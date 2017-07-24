@@ -38,36 +38,29 @@ manager: "jhubbard"
 
 * **Sample databases and sample code**: 
     * They are not installed as part of SQL Server setup by default 
-    * To install them for non-Express editions of SQL Server, see the [CodePlex Web site](http://go.microsoft.com/fwlink/?LinkId=87843)
-    * To read about support for SQL Server sample databases and sample code for SQL Server Express, see [Databases and Samples Overview](http://go.microsoft.com/fwlink/?LinkId=110391)
+    * To install them for non-Express editions of SQL Server, see the [GitHub](http://github.com/Microsoft/sql-server-samples)
     
 
 ## Get the installation media
 
-The download location for [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] depends on the edition:
+The download location for [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] depends on the edition:
 
 - **SQL Server Enterprise, Standard, and Express Editions** are licensed for production use. For Enterprise and Standard Editions, contact your software vendor for the installation media. You can find purchasing information and a directory of Microsoft partners on the [Microsoft purchasing website](https://www.microsoft.com/en-us/server-cloud/products/sql-server/overview.aspx). 
 
-- **Free editions** are available at these links:
-
-| Edition | Description
-|---------|--------
-|[Developer Edition](http://myprodscussu1.app.vssubscriptions.visualstudio.com/Downloads?q=SQL%20Server%20Developer) | Free, full-featured set of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Enterprise edition software that allows developers to build, test, and demonstrate applications in a non-production environment. 
-|[Express Edition](https://www.microsoft.com/sql-server/sql-server-editions-express)| Entry-level, free database that is ideal for deploying small databases in production environments. Build desktop, and small server, data-driven applications up to 10 GB of disk size. 
-| [Evaluation Edition](http://technet.microsoft.com/evalcenter/mt130694) | Full feature set of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Enterprise edition software that provides a 180 day evaluation period.
+- **Free editions** are available at [SQL Server Downloads](http://www.microsoft.com/sql-server/sql-server-downloads).
 
 ## How to install [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]
  
 |Title|Description|  
 |-----------|-----------------|  
-|[Install [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] on Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md)|Review this topic to install [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] on Windows Server Core.|  
+|[Install [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] on Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md)|Review this topic to install [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] on Windows Server Core.|  
 |[Check Parameters for the System Configuration Checker](../../database-engine/install-windows/check-parameters-for-the-system-configuration-checker.md)|Discusses the function of the System Configuration Checker (SCC).|  
 |[Install [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] from the Installation Wizard &#40;Setup&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)|Procedural topic for a typical [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation by using the Installation Wizard.|  
 |[Install [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] from the Command Prompt](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)|Procedural topic that provides sample syntax and installation parameters for running unattended Setup.|  
 |[Install [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Using a Configuration File](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md)|Procedural topic that provides sample syntax and installation parameters for running Setup through a configuration file.|  
 |[Install [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Using SysPrep](../../database-engine/install-windows/install-sql-server-using-sysprep.md)|Procedural topic that provides sample syntax and installation parameters for running Setup through SysPrep.|  
-|[Add Features to an Instance of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] &#40;Setup&#41;](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)|Procedural topic for updating components of an existing instance of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
-|[Repair a Failed [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Installation](../../database-engine/install-windows/repair-a-failed-sql-server-installation.md)|Procedural topic for repairing a corrupt [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] installation.|  
+|[Add Features to an Instance of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] &#40;Setup&#41;](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)|Procedural topic for updating components of an existing instance of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].|  
+|[Repair a Failed [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Installation](../../database-engine/install-windows/repair-a-failed-sql-server-installation.md)|Procedural topic for repairing a corrupt [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] installation.|  
 |[Rename a Computer that Hosts a Stand-Alone Instance of SQL Server](../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)|Procedural topic for updating system metadata that is stored in sys.servers.|  
 |[Install [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Servicing Updates](../../database-engine/install-windows/install-sql-server-servicing-updates.md)|Procedural topic for installing updates for [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].|  
 |[View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)|Procedural topic for checking errors in setup log files.|  

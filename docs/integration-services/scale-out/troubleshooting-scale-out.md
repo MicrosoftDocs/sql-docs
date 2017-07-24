@@ -133,7 +133,8 @@ Execution in Scale Out does not start.
 
 Check the status of the machines you selected to run the package in [SSISDB].[catalog].[worker_agents]. At least one worker must be online and enabled.
 
-### **Symptoms** Packages run successfully, but there is no message logged.
+### **Symptoms** 
+Packages run successfully, but there is no message logged.
 
 ### **Solution**
 
@@ -141,3 +142,9 @@ Check if SQL Server Authentication is allowed by the Sql Server hosting SSISDB.
 
 > [!Note]  
 > If you have changed the account for Scale Out logging, see [Change the Account for Scale Out Logging](change-logdb-account.md) and verify the connection string used for logging.
+
+### **Symptoms**
+The error messages in package execution report are not enough for troubleshooting.
+
+### **Solution**
+More execution logs can be found under TasksRootFolder configured in WorkerSettings.config. By default, it is \<driver\>:\Users\\*[account]*\AppData\Local\SSIS\ScaleOut\Tasks. The *[account]* is the account running Scale Out Worker service with default value SSISScaleOutWorker140.

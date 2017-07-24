@@ -1982,27 +1982,27 @@
 	    },
         {
             "source_path": "docs/integration-services/data-flow/transformations/cache-connection-manager.md",
-            "redirect_url": "/sql/integration-services/data-flow/transformations/cache-connection-manager",
+            "redirect_url": "/sql/integration-services/connection-manager/cache-connection-manager",
             "redirect_document_id": true
         },
         {
             "source_path": "docs/integration-services/data-flow/transformations/cache-connection-manager-editor.md",
-            "redirect_url": "/sql/integration-services/data-flow/transformations/cache-connection-manager-editor",
+            "redirect_url": "/sql/integration-services/connection-manager/cache-connection-manager-editor",
             "redirect_document_id": true
         },
         {
             "source_path": "docs/integration-services/data-flow/transformations/dqs-cleansing-connection-manager.md",
-            "redirect_url": "/sql/integration-services/data-flow/transformations/dqs-cleansing-connection-manager",
+            "redirect_url": "/sql/integration-services/connection-manager/dqs-cleansing-connection-manager",
             "redirect_document_id": true
         },
         {
             "source_path": "docs/integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md",
-            "redirect_url": "/sql/integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager",
+            "redirect_url": "/sql/integration-services/connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager",
             "redirect_document_id": true
         },
         {
             "source_path": "docs/integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-ole-db-connection-manager.md",
-            "redirect_url": "/sql/integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-ole-db-connection-manager",
+            "redirect_url": "/sql/integration-services/connection-manager/lookup-transformation-full-cache-mode-ole-db-connection-manager",
             "redirect_document_id": true
         }
     ]

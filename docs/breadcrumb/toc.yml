@@ -135,6 +135,10 @@
       - name: Failover clusters
         href: /sql/sql-server/failover-clusters/
         homepage: /sql/sql-server/failover-clusters/high-availability-solutions-sql-server
+        items:
+        - name: Install
+          href: /sql/sql-server/failover-clusters/install/
+          homepage: /sql/sql-server/failover-clusters/install/sql-server-failover-cluster-installation
       - name: Install
         href: /sql/sql-server/install/
         homepage: /sql/sql-server/install/planning-a-sql-server-installation

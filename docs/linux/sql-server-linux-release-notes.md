@@ -196,7 +196,9 @@ Please note the following known issues with this release.
 
 - The **mssql-server-is** package is supported on Ubuntu and Red Hat Enterprise Linux (RHEL) in this release.
 
-- The following features are not supported when running SSIS packages on Linux:
+With SSIS on Linux CTP 2.1 Refresh and later, SSIS packages can use ODBC connections on Linux. This functionality has been tested with the SQL Server and the MySQL ODBC drivers, but is also expected to work with any Unicode ODBC driver that observes the ODBC specification. At design time, you can provide either a DSN or a connection string to connect to the ODBC data; you can also use Windows authentication. For more info, see the [blog post announcing ODBC support on Linux](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/).
+
+- The following features are not supported in this release when you run SSIS packages on Linux:
   - SSIS Catalog database
   - Scheduled package execution by SQL Agent
   - Windows Authentication
@@ -206,8 +208,6 @@ Please note the following known issues with this release.
   - Azure Feature Pack for SSIS
   - Hadoop and HDFS support
   - Microsoft Connector for SAP BW
-
-With SSIS on Linux CTP 2.1 Refresh and later, your SSIS packages can use ODBC connections on Linux. For more info, see the [blog post announcing ODBC support on Linux](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/).
 
 #### SQL Server Management Studio (SSMS)
 The following limitations apply to SSMS on Windows connected to SQL Server on Linux.

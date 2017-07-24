@@ -47,11 +47,24 @@ To run an SSIS package on a Linux computer, do the following things:
 
 ## More about SSIS on Linux
 
+**ODBC connections**. With SSIS on Linux CTP 2.1 Refresh and later, SSIS packages can use ODBC connections on Linux. This functionality has been tested with the SQL Server and the MySQL ODBC drivers, but is also expected to work with any Unicode ODBC driver that observes the ODBC specification. At design time, you can provide either a DSN or a connection string to connect to the ODBC data; you can also use Windows authentication. For more info, see the [blog post announcing ODBC support on Linux](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/).
+
 **Deploying packages**. You can only store packages in the file system on Linux in this release. The SSIS Catalog database and the legacy SSIS service are not available on Linux for package deployment and storage.
 
 **Scheduling packages**. You can't use SQL Agent on Linux to schedule package execution in this release.
 
-**Other limitations and known issues**. For other limitations and known issues with SSIS on Linux, see the [Release Notes](sql-server-linux-release-notes.md#ssis).
+**Other limitations and known issues**. The following features are not supported in this release when you run SSIS packages on Linux:
+  - SSIS Catalog database
+  - Scheduled package execution by SQL Agent
+  - Windows Authentication
+  - Third-party components
+  - Change Data Capture (CDC)
+  - SSIS Scale Out
+  - Azure Feature Pack for SSIS
+  - Hadoop and HDFS support
+  - Microsoft Connector for SAP BW
+
+For other limitations and known issues with SSIS on Linux, see the [Release Notes](sql-server-linux-release-notes.md#ssis).
 
 For more info about SSIS on Linux, see the following blog posts:
 

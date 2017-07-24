@@ -27,18 +27,18 @@ manager: "jhubbard"
   
  The **Cache Connection ManagerEditor** dialog box includes the following tabs:  
   
--   [General Tab](../../../integration-services/data-flow/transformations/cache-connection-manager-editor.md#generaltab)  
+-   [General Tab](../../integration-services/connection-manager/cache-connection-manager-editor.md#generaltab)  
   
--   [Columns Tab](../../../integration-services/data-flow/transformations/cache-connection-manager-editor.md#columnstab)  
+-   [Columns Tab](../../integration-services/connection-manager/cache-connection-manager-editor.md#columnstab)  
   
- To learn more about the Cache Connection Manager, see [Cache Connection Manager](../../../integration-services/data-flow/transformations/cache-connection-manager.md).  
+ To learn more about the Cache Connection Manager, see [Cache Connection Manager](../../integration-services/connection-manager/cache-connection-manager.md).  
   
 ##  <a name="generaltab"></a> General Tab  
  Use the **General** tab of the **Cache Connection ManagerEditor** dialog box to indicate whether to read the cache from a file or save the cache to a file.  
   
 ### Options  
  **Connection manager name**  
- Provide a unique name for the cache connection in the workflow. The name provided will be displayed within [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer.  
+ Provide a unique name for the cache connection in the workflow. The name provided will be displayed within [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer.  
   
  **Description**  
  Describe the connection. As a best practice, describe the connection according to its purpose, to make packages self-documenting and easier to maintain.  
@@ -47,11 +47,11 @@ manager: "jhubbard"
  Indicate whether to use a cache file.  
   
 > [!NOTE]  
->  The protection level of the package does not apply to the cache file. If the cache file contains sensitive information, use an access control list (ACL) to restrict access to the location or folder in which you store the file. You should enable access only to certain accounts. For more information, see [Access to Files Used by Packages](../../../integration-services/security/security-overview-integration-services.md#files).  
+>  The protection level of the package does not apply to the cache file. If the cache file contains sensitive information, use an access control list (ACL) to restrict access to the location or folder in which you store the file. You should enable access only to certain accounts. For more information, see [Access to Files Used by Packages](../../integration-services/security/security-overview-integration-services.md#files).  
   
  If you configure the cache connection manager to use a cache file, the connection manager will do one of the following actions:  
   
--   Save data to the file when a Cache Transform transformation is configured to write data from a data source in the data flow to the Cache connection manager. For more information, see [Cache Transform](../../../integration-services/data-flow/transformations/cache-transform.md).  
+-   Save data to the file when a Cache Transform transformation is configured to write data from a data source in the data flow to the Cache connection manager. For more information, see [Cache Transform](../../integration-services/data-flow/transformations/cache-transform.md).  
   
 -   Read data from the cache file.  
   
@@ -97,6 +97,6 @@ manager: "jhubbard"
  Specifies the code page for the column type. If applicable to the data type, you can update **Code Page**.  
   
 ## See Also  
- [Lookup Transformation](../../../integration-services/data-flow/transformations/lookup-transformation.md)  
+ [Lookup Transformation](../../integration-services/data-flow/transformations/lookup-transformation.md)  
   
   

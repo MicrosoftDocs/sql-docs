@@ -1,8 +1,10 @@
 ---
-title: "Upgrade to SQL Server 2016 Using the Installation Wizard (Setup) | Microsoft Docs"
+title: "Upgrade SQL Server Using the Installation Wizard (Setup) | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/14/2015"
-ms.prod: "sql-server-2016"
+ms.date: "07/24/2017"
+ms.prod:
+ - "sql-server-2016"
+ - "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,15 +21,22 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # Upgrade SQL Server Using the Installation Wizard (Setup)
-  The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation Wizard provides a single feature tree for an in-place upgrade of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation Wizard provides a single feature tree for an in-place upgrade of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components to the latest version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-> [!WARNING]  
->  When you upgrade SQL Server, the previous SQL Server instance will be overwritten and will no   
-> longer exist on your computer. Before upgrading, back up SQL Server databases and other objects   
-> associated with the previous SQL Server instance.  
+>[!WARNING]  
+>When you upgrade [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the previous [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md instance will be overwritten and will no longer exist on your computer. 
+>
+>Before upgrading, back up SQL Server databases and other objects associated with the previous SQL Server instance.  
   
 > [!CAUTION]  
->  For many production and some development environments, a new installation upgrade or a rolling upgrade is more appropriate than an in-place upgrade.  For more information regarding upgrade methods, see [Choose a Database Engine Upgrade Method](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md), [Upgrade Data Quality Services](../../database-engine/install-windows/upgrade-data-quality-services.md), [Upgrade Integration Services](../../integration-services/install-windows/upgrade-integration-services.md), [Upgrade Master Data Services](../../database-engine/install-windows/upgrade-master-data-services.md), [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md),  [Upgrade Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md) and [Upgrade Power Pivot for SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md).  
+> For many production and some development environments, a new installation upgrade or a rolling upgrade is more appropriate than an in-place upgrade.  For more information regarding upgrade methods, see:
+> * [Choose a Database Engine Upgrade Method](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md)
+> * [Upgrade Data Quality Services](../../database-engine/install-windows/upgrade-data-quality-services.md)
+> * [Upgrade Integration Services](../../integration-services/install-windows/upgrade-integration-services.md)
+> * [Upgrade Master Data Services](../../database-engine/install-windows/upgrade-master-data-services.md)
+> * [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)
+> * [Upgrade Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md)
+> * [Upgrade Power Pivot for SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md).  
   
 ## Prerequisites  
  You must run Setup as an administrator. If you install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from a remote share, you must use a domain account that has read and execute permissions on the remote share, and is a local administrator.  

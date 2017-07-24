@@ -1,7 +1,7 @@
 ---
 title: "Changelog for SQL Server Data Tools (SSDT) | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/30/2017"
+ms.date: "07/28/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -13,12 +13,66 @@ ms.assetid: b071f8b8-c8e5-44e0-bbb6-04804dd1863a
 caps.latest.revision: 31
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ---
 # Changelog for SQL Server Data Tools (SSDT)
 This change log is for [SQL Server Data Tools (SSDT) for Visual Studio 2015](https://msdn.microsoft.com/library/mt204009.aspx).  
   
-For detailed posts about what’s new and changed, please visit [the SSDT Team blog](https://blogs.msdn.microsoft.com/ssdt/)
+For detailed posts about what's new and changed, please visit [the SSDT Team blog](https://blogs.msdn.microsoft.com/ssdt/)
+
+
+
+## SSDT 17.2
+Build number: **TBD**
+
+### What's New?
+
+**General**
+
+**AS projects:**
+- Object Level Security can now be configured in the Roles dialog for advanced security in 1400-compatability level tabular models.
+- New AAD role member selection for users without email addresses in AS Azure models in SSDT AS projects for VS2017.
+- New AS Azure “Always Prompt” project property in SSDT AS tabular projects to customize behavior of ADAL credential caching.
+
+
+### Bug Fixes
+
+**General**
+- Updated branding references for SQL Server 2017.
+
+**AS projects**
+- Significant performance fixes made to improve experience when committing DAX measure changes and other model edits.
+- Fixed a number of issues with Power Query integration in Analysis Services projects using 1400-compatability level tabular models.
+- Fixed an issue in Multi-Dimensional projects in VS2017 only where Design Aggregation designer may fail to load.
+- Fixed an issue when dragging an item in the Analysis Services multi-dimensional DSV diagram that could crash VS 2017.
+- Fixed an issue in AS projects where the Deploy Dialog was not always in the foreground on top of Visual Studio.
+- Removed Analysis Services import from Data Marketplace as data source since the service has been decommissioned.
+- Fixed an issue that left the table designer disabled after Import New Table from existing data source through Tabular Model Explorer.
+- Fixed an issue that may cause Model menu items Import from Datasource/Add Datasource to remain hidden in the wrong context.
+- Improved experience when creating a measure from the Tabular Model Explorer to avoid switching focus back to the column used to create a measure.
+- When switching from integrated workspace in AS tabular projects to explicit workspace server, the old database files will now be cleaned up.
+- Fixed an issue in AS tabular 1400 models projects where the Row Level Security checkbox UI state initially showed as unchecked regardless of actual underlying object state.
+- Fixed a crash that could occur when importing text file or Excel file into 1400-compat mode tabular model using Power Query and unhandled exception thrown.
+- Fixed an issue that could occur with the scrollbar thumb in the DAX formula editing control in AS tabular model designer.
+- Fixed an issue that prevented modifying a PowerQuery mashup data source if it contained a username/password authentication.
+- Fixed an issue that could prevent a data source to connect when additional properties set in connection string.
+- Fixed an issue that could crash VS when multiple AS tabular model projects loaded and closing the second model designer without interacting with anything in the designer first.
+- Fixed an issue where edits made to KPI formatting were not getting persisted in some cases.
+- Fixed an issue with PowerQuery UI that showed the wrong menu checked state for whether the formula bar was shown.
+- Fixed an issue in AS Tabular 1400-compat level projects with PowerQuery data sources that could crash VS when selecting Change Data Source menu from Tabular Model Explorer.
+- Fixed an intermittent issue where loading a 1400 tabular model may show the error *'Could not load file or assembly 'Microsoft.ProBI.MashupLibrary'*.
+
+**RS projects**
+- User preferences for RS Ruler and Parameter box settings selection state will be remembered correctly across sessions 
+
+**IS projects**
+- Fixed an issue that ADO/ADO.NET ForEachLoop Container can't show correctly
+- Fixed an issue that some tasks/components/wizards are not localized
+- Changed latest TargetServerVersion from "SQL Server vNext" to "SQL Server 2017"
+
+## DacFx 17.2
+
+- Added support for Universal Authentication and MFA. For details, see [IUniversalAuthProvider Interface](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.iuniversalauthprovider.aspx) and [Configure and manage Azure Active Directory authentication with SQL Database or SQL Data Warehouse](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure).
 
 ## SSDT 17.1
 Build number: 14.0.61705.170

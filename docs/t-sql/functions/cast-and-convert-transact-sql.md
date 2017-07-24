@@ -1,7 +1,7 @@
 ---
 title: "CAST and CONVERT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/22/2017"
+ms.date: "12/06/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -42,7 +42,7 @@ manager: "jhubbard"
 # CAST and CONVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Converts an expression of one data type to another data type.   
+  Converts an expression of one data type to another.   
 > [!TIP]
 > Many [examples](#BKMK_examples) are at the bottom of this topic.  
   
@@ -51,6 +51,8 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
+-- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
+    
 -- Syntax for CAST:  
 CAST ( expression AS data_type [ ( length ) ] )  
   
@@ -76,6 +78,8 @@ CONVERT ( data_type [ ( length ) ] , expression [ , style ] )
 
 [Jump to the 15 examples at the end of this topic](#BKMK_examples)
   
+## Remarks  
+  
 ## Date and Time Styles  
  When *expression* is a date or time data type,  *style* can be one of the values shown in the following table. Other values are processed as 0. . Beginning with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], the only styles that are supported when converting from date and time types to **datetimeoffset** are 0 or 1. All other conversion styles return error 9809.  
   
@@ -84,30 +88,30 @@ CONVERT ( data_type [ ( length ) ] , expression [ , style ] )
 |Without century (yy) (<sup>1</sup>)|With century (yyyy)|Standard|Input/Output (<sup>3</sup>)|  
 |---------------------------------------------|---------------------------|--------------|------------------------------------|  
 |-|**0** or **100** (<sup>1,</sup><sup>2</sup>)|Default for datetime and smalldatetime|mon dd yyyy hh:miAM (or PM)|  
-|**1**|**101**|U.S.|1 = mm/dd/yy<br /> 101 = mm/dd/yyyy|  
-|**2**|**102**|ANSI|2 = yy.mm.dd<br /> 102 = yyyy.mm.dd|  
-|**3**|**103**|British/French|3 = dd/mm/yy<br /> 103 = dd/mm/yyyy|  
-|**4**|**104**|German|4 = dd.mm.yy<br /> 104 = dd.mm.yyyy|  
-|**5**|**105**|Italian|5 = dd-mm-yy<br /> 105 = dd-mm-yyyy|  
-|**6**|**106** <sup>(1)</sup>|-|6 = dd mon yy<br /> 106 = dd mon yyyy|  
-|**7**|**107** <sup>(1)</sup>|-|7 = Mon dd, yy<br /> 107 = Mon dd, yyyy|  
+|**1**|**101**|U.S.|1 = mm/dd/yy<br /><br /> 101 = mm/dd/yyyy|  
+|**2**|**102**|ANSI|2 = yy.mm.dd<br /><br /> 102 = yyyy.mm.dd|  
+|**3**|**103**|British/French|3 = dd/mm/yy<br /><br /> 103 = dd/mm/yyyy|  
+|**4**|**104**|German|4 = dd.mm.yy<br /><br /> 104 = dd.mm.yyyy|  
+|**5**|**105**|Italian|5 = dd-mm-yy<br /><br /> 105 = dd-mm-yyyy|  
+|**6**|**106** <sup>(1)</sup>|-|6 = dd mon yy<br /><br /> 106 = dd mon yyyy|  
+|**7**|**107** <sup>(1)</sup>|-|7 = Mon dd, yy<br /><br /> 107 = Mon dd, yyyy|  
 |**8**|**108**|-|hh:mi:ss|  
 |-|**9** or **109** (<sup>1,</sup><sup>2</sup>)|Default + milliseconds|mon dd yyyy hh:mi:ss:mmmAM (or PM)|  
-|**10**|**110**|USA|10 = mm-dd-yy<br /> 110 = mm-dd-yyyy|  
-|**11**|**111**|JAPAN|11 = yy/mm/dd<br /> 111 = yyyy/mm/dd|  
-|**12**|**112**|ISO|12 = yymmdd<br /> 112 = yyyymmdd|  
+|**10**|**110**|USA|10 = mm-dd-yy<br /><br /> 110 = mm-dd-yyyy|  
+|**11**|**111**|JAPAN|11 = yy/mm/dd<br /><br /> 111 = yyyy/mm/dd|  
+|**12**|**112**|ISO|12 = yymmdd<br /><br /> 112 = yyyymmdd|  
 |-|**13** or **113** (<sup>1,</sup><sup>2</sup>)|Europe default + milliseconds|dd mon yyyy hh:mi:ss:mmm(24h)|  
 |**14**|**114**|-|hh:mi:ss:mmm(24h)|  
 |-|**20** or **120** (<sup>2</sup>)|ODBC canonical|yyyy-mm-dd hh:mi:ss(24h)|  
 |-|**21** or **121** (<sup>2</sup>)|ODBC canonical (with milliseconds) default for time, date, datetime2, and datetimeoffset|yyyy-mm-dd hh:mi:ss.mmm(24h)|  
-|-|**126** (<sup>4</sup>)|ISO8601|yyyy-mm-ddThh:mi:ss.mmm (no spaces)<br /> When the value for milliseconds (mmm) is 0, the millisecond value is not displayed. For example, the value '2012-11-07T18:26:20.000 is displayed as '2012-11-07T18:26:20'.|  
-|-|**127**(<sup>6, 7</sup>)|ISO8601 with time zone Z.|yyyy-mm-ddThh:mi:ss.mmmZ (no spaces)<br /> When the value for milliseconds (mmm) is 0, the milliseconds value is not displayed. For example, the value '2012-11-07T18:26:20.000 is displayed as '2012-11-07T18:26:20'.|  
-|-|**130** (<sup>1,</sup><sup>2</sup>)|Hijri (<sup>5</sup>)|dd mon yyyy hh:mi:ss:mmmAM<br /> In this style, mon represents a multi-token Hijri unicode representation of the full month's name. This value will not render correctly on a default US installation of SSMS.|  
+|-|**126** (<sup>4</sup>)|ISO8601|yyyy-mm-ddThh:mi:ss.mmm (no spaces)<br /><br /> Note: When the value for milliseconds (mmm) is 0, the millisecond value is not displayed. For example, the value '2012-11-07T18:26:20.000 is displayed as '2012-11-07T18:26:20'.|  
+|-|**127**(<sup>6, 7</sup>)|ISO8601 with time zone Z.|yyyy-mm-ddThh:mi:ss.mmmZ (no spaces)<br /><br /> Note: When the value for milliseconds (mmm) is 0, the milliseconds value is not displayed. For example, the value '2012-11-07T18:26:20.000 is displayed as '2012-11-07T18:26:20'.|  
+|-|**130** (<sup>1,</sup><sup>2</sup>)|Hijri (<sup>5</sup>)|dd mon yyyy hh:mi:ss:mmmAM<br /><br /> In this style, mon represents a multi-token Hijri unicode representation of the full month's name. This value will not render correctly on a default US installation of SSMS.|  
 |-|**131** (<sup>2</sup>)|Hijri (<sup>5</sup>)|dd/mm/yyyy hh:mi:ss:mmmAM|  
   
  <sup>1</sup> These style values return nondeterministic results. Includes all (yy) (without century) styles and a subset of (yyyy) (with century) styles.  
   
- <sup>2</sup> The default values (*style* **0** or **100**, **9** or **109**, **13** or **113**, **20** or **120**, and **21** or **121**) always return the century (yyyy).  
+ <sup>2</sup> The default values (*style***0** or **100**, **9** or **109**, **13** or **113**, **20** or **120**, and **21** or **121**) always return the century (yyyy).  
   
  <sup>3</sup> Input when you convert to **datetime**; output when you convert to character data.  
   
@@ -154,7 +158,7 @@ CONVERT ( data_type [ ( length ) ] , expression [ , style ] )
 |-----------|------------|  
 |**0** (default)|Use default parsing behavior that discards insignificant white space and does not allow for an internal DTD subset.<br /><br /> Note: When you convert to the **xml** data type, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] insignificant white space is handled differently than in XML 1.0. For more information, see [Create Instances of XML Data](../../relational-databases/xml/create-instances-of-xml-data.md).|  
 |**1**|Preserve insignificant white space. This style setting sets the default **xml:space** handling to behave the same as if **xml:space="preserve"** has been specified instead.|  
-|**2**|Enable limited internal DTD subset processing.<br /><br /> If enabled, the server can use the following information that is provided in an internal DTD subset to perform nonvalidating parse operations.<br /><br /> - Defaults for attributes are applied.<br /> - Internal entity references are resolved and expanded.<br /> - The DTD content model will be checked for syntactical correctness.<br /> <br /><br /> The parser will ignore external DTD subsets. It also does not evaluate the XML declaration to see whether the **standalone** attribute is set **yes** or **no**, but instead parses the XML instance as if it is a stand-alone document.|  
+|**2**|Enable limited internal DTD subset processing.<br /><br /> If enabled, the server can use the following information that is provided in an internal DTD subset to perform nonvalidating parse operations.<br /><br /> -Defaults for attributes are applied.<br /><br /> -Internal entity references are resolved and expanded.<br /><br /> -The DTD content model will be checked for syntactical correctness.<br /><br /> <br /><br /> The parser will ignore external DTD subsets. It also does not evaluate the XML declaration to see whether the **standalone** attribute is set **yes** or **no**, but instead parses the XML instance as if it is a stand-alone document.|  
 |**3**|Preserve insignificant white space and enable limited internal DTD subset processing.|  
   
 ## Binary Styles  
@@ -180,10 +184,15 @@ CONVERT ( data_type [ ( length ) ] , expression [ , style ] )
   
 ## Large-Value Data Types  
  Large-value data types exhibit the same implicit and explicit conversion behavior as their smaller counterparts, specifically the **varchar**, **nvarchar** and **varbinary** data types. However, you should consider the following guidelines:  
+  
 -   Conversion from **image** to **varbinary(max)** and vice-versa is an implicit conversion, and so are conversions between **text** and **varchar(max)**, and **ntext** and **nvarchar(max)**.  
+  
 -   Conversion from large-value data types, such as **varchar(max)**, to a smaller counterpart data type, such as **varchar**, is an implicit conversion, but truncation will occur if the large value is too big for the specified length of the smaller data type.  
+  
 -   Conversion from **varchar**, **nvarchar**, or **varbinary** to their corresponding large-value data types is performed implicitly.  
+  
 -   Conversion from the **sql_variant** data type to the large-value data types is an explicit conversion.  
+  
 -   Large-value data types cannot be converted to the **sql_variant** data type.  
   
  For more information about how to convert from the **xml** data type, see [Create Instances of XML Data](../../relational-databases/xml/create-instances-of-xml-data.md).  
@@ -204,25 +213,18 @@ CONVERT ( data_type [ ( length ) ] , expression [ , style ] )
 ## Truncating and Rounding Results  
  When you convert character or binary expressions (**char**, **nchar**, **nvarchar**, **varchar**, **binary**, or **varbinary**) to an expression of a different data type, data can be truncated, only partially displayed, or an error is returned because the result is too short to display. Conversions to **char**, **varchar**, **nchar**, **nvarchar**, **binary**, and **varbinary** are truncated, except for the conversions shown in the following table.  
   
-From data type **int**, **smallint**, or **tinyint**:   
-|To data type|Result|  
-|------------------|------------|  
-|**char**| \* |  
-|**varchar**| \* |  
-|**nchar**| E |  
-|**nvarchar**| E |  
-
-
-From data type **money**, **smallmoney**, **numeric**, **decimal**, **float**, or **real**:
-|To data type|Result|  
-|------------------|------------|  
-|**char**|E|  
-|**varchar**|E|  
-|**nchar**|E|  
-|**nvarchar**|E|  
+|From data type|To data type|Result|  
+|--------------------|------------------|------------|  
+|**int**, **smallint**, or **tinyint**|**char**|*|  
+||**varchar**|*|  
+||**nchar**|E|  
+||**nvarchar**|E|  
+|**money**, **smallmoney**, **numeric**, **decimal**, **float**, or **real**|**char**|E|  
+||**varchar**|E|  
+||**nchar**|E|  
+||**nvarchar**|E|  
   
- \* = Result length too short to display.   
- E = Error returned because result length is too short to display.  
+ \* = Result length too short to display. E = Error returned because result length is too short to display.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] guarantees that only roundtrip conversions, conversions that convert a data type from its original data type and back again, will yield the same values from version to version. The following example shows such a roundtrip conversion:  
   
@@ -242,27 +244,28 @@ SELECT CONVERT(decimal(10,5), CONVERT(varbinary(20), @myval));
 ```  
 USE AdventureWorks2012;  
 GO  
-SELECT p.FirstName, p.LastName, 
-    SUBSTRING(p.Title, 1, 25) AS Title, 
-    CAST(e.SickLeaveHours AS char(1)) AS [Sick Leave]  
-FROM HumanResources.Employee AS e 
-JOIN Person.Person AS p 
-    ON e.BusinessEntityID = p.BusinessEntityID  
-WHERE NOT e.BusinessEntityID > 5;  
+SELECT p.FirstName, p.LastName, SUBSTRING(p.Title, 1, 25) AS Title, CAST(e.SickLeaveHours AS char(1)) AS [Sick Leave]  
+FROM HumanResources.Employee e JOIN Person.Person p ON e.BusinessEntityID = p.BusinessEntityID  
+WHERE NOT e.BusinessEntityID >5;  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-```   
-FirstName   LastName      Title   Sick Leave  
----------   ------------- ------- --------  
-Ken         Sanchez       NULL   *  
-Terri       Duffy         NULL   *  
-Roberto     Tamburello    NULL   *  
-Rob         Walters       NULL   *  
-Gail        Erickson      Ms.    *  
-(5 row(s) affected)  
-```  
+ `FirstName   LastName      Title   Sick Leave`  
+  
+ `---------   ------------- ------- --------`  
+  
+ `Ken         Sanchez       NULL   *`  
+  
+ `Terri       Duffy         NULL   *`  
+  
+ `Roberto     Tamburello    NULL   *`  
+  
+ `Rob         Walters       NULL   *`  
+  
+ `Gail        Erickson      Ms.    *`  
+  
+ `(5 row(s) affected)`  
   
  When you convert data types that differ in decimal places, sometimes the result value is truncated and at other times it is rounded. The following table shows the behavior.  
   
@@ -328,19 +331,22 @@ SELECT CAST (@x AS NVARCHAR(3));
  Upgrading the database to compatibility level 110 and higher will not change user data that has been stored to disk. You must manually correct this data as appropriate. For example, if you used SELECT INTO to create a table from a source that contained a computed column expression described above, the data (using style 0) would be stored rather than the computed column definition itself. You would need to manually update this data to match style 121.  
   
 ## <a name="BKMK_examples"></a> Examples  
-Examples use the AdventureWorks database.
   
 ### A. Using both CAST and CONVERT  
  Each example retrieves the name of the product for those products that have a `3` in the first digit of their list price and converts their `ListPrice` to `int`.  
   
 ```  
 -- Use CAST  
+USE AdventureWorks2012;  
+GO  
 SELECT SUBSTRING(Name, 1, 30) AS ProductName, ListPrice  
 FROM Production.Product  
 WHERE CAST(ListPrice AS int) LIKE '3%';  
 GO  
   
 -- Use CONVERT.  
+USE AdventureWorks2012;  
+GO  
 SELECT SUBSTRING(Name, 1, 30) AS ProductName, ListPrice  
 FROM Production.Product  
 WHERE CONVERT(int, ListPrice) LIKE '3%';  
@@ -351,7 +357,9 @@ GO
  The following example calculates a single column computation (`Computed`) by dividing the total year-to-date sales (`SalesYTD`) by the commission percentage (`CommissionPCT`). This result is converted to an `int` data type after being rounded to the nearest whole number.  
   
 ```  
-SELECT BusinessEntityID, CAST(ROUND(SalesYTD/CommissionPCT, 0) AS int) AS Computed  
+USE AdventureWorks2012;  
+GO  
+SELECT CAST(ROUND(SalesYTD/CommissionPCT, 0) AS int) AS Computed  
 FROM Sales.SalesPerson   
 WHERE CommissionPCT != 0;  
 GO  
@@ -359,30 +367,46 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-```
-BusinessEntityID  Computed
-----------------  --------
-275               313598182
-276               283424570
-277               212627891
-278               145371947
-279               231518561
-280               135257713
-281               245853562
-282               173636048
-283               131084412
-284               82976958
-286               78989496
-288               101503706
-289               205843561
-290               195101020
-(14 row(s) affected)  
-```  
-
+ `Computed`  
+  
+ `------`  
+  
+ `379753754`  
+  
+ `346698349`  
+  
+ `257144242`  
+  
+ `176493899`  
+  
+ `281101272`  
+  
+ `0`  
+  
+ `301872549`  
+  
+ `212623750`  
+  
+ `298948202`  
+  
+ `250784119`  
+  
+ `239246890`  
+  
+ `101664220`  
+  
+ `124511336`  
+  
+ `97688107`  
+  
+ `(14 row(s) affected)`  
+  
 ### C. Using CAST to concatenate  
  The following example concatenates noncharacter, nonbinary expressions by using `CAST`.  
   
 ```  
+USE AdventureWorks2012;  
+GO  
 SELECT 'The list price is ' + CAST(ListPrice AS varchar(12)) AS ListPrice  
 FROM Production.Product  
 WHERE ListPrice BETWEEN 350.00 AND 400.00;  
@@ -391,21 +415,28 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-```   
-ListPrice  
-------------------  
-The list price is 357.06  
-The list price is 364.09  
-The list price is 364.09  
-The list price is 364.09  
-The list price is 364.09  
-(5 row(s) affected)
-```  
+ `ListPrice`  
+  
+ `------------------`  
+  
+ `The list price is 357.06`  
+  
+ `The list price is 364.09`  
+  
+ `The list price is 364.09`  
+  
+ `The list price is 364.09`  
+  
+ `The list price is 364.09`  
+  
+ `(5 row(s) affected)`  
   
 ### D. Using CAST to produce more readable text  
  The following example uses `CAST` in the select list to convert the `Name` column to a `char(10)` column.  
   
 ```  
+USE AdventureWorks2012;  
+GO  
 SELECT DISTINCT CAST(p.Name AS char(10)) AS Name, s.UnitPrice  
 FROM Sales.SalesOrderDetail AS s   
 JOIN Production.Product AS p   
@@ -416,19 +447,24 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-```   
-Name       UnitPrice  
----------- ---------------------  
-Long-Sleev 31.2437  
-Long-Sleev 32.4935  
-Long-Sleev 49.99  
-(3 row(s) affected)
-```  
+ `Name       UnitPrice`  
+  
+ `---------- ---------------------`  
+  
+ `Long-Sleev 31.2437`  
+  
+ `Long-Sleev 32.4935`  
+  
+ `Long-Sleev 49.99`  
+  
+ `(3 row(s) affected)`  
   
 ### E. Using CAST with the LIKE clause  
  The following example converts the `money` column `SalesYTD` to an `int` and then to a `char(20)` column so that it can be used with the `LIKE` clause.  
   
 ```  
+USE AdventureWorks2012;  
+GO  
 SELECT p.FirstName, p.LastName, s.SalesYTD, s.BusinessEntityID  
 FROM Person.Person AS p   
 JOIN Sales.SalesPerson AS s   
@@ -439,14 +475,17 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-```  
-FirstName        LastName            SalesYTD         SalesPersonID  
----------------- ------------------- ---------------- -------------  
-Tsvi             Reiter              2811012.7151      279  
-Syed             Abbas               219088.8836       288  
-Rachel           Valdez              2241204.0424      289  
-(3 row(s) affected)
-```  
+ `FirstName        LastName            SalesYTD         SalesPersonID`  
+  
+ `---------------- ------------------- ---------------- -------------`  
+  
+ `Tsvi             Reiter              2811012.7151      279`  
+  
+ `Syed             Abbas               219088.8836       288`  
+  
+ `Rachel           Valdez              2241204.0424      289`  
+  
+ `(3 row(s) affected)`  
   
 ### F. Using CONVERT or CAST with typed XML  
  The following are several examples that show using CONVERT to convert to typed XML by using the [XML Data Type and Columns &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-type-and-columns-sql-server.md).  
@@ -484,12 +523,13 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-```   
-UnconvertedDateTime     UsingCast                      UsingConvertTo_ISO8601  
------------------------ ------------------------------ ------------------------------  
-2006-04-18 09:58:04.570 Apr 18 2006  9:58AM            2006-04-18T09:58:04.570  
-(1 row(s) affected)
-```  
+ `UnconvertedDateTime     UsingCast                      UsingConvertTo_ISO8601`  
+  
+ `----------------------- ------------------------------ ------------------------------`  
+  
+ `2006-04-18 09:58:04.570 Apr 18 2006  9:58AM            2006-04-18T09:58:04.570`  
+  
+ `(1 row(s) affected)`  
   
  The following example is approximately the opposite of the previous example. The example displays a date and time as character data, uses `CAST` to change the character data to the `datetime` data type, and then uses `CONVERT` to change the character data to the `datetime` data type.  
   
@@ -503,97 +543,109 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-```  
-UnconvertedText         UsingCast               UsingConvertFrom_ISO8601  
------------------------ ----------------------- ------------------------  
-2006-04-25T15:50:59.997 2006-04-25 15:50:59.997 2006-04-25 15:50:59.997  
-(1 row(s) affected)
-```  
+ `UnconvertedText         UsingCast               UsingConvertFrom_ISO8601`  
+  
+ `----------------------- ----------------------- ------------------------`  
+  
+ `2006-04-25T15:50:59.997 2006-04-25 15:50:59.997 2006-04-25 15:50:59.997`  
+  
+ `(1 row(s) affected)`  
   
 ### H. Using CONVERT with binary and character data  
  The following examples show the results of converting binary and character data by using different styles.  
-Convert the binary value `0x4E616d65` to a character value.   
+  
 ```  
+--Convert the binary value 0x4E616d65 to a character value.  
 SELECT CONVERT(char(8), 0x4E616d65, 0) AS [Style 0, binary to character];  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
+ `Style 0, binary to character`  
+  
+ `----------------------------`  
+  
+ `Name`  
+  
+ `(1 row(s) affected)`  
+  
 ```  
-Style 0, binary to character  
-----------------------------  
-Name  
-(1 row(s) affected)  
-```  
-
-The following example shows how Style 1 can force the result to be truncated. The truncation is caused by including the characters 0x in the result.  
-```
+--The following example shows how Style 1 can force the result  
+--to be truncated. The truncation is caused by  
+--including the characters 0x in the result.  
 SELECT CONVERT(char(8), 0x4E616d65, 1) AS [Style 1, binary to character];  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
+ `Style 1, binary to character`  
+  
+ `------------------------------`  
+  
+ `0x4E616D`  
+  
+ `(1 row(s) affected)`  
+  
 ```  
-Style 1, binary to character  
-------------------------------  
-0x4E616D  
-(1 row(s) affected)  
-```   
-
-The following example shows that Style 2 does not truncate the result because the characters 0x are not included in the result.  
-```  
+--The following example shows that Style 2 does not truncate the  
+--result because the characters 0x are not included in  
+--the result.  
 SELECT CONVERT(char(8), 0x4E616d65, 2) AS [Style 2, binary to character];  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-```   
-Style 2, binary to character  
-------------------------------  
-4E616D65  
-(1 row(s) affected)  
-```     
+ `Style 2, binary to character`  
   
-Convert the character value 'Name' to a binary value.  
+ `------------------------------`  
+  
+ `4E616D65`  
+  
+ `(1 row(s) affected)`  
+  
 ```  
+--Convert the character value 'Name' to a binary value.  
 SELECT CONVERT(binary(8), 'Name', 0) AS [Style 0, character to binary];  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-```   
-Style 0, character to binary  
-----------------------------------  
-0x4E616D6500000000  
-(1 row(s) affected)  
-```   
-
+ `Style 0, character to binary`  
+  
+ `----------------------------------`  
+  
+ `0x4E616D6500000000`  
+  
+ `(1 row(s) affected)`  
+  
 ```  
 SELECT CONVERT(binary(4), '0x4E616D65', 1) AS [Style 1, character to binary];  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- ```   
-Style 1, character to binary  
-----------------------------------  
-0x4E616D65  
-(1 row(s) affected)  
-```   
-
+ `Style 1, character to binary`  
+  
+ `----------------------------------`  
+  
+ `0x4E616D65`  
+  
+ `(1 row(s) affected)`  
+  
 ```  
 SELECT CONVERT(binary(4), '4E616D65', 2) AS [Style 2, character to binary];  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-```   
-Style 2, character to binary  
-----------------------------------  
-0x4E616D65  
-(1 row(s) affected)`  
-```   
-
+ `Style 2, character to binary`  
+  
+ `----------------------------------`  
+  
+ `0x4E616D65`  
+  
+ `(1 row(s) affected)`  
+  
 ### I. Converting date and time data types  
  The following example demonstrates the conversion of date, time, and datetime data types.  
   
@@ -603,23 +655,175 @@ SET @d1 = GETDATE();
 SET @t1 = GETDATE();  
 SET @dt1 = GETDATE();  
 SET @d1 = GETDATE();  
-
 -- When converting date to datetime the minutes portion becomes zero.  
 SELECT @d1 AS [date], CAST (@d1 AS datetime) AS [date as datetime];  
-
 -- When converting time to datetime the date portion becomes zero   
 -- which converts to January 1, 1900.  
 SELECT @t1 AS [time], CAST (@t1 AS datetime) AS [time as datetime];  
-
 -- When converting datetime to date or time non-applicable portion is dropped.  
-SELECT @dt1 AS [datetime], 
-    CAST (@dt1 AS date) AS [datetime as date], 
-    CAST (@dt1 AS time) AS [datetime as time];  
+SELECT @dt1 AS [datetime], CAST (@dt1 AS date) AS [datetime as date], CAST (@dt1 AS time) AS [datetime as time];  
 ```  
   
+## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+  
+### J. Using CAST and CONVERT  
+ This example retrieves the name of the product for those products that have a `3` in the first digit of their list price and converts their `ListPrice` to **int**.  
+  
+```  
+-- Uses AdventureWorks  
+  
+SELECT EnglishProductName AS ProductName, ListPrice  
+FROM dbo.DimProduct  
+WHERE CAST(ListPrice AS int) LIKE '3%';  
+  
+```  
+  
+ This example shows the same query, using CONVERT instead of CAST.  
+  
+```  
+USE ssawPDW;  
+  
+SELECT EnglishProductName AS ProductName, ListPrice  
+FROM dbo.DimProduct  
+WHERE CONVERT(int, ListPrice) LIKE '3%';  
+```  
+  
+### K. Using CAST with arithmetic operators  
+ The following example calculates a single column computation by dividing the product unit price (`UnitPrice`) by the discount percentage (`UnitPriceDiscountPct`). This result is converted to an `int` data type after being rounded to the nearest whole number.  
+  
+```  
+-- Uses AdventureWorks   
+  
+SELECT ProductKey, UnitPrice,UnitPriceDiscountPct,  
+       CAST(ROUND (UnitPrice*UnitPriceDiscountPct,0) AS int) AS DiscountPrice  
+FROM dbo.FactResellerSales  
+WHERE SalesOrderNumber = 'SO47355'   
+      AND UnitPriceDiscountPct > .02  
+```  
+  
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+  
+ `ProductKey  UnitPrice  UnitPriceDiscountPct  DiscountPrice`  
+  
+ `----------  ---------  --------------------  -------------`  
+  
+ `323         430.6445   0.05                  22`  
+  
+ `213         18.5043    0.05                  1`  
+  
+ `456         37.4950    0.10                  4`  
+  
+ `456         37.4950    0.10                  4`  
+  
+ `216         18.5043    0.05                  1`  
+  
+### L. Using CAST to concatenate  
+ The following example concatenates noncharacter expressions by using CAST.  
+  
+```  
+-- Uses AdventureWorks  
+  
+SELECT 'The list price is ' + CAST(ListPrice AS varchar(12)) AS ListPrice  
+FROM dbo.DimProduct  
+WHERE ListPrice BETWEEN 350.00 AND 400.00;  
+```  
+  
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+  
+ `ListPrice`  
+  
+ `------------------------`  
+  
+ `The list price is 357.06`  
+  
+ `The list price is 364.09`  
+  
+ `The list price is 364.09`  
+  
+ `The list price is 364.09`  
+  
+ `The list price is 364.09`  
+  
+### M. Using CAST to produce more readable text  
+ The following example uses CAST in the SELECT list to convert the `Name` column to a **char(10)** column.  
+  
+```  
+-- Uses AdventureWorks  
+  
+SELECT DISTINCT CAST(EnglishProductName AS char(10)) AS Name, ListPrice  
+FROM dbo.DimProduct  
+WHERE EnglishProductName LIKE 'Long-Sleeve Logo Jersey, M';  
+```  
+  
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+  
+ `Name        UnitPrice`  
+  
+ `----------  ---------`  
+  
+ `Long-Sleev  31.2437`  
+  
+ `Long-Sleev  32.4935`  
+  
+ `Long-Sleev  49.99`  
+  
+### N. Using CAST with the LIKE clause  
+ The following example converts the **money** column `ListPrice` to an **int** type and then to a **char(20)** type so that it can be used with the LIKE clause.  
+  
+```  
+-- Uses AdventureWorks  
+  
+SELECT EnglishProductName AS Name, ListPrice  
+FROM dbo.DimProduct  
+WHERE CAST(CAST(ListPrice AS int) AS char(20)) LIKE '2%';  
+```  
+  
+### O. Using CAST and CONVERT with datetime data  
+ The following example displays the current date and time, uses CAST to change the current date and time to a character data type, and then uses CONVERT display the date and time in the ISO 8601 format.  
+  
+```  
+-- Uses AdventureWorks  
+  
+SELECT TOP(1)  
+   SYSDATETIME() AS UnconvertedDateTime,  
+   CAST(SYSDATETIME() AS nvarchar(30)) AS UsingCast,  
+   CONVERT(nvarchar(30), SYSDATETIME(), 126) AS UsingConvertTo_ISO8601  
+FROM dbo.DimCustomer;  
+```  
+  
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+  
+ `UnconvertedDateTime         UsingCast                      UsingConvertTo_ISO8601`  
+  
+ `-----------------------     ------------------------------ ------------------------------`  
+  
+ `07/20/2010 1:44:31 PM       2010-07-20 13:44:31.5879025    2010-07-20T13:44:31.5879025`  
+  
+ The following example is approximately the opposite of the previous example. The example displays a date and time as character data, uses CAST to change the character data to the **datetime** data type, and then uses CONVERT to change the character data to the **datetime** data type.  
+  
+```  
+USE ssawPDW;   
+  
+SELECT TOP(1)   
+   '2010-07-25T13:50:38.544' AS UnconvertedText,  
+CAST('2010-07-25T13:50:38.544' AS datetime) AS UsingCast,  
+   CONVERT(datetime, '2010-07-25T13:50:38.544', 126) AS UsingConvertFrom_ISO8601  
+FROM dbo.DimCustomer;  
+```  
+  
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+  
+ `UnconvertedText         UsingCast               UsingConvertFrom_ISO8601`  
+  
+ `----------------------- ----------------------- ------------------------`  
+  
+ `2010-07-25T13:50:38.544 07/25/2010 1:50:38 PM   07/25/2010 1:50:38 PM`  
   
 ## See Also  
  [Data Type Conversion &#40;Database Engine&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [System Functions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
  [Write International Transact-SQL Statements](../../relational-databases/collations/write-international-transact-sql-statements.md)  
+  
+  
+

@@ -5,7 +5,7 @@ description:  This quick start tutorial shows how to install SQL Server 2017 on 
 author: sabotta 
 ms.author: carlasab 
 manager: craigg
-ms.date: 07/19/2017
+ms.date: 07/24/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -30,30 +30,19 @@ For other system requirements, see [System requirements for SQL Server on Linux]
 
 To configure SQL Server on RHEL, run the following commands in a terminal to install the **mssql-server** package:
 
-1. Enter superuser mode.
-
-   ```bash
-   sudo su
-   ```
-
 1. Download the Microsoft SQL Server Red Hat repository configuration file:
 
    ```bash
-   curl https://packages.microsoft.com/config/rhel/7/mssql-server.repo > /etc/yum.repos.d/mssql-server.repo
-   ```
-
-1. Exit superuser mode.
-
-   ```bash
-   exit
+   sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server.repo
    ```
 
 1. Run the following commands to install SQL Server:
 
    ```bash
+   sudo yum update
    sudo yum install -y mssql-server
    ```
-   
+
 1. After the package installation finishes, run **mssql-conf setup** and follow the prompts to set the SA password and chose your edition.
 
    ```bash
@@ -88,22 +77,10 @@ At this point, SQL Server is running on your RHEL machine and is ready to use!
 
 To create a database, you need to connect with a tool that can run Transact-SQL statements on the SQL Server. The following steps install the SQL Server command-line tools: [sqlcmd](../tools/sqlcmd-utility.md) and [bcp](../tools/bcp-utility.md).
 
-1. Enter superuser mode.
-
-   ```bash
-   sudo su
-   ```
-
 1. Download the Microsoft Red Hat repository configuration file.
 
    ```bash
-   curl https://packages.microsoft.com/config/rhel/7/prod.repo > /etc/yum.repos.d/msprod.repo
-   ```
-
-1. Exit superuser mode.
-
-   ```bash
-   exit
+   sudo curl -o /etc/yum.repos.d/msprod.repo https://packages.microsoft.com/config/rhel/7/prod.repo
    ```
 
 1. If you had a previous version of **mssql-tools** installed, remove any older unixODBC packages.
@@ -117,7 +94,7 @@ To create a database, you need to connect with a tool that can run Transact-SQL 
 
    ```bash
    sudo yum update
-   sudo yum install mssql-tools unixODBC-devel
+   sudo yum install -y mssql-tools unixODBC-devel
    ```
 
 1. For convenience, add `/opt/mssql-tools/bin/` to your **PATH** environment variable. This enables you to run the tools without specifying the full path. Run the following commands to modify the **PATH** for both login sessions and interactive/non-login sessions:

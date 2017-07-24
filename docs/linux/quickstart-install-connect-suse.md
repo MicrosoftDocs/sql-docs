@@ -5,7 +5,7 @@ description:  This quick start tutorial shows how to install SQL Server 2017 on 
 author: sabotta 
 ms.author: carlasab 
 manager: craigg
-ms.date: 07/19/2017
+ms.date: 07/24/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -34,14 +34,13 @@ To configure SQL Server on SLES, run the following commands in a terminal to ins
 
    ```bash
    sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server.repo
-
    sudo zypper --gpg-auto-import-keys refresh
    ```
 
 1. Run the following commands to install SQL Server:
 
    ```bash
-   sudo zypper install mssql-server
+   sudo zypper install -y mssql-server
    ```
 
 1. After the package installation finishes, run **mssql-conf setup** and follow the prompts to set the SA password and chose your edition.
@@ -84,7 +83,7 @@ To create a database, you need to connect with a tool that can run Transact-SQL 
 1. Install **mssql-tools** with the unixODBC developer package.
 
    ```bash
-   sudo zypper install mssql-tools unixODBC-devel
+   sudo zypper install -y mssql-tools unixODBC-devel
    ```
 
 1. For convenience, add `/opt/mssql-tools/bin/` to your **PATH** environment variable. This enables you to run the tools without specifying the full path. Run the following commands to modify the **PATH** for both login sessions and interactive/non-login sessions:

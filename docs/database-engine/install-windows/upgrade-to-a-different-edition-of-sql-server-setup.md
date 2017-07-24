@@ -40,7 +40,7 @@ For local installations, you must run Setup as an administrator. If you install 
   
 1.  Insert the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation media. From the root folder, double-click setup.exe or launch the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation Center from Configuration Tools. To install from a network share, locate the root folder on the share, and then double-click Setup.exe.  
   
-2.  To upgrade an existing instance of [!INCLUDE[ssNoversion](../../includes/noversion-md.md)] to a different edition, from the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation Center click **Maintenance**, and then select **Edition Upgrade**.  
+2.  To upgrade an existing instance of [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] to a different edition, from the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation Center click **Maintenance**, and then select **Edition Upgrade**.  
   
 3.  If Setup support files are required, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup installs them. If you are instructed to restart your computer, restart before you continue.  
   

@@ -14,20 +14,20 @@ ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
 
 In this quick start tutorial, you first install SQL Server 2017 RC1 on Ubuntu 16.04. Then connect with **sqlcmd** to create your first database and run queries.
 
+> [!TIP]
+> This tutorial requires user input and an internet connection. If you are interested in the [unattended](sql-server-linux-setup.md#unattended) or [offline](sql-server-linux-setup.md#offline) installation procedures, see [Installation guidance for SQL Server on Linux](sql-server-linux-setup.md).
+
 ## Prerequisites
 
 You must have a Ubuntu machine with **at least 3.25 GB** of memory.
 
-To install Ubuntu, go to [http://www.ubuntu.com/download/server](http://www.ubuntu.com/download/server). You can also create Ubuntu virtual machines in Azure. For instructions, see [Create a Linux virtual machine with the Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/quick-create-cli).
+To install Ubuntu on your own machine, go to [http://www.ubuntu.com/download/server](http://www.ubuntu.com/download/server). You can also create Ubuntu virtual machines in Azure. See [Create and Manage Linux VMs with the Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm).
 
 For other system requirements, see [System requirements for SQL Server on Linux](sql-server-linux-setup.md#system).
 
 ## <a id="install"></a>Install SQL Server
 
 To configure SQL Server on Ubuntu, run the following commands in a terminal to install the **mssql-server** package.
-
-> [!TIP]
-> These commands involve user input and assume a connection to the internet. If you are interested in the unattended or offline installation procedures, see [Installation guidance for SQL Server on Linux](sql-server-linux-setup.md).
 
 1. Import the public repository GPG keys:
 
@@ -62,7 +62,7 @@ To configure SQL Server on Ubuntu, run the following commands in a terminal to i
    >
    > `This is an evaluation version.  There are [175] days left in the evaluation period.`
    >
-   > This does not reflect the edition you selected. It relates to the preview period for RC1.
+   > This message does not reflect the edition you selected. It relates to the preview period for RC1.
 
 1. Once the configuration is done, verify that the service is running:
 
@@ -76,7 +76,7 @@ At this point, SQL Server is running on your Ubuntu machine and is ready to use!
 
 ## <a id="tools"></a>Install the SQL Server command-line tools
 
-To create a database, you need to connect with a tool that can run Transact-SQL statements on the SQL Server. The following steps install the SQL Server command-line tools, [sqlcmd](../tools/sqlcmd-utility.md) and [bcp](../tools/bcp-utility.md).
+To create a database, you need to connect with a tool that can run Transact-SQL statements on the SQL Server. The following steps install the SQL Server command-line tools: [sqlcmd](../tools/sqlcmd-utility.md) and [bcp](../tools/bcp-utility.md).
 
 1. Import the public repository GPG keys:
 

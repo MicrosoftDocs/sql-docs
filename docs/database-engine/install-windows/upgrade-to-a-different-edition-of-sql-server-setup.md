@@ -26,7 +26,7 @@ manager: "jhubbard"
 - [Hardware and Software Requirements for Installing SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   
 > [!NOTE]  
-> **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on a failover cluster instance:** Running edition upgrade on one of the nodes of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster instanceis sufficient. This node can be either active or passive, and the engine does not bring the resources offline during the edition upgrade. After the edition upgrade it is required to either restart the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance or failover to a different node.  
+> **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on a failover cluster instance:** Running edition upgrade on one of the nodes of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster instance is sufficient. This node can be either active or passive, and the engine does not bring the resources offline during the edition upgrade. After the edition upgrade it is required to either restart the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance or failover to a different node.  
   
 ## Prerequisites  
 For local installations, you must run Setup as an administrator. If you install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from a remote share, you must use a domain account that has read permissions on the remote share.  

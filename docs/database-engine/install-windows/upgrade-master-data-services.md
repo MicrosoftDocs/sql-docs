@@ -118,7 +118,7 @@ manager: "jhubbard"
 ##  <a name="twocomputer"></a> Upgrade in Two-Computer Scenario  
  In this scenario you upgrade a system in which SQL Server is installed on two computers: one with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] or [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)], and the other with an earlier version of [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)].  
   
- If an earlier version of [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] is installed, you continue to use the earlier version \ to host your MDS database on one computer. However, you must upgrade the schema of the MDS database, and then use the [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] or [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)] web application respectively to access the MDS database. The MDS database can no longer be accessed by the earlier version web application.  
+ If an earlier version of [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] is installed, you continue to use the earlier version to host your MDS database on one computer. However, you must upgrade the schema of the MDS database, and then use the [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] or [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)] web application respectively to access the MDS database. The MDS database can no longer be accessed by the earlier version web application.  
   
  **To upgrade in two-computer scenario**  
   

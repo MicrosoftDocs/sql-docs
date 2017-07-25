@@ -73,7 +73,7 @@ This topic describes how to prepare a database for an Always On availability gro
   
 2.  Create at least one new log backup of the primary database.
 
-   >[!NOTE
+   >[!NOTE]
    >A transaction log backup may not be required if a transaction log backup has not been previously captured on the database in the primary replica. Microsoft recommends taking a transaction log backup each time a new database is joined to the availability group. 
   
 3.  On the server instance that hosts the secondary replica, restore the full database backup of the primary database (and optionally a differential backup) followed by any subsequent log backups.  

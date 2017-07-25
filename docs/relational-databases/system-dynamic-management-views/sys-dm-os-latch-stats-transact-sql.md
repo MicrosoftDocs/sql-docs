@@ -163,7 +163,7 @@ GO
 |SERVICE_BROKER_MAP_MANAGER|Internal use only.|  
 |SERVICE_BROKER_HOST_NAME|Internal use only.|  
 |SERVICE_BROKER_READ_CACHE|Internal use only.|  
-|SERVICE_BROKER_WAITFOR_MANAGER| Used to synchronize an instance level map of waiter queues. One queue exists per database ID, Database Version, and Queue ID tuple. Contention on latches of this class can occur when many connections are: In a WAITFOR(RECIEVE) wait state; calling WAITFOR(RECIEVE); exceeding the WAITFOR timeout; receiving a message; committing or rolling back the transaction that contains the WAITFOR(RECIEVE); You can reduce the contention by reducing the number of threads in a WAITFOR(RECIEVE) wait state. |  
+|SERVICE_BROKER_WAITFOR_MANAGER| Used to synchronize an instance level map of waiter queues. One queue exists per database ID, Database Version, and Queue ID tuple. Contention on latches of this class can occur when many connections are: In a WAITFOR(RECEIVE) wait state; calling WAITFOR(RECEIVE); exceeding the WAITFOR timeout; receiving a message; committing or rolling back the transaction that contains the WAITFOR(RECEIVE); You can reduce the contention by reducing the number of threads in a WAITFOR(RECEIVE) wait state. |  
 |SERVICE_BROKER_WAITFOR_TRANSACTION_DATA|Internal use only.|  
 |SERVICE_BROKER_TRANSMISSION_TRANSACTION_DATA|Internal use only.|  
 |SERVICE_BROKER_TRANSPORT|Internal use only.|  

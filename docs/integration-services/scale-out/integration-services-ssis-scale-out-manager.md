@@ -89,7 +89,7 @@ To enable or disable a Scale Out Worker, select the Scale Out Worker and click t
 
 ## Edit Scale Out Worker description
 To edit the description of a Scale Out Worker, select the Scale Out Worker and click the "Edit" button. 
-After finish editting, click the "Save" button.
+After you finish editing, click the "Save" button.
 
 ![Portal Save Worker](media/portal-save-worker.PNG)
 

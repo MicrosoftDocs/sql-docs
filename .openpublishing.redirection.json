@@ -1,6 +1,11 @@
 {
     "redirections": [
         {
+            "source_path": "docs/linux/sql-server-linux-export-import-with-sqlpackage.md",
+            "redirect_url": "/sql/linux/sql-server-linux-migrate-ssms",
+            "redirect_document_id": false
+        },       
+        {
             "source_path": "docs/linux/sql-server-linux-migrate-sqlpackage.md",
             "redirect_url": "/sql/linux/sql-server-linux-migrate-ssms",
             "redirect_document_id": false

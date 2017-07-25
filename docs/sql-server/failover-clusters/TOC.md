@@ -3,7 +3,7 @@
 # [Management of Logins and Jobs After Role Switching](management-of-logins-and-jobs-after-role-switching-sql-server.md)  
 # [Troubleshoot Orphaned Users](troubleshoot-orphaned-users-sql-server.md)  
 
-# [Failover Cluster Installation (Articles)](install/TOC.md)  
+# [Failover Cluster Installation](install/sql-server-failover-cluster-installation.md)  
 
 # [Windows Server Failover Clustering (WSFC) with SQL Server](windows/windows-server-failover-clustering-wsfc-with-sql-server.md)  
 ## [WSFC Quorum Modes and Voting Configuration](windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md)  

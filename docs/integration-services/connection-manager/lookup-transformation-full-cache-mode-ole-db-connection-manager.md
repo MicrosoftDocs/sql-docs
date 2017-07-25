@@ -20,13 +20,13 @@ manager: "jhubbard"
 # Lookup Transformation Full Cache Mode - OLE DB Connection Manager
   You can configure the Lookup transformation to use full cache mode and an OLE DB connection manager. In the full cache mode, the reference dataset is loaded into cache before the Lookup transformation runs.  
   
- The Lookup transformation performs lookups by joining data in input columns from a connected data source with columns in a reference dataset. For more information, see [Lookup Transformation](../../../integration-services/data-flow/transformations/lookup-transformation.md).  
+ The Lookup transformation performs lookups by joining data in input columns from a connected data source with columns in a reference dataset. For more information, see [Lookup Transformation](../../integration-services/data-flow/transformations/lookup-transformation.md).  
   
  When you configure the Lookup transformation to use an OLE DB connection manager, you select a table, view, or SQL query to generate the reference dataset.  
   
 ### To implement a Lookup transformation in full cache mode by using OLE DB connection manager  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] project that contains the package you want, and then double-click the package in Solution Explorer.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project that contains the package you want, and then double-click the package in Solution Explorer.  
   
 2.  On the **Data Flow** tab, from the **Toolbox**, drag the Lookup transformation to the design surface.  
   
@@ -43,7 +43,7 @@ manager: "jhubbard"
   
 7.  In the **Specify how to handle rows with no matching entries** list, select an error handling option for rows without matching entries.  
   
-8.  On the Connection page, select a connection manager from the **OLE DB connection manager** list or click **New** to create a new connection manager. For more information, see [OLE DB Connection Manager](../../../integration-services/connection-manager/ole-db-connection-manager.md).  
+8.  On the Connection page, select a connection manager from the **OLE DB connection manager** list or click **New** to create a new connection manager. For more information, see [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
   
 9. Do one of the following tasks:  
   
@@ -67,7 +67,7 @@ manager: "jhubbard"
     >  The Lookup transformation automatically maps columns that have the same name and the same data type.  
   
     > [!NOTE]  
-    >  Columns must have matching data types to be mapped. For more information, see [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md).  
+    >  Columns must have matching data types to be mapped. For more information, see [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
 11. Include lookup columns in the output by doing the following tasks:  
   
@@ -75,13 +75,13 @@ manager: "jhubbard"
   
     2.  In **Lookup Operation** list, specify whether the values from the lookup columns replace values in the input column or are written to a new column.  
   
-12. To configure the error output, click the **Error Output** page and set the error handling options. For more information, see [Lookup Transformation Editor &#40;Error Output Page&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md).  
+12. To configure the error output, click the **Error Output** page and set the error handling options. For more information, see [Lookup Transformation Editor &#40;Error Output Page&#41;](../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md).  
   
 13. Click **OK** to save your changes to the Lookup transformation, and then run the package.  
   
 ## See Also  
- [Implement a Lookup Transformation in Full Cache Mode Using the Cache Connection Manager](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md)   
- [Implement a Lookup in No Cache or Partial Cache Mode](../../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
- [Integration Services Transformations](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
+ [Implement a Lookup Transformation in Full Cache Mode Using the Cache Connection Manager](../../integration-services/connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)   
+ [Implement a Lookup in No Cache or Partial Cache Mode](../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
+ [Integration Services Transformations](../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   

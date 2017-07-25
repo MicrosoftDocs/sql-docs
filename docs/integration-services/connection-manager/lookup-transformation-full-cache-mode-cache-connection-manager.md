@@ -21,9 +21,9 @@ manager: "jhubbard"
   You can configure the Lookup transformation to use full cache mode and a Cache connection manager. In full cache mode, the reference dataset is loaded into cache before the Lookup transformation runs.  
   
 > [!NOTE]  
->  The Cache connection manager does not support the Binary Large Object (BLOB) data types DT_TEXT, DT_NTEXT, and DT_IMAGE. If the reference dataset contains a BLOB data type, the component will fail when you run the package. You can use the **Cache Connection Manager Editor** to modify column data types. For more information, see [Cache Connection Manager Editor](../../../integration-services/data-flow/transformations/cache-connection-manager-editor.md).  
+>  The Cache connection manager does not support the Binary Large Object (BLOB) data types DT_TEXT, DT_NTEXT, and DT_IMAGE. If the reference dataset contains a BLOB data type, the component will fail when you run the package. You can use the **Cache Connection Manager Editor** to modify column data types. For more information, see [Cache Connection Manager Editor](../../integration-services/connection-manager/cache-connection-manager-editor.md).  
   
- The Lookup transformation performs lookups by joining data in input columns from a connected data source with columns in a reference dataset. For more information, see [Lookup Transformation](../../../integration-services/data-flow/transformations/lookup-transformation.md).  
+ The Lookup transformation performs lookups by joining data in input columns from a connected data source with columns in a reference dataset. For more information, see [Lookup Transformation](../../integration-services/data-flow/transformations/lookup-transformation.md).  
   
  You use one of the following to generate a reference dataset:  
   
@@ -49,21 +49,21 @@ manager: "jhubbard"
   
  For more information, see the following topics:  
   
--   [Cache Transform](../../../integration-services/data-flow/transformations/cache-transform.md)  
+-   [Cache Transform](../../integration-services/data-flow/transformations/cache-transform.md)  
   
--   [Cache Connection Manager](../../../integration-services/data-flow/transformations/cache-connection-manager.md)  
+-   [Cache Connection Manager](../../integration-services/connection-manager/cache-connection-manager.md)  
   
--   [Precedence Constraints](../../../integration-services/control-flow/precedence-constraints.md)  
+-   [Precedence Constraints](../../integration-services/control-flow/precedence-constraints.md)  
   
--   [Execute Package Task](../../../integration-services/control-flow/execute-package-task.md)  
+-   [Execute Package Task](../../integration-services/control-flow/execute-package-task.md)  
   
--   [Sequence Container](../../../integration-services/control-flow/sequence-container.md)  
+-   [Sequence Container](../../integration-services/control-flow/sequence-container.md)  
   
  For a video that demonstrates how to implement a Lookup transformation in Full Cache mode using the Cache connection manager, see [How to: Implement a Lookup Transformation in Full Cache Mode (SQL Server Video)](http://go.microsoft.com/fwlink/?LinkId=131031).  
   
 ### To implement a Lookup transformation in full cache mode in one package by using Cache connection manager and a data source in the data flow  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], open a [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] project, and then open a package.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], open a [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project, and then open a package.  
   
 2.  On the **Control Flow** tab, add two Data Flow tasks, and then connect the tasks by using a green connector:  
   
@@ -78,7 +78,7 @@ manager: "jhubbard"
      For non-index columns, the index position is 0. For index columns, the index position is a sequential, positive number.  
   
     > [!NOTE]  
-    >  When the Lookup transformation is configured to use a Cache connection manager, only index columns in the reference dataset can be mapped to input columns. Also, all index columns must be mapped. For more information, see [Cache Connection Manager Editor](../../../integration-services/data-flow/transformations/cache-connection-manager-editor.md).  
+    >  When the Lookup transformation is configured to use a Cache connection manager, only index columns in the reference dataset can be mapped to input columns. Also, all index columns must be mapped. For more information, see [Cache Connection Manager Editor](../../integration-services/connection-manager/cache-connection-manager-editor.md).  
   
 6.  To save the cache to a file, in the **Cache Connection Manager Editor**, on the **General** tab, configure the Cache connection manager by setting the following options:  
   
@@ -89,9 +89,9 @@ manager: "jhubbard"
          If you type a path for a file that does not exist, the system creates the file when you run the package.  
   
     > [!NOTE]  
-    >  The protection level of the package does not apply to the cache file. If the cache file contains sensitive information, use an access control list (ACL) to restrict access to the location or folder in which you store the file. You should enable access only to certain accounts. For more information, see [Access to Files Used by Packages](../../../integration-services/security/security-overview-integration-services.md#files).  
+    >  The protection level of the package does not apply to the cache file. If the cache file contains sensitive information, use an access control list (ACL) to restrict access to the location or folder in which you store the file. You should enable access only to certain accounts. For more information, see [Access to Files Used by Packages](../../integration-services/security/security-overview-integration-services.md#files).  
   
-7.  Configure the Cache Transform as needed. For more information, see [Cache Transformation Editor &#40;Connection Manager Page&#41;](../../../integration-services/data-flow/transformations/cache-transformation-editor-connection-manager-page.md) and [Cache Transformation Editor &#40;Mappings Page&#41;](../../../integration-services/data-flow/transformations/cache-transformation-editor-mappings-page.md).  
+7.  Configure the Cache Transform as needed. For more information, see [Cache Transformation Editor &#40;Connection Manager Page&#41;](../../integration-services/data-flow/transformations/cache-transformation-editor-connection-manager-page.md) and [Cache Transformation Editor &#40;Mappings Page&#41;](../../integration-services/data-flow/transformations/cache-transformation-editor-mappings-page.md).  
   
 8.  In the second data flow, add a Lookup transformation, and then configure the transformation by doing the following tasks:  
   
@@ -116,11 +116,11 @@ manager: "jhubbard"
         >  The Lookup transformation automatically maps columns that have the same name and the same data type.  
   
         > [!NOTE]  
-        >  Columns must have matching data types to be mapped. For more information, see [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md).  
+        >  Columns must have matching data types to be mapped. For more information, see [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
     8.  In the **Available Lookup Columns** list, select columns. Then in the **Lookup Operation** list, specify whether the values from the lookup columns replace values in the input column or are written to a new column.  
   
-    9. To configure the error output, click the **Error Output** page and set the error handling options. For more information, see [Lookup Transformation Editor &#40;Error Output Page&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md).  
+    9. To configure the error output, click the **Error Output** page and set the error handling options. For more information, see [Lookup Transformation Editor &#40;Error Output Page&#41;](../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md).  
   
     10. Click **OK** to save your changes to the Lookup transformation.  
   
@@ -128,7 +128,7 @@ manager: "jhubbard"
   
 ### To implement a Lookup transformation in full cache mode in two packages by using Cache connection manager and a data source in the data flow  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], open a [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] project, and then open two packages.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], open a [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project, and then open two packages.  
   
 2.  On the Control Flow tab in each package, add a Data Flow task.  
   
@@ -147,16 +147,16 @@ manager: "jhubbard"
          If you type a path for a file that does not exist, the system creates the file when you run the package.  
   
     > [!NOTE]  
-    >  The protection level of the package does not apply to the cache file. If the cache file contains sensitive information, use an access control list (ACL) to restrict access to the location or folder in which you store the file. You should enable access only to certain accounts. For more information, see [Access to Files Used by Packages](../../../integration-services/security/security-overview-integration-services.md#files).  
+    >  The protection level of the package does not apply to the cache file. If the cache file contains sensitive information, use an access control list (ACL) to restrict access to the location or folder in which you store the file. You should enable access only to certain accounts. For more information, see [Access to Files Used by Packages](../../integration-services/security/security-overview-integration-services.md#files).  
   
 6.  Click the **Columns** tab, and then specify which columns are the index columns by using the **Index Position** option.  
   
      For non-index columns, the index position is 0. For index columns, the index position is a sequential, positive number.  
   
     > [!NOTE]  
-    >  When the Lookup transformation is configured to use a Cache connection manager, only index columns in the reference dataset can be mapped to input columns. Also, all index columns must be mapped. For more information, see [Cache Connection Manager Editor](../../../integration-services/data-flow/transformations/cache-connection-manager-editor.md).  
+    >  When the Lookup transformation is configured to use a Cache connection manager, only index columns in the reference dataset can be mapped to input columns. Also, all index columns must be mapped. For more information, see [Cache Connection Manager Editor](../../integration-services/connection-manager/cache-connection-manager-editor.md).  
   
-7.  Configure the Cache Transform as needed. For more information, see [Cache Transformation Editor &#40;Connection Manager Page&#41;](../../../integration-services/data-flow/transformations/cache-transformation-editor-connection-manager-page.md) and [Cache Transformation Editor &#40;Mappings Page&#41;](../../../integration-services/data-flow/transformations/cache-transformation-editor-mappings-page.md).  
+7.  Configure the Cache Transform as needed. For more information, see [Cache Transformation Editor &#40;Connection Manager Page&#41;](../../integration-services/data-flow/transformations/cache-transformation-editor-connection-manager-page.md) and [Cache Transformation Editor &#40;Mappings Page&#41;](../../integration-services/data-flow/transformations/cache-transformation-editor-mappings-page.md).  
   
 8.  Do one of the following to populate the Cache connection manager that is used in the second package:  
   
@@ -166,7 +166,7 @@ manager: "jhubbard"
   
 9. In the child package, create a Cache connection manager by right-clicking in the **Connection Managers** area, clicking **New Connection**, selecting **CACHE** in the **Add SSIS Connection Manager** dialog box, and then clicking **Add**.  
   
-     The **Connection Managers** area appears on the bottom of the **Control Flow**, **Data Flow**, and **Event Handlers** tabs of [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] Designer.  
+     The **Connection Managers** area appears on the bottom of the **Control Flow**, **Data Flow**, and **Event Handlers** tabs of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Designer.  
   
 10. In the **Cache Connection Manager Editor**, on the **General** tab, configure the Cache connection manager to read the data from the cache file that you selected by setting the following options:  
   
@@ -175,7 +175,7 @@ manager: "jhubbard"
     -   For **File name**, either type the file path or click **Browse** to select the file.  
   
     > [!NOTE]  
-    >  The protection level of the package does not apply to the cache file. If the cache file contains sensitive information, use an access control list (ACL) to restrict access to the location or folder in which you store the file. You should enable access only to certain accounts. For more information, see [Access to Files Used by Packages](../../../integration-services/security/security-overview-integration-services.md#files).  
+    >  The protection level of the package does not apply to the cache file. If the cache file contains sensitive information, use an access control list (ACL) to restrict access to the location or folder in which you store the file. You should enable access only to certain accounts. For more information, see [Access to Files Used by Packages](../../integration-services/security/security-overview-integration-services.md#files).  
   
 11. If you copied the column metadata in step 8, click **Columns**, select the empty row, and then press CTRL+V to paste the column metadata.  
   
@@ -202,25 +202,25 @@ manager: "jhubbard"
         >  The Lookup transformation automatically maps columns that have the same name and the same data type.  
   
         > [!NOTE]  
-        >  Columns must have matching data types to be mapped. For more information, see [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md).  
+        >  Columns must have matching data types to be mapped. For more information, see [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
     8.  In the **Available Lookup Columns** list, select columns. Then in the **Lookup Operation** list, specify whether the values from the lookup columns replace values in the input column or are written to a new column.  
   
-    9. To configure the error output, click the **Error Output** page and set the error handling options. For more information, see [Lookup Transformation Editor &#40;Error Output Page&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md).  
+    9. To configure the error output, click the **Error Output** page and set the error handling options. For more information, see [Lookup Transformation Editor &#40;Error Output Page&#41;](../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md).  
   
     10. Click **OK** to save your changes to the Lookup transformation.  
   
-13. Open the parent package, add an Execute Package task to the control flow, and then configure the task to call the child package. For more information, see [Execute Package Task](../../../integration-services/control-flow/execute-package-task.md).  
+13. Open the parent package, add an Execute Package task to the control flow, and then configure the task to call the child package. For more information, see [Execute Package Task](../../integration-services/control-flow/execute-package-task.md).  
   
 14. Run the packages.  
   
 ### To implement a Lookup transformation in full cache mode by using Cache connection manager and an existing cache file  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], open a [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] project, and then open a package.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], open a [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project, and then open a package.  
   
 2.  Right-click in the **Connection Managers** area, and then click **New Connection**.  
   
-     The **Connection Managers** area appears on the bottom of the **Control Flow**, **Data Flow**, and **Event Handlers** tabs of [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] Designer.  
+     The **Connection Managers** area appears on the bottom of the **Control Flow**, **Data Flow**, and **Event Handlers** tabs of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Designer.  
   
 3.  In the **Add SSIS Connection Manager** dialog box, select **CACHE**, and then click **Add** to add a Cache connection manager.  
   
@@ -233,14 +233,14 @@ manager: "jhubbard"
     -   For **File name**, either type the file path or click **Browse** to select the file.  
   
     > [!NOTE]  
-    >  The protection level of the package does not apply to the cache file. If the cache file contains sensitive information, use an access control list (ACL) to restrict access to the location or folder in which you store the file. You should enable access only to certain accounts. For more information, see [Access to Files Used by Packages](../../../integration-services/security/security-overview-integration-services.md#files).  
+    >  The protection level of the package does not apply to the cache file. If the cache file contains sensitive information, use an access control list (ACL) to restrict access to the location or folder in which you store the file. You should enable access only to certain accounts. For more information, see [Access to Files Used by Packages](../../integration-services/security/security-overview-integration-services.md#files).  
   
 6.  Click the **Columns** tab, and then specify which columns are the index columns by using the **Index Position** option.  
   
      For non-index columns, the index position is 0. For index columns, the index position is a sequential, positive number.  
   
     > [!NOTE]  
-    >  When the Lookup transformation is configured to use a Cache connection manager, only index columns in the reference dataset can be mapped to input columns. Also, all index columns must be mapped. For more information, see [Cache Connection Manager Editor](../../../integration-services/data-flow/transformations/cache-connection-manager-editor.md).  
+    >  When the Lookup transformation is configured to use a Cache connection manager, only index columns in the reference dataset can be mapped to input columns. Also, all index columns must be mapped. For more information, see [Cache Connection Manager Editor](../../integration-services/connection-manager/cache-connection-manager-editor.md).  
   
 7.  On the **Control Flow** tab, add a Data Flow task to the package, and then add a Lookup transformation to the data flow.  
   
@@ -267,19 +267,19 @@ manager: "jhubbard"
         >  The Lookup transformation automatically maps columns that have the same name and the same data type.  
   
         > [!NOTE]  
-        >  Columns must have matching data types to be mapped. For more information, see [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md).  
+        >  Columns must have matching data types to be mapped. For more information, see [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
     8.  In the **Available Lookup Columns** list, select columns. Then in the **Lookup Operation** list, specify whether the values from the lookup columns replace values in the input column or are written to a new column.  
   
-    9. To configure the error output, click the **Error Output** page and set the error handling options. For more information, see [Lookup Transformation Editor &#40;Error Output Page&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md).  
+    9. To configure the error output, click the **Error Output** page and set the error handling options. For more information, see [Lookup Transformation Editor &#40;Error Output Page&#41;](../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md).  
   
     10. Click **OK** to save your changes to the Lookup transformation.  
   
 9. Run the package.  
   
 ## See Also  
- [Implement a Lookup Transformation in Full Cache Mode Using the OLE DB Connection Manager](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-ole-db-connection-manager.md)   
- [Implement a Lookup in No Cache or Partial Cache Mode](../../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
- [Integration Services Transformations](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
+ [Implement a Lookup Transformation in Full Cache Mode Using the OLE DB Connection Manager](../../integration-services/connection-manager/lookup-transformation-full-cache-mode-ole-db-connection-manager.md)   
+ [Implement a Lookup in No Cache or Partial Cache Mode](../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
+ [Integration Services Transformations](../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   

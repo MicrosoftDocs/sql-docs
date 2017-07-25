@@ -20,10 +20,7 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Azure Blob Upload Task
-  The **Azure Blob Upload Task** enables an SSIS package to upload files to an Azure blob storage.
-  
->   [!NOTE]
-> To ensure that the Azure Storage Connection Manager and the components that use it - that is, the Blob Source, the Blob Destination, the Blob Upload Task, and the Blob Download Task - can connect to both general-purpose storage accounts and to blob storage accounts, make sure you download the latest version of the Azure Feature Pack [here](https://www.microsoft.com/download/details.aspx?id=49492). For more info about these two types of storage accounts, see [Introduction to Microsoft Azure Storage](https://azure.microsoft.com/en-us/documentation/articles/storage-introduction/#general-purpose-storage-accounts). 
+The **Azure Blob Upload Task** enables an SSIS package to upload files to an Azure blob storage.
     
 To add an **Azure Blob Upload Task**, drag-drop it to the SSIS Designer, and double-click or right-click and click **Edit** to see the following **Azure Blob Upload Task Editor** dialog box.  
   

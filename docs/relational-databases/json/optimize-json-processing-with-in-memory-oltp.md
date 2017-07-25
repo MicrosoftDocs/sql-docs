@@ -1,7 +1,7 @@
 ---
 title: "Optimize JSON processing with in-memory OLTP | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/03/2017"
+ms.date: "07/18/2017"
 ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
@@ -18,12 +18,12 @@ manager: "jhubbard"
 # Optimize JSON processing with in-memory OLTP
 [!INCLUDE[tsql-appliesto-ssvNxt-asdb-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-asdb-xxxx-xxx.md)]
 
-SQL Server and Azure SQL Database let you work with text formatted as JSON. In order to increase performance of your OLTP queries that process JSON data, you can store JSON documents in memory-optimized tables using standard string columns (NVARCHAR type).
+SQL Server and Azure SQL Database let you work with text formatted as JSON. To increase the performance of queries that process JSON data, you can store JSON documents in memory-optimized tables using standard string columns (NVARCHAR type). Storing JSON data in memory-optimized tables increases query performance by leveraging lock-free, in-memory data access.
 
 ## Store JSON in memory-optimized tables
 The following example shows a memory-optimized `Product` table with two JSON columns, `Tags` and `Data`:
 
-```tsql
+```sql
 CREATE SCHEMA xtp;
 GO
 CREATE TABLE xtp.Product(
@@ -36,19 +36,20 @@ CREATE TABLE xtp.Product(
 
 ) WITH (MEMORY_OPTIMIZED=ON);
 ```
-Storing JSON data in memory-optimized tables increases query performance by leveraging lock-free, in-memory data access.
 
-## Optimize JSON with additional in-memory features
-New features that are available in SQL Server and Azure SQL Database let you fully integrate JSON functionalities with existing in-memory OLTP technologies. For example, you can do the following things:
- - Validate the structure of JSON documents stored in memory-optimized tables using natively compiled CHECK constraints.
- - Expose and strongly type values stored in JSON documents using computed columns.
- - Index values in JSON documents using memory-optimized indexes.
- - Natively compile SQL queries that use values from JSON documents or format results as JSON text.
+## Optimize JSON processing with additional in-memory features
+Features that are available in SQL Server and Azure SQL Database let you fully integrate JSON functionality with existing in-memory OLTP technologies. For example, you can do the following things:
+ - [Validate the structure of JSON documents](#validate) stored in memory-optimized tables by using natively compiled CHECK constraints.
+ - [Expose and strongly type values](#computedcol) stored in JSON documents by using computed columns.
+ - [Index values](#index) in JSON documents by using memory-optimized indexes.
+ - [Natively compile SQL queries](#compile) that use values from JSON documents or that format results as JSON text.
 
-## Validate JSON columns
-SQL Server and Azure SQL Database let you add natively compiled CHECK constraints that validate the content of JSON documents stored in a string column, as shown in the following example.
+## <a name="validate"></a> Validate JSON columns
+SQL Server and Azure SQL Database let you add natively compiled CHECK constraints that validate the content of JSON documents stored in a string column. With natively compiled JSON CHECK constraints, you can ensure that JSON text stored in your memory-optimized tables is properly formatted.
 
-```tsql
+The following example creates a `Product` table with a JSON column `Tags`. The `Tags` column has a CHECK constraint that uses the `ISJSON` function to validate the JSON text in the column.
+
+```sql
 DROP TABLE IF EXISTS xtp.Product;
 GO
 CREATE TABLE xtp.Product(
@@ -64,24 +65,24 @@ CREATE TABLE xtp.Product(
 ) WITH (MEMORY_OPTIMIZED=ON);
 ```
 
-The natively compiled CHECK constraint can be added on existing tables that contain JSON columns:
+You can also add the natively compiled CHECK constraint to an existing table that contains JSON columns.
 
-```tsql
+```sql
 ALTER TABLE xtp.Product
     ADD CONSTRAINT [Data should be JSON]
         CHECK (ISJSON(Data)=1)
 ```
 
-With natively compiled JSON CHECK constraints, you can ensure that JSON text stored in your memory-optimized tables is properly formatted.
-
-## Expose JSON values using computed columns
-Computed columns let you expose values from JSON text and access those values without re-evaluating the expressions that fetch a value from the JSON text and without re-parsing the JSON structure. Exposed values are strongly typed and physically persisted in the computed columns. Accessing JSON values using persisted computed columns is faster than accessing values in the JSON document.
+## <a name="computedcol"></a> Expose JSON values using computed columns
+Computed columns let you expose values from JSON text and access those values without fetching the value from the JSON text again and without parsing the JSON structure again. Values exposted in this way are strongly typed and physically persisted in the computed columns. Accessing JSON values using persisted computed columns is faster than accessing values in the JSON document directly.
 
 The following example shows how to expose the following two values from the JSON `Data` column:
 -   The country where a product is made.
 -   The product manufacturing cost.
 
-```tsql
+In this example, the computed columns `MadeIn` and `Cost` are updated every time the JSON document stored in the `Data` column changes.
+
+```sql
 DROP TABLE IF EXISTS xtp.Product;
 GO
 CREATE TABLE xtp.Product(
@@ -97,12 +98,16 @@ CREATE TABLE xtp.Product(
 ) WITH (MEMORY_OPTIMIZED=ON);
 ```
 
-The computed columns `MadeIn` and `Cost` are updated every time the JSON document stored in the `Data` column changes.
+## <a name="index"></a> Index values in JSON columns
+SQL Server and Azure SQL Database let you index values in JSON columns by using memory-optimized indexes. JSON values that are indexed must be exposed and strongly typed by using computed columns, as described in the preceding example.
 
-## Index values in JSON columns
-SQL Server and Azure SQL Database let you index values in JSON columns using memory optimized indexes. JSON values that are indexed must be exposed and strongly typed using computed columns, as shown in the following example.
+Values in JSON columns can be indexed by using both standard NONCLUSTERED and HASH indexes.
+-   NONCLUSTERED indexes optimize queries that select ranges of rows by some JSON value or sort results by JSON values.
+-   HASH indexes optimize queries that select a single row or a few rows by specifying an exact value to find.
 
-```tsql
+The following example builds a table that exposes JSON values by using two computed columns. The example creates a NONCLUSTERED index on one JSON value and a HASH index on the other.
+
+```sql
 DROP TABLE IF EXISTS xtp.Product;
 GO
 CREATE TABLE xtp.Product(
@@ -123,14 +128,13 @@ ALTER TABLE Product
     ADD INDEX [idx_Product_Cost] NONCLUSTERED HASH(Cost)
         WITH (BUCKET_COUNT=20000)
 ```
-Values in JSON columns can be indexed using both standard NONCLUSTERED and HASH indexes.
--   NONCLUSTERED indexes optimize queries that select ranges of rows by some JSON value or sort results by JSON values.
--   HASH indexes give you optimal performance when a single row or a few rows are fetched by specifying the exact value to find.
 
-## Native compilation of JSON queries
-Finally, native compilation of Transact-SQL procedures, functions, and triggers that contain queries with JSON functions increases performance of queries and reduces CPU cycles required to execute the procedures. The following example shows a natively compiled procedure that uses several JSON functions - JSON_VALUE, OPENJSON, and JSON_MODIFY.
+## <a name="compile"></a> Native compilation of JSON queries
+If your procedures, functions, and triggers contain queries that use the built-in JSON functions, native compilation increases the performance of these queries and reduces the CPU cycles required to run them.
 
-```tsql
+The following example shows a natively compiled procedure that uses several JSON functions - **JSON_VALUE**, **OPENJSON**, and **JSON_MODIFY**.
+
+```sql
 CREATE PROCEDURE xtp.ProductList(@ProductIds nvarchar(100))
 WITH SCHEMABINDING, NATIVE_COMPILATION
 AS BEGIN
@@ -155,17 +159,5 @@ AS BEGIN
 END
 ```
 
-## Next steps
-JSON in in-memory OLTP native modules provide a performance improvement for the built-in JSON functionality that's available in SQL Server and Azure SQL Database.
-
-To learn more about core scenarios for using JSON, check out some of these resources:
-
--   [TechNet Blog](https://blogs.technet.microsoft.com/dataplatforminsider/2016/01/05/json-in-sql-server-2016-part-1-of-4/)
--   [MSDN documentation](https://msdn.microsoft.com/library/dn921897.aspx)
--   [Channel 9 video](https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support)
-
-To learn about various scenarios for integrating JSON into your application, check out the following resources:
--   See the demos in this [Channel 9 video](https://channel9.msdn.com/Events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds).
--   Find a scenario that matches your use case in [JSON Blog posts](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/).
--   Find examples in our [GitHub repository](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/json/).
-
+## Learn more about the built-in JSON support in SQL Server  
+For lots of specific solutions, use cases, and recommendations, see the [blog posts about the built-in JSON support](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) in SQL Server and in Azure SQL Database by Microsoft Program Manager Jovan Popovic.

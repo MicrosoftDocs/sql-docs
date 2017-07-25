@@ -1,7 +1,7 @@
 ---
 title: "rowversion (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/16/2017"
+ms.date: "07/22/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -34,42 +34,42 @@ manager: "jhubbard"
 # rowversion (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Is a data type that exposes automatically generated, unique binary numbers within a database. **rowversion** is generally used as a mechanism for version-stamping table rows. The storage size is 8 bytes. The **rowversion** data type is just an incrementing number and does not preserve a date or a time. To record a date or time, use a **datetime2** data type.  
+Is a data type that exposes automatically generated, unique binary numbers within a database. **rowversion** is generally used as a mechanism for version-stamping table rows. The storage size is 8 bytes. The **rowversion** data type is just an incrementing number and does not preserve a date or a time. To record a date or time, use a **datetime2** data type.
   
 ## Remarks  
- Each database has a counter that is incremented for each insert or update operation that is performed on a table that contains a **rowversion** column within the database. This counter is the database rowversion. This tracks a relative time within a database, not an actual time that can be associated with a clock. A table can have only one **rowversion** column. Every time that a row with a **rowversion** column is modified or inserted, the incremented database rowversion value is inserted in the **rowversion** column. This property makes a **rowversion** column a poor candidate for keys, especially primary keys. Any update made to the row changes the rowversion value and, therefore, changes the key value. If the column is in a primary key, the old key value is no longer valid, and foreign keys referencing the old value are no longer valid. If the table is referenced in a dynamic cursor, all updates change the position of the rows in the cursor. If the column is in an index key, all updates to the data row also generate updates of the index.  
+Each database has a counter that is incremented for each insert or update operation that is performed on a table that contains a **rowversion** column within the database. This counter is the database rowversion. This tracks a relative time within a database, not an actual time that can be associated with a clock. A table can have only one **rowversion** column. Every time that a row with a **rowversion** column is modified or inserted, the incremented database rowversion value is inserted in the **rowversion** column. This property makes a **rowversion** column a poor candidate for keys, especially primary keys. Any update made to the row changes the rowversion value and, therefore, changes the key value. If the column is in a primary key, the old key value is no longer valid, and foreign keys referencing the old value are no longer valid. If the table is referenced in a dynamic cursor, all updates change the position of the rows in the cursor. If the column is in an index key, all updates to the data row also generate updates of the index.  The **rowversion** value is incremented with any update statement, even if no row values are changed. (For example, if a column value is 5, and an update statement sets the value to 5, this action is considered an update even though there is no change, and the **rowversion** is incremented.)
   
- **timestamp** is the synonym for the **rowversion** data type and is subject to the behavior of data type synonyms. In DDL statements, use **rowversion** instead of **timestamp** wherever possible. For more information, see [Data Type Synonyms &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-synonyms-transact-sql.md).  
+**timestamp** is the synonym for the **rowversion** data type and is subject to the behavior of data type synonyms. In DDL statements, use **rowversion** instead of **timestamp** wherever possible. For more information, see [Data Type Synonyms &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-synonyms-transact-sql.md).
   
- The [!INCLUDE[tsql](../../includes/tsql-md.md)] **timestamp** data type is different from the **timestamp** data type defined in the ISO standard.  
+The [!INCLUDE[tsql](../../includes/tsql-md.md)] **timestamp** data type is different from the **timestamp** data type defined in the ISO standard.
   
 > [!NOTE]  
 >  The **timestamp** syntax is deprecated. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- In a CREATE TABLE or ALTER TABLE statement, you do not have to specify a column name for the **timestamp** data type, for example:  
+In a CREATE TABLE or ALTER TABLE statement, you do not have to specify a column name for the **timestamp** data type, for example:
   
-```  
+```sql
 CREATE TABLE ExampleTable (PriKey int PRIMARY KEY, timestamp);  
 ```  
   
- If you do not specify a column name, the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] generates the **timestamp** column name; however, the **rowversion** synonym does not follow this behavior. When you use **rowversion**, you must specify a column name, for example:  
+If you do not specify a column name, the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] generates the **timestamp** column name; however, the **rowversion** synonym does not follow this behavior. When you use **rowversion**, you must specify a column name, for example:
   
-```  
+```sql
 CREATE TABLE ExampleTable2 (PriKey int PRIMARY KEY, VerCol rowversion) ;  
 ```  
   
 > [!NOTE]  
 >  Duplicate **rowversion** values can be generated by using the SELECT INTO statement in which a **rowversion** column is in the SELECT list. We do not recommend using **rowversion** in this manner.  
   
- A nonnullable **rowversion** column is semantically equivalent to a **binary(8)** column. A nullable **rowversion** column is semantically equivalent to a **varbinary(8)** column.  
+A nonnullable **rowversion** column is semantically equivalent to a **binary(8)** column. A nullable **rowversion** column is semantically equivalent to a **varbinary(8)** column.
   
- You can use the **rowversion** column of a row to easily determine whether any value in the row has changed since the last time it was read. If any change is made to the row, the rowversion value is updated. If no change is made to the row, the rowversion value is the same as when it was previously read. To return the current rowversion value for a database, use [@@DBTS](../../t-sql/functions/dbts-transact-sql.md).  
+You can use the **rowversion** column of a row to easily determine whether the row has had an update statement ran against it since the last time it was read. If an update statement is ran against the row, the rowversion value is updated. If no update statements are ran against the row, the rowversion value is the same as when it was previously read. To return the current rowversion value for a database, use [@@DBTS](../../t-sql/functions/dbts-transact-sql.md).
   
- You can add a **rowversion** column to a table to help maintain the integrity of the database when multiple users are updating rows at the same time. You may also want to know how many rows and which rows were updated without re-querying the table.  
+You can add a **rowversion** column to a table to help maintain the integrity of the database when multiple users are updating rows at the same time. You may also want to know how many rows and which rows were updated without re-querying the table.
   
- For example, assume that you create a table named `MyTest`. You populate some data in the table by running the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statements.  
+For example, assume that you create a table named `MyTest`. You populate some data in the table by running the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statements.
   
-```  
+```sql
 CREATE TABLE MyTest (myKey int PRIMARY KEY  
     ,myValue int, RV rowversion);  
 GO   
@@ -79,9 +79,9 @@ INSERT INTO MyTest (myKey, myValue) VALUES (2, 0);
 GO  
 ```  
   
- You can then use the following sample [!INCLUDE[tsql](../../includes/tsql-md.md)] statements to implement optimistic concurrency control on the `MyTest` table during the update.  
+You can then use the following sample [!INCLUDE[tsql](../../includes/tsql-md.md)] statements to implement optimistic concurrency control on the `MyTest` table during the update.
   
-```  
+```sql
 DECLARE @t TABLE (myKey int);  
 UPDATE MyTest  
 SET myValue = 2  
@@ -97,13 +97,13 @@ IF (SELECT COUNT(*) FROM @t) = 0
     END;  
 ```  
   
- `myValue` is the **rowversion** column value for the row that indicates the last time that you read the row. This value must be replaced by the actual **rowversion** value. An example of the actual **rowversion** value is 0x00000000000007D3.  
+`myValue` is the **rowversion** column value for the row that indicates the last time that you read the row. This value must be replaced by the actual **rowversion** value. An example of the actual **rowversion** value is 0x00000000000007D3.
   
- You can also put the sample [!INCLUDE[tsql](../../includes/tsql-md.md)] statements into a transaction. By querying the `@t` variable in the scope of the transaction, you can retrieve the updated `myKey` column of the table without requerying the `MyTes`t table.  
+You can also put the sample [!INCLUDE[tsql](../../includes/tsql-md.md)] statements into a transaction. By querying the `@t` variable in the scope of the transaction, you can retrieve the updated `myKey` column of the table without requerying the `MyTes`t table.
   
- The following is the same example using the **timestamp** syntax:  
+The following is the same example using the **timestamp** syntax:
   
-```  
+```sql
 CREATE TABLE MyTest2 (myKey int PRIMARY KEY  
     ,myValue int, TS timestamp);  
 GO   
@@ -126,16 +126,16 @@ IF (SELECT COUNT(*) FROM @t) = 0
     END;  
 ```  
   
-## See Also  
- [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
- [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
- [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
- [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
- [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
- [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
- [MIN_ACTIVE_ROWVERSION &#40;Transact-SQL&#41;](../../t-sql/functions/min-active-rowversion-transact-sql.md)   
- [SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md)   
- [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)  
+## See also
+[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
+[CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
+[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  
+[Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
+[DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  
+[DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)  
+[INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)  
+[MIN_ACTIVE_ROWVERSION &#40;Transact-SQL&#41;](../../t-sql/functions/min-active-rowversion-transact-sql.md)  
+[SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md)  
+[UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)
   
   

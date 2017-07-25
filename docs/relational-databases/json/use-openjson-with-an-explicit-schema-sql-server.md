@@ -28,7 +28,7 @@ manager: "jhubbard"
 ## Example - Use the WITH clause to format the output  
  The following query returns the results shown in the following table. Notice how the AS JSON clause causes values to be returned as JSON objects instead of scalar values in col5 and array_element.  
   
-```tsql  
+```sql  
 DECLARE @json NVARCHAR(MAX) =
 N'{"someObject":   
     {"someArray":  
@@ -64,7 +64,7 @@ WITH ( k1 int,
 ## Example - Load JSON into a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table.  
  The following example loads an entire JSON object into a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table.  
   
-```tsql  
+```sql  
 DECLARE @json NVARCHAR(MAX) = '{  
   "id" : 2,  
   "firstName": "John",  
@@ -83,6 +83,9 @@ DECLARE @json NVARCHAR(MAX) = '{
         isAlive bit, age int,  
         dateOfBirth datetime2, spouse nvarchar(50))  
 ```  
+
+## Learn more about the built-in JSON support in SQL Server  
+For lots of specific solutions, use cases, and recommendations, see the [blog posts about the built-in JSON support](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) in SQL Server and in Azure SQL Database by Microsoft Program Manager Jovan Popovic.
   
 ## See Also  
  [OPENJSON &#40;Transact-SQL&#41;](../../t-sql/functions/openjson-transact-sql.md)  

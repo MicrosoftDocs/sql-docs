@@ -2,7 +2,7 @@
 title: "PolyBase T-SQL objects | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "03/08/2016"
+ms.date: "07/13/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -21,7 +21,7 @@ ms.author: "barbkess"
 manager: "jhubbard"
 ---
 # PolyBase T-SQL objects
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   To use  PolyBase, you must create external tables to reference your external data.  
   
@@ -34,7 +34,10 @@ manager: "jhubbard"
  [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)  
   
  [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)  
-  
+ 
+> [!NOTE]
+>  PolyBase in SQL Server 2016 only supports Windows users. If you try to use a SQL user to query a PolyBase external table, the query will fail.
+
 ## Prerequisites  
  Configure PolyBase. See [PolyBase configuration](../../relational-databases/polybase/polybase-configuration.md).  
   

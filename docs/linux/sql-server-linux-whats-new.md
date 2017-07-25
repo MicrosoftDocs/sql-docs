@@ -1,32 +1,34 @@
-
 ---
 # required metadata
 
-title: What's New for SQL Server 2017 CTP 2.1 on Linux | Microsoft Docs
+title: What's New for SQL Server 2017 RC1 on Linux | Microsoft Docs
 description: This topic highlights what's new for the current release of SQL Server 2017 on Linux.
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 05/17/2017
+ms.date: 07/19/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
 
-# optional metadata
-
-# keywords: ""
-# ROBOTS: ""
-# audience: ""
-# ms.devlang: ""
-# ms.reviewer: ""
-# ms.suite: ""
-# ms.tgt_pltfrm: ""
-# ms.custom: ""
 ---
+
 # What's new for SQL Server 2017 on Linux
 
 This topic describes what's new for SQL Server 2017 running on Linux.
+
+## RC1
+
+The RC1 release contains the following improvements and fixes:
+
+- Enabled Transparent Layer Security (TLS) for encrypted connections. For more information, see [Encrypting Connections to SQL Server on Linux](sql-server-linux-encrypted-connections.md).
+- Enabled [Active Directory Authentication](sql-server-linux-active-directory-authentication.md).
+- Enabled [DB Mail](../relational-databases/database-mail/database-mail.md).
+- Added IPV6 support.
+- Added environment variables for initial SQL Server setup. For more information, see [Configure SQL Server settings with environment variables on Linux](sql-server-linux-configure-environment-variables.md).
+- Removed **sqlpackage** from installed binaries. SqlPackage can still be run against Linux remotely from Windows.
+- Shared disk cluster resource agent sets the resource name like it does on a Windows SQL Server failover cluster instance. `@@ServerName` returns the SQL Server shared disk cluster resource name; prior to RC1 it returned the name of the cluster node that owned the resource.
 
 ## CTP 2.1
 
@@ -36,7 +38,7 @@ The CTP 2.1 release contains the following improvements and fixes:
 - [mssql-conf](sql-server-linux-configure-mssql-conf.md) now requires two-part naming convention for settings.
 - The [mssql-scripter](https://github.com/Microsoft/sql-xplat-cli) tool. This utility enables developers, DBAs, and sysadmins to generate `CREATE` and `INSERT` Transact-SQL scripts from database objects in SQL Server, Azure SQL DB, and Azure SQL DW databases from the command line.
 - The [DBFS tool](https://github.com/Microsoft/dbfs). This is an open-source tool that enables DBAs and sysadmins to monitor SQL Server more easily by exposing live data from SQL Server Dynamic Management Views (DMVs) as virtual files in a virtual directory on Linux operating systems.
-- SQL Server Integration Services (SSIS) now supports SQL Server on Linux. In addition, there is a new package that enables you to run SSIS packages on Linux from the command-line. For more information, see the [blog post announcing SSIS support for Linux](https://blogs.msdn.microsoft.com/ssis/2017/05/17/ssis-helsinki-is-available-in-sql-server-vnext-ctp2-1/).
+- SQL Server Integration Services (SSIS) now runs on Linux. In addition, there's a new package that lets you run SSIS packages on Linux from the commandline. For more info, see the [blog post announcing SSIS support for Linux](https://blogs.msdn.microsoft.com/ssis/2017/05/17/ssis-helsinki-is-available-in-sql-server-vnext-ctp2-1/). With SSIS on Linux CTP 2.1 Refresh, your SSIS packages can use ODBC connections on Linux. For more info, see the [blog post announcing ODBC support on Linux](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/).
 
 ## CTP 2.0
 
@@ -88,7 +90,7 @@ The CTP 1.3 release contains the following improvements and fixes:
 
 The CTP 1.2 release contains the following improvements and fixes:
 
-- Support for [SUSE Linux Enterprise Server v12 SP2](sql-server-linux-setup-suse-linux-enterprise-server.md).
+- Support for [SUSE Linux Enterprise Server v12 SP2](quickstart-install-connect-suse.md).
 - Bug fixes for core engine and stability improvements.
 - Docker image: 
   - Fixed [issue #1](https://github.com/Microsoft/mssql-docker/issues/1) by adding Python to the image.

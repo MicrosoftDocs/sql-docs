@@ -25,6 +25,7 @@
 ## [CONTAINS](contains-transact-sql.md)  
 ## [FREETEXT](freetext-transact-sql.md)  
 ## [IS NULL](is-null-transact-sql.md)  
+# [PREDICT](predict-transact-sql.md)
 # [READTEXT](readtext-transact-sql.md)  
 # [Search Condition](search-condition-transact-sql.md)  
 # [Subqueries (Azure SQL Data Warehouse, Parallel Data Warehouse)](subqueries-azure-sql-data-warehouse-parallel-data-warehouse.md)  

@@ -1,7 +1,7 @@
 ---
 title: "Analysis Services Features Supported by the Editions of SQL Server 2016 | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/20/2017"
+ms.date: "06/29/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -20,7 +20,7 @@ manager: "erikre"
 # Analysis Services Features Supported by the Editions of SQL Server 2016
 [!INCLUDE[ssas-appliesto-sql2016-later](../includes/ssas-appliesto-sql2016-later.md)]
 
-This topic provides details of features supported by the different editions of [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. For features supported by Evaluation and Developer editions, see Enterprise edition.
+This topic provides details of features supported by the different editions of SQL Server 2016 Analysis Services. For features supported by Evaluation and Developer editions, see Enterprise edition.
 
 ## Analysis Services (servers)
   

@@ -38,7 +38,7 @@ Before you configure AD Authentication, you need to:
 >   At this time, the only authentication method supported for database mirroring endpoint is CERTIFICATE. WINDOWS authentication method will be enabled in a future release
 
 ## Step 1: Join [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] host to AD domain
-Numerous tools exist to help you join the [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] host machine to your AD domain. This walkthrough uses [realmd](https://www.freedesktop.org/software/realmd/docs/guide-active-directory-join.html), a popular open source package. If you haven't already, install both the **realmd** and Kerberos client packages on the [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] host machine using your Linux distribution's package manager:  
+Numerous tools exist to help you join the [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] host machine to your AD domain. This walkthrough uses **[realmd](https://www.freedesktop.org/software/realmd/docs/guide-active-directory-join.html)**, a popular open source package. If you haven't already, install both the realmd and Kerberos client packages on the [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] host machine using your Linux distribution's package manager:  
 ```bash  
 # RHEL
 sudo yum install realmd krb5-workstation
@@ -47,7 +47,7 @@ sudo yum install realmd krb5-workstation
 sudo zypper install realmd krb5-client
 
 # Ubuntu
-sudo apt-get install realmd krb5-user
+sudo apt-get install realmd krb5-user software-properties-common python-software-properties packagekit
 ```  
 
 If the Kerberos client package installation prompts you for a realm name, enter your domain name in uppercase.  
@@ -72,6 +72,9 @@ iface eth0 inet dhcp
 dns-nameservers **<AD domain controller IP address>**
 dns-search **<AD domain name>**
 ```  
+>  [!NOTE]  
+>  The network interface (eth0) might differ for differnet machines. To find out which one you are using, run ifconfig and copy the interface that has an IP address and transmitted and received bytes.
+
 After editing this file, restart the network service:
 ```bash
 sudo ifdown eth0 && sudo ifup eth0
@@ -170,7 +173,7 @@ kinit user@CONTOSO.COM
 kvno MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**
 ```
 
-Now create a keytab file for the AD user you created in the previous step. When prompted, enter the password for that AD account. 
+Now create a keytab file for the AD user you created in the previous step. To do so we will use **[ktutil](https://web.mit.edu/kerberos/krb5-1.12/doc/admin/admin_commands/ktutil.html)**. When prompted, enter the password for that AD account. 
 ```bash  
 sudo ktutil
 

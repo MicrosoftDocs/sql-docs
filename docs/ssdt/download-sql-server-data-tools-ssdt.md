@@ -1,7 +1,7 @@
 ---
 title: "Download SQL Server Data Tools (SSDT) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/18/2017"
+ms.date: "07/27/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -15,22 +15,22 @@ ms.assetid: b0fc4987-d260-4d0a-9dd1-98099835b361
 caps.latest.revision: 113
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ---
 # Download SQL Server Data Tools (SSDT)
 
 **[SQL Server Data Tools](https://msdn.microsoft.com/mt186501)** is a modern development tool that you can download for free to build SQL Server relational databases, Azure SQL databases, Integration Services packages, Analysis Services data models, and Reporting Services reports. With SSDT, you can design and deploy any SQL Server content type with the same ease as you would develop an application in Visual Studio. This release supports SQL Server 2017 through SQL Server 2005, and provides the design environment for adding features that are new in SQL Server 2016.  
     
     
-![download](../ssdt/media/download.png) [Download SQL Server Data Tools 17.1 for Visual Studio 2015](https://go.microsoft.com/fwlink/?linkid=849393)
+![download](../ssdt/media/download.png) [Download SQL Server Data Tools 17.2 for Visual Studio 2015](https://go.microsoft.com/fwlink/?linkid=849393)
 
-![download](../ssdt/media/download.png) [Download Data-Tier Application Framework (DacFx) 17.1](https://www.microsoft.com/download/details.aspx?id=55255)
+![download](../ssdt/media/download.png) [Download Data-Tier Application Framework (DacFx) 17.2](https://www.microsoft.com/download/details.aspx?id=55255)
 
 ## SQL Server Data Tools   
 **Version Information**  
   
-The release number: 17.1  
-The build number for this release: 14.0.61705.170
+The release number: 17.2  
+The build number for this release: **TBD**
   
  **What's New**
  - Offline support for AS non-model-related IntelliSense (e.g. highlighting, statement completion, and parameter information)

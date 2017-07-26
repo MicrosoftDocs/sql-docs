@@ -16,6 +16,7 @@ ms.author: "sstein"
 manager: "craigg"
 ---
 # Previous releases of SQL Server Data Tools (SSDT and SSDT-BI)
+
 SQL Server Data Tools (SSDT) provides project templates and design surfaces for building SQL Server content types — relational databases, Analysis Services models, Reporting Services reports, and Integration Services packages.  
   
 It's based on a Visual Studio shell and co-released with SQL Server. New versions of SSDT integrate the latest features of SQL Server. Older versions include the templates and design environment that were current for that release.  
@@ -27,7 +28,7 @@ SSDT is backwards compatible, so you can always use [the newest SSDT](https://ms
 
 ## Recent downloads
 
-The last three recent downloads are provided for the unlikely event that you experience issues with the [latest release](https://msdn.microsoft.com/library/mt204009.aspx). 
+The last three recent downloads are provided for the unlikely event that you experience issues with the [latest release](download-sql-server-data-tools-ssdt.md). 
 
 |Release| Visual Studio 2015|Visual Studio 2013|
 |:---|:---|:---|
@@ -38,7 +39,7 @@ The last three recent downloads are provided for the unlikely event that you exp
 \* SSDT supports the two most recent versions of Visual Studio. With the release of Visual Studio 2017, SSDT for VS2013 is no longer being updated. For additional information, see the *FAQ* section of [this SSDT team blog post](https://blogs.msdn.microsoft.com/ssdt/2017/03/10/sql-server-data-tools-17-0-rc-and-ssdt-in-vs2017/).
 
   
-## Links to Download pages  
+## Links to Download pages 
 **SQL Relational: Database Engine**  
   
 Provides templates for building relational databases for the RDBMS and Azure SQL Database. SSDT is version agnostic with respect to relational database design. You can use either the Visual Studio 2012 or 2013 version with any version of SQL Server Database Engine or Azure SQL Database.  

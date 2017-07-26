@@ -15,7 +15,7 @@ author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
 ---
-# Integration Services Features Supported by the Editions of SQL Server
+# Integration Services features supported by the editions of SQL Server
  This topic provides details about the features of SQL Server Integration Services (SSIS) supported by the different editions of [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)].  
 
 For features supported by Evaluation and Developer editions, see features listed for Enterprise Edition in the following tables.
@@ -31,7 +31,7 @@ The SQL Server Evaluation edition is available for a 180-day trial period.
     
 > [![Download from Evaluation Center](../analysis-services/media/download.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) **[Download SQL Server 2016  from the Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**    
     
-## <a name="ISNew"></a> New Integration Services Features in SQL Server 2017
+## <a name="ISNew"></a> New Integration Services features in SQL Server 2017
   
 |Feature|Enterprise|Standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  

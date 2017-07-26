@@ -1,7 +1,7 @@
 ---
-title: "Prepare the data using PowerShell (R-SQL data science walkthrough) | Microsoft Docs"
+title: "Prepare the data using PowerShell (walkthrough) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/03/2017"
+ms.date: "07/26/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -161,7 +161,6 @@ You should run this script on the computer where you build the solution: for exa
 
 ```
 Execution successful
-C:\tempR\fnEngineerFeatures.sql execution done
 Completed registering all stored procedures used in this walkthrough.
 This step (registering all stored procedures) takes 0.39 seconds.
 Plug in the database server name, database name, user name and password into the R script file
@@ -253,7 +252,9 @@ The following example runs the script using a SQL login:
 
 ### The data loaded but it contains duplicates
 
-If your database contains a table of the same name and the same schema, **bcp** inserts a new copy of the data rather than overwriting existing data. To avoid duplicate data, truncate any existing tables before re-running the script.
+If your database contains an existing table of the same name and the same schema, **bcp** inserts a new copy of the data rather than overwriting existing data.
+
+To avoid duplicate data, truncate any existing tables before re-running the script.
 
 ## What's included in the sample
 
@@ -267,10 +268,11 @@ When you download the files from the GitHub repository, you get the following:
 
 ### <a name="bkmk_data"></a>Training and scoring data
 
-The data is a representative sampling of the New York City taxi data set, which contains records of over 173 million individual trips in 2013, including the fares and tip amounts paid for each trip.  To learn more about how this data was originally collected, and how you can get the full data set, see this blog: 
-[http://chriswhong.com/open-data/foil_nyc_taxi/](http://chriswhong.com/open-data/foil_nyc_taxi/).
+The data is a representative sampling of the New York City taxi data set, which contains records of over 173 million individual trips in 2013, including the fares and tip amounts paid for each trip. To make the data easier to work with, the Microsoft data science team performed downsampling to get just 1% of the data.  This data has been shared in a public blob storage container in Azure, in .CSV format. The source data is an uncompressed file, just under 350MB.
 
-To make the data easier to work with, the Microsoft data science team performed downsampling to get just 1% of the data.  This data has been shared in a public blob storage container in Azure, in .CSV format. The source data is an uncompressed file, just under 350MB.
++ Public dataset: [NYC Taxi and Limousine Commission] (http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)
+
++ [Building Azure ML Models on the NYC Taxi Dataset](https://blogs.technet.microsoft.com/machinelearning/2015/04/02/building-azure-ml-models-on-the-nyc-taxi-dataset/.
 
 ### PowerShell and R script files
 

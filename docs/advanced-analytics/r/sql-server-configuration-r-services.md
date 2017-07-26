@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Configuration (R Services) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/12/2017"
+ms.date: "07/26/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -74,7 +74,7 @@ Optimization of the SQL Server instance is the key to efficient execution of ext
 > [!NOTE]
 > The optimal settings differ depending on the size and type of your data, the number of columns you are using for scoring or training a model.
 > 
-> You can review the results of specific optimizations in the final article: [Performance Tuning - case study results](../r/performance-case-study-r-services.md)
+> You can review the results of specific optimizations in the final article: [Performance Tuning - case study results](../../advanced-analytics/r/performance-case-study-r-services.md)
 > 
 > For sample scripts, see the separate [GitHub repository](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/PerfTuning).
 
@@ -133,23 +133,43 @@ To change the allocated resource values, use T-SQL statements.
 
 + If you change a memory, CPU, or max process setting, and then want to apply the settings immediately, run this statement: `ALTER RESOURCE GOVERNOR RECONFIGURE`
 
-## NUMA, soft-NUMA, and CPU affinity
+## Soft-NUMA, hardware NUMA, and CPU affinity
 
-SQL Server has been designed to take advantage of NUMA-based computers without requiring any application changes. SQL Server 2016 and SQL Server 2017 include the Soft-NUMA feature, which is automatically enabled at the database-instance level when starting the SQL Server service.
+When using SQL Server as the compute context, you can sometimes achieve better performance by tuning settings related to NUMA and processor affinity. 
 
-The soft-NUMA feature automatically partitions service threads per node, and thus generally increases scalability and performance by reducing IO and lazy writer bottlenecks. Whenever the database engine server detects more than eight physical cores per NUMA node or socket, it automatically creates soft-NUMA nodes that ideally contain eight cores, with as few as five and as many as nine logical cores per node. You can review the SQL Server log files to determine soft-NUMA usage. Details are output to the log whenever SQL Server detects more than eight physical cores in each socket.
+Systems with _hardware NUMA_ have more than one system bus, each serving a small set of processors. Each CPU can access memory associated with other groups in a coherent way. Each group is called a NUMA node. If you have hardware NUMA, it may be configured to use interleaved memory instead of NUMA. In that case, Windows and therefore SQL Server will not recognize it as NUMA. 
 
-In editions that support resource governance, you can also leverage the NUMA nodes when configuring resource pools to optimize hardware utilization. Soft-NUMA and CPU affinity cannot divide physical memory in the physical NUMA nodes; therefore, all soft NUMA nodes based on the same physical NUMA node must use memory in the same OS memory block. To use this to your advantage, assign each resource pool to a different workload group, which effectively allocates some number of CPUs to specific workloads.
+You can run the following query to find the number of memory nodes available to SQL Server:
 
-## Optimization for NUMA
+```SQL
+SELECT DISTINCT memory_node_id
+FROM sys.dm_os_memory_clerks
+```
 
-In a default installation of R Services, only 20% of available memory is allocated to R. Typically this is not enough for data science tasks. However, it is important to fine-tune memory allocation between SQL Server and external scripts, with the understanding that the optimum configuration varies case by case.
+If the query returns a single memory node (node 0), either you do not have hardware NUMA, or the hardware is configured as interleaved (non-NUMA). SQL Server also ignores hardware NUMA when there four or fewer CPUs, or if at least one node has only one CPU.
 
-In addition to decreasing the amount of memory reserved for SQL Server and increasing the memory available for external scripts, the team created resource pools to help manage task and resource allocation. A common practice is to align resource pools with groups of CPUs by specifying CPU affinity. The purpose of CPU affinitization is to ensure that both SQL Server and the R processes do not access foreign memory, and that related processes are performed within the same NUMA node. This reduces latency in memory access.
+If your computer has multiple processors but does not have hardware-NUMA, you can also use [Soft-NUMA](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server) to subdivide CPUs into smaller groups.  In both SQL Server 2016 and SQL Server 2017, the Soft-NUMA feature is automatically enabled when starting the SQL Server service.
 
-See the final article in this series for a detailed discussion of how the data science team  experimented with different NUMA configurations, along with their findings.
+When Soft-NUMA is enabled, SQL Server automatically manages the nodes for you; however, to optimize for specific workloads, you can disable _soft affinity_ and manually configure CPU affinity for the soft NUMA nodes. This can give you more control over which workloads are assigned to which nodes, particularly if you are using an edition of SQL Server that supports resource governance. By specifying CPU affinity and aligning resource pools with groups of CPUs, you can reduce latency, and ensure that related processes are performed within the same NUMA node.
 
-+ [Performance Tuning - case study results](/r/performance-case-study-r-services.md)
+The overall process for configuring soft-NUMA and CPU affinity to support R workloads is as follows:
+
+1. Enable soft-NUMA, if available
+2. Define processor affinity
+3. Create resource pools for external processes, using [Resource Governor](../r/resource-governance-for-r-services.md)
+4. Assign the [workload groups](../../sql/relational-databases/resource-governor/resource-governor-workload-group) to specific affinity groups
+
+For details, including sample code, see this tutorial: [SQL Optimization Tips and Tricks (Ke Huang)](https://gallery.cortanaintelligence.com/Tutorial/SQL-Server-Optimization-Tips-and-Tricks-for-Analytics-Services)
+
+**Other resources:**
+
++ [Soft-NUMA in SQL Server](https://docs.microsoft.com/en-us/sql/database-engine/configure-windows/soft-numa-sql-server)
+    
+    How to map soft-NUMA nodes to CPUs
+
++ [Automatic soft-NUMA: It just runs faster (Bob Ward)](https://blogs.msdn.microsoft.com/bobsql/2016/06/03/sql-2016-it-just-runs-faster-automatic-soft-numa/)
+
+   Describes history as well as implementation details, with performance on newer multi-core servers.
 
 ## Task-specific optimizations
 

@@ -1,7 +1,7 @@
 ---
 title: "Deploy the R model and use it in SQL (walkthrough) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/14/2017"
+ms.date: "07/26/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -192,7 +192,8 @@ The stored procedure *PredictTipSingleMode* demonstrates this approach. It takes
     sqlQuery (conn, q2);
     ```
 
-    For more information about **RODBC**, see [http://www.inside-r.org/packages/cran/RODBC/docs/sqlQuery](http://www.inside-r.org/packages/cran/RODBC/docs/sqlQuery).
+    >[!TIP]
+    > R Tools for Visual studio provides great integration with both SQL Server and R. See this article for more examples of using RODBC with a SQL Server connection: [Working with SQL Server and R](https://docs.microsoft.com/en-us/visualstudio/rtvs/sql-server)
 
 ## Summary
 
@@ -218,6 +219,6 @@ We also recommend that you check out some of these additional samples and resour
 
 ## Next steps
 
-[SQL Server R Services Tutorials](sql-server-r-tutorials.md)
+[SQL Server R tutorials](sql-server-r-tutorials.md)
 
 [How to create a stored procedure using sqlrutils](../r/how-to-create-a-stored-procedure-using-sqlrutils.md)

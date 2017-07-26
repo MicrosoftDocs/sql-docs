@@ -1,7 +1,7 @@
 ---
-title: "Step 2: Import Data to SQL Server using PowerShell | Microsoft Docs"
+title: "Lesson 2: Import data to SQL Server using PowerShell | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/02/2017"
+ms.date: "07/26/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -20,11 +20,13 @@ author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
 ---
-# Step 2: Import Data to SQL Server using PowerShell
+# Lesson 2: Import data to SQL Server using PowerShell
+
+This article is part of a tutorial for SQL developers on how to use R in SQL Server.
 
 In this step, you'll run one of the downloaded scripts, to create the database objects required for the walkthrough. The script also creates most of the stored procedures you'll use, and uploads the sample data to a table in the database you specified.
 
-## Run the Scripts to Create SQL Objects
+## Run the scripts to create SQL objects
 
 Among the downloaded files you should see a PowerShell script. To prepare the environment for the walkthrough, you'll run this script.
 
@@ -36,21 +38,21 @@ Actions performed by the script include:
 
 - Creating multiple SQL functions and stored procedures.
 
-#### To run the script
+### Run the script
 
 1.  Open a PowerShell command prompt as administrator and run the following command.
   
-    ```
+    ```ps
     .\RunSQL_SQL_Walkthrough.ps1
     ```
   
     You will be prompted to input the following information:
   
-    -   The name or address of a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instance where [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] has been installed
+    - The name or address of a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instance where [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] has been installed
   
-    -   The user name and password for an account on the instance. The account must have permissions to create databases, create tables and stored procedures, and upload data to tables. If you do not provide the user name and password, your Windows identity is used to sign in to SQL Server.
+    - The user name and password for an account on the instance. The account must have permissions to create databases, create tables and stored procedures, and upload data to tables. If you do not provide the user name and password, your Windows identity is used to sign in to SQL Server.
   
-    -   The path and file name of the sample data file that you just downloaded. For example:
+    - The path and file name of the sample data file that you just downloaded. For example:
   
         `C:\tempRSQL\nyctaxi1pct.csv`
   
@@ -84,19 +86,10 @@ Actions performed by the script include:
     >   
     > If the table already exists, the data will be appended, not overwritten. Therefore, be sure to drop any existing objects before running the script.
 
-## Next Step
+## Next lesson
 
-[Step 3: Explore and Visualize the Data](../tutorials/sqldev-explore-and-visualize-the-data.md)
+[Lesson 3: Explore and visualize the data](../tutorials/sqldev-explore-and-visualize-the-data.md)
 
-## Previous Step
+## Previous lesson
 
-[Step 1: Download the Sample Data](../tutorials/sqldev-download-the-sample-data.md)
-
-## See Also
-
-[In-Database Advanced Analytics for SQL Developers &#40;Tutorial&#41;](../tutorials/sqldev-in-database-r-for-sql-developers.md)
-
-[SQL Server R Services Tutorials](../tutorials/machine-learning-services-tutorials.md)
-
-
-
+[Lesson 1: Download the sample data](../tutorials/sqldev-download-the-sample-data.md)

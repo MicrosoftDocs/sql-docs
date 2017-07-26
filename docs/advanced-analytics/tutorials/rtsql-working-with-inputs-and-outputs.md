@@ -1,7 +1,7 @@
 ---
-title: "Working with Inputs and Outputs (R in T-SQL Tutorial) | Microsoft Docs"
+title: "Working with inputs and outputs (R in SQL quickstart) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/03/2017"
+ms.date: "07/26/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -18,7 +18,7 @@ author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
 ---
-# Working with R Inputs and Outputs in SQL
+# Working with inputs and outputs (R in SQL quickstart0
 
 When you want to run R code in  SQL Server, you must wrap the R script in a system stored procedure, [sp_execute_external_script](https://msdn.microsoft.com/library/mt604368.aspx). This stored procedure is used to start the R runtime in the context of SQL Server, which passes data to R, manages R user sessions securely, and returns any results to the client.
 
@@ -104,7 +104,7 @@ Now you get a **different** error:
 EXECUTE statement failed because its WITH RESULT SETS clause specified 1 result set(s), but the statement only sent 0 result set(s) at run time.*
 ```
 
-We're showing you this error because it's a common one when testing new R code. It means that the R script ran successfully, but SQL Server got back no data, or got back wrong or unexpected data.
+We're showing you this error because it's a common one when testing new R code. It means that the R script ran successfully, but SQL Server received no data, or received wrong or unexpected data.
 
 In this case, the output schema (the line beginning with **WITH**) specifies that one column of integer data should be returned, but since R put the data in a different variable, nothing came back to SQL Server; hence, the error.
 
@@ -139,4 +139,4 @@ EXECUTE sp_execute_external_script
 
 You'll examine some of the problems that you might encounter when passing data between R and SQL Server, such as implicit conversions and differences in tabular data between R and SQL.
 
-[R and SQL Data Types and Data Objects](../tutorials/rtsql-r-and-sql-data-types-and-data-objects.md)
+[R and SQL data types and data objects](../tutorials/rtsql-r-and-sql-data-types-and-data-objects.md)

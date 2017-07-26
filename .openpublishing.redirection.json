@@ -2009,6 +2009,16 @@
             "source_path": "docs/integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-ole-db-connection-manager.md",
             "redirect_url": "/sql/integration-services/connection-manager/lookup-transformation-full-cache-mode-ole-db-connection-manager",
             "redirect_document_id": true
+        },
+		{
+            "source_path": "docs/ssms/use-sql-server-management-studio.md",
+            "redirect_url": "/sql/ssms/sql-server-management-studio-ssms",
+            "redirect_document_id": true
+        },
+		{
+            "source_path": "docs/ssms/features-in-sql-server-management-studio.md",
+            "redirect_url": "/sql/ssms/sql-server-management-studio-ssms",
+            "redirect_document_id": true
         }
     ]
 }

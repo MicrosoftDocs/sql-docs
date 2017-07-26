@@ -116,7 +116,10 @@ sudo realm join contoso.com -U 'user@CONTOSO.COM' -v
 >  If you receive an error, "Insufficient permissions to join the domain," then you will need to check with a domain administrator that you have sufficient permissions to join Linux machines to your domain.
 
  
-Verify that you can now gather information about a user from the domain, and that you can acquire a Kerberos ticket as that user:  
+Verify that you can now gather information about a user from the domain, and that you can acquire a Kerberos ticket as that user. 
+
+We will use **id**, **[kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html)** and **[klist](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/klist.html)** commands for this.
+
 ```bash  
 id user@contoso.com
 uid=1348601103(user@contoso.com) gid=1348600513(domain group@contoso.com) groups=1348600513(domain group@contoso.com)

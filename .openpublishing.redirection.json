@@ -2011,6 +2011,21 @@
             "redirect_document_id": true
         },
 		{
+            "source_path": "docs/relational-databases/database-engine-cross-instance-features.md",
+            "redirect_url": "/sql/relational-databases/database-features",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/relational-databases/technical-reference-database-engine.md",
+            "redirect_url": "/sql/relational-databases/database-features",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/relational-databases/feature-reference-database-engine.md",
+            "redirect_url": "/sql/relational-databases/database-features",
+            "redirect_document_id": true
+        },
+		{
             "source_path": "docs/ssms/use-sql-server-management-studio.md",
             "redirect_url": "/sql/ssms/sql-server-management-studio-ssms",
             "redirect_document_id": true

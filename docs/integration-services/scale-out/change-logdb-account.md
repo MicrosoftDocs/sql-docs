@@ -1,5 +1,5 @@
 ---
-title: "Change the account for SQL Server Integration Services (SSIS) Scale Out logging | Microsoft Docs"
+title: "Change the account for SSIS Scale Out logging | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/18/2017"
 ms.prod: "sql-server-2017"

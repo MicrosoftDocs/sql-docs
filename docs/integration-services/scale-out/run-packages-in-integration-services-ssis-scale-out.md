@@ -32,6 +32,9 @@ After the packages are deployed to the Integration Services server, you can exec
     
     In the **Advanced** tab, you set a Scale Out option called **Retry count**. It sets the number of times a package execution will retry if it fails.
 
+    > [!Note]
+    > The **Dump on errors** option only takes effect when the account running Scale Out Worker service is an administrator of local computer.
+
 3. Select machines
 
     On the **Machine Selection** page, you select the Scale Out Worker machines to run the packages. By default, any machine is allowed to run the packages. 

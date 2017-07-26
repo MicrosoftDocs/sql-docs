@@ -1,6 +1,11 @@
 {
     "redirections": [
         {
+            "source_path": "docs/linux/sql-server-linux-export-import-with-sqlpackage.md",
+            "redirect_url": "/sql/linux/sql-server-linux-migrate-ssms",
+            "redirect_document_id": false
+        },       
+        {
             "source_path": "docs/linux/sql-server-linux-migrate-sqlpackage.md",
             "redirect_url": "/sql/linux/sql-server-linux-migrate-ssms",
             "redirect_document_id": false
@@ -1973,12 +1978,37 @@
 		{
             "source_path": "docs/integration-services/integration-services-ssis-scale-out.md",
             "redirect_url": "/sql/integration-services/scale-out/integration-services-ssis-scale-out",
-            "redirect_document_id": false
+            "redirect_document_id": true
 	    },
 		{
             "source_path": "docs/ssdt/sql-server-tools.md",
             "redirect_url": "/sql/tools/overview-sql-tools",
             "redirect_document_id": false
-	    }
+	    },
+        {
+            "source_path": "docs/integration-services/data-flow/transformations/cache-connection-manager.md",
+            "redirect_url": "/sql/integration-services/connection-manager/cache-connection-manager",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/integration-services/data-flow/transformations/cache-connection-manager-editor.md",
+            "redirect_url": "/sql/integration-services/connection-manager/cache-connection-manager-editor",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/integration-services/data-flow/transformations/dqs-cleansing-connection-manager.md",
+            "redirect_url": "/sql/integration-services/connection-manager/dqs-cleansing-connection-manager",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md",
+            "redirect_url": "/sql/integration-services/connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-ole-db-connection-manager.md",
+            "redirect_url": "/sql/integration-services/connection-manager/lookup-transformation-full-cache-mode-ole-db-connection-manager",
+            "redirect_document_id": true
+        }
     ]
 }

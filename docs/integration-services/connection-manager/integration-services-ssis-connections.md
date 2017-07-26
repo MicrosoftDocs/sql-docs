@@ -81,8 +81,8 @@ A connection manager can be created at the package level or at the project level
 |----------|-----------------|-----------|  
 |ADO|Connects to ActiveX Data Objects (ADO) objects.|[ADO Connection Manager](../../integration-services/connection-manager/ado-connection-manager.md)|  
 |ADO.NET|Connects to a data source by using a .NET provider.|[ADO.NET Connection Manager](../../integration-services/connection-manager/ado-net-connection-manager.md)|  
-|CACHE|Reads data from the data flow or from a cache file (.caw), and can save data to the cache file.|[Cache Connection Manager](../../integration-services/data-flow/transformations/cache-connection-manager.md)|  
-|DQS|Connects to a Data Quality Services server and a Data Quality Services database on the server.|[DQS Cleansing Connection Manager](../../integration-services/data-flow/transformations/dqs-cleansing-connection-manager.md)|  
+|CACHE|Reads data from the data flow or from a cache file (.caw), and can save data to the cache file.|[Cache Connection Manager](../../integration-services/connection-manager/cache-connection-manager.md)|  
+|DQS|Connects to a Data Quality Services server and a Data Quality Services database on the server.|[DQS Cleansing Connection Manager](../../integration-services/connection-manager/dqs-cleansing-connection-manager.md)|  
 |EXCEL|Connects to an Excel workbook file.|[Excel Connection Manager](../../integration-services/connection-manager/excel-connection-manager.md)|  
 |FILE|Connects to a file or a folder.|[File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)|  
 |FLATFILE|Connect to data in a single flat file.|[Flat File Connection Manager](../../integration-services/connection-manager/flat-file-connection-manager.md)|  

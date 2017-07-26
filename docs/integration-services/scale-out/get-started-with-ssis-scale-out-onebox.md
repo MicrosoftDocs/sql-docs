@@ -1,5 +1,5 @@
 ---
-title: "Get Started with SQL Server Integration Services (SSIS) Scale Out on a Single Computer| Microsoft Docs"
+title: "Get Started with SSIS Scale Out on a Single Computer| Microsoft Docs"
 ms.custom: ""
 ms.date: "07/18/2017"
 ms.prod: "sql-server-2017"

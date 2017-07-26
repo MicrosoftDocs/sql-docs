@@ -81,13 +81,13 @@ System.ServiceModel.Security.SecurityNegotiationException: Could not establish s
 
 Step 1: Check if the account running Scale Out Worker service has access to Scale Out Worker certificate by the command below.
 
-```
+```dos
 winhttpcertcfg.exe -l -c LOCAL_MACHINE\MY -s {CN of the worker certificate}
 ```
 
 If the account does not have access, grant by the command below and restart Scale Out Worker service.
 
-```
+```dos
 winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s {CN of the worker certificate} -a {the account running Scale Out Worker service}
 ```
 
@@ -115,13 +115,13 @@ System.ServiceModel.CommunicationException: An error occurred while making the H
 
 Step 1: Check if Scale Out Master certificate is bound to the port in master endpoint correctly on master node with the command below. Check if the certificate hash displayed is matched with Scale Out Master certificate thumbprint.
 
-```
+```dos
 netsh http show sslcert ipport=0.0.0.0:{Master port}
 ```
 
 If the binding is not correct, reset it with following commands and restart Scale Out Worker service.
 
-```
+```dos
 netsh http delete sslcert ipport=0.0.0.0:{Master port}
 netsh http add sslcert ipport=0.0.0.0:{Master port} certhash={Master certificate thumbprint} certstorename=Root appid={random guid}
 ```
@@ -151,7 +151,7 @@ More execution logs can be found under TasksRootFolder configured in WorkerSetti
 
 To locate the log for the package execution with *[execution id]*, execute the T-SQL command below to get the *[task id]*. Then, find the subfolder named with *[task id]* under TasksRootFolder.<sup>1<sup>
 
-```
+```sql
 SELECT [TaskId]
 FROM [SSISDB].[internal].[tasks] tasks, [SSISDB].[internal].[executions] executions 
 WHERE executions.execution_id = *Your Execution Id* AND tasks.JobId = executions.job_id

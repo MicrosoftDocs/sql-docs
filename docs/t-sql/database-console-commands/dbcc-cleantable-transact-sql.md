@@ -1,7 +1,7 @@
 ---
 title: "DBCC CLEANTABLE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/09/2016"
+ms.date: "7/16/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -33,14 +33,12 @@ manager: "jhubbard"
 ---
 # DBCC CLEANTABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-
-  Reclaims space from dropped variable-length columns in tables or indexed views.  
-  
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+Reclaims space from dropped variable-length columns in tables or indexed views.
+![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## Syntax  
   
-```  
+```sql
   
 DBCC CLEANTABLE  
 (  
@@ -65,23 +63,19 @@ DBCC CLEANTABLE
  Suppresses all informational messages.  
   
 ## Remarks  
- DBCC CLEANTABLE reclaims space after a variable-length column is dropped. A variable-length column can be one of the following data types: **varchar**, **nvarchar**, **varchar(max)**, **nvarchar(max)**, **varbinary**, **varbinary(max)**, **text**, **ntext**, **image**, **sql_variant**, and **xml**. The command does not reclaim space after a fixed-length column is dropped.  
-  
- If the dropped columns were stored in-row, DBCC CLEANTABLE reclaims space from the IN_ROW_DATA allocation unit of the table. If the columns were stored off-row, space is reclaimed from either the ROW_OVERFLOW_DATA or the LOB_DATA allocation unit depending on the data type of the dropped column. If reclaiming space from a ROW_OVERFLOW_DATA or LOB_DATA page results in an empty page, DBCC CLEANTABLE removes the page.  
-  
- DBCC CLEANTABLE runs as one or more transactions. If a batch size is not specified, the command processes the whole table in one transaction and the table is exclusively locked during the operation. For some large tables, the length of the single transaction and the log space required may be too much. If a batch size is specified, the command runs in a series of transactions, each including the specified number of rows. DBCC CLEANTABLE cannot be run as a transaction inside another transaction.  
-  
- This operation is fully logged.  
-  
- DBCC CLEANTABLE is not supported for use on system tables, temporary tables, or the xVelocity memory optimized columnstore index portion of a table.  
+DBCC CLEANTABLE reclaims space after a variable-length column is dropped. A variable-length column can be one of the following data types: **varchar**, **nvarchar**, **varchar(max)**, **nvarchar(max)**, **varbinary**, **varbinary(max)**, **text**, **ntext**, **image**, **sql_variant**, and **xml**. The command does not reclaim space after a fixed-length column is dropped.
+If the dropped columns were stored in-row, DBCC CLEANTABLE reclaims space from the IN_ROW_DATA allocation unit of the table. If the columns were stored off-row, space is reclaimed from either the ROW_OVERFLOW_DATA or the LOB_DATA allocation unit depending on the data type of the dropped column. If reclaiming space from a ROW_OVERFLOW_DATA or LOB_DATA page results in an empty page, DBCC CLEANTABLE removes the page.
+DBCC CLEANTABLE runs as one or more transactions. If a batch size is not specified, the command processes the whole table in one transaction and the table is exclusively locked during the operation. For some large tables, the length of the single transaction and the log space required may be too much. If a batch size is specified, the command runs in a series of transactions, each including the specified number of rows. DBCC CLEANTABLE cannot be run as a transaction inside another transaction.
+This operation is fully logged.
+DBCC CLEANTABLE is not supported for use on system tables, temporary tables, or the xVelocity memory optimized columnstore index portion of a table.
   
 ## Best Practices  
- DBCC CLEANTABLE should not be executed as a routine maintenance task. Instead, use DBCC CLEANTABLE after you make significant changes to variable-length columns in a table or indexed view and you need to immediately reclaim the unused space. Alternatively, you can rebuild the indexes on the table or view; however, doing so is a more resource-intensive operation.  
+DBCC CLEANTABLE should not be executed as a routine maintenance task. Instead, use DBCC CLEANTABLE after you make significant changes to variable-length columns in a table or indexed view and you need to immediately reclaim the unused space. Alternatively, you can rebuild the indexes on the table or view; however, doing so is a more resource-intensive operation.
   
 ## Result Sets  
- DBCC CLEANTABLE returns:  
+DBCC CLEANTABLE returns:
   
-```  
+```sql
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
@@ -89,20 +83,19 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
  Caller must own the table or indexed view, or be a member of the **sysadmin** fixed server role, the **db_owner** fixed database role, or the **db_ddladmin** fixed database role.  
   
 ## Examples  
-  
 ### A. Using DBCC CLEANTABLE to reclaim space  
- The following example executes DBCC CLEANTABLE for the `Production.Document` table in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample database.  
+The following example executes DBCC CLEANTABLE for the `Production.Document` table in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample database.
   
-```tsql  
+```sql  
 DBCC CLEANTABLE (AdventureWorks2012,'Production.Document', 0)  
 WITH NO_INFOMSGS;  
 GO  
 ```  
   
 ### B. Using DBCC CLEANTABLE and verifying results  
- The following example creates and populates a table with several variable-length columns. Two of the columns are then dropped and DBCC CLEANTABLE is run to reclaim the unused space. A query is run to verify the page counts and space used values before and after the DBCC CLEANTABLE command is executed.  
+The following example creates and populates a table with several variable-length columns. Two of the columns are then dropped and DBCC CLEANTABLE is run to reclaim the unused space. A query is run to verify the page counts and space used values before and after the DBCC CLEANTABLE command is executed.
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 IF OBJECT_ID ('dbo.CleanTableTest', 'U') IS NOT NULL  
@@ -165,7 +158,7 @@ GO
 ```  
   
 ## See Also  
- [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)   
+[DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
  [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)  
   
   

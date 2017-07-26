@@ -42,7 +42,7 @@ manager: "jhubbard"
   
 **Microsoft JDBC Driver 6.2 for SQL Server:**  
   
-  The JDBC Driver 6.2 includes two JAR class libraries in each installation package: **mssql-jdbc-6.2.0.jre7.jar**, and **mssql-jdbc-6.2.0.jre8.jar**. 
+  The JDBC Driver 6.2 includes two JAR class libraries in each installation package: **mssql-jdbc-6.2.1.jre7.jar**, and **mssql-jdbc-6.2.1.jre8.jar**. 
   
  The JDBC Driver 6.2 is designed to work with and be supported by all major Sun equivalent Java virtual machines, but is tested only on Sun JRE 5.0, 6.0, 7.0, and 8.0. 
   
@@ -50,8 +50,8 @@ manager: "jhubbard"
   
 |JAR|JDBC Version Compliance|Recommended Java Version|Description|  
 |---------|-----------------------------|----------------------|-----------------|   
-|mssql-jdbc-6.2.0.jre7.jar|4.1|7|Requires a Java Runtime Environment (JRE) 7.0. Using JRE 6.0 or lower will throw an exception.<br /><br /> New Features in 6.2 include: Azure AD authentication for Linux, Principal/Password method for Kerberos, automatic detection of REALM in SPN for Cross-Domain authentication, Kerberos Constrained Delegation, Query Timeout, Socket Timeout, and prepared statement handle re-use. |  
-|mssql-jdbc-6.2.0.jre8.jar|4.2|8|Requires a Java Runtime Environment (JRE) 8.0. Using JRE 7.0 or lower will throw an exception.<br /><br /> New Features in 6.2 include: Azure AD authentication for Linux, Principal/Password method for Kerberos, automatic detection of REALM in SPN for Cross-Domain authentication, Kerberos Constrained Delegation, Query Timeout, Socket Timeout, and prepared statement handle re-use|    
+|mssql-jdbc-6.2.1.jre7.jar|4.1|7|Requires a Java Runtime Environment (JRE) 7.0. Using JRE 6.0 or lower will throw an exception.<br /><br /> New Features in 6.2 include: Azure AD authentication for Linux, Principal/Password method for Kerberos, automatic detection of REALM in SPN for Cross-Domain authentication, Kerberos Constrained Delegation, Query Timeout, Socket Timeout, and prepared statement handle re-use. |  
+|mssql-jdbc-6.2.1.jre8.jar|4.2|8|Requires a Java Runtime Environment (JRE) 8.0. Using JRE 7.0 or lower will throw an exception.<br /><br /> New Features in 6.2 include: Azure AD authentication for Linux, Principal/Password method for Kerberos, automatic detection of REALM in SPN for Cross-Domain authentication, Kerberos Constrained Delegation, Query Timeout, Socket Timeout, and prepared statement handle re-use|    
 
   The JDBC Driver 6.2 is also available on the Maven Central Repository and can added to a Maven project by adding the following code in the POM.XML 
   
@@ -59,7 +59,7 @@ manager: "jhubbard"
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>6.2.0.jre8</version>
+    <version>6.2.1.jre8</version>
 </dependency>
 ```    
 

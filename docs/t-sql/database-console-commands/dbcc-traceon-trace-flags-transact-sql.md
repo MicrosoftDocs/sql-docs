@@ -1,7 +1,7 @@
 ---
 title: "Trace Flags (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
+ms.date: "7/17/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -28,9 +28,9 @@ manager: "jhubbard"
 # DBCC TRACEON - Trace Flags (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-Trace flags are used to temporarily set specific server characteristics or to switch off a particular behavior. For example, if trace flag 3205 is set when an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] starts, hardware compression for tape drivers is disabled. Trace flags are frequently used to diagnose performance issues or to debug stored procedures or complex computer systems.  
+Trace flags are used to temporarily set specific server characteristics or to switch off a particular behavior. For example, if trace flag 3205 is set when an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] starts, hardware compression for tape drivers is disabled. Trace flags are frequently used to diagnose performance issues or to debug stored procedures or complex computer systems.
   
- The following table lists and describes the trace flags that are available in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+The following table lists and describes the trace flags that are available in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
  
 > [!NOTE]
 > Some trace flags were introduced in specific [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versions. For more information on the applicable version, see the Microsoft Support article associated with a specific trace flag.
@@ -40,7 +40,7 @@ Trace flags are used to temporarily set specific server characteristics or to sw
 
   
 |Trace flag|Description|  
-|----------------|-----------------|
+|---|---|
 |**139**| Forces correct conversion semantics in the scope of DBCC check commands like [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md), [DBCC CHECKTABLE](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md) and [DBCC CHECKCONSTRAINTS](../../t-sql/database-console-commands/dbcc-checkconstraints-transact-sql.md), when analyzing the improved precision and conversion logic introduced with compatibility level 130 for specific data types, on a database that has a lower compatibility level. For more information, see this [Microsoft Support article](http://support.microsoft.com/help/4010261).<br /><br />**Note:** This trace flag applies to [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] RTM CU3, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 and higher builds.<br /><br />**WARNING:** Trace flag 139 is not meant to be enabled continuously in a production environment, and should be used for the sole purpose of performing database validation checks described in this [Microsoft Support article](http://support.microsoft.com/help/4010261). It should be immediately disabled after validation checks are completed.<br /><br />**Scope**: global only|
 |**174**|Increases the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] plan cache bucket count from 40,009 to 160,001 on 64-bit systems. For more information, see this [Microsoft Support article](http://support.microsoft.com/kb/3026083).<br /><br />**Note:** Please ensure that you thoroughly test this option, before rolling it into a production environment.<br /><br />**Scope**: global only|
 |**176**|Enables a fix to address errors when rebuilding partitions online for tables that contain a computed partitioning column. For more information, see this [Microsoft Support article](http://support.microsoft.com/kb/3213683).<br /><br />**Scope**: global or session|
@@ -85,7 +85,7 @@ Trace flags are used to temporarily set specific server characteristics or to sw
 |**3427**|Enables fix for issue when many consecutive transactions inserting data into temp table in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] consume more CPU than in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. For more information, see [Microsoft Support article](http://support.microsoft.com/help/3216543)<br /><br />**Scope**: global only|  
 |**3608**|Prevents [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from automatically starting and recovering any database except the **master** database. If activities that require **tempdb** are initiated, then **model** is recovered and **tempdb** is created. Other databases will be started and recovered when accessed. Some features, such as snapshot isolation and read committed snapshot, might not work. Use for [Move System Databases](../../relational-databases/databases/move-system-databases.md) and [Move User Databases](../../relational-databases/databases/move-user-databases.md).<br /><br />**Note:** Do not use during normal operation.<br /><br />**Scope**: global only|   
 |**3625**|Limits the amount of information returned to users who are not members of the sysadmin fixed server role, by masking the parameters of some error messages using '\*\*\*\*\*\*'. This can help prevent disclosure of sensitive information.<br /><br />**Scope**: global only|  
-|**4136**|Disables parameter sniffing unless OPTION(RECOMPILE), WITH RECOMPILE or OPTIMIZE FOR <value> is used. For more information, see [Microsoft Support article](http://support.microsoft.com/kb/980653). To accomplish this at the database level, see [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md). To accomplish this at the query level, add the OPTIMIZE FOR UNKNOWN [query hint](../../t-sql/queries/hints-transact-sql-query.md). Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, a second option to accomplish this at the query level is to add the USE HINT [query hint](../../t-sql/queries/hints-transact-sql-query.md) instead of using this trace flag.<br /><br />**Note:** Please ensure that you thoroughly test this option, before rolling it into a production environment.<br /><br />**Scope**: global or session|  
+|**4136**|Disables parameter sniffing unless OPTION(RECOMPILE), WITH RECOMPILE or OPTIMIZE FOR \<value> is used. For more information, see [Microsoft Support article](http://support.microsoft.com/kb/980653). To accomplish this at the database level, see [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md). To accomplish this at the query level, add the OPTIMIZE FOR UNKNOWN [query hint](../../t-sql/queries/hints-transact-sql-query.md). Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, a second option to accomplish this at the query level is to add the USE HINT [query hint](../../t-sql/queries/hints-transact-sql-query.md) instead of using this trace flag.<br /><br />**Note:** Please ensure that you thoroughly test this option, before rolling it into a production environment.<br /><br />**Scope**: global or session|  
 |**4137**|Causes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to generate a plan using minimum selectivity when estimating AND predicates for filters to account for correlation, under the query optimizer cardinality estimation model of [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and earlier versions. For more information, see this [Microsoft Support article](http://support.microsoft.com/kb/2658214).<br /><br />Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, to accomplish this at the query level, add the USE HINT [query hint](../../t-sql/queries/hints-transact-sql-query.md) instead of using this trace flag.<br /><br />**Note:** Please ensure that you thoroughly test this option, before rolling it into a production environment.<br /><br />**Scope**: global or session or query| 
 |**4138**|Causes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to generate a plan that does not use row goal adjustments with queries that contain TOP, OPTION (FAST N), IN, or EXISTS keywords. For more information, see this [Microsoft Support article](http://support.microsoft.com/kb/2667211).<br /><br />Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, to accomplish this at the query level, add the USE HINT [query hint](../../t-sql/queries/hints-transact-sql-query.md) instead of using this trace flag.<br /><br />**Note:** Please ensure that you thoroughly test this option, before rolling it into a production environment.<br /><br />**Scope**: global or session or query| 
 |**4139**|Enable automatically generated quick statistics (histogram amendment) regardless of key column status. If trace flag 4139 is set, regardless of the leading statistics column status (ascending, descending, or stationary), the histogram used to estimate cardinality will be adjusted at query compile time. For more information, see this [Microsoft Support article](http://support.microsoft.com/kb/2952101).<br /><br />Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, to accomplish this at the query level, add the USE HINT [query hint](../../t-sql/queries/hints-transact-sql-query.md) instead of using this trace flag.<br /><br />**Note:** Please ensure that you thoroughly test this option, before rolling it into a production environment.<br /><br />**Scope**: global or session or query|
@@ -138,48 +138,42 @@ Trace flags are used to temporarily set specific server characteristics or to sw
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], there are three types of trace flags: query, session and global. Query trace flags are active for the context of a specific query. Session trace flags are active for a connection and are visible only to that connection. Global trace flags are set at the server level and are visible to every connection on the server. Some flags can only be enabled as global, and some can be enabled at either global or session scope.  
   
  The following rules apply:  
-  
 -   A global trace flag must be enabled globally. Otherwise, the trace flag has no effect. We recommend that you enable global trace flags at startup, by using the **-T** command line option. This ensures the trace flag remains active after a server restart.  
-  
 -   If a trace flag has either global, session or query scope, it can be enabled with the appropriate scope. A trace flag that is enabled at the session level never affects another session, and the effect of the trace flag is lost when the SPID that opened the session logs out.  
   
- Trace flags are set on or off by using either of the following methods:  
-  
+Trace flags are set on or off by using either of the following methods:
 -   Using the DBCC TRACEON and DBCC TRACEOFF commands.  
-  
      For example, to enable the 2528 trace flag globally, use DBCC TRACEON with the -1 argument: `DBCC TRACEON (2528, -1)`. The effect of enabling a global trace flag with DBCC TRACEON is lost on server restart. To turn off a global trace flag, use DBCC TRACEOFF with the -1 argument.  
-  
 -   Using the **-T** startup option to specify that the trace flag be set on during startup.  
-  
      The **-T** startup option enables a trace flag globally. You cannot enable a session-level trace flag by using a startup option. This ensures the trace flag remains active after a server restart. For more information about startup options, see [Database Engine Service Startup Options](../../database-engine/configure-windows/database-engine-service-startup-options.md).
-     
 -   At the query level, by using the QUERYTRACEON [query hint](http://support.microsoft.com/kb/2801413).
   
- Use the `DBCC TRACESTATUS` command to determine which trace flags are currently active.  
+Use the `DBCC TRACESTATUS` command to determine which trace flags are currently active.
   
 ## Examples  
  The following example sets trace flag 3205 on for all sessions at the server level by using DBCC TRACEON.  
   
-```tsql  
+```sql  
 DBCC TRACEON (3205,-1);  
 ```
 
 You can enable all plan-affecting hotfixes controlled by trace flags 4199 and 4137 for a particular query.
   
-```tsql
+```sql
 SELECT x FROM correlated WHERE f1 = 0 AND f2 = 1 OPTION (QUERYTRACEON 4199, QUERYTRACEON 4137)
 ``` 
  
 ## See Also  
- [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [DBCC INPUTBUFFER &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-inputbuffer-transact-sql.md)   
- [DBCC OUTPUTBUFFER &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-outputbuffer-transact-sql.md)   
- [DBCC TRACEOFF &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceoff-transact-sql.md)   
- [DBCC TRACEON &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md)   
- [DBCC TRACESTATUS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-tracestatus-transact-sql.md)   
- [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
- [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [SET NOCOUNT &#40;Transact-SQL&#41;](../../t-sql/statements/set-nocount-transact-sql.md)   
- [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
- [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)   
- [Query Hints (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md) 
+[Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
+[DBCC INPUTBUFFER &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-inputbuffer-transact-sql.md)  
+[DBCC OUTPUTBUFFER &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-outputbuffer-transact-sql.md)  
+[DBCC TRACEOFF &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceoff-transact-sql.md)  
+[DBCC TRACEON &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md)  
+[DBCC TRACESTATUS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-tracestatus-transact-sql.md)  
+[EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)  
+[SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  
+[SET NOCOUNT &#40;Transact-SQL&#41;](../../t-sql/statements/set-nocount-transact-sql.md)  
+[ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)  
+[ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)  
+[Query Hints (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md)
+

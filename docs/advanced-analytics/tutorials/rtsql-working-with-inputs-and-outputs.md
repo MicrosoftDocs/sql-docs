@@ -18,11 +18,9 @@ author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
 ---
-
-# Working with R Inputs and Outputs in SQL)
+# Working with R Inputs and Outputs in SQL
 
 When you want to run R code in  SQL Server, you must wrap the R script in a system stored procedure, [sp_execute_external_script](https://msdn.microsoft.com/library/mt604368.aspx). This stored procedure is used to start the R runtime in the context of SQL Server, which passes data to R, manages R user sessions securely, and returns any results to the client.
-
 
 ## <a name="bkmk_SSMSBasics"></a>Create some simple test data
 
@@ -37,7 +35,7 @@ GO
 ```
 
 When the table has been created, use the following statement to query the table:
-
+  
 ```sql
 SELECT * FROM RTestData
 ```
@@ -65,6 +63,7 @@ EXECUTE sp_execute_external_script
 **Results**
 
 ![rsql_basictut_getsamedataR](media/rsql-basictut-getsamedatar.PNG)
+
 
 **Comments**
 
@@ -96,6 +95,7 @@ Did you get this error? That's because R is case-sensitive! In the example, the 
 Error in eval(expr, envir, enclos) : object 'SQL_in' not found
 ```
 
+That's because R is case-sensitive! In the example, the R script uses the variables *SQL_in* and *SQL_out*, but the parameters to the stored procedure use the variables *SQL_In* and *SQL_Out*.
 Try correcting **only** the *SQL_In* variable and re-run the stored procedure.
 
 Now you get a **different** error:
@@ -104,7 +104,7 @@ Now you get a **different** error:
 EXECUTE statement failed because its WITH RESULT SETS clause specified 1 result set(s), but the statement only sent 0 result set(s) at run time.*
 ```
 
-We've asked you to generate this error because it's a common one when testing new R code. It means that the R script ran successfully, but SQL Server got back no data, or got back wrong or unexpected data.
+We're showing you this error because it's a common one when testing new R code. It means that the R script ran successfully, but SQL Server got back no data, or got back wrong or unexpected data.
 
 In this case, the output schema (the line beginning with **WITH**) specifies that one column of integer data should be returned, but since R put the data in a different variable, nothing came back to SQL Server; hence, the error.
 
@@ -117,7 +117,7 @@ In this case, the output schema (the line beginning with **WITH**) specifies tha
 
 ## Generate results using R
 
-You can also generate values using just the R script, and leave the input query string in _@input_data_1_ blank. Or,you can provide some generic but valid SQL SELECT statement as a placeholder, and not use the SQL results in the R script.
+You can also generate values using just the R script and leave the input query string in _@input_data_1_ blank. Or, use a valid SQL SELECT statement as a placeholder, and not use the SQL results in the R script.
 
 ```sql
 EXECUTE sp_execute_external_script

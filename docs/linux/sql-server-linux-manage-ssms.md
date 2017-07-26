@@ -6,7 +6,7 @@ description:
 author: sanagama 
 ms.author: sanagama 
 manager: jhubbard
-ms.date: 03/17/2017
+ms.date: 07/19/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -46,14 +46,14 @@ When working with SQL Server, you should always use the most recent version of S
 
 ## Before you begin
 - See [Use SSMS on Windows to connect to SQL Server on Linux](sql-server-linux-develop-use-ssms.md) for how to Connect and Query using SSMS
-- Read the [Known Issues](sql-server-linux-release-notes.md) for SQL Server 2017 CTP 2.1 on Linux
+- Read the [Known Issues](sql-server-linux-release-notes.md) for SQL Server 2017 RC1 on Linux
 
 ## Create and manage databases
-While connected to the *master* database, you can create databases on the server and modify or drop existing databases. The following steps describe how to accomplish several common database management tasks through Management Studio. To perform these tasks, make sure you are connected to the *master* database with the server-level principal login that you created when you set up SQL Server 2017 CTP 2.1 on Linux.
+While connected to the *master* database, you can create databases on the server and modify or drop existing databases. The following steps describe how to accomplish several common database management tasks through Management Studio. To perform these tasks, make sure you are connected to the *master* database with the server-level principal login that you created when you set up SQL Server 2017 RC1 on Linux.
 
 ### Create a new database
 
-1. Start SSMS and connect to your server in SQL Server 2017 CTP 2.1 on Linux
+1. Start SSMS and connect to your server in SQL Server 2017 RC1 on Linux
 
 2. In Object Explorer, right-click on the *Databases* folder, and then click *New Database..."
 
@@ -63,7 +63,7 @@ The new database is successfully created in your server. If you prefer to create
 
 ### Drop a database
 
-1. Start SSMS and connect to your server in SQL Server 2017 CTP 2.1 on Linux
+1. Start SSMS and connect to your server in SQL Server 2017 RC1 on Linux
 
 2. In Object Explorer, expand the *Databases* folder to see a list of all the database on the server.
 
@@ -77,7 +77,7 @@ The database is successfully dropped from your server. If you prefer to drop a d
 
 The [Activity Monitor](https://msdn.microsoft.com/en-us/library/hh212951.aspx) tool is built-in into SQL Server Management Studio (SSMS) and displays information about SQL Server processes and how these processes affect the current instance of SQL Server.
 
-1. Start SSMS and connect to your server in SQL Server 2017 CTP 2.1 on Linux
+1. Start SSMS and connect to your server in SQL Server 2017 RC1 on Linux
 
 2. In Object Explorer, right-click the *server* node, and then click *Activity Monitor*
 

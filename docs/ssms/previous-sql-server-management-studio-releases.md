@@ -1,7 +1,7 @@
 ---
 title: "Previous SQL Server Management Studio Releases | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/30/2017"
+ms.date: "07/12/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -18,6 +18,19 @@ manager: "jhubbard"
 # Previous SQL Server Management Studio Releases
   
 The following previous releases of SQL Server Management Studio are available.
+
+## ![download](../ssdt/media/download.png) [SQL Server Management Studio 17.0 release](http://go.microsoft.com/fwlink/?LinkID=847722)
+
+**Version Information**  
+  
+*This release of SSMS uses the Visual Studio 2015 Isolated shell.*  
+The release number: 17.0  
+The build number for this release: 14.0.17099.0
+
+## Changelog  
+
+See [17.0](sql-server-management-studio-changelog-ssms.md#ssms-170-release).
+
    
 ## ![download](../ssdt/media/download.png) [SQL Server Management Studio 16.5.3 release](http://go.microsoft.com/fwlink/?LinkID=840946)
 

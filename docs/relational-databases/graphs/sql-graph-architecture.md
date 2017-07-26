@@ -127,7 +127,7 @@ The following built-in functions are added. These will help users extract inform
 
 
 ## Transact-SQL reference 
-Learn the [!INCLUDE[tsql-md](../../includes/tsql-md.md)] extensions introduced in SQL Server, that enable creating and querying graph objects. The query language extensions help query and traverse the graph using ASCII art syntax.
+Learn the [!INCLUDE[tsql-md](../../includes/tsql-md.md)] extensions introduced in SQL Server and Azure SQL Database, that enable creating and querying graph objects. The query language extensions help query and traverse the graph using ASCII art syntax.
  
 ### Data Definition Language (DDL) statements
 |Task	|Related Topic  |Notes

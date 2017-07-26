@@ -2,7 +2,7 @@
 title: "OPENJSON (Transact-SQL) | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "06/10/2016"
+ms.date: "07/17/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -26,18 +26,18 @@ manager: "jhubbard"
 # OPENJSON (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-**OPENJSON** is a table-valued function that parses JSON text and returns objects and properties from the JSON input as rows and columns.
-
-**OPENJSON** provides a rowset view over a JSON document. You can explicitly specify the columns in the rowset and the property paths to use to populate the columns. Since **OPENJSON** returns a set of rows, you can use **OPENJSON** in the `FROM` clause of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements like any other table, view, or table-valued function.  
+**OPENJSON** is a table-valued function that parses JSON text and returns objects and properties from the JSON input as rows and columns. In other words, **OPENJSON** provides a rowset view over a JSON document. You can explicitly specify the columns in the rowset and the JSON property paths used to populate the columns. Since **OPENJSON** returns a set of rows, you can use **OPENJSON** in the `FROM` clause of a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement just as you can use any other table, view, or table-valued function.  
   
-Use OPENJSON to import JSON data into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], or to convert JSON data to relational format for an app or service that can't consume JSON directly.  
+Use **OPENJSON** to import JSON data into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], or to convert JSON data to relational format for an app or service that can't consume JSON directly.  
   
 > [!NOTE]  
->  The **OPENJSON** function is available only under compatibility level 130 (or higher). If your database compatibility level is lower than 130, SQL Server can't find and run the OPENJSON function. Other JSON functions are available at all compatibility levels. You can check compatibility level in the `sys.databases` view or in database properties. You can change the compatibility level of a database with the following command:  
+>  The **OPENJSON** function is available only under compatibility level 130 or higher. If your database compatibility level is lower than 130, SQL Server can't find and run the **OPENJSON** function. Other JSON functions are available at all compatibility levels.
 > 
-> `ALTER DATABASE DatabaseName SET COMPATIBILITY_LEVEL = 130  `
+> You can check compatibility level in the `sys.databases` view or in database properties. You can change the compatibility level of a database with the following command:  
+> 
+> `ALTER DATABASE DatabaseName SET COMPATIBILITY_LEVEL = 130`
 >   
-> Compatibility level 120 might be the default even in a new Azure SQL Database.  
+> Compatibility level 120 may be the default even in a new Azure SQL Database.  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon")[Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,16 +48,14 @@ OPENJSON( jsonExpression [ , path ] )  [ <with_clause> ]
 
 <with_clause> ::= WITH ( { colName type [ column_path ] [ AS JSON ] } [ ,...n ] )
 ```  
-> [!NOTE]
-> If you use the **AS JSON** option, the column *type* must be `NVARCHAR(MAX)`.
 
-The **OPENJSON** table-valued function parses the *jsonExpression* provided as the first argument and returns one or more rows containing data from the JSON objects in this expression. *jsonExpression* can contain nested sub-objects. If you want to parse a sub-object from within *jsonExpression*, you can specify a second **path** parameter for the JSON sub-object.
+The **OPENJSON** table-valued function parses the *jsonExpression* provided as the first argument and returns one or more rows containing data from the JSON objects in the expression. *jsonExpression* can contain nested sub-objects. If you want to parse a sub-object from within *jsonExpression*, you can specify a **path** parameter for the JSON sub-object.
 
 ### openjson
 
 ![Syntax for OPENJSON TVF](../../relational-databases/json/media/openjson-syntax.png "OPENJSON syntax")  
 
-By default, the **OPENJSON** table-valued function returns three columns, which contain the key name, value, and type of each {key:value} pair found in *jsonExpression*. As an alternative, you can explicitly specify the schema of the result set **OPENJSON** returns by using *with_clause*:
+By default, the **OPENJSON** table-valued function returns three columns, which contain the key name, the value, and the type of each {key:value} pair found in *jsonExpression*. As an alternative, you can explicitly specify the schema of the result set that **OPENJSON** returns by providing *with_clause*.
   
 ### with_clause
   
@@ -67,7 +65,7 @@ By default, the **OPENJSON** table-valued function returns three columns, which 
 
 ## Arguments  
 ### *jsonExpression*  
-Is a Unicode character expression containing the JSON text.  
+Is a Unicode character expression containing JSON text.  
   
 OPENJSON iterates over the elements of the array or the properties of the object in the JSON expression and returns one row for each element or property. The following example returns each property of the object provided as *jsonExpression*:  
   
@@ -99,8 +97,10 @@ FROM OPENJSON(@json)
 |ObjectValue|{"obj":"ect"}|5|  
 
 ### *path*  
-Is a JSON path expression that references an object or an array within *jsonExpression*. **OPENJSON** seeks into the JSON text at the specified position and parses only the referenced fragment. For more info, see [JSON Path Expressions &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md).
+Is an optional JSON path expression that references an object or an array within *jsonExpression*. **OPENJSON** seeks into the JSON text at the specified position and parses only the referenced fragment. For more info, see [JSON Path Expressions &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md).
 
+In [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] and in [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)], you can provide a variable as the value of *path*.
+  
 The following example returns a nested object by specifying the *path*:  
 
 ```sql  
@@ -112,7 +112,7 @@ DECLARE @json NVARCHAR(4000) = N'{
               }  
  }';
 
-SELECT [key],value
+SELECT [key], value
 FROM OPENJSON(@json,'$.path.to."sub-object"')
 ```  
   
@@ -126,43 +126,42 @@ FROM OPENJSON(@json,'$.path.to."sub-object"')
 |3|es-AR|  
 |4|sr-Cyrl|  
  
-**OPENJSON** returns the indexes of the elements in the JSON text as keys when it parses a JSON array.
+When **OPENJSON** parses a JSON array, the function returns the indexes of the elements in the JSON text as keys.
 
-In [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] and in [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)], you can provide a variable as the value of *path*.
-  
 The comparison used to match path steps with the properties of the JSON expression is case-sensitive and collation-unaware (that is, a BIN2 comparison). 
 
 ### *with_clause*
-Explicitly defines the output schema for the **OPENJSON** function to return. The *with_clause* can contain the following elements:
+Explicitly defines the output schema for the **OPENJSON** function to return. The optional *with_clause* can contain the following elements:
 
 *colName*
 Is the name for the output column.  
   
-By default, OPENJSON uses the name of the column to match a property in the JSON text. For example, if you specify the column *name* in the schema, OPENJSON tries to populate this column with the property "name" in the JSON text. You can override this default mapping by using the  *column_path* argument.  
+By default, **OPENJSON** uses the name of the column to match a property in the JSON text. For example, if you specify the column *name* in the schema, OPENJSON tries to populate this column with the property "name" in the JSON text. You can override this default mapping by using the  *column_path* argument.  
   
 *type*  
 Is the data type for the output column.  
+
+> [!NOTE]
+> If you also use the **AS JSON** option, the column *type* must be `NVARCHAR(MAX)`.
   
 *column_path*  
 Is the JSON path that specifies the property to return in the specified column. For more info, see the description of the *path* parameter previously in this topic.  
   
-Use *column_path* to override default mapping rules if the name of an output column doesn't match the name of the property.  
-  
-For more info, see [JSON Path Expressions &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md).  
+Use *column_path* to override default mapping rules when the name of an output column doesn't match the name of the property.  
   
 The comparison used to match path steps with the properties of the JSON expression is case-sensitive and collation-unaware (that is, a  BIN2 comparison).  
   
-*AS JSON*  
-Use the AS JSON option in a column definition to specify that the referenced property contains an inner object or array.
-
--   If you don't specify AS JSON for a column, the function returns a scalar value (for example, int, string, true, false) from the specified JSON property on the specified path. If the path represents an object or an array, and the property can't be found at the specified path, the function returns null in lax mode or returns an error in strict mode. This behavior is similar to the behavior of the JSON_VALUE function.  
+For more info about paths, see [JSON Path Expressions &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md).  
   
--   If you specify AS JSON for a column, the function returns a JSON fragment from the specified JSON property on the specified path. If the path represents a scalar value, and the property can't be found at the specified path, the function returns null in lax mode or returns an error in strict mode. This behavior is similar to the behavior of the JSON_QUERY function.  
+*AS JSON*  
+Use the **AS JSON** option in a column definition to specify that the referenced property contains an inner JSON object or array. If you specify the **AS JSON** option, the type of the column must be NVARCHAR(MAX).
+
+-   If you don't specify **AS JSON** for a column, the function returns a scalar value (for example, int, string, true, false) from the specified JSON property on the specified path. If the path represents an object or an array, and the property can't be found at the specified path, the function returns null in lax mode or returns an error in strict mode. This behavior is similar to the behavior of the **JSON_VALUE** function.  
+  
+-   If you specify **AS JSON** for a column, the function returns a JSON fragment from the specified JSON property on the specified path. If the path represents a scalar value, and the property can't be found at the specified path, the function returns null in lax mode or returns an error in strict mode. This behavior is similar to the behavior of the **JSON_QUERY** function.  
   
 > [!NOTE]  
-> If you want to return a nested JSON fragment from a JSON property, you have to provide the **AS JSON** flag. Without this option, if the property can't be found, OPENJSON returns a NULL value instead of the referenced JSON object or array, or it returns a run-time error in strict mode .  
->   
-> If you specify the AS JSON option, the type of the column must be NVARCHAR(MAX).  
+> If you want to return a nested JSON fragment from a JSON property, you have to provide the **AS JSON** flag. Without this option, if the property can't be found, OPENJSON returns a NULL value instead of the referenced JSON object or array, or it returns a run-time error in strict mode.  
   
 For example, the following query returns and formats the elements of an array:  
   
@@ -257,16 +256,16 @@ Column names in *with_clause* are matched with keys in the JSON text. If you spe
 
 ## Examples  
   
-### Example 1 - Convert a JSON array value to a temporary table  
+### Example 1 - Convert a JSON array to a temporary table  
 The following example provides a list of identifiers as a JSON array of numbers. The query converts the JSON array to a table of identifiers and filters all products with the specified ids.  
   
 ```sql  
-DECLARE @pSearchOptions NVARCHAR(4000) =N'[1,2,3,4]'
+DECLARE @pSearchOptions NVARCHAR(4000) = N'[1,2,3,4]'
 
 SELECT *
 FROM products
 INNER JOIN OPENJSON(@pSearchOptions) AS productTypes
- ON product.productTypeID=productTypes.value
+ ON product.productTypeID = productTypes.value
 ```  
   
 This query is equivalent to the following example. However, in the example below, you have to embed numbers in the query instead of passing them as parameters.  
@@ -274,7 +273,7 @@ This query is equivalent to the following example. However, in the example below
 ```sql  
 SELECT *
 FROM products
-WHERE product.productTypeID IN(1,2,3,4)
+WHERE product.productTypeID IN (1,2,3,4)
 ```  
   
 ### Example 2 - Merge properties from two JSON objects  
@@ -292,11 +291,11 @@ FROM OPENJSON(@json1)
 UNION ALL
 SELECT *
 FROM OPENJSON(@json2)
-WHERE [key] NOT IN(SELECT [key] FROM OPENJSON(@json1))
+WHERE [key] NOT IN (SELECT [key] FROM OPENJSON(@json1))
 ```  
   
 ### Example 3 - Join rows with JSON data stored in table cells using CROSS APPLY  
-In the following example, the SalesOrderHeader table has a SalesReason text column that contains an array of SalesOrderReasons in JSON format. The SalesOrderReasons objects contain properties like *Quality* and *Manufacturer*. The example creates a report that joins every sales order row to the related sales reasons. The OPENJSON operator expands the JSON array of sales reasons as if the reasons were stored in a separate child table. Then the CROSS APPLY operator joins each sales order row to the rows returned by the OPENJSON table-valued function.  
+In the following example, the `SalesOrderHeader` table has a `SalesReason` text column that contains an array of `SalesOrderReasons` in JSON format. The `SalesOrderReasons` objects contain properties like *Quality* and *Manufacturer*. The example creates a report that joins every sales order row to the related sales reasons. The OPENJSON operator expands the JSON array of sales reasons as if the reasons were stored in a separate child table. Then the CROSS APPLY operator joins each sales order row to the rows returned by the OPENJSON table-valued function.  
   
 ```sql  
 SELECT SalesOrderID,OrderDate,value AS Reason
@@ -315,7 +314,7 @@ FROM Sales.SalesOrderHeader
      CROSS APPLY OPENJSON (SalesReasons) WITH (value nvarchar(100) '$')
 ```  
   
-In this example, the `$` path references each element in arrays. If you want to explicitly cast the returned value, you can use this type of query.  
+In this example, the `$` path references each element in the array. If you want to explicitly cast the returned value, you can use this type of query.  
   
 ### Example 4 - Combine relational rows and JSON elements with CROSS APPLY  
 The following query combines relational rows and JSON elements into the results shown in the following table.  

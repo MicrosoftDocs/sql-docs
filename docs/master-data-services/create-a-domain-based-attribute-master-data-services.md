@@ -83,7 +83,7 @@ manager: "jhubbard"
   
 9. From the **Attribute type** list, select **Domain-based**.  
   
-10. From the **Domain Entity** list, choose the entity to be used to populate the attribute values. If there are more than fifty entities, you can filter and search for an entity. Otherwise, select an entity from the drop-down list.  
+10. From the **Domain Entity** list, choose the entity to be used to populate the attribute values. 
   
 11. **Optional, for domain-based attributes for leaf members.** Select a filter parent attribute that is used to constrain the allowed values for the domain-based attribute.  
   

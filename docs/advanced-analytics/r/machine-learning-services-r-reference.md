@@ -1,7 +1,7 @@
 ---
-title: "R | Microsoft Docs"
+title: "API reference for SQL Server Machine Learning Services | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/30/2017"
+ms.date: "07/2/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -14,7 +14,7 @@ ms.author: "jeannt"
 manager: "jhubbard"
 ---
 
-# Reference for SQL Server Machine Learning APIs
+# API reference for SQL Server Machine Learning Services
 
 This article provides links to the reference documentation for APIs used by SQL Server R Services and SQL Server Machine Learning Services.
 
@@ -22,27 +22,50 @@ For the most part, SQL Server consumes the same R and Python libraries that are 
 
 ## R
 
-+ [RevoScaleR functions](https://msdn.microsoft.com/microsoft-r/scaler/scaler)
-+ [MicrosoftML](https://msdn.microsoft.com/microsoft-r/microsoftml/microsoftml)
-+ [olapR](https://msdn.microsoft.commicrosoft-r/olapr/olapr)
-+ [sqlrutils](https://msdn.microsoft.commicrosoft-r/sqlrutils/sqlrutils)
-+ [mrsdeploy functions](https://msdn.microsoft.com/microsoft-r/mrsdeploy/mrsdeploy)
++ [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)
 
-"How-to" topics and tutorials specific to use of these R or Python APIs in SQL Server can be found here:
+    Scalable algorithms that support remote compute contexts and multiple data sources.
 
-+ [ScaleR Functions for Working with SQL Server](scaler-functions-for-working-with-sql-server-data.md)
-+ [Generate a Stored Procedure Using sqlrutils](generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md)
-+ [Read MDX Data into R using olapR](how-to-create-mdx-queries-using-olapr.md)
++ [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)
+
+    Fast, scalable machine learning algorithms and transforms for R. Requires RevoScaleR.
+
++ [olapR](https://docs.microsoft.com/r-server/r-reference/olapr/olapr)
+
+   Reads the schema of OLAP data sources and executes MDX queries.
+
++ [sqlrutils](https://docs.microsoft.com/r-server/r-reference/sqlrutils/sqlrutils)
+
+    Helper functions for generating a well-formed stored procedure from R code.
+
++ [mrsdeploy](https://docs.microsoft.com/r-server/r-reference/mrsdeploy/mrsdeploy-package)
+
+   Functions for establishing a remote session in a console application and for publishing and managing a web service that uses R or Python code.
 
 ## Python
 
-**revoscalepy**
++ [revoscalepy](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package)
 
-> [!NOTE]
-> This feature is new and still under development.
-> Documentation coming soon.
+    Python equivalent of the RevoScaleR package for the R language. Supports the same compute contexts and data sources.
 
-## See Also
++ [Microsoftml for Python](https://docs.microsoft.com/r-server/python-reference/microsoftml/microsoftml-package)
 
-[RevoPEMAR function reference](https://msdn.microsoft.com/microsoft-r/pemar/pemar)
-[RevoUtils](https://msdn.microsoft.com/microsoft-r/revoutils/revoutils)
+    Python equivalent of the MicrosoftML package for R. Supports the same compute contexts and data sources,and includes fast, scalable algorithms and transformations from Microsoft.
+
+## Related APIs
+
++ [RevoPEMAR function reference](https://docs.microsoft.com/r-server/r-reference/revopemar/pemar)
+
+    Supports development of parallel algorithms
+
++ [RevoUtils](https://docs.microsoft.com/r-server/r-reference/revoutils/revoutils)
+
+    Utility functions for use with RevoScaleR environments
+
+## Other
+
+"How-to" topics and summaries specific to use of these R or Python APIs in SQL Server can be found here:
+
++ [ScaleR functions for working with SQL Server](scaler-functions-for-working-with-sql-server-data.md)
++ [Generate a stored procedure using sqlrutils](generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md)
++ [Read MDX Data into R using olapR](how-to-create-mdx-queries-using-olapr.md)

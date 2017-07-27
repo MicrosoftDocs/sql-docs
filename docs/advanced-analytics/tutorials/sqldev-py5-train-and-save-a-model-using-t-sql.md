@@ -1,7 +1,7 @@
 ---
 title: "Step 5: Train and Save a Model using T-SQL | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/25/2017"
+ms.date: "07/26/2017"
 ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
@@ -20,7 +20,7 @@ author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
 ---
-# Step 5: Train and Save a Model using T-SQL
+# Step 5: Train and save a model using T-SQL
 
 In this step, you'll learn how to train a machine learning model using the Python packages **scikit-learn** and **revoscalepy**. These Python libraries are already installed with SQL Server Machine Learning Services, so you can load the modules and call the necessary functions from within a stored procedure. You'll train the model using the data features you just created, and then save the trained model in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table.
 
@@ -44,7 +44,7 @@ In this step, you'll learn how to train a machine learning model using the Pytho
 
 2. Run the stored procedure, and type an integer that represents the percentage of data allocated to the training set. For example, the following statement would allocate 60% of data to the training set. Training and testing data are stored in two separate tables.
 
-    ```SQL	
+    ```SQL
     EXEC TrainTestSplit 60
     GO
     ```
@@ -115,10 +115,9 @@ To make it easier to retrain the model, you can wrap the call to sp_execute_exer
 
 ## Build a logistic model using the _revoscalepy_ package
 
-Now you'll create a different stored procedure that can uses the new **revoscalepy** package to train a logistic regression model. The **revoscalepy** package for Python contains objects, transformation, and algorithms similar to those provided for the R language's **RevoScaleR** package. With this library, you can create a compute context, move data between compute contexts, transform data, and train predictive models using popular algorithms such as logistic and linear regression, decision trees, and more. For more information, see [what is revoscalepy?](https://review.docs.microsoft.com/en-us/sql/advanced-analytics/python/what-is-revoscalepy)
+Now you'll create a different stored procedure that can uses the new **revoscalepy** package to train a logistic regression model. The **revoscalepy** package for Python contains objects, transformation, and algorithms similar to those provided for the R language's **RevoScaleR** package. With this library, you can create a compute context, move data between compute contexts, transform data, and train predictive models using popular algorithms such as logistic and linear regression, decision trees, and more. For more information, see [what is revoscalepy?](../python/what-is-revoscalepy.md).
 
-
-1. In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], open a new Query window and run the following statement to create the stored procedure _TrainTipPredictionModelRxPy_.  This model will be based on the training data you just prepared. Because the stored procedure already includes a definition of the input data, you don't need to provide an input query.
+1. In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], open a new **Query** window and run the following statement to create the stored procedure _TrainTipPredictionModelRxPy_.  This model will be based on the training data you just prepared. Because the stored procedure already includes a definition of the input data, you don't need to provide an input query.
 
     ```SQL
     DROP PROCEDURE IF EXISTS TrainTipPredictionModelRxPy;
@@ -183,16 +182,10 @@ Now you'll create a different stored procedure that can uses the new **revoscale
 
 In the next step you'll use the trained models to create predictions.
 
-## Next Step
+## Next step
 
 [Step 6: Operationalize the Model](sqldev-py6-operationalize-the-model.md)
 
-## Previous Step
+## Previous step
 
 [Step 4: Create Data Features using T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
-
-## See Also
-
-[Machine Learning Services with Python](../python/sql-server-python-services.md)
-
-

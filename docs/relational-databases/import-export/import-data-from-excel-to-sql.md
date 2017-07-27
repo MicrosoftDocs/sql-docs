@@ -15,10 +15,12 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # Import data from Excel to SQL Server or Azure SQL Database
-Here are your options for importing data from Excel files to SQL Server or to Azure SQL Database. You can import data directly from Excel SQL by using the SQL Server Import and Export Wizard, Integration Services (SSIS), or the OPENROWSET function. Or, you can save your Excel data as text, and then use the BULK INSERT statement, BCP, or Azure Data Factory. We summarize the options here with links to more detailed instructions.
+There are several ways to import data from Excel files to SQL Server or to Azure SQL Database.
+-   You can import data directly from Excel SQL by using the SQL Server Import and Export Wizard, Integration Services (SSIS), or the OPENROWSET function. 
+-   You can save your Excel data as text, and then use the BULK INSERT statement, BCP, or Azure Data Factory. We summarize the options here with links to more detailed instructions.
 
 > [!NOTE]
-> A complete description of powerful tools and services like SSIS or Azure Data Factory is beyond the scope of this article. To learn more about the solution that interests you, follow the links provided for tutorials and more info.
+> A complete description of complex tools and services like SSIS or Azure Data Factory is beyond the scope of this overview. To learn more about the solution that interests you, follow the links provided for tutorials and more info.
 
 ## SQL Server Import and Export Wizard
 
@@ -126,14 +128,16 @@ For more info about linked servers, see the following topics.
 -   [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md)
 
 For more examples and info about both linked servers and distributed queries, see the following topics.
--   [How to use Excel with SQL Server linked servers and distributed queries](https://support.microsoft.com/help/306397/how-to-use-excel-with-sql-server-linked-servers-and-distributed-queries).
+-   [How to use Excel with SQL Server linked servers and distributed queries](https://support.microsoft.com/help/306397/how-to-use-excel-with-sql-server-linked-servers-and-distributed-queries)
 -   [How to import data from Excel to SQL Server](https://support.microsoft.com/help/321686/how-to-import-data-from-excel-to-sql-server)
 
 ## Prerequisite - Save Excel data as text
-To use the remaining options described on this page - the BULK INSERT statement, the BCP tool, or Azure Data Factory - first export your Excel data to a text file. In Excel, select **File | Save As** and then select **Text (Tab delimited) (\*.txt)** or **CSV (Comma delimited) (\*.csv)** as the file type.
+To use the rest of the methods described on this page - the BULK INSERT statement, the BCP tool, or Azure Data Factory - first you have to export your Excel data to a text file.
+
+In Excel, select **File | Save As** and then select **Text (Tab delimited) (\*.txt)** or **CSV (Comma delimited) (\*.csv)** as the destination file type.
 
 > [!TIP]
-> For best results with data importing tools, save sheets that contain only the column headers and the rows of data. If the saved data contains page titles, blank lines, notes, and so forth, you may see unexpected results.
+> For best results with data importing tools, save sheets that contain only the column headers and the rows of data. If the saved data contains page titles, blank lines, notes, and so forth, you may see unexpected results later when you import the data.
 
 ## BULK INSERT command
 

@@ -2024,6 +2024,21 @@
             "source_path": "docs/relational-databases/feature-reference-database-engine.md",
             "redirect_url": "/sql/relational-databases/database-features",
             "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/database-engine/configure-windows/sql-server-database-engine.md",
+            "redirect_url": "/sql/database-engine/sql-server-database-engine-overview",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/database-engine/configure-windows/what-s-new-in-sql-server-2016-database-engine.md",
+            "redirect_url": "/sql/database-engine/whats-new-in-sql-server-2016",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/database-engine/configure-windows/what-s-new-in-sql-server-2017-database-engine.md",
+            "redirect_url": "/sql/database-engine/whats-new-in-sql-server-2017",
+            "redirect_document_id": true
         }
 
     ]

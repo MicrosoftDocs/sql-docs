@@ -1,6 +1,3 @@
-# [Database Engine](sql-server-database-engine.md)  
-# [What's New in SQL Server 2017 (Database Engine)](what-s-new-in-sql-server-2017-database-engine.md)  
-# [What's New in SQL Server 2016 (Database Engine)](what-s-new-in-sql-server-2016-database-engine.md)  
 # [Database Engine Instances (SQL Server)](database-engine-instances-sql-server.md)  
 ## [Log File Viewer](../../relational-databases/logs/log-file-viewer.md)
 # [Configure Database Engine Instances](configure-database-engine-instances-sql-server.md)  

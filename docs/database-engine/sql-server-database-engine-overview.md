@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Database Engine | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/11/2017"
+ms.date: "07/26/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -19,9 +19,9 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # SQL Server Database Engine
-  The [!INCLUDE[ssDE](../../includes/ssde-md.md)] is the core service for storing, processing, and securing data. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] provides controlled access and rapid transaction processing to meet the requirements of the most demanding data consuming applications within your enterprise.  
+  The [!INCLUDE[ssDE](../includes/ssde-md.md)] is the core service for storing, processing, and securing data. The [!INCLUDE[ssDE](../includes/ssde-md.md)] provides controlled access and rapid transaction processing to meet the requirements of the most demanding data consuming applications within your enterprise.  
   
- Use the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to create relational databases for online transaction processing or online analytical processing data. This includes creating tables for storing data, and database objects such as indexes, views, and stored procedures for viewing, managing, and securing data. You can use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to manage the database objects, and [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] to capture server events.  
+ Use the [!INCLUDE[ssDE](../includes/ssde-md.md)] to create relational databases for online transaction processing or online analytical processing data. This includes creating tables for storing data, and database objects such as indexes, views, and stored procedures for viewing, managing, and securing data. You can use [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] to manage the database objects, and [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] to capture server events.  
 
 
 ## See Also  

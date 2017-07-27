@@ -20,7 +20,7 @@ manager: "jhubbard"
 ---
 # Predict and plot from model (R in SQL quickstart)
 
-To perform _scoring_ using new data, you'll get one of the trained models from the table, and then call a new set of data on which to base predictions. Scoring is a term sometimes used in data science to mean generating predictions, probabilities, or other values based on new data fed into a trained model.
+To perform _scoring_ using new data, get one of the trained models from the table, and then call a new set of data on which to base predictions. Scoring is a term sometimes used in data science to mean generating predictions, probabilities, or other values based on new data fed into a trained model.
 
 ## Create the table of new speeds
 
@@ -141,11 +141,11 @@ The following example demonstrates how to create a simple graphic using a plotti
 ```
 
 + The `tempfile` function returns a string that can be used as a file name, but the file is not actually generated yet.
-+ For arguments to `tempfile`, you can specify a prefix and file extension, as well as a tmpdir. To verify the file name and path, print a message using `str()`.
++ For arguments to `tempfile`, you can specify a prefix and file extension, as well as the directory. To verify the complete file name and path, print a message using `str()`.
 + The `jpeg` function creates an R device with the specified parameters.
 + After you create the plot, you can add more visual features to it. In this case, a regression line is added using `abline`.
 + When you are done adding plot features, you must close the graphics device using the `dev.off()` function.
-+ The `readBin` function takes a file to read, a format specification, and the number of records. The **rb** keyword indicates that the file is binary rather than containing text.
++ The `readBin` function takes a file to read, a format specification, and the number of records. The `rb`**` keyword indicates that the file is binary rather than text.
 
 **Results**
 

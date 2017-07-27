@@ -75,7 +75,7 @@ In this section, you'll learn how to work with each type of output using stored 
 
     In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], open a new **Query** window.
 
-2. In the database that contains the tutrial data, create the procedure using this statement:
+2. In the database that contains the tutorial data, create the procedure using this statement:
 
     ```SQL
     CREATE PROCEDURE [dbo].[PlotHistogram]
@@ -154,11 +154,13 @@ The stored procedure returns the image as a stream of varbinary data, which obvi
   
     **Results**
     
-    *Starting copy...*
-    *1 rows copied.*
-    *Network packet size (bytes): 4096*
-    *Clock Time (ms.) Total     : 3922   Average : (0.25 rows per sec.)*
-    
+    ```
+    Starting copy...
+    1 rows copied.
+    Network packet size (bytes): 4096
+    Clock Time (ms.) Total     : 3922   Average : (0.25 rows per sec.)
+    ```
+
     > [!TIP]
     > If you save the format information to file (bcp.fmt), the **bcp** utility generates a format definition that you can apply to similar commands in future without being prompted for graphic file format options. To use the format file, add `-f bcp.fmt` to the end of any command line, after the password argument.
   
@@ -254,9 +256,15 @@ To generate graphs for users, you can use a stored procedure that creates the ou
 
     **Results**
     
-    *STDOUT message(s) from external script:*
-    *[1] Creating output plot files:[1]* *C:\\\temp\\\plots\\\rHistogram_Tipped_18887f6265d4.jpg[1]* *C:\\\temp\\\plots\\\rHistograms_Tip_and_Fare_Amount_1888441e542c.pdf[1]* *C:\\\temp\\\plots\\\rXYPlots_Tip_vs_Fare_Amount_18887c9d517b.pdf*
-  
+    ```
+    STDOUT message(s) from external script:
+    [1] Creating output plot files:[1] C:\temp\plots\rHistogram_Tipped_18887f6265d4.jpg[1] 
+    
+    C:\temp\plots\rHistograms_Tip_and_Fare_Amount_1888441e542c.pdf[1]
+    
+    C:\temp\plots\rXYPlots_Tip_vs_Fare_Amount_18887c9d517b.pdf
+    ```
+
     The numbers in the file names are randomly generated.
 
 3. To view the plot, open the destination folder and review the files that were created by the R code in the stored procedure.

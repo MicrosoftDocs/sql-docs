@@ -20,7 +20,7 @@ manager: "jhubbard"
 ---
 # R and SQL data types and data objects (R in SQL quickstart)
 
-In this step, you'll learn about some common issues that arise when moving data between R and SQL Server:
+In this step, you learn about some common issues that arise when moving data between R and SQL Server:
 
 + Data types sometimes do not match
 + Implicit conversions might take place
@@ -87,23 +87,21 @@ Now, review the text in **Messages** to see why the output is different.
 
 **Results - Example 1**
 
-*STDOUT message(s) from external script:*
-
-*'data.frame':	3 obs. of  1 variable:*
-
-*$ mytextvariable: Factor w/ 3 levels " ","hello","world": 2 1 3*
+```
+STDOUT message(s) from external script:
+'data.frame':	3 obs. of  1 variable:
+$ mytextvariable: Factor w/ 3 levels " ","hello","world": 2 1 3
+```
 
 **Results - Example 2**
 
-*STDOUT message(s) from external script:*
-
-*'data.frame':	1 obs. of  3 variables:*
-
-*$ c..hello..: Factor w/ 1 level "hello": 1*
- 
-*$ X...      : Factor w/ 1 level " ": 1*
- 
-*$ c..world..: Factor w/ 1 level "world": 1*
+```
+STDOUT message(s) from external script:
+'data.frame':	1 obs. of  3 variables:
+$ c..hello..: Factor w/ 1 level "hello": 1
+$ X...      : Factor w/ 1 level " ": 1
+$ c..world..: Factor w/ 1 level "world": 1
+```
 
 As you can see, a slight change in R syntax had a big effect on the schema of the results. We won't go into why, because the differences in R data types are explained more thoroughly in this article by Hadley Wickham: [R Data Structures](http://adv-r.had.co.nz/Data-structures.html).
 
@@ -209,7 +207,6 @@ R and SQL Server don't use the same data types, so when you run a query in SQL S
 
 To see how this works, run a query such as this one on the AdventureWorksDW data warehouse. This view returns sales data used in creating forecasts.
 
-
 ```sql
 SELECT ReportingDate
          , CAST(ModelRegion as varchar(50)) as ProductSeries
@@ -244,10 +241,12 @@ After you get the query working, review the results of the `str` function to see
 
 **Results**
 
-  *STDOUT message(s) from external script: 'data.frame':    37 obs. of  3 variables:*
-  *STDOUT message(s) from external script: $ ReportingDate: POSIXct, format: "2010-12-24 23:00:00" "2010-12-24 23:00:00"*
-  *STDOUT message(s) from external script: $ ProductSeries: Factor w/ 1 levels "M200 Europe",..: 1 1 1 1 1 1 1 1 1 1 ...*
-  *STDOUT message(s) from external script: $ Amount       : num  3400 16925 20350 16950 16950*
+```
+STDOUT message(s) from external script: 'data.frame':    37 obs. of  3 variables:
+STDOUT message(s) from external script: $ ReportingDate: POSIXct, format: "2010-12-24 23:00:00" "2010-12-24 23:00:00"
+STDOUT message(s) from external script: $ ProductSeries: Factor w/ 1 levels "M200 Europe",..: 1 1 1 1 1 1 1 1 1 1
+STDOUT message(s) from external script: $ Amount       : num  3400 16925 20350 16950 16950
+```
 
 + The datetime column has been processed using the R data type, **POSIXct**.
 + The text column "ProductSeries" has been identified as a **factor**, meaning a categorical variable. String values are handled as factors by default. If you pass a string to R, it is converted to an integer for internal use, and then mapped back to the string on output.
@@ -259,7 +258,7 @@ From even these short examples, you can see the need to check the effects of dat
 + Test your data in advance and verify columns or values in your schema that could be a problem when passed to R code.
 + Specify columns in your input data source individually, rather than using `SELECT *`, and know how each column will be handled.
 + Perform explicit casts as necessary when preparing your input data, to avoid surprises.
-+ Avoid passing columns of data (such as **GUIDS** or **rowguids**) that cause errors and aren't useful for modeling.
++ Avoid passing columns of data (such as GUIDS or rowguids) that cause errors and aren't useful for modeling.
 
 For more information on supported and unsupported data types, see [R libraries and data types](../r/r-libraries-and-data-types.md).
 

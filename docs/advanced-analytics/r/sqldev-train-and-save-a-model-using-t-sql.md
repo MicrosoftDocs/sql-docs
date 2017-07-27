@@ -86,18 +86,21 @@ Because the stored procedure already includes a definition of the input data, yo
     EXEC TrainTipPredictionModel
     ```
 
-2. Watch the **Messages** window of [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] for messages that would be piped to R's **stdout** stream.  For example:
+2. Watch the **Messages** window of [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] for messages that would be piped to R's **stdout** stream, like this messaage: 
 
     "STDOUT message(s) from external script: Rows Read: 1193025, Total Rows Processed: 1193025, Total Chunk Time: 0.093 seconds"
-  
+
     You might also see messages specific to the individual function, `rxLogit`, displaying the variables and test metrics generated as part of model creation.
 
 3.  When the statement has completed, open the table *nyc_taxi_models*. Processing of the data and fitting the model might take a while.
 
     You can see that one new row has been added, which contains the serialized model in the column _model_.
 
-    *model*
-    *0x580A00000002000302020....*
+    ```
+    model
+    ------
+    0x580A00000002000302020....
+    ```
 
 In the next step you'll use the trained model to create predictions.
 

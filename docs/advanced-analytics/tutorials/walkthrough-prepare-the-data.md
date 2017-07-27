@@ -225,7 +225,7 @@ bcp TutorialDB.dbo.nyctaxi_sample in c:\tempR\nyctaxi1pct.csv -t ',' -S rtestser
 bcp TutorialDB.dbo.nyctaxi_sample in c:\tempR\nyctaxi1pct.csv -t ',' -S rtestserver.contoso.com -f C:\tempR\taxiimportfmt.xml -F 2 -C "RAW" -b 200000 -T
 ~~~~
 
-+ The **in** keyword specifies the direction of data movement.
++ The `in` keyword specifies the direction of data movement.
 + The  **-f** argument requires that you specify the full path of a format file. A format file is required if you use the **in** option.
 + Use the **-U** and **-P** arguments if running bcp with a SQL login.
 + Use the **-T** argument if you are using Windows integrated authentication.

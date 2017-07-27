@@ -30,11 +30,11 @@ The goal of this tutorial is to provide SQL programmers with hands-on experience
 
 ## Overview
 
-The process of building an end to end solution typically consists of obtaining and cleaning data, data exploration and feature engineering, model training and tuning, and finally deployment of the model in production. Development and testing of the actual code is best performed using a dedicated development environment.For R, that might mean RStudio or [!INCLUDE[rtvs-short](../../includes/rtvs-short-md.md)].
+The process of building an end to end solution typically consists of obtaining and cleaning data, data exploration and feature engineering, model training and tuning, and finally deployment of the model in production. Development and testing of the actual code is best performed using a dedicated development environment. For R, that might mean RStudio or [!INCLUDE[rtvs-short](../../includes/rtvs-short-md.md)].
 
 However, after the solution has been created, you can easily deploy it to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] using [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedures in the familiar environment of [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].
 
-In this tutorial, we'll assume that you have been given all the R code needed for the solution, and you'll focus on building and deploying the solution using SQL Server.
+In this tutorial, we assume that you have been given all the R code needed for the solution, and focus on building and deploying the solution using SQL Server.
 
 - [Lesson 1: Download the sample data](../tutorials/sqldev-download-the-sample-data.md)
 

@@ -18,7 +18,7 @@ manager: "jhubbard"
 ---
 # Operationalize R code (Machine Learning Services)
 
-Database developers are tasked with integrating multiple technologies and bringing together the results so that they can be shared throughout the enterprise. The database developer works with application developers, SQL developers, and data scientists to design solutions, recommend data management methods, and architect and deploy solutions.
+Database developers are tasked with integrating multiple technologies and bringing together the results so that they can be shared throughout the enterprise. The database developer works with application developers, SQL developers, and data scientists to design and deploy solutions.
 
 This article summarizes the key points for the database developer to consider when operationalizing R code using SQL Server.
 

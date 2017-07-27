@@ -66,13 +66,13 @@ GO
 
 - The  SELECT statement gets the serialized model from the database, and stores the model in the R variable `mod` for further processing using R.
 
-- The new cases that will be scored are obtained from the [!INCLUDE[tsql](../../includes/tsql-md.md)] query specified in `@inquery`, the first parameter to the stored procedure. As the query data is read, the rows are saved in the default data frame, `InputDataSet`. This data frame is passed to the `rxPredict` function in R, which generates the scores.
+- The new cases for scoring are obtained from the [!INCLUDE[tsql](../../includes/tsql-md.md)] query specified in `@inquery`, the first parameter to the stored procedure. As the query data is read, the rows are saved in the default data frame, `InputDataSet`. This data frame is passed to the `rxPredict` function in R, which generates the scores.
   
     `OutputDataSet<-rxPredict(modelObject = mod, data = InputDataSet, outData = NULL,            predVarNames = "Score", type = "response", writeModelVars = FALSE, overwrite = TRUE);`
   
     Because a data.frame can contain a single row, you can use the same code for batch or single scoring.
   
--   The value returned by the `rxPredict` function is  a **float** that represents the probability that a tip  (of any amount) will be given.
+-   The value returned by the `rxPredict` function is  a **float** that represents the probability that the driver gets a tip of any amount.
 
 ## Batch scoring
 
@@ -165,7 +165,7 @@ Now let's see how batch scoring works.
     EXEC [dbo].[PredictTip] @inquery = @query_string;
     ```
   
-4. The stored procedure returns a series of values representing the prediction for each of the "top 10 trips". However, the "top 10 trips" are all single-passenger trips with a relatively short trip distance. The driver is very unlikely to get a tip on such trips.
+4. The stored procedure returns a series of values representing the prediction for each of the top ten trips. However, the top trips are also single-passenger trips with a relatively short trip distance, for which the driver is unlikely to get a tip.
   
 
 > [!TIP]

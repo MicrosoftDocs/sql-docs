@@ -18,7 +18,7 @@ manager: "jhubbard"
 
 This article provides links to the reference documentation for APIs used by SQL Server R Services and SQL Server Machine Learning Services.
 
-For the most part, SQL Server consumes the same R and Python libraries that are provided in Microsoft R Server and Microsoft Machine Learning Server. To ensure that a single-source is used for documentation, all APIs are documented based on source code and published to the MSDN library.
+For the most part, SQL Server consumes the same R and Python libraries that are provided in Microsoft R Server and Microsoft Machine Learning Server. Documentation for all APIs is derived from source code and is not post-edited. 
 
 ## R
 
@@ -50,7 +50,7 @@ For the most part, SQL Server consumes the same R and Python libraries that are 
 
 + [Microsoftml for Python](https://docs.microsoft.com/r-server/python-reference/microsoftml/microsoftml-package)
 
-    Python equivalent of the MicrosoftML package for R. Supports the same compute contexts and data sources,and includes fast, scalable algorithms and transformations from Microsoft.
+    Python equivalent of the MicrosoftML package for R. Supports the same compute contexts and data sources, and includes fast, scalable algorithms and transformations from Microsoft.
 
 ## Related APIs
 

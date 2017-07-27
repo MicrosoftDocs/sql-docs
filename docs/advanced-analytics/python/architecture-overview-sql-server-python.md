@@ -15,10 +15,10 @@ manager: "jhubbard"
 ---
 # Architecture overview for Machine Learning Services with Python
 
-This topic provides an overview of how Python is integrated with SQL Server, including the security model, the components in the database engine that support external script execution, and new components that enable interoperability of Python with SQL Server. For details see the linked topics.
+This topic provides an overview of how Python is integrated with SQL Server, including the security model, the components in the database engine that support external script execution, and new components that enable interoperability of Python with SQL Server. For details, see the linked topics.
 
 > [!IMPORTANT]
-> Support for Python is available beginning with SQL Server 2017 CTP 2.0. This is a pre-release feature and subject to change.
+> Support for Python is available beginning with SQL Server 2017 CTP 2.0. This pre-release feature is subject to change.
 
 ## Python interoperability
 

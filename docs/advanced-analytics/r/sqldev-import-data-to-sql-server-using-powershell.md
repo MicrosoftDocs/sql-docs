@@ -28,9 +28,7 @@ In this step, you'll run one of the downloaded scripts, to create the database o
 
 ## Run the scripts to create SQL objects
 
-Among the downloaded files you should see a PowerShell script. To prepare the environment for the walkthrough, you'll run this script.
-
-Actions performed by the script include:
+Among the downloaded files, you should see a PowerShell script that you can run to prepare the environment for the walkthrough. Actions performed by the script include:
 
 - Installing the SQL Native Client and SQL command-line utilities, if not already installed. These utilities are required for bulk-loading the data to the database using **bcp**.
 

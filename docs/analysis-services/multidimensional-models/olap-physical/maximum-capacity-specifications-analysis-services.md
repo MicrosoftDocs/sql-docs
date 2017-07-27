@@ -81,7 +81,7 @@ manager: "erikre"
 |Length of object names|100 characters|  
   
 ##  <a name="bkmk_vertipaq"></a> Tabular (DeploymentMode=2)  
-**Note:** The following are theoretical limits. Performance will be diminished at lower numbers.   
+The following are theoretical limits. Performance will be diminished at lower numbers.   
 
 |Object|Maximum sizes/numbers|  
 |------------|----------------------------|  

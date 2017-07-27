@@ -1,7 +1,7 @@
 ---
 title: "What's new in SQL Server 2017 | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/21/2017"
+ms.date: "07/25/2017"
 ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
@@ -34,6 +34,13 @@ SQL Server 2017 represents a major step towards making SQL Server a platform tha
     -   The failover handling of the execution logs from Scale Out Workers is improved.
     -   The parameter *runincluster* of the stored procedure **[catalog].[create_execution]** is renamed to *runinscaleout* for consistency and readability.
     -   The SSIS Catalog has a new global property to specify the default mode for executing SSIS packages.
+
+### Master Data Services (MDS)
+- The upgrade experience and performance has been improved, when upgrading to SQL Server 2017 Master Data Services from the following previous releases of SQL Server.
+    - SQL Server 2012
+    - SQL Server 2014
+    - SQL Server 2016
+
 
 ## SQL Server Database Engine  
 SQL Server 2017 includes many new Database Engine features, enhancements, and performance improvements. 
@@ -75,6 +82,12 @@ For more information, see [What's new in SQL Server 2017 Database Engine](~/data
 - OData Source and OData Connection Manager now support connecting to the OData feeds of Microsoft Dynamics AX Online and Microsoft Dynamics CRM Online. (CTP 1.0)
 
 For more info, see [What's New in Integration Services in SQL Server 2017](~/integration-services/what-s-new-in-integration-services-in-sql-server-2017.md).
+
+## Master Data Services (MDS)
+In addition to improving the upgrade performance and experience for upgrading to SQL Server 2017 MDS, the following additional enhancements have been made to Master Data Services.
+- You can now view the sorted lists of entities, collections and hierarchies in the **Explorer** page of the Web application.
+- Performance has been improved for staging millions of records using the staging stored procedure.
+- Performance has been improved when expanding the **Entities** folder on the **Manage Groups** page to assign model permissions. The **Manage Groups** page is located in the **Security** section of the Web application. For more information about the performance improvement, see [https://support.microsoft.com/help/4023865?preview](https://support.microsoft.com/help/4023865?preview). For more information about assigning permissions, see [Assign Model Object Permissions (Master Data Services)](../master-data-services/assign-model-object-permissions-master-data-services.md).
 
 ## SQL Server Analysis Services (SSAS) 
 SQL Server Analysis Services 2017 introduces many enhancements for tabular models. These include:

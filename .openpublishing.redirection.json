@@ -2028,12 +2028,12 @@
 		{
             "source_path": "docs/ssms/use-sql-server-management-studio.md",
             "redirect_url": "/sql/ssms/sql-server-management-studio-ssms",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
 		{
             "source_path": "docs/ssms/features-in-sql-server-management-studio.md",
             "redirect_url": "/sql/ssms/sql-server-management-studio-ssms",
-            "redirect_document_id": true
+            "redirect_document_id": false
         }
     ]
 }

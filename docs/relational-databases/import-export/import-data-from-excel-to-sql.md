@@ -28,7 +28,7 @@ Import data directly from Excel files by stepping through the pages of a wizard.
 
 ![Connect to an Excel data source](media/excel-connection.png)
 
-For an example of using the wizard to import from Excel to SQL Server, see [Get started with this simple example of the Import and Export Wizard](get-started-with-this-simple-example-of-the-import-and-export-wizard.md).
+For an example of using the wizard to import from Excel to SQL Server, see [Get started with this simple example of the Import and Export Wizard](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md).
 
 ## SQL Server Integration Services (SSIS)
 
@@ -37,10 +37,10 @@ If you're familiar with SSIS and don't want to run the SQL Server Import and Exp
 ![Components in the data flow](media/excel-to-sql-data-flow.png)
 
 For more info about these SSIS components, see the following topics.
--   [Excel Source](../data-flow/excel-source.md)
--   [SQL Server Destination](../data-flow/sql-server-destination.md)
+-   [Excel Source](../../integration-services/data-flow/excel-source.md)
+-   [SQL Server Destination](../../integration-services/data-flow/sql-server-destination.md)
 
-To start learning how to build SSIS packages, see the tutorial [How to Create an ETL Package](../ssis-how-to-create-an-etl-package.md).
+To start learning how to build SSIS packages, see the tutorial [How to Create an ETL Package](../../integration-services/ssis-how-to-create-an-etl-package.md).
 
 ## OPENROWSET and linked servers
 > [!NOTE]

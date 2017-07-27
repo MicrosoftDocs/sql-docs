@@ -46,7 +46,7 @@ We are starting to add graph extensions to SQL Server, to make storing and query
 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] extensions will allow users to create node or edge tables. Both nodes and edges can have properties associated to them. Since, nodes and edges are stored as tables, all the operations that are supported on relational tables are supported on node or edge table. Here is an example:  
 
 ```   
-CREATE TABLE Person (ID INTEGER PRIMARY KEY, name VARCHAR(100)) AS NODE;
+CREATE TABLE Person (ID INTEGER PRIMARY KEY, Name VARCHAR(100), Age INT) AS NODE;
 CREATE TABLE friends (StartDate date) AS EDGE;
 ```   
 

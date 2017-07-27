@@ -265,17 +265,17 @@ To generate graphs for users, you can use a stored procedure that creates the ou
     C:\temp\plots\rXYPlots_Tip_vs_Fare_Amount_18887c9d517b.pdf
     ```
 
-    The numbers in the file names are randomly generated.
+    The numbers in the file names are randomly generated to ensure that you don't get an error when trying to write to an existing file.
 
 3. To view the plot, open the destination folder and review the files that were created by the R code in the stored procedure.
 
-    + rHistogram\_Tipped\_*nnnn*.jpg: Shows the number of trips that got a tip (1) vs. the trips that got no tip (0). This histogram is much like the one you generated in the previous step.
+    + The file `rHistogram_Tipped.jpg` shows the number of trips that got a tip vs. the trips that got no tip. (This histogram is much like the one you generated in the previous step.)
 
-    + rHistograms\_Tip\_and\_Fare\_Amount\_*nnnn*.pdf: Shows  the distribution of values in the tip_amount and fare_amount columns.
+    + The file `rHistograms_Tip_and_Fare_Amount.pdf` shows the distribution of tip amounts, plotted against the fare amounts.
     
     ![histogram showing tip_amount and fare_amount](media/rsql-devtut-tipamtfareamt.PNG "histogram showing tip_amount and fare_amount")
 
-    + rXYPlots\_Tip\_vs\_Fare\_Amount\_*nnnn*.pdf: A scatterplot with the fare amount on the x-axis and the tip amount on the y-axis.
+    + The file `rXYPlots_Tip_vs_Fare_Amount.pdf` contains a scatterplot with the fare amount on the x-axis and the tip amount on the y-axis.
 
     ![tip amount plotted over fare amount](media/rsql-devtut-tipamtbyfareamt.PNG "tip amount plotted over fare amount")
 

@@ -23,7 +23,7 @@ Microsoft R Server includes an operationalization feature, **mrsdeploy**, that s
 
 This topic provides information about how to enable and configure the feature.
 
-For general information about scenarios supported by operationalization using Microsoft R Server, see [Operationalization with R Server](https://docs.microsoft.com/r-server/what-is-operationalization.
+For general information about scenarios supported by **mrsdeploy**, see [Operationalization with R Server](https://docs.microsoft.com/r-server/what-is-operationalization).
 
 ## Using mrsdeploy for operationalization
 

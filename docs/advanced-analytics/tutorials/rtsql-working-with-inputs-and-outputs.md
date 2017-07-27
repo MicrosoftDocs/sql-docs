@@ -18,7 +18,7 @@ author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
 ---
-# Working with inputs and outputs (R in SQL quickstart0
+# Working with inputs and outputs (R in SQL quickstart)
 
 When you want to run R code in  SQL Server, you must wrap the R script in a system stored procedure, [sp_execute_external_script](https://msdn.microsoft.com/library/mt604368.aspx). This stored procedure is used to start the R runtime in the context of SQL Server, which passes data to R, manages R user sessions securely, and returns any results to the client.
 

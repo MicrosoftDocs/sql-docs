@@ -182,12 +182,12 @@ In this section, you'll learn how to create single predictions using a stored pr
   
     ```SQL
     CREATE PROCEDURE [dbo].[PredictTipSingleMode] @passenger_count int = 0,
-    @trip_distance float = 0,  
-    @trip_time_in_secs int = 0,  
-    @pickup_latitude float = 0,  
-    @pickup_longitude float = 0,  
-    @dropoff_latitude float = 0,  
-    @dropoff_longitude float = 0  
+    @trip_distance float = 0,
+    @trip_time_in_secs int = 0,
+    @pickup_latitude float = 0,
+    @pickup_longitude float = 0,
+    @dropoff_latitude float = 0,
+    @dropoff_longitude float = 0
     AS  
     BEGIN  
       DECLARE @inquery nvarchar(max) = N'  
@@ -233,21 +233,25 @@ In this section, you'll learn how to create single predictions using a stored pr
   
 2. Try it out, by providing the values manually.
   
-    Open a new **Query** window, and call the stored procedure, typing parameters for each of the feature columns.
+    Open a new **Query** window, and call the stored procedure, providing values for each of the parameters. The parameters represent feature columns used by the model and are required.
+
+    ```
+    EXEC [dbo].[PredictTipSingleMode] @passenger_count = 0,
+    @trip_distance float = 2.5,
+    @trip_time_in_secs int = 631,
+    @pickup_latitude float = 40.763958,
+    @pickup_longitude float = -73.973373,
+    @dropoff_latitude float =  40.782139,
+    @dropoff_longitude float = 73.977303
+    ```
+
+    Or, use this shorter form supported for [parameters to a stored procedure](https://docs.microsoft.com/sql/relational-databases/stored-procedures/specify-parameters):
   
     ```SQL
     EXEC [dbo].[PredictTipSingleMode] 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
     ```
-  
-    The values are for these feature columns, in order:
-  
-    - trip\_time\_in\_secs
-    - pickup\_latitude
-    - pickup\_longitude
-    - dropoff\_latitude
-    - dropoff\_longitude
 
-3. The results indicate that the probability of getting a tip is very low on these top 10 trips, all of which are single-passenger trips over a relatively short distance.
+3. The results indicate that the probability of getting a tip is very low on these top 10 trips, since all are single-passenger trips over a relatively short distance.
 
 ## Conclusions
 

@@ -157,7 +157,7 @@ The overall process for configuring soft-NUMA and CPU affinity to support R work
 1. Enable soft-NUMA, if available
 2. Define processor affinity
 3. Create resource pools for external processes, using [Resource Governor](../r/resource-governance-for-r-services.md)
-4. Assign the [workload groups](../../sql/relational-databases/resource-governor/resource-governor-workload-group) to specific affinity groups
+4. Assign the [workload groups](../../relational-databases/resource-governor/resource-governor-workload-group.md) to specific affinity groups
 
 For details, including sample code, see this tutorial: [SQL Optimization Tips and Tricks (Ke Huang)](https://gallery.cortanaintelligence.com/Tutorial/SQL-Server-Optimization-Tips-and-Tricks-for-Analytics-Services)
 

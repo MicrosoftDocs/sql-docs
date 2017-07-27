@@ -18,15 +18,15 @@ manager: "jhubbard"
 # Introduction to Memory-Optimized Tables
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Memory-optimized tables are tables, created using [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).  
+  Memory-optimized tables are created using [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).  
   
- Memory-optimized tables are fully durable by default, and, like transactions on (traditional) disk-based tables, fully durable transactions on memory-optimized tables are fully atomic, consistent, isolated, and durable (ACID). Memory-optimized tables and natively compiled stored procedures support a subset of [!INCLUDE[tsql](../../includes/tsql-md.md)].
+ Memory-optimized tables are fully durable by default, and, like transactions on (traditional) disk-based tables, transactions on memory-optimized tables are fully atomic, consistent, isolated, and durable (ACID). Memory-optimized tables and natively compiled stored procedures support only a subset of [!INCLUDE[tsql](../../includes/tsql-md.md)] features.
  
 Starting with SQL Server 2016, and in Azure SQL Database, there are no limitations for [collations or code pages](../../relational-databases/collations/collation-and-unicode-support.md) that are specific to In-Memory OLTP.
   
- The primary store for memory-optimized tables is main memory; memory-optimized tables reside in memory. Rows in the table are read from and written to memory. The entire table resides in memory. A second copy of the table data is maintained on disk, but only for durability purposes. See [Creating and Managing Storage for Memory-Optimized Objects](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md) for more information about durable tables. Data in memory-optimized tables is only read from disk during database recovery. For example, after a server restart.  
+ The primary storage for memory-optimized tables is the main memory. Rows in the table are read from and written to memory. A second copy of the table data is maintained on disk, but only for durability purposes. See [Creating and Managing Storage for Memory-Optimized Objects](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md) for more information about durable tables. Data in memory-optimized tables is only read from disk during database recovery (eg. after a server restart).  
   
- For even greater performance gains, In-Memory OLTP supports durable tables with transaction durability delayed. Delayed durable transactions are saved to disk soon after the transaction has committed and returned control to the client. In exchange for the increased performance, committed transactions that have not saved to disk are lost in a server crash or fail over.  
+ For even greater performance gains, In-Memory OLTP supports durable tables with transaction durability delayed. Delayed durable transactions are saved to disk soon after the transaction has committed and control was returned to the client. In exchange for the increased performance, committed transactions that have not saved to disk are lost in a server crash or fail over.  
   
  Besides the default durable memory-optimized tables, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] also supports non-durable memory-optimized tables, which are not logged and their data is not persisted on disk. This means that transactions on these tables do not require any disk IO, but the data will not be recovered if there is a server crash or failover.  
   

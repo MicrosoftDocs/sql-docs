@@ -2029,7 +2029,16 @@
             "source_path": "docs/integration-services/import-export-data/import-data-from-excel-to-sql.md",
             "redirect_url": "/sql/relational-databases/import-export/import-data-from-excel-to-sql",
             "redirect_document_id": true
+        },
+		{
+            "source_path": "docs/ssms/use-sql-server-management-studio.md",
+            "redirect_url": "/sql/ssms/sql-server-management-studio-ssms",
+            "redirect_document_id": false
+        },
+		{
+            "source_path": "docs/ssms/features-in-sql-server-management-studio.md",
+            "redirect_url": "/sql/ssms/sql-server-management-studio-ssms",
+            "redirect_document_id": false
         }
-
     ]
 }

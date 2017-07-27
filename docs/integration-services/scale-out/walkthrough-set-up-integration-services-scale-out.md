@@ -42,7 +42,7 @@ To enable the functionality of Scale Out Master, you must install Database Engin
 
 For information on setting up Database Engine Services and [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)], see [Install SQL Server Database Engine](../../database-engine/install-windows/install-sql-server-database-engine.md), and [Install Integration Services](../install-windows/install-integration-services.md).
 > [!NOTE]
-> During Database Engine installation, select Mixed Mode for Authentication mode on the Database Engine Configuration page. 
+> To use the default SQL authentication account for Scale Out logging, select Mixed Mode for authentication mode on the Database Engine Configuration page during Database Engine installation. See [Change the account for Scale Out logging](change-logdb-account.md) for more information.
 
 **To install the Scale Out Master feature, use the [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] installation wizard or the command prompt.**
 

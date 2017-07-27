@@ -20,13 +20,15 @@ This topic describes limitations and issues with [!INCLUDE[ssSQLv14_md](../inclu
 
 - [What's New in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md).
 - [SQL Server on Linux Release notes](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-release-notes).
-- [SQL Server Reporting Services release notes](../reporting-services/reporting-services-release-notes.md).
 
  **Try it out:**    
    -   [![Download from Evaluation Center](../analysis-services/media/download.png)](http://go.microsoft.com/fwlink/?LinkID=829477)  Download [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] from the **[Evaluation Center](http://go.microsoft.com/fwlink/?LinkID=829477)**
 
-## SQL Server 2017 Release Candidate (RC1 - July 2017)
+## SQL Server 2017 Release Candidate (RC2 - Augusty 2017)
 
+
+![horizontal_bar](../sql-server/media/horizontal-bar.png)
+## SQL Server 2017 Release Candidate (RC1 - July 2017)
 ### SQL Server Integration Services (SSIS) (RC1 - July 2017)
 - **Issue and customer impact:** The parameter *runincluster* of the stored procedure **[catalog].[create_execution]** is renamed to *runinscaleout* for consistency and readability.
 - **Workaround:** If you have existing scripts to run packages in Scale Out, you have to change the parameter name from *runincluster* to *runinscaleout* to make the scripts work in RC1.
@@ -105,5 +107,9 @@ This topic describes limitations and issues with [!INCLUDE[ssSQLv14_md](../inclu
 - [MSDN Forums - ask technical questions](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)
 - [Microsoft Connect - report bugs and request features](https://connect.microsoft.com/SQLServer/Feedback)
 - [Reddit - general discussion about R](https://www.reddit.com/r/SQLServer/)
+
+## More information
+- [SQL Server Reporting Services release notes](../reporting-services/reporting-services-release-notes.md).
+- [Known Issues for Machine Learning Services](../advanced-analytics/known-issues-for-sql-server-machine-learning-services.md)
 
 ![MS_Logo_X-Small](../sql-server/media/ms-logo-x-small.png)

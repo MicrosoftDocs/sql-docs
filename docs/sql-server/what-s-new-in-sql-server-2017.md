@@ -1,7 +1,7 @@
 ---
 title: "What's new in SQL Server 2017 | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/14/2017"
+ms.date: "07/21/2017"
 ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
@@ -23,26 +23,12 @@ SQL Server 2017 represents a major step towards making SQL Server a platform tha
 >[!TIP]
 >**Run SQL Server on Linux!** For more information, see [SQL Server on Linux Documentation](https://docs.microsoft.com/sql/linux/) and [What's new for SQL Server 2017 on Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-whats-new).
 
-## Latest release: SQL Server 2017 Release Candidate (RC1, July 2017)
-
-### SQL Server Database Engine    
-- CLR assemblies can now be added to a whitelist, as a workaround for the `clr strict security` feature described in CTP 2.0. [sp_add_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md), [sp_drop_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md), and [sys.trusted_asssemblies](../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md) are added to support the white list of trusted assemblies.  
-
-### SQL Server Integration Services (SSIS)
-- The new **Scale Out** feature in SSIS has the following new and changed features in RC1. For more info, see [What's New in Integration Services in SQL Server 2017](~/integration-services/what-s-new-in-integration-services-in-sql-server-2017.md).
-    -   Scale Out Master now supports high availability.
-    -   The failover handling of the execution logs from Scale Out Workers is improved.
-    -   The parameter *runincluster* of the stored procedure **[catalog].[create_execution]** is renamed to *runinscaleout* for consistency and readability.
-    -   The SSIS Catalog has a new global property to specify the default mode for executing SSIS packages.
-    
-### Master Data Services (MDS)
-The upgrade experience and performance has been improved, when upgrading to SQL Server 2017 Master Data Services from the following previous releases of SQL Server.
-- SQL Server 2012
-- SQL Server 2014
-- SQL Server 2016
+## Latest release: SQL Server 2017 Release Candidate (RC2, August 2017)
+This release contains bug fixes and performance improvements.
 
 ## SQL Server Database Engine  
 SQL Server 2017 includes many new Database Engine features, enhancements, and performance improvements. 
+- **CLR assemblies** can now be added to a whitelist, as a workaround for the `clr strict security` feature described in CTP 2.0. [sp_add_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md), [sp_drop_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md), and [sys.trusted_asssemblies](../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md) are added to support the white list of trusted assemblies (RC1).  
 - **Resumable online index rebuild** resumes an online index rebuild operation from where it stopped after a failure (such as a failover to a replica or insufficient disk space), or pauses and later resumes an online index rebuild operation. See [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md) and [Guidelines for online index operations](../relational-databases/indexes/guidelines-for-online-index-operations.md). (CTP 2.0)
 - The **IDENTITY_CACHE** option for ALTER DATABASE SCOPED CONFIGURATION allows you to avoid gaps in the values of identity columns if a server restarts unexpectedly or fails over to a secondary server. See [ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md). (CTP 2.0)
 - **Automatic database tuning** provides insight into potential query performance problems, recommends solutions, and can automatically fix identified problems. See [Automatic tuning](../relational-databases/automatic-tuning/automatic-tuning.md). (CTP 2.0)
@@ -82,11 +68,6 @@ For more information, see [What's new in SQL Server 2017 Database Engine](~/data
 
 For more info, see [What's New in Integration Services in SQL Server 2017](~/integration-services/what-s-new-in-integration-services-in-sql-server-2017.md).
 
-## Master Data Services (MDS)
-In addition to improving the upgrade performance and experience for upgrading to SQL Server 2017 MDS, the following additional enhancements have been made to Master Data Services.
-- You can now view the sorted lists of entities, collections and hierarchies in the Explorer page of the Web application.
-- Performance has been improved for staging millions of records using the staging stored procedure.
-
 ## SQL Server Analysis Services (SSAS) 
 SQL Server Analysis Services 2017 introduces many enhancements for tabular models. These include:
 - Tabular mode as the default installation option for Analysis Services. (CTP 2.0)
@@ -104,7 +85,7 @@ SQL Server Analysis Services 2017 introduces many enhancements for tabular model
 For more information, see [What's new in SQL Server Analysis Services 2017](~/analysis-services/what-s-new-in-sql-server-analysis-services-2017.md).
 
 ## SQL Server Reporting Services (SSRS)
-As of CTP 2.1, SSRS is no longer available to install through SQL Server setup. Go to the Microsoft Download Center to [download the May 2017 Preview of Power BI Report Server and Power BI Desktop optimized for Power BI Report Server](https://www.microsoft.com/download/details.aspx?id=55253). For information about Power BI Report Server, see [Get started with Power BI Report Server](https://powerbi.microsoft.com/documentation/reportserver-get-started/).
+As of CTP 2.1, SSRS is no longer available to install through SQL Server setup. Go to the Microsoft Download Center to [download the Microsoft SQL Server 2017 Reporting Services Release Candidate](https://www.microsoft.com/download/details.aspx?id=55252). 
 - Comments are now available for reports, to add perspective and collaborate with others. You can also include attachments with comments. (CTP 2.1)
 - In the latest releases of Report Builder and SQL Server Data Tools, you can create native DAX queries against supported SQL Server Analysis Services tabular data models by dragging and dropping desired fields in the query designers. See the [Reporting Services blog](https://blogs.msdn.microsoft.com/sqlrsteamblog/2017/03/09/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools/).
 

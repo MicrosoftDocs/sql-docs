@@ -17,7 +17,7 @@ ms.assetid: c9a4e145-33c3-42b2-a510-79813e67806a
 caps.latest.revision: 47
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ---
 # JSON Data (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

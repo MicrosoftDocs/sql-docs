@@ -26,6 +26,7 @@
 ## [Use a Format File to Bulk Import Data](use-a-format-file-to-bulk-import-data-sql-server.md)  
 ## [Use a Format File to Skip a Table Column](use-a-format-file-to-skip-a-table-column-sql-server.md)  
 ## [Use a Format File to Skip a Data Field](use-a-format-file-to-skip-a-data-field-sql-server.md)  
-## [Use a Format File to Map Table Columns to Data-File Fields](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
+## [Use a Format File to Map Table Columns to Data-File Fields](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)
+# [Import data from Excel to SQL](import-data-from-excel-to-sql.md)  
 # [Examples of Bulk Import and Export of XML Documents](examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)  
 # [Examples of Bulk Access to Data in Azure Blob Storage](examples-of-bulk-access-to-data-in-azure-blob-storage.md)  

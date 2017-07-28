@@ -181,7 +181,7 @@ When you install [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], 
   
  **Example of a Default Configuration File**  
   
-```  
+```xml
 \<?xml version="1.0" encoding="utf-8"?>  
 \<DtsServiceConfiguration xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
   <StopExecutingPackagesOnShutdown>true</StopExecutingPackagesOnShutdown>  
@@ -226,7 +226,7 @@ When you install [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], 
   
  **Example of a Modified Configuration File for a Named Instance of SQL Server**  
   
-```  
+```xml
 \<?xml version="1.0" encoding="utf-8"?>  
 \<DtsServiceConfiguration xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
   <StopExecutingPackagesOnShutdown>true</StopExecutingPackagesOnShutdown>  
@@ -372,9 +372,17 @@ For more info, see [Getting Cross Domain Kerberos and Delegation working with SS
   
 #### To configure a Windows firewall using the Command Prompt window  
   
-1.  Run the command: `netsh firewall add portopening protocol=TCP port=135 name="RPC (TCP/135)" mode=ENABLE scope=SUBNET`  
+1.  Run the following command:
+
+    ```dos
+    netsh firewall add portopening protocol=TCP port=135 name="RPC (TCP/135)" mode=ENABLE scope=SUBNET
+    ```
   
-2.  Run the command: `netsh firewall add allowedprogram program="%ProgramFiles%\Microsoft SQL Server\100\DTS\Binn\MsDtsSrvr.exe" name="SSIS Service" scope=SUBNET`  
+2.  Run the following command:
+
+    ```dos
+    netsh firewall add allowedprogram program="%ProgramFiles%\Microsoft SQL Server\100\DTS\Binn\MsDtsSrvr.exe" name="SSIS Service" scope=SUBNET
+    ```
   
     > [!NOTE]  
     >  To open the firewall for all computers, and also for computers on the Internet, replace scope=SUBNET with scope=ALL.  

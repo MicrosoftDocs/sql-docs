@@ -56,14 +56,14 @@ To enhance the usefulness of the error output, before the package writes the fai
   
     [Visual Basic]  
   
-    ```  
+    ```vb  
     Row.ErrorDescription =   
       Me.ComponentMetaData.GetErrorDescription(Row.ErrorCode)  
     ```  
   
     [Visual C#]  
   
-    ```  
+    ```cs
     Row.ErrorDescription = this.ComponentMetaData.GetErrorDescription(Row.ErrorCode);  
     ```  
   
@@ -71,7 +71,7 @@ To enhance the usefulness of the error output, before the package writes the fai
   
     [Visual Basic]  
   
-    ```  
+    ```vb
     Public Overrides Sub Input0_ProcessInputRow(ByVal Row As Input0Buffer)  
   
       Row.ErrorDescription =   
@@ -82,7 +82,7 @@ To enhance the usefulness of the error output, before the package writes the fai
   
     [Visual C#]  
   
-    ```  
+    ```cs
     public override void Input0_ProcessInputRow(Input0Buffer Row)  
         {  
   

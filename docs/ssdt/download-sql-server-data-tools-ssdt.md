@@ -32,19 +32,21 @@ manager: "craigg"
 The release number: 17.2  
 The build number for this release: **TBD**
   
- **What's New**
+**What's New**
 
-- IN AS projects, Object Level Security can now be configured in the *Roles* dialog for advanced security in 1400 compatability level tabular models.
+- In AS projects, Object Level Security can now be configured in the Roles dialog for advanced security in 1400 compatability level tabular models.
 - New AAD role member selection for users without email addresses in AS Azure models in SSDT AS projects for VS2017.
 - New AS Azure "Always Prompt" project property in SSDT AS tabular projects to customize behavior of ADAL credential caching.
 
- **Known Issues**
 
-Report issues at the [SSDT Connect Feedback](https://connect.microsoft.com/SQLServer/Feedback) site.
 
-For a complete list of changes, see the [changelog](changelog-for-sql-server-data-tools-ssdt.md).
+**Known Issues**
 
- > To use SQL Server Data Tools in Visual Studio 2017 see [this](#use-ssdt-in-visual-studio-2017) section below
+- For a complete list of changes, see the [changelog](changelog-for-sql-server-data-tools-ssdt.md).
+- Report issues at the [SSDT Connect Feedback](https://connect.microsoft.com/SQLServer/Feedback) site.
+
+> [!NOTE]
+> To use SQL Server Data Tools in Visual Studio 2017 see [this](#use-ssdt-in-visual-studio-2017) section below
 
   **Available Languages**  
   

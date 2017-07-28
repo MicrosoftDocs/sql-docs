@@ -28,7 +28,7 @@ By default the two extra columns in an [!INCLUDE[ssISnoversion](../includes/ssis
   
 To enhance the usefulness of the error output, before the package writes the failed rows to the file, you will use a Script component to access the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] API and get a description of the error.  
   
-### To configure an error output  
+## To configure an error output  
   
 1.  In the **SSIS Toolbox**, expand **Common**, and then drag **Script Component** onto the design surface of the **Data Flow** tab. Place **Script** to the right of the **Lookup Currency Key** transformation.  
   

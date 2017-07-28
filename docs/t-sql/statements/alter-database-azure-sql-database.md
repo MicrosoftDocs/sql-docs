@@ -188,7 +188,7 @@ COMPATIBILITY_LEVEL = { 130 | 120 | 110 | 100 }
  MODIFY (EDITION **=** [ 'basic' | 'standard' | 'premium' | 'premiumrs' ] )    
  Changes the service tier of the database.  EDITION change will fail if the MAXSIZE property for the database is set to a value outside the valid range supported by that edition.  
   
- MODIFY (MAXSIZE **=** [100 MB | 500 MB | 1 | 5 | 10 | 20 | 30 … 150…500] GB)  
+ MODIFY (MAXSIZE **=** [100 MB | 500 MB | 1 | 5 | 10 | 20 | 30 … 150…500…4096] GB)  
  Specifies the maximum size of the database. The maximum size must comply with the valid set of values for the EDITION property of the database. Changing the maximum size of the database may cause the database EDITION to be changed. Following table lists the supported MAXSIZE values and the defaults (D) for the [!INCLUDE[ssSDS](../../includes/sssds-md.md)] service tiers.  
   
 |**MAXSIZE**|**Basic**|**S0-S2**|**S3**|**P1-P6 and PRS1-PRS6**| **P11-P15** 

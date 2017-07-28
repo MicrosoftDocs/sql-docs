@@ -30,9 +30,8 @@ Build number: **TBD**
 **General**
 
 
-
 **AS projects:**
-- Object Level Security can now be configured in the Roles dialog for advanced security in 1400 compatability level tabular models.
+- Object Level Security can now be configured in the *Roles* dialog for advanced security in 1400 compatability level tabular models.
 - New AAD role member selection for users without email addresses in AS Azure models in SSDT AS projects for VS2017.
 - New AS Azure "Always Prompt" project property in SSDT AS tabular projects to customize behavior of ADAL credential caching.
 
@@ -74,8 +73,7 @@ Build number: **TBD**
 
 ## DacFx 17.2
 
-- Added support for Universal Authentication and MFA. For details, see [IUniversalAuthProvider Interface](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.iuniversalauthprovider.aspx) and [Configure and manage Azure Active Directory authentication with SQL Database or SQL Data Warehouse](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure).
-- 
+- Support for Universal Authentication and MFA. For details, see [IUniversalAuthProvider Interface](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.iuniversalauthprovider.aspx) and [Configure and manage Azure Active Directory authentication with SQL Database or SQL Data Warehouse](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure).
 
 ## SSDT 17.1
 Build number: 14.0.61705.170

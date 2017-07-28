@@ -1,7 +1,7 @@
 ---
 title: "Download SQL Server Data Tools (SSDT) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/27/2017"
+ms.date: "07/28/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -33,17 +33,16 @@ The release number: 17.2
 The build number for this release: **TBD**
   
  **What's New**
- - Offline support for AS non-model-related IntelliSense (e.g. highlighting, statement completion, and parameter information)
- - Addition to Tabular Model Explorer to display M expressions
- - Azure Active Directory People Picker for configuring Role Members in Tabular models
- - Support for encoding hints in UI when defining 1400 models
- - Several AS project bug fixes
- - Several DacFx bug fixes
+
+- IN AS projects, Object Level Security can now be configured in the *Roles* dialog for advanced security in 1400 compatability level tabular models.
+- New AAD role member selection for users without email addresses in AS Azure models in SSDT AS projects for VS2017.
+- New AS Azure "Always Prompt" project property in SSDT AS tabular projects to customize behavior of ADAL credential caching.
 
  **Known Issues**
- - When creating a new data source in a 1400-compatibility level AS model, if you select a file-based data source and cancel press cancel before creating the data source, the tabular editor (Model.bim) becomes read-only. You can workaround this issue by simply closing the tabular editor and reopening it from Solution Explorer.
 
-Complete list of changes available in the [changelog](changelog-for-sql-server-data-tools-ssdt.md)
+Report issues at the [SSDT Connect Feedback](https://connect.microsoft.com/SQLServer/Feedback) site.
+
+For a complete list of changes, see the [changelog](changelog-for-sql-server-data-tools-ssdt.md).
 
  > To use SQL Server Data Tools in Visual Studio 2017 see [this](#use-ssdt-in-visual-studio-2017) section below
 

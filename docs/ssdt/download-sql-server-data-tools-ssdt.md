@@ -19,7 +19,7 @@ manager: "craigg"
 ---
 # Download SQL Server Data Tools (SSDT)
 
-**[SQL Server Data Tools](https://msdn.microsoft.com/mt186501)** is a modern development tool that you can download for free to build SQL Server relational databases, Azure SQL databases, Integration Services packages, Analysis Services data models, and Reporting Services reports. With SSDT, you can design and deploy any SQL Server content type with the same ease as you would develop an application in Visual Studio. This release supports SQL Server 2017 through SQL Server 2005, and provides the design environment for adding features that are new in SQL Server 2016.  
+**[SQL Server Data Tools](https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx)** is a modern development tool that you can download for free to build SQL Server relational databases, Azure SQL databases, Integration Services packages, Analysis Services data models, and Reporting Services reports. With SSDT, you can design and deploy any SQL Server content type with the same ease as you would develop an application in Visual Studio. This release supports SQL Server 2017 through SQL Server 2005, and provides the design environment for adding features that are new in SQL Server.  
     
     
 ![download](../ssdt/media/download.png) [Download SQL Server Data Tools 17.2 for Visual Studio 2015](https://go.microsoft.com/fwlink/?linkid=849393)

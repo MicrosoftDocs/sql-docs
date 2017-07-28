@@ -16,7 +16,7 @@ ms.assetid: 178a2a4e-e0f6-49b9-9895-396956d3c7d9
 caps.latest.revision: 17
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ---
 # Format JSON Output Automatically with AUTO Mode (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

@@ -2,7 +2,7 @@
 title: "Create Foreign Key Relationships | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "05/18/2016"
+ms.date: "07/25/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -19,7 +19,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Create Foreign Key Relationships
-[!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
  > For content related to previous versions of SQL Server, see [Create Foreign Key Relationships](https://msdn.microsoft.com/en-US/library/ms189049(SQL.120).aspx).
 

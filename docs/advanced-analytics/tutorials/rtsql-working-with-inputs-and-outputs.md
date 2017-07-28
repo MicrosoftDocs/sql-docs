@@ -1,7 +1,7 @@
 ---
-title: "Working with Inputs and Outputs (R in T-SQL Tutorial) | Microsoft Docs"
+title: "Working with inputs and outputs (R in SQL quickstart) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/03/2017"
+ms.date: "07/26/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -18,7 +18,7 @@ author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
 ---
-# Working with R Inputs and Outputs in SQL
+# Working with inputs and outputs (R in SQL quickstart)
 
 When you want to run R code in  SQL Server, you must wrap the R script in a system stored procedure, [sp_execute_external_script](https://msdn.microsoft.com/library/mt604368.aspx). This stored procedure is used to start the R runtime in the context of SQL Server, which passes data to R, manages R user sessions securely, and returns any results to the client.
 
@@ -50,7 +50,7 @@ SELECT * FROM RTestData
 
 ## Get the same data using R script
 
-After the table has been created, run the following statement. It gets the data from the table, makes a round-trip through the R runtime, and returns the values with the column name, *NewColName*.
+After the table has been created, run the following statement:
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -59,6 +59,8 @@ EXECUTE sp_execute_external_script
     , @input_data_1 = N' SELECT *  FROM RTestData;'
     WITH RESULT SETS (([NewColName] int NOT NULL));
 ```
+
+It gets the data from the table, makes a round trip through the R runtime, and returns the values with the column name, *NewColName*.
 
 **Results**
 
@@ -101,10 +103,10 @@ Try correcting **only** the *SQL_In* variable and re-run the stored procedure.
 Now you get a **different** error:
 
 ```Error
-EXECUTE statement failed because its WITH RESULT SETS clause specified 1 result set(s), but the statement only sent 0 result set(s) at run time.*
+EXECUTE statement failed because its WITH RESULT SETS clause specified 1 result set(s), but the statement only sent 0 result set(s) at run time.
 ```
 
-We're showing you this error because it's a common one when testing new R code. It means that the R script ran successfully, but SQL Server got back no data, or got back wrong or unexpected data.
+We're showing you this error because it's a common one when testing new R code. It means that the R script ran successfully, but SQL Server received no data, or received wrong or unexpected data.
 
 In this case, the output schema (the line beginning with **WITH**) specifies that one column of integer data should be returned, but since R put the data in a different variable, nothing came back to SQL Server; hence, the error.
 
@@ -113,7 +115,7 @@ In this case, the output schema (the line beginning with **WITH**) specifies tha
 - Variable names must follow the rules for valid SQL identifiers.
 - The order of the parameters is important. You must specify the required parameters *@input_data_1* and *@output_data_1* first, in order to use the optional parameters *@input_data_1_name* and *@output_data_1_name*.
 - Only one input dataset can be passed as a parameter, and you can return only one dataset. However, you can call other datasets from inside your R code and you can return outputs of other types in addition to the dataset. You can also add the OUTPUT keyword to any parameter to have it returned with the results. There is a simple example later in this tutorial.
-- The `WITH RESULT SETS` statement defines the schema for the data, for the benefit of SQL Server. You need to provide SQL compatible data types for each column you return from R. You can use the schema definition to provide new column names too; you need not use the column names from the R data.frame. In some cases this clause is optional; try omitting it and see what happens.
+- The `WITH RESULT SETS` statement defines the schema for the data, for the benefit of SQL Server. You need to provide SQL compatible data types for each column you return from R. You can use the schema definition to provide new column names too; you need not use the column names from the R data.frame. In some cases, this clause is optional; try omitting it and see what happens.
 
 ## Generate results using R
 
@@ -139,4 +141,4 @@ EXECUTE sp_execute_external_script
 
 You'll examine some of the problems that you might encounter when passing data between R and SQL Server, such as implicit conversions and differences in tabular data between R and SQL.
 
-[R and SQL Data Types and Data Objects](../tutorials/rtsql-r-and-sql-data-types-and-data-objects.md)
+[R and SQL data types and data objects](../tutorials/rtsql-r-and-sql-data-types-and-data-objects.md)

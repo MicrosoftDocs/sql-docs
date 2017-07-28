@@ -1,8 +1,8 @@
 ---
-title: "Using R Code in Transact-SQL (SQL Server R Services) | Microsoft Docs"
+title: "Using R code in Transact-SQL (R in SQL quickstart) | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "07/03/2017"
+ms.date: "07/26/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -20,18 +20,18 @@ author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
 ---
-# Using R Code in Transact-SQL
+# Using R code in Transact-SQL (R in SQL quickstart)
 
 This tutorial walks you through the basic mechanics of calling an R script from a T-SQL stored procedure.
 
-**What You'll Learn**
+**What you'll learn**
 
 + How to embed R in a T-SQL function
 + Some tips for working with R and SQL data types and data objects
 + How to create a simple model, and save it to SQL Server
 + How to create predictions and an R plot using the model
 
-**Estimated Time**
+**Estimated time**
 
 30 minutes, not including setup
 
@@ -47,7 +47,6 @@ Your SQL Server instance can be in an Azure virtual machine or on-premises. Just
 To run SQL queries that include R script, you can use any other application that can connect to a database and run ad hoc T-SQL code. If you are a SQL pro,  you can use SQL Server Management Studio (SSMS) or Visual Studio.
 
 For this tutorial, to show how easy it is to run R inside SQL Server, we'll use the new **mssql extension for Visual Studio Code**. VS Code is a free development environment that can run on Linux, macOS, or Windows. The **mssql*** extension is a lightweight extension for running SLq queries. To install it, see this article: [Use the mssql extension for Visual Studio Code](https://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-vscode).
-
 
 ## Connect to a database and run a Hello World test script
 
@@ -88,12 +87,12 @@ For this tutorial, to show how easy it is to run R inside SQL Server, we'll use 
 
 Now that your instance is ready to work with R, let's get started.
 
-Lesson 1: [Working with Inputs and Outputs](/rtsql-working-with-inputs-and-outputs.md)
+Lesson 1: [Working with inputs and outputs](../../advanced-analytics/tutorials/rtsql-working-with-inputs-and-outputs.md)
 
-Lesson 2: [R and SQL Data Types and Data Objects](/rtsql-r-and-sql-data-types-and-data-objects.md)
+Lesson 2: [R and SQL data types and data objects](../../advanced-analytics/tutorials/rtsql-r-and-sql-data-types-and-data-objects.md)
 
-Lesson 3: [Using R Functions with SQL Server Data](/rtsql-using-r-functions-with-sql-server-data.md)
+Lesson 3: [Using R functions with SQL Server data](../../advanced-analytics/tutorials/rtsql-using-r-functions-with-sql-server-data.md)
 
-Lesson 4:  [Create a Predictive Model](/rtsql-create-a-predictive-model-r.md)
+Lesson 4:  [Create a predictive model](../../advanced-analytics/tutorials/rtsql-create-a-predictive-model-r.md)
 
-Lesson 5:  [Predict and Plot from Model](/rtsql-predict-and-plot-from-model.md)
+Lesson 5:  [Predict and plot from model](../../advanced-analytics/tutorials/rtsql-predict-and-plot-from-model.md)

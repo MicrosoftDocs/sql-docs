@@ -65,7 +65,7 @@ ALTER AVAILABILITY GROUP group_name
   | FAILURE_CONDITION_LEVEL  = { 1 | 2 | 3 | 4 | 5 }   
   | HEALTH_CHECK_TIMEOUT = milliseconds  
   | DB_FAILOVER  = { ON | OFF }   
-  | REQUIRED_SYNCHRONOUS_SECONDARIES_TO_COMMIT = { integer }
+  | REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT = { integer }
   
 <server_instance> ::=   
  { 'system_name[\instance_name]' | 'FCI_network_name[\instance_name]' }  
@@ -219,7 +219,7 @@ ALTER AVAILABILITY GROUP group_name
  For more information regarding this setting, see [Database Level Health Detection Option](../../database-engine/availability-groups/windows/sql-server-always-on-database-health-detection-failover-option.md) 
 
  
- REQUIRED_SYNCHRONOUS_SECONDARIES_TO_COMMIT   
+ REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT   
  Introduced in SQL Server 2017 CTP 2.2. Used to set a minimum number of synchronous secondary replicas required to commit before the primary commits a transaction. Guarantees that SQL Server transactions will wait until the transaction logs are updated on the minimum number of secondary replicas. The default is 0 which gives the same behavior as SQL Server 2016. The minimum value is 0. The maximum value is the number of replicas minus 1. This option relates to replicas in synchronous commit mode. When replicas are in synchronous commit mode, writes on the primary replica wait until writes on the secondary synchronous replicas are committed to the replica database transaction log. If a SQL Server that hosts a secondary synchronous replica stops responding, the SQL Server that hosts the primary replica will mark that secondary replica as NOT SYNCHRONIZED and proceed. When the unresponsive database comes back online it will be in a "not synced" state and the replica will be marked as unhealthy until the primary can make it synchronous again. This setting guarantees that the primary replica will not proceed until the minimum number of replicas have committed each transaction. If the minimum number of replicas is not available then commits on the primary will fail. This setting applies to availability groups with cluster type `WSFC` and `EXTERNAL`. For cluster type `EXTERNAL` the setting is changed when the availability group is added to a cluster resource. See [High availability and data protection for availability group configurations](../../linux/sql-server-linux-availability-group-ha.md).
   
  ADD DATABASE *database_name*  

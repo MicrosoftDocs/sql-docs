@@ -81,13 +81,13 @@ System.ServiceModel.Security.SecurityNegotiationException: Could not establish s
 
 Step 1: Check if the account running Scale Out Worker service has access to Scale Out Worker certificate by the command below.
 
-```
+```dos
 winhttpcertcfg.exe -l -c LOCAL_MACHINE\MY -s {CN of the worker certificate}
 ```
 
 If the account does not have access, grant by the command below and restart Scale Out Worker service.
 
-```
+```dos
 winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s {CN of the worker certificate} -a {the account running Scale Out Worker service}
 ```
 
@@ -115,13 +115,13 @@ System.ServiceModel.CommunicationException: An error occurred while making the H
 
 Step 1: Check if Scale Out Master certificate is bound to the port in master endpoint correctly on master node with the command below. Check if the certificate hash displayed is matched with Scale Out Master certificate thumbprint.
 
-```
+```dos
 netsh http show sslcert ipport=0.0.0.0:{Master port}
 ```
 
 If the binding is not correct, reset it with following commands and restart Scale Out Worker service.
 
-```
+```dos
 netsh http delete sslcert ipport=0.0.0.0:{Master port}
 netsh http add sslcert ipport=0.0.0.0:{Master port} certhash={Master certificate thumbprint} certstorename=Root appid={random guid}
 ```
@@ -133,7 +133,8 @@ Execution in Scale Out does not start.
 
 Check the status of the machines you selected to run the package in [SSISDB].[catalog].[worker_agents]. At least one worker must be online and enabled.
 
-### **Symptoms** Packages run successfully, but there is no message logged.
+### **Symptoms** 
+Packages run successfully, but there is no message logged.
 
 ### **Solution**
 
@@ -141,3 +142,18 @@ Check if SQL Server Authentication is allowed by the Sql Server hosting SSISDB.
 
 > [!Note]  
 > If you have changed the account for Scale Out logging, see [Change the Account for Scale Out Logging](change-logdb-account.md) and verify the connection string used for logging.
+
+### **Symptoms**
+The error messages in package execution report are not enough for troubleshooting.
+
+### **Solution**
+More execution logs can be found under TasksRootFolder configured in WorkerSettings.config. By default, it is \<driver\>:\Users\\*[account]*\AppData\Local\SSIS\ScaleOut\Tasks. The *[account]* is the account running Scale Out Worker service with default value SSISScaleOutWorker140.
+
+To locate the log for the package execution with *[execution id]*, execute the T-SQL command below to get the *[task id]*. Then, find the subfolder named with *[task id]* under TasksRootFolder.<sup>1<sup>
+
+```sql
+SELECT [TaskId]
+FROM [SSISDB].[internal].[tasks] tasks, [SSISDB].[internal].[executions] executions 
+WHERE executions.execution_id = *Your Execution Id* AND tasks.JobId = executions.job_id
+```
+<sup>1</sup> This query is for troubleshooting purpose only and open to change when the logging/diagnostic scenario for Scale Out Worker is improved in the future. 

@@ -1,7 +1,7 @@
 ---
 title: "Maximum Capacity Specifications (Analysis Services) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/29/2017"
+ms.date: "07/27/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -81,21 +81,21 @@ manager: "erikre"
 |Length of object names|100 characters|  
   
 ##  <a name="bkmk_vertipaq"></a> Tabular (DeploymentMode=2)  
-  
+The following are theoretical limits. Performance will be diminished at lower numbers.   
+
 |Object|Maximum sizes/numbers|  
 |------------|----------------------------|  
-|Databases in an instance|2^31-1 = 2,147,483,647|  
-|Tables in a database|2^31-1 = 2,147,483,647|  
-|Columns in a table|16,000  (including calculated columns) |  
+|Databases in an instance|16,000|  
+|Combined number of tables and columns in a database|16,000|  
 |Rows in a table|Unlimited<br /><br /> **Warning:** With the restriction that no single column in the table can have more than 1,999,999,997 distinct values.|  
-|Hierarchies in a table|2^31-1 = 2,147,483,647|  
-|Levels in a hierarchy|2^31-1 = 2,147,483,647|  
-|Relationships|2^31-1 = 2,147,483,647|  
-|Key Columns in a table|16,000|  
-|Measures in a table|2^31-1 = 2,147,483,647|  
+|Hierarchies in a table|15,999|  
+|Levels in a hierarchy|15,999|  
+|Relationships|8,000|  
+|Key Columns in all table|15,999|  
+|Measures in a tables|2^31-1 = 2,147,483,647|  
 |Cells returned by a query|2^31-1 = 2,147,483,647|  
 |Record size of the source query|64K|  
-|Length of object names|100 characters|  
+|Length of object names|512 characters|  
   
 ## See also  
  [Determine the Server Mode of an Analysis Services Instance](../../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)   

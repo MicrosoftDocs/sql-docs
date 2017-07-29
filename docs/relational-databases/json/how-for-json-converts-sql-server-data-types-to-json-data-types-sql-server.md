@@ -16,7 +16,7 @@ ms.assetid: da356f06-efd0-4ea3-8157-77395bf790d7
 caps.latest.revision: 11
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ---
 # How FOR JSON converts SQL Server data types to JSON data types (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

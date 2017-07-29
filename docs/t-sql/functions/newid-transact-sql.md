@@ -1,7 +1,7 @@
 ---
 title: "NEWID (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "07/29/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -66,9 +66,7 @@ Value of @myid is: 6F9619FF-8B86-D011-B42D-00C04FC964FF
   
 ### B. Using NEWID in a CREATE TABLE statement  
   
-||  
-|-|  
-|[!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
+**Applies to**:  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
   
  The following example creates the `cust` table with a **uniqueidentifier** data type, and uses NEWID to fill the table with a default value. In assigning the default value of `NEWID()`, each new and existing row has a unique value for the `CustomerID` column.  
   

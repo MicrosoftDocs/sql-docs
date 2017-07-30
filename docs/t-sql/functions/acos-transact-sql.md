@@ -65,8 +65,7 @@ The ACOS of the number is: 3.14159
 (1 row(s) affected)  
 ```  
   
-## Examples: 
-[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 
+### [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 
 
 The following example returns the ACOS of the specified number.
   

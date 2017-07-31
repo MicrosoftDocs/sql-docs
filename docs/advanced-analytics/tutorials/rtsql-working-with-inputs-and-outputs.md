@@ -1,7 +1,7 @@
 ---
 title: "Working with inputs and outputs (R in SQL quickstart) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/26/2017"
+ms.date: "07/31/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -20,7 +20,7 @@ manager: "jhubbard"
 ---
 # Working with inputs and outputs (R in SQL quickstart)
 
-When you want to run R code in  SQL Server, you must wrap the R script in a system stored procedure, [sp_execute_external_script](https://msdn.microsoft.com/library/mt604368.aspx). This stored procedure is used to start the R runtime in the context of SQL Server, which passes data to R, manages R user sessions securely, and returns any results to the client.
+When you want to run R code in SQL Server, you must wrap the R script in a system stored procedure, [sp_execute_external_script](https://msdn.microsoft.com/library/mt604368.aspx). This stored procedure is used to start the R runtime in the context of SQL Server, which passes data to R, manages R user sessions securely, and returns any results to the client.
 
 ## <a name="bkmk_SSMSBasics"></a>Create some simple test data
 
@@ -91,13 +91,9 @@ EXECUTE sp_execute_external_script
   WITH RESULT SETS (([NewColName] int NOT NULL));
 ```
 
-Did you get this error? That's because R is case-sensitive! In the example, the R script uses the variables *SQL_in* and *SQL_out*, but the parameters to the stored procedure use the variables *SQL_In* and *SQL_Out*.
+Did you get the error, "object SQL\_in not found"? That's because R is case-sensitive! In the example, the R script uses the variables *SQL_in* and *SQL_out*, but the parameters to the stored procedure use the variables *SQL_In* and *SQL_Out*.
 
-```Error
-Error in eval(expr, envir, enclos) : object 'SQL_in' not found
-```
-
-That's because R is case-sensitive! In the example, the R script uses the variables *SQL_in* and *SQL_out*, but the parameters to the stored procedure use the variables *SQL_In* and *SQL_Out*.
+That's because R is case-sensitive. In the example, the R script uses the variables *SQL_in* and *SQL_out*, but the parameters to the stored procedure use the variables *SQL_In* and *SQL_Out*.
 Try correcting **only** the *SQL_In* variable and re-run the stored procedure.
 
 Now you get a **different** error:
@@ -106,9 +102,9 @@ Now you get a **different** error:
 EXECUTE statement failed because its WITH RESULT SETS clause specified 1 result set(s), but the statement only sent 0 result set(s) at run time.
 ```
 
-We're showing you this error because it's a common one when testing new R code. It means that the R script ran successfully, but SQL Server received no data, or received wrong or unexpected data.
+We're showing you this error because you can expect to see it often when testing new R code. It means that the R script ran successfully, but SQL Server received no data, or received wrong or unexpected data.
 
-In this case, the output schema (the line beginning with **WITH**) specifies that one column of integer data should be returned, but since R put the data in a different variable, nothing came back to SQL Server; hence, the error.
+In this case, the output schema (the line beginning with **WITH**) specifies that one column of integer data should be returned, but since R put the data in a different variable, nothing came back to SQL Server; hence, the error. to fix the error, correct the second variable name.
 
 **Remember these requirements!**
 

@@ -1,7 +1,7 @@
 ---
 title: "Setup and Configuration | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/29/2017"
+ms.date: "07/31/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -17,23 +17,19 @@ manager: "jhubbard"
 
   You install the components required for using Python by running the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup wizard and following the interactive prompts as described in this topic.
 
-Overview of the setup process
+## Machine learning options in SQL Server setup
 
-  + Be sure to install the database engine. An instance of SQL Server is required to run Python scripts in-database.
-  + Choose the **Machine Learning Services** feature, and select **Python** as the language.
-  + After installation is complete, reconfigure the instance to allow execution of scripts that use an external executable.
-  + You might need to make some additional configuration of the worker account pool that is used to run Python. 
-  + Each configuration change requires a restart of the Trusted Launchpad service.
+Choose the **Machine Learning Services** feature, and select **Python** as the language.
 
-To perform an unattended installation, use the command-line options for SQL Server setup and the arguments specific to Python, as described here: [Unattended Installs of SQL Server with Python Machine Learning Services](./unattended-installs-of-sql-server-python-services.md).
+The **Shared Features** section contains a separate installation option, **Machine Learning Server (Standalone)**. This option supports operationalization of Python code on a server that does not have SQL Server, or that does not require use of SQL Server compute contexts. Thus, we recommend that you **do not** install this on the same computer as a SQL Server instance. Instead, install Machine Learning Server (Standalone) on a separate computer.
 
-## Prerequisites
+After installation is complete, you must reconfigure the instance to allow execution of scripts that use an external executable. You might need to make additional changes to the server to support machine learning workloads. Configuration changes generally require a restart of the instance or a restart of the Launchpad service.
 
-+  SQL Server 2017 is required. Python integration is not supported on previous versions of SQL Server.
-+  Additional prerequisites are installed as part of the Python component setup.
-+  The **Shared Features** section contains a separate installation option, **Machine Learning Server (Standalone)**. We recommend that you **do not** install this on the same computer as a SQL Server instance that uses R Services or Python Services.
-  Instead, install the Machine Learning Server (Standalone) on a separate computer that you will use for developing and testing your R solutions.
+### Prerequisites
 
++ SQL Server 2017 is required. Python integration is not supported on previous versions of SQL Server.
++ Be sure to install the database engine. An instance of SQL Server is required to run Python scripts in-database.
++ Prerequisites are installed as part of the Python component setup.
 + You cannot install Machine Learning with Python Services on a failover cluster. The reason is that the security mechanism used for isolating Python processes is not compatible with a Windows Server failover cluster environment.
    
   As a workaround, you can use replication to copy necessary tables to a standalone SQL Server instance that uses Python Services, or you can install Machine Learning with Python Services on a standalone computer that uses Always On and is part of an availability group.
@@ -44,6 +40,10 @@ To perform an unattended installation, use the command-line options for SQL Serv
   
 > [!IMPORTANT]
 > After setup is complete, be sure to complete the additional post-configuration steps described in this topic. These include enabling SQL Server to use external scripts, and adding accounts required for SQL Server to run Python jobs on your behalf.
+
+### Unattended installation
+
+To perform an unattended installation, use the command-line options for SQL Server setup and the arguments specific to Python, as described here: [Unattended installs of SQL Server with Python Machine Learning Services](./unattended-installs-of-sql-server-python-services.md).
 
 ##  <a name="bkmk_installPythonInDatabase"></a> Step 1: Install Machine Learning Services (In-Database) on SQL Server
 
@@ -153,13 +153,15 @@ Take a moment to verify that all components used to launch Python script are run
 > Column or headings used in the Python script are not returned, by design. To add column names for your output, you must specify the schema for the return dataset using the WITH RESULTS parameter of the stored procedure, naming the columns and specifying the SQL data type.
 > For example, you could add the following line to generate an arbitrary column name: `WITH RESULT SETS ((Col1 AS int))`
 
-## Troubleshooting and Additional Steps
+## Step 4: Additional configuration
 
-If this command was successful, you can run Python commands from SQL Server Management Studio, Visual Studio Code, or any other client that can send T-SQL statements to the server.
+If the previous command was successful, you can run Python commands from SQL Server Management Studio, Visual Studio Code, or any other client that can send T-SQL statements to the server.
 
-If not, review the following list and see if changes to the configuration of the service or database might be needed.
+If you got an error when running the command, review the following list, and determine which you might need to make  to the configuration of the service or database.
 
-It is important to note that not all the listed changes are required, and none might be required. It depends on your security schema, where you installed SQL Server, and how you expect users to connect to the database and run external scripts.
+> [!NOTE]
+> 
+> Not all the listed changes are required, and none might be required. Requirements depends on your security schema, where you installed SQL Server, and how you expect users to connect to the database and run external scripts.
 
 ###  <a name="bkmk_configureAccounts"></a> Enable implied authentication for Launchpad account group
 
@@ -200,10 +202,6 @@ GRANT EXECUTE ANY EXTERNAL SCRIPT  TO [UserName]
 > [!NOTE]
 > Permissions are not specific to the supported script language. In other words, there are not separate permission levels for R script vs. Python script. If you need to maintain separate permissions for these languages, you can install R and Python on separate instances.
 
-### Add more worker accounts
-
-If you expect many users to be running scripts concurrently, you can increase the number of worker accounts that are assigned to the Launchpad service. For more information, see [Modify the User Account Pool for SQL Server R Services](../r/modify-the-user-account-pool-for-sql-server-r-services.md).
-
 ### Give your users read, write, or DDL permissions to databases
 
 While running scripts, the user account or SQL login might need to read data from other databases, create new tables to store results, and write data into tables.
@@ -232,6 +230,16 @@ If you create a machine learning solution on a data science client computer and 
 
 + For Windows authentication: You might need to create an ODBC data source on the data science client that specifies the instance name and other connection information. For more information, see [ODBC Data Source Administrator](https://docs.microsoft.com/sql/odbc/admin/odbc-data-source-administrator).
 
+
+## Next steps
+
+Now that you have everything working, you might also want to optimize the server to support machine learning, or install pretrained models. 
+
+### Add more worker accounts
+
+If you expect many users to be running scripts concurrently, you can increase the number of worker accounts that are assigned to the Launchpad service. For more information, see [Modify the User Account Pool for SQL Server R Services](../r/modify-the-user-account-pool-for-sql-server-r-services.md).
+
+
 ### Optimize the server for script execution
 
 The default settings for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup are intended to optimize the balance of the server for a variety of services supported by the database engine, which might include ETL processes, reporting, auditing, and applications that use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data.
@@ -257,8 +265,25 @@ If you have Enterprise Edition, we recommend that you use Resource Governor to c
 
 If you are using Standard Edition and do not have Resource Governor, you can use DMVs and extended events, as well as Windows event monitoring, to help you manage server resources. For more information, see [Monitoring and Managing R Services](../r/managing-and-monitoring-r-solutions.md).
 
-## See Also
+### Upgrade the machine learning components
+
+When you install Machine Learning Services using SQL Server 2017, you get the version of the machine learning components that was up to date at the time the release was published. Each time you patch or upgrade the SQL Server instance, the machine learning components are upgraded as well.
+
+However, you can upgrade the machine learning components on a faster schedule than is supported by SQL Server releases, by installing Microsoft Machine Learning Server. When you do so, you also get any new features supported in the latest release of Microsoft Machine Learning Server, such as:
+
++ Updates to Python packages for [revoscalepy](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package) and [microsoftml for Python](https://docs.microsoft.com/r-server/python-reference/microsoftml/microsoftml-package)
++ [Pretrained models](https://docs.microsoft.com/r-server/install/microsoftml-install-pretrained-models) for image classification and text analysis
+
+For information about how to upgrade an instance, see [Upgrade R components through binding](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
+
+> [!NOTE]
+> 
+> The current release version contains the latest version of all machine learning components. Therefore, although upgrades via Microsoft Machine Learning Server are supported for SQL Server 2017, the upgrade that is currently available applies only to SQL Server 2016 instances.
+
+### Tutorials
+
+See these tutorials for some examples of how you can use Python with SQL Server to build and deploy machine learning solutions.
 
 [Using Python in T-SQL](../tutorials/run-python-using-t-sql.md)
 
-[Create a Python Model using revoscalepy](../tutorials/use-python-revoscalepy-to-create-model.md)
+[Create a Python model using revoscalepy](../tutorials/use-python-revoscalepy-to-create-model.md)

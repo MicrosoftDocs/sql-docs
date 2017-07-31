@@ -1,7 +1,7 @@
----
+﻿---
 title: "UPDATE STATISTICS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/01/2016"
+ms.date: "07/26/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -115,9 +115,7 @@ For more information, see  the [CSS SQL Escalation Services blog](http://blogs.m
  ON PARTITIONS ( { <partition_number> | \<range> } [, …n] ) ]  
  Forces the leaf-level statistics covering the partitions specified in the ON PARTITIONS clause to be recomputed, and then merged to build the global statistics. WITH RESAMPLE is required because partition statistics built with different sample rates cannot be merged together.  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  ALL | COLUMNS | INDEX  
  Update all existing statistics, statistics created on one or more columns, or statistics created for indexes. If none of the options are specified, the UPDATE STATISTICS statement updates all statistics on the table or indexed view.  
@@ -151,9 +149,7 @@ For more information, see  the [CSS SQL Escalation Services blog](http://blogs.m
   
 -   Statistics created with spatial indexes or XML indexes.  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  <update_stats_stream_option>  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  

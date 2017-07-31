@@ -20,9 +20,7 @@ This topic describes what's new for SQL Server 2017 running on Linux.
 
 ## RC2
 
-The RC2 release contains the following improvements and fixes:
-
-- Enabled support for Network File System (NFS) 4.2 or higher. For more information, see [System requirements](sql-server-linux-setup.md#system).
+The RC2 release contains miscellaneous bug fixes and improvements.
 
 ## RC1
 

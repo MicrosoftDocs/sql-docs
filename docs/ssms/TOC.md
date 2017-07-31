@@ -7,9 +7,6 @@
 ## [New and recently updated articles](new-updated-ssms.md)
 ## [Previous SSMS Releases](previous-sql-server-management-studio-releases.md)
 
-# [Use SSMS](use-sql-server-management-studio.md)
-# [Features in SSMS](features-in-sql-server-management-studio.md)
-# [Usage Feedback Collection](sql-server-management-studio-telemetry-ssms.md)
 # [Download SQL Server PowerShell Module](download-sql-server-ps-module.md)
 
 # [SQL Server Agent +](../ssms/agent/sql-server-agent.md)
@@ -49,4 +46,4 @@
 
 # [Ssms Utility](ssms-utility.md)  
 # [SSMS Keyboard Shortcuts](sql-server-management-studio-keyboard-shortcuts.md)  
-
+# [Anonymous Usage Data](sql-server-management-studio-telemetry-ssms.md)

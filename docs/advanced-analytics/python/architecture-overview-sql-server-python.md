@@ -1,7 +1,7 @@
 ---
 title: "Architecture | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/11/2017"
+ms.date: "07/26/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -15,16 +15,16 @@ manager: "jhubbard"
 ---
 # Architecture overview for Machine Learning Services with Python
 
-This topic provides an overview of how Python is integrated with SQL Server, including the security model, the components in the database engine that support external script execution, and new components that enable interoperability of Python with SQL Server. For details see the linked topics.
+This topic provides an overview of how Python is integrated with SQL Server, including the security model, the components in the database engine that support external script execution, and new components that enable interoperability of Python with SQL Server. For details, see the linked topics.
 
 > [!IMPORTANT]
-> Support for Python is available beginning with SQL Server 2017 CTP 2.0. This is a pre-release feature and subject to change.
+> Support for Python is available beginning with SQL Server 2017 CTP 2.0. This pre-release feature is subject to change.
 
 ## Python interoperability
 
 SQL Server Machine Learning Services (In-Database) installs the Anaconda distribution of Python, and the Python 3.5 runtime and interpreter. This ensures near-complete compatibility with standard Python solutions. Python runs in a separate process from SQL Server, to guarantee that database operations are not compromised.
 
-For more information about the interaction of SQL Server with Python, see [Python interoperability](/python-interoperability.md)
+For more information about the interaction of SQL Server with Python, see [Python interoperability](../../advanced-analytics/python/python-interoperability.md)
 
 ## Components that support Python integration
 

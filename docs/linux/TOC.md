@@ -37,6 +37,7 @@
 ### [Use PowerShell to manage](sql-server-linux-manage-powershell.md)
 ### [Create and run jobs](sql-server-linux-run-sql-server-agent-job.md)
 ### [Use log shipping](sql-server-linux-use-log-shipping.md)
+### [Use DB Mail and email alerts](sql-server-linux-db-mail-sql-agent.md)
 
 ## [Migrate](sql-server-linux-migrate-overview.md)
 ### [Restore from Windows](sql-server-linux-migrate-restore-database.md)
@@ -84,4 +85,4 @@
 ## [Stack Overflow](http://stackoverflow.com/questions/tagged/sql-server)
 ## [MSDN Forums](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)
 ## [Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback)
-## [Reddit](https://connect.microsoft.com/SQLServer/Feedback)
+## [Reddit](https://www.reddit.com/r/SQLServer)

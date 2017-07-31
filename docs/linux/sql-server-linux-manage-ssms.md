@@ -6,7 +6,7 @@ description:
 author: sanagama 
 ms.author: sanagama 
 manager: jhubbard
-ms.date: 03/17/2017
+ms.date: 07/19/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine

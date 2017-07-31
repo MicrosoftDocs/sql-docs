@@ -1,7 +1,7 @@
 ---
 title: "CONCAT_WS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/21/2016"
+ms.date: "07/24/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -28,25 +28,22 @@ manager: "jhubbard"
 Concatenates a variable number of arguments with a delimiter specified in the 1st argument. (`CONCAT_WS` indicates *concatenate with separator*.)
 
 ##  Syntax   
-```
+```sql
 CONCAT_WS ( separator, argument1, argument1 [, argumentN]… ) 
 ```
 
 ## Arguments   
-
-separator   
+separator  
 Is an expression of any character type (`nvarchar`, `varchar`, `nchar`, or `char`).
 
-argument1, argument2, argument*N*   
+argument1, argument2, argument*N*  
 Is an expression of any type.
 
-## Return Types   
+## Return types
 String. The length and type depend on the input.
 
 ## Remarks   
-
 `CONCAT_WS` takes a variable number of arguments and concatenates them into a single string using the first argument as separator. It requires a separator and a minimum of two arguments; otherwise, an error is raised. All arguments are implicitly converted to string types and are then concatenated. 
-
 
 The implicit conversion to strings follows the existing rules for data type conversions. For more information about behavior and data type conversions, see [CONCAT (Transact-SQL)](../../t-sql/functions/concat-transact-sql.md).
 
@@ -60,14 +57,12 @@ Null values are ignored during concatenation, and does not add the separator. Th
 
 If your scenario requires null values to be included with a separator, see example C using the `ISNULL` function.
 
-
 ## Examples   
-
 
 ### A.  Concatenating values with separator
 The following example concatenates three columns from the sys.databases table, separating the values with a  `- `.   
-```tsql
 
+```sql
 SELECT CONCAT_WS( ' - ', database_id, recovery_model_desc, containment_desc) AS DatabaseInfo
 FROM sys.databases;
 ```
@@ -85,13 +80,13 @@ FROM sys.databases;
 ### B.  Skipping NULL values
 The following example ignores `NULL` values in the arguments list.
 
-```tsql
+```sql
 SELECT CONCAT_WS(',','1 Microsoft Way', NULL, NULL, 'Redmond', 'WA', 98052) AS Address;
 ```
 
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]   
 
-```
+```sql
 Address
 ------------   
 1 Microsoft Way,Redmond,WA,98052
@@ -99,7 +94,8 @@ Address
 
 ### C.  Generating CSV file from table
 The following example uses a comma as the separator and adds the carriage return character to result in the column separated values format.
-```tsql
+
+```sql
 SELECT 
 STRING_AGG(CONCAT_WS( ',', database_id, recovery_model_desc, containment_desc), char(13)) AS DatabaseInfo
 FROM sys.databases
@@ -107,7 +103,7 @@ FROM sys.databases
 
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]   
 
-```
+```sql
 DatabaseInfo
 ------------   
 1,SIMPLE,NONE
@@ -118,14 +114,13 @@ DatabaseInfo
 
 CONCAT_WS will ignore NULL values in the columns. If some of the columns are nullable, wrap it with `ISNULL` function and provide default value like in the following example:
 
-```tsql
+```sql
 SELECT 
 STRING_AGG(CONCAT_WS( ',', database_id, ISNULL(recovery_model_desc,''), ISNULL(containment_desc,'N/A')), char(13)) AS DatabaseInfo
 FROM sys.databases;
 ```
 
-## See Also
-
-[String Functions (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)   
+## See also
+[String Functions (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)  
 [CONCAT (Transact-SQL)](../../t-sql/functions/concat-transact-sql.md)      
 

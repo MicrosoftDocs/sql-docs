@@ -19,7 +19,7 @@ ms.assetid: 81bd93d8-eef8-4572-88d7-5c37ab5ac2bf
 caps.latest.revision: 29
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ---
 # Stretch Database databases and tables - Stretch Database Advisor
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

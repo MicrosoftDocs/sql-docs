@@ -6,7 +6,7 @@ description: Install, update, and uninstall SQL Server on Linux. This topic cove
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 07/17/2017
+ms.date: 07/24/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -144,7 +144,7 @@ If your Linux machine does not have access to the online repositories used in th
    |-----|-----|
    | RHEL | `rpm -qpR mssql-server_versionnumber.x86_64.rpm` |
    | SLES | `rpm -qpR mssql-server_versionnumber.x86_64.rpm` |
-   | Ubuntu | `dpkg -I mssql-server_versionnumber_amd64.deb | grep "Depends:"` |
+   | Ubuntu | `dpkg -I mssql-server_versionnumber_amd64.deb` |
 
    After resolving the missing dependencies, attempt to install the mssql-server package again.
 

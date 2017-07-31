@@ -1,7 +1,7 @@
 ---
 title: "What's new in SQL Server 2017 | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/12/2017"
+ms.date: "07/31/2017"
 ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
@@ -35,6 +35,13 @@ SQL Server 2017 represents a major step towards making SQL Server a platform tha
     -   The parameter *runincluster* of the stored procedure **[catalog].[create_execution]** is renamed to *runinscaleout* for consistency and readability.
     -   The SSIS Catalog has a new global property to specify the default mode for executing SSIS packages.
 
+### Master Data Services (MDS)
+- The upgrade experience and performance has been improved, when upgrading to SQL Server 2017 Master Data Services from the following previous releases of SQL Server.
+    - SQL Server 2012
+    - SQL Server 2014
+    - SQL Server 2016
+
+
 ## SQL Server Database Engine  
 SQL Server 2017 includes many new Database Engine features, enhancements, and performance improvements. 
 - **Resumable online index rebuild** resumes an online index rebuild operation from where it stopped after a failure (such as a failover to a replica or insufficient disk space), or pauses and later resumes an online index rebuild operation. See [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md) and [Guidelines for online index operations](../relational-databases/indexes/guidelines-for-online-index-operations.md). (CTP 2.0)
@@ -57,7 +64,7 @@ SQL Server 2017 includes many new Database Engine features, enhancements, and pe
 - **In-memory enhancements** include support for computed columns in memory-optimized tables, full support for JSON functions in natively compiled modules, and the CROSS APPLY operator in natively compiled modules. (CTP 1.1)
 - New **string functions** are CONCAT_WS, TRANSLATE, and TRIM, and WITHIN GROUP is now supported for the STRING_AGG function. (CTP 1.1)
 - There are new **bulk access options** (BULK INSERT and OPENROWSET(BULK...) ) for CSV and Azure Blob files. (CTP 1.1)
-- **Memory-optimized object enhancements** include sp_spaceused and elimination of the 8 index limitation for memory-optimized tables, sp_rename for memory-optimized tables and natively compiled T-SQL modules, and CASE statements and TOP (N) WITH TIES for natively compiled T-SQL modules. Memory-optimized filegroup files can now be stored, backed up and restored on Azure Storage. (CTP 1.0)
+- **Memory-optimized object enhancements** include sp_spaceused and elimination of the 8 index limitation for memory-optimized tables, sp_rename for memory-optimized tables and natively compiled T-SQL modules, and CASE and TOP (N) WITH TIES for natively compiled T-SQL modules. Memory-optimized filegroup files can now be stored, backed up and restored on Azure Storage. (CTP 1.0)
 - **DATABASE SCOPED CREDENTIAL** is a new class of securable, supporting CONTROL, ALTER, REFERENCES, TAKE OWNERSHIP, and VIEW DEFINITION permissions. ADMINISTER DATABASE BULK OPERATIONS is now visible in sys.fn_builtin_permissions. (CTP 1.0)
 - Database **COMPATIBILITY_LEVEL 140** is added. (CTP 1.0).  
 
@@ -71,10 +78,16 @@ For more information, see [What's new in SQL Server 2017 Database Engine](~/data
     -   The SSIS Catalog has a new global property to specify the default mode for executing SSIS packages.
 - In the new **Scale Out for SSIS** feature, you can now use the **Use32BitRuntime** parameter when you trigger execution. (CTP 2.1)
 - SQL Server 2017 Integration Services (SSIS) now supports **SQL Server on Linux**, and a new package lets you run SSIS packages on Linux from the command line. For more information, see the [blog post announcing SSIS support for Linux](https://blogs.msdn.microsoft.com/ssis/2017/05/17/ssis-helsinki-is-available-in-sql-server-vnext-ctp2-1/). (CTP 2.1)
-- The new **Scale Out for SSIS** feature makes it much easier to run SSIS on multiple machines. See [Integration Services Scale Out](~/integration-services/integration-services-ssis-scale-out.md). (CTP 1.0)
+- The new **Scale Out for SSIS** feature makes it much easier to run SSIS on multiple machines. See [Integration Services Scale Out](~/integration-services/scale-out/integration-services-ssis-scale-out.md). (CTP 1.0)
 - OData Source and OData Connection Manager now support connecting to the OData feeds of Microsoft Dynamics AX Online and Microsoft Dynamics CRM Online. (CTP 1.0)
 
 For more info, see [What's New in Integration Services in SQL Server 2017](~/integration-services/what-s-new-in-integration-services-in-sql-server-2017.md).
+
+## Master Data Services (MDS)
+In addition to improving the upgrade performance and experience for upgrading to SQL Server 2017 MDS, the following additional enhancements have been made to Master Data Services.
+- You can now view the sorted lists of entities, collections and hierarchies in the **Explorer** page of the Web application.
+- Performance has been improved for staging millions of records using the staging stored procedure.
+- Performance has been improved when expanding the **Entities** folder on the **Manage Groups** page to assign model permissions. The **Manage Groups** page is located in the **Security** section of the Web application. For more information about the performance improvement, see [https://support.microsoft.com/help/4023865?preview](https://support.microsoft.com/help/4023865?preview). For more information about assigning permissions, see [Assign Model Object Permissions (Master Data Services)](../master-data-services/assign-model-object-permissions-master-data-services.md).
 
 ## SQL Server Analysis Services (SSAS) 
 SQL Server Analysis Services 2017 introduces many enhancements for tabular models. These include:
@@ -93,16 +106,24 @@ SQL Server Analysis Services 2017 introduces many enhancements for tabular model
 For more information, see [What's new in SQL Server Analysis Services 2017](~/analysis-services/what-s-new-in-sql-server-analysis-services-2017.md).
 
 ## SQL Server Reporting Services (SSRS)
-As of CTP 2.1, SSRS is no longer available to install through SQL Server setup. Go to the Microsoft Download Center to [download the May 2017 Preview of Power BI Report Server and Power BI Desktop optimized for Power BI Report Server](https://www.microsoft.com/download/details.aspx?id=55253). For information about Power BI Report Server, see [Get started with Power BI Report Server](https://powerbi.microsoft.com/documentation/reportserver-get-started/).
+As of CTP 2.1, SSRS is no longer available to install through SQL Server setup. Go to the Microsoft Download Center to [download the Microsoft SQL Server 2017 Reporting Services Release Candidate](https://www.microsoft.com/download/details.aspx?id=55252). 
 - Comments are now available for reports, to add perspective and collaborate with others. You can also include attachments with comments. (CTP 2.1)
 - In the latest releases of Report Builder and SQL Server Data Tools, you can create native DAX queries against supported SQL Server Analysis Services tabular data models by dragging and dropping desired fields in the query designers. See the [Reporting Services blog](https://blogs.msdn.microsoft.com/sqlrsteamblog/2017/03/09/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools/).
 
 For more information, see [What's new in SQL Server Reporting Services (SSRS)](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md).
 
 ## SQL Server Machine Learning Services
-SQL Server R Services is now renamed **SQL Server Machine Learning Services**, to reflect new support for Python in addition to R languages. You can use Machine Learning Services (In-Database) to run R or Python scripts in SQL Server, or install Microsoft Machine Learning Server (Standalone) to deploy and consume R and Python models that don't require SQL Server. Both platforms include new MicrosoftML algorithms for distributed machine learning, and the latest version of Microsoft R (version 9.1.0). (CTP 2.0)
-- Machine learning with Python includes the **revoscalepy** module, which supports a subset of the distributed algorithms and compute contexts provided in RevoScaleR. 
-- You can easily create multiple models in parallel from R by using the new **rxExecBy** function. Supported compute contexts include RxSpark and RxInSQLServer. (CTP 2.0)
+SQL Server R Services has been renamed **SQL Server Machine Learning Services**, to reflect support for Python in addition to the R language. You can use Machine Learning Services (In-Database) to run R or Python scripts in SQL Server. Or install **Microsoft Machine Learning Server (Standalone)** to deploy and consume R and Python models that don't require SQL Server. 
+
+SQL Server developers now have access to the extensive Python ML and AI libraries available in the open source ecosystem along with the latest innovations from Microsoft: 
+
++ **revoscalepy** - This Pythonic version of RevoScaleR includes parallel algorithms for linear and logistic regressions, decision tree, boosted trees and random forests, as well as a rich set of APIs for data transformation and data movement, remote compute contexts, and data sources.
+
++ **microsoftml** - This state-of-the-art package of machine learning algorithms and transforms with Python bindings includes deep neural networks, fast decision trees and decision forests, highlyand  optimized algorithms for linear and logistic regressions. You also get pre-trained models based on ResNet models that you can use for image extraction or sentiment analysis.
+
++ **Python operationalization with T-SQL** - Deploy Python code easily by using the stored procedure `sp_execute_external_script`. Get great performance by streaming data from SQL to Python processes and using MPI ring parallelization.
+
++ **Python in SQL Server compute contexts** - Data scientists and developers can execute Python code remotely from their development environments to explore data and develop models without moving data around.
 
 For more information, see [What's new in SQL Server Machine Learning Services](~/advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md).
 

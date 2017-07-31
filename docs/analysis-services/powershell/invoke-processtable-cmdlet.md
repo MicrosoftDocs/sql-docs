@@ -22,7 +22,7 @@ manager: "erikre"
   Conducts the **Process** operation on a **Table** with a specific **RefreshType**.  
 
 >[!NOTE] 
->This article may contain outdated information and examples.
+>This article may contain outdated information and examples. Use the Get-Help cmdlet for the latest.
   
 ## Syntax  
  `Invoke-ProcessTable [-DatabaseName] <string> [-TableName] <string> [-RefreshType] <RefreshType> {Full |     ClearValues | Calculate | DataOnly | Automatic | Add | Defragment} [-Server <string>] [-Credential <pscredential>     [-WhatIf] [-Confirm]  [<CommonParameters>]`  

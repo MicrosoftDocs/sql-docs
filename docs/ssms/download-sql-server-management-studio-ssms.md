@@ -69,15 +69,15 @@ For information about user data collection, see
   
 ## Supported Operating systems
   
-This release of SSMS supports the following platforms when used with the latest available service pack:   
-- Windows 10
-- Windows 8.1
-- Windows 8
-- Windows 7 (SP1)
+This release of SSMS supports the following 64-bit platforms when used with the latest available service pack:
+- Windows 10 (64-bit)
+- Windows 8.1 (64-bit)
+- Windows 8 (64-bit)
+- Windows 7 (SP1) (64-bit)
 - Windows Server 2016
-- Windows Server 2012 (64-bit) 
-- Windows Server 2012 R2 (64-bit) 
-- Windows Server 2008 R2 (64-bit)  
+- Windows Server 2012 R2 (64-bit)
+- Windows Server 2012 (64-bit)
+- Windows Server 2008 R2 (64-bit)
 
 >[!NOTE]
 >SSMS 17.X is based on the Visual Studio 2015 Isolated shell, which was released before Windows Server 2016. Microsoft takes app compatibility seriously and ensures that already-shipped applications continue to run on the latest Windows releases. To minimize issues running SSMS on Windows Server 2016, ensure SSMS has all of the latest updates applied. If you experience any issues with SSMS on Windows Server 2016, contact support. The support team determines if the issue is with SSMS, Visual Studio, or with Windows compatibility. The support team then routes the issue to the appropriate team for further investigation.
@@ -120,8 +120,5 @@ SQL Server Management Studio 17.1 Upgrade Package (upgrades 17.0 to 17.1):<br>
 ## See Also  
 [Tutorial: SQL Server Management Studio](http://msdn.microsoft.com/en-us/d2bade70-07cf-4d94-b5d2-88aecb538ed1)  
 [SQL Server Management Studio documentation](https://msdn.microsoft.com/library/hh213248(v=sql.130).aspx)  
-[Microsoft SQL Server](https://msdn.microsoft.com/library/bb545450.aspx)  
 [Additional updates and service packs](https://technet.microsoft.com/sqlserver/ff803383.aspx)  
 [Download SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)  
-
-

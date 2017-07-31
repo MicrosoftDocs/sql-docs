@@ -75,8 +75,10 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
   
  For more information about the Windows and SQL collation names, [COLLATE (Transact-SQL)](http://msdn.microsoft.com/library/ms184391.aspx).  
   
- *CATALOG_COLLATION*
-Specifies the default collation for the metadata catalog. *DATABASE_DEFAULT* specifies that the metadata catalog used for system views and system tables be collated to match the default collation for the database.  This is the behavior found in SQL Server. *SQL_Latin1_General_CP1_CI_AS* specifies that the metadata catalog used for system views and tables be collated to a fixed SQL_Latin1_General_CP1_CI_AS collation.  This is the default setting on Azure SQL Database if unspecified.
+ *CATALOG_COLLATION*  
+Specifies the default collation for the metadata catalog. *DATABASE_DEFAULT* specifies that the metadata catalog used for system views and system tables be collated to match the default collation for the database.  This is the behavior found in SQL Server. 
+
+*SQL_Latin1_General_CP1_CI_AS* specifies that the metadata catalog used for system views and tables be collated to a fixed SQL_Latin1_General_CP1_CI_AS collation.  This is the default setting on Azure SQL Database if unspecified.
 
  *EDITION*  
  Specifies the service tier of the database. The available values are: 'basic', 'standard', 'premium', and 'premiumrs'.  

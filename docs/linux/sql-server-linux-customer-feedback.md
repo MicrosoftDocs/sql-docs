@@ -30,6 +30,8 @@ SQL Server 2017 always collects and sends information about the installation exp
 
 This option lets you change if SQL Server sends feedback to Microsoft or not. By default, this value is set to true. To change the value, run the following commands:
 
+### On Red Hat, SUSE, and Ubuntu
+
 1. Run the mssql-conf script as root with the **set** command for **telemetry.customerfeedback**. The following example turns off customer feedback by specifying **false**.
 
    ```bash
@@ -41,7 +43,26 @@ This option lets you change if SQL Server sends feedback to Microsoft or not. By
    ```bash
    sudo systemctl restart mssql-server
    ```
+### On Docker
+To disable Customer Feedback on docker you must have Docker [persist your data](sql-server-linux-configure-docker). 
+
+1. Add an `mssql.conf` file with the lines `[telemetry]` and `customerfeedback = false` in the host directory:
  
+   ```bash
+   echo '[telemetry]' >> <host directory>/mssql.conf
+   ```
+
+   ```bash
+   echo 'customerfeedback = false' >> <host directory>/mssql.conf
+   ```
+2. Run the container image
+   ```bash
+   docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' --cap-add SYS_PTRACE -p 1433:1433 -v sqlvolume:/var/opt/mssql -d microsoft/mssql-server-linux
+   ```
+
+   ```PowerShell
+   docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" --cap-add SYS_PTRACE -p 1433:1433 -v sqlvolume:/var/opt/mssql -d microsoft/mssql-server-linux
+   ```
 ## Local Audit for SQL Server on Linux Usage Feedback Collection
 
 Microsoft SQL Server 2017 contains Internet-enabled features that can collect and send information about your computer or device ("standard computer information") to Microsoft. The Local Audit component of SQL Server Usage Feedback collection can write data collected by the service to a designated folder, representing the data (logs) that will be sent to Microsoft. The purpose of the Local Audit is to allow customers to see all data Microsoft collects with this feature, for compliance, regulatory or privacy validation reasons.

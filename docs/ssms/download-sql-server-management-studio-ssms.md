@@ -1,7 +1,7 @@
 ---
 title: "Download SQL Server Management Studio (SSMS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/27/2017"
+ms.date: "07/31/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -65,7 +65,7 @@ SSMS 17.2 is the latest version of SQL Server Management Studio. The 17.x genera
 Version 17.2 includes:
 
 - Multi-Factor Authentication (MFA)
-  - Multiple-user Azure AD authentication for Universal authentication with Multi-factor authentication (UA with MFA)
+  - Multiple-user Azure AD authentication for Universal Authentication with Multi-factor authentication (UA with MFA)
   - A new user credential input field was added for Universal Authentication with MFA to support multi-user authentication.
 - The connection dialog box now supports the following 5 authentication methods:
   - Windows Authentication
@@ -149,16 +149,16 @@ SQL Server Management Studio 17.1 Upgrade Package (upgrades 17.0 to 17.1):<br>
 
 The following are issues and limitations with this 17.2 release:
 
-- Query windows using "Active Directory - Universal with MFA Support" authentication may experience an error similar to the following, when attempting to execute a query after being open for one hour:
+- Query windows using "Active Directory - Universal with MFA Support" authentication may experience an error similar to the following, when attempting to execute a query after being open for about an hour or more:
 
    `Msg 0, Level 11, State 0, Line 0
-The connection is broken and recovery is not possible. The client driver attempted to recover the connection one or more times and all attempts failed. Increase the value of ConnectRetryCount to increase the number of recovery attempts.`
+The connection is broken and recovery is not possible. The client driver attempted to recover the connection one or more times and all attempts failed. Increase the value of *ConnectRetryCount* to increase the number of recovery attempts.`
 
    Re-running the query should get past the error and succeed.
 
-- The following SSMS functionality is not supported for Azure AD auth using Universal Authentication with MFA:
+- The following SSMS functionality is not supported for Azure AD using Universal Authentication with MFA:
   - The **New Table/View** designer shows the old-style login prompt, and does not work for Azure AD authentication.
-  - The **Edit Top 200 Rows** feature doesn't support Azure Ad authentication.
+  - The **Edit Top 200 Rows** feature doesn't support Azure AD authentication.
   - The **Registered Server** component does not support Azure AD authentication.
   - The **Database Engine Tuning Advisor** is not supported for Azure AD authentication. There is a known issue where the error message presented to the user is less than helpful: *Could not load file or assembly 'Microsoft.IdentityModel.Clients.ActiveDirectory,…* instead of the expected *Database Engine Tuning Advisor does not support Microsoft Azure SQL Database. (DTAClient)*.
 

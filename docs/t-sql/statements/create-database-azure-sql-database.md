@@ -62,20 +62,7 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 }  
 [;]  
   
-```  
-  
-```  
-To copy a database in Azure SQL Database V12:  
-CREATE DATABASE database_name  
-    AS COPY OF [source_server_name.] source_database_name  
-    [ ( SERVICE_OBJECTIVE =   
-          {  'basic' | 'S0' | 'S1' | 'S2' | 'S3'   
-            | 'P1' | 'P2' | 'P3' | 'P4'| 'P6' | 'P11' | 'P15'  
-            | 'PRS1' | 'PRS2' | 'PRS4' | 'PRS6' 
-            | { ELASTIC_POOL(name = <elastic_pool_name>) } } )  
-    ]  
-[;]  
-```  
+```
   
 ## Arguments  
  This syntax diagram demonstrates the supported arguments in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  

@@ -140,9 +140,7 @@ FROM sys.databases;
 ### B. Check the copying status in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
  The following example queries the `sys.databases` and `sys.dm_database_copies` views to return information about a database copy operation.  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
+**Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
   
 ```  
 -- Execute from the master database.  
@@ -154,9 +152,7 @@ WHERE a.state = 7;
 ### C. Check the temporal retention policy status in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
  The following example queries the `sys.databases` to return information whether temporal retention cleanup task is enabled. Be aware that after restore operation temporal retention is disabled by default. Use `ALTER DATABASE` to enable it explicitly.
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
+**Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
   
 ```  
 -- Execute from the master database.  

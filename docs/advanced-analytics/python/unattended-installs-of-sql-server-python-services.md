@@ -42,7 +42,7 @@ The following example shows the **minimum** required features to specify in the 
 1. Open an elevated command prompt, and run the following command:
 
     ```  
-    Setup.exe /q /ACTION=Install /FEATURES=SQLENGINE,ADVANCEDANALYTICS, SQL_INST_MPY /INSTANCENAME=MSSQLSERVER /SECURITYMODE=SQL /SAPWD="%password%" /SQLSYSADMINACCOUNTS="<username>" /IACCEPTSQLSERVERLICENSETERMS /IACCEPTPYTHONLICENSETERMS
+    Setup.exe /q /ACTION=Install /FEATURES=SQL,ADVANCEDANALYTICS, SQL_INST_MPY /INSTANCENAME=MSSQLSERVER /SECURITYMODE=SQL /SAPWD="%password%" /SQLSYSADMINACCOUNTS="<username>" /IACCEPTSQLSERVERLICENSETERMS /IACCEPTPYTHONLICENSETERMS
     ```
 
     > [!NOTE]
@@ -54,7 +54,7 @@ The following example shows the **minimum** required features to specify in the 
 
 ## <a name = "bkmk_PostInstall"></a>Post-installation steps
 
-1.  After installation is complete, open a new Query window in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], and run the following command to enable the feature.
+1.  After installation is complete, open a new **Query** window in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], and run the following command to enable the feature.
 
     ```SQL
     EXEC sp_configure  'external scripts enabled', 1

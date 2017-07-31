@@ -36,13 +36,13 @@ We strongly recommend that you turn on Windows Firewall (or another firewall of 
 
 For example, if you are developing an R solution on your laptop and want to perform computations on the SQL Server computer, you would create a SQL Server data source in R, by using the **rx** functions and defining a connection string based on your Windows credentials.
 
-When you change the _compute context_ from your laptop to the SQL Server computer, if your Windows account has the necessary permissions, all R code will be executed on the SQL Server computer. Moreover, any SQL queries executed as part of the R code will be run under your credentials as well.
+When you change the _compute context_ from your laptop to the SQL Server computer, if your Windows account has the necessary permissions, all R code is executed on the SQL Server computer. Moreover, any SQL queries executed as part of the R code are run under your credentials as well.
 
 The use of SQL logins is also supported in this scenario, which requires that the SQL Server instance be configured to allow mixed mode authentication.
 
 ### Implied authentication
 
- In general the [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] starts the external script runtime and executes scripts under its own account. However, if the external runtime makes an ODBC call, the [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] will impersonate the credentials of the user that sent the command to ensure that the ODBC call does not fail. This is called *implied authentication*.
+ In general, the [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] starts the external script runtime and executes scripts under its own account. However, if the external runtime makes an ODBC call, the [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] impersonates the credentials of the user that sent the command to ensure that the ODBC call does not fail. This is called *implied authentication*.
  
  > [!IMPORTANT]
  >
@@ -52,7 +52,7 @@ The use of SQL logins is also supported in this scenario, which requires that th
 
 ## No support for encryption at rest
 
-Transparent Data Encryption is not supported for data sent to or received from the external script runtime. As a consequence, encryption at rest **will not** be applied to any data that you use in R or Python scripts, any data saved to disk, or any persisted intermediate results.
+Transparent Data Encryption is not supported for data sent to or received from the external script runtime. As a consequence, encryption at rest **is not** be applied to any data that you use in R or Python scripts, any data saved to disk, or any persisted intermediate results.
 
 ## Resources
 

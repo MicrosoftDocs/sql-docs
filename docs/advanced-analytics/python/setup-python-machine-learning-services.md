@@ -274,7 +274,7 @@ However, you can upgrade the machine learning components on a faster schedule th
 + Updates to Python packages for [revoscalepy](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package) and [microsoftml for Python](https://docs.microsoft.com/r-server/python-reference/microsoftml/microsoftml-package)
 + [Pretrained models](https://docs.microsoft.com/r-server/install/microsoftml-install-pretrained-models) for image classification and text analysis
 
-For information about how to upgrade an instance, see [Upgrade R components through binding](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
+For information about how to upgrade an instance, see [Upgrade R components through binding](..\r\use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
 
 > [!NOTE]
 > 

@@ -6,7 +6,7 @@ description: Install, update, and uninstall SQL Server on Linux. This topic cove
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 07/24/2017
+ms.date: 08/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -26,7 +26,7 @@ ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ---
 # Installation guidance for SQL Server on Linux
 
-This topic explains how to install, update, and uninstall SQL Server 2017 on Linux. SQL Server 2017 RC1 is supported on Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES), and Ubuntu. It is also available as a Docker image, which can run on Docker Engine on Linux or Docker for Windows/Mac.
+This topic explains how to install, update, and uninstall SQL Server 2017 on Linux. SQL Server 2017 RC2 is supported on Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES), and Ubuntu. It is also available as a Docker image, which can run on Docker Engine on Linux or Docker for Windows/Mac.
 
 > [!TIP]
 > To get started quickly, jump to one of the quick start tutorials for [RHEL](quickstart-install-connect-red-hat.md), [SLES](quickstart-install-connect-suse.md), [Ubuntu](quickstart-install-connect-ubuntu.md), or [Docker](quickstart-install-connect-docker.md).
@@ -54,6 +54,13 @@ SQL Server 2017 has the following system requirements for Linux:
 | **Processor speed** | 2 GHz |
 | **Processor cores** | 2 cores |
 | **Processor type** | x64-compatible only |
+
+> [!NOTE]
+> If you use **Network File System (NFS)** remote shares in production, note the following support requirements:
+>
+> - Use NFS version **4.2 or higher**. Older versions of NFS do not support required features, such as fallocate and sparse file creation, common to modern file systems.
+> - Locate only the **/var/opt/mssql** directories on the NFS mount. Other files, such as the SQL Server system binaries, are not supported.
+> - Ensure that NFS clients use the 'nolock' option when mounting the remote share.
 
 > [!NOTE]
 > SQL Server Engine has been tested up to 1 TB of memory at this time.
@@ -102,10 +109,10 @@ You can perform an unattended installation in the following way:
 - Follow the initial steps in the [quick start tutorials](#platforms) to register the repositories and install SQL Server.
 - When you run `mssql-conf setup`, set [environment variables](sql-server-linux-configure-environment-variables.md) and use the `-n` (no prompt) option.
 
-The following example configures the Developer edition of SQL Server with the **MSSQL_PID** environment variable. It also sets the SA user password with the **MSSQL_SA_PASSWORD** environment variable. The `-n` parameter pulls in these values for a simple unattended install:
+The following example configures the Developer edition of SQL Server with the **MSSQL_PID** environment variable. It also accepts the EULA (**ACCEPT_EULA**) and sets the SA user password (**MSSQL_SA_PASSWORD**). The `-n` parameter performs an unprompted installation where the configuration values are pulled from the environment variables.
 
 ```bash
-sudo MSSQL_PID=Developer MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>' /opt/mssql/bin/mssql-conf -n setup
+sudo MSSQL_PID=Developer ACCEPT_EULA=Y MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>' /opt/mssql/bin/mssql-conf -n setup
 ```
 
 You can also create a script that performs other actions. For example, you could install other SQL Server packages.

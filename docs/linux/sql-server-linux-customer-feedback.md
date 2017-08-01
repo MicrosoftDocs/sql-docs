@@ -44,7 +44,7 @@ This option lets you change if SQL Server sends feedback to Microsoft or not. By
    sudo systemctl restart mssql-server
    ```
 ### On Docker
-To disable Customer Feedback on docker you must have Docker [persist your data](sql-server-linux-configure-docker). 
+To disable Customer Feedback on docker you must have Docker [persist your data](sql-server-linux-configure-docker.md). 
 
 1. Add an `mssql.conf` file with the lines `[telemetry]` and `customerfeedback = false` in the host directory:
  
@@ -98,7 +98,7 @@ This option enables Local Audit and lets you set the directory where the Local A
    sudo systemctl restart mssql-server
    ```
 ### On Docker
-To enable Local Audit on docker you must have Docker [persist your data](sql-server-linux-configure-docker). 
+To enable Local Audit on docker you must have Docker [persist your data](sql-server-linux-configure-docker.md). 
 
 1. The target directory for new Local Audit logs will be in the container. Create a target directory for new Local Audit logs in the host directory on your machine. The following example creates a new **/audit** directory:
 

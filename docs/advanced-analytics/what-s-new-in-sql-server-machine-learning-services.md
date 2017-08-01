@@ -44,13 +44,13 @@ But running Python in-database isn't just for machine learning; there are a myri
 
 + **revoscalepy**
 
-    This release includes the final version of **revoscalepy**, which supplies Pythonic equivalents of the scalable, streaming algorithms in RevoScaleR. You can create Python models for linear and logistic regressions, decision trees, boosted trees, and random forests, all parallelizable and capable of being run in remote compute contexts.
+    This release includes the final version of **revoscalepy**, which supplies Pythonic equivalents of the scalable, streaming algorithms in RevoScaleR. You can create Python models for linear and logistic regressions, decision trees, boosted trees, and random forests, all parallelizable, and capable of being run in remote compute contexts.
 
     For more information, see [What is revoscalepy](python/what-is-revoscalepy.md).
 
 + Remote compute contexts for Python
 
-    This release supports use of multiple data sources and remote compute contexts. The data scientist or developer can execute Python code on a remote SQL Server, to explore data and build models without moving data around. Use of remote compute contexts requires **revoscalepy**.
+    This release supports use of multiple data sources and remote compute contexts. The data scientist or developer can execute Python code on a remote SQL Server, to explore data or build models without moving data. Use of remote compute contexts requires **revoscalepy**.
 
 + Python support in Microsoft Machine Learning Server (Standalone)
 

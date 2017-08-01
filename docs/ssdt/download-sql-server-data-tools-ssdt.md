@@ -1,7 +1,7 @@
 ---
 title: "Download SQL Server Data Tools (SSDT) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/28/2017"
+ms.date: "08/01/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -34,10 +34,11 @@ The build number for this release: **TBD**
   
 **What's New**
 
-- In AS projects, Object Level Security can now be configured in the Roles dialog for advanced security in 1400 compatability level tabular models.
+**AS**
+
+- Object Level Security can now be configured in the Roles dialog for advanced security in 1400 compatability level tabular models.
 - New AAD role member selection for users without email addresses in AS Azure models in SSDT AS projects for VS2017.
 - New AS Azure "Always Prompt" project property in SSDT AS tabular projects to customize behavior of ADAL credential caching.
-
 
 
 **Known Issues**

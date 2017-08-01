@@ -1,7 +1,7 @@
 ---
 title: "Changelog for SQL Server Data Tools (SSDT) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/28/2017"
+ms.date: "08/01/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -26,8 +26,6 @@ For detailed posts about what's new and changed, see [the SSDT Team blog](https:
 Build number: **TBD**
 
 ### What's New?
-
-**General**
 
 
 **AS projects:**
@@ -73,7 +71,7 @@ Build number: **TBD**
 
 ## DacFx 17.2
 
-- Support for Universal Authentication and MFA. For details, see [IUniversalAuthProvider Interface](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.iuniversalauthprovider.aspx) and [Configure and manage Azure Active Directory authentication with SQL Database or SQL Data Warehouse](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure).
+- Universal Authentication and MFA. For details, see [IUniversalAuthProvider Interface](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.iuniversalauthprovider.aspx) and [Configure and manage Azure Active Directory authentication with SQL Database or SQL Data Warehouse](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure).
 
 ## SSDT 17.1
 Build number: 14.0.61705.170

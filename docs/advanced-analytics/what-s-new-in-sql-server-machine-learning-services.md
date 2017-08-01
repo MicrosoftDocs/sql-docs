@@ -30,7 +30,7 @@ Microsoft Machine Learning Server in SQL Server now provides comprehensive suppo
 
 > [!IMPORTANT]
 > 
-> Machine learning services, including use of R or Python, are currently not supported when running SQL Server on Linux, or in Azure SQL database. Look for changes in a later release. 
+> Machine learning services, including use of R or Python, are currently not supported when running SQL Server on Linux, or in Azure SQL database. Look for changes in a later release.
 > 
 > However, native scoring using the PREDICT function is currently supported in the Linux edition. 
  
@@ -89,7 +89,7 @@ Realtime scoring relies on native C++ libraries to read a model stored in an opt
 Additionally, this release of SQL Server 2017 includes a native T-SQL function for fast scoring that can be run on any edition of SQL Server, even on Linux. The function requires no installation of R or extra configuration. This means you can train a model elsewhere, save it in SQL Server, and then perform scoring without ever calling R. This feature is referred to as _native scoring_.
 
   - Native scoring is available only in SQL Server 2017. It uses a T-SQL function that can run in any edition of SQL Server, including Linux.
- - Realtime scoring is supported in SQL Server 2017, and in Microsoft Machine Learning Server. You can runa stored procedure or perform realtime scoring from R code.
+ - Realtime scoring is supported in SQL Server 2017, and in Microsoft Machine Learning Server. You can runa  stored procedure or perform realtime scoring from R code.
  - Realtime scoring is also available for SQL Server 2016, if the instance is upgraded to the latest release of Microsoft R Server.
 
 For more information, see these articles:

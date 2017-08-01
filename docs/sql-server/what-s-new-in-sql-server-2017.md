@@ -1,7 +1,7 @@
 ---
 title: "What's new in SQL Server 2017 | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/25/2017"
+ms.date: "07/31/2017"
 ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
@@ -113,9 +113,17 @@ As of CTP 2.1, SSRS is no longer available to install through SQL Server setup. 
 For more information, see [What's new in SQL Server Reporting Services (SSRS)](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md).
 
 ## SQL Server Machine Learning Services
-SQL Server R Services is now renamed **SQL Server Machine Learning Services**, to reflect new support for Python in addition to R languages. You can use Machine Learning Services (In-Database) to run R or Python scripts in SQL Server, or install Microsoft Machine Learning Server (Standalone) to deploy and consume R and Python models that don't require SQL Server. Both platforms include new MicrosoftML algorithms for distributed machine learning, and the latest version of Microsoft R (version 9.1.0). (CTP 2.0)
-- Machine learning with Python includes the **revoscalepy** module, which supports a subset of the distributed algorithms and compute contexts provided in RevoScaleR. 
-- You can easily create multiple models in parallel from R by using the new **rxExecBy** function. Supported compute contexts include RxSpark and RxInSQLServer. (CTP 2.0)
+SQL Server R Services has been renamed **SQL Server Machine Learning Services**, to reflect support for Python in addition to the R language. You can use Machine Learning Services (In-Database) to run R or Python scripts in SQL Server. Or install **Microsoft Machine Learning Server (Standalone)** to deploy and consume R and Python models that don't require SQL Server. 
+
+SQL Server developers now have access to the extensive Python ML and AI libraries available in the open source ecosystem along with the latest innovations from Microsoft: 
+
++ **revoscalepy** - This Pythonic version of RevoScaleR includes parallel algorithms for linear and logistic regressions, decision tree, boosted trees and random forests, as well as a rich set of APIs for data transformation and data movement, remote compute contexts, and data sources.
+
++ **microsoftml** - This state-of-the-art package of machine learning algorithms and transforms with Python bindings includes deep neural networks, fast decision trees and decision forests, highlyand  optimized algorithms for linear and logistic regressions. You also get pre-trained models based on ResNet models that you can use for image extraction or sentiment analysis.
+
++ **Python operationalization with T-SQL** - Deploy Python code easily by using the stored procedure `sp_execute_external_script`. Get great performance by streaming data from SQL to Python processes and using MPI ring parallelization.
+
++ **Python in SQL Server compute contexts** - Data scientists and developers can execute Python code remotely from their development environments to explore data and develop models without moving data around.
 
 For more information, see [What's new in SQL Server Machine Learning Services](~/advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md).
 

@@ -122,7 +122,7 @@ While inserting into an edge table, users must provide values for `$from_id` and
 
 BULK insert for node table is remains same as that of a relational table.
 
-Before bulk inserting into an edge table, the node tables must be imported. Values for `$from_id` and `$to_id` can then be extracted and inserted edges. 
+Before bulk inserting into an edge table, the node tables must be imported. Values for `$from_id` and `$to_id` can then be extracted from the `$node_id` column of the node table and inserted as edges. 
 
   
 ### Permissions  

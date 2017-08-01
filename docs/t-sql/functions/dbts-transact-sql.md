@@ -1,7 +1,7 @@
 ---
 title: "@@DBTS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/13/2017"
+ms.date: "07/30/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -26,38 +26,37 @@ manager: "jhubbard"
 # @@DBTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Returns the value of the current **timestamp** data type for the current database. This timestamp is guaranteed to be unique in the database.  
+Returns the value of the current **timestamp** data type for the current database. This timestamp is guaranteed to be unique in the database.
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## Syntax  
   
-```  
-  
+```sql
 @@DBTS  
 ```  
   
-## Return Types  
- **varbinary**  
+## Return types
+**varbinary**
   
 ## Remarks  
- @@DBTS returns the last-used timestamp value of the current database. A new timestamp value is generated when a row with a **timestamp** column is inserted or updated.  
+@@DBTS returns the last-used timestamp value of the current database. A new timestamp value is generated when a row with a **timestamp** column is inserted or updated.
   
- The @@DBTS function is not affected by changes in the transaction isolation levels.  
+The @@DBTS function is not affected by changes in the transaction isolation levels.
   
 ## Examples  
- The following example returns the current **timestamp** from the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
+The following example returns the current **timestamp** from the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT @@DBTS;  
 ```  
   
-## See Also  
- [Configuration Functions &#40;Transact-SQL&#41;](../../t-sql/functions/configuration-functions-transact-sql.md)   
- [Cursor Concurrency &#40;ODBC&#41;](../../relational-databases/native-client-odbc-cursors/properties/cursor-concurrency-odbc.md)   
- [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [MIN_ACTIVE_ROWVERSION &#40;Transact-SQL&#41;](../../t-sql/functions/min-active-rowversion-transact-sql.md)  
+## See also
+[Configuration Functions &#40;Transact-SQL&#41;](../../t-sql/functions/configuration-functions-transact-sql.md)  
+[Cursor Concurrency &#40;ODBC&#41;](../../relational-databases/native-client-odbc-cursors/properties/cursor-concurrency-odbc.md)  
+[Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
+[MIN_ACTIVE_ROWVERSION &#40;Transact-SQL&#41;](../../t-sql/functions/min-active-rowversion-transact-sql.md)
   
   

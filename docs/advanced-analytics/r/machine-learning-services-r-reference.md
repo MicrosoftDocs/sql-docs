@@ -1,7 +1,7 @@
 ---
 title: "API reference for SQL Server Machine Learning Services | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/2/2017"
+ms.date: "07/31/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -16,9 +16,14 @@ manager: "jhubbard"
 
 # API reference for SQL Server Machine Learning Services
 
-This article provides links to the reference documentation for APIs used by SQL Server R Services and SQL Server Machine Learning Services.
+This article provides links to the reference documentation for machine learning APIs used by SQL Server. 
 
-For the most part, SQL Server consumes the same R and Python libraries that are provided in Microsoft R Server and Microsoft Machine Learning Server. Documentation for all APIs is derived from source code and is not post-edited. 
+**Applies to:** SQL Server 2016 R Services, SQL Server 2017 Machine Learning Services
+
+For the most part, SQL Server consumes the same R and Python libraries that are provided in Microsoft R Server and Microsoft Machine Learning Server. 
+
+> [!NOTE]
+> Documentation for all APIs is derived from source code and is not post-edited.
 
 ## R
 

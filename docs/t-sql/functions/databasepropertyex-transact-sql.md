@@ -1,7 +1,7 @@
 ---
 title: "DATABASEPROPERTYEX (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/12/2016"
+ms.date: "07/29/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -27,32 +27,31 @@ manager: "jhubbard"
 # DATABASEPROPERTYEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Returns the current setting of the specified database option or property for the specified database in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+Returns the current setting of the specified database option or property for the specified database in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## Syntax  
   
-```  
+```sql
 -- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
   
 DATABASEPROPERTYEX ( database , property )  
 ```  
   
 ## Arguments  
- *database*  
- Is an expression that represents the name of the database for which to return the named property information. *database* is **nvarchar(128)**.  
+*database*  
+Is an expression that represents the name of the database for which to return the named property information. *database* is **nvarchar(128)**.  
+For [!INCLUDE[ssSDS](../../includes/sssds-md.md)], must be the name of the current database. Returns NULL for all properties if a different database name is provided.
   
- For [!INCLUDE[ssSDS](../../includes/sssds-md.md)], must be the name of the current database. Returns NULL for all properties if a different database name is provided.  
-  
- *property*  
- Is an expression that represents the name of the database property to return. *property* is **varchar(128)**, and can be one of the following values. The return type is **sql_variant**. The following table shows the base data type for each property value.  
+*property*  
+Is an expression that represents the name of the database property to return. *property* is **varchar(128)**, and can be one of the following values. The return type is **sql_variant**. The following table shows the base data type for each property value.
   
 > [!NOTE]  
 >  If the database is not started, properties that the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retrieves by accessing the database directly instead of retrieving the value from metadata will return NULL. That is, if the database has AUTO_CLOSE set to ON, or the database is otherwise offline.  
   
 |Property|Description|Value returned|  
-|--------------|-----------------|--------------------|  
+|---|---|---|
 |Collation|Default collation name for the database.|Collation name<br /><br /> NULL = Database is not started.<br /><br /> Base data type: **nvarchar(128)**|  
 |ComparisonStyle|The Windows comparison style of the collation. ComparisonStyle is a bitmap that is calculated by using the following values for the possible styles.<br /><br /> Ignore case : 1<br /><br /> Ignore accent : 2<br /><br /> Ignore Kana : 65536<br /><br /> Ignore width : 131072<br /><br /> <br /><br /> For example, the default of 196609 is the result of combining the Ignore case, Ignore Kana, and Ignore width options.|Returns the comparison style.<br /><br /> Returns 0 for all binary collations.<br /><br /> Base data type: **int**|  
 |Edition|The database edition or service tier.|**Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].<br /><br /> <br /><br /> Web = Web Edition Database<br /><br /> Business = Business Edition Database<br /><br /> Basic<br /><br /> Standard<br /><br /> Premium<br /><br /> System (for master database)<br /><br /> NULL = Database is not started.<br /><br /> Base data type: **nvarchar**(64)|  
@@ -94,37 +93,37 @@ DATABASEPROPERTYEX ( database , property )
 |UserAccess|Indicates which users can access the database.|SINGLE_USER = Only one db_owner, dbcreator, or sysadmin user at a time<br /><br /> RESTRICTED_USER = Only members of db_owner, dbcreator, and sysadmin roles<br /><br /> MULTI_USER = All users<br /><br /> Base data type: **nvarchar(128)**|  
 |Version|Internal version number of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] code with which the database was created. [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|Version number = Database is open.<br /><br /> NULL = Database is not started.<br /><br /> Base data type: **int**|  
   
-## Return Types  
- **sql_variant**  
+## Return types
+**sql_variant**
   
 ## Exceptions  
- Returns NULL on error or if a caller does not have permission to view the object.  
+Returns NULL on error or if a caller does not have permission to view the object.
   
- In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a user can only view the metadata of securables that the user owns or on which the user has been granted permission. This means that metadata-emitting, built-in functions such as OBJECT_ID may return NULL if the user does not have any permission on the object. For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a user can only view the metadata of securables that the user owns or on which the user has been granted permission. This means that metadata-emitting, built-in functions such as OBJECT_ID may return NULL if the user does not have any permission on the object. For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).
   
 ## Remarks  
- DATABASEPROPERTYEX returns only one property setting at a time. To display multiple property settings, use the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view.  
+DATABASEPROPERTYEX returns only one property setting at a time. To display multiple property settings, use the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view.
   
 ## Examples  
   
 ### A. Retrieving the status of the AUTO_SHRINK database option  
- The following example returns the status of the AUTO_SHRINK database option for the `AdventureWorks` database.  
+The following example returns the status of the AUTO_SHRINK database option for the `AdventureWorks` database.
   
-```  
+```sql
 SELECT DATABASEPROPERTYEX('AdventureWorks2014', 'IsAutoShrink');  
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)] This indicates that AUTO_SHRINK is off.  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)] This indicates that AUTO_SHRINK is off.
   
-```  
+```sql
 ------------------  
 0  
 ```  
   
 ### B. Retrieving the default collation for a database  
- The following example returns several attributes of the `AdventureWorks` database.  
+The following example returns several attributes of the `AdventureWorks` database.
   
-```  
+```sql
 SELECT   
     DATABASEPROPERTYEX('AdventureWorks2014', 'Collation') AS Collation,  
     DATABASEPROPERTYEX('AdventureWorks2014', 'Edition') AS Edition,  
@@ -132,19 +131,19 @@ SELECT
     DATABASEPROPERTYEX('AdventureWorks2014', 'MaxSizeInBytes') AS MaxSizeInBytes  
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```  
+```sql
 Collation                     Edition        ServiceObjective  MaxSizeInBytes  
 ----------------------------  -------------  ----------------  --------------  
 SQL_Latin1_General_CP1_CI_AS  DataWarehouse  DW1000            5368709120  
 ```  
   
-## See Also  
- [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [Database States](../../relational-databases/databases/database-states.md)   
- [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
- [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
- [SERVERPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/serverproperty-transact-sql.md)  
+## See also
+[ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)  
+[Database States](../../relational-databases/databases/database-states.md)  
+[sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)  
+[sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)  
+[SERVERPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/serverproperty-transact-sql.md)
   
   

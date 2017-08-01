@@ -26,15 +26,15 @@ This topic describes how to use the command-line arguments in SQL Server 2017 se
 
 Before beginning the installation process, note these requirements:
 
-+ The Python service cannot be installed independently of the SQL Server 2017 database engine. You must include the **SQL** feature.
-+ If you are performing an offline install, you must download the required Python components in advance, and copy them to a local folder. For download locations, see [Installing Machine Learning Components without Internet Access](../../advanced-analytics/r-services/installing-ml-components-without-internet-access.md).
++ The Python service cannot be installed independently of the SQL Server 2017 database engine. You must include the SQL database engine feature.
++ If you are performing an offline installation, you must download the required Python components in advance, and copy them to a local folder. For download locations, see [Installing Machine Learning Components without Internet Access](../../advanced-analytics/r-services/installing-ml-components-without-internet-access.md).
 + There is a new parameter, */IACCEPTPYTHONLICENSETERMS*, that indicates you have accepted the license terms for using the Python components provided by Continuum Analytics. If you do not include this parameter in your command line, setup will fail.
 + To complete setup without having to respond to prompts, make sure that you have identified all required arguments, including those for Python and SQL Server licensing, and for any other features that you might want to install.
 +  Mixed Mode authentication was required in some pre-release versions of SQL Server 2016. It is no longer required, though it might be useful in scenarios where data scientists are developing and testing solutions remotely using SQL logins.
 
-## Perform an unattended install of Python Machine Learning Services (In-Database)
+## Perform an unattended installation of Python Machine Learning Services (In-Database)
 
-The following example shows the **minimum** required features to specify in the command line when performing a silent, unattended install of Python with the database engine on the default instance.
+The following example shows the **minimum** required features to specify in the command line when performing a silent, unattended installation of Python and the database engine on the default instance.
 
 > [!NOTE]
 > This feature requires SQL Server 2017. Python is not supported in earlier versions of SQL Server.
@@ -59,9 +59,9 @@ The following example shows the **minimum** required features to specify in the 
     ```SQL
     EXEC sp_configure  'external scripts enabled', 1
     RECONFIGURE WITH OVERRIDE
-    ```  
+    ```
   
-    > [!NOTE]  
+    > [!NOTE]
     >  You must explicitly enable the feature and reconfigure; otherwise, it will not be possible to invoke external scripts even if the feature has been installed.
   
 3.  Restart the SQL Server service for the reconfigured instance. Doing so will automatically restart the related [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] service as well.

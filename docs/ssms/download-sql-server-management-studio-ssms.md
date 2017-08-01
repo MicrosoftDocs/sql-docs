@@ -84,10 +84,10 @@ Version 17.2 includes:
 - Enabled View designer for Azure SQL Databases
 - The default scripting options for scripting objects from Object Explorer in SSMS have changed:
   - Previously, the default on a new install was to have the generated script target the latest version of SQL Server (currently SQL Server 2017).
-	- In SSMS 17.2 a new option has been added - *Match Script Settings to Source*. When set to *True*, the generated script targets the same version, engine type, and engine edition as the server the object being scripted is from.
-	- The *Match Script Settings to Source* value is set to *True* by default, so new installs of SSMS will automatically default to always scripting objects to the same target as the original server.
-	- When the *Match Script Settings to Source* value is set to *False*, the normal scripting target options will be enabled and function as they did previously.
-	- Additionally, all the scripting options have been moved to their own section - *Version Options*. They are no longer under *General Scripting Options*.
+  - In SSMS 17.2 a new option has been added: *Match Script Settings to Source*. When set to *True*, the generated script targets the same version, engine type, and engine edition as the server the object being scripted is from.
+  - The *Match Script Settings to Source* value is set to *True* by default, so new installs of SSMS will automatically default to always scripting objects to the same target as the original server.
+  - When the *Match Script Settings to Source* value is set to *False*, the normal scripting target options will be enabled and function as they did previously.
+  - Additionally, all the scripting options have been moved to their own section - *Version Options*. They are no longer under *General Scripting Options*.
 
 - Added support for National Clouds in "Restore from URL"
 - QueryStoreUI reports now supports additional metrics (RowCount, DOP, CLR Time etc.) from sys.query_store_runtime_stats.
@@ -117,13 +117,12 @@ This release of SSMS supports the following 64-bit platforms when used with the 
 - Windows 8.1 (64-bit)
 - Windows 8 (64-bit)
 - Windows 7 (SP1) (64-bit)
-- Windows Server 2016
+- Windows Server 2016 *
 - Windows Server 2012 R2 (64-bit)
 - Windows Server 2012 (64-bit)
 - Windows Server 2008 R2 (64-bit)
 
-> [!NOTE]
-> SSMS 17.X is based on the Visual Studio 2015 Isolated shell, which was released before Windows Server 2016. Microsoft takes app compatibility seriously and ensures that already-shipped applications continue to run on the latest Windows releases. To minimize issues running SSMS on Windows Server 2016, ensure SSMS has all of the latest updates applied. If you experience any issues with SSMS on Windows Server 2016, contact support. The support team determines if the issue is with SSMS, Visual Studio, or with Windows compatibility. The support team then routes the issue to the appropriate team for further investigation.
+\* SSMS 17.X is based on the Visual Studio 2015 Isolated shell, which was released before Windows Server 2016. Microsoft takes app compatibility seriously and ensures that already-shipped applications continue to run on the latest Windows releases. To minimize issues running SSMS on Windows Server 2016, ensure SSMS has all of the latest updates applied. If you experience any issues with SSMS on Windows Server 2016, contact support. The support team determines if the issue is with SSMS, Visual Studio, or with Windows compatibility. The support team then routes the issue to the appropriate team for further investigation.
 
 ## SSMS installation tips and issues
 

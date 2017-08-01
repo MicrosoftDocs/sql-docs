@@ -111,19 +111,19 @@ For information about user data collection, see [SQL Server Privacy Statement](h
 * Additionally, SSMS 17.x can be installed side by side with SSMS 16.x or SQL Server 2014 SSMS and earlier.
 
 ## Supported Operating systems
+  
+This release of SSMS supports the following 64-bit platforms when used with the latest available service pack:
+- Windows 10 (64-bit)
+- Windows 8.1 (64-bit)
+- Windows 8 (64-bit)
+- Windows 7 (SP1) (64-bit)
+- Windows Server 2016
+- Windows Server 2012 R2 (64-bit)
+- Windows Server 2012 (64-bit)
+- Windows Server 2008 R2 (64-bit)
 
-This release of SSMS supports the following platforms when used with the latest available service pack:
-
-* Windows 10
-* Windows 8.1
-* Windows 8
-* Windows 7 (SP1)
-* Windows Server 2016*
-* Windows Server 2012 (64-bit)
-* Windows Server 2012 R2 (64-bit)
-* Windows Server 2008 R2 (64-bit)
-
-*SSMS 17.x is based on the Visual Studio 2015 Isolated shell, which was released before Windows Server 2016. Microsoft takes app compatibility seriously and ensures that already-shipped applications continue to run on the latest Windows releases. To minimize issues running SSMS on Windows Server 2016, ensure SSMS has all of the latest updates applied. If you experience any issues with SSMS on Windows Server 2016, contact support. The support team determines if the issue is with SSMS, Visual Studio, or with Windows compatibility. The support team then routes the issue to the appropriate team for further investigation.
+> [!NOTE]
+> SSMS 17.X is based on the Visual Studio 2015 Isolated shell, which was released before Windows Server 2016. Microsoft takes app compatibility seriously and ensures that already-shipped applications continue to run on the latest Windows releases. To minimize issues running SSMS on Windows Server 2016, ensure SSMS has all of the latest updates applied. If you experience any issues with SSMS on Windows Server 2016, contact support. The support team determines if the issue is with SSMS, Visual Studio, or with Windows compatibility. The support team then routes the issue to the appropriate team for further investigation.
 
 ## SSMS installation tips and issues
 

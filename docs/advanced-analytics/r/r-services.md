@@ -2,7 +2,7 @@
 title: "Microsoft Machine Learning Services | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "06/29/2017"
+ms.date: "07/31/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -20,14 +20,15 @@ manager: "jhubbard"
 
 The goal of Microsoft Machine Learning Services is to provide an extensible, scalable platform for integrating machine learning tasks and tools with the applications that consume machine learning services. The platform must serve the needs of all users involved in the data development and analytics process, from data scientists, to architects and database administrators.
 
-Key concepts include:
+Key benefits include:
 
-+ High-performance scalable analytics. Write-once, deploy-anywhere solutions
-+ Avoid data movement and data risk: bring analytics to the data
-+ Let data scientists choose their own tools and languages
-+ Integrate the best features of open source with Microsoft's enterprise capabilities
-+ Simplify administration
-+ Make it easier to deploy and consume predictive models
++ Scalable analytics
++ Multiple platforms and compute contexts, for "write once, deploy anywhere" solutions
++ Avoids data movement and data risk by bringing analytics to the data
++ Data scientists can choose their own tools and languages
++ Integrates the best features of open source with Microsoft's enterprise capabilities
++ Simplified administration
++ Easy to deploy and consume predictive models
 
 ## In-database analytics with SQL Server
 
@@ -36,15 +37,14 @@ In SQL Server 2016, Microsoft launched two server platforms for integrating the 
 + **SQL Server R Services (In-Database)**, for integration with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 + **Microsoft R Server**, for enterprise-level R deployments on Windows and Linux servers
 
-In SQL Server 2017 CTP 2.0, the name has been changed to reflect support for the popular Python language.
+In SQL Server 2017, the name has been changed to reflect support for the popular Python language.
 
-+ **SQL Server Machine Learning Services (In-Database)** supports both R and Python.
-version-md.md)]
++ **SQL Server Machine Learning Services (In-Database)** supports both R and Python for in-database analytics.
 + **Microsoft Machine Learning Server** supports R and Python deployments on Windows servers, with expansion to other supported platforms planned for late 2017.
 
 ### Benefits
 
-[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] brings the compute to the data by allowing R to run on the same computer as the database. It includes the Launchpad service, which runs outside the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] process and communicates securely with the R or Python runtimes.
+Microsoft Machine Learning Services brings the compute to the data by allowing R to run on the same computer as the database. It includes the Trusted Launchpad service, which runs outside the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] process and communicates securely with the R or Python runtime.
 
 Using SQL Server Machine Learning Services, you can train models, generate plots, perform scoring, and easily move data between [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and R or Python.
 
@@ -61,19 +61,17 @@ To get started, see these resources:
 + [Machine Learning Tutorials](../tutorials/machine-learning-services-tutorials.md)
 
 > [!NOTE]
-> Support for Python is provided only in SQL Server 2017. This is a new feature and still under development.
+> Support for Python is provided only in SQL Server 2017. 
 
-## Microsoft R Server and Machine Learning Server (Standalone)
+## Machine Learning Server (Standalone) and Microsoft R Server (Standalone)
 
-This standalone server system supports distributed, scalable R solutions on multiple platforms and using multiple enterprise data sources, including Linux, Hadoop, and Teradata.
-
-For more information, see [Microsoft R Server](https://docs.microsoft.com/r-server/index).
-
-If you don't need to integrate with SQL Server, you can install R Server to enable rapid development, deployment, and operationalization of machine learning solutions. You can also use the R Server installers to upgrade the R components associated with a SQL Server instance and obtain the latest version of R.
+This standalone server system supports distributed, scalable R solutions on multiple platforms and using multiple enterprise data sources, such as Linux and HD Insight. If you don't need to integrate with SQL Server, you can install R Server to enable rapid development, deployment, and operationalization of machine learning solutions. You can also use the R Server installers to upgrade the R components associated with a SQL Server instance and obtain the latest version of R.
 
 If you install Microsoft Machine Learning Server using SQL Server 2017 setup, you can also deploy and consume Python applications.
 
-## Related Technologies
+For more information, see [Microsoft R Server](https://docs.microsoft.com/r-server/index).
+
+## Related technologies
 
 Microsoft provides broad support for machine learning ecosystems, including tools, providers, enhanced R and Python packages, a cloud development and services platform, and an integrated development environment.
 
@@ -108,16 +106,18 @@ You can deploy a pre-installed and pre-configured version of [!INCLUDE[rsql_plat
 The Azure Marketplace contains several virtual machines that support data science:
 
 + The **Microsoft Data Science Virtual Machine** is configured with Microsoft R Server, as well as Python (Anaconda distribution), a Jupyter notebook server, Visual Studio Community Edition, Power BI Desktop, the Azure SDK, and SQL Server Express edition.
-+ **Microsoft R Server 2016 for Linux** contains the latest version of R Server (version 9.0.1). Separate VMs are available for CentOS version 7.2 and  Ubuntu version 16.04.
+
++ **Microsoft R Server 2016 for Linux** contains the latest version of R Server (version 9.0.1). Separate VMs are available for CentOS version 7.2 and Ubuntu version 16.04.
+
 + The **R Server Only SQL Server 2016 Enterprise** virtual machine includes a standalone installer for R Server 9.0.1 that supports the new Modern Software Lifecycle licensing model.
 
 > [!TIP]
-> The new [Data Science VM for Windows Server 2016](http://aka.ms/dsvm/win2016) provides GPU versions of popular deep learning frameworks such as CNTK. Tools are pre-installed, and include the GPU NVIDIA drivers, CUDA Toolkit 8.0, and the NVIDIA cuDNN library for GPU workloads. In just minutes, you can have a complete environment for building deep learning models that can run on either CPU or CPU plus GPU.
+> The new [Data Science VM for Windows Server 2016](http://aka.ms/dsvm/win2016) provides GPU versions of popular deep learning frameworks such as CNTK. Pre-installed tools include the GPU NVIDIA drivers, CUDA Toolkit 8.0, and the NVIDIA cuDNN library for GPU workloads. In just minutes, you can have a complete environment for building deep learning models that can run on either CPU or CPU plus GPU.
 
-## See Also
+## Next steps
 
-[Getting Started with SQL Server R Services](getting-started-with-sql-server-r-services.md)
+[Getting started with Machine Learning Services](getting-started-with-sql-server-r-services.md)
 
-[Getting started with Microsoft R Server](getting-started-with-microsoft-r-server-standalone.md)
+[Getting started with Machiine Learning Server](getting-started-with-microsoft-r-server-standalone.md)
 
-[Install SQL Server Database Engine](../../database-engine/install-windows/install-sql-server-database-engine.md)
+[Install the SQL Server database engine](../../database-engine/install-windows/install-sql-server-database-engine.md)

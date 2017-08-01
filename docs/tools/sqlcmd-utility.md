@@ -1,7 +1,7 @@
 ---
 title: "sqlcmd Utility | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/10/2017"
+ms.date: "07/27/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -34,13 +34,13 @@ manager: "jhubbard"
 # sqlcmd Utility
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-_md](../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
 
- > For content related to previous versions of SQL Server, see [sqlcmd Utility](https://msdn.microsoft.com/en-US/library/ms162773(SQL.120).aspx).
+ > For SQL Server 2014 and lower, see [sqlcmd Utility](https://msdn.microsoft.com/en-US/library/ms162773(SQL.120).aspx).
 
 
   The **sqlcmd** utility lets you enter Transact-SQL statements, system procedures, and script files at the command prompt, in **Query Editor** in SQLCMD mode, in a Windows script file or in an operating system (Cmd.exe) job step of a  SQL Server  Agent job. This utility uses ODBC to execute Transact-SQL batches. 
   
 > [!NOTE]
-> The most recent versions of the sqlcmd utility is available as a web release from the [Download Center](http://go.microsoft.com/fwlink/?LinkID=825643). At least version 13.1 is required to support Always Encrypted (`-g`) and Azure Active Directory authentication (`-G`). (You may have several versions of sqlcmd.exe installed on your computer. Be sure you are using the correct version. To determine the version, execute `sqlcmd -?`.)
+> The most recent versions of the sqlcmd utility is available as a web release from the [Download Center](http://go.microsoft.com/fwlink/?LinkID=825643). You need version 13.1 or higher to support Always Encrypted (`-g`) and Azure Active Directory authentication (`-G`). (You may have several versions of sqlcmd.exe installed on your computer. Be sure you are using the correct version. To determine the version, execute `sqlcmd -?`.)
 
   To run sqlcmd statements in SSMS, select SQLCMD Mode from the top navigation Query Menu dropdown.  
   
@@ -138,7 +138,7 @@ Sets the Column Encryption Setting to `Enabled`. For more information, see [Alwa
 
     When you want to use an Azure Active Directory user name and password, you can provide the **-G** option and also use the user name and password by providing the **-U** and **-P** options.
     ``` 
-    Sqlcmd -S Target_DB_or_DW.testsrv.database.windows.net -U bob@contoso.com -P MyAADPassword -G 
+    Sqlcmd -S testsrv.database.windows.net -d Target_DB_or_DW -U bob@contoso.com -P MyAADPassword -G 
     ``` 
     This will generate the following connection string in the backend: 
 

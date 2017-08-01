@@ -1,7 +1,7 @@
 ---
 title: "DATETIMEFROMPARTS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/03/2017"
+ms.date: "07/29/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -25,57 +25,57 @@ manager: "jhubbard"
 # DATETIMEFROMPARTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all_md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-  Returns a **datetime** value for the specified date and time.  
+Returns a **datetime** value for the specified date and time.
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## Syntax  
   
-```  
+```sql
 -- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
   
 DATETIMEFROMPARTS ( year, month, day, hour, minute, seconds, milliseconds )  
 ```  
   
 ## Arguments  
- *year*  
- Integer expression specifying a year.  
+*year*  
+Integer expression specifying a year.
   
- *month*  
- Integer expression specifying a month.  
+*month*  
+Integer expression specifying a month.
   
- *day*  
- Integer expression specifying a day.  
+*day*  
+Integer expression specifying a day.
   
- *hour*  
- Integer expression specifying hours.  
+*hour*  
+Integer expression specifying hours.
   
- *minute*  
- Integer expression specifying minutes.  
+*minute*  
+Integer expression specifying minutes.
   
- *seconds*  
- Integer expression specifying seconds.  
+*seconds*  
+Integer expression specifying seconds.
   
- *milliseconds*  
- Integer expression specifying milliseconds.  
+*milliseconds*  
+Integer expression specifying milliseconds.
   
-## Return Types  
- **datetime**  
+## Return types
+**datetime**
   
 ## Remarks  
- **DATETIMEFROMPARTS** returns a fully initialized **datetime** value. If the arguments are not valid, then an error is raised. If required arguments are null, then a null is returned.  
+**DATETIMEFROMPARTS** returns a fully initialized **datetime** value. If the arguments are not valid, then an error is raised. If required arguments are null, then a null is returned.
   
- This function is capable of being remoted to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] servers and above. It will not be remoted to servers that have a version below [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+This function is capable of being remoted to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] servers and above. It will not be remoted to servers that have a version below [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
   
 ## Examples  
   
-```  
+```sql
 SELECT DATETIMEFROMPARTS ( 2010, 12, 31, 23, 59, 59, 0 ) AS Result;  
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```  
+```sql
 Result  
 ---------------------------  
 2010-12-31 23:59:59.000  
@@ -85,13 +85,13 @@ Result
   
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-```  
+```sql
 SELECT DATETIMEFROMPARTS ( 2010, 12, 31, 23, 59, 59, 0 ) AS Result;  
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```  
+```sql
 Result  
 ---------------------------  
 2010-12-31 23:59:59.000  
@@ -99,8 +99,8 @@ Result
 (1 row(s) affected)  
 ```  
   
-## See Also  
- [datetime &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime-transact-sql.md)  
+## See also
+[datetime &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime-transact-sql.md)
   
   
 

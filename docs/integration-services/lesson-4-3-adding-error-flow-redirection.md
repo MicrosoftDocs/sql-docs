@@ -28,7 +28,7 @@ By default the two extra columns in an [!INCLUDE[ssISnoversion](../includes/ssis
   
 To enhance the usefulness of the error output, before the package writes the failed rows to the file, you will use a Script component to access the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] API and get a description of the error.  
   
-### To configure an error output  
+## To configure an error output  
   
 1.  In the **SSIS Toolbox**, expand **Common**, and then drag **Script Component** onto the design surface of the **Data Flow** tab. Place **Script** to the right of the **Lookup Currency Key** transformation.  
   
@@ -56,14 +56,14 @@ To enhance the usefulness of the error output, before the package writes the fai
   
     [Visual Basic]  
   
-    ```  
+    ```vb  
     Row.ErrorDescription =   
       Me.ComponentMetaData.GetErrorDescription(Row.ErrorCode)  
     ```  
   
     [Visual C#]  
   
-    ```  
+    ```cs
     Row.ErrorDescription = this.ComponentMetaData.GetErrorDescription(Row.ErrorCode);  
     ```  
   
@@ -71,7 +71,7 @@ To enhance the usefulness of the error output, before the package writes the fai
   
     [Visual Basic]  
   
-    ```  
+    ```vb
     Public Overrides Sub Input0_ProcessInputRow(ByVal Row As Input0Buffer)  
   
       Row.ErrorDescription =   
@@ -82,7 +82,7 @@ To enhance the usefulness of the error output, before the package writes the fai
   
     [Visual C#]  
   
-    ```  
+    ```cs
     public override void Input0_ProcessInputRow(Input0Buffer Row)  
         {  
   

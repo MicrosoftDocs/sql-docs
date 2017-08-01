@@ -145,7 +145,7 @@ The following sections describe known issues with this release of SQL Server 201
 
 #### Remote database files
 
-- Hosting database files on a NFS server with version <4 is not supported in this release. This includes using NFS for shared disk failover clustering as well as databases on non-clustered instances. We are working on enabling other NFS server versions in the upcoming releases. 
+- Hosting database files on a NFS server is not supported in this release. This includes using NFS for shared disk failover clustering as well as databases on non-clustered instances. We are working on enabling NFS server support in the upcoming releases.
 
 #### Localization
 
@@ -160,10 +160,6 @@ The following sections describe known issues with this release of SQL Server 201
    ```bash
    sudo MSSQL_LCID=<LcidValue> /opt/mssql/bin/mssql-conf setup
    ```
-
-#### Availability group
-
-On Linux, rolling upgrade to SQL Server 2017 RC2 is not supported. After you upgrade the secondary replica, it will disconnect from the primary replica until the primary replica is upgraded. Microsoft is planning to resolve this for a future release.
 
 #### Full-Text Search
 - Not all filters are available with this release, including filters for Office documents. For a list of supported filters, see [Install SQL Server Full-Text Search on Linux](sql-server-linux-setup-full-text-search.md#filters).
@@ -304,21 +300,22 @@ The following sections describe known issues with this release of SQL Server 201
     - **Resolution**: Change the language of the **sa** login with the **ALTER LOGIN** statement.
 
 #### Databases
+
 - System databases cannot be moved with the mssql-conf utility.
 
 - When restoring a database that was backed up on SQL Server on Windows, you must use the **WITH MOVE** clause in the Transact-SQL statement.
 
 - Distributed transactions requiring the Microsoft Distributed Transaction Coordinator service are not supported on SQL Server running on Linux. SQL Server to SQL Server distributed transactions are supported.
 
-#### Remote database files 
+#### Remote database files
 
-- Hosting database files on a NFS server with version <4 is not supported in this release. This includes using NFS for shared disk failover clustering as well as databases on non-clustered instances. We are working on enabling other NFS server versions in the upcoming releases. 
+- Hosting database files on a NFS server is not supported in this release. This includes using NFS for shared disk failover clustering as well as databases on non-clustered instances. We are working on enabling NFS server support in the upcoming releases.
 
-#### Cross platform availability groups and distributed availability groups 
+#### Cross platform availability groups and distributed availability groups
 
 - Due to a known issue, creating availability groups with replicas on instances hosted on both Windows and Linux is not working in this release. This includes distributed availability groups. The fix will be available in the upcoming release candidate build. 
 
-#### Server Collation 
+#### Server Collation
 
 - When using the MSSQL_COLLATION override, OR when doing a localized (non English) install, it is possible SQL Server will hit a deadlock when trying to set the server collation, which generates a dump. Setup does complete successfully, however the server collation will not have been set. The workaround is to simply run ./mssql-conf set-collation and enter the collation name desired when prompted (the collation name can be found in the errorlog at the line: “Attempting to change default collation to …”). 
  
@@ -355,7 +352,7 @@ In RC1 the cluster resource agent sets the virtual server name like it does in a
 
 #### Availability group
 
-On Linux, rolling upgrade to SQL Server 2017 RC1 is not supported. After you upgrade the secondary replica, it will disconnect from the primary replica until the primary replica is upgraded. Microsoft is planning to resolve this for a future release. 
+On Linux, rolling upgrade of SQL Server 2017 CTP 2.1 to RC1 is not supported. After you upgrade the secondary replica, it will disconnect from the primary replica until the primary replica is upgraded. Microsoft is planning to resolve this for a future release.
 
 #### Full-Text Search
 - Not all filters are available with this release, including filters for Office documents. For a list of supported filters, see [Install SQL Server Full-Text Search on Linux](sql-server-linux-setup-full-text-search.md#filters).

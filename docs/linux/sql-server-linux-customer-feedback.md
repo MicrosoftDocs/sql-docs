@@ -100,27 +100,21 @@ This option enables Local Audit and lets you set the directory where the Local A
 ### On Docker
 To enable Local Audit on docker you must have Docker [persist your data](sql-server-linux-configure-docker). 
 
-1. Create a target directory for new Local Audit logs. The following example creates a new **/tmp/audit** directory:
+1. The target directory for new Local Audit logs will be in the container. Create a target directory for new Local Audit logs in the host directory on your machine. The following example creates a new **/audit** directory:
 
    ```bash
-   sudo mkdir /tmp/audit
+   sudo mkdir <host directory>/audit
    ```
 
-1. Change the owner and group of the directory to the **mssql** user:
-
-   ```bash
-   sudo chown mssql /tmp/audit
-   sudo chgrp mssql /tmp/audit
-   ```
    
-1. Add an `mssql.conf` file with the lines `[telemetry]` and `userrequestedlocalauditdirectory = /tmp/audit` in the host directory:
+1. Add an `mssql.conf` file with the lines `[telemetry]` and `userrequestedlocalauditdirectory = <host directory>/audit` in the host directory:
  
    ```bash
    echo '[telemetry]' >> <host directory>/mssql.conf
    ```
 
    ```bash
-   echo 'userrequestedlocalauditdirectory = /tmp/audit' >> <host directory>/mssql.conf
+   echo 'userrequestedlocalauditdirectory = <host directory>/audit' >> <host directory>/mssql.conf
    ```
 2. Run the container image
    ```bash

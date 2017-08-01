@@ -43,6 +43,7 @@ This option lets you change if SQL Server sends feedback to Microsoft or not. By
    ```bash
    sudo systemctl restart mssql-server
    ```
+   
 ### On Docker
 To disable Customer Feedback on docker you must have Docker [persist your data](sql-server-linux-configure-docker.md). 
 
@@ -63,6 +64,7 @@ To disable Customer Feedback on docker you must have Docker [persist your data](
    ```PowerShell
    docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" --cap-add SYS_PTRACE -p 1433:1433 -v <host directory>:/var/opt/mssql -d microsoft/mssql-server-linux
    ```
+   
 ## Local Audit for SQL Server on Linux Usage Feedback Collection
 
 Microsoft SQL Server 2017 contains Internet-enabled features that can collect and send information about your computer or device ("standard computer information") to Microsoft. The Local Audit component of SQL Server Usage Feedback collection can write data collected by the service to a designated folder, representing the data (logs) that will be sent to Microsoft. The purpose of the Local Audit is to allow customers to see all data Microsoft collects with this feature, for compliance, regulatory or privacy validation reasons.
@@ -97,6 +99,7 @@ This option enables Local Audit and lets you set the directory where the Local A
    ```bash
    sudo systemctl restart mssql-server
    ```
+   
 ### On Docker
 To enable Local Audit on docker you must have Docker [persist your data](sql-server-linux-configure-docker.md). 
 
@@ -124,6 +127,7 @@ To enable Local Audit on docker you must have Docker [persist your data](sql-ser
    ```PowerShell
    docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" --cap-add SYS_PTRACE -p 1433:1433 -v <host directory>:/var/opt/mssql -d microsoft/mssql-server-linux
    ```
+   
 ## Next steps
 
 For more information about SQL Server on Linux, see the [Overview of SQL Server on Linux](sql-server-linux-overview.md).

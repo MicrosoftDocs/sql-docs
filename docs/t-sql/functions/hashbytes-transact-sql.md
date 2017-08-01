@@ -1,7 +1,7 @@
 ---
 title: "HASHBYTES (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/03/2016"
+ms.date: "07/29/2016"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -52,9 +52,7 @@ HASHBYTES ( '<algorithm>', { @input | 'input' } )
   
  The output conforms to the algorithm standard: 128 bits (16 bytes) for MD2, MD4, and MD5; 160 bits (20 bytes) for SHA and SHA1; 256 bits (32 bytes) for SHA2_256, and 512 bits (64 bytes) for SHA2_512.  
   
-||  
-|-|  
-|256 bits (32 bytes) for SHA2_256, and 512 bits (64 bytes) for SHA2_512 applies to [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  For [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and earlier, allowed input values are limited to 8000 bytes.  
   

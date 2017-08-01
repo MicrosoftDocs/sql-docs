@@ -77,10 +77,10 @@ EXECUTE sp_execute_external_script
 
 ```sql
 EXECUTE sp_execute_external_script
-        @language = N'R'
-      , @script = N' OutputDataSet\<- data.frame(c("hello"), " ", c("world"));
-	  str(OutputDataSet)'
-      , @input_data_1 = N'  ';
+  @language = N'R', 
+  @script = N' OutputDataSet <- data.frame(c("hello"), " ", c("world"));
+    str(OutputDataSet)' , 
+  @input_data_1 = N'  ';
 ```
 
 Now, review the text in **Messages** to see why the output is different.
@@ -161,6 +161,14 @@ Now R returns a single value as the result.
 
 Why? In this case, because the two arguments can be handled as vectors of the same length, R returns the inner product as a matrix.  This is the expected behavior according to the rules of linear algebra; however, it could cause problems if your downstream application expects the output schema to never change!
 
+> [!TIP]
+> 
+> Getting errors? These examples require the table **RTestData**. If you haven't created the test data table, go back to this topic: [Working with inputs and outputs](../tutorials/rtsql-working-with-inputs-and-outputs.md).
+> 
+> If you have created the table but still get an error, make sure that you are running the stored procedure in the context of the database that contains the table, and not in **master** or another database.
+> 
+> Also, we suggest that you avoid using temporary tables for these examples. Some R clients will terminate a connection between batches, deleting temporary tables.
+
 ## Merge or multiply columns of different length
 
 R provides great flexibility for working with vectors of different sizes, and for combining these column-like structures into data frames. Lists of vectors can look like a table, but they don't follow all the rules that govern database tables.
@@ -193,9 +201,6 @@ To fill out the data frame, R repeats the elements retrieved from RTestData as m
 
 Remember that a data frame only looks like a table, and is actually a list of vectors.
 
-> [!TIP]
-> See this article for more help on navigating R data frames: [15 Easy Solutions to Your Data Frame Problems in R](https://www.datacamp.com/community/tutorials/15-easy-solutions-data-frame-problems-r#gs.B206djs)
-
 ## Cast or convert SQL Server data
 
 R and SQL Server don't use the same data types, so when you run a query in SQL Server to get data and then pass that to the R runtime, some type of implicit conversion usually takes place. Another set of conversions takes place when you return data from R to SQL Server.
@@ -220,7 +225,7 @@ SELECT ReportingDate
 > 
 > You can use any version of AdventureWorks, or create a different query using a database of your own. The point is to try to handle some data that contains text, datetime and numeric values.
 
-Now, try pasting this query into the R script wrapper. If you get an error, you'll probably need to make some edits to the query text. For example, the string predicate in the WHERE clause must be enclosed by two sets of single quotation marks.
+Now, try pasting this query as the input to the stored procedure.
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -236,6 +241,8 @@ EXECUTE sp_execute_external_script
            ORDER BY ReportingDate ASC ;'
 WITH RESULT SETS undefined;
 ```
+
+If you get an error, you'll probably need to make some edits to the query text. For example, the string predicate in the WHERE clause must be enclosed by two sets of single quotation marks.
 
 After you get the query working, review the results of the `str` function to see how R treats the input data.
 

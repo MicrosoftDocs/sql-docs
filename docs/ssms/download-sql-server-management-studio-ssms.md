@@ -1,7 +1,7 @@
 ---
 title: "Download SQL Server Management Studio (SSMS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/31/2017"
+ms.date: "08/01/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -82,7 +82,13 @@ Version 17.2 includes:
 
 - Output window has entries for queries run during expansion of Object Explorer nodes
 - Enabled View designer for Azure SQL Databases
-- SSMS allows easier scripting of source server options from Object Explorer. Check out the new option under menu Options | SQLServer Object Exploere | Scripting | Version options.
+- The default scripting options for scripting objects from Object Explorer in SSMS have changed:
+  - Previously, the default on a new install was to have the generated script target the latest version of SQL Server (currently SQL Server 2017).
+	- In SSMS 17.2 a new option has been added - *Match Script Settings to Source*. When set to *True*, the generated script targets the same version, engine type, and engine edition as the server the object being scripted is from.
+	- The *Match Script Settings to Source* value is set to *True* by default, so new installs of SSMS will automatically default to always scripting objects to the same target as the original server.
+	- When the *Match Script Settings to Source* value is set to *False*, the normal scripting target options will be enabled and function as they did previously.
+	- Additionally, all the scripting options have been moved to their own section - *Version Options*. They are no longer under *General Scripting Options*.
+
 - Added support for National Clouds in "Restore from URL"
 - QueryStoreUI reports now supports additional metrics (RowCount, DOP, CLR Time etc.) from sys.query_store_runtime_stats.
 - IntelliSense is now supported for Azure SQL Database
@@ -162,6 +168,9 @@ The connection is broken and recovery is not possible. The client driver attempt
   - The **Registered Server** component does not support Azure AD authentication.
   - The **Database Engine Tuning Advisor** is not supported for Azure AD authentication. There is a known issue where the error message presented to the user is less than helpful: *Could not load file or assembly 'Microsoft.IdentityModel.Clients.ActiveDirectory,…* instead of the expected *Database Engine Tuning Advisor does not support Microsoft Azure SQL Database. (DTAClient)*.
 
+**AS**
+
+- Object Explorer in SSAS will not show the Windows Auth username in AS Azure connection properties.
 For more information, see the [SSMS changelog](sql-server-management-studio-changelog-ssms.md).
 
 ## Previous releases

@@ -57,11 +57,11 @@ To disable Customer Feedback on docker you must have Docker [persist your data](
    ```
 2. Run the container image
    ```bash
-   docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' --cap-add SYS_PTRACE -p 1433:1433 -v sqlvolume:/var/opt/mssql -d microsoft/mssql-server-linux
+   docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' --cap-add SYS_PTRACE -p 1433:1433 -v <host directory>:/var/opt/mssql -d microsoft/mssql-server-linux
    ```
 
    ```PowerShell
-   docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" --cap-add SYS_PTRACE -p 1433:1433 -v sqlvolume:/var/opt/mssql -d microsoft/mssql-server-linux
+   docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" --cap-add SYS_PTRACE -p 1433:1433 -v <host directory>:/var/opt/mssql -d microsoft/mssql-server-linux
    ```
 ## Local Audit for SQL Server on Linux Usage Feedback Collection
 
@@ -97,7 +97,39 @@ This option enables Local Audit and lets you set the directory where the Local A
    ```bash
    sudo systemctl restart mssql-server
    ```
+### On Docker
+To enable Local Audit on docker you must have Docker [persist your data](sql-server-linux-configure-docker). 
 
+1. Create a target directory for new Local Audit logs. The following example creates a new **/tmp/audit** directory:
+
+   ```bash
+   sudo mkdir /tmp/audit
+   ```
+
+1. Change the owner and group of the directory to the **mssql** user:
+
+   ```bash
+   sudo chown mssql /tmp/audit
+   sudo chgrp mssql /tmp/audit
+   ```
+   
+1. Add an `mssql.conf` file with the lines `[telemetry]` and `userrequestedlocalauditdirectory = /tmp/audit` in the host directory:
+ 
+   ```bash
+   echo '[telemetry]' >> <host directory>/mssql.conf
+   ```
+
+   ```bash
+   echo 'userrequestedlocalauditdirectory = /tmp/audit' >> <host directory>/mssql.conf
+   ```
+2. Run the container image
+   ```bash
+   docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' --cap-add SYS_PTRACE -p 1433:1433 -v <host directory>:/var/opt/mssql -d microsoft/mssql-server-linux
+   ```
+
+   ```PowerShell
+   docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" --cap-add SYS_PTRACE -p 1433:1433 -v <host directory>:/var/opt/mssql -d microsoft/mssql-server-linux
+   ```
 ## Next steps
 
 For more information about SQL Server on Linux, see the [Overview of SQL Server on Linux](sql-server-linux-overview.md).

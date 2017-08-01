@@ -1,7 +1,7 @@
 ---
 title: "Components for Python integration with SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/30/2017"
+ms.date: "07/31/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -37,8 +37,8 @@ The SQL Server Trusted Launchpad is a service introduced in SQL Server 2016 that
 
 The Launchpad service can start only trusted launchers that are published by Microsoft, or that have been certified by Microsoft as meeting requirements for performance and resource management.
 
-+ SQL Server 2016 supports R
 + SQL Server 2017 supports R and Python 3.5
++ SQL Server 2016 supports R
 
 The [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] service runs under its own user account.
 
@@ -111,7 +111,7 @@ After the script has been embedded in the stored procedure, any application that
 
 ![script-in-db-python](../../advanced-analytics/python/media/script-in-db-python.png)
 
-1. A request for the R runtime is indicated by the parameter _@language='Python'_ passed to the stored procedure. SQL Server sends this request to the Launchpad service.
+1. A request for the Python runtime is indicated by the parameter _@language='Python'_ passed to the stored procedure. SQL Server sends this request to the Launchpad service.
 2. The Launchpad service starts the appropriate launcher; in this case, PythonLauncher.
 3. PythonLauncher starts the external Python35 process.
 4. BxlServer coordinates with the Python runtime to manage exchanges of data, and storage of working results.

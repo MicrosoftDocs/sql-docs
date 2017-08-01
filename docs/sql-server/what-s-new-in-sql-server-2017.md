@@ -20,8 +20,7 @@ SQL Server 2017 represents a major step towards making SQL Server a platform tha
 
 **Try it out:** [Download the SQL Server 2017 Release Candidate (RC)](http://go.microsoft.com/fwlink/?LinkID=829477)
 
->[!TIP]
->**Run SQL Server on Linux!** For more information, see [SQL Server on Linux Documentation](https://docs.microsoft.com/sql/linux/) and [What's new for SQL Server 2017 on Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-whats-new).
+>**Run SQL Server on Linux!** For more information, see [SQL Server on Linux Documentation](https://docs.microsoft.com/sql/linux/).
 
 ## Latest release: SQL Server 2017 Release Candidate (RC2, August 2017)
 This release contains bug fixes and performance improvements.
@@ -31,7 +30,6 @@ This release contains bug fixes and performance improvements.
     - SQL Server 2012
     - SQL Server 2014
     - SQL Server 2016
-
 
 ## SQL Server Database Engine  
 SQL Server 2017 includes many new Database Engine features, enhancements, and performance improvements. 
@@ -121,4 +119,5 @@ For more information, see [What's new in SQL Server Machine Learning Services](~
 
 ## Next steps
 - See the [SQL Server 2017 Release Notes](sql-server-2017-release-notes.md).
+- Find out [What's new for SQL Server 2017 on Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-whats-new).
 - Find out [What's new in SQL Server 2016](what-s-new-in-sql-server-2016.md).

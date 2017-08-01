@@ -24,8 +24,8 @@ This topic describes limitations and issues with [!INCLUDE[ssSQLv14_md](../inclu
  **Try it out:**    
    -   [![Download from Evaluation Center](../analysis-services/media/download.png)](http://go.microsoft.com/fwlink/?LinkID=829477)  Download [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] from the **[Evaluation Center](http://go.microsoft.com/fwlink/?LinkID=829477)**
 
-## SQL Server 2017 Release Candidate (RC2 - Augusty 2017)
-
+## SQL Server 2017 Release Candidate (RC2 - August 2017)
+There are no release notes for this release.
 
 ![horizontal_bar](../sql-server/media/horizontal-bar.png)
 ## SQL Server 2017 Release Candidate (RC1 - July 2017)

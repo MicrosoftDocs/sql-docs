@@ -45,9 +45,9 @@ Generally available | Build number: **TBD**
 - Enabled View designer Azure SQL Databases
 - The default scripting options for scripting objects from Object Explorer in SSMS have changed:
   - Previously, the default on a new install was to have the generated script target the latest version of SQL Server (currently SQL Server 2017).
-	- In SSMS 17.2 a new option has been added - *Match Script Settings to Source*. When set to *True*, the generated script targets the same version, engine type, and engine edition as the server the object being scripted is from.
-	- The *Match Script Settings to Source* value is set to *True* by default, so new installs of SSMS will automatically default to always scripting objects to the same target as the original server.
-	- When the *Match Script Settings to Source* value is set to *False*, the normal scripting target options will be enabled and function as they did previously.
+  - In SSMS 17.2 a new option has been added: *Match Script Settings to Source*. When set to *True*, the generated script targets the same version, engine type, and engine edition as the server the object being scripted is from.
+  - The *Match Script Settings to Source* value is set to *True* by default, so new installs of SSMS will automatically default to always scripting objects to the same target as the original server.
+  - When the *Match Script Settings to Source* value is set to *False*, the normal scripting target options will be enabled and function as they did previously.
 	- Additionally, all the scripting options have been moved to their own section - *Version Options*. They are no longer under *General Scripting Options*.
 
 - Added support for National Clouds in "Restore from URL"

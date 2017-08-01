@@ -91,7 +91,7 @@ description: Learn about SQL
                                                 <ul>
                                                     <li><a href="/sql/ssms/download-sql-server-management-studio-ssms">SQL Server Management Studio (SSMS)</a></li>
                                                     <li><a href="/sql/ssdt/download-sql-server-data-tools-ssdt">SQL Server Data Tools (SSDT)</a></li>
-                                                    <li><a href="https://www.microsoft.com/download/details.aspx?id=55253">Power BI Report Server and tools</a></li>
+                                                    <li><a href="https://www.microsoft.com/download/details.aspx?id=55329">Power BI Report Server and tools</a></li>
                                                 </ul>
                                                 <h4 class="likeAnH3" style="margin: 1rem 0px;">Sample databases</h4>
                                                 <ul>
@@ -190,14 +190,14 @@ description: Learn about SQL
                                                 </div>
                                                 <h4 class="likeAnH3" style="margin: 1rem 0px;">Design</h4>
                                                 <ul>
-                                                    <li><a href="/sql/connect/sql-server-driver">Connect with client applications</a></li>
+                                                    <li><a href="/sql/connect/sql-server-drivers">Connect with client applications</a></li>
                                                     <li><a href="/sql/relational-databases/database-features">Relational database concepts</a></li>
                                                 </ul>
                                                 <h4 class="likeAnH3" style="margin: 1rem 0px;">Tools</h4>
                                                 <ul>
                                                     <li><a href="/sql/ssms/download-sql-server-management-studio-ssms">SQL Server Management Studio (SSMS)</a></li>
                                                     <li><a href="/sql/ssdt/download-sql-server-data-tools-ssdt">SQL Server Data Tools (SSDT)</a></li>
-                                                    <li><a href="/sql/tools/command-prompt-utility-reference-database-engine">See all SQL tools</a></li>
+                                                    <li><a href="/sql/tools/overview-sql-tools">See all SQL tools</a></li>
                                                 </ul>
                                                 <h4 class="likeAnH3" style="margin: 1rem 0px;">Reference</h4>
                                                 <ul>

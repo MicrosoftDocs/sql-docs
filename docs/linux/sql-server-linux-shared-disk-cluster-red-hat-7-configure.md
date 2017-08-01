@@ -28,7 +28,7 @@ ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
 This guide provides instructions to create a two-node shared disk cluster for SQL Server on Red Hat Enterprise Linux. The clustering layer is based on Red Hat Enterprise Linux (RHEL) [HA add-on](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) built on top of [Pacemaker](http://clusterlabs.org/). The SQL Server instance is active on either one node or the other.
 
 > [!NOTE] 
-> Access to Red Hat documentation requires a subscription. 
+> Access to Red Hat HA add-on and documentation requires a subscription. 
 
 As the diagram below shows storage is presented to two servers. Clustering components - Corosync and Pacemaker - coordinate communications and resource management. One of the servers has the active connection to the storage resources and the SQL Server. When Pacemaker detects a failure the clustering components manage moving the resources to the other node.  
 
@@ -38,17 +38,14 @@ For more details on cluster configuration, resource agents options, and manageme
 
 
 > [!NOTE] 
-> At this point, SQL Server's integration with Pacemaker is not as coupled as with WSFC on Windows. From within SQL, there is no knowledge about the presence of the cluster, all orchestration is outside in and the service is controlled as a standalone instance by Pacemaker. Also, virtual network name is specific to WSFC, there is no equivalent of the same in Pacemaker. It is expected that @@servername and  sys.servers to return the node name, while the cluster dmvs sys.dm_os_cluster_nodes and sys.dm_os_cluster_properties will no records.
+> At this point, SQL Server's integration with Pacemaker is not as coupled as with WSFC on Windows. From within SQL, there is no knowledge about the presence of the cluster, all orchestration is outside in and the service is controlled as a standalone instance by Pacemaker. Also for example, cluster dmvs sys.dm_os_cluster_nodes and sys.dm_os_cluster_properties will no records.
 To use a connection string that points to a string server name and not use the IP, they will have to register in their DNS server the IP used to create the virtual IP resource (as explained below) with the chosen server name.
-
-> [!NOTE] 
-> This is not a production setup. This guide creates an architecture that is for high-level functional testing.
 
 The following sections walk through the steps to set up a failover cluster solution. 
 
 ## Prerequisites
 
-To complete the end-to-end scenario below you need two machines to deploy the two nodes cluster and another server to configure the NFS share. Below steps outline how these servers will be configured.
+To complete the end-to-end scenario below you need two machines to deploy the two nodes cluster and another server to configure the NFS server. Below steps outline how these servers will be configured.
 
 ## Setup and configure the operating system on each cluster node
 
@@ -69,7 +66,7 @@ The first step is to configure the operating system on the cluster nodes. For th
    sudo systemctl disable mssql-server
    ```
 > [!NOTE] 
-> At setup time, a Server Master Key is generated for the SQL Server instance and placed at var/opt/mssql/secrets/machine-key. On Linux, SQL Server always runs as a local account called mssql. Because it’s a local account, its identity isn’t shared across nodes. Therefore, you need to copy the encryption key from primary node to each secondary node so each local mssql account can access it to decrypt the Server Master Key.
+> At setup time, a Server Master Key is generated for the SQL Server instance and placed at var/opt/mssql/secrets/machine-key. On Linux, SQL Server always runs as a local account called mssql. Because it’s a local account, its identity isn’t shared across nodes. Therefore, you need to copy the encryption key from primary node to each secondary node so each local mssql account can access it to decrypt the Server Master Key. 
 
 1. On the primary node, create a SQL server login for Pacemaker and grant the login permission to run `sp_server_diagnostics`. Pacemaker will use this account to verify which node is running SQL Server. 
 
@@ -84,8 +81,9 @@ The first step is to configure the operating system on the cluster nodes. For th
    GO
    CREATE LOGIN [<loginName>] with PASSWORD= N'<loginPassword>'
 
-   GRANT VIEW SERVER STATE TO <loginName>
+   ALTER SERVER ROLE [sysadmin] ADD MEMBER [<loginName>]
    ```
+   Alternatively, you can set the permissions at a more granular level. The Pacemaker login requires `VIEW SERVER STATE` to query health    status with sp_server_diagnostics, `setupadmin` and `ALTER ANY LINKED SERVER` to update the FCI instance name with the resource name    by running sp_dropserver and sp_addserver. 
 
 1. On the primary node, stop and disable SQL Server. 
 
@@ -118,6 +116,9 @@ In the next section you will configure shared storage and move your database fil
 There are a variety of solutions for providing shared storage. This walk-through demonstrates configuring shared storage with NFS. We recommend to follow best practices and use Kerberos to secure NFS (you can find an example here: https://www.certdepot.net/rhel7-use-kerberos-control-access-nfs-network-shares/). If you do not, then anyone who can access your network and spoof the IP address of a SQL node will be able to access your data files. As always, make sure you threat model your system before using it in production. Another storage option is to use SMB fileshare.
 
 ### Configure shared storage with NFS
+
+> [!IMPORTANT] 
+> Hosting database files on a NFS server with version <4 is not supported in this release. This includes using NFS for shared disk failover clustering as well as databases on non-clustered instances. We are working on enabling other NFS server versions in the upcoming releases. 
 
 On the NFS Server do the following:
 
@@ -319,7 +320,7 @@ At this point both instances of SQL Server are configured to run with the databa
    sudo pcs cluster start --all
    ```
 
-   > RHEL HA add-on has fencing agents for VMWare and KVM. Fencing needs to be disabled on all other hypervisors. Disabling fencing agents is not recommended in production environments. As of CTP 2.1 timeframe, there are no fencing agents for HyperV or cloud environments. If you are running one of these configurations, you need to disable fencing. \**This is NOT recommended in a production system!**
+   > RHEL HA add-on has fencing agents for VMWare and KVM. Fencing needs to be disabled on all other hypervisors. Disabling fencing agents is not recommended in production environments. As of RC1 timeframe, there are no fencing agents for HyperV or cloud environments. If you are running one of these configurations, you need to disable fencing. \**This is NOT recommended in a production system!**
 
    The following command disables the fencing agents.
 
@@ -395,4 +396,3 @@ At this point both instances of SQL Server are configured to run with the databa
 ## Next steps
 
 [Operate SQL Server on Red Hat Enterprise Linux shared disk cluster](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)
-

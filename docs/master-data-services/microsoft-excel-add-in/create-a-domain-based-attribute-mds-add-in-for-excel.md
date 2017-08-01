@@ -1,7 +1,7 @@
 ---
 title: "Create a Domain-based Attribute (MDS Add-in for Excel) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: "07/25/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -46,7 +46,9 @@ manager: "jhubbard"
   
     -   To use values from the worksheet, choose **the selected column**. A new entity and new staging table will be created with the values from the selected column.  
   
-    -   To use values from an existing entity, choose the name of the entity.  
+    -   To use values from an existing entity, choose the name of the entity.
+    
+    If there are more than fifty entities, you can filter and search for an entity. Otherwise, select an entity from the drop-down list.  
   
 6.  If you chose **the selected column** in the previous step, in the **New entity name** box, type a name for the new entity. This can be the same as the column (attribute) name.  
   

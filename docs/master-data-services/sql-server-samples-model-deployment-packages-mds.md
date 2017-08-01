@@ -1,7 +1,7 @@
 ---
-title: "SQL Server Samples: Model Deployment Packages (MDS) | Microsoft Docs"
+title: "SQL Server Examples: Model Deployment Packages (MDS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/06/2017"
+ms.date: "07/28/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -18,7 +18,7 @@ author: "sabotta"
 ms.author: "carlasab"
 manager: "craigg"
 ---
-# SQL Server Samples: Model Deployment Packages (MDS)
+# SQL Server Examples: Model Deployment Packages (MDS)
   Sample model packages with data are included when you install [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. The default location for these package files is \<drive>\Program Files\Microsoft SQL Server\130\Master Data Services\Samples\Packages.  
   
  For instructions on how to deploy the sample model packages, see [Deploying Sample Models and Data](../master-data-services/master-data-services-installation-and-configuration.md#deploySample). You deploy the sample model packages by using the [MDSModelDeploy tool](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md).  

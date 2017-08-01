@@ -44,11 +44,11 @@ NTILE (integer_expression) OVER ( [ <partition_by_clause> ] < order_by_clause > 
  *integer_expression*  
  Is a positive integer constant expression that specifies the number of groups into which each partition must be divided. *integer_expression* can be of type **int**, or **bigint**.  
   
- <partition_by_clause>  
+ \<partition_by_clause>  
  Divides the result set produced by the [FROM](../../t-sql/queries/from-transact-sql.md) clause into partitions to which the function is applied. For the PARTITION BY syntax, see [OVER Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
- <order_by_clause>  
- Determines the order in which the NTILE values are assigned to the rows in a partition. An integer cannot represent a column when the <order_by_clause> is used in a ranking function.  
+ \<order_by_clause>  
+ Determines the order in which the NTILE values are assigned to the rows in a partition. An integer cannot represent a column when the \<order_by_clause> is used in a ranking function.  
   
 ## Return Types  
  **bigint**  

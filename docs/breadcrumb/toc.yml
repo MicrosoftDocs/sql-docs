@@ -16,7 +16,7 @@
         items:
         - name: ADO appendixes
           href: /sql/ado/guide/appendixes/
-          homepage: /sql/ado/guide/ado-programmer-s-guide
+          homepage: /sql/ado/guide/appendixes/appendix-a-providers
         - name: ADO data
           href: /sql/ado/guide/data/
           homepage: /sql/ado/guide/data/ado-fundamentals
@@ -71,10 +71,10 @@
         items:
         - name: Linux and Mac
           href: /sql/connect/odbc/linux-mac/
-          homepage: /sql/connect/odbc/linux-mac/connecting-with-bcp
+          homepage: /sql/connect/odbc/linux-mac/system-requirements
         - name: Windows
           href: /sql/connect/odbc/windows/
-          homepage: /sql/connect/odbc/windows/asynchronous-execution-notification-method-sample
+          homepage: /sql/connect/odbc/windows/microsoft-odbc-driver-for-sql-server-on-windows
         - name: ODBC advanced
           href: /sql/odbc/
           homepage: /sql/odbc/microsoft-open-database-connectivity-odbc
@@ -135,6 +135,10 @@
       - name: Failover clusters
         href: /sql/sql-server/failover-clusters/
         homepage: /sql/sql-server/failover-clusters/high-availability-solutions-sql-server
+        items:
+        - name: Install
+          href: /sql/sql-server/failover-clusters/install/
+          homepage: /sql/sql-server/failover-clusters/install/sql-server-failover-cluster-installation
       - name: Install
         href: /sql/sql-server/install/
         homepage: /sql/sql-server/install/planning-a-sql-server-installation

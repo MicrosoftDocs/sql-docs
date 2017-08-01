@@ -2,11 +2,11 @@
 # required metadata
 
 title: Release notes for SQL Server 2017 on Linux | Microsoft Docs
-description: This topic contains the release notes and supported features for SQL Server 2017 running on Linux. Release notes are included for CTP 2.1 and prior versions.
+description: This topic contains the release notes and supported features for SQL Server 2017 running on Linux. Release notes are included for RC1 and prior versions.
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 05/23/2017
+ms.date: 07/18/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -26,12 +26,13 @@ ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 ---
 # Release notes for SQL Server 2017 on Linux
 
-The following release notes apply to SQL Server 2017 running on Linux. This release supports many of the SQL Server database engine features for Linux. The topic below is broken into sections for each release, beginning with the most recent release, CTP 2.1. See the information in each section for supported platforms, tools, features, and known issues.
+The following release notes apply to SQL Server 2017 running on Linux. This release supports many of the SQL Server database engine features for Linux. The topic below is broken into sections for each release, beginning with the most recent release, RC1. See the information in each section for supported platforms, tools, features, and known issues.
 
 The following table lists the releases of SQL Server 2017 covered in this topic.
 
 | Release | Version | Release date |
 |-----|-----|-----|
+| [RC1](#RC1) | 14.0.800.90 | 7-2017 |
 | [CTP 2.1](#ctp21) | 14.0.600.250 | 5-2017 |
 | [CTP 2.0](#ctp20) | 14.0.500.272 | 4-2017 |
 | [CTP 1.4](#ctp14) | 14.0.405.198 | 3-2017 |
@@ -40,17 +41,17 @@ The following table lists the releases of SQL Server 2017 covered in this topic.
 | [CTP 1.1](#ctp11) | 14.0.100.187 | 12-2016 |
 | [CTP 1.0](#ctp10) | 14.0.1.246 | 11-2016 |
 
-## <a id="ctp21"> CTP 2.1 (May 2017) </a>
-The SQL Server engine version for this release is 14.0.600.250.
+## <a id="RC1"> RC1 (July 2017) </a>
+The SQL Server engine version for this release is 14.0.800.90.
 
 ### Supported platforms 
 
 | Platform | File System | Installation Guide |
 |-----|-----|-----|
-| Red Hat Enterprise Linux 7.3 Workstation, Server, and Desktop | XFS or EXT4 | [Installation guide](sql-server-linux-setup-red-hat.md) | 
-| SUSE Enterprise Linux Server v12 SP2 | EXT4 | [Installation guide](sql-server-linux-setup-suse-linux-enterprise-server.md) |
-| Ubuntu 16.04LTS | EXT4 | [Installation guide](sql-server-linux-setup-ubuntu.md) | 
-| Docker Engine 1.8+ on Windows, Mac, or Linux | N/A | [Installation guide](sql-server-linux-setup-docker.md) | 
+| Red Hat Enterprise Linux 7.3 Workstation, Server, and Desktop | XFS or EXT4 | [Installation guide](quickstart-install-connect-red-hat.md) | 
+| SUSE Enterprise Linux Server v12 SP2 | EXT4 | [Installation guide](quickstart-install-connect-suse.md) |
+| Ubuntu 16.04LTS | EXT4 | [Installation guide](quickstart-install-connect-ubuntu.md) | 
+| Docker Engine 1.8+ on Windows, Mac, or Linux | N/A | [Installation guide](quickstart-install-connect-docker.md) | 
 
 > [!NOTE]
 > You need at least 3.25GB of memory to run SQL Server on Linux.
@@ -58,6 +59,194 @@ The SQL Server engine version for this release is 14.0.600.250.
 
 ### Package details
 Package details and download locations for the RPM and Debian packages are listed in the following table. Note that you do not need to download these packages directly if you use the steps in the following installation guides:
+
+- [Install SQL Server package](sql-server-linux-setup.md)
+- [Install Full-text Search package](sql-server-linux-setup-full-text-search.md)
+- [Install SQL Server Agent package](sql-server-linux-setup-sql-agent.md)
+
+| Package | Package version | Downloads |
+|-----|-----|-----|
+| Red Hat RPM package | 14.0.800.90-2 | [Engine RPM package](https://packages.microsoft.com/rhel/7/mssql-server/mssql-server-14.0.800.90-2.x86_64.rpm)</br>[High Availability RPM package](https://packages.microsoft.com/rhel/7/mssql-server/mssql-server-ha-14.0.800.90-2.x86_64.rpm)</br>[Full-text Search RPM package](https://packages.microsoft.com/rhel/7/mssql-server/mssql-server-fts-14.0.800.90-2.x86_64.rpm)</br>[SQL Server Agent RPM package](https://packages.microsoft.com/rhel/7/mssql-server/mssql-server-agent-14.0.800.90-2.x86_64.rpm) | 
+| SLES RPM package | 14.0.800.90-2 | [mssql-server Engine RPM package](https://packages.microsoft.com/sles/12/mssql-server/mssql-server-14.0.800.90-2.x86_64.rpm)</br>[High Availability RPM package](https://packages.microsoft.com/sles/12/mssql-server/mssql-server-ha-14.0.800.90-2.x86_64.rpm)</br>[Full-text Search RPM package](https://packages.microsoft.com/sles/12/mssql-server/mssql-server-fts-14.0.800.90-2.x86_64.rpm)</br>[SQL Server Agent RPM package](https://packages.microsoft.com/rhel/7/mssql-server/mssql-server-agent-14.0.800.90-2.x86_64.rpm) | 
+| Ubuntu 16.04 Debian package | 14.0.800.90-2 | [Engine Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server/pool/main/m/mssql-server/mssql-server_14.0.800.90-2_amd64.deb)</br>[High Availability Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.800.90-2_amd64.deb)</br>[Full-text Search Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.800.90-2_amd64.deb)</br>[SQL Server Agent Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server/pool/main/m/mssql-server-agent/mssql-server-agent_14.0.800.90-2_amd64.deb) |
+
+### Supported client tools
+
+| Tool | Minimum version |
+|-----|-----|
+| [SQL Server Management Studio (SSMS) for Windows](https://go.microsoft.com/fwlink/?linkid=847722) | 17.0 |
+| [SQL Server Data Tools for Visual Studio](https://go.microsoft.com/fwlink/?linkid=846626) | 17.0 |
+| [Visual Studio Code](https://code.visualstudio.com) with the [mssql extension](https://aka.ms/mssql-marketplace) | Latest |
+
+### Unsupported features and services
+The following features and services are not available on Linux at this time. The support of these features will be increasingly enabled during the monthly updates cadence of the preview program.
+
+| Area | Unsupported feature or service |
+|-----|-----|
+| **Database engine** | Transactional replication |
+| &nbsp; | Merge replication |
+| &nbsp; | Stretch DB |
+| &nbsp; | Polybase |
+| &nbsp; | Distributed Query |
+| &nbsp; | System extended stored procedures (XP_CMDSHELL, etc.) |
+| &nbsp; | Filetable |
+| &nbsp; | CLR assemblies with the EXTERNAL_ACCESS or UNSAFE permission set |
+| **SQL Server Agent** |  Subsystems: CmdExec, PowerShell, Queue Reader, SSIS, SSAS, SSRS |
+| &nbsp; | Alerts |
+| &nbsp; | Log Reader Agent |
+| &nbsp; | Change Data Capture |
+| &nbsp; | Managed Backup |
+| **High Availability** | Database mirroring  |
+| &nbsp; | Availability group rolling upgrade |
+| **Security** | Extensible Key Management |
+| **Services** | SQL Server Browser |
+| &nbsp; | SQL Server R services |
+| &nbsp; | StreamInsight |
+| &nbsp; | Analysis Services |
+| &nbsp; | Reporting Services |
+| &nbsp; | Data Quality Services |
+| &nbsp; | Master Data Services |
+
+### Known issues
+The following sections describe known issues with this release of SQL Server 2017 RC1 on Linux.
+
+#### General
+- The length of the hostname where SQL Server is installed needs to be 15 characters or less. 
+
+    - **Resolution**: Change the name in /etc/hostname to something 15 characters long or less.
+
+- Manually setting the system time backwards in time will cause SQL Server to stop updating the internal system time within SQL Server.
+
+    - **Resolution**: Restart SQL Server.
+
+- Only single instance installations are supported.
+
+    - **Resolution**: If you want to have more than one instance on a given host, consider using VMs or Docker containers. 
+
+- SQL Server Configuration Manager can’t connect to SQL Server on Linux.
+
+- The default language of the **sa** login is English.
+
+    - **Resolution**: Change the language of the **sa** login with the **ALTER LOGIN** statement.
+
+#### Databases
+- System databases cannot be moved with the mssql-conf utility.
+
+- When restoring a database that was backed up on SQL Server on Windows, you must use the **WITH MOVE** clause in the Transact-SQL statement.
+
+- Distributed transactions requiring the Microsoft Distributed Transaction Coordinator service are not supported on SQL Server running on Linux. SQL Server to SQL Server distributed transactions are supported.
+
+#### Remote database files 
+
+- Hosting database files on a NFS server with version <4 is not supported in this release. This includes using NFS for shared disk failover clustering as well as databases on non-clustered instances. We are working on enabling other NFS server versions in the upcoming releases. 
+
+#### Cross platform availability groups and distributed availability groups 
+
+- Due to a known issue, creating availability groups with replicas on instances hosted on both Windows and Linux is not working in this release. This includes distributed availability groups. The fix will be available in the upcoming release candidate build. 
+
+#### Server Collation 
+
+- When using the MSSQL_COLLATION override, OR when doing a localized (non English) install, it is possible SQL Server will hit a deadlock when trying to set the server collation, which generates a dump. Setup does complete successfully, however the server collation will not have been set. The workaround is to simply run ./mssql-conf set-collation and enter the collation name desired when prompted (the collation name can be found in the errorlog at the line: “Attempting to change default collation to …”). 
+ 
+#### Localization
+
+- If your locale is not English (en_us) during setup, you must use UTF-8 encoding in your bash session/terminal. If you use ASCII encoding, you might see an error similar to the following:
+
+   ```
+   UnicodeEncodeError: 'ascii' codec can't encode character u'\xf1' in position 8: ordinal not in range(128)
+   ```
+
+   If you cannot use UTF-8 encoding, run setup using the MSSQL_LCID environment variable to specify your language choice.
+
+   ```bash
+   sudo MSSQL_LCID=<LcidValue> /opt/mssql/bin/mssql-conf setup
+   ```
+
+#### <a name = "fci"></a>Shared disk cluster instance upgrade
+
+In RC1 the cluster resource agent sets the virtual server name like it does in a Failover Cluster Instance on Windows. Prior to RC1 `@@servername` on a shared disk cluster returned the specific node name so after failover `@@servername` returned a different value. In RC1 the serverName of the shared disk cluster instance is updated with the resource name when the resource is added to the cluster. Because of this, the cluster will have to restart the SQL Server after the manual failover during the upgrade - as in the following steps:
+
+1. Upgrade secondary (passive) cluster node first.
+   - Upgrade **mssql-server** package.
+   - Upgrade **mssql-server-ha** package.
+1. Manually fail over to the upgraded node.
+   `pcs resource move <resourceName>`
+   - Resource fails initially because the resource agent checks the actual and expected serverName. The expected serverName will be different.
+   - Cluster will restart SQL Server resource on the same node. This will update the server name.
+1. Upgrade the other node. 
+   - Upgrade **mssql-server** package.
+   - Upgrade **mssql-server-ha** package.
+1. Remove the constraint added by the manual resource move. See [Failover cluster manually](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md#failManual).
+2. If desired, fail back to the original primary node. 
+
+#### Availability group
+
+On Linux, rolling upgrade to SQL Server 2017 RC1 is not supported. After you upgrade the secondary replica, it will disconnect from the primary replica until the primary replica is upgraded. Microsoft is planning to resolve this for a future release. 
+
+#### Full-Text Search
+- Not all filters are available with this release, including filters for Office documents. For a list of supported filters, see [Install SQL Server Full-Text Search on Linux](sql-server-linux-setup-full-text-search.md#filters).
+
+#### SQL Server Integration Services (SSIS)
+
+- The **mssql-server-is** package is not supported on SUSE in this release. It is currently supported on Ubuntu and on Red Hat Enterprise Linux (RHEL).
+
+- The following features are not supported in this release when you run SSIS packages on Linux:
+  - SSIS Catalog database
+  - Scheduled package execution by SQL Agent
+  - Windows Authentication
+  - Third-party components
+  - Change Data Capture (CDC)
+  - SSIS Scale Out
+  - Azure Feature Pack for SSIS
+  - Hadoop and HDFS support
+  - Microsoft Connector for SAP BW
+
+For more info about SSIS on Linux, see the following articles:
+-   [Install SQL Server Integration Services (SSIS) on Linux](sql-server-linux-setup-ssis.md)
+-   [Extract, transform, and load data on Linux with SSIS](sql-server-linux-migrate-ssis.md)
+
+#### SQL Server Management Studio (SSMS)
+The following limitations apply to SSMS on Windows connected to SQL Server on Linux.
+
+- Maintenance plans are not supported.
+
+- Management Data Warehouse (MDW) and the data collector in SSMS are not supported. 
+
+- SSMS UI components that have Windows Authentication or Windows event log options do not work with Linux. You can still use these features with other options, such as SQL logins. 
+
+- Number of log files to retain cannot be modified.
+
+### Next steps
+
+To get started, see the following quick start tutorials:
+
+- [Install on Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
+- [Install on SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
+- [Install on Ubuntu](quickstart-install-connect-ubuntu.md)
+- [Run on Docker](quickstart-install-connect-ubuntu.md)
+<br/>
+<br/>
+
+![Separation bar graphic](./media/sql-server-linux-release-notes/seperationbar3.png)
+
+## <a id="ctp21"> CTP 2.1 (May 2017) </a>
+The SQL Server engine version for this release is 14.0.600.250.
+
+### Supported platforms 
+
+| Platform | File System | Installation Guide |
+|-----|-----|-----|
+| Red Hat Enterprise Linux 7.3 Workstation, Server, and Desktop | XFS or EXT4 | [Installation guide](quickstart-install-connect-red-hat.md) | 
+| SUSE Enterprise Linux Server v12 SP2 | EXT4 | [Installation guide](quickstart-install-connect-suse.md) |
+| Ubuntu 16.04LTS | EXT4 | [Installation guide](quickstart-install-connect-ubuntu.md) | 
+| Docker Engine 1.8+ on Windows, Mac, or Linux | N/A | [Installation guide](quickstart-install-connect-docker.md) | 
+
+> [!NOTE]
+> You need at least 3.25 GB of memory to run SQL Server on Linux.
+> SQL Server Engine has been tested up to 1 TB of memory at this time.
+
+### Package details
+Package details and download locations for the RPM and Debian packages are listed in the following table. You do not need to download these packages directly if you use the steps in the following installation guides:
 
 - [Install SQL Server package](sql-server-linux-setup.md)
 - [Install Full-text Search package](sql-server-linux-setup-full-text-search.md)
@@ -185,11 +374,17 @@ The following limitations apply to SSMS on Windows connected to SQL Server on Li
 - Number of log files to retain cannot be modified.
 
 ### Next steps
-To begin using SQL Server on Linux, see [Get started with SQL Server on Linux](sql-server-linux-get-started-tutorial.md).
+
+To get started, see the following quick start tutorials:
+
+- [Install on Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
+- [Install on SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
+- [Install on Ubuntu](quickstart-install-connect-ubuntu.md)
+- [Run on Docker](quickstart-install-connect-ubuntu.md)
 <br/>
 <br/>
 
-![Separation bar grapic](./media/sql-server-linux-release-notes/seperationbar3.png)
+![Separation bar graphic](./media/sql-server-linux-release-notes/seperationbar3.png)
 
 ## <a id="ctp20"> CTP 2.0 (April 2017) </a>
 The SQL Server engine version for this release is 14.0.500.272.
@@ -198,10 +393,10 @@ The SQL Server engine version for this release is 14.0.500.272.
 
 | Platform | File System | Installation Guide |
 |-----|-----|-----|
-| Red Hat Enterprise Linux 7.3 Workstation, Server, and Desktop | XFS or EXT4 | [Installation guide](sql-server-linux-setup-red-hat.md) | 
-| SUSE Enterprise Linux Server v12 SP2 | EXT4 | [Installation guide](sql-server-linux-setup-suse-linux-enterprise-server.md) |
-| Ubuntu 16.04LTS and 16.10 | EXT4 | [Installation guide](sql-server-linux-setup-ubuntu.md) | 
-| Docker Engine 1.8+ on Windows, Mac, or Linux | N/A | [Installation guide](sql-server-linux-setup-docker.md) | 
+| Red Hat Enterprise Linux 7.3 Workstation, Server, and Desktop | XFS or EXT4 | [Installation guide](quickstart-install-connect-red-hat.md) | 
+| SUSE Enterprise Linux Server v12 SP2 | EXT4 | [Installation guide](quickstart-install-connect-suse.md) |
+| Ubuntu 16.04LTS and 16.10 | EXT4 | [Installation guide](quickstart-install-connect-ubuntu.md) | 
+| Docker Engine 1.8+ on Windows, Mac, or Linux | N/A | [Installation guide](quickstart-install-connect-docker.md) | 
 
 > [!NOTE] 
 > You need at least 3.25GB of memory to run SQL Server on Linux.
@@ -288,7 +483,7 @@ The following sections describe known issues with this release of SQL Server 201
 - Distributed transactions requiring the Microsoft Distributed Transaction Coordinator service are not supported on SQL Server running on Linux. SQL Server to SQL Server distributed transactions are supported.
 
 #### Always On Availability Group
-- All HA configurations - meaning availability group is added as a resource to a Pacemaker cluster - created with pre CTP2.0 packages are not backwards compatible with the new package. Delete all previousely configured clustered resources and create new availability groups with `CLUSTER_TYPE=EXTERNAL`. See [Configure Always On Availability Group for SQL Server on Linux](sql-server-linux-availability-group-configure-ha.md).
+- All HA configurations - meaning availability group is added as a resource to a Pacemaker cluster - created with pre CTP2.0 packages are not backwards compatible with the new package. Delete all previously configured clustered resources and create new availability groups with `CLUSTER_TYPE=EXTERNAL`. See [Configure Always On Availability Group for SQL Server on Linux](sql-server-linux-availability-group-configure-ha.md).
 - Availability groups created with `CLUSTER_TYPE=NONE` and not added as resources in the cluster will continue working after upgrade. Use for read-scale scenarios. See [Configure read-scale availability group for SQL Server on Linux](sql-server-linux-availability-group-configure-rs.md).
 - `sys.fn_hadr_backup_is_preffered_replica` does not work for `CLUSTER_TYPE=NONE` or `CLUSTER_TYPE=EXTERNAL` because it relies on the WSFC-replicated cluster registry key which not available. We are working on providing a similar functionality through a different function. 
 
@@ -326,11 +521,17 @@ The following limitations apply to SSMS on Windows connected to SQL Server on Li
 - Number of log files to retain cannot be modified.
 
 ### Next steps
-To begin using SQL Server on Linux, see [Get started with SQL Server on Linux](sql-server-linux-get-started-tutorial.md).
+
+To get started, see the following quick start tutorials:
+
+- [Install on Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
+- [Install on SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
+- [Install on Ubuntu](quickstart-install-connect-ubuntu.md)
+- [Run on Docker](quickstart-install-connect-ubuntu.md)
 <br/>
 <br/>
 
-![Separation bar grapic](./media/sql-server-linux-release-notes/seperationbar3.png)
+![Separation bar graphic](./media/sql-server-linux-release-notes/seperationbar3.png)
 
 ## <a id="ctp14"> CTP 1.4 (March 2017) </a>
 The SQL Server engine version for this release is 14.0.405.198.
@@ -339,10 +540,10 @@ The SQL Server engine version for this release is 14.0.405.198.
 
 | Platform | File System | Installation Guide |
 |-----|-----|-----|
-| Red Hat Enterprise Linux 7.3 Workstation, Server, and Desktop | XFS or EXT4 | [Installation guide](sql-server-linux-setup-red-hat.md) | 
-| SUSE Enterprise Linux Server v12 SP2 | EXT4 | [Installation guide](sql-server-linux-setup-suse-linux-enterprise-server.md) |
-| Ubuntu 16.04LTS and 16.10 | EXT4 | [Installation guide](sql-server-linux-setup-ubuntu.md) | 
-| Docker Engine 1.8+ on Windows, Mac, or Linux | N/A | [Installation guide](sql-server-linux-setup-docker.md) | 
+| Red Hat Enterprise Linux 7.3 Workstation, Server, and Desktop | XFS or EXT4 | [Installation guide](quickstart-install-connect-red-hat.md) | 
+| SUSE Enterprise Linux Server v12 SP2 | EXT4 | [Installation guide](quickstart-install-connect-suse.md) |
+| Ubuntu 16.04LTS and 16.10 | EXT4 | [Installation guide](quickstart-install-connect-ubuntu.md) | 
+| Docker Engine 1.8+ on Windows, Mac, or Linux | N/A | [Installation guide](quickstart-install-connect-docker.md) | 
 
 > [!NOTE] 
 > You need at least 3.25GB of memory to run SQL Server on Linux.
@@ -499,11 +700,17 @@ The following limitations apply to SSMS on Windows connected to SQL Server on Li
 - Number of log files to retain cannot be modified.
 
 ### Next steps
-To begin using SQL Server on Linux, see [Get started with SQL Server on Linux](sql-server-linux-get-started-tutorial.md).
+
+To get started, see the following quick start tutorials:
+
+- [Install on Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
+- [Install on SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
+- [Install on Ubuntu](quickstart-install-connect-ubuntu.md)
+- [Run on Docker](quickstart-install-connect-ubuntu.md)
 <br/>
 <br/>
 
-![Separation bar grapic](./media/sql-server-linux-release-notes/seperationbar3.png)
+![Separation bar graphic](./media/sql-server-linux-release-notes/seperationbar3.png)
 
 ## <a id="ctp13"> CTP 1.3 (February 2017) </a>
 The SQL Server engine version for this release is 14.0.304.138.
@@ -512,10 +719,10 @@ The SQL Server engine version for this release is 14.0.304.138.
 
 | Platform | File System | Installation Guide |
 |-----|-----|-----|
-| Red Hat Enterprise Linux 7.3 Workstation, Server, and Desktop | XFS or EXT4 | [Installation guide](sql-server-linux-setup-red-hat.md) | 
-| SUSE Enterprise Linux Server v12 SP2 | EXT4 | [Installation guide](sql-server-linux-setup-suse-linux-enterprise-server.md) |
-| Ubuntu 16.04LTS and 16.10 | EXT4 | [Installation guide](sql-server-linux-setup-ubuntu.md) | 
-| Docker Engine 1.8+ on Windows, Mac, or Linux | N/A | [Installation guide](sql-server-linux-setup-docker.md) | 
+| Red Hat Enterprise Linux 7.3 Workstation, Server, and Desktop | XFS or EXT4 | [Installation guide](quickstart-install-connect-red-hat.md) | 
+| SUSE Enterprise Linux Server v12 SP2 | EXT4 | [Installation guide](quickstart-install-connect-suse.md) |
+| Ubuntu 16.04LTS and 16.10 | EXT4 | [Installation guide](quickstart-install-connect-ubuntu.md) | 
+| Docker Engine 1.8+ on Windows, Mac, or Linux | N/A | [Installation guide](quickstart-install-connect-docker.md) | 
 
 > [!NOTE] 
 > You need at least 3.25GB of memory to run SQL Server on Linux.
@@ -651,11 +858,17 @@ The following limitations apply to SSMS on Windows connected to SQL Server on Li
 - Number of log files to retain cannot be modified.
 
 ### Next steps
-To begin using SQL Server on Linux, see [Get started with SQL Server on Linux](sql-server-linux-get-started-tutorial.md).
+
+To get started, see the following quick start tutorials:
+
+- [Install on Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
+- [Install on SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
+- [Install on Ubuntu](quickstart-install-connect-ubuntu.md)
+- [Run on Docker](quickstart-install-connect-ubuntu.md)
 <br/>
 <br/>
 
-![Separation bar grapic](./media/sql-server-linux-release-notes/seperationbar3.png)
+![Separation bar graphic](./media/sql-server-linux-release-notes/seperationbar3.png)
 
 ## <a id="ctp12"> CTP 1.2 (January 2017)
 The SQL Server engine version for this release is 14.0.200.24.
@@ -664,10 +877,10 @@ The SQL Server engine version for this release is 14.0.200.24.
 
 | Platform | File System | Installation Guide |
 |-----|-----|-----|
-| Red Hat Enterprise Linux 7.3 Workstation, Server, and Desktop | XFS or EXT4 | [Installation guide](sql-server-linux-setup-red-hat.md) | 
-| SUSE Enterprise Linux Server v12 SP2 | EXT4 | [Installation guide](sql-server-linux-setup-suse-linux-enterprise-server.md) |
-| Ubuntu 16.04LTS and 16.10 | EXT4 | [Installation guide](sql-server-linux-setup-ubuntu.md) | 
-| Docker Engine 1.8+ on Windows, Mac, or Linux | N/A | [Installation guide](sql-server-linux-setup-docker.md) | 
+| Red Hat Enterprise Linux 7.3 Workstation, Server, and Desktop | XFS or EXT4 | [Installation guide](quickstart-install-connect-red-hat.md) | 
+| SUSE Enterprise Linux Server v12 SP2 | EXT4 | [Installation guide](quickstart-install-connect-suse.md) |
+| Ubuntu 16.04LTS and 16.10 | EXT4 | [Installation guide](quickstart-install-connect-ubuntu.md) | 
+| Docker Engine 1.8+ on Windows, Mac, or Linux | N/A | [Installation guide](quickstart-install-connect-docker.md) | 
 
 > [!NOTE] 
 > You need at least 3.25GB of memory to run SQL Server on Linux.
@@ -773,7 +986,7 @@ The following sections describe known issues with this release of SQL Server 201
 - SqlPackage shows the location of files with a "C:\\" prefix.
 
 #### Sqlcmd/BCP & ODBC 
-- If you have an older version of SQL Server Command Line tools (mssql-tools) and the ODBC Driver (msodbcsql), you might have installed a custom unixODBC Driver Manager (unixODBC-utf16). This could casue a potential conflict as we no longer use a custom driver manager. 
+- If you have an older version of SQL Server Command Line tools (mssql-tools) and the ODBC Driver (msodbcsql), you might have installed a custom unixODBC Driver Manager (unixODBC-utf16). This could cause a potential conflict as we no longer use a custom driver manager. 
 
     - **Resolution**: On Ubuntu and SLES, the conflict will be resolved automatically. When prompted if you would like to uninstall the existing unixODBC Driver Manager, type 'y' and proceed with the installation. On RedHat, you will have to remove the existing unixODBC Driver Manager manually using `yum remove unixODBC-utf16 unixODBC-utf16-devel` and retry the install.
     
@@ -791,11 +1004,17 @@ The following limitations apply to SSMS on Windows connected to SQL Server on Li
 - The file browser is restricted to the  "C:\\" scope, which resolves to /var/opt/mssql/ on Linux. To use other paths, generate scripts of the UI operation and replace the C:\\ paths with Linux paths. Then execute the script manually in SSMS.
 
 ### Next steps
-To begin using SQL Server on Linux, see [Get started with SQL Server on Linux](sql-server-linux-get-started-tutorial.md).
+
+To get started, see the following quick start tutorials:
+
+- [Install on Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
+- [Install on SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
+- [Install on Ubuntu](quickstart-install-connect-ubuntu.md)
+- [Run on Docker](quickstart-install-connect-ubuntu.md)
 <br/>
 <br/>
 
-![Separation bar grapic](./media/sql-server-linux-release-notes/seperationbar3.png)
+![Separation bar graphic](./media/sql-server-linux-release-notes/seperationbar3.png)
 
 ## <a id="ctp11"> CTP 1.1 (December 2016)
 The SQL Server engine version for this release is 14.0.100.187.
@@ -804,9 +1023,9 @@ The SQL Server engine version for this release is 14.0.100.187.
 
 | Platform | File System | Installation Guide |
 |-----|-----|-----|
-| Red Hat Enterprise Linux Workstation, Server, and Desktop | XFS or EXT4 | [Installation guide](sql-server-linux-setup-red-hat.md) | 
-| Ubuntu 16.04LTS and 16.10 | EXT4 | [Installation guide](sql-server-linux-setup-ubuntu.md) | 
-| Docker Engine 1.8+ on Windows, Mac, or Linux | N/A | [Installation guide](sql-server-linux-setup-docker.md) | 
+| Red Hat Enterprise Linux Workstation, Server, and Desktop | XFS or EXT4 | [Installation guide](quickstart-install-connect-red-hat.md) | 
+| Ubuntu 16.04LTS and 16.10 | EXT4 | [Installation guide](quickstart-install-connect-ubuntu.md) | 
+| Docker Engine 1.8+ on Windows, Mac, or Linux | N/A | [Installation guide](quickstart-install-connect-docker.md) | 
 
 > [!NOTE] 
 > You need at least 3.25GB of memory to run SQL Server on Linux.
@@ -929,12 +1148,9 @@ The following limitations apply to SSMS on Windows connected to SQL Server on Li
 
 - The file browser is restricted to the  "C:\\" scope, which resolves to /var/opt/mssql/ on Linux. To use other paths, generate scripts of the UI operation and replace the C:\\ paths with Linux paths. Then execute the script manually in SSMS.
 
-### Next steps
-To begin using SQL Server on Linux, see [Get started with SQL Server on Linux](sql-server-linux-get-started-tutorial.md).
-<br/>
-<br/>
+v
 
-![Separation bar grapic](./media/sql-server-linux-release-notes/seperationbar3.png)
+![Separation bar graphic](./media/sql-server-linux-release-notes/seperationbar3.png)
 
 ## <a id="ctp10"> CTP 1.0 (November 2016)
 The SQL Server engine version for this release is 14.0.1.246.
@@ -943,9 +1159,9 @@ The SQL Server engine version for this release is 14.0.1.246.
 
 | Platform | File System | Installation Guide |
 |-----|-----|-----|
-| Red Hat Enterprise Linux 7.2 Workstation, Server, and Desktop | XFS or EXT4 | [Installation guide](sql-server-linux-setup-red-hat.md) | 
-| Ubuntu 16.04LTS | EXT4 | [Installation guide](sql-server-linux-setup-ubuntu.md) | 
-| Docker Engine 1.8+ on Windows, Mac, or Linux | N/A | [Installation guide](sql-server-linux-setup-docker.md) | 
+| Red Hat Enterprise Linux 7.2 Workstation, Server, and Desktop | XFS or EXT4 | [Installation guide](quickstart-install-connect-red-hat.md) | 
+| Ubuntu 16.04LTS | EXT4 | [Installation guide](quickstart-install-connect-ubuntu.md) | 
+| Docker Engine 1.8+ on Windows, Mac, or Linux | N/A | [Installation guide](quickstart-install-connect-docker.md) | 
 
 > [!NOTE] 
 > You need at least 3.25GB of memory to run SQL Server on Linux.
@@ -1065,4 +1281,12 @@ The following limitations apply to SSMS on Windows connected to SQL Server on Li
 - The file browser is restricted to the  "C:\\" scope, which resolves to /var/opt/mssql/ on Linux. To use other paths, generate scripts of the UI operation and replace the C:\\ paths with Linux paths. Then execute the script manually in SSMS.
 
 ### Next steps
-To begin using SQL Server on Linux, see [Get started with SQL Server on Linux](sql-server-linux-get-started-tutorial.md).
+
+To get started, see the following quick start tutorials:
+
+- [Install on Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
+- [Install on SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
+- [Install on Ubuntu](quickstart-install-connect-ubuntu.md)
+- [Run on Docker](quickstart-install-connect-ubuntu.md)
+<br/>
+<br/>

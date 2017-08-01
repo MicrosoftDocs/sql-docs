@@ -1,6 +1,46 @@
 {
     "redirections": [
         {
+            "source_path": "docs/linux/sql-server-linux-export-import-with-sqlpackage.md",
+            "redirect_url": "/sql/linux/sql-server-linux-migrate-ssms",
+            "redirect_document_id": false
+        },       
+        {
+            "source_path": "docs/linux/sql-server-linux-migrate-sqlpackage.md",
+            "redirect_url": "/sql/linux/sql-server-linux-migrate-ssms",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/linux/sql-server-linux-get-started-tutorial.md",
+            "redirect_url": "/sql/linux/sql-server-linux-overview",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/linux/sql-server-linux-connect-and-query-sqlcmd.md",
+            "redirect_url": "/sql/linux/sql-server-linux-setup-tools",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/linux/sql-server-linux-setup-suse-linux-enterprise-server.md",
+            "redirect_url": "/sql/linux/quickstart-install-connect-suse",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/linux/sql-server-linux-setup-red-hat.md",
+            "redirect_url": "/sql/linux/quickstart-install-connect-red-hat",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/linux/sql-server-linux-setup-ubuntu.md",
+            "redirect_url": "/sql/linux/quickstart-install-connect-ubuntu",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/linux/sql-server-linux-setup-docker.md",
+            "redirect_url": "/sql/linux/quickstart-install-connect-docker",
+            "redirect_document_id": true
+        },                                        
+        {
             "source_path": "docs/relational-databases/relational-databases-new-updated-sql-docs-pr.md",
             "redirect_url": "/sql/relational-databases/new-updated-relational-databases",
             "redirect_document_id": true
@@ -1491,6 +1531,26 @@
             "redirect_document_id": false
         },
         {
+            "source_path": "docs/analysis-services/deprecated-analysis-services-features-in-sql-server-2016.md",
+            "redirect_url": "/sql/analysis-services/analysis-services-backward-compatibility",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/analysis-services/discontinued-analysis-services-functionality-in-sql-server-2016.md",
+            "redirect_url": "/sql/analysis-services/analysis-services-backward-compatibility",
+            "redirect_document_id": false
+        },
+                {
+            "source_path": "docs/analysis-services/breaking-changes-to-analysis-services-features-in-sql-server-2016.md",
+            "redirect_url": "/sql/analysis-services/analysis-services-backward-compatibility",
+            "redirect_document_id": false
+        },
+                {
+            "source_path": "docs/analysis-services/behavior-changes-to-analysis-services-features-in-sql-server-2016.md",
+            "redirect_url": "/sql/analysis-services/analysis-services-backward-compatibility",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "docs/analysis-services/troubleshoot-a-power-pivot-for-sharepoint-installation.md",
             "redirect_url": "/sql/analysis-services/analysis-services",
             "redirect_document_id": false
@@ -1886,13 +1946,98 @@
             "redirect_document_id": false
         },
         {
-            "source_path": "docs/sql/sql-hub-menu.md",
+            "source_path": "docs/sql-hub-menu.md",
             "redirect_url": "/sql/index",
             "redirect_document_id": false
         },
         {
-            "source_path": "docs/sql/microsoft-sql-documentation-table-of-contents.md",
+            "source_path": "docs/microsoft-sql-documentation-table-of-contents.md",
             "redirect_url": "/sql/index",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/sql-server-profiler/correlate-a-trace-with-windows-performance-log-data-sql-server-profiler.md",
+            "redirect_url": "/sql/tools/sql-server-profiler/correlate-a-trace-with-windows-performance-log-data",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/sql-server-profiler/modify-a-trace-template-sql-server-profiler.md",
+            "redirect_url": "/sql/tools/sql-server-profiler/modify-trace-templates",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/whitepapers/microsoft-white-papers.md",
+            "redirect_url": "/sql/index",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/database-engine/install-windows/installation-for-sql-server-2016.md",
+            "redirect_url": "/sql/database-engine/install-windows/installation-for-sql-server",
+            "redirect_document_id": false
+        },
+		{
+            "source_path": "docs/integration-services/integration-services-ssis-scale-out.md",
+            "redirect_url": "/sql/integration-services/scale-out/integration-services-ssis-scale-out",
+            "redirect_document_id": true
+	    },
+		{
+            "source_path": "docs/ssdt/sql-server-tools.md",
+            "redirect_url": "/sql/tools/overview-sql-tools",
+            "redirect_document_id": false
+	    },
+        {
+            "source_path": "docs/integration-services/data-flow/transformations/cache-connection-manager.md",
+            "redirect_url": "/sql/integration-services/connection-manager/cache-connection-manager",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/integration-services/data-flow/transformations/cache-connection-manager-editor.md",
+            "redirect_url": "/sql/integration-services/connection-manager/cache-connection-manager-editor",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/integration-services/data-flow/transformations/dqs-cleansing-connection-manager.md",
+            "redirect_url": "/sql/integration-services/connection-manager/dqs-cleansing-connection-manager",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md",
+            "redirect_url": "/sql/integration-services/connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-ole-db-connection-manager.md",
+            "redirect_url": "/sql/integration-services/connection-manager/lookup-transformation-full-cache-mode-ole-db-connection-manager",
+            "redirect_document_id": true
+        },
+		{
+            "source_path": "docs/relational-databases/database-engine-cross-instance-features.md",
+            "redirect_url": "/sql/relational-databases/database-features",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/relational-databases/technical-reference-database-engine.md",
+            "redirect_url": "/sql/relational-databases/database-features",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/relational-databases/feature-reference-database-engine.md",
+            "redirect_url": "/sql/relational-databases/database-features",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/integration-services/import-export-data/import-data-from-excel-to-sql.md",
+            "redirect_url": "/sql/relational-databases/import-export/import-data-from-excel-to-sql",
+            "redirect_document_id": true
+        },
+		{
+            "source_path": "docs/ssms/use-sql-server-management-studio.md",
+            "redirect_url": "/sql/ssms/sql-server-management-studio-ssms",
+            "redirect_document_id": false
+        },
+		{
+            "source_path": "docs/ssms/features-in-sql-server-management-studio.md",
+            "redirect_url": "/sql/ssms/sql-server-management-studio-ssms",
             "redirect_document_id": false
         }
     ]

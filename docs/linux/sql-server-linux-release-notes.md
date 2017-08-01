@@ -91,7 +91,7 @@ The following features and services are not available on Linux at this time. The
 | &nbsp; | Merge replication |
 | &nbsp; | Stretch DB |
 | &nbsp; | Polybase |
-| &nbsp; | Distributed Query |
+| &nbsp; | Distributed query with 3rd-party connections |
 | &nbsp; | System extended stored procedures (XP_CMDSHELL, etc.) |
 | &nbsp; | Filetable |
 | &nbsp; | CLR assemblies with the EXTERNAL_ACCESS or UNSAFE permission set |
@@ -101,7 +101,6 @@ The following features and services are not available on Linux at this time. The
 | &nbsp; | Change Data Capture |
 | &nbsp; | Managed Backup |
 | **High Availability** | Database mirroring  |
-| &nbsp; | Availability group rolling upgrade |
 | **Security** | Extensible Key Management |
 | **Services** | SQL Server Browser |
 | &nbsp; | SQL Server R services |
@@ -137,7 +136,7 @@ The following sections describe known issues with this release of SQL Server 201
 
 #### Databases
 
-- System databases cannot be moved with the mssql-conf utility.
+- The master database cannot be moved with the mssql-conf utility. Other system databases can be moved with mssql-conf.
 
 - When restoring a database that was backed up on SQL Server on Windows, you must use the **WITH MOVE** clause in the Transact-SQL statement.
 

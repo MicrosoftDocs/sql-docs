@@ -22,6 +22,8 @@ In SQL Server 2016, Microsoft introduced SQL Server R Services, a feature that s
 
 In SQL Server 2017, machine learning becomes even more powerful, with addition of support for the popular Python language. Along with the support for new languages comes a new name: **Machine Learning Services (In-Database)**.
 
+Catch the latest announcement here! [Python in SQL Server 2017: enhanced in-database machine learning](https://blogs.technet.microsoft.com/dataplatforminsider/2017/04/19/python-in-sql-server-2017-enhanced-in-database-machine-learning/)
+
 ## What's new in SQL Server 2017 Release Candidate 2
 
 Microsoft Machine Learning Server in SQL Server now provides comprehensive support for building and deploying machine learning solutions. Here are the highlights of this release:

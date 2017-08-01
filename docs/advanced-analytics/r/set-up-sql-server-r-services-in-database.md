@@ -19,7 +19,7 @@ manager: "jhubbard"
 ---
 # Set up SQL Server Machine Learning Services (In-Database)
 
-This topic describes how to set up machine learning services in SQL Server, by running the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup wizard.
+This topic describes how to set up machine learning services in SQL Server with the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup wizard.
 
 **Applies to:** SQl Server 2016 R Services (R only), SQL Server 2017 Machine Learning Services (R and Python)
 

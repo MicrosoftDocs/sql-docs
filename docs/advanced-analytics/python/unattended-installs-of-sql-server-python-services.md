@@ -1,5 +1,5 @@
 ---
-title: "Unattended installs of Python Machine Learning Services (In-Database) | Microsoft Docs"i
+title: "Unattended installation of Python Machine Learning Services (In-Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/31/2017"
 ms.prod: "sql-server-2016"
@@ -15,7 +15,7 @@ author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
 ---
-# Unattended installs of Python Machine Learning Services (In-Database)
+# Unattended installation of Python Machine Learning Services (In-Database)
 
 This topic describes how to use the command-line arguments in SQL Server 2017 setup to install the SQL Server database engine with Machine Learning Services and Python, using quiet mode.
 

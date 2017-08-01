@@ -1,5 +1,5 @@
 ---
-title: "Setup and Configuration | Microsoft Docs"
+title: "Setup and configuration | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/31/2017"
 ms.prod: "sql-server-2016"
@@ -231,14 +231,13 @@ If you create a machine learning solution on a data science client computer and 
 + For Windows authentication: You might need to create an ODBC data source on the data science client that specifies the instance name and other connection information. For more information, see [ODBC Data Source Administrator](https://docs.microsoft.com/sql/odbc/admin/odbc-data-source-administrator).
 
 
-## Next steps
+## Additional configuration
 
-Now that you have everything working, you might also want to optimize the server to support machine learning, or install pretrained models. 
+Now that you have everything working, you might also want to optimize the server to support machine learning, or install pretrained models.
 
 ### Add more worker accounts
 
 If you expect many users to be running scripts concurrently, you can increase the number of worker accounts that are assigned to the Launchpad service. For more information, see [Modify the User Account Pool for SQL Server R Services](../r/modify-the-user-account-pool-for-sql-server-r-services.md).
-
 
 ### Optimize the server for script execution
 

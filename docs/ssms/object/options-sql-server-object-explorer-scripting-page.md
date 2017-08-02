@@ -35,15 +35,15 @@ The **Edit** and **Modify** commands might produce results that are different fr
 ## Options  
 Specify scripting options by selecting from the available settings in the list to the right of each option.  
   
-### General Scripting Options  
+### General scripting options  
 **Delimit individual statements**  
 Separates individual [!INCLUDE[tsql](../../includes/tsql_md.md)] statements by using a batch separator. To change the default batch separator for **Query Editor**, select **Tools**/**Options**/**Query Execution**/**SQL Server**/**General**/**Batch separator**. Default is False. For more information, see [GO (Transact-SQL)](https://msdn.microsoft.com/b2ca6791-3a07-4209-ba8e-2248a92dd738).  
   
 **Include descriptive headers**  
 Adds descriptive comments to the script by separating the script into sections for each object. Default is True. For more information, see [/*...*/ (Comment) (Transact-SQL)](https://msdn.microsoft.com/4d9ab1b2-4bbb-4c16-beb1-cafc1af7417c).  
   
-**Include vardecimal options**  
-Includes the vardecimal storage options. Default is False. For more information, see and [sp_db_vardecimal_storage_format (Transact-SQL)](https://msdn.microsoft.com/9920b2f7-b802-4003-913c-978c17ae4542).  
+**Include enabling vardecimal compression**  
+Includes the vardecimal storage options. Default is False. For more information, see [sp_db_vardecimal_storage_format (Transact-SQL)](https://msdn.microsoft.com/9920b2f7-b802-4003-913c-978c17ae4542).  
   
 **Script change tracking**  
 Includes change tracking information in the script.  
@@ -54,7 +54,8 @@ Includes a script for full-text catalogs. Default is False. For more information
 **Script USE <database>**  
 Adds the USE DATABASE statement to the script to create database objects in the context of the current **Object Explorer** database. When the script is expected for use in a different database, select False to omit. Default is True. For more information, see [USE (Transact-SQL)](https://msdn.microsoft.com/c05acac8-c063-4770-8e36-d7f71d500b10).  
   
-### Object Scripting Options  
+### Object scripting options  
+
 **Check for object existence**
 Check that an object with the given name exists before dropping or altering or that an object with the given name does not exist before creating. For more information, see [IF...ELSE (Transact-SQL)](https://msdn.microsoft.com/676c881f-dee1-417a-bc51-55da62398e81) and [EXISTS (Transact-SQL)](https://msdn.microsoft.com/b6510a65-ac38-4296-a3d5-640db0c27631).
 
@@ -63,6 +64,9 @@ Generates a script for additional objects that are required when the script for 
   
 **Schema qualify object names**  
 Qualifies object names with the object schema. Default is False. For more information, see [Create a Database Schema](https://msdn.microsoft.com/ed2a5522-f4d2-4111-95a4-d3e1e5081739).  
+
+**Script data compression options**
+Includes data compression options in the script. Default is False.
 
 **Script extended properties**  
 Includes extended properties in the script if the object has extended properties. Default is False. For more information, see [sp_addextendedproperty (Transact-SQL)](https://msdn.microsoft.com/565483ea-875b-4133-b327-d0006d2d7b4c).  
@@ -73,7 +77,7 @@ Includes the owner in the generated script. Default is False.
 **Script permissions**  
 Includes permissions on database objects in the script. Default is True. For more information, see [Permissions](https://msdn.microsoft.com/f28e3dea-24e6-4a81-877b-02ec4c7e36b9).  
   
-### Table/View Options  
+### Table/View options  
 The following options apply only to scripts for tables or views.  
   
 **Convert user-defined data types to base types**  
@@ -130,10 +134,11 @@ Includes [Unique Constraints and Check Constraints](https://msdn.microsoft.com/6
 **Script view columns**  
 Declares view columns in view headers. Default is False. For more information, see [CREATE VIEW (Transact-SQL)](https://msdn.microsoft.com/aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9).  
   
-**ScriptDriIncludeSystemNames**  
+**Include dri system names**  
 Includes system generated constraint names to enforce declarative referential integrity. Default is False. For more information, see [REFERENTIAL_CONSTRAINTS (Transact-SQL)](https://msdn.microsoft.com/5d358f18-0a85-4b55-af4b-98d5f4cd1020).  
   
 ### Version options
+
 **Match script settings to source**
 If enabled the target version, engine edition and engine type of the scripts generated will be set to the values of the server the object being scripted. This will disable (and ignore) the other version options. 
 
@@ -146,6 +151,6 @@ Scripts generated will be targeted for the specified [Database Engine Type](http
 **Script for server version**  
 Scripts generated will be targeted for the specified version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Features that are new in [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] cannot be scripted for earlier versions. Some scripts that are created for [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] cannot be executed on servers that are running on an earlier version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], or on a database that has an earlier [database compatibility level setting](https://msdn.microsoft.com/ca5fd220-d5ea-4182-8950-55d4101a86f6).  
 
-## See Also  
+## See also  
 [Generate Scripts (SQL Server Management Studio)](https://msdn.microsoft.com/9711c617-3c68-4e5a-aea3-befc64d51524)  
   

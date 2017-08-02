@@ -2013,12 +2013,12 @@
 		{
             "source_path": "docs/relational-databases/database-engine-cross-instance-features.md",
             "redirect_url": "/sql/relational-databases/database-features",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "docs/relational-databases/technical-reference-database-engine.md",
             "redirect_url": "/sql/relational-databases/database-features",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "docs/integration-services/import-export-data/import-data-from-excel-to-sql.md",

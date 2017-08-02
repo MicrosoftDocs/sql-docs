@@ -2021,11 +2021,6 @@
             "redirect_document_id": true
         },
         {
-            "source_path": "docs/relational-databases/feature-reference-database-engine.md",
-            "redirect_url": "/sql/relational-databases/database-features",
-            "redirect_document_id": true
-        },
-        {
             "source_path": "docs/integration-services/import-export-data/import-data-from-excel-to-sql.md",
             "redirect_url": "/sql/relational-databases/import-export/import-data-from-excel-to-sql",
             "redirect_document_id": true

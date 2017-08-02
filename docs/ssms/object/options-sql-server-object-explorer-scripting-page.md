@@ -42,7 +42,7 @@ Separates individual [!INCLUDE[tsql](../../includes/tsql_md.md)] statements by u
 **Include descriptive headers**  
 Adds descriptive comments to the script by separating the script into sections for each object. Default is True. For more information, see [/*...*/ (Comment) (Transact-SQL)](https://msdn.microsoft.com/4d9ab1b2-4bbb-4c16-beb1-cafc1af7417c).  
   
-**Include enabling VarDecimal compression**  
+**Include enabling vardecimal compression**  
 Includes the vardecimal storage options. Default is False. For more information, see [sp_db_vardecimal_storage_format (Transact-SQL)](https://msdn.microsoft.com/9920b2f7-b802-4003-913c-978c17ae4542).  
   
 **Script change tracking**  
@@ -134,7 +134,7 @@ Includes [Unique Constraints and Check Constraints](https://msdn.microsoft.com/6
 **Script view columns**  
 Declares view columns in view headers. Default is False. For more information, see [CREATE VIEW (Transact-SQL)](https://msdn.microsoft.com/aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9).  
   
-**Include DRI System Names**  
+**Include dri system names**  
 Includes system generated constraint names to enforce declarative referential integrity. Default is False. For more information, see [REFERENTIAL_CONSTRAINTS (Transact-SQL)](https://msdn.microsoft.com/5d358f18-0a85-4b55-af4b-98d5f4cd1020).  
   
 ### Version options

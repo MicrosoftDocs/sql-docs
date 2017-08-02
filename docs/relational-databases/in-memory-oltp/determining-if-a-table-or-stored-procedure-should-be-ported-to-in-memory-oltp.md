@@ -2,7 +2,7 @@
 title: "Determining if a Table or Stored Procedure Should Be Ported to In-Memory OLTP | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
+ms.date: "08/02/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -51,9 +51,7 @@ manager: "jhubbard"
     -   Percent of total accesses. The percentage of scans and seeks on this table with respect to the activity of the entire database. The higher this percentage, the more heavily used the table is compared to other tables in the database.  
   
     -   Lookup Statistics/Range Scan Statistics. This column records the number of point lookups and range scans (index scans and table scans) conducted on the table during profiling. Average per transaction is an estimate.  
-  
-    -   Interop Gain and Native Gain. These columns estimate the amount of performance benefit a point lookup or range scan would have if the table is converted to a memory-optimized table.  
-  
+    
 -   Contention Statistics Section  
   
      This section includes a table that shows contention on the database table. For more information regarding database latches and locks, please see Locking Architecture. The columns are as follows:  

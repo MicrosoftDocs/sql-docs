@@ -1,7 +1,7 @@
 ---
 title: "EnvelopeAggregate (geography Data Type) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "07/30/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -25,11 +25,7 @@ manager: "jhubbard"
 # EnvelopeAggregate (geography Data Type)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Returns a bounding object for a given set of **geography** objects. The resulting **geography** object contains multiple circular arc segments.  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [current version](http://msdn.microsoft.com/library/bb500435.aspx)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
+Returns a bounding object for a given set of **geography** objects. The resulting **geography** object contains multiple circular arc segments.
   
 ## Syntax  
   

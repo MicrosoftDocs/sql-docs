@@ -13,7 +13,7 @@ ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
 ---
 # Install SQL Server and create a database on Red Hat
 
-In this quick start tutorial, you first install SQL Server 2017 RC1 on Red Hat Enterprise Linux (RHEL) 7.3. Then connect with **sqlcmd** to create your first database and run queries.
+In this quick start tutorial, you first install SQL Server 2017 RC2 on Red Hat Enterprise Linux (RHEL) 7.3. Then connect with **sqlcmd** to create your first database and run queries.
 
 > [!TIP]
 > This tutorial requires user input and an internet connection. If you are interested in the [unattended](sql-server-linux-setup.md#unattended) or [offline](sql-server-linux-setup.md#offline) installation procedures, see [Installation guidance for SQL Server on Linux](sql-server-linux-setup.md).
@@ -52,11 +52,11 @@ To configure SQL Server on RHEL, run the following commands in a terminal to ins
    > Make sure to specify a strong password for the SA account (Minimum length 8 characters, including uppercase and lowercase letters, base 10 digits and/or non-alphanumeric symbols).
 
    > [!TIP]
-   > When installing RC1, no purchased licenses are required to try any of the editions. Because it is a release candidate, the following message appears regardless of the edition you select:
+   > When installing RC2, no purchased licenses are required to try any of the editions. Because it is a release candidate, the following message appears regardless of the edition you select:
    >
    > `This is an evaluation version.  There are [175] days left in the evaluation period.`
    >
-   > This message does not reflect the edition you selected. It relates to the preview period for RC1.
+   > This message does not reflect the edition you selected. It relates to the preview period for RC2.
 
 1. Once the configuration is done, verify that the service is running:
 

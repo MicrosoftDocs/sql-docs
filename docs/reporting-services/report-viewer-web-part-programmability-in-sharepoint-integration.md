@@ -14,8 +14,8 @@ applies_to:
   - "SQL Server 2016 Preview"
 ms.assetid: 714017b7-1bd6-4950-a3c6-d0df8450a877
 caps.latest.revision: 8
-author: "sabotta"
-ms.author: "carlasab"
+author: "guyinacube"
+ms.author: "asaxton"
 manager: "erikre"
 ---
 # Report Viewer Web Part Programmability in SharePoint Integration

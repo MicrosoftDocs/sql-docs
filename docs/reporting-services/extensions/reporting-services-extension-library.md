@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "library [Reporting Services]"
 ms.assetid: e8eff470-64d6-41c3-b98b-5ec916c121c3
 caps.latest.revision: 33
-author: "sabotta"
-ms.author: "carlasab"
+author: "guyinacube"
+ms.author: "asaxton"
 manager: "erikre"
 ---
 # Reporting Services Extension Library

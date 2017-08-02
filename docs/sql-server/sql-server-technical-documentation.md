@@ -1,6 +1,6 @@
 ---
 title: "SQL Server Technical Documentation | Microsoft Docs"
-ms.date: "07/31/2017"
+ms.date: "08/02/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""

@@ -82,4 +82,3 @@ You can also view SQL Server documentation offline by using the Help Viewer. For
 + [SQL Server Data Tools in Visual Studio 2015](https://msdn.microsoft.com/mt186501.aspx)
 + [Videos, samples, and community resources](https://msdn.microsoft.com/library/dn237258.aspx)
   
-[!INCLUDE[feedback_stackoverflow_msdn_connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]

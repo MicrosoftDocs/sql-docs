@@ -40,7 +40,8 @@ RAND ( [ seed ] )
   
 ## Arguments  
  *seed*  
- Is an integer [expression](../../t-sql/language-elements/expressions-transact-sql.md) (**tinyint**, **smallint**, or **int**) that gives the seed value. If *seed* is not specified, the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] assigns a seed value at random. For a specified seed value, the result returned is always the same.  
+ Is an integer [expression](../../t-sql/language-elements/expressions-transact-sql.md) (**tinyint**, **smallint**, or **int**) that gives the seed value. If *seed* is not specified, the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] assigns a seed value at random. For a specified seed value, the result returned is always the same.
+ Seed is the top maximum value so the generated number will always be less than this number.
   
 ## Return Types  
  **float**  

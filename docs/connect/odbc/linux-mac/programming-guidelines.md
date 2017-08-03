@@ -65,11 +65,21 @@ The following features are not available in this release of the ODBC driver on m
 
 ## Character Set Support
 
-For now, the client encoding can be UTF-8 or one of the following character sets: 
-
-ISO8859-1, ISO8859-2, ISO8859-3, ISO8859-4, ISO8859-5, ISO8859-6, ISO8859-7, ISO8859-8, ISO8859-9, ISO8859-13, ISO8859-15.
-
-SQLCHAR data must be one of the supproted character sets. SQLWCHAR data must be UTF-16LE (Little Endian).  
+The client encoding can be one of the following:
+  -  UTF-8
+  -  ISO-8859-1
+  -  ISO-8859-2
+  -  ISO-8859-3
+  -  ISO-8859-4
+  -  ISO-8859-5
+  -  ISO-8859-6
+  -  ISO-8859-7
+  -  ISO-8859-8
+  -  ISO-8859-9
+  -  ISO-8859-13
+  -  ISO-8859-15
+  
+SQLCHAR data must be one of the supported character sets. SQLWCHAR data must be UTF-16LE (Little Endian).  
 
 If SQLDescribeParameter does not specify a SQL type on the server, the driver uses the SQL type specified in the *ParameterType* parameter of SQLBindParameter. If a narrow character SQL type, such as SQL_VARCHAR, is specified in SQLBindParameter, the driver converts the supplied data from the client code page to the default [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] code page. (The default [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] code page is typically 1252.) If the client code page is not supported, it will be set to UTF-8. In this case, the driver then converts the UTF-8 data to the default code page. However, data loss is possible. If code page 1252 cannot represent a character, the driver converts the character to a question mark ('?'). To avoid this data loss, specify a Unicode SQL character type, such as SQL_NVARCHAR, in SQLBindParameter. In this case, the driver converts the supplied Unicode data in UTF-8 encoding to UTF-16 without loss of data.
 

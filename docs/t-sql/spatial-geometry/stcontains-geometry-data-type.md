@@ -1,7 +1,7 @@
 ---
 title: "STContains (geometry Data Type) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "08/03/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -25,11 +25,7 @@ manager: "jhubbard"
 # STContains (geometry Data Type)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Returns 1 if a **geometry** instance completely contains another **geometry** instance. Returns 0 if it does not.  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [current version](http://msdn.microsoft.com/library/bb500435.aspx)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
+Returns 1 if a **geometry** instance completely contains another **geometry** instance. Returns 0 if it does not.
   
 ## Syntax  
   
@@ -66,3 +62,4 @@ SELECT @g.STContains(@h);
  [OGC Methods on Geometry Instances](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   
+

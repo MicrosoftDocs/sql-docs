@@ -57,7 +57,7 @@ The SQL Server engine version for this release is 14.0.900.75.
 
 > [!NOTE]
 > You need at least 3.25GB of memory to run SQL Server on Linux.
-> SQL Server Engine has been tested up to 1 TB of memory at this time.
+> SQL Server Engine has been tested up to 1.5 TB of memory at this time.
 
 ### Package details
 

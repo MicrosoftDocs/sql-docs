@@ -2,7 +2,7 @@
 title: "external scripts enabled Server Configuration Option | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "03/15/2017"
+ms.date: "08/03/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -33,7 +33,7 @@ manager: "jhubbard"
   
 ```  
 sp_configure 'external scripts enabled', 1;  
-RECONFIGURE;  
+RECONFIGURE WITH OVERRIDE;  
 ```  
   
  You must restart [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to make this change effective.  

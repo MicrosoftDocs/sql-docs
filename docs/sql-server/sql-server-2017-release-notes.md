@@ -18,10 +18,9 @@ manager: "jhubbard"
 # SQL Server 2017 Release Notes
 This topic describes limitations and issues with [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]. For related information, see the following:
 - [What's New in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md).
-- [SQL Server on Linux Release notes](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-release-notes).
-
- **Try it out:**    
-[![Download from Evaluation Center](../analysis-services/media/download.png)](http://go.microsoft.com/fwlink/?LinkID=829477)  Download [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] from the **[Evaluation Center](http://go.microsoft.com/fwlink/?LinkID=829477)**
+- [SQL Server on Linux release notes](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-release-notes).
+  
+[![Download from Evaluation Center.](../analysis-services/media/download.png)](http://go.microsoft.com/fwlink/?LinkID=829477)  Download [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] from the **[Evaluation Center](http://go.microsoft.com/fwlink/?LinkID=829477)**
 
 ## SQL Server 2017 Release Candidate (RC2 - August 2017)
 There are no SQL Server on Windows release notes for this release. See [SQL Server on Linux Release notes](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-release-notes).
@@ -105,7 +104,7 @@ There are no SQL Server on Windows release notes for this release. See [SQL Serv
 - [Stack Overflow (tag sql-server) - ask technical questions](http://stackoverflow.com/questions/tagged/sql-server)
 - [MSDN Forums - ask technical questions](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)
 - [Microsoft Connect - report bugs and request features](https://connect.microsoft.com/SQLServer/Feedback)
-- [Reddit - general discussion about R](https://www.reddit.com/r/SQLServer/)
+- [Reddit - general discussion about SQL Server](https://www.reddit.com/r/SQLServer/)
 
 ## More information
 - [SQL Server Reporting Services release notes](../reporting-services/reporting-services-release-notes.md).

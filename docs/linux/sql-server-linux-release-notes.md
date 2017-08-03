@@ -32,8 +32,7 @@ The following table lists the releases of SQL Server 2017 covered in this topic.
 
 | Release | Version | Release date |
 |-----|-----|-----|
-| [RC2](#RC2) | 14.0.900.75 | 8-2017 |
-| [RC1](#RC1) | 14.0.800.90 | 7-2017 |
+| [RC2](#RC2) | 14.0.900.75 | 8-2017 || [RC1](#RC1) | 14.0.800.90 | 7-2017 |
 | [CTP 2.1](#ctp21) | 14.0.600.250 | 5-2017 |
 | [CTP 2.0](#ctp20) | 14.0.500.272 | 4-2017 |
 | [CTP 1.4](#ctp14) | 14.0.405.198 | 3-2017 |
@@ -70,7 +69,7 @@ Package details and download locations for the RPM and Debian packages are liste
 | Package | Package version | Downloads |
 |-----|-----|-----|
 | Red Hat RPM package | 14.0.900.75-1 | [Engine RPM package](https://packages.microsoft.com/rhel/7/mssql-server/mssql-server-14.0.900.75-1.x86_64.rpm)</br>[High Availability RPM package](https://packages.microsoft.com/rhel/7/mssql-server/mssql-server-ha-14.0.900.75-1.x86_64.rpm)</br>[Full-text Search RPM package](https://packages.microsoft.com/rhel/7/mssql-server/mssql-server-fts-14.0.900.75-1.x86_64.rpm)</br>[SQL Server Agent RPM package](https://packages.microsoft.com/rhel/7/mssql-server/mssql-server-agent-14.0.900.75-1.x86_64.rpm) | 
-| SLES RPM package1| 14.0.900.75-1 | [mssql-server Engine RPM package](https://packages.microsoft.com/sles/12/mssql-server/mssql-server-14.0.900.75-1.x86_64.rpm)</br>[High Availability RPM package](https://packages.microsoft.com/sles/12/mssql-server/mssql-server-ha-14.0.900.75-1.x86_64.rpm)</br>[Full-text Search RPM package](htpps://packages.microsoft.com/sles/12/mssql-server/mssql-server-fts-14.0.900.75-1.x86_64.rpm)</br>[SQL Server Agent RPM package](https://packages.microsoft.com/rhel/7/mssql-server/mssql-server-agent-14.0.900.75-1.x86_64.rpm) | 
+| SLES RPM package | 14.0.900.75-1 | [mssql-server Engine RPM package](https://packages.microsoft.com/sles/12/mssql-server/mssql-server-14.0.900.75-1.x86_64.rpm)</br>[High Availability RPM package](https://packages.microsoft.com/sles/12/mssql-server/mssql-server-ha-14.0.900.75-1.x86_64.rpm)</br>[Full-text Search RPM package](https://packages.microsoft.com/sles/12/mssql-server/mssql-server-fts-14.0.900.75-1.x86_64.rpm)</br>[SQL Server Agent RPM package](https://packages.microsoft.com/rhel/7/mssql-server/mssql-server-agent-14.0.900.75-1.x86_64.rpm) | 
 | Ubuntu 16.04 Debian package | 14.0.900.75-1 | [Engine Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server/pool/main/m/mssql-server/mssql-server_14.0.900.75-1_amd64.deb)</br>[High Availability Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.900.75-1_amd64.deb)</br>[Full-text Search Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.900.75-1_amd64.deb)</br>[SQL Server Agent Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server/pool/main/m/mssql-server-agent/mssql-server-agent_14.0.900.75-1_amd64.deb) |
 
 ### Supported client tools

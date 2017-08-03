@@ -1,3 +1,4 @@
+
 ---
 # required metadata
 
@@ -32,7 +33,8 @@ The following table lists the releases of SQL Server 2017 covered in this topic.
 
 | Release | Version | Release date |
 |-----|-----|-----|
-| [RC2](#RC2) | 14.0.900.75 | 8-2017 || [RC1](#RC1) | 14.0.800.90 | 7-2017 |
+| [RC2](#RC2) | 14.0.900.75 | 8-2017 |
+| [RC1](#RC1) | 14.0.800.90 | 7-2017 |
 | [CTP 2.1](#ctp21) | 14.0.600.250 | 5-2017 |
 | [CTP 2.0](#ctp20) | 14.0.500.272 | 4-2017 |
 | [CTP 1.4](#ctp14) | 14.0.405.198 | 3-2017 |

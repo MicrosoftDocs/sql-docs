@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "external DataSet objects [Reporting Services]"
 ms.assetid: 11daa013-ec17-4760-80e3-6d84cd8d5722
 caps.latest.revision: 49
-author: "sabotta"
-ms.author: "carlasab"
+author: "guyinacube"
+ms.author: "asaxton"
 manager: "erikre"
 ---
 # Using an External Dataset with Reporting Services

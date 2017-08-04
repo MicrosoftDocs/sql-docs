@@ -1,7 +1,7 @@
-#---
+---
 title: "sys.external_library_files (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/17/2017"
+ms.date: "08/03/2017"
 ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""

@@ -4,7 +4,7 @@ description: Display snippets of updated content for recently changed in documen
 services: na
 documentationcenter: ''
 author: MightyPen
-manager: jhubbard
+manager: craigg
 editor: ''
 ms.service: na
 ms.topic: updart-autogen

@@ -1,7 +1,7 @@
 ---
 title: "Collation and Unicode Support | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
+ms.date: "08/04/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -157,6 +157,8 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
 -   Supplementary characters are not supported for use in metadata, such as in names of database objects.    
     
 -   Introduced in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], a new family of supplementary character (SC) collations can be used with the data types **nchar**, **nvarchar** and **sql_variant**. For example: `Latin1_General_100_CI_AS_SC`, or if using a Japanese collation, `Japanese_Bushu_Kakusu_100_CI_AS_SC`.    
+  > [!NOTE]    
+  >  Databases that use collations with supplementary characters (\_SC), cannot be enabled for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication. This is because some of the system tables and stored procedures that are created for replication, use the legacy **ntext** data type,  which does not support supplementary characters.  
     
      The SC flag can be applied to:    
     

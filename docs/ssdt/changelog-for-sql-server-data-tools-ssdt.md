@@ -1,7 +1,7 @@
 ---
 title: "Changelog for SQL Server Data Tools (SSDT) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/01/2017"
+ms.date: "08/07/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -23,7 +23,7 @@ For detailed posts about what's new and changed, see [the SSDT Team blog](https:
 
 
 ## SSDT 17.2
-Build number: **TBD**
+Build number: 14.0.61707.300
 
 ### What's New?
 

@@ -1,7 +1,7 @@
 ---
 title: "Download SQL Server Data Tools (SSDT) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/01/2017"
+ms.date: "08/07/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -22,7 +22,7 @@ manager: "craigg"
 **[SQL Server Data Tools](https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx)** is a modern development tool that you can download for free to build SQL Server relational databases, Azure SQL databases, Integration Services packages, Analysis Services data models, and Reporting Services reports. With SSDT, you can design and deploy any SQL Server content type with the same ease as you would develop an application in Visual Studio. This release supports SQL Server 2017 through SQL Server 2005, and provides the design environment for adding features that are new in SQL Server.  
     
     
-![download](../ssdt/media/download.png) [Download SQL Server Data Tools 17.2 for Visual Studio 2015](https://go.microsoft.com/fwlink/?linkid=849393)
+![download](../ssdt/media/download.png) [Download SQL Server Data Tools 17.2 for Visual Studio 2015](https://go.microsoft.com/fwlink/?linkid=852922)
 
 ![download](../ssdt/media/download.png) [Download Data-Tier Application Framework (DacFx) 17.2](https://www.microsoft.com/download/details.aspx?id=55255)
 
@@ -30,7 +30,7 @@ manager: "craigg"
 **Version Information**  
   
 The release number: 17.2  
-The build number for this release: **TBD**
+The build number for this release: 14.0.61707.300
   
 **What's New**
 
@@ -52,17 +52,17 @@ The build number for this release: **TBD**
   **Available Languages**  
   
  This release of SSDT can be installed in the following languages:  
-[Chinese (People's Republic of China)]( https://go.microsoft.com/fwlink/?linkid=849393&clcid=0x804) | 
-[Chinese (Taiwan)]( https://go.microsoft.com/fwlink/?linkid=849393&clcid=0x404) | 
-[English (United States)]( https://go.microsoft.com/fwlink/?linkid=849393&clcid=0x409) | 
-[French]( https://go.microsoft.com/fwlink/?linkid=849393&clcid=0x40c)  
-[German]( https://go.microsoft.com/fwlink/?linkid=849393&clcid=0x407) | 
-[Italian]( https://go.microsoft.com/fwlink/?linkid=849393&clcid=0x410) | 
-[Japanese]( https://go.microsoft.com/fwlink/?linkid=849393&clcid=0x411) | 
-[Korean]( https://go.microsoft.com/fwlink/?linkid=849393&clcid=0x412) | 
-[Portuguese (Brazil)]( https://go.microsoft.com/fwlink/?linkid=849393&clcid=0x416) | 
-[Russian]( https://go.microsoft.com/fwlink/?linkid=849393&clcid=0x419) | 
-[Spanish]( https://go.microsoft.com/fwlink/?linkid=849393&clcid=0x40a)  
+[Chinese (People's Republic of China)]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x804) | 
+[Chinese (Taiwan)]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x404) | 
+[English (United States)]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x409) | 
+[French]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x40c)  
+[German]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x407) | 
+[Italian]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x410) | 
+[Japanese]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x411) | 
+[Korean]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x412) | 
+[Portuguese (Brazil)]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x416) | 
+[Russian]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x419) | 
+[Spanish]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x40a)  
 
 **ISO Images**
 

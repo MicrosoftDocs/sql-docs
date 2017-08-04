@@ -25,7 +25,7 @@ There are several ways to import data from Excel files to SQL Server or to Azure
     -   Azure Data Factory
 
 > [!IMPORTANT]
-> A complete description of complex tools and services like SSIS or Azure Data Factory is beyond the scope of this overview. To learn more about the solution that interests you, follow the links provided for tutorials and more info.
+> A complete description of complex tools and services like SSIS or Azure Data Factory is beyond the scope of this overview. To learn more about the solution that interests you, follow the links provided for more info.
 
 ## SQL Server Import and Export Wizard
 
@@ -41,7 +41,7 @@ If you're familiar with SSIS and don't want to run the SQL Server Import and Exp
 
 ![Components in the data flow](media/excel-to-sql-data-flow.png)
 
-For more info about these SSIS components, see the following topics.
+For more info about these SSIS components, see the following topics:
 -   [Excel Source](../../integration-services/data-flow/excel-source.md)
 -   [SQL Server Destination](../../integration-services/data-flow/sql-server-destination.md)
 
@@ -66,7 +66,7 @@ RECONFIGURE;
 GO
 ```
 
-The following code sample uses `OPENROWSET` to import the data from the Excel `Data` worksheet into a new SQL Server table.
+The following code sample uses `OPENROWSET` to import the data from the Excel `Data` worksheet into a new database table.
 
 ```sql
 USE ImportFromExcel;
@@ -92,14 +92,14 @@ To *append* the imported data to an *existing* table instead of creating a new t
 
 To query the Excel data without importing it, just use the standard `SELECT ... FROM ...` syntax.
 
-For more info about distributed queries, see the following topics.
+For more info about distributed queries, see the following topics:
 -   [Distributed Queries](https://msdn.microsoft.com/library/ms188721(v=sql.105).aspx). (Distributed queries are still supported in SQL Server 2016, but the documentation for this feature has not been updated.)
 -   [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md)
 -   [OPENDATASOURCE](../../t-sql/functions/openquery-transact-sql.md)
 
 ### Linked servers
 
-You can also configure a persistent connection to the Excel file as a *linked server*. The following example imports the data from the `Data` worksheet on the existing Excel linked server `EXCELLINK` into a new SQL Server table named `Data_ls`.
+You can also configure a persistent connection to the Excel file as a *linked server*. The following example imports the data from the `Data` worksheet on the existing Excel linked server `EXCELLINK` into a new database table named `Data_ls`.
 
 ```sql
 USE ImportFromExcel;
@@ -132,11 +132,11 @@ EXEC @RC = [master].[dbo].[sp_addlinkedserver] @server, @srvproduct, @provider,
 @datasrc, @location, @provstr, @catalog
 ```
 
-For more info about linked servers, see the following topics.
+For more info about linked servers, see the following topics:
 -   [Create Linked Servers](../../relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md)
 -   [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md)
 
-For more examples and info about both linked servers and distributed queries, see the following topics.
+For more examples and info about both linked servers and distributed queries, see the following topics:
 -   [How to use Excel with SQL Server linked servers and distributed queries](https://support.microsoft.com/help/306397/how-to-use-excel-with-sql-server-linked-servers-and-distributed-queries)
 -   [How to import data from Excel to SQL Server](https://support.microsoft.com/help/321686/how-to-import-data-from-excel-to-sql-server)
 
@@ -163,7 +163,7 @@ BULK INSERT Data_bi FROM 'D:\Desktop\data.csv'
 GO
 ```
 
-For more info, see the following topics.
+For more info, see the following topics:
 -   [Import Bulk Data by Using BULK INSERT or OPENROWSET(BULK...)](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)
 -   [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)
 
@@ -175,7 +175,7 @@ BCP is a program that you run from the command prompt. The following example loa
 bcp.exe ImportFromExcel..Data_bcp in "D:\Desktop\data.csv" -T -c -t ,
 ```
 
-For more info about BCP, see the following topics.
+For more info about BCP, see the following topics:
 -   [Import and Export Bulk Data by Using the bcp Utility ](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)
 -   [bcp Utility](../../tools/bcp-utility.md)
 -   [Prepare Data for Bulk Export or Import](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md)
@@ -183,18 +183,22 @@ For more info about BCP, see the following topics.
 ## Copy Wizard (Azure Data Factory)
 Import data saved as text files by stepping through the pages of the Copy Wizard.
 
-For more info about the Copy Wizard, see the following topics.
+For more info about the Copy Wizard, see the following topics:
 -   [Data Factory Copy Wizard](https://docs.microsoft.com/azure/data-factory/data-factory-azure-copy-wizard)
 -   [Tutorial: Create a pipeline with Copy Activity using Data Factory Copy Wizard](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-wizard-tutorial).
 
 ## Azure Data Factory
 If you're familiar with Azure Data Factory and don't want to run the Copy Wizard, create a pipeline with a Copy activity that copies from the text file to SQL Server or to Azure SQL Database.
 
-For more info about using these Data Factory sources and sinks, see the following topics.
+For more info about using these Data Factory sources and sinks, see the following topics:
 -   [File system](https://docs.microsoft.com/azure/data-factory/data-factory-onprem-file-system-connector)
 -   [SQL Server](https://docs.microsoft.com/azure/data-factory/data-factory-sqlserver-connector)
 -   [Azure SQL Database](https://docs.microsoft.com/azure/data-factory/data-factory-azure-sql-connector)
 
-To start learning how to copy data with Azure data factory, see the following topics.
+To start learning how to copy data with Azure data factory, see the following topics:
 -   [Move data by using Copy Activity](https://docs.microsoft.com/azure/data-factory/data-factory-data-movement-activities)
 -   [Tutorial: Create a pipeline with Copy Activity using Azure portal](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-from-azure-blob-storage-to-sql-database)
+
+## Next steps
+
+To learn more about the solution that interests you, follow the links provided for more info.

@@ -839,8 +839,10 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 ||PolyBase|Installs PolyBase components.|  
 ||AdvancedAnalytics|Installs R Services (In-Database).|  
 |AS||Installs all [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] components.|  
-|RS||Installs all [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] components.|  
-|DQC||Installs [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)].|  
+|RS||Installs all [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] components.|  
+|RS_SHP||Installs [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Add-In for SharePoint products.|  
+|RS_SHPWFE||Installs [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] components |  
+|DQC||Installs [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)].|  
 |IS||Installs all [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] components.|  
 |MDS||Installs [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].|  
 |SQL_SHARED_MR||Installs Microsoft R Server.|  

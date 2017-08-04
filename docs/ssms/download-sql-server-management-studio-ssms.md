@@ -1,7 +1,7 @@
 ---
 title: "Download SQL Server Management Studio (SSMS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/01/2017"
+ms.date: "08/07/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -38,9 +38,9 @@ Use SQL Server Management Studio (SSMS) to query, design, and manage your databa
 
 SSMS 17.x is the latest generation of *SQL Server Management Studio* and provides support for SQL Server 2017.
 
-**[![download](../ssdt/media/download.png) Download SQL Server Management Studio 17.2](https://go.microsoft.com/fwlink/?linkid=849819)**
+**[![download](../ssdt/media/download.png) Download SQL Server Management Studio 17.2](https://go.microsoft.com/fwlink/?linkid=854085)**
 
-**[![download](../ssdt/media/download.png) Download SQL Server Management Studio 17.2 Upgrade Package (upgrades 17.x to 17.2)](https://go.microsoft.com/fwlink/?linkid=849821)**
+**[![download](../ssdt/media/download.png) Download SQL Server Management Studio 17.2 Upgrade Package (upgrades 17.x to 17.2)](https://go.microsoft.com/fwlink/?linkid=854087)**
 
 The SSMS 17.x installation does not upgrade or replace SSMS versions 16.x or earlier. SSMS 17.x installs side by side with previous versions so both versions are available for use.
 If a computer contains side by side installations of SSMS, verify you start the correct version for your specific needs. The latest version is labeled *Microsoft SQL Server Management Studio 17*, and has a new icon: 
@@ -56,7 +56,7 @@ If a computer contains side by side installations of SSMS, verify you start the 
 **Version Information**
 
 The release number: 17.2
-The build number for this release: **TBD**
+The build number for this release: 14.0.17177.0
 
 ## New in this Release
 
@@ -75,6 +75,7 @@ Version 17.2 includes:
   - Active Directory - Integrated
 
 - Database import/export for DacFx wizard can now use Universal Authentication with MFA.
+- For API support, see [IUniversalAuthProvider Interface](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.iuniversalauthprovider.aspx).
 - ADAL managed library used by Azure AD Universal Authentication with MFA was upgraded to version 3.13.9.
 - A new CLI interface supporting Azure AD admin setting for SQL Database and SQL Data Warehouse.
 
@@ -99,6 +100,14 @@ Version 17.2 includes:
  - Addressed some issues related to paths
  - Activity Monitor stability improvements
  - Connection Properties dialog displays the correct platform
+- Performance Dashboard server report now available as a default report:
+  - Can connect to SQL Server 2008 and newer versions.
+  - Missing indexes sub-report uses scoring to assist in identifying most useful indexes.
+  - Historical wait stats sub-report now aggregates waits be category. Idle and sleep waits filtered out by default.
+  - New Historical latches sub-report.
+- Showplan node search allows searching in plan properties. Easily look for any operator property such as table name. To use this option when viewing a plan:
+  - Right-click on plan, and in the context menu click on Find Node option
+  - Use CTRL+F
 
 For the full list of changes, see [SQL Server Management Studio - Changelog (SSMS)](../ssms/sql-server-management-studio-changelog-ssms.md).
 
@@ -145,10 +154,10 @@ This release of SSMS supports the following 64-bit platforms when used with the 
 This release of SSMS can be installed in the following languages:
 
 SQL Server Management Studio 17.1:<br>
-[Chinese (People's Republic of China)](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x804) | [Chinese (Taiwan)](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x40a)
+[Chinese (People's Republic of China)](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x804) | [Chinese (Taiwan)](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x40a)
 
 SQL Server Management Studio 17.1 Upgrade Package (upgrades 17.0 to 17.1):<br>
-[Chinese (People's Republic of China)](https://go.microsoft.com/fwlink/?linkid=849821&clcid=0x804) | [Chinese (Taiwan)](https://go.microsoft.com/fwlink/?linkid=849821&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=849821&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=849821&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=849821&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=849821&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=849821&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=849821&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=849821&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=849821&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=849821&clcid=0x40a)
+[Chinese (People's Republic of China)](https://go.microsoft.com/fwlink/?linkid=854087&clcid=0x804) | [Chinese (Taiwan)](https://go.microsoft.com/fwlink/?linkid=854087&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=854087&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=854087&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=854087&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=854087&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=854087&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=854087&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=854087&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=854087&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=854087&clcid=0x40a)
 
 ## Release Notes
 

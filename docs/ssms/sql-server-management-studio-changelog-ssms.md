@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Management Studio - Changelog (SSMS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/01/2017"
+ms.date: "08/07/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -17,11 +17,11 @@ manager: "craigg"
 ---
 # SQL Server Management Studio - Changelog (SSMS)
 
-This article provides details about updates, improvements, and bug fixes for the current and previous versions of SSMS. Download previous SSMS versions by clicking the desired section header.
+This article provides details about updates, improvements, and bug fixes for the current and previous versions of SSMS. Download [previous SSMS versions below](#previous-ssms-releases).
 
 ## [SSMS 17.2](download-sql-server-management-studio-ssms.md)
 
-Generally available | Build number: **TBD**
+Generally available | Build number: 14.0.17177.0
 
 ### Enhancements
 
@@ -36,6 +36,7 @@ Generally available | Build number: **TBD**
   - Active Directory - Integrated
 
 - Database export/import for DacFx wizard using Universal Authentication with MFA.
+- For API support, see [IUniversalAuthProvider Interface](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.iuniversalauthprovider.aspx).
 - ADAL managed library used by Azure AD Universal Authentication with MFA was upgraded to 3.13.9 version.
 - In addition a new CLI interface was delivered supporting Azure AD admin setting for SQL Database and SQL Data Warehouse.
 
@@ -149,7 +150,7 @@ Integration Services (IS)
 
 ## Previous SSMS releases
 
-Download previous SSMS versions by clicking the desired version's section header.
+Download previous SSMS versions by clicking the title links in the following sections.
 
 ## ![download](../ssdt/media/download.png) [SSMS 17.1](https://go.microsoft.com/fwlink/?linkid=849819)
 Generally available | Build number: 14.0.17119.0

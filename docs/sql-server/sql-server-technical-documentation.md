@@ -1,6 +1,6 @@
 ---
 title: "SQL Server Technical Documentation | Microsoft Docs"
-ms.date: "07/31/2017"
+ms.date: "08/05/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -30,8 +30,6 @@ manager: "jhubbard"
 
  Documentation to help you install, configure, and use SQL Server. The content includes end-to-end examples, code samples, and videos. For [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] language topics, see [Language Reference](../t-sql/language-reference.md).
 
- 
-
 **SQL Server 2017**
 
 - [SQL Server 2017 Release Notes](../sql-server/sql-server-2017-release-notes.md)
@@ -47,7 +45,10 @@ manager: "jhubbard"
  - [**Download SQL Server 2016  from the Evaluation Center**](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) 
  - **[Spin up a Virtual Machine with SQL Server 2016 already installed](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)**    
  - **[Download the latest version of SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx)**   
-      
+ 
+**Supporting information**
+[Microsoft SQL Server License Terms and Information](https://www.microsoft.com/en-us/download/details.aspx?id=39299) 
+    
 ## SQL Server Technologies    
     
 |||    
@@ -60,8 +61,7 @@ manager: "jhubbard"
 |![Analysis Services](../sql-server/media/analysis-services.png "Analysis Services")|**[Analysis Services](../analysis-services/analysis-services.md)**<br /><br /> [!INCLUDE[ssASnoversion_md](../includes/ssasnoversion-md.md)] is an analytical data platform and toolset for personal, team, and corporate business intelligence. Servers and client designers support traditional OLAP solutions, new tabular modeling solutions, as well as self-service analytics and collaboration using [!INCLUDE[ssGemini](../includes/ssgemini-md.md)], Excel, and a SharePoint Server environment. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] also includes Data Mining so that you can uncover the patterns and relationships hidden inside large volumes of data.|    
 |![Replication services](../sql-server/media/replication-services.png "Replication services")|**[Replication](../relational-databases/replication/sql-server-replication.md)**<br /><br /> Replication is a set of technologies for copying and distributing data and database objects from one database to another, and then synchronizing between databases to maintain consistency. By using replication, you can distribute data to different locations and to remote or mobile users by means of local and wide area networks, dial-up connections, wireless connections, and the Internet.|    
 |![Reporting Services](../sql-server/media/reporting-services.png "Reporting Services")|**[Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)**<br /><br /> Reporting Services delivers enterprise, Web-enabled reporting functionality so you can create reports that draw content from a variety of data sources, publish reports in various formats, and centrally manage security and subscriptions.|    
-
-    
+  
 ## Earlier SQL Server versions
 - [Books Online for SQL Server 2014 Books Online](https://msdn.microsoft.com/library/ms130214(v=sql.120).aspx)
 - [Install SQL Server 2014 Express and other older SQL Server versions](http://www.hanselman.com/blog/DownloadSQLServerExpress.aspx). (**Thank you to [Scott Hanselman](http://www.hanselman.com/) for collecting all of the installer package links in one place!**)  
@@ -81,7 +81,7 @@ manager: "jhubbard"
 + [SQL Server Configuration Manager](../relational-databases/sql-server-configuration-manager.md)
 + [SQL Server Update Center - links and information for all supported versions](https://msdn.microsoft.com/library/ff803383.aspx)
   
-##  ![info_tip](../sql-server/media/info-tip.png) Engage with the SQL Server engineering team 
+##  ![info_tip](../sql-server/media/info-tip.png) Get Help 
 - [Stack Overflow (tag sql-server) - ask technical questions](http://stackoverflow.com/questions/tagged/sql-server)
 - [MSDN Forums - ask technical questions](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)
 - [Microsoft Connect - report bugs and request features](https://connect.microsoft.com/SQLServer/Feedback)

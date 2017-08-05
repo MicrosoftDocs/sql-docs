@@ -37,9 +37,8 @@ manager: "jhubbard"
 - [SQL Server 2017 Release Notes](../sql-server/sql-server-2017-release-notes.md)
 - [What's New in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)
 
-
 **SQL Server 2016**
- 
+
 - [SQL Server 2016 Release Notes](../sql-server/sql-server-2016-release-notes.md)
 - [What's New in SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)
     
@@ -54,7 +53,7 @@ manager: "jhubbard"
 |||    
 |-|-|    
 |![SQL database engine](../sql-server/media/sql-database-engine.png "SQL database engine")|**[Database Engine](../database-engine/configure-windows/sql-server-database-engine.md)**<br /><br /> The Database Engine is the core service for storing, processing, and securing data. The Database Engine provides controlled access and rapid transaction processing to meet the requirements of the most demanding data consuming applications within your enterprise. The Database Engine also provides rich support for sustaining high availability.|    
-|![R Server](../sql-server/media/r-server.png "R Server")|**[Machine Learning Services](../advanced-analytics/r-services/r-services.md)**<br /><br /> Microsoft Machine Learning Services supports integration of machine learning, using the popular R and Python languages, into enterprise workflows.<br /><br /> Machine Learning Services (In-Database) integrates R and Python with SQL Server, making it easy to build, retrain, and score models by calling stored procedures.<br /><br /> Microsoft Machine Learning Server provides enterprise-scale support for R and Python, without requiring SQL Server.|    
+|![R Server](../sql-server/media/r-server.png "R Server")|**[Machine Learning Services](../advanced-analytics/r-services/r-services.md)**<br /><br /> Microsoft Machine Learning Services supports integration of machine learning, using the popular R and Python languages, into enterprise workflows.<br /><br /> Machine Learning Services (In-Database) integrates R and Python with SQL Server, making it easy to build, retrain, and score models by calling stored procedures.  Microsoft Machine Learning Server provides enterprise-scale support for R and Python, without requiring SQL Server.|    
 |![Data Quality Services](../sql-server/media/data-quality-services.png "Data Quality Services")|**[Data Quality Services](../data-quality-services/data-quality-services.md)**<br /><br /> SQL Server Data Quality Services (DQS) provides you with a knowledge-driven data cleansing solution. DQS enables you to build a knowledge base, and then use that knowledge base to perform data correction and deduplication on your data, using both computer-assisted and interactive means. You can use cloud-based reference data services, and you can build a data management solution that integrates DQS with SQL Server Integration Services and Master Data Services.|    
 |![Integration Services](../sql-server/media/integration-services.png "Integration Services")|**[Integration Services](../integration-services/sql-server-integration-services.md)**<br /><br /> [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] is a platform for building high performance data integration solutions, including packages that provide extract, transform, and load (ETL) processing for data warehousing.|    
 |![Master Data Services](../sql-server/media/master-data-services.png)|**[Master Data Services](../master-data-services/master-data-services-installation-and-configuration.md)**<br /><br /> [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] is the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] solution for master data management. A solution built on [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] helps ensure that reporting and analysis is based on the right information. Using [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], you create a central repository for your master data and maintain an auditable, securable record of that data as it changes over time.|    
@@ -70,20 +69,17 @@ manager: "jhubbard"
 - [SQL Server 2008 R2 Product Documentation](https://msdn.microsoft.com/library/hh278298(v=sql.10).aspx)  
 - [SQL Server 2008 technical documentation](https://msdn.microsoft.com/library/hh994727(v=sql.10).aspx) 
 - [SQL Server 2005 archived documentation](https://msdn.microsoft.com/library/hh278313(v=sql.10).aspx)    
-
 **Sample databases**  
 - [Wide World Importers sample database](https://msdn.microsoft.com/library/mt734199(v=sql.1).aspx)  
 - [AdventureWorks sample databases and scripts for SQL Server 2016](https://www.microsoft.com/en-us/download/details.aspx?id=49502) 
 - [SQL Server samples on GitHub](https://github.com/Microsoft/sql-server-samples) 
    
  ## More information   
-+ You can also view SQL Server documentation offline by using the Help Viewer. For more information, see [Help Viewer and Offline Content for SQL Server](../release-notes/sql-server-help-installation.md).
++ [Download SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) 
++ [Download SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
++ To view SQL Server documentation offline, see see [Help Viewer and Offline Content for SQL Server](../release-notes/sql-server-help-installation.md).
 + [SQL Server Configuration Manager](../relational-databases/sql-server-configuration-manager.md)
-+ [SQL Server Update Center](https://msdn.microsoft.com/library/ff803383.aspx) links and information for all supported versions 
-+ [Install SQL Server Database Engine](../database-engine/install-windows/install-sql-server-database-engine.md) 
-+ [Install SQL Server Management Tools with SSMS](https://msdn.microsoft.com/library/bb500441.aspx) 
-+ [SQL Server Data Tools in Visual Studio 2015](https://msdn.microsoft.com/mt186501.aspx)
-+ [Videos, samples, and community resources](https://msdn.microsoft.com/library/dn237258.aspx)
++ [SQL Server Update Center - links and information for all supported versions](https://msdn.microsoft.com/library/ff803383.aspx)
   
 ##  ![info_tip](../sql-server/media/info-tip.png) Engage with the SQL Server engineering team 
 - [Stack Overflow (tag sql-server) - ask technical questions](http://stackoverflow.com/questions/tagged/sql-server)

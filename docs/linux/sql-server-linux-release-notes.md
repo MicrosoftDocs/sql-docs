@@ -160,6 +160,8 @@ The following sections describe known issues with this release of SQL Server 201
       sudo systemctl restart mssql-server
       ```
 
+- SQL Server 2014 databases on Windows that use In-memory OLTP cannot be restored on SQL Server 2017 on Linux. To restore a SQL Server 2014 database that uses in-memory OLTP, first upgrade the databases to SQL Server 2016 or SQL Server 2017 on Windows before moving them to SQL Server on Linux via backup/restore or detach/attach.
+
 #### Remote database files
 
 - Hosting database files on a NFS server is not supported in this release. This includes using NFS for shared disk failover clustering as well as databases on non-clustered instances. We are working on enabling NFS server support in the upcoming releases.
@@ -865,8 +867,6 @@ The following sections describe known issues with this release of SQL Server 201
 
 #### In-Memory OLTP
 - In-Memory OLTP databases can only be created in the /var/opt/mssql directory. For more information, visit the [In-memory OLTP Topic](sql-server-linux-performance-get-started.md#use-in-memory-oltp).
-
-- SQL Server 2014 databases on Windows that use In-memory OLTP cannot be restored on SQL Server 2017 on Linux. To restore a SQL Server 2014 database that uses in-memory OLTP, first upgrade the databases to SQL Server 2016 or SQL Server 2017 on Windows before moving them to SQL Server on Linux via backup/restore or detach/attach.
 
 #### SqlPackage
 - Using SqlPackage requires specifying an absolute path for files. Using relative paths will map the files under the "/tmp/sqlpackage.\<code\>/system/system32" folder. 

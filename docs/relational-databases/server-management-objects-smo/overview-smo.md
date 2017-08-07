@@ -130,7 +130,7 @@ manager: "jhubbard"
   
  The URN of an object can be retrieved by referencing its URN property. The Scripter object also uses URNs as parameters that pass object references to the method of the **Scripter** object. Additionally, an URN can be specified for the **GetSmoObject** method of the **Server** object. This is used to create an instance of the SMO object.  
   
-## New SQL Server Features Represented in SMO  
+## SQL Server Features Represented in SMO  
  **Table and Index Partitioning**  
   
  Index Table Partitioning lets you manage the spread of data in tables and indexes across file groups. This new feature is represented by SMO objects.  

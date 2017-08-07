@@ -2035,6 +2035,11 @@
             "redirect_url": "/sql/ssms/sql-server-management-studio-ssms",
             "redirect_document_id": false
         },
+       	{
+            "source_path": "docs/sql-server/sql-server-resources.md",
+            "redirect_url": "/sql/sql-server/sql-server-technical-documentation",
+            "redirect_document_id": false
+        },
         {
             "source_path": "docs/ssms/previous-sql-server-management-studio-releases.md",
             "redirect_url": "/sql/ssms/sql-server-management-studio-changelog-ssms",

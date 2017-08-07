@@ -1,7 +1,7 @@
 ---
 title: "Using Filegroups and Files to Store Data | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/06/2017"
+ms.date: "03/06/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -27,7 +27,7 @@ manager: "jhubbard"
  Every database that is created automatically has a file group named "Primary" and a data file with the same name as the database. Additional files and groups can be added to the collections.  
   
 ## Examples  
- For the following code examples, you will have to select the programming environment, programming template and the programming language to create your application. For more information, see [Create a Visual C&#35; SMO Project in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ For the following code examples, you will have to select the programming environment, programming template and the programming language to create your application. For more information, see [Create a Visual Basic SMO Project in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-basic-smo-project-in-visual-studio-net.md) and [Create a Visual C&#35; SMO Project in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## Adding FileGroups and DataFiles to a Database in Visual Basic  
  The primary file group and data file are created automatically with default property values. The code example specifies some property values that you can use. Otherwise, the default property values are used.  

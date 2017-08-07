@@ -275,6 +275,7 @@ The following features and services are not available on Linux at this time. The
 | &nbsp; | Stretch DB |
 | &nbsp; | Polybase |
 | &nbsp; | Distributed Query |
+| &nbsp; | Machine Learning Services |
 | &nbsp; | System extended stored procedures (XP_CMDSHELL, etc.) |
 | &nbsp; | Filetable |
 | &nbsp; | CLR assemblies with the EXTERNAL_ACCESS or UNSAFE permission set |

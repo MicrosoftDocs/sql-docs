@@ -58,8 +58,8 @@ for this software, unless other terms accompany those items. If so, those terms 
 * use Microsoft’s trademarks in your programs’ names or in a way that suggests your programs come from or are endorsed by Microsoft;
 * include Distributable Code in malicious, deceptive or unlawful programs; or
 * modify or distribute the source code of any Distributable Code so that any part of it becomes subject to an Excluded License. An Excluded License is one that requires, as a condition of use, modification or distribution, that
-* the code be disclosed or distributed in source code form; or
-* others have the right to modify it.
+  * the code be disclosed or distributed in source code form; or
+  * others have the right to modify it.
 
 **3.	SCOPE OF LICENSE.** The software is licensed, not sold. Unless applicable law gives you more rights, Microsoft reserves all other rights not expressly granted under this agreement, whether by implication, estoppel or otherwise. You may use the software only as expressly permitted in this agreement. In doing so, you must comply with any technical limitations in the software that only allow you to use it in certain ways. You may not
 * work around any technical limitations in the software;
@@ -71,14 +71,21 @@ for this software, unless other terms accompany those items. If so, those terms 
 * use the software for commercial software hosting services.
 
 **4.	THIRD PARTY NOTICES.** The software may include third party components with separate legal notices or governed by other agreements, as may be described in the ThirdPartyNotices file accompanying the software.  Even if such components are governed by other agreements, the disclaimers and the limitations on and exclusions of damages below also apply.
+
 **5.	BACKUP COPY.** You may make one backup copy of the software. You may use it only to reinstall the software.
+
 **6.	DOCUMENTATION.** Any person that has valid access to your computer or internal network may copy and use the documentation for your internal, reference purposes.
+
 **7.	EXPORT RESTRICTIONS.** The software is subject to United States export laws and regulations. You must comply with all domestic and international export laws and regulations that apply to the software. These laws include restrictions on destinations, end users and end use. For additional information, see www.microsoft.com/exporting.
+
 **8.	SUPPORT SERVICES.** Because this software is “as is,” we may not provide support services for it.
+
 **9.	ENTIRE AGREEMENT**. This agreement, and the terms for supplements, updates, Internet-based services and support services that you use, are the entire agreement for the software and support services.
+
 **10.	APPLICABLE LAW.**
 
 &nbsp;&nbsp;**a.	United States.** If you acquired the software in the United States, Washington state law governs the interpretation of this agreement and applies to claims for breach of it, regardless of conflict of laws principles. The laws of the state where you live govern all other claims, including claims under state consumer protection laws, unfair competition laws, and in tort.
+
 &nbsp;&nbsp;**b.	Outside the United States.** If you acquired the software in any other country, the laws of that country apply.
 
 **11.	LEGAL EFFECT.** This agreement describes certain legal rights. You may have other rights under the laws of your country. You may also have rights with respect to the party from whom you acquired the software. This agreement does not change your rights under the laws of your country if the laws of your country do not permit it to do so.

@@ -20,11 +20,8 @@ manager: "jhubbard"
 ---
 # Move a TDE Protected Database to Another SQL Server
   This topic describes how to to protect a database by using transparent data encryption (TDE), and then move the database to another instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../includes/tsql-md.md)]. TDE performs real-time I/O encryption and decryption of the data and log files. The encryption uses a database encryption key (DEK), which is stored in the database boot record for availability during recovery. The DEK is a symmetric key secured by using a certificate stored in the **master** database of the server or an asymmetric key protected by an EKM module.  
-  
- 
-##  <a name="BeforeYouBegin"></a> Before You Begin  
-  
-###  <a name="Restrictions"></a> Limitations and Restrictions  
+   
+##  <a name="Restrictions"></a> Limitations and Restrictions  
   
 -   When moving a TDE protected database, you must also move the certificate or asymmetric key that is used to open the DEK. The certificate or asymmetric key must be installed in the **master** database of the destination server, so that [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] can access the database files. For more information, see [Transparent Data Encryption &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption.md).  
   
@@ -32,9 +29,7 @@ manager: "jhubbard"
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] stores the files created here in **C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\DATA** by default. Your file names and locations might be different.  
   
-###  <a name="Security"></a> Security  
-  
-####  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Permissions  
   
 -   Requires **CONTROL DATABASE** permission on the **master** database to create the database master key.  
   
@@ -43,6 +38,8 @@ manager: "jhubbard"
 -   Requires **CONTROL DATABASE** permission on the encrypted database and **VIEW DEFINITION** permission on the certificate or asymmetric key that is used to encrypt the database encryption key.  
   
 ##  <a name="SSMSProcedure"></a> To create a database protected by transparent data encryption  
+
+The following procedures show you have to create a database protected by TDE using SQL Server Management Studio and by using Transact-SQL.
   
 ###  <a name="SSMSCreate"></a> Using SQL Server Management Studio  
   
@@ -84,7 +81,7 @@ manager: "jhubbard"
   
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
-    ```  
+    ```sql  
     -- Create a database master key and a certificate in the master database.  
     USE master ;  
     GO  
@@ -136,7 +133,9 @@ manager: "jhubbard"
   
 -   [ALTER DATABASE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-database-transact-sql.md)  
   
-##  <a name="TsqlProcedure"></a> To move a database  
+##  <a name="TsqlProcedure"></a> To move a database protected by transparent data encryption 
+
+The following procedures show you have to move a database protected by TDE using SQL Server Management Studio and by using Transact-SQL.
   
 ###  <a name="SSMSMove"></a> Using SQL Server Management Studio  
   
@@ -257,7 +256,7 @@ manager: "jhubbard"
   
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
-    ```  
+    ```sql  
     -- Detach the TDE protected database from the source server.   
     USE master ;  
     GO  

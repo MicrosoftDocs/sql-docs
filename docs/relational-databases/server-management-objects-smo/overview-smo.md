@@ -1,7 +1,7 @@
 ---
 title: "Overview (SMO) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/02/2016"
+ms.date: "08/06/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -20,11 +20,9 @@ manager: "jhubbard"
   
  For example, the user applications that control the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] management tasks might have to be simplified to meet the needs of new users and to reduce training costs. You might have to create customized [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases, or create an application for creating and monitoring the efficiency of indexes. An SMO application might also be used to include third-party hardware or software seamlessly into the database management application.  
   
- The SMO object model extends and supersedes the Distributed Management Objects (SQL-DMO) object model. Compared to SQL-DMO, SMO increases performance, control, and ease of use. Most SQL-DMO functionality is included in SMO, and there are various new classes that support new features in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The object model is intuitive and uses SQL-DMO terminology, where it is possible, to help transfer your skills.  
-  
  Because SMO is compatible with [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later versions, you can easily manage a multi-version environment.  
   
- New features in SMO include the following:  
+ Features in SMO include the following:  
   
 -   Cached object model and optimized object instance creation. Objects are loaded only when specifically referenced. Object properties are only partially loaded when the object is created. The remaining objects and properties are loaded when they are referenced directly.  
   
@@ -85,12 +83,10 @@ manager: "jhubbard"
   
 -   Scripter Class. This is used to create script files for the regeneration of objects and their dependencies.  
   
-## New SMO Features  
+## SMO Features  
  **Optimized Performance**  
   
- In SQL-DMO, object enumeration required that each object within a collection was fully instantiated. This is inefficient in terms of network and memory footprint. On many occasions an object might be instantiated without most of its properties being explicitly referenced.  
-  
- The SMO architecture is more efficient in terms of memory because objects are only partially instantiated at first, and minimal property information is requested from the server. Full instantiation of objects is delayed until the object is explicitly referenced. An object is fully instantiated when a property is requested that is not in the set of properties that are first retrieved, or when a method is called that requires such a property. The transition between partially instantiated and fully instantiated objects is transparent to the user. Additionally, some properties that use lots of memory are never retrieved, unless the property explicitly referenced. An example of this is the <xref:Microsoft.SqlServer.Management.Smo.Database.Size%2A> property of the <xref:Microsoft.SqlServer.Management.Smo.Database> object property. However, partial instantiation does require more network round trips and might not be the best performing option for your application.  
+ The SMO architecture is efficient in terms of memory because objects are only partially instantiated at first, and minimal property information is requested from the server. Full instantiation of objects is delayed until the object is explicitly referenced. An object is fully instantiated when a property is requested that is not in the set of properties that are first retrieved, or when a method is called that requires such a property. The transition between partially instantiated and fully instantiated objects is transparent to the user. Additionally, some properties that use lots of memory are never retrieved, unless the property explicitly referenced. An example of this is the <xref:Microsoft.SqlServer.Management.Smo.Database.Size%2A> property of the <xref:Microsoft.SqlServer.Management.Smo.Database> object property. However, partial instantiation does require more network round trips and might not be the best performing option for your application.  
   
  You can control instantiation to suit the system environment. Relying on delayed instantiation minimizes the amount of memory required by the application, although it might trigger many server requests when properties are referenced.  
   
@@ -114,7 +110,7 @@ manager: "jhubbard"
   
 -   Simple 1-phase scripting (creates the script in one step)  
   
--   Advanced 3-phase scripting (creates the script in three steps; depencency discovery, list generation, script generation)  
+-   Advanced 3-phase scripting (creates the script in three steps; dependency discovery, list generation, script generation)  
   
 -   Two-way dependency discovery (allows for discovery of dependencies, or dependents)  
   
@@ -134,7 +130,7 @@ manager: "jhubbard"
   
  The URN of an object can be retrieved by referencing its URN property. The Scripter object also uses URNs as parameters that pass object references to the method of the **Scripter** object. Additionally, an URN can be specified for the **GetSmoObject** method of the **Server** object. This is used to create an instance of the SMO object.  
   
-## New SQL Server Features Represented in SMO  
+## SQL Server Features Represented in SMO  
  **Table and Index Partitioning**  
   
  Index Table Partitioning lets you manage the spread of data in tables and indexes across file groups. This new feature is represented by SMO objects.  
@@ -170,13 +166,6 @@ manager: "jhubbard"
  **Index Enhancements**  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] index enhancements are represented by new properties in the <xref:Microsoft.SqlServer.Management.Smo.Index> object.  
-  
-## SMO and SQL-DMO  
- The SMO object model supersedes and replaces SQL-DMO. SMO supports [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later versions. It supports more [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] management tasks and contains many new features in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. SMO is designed to be more efficient and provide more control.  
-  
- The DMO library is a COM object model, whereas SMO is implemented as a [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] assembly. COM components are libraries that provide re-usable functionality to applications and in unmanaged application programming. The [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] assemblies provide reusable functionality for the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] to write managed code applications.  
-  
- During the transition to [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] technology it is possible to have applications written partly in managed code and partly in unmanaged code. The [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] lets you interface with COM components, which requires a Primary Interop Assembly. A runtime wrapper is required for SQL-DMO so that it can be called from a [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]-based application.  
   
 ## See Also  
  [Replication Management Objects Concepts](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)  

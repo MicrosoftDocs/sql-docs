@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Management Studio - Changelog (SSMS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/30/2017"
+ms.date: "08/07/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -13,11 +13,146 @@ ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 caps.latest.revision: 72
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ---
 # SQL Server Management Studio - Changelog (SSMS)
 
-## SSMS 17.1 release
+This article provides details about updates, improvements, and bug fixes for the current and previous versions of SSMS. Download [previous SSMS versions below](#previous-ssms-releases).
+
+## [SSMS 17.2](download-sql-server-management-studio-ssms.md)
+
+Generally available | Build number: 14.0.17177.0
+
+### Enhancements
+
+- Multi-Factor Authentication (MFA)
+  - Multiple-user Azure AD authentication for Universal authentication with Multi-factor authentication (UA with MFA)
+  - A new user credential input field was added for Universal Authentication with MFA to support multi-user authentication.
+- The connection dialog box now supports the following 5 authentication methods:
+  - Windows Authentication
+  - SQL Server Authentication
+  - Active Directory - Universal with MFA support
+  - Active Directory - Password
+  - Active Directory - Integrated
+
+- Database export/import for DacFx wizard using Universal Authentication with MFA.
+- For API support, see [IUniversalAuthProvider Interface](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.iuniversalauthprovider.aspx).
+- ADAL managed library used by Azure AD Universal Authentication with MFA was upgraded to 3.13.9 version.
+- In addition a new CLI interface was delivered supporting Azure AD admin setting for SQL Database and SQL Data Warehouse.
+
+ For more information on the Active Directory authentication methods, see [Universal Authentication with SQL Database and SQL Data Warehouse (SSMS support for MFA)](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication) and [Configure Azure SQL Database multi-factor authentication for SQL Server Management Studio](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication-configure).
+
+- Output window has entries for queries run during expansion of Object Explorer nodes
+- Enabled View designer Azure SQL Databases
+- The default scripting options for scripting objects from Object Explorer in SSMS have changed:
+  - Previously, the default on a new install was to have the generated script target the latest version of SQL Server (currently SQL Server 2017).
+  - In SSMS 17.2 a new option has been added: *Match Script Settings to Source*. When set to *True*, the generated script targets the same version, engine type, and engine edition as the server the object being scripted is from.
+  - The *Match Script Settings to Source* value is set to *True* by default, so new installs of SSMS will automatically default to always scripting objects to the same target as the original server.
+  - When the *Match Script Settings to Source* value is set to *False*, the normal scripting target options will be enabled and function as they did previously.
+	- Additionally, all the scripting options have been moved to their own section - *Version Options*. They are no longer under *General Scripting Options*.
+
+- Added support for National Clouds in "Restore from URL"
+- QueryStoreUI reports now supports additional metrics (RowCount, DOP, CLR Time etc.) from sys.query_store_runtime_stats.
+- IntelliSense is now supported for Azure SQL Database
+	- https://connect.microsoft.com/SQLServer/feedback/details/3100677/ssms-2016-would-be-nice-to-have-intellisense-on-azure-sql-databases
+- Security: connection dialog will default to not trusting server certificates and to requesting encryption for Azure SQL DB connections
+- General improvements around support for SQL Server on Linux:
+ - Database Mail node is back
+ - Addressed misc issues related to paths
+ - Activity Monitor is more stable
+ - Connection Properties dialog displays correct platform
+- Performance Dashboard server report now available as a default report:
+  - Can connect to SQL Server 2008 and newer versions.
+  - Missing indexes sub-report uses scoring to assist in identifying most useful indexes.
+  - Historical wait stats sub-report now aggregates waits be category. Idle and sleep waits filtered out by default.
+  - New Historical latches sub-report.
+- Showplan node search allows searching in plan properties. Easily look for any operator property such as table name. To use this option when viewing a plan:
+  - Right-click on plan, and in the context menu click on Find Node option
+  - Use CTRL+F
+
+
+### Analysis Services (AS)
+
+- New AAD role member selection for users without email addresses in AS Azure models in SSMS
+
+### Integration Services (IS)
+
+- Added new column ("Executed Count") to the execution report for SSIS
+
+### Known issues in this release:
+
+- Query windows using "Active Directory - Universal with MFA Support" authentication may experience an error similar to the following, when attempting to execute a query after being open for one hour:
+
+   `Msg 0, Level 11, State 0, Line 0
+The connection is broken and recovery is not possible. The client driver attempted to recover the connection one or more times and all attempts failed. Increase the value of ConnectRetryCount to increase the number of recovery attempts.`
+
+   Re-running the query should get past the error and succeed.
+
+- The following SSMS functionality is not supported for Azure AD auth using Universal Authentication with MFA:
+  - The **New Table/View** designer shows the old-style login prompt, and does not work for Azure AD authentication.
+  - The **Edit Top 200 Rows** feature doesn't support Azure Ad authentication.
+  - The **Registered Server** component does not support Azure AD authentication.
+  - The **Database Engine Tuning Advisor** is not supported for Azure AD authentication. There is a known issue where the error message presented to the user is less than helpful: *Could not load file or assembly 'Microsoft.IdentityModel.Clients.ActiveDirectory,…* instead of the expected *Database Engine Tuning Advisor does not support Microsoft Azure SQL Database. (DTAClient)*.
+
+**AS**
+
+- Object Explorer in SSAS will not show the Windows Auth username in AS Azure connection properties.
+
+### Bug fixes
+
+- Fixed an issue when trying to print the results of a query (as text).  https://connect.microsoft.com/SQLServer/feedback/details/3055225/
+- Fixed an issue where SSMS was incorrectly dropping tables and other objects when scripting the deletion of such objects on a SQL Azure database.
+- Fixed an issue where SSMS occasionally SSMS refuses to start with an error like "Cannot find one or more components. Please reinstall the application"
+- Fixed an issue where the SPID in SSMS UI could get stale and out of sync. https://connect.microsoft.com/SQLServer/feedback/details/1898875
+- Fixed an issue in SSMS (silent) setup where the /passive argument was treated as /quiet.
+- Fixed an issue where SSMS occasionally throws an "Object reference not set to an instance of the object" error on startup. http://connect.microsoft.com/SQLServer/feedback/details/3134698
+- Fixed an issue on the "Data Compression Wizard" that was causing SSMS to crash when pressing 'Calculate' on Graph Table
+- Addressed performance issue when right clicking on an index for a table (over a slow internet connect). https://connect.microsoft.com/SQLServer/feedback/details/3120783
+- Fixed an issue where SSMS was not able to enumerate backup files on servers with a case-sensitive collation. http://connect.microsoft.com/SQLServer/feedback/details/3134787 and https://connect.microsoft.com/SQLServer/feedback/details/3137000
+- Showplan and showplan compare assorted fixes
+- Fixed an issue where the Connection Dialog  was not allowing the user to specify the "Network Protocol" to use for the connection, unless SQL Server was installed on the machine running SSMS. https://connect.microsoft.com/SQLServer/feedback/details/3134997
+- Improved support for multi-monitor configurations where some SSMS dialog were showing up on "random" locations. Added new option "Task Dialogs" under "SQL Server Object Explorer | Commands" user settings to allow remembering the position of a task dialog or property sheet when it closes. https://connect.microsoft.com/SQLServer/feedback/details/889169, https://connect.microsoft.com/SQLServer/feedback/details/1158271, https://connect.microsoft.com/SQLServer/feedback/details/3135260 
+- Fixed an issue where SSMS was not able to change DB properties for encrypted Azure SQL DB
+- Improved "Discard results after execution" option. https://connect.microsoft.com/SQLServer/feedback/details/1196581
+- Improved/fixed issue where users are not able to access Azure subscriptions for which they are not administrators.
+- Improved "Database Restore" wizard to keep the target database selected in OE regadless of the source database selection. https://connect.microsoft.com/SQLServer/feedback/details/3118581
+- Fixed an issue where Object Explorer was not sorting incorrectly newly added "Natively compiled stored procedures". http://connect.microsoft.com/SQLServer/feedback/details/3133365
+- Fixed an issue where "SELECT TOP n ROWS" did not include the "TOP" clause. For Azure SQLDW. https://connect.microsoft.com/SQLServer/feedback/details/3133551 and https://connect.microsoft.com/SQLServer/feedback/details/3135874
+- QueryStoreUI: fixed issue where non-custom time intervals were not working correctly for all reports.
+- Always Encrypted:
+	- Improved messaging for AKV permission status in New CMK dialog
+	- Added tooltips to CEK dropdown to make it easier to distinguish CEKs with long names
+	- Fixed an issue where some CNG key store providers would not be displayed in the New Column Master Key dialog for Always Encrypted
+- Fixed inconsistent "Application Name" for SSMS connections. http://connect.microsoft.com/SQLServer/feedback/details/3135115
+- Fixed an issue where SSMS was not generating correct scripts for SQL Azure (tables and indexes with DATA_COMPRESSIONS option). https://connect.microsoft.com/SQLServer/feedback/details/3133148
+- Fixed an issue where user was not able to use CTRL+Q shortcut for Quick Launch (note: the new key bindings to toggle the "IntelliSense Enabled" option in Query Editor is now CTRL+B, CTRL+I. https://connect.microsoft.com/SQLServer/feedback/details/3131968
+- Fixed an issue in "Restore Database" where SSMS was throwing an exception when trying to select a storage account from a subscription that has accounts with custom domains defined
+- Fixed an issue in "Database Diagram" where SSMS was throwing an "Index was outside the bounds of the array" error; also, the user was not able to change the "Table View" to anything but standard. https://connect.microsoft.com/SQLServer/feedback/details/3133792 and http://connect.microsoft.com/SQLServer/feedback/details/3135326
+- Fixed an issue in "Backup/Restore to URL" where SSMS was not enumerating classic storage accounts.
+- Fixed an issue where an exception was being thrown when trying to add schema-bound securables to DB Roles. https://connect.microsoft.com/SQLServer/feedback/details/3118143
+- Fixed an issue were SSMS was intermittently showing the error "Data is Null. This method or property cannot be called on Null values." when expanding a table node http://connect.microsoft.com/SQLServer/feedback/details/3136283
+- DTA: Fixed an issue where DTAEngine.exe terminates with Heap Corruption when evaluating Partition Function with Certain Boundary Values.
+
+
+Analysis Services (AS)
+- Fixed an issue where AS Restore Database would fail with an error if the DB had a different Name than ID
+- Fixed an issue causing the DAX query window to disregard the menu option for toggling IntelliSense Enabled
+- Fixed an issue that prevented connecting to SSAS through msmdpump IIS http/https addresses
+- Allow connecting to AS Azure using a password that contain a semi-colon
+- Scripting out AS Restore Database command with "Skip Membership" option will include the new corresponding JSON option when used with SQL Server 2017 AS server or AS Azure
+- Fixed an extremely rare issue that could cause the delete database dialog to raise an error when loading
+- Fixed an issue that may occur when attempting to view partitions in 1400-compat level model containing a mix of SQL query and M partition definitions
+
+Integration Services (IS)
+- Fixed issue where the execution information reports of SSISDB catalog can't be displayed
+- Addressed issues in SSMS related to poor performance with large number of projects/packages
+
+
+## Previous SSMS releases
+
+Download previous SSMS versions by clicking the title links in the following sections.
+
+## ![download](../ssdt/media/download.png) [SSMS 17.1](https://go.microsoft.com/fwlink/?linkid=849819)
 Generally available | Build number: 14.0.17119.0
 
 ### Enhancements
@@ -42,7 +177,7 @@ Generally available | Build number: 14.0.17119.0
 - Scripting: temporarily preventing SSMS from accidentally deleting Azure database objects when trying to script the deletion by disabling that option.  Proper fix will be in an upcoming release of SSMS.
 - Object Explorer: fixed an issue where "Databases" node was not expanded when connected to an Azure database created using "AS COPY"
 
-## SSMS 17.0 release
+## ![download](../ssdt/media/download.png) [SSMS 17.0](http://go.microsoft.com/fwlink/?LinkID=847722)
 Generally available | Build number: 14.0.17099.0
 
 ### Enhancements 
@@ -106,9 +241,9 @@ Generally available | Build number: 14.0.17099.0
   - Removed empty chart (5th chart) in Overview section
   - Added "(paused)" to Overview title if the Activity Monitor data collection is paused
   - Graph Extensions to SQL Server 
-			- New icons for graph node and edge tables
-			- Graph node and edge tables will be displayed under Graph Tables folder
-			- Templates to create graph node and edge tables available
+	- New icons for graph node and edge tables
+	- Graph node and edge tables will be displayed under Graph Tables folder
+	- Templates to create graph node and edge tables available
 - Presentation Mode
 	- 3 new tasks available via Quick Launch (Ctr-Q)
 	- PresentOn - Turn on presentation mode
@@ -207,7 +342,7 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 - Ctrl-R now toggles results pane in SSMS DAX query editor
 
 
-## SSMS 16.5.3 release
+## ![download](../ssdt/media/download.png) [SSMS 16.5.3](http://go.microsoft.com/fwlink/?LinkID=840946)
 Generally available | Build number: 13.0.16106.4
 
 The following issues were fixed this release:
@@ -237,7 +372,7 @@ The following issues were fixed this release:
 * SSMS 2016 crashes with error "The process was terminated due to an internal error in the .NET Runtime at IP 71AF8579 (71AE0000) with exit code 80131506"
 
 
-## SSMS 16.5.1 release
+## SSMS 16.5.1
 Generally available | Build number: 13.0.16100.1
 
 * Fixed an issue where Invoke-Sqlcmd erroneously inserts multiple rows when check constraint occurs. [Microsoft Connect Item: 811560](https://connect.microsoft.com/SQLServer/feedback/details/811560)
@@ -247,7 +382,7 @@ Generally available | Build number: 13.0.16100.1
 * Fixed an issue where clicking query plan XML does not open the proper SSMS UI.
 
 
-## SSMS 16.5 release
+## ![download](../ssdt/media/download.png) [SSMS 16.5](http://go.microsoft.com/fwlink/?LinkID=832812)
 Generally available | Build number: 13.0.16000.28
 
 * Fixed an issue where a crash could occur when a database with table name containing “;:” was clicked on.
@@ -271,7 +406,7 @@ Generally available | Build number: 13.0.16000.28
 * Fixed the issue of SSMS crashes that occur when closing the application or when it is trying to show the error dialog.
 
 
-## SSMS 16.4.1 (September 2016) release
+## ![download](../ssdt/media/download.png) [SSMS 16.4.1 (September 2016)](http://go.microsoft.com/fwlink/?LinkID=828615)
 Generally available | Build number: 13.0.15900.1
 
 *  Fixed an issue where attempting to ALTER/Modify a Stored Procedure fails:  
@@ -333,7 +468,7 @@ Generally available | Build number: 13.0.15900.1
 
 
 
-## SSMS 16.3 (August 2016) release
+## ![download](../ssdt/media/download.png) [SSMS 16.3 (August 2016)](http://go.microsoft.com/fwlink/?LinkID=824938)
 Generally available | Version number: 13.0.15700.28
 
 * SSMS monthly releases are now branded numerically.
@@ -389,7 +524,7 @@ Generally available | Version number: 13.0.15700.28
 
 
 ---
-## SSMS July 2016 hotfix update release 
+## ![download](../ssdt/media/download.png) [SSMS July 2016 hotfix update](http://go.microsoft.com/fwlink/?LinkID=822301)
 Generally available | Version number: 13.0.15600.2
 
 * **Bug fix in SSMS to enable missing right-click menu items**.  
@@ -399,357 +534,91 @@ Generally available | Version number: 13.0.15600.2
 [Microsoft Connect item #2924345](https://connect.microsoft.com/SQLServer/feedback/details/2924345/some-ssms-object-explorer-right-click-menu-options-missing-in-july-update)
 
 ---
-## SSMS July 2016 release 
+## SSMS July 2016 
 Generally available | Version number: 13.0.15500.91
 
-* *Edit, July 5th:* **Improved support for SQL Server 2016 (1200 compatibility level) tabular databases in the Analysis Services Process dialog and the Analysis Services deployment wizard.**
+* *Edit, July 5:* Improved support for SQL Server 2016 (1200 compatibility level) tabular databases in the Analysis Services Process dialog and the Analysis Services deployment wizard.
 
-* *Edit, July 5th:* **New option in SSMS 'query execution options' dialog to set 'XACT_ABORT'. This option is enabled by default in this release of SSMS and instructs SQL Server to rollback the entire transaction and abort the batch if a run-time error occurs.**
+* *Edit, July 5:* New option in SSMS 'query execution options' dialog to set 'XACT_ABORT'. This option is enabled by default in this release of SSMS and instructs SQL Server to rollback the entire transaction and abort the batch if a run-time error occurs.
 
-* **Support for Azure SQL Data Warehouse in SSMS.**
+* Support for Azure SQL Data Warehouse in SSMS.
 
-* **Significant updates to the SQL Server PowerShell module. This includes a new [SQL PowerShell module and new CMDLETs for Always Encrypted, SQL Agent, and SQL Error Logs](https://blogs.technet.microsoft.com/dataplatforminsider/2016/06/30/sql-powershell-july-2016-update)**.
+* Significant updates to the SQL Server PowerShell module. This includes a new [SQL PowerShell module and new CMDLETs for Always Encrypted, SQL Agent, and SQL Error Logs](https://blogs.technet.microsoft.com/dataplatforminsider/2016/06/30/sql-powershell-july-2016-update).
 
-* **Support for PowerShell script generation in the Always Encrypted wizard**.
+* Support for PowerShell script generation in the Always Encrypted wizard.
 
-* **Significantly improved connection times to Azure SQL databases.**
+* Significantly improved connection times to Azure SQL databases.
 
-* **New ‘Backup to URL’ dialog to support the creation of Azure storage credentials for SQL Server 2016 database backups. This provides a more streamlined experience for storing database backups in an Azure storage account.**
+* New ‘Backup to URL’ dialog to support the creation of Azure storage credentials for SQL Server 2016 database backups. This dialog provides a more streamlined experience for storing database backups in an Azure storage account.
  
-* **New Restore dialog to streamline restoring a SQL Server 2016 database backup from the Microsoft Azure storage service.**
+* New Restore dialog to streamline restoring a SQL Server 2016 database backup from the Microsoft Azure storage service.
  
-* **Bug fix in SSMS query designer to allow adding tables to the designer if a user doesn’t have SELECT permissions on them.**
+* Bug fix in SSMS query designer to allow adding tables to the designer if a user doesn’t have SELECT permissions on them.
 
-* **Bug fix to add IntelliSense support for 'TRY_CAST()', and 'TRY_CONVERT()' functions.**  
+* Bug fix to add IntelliSense support for 'TRY_CAST()', and 'TRY_CONVERT()' functions.  
 *Linked customer bug requests:*  
 [Microsoft Connect item #2453461](https://connect.microsoft.com/SQLServer/feedback/details/2453461/sql-server-2012-issue-with-try-cast).
 
-* **Bug fix in PowerShell module to enable loading of ‘SQLAS’ Analysis Services extension.**  
+* Bug fix in PowerShell module to enable loading of ‘SQLAS’ Analysis Services extension.  
 *Linked customer bug requests:*  
 [Microsoft Connect item #2544902](https://connect.microsoft.com/SQLServer/feedback/details/2544902/ssms-march-2016-refresh-sqlps-failed-to-load-the-sqlas-extension).
 
-* **Bug fix in the SSMS editor window to allow drag-and-drop open of Sql files.**  
+* Bug fix in the SSMS editor window to allow drag-and-drop open of Sql files.  
 *Linked customer bug requests:*  
 [Microsoft Connect item #2690658](https://connect.microsoft.com/SQLServer/feedback/details/2690658/cannot-drag-sql-files-into-management-studios).
 
-* **Bug fix in Profiler to fix Profiler crash when exiting.**  
+* Bug fix in Profiler to fix Profiler crash when exiting.  
 *Linked customer bug requests:*  
 [Microsoft Connect item #2616550](https://connect.microsoft.com/SQLServer/feedback/details/2616550/sql-server-2016-rc2-profiler-version-13-0-1300-275-wont-close-after-trace-is-started-even-after-trace-is-stopped).  
 [Microsoft Connect item #2319968](https://connect.microsoft.com/SQLServer/Feedback/Details/2319968).
 
-* **Bug fix in SSMS to prevent crash when trying to edit a join link in the SSMS table designer.**  
+* Bug fix in SSMS to prevent crash when trying to edit a join link in the SSMS table designer.  
 *Linked customer bug requests:*  
 [Microsoft Connect item #2721052](https://connect.microsoft.com/SQLServer/feedback/details/2721052/ssms-view-design-mode-right-click-on-join-crashes-ssms).
 
-* **Bug fix in SSMS to enable database script generation for db_owner role members.**  
+* Bug fix in SSMS to enable database script generation for db_owner role members.  
 *Linked customer bug requests:*  
 [Microsoft Connect item #2869241](https://connect.microsoft.com/SQLServer/feedback/details/2869241/error-with-script-database-as-create-to-in-ssms-2008r2-and-ssms-2016-june).
 
-* **Bug fix in SSMS editor to remove the delay in closing a query tab if the server has gone offline.**  
+* Bug fix in SSMS editor to remove the delay in closing a query tab if the server has gone offline.  
 *Linked customer bug requests:*  
 [Microsoft Connect item #2656058](https://connect.microsoft.com/SQLServer/feedback/details/2656058/ssms-2014-2016-query-tab-takes-significantly-longer-to-close-if-the-instance-it-was-connected-to-is-now-offline).
 
-* **Bug fix to enable Backup option in SQL Server Express databases.**  
+* Bug fix to enable Backup option in SQL Server Express databases. 
 *Linked customer bug requests:*  
 [Microsoft Connect item #2801910](https://connect.microsoft.com/SQLServer/feedback/details/2801910/ssms-2016-backup-option-not-appearing-in-tasks).  
 [Microsoft Connect item #2874434](https://connect.microsoft.com/SQLServer/feedback/details/2874434/backup-missing-from-tasks-context-menu-in-ssms-2016-when-you-are-connected-to-an-express-instance).
 
-* **Bug fix in Analysis Services to correctly show the Data Feed provider for multi-dimensional Analysis Services models.**
+* Bug fix in Analysis Services to correctly show the Data Feed provider for multi-dimensional Analysis Services models.
 
 ----
-## SSMS June 2016 generally available release
+## ![download](../ssdt/media/download.png) [SSMS June 2016](http://go.microsoft.com/fwlink/?LinkID=799832)
 Generally available | Version number: 13.0.15000.23
 
-* **SSMS is generally available starting with the June 2016 release.**
+* SSMS is generally available starting with the June 2016 release.
 
-* **New quick find dialog in SSMS that is better integrated into the current document and allows searching via regular expressions.**  
+* New quick find dialog in SSMS that is better integrated into the current document and allows searching via regular expressions. 
 *Linked customer bug requests:*  
 <https://connect.microsoft.com/SQLServer/feedback/details/2735513/quick-find-replace-in-ssms-2016-rc3/>
 
-* **Improvements in SSMS installer to allow you to track installation progress and process exit codes for unattended installations via scripts.**
+* Improvements in SSMS installer to allow you to track installation progress and process exit codes for unattended installations via scripts.
 
-* **Bug fix in SSMS context-sensitive F1 help to correctly display help documents and articles.**
+* Bug fix in SSMS context-sensitive F1 help to correctly display help documents and articles.
 
-* **Bug fix in Query Data Store 'Regressed Queries' view that caused SSMS to crash when scrolling.** 
+* Bug fix in Query Data Store 'Regressed Queries' view that caused SSMS to crash when scrolling.
 
-* **Bug fix in Excel Analysis Services OLEDB connector to allow connections from Excel 2016 to SQL Server Analysis Services.**
+* Bug fix in Excel Analysis Services OLEDB connector to allow connections from Excel 2016 to SQL Server Analysis Services.
 
-* **Bug fix in SSMS Connection dialog to show the connection dialog on the same monitor as the main SSMS window in multi-monitor systems.**  
+* Bug fix in SSMS Connection dialog to show the connection dialog on the same monitor as the main SSMS window in multi-monitor systems.  
 *Linked customer bug requests:*  
 <https://connect.microsoft.com/SQLServer/feedback/details/724909/connection-dialog-appears-off-screen/>
 <https://connect.microsoft.com/SQLServer/feedback/details/755689/sql-server-management-studio-connect-to-server-popup-dialog/>  
 <https://connect.microsoft.com/SQLServer/feedback/details/389165/sql-server-management-studio-gets-confused-dealing-with-multiple-displays/>
 
-* **Bug fixes in Always Encrypted experience. Fixed bug where Always Encrypted menu option was not enabled correctly for Stretch databases. Also fixed bug in the Always Encrypted wizard where it was not properly using the SafeNet (Luna SA) HSM provider.**
+* Bug fixes in Always Encrypted experience. Fixed bug where Always Encrypted menu option was not enabled correctly for Stretch databases. Also fixed bug in the Always Encrypted wizard where it was not properly using the SafeNet (Luna SA) HSM provider.
 
----
-## SSMS April 2016 Preview 
-Version number: 13.0.14000.36
-  
-* **Improvement in the SSMS installer to add human-readable error messages.**  
-  
-* **Improvement in the Stretch database wizard to add support for predicates**.  
-  
-* **Improvement in the AlwaysEncrypted Powershell commandlet to add key encryption APIs**.  
-  
-* **Bug fix to turn off IntelliSense in the SSMS toolbar if it has been disabled in the Tools,Options dialog.**  
-*Linked customer bug requests:*  
-<https://connect.microsoft.com/SQLServer/feedback/details/2555163/sql-2016-rc2-turning-off-intellisense-from-options-does-not-turn-it-off-on-toolbar/>  
-    
-* **Improvements and bug fixes in the Showplan comparison user interface to reduce the spacing used by long query plans**.  
-  
-* **Bug fixes in SSMS to fix issues that caused SSMS to crash when exiting**.   
-  
-* **Bug fixes in the Always Encrypted wizard to retain user permissions during encryption and to allow database detach operations after the wizard is complete**.  
-  
-* **Bug fix in Always Encrypted New Column Master Key dialog to provide feedback on attempt to generate a key using an unsupported Cryptographic Algorithm (CNG) provider.**  
-  
----  
-## SSMS March 2016 Preview Refresh
-Version number: 13.0.13000.55
-  
-* **SSMS now uses the Visual Studio 2015 Isolated Shell.**  
-*Linked customer bug requests:*  
-<https://connect.microsoft.com/SQLServer/feedback/details/2390544/update-ssms-to-use-visual-studio-2015-dependencies/>  
-  
-* **New quick launch toolbar that helps you to quickly find menu items, and options. (VS 2015 Isolated shell)**  
-  
-* **Improvements in SSMS theming options to add support for an SSMS light theme. (VS 2015 Isolated shell)**  
-  
-* **Bug fix in SSMS tools menu option to correctly reset query shortcuts if the "Reset to Default" button is pressed.**  
-  
-* **Bug fix in SSMS new project templates to display easily readable template names.**  
-  
-* **Resolved error with viewing the SQL Agent job history in SSMS.**  
-*Linked customer bug requests:*  
-<https://connect.microsoft.com/SQLServer/feedback/details/2458860/error-viewing-job-history-microsoft-datawarehouse-sqm/>  
-    
-* **Bug fix to allow off-line installation of SSMS. This allows you to install without the need for an Internet connection. (VS 2015 Isolated shell)**  
-*Linked customer bug requests:*  
-<https://connect.microsoft.com/SQLServer/feedback/details/2497178/cannot-install-ssms-when-server-has-no-internet-access/>  
-    
-* **Bug fix to keep user's current directory when SQL Server PowerShell (SQLPS) module is imported.**  
-*Linked customer bug requests:*  
-<https://connect.microsoft.com/SQLServer/feedback/details/2434605/loading-sqlps-module-changes-current-directory-to-ps-sqlserver/>  
-    
-* **Bug fix in SQL Server PowerShell (SQLPS) module to use approved PowerShell verbs.**  
-*Linked customer bug requests:*  
-<https://connect.microsoft.com/SQLServer/feedback/details/2432891/sqlps-module-uses-unapproved-powershell-verbs/>  
-    
-* **Bug fix in SQL Server Powershell (SQLPS) module to load module faster.**  
-*Linked customer bug requests:*  
-<https://connect.microsoft.com/SQLServer/feedback/details/2429153/sqlps-module-is-slow-to-load/>  
-    
-* **Bug fix in SQL Agent Job Steps to allow modifying a job step.**  
-*Linked customer bug requests:*  
-<https://connect.microsoft.com/SQLServer/feedback/details/2453996/issues-with-agent-in-ssms-2016-rc0-13-0-12000-65/>  
-    
-* **Bug fix in SSMS Object explorer to list tables alphabetically.**  
-*Linked customer bug requests:*  
-<https://connect.microsoft.com/SQLServer/feedback/details/2424718/sql-server-2016-ssms-table-list-confusing/>  
-    
-* **Bug fix in 'available databases' drop down to show accurate list of database names when a SQL Server connection is changed.**  
-*Linked customer bug requests:*  
-<https://connect.microsoft.com/SQLServer/feedback/details/2513420/available-databases-drop-down-box-does-not-update-when-connection-changes-in-ssms/>  
-    
-* **Bug fix in SSMS Keyboard shortcuts to move focus to 'available databases' dropdown if 'CTRL+U' keystroke pressed**  
-*Linked customer bug requests:*  
-<https://connect.microsoft.com/SQLServer/feedback/details/2534820/ssms-ctrl-u-doesnt-work/>  
-  
----  
-## SSMS March 2016 Preview 
-Version number: 13.0.12500.29 
-  
-* **Improvement in SSMS web installer to allow navigation using keyboard keys.**  
-  
-* **Improvement in AlwaysEncrypted wizard to support alias data types for encryption.**  
-  
-* **Bug Fix in AlwaysOn 'New Availability Group' wizard to display the correct number of maximum automatic failover targets.**  
-*Linked customer bug requests:* <https://connect.microsoft.com/SQLServer/feedback/details/2333670/ssms-is-showing-the-wrong-number-of-maximum-automatic-failover-targets/>  
-    
-* **Bug fix in SSMS web installer to fix errors affecting installation.**  
-*Linked customer bug requests:*  
-<https://connect.microsoft.com/SQLServer/feedback/details/2181548/sql-server-2016-ctp-3-2-management-studio-setup/>  
-    
-* **Bug fix in SSMS preview release to enable saving maintenance plans on SQL Server 2012 and below.**  
-      
-* **Bug fixes in Backup wizard to allow custom multiple backup names for striped backups, and to display appropriate backup file name if a new name is entered after a storage credential is selected.**  
-  
----  
-## SSMS February 2016 Preview 
-Version number: 13.0.12000.65
-  
-* **Improvement in Activity monitor to display text options when high contrast settings are enabled in SSMS.**  
-  
-* **Improvement in the Always Encrypted wizard dialog to display a warning if the collation for a column will be changed during the encryption process.**  
-  
-* **Improvement in policy management to add support for creating conditions on Column Encryption Keys, Column Encryption Key Values, and Column Master keys.**  
-  
-* **Bug fix to improve usability of Always Encrypted master key cleanup dialog and Always Encrypted error messages.**  
-  
-* **Bug fix to disable Always Encrypted column master key rotation if only one key exists.**  
-  
-* **Bug fix for 'type initializer' error that occurs if Always Encrypted dialog is launched using the SSMS January release or the SSMS release bundled with the SQL Server RC0 media.**  
-  
----  
-## SSMS January 2016 Preview 
-Version number: 13.0.11000.78 
-  
-* **Bug fix in SSMS to allow the deletion of Extended Events (XEvent) sessions.**  
-  
-* **Bug fix to open properties dialog for a SQL Server 2014 availability group.**  
- *Linked customer bug requests:*  
- <https://connect.microsoft.com/SQLServer/feedback/details/1609719/>  
-     
-* **Bug fix to enable the ability to add an Azure replica to an availability group.**  
- *Linked customer bug requests:*  
- <https://connect.microsoft.com/SQLServer/feedback/details/2029135/>  
-     
-* **Bug fix to open properties dialog for SQL Server 2014 databases.**  
- *Linked customer bug requests:*  
- <https://connect.microsoft.com/SQLServer/feedback/details/2080209/>  
-     
-* **Bug fix to remove duplicate columns that appear for each table when connected to an Azure SQL database.**  
- *Linked customer bug requests:*  
- <https://connect.microsoft.com/SQLServer/feedback/details/2103116/>  
----  
-## SSMS December 2015 Preview 
-Version number: 13.0.900.73
-  
-* **Improvements to Showplan comparison to enable comparison of the current query execution plan with one saved in a file.**  
-  
-* **Improved IntelliSense support for inline columnstore indexes in SSMS.**  
-  
-* **Bug fix in Extended Events session wizard to enable selection of templates when connected to an Azure V12 server.**  
-  
-* **New tab-stops in the "Create Audit" and "New Login" dialogs under the Security folder to enable easier keyboard navigation.**  
-  
-* **Bug fix to enable functionality to "Switch to results tab after query execution" if SSMS is set to display results in grid format.**   
- *Linked customer bug requests:*  
-  <https://connect.microsoft.com/SQLServer/feedback/details/1390296/switch-to-results-tab-after-query-execution-grid-mode-in-ssms-2016>  
-  
-* **Bug fix to display un-truncated column headers if SSMS is set to display results in grid format.**  
- *Linked customer bug requests:*  
-  <https://connect.microsoft.com/SQLServer/feedback/details/2004111/bugbash-column-headers-in-grid-mode-truncated-with-courier-new-8>  
-      
-* **Bug fixes to allow proper installation of SSMS web installer.**  
- *Linked customer bug requests:*  
-<https://connect.microsoft.com/SQLServer/feedback/details/2003865/ssms-october-preview-incoherent-error-message>  
-<https://connect.microsoft.com/SQLServer/feedback/details/2079557/unable-to-instal-sql-server-update-13-0-800-111-over-13-0-700-242-error-code-2711>  
-  
----  
-## SSMS November 2015 Preview
-Version number: 13.0.800.111
-  
-* **Bitmap scaling support for High-DPI displays in SSMS.**  
-  
-* **Improvements to the user-interface of AlwaysEncrypted dialogs and wizards to simplify the process of creating database encryption keys.**  
-  
-* **New right-click context menu option in "Processes" list in Activity monitor to view Live Query Statistics.**  
-  
-* **Bug fix to enable proper uninstall of SSMS preview releases on client machines.**  
-  *Linked customer bug requests:*  
-  <https://connect.microsoft.com/SQLServer/feedback/details/1868474/ssms-2016-preview-can-be-installed-but-not-uninstalled>  
-  
-* **Bug fix to allow editing of job steps in SQL Job Agent even when a file is missing**.  
-  *Linked customer bug requests:*  
-  <https://connect.microsoft.com/SQLServer/feedback/details/1769778/management-studio-2016-sql-job-agent>  
-    <https://connect.microsoft.com/SQLServer/feedback/details/1502100/ssms-preview-error>  
-      
-* **Bug fix in "View Target Data" menu option for an Extended Events Session on a database running in an Azure virtual machine.**  
-  *Linked customer bug requests*:  
-  <https://connect.microsoft.com/SQLServer/feedback/details/1769778/management-studio-2016-sql-job-agent>  
-***  
 
-## SSMS October 2015 Preview 
-Version number: 13.0.700.242  
-* **New modernized lightweight web installer that simplifies the SSMS download and install process.**  
+## Additional Downloads  
+For a list of all SQL Server Management Studio downloads, search the [Microsoft Download Center](https://www.microsoft.com/en-us/download/search.aspx?q=sql%20server%20management%20studio&p=0&r=10&t=&s=Relevancy~Descending).  
   
-* **New Always Encrypted column encryption wizard that enables client-side encryption and decryption of selected columns.**  
-  
-* **New Column Master Key (CMK) rotation dialog for Always Encrypted databases that simplifies the process of rotating encryption keys to keep data secure.**  
-  
-* **New stretch database monitor that allows you to troubleshoot and monitor the migration status of data to the Azure cloud.**  
-  
-* **Improvements to the Stretch database wizard to support choosing a Microsoft Azure server that is not in the default Microsoft Azure subscription.**  
-  *Linked customer bug requests:*  
-  <https://connect.microsoft.com/SQLServer/feedback/details/1687063/cannot-choose-from-multiple-microsoft-azure-subscriptions>  
-* **Bug fix to allow proper display of live execution plan in SSMS.**  
-  *Linked customer bug requests:*  
-<https://connect.microsoft.com/SQLServer/feedback/details/1774446/viewing-live-execution-plan-from-activity-monitor-crashes-ssms>    
-* **Bug fix to remove invalid options in SSMS scripting of database snapshots**  
-  *Linked customer bug requests:*  
-<https://connect.microsoft.com/SQLServer/feedback/details/1515168/ssms-scripting-of-database-snapshots-includes-invalid-options>  
-* **Bug fix in Query Data Store UI to show details in the "Top Resource Consuming Queries" pane.**  
-  *Linked customer bug requests:*  
-<https://connect.microsoft.com/SQLServer/feedback/details/1737185/sql-server-2016-overall-resource-consumption-query-store-pane-issue>  
-***  
-
-## SSMS September 2015 Preview 
-Version number: 13.0.600.65  
-* **New firewall rule dialog that streamlines the process of connecting to an Azure SQL database.**      
-    
-* **Updated "New index" dialog allowing the creation of non-clustered rowstore indexes even when a clustered columnstore index is present. This functionality is available for SQL 2016 and beyond.**      
-  *Linked customer bug requests:*    
-  <https://connect.microsoft.com/SQLServer/feedback/details/1552617/creation-of-nc-index-when-clustered-columnstore-index>  
-      
-* **Bug fix to allow viewing and editing SQL Agent job steps in SSMS preview releases running on Windows 7.**      
-  *Linked customer bug requests:*    
-  <https://connect.microsoft.com/SQLServer/feedback/details/1548140/cannot-view-or-edit-any-sql-agent-job-step>,    
-  <https://connect.microsoft.com/SQLServer/feedback/details/1626895/unable-to-load-dll-dts>,    
-  <https://connect.microsoft.com/SQLServer/feedback/details/1576662/error-creating-new-job-step>     
-      
-* **Bug fix to display trigger nodes in SSMS for SQL Server 2014 and later.**      
-  *Linked customer bug requests:*    
-  <https://connect.microsoft.com/SQLServer/feedback/details/1617533/trigger-node-missing>   
-      
-* **Bug fixes in database and server standard report user interface to exclude version information from header.**      
-  *Linked customer bug requests:*    
-  <https://connect.microsoft.com/SQLServer/feedback/details/1387471/report-headings-wrongly-named>  
-      
-* **Bug fix to prevent a Live Query Statistics node from displaying as complete when it's incomplete.**      
-  *Linked customer bug requests:*    
-  <https://connect.microsoft.com/SQLServer/feedback/details/1589096/live-query-statistics-node-shows-as-completed>  
-  
-***      
-## SSMS August 2015 Preview 
-Version number: 13.0.500.53
-  
-* **Object explorer updates to reduce loading delay when there are a large number of databases.**  
-  
-* **Improvements for installation of SSMS on Windows 10 machines.**  
-  
-* **Bug fixes and updates to SQL Server Configuration manager, and SSMS user reports user interface**    
-***  
-  
-## SSMS July 2015 Preview
-Version number: 13.0.400.91
-  
-* **Database diagrams for Azure SQL Database (V12).**  
-  
-* **Improved IntelliSense support for new temporal table syntax.**  
-  
-* **Updated DacFx library to support latest Azure SQL databases features including row-level security and Azure Active directory authentication.**  
-  
-* **Bug fixes (updated 'check for update' UI, UI fix in 'compatibility level' list and more).**  
-***  
-  
-## SSMS June 2015 Preview 
-Version number: 13.0.300.44
-  
-* **New SSMS light-weight web installer.**  
-  
-* **Automatic check for updates.**  
-  
-* **SSMS now has full-text-search support for Azure SQL Database (V12).**  
-  
-* **Top customer requests addressed:**  
-  * 'Edit Top 200 Rows' enabled for tables and views in Object Explorer.  
-  * Table designer enabled for Azure SQL Database (V12).  
-  * Database and table property dialogs enabled for Azure SQL Database (V12).  
-    
- * **New option to skip prompt to save T-SQL files.**  
-   
- * **Import/Export wizard support for new Azure SQL Database service tiers (Basic, Standard, Premium).**  
-   
- * **Numerous bug fixes (scripting scenarios, enabling change tracking for SQL databases, and more).**   
+For the latest release of SQL Server Management Studio, see [Download SQL Server Management Studio &#40;SSMS&#41;](../ssms/download-sql-server-management-studio-ssms.md).  

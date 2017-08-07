@@ -20,7 +20,7 @@ ms.author: rebeccaz
 
 --- 
 
-# Remove a Transparent Data Encryption (TDE) Protector Using PowerShell
+# Remove a Transparent Data Encryption (TDE) Protector using PowerShell
 
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
 
@@ -36,7 +36,7 @@ The following procedures should only be done in extreme cases or in test environ
 
 If a key is ever suspected to be compromised, such that a service or user had unauthorized access to the key, it’s best to delete the key.
 
-Keep in mind that once the TDE Protector is deleted in Key Vault, **all connections to the encrypted databases under the server are blocked, and these databases go offline and get dropped within 24 hours**. Old backups encrypted with the compromised key are no longer be accessible.
+Keep in mind that once the TDE Protector is deleted in Key Vault, **all connections to the encrypted databases under the server are blocked, and these databases go offline and get dropped within 24 hours**. Old backups encrypted with the compromised key are no longer accessible.
 
 This how-to guide goes over two approaches depending on the desired result after the incident response:
 - To keep the Azure SQL Databases / Data Warehouses **accessible**
@@ -62,9 +62,9 @@ This how-to guide goes over two approaches depending on the desired result after
 
 3. Make sure the server and any replicas have updated to the new TDE Protector using the [Get-AzureRmSqlServerTransparentDataEncryptionProtector](/powershell/module/azurerm.sql/get-azurermsqlservertransparentdataencryptionprotector) cmdlet. 
 
->[!NOTE]
->It may take a few minutes for the new TDE Protector to propagate to all databases and secondary databases under the server.
->
+   >[!NOTE]
+   > It may take a few minutes for the new TDE Protector to propagate to all databases and secondary databases under the server.
+   >
 
    ```powershell
    Get-AzureRmSqlServerTransparentDataEncryptionProtector `

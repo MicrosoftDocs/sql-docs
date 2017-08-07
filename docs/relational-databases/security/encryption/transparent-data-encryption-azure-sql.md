@@ -47,22 +47,22 @@ To learn more about TDE with BYOK support for Azure SQL Database and Data Wareho
 
 To start using TDE with BYOK support, visit the how-to guide [Turn on Transparent Data Encryption using your own key from Key Vault Using PowerShell](transparent-data-encryption-byok-azure-sql-configure.md).
 
-## Moving a TDE protected database
+## Moving a TDE-protected database
 
 You do not need to decrypt databases for operations within Azure. The TDE settings on the source database or primary database are transparently inherited on the target. This includes operations involving:
-- Geo-Restore
-- Self-Service Point in Time Restore
-- Restore a Deleted Database
-- Active Geo_Replication
-- Creating a Database Copy
+- Geo-restore
+- Self-service point-in-time restore
+- Restore a deleted database
+- Active geo-replication
+- Creating a database copy
 
-When exporting a TDE protected database, the exported content of the database is not encrypted. This exported content is stored in unencrypted .bacpac files. Be sure to protect the .bacpac files appropriately and enable TDE once import of the new database is completed.
+When exporting a TDE-protected database, the exported content of the database is not encrypted. This exported content is stored in unencrypted .bacpac files. Be sure to protect the .bacpac files appropriately and enable TDE once import of the new database is completed.
 
 For example, if the .bacpac file is exported from an on-premises SQL Server, then the imported content of the new database is not automatically encrypted. Likewise, if the .bacpac file is exported to an on-premises SQL Server, the new database is also not automatically encrypted.
 
 The one exception is when exporting to and from Azure SQL Database – TDE is enabled in the new database, but the .bacpac file itself is still not encrypted.
 
-## Managing Transparent Data Encryption in Azure portal
+## Managing Transparent Data Encryption in the Azure portal
 
 To configure TDE through Azure portal, you must be connected as the Azure Owner, Contributor, or SQL Security Manager. 
 
@@ -74,9 +74,7 @@ The TDE master key, also referred to as the *TDE Protector*, is set on the serve
 
 ![TDE with BYOK support](./media/transparent-data-encryption-azure-sql/tde-byok-support.png) 
 
-## Programmatically managing Transparent Data Encryption in Azure SQL Database and Data Warehouse
-
-### PowerShell
+## Managing Transparent Data Encryption using PowerShell
 
 To configure TDE through PowerShell, you must be connected as the Azure Owner, Contributor, or SQL Security Manager. 
 
@@ -92,7 +90,7 @@ To configure TDE through PowerShell, you must be connected as the Azure Owner, C
 | [Remove-AzureRmSqlServerKeyVaultKey](/powershell/module/azurerm.sql/remove-azurermsqlserverkeyvaultkey) |Removes a Key Vault key from a SQL server. |
 |  | |
 
-### Transact-SQL
+### Managing Transparent Data Encryption using Transact-SQL
 
 Connect to the database using a login that is an administrator or member of the **dbmanager** role in the master database.
 

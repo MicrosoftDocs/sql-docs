@@ -68,9 +68,7 @@ manager: "jhubbard"
 ## Using Transparent Data Encryption  
  To use TDE, follow these steps.  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
+**Applies to**: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 -   Create a master key  
   
@@ -82,7 +80,7 @@ manager: "jhubbard"
   
  The following example illustrates encrypting and decrypting the `AdventureWorks2012` database using a certificate installed on the server named `MyServerCert`.  
   
-```  
+```sql  
 USE master;  
 GO  
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<UseStrongPasswordHere>';  
@@ -147,7 +145,7 @@ GO
 >  Full-text indexes will be encrypted when a database is set for encryption. Full-text indexes created prior to SQL Server 2008 will be imported into the database during upgrade to SQL Server 2008 or greater and they will be encrypted by TDE.  
 
 > [!TIP]  
->  To monitor changes in the TDE status of a database, use SQL Server Audit or SQL Database Auditing. For SQL Server, TDE is tracked under the audit action group DATABASE_CHANGE_GROUP which can be found in [SQL Server Audit Action Groups and Actions](../../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md).
+> To monitor changes in the TDE status of a database, use SQL Server Audit or SQL Database Auditing. For SQL Server, TDE is tracked under the audit action group DATABASE_CHANGE_GROUP which can be found in [SQL Server Audit Action Groups and Actions](../../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md).
   
 ### Restrictions  
  The following operations are not allowed during initial database encryption, key change, or database decryption:  

@@ -49,7 +49,7 @@ It is important to note that **once a key is stored in Key Vault, that key never
 
 Using TDE with BYOK brings both additional key management tasks to you and related costs for the use of the key vault itself. These considerations are discussed in the next two sections.
 
-### Key Management Responsibilities
+### Key management responsibilities
 
 Taking over encryption key management of an application’s resources is an important responsibility. By using TDE with BYOK through Key Vault, the following are the key management tasks that you are assuming:
 - **Key rotations:** The TDE protectors should be rotated according to internal regulations or compliance requirements. Key rotations can be done through the TDE protector’s key vault.  
@@ -57,14 +57,14 @@ Taking over encryption key management of an application’s resources is an impo
 - **Deleting keys**: Keys may be dropped from Key Vault and the SQL server for additional safety or to meet compliance.
 - **Auditing/reporting on all encryption keys**: Key Vault provides logs that are easy to inject into other security information and event management (SIEM) tools. Operations Management Suite (OMS) [Log Analytics](https://docs.microsoft.com/azure/log-analytics/log-analytics-azure-key-vault) is one example service that is already integrated.
 
-### Pricing Considerations 
+### Pricing considerations 
 
 TDE with BYOK support is a security capability that is built into Azure SQL Database and Data Warehouse, without any extra fees. However, there are related costs for using Key Vault itself. Key Vault operations made by the server are charged as normal operations to your vault, and follow Key Vault’s [pricing](https://azure.microsoft.com/pricing/details/key-vault/). The server sends requests to Key Vault for the following events:
 - SQL instance restarts
 - Key rollovers
 - Every 6 hours to check if any changes have been made to the server’s permissions to the key vault
 
-## Important Warnings
+## Important warnings
 
 ### Loss of access to keys
 
@@ -84,9 +84,9 @@ Key vaults being used for TDE must be in the same AAD tenant as the SQL Database
 
 Unique TDE Protectors for a database or data warehouse are not supported. The TDE Protector is set on the server-level, and inherited by all resources under the server. 
 
-## Guidelines for Managing Encrypted Databases
+## Guidelines for managing encrypted databases
 
-### High Availability & Disaster Recovery
+### High availability and disaster recovery
   
 There are two ways geo-replication can be configured for servers using Key Vault: 
 
@@ -111,7 +111,7 @@ To get started, use the [Add-AzureRmSqlServerKeyVaultKey](/powershell/module/azu
 
 Follow the steps in [Active geo-replication overview](https://docs.microsoft.com/azure/sql-database/sql-database-geo-replication-overview) to configure active geo-replication with these servers and to trigger a failover.  
 
-### Backup & Restore
+### Backup and restore
 
 Once a database is encrypted with TDE using a key from Key Vault, any generated backups are also encrypted with the same TDE Protector.
 
@@ -131,7 +131,7 @@ To learn more about backup recovery for SQL Database, see [Recover an Azure SQL 
 
 ## Best practices
 
-### Key Management 
+### Key management 
 
 To ensure quick key recovery and access your data outside of Azure, we recommend the following:
 - Create your encryption key locally on a local HSM device. (Make sure this is an asymmetric, RSA 2048 key so it is storable in Azure Key Vault.)
@@ -142,7 +142,7 @@ To ensure quick key recovery and access your data outside of Azure, we recommend
 
 Creating the TDE encryption key locally first and importing the asymmetric key is highly recommended for production scenarios because it allows the administrator to escrow the key in a key escrow system. If the asymmetric key is created in the Azure Key Vault, it cannot be escrowed because the private key can never leave the vault. Keys used to protect critical data should be escrowed. The loss of an asymmetric key results in permanently unrecoverable data.
 
-### Pre-configuration for Replicated Databases
+### Pre-configuration for replicated databases
 
 If an encrypted database is going to be replicated to another server, make sure that the server has access to a copy of the Key Vault key material used in the other server **before** moving or replicating the database.  
 

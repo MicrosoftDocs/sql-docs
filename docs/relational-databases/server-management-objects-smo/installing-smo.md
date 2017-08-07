@@ -21,7 +21,9 @@ manager: "jhubbard"
 
 ---
 
-# SMO Nuget Package
+#Installing SMO
+
+## SMO Nuget Package
 
 Beginning with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2017 SMO is distributed as the [Microsoft.SqlServer.SqlManagementObjects](https://www.nuget.org/packages/Microsoft.SqlServer.SqlManagementObjects) nuget package to allow users to develop applications with SMO.
 

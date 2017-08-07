@@ -15,4 +15,4 @@
 # [SMO Programming - Getting Started in Visual C# .NET](smo-programming-getting-started-in-visual-csharp-net.md)
 # [SMO Programming Languages](smo-programming-languages.md)
 # [SMO Syntax Conventions](smo-syntax-conventions.md)
-# [SMO License Terms](smo-license_terms.md)
+# [SMO License Terms](smo-license-terms.md)

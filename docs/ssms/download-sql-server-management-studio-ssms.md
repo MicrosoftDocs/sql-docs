@@ -153,10 +153,10 @@ This release of SSMS supports the following 64-bit platforms when used with the 
 
 This release of SSMS can be installed in the following languages:
 
-SQL Server Management Studio 17.1:<br>
+SQL Server Management Studio 17.2:<br>
 [Chinese (People's Republic of China)](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x804) | [Chinese (Taiwan)](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x40a)
 
-SQL Server Management Studio 17.1 Upgrade Package (upgrades 17.0 to 17.1):<br>
+SQL Server Management Studio 17.2 Upgrade Package (upgrades 17.x to 17.2):<br>
 [Chinese (People's Republic of China)](https://go.microsoft.com/fwlink/?linkid=854087&clcid=0x804) | [Chinese (Taiwan)](https://go.microsoft.com/fwlink/?linkid=854087&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=854087&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=854087&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=854087&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=854087&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=854087&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=854087&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=854087&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=854087&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=854087&clcid=0x40a)
 
 ## Release Notes

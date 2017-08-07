@@ -25,7 +25,7 @@ manager: "jhubbard"
   All required SQL Server Management Object (SMO) components are included in the Microsoft.SqlServer.SqlManagementObjects nuget package. SMO is implemented in several managed assemblies. You can develop SMO applications on either a client or a server.  
 
 >>[!Important]
-The file version of the SMO assemblies is displayed as $(Major).**0**.$(Build).$(Revision). But the embedded assembly version is $(Major).**100**.$(Build).$(Revision). This is done to keep the version of SMO used in each application separate so updates to one doesn't affect any others.
+The file version of the SMO assemblies is displayed as Major.**0**.Build.Revision. But the embedded assembly version is Major.**100**.Build.Revision. This is done to keep the version of SMO used in each application separate so updates to one doesn't affect any others.
 >>
 >>Because of this you should **not** install these versions of the assemblies to the Global Assembly Cache (GAC). Doing so could cause other applications, such as [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Studio, to break. 
   

@@ -152,7 +152,7 @@ Build number: 14.0.61704.140
 - Tabular: Fixed an issue where Integrated Workspace mode was allowed on 32-bit machines even though it is not supported.
 - Tabular: Fixed an issue where clicking on anything while in semi-select mode (typing a DAX expression but clicking a measure, for example) could cause crashes.
 - Tabular: Fixed an issue where Deployment Wizard would reset the model's .Name property back to "Model". [Connect Item](http://connect.microsoft.com/SQLServer/feedback/details/3107018/ssas-deployment-wizard-resets-modelname-to-model)
-- Tabular: Fixed an issue where selecting a hirarchy in TME should display properties even if Diagram View is not selected.
+- Tabular: Fixed an issue where selecting a hierarchy in TME should display properties even if Diagram View is not selected.
 - Tabular: Fixed an issue where pasting into the DAX Formula bar would paste images or other content instead of text when pasting from certain applications.
 - Tabular: Fixed an issue where some old models in the 1103 couldn't be opened due to presence of measures with a specific definition.
 - Tabular: Fixed an issue where XEvent Sessions could not be deleted.

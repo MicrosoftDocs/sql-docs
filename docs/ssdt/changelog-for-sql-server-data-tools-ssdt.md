@@ -69,9 +69,6 @@ Build number: 14.0.61707.300
 - Fixed an issue where some tasks/components/wizards are not localized
 - Changed latest *TargetServerVersion* from "SQL Server vNext" to "SQL Server 2017"
 
-## DacFx 17.2
-
-- Universal Authentication and MFA. For details, see [IUniversalAuthProvider Interface](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.iuniversalauthprovider.aspx) and [Configure and manage Azure Active Directory authentication with SQL Database or SQL Data Warehouse](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure).
 
 ## SSDT 17.1
 Build number: 14.0.61705.170

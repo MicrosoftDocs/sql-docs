@@ -24,7 +24,7 @@ manager: "craigg"
     
 ![download](../ssdt/media/download.png) [Download SQL Server Data Tools 17.2 for Visual Studio 2015](https://go.microsoft.com/fwlink/?linkid=852922)
 
-![download](../ssdt/media/download.png) [Download Data-Tier Application Framework (DacFx) 17.2](https://www.microsoft.com/download/details.aspx?id=55255)
+![download](../ssdt/media/download.png) [Download Data-Tier Application Framework (DacFx) 17.2](https://www.microsoft.com/download/details.aspx?id=55713)
 
 ## SQL Server Data Tools   
 **Version Information**  
@@ -68,17 +68,17 @@ The build number for this release: 14.0.61707.300
 
 An ISO image of SSDT can be used as an alternative way to install SSDT or to set up an Administrative Installation point. The ISO is a self-contained file that contains all of the components needed by SSDT and it can be downloaded using a restartable download manager, useful for situations with limited or less reliable network bandwidth. Once downloaded, the ISO can be mounted as a drive or burned to a DVD.
 
-[Chinese (People's Republic of China)]( https://go.microsoft.com/fwlink/?linkid=849399&clcid=0x804) |
-[Chinese (Taiwan)]( https://go.microsoft.com/fwlink/?linkid=849399&clcid=0x404) |
-[English (United States)]( https://go.microsoft.com/fwlink/?linkid=849399&clcid=0x409) |
-[French]( https://go.microsoft.com/fwlink/?linkid=849399&clcid=0x40c)  
-[German]( https://go.microsoft.com/fwlink/?linkid=849399&clcid=0x407) |
-[Italian]( https://go.microsoft.com/fwlink/?linkid=849399&clcid=0x410) |
-[Japanese]( https://go.microsoft.com/fwlink/?linkid=849399&clcid=0x411) |
-[Korean]( https://go.microsoft.com/fwlink/?linkid=849399&clcid=0x412) |
-[Portuguese (Brazil)]( https://go.microsoft.com/fwlink/?linkid=849399&clcid=0x416) |
-[Russian]( https://go.microsoft.com/fwlink/?linkid=849399&clcid=0x419) |
-[Spanish]( https://go.microsoft.com/fwlink/?linkid=849399&clcid=0x40a)
+[Chinese (People's Republic of China)]( https://go.microsoft.com/fwlink/?linkid=852942&clcid=0x804) |
+[Chinese (Taiwan)]( https://go.microsoft.com/fwlink/?linkid=852942&clcid=0x404) |
+[English (United States)]( https://go.microsoft.com/fwlink/?linkid=852942&clcid=0x409) |
+[French]( https://go.microsoft.com/fwlink/?linkid=852942&clcid=0x40c)  
+[German]( https://go.microsoft.com/fwlink/?linkid=852942&clcid=0x407) |
+[Italian]( https://go.microsoft.com/fwlink/?linkid=852942&clcid=0x410) |
+[Japanese]( https://go.microsoft.com/fwlink/?linkid=852942&clcid=0x411) |
+[Korean]( https://go.microsoft.com/fwlink/?linkid=852942&clcid=0x412) |
+[Portuguese (Brazil)]( https://go.microsoft.com/fwlink/?linkid=852942&clcid=0x416) |
+[Russian]( https://go.microsoft.com/fwlink/?linkid=852942&clcid=0x419) |
+[Spanish]( https://go.microsoft.com/fwlink/?linkid=852942&clcid=0x40a)
 
 ## Download Visual Studio
 

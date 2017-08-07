@@ -22,7 +22,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Files and Version Numbers
-  All required SQL Server Management Object (SMO) components are included in the Microsoft.SqlServer.SqlManagementObjects nuget package. SMO is implemented in several managed assemblies. You can develop SMO applications on either a client or a server.  
+  All required SQL Server Management Object (SMO) components are included in the Microsoft.SqlServer.SqlManagementObjects NuGet package. SMO is implemented in several managed assemblies. You can develop SMO applications on either a client or a server.  
 
 >>[!Important]
 The file version of the SMO assemblies is displayed as Major.**0**.Build.Revision. But the embedded assembly version is Major.**100**.Build.Revision. This is done to keep the version of SMO used in each application separate so updates to one doesn't affect any others.

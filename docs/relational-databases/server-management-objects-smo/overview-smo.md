@@ -110,7 +110,7 @@ manager: "jhubbard"
   
 -   Simple 1-phase scripting (creates the script in one step)  
   
--   Advanced 3-phase scripting (creates the script in three steps; depencency discovery, list generation, script generation)  
+-   Advanced 3-phase scripting (creates the script in three steps; dependency discovery, list generation, script generation)  
   
 -   Two-way dependency discovery (allows for discovery of dependencies, or dependents)  
   

@@ -23,17 +23,17 @@ manager: "jhubbard"
 
 #Installing SMO
 
-## SMO Nuget Package
+## SMO NuGet Package
 
-Beginning with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2017 SMO is distributed as the [Microsoft.SqlServer.SqlManagementObjects](https://www.nuget.org/packages/Microsoft.SqlServer.SqlManagementObjects) nuget package to allow users to develop applications with SMO.
+Beginning with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2017 SMO is distributed as the [Microsoft.SqlServer.SqlManagementObjects](https://www.nuget.org/packages/Microsoft.SqlServer.SqlManagementObjects) NuGet package to allow users to develop applications with SMO.
 
-This is a replacement for SharedManagementObjects.msi, which was previously released as part of the SQL Feature Pack for each release of SQL Server. Applications that use SMO should be updated to use the nuget package instead and will be responsible for ensuring the binaries are installed with the application being developed.
+This is a replacement for SharedManagementObjects.msi, which was previously released as part of the SQL Feature Pack for each release of SQL Server. Applications that use SMO should be updated to use the NuGet package instead and will be responsible for ensuring the binaries are installed with the application being developed.
 
 >>[!Important]
 >>As mentioned on the [Files and Version Numbers](files-and-version-numbers.md) page, you should not install the SMO assemblies into the GAC. Doing so could cause issues with other applications which also use those versions of SMO (such as [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Studio).
 
 ##Installing the Package
 
-See [Nuget Quick Start - Use a Package](https://docs.microsoft.com/en-us/nuget/quickstart/use-a-package) for instructions and examples of installing and using a nuget package. 
+See [NuGet Quick Start - Use a Package](https://docs.microsoft.com/en-us/nuget/quickstart/use-a-package) for instructions and examples of installing and using a NuGet package. 
   
   

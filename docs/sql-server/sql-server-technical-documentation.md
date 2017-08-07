@@ -1,6 +1,6 @@
 ---
 title: "SQL Server Technical Documentation | Microsoft Docs"
-ms.date: "08/05/2017"
+ms.date: "08/07/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -28,7 +28,7 @@ manager: "jhubbard"
 
  > For content related to previous versions of SQL Server, see [Installation for SQL Server 2014](https://msdn.microsoft.com/en-US/library/bb500469(SQL.120).aspx).
 
- Documentation to help you install, configure, and use SQL Server. The content includes end-to-end examples, code samples, and videos. For SQL Server language topics, see [Language Reference](../t-sql/language-reference.md).
+Documentation to help you install, configure, and use SQL Server. The content includes end-to-end examples, code samples, and videos. For SQL Server language topics, see [Language Reference](../t-sql/language-reference.md).
 
 **SQL Server 2017**
 
@@ -43,8 +43,7 @@ manager: "jhubbard"
 **Try SQL Server!**    
 - [![Download from Evaluation Center](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [**Download SQL Server 2017**](http://go.microsoft.com/fwlink/?LinkID=829477)
 - [![Download from Evaluation Center](../includes/media/download2.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) [**Download SQL Server 2016**](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) 
-- **[Spin up a Virtual Machine with SQL Server 2016 already installed](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)**    
-- [![Download from Evaluation Center](../includes/media/download2.png)](https://msdn.microsoft.com/library/mt238290.aspx) [**Download SQL Server Management Studio (SSMS)**](https://msdn.microsoft.com/library/mt238290.aspx)   
+- **[Spin up a Virtual Machine with SQL Server 2016 already installed](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)**   - [![Download from Evaluation Center](../includes/media/download2.png)](https://msdn.microsoft.com/library/mt238290.aspx) [**Download SQL Server Management Studio (SSMS)**](https://msdn.microsoft.com/library/mt238290.aspx)   
 - [![Download from Evaluation Center](../includes/media/download2.png)](../ssdt/download-sql-server-data-tools-ssdt.md) [**Download SQL Server Data Tools (SSDT)**](../ssdt/download-sql-server-data-tools-ssdt.md)
  
 **Supporting information**
@@ -75,7 +74,8 @@ manager: "jhubbard"
 - [SQL Server 2008 R2 Product Documentation](https://msdn.microsoft.com/library/hh278298(v=sql.10).aspx)  
 - [SQL Server 2008 technical documentation](https://msdn.microsoft.com/library/hh994727(v=sql.10).aspx) 
 - [SQL Server 2005 archived documentation](https://msdn.microsoft.com/library/hh278313(v=sql.10).aspx)    
-##Samples**  
+
+## Samples  
 - [Wide World Importers sample database](https://msdn.microsoft.com/library/mt734199(v=sql.1).aspx)  
 - [AdventureWorks sample databases and scripts for SQL Server 2016](https://www.microsoft.com/en-us/download/details.aspx?id=49502) 
 - [SQL Server samples on GitHub](https://github.com/Microsoft/sql-server-samples) 

@@ -1,7 +1,7 @@
 ---
 title: "Using Encryption | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/06/2017"
+ms.date: "08/02/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -38,7 +38,7 @@ manager: "jhubbard"
  In SMO, certificates are represented by the <xref:Microsoft.SqlServer.Management.Smo.Certificate> object. The <xref:Microsoft.SqlServer.Management.Smo.Certificate> object has properties that specify the public key, the name of the subject, period of validity, and information about the issuer. Permission to access the certificate is controlled by using the **Grant**, **Revoke** and **Deny** methods.  
   
 ## Example  
- For the following code example, you will have to select the programming environment, programming template and the programming language to create your application. For more information, see [Create a Visual C&#35; SMO Project in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ For the following code example, you will have to select the programming environment, programming template and the programming language to create your application. For more information, see [Create a Visual Basic SMO Project in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-basic-smo-project-in-visual-studio-net.md) and [Create a Visual C&#35; SMO Project in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## Adding a Certificate in Visual Basic  
  The code example creates a simple certificate with an encryption password. Unlike other objects, the <xref:Microsoft.SqlServer.Management.Smo.Certificate.Create%2A> method has several overloads. The overload used in the example creates a new certificate with an encryption password.  

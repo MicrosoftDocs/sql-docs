@@ -42,7 +42,7 @@ for this software, unless other terms accompany those items. If so, those terms 
      
 &nbsp;&nbsp;**b.    Other Microsoft Programs.**  
 
-   * The software includes other Microsoft SQL Server technologies, , Microsoft Visual Studio  2017, .NET Framework, Visual C++ Redistributable for Visual Studio 2017, and Microsoft Report Viewer 2016 Runtime in conjunction with the software licensed here. These components are governed by separate agreements and their own product support policies, as described in the license terms found in the installation directory for that component or in the “Licenses” folder accompanying the software.  
+   * The software includes other Microsoft SQL Server technologies, Microsoft Visual Studio  2017, .NET Framework, Visual C++ Redistributable for Visual Studio 2017, and Microsoft Report Viewer 2016 Runtime in conjunction with the software licensed here. These components are governed by separate agreements and their own product support policies, as described in the license terms found in the installation directory for that component or in the “Licenses” folder accompanying the software.  
   
 **2.    ADDITIONAL LICENSING REQUIREMENTS AND/OR USE RIGHTS.**  
   

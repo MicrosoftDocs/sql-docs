@@ -3,8 +3,10 @@ title: "Automatic seeding for secondary replicas (SQL Server) | Microsoft Docs"
 description: "Use automatic seeding to initialize secondary replicas."
 services: data-lake-analytics
 ms.custom: ""
-ms.date: "06/22/2017"
-ms.prod: "sql-server-2016"
+ms.date: "08/08/2017"
+ms.prod: 
+ - "sql-server-2016"
+ - "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,7 +25,7 @@ manager: "jhubbard"
 
 [!INCLUDE [tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-In SQL Server 2012 and 2014, the only way to initialize a secondary replica in an availability group is to use backup, copy, and restore. SQL Server 2016 introduces a new feature to initialize a secondary replica – *automatic seeding*. Automatic seeding uses the log stream transport to stream the backup using VDI to the secondary replica for each database of the availability group using the configured endpoints. This new feature can be used either during the initial creation of an availability group or when a database is added to one. Automatic seeding is in all editions of SQL Server that support Always On availability groups, and can be used with both traditional availability groups and [distributed availability groups](distributed-availability-groups.md).
+In SQL Server 2012 and 2014, the only way to initialize a secondary replica in a SQL Server Always On availability group is to use backup, copy, and restore. SQL Server 2016 introduces a new feature to initialize a secondary replica – *automatic seeding*. Automatic seeding uses the log stream transport to stream the backup using VDI to the secondary replica for each database of the availability group using the configured endpoints. This new feature can be used either during the initial creation of an availability group or when a database is added to one. Automatic seeding is in all editions of SQL Server that support Always On availability groups, and can be used with both traditional availability groups and [distributed availability groups](distributed-availability-groups.md).
 
 ## Considerations
 
@@ -50,7 +52,18 @@ Compression can be used for automatic seeding, but it is disabled by default. Tu
 
 ### Disk layout
 
-The folder where the database will be created by automatic seeding must already exist and be the same as the path on the primary replica.
+In SQL Server 2016 and before, the folder where the database will be created by automatic seeding must already exist and be the same as the path on the primary replica. 
+
+In SQL Server 2017, Microsoft recommends using the same data and log file path on all replicas participating in an availability group. In some cases this is not possible. For example, in a cross-platform availability group an instance of SQL Server on Windows and an instance of SQL Server on Linux will have different paths. It is also possible to use different paths on instances of SQL Server hosting availability group replicas on the same platform.
+
+The following table presents examples of supported data disk layouts that can support automatic seeding:
+
+|Primary instance</br>Default data path|Secondary instance</br>Default data path|Primary instance</br>Source file location|Secondary instance</br> Target file location
+|:------|:------|:------|:------
+|c:\\data\\|/var/opt/mssql/data/|c:\\data\\|/var/opt/mssql/data/|
+|c:\\data\\|/var/opt/mssql/data/|c:\\data\\group1\\|/var/opt/mssql/data/group1/|
+|c:\\data\\|d:\\data\\|c:\\data\\|d:\\data\\
+|c:\\data\\|d:\\data\\|c:\\data\\group1\\|d:\\data\\group1\
 
 ### Security
 

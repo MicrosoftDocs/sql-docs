@@ -1,7 +1,7 @@
 ---
 title: "ALTER SERVER AUDIT  (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/08/2017"
+ms.date: "08/08/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -101,7 +101,7 @@ ALTER SERVER AUDIT audit_name
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] operations continue. Audit records are not retained. The audit continues to attempt to log events and will resume if the failure condition is resolved. Selecting the continue option can allow unaudited activity which could violate your security policies. Use this option, when continuing operation of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] is more important than maintaining a complete audit.  
   
  SHUTDOWN  
- Forces a server shut down when the server instance writing to the target cannot write data to the audit target. The login issuing this must have the **SHUTDOWN** permission. If the logon does not have this permission, this function will fail and an error message will be raised. No audited events occur. Use the option when an audit failure could compromise the security or integrity of the system.  
+ Forces the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to shut down when the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] writing to the target cannot write data to the audit target. The login issuing this must have the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  **SHUTDOWN** permission. If the logon does not have this permission, this function will fail and an error message will be raised. No audited events occur. Use the option when an audit failure could compromise the security or integrity of the system.  
   
  FAIL_OPERATION  
  Database actions fail if they cause audited events. Actions which do not cause audited events can continue, but no audited events can occur. The audit continues to attempt to log events and will resume if the failure condition is resolved. Use this option when maintaining a complete audit is more important than full access to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  

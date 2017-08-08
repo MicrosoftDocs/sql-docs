@@ -23,7 +23,7 @@ ADO is used in C++ programs to connect to SQL Server. Of course, it also works t
 Each section in this article describes a component of ADO.
 
 > [!NOTE]
-> ADO.NET is different than ADO. ADO.NET, and many other SQL connection drivers and their languages, are discussed starting at [SQL Server Drivers](../connect/sql-server-drivers.md).
+> ADO.NET is different than ADO. ADO.NET, and many other SQL connection drivers and their languages, are discussed starting at [SQL Server Drivers](../connect/sql-connection-libraries.md).
 
   
 ## ADO  

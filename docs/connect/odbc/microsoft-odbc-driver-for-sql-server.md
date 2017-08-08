@@ -1,7 +1,7 @@
 ---
 title: "Microsoft ODBC Driver for SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "08/08/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -23,6 +23,12 @@ ODBC is the primary native data access API for applications written in C and C++
 ## Download
 
 - [Download ODBC Driver for SQL Server](../../connect/odbc/download-odbc-driver-for-sql-server.md)  
+
+## Code example in C++
+
+We have a small .zip file that contains the source code of a C++ program which uses ODBC:
+
+- [C++ code example, using ODBC](../../odbc/reference/sample-odbc-program.md)
 
 ## Documentation  
 

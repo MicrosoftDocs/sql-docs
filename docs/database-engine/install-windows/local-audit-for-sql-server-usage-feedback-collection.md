@@ -55,7 +55,7 @@ Do the following steps to get the SQL Server CEIP Telemetry service logon accoun
  
 1. Launch **Services** - click on the **Windows**  button and type *services.msc*. 
 
-2. Navigate to the appropriate service. For example, for the database engine locate **SQL Server CEIP service <instance name>**. For Analysis Services locate **SQL Server Analysis Services CEIP <instance name>**. For Integration Services locate **SQL Server Integration Services CEIP service 13**.
+2. Navigate to the appropriate service. For example, for the database engine locate **SQL Server CEIP service \<instance name\>**. For Analysis Services locate **SQL Server Analysis Services CEIP \<instance name\>**. For Integration Services locate **SQL Server Integration Services CEIP service 13**.
 
 3. Right-click on the service and choose **Properties**. 
 

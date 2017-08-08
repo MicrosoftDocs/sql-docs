@@ -1,7 +1,7 @@
 ---
 title: "UNION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/24/2017"
+ms.date: "08/07/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -50,7 +50,7 @@ manager: "jhubbard"
 ```  
   
 ## Arguments  
- \<query_specification> | ( <query_expression> )  
+\<query_specification> | ( \<query_expression> )
  Is a query specification or query expression that returns data to be combined with the data from another query specification or query expression. The definitions of the columns that are part of a UNION operation do not have to be the same, but they must be compatible through implicit conversion. When data types differ, the resulting data type is determined based on the rules for [data type precedence](../../t-sql/data-types/data-type-precedence-transact-sql.md). When the types are the same but differ in precision, scale, or length, the result is determined based on the same rules for combining expressions. For more information, see [Precision, Scale, and Length &#40;Transact-SQL&#41;](../../t-sql/data-types/precision-scale-and-length-transact-sql.md).  
   
  Columns of the **xml** data type must be equivalent. All columns must be either typed to an XML schema or untyped. If typed, they must be typed to the same XML schema collection.  

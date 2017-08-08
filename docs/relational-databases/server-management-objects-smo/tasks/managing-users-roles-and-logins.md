@@ -1,7 +1,7 @@
 ---
 title: "Managing Users, Roles, and Logins | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/02/2016"
+ms.date: "08/06/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -29,35 +29,7 @@ manager: "jhubbard"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] databases also have roles that specify a set of database level privileges that let a user perform specific tasks. Unlike server roles, database roles are not fixed. They can be created, modified, and removed. Privileges and users can be assigned to a database role for bulk administration.  
   
 ## Example  
- For the following code example, you will have to select the programming environment, programming template and the programming language to create your application. For more information, see [Create a Visual Basic SMO Project in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-basic-smo-project-in-visual-studio-net.md) and [Create a Visual C&#35; SMO Project in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
-  
-## Enumerating Logins and Associated Users in Visual Basic  
- Every user in a database is associated with a logon. The logon can be associated with users in more than one database. The code example shows how to call the <xref:Microsoft.SqlServer.Management.Smo.Login.EnumDatabaseMappings%2A> method of the <xref:Microsoft.SqlServer.Management.Smo.Login> object to list all the database users who are associated with the logon. The example creates a logon and user in the [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] database to make sure there is mapping information to enumerate.  
-  
-```VBNET
-'Connect to the local, default instance of SQL Server.
-Dim srv As Server
-srv = New Server
-'Iterate through each database and display.
-Dim db As Database
-For Each db In srv.Databases
-    Console.WriteLine("============================================")
-    Console.WriteLine("Login Mappings for the database: " + db.Name)
-    Console.WriteLine(" ")
-    'Run the EnumLoginMappings method and return details of database user-login mappings to a DataTable object variable.
-    Dim d As DataTable
-    d = db.EnumLoginMappings
-    'Display the mapping information.
-    Dim r As DataRow
-    Dim c As DataColumn
-    For Each r In d.Rows
-        For Each c In r.Table.Columns
-            Console.WriteLine(c.ColumnName + " = " + r(c))
-        Next
-        Console.WriteLine(" ")
-    Next
-Next
-```
+ For the following code examples, you will have to select the programming environment, programming template and the programming language to create your application. For more information, see [Create a Visual C&#35; SMO Project in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## Enumerating Logins and Associated Users in Visual C#  
  Every user in a database is associated with a logon. The logon can be associated with users in more than one database. The code example shows how to call the <xref:Microsoft.SqlServer.Management.Smo.Login.EnumDatabaseMappings%2A> method of the <xref:Microsoft.SqlServer.Management.Smo.Login> object to list all the database users who are associated with the logon. The example creates a logon and user in the [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] database to make sure there is mapping information to enumerate.  
@@ -114,7 +86,7 @@ CD \sql\localhost\Default\Databases
 ```  
   
 ## Managing Roles and Users  
- This sample demonstrates how to how to manage roles and users. The first sample uses C#, the second Visual Basic. These samples need to reference the following assemblies:  
+ This sample demonstrates how to how to manage roles and users. To run this sample you will need to reference the following assemblies:  
   
 -   Microsoft.SqlServer.Smo.dll  
   
@@ -188,73 +160,6 @@ public class A {
       Console.WriteLine(" ");  
    }  
 }  
-```  
-  
- This is the Visual Basic version:  
-  
-```VBNET  
-Imports Microsoft.SqlServer.Management.Smo  
-  
-Public Class A  
-   Public Shared Sub Main()  
-      Dim svr As New Server()  
-      Dim db As New Database(svr, "TESTDB")  
-      db.Create()  
-  
-      ' Creating Logins  
-      Dim login As New Login(svr, "Login1")  
-      login.LoginType = LoginType.SqlLogin  
-      login.Create("password@1")  
-  
-      Dim login2 As New Login(svr, "Login2")  
-      login2.LoginType = LoginType.SqlLogin  
-      login2.Create("password@1")  
-  
-      ' Creating Users in the database for the logins created  
-      Dim user1 As New User(db, "User1")  
-      user1.Login = "Login1"  
-      user1.Create()  
-  
-      Dim user2 As New User(db, "User2")  
-      user2.Login = "Login2"  
-      user2.Create()  
-  
-      ' Creating database permission Sets  
-      Dim dbPermSet As New DatabasePermissionSet(DatabasePermission.AlterAnySchema)  
-      dbPermSet.Add(DatabasePermission.AlterAnyUser)  
-  
-      Dim dbPermSet2 As New DatabasePermissionSet(DatabasePermission.CreateType)  
-      dbPermSet2.Add(DatabasePermission.CreateSchema)  
-      dbPermSet2.Add(DatabasePermission.CreateTable)  
-  
-      ' Creating Database roles  
-      Dim role1 As New DatabaseRole(db, "Role1")  
-      role1.Create()  
-  
-      Dim role2 As New DatabaseRole(db, "Role2")  
-      role2.Create()  
-  
-      ' Granting Database Permission Sets to Roles  
-      db.Grant(dbPermSet, role1.Name)  
-      db.Grant(dbPermSet2, role2.Name)  
-  
-      ' Adding members (Users / Roles) to Role  
-      role1.AddMember("User1")  
-  
-      role2.AddMember("User2")  
-  
-      ' Role1 becomes a member of Role2  
-      role2.AddMember("Role1")  
-  
-      ' Enumerating through explicit permissions granted to Role1  
-      ' enumerates all database permissions for the Grantee  
-      Dim dbPermsRole1 As DatabasePermissionInfo() = db.EnumDatabasePermissions("Role1")  
-      For Each dbp As DatabasePermissionInfo In dbPermsRole1  
-         Console.WriteLine(dbp.Grantee + " has " & dbp.PermissionType.ToString() & " permission.")  
-      Next  
-      Console.WriteLine(" ")  
-   End Sub  
-End Class  
-```  
+```
   
   

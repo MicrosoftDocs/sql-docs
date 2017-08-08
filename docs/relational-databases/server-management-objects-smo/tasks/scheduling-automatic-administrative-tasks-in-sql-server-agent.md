@@ -35,64 +35,15 @@ manager: "jhubbard"
 ## Examples  
  To use any code example that is provided, you will have to choose the programming environment, the programming template, and the programming language in which to create your application. For more information, see [Create a Visual C&#35; SMO Project in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
-1.  For programs that use [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent, you must include the **Imports** statement to qualify the Agent namespace. Insert the statement after the other **Imports** statements, before any declarations in the application, such as:  
+For programs that use [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent, you must include the **using** statement to qualify the Agent namespace. Insert the statement after the other **using** statements, before any declarations in the application, such as:
   
- `Imports Microsoft.SqlServer.Management.Smo`  
+ ```
+using Microsoft.SqlServer.Management.Smo;
   
- `Imports Microsoft.SqlServer.Management.Common`  
+using Microsoft.SqlServer.Management.Common;
   
- `Imports Microsoft.SqlServer.Management.Smo.Agent`  
-  
-## Creating a Job with Steps and a Schedule in Visual Basic  
- This code example creates a job with steps and a schedule, and then informs an operator.  
-  
-```VBNET
-'Connect to the local, default instance of SQL Server.
-Dim srv As Server
-srv = New Server
-'Define an Operator object variable by supplying the Agent (parent JobServer object) and the name in the constructor.
-Dim op As [Operator]
-op = New [Operator](srv.JobServer, "Test_Operator")
-'Set the Net send address.
-op.NetSendAddress = "Network1_PC"
-'Create the operator on the instance of SQL Agent.
-op.Create()
-'Define a Job object variable by supplying the Agent and the name arguments in the constructor and setting properties.
-Dim jb As Job
-jb = New Job(srv.JobServer, "Test_Job")
-'Specify which operator to inform and the completion action.
-jb.OperatorToNetSend = "Test_Operator"
-jb.NetSendLevel = CompletionAction.Always
-'Create the job on the instance of SQL Agent. 
-jb.Create()
-'Define a JobStep object variable by supplying the parent job and name arguments in the constructor.
-Dim jbstp As JobStep
-jbstp = New JobStep(jb, "Test_Job_Step")
-jbstp.Command = "Test_StoredProc"
-jbstp.OnSuccessAction = StepCompletionAction.QuitWithSuccess
-jbstp.OnFailAction = StepCompletionAction.QuitWithFailure
-'Create the job step on the instance of SQL Agent.
-jbstp.Create()
-'Define a JobSchedule object variable by supplying the parent job and name arguments in the constructor. 
-Dim jbsch As JobSchedule
-jbsch = New JobSchedule(jb, "Test_Job_Schedule")
-'Set properties to define the schedule frequency, and duration.
-jbsch.FrequencyTypes = FrequencyTypes.Daily
-jbsch.FrequencySubDayTypes = FrequencySubDayTypes.Minute
-jbsch.FrequencySubDayInterval = 30
-Dim ts1 As TimeSpan
-ts1 = New TimeSpan(9, 0, 0)
-jbsch.ActiveStartTimeOfDay = ts1
-Dim ts2 As TimeSpan
-ts2 = New TimeSpan(17, 0, 0)
-jbsch.ActiveEndTimeOfDay = ts2
-jbsch.FrequencyInterval = 1
-Dim d As Date
-d = New Date(2003, 1, 1)
-jbsch.ActiveStartDate = d
-'Create the job schedule on the instance of SQL Agent.
-jbsch.Create()
-```
+using Imports Microsoft.SqlServer.Management.Smo.Agent;
+  ```
   
 ## Creating a Job with Steps and a Schedule in Visual C#  
  This code example creates a job with steps and a schedule, and then informs an operator.  
@@ -207,35 +158,6 @@ $jbsch.ActiveStartDate = "01/01/2003"
 $jbsch.Create();  
 ```  
   
-## Creating an Alert in Visual Basic  
- This code example creates an alert that is triggered by a performance condition. The condition must be provided in a specific format:  
-  
- **ObjectName|CounterName|Instance|ComparisionOp|CompValue**  
-  
- An operator is required for the alert notification. The <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> type requires square parentheses because **operator** is a Visual Basic keyword.  
-  
-```VBNET
-'Connect to the local, default instance of SQL Server.
-Dim srv As Server
-srv = New Server
-'Define an Alert object variable by supplying the SQL Agent and the name arguments in the constructor.
-Dim al As Alert
-al = New Alert(srv.JobServer, "Test_Alert")
-'Specify the performance condition string to define the alert.
-al.PerformanceCondition = "SQLServer:General Statistics|User Connections||>|3"
-'Create the alert on the SQL Agent.
-al.Create()
-'Define an Operator object variable by supplying the SQL Agent and the name arguments in the constructor.
-Dim op As [Operator]
-op = New [Operator](srv.JobServer, "Test_Operator")
-'Set the net send address.
-op.NetSendAddress = "NetworkPC"
-'Create the operator on the SQL Agent.
-op.Create()
-'Run the AddNotification method to specify the operator is notified when the alert is raised.
-al.AddNotification("Test_Operator", NotifyMethods.NetSend)
-``` 
-  
 ## Creating an Alert in Visual C#  
  This code example creates an alert that is triggered by a performance condition. The condition must be provided in a specific format:  
   
@@ -305,36 +227,6 @@ $al.AddNotification("Test_Operator", $ns)
 #Drop the alert and the operator  
 $al.Drop()  
 $op.Drop()  
-```  
-  
-## Allowing User Access to Subsystem by Using a Proxy Account in Visual Basic  
- This code example shows how to allow a user access to a specified subsystem by using the <xref:Microsoft.SqlServer.Management.Smo.Agent.ProxyAccount.AddSubSystem%2A> method of the <xref:Microsoft.SqlServer.Management.Smo.Agent.ProxyAccount> object.  
-  
-```VBNET
-'Connect to the local, default instance of SQL Server.
-Dim srv As Server
-srv = New Server
-'Declare a JobServer object variable and reference the SQL Agent.
-Dim js As JobServer
-js = srv.JobServer
-'Define a Credential object variable by supplying the parent server and name arguments in the constructor.
-Dim c As Credential
-c = New Credential(srv, "Proxy_accnt")
-'Set the identity to a valid login represented by the vIdentity string variable. 
-'The sub system will run under this login.
-c.Identity = vIdentity
-'Create the credential on the instance of SQL Server.
-c.Create()
-'Define a ProxyAccount object variable by supplying the SQL Agent, the name, the credential, the description arguments in the constructor.
-Dim pa As ProxyAccount
-pa = New ProxyAccount(js, "Test_proxy", "Proxy_accnt", True, "Proxy account for users to run job steps in command shell.")
-'Create the proxy account on the SQL Agent.
-pa.Create()
-'Add the login, represented by the vLogin string variable, to the proxy account. 
-pa.AddLogin(vLogin)
-'Add the CmdExec subsytem to the proxy account. 
-pa.AddSubSystem(AgentSubSystem.CmdExec)
-'Now users logged on as vLogin can run CmdExec job steps with the specified credentials.
 ```
   
 ## Allowing User Access to Subsystem by Using a Proxy Account in Visual C#  

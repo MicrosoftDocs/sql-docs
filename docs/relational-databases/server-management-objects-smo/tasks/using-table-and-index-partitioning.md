@@ -31,53 +31,7 @@ manager: "jhubbard"
  Each <xref:Microsoft.SqlServer.Management.Smo.Table> and <xref:Microsoft.SqlServer.Management.Smo.Index> object specifies which partition scheme it uses in the <xref:Microsoft.SqlServer.Management.Smo.PartitionScheme> property and specifies the columns in the <xref:Microsoft.SqlServer.Management.Smo.PartitionSchemeParameterCollection>.  
   
 ## Example  
- For the following code example, you will have to select the programming environment, programming template and the programming language to create your application. For more information, see [Create a Visual C&#35; SMO Project in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
-  
-## Setting Up a Partition Scheme for a Table in Visual Basic  
- The code example shows how to create a partition function and a partition scheme for the `TransactionHistory` table in the [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] sample database. The partitions are divided by date with the intention of separating out old records into the `TransactionHistoryArchive` table.  
-  
-```VBNET
-'Connect to the local, default instance of SQL Server.
-Dim srv As Server
-srv = New Server()
-'Reference the AdventureWorks2012database.
-Dim db As Database
-db = srv.Databases("AdventureWorks2012")
-'Define and create three new file groups on the database.
-Dim fg2 As FileGroup
-fg2 = New FileGroup(db, "Second")
-fg2.Create()
-Dim fg3 As FileGroup
-fg3 = New FileGroup(db, "Third")
-fg3.Create()
-Dim fg4 As FileGroup
-fg4 = New FileGroup(db, "Fourth")
-fg4.Create()
-'Define a partition function by supplying the parent database and name arguments in the constructor.
-Dim pf As PartitionFunction
-pf = New PartitionFunction(db, "TransHistPF")
-'Add a partition function parameter that specifies the function uses a DateTime range type.
-Dim pfp As PartitionFunctionParameter
-pfp = New PartitionFunctionParameter(pf, DataType.DateTime)
-pf.PartitionFunctionParameters.Add(pfp)
-'Specify the three dates that divide the data into four partitions.
-Dim val() As Object
-val = New Object() {"1/1/2003", "1/1/2004", "1/1/2005"}
-pf.RangeValues = val
-'Create the partition function.
-pf.Create()
-'Define a partition scheme by supplying the parent database and name arguments in the constructor.
-Dim ps As PartitionScheme
-ps = New PartitionScheme(db, "TransHistPS")
-'Specify the partition function and the filegroups required by the partition scheme.
-ps.PartitionFunction = "TransHistPF"
-ps.FileGroups.Add("PRIMARY")
-ps.FileGroups.Add("second")
-ps.FileGroups.Add("Third")
-ps.FileGroups.Add("Fourth")
-'Create the partition scheme.
-ps.Create()
-```
+ For the following code examples, you will have to select the programming environment, programming template and the programming language to create your application. For more information, see [Create a Visual C&#35; SMO Project in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## Setting Up a Partition Scheme for a Table in Visual C#  
  The code example shows how to create a partition function and a partition scheme for the `TransactionHistory` table in the [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] sample database. The partitions are divided by date with the intention of separating out old records into the `TransactionHistoryArchive` table.  

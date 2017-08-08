@@ -49,7 +49,9 @@ UPDATE STATISTICS table_or_indexed_view_name
     [    WITH   
         [  
             FULLSCAN   
+              [ [ , ] PERSIST_SAMPLE_PERCENT = { ON | OFF } ]    
             | SAMPLE number { PERCENT | ROWS }   
+              [ [ , ] PERSIST_SAMPLE_PERCENT = { ON | OFF } ]    
             | RESAMPLE   
               [ ON PARTITIONS ( { <partition_number> | <range> } [, …n] ) ]  
             | <update_stats_stream_option> [ ,...n ]  
@@ -97,7 +99,7 @@ UPDATE STATISTICS schema_name . ] table_name
   
  SAMPLE is useful for special cases in which the query plan, based on default sampling, is not optimal. In most situations, it is not necessary to specify SAMPLE because the query optimizer uses sampling and determines the statistically significant sample size by default, as required to create high-quality query plans. 
  
-Starting with SQL Server 2016, sampling of data to build statistics is done in parallel, when using compatibility level 130, to improve the performance of statistics collection. The query optimizer will use parallel sample statistics, whenever a table size exceeds a certain threshold. 
+Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], sampling of data to build statistics is done in parallel, when using compatibility level 130, to improve the performance of statistics collection. The query optimizer will use parallel sample statistics, whenever a table size exceeds a certain threshold. 
    
  SAMPLE cannot be used with the FULLSCAN option. When neither SAMPLE nor FULLSCAN is specified, the query optimizer uses sampled data and computes the sample size by default.  
   
@@ -111,7 +113,19 @@ For more information, see  the [CSS SQL Escalation Services blog](http://blogs.m
  Update each statistic using its most recent sample rate.  
   
  Using RESAMPLE can result in a full-table scan. For example, statistics for indexes use a full-table scan for their sample rate. When none of the sample options (SAMPLE, FULLSCAN, RESAMPLE) are specified, the query optimizer samples the data and computes the sample size by default.  
-  
+
+PERSIST_SAMPLE_PERCENT = { ON | OFF }
+ When **ON**, the statistics will retain the set sampling percentage for subsequent updates that do not explicitly specify a sampling percentage. When **OFF**, statistics sampling percentage will get reset to default sampling in subsequent updates that do not explicitly specify a sampling percentage. The default is **OFF**. 
+ 
+ > [!NOTE]
+ > If AUTO_UPDATE_STATISTICS is executed, it uses the persisted sampling percentage if available, or use default sampling percentage if not.
+ > RESAMPLE behavior is not affected by this option.
+ 
+ > [!TIP] 
+ > [DBCC SHOW_STATISTICS](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md) and [sys.dm_db_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md) expose the persisted sample percent value for the selected statistic.
+ 
+ **Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4.  
+ 
  ON PARTITIONS ( { <partition_number> | \<range> } [, …n] ) ]  
  Forces the leaf-level statistics covering the partitions specified in the ON PARTITIONS clause to be recomputed, and then merged to build the global statistics. WITH RESAMPLE is required because partition statistics built with different sample rates cannot be merged together.  
   
@@ -162,7 +176,7 @@ For more information, see  the [CSS SQL Escalation Services blog](http://blogs.m
 ## Updating All Statistics with sp_updatestats  
  For information about how to update statistics for all user-defined and internal tables in the database, see the stored procedure [sp_updatestats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md). For example, the following command calls sp_updatestats to update all statistics for the database.  
   
-```  
+```t-sql  
 EXEC sp_updatestats;  
 ```  
   
@@ -172,23 +186,23 @@ EXEC sp_updatestats;
 ## PDW / SQL Data Warehouse  
  The following syntax is not supported by PDW / SQL Data Warehouse  
   
--   ```  
+-   ```t-sql  
     update statistics t1 (a,b);   
     ```  
   
--   ```  
+-   ```t-sql  
     update statistics t1 (a) with sample 10 rows;  
     ```  
   
--   ```  
+-   ```t-sql  
     update statistics t1 (a) with NORECOMPUTE;  
     ```  
   
--   ```  
+-   ```t-sql  
     update statistics t1 (a) with INCREMENTAL=ON;  
     ```  
   
--   ```  
+-   ```t-sql  
     update statistics t1 (a) with stats_stream = 0x01;  
     ```  
   
@@ -200,7 +214,7 @@ EXEC sp_updatestats;
 ### A. Update all statistics on a table  
  The following example updates the statistics for all indexes on the `SalesOrderDetail` table.  
   
-```  
+```t-sql  
 USE AdventureWorks2012;  
 GO  
 UPDATE STATISTICS Sales.SalesOrderDetail;  
@@ -210,7 +224,7 @@ GO
 ### B. Update the statistics for an index  
  The following example updates the statistics for the `AK_SalesOrderDetail_rowguid` index of the `SalesOrderDetail` table.  
   
-```  
+```t-sql  
 USE AdventureWorks2012;  
 GO  
 UPDATE STATISTICS Sales.SalesOrderDetail AK_SalesOrderDetail_rowguid;  
@@ -220,7 +234,7 @@ GO
 ### C. Update statistics by using 50 percent sampling  
  The following example creates and then updates the statistics for the `Name` and `ProductNumber` columns in the `Product` table.  
   
-```  
+```t-sql  
 USE AdventureWorks2012;  
 GO  
 CREATE STATISTICS Products  
@@ -234,7 +248,7 @@ UPDATE STATISTICS Production.Product(Products)
 ### D. Update statistics by using FULLSCAN and NORECOMPUTE  
  The following example updates the `Products` statistics in the `Product` table, forces a full scan of all rows in the `Product` table, and turns off automatic statistics for the `Products` statistics.  
   
-```  
+```t-sql  
 USE AdventureWorks2012;  
 GO  
 UPDATE STATISTICS Production.Product(Products)  
@@ -247,21 +261,21 @@ GO
 ### E. Update statistics on a table  
  The following example updates the `CustomerStats1` statistics on the `Customer` table.  
   
-```  
+```t-sql  
 UPDATE STATISTICS Customer ( CustomerStats1 );  
 ```  
   
 ### F. Update statistics by using a full scan  
  The following example updates the `CustomerStats1` statistics, based on scanning all of the rows in the `Customer` table.  
   
-```  
+```t-sql  
 UPDATE STATISTICS Customer (CustomerStats1) WITH FULLSCAN;  
 ```  
   
 ### G. Update all statistics on a table  
  The following example updates all statistics on the `Customer` table.  
   
-```  
+```t-sql  
 UPDATE STATISTICS Customer;  
 ```  
   
@@ -274,6 +288,7 @@ UPDATE STATISTICS Customer;
  [sp_autostats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-autostats-transact-sql.md)   
  [sp_updatestats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md)   
  [STATS_DATE &#40;Transact-SQL&#41;](../../t-sql/functions/stats-date-transact-sql.md)  
+ [sys.dm_db_stats_properties &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)
   
   
 

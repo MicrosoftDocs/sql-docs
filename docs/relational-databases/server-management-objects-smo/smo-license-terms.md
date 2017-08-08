@@ -11,9 +11,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 8f3d273c-c663-4341-aa2f-5ed8ebcba5b0
 caps.latest.revision: 9
-author: "stevestein"
-ms.author: "sstein"
-manager: "jhubbard"
+author: "Charles-Gagnon"
+ms.author: "chgagnon"
+manager: "kenvh"
 ---
 # SQL Server Shared Management Objects (SMO) License Terms
 

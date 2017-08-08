@@ -36,4 +36,7 @@ This is a replacement for SharedManagementObjects.msi, which was previously rele
 
 See [NuGet Quick Start - Use a Package](https://docs.microsoft.com/en-us/nuget/quickstart/use-a-package) for instructions and examples of installing and using a NuGet package. 
   
+## System Requirements
+  
+ SMO requires [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.0 to run, so any applications using it must ensure that client machines have that version or higher installed.
   

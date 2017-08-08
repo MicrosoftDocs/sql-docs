@@ -73,14 +73,14 @@ Scenarios where source and target database location are not the instance default
 |c:\\data\\ |c:\\data\\ |d:\\data\\ |d:\\data\\
 |c:\\data\\ |c:\\data\\ |d:\\data\\group1\\ |d:\\data\\group1\\
 
-If you mix default and non default plaths on the primary and secondary replicas, SQL Server 2017 behaves differently than previous releases The following table shows the SQL Server 2017 behavior.
+If you mix default and non default paths on the primary and secondary replicas, SQL Server 2017 behaves differently than previous releases The following table shows the SQL Server 2017 behavior.
 
-|Primary instance</br>Default data path |Secondary instance</br>Default data path |Primary instance</br>Source file location |SQL Server 2016</br>Secondary instance</br> Target file location |SQL Server 2017</br>Secondary instance</br> Target file location
+|Primary instance</br>Default data path |Secondary instance</br>Default data path |Primary instance</br>Source file location |SQL Server 2016 </br>Secondary instance</br> Target file location |SQL Server 2017 </br>Secondary instance</br> Target file location
 |:------|:------|:------|:------|:------
 |c:\\data\\ |d:\\data\\ |c:\\data\\ |c:\\data\\ |d:\\data\\ 
 |c:\\data\\ |d:\\data\\ |c:\\data\\group1\\ |c:\\data\\group1\\ |d:\\data\\group1\\
 
-To revert to the SQL Server 2016 behavior, enable traceflag 9571.
+To revert to the behavior for SQL Server 2016 and before, enable trace flag 9571. For information about how to enable trace flags see [DBCC TRACEON (Transact-SQL)](../../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md).
 
 ### Security
 

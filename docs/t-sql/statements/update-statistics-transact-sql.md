@@ -114,8 +114,8 @@ For more information, see  the [CSS SQL Escalation Services blog](http://blogs.m
   
  Using RESAMPLE can result in a full-table scan. For example, statistics for indexes use a full-table scan for their sample rate. When none of the sample options (SAMPLE, FULLSCAN, RESAMPLE) are specified, the query optimizer samples the data and computes the sample size by default.  
 
-PERSIST_SAMPLE_PERCENT = { ON | OFF }
- When **ON**, the statistics will retain the set sampling percentage for subsequent updates that do not explicitly specify a sampling percentage. When **OFF**, statistics sampling percentage will get reset to default sampling in subsequent updates that do not explicitly specify a sampling percentage. The default is **OFF**. 
+PERSIST_SAMPLE_PERCENT = { ON | OFF }  
+When **ON**, the statistics will retain the set sampling percentage for subsequent updates that do not explicitly specify a sampling percentage. When **OFF**, statistics sampling percentage will get reset to default sampling in subsequent updates that do not explicitly specify a sampling percentage. The default is **OFF**. 
  
  > [!NOTE]
  > If AUTO_UPDATE_STATISTICS is executed, it uses the persisted sampling percentage if available, or use default sampling percentage if not.
@@ -186,25 +186,25 @@ EXEC sp_updatestats;
 ## PDW / SQL Data Warehouse  
  The following syntax is not supported by PDW / SQL Data Warehouse  
   
--   ```t-sql  
-    update statistics t1 (a,b);   
-    ```  
+```t-sql  
+update statistics t1 (a,b);   
+```  
   
--   ```t-sql  
-    update statistics t1 (a) with sample 10 rows;  
-    ```  
+```t-sql  
+update statistics t1 (a) with sample 10 rows;  
+```  
   
--   ```t-sql  
-    update statistics t1 (a) with NORECOMPUTE;  
-    ```  
+```t-sql  
+update statistics t1 (a) with NORECOMPUTE;  
+```  
   
--   ```t-sql  
-    update statistics t1 (a) with INCREMENTAL=ON;  
-    ```  
+```t-sql  
+update statistics t1 (a) with INCREMENTAL=ON;  
+```  
   
--   ```t-sql  
-    update statistics t1 (a) with stats_stream = 0x01;  
-    ```  
+```t-sql  
+update statistics t1 (a) with stats_stream = 0x01;  
+```  
   
 ## Permissions  
  Requires ALTER permission on the table or view.  

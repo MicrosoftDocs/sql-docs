@@ -1606,11 +1606,6 @@
             "redirect_document_id": false
         },
         {
-            "source_path": "docs/connect/homepage-sql-connection-drivers.md",
-            "redirect_url": "/sql/connect/sql-connection-libraries",
-            "redirect_document_id": false
-        },
-        {
             "source_path": "docs/whitepapers/microsoft-sql-and-the-gdpr-requirements.md",
             "redirect_url": "/sql/relational-databases/security/microsoft-sql-and-the-gdpr-requirements",
             "redirect_document_id": false

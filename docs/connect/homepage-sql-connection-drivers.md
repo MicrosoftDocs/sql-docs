@@ -1,13 +1,11 @@
 
-???3 2017-07-31 15:01pm
+???3 2017-08-02 10:44am
 
 ---
 title: "Home page for SQL Connection Drivers | Microsoft Docs"
 description: "Hub page with annotated links to downloads and documentation for numerous combinations of languages and operating systems, for connecting to SQL Server or to Azure SQL Database."
 author: "MightyPen"
-manager: "craigg"
-
-ms.date: "07/31/2017"
+ms.date: "08/02/2017"
 ms.prod: "sql-non-specified"
 ms.technology: 
   - "drivers"
@@ -38,21 +36,53 @@ For details about the connection strings for connecting to Azure SQL Database, s
 - Other Azure SQL Database that are nearby the preceding article in the table of contents, about other languages. For instance, see [Use PHP to query an Azure SQL database](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-php).
 
 
-<a name="an-050-languages" />
+<a name="an-050-languages-clients" />
 
-## Languages
+## Languages for client programs
 
 
 This section lists the primary programming languages with which you can connect to SQL Server. For each language, it also lists the primary connection libraries or providers, which we call *connection drivers*.
 
-In most rows of the following table of links, the link takes you to a section that is devoted to the language. Each language section provides direct links to detailed subareas for the language and its related driver.
+In most rows of the following table of links, the link takes you to a later section that is devoted to the language. Each language section provides direct links to detailed subareas for the language and its related driver.
+
+
+| Logo | Language | Driver | Description |
+| :--  | :------- | :----- | :---------- |
+
+| ![C# logo][image-ref-320-csharp]| C# and Visual Basic | [ADO.NET](#an-110-ado-net-docu) | System.Data.SqlClient classes. |
+
+| ![C++ logo][image-ref-322-cpp]  | [ADO for C++](#an-120-ado-cpp-docu)     | ActiveX Data Objects, distinct from .NET Framework. |
+
+| ![ORM Entity Framework, of .NET Framework][image-ref-333-ef] | [Entity Framework (EF)](https://docs.microsoft.com/en-us/ef/) | EF is an Object-relational mapper (ORM).<br /><br />Another set of EF documentation is available at: [Introduction to Entity Framework](https://msdn.microsoft.com/en-us/library/aa937723.aspx). |
+
+| ![Java logo][image-ref-330-java] | [JDBC](#an-130-jdbc-docu)               | Java programs can connect to SQL Server. |
+
+| . | [LINQ to Entites](https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/ef/language-reference/linq-to-entities)| LINQ to Entities is is part of the ADO.NET Entity Framework. LINQ to Entities offers more features than does LINQ to SQL, but at the cost of some complexity.<br /><br /> LINQ to Entities requires you use a tool to generate a set of classes from your relational database tables schema. The group of generated classes is called an entity data model (EDM). |
+
+| . | [LINQ to SQL](https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/sql/linq/) | Language Integrated Query (LINQ) to SQL is an API for working with SQL relational databases. LINQ helps overcome the mismatch between object oriented programming (OOP) languages versus relationally organized data. LINQ provides object-relational mapping (ORM).<br /><br />The ORM of LINQ to SQL is not as powerful as that of LINQ to Entities. LINQ to SQL relies on anonymous ???3 objects which are declared at compile time, not earlier in your source code during design time. In C#, the **var** keyword is used in your source code for anonymous classes.<br /><br />LINQ is a set of *extensions to the .NET Framework* that encompass language-integrated query, set, and transform operations. LINQ extends C# and Visual Basic with *native language syntax* for queries and provides class libraries to take advantage of these capabilities. |
+
+| ![Node.js logo][image-ref-340-node] | [Node.js](#an-140-node-js-docu)         | JavaScript support through Node.js. |
+
+| ![ODBC logo][image-ref-350-odbc] | [ODBC for C/C++](#an-160-odbc-cpp-docu) | The primary native API for accessing data from SQL Server. ODBC drivers are available for operating systems beyond just Windows, such as for Linux and MacOS.<br /><br />There are ODBC drivers for data targets others than just SQL Server. There are ODBC drivers for other languages such as COBOL, Perl, PHP, and Python. For additional examples, see [ODBC for MySQL](https://dev.mysql.com/downloads/connector/odbc/). |
+
+| ![PHP logo][image-ref-360-php] | [PHP](#an-170-php-docu)                 | PHP can access data in all Editions of SQL Server 2005 and later (including Express Editions), as well as in Azure SQL Database. |
+
+| ![Python logo][image-ref-370-python] | [Python](#an-180-python-docu)           | You can connect to SQL Server using Python on Windows, Linux, or MacOS. |
+
+| ![Ruby logo][image-ref-380-ruby] | [Ruby](#an-190-ruby-docu)               | You can connect to SQL Server using Ruby on Windows, Linux, or MacOS. |
+
+| | | <br /> |
+
+
+
+
 
 
 | Logo | Language | Description |
 | :--  | :------- | :---------- |
 | ![C# logo][image-ref-320-csharp]  |  [C# and Visual Basic, using ADO.NET](#an-110-ado-net-docu)  |  System.Data.SqlClient classes. |
 | ![C++ logo][image-ref-322-cpp]  | [ADO for C++](#an-120-ado-cpp-docu)     | ActiveX Data Objects, distinct from .NET Framework. |
-| . | [Entity Framework (EF)](https://docs.microsoft.com/en-us/ef/) | EF is an Object-relational mapper (ORM).<br /><br />Another set of EF documentation is available at: [Introduction to Entity Framework](https://msdn.microsoft.com/en-us/library/aa937723.aspx). |
+| ![ORM Entity Framework, of .NET Framework][image-ref-333-ef] | [Entity Framework (EF)](https://docs.microsoft.com/en-us/ef/) | EF is an Object-relational mapper (ORM).<br /><br />Another set of EF documentation is available at: [Introduction to Entity Framework](https://msdn.microsoft.com/en-us/library/aa937723.aspx). |
 | ![Java logo][image-ref-330-java] | [JDBC](#an-130-jdbc-docu)               | Java programs can connect to SQL Server. |
 | . | [LINQ to Entites](https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/ef/language-reference/linq-to-entities)| LINQ to Entities is is part of the ADO.NET Entity Framework. LINQ to Entities offers more features than does LINQ to SQL, but at the cost of some complexity.<br /><br /> LINQ to Entities requires you use a tool to generate a set of classes from your relational database tables schema. The group of generated classes is called an entity data model (EDM). |
 | . | [LINQ to SQL](https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/sql/linq/) | Language Integrated Query (LINQ) to SQL is an API for working with SQL relational databases. LINQ helps overcome the mismatch between object oriented programming (OOP) languages versus relationally organized data. LINQ provides object-relational mapping (ORM).<br /><br />The ORM of LINQ to SQL is not as powerful as that of LINQ to Entities. LINQ to SQL relies on anonymous ???3 objects which are declared at compile time, not earlier in your source code during design time. In C#, the **var** keyword is used in your source code for anonymous classes.<br /><br />LINQ is a set of *extensions to the .NET Framework* that encompass language-integrated query, set, and transform operations. LINQ extends C# and Visual Basic with *native language syntax* for queries and provides class libraries to take advantage of these capabilities. |
@@ -62,6 +92,7 @@ In most rows of the following table of links, the link takes you to a section th
 | ![Python logo][image-ref-370-python] | [Python](#an-180-python-docu)           | You can connect to SQL Server using Python on Windows, Linux, or MacOS. |
 | ![Ruby logo][image-ref-380-ruby] | [Ruby](#an-190-ruby-docu)               | You can connect to SQL Server using Ruby on Windows, Linux, or MacOS. |
 | | | <br /> |
+
 
 
 #### Code examples
@@ -84,10 +115,10 @@ We have the following articles devoted to the download and install various SQL c
 
 <a name="an-110-ado-net-docu" />
 
-## [ADO.NET for C# and VB](/sql/connect/ado-net/index)
+## [C# and VB with ADO.NET](/sql/connect/ado-net/index)
 
 
-![ADO.NET logo][image-ref-310-ado-net]
+![C# logo][image-ref-320-csharp]
 
 [ADO.NET](/sql/connect/ado-net/index) is a casual name for .NET Framework classes in the following namespaces:
 
@@ -95,24 +126,29 @@ We have the following articles devoted to the download and install various SQL c
 - System.Data.SqlClient
 
 
-The managed languages C# and Visual Basic are the most common users of ADO.NET.
+The .NET managed languages C# and Visual Basic are the most common users of ADO.NET.
 
 &nbsp;
 
 
 <a name="an-120-ado-cpp-docu" />
 
-## [C++ using ADO](/sql/ado/index) ???3 MISMATCH with Languages table?!
+## [C++ using ADO OLEDB](/sql/ado/index) ???3 MISMATCH with Languages table?!
 
 
 ![C++ logo][image-ref-322-cpp]
 
+> [!NOTE]
+> [Microsoft ActiveX Data Objects (ADO)](/sql/ado/index) is older technology that Microsoft recommends you *not* use for new development.
+> 
+> Instead, use ODBC in your C++ programs.
+
 [Microsoft ActiveX Data Objects (ADO)](/sql/ado/index) enables your client C++ application to access and manipulate data from a variety of sources. ADO is an OLE DB provider.
 
 
-- *ADO* - stands for Microsoft ActiveX Data Objects.
+- *ADO* - stands for *ActiveX Data Objects*.
 
-- *OLE DB* - stands for Object Linking and Embedding for Databases. It is implemented in the pattern of the Component Object Model (COM).
+- *OLE DB* - stands for *Object Linking and Embedding for Databases*. It is implemented in the pattern of the Component Object Model (COM).
     - Some OLE DB providers use ODBC internally.
 
 
@@ -233,17 +269,78 @@ You can use [Ruby](/sql/connect/ruby/index) to interact with SQL Server.
 &nbsp;
 
 
+<a name="an-204-aka-ms-sqldev" />
+
+## [Get started website for SQL client development](http://aka.ms/sqldev)
+
+
+You can choose from a long list of programming languages for connecting to SQL Server. And your client program can run a variety of operating systems.
+
+Our [SQL client developer documentation website](http://aka.ms/sqldev) emphasizes simplicity and completeness for the deveoper who is just getting started with any one of these combinations. Our SQL client developer website organizes the code examples for all of these combinations. For each combination, the website explains every necessary step. The steps include downloads and installs of SQL Server, programmer tools, and API libraries. And of course code examples that you can run are provided. Next are a couple outlines of the detail provided on the website:
+
+#### Java on Ubuntu:
+
+1. Set up your environment
+    - Step 1.1 Install SQL Server
+    - Step 1.2 Install Java
+    - Step 1.3 Install the Java Development Kit (JDK)
+    - Step 1.4 Install Maven
+2. Create Java application with SQL Server
+    - Step 2.1 Create a Java app that connects to SQL Server and executes queries
+    - Step 2.2 Create a Java app that connects to SQL Server using the popular framework Hibernate
+3. Make your Java app up to 100x faster
+    - Step 3.1 Create a Java app to demonstrate Columnstore indexes
+
+
+#### Python on Windows:
+
+1. Set up your environment
+    - Step 1.1 Install SQL Server
+    - Step 1.2 Install Python
+    - Step 1.3 Install the ODBC Driver and SQL Command Line Utility for SQL Server
+2. Create Python application with SQL Server
+    - Step 2.1 Install the Python driver for SQL Server
+    - Step 2.2 Create a database for your application
+    - Step 2.3 Create a Python app that connects to SQL Server and executes queries
+3. Make your Python app up to 100x faster
+    - Step 3.1 Create a new table with 5 million using sqlcmd
+    - Step 3.2 Create a Python app that queries this tables and measures the time taken
+    - Step 3.3 Measure how long it takes to run the query
+    - Step 3.4 Add a columnstore index to your table
+    - Step 3.5 Measure how long it takes to run the query with a columnstore index
+
+
+The following screenshots give you an idea of what our SQL development documentation website looks like.
+
+
+#### Choose a language:
+
+![SQL Dev website, get started][image-ref-390-aka-ms-sqldev-choose-language]
+
+&nbsp;
+
+
+#### Choose an operating system:
+
+![SQL Dev website, Java Ubuntu][image-ref-400-aka-ms-sqldev-java-ubuntu]
+
+
+
+
 <!-- Image references -->
 
 [image-ref-310-ado-net]: ./media/homepage-sql-connection-drivers/gm-ado-net-an40.png
-[image-ref-322-cpp]: ./media/homepage-sql-connection-drivers/gm-cpp-4point-p61c.png
-[image-ref-320-csharp]: ./media/homepage-sql-connection-drivers/gm-csharp-c10.png
-[image-ref-330-java]: ./media/homepage-sql-connection-drivers/gm-java-j18.png
-[image-ref-340-node]: ./media/homepage-sql-connection-drivers/gm-node-n14.png
+[image-ref-322-cpp]: ./media/homepage-sql-connection-drivers/gm-cpp-4point-p61f.png
+[image-ref-320-csharp]: ./media/homepage-sql-connection-drivers/gm-csharp-c10c.png
+[image-ref-333-ef]: ./media/homepage-sql-connection-drivers/gm-entity-framework-ef20d.png
+[image-ref-330-java]: ./media/homepage-sql-connection-drivers/gm-java-j18c.png
+[image-ref-340-node]: ./media/homepage-sql-connection-drivers/gm-node-n30.png
 [image-ref-350-odbc]: ./media/homepage-sql-connection-drivers/gm-odbc-ic55826-o35.png
-[image-ref-360-php]: ./media/homepage-sql-connection-drivers/gm-php-php51.png
-[image-ref-370-python]: ./media/homepage-sql-connection-drivers/gm-python-py66.png
-[image-ref-380-ruby]: ./media/homepage-sql-connection-drivers/gm-ruby-un-r73.png
+[image-ref-360-php]: ./media/homepage-sql-connection-drivers/gm-php-php60.png
+[image-ref-370-python]: ./media/homepage-sql-connection-drivers/gm-python-py72.png
+[image-ref-380-ruby]: ./media/homepage-sql-connection-drivers/gm-ruby-un-r82.png
+[image-ref-390-aka-ms-sqldev-choose-language]: ./media/homepage-sql-connection-drivers/gm-aka-ms-sqldev-choose-language-g21.png
+[image-ref-400-aka-ms-sqldev-java-ubuntu]: ./media/homepage-sql-connection-drivers/gm-aka-ms-sqldev-java-ubuntu-c31.png
 
 
 ???3 more images

@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "Multiple Flat Files Connection Manager Editor"
 ms.assetid: ad0cb668-0df2-4d4e-9a20-d20692a0b67a
 caps.latest.revision: 30
-author: "douglaslMS"
+author: "v-thepet"
 ms.author: "douglasl"
 manager: "jhubbard"
 ---

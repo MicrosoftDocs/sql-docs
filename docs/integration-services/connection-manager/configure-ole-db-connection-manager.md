@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "Configure OLE DB Connection Manager dialog box"
 ms.assetid: 66b60dda-1f1b-45d0-9818-8434ea1121eb
 caps.latest.revision: 21
-author: "douglaslMS"
+author: "v-thepet"
 ms.author: "douglasl"
 manager: "jhubbard"
 ---

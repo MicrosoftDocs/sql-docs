@@ -13,7 +13,7 @@ f1_keywords:
   - "sql13.dts.designer.cacheconnection.f1"
 ms.assetid: 0d8f9324-0c35-4eea-b06d-da3cc2426d2c
 caps.latest.revision: 27
-author: "douglaslMS"
+author: "v-thepet"
 ms.author: "douglasl"
 manager: "jhubbard"
 ---

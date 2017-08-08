@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "File Connection Manager Editor"
 ms.assetid: 051c48e5-3d86-49af-b554-ff62e3de3622
 caps.latest.revision: 22
-author: "douglaslMS"
+author: "v-thepet"
 ms.author: "douglasl"
 manager: "jhubbard"
 ---

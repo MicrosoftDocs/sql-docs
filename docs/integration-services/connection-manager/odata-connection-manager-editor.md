@@ -14,7 +14,7 @@ f1_keywords:
   - "sql13.dts.designer.odataconnectionmanager.f1"
 ms.assetid: 7fc2b8f7-10a8-4adc-a5d3-a4ddf5db651c
 caps.latest.revision: 10
-author: "douglaslMS"
+author: "v-thepet"
 ms.author: "douglasl"
 manager: "jhubbard"
 ---

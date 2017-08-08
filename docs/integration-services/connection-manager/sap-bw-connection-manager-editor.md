@@ -13,7 +13,7 @@ f1_keywords:
   - "sql13.dts.designer.sapbwconnectionmanager.f1"
 ms.assetid: ec970319-e749-4753-8675-9cf76ed99669
 caps.latest.revision: 10
-author: "douglaslMS"
+author: "v-thepet"
 ms.author: "douglasl"
 manager: "jhubbard"
 ---

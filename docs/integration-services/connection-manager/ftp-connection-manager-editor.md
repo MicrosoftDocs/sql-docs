@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 874b6585-255b-4a43-8396-bb08c3e8ac2b
 caps.latest.revision: 26
 author: "douglaslMS"
-ms.author: "douglasl"
+ms.author: "v-thepet"
 manager: "jhubbard"
 ---
 # FTP Connection Manager Editor

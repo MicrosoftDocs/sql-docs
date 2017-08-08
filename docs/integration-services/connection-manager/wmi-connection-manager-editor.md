@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "WMI Connection Manager Editor"
 ms.assetid: 0ef2c913-0779-4a07-989e-3361cd83170b
 caps.latest.revision: 28
-author: "douglaslMS"
+author: "v-thepet"
 ms.author: "douglasl"
 manager: "jhubbard"
 ---

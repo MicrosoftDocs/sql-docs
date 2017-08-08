@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "Configure ODBC Connection Manager dialog box"
 ms.assetid: a596eeaf-68b2-4560-b77d-d2f72ddba926
 caps.latest.revision: 18
-author: "douglaslMS"
+author: "v-thepet"
 ms.author: "douglasl"
 manager: "jhubbard"
 ---

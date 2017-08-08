@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "Flat File Connection Manager Editor"
 ms.assetid: 77296024-5c1a-4f6a-9665-0b50d45d744c
 caps.latest.revision: 24
-author: "douglaslMS"
+author: "v-thepet"
 ms.author: "douglasl"
 manager: "jhubbard"
 ---

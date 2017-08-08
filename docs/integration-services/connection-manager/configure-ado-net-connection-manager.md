@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "Configure ADO.NET Connection Manager dialog box"
 ms.assetid: 609f8354-e876-4fed-adab-ac8d57a94f1c
 caps.latest.revision: 18
-author: "douglaslMS"
+author: "v-thepet"
 ms.author: "douglasl"
 manager: "jhubbard"
 ---

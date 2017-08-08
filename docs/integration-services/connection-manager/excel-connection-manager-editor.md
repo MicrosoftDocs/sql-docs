@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "Excel Connection Manager Editor"
 ms.assetid: 7ff097e4-cafb-4885-a898-05b2a46628c1
 caps.latest.revision: 32
-author: "douglaslMS"
+author: "v-thepet"
 ms.author: "douglasl"
 manager: "jhubbard"
 ---

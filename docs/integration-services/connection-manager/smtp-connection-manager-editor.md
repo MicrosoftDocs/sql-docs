@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "SMTP Connection Manager Editor"
 ms.assetid: 2693de0d-b04d-4325-a856-ce667d2b8aa1
 caps.latest.revision: 37
-author: "douglaslMS"
+author: "v-thepet"
 ms.author: "douglasl"
 manager: "jhubbard"
 ---

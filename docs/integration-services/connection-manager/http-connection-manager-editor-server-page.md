@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "HTTP Connection Manager Editor"
 ms.assetid: 774778a0-ece6-4971-b93f-b121d8fc1fc1
 caps.latest.revision: 32
-author: "douglaslMS"
+author: "v-thepet"
 ms.author: "douglasl"
 manager: "jhubbard"
 ---

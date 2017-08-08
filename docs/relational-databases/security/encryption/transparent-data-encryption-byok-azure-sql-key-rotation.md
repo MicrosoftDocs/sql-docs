@@ -20,7 +20,7 @@ ms.author: ryzhang26
 
 --- 
 
-# Rotate the Transparent Data Encryption (TDE) protector Using PowerShell 
+# Rotate the Transparent Data Encryption (TDE) protector using PowerShell 
 
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
 
@@ -38,15 +38,15 @@ This guide discusses two options to rotate the TDE protector on the server.
 
 ## Prerequisites
 
-- This how-to guide assumes that you are already using a key from Azure Key Vault as the TDE Protector for an Azure SQL Database or Data Warehouse. See [Transparent Data Encryption with BYOK Support](transparent-data-encryption-byok-azure-sql.md).
+- This how-to guide assumes that you are already using a key from Azure Key Vault as the TDE protector for an Azure SQL Database or Data Warehouse. See [Transparent Data Encryption with BYOK Support](transparent-data-encryption-byok-azure-sql.md).
 - You must have Azure PowerShell version 3.7.0 or newer installed and running. 
-- [Recommended but optional] Create the key material for the TDE Protector in a hardware security module (HSM) or local key store first, and import the key material to Azure Key Vault. Follow the [instructions for using a hardware security module (HSM) and Key Vault](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-get-started) to learn more.
+- [Recommended but optional] Create the key material for the TDE protector in a hardware security module (HSM) or local key store first, and import the key material to Azure Key Vault. Follow the [instructions for using a hardware security module (HSM) and Key Vault](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-get-started) to learn more.
 
 ## Option 1: Auto rotation
 
-Generate a new version of the existing TDE Protector key in Key Vault, under the same key name and key vault. The Azure SQL service starts using this new version within 24 hours. 
+Generate a new version of the existing TDE protector key in Key Vault, under the same key name and key vault. The Azure SQL service starts using this new version within 24 hours. 
 
-To create a new version of the TDE Protector using the [Add-AzureKeyVaultKey](/powershell/module/azurerm.keyvault/add-azurekeyvaultkey) cmdlet:
+To create a new version of the TDE protector using the [Add-AzureKeyVaultKey](/powershell/module/azurerm.keyvault/add-azurekeyvaultkey) cmdlet:
 
    ```powershell
    Add-AzureKeyVaultKey `
@@ -108,6 +108,6 @@ The option uses the [Add-AzureKeyVaultKey](/powershell/module/azurerm.keyvault/a
 
 ## Next steps
 
-- In case of a security risk, learn how to remove a potentially compromised TDE Protector: [Remove a potentially compromised key](transparent-data-encryption-byok-azure-sql-remove-tde-protector.md) 
+- In case of a security risk, learn how to remove a potentially compromised TDE protector: [Remove a potentially compromised key](transparent-data-encryption-byok-azure-sql-remove-tde-protector.md) 
 
 - Get started with Bring Your Own Key support for TDE: [Turn on TDE using your own key from Key Vault using PowerShell](transparent-data-encryption-byok-azure-sql-configure.md)

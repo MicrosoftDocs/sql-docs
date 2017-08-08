@@ -1,7 +1,7 @@
 ---
 title: "ALTER DATABASE File and Filegroup Options (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/26/2017"
+ms.date: "08/07/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -105,7 +105,7 @@ ALTER DATABASE database_name
 ```  
   
 ## Arguments  
- **<add_or_modify_files>::=**  
+**\<add_or_modify_files>::=**
   
  Specifies the file to be added, removed, or modified.  
   
@@ -154,7 +154,7 @@ MODIFY FILE ( NAME = logical_file_name, FILENAME = ' new_path/os_file_name ' )
  You can set a FILESTREAM file to OFFLINE. When a FILESTREAM file is offline, its parent filegroup will be internally marked as offline; therefore, all access to FILESTREAM data within that filegroup will fail.  
   
 > [!NOTE]  
->  <add_or_modify_files> options are not available in a Contained Database.  
+>  \<add_or_modify_files> options are not available in a Contained Database.
   
  **\<filespec>::=**  
   
@@ -247,7 +247,7 @@ MODIFY FILE ( NAME = logical_file_name, FILENAME = ' new_path/os_file_name ' )
 > [!NOTE]  
 >  \<filespec> options are not available in a Contained Database.  
   
- **<add_or_modify_filegroups>::=**  
+ **\<add_or_modify_filegroups>::=**  
   
  Add, modify, or remove a filegroup from the database.  
   
@@ -277,10 +277,10 @@ ALTER DATABASE xtp_db ADD FILE (NAME='xtp_mod', FILENAME='d:\data\xtp_mod') TO F
 > [!NOTE]  
 >  Unless the FILESTREAM Garbage Collector has removed all the files from a FILESTREAM container, the ALTER DATABASE REMOVE FILE operation to remove a FILESTREAM container will fail and return an error. See the "Remove FILESTREAM Container" section in Remarks later in this topic.  
   
- MODIFY FILEGROUP *filegroup_name* { <filegroup_updatability_option> | DEFAULT | NAME **=***new_filegroup_name* }  
+MODIFY FILEGROUP *filegroup_name* { \<filegroup_updatability_option> | DEFAULT | NAME **=***new_filegroup_name* }
  Modifies the filegroup by setting the status to READ_ONLY or READ_WRITE, making the filegroup the default filegroup for the database, or changing the filegroup name.  
   
- <filegroup_updatability_option>  
+ \<filegroup_updatability_option>  
  Sets the read-only or read/write property to the filegroup.  
   
  DEFAULT  
@@ -300,7 +300,7 @@ ALTER DATABASE xtp_db ADD FILE (NAME='xtp_mod', FILENAME='d:\data\xtp_mod') TO F
   
  When a file in the filegroup meets the autogrow threshold, all files in the filegroup grow.  
   
- **<filegroup_updatability_option>::=**  
+ **\<filegroup_updatability_option>::=**  
   
  Sets the read-only or read/write property to the filegroup.  
   

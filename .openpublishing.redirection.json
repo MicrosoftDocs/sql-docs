@@ -1597,7 +1597,17 @@
         },
         {
             "source_path": "docs/connect/sql-server-driver-documentation.md",
-            "redirect_url": "/sql/connect/sql-server-drivers",
+            "redirect_url": "/sql/connect/sql-connection-libraries",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/connect/sql-server-drivers.md",
+            "redirect_url": "/sql/connect/sql-connection-libraries",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/connect/homepage-sql-connection-drivers.md",
+            "redirect_url": "/sql/connect/sql-connection-libraries",
             "redirect_document_id": false
         },
         {

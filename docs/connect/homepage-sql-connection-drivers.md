@@ -1,6 +1,3 @@
-
-???3 2017-08-02 10:44am
-
 ---
 title: "Home page for SQL Connection Drivers | Microsoft Docs"
 description: "Hub page with annotated links to downloads and documentation for numerous combinations of languages and operating systems, for connecting to SQL Server or to Azure SQL Database."
@@ -15,6 +12,8 @@ ms.author: "genemi"
 ---
 # Connection Drivers for Microsoft SQL Server
 
+> [NOTE]
+> This article is not complete, and it is still in-progress.  It should be ignored for now.
 
 Welcome to the homepage for the languages and connection drivers you can use to interact with Microsoft SQL Server. This article:
 
@@ -108,7 +107,7 @@ The documentation links in the preceding table lead to code examples, among othe
 
 We have the following articles devoted to the download and install various SQL connection drivers:
 
-- [SQL Server Drivers](sql-server-drivers.md)
+- [SQL Server Drivers](sql-connection-libraries.md)
 
 - [Connectivity libraries and frameworks for Microsoft SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-libraries)
 

@@ -54,7 +54,7 @@ Compression can be used for automatic seeding, but it is disabled by default. Tu
 
 In SQL Server 2016 and before, the folder where the database will be created by automatic seeding must already exist and be the same as the path on the primary replica. 
 
-In SQL Server 2017, Microsoft recommends using the same data and log file path on all replicas participating in an availability group. In some cases this is not possible. For example, in a cross-platform availability group one instance of SQL Server is on Windows and another instance of SQL Server on is on Linux. The different platforms have different paths. It is also possible to use different paths on instances of SQL Server hosting availability group replicas on the same platform.
+In SQL Server 2017, Microsoft recommends using the same data and log file path on all replicas participating in an availability group but you can use different paths if necessary. For example, in a cross-platform availability group one instance of SQL Server is on Windows and another instance of SQL Server on is on Linux. The different platforms have different paths. It is also possible to use different paths on instances of SQL Server hosting availability group replicas on the same platform.
 
 The following table presents examples of supported data disk layouts that can support automatic seeding:
 

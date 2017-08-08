@@ -54,7 +54,7 @@ Compression can be used for automatic seeding, but it is disabled by default. Tu
 
 In SQL Server 2016 and before, the folder where the database will be created by automatic seeding must already exist and be the same as the path on the primary replica. 
 
-In SQL Server 2017, Microsoft recommends using the same data and log file path on all replicas participating in an availability group. In some cases this is not possible. For example, in a cross-platform availability group an instance of SQL Server on Windows and an instance of SQL Server on Linux will have different paths. It is also possible to use different paths on instances of SQL Server hosting availability group replicas on the same platform.
+In SQL Server 2017, Microsoft recommends using the same data and log file path on all replicas participating in an availability group. In some cases this is not possible. For example, in a cross-platform availability group one instance of SQL Server is on Windows and another instance of SQL Server on is on Linux. The different platforms have different paths. It is also possible to use different paths on instances of SQL Server hosting availability group replicas on the same platform.
 
 The following table presents examples of supported data disk layouts that can support automatic seeding:
 
@@ -64,6 +64,22 @@ The following table presents examples of supported data disk layouts that can su
 |c:\\data\\ |/var/opt/mssql/data/ |c:\\data\\group1\\ |/var/opt/mssql/data/group1/|
 |c:\\data\\ |d:\\data\\ |c:\\data\\ |d:\\data\\
 |c:\\data\\ |d:\\data\\ |c:\\data\\group1\\ |d:\\data\\group1\
+
+Scenarios where source and target database location are not the instance default paths are not impacted by this change. Requirements for target file paths to match the source remain the same.
+
+|Primary instance</br>Default data path|Secondary instance</br>Default data path|Primary instance</br>Source file location|Secondary instance</br> Target file location
+|:------|:------|:------|:------
+|c:\\data\\ |c:\\data\\ |d:\\group1\\ |d:\\group1\\
+|c:\\data\\ |c:\\data\\ |d:\\data\\ |d:\\data\\
+|c:\\data\\ |c:\\data\\ |d:\\data\\group1\\ |d:\\data\\group1\\
+
+If you mix default and non default plaths on the primary and secondary replicas, SQL Server 2017 behaves differently than previous releases The following table shows the SQL Server 2017 behavior.
+|Primary instance</br>Default data path|Secondary instance</br>Default data path|Primary instance</br>Source file location|SQL Server 2016</br>Secondary instance</br> Target file location |SQL Server 2017</br>Secondary instance</br> Target file location
+|:------|:------|:------|:------
+|c:\\data\\ |d:\\data\\ |c:\\data\\ |c:\\data\\ |d:\\data\\ 
+|c:\\data\\ |d:\\data\\ |c:\\data\\group1\|c:\\data\\group1\|d:\\data\\group1\
+
+To revert to the SQL Server 2016 behavior, enable traceflag 9571.
 
 ### Security
 

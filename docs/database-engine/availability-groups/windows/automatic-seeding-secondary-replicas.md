@@ -60,10 +60,10 @@ The following table presents examples of supported data disk layouts that can su
 
 |Primary instance</br>Default data path|Secondary instance</br>Default data path|Primary instance</br>Source file location|Secondary instance</br> Target file location
 |:------|:------|:------|:------
-|c:\\data\\|/var/opt/mssql/data/|c:\\data\\|/var/opt/mssql/data/|
-|c:\\data\\|/var/opt/mssql/data/|c:\\data\\group1\\|/var/opt/mssql/data/group1/|
-|c:\\data\\|d:\\data\\|c:\\data\\|d:\\data\\
-|c:\\data\\|d:\\data\\|c:\\data\\group1\\|d:\\data\\group1\
+|c:\\data\\ |/var/opt/mssql/data/ |c:\\data\\ |/var/opt/mssql/data/|
+|c:\\data\\ |/var/opt/mssql/data/ |c:\\data\\group1\\ |/var/opt/mssql/data/group1/|
+|c:\\data\\ |d:\\data\\ |c:\\data\\ |d:\\data\\
+|c:\\data\\ |d:\\data\\ |c:\\data\\group1\\ |d:\\data\\group1\
 
 ### Security
 

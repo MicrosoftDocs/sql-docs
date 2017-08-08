@@ -78,7 +78,7 @@ If you mix default and non default plaths on the primary and secondary replicas,
 |Primary instance</br>Default data path |Secondary instance</br>Default data path |Primary instance</br>Source file location |SQL Server 2016</br>Secondary instance</br> Target file location |SQL Server 2017</br>Secondary instance</br> Target file location
 |:------|:------|:------|:------|:------
 |c:\\data\\ |d:\\data\\ |c:\\data\\ |c:\\data\\ |d:\\data\\ 
-|c:\\data\\ |d:\\data\\ |c:\\data\\group1\|c:\\data\\group1\|d:\\data\\group1\
+|c:\\data\\ |d:\\data\\ |c:\\data\\group1\\ |c:\\data\\group1\\ |d:\\data\\group1\\
 
 To revert to the SQL Server 2016 behavior, enable traceflag 9571.
 

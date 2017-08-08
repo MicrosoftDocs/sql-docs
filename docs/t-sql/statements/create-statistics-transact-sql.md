@@ -154,7 +154,7 @@ CREATE STATISTICS statistics_name
   
  We recommend against specifying 0 PERCENT or 0 ROWS. When 0 PERCENT or ROWS is specified, the statistics object is created but does not contain statistics data.  
  
-PERSIST_SAMPLE_PERCENT = { ON | OFF }
+ PERSIST_SAMPLE_PERCENT = { ON | OFF }  
  When **ON**, the statistics will retain the creation sampling percentage for subsequent updates that do not explicitly specify a sampling percentage. When **OFF**, statistics sampling percentage will get reset to default sampling in subsequent updates that do not explicitly specify a sampling percentage. The default is **OFF**. 
  
  **Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4.  

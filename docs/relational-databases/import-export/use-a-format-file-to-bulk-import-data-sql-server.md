@@ -70,7 +70,7 @@ cls
 # revise directory as desired
 $dir = 'D:\BCP\';
 
-$bcpFile = $dir + 'MyFirstImport.bcp';
+$bcpFile = Join-Path -Path $dir -ChildPath 'MyFirstImport.bcp';
 
 # Confirm directory exists
 IF ((Test-Path -Path $dir) -eq 0)

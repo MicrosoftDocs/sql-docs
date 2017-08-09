@@ -38,44 +38,40 @@ To create an availability group with automatic seeding, set `SEEDING_MODE=AUTOMA
 
 The following example creates an availability group on a two node windows server failover cluster. Before running the scripts, update the values for your environment.
 
-1. Create the endpoints. Each server will need an endpoint. The following script creates an endpoint that uses TCP port 5022 for the listener. Set `<endpoint_name>` and `LISTENER_PORT` to match your environment and run the script:
+1. Create the endpoints. Each server will need an endpoint. The following script creates an endpoint that uses TCP port 5022 for the listener. Set `<endpoint_name>` and `LISTENER_PORT` to match your environment and run the script on both servers:
 
-    ```
-    --Create the endpoint on both servers
-    -- Run this script twice, once on each server. 
+    ```Transact-SQL
     CREATE ENDPOINT [<endpoint_name>] 
-    STATE=STARTED
-    AS TCP (LISTENER_PORT = 5022, LISTENER_IP = ALL)
-    FOR DATA_MIRRORING (ROLE = ALL, AUTHENTICATION = WINDOWS NEGOTIATE, ENCRYPTION = REQUIRED ALGORITHM AES)
+        STATE=STARTED
+        AS TCP (LISTENER_PORT = 5022, LISTENER_IP = ALL)
+        FOR DATA_MIRRORING (ROLE = ALL, AUTHENTICATION = WINDOWS NEGOTIATE, ENCRYPTION = REQUIRED ALGORITHM AES)
     GO
     ```
 
-1. Create the availability group. The following script creates the availability group. Update the values for the group name, server names, and domain names, and run it on the primary instance of SQL Server.  
+1. Create the availability group. The following script creates the availability group. Update the values in angle brackets `<>` for the group name, server names, and domain names, and run it on the primary instance of SQL Server.  
 
-    ```
-    ---Run On Primary
+    ```Transact-SQL
     CREATE AVAILABILITY GROUP [<availability_group_name>]
-    FOR DATABASE db1
-    REPLICA ON'<*primary_server*>'
-    WITH (ENDPOINT_URL = N'TCP://<primary_server>.<fully_qualified_domain_name>:5022', 
-    FAILOVER_MODE = AUTOMATIC, 
-    AVAILABILITY_MODE = SYNCHRONOUS_COMMIT, 
-    BACKUP_PRIORITY = 50, 
-    SECONDARY_ROLE(ALLOW_CONNECTIONS = NO), 
-    SEEDING_MODE = AUTOMATIC),
-    N'<secondary_server>' WITH (ENDPOINT_URL = N'TCP://<secondary_server>.<fully_qualified_domain_name>:5022', 
-    FAILOVER_MODE = AUTOMATIC, 
-    AVAILABILITY_MODE = SYNCHRONOUS_COMMIT, 
-    BACKUP_PRIORITY = 50, 
-    SECONDARY_ROLE(ALLOW_CONNECTIONS = NO), 
-    SEEDING_MODE = AUTOMATIC);
+        FOR DATABASE db1
+        REPLICA ON'<*primary_server*>'
+        WITH (ENDPOINT_URL = N'TCP://<primary_server>.<fully_qualified_domain_name>:5022', 
+            FAILOVER_MODE = AUTOMATIC, 
+            AVAILABILITY_MODE = SYNCHRONOUS_COMMIT, 
+            BACKUP_PRIORITY = 50, 
+            SECONDARY_ROLE(ALLOW_CONNECTIONS = NO), 
+            SEEDING_MODE = AUTOMATIC),
+        N'<secondary_server>' WITH (ENDPOINT_URL = N'TCP://<secondary_server>.<fully_qualified_domain_name>:5022', 
+            FAILOVER_MODE = AUTOMATIC, 
+            AVAILABILITY_MODE = SYNCHRONOUS_COMMIT, 
+            BACKUP_PRIORITY = 50, 
+            SECONDARY_ROLE(ALLOW_CONNECTIONS = NO), 
+            SEEDING_MODE = AUTOMATIC);
     GO
     ``` 
 
-1. Join the secondary server to the availability group and grant permission to the availability group to create databases. Run the following script on the secondary instance of SQL Server: 
+1. Join the secondary server instance to the availability group and grant permission to the availability group to create databases. Updated the following script. Replace the values in angle brackets `<>` for your environment. Run the script on the secondary instance of SQL Server: 
  
-    ```
-    --Run on Secondary Replica to join to the availability group
+    ```Transact-SQL
     ALTER AVAILABILITY GROUP [<availability_group_name>] JOIN
     GO  
     ALTER AVAILABILITY GROUP [<availability_group_name>] GRANT CREATE ANY DATABASE
@@ -84,15 +80,15 @@ The following example creates an availability group on a two node windows server
 
 SQL Server will automatically create the database replica on the secondary server. If the database is large it may take some time to complete synchronization of the database. If a database is in an availability group that is configured for automatic seeding, you can query `sys.dm_hadr_automatic_seeding` system view to monitor the seeding progress. The following query returns one row for every database that is in an availability group configured for automatic seeding.
 
-```
- SELECT start_time,
-       ag.name,
-       db.database_name,
-       current_state,
-       performed_seeding,
-       failure_state,
-       failure_state_desc
- FROM sys.dm_hadr_automatic_seeding autos 
+```Transact-SQL 
+SELECT start_time,
+    ag.name,
+    db.database_name,
+    current_state,
+    performed_seeding,
+    failure_state,
+    failure_state_desc
+FROM sys.dm_hadr_automatic_seeding autos 
     JOIN sys.availability_databases_cluster db ON autos.ag_db_id = db.group_database_id
     JOIN sys.availability_groups ag ON autos.ag_id = ag.group_id
 ```
@@ -101,7 +97,7 @@ SQL Server will automatically create the database replica on the secondary serve
 
 To temporarily prevent the primary from seeding more databases to the secondary replica you can deny the availability group permission to create databases. Run the following query on the instance that hosts the secondary replica in order to deny the availability group permission to create replica databases.
 
-```
+```Transact-SQL
 ALTER AVAILABILITY GROUP [<availability_group_name>] DENY CREATE ANY DATABASE
 GO
 ```
@@ -111,9 +107,10 @@ GO
 
 You can set automatic seeding on an existing database. The following command will change an availability group to use automatic seeding. 
 
-```
+```Transact SQL
 ALTER AVAILABILITY GROUP [<availability_group_name>] 
-MODIFY REPLICA ON '<primary_node>' WITH (SEEDING_MODE = AUTOMATIC)
+    MODIFY REPLICA ON '<primary_node>' 
+    WITH (SEEDING_MODE = AUTOMATIC)
 GO
 ```
 
@@ -123,7 +120,7 @@ This will force a database to restart seeding if needed. For example, if seeding
 
 To stop automatic seeding for an availability group, run the following script on the instance that hosts the primary replica:
 
-```
+```Transact-SQL
 ALTER AVAILABILITY GROUP [<availability_group_name>] 
     MODIFY REPLICA ON '<primary_node>'   
     WITH (SEEDING_MODE = MANUAL)
@@ -143,13 +140,13 @@ The following system views show the status of SQL Server automatic seeding.
 
 On the primary replica, query `sys.dm_hadr_automatic_seeding` to check the status of the automatic seeding process. The view returns one row for each seeding process. For example:
 
-``` 
+```Transact-SQL
 SELECT start_time, 
-        completion_time
-        is_source,
-        current_state,
-        failure_state,
-        failure_state_desc
+    completion_time
+    is_source,
+    current_state,
+    failure_state,
+    failure_state_desc
 FROM sys.dm_hadr_automatic_seeding
 ```
  
@@ -157,7 +154,7 @@ FROM sys.dm_hadr_automatic_seeding
 
 On the primary replica, query `sys.dm_hadr_physical_seeding_stats` DMV to see the physical statistics for each seeding process that is currently running. The following query returns rows when seeding is running:
 
-```
+```Transact-SQL
 SELECT * FROM sys.dm_hadr_physical_seeding_stats;
 ```
 
@@ -171,7 +168,7 @@ Automatic seeding has new extended events for tracking state change, failures, a
 
 For example, this script creates an extended events session that captures events related to automatic seeding: 
 
-```
+```Transact-SQL
 CREATE EVENT SESSION [AlwaysOn_autoseed] ON SERVER 
     ADD EVENT sqlserver.hadr_automatic_seeding_state_transition,
     ADD EVENT sqlserver.hadr_automatic_seeding_timeout,
@@ -217,18 +214,18 @@ The following table lists extended events related to automatic seeding:
 
 Query `sys.dm_hadr_physical_seeding_stats` for currently running automatic seeding processes. The view returns one row for each database. For example:
 
-```
+```Transact-SQL
 SELECT local_database_name, 
-       role_desc, 
-       internal_state_desc, 
-       transfer_rate_bytes_per_second, 
-       transferred_size_bytes, 
-       database_size_bytes, 
-       start_time_utc, 
-       end_time_utc, estimate_time_complete_utc, 
-       total_disk_io_wait_time_ms, 
-       total_network_wait_time_ms, 
-       is_compression_enabled 
+    role_desc, 
+    internal_state_desc, 
+    transfer_rate_bytes_per_second, 
+    transferred_size_bytes, 
+    database_size_bytes, 
+    start_time_utc, 
+    end_time_utc, estimate_time_complete_utc, 
+    total_disk_io_wait_time_ms, 
+    total_network_wait_time_ms, 
+    is_compression_enabled 
 FROM sys.dm_hadr_physical_seeding_stats
 ```
 
@@ -237,14 +234,14 @@ FROM sys.dm_hadr_physical_seeding_stats
 
 When a database fails to appear as part of an availability group with automatic seeding enabled, the automatic seeding likely failed. This prevents addition of the database to the availability group on either the primary and secondary replica. Query `sys.dm_hadr_automatic_seeding` on both the primary and secondary replicas. For example, run the following query to identify failure state of automatic seeding.
 
-```
+```Transact-SQL
 SELECT start_time, 
-       completion_time, 
-       is_source, 
-       current_state, 
-       failure_state, 
-       failure_state_desc, 
-       error_code 
+    completion_time, 
+    is_source, 
+    current_state, 
+    failure_state, 
+    failure_state_desc, 
+    error_code 
 FROM sys.dm_hadr_automatic_seeding
 ```
 

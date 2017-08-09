@@ -1,6 +1,6 @@
 ---
 title: "SQL Server Technical Documentation | Microsoft Docs"
-ms.date: "06/27/2017"
+ms.date: "07/31/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -30,29 +30,31 @@ manager: "jhubbard"
 
  Documentation to help you install, configure, and use SQL Server. The content includes end-to-end examples, code samples, and videos. For [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] language topics, see [Language Reference](../t-sql/language-reference.md).
 
-You can also view SQL Server documentation offline by using the Help Viewer. For more information, see [Help Viewer and Offline Content for SQL Server](../release-notes/sql-server-help-installation.md).
+ 
 
 **SQL Server 2017**
 
 - [SQL Server 2017 Release Notes](../sql-server/sql-server-2017-release-notes.md)
 - [What's New in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)
- 
-**SQL Server 2016:**
+
+
+**SQL Server 2016**
  
 - [SQL Server 2016 Release Notes](../sql-server/sql-server-2016-release-notes.md)
 - [What's New in SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)
     
  **Try SQL Server!**    
+ - [![Download from Evaluation Center](../analysis-services/media/download.png)](http://go.microsoft.com/fwlink/?LinkID=829477)  Download [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] from the **[Evaluation Center](http://go.microsoft.com/fwlink/?LinkID=829477)** 
  - [**Download SQL Server 2016  from the Evaluation Center**](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) 
  - **[Spin up a Virtual Machine with SQL Server 2016 already installed](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)**    
- - **[Download the latest version of SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx)**   
+ - **[Download the latest version of SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx)**   
       
 ## SQL Server Technologies    
     
 |||    
 |-|-|    
 |![SQL database engine](../sql-server/media/sql-database-engine.png "SQL database engine")|**[Database Engine](../database-engine/configure-windows/sql-server-database-engine.md)**<br /><br /> The Database Engine is the core service for storing, processing, and securing data. The Database Engine provides controlled access and rapid transaction processing to meet the requirements of the most demanding data consuming applications within your enterprise. The Database Engine also provides rich support for sustaining high availability.|    
-|![R Server](../sql-server/media/r-server.png "R Server")|**[R Services](../advanced-analytics/r-services/r-services.md)**<br /><br /> Microsoft R Services provides multiple ways to incorporate the popular R language into enterprise workflows.<br /><br /> [!INCLUDE[rsql_productname](../includes/rsql-productname-md.md)] integrates the R language with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], making it easy to build, retrain, and score models by calling [!INCLUDE[tsql](../includes/tsql-md.md)] stored procedures.<br /><br /> Microsoft R Server provides multi-platform, scalable support for R in the enterprise, and supports data sources such as Hadoop and Teradata.|    
+|![R Server](../sql-server/media/r-server.png "R Server")|**[Machine Learning Services](../advanced-analytics/r-services/r-services.md)**<br /><br /> Microsoft Machine Learning Services supports integration of machine learning, using the popular R and Python languages, into enterprise workflows.<br /><br /> Machine Learning Services (In-Database) integrates R and Python with SQL Server, making it easy to build, retrain, and score models by calling stored procedures.<br /><br /> Microsoft Machine Learning Server provides enterprise-scale support for R and Python, without requiring SQL Server.|    
 |![Data Quality Services](../sql-server/media/data-quality-services.png "Data Quality Services")|**[Data Quality Services](../data-quality-services/data-quality-services.md)**<br /><br /> SQL Server Data Quality Services (DQS) provides you with a knowledge-driven data cleansing solution. DQS enables you to build a knowledge base, and then use that knowledge base to perform data correction and deduplication on your data, using both computer-assisted and interactive means. You can use cloud-based reference data services, and you can build a data management solution that integrates DQS with SQL Server Integration Services and Master Data Services.|    
 |![Integration Services](../sql-server/media/integration-services.png "Integration Services")|**[Integration Services](../integration-services/sql-server-integration-services.md)**<br /><br /> [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] is a platform for building high performance data integration solutions, including packages that provide extract, transform, and load (ETL) processing for data warehousing.|    
 |![Master Data Services](../sql-server/media/master-data-services.png)|**[Master Data Services](../master-data-services/master-data-services-installation-and-configuration.md)**<br /><br /> [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] is the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] solution for master data management. A solution built on [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] helps ensure that reporting and analysis is based on the right information. Using [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], you create a central repository for your master data and maintain an auditable, securable record of that data as it changes over time.|    
@@ -75,6 +77,7 @@ You can also view SQL Server documentation offline by using the Help Viewer. For
 - [SQL Server samples on GitHub](https://github.com/Microsoft/sql-server-samples) 
    
  ## More information   
++ You can also view SQL Server documentation offline by using the Help Viewer. For more information, see [Help Viewer and Offline Content for SQL Server](../release-notes/sql-server-help-installation.md).
 + [SQL Server Configuration Manager](../relational-databases/sql-server-configuration-manager.md)
 + [SQL Server Update Center](https://msdn.microsoft.com/library/ff803383.aspx) links and information for all supported versions 
 + [Install SQL Server Database Engine](../database-engine/install-windows/install-sql-server-database-engine.md) 
@@ -82,4 +85,8 @@ You can also view SQL Server documentation offline by using the Help Viewer. For
 + [SQL Server Data Tools in Visual Studio 2015](https://msdn.microsoft.com/mt186501.aspx)
 + [Videos, samples, and community resources](https://msdn.microsoft.com/library/dn237258.aspx)
   
-[!INCLUDE[feedback_stackoverflow_msdn_connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
+##  ![info_tip](../sql-server/media/info-tip.png) Engage with the SQL Server engineering team 
+- [Stack Overflow (tag sql-server) - ask technical questions](http://stackoverflow.com/questions/tagged/sql-server)
+- [MSDN Forums - ask technical questions](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)
+- [Microsoft Connect - report bugs and request features](https://connect.microsoft.com/SQLServer/Feedback)
+- [Reddit - general discussion about SQL Server](https://www.reddit.com/r/SQLServer/)

@@ -2,7 +2,7 @@
 title: "ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL) | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "04/14/2017"
+ms.date: "07/27/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -42,7 +42,7 @@ manager: "jhubbard"
   
 - Enable or disable query optimization hotfixes at the database level.  
 
-- Enable or disable the identity cache at the database level. **Applies to**: SQL Server 2017 and Azure SQL Database (feature is in public preview) 
+- Enable or disable the identity cache at the database level.  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

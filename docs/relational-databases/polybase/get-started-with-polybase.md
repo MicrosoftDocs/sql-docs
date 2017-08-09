@@ -84,10 +84,13 @@ SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;
   
 -   Cloudera CDH 4.3 on Linux  
   
--   Cloudera CDH 5.1 – 5.5, 5.9 - 5.11 on Linux  
+-   Cloudera CDH 5.1 – 5.5, 5.9 - 5.12 on Linux  
   
 -   Azure Blob Storage  
-  
+ 
+Hadoop follows the "Major.Minor.Version" pattern for its new releases. All versions within a supported Major and Minor release are supported.
+ 
+
 >  [!NOTE]
 > Azure Data Lake Store connectivity is only supported in Azure SQL Data Warehouse.
   

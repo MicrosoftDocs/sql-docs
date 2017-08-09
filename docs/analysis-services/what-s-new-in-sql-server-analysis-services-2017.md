@@ -1,7 +1,7 @@
 ---
 title: "What&#39;s new in SQL Server 2017 Analysis Services | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/17/2017"
+ms.date: "07/27/2017"
 ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
@@ -17,6 +17,10 @@ manager: "erikre"
 ---
 # What&#39;s new in SQL Server 2017 Analysis Services
 [!INCLUDE[tsql-appliesto-ssvNxt-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
+
+
+## SQL Server 2017 Analysis Services RC2
+There are no new features in this release. Improvements in this release include bug fixes and performance.
 
 ## SQL Server 2017 Analysis Services RC1
 There are no new features in this release, however, this release includes additional improvements to [Dynamic Management Views](https://docs.microsoft.com/sql/analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services) (DMV) for tabular models at the 1200 and 1400 compatibility levels.

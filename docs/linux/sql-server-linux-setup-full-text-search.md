@@ -92,7 +92,7 @@ If you need an offline installation, locate the Full-text Search package downloa
 
 ## Supported languages
 
-Full-Text Search uses [word breakers](https://msdn.microsoft.com/library/ms142509.aspx) that determine how to identify individual words based on language. You can get a list of registered word breakers by querying the **sys.fulltext_languages** catalog view. Word breakers for the following languages are installed with SQL Server 2017 RC1:
+Full-Text Search uses [word breakers](https://msdn.microsoft.com/library/ms142509.aspx) that determine how to identify individual words based on language. You can get a list of registered word breakers by querying the **sys.fulltext_languages** catalog view. Word breakers for the following languages are installed with SQL Server 2017 RC2:
 
 | Language | Language ID |
 |---|---|
@@ -154,7 +154,7 @@ Full-Text Search uses [word breakers](https://msdn.microsoft.com/library/ms14250
 
 Full-Text Search also works with text stored in binary files. But in this case, an installed filter is required to process the file. For more information about filters, see [Configure and Manage Filters for Search](https://msdn.microsoft.com/library/ms142499.aspx).
 
-You can see a list of installed filters by calling **sp_help_fulltext_system_components 'filter'**. For SQL Server 2017 RC1, the following filters are installed:
+You can see a list of installed filters by calling **sp_help_fulltext_system_components 'filter'**. For SQL Server 2017 RC2, the following filters are installed:
 
 | Component Name | Class ID | Version |
 |---|---|---|

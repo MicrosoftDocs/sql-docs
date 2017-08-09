@@ -42,9 +42,9 @@ SQL Server Data Tools (SSDT) turns Visual Studio into a powerful development and
 
 ## Upgrade SQL Server Data Tools to SSDT 17.0 RC release
 
-SQL Server 2017 RC1 on Linux is supported by SSDT version 17.0 RC or later.
+SQL Server 2017 RC2 on Linux is supported by SSDT version 17.0 RC or later.
 
-1. [Download and Install SSDT 17.0 RC1].
+1. [Download and Install SSDT 17.0 RC2].
 
 ## Create a new database project in source control
 
@@ -117,7 +117,7 @@ If you're new to T-SQL, see [Tutorial: Writing Transact-SQL Statements] and the 
 For more information about developing a database with SQL Data Tools, see [SSDT MSDN documents]
 
 [Download and Install Visual Studio]:https://www.visualstudio.com/downloads/
-[Download and Install SSDT 17.0 RC1]:https://aka.ms/ssdt-download
+[Download and Install SSDT 17.0 RC2]:https://aka.ms/ssdt-download
 [SSDT MSDN documents]: https://msdn.microsoft.com/en-us/library/hh272686(v=vs.103).aspx
 [Tutorial: Writing Transact-SQL Statements]:https://msdn.microsoft.com/library/ms365303.aspx
 [Transact-SQL Reference (Database Engine)]:https://msdn.microsoft.com/library/bb510741.aspx

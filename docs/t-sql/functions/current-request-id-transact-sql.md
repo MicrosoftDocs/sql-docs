@@ -1,7 +1,7 @@
 ---
 title: "CURRENT_REQUEST_ID (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/06/2017"
+ms.date: "07/24/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -25,24 +25,23 @@ manager: "jhubbard"
 # CURRENT_REQUEST_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Returns the ID of the current request within the current session.  
+Returns the ID of the current request within the current session.
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## Syntax  
   
-```  
-  
+```sql
 CURRENT_REQUEST_ID()  
 ```  
   
-## Return Types  
- **smallint**  
+## Return types
+**smallint**
   
 ## Remarks  
- To find exact information about the current session and current request, use @@SPID and CURRENT_REQUEST_ID(), respectively.  
+To find exact information about the current session and current request, use @@SPID and CURRENT_REQUEST_ID(), respectively.
   
-## See Also  
- [@@SPID &#40;Transact-SQL&#41;](../../t-sql/functions/spid-transact-sql.md)  
+## See also
+[@@SPID &#40;Transact-SQL&#41;](../../t-sql/functions/spid-transact-sql.md)
   
   

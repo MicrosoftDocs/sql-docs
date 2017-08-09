@@ -876,6 +876,11 @@
             "redirect_document_id": false
         },
         {
+            "source_path": "docs/connect/php/download-microsoft-php-driver-for-sql-server.md",
+            "redirect_url": "/sql/connect/php/microsoft-php-driver-for-sql-server",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "docs/connect/odbc/using-azure-key-vault-odbc.md",
             "redirect_url": "/sql/connect/odbc/using-always-encrypted-with-the-odbc-driver",
             "redirect_document_id": false

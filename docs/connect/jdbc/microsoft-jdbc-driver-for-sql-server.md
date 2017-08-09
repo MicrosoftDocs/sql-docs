@@ -1,7 +1,7 @@
 ---
 title: "Microsoft JDBC Driver for SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "08/08/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -16,10 +16,12 @@ ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Microsoft JDBC Driver for SQL Server
-[!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  In our continued commitment to interoperability, Microsoft provides a Java Database Connectivity (JDBC) driver for use with SQL Server, and Azure SQL Database. The driver is available at no additional charge and provides Java database connectivity from any Java application, application server, or Java-enabled applet. This driver is a Type 4 JDBC driver that provides database connectivity through the standard JDBC application program interfaces (APIs).  
-The Microsoft JDBC Driver for SQL Server has been tested against major application servers such as IBM WebSphere, and SAP NetWeaver.  
+![Download-DownArrow-Circled](../ssdt/media/download.png)[To download JDBC driver](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+
+In our continued commitment to interoperability, Microsoft provides a Java Database Connectivity (JDBC) driver for use with SQL Server, and Azure SQL Database. The driver is available at no additional charge and provides Java database connectivity from any Java application, application server, or Java-enabled applet. This driver is a Type 4 JDBC driver that provides database connectivity through the standard JDBC application program interfaces (APIs).
+
+The Microsoft JDBC Driver for SQL Server has been tested against major application servers such as IBM WebSphere, and SAP NetWeaver.
   
 ## Getting Started  
 * [Step 1: Configure development environment for Java development](../../connect/jdbc/step-1-configure-development-environment-for-java-development.md)  
@@ -36,11 +38,11 @@ The Microsoft JDBC Driver for SQL Server has been tested against major applicati
 * [Code Samples](../../connect/jdbc/sample-jdbc-driver-applications.md) 
 * [Compliance and Legal](../../connect/jdbc/compliance-and-legal-for-the-jdbc-sql-driver.md)  
   
-## Community  
- [Finding Additional JDBC Driver Information](../../connect/jdbc/finding-additional-jdbc-driver-information.md)  
+## Community
+[Finding Additional JDBC Driver Information](../../connect/jdbc/finding-additional-jdbc-driver-information.md)  
   
-## Download  
- [Download Microsoft JDBC Driver for SQL Server](../../connect/jdbc/download-microsoft-jdbc-driver-for-sql-server.md)  
+## Download
+[Download Microsoft JDBC Driver for SQL Server](../../connect/jdbc/download-microsoft-jdbc-driver-for-sql-server.md) - has additional information about Maven projects, and more.
   
 ## Samples  
 * [Sample JDBC Driver Applications](../../connect/jdbc/sample-jdbc-driver-applications.md)  
@@ -49,5 +51,3 @@ The Microsoft JDBC Driver for SQL Server has been tested against major applicati
 * [Getting Started with Java on Ubuntu](https://www.microsoft.com/en-us/sql-server/developer-get-started/java/ubuntu/)
 * [Getting Started with Java on Red Hat Enterprise Linux (RHEL)](https://www.microsoft.com/en-us/sql-server/developer-get-started/java/rhel/)
 * [Getting Started with Java on SUSE Linux Enterprise Server (SLES)](https://www.microsoft.com/en-us/sql-server/developer-get-started/java/sles/)
-  
-  

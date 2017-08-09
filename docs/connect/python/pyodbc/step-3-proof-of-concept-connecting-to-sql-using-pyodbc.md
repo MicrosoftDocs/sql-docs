@@ -1,7 +1,7 @@
 ---
 title: "Step 3: Proof of concept connecting to SQL using pyodbc | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "08/08/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -16,7 +16,6 @@ ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Step 3: Proof of concept connecting to SQL using pyodbc
-[!INCLUDE[Driver_Python_Download](../../../includes/driver_python_download.md)]
 
 This example should be considered a proof of concept only.  The sample code is simplified for clarity, and does not necessarily represent best practices recommended by Microsoft.  
 

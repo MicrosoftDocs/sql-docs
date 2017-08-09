@@ -1,7 +1,7 @@
 ---
 title: "Download ODBC Driver for SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "08/08/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -36,7 +36,7 @@ manager: "jhubbard"
 
 - [OS X 10.11 and macOS 10.12 Homebrew formulae](https://github.com/Microsoft/homebrew-mssql-release)
 
-See also [Installing the Driver](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).
+See also [Installing the Driver](linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).
 
 ## Microsoft ODBC Driver 13 for SQL Server  
 

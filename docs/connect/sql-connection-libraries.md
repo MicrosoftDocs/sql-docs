@@ -7,10 +7,10 @@ ms.prod: "sql-server"
 ms.custom: "develop apps"
 ms.workload: "data-management"
 ms.topic: article
-ms.date: 08/08/2017
+ms.date: 08/09/2017
 ms.author: genemi
 ---
-# Connectiion modules for Microsoft SQL databases
+# Connection modules for Microsoft SQL databases
 
 This article provides download links to connection modules or *drivers* that your client programs can use for interacting with [Microsoft SQL Server](../index.md), and with its twin in the cloud [Azure SQL Database](http://docs.microsoft.com/azure/sql-database/). Drivers are available for a variety of programming languages, running on the following operating systems:
 
@@ -21,9 +21,9 @@ This article provides download links to connection modules or *drivers* that you
 
 #### OOP-to-relational mismatch
 
-*Relational*: Client programs written in an object oriented programming (OOP) language often use SQL drivers or frameworks which return queried data to them in a format that is more relational than object oriented. C# using ADO.NET is one example. The OOP-relational format mismatch sometimes makes the OOP code harder to write and understand. ADO.NET for C# is on example.
+*Relational*: Client programs that are written in an object-oriented programming (OOP) language often use SQL drivers which return queried data in a format that is more relational than object oriented. C# using ADO.NET is one example. The OOP-relational format mismatch sometimes makes the OOP code harder to write and understand.
 
-*ORM*: Other drivers or frameworks return queried data in the OOP format, avoiding the mismatch. These work by expecting that classes have been defined to match the data columns of particular SQL tables. The driver then performs the *object-relational mapping* (ORM) to return queried data as an instance of a class. Microsoft's Entity Framework (EF) for C#, and Hibernate for Java, are two examples.
+*ORM*: Other drivers or frameworks return queried data in the OOP format, avoiding the mismatch. These drivers work by expecting that classes have been defined to match the data columns of particular SQL tables. The driver then performs the *object-relational mapping* (ORM) to return queried data as an instance of a class. Microsoft's Entity Framework (EF) for C#, and Hibernate for Java, are two examples.
 
 The present article devotes separate sections to these two kinds of connection drivers.
 
@@ -62,7 +62,7 @@ although the FWLink is less precise than is http://github.com/Microsoft/msphpsql
 ## Drivers for ORM access
 
 
-The table below lists examples of Object Relational Mapping (ORM) frameworks, and web frameworks, that client applications can use to connect to Microsoft SQL databases.
+The following table lists examples of Object Relational Mapping (ORM) frameworks that client applications use to connect to Microsoft SQL databases.
 
 
 | Language | ORM driver download |

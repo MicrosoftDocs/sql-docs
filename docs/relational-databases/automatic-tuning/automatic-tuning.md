@@ -25,7 +25,7 @@ manager: "jhubbard"
 
 Automatic tuning in [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], notifies you whenever a potential performance issue is detected, and lets you apply corrective actions,
 or lets the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] automatically fix performance problems.
-Automatic tuning in [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] enables you to identify and fix performance issues caused by **SQL plan choice regressions**. Automatic tuning in [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] creates nessecary indexes and drops unused indexes.
+Automatic tuning in [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] enables you to identify and fix performance issues caused by **SQL plan choice regressions**. Automatic tuning in [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] creates necessary indexes and drops unused indexes.
 
 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] monitors the queries that are executed on the database and automatically improves performance of the workload. [!INCLUDE[ssde_md](../../includes/ssde_md.md)] has a built-in intelligence mechanism that can automatically tune and improve performance of your queries by dynamically adapting the database to your workload. There are two automatic tuning features that are available:
 
@@ -38,7 +38,7 @@ One of the main tasks in classic database administration is monitoring the workl
 
 ## How does automatic tuning work?
 
-Automatic tuning is a continous monitoring and analysis process that constantly learns about the characteristic of your workload and identify potential issues and improvements.
+Automatic tuning is a continuous monitoring and analysis process that constantly learns about the characteristic of your workload and identify potential issues and improvements.
 
 ![Automatic tuning process](./media/tuning-process.png)
 
@@ -148,10 +148,10 @@ Once you turn-on this option, [!INCLUDE[ssde_md](../../includes/ssde_md.md)] wil
 
 # Automatic index management
 
-In [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)], index management is easy because [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] learns about your workload and ensures that your data is always optimally indexed. Proper index design is crucial for optimal performance of your workload, and automatic index management can help you optimize your indexes. Automatic index management can either fix performance issues in incorrectly indexed databases, or maintain and improve indexes on the existing database schema. Automatic tuning in [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] performs the folloowing actions:
+In [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)], index management is easy because [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] learns about your workload and ensures that your data is always optimally indexed. Proper index design is crucial for optimal performance of your workload, and automatic index management can help you optimize your indexes. Automatic index management can either fix performance issues in incorrectly indexed databases, or maintain and improve indexes on the existing database schema. Automatic tuning in [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] performs the following actions:
 
  - Identifies indexes that could improve performance of your T-SQL queries that read data from the tables.
- - Identifies the redundant indexes or indexes that were not used in longer period of time that could be removed. Removing unnecessary indexes improves perfromance of the queries that update data in tables.
+ - Identifies the redundant indexes or indexes that were not used in longer period of time that could be removed. Removing unnecessary indexes improves performance of the queries that update data in tables.
 
 ## Why do you need index management?
 

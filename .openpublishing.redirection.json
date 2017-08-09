@@ -2055,6 +2055,131 @@
             "redirect_url": "/sql/ssms/download-sql-server-management-studio-ssms#release-notes",
             "redirect_document_id": false
         },
+       {
+            "source_path": "docs/integration-services/connection-manager/cache-connection-manager-editor.md",
+            "redirect_url": "/sql/integration-services/connection-manager/cache-connection-manager",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/connection-manager/configure-ado-net-connection-manager.md",
+            "redirect_url": "/sql/integration-services/connection-manager/ado-net-connection-manager",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/connection-manager/configure-ole-db-connection-manager.md",
+            "redirect_url": "/sql/integration-services/connection-manager/ole-db-connection-manager",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/connection-manager/excel-connection-manager-editor.md",
+            "redirect_url": "/sql/integration-services/connection-manager/excel-connection-manager",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/connection-manager/file-connection-manager-editor.md",
+            "redirect_url": "/sql/integration-services/connection-manager/file-connection-manager",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/connection-manager/flat-file-connection-manager-editor-general-page.md",
+            "redirect_url": "/sql/integration-services/connection-manager/flat-file-connection-manager",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/connection-manager/flat-file-connection-manager-editor-columns-page.md",
+            "redirect_url": "/sql/integration-services/connection-manager/flat-file-connection-manager",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/connection-manager/flat-file-connection-manager-editor-preview-page.md",
+            "redirect_url": "/sql/integration-services/connection-manager/flat-file-connection-manager",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/connection-manager/flat-file-connection-manager-editor-advanced-page.md",
+            "redirect_url": "/sql/integration-services/connection-manager/flat-file-connection-manager",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/connection-manager/ftp-connection-manager-editor.md",
+            "redirect_url": "/sql/integration-services/connection-manager/ftp-connection-manager",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/connection-manager/http-connection-manager-editor-proxy-page.md",
+            "redirect_url": "/sql/integration-services/connection-manager/http-connection-manager",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/connection-manager/http-connection-manager-editor-server-page.md",
+            "redirect_url": "/sql/integration-services/connection-manager/http-connection-manager",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/connection-manager/msmq-connection-manager-editor.md",
+            "redirect_url": "/sql/integration-services/connection-manager/msmq-connection-manager",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/connection-manager/multiple-flat-files-connection-manager-editor-general-page.md",
+            "redirect_url": "/sql/integration-services/connection-manager/multiple-flat-files-connection-manager",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/connection-manager/multiple-flat-files-connection-manager-editor-columns-page.md",
+            "redirect_url": "/sql/integration-services/connection-manager/multiple-flat-files-connection-manager",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/connection-manager/multiple-flat-files-connection-manager-editor-preview-page.md",
+            "redirect_url": "/sql/integration-services/connection-manager/multiple-flat-files-connection-manager",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/connection-manager/multiple-flat-files-connection-manager-editor-advanced-page.md",
+            "redirect_url": "/sql/integration-services/connection-manager/multiple-flat-files-connection-manager",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/connection-manager/odata-connection-manager-editor.md",
+            "redirect_url": "/sql/integration-services/connection-manager/odata-connection-manager",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/connection-manager/odbc-connection-manager-ui-reference.md",
+            "redirect_url": "/sql/integration-services/connection-manager/odbc-connection-manager",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/connection-manager/sap-bw-connection-manager-editor.md",
+            "redirect_url": "/sql/integration-services/connection-manager/sap-bw-connection-manager",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/connection-manager/smo-connection-manager-editor.md",
+            "redirect_url": "/sql/integration-services/connection-manager/smo-connection-manager",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/connection-manager/smtp-connection-manager-editor.md",
+            "redirect_url": "/sql/integration-services/connection-manager/smtp-connection-manager",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/connection-manager/sql-server-compact-edition-connection-manager-editor-all-page.md",
+            "redirect_url": "/sql/integration-services/connection-manager/sql-server-compact-edition-connection-manager",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/connection-manager/sql-server-compact-edition-connection-manager-editor-connection-page.md",
+            "redirect_url": "/sql/integration-services/connection-manager/sql-server-compact-edition-connection-manager",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/connection-manager/wmi-connection-manager-editor.md",
+            "redirect_url": "/sql/integration-services/connection-manager/wmi-connection-manager.md",
+            "redirect_document_id": false
+          },
         {
             "source_path": "docs/relational-databases/server-management-objects-smo/how-to-create-a-visual-basic-smo-project-in-visual-studio-net.md",
             "redirect_url": "sql/relational-databases/server-management-objects-smo/overview-smo",

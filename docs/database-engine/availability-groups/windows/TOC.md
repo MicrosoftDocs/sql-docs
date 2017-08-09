@@ -14,7 +14,6 @@
 ## [Listener](create-or-configure-an-availability-group-listener-sql-server.md)  
 
 # Concepts
-## [Automatic seeding](automatically-initialize-always-on-availability-group.md)  
 ## [Automatic seeding for secondary replicas](automatic-seeding-secondary-replicas.md)
 ## [Availability group policies](always-on-policies-for-operational-issues-always-on-availability.md)  
 ## [Availability modes](availability-modes-always-on-availability-groups.md)  
@@ -55,6 +54,7 @@
 ## Configure availability group 
 ### [Change replica availability](change-the-availability-mode-of-an-availability-replica-sql-server.md)  
 ### [Change replica failover mode](change-the-failover-mode-of-an-availability-replica-sql-server.md)  
+### [Configure automatic seeding](automatically-initialize-always-on-availability-group.md)  
 ### [Configure backup on replicas](configure-backup-on-availability-replicas-sql-server.md)  
 ### [Configure flexible failover policy](configure-flexible-automatic-failover-policy.md)  
 ### [Configure backup on replicas](configure-backup-on-availability-replicas-sql-server.md)  

@@ -1,7 +1,7 @@
 ---
 title: "Python SQL Driver - pyodbc | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/08/2017"
+ms.date: "08/09/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -17,7 +17,7 @@ manager: "jhubbard"
 ---
 # Python SQL Driver - pyodbc
 
-![Download-DownArrow-Circled](../../ssdt/media/download.png)[To install SQL driver for Python](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![Download-DownArrow-Circled](../../../ssdt/media/download.png)[To install SQL driver for Python](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
 ## Getting Started
 

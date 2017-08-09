@@ -16,7 +16,8 @@ ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Overview of the PHP SQL Driver
-[!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
+
+![Download-DownArrow-Circled](../../ssdt/media/download.png)[To download PHP driver for SQL Server](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
 The [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] is a PHP extension that provides data access to SQL Server 2005 and later versions including Azure SQL Database. The extension provides a procedural interface (the SQLSRV driver) and an object-oriented interface (the PDO_SQLSRV driver) for accessing data in all versions (including Express) beginning with SQL Server 2005 (support for PHP for SQL Server versions 3.1 and later begins with SQL Server 2008). The [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] API includes support for Windows Authentication, transactions, parameter binding, streaming, metadata access, and error handling.  
   
@@ -26,7 +27,7 @@ To use the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] you must ha
   
 |Topic|Description|  
 |---------|---------------|  
-|[Download Microsoft PHP Driver for SQL Server](../../connect/php/download-microsoft-php-driver-for-sql-server.md)|Links to download drivers and source code for Microsoft PHP driver for SQL Server.|  
+| ![Download-DownArrow-Circled](../../ssdt/media/download.png)[To download PHP driver for SQL Server](../sql-connection-libraries.md#anchor-20-drivers-relational-access) | Links to download drivers and source code for Microsoft PHP driver for SQL Server. |
 |[Release Notes for the PHP SQL Driver](../../connect/php/release-notes-for-the-php-sql-driver.md)|Lists the features that were added for versions 4.0, 3.2, 3.1, 3.0, and 2.0.|  
 |[Support Resources for the PHP SQL Driver](../../connect/php/support-resources-for-the-php-sql-driver.md)|Provides links to resources that can be helpful when you are developing applications that use the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].|  
 |[About Code Examples in the Documentation](../../connect/php/about-code-examples-in-the-documentation.md)|Provides information that might be helpful when you run the code examples in this documentation.|  
@@ -39,5 +40,4 @@ To use the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] you must ha
 ## See Also  
 [Getting Started with the PHP SQL Driver](../../connect/php/getting-started-with-the-php-sql-driver.md)
 [Programming Guide for PHP SQL Driver](../../connect/php/programming-guide-for-php-sql-driver.md)
-[Example Application &#40;SQLSRV Driver&#41;](../../connect/php/example-application-sqlsrv-driver.md)  
-  
+[Example Application &#40;SQLSRV Driver&#41;](../../connect/php/example-application-sqlsrv-driver.md)

@@ -1,8 +1,8 @@
----
+﻿---
 title: "FROM (Transact-SQL) | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "06/28/2017"
+ms.date: "08/09/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -159,7 +159,7 @@ FROM { <table_source> [ ,...n ] }
  Specifies a table, view, table variable, or derived table source, with or without an alias, to use in the [!INCLUDE[tsql](../../includes/tsql-md.md)] statement. Up to 256 table sources can be used in a statement, although the limit varies depending on available memory and the complexity of other expressions in the query. Individual queries may not support up to 256 table sources.  
   
 > [!NOTE]  
->  Query performance may suffer with lots of tables referenced in a query. Compilation and optimization time is also affected by additional factors. These include the presence of indexes and indexed views on each <table_source> and the size of the <select_list> in the SELECT statement.  
+>  Query performance may suffer with lots of tables referenced in a query. Compilation and optimization time is also affected by additional factors. These include the presence of indexes and indexed views on each \<table_source> and the size of the \<select_list> in the SELECT statement.  
   
  The order of table sources after the FROM keyword does not affect the result set that is returned. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] returns errors when duplicate names appear in the FROM clause.  
   
@@ -200,7 +200,7 @@ FROM { <table_source> [ ,...n ] }
  *user_defined_function*  
  Specifies a table-valued function.  
   
- OPENXML <openxml_clause>  
+ OPENXML \<openxml_clause>  
 
 **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
 
@@ -215,7 +215,7 @@ FROM { <table_source> [ ,...n ] }
  *column_alias*  
  Is an optional alias to replace a column name in the result set of the derived table. Include one column alias for each column in the select list, and enclose the complete list of column aliases in parentheses.  
   
- *table_or_view_name* FOR SYSTEM_TIME <system_time>  
+ *table_or_view_name* FOR SYSTEM_TIME \<system_time>  
 
 **Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
 
@@ -246,7 +246,7 @@ FROM { <table_source> [ ,...n ] }
  *repeat_seed*  
  Is a constant integer expression used by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to generate a random number. *repeat_seed* is **bigint**. If *repeat_seed* is not specified, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assigns a value at random. For a specific *repeat_seed* value, the sampling result is always the same if no changes have been applied to the table. The *repeat_seed* expression must evaluate to an integer greater than zero.  
   
- <joined_table>  
+ \<joined_table>  
  Is a result set that is the product of two or more tables. For multiple joins, use parentheses to change the natural order of the joins.  
   
 \<join_type>  
@@ -316,7 +316,7 @@ ON (p.ProductID = v.ProductID);
  *right_table_source*  
  Is a table source as defined in the previous argument. For more information, see the Remarks section.  
   
- *table_source* PIVOT <pivot_clause>  
+ *table_source* PIVOT \<pivot_clause>  
  Specifies that the *table_source* is pivoted based on the *pivot_column*. *table_source* is a table or table expression. The output is a table that contains all columns of the *table_source* except the *pivot_column* and *value_column*. The columns of the *table_source*, except the *pivot_column* and *value_column*, are called the grouping columns of the pivot operator. For more information about PIVOT and UNPIVOT, see [Using PIVOT and UNPIVOT](../../t-sql/queries/from-using-pivot-and-unpivot.md).  
   
  PIVOT performs a grouping operation on the input table with regard to the grouping columns and returns one row for each group. Additionally, the output contains one column for each value specified in the *column_list* that appears in the *pivot_column* of the *input_table*.  
@@ -344,7 +344,7 @@ ON (p.ProductID = v.ProductID);
  *table_alias*  
  Is the alias name of the output table. *pivot_table_alias* must be specified.  
   
- UNPIVOT < unpivot_clause >  
+ UNPIVOT \< unpivot_clause >  
  Specifies that the input table is narrowed from multiple columns in *column_list* into a single column called *pivot_column*. For more information about PIVOT and UNPIVOT, see [Using PIVOT and UNPIVOT](../../t-sql/queries/from-using-pivot-and-unpivot.md).  
   
  AS OF \<date_time>  
@@ -352,7 +352,7 @@ ON (p.ProductID = v.ProductID);
 **Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
 
   
- Returns a table with single record for each row containing the values that were actual (current) at the specified point in time in the past. Internally, a union is performed between the temporal table and its history table and the results are filtered to return the values in the row that was valid at the point in time specified by the *<date_time>* parameter. The value for a row is deemed valid if the *system_start_time_column_name* value is less than or equal to the *<date_time>* parameter value and the *system_end_time_column_name* value is greater than the *<date_time>* parameter value.   
+ Returns a table with single record for each row containing the values that were actual (current) at the specified point in time in the past. Internally, a union is performed between the temporal table and its history table and the results are filtered to return the values in the row that was valid at the point in time specified by the *\<date_time>* parameter. The value for a row is deemed valid if the *system_start_time_column_name* value is less than or equal to the *\<date_time>* parameter value and the *system_end_time_column_name* value is greater than the *\<date_time>* parameter value.   
   
  FROM \<start_date_time> TO \<end_date_time>
 

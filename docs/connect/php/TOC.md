@@ -8,7 +8,6 @@
 ## [Step 4: Connect resiliently to SQL with PHP](step-4-connect-resiliently-to-sql-with-php.md)
 
 # [Overview](overview-of-the-php-sql-driver.md)
-## [Download](download-microsoft-php-driver-for-sql-server.md)
 ## [System Requirements](system-requirements-for-the-php-sql-driver.md)
 ## [Loading the driver](loading-the-php-sql-driver.md)
 ## [Configuring IIS](configuring-iis-for-php-sql-driver.md)

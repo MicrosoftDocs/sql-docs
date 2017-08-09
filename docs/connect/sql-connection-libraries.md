@@ -7,10 +7,10 @@ ms.prod: "sql-server"
 ms.custom: "develop apps"
 ms.workload: "data-management"
 ms.topic: article
-ms.date: 08/08/2017
+ms.date: 08/09/2017
 ms.author: genemi
 ---
-# Connectiion modules for Microsoft SQL databases
+# Connection modules for Microsoft SQL databases
 
 This article provides download links to connection modules or *drivers* that your client programs can use for interacting with [Microsoft SQL Server](../index.md), and with its twin in the cloud [Azure SQL Database](http://docs.microsoft.com/azure/sql-database/). Drivers are available for a variety of programming languages, running on the following operating systems:
 
@@ -21,44 +21,52 @@ This article provides download links to connection modules or *drivers* that you
 
 #### OOP-to-relational mismatch
 
-*Relational*: Client programs written in an object oriented programming (OOP) language often use SQL drivers or frameworks which return queried data to them in a format that is more relational than object oriented. C# using ADO.NET is one example. The OOP-relational format mismatch sometimes makes the OOP code harder to write and understand. ADO.NET for C# is on example.
+*Relational*: Client programs that are written in an object-oriented programming (OOP) language often use SQL drivers which return queried data in a format that is more relational than object oriented. C# using ADO.NET is one example. The OOP-relational format mismatch sometimes makes the OOP code harder to write and understand.
 
-*ORM*: Other drivers or frameworks return queried data in the OOP format, avoiding the mismatch. These work by expecting that classes have been defined to match the data columns of particular SQL tables. The driver then performs the *object-relational mapping* (ORM) to return queried data as an instance of a class. Microsoft's Entity Framework (EF) for C#, and Hibernate for Java, are two examples.
+*ORM*: Other drivers or frameworks return queried data in the OOP format, avoiding the mismatch. These drivers work by expecting that classes have been defined to match the data columns of particular SQL tables. The driver then performs the *object-relational mapping* (ORM) to return queried data as an instance of a class. Microsoft's Entity Framework (EF) for C#, and Hibernate for Java, are two examples.
 
 The present article devotes separate sections to these two kinds of connection drivers.
 
 
+<a name="anchor-20-drivers-relational-access" />
+
 ## Drivers for relational access
 
 
-<!-- Each given Microsoft Download Center page should be enhanced
+<!--
+Each given Microsoft Download Center page should be enhanced
 with a link to the next NEWER version page, on the day that the
 original page is no longer the latest because the newer page is being added.
 But this policy is not agreed on or observed,
 putting the links in the following table at risk for being outdated.
+
+PHP driver in Github.com also uses this FWLink:  http://go.microsoft.com/fwlink/?LinkID=518036 ,
+although the FWLink is less precise than is http://github.com/Microsoft/msphpsql/tree/dev#install-unix .
 -->
 
 
-| Language | Download the driver |
-| :------- | :---------- | :------- |
-| C#       | [ADO.NET](http://www.microsoft.com/net/download/) |
+| Language | Download the SQL driver |
+| :------- | :---------------------- |
+| C#       | [ADO.NET](http://www.microsoft.com/net/download/)<br /><br />[.NET Core, for Linux-Ubuntu](https://www.microsoft.com/net/core#Ubuntu)<br />[.NET Core, for MacOS](https://www.microsoft.com/net/core#macos)<br />[.NET Core, for Windows](https://www.microsoft.com/net/core) |
+| C++      | [ODBC 13.1](http://docs.microsoft.com/sql/connect/odbc/download-odbc-driver-for-sql-server) |
 | Java     | [JDBC](http://go.microsoft.com/fwlink/?LinkId=245496)<br />[Download 6.2](http://www.microsoft.com/download/details.aspx?id=55539) |
-| PHP      | Operating system:<br /><br />[Windows PHP driver](http://www.microsoft.com/download/details.aspx?id=20098)<br />[Ubuntu or MacOS PHP driver, from Github](http://github.com/Microsoft/msphpsql/tree/dev#install-unix) |
-| Node.js  | [Install instructions for Node.js driver](http://docs.microsoft.com/sql/connect/node-js/step-1-configure-development-environment-for-node-js-development) |
-| Python   | [Install instructions for pyodbc](http://docs.microsoft.com/sql/connect/python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development)<br />[Download ODBC 13.1](http://docs.microsoft.com/sql/connect/odbc/download-odbc-driver-for-sql-server) |
-| Ruby     | [Install instructions for Ruby driver](https://docs.microsoft.com/en-us/sql/connect/ruby/step-1-configure-development-environment-for-ruby-development)<br />[Ruby download page](https://rubyinstaller.org/downloads/) |
-| C++      | [Download ODBC 13.1](http://docs.microsoft.com/sql/connect/odbc/download-odbc-driver-for-sql-server) |
+| Node.js  | [Node.js driver, install instructions](http://docs.microsoft.com/sql/connect/node-js/step-1-configure-development-environment-for-node-js-development) |
+| PHP      | *Operating system:*<br /><br />[Windows PHP driver](http://www.microsoft.com/download/details.aspx?id=20098)<br />[Ubuntu or MacOS PHP driver, from Github](http://github.com/Microsoft/msphpsql/tree/dev#install-unix) |
+| Python   | [pyodbc, install instructions](http://docs.microsoft.com/sql/connect/python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development)<br />[Download ODBC 13.1](http://docs.microsoft.com/sql/connect/odbc/download-odbc-driver-for-sql-server) |
+| Ruby     | [Ruby driver, install instructions](https://docs.microsoft.com/sql/connect/ruby/step-1-configure-development-environment-for-ruby-development)<br />[Ruby download page](https://rubyinstaller.org/downloads/) |
 | &nbsp; | <br /> |
 
+
+<a name="anchor-40-drivers-orm-access" />
 
 ## Drivers for ORM access
 
 
-The table below lists examples of Object Relational Mapping (ORM) frameworks, and web frameworks, that client applications can use to connect to Microsoft SQL databases.
+The following table lists examples of Object Relational Mapping (ORM) frameworks that client applications use to connect to Microsoft SQL databases.
 
 
 | Language | ORM driver download |
-| :------- | :-- |
+| :------- | :------------------ |
 | C# | [Entity Framework Core](http://docs.microsoft.com/ef/core/)<br />[Entity Framework (6.x or later)](http://docs.microsoft.com/ef/) |
 | Java | [Hibernate ORM](http://hibernate.org/orm)|
 | PHP | [Eloquent ORM, included in Laravel install](http://laravel.com/docs/) |
@@ -67,6 +75,8 @@ The table below lists examples of Object Relational Mapping (ORM) frameworks, an
 | Ruby | [Ruby on Rails](http://rubyonrails.org/) |
 | &nbsp; | <br /> |
 
+
+<a name="anchor-60-build-an-app-webpages" />
 
 ## Build-an-app webpages
 
@@ -80,7 +90,16 @@ The table below lists examples of Object Relational Mapping (ORM) frameworks, an
     - ORM code examples.
     - Columnstore index demonstrations for much faster performance.
 
+
+#### First page, of Build-an-app webpages
+
 ![Build-an-app webpages, first page screenshot][image-ref-163-buildanapp-webpages-first-page]
+
+
+#### Menu for Java - Ubuntu, of Build-an-app webpages
+
+![Build-an-app webpages, menu Java Ubuntu][image-ref-167-buildanapp-webpages-menu-java-ubuntu]
+
 
 &nbsp;
 
@@ -93,4 +112,4 @@ The table below lists examples of Object Relational Mapping (ORM) frameworks, an
 <!-- Image references -->
 
 [image-ref-163-buildanapp-webpages-first-page]: ./media/homepage-sql-connection-drivers/gm-aka-ms-sqldev-choose-language-g21.png
-
+[image-ref-167-buildanapp-webpages-menu-java-ubuntu]: ./media/homepage-sql-connection-drivers/gm-aka-ms-sqldev-java-ubuntu-c31.png

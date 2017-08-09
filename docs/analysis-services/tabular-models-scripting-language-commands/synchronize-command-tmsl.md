@@ -1,7 +1,7 @@
 ---
 title: "Synchronize command (TMSL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/30/2017"
+ms.date: "08/09/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -18,7 +18,7 @@ manager: "erikre"
 ---
 # Synchronize command (TMSL)
 
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
+[!INCLUDE[ssas-appliesto-sql2016-later](../../includes/ssas-appliesto-sql2016-later.md)]
 
   Synchronizes an Analysis Services database with another existing database.  
   

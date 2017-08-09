@@ -49,8 +49,6 @@ manager: "jhubbard"
   
  You can set properties through [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Designer or programmatically.  
   
- For more information about the properties that you can set in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Designer, see [Cache Connection Manager Editor](../../integration-services/connection-manager/cache-connection-manager-editor.md).  
-  
  For information about how to configure a connection manager programmatically, see <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> and [Adding Connections Programmatically](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md).  
   
 ## Cache Connection Manager Editor
@@ -62,12 +60,6 @@ manager: "jhubbard"
  The Lookup transformation performs lookups on the reference dataset.  
   
  The **Cache Connection ManagerEditor** dialog box includes the following tabs:  
-  
--   [General Tab](../../integration-services/connection-manager/cache-connection-manager-editor.md#generaltab)  
-  
--   [Columns Tab](../../integration-services/connection-manager/cache-connection-manager-editor.md#columnstab)  
-  
- To learn more about the Cache Connection Manager, see [Cache Connection Manager](../../integration-services/connection-manager/cache-connection-manager.md).  
   
 ###  <a name="generaltab"></a> General Tab  
  Use the **General** tab of the **Cache Connection ManagerEditor** dialog box to indicate whether to read the cache from a file or save the cache to a file.  

@@ -75,7 +75,7 @@ to the plan changes.
 In [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] detects and shows potential plan choice regressions and the recommended
 actions that should be applied in the [sys.dm_db_tuning_recommendations &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md)
 view. The view shows information about the problem, the importance of the issue, and details such as the
-identified query, the id of the regressed plan, the id of the plan that was used as baseline for comparison, and the [!INCLUDE[tsql_md](../../includes/tsql_md.md)] statement that can
+identified query, the ID of the regressed plan, the ID of the plan that was used as baseline for comparison, and the [!INCLUDE[tsql_md](../../includes/tsql_md.md)] statement that can
 be executed to fix the problem.
 
 | type | description | datetime | score | details | … |
@@ -88,7 +88,7 @@ Some columns from this view are described in the following list:
  - Description that contains information why [!INCLUDE[ssde_md](../../includes/ssde_md.md)] thinks that this plan change is a potential performance regression.
  - Datetime when the potential regression is detected.
  - Score of this recommendation. 
- - Details about the issues such as id of the detected plan, id of the regressed plan, id of the plan that should be forced to fix the issue, [!INCLUDE[tsql_md](../../includes/tsql_md.md)]
+ - Details about the issues such as ID of the detected plan, ID of the regressed plan, ID of the plan that should be forced to fix the issue, [!INCLUDE[tsql_md](../../includes/tsql_md.md)]
  script that might be applied to fix the issue, etc. Details are stored in [JSON format](../../relational-databases/json/index.md).
 
 Use the following query to obtain a script that fixes the issue and additional information about the estimated gain:
@@ -163,13 +163,13 @@ Finding the optimal set of indexes that improve performance of the queries that 
 
 ## How to identify indexes that need to be changed in your database?
 
-[!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] makes index management process easy. Instead of the tedious process of manual workload analysis and index monitoring, [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] analyzes your workload, identifies the queries that could be executed faster with a new index, and identifies unused or duplicated indexes. Find more information about identification of indexes that should be changed at [Find index recommendations in Azure portal](sql-database-advisor-portal.md).
+[!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] makes index management process easy. Instead of the tedious process of manual workload analysis and index monitoring, [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] analyzes your workload, identifies the queries that could be executed faster with a new index, and identifies unused or duplicated indexes. Find more information about identification of indexes that should be changed at [Find index recommendations in Azure portal](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-advisor-portal).
 
 ## Automatic index management
 
 In addition to detection, [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] can automatically apply identified recommendations. If you find that the built-in rules improve the performance of your database, you might let [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] automatically manage your indexes.
 
-To enable automatic tuning in Azure SQL Database and let automatic tuning feature fully manage your workload, see [Enable automatic tuning](sql-database-automatic-tuning-enable.md).
+To enable automatic tuning in Azure SQL Database and let automatic tuning feature fully manage your workload, see [Enable automatic tuning](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-automatic-tuning-enable).
 
 When the [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] applies a CREATE INDEX or DROP INDEX recommendation, it automatically monitors the performance of the queries that are affected by the index. New index will be retained only if performance of the queries are increased. Dropped index will be automatically re-created if there are some queries that run slower due to the absence of the index.
 

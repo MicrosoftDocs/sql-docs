@@ -103,7 +103,13 @@ manager: "erikre"
   
  **EditSessionTimeout**  
  Specifies the number of seconds until a report edit session times out. The default value is 7200 seconds (2 hours).  
+ 
+ **EnableCustomVisuals (PowerBI Report Server Only)**  
+ Should PowerBI ReportServer enable the display of PowerBI custom visuals. Values are True, False.  Default is True.  
   
+ **EnablePowerBIReportExportData (PowerBI Report Server Only)**  
+ Should PowerBI ReportServer enable the export of data from PowerBI visuals. Values are True, False.  Default is True.  
+ 
  **EnableTestConnectionDetailedErrors**  
  Indicates whether detailed error messages are sent to the client computer when users test data source connections using the report server. The default value is **true**. If the option is set to **false**, only generic error messages are sent.  
   

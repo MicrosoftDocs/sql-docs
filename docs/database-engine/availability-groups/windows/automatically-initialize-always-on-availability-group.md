@@ -1,8 +1,10 @@
 ---
 title: "Automatically initialize Always On availability group | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/14/2016"
-ms.prod: "sql-server-2016"
+ms.date: "08/08/2016"
+ms.prod: 
+ - "sql-server-2016"
+ - "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,12 +20,13 @@ manager: "jhubbard"
 # Automatically initialize Always On Availability group
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
+SQL Server 2016 introduced automatic seeding of availability groups. When you create an availability group with automatic seeding SQL Server automatically creates the secondary replicas for every database in the group. With automatic seeding you no longer have to manually backup and restore secondary replicas. To enable automatic seeding, create the availability group with T-SQL or use the latest version of SQL Server Management Studio.
 
- SQL Server 2016 introduces automatic seeding of availability groups. When you create an availability group with automatic seeding SQL Server automatically creates the secondary replicas for every database in the group. With automatic seeding you no longer have to manually backup and restore secondary replicas. To enable automatic seeding, create the availability group with T-SQL.
+For background information, see [Automatic seeding for secondary replicas](automatic-seeding-secondary-replicas.md).
  
 ## Prerequisites
 
-Automatic seeding requires that the data and log file path is the same on every SQL Server instance participating in the availability group. 
+In SQL Server 2016, automatic seeding requires that the data and log file path is the same on every SQL Server instance participating in the availability group. In SQL Server 2017, you can use different disk layout. For details see [Disk layout](automatic-seeding-secondary-replicas.md#disklayout).
 
 Availability group seeding communicates over the database mirroring endpoint. Open inbound firewall rules to the mirroring endpoint port on each server.
 

@@ -23,7 +23,7 @@ manager: "jhubbard"
 
 Microsoft SQL Server contains Internet-enabled features that can collect and send information about your computer or device ("standard computer information") to Microsoft. The Local Audit component of [SQL Server Usage Feedback collection](http://support.microsoft.com/kb/3153756) writes data collected by the service to a designated folder, representing the data (logs) that will be sent to Microsoft. The purpose of the Local Audit is to allow customers to see all data Microsoft collects with this feature, for compliance, regulatory or privacy validation reasons.  
 
-As of SQL Server 2016 CU2, Local Audit is configurable at instance level for SQL Server Database Engine and Analysis Services (SSAS). Local Audit for SQL Server Integration Services (SSIS) is configurable with the Database Engine. Other SQL Server components that get installed during Setup and SQL Server Tools that are downloaded or installed after Setup do not have Local Audit capability for usage feedback collection. 
+As of SQL Server 2016 CU2, Local Audit is configurable at instance level for SQL Server Database Engine and Analysis Services (SSAS). In SQL Server 2016 CU4 and SQL Server 2016 SP1, Local Audit is also enabled for SQL Server Integration Services (SSIS). Other SQL Server components that get installed during Setup and SQL Server Tools that are downloaded or installed after Setup do not have Local Audit capability for usage feedback collection. 
 
 ## Prerequisites 
 
@@ -55,7 +55,7 @@ Do the following steps to get the SQL Server CEIP Telemetry service logon accoun
  
 1. Launch **Services** - click on the **Windows**  button and type *services.msc*. 
 
-2. Navigate to the appropriate service. For example, for the database engine locate **SQL Server CEIP service *instance name***. For Analysis Services locate **SQL Server Analysis Services CEIP *instance name***. 
+2. Navigate to the appropriate service. For example, for the database engine locate **SQL Server CEIP service \<instance name\>**. For Analysis Services locate **SQL Server Analysis Services CEIP \<instance name\>**. For Integration Services locate **SQL Server Integration Services CEIP service 13**.
 
 3. Right-click on the service and choose **Properties**. 
 

@@ -1,7 +1,7 @@
 ---
 title: "CREATE STATISTICS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/11/2017"
+ms.date: "08/10/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -127,7 +127,7 @@ CREATE STATISTICS statistics_name
   
 -   CLR user-defined type columns can be specified if the type supports binary ordering. Computed columns defined as method invocations of a user-defined type column can be specified if the methods are marked deterministic.  
   
- WHERE <filter_predicate>  
+ WHERE \<filter_predicate> 
  Specifies an expression for selecting a subset of rows to include when creating the statistics object. Statistics that are created with a filter predicate are called filtered statistics. The filter predicate uses simple comparison logic and cannot reference a computed column, a UDT column, a spatial data type column, or a **hierarchyID** data type column. Comparisons using NULL literals are not allowed with the comparison operators. Use the IS NULL and IS NOT NULL operators instead.  
   
  Here are some examples of filter predicates for the Production.BillOfMaterials table:  
@@ -311,3 +311,4 @@ ON DimCustomer (CustomerKey, EmailAddress) WITH SAMPLE 50 PERCENT;
  [sys.stats_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)  
   
   
+

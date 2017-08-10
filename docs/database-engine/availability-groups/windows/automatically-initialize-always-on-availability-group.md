@@ -69,6 +69,45 @@ The following example creates an availability group on a two node windows server
     GO
     ``` 
 
+    ```tsql
+    CREATE AVAILABILITY GROUP [<availability_group_name>]
+        FOR DATABASE db1
+        REPLICA ON'<*primary_server*>'
+        WITH (ENDPOINT_URL = N'TCP://<primary_server>.<fully_qualified_domain_name>:5022', 
+            FAILOVER_MODE = AUTOMATIC, 
+            AVAILABILITY_MODE = SYNCHRONOUS_COMMIT, 
+            BACKUP_PRIORITY = 50, 
+            SECONDARY_ROLE(ALLOW_CONNECTIONS = NO), 
+            SEEDING_MODE = AUTOMATIC),
+        N'<secondary_server>' WITH (ENDPOINT_URL = N'TCP://<secondary_server>.<fully_qualified_domain_name>:5022', 
+            FAILOVER_MODE = AUTOMATIC, 
+            AVAILABILITY_MODE = SYNCHRONOUS_COMMIT, 
+            BACKUP_PRIORITY = 50, 
+            SECONDARY_ROLE(ALLOW_CONNECTIONS = NO), 
+            SEEDING_MODE = AUTOMATIC);
+    GO
+    ``` 
+
+    ```SQL
+    CREATE AVAILABILITY GROUP [<availability_group_name>]
+        FOR DATABASE db1
+        REPLICA ON'<*primary_server*>'
+        WITH (ENDPOINT_URL = N'TCP://<primary_server>.<fully_qualified_domain_name>:5022', 
+            FAILOVER_MODE = AUTOMATIC, 
+            AVAILABILITY_MODE = SYNCHRONOUS_COMMIT, 
+            BACKUP_PRIORITY = 50, 
+            SECONDARY_ROLE(ALLOW_CONNECTIONS = NO), 
+            SEEDING_MODE = AUTOMATIC),
+        N'<secondary_server>' WITH (ENDPOINT_URL = N'TCP://<secondary_server>.<fully_qualified_domain_name>:5022', 
+            FAILOVER_MODE = AUTOMATIC, 
+            AVAILABILITY_MODE = SYNCHRONOUS_COMMIT, 
+            BACKUP_PRIORITY = 50, 
+            SECONDARY_ROLE(ALLOW_CONNECTIONS = NO), 
+            SEEDING_MODE = AUTOMATIC);
+    GO
+    ``` 
+
+
 1. Join the secondary server instance to the availability group and grant permission to the availability group to create databases. Updated the following script. Replace the values in angle brackets `<>` for your environment. Run the script on the secondary instance of SQL Server: 
  
     ```Transact-SQL

@@ -98,8 +98,8 @@ You create an availability group using automatic seeding with either Transact-SQ
 
 The following example creates an availability group using Transact-SQL. See also the topic [Create an Availability Group (Transact-SQL)](create-an-availability-group-transact-sql.md). Seeding is enabled  on a secondary replica by setting the SEEDING_MODE option to AUTOMATIC. The default behavior is MANUAL, which is the pre-SQL Server 2016 behavior requiring a backup of the database to be made on the primary replica, a copy of the backup file to the secondary replica, and a restore of the backup WITH NORECOVERY.
 
-```
-CREATE AVAILABILITY GROUP [AGName]
+```sql
+CREATE AVAILABILITY GROUP [<AGName>]
   FOR DATABASE db1
   REPLICA ON N'Primary_Replica'
 WITH (
@@ -108,7 +108,7 @@ WITH (
   AVAILABILITY_MODE = SYNCHRONOUS_COMMIT, 
 ),
   N'Secondary_Replica' WITH (
-    ENDPOINT_URL = N'TCP://Secondary_Replica.Contoso.com :5022', 
+    ENDPOINT_URL = N'TCP://Secondary_Replica.Contoso.com:5022', 
     FAILOVER_MODE = AUTOMATIC, 
     SEEDING_MODE = AUTOMATIC);
  GO
@@ -122,19 +122,21 @@ Local availability replica for availability group 'AGName' has not been granted 
 
 After joining, issue the following statement:
 
-```
-ALTER AVAILABILITY GROUP [AGName] GRANT CREATE ANY DATABASE
+```sql
+ALTER AVAILABILITY GROUP [AGName] 
+    GRANT CREATE ANY DATABASE
  GO
 ````
 
 > [!NOTE] 
 > There is currently a known issue as of SQL Server 2016 SP1 CU2 where a secondary replica must wait three minutes to allow the AG to seed the database before executing an ALTER AVAILABILITY GROUP... statement. Before that time elapses, the statement will not return an error, rather it will indicate success. This is also a known issue. These issues will be fixed in a future update to SQL Server. As a workaround, insert a WAITFOR statement:
-
-```
+>
+>```sql
 WAITFOR DELAY '00:03:15';
 ALTER AVAILABILITY GROUP [AGName] GRANT CREATE ANY DATABASE;
 GO
 ```
+>
 
 If successful, the database(s) are automatically created on the secondary replica with a state of either:
 
@@ -159,7 +161,7 @@ If the secondary replica used automatic seeding when it was added to the availab
 
 A replica’s seeding mode can be altered after the availability group is created, so automatic seeding can be enabled or disabled. Enabling automatic seeding after creation allows a database to be added to the availability group using automatic seeding if it was created with backup, copy, and restore. For example:
 
-```
+```sql
 ALTER AVAILABILITY GROUP [AGName]
   MODIFY REPLICA ON 'Replica_Name'
   WITH (SEEDING_MODE = AUTOMATIC)
@@ -171,8 +173,9 @@ To disable automatic seeding, use a value of MANUAL.
 
 If you do not want to disable automatic seeding completely for a secondary replica, but want to temporarily prevent the secondary replica from being able to automatically create databases, deny the availability group CREATE permission. This is the case when a new database is added to the availability group, but the availability group should not be allowed to create the database on a secondary replica.
 
-```
-ALTER AVAILABILITY GROUP [AGName] DENY CREATE ANY DATABASE
+```sql
+ALTER AVAILABILITY GROUP [AGName] 
+    DENY CREATE ANY DATABASE
 GO
 ```
 
@@ -187,11 +190,11 @@ There are four ways to monitor and troubleshoot automatic seeding:
 
 ### Dynamic Management Views
 
-There are two dynamic management views (DMVs) for monitoring seeding: sys.dm_hadr_automatic_seeding and sys.dm_hadr_physical_seeding_stats.
+There are two dynamic management views (DMVs) for monitoring seeding: `sys.dm_hadr_automatic_seeding` and `sys.dm_hadr_physical_seeding_stats`.
 
-* sys.dm_hadr_automatic_seeding contains the general status of automatic seeding, and retains the history for each time it is executed (whether successful or not). The column current_state will have either a value of COMPLETED or FAILED. If the value is FAILED, use the value in failure_state_desc to help in diagnosing the problem. You may need to combine that with what it in the [SQL Server Log](#sql-server-log) to see what went wrong. This DMV is populated on the primary replica and all secondary replicas.
+* `sys.dm_hadr_automatic_seeding` contains the general status of automatic seeding, and retains the history for each time it is executed (whether successful or not). The column `current_state` will have either a value of COMPLETED or FAILED. If the value is FAILED, use the value in `failure_state_desc` to help in diagnosing the problem. You may need to combine that with what it in the [SQL Server Log](#sql-server-log) to see what went wrong. This DMV is populated on the primary replica and all secondary replicas.
 
-* sys.dm_hadr_physical_seeding_stats shows the status of the automatic seeding operation as it is executing. As with sys.dm_hadr_automatic_seeding, this will show values on both the primary and secondary replicas, but this history is not stored. The values are for the current execution only, and will not be retained. Columns of interest include start_time_utc, end_time_utc, estimate_time_complete_utc, total_disk_io_wait_time_ms, total_network_wait_time_ms, and if the seeding operation fails, failure_message.
+* `sys.dm_hadr_physical_seeding_stats` shows the status of the automatic seeding operation as it is executing. As with `sys.dm_hadr_automatic_seeding`, this returns values for both the primary and secondary replicas, but this history is not stored. The values are for the current execution only, and will not be retained. Columns of interest include `start_time_utc`, `end_time_utc`, `estimate_time_complete_utc`, `total_disk_io_wait_time_ms`, `total_network_wait_time_ms`, and if the seeding operation fails, failure_message.
 
 ### Backup history tables
 
@@ -202,7 +205,7 @@ Automatic seeding also puts entries into the `msdb` tables which store the histo
 Automatic seeding adds new extended events for tracking state change, failures, and performance statistics during initialization.
 For example, the following script creates an extended events session that captures events related to automatic seeding.
 
-```
+```sql
 CREATE EVENT SESSION [AG_autoseed] ON SERVER 
     ADD EVENT sqlserver.hadr_automatic_seeding_state_transition,
     ADD EVENT sqlserver.hadr_automatic_seeding_timeout,
@@ -214,8 +217,20 @@ CREATE EVENT SESSION [AG_autoseed] ON SERVER
     ADD EVENT sqlserver.hadr_physical_seeding_progress,
     ADD EVENT sqlserver.hadr_physical_seeding_restore_state_change,
     ADD EVENT sqlserver.hadr_physical_seeding_submit_callback
-    ADD TARGET package0.event_file(SET filename=N’autoseed.xel’,max_file_size=(5),max_rollover_files=(4))
-  WITH (MAX_MEMORY=4096 KB,EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,MAX_DISPATCH_LATENCY=30 SECONDS,MAX_EVENT_SIZE=0 KB,MEMORY_PARTITION_MODE=NONE,TRACK_CAUSALITY=OFF,STARTUP_STATE=ON)
+    ADD TARGET package0.event_file(
+        SET filename=N’autoseed.xel’,
+        max_file_size=(5),
+        max_rollover_files=(4)
+        )
+    WITH (
+        MAX_MEMORY=4096 KB,
+        EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,
+        MAX_DISPATCH_LATENCY=30 SECONDS,
+        MAX_EVENT_SIZE=0 KB,
+        MEMORY_PARTITION_MODE=NONE,
+        TRACK_CAUSALITY=OFF,
+        STARTUP_STATE=ON
+        )
 GO
 
 ALTER EVENT SESSION AlwaysOn_autoseed ON SERVER STATE=START

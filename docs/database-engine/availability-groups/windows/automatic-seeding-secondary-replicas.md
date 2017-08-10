@@ -38,21 +38,21 @@ Considerations for using automatic seeding include:
 
 ### Performance and transaction log impact on the primary replica
 
-Automatic seeding may or may not practical to initialize a secondary replica, depending on the size of the database, network speed, and distance between the primary and secondary replicas. For example, given:
+Automatic seeding may or may not be practical to initialize a secondary replica, depending on the size of the database, network speed, and distance between the primary and secondary replicas. For example, given:
 
 * The database size is 5 TB
 * The network speed is 1Gb/sec
 * The distance between the two sites is 1000 miles
 
-A 1Gb/sec network can provide sustained throughput of 125 MB/sec if the full bandwidth is available. In this example, automatic seeding would take just over 11 hours. In practice, the automatic seeding process is somewhat slower, as network signals degrade over longer distances and the link is usually shared with other resources on the network. During seeding, the transaction log on the database at the primary replica will continue to grow and cannot be truncated until automatic seeding of that database is complete.  The transaction log can then be truncated using a transaction log backup.
+If if the full bandwidth is available, 1Gb/sec network can provide sustained throughput of 125 MB/sec. In this example, automatic seeding would take just over 11 hours. In practice, the automatic seeding process is slower, as network signals degrade over longer distances and the link is shared with other resources on the network. During seeding, the transaction log on the database at the primary replica continues to grow and cannot be truncated until automatic seeding of that database is complete.  The transaction log can then be truncated using a transaction log backup.
 
-Automatic seeding is a single-threaded process that can handle up to five databases. This may affect performance, especially if the availability group has more than one database.
+Automatic seeding is a single-threaded process that can handle up to five databases. The single-threading affects performance, especially if the availability group has more than one database.
 
 Compression can be used for automatic seeding, but it is disabled by default. Turning on compression reduces network bandwidth and possibly speeds up the process, but the tradeoff is additional processor overhead. To use compression during automatic seeding, enable trace flag 9567 - see [Tune compression for availability group](tune-compression-for-availability-group.md).
 
 ### <a name = "disklayout"></a> Disk layout
 
-In SQL Server 2016 and before, the folder where the database will be created by automatic seeding must already exist and be the same as the path on the primary replica. 
+In SQL Server 2016 and before, the folder where the database is created by automatic seeding must already exist and be the same as the path on the primary replica. 
 
 In SQL Server 2017, Microsoft recommends using the same data and log file path on all replicas participating in an availability group but you can use different paths if necessary. For example, in a cross-platform availability group one instance of SQL Server is on Windows and another instance of SQL Server on is on Linux. The different platforms have different paths. It is also possible to use different paths on instances of SQL Server hosting availability group replicas on the same platform.
 
@@ -73,7 +73,7 @@ Scenarios where source and target database location are not the instance default
 |c:\\data\\ |c:\\data\\ |d:\\data\\ |d:\\data\\
 |c:\\data\\ |c:\\data\\ |d:\\data\\group1\\ |d:\\data\\group1\\
 
-If you mix default and non default paths on the primary and secondary replicas, SQL Server 2017 behaves differently than previous releases The following table shows the SQL Server 2017 behavior.
+If you mix default and non default paths on the primary and secondary replicas, SQL Server 2017 behaves differently than previous releases. The following table shows the SQL Server 2017 behavior.
 
 |Primary instance</br>Default data path |Secondary instance</br>Default data path |Primary instance</br>Source file location |SQL Server 2016 </br>Secondary instance</br> Target file location |SQL Server 2017 </br>Secondary instance</br> Target file location
 |:------|:------|:------|:------|:------
@@ -88,11 +88,11 @@ Security permissions vary depending on the type of replica being initialized:
 
 * For a traditional availability group, permissions must be granted to the availability group on the secondary replica as it is joined to the availability group. In Transact-SQL, use the command `ALTER AVAILABILITY GROUP [<AGName>] GRANT CREATE ANY DATABASE`.
 * For a distributed availability group where the replica’s databases that are being created are on the primary replica of the second availability group, no extra permissions are required as it is already a primary.
-* For a secondary replica on the second availability group of a distributed availability group, you must use the command `ALTER AVAILABILITY GROUP [<2ndAGName>] GRANT CREATE ANY DATABASE`. This secondary replica will be seeded from the primary of the second availability group.
+* For a secondary replica on the second availability group of a distributed availability group, you must use the command `ALTER AVAILABILITY GROUP [<2ndAGName>] GRANT CREATE ANY DATABASE`. This secondary replica is seeded from the primary of the second availability group.
 
 ## Create an availability group with automatic seeding
 
-You create an availability group using automatic seeding with either Transact-SQL or SQL Server Management Studio (SSMS, version 17 or later). To use the Availability Group Wizard in SSMS, follow [these instructions](use-the-availability-group-wizard-sql-server-management-studio.md) - when you get to Step 9, you will see automatic seeding as the first, and default, option.
+You create an availability group using automatic seeding with either Transact-SQL or SQL Server Management Studio (SSMS, version 17 or later). To use the Availability Group Wizard in SSMS, follow [these instructions](use-the-availability-group-wizard-sql-server-management-studio.md) - when you get to Step 9, notice automatic seeding is the first, and default, option.
 
 ![Select initial data synchronization][1]
 
@@ -142,7 +142,7 @@ GO
 
 If successful, the database(s) are automatically created on the secondary replica with a state of either:
 
-* SYNCHRONIZED if the secondary replica is configured to be synchronous and the data is completely synchronized.
+* SYNCHRONIZED if the secondary replica is configured to be synchronous and the data is synchronized.
 * SYNCHRONIZING if the secondary replica is configured with asynchronous data movement, or when configured with synchronous but not yet synchronized with the primary replica.
 
 <a name="sql-server-log"></a>
@@ -157,7 +157,7 @@ It is possible to combine the traditional backup, copy, and restore with automat
 ## Add a database to an availability group with automatic seeding
 
 You can add a database to an availability group using automatic seeding using Transact-SQL or SQL Server Management Studio (SSMS, version 17 or later).
-If the secondary replica used automatic seeding when it was added to the availability group, nothing additional needs to be done. If backup, copy, and restore was used, first change the seeding mode (see next section) and then when adding the database use the GRANT statement - see [Availability Group - Add a Database](availability-group-add-a-database.md).
+If the secondary replica used automatic seeding when it was added to the availability group, nothing additional needs to be done. If the secondary replica used backup, copy, and restore, first change the seeding mode (see next section) and then when adding the database use the `GRANT` statement - see [Availability Group - Add a Database](availability-group-add-a-database.md).
 
 ## Change the seeding mode of a replica
 
@@ -194,9 +194,9 @@ There are four ways to monitor and troubleshoot automatic seeding:
 
 There are two dynamic management views (DMVs) for monitoring seeding: `sys.dm_hadr_automatic_seeding` and `sys.dm_hadr_physical_seeding_stats`.
 
-* `sys.dm_hadr_automatic_seeding` contains the general status of automatic seeding, and retains the history for each time it is executed (whether successful or not). The column `current_state` will have either a value of COMPLETED or FAILED. If the value is FAILED, use the value in `failure_state_desc` to help in diagnosing the problem. You may need to combine that with what it in the [SQL Server Log](#sql-server-log) to see what went wrong. This DMV is populated on the primary replica and all secondary replicas.
+* `sys.dm_hadr_automatic_seeding` contains the general status of automatic seeding, and retains the history for each time it is executed (whether successful or not). The column `current_state` has either a value of COMPLETED or FAILED. If the value is FAILED, use the value in `failure_state_desc` to help in diagnosing the problem. You may need to combine that with what it in the [SQL Server Log](#sql-server-log) to see what went wrong. This DMV is populated on the primary replica and all secondary replicas.
 
-* `sys.dm_hadr_physical_seeding_stats` shows the status of the automatic seeding operation as it is executing. As with `sys.dm_hadr_automatic_seeding`, this returns values for both the primary and secondary replicas, but this history is not stored. The values are for the current execution only, and will not be retained. Columns of interest include `start_time_utc`, `end_time_utc`, `estimate_time_complete_utc`, `total_disk_io_wait_time_ms`, `total_network_wait_time_ms`, and if the seeding operation fails, failure_message.
+* `sys.dm_hadr_physical_seeding_stats` shows the status of the automatic seeding operation as it is executing. As with `sys.dm_hadr_automatic_seeding`, this returns values for both the primary and secondary replicas, but this history is not stored. The values are for the current execution only, and is not retained. Columns of interest include `start_time_utc`, `end_time_utc`, `estimate_time_complete_utc`, `total_disk_io_wait_time_ms`, `total_network_wait_time_ms`, and if the seeding operation fails, failure_message.
 
 ### Backup history tables
 

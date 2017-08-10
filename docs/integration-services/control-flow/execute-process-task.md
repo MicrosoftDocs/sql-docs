@@ -83,8 +83,6 @@ manager: "jhubbard"
 ## Execute Process Task Editor (General Page)
   Use the **General** pageof the **Execute Process Task Editor** dialog box to name and describe the Execute Process task.  
   
- To learn about this task, see [Execute Process Task](../../integration-services/control-flow/execute-process-task.md).  
-  
 ### Options  
  **Name**  
  Provide a unique name for the Execute Process task. This name is used as the label in the task icon.  
@@ -97,8 +95,6 @@ manager: "jhubbard"
   
 ## Execute Process Task Editor (Process Page)
   Use the **Process** page of the **Execute Process Task Editor** dialog box to configure the options that execute the process. These options include the executable to run, its location, command prompt arguments, and the variables that provide input and capture output.  
-  
- To learn about this task, see [Execute Process Task](../../integration-services/control-flow/execute-process-task.md).  
   
 ### Options  
  **RequireFullFileName**  

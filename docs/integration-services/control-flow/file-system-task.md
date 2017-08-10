@@ -79,8 +79,6 @@ manager: "jhubbard"
 ## File System Task Editor (General Page)
   Use the **General** page of the **File System Task Editor** dialog to configure the file system operation that the task performs.  
   
- To learn about this task, see [File System Task](../../integration-services/control-flow/file-system-task.md).  
-  
  You must specify a source and destination connection manager by setting the SourceConnection and DestinationConnection properties. You can either provide the names of File connection managers that point to the files that the task uses as a source or destination, or if the paths of the files are stored in variables, you can provide the names of the variables. To use variables to store the file paths, you must set first set the IsSourcePathVariable option for the source connection and the IsDestinationPatheVariable option for the destination connection to **True**. You can then choose the existing system or user-defined variables to use, or you can create new variables. In the **Add Variable** dialog box, you can configure and specify the scope of the variables. The scope must be the File System task or a parent container. For more information see, [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md) and [Use Variables in Packages](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
   
 > [!NOTE]  

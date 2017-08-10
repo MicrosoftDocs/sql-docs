@@ -232,8 +232,6 @@ manager: "jhubbard"
 ## Analysis Services Execute DDL Task Editor (General Page)
   Use the **General** pageof the **Analysis Services Execute DDL Task Editor** dialog box to name and describe the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Execute DDL task.  
   
- To learn about this task, see [Analysis Services Execute DDL Task](../../integration-services/control-flow/analysis-services-execute-ddl-task.md).  
-  
 ### Options  
  **Name**  
  Provide a unique name for the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Execute DDL task. This name is used as the label in the task icon.  
@@ -246,8 +244,6 @@ manager: "jhubbard"
   
 ## Analysis Services Execute DDL Task Editor (DDL Page)
   Use the **DDL** page of the **Analysis Services Execute DDL Task Editor** dialog box to specify a connection to an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] project or an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database and to provide information about the source of data definition language (DDL) statements.  
-  
- To learn about this task, see [Analysis Services Execute DDL Task](../../integration-services/control-flow/analysis-services-execute-ddl-task.md).  
   
 ### Static Options  
  **Connection**  

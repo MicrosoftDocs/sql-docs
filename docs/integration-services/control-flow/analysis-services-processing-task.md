@@ -80,8 +80,6 @@ manager: "jhubbard"
 ## Analysis Services Processing Task Editor (General Page)
   Use the **General** pageof the **Analysis Services Processing Task Editor** dialog box to name and describe the Analysis Services Processing task.  
   
- To learn about this task, see [Analysis Services Processing Task](../../integration-services/control-flow/analysis-services-processing-task.md).  
-  
 ### Options  
  **Name**  
  Provide a unique name for the Analysis Services Processing task. This name is used as the label in the task icon.  
@@ -104,8 +102,6 @@ manager: "jhubbard"
 3.  Some processing options provided, such as process indexes, are not appropriate for tabular models and should not be used.  
   
 4.  Batch settings are ignored for tabular models.  
-  
- To learn about this task, see [Analysis Services Processing Task](../../integration-services/control-flow/analysis-services-processing-task.md).  
   
 ### Options  
  **Analysis Services connection manager**  

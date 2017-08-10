@@ -100,8 +100,6 @@ manager: "jhubbard"
 ## Message Queue Task Editor (General Page)
   Use the **General page** of the **Message Queue Task Editor** dialog box to name and describe the Message Queue task, to specify the message format, and to indicate whether the task sends or receives messages.  
   
- To learn about this task, see [Message Queue Task](../../integration-services/control-flow/message-queue-task.md).  
-  
 ### Options  
  **Name**  
  Provide a unique name for the Message Queue task. This name is used as the label in the task icon.  

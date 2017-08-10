@@ -85,8 +85,6 @@ manager: "jhubbard"
 ## Send Mail Task Editor (General Page)
   Use the **General page** of the **Send Mail Task Editor** dialog box to name and describe the Send Mail task.  
   
- To learn about this task, see [Send Mail Task](../../integration-services/control-flow/send-mail-task.md).  
-  
 ### Options  
  **Name**  
  Provide a unique name for the Send Mail task. This name is used as the label in the task icon.  
@@ -98,8 +96,6 @@ manager: "jhubbard"
   
 ## Send Mail Task Editor (Mail Page)
   Use the **Mail** page of the **Send Mail Task Editor** dialog box to specify recipients, message type, and priority for a message. You can also attach files to the message. The message text can be a string you provide, a file connection to a file that contains the text, or the name of a variable that contains the text.  
-  
- To learn about this task, see [Send Mail Task](../../integration-services/control-flow/send-mail-task.md).  
   
 ### Options  
  **SMTPConnection**  

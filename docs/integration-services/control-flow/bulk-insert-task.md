@@ -162,8 +162,6 @@ manager: "jhubbard"
 ## Bulk Insert Task Editor (General Page)
   Use the **General** page of the **Bulk Insert Task Editor** dialog box to name and describe the Bulk Insert task.  
   
- To learn about this task, see [Bulk Insert Task](../../integration-services/control-flow/bulk-insert-task.md).  
-  
 ### Options  
  **Name**  
  Provide a unique name for the Bulk Insert task. This name is used as the label in the task icon.  

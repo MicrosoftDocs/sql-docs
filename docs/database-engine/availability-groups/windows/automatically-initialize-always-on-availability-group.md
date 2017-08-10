@@ -1,7 +1,7 @@
 ---
 title: "Automatically initialize Always On availability group | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/08/2016"
+ms.date: "08/08/2017"
 ms.prod: 
  - "sql-server-2016"
  - "sql-server-2017"

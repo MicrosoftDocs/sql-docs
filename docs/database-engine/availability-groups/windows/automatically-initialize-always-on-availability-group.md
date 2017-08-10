@@ -44,7 +44,11 @@ The following example creates an availability group on a two node windows server
     CREATE ENDPOINT [<endpoint_name>] 
         STATE=STARTED
         AS TCP (LISTENER_PORT = 5022, LISTENER_IP = ALL)
-        FOR DATA_MIRRORING (ROLE = ALL, AUTHENTICATION = WINDOWS NEGOTIATE, ENCRYPTION = REQUIRED ALGORITHM AES)
+        FOR DATA_MIRRORING (
+            ROLE = ALL, 
+            AUTHENTICATION = WINDOWS NEGOTIATE, 
+            ENCRYPTION = REQUIRED ALGORITHM AES
+            )
     GO
     ```
 
@@ -69,45 +73,6 @@ The following example creates an availability group on a two node windows server
     GO
     ``` 
 
-    ```tsql
-    CREATE AVAILABILITY GROUP [<availability_group_name>]
-        FOR DATABASE db1
-        REPLICA ON'<*primary_server*>'
-        WITH (ENDPOINT_URL = N'TCP://<primary_server>.<fully_qualified_domain_name>:5022', 
-            FAILOVER_MODE = AUTOMATIC, 
-            AVAILABILITY_MODE = SYNCHRONOUS_COMMIT, 
-            BACKUP_PRIORITY = 50, 
-            SECONDARY_ROLE(ALLOW_CONNECTIONS = NO), 
-            SEEDING_MODE = AUTOMATIC),
-        N'<secondary_server>' WITH (ENDPOINT_URL = N'TCP://<secondary_server>.<fully_qualified_domain_name>:5022', 
-            FAILOVER_MODE = AUTOMATIC, 
-            AVAILABILITY_MODE = SYNCHRONOUS_COMMIT, 
-            BACKUP_PRIORITY = 50, 
-            SECONDARY_ROLE(ALLOW_CONNECTIONS = NO), 
-            SEEDING_MODE = AUTOMATIC);
-    GO
-    ``` 
-
-    ```SQL
-    CREATE AVAILABILITY GROUP [<availability_group_name>]
-        FOR DATABASE db1
-        REPLICA ON'<*primary_server*>'
-        WITH (ENDPOINT_URL = N'TCP://<primary_server>.<fully_qualified_domain_name>:5022', 
-            FAILOVER_MODE = AUTOMATIC, 
-            AVAILABILITY_MODE = SYNCHRONOUS_COMMIT, 
-            BACKUP_PRIORITY = 50, 
-            SECONDARY_ROLE(ALLOW_CONNECTIONS = NO), 
-            SEEDING_MODE = AUTOMATIC),
-        N'<secondary_server>' WITH (ENDPOINT_URL = N'TCP://<secondary_server>.<fully_qualified_domain_name>:5022', 
-            FAILOVER_MODE = AUTOMATIC, 
-            AVAILABILITY_MODE = SYNCHRONOUS_COMMIT, 
-            BACKUP_PRIORITY = 50, 
-            SECONDARY_ROLE(ALLOW_CONNECTIONS = NO), 
-            SEEDING_MODE = AUTOMATIC);
-    GO
-    ``` 
-
-
 1. Join the secondary server instance to the availability group and grant permission to the availability group to create databases. Updated the following script. Replace the values in angle brackets `<>` for your environment. Run the script on the secondary instance of SQL Server: 
  
     ```Transact-SQL
@@ -128,8 +93,10 @@ SELECT start_time,
     failure_state,
     failure_state_desc
 FROM sys.dm_hadr_automatic_seeding autos 
-    JOIN sys.availability_databases_cluster db ON autos.ag_db_id = db.group_database_id
-    JOIN sys.availability_groups ag ON autos.ag_id = ag.group_id
+    JOIN sys.availability_databases_cluster db 
+        ON autos.ag_db_id = db.group_database_id
+    JOIN sys.availability_groups ag 
+        ON autos.ag_id = ag.group_id
 ```
 
 ## Prevent automatic seeding after an availability group
@@ -137,7 +104,8 @@ FROM sys.dm_hadr_automatic_seeding autos
 To temporarily prevent the primary from seeding more databases to the secondary replica you can deny the availability group permission to create databases. Run the following query on the instance that hosts the secondary replica in order to deny the availability group permission to create replica databases.
 
 ```Transact-SQL
-ALTER AVAILABILITY GROUP [<availability_group_name>] DENY CREATE ANY DATABASE
+ALTER AVAILABILITY GROUP [<availability_group_name>] 
+    DENY CREATE ANY DATABASE
 GO
 ```
 
@@ -219,8 +187,20 @@ CREATE EVENT SESSION [AlwaysOn_autoseed] ON SERVER
     ADD EVENT sqlserver.hadr_physical_seeding_progress,
     ADD EVENT sqlserver.hadr_physical_seeding_restore_state_change,
     ADD EVENT sqlserver.hadr_physical_seeding_submit_callback
-    ADD TARGET package0.event_file(SET filename=N’autoseed.xel’,max_file_size=(5),max_rollover_files=(4))
-WITH (MAX_MEMORY=4096 KB,EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,MAX_DISPATCH_LATENCY=30 SECONDS,MAX_EVENT_SIZE=0 KB,MEMORY_PARTITION_MODE=NONE,TRACK_CAUSALITY=OFF,STARTUP_STATE=ON)
+    ADD TARGET package0.event_file(
+        SET filename=N’autoseed.xel’,
+            max_file_size=(5),
+            max_rollover_files=(4)
+        )
+WITH (
+    MAX_MEMORY=4096 KB,
+    EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,
+    MAX_DISPATCH_LATENCY=30 SECONDS,
+    MAX_EVENT_SIZE=0 KB,
+    MEMORY_PARTITION_MODE=NONE,
+    TRACK_CAUSALITY=OFF,
+    STARTUP_STATE=ON
+    )
 GO 
 
 ALTER EVENT SESSION AlwaysOn_autoseed ON SERVER STATE=START

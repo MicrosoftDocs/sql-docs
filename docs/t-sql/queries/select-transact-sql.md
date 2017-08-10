@@ -1,7 +1,7 @@
 ---
 title: "SELECT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/06/2017"
+ms.date: "08/09/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -34,7 +34,7 @@ manager: "jhubbard"
 
   Retrieves rows from the database and enables the selection of one or many rows or columns from one or many tables in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The full syntax of the SELECT statement is complex, but the main clauses can be summarized as:  
   
- [ WITH { [ XMLNAMESPACES ,] [ <common_table_expression> ] } ]  
+[ WITH { [ XMLNAMESPACES ,] [ \<common_table_expression> ] } ]
   
  SELECT *select_list* [ INTO *new_table* ]  
   

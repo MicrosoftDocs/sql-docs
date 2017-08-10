@@ -54,7 +54,7 @@ Compression can be used for automatic seeding, but it is disabled by default. Tu
 
 In SQL Server 2016 and before, the folder where the database is created by automatic seeding must already exist and be the same as the path on the primary replica. 
 
-In SQL Server 2017, Microsoft recommends using the same data and log file path on all replicas participating in an availability group but you can use different paths if necessary. For example, in a cross-platform availability group one instance of SQL Server is on Windows and another instance of SQL Server on is on Linux. The different platforms have different paths. It is also possible to use different paths on instances of SQL Server hosting availability group replicas on the same platform.
+In SQL Server 2017, Microsoft recommends using the same data and log file path on all replicas participating in an availability group but you can use different paths if necessary. For example, in a cross-platform availability group one instance of SQL Server is on Windows and another instance of SQL Server on is on Linux. The different platforms have different default paths. SQL Server 2017 supports availability group replicas on instances of SQL Server with different default paths.
 
 The following table presents examples of supported data disk layouts that can support automatic seeding:
 
@@ -65,9 +65,9 @@ The following table presents examples of supported data disk layouts that can su
 |c:\\data\\ |d:\\data\\ |c:\\data\\ |d:\\data\\
 |c:\\data\\ |d:\\data\\ |c:\\data\\group1\\ |d:\\data\\group1\
 
-Scenarios where source and target database location are not the instance default paths are not impacted by this change. Requirements for target file paths to match the source remain the same.
+Scenarios where primary and secondary replica database location are not the instance default paths are not impacted by this change. Requirements for secondary replica file paths to match the primary replica file paths remain the same.
 
-|Primary instance</br>Default data path|Secondary instance</br>Default data path|Primary instance</br>Source file location|Secondary instance</br> Target file location
+|Primary instance</br>Default data path|Secondary instance</br>Default data path|Primary instance</br>File location|Secondary instance</br> File location
 |:------|:------|:------|:------
 |c:\\data\\ |c:\\data\\ |d:\\group1\\ |d:\\group1\\
 |c:\\data\\ |c:\\data\\ |d:\\data\\ |d:\\data\\
@@ -75,7 +75,7 @@ Scenarios where source and target database location are not the instance default
 
 If you mix default and non default paths on the primary and secondary replicas, SQL Server 2017 behaves differently than previous releases. The following table shows the SQL Server 2017 behavior.
 
-|Primary instance</br>Default data path |Secondary instance</br>Default data path |Primary instance</br>Source file location |SQL Server 2016 </br>Secondary instance</br> Target file location |SQL Server 2017 </br>Secondary instance</br> Target file location
+|Primary instance</br>Default data path |Secondary instance</br>Default data path |Primary instance</br>File location |SQL Server 2016 </br>Secondary instance</br>File location |SQL Server 2017 </br>Secondary instance</br>File location
 |:------|:------|:------|:------|:------
 |c:\\data\\ |d:\\data\\ |c:\\data\\ |c:\\data\\ |d:\\data\\ 
 |c:\\data\\ |d:\\data\\ |c:\\data\\group1\\ |c:\\data\\group1\\ |d:\\data\\group1\\
@@ -126,17 +126,8 @@ After joining, issue the following statement:
 ALTER AVAILABILITY GROUP [AGName] 
     GRANT CREATE ANY DATABASE
  GO
-````
-
-> [!NOTE] 
-> There is currently a known issue as of SQL Server 2016 SP1 CU2 where a secondary replica must wait three minutes to allow the AG to seed the database before executing an ALTER AVAILABILITY GROUP... statement. Before that time elapses, the statement will not return an error, rather it will indicate success. This is also a known issue. These issues will be fixed in a future update to SQL Server. As a workaround, insert a WAITFOR statement:
->
->```sql
-WAITFOR DELAY '00:03:15';
-ALTER AVAILABILITY GROUP [AGName] GRANT CREATE ANY DATABASE;
-GO
 ```
->
+
 
 If successful, the database(s) are automatically created on the secondary replica with a state of either:
 

@@ -206,10 +206,12 @@ As shown in the following figure, secondary replicas show nothing in SQL Server 
 
 The same concepts hold true when you use the dynamic management views. By using the following query, you can see all the availability groups (regular and distributed) and the nodes participating in them. This result is displayed only if you query the primary replica in one of the WSFC clusters that are participating in the distributed availability group. There is a new column in the dynamic management view `sys.availability_groups` named `is_distributed`, which is 1 when the availability group is a distributed availability group. To see this column:
 
-```
-SELECT ag.[name] as 'AG Name', ag.Is_Distributed, ar.replica_server_name as 'Replica Name'
+```sql
+SELECT ag.[name] as 'AG Name', 
+    ag.Is_Distributed, 
+    ar.replica_server_name as 'Replica Name'
 FROM 	sys.availability_groups ag, 
-sys.availability_replicas ar       
+    sys.availability_replicas ar       
 WHERE	ag.group_id = ar.group_id
 ```
 
@@ -219,7 +221,7 @@ An example of output from the second WSFC cluster that's participating in a dist
 
 In SQL Server Management Studio, any status shown on the Dashboard and other areas are for local synchronization only within that availability group. To display the health of a distributed availability group, query the dynamic management views. The following example query extends and refines the previous query:
 
-```
+```sql
 SELECT ag.[name] as 'AG Name', ag.is_distributed, ar.replica_server_name as 'Underlying AG', ars.role_desc as 'Role', ars.synchronization_health_desc as 'Sync Status'
 FROM 	sys.availability_groups ag, 
 sys.availability_replicas ar,       

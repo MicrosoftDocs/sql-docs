@@ -32,7 +32,7 @@ Make sure the endpoints can communicate between the different availability group
 
 For example, the following script creates a listener endpoint on TCP port 5022 that listens on all IP addresses.  
 
-```tsql
+```sql
 CREATE ENDPOINT [aodns-hadr] 
     STATE=STARTED
     AS TCP (LISTENER_PORT = 5022, LISTENER_IP = ALL)
@@ -48,7 +48,7 @@ GO
 
 For example, the following script changes a listener endpoint to listen on all IP addresses.  
 
-```tsql
+```sql
 ALTER ENDPOINT [aodns-hadr] 
     AS TCP (LISTENER_IP = ALL)
 GO
@@ -59,7 +59,7 @@ GO
 ### Create the primary availability group on the first cluster  
 Create an availability group on the first WSFC.   In this example, the availability group is named `ag1` for the database `db1`.      
   
-```tsql  
+```sql  
 CREATE AVAILABILITY GROUP [ag1]   
 FOR DATABASE db1   
 REPLICA ON N'server1' WITH (ENDPOINT_URL = N'TCP://server1.contoso.com:5022',  
@@ -85,7 +85,7 @@ Any secondary replicas must be joined to the availability group with **ALTER AVA
   
 In this example, the following commands are run on the secondary replica, `server2`, to join the `ag1` availability group. The availability group is then permitted to create databases on the secondary.  
   
-```tsql  
+```sql  
 ALTER AVAILABILITY GROUP [ag1] JOIN   
 ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE  
 GO  
@@ -105,7 +105,7 @@ GO
 ## Create second availability group  
  Then on the second WSFC, create a second availability group, `ag2`. In this case, the database is not specified, because it will be automatically seeded from the primary availability group.  
   
-```tsql  
+```sql  
 CREATE AVAILABILITY GROUP [ag2]   
 FOR   
 REPLICA ON N'server3' WITH (ENDPOINT_URL = N'TCP://server3.contoso.com:5022',   
@@ -129,7 +129,7 @@ GO
 ### Join the secondary replicas to the secondary availability group  
  In this example, the following  commands are run on the secondary replica, `server4`, to join the `ag2` availability group. The availability group is then permitted to create databases on the secondary to support direct seeding.  
   
-```tsql  
+```sql  
 ALTER AVAILABILITY GROUP [ag2] JOIN   
 ALTER AVAILABILITY GROUP [ag2] GRANT CREATE ANY DATABASE  
 GO  
@@ -147,7 +147,7 @@ GO
 ## Create distributed availability group on first cluster  
  On the first WSFC, create a distributed availability group (named `distributedag` in this example). Use the **CREATE AVAILABILITY GROUP** command with the **DISTRIBUTED** option. The **AVAILABILITY GROUP ON** parameter specifies the member availability groups, `ag1` and `ag2`.  
   
-```tsql  
+```sql  
 CREATE AVAILABILITY GROUP [distributedag]  
    WITH (DISTRIBUTED)   
    AVAILABILITY GROUP ON  
@@ -174,7 +174,7 @@ GO
 ## Join distributed availability group on second cluster  
  Then join the distributed availability group on the second WSFC.  
   
-```tsql  
+```sql  
 ALTER AVAILABILITY GROUP [distributedag]   
    JOIN   
    AVAILABILITY GROUP ON  
@@ -202,7 +202,7 @@ Only manual failover is supported at this time. The following Transact-SQL state
 
 1. Set the availability mode to synchronous commit for the secondary availability group. 
     
-      ```tsql  
+      ```sql  
       ALTER AVAILABILITY GROUP [distributedag] 
       MODIFY 
       AVAILABILITY GROUP ON
@@ -225,7 +225,7 @@ Only manual failover is supported at this time. The following Transact-SQL state
   
 1. Wait until the status of the distributed availability group has changed to `SYNCHRONIZED`. Run the following query on the SQL Server that hosts the primary replica of the primary availability group. 
     
-      ```tsql  
+      ```sql  
       SELECT ag.name
              , drs.database_id
              , drs.group_id
@@ -241,7 +241,7 @@ Only manual failover is supported at this time. The following Transact-SQL state
 
 1. On the SQL Server that hostes the primary replica for the primary availability group, set the distributed availability group role to `SECONDARY`. 
 
-      ```tsql
+      ```sql
       ALTER AVAILABILITY GROUP distributedag SET (ROLE = SECONDARY); 
       ```  
 
@@ -250,7 +250,7 @@ Only manual failover is supported at this time. The following Transact-SQL state
 
 1. Test the failover readiness. Run the following query:
 
-      ```tsql
+      ```sql
       SELECT ag.name, 
              drs.database_id, 
              drs.group_id, 
@@ -264,7 +264,7 @@ Only manual failover is supported at this time. The following Transact-SQL state
 
 1. Failover from the primary availability group to the secondary availability group. Run the following command on the SQL Server that hosts the primary replica for the secondary availability group. 
 
-      ```tsql
+      ```sql
       ALTER AVAILABILITY GROUP distributedag FORCE_FAILOVER_ALLOW_DATA_LOSS; 
       ```  
 
@@ -276,7 +276,7 @@ After completing the steps above, the distributed availability group fails over 
 ## Remove a distributed availability group  
  The following Transact-SQL statement removes a distributed availability group named `distributedag`:  
   
-```tsql  
+```sql  
 DROP AVAILABILITY GROUP [distributedag]  
 ```  
 
@@ -290,7 +290,7 @@ You can create a distributed availability group using an availability group on a
  
  The following DDL creates this distributed availability group. 
 
-```tsql  
+```sql  
 CREATE AVAILABILITY GROUP [SQLFCIDAG]  
    WITH (DISTRIBUTED)   
    AVAILABILITY GROUP ON  
@@ -317,7 +317,7 @@ CREATE AVAILABILITY GROUP [SQLFCIDAG]
 
 To manually fail over the FCI availability group, update the distributed availability group to reflect the change of listener URL. For example, run the following DDL on both the primary AG and the secondary AG of SQLFCIAG:
 
-```tsql  
+```sql  
 ALTER AVAILABILITY GROUP [SQLFCIDAG]  
    MODIFY AVAILABILITY GROUP ON  
  'SQLFCIAG' WITH    

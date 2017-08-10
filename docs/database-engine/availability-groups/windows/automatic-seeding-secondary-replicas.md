@@ -86,9 +86,9 @@ To revert to the behavior for SQL Server 2016 and before, enable trace flag 9571
 
 Security permissions vary depending on the type of replica being initialized:
 
-* For a traditional availability group, permissions must be granted to the availability group on the secondary replica as it is joined to the availability group. In Transact-SQL, use the command ALTER AVAILABILITY GROUP [AGName] GRANT CREATE ANY DATABASE.
+* For a traditional availability group, permissions must be granted to the availability group on the secondary replica as it is joined to the availability group. In Transact-SQL, use the command `ALTER AVAILABILITY GROUP [<AGName>] GRANT CREATE ANY DATABASE`.
 * For a distributed availability group where the replica’s databases that are being created are on the primary replica of the second availability group, no extra permissions are required as it is already a primary.
-* For a secondary replica on the second availability group of a distributed availability group, you must use the command ALTER AVAILABILITY GROUP [2ndAGName] GRANT CREATE ANY DATABASE. This secondary replica will be seeded from the primary of the second availability group.
+* For a secondary replica on the second availability group of a distributed availability group, you must use the command `ALTER AVAILABILITY GROUP [<2ndAGName>] GRANT CREATE ANY DATABASE`. This secondary replica will be seeded from the primary of the second availability group.
 
 ## Create an availability group with automatic seeding
 
@@ -96,7 +96,7 @@ You create an availability group using automatic seeding with either Transact-SQ
 
 ![Select initial data synchronization][1]
 
-The following example creates an availability group using Transact-SQL. See also the topic [Create an Availability Group (Transact-SQL)](create-an-availability-group-transact-sql.md). Seeding is enabled  on a secondary replica by setting the SEEDING_MODE option to AUTOMATIC. The default behavior is MANUAL, which is the pre-SQL Server 2016 behavior requiring a backup of the database to be made on the primary replica, a copy of the backup file to the secondary replica, and a restore of the backup WITH NORECOVERY.
+The following example creates an availability group with automatic seeding using Transact-SQL. See also the topic [Create an Availability Group (Transact-SQL)](create-an-availability-group-transact-sql.md). Seeding is enabled  on a secondary replica by setting the `SEEDING_MODE` option to `AUTOMATIC`. The default behavior is `MANUAL`, which is the pre-SQL Server 2016 behavior - requiring a backup of the database to be made on the primary replica, a copy of the backup file to the secondary replica, and a restore of the backup `WITH NORECOVERY`.
 
 ```sql
 CREATE AVAILABILITY GROUP [<AGName>]
@@ -114,11 +114,11 @@ WITH (
  GO
 ```
 
-Setting SEEDING_MODE on a primary replica during a CREATE AVAILABILITY GROUP statement has no effect since the primary replica already contains the main read/write copy of the database. SEEDING_MODE would only apply when another replica was made the primary and a database was added. The seeding mode can be changed later - see [Change the seeding mode of a replica](#change-the-seeding-mode-of-a-replica).
+Setting `SEEDING_MODE` on a primary replica during a `CREATE AVAILABILITY GROUP` statement has no effect since the primary replica already contains the main read/write copy of the database. `SEEDING_MODE` would only apply when another replica was made the primary and a database was added. The seeding mode can be changed later - see [Change the seeding mode of a replica](#change-the-seeding-mode-of-a-replica).
 
 On an instance that becomes a secondary replica, once the instance is joined the following message is added to the SQL Server Log:
 
-Local availability replica for availability group 'AGName' has not been granted permission to create databases, but has a SEEDING_MODE of AUTOMATIC. Use the ALTER AVAILABILITY GROUP … GRANT CREATE ANY DATABASE command to allow the creation of databases seeded by the primary availability replica.
+    >Local availability replica for availability group 'AGName' has not been granted permission to create databases, but has a SEEDING_MODE of AUTOMATIC. Use the ALTER AVAILABILITY GROUP … GRANT CREATE ANY DATABASE command to allow the creation of databases seeded by the primary availability replica.
 
 After joining, issue the following statement:
 

@@ -65,7 +65,7 @@ manager: "jhubbard"
 |Columns per nonwide table||1,024||  
 |Columns per wide table||30,000||  
 |Columns per SELECT statement||4,096||  
-|Columns per INSERT statement||4096||  
+|Columns per INSERT statement||4,096||  
 |Connections per client||Maximum value of configured connections||  
 |Database size||524,272 terabytes||  
 |Databases per instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]||32,767||  

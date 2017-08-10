@@ -26,7 +26,7 @@ For background information, see [Automatic seeding for secondary replicas](autom
  
 ## Prerequisites
 
-In SQL Server 2016, automatic seeding requires that the data and log file path is the same on every SQL Server instance participating in the availability group. In SQL Server 2017, you can use different disk layout. For details see [Disk layout](automatic-seeding-secondary-replicas.md#disklayout).
+In SQL Server 2016, automatic seeding requires that the data and log file path is the same on every SQL Server instance participating in the availability group. In SQL Server 2017, you can use different paths, however Microsoft recommends using the same paths when all replicas are hosted on the same platform (for example either Windows or Linux). Cross-platform availability groups will have different paths for the replicas. For details see [Disk layout](automatic-seeding-secondary-replicas.md#disklayout).
 
 Availability group seeding communicates over the database mirroring endpoint. Open inbound firewall rules to the mirroring endpoint port on each server.
 

@@ -105,9 +105,9 @@ GO
 
 ## Enable automatic seeding on an existing availability group
 
-You can set automatic seeding on an existing database. The following command will change an availability group to use automatic seeding. 
+You can set automatic seeding on an existing database. The following command will change an availability group to use automatic seeding.
 
-```Transact SQL
+```Transact-SQL
 ALTER AVAILABILITY GROUP [<availability_group_name>] 
     MODIFY REPLICA ON '<primary_node>' 
     WITH (SEEDING_MODE = AUTOMATIC)

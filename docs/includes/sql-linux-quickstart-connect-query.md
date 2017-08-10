@@ -113,7 +113,7 @@ For other installation scenarios, see the following resources:
 
 |||
 |---|---|
-| [Upgrade](../linux/sql-server-linux-setup.md#upgrade) | Learn how to upgrade and existing installation of SQL Server on Linux |
+| [Upgrade](../linux/sql-server-linux-setup.md#upgrade) | Learn how to upgrade an existing installation of SQL Server on Linux |
 | [Uninstall](../linux/sql-server-linux-setup.md#uninstall) | Uninstall SQL Server on Linux |
 | [Unattended install](../linux/sql-server-linux-setup.md#unattended) | Learn how to script the installation without prompts |
 | [Offline install](../linux/sql-server-linux-setup.md#offline) | Learn how to manually download the packages for offline installation |

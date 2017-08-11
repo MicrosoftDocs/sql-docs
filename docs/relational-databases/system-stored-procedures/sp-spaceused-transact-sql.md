@@ -37,6 +37,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 [, [ @updateusage = ] 'updateusage' ]  
 [, [ @mode = ] 'mode' ]  
 [, [ @oneresultset = ] oneresultset ]  
+[, [ @include_total_xtp_storage = ] include_total_xtp_storage ]
 ```  
   
 ## Arguments  
@@ -54,7 +55,7 @@ If *objname* is not specified, results are returned for the whole database.
  [ **@mode=**] **'***mode***'**  
  Indicates the scope of the results. For a stretched table or database, the *mode* parameter lets you include or exclude the remote portion of the object. For more info, see [Stretch Database](../../sql-server/stretch-database/stretch-database.md).  
   
- The *mode* argument can have the following values.  
+ The *mode* argument can have the following values:  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -65,15 +66,20 @@ If *objname* is not specified, results are returned for the whole database.
  *mode* is **varchar(11)**, with a default of **N'ALL'**.  
   
  [ **@oneresultset=**] *oneresultset*  
- Indicates whether to return a single result set. The *oneresultset* argument can have the following values.  
+ Indicates whether to return a single result set. The *oneresultset* argument can have the following values:  
   
 |Value|Description|  
 |-----------|-----------------|  
-|0|When *@objname* is null or is not specified, two result sets are returned. This is the current and default behavior.|  
+|0|When *@objname* is null or is not specified, two result sets are returned. Two result sets is the default behavior.|  
 |1|When *@objname* = null or is not specified, a single result set is returned.|  
   
  *oneresultset* is **bit**, with a default of **0**.  
+
+[ **@include_total_xtp_storage**] **'***include_total_xtp_storage***'** 
+ Applies to: [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], [!INCLUDE[ssds-md](../../includes/ssssds-md.md)]Azure SQL Database
   
+ When @oneresultset=1, the parameter @include_total_xtp_storage determines whether the single resultset includes columns for MEMORY_OPTIMIZED_DATA storage. The default value is 0, i.e., by default (if the parameter is omitted) the XTP columns are not included in the resultset.  
+
 ## Return Code Values  
  0 (success) or 1 (failure)  
   
@@ -116,35 +122,6 @@ If *objname* is not specified, results are returned for the whole database.
 |**index_size**|**varchar(18)**|Total amount of space used by indexes in *objname*.|  
 |**unused**|**varchar(18)**|Total amount of space reserved for *objname* but not yet used.|  
  
-##  <a name="bkmk_2016"></a> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later 
-
-The sp_spaceused stored procedure now includes support for MEMORY_OPTIMIZED_STORAGE. As part of that one new additional parameter has been added to the stored procedure.
-
-## Syntax  
-  
-```  
--- Applies to SQL Server and Azure SQL Database 
-sp_spaceused [[ @objname = ] 'objname' ]   
-[, [ @updateusage = ] 'updateusage' ]  
-[, [ @mode = ] 'mode' ]  
-[, [ @oneresultset = ] oneresultset ]  
-[, [ @include_total_xtp_storage = ] include_total_xtp_storage ]
-```  
-
-
-
-## Arguments 
-
-[ **@include_total_xtp_storage**] **'***include_total_xtp_storage***'** 
- Applies to: SQL Server, Azure SQL Database
-  
- When @oneresultset=1, the parameter @include_total_xtp_storage determines whether the single resultset includes columns for MEMORY_OPTIMIZED_DATA storage. The default value is 0, i.e., by default (if the parameter is omitted) the XTP columns are not included in the resultset. 
-
-## Return Code Values  
- 0 (success) or 1 (failure)  
-
-## Result Sets 
-
 This is the default mode, when no parameters are specified. The following result sets are returned detailing on-disk database size information. 
 
 |Column name|Data type|Description|  
@@ -184,19 +161,6 @@ If *objname* is omitted, the value of oneresultset is 1, and *include_total_xtp_
 |**xtp_precreated**|**varchar(18)**|Total size of checkpoint files with state PRECREATED, in KB. This counts towards the unallocated space in the database as a whole. Returns NULL if the database does not have a memory_optimized_data filegroup with at least one container. *This column is only included if @include_total_xtp_storage=1*.| 
 |**xtp_used**|**varchar(18)**|Total size of checkpoint files with states UNDER CONSTRUCTION, ACTIVE, and MERGE TARGET, in KB. This is the disk space actively used for data in memory-optimized tables. Returns NULL if the database does not have a memory_optimized_data filegroup with at least one container. *This column is only included if @include_total_xtp_storage=1*.| 
 |**xtp_pending_truncation**|**varchar(18)**|Total size of checkpoint files with state WAITING_FOR_LOG_TRUNCATION, in KB. This is the disk space used for checkpoint files that are awaiting cleanup, once log truncation happens. Returns NULL if the database does not have a memory_optimized_data filegroup with at least one container. *This column is only included if @include_total_xtp_storage=1*.|
-
-If *objname* is specified, the following result set is returned for the specified object. Note that there is no per-table accounting of on-disk footprint for memory-optimized tables, thus NULL values are returned in that case. 
-
-|Column name|Data type|Description|  
-|-----------------|---------------|-----------------|  
-|**name**|**nvarchar(128)**|Name of the object for which space usage information was requested.<br /><br /> The schema name of the object is not returned. If the schema name is required, use the [sys.dm_db_partition_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md) or [sys.dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) dynamic management views to obtain equivalent size information.|  
-|**rows**|**char(20)**|Number of rows existing in the table. If the object specified is a [!INCLUDE[ssSB](../../includes/sssb-md.md)] queue, this column indicates the number of messages in the queue.|  
-|**reserved**|**varchar(18)**|Total amount of reserved space for *objname*. Returns NULL if the table is memory-optimized.|  
-|**data**|**varchar(18)**|Total amount of space used by data in *objname*. Returns NULL if the table is memory-optimized.|  
-|**index_size**|**varchar(18)**|Total amount of space used by indexes in *objname*. Returns NULL if the table is memory-optimized.|  
-|**unused**|**varchar(18)**|Total amount of space reserved for *objname* but not yet used. Returns NULL if the table is memory-optimized.| 
-
-##  <a name="bkmk_2016"></a> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later
 
 ## Remarks  
  **database_size** will always be larger than the sum of **reserved** + **unallocated space** because it includes the size of log files, but **reserved** and **unallocated_space** consider only data pages.  

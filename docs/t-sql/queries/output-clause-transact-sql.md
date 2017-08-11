@@ -1,7 +1,7 @@
----
+﻿---
 title: "OUTPUT Clause (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/16/2017"
+ms.date: "08/09/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -137,14 +137,14 @@ DELETE Sales.ShoppingCartItem
  Is available only for the MERGE statement. Specifies a column of type **nvarchar(10)** in the OUTPUT clause in a MERGE statement that returns one of three values for each row: 'INSERT', 'UPDATE', or 'DELETE', according to the action that was performed on that row.  
   
 ## Remarks  
- The OUTPUT <dml_select_list> clause and the OUTPUT <dml_select_list> INTO { **@***table_variable* | *output_table* } clause can be defined in a single INSERT, UPDATE, DELETE, or MERGE statement.  
+ The OUTPUT \<dml_select_list> clause and the OUTPUT \<dml_select_list> INTO { **@***table_variable* | *output_table* } clause can be defined in a single INSERT, UPDATE, DELETE, or MERGE statement.  
   
 > [!NOTE]  
 >  Unless specified otherwise, references to the OUTPUT clause refer to both the OUTPUT clause and the OUTPUT INTO clause.  
   
  The OUTPUT clause may be useful to retrieve the value of identity or computed columns after an INSERT or UPDATE operation.  
   
- When a computed column is included in the <dml_select_list>, the corresponding column in the output table or table variable is not a computed column. The values in the new column are the values that were computed at the time the statement was executed.  
+ When a computed column is included in the \<dml_select_list>, the corresponding column in the output table or table variable is not a computed column. The values in the new column are the values that were computed at the time the statement was executed.  
   
  There is no guarantee that the order in which the changes are applied to the table and the order in which the rows are inserted into the output table or table variable will correspond.  
   
@@ -197,9 +197,9 @@ DELETE Sales.ShoppingCartItem
   
     -   The target cannot be a remote table or partitioned view.  
   
-    -   The source itself cannot contain a <dml_table_source> clause.  
+    -   The source itself cannot contain a \<dml_table_source> clause.  
   
--   The OUTPUT INTO clause is not supported in INSERT statements that contain a <dml_table_source> clause.  
+-   The OUTPUT INTO clause is not supported in INSERT statements that contain a \<dml_table_source> clause.  
   
 -   @@ROWCOUNT returns the rows inserted only by the outer INSERT statement.  
   
@@ -207,7 +207,7 @@ DELETE Sales.ShoppingCartItem
   
 -   Query notifications treat the statement as a single entity, and the type of any message that is created will be the type of the nested DML, even if the significant change is from the outer INSERT statement itself.  
   
--   In the <dml_table_source> clause, the SELECT and WHERE clauses cannot include subqueries, aggregate functions, ranking functions, full-text predicates, user-defined functions that perform data access, or the TEXTPTR function.  
+-   In the \<dml_table_source> clause, the SELECT and WHERE clauses cannot include subqueries, aggregate functions, ranking functions, full-text predicates, user-defined functions that perform data access, or the TEXTPTR function.  
 
 ## Parallelism
  An OUTPUT clause that returns results to the client will always use a serial plan.
@@ -305,9 +305,9 @@ DROP TABLE dbo.table1;
 >  Use the READPAST table hint in UPDATE and DELETE statements if your scenario allows for multiple applications to perform a destructive read from one table. This prevents locking issues that can come up if another application is already reading the first qualifying record in the table.  
   
 ## Permissions  
- SELECT permissions are required on any columns retrieved through <dml_select_list> or used in <scalar_expression>.  
+ SELECT permissions are required on any columns retrieved through \<dml_select_list> or used in \<scalar_expression>.  
   
- INSERT permissions are required on any tables specified in <output_table>.  
+ INSERT permissions are required on any tables specified in \<output_table>.  
   
 ## Examples  
   

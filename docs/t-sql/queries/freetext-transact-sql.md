@@ -1,7 +1,7 @@
 ---
 title: "FREETEXT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/16/2017"
+ms.date: "08/09/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -115,7 +115,7 @@ WHERE FREETEXT(Description, @SearchWord);
 ## General Remarks  
  Full-text predicates and functions work on a single table, which is implied in the FROM predicate. To search on multiple tables, use a joined table in your FROM clause to search on a result set that is the product of two or more tables.  
   
- Full-text queries using FREETEXT are less precise than those full-text queries using CONTAINS. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] full-text search engine identifies important words and phrases. No special meaning is given to any of the reserved keywords or wildcard characters that typically have meaning when specified in the <contains_search_condition> parameter of the CONTAINS predicate.  
+Full-text queries using FREETEXT are less precise than those full-text queries using CONTAINS. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] full-text search engine identifies important words and phrases. No special meaning is given to any of the reserved keywords or wildcard characters that typically have meaning when specified in the \<contains_search_condition> parameter of the CONTAINS predicate.
   
  Full-text predicates are not allowed in the [OUTPUT clause](../../t-sql/queries/output-clause-transact-sql.md) when the database compatibility level is set to 100.  
   

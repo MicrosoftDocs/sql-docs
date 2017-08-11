@@ -1,7 +1,7 @@
-﻿---
+---
 title: "UPDATE STATISTICS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/26/2016"
+ms.date: "08/10/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -126,7 +126,7 @@ When **ON**, the statistics will retain the set sampling percentage for subseque
  
  **Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4.  
  
- ON PARTITIONS ( { <partition_number> | \<range> } [, …n] ) ]  
+ ON PARTITIONS ( { \<partition_number> | \<range> } [, …n] ) ] 
  Forces the leaf-level statistics covering the partitions specified in the ON PARTITIONS clause to be recomputed, and then merged to build the global statistics. WITH RESAMPLE is required because partition statistics built with different sample rates cannot be merged together.  
   
 **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
@@ -165,7 +165,7 @@ When **ON**, the statistics will retain the set sampling percentage for subseque
   
 **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
- <update_stats_stream_option>  
+ \<update_stats_stream_option> 
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## Remarks  
@@ -291,5 +291,6 @@ UPDATE STATISTICS Customer;
  [sys.dm_db_stats_properties &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)
   
   
+
 
 

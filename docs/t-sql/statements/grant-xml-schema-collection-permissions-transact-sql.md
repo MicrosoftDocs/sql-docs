@@ -1,7 +1,7 @@
 ---
 title: "GRANT XML Schema Collection Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/10/2016"
+ms.date: "08/10/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -58,13 +58,13 @@ GRANT permission  [ ,...n ] ON
  ON XML SCHEMA COLLECTION :: [ *schema_name*. ] *XML_schema_collection_name*  
  Specifies the XML schema collection on which the permission is being granted. The scope qualifier (::) is required. If *schema_name* is not specified, the default schema will be used. If *schema_name* is specified, the schema scope qualifier (.) is required.  
   
- <database_principal>  
+ \<database_principal> 
  Specifies the principal to which the permission is being granted.  
   
  WITH GRANT OPTION  
  Indicates that the principal will also be given the ability to grant the specified permission to other principals.  
   
- AS <database_principal>  
+ AS \<database_principal> 
  Specifies a principal from which the principal executing this query derives its right to grant the permission.  
   
  *Database_user*  
@@ -139,3 +139,4 @@ GRANT permission  [ ,...n ] ON
  [Principals &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
   
   
+

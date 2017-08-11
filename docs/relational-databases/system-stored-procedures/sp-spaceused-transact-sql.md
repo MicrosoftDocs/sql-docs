@@ -2,7 +2,7 @@
 title: "sp_spaceused (Transact-SQL) | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "04/17/2017"
+ms.date: "08/11/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -33,31 +33,20 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Applies to SQL Server and Azure SQL Database 
 sp_spaceused [[ @objname = ] 'objname' ]   
 [, [ @updateusage = ] 'updateusage' ]  
 [, [ @mode = ] 'mode' ]  
 [, [ @oneresultset = ] oneresultset ]  
 ```  
-```  
--- Applies to Azure SQL Data Warehouse and Parallel Data Warehouse 
-sp_spaceused   -- works on databases, not tables 
-[, [ @updateusage = ] 'updateusage' ]  
-[, [ @mode = ] 'mode' ]  
-[, [ @oneresultset = ] oneresultset ]  
-```
- 
- 
   
 ## Arguments  
  [ **@objname=**] **'***objname***'** 
- Applies to: SQL Server, Azure SQL Database
-  
+   
  Is the qualified or nonqualified name of the table, indexed view, or queue for which space usage information is requested. Quotation marks are required only if a qualified object name is specified. If a fully qualified object name (including a database name) is provided, the database name must be the name of the current database.  
-  
- If *objname* is not specified, results are returned for the whole database.  
-  
- *objname* is **nvarchar(776)**, with a default of NULL.  
+If *objname* is not specified, results are returned for the whole database.  
+*objname* is **nvarchar(776)**, with a default of NULL.  
+> [!NOTE]  
+> [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)] and [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)] only support database and table objects.
   
  [ **@updateusage=**] **'***updateusage***'**  
  Indicates DBCC UPDATEUSAGE should be run to update space usage information. When *objname* is not specified, the statement is run on the whole database; otherwise, the statement is run on *objname*. Values can be **true** or **false**. *updateusage* is **varchar(5)**, with a default of **false**.  
@@ -229,7 +218,7 @@ If *objname* is specified, the following result set is returned for the specifie
 ### A. Displaying disk space information about a table  
  The following example reports disk space information for the `Vendor` table and its indexes.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_spaceused N'Purchasing.Vendor';  
@@ -239,7 +228,7 @@ GO
 ### B. Displaying updated space information about a database  
  The following example summarizes space used in the current database and uses the optional parameter `@updateusage` to ensure current values are returned.  
   
-```  
+```sql  
 USE AdventureWorks008R2;  
 GO  
 EXEC sp_spaceused @updateusage = N'TRUE';  
@@ -249,7 +238,7 @@ GO
 ### C. Displaying space usage information about the remote table associated with a Stretch-enabled table  
  The following example summarizes the space used by the remote table associated with a Stretch-enabled table by using the **@mode** argument to specify the remote target. For more info, see [Stretch Database](../../sql-server/stretch-database/stretch-database.md).  
   
-```tsql  
+```sql  
 USE StretchedAdventureWorks2016  
 GO  
 EXEC sp_spaceused N'Purchasing.Vendor', @mode = 'REMOTE_ONLY'  
@@ -258,18 +247,16 @@ EXEC sp_spaceused N'Purchasing.Vendor', @mode = 'REMOTE_ONLY'
 ### D. Displaying space usage information for a database in a single result set  
  The following example summarizes space usage for the current database in a single result set.  
   
-```tsql  
+```sql  
 USE AdventureWorks2016  
 GO  
 EXEC sp_spaceused @oneresultset = 1  
 ```  
 
-**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
-
 ### E. Displaying space usage information for a database with at least one MEMORY_OPTIMIZED file group in a single result set 
  The following example summarizes space usage for the current database with at least one MEMORY_OPTIMIZED file group in a single result set.
  
-```tsql
+```sql
 USE WideWorldImporters
 GO
 EXEC sp_spaceused @updateusage = 'FALSE', @mode = 'ALL', @oneresultset = '1', @include_total_xtp_storage = '1';
@@ -279,7 +266,7 @@ GO
 ### F. Displaying space usage information for a MEMORY_OPTIMIZED table object in a database.
  The following example summarizes space usage for a MEMORY_OPTIMIZED table object in the current database with at least one MEMORY_OPTIMIZED file group.
  
-```tsql
+```sql
 USE WideWorldImporters
 GO
 EXEC sp_spaceused

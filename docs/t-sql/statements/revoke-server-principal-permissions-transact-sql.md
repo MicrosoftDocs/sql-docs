@@ -1,7 +1,7 @@
 ---
 title: "REVOKE Server Principal Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/26/2017"
+ms.date: "08/10/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -61,7 +61,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] }
  SERVER ROLE **::** *server_role*  
  Specifies the server role on which the permission is being revoked. The scope qualifier (**::**) is required.  
   
- { FROM | TO } <server_principal>  
+ { FROM | TO } \<server_principal> 
  Specifies the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login or server role from which the permission is being revoked.  
   
  *SQL_Server_login*  
@@ -151,3 +151,4 @@ GO
  [Security Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)  
   
   
+

@@ -1,7 +1,7 @@
 ---
 title: "TRUNCATE TABLE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/26/2016"
+ms.date: "08/10/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -74,7 +74,7 @@ TRUNCATE TABLE [ { database_name . [ schema_name ] . | schema_name . ] table_nam
   
  Specifies the partitions to truncate or from which all rows are removed. If the table is not partitioned, the **WITH PARTITIONS** argument will generate an error. If the **WITH PARTITIONS** clause is not provided, the entire table will be truncated.  
   
- *<partition_number_expression>* can be specified in the following ways:  
+ *\<partition_number_expression>* can be specified in the following ways: 
   
 -   Provide the number of a partition, for example: `WITH (PARTITIONS (2))`  
   
@@ -160,3 +160,4 @@ GO
  [IDENTITY &#40;Property&#41; &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql-identity-property.md)  
   
   
+

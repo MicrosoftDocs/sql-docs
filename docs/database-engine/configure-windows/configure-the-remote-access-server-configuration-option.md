@@ -1,7 +1,7 @@
 ---
 title: "Configure the remote access Server Configuration Option | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/02/2017"
+ms.date: "08/11/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -49,7 +49,7 @@ manager: "jhubbard"
  This topic describes how to configure the **remote access** server configuration option in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. The **remote access** option controls the execution of stored procedures from local or remote servers on which instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] are running. This default value for this option is 1. This grants permission to run local stored procedures from remote servers or remote stored procedures from the local server. To prevent local stored procedures from being run from a remote server or remote stored procedures from being run on the local server, set the option to 0.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)] Use [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) instead.  
+>  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)] Use [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) instead. <br />When remote access is not enabled, execution of a stored procedure on a linked server will fail, when using 4 part naming, such as the syntax `EXEC linkedserver1.TestDB.dbo.proc_test;`. Use `EXEC(N'TestDB.dbo.proc_test') AT [SQL01];` instead.
   
  **In This Topic**  
   

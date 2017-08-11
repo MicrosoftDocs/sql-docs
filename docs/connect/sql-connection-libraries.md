@@ -4,6 +4,7 @@ description: "Provides download links for modules which enable connection to Mic
 author: MightyPen
 ms.service:
 ms.prod: "sql-server"
+ms.technology: "dbe-data-tier-apps"
 ms.custom: "develop apps"
 ms.workload: "data-management"
 ms.topic: article

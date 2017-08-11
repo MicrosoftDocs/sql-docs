@@ -20,7 +20,7 @@ manager: "jhubbard"
 # Configure the remote access Server Configuration Option
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  This topic is about the "Remote Access" feature. This is an obscure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] communication feature that is deprecated, and you probably shouldn't be using it. If you reached this page because you are having trouble connecting to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see one of the following topics instead:  
+  This topic is about the "Remote Access" feature. This configuration option is an obscure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] communication feature that is deprecated, and you probably shouldn't be using it. If you reached this page because you are having trouble connecting to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see one of the following topics instead:  
   
 -   [Tutorial: Getting Started with the Database Engine](../../relational-databases/tutorial-getting-started-with-the-database-engine.md)  
   

@@ -3,8 +3,8 @@ title: "CREATE DATABASE (Azure SQL Database) | Microsoft Docs"
 ms.custom: 
   - "MSDN content"
   - "MSDN - SQL DB"
-ms.date: "04/03/2017"
 ms.prod: 
+ms.date: "08/10/2017"
 ms.reviewer: ""
 ms.service: "sql-database"
 ms.suite: ""
@@ -127,7 +127,7 @@ CREATE DATABASE database_name
  SERVICE_OBJECTIVE  
  Specifies the performance level. For service objective descriptions and more information about the size, editions, and the service objectives combinations, see [Azure SQL Database Service Tiers and Performance Levels](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/). If the specified SERVICE_OBJECTIVE is not supported by the EDITION you receive an error.  
   
- ELASTIC_POOL (name = <elastic_pool_name>)  
+ ELASTIC_POOL (name = \<elastic_pool_name>) 
  To create a new database in an elastic database pool, set the SERVICE_OBJECTIVE of the database to ELASTIC_POOL and provide the name of the pool. For more information, see [Create and manage a SQL Database elastic database pool (preview)](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/).  
   
  *AS COPY OF [source_server_name.]source_database_name*  
@@ -262,3 +262,4 @@ CREATE DATABASE db_copy
 -   [ALTER DATABASE &#40;Azure SQL Database&#41;](https://msdn.microsoft.com/library/mt574871.aspx)   
     
   
+

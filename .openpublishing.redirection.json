@@ -2204,6 +2204,246 @@
             "source_path": "docs/relational-databases/server-management-objects-smo/system-requirements.md",
             "redirect_url": "sql/relational-databases/server-management-objects-smo/overview-smo",
             "redirect_document_id": false
-        }
+        },
+       {
+            "source_path": "docs/integration-services/control-flow/analysis-services-execute-ddl-task-editor-general-page.md",
+            "redirect_url": "/sql/integration-services/control-flow/analysis-services-execute-ddl-task",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/control-flow/analysis-services-execute-ddl-task-editor-ddl-page.md",
+            "redirect_url": "/sql/integration-services/control-flow/analysis-services-execute-ddl-task",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/control-flow/analysis-services-processing-task-editor-general-page.md",
+            "redirect_url": "/sql/integration-services/control-flow/analysis-services-processing-task",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/control-flow/analysis-services-processing-task-editor-analysis-services-page.md",
+            "redirect_url": "/sql/integration-services/control-flow/analysis-services-processing-task",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/control-flow/bulk-insert-task-editor-general-page.md",
+            "redirect_url": "/sql/integration-services/control-flow/bulk-insert-task",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/control-flow/bulk-insert-task-editor-connection-page.md",
+            "redirect_url": "/sql/integration-services/control-flow/bulk-insert-task",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/control-flow/bulk-insert-task-editor-options-page.md",
+            "redirect_url": "/sql/integration-services/control-flow/bulk-insert-task",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/control-flow/cdc-control-task-editor.md",
+            "redirect_url": "/sql/integration-services/control-flow/cdc-control-task",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/control-flow/data-mining-query-task-editor-query-tab.md",
+            "redirect_url": "/sql/integration-services/control-flow/data-mining-query-task",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/control-flow/data-mining-query-task-editor-mining-model-tab.md",
+            "redirect_url": "/sql/integration-services/control-flow/data-mining-query-task",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/control-flow/data-mining-query-task-editor-output-tab.md",
+            "redirect_url": "/sql/integration-services/control-flow/data-mining-query-task",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/control-flow/data-profile-viewer-f1-help.md",
+            "redirect_url": "/sql/integration-services/control-flow/data-profile-viewer",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/control-flow/execute-package-task-editor.md",
+            "redirect_url": "/sql/integration-services/control-flow/execute-package-task",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/control-flow/execute-process-task-editor-general-page.md",
+            "redirect_url": "/sql/integration-services/control-flow/execute-process-task",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/control-flow/execute-process-task-editor-process-page.md",
+            "redirect_url": "/sql/integration-services/control-flow/execute-process-task",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/control-flow/file-system-task-editor-general-page.md",
+            "redirect_url": "/sql/integration-services/control-flow/file-system-task",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/control-flow/ftp-task-editor-general-page.md",
+            "redirect_url": "/sql/integration-services/control-flow/ftp-task",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/control-flow/ftp-task-editor-file-transfer-page.md",
+            "redirect_url": "/sql/integration-services/control-flow/ftp-task",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/control-flow/message-queue-task-editor-general-page.md",
+            "redirect_url": "/sql/integration-services/control-flow/message-queue-task",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/control-flow/message-queue-task-editor-send-page.md",
+            "redirect_url": "/sql/integration-services/control-flow/message-queue-task",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/control-flow/message-queue-task-editor-receive-page.md",
+            "redirect_url": "/sql/integration-services/control-flow/message-queue-task",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/control-flow/select-variables.md",
+            "redirect_url": "/sql/integration-services/control-flow/message-queue-task",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/control-flow/script-task-editor-general-page.md",
+            "redirect_url": "/sql/integration-services/control-flow/script-task",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/control-flow/script-task-editor-script-page.md",
+            "redirect_url": "/sql/integration-services/control-flow/script-task",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/control-flow/send-mail-task-editor-general-page.md",
+            "redirect_url": "/sql/integration-services/control-flow/send-mail-task",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/control-flow/send-mail-task-editor-mail-page.md",
+            "redirect_url": "/sql/integration-services/control-flow/send-mail-task",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/control-flow/transfer-database-task-editor-general-page.md",
+            "redirect_url": "/sql/integration-services/control-flow/transfer-database-task",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/control-flow/transfer-database-task-editor-databases-page.md",
+            "redirect_url": "/sql/integration-services/control-flow/transfer-database-task",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/control-flow/source-database-files.md",
+            "redirect_url": "/sql/integration-services/control-flow/transfer-database-task",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/control-flow/destination-database-files.md",
+            "redirect_url": "/sql/integration-services/control-flow/transfer-database-task",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/control-flow/transfer-error-messages-task-editor-general-page.md",
+            "redirect_url": "/sql/integration-services/control-flow/transfer-error-messages-task",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/control-flow/transfer-error-messages-task-editor-messages-page.md",
+            "redirect_url": "/sql/integration-services/control-flow/transfer-error-messages-task",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/control-flow/transfer-jobs-task-editor-general-page.md",
+            "redirect_url": "/sql/integration-services/control-flow/transfer-jobs-task",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/control-flow/transfer-jobs-task-editor-jobs-page.md",
+            "redirect_url": "/sql/integration-services/control-flow/transfer-jobs-task",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/control-flow/transfer-logins-task-editor-general-page.md",
+            "redirect_url": "/sql/integration-services/control-flow/transfer-logins-task",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/control-flow/transfer-logins-task-editor-logins-page.md",
+            "redirect_url": "/sql/integration-services/control-flow/transfer-logins-task",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/control-flow/transfer-master-stored-procedures-task-editor-general-page.md",
+            "redirect_url": "/sql/integration-services/control-flow/transfer-master-stored-procedures-task",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/control-flow/transfer-master-stored-procedures-task-editor-stored-procedures-page.md",
+            "redirect_url": "/sql/integration-services/control-flow/transfer-master-stored-procedures-task",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/control-flow/transfer-sql-server-objects-task-editor-general-page.md",
+            "redirect_url": "/sql/integration-services/control-flow/transfer-sql-server-objects-task",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/control-flow/transfer-sql-server-objects-task-editor-objects-page.md",
+            "redirect_url": "/sql/integration-services/control-flow/transfer-sql-server-objects-task",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/control-flow/web-service-task-editor-general-page.md",
+            "redirect_url": "/sql/integration-services/control-flow/web-service-task",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/control-flow/web-service-task-editor-input-page.md",
+            "redirect_url": "/sql/integration-services/control-flow/web-service-task",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/control-flow/web-service-task-editor-output-page.md",
+            "redirect_url": "/sql/integration-services/control-flow/web-service-task",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/control-flow/wmi-data-reader-task-editor-general-page.md",
+            "redirect_url": "/sql/integration-services/control-flow/wmi-data-reader-task",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/control-flow/wmi-data-reader-task-editor-wmi-options-page.md",
+            "redirect_url": "/sql/integration-services/control-flow/wmi-data-reader-task",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/control-flow/wmi-event-watcher-task-editor-general-page.md",
+            "redirect_url": "/sql/integration-services/control-flow/wmi-event-watcher-task",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/control-flow/wmi-event-watcher-task-editor-wmi-options-page.md",
+            "redirect_url": "/sql/integration-services/control-flow/wmi-event-watcher-task",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/control-flow/xml-task-editor-general-page.md",
+            "redirect_url": "/sql/integration-services/control-flow/xml-task",
+            "redirect_document_id": false
+          }
     ]
 }

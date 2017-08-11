@@ -78,7 +78,7 @@ If *objname* is not specified, results are returned for the whole database.
 [ **@include_total_xtp_storage**] **'***include_total_xtp_storage***'** 
  Applies to: [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], [!INCLUDE[sssds-md](../../includes/sssds-md.md)].  
   
- When @oneresultset=1, the parameter @include_total_xtp_storage determines whether the single resultset includes columns for MEMORY_OPTIMIZED_DATA storage. The default value is 0,that is, by default (if the parameter is omitted) the XTP columns are not included in the resultset.  
+ When @oneresultset=1, the parameter @include_total_xtp_storage determines whether the single resultset includes columns for MEMORY_OPTIMIZED_DATA storage. The default value is 0, that is, by default (if the parameter is omitted) the XTP columns are not included in the resultset.  
 
 ## Return Code Values  
  0 (success) or 1 (failure)  
@@ -147,7 +147,7 @@ The following result set is returned **ONLY IF** the database has a MEMORY_OPTIM
 |**xtp_used**|**varchar(18)**|Total size of checkpoint files with states UNDER CONSTRUCTION, ACTIVE, and MERGE TARGET, in KB. This is the disk space actively used for data in memory-optimized tables.|  
 |**xtp_pending_truncation**|**varchar(18)**|Total size of checkpoint files with state WAITING_FOR_LOG_TRUNCATION, in KB. This is the disk space used for checkpoint files that are awaiting cleanup, once log truncation happens.|
 
-If *objname* is omitted, the value of oneresultset is 1, and *include_total_xtp_storage* is 1, the following single result set is returned to provide current database size information. The last three columns are omitted if *include_total_xtp_storage* is 0 (the default). 
+If *objname* is omitted, the value of oneresultset is 1, and *include_total_xtp_storage* is 1, the following single result set is returned to provide current database size information. If `include_total_xtp_storage` is 0 (the default), the last three columns are omitted. 
 
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  

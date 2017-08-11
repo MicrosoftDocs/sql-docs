@@ -3,8 +3,8 @@ title: "CREATE DATABASE (Azure SQL Database) | Microsoft Docs"
 ms.custom: 
   - "MSDN content"
   - "MSDN - SQL DB"
+ms.prod: 
 ms.date: "08/10/2017"
-ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.service: "sql-database"
 ms.suite: ""

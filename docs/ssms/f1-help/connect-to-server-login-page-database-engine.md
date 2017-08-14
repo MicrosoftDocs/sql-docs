@@ -45,7 +45,7 @@ The current version of SSMS, offers five authentication modes when connecting to
   
 When connecting to an instance of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Database Engine through [!INCLUDE[ssSDS](../../includes/sssds_md.md)], you must use [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Authentication and specify a database in the **Connect to Server** dialog box, on the **Connection Properties** tab. Ensure that you select the **Encrypt connection** checkbox.  
   
-By default, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] connects to **master**. If you specify a user database, you will only see that database and its objects in Object Explorer. If you connect to **master**, you will be able to see all databases. For more information, see the [Windows Azure SQL Database Overview](http://go.microsoft.com/fwlink/?LinkId=163948).  
+By default, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] connects to **master**. If you specify a user database when connecting to [!INCLUDE[ssSDS](../../includes/sssds_md.md)], you only see that database and its objects in Object Explorer. If you connect to **master**, you can see all databases. For more information, see the [Windows Azure SQL Database Overview](http://go.microsoft.com/fwlink/?LinkId=163948).  
   
   > **Windows Authentication**  
 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows Authentication mode allows a user to connect through a Windows user account.  
@@ -53,8 +53,8 @@ By default, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] connects t
   > **SQL Server Authentication**  
 When a user connects with a specified login name and password from a non-trusted connection, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] performs the authentication itself by checking to see if a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] login account has been set up and if the specified password matches the one previously recorded. If [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] does not have a login account set, authentication fails, and the user receives an error message.  
   
-  > [!IMPORTANT]  
-  > When possible, use Windows Authentication.  
+    > [!IMPORTANT]  
+    > When possible, use Windows Authentication.  
 
   
   > **Active Directory - Universal with MFA support**  

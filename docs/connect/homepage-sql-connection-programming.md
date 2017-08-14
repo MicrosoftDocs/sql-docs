@@ -13,7 +13,7 @@ ms.author: "genemi"
 # Connection Drivers for Microsoft SQL Server
 
 
-Welcome to the homepage for the our documentation about client programming to interact with Microsoft SQL Server (and with Azure SQL Database in the cloud). This article:
+Welcome to our homepage about client programming to interact with Microsoft SQL Server, and with Azure SQL Database in the cloud. This article provides the following information:
 
 - Lists and describes the available language and driver combinations.
     - Information is given for the operating systems of Linux (Ubuntu and others), MacOS, and Windows.
@@ -23,7 +23,7 @@ Welcome to the homepage for the our documentation about client programming to in
 
 #### Azure SQL Database
 
-In any given language, the code that connects to SQL Server is almost identical to the code for connecting to Azure SQL Database in the Microsoft cloud.
+In any given language, the code that connects to SQL Server is almost identical to the code for connecting to Azure SQL Database.
 
 For details about the connection strings for connecting to Azure SQL Database, see:
 
@@ -71,7 +71,7 @@ The .NET managed languages, such as C# and Visual Basic, are the most common use
 |||
 | :-- | :-- |
 | [Proof of concept connecting to SQL using ADO.NET](./ado-net/step-3-proof-of-concept-connecting-to-sql-using-ado-net.md) | A small code example focused on connecting and querying SQL Server. |
-| [Connect resiliently to SQL with ADO.NET](./ado-net/step-4-connect-resiliently-to-sql-with-ado-net.md) | Retry logic in a code example, because connections can occasionally experience moments of connectivity loss.<br /><br />This applies particularly well to connections maintained through the internet into any cloud database, such as to Azure SQL Database. |
+| [Connect resiliently to SQL with ADO.NET](./ado-net/step-4-connect-resiliently-to-sql-with-ado-net.md) | Retry logic in a code example, because connections can occasionally experience moments of connectivity loss.<br /><br />Retry logic applies well to connections maintained through the internet into any cloud database, such as to Azure SQL Database. |
 | [Azure SQL Database: Demonstration of how to use .NET Core on Windows/Linux/macOS to create a C# program, to connect and query](http://docs.microsoft.com/azure/sql-database/sql-database-connect-query-dotnet-core) | Azure SQL Database example. |
 | [Build-an-app: C#, ADO.NET, Windows](http://www.microsoft.com/sql-server/developer-get-started/csharp/win/) | Configuration information, along with code examples. |
 | &nbsp; | <br /> |
@@ -82,7 +82,7 @@ The .NET managed languages, such as C# and Visual Basic, are the most common use
 | :-- | :-- |
 | [C# using ADO.NET](./ado-net/index.md)| Root of our documentation. |
 | [Namespace: System.Data](http://docs.microsoft.com/dotnet/api/system.data) | A set of classes used for ADO.NET. |
-| [Namespace: System.Data.SqlClient](http://docs.microsoft.com/dotnet/api/system.data.SqlClient) | The set of classes which are most directly the center of ADO.NET. |
+| [Namespace: System.Data.SqlClient](http://docs.microsoft.com/dotnet/api/system.data.SqlClient) | The set of classes that are most directly the center of ADO.NET. |
 | &nbsp; | <br /> |
 
 
@@ -105,7 +105,7 @@ EF is made possible by the following underlying technologies:
 
 The [start page for Entity Framework](http://docs.microsoft.com/ef/) introduces EF with a description similar to the following:
 
-    > Entity Framework is an object-relational mapper (O/RM) that enables .NET developers to work with a database using .NET objects. It eliminates the need for most of the data-access code that developers usually need to write.
+    > Entity Framework is an object-relational mapper (O/RM) that enables .NET developers to work with a database using .NET objects. It eliminates the need for most of the data-access source code that developers usually need to write.
 
 
 *Entity Framework* is a name shared by two separate source code branches. One EF branch is older, and its source code can now be maintained by the public. The other EF is new, as described next:
@@ -113,7 +113,7 @@ The [start page for Entity Framework](http://docs.microsoft.com/ef/) introduces 
 |     |     |
 | :-- | :-- |
 | [EF 6.x](http://docs.microsoft.com/ef/ef6/) | Microsoft first released EF in August 2008. In March 2015 Microsoft announced that EF 6.x was the final version that Microsoft would develop. Microsoft released the source code into the public domain.<br /><br />Initially EF was part of .NET Framework. But EF 6.x was removed from .NET Framework.<br /><br />[EF 6.x source code on Github, in repository *aspnet/EntityFramework6*](http://github.com/aspnet/EntityFramework6) |
-| [EF Core](http://docs.microsoft.com/ef/core/) | In June 2016 Microsoft released a newly developed EF Core. EF Core is designed for better flexibility and portability. EF Core can run on operating systems beyond just Microsoft Windows. And EF Core can interact with databases beyond just Microsoft SQL Server and other relational databases. |
+| [EF Core](http://docs.microsoft.com/ef/core/) | Microsoft released the newly developed EF Core in June 2016. EF Core is designed for better flexibility and portability. EF Core can run on operating systems beyond just Microsoft Windows. And EF Core can interact with databases beyond just Microsoft SQL Server and other relational databases. |
 | &nbsp; | <br /> |
 
 EF and related technologies are powerful, and are a lot to learn for the developer who wants to master the entire area.
@@ -134,8 +134,8 @@ Microsoft provides a Java Database Connectivity (JDBC) driver for use with SQL S
 | :-- | :-- |
 | [Java and JDBC](./jdbc/index.md) | Root of our documentation. |
 | [Code examples](./jdbc/code-samples/index.md) | Code examples that teach about data types, result sets, and large data. |
-| [Connection URL Sample](./jdbc/connection-url-sample.md) | Describes how to use a connection URL to connect to SQL Server, and then to use an SQL statement to retrieve data.
-| [Data Source Sample](./jdbc/data-source-sample.md) | Describes how to use a data source to connect to SQL Server, and then to use a stored procedure to retrieve data. |
+| [Connection URL Sample](./jdbc/connection-url-sample.md) | Describes how to use a connection URL to connect to SQL Server. Then use it to use an SQL statement to retrieve data. |
+| [Data Source Sample](./jdbc/data-source-sample.md) | Describes how to use a data source to connect to SQL Server. Then use a stored procedure to retrieve data. |
 | [Use Java to query an Azure SQL database](http://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java) | Azure SQL Database example. |
 | [Create Java apps using SQL Server on Ubuntu](http://www.microsoft.com/sql-server/developer-get-started/java/ubuntu/) | Configuration information, along with code examples. |
 | &nbsp; | <br /> |
@@ -178,7 +178,7 @@ The Node.js connection driver for SQL Server is implemented in JavaScript. The d
 
 ![ODBC logo][image-ref-350-odbc]
 
-Open database connectivity (ODBC) was developed in the 1990's, and it predates .NET Framework. ODBC is designed to be independent of any particular database system, and independent of operating system.
+Open database connectivity (ODBC) was developed in the 1990s, and it predates .NET Framework. ODBC is designed to be independent of any particular database system, and independent of operating system.
 
 Over the years numerous ODBC drivers have been created and released by groups within and outside of Microsoft. The range of drivers involve several client programming languages. The list of data targets goes well beyond SQL Server.
 
@@ -214,7 +214,7 @@ The ODBC content in this section focuses on accessing either SQL Server or Azure
 
 ## ![PHP logo][image-ref-360-php] PHP
 
-You can use [PHP](./php/index) to interact with SQL Server.
+You can use [PHP](./php/index.md) to interact with SQL Server.
 #### Code examples
 
 |||
@@ -281,7 +281,7 @@ You can use Ruby to interact with SQL Server. The root of our Ruby documentation
 
 On our [*Build-an-app*](https://www.microsoft.com/sql-server/developer-get-started/) webpages you can choose from a long list of programming languages for connecting to SQL Server. And your client program can run a variety of operating systems.
 
-*Build-an-app* emphasizes simplicity and completeness for the deveoper who is just getting started. The steps explain the following:
+*Build-an-app* emphasizes simplicity and completeness for the developer who is just getting started. The steps explain the following tasks:
 
 1. How to install Microsoft SQL Server
 2. How to download and install tools and drivers.
@@ -316,7 +316,7 @@ Next are a couple approximate outlines of the detail provided on the website:
     - Step 2.3 Create a Python app that connects to SQL Server and executes queries
 3. Make your Python app up to 100x faster
     - Step 3.1 Create a new table with 5 million using sqlcmd
-    - Step 3.2 Create a Python app that queries this tables and measures the time taken
+    - Step 3.2 Create a Python app that queries this table and measures the time taken
     - Step 3.3 Measure how long it takes to run the query
     - Step 3.4 Add a columnstore index to your table
     - Step 3.5 Measure how long it takes to run the query with a columnstore index
@@ -340,7 +340,7 @@ The following screenshots give you an idea of what our SQL development documenta
 ## Azure development in general
 
 
-This section provides links about using these same languages for Azure development in general, beyond targeting just Azure SQL Database and Microsoft SQL Server.
+This section provides links about using these same languages for Azure development in general. The information goes beyond targeting just Azure SQL Database and Microsoft SQL Server.
 
 #### Developer hub for Azure
 

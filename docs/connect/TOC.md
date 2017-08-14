@@ -1,3 +1,4 @@
+# [Programming to interact with SQL Server](homepage-sql-connection-programming.md)
 # [SQL Server Drivers](sql-connection-libraries.md)
 # [New and recently updated articles](new-updated-connect.md)
 

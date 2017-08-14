@@ -21,7 +21,6 @@ manager: "jhubbard"
 # Connect to Server (Connection Properties Page) Database Engine
 Use this tab to view or specify options when connecting to an instance of [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] or registering [!INCLUDE[ssDE](../../includes/ssde_md.md)] in **Registered Servers**. **Connect** and **Options** only appear in this dialog box when connecting to an instance of the [!INCLUDE[ssDE](../../includes/ssde_md.md)]. **Test** and **Save** only appear in this dialog box when registering [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
   
-## Options  
 **Connect to database**  
 Select a database to connect to from the list. If you select **<default>**, you connect to the default database for the server. If you select **<Browse server>**, you can browse the server for the database to which to connect.  
   

@@ -27,9 +27,9 @@ manager: "jhubbard"
 Use this dialog to view or specify options when connecting to [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]. In most cases, you can connect by entering the computer name of the database server in the **Server name** box and then clicking **Connect**. If you are connecting to a named instance, use the computer name followed by a backslash, and then the instance name. For example `mycomputer\myinstance`. If you are connecting to [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)], use the computer name followed by **\sqlexpress**.  
   
 Many factors can affect your ability to connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. For help, see the following resources:  
-- [Tutorial Lesson 1: Connecting to the Database Engine](../relational-databases/lesson-1-connecting-to-the-database-engine)  
-- [Troubleshoot Connecting to the SQL Server Database Engine](../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md)  
-- [Solving Connectivity errors to SQL Server](https://support.microsoft.com/en-us/help/4009936/solving-connectivity-errors-to-sql-server)   
+- [Tutorial Lesson 1: Connecting to the Database Engine](../../relational-databases/lesson-1-connecting-to-the-database-engine)  
+- [Troubleshoot Connecting to the SQL Server Database Engine](../../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md)  
+- [Solving Connectivity errors to SQL Server](https://support.microsoft.com/help/4009936/solving-connectivity-errors-to-sql-server)   
   
 ## Options  
 **Server type**  
@@ -39,7 +39,7 @@ When registering a server from Object Explorer, select the type of server to con
 Select the server instance to connect to. The server instance last connected to is displayed by default.  
   
 > [!NOTE]  
-> To connect to an active user instance of [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)] connect using named pipes protocol specifying the pipe name, such as np:\\\\.\pipe\3C3DF6B1-2262-47\tsql\query For more information, see the [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)] documentation.  
+> To connect to an active user instance of [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)] connect using named pipes protocol specifying the pipe name, such as `np:\\\\.\pipe\3C3DF6B1-2262-47\tsql\query` For more information, see the [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)] documentation.  
   
 **Authentication**  
 The current version of SSMS, offers five authentication modes when connecting to an instance of the [!INCLUDE[ssDE](../../includes/ssde_md.md)]. If your Authentication dialog box does not match the following list, download the most recent version of SSMS, from [Download SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md).  
@@ -55,7 +55,7 @@ The current version of SSMS, offers five authentication modes when connecting to
   > When possible, use Windows Authentication or Active Directory Password Authentication.  
   
   > **Active Directory - Universal with MFA support**  
-Active Directory - Universal with MFA is an interactive work flow that supports Azure Multi-Factor Authentication (MFA). Azure MFA helps safeguard access to data and applications while meeting user demand for a simple sign-in process. It delivers strong authentication with a range of easy verification options—phone call, text message, smart cards with pin, or mobile app notification—allowing users to choose the method they prefer. When the user account is configured for MFA the interactive authentication work flow requires additional user interaction through pop-up dialog boxes, smart card use, etc. When the user account is configured for MFA, the user must select Azure Universal Authentication to connect. If the user account does not require MFA, the user can still use the other two Azure Active Directory Authentication options. For more information, see [SSMS support for Azure AD MFA with SQL Database and SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/). If necessary, you can change the domain which will authenticate the login, by clicking **Options**, selecting the **Connection Properties** tab, and then completing the **AD domain name or tenant ID** box.  
+Active Directory - Universal with MFA is an interactive work flow that supports Azure Multi-Factor Authentication (MFA). Azure MFA helps safeguard access to data and applications while meeting user demand for a simple sign-in process. It delivers strong authentication with a range of easy verification options—phone call, text message, smart cards with pin, or mobile app notification—allowing users to choose the method they prefer. When the user account is configured for MFA the interactive authentication work flow requires additional user interaction through pop-up dialog boxes, smart card use, etc. When the user account is configured for MFA, the user must select Azure Universal Authentication to connect. If the user account does not require MFA, the user can still use the other two Azure Active Directory Authentication options. For more information, see [SSMS support for Azure AD MFA with SQL Database and SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/). If necessary, you can change the domain that authenticates the login, by clicking **Options**, selecting the **Connection Properties** tab, and then completing the **AD domain name or tenant ID** box.  
 
   > **Active Directory - Password**  
 Azure Active Directory Authentication is a mechanism of connecting to [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssSDSfull](../../includes/sssdsfull_md.md)] by using identities in Azure Active Directory (Azure AD).  Use this method for connecting to [!INCLUDE[ssSDS](../../includes/sssds_md.md)] if you are logged into Windows using credentials from a domain that is not federated with Azure, or when using Azure AD authentication using Azure AD based on the initial or the client domain. For more information, see [Connecting to SQL Database By Using Azure Active Directory Authentication](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/).  
@@ -64,16 +64,16 @@ Azure Active Directory Authentication is a mechanism of connecting to [!INCLUDE[
 Azure Active Directory Authentication is a mechanism of connecting to [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssSDSfull](../../includes/sssdsfull_md.md)] by using identities in Azure Active Directory (Azure AD). Use this method for connecting to [!INCLUDE[ssSDS](../../includes/sssds_md.md)] if you are logged into Windows using your Azure Active Directory credentials from a federated domain. For more information, see [Connecting to SQL Database By Using Azure Active Directory Authentication](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/).  
   
 **User name**  
-The Windows user name to connect with. This option is only available if you have selected to connect using **Active Directory Password Authentication**. It is read-only when you selecting **Windows Authentication**.  
+The Windows user name to connect with. This option is only available if you have selected to connect using **Active Directory Password Authentication**. It is read-only when you select **Windows Authentication** or **Active Directory - Integrated** authentication.  
   
 **Login**  
-Enter the login to connect with. This option is only available if you have selected to connect using [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Authentication or or Active Directory Password Authentication.  
+Enter the login to connect with. This option is only available if you have selected to connect using [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Authentication or Active Directory Password Authentication.  
   
 **Password**  
-Enter the password for the login. This option is only editable if you have selected to connect using [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Authentication or or Active Directory Password Authentication.  
+Enter the password for the login. This option is only editable if you have selected to connect using [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Authentication or Active Directory Password Authentication.  
   
 **Connect**  
-Click to connect to the server selected above.  
+Click to connect to the server.  
   
 **Options**  
 Click to display the **Connection Properties**, and **Additional Connection Parameters** tabs.  

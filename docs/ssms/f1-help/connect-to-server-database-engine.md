@@ -53,7 +53,8 @@ The current version of SSMS, offers five authentication modes when connecting to
   
   > [!IMPORTANT]  
   > When possible, use Windows Authentication or Active Directory Password Authentication.  
-  
+
+
   > **Active Directory - Universal with MFA support**  
 Active Directory - Universal with MFA is an interactive work flow that supports Azure Multi-Factor Authentication (MFA). Azure MFA helps safeguard access to data and applications while meeting user demand for a simple sign-in process. It delivers strong authentication with a range of easy verification options—phone call, text message, smart cards with pin, or mobile app notification—allowing users to choose the method they prefer. When the user account is configured for MFA the interactive authentication work flow requires additional user interaction through pop-up dialog boxes, smart card use, etc. When the user account is configured for MFA, the user must select Azure Universal Authentication to connect. If the user account does not require MFA, the user can still use the other two Azure Active Directory Authentication options. For more information, see [SSMS support for Azure AD MFA with SQL Database and SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/). If necessary, you can change the domain that authenticates the login, by clicking **Options**, selecting the **Connection Properties** tab, and then completing the **AD domain name or tenant ID** box.  
 

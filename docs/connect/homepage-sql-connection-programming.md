@@ -70,8 +70,8 @@ The .NET managed languages, such as C# and Visual Basic, are the most common use
 
 |||
 | :-- | :-- |
-| [Proof of concept connecting to SQL using ADO.NET](http://docs.microsoft.com/sql/connect/ado-net/step-3-proof-of-concept-connecting-to-sql-using-ado-net) | A small code example focused on connecting and querying SQL Server. |
-| [Connect resiliently to SQL with ADO.NET](http://docs.microsoft.com/sql/connect/ado-net/step-4-connect-resiliently-to-sql-with-ado-net) | Retry logic in a code example, because connections can occasionally experience moments of connectivity loss.<br /><br />This applies particularly well to connections maintained through the internet into any cloud database, such as to Azure SQL Database. |
+| [Proof of concept connecting to SQL using ADO.NET](./ado-net/step-3-proof-of-concept-connecting-to-sql-using-ado-net.md) | A small code example focused on connecting and querying SQL Server. |
+| [Connect resiliently to SQL with ADO.NET](./ado-net/step-4-connect-resiliently-to-sql-with-ado-net.md) | Retry logic in a code example, because connections can occasionally experience moments of connectivity loss.<br /><br />This applies particularly well to connections maintained through the internet into any cloud database, such as to Azure SQL Database. |
 | [Azure SQL Database: Demonstration of how to use .NET Core on Windows/Linux/macOS to create a C# program, to connect and query](http://docs.microsoft.com/azure/sql-database/sql-database-connect-query-dotnet-core) | Azure SQL Database example. |
 | [Build-an-app: C#, ADO.NET, Windows](http://www.microsoft.com/sql-server/developer-get-started/csharp/win/) | Configuration information, along with code examples. |
 | &nbsp; | <br /> |
@@ -80,7 +80,7 @@ The .NET managed languages, such as C# and Visual Basic, are the most common use
 
 |||
 | :-- | :-- |
-| [C# using ADO.NET](ado-net/)| Root of our documentation. |
+| [C# using ADO.NET](./ado-net/index.md)| Root of our documentation. |
 | [Namespace: System.Data](http://docs.microsoft.com/dotnet/api/system.data) | A set of classes used for ADO.NET. |
 | [Namespace: System.Data.SqlClient](http://docs.microsoft.com/dotnet/api/system.data.SqlClient) | The set of classes which are most directly the center of ADO.NET. |
 | &nbsp; | <br /> |
@@ -132,10 +132,10 @@ Microsoft provides a Java Database Connectivity (JDBC) driver for use with SQL S
 
 |||
 | :-- | :-- |
-| [Java and JDBC](/sql/connect/jdbc/index) | Root of our documentation. |
-| [Code examples](/sql/connect/jdbc/code-samples/index) | Code examples that teach about data types, result sets, and large data. |
-| [Connection URL Sample](http://docs.microsoft.com/sql/connect/jdbc/connection-url-sample) | Describes how to use a connection URL to connect to SQL Server, and then to use an SQL statement to retrieve data.
-| [Data Source Sample](http://docs.microsoft.com/sql/connect/jdbc/data-source-sample) | Describes how to use a data source to connect to SQL Server, and then to use a stored procedure to retrieve data. |
+| [Java and JDBC](./jdbc/index.md) | Root of our documentation. |
+| [Code examples](./jdbc/code-samples/index.md) | Code examples that teach about data types, result sets, and large data. |
+| [Connection URL Sample](./jdbc/connection-url-sample.md) | Describes how to use a connection URL to connect to SQL Server, and then to use an SQL statement to retrieve data.
+| [Data Source Sample](./jdbc/data-source-sample.md) | Describes how to use a data source to connect to SQL Server, and then to use a stored procedure to retrieve data. |
 | [Use Java to query an Azure SQL database](http://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java) | Azure SQL Database example. |
 | [Create Java apps using SQL Server on Ubuntu](http://www.microsoft.com/sql-server/developer-get-started/java/ubuntu/) | Configuration information, along with code examples. |
 | &nbsp; | <br /> |
@@ -146,9 +146,9 @@ The JDBC documentation includes the following major areas:
 
 |||
 | :-- | :-- |
-| [Java Database Connectivity (JDBC)](/sql/connect/jdbc/index) | Root article to our JDBC documentation. |
-| [Reference](/sql/connect/jdbc/reference/index) | Interfaces, classes, and members. |
-| [Programming Guide for JDBC SQL Driver](http://docs.microsoft.com/sql/connect/jdbc/programming-guide-for-jdbc-sql-driver) | Configuration information, along with code examples. |
+| [Java Database Connectivity (JDBC)](./jdbc/index.md) | Root article to our JDBC documentation. |
+| [Reference](./jdbc/reference/index.md) | Interfaces, classes, and members. |
+| [Programming Guide for JDBC SQL Driver](./jdbc/programming-guide-for-jdbc-sql-driver.md) | Configuration information, along with code examples. |
 | &nbsp; | <br /> |
 
 
@@ -157,7 +157,7 @@ The JDBC documentation includes the following major areas:
 
 ## ![Node.js logo][image-ref-340-node] Node.js
 
-With Node.js you can connect to SQL Server from Windows, Linux, or Mac. The root of our Node.js documentation is [here](/sql/connect/node-js/index).
+With Node.js you can connect to SQL Server from Windows, Linux, or Mac. The root of our Node.js documentation is [here](./node-js/index.md).
 
 The Node.js connection driver for SQL Server is implemented in JavaScript. The driver uses the TDS protocol, which is supported by all modern versions of SQL Server. The driver is an open source project, [available on Github](http://tediousjs.github.io/tedious/).
 
@@ -165,7 +165,7 @@ The Node.js connection driver for SQL Server is implemented in JavaScript. The d
 
 |||
 | :-- | :-- |
-| [Proof of concept connecting to SQL using Node.js](http://docs.microsoft.com/sql/connect/node-js/step-3-proof-of-concept-connecting-to-sql-using-node-js) | Bare bones source code for connecting to SQL Server, and executing a query. |
+| [Proof of concept connecting to SQL using Node.js](./node-js/step-3-proof-of-concept-connecting-to-sql-using-node-js.md) | Bare bones source code for connecting to SQL Server, and executing a query. |
 | [Azure SQL database: Use Node.js to query](http://docs.microsoft.com/azure/sql-database/sql-database-connect-query-nodejs) | Example for Azure SQL Database in the cloud. |
 | [Create Node.js apps to use SQL Server on macOS](http://www.microsoft.com/sql-server/developer-get-started/node/mac/) | Configuration information, along with code examples. |
 | &nbsp; | <br /> |
@@ -186,7 +186,7 @@ Some other connectivity drivers use ODBC internally.
 
 #### Code example
 
-- [C++ code example, using ODBC](http://docs.microsoft.com/sql/odbc/reference/sample-odbc-program)
+- [C++ code example, using ODBC](../odbc/reference/sample-odbc-program.md)
 
 #### Documentation outline
 
@@ -195,17 +195,17 @@ The ODBC content in this section focuses on accessing either SQL Server or Azure
 
 | Area | Subarea | Description |
 | :--- | :------ | :---------- |
-| [ODBC for C++](/sql/connect/odbc/index) | Root of our documentation. |
-| [Linux-Mac](/sql/connect/odbc/linux-mac/index) | &nbsp; | Information about using ODBC on the Linux or MacOS operating systems. |
-| [Windows](/sql/connect/odbc/windows/index)     | &nbsp; | Information about using ODBC on the Windows operating system. |
-| [Administration](/sql/odbc/admin/index) | &nbsp; | The administrative tool for managing ODBC data sources. |
-| [Microsoft](/sql/odbc/microsoft/index)  | &nbsp; | Various ODBC drivers that are created and provided by Microsoft. |
-| [Conceptual and reference](/sql/odbc/reference/index) | &nbsp; | Conceptual information about the ODBC interface, in addition to traditional reference. |
-| &nbsp; " | [Appendixes](/sql/odbc/reference/appendixes/index)    | State transition tables, ODBC cursor library, and more. |
-| &nbsp; " | [Develop app](/sql/odbc/reference/develop-app/index)  | Functions, handles, and much more. |
-| &nbsp; " | [Develop driver](/sql/odbc/reference/develop-driver/index) | How to develop your own ODBC driver, if you have a specialized data source. |
-| &nbsp; " | [Install](/sql/odbc/reference/install/index) | ODBC installation, subkeys, and more. |
-| &nbsp; " | [Syntax](/sql/odbc/reference/syntax/index)   | APIs for setup, installer, translation, and data access. |
+| [ODBC for C++](./odbc/index.md) | Root of our documentation. |
+| [Linux-Mac](./odbc/linux-mac/index.md) | &nbsp; | Information about using ODBC on the Linux or MacOS operating systems. |
+| [Windows](./odbc/windows/index.md)     | &nbsp; | Information about using ODBC on the Windows operating system. |
+| [Administration](../odbc/admin/index.md) | &nbsp; | The administrative tool for managing ODBC data sources. |
+| [Microsoft](../odbc/microsoft/index.md)  | &nbsp; | Various ODBC drivers that are created and provided by Microsoft. |
+| [Conceptual and reference](../odbc/reference/index.md) | &nbsp; | Conceptual information about the ODBC interface, in addition to traditional reference. |
+| &nbsp; " | [Appendixes](../odbc/reference/appendixes/index.md)    | State transition tables, ODBC cursor library, and more. |
+| &nbsp; " | [Develop app](../odbc/reference/develop-app/index.md)  | Functions, handles, and much more. |
+| &nbsp; " | [Develop driver](../odbc/reference/develop-driver/index.md) | How to develop your own ODBC driver, if you have a specialized data source. |
+| &nbsp; " | [Install](../odbc/reference/install/index.md) | ODBC installation, subkeys, and more. |
+| &nbsp; " | [Syntax](../odbc/reference/syntax/index.md)   | APIs for setup, installer, translation, and data access. |
 | &nbsp; | &nbsp; | <br /> |
 
 
@@ -214,20 +214,20 @@ The ODBC content in this section focuses on accessing either SQL Server or Azure
 
 ## ![PHP logo][image-ref-360-php] PHP
 
-You can use [PHP](/sql/connect/php/index) to interact with SQL Server.
+You can use [PHP](./php/index) to interact with SQL Server.
 #### Code examples
 
 |||
 | :-- | :-- |
-| [Proof of concept connecting to SQL using PHP](http://docs.microsoft.com/sql/connect/php/step-3-proof-of-concept-connecting-to-sql-using-php) | A small code example focused on connecting and querying SQL Server. |
-| [Connect resiliently to SQL with PHP](http://docs.microsoft.com/sql/connect/php/step-4-connect-resiliently-to-sql-with-php) | Retry logic in a code example, because connections through the Internet and the cloud can occasionally experience moments of connectivity loss. |
+| [Proof of concept connecting to SQL using PHP](./php/step-3-proof-of-concept-connecting-to-sql-using-php.md) | A small code example focused on connecting and querying SQL Server. |
+| [Connect resiliently to SQL with PHP](./php/step-4-connect-resiliently-to-sql-with-php.md) | Retry logic in a code example, because connections through the Internet and the cloud can occasionally experience moments of connectivity loss. |
 | [Azure SQL database: Use PHP to query](http://docs.microsoft.com/azure/sql-database/sql-database-connect-query-php) | Azure SQL Database example. |
 | [Create PHP apps to use SQL Server on RHEL](http://www.microsoft.com/sql-server/developer-get-started/php/rhel/) | Configuration information, along with code examples. |
 | &nbsp; | <br /> |
 
 #### Documentation
 
-[PHP to SQL Server](php/index)
+[PHP to SQL Server](./php/index.md)
 
 
 
@@ -242,7 +242,7 @@ You can use Python to interact with SQL Server.
 
 |||
 | :-- | :-- |
-| [Proof of concept connecting to SQL with Python using pyodbc](http://docs.microsoft.com/sql/connect/python/pyodbc/step-3-proof-of-concept-connecting-to-sql-using-pyodbc) | A small code example focused on connecting and querying SQL Server. |
+| [Proof of concept connecting to SQL with Python using pyodbc](./python/pyodbc/step-3-proof-of-concept-connecting-to-sql-using-pyodbc.md) | A small code example focused on connecting and querying SQL Server. |
 | [Azure SQL database: Use Python to query](http://docs.microsoft.com/azure/sql-database/sql-database-connect-query-python) | Azure SQL Database example. |
 | [Create PHP apps to use SQL Server on SLES](http://www.microsoft.com/sql-server/developer-get-started/python/slesl/) | Configuration information, along with code examples. |
 | &nbsp; | <br /> |
@@ -251,9 +251,9 @@ You can use Python to interact with SQL Server.
 
 | Area | Description |
 | :--- | :---------- |
-| [Python to SQL Server](/sql/connect/python/index) | Root of our documentation. |
-| [pymssql driver](/sql/connect/python/pymssql/index) | Microsoft does not maintain or test the pymssql driver.<br /><br />The pymssql connection driver is a simple interface to SQL databases, for use in Python programs. Pymssql builds on top of FreeTDS to provide a Python DB-API (PEP-249) interface to Microsoft SQL Server. |
-| [pyodbc driver](/sql/connect/python/pyodbc/index)   | The pyodbc connection driver is an open source Python module that makes accessing ODBC databases simple. It implements the DB API 2.0 specification, but is packed with even more Pythonic convenience. |
+| [Python to SQL Server](./python/index.md) | Root of our documentation. |
+| [pymssql driver](./python/pymssql/index.md) | Microsoft does not maintain or test the pymssql driver.<br /><br />The pymssql connection driver is a simple interface to SQL databases, for use in Python programs. Pymssql builds on top of FreeTDS to provide a Python DB-API (PEP-249) interface to Microsoft SQL Server. |
+| [pyodbc driver](./python/pyodbc/index.md)   | The pyodbc connection driver is an open source Python module that makes accessing ODBC databases simple. It implements the DB API 2.0 specification, but is packed with even more Pythonic convenience. |
 | &nbsp; | <br /> |
 
 
@@ -261,13 +261,13 @@ You can use Python to interact with SQL Server.
 
 ## ![Ruby logo][image-ref-380-ruby] Ruby
 
-You can use Ruby to interact with SQL Server. The root of our Ruby documentation is [here](/sql/connect/ruby/index).
+You can use Ruby to interact with SQL Server. The root of our Ruby documentation is [here](./ruby/index.md).
 
 #### Code examples
 
 |||
 | :-- | :-- |
-| [Proof of concept connecting to SQL with Ruby](http://docs.microsoft.com/sql/connect/ruby/step-3-proof-of-concept-connecting-to-sql-using-ruby) | A small code example focused on connecting and querying SQL Server. |
+| [Proof of concept connecting to SQL with Ruby](./ruby/step-3-proof-of-concept-connecting-to-sql-using-ruby.md) | A small code example focused on connecting and querying SQL Server. |
 | [Azure SQL database: Use Ruby to query](http://docs.microsoft.com/azure/sql-database/sql-database-connect-query-ruby) | Azure SQL Database example. |
 | [Create Ruby apps to use SQL Server on MacOS](http://www.microsoft.com/sql-server/developer-get-started/ruby/mac/) | Configuration information, along with code examples. |
 | &nbsp; | <br /> |
@@ -279,7 +279,7 @@ You can use Ruby to interact with SQL Server. The root of our Ruby documentation
 ## [Build-an-app website, for SQL client development](http://www.microsoft.com/sql-server/developer-get-started/)
 
 
-On our [*Build-an-app*](https://www.microsoft.com/en-us/sql-server/developer-get-started/) webpages you can choose from a long list of programming languages for connecting to SQL Server. And your client program can run a variety of operating systems.
+On our [*Build-an-app*](https://www.microsoft.com/sql-server/developer-get-started/) webpages you can choose from a long list of programming languages for connecting to SQL Server. And your client program can run a variety of operating systems.
 
 *Build-an-app* emphasizes simplicity and completeness for the deveoper who is just getting started. The steps explain the following:
 

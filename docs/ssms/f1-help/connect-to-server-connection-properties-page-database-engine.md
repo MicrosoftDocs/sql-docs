@@ -1,7 +1,7 @@
 ---
 title: "Connect to Server (Connection Properties Page) Database Engine | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "08/14/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -53,6 +53,9 @@ Select to specify the background color for the status bar in a [!INCLUDE[ssDE](.
   
 -   On the **File** menu, when you click **New** and then **Database Engine Query**, the color you that you specify in the **Connect to Server** dialog box applies to that Query Editor window.  
   
+**AD domain name or tenant ID**  
+When connecting with **Active Directory - Universal with MFA** authentication, specify the authenticating domain. This option is only available when using SSMS version 17.2 or later. 
+
 **Reset All**  
 Replace all manually entered connection property values with their defaults.  
   

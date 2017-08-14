@@ -23,14 +23,14 @@ Use this tab to view or specify options when connecting to an instance of [!INCL
   
 ## Options  
 **Connect to database**  
-Select a database to connect to from the list. If you select **<default>**, you will be connected to the default database for the server. If you select **<Browse server>**, you can browse the server for the database to which to connect.  
+Select a database to connect to from the list. If you select **<default>**, you connect to the default database for the server. If you select **<Browse server>**, you can browse the server for the database to which to connect.  
   
 When connecting to an instance of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Database Engine through [!INCLUDE[ssSDSfull](../../includes/sssdsfull_md.md)], you must use [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Authentication and specify a database in the **Connect to Server** dialog box, on the **Connection Properties** tab. Ensure that you select the **Encrypt connection** checkbox.  
   
-By default, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] connects to **master**. If you specify a user database, you will only see that database and its objects in Object Explorer. If you connect to **master**, you will be able to see all databases. For more information, see the [Windows Azure SQL Database Overview](http://go.microsoft.com/fwlink/?LinkId=163948).  
+By default, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] connects to **master**. When connecting to [!INCLUDE[ssSDS](../../includes/sssds_md.md)], if you specify a user database, you only see that database and its objects in Object Explorer. If you connect to **master**, you can see all databases. For more information, see the [Windows Azure SQL Database Overview](http://go.microsoft.com/fwlink/?LinkId=163948).  
   
 **Network protocol**  
-Select a protocol from the list. The available client protocols are those that you configured using the Client Network Configuration in Computer Management.  
+Select a protocol from the list. The available client protocols are configured using the Client Network Configuration in Computer Management.  
   
 **Network packet size**  
 Enter the size of the network packets to be sent. The default is 4096 bytes.  

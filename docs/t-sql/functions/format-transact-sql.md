@@ -57,6 +57,8 @@ FORMAT ( value, format [, culture ] )
   
 ## Remarks  
  FORMAT returns NULL for errors other than a *culture* that is not *valid*. For example, NULL is returned if the value specified in *format* is not valid.  
+ 
+ The FORMAT function is nondeterministic.   
   
  FORMAT relies on the presence of .the .NET Framework Common Language Runtime (CLR).  
   
@@ -101,13 +103,11 @@ SELECT FORMAT ( @d, 'D', 'en-US' ) AS 'US English Result'
       ,FORMAT ( @d, 'D', 'en-gb' ) AS 'Great Britain English Result'  
       ,FORMAT ( @d, 'D', 'de-de' ) AS 'German Result'  
       ,FORMAT ( @d, 'D', 'zh-cn' ) AS 'Chinese (Simplified PRC) Result';  
-  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```  
-  
 US English Result Great Britain English Result  German Result Simplified Chinese (PRC) Result  
 ----------------  ----------------------------- ------------- -------------------------------------  
 10/1/2011         01/10/2011                    01.10.2011    2011/10/1  
@@ -119,7 +119,6 @@ US English Result            Great Britain English Result  German Result        
 Saturday, October 01, 2011   01 October 2011               Samstag, 1. Oktober 2011        2011年10月1日  
   
 (1 row(s) affected)  
-  
 ```  
   
 ### B. FORMAT with custom formatting strings  
@@ -135,33 +134,28 @@ SELECT FORMAT( @d, 'dd/MM/yyyy', 'en-US' ) AS 'DateTime Result'
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```  
-  
 DateTime Result  Custom Number Result  
 --------------   --------------------  
 27/09/2012       123-45-6789  
   
 (1 row(s) affected)  
-  
 ```  
   
 ### C. FORMAT with numeric types  
  The following example returns 5 rows from the **Sales.CurrencyRate** table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database. The column **EndOfDateRate** is stored as type **money** in the table. In this example, the column is returned unformatted and then formatted by specifying the .NET Number format, General format, and Currency format types. For more information about these and other numeric formats, see [Standard Numeric Format Strings](http://msdn.microsoft.com/library/dwhawy9k.aspx).  
   
 ```  
-  
-bSELECT TOP(5)CurrencyRateID, EndOfDayRate  
+SELECT TOP(5)CurrencyRateID, EndOfDayRate  
             ,FORMAT(EndOfDayRate, 'N', 'en-us') AS 'Number Format'  
             ,FORMAT(EndOfDayRate, 'G', 'en-us') AS 'General Format'  
             ,FORMAT(EndOfDayRate, 'C', 'en-us') AS 'Currency Format'  
 FROM Sales.CurrencyRate  
 ORDER BY CurrencyRateID;  
-  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```  
-  
 CurrencyRateID EndOfDayRate  Numeric Format  General Format  Currency Format  
 -------------- ------------  --------------  --------------  ---------------  
 1              1.0002        1.00            1.0002          $1.00  
@@ -184,11 +178,9 @@ SELECT TOP(5)CurrencyRateID, EndOfDayRate
       ,FORMAT(EndOfDayRate, 'C', 'de-de') AS 'Currency Format'  
 FROM Sales.CurrencyRate  
 ORDER BY CurrencyRateID;  
-  
 ```  
   
 ```  
-  
 CurrencyRateID EndOfDayRate  Numeric Format  General Format  Currency Format  
 -------------- ------------  --------------  --------------  ---------------  
 1              1.0002        1,00            1,0002          1,00 €  
@@ -198,7 +190,6 @@ CurrencyRateID EndOfDayRate  Numeric Format  General Format  Currency Format
 5              8.2784        8,28            8,2784          8,28 €  
   
  (5 row(s) affected)  
-  
 ```  
   
 ###  <a name="ExampleD"></a> D. FORMAT with time data types  

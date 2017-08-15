@@ -43,7 +43,7 @@ FORMAT ( value, format [, culture ] )
  *format*  
  **nvarchar** format pattern.  
   
- The *format* argument must contain a valid .NET Framework format string, either as a standard format string (for example, "C" or "D"), or as a pattern of custom characters for dates and numeric values (for example, "MMMM DD, yyyy (dddd)"). Composite formatting is not supported. For a full explanation of these formatting patterns, please consult the .NET Framework documentation on string formatting in general, custom date and time formats, and custom number formats. A good starting point is the topic, "[Formatting Types](http://go.microsoft.com/fwlink/?LinkId=211776)."  
+ The *format* argument must contain a valid .NET Framework format string, either as a standard format string (for example, "C" or "D"), or as a pattern of custom characters for dates and numeric values (for example, "MMMM DD, yyyy (dddd)"). Composite formatting is not supported. For a full explanation of these formatting patterns, consult the .NET Framework documentation on string formatting in general, custom date and time formats, and custom number formats. A good starting point is the topic, "[Formatting Types](http://go.microsoft.com/fwlink/?LinkId=211776)."  
   
  *culture*  
  Optional **nvarchar** argument specifying a culture.  
@@ -62,9 +62,9 @@ FORMAT ( value, format [, culture ] )
   
  FORMAT relies on the presence of the .NET Framework Common Language Runtime (CLR).  
   
- This function will not be remoted since it depends on the presence of the CLR. Remoting a function that requires the CLR would cause an error on the remote server.  
+ This function cannot be remoted since it depends on the presence of the CLR. Remoting a function that requires the CLR, could cause an error on the remote server.  
   
- FORMAT relies upon CLR formatting rules which dictate that colons and periods must be escaped. Therefore, when the format string (second parameter) contains a colon or period, the colon or period must be escaped with backslash when an input value (first parameter) is of the **time** data type. See [D. FORMAT with time data types](#ExampleD).  
+ FORMAT relies upon CLR formatting rules, which dictate that colons and periods must be escaped. Therefore, when the format string (second parameter) contains a colon or period, the colon or period must be escaped with backslash when an input value (first parameter) is of the **time** data type. See [D. FORMAT with time data types](#ExampleD).  
   
  The following table lists the acceptable data types for the *value* argument together with their .NET Framework mapping equivalent types.  
   

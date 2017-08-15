@@ -1,5 +1,5 @@
 ---
-title: "Home page for SQL Connection Drivers | Microsoft Docs"
+title: "Homepage for SQL client programming | Microsoft Docs"
 description: "Hub page with annotated links to downloads and documentation for numerous combinations of languages and operating systems, for connecting to SQL Server or to Azure SQL Database."
 author: "MightyPen"
 ms.date: "08/14/2017"
@@ -10,7 +10,7 @@ ms.topic: "article"
 ms.reviewer: "meetb"
 ms.author: "genemi"
 ---
-# Connection Drivers for Microsoft SQL Server
+# Homepage for client programming to Microsoft SQL Server
 
 
 Welcome to our homepage about client programming to interact with Microsoft SQL Server, and with Azure SQL Database in the cloud. This article provides the following information:

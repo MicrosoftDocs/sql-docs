@@ -131,7 +131,13 @@ ALTER AVAILABILITY GROUP [AGName]
 ```
 
 >[!NOTE]
->When the availability group creates a database on a secondary replica, it sets the database owner as the account that granted permission to create any database. 
+>When the availability group creates a database on a secondary replica, it sets the database owner as the account that granted permission to create any database.
+>
+>To set the owner of the database to `sa`, run the following command on the secondary replica.
+> ```sql
+ALTER AUTHORIZATION ON DATABASE::<DatabaseName> TO sa;
+>
+>In most cases, you should set the database owner on the secondary replica to the same as the primary replica.   
 
 If successful, the database(s) are automatically created on the secondary replica with a state of either:
 

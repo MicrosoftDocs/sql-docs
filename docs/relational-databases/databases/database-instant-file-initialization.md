@@ -25,7 +25,7 @@ manager: "jhubbard"
   
 -   Create a database.  
   
--   Add files, log or data, to an existing database.  
+-   Add data or log files, to an existing database.  
   
 -   Increase the size of an existing file (including autogrow operations).  
   
@@ -34,7 +34,7 @@ manager: "jhubbard"
  File initialization causes these operations to take longer. However, when data is written to the files for the first time, the operating system does not have to fill the files with zeros.  
   
 ## Instant File Initialization  
- In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], data files can be initialized instantaneously. This allows for fast execution of the previously mentioned file operations. Instant file initialization reclaims used disk space without filling that space with zeros. Instead, disk content is overwritten as new data is written to the files. Log files cannot be initialized instantaneously.  
+ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], data files can be initialized instantaneously. Instant file initialization allows for fast execution of the previously mentioned file operations. Instant file initialization reclaims used disk space without filling that space with zeros. Instead, disk content is overwritten as new data is written to the files. Log files cannot be initialized instantaneously.  
   
 > [!NOTE]  
 >  Instant file initialization is available only on [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[winxppro](../../includes/winxppro-md.md)] or [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] or later versions.  
@@ -56,9 +56,9 @@ Some conditions, such as TDE, can prevent Instant File Initialization.
 5.  Click **Apply**, and then close all **Local Security Policy** dialog boxes.  
   
 ### Security Considerations  
- Because the deleted disk content is overwritten only as new data is written to the files, the deleted content might be accessed by an unauthorized principal. While the database file is attached to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], this information disclosure threat is reduced by the discretionary access control list (DACL) on the file. This DACL allows file access only to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account and the local administrator. However, when the file is detached, it may be accessed by a user or service that does not have SE_MANAGE_VOLUME_NAME. A similar threat exists when the database is backed up. The deleted content can become available to an unauthorized user or service if the backup file is not protected with an appropriate DACL.  
+ Because the deleted disk content is overwritten only as new data is written to the files, the deleted content might be accessed by an unauthorized principal. While the database file is attached to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], this information disclosure threat is reduced by the discretionary access control list (DACL) on the file. This DACL allows file access only to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account and the local administrator. However, when the file is detached, it may be accessed by a user or service that does not have SE_MANAGE_VOLUME_NAME. A similar threat exists when the database is backed up. If the backup file is not protected with an appropriate DACL, the deleted content can become available to an unauthorized user or service.  
   
- If the potential for disclosing deleted content is a concern, you should do one or both of the following:  
+ If the potential for disclosing deleted content is a concern, you should take one or both of the following actions:  
   
 -   Always make sure that any detached data files and backup files have restrictive DACLs.  
   

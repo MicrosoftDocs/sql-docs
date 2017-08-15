@@ -41,6 +41,9 @@ sp_spaceused [[ @objname = ] 'objname' ]
 ```  
   
 ## Arguments  
+
+For [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)], `sp_spacedused` must specify named parameters (for example `sp_spacedused (@objname= N'Table1');` rather than relying upon the ordinal position of parameters. 
+
  [ **@objname=**] **'***objname***'** 
    
  Is the qualified or nonqualified name of the table, indexed view, or queue for which space usage information is requested. Quotation marks are required only if a qualified object name is specified. If a fully qualified object name (including a database name) is provided, the database name must be the name of the current database.  

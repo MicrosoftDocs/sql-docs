@@ -266,7 +266,7 @@ The following table lists extended events related to automatic seeding.
 
 [Always On Availability Groups Troubleshooting and Monitoring Guide](http://technet.microsoft.com/library/dn135328.aspx)
 
-> This content written by [Allan Hirt](http://mvp.microsoft.com/en-us/PublicProfile/4025254?fullName=Allan%20Hirt), Microsoft Most Valued Professional.
+> [Allan Hirt](http://mvp.microsoft.com/en-us/PublicProfile/4025254?fullName=Allan%20Hirt), Microsoft Most Valued Professional, contributed to this article.
 
 <!--Image references-->
 [1]: ./media/auto-seed-new-availability-group.png

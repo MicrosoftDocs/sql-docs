@@ -136,6 +136,7 @@ ALTER AVAILABILITY GROUP [AGName]
 >To set the owner of the database to `sa`, run the following command on the secondary replica.
 > ```sql
 ALTER AUTHORIZATION ON DATABASE::<DatabaseName> TO sa;
+```
 >
 >In most cases, you should set the database owner on the secondary replica to the same as the primary replica.   
 

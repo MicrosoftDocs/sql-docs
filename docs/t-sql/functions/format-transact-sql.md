@@ -32,7 +32,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
-  
 FORMAT ( value, format [, culture ] )  
 ```  
   
@@ -92,7 +91,7 @@ FORMAT ( value, format [, culture ] )
 ### A. Simple FORMAT example  
  The following example returns a simple date formatted for different cultures.  
   
-```  
+```sql  
 DECLARE @d DATETIME = '10/01/2011';  
 SELECT FORMAT ( @d, 'd', 'en-US' ) AS 'US English Result'  
       ,FORMAT ( @d, 'd', 'en-gb' ) AS 'Great Britain English Result'  
@@ -122,10 +121,9 @@ Saturday, October 01, 2011   01 October 2011               Samstag, 1. Oktober 2
 ```  
   
 ### B. FORMAT with custom formatting strings  
- The following example shows formatting numeric values by specifying a custom format. For more information about these and other custom formats, see [Custom Numeric Format Strings](http://msdn.microsoft.com/library/0c899ak8.aspx).  
+ The following example shows formatting numeric values by specifying a custom format. The example assumes that the current date is September 27, 2012. For more information about these and other custom formats, see [Custom Numeric Format Strings](http://msdn.microsoft.com/library/0c899ak8.aspx).  
   
-```  
--- Current date is September 27 2012.  
+```sql  
 DECLARE @d DATETIME = GETDATE();  
 SELECT FORMAT( @d, 'dd/MM/yyyy', 'en-US' ) AS 'DateTime Result'  
        ,FORMAT(123456789,'###-##-####') AS 'Custom Number Result';  
@@ -144,7 +142,7 @@ DateTime Result  Custom Number Result
 ### C. FORMAT with numeric types  
  The following example returns 5 rows from the **Sales.CurrencyRate** table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database. The column **EndOfDateRate** is stored as type **money** in the table. In this example, the column is returned unformatted and then formatted by specifying the .NET Number format, General format, and Currency format types. For more information about these and other numeric formats, see [Standard Numeric Format Strings](http://msdn.microsoft.com/library/dwhawy9k.aspx).  
   
-```  
+```sql  
 SELECT TOP(5)CurrencyRateID, EndOfDayRate  
             ,FORMAT(EndOfDayRate, 'N', 'en-us') AS 'Number Format'  
             ,FORMAT(EndOfDayRate, 'G', 'en-us') AS 'General Format'  
@@ -170,8 +168,7 @@ CurrencyRateID EndOfDayRate  Numeric Format  General Format  Currency Format
   
  This example specifies the German culture (de-de).  
   
-```  
-  
+```sql  
 SELECT TOP(5)CurrencyRateID, EndOfDayRate  
       ,FORMAT(EndOfDayRate, 'N', 'de-de') AS 'Numeric Format'  
       ,FORMAT(EndOfDayRate, 'G', 'de-de') AS 'General Format'  
@@ -195,14 +192,14 @@ CurrencyRateID EndOfDayRate  Numeric Format  General Format  Currency Format
 ###  <a name="ExampleD"></a> D. FORMAT with time data types  
  FORMAT returns NULL in these cases because `.` and `:` are not escaped.  
   
-```  
+```sql  
 SELECT FORMAT(cast('07:35' as time), N'hh.mm');   --> returns NULL  
 SELECT FORMAT(cast('07:35' as time), N'hh:mm');   --> returns NULL  
 ```  
   
  Format returns a formatted string because the `.` and `:` are escaped.  
   
-```  
+```sql  
 SELECT FORMAT(cast('07:35' as time), N'hh\.mm');  --> returns 07.35  
 SELECT FORMAT(cast('07:35' as time), N'hh\:mm');  --> returns 07:35  
 ```  

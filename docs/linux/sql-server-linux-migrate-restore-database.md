@@ -59,7 +59,7 @@ There are several ways to create a backup file of a database on Windows. The fol
 
 1. Right-click your target database, select **Tasks**, and then click **Back Up...**.
 
-   ![SSMS create backup](./media/sql-server-linux-migrate-restore-database/ssms-create-backup.png)
+   ![Use SSMS to create a backup file](./media/sql-server-linux-migrate-restore-database/ssms-create-backup.png)
 
 1. In the **Backup Up Database** dialog, verify that **Backup type** is **Full** and **Back up to** is **Disk**. Note name and location of the file. For example, a database named **YourDB** on SQL Server 2016 has a default backup path of `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Backup\YourDB.bak`.
 
@@ -103,7 +103,7 @@ To restore the database, you must first transfer the backup file from the Window
    ![scp command](./media/sql-server-linux-migrate-restore-database/scp-command.png)
 
 > [!TIP]
-> There are alternatives to using scp for file transfer. One is to use [Samba](https://help.ubuntu.com/community/Samba) to setup an SMB network share between Windows and Linux. For a walkthrough on Ubuntu, see [How to Create a Network Share Via Samba](https://help.ubuntu.com/community/How%20to%20Create%20a%20Network%20Share%20Via%20Samba%20Via%20CLI%20%28Command-line%20interface/Linux%20Terminal%29%20-%20Uncomplicated,%20Simple%20and%20Brief%20Way!). Once established, you can access it as a network file share from Windows, such as **\\\\machinenameorip\\share**.
+> There are alternatives to using scp for file transfer. One is to use [Samba](https://help.ubuntu.com/community/Samba) to configure an SMB network share between Windows and Linux. For a walkthrough on Ubuntu, see [How to Create a Network Share Via Samba](https://help.ubuntu.com/community/How%20to%20Create%20a%20Network%20Share%20Via%20Samba%20Via%20CLI%20%28Command-line%20interface/Linux%20Terminal%29%20-%20Uncomplicated,%20Simple%20and%20Brief%20Way!). Once established, you can access it as a network file share from Windows, such as **\\\\machinenameorip\\share**.
 
 ## Move the backup file before restoring
 
@@ -154,7 +154,7 @@ To restore the database backup, you can use the **RESTORE DATABASE** Transact-SQ
    sqlcmd -S localhost -U SA
    ```
 
-1. At the `>1` prompt, enter the following **RESTORE DATABASE** command, pressing ENTER after each line (you can not copy and paste the entire multi-line command at once). Replace all occurrences of `YourDB` with the name of your database.
+1. At the `>1` prompt, enter the following **RESTORE DATABASE** command, pressing ENTER after each line (you cannot copy and paste the entire multi-line command at once). Replace all occurrences of `YourDB` with the name of your database.
 
    ```sql
    RESTORE DATABASE YourDB
@@ -173,7 +173,7 @@ To restore the database backup, you can use the **RESTORE DATABASE** Transact-SQ
    GO
    ```
 
-1. Run other queries on your migrated database. The following command switches context to the **YourDB** database and selects rows from one of its table.
+1. Run other queries on your migrated database. The following command switches context to the **YourDB** database and selects rows from one of its tables.
 
    ```sql
    USE YourDB
@@ -187,7 +187,7 @@ To restore the database backup, you can use the **RESTORE DATABASE** Transact-SQ
 
 ## Next steps
 
-In this tutorial, you learned how to backup a database on Windows and move it to a Linux server running SQL Server 2017 RC2. You learned how to:
+In this tutorial, you learned how to back up a database on Windows and move it to a Linux server running SQL Server 2017 RC2. You learned how to:
 > [!div class="checklist"]
 > * Use SSMS and Transact-SQL to create a backup file on Windows
 > * Install a Bash shell on Windows

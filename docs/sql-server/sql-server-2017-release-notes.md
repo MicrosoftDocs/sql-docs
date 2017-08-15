@@ -23,7 +23,7 @@ This topic describes limitations and issues with [!INCLUDE[ssSQLv14_md](../inclu
 [![Download from Evaluation Center.](../analysis-services/media/download.png)](http://go.microsoft.com/fwlink/?LinkID=829477)  Download [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] from the **[Evaluation Center](http://go.microsoft.com/fwlink/?LinkID=829477)**
 
 ## SQL Server 2017 Release Candidate (RC2 - August 2017)
-There are no SQL Servers on Windows release notes for this release. See [SQL Server on Linux Release notes](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-release-notes).
+There are no SQL Server on Windows release notes for this release. See [SQL Server on Linux Release notes](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-release-notes).
 
 ![horizontal_bar](../sql-server/media/horizontal-bar.png)
 ## SQL Server 2017 Release Candidate (RC1 - July 2017)

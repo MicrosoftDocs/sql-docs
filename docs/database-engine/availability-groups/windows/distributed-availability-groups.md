@@ -241,7 +241,7 @@ To further extend the previous query, you can also see the underlying performanc
 SELECT ag.[name] as 'Distributed AG Name', ar.replica_server_name as 'Underlying AG', dbs.[name] as 'DB', ars.role_desc as 'Role', drs.synchronization_health_desc as 'Sync Status', drs.log_send_queue_size, drs.log_send_rate, drs.redo_queue_size, drs.redo_rate
 FROM 	sys.databases dbs,
 	sys.availability_groups ag,
-	sys.availablity_replicas ar,
+	sys.availability_replicas ar,
 	sys.dm_hadr_availability_replica_states ars,
 	sys.dm_hadr_database_replica_states drs
 WHERE	drs.group_id = ag.group_id

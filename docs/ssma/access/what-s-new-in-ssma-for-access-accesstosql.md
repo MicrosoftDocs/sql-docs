@@ -2,7 +2,7 @@
 title: "What&#39;s New in SSMA for Access(AccessToSQL) | Microsoft Docs"
 ms.prod: "sql-non-specified"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "08/14/2017"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,7 +16,7 @@ ms.assetid: a24d3fc0-6911-4bfa-828a-197abf222e02
 caps.latest.revision: 37
 author: "sabotta"
 ms.author: "carlasab"
-manager: "lonnyb"
+manager: "murato"
 ---
 # What&#39;s New in SSMA for Access(AccessToSQL)
 This topic lists SSMA for Access changes in each release.  
@@ -24,59 +24,65 @@ This topic lists SSMA for Access changes in each release.
 ## May 2016  
 The May 2016  release of SSMA for Access contains  the following changes:  
   
-1.  Official support for SQL Server 2016
-2.  Removed installer check for .Net 2.0
-3.  Fixed "save project" and "open project" commands for SSMA Console
-4.  Fixed "securepassword" command for SSMA Console
-5.  Fixed counting of objects for initial loading
-6.  Fixed tables data loading for UI tabs for Access
-7.  Fixed bug in global settings 
+-  Official support for SQL Server 2016
+
+-  Removed installer check for .Net 2.0.
+
+-  Fixed "save project" and "open project" commands for SSMA Console.
+ 
+-  Fixed "securepassword" command for SSMA Console.
+ 
+-  Fixed counting of objects for initial loading.
+ 
+-  Fixed tables data loading for UI tabs for Access.
+
+-  Fixed bug in global settings. 
    
 ## March 2016  
 The March 2016 preview release of SSMA for Access contains  the following changes:  
   
-1.  Support migration to SQL Server 2016  
+-  Support migration to SQL Server 2016.  
    
 ## January 2016  
 The January 2016 maintenance release of SSMA for Access contains the following changes:  
   
-1.  Fixed invalid function for default of a GUID field (RFC 3894811)  
+-  Fixed invalid function for default of a GUID field (RFC 3894811).  
   
-2.  Fixed hang on importing records to SQL Database (Azure) (RFC 4919573)  
+-  Fixed hang on importing records to SQL Database (Azure) (RFC 4919573).  
   
-3.  Added View Log Menu Item to SSMA (RFC 5706203)  
+-  Added View Log Menu Item to SSMA (RFC 5706203).  
   
-4.  Added Telemetry  
+-  Added Telemetry.  
   
 ## July 2014  
 The July 2014 release of SSMA for Access contains the following changes:  
   
-1.  Improved Azure SQL DB code conversion  
+-   Improved Azure SQL DB code conversion.  
   
-2.  Extension pack functionality moved to schema to support Azure SQL DB  
+-   Extension pack functionality moved to schema to support Azure SQL DB.  
   
-3.  Performance improvements tested for databases with over 10k objects  
+-   Performance improvements tested for databases with over 10k objects.  
   
-4.  UI improvements for dealing with large number of objects  
+-   UI improvements for dealing with large number of objects.  
   
-5.  Highlighting of “well known” LOB schemas (so they can be ignored in conversion)  
+-   Highlighting of “well known” LOB schemas (so they can be ignored in conversion).  
   
-6.  Conversion speed improvements  
+-   Conversion speed improvements.
   
-7.  Show object counts in UI  
+-   Show object counts in UI.
   
-8.  Report size reduction by more than 25%  
+-   Report size reduction by more than 25%.
   
-9. Improved error messages for unparsed constructs.  
+-   Improved error messages for unparsed constructs.  
   
 ## April 2014  
 The April 2014 release of SSMA for Access contains the following changes:  
   
-1.  Added support of MS SQL Server 2014.  
+-   Added support of MS SQL Server 2014.  
   
-2.  Fixed bugs regarding conversion to Azure.  
+-   Fixed bugs regarding conversion to Azure.  
   
-3.  Fixed bugs regarding invisible report pages in IE 10.  
+-   Fixed bugs regarding invisible report pages in IE 10.  
   
 ## January 2012  
 The January 2012 release of SSMA for Access contains the following changes:  
@@ -97,24 +103,24 @@ The April 2011 release of SSMA for Access contains the following changes:
   
 -   Single Installable of “SSMA for Access”, which supports [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] “Denali” and SQL Azure.  
   
--   The ability to connect [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] “Denali”  
+-   The ability to connect [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] “Denali.”  
   
--   SSMA for Access Console version supports backward compatibility. You will be able to open the projects created by versions earlier to SSMA v5.0  
+-   SSMA for Access Console version supports backward compatibility. You will be able to open the projects created by versions earlier to SSMA v5.0.
   
 -   SSMA v5.0 product can be installed side by side (SxS) with older versions of SSMA Product.  
   
 ## July 2010  
 The July 2010 release of SSMA for Access contains the following changes:  
   
--   Support for migrating to SQL Server 2008 R2 and SQL Azure  
+-   Support for migrating to SQL Server 2008 R2 and SQL Azure.
   
 -   Secure connection to both SQL Server and SQL Azure.  
   
--   Support for Access 2010 databases  
+-   Support for Access 2010 databases.
   
--   New SSMA Console application for command line execution  
+-   New SSMA Console application for command-line execution.
   
--   Support for SQL Server DateTime2 data type  
+-   Support for SQL Server DateTime2 data type.
   
 ## June 2008  
 The June 2008 release of SSMA for Access contains the following changes:  
@@ -125,7 +131,7 @@ The June 2008 release of SSMA for Access contains the following changes:
 The May 2007 release of SSMA for Access contains the following changes:  
   
 -   Support for Access databases that use workgroup policies.  
-  
+
 -   The ability to delete converted objects from the SQL Server metadata explorer.  
   
 -   Support for user-entered comments the SQL Server formatted SQL mode.  
@@ -149,8 +155,8 @@ The November 2006 release of SSMA for Access contains the following changes:
   
     -   You can configure SSMA to prompt to replace duplicate objects, or always or never replace duplicate objects during schema conversion.  
   
--   A new conversion option lets you specify if SSMA displays a warning when a complex query contains a wildcard.  
+-   A new conversion option lets you specify whether SSMA displays a warning when a complex query contains a wildcard.  
   
 ## July 2006  
-The July 2006 release of SSMA for Access was the initial release.x  
+The July 2006 release of SSMA for Access was the initial release.
   

@@ -237,8 +237,9 @@ description: Learn about SQL
                                                 <ul>
                                                     <li><a href="https://www.microsoft.com/en-us/download/details.aspx?id=54090">Database Experimentation Assistant</a></li> 
                                                 </ul>
-												<h4 class="likeAnH3" style="margin: 1rem 0px;">Download migration tools</h4>
+												<h4 class="likeAnH3" style="margin: 1rem 0px;">Migration tools and services</h4>
                                                 <ul>
+												    <li><a href="http://sqldatabase-migrationpreview.azurewebsites.net">Azure Database Migration Service (Private preview)</a></li>
                                                     <li><a href="https://www.microsoft.com/download/details.aspx?id=53595">Data Migration Assistant</a></li>
                                                     <li><a href="https://www.microsoft.com/en-us/download/details.aspx?id=54255">SSMA for Access</a></li>
                                                     <li><a href="https://www.microsoft.com/en-us/download/details.aspx?id=54254">SSMA for DB2</a></li>
@@ -248,7 +249,6 @@ description: Learn about SQL
                                                 </ul>
                                                 <h4 class="likeAnH3" style="margin: 1rem 0px;">Migrate your database to Azure</h4>
                                                 <ul>
-                                                    <li><a href="http://sqldatabase-migrationpreview.azurewebsites.net">Azure Database Migration Service (Private preview)</a></li>
                                                     <li><a href="/azure/sql-database/sql-database-migrate-your-sql-server-database">Migrate to Azure SQL Database</a></li>
                                                     <li><a href="/azure/sql-data-warehouse/sql-data-warehouse-overview-migrate">Migrate to Azure SQL Data Warehouse</a></li>
                                                 </ul>

@@ -1,7 +1,7 @@
 ---
 title: "Table Value Constructor (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/16/2017"
+ms.date: "08/15/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -55,7 +55,7 @@ VALUES ( <row value expression list> ) [ ,...n ]
  Is a constant, a variable, or an expression. The expression cannot contain an EXECUTE statement.  
   
 ## Limitations and Restrictions  
- Table value constructors can be used in one of two ways: directly in the VALUES list of an INSERT … VALUES statement, or as a derived table anywhere that derived tables are allowed. The maximum number of rows that can be constructed by inserting rows directly in the VALUES list is 1000. Error 10738 is returned if the number of rows exceeds 1000 in that case. To insert more than 1000 rows, use one of the following methods:  
+ Table value constructors can be used in one of two ways: directly in the VALUES list of an INSERT … VALUES statement, or as a derived table anywhere that derived tables are allowed. Error 10738 is returned if the number of rows exceeds the maximum. To insert more rows than the limit allows, use one of the following methods:  
   
 -   Create multiple INSERT statements  
   

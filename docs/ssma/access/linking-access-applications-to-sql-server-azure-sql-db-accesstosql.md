@@ -31,13 +31,13 @@ author: "sabotta"
 ms.author: "carlasab"
 manager: "murato"
 ---
-# Linking Access Applications to SQL Server - Azure SQL DB (AccessToSQL)
+# Linking Access applications to SQL Server - Azure SQL DB (AccessToSQL)
 If you want to use your existing Access applications with [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], you can link your original Access tables to the migrated [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure tables. Linking modifies your Access database so that your queries, forms, reports, and data access pages use the data in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure database instead of the data in your Access database.  
   
 > [!NOTE]  
 > Your Access tables remain in Access, but are not updated together with [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure updates. After you link the tables and verify functionality, you might want to delete your Access tables.  
   
-## Linking Access and SQL Server Tables  
+## Linking Access and SQL Server tables  
 When you link an Access table to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure table, the Jet database engine stores connection information and table metadata, but the data is stored in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure. This linking allows your Access applications operate against the Access tables even though the actual tables and data are in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure.  
   
 > [!NOTE]  
@@ -59,7 +59,7 @@ When you open a table in Access, the data is retrieved using a keyset cursor. As
 > To link access tables with an Azure database, you need SQL Server Native Client(SNAC) version 10.5 or above.   
 > You can obtain the latest version of SNAC from [Microsoft® SQL Server® 2008 R2 Feature Pack](http://go.microsoft.com/fwlink/?LinkId=196940).  
   
-## Unlinking Access Tables  
+## Unlinking Access tables  
 When you unlink an Access table from a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure table, SSMA restores the original Access table and its data.  
   
 **To unlink tables**  
@@ -68,7 +68,7 @@ When you unlink an Access table from a [!INCLUDE[ssNoVersion](../../includes/ssn
   
 2.  Right-click **Tables**, and then select **Unlink**.  
   
-## Linking Tables to a Different Server  
+## Linking tables to a different server  
 If you have linked the Access tables to one SQL Server instance and you later want to change the links to another instance, you must relink the tables.  
   
 **To link tables to a different server**  
@@ -85,7 +85,7 @@ If you have linked the Access tables to one SQL Server instance and you later wa
   
 6.  Right-click **Tables**, and then select **Link**.  
   
-## Updating Linked Tables  
+## Updating linked tables  
 If the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure table definitions are altered, you can unlink and then re-link the tables in SSMA by using the procedures shown previously in this topic. You can also update the tables by using Access.  
   
 **To update linked tables by using Access**  
@@ -98,7 +98,7 @@ If the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure ta
   
 4.  Select the check box next to each linked table that you want to update, and then click **OK**.  
   
-## Possible Post-Migration Issues  
+## Possible post-migration issues  
 The following sections list issues that might occur in existing Access applications after you migrate databases from Access to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure and then link the tables, together with the causes and the resolutions.  
   
 ### Slow performance with linked tables  
@@ -155,5 +155,5 @@ Recordset.LastModified
 **Resolution:** You can define an Access query that returns only those rows with supported data types.  
   
 ## See Also  
-[Migrating Access Databases to SQL Server](http://msdn.microsoft.com/en-us/76a3abcf-2998-4712-9490-fe8d872c89ca)  
+[Migrating Access Databases to SQL Server](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
   

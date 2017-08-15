@@ -27,7 +27,7 @@ author: "sabotta"
 ms.author: "carlasab"
 manager: "murato"
 ---
-# Getting Started with SQL Server Migration Assistant for Access (AccessToSQL)
+# Getting started with SQL Server Migration Assistant for Access (AccessToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) for Access allows you to quickly convert Access database objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or Azure SQL DB objects, upload the resulting objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or Azure SQL DB, and migrate data from Access to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or Azure SQL DB. If necessary, you can also link Access tables to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or Azure SQL DB tables so that you can continue to use your existing Access front-end applications with [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or Azure SQL DB.  
   
 This topic introduces the installation process and helps to familiarize you with the SSMA user interface.  
@@ -57,15 +57,15 @@ After you load converted schemas into [!INCLUDE[ssNoVersion](../../includes/ssno
   
 For more information about these tasks and how to perform them, see the following topics:  
   
--   [Preparing Access Databases for Migration](http://msdn.microsoft.com/en-us/9b80a9e0-08e7-4b4d-b5ec-cc998d3f5114)  
+-   [Preparing Access Databases for Migration](http://msdn.microsoft.com/9b80a9e0-08e7-4b4d-b5ec-cc998d3f5114)  
   
--   [Migrating Access Databases to SQL Server](http://msdn.microsoft.com/en-us/76a3abcf-2998-4712-9490-fe8d872c89ca)  
+-   [Migrating Access Databases to SQL Server](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
   
--   [Linking Access Applications to SQL Server](http://msdn.microsoft.com/en-us/82374ad2-7737-4164-a489-13261ba393d4)  
+-   [Linking Access Applications to SQL Server](http://msdn.microsoft.com/82374ad2-7737-4164-a489-13261ba393d4)  
   
 The following sections describe the features of the SSMA user interface.  
   
-### Metadata Explorers  
+### Metadata explorers  
 SSMA contains two metadata explorers that you can use to browse and perform actions on Access and [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or Azure SQL DB databases.  
   
 #### Access Metadata Explorer  
@@ -75,9 +75,9 @@ You can use Access Metadata Explorer to perform the following tasks:
   
 -   Browse the tables in each Access database.  
   
--   Select objects for conversion and convert the objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] syntax. For more information, see [Converting Access Database Objects](http://msdn.microsoft.com/en-us/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c).  
+-   Select objects for conversion and convert the objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] syntax. For more information, see [Converting Access Database Objects](http://msdn.microsoft.com/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c).  
   
--   Select objects for data migration and migrate the data from those objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. For more information, see [Migrating Access Data into SQL Server](http://msdn.microsoft.com/en-us/f3b18af7-1af0-499d-a00d-a0af94895625).  
+-   Select objects for data migration and migrate the data from those objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. For more information, see [Migrating Access Data into SQL Server](http://msdn.microsoft.com/f3b18af7-1af0-499d-a00d-a0af94895625).  
   
 -   Link and unlink Access and [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tables.  
   
@@ -86,7 +86,7 @@ You can use Access Metadata Explorer to perform the following tasks:
   
 You can use the SQL Server or Azure SQL DB Metadata Explorer to select converted Access database objects and load (synchronize) those objects into the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or Azure SQL DB.  
   
-For more information, see [Loading Converted Database Objects into SQL Server](http://msdn.microsoft.com/en-us/4e854eee-b10c-4f0b-9d9e-d92416e6f2ba).  
+For more information, see [Loading Converted Database Objects into SQL Server](http://msdn.microsoft.com/4e854eee-b10c-4f0b-9d9e-d92416e6f2ba).  
   
 ### Metadata  
 To the right of each metadata explorer are tabs that describe the selected object. For example, if you select a table in Access Metadata Explorer, four tabs appear: **Table**, **Type Mapping**, **Properties**, and **Data**. If you select a table in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Metadata Explorer, three tabs appear: **Table**, **SQL**, and **Data**.  
@@ -95,15 +95,15 @@ Most metadata settings are read-only. However, you can alter the following metad
   
 -   In Access Metadata Explorer, you can alter type mappings. Be sure to make these changes before you create reports or convert schemas.  
   
--   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Metadata Explorer, you can alter table and index properties on the **Table** tab. Make these changes before you load the schemas into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. For more information, see [Converting Access Database Objects](http://msdn.microsoft.com/en-us/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c).  
+-   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Metadata Explorer, you can alter table and index properties on the **Table** tab. Make these changes before you load the schemas into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. For more information, see [Converting Access Database Objects](http://msdn.microsoft.com/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c).  
   
 ### Toolbars  
 SSMA has two toolbars: a project toolbar and a migration toolbar.  
   
-#### The Project Toolbar  
+#### The project toolbar  
 The project toolbar contains buttons for working with projects, adding Access database files, and connecting to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or Azure SQL DB. These buttons resemble the commands on the **File** menu.  
   
-#### The Migration Toolbar  
+#### The migration toolbar  
 The migration toolbar contains the following commands:  
   
 |Button|Function|  
@@ -125,13 +125,13 @@ SSMA contains the following menus:
 |**Tools**|Contains commands to create reports, export data, migrate objects and data, link tables, and provides access to global and project settings dialog boxes.|  
 |**Help**|Provides access to SSMA Help and to the **About** dialog box.|  
   
-### Output Pane and Error List Pane  
+### Output pane and Error List pane  
 The **View** menu provides commands to toggle the visibility of the Output pane and the Error List pane:  
   
 -   The Output pane shows status messages from SSMA during object conversion, object synchronization, and data migration.  
   
 -   The Error List pane shows error, warning, and informational messages in a list that you can sort.  
   
-## See Also  
-[Migrating Access Databases to SQL Server](http://msdn.microsoft.com/en-us/76a3abcf-2998-4712-9490-fe8d872c89ca)  
+## See also  
+[Migrating Access Databases to SQL Server](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
   

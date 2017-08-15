@@ -119,7 +119,9 @@ Setting `SEEDING_MODE` on a primary replica during a `CREATE AVAILABILITY GROUP`
 On an instance that becomes a secondary replica, once the instance is joined the following message is added to the SQL Server Log:
 
 >Local availability replica for availability group 'AGName' has not been granted permission to create databases, but has a `SEEDING_MODE` of `AUTOMATIC`. Use `ALTER AVAILABILITY GROUP … GRANT CREATE ANY DATABASE` to allow the creation of databases seeded by the primary availability replica.
-    
+
+In order for automatic seeding to work, the availability group needs permission to create a database. The following example grants this permission to an availability group called AGName.
+ 
 After joining, issue the following statement:
 
 ```sql
@@ -128,6 +130,8 @@ ALTER AVAILABILITY GROUP [AGName]
  GO
 ```
 
+>[!NOTE]
+>When the availability group creates a database on a secondary replica, it sets the database owner as the account that granted permission to create any database. 
 
 If successful, the database(s) are automatically created on the secondary replica with a state of either:
 

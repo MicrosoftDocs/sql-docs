@@ -2,7 +2,7 @@
 title: "Preparing Access Databases for Migration (AccessToSQL) | Microsoft Docs"
 ms.prod: "sql-non-specified"
 ms.custom: ""
-ms.date: "08/14/2017"
+ms.date: "08/15/2017"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -43,13 +43,13 @@ After you migrate databases to [!INCLUDE[ssNoVersion](../../includes/ssnoversion
 **Note** Not all Access features and settings are supported by, or can be easily converted to, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Before you start migrating databases, see [Incompatible Access Features](http://msdn.microsoft.com/en-us/99d45b9c-e3b9-4d56-8c25-b594b887ace1).  
   
 ## Preparing for Migration  
-Use the following guidelines to help you prepare your Access databases for migration to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+Use the following guidelines to help prepare your Access databases for migration to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
   
 ### Upgrading Older Access Databases  
 SSMA for Access supports Access 97 and later versions. If you have databases from earlier versions of Access, open and save the databases in Access 97 or a later version.  
   
 ### Removing Workgroup Protection  
-SSMA cannot migrate databases that use workgroup protection. You can do the following to remove workgroup protection from an Access database:  
+SSMA cannot migrate databases that use workgroup protection. To remove workgroup protection from an Access database, perform the following steps:  
   
 1.  Copy the Access database file to another location.  
   
@@ -57,9 +57,9 @@ SSMA cannot migrate databases that use workgroup protection. You can do the foll
   
 3.  On the **Tools** menu, point to **Security**, and then select **User and Group Permissions**.  
   
-4.  Select the **Users** option, select the **Admin** user, and then make sure that the **Administer** permission is selected.  
+4.  Select the **Users** option, select the **Admin** user, and then ensure that the **Administer** permission is selected.  
   
-5.  Select the **Groups** option, select the **Users** group, and then make sure that the **Administer** permission is selected.  
+5.  Select the **Groups** option, select the **Users** group, and then ensure that the **Administer** permission is selected.  
   
 6.  Click **OK**, and then on the **File** menu, click **Exit**.  
   
@@ -73,7 +73,7 @@ To back up an Access database, on the **Tools** menu, point to **Database Utilit
 For information about how to  back up [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] databases, see "Backing Up and Restoring Databases in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Books Online.  
   
 ### Documenting Databases  
-You might also want to document the properties, such as lists of database objects, file sizes, and permissions, of your Access databases. To generate this documentation in Access, on the **Tools** menu, point to **Analyze**, and then click **Documenter**.  
+You might also want to document the properties, such as lists of database objects, file sizes, and permissions, of your Access databases. To generate this documentation in Access, on the **Tools** menu, point to **Analyze**, and then click **Documented**.  
   
 ## See Also  
 [Migrating Access Databases to SQL Server](http://msdn.microsoft.com/en-us/76a3abcf-2998-4712-9490-fe8d872c89ca)  

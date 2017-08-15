@@ -2,7 +2,7 @@
 title: "Get Started with SQL Server Migration Assistant for Access | Microsoft Docs"
 ms.prod: "sql-non-specified"
 ms.custom: ""
-ms.date: "08/14/2017"
+ms.date: "08/15/2017"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -28,21 +28,26 @@ ms.author: "carlasab"
 manager: "murato"
 ---
 # Getting Started with SQL Server Migration Assistant for Access (AccessToSQL)
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) for Access lets you quickly convert Access database objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or Azure SQL DB objects, upload the resulting objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or Azure SQL DB, and migrate data from Access to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or Azure SQL DB. If necessary, you can also link Access tables to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or Azure SQL DB tables so that you can continue to use your existing Access front-end applications with [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or Azure SQL DB.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) for Access allows you to quickly convert Access database objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or Azure SQL DB objects, upload the resulting objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or Azure SQL DB, and migrate data from Access to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or Azure SQL DB. If necessary, you can also link Access tables to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or Azure SQL DB tables so that you can continue to use your existing Access front-end applications with [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or Azure SQL DB.  
   
 This topic introduces the installation process and helps to familiarize you with the SSMA user interface.  
   
 ## Installing SSMA  
-To use SSMA, you first must install the SSMA client program on a computer that can access both the databases that you want to migrate and the target instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or Azure SQL DB. For installation instructions, see [Installing SQL Server Migration Assistant for Access &#40;AccessToSQL&#41;](../../ssma/access/installing-sql-server-migration-assistant-for-access-accesstosql.md).  
+To use SSMA, you first must install the SSMA client program on a computer that can access both the databases you want to migrate and the target instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or Azure SQL DB. For installation instructions, see [Installing SQL Server Migration Assistant for Access &#40;AccessToSQL&#41;](../../ssma/access/installing-sql-server-migration-assistant-for-access-accesstosql.md).  
   
 To start SSMA, click **Start**, point to **All Programs**, point to **SQL Server Migration Assistant for Access**, and then select **SQL Server Migration Assistant for Access**.  
   
 ## Using SSMA  
-After installing SSMA, you can use the tool to migrate Access databases to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or Azure SQL DB. Before you start, it helps to become familiar with the SSMA user interface. The SSMA user interface, including the metadata explorers, metadata, toolbars, output pane, and error list pane are shown in the following diagram:  
+After installing SSMA, it helps to become familiar with the SSMA user interface before using the tool to migrate Access databases to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or Azure SQL DB. The SSMA user interface, including the metadata explorers, metadata, toolbars, output pane, and error list pane are shown in the following diagram:  
   
 ![SSMA for Access Graphical User Interface](../../ssma/access/media/ssmaforaccessgui.gif "SSMA for Access Graphical User Interface")  
   
-To start a migration, create a new project, and then add Access databases to Access Metadata Explorer. You can then right-click objects in Access Metadata Explorer to perform tasks such as exporting an inventory of Access database objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or Azure SQL DB, creating reports that assess conversions to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or Azure SQL DB, and converting Access schemas to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or Azure SQL DB schemas. You can also perform these tasks by using the toolbars and menus.  
+To start a migration, create a new project, and then add Access databases to Access Metadata Explorer. You can then right-click objects in Access Metadata Explorer to perform tasks such as:
+- Exporting an inventory of Access database objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or Azure SQL DB.
+- Creating reports that assess conversions to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or Azure SQL DB.
+- Converting Access schemas to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or Azure SQL DB schemas.
+
+You can also perform these tasks by using the toolbars and menus.  
   
 You must also connect to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. After a successful connection, a hierarchy of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] databases appears in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Metadata Explorer. After you convert Access schemas to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] schemas, you can select those converted schemas in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Metadata Explorer, and then load the schemas into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
   
@@ -88,9 +93,9 @@ To the right of each metadata explorer are tabs that describe the selected objec
   
 Most metadata settings are read-only. However, you can alter the following metadata:  
   
--   In Access Metadata Explorer, you can alter type mappings. You should make these changes before you create reports or convert schemas.  
+-   In Access Metadata Explorer, you can alter type mappings. Be sure to make these changes before you create reports or convert schemas.  
   
--   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Metadata Explorer, you can alter table and index properties on the **Table** tab. You should make these changes before you load the schemas into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. For more information, see [Converting Access Database Objects](http://msdn.microsoft.com/en-us/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c).  
+-   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Metadata Explorer, you can alter table and index properties on the **Table** tab. Make these changes before you load the schemas into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. For more information, see [Converting Access Database Objects](http://msdn.microsoft.com/en-us/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c).  
   
 ### Toolbars  
 SSMA has two toolbars: a project toolbar and a migration toolbar.  

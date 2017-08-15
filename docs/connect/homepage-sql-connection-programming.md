@@ -33,7 +33,7 @@ For details about the connection strings for connecting to Azure SQL Database, s
 
 #### Build-an-app webpages
 
-Our *Build-an-app* webpages present code examples, along with configuration information, in an alternative format. For more information, see later in this article the section labeled [Build-an-app website](#an-204-aka-ms-sqldev).
+Our *Build-an-app* webpages present code examples, along with configuration information, in an alternative format. For more information, see later in this article the [section labeled *Build-an-app website*](#an-204-aka-ms-sqldev).
 
 
 
@@ -46,9 +46,9 @@ In the following table, each language image is a link to detail about using the 
 
 | &nbsp; | &nbsp; | &nbsp; |
 | :-- | :-- | :-- |
-| &nbsp; [![C# logo][image-ref-320-csharp]](#an-110-ado-net-docu) | &nbsp; ![ORM Entity Framework, of .NET Framework][image-ref-333-ef] | &nbsp; ![Java logo][image-ref-330-java] |
-| &nbsp; ![Node.js logo][image-ref-340-node] | &nbsp; **`ODBC for C++`** | &nbsp; ![PHP logo][image-ref-360-php] |
-| &nbsp; ![Python logo][image-ref-370-python] | &nbsp; ![Ruby logo][image-ref-380-ruby] | &nbsp; ... |
+| &nbsp; [![C# logo][image-ref-320-csharp]](#an-110-ado-net-docu) | &nbsp; [![ORM Entity Framework, of .NET Framework][image-ref-333-ef]](#an-116-csharp-ef-orm) | &nbsp; [![Java logo][image-ref-330-java]](#an-130-jdbc-docu) |
+| &nbsp; [![Node.js logo][image-ref-340-node]](#an-140-node-js-docu) | &nbsp; [**`ODBC for C++`**](#an-160-odbc-cpp-docu) | &nbsp; [![PHP logo][image-ref-360-php]](#an-170-php-docu) |
+| &nbsp; [![Python logo][image-ref-370-python]](#an-180-python-docu) | &nbsp; [![Ruby logo][image-ref-380-ruby]](#an-190-ruby-docu) | &nbsp; ... |
 | &nbsp; | &nbsp; | <br />|
 
 
@@ -91,9 +91,9 @@ The .NET managed languages, such as C# and Visual Basic, are the most common use
 
 ## ![Entity Framework logo][image-ref-333-ef] Entity Framework (EF) with C&#x23;
 
-[Entity Framework (EF)](http://docs.microsoft.com/ef/) provides Object-Relational Mapping (ORM). ORM makes it easier for your Object-Oriented Programming (OOP) source code to manipulate data that was retrieved from a relational SQL database.
+Entity Framework (EF) provides Object-Relational Mapping (ORM). ORM makes it easier for your Object-Oriented Programming (OOP) source code to manipulate data that was retrieved from a relational SQL database.
 
-EF is made possible by the following underlying technologies:
+EF has direct or indirect relationships with the following technologies:
 
 - .NET Framework
 - [LINQ to SQL](http://docs.microsoft.com/dotnet/framework/data/adonet/sql/linq/), or [LINQ to Entities](http://docs.microsoft.com/dotnet/framework/data/adonet/ef/language-reference/linq-to-entities)
@@ -101,14 +101,13 @@ EF is made possible by the following underlying technologies:
 - Handy programs that generate source code for classes which map to the tables in your SQL database. For instance, [EdmGen.exe](http://docs.microsoft.com/dotnet/framework/data/adonet/ef/edm-generator-edmgen-exe).
 
 
-#### Links to original and new EF
+#### Original EF, and new EF
 
 The [start page for Entity Framework](http://docs.microsoft.com/ef/) introduces EF with a description similar to the following:
 
-    > Entity Framework is an object-relational mapper (O/RM) that enables .NET developers to work with a database using .NET objects. It eliminates the need for most of the data-access source code that developers usually need to write.
+- Entity Framework is an object-relational mapper (O/RM) that enables .NET developers to work with a database using .NET objects. It eliminates the need for most of the data-access source code that developers usually need to write.
 
-
-*Entity Framework* is a name shared by two separate source code branches. One EF branch is older, and its source code can now be maintained by the public. The other EF is new, as described next:
+*Entity Framework* is a name shared by two separate source code branches. One EF branch is older, and its source code can now be maintained by the public. The other EF is new. The two EFs are described next:
 
 |     |     |
 | :-- | :-- |
@@ -132,7 +131,6 @@ Microsoft provides a Java Database Connectivity (JDBC) driver for use with SQL S
 
 |||
 | :-- | :-- |
-| [Java and JDBC](./jdbc/index.md) | Root of our documentation. |
 | [Code examples](./jdbc/code-samples/index.md) | Code examples that teach about data types, result sets, and large data. |
 | [Connection URL Sample](./jdbc/connection-url-sample.md) | Describes how to use a connection URL to connect to SQL Server. Then use it to use an SQL statement to retrieve data. |
 | [Data Source Sample](./jdbc/data-source-sample.md) | Describes how to use a data source to connect to SQL Server. Then use a stored procedure to retrieve data. |
@@ -146,7 +144,7 @@ The JDBC documentation includes the following major areas:
 
 |||
 | :-- | :-- |
-| [Java Database Connectivity (JDBC)](./jdbc/index.md) | Root article to our JDBC documentation. |
+| [Java Database Connectivity (JDBC)](./jdbc/index.md) | Root of our JDBC documentation. |
 | [Reference](./jdbc/reference/index.md) | Interfaces, classes, and members. |
 | [Programming Guide for JDBC SQL Driver](./jdbc/programming-guide-for-jdbc-sql-driver.md) | Configuration information, along with code examples. |
 | &nbsp; | <br /> |
@@ -214,7 +212,8 @@ The ODBC content in this section focuses on accessing either SQL Server or Azure
 
 ## ![PHP logo][image-ref-360-php] PHP
 
-You can use [PHP](./php/index.md) to interact with SQL Server.
+You can use PHP to interact with SQL Server. The root of our Node.js documentation is [here](./php/index.md).
+
 #### Code examples
 
 |||
@@ -224,10 +223,6 @@ You can use [PHP](./php/index.md) to interact with SQL Server.
 | [Azure SQL database: Use PHP to query](http://docs.microsoft.com/azure/sql-database/sql-database-connect-query-php) | Azure SQL Database example. |
 | [Create PHP apps to use SQL Server on RHEL](http://www.microsoft.com/sql-server/developer-get-started/php/rhel/) | Configuration information, along with code examples. |
 | &nbsp; | <br /> |
-
-#### Documentation
-
-[PHP to SQL Server](./php/index.md)
 
 
 
@@ -244,7 +239,7 @@ You can use Python to interact with SQL Server.
 | :-- | :-- |
 | [Proof of concept connecting to SQL with Python using pyodbc](./python/pyodbc/step-3-proof-of-concept-connecting-to-sql-using-pyodbc.md) | A small code example focused on connecting and querying SQL Server. |
 | [Azure SQL database: Use Python to query](http://docs.microsoft.com/azure/sql-database/sql-database-connect-query-python) | Azure SQL Database example. |
-| [Create PHP apps to use SQL Server on SLES](http://www.microsoft.com/sql-server/developer-get-started/python/slesl/) | Configuration information, along with code examples. |
+| [Create PHP apps to use SQL Server on SLES](http://www.microsoft.com/sql-server/developer-get-started/python/sles/) | Configuration information, along with code examples. |
 | &nbsp; | <br /> |
 
 #### Documentation
@@ -337,10 +332,10 @@ The following screenshots give you an idea of what our SQL development documenta
 
 
 
-## Azure development in general
+## Other development
 
 
-This section provides links about using these same languages for Azure development in general. The information goes beyond targeting just Azure SQL Database and Microsoft SQL Server.
+This section provides links about other development options. These include using these same languages for Azure development in general. The information goes beyond targeting just Azure SQL Database and Microsoft SQL Server.
 
 #### Developer hub for Azure
 
@@ -349,10 +344,12 @@ This section provides links about using these same languages for Azure developme
 - [Azure for Java developers](http://docs.microsoft.com/java/azure/)
 - [Azure for Node.js developers](http://docs.microsoft.com/nodejs/azure/)
 - [Azure for Python developers](http://docs.microsoft.com/python/azure/)
+- [Create a PHP web app in Azure](http://docs.microsoft.com/azure/app-service-web/app-service-web-get-started-php)
 
 #### Other languages
 
-- [Create a PHP web app in Azure](http://docs.microsoft.com/azure/app-service-web/app-service-web-get-started-php)
+- [Create Go apps using SQL Server on Windows](http://www.microsoft.com/sql-server/developer-get-started/go/windows/)
+
 
 
 <!-- Image references. -->

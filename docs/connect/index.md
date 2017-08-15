@@ -1,3 +1,3 @@
 ---
-redirect_url: /sql/connect/sql-connection-libraries
+redirect_url: /sql/connect/homepage-sql-connection-programming
 ---

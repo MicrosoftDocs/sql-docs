@@ -95,10 +95,10 @@ To restore the database, you must first transfer the backup file from the Window
    cd 'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Backup\'
    ```
 
-1. Use the **scp** command to transfer the file to the target Linux machine. The following example transfers **YourDB.bak** to the home directory of *user1* on the Linux server with an IP address of *18.80.888.88*:
+1. Use the **scp** command to transfer the file to the target Linux machine. The following example transfers **YourDB.bak** to the home directory of *user1* on the Linux server with an IP address of *192.0.2.9*:
 
    ```bash
-   scp YourDB.bak user1@18.80.888.88:./
+   scp YourDB.bak user1@192.0.2.9:./
    ```
    ![scp command](./media/sql-server-linux-migrate-restore-database/scp-command.png)
 
@@ -109,10 +109,10 @@ To restore the database, you must first transfer the backup file from the Window
 
 At this point, the backup file is on your Linux server in your user's home directory. Before restoring the database to SQL Server, you must place the backup in a subdirectory of **/var/opt/mssql**.
 
-1. In the same Windows Bash session, connect remotely to your target Linux machine with **ssh**. The following example connects to the Linux machine **18.80.888.88** as user **user1**.
+1. In the same Windows Bash session, connect remotely to your target Linux machine with **ssh**. The following example connects to the Linux machine **192.0.2.9** as user **user1**.
 
    ```bash
-   ssh user1@18.80.888.88
+   ssh user1@192.0.2.9
    ```
 
    You are now running commands on the remote Linux server.

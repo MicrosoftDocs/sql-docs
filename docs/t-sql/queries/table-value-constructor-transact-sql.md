@@ -140,7 +140,7 @@ SELECT * FROM Sales.MySalesReason;
 ```  
   
 ### C. Specifying multiple values as a derived table in a FROM clause  
- The following examples uses the table value constructor to specify multiple values in the FROM clause of a SELECT statement.  
+ The following examples use the table value constructor to specify multiple values in the FROM clause of a SELECT statement.  
   
 ```  
 SELECT a, b FROM (VALUES (1, 2), (3, 4), (5, 6), (7, 8), (9, 10) ) AS MyTable(a, b);  

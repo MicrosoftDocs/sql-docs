@@ -1,7 +1,7 @@
 ---
 title: "Database Instant File Initialization | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "08/15/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -41,7 +41,7 @@ manager: "jhubbard"
   
  Instant file initialization is only available if the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (MSSQLSERVER) service account has been granted SE_MANAGE_VOLUME_NAME. Members of the Windows Administrator group have this right and can grant it to other users by adding them to the **Perform Volume Maintenance Tasks** security policy. For more information about assigning user rights, see the Windows documentation.  
   
- Instant file initialization is not available when TDE is enabled.  
+Some conditions, such as TDE, can prevent Instant File Initialization.  
   
  To grant an account the `Perform volume maintenance tasks` permission:  
   

@@ -1,7 +1,7 @@
 ---
 title: "Deterministic and Nondeterministic Functions | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/28/2016"
+ms.date: "08/26/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -84,7 +84,7 @@ manager: "jhubbard"
 |CURRENT_TIMESTAMP|RAND|  
 |DENSE_RANK|RANK|  
 |FIRST_VALUE|ROW_NUMBER|   
-||TEXTPTR|  
+|FORMAT|TEXTPTR|  
   
 ## Calling Extended Stored Procedures from Functions  
  Functions that call extended stored procedures are nondeterministic, because the extended stored procedures can cause side effects on the database. Side effects are changes to a global state of the database, such as an update to a table, or to an external resource, such as a file or the network; for example, modifying a file or sending an e-mail message. You should not rely on returning a consistent result set when executing an extended stored procedure from a user-defined function. User-defined functions that create side effects on the database are not recommended.  

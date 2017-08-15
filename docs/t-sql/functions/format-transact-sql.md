@@ -1,7 +1,7 @@
 ---
 title: "FORMAT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/21/2016"
+ms.date: "08/15/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -48,7 +48,7 @@ FORMAT ( value, format [, culture ] )
  *culture*  
  Optional **nvarchar** argument specifying a culture.  
   
- If the *culture* argument is not provided, the language of the current session is used. This language is set either implicitly, or explicitly by using the SET LANGUAGE statement. *culture* accepts any culture supported by the .NET Framework as an argument; it is not limited to the languages explicitly supported by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . If the *culture* argument is not valid, FORMAT raises an error.  
+ If the *culture* argument is not provided, the language of the current session is used. This language is set either implicitly, or explicitly by using the SET LANGUAGE statement. *culture* accepts any culture supported by the .NET Framework as an argument; it is not limited to the languages explicitly supported by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. If the *culture* argument is not valid, FORMAT raises an error.  
   
 ## Return Types  
  **nvarchar** or null  
@@ -60,11 +60,11 @@ FORMAT ( value, format [, culture ] )
  
  The FORMAT function is nondeterministic.   
   
- FORMAT relies on the presence of .the .NET Framework Common Language Runtime (CLR).  
+ FORMAT relies on the presence of the .NET Framework Common Language Runtime (CLR).  
   
  This function will not be remoted since it depends on the presence of the CLR. Remoting a function that requires the CLR would cause an error on the remote server.  
   
- FORMAT relies upon CLR formatting rules which dictate that colons and periods must be escaped. Therefor, when the format string (second parameter) contains a colon or period, the colon or period must be escaped with backslash when an input value (first parameter) is of the **time** data type. See [D. FORMAT with time data types](#ExampleD).  
+ FORMAT relies upon CLR formatting rules which dictate that colons and periods must be escaped. Therefore, when the format string (second parameter) contains a colon or period, the colon or period must be escaped with backslash when an input value (first parameter) is of the **time** data type. See [D. FORMAT with time data types](#ExampleD).  
   
  The following table lists the acceptable data types for the *value* argument together with their .NET Framework mapping equivalent types.  
   
@@ -193,14 +193,14 @@ CurrencyRateID EndOfDayRate  Numeric Format  General Format  Currency Format
 ```  
   
 ###  <a name="ExampleD"></a> D. FORMAT with time data types  
- FORMAT returns NULL in these cases because . and : are not escaped.  
+ FORMAT returns NULL in these cases because `.` and `:` are not escaped.  
   
 ```  
 SELECT FORMAT(cast('07:35' as time), N'hh.mm');   --> returns NULL  
 SELECT FORMAT(cast('07:35' as time), N'hh:mm');   --> returns NULL  
 ```  
   
- Format returns a formatted string because the . and : are escaped.  
+ Format returns a formatted string because the `.` and `:` are escaped.  
   
 ```  
 SELECT FORMAT(cast('07:35' as time), N'hh\.mm');  --> returns 07.35  

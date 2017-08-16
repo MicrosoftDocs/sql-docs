@@ -47,7 +47,7 @@ ALTER DATABASE { database_name }
       MAXSIZE = { 100 MB | 250 MB | 500 MB |1 | 1024 … 4096 } GB    
     | EDITION = { 'basic' | 'standard' | 'premium' | 'premiumrs' }   
     | SERVICE_OBJECTIVE =   
-                 {  'S0' | 'S1' | 'S2' | 'S3'|
+                 {  'S0' | 'S1' | 'S2' | 'S3'| 'S4'| 'S6'| 'S7'| 'S9'| 'S12' |
                  | 'P1' | 'P2' | 'P3' | 'P4'| 'P6' | 'P11'  | 'P15' | 
                  | 'PRS1' | 'PRS2' | 'PRS4' | 'PRS6' |
                  | { ELASTIC_POOL (name = <elastic_pool_name>) }   
@@ -57,7 +57,7 @@ ALTER DATABASE { database_name }
    {  
       ALLOW_CONNECTIONS = { ALL | NO }  
      | SERVICE_OBJECTIVE =   
-                 {  'S0' | 'S1' | 'S2' | 'S3' |
+                 {  'S0' | 'S1' | 'S2' | 'S3' | 'S4'| 'S6'| 'S7'| 'S9'| 'S12' |
                  | 'P1' | 'P2' | 'P3' | 'P4'| 'P6' | 'P11' | 'P15' |
                  | 'PRS1' | 'PRS2' | 'PRS4' | 'PRS6' |  
                  | { ELASTIC_POOL ( name = <elastic_pool_name>) }   
@@ -208,11 +208,11 @@ COMPATIBILITY_LEVEL = { 130 | 120 | 110 | 100 }
 |150 GB|N/A|√|√|√|√|  
 |200 GB|N/A|√|√|√|√|  
 |250 GB|N/A|√ (D)|√ (D)|√|√|  
-|300 GB|N/A|N/A|√|√|√|  
-|400 GB|N/A|N/A|√|√|√|
-|500 GB|N/A|N/A|√|√ (D)|√|
-|750 GB|N/A|N/A|√|√|√|
-|1024 GB|N/A|N/A|√|√|√ (D)|
+|300 GB|N/A|√|√|√|√|  
+|400 GB|N/A|√|√|√|√|
+|500 GB|N/A|√|√|√ (D)|√|
+|750 GB|N/A|√|√|√|√|
+|1024 GB|N/A|√|√|√|√ (D)|
 |From 1024 GB up to 4096 GB in increments of 256 GB*|N/A|N/A|N/A|N/A|√|√|  
   
  \* P11 and P15 allow MAXSIZE up to 4 TB with 1024 GB being the default size.  P11 and P15 can use up to 4 TB of included storage at no additional charge. In the Premium tier, MAXSIZE greater than 1 TB is currently available in the following regions: US East2, West US, US Gov Virginia, West Europe, Germany Central, South East Asia, Japan East, Australia East, Canada Central, and Canada East. For current limitations, see [Single databases](https://docs.microsoft.com/azure/sql-database-single-database-resources).  

@@ -120,7 +120,7 @@ On an instance that becomes a secondary replica, once the instance is joined the
 
 >Local availability replica for availability group 'AGName' has not been granted permission to create databases, but has a `SEEDING_MODE` of `AUTOMATIC`. Use `ALTER AVAILABILITY GROUP … GRANT CREATE ANY DATABASE` to allow the creation of databases seeded by the primary availability replica.
 
-In order for automatic seeding to work, the availability group needs permission to create a database. The following example grants this permission to an availability group called AGName.
+Grant the availability group permission to create databases on the secondary replica instance of SQL Server. In order for automatic seeding to work, the availability group needs permission to create a database. The following example grants this permission to an availability group called AGName.
  
 After joining, issue the following statement:
 
@@ -129,16 +129,6 @@ ALTER AVAILABILITY GROUP [AGName]
     GRANT CREATE ANY DATABASE
  GO
 ```
-
->[!NOTE]
->When the availability group creates a database on a secondary replica, it sets the database owner as the account that granted permission to create any database.
->
->To set the owner of the database to `sa`, run the following command on the secondary replica.
-> ```sql
-ALTER AUTHORIZATION ON DATABASE::<DatabaseName> TO sa;
-```
->
->In most cases, you should set the database owner on the secondary replica to the same as the primary replica.   
 
 If successful, the database(s) are automatically created on the secondary replica with a state of either:
 
@@ -149,6 +139,19 @@ If successful, the database(s) are automatically created on the secondary replic
 In addition to the [Dynamic Management Views](#dynamic-management-views) described below, the start and completion of automatic seeding can be seen in the SQL Server Log:
 
 ![SQL server log][2]
+
+>[!NOTE]
+>When the availability group creates a database on a secondary replica, it sets the database owner as the account that granted permission to create any database. Most applications require the database owner on the secondary replica to be the same as on the primary replica. If necessary set the owner of the database on the secondary replica. 
+>
+>To set the owner of the database to `sa`, run the following command on the secondary replica.
+> ```sql
+USE MASTER
+GO
+ALTER AUTHORIZATION ON DATABASE::<DatabaseName> TO sa;
+```
+>  
+
+
 
 ## Combine backup and restore with automatic seeding
 

@@ -1,7 +1,7 @@
 ---
 title: "index_option (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/05/2017"
+ms.date: "08/07/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -209,7 +209,7 @@ manager: "jhubbard"
   
  For more information about compression, see [Data Compression](../../relational-databases/data-compression/data-compression.md).  
   
- ON PARTITIONS **(** { <partition_number_expression> | \<range> } [ **,**...*n* ] **)**  
+ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [ **,**...*n* ] **)**
  **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Specifies the partitions to which the DATA_COMPRESSION setting applies. If the table is not partitioned, the ON PARTITIONS argument will generate an error. If the ON PARTITIONS clause is not provided, the DATA_COMPRESSION option will apply to all partitions of a partitioned table.  

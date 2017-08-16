@@ -1,7 +1,7 @@
----
+﻿---
 title: "UPDATE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/17/2017"
+ms.date: "08/09/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -112,7 +112,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
 ```  
   
 ## Arguments  
- WITH <common_table_expression>  
+ WITH \<common_table_expression>  
  Specifies the temporary named result set or view, also known as common table expression (CTE), defined within the scope of the UPDATE statement. The CTE result set is derived from a simple query and is referenced by UPDATE statement.  
   
  Common table expressions can also be used with the SELECT, INSERT, DELETE, and CREATE VIEW statements. For more information, see [WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
@@ -142,7 +142,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  *rowset_function_limited*  
  Is either the [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) or [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) function, subject to provider capabilities.  
   
- WITH **(** <Table_Hint_Limited> **)**  
+ WITH **(** \<Table_Hint_Limited> **)**  
  Specifies one or more table hints that are allowed for a target table. The WITH keyword and the parentheses are required. NOLOCK and READUNCOMMITTED are not allowed. For information about table hints, see [Table Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
  @*table_variable*  
@@ -207,10 +207,10 @@ SET { column_name = { expression | NULL } } [ ,...n ]
   
  SET **@***variable* = *column* = *expression* sets the variable to the same value as the column. This differs from SET **@***variable* = *column*, *column* = *expression*, which sets the variable to the pre-update value of the column.  
   
- <OUTPUT_Clause>  
+ \<OUTPUT_Clause>  
  Returns updated data or expressions based on it as part of the UPDATE operation. The OUTPUT clause is not supported in any DML statements that target remote tables or views. For more information, see [OUTPUT Clause &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md).  
   
- FROM <table_source>  
+ FROM \<table_source>  
  Specifies that a table, view, or derived table source is used to provide the criteria for the update operation. For more information, see [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md).  
   
  If the object being updated is the same as the object in the FROM clause and there is only one reference to the object in the FROM clause, an object alias may or may not be specified. If the object being updated appears more than one time in the FROM clause, one, and only one, reference to the object must not specify a table alias. All other references to the object in the FROM clause must include an object alias.  
@@ -227,13 +227,13 @@ SET { column_name = { expression | NULL } } [ ,...n ]
   
 -   Positioned updates use the CURRENT OF clause to specify a cursor. The update operation occurs at the current position of the cursor.  
   
- <search_condition>  
+ \<search_condition>  
  Specifies the condition to be met for the rows to be updated. The search condition can also be the condition upon which a join is based. There is no limit to the number of predicates that can be included in a search condition. For more information about predicates and search conditions, see [Search Condition &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md).  
   
  CURRENT OF  
  Specifies that the update is performed at the current position of the specified cursor.  
   
- A positioned update using a WHERE CURRENT OF clause updates the single row at the current position of the cursor. This can be more accurate than a searched update that uses a WHERE <search_condition> clause to qualify the rows to be updated. A searched update modifies multiple rows when the search condition does not uniquely identify a single row.  
+ A positioned update using a WHERE CURRENT OF clause updates the single row at the current position of the cursor. This can be more accurate than a searched update that uses a WHERE \<search_condition> clause to qualify the rows to be updated. A searched update modifies multiple rows when the search condition does not uniquely identify a single row.  
   
  GLOBAL  
  Specifies that *cursor_name* refers to a global cursor.  
@@ -244,7 +244,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  *cursor_variable_name*  
  Is the name of a cursor variable. *cursor_variable_name* must reference a cursor that allows updates.  
   
- OPTION **(** <query_hint> [ **,**... *n* ] **)**  
+ OPTION **(** \<query_hint> [ **,**... *n* ] **)**  
  Specifies that optimizer hints are used to customize the way the [!INCLUDE[ssDE](../../includes/ssde-md.md)] processes the statement. For more information, see [Query Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
   
 ## Best Practices  

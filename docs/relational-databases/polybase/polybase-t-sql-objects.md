@@ -2,7 +2,7 @@
 title: "PolyBase T-SQL objects | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "07/13/2017"
+ms.date: "08/15/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "PolyBase, fundamentals"
   - "PolyBase, SQL statements"
   - "PolyBase, SQL objects"
-ms.assetid: ef5d6c40-6ce6-4cf0-8ad3-38f98b32f98e
 caps.latest.revision: 20
 author: "barbkess"
 ms.author: "barbkess"
@@ -41,7 +40,9 @@ manager: "jhubbard"
 ## Prerequisites  
  Configure PolyBase. See [PolyBase configuration](../../relational-databases/polybase/polybase-configuration.md).  
   
-## Create external tables for Hadoop  
+## Create external tables for Hadoop
+Applies to: SQL Server (starting with 2016), Parallel Data Warehouse
+  
  **1. Create Database Scoped Credential**  
   
  This step is required only for Kerberos-secured Hadoop clusters.  
@@ -120,6 +121,8 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
 ```  
   
 ## Create external tables for Azure blob storage  
+Applies to: SQL Server (starting with 2016), Azure SQL Data Warehouse, Parallel Data Warehouse
+
  **1. Create Database Scoped Credential**  
   
 ```sql  
@@ -195,11 +198,11 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
 ```  
  
 ## Create external tables for Azure Data Lake Store
-Azure Data Lake Store is only supported by PolyBase in SQL Data Warehouse.
- For more information about Azure SQL Data Warhouse and ADLS, go to [Load with Azure Data Lake Store](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store)
+Applies to: Azure SQL Data Warehouse
+
+For more information, see [Load with Azure Data Lake Store](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store)
  
- **1. Create Database Scoped Credential**  
-  
+ **1. Create Database Scoped Credential**   
 
 ```sql
 -- Create a Database Master Key.

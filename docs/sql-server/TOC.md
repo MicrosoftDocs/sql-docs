@@ -27,7 +27,7 @@
 ## [SQL Server 2008 R2 SP2 Release Notes](../release-notes/sql-server-2008-r2-sp2-release-notes.md)
 
 # [Analysis Services](../analysis-services/analysis-services.md)
-# [Database Engine](../database-engine/configure-windows/sql-server-database-engine.md)
+# [Database Engine](../database-engine/sql-server-database-engine-overview.md)
 # [Data Quality Services](../data-quality-services/data-quality-services.md)
 # [Failover clusters](../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)
 # [Install](../sql-server/install/planning-a-sql-server-installation.md)
@@ -37,7 +37,4 @@
 # [SQL Server Migration Assistant](../ssma/sql-server-migration-assistant.md)
 # [Stretch Database](../sql-server/stretch-database/stretch-database.md)
 # [Tutorials for SQL Server](tutorials-for-sql-server-2016.md)
-
-# About the documentation
-## [SQL Server Resources](sql-server-resources.md)
-## [Help Viewer](../release-notes/sql-server-help-installation.md)
+# [Local content with Help Viewer](../release-notes/sql-server-help-installation.md)

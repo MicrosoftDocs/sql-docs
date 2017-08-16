@@ -2,7 +2,7 @@
 title: "CREATE TABLE (Transact-SQL) | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "07/10/2017"
+ms.date: "08/10/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -753,7 +753,7 @@ CREATE TABLE t4( c1 int, c2 int, INDEX ix_1 NONCLUSTERED (c1,c2))
   
  For recommendations on when to use COMPRESSION_DELAY, please see [Get started with Columnstore for real time operational analytics](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)  
   
- < table_option> ::=  
+ \< table_option> ::= 
  Specifies one or more table options.  
   
  DATA_COMPRESSION  
@@ -1660,4 +1660,5 @@ GO
  [sp_spaceused &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)  
   
   
+
 

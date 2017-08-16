@@ -38,7 +38,7 @@ Before you configure AD Authentication, you need to:
 >   At this time, the only authentication method supported for database mirroring endpoint is CERTIFICATE. WINDOWS authentication method will be enabled in a future release
 
 ## Step 1: Join [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] host to AD domain
-Numerous tools exist to help you join the [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] host machine to your AD domain. This walkthrough uses [realmd](https://www.freedesktop.org/software/realmd/docs/guide-active-directory-join.html), a popular open source package. If you haven't already, install both the **realmd** and Kerberos client packages on the [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] host machine using your Linux distribution's package manager:  
+Numerous tools exist to help you join the [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] host machine to your AD domain. This walkthrough uses **[realmd](https://www.freedesktop.org/software/realmd/docs/guide-active-directory-join.html)**, a popular open source package. If you haven't already, install both the realmd and Kerberos client packages on the [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] host machine using your Linux distribution's package manager:  
 ```bash  
 # RHEL
 sudo yum install realmd krb5-workstation
@@ -47,7 +47,7 @@ sudo yum install realmd krb5-workstation
 sudo zypper install realmd krb5-client
 
 # Ubuntu
-sudo apt-get install realmd krb5-user
+sudo apt-get install realmd krb5-user software-properties-common python-software-properties packagekit
 ```  
 
 If the Kerberos client package installation prompts you for a realm name, enter your domain name in uppercase.  
@@ -72,6 +72,9 @@ iface eth0 inet dhcp
 dns-nameservers **<AD domain controller IP address>**
 dns-search **<AD domain name>**
 ```  
+>  [!NOTE]  
+>  The network interface (eth0) might differ for differnet machines. To find out which one you are using, run ifconfig and copy the interface that has an IP address and transmitted and received bytes.
+
 After editing this file, restart the network service:
 ```bash
 sudo ifdown eth0 && sudo ifup eth0
@@ -113,7 +116,10 @@ sudo realm join contoso.com -U 'user@CONTOSO.COM' -v
 >  If you receive an error, "Insufficient permissions to join the domain," then you will need to check with a domain administrator that you have sufficient permissions to join Linux machines to your domain.
 
  
-Verify that you can now gather information about a user from the domain, and that you can acquire a Kerberos ticket as that user:  
+Verify that you can now gather information about a user from the domain, and that you can acquire a Kerberos ticket as that user. 
+
+We will use **id**, **[kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html)** and **[klist](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/klist.html)** commands for this.
+
 ```bash  
 id user@contoso.com
 uid=1348601103(user@contoso.com) gid=1348600513(domain group@contoso.com) groups=1348600513(domain group@contoso.com)
@@ -135,6 +141,10 @@ Default principal: user@CONTOSO.COM
 For more information, see the Red Hat documentation for [Discovering and Joining Identity Domains](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/Windows_Integration_Guide/realmd-domain.html). 
 
 ## Step 2: Create AD user for [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] and set SPN  
+
+>  [!NOTE]  
+>  In the next steps we will use your [fully qualified domain name](https://en.wikipedia.org/wiki/Fully_qualified_domain_name). If you are on **Azure**, you will have to **[create one](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/portal-create-fqdn)** before you proceed. 
+
 On your domain controller, run the [New-ADUser](https://technet.microsoft.com/library/ee617253.aspx) PowerShell command to create a new AD user with a password that never expires. This example names the account "mssql," but the account name can be anything you like. You will be prompted to enter a new password for the account:  
 ```PowerShell  	
 Import-Module ActiveDirectory
@@ -147,7 +157,7 @@ New-ADUser mssql -AccountPassword (Read-Host -AsSecureString "Enter Password") -
 
 Now set the ServicePrincipalName (SPN) for this account using the `setspn.exe` tool. The SPN must be formatted exactly as specified in the following example: You can find the fully qualified domain name of the [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] host machine by running `hostname --all-fqdns` on the [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] host, and the TCP port should be 1433 unless you have configured [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] to use a different port number.  
 ```PowerShell   
-setspn -A MSSQLSvc/**<fully qualified domain name of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] host machine>**:**<tcp port>** mssql
+setspn -A MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>** mssql
 ```   
 
 >  [!NOTE]  
@@ -163,16 +173,16 @@ First, check the Key Version Number (kvno) for the AD account created in the pre
 ```bash
 kinit user@CONTOSO.COM
 
-kvno MSSQLSvc/**<fully qualified domain name of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] host machine>**:**<tcp port>**
+kvno MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**
 ```
 
-Now create a keytab file for the AD user you created in the previous step. When prompted, enter the password for that AD account. 
+Now create a keytab file for the AD user you created in the previous step. To do so we will use **[ktutil](https://web.mit.edu/kerberos/krb5-1.12/doc/admin/admin_commands/ktutil.html)**. When prompted, enter the password for that AD account. 
 ```bash  
 sudo ktutil
 
-ktutil: addent -password -p MSSQLSvc/**<fully qualified domain name of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] host machine>**:**<tcp port>**@CONTOSO.COM -k **<kvno from above>** -e aes256-cts-hmac-sha1-96
+ktutil: addent -password -p MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**@CONTOSO.COM -k **<kvno from above>** -e aes256-cts-hmac-sha1-96
 
-ktutil: addent -password -p MSSQLSvc/**<fully qualified domain name of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] host machine>**:**<tcp port>**@CONTOSO.COM -k **<kvno from above>** -e rc4-hmac
+ktutil: addent -password -p MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**@CONTOSO.COM -k **<kvno from above>** -e rc4-hmac
 
 ktutil: wkt /var/opt/mssql/secrets/mssql.keytab
 

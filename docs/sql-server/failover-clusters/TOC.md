@@ -3,14 +3,7 @@
 # [Management of Logins and Jobs After Role Switching](management-of-logins-and-jobs-after-role-switching-sql-server.md)  
 # [Troubleshoot Orphaned Users](troubleshoot-orphaned-users-sql-server.md)  
 
-# Install
-## [SQL Server Failover Cluster Installation](install/sql-server-failover-cluster-installation.md)  
-## [Before Installing Failover Clustering](install/before-installing-failover-clustering.md)  
-## [Create a New SQL Server Failover Cluster (Setup)](install/create-a-new-sql-server-failover-cluster-setup.md)  
-## [Add or Remove Nodes in a SQL Server Failover Cluster (Setup)](install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)  
-## [Install Client Tools on a SQL Server Failover Cluster](install/install-client-tools-on-a-sql-server-failover-cluster.md)  
-## [Remove a SQL Server Failover Cluster Instance (Setup)](install/remove-a-sql-server-failover-cluster-instance-setup.md)  
-## [Rename a SQL Server Failover Cluster Instance](install/rename-a-sql-server-failover-cluster-instance.md)  
+# [Failover Cluster Installation](install/sql-server-failover-cluster-installation.md)  
 
 # [Windows Server Failover Clustering (WSFC) with SQL Server](windows/windows-server-failover-clustering-wsfc-with-sql-server.md)  
 ## [WSFC Quorum Modes and Voting Configuration](windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md)  
@@ -31,4 +24,4 @@
 ### [Recover from Failover Cluster Instance Failure](windows/recover-from-failover-cluster-instance-failure.md)  
 ### [Change the IP Address of a Failover Cluster Instance](windows/change-the-ip-address-of-a-failover-cluster-instance.md)  
 ## [Upgrade a SQL Server Failover Cluster Instance](windows/upgrade-a-sql-server-failover-cluster-instance.md)  
-### [Upgrade a SQL Server Failover Cluster Instance (Setup)](windows/upgrade-a-sql-server-failover-cluster-instance-setup.md)  
+### [Upgrade a SQL Server Failover Cluster Instance (Setup)](windows/upgrade-a-sql-server-failover-cluster-instance-setup.md)

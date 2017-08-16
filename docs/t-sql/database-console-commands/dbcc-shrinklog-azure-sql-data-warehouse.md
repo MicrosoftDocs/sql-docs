@@ -1,7 +1,7 @@
 ---
 title: "DBCC SHRINKLOG (Azure SQL Data Warehouse) | Microsoft Docs"
 ms.custom: ""
-ms.date: "7/17/2017"
+ms.date: "07/17/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -11,7 +11,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
-ms.assetid: 3dd74d20-1265-4553-8819-97cd89498893
 caps.latest.revision: 11
 author: "barbkess"
 ms.author: "barbkess"

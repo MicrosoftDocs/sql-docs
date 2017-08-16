@@ -2,7 +2,7 @@
 title: "Get started with PolyBase | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "7/13/2017"
+ms.date: "8/15/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -19,7 +19,6 @@ helpviewer_keywords:
   - "Azure blob storage export"
   - "Hadoop import, PolyBase getting started"
   - "Hadoop export, Polybase getting started"
-ms.assetid: c71ddc50-b4c7-416c-9789-264671bd9ecb
 caps.latest.revision: 78
 author: "barbkess"
 ms.author: "barbkess"
@@ -238,10 +237,15 @@ CREATE EXTERNAL DATA SOURCE AzureStorage with (
 --3:  Create an external file format.  
 -- FORMAT TYPE: Type of format in Hadoop (DELIMITEDTEXT,  RCFILE, ORC, PARQUET).  
   
-CREATE EXTERNAL FILE FORMAT TextFileFormat WITH (  
-        FORMAT_TYPE = DELIMITEDTEXT,   
-        FORMAT_OPTIONS (FIELD_TERMINATOR ='|',   
-                USE_TYPE_DEFAULT = TRUE)  
+CREATE EXTERNAL FILE FORMAT TextFileFormat
+WITH (  
+       FORMAT_TYPE = DELIMITEDTEXT,   
+       FORMAT_OPTIONS (
+         FIELD_TERMINATOR ='|',   
+         USE_TYPE_DEFAULT = TRUE
+       )
+);
+         
   
 --4: Create an external table.  
 -- The external table points to data stored in Azure storage.  

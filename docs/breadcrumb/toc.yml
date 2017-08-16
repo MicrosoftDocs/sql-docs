@@ -289,14 +289,14 @@
             homepage: /sql/analysis-services/xmla/xml-data-types/xml-data-types-xmla
       - name: Database Engine
         href: /sql/database-engine/
-        homepage: /sql/database-engine/sql-server-database-engine-backward-compatibility
+        homepage: /sql/database-engine/sql-server-database-engine-overview
         items:
         - name: Availability groups
           href: /sql/database-engine/availability-groups/windows/
           homepage: /sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server
         - name: Configure on Windows
           href: /sql/database-engine/configure-windows/
-          homepage: /sql/database-engine/configure-windows/sql-server-database-engine
+          homepage: /sql/database-engine/configure-windows/configure-database-engine-instances-sql-server
         - name: Database mirroring
           href: /sql/database-engine/database-mirroring/
           homepage: /sql/database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server

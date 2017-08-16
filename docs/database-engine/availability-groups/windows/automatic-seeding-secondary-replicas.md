@@ -121,6 +121,11 @@ On an instance that becomes a secondary replica, once the instance is joined the
 >Local availability replica for availability group 'AGName' has not been granted permission to create databases, but has a `SEEDING_MODE` of `AUTOMATIC`. Use `ALTER AVAILABILITY GROUP … GRANT CREATE ANY DATABASE` to allow the creation of databases seeded by the primary availability replica.
 
 Grant the availability group permission to create databases on the secondary replica instance of SQL Server. In order for automatic seeding to work, the availability group needs permission to create a database. The following example grants this permission to an availability group called AGName.
+
+>[!TIP]
+>When the availability group creates a database on a secondary replica, it sets the database owner as the account that ran the ALTER AVAILABILITY GROUP statement to grant permission to create any database. Most applications require the database owner on the secondary replica to be the same as on the primary replica.
+>
+>To ensure that all databases are created with the same database owner as the primary replica, run the following command under the security context of the login that is database owner on the primary replica. 
  
 After joining, issue the following statement:
 
@@ -141,15 +146,18 @@ In addition to the [Dynamic Management Views](#dynamic-management-views) describ
 ![SQL server log][2]
 
 >[!NOTE]
->When the availability group creates a database on a secondary replica, it sets the database owner as the account that granted permission to create any database. Most applications require the database owner on the secondary replica to be the same as on the primary replica. If necessary set the owner of the database on the secondary replica. 
+>If necessary set the owner of the database on the secondary replica. 
 >
->To set the owner of the database to `sa`, run the following command on the secondary replica.
+>Before you change database owner, fail over to the new secondary replia.
+>
+>To set the owner of the database to a different login, update the following script - replace the values in angle brackets (\<\>) for your environment - and  run the following command on the secondary replica.
 > ```sql
 USE MASTER
 GO
-ALTER AUTHORIZATION ON DATABASE::<DatabaseName> TO sa;
+ALTER AUTHORIZATION ON DATABASE::<DatabaseName> TO <LoginName>;
 ```
 >  
+>Typically the database owner on the secondary replica should be the same as the primary replica. 
 
 
 

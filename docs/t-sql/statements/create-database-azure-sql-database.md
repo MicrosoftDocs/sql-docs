@@ -94,7 +94,7 @@ CREATE DATABASE database_name
  *MAXSIZE*  
  Specifies the maximum size of the database. MAXSIZE must be valid for the specified EDITION (service tier) Following are the supported MAXSIZE values and defaults (D) for the service tiers.  
   
-|**MAXSIZE**|**Basic**|**S0-S2**|**S3**|**P1-P6 and PRS1-PRS6**| **P11-P15** 
+|**MAXSIZE**|**Basic**|**S0-S2**|**S3-S12**|**P1-P6 and PRS1-PRS6**| **P11-P15** 
 |-----------------|---------------|------------------|-----------------|-----------------|-----------------|-----------------|  
 |100 MB|√|√|√|√|√|  
 |250 MB|√|√|√|√|√|  

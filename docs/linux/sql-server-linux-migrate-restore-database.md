@@ -76,7 +76,7 @@ To restore the database, you must first transfer the backup file from the Window
 
 1. Open a Bash session on Windows.
 
-## Copy the backup file to Linux
+## <a id="scp"></a> Copy the backup file to Linux
 
 1. In your Bash session, navigate to the directory containing your backup file. For example:
 

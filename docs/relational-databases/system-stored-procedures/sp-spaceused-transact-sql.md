@@ -2,7 +2,7 @@
 title: "sp_spaceused (Transact-SQL) | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "08/11/2017"
+ms.date: "08/14/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -41,6 +41,9 @@ sp_spaceused [[ @objname = ] 'objname' ]
 ```  
   
 ## Arguments  
+
+For [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)], `sp_spacedused` must specify named parameters (for example `sp_spacedused (@objname= N'Table1');` rather than relying upon the ordinal position of parameters. 
+
  [ **@objname=**] **'***objname***'** 
    
  Is the qualified or nonqualified name of the table, indexed view, or queue for which space usage information is requested. Quotation marks are required only if a qualified object name is specified. If a fully qualified object name (including a database name) is provided, the database name must be the name of the current database.  
@@ -75,8 +78,8 @@ If *objname* is not specified, results are returned for the whole database.
   
  *oneresultset* is **bit**, with a default of **0**.  
 
-[ **@include_total_xtp_storage**] **'***include_total_xtp_storage***'** 
- Applies to: [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], [!INCLUDE[sssds-md](../../includes/sssds-md.md)].  
+[ **@include_total_xtp_storage**] **'***include_total_xtp_storage***'**  
+**Applies to:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], [!INCLUDE[sssds-md](../../includes/sssds-md.md)].  
   
  When @oneresultset=1, the parameter @include_total_xtp_storage determines whether the single resultset includes columns for MEMORY_OPTIMIZED_DATA storage. The default value is 0, that is, by default (if the parameter is omitted) the XTP columns are not included in the resultset.  
 

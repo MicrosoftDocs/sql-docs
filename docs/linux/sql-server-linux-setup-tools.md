@@ -194,8 +194,9 @@ To install the tools for Mac El Capitan and Sierra, use the following commands:
 #brew untap microsoft/mssql-preview if you installed the preview version 
 brew tap microsoft/mssql-release https://github.com/Microsoft/homebrew-mssql-release
 brew update
-brew install mssql-tools
-#for silent install ACCEPT_EULA=y brew install mssql-tools
+brew install --no-sandbox mssql-tools
+#for silent install: 
+#ACCEPT_EULA=y brew install --no-sandbox mssql-tools
 ```
 
 ## <a id="docker"></a> Docker

@@ -2,7 +2,7 @@
 title: "Adaptive query processing in Microsoft SQL databases | Microsoft Docs | Microsoft Docs"
 description: "Adaptive query processing features to improve query performance in SQL Server (2017 and later), and Azure SQL Database."
 ms.custom: 
-ms.date: "07/19/2017"
+ms.date: "08/02/2017"
 ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
@@ -95,10 +95,10 @@ The query returns 336 rows.  Enabling Live Query Statistics we see the followin
 ![Query result 336 rows](./media/4_AQPStats336Rows.png)
 
 In the plan, we see the following:
-- We have a columnstore index scan used to provide rows for the hash join build phase.
-- We have the new adaptive join operator. This operator defines a threshold that is used to decide when to switch to a nested loop plan.  For our example, the threshold is 78 rows.  Anything with &gt;= 78 rows will use a hash join.  If less than the threshold, a nested loop join will be used.
-- Since we return 336 rows, we are exceeding the threshold and so the second branch represents the probe phase of a standard hash join operation. Notice that Live Query Statistics shows rows flowing through the operators – in this case “672 of 672”.
-- And the last branch is our Clustered Index Seek for use by the nested loop join had the threshold not been exceeded. Notice that we see “0 of 336” rows displayed (the branch is unused).
+1. We have a columnstore index scan used to provide rows for the hash join build phase.
+1. We have the new adaptive join operator. This operator defines a threshold that is used to decide when to switch to a nested loop plan.  For our example, the threshold is 78 rows.  Anything with &gt;= 78 rows will use a hash join.  If less than the threshold, a nested loop join will be used.
+1. Since we return 336 rows, we are exceeding the threshold and so the second branch represents the probe phase of a standard hash join operation. Notice that Live Query Statistics shows rows flowing through the operators – in this case “672 of 672”.
+1. And the last branch is our Clustered Index Seek for use by the nested loop join had the threshold not been exceeded. Notice that we see “0 of 336” rows displayed (the branch is unused).
  Now let’s contrast the plan with the same query, but this time for a Quantity value that only has one row in the table:
  
 ```sql
@@ -160,7 +160,7 @@ The following chart shows an example intersection between the cost of a hash joi
 Interleaved execution changes the unidirectional boundary between the optimization and execution phases for a single-query execution and enables plans to adapt based on the revised cardinality estimates. During optimization if we encounter a candidate for interleaved execution, which is currently **multi-statement table valued functions (MSTVFs)**, we will pause optimization, execute the applicable subtree, capture accurate cardinality estimates, and then resume optimization for downstream operations.
 MSTVFs have a fixed cardinality guess of “100” in SQL Server 2014 and SQL Server 2016, and “1” for earlier versions. Interleaved execution helps workload performance issues that are due to these fixed cardinality estimates associated with multi-statement table valued functions.
 
-The following image depicts a live query statistis ouput, a subset of an overall execution plan that shows the impact of fixed cardinality estimates from MSTVFs. You can see the actual row flow vs. estimated rows. There are three noteworhy areas of the plan (flow is from right to left):
+The following image depicts a live query statistics ouput, a subset of an overall execution plan that shows the impact of fixed cardinality estimates from MSTVFs. You can see the actual row flow vs. estimated rows. There are three noteworthy areas of the plan (flow is from right to left):
 1. The MSTVF Table Scan has a fixed estimate of 100 rows. For this example, however, there are *527,597* rows flowing through this MSTVF Table Scan as seen in Live Query Statistics via the “527597 of 100” actual of estimated – so the fixed estimate is significantly skewed.
 1. For the Nested Loops operation, only 100 rows are assumed to be returned by the outer side of the join. Given the high number of rows actually being returned by the MSTVF, you are likely better off with a different join algorithm altogether.
 1. For the Hash Match operation, notice the small warning symbol, which in this case is indicating a spill to disk.

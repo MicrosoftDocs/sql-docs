@@ -1,7 +1,7 @@
 ---
 title: "Database Console Commands | Microsoft Docs"
 ms.custom: ""
-ms.date: "7/16/2017"
+ms.date: "07/16/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""

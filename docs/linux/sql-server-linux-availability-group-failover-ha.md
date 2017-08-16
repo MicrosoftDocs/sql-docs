@@ -182,9 +182,6 @@ Before you upgrade an availability group, review the best practices at [Upgradin
 
 The following sections explain how to perform a rolling upgrade with SQL Server instances on Linux with availability groups. 
 
->[!WARNING]
->On Linux, rolling upgrade to SQL Server 2017 RC1 is not supported. After you upgrade the secondary replica, it will disconnect from the primary replica until the primary replica is upgraded. Microsoft is planning to resolve this for a future release. 
-
 ### Upgrade steps on Linux
 
 When availability group replicas are on instances of SQL Server in Linux, the cluster type of the availability group is either `EXTERNAL` or `NONE`. An availability group that is managed by a cluster manager besides Windows Server Failover Cluster (WSFC) is `EXTERNAL`. Pacemaker with Corosync is an example of an external cluster manager. An availability group with no cluster manager has cluster type `NONE` The upgrade steps outlined here are specific for availability groups of cluster type `EXTERNAL` or `NONE`.

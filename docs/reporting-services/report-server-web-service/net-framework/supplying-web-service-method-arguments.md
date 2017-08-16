@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "XML Web service [Reporting Services], methods"
 ms.assetid: f7b9ca05-fc4c-4b30-8e5d-172dd0f4a832
 caps.latest.revision: 38
-author: "sabotta"
+author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
 ---

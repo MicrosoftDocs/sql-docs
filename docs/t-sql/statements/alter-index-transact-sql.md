@@ -1,7 +1,7 @@
 ---
 title: "ALTER INDEX (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/10/2017"
+ms.date: "08/07/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -715,7 +715,7 @@ ONLINE INDEX REBUILD is specified as resumable using the RESUMABLE=ON option.
 -  Please note two different MAX_DURATION options. One is related to low_priority_lock_wait and the other is related to RESUMABLE=ON option.
    -  MAX_DURATION option is supported for RESUMABLE=ON option or the **low_priority_lock_wait** argument option. 
    MAX_DURATION for RESUMABLE option specifies the time interval for an index being rebuild. Once this time is used the index rebuild is either paused or it completes its execution. User decides when a rebuild for a paused index can be resumed. The **time** in minutes for MAX_DURATION must be greater than 0 minutes and less or equal one week (7 x 24 x 60= 10080 minutes). Having a long pause for an index operation may impact the DML performance on a specific table as well as the database disk capacity since both indexes the original one and the newly created one require disk space and need to be updated during DML operations. If MAX_DURATION option is omitted, the index operation will continue until its completion or until a failure occurs. 
-   - 	The <low_priority_lock_wait> argument option allows you to decide how the index operation can proceed when blocked on the SCH-M lock.
+- 	The \<low_priority_lock_wait> argument option allows you to decide how the index operation can proceed when blocked on the SCH-M lock.
  
 -  Re-executing the original ALTER INDEX REBUILD statement with the same parameters resumes a paused index rebuild operation. You can also resume a paused index rebuild operation by executing the ALTER INDEX RESUME statement.
 -  The SORT_IN_TEMPDB=ON option is not supported for resumable index 

@@ -1,7 +1,7 @@
 ---
 title: "Step 2: Create a SQL database for ADO.NET development | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/30/2017"
+ms.date: "08/08/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -16,12 +16,11 @@ ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Step 2: Create a SQL database for ADO.NET development
-[!INCLUDE[Driver_ADODotNet_Download](../../includes/driver_adodotnet_download.md)]
 
 [!INCLUDE[CreateDatabase](../../includes/createdatabase.md)]
 
 ## Sequential articles
 
-- Previous:&nbsp;&nbsp;&nbsp;[Step 1: Configure development environment for ADO.NET development](../../connect/ado-net/step-1-configure-development-environment-for-ado-net-development.md)
+- Previous:&nbsp;&nbsp;&nbsp;[Step 1: Configure development environment for ADO.NET development](step-1-configure-development-environment-for-ado-net-development.md)
 
-- Next:&nbsp;&nbsp;&nbsp;[Step 3: Proof of concept connecting to SQL using ADO.NET](../../connect/ado-net/step-3-proof-of-concept-connecting-to-sql-using-ado-net.md)  
+- Next:&nbsp;&nbsp;&nbsp;[Step 3: Proof of concept connecting to SQL using ADO.NET](step-3-proof-of-concept-connecting-to-sql-using-ado-net.md)  

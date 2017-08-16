@@ -1,7 +1,7 @@
 ---
 title: "What's new in SQL Server 2017 | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/25/2017"
+ms.date: "07/31/2017"
 ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
@@ -20,20 +20,10 @@ SQL Server 2017 represents a major step towards making SQL Server a platform tha
 
 **Try it out:** [Download the SQL Server 2017 Release Candidate (RC)](http://go.microsoft.com/fwlink/?LinkID=829477)
 
->[!TIP]
->**Run SQL Server on Linux!** For more information, see [SQL Server on Linux Documentation](https://docs.microsoft.com/sql/linux/) and [What's new for SQL Server 2017 on Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-whats-new).
+>**Run SQL Server on Linux!** For more information, see [SQL Server on Linux Documentation](https://docs.microsoft.com/sql/linux/).
 
-## Latest release: SQL Server 2017 Release Candidate (RC1, July 2017)
-
-### SQL Server Database Engine    
-- CLR assemblies can now be added to a whitelist, as a workaround for the `clr strict security` feature described in CTP 2.0. [sp_add_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md), [sp_drop_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md), and [sys.trusted_asssemblies](../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md) are added to support the white list of trusted assemblies.  
-
-### SQL Server Integration Services (SSIS)
-- The new **Scale Out** feature in SSIS has the following new and changed features in RC1. For more info, see [What's New in Integration Services in SQL Server 2017](~/integration-services/what-s-new-in-integration-services-in-sql-server-2017.md).
-    -   Scale Out Master now supports high availability.
-    -   The failover handling of the execution logs from Scale Out Workers is improved.
-    -   The parameter *runincluster* of the stored procedure **[catalog].[create_execution]** is renamed to *runinscaleout* for consistency and readability.
-    -   The SSIS Catalog has a new global property to specify the default mode for executing SSIS packages.
+## Latest release: SQL Server 2017 Release Candidate (RC2, August 2017)
+This release contains bug fixes and performance improvements.
 
 ### Master Data Services (MDS)
 - The upgrade experience and performance has been improved, when upgrading to SQL Server 2017 Master Data Services from the following previous releases of SQL Server.
@@ -41,9 +31,9 @@ SQL Server 2017 represents a major step towards making SQL Server a platform tha
     - SQL Server 2014
     - SQL Server 2016
 
-
 ## SQL Server Database Engine  
 SQL Server 2017 includes many new Database Engine features, enhancements, and performance improvements. 
+- **CLR assemblies** can now be added to a whitelist, as a workaround for the `clr strict security` feature described in CTP 2.0. [sp_add_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md), [sp_drop_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md), and [sys.trusted_asssemblies](../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md) are added to support the white list of trusted assemblies (RC1).  
 - **Resumable online index rebuild** resumes an online index rebuild operation from where it stopped after a failure (such as a failover to a replica or insufficient disk space), or pauses and later resumes an online index rebuild operation. See [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md) and [Guidelines for online index operations](../relational-databases/indexes/guidelines-for-online-index-operations.md). (CTP 2.0)
 - The **IDENTITY_CACHE** option for ALTER DATABASE SCOPED CONFIGURATION allows you to avoid gaps in the values of identity columns if a server restarts unexpectedly or fails over to a secondary server. See [ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md). (CTP 2.0)
 - **Automatic database tuning** provides insight into potential query performance problems, recommends solutions, and can automatically fix identified problems. See [Automatic tuning](../relational-databases/automatic-tuning/automatic-tuning.md). (CTP 2.0)
@@ -113,12 +103,27 @@ As of CTP 2.1, SSRS is no longer available to install through SQL Server setup. 
 For more information, see [What's new in SQL Server Reporting Services (SSRS)](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md).
 
 ## SQL Server Machine Learning Services
-SQL Server R Services is now renamed **SQL Server Machine Learning Services**, to reflect new support for Python in addition to R languages. You can use Machine Learning Services (In-Database) to run R or Python scripts in SQL Server, or install Microsoft Machine Learning Server (Standalone) to deploy and consume R and Python models that don't require SQL Server. Both platforms include new MicrosoftML algorithms for distributed machine learning, and the latest version of Microsoft R (version 9.1.0). (CTP 2.0)
-- Machine learning with Python includes the **revoscalepy** module, which supports a subset of the distributed algorithms and compute contexts provided in RevoScaleR. 
-- You can easily create multiple models in parallel from R by using the new **rxExecBy** function. Supported compute contexts include RxSpark and RxInSQLServer. (CTP 2.0)
+SQL Server R Services has been renamed **SQL Server Machine Learning Services**, to reflect support for Python in addition to the R language. You can use Machine Learning Services (In-Database) to run R or Python scripts in SQL Server. Or install **Microsoft Machine Learning Server (Standalone)** to deploy and consume R and Python models that don't require SQL Server. 
+
+SQL Server developers now have access to the extensive Python ML and AI libraries available in the open source ecosystem along with the latest innovations from Microsoft: 
+
++ **revoscalepy** - This Pythonic version of RevoScaleR includes parallel algorithms for linear and logistic regressions, decision tree, boosted trees and random forests, as well as a rich set of APIs for data transformation and data movement, remote compute contexts, and data sources.
+
++ **microsoftml** - This state-of-the-art package of machine learning algorithms and transforms with Python bindings includes deep neural networks, fast decision trees and decision forests, highlyand  optimized algorithms for linear and logistic regressions. You also get pre-trained models based on ResNet models that you can use for image extraction or sentiment analysis.
+
++ **Python operationalization with T-SQL** - Deploy Python code easily by using the stored procedure `sp_execute_external_script`. Get great performance by streaming data from SQL to Python processes and using MPI ring parallelization.
+
++ **Python in SQL Server compute contexts** - Data scientists and developers can execute Python code remotely from their development environments to explore data and develop models without moving data around.
 
 For more information, see [What's new in SQL Server Machine Learning Services](~/advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md).
 
+##  ![info_tip](../sql-server/media/info-tip.png) Engage with the SQL Server engineering team 
+- [Stack Overflow (tag sql-server) - ask technical questions](http://stackoverflow.com/questions/tagged/sql-server)
+- [MSDN Forums - ask technical questions](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)
+- [Microsoft Connect - report bugs and request features](https://connect.microsoft.com/SQLServer/Feedback)
+- [Reddit - general discussion about SQL Server](https://www.reddit.com/r/SQLServer/)
+
 ## Next steps
 - See the [SQL Server 2017 Release Notes](sql-server-2017-release-notes.md).
+- Find out [What's new for SQL Server 2017 on Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-whats-new).
 - Find out [What's new in SQL Server 2016](what-s-new-in-sql-server-2016.md).

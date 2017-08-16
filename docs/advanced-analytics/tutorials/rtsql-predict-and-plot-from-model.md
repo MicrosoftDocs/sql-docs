@@ -1,7 +1,7 @@
 ---
 title: "Predict and plot from model (R in SQL quickstart) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/26/2017"
+ms.date: "07/31/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -51,7 +51,7 @@ To get predictions based on one specific model, you must write a SQL script that
 In this example, because your model is based on the **rxLinMod** algorithm provided as part of the **RevoScaleR** package, you should call the `rxPredict` function, rather than the generic R `predict` function.
 
 ```sql
-DECLARE @speedmodel varbinary(max) = (SELECT model FROM [dbo].[stopping_distance_models] WHERE model_name = 'default model');
+DECLARE @speedmodel varbinary(max) = (SELECT model FROM [dbo].[stopping_distance_models] WHERE model_name = 'latest model');
 EXEC sp_execute_external_script
     @language = N'R'
     , @script = N'
@@ -69,7 +69,7 @@ WITH RESULT SETS (([new_speed] INT, [predicted_distance] INT))
 ```
 
 + Use a SELECT statement to get a single model from the table, and pass it as an input parameter.
-+  After retrieving the model from the table, call the `unserialize` function on the model. 
++  After retrieving the model from the table, call the `unserialize` function on the model.
 
     > [!TIP] 
     > Also check out the new [serialization functions](https://docs.microsoft.com/=r-server/r-reference/revoscaler/rxserializemodel) provided by RevoScaleR, which support [realtime scoring](../../advanced-analytics/real-time-scoring.md).

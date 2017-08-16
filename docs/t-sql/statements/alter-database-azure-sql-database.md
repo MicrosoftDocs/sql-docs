@@ -191,7 +191,7 @@ COMPATIBILITY_LEVEL = { 130 | 120 | 110 | 100 }
  MODIFY (MAXSIZE **=** [100 MB | 500 MB | 1 | 1024…4096] GB)  
  Specifies the maximum size of the database. The maximum size must comply with the valid set of values for the EDITION property of the database. Changing the maximum size of the database may cause the database EDITION to be changed. Following table lists the supported MAXSIZE values and the defaults (D) for the [!INCLUDE[ssSDS](../../includes/sssds-md.md)] service tiers.  
   
-|**MAXSIZE**|**Basic**|**S0-S2**|**S3**|**P1-P6 and PRS1-PRS6**| **P11-P15** 
+|**MAXSIZE**|**Basic**|**S0-S2**|**S3-S12**|**P1-P6 and PRS1-PRS6**| **P11-P15** 
 |-----------------|---------------|------------------|-----------------|-----------------|-----------------|-----------------|  
 |100 MB|√|√|√|√|√|  
 |250 MB|√|√|√|√|√|  
@@ -226,7 +226,7 @@ COMPATIBILITY_LEVEL = { 130 | 120 | 110 | 100 }
   
 -   If neither MAXSIZE nor EDITION is specified, the EDITION is set to Standard (S0), and MAXSIZE is set to 250 GB.  
   
- MODIFY SERVICE_OBJECTIVE {  'S0' | 'S1' | 'S2' | 'S3' | 'P1' | 'P2' | 'P3' | 'P4'| 'P6' | 'P11' | 'P15' | 'PRS1' | 'PRS2' | 'PRS4' | 'PRS6' |  
+ MODIFY SERVICE_OBJECTIVE {  'S0' | 'S1' | 'S2' | 'S3' | 'S4'| 'S6'| 'S7'| 'S9'| 'S12' | 'P1' | 'P2' | 'P3' | 'P4'| 'P6' | 'P11' | 'P15' | 'PRS1' | 'PRS2' | 'PRS4' | 'PRS6' |  
  Specifies the performance level. For service objective descriptions and more information about the size, editions, and the service objectives combinations, see [Azure SQL Database Service Tiers and Performance Levels](http://msdn.microsoft.com/library/azure/dn741336.aspx). If the specified SERVICE_OBJECTIVE is not supported by the EDITION, you receive an error. To change the SERVICE_OBJECTIVE value from one tier to another (for example from S1 to P1), you must also change the EDITION value.  
   
 ELASTIC_POOL (name = \<elastic_pool_name>)
@@ -238,7 +238,7 @@ ELASTIC_POOL (name = \<elastic_pool_name>)
  WITH ALLOW_CONNECTIONS { ALL | **NO** }  
  When ALLOW_CONNECTIONS is not specified, it is set to NO by default. If it is set ALL, it will be a read-only database that will allow all logins with the appropriate permissions to connect.  
   
- WITH SERVICE_OBJECTIVE {  'S0' | 'S1' | 'S2' | 'S3' | 'P1' | 'P2' | 'P3' | 'P4'| 'P6' | 'P11' | 'P15' | 'PRS1' | 'PRS2' | 'PRS4' | 'PRS6' }  
+ WITH SERVICE_OBJECTIVE {  'S0' | 'S1' | 'S2' | 'S3' | 'S4'| 'S6'| 'S7'| 'S9'| 'S12' | 'P1' | 'P2' | 'P3' | 'P4'| 'P6' | 'P11' | 'P15' | 'PRS1' | 'PRS2' | 'PRS4' | 'PRS6' }  
  When SERVICE_OBJECTIVE is not specified, the secondary database will be created at the same service level as the primary database. When SERVICE_OBJECTIVE is  specified, the secondary database will be created at the specified level. This option supports creating geo-replicated secondaries with less expensive service levels. The SERVICE_OBJECTIVE specified must be within the same edition as the source, e.g. you cannot specify S0 if the edition is premium.  
   
  ELASTIC_POOL ( name = \<elastic_pool_name>)  

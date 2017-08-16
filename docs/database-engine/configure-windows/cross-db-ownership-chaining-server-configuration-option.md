@@ -1,7 +1,7 @@
 ---
 title: "cross db ownership chaining Server Configuration Option | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/02/2017"
+ms.date: "08/15/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -33,7 +33,13 @@ manager: "jhubbard"
 -   You can set cross-database ownership chaining for individual databases using the SET clause of the ALTER DATABASE statement. If you are creating a new database, you can set the cross-database ownership chaining option for the new database using the CREATE DATABASE statement.  
   
      Setting **cross db ownership chaining** to 1 is not recommended unless all of the databases hosted by the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] must participate in cross-database ownership chaining and you are aware of the security implications of this setting.  
-  
+
+To determine the current status of cross-database ownership chaining, execute the following query:  
+```sql
+SELECT is_db_chaining_on, name FROM sys.databases;
+```  
+A result of 1 indicates that cross-database ownership chaining is enabled.
+
 ## Controlling Cross-Database Ownership Chaining  
  Before turning cross-database ownership chaining on or off, consider the following:  
   

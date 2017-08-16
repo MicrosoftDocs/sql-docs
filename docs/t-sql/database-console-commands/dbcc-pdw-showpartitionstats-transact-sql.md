@@ -1,7 +1,7 @@
 ---
 title: "DBCC PDW_SHOWPARTITIONSTATS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "7/17/2017"
+ms.date: "07/17/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.service: "sql-data-warehouse"
@@ -12,7 +12,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
-ms.assetid: 0ec3620d-73a3-401d-b367-ab30f108d2ad
 caps.latest.revision: 10
 author: "barbkess"
 ms.author: "barbkess"

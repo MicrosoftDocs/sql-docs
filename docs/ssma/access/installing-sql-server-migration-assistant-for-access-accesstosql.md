@@ -2,7 +2,7 @@
 title: "Installing SQL Server Migration Assistant for Access (AccessToSQL) | Microsoft Docs"
 ms.prod: "sql-non-specified"
 ms.custom: ""
-ms.date: "08/14/2017"
+ms.date: "08/15/2017"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -32,7 +32,7 @@ ms.author: "carlasab"
 manager: "murato"
 ---
 # Installing SQL Server Migration Assistant for Access (AccessToSQL)
-[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) for Access is installed by using a Windows Installer-based wizard. This topic provides information about the installation prerequisites, a link to the latest version of SSMA, and instructions for installing, licensing, uninstalling, and upgrading SSMA.  
+[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) for Access is installed by using a Windows Installer-based wizard. This topic provides information about installation prerequisites, a link to the latest version of SSMA, and instructions for installing, licensing, uninstalling, and upgrading SSMA.  
   
 ## Prerequisites  
 Before you install SSMA, make sure that your system meets the following requirements:  
@@ -54,9 +54,12 @@ Before you install SSMA, make sure that your system meets the following requirem
 ## Installing SSMA  
 SSMA is a Web download. To download the latest version, see the [SQL Server Migration Assistant download page](http://aka.ms/ssmaforaccess).  
   
-After you download the latest version, you must extract the installation files from before you can install SSMA.  
+After you download the latest version, you must extract the installation files from before you can install SSMA.
+
+> [!IMPORTANT]  
+> -   Please uninstall all prior versions of SSMA for Access before installing the new version.  
   
-**To install the SSMA**  
+**To install SSMA**  
   
 1.  Double-click SSMA for Access *n*.msi, where *n* is the build number.  
   
@@ -64,14 +67,11 @@ After you download the latest version, you must extract the installation files f
   
     If you do not have the prerequisites installed, a message appears that indicates that you must first install required components. Make sure that you have installed all prerequisites, and then run the installation program again.  
   
-3.  Read the End-User License Agreement. If you agree, select **I accept the agreement**, and then click **Next**.  
+3.  Read the End-User License Agreement; if you agree, select **I accept the agreement**, and then click **Next**.  
   
 4.  On the Choose Setup Type page, click **Typical**.  
   
 5.  Click **Install**.  
-  
-> [!IMPORTANT]  
-> -   Please uninstall all prior versions of SSMA for Access before installing the new version.  
   
 The default installation location is C:\Program Files\Microsoft SQL Server Migration Assistant for Access.  
   
@@ -84,13 +84,13 @@ Uninstall SSMA by using **Add or Remove Programs** in Control Panel. Be aware th
   
 2.  Select **Microsoft SQL Server Migration Assistant for Access**, and then click **Remove**.  
   
-## Upgrading to a Later Version  
-If you want to upgrade to a later version of SSMA for Access, you must first uninstall SSMA for Access and then install the newer version. Follow the instructions earlier in this topic for uninstalling and installing.  
+## Upgrading to a later version  
+If you want to upgrade to a later version of SSMA for Access, you must first uninstall SSMA for Access and then install the newer version. Follow the instructions in the Uninstalling SSMA for Access section to complete this process.  
   
-If you open a project from an earlier version of SSMA for Access, SSMA asks if you want to convert the project to the newer version. Click **Yes** to work with the project in the newer version of SSMA.  
+If you open a project created in an earlier version of SSMA for Access, SSMA asks if you want to convert the project to the newer version. Click **Yes** to work with the project in the newer version of SSMA.  
   
-## See Also  
-[Preparing Access Databases for Migration](http://msdn.microsoft.com/en-us/9b80a9e0-08e7-4b4d-b5ec-cc998d3f5114)  
-[Migrating Access Databases to SQL Server](http://msdn.microsoft.com/en-us/76a3abcf-2998-4712-9490-fe8d872c89ca)  
-[Linking Access Applications to SQL Server](http://msdn.microsoft.com/en-us/82374ad2-7737-4164-a489-13261ba393d4)  
+## See also  
+[Preparing Access Databases for Migration](http://msdn.microsoft.com/9b80a9e0-08e7-4b4d-b5ec-cc998d3f5114)  
+[Migrating Access Databases to SQL Server](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
+[Linking Access Applications to SQL Server](http://msdn.microsoft.com/82374ad2-7737-4164-a489-13261ba393d4)  
   

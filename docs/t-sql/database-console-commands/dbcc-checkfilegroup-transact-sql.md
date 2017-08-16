@@ -2,7 +2,7 @@
 title: "DBCC CHECKFILEGROUP (Transact-SQL) | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "7/16/2017"
+ms.date: "07/16/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""

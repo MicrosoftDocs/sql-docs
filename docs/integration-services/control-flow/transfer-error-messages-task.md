@@ -11,6 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "sql13.dts.designer.transfererrormessagestask.f1"
+  - "sql13.dts.designer.transfererrormessagestask.general.f1"
+  - "sql13.dts.designer.transfererrormessagestask.errormessages.F1"
 helpviewer_keywords: 
   - "Transfer Error Messages task [Integration Services]"
 ms.assetid: da702289-035a-4d14-bd74-04461fbfee1b
@@ -61,11 +63,7 @@ manager: "jhubbard"
 ## Configuration of the Transfer Error Messages Task  
  You can set properties through [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer or programmatically.  
   
- For more information about the properties that you can set in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click one of the following topics:  
-  
--   [Transfer Error Messages Task Editor &#40;General Page&#41;](../../integration-services/control-flow/transfer-error-messages-task-editor-general-page.md)  
-  
--   [Transfer Error Messages Task Editor &#40;Messages Page&#41;](../../integration-services/control-flow/transfer-error-messages-task-editor-messages-page.md)  
+ For more information about the properties that you can set in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click the following topic:  
   
 -   [Expressions Page](../../integration-services/expressions/expressions-page.md)  
   
@@ -77,6 +75,54 @@ manager: "jhubbard"
  For more information about how to set these properties in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click the following topic:  
   
 -   [Set the Properties of a Task or Container](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+  
+## Transfer Error Messages Task Editor (General Page)
+  Use the **General** page of the **Transfer Error Messages Task Editor** dialog box to name and describe the Transfer Error Messages task. The Transfer Error Messages task transfers one or more [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] user-defined error messages between instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].   
+  
+### Options  
+ **Name**  
+ Type a unique name for the Transfer Error Messages task. This name is used as the label in the task icon.  
+  
+> [!NOTE]  
+>  Task names must be unique within a package.  
+  
+ **Description**  
+ Type a description of the Transfer Error Messages task.  
+  
+## Transfer Error Messages Task Editor (Messages Page)
+  Use the **Messages** page of the **Transfer Error Messages Task Editor** dialog box to specify properties for copying one or more [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] user-defined error messages from one instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to another. 
+  
+### Options  
+ **SourceConnection**  
+ Select a SMO connection manager in the list, or click **\<New connection...>** to create a new connection to the source server.  
+  
+ **DestinationConnection**  
+ Select a SMO connection manager in the list, or click **\<New connection...>** to create a new connection to the destination server.  
+  
+ **IfObjectExists**  
+ Select whether the task should overwrite existing user-defined error messages, skip existing messages, or fail if error messages of the same name already exist on the destination server.  
+  
+ **TransferAllErrorMessages**  
+ Select whether the task should copy all or only the specified user-defined messages from the source server to the destination server.  
+  
+ This property has the options listed in the following table:  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**True**|Copy all user-defined messages.|  
+|**False**|Copy only the specified user-defined messages.|  
+  
+ **ErrorMessagesList**  
+ Click the browse button **(…)** to select the error messages to copy.  
+  
+> [!NOTE]  
+>  You must specify the **SourceConnection** before you can select error messages to copy.  
+  
+ **ErrorMessageLanguagesList**  
+ Click the browse button **(…)** to select the languages for which to copy user-defined error messages to the destination server. A us_english (code page 1033) version of the message must exist on the destination server before you can transfer other language versions of the message to that server.  
+  
+> [!NOTE]  
+>  You must specify the **SourceConnection** before you can select error messages to copy.  
   
 ## See Also  
  [Integration Services Tasks](../../integration-services/control-flow/integration-services-tasks.md)   

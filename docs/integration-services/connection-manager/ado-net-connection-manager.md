@@ -9,6 +9,8 @@ ms.technology:
   - "integration-services"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
+f1_keywords: 
+  - "sql13.dts.designer.adonetconnection.f1"
 helpviewer_keywords: 
   - "connection managers [Integration Services], ADO.NET"
   - "ADO.NET connection manager [Integration Services]"
@@ -59,6 +61,24 @@ manager: "jhubbard"
 -   [Configure ADO.NET Connection Manager](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)  
   
  For information about configuring a connection manager programmatically, see <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> and [Adding Connections Programmatically](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md).  
+  
+## Configure ADO.NET Connection Manager
+  Use the **Configure ADO.NET Connection Manager** dialog box to add a connection to a data source that can be accessed by using a .NET Framework data provider, such as the SqlClient provider. The connection manager can use an existing connection, or you can create a new one.  
+  
+ To learn more about the ADO.NET connection manager, see [ADO.NET Connection Manager](../../integration-services/connection-manager/ado-net-connection-manager.md).  
+  
+### Options  
+ **Data connections**  
+ Select an existing ADO.NET data connection from the list.  
+  
+ **Data connection properties**  
+ View properties and values for the selected ADO.NET data connection.  
+  
+ **New**  
+ Create an ADO.NET data connection by using the **Connection Manager** dialog box.  
+  
+ **Delete**  
+ Select a connection, and then delete it by using the **Delete** button.  
   
 ## See Also  
  [Integration Services &#40;SSIS&#41; Connections](../../integration-services/connection-manager/integration-services-ssis-connections.md)  

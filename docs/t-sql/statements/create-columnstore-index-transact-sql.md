@@ -2,7 +2,7 @@
 title: "CREATE COLUMNSTORE INDEX (Transact-SQL) | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "07/13/2017"
+ms.date: "08/10/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -223,7 +223,7 @@ COLUMNSTORE_ARCHIVE
   
  For more information about compression, see [Data Compression](../../relational-databases/data-compression/data-compression.md).  
   
-WHERE <filter_expression> [ AND <filter_expression> ]  
+WHERE \<filter_expression> [ AND \<filter_expression> ]
    Applies to: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
   
    Called a filter predicate, this specifies which rows to include in the index. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] creates filtered statistics on the data rows in the filtered index.  
@@ -711,3 +711,4 @@ WITH ( DROP_EXISTING = ON);
 --Drop the clustered columnstore index. The table continues to be distributed, but changes to a heap.  
 DROP INDEX cci_xdimProduct ON xdimProduct;  
 ```  
+

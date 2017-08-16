@@ -1,7 +1,7 @@
 ---
 title: "RESTORE Arguments (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/17/2017"
+ms.date: "08/10/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -65,7 +65,7 @@ manager: "jhubbard"
   
  Is the database that the log or complete database is restored into. If supplied as a variable (**@***database_name_var*), this name can be specified either as a string constant (**@***database_name_var* = *database*_*name*) or as a variable of character string data type, except for the **ntext** or **text** data types.  
   
- <file_or_filegroup_or_page> [ **,**...*n* ]  
+ \<file_or_filegroup_or_page> [ **,**...*n* ] 
  **Supported by:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
   
  Specifies the name of a logical file or filegroup or page to include in a RESTORE DATABASE or RESTORE LOG statement. You can specify a list of files or filegroups.  
@@ -114,17 +114,17 @@ manager: "jhubbard"
  [ **,**...*n* ]  
  Is a placeholder indicating that multiple files and filegroups and pages can be specified in a comma-separated list. The number is unlimited.  
   
- FROM { <backup_device> [ **,**...*n* ]| <database_snapshot> }  
+ FROM { \<backup_device> [ **,**...*n* ]| \<database_snapshot> } 
  Typically, specifies the backup devices from which to restore the backup. Alternatively, in a RESTORE DATABASE statement, the FROM clause can specify the name of a database snapshot to which you are reverting the database, in which case, no WITH clause is permitted.  
   
  If the FROM clause is omitted, the restore of a backup does not take place. Instead, the database is recovered. This allows you to recover a database that has been restored with the NORECOVERY option or to switch over to a standby server. If the FROM clause is omitted, NORECOVERY, RECOVERY, or STANDBY must be specified in the WITH clause.  
   
- <backup_device> [ **,**...*n* ]  
+ \<backup_device> [ **,**...*n* ] 
  Specifies the logical or physical backup devices to use for the restore operation.  
   
  **Supported by:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md), [RESTORE REWINDONLY](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md), and [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
- <backup_device>::=  
+ \<backup_device>::= 
  Specifies a logical or physical backup device to use for the backup operation, as follows:  
   
  { *logical_backup_device_name* | **@***logical_backup_device_name_var* }  
@@ -151,7 +151,7 @@ manager: "jhubbard"
 > [!NOTE]  
 >  When you are restoring a backup from a mirrored media set, you can specify only a single mirror for each media family. In the presence of errors, however, having the other mirrors enables some restore problems to be resolved quickly. You can substitute a damaged media volume with the corresponding volume from another mirror. Be aware that for offline restores you can restore from fewer devices than media families, but each family is processed only once.  
   
- <database_snapshot>::=  
+ \<database_snapshot>::= 
  **Supported by:**  [RESTORE DATABASE](../../t-sql/statements/restore-statements-transact-sql.md)  
   
  DATABASE_SNAPSHOT **=***database_snapshot_name*  
@@ -248,9 +248,7 @@ manager: "jhubbard"
  CREDENTIAL  
  **Supported by:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md), and [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  Used only when restoring a backup from the Microsoft Azure Blob storage service.  
   
@@ -395,9 +393,7 @@ manager: "jhubbard"
  FILESTREAM ( DIRECTORY_NAME =*directory_name* )  
  **Supported by:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) and [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  A windows-compatible directory name. This name should be unique among all the database-level FILESTREAM directory names in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. Uniqueness comparison is done in a case-insensitive fashion, regardless of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] collation settings.  
   
@@ -637,3 +633,4 @@ manager: "jhubbard"
  [FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md)  
   
   
+

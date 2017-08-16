@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "rendering extensions [Reporting Services], removing"
 ms.assetid: 2abfebfb-065f-45cc-a904-c914394cf900
 caps.latest.revision: 38
-author: "sabotta"
-ms.author: "carlasab"
+author: "guyinacube"
+ms.author: "asaxton"
 manager: "erikre"
 ---
 # Removing a Rendering Extension

@@ -16,7 +16,7 @@ ms.assetid: aa86c2d1-458e-465f-abfa-75470137d054
 caps.latest.revision: 11
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ---
 # Remove Square Brackets from JSON - WITHOUT_ARRAY_WRAPPER Option
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

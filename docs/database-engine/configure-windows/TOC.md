@@ -1,6 +1,6 @@
+# [Configure Database Engine Instances](configure-database-engine-instances-sql-server.md)  
 # [Database Engine Instances (SQL Server)](database-engine-instances-sql-server.md)  
 ## [Log File Viewer](../../relational-databases/logs/log-file-viewer.md)
-# [Configure Database Engine Instances](configure-database-engine-instances-sql-server.md)  
 # [Server Configuration Options (SQL Server)](server-configuration-options-sql-server.md)  
 ## [access check cache Server Configuration Options](access-check-cache-server-configuration-options.md)  
 ## [ad hoc distributed queries Server Configuration Option](ad-hoc-distributed-queries-server-configuration-option.md)  

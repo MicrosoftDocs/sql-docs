@@ -1,7 +1,7 @@
 ---
 title: "DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "7/16/2017"
+ms.date: "07/16/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.service: "sql-data-warehouse"
@@ -12,7 +12,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
-ms.assetid: 21f215c4-2c98-43d0-b44a-c466abf0efac
 caps.latest.revision: 12
 author: "barbkess"
 ms.author: "barbkess"

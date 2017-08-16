@@ -6,23 +6,11 @@ description: This topic shows how to take a SQL Server database backup on Window
 author: MikeRayMSFT 
 ms.author: mikeray 
 manager: jhubbard
-ms.date: 08/15/2017
+ms.date: 08/16/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 9ac64d1a-9fe5-446e-93c3-d17b8f55a28f
-
-# optional metadata
-
-# keywords: ""
-# ROBOTS: ""
-# audience: ""
-# ms.devlang: ""
-# ms.reviewer: ""
-# ms.suite: ""
-# ms.tgt_pltfrm: ""
-# ms.custom: ""
-
 ---
 # Migrate a SQL Server database from Windows to Linux using backup and restore
 
@@ -41,15 +29,16 @@ The following prerequisites are required to complete this tutorial:
 
 * Windows machine with the following:
   * [SQL Server](https://www.microsoft.com/sql-server/sql-server-2016-editions) installed.
-  * [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms) installed.
+  * [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) installed.
   * Target database to migrate.
+
 * Linux machine with the following installed:
   * SQL Server 2017 RC2. See the installation quickstarts for [RHEL](quickstart-install-connect-red-hat.md), [SLES](quickstart-install-connect-suse.md), or [Ubuntu](quickstart-install-connect-ubuntu.md).
   * SQL Server 2017 RC2 [command-line tools](sql-server-linux-setup-tools.md).
 
 ## Create a backup on Windows
 
-There are several ways to create a backup file of a database on Windows. The following steps us SQL Server Management Studio (SSMS).
+There are several ways to create a backup file of a database on Windows. The following steps use SQL Server Management Studio (SSMS).
 
 1. Start **SQL Server Management Studio** on your Windows machine.
 
@@ -82,7 +71,7 @@ To restore the database, you must first transfer the backup file from the Window
 
 1. Install a Bash shell on your Windows machine that supports the **scp** (secure copy) and **ssh** (remote login) commands. Two examples include:
 
-   * The [Windows Subsystem for Linux](https://msdn.microsoft.com/en-us/commandline/wsl/about) (Windows 10)
+   * The [Windows Subsystem for Linux](https://msdn.microsoft.com/commandline/wsl/about) (Windows 10)
    * The Git Bash Shell ([https://git-scm.com/downloads](https://git-scm.com/downloads))
 
 1. Open a Bash session on Windows.

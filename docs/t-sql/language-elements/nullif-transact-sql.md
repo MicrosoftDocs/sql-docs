@@ -50,7 +50,7 @@ NULLIF ( expression , expression )
 ## Remarks  
  NULLIF is equivalent to a searched CASE expression in which the two expressions are equal and the resulting expression is NULL.  
   
- We recommend that you not use time-dependent functions, such as RAND(), within a NULLIF function. This could cause the function to be evaluted twice and to return different results from the two invocations.  
+ We recommend that you not use time-dependent functions, such as RAND(), within a NULLIF function. This could cause the function to be evaluated twice and to return different results from the two invocations.  
   
 ## Examples  
   

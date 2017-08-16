@@ -6,7 +6,7 @@ description: Install, update, and uninstall SQL Server on Linux. This topic cove
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 08/02/2017
+ms.date: 08/11/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -65,7 +65,7 @@ You can install SQL Server on Linux from the command-line. For instructions, see
 - [Install on Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
 - [Install on SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
 - [Install on Ubuntu](quickstart-install-connect-ubuntu.md)
-- [Run on Docker](quickstart-install-connect-ubuntu.md)
+- [Run on Docker](quickstart-install-connect-docker.md)
 
 ## <a id="upgrade"></a> Upgrade SQL Server
 

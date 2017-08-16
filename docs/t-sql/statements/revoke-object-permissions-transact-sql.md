@@ -1,7 +1,7 @@
 ---
 title: "REVOKE Object Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/10/2016"
+ms.date: "08/10/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -79,7 +79,7 @@ REVOKE [ GRANT OPTION FOR ] <permission> [ ,...n ] ON
  ON [ OBJECT :: ] [ *schema_name* ] . *object_name*  
  Specifies the object on which the permission is being revoked. The OBJECT phrase is optional if *schema_name* is specified. If the OBJECT phrase is used, the scope qualifier (::) is required. If *schema_name* is not specified, the default schema is used. If *schema_name* is specified, the schema scope qualifier (.) is required.  
   
- { FROM | TO } <database_principal>  
+ { FROM | TO } \<database_principal> 
  Specifies the principal from which the permission is being revoked.  
   
  GRANT OPTION  
@@ -94,7 +94,7 @@ REVOKE [ GRANT OPTION FOR ] <permission> [ ,...n ] ON
 > [!CAUTION]  
 >  A cascaded revocation of a permission granted WITH GRANT OPTION will revoke both GRANT and DENY of that permission.  
   
- AS <database_principal>  
+ AS \<database_principal> 
  Specifies a principal from which the principal executing this query derives its right to revoke the permission.  
   
  *Database_user*  
@@ -189,3 +189,4 @@ GO
  [sys.fn_my_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)  
   
   
+

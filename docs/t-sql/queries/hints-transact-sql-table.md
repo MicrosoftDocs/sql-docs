@@ -1,7 +1,7 @@
 ---
 title: "Table Hints (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/09/2017"
+ms.date: "08/11/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -338,9 +338,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
  Is equivalent to HOLDLOCK. Makes shared locks more restrictive by holding them until a transaction is completed, instead of releasing the shared lock as soon as the required table or data page is no longer needed, whether the transaction has been completed or not. The scan is performed with the same semantics as a transaction running at the SERIALIZABLE isolation level. For more information about isolation levels, see [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
   
  SNAPSHOT  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
   
  The memory-optimized table is accessed under SNAPSHOT isolation. SNAPSHOT can only be used with memory-optimized tables (not with disk-based tables). For more information, see [Introduction to Memory-Optimized Tables](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md).  
   
@@ -352,9 +350,7 @@ LEFT JOIN dbo.[Order History] AS oh
 ```  
   
  SPATIAL_WINDOW_MAX_CELLS = *integer*  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Specifies the maximum number of cells to use for tessellating a geometry or geography object. *number* is a value between 1 and 8192.  
   

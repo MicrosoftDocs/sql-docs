@@ -1,7 +1,7 @@
 ---
 title: "CREATE EXTERNAL DATA SOURCE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/05/2017"
+ms.date: "08/10/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -131,7 +131,7 @@ CREATE EXTERNAL DATA SOURCE data_source_name
  TYPE = [ HADOOP | SHARD_MAP_MANAGER | RDBMS | BLOB_STORAGE]  
  Specifies the data source type. Use HADOOP when the external data source is Hadoop or Azure Storage blob for Hadoop. Use SHARD_MAP_MANAGER when creating an external data source for Elastic Database query for sharding on Azure SQL Database. Use RDBMS with external data sources for cross-database queries with Elastic Database query on Azure SQL Database.  Use BLOB_STORAGE when performing bulk operations using [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) or [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) with [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 or later.
   
-LOCATION = <location_path>  
+LOCATION = \<location_path> 
 **HADOOP**    
 For HADOOP, specifies the Uniform Resource Indicator (URI) for a Hadoop cluster.  
 `LOCATION = 'hdfs:\/\/*NameNode\_URI*\[:*port*\]'`  
@@ -517,3 +517,4 @@ To see this example in use, see [BULK INSERT](../../t-sql/statements/bulk-insert
 [sys.external_data_sources (Transact-SQL)](../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md)  
   
   
+

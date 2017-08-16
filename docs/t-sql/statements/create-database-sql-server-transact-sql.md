@@ -1,7 +1,7 @@
 ---
 title: "CREATE DATABASE (SQL Server Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/26/2017"
+ms.date: "08/10/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -176,7 +176,7 @@ CREATE DATABASE database_snapshot_name
 >  Contained databases are collated differently than non-contained databases. Please see [Contained Database Collations](../../relational-databases/databases/contained-database-collations.md) for more information.  
   
  WITH \<option>  
- -   **<filestream_options>**  
+ -   **\<filestream_options>** 
   
      NON_TRANSACTED_ACCESS = { **OFF** | READ_ONLY | FULL }  
 **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
@@ -189,7 +189,7 @@ CREATE DATABASE database_snapshot_name
     |READONLY|FILESTREAM data in this database can be read by non-transactional processes.|  
     |FULL|Full non-transactional access to FILESTREAM FileTables is enabled.|  
   
-     DIRECTORY_NAME = <directory_name>  
+     DIRECTORY_NAME = \<directory_name> 
 **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
      A windows-compatible directory name. This name should be unique among all the Database_Directory names in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. Uniqueness comparison is case-insensitive, regardless of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] collation settings. This option should be set before creating a FileTable in this database.  
@@ -247,7 +247,7 @@ CREATE DATABASE database_snapshot_name
   
      To set this option, requires membership in the sysadmin fixed server role.  
   
- FOR ATTACH [ WITH < attach_database_option > ]  
+ FOR ATTACH [ WITH \< attach_database_option > ] 
  Specifies that the database is created by [attaching](../../relational-databases/databases/database-detach-and-attach-sql-server.md) an existing set of operating system files. There must be a \<filespec> entry that specifies the primary file. The only other \<filespec> entries required are those for any files that have a different path from when the database was first created or last attached. A \<filespec> entry must be specified for these files.  
   
  FOR ATTACH requires the following:  
@@ -269,9 +269,9 @@ CREATE DATABASE database_snapshot_name
   
  FOR ATTACH can specify the RESTRICTED_USER option. RESTRICTED_USER allows for only members of the db_owner fixed database role and dbcreator and sysadmin fixed server roles to connect to the database, but does not limit their number. Attempts by unqualified users are refused.  
   
- If the database uses [!INCLUDE[ssSB](../../includes/sssb-md.md)], use the WITH <service_broker_option> in your FOR ATTACH clause:  
+ If the database uses [!INCLUDE[ssSB](../../includes/sssb-md.md)], use the WITH \<service_broker_option> in your FOR ATTACH clause: 
   
- <service_broker_option>  
+ \<service_broker_option> 
  Controls [!INCLUDE[ssSB](../../includes/sssb-md.md)] message delivery and the [!INCLUDE[ssSB](../../includes/sssb-md.md)] identifier for the database. [!INCLUDE[ssSB](../../includes/sssb-md.md)] options can only be specified when the FOR ATTACH clause is used.  
   
  ENABLE_BROKER  
@@ -840,3 +840,4 @@ GO
  [Move Database Files](../../relational-databases/databases/move-database-files.md)   
  [Databases](../../relational-databases/databases/databases.md)   
  [Binary Large Object &#40;Blob&#41; Data &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)  
+

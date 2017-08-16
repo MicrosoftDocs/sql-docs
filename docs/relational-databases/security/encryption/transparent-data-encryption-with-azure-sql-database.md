@@ -5,7 +5,7 @@ ms.custom:
   - "MSDN content"
   - "MSDN - SQL DB"
 ms.date: "09/02/2016"
-ms.prod: "sql-server-2016"
+ms.prod: 
 ms.reviewer: ""
 ms.service: "sql-database"
 ms.suite: ""

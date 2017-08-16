@@ -125,7 +125,7 @@ Grant the availability group permission to create databases on the secondary rep
 >[!TIP]
 >When the availability group creates a database on a secondary replica, it sets the database owner as the account that ran the ALTER AVAILABILITY GROUP statement to grant permission to create any database. Most applications require the database owner on the secondary replica to be the same as on the primary replica.
 >
->To ensure that all databases are created with the same database owner as the primary replica, run the following command under the security context of the login that is database owner on the primary replica. 
+>To ensure that all databases are created with the same database owner as the primary replica, run the following command under the security context of the login that is database owner on the primary replica. Note that this login needs `ALTER AVAILABILITY GROUP` permission 
  
 After joining, issue the following statement:
 

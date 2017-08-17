@@ -2,7 +2,7 @@
 title: "What&#39;s New in SSMA for Access(AccessToSQL) | Microsoft Docs"
 ms.prod: "sql-non-specified"
 ms.custom: ""
-ms.date: "08/14/2017"
+ms.date: "08/16/2017"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +16,48 @@ ms.assetid: a24d3fc0-6911-4bfa-828a-197abf222e02
 caps.latest.revision: 37
 author: "sabotta"
 ms.author: "carlasab"
-manager: "murato"
+manager: "craigg"
 ---
 # What&#39;s New in SSMA for Access(AccessToSQL)
 This topic lists SSMA for Access changes in each release.  
+
+## SSMA v7.4
+The v7.4 release of SSMA for Access contains the following changes.
+- The **Query timeout** option is now available during schema object discovery at source and target.
+![query timeout option](../media/query-timeout.png)
+
+- The quality and conversion metric has been improved with targeted fixes, based on customer feedback.
+
+> [!IMPORTANT]
+> .Net 4.5.2 is a pre-requisite for installing SSMA v7.4. In addition, beginning with v7.4, the 32-bit version of SSMA is being discontinued.
+
+## SSMA v7.3
+The v7.3 release of SSMA for Access contains the following changes.
+- Improved quality and conversion metric with targeted fixes based on customer feedback.
+- SSMA extensibility framework exposed via the following items.
+  - Export functionality to a SQL Server Data Tools (SSDT) project.
+    -   You can now export schema scripts from SSMA to an SSDT project. You can use the schema scripts to make additional schema changes and deploy your database.
+![Save as SSDT project command](../media/export-schema-scripts.png)
+
+  - Libraries that can be consumed by SSMA for performing custom conversions.
+    - You can now construct code that can handle custom syntax conversions and conversions that weren't previously handled by SSMA.
+      - Instructions on how to construct a custom converter are available in this blog post, [Extending SQL Server Migration Assistant's conversion capabilities](https://blogs.msdn.microsoft.com/datamigration/2017/02/21/2185/).
+      - Sample project for conversion can be download this [blog post](https://blogs.msdn.microsoft.com/datamigration/ssmafororacleconversionsample/).
+
+## SSMA v7.2
+The v7.2 release of SSMA for Access contains the following changes.
+- Improved quality and conversion metric with targeted fixes based on customer feedback.
+- Telemetry enhancements to provide better data points to troubleshoot customer issues and improve SSMA’s conversion rates.
+
+## SSMA v7.1
+The v7.1 release of SSMA for Access contains the following changes.
+- SQL Server 2017 on Windows and Linux CTP1 is now a supported target platform for migration. This feature is in technical preview and will allow schema and data movement to target SQL servers.
+- SSMA now supports automatic updates to download the latest version of SSMA as soon as it is available.
+- SSMA installable binaries are now delivered through Windows installer package files (.msi).
+
+**Resources**
+
+[Extending SQL Server Migration Assistant's conversion capabilities](https://blogs.msdn.microsoft.com/datamigration/2017/02/21/2185/)
   
 ## May 2016  
 The May 2016  release of SSMA for Access contains  the following changes:  

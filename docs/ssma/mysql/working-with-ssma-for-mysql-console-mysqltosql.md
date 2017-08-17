@@ -2,7 +2,7 @@
 title: "Working with SSMA for MySQL Console (MySQLToSQL) | Microsoft Docs"
 ms.prod: "sql-non-specified"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "08/15/2017"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 

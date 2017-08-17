@@ -114,7 +114,7 @@ Because distributed availability groups support two completely different availab
 
 The ability to migrate is especially useful in scenarios where you're changing or upgrading the underlying OS while you keep the same SQL Server version. Although Windows Server 2016 does allow a rolling upgrade from Windows Server 2012 R2 on the same hardware, most users choose to deploy new hardware or virtual machines. 
 
-To complete the migration to the new configuration, at the end of the process, stop all data traffic to the original availability group, and change the distributed availability group to synchronous data movement. This action ensures that the primary replica of the second availability group is fully synchronized, so there would be no data loss. After you've verified the synchronization, fail over the distributed availability group to the second availability group in the [Fail over to a secondary availability group](https://msdn.microsoft.com/en-US/library/mt651673.aspx) section.
+To complete the migration to the new configuration, at the end of the process, stop all data traffic to the original availability group, and change the distributed availability group to synchronous data movement. This action ensures that the primary replica of the second availability group is fully synchronized, so there would be no data loss. After you've verified the synchronization, fail over the distributed availability group to the secondary availability group. For more information, see [Fail over to a secondary availability group](configure-distributed-availability-groups.md#failover-to-a-secondary-availability-group).
 
 Post-migration, where the second availability group is now the new primary availability group, you might need to do either of the following:
 

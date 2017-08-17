@@ -2,7 +2,7 @@
 title: "What&#39;s New in SSMA  for Oracle (OracleToSQL) | Microsoft Docs"
 ms.prod: "sql-non-specified"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "08/16/2017"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +13,58 @@ ms.assetid: f305ebb6-7393-4a43-abb3-6332b739d690
 caps.latest.revision: 24
 author: "sabotta"
 ms.author: "carlasab"
-manager: "v-thobro"
+manager: "craigg"
 ---
 # What&#39;s New in SSMA  for Oracle (OracleToSQL)
 This topic lists SSMA for Oracle changes in each release.  
+
+## SSMA v7.4
+The v7.4 release of SSMA for Oracle contains the following changes.
+
+- SSMA for Oracle now supports Azure SQL Data Warehouse as a target platform for migration.
+![New Project window](../media/new-project.png)
+  - Supports the Data Warehouse storage options as shown in the following image.
+![storage options for data warehouse](../media/storage-options.png)
+  - Supports the data distribution options as shown in the following image.
+![data distribution for data warehouse](../media/data-distribution.png)
+
+- The **Query timeout** option is now available during schema object discovery at source and target.
+![query timeout option](../media/query-timeout.png)
+
+- The quality and conversion metric has been improved with targeted fixes, based on customer feedback.
+
+> [!IMPORTANT]
+> .Net 4.5.2 is a pre-requisite for installing SSMA v7.4. In addition, beginning with v7.4, the 32-bit version of SSMA is being discontinued.
+
+## SSMA v7.3
+The v7.3 release of SSMA for Oracle contains the following changes.
+- Improved quality and conversion metric with targeted fixes based on customer feedback.
+- SSMA extensibility framework exposed via the following items.
+  - Export functionality to a SQL Server Data Tools (SSDT) project.
+    -   You can now export schema scripts from SSMA to an SSDT project. You can use the schema scripts to make additional schema changes and deploy your database.
+![Save as SSDT project command](../media/export-schema-scripts.png)
+  - Libraries that can be consumed by SSMA for performing custom conversions.
+    - You can now construct code that can handle custom syntax conversions and conversions that weren't previously handled by SSMA.
+      - Instructions on how to construct a custom converter are available in this blog post, [Extending SQL Server Migration Assistant's conversion capabilities](https://blogs.msdn.microsoft.com/datamigration/2017/02/21/2185/).
+      - Sample project for conversion can be download this [blog post](https://blogs.msdn.microsoft.com/datamigration/ssmafororacleconversionsample/).
+
+
+## SSMA v7.2
+The v7.2 release of SSMA for Oracle contains the following changes.
+- Improved quality and conversion metric with targeted fixes based on customer feedback.
+- Telemetry enhancements to provide better data points to troubleshoot customer issues and improve SSMA’s conversion rates.
+
+## SSMA v7.1
+The v7.1 release of SSMA for Access contains the following changes.
+- SQL Server 2017 on Windows and Linux CTP1 is now a supported target platform for migration. This feature is in technical preview and will allow schema and data movement to target SQL servers.
+- SSMA now supports automatic updates to download the latest version of SSMA as soon as it is available.
+- SSMA installable binaries are now delivered through Windows installer package files (.msi).
+
+**Resources**
+
+[Extending SQL Server Migration Assistant's conversion capabilities](https://blogs.msdn.microsoft.com/datamigration/2017/02/21/2185/)
+
+[Assess and migrate data from non Microsoft data platforms to SQL Server *(with Oracle example)*](https://blogs.msdn.microsoft.com/datamigration/2016/11/16/sql-server-migration-assistant-how-to-assess-and-migrate-databases-from-non-microsoft-data-platforms-to-sql-server/) 
 
 ## May 2016  
 The May 2016 release of SSMA for Oracle contains the following changes:  

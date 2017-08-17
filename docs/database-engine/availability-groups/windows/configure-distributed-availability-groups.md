@@ -202,7 +202,7 @@ GO
 ```  
 
   
-## Fail over to a secondary availability group  
+## <a name="failover"></a> Fail over to a secondary availability group  
 Only manual failover is supported at this time. The following Transact-SQL statement fails over the distributed availability group named `distributedag`:  
 
 

@@ -120,7 +120,7 @@ On an instance that becomes a secondary replica, once the instance is joined the
 
 >Local availability replica for availability group 'AGName' has not been granted permission to create databases, but has a `SEEDING_MODE` of `AUTOMATIC`. Use `ALTER AVAILABILITY GROUP … GRANT CREATE ANY DATABASE` to allow the creation of databases seeded by the primary availability replica.
 
-### Grant create database permission on secondary replica to availability group
+### <a name = "grantCreate"></a> Grant create database permission on secondary replica to availability group
 
 After joining, grant the availability group permission to create databases on the secondary replica instance of SQL Server. In order for automatic seeding to work, the availability group needs permission to create a database. 
 

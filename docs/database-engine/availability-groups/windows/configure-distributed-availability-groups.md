@@ -1,7 +1,7 @@
 ---
 title: "Configure distributed availability group (Always On Availability Group) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/12/2017"
+ms.date: "08/17/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

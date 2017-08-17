@@ -1,7 +1,7 @@
 ---
 title: "Distributed availability groups (SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/20/2017"
+ms.date: "08/17/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -169,6 +169,7 @@ As mentioned earlier, a distributed availability group is a SQL Server-only cons
 
 <!-- ![Two WSFC clusters with multiple availability groups through PowerShell Get-ClusterGroup command][7]  -->
 <a name="fig7"></a>
+
 ```
 PS C:\> Get-ClusterGroup -Cluster CLUSTER_A
 

@@ -2459,6 +2459,276 @@
             "source_path": "docs/integration-services/control-flow/xml-task-editor-general-page.md",
             "redirect_url": "/sql/integration-services/control-flow/xml-task",
             "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/ado-net-source-editor-connection-manager-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/ado-net-source",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/ado-net-source-editor-columns-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/ado-net-source",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/ado-net-source-editor-error-output-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/ado-net-source",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/cdc-source-editor-connection-manager-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/cdc-source",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/cdc-source-editor-columns-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/cdc-source",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/cdc-source-editor-error-output-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/cdc-source",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/excel-source-editor-connection-manager-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/excel-source",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/excel-source-editor-columns-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/excel-source",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/excel-source-editor-error-output-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/excel-source",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/flat-file-source-editor-connection-manager-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/flat-file-source",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/flat-file-source-editor-columns-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/flat-file-source",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/flat-file-source-editor-error-output-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/flat-file-source",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/odata-source-editor-connection-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/odata-source",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/odata-source-editor-columns-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/odata-source",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/odata-source-editor-error-output-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/odata-source",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/odbc-source-editor-connection-manager-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/odbc-source",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/odbc-source-editor-columns-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/odbc-source",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/odbc-source-editor-error-output-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/odbc-source",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/ole-db-source-editor-connection-manager-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/ole-db-source",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/ole-db-source-editor-columns-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/ole-db-source",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/ole-db-source-editor-error-output-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/ole-db-source",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/raw-file-source-editor-connection-manager-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/raw-file-source",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/raw-file-source-editor-columns-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/raw-file-source",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/xml-source-editor-connection-manager-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/xml-source",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/xml-source-editor-columns-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/xml-source",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/xml-source-editor-error-output-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/xml-source",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/ado-net-destination-editor-connection-manager-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/ado-net-destination",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/ado-net-destination-editor-mappings-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/ado-net-destination",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/ado-net-destination-editor-error-output-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/ado-net-destination",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/data-mining-model-training-editor-connection-tab.md",
+            "redirect_url": "/sql/integration-services/data-flow/data-mining-model-training-destination",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/data-mining-model-training-editor-columns-tab.md",
+            "redirect_url": "/sql/integration-services/data-flow/data-mining-model-training-destination",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/configure-data-streaming-destination.md",
+            "redirect_url": "/sql/integration-services/data-flow/data-streaming-destination",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/dimension-processing-destination-editor-connection-manager-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/dimension-processing-destination",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/dimension-processing-destination-editor-mappings-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/dimension-processing-destination",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/dimension-processing-destination-editor-advanced-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/dimension-processing-destination",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/excel-destination-editor-connection-manager-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/excel-destination",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/excel-destination-editor-mappings-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/excel-destination",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/excel-destination-editor-error-output-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/excel-destination",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/flat-file-destination-editor-connection-manager-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/flat-file-destination",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/flat-file-destination-editor-mappings-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/flat-file-destination",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/odbc-destination-editor-connection-manager-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/odbc-destination",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/odbc-destination-editor-mappings-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/odbc-destination",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/odbc-destination-editor-error-output-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/odbc-destination",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/ole-db-destination-editor-connection-manager-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/ole-db-destination",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/ole-db-destination-editor-mappings-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/ole-db-destination",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/ole-db-destination-editor-error-output-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/ole-db-destination",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/partition-processing-destination-editor-connection-manager-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/partition-processing-destination",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/partition-processing-destination-editor-mappings-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/partition-processing-destination",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/partition-processing-destination-editor-advanced-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/partition-processing-destination",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/raw-file-destination-editor-connection-manager-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/raw-file-destination",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/raw-file-destination-editor-columns-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/raw-file-destination",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/sql-destination-editor-connection-manager-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/sql-server-destination",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/sql-destination-editor-mappings-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/sql-server-destination",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/sql-destination-editor-advanced-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/sql-server-destination",
+            "redirect_document_id": false
           }
     ]
 }

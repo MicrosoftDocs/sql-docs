@@ -2591,7 +2591,7 @@
             "redirect_document_id": false
           },
        {
-            "source_path": "docs/integration-services/data-flow/ado-net-destination-editor-connection-manager-page.md
+            "source_path": "docs/integration-services/data-flow/ado-net-destination-editor-connection-manager-page.md",
             "redirect_url": "/sql/integration-services/data-flow/ado-net-destination",
             "redirect_document_id": false
           },

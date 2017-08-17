@@ -1,7 +1,7 @@
 ---
 title: "What's new in SQL Server 2017 | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/31/2017"
+ms.date: "08/07/2017"
 ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
@@ -16,22 +16,14 @@ ms.author: "craigg"
 manager: "jhubbard"
 ---
 # What's new in SQL Server 2017
-SQL Server 2017 represents a major step towards making SQL Server a platform that gives you choices of development languages, data types, on-premises or cloud, and operating systems by bringing the power of SQL Server to Linux, Linux-based Docker containers, and Windows. This topic summarizes what is new for specific feature areas in the most recent SQL Server 2017 Release Candidate (RC1, July 2017) and Community Technical Preview (CTP) releases.
+SQL Server 2017 represents a major step towards making SQL Server a platform that gives you choices of development languages, data types, on-premises or cloud, and operating systems by bringing the power of SQL Server to Linux, Linux-based Docker containers, and Windows. This topic summarizes what is new for specific feature areas in the most recent SQL Server 2017 Release Candidate (RC2, August 2017) and Community Technical Preview (CTP) releases.
 
-**Try it out:** [Download the SQL Server 2017 Release Candidate (RC)](http://go.microsoft.com/fwlink/?LinkID=829477)
+**Try it out:** [Download the latest SQL Server 2017 Release: RC2, August 2017](http://go.microsoft.com/fwlink/?LinkID=829477).
+This release contains bug fixes and performance improvements.
 
 >**Run SQL Server on Linux!** For more information, see [SQL Server on Linux Documentation](https://docs.microsoft.com/sql/linux/).
 
-## Latest release: SQL Server 2017 Release Candidate (RC2, August 2017)
-This release contains bug fixes and performance improvements.
-
-### Master Data Services (MDS)
-- The upgrade experience and performance has been improved, when upgrading to SQL Server 2017 Master Data Services from the following previous releases of SQL Server.
-    - SQL Server 2012
-    - SQL Server 2014
-    - SQL Server 2016
-
-## SQL Server Database Engine  
+## SQL Server 2017 Database Engine  
 SQL Server 2017 includes many new Database Engine features, enhancements, and performance improvements. 
 - **CLR assemblies** can now be added to a whitelist, as a workaround for the `clr strict security` feature described in CTP 2.0. [sp_add_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md), [sp_drop_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md), and [sys.trusted_asssemblies](../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md) are added to support the white list of trusted assemblies (RC1).  
 - **Resumable online index rebuild** resumes an online index rebuild operation from where it stopped after a failure (such as a failover to a replica or insufficient disk space), or pauses and later resumes an online index rebuild operation. See [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md) and [Guidelines for online index operations](../relational-databases/indexes/guidelines-for-online-index-operations.md). (CTP 2.0)
@@ -60,7 +52,7 @@ SQL Server 2017 includes many new Database Engine features, enhancements, and pe
 
 For more information, see [What's new in SQL Server 2017 Database Engine](~/database-engine/configure-windows/what-s-new-in-sql-server-2017-database-engine.md).
 
-## SQL Server Integration Services (SSIS)
+## SQL Server 2017 Integration Services (SSIS)
 - The new **Scale Out** feature in SSIS has the following new and changed features. For more info, see [What's New in Integration Services in SQL Server 2017](~/integration-services/what-s-new-in-integration-services-in-sql-server-2017.md). (RC1)
     -   Scale Out Master now supports high availability.
     -   The failover handling of the execution logs from Scale Out Workers is improved.
@@ -73,13 +65,13 @@ For more information, see [What's new in SQL Server 2017 Database Engine](~/data
 
 For more info, see [What's New in Integration Services in SQL Server 2017](~/integration-services/what-s-new-in-integration-services-in-sql-server-2017.md).
 
-## Master Data Services (MDS)
-In addition to improving the upgrade performance and experience for upgrading to SQL Server 2017 MDS, the following additional enhancements have been made to Master Data Services.
+## SQL Server 2017 Master Data Services (MDS)
+- Experience and performance are improved when upgrading from SQL Server 2012, SQL Server 2014, and SQL Server 2016 to SQL Server 2017 Master Data Services. 
 - You can now view the sorted lists of entities, collections and hierarchies in the **Explorer** page of the Web application.
-- Performance has been improved for staging millions of records using the staging stored procedure.
-- Performance has been improved when expanding the **Entities** folder on the **Manage Groups** page to assign model permissions. The **Manage Groups** page is located in the **Security** section of the Web application. For more information about the performance improvement, see [https://support.microsoft.com/help/4023865?preview](https://support.microsoft.com/help/4023865?preview). For more information about assigning permissions, see [Assign Model Object Permissions (Master Data Services)](../master-data-services/assign-model-object-permissions-master-data-services.md).
+- Performance is improved for staging millions of records using the staging stored procedure.
+- Performance is improved when expanding the **Entities** folder on the **Manage Groups** page to assign model permissions. The **Manage Groups** page is located in the **Security** section of the Web application. For more information about the performance improvement, see [https://support.microsoft.com/help/4023865?preview](https://support.microsoft.com/help/4023865?preview). For more information about assigning permissions, see [Assign Model Object Permissions (Master Data Services)](../master-data-services/assign-model-object-permissions-master-data-services.md).
 
-## SQL Server Analysis Services (SSAS) 
+## SQL Server 2017 Analysis Services (SSAS) 
 SQL Server Analysis Services 2017 introduces many enhancements for tabular models. These include:
 - Tabular mode as the default installation option for Analysis Services. (CTP 2.0)
 - Object-level security to secure the metadata of tabular models. (CTP 2.0)
@@ -95,25 +87,22 @@ SQL Server Analysis Services 2017 introduces many enhancements for tabular model
 
 For more information, see [What's new in SQL Server Analysis Services 2017](~/analysis-services/what-s-new-in-sql-server-analysis-services-2017.md).
 
-## SQL Server Reporting Services (SSRS)
+## SQL Server 2017 Reporting Services (SSRS)
 As of CTP 2.1, SSRS is no longer available to install through SQL Server setup. Go to the Microsoft Download Center to [download the Microsoft SQL Server 2017 Reporting Services Release Candidate](https://www.microsoft.com/download/details.aspx?id=55252). 
 - Comments are now available for reports, to add perspective and collaborate with others. You can also include attachments with comments. (CTP 2.1)
 - In the latest releases of Report Builder and SQL Server Data Tools, you can create native DAX queries against supported SQL Server Analysis Services tabular data models by dragging and dropping desired fields in the query designers. See the [Reporting Services blog](https://blogs.msdn.microsoft.com/sqlrsteamblog/2017/03/09/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools/).
 
 For more information, see [What's new in SQL Server Reporting Services (SSRS)](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md).
 
-## SQL Server Machine Learning Services
-SQL Server R Services has been renamed **SQL Server Machine Learning Services**, to reflect support for Python in addition to the R language. You can use Machine Learning Services (In-Database) to run R or Python scripts in SQL Server. Or install **Microsoft Machine Learning Server (Standalone)** to deploy and consume R and Python models that don't require SQL Server. 
+## SQL Server 2017 Machine Learning Services
+SQL Server R Services has been renamed **SQL Server Machine Learning Services**, to reflect support for Python in addition to the R language. You can use Machine Learning Services (In-Database) to run R or Python scripts in SQL Server, or install **Microsoft Machine Learning Server (Standalone)** to deploy and consume R and Python models that don't require SQL Server. 
 
-SQL Server developers now have access to the extensive Python ML and AI libraries available in the open source ecosystem along with the latest innovations from Microsoft: 
+SQL Server developers now have access to the extensive Python ML and AI libraries available in the open-source ecosystem, along with the latest innovations from Microsoft: 
 
-+ **revoscalepy** - This Pythonic version of RevoScaleR includes parallel algorithms for linear and logistic regressions, decision tree, boosted trees and random forests, as well as a rich set of APIs for data transformation and data movement, remote compute contexts, and data sources.
-
-+ **microsoftml** - This state-of-the-art package of machine learning algorithms and transforms with Python bindings includes deep neural networks, fast decision trees and decision forests, highlyand  optimized algorithms for linear and logistic regressions. You also get pre-trained models based on ResNet models that you can use for image extraction or sentiment analysis.
-
-+ **Python operationalization with T-SQL** - Deploy Python code easily by using the stored procedure `sp_execute_external_script`. Get great performance by streaming data from SQL to Python processes and using MPI ring parallelization.
-
-+ **Python in SQL Server compute contexts** - Data scientists and developers can execute Python code remotely from their development environments to explore data and develop models without moving data around.
+- **revoscalepy** - This Pythonic version of RevoScaleR includes parallel algorithms for linear and logistic regressions, decision tree, boosted trees and random forests, as well as a rich set of APIs for data transformation and data movement, remote compute contexts, and data sources.
+- **microsoftml** - This state-of-the-art package of machine learning algorithms and transforms with Python bindings includes deep neural networks, fast decision trees and decision forests, and optimized algorithms for linear and logistic regressions. You also get pre-trained models based on ResNet models that you can use for image extraction or sentiment analysis.
+- **Python operationalization with T-SQL** - Deploy Python code easily by using the stored procedure `sp_execute_external_script`. Get great performance by streaming data from SQL to Python processes and using MPI ring parallelization.
+- **Python in SQL Server compute contexts** - Data scientists and developers can execute Python code remotely from their development environments to explore data and develop models without moving data around.
 
 For more information, see [What's new in SQL Server Machine Learning Services](~/advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md).
 

@@ -27,7 +27,7 @@ manager: "jhubbard"
 
 Uploads R packages to a database from the specified byte stream, file path, or blob store url.
 
-This statement serves as a generic mechanism for the database administrator to upload artifacts needed for any new external language runtimes (R, Python, Java, etc.) and OS platforms supported by SQL Server. Currently only the R language and Windows platform are supported.
+This statement serves as a generic mechanism for the database administrator to upload artifacts needed for any new external language runtimes (R, Python, Java, etc.) and OS platforms supported by [!INCLUDE[ssnoversion](../../includes/ssnoversion.md)]. Currently only the R language and Windows platform are supported.
 
 ## Syntax
 
@@ -59,7 +59,7 @@ WITH ( LANGUAGE = 'R' )
 
 Libraries are added to the database scoped to the user. That is, library names are considered unique within the context of a specific user or owner.
 
-For example, two users **RUser1** and **RUser2** can both individually and separately upload the R library ggplot2. the zip file for this R package contains the Windows version binaries, and the .gz file contains the Linux version binaries. Both users could upload the Windows version, and then both users could also add the Linux platform version to their libraries by calling `ALTER EXTERNAL LIBRARY`.
+For example, two users **RUser1** and **RUser2** can both individually and separately upload the R library `ggplot2`. The zip file for this R package contains the Windows version binaries, and the .gz file contains the Linux version binaries. Both users could upload the Windows version, and then both users could also add the Linux platform version to their libraries by calling `ALTER EXTERNAL LIBRARY`.
 
 However, neither user could subsequently upload a Python library called "ggplot2". In short, library names must be unique per user. The library name need not be aligned with the source package name, and is purely for SQL management purposes.
 
@@ -73,7 +73,7 @@ When the user **RUser1** executes an R script, the value of `libPath` can contai
 
 **file_spec**
 
-Specifies the content of the package for a specific platform. Only one file artifact per platform will be supported. 
+Specifies the content of the package for a specific platform. Only one file artifact per platform is supported. 
 
 The file can be specified in the form of a local path, or network path.
 
@@ -81,7 +81,7 @@ Optionally, an OS platform for the file can be specified. Only one file artifact
 
 **PLATFORM = WINDOWS**
 
-Specifies the platform for the content of the library. The value will default automatically to the host platform on which SQL Server is running. Therefore, the user doesn’t have to specify the value. It is required in case where multiple platforms are supported, or the user needs to specify a different platform. Windows is the only supported platform.
+Specifies the platform for the content of the library. The value defaults to the host platform on which SQL Server is running. Therefore, the user doesn’t have to specify the value. It is required in case where multiple platforms are supported, or the user needs to specify a different platform. Windows is the only supported platform.
 
 ### Return values
 
@@ -90,11 +90,9 @@ An informational message is returned if the statement was successful.
 
 ## Remarks
 
-For the R language, packages must be prepared in the form of zipped archive files with the .ZIP extension for Windows.
+For the R language, packages must be prepared in the form of zipped archive files with the .ZIP extension for Windows. Currently, only the Windows platform is supported.  
 
-Currently, only the Windows platform is supported.  
-
-The `CREATE EXTERNAL LIBRARY` statement only uploads the library bits to the database. The library is not actually installed until a user runs an external script afterwards, by executing [sp_execute_external_script]../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).  
+The `CREATE EXTERNAL LIBRARY` statement only uploads the library bits to the database. The library is not actually installed until a user runs an external script afterwards, by executing [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).  
 
 ## Permissions  
 Requires the `CREATE EXTERNAL LIBRARY` permission.  
@@ -102,20 +100,22 @@ Requires the `CREATE EXTERNAL LIBRARY` permission.
 ## Examples
 
 ### A. Add an external library to a database  
-The folowing example adds an external library called customPackage to a database.   
+The following example adds an external library called customPackage to a database.   
 ```sql
 CREATE EXTERNAL LIBRARY customPackage 
-FROM (CONTENT = 'C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\customPackage.zip')
+FROM 
+    (CONTENT = 'C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\customPackage.zip')
 WITH (LANGUAGE = 'R');
 ```
 
 ### B. Add ggplot2 to a database
 
-The database administrator needs to install R packages on a specific database, and make them available to all users of the database. To install the packages, he must log into SQL Server using the database owner role and run the following statement to generate the package library:
+The database administrator needs to install R packages on a specific database, and make them available to all users of the database. To install the packages, the DBA must log in to [!INCLUDE[ssnoversion](../../includes/ssnoversion.md)] using the database owner role and run the following statement to generate the package library:
 
 ```sql
 CREATE EXTERNAL LIBRARY ggplot2 
-FROM (CONTENT = 'C:\Program Files\Microsoft SQL Server\MSSQL1314.MSSQLSERVER\ggplot2.zip') 
+FROM 
+    (CONTENT = 'C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\ggplot2.zip') 
 WITH (LANGUAGE = 'R'); 
 ```
 
@@ -134,7 +134,7 @@ DROP EXTERNAL LIBRARY ggplot2 <user_name>;
 ```
 
 > [!NOTE]
-> Unlike other `DROP` statements in SQL Server, this statement supports an optional parameter that specifies the user authority. This option allows users with ownership roles to delete libraries uploaded by regular users. 
+> Unlike other `DROP` statements in [!INCLUDE[ssnoversion](../../includes/ssnoversion.md)], this statement supports an optional parameter that specifies the user authority. This option allows users with ownership roles to delete libraries uploaded by regular users. 
 
 ## See also  
 [ALTER EXTERNAL LIBRARY (Transact-SQL)](alter-external-library-transact-sql.md)  

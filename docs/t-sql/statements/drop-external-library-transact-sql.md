@@ -1,7 +1,7 @@
 ---
 title: "DROP EXTERNAL LIBRARY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/18/2017"
+ms.date: "08/17/2017"
 ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
@@ -69,8 +69,8 @@ DROP EXTERNAL LIBRARY ggplot2 <user_name>;
 ```
 
 ## See also  
-[CREATE EXTERNAL DATA SOURCE (Transact-SQL)](create-external-data-source-transact-sql.md)  
-[ALTER EXTERNAL DATA SOURCE (Transact-SQL)](alter-external-data-source-transact-sql.md)  
+[CREATE EXTERNAL LIBRARY (Transact-SQL)](create-external-library-transact-sql.md)  
+[ALTER EXTERNAL LIBRARY (Transact-SQL)](alter-external-library-transact-sql.md)  
 [sys.external_library_files](../../relational-databases/system-catalog-views/sys-external-library-files-transact-sql.md)  
 [sys.external_libraries](../../relational-databases/system-catalog-views/sys-external-libraries-transact-sql.md)  
 

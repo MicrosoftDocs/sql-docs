@@ -25,7 +25,7 @@ manager: "jhubbard"
 # CREATE EXTERNAL LIBRARY (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]  
 
-Uploads R packages to a database from the specified byte stream, file path, or blob store url.
+Uploads R packages to a database from the specified byte stream or file path.
 
 This statement serves as a generic mechanism for the database administrator to upload artifacts needed for any new external language runtimes (R, Python, Java, etc.) and OS platforms supported by [!INCLUDE[ssnoversion](../../includes/ssnoversion.md)]. Currently only the R language and Windows platform are supported.
 

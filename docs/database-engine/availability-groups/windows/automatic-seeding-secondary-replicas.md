@@ -150,7 +150,7 @@ In addition to the [Dynamic Management Views](#dynamic-management-views) describ
 >[!NOTE]
 >If necessary set the owner of the database on the secondary replica. 
 >
->Before you change database owner, fail over to the new secondary replia.
+>You can only change the owner of a database in a primary replica because the database must be read/write. Before you change database owner, fail over to the new secondary replia.
 >
 >To set the owner of the database to a different login, update the following script - replace the values in angle brackets (\<\>) for your environment - and run the following command:
 > ```sql

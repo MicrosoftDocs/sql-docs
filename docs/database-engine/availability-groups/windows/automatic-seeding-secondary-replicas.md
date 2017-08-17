@@ -120,17 +120,19 @@ On an instance that becomes a secondary replica, once the instance is joined the
 
 >Local availability replica for availability group 'AGName' has not been granted permission to create databases, but has a `SEEDING_MODE` of `AUTOMATIC`. Use `ALTER AVAILABILITY GROUP … GRANT CREATE ANY DATABASE` to allow the creation of databases seeded by the primary availability replica.
 
-Grant the availability group permission to create databases on the secondary replica instance of SQL Server. In order for automatic seeding to work, the availability group needs permission to create a database. The following example grants this permission to an availability group called AGName.
+### Grant create database permission on secondary replica to availability group
+
+After joining, grant the availability group permission to create databases on the secondary replica instance of SQL Server. In order for automatic seeding to work, the availability group needs permission to create a database. 
 
 >[!TIP]
 >When the availability group creates a database on a secondary replica, it sets the database owner as the account that ran the ALTER AVAILABILITY GROUP statement to grant permission to create any database. Most applications require the database owner on the secondary replica to be the same as on the primary replica.
 >
->To ensure that all databases are created with the same database owner as the primary replica, run the following command under the security context of the login that is database owner on the primary replica. Note that this login needs `ALTER AVAILABILITY GROUP` permission 
+>To ensure that all databases are created with the same database owner as the primary replica, run the example command below under the security context of the login that is database owner on the primary replica. Note that this login needs `ALTER AVAILABILITY GROUP` permission 
  
-After joining, issue the following statement:
+The following example grants this permission to an availability group called AGName.
 
 ```sql
-ALTER AVAILABILITY GROUP [AGName] 
+ALTER AVAILABILITY GROUP [<AGName>] 
     GRANT CREATE ANY DATABASE
  GO
 ```

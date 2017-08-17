@@ -1,7 +1,7 @@
 ---
 title: "Deleting Backup Blob Files with Active Leases | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "08/17/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -15,31 +15,31 @@ author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
 ---
-# Deleting Backup Blob Files with Active Leases
-  When backing up to or restoring from Windows Azure storage, SQL Server acquires an infinite lease in order to lock exclusive access to the blob. When the backup or restore process is successfully completed, the lease is released. If a backup or restore fails, the backup process attempts to clean up any invalid blob. However, if the backup fails due to prolonged or sustained network connectivity failure, the backup  process may not be able gain access to the blob and the blob may remain orphaned. This means that the blob cannot be written to or deleted until the lease is released. This topic describes how to release the lease and deleting the blob..  
+# Delete backup blob files with active leases
+  When backing up to or restoring from Microsoft Azure storage, SQL Server acquires an infinite lease to lock exclusive access to the blob. When the backup or restore process is successfully completed, the lease is released. If a backup or restore fails, the backup process attempts to clean up any invalid blobs. However, if the backup fails due to prolonged or sustained network connectivity failure, the backup  process may not be able gain access to the blob and the blob may remain orphaned. This means the blob cannot be written to or deleted until the lease is released. This topic describes how to release (break) the lease and delete the blob. 
   
- For more information on the types of leases, read this [article](http://go.microsoft.com/fwlink/?LinkId=275664).  
+ For more information on lease types, read this [article](http://go.microsoft.com/fwlink/?LinkId=275664).  
   
- If the backup operation fails, it can result in a backup file that is not valid.  The backup blob file might also have an active lease, preventing it from being deleted or overwritten.  In order to delete or overwrite such blobs, the lease should first be broken.If there are backup failures, we recommend that you clean up leases and delete blobs. You can also choose cleanup periodically as part of storage management tasks.  
+ If the backup operation fails, it can result in an invalid backup file.  The backup blob file might also have an active lease, preventing it from being deleted or overwritten. To delete or overwrite such blobs, the lease should first be released (broken). If there are backup failures, we recommend that you clean up leases and delete blobs. You can also choose to cleanup periodically as part of your storage management tasks.  
   
  If there is a restore failure, subsequent restores are not blocked, and therefore the active lease may not be an issue. Breaking the lease is only necessary when you have to overwrite or delete the blob.  
   
-## Managing Orphaned Blobs  
+## Manage orphaned blobs  
  The follow steps describe how to clean up after failed backup or restore activity. All the steps can be done using PowerShell scripts. A code example is provided in the following section:  
   
-1.  **Identifying blobs that have leases:** If you have a script or a process that runs the backup processes, you might be able to capture the failure within the script or process and use that to clean up the blobs.   You can also use the LeaseStats and LeastState properties to identify the blobs that have leases on them. Once you have identified the blobs, we recommend that you review the list, verify the validity of the backup file before deleting the blob.  
+1.  **Identify blobs with leases:** If you have a script or a process that runs the backup processes, you might be able to capture the failure within the script or process and use that to clean up the blobs.   You can also use the LeaseStats and LeastState properties to identify the blobs that have leases on them. Once you have identified the blobs, we recommend that you review the list, verify the validity of the backup file before deleting the blob.  
   
-2.  **Breaking the lease:** An authorized request can break the lease without supplying a lease ID. See [here](http://go.microsoft.com/fwlink/?LinkID=275664) for more information.  
+2.  **Break the lease:** An authorized request can break the lease without supplying a lease ID. See [here](http://go.microsoft.com/fwlink/?LinkID=275664) for more information.  
   
     > [!TIP]  
     >  SQL Server issues a lease ID to establish exclusive access during the restore operation. The restore lease ID is BAC2BAC2BAC2BAC2BAC2BAC2BAC2BAC2.  
   
-3.  **Deleting the Blob:** To delete a blob that has an active lease, you must first break the lease.  
+3.  **Delete the Blob:** To delete a blob that has an active lease, you must first break the lease.  
   
-###  <a name="Code_Example"></a> PowerShell Script Example  
+###  <a name="Code_Example"></a> PowerShell script example  
   
 > [!IMPORTANT]  
->  If you are running PowerShell 2.0, you may have problems loading the Microsoft WindowsAzure.Storage.dll assembly. We recommend that you upgrade  Powershell to solve the issue. You may also use the following workaround for PowerShell 2.0:  
+>  If you are running PowerShell 2.0, you may have problems loading the Microsoft WindowsAzure.Storage.dll assembly. We recommend that you upgrade Powershell to solve the issue. You may also use the following workaround for PowerShell 2.0:  
 >   
 >  -   Create or modify the powershell.exe.config file to load .NET 2.0 and .NET 4.0 assemblies at runtime with the following:  
 >   
@@ -59,9 +59,9 @@ manager: "jhubbard"
  Tips on running this script  
   
 > [!WARNING]  
->  If a backup to Windows Azure Blob storage service is running at the same time as this script, the backup can fail since this script will break the lease that the backup is trying to acquire at the same time. We recommend running this script during a maintenance windows or when no backups are expected to run.  
+>  If a backup to the Microsoft Azure Blob storage service is running at the same time as this script, the backup can fail since this script will break the lease that the backup is trying to concurrently acquire. We recommend running this script during a maintenance windows or when no backups are expected to run.  
   
-1.  When you run this script, you will be prompted to provide values for the storage account, storage key, container, and the windows azure storage assembly path and name parameters. The path of the storage is assembly is the installation directory of the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The file name for the storage assembly is Microsoft.WindowsAzure.Storage.dll. Following is an example of the prompts and values entered:  
+1.  When you run this script, you will be prompted to provide values for the storage account, storage key, container, and the azure storage assembly path and name parameters. The path of the storage is assembly is the installation directory of the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The file name for the storage assembly is Microsoft.WindowsAzure.Storage.dll. Following is an example of the prompts and values entered:  
   
     ```  
     cmdlet  at command pipeline position 1  
@@ -110,7 +110,7 @@ $client = New-Object 'Microsoft.WindowsAzure.Storage.Blob.CloudBlobClient' "http
 $container = $client.GetContainerReference($blobContainer)  
   
 #list all the blobs  
-$allBlobs = $container.ListBlobs()   
+$allBlobs = $container.ListBlobs($null,$true) 
   
 $lockedBlobs = @()  
 # filter blobs that are have Lease Status as "locked"  
@@ -153,7 +153,7 @@ if($lockedBlobs.Count -gt 0)
   
 ```  
   
-## See Also  
+## See also  
  [SQL Server Backup to URL Best Practices and Troubleshooting](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
   
   

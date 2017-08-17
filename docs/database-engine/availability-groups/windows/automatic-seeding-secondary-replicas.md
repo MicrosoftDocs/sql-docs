@@ -125,9 +125,9 @@ On an instance that becomes a secondary replica, once the instance is joined the
 After joining, grant the availability group permission to create databases on the secondary replica instance of SQL Server. In order for automatic seeding to work, the availability group needs permission to create a database. 
 
 >[!TIP]
->When the availability group creates a database on a secondary replica, it sets the database owner as the account that ran the ALTER AVAILABILITY GROUP statement to grant permission to create any database. Most applications require the database owner on the secondary replica to be the same as on the primary replica.
+>When the availability group creates a database on a secondary replica, it sets the database owner as the account that ran the `ALTER AVAILABILITY GROUP` statement to grant permission to create any database. Most applications require the database owner on the secondary replica to be the same as on the primary replica.
 >
->To ensure that all databases are created with the same database owner as the primary replica, run the example command below under the security context of the login that is database owner on the primary replica. Note that this login needs `ALTER AVAILABILITY GROUP` permission 
+>To ensure that all databases are created with the same database owner as the primary replica, run the example command below under the security context of the login that is database owner on the primary replica. Note that this login needs `ALTER AVAILABILITY GROUP` permission. 
  
 The following example grants this permission to an availability group called AGName.
 
@@ -152,7 +152,7 @@ In addition to the [Dynamic Management Views](#dynamic-management-views) describ
 >
 >Before you change database owner, fail over to the new secondary replia.
 >
->To set the owner of the database to a different login, update the following script - replace the values in angle brackets (\<\>) for your environment - and  run the following command on the secondary replica.
+>To set the owner of the database to a different login, update the following script - replace the values in angle brackets (\<\>) for your environment - and run the following command:
 > ```sql
 USE MASTER
 GO

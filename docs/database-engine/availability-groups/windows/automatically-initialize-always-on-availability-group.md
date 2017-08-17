@@ -20,13 +20,13 @@ manager: "jhubbard"
 # Automatically initialize Always On Availability group
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-SQL Server 2016 introduced automatic seeding of availability groups. When you create an availability group with automatic seeding SQL Server automatically creates the secondary replicas for every database in the group. With automatic seeding you no longer have to manually backup and restore secondary replicas. To enable automatic seeding, create the availability group with T-SQL or use the latest version of SQL Server Management Studio.
+SQL Server 2016 introduced automatic seeding of availability groups. When you create an availability group with automatic seeding, SQL Server automatically creates the secondary replicas for every database in the group. You no longer have to manually back up and restore secondary replicas. To enable automatic seeding, create the availability group with T-SQL or use the latest version of SQL Server Management Studio.
 
 For background information, see [Automatic seeding for secondary replicas](automatic-seeding-secondary-replicas.md).
  
 ## Prerequisites
 
-In SQL Server 2016, automatic seeding requires that the data and log file path is the same on every SQL Server instance participating in the availability group. In SQL Server 2017, you can use different paths, however Microsoft recommends using the same paths when all replicas are hosted on the same platform (for example either Windows or Linux). Cross-platform availability groups will have different paths for the replicas. For details see [Disk layout](automatic-seeding-secondary-replicas.md#disklayout).
+In SQL Server 2016, automatic seeding requires that the data and log file path is the same on every SQL Server instance participating in the availability group. In SQL Server 2017, you can use different paths, however Microsoft recommends using the same paths when all replicas are hosted on the same platform (for example either Windows or Linux). Cross-platform availability groups have different paths for the replicas. For details, see [Disk layout](automatic-seeding-secondary-replicas.md#disklayout).
 
 Availability group seeding communicates over the database mirroring endpoint. Open inbound firewall rules to the mirroring endpoint port on each server.
 
@@ -38,7 +38,7 @@ To create an availability group with automatic seeding, set `SEEDING_MODE=AUTOMA
 
 The following example creates an availability group on a two node windows server failover cluster. Before running the scripts, update the values for your environment.
 
-1. Create the endpoints. Each server will need an endpoint. The following script creates an endpoint that uses TCP port 5022 for the listener. Set `<endpoint_name>` and `LISTENER_PORT` to match your environment and run the script on both servers:
+1. Create the endpoints. Each server needs an endpoint. The following script creates an endpoint that uses TCP port 5022 for the listener. Set `<endpoint_name>` and `LISTENER_PORT` to match your environment and run the script on both servers:
 
     ```sql
     CREATE ENDPOINT [<endpoint_name>] 
@@ -73,7 +73,7 @@ The following example creates an availability group on a two node windows server
     GO
     ``` 
 
-1. Join the secondary server instance to the availability group and grant permission to the availability group to create databases. Updated the following script. Replace the values in angle brackets `<>` for your environment. Run the script on the secondary instance of SQL Server: 
+1. Join the secondary server instance to the availability group and grant create database permission to the availability group. Update the following script, replace the values in angle brackets `<>` for your environment, and run it on the secondary replica instance of SQL Server: 
  
     ```sql
     ALTER AVAILABILITY GROUP [<availability_group_name>] JOIN
@@ -82,7 +82,7 @@ The following example creates an availability group on a two node windows server
     GO
     ```
 
-SQL Server will automatically create the database replica on the secondary server. If the database is large it may take some time to complete synchronization of the database. If a database is in an availability group that is configured for automatic seeding, you can query `sys.dm_hadr_automatic_seeding` system view to monitor the seeding progress. The following query returns one row for every database that is in an availability group configured for automatic seeding.
+SQL Server automatically creates the database replica on the secondary server. If the database is large, it may take some time to complete synchronization of the database. If a database is in an availability group that is configured for automatic seeding, you can query `sys.dm_hadr_automatic_seeding` system view to monitor the seeding progress. The following query returns one row for every database that is in an availability group configured for automatic seeding.
 
 ```sql 
 SELECT start_time,
@@ -101,7 +101,7 @@ FROM sys.dm_hadr_automatic_seeding autos
 
 ## Prevent automatic seeding after an availability group
 
-To temporarily prevent the primary from seeding more databases to the secondary replica you can deny the availability group permission to create databases. Run the following query on the instance that hosts the secondary replica in order to deny the availability group permission to create replica databases.
+To temporarily prevent the primary replica from seeding more databases to the secondary replica, you can deny the availability group permission to create databases. Run the following query on the instance that hosts the secondary replica in order to deny the availability group permission to create replica databases.
 
 ```sql
 ALTER AVAILABILITY GROUP [<availability_group_name>] 
@@ -112,7 +112,7 @@ GO
 
 ## Enable automatic seeding on an existing availability group
 
-You can set automatic seeding on an existing database. The following command will change an availability group to use automatic seeding.
+You can set automatic seeding on an existing database. The following command changes an availability group to use automatic seeding.
 
 ```sql
 ALTER AVAILABILITY GROUP [<availability_group_name>] 
@@ -121,7 +121,7 @@ ALTER AVAILABILITY GROUP [<availability_group_name>]
 GO
 ```
 
-This will force a database to restart seeding if needed. For example, if seeding fails because of insufficient disk space on the secondary replica, the you can run `ALTER AVAILABILITY GROUP ... WITH (SEEDING_MODE=AUTOMATIC)` to restart seeding after you have added free space.
+The preceding command forces a database to restart seeding if needed. For example, if seeding fails because of insufficient disk space on the secondary replica, run `ALTER AVAILABILITY GROUP ... WITH (SEEDING_MODE=AUTOMATIC)` to restart seeding after you have added free space.
 
 ## Stop automatic seeding
 
@@ -134,7 +134,7 @@ ALTER AVAILABILITY GROUP [<availability_group_name>]
 GO
 ```
 
-This will cancel any replicas that are currently seeding, and prevent SQL Server from automatically initializing any replicas in this availability group. This will not stop synchronization for any replicas that are already initialized. 
+The preceding script cancels any replicas that are currently seeding, and prevents SQL Server from automatically initializing any replicas in this availability group. It does not stop synchronization for any replicas that are already initialized. 
 
 
 ## Monitor automatic seeding availability group
@@ -229,7 +229,7 @@ The following table lists extended events related to automatic seeding:
 
 ### Other troubleshooting considerations
 
-**Monitor when automatic seeding will complete**
+**Monitor when automatic seeding**
 
 Query `sys.dm_hadr_physical_seeding_stats` for currently running automatic seeding processes. The view returns one row for each database. For example:
 
@@ -268,7 +268,7 @@ FROM sys.dm_hadr_automatic_seeding
 
 SQL Server uses a fixed number of threads for automatic seeding. On the primary instance, SQL Server uses one thread per LUN to read changes. On the secondary instance SQL Server uses one thread per LUN to initialize database.
 
-Set trace flag 9567 on the primary replica to enable compression of the data stream during automatic seeding. This can significantly reduce the transfer time of automatic seeding, however it also will increase the CPU usage. For more information, see [Tune compression for availability group](../../../database-engine/availability-groups/windows/tune-compression-for-availability-group.md). 
+Set trace flag 9567 on the primary replica to enable compression of the data stream during automatic seeding. This can significantly reduce the transfer time of automatic seeding, however it also increases the CPU usage. For more information, see [Tune compression for availability group](../../../database-engine/availability-groups/windows/tune-compression-for-availability-group.md). 
 
 
 ## When not to use automatic seeding

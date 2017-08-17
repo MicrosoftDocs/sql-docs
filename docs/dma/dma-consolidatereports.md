@@ -56,39 +56,39 @@ The PowerShell script creates the following objects in the SQL instance you have
 
 - **Database** – The name provided in the PowerShell parameters
 
- - Main repository
+  - Main repository
 
 - **Table** – ReportData
 
- - Data for reporting
+  - Data for reporting
 
 - **Table** - BreakingChangeWeighting
 
- - Reference table for all breaking changes.  Here you can define your own weighting values to influence a more accurate % upgrade success ranking
+  - Reference table for all breaking changes.  Here you can define your own weighting values to influence a more accurate % upgrade success ranking
 
 - **View** – UpgradeSuccessRanking\_OnPrem
 
- - View displaying a success factor for each database to be migrated on premise
+  - View displaying a success factor for each database to be migrated on premise
 
 - **View** – UpgradeSuccessRanking\_Azure
 
- - View displaying a success factor for each database to be migrated on premise
+  - View displaying a success factor for each database to be migrated on premise
 
 - **Stored Procedure** – JSONResults\_Insert
 
- - Used to import data from JSON file into SQL Server
+  - Used to import data from JSON file into SQL Server
 
 - **Stored Procedure** – AzureFeatureParityResults\_Insert
 
- - Used to import Azure feature parity results from JSON file into SQL Server
+  - Used to import Azure feature parity results from JSON file into SQL Server
 
 - **Table Type** – JSONResults
 
- - Used to hold the JSON results for on premise assessments and passed into the JSONResults\_Insert stored procedure
+  - Used to hold the JSON results for on premise assessments and passed into the JSONResults\_Insert stored procedure
 
 - **Table Type** – AzureFeatureParityResults
 
- - Used to hold the Azure feature parity results for azure assessments and passed into the AzureFeatureParityResults\_Insert stored procedure
+  - Used to hold the Azure feature parity results for azure assessments and passed into the AzureFeatureParityResults\_Insert stored procedure
 
 The PowerShell script will create a **Processed** directory inside the directory you provided which contains the JSON files that are to be processed.
 

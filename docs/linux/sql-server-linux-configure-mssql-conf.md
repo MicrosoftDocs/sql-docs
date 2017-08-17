@@ -186,7 +186,7 @@ The first phase capture is controlled by the **coredump.coredumptype** setting, 
     sudo /opt/mssql/bin/mssql-conf set coredump.captureminiandfull <true or false>
     ```
 
-    Default: **true**
+    Default: **false**
 
 1. Specify the type of dump file with the **coredump.coredumptype** setting.
 

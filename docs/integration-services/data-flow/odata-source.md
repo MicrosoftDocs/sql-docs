@@ -10,6 +10,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "sql13.DTS.DESIGNER.ODATASOURCE.F1"
+  - "sql13.dts.designer.odatasource.connection.f1"
+  - "sql13.dts.designer.odatasource.columns.f1"
+  - "sql13.dts.designer.odatasource.erroroutput.f1"
 ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
 caps.latest.revision: 14
 author: "douglaslMS"
@@ -44,13 +47,86 @@ manager: "jhubbard"
   
 -   [Modify OData Source Query at Runtime](../../integration-services/data-flow/modify-odata-source-query-at-runtime.md)  
   
--   [OData Source Editor &#40;Connection Page&#41;](../../integration-services/data-flow/odata-source-editor-connection-page.md)  
-  
--   [OData Source Editor &#40;Columns Page&#41;](../../integration-services/data-flow/odata-source-editor-columns-page.md)  
-  
--   [OData Source Editor &#40;Error Output Page&#41;](../../integration-services/data-flow/odata-source-editor-error-output-page.md)  
-  
 -   [OData Source Properties](../../integration-services/data-flow/odata-source-properties.md)  
+  
+## OData Source Editor (Connection Page)
+  Use the **Connection** page of the **OData Source Editor** dialog box to select the OData connection manager for the OData source. This page also lets you specify a collection or a resource path and any query options to indicate what data needs to be retrieved from the OData source. 
+  
+### Static Options  
+ **OData connection manager**  
+ Select an existing connection manager from the list, or create a new connection by clicking **New**.  
+  
+ After you select or create a connection manager, the dialog box displays the OData protocol version that the connection manager is using.  
+  
+ **New**  
+ Create a new connection manager by using the **OData Connection Manager Editor** dialog box.  
+  
+ **Use collection or resource path**  
+ Specify the method for selecting data from the source.  
+  
+|Option|Description|  
+|------------|-----------------|  
+|Collection|Retrieve data from the OData source by using a collection name.|  
+|Resource Path|Retrieve data from the OData source by using a resource path.|  
+  
+ **Query options**  
+ Specify options for the query.  For example: $top=5  
+  
+ **Feed url**  
+ Displays the read-only Feed URL based on options you selected on this dialog box.  
+  
+ **Preview**  
+ Preview results by using the **Preview** dialog box. **Preview** can display up to 20 rows.  
+  
+### Dynamic Options  
+  
+#### Use collection or resource path = Collection  
+ **Collection**  
+ Select a collection from the drop-down list.  
+  
+#### Use collection or resource path = Resource Path  
+ **Resource path**  
+ Type a resource path. For example: Employees  
+  
+## OData Source Editor (Columns Page)
+  Use the **Columns** page of the **OData Source Editor** dialog box to select external (source) columns to be included in the output and map them to output columns.  
+  
+### Options  
+ **Available External Columns**  
+ View the list of available source columns in the data source. Use check boxes in the list to add to or remove columns to the table at the bottom of the page. The selected columns will be added to the output.  
+  
+ **External Column**  
+ View source columns that you chose to be included in the output.  
+  
+ **Output Column**  
+ Provide a unique name for each output column. The default is the name of the selected external (source) column; however, you can choose any unique, descriptive name.  
+  
+## OData Source Editor (Error Output Page)
+  Use the **Error Output** page of the **OData Source Editor** dialog box to select error handling options and to set properties on error output columns.  
+  
+### Options  
+ **Input/Output**  
+ View the name of the data source.  
+  
+ **Column**  
+ View the external (source) columns that you selected on the **Connection Manager** page of the **OData Source Editor** dialog box.  
+  
+ **Error**  
+ Specify what should happen when an error occurs: ignore the failure, redirect the row, or fail the component.  
+  
+ **Related Topics:** [Error Handling in Data](../../integration-services/data-flow/error-handling-in-data.md)  
+  
+ **Truncation**  
+ Specify what should happen when a truncation occurs: ignore the failure, redirect the row, or fail the component.  
+  
+ **Description**  
+ View the description of the error.  
+  
+ **Set this value to selected cells**  
+ Specify what should happen to all the selected cells when an error or truncation occurs: ignore the failure, redirect the row, or fail the component.  
+  
+ **Apply**  
+ Apply the error handling option to the selected cells.  
   
 ## See Also  
  [OData Connection Manager](../../integration-services/connection-manager/odata-connection-manager.md)  

@@ -25,7 +25,7 @@ The preview version of SSDT for Visual Studio 2017 (15.3.0 preview) is now avail
 
 | SSDT for Visual Studio 2017 (preview) | SSDT for Visual Studio 2015 | 
 |:--|:--|
-|[![download](../ssdt/media/download.png) Download SSDT for Visual Studio 2017 (15.3.0 preview) ](https://go.microsoft.com/fwlink/?linkid=853836)<br>* requires Visual Studio 2017 15.3 or later| [![download](../ssdt/media/download.png) Download SSDT for Visual Studio 2015 (17.2)](https://go.microsoft.com/fwlink/?linkid=852922)|
+|[![download](../ssdt/media/download.png) Download SSDT for Visual Studio 2017 (15.3.0 preview) ](https://go.microsoft.com/fwlink/?linkid=853836) | [![download](../ssdt/media/download.png) Download SSDT for Visual Studio 2015 (17.2)](https://go.microsoft.com/fwlink/?linkid=852922)|
 |||
 
 
@@ -40,6 +40,8 @@ The release number: 15.3.0 preview
 The build number for this release: 14.0.16121.0
   
 For a complete list of changes, see the [changelog](changelog-for-sql-server-data-tools-ssdt.md).
+
+SSDT for Visual Studio 2017 has the same system requirements as installing VS, supported operating systems are Windows 7 SP1, Windows 8.1 or Windows Server 2012 R2, Windows 10 or Windows Server 2016.  
 
 ### Available Languages - SSDT for VS 2017
   

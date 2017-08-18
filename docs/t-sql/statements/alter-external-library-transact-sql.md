@@ -57,7 +57,7 @@ Specifies the name of an existing package library. Libraries are scoped to the u
 
 **owner_name**
 
-Specifies the name of the user or role that owns the external library. Database owners can modify user libraries.
+Specifies the name of the user or role that owns the external library.
 
 **file_spec**
 
@@ -81,7 +81,7 @@ For the R language, packages must be prepared in the form of zipped archive file
 The `ALTER EXTERNAL LIBRARY` statement only uploads the library bits to the database. The modified library is not actually installed until a user runs an external script afterwards, by executing [sp_execute_external_script (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
 ## Permissions
-Requires the `ALTER ANY EXTERNAL LIBRARY` permission.
+Requires the `ALTER ANY EXTERNAL LIBRARY` permission. Users who created an external library, can alter that external library.
 
 ## Examples
 

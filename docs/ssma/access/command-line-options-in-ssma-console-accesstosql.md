@@ -19,7 +19,7 @@ ms.author: "carlasab"
 manager: "murato"
 ---
 # Command-line options in the SSMA Console (AccessToSQL)
-Microsoft provides you with a robust set command-line option to execute and control SSMA activities. The ensuing sections detail the same.  
+Microsoft provides you with a robust set of command-line options to execute and control SSMA activities. The ensuing sections provide additional detail.  
   
 ## Command-line options in the SSMA Console  
 Described herein are the console command options.  
@@ -86,7 +86,7 @@ This command is used for outputting the command output messages in an xml format
   
 There are two options available for xmloutput, namely:  
   
--   If the filepath is provided after the xmloutput switch the output is redirected to the file.  
+-   If the filepath is provided after the xmloutput switch, the output is redirected to the file.  
   
     **Syntax example:**  
   
@@ -110,7 +110,7 @@ All the SSMA operations in the Console application are recorded in a log file, a
 `“C:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ConversionAndDataMigrationSample.xml”  –l c:\SsmaProjects\migration1.log`  
   
 ### Project environment folder option: –e/projectenvironment  
-This denotes the project environment settings folder for the current SSMA project. This switch is optional.  
+This optional switch denotes the project environment settings folder for the current SSMA project.  
   
 **Syntax example:**  
   
@@ -123,13 +123,13 @@ This denotes the project environment settings folder for the current SSMA projec
 ||  
   
 ### Secure password option: –p/securepassword  
-This option indicates the encrypted password for server connections. It differs from all other options: the option does not execute any script or help in any migration-related activities, but helps manage password-encryption for the server connections used in the migration project.  
+This option indicates the encrypted password for server connections. It differs from all other options in that it does not execute any script or help in any migration-related activities, but helps manage password-encryption for the server connections used in the migration project.  
   
 You cannot enter any other option or password as the command-line parameter. Otherwise, it results in an error. For more information, see the [Managing Passwords](http://msdn.microsoft.com/b099d0f9-dd37-4c87-8b6f-ed0177881ea4) section.  
   
-The following sub-options are supported for `–p/securepassword`:  
+The following suboptions are supported for `–p/securepassword`:  
   
--   To add password to protected storage for a specified Server ID or for all Server IDs defined in the server connection file. The -overwrite option, shown below, updates the password if it already exists:  
+-   To add a password to protected storage for a specified Server ID, or for all Server IDs defined in the server connection file; the -overwrite option, shown in the following example, update the password if it already exists:  
   
     `-p|-securepassword -a|add    {"<server_id>[, .n]"|all}``-c|-serverconnection <server-connection-file> [-v|variable <variable-value-file>]``[-o|overwrite]`  
   

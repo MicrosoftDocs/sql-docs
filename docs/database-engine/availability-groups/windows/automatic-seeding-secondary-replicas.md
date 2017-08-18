@@ -137,6 +137,21 @@ ALTER AVAILABILITY GROUP [<AGName>]
  GO
 ```
 
+If necessary set the owner of the database on the secondary replica. 
+
+You can only change the owner of a database in a primary replica because the database must be read/write. Before you change database owner, fail over to the new secondary replia.
+
+To set the owner of the database to a different login, update the following script - replace the values in angle brackets (\<\>) for your environment - and run the following command:
+ ```sql
+USE MASTER
+GO
+ALTER AUTHORIZATION ON DATABASE::<DatabaseName> TO <LoginName>;
+```
+  
+Typically the database owner on the secondary replica should be the same as the primary replica. 
+
+### Verify automatic seeding
+
 If successful, the database(s) are automatically created on the secondary replica with a state of either:
 
 * SYNCHRONIZED if the secondary replica is configured to be synchronous and the data is synchronized.
@@ -147,19 +162,6 @@ In addition to the [Dynamic Management Views](#dynamic-management-views) describ
 
 ![SQL server log][2]
 
->[!NOTE]
->If necessary set the owner of the database on the secondary replica. 
->
->You can only change the owner of a database in a primary replica because the database must be read/write. Before you change database owner, fail over to the new secondary replia.
->
->To set the owner of the database to a different login, update the following script - replace the values in angle brackets (\<\>) for your environment - and run the following command:
-> ```sql
-USE MASTER
-GO
-ALTER AUTHORIZATION ON DATABASE::<DatabaseName> TO <LoginName>;
-```
->  
->Typically the database owner on the secondary replica should be the same as the primary replica. 
 
 
 

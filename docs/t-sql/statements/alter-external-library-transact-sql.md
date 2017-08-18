@@ -85,8 +85,6 @@ Requires the `ALTER ANY EXTERNAL LIBRARY` permission. Users who created an exter
 
 ## Examples
 
-### A. Add an external library to a database
-
 The following example modifies an external library called customPackage.
 
 ```sql  

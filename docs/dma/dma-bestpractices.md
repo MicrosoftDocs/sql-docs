@@ -1,5 +1,5 @@
 ---
-title: "Best Practices for Data Migration Assistant | Microsoft Docs"
+title: "Best Practices for Data Migration Assistant (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: "08/24/2017"
 ms.prod: "sql-non-specified"

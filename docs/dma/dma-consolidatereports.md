@@ -1,5 +1,5 @@
 ---
-title: "Consolidate Assessment Reports (Data Migration Assistant) | Microsoft Docs"
+title: "Consolidate Assessment Reports (SQL Server Data Migration Assistant) | Microsoft Docs"
 ms.custom: 
 ms.date: "08/24/2017"
 ms.prod: "sql-non-specified"

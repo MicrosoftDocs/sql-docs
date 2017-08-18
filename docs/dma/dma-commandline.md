@@ -1,5 +1,5 @@
 ---
-title: "Run from Command Line (Data Migration Assistant) | Microsoft Docs"
+title: "Run from Command Line (SQL Server Data Migration Assistant) | Microsoft Docs"
 ms.custom: 
 ms.date: "08/24/2017"
 ms.prod: "sql-non-specified"
@@ -56,37 +56,36 @@ DmaCmd.exe /AssessmentName="string"
 
 ## Examples
 
-- Dmacmd.exe
+**Dmacmd.exe**
 
   `Dmacmd.exe /? or DmaCmd.exe /help`
 
-- Single-database assessment using Windows authentication and running compatibility rules
+**Single-database assessment using Windows authentication and running compatibility rules**
 
-  ```
+```
 DmaCmd.exe /AssessmentName="TestAssessment"
 /AssessmentDatabases="Server=SQLServerInstanceName;Initial
 Catalog=DatabaseName;***Integrated Security=true*"**
 ***/AssessmentEvaluateCompatibilityIssues*** /AssessmentOverwriteResult
 /AssessmentResultJson="C:\\temp\\Results\\AssessmentReport.json"
-  ```
+```
 
 
-- Single-database assessment using SQL Server authentication and running feature recommendation
 
+**Single-database assessment using SQL Server authentication and running feature recommendation**
 
-   ```
+```
 DmaCmd.exe /AssessmentName="TestAssessment"
 /AssessmentDatabases="Server=SQLServerInstanceName;Initial
 Catalog=DatabaseName;***User Id=myUsername;Password=myPassword;***"
 ***/AssessmentEvaluateRecommendations*** /AssessmentOverwriteResult
 /AssessmentResultCsv="C:\\temp\\Results\\AssessmentReport.csv"
-   ```
+```
 
 
-- Single-database assessment for target platform SQL Server 2012 and save results to .json and .csv file
+**Single-database assessment for target platform SQL Server 2012 and save results to .json and .csv file**
 
-
-   ```
+```
 DmaCmd.exe /AssessmentName="TestAssessment"
 /AssessmentDatabases="Server=SQLServerInstanceName;Initial
 Catalog=DatabaseName;Integrated Security=true"
@@ -94,13 +93,12 @@ Catalog=DatabaseName;Integrated Security=true"
 /AssessmentEvaluateRecommendations /AssessmentOverwriteResult
 ***/AssessmentResultJson***="C:\\temp\\Results\\AssessmentReport.json"
 ***/AssessmentResultCsv***="C:\\temp\\Results\\AssessmentReport.csv"
-   ```
+```
 
 
-- Single-database assessment for target platform SQL Azure Database save results to .json and .csv file
- 
+**Single-database assessment for target platform SQL Azure Database save results to .json and .csv file**
 
-   ```
+```
 DmaCmd.exe /AssessmentName="TestAssessment" 
 /AssessmentDatabases="Server=SQLServerInstanceName;Initial
 Catalog=DatabaseName;Integrated Security=true"
@@ -109,12 +107,12 @@ Catalog=DatabaseName;Integrated Security=true"
 /AssessmentOverwriteResult 
 /AssessmentResultCsv="C:\\temp\\AssessmentReport.csv" 
 /AssessmentResultJson="C:\\temp\\AssessmentReport.json"
-   ```
-
-- Multiple-database assessment
+```
 
 
-   ```
+**Multiple-database assessment**
+
+```
 DmaCmd.exe /AssessmentName="TestAssessment"
 ***/AssessmentDatabases="Server=SQLServerInstanceName1;Initial
 Catalog=DatabaseName1;Integrated Security=true"
@@ -125,7 +123,8 @@ Catalog=DatabaseName3;Integrated Security=true"***
 /AssessmentEvaluateCompatibilityIssues /AssessmentOverwriteResult
 /AssessmentResultCsv="C:\\temp\\Results\\AssessmentReport.csv"
 /AssessmentResultJson="C:\\Results\\test2016.json"
-   ```
+```
+
 
 
 ## See Also

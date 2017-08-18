@@ -61,7 +61,7 @@ Specifies the name of the user or role that owns the external library. Database 
 
 **file_spec**
 
-Specifies the content of the package for a specific platform. Only one file artifact per platform will be supported.
+Specifies the content of the package for a specific platform. Only one file artifact per platform is supported.
 
 The file can be specified in the form of a local path or network path. If the data source option is specified, the file name can be a relative path with respect to the container referenced in the `EXTERNAL DATA SOURCE`.
 
@@ -78,7 +78,7 @@ Specifies the platform for the content of the library. This value is required wh
 ## Remarks
 
 For the R language, packages must be prepared in the form of zipped archive files with the .ZIP extension for Windows. Currently, only the Windows platform is supported.  
-The `ALTER EXTERNAL LIBRARY` statement only uploads the library bits to the database. The modified library is not actually installed until a user runs an external script afterwards, by executing [sp_execute_external_script (Transact-SQL)](../../(relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
+The `ALTER EXTERNAL LIBRARY` statement only uploads the library bits to the database. The modified library is not actually installed until a user runs an external script afterwards, by executing [sp_execute_external_script (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
 ## Permissions
 Requires the `ALTER ANY EXTERNAL LIBRARY` permission.

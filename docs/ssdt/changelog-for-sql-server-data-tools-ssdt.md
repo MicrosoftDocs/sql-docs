@@ -20,7 +20,7 @@ This change log is for [SQL Server Data Tools (SSDT)](https://msdn.microsoft.com
   
 For detailed posts about what's new and changed, see [the SSDT Team blog](https://blogs.msdn.microsoft.com/ssdt/)
 
-## SSDT 15.3.0 preview for Visual Studio 2017
+## SSDT for Visual Studio 2017 (15.3.0 preview)
 Build number: 14.0.16121.0
   
 **What's New**

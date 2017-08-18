@@ -1,7 +1,7 @@
 ---
 title: "CREATE EXTERNAL LIBRARY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/17/2017"
+ms.date: "08/18/2017"
 ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
@@ -57,11 +57,7 @@ WITH ( LANGUAGE = 'R' )
 
 **library_name**
 
-Libraries are added to the database scoped to the user. That is, library names are considered unique within the context of a specific user or owner.
-
-For example, two users **RUser1** and **RUser2** can both individually and separately upload the R library `ggplot2`. The zip file for this R package contains the Windows version binaries, and the .gz file contains the Linux version binaries. Both users could upload the Windows version, and then both users could also add the Linux platform version to their libraries by calling `ALTER EXTERNAL LIBRARY`.
-
-However, neither user could subsequently upload a Python library called "ggplot2". In short, library names must be unique per user. The library name need not be aligned with the source package name, and is purely for SQL management purposes.
+Libraries are added to the database scoped to the user. That is, library names are considered unique within the context of a specific user or owner, and library names must be unique per user. For example, two users **RUser1** and **RUser2** can both individually and separately upload the R library `ggplot2`. 
 
 **owner_name**
 
@@ -106,6 +102,19 @@ CREATE EXTERNAL LIBRARY customPackage
 FROM 
     (CONTENT = 'C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\customPackage.zip')
 WITH (LANGUAGE = 'R');
+```  
+Then execute the `sp_execute_external_script` procedure, to install the library.  
+```sql
+EXEC sp_execute_external_script 
+@language =N'R', 
+@script=N'
+# load customPackage
+library(customPackage)
+
+# call customPackageFunc
+OutputDataSet <- customPackageFunc()
+'
+with result sets (([result] int));    
 ```
 
 ### B. Add ggplot2 to a database
@@ -117,6 +126,25 @@ CREATE EXTERNAL LIBRARY ggplot2
 FROM 
     (CONTENT = 'C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\ggplot2.zip') 
 WITH (LANGUAGE = 'R'); 
+```
+If `packageB` has a dependency on `packageA`, then the code for example could be something like:   
+```
+CREATE  packageA
+CREATE  packageB
+```
+
+`packageA` and `packageB` are both installed when `sp_execute_external_script` is first run.   
+```sql
+EXEC sp_execute_external_script 
+@language =N'R', 
+@script=N'
+# load packageB
+library(packageB)
+
+# call customPackageFunc
+OutputDataSet <- customPackageFunc()
+'
+with result sets (([result] int));    
 ```
 
 For this to work, the folder where the packages are saved must be accessible to the server. 

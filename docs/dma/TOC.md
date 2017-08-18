@@ -1,13 +1,13 @@
-# [Data Migration Assistant Overview](dma-overview.md)
+# [Data Migration Assistant overview](dma-overview.md)
 
-# [What's New in Data Migration Assistant v3.1](dma-whatsnewv31.md)
-# [Assess your SQL Server Migration](dma-assesssqlonprem.md)
-# [Consolidate Assessment Reports](dma-consolidatereports.md)
-# [Power BI Reports for Consolidated Assessments](dma-powerbiassesreport.md)
-# [Migrate On-Premises SQL Server](dma-migrateonpremsql.md)
-# [Migrating SQL Server Logins](dma-migrateserverlogins.md)
-# [Best Practices for Data Migration Assistant](dma-bestpractices.md)
-# [Run from Command Line](dma-commandline.md)
-# [Configuration Settings](dma-configurationsettings.md)
+# [What's new in Data Migration Assistant v3.1](dma-whatsnewv31.md)
+# [Assess your SQL Server migration](dma-assesssqlonprem.md)
+# [Consolidate assessment reports](dma-consolidatereports.md)
+# [Power BI reports for consolidated assessments](dma-powerbiassesreport.md)
+# [Migrate on-premises SQL Server](dma-migrateonpremsql.md)
+# [Migrating SQL Server logins](dma-migrateserverlogins.md)
+# [Best practices for Data Migration Assistant](dma-bestpractices.md)
+# [Run from command line](dma-commandline.md)
+# [Configuration settings](dma-configurationsettings.md)
 
 

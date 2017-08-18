@@ -1,5 +1,5 @@
 ---
-title: "Report on your Consolidated Assessments using Power BI (Data Migration Assistant) | Microsoft Docs"
+title: "Report on your Consolidated Assessments using Power BI (SQL Server Data Migration Assistant) | Microsoft Docs"
 ms.custom: 
 ms.date: "08/24/2017"
 ms.prod: "sql-non-specified"

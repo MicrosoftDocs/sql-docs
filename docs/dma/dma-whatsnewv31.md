@@ -1,5 +1,5 @@
 ---
-title: "What's New in Data Migration Assistant v3.1 | Microsoft Docs"
+title: "What's New in Data Migration Assistant v3.1 (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: "08/24/2017"
 ms.prod: "sql-non-specified"

@@ -2729,6 +2729,236 @@
             "source_path": "docs/integration-services/data-flow/sql-destination-editor-advanced-page.md",
             "redirect_url": "/sql/integration-services/data-flow/sql-server-destination",
             "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/transformations/aggregate-transformation-editor-aggregations-tab.md",
+            "redirect_url": "/sql/integration-services/data-flow/tranformations/aggregate-transformation",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/transformations/aggregate-transformation-editor-advanced-tab.md",
+            "redirect_url": "/sql/integration-services/data-flow/tranformations/aggregate-transformation",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/transformations/audit-transformation-editor.md",
+            "redirect_url": "/sql/integration-services/data-flow/tranformations/audit-transformation",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/transformations/cache-transformation-editor-connection-manager-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/tranformations/cache-transform",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/transformations/cache-transformation-editor-mappings-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/tranformations/cache-transform",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/transformations/character-map-transformation-editor.md",
+            "redirect_url": "/sql/integration-services/data-flow/tranformations/character-map-transformation",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/transformations/conditional-split-transformation-editor.md",
+            "redirect_url": "/sql/integration-services/data-flow/tranformations/conditional-split-transformation",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/transformations/copy-column-transformation-editor.md",
+            "redirect_url": "/sql/integration-services/data-flow/tranformations/copy-column-transformation",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/transformations/data-conversion-transformation-editor.md",
+            "redirect_url": "/sql/integration-services/data-flow/tranformations/data-conversion-transformation",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/transformations/data-mining-query-transformation-editor-mining-model-tab.md",
+            "redirect_url": "/sql/integration-services/data-flow/tranformations/data-mining-query-transformation",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/transformations/data-mining-query-transformation-editor-query-tab.md",
+            "redirect_url": "/sql/integration-services/data-flow/tranformations/data-mining-query-transformation",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/transformations/derived-column-transformation-editor.md",
+            "redirect_url": "/sql/integration-services/data-flow/tranformations/derived-column-transformation",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/transformations/dqs-cleansing-transformation-editor-dialog-box.md",
+            "redirect_url": "/sql/integration-services/data-flow/tranformations/dqs-cleansing-transformation",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/transformations/export-column-transformation-editor-columns-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/tranformations/export-column-transformation",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/transformations/export-column-transformation-editor-error-output-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/tranformations/export-column-transformation",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/transformations/fuzzy-grouping-transformation-editor-connection-manager-tab.md",
+            "redirect_url": "/sql/integration-services/data-flow/tranformations/fuzzy-grouping-transformation",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/transformations/fuzzy-grouping-transformation-editor-columns-tab.md",
+            "redirect_url": "/sql/integration-services/data-flow/tranformations/fuzzy-grouping-transformation",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/transformations/fuzzy-grouping-transformation-editor-advanced-tab.md",
+            "redirect_url": "/sql/integration-services/data-flow/tranformations/fuzzy-grouping-transformation",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/transformations/fuzzy-lookup-transformation-editor-reference-table-tab.md",
+            "redirect_url": "/sql/integration-services/data-flow/tranformations/fuzzy-lookup-transformation",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/transformations/fuzzy-lookup-transformation-editor-columns-tab.md",
+            "redirect_url": "/sql/integration-services/data-flow/tranformations/fuzzy-lookup-transformation",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/transformations/fuzzy-lookup-transformation-editor-advanced-tab.md",
+            "redirect_url": "/sql/integration-services/data-flow/tranformations/fuzzy-lookup-transformation",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/transformations/lookup-transformation-editor-general-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/tranformations/lookup-transformation",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/transformations/lookup-transformation-editor-connection-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/tranformations/lookup-transformation",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/transformations/lookup-transformation-editor-columns-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/tranformations/lookup-transformation",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/tranformations/lookup-transformation",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/transformations/lookup-transformation-editor-advanced-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/tranformations/lookup-transformation",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/transformations/merge-join-transformation-editor.md",
+            "redirect_url": "/sql/integration-services/data-flow/tranformations/merge-join-transformation",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/transformations/merge-transformation-editor.md",
+            "redirect_url": "/sql/integration-services/data-flow/tranformations/merge-transformation",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/transformations/multicast-transformation-editor.md",
+            "redirect_url": "/sql/integration-services/data-flow/tranformations/multicast-transformation",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/transformations/configure-the-ole-db-command-transformation.md",
+            "redirect_url": "/sql/integration-services/data-flow/tranformations/ole-db-command-transformation",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/transformations/percentage-sampling-transformation-editor.md",
+            "redirect_url": "/sql/integration-services/data-flow/tranformations/percentage-sampling-transformation",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/transformations/row-sampling-transformation-editor-sampling-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/tranformations/row-sampling-transformation",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/transformations/select-script-component-type.md",
+            "redirect_url": "/sql/integration-services/data-flow/tranformations/script-component",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/transformations/script-transformation-editor-connection-managers-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/tranformations/script-component",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/transformations/script-transformation-editor-input-columns-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/tranformations/script-component",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/transformations/script-transformation-editor-inputs-and-outputs-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/tranformations/script-component",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/transformations/script-transformation-editor-script-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/tranformations/script-component",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/transformations/sort-transformation-editor.md",
+            "redirect_url": "/sql/integration-services/data-flow/tranformations/sort-transformation",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/transformations/term-extraction-transformation-editor-term-extraction-tab.md",
+            "redirect_url": "/sql/integration-services/data-flow/tranformations/term-extraction-transformation",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/transformations/term-extraction-transformation-editor-exclusion-tab.md",
+            "redirect_url": "/sql/integration-services/data-flow/tranformations/term-extraction-transformation",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/transformations/term-extraction-transformation-editor-advanced-tab.md",
+            "redirect_url": "/sql/integration-services/data-flow/tranformations/term-extraction-transformation",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/transformations/term-lookup-transformation-editor-term-lookup-tab.md",
+            "redirect_url": "/sql/integration-services/data-flow/tranformations/term-lookup-transformation",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/transformations/term-lookup-transformation-editor-reference-table-tab.md",
+            "redirect_url": "/sql/integration-services/data-flow/tranformations/term-lookup-transformation",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/transformations/term-lookup-transformation-editor-advanced-tab.md",
+            "redirect_url": "/sql/integration-services/data-flow/tranformations/term-lookup-transformation",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/transformations/union-all-transformation-editor.md",
+            "redirect_url": "/sql/integration-services/data-flow/tranformations/union-all-transformation",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/transformations/unpivot-transformation-editor.md",
+            "redirect_url": "/sql/integration-services/data-flow/tranformations/unpivot-transformation",
+            "redirect_document_id": false
           }
     ]
 }

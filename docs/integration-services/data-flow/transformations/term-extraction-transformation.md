@@ -11,6 +11,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "sql13.dts.designer.termextractiontrans.f1"
+  - "sql13.dts.designer.termextraction.termextraction.f1"
+  - "sql13.dts.designer.termextraction.inclusionexclusion.f1"
+  - "sql13.dts.designer.termextraction.advanced.f1"
 helpviewer_keywords: 
   - "word boundaries [Integration Services]"
   - "extracting data [Integration Services]"
@@ -169,14 +172,6 @@ manager: "jhubbard"
   
  You can set properties through [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer or programmatically.  
   
- For more information about the properties that you can set in the **Term Extraction Transformation Editor** dialog box, click one of the following topics:  
-  
--   [Term Extraction Transformation Editor &#40;Term Extraction Tab&#41;](../../../integration-services/data-flow/transformations/term-extraction-transformation-editor-term-extraction-tab.md)  
-  
--   [Term Extraction Transformation Editor &#40;Exclusion Tab&#41;](../../../integration-services/data-flow/transformations/term-extraction-transformation-editor-exclusion-tab.md)  
-  
--   [Term Extraction Transformation Editor &#40;Advanced Tab&#41;](../../../integration-services/data-flow/transformations/term-extraction-transformation-editor-advanced-tab.md)  
-  
  For more information about the properties that you can set in the **Advanced Editor** dialog box or programmatically, click one of the following topics:  
   
 -   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -185,4 +180,76 @@ manager: "jhubbard"
   
  For more information about how to set properties, see [Set the Properties of a Data Flow Component](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
+## Term Extraction Transformation Editor (Term Extraction Tab)
+  Use the **Term Extraction** tab of the **Term Extraction Transformation Editor** dialog box to specify a text column that contains text to be extracted.  
   
+### Options  
+ **Available Input Columns**  
+ Using the check boxes, select a single text column to use for term extraction.  
+  
+ **Term**  
+ Provide a name for the output column that will contain the extracted terms.  
+  
+ **Score**  
+ Provide a name for the output column that will contain the score for each extracted term.  
+  
+ **Configure Error Output**  
+ Use the [Configure Error Output](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) dialog box to specify error handling for rows that cause errors.  
+  
+## Term Extraction Transformation Editor (Exclusion Tab)
+  Use the **Exclusion** tab of the **Term Extraction Transformation Editor** dialog box to set up a connection to an exclusion table and specify the columns that contain exclusion terms.  
+  
+### Options  
+ **Use exclusion terms**  
+ Indicate whether to exclude specific terms during term extraction by specifying a column that contains exclusion terms. You must specify the following source properties if you choose to exclude terms.  
+  
+ **OLE DB connection manager**  
+ Select an existing OLE DB connection manager, or create a new connection by clicking **New**.  
+  
+ **New**  
+ Create a new connection to a database by using the **Configure OLE DB Connection Manager** dialog box.  
+  
+ **Table or view**  
+ Select the table or view that contains the exclusion terms.  
+  
+ **Column**  
+ Select the column in the table or view that contains the exclusion terms.  
+  
+ **Configure Error Output**  
+ Use the [Configure Error Output](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) dialog box to specify error handling for rows that cause errors.  
+  
+## Term Extraction Transformation Editor (Advanced Tab)
+  Use the **Advanced** tab of the **Term Extraction Transformation Editor** dialog box to specify properties for the extraction such as frequency, length, and whether to extract words or phrases.  
+  
+### Options  
+ **Noun**  
+ Specify that the transformation extracts individual nouns only.  
+  
+ **Noun phrase**  
+ Specify that the transformation extracts noun phrases only.  
+  
+ **Noun and noun phrase**  
+ Specify that the transformation extracts both nouns and noun phrases.  
+  
+ **Frequency**  
+ Specify that the score is the frequency of the term.  
+  
+ **TFIDF**  
+ Specify that the score is the TFIDF value of the term. The TFIDF score is the product of Term Frequency and Inverse Document Frequency, defined as: TFIDF of a Term T = (frequency of T) * log( (#rows in Input) / (#rows having T) )  
+  
+ **Frequency threshold**  
+ Specify the number of times a word or phrase must occur before extracting it. The default value is 2.  
+  
+ **Maximum length of term**  
+ Specify the maximum length of a phrase in words. This option affects noun phrases only. The default value is 12.  
+  
+ **Use case-sensitive term extraction**  
+ Specify whether to make the extraction case-sensitive. The default is **False**.  
+  
+ **Configure Error Output**  
+ Use the [Configure Error Output](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) dialog box to specify error handling for rows that cause errors.  
+  
+## See Also  
+ [Integration Services Error and Message Reference](../../../integration-services/integration-services-error-and-message-reference.md)   
+ [Term Lookup Transformation](../../../integration-services/data-flow/transformations/term-lookup-transformation.md)  
+

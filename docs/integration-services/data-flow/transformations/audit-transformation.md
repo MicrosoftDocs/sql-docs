@@ -11,6 +11,7 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "sql13.dts.designer.audittrans.f1"
+  - "sql13.dts.designer.audittransformation.f1"
 helpviewer_keywords: 
   - "environment data in packages [Integration Services]"
   - "Audit transformation"
@@ -45,8 +46,6 @@ manager: "jhubbard"
   
  You can set properties through [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer or programmatically.  
   
- For more information about the properties that you can set in the **Audit Transformation Editor** dialog box, see [Audit Transformation Editor](../../../integration-services/data-flow/transformations/audit-transformation-editor.md).  
-  
  The **Advanced Editor** dialog box reflects the properties that can be set programmatically. For more information about the properties that you can set in the **Advanced Editor** dialog box or programmatically, click one of the following topics:  
   
 -   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -54,5 +53,27 @@ manager: "jhubbard"
 -   [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
  For more information about how to set properties, see [Set the Properties of a Data Flow Component](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
+  
+## Audit Transformation Editor
+  The Audit transformation enables the data flow in a package to include data about the environment in which the package runs. For example, the name of the package, computer, and operator can be added to the data flow. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] includes system variables that provide this information.  
+  
+### Options  
+ **Output column name**  
+ Provide the name for a new output column that will contain the audit information.  
+  
+ **Audit type**  
+ Select an available system variable to supply the audit information.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**Execution instance GUID**|Insert the GUID that uniquely identifies the execution instance of the package.|  
+|**Package ID**|Insert the GUID that uniquely identifies the package.|  
+|**Package name**|Insert the package name.|  
+|**Version ID**|Insert the GUID that uniquely identifies the version of the package.|  
+|**Execution start time**|Insert the time at which package execution started.|  
+|**Machine name**|Insert the name of the computer on which the package was launched.|  
+|**User name**|Insert the login name of the user who launched the package.|  
+|**Task name**|Insert the name of the Data Flow task with which the Audit transformation is associated.|  
+|**Task ID**|Insert the GUID that uniquely identifies the Data Flow task with which the Audit transformation is associated.|  
   
   

@@ -79,11 +79,6 @@ Optionally, an OS platform for the file can be specified. Only one file artifact
 
 Specifies the platform for the content of the library. The value defaults to the host platform on which SQL Server is running. Therefore, the user doesn’t have to specify the value. It is required in case where multiple platforms are supported, or the user needs to specify a different platform. Windows is the only supported platform.
 
-### Return values
-
-An informational message is returned if the statement was successful.  
-- "Library installation successful"  
-
 ## Remarks
 
 For the R language, packages must be prepared in the form of zipped archive files with the .ZIP extension for Windows. Currently, only the Windows platform is supported.  

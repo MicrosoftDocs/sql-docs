@@ -1,7 +1,8 @@
 ---
 title: "SQL Server Management Objects Support for In-Memory OLTP | Microsoft Docs"
+description: "Describes items in SQL Server Management Objects (SMO) that support In-Memory OLTP."
 ms.custom: ""
-ms.date: "08/17/2017"
+ms.date: "08/18/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -17,49 +18,27 @@ manager: "jhubbard"
 ---
 # SQL Server Management Objects Support for In-Memory OLTP
 
-This topic describes changes in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) for In-Memory OLTP.  
-  
-The following types and members support In-Memory OLTP:  
-  
-- Microsoft.SqlServer.Management.Smo.**<xref:Microsoft.SqlServer.Management.Smo.DurabilityType>** (enumeration)
+This topic describes items in SQL Server Management Objects (SMO) that support In-Memory OLTP.  
 
-- Microsoft.SqlServer.Management.Smo.FileGroup.**<xref:Microsoft.SqlServer.Management.Smo.FileGroup.FileGroupType%2A>** (property)
+## SMO types and members
 
-- Microsoft.SqlServer.Management.Smo.FileGroup.**<xref:Microsoft.SqlServer.Management.Smo.FileGroup.%23ctor%2A>** (constructor)
+The following types and members are in the namespace **Microsoft.SqlServer.Management.Smo**, and they support In-Memory OLTP:
 
-- Microsoft.SqlServer.Management.Smo.**<xref:Microsoft.SqlServer.Management.Smo.FileGroupType>** (enumeration)
+- **<xref:Microsoft.SqlServer.Management.Smo.DurabilityType>** (enumeration)
+- FileGroup.**<xref:Microsoft.SqlServer.Management.Smo.FileGroup.FileGroupType%2A>** (property)
+- FileGroup.**<xref:Microsoft.SqlServer.Management.Smo.FileGroup.%23ctor%2A>** (constructor)
+- **<xref:Microsoft.SqlServer.Management.Smo.FileGroupType>** (enumeration)
+- Index.**<xref:Microsoft.SqlServer.Management.Smo.Index.BucketCount%2A>** (property)
+- IndexType.**<xref:Microsoft.SqlServer.Management.Smo.IndexType.NonClusteredHashIndex>** (enumeration member)
+- Index.**<xref:Microsoft.SqlServer.Management.Smo.Index.IsMemoryOptimized%2A>** (property)
+- Server.**<xref:Microsoft.SqlServer.Management.Smo.Server.IsXTPSupported%2A>** (property)
+- StoredProcedure.**<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.IsNativelyCompiled%2A>** (property)
+- StoredProcedure.**<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.IsSchemaBound%2A>** (property)
+- Table.**<xref:Microsoft.SqlServer.Management.Smo.Table.Durability%2A>** (property)
+- Table.**<xref:Microsoft.SqlServer.Management.Smo.Table.IsMemoryOptimized%2A>** (property)
+- UserDefinedTableType.**<xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType.IsMemoryOptimized%2A>** (property)
 
-- Microsoft.SqlServer.Management.Smo.Index.**<xref:Microsoft.SqlServer.Management.Smo.Index.BucketCount%2A>** (property)
-
-- Microsoft.SqlServer.Management.Smo.IndexType.**<xref:Microsoft.SqlServer.Management.Smo.IndexType.NonClusteredHashIndex>** (enumeration member)
-
-- Microsoft.SqlServer.Management.Smo.Index.**<xref:Microsoft.SqlServer.Management.Smo.Index.IsMemoryOptimized%2A>** (property)
-
-- Microsoft.SqlServer.Management.Smo.Server.**<xref:Microsoft.SqlServer.Management.Smo.Server.IsXTPSupported%2A>** (property)
-
-- Microsoft.SqlServer.Management.Smo.StoredProcedure.**<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.IsNativelyCompiled%2A>** (property)
-
-- Microsoft.SqlServer.Management.Smo.StoredProcedure.**<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.IsSchemaBound%2A>** (property)
-
-- Microsoft.SqlServer.Management.Smo.Table.**<xref:Microsoft.SqlServer.Management.Smo.Table.Durability%2A>** (property)
-
-- Microsoft.SqlServer.Management.Smo.Table.**<xref:Microsoft.SqlServer.Management.Smo.Table.IsMemoryOptimized%2A>** (property)
-
-- Microsoft.SqlServer.Management.Smo.UserDefinedTableType.**<xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType.IsMemoryOptimized%2A>** (property)
-
-## Code Sample
-
-#### Actions taken in the code example
-  
--   Create a database with memory-optimized filegroup and memory-optimized file.  
-  
--   Create a durable memory-optimized table with a primary key, nonclustered index, and a nonclustered hash index.  
-  
--   Create columns and indexes.  
-  
--   Create a user-defined memory-optimized table type.  
-  
--   Create a natively compiled stored procedure.
+## C# code example
 
 #### Assemblies referenced by the compiled code example
 
@@ -67,6 +46,14 @@ The following types and members support In-Memory OLTP:
 - Microsoft.SqlServer.Management.Sdk.Sfc.dll
 - Microsoft.SqlServer.Smo.dll
 - Microsoft.SqlServer.SqlEnum.dll
+
+#### Actions taken in the code example
+
+1. Create a database with memory-optimized filegroup and memory-optimized file.  
+2. Create a durable memory-optimized table with a primary key, nonclustered index, and a nonclustered hash index.  
+3. Create columns and indexes.  
+4. Create a user-defined memory-optimized table type.  
+5. Create a natively compiled stored procedure.
 
 #### Source code
   
@@ -172,6 +159,7 @@ public class A {
 }  
 ```  
   
-## See Also  
+## See also  
 
-[SQL Server Support for In-Memory OLTP](sql-server-support-for-in-memory-oltp.md)
+- [SQL Server Support for In-Memory OLTP](sql-server-support-for-in-memory-oltp.md)
+- [Overview of SMO](../server-management-objects-smo/overview-smo.md)

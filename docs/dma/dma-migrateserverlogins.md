@@ -21,7 +21,10 @@ manager: "craigg"
 
 # Migrating SQL Server Logins using Data Migration Assistant
 
-This article provides an overview of migrating SQL Server logins using Data Migration Assistant. The following are the key concepts.
+This article provides an overview of migrating SQL Server logins using Data Migration Assistant. 
+
+## Key Concepts
+The following are the key concepts.
 
 - You can migrate the logins based on a Windows principal (such as a domain user or a Windows domain group). You can also migrate logins created based on SQL authentication, also called SQL Server logins.
 

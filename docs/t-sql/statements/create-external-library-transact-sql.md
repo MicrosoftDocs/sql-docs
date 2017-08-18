@@ -100,7 +100,7 @@ The following example adds an external library called customPackage to a databas
 ```sql
 CREATE EXTERNAL LIBRARY customPackage 
 FROM 
-    (CONTENT = 'C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\customPackage.zip')
+  (CONTENT = 'C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\customPackage.zip')
 WITH (LANGUAGE = 'R');
 ```  
 Then execute the `sp_execute_external_script` procedure, to install the library.  
@@ -117,20 +117,18 @@ OutputDataSet <- customPackageFunc()
 with result sets (([result] int));    
 ```
 
-### B. Add ggplot2 to a database
+### B. Installing packages with dependencies
 
-The database administrator needs to install R packages on a specific database, and make them available to all users of the database. To install the packages, the DBA must log in to [!INCLUDE[ssnoversion](../../includes/ssnoversion.md)] using the database owner role and run the following statement to generate the package library:
-
-```sql
-CREATE EXTERNAL LIBRARY ggplot2 
+If `packageB` has a dependency on `packageA`, then the code for example follows these general principals:   
+```
+CREATE EXTERNAL LIBRARY packageA 
 FROM 
-    (CONTENT = 'C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\ggplot2.zip') 
+  (CONTENT = 'C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\ggplot2.zip') 
 WITH (LANGUAGE = 'R'); 
-```
-If `packageB` has a dependency on `packageA`, then the code for example could be something like:   
-```
-CREATE  packageA
-CREATE  packageB
+
+CREATE EXTERNAL LIBRARY packageB FROM 
+  (CONTENT = 'C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\ggplot2.zip') 
+WITH (LANGUAGE = 'R');
 ```
 
 `packageA` and `packageB` are both installed when `sp_execute_external_script` is first run.   
@@ -141,8 +139,8 @@ EXEC sp_execute_external_script
 # load packageB
 library(packageB)
 
-# call customPackageFunc
-OutputDataSet <- customPackageFunc()
+# call customPackageBFunc
+OutputDataSet <- customPackageBFunc()
 '
 with result sets (([result] int));    
 ```

@@ -128,6 +128,8 @@ After joining, grant the availability group permission to create databases on th
 >When the availability group creates a database on a secondary replica, it sets the database owner as the account that ran the `ALTER AVAILABILITY GROUP` statement to grant permission to create any database. Most applications require the database owner on the secondary replica to be the same as on the primary replica.
 >
 >To ensure that all databases are created with the same database owner as the primary replica, run the example command below under the security context of the login that is database owner on the primary replica. Note that this login needs `ALTER AVAILABILITY GROUP` permission. 
+>
+>To change database owner after a secondary replica automatically creates a database use `ALTER AUTHORIZATION`. See [ALTER AUTHORIZATION (Transact-SQL)](../../../t-sql/statements/alter-authorization-transact-sql.md)
  
 The following example grants this permission to an availability group called AGName.
 
@@ -138,17 +140,6 @@ ALTER AVAILABILITY GROUP [<AGName>]
 ```
 
 If necessary set the owner of the database on the secondary replica. 
-
-You can only change the owner of a database in a primary replica because the database must be read/write. Before you change database owner, fail over to the new secondary replia.
-
-To set the owner of the database to a different login, update the following script - replace the values in angle brackets (\<\>) for your environment - and run the following command:
- ```sql
-USE MASTER
-GO
-ALTER AUTHORIZATION ON DATABASE::<DatabaseName> TO <LoginName>;
-```
-  
-Typically the database owner on the secondary replica should be the same as the primary replica. 
 
 ### Verify automatic seeding
 

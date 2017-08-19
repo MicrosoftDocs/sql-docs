@@ -18,7 +18,7 @@ author: "sabotta"
 ms.author: "carlasab"
 manager: "craigg"
 ---
-# What&#39;s New in SSMA  for DB2 (DB2ToSQL)
+# What&#39;s New in SSMA for DB2 (DB2ToSQL)
 This topic lists SSMA for DB2 changes in each release.  
 
 ## SSMA v7.4
@@ -91,4 +91,4 @@ The January 2016 maintenance release of SSMA for DB2 contains the following chan
 -  Added Telemetry.
   
 ## November 2014  
-The November 2014 release of SSMA for DB2 is the initial release.
+The November 2014 release of SSMA for DB2 was the initial release.

@@ -22,14 +22,18 @@ This topic lists SSMA for Oracle changes in each release.
 The v7.4 release of SSMA for Oracle contains the following changes:
 
 - SSMA for Oracle now supports Azure SQL Data Warehouse as a target platform for migration.
-![New Project window](../media/new-project.png)
+
+    ![New Project window](../media/new-project.png)
   - Supports the Data Warehouse storage options as shown in the following image:
-![storage options for data warehouse](../media/storage-options_red.png)
+
+    ![storage options for data warehouse](../media/storage-options_red.png)
   - Supports the data distribution options as shown in the following image:
-![data distribution for data warehouse](../media/data-distribution_red.png)
+
+    ![data distribution for data warehouse](../media/data-distribution_red.png)
 
 - The **Query timeout** option is now available during schema object discovery at source and target.
-![query timeout option](../media/query-timeout_red.png)
+
+    ![query timeout option](../media/query-timeout_red.png)
 
 - The quality and conversion metric has been improved with targeted fixes, based on customer feedback.
 
@@ -157,7 +161,7 @@ The July 2010 release of SSMA for Oracle contains the following changes:
 ## June 2008  
 The June 2008 release of SSMA for Oracle contains the following changes:  
   
--   Added improvements in Assessment Report were completed. It includes additional information for synonyms, raw source for parsable objects, panels and SQL Server logo removal, and layout persistence.  
+-   Added improvements to the Assessment Report, including additional information for synonyms, raw source for parsable objects, panels and SQL Server logo removal, and layout persistence.  
 -   Added improvements in object conversion:  
     -   Packages DBMS_LOB, DBMS_SQL conversion added.  
     -   Joins conversion revised.  

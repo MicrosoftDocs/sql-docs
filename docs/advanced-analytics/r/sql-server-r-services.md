@@ -22,7 +22,7 @@ manager: "jhubbard"
   
   Because machine learning is integrated with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you can keep analytics close to the data and eliminate the costs and security risks associated with data movement.
   
-SQL Server supports the open source R language with a comprehensive set of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tools and technologies that offer superior performance, security, reliability and manageability. You can deploy R solutions using convenient, familiar  tools, and your production applications can call the R runtime and retrieve predictions and visuals using [!INCLUDE[tsql](../../includes/tsql-md.md)]. You also get the [ScaleR](https://msdn.microsoft.com/microsoft-r/scaler/scaler) libraries to improve the scale and performance of your R solutions.
+SQL Server supports the open source R language with a comprehensive set of tools and technologies that offer superior performance, security, reliability, and manageability. You can deploy R solutions using convenient, familiar SQL tools, and your production applications can call the R runtime and retrieve predictions and visuals using [!INCLUDE[tsql](../../includes/tsql-md.md)]. You also get the [Microsoft R](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler) libraries to improve the scale and performance of your R solutions, including RevoScaleR, revoscalepy, and MicrososftML.
   
 Through SQL Server setup, you can install both server and client components.
   
@@ -32,7 +32,7 @@ Through SQL Server setup, you can install both server and client components.
   
     When you select this feature, extensions are installed in the database engine to support execution of code written in R or Python. A new service is created, the [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)], to manage communications between the external runtimes and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.
   
-+ Install **Microsoft Machine Learning Server (Standalone)** on a separate computer if you don;t need to use SQL Server as the compute context. Machine Learning Server includes the same machine learning components, plus the mrsdeploy package for scalable, distributed execution of machine learnign jobs as a web service.
++ Install **Microsoft Machine Learning Server (Standalone)** on a separate computer if you don't need to use SQL Server as the compute context. Machine Learning Server includes the same machine learning components, plus the mrsdeploy package for scalable, distributed execution of machine learning jobs as a web service.
   
 +    Install [Microsoft R Client](https://docs.microsoft.com/r-server/r-client/what-is-microsoft-r-client) on remote computers to develop solutions that can be deployed to SQL Server, or to Machine Learning Server on Windows, Linux, or Hadoop.
 
@@ -53,7 +53,7 @@ Through SQL Server setup, you can install both server and client components.
     
     We recommend that you install Microsoft Machine Learning Server (Standalone) on a laptop or other remote computer used for development, and use that computer to create and test machine learning solutions that can easily be deployed to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that is running Machine Learning Services \(In-Database\) or another supported compute context.
   
-    You can also use the mrsdeploy package that is installed with Machine Learning Server to publish and distribute R and Python jobs as a web service.
+    You can also use the **mrsdeploy** package that is installed with Machine Learning Server to publish and distribute R and Python jobs as a web service.
 
 ## Additional resources
 

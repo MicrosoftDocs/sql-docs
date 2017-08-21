@@ -30,17 +30,17 @@ See this announcement for details and updates: [Exciting new templates in Azure 
 
 ## Fraud detection
 
-[Online fraud detectiontemplate (SQL Server R Services)](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/FraudDetection/Introduction.md)
+[Online fraud detection template (SQL Server R Services)](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/FraudDetection/Introduction.md)
 
-One of the important tasks for online business is to detect fraudulent transactions, and to identify the transactions made by stolen payment instruments or credentials, in order to reduce charge back losses. When fraudulent transactions are discovered, businesses typically take measures to block certain accounts as soon as possible, to prevent further losses. In this scenario, you'll learn how to use data from online purchase transactions to identify likely fraud. This methodology is one that you can easily apply to fraud detection in other domains.
+One of the important tasks for online business is to detect fraudulent transactions, and to identify the transactions made by stolen payment instruments or credentials, in order to reduce charge back losses. When fraudulent transactions are discovered, businesses typically take measures to block certain accounts as soon as possible, to prevent further losses. In this scenario, you learn how to use data from online purchase transactions to identify likely fraud. This methodology is one that you can easily apply to fraud detection in other domains.
 
-In this template, you'll learn how to use data from online purchase transactions to identify likely fraud. Fraud detection is solved as a binary classification problem. The methodology used in this template can be easily applied to fraud detection in other domains.
+In this template, you learn how to use data from online purchase transactions to identify likely fraud. Fraud detection is solved as a binary classification problem. The methodology used in this template can be easily applied to fraud detection in other domains.
 
 ## Campaign optimization
 
 [Predict how and when to contact leads](https://microsoft.github.io/r-server-campaign-optimization/)
 
-This solution uses insurance industry data to preedict leads based ondemographics, historical response data, and product-specific details.  Recommendations are also generated to indicate the best channel and time to approach users to influence purchase behavior.
+This solution uses insurance industry data to predict leads based on demographics, historical response data, and product-specific details.  Recommendations are also generated to indicate the best channel and time to approach users to influence purchase behavior.
 
 Parallel samples are provided for SQL Server in-database, in Azure, and HDInsight Spark.
 
@@ -56,9 +56,9 @@ This template get you started with churn prevention by formulating the churn pro
 
 [Predictive maintenance template (SQL Server 2016)](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/PredictiveMaintenance/Introduction.md)
 
-The goal of "data-driven" predictive maintenance is to increase the efficiency of maintenance tasks by capturing past failures and using that information to predict when or where a device might fail. The ability to forecast device obsolescence is particularly important for applications that rely on distributed data or sensors, as exemplified by the Internet of Things (IoT).
+The goal of "data-driven" predictive maintenance is to increase the efficiency of maintenance tasks by capturing past failures and using that information to predict when or where a device might fail. The ability to forecast device obsolescence is especially valuable for applications that rely on distributed data or sensors. Other applications might be found for monitoring or predicting error in IoT (Internet of Things) devices.
 
-This template focuses on answering the question of “When will an in-service machine fail?” The input data represents simulated sensor measurements for aircraft engines. Data obtained from monitoring the engine’s current operation conditions, such as the current working cycle, settings, sensor measurements and so forth, are used to create three types of predictive models:
+This template focuses on answering the question of "When will an in-service machine fail?" The input data represents simulated sensor measurements for aircraft engines. Data obtained from monitoring the engine’s current operation conditions, such as the current working cycle, settings, sensor measurements and so forth, are used to create three types of predictive models:
 
 -   **Regression models**, to predict how much longer an engine will last before it fails. The sample model predicts the metric Remaining Useful Life (RUL), also called Time to Failure (TTF).
   

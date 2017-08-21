@@ -35,13 +35,13 @@ The database administrator is responsible for setting up roles and adding users 
 
 The following new database roles support secure installation and R package management in SQL Server:
 
-- **rpkgs-users** Allows users to use any shared packages that were installed by members of the **rpkgs-shared** role.
+- `rpkgs-users`: Allows users to use any shared packages that were installed by members of the `rpkgs-shared` role.
 
-- **rpkgs-private** Provides access to shared packages with the same permissions as the **rpkgs-users** role. Members of this role can also install, remove and use privately scoped packages.
+- `rpkgs-private`: Provides access to shared packages with the same permissions as the `rpkgs-users` role. Members of this role can also install, remove and use privately scoped packages.
 
--  **rpkgs-shared** Provides the same permissions as the **rpkgs-private** role. Users who are members of this role can also install or remove shared packages.
+-  `rpkgs-shared`: Provides the same permissions as the `rpkgs-private` role. Users who are members of this role can also install or remove shared packages.
 
-- **db_owner** - Has the same permissions as the **rpkgs-shared** role. Can also grant users the right to install or remove both shared and private packages.
+- `db_owner`: Has the same permissions as the `rpkgs-shared` role. Can also grant users the right to install or remove both shared and private packages.
 
 ### Creating an external package library using T-SQL
 
@@ -61,7 +61,7 @@ The **RevoScaleR** package now includes functions to support easier installation
 
 ### R package management functions
 
-The following package management functions are provided in RevoScaleR, for installation and removal of packages in a specified compute context. 
+The following package management functions are provided in RevoScaleR, for installation and removal of packages in a specified compute context:
 
 + [rxInstalledPackages](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxinstalledpackages): Find information about packages installed in the specified compute context.
 
@@ -97,11 +97,11 @@ The new package management functions provide two scopes for installation and use
 
 - **Shared scope**
 
-  *Shared scope* means that users who have been given permission to the shared scope role (**rpkgs-shared**) can install and uninstall packages to a specified database. A package that is installed in a shared scope library can be used by other users of the database on SQL Server, provided those users are allowed to use installed R packages.
+  *Shared scope* means that users who have been given permission to the shared scope role (`rpkgs-shared`) can install and uninstall packages to a specified database. A package that is installed in a shared scope library can be used by other users of the database on SQL Server, provided those users are allowed to use installed R packages.
 
 - **Private scope**
 
-  *Private scope* means that users who have been given membership in the private scope role (**rpkgs-private**) can install or uninstall packages into a private library location defined per user. Therefore, any packages installed in the private scope can be used only by the user who installed them. In other words, a user on SQL Server cannot use private packages that were installed by a different user.
+  *Private scope* means that users who have been given membership in the private scope role (`rpkgs-private`) can install or uninstall packages into a private library location defined per user. Therefore, any packages installed in the private scope can be used only by the user who installed them. In other words, a user on SQL Server cannot use private packages that were installed by a different user.
 
 These models for *shared* and *private* scope can be combined to develop custom secure systems for deploying and managing packages on SQL Server.
 

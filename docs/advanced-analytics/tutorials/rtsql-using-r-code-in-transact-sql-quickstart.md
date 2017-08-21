@@ -44,14 +44,14 @@ You must have access to an instance of SQL Server with one of the following alre
 
 Your SQL Server instance can be in an Azure virtual machine or on-premises. Just be aware that the external scripting feature is disabled by default, so you might need to perform some additional steps to get it working.
 
-To run SQL queries that include R script, you can use any other application that can connect to a database and run ad hoc T-SQL code. If you are a SQL pro,  you can use SQL Server Management Studio (SSMS) or Visual Studio.
+To run SQL queries that include R script, you can use any other application that can connect to a database and run T-SQL code. SQL professionals can use SQL Server Management Studio (SSMS) or Visual Studio.
 
-For this tutorial, to show how easy it is to run R inside SQL Server, we'll use the new **mssql extension for Visual Studio Code**. VS Code is a free development environment that can run on Linux, macOS, or Windows. The **mssql*** extension is a lightweight extension for running SLq queries. To install it, see this article: [Use the mssql extension for Visual Studio Code](https://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-vscode).
+For this tutorial, to show how easy it is to run R inside SQL Server, we've used the new **mssql extension for Visual Studio Code**. VS Code is a free development environment that can run on Linux, macOS, or Windows. The **mssql*** extension is a lightweight extension for running SLq queries. To install it, see this article: [Use the mssql extension for Visual Studio Code](https://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-vscode).
 
 ## Connect to a database and run a Hello World test script
 
 1. In Visual Studio Code, create a new text file and name it BasicRSQL.sql.
-2. While this file is open, press CTRL+SHIFT+P (COMMAND + P on a macOS), type **sql** to list the SQL commands, and select **CONNECT**. Visual Studio Code will prompt you to create a profile to use when connecting to a specific database. This is optional, but will make it easier to switch between databases and logins.
+2. While this file is open, press CTRL+SHIFT+P (COMMAND + P on a macOS), type **sql** to list the SQL commands, and select **CONNECT**. Visual Studio Code prompts you to create a profile to use when connecting to a specific database. This is optional, but makes it easier to switch between databases and logins.
     + Choose a server or instance where R in SQL Server has been installed.
     + Use an account that has permissions to create a new database, run SELECT statements, and view table definitions.
 2. If the connection is successful, you should be able to see the server and database name in the status bar, together with your current credentials. If the connection failed, check whether the computer name and server name are correct.

@@ -19,12 +19,12 @@ manager: "jhubbard"
 
 It is based on the **RevoScaleR** package for R, which was provided in Microsoft R Server and SQL Server R Services, and aims to provide the same functionality:
 
-+ Supports multiple compute contexts, remote or local
++ Supports multiple compute contexts, both remote and local
 + Provides functions equivalent to those in RevoScaleR for data transformation and visualization
 + Provides Python versions of RevoScaleR machine learning algorithms for distributed or parallel processing
 + Improved performance, including use of the Intel math libraries
 
-MicrosoftML packages are also proided for both R and Python. For more information, see [Using MicrosoftML in SQL Server](../using-the-microsoftml-package.md)
+MicrosoftML packages are also provided for both R and Python. For more information, see [Using MicrosoftML in SQL Server](../using-the-microsoftml-package.md)
 
 > [!WARNING]
 > 
@@ -93,7 +93,7 @@ New machine learning algorithms are also provided by the Python version of [Micr
 |`rx_fast_trees` | Create a boosted tree model |
 |`rx_logistic_regression` | Create a logistic regression model|
 |`rx_neural_network` | Create a customizable neural network model |
-|`rx_oneclass_svm` | Creates a SVM model for imabalnced datsets, for use in anomaly detection|
+|`rx_oneclass_svm` | Creates a SVM model on an imbalanced dataset, for use in anomaly detection|
 
 > [!TIP]
 > Many of these algorithms are already provided as modules in Azure Machine Learning.

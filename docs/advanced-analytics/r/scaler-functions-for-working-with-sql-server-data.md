@@ -19,7 +19,7 @@ manager: "jhubbard"
 ---
 # RevoScaleR functions for working with SQL Server data
 
-This topic provides an overview of the main functions provided in RevoScaleR for working with SQL Server data. 
+This topic provides an overview of the main functions provided in RevoScaleR for working with SQL Server data.
 
 For a complete list of ScaleR functions and how to use them, see the [Microsoft R Server](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler) reference.
 
@@ -67,4 +67,4 @@ For example, if you regularly move large amounts of data from a database to a lo
 
 + [rxReadXdf](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxreadxdf) - Reads data from an XDF file into a data frame
 
-For more information about working with these functions, including using data sources other than [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], see [Import and transform data](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxodbcdata).
+For more information about working with these functions, including using data sources other than [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], see [Howto guides for data analysis in Microsoft R](https://docs.microsoft.com/r-server/r/how-to-introduction).

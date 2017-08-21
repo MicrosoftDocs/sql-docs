@@ -36,13 +36,13 @@ The word *operationalization* can mean many things:
 
 If you have installed Machine Learning Services with SQL Server, *operationalization* is a matter of wrapping your R or Python code in a stored procedure. Any application can then call the stored procedure to retrain a model, generate scores, or create reports. You can also automate jobs using existing scheduling mechanisms in SQL Server.
 
-However, Microsoft R Server provides a different mechanism for deployment support, using web services that support publishing of R jobs, and an administrative utility for running distributed R jobs. Microsoft R Server uses the functions in the **mrsdeploy** package to establish a session with remote compute nodes and execute R code in a console application. 
+However, Microsoft R Server provides a different mechanism for deployment support, using web services that support publishing of R jobs, and an administrative utility for running distributed R jobs. Microsoft R Server uses the functions in the **mrsdeploy** package to establish a session with remote compute nodes and execute R code in a console application.
 
 This deployment feature of R Server provides these benefits:
 
 + Role-based access control to analytical web services
 
-    Determine who can publish, update, and delete their own web services, those who can also update and delete the web services published by other users, and who can only list and consume web services. 
+    Determine who can publish, update, and delete their own web services, those who can also update and delete the web services published by other users, and who can only list and consume web services.
 
 + Faster scoring
   
@@ -68,7 +68,7 @@ This deployment feature of R Server provides these benefits:
 
 SQL Server 2017 CTP 2.0 and later includes this feature, which was previously available only with R Server, and not installed with SQL Server R Services. The **mrsdeploy** package is installed on the SQL Server computer, if you select the option to install **Microsoft Machine Learning Server**, from the **Shared Features** section of SQL Server setup.
 
-Typically, we do not recommend that you install Machine Learning Server on the same computer that is running SQL Server Machine Learning Services. We recommend that you install **Microsoft Machine Learning Server** on a separate computer from SQL Server, and then configure the operationalization features on that computer. 
+Typically, we do not recommend that you install Machine Learning Server on the same computer that is running SQL Server Machine Learning Services. We recommend that you install **Microsoft Machine Learning Server** on a separate computer from SQL Server, and then configure the operationalization features on that computer.
 
 However, if you need to install them together, follow these additional steps to successfully configure the service.
 
@@ -83,7 +83,7 @@ However, if you need to install them together, follow these additional steps to 
     + Create a new registry key `H_KEY_LOCAL_MACHINE\SOFTWARE\R Server\Path`
     + Set the value of the key to `"C:\Program Files\Microsoft SQL Server\140\R_SERVER"`.
 
-4. When done, open the [Administrator Utility](https://docs.microsoft.com/r-server/operationalize/configure-use-admin-utility). 
+4. When done, open the [Administrator Utility](https://docs.microsoft.com/r-server/operationalize/configure-use-admin-utility).
 
 5. Continue to configure the **mrsdeploy** service as described here: [Configuration for administrators](https://docs.microsoft.com/r-server/operationalize/configure-start-for-administrators)
 

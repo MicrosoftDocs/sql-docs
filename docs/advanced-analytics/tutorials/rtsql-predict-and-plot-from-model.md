@@ -26,7 +26,7 @@ To perform _scoring_ using new data, get one of the trained models from the tabl
 
 Did you notice that the original training data stops at a speed of 25 miles per hour? That's because the original data was based on an experiment from 1920!
 
-You might wonder, how long would it take an automobile from the 1920s to stop, assuming it could get going as fast as 60 mph or even 100 mph? To answer this question, you will provide some new speed values.
+You might wonder, how long would it take an automobile from the 1920s to stop, assuming it could get going as fast as 60 mph or even 100 mph? To answer this question, you must provide some new speed values.
 
 ```sql
 CREATE TABLE [dbo].[NewCarSpeed]([speed] [int] NOT NULL,
@@ -48,7 +48,7 @@ To get predictions based on one specific model, you must write a SQL script that
 2. Gets the new input data
 3. Calls an R prediction function that is compatible with that model
 
-In this example, because your model is based on the **rxLinMod** algorithm provided as part of the **RevoScaleR** package, you should call the `rxPredict` function, rather than the generic R `predict` function.
+In this example, because your model is based on the **rxLinMod** algorithm provided as part of the **RevoScaleR** package, you call the [rxPredict](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxpredict) function, rather than the generic R `predict` function.
 
 ```sql
 DECLARE @speedmodel varbinary(max) = (SELECT model FROM [dbo].[stopping_distance_models] WHERE model_name = 'latest model');
@@ -140,7 +140,7 @@ The following example demonstrates how to create a simple graphic using a plotti
   WITH RESULT SETS ((plot varbinary(max)));
 ```
 
-+ The `tempfile` function returns a string that can be used as a file name, but the file is not actually generated yet.
++ The `tempfile` function returns a string that can be used as a file name, but the file has not been generated yet.
 + For arguments to `tempfile`, you can specify a prefix and file extension, as well as the directory. To verify the complete file name and path, print a message using `str()`.
 + The `jpeg` function creates an R device with the specified parameters.
 + After you create the plot, you can add more visual features to it. In this case, a regression line is added using `abline`.

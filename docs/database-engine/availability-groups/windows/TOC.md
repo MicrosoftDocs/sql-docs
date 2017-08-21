@@ -10,7 +10,7 @@
 ### [Dialog](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
 ### [Transact-SQL](create-an-availability-group-transact-sql.md)  
 ### [PowerShell](create-an-availability-group-sql-server-powershell.md)  
-### [Azure virtual machines>](http://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-availability-group-overview)
+### [Azure virtual machines](http://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-availability-group-overview)
 ## [Listener](create-or-configure-an-availability-group-listener-sql-server.md)  
 
 # Concepts

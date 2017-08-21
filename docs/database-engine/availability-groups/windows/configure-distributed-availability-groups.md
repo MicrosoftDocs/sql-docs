@@ -251,8 +251,7 @@ Only manual failover is supported at this time. The following Transact-SQL state
     ALTER AVAILABILITY GROUP distributedag SET (ROLE = SECONDARY); 
     ```  
 
-    >[NOTE!]
-    >At this point, the distributed availability group is not available.
+    At this point, the distributed availability group is not available.
 
 1. Test the failover readiness. Run the following query:
 
@@ -274,8 +273,7 @@ Only manual failover is supported at this time. The following Transact-SQL state
     ALTER AVAILABILITY GROUP distributedag FORCE_FAILOVER_ALLOW_DATA_LOSS; 
     ```  
 
-    >[NOTE!]
-    >After this step, the distributed availability group is available.
+    After this step, the distributed availability group is available.
       
 After completing the steps above, the distributed availability group fails over without any data loss. If the availability groups are across a geographical distance that causes latency, change the availability mode back to ASYNCHRONOUS_COMMIT. 
   
@@ -316,8 +314,7 @@ CREATE AVAILABILITY GROUP [SQLFCIDAG]
       );   
 ```  
 
-    >[NOTE!]
-    >The listener URL is the VNN of the primary FCI instance.
+The listener URL is the VNN of the primary FCI instance.
 
 ## Manually fail over FCI in distributed availability group
 

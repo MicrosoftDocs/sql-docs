@@ -1,7 +1,7 @@
 ---
 title: "RevoScaleR Functions for working with SQL Server data | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/31/2017"
+ms.date: "08/20/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -35,9 +35,7 @@ The following functions let you define a [!INCLUDE[ssNoVersion_md](../../include
 
 You can execute DDL statements from R, if you have the necessary permissions on the instance and database. The following functions use ODBC calls to execute DDL statements or retrieve the database schema.
 
-+ [rxSqlServerDropTable](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqlserverdroptable) - Drop a [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] table
-
-+ [rxSqlServerTableExists](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqlservertableexists) - Check for the existence of a database table or object
++ `rxSqlServerTableExists` and [rxSqlServerDropTable](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqlserverdroptable) - Drop a [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] table, or check for the existence of a database table or object
 
 + [rxExecuteSQLDDL](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxexecutesqlddl) - Execute a Data Definition Language (DDL) command that defines or manipulates database objects. This function cannot return data, and is used only to retrieve or modify the object schema or metadata.
 
@@ -49,15 +47,13 @@ The following functions let you define a new compute context, switch compute con
 
 + [rxInSqlServer](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxinsqlserver) - Generate a SQL Server compute context that lets **ScaleR** functions run in SQL Server R Services. This compute context is currently supported only for SQL Server instances on Windows.
 
-+ [rxGetComputeContext](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxgetcomputecontext) - Get the current compute context.
-
-+ [rxSetComputeContext](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsetcomputecontext) - Specify which compute context to use.
++ `rxGetComputeContext` and [rxSetComputeContext](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxgetcomputecontext) - Get or set the active compute context.
 
 ## Move data and transform data
 
 After you have created a data source object, you can use the object to load data into it, transform data, or write new data to the specified destination. Depending on the size of the data in the source, you can also define the batch size as part of the data source and move data in chunks.
 
-+ [rxOpen-methods](https://docs.microsoft.com/microsoft-r/scaler/packagehelp/rxopen-methods) - Check whether a data source is available, open or close a data source, read data from a source, write data to the target, and close a data source
++ [rxOpen-methods](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxopen-methods) - Check whether a data source is available, open or close a data source, read data from a source, write data to the target, and close a data source
 
 + [rxImport](https://docs.microsoft.com/r-server/r-reference/revoscaler/rximport) - Move data from a data source into file storage or into a data frame.
 
@@ -69,6 +65,6 @@ For example, if you regularly move large amounts of data from a database to a lo
 
 + [RxXdfData](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxxdfdata) - Create an XDF data object
 
-+ [rxReadXdf](https://msdn.microsoft.com/r-server/r-reference/revoscaler/rxreadxdf) - Reads data from an XDF file into a data frame
++ [rxReadXdf](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxreadxdf) - Reads data from an XDF file into a data frame
 
 For more information about working with these functions, including using data sources other than [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], see [Import and transform data](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxodbcdata).

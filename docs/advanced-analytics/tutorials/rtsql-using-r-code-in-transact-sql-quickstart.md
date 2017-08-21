@@ -2,7 +2,7 @@
 title: "Using R code in Transact-SQL (R in SQL quickstart) | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "07/26/2017"
+ms.date: "08/20/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -87,12 +87,12 @@ For this tutorial, to show how easy it is to run R inside SQL Server, we'll use 
 
 Now that your instance is ready to work with R, let's get started.
 
-Lesson 1: [Working with inputs and outputs](../../advanced-analytics/tutorials/rtsql-working-with-inputs-and-outputs.md)
+Lesson 1: [Working with inputs and outputs](rtsql-working-with-inputs-and-outputs.md)
 
-Lesson 2: [R and SQL data types and data objects](../../advanced-analytics/tutorials/rtsql-r-and-sql-data-types-and-data-objects.md)
+Lesson 2: [R and SQL data types and data objects](rtsql-r-and-sql-data-types-and-data-objects.md)
 
-Lesson 3: [Using R functions with SQL Server data](../../advanced-analytics/tutorials/rtsql-using-r-functions-with-sql-server-data.md)
+Lesson 3: [Using R functions with SQL Server data](rtsql-using-r-functions-with-sql-server-data.md)
 
-Lesson 4:  [Create a predictive model](../../advanced-analytics/tutorials/rtsql-create-a-predictive-model-r.md)
+Lesson 4:  [Create a predictive model](rtsql-create-a-predictive-model-r.md)
 
-Lesson 5:  [Predict and plot from model](../../advanced-analytics/tutorials/rtsql-predict-and-plot-from-model.md)
+Lesson 5:  [Predict and plot from model](rtsql-predict-and-plot-from-model.md)

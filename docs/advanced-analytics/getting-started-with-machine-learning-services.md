@@ -1,7 +1,7 @@
 ---
 title: "Getting Started | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/31/2017"
+ms.date: "08/20/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -79,7 +79,7 @@ You can also install R Server through platform-specific installers available fro
 
 ### R tutorials
 
-+ [Use R in SQL Server](/tutorials/sql-server-r-tutorials.md)
++ [SQL Server R tutorials](../advanced-analytics/tutorials/sql-server-r-tutorials.md)
 
    Learn how to run R in SQL Server, create and use remote compute contexts, or perform simulations in R using SQL Server.
    
@@ -91,7 +91,7 @@ You can also install R Server through platform-specific installers available fro
 
 ### Python tutorials
 
-+ [Use Python in SQL Server](/tutorials/sql-server-r-tutorials.md)
++ [SQL Server Python tutorials](../advanced-analytics/tutorials/sql-server-r-tutorials.md)
 
   Learn how to run Python in SQL Server. Build a model using Python and use it to score SQL Server data.
 

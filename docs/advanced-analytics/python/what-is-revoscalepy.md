@@ -1,7 +1,7 @@
 ---
 title: "Introducing revoscalepy | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/19/2017"
+ms.date: "08/20/2017"
 ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
@@ -62,7 +62,7 @@ You create the data source object by using functions listed in the following tab
 
 + Use [RxSqlServerData](https://docs.microsoft.com/r-server/python-reference/revoscalepy/rxsqlserverdata) to define a data source from a query or table
 + Use [RxInSqlServer](https://docs.microsoft.com/r-server/python-reference/revoscalepy/rxinsqlserver) to create a SQL Server compute context
-+ Use [RxOdbcData](https://docs.microsoft.com/r-server/python-reference/revoscalepy/rxodbbcdata) to create a data source from an ODBC connection
++ Use [RxOdbcData](https://docs.microsoft.com/r-server/python-reference/revoscalepy/rxodbcdata) to create a data source from an ODBC connection
 
 **revoscalepy** also supports the [XDF data source](https://docs.microsoft.com/r-server/python-reference/revoscalepy/rxxdfdata), used for moving data between memory and other data sources.
 

@@ -1,8 +1,8 @@
 ---
-title: "Common Issues with External Script Execution | Microsoft Docs"
+title: "Common issues with external script execution | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "06/16/2017"
+ms.date: "08/20/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -15,16 +15,15 @@ author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
 ---
-# Common Issues with External Script Execution
+# Common issues with external script execution
 
-This section contains a list of known issues and common problems when running R
-or Python code in SQL Server.
+This section contains a list of known issues and common problems when running R or Python code in SQL Server.
 
 Before you get started, we recommend that you collect some information about your system: [Data Collection for Troubleshooting](data-collection-ml-troubleshooting-process.md)
 
 Also, review this list of common issues specific to initial setup or configuration: [Setup and Upgrade FAQ](r/upgrade-and-installation-faq-sql-server-r-services.md)
 
-## Launchpad Issues
+## Launchpad issues
 
 The **SQL Server Trusted Launchpad** is the service that manages execution of external scripts and communication with R, Python, or other external runtimes. Multiple issues can prevent Launchpad from starting, including configuration problems or changes, or missing network protocols.
 
@@ -36,7 +35,7 @@ As part of the troubleshooting process, begin by asking and answering these ques
 
 ### Determine if Launchpad is running
 
-1.  Open the **Services** panel (Services.msc). Or, from the command line, type SQLServerManager13.msc or SQLServerManager14.msc to open [SQL Server Configuration Manager](https://docs.microsoft.comsql/relational-databases/sql-server-configuration-manager).
+1.  Open the **Services** panel (Services.msc). Or, from the command line, type SQLServerManager13.msc or SQLServerManager14.msc to open [SQL Server Configuration Manager](https://docs.microsoft.com/sql/relational-databases/sql-server-configuration-manager).
 
 2.  Make a note of the service account that the Launchpad is running under. Each instance where R or Python is enabled should have its own instance of the Launchpad service. For example, the service for a named instance might be something like _MSSQLLaunchpad$InstanceName_.
 
@@ -48,7 +47,7 @@ As part of the troubleshooting process, begin by asking and answering these ques
 
 ### Check the Launchpad service account
 
-The default service account is something like this: "NT Service\$SQL2016" where the final part varies, based on your SQL instance name.
+The default service account is something like this: "NT Service\$SQL2016" (or "NT Service\$SQL2017"), where the final part varies, based on your SQL instance name.
 
 The Launchpad service (Launchpad.exe) runs using a low-privilege service account. However to start R and Python and communicate with the database instance, the Launchpad service account requires the following user rights:
 
@@ -97,7 +96,7 @@ As a workaround, you should enable the 8dot3 notation on the volume where SQL Se
 
 #### User group for Launchpad cannot log in locally
 
-During setup of R Services, SQL Server creates the Windows user group, **SQLRUserGroup**, and provisions it with all rights necessary for Launchpad to connect to SQL Server and run external script jobs.
+During setup of machine learning services, SQL Server creates the Windows user group, **SQLRUserGroup**, and provisions it with all rights necessary for Launchpad to connect to SQL Server and run external script jobs. this user group is also used for execution of Python scripts, if enabled.
 
 However, in organizations where more restrictive security policies are enforced, the rights required by this group might have been manually removed, or might be automatically revoked by policy. If this happens, Launchpad can no longer connect to SQL Server, and R Services will be unable to function.
 
@@ -107,7 +106,7 @@ For more information, see [Configure Windows Service Accounts and Permissions](h
 
 #### Improper setup leading to mismatched DLLs
 
-If you install the database engine with other features, patch the server, and then later add the R Services feature using the original media, the wrong version of the R components might be installed. When Launchpad detects a version mismatch, it will shut down and create a dump file.
+If you install the database engine with other features, patch the server, and then later add the machine learning feature using the original media, the wrong version of the machine learning components might be installed. When Launchpad detects a version mismatch, it will shut down and create a dump file.
 
 To avoid this problem, be sure to install any new features at the same patch level as the server instance.
 
@@ -141,7 +140,7 @@ This section lists the most common error messages returned by Launchpad.
 
 #### Error: Unable to launch runtime for R script
 
-If the Windows group for R users (which is also used for Python) does not have the ability to log into the instance that is running R Services, you might see the following errors:
+If the Windows group for R users (also used for Python) does not have the ability to log into the instance that is running R Services, you might see the following errors:
 
 - When trying to run R scripts:
 
@@ -183,17 +182,17 @@ To give the necessary permissions to the new service account, use the **Local Se
 
 #### Error: Unable to communicate with the Launchpad service
 
-If you install R Services and enable the feature, but get this error when you try to run an R script, it might be that the Launchpad service for the instance has stopped running.
+If you have installed and then enabled the machine learning services, but get this error when you try to run an R script, it might be that the Launchpad service for the instance has stopped running.
 
-1.  From a Windows command prompt, open the SQL Server Configuration Manager. For more information, see [SQL Server Configuration Manager](../relational-databases/sql-server-configuration-manager.md).
+1.  From a Windows command prompt, open the SQL Server Configuration Manager. For more information, see [SQL Server Configuration Manager](https://docs.microsoft.com/sql/relational-databases/sql-server-configuration-manager).
 
-2.  Right-click SQL Server Launchpad for the instance where R Services is not working, and select **Properties**.
+2.  Right-click SQL Server Launchpad for the instance, and select **Properties**.
 
 3.  Click the **Service** tab and verify that the service is running. If it is not, change the **Start Mode** to **Automatic** and click **Apply**.
 
-4.  Typically, restarting the service fixes the problem and R scripts can run. If it does not, make a note of the path and arguments in the **Binary Path** property.
+4.  Typically, restarting the service fixes the problem and machine learning scripts can run. If this does not fix the issue, make a note of the path and arguments in the **Binary Path** property.
 
-    - Review the rlauncher.config file and ensure that the working directory is valid.
+    - Review the launcher's .config file and ensure that the working directory is valid.
 
     - Ensure that the Windows group used by Launchpad has the ability to connect to the SQL Server instance, as described in the [previous section](#bkmk_LaunchpadTS).
 
@@ -201,15 +200,15 @@ If you install R Services and enable the feature, but get this error when you tr
 
 #### Error: Fatal error creation of tmpFile failed
 
-In this scenario, you have successfully installed SQL Server 2016 with R Services (In-Database), and Launchpad is running. You try to run some simple R or Python code, but Launchpad fails with this error: “Unable to communicate with the runtime for R script. Please check the requirements of R runtime.”
+In this scenario, you have successfully installed the machine learning services, and Launchpad is running. You try to run some simple R or Python code, but Launchpad fails with an error liek this: “Unable to communicate with the runtime for R script. Please check the requirements of R runtime.”
 
-At the same time, the R runtime outputs the following message as part of the STDERR message: “Fatal error: creation of tmpfile failed”.
+At the same time, the external script runtime outputs the following message as part of the STDERR message: “Fatal error: creation of tmpfile failed”.
 
-This error indicates that the account the R script is attempting to use does not have permission to log into the database. This can happen when strict security policies are implemented. To determine if this is the case, review the SQL Server logs, and check whether the account MSSQLSERVER01 was denied at login. (The same information is provided in the logs specific to R Services, ExtLaunchError.log).
+This error indicates that the account the Launchpad is attempting to use does not have permission to log into the database. This can happen when strict security policies are implemented. To determine if this is the case, review the SQL Server logs, and check whether the account MSSQLSERVER01 was denied at login. The same information is provided in the logs specific to R\_SERVICES or PYTHON\_SERVICES. Look for ExtLaunchError.log.
 
 By default, 20 accounts are provisioned and associated with the Launchpad.exe process, with the names MSSQLSERVER01 – MSSQLSERVER20. The number of accounts might have been increased, if you make heavy use of R or Python.
 
-To resolve the issue, ensure that the group has the permission “Allow Log on Locally” rights to the local instance where R Services is used. In some environments, this might require a GPO exception from the network administrator.
+To resolve the issue, ensure that the group has the permission “Allow Log on Locally” rights to the local instance where machine learning is used. In some environments, this might require a GPO exception from the network administrator.
 
 ## R Script Issues
 

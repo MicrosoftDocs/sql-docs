@@ -1,7 +1,7 @@
 ---
 title: "Deploy and consume analytics using mrsdeploy | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/26/2017"
+ms.date: "08/20/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -42,7 +42,7 @@ This deployment feature of R Server provides these benefits:
 
 + Role-based access control to analytical web services
 
-    Determine who can publish, update, and delete their own web services, those who can also update and delete the web services published by other users, and who can only list and consume web services. Learn more about [roles](https://msdn.microsoft.com/microsoft-r/operationalize/security-roles.md).
+    Determine who can publish, update, and delete their own web services, those who can also update and delete the web services published by other users, and who can only list and consume web services. 
 
 + Faster scoring
   

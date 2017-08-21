@@ -1,5 +1,5 @@
 ---
-title: "Getting Started | Microsoft Docs"
+title: "Getting started with machine learning in SQL Server| Microsoft Docs"
 ms.custom: ""
 ms.date: "08/20/2017"
 ms.prod: "sql-server-2016"

@@ -13,7 +13,7 @@ author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
 ---
-## How to perform realtime scoring or native scoring in SQL Server
+# How to perform realtime scoring or native scoring in SQL Server
 
 This topic provides instructions and sample code for how to execute the realtime scoring and native scoring features in SQL Server 2016 and SQL Server 2017. The goal of both realtime scoring and native scoring is to improve the performance of scoring operations in small batches.
 

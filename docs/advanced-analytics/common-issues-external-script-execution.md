@@ -1,5 +1,5 @@
 ---
-title: "Common issues with external script execution | Microsoft Docs"
+title: "Common issues with external script execution in SQL Server| Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
 ms.date: "08/20/2017"
@@ -15,7 +15,7 @@ author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
 ---
-# Common issues with external script execution
+# Common issues with external script execution in SQL Server
 
 This section contains a list of known issues and common problems when running R or Python code in SQL Server.
 

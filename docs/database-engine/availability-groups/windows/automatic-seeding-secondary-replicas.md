@@ -44,7 +44,7 @@ Automatic seeding may or may not be practical to initialize a secondary replica,
 * The network speed is 1Gb/sec
 * The distance between the two sites is 1000 miles
 
-If if the full bandwidth is available, 1Gb/sec network can provide sustained throughput of 125 MB/sec. In this example, automatic seeding would take just over 11 hours. In practice, the automatic seeding process is slower, as network signals degrade over longer distances and the link is shared with other resources on the network. During seeding, the transaction log on the database at the primary replica continues to grow and cannot be truncated until automatic seeding of that database is complete.  The transaction log can then be truncated using a transaction log backup.
+If the full bandwidth is available, 1Gb/sec network can provide sustained throughput of 125 MB/sec. In this example, automatic seeding would take just over 11 hours. In practice, the automatic seeding process is slower, as network signals degrade over longer distances and the link is shared with other resources on the network. During seeding, the transaction log on the database at the primary replica continues to grow and cannot be truncated until automatic seeding of that database is complete.  The transaction log can then be truncated using a transaction log backup.
 
 Automatic seeding is a single-threaded process that can handle up to five databases. The single-threading affects performance, especially if the availability group has more than one database.
 

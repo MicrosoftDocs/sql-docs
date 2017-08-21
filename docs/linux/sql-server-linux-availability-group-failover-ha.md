@@ -195,6 +195,15 @@ When availability group replicas are on instances of SQL Server in Linux, the cl
 
    >[!NOTE]
    >If an availability group only has asynchronous replicas - to avoid any data loss change one replica to synchronous and wait until it is synchronized. Then upgrade this replica.
+   
+   b.1. Stop the resource on the node hosting the secondary replica targeted for upgrade
+   
+   Before running the upgrade command, stop the resource so the cluster will not monitor it and fail it unnecessarily. The following example adds a location constraint on the node that will result on the resource to be stopped. Update `ag_cluster-master` with the resource name and `nodeName1` with the node hosting the replica targeted for upgrade.
+
+   ```bash
+   pcs constraint location ag_cluster-master avoids nodeName1
+   ```
+   b.2. Upgrade SQL Server on the secondary replica
 
    The following example upgrades `mssql-server` and `mssql-server-ha` packages.
 
@@ -202,11 +211,18 @@ When availability group replicas are on instances of SQL Server in Linux, the cl
    sudo yum update mssql-server
    sudo yum update mssql-server-ha
    ```
+   b.3. Remove the location constraint
+
+   Before running the upgrade command, stop the resource so the cluster will not monitor it and fail it unnecessarily. The following example adds a location constraint on the node that will result on the resource to be stopped. Update `ag_cluster-master` with the resource name and `nodeName1` with the node hosting the replica targeted for upgrade.
+
+   ```bash
+   pcs constraint remove location-ag_cluster-master-rhel1--INFINITY
+   ```
+   As a best practice, ensure the resource is started (using `pcs status` command) and the secondary replica is connected and synchronized state after upgrade.
 
 1. After all secondary replicas are upgraded, manually fail over to one of the synchronous secondary replicas.
 
    For availability groups with `EXTERNAL` cluster type, use the cluster management tools to fail over; availability groups with `NONE` cluster type should use Transact-SQL to fail over. 
-
    The following example fails over an availability group with the cluster management tools. Replace `<targetReplicaName>` with the name of the synchronous secondary replica that will become primary:
 
    ```bash
@@ -215,7 +231,6 @@ When availability group replicas are on instances of SQL Server in Linux, the cl
    
    >[!IMPORTANT]
    >The following steps only apply to availability groups that do not have a cluster manager.  
-
    If the availability group cluster type is `NONE`, manually fail over. Complete the following steps in order:
 
       a. The following command sets the primary replica to secondary. Replace `AG1` with the name of your availability group. Run the Transact-SQL command on the instance of SQL Server that hosts the primary replica.
@@ -230,13 +245,27 @@ When availability group replicas are on instances of SQL Server in Linux, the cl
       ALTER AVAILABILITY GROUP [ag1] FAILOVER;
       ```
 
-1. After failover, upgrade SQL Server on the old primary replica. 
+1. After failover, upgrade SQL Server on the old primary replica by repeating the same procedure described in steps b.1-b.3 above.
 
    The following example upgrades `mssql-server` and `mssql-server-ha` packages.
 
    ```bash
+   # add constraint for the resource to stop on the upgraded node
+   # replace 'nodename2' with the name of the cluster node targeted for upgrade
+   pcs constraint location ag_cluster-master avoids nodeName2
    sudo yum update mssql-server
    sudo yum update mssql-server-ha
+   ```
+   
+   ```bash
+   # upgrade mssql-server and mssql-server-ha packages
+   sudo yum update mssql-server
+   sudo yum update mssql-server-ha
+   ```
+
+   ```bash
+   # remove the constraint; make sure the resource is started and replica is connected and synchronized
+   pcs constraint remove location-ag_cluster-master-rhel1--INFINITY
    ```
 
 1. For an availability groups with an external cluster manager - where cluster type is EXTERNAL, cleanup the location constraint that was caused by the manual failover. 

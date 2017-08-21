@@ -247,35 +247,35 @@ Only manual failover is supported at this time. The following Transact-SQL state
 
 1. On the SQL Server that hosts the primary replica for the primary availability group, set the distributed availability group role to `SECONDARY`. 
 
-      ```sql
-      ALTER AVAILABILITY GROUP distributedag SET (ROLE = SECONDARY); 
-      ```  
+    ```sql
+    ALTER AVAILABILITY GROUP distributedag SET (ROLE = SECONDARY); 
+    ```  
 
-   >[NOTE!]
-   >At this point, the distributed availability group is not available.
+    >[NOTE!]
+    >At this point, the distributed availability group is not available.
 
 1. Test the failover readiness. Run the following query:
 
-      ```sql
-      SELECT ag.name, 
-             drs.database_id, 
-             drs.group_id, 
-             drs.replica_id, 
-             drs.synchronization_state_desc, 
-             drs.end_of_log_lsn 
-      FROM sys.dm_hadr_database_replica_states drs, sys.availability_groups ag
-      WHERE drs.group_id = ag.group_id; 
-      ```  
+    ```sql
+    SELECT ag.name, 
+        drs.database_id, 
+        drs.group_id, 
+        drs.replica_id, 
+        drs.synchronization_state_desc, 
+        drs.end_of_log_lsn 
+    FROM sys.dm_hadr_database_replica_states drs, sys.availability_groups ag
+    WHERE drs.group_id = ag.group_id; 
+    ```  
     The availability group is ready to fail over when the **synchronization_state_desc** is `SYNCHRONIZED` and the **end_of_log_lsn** is the same for both availability groups. 
 
 1. Fail over from the primary availability group to the secondary availability group. Run the following command on the SQL Server that hosts the primary replica for the secondary availability group. 
 
-      ```sql
-      ALTER AVAILABILITY GROUP distributedag FORCE_FAILOVER_ALLOW_DATA_LOSS; 
-      ```  
+    ```sql
+    ALTER AVAILABILITY GROUP distributedag FORCE_FAILOVER_ALLOW_DATA_LOSS; 
+    ```  
 
-   >[NOTE!]
-   >After this step, the distributed availability group is available.
+    >[NOTE!]
+    >After this step, the distributed availability group is available.
       
 After completing the steps above, the distributed availability group fails over without any data loss. If the availability groups are across a geographical distance that causes latency, change the availability mode back to ASYNCHRONOUS_COMMIT. 
   
@@ -316,8 +316,8 @@ CREATE AVAILABILITY GROUP [SQLFCIDAG]
       );   
 ```  
 
->[NOTE!]
->The listener URL is the VNN of the primary FCI instance.
+    >[NOTE!]
+    >The listener URL is the VNN of the primary FCI instance.
 
 ## Manually fail over FCI in distributed availability group
 

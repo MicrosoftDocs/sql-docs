@@ -49,7 +49,7 @@ The v7.2 release of SSMA for Sybase contains the following changes:
 
 ## SSMA v7.1
 The v7.1 release of SSMA for Access contains the following changes:
-- SQL Server 2017 on Windows and Linux CTP1 is now a supported target platform for migration. This feature is in technical preview and allows schema and data movement to target SQL servers.
+- SQL Server 2017 on Windows and Linux CTP1 is now a supported target platform for migration. This feature is in technical preview and supports schema and data movement to target SQL servers.
 - SSMA now supports automatic updates to download the latest version of SSMA as soon as it is available.
 - SSMA installable binaries are now delivered through Windows installer package files (.msi).
 
@@ -115,9 +115,9 @@ The July 2011 release of SSMA for Sybase contains the following changes:
 ## April 2011  
 The April 2011 release of SSMA for Sybase contains the following changes:  
   
--   Consolidated “SSMA for Sybase” product, which supports [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] “Denali” and SQL Azure.  
+-   Consolidated “SSMA for Sybase” product, which supports [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] “Denali” and Azure SQL.  
 -   Added support for connecting and migrating to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] “Denali.”  
--   Added a new feature to convert and migrate Sybase databases to SQL Azure.  
+-   Added a new feature to convert and migrate Sybase databases to Azure SQL.  
 -   Enhanced client-side data migration engine, supporting parallel migration of data.  
 -   Improved data migration performance with Simple and Bulk logged recovery models.  
 -   Added the ability to properly convert and migrate case-sensitive Sybase databases to case-sensitive SQL Server.  
@@ -141,7 +141,7 @@ The July 2010 release of SSMA for Sybase contains the following changes:
 The June 2008 release of SSMA for Sybase contains the following changes:  
   
 -   Added SSMA Tester, which automatically tests the database object conversion and the data migration made by SSMA. After all SSMA migration steps are finished, use SSMA Tester to verify that converted objects work the same way and that all data was transferred properly.  
--   Added Pre-SQL conversion. User now can specify temporary tables (and other objects) declarations for each source procedure to be used in conversion.  
+-   Added Pre-SQL conversion. User now can specify temporary table (and other object) declarations for each source procedure to be used in conversion.  
 -   Added improvements in object conversion:  
     -   Joins conversion revised.  
     -   Aggregates and non-aggregates without having/group by clauses.  
@@ -156,7 +156,7 @@ The June 2008 release of SSMA for Sybase contains the following changes:
 The May 2007 release of SSMA for Sybase contains the following changes:  
   
 -   Added the ability to load database content faster when saving a project.  
--   Added support for user-entered comments the SQL Server formatted SQL mode.  
+-   Added support for user-entered comments in the SQL Server formatted SQL mode.  
 -   Added improvements in object conversion.  
   
 The Help file was not updated for this release. For more information, see the Documentation Notes section later in this topic.  
@@ -167,7 +167,7 @@ The November 2006 release of SSMA for Sybase contains the following changes:
 -   Added new global settings:  
     -   You can opt to show line numbers in editor windows.  
     -   You can configure SSMA to prompt to replace duplicate objects, or always or never replace duplicate objects during schema conversion.  
--   Added a new conversion option let you configure how SSMA handles the following situations:  
+-   Added a new conversion option that lets you configure how SSMA handles the following situations:  
     -   A CAST or CONVERT statement that contains a binary string.  
     -   Checks for null values in equality expressions.  
     -   Proxy tables.  

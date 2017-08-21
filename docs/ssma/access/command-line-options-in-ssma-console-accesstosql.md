@@ -129,7 +129,7 @@ You cannot enter any other option or password as the command-line parameter. Oth
   
 The following suboptions are supported for `–p/securepassword`:  
   
--   To add a password to protected storage for a specified Server ID, or for all Server IDs defined in the server connection file; the -overwrite option, shown in the following example, update the password if it already exists:  
+-   To add a password, or update an existing password, to protected storage for a specified Server ID or for all Server IDs defined in the server connection file:  
   
     `-p|-securepassword -a|add    {"<server_id>[, .n]"|all}``-c|-serverconnection <server-connection-file> [-v|variable <variable-value-file>]``[-o|overwrite]`  
   

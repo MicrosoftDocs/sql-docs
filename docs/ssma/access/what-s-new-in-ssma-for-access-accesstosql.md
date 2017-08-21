@@ -51,7 +51,7 @@ The v7.2 release of SSMA for Access contains the following changes:
 
 ## SSMA v7.1
 The v7.1 release of SSMA for Access contains the following changes:
-- SQL Server 2017 on Windows and Linux CTP1 is now a supported target platform for migration. This feature is in technical preview and allows schema and data movement to target SQL servers.
+- SQL Server 2017 on Windows and Linux CTP1 is now a supported target platform for migration. This feature is in technical preview and supports schema and data movement to target SQL servers.
 - SSMA now supports automatic updates to download the latest version of SSMA as soon as it is available.
 - SSMA installable binaries are now delivered through Windows installer package files (.msi).
 
@@ -87,7 +87,7 @@ The January 2016 maintenance release of SSMA for Access contains the following c
 The July 2014 release of SSMA for Access contains the following changes:  
   
 -   Improved Azure SQL DB code conversion.  
--   Move extension pack functionality to schema to support Azure SQL DB.  
+-   Moved extension pack functionality to schema to support Azure SQL DB.  
 -   Tested performance improvements for databases with over 10k objects.  
 -   Added UI improvements for dealing with large number of objects.  
 -   Added support for highlighting of “well known” LOB schemas (so they can be ignored in conversion).  
@@ -118,7 +118,7 @@ The July 2011 release of SSMA for Access contains the following changes:
 ## April 2011  
 The April 2011 release of SSMA for Access contains the following changes:  
   
--   Added a single installable of “SSMA for Access”, which supports [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] “Denali” and SQL Azure.  
+-   Added a single installable of “SSMA for Access”, which supports [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] “Denali” and Azure SQL.  
 -   Added the ability to connect [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] “Denali.”  
 -   Added SSMA for Access Console version support for backward compatibility. You can open the projects created by versions earlier to SSMA v5.0.
 -   Added the ability to install SSMA v5.0 product side by side (SxS) with older versions of SSMA Product.  
@@ -126,8 +126,8 @@ The April 2011 release of SSMA for Access contains the following changes:
 ## July 2010  
 The July 2010 release of SSMA for Access contains the following changes:  
   
--   Added support for migrating to SQL Server 2008 R2 and SQL Azure.
--   Added a secure connection to both SQL Server and SQL Azure.  
+-   Added support for migrating to SQL Server 2008 R2 and Azure SQL.
+-   Added a secure connection to both SQL Server and Azure SQL.  
 -   Added support for Access 2010 databases.
 -   Added a new SSMA Console application for command-line execution.
 -   Added support for the SQL Server DateTime2 data type.
@@ -142,7 +142,7 @@ The May 2007 release of SSMA for Access contains the following changes:
   
 -   Added support for Access databases that use workgroup policies.  
 -   Provided the ability to delete converted objects from the SQL Server metadata explorer.  
--   Added support for user-entered comments the SQL Server formatted SQL mode.  
+-   Added support for user-entered comments in the SQL Server formatted SQL mode.  
 -   Added improvements in object conversion.  
   
 ## November 2006  

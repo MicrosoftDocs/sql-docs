@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Migration Assistant | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/16/2017"
+ms.date: "08/17/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -44,7 +44,7 @@ The following target versions are supported for SSMA.
 - SQL Server 2014
 - SQL Server 2016
 - Azure SQL Database
-- SQL Server 2017
+- SQL Server 2017 on Windows and Linux (Preview)
 - **Azure SQL Data Warehouse
 
 ** This target is supported only by SSMA for Oracle.

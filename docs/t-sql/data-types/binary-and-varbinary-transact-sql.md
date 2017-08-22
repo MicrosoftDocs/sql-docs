@@ -1,7 +1,7 @@
 ---
 title: "binary and varbinary (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "7/22/2017"
+ms.date: "08/16/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -50,7 +50,7 @@ When *n* is not specified in a data definition or variable declaration statement
 ## Converting binary and varbinary data
 When data is converted from a string data type (**char**, **varchar**, **nchar**, **nvarchar**, **binary**, **varbinary**, **text**, **ntext**, or **image**) to a **binary** or **varbinary** data type of unequal length, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pads or truncates the data on the right. When other data types are converted to **binary** or **varbinary**, the data is padded or truncated on the left. Padding is achieved by using hexadecimal zeros.
   
-Converting data to the **binary** and **varbinary** data types is useful if **binary** data is the easiest way to move data around. Converting any value of any type to a binary value of large enough size and then back to the type, will always result in the same value if both conversions are taking place on the same version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The binary representation of a value might change from version to version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+Converting data to the **binary** and **varbinary** data types is useful if **binary** data is the easiest way to move around data. Converting any value of any type to a binary value of large enough size and then back to the type, always results in the same value if both conversions are taking place on the same version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The binary representation of a value might change from version to version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   
 You can convert **int**, **smallint**, and **tinyint** to **binary** or **varbinary**, but if you convert the **binary** value back to an integer value, this value will be different from the original integer value if truncation has occurred. For example, the following SELECT statement shows that the integer value `123456` is usually stored as a binary `0x0001e240`:
   

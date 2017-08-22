@@ -21,7 +21,7 @@ manager: "jhubbard"
  Connect to an OData data source with an OData connection manager. An OData Source component uses an OData connection manager to connect to an OData data source and consume data from the service. For more info, see [OData Source](../../integration-services/data-flow/odata-source.md).  
   
 ## Adding an OData Connection Manager to an SSIS Package  
- You can add a new OData Connection Manager to an SSIS package in three ways:  
+ You can add a new OData connection manager to an SSIS package in three ways:  
   
 -   Click the **New…** button in the **OData Source Editor**  
   
@@ -30,7 +30,7 @@ manager: "jhubbard"
 -   Right-click in the **Connection Managers** pane at the bottom of the package designer, and then select **New Connection**. Select **ODATA** for **Connection manager type**.  
   
 ## Connection Manager Authentication  
- The OData Connection Manager supports five modes of authentication.  
+ The OData connection manager supports five modes of authentication.  
   
 -   Windows Authentication  
   
@@ -50,7 +50,7 @@ manager: "jhubbard"
  There are several ways to parameterize the username and password values or to store them outside the package. For example, you can use parameters, or set the connection manager properties directly when you run the package from SQL Server Management Studio.  
   
 ## OData Connection Manager Properties  
- The following list describes the properties of the OData Connection Manager.  
+ The following list describes the properties of the OData connection manager.  
   
 |||  
 |-|-|  

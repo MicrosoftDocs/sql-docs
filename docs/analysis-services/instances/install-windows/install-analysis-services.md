@@ -39,7 +39,7 @@ manager: "erikre"
   
      ![Setup feature tree showing Analsyis Services](../../../analysis-services/instances/install-windows/media/ssas-setupas.gif "Setup feature tree showing Analsyis Services")  
   
-2.  On the Analysis Services Configuration page, select a mode. Tabular mode is the defualt..  
+2.  On the Analysis Services Configuration page, select a mode. Tabular mode is the default..  
   
      ![Setup page with Analysis Services config options](../../../analysis-services/instances/install-windows/media/ssas-setupasconfig.png "Setup page with Analysis Services config options")  
   

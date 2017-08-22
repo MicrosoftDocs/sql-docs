@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Migration Assistant | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/11/2017"
+ms.date: "08/17/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -16,7 +16,7 @@ ms.assetid: d0233525-a83b-4279-813e-c554042abd0e
 caps.latest.revision: 18
 author: "sabotta"
 ms.author: "carlasab"
-manager: "murato"
+manager: "craigg"
 ---
 # SQL Server Migration Assistant
 Microsoft SQL Server Migration Assistant (SSMA) is a tool designed to automate database migration to SQL Server from Microsoft Access, DB2, MySQL, Oracle, and Sybase.  
@@ -32,6 +32,23 @@ Microsoft SQL Server Migration Assistant (SSMA) is a tool designed to automate d
 -   [SQL Server Migration Assistant for Oracle](../ssma/oracle/sql-server-migration-assistant-for-oracle-oracletosql.md)  
   
 -  [ SQL Server Migration Assistant for Sybase ASE](../ssma/sybase/sql-server-migration-assistant-for-sybase-sybasetosql.md)  
+
+## Supported Sources and Target Versions
+For supported sources, review the information on the Download Center for the SSMA download.
+
+The following target versions are supported for SSMA.
+
+- SQL Server 2008
+- SQL Server 2008 R2
+- SQL Server 2012
+- SQL Server 2014
+- SQL Server 2016
+- Azure SQL Database
+- SQL Server 2017 on Windows and Linux (Preview)
+- **Azure SQL Data Warehouse
+
+** This target is supported only by SSMA for Oracle.
+ 
 
 ## Downloads
 - [SSMA for Access](http://aka.ms/ssmaforaccess)

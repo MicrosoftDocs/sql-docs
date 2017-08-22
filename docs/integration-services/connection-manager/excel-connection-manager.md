@@ -76,17 +76,18 @@ manager: "jhubbard"
  **First row has column names**  
  Specify whether the first row of data in the selected worksheet contains column names. The default value of this option is **True**.  
   
-### Providers and drivers for Microsoft Excel and Access file  
- You may have to download the OLE DB providers and drivers for Microsoft Office files if they're not already installed. Later versions of the provider can open files created by earlier versions of Excel.  
+## Connectivity components for Microsoft Excel and Access files
   
- If the computer has a 32-bit version of Office, then you have to install the 32-bit version of the drivers, and you also have to ensure that you run the wizard or the Integration Services package that it creates in 32-bit mode.  
+You may have to download the connectivity components for Microsoft Office files if they're not already installed. Download the latest version of the connectivity components for both Excel and Access files here:
+[Microsoft Access Database Engine 2016 Redistributable](https://www.microsoft.com/download/details.aspx?id=54920).
   
-|Microsoft Office version|Download|  
-|------------------------------|--------------|  
-|2007|[2007 Office System Driver: Data Connectivity Components](https://www.microsoft.com/download/details.aspx?id=23734)|  
-|2010|[Microsoft Access 2010 Runtime](https://www.microsoft.com/download/details.aspx?id=10910)|  
-|2013|[Microsoft Access 2013 Runtime](http://www.microsoft.com/download/details.aspx?id=39358)|  
-|2016|[Microsoft Access 2016 Runtime](https://www.microsoft.com/download/details.aspx?id=50040)|
+The latest version of the components can open files created by earlier versions of Excel.
+
+If the computer has a 32-bit version of Office, then you have to install the 32-bit version of the components, and you also have to ensure that you run the package in 32-bit mode.
+
+If you have an Office 365 subscription, make sure that you download the Access Database Engine 2016 Redistributable and not the Microsoft Access 2016 Runtime. When you run the installer, you may see an error message that you can't install the download side-by-side with Office click-to-run components. To bypass this error message, run the installation in quiet mode by opening a Command Prompt window and running the .EXE file that you downloaded with the `/quiet` switch. For example:
+
+`C:\Users\<user name>\Downloads\AccessDatabaseEngine.exe /quiet`
   
 ## Related Tasks  
   

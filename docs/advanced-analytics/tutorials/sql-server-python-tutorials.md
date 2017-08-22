@@ -72,7 +72,7 @@ To use these tutorials, you must have installed SQL Server 2017 Machine Learning
 
 After running SQL Server setup, don't forget these important steps:
 
-+ Enable the external script execution feature by running `sp_configure 'enable external script', 1`
++ Enable the external script execution feature by running `sp_configure 'external scripts enabled', 1`
 + Restart the server
 + Ensure that the service that calls the external runtime has necessary permissions
 + Ensure that your SQL login or Windows user account has necessary permissions to connect to the server, to read data, and to create any database objects required by the sample

@@ -2,7 +2,7 @@
 title: "Power BI Report Server Integration (Configuration Manager) | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "05/25/2017"
+ms.date: "08/17/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -23,7 +23,7 @@ manager: "erikre"
 
 # Power BI Report Server Integration (Configuration Manager)
 
-[!INCLUDE[ssrs-appliesto-sql2016-preview](../../includes/ssrs-appliesto-sql2016-preview.md)]
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
 The  **Power BI Integration** page  in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager is used to register the report server with the desired Azure Active Directory (AD) managed tenant to allow users of the report server to pin supported report items to [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] dashboards. For a list of the supported items you can pin, see [Pin Reporting Services items to Power BI Dashboards](../../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md).
 
@@ -35,7 +35,7 @@ In addition to an active internet connection so you can browse to the [!INCLUDE[
 
 - **Azure Active Directory:** Your organization must use Azure Active Directory, which provides directory and identity management for Azure services and web applications. For more information, see [What is Azure Active Directory?](https://azure.microsoft.com/en-us/documentation/articles/active-directory-whatis/)
 
-- **Managed Tenant:** The [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] dashboard you want to pin report items to must be part of an Azure AD managed tenant.  A managed tenant is created automatically the first time your organization subscribes to Azure services such as Office 365 and Microsoft Intune.   Viral tenants are currently not supported supported.  For more information, see  the sections "What is an Azure AD tenant" and "how to get an Azure AD Directory" in [What is an Azure AD directory?](https://msdn.microsoft.com/library/azure/jj573650.aspx#BKMK_WhatIsAnAzureADTenant)
+- **Managed Tenant:** The [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] dashboard you want to pin report items to must be part of an Azure AD managed tenant.  A managed tenant is created automatically the first time your organization subscribes to Azure services such as Office 365 and Microsoft Intune.   Viral tenants are currently not supported.  For more information, see  the sections "What is an Azure AD tenant" and "how to get an Azure AD Directory" in [What is an Azure AD directory?](https://msdn.microsoft.com/library/azure/jj573650.aspx#BKMK_WhatIsAnAzureADTenant)
 
 - The user performing the [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] integration needs to be a member of the Azure AD tenant, a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] system administrator and a system administrator for the ReportServer catalog database.
 

@@ -1,7 +1,7 @@
 ---
 title: "Changelog for SQL Server Data Tools (SSDT) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/07/2017"
+ms.date: "08/18/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -16,13 +16,28 @@ ms.author: "sstein"
 manager: "craigg"
 ---
 # Changelog for SQL Server Data Tools (SSDT)
-This change log is for [SQL Server Data Tools (SSDT) for Visual Studio 2015](https://msdn.microsoft.com/library/mt204009.aspx).  
+This change log is for [SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx).  
   
 For detailed posts about what's new and changed, see [the SSDT Team blog](https://blogs.msdn.microsoft.com/ssdt/)
 
+## SSDT for Visual Studio 2017 (15.3.0 preview)
+Build number: 14.0.16121.0
+  
+**What's New**
+
+This preview is the first version of SSDT for Visual Studio 2017. This release introduces a standalone web installation experience for SQL Server Database, Analysis Services, Reporting Services, and Integration Services projects in Visual Studio 2017 15.3 or later.
 
 
-## SSDT 17.2
+**Known Issues**
+
+- The installer is not localized.
+- SSIS is not localized.
+- SSIS Execute Package Task doesn't support debugging when *ExecuteOutofProcess* is set to *True*. This issue only applies to debugging. Save, deploy, and execution via DTExec.exe or SSIS catalog is not impacted.
+- For a complete list of changes, see the [changelog](changelog-for-sql-server-data-tools-ssdt.md).
+- Report issues at the [SSDT Connect Feedback](https://connect.microsoft.com/SQLServer/Feedback) site.
+
+
+## SSDT 17.2 for Visual Studio 2015
 Build number: 14.0.61707.300
 
 ### What's New?
@@ -70,7 +85,7 @@ Build number: 14.0.61707.300
 - Changed latest *TargetServerVersion* from "SQL Server vNext" to "SQL Server 2017"
 
 
-## SSDT 17.1
+## SSDT 17.1 for Visual Studio 2015
 Build number: 14.0.61705.170
 
 ### What's New?
@@ -100,7 +115,7 @@ Build number: 14.0.61705.170
 ## DacFx 17.0.1 
 - Fix for issue with databases with an asymmetric key by an HSM with an EKM provider [Connect item](https://connect.microsoft.com/SQLServer/feedback/details/3132749/sqlpackage-exe-fails-when-extracting-a-database-which-contains-an-asymmetric-key-using-an-ekm-provider)
 
-## SSDT 17.0 (supports up to SQL Server 2017)
+## SSDT 17.0 for Visual Studio 2015 (supports up to SQL Server 2017)
 Build number: 14.0.61704.140
 
 ### What's New?
@@ -202,7 +217,7 @@ Build number: 14.0.61704.140
 - Always Encrypted: Online encryption does not disable change tracking on cancellation and does not work properly if change tracking has not been cleaned prior to start encryption
 
 
-## SSDT 16.5 (supports up to SQL Server 2016)
+## SSDT 16.5 for Visual Studio 2015 (supports up to SQL Server 2016)
 Released: October 20, 2016
 
 Build number: 14.0.61021.0
@@ -297,7 +312,7 @@ For more information, please read the [Analysis Services blog post](https://blog
 
 
 
-## SSDT 16.4 (for SQL Server 2016)
+## SSDT 16.4 for Visual Studio 2015 (for SQL Server 2016)
 Released: September 20, 2016
 
 Build number: 14.0.60918
@@ -337,7 +352,7 @@ SSDT Tabular now includes an internal SSAS instance, which SSDT Tabular starts a
 
 
 
-## SSDT 16.3 (for SQL Server 2016)
+## SSDT 16.3 for Visual Studio 2015 (for SQL Server 2016)
 Released: August 15, 2016
 
 Build number: 14.0.60812.0  
@@ -377,7 +392,7 @@ Build number: 14.0.60812.0
 
  
   
-## SSDT July (for SQL Server 2016)  
+## SSDT July for Visual Studio 2015 (for SQL Server 2016)  
 Released: June 30, 2016  
   
 Build number: 14.0.60629.0  
@@ -420,7 +435,7 @@ Build number: 14.0.60629.0
     * Fixed issue in 1200 compatibility level models calculated table UI when using default formatting for column type to allow changing the formatting type from the UI. 
     
 
-## SSDT June (for SQL Server 2016)  
+## SSDT June for Visual Studio 2015 (for SQL Server 2016)  
 Released: June 1, 2016  
   
 Build number: 14.0.60525.0 

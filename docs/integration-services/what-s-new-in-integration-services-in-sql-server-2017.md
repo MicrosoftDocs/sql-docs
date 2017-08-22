@@ -29,7 +29,15 @@ Here are the most important new features in Integration Services for SQL Server 
 
 -   **Integration Services on Linux**. Run SSIS packages on Linux computers. For more info, see [Extract, transform, and load data on Linux with SSIS](../linux/sql-server-linux-migrate-ssis.md).
 
--   **Connectivity improvements**. Connect to the OData feeds of Microsoft Dynamics AX Online and Microsoft Dynamics CRM Online with the updated OData components. In addition to these connectivity improvements in SQL Server, the Integration Services Feature Pack for Azure has added support for Azure Data Lake Store. For more info, see [Azure Feature Pack for Integration Services (SSIS)](azure-feature-pack-for-integration-services-ssis.md).
+-   **Connectivity improvements**. Connect to the OData feeds of Microsoft Dynamics AX Online and Microsoft Dynamics CRM Online with the updated OData components. 
+
+## New in the Azure Feature Pack
+
+In addition to the connectivity improvements in SQL Server, the Integration Services Feature Pack for Azure has added support for Azure Data Lake Store. For more info, see [Azure Feature Pack for Integration Services (SSIS)](azure-feature-pack-for-integration-services-ssis.md).
+
+## New in SQL Server Data Tools (SSDT)
+
+You can now develop SSIS projects and packages that target SQL Server versions 2012 through 2017 in Visual Studio 2017 or in Visual Studio 2015. For more info, see [Download SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md).
 
 ## New in SSIS in SQL Server 2017 RC1
 

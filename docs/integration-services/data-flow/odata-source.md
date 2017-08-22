@@ -20,28 +20,25 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # OData Source
-  Use the OData Source component in an SSIS package to consume data from an Open Data Protocol (OData) service. The component supports the OData v3 and v4 protocols.  
+Use the OData Source component in an SSIS package to consume data from an Open Data Protocol (OData) service. The component supports the OData v3 and v4 protocols.  
   
 -   For OData V3 protocol, the component supports the ATOM and JSON data formats .  
   
 -   For OData V4 protocol, the component supports the JSON data format .  
+
+The OData source includes support for the following data sources:
+-   Microsoft Dynamics AX Online and Microsoft Dynamics CRM Online
+-   SharePoint lists. To see all the lists on a SharePoint server, use the following URL: http://\<server>/_vti_bin/ListData.svc. For more information about SharePoint URL conventions, see [SharePoint Foundation REST Interface](http://msdn.microsoft.com/library/ff521587.aspx).
   
-> [!NOTE]  
->  You can also use the OData Source to read from SharePoint lists. To see all the lists on a SharePoint server, use the following URL: http://\<server>/_vti_bin/ListData.svc. For more information about SharePoint URL conventions, see [SharePoint Foundation REST Interface](http://msdn.microsoft.com/library/ff521587.aspx).  OData source now supports Microsoft Dynamics AX Online and Microsoft Dynamics CRM Online products.
+## OData Format and Performance
+ Most OData services can return results in multiple formats. You can specify the format of the result set by using the `$format` query option. Formats such as JSON and JSON Light are more efficient than ATOM or XML, and may give you better performance when transferring large amounts of data. The following table provides results from sample tests. As you can see, there was a 30-53% performance gain when switching from ATOM to JSON and a 67% performance gain when switching from ATOM to the new JSON light format (available in WCF Data Services 5.1).  
   
-## OData Format  
- Most OData services return results in multiple formats. You can specify the format of the result set by using the $format query option. Formats such as JSON and JSON Light are more efficient than ATOM or XML, and may give you better performance when transferring large amounts of data. The following table provides results from sample tests. As you can see, there was a 30-53% performance gain when switching from ATOM to JSON and a 67% performance gain when switching from ATOM to the new JSON light format (available in WCF Data Services 5.1).  
-  
-|||||  
-|-|-|-|-|  
 |Rows|ATOM|JSON|JSON (Light)|  
+|-|-|-|-|  
 |10000|113 seconds|74 seconds|68 seconds|  
 |1000000|1110 seconds|853 seconds|665 seconds|  
   
-> [!NOTE]  
->  The SSIS OData Source uses 5.6.1 to parse OData V3 feeds and ODataLib 6.12.0 to parse OData V4 feeds.  
-  
-## In This Section  
+## Related Topics in This Section  
   
 -   [Tutorial: Using the OData Source](../../integration-services/data-flow/tutorial-using-the-odata-source.md)  
   
@@ -70,10 +67,10 @@ manager: "jhubbard"
 |Resource Path|Retrieve data from the OData source by using a resource path.|  
   
  **Query options**  
- Specify options for the query.  For example: $top=5  
+ Specify options for the query. For example: `$top=5` 
   
  **Feed url**  
- Displays the read-only Feed URL based on options you selected on this dialog box.  
+ Displays the read-only feed URL based on options you selected on this dialog box.  
   
  **Preview**  
  Preview results by using the **Preview** dialog box. **Preview** can display up to 20 rows.  
@@ -93,7 +90,7 @@ manager: "jhubbard"
   
 ### Options  
  **Available External Columns**  
- View the list of available source columns in the data source. Use check boxes in the list to add to or remove columns to the table at the bottom of the page. The selected columns will be added to the output.  
+ View the list of available source columns in the data source. Use check boxes in the list to add to or remove columns to the table at the bottom of the page. The selected columns are added to the output.  
   
  **External Column**  
  View source columns that you chose to be included in the output.  

@@ -36,7 +36,7 @@ manager: "jhubbard"
 ## Types of Plan Guides  
  The following types of plan guides can be created.  
   
- OBJECT plan guide  
+ ### OBJECT plan guide  
  An OBJECT plan guide matches queries that execute in the context of [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedures, scalar user-defined functions, multi-statement table-valued user-defined functions, and DML triggers.  
   
  Suppose the following stored procedure, which takes the `@Country_region` parameter, is in a database application that is deployed against the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database:  
@@ -75,7 +75,7 @@ sp_create_plan_guide
   
  When the query specified in the `sp_create_plan_guide` statement executes, the query is modified before optimization to include the `OPTIMIZE FOR (@Country = N''US'')` clause.  
   
- SQL plan guide  
+ ### SQL plan guide  
  An SQL plan guide matches queries that execute in the context of stand-alone [!INCLUDE[tsql](../../includes/tsql-md.md)] statements and batches that are not part of a database object. SQL-based plan guides can also be used to match queries that parameterize to a specified form. SQL plan guides apply to stand-alone [!INCLUDE[tsql](../../includes/tsql-md.md)] statements and batches. Frequently, these statements are submitted by an application by using the [sp_executesql](../../relational-databases/system-stored-procedures/sp-executesql-transact-sql.md) system stored procedure. For example, consider the following stand-alone batch:  
   
 ```t-sql  
@@ -99,7 +99,7 @@ sp_create_plan_guide
   
  SQL plan guides can also be created on queries that parameterize to the same form when the PARAMETERIZATION database option is SET to FORCED, or when a TEMPLATE plan guide is created specifying that a parameterized class of queries.  
   
- TEMPLATE plan guide  
+ ### TEMPLATE plan guide  
  A TEMPLATE plan guide matches stand-alone queries that parameterize to a specified form. These plan guides are used to override the current PARAMETERIZATION database SET option of a database for a class of queries.  
   
  You can create a TEMPLATE plan guide in either of the following situations:  

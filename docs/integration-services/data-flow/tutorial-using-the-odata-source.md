@@ -34,15 +34,15 @@ manager: "jhubbard"
   
 1.  Drag-drop a **Data Flow Task** from the **SSIS Toolbox** on to the control flow design surface of your SSIS package.  
   
-2.  Click the **Data Flow** tab, or double click on the newly added **Data Flow Task** to launch the **Data Flow design surface**.  
+2.  Click the **Data Flow** tab, or double-click on the **Data Flow Task** to open the Data Flow design surface.  
   
-3.  Drag-drop **OData Source** from the **Common** group in the **SSIS Toolbox**. When the **OData Source** is first installed, it will appear under the **Common** group in the **SSIS Toolbox**.  
+3.  Drag-drop **OData Source** from the **Common** group in the **SSIS Toolbox**. When the **OData Source** is first installed, it appears under the **Common** group in the **SSIS Toolbox**.  
   
-4.  Double click the **OData Source** component to launch the **OData Source Editor** dialog box.  
+4.  Double-click the **OData Source** component to launch the **OData Source Editor** dialog box.  
   
 5.  Click **New…** to add a new OData Connection Manager.  
   
-6.  Enter the OData service URL for **Service document location**. This can be the URL to the service document, or to a specific feed or entity. For the purpose of this tutorial, enter the URL to the service document: [http://services.odata.org/V3/Northwind/Northwind.svc/](http://services.odata.org/V3/Northwind/Northwind.svc/).  
+6.  Enter the OData service URL for **Service document location**. This URL can be the URL to the service document, or to a specific feed or entity. For the purpose of this tutorial, enter the URL to the service document: [http://services.odata.org/V3/Northwind/Northwind.svc/](http://services.odata.org/V3/Northwind/Northwind.svc/).  
   
 7.  Confirm that **Windows Authentication** is selected for the **authentication** to use to access the OData Service. **Windows Authentication** is selected by default.  
   
@@ -50,7 +50,7 @@ manager: "jhubbard"
   
 9. In the **OData Source Editor** Dialog Box, confirm that **Collection** is selected for **Use collection on resource path** option.  
   
-10. From the **Collection** drop down list, select **Employees**.  
+10. From the **Collection** drop-down list, select **Employees**.  
   
 11. Enter any additional OData query options or filters for **Query Options**. For example, `$orderby=CompanyName&$top=100`. For the purpose of this tutorial, enter `$top=5`.  
   
@@ -84,6 +84,6 @@ manager: "jhubbard"
   
 10. Click OK to close the **Flat File Destination Editor** dialog box.  
   
-11. Run the SSIS package. Verify that the output file is created with ID, First Name, and Last Name for 5 employees from the OData feed.  
+11. Run the SSIS package. Verify that the output file is created with ID, First Name, and Last Name for five employees from the OData feed.  
   
   

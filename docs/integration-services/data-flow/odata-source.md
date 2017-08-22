@@ -22,9 +22,9 @@ manager: "jhubbard"
 # OData Source
 Use the OData Source component in an SSIS package to consume data from an Open Data Protocol (OData) service. The component supports the OData v3 and v4 protocols.  
   
--   For OData V3 protocol, the component supports the ATOM and JSON data formats .  
+-   For OData V3 protocol, the component supports the ATOM and JSON data formats.  
   
--   For OData V4 protocol, the component supports the JSON data format .  
+-   For OData V4 protocol, the component supports the JSON data format.  
 
 The OData source includes support for the following data sources:
 -   Microsoft Dynamics AX Online and Microsoft Dynamics CRM Online

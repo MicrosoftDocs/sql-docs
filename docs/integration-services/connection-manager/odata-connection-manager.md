@@ -27,7 +27,7 @@ manager: "jhubbard"
   
 -   Right-click the **Connection Managers** folder in **Solution Explorer**, and then click **New Connection Manager**. Select **ODATA** for **Connection manager type**.  
   
--   Right-click in the **Connection Managers** pane at the bottom of the package designer, and then select **New Connection…**. Select **ODATA** for **Connection manager type**.  
+-   Right-click in the **Connection Managers** pane at the bottom of the package designer, and then select **New Connection**. Select **ODATA** for **Connection manager type**.  
   
 ## Connection Manager Authentication  
  The OData Connection Manager supports five modes of authentication.  
@@ -47,7 +47,7 @@ manager: "jhubbard"
 ### Specifying and Securing Credentials  
  If the OData service requires basic authentication, you can specify a username and password in the [OData Connection Manager Editor](../../integration-services/connection-manager/odata-connection-manager-editor.md). The values you enter in the editor are persisted in the package. The password value is encrypted according to the package protection level.  
   
- There are several ways to parameterize the username and password values or to store them outside the package. For example, you can do this by using parameters, or by setting the connection manager properties directly when you run the package using SQL Server Management Studio.  
+ There are several ways to parameterize the username and password values or to store them outside the package. For example, you can use parameters, or set the connection manager properties directly when you run the package from SQL Server Management Studio.  
   
 ## OData Connection Manager Properties  
  The following list describes the properties of the OData Connection Manager.  

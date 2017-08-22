@@ -18,9 +18,9 @@ manager: "jhubbard"
 # Modify OData Source Query at Runtime
  You can modify the OData Source query at runtime by adding an expression to the **[OData Source].[Query]** property of the Data Flow task.  
   
- Note that the columns returned have to be the same columns that were returned at design time; otherwise, you get an error when the package is executed. Be sure to specify the same columns (in the same order) when using the $select query option. A safer alternative to using the $select option is to deselect the columns you don’t want directly from the Source Component UI.  
+ The columns returned have to be the same columns that were returned at design time; otherwise, you get an error when the package is executed. Be sure to specify the same columns (in the same order) when using the $select query option. A safer alternative to using the $select option is to deselect the columns you don’t want directly from the Source Component UI.  
   
- There are a few different ways of dynamically setting the query value at runtime. Below are some of the more common methods.  
+ There are a few different ways of dynamically setting the query value at runtime. Here are some of the more common methods.  
   
 ## Provide the Query as a Parameter  
  The following procedure shows how to expose the query used by an OData Source component as a parameter of the package.  
@@ -31,7 +31,7 @@ manager: "jhubbard"
   
 3.  Choose whether to **create new parameter** or **use an existing parameter**.  
   
-4.  If you select **Create new parameter**, do the following:  
+4.  If you select **Create new parameter**:  
   
     1.  Enter **name** and **description** for the parameter.  
   
@@ -46,7 +46,7 @@ manager: "jhubbard"
 ## Provide the query with an Expression
  This method is useful when you want to dynamically construct the query string at runtime.
   
-1.  Select the **Data Flow Task** which contains your **OData Source**.  
+1.  Select the **Data Flow Task** that contains your **OData Source**.  
   
 2.  In the **Properties** window, highlight the **Expressions** property.  
   

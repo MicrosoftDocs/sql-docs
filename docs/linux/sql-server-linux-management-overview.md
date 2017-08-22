@@ -1,6 +1,4 @@
 ---
-# required metadata
-
 title: Manage SQL Server on Linux | Microsoft Docs
 description: This topic provides links to common management tasks and tools for SQL Server running on Linux.
 author: rothja 
@@ -11,20 +9,11 @@ ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 6bd8eb0b-593d-467e-87ea-ab1c4dbcd1ea
-
-# optional metadata
-
-# keywords: ""
-# ROBOTS: ""
-# audience: ""
-# ms.devlang: ""
-# ms.reviewer: ""
-# ms.suite: ""
-# ms.tgt_pltfrm: ""
 ms.custom: H1Hack27Feb2017
-
 ---
 # Choose the right tool to manage SQL Server on Linux
+
+[!INCLUDE[tsql-appliesto-sslinx-only_md](../../docs/includes/tsql-appliesto-sslinx-only_md.md)]
 
 There are several ways to manage SQL Server 2017 RC2 on Linux. The following section provide a quick overview of different management tools and techniques with pointers to more resources.
 

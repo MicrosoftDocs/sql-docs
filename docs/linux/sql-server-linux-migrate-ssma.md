@@ -1,6 +1,4 @@
 ---
-# required metadata
-
 title: Automate database migrations to SQL Server on Linux | Microsoft Docs
 description: 
 author: sanagama 
@@ -11,19 +9,11 @@ ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 251bc3af-ebce-4d97-adec-afc0e7fab6cc
-
-# optional metadata
-# keywords: ""
-# ROBOTS: ""
-# audience: ""
-# ms.devlang: ""
-# ms.reviewer: ""
-# ms.suite: ""
-# ms.tgt_pltfrm: ""
 ms.custom: H1Hack27Feb2017
-
 ---
 # Automate database migration to Linux with the SQL Server Migration Assistant
+
+[!INCLUDE[tsql-appliesto-sslinx-only_md](../../docs/includes/tsql-appliesto-sslinx-only_md.md)]
 
 This topic introduces [SQL Server Migration Assistant (SSMA)](http://msdn.microsoft.com/library/mt613434.aspx) that helps you easily migrate databases to SQL Server 2017 RC2 on Linux from Microsoft Access, DB2, MySQL, Oracle and Sybase. SSMA is a Windows application, so use SSMA when you have a Windows machine that can connect to a remote SQL Server instance on Linux. 
 

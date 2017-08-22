@@ -12,6 +12,8 @@ ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
 ---
 # Install SQL Server and create a database on Ubuntu
 
+[!INCLUDE[tsql-appliesto-sslinx-only_md](../../docs/includes/tsql-appliesto-sslinx-only_md.md)]
+
 In this quick start tutorial, you first install SQL Server 2017 RC2 on Ubuntu 16.04. Then connect with **sqlcmd** to create your first database and run queries.
 
 > [!TIP]

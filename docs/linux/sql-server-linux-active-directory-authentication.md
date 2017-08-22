@@ -1,6 +1,4 @@
 ---
-# required metadata
-
 title: "Active Directory Authentication with SQL Server on Linux | Microsoft Docs"
 description: "Configuration steps for AAD authentication for SQL Server on Linux"
 author: "tmullaney" 
@@ -13,11 +11,10 @@ ms.technology: "database-engine"
 ms.assetid: 
 helpviewer_keywords: 
   - "Linux, AAD authentication"
-
 ---
 # Active Directory Authentication with SQL Server on Linux  
-[!INCLUDE[tsql-appliesto-sslinx-only_md](../../docs/includes/tsql-appliesto-sslinx-only_md.md)]
 
+[!INCLUDE[tsql-appliesto-sslinx-only_md](../../docs/includes/tsql-appliesto-sslinx-only_md.md)]
 
 This document explains how to configure [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] on Linux to support Active Directory (AD) authentication, also known as integrated authentication. AD Authentication enables domain-joined clients on either Windows or Linux to authenticate to [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] using their domain credentials and the Kerberos protocol. 
 AD Authentication has the following advantages over [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] Authentication:  

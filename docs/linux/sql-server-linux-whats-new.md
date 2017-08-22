@@ -1,6 +1,4 @@
 ---
-# required metadata
-
 title: What's New for SQL Server 2017 RC1 on Linux | Microsoft Docs
 description: This topic highlights what's new for the current release of SQL Server 2017 on Linux.
 author: rothja 
@@ -11,10 +9,10 @@ ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
-
 ---
-
 # What's new for SQL Server 2017 on Linux
+
+[!INCLUDE[tsql-appliesto-sslinx-only_md](../../docs/includes/tsql-appliesto-sslinx-only_md.md)]
 
 This topic describes what's new for SQL Server 2017 running on Linux.
 

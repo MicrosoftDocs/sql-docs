@@ -12,6 +12,8 @@ ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ---
 # Run the SQL Server 2017 container image with Docker
 
+[!INCLUDE[tsql-appliesto-sslinx-only_md](../../docs/includes/tsql-appliesto-sslinx-only_md.md)]
+
 In this quick start tutorial, you use Docker to pull and run the SQL Server 2017 RC2 container image, [mssql-server-linux](https://hub.docker.com/r/microsoft/mssql-server-linux/). Then connect with **sqlcmd** to create your first database and run queries.
 
 This image consists of SQL Server running on Linux based on Ubuntu 16.04. It can be used with the Docker Engine 1.8+ on Linux or on Docker for Mac/Windows.

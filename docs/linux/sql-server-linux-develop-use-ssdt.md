@@ -1,6 +1,4 @@
 ---
-# required metadata
-
 title: Develop and Deploy SQL Server databases for Linux  | Microsoft Docs
 description: 
 author: erickangMSFT 
@@ -11,20 +9,11 @@ ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
-
-# optional metadata
-
-# keywords: ""
-# ROBOTS: ""
-# audience: ""
-# ms.devlang: ""
-# ms.reviewer: ""
-# ms.suite: ""
-# ms.tgt_pltfrm: ""
 ms.custom: H1Hack27Feb2017
-
 ---
-# Use Visual Studio to create databases for SQL Server on Linux 
+# Use Visual Studio to create databases for SQL Server on Linux
+
+[!INCLUDE[tsql-appliesto-sslinx-only_md](../../docs/includes/tsql-appliesto-sslinx-only_md.md)]
 
 SQL Server Data Tools (SSDT) turns Visual Studio into a powerful development and database lifecycle management (DLM) environment for SQL Server on Linux. You can develop, build, test and publish your database from a source controlled project, just like you develop your application code.
 
@@ -121,6 +110,3 @@ For more information about developing a database with SQL Data Tools, see [SSDT 
 [SSDT MSDN documents]: https://msdn.microsoft.com/en-us/library/hh272686(v=vs.103).aspx
 [Tutorial: Writing Transact-SQL Statements]:https://msdn.microsoft.com/library/ms365303.aspx
 [Transact-SQL Reference (Database Engine)]:https://msdn.microsoft.com/library/bb510741.aspx
-
-
-

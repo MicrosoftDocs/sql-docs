@@ -1,5 +1,4 @@
 ---
-# required metadata
 title: Get started with SQL Server 2017 on Red Hat Enterprise Linux | Microsoft Docs
 description:  This quick start tutorial shows how to install SQL Server 2017 on Red Hat Enterprise Linux and then create and query a database with sqlcmd.
 author: sabotta 
@@ -12,6 +11,8 @@ ms.technology: database-engine
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
 ---
 # Install SQL Server and create a database on Red Hat
+
+[!INCLUDE[tsql-appliesto-sslinx-only_md](../../docs/includes/tsql-appliesto-sslinx-only_md.md)]
 
 In this quick start tutorial, you first install SQL Server 2017 RC2 on Red Hat Enterprise Linux (RHEL) 7.3. Then connect with **sqlcmd** to create your first database and run queries.
 

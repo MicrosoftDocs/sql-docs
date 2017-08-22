@@ -18,7 +18,7 @@ manager: "jhubbard"
 # Tutorial: Using the OData Source
   This tutorial walks you through the process to extract the **Employees** collection from the sample **Northwind** OData service (http://services.odata.org/V3/Northwind/Northwind.svc/), and then load it into a flat file.  
   
-## 1. Create an Integration Services Project  
+## 1. Create an Integration Services project  
   
 1.  Launch **SQL Server Data Tools** or [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
   
@@ -30,13 +30,13 @@ manager: "jhubbard"
   
 5.  Enter a **name** and select a **location** for the project, and click **OK**.  
   
-## 2. Add and Configure an OData Source to the SSIS Package  
+## 2. Add and configure an OData Source 
   
 1.  Drag-drop a **Data Flow Task** from the **SSIS Toolbox** on to the control flow design surface of your SSIS package.  
   
 2.  Click the **Data Flow** tab, or double-click on the **Data Flow Task** to open the Data Flow design surface.  
   
-3.  Drag-drop **OData Source** from the **Common** group in the **SSIS Toolbox**. When the **OData Source** is first installed, it appears under the **Common** group in the **SSIS Toolbox**.  
+3.  Drag-drop **OData Source** from the **Common** group in the **SSIS Toolbox**.
   
 4.  Double-click the **OData Source** component to launch the **OData Source Editor** dialog box.  
   
@@ -62,7 +62,7 @@ manager: "jhubbard"
   
 15. Click **OK** to close the **OData Source Editor** dialog box.  
   
-## 3. Add a Flat File Destination and Test the Solution  
+## 3. Add and configure a Flat File Destination
   
 1.  Now, drag-drop a **Flat File Destination** from **SSIS Toolbox** to the Data Flow design surface below the **OData Source** component.  
   
@@ -83,7 +83,8 @@ manager: "jhubbard"
 9. In the **Flat File Destination Editor** dialog box, click **Mappings** in the left navigation pane. Review the mappings.  
   
 10. Click OK to close the **Flat File Destination Editor** dialog box.  
-  
-11. Run the SSIS package. Verify that the output file is created with ID, First Name, and Last Name for five employees from the OData feed.  
+
+## 4. Run the package
+Run the SSIS package. Verify that the output file is created with ID, First Name, and Last Name for five employees from the OData feed.
   
   

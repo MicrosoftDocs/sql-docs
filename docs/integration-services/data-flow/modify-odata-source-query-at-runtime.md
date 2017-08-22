@@ -22,7 +22,7 @@ manager: "jhubbard"
   
  There are a few different ways of dynamically setting the query value at runtime. Here are some of the more common methods.  
   
-## Provide the Query as a Parameter  
+## Provide the query as a parameter  
  The following procedure shows how to expose the query used by an OData Source component as a parameter of the package.  
   
 1.  Right click on the **Data Flow task** and select the **Parameterize…** option.  
@@ -43,7 +43,7 @@ manager: "jhubbard"
   
 5.  Click **OK** to close the dialog box.  
   
-## Provide the query with an Expression
+## Provide the query with an expression
  This method is useful when you want to dynamically construct the query string at runtime.
   
 1.  Select the **Data Flow Task** that contains your **OData Source**.  

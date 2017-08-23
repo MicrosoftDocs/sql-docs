@@ -1,8 +1,10 @@
 ---
 title: "File Locations for Default and Named Instances of SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.date: "08/23/2017"
+ms.prod: 
+  - "sql-server-2016"
+  - "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 

@@ -85,7 +85,7 @@ GO
  ```  
   
 ### B. Using the OVER clause  
- The following example uses the MIN, MAX, AVG and COUNT functions with the OVER clause to provide aggregated values for each department in the `HumanResources.Department` table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
+ The following example uses the MIN, MAX, AVG, and COUNT functions with the OVER clause to provide aggregated values for each department in the `HumanResources.Department` table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
   
 ```sql  
 SELECT DISTINCT Name  

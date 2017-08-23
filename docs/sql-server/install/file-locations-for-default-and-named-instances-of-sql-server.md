@@ -103,29 +103,30 @@ manager: "jhubbard"
   
 |Component|Default path|Configurable or Fixed Path|  
 |---------------|------------------|--------------------------------|  
-|[!INCLUDE[ssDE](../../includes/ssde-md.md)] server components|\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL14.\<InstanceID>\|Configurable|  
-|[!INCLUDE[ssDE](../../includes/ssde-md.md)] data files|\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL14.\<InstanceID>\|Configurable|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] server|\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSAS14.\<InstanceID>\|Configurable|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data files|\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSAS14.\<InstanceID>\|Configurable|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server|\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSRS14.\<InstanceID>\Reporting Services\ReportServer\Bin\|Configurable|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report manager|\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSRS14.\<InstanceID>\Reporting Services\ReportManager\|Fixed path|  
-|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|\<Install Directory>\140\DTS\|Configurable*|  
-|Client Components (except bcp.exe and sqlcmd.exe)|\<Install Directory>\140\Tools\|Configurable*|  
+|[!INCLUDE[ssDE](../../includes/ssde-md.md)] server components|\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL14.\<InstanceID>\ |Configurable|  
+|[!INCLUDE[ssDE](../../includes/ssde-md.md)] data files|\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL14.\<InstanceID>\ |Configurable|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] server|\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSAS14.\<InstanceID>\ |Configurable|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data files|\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSAS14.\<InstanceID>\ |Configurable|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server|\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSRS14.\<InstanceID>\Reporting Services\ReportServer\Bin\ |Configurable|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report manager|\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSRS14.\<InstanceID>\Reporting Services\ReportManager\ |Fixed path|  
+|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|\<Install Directory>\140\DTS\ |Configurable <sup>1</sup>|  
+|Client Components (except bcp.exe and sqlcmd.exe)|\<Install Directory>\140\Tools\ |Configurable <sup>1</sup>|  
 |Client Components (bcp.exe and sqlcmd.exe)|\<Install Directory>\Client SDK\ODBC\110\Tools\Binn|Fixed path|  
-|Replication and server-side COM objects|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]COM\\**|Fixed path|  
+|Replication and server-side COM objects|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]COM\\ <sup>2</sup> |Fixed path|  
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] component DLLs for the Data Transformation Run-time engine, the Data Transformation Pipeline engine, and the **dtexec** command prompt utility|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\Binn|Fixed path|  
 |DLLs that provide managed connection support for [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\Connections|Fixed path|  
 |DLLs for each type of enumerator that [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] supports|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\ForEachEnumerators|Fixed path|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser Service, WMI providers|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Shared\|Fixed path|  
-|Components that are shared between all instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Shared\|Fixed path|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser Service, WMI providers|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Shared\ |Fixed path|  
+|Components that are shared between all instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Shared\ |Fixed path|  
   
- **\*\* Security Note \*\*** Ensure that the \Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\ folder is protected with limited permissions.  
+>[!WARNING]
+>Ensure that the \Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\ folder is protected with limited permissions.  
   
- Note that the default drive for file locations is *systemdrive*, normally drive C. Installation paths for child features are determined by the installation path of the parent feature.  
+Note that the default drive for file locations is *systemdrive*, normally drive C. Installation paths for child features are determined by the installation path of the parent feature.  
   
- *A single installation path is shared between [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] and client components. Changing the installation path for one component also changes it for other components. Subsequent installations install components to the same location as the original installation.  
+<sup>1</sup> A single installation path is shared between [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] and client components. Changing the installation path for one component also changes it for other components. Subsequent installations install components to the same location as the original installation.  
   
- **This directory is used by all instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on a computer. If you apply an update to any of the instances on the computer, any changes to files in this folder will affect all instances on the computer. When you add features to an existing installation, you cannot change the location of a previously installed feature, nor can you specify the location for a new feature. You must either install additional features to the directories already established by Setup, or uninstall and reinstall the product.  
+<sup>2</sup> This directory is used by all instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on a computer. If you apply an update to any of the instances on the computer, any changes to files in this folder will affect all instances on the computer. When you add features to an existing installation, you cannot change the location of a previously installed feature, nor can you specify the location for a new feature. You must either install additional features to the directories already established by Setup, or uninstall and reinstall the product.  
   
 > [!NOTE]  
 >  For clustered configurations, you must select a local drive that is available on every node of the cluster.  

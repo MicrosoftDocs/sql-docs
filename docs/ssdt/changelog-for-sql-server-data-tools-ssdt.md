@@ -1,7 +1,7 @@
 ---
 title: "Changelog for SQL Server Data Tools (SSDT) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/18/2017"
+ms.date: "08/23/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -23,7 +23,7 @@ For detailed posts about what's new and changed, see [the SSDT Team blog](https:
 ## SSDT for Visual Studio 2017 (15.3.0 preview)
 Build number: 14.0.16121.0
   
-**What's New**
+### What's New?
 
 This preview is the first version of SSDT for Visual Studio 2017. This release introduces a standalone web installation experience for SQL Server Database, Analysis Services, Reporting Services, and Integration Services projects in Visual Studio 2017 15.3 or later.
 
@@ -35,6 +35,7 @@ This preview is the first version of SSDT for Visual Studio 2017. This release i
 - SSIS Execute Package Task doesn't support debugging when *ExecuteOutofProcess* is set to *True*. This issue only applies to debugging. Save, deploy, and execution via DTExec.exe or SSIS catalog is not impacted.
 - For a complete list of changes, see the [changelog](changelog-for-sql-server-data-tools-ssdt.md).
 - Report issues at the [SSDT Connect Feedback](https://connect.microsoft.com/SQLServer/Feedback) site.
+- SSIS Packages containing 3rd party extensions cannot be switched to target other server versions.
 
 
 ## SSDT 17.2 for Visual Studio 2015

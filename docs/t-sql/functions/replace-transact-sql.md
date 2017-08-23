@@ -54,7 +54,7 @@ REPLACE ( string_expression , string_pattern , string_replacement )
   
  Returns NULL if any one of the arguments is NULL.  
   
- If *string_expression* is not of type **varchar(max)** or **nvarchar(max),REPLACE** truncates the return value at 8,000 bytes. To return values greater than 8,000 bytes, *string_expression* must be explicitly cast to a large-value data type.  
+ If *string_expression* is not of type **varchar(max)** or **nvarchar(max), REPLACE** truncates the return value at 8,000 bytes. To return values greater than 8,000 bytes, *string_expression* must be explicitly cast to a large-value data type.  
   
 ## Remarks  
  REPLACE performs comparisons based on the collation of the input. To perform a comparison in a specified collation, you can use [COLLATE](~/t-sql/statements/collations.md) to apply an explicit collation to the input.  

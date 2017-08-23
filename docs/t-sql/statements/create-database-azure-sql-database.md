@@ -3,8 +3,8 @@ title: "CREATE DATABASE (Azure SQL Database) | Microsoft Docs"
 ms.custom: 
   - "MSDN content"
   - "MSDN - SQL DB"
-ms.date: "04/03/2017"
-ms.prod: "sql-non-specified"
+ms.prod: 
+ms.date: "08/10/2017"
 ms.reviewer: ""
 ms.service: "sql-database"
 ms.suite: ""
@@ -47,6 +47,8 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 {  
    (<edition_options> [, ...n])   
 }  
+
+[ WITH CATALOG_COLLATION = { DATABASE_DEFAULT | SQL_Latin1_General_CP1_CI_AS }  ]
   
 <edition_options> ::=   
 {  
@@ -60,20 +62,7 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 }  
 [;]  
   
-```  
-  
-```  
-To copy a database in Azure SQL Database V12:  
-CREATE DATABASE database_name  
-    AS COPY OF [source_server_name.] source_database_name  
-    [ ( SERVICE_OBJECTIVE =   
-          {  'basic' | 'S0' | 'S1' | 'S2' | 'S3'   
-            | 'P1' | 'P2' | 'P3' | 'P4'| 'P6' | 'P11' | 'P15'  
-            | 'PRS1' | 'PRS2' | 'PRS4' | 'PRS6' 
-            | { ELASTIC_POOL(name = <elastic_pool_name>) } } )  
-    ]  
-[;]  
-```  
+```
   
 ## Arguments  
  This syntax diagram demonstrates the supported arguments in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
@@ -86,6 +75,11 @@ CREATE DATABASE database_name
   
  For more information about the Windows and SQL collation names, [COLLATE (Transact-SQL)](http://msdn.microsoft.com/library/ms184391.aspx).  
   
+ *CATALOG_COLLATION*  
+Specifies the default collation for the metadata catalog. *DATABASE_DEFAULT* specifies that the metadata catalog used for system views and system tables be collated to match the default collation for the database.  This is the behavior found in SQL Server. 
+
+*SQL_Latin1_General_CP1_CI_AS* specifies that the metadata catalog used for system views and tables be collated to a fixed SQL_Latin1_General_CP1_CI_AS collation.  This is the default setting on Azure SQL Database if unspecified.
+
  *EDITION*  
  Specifies the service tier of the database. The available values are: 'basic', 'standard', 'premium', and 'premiumrs'.  
   
@@ -127,7 +121,7 @@ CREATE DATABASE database_name
  SERVICE_OBJECTIVE  
  Specifies the performance level. For service objective descriptions and more information about the size, editions, and the service objectives combinations, see [Azure SQL Database Service Tiers and Performance Levels](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/). If the specified SERVICE_OBJECTIVE is not supported by the EDITION you receive an error.  
   
- ELASTIC_POOL (name = <elastic_pool_name>)  
+ ELASTIC_POOL (name = \<elastic_pool_name>) 
  To create a new database in an elastic database pool, set the SERVICE_OBJECTIVE of the database to ELASTIC_POOL and provide the name of the pool. For more information, see [Create and manage a SQL Database elastic database pool (preview)](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/).  
   
  *AS COPY OF [source_server_name.]source_database_name*  
@@ -164,6 +158,8 @@ CREATE DATABASE database_name
 >  The `CREATE DATABASE` statement must be the only statement in a [!INCLUDE[tsql](../../includes/tsql-md.md)] batch. You must be connected to the **master** database when executing the `CREATE DATABASE` statement.  
   
  To change the size, edition, or service objective values later, use [ALTER DATABASE &#40;Azure SQL Database&#41;](../../t-sql/statements/alter-database-azure-sql-database.md).  
+
+The CATALOG_COLLATION argument is only available during database creation. 
   
 ## Database Copies  
  Copying a database using the `CREATE DATABASE` statement is an asynchronous operation. Therefore, a connection to the [!INCLUDE[ssSDS](../../includes/sssds-md.md)] server is not needed for the full duration of the copy process. The `CREATE DATABASE` statement will return control to the user after the entry in sys.databases is created but before the database copy operation is complete. In other words, the `CREATE DATABASE` statement returns successfully when the database copy is still in progress.  
@@ -203,14 +199,14 @@ CREATE DATABASE database_name
 ### Simple Example  
  A simple example for creating a database.  
   
-```  
+```tsql  
 CREATE DATABASE TestDB1;  
 ```  
   
 ### Simple Example with Edition  
  A simple example for creating a standard database.  
   
-```  
+```tsql  
 CREATE DATABASE TestDB2  
 ( EDITION = 'standard' );  
 ```  
@@ -218,7 +214,7 @@ CREATE DATABASE TestDB2
 ### Example with Additional Options  
  An example using multiple options.  
   
-```  
+```tsql  
 CREATE DATABASE hito   
 COLLATE Japanese_Bushu_Kakusu_100_CS_AS_KS_WS   
 ( MAXSIZE = 500 MB, EDITION = 'standard', SERVICE_OBJECTIVE = 'S1' ) ;  
@@ -227,7 +223,7 @@ COLLATE Japanese_Bushu_Kakusu_100_CS_AS_KS_WS
 ### Creating a Copy  
  An example creating a copy of a database.  
   
-```  
+```tsql  
 CREATE DATABASE escuela   
 AS COPY OF school;  
 ```  
@@ -235,25 +231,34 @@ AS COPY OF school;
 ### Creating a Database in an Elastic Pool  
  Creates new database in pool named S3M100:  
   
-```  
+```tsql  
 CREATE DATABASE db1 ( SERVICE_OBJECTIVE = ELASTIC_POOL ( name = S3M100 ) ) ;  
 ```  
   
 ### Creating a Copy of a Database on Another Server  
  The following example creates a copy of the db_original database, named db_copy in the P2 performance level for a single database.  This is true regardless of whether db_original is in an elastic pool or a performance level for a single database.  
   
-```  
+```tsql  
 CREATE DATABASE db_copy   
     AS COPY OF ozabzw7545.db_original ( SERVICE_OBJECTIVE = 'P2' )  ;  
 ```  
   
  The following example creates a copy of the db_original database, named db_copy in an elastic pool named ep1.  This is true regardless of whether db_original is in an elastic pool or a performance level for a single database.  If db_original is in an elastic pool with a different name, then db_copy is still created in ep1.  
   
-```  
+```tsql  
 CREATE DATABASE db_copy   
     AS COPY OF ozabzw7545.db_original   
     (SERVICE_OBJECTIVE = ELASTIC_POOL( name = ep1 ) ) ;  
 ```  
+
+### Create database with specified catalog collation value
+
+The following example sets the catalog collation to DATABASE_DEFAULT during database creation, which sets the catalog collation to be the same as the database collation.
+
+```tsql
+CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140  (MAXSIZE = 100 MB, EDITION = ‘basic’)  
+      WITH CATALOG_COLLATION = DATABASE_DEFAULT 
+```
   
 ## See Also  
 
@@ -262,3 +267,4 @@ CREATE DATABASE db_copy
 -   [ALTER DATABASE &#40;Azure SQL Database&#41;](https://msdn.microsoft.com/library/mt574871.aspx)   
     
   
+

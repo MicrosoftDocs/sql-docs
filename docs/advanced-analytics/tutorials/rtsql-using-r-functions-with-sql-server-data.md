@@ -1,7 +1,7 @@
 ---
-title: "Using R Functions with SQL Server Data (R in T-SQL Tutorial) | Microsoft Docs"
+title: "Using R functions with SQL Server data (R in SQL quickstart) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/03/2017"
+ms.date: "07/26/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -18,7 +18,7 @@ author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
 ---
-# Using R Functions with SQL Server Data
+# Using R functions with SQL Server data (R in SQL quickstart)
 
 Now that you're familiar with basic operations, it's time to have some fun with R. For example, many advanced statistical functions might be complicated to implement using T-SQL, but require only a single line of R code.  With R Services, it's easy to embed R utility scripts in a stored procedure.
 
@@ -78,9 +78,9 @@ EXEC MyRNorm @param1 = 100,@param2 = 50, @param3 = 3
 
 ## Related resources
 
-+ Would you like to install more R packages, to get more advanced statistical functions? See [Installing and Managing R packages](../r/installing-and-managing-r-packages.md).
++ Would you like to install more R packages, to get more advanced statistical functions? See [Installing and managing R packages](../r/installing-and-managing-r-packages.md).
 
-+ To help you convert your standalone R code to a format that can be easily parameterized using SQL Server stored procedures, the Microsoft R team has provided a new R package, **sqlrutils**. For more information, see [How to Create a Stored Procedure using sqlrutils](../r/how-to-create-a-stored-procedure-using-sqlrutils.md).
++ To help you convert your standalone R code to a format that can be easily parameterized using SQL Server stored procedures, the Microsoft R team has provided a new R package, **sqlrutils**. For more information, see [How to Create a stored procedure using sqlrutils](../r/how-to-create-a-stored-procedure-using-sqlrutils.md).
 
 ## Use R utility functions for troubleshooting
 
@@ -107,4 +107,4 @@ For an example, see this tutorial: [Create Data Features](../tutorials/walkthrou
 
 Next, you'll build a predictive model using R in SQL Server.
 
-[Create a Predictive Model](..//tutorials/rtsql-create-a-predictive-model-r.md)
+[Create a predictive model](../tutorials/rtsql-create-a-predictive-model-r.md)

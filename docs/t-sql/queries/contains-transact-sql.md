@@ -1,7 +1,7 @@
----
+﻿---
 title: "CONTAINS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/05/2016"
+ms.date: "08/11/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -57,11 +57,7 @@ manager: "jhubbard"
 -   A word that is a synonym of another word using a thesaurus (for example, the word "metal" can have synonyms such as "aluminum" and "steel").  
   
  For information about the forms of full-text searches that are supported by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Query with Full-Text Search](../../relational-databases/search/query-with-full-text-search.md).  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Preview in some regions](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).|  
-  
+ 
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
@@ -153,9 +149,7 @@ CONTAINS (
  Specifies that  the query will search all full-text indexed columns in the table specified in the FROM clause for the given search condition. The columns in the CONTAINS clause must come from a single table that has a full-text index. Unless *language_term* is specified, the language of all columns of the table must be the same.  
   
  PROPERTY ( *column_name* , '*property_name*')  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
   
  Specifies a document property on which to search for the specified search condition.  
   
@@ -178,7 +172,7 @@ CONTAINS (
  \<*contains_search_condition*>  
  Specifies the text to search for in *column_name* and the conditions for a match.  
   
- *<contains_search_condition>* is **nvarchar**. An implicit conversion occurs when another character data type is used as input. In the following example, the `@SearchWord` variable, which is defined as `varchar(30)`, causes an implicit conversion in the `CONTAINS` predicate.  
+*\<contains_search_condition>* is **nvarchar**. An implicit conversion occurs when another character data type is used as input. In the following example, the `@SearchWord` variable, which is defined as `varchar(30)`, causes an implicit conversion in the `CONTAINS` predicate.
   
 ```  
   
@@ -217,32 +211,32 @@ WHERE CONTAINS(Description, @SearchWord);
 > [!NOTE]  
 >  Some languages, such as those written in some parts of Asia, can have phrases that consist of one or more words without spaces between them.  
   
- <simple_term>  
- Specifies a match for an exact word or a phrase. Examples of valid simple terms are "blue berry", blueberry, and "Microsoft SQL Server". Phrases should be enclosed in double quotation marks (""). Words in a phrase must appear in the same order as specified in *<contains_search_condition>* as they appear in the database column. The search for characters in the word or phrase is not case-sensitive. Noise words (or [stopwords](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)) (such as a, and, or the) in full-text indexed columns are not stored in the full-text index. If a noise word is used in a single word search, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] returns an error message indicating that the query contains only noise words. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] includes a standard list of noise words in the directory \Mssql\Binn\FTERef of each instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+\<simple_term>
+ Specifies a match for an exact word or a phrase. Examples of valid simple terms are "blue berry", blueberry, and "Microsoft SQL Server". Phrases should be enclosed in double quotation marks (""). Words in a phrase must appear in the same order as specified in *\<contains_search_condition>* as they appear in the database column. The search for characters in the word or phrase is not case-sensitive. Noise words (or [stopwords](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)) (such as a, and, or the) in full-text indexed columns are not stored in the full-text index. If a noise word is used in a single word search, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] returns an error message indicating that the query contains only noise words. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] includes a standard list of noise words in the directory \Mssql\Binn\FTERef of each instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Punctuation is ignored. Therefore, `CONTAINS(testing, "computer failure")` matches a row with the value, "Where is my computer? Failure to find it would be expensive." For more information on word-breaker behavior, see [Configure and Manage Word Breakers and Stemmers for Search](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md).  
   
- <prefix_term>  
+ \<prefix_term>  
  Specifies a match of words or phrases beginning with the specified text. Enclose a prefix term in double quotation marks ("") and add an asterisk (*) before the ending quotation mark, so that all text starting with the simple term specified before the asterisk is matched. The clause should be specified this way: `CONTAINS (column, '"text*"')`. The asterisk matches zero, one, or more characters (of the root word or words in the word or phrase). If the text and asterisk are not delimited by double quotation marks, so the predicate reads `CONTAINS (column, 'text*')`, full-text search considers the asterisk as a character and searches for exact matches to `text*`. The full-text engine will not find words with the asterisk (\*) character because word breakers typically ignore such characters.  
   
- When *<prefix_term>* is a phrase, each word contained in the phrase is considered to be a separate prefix. Therefore, a query specifying a prefix term of "local wine*" matches any rows with the text of "local winery", "locally wined and dined", and so on.  
+ When *\<prefix_term>* is a phrase, each word contained in the phrase is considered to be a separate prefix. Therefore, a query specifying a prefix term of "local wine*" matches any rows with the text of "local winery", "locally wined and dined", and so on.  
   
- <generation_term>  
+ \<generation_term>  
  Specifies a match of words when the included simple terms include variants of the original word for which to search.  
   
  INFLECTIONAL  
  Specifies that the language-dependent stemmer is to be used on the specified simple term. Stemmer behavior is defined based on stemming rules of each specific language. The neutral language does not have an associated stemmer. The column language of the columns being queried is used to refer to the desired stemmer. If *language_term* is specified, the stemmer corresponding to that language is used.  
   
- A given *<simple_term>* within a *<generation_term>* will not match both nouns and verbs.  
+ A given *\<simple_term>* within a *\<generation_term>* will not match both nouns and verbs.  
   
  THESAURUS  
- Specifies that the thesaurus corresponding to the column full-text language, or the language specified in the query is used. The longest pattern or patterns from the *<simple_term>* are matched against the thesaurus and additional terms are generated to expand or replace the original pattern. If a match is not found for all or part of the *<simple_term>*, the non-matching portion is treated as a *simple_term*. For more information on the full-text search thesaurus, see [Configure and Manage Thesaurus Files for Full-Text Search](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md).  
+ Specifies that the thesaurus corresponding to the column full-text language, or the language specified in the query is used. The longest pattern or patterns from the *\<simple_term>* are matched against the thesaurus and additional terms are generated to expand or replace the original pattern. If a match is not found for all or part of the *\<simple_term>*, the non-matching portion is treated as a *simple_term*. For more information on the full-text search thesaurus, see [Configure and Manage Thesaurus Files for Full-Text Search](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md).  
   
- <generic_proximity_term>  
+ \<generic_proximity_term>  
  Specifies a match of words or phrases that must be in the document that is being searched.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] We recommend that you use <custom_proximity_term>.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] We recommend that you use \<custom_proximity_term>.  
   
  NEAR | ~  
  Indicates that the word or phrase on each side of the NEAR or ~ operator must occur in a document for a match to be returned. You must specify two search terms. A given search term can be either a single word or a phrase that is delimited by double quotation marks ("*phrase*").  
@@ -253,12 +247,10 @@ WHERE CONTAINS(Description, @SearchWord);
   
  For more information about generic proximity terms, see [Search for Words Close to Another Word with NEAR](../../relational-databases/search/search-for-words-close-to-another-word-with-near.md).  
   
- <custom_proximity_term>  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+ \<custom_proximity_term>  
+**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
   
- Specifies a match of words or phrases, and optionally, the maximum distance allowed between search terms. you can also specify that search terms must be found in the exact order in which you specify them (<match_order>).  
+ Specifies a match of words or phrases, and optionally, the maximum distance allowed between search terms. you can also specify that search terms must be found in the exact order in which you specify them (\<match_order>).  
   
  A given search term can be either a single word or a phrase that is delimited by double quotation marks ("*phrase*"). Every specified term must be in the document for a match to be returned. You must specify at least two search terms. The maximum number of search terms is 64.  
   
@@ -270,7 +262,7 @@ CONTAINS(column_name, 'NEAR(term1,"term3 term4")')
   
  The optional parameters are as follows:  
   
- <maximum_distance>  
+ \<maximum_distance>  
  Specifies the maximum distance allowed between the search terms at the start and end of a string in order for that string to qualify as a match.  
   
  *integer*  
@@ -297,10 +289,10 @@ CONTAINS(column_name, 'NEAR((AA,BB,CC),5)')
  **MAX**  
  Returns any rows that contain the specified terms regardless of the distance between them. This is the default.  
   
- <match_order>  
- Specifies whether the terms must occur in the specified order to be returned by a search query. To specify <match_order>, you must also specify <maximum_distance>.  
+ \<match_order>  
+ Specifies whether the terms must occur in the specified order to be returned by a search query. To specify \<match_order>, you must also specify \<maximum_distance>.  
   
- <match_order> takes one of the following values:  
+ \<match_order> takes one of the following values:  
   
  TRUE  
  Enforces the specified order within terms. For example, `NEAR(A,B)` would match only `A … B`.  
@@ -318,14 +310,14 @@ CONTAINS(column_name, 'NEAR ((Monday, Tuesday, Wednesday), MAX, TRUE)')
   
  For more information about using custom proximity terms, see [Search for Words Close to Another Word with NEAR](../../relational-databases/search/search-for-words-close-to-another-word-with-near.md).  
   
- <weighted_term>  
+ \<weighted_term>  
  Specifies that the matching rows (returned by the query) match a list of words and phrases, each optionally given a weighting value.  
   
  ISABOUT  
- Specifies the *<weighted_term>* keyword.  
+ Specifies the *\<weighted_term>* keyword.  
   
  WEIGHT(*weight_value*)  
- Specifies a weight value, which is a number from 0.0 through 1.0. Each component in *<weighted_term>* may include a *weight_value*. *weight_value* is a way to change how various portions of a query affect the rank value assigned to each row matching the query. WEIGHT does not affect the results of CONTAINS queries, but WEIGHT impacts rank in [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) queries.  
+ Specifies a weight value, which is a number from 0.0 through 1.0. Each component in *\<weighted_term>* may include a *weight_value*. *weight_value* is a way to change how various portions of a query affect the rank value assigned to each row matching the query. WEIGHT does not affect the results of CONTAINS queries, but WEIGHT impacts rank in [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) queries.  
   
 > [!NOTE]  
 >  The decimal separator is always a period, regardless of the operating system locale.  
@@ -342,7 +334,7 @@ CONTAINS(column_name, 'NEAR ((Monday, Tuesday, Wednesday), MAX, TRUE)')
  { OR | | }  
  Indicates that either of the two contains search conditions must be met for a match. The bar symbol (|) may be used instead of the OR keyword to represent the OR operator.  
   
- When *<contains_search_condition>* contains parenthesized groups, these parenthesized groups are evaluated first. After evaluating parenthesized groups, these rules apply when using these logical operators with contains search conditions:  
+ When *\<contains_search_condition>* contains parenthesized groups, these parenthesized groups are evaluated first. After evaluating parenthesized groups, these rules apply when using these logical operators with contains search conditions:  
   
 -   NOT is applied before AND.  
   
@@ -432,9 +424,7 @@ GO
   
 ### E. Using CONTAINS with <proximity_term>  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
   
  The following example searches the `Production.ProductReview` table for all comments that contain the word "`bike`" within 10 terms of the word "`control`" and in the specified order (that is, where "`bike`" precedes "`control`").  
   
@@ -534,9 +524,7 @@ GO
   
 ### K. Querying on a document property  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
   
  The following query searches on an indexed property, `Title`, in the `Document` column of the `Production.Document` table. The query returns only documents whose `Title` property contains the string `Maintenance` or `Repair`.  
   

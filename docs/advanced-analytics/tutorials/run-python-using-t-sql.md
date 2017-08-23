@@ -1,7 +1,7 @@
 ---
 title: "Run Python using T-SQL | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/20/2017"
+ms.date: "07/31/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -18,7 +18,7 @@ author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
 ---
-# Run Python Using T-SQL
+# Run Python using T-SQL
 
 This example shows how you can run a simple Python script in SQL Server, by using the stored procedure [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)
 
@@ -47,13 +47,13 @@ INSERT INTO PythonTest VALUES
 GO
 ```
 
-## Step 2. Run the Hello World script
+## Step 2. Run the "Hello World" script
 
 The following code loads the Python executable, passes the input data, and for each row of input data, updates the day name in the table with a number representing the day-of-week index.
 
 Take a note of the parameter *@RowsPerRead*. This parameter specifies the number of rows that are passed to the Python runtime from SQL Server.
 
-The Python Data Analysis Library, or **pandas**, is required for passing data to SQL Server, and is included by default with Machine Learning Services.
+The Python Data Analysis Library, known as **pandas**, is required for passing data to SQL Server, and is included by default with Machine Learning Services.
 
 ```sql
 DECLARE @ParamINT INT = 1234567
@@ -117,9 +117,9 @@ GO
 ```
 
 > [!TIP]
-> The parameters for this stored procedure are described in more detail in this quickstart: [Using R Code in T-SQL](rtsql-using-r-code-in-transact-sql-quickstart.md).
+> The parameters for this stored procedure are described in more detail in this quickstart: [Using R code in T-SQL](rtsql-using-r-code-in-transact-sql-quickstart.md).
 
-## Step 3. View the Results
+## Step 3. View the results
 
 The stored procedure returns the original data, applies the script, and then returns the modified data in the **Results** pane of Management Studio or other SQL query tool.
 
@@ -141,6 +141,7 @@ Status messages or errors returned to the Python console are returned as message
 
 *Sample results*
 
+```
 Output parameters (before):
 ParamINT=1234567
 ParamCharN=INPUT 
@@ -164,18 +165,22 @@ C:\PROGRA~1\MICROS~2\MSSQL1~1.MSS\MSSQL\EXTENS~1\MSSQLSERVER01\7A70B3FB-FBA2-4C5
 Output parameters (after):
 ParamINT=2
 ParamCharN=OUTPUT
-
-**Notes**
+```
 
 + The Message output includes the working directory used for script execution. In this example,  MSSQLSERVER01 refers to the worker account allocated by SQL Server to manage the job. The GUID is the name of a temporary folder that is created during script execution to store data and script artifacts. These temporary folders are secured by SQL Server, and are cleaned up by the Windows job object after script has terminated.
+
 + The section containing the message "Hello World" prints two times. This happens because the value of *@RowsPerRead* was set to 5 and there are 10 rows in the table; therefore, two calls to Python are required to process all the rows in the table.
 
     In your production runs, we recommend that you experiment with different values to determine the maximum number of rows that should be passed in each batch. The optimum number of rows is data-dependent, and is affected by both the number of columns in the dataset and the type of data that you are passing.
 
-## Related Resources
+## Resources
 
-See these Python samples and tutorials for advanced tips and end-to-end demos.
+See these additional Python samples and tutorials for advanced tips and end-to-end demos.
 
 + [Use Python revoscalepy to create a model](use-python-revoscalepy-to-create-model.md)
 + [In-Database Python for SQL Developers](sqldev-in-database-python-for-sql-developers.md)
 + [Build a predictive model using Python and SQL Server](https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/)
+
+## Troubleshooting
+
+If you can't find the stored procedure, `sp_execute_external_script`, it means you probably haven't finished configuring the instance to support external runtimes. After running SQL Server 2017 setup and selecting Python as the machine learning language, you must also explicitly enable the feature using `sp_configure`, and then restart the instance. For details, see [Setup Machine Learning Services with Python](../python/setup-python-machine-learning-services.md).

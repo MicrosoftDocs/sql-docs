@@ -13,7 +13,7 @@ ms.assetid: 0e908ec0-7173-4cd2-8f48-2700757b53a5
 caps.latest.revision: 5
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ---
 # Import JSON documents into SQL Server
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -73,13 +73,13 @@ You can also use OPENROWSET(BULK) as described above to read JSON files from oth
 
     Here is the command syntax:
 
-    ```
+    ```dos
     net use [drive letter] \\[storage name].file.core.windows.net\[share name] /u:[storage account name] [storage account access key]
     ```
 
     Here's an example that assigns local drive letter `T:` to the Azure File Storage share:
 
-    ```
+    ```dos
     net use t: \\mystorage.file.core.windows.net\sharejson /u:myaccount hb5qy6eXLqIdBj0LvGMHdrTiygkjhHDvWjUZg3Gu7bubKLg==
     ```
 
@@ -135,7 +135,7 @@ SELECT value
 ### Example 2
 OPENROWSET reads a single text value from the file, returns it as a BulkColumn, and passes it to the OPENJSON function. OPENJSON iterates through the array of JSON objects in the BulkColumn array and returns one book in each row, formatted as JSON:
 
-```
+```json
 {"id":"978-0641723445″, "cat":["book","hardcover"], "name":"The Lightning Thief", … 
 {"id":"978-1423103349″, "cat":["book","paperback"], "name":"The Sea of Monsters", … 
 {"id":"978-1857995879″, "cat":["book","paperback"], "name":"Sophie’s World : The Greek … 
@@ -160,7 +160,8 @@ In this example, OPENROWSET(BULK) reads the content of the file and passes that 
 978-0641723445|The Lightning Thief|12.5|384|Rick Riordan| 
 978-1423103349|The Sea of Monsters|6.49|304|Rick Riordan| 
 978-1857995879|Sophie’s World : The Greek Philosophers|3.07|64|Jostein Gaarder| 
-978-1933988177|Lucene in Action, Second Edition|30.5|475|Michael McCandless| 
+978-1933988177|Lucene in Action, Second Edition|30.5|475|Michael McCandless|
+||||||
 
 Now you can return this table to the user, or load the data into another table.
 

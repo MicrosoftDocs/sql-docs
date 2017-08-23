@@ -1,7 +1,7 @@
 ---
 title: "CREATE ASSEMBLY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/19/2017"
+ms.date: "8/07/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -61,7 +61,7 @@ FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }
  Specifies the name of a user or role as owner of the assembly. *owner_name* must either be the name of a role of which the current user is a member, or the current user must have IMPERSONATE permission on *owner_name*. If not specified, ownership is given to the current user.  
   
  \<client_assembly_specifier>  
- Specifies the local path or network location where the assembly that is being uploaded is located, and also the manifest file name that corresponds to the assembly.  <client_assembly_specifier> can be expressed as a fixed string or an expression evaluating to a fixed string, with variables. CREATE ASSEMBLY does not support loading multimodule assemblies. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] also looks for any dependent assemblies of this assembly in the same location and also uploads them with the same owner as the root level assembly. If these dependent assemblies are not found and they are not already loaded in the current database, CREATE ASSEMBLY fails. If the dependent assemblies are already loaded in the current database, the owner of those assemblies must be the same as the owner of the newly created assembly.  
+Specifies the local path or network location where the assembly that is being uploaded is located, and also the manifest file name that corresponds to the assembly.  \<client_assembly_specifier> can be expressed as a fixed string or an expression evaluating to a fixed string, with variables. CREATE ASSEMBLY does not support loading multimodule assemblies. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] also looks for any dependent assemblies of this assembly in the same location and also uploads them with the same owner as the root level assembly. If these dependent assemblies are not found and they are not already loaded in the current database, CREATE ASSEMBLY fails. If the dependent assemblies are already loaded in the current database, the owner of those assemblies must be the same as the owner of the newly created assembly.
   
  \<client_assembly_specifier> cannot be specified if the logged in user is being impersonated.  
   
@@ -111,7 +111,7 @@ When enabled, the `PERMISSION_SET` option in the `CREATE ASSEMBLY` and `ALTER AS
  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not allow registering different versions of an assembly with the same name, culture and public key.  
   
- When attempting to access the assembly specified in <client_assembly_specifier>, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] impersonates the security context of the current Windows login. If <client_assembly_specifier> specifies a network location (UNC path), the impersonation of the current login is not carried forward to the network location because of delegation limitations. In this case, access is made using the security context of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account. For more information, see [Credentials &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md).  
+When attempting to access the assembly specified in \<client_assembly_specifier>, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] impersonates the security context of the current Windows login. If \<client_assembly_specifier> specifies a network location (UNC path), the impersonation of the current login is not carried forward to the network location because of delegation limitations. In this case, access is made using the security context of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account. For more information, see [Credentials &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md).
   
  Besides the root assembly specified by *assembly_name*, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tries to upload any assemblies that are referenced by the root assembly being uploaded. If a referenced assembly is already uploaded to the database because of an earlier CREATE ASSEMBLY statement, this assembly is not uploaded but is available to the root assembly. If a dependent assembly was not previously uploaded, but [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cannot locate its manifest file in the source directory, CREATE ASSEMBLY returns an error.  
   

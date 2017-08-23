@@ -1,7 +1,7 @@
 ---
-title: "Create a Predictive Model (R in T-SQL Tutorial) | Microsoft Docs"
+title: "Create a predictive model (R in SQL quickstart) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/03/2017"
+ms.date: "07/26/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -18,9 +18,9 @@ author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
 ---
-# Create an R Model using SQL
+# Create a predictive model (R in SQL quickstart)
 
-In this step, you'll learn how to train a model using R, and then save the model to a table in SQL Server. The model is a simple regression model that predicts the stopping distance of a car based on speed. You'll use the `cars` dataset already included with R, because it is small and easy to understand.
+In this step, you'll learn how to train a model using R, and then save the model to a table in SQL Server. The model is a simple regression model that predicts the stopping distance of a car based on speed. You'll use the `cars` dataset included with R, because it is small and easy to understand.
 
 ## Create the source data
 
@@ -115,7 +115,7 @@ Generally, the output of R from the stored procedure [sp_execute_external_script
 
 However, you can return outputs of other types, such as scalars, in addition to the data frame.
 
-For example, suppose you want to train a model but immediately view a table of coefficients from the model. You could create the table of coefficients as the main result set, and output the trained model in a SQL variable. You could immediately re-use the model by callings variable, or you could save it to a table as shown here.
+For example, suppose you want to train a model but immediately view a table of coefficients from the model. You could create the table of coefficients as the main result set, and output the trained model in a SQL variable. You could immediately re-use the model by calling the variable, or you could save the model to a table as shown here.
 
 ```sql
 DECLARE @model varbinary(max), @modelname varchar(30)
@@ -152,6 +152,6 @@ Remember these rules for working with SQL parameters and R variables in `sp_exec
 
 Now that you have a model, in the final step, you'll learn how to generate predictions from it and plot the results.
 
-[Predict and Plot from Model](/rtsql-predict-and-plot-from-model.md)
+[Predict and plot from model](../tutorials/rtsql-predict-and-plot-from-model.md)
 
 

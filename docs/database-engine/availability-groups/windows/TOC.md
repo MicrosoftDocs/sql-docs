@@ -10,11 +10,11 @@
 ### [Dialog](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
 ### [Transact-SQL](create-an-availability-group-transact-sql.md)  
 ### [PowerShell](create-an-availability-group-sql-server-powershell.md)  
-### [Azure virtual machines>](http://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-availability-group-overview)
+### [Azure virtual machines](http://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-availability-group-overview)
 ## [Listener](create-or-configure-an-availability-group-listener-sql-server.md)  
 
 # Concepts
-## [Automatic seeding](automatically-initialize-always-on-availability-group.md)  
+## [Automatic seeding for secondary replicas](automatic-seeding-secondary-replicas.md)
 ## [Availability group policies](always-on-policies-for-operational-issues-always-on-availability.md)  
 ## [Availability modes](availability-modes-always-on-availability-groups.md)  
 ## [Backup on secondary](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
@@ -54,8 +54,12 @@
 ## Configure availability group 
 ### [Change replica availability](change-the-availability-mode-of-an-availability-replica-sql-server.md)  
 ### [Change replica failover mode](change-the-failover-mode-of-an-availability-replica-sql-server.md)  
+### [Configure automatic seeding](automatically-initialize-always-on-availability-group.md)  
+### [Configure backup on replicas](configure-backup-on-availability-replicas-sql-server.md)  
 ### [Configure flexible failover policy](configure-flexible-automatic-failover-policy.md)  
 ### [Configure backup on replicas](configure-backup-on-availability-replicas-sql-server.md)  
+### [Configure distributed availability groups](configure-distributed-availability-groups.md)
+### [Configure for distributed transactions](configure-availability-group-for-distributed-transactions.md)
 ### [Configure read-only access replica](configure-read-only-access-on-an-availability-replica-sql-server.md)  
 ### [Configure read-only routing](configure-read-only-routing-for-an-availability-group-sql-server.md)  
 ### [Remove listener](remove-an-availability-group-listener-sql-server.md)  

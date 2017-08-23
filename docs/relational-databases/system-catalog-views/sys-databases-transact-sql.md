@@ -1,7 +1,11 @@
 ---
 title: "sys.databases (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
+<<<<<<< HEAD
 ms.date: "03/09/2017"
+=======
+ms.date: "07/31/2017"
+>>>>>>> dea3fc621bff9da54471ebef94862861653a9b2d
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -113,7 +117,8 @@ manager: "jhubbard"
 |**is_remote_data_archive_enabled**|**bit**|Indicates whether the database is stretched.<br /> 0 = The database is not Stretch-enabled.<br /> 1 = The database is Stretch-enabled.<br /> **Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /> For more information, see [Stretch Database](../../sql-server/stretch-database/stretch-database.md).|  
 |**is_mixed_page_allocation_on**|**bit**|Indicates whether tables and indexes in the database can allocate initial pages from mixed extents.<br /> 0 = Tables and indexes in the database always allocate  initial pages from uniform extents.<br /> 1 =  Tables and indexes in the database can allocate initial pages from mixed extents.<br /> **Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /> For more information, see the SET MIXED_PAGE_ALLOCATION option of [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).|  
 |**is_temporal_retention_enabled**|**bit**|Indicates whether temporal retention policy cleanup task is enabled.<br /> **Applies to**: Azure SQL Database|
-
+|**catalog_collation_type**|**int**|The catalog collation setting:<br />0 = DATABASE_DEFAULT<br />2 = SQL_Latin_1_General_CP1_CI_AS<br /> **Applies to**: Azure SQL Database|
+|**catalog_collation_type_desc**|**nvarchar(60)**|The catalog collation setting:<br />DATABASE_DEFAULT<br />SQL_Latin_1_General_CP1_CI_AS<br /> **Applies to**: Azure SQL Database|
   
 ## Permissions  
  If the caller of `sys.databases` is not the owner of the database and the database is not `master` or `tempdb`, the minimum permissions required to see the corresponding row are `ALTER ANY DATABASE` or the `VIEW ANY DATABASE` server-level permission, or `CREATE DATABASE` permission in the `master` database. The database to which the caller is connected can always be viewed in `sys.databases`.  
@@ -139,7 +144,11 @@ FROM sys.databases;
 ### B. Check the copying status in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
  The following example queries the `sys.databases` and `sys.dm_database_copies` views to return information about a database copy operation.  
   
+<<<<<<< HEAD
 **Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
+=======
+**Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
+>>>>>>> dea3fc621bff9da54471ebef94862861653a9b2d
   
 ```  
 -- Execute from the master database.  
@@ -151,7 +160,11 @@ WHERE a.state = 7;
 ### C. Check the temporal retention policy status in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
  The following example queries the `sys.databases` to return information whether temporal retention cleanup task is enabled. Be aware that after restore operation temporal retention is disabled by default. Use `ALTER DATABASE` to enable it explicitly.
   
+<<<<<<< HEAD
 **Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+=======
+**Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
+>>>>>>> dea3fc621bff9da54471ebef94862861653a9b2d
   
 ```  
 -- Execute from the master database.  

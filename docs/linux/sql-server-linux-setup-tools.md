@@ -6,7 +6,7 @@ description: This topic describes how to install the SQL Server Tools on Linux.
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 05/17/2017
+ms.date: 07/17/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -39,7 +39,9 @@ Install the tools for your platform:
 - [macOS](#macos)
 - [Docker](#docker)
 
-## <a id="RHEL"><a/>Install tools on RHEL
+This topic describes how to install the command-line tools. If you are looking for examples of how to use **sqlcmd** or **bcp**, see the [links](#next-steps) at the end of this topic.
+
+## <a id="RHEL"><a/>Install tools on RHEL 7
 
 Use the following steps to install the **mssql-tools** on Red Hat Enterprise Linux. 
 
@@ -97,7 +99,7 @@ Use the following steps to install the **mssql-tools** on Red Hat Enterprise Lin
    source ~/.bashrc
    ```
 
-## <a id="ubuntu"></a>Install tools on Ubuntu
+## <a id="ubuntu"></a>Install tools on Ubuntu 16.04
 
 Use the following steps to install the **mssql-tools** on Ubuntu. 
 
@@ -142,7 +144,7 @@ Use the following steps to install the **mssql-tools** on Ubuntu.
    source ~/.bashrc
    ```
 
-## <a id="SLES"></a>Install tools on SLES
+## <a id="SLES"></a>Install tools on SLES 12
 
 Use the following steps to install the **mssql-tools** on SUSE Linux Enterprise Server. 
 
@@ -192,8 +194,9 @@ To install the tools for Mac El Capitan and Sierra, use the following commands:
 #brew untap microsoft/mssql-preview if you installed the preview version 
 brew tap microsoft/mssql-release https://github.com/Microsoft/homebrew-mssql-release
 brew update
-brew install mssql-tools
-#for silent install ACCEPT_EULA=y brew install mssql-tools
+brew install --no-sandbox mssql-tools
+#for silent install: 
+#ACCEPT_EULA=y brew install --no-sandbox mssql-tools
 ```
 
 ## <a id="docker"></a> Docker
@@ -261,4 +264,11 @@ To manually install these packages, use the following steps:
 
 ## Next steps
 
-After installation, connect to the SQL Server instance to create and manage databases. To get started, see [Connect and query SQL Server on Linux](sql-server-linux-connect-and-query-sqlcmd.md).
+For an example of how to use **sqlcmd** to connect to SQL Server and create a database, see one of the following quick start tutorials:
+
+- [Install on Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
+- [Install on SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
+- [Install on Ubuntu](quickstart-install-connect-ubuntu.md)
+- [Run on Docker](quickstart-install-connect-ubuntu.md)
+
+For an example of how to use **bcp** to bulk import and export data, see [Bulk copy data to SQL Server on Linux](sql-server-linux-migrate-bcp.md).

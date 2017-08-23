@@ -2,7 +2,7 @@
 title: "CREATE TABLE (Transact-SQL) | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "04/11/2017"
+ms.date: "08/10/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -381,11 +381,11 @@ column_name <data_type>
  PERSISTED  
  Specifies that the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] will physically store the computed values in the table, and update the values when any other columns on which the computed column depends are updated. Marking a computed column as PERSISTED lets you create an index on a computed column that is deterministic, but not precise. For more information, see [Indexes on Computed Columns](../../relational-databases/indexes/indexes-on-computed-columns.md). Any computed columns that are used as partitioning columns of a partitioned table must be explicitly marked PERSISTED. *computed_column_expression* must be deterministic when PERSISTED is specified.  
   
- ON { <partition_scheme> | *filegroup* | **"**default**"** }  
+ ON { *partition_scheme* | *filegroup* | **"**default**"** }  
 
- Specifies the partition scheme or filegroup on which the table is stored. If <partition_scheme> is specified, the table is to be a partitioned table whose partitions are stored on a set of one or more filegroups specified in <partition_scheme>. If *filegroup* is specified, the table is stored in the named filegroup. The filegroup must exist within the database. If **"**default**"** is specified, or if ON is not specified at all, the table is stored on the default filegroup. The storage mechanism of a table as specified in CREATE TABLE cannot be subsequently altered.  
+ Specifies the partition scheme or filegroup on which the table is stored. If *partition_scheme* is specified, the table is to be a partitioned table whose partitions are stored on a set of one or more filegroups specified in *partition_scheme*. If *filegroup* is specified, the table is stored in the named filegroup. The filegroup must exist within the database. If **"**default**"** is specified, or if ON is not specified at all, the table is stored on the default filegroup. The storage mechanism of a table as specified in CREATE TABLE cannot be subsequently altered.  
   
- ON {<partition_scheme> | *filegroup* | **"**default**"**} can also be specified in a PRIMARY KEY or UNIQUE constraint. These constraints create indexes. If *filegroup* is specified, the index is stored in the named filegroup. If **"**default**"** is specified, or if ON is not specified at all, the index is stored in the same filegroup as the table. If the PRIMARY KEY or UNIQUE constraint creates a clustered index, the data pages for the table are stored in the same filegroup as the index. If CLUSTERED is specified or the constraint otherwise creates a clustered index, and a <partition_scheme> is specified that differs from the <partition_scheme> or *filegroup* of the table definition, or vice-versa, only the constraint definition will be honored, and the other will be ignored.  
+ ON {*partition_scheme* | *filegroup* | **"**default**"**} can also be specified in a PRIMARY KEY or UNIQUE constraint. These constraints create indexes. If *filegroup* is specified, the index is stored in the named filegroup. If **"**default**"** is specified, or if ON is not specified at all, the index is stored in the same filegroup as the table. If the PRIMARY KEY or UNIQUE constraint creates a clustered index, the data pages for the table are stored in the same filegroup as the index. If CLUSTERED is specified or the constraint otherwise creates a clustered index, and a *partition_scheme* is specified that differs from the *partition_scheme* or *filegroup* of the table definition, or vice-versa, only the constraint definition will be honored, and the other will be ignored.  
   
 > [!NOTE]  
 >  In this context, default is not a keyword. It is an identifier for the default filegroup and must be delimited, as in ON **"**default**"** or ON **[**default**]**. If **"**default**"** is specified, the QUOTED_IDENTIFIER option must be ON for the current session. This is the default setting. For more information, see [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
@@ -396,7 +396,7 @@ column_name <data_type>
  TEXTIMAGE_ON { *filegroup*| **"**default**"** }  
  Indicates that the **text**, **ntext**, **image**, **xml**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, and CLR user-defined type columns (including geometry and geography) are stored on the specified filegroup.  
   
- TEXTIMAGE_ON is not allowed if there are no large value columns in the table. TEXTIMAGE_ON cannot be specified if <partition_scheme> is specified. If **"**default**"** is specified, or if TEXTIMAGE_ON is not specified at all, the large value columns are stored in the default filegroup. The storage of any large value column data specified in CREATE TABLE cannot be subsequently altered.  
+ TEXTIMAGE_ON is not allowed if there are no large value columns in the table. TEXTIMAGE_ON cannot be specified if *partition_scheme* is specified. If **"**default**"** is specified, or if TEXTIMAGE_ON is not specified at all, the large value columns are stored in the default filegroup. The storage of any large value column data specified in CREATE TABLE cannot be subsequently altered.  
 
 > [!NOTE]  
 > Varchar(max), nvarchar(max), varbinary(max), xml and large UDT values are stored directly in the data row, up to a limit of 8000 bytes and as long as the value can fit the record. If the value does not fit in the record, a pointer is sorted in-row and the rest is stored out of row in the LOB storage space. 0 is the default value.
@@ -753,7 +753,7 @@ CREATE TABLE t4( c1 int, c2 int, INDEX ix_1 NONCLUSTERED (c1,c2))
   
  For recommendations on when to use COMPRESSION_DELAY, please see [Get started with Columnstore for real time operational analytics](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)  
   
- < table_option> ::=  
+ \< table_option> ::= 
  Specifies one or more table options.  
   
  DATA_COMPRESSION  
@@ -787,7 +787,7 @@ CREATE TABLE t4( c1 int, c2 int, INDEX ix_1 NONCLUSTERED (c1,c2))
  ON PARTITIONS **(** { `<partition_number_expression>` | [ **,**...*n* ] **)**  
  Specifies the partitions to which the DATA_COMPRESSION setting applies. If the table is not partitioned, the ON PARTITIONS argument will generate an error. If the ON PARTITIONS clause is not provided, the DATA_COMPRESSION option will apply to all partitions of a partitioned table.  
   
- <partition_number_expression> can be specified in the following ways:  
+ *partition_number_expression* can be specified in the following ways:  
   
 -   Provide the partition number of a partition, for example: ON PARTITIONS (2).  
   
@@ -888,7 +888,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  Enables system versioning of the table if the datatype, nullability constraint, and primary key constraint requirements are met. If the **HISTORY_TABLE** argument is not used, the system generates a new history table matching the schema of the current table in the same filegroup as the current table, creating a link between the two tables and enables the system to record the history of each record in the current table in the history table. The name of this history table will be `MSSQL_TemporalHistoryFor<primary_table_object_id>`. By default, the history table is **PAGE** compressed. If the HISTORY_TABLE argument is used to create a link to and use an existing history table, the link is created between the current table and the specified table. If current table is partitioned, the history table is created on default file group because partitioning configuration is not replicated automatically from the current table to the history table. If the name of a history table is specified during history table creation, you must specify the schema and table name. When creating a link to an existing history table, you can choose to perform a data consistency check. This data consistency check ensures that existing records do not overlap. Performing the data consistency check is the default. Use this argument in conjunction with the PERIOD FOR SYSTEM_TIME and GENERATED ALWAYS AS ROW { START | END } arguments to enable system versioning on a table. For more information, see [Temporal Tables](../../relational-databases/tables/temporal-tables.md).  
   
- REMOTE_DATA_ARCHIVE = { ON [ ( <table_stretch_options> [,...n] ) ] | OFF ( MIGRATION_STATE = PAUSED ) }  
+ REMOTE_DATA_ARCHIVE = { ON [ ( *table_stretch_options* [,...n] ) ] | OFF ( MIGRATION_STATE = PAUSED ) }  
    
   
 **Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -920,7 +920,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  MIGRATION_STATE = { OUTBOUND |  INBOUND | PAUSED }  
    
   
-**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
+**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], and Azure SQL . 
   
 -   Specify `OUTBOUND` to migrate data from SQL Server to Azure.  
   
@@ -990,7 +990,7 @@ Column and table indexes can be specified as part of the CREATE TABLE statement.
   
  Prefix local temporary table names with single number sign (#*table_name*), and prefix global temporary table names with a double number sign (##*table_name*).  
   
- SQL statements reference the temporary table by using the value specified for *table_name* in the CREATE TABLE statement, for example:  
+ SQL statements reference the temporary table by using the value specified for *table_name* in the CREATE TABLE statement, for example####:  
   
 ```  
 CREATE TABLE #MyTempTable (cola INT PRIMARY KEY);  
@@ -1057,7 +1057,76 @@ GO
  When you create local or global temporary tables, the CREATE TABLE syntax supports constraint definitions except for FOREIGN KEY constraints. If a FOREIGN KEY constraint is specified in a temporary table, the statement returns a warning message that states the constraint was skipped. The table is still created without the FOREIGN KEY constraints. Temporary tables cannot be referenced in FOREIGN KEY constraints.  
   
  If a temporary table is created with a named constraint and the temporary table is created within the scope of a user-defined transaction, only one user at a time can execute the statement that creates the temp table. For example, if a stored procedure creates a temporary table with a named primary key constraint, the stored procedure cannot be executed simultaneously by multiple users.  
+
+
+## Database scoped global temporary tables (Azure SQL Database)
+
+Global temporary tables for SQL Server (initiated with ## table name) are stored in tempdb and shared among all users’ sessions across the whole SQL Server instance. For information on SQL table types, see the above section on Create Tables.  
+
+Azure SQL Database supports global temporary tables that are also stored in tempdb and scoped to the database level.  This means that global temporary tables are shared for all users’ sessions within the same Azure SQL database. User sessions from other Azure SQL databases cannot access global temporary tables.
+
+Global temporary tables for Azure SQL DB follow the same syntax and semantics that SQL Server uses for temporary tables.  Similarly, global temporary stored procedures are also scoped to the database level in Azure SQL DB. Local temporary tables (initiated with # table name) are also supported for Azure SQL Database and follow the same syntax and semantics that SQL Server uses.  See the above section on [Temporary Tables](#temporary-tables).  
+
+> [!IMPORTANT]
+> This feature is in public preview and is available for Azure SQL Database.
+>
+
+### Troubleshooting global temporary tables for Azure SQL DB 
+
+For the troubleshooting the tempdb, see [Troubleshooting Insufficient Disk space in tempdb](https://technet.microsoft.com/library/ms176029%28v=sql.105%29.aspx?f=255&MSPPError=-2147217396). To access the troubleshooting DMVs in Azure SQL Database, you must be a server admin.
   
+### Permissions  
+
+ Any user can create global temporary objects. Users can only access their own objects, unless they receive additional permissions. 
+ .  
+  
+### Examples 
+
+- Session A creates a global temp table ##test in Azure SQL Database testdb1 and adds 1 row
+
+```tsql
+CREATE TABLE ##test ( a int, b int);
+INSERT INTO ##test values (1,1);
+
+--Obtain object ID for temp table ##test 
+SELECT OBJECT_ID('tempdb.dbo.##test') AS 'Object ID'; 
+
+---Result
+1253579504
+
+---Obtain global temp table name for a given object ID 1253579504 in tempdb (2)
+SELECT name FROM tempdb.sys.objects WHERE object_id = 1253579504
+
+---Result
+##test
+```
+- Session B connects to Azure SQL Database testdb1 and can access table ##test created by session A
+
+```tsql
+SELECT * FROM ##test
+---Results
+1,1
+```
+
+- Session C connects to another database in Azure SQL Database testdb2 and wants to access ##test created in testdb1. This select fails due to the database scope for the global temp tables 
+
+```tsql
+SELECT * FROM ##test
+---Results
+Msg 208, Level 16, State 0, Line 1
+Invalid object name '##test'
+```
+
+- Addressing system object in Azure SQL Database tempdb from current user database testdb1
+
+```tsql
+SELECT * FROM tempdb.sys.objects
+SELECT * FROM tempdb.sys.columns
+SELECT * FROM tempdb.sys.database_files
+```
+
+
+
 ## Partitioned Tables  
  Before creating a partitioned table by using CREATE TABLE, you must first create a partition function to specify how the table becomes partitioned. A partition function is created by using [CREATE PARTITION FUNCTION](../../t-sql/statements/create-partition-function-transact-sql.md). Second, you must create a partition scheme to specify the filegroups that will hold the partitions indicated by the partition function. A partition scheme is created by using [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md). Placement of PRIMARY KEY or UNIQUE constraints to separate filegroups cannot be specified for partitioned tables. For more information, see [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
   
@@ -1591,4 +1660,5 @@ GO
  [sp_spaceused &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)  
   
   
+
 

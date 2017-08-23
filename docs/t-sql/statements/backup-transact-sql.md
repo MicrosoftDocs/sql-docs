@@ -1,7 +1,7 @@
 ---
 title: "BACKUP (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/26/2016"
+ms.date: "08/07/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -179,7 +179,7 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
 > [!NOTE]  
 >  The mirror database in a database mirroring partnership cannot be backed up.  
   
- <file_or_filegroup> [ **,**...*n* ]  
+\<file_or_filegroup> [ **,**...*n* ]
  Used only with BACKUP DATABASE, specifies a database file or filegroup to include in a file backup, or specifies a read-only file or filegroup to include in a partial backup.  
   
  FILE **=** { *logical_file_name*| **@***logical_file_name_var* }  
@@ -206,17 +206,17 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
 >  Explicitly listing the read/write filegroups by using FILEGROUP instead of READ_WRITE_FILEGROUPS creates a file backup.  
   
  FILEGROUP = { *logical_filegroup_name*| **@***logical_filegroup_name_var* }  
- Is the logical name of a read-only filegroup or a variable whose value equates to the logical name of a read-only filegroup that is to be included in the partial backup. For more information, see "<file_or_filegroup>," earlier in this topic.  
+Is the logical name of a read-only filegroup or a variable whose value equates to the logical name of a read-only filegroup that is to be included in the partial backup. For more information, see "\<file_or_filegroup>," earlier in this topic.
   
  *n*  
  Is a placeholder that indicates that multiple read-only filegroups can be specified in a comma-separated list.  
   
  For more information about partial backups, see [Partial Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/partial-backups-sql-server.md).  
   
- TO <backup_device> [ **,**...*n* ]  
+TO \<backup_device> [ **,**...*n* ]
  Indicates that the accompanying set of [backup devices](../../relational-databases/backup-restore/backup-devices-sql-server.md) is either an unmirrored media set or the first of the mirrors within a mirrored media set (for which one or more MIRROR TO clauses are declared).  
   
- <backup_device>  
+\<backup_device>
  Specifies a logical or physical backup device to use for the backup operation.  
   
  { *logical_device_name* | **@***logical_device_name_var* }  
@@ -240,7 +240,7 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
  *n*  
  Is a placeholder that indicates that up to 64 backup devices may be specified in a comma-separated list.  
   
- MIRROR TO <backup_device> [ **,**...*n* ]  
+MIRROR TO \<backup_device> [ **,**...*n* ]
  Specifies a set of up to three secondary backup devices, each of which will mirror the backups devices specified in the TO clause. The MIRROR TO clause must be specify the same type and number of the backup devices as the TO clause. The maximum number of MIRROR TO clauses is three.  
   
  This option is available only in the Enterprise edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -248,8 +248,8 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
 > [!NOTE]  
 >  For MIRROR TO = DISK, BACKUP automatically determines the appropriate block size for disk devices. For more information about block size, see "BLOCKSIZE" later in this table.  
   
- <backup_device>  
- See "<backup_device>," earlier in this section.  
+\<backup_device>
+See "\<backup_device>," earlier in this section.
   
  *n*  
  Is a placeholder that indicates that up to 64 backup devices may be specified in a comma-separated list. The number of devices in the MIRROR TO clause must equal the number of devices in the TO clause.  
@@ -307,7 +307,7 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
  These options operate on the backup set that is created by this backup operation.  
   
 > [!NOTE]  
->  To specify a backup set for a restore operation, use the FILE **=***<backup_set_file_number>* option. For more information about how to specify a backup set, see "Specifying a Backup Set" in [RESTORE Arguments &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
+>  To specify a backup set for a restore operation, use the FILE **=***\<backup_set_file_number>* option. For more information about how to specify a backup set, see "Specifying a Backup Set" in [RESTORE Arguments &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).
   
  COPY_ONLY  
  Specifies that the backup is a *copy-only backup*, which does not affect the normal sequence of backups. A copy-only backup is created independently of your regularly scheduled, conventional backups. A copy-only backup does not affect your overall backup and restore procedures for the database.  

@@ -1,7 +1,7 @@
 ---
 title: "Changelog for SQL Server Data Tools (SSDT) | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/30/2017"
+ms.date: "08/18/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -13,22 +13,87 @@ ms.assetid: b071f8b8-c8e5-44e0-bbb6-04804dd1863a
 caps.latest.revision: 31
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "craigg"
 ---
 # Changelog for SQL Server Data Tools (SSDT)
-This change log is for [SQL Server Data Tools (SSDT) for Visual Studio 2015](https://msdn.microsoft.com/library/mt204009.aspx).  
+This change log is for [SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx).  
   
-For detailed posts about what’s new and changed, please visit [the SSDT Team blog](https://blogs.msdn.microsoft.com/ssdt/)
+For detailed posts about what's new and changed, see [the SSDT Team blog](https://blogs.msdn.microsoft.com/ssdt/)
 
-## SSDT 17.1
+## SSDT for Visual Studio 2017 (15.3.0 preview)
+Build number: 14.0.16121.0
+  
+**What's New**
+
+This preview is the first version of SSDT for Visual Studio 2017. This release introduces a standalone web installation experience for SQL Server Database, Analysis Services, Reporting Services, and Integration Services projects in Visual Studio 2017 15.3 or later.
+
+
+**Known Issues**
+
+- The installer is not localized.
+- SSIS is not localized.
+- SSIS Execute Package Task doesn't support debugging when *ExecuteOutofProcess* is set to *True*. This issue only applies to debugging. Save, deploy, and execution via DTExec.exe or SSIS catalog is not impacted.
+- For a complete list of changes, see the [changelog](changelog-for-sql-server-data-tools-ssdt.md).
+- Report issues at the [SSDT Connect Feedback](https://connect.microsoft.com/SQLServer/Feedback) site.
+
+
+## SSDT 17.2 for Visual Studio 2015
+Build number: 14.0.61707.300
+
+### What's New?
+
+
+**AS projects:**
+- Object Level Security can now be configured in the *Roles* dialog for advanced security in 1400 compatability level tabular models.
+- New AAD role member selection for users without email addresses in AS Azure models in SSDT AS projects for VS2017.
+- New AS Azure "Always Prompt" project property in SSDT AS tabular projects to customize behavior of ADAL credential caching.
+
+
+### Bug Fixes
+
+**General**
+- Updated branding references for SQL Server 2017.
+
+**AS projects**
+- Significant performance fixes made to improve experience when committing DAX measure changes and other model edits.
+- Fixed a number of issues with Power Query integration in Analysis Services projects using 1400-compatability level tabular models.
+- Fixed an issue in Multi-Dimensional projects in VS2017 only where Design Aggregation designer may fail to load.
+- Fixed an issue when dragging an item in the Analysis Services multi-dimensional DSV diagram that could crash VS 2017.
+- Fixed an issue in AS projects where the Deploy Dialog was not always in the foreground on top of Visual Studio.
+- Removed Analysis Services import from Data Marketplace as data source since the service has been decommissioned.
+- Fixed an issue that left the table designer disabled after Import New Table from existing data source through Tabular Model Explorer.
+- Fixed an issue that may cause Model menu items Import from Datasource/Add Datasource to remain hidden in the wrong context.
+- Improved experience when creating a measure from the Tabular Model Explorer to avoid switching focus back to the column used to create a measure.
+- When switching from integrated workspace in AS tabular projects to explicit workspace server, the old database files are now be cleaned up.
+- Fixed an issue in AS tabular 1400 models projects where the Row Level Security checkbox UI state initially showed as unchecked regardless of actual underlying object state.
+- Fixed a crash that could occur when importing text file or Excel file into 1400-compat mode tabular model using Power Query and unhandled exception thrown.
+- Fixed an issue that could occur with the scrollbar thumb in the DAX formula editing control in AS tabular model designer.
+- Fixed an issue that prevented modifying a PowerQuery mashup data source when it contained a username/password authentication.
+- Fixed an issue that could prevent a data source to connect when additional properties set in connection string.
+- Fixed an issue that could crash VS when multiple AS tabular model projects loaded and closing the second model designer without interacting with anything in the designer first.
+- Fixed an issue where edits made to KPI formatting were not getting persisted in some cases.
+- Fixed an issue with PowerQuery UI that showed the wrong menu checked state for whether the formula bar was shown.
+- Fixed an issue in AS Tabular 1400-compat level projects with PowerQuery data sources that could crash VS when selecting Change Data Source menu from Tabular Model Explorer.
+- Fixed an intermittent issue where loading a 1400 tabular model may show the error *'Could not load file or assembly 'Microsoft.ProBI.MashupLibrary'*.
+
+**RS projects**
+- User preferences for RS Ruler and Parameter box settings selection state is remembered correctly across sessions.
+
+**IS projects**
+- Fixed an issue where ADO/ADO.NET ForEachLoop Container didn't show correctly
+- Fixed an issue where some tasks/components/wizards are not localized
+- Changed latest *TargetServerVersion* from "SQL Server vNext" to "SQL Server 2017"
+
+
+## SSDT 17.1 for Visual Studio 2015
 Build number: 14.0.61705.170
 
 ### What's New?
 **AS projects:**
 - Users can set encoding hints on columns in the UI on 1400 models
 - Non-model-related IntelliSense is now available in offline mode
-- Tabular Model Explorer now contains a node to represent named M expressions available across the model (1400 compat-level tabular models)
-- Azure Active Directory People Picker similar to Microsoft Azure Portal's IAM now available when setting up Role Members in Tabular Models
+- Tabular Model Explorer now contains a node to represent named M expressions available across the model (1400 compatibility level tabular models)
+- Azure Active Directory People Picker, similar to Microsoft Azure portal's IAM, now available when setting up Role Members in Tabular Models
 
 **Database projects:**
 - Updated to DacFx 17.1
@@ -36,7 +101,7 @@ Build number: 14.0.61705.170
 ### Bug Fixes
 - Fixed an issue where the Business Intelligence Designers group name was displayed incorrectly in Visual Studio Options in VS2017
 - Fixed an issue where a crash could occur generating a Code Map for a solution with a Report Project or AS Project
-- Fixed a number of issues with PowerQuery integration for Analysis Services 1400 compat-level tabular models
+- Fixed a number of issues with PowerQuery integration for Analysis Services 1400 compatibility level tabular models
 - Fixed an issue in the new DAX editor tool window where the assignment operator could not be on a separate line when defining a measure
 - Fixed an issue that prevented the tabular measure display from updating when renaming measures in perspective
 - Updated Analysis Services integrated workspace engine and Tabular Object Model that fixes a regression that caused 1200 tabular projects containing translations to fail on deploy to SQL Server 2016 Analysis Services server
@@ -50,7 +115,7 @@ Build number: 14.0.61705.170
 ## DacFx 17.0.1 
 - Fix for issue with databases with an asymmetric key by an HSM with an EKM provider [Connect item](https://connect.microsoft.com/SQLServer/feedback/details/3132749/sqlpackage-exe-fails-when-extracting-a-database-which-contains-an-asymmetric-key-using-an-ekm-provider)
 
-## SSDT 17.0 (supports up to SQL Server 2017)
+## SSDT 17.0 for Visual Studio 2015 (supports up to SQL Server 2017)
 Build number: 14.0.61704.140
 
 ### What's New?
@@ -66,7 +131,7 @@ Build number: 14.0.61704.140
 - Support for CDC Control Task, CDC Splitter and CDC Source when targeting SQL Server 2017. 
 
 **AS projects:**
-- Analysis Services PowerQuery Integration (1400 compat-level tabular models):
+- Analysis Services PowerQuery Integration (1400 compatibility level tabular models):
     - DirectQuery is available for SQL Oracle, And Teradata if user has installed 3rd Party drivers
     - Add columns by example in PowerQuery
     - Data access options in 1400 models (model-level properties used by M engine)
@@ -102,7 +167,7 @@ Build number: 14.0.61704.140
 - Tabular: Fixed an issue where Integrated Workspace mode was allowed on 32-bit machines even though it is not supported.
 - Tabular: Fixed an issue where clicking on anything while in semi-select mode (typing a DAX expression but clicking a measure, for example) could cause crashes.
 - Tabular: Fixed an issue where Deployment Wizard would reset the model's .Name property back to "Model". [Connect Item](http://connect.microsoft.com/SQLServer/feedback/details/3107018/ssas-deployment-wizard-resets-modelname-to-model)
-- Tabular: Fixed an issue where selecting a heirarchy in TME should display properties even if Diagram View is not selected.
+- Tabular: Fixed an issue where selecting a hierarchy in TME should display properties even if Diagram View is not selected.
 - Tabular: Fixed an issue where pasting into the DAX Formula bar would paste images or other content instead of text when pasting from certain applications.
 - Tabular: Fixed an issue where some old models in the 1103 couldn't be opened due to presence of measures with a specific definition.
 - Tabular: Fixed an issue where XEvent Sessions could not be deleted.
@@ -116,7 +181,7 @@ Build number: 14.0.61704.140
 - Deployment Wizard should apply changes to calculated table partitions even when the option to keep partitions is enabled
 - Fixed an issue where Advanced Properties dialog to existing AS Connection didn’t show full list until reselected
 - Fixed a few issues with clipped UI strings that appeared in some localized builds
-- Fixed a number of issues with PowerQuery integration in 1400 compat-level AS tabular models
+- Fixed a number of issues with PowerQuery integration in 1400 compatibility level AS tabular models
 - Fixed an issue with Report Wizard style templates not showing up correctly
 - Fixed an issue with the Report Wizard that could lead to incorrect data source settings when changing from SQL to AS
 - Fixed an issue causing Analysis Services (Tabular) project build failure from command line (devenv.com\exe)
@@ -152,7 +217,7 @@ Build number: 14.0.61704.140
 - Always Encrypted: Online encryption does not disable change tracking on cancellation and does not work properly if change tracking has not been cleaned prior to start encryption
 
 
-## SSDT 16.5 (supports up to SQL Server 2016)
+## SSDT 16.5 for Visual Studio 2015 (supports up to SQL Server 2016)
 Released: October 20, 2016
 
 Build number: 14.0.61021.0
@@ -247,7 +312,7 @@ For more information, please read the [Analysis Services blog post](https://blog
 
 
 
-## SSDT 16.4 (for SQL Server 2016)
+## SSDT 16.4 for Visual Studio 2015 (for SQL Server 2016)
 Released: September 20, 2016
 
 Build number: 14.0.60918
@@ -287,7 +352,7 @@ SSDT Tabular now includes an internal SSAS instance, which SSDT Tabular starts a
 
 
 
-## SSDT 16.3 (for SQL Server 2016)
+## SSDT 16.3 for Visual Studio 2015 (for SQL Server 2016)
 Released: August 15, 2016
 
 Build number: 14.0.60812.0  
@@ -320,14 +385,14 @@ Build number: 14.0.60812.0
         - Fixed a DAX expression issue that caused inconsistent behaviors based on how you commit the expression .
         - Fixed a VS crash issue when creating KPIs.
         - Fixed an issue that generated invalid reports for SQL Server 2008 R2, 2012 and 2014.
-        - Fixed a Hierarchy order issue that caused an infinite loop error for .dwpro project.
+        - Fixed a hierarchy order issue that caused an infinite loop error for .dwpro project.
         - Fixed a RS RDL issue where downgrading RDL required a full rebuild which caused user’s confusion.
         - Fixed a KPI issue where Hide From Client Tools had no effect.
         
 
  
   
-## SSDT July (for SQL Server 2016)  
+## SSDT July for Visual Studio 2015 (for SQL Server 2016)  
 Released: June 30, 2016  
   
 Build number: 14.0.60629.0  
@@ -352,7 +417,7 @@ Build number: 14.0.60629.0
 
  * **Analysis Services & Reporting Services:**
     * Fixed a SxS issue with MSOLAP OLEDB provider where only the 32-bit provider was getting installed, impacting 64-bit Excel 2016 connecting to SQL Server 2014 (did not repro with ClickOnce installs from Office365, only MSI Excel install).
-    * Fixed an issue for a corner case to be more robust when upgrading AS model with pasted tables from 1103 to 1200 compat-level that could give error "Relationship uses an invalid column ID".
+    * Fixed an issue for a corner case to be more robust when upgrading AS model with pasted tables from 1103 to 1200 compatibility level that could give error "Relationship uses an invalid column ID".
     * Fixed a SxS issue when SSDT-BI 2013 on same machine, could no longer import data in AS model after uninstalling SSDT 2015 (cartridges shared registry setting).
     * Improved robustness to address issues\crashes when the connection to the AS engine is lost (i.e. SSDT left open overnight and AS server recycled, or other cases where the connection is temporarily lost). 
     * Fixed issues with dialogs opening on different screens than VS in multi-monitor scenarios. 
@@ -367,145 +432,20 @@ Build number: 14.0.60629.0
     * Fixed an Object Reference not set exception when viewing the model.bim project file properties while in code view. 
     * Fixed an issue with pasting data into AS model grid to create pasted table yielded incorrect values on international locales using comma as decimal separator. 
     * Fixed an issue opening 2008 RS project in SSDT and choosing to not upgrade it. 
-    * Fixed issue in 1200 compat-level models calculated table UI when using default formatting for column type to allow changing the formatting type from the UI. 
+    * Fixed issue in 1200 compatibility level models calculated table UI when using default formatting for column type to allow changing the formatting type from the UI. 
     
 
-## SSDT June (for SQL Server 2016)  
+## SSDT June for Visual Studio 2015 (for SQL Server 2016)  
 Released: June 1, 2016  
   
 Build number: 14.0.60525.0 
 
 SSDT General Availability (GA) is now released. The SSDT GA update for June 2016 adds support for the latest updates of SQL Server 2016 RTM, and various bug fixes. For details, see [SQL Server Data Tools GA update for June 2016](https://blogs.msdn.microsoft.com/ssdt/2016/06/01/sql-server-data-tools-ga-update-for-june-2016/).
 
-      
-
-## SSDT April (for SQL Server 2016 RC3)  
-Released: April 15, 2016  
-  
-Build number: 14.0.60413.0  
-  
-**SQL Server Database**  
-* **Always Encrypted Support:** For Databases that contain Always Encrypted columns, SSDT and DacFx allows viewing and editing these databases and publishing from a database project to them. Note that support for altering columns with column encryption present will be coming in a future release.  
-* **Connection dialog and SQL Server Object Explorer:** Multiple fixes and improvements.  
-    * The Details page listing advanced connection properties was overhauled to show the full connection string in a multi-line box, and to improve support on High DPI machines.  
-    * We have brought back the traditional error dialog with detailed connection errors. This helps when diagnosing login issues with clearer error messages and a stack trace so that DBAs or CSS can get the information they need to help diagnose your problems.  
-    * For users with minimal permissions we fixed a number of issues around listing databases in the Connection Dialog and SQL Server Object Explorer, viewing the Security folder, and more.  
-    * Azure SQL DB performance when expanding the databases node to list all DBs has been improved.  
-* **SSDT installer:**  
-    * Fixed issue where .Net was being downloaded on uninstall.  
-    * The installer size is now set correctly on High DPI machines.  
-    * Removed the version check blocking SSDT installation if a newer SQL Server version is present.  
-    * Schema Compare: Fixed a performance issue where checking/unchecking multiple items took a long time in Visual Studio.  
-    * Support for using LocalDB 2014 on x86 machines, since there is no x86 version of SQL Server 2016.  
-* **Build and Deployment:**  
-    * Fixed issue where computed columns were not supported on Temporal Tables.  
-    * The “Execute deployment script in single-user mode” option is ignored when deploying to Azure V12 as this is not supported in cloud scenarios.  
   
   
-## SSDT Hotfix (for SQL Server 2016 RC2)  
-Released: April 5, 2016  
+## Additional Resources
   
-Build number: 14.0.60329.0  
-  
-This build contains a hotfix for the version of SSDT that provides features for SQL Server Integration Services. Build 14.0.60316.0 can also be used with Analysis Services and Reporting Services in SQL Server 2016.   
-  
-To get this hotfix, use the [download links on this blog post](https://blogs.msdn.microsoft.com/ssdt/2016/04/05/ssdt-preview-update-rc2/).  
-  
-Report developers, if you build new reports using this build of SSDT, [read the known issue and workaround](https://blogs.msdn.microsoft.com/ssdt/2016/04/05/ssdt-preview-update-rc2/) for a  for a temporary issue in SSRS reports found only in this hotfix.  
-  
-## SSDT Hotfix (for SQL Server 2016 RC0)  
-Released: March 18, 2016  
-  
-Build number: 14.0.60316.0  
-  
-This build contains a hotfix for the version of SSDT that provides features for SQL Server 2016 RC0. There is no RC1 version of SSDT at this time. Build 14.0.60316.0 can be used with either RC0 or RC1 of SQL Server 2016.  
-      
-## SSDT February 2016 Preview (for SQL Server 2016 RC0)  
-Released: March 7, 2016  
-  
-Build number: 14.0.60305.0  
-  
--   **SQL Server project templates**  
-  
-    No announcements for this SSDT preview release. See [What's New in Database Engine](https://msdn.microsoft.com/library/bb510411.aspx) to learn about other features in this release.  
-  
--   **SSIS package project templates**  
-  
-    SSIS Designer creates and maintains packages for SQL Server 2016, 2014, or 2012. New templates renamed as parts. SSIS Hadoop connector supports for ORC format. See [What's New in Integration Services](https://msdn.microsoft.com/library/bb522534.aspx) for details.  
-  
--   **SSAS project templates (Tabular model projects)**  
-  
-    This month’s update to Analysis Services delivers support for display folders for Tabular models and any models created with new SQL Server 2016 compatibility level is now supported in SSIS packages. For more information. see [What's New in Analysis Services (blog post)](http://blogs.msdn.com/b/analysisservices/archive/2016/01/28/what-s-new-for-sql-server-2016-analysis-services-in-ctp3-3.aspx) for details.  
-  
--   **SSRS report project templates**  
-  
-    No announcements for this SSDT preview release. See [What's New in Reporting Services](https://msdn.microsoft.com/library/ms170438.aspx) to learn  about other features in this release.  
-  
-## SSDT January 2016 Preview  
-Released: Feb 4, 2016  
-  
-Build number: 14.0.60203.0  
-  
--   **SQL Server project templates**  
-  
-    No announcements for this SSDT preview release. See [What's New in Database Engine](https://msdn.microsoft.com/library/bb510411.aspx) to learn about other features in this CTP.  
-  
--   **SSIS package project templates**  
-  
-    Adds support for ODBC source and destination components, a CDC control task,  
-      a CDC source and splitter component, a Microsoft Connector for SAP BW, and an Integration Services Feature Pack for Azure. See [What's New in Integration Services](https://msdn.microsoft.com/library/bb522534.aspx) for details.  
-  
--   **SSAS project templates**  
-  
-    Includes enhancements for Tabular models at 1200 compatibility level, calculated columns and row-level security for models in DirectQuery mode, translations of model metadata,  TMSL script execution in the SSIS Analysis Services Execute DDL Task, and numerous bug fixes.  
-    See [What's New in Analysis Services (msdn)](https://msdn.microsoft.com/library/bb522628.aspx) or [What's New in Analysis Services (blog post)](http://blogs.msdn.com/b/analysisservices/archive/2016/01/28/what-s-new-for-sql-server-2016-analysis-services-in-ctp3-3.aspx) for details.  
-  
--   **SSRS report project templates**  
-  
-    No announcements for this SSDT preview release. See [What's New in Reporting Services](https://msdn.microsoft.com/library/ms170438.aspx) to learn  about other features in this CTP.  
-  
-## SSDT December 2015 Preview  
-  
--   **SQL Server project templates** include bug fixes for the Connection dialog box, recent history lists, proper use of authentication context set in the connection property when loading a database list.  
-  
-    -   Changed test connection timeout value to 15 seconds.  
-  
-    -   Create an Azure SQL Database server firewall rule if the client IP is not registered when loading a database list.  
-  
-    -   SQL Server 2016 CTP3.2 feature programmability support.  
-  
--   **SSAS project templates** add support for creating calculated tables based on DAX expressions and other objects already defined in the model.  
-  
--   **SSIS package project template** additions include SSIS Hadoop connector support for Avro file format and Kerberos authentication.   
-    Please note that SSIS designer support for SSIS 2012 and 2014 is not yet included in this update.  
-  
-## SSDT November 2015 Preview  
-  
--   **SQL Server project templates**. Preview of improved connection experience for SQL Server and Azure SQL Database.  
-  
--   **SSIS package project templates**. SSIS catalog performance improvement: The performance for most SSIS catalog views for non-ssis-admin user is improved.  
-  
--   **SSAS project templates** include enhancements for Tabular model projects in Analysis Services. You can use the **View Code** command to view the model definition in JSON. If you aren't using a full-featured edition Visual Studio 2015, you will need one to get the JSON editor. You can download the [Visual Studio Community edition](https://www.visualstudio.com/downloads/download-visual-studio-vs.aspx) for free.  
-  
-## SSDT October 2015 Preview  
-  
--   New project  templates for BI (Analysis Services models, Reporting Services reports, and Integration Services packages). All  SQL Server project templates are now in one SSDT.  
-  
--   New SSIS features including Hadoop connector, control flow template, relaxed max buffer size of data flow task.  
-  
--   SQL Server 2016 CTP 3.0 feature support for relational database projects.  
-  
--   Various bug fixes in SSIS and support for Windows 7 OS.  
-  
-## SSDT September 2015 Preview  
-  
--   Multi-language support is new in this preview.  
-  
-## SSDT August 2015 Preview  
-  
--   New standalone Setup.exe program for installing SSDT.  You no longer need to use a modified version of SQL Server Setup. This version of SSDT includes a project template for building relational databases deployed to SQL Server or Azure SQL Database.  
-  
-## See Also  
 [Download SQL Server Data Tools &#40;SSDT&#41;](../ssdt/download-sql-server-data-tools-ssdt.md)  
 [Previous releases of SQL Server Data Tools &#40;SSDT and SSDT-BI&#41;](../ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md)  
 [What's New in Database Engine](https://msdn.microsoft.com/library/bb510411.aspx)  

@@ -14,7 +14,7 @@ ms.workload: linux-sql
 ms.tgt_pltfrm: na
 ms.devlang: na
 ms.topic: updart-autogen
-ms.date: 06/30/2017
+ms.date: 07/17/2017
 ms.author: genemi
 ---
 # New and Recently Updated: SQL Server on Linux docs
@@ -29,7 +29,7 @@ Recent updates are reported for the following date range and subject:
 
 
 
-- *Date range of updates:* &nbsp; **2017-05-17** &nbsp; -to- &nbsp; **2017-06-30**
+- *Date range of updates:* &nbsp; **2017-05-23** &nbsp; -to- &nbsp; **2017-07-17**
 - *Subject area:* &nbsp; **Microsoft SQL Server on Linux**.
 
 
@@ -42,8 +42,30 @@ Recent updates are reported for the following date range and subject:
 The following links jump to new articles which have been added recently.
 
 
-1. [Configure SQL Server settings with environment variables on Linux](sql-server-linux-configure-environment-variables.md)
-2. [Installing SQL Server Integration Services (SSIS) on Linux](sql-server-linux-setup-ssis.md)
+1. [Run the SQL Server 2017 container image with Docker](quickstart-install-connect-docker.md)
+2. [Install SQL Server and create a database on Red Hat](quickstart-install-connect-red-hat.md)
+3. [Install SQL Server and create a database on SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
+4. [Install SQL Server and create a database on Ubuntu](quickstart-install-connect-ubuntu.md)
+5. [Sample: Unattended SQL Server installation script for Red Hat Enterprise Linux](sample-unattended-install-redhat.md)
+6. [Sample: Unattended SQL Server installation script for SUSE Linux Enterprise Server](sample-unattended-install-suse.md)
+7. [Sample: Unattended SQL Server installation script for Ubuntu](sample-unattended-install-ubuntu.md)
+8. [Active Directory Authentication with SQL Server on Linux](sql-server-linux-active-directory-authentication.md)
+9. [High availability and data protection for availability group configurations](sql-server-linux-availability-group-ha.md)
+10. [Configure SQL Server 2017 container images on Docker](sql-server-linux-configure-docker.md)
+11. [Customer Feedback for SQL Server on Linux](sql-server-linux-customer-feedback.md)
+12. [Encrypting Connections to SQL Server on Linux](sql-server-linux-encrypted-connections.md)
+13. [Install SQL Server Integration Services (SSIS) on Linux](sql-server-linux-setup-ssis.md)
+
+
+
+
+&nbsp;
+
+<a name="compactupdatedlist"/>
+
+## Compact List of Articles Updated Recently
+
+This compact list provides links to all the updated articles which are listed in the Excerpts section.
 
 
 
@@ -65,61 +87,16 @@ For these and other reasons, do not copy code from these excerpts, and do not ta
 
 <a name="TitleNum_1"/>
 
-### 1. &nbsp; [Configure RHEL Cluster for SQL Server Availability Group](sql-server-linux-availability-group-cluster-rhel.md)
+### 1. &nbsp; [Configure SLES Cluster for SQL Server Availability Group](sql-server-linux-availability-group-cluster-sles.md)
 
 *Updated: 2017-06-22* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Next](#TitleNum_2))
-
-<!-- Source markdown line 41.  ms.author= mikeray.  -->
-
-&nbsp;
-
-
-<!-- git diff --ignore-all-space --unified=0 b528607affac5f75c0d518e53377e6f1a4a0461e 19ca65f997c45d4e1b83a7554d76119d8fa0d556  (PR=2150  ,  Filename=sql-server-linux-availability-group-cluster-rhel.md  ,  Dirpath=docs\linux\  ,  MergeCommitSha40=6dccaff93a6c8b2374a1fad069b2f597898802fc) -->
-
-
-
-**Roadmap**
-
-
-The steps to create an availability group on Linux servers for high availability are different from the steps on a Windows Server failover cluster. The following list describes the high level steps: 
-
-1. [Configure SQL Server on the cluster nodes--sql-server-linux-setup.md).
-
-2. [Create the availability group--sql-server-linux-availability-group-failover-ha.md). 
-
-3. Configure a cluster resource manager, like Pacemaker. These instructions are in this document.
-   
-   The way to configure a cluster resource manager depends on the specific Linux distribution. 
-
-   >[!IMPORTANT]
-   >Production environments require a fencing agent, like STONITH for high availability. The demonstrations in this documentation do not use fencing agents. The demonstrations are for testing and validation only. 
-   
-   >A Linux cluster uses fencing to return the cluster to a known state. The way to configure fencing depends on the distribution and the environment. At this time, fencing is not available in some cloud environments. See [Support Policies for RHEL High Availability Clusters - Virtualization Platforms](https://access.redhat.com/articles/29440) for more information.
-
-5. [Add the availability group as a resource in the cluster--sql-server-linux-availability-group-cluster-rhel.md#create-availability-group-resource).  
-
-
-
-
-
-&nbsp;
-
-&nbsp;
-
----
-
-<a name="TitleNum_2"/>
-
-### 2. &nbsp; [Configure SLES Cluster for SQL Server Availability Group](sql-server-linux-availability-group-cluster-sles.md)
-
-*Updated: 2017-06-22* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_1) | [Next](#TitleNum_3))
 
 <!-- Source markdown line 189.  ms.author= mikeray.  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 ce244c8fbb949ec5d9e963d5d8ec2f7e480fca31 8be07deddcf0c348d75bf5b4f44615c2383e0722  (PR=2150  ,  Filename=sql-server-linux-availability-group-cluster-sles.md  ,  Dirpath=docs\linux\  ,  MergeCommitSha40=6dccaff93a6c8b2374a1fad069b2f597898802fc) -->
+<!-- git diff --ignore-all-space --unified=0 f8d28af253be1dc67615f1ea04135b2f6dff3b71 8be07deddcf0c348d75bf5b4f44615c2383e0722  (PR=2150  ,  Filename=sql-server-linux-availability-group-cluster-sles.md  ,  Dirpath=docs\linux\  ,  MergeCommitSha40=6dccaff93a6c8b2374a1fad069b2f597898802fc) -->
 
 
 
@@ -151,369 +128,70 @@ Resource level fencing ensures mainly that there is no data corruption in case o
 
 ---
 
-<a name="TitleNum_3"/>
+<a name="TitleNum_2"/>
 
-### 3. &nbsp; [Configure Ubuntu Cluster and Availability Group Resource](sql-server-linux-availability-group-cluster-ubuntu.md)
+### 2. &nbsp; [Release notes for SQL Server 2017 on Linux](sql-server-linux-release-notes.md)
 
-*Updated: 2017-06-22* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_2) | [Next](#TitleNum_4))
+*Updated: 2017-06-20* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_1))
 
-<!-- Source markdown line 37.  ms.author= mikeray.  -->
-
-&nbsp;
-
-
-<!-- git diff --ignore-all-space --unified=0 e3699a7bed85f60a995a2c66cf1ee45bf3650e86 11fc0dba88ff010174374fc04cccd61bc7a52a81  (PR=2150  ,  Filename=sql-server-linux-availability-group-cluster-ubuntu.md  ,  Dirpath=docs\linux\  ,  MergeCommitSha40=6dccaff93a6c8b2374a1fad069b2f597898802fc) -->
-
-
-
-**Roadmap**
-
-
-The steps to create an availability group on Linux servers for high availability are different from the steps on a Windows Server failover cluster. The following list describes the high level steps: 
-
-1. [Configure SQL Server on the cluster nodes--sql-server-linux-setup.md).
-
-2. [Create the availability group--sql-server-linux-availability-group-failover-ha.md). 
-
-3. Configure a cluster resource manager, like Pacemaker. These instructions are in this document.
-   
-   The way to configure a cluster resource manager depends on the specific Linux distribution. 
-
-   >[!IMPORTANT]
-   >Production environments require a fencing agent, like STONITH for high availability. The demonstrations in this documentation do not use fencing agents. The demonstrations are for testing and validation only. 
-   
-   >A Linux cluster uses fencing to return the cluster to a known state. The way to configure fencing depends on the distribution and the environment. At this time, fencing is not available in some cloud environments. See [Support Policies for RHEL High Availability Clusters - Virtualization Platforms](https://access.redhat.com/articles/29440) for more information.
-
-5.  [Add the availability group as a resource in the cluster--sql-server-linux-availability-group-cluster-ubuntu.md#create-availability-group-resource). 
-
-
-
-
-
-&nbsp;
-
-&nbsp;
-
----
-
-<a name="TitleNum_4"/>
-
-### 4. &nbsp; [Configure Always On availability group for SQL Server on Linux](sql-server-linux-availability-group-configure-ha.md)
-
-*Updated: 2017-05-19* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_3) | [Next](#TitleNum_5))
-
-<!-- Source markdown line 33.  ms.author= mikeray.  -->
+<!-- Source markdown line 156.  ms.author= jroth.  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 9ef786a0f29b0960d577a333dedb5ebbe5319134 57a071104cb5eed20ae1fe41adb50ffdc19e1fa8  (PR=1777  ,  Filename=sql-server-linux-availability-group-configure-ha.md  ,  Dirpath=docs\linux\  ,  MergeCommitSha40=5bd0e1d3955d898824d285d28979089e2de6f322) -->
+<!-- git diff --ignore-all-space --unified=0 684da20f7834000886d7a93f83563c55dc3cf9a6 8597bcde7e5754bb7f38de1ec980027245dac6e5  (PR=2115  ,  Filename=sql-server-linux-release-notes.md  ,  Dirpath=docs\linux\  ,  MergeCommitSha40=424a23fd98876db808b91f017e7acbcb5b4daa45) -->
 
 
 
-For a configuration that will guarantee high availability and data protection, the availability group must include at least three synchronous commit replicas. For details see [Balancing high availability and data protection--sql-server-linux-availability-group-cluster-rhel.md#balancing-high-availability-and-data-protection). 
+**SQL Server Integration Services (SSIS)**
 
-All servers must be either physical or virtual, and virtual servers must be on the same virtualization platform. This is because the fencing agents are platform specific. See [Policies for Guest Clusters](https://access.redhat.com/articles/29440#guest_policies).
+You can run SSIS packages on Linux. For more info, see the [blog post announcing SSIS support for Linux](https://blogs.msdn.microsoft.com/ssis/2017/05/17/ssis-helsinki-is-available-in-sql-server-vnext-ctp2-1/). Please note the following known issues with this release.
 
-**Roadmap**
+- The **mssql-server-is** package is only supported on Ubuntu at this time.
 
+- The following features are not supported when running SSIS packages on Linux:
+  - SSIS Catalog DB
+  - Schedule Packages execution by SQL Agent
+  - Windows Authentication
+  - Third-party components
+  - Third-party ODBC drivers
+  - ODBC Connection Manager, Source, and Destination (supported with SSIS on Linux CTP 2.1 Refresh)
+  - Change Data Capture (CDC)
+  - Scale Out
+  - Azure Feature Pack
+  - Hadoop and HDFS Support
+  - Microsoft Connector for SAP BW
 
-The steps to create an availability group on Linux servers for high availability are different from the steps on a Windows Server failover cluster. The following list describes the high level steps: 
-
-1. [Configure SQL Server on three cluster servers--sql-server-linux-setup.md).
-
-   >[!IMPORTANT]
-   >All three servers in the availability group need to be on the same platform - i.e. physical or virtual. This is because the Linux high availability uses fencing agents to isolate resources on servers. The fencing agents are specific for each platform.
-
-2. Create the availability group. This step is covered in this current article. 
-
-3. Configure a cluster resource manager, like Pacemaker.
-   
-   The way to configure a cluster resource manager depends on the specific Linux distribution. Follow the distribution specific links below: 
-
-   * [RHEL--sql-server-linux-availability-group-cluster-rhel.md)
-   * [SUSE--sql-server-linux-availability-group-cluster-sles.md)
-   * [Ubuntu--sql-server-linux-availability-group-cluster-ubuntu.md)
-
-   >[!IMPORTANT]
-   >Production environments require a fencing agent, like STONITH for high availability. The demonstrations in this documentation do not use fencing agents. The demonstrations are for testing and validation only. 
+With SSIS on Linux CTP 2.1 Refresh, your SSIS packages can use ODBC connections on Linux. For more info, see the [blog post announcing ODBC support on Linux](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/).
 
 
 
+
+
+<a name="similars2"/>
 
 &nbsp;
 
-&nbsp;
-
----
-
-<a name="TitleNum_5"/>
-
-### 5. &nbsp; [Release notes for SQL Server 2017 on Linux](sql-server-linux-release-notes.md)
-
-*Updated: 2017-06-20* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_4) | [Next](#TitleNum_6))
-
-<!-- Source markdown line 43.  ms.author= jroth.  -->
-
-&nbsp;
-
-
-<!-- git diff --ignore-all-space --unified=0 a089ce45180cb19589f72f41f12859cab744f61d 8597bcde7e5754bb7f38de1ec980027245dac6e5  (PR=2115  ,  Filename=sql-server-linux-release-notes.md  ,  Dirpath=docs\linux\  ,  MergeCommitSha40=424a23fd98876db808b91f017e7acbcb5b4daa45) -->
-
-
-
-**<a id="ctp21"> CTP 2.1 (May 2017) </a>**
-
-The SQL Server engine version for this release is 14.0.600.250.
-
-**Supported platforms **
-
-
-| Platform | File System | Installation Guide |
-|-----|-----|-----|
-| Red Hat Enterprise Linux 7.3 Workstation, Server, and Desktop | XFS or EXT4 | [Installation guide--sql-server-linux-setup-red-hat.md) | 
-| SUSE Enterprise Linux Server v12 SP2 | EXT4 | [Installation guide--sql-server-linux-setup-suse-linux-enterprise-server.md) |
-| Ubuntu 16.04LTS | EXT4 | [Installation guide--sql-server-linux-setup-ubuntu.md) | 
-| Docker Engine 1.8+ on Windows, Mac, or Linux | N/A | [Installation guide--sql-server-linux-setup-docker.md) | 
-
-> [!NOTE]
-> You need at least 3.25GB of memory to run SQL Server on Linux.
-> SQL Server Engine has been tested up to 1 TB of memory at this time.
-
-**Package details**
-
-Package details and download locations for the RPM and Debian packages are listed in the following table. Note that you do not need to download these packages directly if you use the steps in the following installation guides:
-
-- [Install SQL Server package--sql-server-linux-setup.md)
-- [Install Full-text Search package--sql-server-linux-setup-full-text-search.md)
-- [Install SQL Server Agent package--sql-server-linux-setup-sql-agent.md)
-
-| Package | Package version | Downloads |
-|-----|-----|-----|
-| Red Hat RPM package | 14.0.600.250-2 | [Engine RPM package](https://packages.microsoft.com/rhel/7/mssql-server/mssql-server-14.0.600.250-2.x86_64.rpm)</br>[High Availability RPM package](https://packages.microsoft.com/rhel/7/mssql-server/mssql-server-ha-14.0.600.250-2.x86_64.rpm)</br>[Full-text Search RPM package](https://packages.microsoft.com/rhel/7/mssql-server/mssql-server-fts-14.0.600.250-2.x86_64.rpm)</br>[SQL Server Agent RPM package](https://packages.microsoft.com/rhel/7/mssql-server/mssql-server-agent-14.0.600.250-2.x86_64.rpm) | 
-
-
-
-
-&nbsp;
-
-&nbsp;
-
----
-
-<a name="TitleNum_6"/>
-
-### 6. &nbsp; [Install SQL Server on Red Hat Enterprise Linux](sql-server-linux-setup-red-hat.md)
-
-*Updated: 2017-05-25* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_5) | [Next](#TitleNum_7))
-
-<!-- Source markdown line 104.  ms.author= jroth.  -->
-
-&nbsp;
-
-
-<!-- git diff --ignore-all-space --unified=0 cf0b8f3c10eab91895fb06ba4aa673b48c6b2d61 9e529d16cbd937ad4178630dfbe8f910c6bd4a26  (PR=1833  ,  Filename=sql-server-linux-setup-red-hat.md  ,  Dirpath=docs\linux\  ,  MergeCommitSha40=288d8d413d36d023d83e68f587f297391bb6595d) -->
-
-
-
-**<a id="offline"></a> Offline installation**
-
-
-[!INCLUDE[SQL Server Linux offline package installation--../includes/sql-server-linux-offline-package-install-intro.md)]
-
-To manually install the SQL Server database engine package for Red Hat Enterprise Linux, use the following steps:
-
-1. **Download the .rpm database engine package**. Find package download links in the package details section of the [Release Notes--sql-server-linux-release-notes.md).
-
-1. **Move the downloaded package to your Linux machine**. If you used a different machine to download the packages, one way to move the packages to your Linux machine is with the **scp** commmand.
-
-1. **Install the database engine package**. Use the **yum** command with the **localinstall** option. Replace `versionnumber` with your package version number.
-
-    ```bash
-    sudo yum localinstall mssql-server_versionnumber.x86_64.rpm
-    ```
-
-    > [!NOTE]
-    > You can also install the RPM package with the `rpm -ivh` command, but the `yum localinstall` command also installs dependencies if available from approved repositories.
-
-1. **Resolve missing dependencies**: You might have missing dependencies at this point. If not, you can skip this step. In some cases, you must manually locate and install these dependencies. Use the **rpm** command to inspect the dependencies of the SQL Server packages:
-
-    ```bash
-    rpm -qpR mssql-server_versionnumber.x86_64.rpm
-    ```
-
-1. **Complete the SQL Server setup**. Use **mssql-conf** to complete the SQL Server setup:
-
-   ```bash
-   sudo /opt/mssql/bin/mssql-conf setup
-   ```
-
-
-
-
-&nbsp;
-
-&nbsp;
-
----
-
-<a name="TitleNum_7"/>
-
-### 7. &nbsp; [Install SQL Server on SUSE Linux Enterprise Server](sql-server-linux-setup-suse-linux-enterprise-server.md)
-
-*Updated: 2017-05-25* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_6) | [Next](#TitleNum_8))
-
-<!-- Source markdown line 88.  ms.author= jroth.  -->
-
-&nbsp;
-
-
-<!-- git diff --ignore-all-space --unified=0 c25525e4edfdd9b83c0ae8cd32e784987bb390dd 1b43dfae69eda0068cb4c072c3b0596e68010536  (PR=1833  ,  Filename=sql-server-linux-setup-suse-linux-enterprise-server.md  ,  Dirpath=docs\linux\  ,  MergeCommitSha40=288d8d413d36d023d83e68f587f297391bb6595d) -->
-
-
-
-**<a id="offline"></a> Offline installation**
-
-
-[!INCLUDE[SQL Server Linux offline package installation--../includes/sql-server-linux-offline-package-install-intro.md)]
-
-To manually install the SQL Server database engine package for SUSE Linux Enterprise Server, use the following steps:
-
-1. **Download the .rpm database engine package**. Find package download links in the package details section of the [Release Notes--sql-server-linux-release-notes.md).
-
-1. **Move the downloaded package to your Linux machine**. If you used a different machine to download the packages, one way to move the packages to your Linux machine is with the **scp** commmand.
-
-1. **Install the database engine package**. Use the **zypper install** command. Replace `versionnumber` with your package version number.
-
-    ```bash
-    sudo zypper install mssql-server_versionnumber.x86_64.rpm
-    ```
-
-    > [!NOTE]
-    > You can also install the RPM package with the `rpm -ivh` command, but the `zypper install` command also installs dependencies if available from approved repositories.
-
-1. **Resolve missing dependencies**: You might have missing dependencies at this point. If not, you can skip this step. In some cases, you must manually locate and install these dependencies. Use the **rpm** command to inspect the dependencies of the SQL Server packages:
-
-    ```bash
-    rpm -qpR mssql-server_versionnumber.x86_64.rpm
-    ```
-
-1. **Complete the SQL Server setup**. Use **mssql-conf** to complete the SQL Server setup:
-
-   ```bash
-   sudo /opt/mssql/bin/mssql-conf setup
-   ```
-
-
-
-
-&nbsp;
-
-&nbsp;
-
----
-
-<a name="TitleNum_8"/>
-
-### 8. &nbsp; [Install SQL Server on Ubuntu](sql-server-linux-setup-ubuntu.md)
-
-*Updated: 2017-06-19* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_7))
-
-<!-- Source markdown line 101.  ms.author= jroth.  -->
-
-&nbsp;
-
-
-<!-- git diff --ignore-all-space --unified=0 83bb0029e6ecd5c017440356566538951fee96c2 6d6ebb5775a4940f70379730027bf44b8ea6dffc  (PR=2090  ,  Filename=sql-server-linux-setup-ubuntu.md  ,  Dirpath=docs\linux\  ,  MergeCommitSha40=0bc7925f72d59170a24f4a82d1c1a73e618a97a0) -->
-
-
-
-**<a id="offline"></a> Offline installation**
-
-
-[!INCLUDE[SQL Server Linux offline package installation--../includes/sql-server-linux-offline-package-install-intro.md)]
-
-To manually install the SQL Server database engine package for Ubuntu, use the following steps:
-
-1. **Download the .deb database engine package**. Find package download links in the package details section of the [Release Notes--sql-server-linux-release-notes.md).
-
-1. **Move the downloaded package to your Linux machine**. If you used a different machine to download the packages, one way to move the packages to your Linux machine is with the **scp** commmand.
-
-1. **Install the database engine package**. Use the **dpkg** command. Replace `versionnumber` with your package version number.
-
-    ```bash
-    sudo dpkg -i mssql-server_versionnumber_amd64.deb
-    ```
-
-1. **Resolve missing dependencies**: Typically, there are missing dependencies at this point. If you have access to approved repositories containing those dependencies, the easiest solution is to use the **apt-get** command:
-
-    ```bash
-    sudo apt-get -f install
-    ```
-
-    > [!NOTE]
-    > This command completes the installation of the SQL Server package as well.
-
-    In some cases, you might have to manually install the dependencies. Inspect the package's dependencies with the following command:
-
-    ```bash
-    dpkg -I mssql-server_versionnumber_amd64.deb | grep "Depends:"
-    ```
-
-1. **Complete the SQL Server setup**. Use **mssql-conf** to complete the SQL Server setup:
-
-   ```bash
-   sudo /opt/mssql/bin/mssql-conf setup
-   ```
-
-
-
-
-&nbsp;
-
-<a name="compactupdatedlist"/>
-
-## Compact List of Articles Updated Recently
-
-This compact list provides links to all the updated articles which are listed in the preceding section.
-
-1. [Configure RHEL Cluster for SQL Server Availability Group](#TitleNum_1)
-2. [Configure SLES Cluster for SQL Server Availability Group](#TitleNum_2)
-3. [Configure Ubuntu Cluster and Availability Group Resource](#TitleNum_3)
-4. [Configure Always On availability group for SQL Server on Linux](#TitleNum_4)
-5. [Release notes for SQL Server 2017 on Linux](#TitleNum_5)
-6. [Install SQL Server on Red Hat Enterprise Linux](#TitleNum_6)
-7. [Install SQL Server on SUSE Linux Enterprise Server](#TitleNum_7)
-8. [Install SQL Server on Ubuntu](#TitleNum_8)
-
-
-
-
-<a name="sisters2"/>
-
-&nbsp;
-
-## Sister Articles
+## Similar Articles
 
 This section lists very similar articles for recently updated articles in other subject areas, within the same GitHub.com repository: [MicrosoftDocs/**sql-docs-pr**](https://github.com/microsoftdocs/sql-docs-pr/).
 
-<!--  20170630-1150  -->
+<!--  20170717-1101  -->
 
 #### Subject areas which do have new or recently updated articles
 
-- [New + Updated (12+2): **Advanced Analystics for SQL** docs](../advanced-analytics/new-updated-advanced-analytics.md)
-- [New + Updated (1+0):  **Analysis Services for SQL** docs](../analysis-services/new-updated-analysis-services.md)
-- [New + Updated (0+2):  **Connect to SQL** docs](../connect/new-updated-connect.md)
-- [New + Updated (3+0):  **Database Engine for SQL** docs](../database-engine/new-updated-database-engine.md)
-- [New + Updated (1+2):  **Integration Services for SQL** docs](../integration-services/new-updated-integration-services.md)
-- [New + Updated (2+8):  **Linux for SQL** docs](../linux/new-updated-linux.md)
-- [New + Updated (1+0):  **Master Data Services (MDS) for SQL** docs](../master-data-services/new-updated-master-data-services.md)
-- [New + Updated (5+5):  **Relational Databases for SQL** docs](../relational-databases/new-updated-relational-databases.md)
-- [New + Updated (2+0):  **Reporting Services for SQL** docs](../reporting-services/new-updated-reporting-services.md)
-- [New + Updated (0+4):  **Microsoft SQL Server** docs](../sql-server/new-updated-sql-server.md)
-- [New + Updated (0+1):  **SQL Server Data Tools (SSDT)** docs](../ssdt/new-updated-ssdt.md)
-- [New + Updated (0+1):  **SQL Server Management Studio (SSMS)** docs](../ssms/new-updated-ssms.md)
-- [New + Updated (1+0):  **Tools for SQL** docs](../tools/new-updated-tools.md)
+- [New + Updated (4+4) : **Advanced Analytics for SQL** docs](../advanced-analytics/new-updated-advanced-analytics.md)
+- [New + Updated (2+0) : **Analysis Services for SQL** docs](../analysis-services/new-updated-analysis-services.md)
+- [New + Updated (1+2) : **Connect to SQL** docs](../connect/new-updated-connect.md)
+- [New + Updated (6+0) : **Database Engine for SQL** docs](../database-engine/new-updated-database-engine.md)
+- [New + Updated (13+2): **Linux for SQL** docs](../linux/new-updated-linux.md)
+- [New + Updated (1+0) : **Master Data Services (MDS) for SQL** docs](../master-data-services/new-updated-master-data-services.md)
+- [New + Updated (1+0) : **ODBC (Open Database Connectivity) for SQL** docs](../odbc/new-updated-odbc.md)
+- [New + Updated (8+4) : **Relational Databases for SQL** docs](../relational-databases/new-updated-relational-databases.md)
+- [New + Updated (2+2) : **Microsoft SQL Server** docs](../sql-server/new-updated-sql-server.md)
+- [New + Updated (0+1) : **SQL Server Management Studio (SSMS)** docs](../ssms/new-updated-ssms.md)
+- [New + Updated (1+0) : **Transact-SQL** docs](../t-sql/new-updated-t-sql.md)
+- [New + Updated (1+0) : **Tools for SQL** docs](../tools/new-updated-tools.md)
 
 
 #### Subject areas which have no new or recently updated articles
@@ -521,12 +199,13 @@ This section lists very similar articles for recently updated articles in other 
 - [New + Updated (0+0): **ActiveX Data Objects (ADO) for SQL** docs](../ado/new-updated-ado.md)
 - [New + Updated (0+0): **Data Quality Services for SQL** docs](../data-quality-services/new-updated-data-quality-services.md)
 - [New + Updated (0+0): **Data Mining Extensions (DMX) for SQL** docs](../dmx/new-updated-dmx.md)
+- [New + Updated (0+0): **Integration Services for SQL** docs](../integration-services/new-updated-integration-services.md)
 - [New + Updated (0+0): **Multidimensional Expressions (MDX) for SQL** docs](../mdx/new-updated-mdx.md)
-- [New + Updated (0+0): **ODBC (Open Database Connectivity) for SQL** docs](../odbc/new-updated-odbc.md)
 - [New + Updated (0+0): **PowerShell for SQL** docs](../powershell/new-updated-powershell.md)
+- [New + Updated (0+0): **Reporting Services for SQL** docs](../reporting-services/new-updated-reporting-services.md)
 - [New + Updated (0+0): **Samples for SQL** docs](../sample/new-updated-sample.md)
+- [New + Updated (0+0): **SQL Server Data Tools (SSDT)** docs](../ssdt/new-updated-ssdt.md)
 - [New + Updated (0+0): **SQL Server Migration Assistant (SSMA)** docs](../ssma/new-updated-ssma.md)
-- [New + Updated (0+0): **Transact-SQL** docs](../t-sql/new-updated-t-sql.md)
 - [New + Updated (0+0): **XQuery for SQL** docs](../xquery/new-updated-xquery.md)
 
 

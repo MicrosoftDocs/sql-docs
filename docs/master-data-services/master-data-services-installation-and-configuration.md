@@ -2,7 +2,7 @@
 title: "Master Data Services Installation and Configuration | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "05/26/2017"
+ms.date: "07/28/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -14,7 +14,7 @@ ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 caps.latest.revision: 44
 author: "sabotta"
 ms.author: "carlasab"
-manager: "jhubbard"
+manager: "craigg"
 ---
 # Master Data Services Installation and Configuration
   This article covers how to install [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] on a Windows Server 2012 R2 machine, set up the MDS database and website, and deploy the sample models and data. [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] (MDS) enables your organization to manage a trusted version of data.   
@@ -30,8 +30,8 @@ For an overview of how you organize data in [!INCLUDE[ssMDSshort_md](../includes
 For links to videos and other training resources to help you learn [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)], see [Learn Master Data Services](../master-data-services/learn-sql-server-master-data-services.md). 
   
 > **Download**  
->-   To download [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], go to  **[Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**.  
->-   Have an Azure account?  Then go **[Here](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)** to spin up a Virtual Machine with [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  already installed.  
+>-   To download [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], go to  **[Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2017-ctp/)**.  
+>-   Have an Azure account?  Then go **[Here](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)** to spin up a Virtual Machine with SQL Server already installed.  
  
 > **Can't create an MDS web site?**
 >>Check out this Microsoft support article for instructions on how to resolve this problem.
@@ -83,14 +83,14 @@ If you're interested in making changes to the installation of [!INCLUDE[ssCurren
 
    ![mds_AddRolesFeaturesWizard_ServerRolesPage](../master-data-services/media/mds-addrolesfeatureswizard-serverrolespage.png)
    
-9. On the **Features** page, click the features that are required for [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] on [!INCLUDE[winblue_server_2_md](../includes/winblue-server-2-md.md)], and then click **Next**. The following images show the selected, required features.
+9. On the **Features** page, confirm that the following features are selected, and then click **Next**. These features are required for [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] on [!INCLUDE[winblue_server_2_md](../includes/winblue-server-2-md.md)].
   
     |Features|Features|  
     |--------------|--------------|  
     |![mds_AddRolesFeaturesWizard_FeaturesPage](../master-data-services/media/mds-addrolesfeatureswizard-featurespage.png)|![mds_AddRolesFeaturesWizard_FeaturesPage_WindowsProcActive](../master-data-services/media/mds-addrolesfeatureswizard-featurespage-windowsprocactive.png)|  
 
 10. In the left-hand pane, click **Web Server Role (IIS)** and then click **Role Services**.
-11. On the **Role Services** page, click the services that are required for [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] on [!INCLUDE[winblue_server_2](../includes/winblue-server-2-md.md)], and then click **Next**. The following images show the selected, required roles and roles services.
+11. On the **Role Services** page, confirm that the following services are selected, and then click **Next**. These services are required for [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] on [!INCLUDE[winblue_server_2](../includes/winblue-server-2-md.md)].
 
     > [!WARNING]  
     >  Do not install the WebDAV Publishing role service. WebDAV Publishing is not compatible with [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
@@ -198,7 +198,7 @@ If you're interested in making changes to the installation of [!INCLUDE[ssCurren
  You can also use [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] to specify other settings for the Web applications and services associated with the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database. For example, you can specify how frequently data is loaded or how often validation emails are sent. For more information, see [System Settings &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md).  
   
 ##  <a name="deploySample"></a> Deploying Sample Models and Data  
- The following three sample model packages are included with  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].   These sample models include data. **The default location for the sample model packages is %programfiles%\Microsoft SQL Server\130\Master Data Services\Samples\Packages.**
+ The following three sample model packages are included with  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].   These sample models include data. **The default location for the sample model packages is %programfiles%\Microsoft SQL Server\140\Master Data Services\Samples\Packages.**
   
 -   chartofaccounts_en.pkg  
   
@@ -206,7 +206,7 @@ If you're interested in making changes to the installation of [!INCLUDE[ssCurren
   
 -   product_en.pkg  
   
- You deploy the packages using the MDSModelDeploy tool. The default location for the MDSModelDeploy tool is *drive*\Program Files\Microsoft SQL Server\ 130\Master Data Services\Configuration.  
+ You deploy the packages using the MDSModelDeploy tool. The default location for the MDSModelDeploy tool is *drive*\Program Files\Microsoft SQL Server\ 140\Master Data Services\Configuration.  
   
  For information about prerequisites for running this tool, see [Deploy a Model Deployment Package by Using MDSModelDeploy](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md).  
   
@@ -214,12 +214,12 @@ If you're interested in making changes to the installation of [!INCLUDE[ssCurren
   
  **To deploy the sample models**  
   
-1.  Copy the sample model packages to *drive*\Program Files\Microsoft SQL Server\130\Master Data Services\Configuration.  
+1.  Copy the sample model packages to *drive*\Program Files\Microsoft SQL Server\140\Master Data Services\Configuration.  
   
 2.  Open an Administrator: Command Prompt and navigate to MDSModelDeploy.exe, by running the following command.  
   
     ```  
-    cd c:\Program Files\Microsoft SQL Server\130\Master Data Services\Configuration  
+    cd c:\Program Files\Microsoft SQL Server\140\Master Data Services\Configuration  
     ```  
   
 3.  Deploy each of the sample models to [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] by running each of the following commands.  
@@ -234,7 +234,7 @@ If you're interested in making changes to the installation of [!INCLUDE[ssCurren
     >  The first service value in the list of values returned, is the one you specify to deploy a model.  
     >
     > [!NOTE]
-    > In order to know more about the metadata information of the sample models, please refer to the readme file available at this  location "c:\Program Files\Microsoft SQL Server\130\Master Data Services\Configuration"
+    > In order to know more about the metadata information of the sample models, please refer to the readme file available at this  location "c:\Program Files\Microsoft SQL Server\140\Master Data Services\Configuration"
     >
    
      **To deploy the chartofaccounts_en.pkg sample model**  

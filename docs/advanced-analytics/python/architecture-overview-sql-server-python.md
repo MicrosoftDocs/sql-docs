@@ -1,7 +1,7 @@
 ---
 title: "Architecture | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/18/2017"
+ms.date: "07/26/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -13,21 +13,20 @@ author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
 ---
+# Architecture overview for Machine Learning Services with Python
 
-# Architecture Overview - Machine Learning Services with Python
-
-This topic provides an overview of how Python is integrated with SQL Server, including the security model, the components in the database engine that support external script execution, and new components that enable interoperability of Python with SQL Server. For details see the linked topics.
+This topic provides an overview of how Python is integrated with SQL Server, including the security model, the components in the database engine that support external script execution, and new components that enable interoperability of Python with SQL Server. For details, see the linked topics.
 
 > [!IMPORTANT]
-> Support for Python is available beginning with SQL Server 2017. This is a pre-release feature and subject to change.
+> Support for Python is available beginning with SQL Server 2017 CTP 2.0. This pre-release feature is subject to change.
 
-## Python Interoperability
+## Python interoperability
 
-SQL Server Machine Learning Services (In-Database) installs the Anaconda distribution of Python, and the Python 3.5 runtime and interpreter. This ensure near-complete compatibility with standard Python solutions. Python runs in a separate process from SQL Server, to ensure that database operations are not compromised.
+SQL Server Machine Learning Services (In-Database) installs the Anaconda distribution of Python, and the Python 3.5 runtime and interpreter. This ensures near-complete compatibility with standard Python solutions. Python runs in a separate process from SQL Server, to guarantee that database operations are not compromised.
 
-For more information about the interaction of SQL Server with Python, see [Python Interoperability](/python-interoperability.md)
+For more information about the interaction of SQL Server with Python, see [Python interoperability](../../advanced-analytics/python/python-interoperability.md)
 
-## New Components that Support Python Integration
+## Components that support Python integration
 
 The extensibility framework introduced in SQL Server 2016 now supports execution of Python script, through the addition of new language-specific components. These components improve data exchange speed and compression, while providing a secure, high-performance platform for running external scripts.
 
@@ -41,12 +40,12 @@ All tasks are secured by Windows job objects or SQL Server security. Data is kep
 
 For details, see [Security for Python](../../advanced-analytics/python/security-overview-sql-server-python-services.md)
 
-## Resource Governance
+## Resource governance
 
 In SQL Server Enterprise Edition, you can use Resource Governor to manage and monitor resource use of external script operations, including R script and Python scripts.
 
 For more information, see [Resource Governance for R](../../advanced-analytics/r/resource-governance-for-r-services.md).
 
-## See Also
+## Next steps
 
-[Run Python using T-SQl](../tutorials/run-python-using-t-sql.md)
+[Run Python using T-SQL](../tutorials/run-python-using-t-sql.md)

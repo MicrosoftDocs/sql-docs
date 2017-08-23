@@ -1,8 +1,10 @@
 ---
 title: "Upgrade Analysis Services | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
+ms.date: "07/17/2017"
+ms.prod: 
+  - "sql-server-2016"
+  - "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -26,15 +28,15 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Upgrade Analysis Services
-  Analysis Services instances can be upgraded to a SQL Server 2016 version of the same server mode to take advantage of features introduced in the current release, as described in [What's New in Analysis Services](../../analysis-services/what-s-new-in-analysis-services.md).  
+  Analysis Services instances can be upgraded to a SQL Server version of the same server mode to take advantage of features introduced in the current release, as described in [What's New in Analysis Services](../../analysis-services/what-s-new-in-analysis-services.md).  
   
  You can upgrade each instance in-place, independently of other instances running on the same hardware. However, most administrators choose to install a new instance of the new version  for application testing before transferring production workloads onto the new server. But for development or test servers, an in-place upgrade might be more convenient.  
   
  Before upgrading to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], review the following:  
-  
--   [SQL Server 2016 Release Notes](http://go.microsoft.com/fwlink/?LinkID=398124) describes known problems and workarounds.  
-  
--   [Analysis Services Backward Compatibility](../../analysis-services/analysis-services-backward-compatibility.md) summarizes discontinued, deprecated, and changed features. You should review these lists periodically to assess the impact of product changes to your models, scripts, or custom code. Typically, feature transitions are announced during pre-release of the next major release.  
+
+- [SQL Server 2017 Release Notes](../../sql-server/sql-server-2017-release-notes.md) describes known problems and workarounds.  
+- [SQL Server 2016 Release Notes](../../sql-server/sql-server-2016-release-notes.md) describes known problems and workarounds.  
+- [Analysis Services Backward Compatibility](../../analysis-services/analysis-services-backward-compatibility.md) summarizes discontinued, deprecated, and changed features. You should review these lists periodically to assess the impact of product changes to your models, scripts, or custom code. Typically, feature transitions are announced during pre-release of the next major release.  
   
 ## Server Upgrade  
  There are two basic approaches for upgrading servers and databases:  

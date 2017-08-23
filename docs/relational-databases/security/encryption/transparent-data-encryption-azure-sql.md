@@ -36,7 +36,7 @@ SQL Server running on an Azure virtual machine can also use an asymmetric key fr
 
 In Azure, the default setting for TDE is that the database encryption key is protected by a built-in server certificate. The built-in server certificate is unique for each server. If a database is in a geo-replication relationship, both the primary and geo-secondary database will be protected by the primary’s parent server key. If 2 databases are connected to the same server, they share the same built-in certificate. Microsoft automatically rotates these certificates at least every 90 days.
 
-Microsoft also seamlessly moves and manages the keys as needed for Geo-replication and restores. 
+Microsoft also seamlessly moves and manages the keys as needed for Geo-replication and restores. All newly created SQL databases are encrypted by default using service-managed TDE. Existing databases before May 2017 and databases created through restore, geo-replication, and database copy are not encrypted by default.
 
 ## Bring Your Own Key
 
@@ -90,7 +90,7 @@ To configure TDE through PowerShell, you must be connected as the Azure Owner, C
 | [Remove-AzureRmSqlServerKeyVaultKey](/powershell/module/azurerm.sql/remove-azurermsqlserverkeyvaultkey) |Removes a Key Vault key from a SQL server. |
 |  | |
 
-### Managing Transparent Data Encryption using Transact-SQL
+## Managing Transparent Data Encryption using Transact-SQL
 
 Connect to the database using a login that is an administrator or member of the **dbmanager** role in the master database.
 
@@ -102,6 +102,22 @@ Connect to the database using a login that is an administrator or member of the 
 |  | |
 
 The TDE Protector cannot be switched to a key from Azure Key Vault using Transact-SQL; use PowerShell or the Azure portal.
+
+## Managing Transparent Data Encryption using PowerShell
+
+To configure TDE through PowerShell, you must be connected as the Azure Owner, Contributor, or SQL Security Manager. 
+
+| Cmdlet | Description |
+| --- | --- |
+| [Set-AzureRmSqlDatabaseTransparentDataEncryption](/powershell/module/azurerm.sql/set-azurermsqldatabasetransparentdataencryption) |Enables or disables TDE for a database.|
+| [Get-​Azure​Rm​Sql​Database​Transparent​Data​Encryption](/powershell/module/azurerm.sql/get-azurermsqldatabasetransparentdataencryption) |Gets the TDE state for a database. |
+| [Get-​Azure​Rm​Sql​Database​Transparent​Data​Encryption​Activity](/powershell/module/azurerm.sql/get-azurermsqldatabasetransparentdataencryptionactivity) |Checks the encryption progress for a database. |
+| [Add-AzureRmSqlServerKeyVaultKey](/powershell/module/azurerm.sql/add-azurermsqlserverkeyvaultkey) |Adds a Key Vault key to a SQL server. |
+| [Get-AzureRmSqlServerKeyVaultKey](/powershell/module/azurerm.sql/get-azurermsqlserverkeyvaultkey) |Gets a SQL server's Key Vault keys. |
+| [Set-AzureRmSqlServerTransparentDataEncryptionProtector](/powershell/module/azurerm.sql/set-azurermsqlservertransparentdataencryptionprotector) |Sets the TDE Protector for a SQL server. |
+| [Get-AzureRmSqlServerTransparentDataEncryptionProtector](/powershell/module/azurerm.sql/get-azurermsqlservertransparentdataencryptionprotector) |Gets the Transparent Data Encryption (TDE) protector. |
+| [Remove-AzureRmSqlServerKeyVaultKey](/powershell/module/azurerm.sql/remove-azurermsqlserverkeyvaultkey) |Removes a Key Vault key from a SQL server. |
+|  | |
 
 ## Next steps
 

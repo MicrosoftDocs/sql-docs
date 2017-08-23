@@ -103,21 +103,23 @@ Connect to the database using a login that is an administrator or member of the 
 
 The TDE Protector cannot be switched to a key from Azure Key Vault using Transact-SQL; use PowerShell or the Azure portal.
 
-## Managing Transparent Data Encryption using PowerShell
+## Managing Transparent Data Encryption using REST API
+ 
+To configure TDE through REST API, you must be connected as the Azure Owner, Contributor, or SQL Security Manager. 
 
-To configure TDE through PowerShell, you must be connected as the Azure Owner, Contributor, or SQL Security Manager. 
-
-| Cmdlet | Description |
+| Command | Description |
 | --- | --- |
-| [Set-AzureRmSqlDatabaseTransparentDataEncryption](/powershell/module/azurerm.sql/set-azurermsqldatabasetransparentdataencryption) |Enables or disables TDE for a database.|
-| [Get-​Azure​Rm​Sql​Database​Transparent​Data​Encryption](/powershell/module/azurerm.sql/get-azurermsqldatabasetransparentdataencryption) |Gets the TDE state for a database. |
-| [Get-​Azure​Rm​Sql​Database​Transparent​Data​Encryption​Activity](/powershell/module/azurerm.sql/get-azurermsqldatabasetransparentdataencryptionactivity) |Checks the encryption progress for a database. |
-| [Add-AzureRmSqlServerKeyVaultKey](/powershell/module/azurerm.sql/add-azurermsqlserverkeyvaultkey) |Adds a Key Vault key to a SQL server. |
-| [Get-AzureRmSqlServerKeyVaultKey](/powershell/module/azurerm.sql/get-azurermsqlserverkeyvaultkey) |Gets a SQL server's Key Vault keys. |
-| [Set-AzureRmSqlServerTransparentDataEncryptionProtector](/powershell/module/azurerm.sql/set-azurermsqlservertransparentdataencryptionprotector) |Sets the TDE Protector for a SQL server. |
-| [Get-AzureRmSqlServerTransparentDataEncryptionProtector](/powershell/module/azurerm.sql/get-azurermsqlservertransparentdataencryptionprotector) |Gets the Transparent Data Encryption (TDE) protector. |
-| [Remove-AzureRmSqlServerKeyVaultKey](/powershell/module/azurerm.sql/remove-azurermsqlserverkeyvaultkey) |Removes a Key Vault key from a SQL server. |
-|  | |
+|[Create Or Update Server](rest/api/sql/servers/createorupdate)|Adds an AAD identity to a SQL server (used to grant access to Key Vault).|
+|[Create Or Update Server Key](/rest/api/sql/serverkeys/createorupdate)|Adds a Key Vault key to a SQL server.|
+|[Delete Server Key](/rest/api/sql/serverkeys/delete)|Removes a Key Vault key from a SQL server.|
+|[Get Server Keys](/rest/api/sql/serverkeys/get)|Gets a specific Key Vault key from a SQL server.|
+|[List Server Keys By Server](/rest/api/sql/serverkeys/listbyserver)|Gets a SQL server's Key Vault keys.|
+|[Create Or Update Encryption Protector](/rest/api/sql/encryptionprotectors/createorupdate)|Sets the TDE Protector for a SQL server.|
+|[Get Encryption Protector](/rest/api/sql/encryptionprotectors/get)|Gets the TDE Protector for a SQL server.|
+|[List Encryption Protectors By Server](/rest/api/sql/encryptionprotectors/listbyserver)|Gets a SQL server's TDE Protectors.|
+|[Create Or Update Transparent Data Encryption Configuration](/rest/api/sql/transparentdataencryptions/createorupdate)|Enables or disables TDE for a database.|
+|[Get Transparent Data Encryption Configuration](/rest/api/sql/transparentdataencryptions/get)|Gets the TDE configuration for a database.|
+|[List Transparent Data Encryption Configuration Results](/rest/api/sql/transparentdataencryptionactivities/ListByConfiguration)|Gets the encryption result for a database.|
 
 ## Next steps
 

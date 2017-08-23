@@ -53,7 +53,7 @@ manager: "jhubbard"
   
 -   **Compression**: Indicates that at least one table or index uses data compression or the vardecimal storage format. To enable a database to be moved to an edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that does not support this feature, use the [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) or [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) statement to remove data compression. To remove vardecimal storage format, use the sp_tableoption statement. For more information, see [Data Compression](../../relational-databases/data-compression/data-compression.md).  
   
--   **Filestream**: Indicates that the database uses FILESTREAM. The database has a FILESTREAM filegroup. For more information, see [FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md).  
+-   **MultipleFSContainers**: Indicates that the database uses multiple FILESTREAM containers. The database has a FILESTREAM filegroup with multiple containers (files). For more information, see [FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md).  
   
 -   **InMemoryOLTP**: Indicates that the database uses In-Memory OLTP. The database has a MEMORY_OPTIMIZED_DATA filegroup. For more information, see [In-Memory OLTP &#40;In-Memory Optimization&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   

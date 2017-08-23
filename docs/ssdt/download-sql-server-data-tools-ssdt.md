@@ -28,6 +28,10 @@ The preview version of SSDT for Visual Studio 2017 (15.3.0 preview) is now avail
 |[![download](../ssdt/media/download.png) Download SSDT for Visual Studio 2017 (15.3.0 preview) ](https://go.microsoft.com/fwlink/?linkid=853836) | [![download](../ssdt/media/download.png) Download SSDT for Visual Studio 2015 (17.2)](https://go.microsoft.com/fwlink/?linkid=852922)|
 |||
 
+> [!IMPORTANT]
+> Before installation, close all VS instances, and uninstall SSAS and SSRS if they are already installed on VS 2017.
+> 
+
 
 SSDT for Visual Studio 2015, and SSDT for Visual Studio 2017 both use DacFx 17.2: [Download Data-Tier Application Framework (DacFx) 17.2](https://www.microsoft.com/download/details.aspx?id=55713)
 
@@ -39,9 +43,6 @@ SSDT for Visual Studio 2015, and SSDT for Visual Studio 2017 both use DacFx 17.2
 The release number: 15.3.0 preview  
 The build number for this release: 14.0.16121.0
 
-> [IMPORTANT!]
-> Before installation, close all VS instances, and uninstall SSAS and SSRS if they are already installed on VS 2017.
-  
 For a complete list of changes, see the [changelog](changelog-for-sql-server-data-tools-ssdt.md).
 
 SSDT for Visual Studio 2017 has the same system requirements as installing VS, supported operating systems are Windows 7 SP1, Windows 8.1 or Windows Server 2012 R2, Windows 10 or Windows Server 2016.  

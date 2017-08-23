@@ -13,7 +13,7 @@ ms.custom: H1Hack27Feb2017
 ---
 # Use Visual Studio to create databases for SQL Server on Linux
 
-[!INCLUDE[tsql-appliesto-sslinx-only_md](../../docs/includes/tsql-appliesto-sslinx-only_md.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
 
 SQL Server Data Tools (SSDT) turns Visual Studio into a powerful development and database lifecycle management (DLM) environment for SQL Server on Linux. You can develop, build, test and publish your database from a source controlled project, just like you develop your application code.
 
@@ -33,7 +33,7 @@ SQL Server Data Tools (SSDT) turns Visual Studio into a powerful development and
 
 SQL Server 2017 RC2 on Linux is supported by SSDT version 17.0 RC or later.
 
-1. [Download and Install SSDT 17.0 RC2].
+* [Download and Install SSDT 17.0 RC2](https://go.microsoft.com/fwlink/?linkid=837939).
 
 ## Create a new database project in source control
 

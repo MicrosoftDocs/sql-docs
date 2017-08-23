@@ -12,7 +12,7 @@ ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
 ---
 # Install SQL Server and create a database on SUSE Linux Enterprise Server
 
-[!INCLUDE[tsql-appliesto-sslinx-only_md](../../docs/includes/tsql-appliesto-sslinx-only_md.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
 
 In this quick start tutorial, you first install SQL Server 2017 RC2 on SUSE Linux Enterprise Server (SLES) v12 SP2. Then connect with **sqlcmd** to create your first database and run queries.
 

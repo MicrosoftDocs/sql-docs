@@ -13,7 +13,7 @@ ms.custom: H1Hack27Feb2017
 ---
 # Use Visual Studio Code to create and run Transact-SQL scripts for SQL Server
 
-[!INCLUDE[tsql-appliesto-sslinx-only_md](../../docs/includes/tsql-appliesto-sslinx-only_md.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
 
 This topic shows how to use the **mssql** extension for Visual Studio Code (VS Code) to develop SQL Server databases.
 

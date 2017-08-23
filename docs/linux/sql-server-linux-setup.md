@@ -12,7 +12,7 @@ ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ---
 # Installation guidance for SQL Server on Linux
 
-[!INCLUDE[tsql-appliesto-sslinx-only_md](../../docs/includes/tsql-appliesto-sslinx-only_md.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
 
 This topic explains how to install, update, and uninstall SQL Server 2017 on Linux. SQL Server 2017 RC2 is supported on Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES), and Ubuntu. It is also available as a Docker image, which can run on Docker Engine on Linux or Docker for Windows/Mac.
 

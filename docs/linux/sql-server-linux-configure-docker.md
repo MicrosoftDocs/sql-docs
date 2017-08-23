@@ -13,7 +13,7 @@ ms.custom: H1Hack27Feb2017
 ---
 # Configure SQL Server 2017 container images on Docker
 
-[!INCLUDE[tsql-appliesto-sslinx-only_md](../../docs/includes/tsql-appliesto-sslinx-only_md.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
 
 This topic explains how to configure and use the [mssql-server-linux container image](https://hub.docker.com/r/microsoft/mssql-server-linux/) with Docker. This image consists of SQL Server running on Linux based on Ubuntu 16.04. It can be used with the Docker Engine 1.8+ on Linux or on Docker for Mac/Windows.
 

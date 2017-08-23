@@ -12,7 +12,7 @@ ms.assetid: e37742d4-541c-4d43-9ec7-a5f9b2c0e5d1
 ---
 # Availability groups for SQL Server on Linux
 
-[!INCLUDE[tsql-appliesto-sslinx-only_md](../../docs/includes/tsql-appliesto-sslinx-only_md.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
 
 A SQL Server Always On availability group is a high-availability (HA), disaster-recovery (DR), and scale-out solution. It provides HA for groups of databases on direct attached storage. It supports multiple secondaries for integrated HA and DR, automatic failure detection, fast transparent failover, and read load balancing. This broad set of capabilities allows you to achieve optimal availability SLAs for your workloads.
 

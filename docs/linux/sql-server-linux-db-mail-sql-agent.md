@@ -12,7 +12,7 @@ ms.assetid: tbd
 ---
 # DB Mail and Email Alerts with SQL Agent on Linux
 
-[!INCLUDE[tsql-appliesto-sslinx-only_md](../../docs/includes/tsql-appliesto-sslinx-only_md.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
 
 The following steps show you how to set up DB Mail and use it with SQL Server Agent (**mssql-server-agent**) on Linux. 
 

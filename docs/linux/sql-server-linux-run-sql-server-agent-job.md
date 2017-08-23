@@ -12,7 +12,7 @@ ms.assetid: 1d93d95e-9c89-4274-9b3f-fa2608ec2792
 ---
 # Create and run SQL Server Agent jobs on Linux
 
-[!INCLUDE[tsql-appliesto-sslinx-only_md](../../docs/includes/tsql-appliesto-sslinx-only_md.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
 
 SQL Server jobs are used to regularly perform the same sequence of commands in your SQL Server database. This topic provides examples of how to create SQL Server Agent jobs on Linux using both Transact-SQL and SQL Server Management Studio (SSMS).
 

@@ -12,7 +12,7 @@ ms.assetid: 9dab69c7-73af-4340-aef0-de057356b791
 ---
 # Extract, transform, and load data on Linux with SSIS
 
-[!INCLUDE[tsql-appliesto-sslinx-only_md](../../docs/includes/tsql-appliesto-sslinx-only_md.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
 
 This topic describes how to run SQL Server Integration Services (SSIS) packages on Linux. SSIS solves complex data integration problems by loading data from multiple sources and formats, transforming and cleansing the data, and updating multiple destinations. 
 

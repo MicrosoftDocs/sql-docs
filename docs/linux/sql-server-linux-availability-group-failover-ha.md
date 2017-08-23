@@ -12,7 +12,7 @@ ms.assetid:
 ---
 # Operate HA availability group for SQL Server on Linux
 
-[!INCLUDE[tsql-appliesto-sslinx-only_md](../../docs/includes/tsql-appliesto-sslinx-only_md.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
 
 ## <a name="failover"></a>Fail over availability group
 

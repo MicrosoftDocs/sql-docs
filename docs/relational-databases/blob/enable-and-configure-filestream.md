@@ -67,7 +67,7 @@ manager: "jhubbard"
   
 -   Use 64-KB NTFS clusters. Compressed volumes must be set to 4-KB NTFS clusters.  
   
--   Disable indexing on FILESTREAM volumes and set **disablelastaccess** To set **disablelastaccess**, use the Windows **fsutil** utility.  
+-   Disable indexing on FILESTREAM volumes and set **disablelastaccess**. To set **disablelastaccess**, use the Windows **fsutil** utility.  
   
 -   Disable antivirus scanning of FILESTREAM volumes when it is not necessary. If antivirus scanning is necessary, avoid setting policies that will automatically delete offending files.  
   

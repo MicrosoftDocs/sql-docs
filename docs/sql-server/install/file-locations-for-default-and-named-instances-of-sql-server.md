@@ -34,7 +34,14 @@ manager: "jhubbard"
 >  Do not delete any of the following directories or their contents: Binn, Data, Ftdata, HTML, or 1033. You can delete other directories, if necessary; however, you might not be able to retrieve any lost functionality or data without uninstalling and then reinstalling [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Do not delete or modify any of the .htm files in the HTML directory. They are required for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tools to function properly.  
   
 ## Shared Files for All Instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
- Common files used by all instances on a single computer are installed in the folder [!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)], where \<*drive*> is the drive letter where components are installed. The default is usually drive C.  
+ Common files used by all instances on a single computer are installed in the folder [!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]. \<*drive*> is the drive letter where components are installed. The default is usually drive C.  \<*nnn*> identifies the version. The following table identifies versions for the paths. 
+
+|\<*nnn*>|Version
+|-----|-----
+|140|[!INCLUDE[ssqlv14](../../includes/sssqlv14-md.md)]
+|130|[!INCLUDE[ssqlv13](../../includes/sssql15-md.md)]
+|120|SQL Server 2014
+|110|[!INCLUDE[sssql11](../../includes/sssql11-md.md)] 
   
 ## File Locations and Registry Mapping  
  During [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup, an instance ID is generated for each server component. The server components in this [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] release are the [!INCLUDE[ssDE](../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], and [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  

@@ -109,7 +109,7 @@ To configure TDE through REST API, you must be connected as the Azure Owner, Con
 
 | Command | Description |
 | --- | --- |
-|[Create Or Update Server](rest/api/sql/servers/createorupdate)|Adds an AAD identity to a SQL server (used to grant access to Key Vault).|
+|[Create Or Update Server](/rest/api/sql/servers/createorupdate)|Adds an AAD identity to a SQL server (used to grant access to Key Vault).|
 |[Create Or Update Server Key](/rest/api/sql/serverkeys/createorupdate)|Adds a Key Vault key to a SQL server.|
 |[Delete Server Key](/rest/api/sql/serverkeys/delete)|Removes a Key Vault key from a SQL server.|
 |[Get Server Keys](/rest/api/sql/serverkeys/get)|Gets a specific Key Vault key from a SQL server.|

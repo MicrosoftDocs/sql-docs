@@ -217,7 +217,7 @@ WHERE CONTAINS(Description, @SearchWord);
  Punctuation is ignored. Therefore, `CONTAINS(testing, "computer failure")` matches a row with the value, "Where is my computer? Failure to find it would be expensive." For more information on word-breaker behavior, see [Configure and Manage Word Breakers and Stemmers for Search](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md).  
   
  \<prefix_term>  
- Specifies a match of words or phrases beginning with the specified text. Enclose a prefix term in double quotation marks ("") and add an asterisk (*) before the ending quotation mark, so that all text starting with the simple term specified before the asterisk is matched. The clause should be specified this way: `CONTAINS (column, '"text*"')`. The asterisk matches zero, one, or more characters (of the root word or words in the word or phrase). If the text and asterisk are not delimited by double quotation marks, so the predicate reads `CONTAINS (column, 'text*')`, full-text search considers the asterisk as a character and searches for exact matches to `text*`. The full-text engine will not find words with the asterisk (\*) character because word breakers typically ignore such characters.  
+ Specifies a match of words or phrases beginning with the specified text. Enclose a prefix term in double quotation marks ("") and add an asterisk (\*) before the ending quotation mark, so that all text starting with the simple term specified before the asterisk is matched. The clause should be specified this way: `CONTAINS (column, '"text*"')`. The asterisk matches zero, one, or more characters (of the root word or words in the word or phrase). If the text and asterisk are not delimited by double quotation marks, so the predicate reads `CONTAINS (column, 'text*')`, full-text search considers the asterisk as a character and searches for exact matches to `text*`. The full-text engine will not find words with the asterisk (\*) character because word breakers typically ignore such characters.  
   
  When *\<prefix_term>* is a phrase, each word contained in the phrase is considered to be a separate prefix. Therefore, a query specifying a prefix term of "local wine*" matches any rows with the text of "local winery", "locally wined and dined", and so on.  
   
@@ -243,7 +243,7 @@ WHERE CONTAINS(Description, @SearchWord);
   
  Several proximity terms can be chained, as in `a NEAR b NEAR c` or `a ~ b ~ c`. Chained proximity terms must all be in the document for a match to be returned.  
   
- For example, `CONTAINS(`*column_name*`, 'fox NEAR chicken')` and `CONTAINSTABLE(`*table_name*, *column_name*`, 'fox ~ chicken')` would both return any documents in the specified column that contain both "fox" and "chicken". In addition, CONTAINSTABLE returns a rank for each document based on the proximity of "fox" and "chicken". For example, if a document contains the sentence, "The fox ate the chicken," its ranking would be high because the terms are closer to one another than in other documents.  
+ For example, `CONTAINS(*column_name*, 'fox NEAR chicken')` and `CONTAINSTABLE(*table_name*, *column_name*, 'fox ~ chicken')` would both return any documents in the specified column that contain both "fox" and "chicken". In addition, CONTAINSTABLE returns a rank for each document based on the proximity of "fox" and "chicken". For example, if a document contains the sentence, "The fox ate the chicken," its ranking would be high because the terms are closer to one another than in other documents.  
   
  For more information about generic proximity terms, see [Search for Words Close to Another Word with NEAR](../../relational-databases/search/search-for-words-close-to-another-word-with-near.md).  
   
@@ -268,13 +268,13 @@ CONTAINS(column_name, 'NEAR(term1,"term3 term4")')
  *integer*  
  Specifies a positive integer from 0 to 4294967295. This value controls how many non-search terms can occur between the first and last search terms, excluding any additional specified search terms.  
   
- For example, the following query searches for "`AA`" and "`BB`", in either order, within a maximum distance of five.  
+ For example, the following query searches for `AA` and `BB`, in either order, within a maximum distance of five.  
   
 ```  
 CONTAINS(column_name, 'NEAR((AA,BB),5)')  
 ```  
   
- The string "`AA` `one two three four five BB`" would be a match. In the following example, the query specifies for three search terms, "`AA`", "`BB`", and "`CC`"within a maximum distance of five:  
+ The string `AA one two three four five BB` would be a match. In the following example, the query specifies for three search terms, `AA`, `BB`, and `CC` within a maximum distance of five:  
   
 ```  
 CONTAINS(column_name, 'NEAR((AA,BB,CC),5)')  
@@ -282,9 +282,9 @@ CONTAINS(column_name, 'NEAR((AA,BB,CC),5)')
   
  This query would match the following string, in which the total distance is five:  
   
- `BB`   `one two`   `CC`   `three four five A`  `A`  
+ `BB   one two   CC   three four five A  A`  
   
- Notice that the inner search term, "CC", is not counted.  
+ Notice that the inner search term, `CC`, is not counted.  
   
  **MAX**  
  Returns any rows that contain the specified terms regardless of the distance between them. This is the default.  
@@ -363,7 +363,7 @@ CONTAINS(column_name, 'NEAR ((Monday, Tuesday, Wednesday), MAX, TRUE)')
   
  For example, the following CONTAINS query searches for the term "`Red`" in the `Name` and `Color` columns of the `Production.Product` table of the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] sample database.  
   
-```  
+```sql  
 Use AdventureWorks2012;  
 GO  
 SELECT Name, Color   
@@ -373,10 +373,10 @@ WHERE CONTAINS((Name, Color), 'Red');
   
 ## Examples  
   
-### A. Using CONTAINS with <simple_term>  
+### A. Using CONTAINS with \<simple_term>  
  The following example finds all products with a price of `$80.99` that contain the word `"Mountain"`.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT Name, ListPrice  
@@ -386,10 +386,10 @@ WHERE ListPrice = 80.99
 GO  
 ```  
   
-### B. Using CONTAINS and phrase with <simple_term>  
+### B. Using CONTAINS and phrase with \<simple_term>  
  The following example returns all products that contain either the phrase `"Mountain"` or `"Road"`.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT Name  
@@ -398,10 +398,10 @@ WHERE CONTAINS(Name, ' Mountain OR Road ')
 GO  
 ```  
   
-### C. Using CONTAINS with <prefix_term>  
+### C. Using CONTAINS with \<prefix_term>  
  The following example returns all product names with at least one word starting with the prefix chain in the `Name` column.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT Name  
@@ -410,10 +410,10 @@ WHERE CONTAINS(Name, ' "Chain*" ');
 GO  
 ```  
   
-### D. Using CONTAINS and OR with <prefix_term>  
+### D. Using CONTAINS and OR with \<prefix_term>  
  The following example returns all category descriptions containing strings with prefixes of either `"chain"` or `"full"`.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT Name  
@@ -422,13 +422,13 @@ WHERE CONTAINS(Name, '"chain*" OR "full*"');
 GO  
 ```  
   
-### E. Using CONTAINS with <proximity_term>  
+### E. Using CONTAINS with \<proximity_term>  
   
 **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
   
  The following example searches the `Production.ProductReview` table for all comments that contain the word "`bike`" within 10 terms of the word "`control`" and in the specified order (that is, where "`bike`" precedes "`control`").  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT Comments  
@@ -437,10 +437,10 @@ WHERE CONTAINS(Comments , 'NEAR((bike,control), 10, TRUE)');
 GO  
 ```  
   
-### F. Using CONTAINS with <generation_term>  
+### F. Using CONTAINS with \<generation_term>  
  The following example searches for all products with words of the form `ride`: "riding," "ridden," and so on.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT Description  
@@ -449,10 +449,10 @@ WHERE CONTAINS(Description, ' FORMSOF (INFLECTIONAL, ride) ');
 GO  
 ```  
   
-### G. Using CONTAINS with <weighted_term>  
+### G. Using CONTAINS with \<weighted_term>  
  The following example searches for all product names containing the words `performance`, `comfortable`, or `smooth`, and different weights are given to each word.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT Description  
@@ -465,7 +465,7 @@ GO
 ### H. Using CONTAINS with variables  
  The following example uses a variable instead of a specific search term.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 DECLARE @SearchWord nvarchar(30)  
@@ -479,7 +479,7 @@ GO
 ### I. Using CONTAINS with a logical operator (AND)  
  The following example uses the ProductDescription table of the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database. The query uses the CONTAINS predicate to search for descriptions in which the description ID is not equal to 5 and the description contains both the word `Aluminum` and the word `spindle`. The search condition uses the AND Boolean operator.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT Description  
@@ -492,7 +492,7 @@ GO
 ### J. Using CONTAINS to verify a row insertion  
  The following example uses CONTAINS within a SELECT subquery. Using the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database, the query obtains the comment value of all the comments in the ProductReview table for a particular cycle. The search condition uses the AND Boolean operator.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 INSERT INTO Production.ProductReview   
@@ -531,13 +531,12 @@ GO
 > [!NOTE]  
 >  For a property-search to return rows, the filter or filters that parse the column during indexing must extract the specified property. Also, the full-text index of the specified table must have been configured to include the property. For more information, see [Search Document Properties with Search Property Lists](../../relational-databases/search/search-document-properties-with-search-property-lists.md).  
   
-```  
+```sql  
 Use AdventureWorks2012;  
 GO  
 SELECT Document FROM Production.Document  
   WHERE CONTAINS(PROPERTY(Document,'Title'), 'Maintenance OR Repair');  
 GO  
-  
 ```  
   
 ## See Also  

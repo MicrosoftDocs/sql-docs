@@ -1,6 +1,4 @@
 ---
-# required metadata
-
 title: Configure availability group for SQL Server on Linux | Microsoft Docs
 description: 
 author: MikeRayMSFT 
@@ -11,20 +9,10 @@ ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 
-
-# optional metadata
-# keywords: ""
-# ROBOTS: ""
-# audience: ""
-# ms.devlang: ""
-# ms.reviewer: ""
-# ms.suite: ""
-# ms.tgt_pltfrm: ""
-# ms.custom: ""
-
 ---
-
 # Configure Always On availability group for SQL Server on Linux
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
 
 This article describes how to create a SQL Server Always on availability group for high availability on Linux. There are two configuration types for availability groups. A *high availability* configuration uses a cluster manager to provide business continuity. This configuration can also include read scale-out replicas. This document explains how to create the availability group high availability configuration.
 

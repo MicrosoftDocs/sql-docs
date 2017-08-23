@@ -1,6 +1,4 @@
 ---
-# required metadata
-
 title: Migrate databases to SQL Server on Linux | Microsoft Docs
 description: This topic describes the different options for migrating databases and data to SQL Server on Linux.
 author: rothja 
@@ -11,20 +9,11 @@ ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 1619489d-377a-4f32-8930-d4f536539689
-
-# optional metadata
-
-# keywords: ""
-# ROBOTS: ""
-# audience: ""
-# ms.devlang: ""
-# ms.reviewer: ""
-# ms.suite: ""
-# ms.tgt_pltfrm: ""
 ms.custom: H1Hack27Feb2017
-
 ---
 # Migrate databases and structured data to SQL Server on Linux 
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
 
 You can migrate your databases and data to SQL Server 2017 RC2 running on Linux. The method you choose to use depends on the source data and your specific scenario. The following sections provide best practices for various migration scenarios.
 

@@ -1,7 +1,7 @@
 ---
 title: "Automatically initialize Always On availability group | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/17/2017"
+ms.date: "08/23/2017"
 ms.prod: 
  - "sql-server-2016"
  - "sql-server-2017"
@@ -112,11 +112,11 @@ GO
 
 ## Enable automatic seeding on an existing availability group
 
-You can set automatic seeding on an existing database. The following command changes an availability group to use automatic seeding.
+You can set automatic seeding on an existing database. The following command changes an availability group to use automatic seeding. Run the following command on the primary replica.
 
 ```sql
 ALTER AVAILABILITY GROUP [<availability_group_name>] 
-    MODIFY REPLICA ON '<primary_node>' 
+    MODIFY REPLICA ON '<secondary_node>' 
     WITH (SEEDING_MODE = AUTOMATIC)
 GO
 ```
@@ -125,11 +125,11 @@ The preceding command forces a database to restart seeding if needed. For exampl
 
 ## Stop automatic seeding
 
-To stop automatic seeding for an availability group, run the following script on the instance that hosts the primary replica:
+To stop automatic seeding for an availability group, run the following script on the primary replica:
 
 ```sql
 ALTER AVAILABILITY GROUP [<availability_group_name>] 
-    MODIFY REPLICA ON '<primary_node>'   
+    MODIFY REPLICA ON '<secondary_node>'   
     WITH (SEEDING_MODE = MANUAL)
 GO
 ```

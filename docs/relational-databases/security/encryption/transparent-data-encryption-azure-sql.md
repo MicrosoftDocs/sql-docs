@@ -36,7 +36,11 @@ SQL Server running on an Azure virtual machine can also use an asymmetric key fr
 
 In Azure, the default setting for TDE is that the database encryption key is protected by a built-in server certificate. The built-in server certificate is unique for each server. If a database is in a geo-replication relationship, both the primary and geo-secondary database will be protected by the primary’s parent server key. If 2 databases are connected to the same server, they share the same built-in certificate. Microsoft automatically rotates these certificates at least every 90 days.
 
-Microsoft also seamlessly moves and manages the keys as needed for Geo-replication and restores. All newly created SQL databases are encrypted by default using service-managed TDE. Existing databases before May 2017 and databases created through restore, geo-replication, and database copy are not encrypted by default.
+Microsoft also seamlessly moves and manages the keys as needed for Geo-replication and restores. 
+
+> [!IMPORTANT]
+> All newly created SQL databases are encrypted by default using service-managed TDE. Existing databases before May 2017 and databases created through restore, geo-replication, and database copy are not encrypted by default.
+>
 
 ## Bring Your Own Key
 

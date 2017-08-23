@@ -1,7 +1,7 @@
 ﻿---
 title: "CONTAINS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/11/2017"
+ms.date: "08/23/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -63,7 +63,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
-  
 CONTAINS (   
      {   
         column_name | ( column_list )   
@@ -146,7 +145,7 @@ CONTAINS (
  Specifies two or more columns, separated by commas. *column_list* must be enclosed in parentheses. Unless *language_term* is specified, the language of all columns of *column_list* must be the same.  
   
  \*  
- Specifies that  the query will search all full-text indexed columns in the table specified in the FROM clause for the given search condition. The columns in the CONTAINS clause must come from a single table that has a full-text index. Unless *language_term* is specified, the language of all columns of the table must be the same.  
+ Specifies that  the query searchs all full-text indexed columns in the table specified in the FROM clause for the given search condition. The columns in the CONTAINS clause must come from a single table that has a full-text index. Unless *language_term* is specified, the language of all columns of the table must be the same.  
   
  PROPERTY ( *column_name* , '*property_name*')  
 **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
@@ -161,11 +160,11 @@ CONTAINS (
   
  If documents of different languages are stored together as binary large objects (BLOBs) in a single column, the locale identifier (LCID) of a given document determines what language to use to index its content. When querying such a column, specifying LANGUAGE *language_term* can increase the probability of a good match.  
   
- *language_term* can be specified as a string, integer, or hexadecimal value corresponding to the LCID of a language. If *language_term* is specified, the language it represents will be applied to all elements of the search condition. If no value is specified, the column full-text language is used.  
+ *language_term* can be specified as a string, integer, or hexadecimal value corresponding to the LCID of a language. If *language_term* is specified, the language it represents is applied to all elements of the search condition. If no value is specified, the column full-text language is used.  
   
- When specified as a string, *language_term* corresponds to the **alias** column value in he [sys.syslanguages &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) compatibility view. The string must be enclosed in single quotation marks, as in '*language_term*'. When specified as an integer, *language_term* is the actual LCID that identifies the language. When specified as a hexadecimal value, *language_term* is 0x followed by the hexadecimal value of the LCID. The hexadecimal value must not exceed eight digits, including leading zeros.  
+ When specified as a string, *language_term* corresponds to the **alias** column value in the [sys.syslanguages &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) compatibility view. The string must be enclosed in single quotation marks, as in '*language_term*'. When specified as an integer, *language_term* is the actual LCID that identifies the language. When specified as a hexadecimal value, *language_term* is 0x followed by the hexadecimal value of the LCID. The hexadecimal value must not exceed eight digits, including leading zeros.  
   
- If the value is in double-byte character set (DBCS) format, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will convert it to Unicode.  
+ If the value is in double-byte character set (DBCS) format, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] converts it to Unicode.  
   
  If the language specified is not valid or there are no resources installed that correspond to that language, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] returns an error. To use the neutral language resources, specify 0x0 as *language_term*.  
   
@@ -174,8 +173,7 @@ CONTAINS (
   
 *\<contains_search_condition>* is **nvarchar**. An implicit conversion occurs when another character data type is used as input. In the following example, the `@SearchWord` variable, which is defined as `varchar(30)`, causes an implicit conversion in the `CONTAINS` predicate.
   
-```  
-  
+```sql  
 USE AdventureWorks2012;  
 GO  
 DECLARE @SearchWord varchar(30)  
@@ -183,13 +181,11 @@ SET @SearchWord ='performance'
 SELECT Description   
 FROM Production.ProductDescription   
 WHERE CONTAINS(Description, @SearchWord);  
-  
 ```  
   
  Because "parameter sniffing" does not work across conversion, use **nvarchar** for better performance. In the example, declare `@SearchWord` as `nvarchar(30)`.  
   
-```  
-  
+```sql  
 USE AdventureWorks2012;  
 GO  
 DECLARE @SearchWord nvarchar(30)  
@@ -197,7 +193,6 @@ SET @SearchWord = N'performance'
 SELECT Description   
 FROM Production.ProductDescription   
 WHERE CONTAINS(Description, @SearchWord);  
-  
 ```  
   
  You can also use the OPTIMIZE FOR query hint for cases in which a non optimal plan is generated.  
@@ -211,8 +206,8 @@ WHERE CONTAINS(Description, @SearchWord);
 > [!NOTE]  
 >  Some languages, such as those written in some parts of Asia, can have phrases that consist of one or more words without spaces between them.  
   
-\<simple_term>
- Specifies a match for an exact word or a phrase. Examples of valid simple terms are "blue berry", blueberry, and "Microsoft SQL Server". Phrases should be enclosed in double quotation marks (""). Words in a phrase must appear in the same order as specified in *\<contains_search_condition>* as they appear in the database column. The search for characters in the word or phrase is not case-sensitive. Noise words (or [stopwords](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)) (such as a, and, or the) in full-text indexed columns are not stored in the full-text index. If a noise word is used in a single word search, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] returns an error message indicating that the query contains only noise words. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] includes a standard list of noise words in the directory \Mssql\Binn\FTERef of each instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+\<simple_term>  
+Specifies a match for an exact word or a phrase. Examples of valid simple terms are "blue berry", blueberry, and "Microsoft SQL Server". Phrases should be enclosed in double quotation marks (""). Words in a phrase must appear in the same order as specified in *\<contains_search_condition>* as they appear in the database column. The search for characters in the word or phrase is not case-sensitive. Noise words (or [stopwords](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)) (such as a, and, or the) in full-text indexed columns are not stored in the full-text index. If a noise word is used in a single word search, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] returns an error message indicating that the query contains only noise words. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] includes a standard list of noise words in the directory \Mssql\Binn\FTERef of each instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Punctuation is ignored. Therefore, `CONTAINS(testing, "computer failure")` matches a row with the value, "Where is my computer? Failure to find it would be expensive." For more information on word-breaker behavior, see [Configure and Manage Word Breakers and Stemmers for Search](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md).  
   
@@ -294,7 +289,7 @@ CONTAINS(column_name, 'NEAR((AA,BB,CC),5)')
   
  \<match_order> takes one of the following values:  
   
- TRUE  
+ **TRUE**  
  Enforces the specified order within terms. For example, `NEAR(A,B)` would match only `A … B`.  
   
  **FALSE**  
@@ -361,7 +356,7 @@ CONTAINS(column_name, 'NEAR ((Monday, Tuesday, Wednesday), MAX, TRUE)')
 ## Querying Multiple Columns (Full-Text Search)  
  You can query multiple columns by specifying a list of columns to search. The columns must be from the same table.  
   
- For example, the following CONTAINS query searches for the term "`Red`" in the `Name` and `Color` columns of the `Production.Product` table of the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] sample database.  
+ For example, the following CONTAINS query searches for the term `Red` in the `Name` and `Color` columns of the `Production.Product` table of the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] sample database.  
   
 ```sql  
 Use AdventureWorks2012;  
@@ -374,7 +369,7 @@ WHERE CONTAINS((Name, Color), 'Red');
 ## Examples  
   
 ### A. Using CONTAINS with \<simple_term>  
- The following example finds all products with a price of `$80.99` that contain the word `"Mountain"`.  
+ The following example finds all products with a price of `$80.99` that contain the word `Mountain`.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -387,7 +382,7 @@ GO
 ```  
   
 ### B. Using CONTAINS and phrase with \<simple_term>  
- The following example returns all products that contain either the phrase `"Mountain"` or `"Road"`.  
+ The following example returns all products that contain either the phrase `Mountain` or `Road`.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -411,7 +406,7 @@ GO
 ```  
   
 ### D. Using CONTAINS and OR with \<prefix_term>  
- The following example returns all category descriptions containing strings with prefixes of either `"chain"` or `"full"`.  
+ The following example returns all category descriptions containing strings with prefixes of either `chain` or `full`.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -426,7 +421,7 @@ GO
   
 **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
   
- The following example searches the `Production.ProductReview` table for all comments that contain the word "`bike`" within 10 terms of the word "`control`" and in the specified order (that is, where "`bike`" precedes "`control`").  
+ The following example searches the `Production.ProductReview` table for all comments that contain the word `bike` within 10 terms of the word "`control`" and in the specified order (that is, where "`bike`" precedes "`control`").  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -438,7 +433,7 @@ GO
 ```  
   
 ### F. Using CONTAINS with \<generation_term>  
- The following example searches for all products with words of the form `ride`: "riding," "ridden," and so on.  
+ The following example searches for all products with words of the form `ride`: riding, ridden, and so on.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -496,9 +491,9 @@ GO
 USE AdventureWorks2012;  
 GO  
 INSERT INTO Production.ProductReview   
-(ProductID, ReviewerName, EmailAddress, Rating, Comments)   
+  (ProductID, ReviewerName, EmailAddress, Rating, Comments)   
 VALUES  
-(780, 'John Smith', 'john@fourthcoffee.com', 5,   
+  (780, 'John Smith', 'john@fourthcoffee.com', 5,   
 'The Mountain-200 Silver from AdventureWorks2008 Cycles meets and exceeds expectations. I enjoyed the smooth ride down the roads of Redmond');  
   
 -- Given the full-text catalog for these tables is Adv_ft_ctlg,   
@@ -507,18 +502,15 @@ WAITFOR DELAY '00:00:30';
 -- Wait 30 seconds to make sure that the full-text index gets updated.  
   
 SELECT r.Comments, p.Name  
-FROM Production.ProductReview r  
-JOIN Production.Product p   
-ON  
- r.ProductID = p.ProductID  
-  
-AND r.ProductID = (SELECT ProductID  
-                  FROM Production.ProductReview  
-                  WHERE CONTAINS (Comments,   
-                                 ' AdventureWorks2008 AND   
-                                   Redmond AND   
-                                   "Mountain-200 Silver" '));  
-  
+FROM Production.ProductReview AS r  
+JOIN Production.Product AS p   
+    ON r.ProductID = p.ProductID  
+    AND r.ProductID = (SELECT ProductID  
+FROM Production.ProductReview  
+WHERE CONTAINS (Comments,   
+    ' AdventureWorks2008 AND   
+    Redmond AND   
+    "Mountain-200 Silver" '));  
 GO  
 ```  
   
@@ -534,8 +526,9 @@ GO
 ```sql  
 Use AdventureWorks2012;  
 GO  
-SELECT Document FROM Production.Document  
-  WHERE CONTAINS(PROPERTY(Document,'Title'), 'Maintenance OR Repair');  
+SELECT Document 
+FROM Production.Document  
+WHERE CONTAINS(PROPERTY(Document,'Title'), 'Maintenance OR Repair');  
 GO  
 ```  
   

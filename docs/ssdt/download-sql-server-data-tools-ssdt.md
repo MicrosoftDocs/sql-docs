@@ -1,7 +1,7 @@
 ---
 title: "Download SQL Server Data Tools (SSDT) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/18/2017"
+ms.date: "08/23/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -28,6 +28,10 @@ The preview version of SSDT for Visual Studio 2017 (15.3.0 preview) is now avail
 |[![download](../ssdt/media/download.png) Download SSDT for Visual Studio 2017 (15.3.0 preview) ](https://go.microsoft.com/fwlink/?linkid=853836) | [![download](../ssdt/media/download.png) Download SSDT for Visual Studio 2015 (17.2)](https://go.microsoft.com/fwlink/?linkid=852922)|
 |||
 
+> [!IMPORTANT]
+> Before installing SSDT for Visual Studio 2017 (preview), close all VS instances, and uninstall SSAS and SSRS if they are already installed on VS 2017.
+> 
+
 
 SSDT for Visual Studio 2015, and SSDT for Visual Studio 2017 both use DacFx 17.2: [Download Data-Tier Application Framework (DacFx) 17.2](https://www.microsoft.com/download/details.aspx?id=55713)
 
@@ -38,7 +42,7 @@ SSDT for Visual Studio 2015, and SSDT for Visual Studio 2017 both use DacFx 17.2
   
 The release number: 15.3.0 preview  
 The build number for this release: 14.0.16121.0
-  
+
 For a complete list of changes, see the [changelog](changelog-for-sql-server-data-tools-ssdt.md).
 
 SSDT for Visual Studio 2017 has the same system requirements as installing VS, supported operating systems are Windows 7 SP1, Windows 8.1 or Windows Server 2012 R2, Windows 10 or Windows Server 2016.  
@@ -96,6 +100,7 @@ An ISO image of SSDT can be used as an alternative way to install SSDT or to set
 ## Installing SSDT without Visual Studio pre-installed
 
 If you don't have Visual Studio installed on your machine, installing SSDT for Visual Studio will install a minimal version of Visual Studio. This version of Visual Studio is free to install and use on as many machines as you wish. It gives you all the SQL Server project types, plus *SQL Server Object Explorer* and other SQL tools experiences.
+
 If you already have Visual Studio 2015 (or above) installed, installing SSDT will add the full set of SQL Server tools into your existing Visual Studio installation. Visual Studio includes many features you might want to use, such as Source Code Control integration and non-SQL language support. We recommend using Visual Studio 2015 or above to get the best experience when developing T-SQL.
 
 

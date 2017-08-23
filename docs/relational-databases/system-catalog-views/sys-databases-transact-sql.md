@@ -1,11 +1,7 @@
 ---
 title: "sys.databases (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-<<<<<<< HEAD
 ms.date: "03/09/2017"
-=======
-ms.date: "07/31/2017"
->>>>>>> dea3fc621bff9da54471ebef94862861653a9b2d
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -144,11 +140,7 @@ FROM sys.databases;
 ### B. Check the copying status in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
  The following example queries the `sys.databases` and `sys.dm_database_copies` views to return information about a database copy operation.  
   
-<<<<<<< HEAD
-**Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
-=======
 **Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
->>>>>>> dea3fc621bff9da54471ebef94862861653a9b2d
   
 ```  
 -- Execute from the master database.  
@@ -160,11 +152,7 @@ WHERE a.state = 7;
 ### C. Check the temporal retention policy status in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
  The following example queries the `sys.databases` to return information whether temporal retention cleanup task is enabled. Be aware that after restore operation temporal retention is disabled by default. Use `ALTER DATABASE` to enable it explicitly.
   
-<<<<<<< HEAD
 **Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
-=======
-**Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
->>>>>>> dea3fc621bff9da54471ebef94862861653a9b2d
   
 ```  
 -- Execute from the master database.  

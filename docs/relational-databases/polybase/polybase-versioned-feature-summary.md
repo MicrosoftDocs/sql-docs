@@ -29,6 +29,7 @@ Summary of PolyBase features available for SQL Server products and services.
 |Query Hadoop data with [!INCLUDE[tsql](../../includes/tsql-md.md)]|yes|no|no|yes|
 |Import data from Hadoop|yes|no|no|yes|
 |Export data to Hadoop  |yes|no|no| yes|
+|Query, Import from, Export to HDInsights |no|no|no|no
 |Push down query computations to Hadoop|yes|no|no|yes|  
 |Import data from Azure blob storage|yes|no|yes|yes| 
 |Export data to Azure blob storage|yes|no|yes|yes|  

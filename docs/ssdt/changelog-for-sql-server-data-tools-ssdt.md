@@ -23,7 +23,7 @@ For detailed posts about what's new and changed, see [the SSDT Team blog](https:
 ## SSDT for Visual Studio 2017 (15.3.0 preview)
 Build number: 14.0.16121.0
   
-**What's New**
+### What's New?
 
 This preview is the first version of SSDT for Visual Studio 2017. This release introduces a standalone web installation experience for SQL Server Database, Analysis Services, Reporting Services, and Integration Services projects in Visual Studio 2017 15.3 or later.
 

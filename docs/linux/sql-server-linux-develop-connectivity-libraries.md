@@ -1,6 +1,4 @@
 ---
-# required metadata
-
 title: Connectivity libraries and frameworks | Microsoft Docs
 description: Lists the connectivity drivers that client apps can use from various languages to connect to Microsoft SQL Server running on-premises or in the cloud, on Linux, Windows or Docker and also to Azure SQL Database and Azure SQL Data Warehouse. 
 author: sanagama 
@@ -11,20 +9,10 @@ ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 80efe5ff-09ba-48a0-ac93-a91d62cff47c
-
-# optional metadata
-
-# keywords: ""
-# ROBOTS: ""
-# audience: ""
-# ms.devlang: ""
-# ms.reviewer: ""
-# ms.suite: ""
-# ms.tgt_pltfrm: ""
-# ms.custom: ""
-
 ---
 # Connectivity libraries and frameworks for Microsoft SQL Server
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
 
 Check out our [Getting Started Tutorials](http://aka.ms/sqldev) to quickly get started with programming languages such as C#, Java, Node.js, PHP and Python and build an app using SQL Server on Linux or Windows or Docker on macOS.
 

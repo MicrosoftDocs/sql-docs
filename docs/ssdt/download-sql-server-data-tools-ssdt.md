@@ -29,7 +29,7 @@ The preview version of SSDT for Visual Studio 2017 (15.3.0 preview) is now avail
 |||
 
 > [!IMPORTANT]
-> Before installation, close all VS instances, and uninstall SSAS and SSRS if they are already installed on VS 2017.
+> Before installing SSDT for Visual Studio 2017 (preview), close all VS instances, and uninstall SSAS and SSRS if they are already installed on VS 2017.
 > 
 
 

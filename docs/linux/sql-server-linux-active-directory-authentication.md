@@ -13,15 +13,15 @@ helpviewer_keywords:
 ---
 # Active Directory Authentication with SQL Server on Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-This document explains how to configure [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] on Linux to support Active Directory (AD) authentication, also known as integrated authentication. AD Authentication enables domain-joined clients on either Windows or Linux to authenticate to [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] using their domain credentials and the Kerberos protocol.
+This document explains how to configure [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux to support Active Directory (AD) authentication, also known as integrated authentication. AD Authentication enables domain-joined clients on either Windows or Linux to authenticate to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] using their domain credentials and the Kerberos protocol.
 
-AD Authentication has the following advantages over [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] Authentication:
+AD Authentication has the following advantages over [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication:
 
 * Users authenticate via single sign-on, without being prompted for a password.   
-* By creating logins for AD groups, you can manage access and permissions in [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] using AD group memberships.  
-* Each user has a single identity across your organization, so you don’t have to keep track of which [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] logins correspond to which people.   
+* By creating logins for AD groups, you can manage access and permissions in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] using AD group memberships.  
+* Each user has a single identity across your organization, so you don’t have to keep track of which [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] logins correspond to which people.   
 * AD enables you to enforce a centralized password policy across your organization.   
 
 ## Prerequisites
@@ -29,7 +29,7 @@ AD Authentication has the following advantages over [!INCLUDE[ssNoVersion](../..
 Before you configure AD Authentication, you need to:
 
 * Set up an AD Domain Controller (Windows) on your network  
-* Install [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)]
+* Install [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
   * [Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
   * [SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
   * [Ubuntu](quickstart-install-connect-ubuntu.md)
@@ -37,9 +37,9 @@ Before you configure AD Authentication, you need to:
 > [!IMPORTANT]
 > At this time, the only authentication method supported for database mirroring endpoint is CERTIFICATE. WINDOWS authentication method will be enabled in a future release.
 
-## Step 1: Join [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] host to AD domain
+## Step 1: Join [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] host to AD domain
 
-Numerous tools exist to help you join the [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] host machine to your AD domain. This walkthrough uses **[realmd](https://www.freedesktop.org/software/realmd/docs/guide-active-directory-join.html)**, a popular open source package. If you haven't already, install both the realmd and Kerberos client packages on the [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] host machine using your Linux distribution's package manager:
+Numerous tools exist to help you join the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] host machine to your AD domain. This walkthrough uses **[realmd](https://www.freedesktop.org/software/realmd/docs/guide-active-directory-join.html)**, a popular open source package. If you haven't already, install both the realmd and Kerberos client packages on the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] host machine using your Linux distribution's package manager:
 
 ```bash
 # RHEL
@@ -57,13 +57,13 @@ If the Kerberos client package installation prompts you for a realm name, enter 
 > [!NOTE]
 > This walkthrough uses "contoso.com" and "CONTOSO.COM" as example domain and realm names, respectively. You should replace these with your own values. These commands are case-sensitive, so make sure you use uppercase wherever it is used in this walkthrough.
 
-Run the following command to verify that the [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] host machine is configured to use the AD domain controller for as a DNS nameserver:
+Run the following command to verify that the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] host machine is configured to use the AD domain controller for as a DNS nameserver:
 
 ```bash
 sudo realm discover contoso.com -v
 ```
 
-If your domain is not found, you need to configure your [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] host machine to use your AD domain controller's IP address as a DNS nameserver. The specific steps to do this depend on your network device configuration, domain configuration, and Linux distribution. Here are some example approaches.
+If your domain is not found, you need to configure your [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] host machine to use your AD domain controller's IP address as a DNS nameserver. The specific steps to do this depend on your network device configuration, domain configuration, and Linux distribution. Here are some example approaches.
 
 ### Example DNS configuration: Ubuntu
 
@@ -156,7 +156,7 @@ Default principal: user@CONTOSO.COM
 
 For more information, see the Red Hat documentation for [Discovering and Joining Identity Domains](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/Windows_Integration_Guide/realmd-domain.html). 
 
-## Step 2: Create AD user for [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] and set SPN
+## Step 2: Create AD user for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and set SPN
 
 > [!NOTE]
 > In the next steps we will use your [fully qualified domain name](https://en.wikipedia.org/wiki/Fully_qualified_domain_name). If you are on **Azure**, you will have to **[create one](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/portal-create-fqdn)** before you proceed.
@@ -172,7 +172,7 @@ New-ADUser mssql -AccountPassword (Read-Host -AsSecureString "Enter Password") -
 > [!NOTE]
 > It is a security best practice to have a dedicated AD account for SQL Server, so that SQL Server's credentials aren't shared with other services using the same account. However, you can reuse an existing AD account if you prefer, if you know the account's password (required to generate a keytab file in the next step).
 
-Now set the ServicePrincipalName (SPN) for this account using the `setspn.exe` tool. The SPN must be formatted exactly as specified in the following example: You can find the fully qualified domain name of the [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] host machine by running `hostname --all-fqdns` on the [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] host, and the TCP port should be 1433 unless you have configured [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] to use a different port number.
+Now set the ServicePrincipalName (SPN) for this account using the `setspn.exe` tool. The SPN must be formatted exactly as specified in the following example: You can find the fully qualified domain name of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] host machine by running `hostname --all-fqdns` on the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] host, and the TCP port should be 1433 unless you have configured [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to use a different port number.
 
 ```PowerShell
 setspn -A MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>** mssql
@@ -185,9 +185,9 @@ setspn -A MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port
 
 For more information, see [Register a Service Principal Name for Kerberos Connections](../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md).
 
-## Step 3: Configure [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] service keytab
+## Step 3: Configure [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] service keytab
 
-First, check the Key Version Number (kvno) for the AD account created in the previous step. Usually it will be 2, but it could be another integer if you changed the account's password multiple times. On the [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] host machine, run the following:
+First, check the Key Version Number (kvno) for the AD account created in the previous step. Usually it will be 2, but it could be another integer if you changed the account's password multiple times. On the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] host machine, run the following:
 
 ```bash
 kinit user@CONTOSO.COM
@@ -212,14 +212,14 @@ quit
 > [!NOTE]
 > The ktutil tool does not validate the password, so make sure you enter it correctly.
 
-Anyone with access to this `keytab` file can impersonate [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] on the domain, so make sure you restrict access to the file such that only the `mssql` account has read access:
+Anyone with access to this `keytab` file can impersonate [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on the domain, so make sure you restrict access to the file such that only the `mssql` account has read access:
 
 ```bash
 sudo chown mssql:mssql /var/opt/mssql/secrets/mssql.keytab
 sudo chmod 400 /var/opt/mssql/secrets/mssql.keytab
 ```
 
-Next, configure [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] to use this `keytab` file for Kerberos authentication:
+Next, configure [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to use this `keytab` file for Kerberos authentication:
 
 ```bash
 sudo /opt/mssql/bin/mssql-conf set network.kerberoskeytabfile /var/opt/mssql/secrets/mssql.keytab
@@ -228,7 +228,7 @@ sudo systemctl restart mssql-server
 
 ## Step 4: Create AD-based logins in Transact-SQL
 
-Connect to [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] and create a new, AD-based login:
+Connect to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and create a new, AD-based login:
 
 ```sql
 CREATE LOGIN [CONTOSO\user] FROM WINDOWS;
@@ -240,9 +240,9 @@ Verify that the login is now listed in the [sys.server_principals](../relational
 SELECT name FROM sys.server_principals;
 ```
 
-## Step 5: Connect to [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] using AD Authentication
+## Step 5: Connect to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] using AD Authentication
 
-Log in to a client machine using your domain credentials. Now you can connect to [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] without reentering your password, by using AD Authentication. If you create a login for an AD group, any AD user who is a member of that group can connect in the same way.
+Log in to a client machine using your domain credentials. Now you can connect to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] without reentering your password, by using AD Authentication. If you create a login for an AD group, any AD user who is a member of that group can connect in the same way.
 
 The specific connection string parameter for clients to use AD Authentication depends on which driver you are using. A few examples are below.
 
@@ -264,7 +264,7 @@ sqlcmd -S mssql.contoso.com
 
 ### Example 2: SSMS on a domain-joined Windows client
 
-Log in to a domain-joined Windows client using your domain credentials. Make sure [!INCLUDE[ssmanstudiofull-md](../../docs/includes/ssmanstudiofull-md.md)] is installed, then connect to your [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] instance by specifying **Windows Authentication** in the **Connect to Server** dialog.
+Log in to a domain-joined Windows client using your domain credentials. Make sure [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)] is installed, then connect to your [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance by specifying **Windows Authentication** in the **Connect to Server** dialog.
 
 ### AD Authentication using other client drivers
 

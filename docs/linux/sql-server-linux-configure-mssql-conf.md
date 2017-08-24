@@ -350,7 +350,7 @@ This **traceflag** option enables or disables traceflags for the startup of the 
    sudo systemctl restart mssql-server
    ```
 
-## Unset a setting
+## Remove a setting
 
 To unset any setting made with `mssql-conf set`, call **mssql-conf** with the `unset` option and the name of the setting. This clears the setting, effectively returning it to its default value.
 
@@ -360,7 +360,7 @@ To unset any setting made with `mssql-conf set`, call **mssql-conf** with the `u
    sudo /opt/mssql/bin/mssql-conf unset network.tcpport
    ```
 
-2. Restart the SQL Server service.
+1. Restart the SQL Server service.
 
    ```bash
    sudo systemctl restart mssql-server
@@ -368,7 +368,7 @@ To unset any setting made with `mssql-conf set`, call **mssql-conf** with the `u
 
 ## View current settings
 
-To view any configured settings, run the following command to view the contents of the **mssql.conf** file:
+To view any configured settings, run the following command to output the contents of the **mssql.conf** file:
 
 ```bash
 sudo cat /var/opt/mssql/mssql.conf
@@ -378,7 +378,7 @@ Note that any settings not shown in this file are using their default values. Th
 
 ## mssql.conf format
 
-The following **mssql.conf** file provides an example for each setting. You can use this format to manually make changes to the **mssql.conf** file as needed. If you do manually change the file, you must restart SQL Server before the changes are applied.
+The following **/var/opt/mssql/mssql.conf** file provides an example for each setting. You can use this format to manually make changes to the **mssql.conf** file as needed. If you do manually change the file, you must restart SQL Server before the changes are applied.
 
 ```ini
 [EULA]

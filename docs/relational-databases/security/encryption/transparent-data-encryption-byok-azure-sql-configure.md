@@ -20,7 +20,7 @@ ms.author: rebeccaz
 
 --- 
 
-# Enable Transparent Data Encryption using your own key from Azure Key Vault using PowerShell
+# PowerShell: Enable Transparent Data Encryption using your own key from Azure Key Vault
 
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
 
@@ -107,7 +107,7 @@ Use the [Set-AzureRmKeyValutAccessPolicy](/powershell/module/azurerm.keyvault/se
    -ServerName <LogicalServerName> 
    ```
 
-## 4. Turn on TDE 
+## Step 4. Turn on TDE 
 
 Use the [Set-AzureRMSqlDatabaseTransparentDataEncryption](/powershell/module/azurerm.sql/set-azurermsqldatabasetransparentdataencryption) cmdlet to turn on TDE.
 
@@ -121,7 +121,7 @@ Use the [Set-AzureRMSqlDatabaseTransparentDataEncryption](/powershell/module/azu
 
 Now the database or data warehouse has TDE enabled with an encryption key in Key Vault.
 
-## 5. Check the encryption state and encryption activity of the database or data warehouse
+## Step 5. Check the encryption state and encryption activity of the database or data warehouse
 
 Use the [Get-AzureRMSqlDatabaseTransparentDataEncryption](/powershell/module/azurerm.sql/get-azurermsqldatabasetransparentdataencryption) to get the encryption state and the [Get-AzureRMSqlDatabaseTransparentDataEncryptionActivity](/powershell/module/azurerm.sql/get-azurermsqldatabasetransparentdataencryptionactivity) to check the encryption progress for a database or data warehouse.
 
@@ -160,7 +160,7 @@ Use the [Get-AzureRMSqlDatabaseTransparentDataEncryption](/powershell/module/azu
    -ResourceGroupName <SQLDatabaseResourceGroupName>
    ```
  
- - Use the [Remove-AzureRmSqlServerKeyVaultKey](/powershell/module/azurerm.sql/remove-azurermsqlserverkeyvaultkey) to remove a Key Vault key from the server.
+- Use the [Remove-AzureRmSqlServerKeyVaultKey](/powershell/module/azurerm.sql/remove-azurermsqlserverkeyvaultkey) to remove a Key Vault key from the server.
 
    ```powershell
    <# The key set as the TDE Protector cannot be removed. #>

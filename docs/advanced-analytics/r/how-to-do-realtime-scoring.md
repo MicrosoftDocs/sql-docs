@@ -1,7 +1,7 @@
 ---
 title: "How to perform realtime scoring or native scoring in SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/14/2017"
+ms.date: "08/20/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -13,7 +13,7 @@ author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
 ---
-## How to perform realtime scoring or native scoring in SQL Server
+# How to perform realtime scoring or native scoring in SQL Server
 
 This topic provides instructions and sample code for how to execute the realtime scoring and native scoring features in SQL Server 2016 and SQL Server 2017. The goal of both realtime scoring and native scoring is to improve the performance of scoring operations in small batches.
 
@@ -58,7 +58,7 @@ For more information, see [rxSerializeModel](https://docs.microsoft.com/r-server
 
 From SQL code, you can train the model using `sp_execute_external_script`, and directly insert the trained models into a table, in a column of type **varbinary(max)**.
 
-For a simple example, see [this tutorial](/tutorials/rtsql-create-a-predictive-model-r.md)
+For a simple example, see [this tutorial](../tutorials/rtsql-create-a-predictive-model-r.md)
 
 **Using R**
 

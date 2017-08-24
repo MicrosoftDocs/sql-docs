@@ -12,6 +12,8 @@ ms.assetid:
 ---
 # Configure SQL Server settings with environment variables on Linux
 
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+
 You can use several different environment variables to configure SQL Server 2017 RC2 on Linux. These variables are used in two scenarios:
 
 - To configure initial setup with the `mssql-conf setup` command.

@@ -13,7 +13,7 @@ ms.custom: H1Hack27Feb2017
 ---
 # Migrate databases and structured data to SQL Server on Linux 
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 You can migrate your databases and data to SQL Server 2017 RC2 running on Linux. The method you choose to use depends on the source data and your specific scenario. The following sections provide best practices for various migration scenarios.
 

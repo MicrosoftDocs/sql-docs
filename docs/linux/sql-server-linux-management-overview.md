@@ -13,7 +13,7 @@ ms.custom: H1Hack27Feb2017
 ---
 # Choose the right tool to manage SQL Server on Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 There are several ways to manage SQL Server 2017 RC2 on Linux. The following section provide a quick overview of different management tools and techniques with pointers to more resources.
 

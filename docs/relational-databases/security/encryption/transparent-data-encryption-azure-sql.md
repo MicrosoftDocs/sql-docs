@@ -60,11 +60,11 @@ You do not need to decrypt databases for operations within Azure. The TDE settin
 - Active geo-replication
 - Creating a database copy
 
-When exporting a TDE-protected database, the exported content of the database is not encrypted. This exported content is stored in unencrypted .bacpac files. Be sure to protect the .bacpac files appropriately and enable TDE once import of the new database is completed.
+When exporting a TDE-protected database, the exported content of the database is not encrypted. This exported content is stored in unencrypted BACPAC files. Be sure to protect the BACPAC files appropriately and enable TDE once import of the new database is completed.
 
-For example, if the .bacpac file is exported from an on-premises SQL Server, then the imported content of the new database is not automatically encrypted. Likewise, if the .bacpac file is exported to an on-premises SQL Server, the new database is also not automatically encrypted.
+For example, if the BACPAC file is exported from an on-premises SQL Server, then the imported content of the new database is not automatically encrypted. Likewise, if the BACPAC file is exported to an on-premises SQL Server, the new database is also not automatically encrypted.
 
-The one exception is when exporting to and from Azure SQL Database – TDE is enabled in the new database, but the .bacpac file itself is still not encrypted.
+The one exception is when exporting to and from Azure SQL Database. TDE is enabled in the new database, but the PACPAC file itself is still not encrypted.
 
 ## Managing Transparent Data Encryption in the Azure portal
 

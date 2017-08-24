@@ -145,7 +145,7 @@ CONTAINS (
  Specifies two or more columns, separated by commas. *column_list* must be enclosed in parentheses. Unless *language_term* is specified, the language of all columns of *column_list* must be the same.  
   
  \*  
- Specifies that  the query searchs all full-text indexed columns in the table specified in the FROM clause for the given search condition. The columns in the CONTAINS clause must come from a single table that has a full-text index. Unless *language_term* is specified, the language of all columns of the table must be the same.  
+ Specifies that the query searches all full-text indexed columns in the table specified in the FROM clause for the given search condition. The columns in the CONTAINS clause must come from a single table that has a full-text index. Unless *language_term* is specified, the language of all columns of the table must be the same.  
   
  PROPERTY ( *column_name* , '*property_name*')  
 **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 

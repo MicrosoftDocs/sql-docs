@@ -16,6 +16,8 @@ author: "Lingxi-Li"
 ms.author: "lingxl"
 manager: "jhubbard"
 ---
+# Azure Data Lake Store File System Task
+
 The **Azure Data Lake Store File System Task** enables users to perform various file system operations on [Azure Data Lake Store (ADLS)](https://azure.microsoft.com/en-us/services/data-lake-store/).
 
 The **Azure Data Lake Store File System Task** is a component of the [SQL Server Integration Services (SSIS) Feature Pack for Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).

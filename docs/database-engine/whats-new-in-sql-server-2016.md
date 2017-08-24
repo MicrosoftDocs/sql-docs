@@ -27,7 +27,8 @@ This topic summarizes the enhancements introduced in the [!INCLUDE[ssCurrent](..
 
 To review what is new in the other SQL Server components, see [What's New in SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md).
 
-[!NOTE] [!INCLUDEssSQL15] is a 64-bit application. 32-bit installation is discontinued, though some elements run as 32-bit components.
+[!NOTE] 
+[!INCLUDEssSQL15] is a 64-bit application. 32-bit installation is discontinued, though some elements run as 32-bit components.
 
 #### Try it out
 

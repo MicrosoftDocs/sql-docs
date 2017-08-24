@@ -28,7 +28,7 @@ This topic summarizes the enhancements introduced in the [!INCLUDE[ssCurrent](..
 To review what is new in the other SQL Server components, see [What's New in SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md).
 
 > [!NOTE]
->  [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] is a 64-bit application. 32-bit installation is discontinued, though some elements run as 32-bit components.
+> [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] is a 64-bit application. 32-bit installation is discontinued, though some elements run as 32-bit components.
 
 #### Try it out
 
@@ -36,7 +36,7 @@ To review what is new in the other SQL Server components, see [What's New in SQL
 
 - Have an Azure account?  Then go **[Here](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/)** to spin up a Virtual Machine with [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] already installed.
 
-![note](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "note") For the current release notes, see [SQL Server 2016 Release Notes](../sql-server/sql-server-2016-release-notes.md).
+> [!note](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "note") For the current release notes, see [SQL Server 2016 Release Notes](../sql-server/sql-server-2016-release-notes.md).
   
 ## SQL Server 2016 Service Pack 1 (SP1)  
 -  `CREATE OR ALTER <object>` syntax is now available for [procedures](../t-sql/statements/create-procedure-transact-sql.md), [views](../t-sql/statements/create-view-transact-sql.md), [functions](../t-sql/statements/create-function-transact-sql.md), and [triggers](../t-sql/statements/create-trigger-transact-sql.md).

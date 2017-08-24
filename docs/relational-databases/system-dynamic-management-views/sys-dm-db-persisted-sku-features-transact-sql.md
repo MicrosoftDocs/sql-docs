@@ -64,7 +64,7 @@ manager: "jhubbard"
 -   **TransparentDataEncryption**: Indicates that a database is encrypted by using transparent data encryption. To remove transparent data encryption, use the ALTER DATABASE statement. For more information, see [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption-tde.md).  
 
 > [!NOTE]
-> Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Service Pack 1, these features are available accross muiltiple [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Editions, and not limited to Enterprise or Developer Editions only.
+> Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Service Pack 1, these features are available accross multiple [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Editions, and not limited to Enterprise or Developer Editions only.
 
  To determine whether a database uses any features that are restricted to specific editions, execute the following statement in the database:  
   

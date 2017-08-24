@@ -12,7 +12,7 @@ ms.assetid: 222e23b2-51e7-429b-b8e5-61e0ebe7df9b
 ---
 # Create a Linux SQL Server 2017 virtual machine with the Azure portal
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 Azure provides Linux virtual machine images that have SQL Server 2017 RC2 installed. This topic provides a short walkthrough on how to use the Azure portal to create a Linux SQL Server virtual machine. 
 

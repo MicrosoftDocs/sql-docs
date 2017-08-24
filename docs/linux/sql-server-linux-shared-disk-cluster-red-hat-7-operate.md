@@ -12,7 +12,7 @@ ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
 ---
 # Operate Red Hat Enterprise Linux shared disk cluster for SQL Server
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 This document describes how to do the following tasks for SQL Server on a shared disk failover cluster with Red Hat Enterprise Linux.
 

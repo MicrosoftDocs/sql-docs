@@ -12,7 +12,7 @@ ms.assetid: 77f16adc-e6cb-4a57-82f3-7b9780369868
 ---
 # Install SQL Server Agent on Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 The following steps install SQL Server Agent (**mssql-server-agent**) on Linux. The [SQL Server Agent](https://docs.microsoft.com/sql/ssms/agent/sql-server-agent) runs scheduled SQL Server jobs. For information on the features supported for this release of the SQL Server Agent, see the [Release Notes](sql-server-linux-release-notes.md).
 

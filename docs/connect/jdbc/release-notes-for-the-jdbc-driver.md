@@ -46,7 +46,7 @@ The JDBC Driver now supports the following configurable timeouts you can change 
 
 ## Updates in Microsoft JDBC Driver 6.1 for SQL Server
 
-The Microsoft JDBC Driver 6.1 for SQL Server is fully compliant with JDBC specifications 4.1 and 4.2. This release is the initial open source release of the JDBC Driver and contains the mssql-jdbc-6.1.0.jre8.jar mssql-jdbc-6.1.0.jre7.jar files, which correspond to the Java version compatibility. 
+The Microsoft JDBC Driver 6.1 for SQL Server is fully compliant with JDBC specifications 4.1 and 4.2. This is the initial open source release of the JDBC Driver and contains the mssql-jdbc-6.1.0.jre8.jar mssql-jdbc-6.1.0.jre7.jar files, which correspond to the Java version compatibility. 
 
 ## Updates in Microsoft JDBC Driver 6.0 for SQL Server
 

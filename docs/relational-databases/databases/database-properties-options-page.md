@@ -2,7 +2,7 @@
 title: "Database Properties (Options Page) | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "04/29/2016"
+ms.date: "08/24/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -43,7 +43,7 @@ manager: "jhubbard"
  **Auto Close**  
  Specify whether the database shuts down cleanly and frees resources after the last user exits. Possible values are **True** and **False**. When **True**, the database is shut down cleanly and its resources are freed after the last user logs off.  
   
- Auto Create Incremental Statistics  
+ **Auto Create Incremental Statistics**  
  Specify whether to use the incremental option when per partition statistics are created. For information about incremental statistics, see [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md).  
   
  **Auto Create Statistics**  
@@ -124,6 +124,9 @@ manager: "jhubbard"
  Specify one of the following options for non-transactional access through the file system to FILESTREAM data stored in FileTables: **OFF**, **READ_ONLY**, or **FULL**. If FILESTREAM is not enabled on the server, this value is set to OFF and is disabled. For more information, see [FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md).  
   
 ## Miscellaneous  
+**Allow Snapshot Isolation**  
+Enables this feature.  
+
  **ANSI NULL Default**  
  Allow null values for all user-defined data types or columns that are not explicitly defined as **NOT NULL** during a **CREATE TABLE** or **ALTER TABLE** statement (the default state). For more information, see [SET ANSI_NULL_DFLT_ON &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-null-dflt-on-transact-sql.md) and [SET ANSI_NULL_DFLT_OFF &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-null-dflt-off-transact-sql.md).  
   
@@ -149,7 +152,13 @@ manager: "jhubbard"
  When **True**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] maintains correlation statistics between any two tables in the database that are linked by a FOREIGN KEY constraint and have **datetime** columns.  
   
  When **False**, correlation statistics are not maintained.  
-  
+ 
+ **Delayed Durability**  
+ Enables this feature.  
+ 
+ **Is Read Committed Snapshot On**  
+ Enables this feature.  
+ 
  **Numeric Round-Abort**  
  Specify how the database handles rounding errors. Possible values are **True** and **False**. When **True**, an error is generated when loss of precision occurs in an expression. When **False**, losses of precision do not generate error messages, and the result is rounded to the precision of the column or variable storing the result. For more information, see [SET NUMERIC_ROUNDABORT &#40;Transact-SQL&#41;](../../t-sql/statements/set-numeric-roundabort-transact-sql.md).  
   
@@ -186,14 +195,27 @@ manager: "jhubbard"
   
  **Target Recovery Time (Seconds)**  
  Specifies the maximum bound on the time, expressed in seconds, to recover the specified database in the event of a crash. For more information, see [Database Checkpoints &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md).  
-  
+
+## Service Broker  
+**Broker Enabled**  
+Enables or disables Service Broker.  
+
+**Honor Broker Priority**  
+Read only Service Broker property.  
+
+**Serice Broker Identifier**  
+Read only identifier.  
+
 ## State  
  **Database Read Only**  
  Specify whether the database is read only. Possible values are **True** and **False**. When **True**, users can only read data in the database. Users cannot modify the data or database objects; however, the database itself can be deleted using the DROP DATABASE statement. The database cannot be in use when a new value for the **Database Read Only** option is specified. The master database is the exception, and only the system administrator can use master while the option is being set.  
   
  **Database State**  
  View the current state of the database. It is not editable. For more information about **Database State**, see [Database States](../../relational-databases/databases/database-states.md).  
-  
+
+ **Encryption Enabled**  
+ When **True**, this database is enabled for database encryption. A Database Encryption Key is required for encryption. For more information, see [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption-tde.md).  
+ 
  **Restrict Access**  
  Specify which users may access the database. Possible values are:  
   
@@ -209,9 +231,8 @@ manager: "jhubbard"
   
      Only members of the db_owner, dbcreator, or sysadmin roles can use the database.  
   
- **Encryption Enabled**  
- When **True**, this database is enabled for database encryption. A Database Encryption Key is required for encryption. For more information, see [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption-tde.md).  
-  
+
+
 ## See Also  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)  

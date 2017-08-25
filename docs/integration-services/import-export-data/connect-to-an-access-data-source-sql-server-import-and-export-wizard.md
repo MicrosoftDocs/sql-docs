@@ -62,7 +62,10 @@ Specify advanced options, such as the database password or a non-default workgro
 
 ## I don't see Access in the list of data sources
 If you don't see Access in the list of data sources, are you running the 64-bit wizard? The providers for Excel and Access are typically 32-bit and aren't visible in the 64-bit wizard. Run the 32-bit wizard instead.
-  
+
+> [!NOTE]
+> To use the 64-bit version of the SQL Server Import and Export Wizard, you have to install SQL Server. SQL Server Data Tools (SSDT) and SQL Server Management Studio (SSMS) are 32-bit applications and only install 32-bit files, including the 32-bit version of the wizard.
+
 ## <a name="officeDownloads"></a>Get the files you need to connect to Access  
 You may have to download the connectivity components for Microsoft Office data sources, including Access and Excel, if they're not already installed. Download the latest version of the connectivity components for both Access and Excel files here:
 [Microsoft Access Database Engine 2016 Redistributable](https://www.microsoft.com/download/details.aspx?id=54920).

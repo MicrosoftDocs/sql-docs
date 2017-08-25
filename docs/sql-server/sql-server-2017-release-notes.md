@@ -1,7 +1,7 @@
 ---
 title: "SQL Server 2017 Release Notes | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/16/2017"
+ms.date: "08/25/2017"
 ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
@@ -16,12 +16,17 @@ ms.author: "craigg"
 manager: "jhubbard"
 ---
 # SQL Server 2017 Release Notes
-This topic describes limitations and issues with [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]. For related information, see:
+This topic describes limitations and issues with SQL Server 2017. For related information, see:
 - [What's New in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md).
 - [SQL Server on Linux release notes](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-release-notes).
-  
-[![Download from Evaluation Center.](../analysis-services/media/download.png)](http://go.microsoft.com/fwlink/?LinkID=829477)  Download [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] from the **[Evaluation Center](http://go.microsoft.com/fwlink/?LinkID=829477)**
 
+[![Download from Evaluation Center](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) **Try it out:** [Download SQL Server 2017 - October 2017](http://go.microsoft.com/fwlink/?LinkID=829477).
+
+## SQL Server 2017 - general availability release (October 2017)
+### Database Engine
+### Master Data Services (MDS)
+
+![horizontal_bar](../sql-server/media/horizontal-bar.png)
 ## SQL Server 2017 Release Candidate (RC2 - August 2017)
 There are no SQL Server on Windows release notes for this release. See [SQL Server on Linux Release notes](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-release-notes).
 

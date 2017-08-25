@@ -23,7 +23,7 @@ manager: "craigg"
 
 If you want to jump right in and start creating tables, running queries, basically design and manage your database, then [**SQL Server Management Studio (SSMS)**](../ssms/download-sql-server-management-studio-ssms.md) is most likely your go-to tool. SSMS is free, and runs on Windows.
 
-If you're not running Windows, [Visual Studio Code](https://code.visualstudio.com/) is free and works on Linux, macOS, (and Windows). Install the [**mssql for Visual Studio Code**](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql) extension for developing Microsoft SQL Server, Azure SQL Database and SQL Data Warehouse everywhere with a rich set of functionalities. See [Use Visual Studio Code to create and run Transact-SQL scripts for SQL Server](../linux/sql-server-linux-develop-use-vscode.md).
+If you're running Linux or macOS, try [Visual Studio Code](https://code.visualstudio.com/) with the [**mssql for Visual Studio Code**](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql) extension. These tools are for developing Microsoft SQL Server, Azure SQL Database and SQL Data Warehouse with a rich set of functionalities, and are also free. See [Use Visual Studio Code to create and run Transact-SQL scripts for SQL Server](../linux/sql-server-linux-develop-use-vscode.md).
 
 
 ## SQL tools 

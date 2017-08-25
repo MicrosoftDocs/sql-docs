@@ -32,6 +32,7 @@
 # [The SSMS Environment](the-sql-server-management-studio-environment.md)
 # [Property Pages in SSMS](property-pages-in-sql-server-management-studio.md)
 # [Properties Window in SSMS](properties-window-management-studio.md)
+# [Output Window in SSMS](output-window.md)
 
 # [About Dialog Box](about-dialog-box.md)
 # [SSMS Web Browser](sql-server-management-studio-web-browser.md)

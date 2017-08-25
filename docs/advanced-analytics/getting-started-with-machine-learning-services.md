@@ -1,7 +1,7 @@
 ---
-title: "Getting Started | Microsoft Docs"
+title: "Getting started with machine learning in SQL Server| Microsoft Docs"
 ms.custom: ""
-ms.date: "07/31/2017"
+ms.date: "08/20/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -67,7 +67,7 @@ You can also install R Server through platform-specific installers available fro
 
 + [Data Science Virtual Machine](../advanced-analytics/r/provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure.md)
 
-  Jump-start your entry into machine learning by getting this complete machine learning solution from the Azure Marketplace. The data science virtual machine (frequently shortened to "DSVM") includes SQL Server, Microsoft Machine Learnign Server, and all development tools.
+  Jump-start your entry into machine learning by getting this complete machine learning solution from the Azure Marketplace. The data science virtual machine (frequently shortened to "DSVM") includes SQL Server, Microsoft Machine Learning Server, and all development tools.
   
   The latest version of the Data Science Virtual Machine (DSVM) runs on Windows 2016 Preview Edition, to provide the clean customizable look of Windows 10. It comes pre-configured with NVIDIA drivers, CUDA Toolkit 8.0, and the NVIDIA cuDNN library for GPU workloads.
 
@@ -79,7 +79,7 @@ You can also install R Server through platform-specific installers available fro
 
 ### R tutorials
 
-+ [Use R in SQL Server](/tutorials/sql-server-r-tutorials.md)
++ [SQL Server R tutorials](../advanced-analytics/tutorials/sql-server-r-tutorials.md)
 
    Learn how to run R in SQL Server, create and use remote compute contexts, or perform simulations in R using SQL Server.
    
@@ -91,7 +91,7 @@ You can also install R Server through platform-specific installers available fro
 
 ### Python tutorials
 
-+ [Use Python in SQL Server](/tutorials/sql-server-r-tutorials.md)
++ [SQL Server Python tutorials](../advanced-analytics/tutorials/sql-server-r-tutorials.md)
 
   Learn how to run Python in SQL Server. Build a model using Python and use it to score SQL Server data.
 

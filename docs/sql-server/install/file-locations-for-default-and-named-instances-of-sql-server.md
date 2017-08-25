@@ -115,7 +115,9 @@ manager: "jhubbard"
 |Replication and server-side COM objects|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]COM\\ <sup>2</sup> |Fixed path|  
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] component DLLs for the Data Transformation Run-time engine, the Data Transformation Pipeline engine, and the **dtexec** command prompt utility|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\Binn|Fixed path|  
 |DLLs that provide managed connection support for [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\Connections|Fixed path|  
-|DLLs for each type of enumerator that [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] supports|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\ForEachEnumerators|Fixed path|
+|DLLs for each type of enumerator that [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] supports|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\ForEachEnumerators|Fixed path|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser Service, WMI providers|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Shared\ |Fixed path|  
+|Components that are shared between all instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Shared\ |Fixed path|  
   
 >[!WARNING]
 >Ensure that the \Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\ folder is protected with limited permissions.  

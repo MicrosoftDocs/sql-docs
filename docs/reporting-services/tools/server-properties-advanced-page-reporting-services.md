@@ -119,6 +119,24 @@ Should PowerBI ReportServer enable the export of data from PowerBI visuals. Valu
 **EnableTestConnectionDetailedErrors**  
 Indicates whether detailed error messages are sent to the client computer when users test data source connections using the report server. The default value is **true**. If the option is set to **false**, only generic error messages are sent.
 
+**AccessControlAllowCredentials**  
+Indicates whether the response to the client request can be exposed when the 'credentials' flag is set to true. The default value is **false**.
+
+**AccessControlAllowHeaders**
+A comma seperated list of headers that the server will allow when a client makes a request. This property can be an empty string, specifying * will allow all headers.
+
+**AccessControlAllowMethods**
+A comma seperated list of HTTP methods that the server will allow when a client makes a request. The default values are (GET, PUT, POST, PATCH, DELETE), specifying * will allow all methods.
+
+**AccessControlAllowOrigin**
+A comma seperated list of origins that the server will allow when a client makes a request. The default value is blank which prevents all requests, specifying * will allow all origins when credentials are not set; if credentials are specified an explicit list of origins must be specified.
+
+**AccessControlExposeHeaders**
+A comma seperated list of headers that the server will expose to clients. The default value is blank.
+
+**AccessControlMaxAge**
+Specifies the number of seconds the results of the preflight request can be cached. The default value is 600 (10 minutes).
+
 ## See Also
 
 [Set Report Server Properties &#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md)   

@@ -139,11 +139,11 @@ manager: "jhubbard"
   
  Types of MSI log files:  
   
--   \<Feature>_\<Architecture>\_\<Interation>.log  
+-   \<Feature>_\<Architecture>\_\<Interaction>.log  
   
--   \<Feature>_\<Architecture>\_\<Language>\_\<Interation>.log  
+-   \<Feature>_\<Architecture>\_\<Language>\_\<Interaction>.log  
   
--   \<Feature>_\<Architecture>\_\<Interation>\_\<workflow>.log  
+-   \<Feature>_\<Architecture>\_\<Interaction>\_\<workflow>.log  
   
 ### Location  
  The MSI log files are located at %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\130\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\<Name\>.log.  

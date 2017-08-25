@@ -91,21 +91,21 @@ manager: "jhubbard"
   
 |Component|Default path|Configurable or Fixed Path|  
 |---------------|------------------|--------------------------------|  
-|[!INCLUDE[ssDE](../../includes/ssde-md.md)] server components|\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL13.\<InstanceID>\|Configurable|  
-|[!INCLUDE[ssDE](../../includes/ssde-md.md)] data files|\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL13.\<InstanceID>\|Configurable|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] server|\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSAS13.\<InstanceID>\|Configurable|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data files|\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSAS13.\<InstanceID>\|Configurable|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server|\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSRS13.\<InstanceID>\Reporting Services\ReportServer\Bin\|Configurable|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report manager|\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSRS13.\<InstanceID>\Reporting Services\ReportManager\|Fixed path|  
-|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|\<Install Directory>\130\DTS\|Configurable*|  
-|Client Components (except bcp.exe and sqlcmd.exe)|\<Install Directory>\130\Tools\|Configurable*|  
-|Client Components (bcp.exe and sqlcmd.exe)|\<Install Directory>\Client SDK\ODBC\110\Tools\Binn|Fixed path|  
-|Replication and server-side COM objects|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]COM\\**|Fixed path|  
-|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] component DLLs for the Data Transformation Run-time engine, the Data Transformation Pipeline engine, and the **dtexec** command prompt utility|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\Binn|Fixed path|  
-|DLLs that provide managed connection support for [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\Connections|Fixed path|  
-|DLLs for each type of enumerator that [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] supports|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\ForEachEnumerators|Fixed path|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser Service, WMI providers|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Shared\|Fixed path|  
-|Components that are shared between all instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Shared\|Fixed path|  
+|[!INCLUDE[ssDE](../../includes/ssde-md.md)] server components|\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL13.\<InstanceID>\ |Configurable|  
+|[!INCLUDE[ssDE](../../includes/ssde-md.md)] data files|\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL13.\<InstanceID>\ |Configurable|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] server|\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSAS13.\<InstanceID>\ |Configurable|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data files|\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSAS13.\<InstanceID>\ |Configurable|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server|\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSRS13.\<InstanceID>\Reporting Services\ReportServer\Bin\  |Configurable|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report manager|\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSRS13.\<InstanceID>\Reporting Services\ReportManager\ |Fixed path|  
+|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|\<Install Directory>\130\DTS\ |Configurable*|  
+|Client Components (except bcp.exe and sqlcmd.exe)|\<Install Directory>\130\Tools\ |Configurable*|  
+|Client Components (bcp.exe and sqlcmd.exe)|\<Install Directory>\Client SDK\ODBC\110\Tools\Binn |Fixed path|  
+|Replication and server-side COM objects|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]COM\\** |Fixed path|  
+|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] component DLLs for the Data Transformation Run-time engine, the Data Transformation Pipeline engine, and the **dtexec** command prompt utility|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\Binn |Fixed path|  
+|DLLs that provide managed connection support for [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\Connections |Fixed path|  
+|DLLs for each type of enumerator that [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] supports|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\ForEachEnumerators |Fixed path|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser Service, WMI providers|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Shared\ |Fixed path|  
+|Components that are shared between all instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Shared\ |Fixed path|  
   
  **\*\* Security Note \*\*** Ensure that the \Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\ folder is protected with limited permissions.  
   

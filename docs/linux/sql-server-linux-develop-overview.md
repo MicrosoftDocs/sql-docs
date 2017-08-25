@@ -1,6 +1,4 @@
 ---
-# required metadata
-
 title: Develop applications for SQL Server on Linux | Microsoft Docs
 description: 
 author: sanagama 
@@ -11,19 +9,11 @@ ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 758cb738-b018-465b-9ab0-59a24b892e66
-
-# optional metadata
-# keywords: ""
-# ROBOTS: ""
-# audience: ""
-# ms.devlang: ""
-# ms.reviewer: ""
-# ms.suite: ""
-# ms.tgt_pltfrm: ""
 ms.custom: H1Hack27Feb2017
-
 ---
 # How to get started developing applications for SQL Server on Linux
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 You can create applications that connect to and use SQL Server 2017 RC2 on Linux from a variety of programming languages, such as C#, Java, Node.js, PHP, Python, Ruby, and C++. You can also use popular web frameworks and Object Relational Mapping (ORM) frameworks.
 

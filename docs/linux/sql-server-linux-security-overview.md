@@ -1,6 +1,4 @@
 ---
-# required metadata
-
 title: Security limitations for SQL Server on Linux | Microsoft Docs
 description: This topic describes SQL Server on Linux restrictions.
 author: BYHAM 
@@ -11,22 +9,12 @@ ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 64da74cc-14bf-4636-a55e-8cc1fce2aaff
-
-# optional metadata
-
-# keywords: ""
-# ROBOTS: ""
-# audience: ""
-# ms.devlang: ""
-# ms.reviewer: ""
-# ms.suite: ""
-# ms.tgt_pltfrm: ""
-# ms.custom: ""
-
 ---
 # Security limitations for SQL Server on Linux
 
-SQL Server on Linux currently has the following limitations: 
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+
+SQL Server on Linux currently has the following limitations:
 
 * A standard password policy is provided. MUST_CHANGE is the only option you may configure.  
 * Extensible Key Management is not supported. 

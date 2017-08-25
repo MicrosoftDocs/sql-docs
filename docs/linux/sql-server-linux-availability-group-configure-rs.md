@@ -1,6 +1,4 @@
 ---
-# required metadata
-
 title: Configure read scale-out availability group for SQL Server on Linux | Microsoft Docs
 description: 
 author: MikeRayMSFT 
@@ -11,20 +9,10 @@ ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 
-
-# optional metadata
-# keywords: ""
-# ROBOTS: ""
-# audience: ""
-# ms.devlang: ""
-# ms.reviewer: ""
-# ms.suite: ""
-# ms.tgt_pltfrm: ""
-# ms.custom: ""
-
 ---
-
 # Configure read scale-out availability group for SQL Server on Linux
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 You can configure a read scale-out availability group for SQL Server on Linux. There are two architectures for availability groups. A *high availability* architecture uses a cluster manager to provide improved business continuity. This architecture can also include read scale-out replicas. To create the high availability architecture, see [Configure Always On availability group for SQL Server on Linux](sql-server-linux-availability-group-configure-ha.md).
 

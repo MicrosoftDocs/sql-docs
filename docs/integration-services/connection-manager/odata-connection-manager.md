@@ -80,9 +80,9 @@ Select one of the following options:
 -   **Microsoft Dynamics CRM Online** for Dynamics CRM Online
 -   **Microsoft Online Services** for Microsoft Online Services
 
-To connect to Microsoft Dynamics AX Online or Microsoft Dynamics CRM online, you can't use the **Microsoft Online Services** authentication option. You also can't use any option that's configured for multi-factor authentication.
-
 If you select an option other than Windows Authentication, enter the **user name** and **password**. 
+
+To connect to Microsoft Dynamics AX Online or Microsoft Dynamics CRM online, you can't use the **Microsoft Online Services** authentication option. You also can't use any option that's configured for multi-factor authentication.
 
  **Test Connection**  
  Click this button to test the connection to the OData source.  

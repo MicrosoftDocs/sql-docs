@@ -2197,7 +2197,7 @@
           },
        {
             "source_path": "docs/integration-services/connection-manager/wmi-connection-manager-editor.md",
-            "redirect_url": "/sql/integration-services/connection-manager/wmi-connection-manager.md",
+            "redirect_url": "/sql/integration-services/connection-manager/wmi-connection-manager",
             "redirect_document_id": false
           },
         {

@@ -53,7 +53,7 @@ The Table Designer is a visual tool where you design and visualize [database tab
 
 ## See Also
 
-[Tables](http://msdn.microsoft.com/en-us/82d7819c-b801-4309-a849-baa63083e83f)  
+[Tables](http://msdn.microsoft.com/82d7819c-b801-4309-a849-baa63083e83f)  
 [Table Properties &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/table-properties-visual-database-tools.md)  
 [Column Properties](column-properties-visual-database-tools.md)  
 [Add Columns to a Table](../../relational-databases/tables/add-columns-to-a-table-database-engine.md)  

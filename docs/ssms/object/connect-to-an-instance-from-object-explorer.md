@@ -1,7 +1,7 @@
 ---
 title: "Connect to a SQL Server or Azure SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/24/2017"
+ms.date: "08/25/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -19,7 +19,7 @@ manager: "craigg"
 
 To work with servers and databases, you must first connect to the server. You can connect to multiple servers at the same time.
 
-SSMS supports several types of connections. This article provides details for connecting to SQL Server and Azure SQL Server. For information on the other connection options, see the [See Also](#see-also) links at the bottom of this page.
+[SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md) supports several types of connections. This article provides details for connecting to SQL Server and Azure SQL Database. For information on the other connection options, see the [links](#see-also) at the bottom of this page.
   
 ## Connecting to a Server  
 
@@ -51,8 +51,8 @@ SSMS supports several types of connections. This article provides details for co
 
 ## See Also
 
-[SQL Server Management Studio](../sql-server-management-studio-ssms.md)  
-[Download SQL Server Management Studio](../download-sql-server-management-studio-ssms.md)
+[SQL Server Management Studio (SSMS)](../sql-server-management-studio-ssms.md)  
+[Download SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md)
 
 [Analysis Services](https://docs.microsoft.com/sql/analysis-services/instances/connect-to-analysis-services)  
 [Integration Services](https://docs.microsoft.com/sql/integration-services/sql-server-integration-services)  

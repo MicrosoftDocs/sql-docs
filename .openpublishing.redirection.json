@@ -2959,6 +2959,16 @@
             "source_path": "docs/integration-services/data-flow/transformations/unpivot-transformation-editor.md",
             "redirect_url": "/sql/integration-services/data-flow/tranformations/unpivot-transformation",
             "redirect_document_id": false
-          }
+          },
+	      {
+            "source_path": "docs/ssms/visual-database-tools/open-table-designer-visual-database-tools.md",
+            "redirect_url": "/sql/ssms/visual-db-tools/design-tables-visual-database-tools",
+            "redirect_document_id": false
+          },        
+		  {
+            "source_path": "docs/ssms/visual-database-tools/save-your-work-in-table-designer-visual-database-tools.md",
+            "redirect_url": "/sql/ssms/visual-db-tools/design-tables-visual-database-tools",
+            "redirect_document_id": false
+        }
     ]
 }

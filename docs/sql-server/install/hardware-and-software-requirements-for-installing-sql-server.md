@@ -2,8 +2,10 @@
 title: "Hardware and Software Requirements for Installing SQL Server 2016 | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "06/14/2017"
-ms.prod: "sql-server-2016"
+ms.date: "08/23/2017"
+ms.prod: 
+  - "sql-server-2016"
+  - "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -55,7 +57,7 @@ manager: "jhubbard"
 
 The topic lists the minimum hardware and software requirements to install and run [!INCLUDE[ssNoVer](../../includes/ssnoversion-md.md)] on the Windows operating system. 
 
-[!INCLUDE[sscurrent](../../includes/sssqlv14-md.md)] introduces support for [!INCLUDE[ssNoVer](../../includes/ssnoversion-md.md)] on Linux. For information, see [[!INCLUDE[sscurrent](../../includes/sssqlv14-md.md)] on Linux](../../linux/sql-server-linux-overview.md). 
+[!INCLUDE[sscurrent](../../includes/sssqlv14-md.md)] introduces support for [!INCLUDE[ssNoVer](../../includes/ssnoversion-md.md)] on Linux. For information, see [Hardware and Software Requirements for [!INCLUDE[ssNoVersion](../../includes/ssNoVersion_md.md)] on Linux](../../linux/sql-server-linux-setup.md#system). 
 
 > This topic applies to [!INCLUDE[ss2016](../../includes/sssql15-md.md)] and later. For content related to previous versions of SQL Server, see [Hardware and Software Requirements for Installing SQL Server 2014](https://msdn.microsoft.com/library/ms143506(v=sql.120).aspx). 
   

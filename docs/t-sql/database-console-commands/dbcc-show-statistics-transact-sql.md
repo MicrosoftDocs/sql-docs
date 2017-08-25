@@ -1,7 +1,7 @@
 ---
 title: "DBCC SHOW_STATISTICS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "7/17/2017"
+ms.date: "07/17/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -52,7 +52,7 @@ For more information, see [Statistics](../../relational-databases/statistics/sta
   
 ## Syntax  
   
-```sql
+```
 -- Syntax for SQL Server and Azure SQL Database  
   
 DBCC SHOW_STATISTICS ( table_or_indexed_view_name , target )   
@@ -61,9 +61,9 @@ DBCC SHOW_STATISTICS ( table_or_indexed_view_name , target )
     STAT_HEADER | DENSITY_VECTOR | HISTOGRAM | STATS_STREAM  
 ```  
   
-```sql
+```
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
+
 DBCC SHOW_STATISTICS ( table_name , target )   
     [ WITH {STAT_HEADER | DENSITY_VECTOR | HISTOGRAM } [ ,...n ] ]  
 [;]  
@@ -103,6 +103,7 @@ The following table describes the columns returned in the result set when STAT_H
 |String Index|Yes indicates the statistics object contains string summary statistics to improve the cardinality estimates for query predicates that use the LIKE operator; for example, `WHERE ProductName LIKE '%Bike'`. String summary statistics are stored separately from the histogram and are created on the first key column of the statistics object when it is of type **char**, **varchar**, **nchar**, **nvarchar**, **varchar(max)**, **nvarchar(max)**, **text**, or **ntext.**.|  
 |Filter Expression|Predicate for the subset of table rows included in the statistics object. NULL = non-filtered statistics. For more information about filtered predicates, see [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md). For more information about filtered statistics, see [Statistics](../../relational-databases/statistics/statistics.md).|  
 |Unfiltered Rows|Total number of rows in the table before applying the filter expression. If Filter Expression is NULL, Unfiltered Rows is equal to Rows.|  
+|Persisted Sample Percent|Persisted sample percentage used for statistic updates that do not explicitly specify a sampling percentage. If value is zero, then no persisted sample percentage is set for this statistic.<br /><br /> **Applies to:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4| 
   
 The following table describes the columns returned in the result set when DENSITY_VECTOR is specified.
   
@@ -177,7 +178,7 @@ DBCC SHOW_STATISTICS is not supported on external tables.
 ### A. Returning all statistics information  
 The following example displays all statistics information for the `AK_Address_rowguid` index of the `Person.Address` table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.
   
-```sql
+```t-sql
 DBCC SHOW_STATISTICS ("Person.Address", AK_Address_rowguid);  
 GO  
 ```  
@@ -185,7 +186,7 @@ GO
 ### B. Specifying the HISTOGRAM option  
 The following example limits the statistics information displayed for the `AK_Address_rowguid` index to the HISTOGRAM data.
   
-```sql
+```t-sql
 DBCC SHOW_STATISTICS ("Person.Address", AK_Address_rowguid) WITH HISTOGRAM;  
 GO  
 ```  
@@ -194,7 +195,7 @@ GO
 ### C. Display the contents of one statistics object  
  The following example displays the contents of the Customer_LastName statistics on the DimCustomer table.  
   
-```sql
+```t-sql
 -- Uses AdventureWorks  
 --First, create a statistics object  
 CREATE STATISTICS Customer_LastName   
@@ -211,7 +212,7 @@ The results show the header, the density vector, and part of the histogram.
 ### D. Specifying the HISTOGRAM option  
 This limits the statistics information displayed for Customer_LastName to the HISTOGRAM data.
   
-```sql
+```t-sql
 DBCC SHOW_STATISTICS ("dbo.DimCustomer",Customer_LastName) WITH HISTOGRAM;  
 GO  
 ```  
@@ -224,6 +225,6 @@ GO
 [sp_autostats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-autostats-transact-sql.md)  
 [sp_createstats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-createstats-transact-sql.md)  
 [STATS_DATE &#40;Transact-SQL&#41;](../../t-sql/functions/stats-date-transact-sql.md)  
-[UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)
-  
-  
+[UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)  
+[sys.dm_db_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)  
+[sys.dm_db_stats_histogram (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)   

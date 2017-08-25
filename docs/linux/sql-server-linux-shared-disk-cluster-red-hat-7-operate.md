@@ -1,6 +1,4 @@
 ---
-# required metadata
-
 title: Operate Red Hat Enterprise Linux shared cluster for SQL Server | Microsoft Docs
 description: Implement high availability by configuring Red Hat Enterprise Linux shared disk cluster for SQL Server.
 author: MikeRayMSFT 
@@ -11,20 +9,10 @@ ms.topic: article
 ms.prod: sql-linux 
 ms.technology: database-engine
 ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
-
-# optional metadata
-# keywords: ""
-# ROBOTS: ""
-# audience: ""
-# ms.devlang: ""
-# ms.reviewer: ""
-# ms.suite: ""
-# ms.tgt_pltfrm: ""
-# ms.custom: ""
-
 ---
-
 # Operate Red Hat Enterprise Linux shared disk cluster for SQL Server
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 This document describes how to do the following tasks for SQL Server on a shared disk failover cluster with Red Hat Enterprise Linux.
 

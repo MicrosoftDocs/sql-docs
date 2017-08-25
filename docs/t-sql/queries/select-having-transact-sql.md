@@ -1,7 +1,7 @@
 ---
 title: "HAVING (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/03/2017"
+ms.date: "08/09/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -41,7 +41,7 @@ manager: "jhubbard"
 ```  
   
 ## Arguments  
- <search_condition>  
+\<search_condition>
  Specifies the search condition for the group or the aggregate to meet.  
   
  The **text**, **image**, and **ntext** data types cannot be used in a HAVING clause.  

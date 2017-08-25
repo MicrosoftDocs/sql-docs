@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "assigning namespaces to extensions"
 ms.assetid: 82f4b71b-dd39-467d-8d8c-6771eb2b12de
 caps.latest.revision: 39
-author: "sabotta"
-ms.author: "carlasab"
+author: "guyinacube"
+ms.author: "asaxton"
 manager: "erikre"
 ---
 # Creating a Data Processing Extension Library

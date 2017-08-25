@@ -53,9 +53,6 @@ On the next page, **Choose a Data Source**, you pick Microsoft Excel as your dat
 
 ![Choose the Excel data source](../../integration-services/import-export-data/media/choose-the-excel-data-source.jpg)
 
-> [!NOTE]
-> Typically you specify Microsoft Excel 2016 as the version, and download the files for connecting to Excel 2016 and Access 2016. If you have a Microsoft Office 365 subscription, however, you can't install the Office 2016 runtime. You can only install the data providers for Excel 2016 and Access 2016 with a desktop version of Microsoft Office. So you simply specify the prior version of Excel, Excel 2013. If necessary, you download the files for connecting to Excel 2013 and Access 2013. This limitation of the Office 2016 runtime is mentioned in [this blog post](https://blogs.office.com/2015/12/16/access-2016-runtime-is-now-available-for-download/).
-
 For more info about connecting to Excel, see [Connect to an Excel Data Source](../../integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md). For more info about this page of the wizard, see [Choose a Data Source](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md).
 
 ## Step 4 - Pick SQL Server as your destination

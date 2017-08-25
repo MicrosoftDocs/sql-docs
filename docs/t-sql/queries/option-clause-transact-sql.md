@@ -172,7 +172,7 @@ OPTION ( FORCE ORDER )
 ;  
 ```  
   
-### H. Using EXERNALPUSHDOWN  
+### H. Using EXTERNALPUSHDOWN  
  The following example forces the pushdown of the WHERE clause to the MapReduce job on the external Hadoop table.  
   
 ```  

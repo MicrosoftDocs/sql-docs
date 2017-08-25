@@ -1,13 +1,12 @@
 ---
 title: "Retrieve numeric data with SQL_NUMERIC_STRUCT | Microsoft Docs" 
 description: "C/C++ using ODBC retrieves the SQL Server numeric data type by using SQL_NUMERIC_STRUCT, related to SQL_C_NUMERIC."
-services: "sql-database"
 documentationCenter: ""
 authors: "MightyPen"
 manager: "jhubbard"
 editor: ""
-
-ms.service: "sql-database"
+ms.prod: "sql-non-specified"
+ms.technology: "dbe-data-tier-apps"
 ms.devlang: "C++"
 ms.topic: "article"
 ms.custom: ""

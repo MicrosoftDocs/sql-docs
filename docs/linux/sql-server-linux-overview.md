@@ -1,32 +1,18 @@
 ---
-# required metadata
-
 title: Overview of SQL Server on Linux | Microsoft Docs
 description: This topic describes how SQL Server runs on Linux and provides information on how to learn more.
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 07/19/2017
+ms.date: 08/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
-
-# optional metadata
-
-# keywords: ""
-# ROBOTS: ""
-# audience: ""
-# ms.devlang: ""
-# ms.reviewer: ""
-# ms.suite: ""
-# ms.tgt_pltfrm: ""
-# ms.custom: ""
-
 ---
 # SQL Server on Linux
 
-SQL Server now runs on Linux! This latest release, SQL Server 2017 RC1, runs on Linux and is in
+SQL Server now runs on Linux! This latest release, SQL Server 2017 RC2, runs on Linux and is in
 many ways simply SQL Server. It’s the same SQL Server database engine, with many similar features and services regardless of your operating system.
 
 ## Install

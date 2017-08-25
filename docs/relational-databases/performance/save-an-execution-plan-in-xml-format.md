@@ -1,7 +1,7 @@
 ---
 title: "Save an Execution Plan in XML Format | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "08/21/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -30,25 +30,27 @@ manager: "jhubbard"
   
 1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] open a query editor and connect to [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-2.  Turn SHOWPLAN_XML on with the following statement:  
+2.  Turn [SHOWPLAN_XML](../../t-sql/statements/set-showplan-xml-transact-sql.md) on with the following statement:  
   
-    ```  
+    ```t-sql  
     SET SHOWPLAN_XML ON;  
     GO  
     ```  
   
-     To turn STATISTICS XML on, use the following statement:  
+     To turn [STATISTICS XML](../../t-sql/statements/set-statistics-xml-transact-sql.md) on, use the following statement:  
   
-    ```  
+    ```t-sql  
     SET STATISTICS XML ON;  
     GO  
     ```  
   
-     SHOWPLAN_XML generates compile-time query execution plan information for a query, but does not execute the query. STATISTICS XML generates run-time query execution plan information for a query, and executes the query.  
+     > [!NOTE] 
+     > SHOWPLAN_XML generates compile-time query execution plan information for a query, but does not execute the query. This is also known as the **estimated** execution plan. 
+     > STATISTICS XML generates runtime query execution plan information for a query, and executes the query. This is also known as the **actual** execution plan.  
   
 3.  Execute a query. Example:  
   
-    ```  
+    ```t-sql  
     USE AdventureWorks2012;  
     GO  
     SET SHOWPLAN_XML ON;  
@@ -69,7 +71,7 @@ manager: "jhubbard"
   
 ### To save an execution plan by using SQL Server Management Studio options  
   
-1.  Generate either an estimated execution plan or an actual execution plan by using [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. For more information, see [Display the Estimated Execution Plan](../../relational-databases/performance/display-the-estimated-execution-plan.md) or [Display an Actual Execution Plan](../../relational-databases/performance/display-an-actual-execution-plan.md).  
+1.  Generate either an estimated execution plan or an actual execution plan by using [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. For more information, see [Display the Estimated Execution Plan](../../relational-databases/performance/display-the-estimated-execution-plan.md) and [Display an Actual Execution Plan](../../relational-databases/performance/display-an-actual-execution-plan.md).  
   
 2.  In the **Execution plan** tab of the results pane, right-click the graphical execution plan, and choose **Save Execution Plan As**.  
   

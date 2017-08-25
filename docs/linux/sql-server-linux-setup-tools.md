@@ -1,6 +1,4 @@
 ---
-# required metadata
-
 title: Install SQL Server command-line tools on Linux | Microsoft Docs
 description: This topic describes how to install the SQL Server Tools on Linux.
 author: rothja 
@@ -11,20 +9,10 @@ ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
-
-# optional metadata
-
-# keywords: ""
-# ROBOTS: ""
-# audience: ""
-# ms.devlang: ""
-# ms.reviewer: ""
-# ms.suite: ""
-# ms.tgt_pltfrm: ""
-# ms.custom: ""
-
 ---
 # Install sqlcmd and bcp the SQL Server command-line tools on Linux
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 The following steps install the command-line tools, Microsoft ODBC drivers, and their dependencies. The **mssql-tools** package contains:
 
@@ -194,8 +182,9 @@ To install the tools for Mac El Capitan and Sierra, use the following commands:
 #brew untap microsoft/mssql-preview if you installed the preview version 
 brew tap microsoft/mssql-release https://github.com/Microsoft/homebrew-mssql-release
 brew update
-brew install mssql-tools
-#for silent install ACCEPT_EULA=y brew install mssql-tools
+brew install --no-sandbox mssql-tools
+#for silent install: 
+#ACCEPT_EULA=y brew install --no-sandbox mssql-tools
 ```
 
 ## <a id="docker"></a> Docker

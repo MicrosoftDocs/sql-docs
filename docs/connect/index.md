@@ -1,3 +1,3 @@
 ---
-redirect_url: /sql/connect/sql-server-drivers
+redirect_url: /sql/connect/homepage-sql-connection-programming
 ---

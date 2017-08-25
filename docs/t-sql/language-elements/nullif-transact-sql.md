@@ -1,7 +1,7 @@
 ---
 title: "NULLIF (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/06/2017"
+ms.date: "08/16/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -35,8 +35,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 NULLIF ( expression , expression )  
 ```  
   
@@ -52,20 +50,14 @@ NULLIF ( expression , expression )
 ## Remarks  
  NULLIF is equivalent to a searched CASE expression in which the two expressions are equal and the resulting expression is NULL.  
   
- We recommend that you not use time-dependent functions, such as RAND(), within a NULLIF function. This could cause the function to be evaluted twice and to return different results from the two invocations.  
+ We recommend that you not use time-dependent functions, such as RAND(), within a NULLIF function. This could cause the function to be evaluated twice and to return different results from the two invocations.  
   
 ## Examples  
   
 ### A. Returning budget amounts that have not changed  
  The following example creates a `budgets` table to show a department (`dept`) its current budget (`current_year`) and its previous budget (`previous_year`). For the current year, `NULL` is used for departments with budgets that have not changed from the previous year, and `0` is used for budgets that have not yet been determined. To find out the average of only those departments that receive a budget and to include the budget value from the previous year (use the `previous_year` value, where the `current_year` is `NULL`), combine the `NULLIF` and `COALESCE` functions.  
   
-```  
-USE AdventureWorks2012;  
-GO  
-IF OBJECT_ID ('dbo.budgets','U') IS NOT NULL  
-   DROP TABLE budgets;  
-GO  
-SET NOCOUNT ON;  
+```sql  
 CREATE TABLE dbo.budgets  
 (  
    dept            tinyint   IDENTITY,  
@@ -87,18 +79,17 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Average Budget`  
-  
- `--------------`  
-  
- `212500.000000`  
-  
- `(1 row(s) affected)`  
+ ```
+ Average Budget  
+ --------------  
+ 212500.000000  
+ (1 row(s) affected)
+ ```  
   
 ### B. Comparing NULLIF and CASE  
  To show the similarity between `NULLIF` and `CASE`, the following queries evaluate whether the values in the `MakeFlag` and `FinishedGoodsFlag` columns are the same. The first query uses `NULLIF`. The second query uses the `CASE` expression.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT ProductID, MakeFlag, FinishedGoodsFlag,   
@@ -116,13 +107,11 @@ FROM Production.Product
 WHERE ProductID < 10;  
 GO  
 ```  
-  
-## Examples: ssSDWfull and ssPDW  
-  
+
 ### C: Returning budget amounts that contain no data  
  The following example creates a `budgets` table, loads data, and uses `NULLIF` to return a null if neither `current_year` nor `previous_year` contains data.  
   
-```  
+```sql  
 CREATE TABLE budgets (  
    dept           tinyint,  
    current_year   decimal(10,2),  
@@ -142,19 +131,15 @@ FROM budgets;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `dept   LastBudget`  
-  
- `----   -----------`  
-  
- `1      100000.00`  
-  
- `2      null`  
-  
- `3      0.00`  
-  
- `4      null`  
-  
- `5      null`  
+ ```
+ dept   LastBudget  
+ ----   -----------  
+ 1      100000.00  
+ 2      null 
+ 3      0.00  
+ 4      null  
+ 5      null
+ ```  
   
 ## See Also  
  [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   

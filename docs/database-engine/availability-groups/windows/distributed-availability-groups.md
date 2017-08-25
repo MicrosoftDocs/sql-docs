@@ -1,7 +1,7 @@
 ---
 title: "Distributed availability groups (SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/20/2017"
+ms.date: "08/17/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -114,7 +114,7 @@ Because distributed availability groups support two completely different availab
 
 The ability to migrate is especially useful in scenarios where you're changing or upgrading the underlying OS while you keep the same SQL Server version. Although Windows Server 2016 does allow a rolling upgrade from Windows Server 2012 R2 on the same hardware, most users choose to deploy new hardware or virtual machines. 
 
-To complete the migration to the new configuration, at the end of the process, stop all data traffic to the original availability group, and change the distributed availability group to synchronous data movement. This action ensures that the primary replica of the second availability group is fully synchronized, so there would be no data loss. After you've verified the synchronization, fail over the distributed availability group to the second availability group in the [Fail over to a secondary availability group](https://msdn.microsoft.com/en-US/library/mt651673.aspx) section.
+To complete the migration to the new configuration, at the end of the process, stop all data traffic to the original availability group, and change the distributed availability group to synchronous data movement. This action ensures that the primary replica of the second availability group is fully synchronized, so there would be no data loss. After you've verified the synchronization, fail over the distributed availability group to the secondary availability group. For more information, see [Fail over to a secondary availability group](configure-distributed-availability-groups.md#failover).
 
 Post-migration, where the second availability group is now the new primary availability group, you might need to do either of the following:
 
@@ -169,6 +169,7 @@ As mentioned earlier, a distributed availability group is a SQL Server-only cons
 
 <!-- ![Two WSFC clusters with multiple availability groups through PowerShell Get-ClusterGroup command][7]  -->
 <a name="fig7"></a>
+
 ```
 PS C:\> Get-ClusterGroup -Cluster CLUSTER_A
 
@@ -206,10 +207,12 @@ As shown in the following figure, secondary replicas show nothing in SQL Server 
 
 The same concepts hold true when you use the dynamic management views. By using the following query, you can see all the availability groups (regular and distributed) and the nodes participating in them. This result is displayed only if you query the primary replica in one of the WSFC clusters that are participating in the distributed availability group. There is a new column in the dynamic management view `sys.availability_groups` named `is_distributed`, which is 1 when the availability group is a distributed availability group. To see this column:
 
-```
-SELECT ag.[name] as 'AG Name', ag.Is_Distributed, ar.replica_server_name as 'Replica Name'
+```sql
+SELECT ag.[name] as 'AG Name', 
+    ag.Is_Distributed, 
+    ar.replica_server_name as 'Replica Name'
 FROM 	sys.availability_groups ag, 
-sys.availability_replicas ar       
+    sys.availability_replicas ar       
 WHERE	ag.group_id = ar.group_id
 ```
 
@@ -219,7 +222,7 @@ An example of output from the second WSFC cluster that's participating in a dist
 
 In SQL Server Management Studio, any status shown on the Dashboard and other areas are for local synchronization only within that availability group. To display the health of a distributed availability group, query the dynamic management views. The following example query extends and refines the previous query:
 
-```
+```sql
 SELECT ag.[name] as 'AG Name', ag.is_distributed, ar.replica_server_name as 'Underlying AG', ars.role_desc as 'Role', ars.synchronization_health_desc as 'Sync Status'
 FROM 	sys.availability_groups ag, 
 sys.availability_replicas ar,       
@@ -239,7 +242,7 @@ To further extend the previous query, you can also see the underlying performanc
 SELECT ag.[name] as 'Distributed AG Name', ar.replica_server_name as 'Underlying AG', dbs.[name] as 'DB', ars.role_desc as 'Role', drs.synchronization_health_desc as 'Sync Status', drs.log_send_queue_size, drs.log_send_rate, drs.redo_queue_size, drs.redo_rate
 FROM 	sys.databases dbs,
 	sys.availability_groups ag,
-	sys.availablity_replicas ar,
+	sys.availability_replicas ar,
 	sys.dm_hadr_availability_replica_states ars,
 	sys.dm_hadr_database_replica_states drs
 WHERE	drs.group_id = ag.group_id

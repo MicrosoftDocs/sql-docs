@@ -193,7 +193,8 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |Delayed Durability|Yes|Yes|Yes|Yes|Yes|
 |Automatic Tuning|Yes|No|No|No|No|
 |Batch Mode Adaptive Joins|Yes|No|No|No|No|
-|Batch Memory Grant Feedback|Yes|No|No|No|No|
+|Batch Mode Memory Grant Feedback|Yes|No|No|No|No|
+|Interleaved Execution for Multi-Statement Table Valued Functions|Yes|Yes|Yes|Yes|Yes|
 |Bulk insert improvements|Yes|Yes|Yes|Yes|Yes|
 
 

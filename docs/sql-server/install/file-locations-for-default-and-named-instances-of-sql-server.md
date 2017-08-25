@@ -109,8 +109,8 @@ manager: "jhubbard"
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data files|\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSAS14.\<InstanceID>\ |Configurable|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server|\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSRS14.\<InstanceID>\Reporting Services\ReportServer\Bin\ |Configurable|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report manager|\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSRS14.\<InstanceID>\Reporting Services\ReportManager\ |Fixed path|  
-|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|\<Install Directory>\140\DTS\ |Configurable <sup>1</sup>|  
-|Client Components (except bcp.exe and sqlcmd.exe)|\<Install Directory>\140\Tools\ |Configurable <sup>1</sup>|  
+|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|\<Install Directory>\140\DTS\\ <sup>1</sup> |Configurable |  
+|Client Components (except bcp.exe and sqlcmd.exe)|\<Install Directory>\140\Tools\\ <sup>1</sup> |Configurable |  
 |Client Components (bcp.exe and sqlcmd.exe)|\<Install Directory>\Client SDK\ODBC\110\Tools\Binn|Fixed path|  
 |Replication and server-side COM objects|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]COM\\ <sup>2</sup> |Fixed path|  
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] component DLLs for the Data Transformation Run-time engine, the Data Transformation Pipeline engine, and the **dtexec** command prompt utility|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\Binn|Fixed path|  

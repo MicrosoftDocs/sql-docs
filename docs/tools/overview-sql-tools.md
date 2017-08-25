@@ -19,7 +19,7 @@ manager: "craigg"
 
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]  
 
-  ![](../includes/media/sql-database-tools.png) This article provides a list of available tools for working with SQL Server, Azure SQL Database, SQL Data Warehouse, and SQL Server-based applications. The first sections provide quick access to current tools for common tasks. Further down the page is a larger index of tools and command prompt utilities available for working with SQL.
+![](../includes/media/sql-database-tools.png) This article provides a list of available tools for working with SQL Server, Azure SQL Database, SQL Data Warehouse, and SQL Server-based applications. 
 
 If you want to jump right in and start creating tables, running queries, basically design and manage your database, then [**SQL Server Management Studio (SSMS)**](../ssms/download-sql-server-management-studio-ssms.md) is most likely your go-to tool. SSMS is free, and runs on Windows.
 

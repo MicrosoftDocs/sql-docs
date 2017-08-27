@@ -1,7 +1,7 @@
 ---
 title: "Differences in machine learning features between editions of SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/31/2017"
+ms.date: "08/22/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -46,7 +46,12 @@ manager: "jhubbard"
   
      Only Express Edition with Advanced Services includes the machine learning features. The performance limitations are similar to Standard Edition. Web edition is not intended for tasks such as creating machine learning models; however, you can use the PREDICT function to perform scoring using models trained elsewhere.
 
-For more information about other product features, see [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md) 
+-   **Azure SQL Database**
+  
+     Machine learning features such as R and Python scripting are currently not supported in Azure SQL Database.
+     
+     For more information, and announcements about when this feature will be available, see the SQL Server blog: [Python in SQL Server 2017: enhanced in-database machine learning](https://blogs.technet.microsoft.com/dataplatforminsider/2017/04/19/python-in-sql-server-2017-enhanced-in-database-machine-learning/)
+
 
 ### Languages supported in all editions
 
@@ -65,7 +70,7 @@ Performance of machine learning solutions in [!INCLUDE[ssNoVersion](../../includ
 
 Performance has not been assessed for Python solutions, as the feature is still under development, but some of the same benefits are expected to apply.
 
-Users can also expect to see considerable differences in performance and scalability for the same machine learning solution if run in Enterprise Edition vs. Standard Edition. Reasons include support for parallel processing, streaming, and increased threads available for machine learning.
+Users can also expect to see considerable differences in performance and scalability for the same machine learning solution if run in Enterprise Edition vs. Standard Edition. Reasons include support for parallel processing, increased threads available for machine learning, and streaming (or chunking), which allows the RevoScaleR functions to handle more data than can fit in memory. 
 
 However, performance even on identical hardware can be affected by many factors outside the R or Python code. These factors  include competing demands on server resources, the type of query plan that is created, schema changes, the need to update statistics or create a new query plan, fragmentation, and more. It is possible that a stored procedure containing R or Python code might run in seconds under one workload, but take minutes when there are other services running.  Therefore, we recommend that you monitor multiple aspects of server performance, including networking for remote compute contexts, when measuring machine learning performance.
 
@@ -87,6 +92,19 @@ Standard Edition also provides limited performance and scalability in comparison
 
 Express Edition is subject to the same limitations as Standard Edition.
 
+## Machine learning in Web Edition
+
+Web editior does not support runnning R or Python scripts. However, you can use the PREDICT function to perform [native scoring](../sql-native-scoring.md) on a model that has been trained on a different SQL Server or R Server instance and then saved in the required binary format.
+
 ## Next steps
 
-For more information, see [Editions and components of SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md) and [Editions and components of SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md)
+For more information, see:
+
++ [Editions and components of SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md)
++ [Editions and components of SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md)
+
+For more information about other features in SQL Server, see:
+
++ [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md) 
+
+For more information about Microsoft R features and how you can optimize your solution for laarger data sets, see the [Microsoft R Server](https://docs.microsoft.com/r-server/r/tutorial-large-data-tips) documentation.

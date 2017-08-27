@@ -1,7 +1,7 @@
 ---
 title: "Lesson 6: Operationalize the R model| Microsoft Docs"
 ms.custom: ""
-ms.date: "07/26/2016"
+ms.date: "08/23/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -82,9 +82,9 @@ Now let's see how batch scoring works.
   
     ```SQL
     SELECT TOP 10 a.passenger_count AS passenger_count,
-        a.trip_time_in_secs AS trip_time_in_secs,  
-        a.trip_distance AS trip_distance,  
-        a.dropoff_datetime AS dropoff_datetime,    
+        a.trip_time_in_secs AS trip_time_in_secs, 
+        a.trip_distance AS trip_distance, 
+        a.dropoff_datetime AS dropoff_datetime, 
         dbo.fnCalculateDistance(pickup_latitude, pickup_longitude, dropoff_latitude,dropoff_longitude) AS direct_distance
     FROM
     (

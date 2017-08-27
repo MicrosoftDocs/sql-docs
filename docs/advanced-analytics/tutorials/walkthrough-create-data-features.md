@@ -1,7 +1,7 @@
 ---
 title: "Create data features using R and SQL (walkthrough) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/15/2017"
+ms.date: "08/23/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -49,6 +49,10 @@ First, let's do it the way R users are accustomed to: get the data onto your lap
     ```R
     featureDataSource <- RxSqlServerData(sqlQuery = bigQuery,colClasses = c(pickup_longitude = "numeric", pickup_latitude = "numeric", dropoff_longitude = "numeric", dropoff_latitude = "numeric", passenger_count  = "numeric", trip_distance  = "numeric", trip_time_in_secs  = "numeric", direct_distance  = "numeric"), connectionString = connStr);
     ```
+
+    - [RxSqlServerData](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqlserverdata) can take either a query consisting of a valid SELECT query, provided as the argument to the _sqlQuery_ parameter, or the name of a table object, provided as the _table_ parameter.
+    
+    - If you want to sample data from a table, you must use the _sqlQuery_ parameter, define sampling parameters using the T-SQL TABLESAMPLE clause, and set the _rowBuffering_ argument to FALSE.
 
 3. Run the following code to create the custom R function. ComputeDist takes in two pairs of latitude and longitude values, and calculates the linear distance between them, returning the distance in miles.
 

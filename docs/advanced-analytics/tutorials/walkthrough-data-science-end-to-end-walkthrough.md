@@ -1,7 +1,8 @@
 ---
 title: "End-to-end data science walkthrough for R and SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.prod: "sql-server-2016"
+ms.date: "08/22/2017"
+ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -33,17 +34,17 @@ Because the walkthrough is designed to introduce R developers to [!INCLUDE[rsql_
 
 ## Overview
 
-The estimated times do not include setup. For more information, see [Prerequisites for the walkthrough](/walkthrough-prerequisites-for-data-science-walkthroughs.md).
+The estimated times do not include setup. For more information, see [Prerequisites for the walkthrough](../tutorials/walkthrough-prerequisites-for-data-science-walkthroughs.md).
 
 |Topic list|Estimated time|
 |-|------------------------------|
-|[Prepare the R walkthrough data](/walkthrough-prepare-the-data.md)<br /><br />Obtain the data used for building a model. Download a public dataset and load it into a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.|30 minutes|
-|[Explore the data using SQL](/walkthrough-view-and-explore-the-data.md)<br /><br />Understand your data  using SQL tools and summaries.|10 minutes|
-|[Summarize the data using R](/walkthrough-view-and-summarize-the-data.md)<br /><br />Use R to explore the data and generate summaries.|10 minutes|
-|[Creates plots using R in SQL Server](/walkthrough-create-graphs-and-plots-using-r.md)<br /><br />Create plots in local and remote compute contexts by mixing R and SQL.|10 minutes|
-|[Create data features using R and T-SQL)](/walkthrough-create-data-features.md)<br /><br />Perform feature engineering using custom functions in R and [!INCLUDE[tsql](../../includes/tsql-md.md)]. Compare the performance of R and T-SQL for featurization tasks. |10 minutes|
-|[Build an R model and save it in SQL Server](./walkthrough-build-and-save-the-model.md)<br /><br />Train and tune a predictive model. Assess model performance. This walkthrough creates a classification model. Plot the model's accuracy using R.|15 minutes|
-|[Deploy the R model using SQL Server](/walkthrough-deploy-and-use-the-model.md)<br /><br />Deploy the model in production by saving the model to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database. Call the model from a stored procedure to generate predictions.|10 minutes|
+|[Prepare the R walkthrough data](../tutorials/walkthrough-prepare-the-data.md) <br /><br />Obtain the data used for building a model. Download a public dataset and load it into a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.|30 minutes|
+|[Explore the data using SQL](../tutorials/walkthrough-view-and-explore-the-data.md) <br /><br />Understand your data using SQL tools and summaries.|10 minutes|
+|[Summarize the data using R](../tutorials/walkthrough-view-and-summarize-data-using-r.md) <br /><br />Use R to explore the data and generate summaries.|10 minutes|
+|[Create plots using R in SQL Server](../tutorials/walkthrough-create-graphs-and-plots-using-r.md) <br /><br />Create plots in local and remote compute contexts by mixing R and SQL.|10 minutes|
+|[Create data features using R and T-SQL)](../tutorials/walkthrough-create-data-features.md) <br /><br />Perform feature engineering using custom functions in R and [!INCLUDE[tsql](../../includes/tsql-md.md)]. Compare the performance of R and T-SQL for featurization tasks. |10 minutes|
+|[Build an R model and save it in SQL Server](../tutorials/walkthrough-build-and-save-the-model.md) <br /><br />Train and tune a predictive model. Assess model performance. This walkthrough creates a classification model. Plot the model's accuracy using R.|15 minutes|
+|[Deploy the R model using SQL Server](../tutorials/walkthrough-deploy-and-use-the-model.md) <br /><br />Deploy the model in production by saving the model to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database. Call the model from a stored procedure to generate predictions.|10 minutes|
 
 ### Intended audience
 
@@ -59,9 +60,8 @@ This walkthrough is intended for R or SQL developers. It provides an introductio
 + To run R commands, you'll need a separate computer that has an R IDE and the Microsoft R Open libraries. It can be a laptop or other networked computer, but it must be able to connect to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.
 + If you need to put client and server on the same computer, be sure to install a separate set of Microsoft R libraries for use in sending R script from a "remote" client. Do not use the R libraries that are installed for use by the SQL Server instance for this purpose.
 
-For details about how to set up these server and client environments, see [Prerequisites for R and SQL Server data science walkthrough](/walkthrough-prerequisites-for-data-science-walkthroughs.md).
-
+For details about how to set up these server and client environments, see [Prerequisites for R and SQL Server data science walkthrough](../tutorials/walkthrough-prerequisites-for-data-science-walkthroughs.md).
 
 ## Next lesson
 
-[Prepare the R walkthrough data](/walkthrough-prepare-the-data.md)
+[Prepare the R walkthrough data](../tutorials/walkthrough-prepare-the-data.md)

@@ -2,7 +2,7 @@
 title: "Prerequisites for the data science walkthrough for SQL Server and R | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "07/05/2017"
+ms.date: "08/23/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -28,7 +28,7 @@ You can run the walkthrough on a computer that has both [!INCLUDE[ssNoVersion](.
 
 ## Install machine learning for SQL Server
 
-You must have access to an instance of SQL Server with either of the following features installed:
+You must have access to an instance of SQL Server with support for R installed, using either of the following:
 
 + Machine Learning Services (In-Database) for SQL Server 2017
 + SQL Server 2016 R Services
@@ -61,6 +61,16 @@ To connect to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-m
 - Ability to run R script (`GRANT EXECUTE ANY EXTERNAL SCRIPT to <user>`)
 
 For this walkthrough, we have used the SQL login **RTestUser**. We generally recommend that you use Windows integrated authentication, but using the SQL login is simpler for some demo purposes.
+
+## Change list
+
++ This sample was originally developed using SQL Server 2016 R Services.
+
++ The sample has been tested and updated using a pre-release build of SQL Server 2017 Machine Learning Services (RC1 and RC2). Some minor changes were made to account for updates to Microsoft R functions in late 2016. In general, almost all steps should run without modification between 2016 and 2017.
+
++ In general, SQL Server tutorials reflect the latest released version of SQL Server, with some delay to be expected for verification and update.
+
++ Note that Microsoft R components are released on a different, and more rapid, schedule than are updates to SQL Server. For R and Python, we will try to stay abreast of improvements in Microsoft R, but updates might be delayed until the new machine learning components are published with the corresponding SQL Server service release.
 
 ## Next lesson
 

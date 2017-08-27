@@ -91,7 +91,7 @@ Specifies the default collation for the metadata catalog. *DATABASE_DEFAULT* spe
  *MAXSIZE*  
  Specifies the maximum size of the database. MAXSIZE must be valid for the specified EDITION (service tier) Following are the supported MAXSIZE values and defaults (D) for the service tiers.  
   
-|**MAXSIZE**|**Basic**|**Standard**|**Premium**| **PremiumRS** 
+|**MAXSIZE**|**Basic**|**Standard**|**Premium**| **Premium RS** 
 |-----------------|---------------|------------------|-----------------|-----------------|  
 |100 MB|√|√|√|√|  
 |500 MB|√|√|√|√|  

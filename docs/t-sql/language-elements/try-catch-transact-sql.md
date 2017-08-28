@@ -89,17 +89,17 @@ END CATCH
 ## Retrieving Error Information  
  In the scope of a CATCH block, the following system functions can be used to obtain information about the error that caused the CATCH block to be executed:  
   
--   [ERROR_NUMBER()](../../t-sql/functions/error-number-transact-sql) returns the number of the error.  
+-   [ERROR_NUMBER()](../../t-sql/functions/error-number-transact-sql.md) returns the number of the error.  
   
--   [ERROR_SEVERITY()](../../t-sql/functions/error-severity-transact-sql) returns the severity.  
+-   [ERROR_SEVERITY()](../../t-sql/functions/error-severity-transact-sql.md) returns the severity.  
   
--   [ERROR_STATE()](../../t-sql/functions/error-state-transact-sql) returns the error state number.  
+-   [ERROR_STATE()](../../t-sql/functions/error-state-transact-sql.md) returns the error state number.  
   
--   [ERROR_PROCEDURE()](../../t-sql/functions/error-procedure-transact-sql) returns the name of the stored procedure or trigger where the error occurred.  
+-   [ERROR_PROCEDURE()](../../t-sql/functions/error-procedure-transact-sql.md) returns the name of the stored procedure or trigger where the error occurred.  
   
--   [ERROR_LINE()](../../t-sql/functions/error-line-transact-sql) returns the line number inside the routine that caused the error.  
+-   [ERROR_LINE()](../../t-sql/functions/error-line-transact-sql.md) returns the line number inside the routine that caused the error.  
   
--   [ERROR_MESSAGE()](../../t-sql/functions/error-message-transact-sql) returns the complete text of the error message. The text includes the values supplied for any substitutable parameters, such as lengths, object names, or times.  
+-   [ERROR_MESSAGE()](../../t-sql/functions/error-message-transact-sql.md) returns the complete text of the error message. The text includes the values supplied for any substitutable parameters, such as lengths, object names, or times.  
   
  These functions return NULL if they are called outside the scope of the CATCH block. Error information can be retrieved by using these functions from anywhere within the scope of the CATCH block. For example, the following script shows a stored procedure that contains error-handling functions. In the `CATCH` block of a `TRY…CATCH` construct, the stored procedure is called and information about the error is returned.  
   

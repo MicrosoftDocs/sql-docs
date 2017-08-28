@@ -24,11 +24,9 @@ manager: "jhubbard"
 
 This article is part of a tutorial for SQL developers on how to use R in SQL Server.
 
-In this step, you'll learn to *operationalize* the model using a stored procedure. This stored procedure can be called directly by other applications, to make predictions on new observations.
+In this step, you learn to *operationalize* the model using a stored procedure. This stored procedure can be called directly by other applications, to make predictions on new observations. The walkthrough demonstrates two ways to perform scoring using an R model in a stored procedure:
 
-In this step, you'll learn two methods for calling an R model from a stored procedure:
-
-- **Batch scoring mode**: Use a SELECT query to provide multiple rows of data. The stored procedure returns a table of observations corresponding to the input cases.
+- **Batch scoring mode**: Use a SELECT query as an input to the stored procedure. The stored procedure returns a table of observations corresponding to the input cases.
 
 - **Individual scoring mode**: Pass a set of individual parameter values as input.  The stored procedure returns a single row or value.
 
@@ -110,7 +108,7 @@ Now let's see how batch scoring works.
     1  214 0.7 2013-06-26 13:28:10.000   0.6970098661
     ```
 
-    You'll use this query as input to the stored procedure, _PredictTipBatchMode_, which was provided as part of the download.
+    This query can be used as input to the stored procedure, _PredictTipBatchMode_, provided as part of the download.
 
 2. Take a minute to review the code of the stored procedure _PredictTipBatchMode_ in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].
 

@@ -19,9 +19,9 @@ manager: "jhubbard"
 ---
 # Using the MicrosoftML package with SQL Server
 
-The [**MicrosoftML**](https://msdn.microsoft.com/microsoft-r/microsoftml-introduction) package that is provided with Microsoft R Server and SQL Server 2017 includes multiple machine learning algorithms. These APIs were developed by Microsoft for internal machine learning applications, and have been refined over the years to support big data and high performance, with multicore processing and fast data streaming. MicrosoftML also includes numerous transformations for text processing and featurization.
+The [**MicrosoftML**](https://msdn.microsoft.com/microsoft-r/microsoftml-introduction) package that is provided with Microsoft R Server and SQL Server 2017 includes multiple machine learning algorithms. These APIs were developed by Microsoft for internal machine learning applications, and have been refined over the years to support high performance on big data, using multicore processing and fast data streaming. MicrosoftML also includes numerous transformations for text and image processing.
 
-In SQL Server 2017 CTP 2.0, support was added for the Python language. Python functions equivalent to those in the MicrosoftML package for R have been included in this release. Because Python conventions prefer lower case, the corresponding package name for Python is **microsoftml**.
+In SQL Server 2017 CTP 2.0, support was added for the Python language. The **microsoftml** package for Python contains functions equivalent to those in the MicrosoftML package for R. 
 
 + **MicrosoftML for R**
 
@@ -35,7 +35,7 @@ In SQL Server 2017 CTP 2.0, support was added for the Python language. Python fu
 
 ## What's in MicrosoftML
 
-MicrosoftML contains a variety of machine learnign algorithms and transformations that ahve been highly optimized for performance.
+MicrosoftML contains a variety of machine learning algorithms and transformations that have been optimized for performance.
 
 ### Machine learning algorithms
 
@@ -69,13 +69,13 @@ For more information, see [MicrosoftML functions](https://msdn.microsoft.com/mic
 
 This section describes how to locate and load the package in your R and Python code.
 
-+ The MicrosoftML package for R is installed by default with Microsoft R Server 9.1.0 and in SQL Server 2017. 
++ The MicrosoftML package for R is installed by default with Microsoft R Server 9.1.0 and in SQL Server 2017.
 
-    It is also available for use with SQL Server 2016 if you upgrade the R components using Microsoft R Server installer as described here: [Upgrade an instance of SQL Server using binding](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
+    It is also available for use with SQL Server 2016, if you upgrade the R components for the instance, by using the Microsoft R Server installer as described here: [Upgrade an instance of SQL Server using binding](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
 
-+ The microsoftml package for Python is installed by default in SQL Server 2017 (requires RC2 or later)
++ The **microsoftml** package for Python is installed by default with SQL Server 2017 
 
-   An early version was released with RC1 but the library has undergone considerable revision. We strongly recommend that you get the latest release candidate.
+   To use this package, we recommend that you upgrade to Release Candidate 2 or later. An early version was released with RC1 but the library has undergone considerable revision, including changes to function names. 
 
 However, for both R and Python, the package is not loaded by default; thus, you must explicitly load the package as part of your code to use its functions.
 

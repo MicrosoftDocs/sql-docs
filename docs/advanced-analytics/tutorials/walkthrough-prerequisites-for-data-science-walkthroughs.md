@@ -64,13 +64,9 @@ For this walkthrough, we have used the SQL login **RTestUser**. We generally rec
 
 ## Change list
 
-+ This sample was originally developed using SQL Server 2016 R Services.
++ This sample was originally developed using SQL Server 2016 R Services. However, breaking changes were introduced in the Microsoft R components for 2016 SP1. Specifically, the _varsToDrop_ and _varsToKeep_ parameters were no longer supported for SQL Server data sources. Therefre, if you downloaded a version of the tutorial prior to SP1, it will no longer work with post-SP1 builds.
 
-+ The sample has been tested and updated using a pre-release build of SQL Server 2017 Machine Learning Services (RC1 and RC2). Some minor changes were made to account for updates to Microsoft R functions in late 2016. In general, almost all steps should run without modification between 2016 and 2017.
-
-+ In general, SQL Server tutorials reflect the latest released version of SQL Server, with some delay to be expected for verification and update.
-
-+ Note that Microsoft R components are released on a different, and more rapid, schedule than are updates to SQL Server. For R and Python, we will try to stay abreast of improvements in Microsoft R, but updates might be delayed until the new machine learning components are published with the corresponding SQL Server service release.
++ The current version of the sample has been tested using a pre-release build of SQL Server 2017 Machine Learning Services (RC1 and RC2). In general, almost all steps should run without modification between 2016 SP1 and 2017.
 
 ## Next lesson
 

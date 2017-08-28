@@ -94,7 +94,7 @@ Express Edition is subject to the same limitations as Standard Edition.
 
 ## Machine learning in Web Edition
 
-Web editior does not support runnning R or Python scripts. However, you can use the PREDICT function to perform [native scoring](../sql-native-scoring.md) on a model that has been trained on a different SQL Server or R Server instance and then saved in the required binary format.
+Web edition does not support execution of R or Python scripts. However, you can use the PREDICT function to perform [native scoring](../sql-native-scoring.md) on a model that has been trained on a different SQL Server or R Server instance and then saved in the required binary format.
 
 ## Next steps
 
@@ -107,4 +107,4 @@ For more information about other features in SQL Server, see:
 
 + [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md) 
 
-For more information about Microsoft R features and how you can optimize your solution for laarger data sets, see the [Microsoft R Server](https://docs.microsoft.com/r-server/r/tutorial-large-data-tips) documentation.
+For more information about Microsoft R features and how you can optimize your solution for large data sets, see the [Microsoft R Server](https://docs.microsoft.com/r-server/r/tutorial-large-data-tips) documentation.

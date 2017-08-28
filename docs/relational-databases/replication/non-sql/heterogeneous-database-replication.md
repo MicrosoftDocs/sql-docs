@@ -28,6 +28,7 @@ manager: "jhubbard"
 
 -   Publishing data to and from Oracle has the following restrictions:  
   | |2016 or earlier |2017 or later |
+  |-------|-------|--------|
   |Replication from Oracle |Only support Oracle 10g or earlier |Only support Oracle 10g or earlier |
   |Replication to Oracle |Up to Oracle 12c |Not supported |
 

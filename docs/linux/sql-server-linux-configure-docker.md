@@ -252,7 +252,7 @@ This updates the SQL Server image for any new containers you create, but it does
 
 ## Run a specific SQL Server container image
 
-There are scenarios where you might not want to use the latest SQL Server container image. For example, you might want to rollback or downgrade to a previous release for troubleshooting or testing. To run a specific container image version, use the following steps:
+There are scenarios where you might not want to use the latest SQL Server container image. To run a specific SQL Server container image, use the following steps:
 
 1. Identify the Docker **tag** for the release you want to use. To view the available tags, see [the mssql-server-linux Docker hub page](https://hub.docker.com/r/microsoft/mssql-server-linux/tags/).
 
@@ -262,7 +262,7 @@ There are scenarios where you might not want to use the latest SQL Server contai
    docker pull microsoft/mssql-server-linux:<image_tag>
    ```
 
-1. To run a new container with that image, specify the tag name in the `docker run` command. In the following command, replace `<image_tag>` with thee version you want to run.
+1. To run a new container with that image, specify the tag name in the `docker run` command. In the following command, replace `<image_tag>` with the version you want to run.
 
    ```bash
    docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1401:1433 -d microsoft/mssql-server-linux:<image_tag>
@@ -272,10 +272,10 @@ There are scenarios where you might not want to use the latest SQL Server contai
    docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1401:1433 -d microsoft/mssql-server-linux:<image_tag>
    ```
 
-1. If you want to downgrade a running container, you must be using a persistence technique. Follow the same steps outlined in the [upgrade section](#upgrade), but use the tag name when you run the new container.
+These steps can also be used to downgrade an existing container. For example, you might want to rollback or downgrade a running container for troubleshooting or testing. To downgrade a running container, you must be using a persistence technique for the data folder. Follow the same steps outlined in the [upgrade section](#upgrade), but specify the tag name of the older version when you run the new container.
 
-   > [!IMPORTANT]
-   > Upgrade and downgrade are only supported between RC1 and RC2 at this time.
+> [!IMPORTANT]
+> Upgrade and downgrade are only supported between RC1 and RC2 at this time.
 
 ## <a id="troubleshooting"></a> Troubleshooting
 

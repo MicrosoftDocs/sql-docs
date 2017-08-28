@@ -4,7 +4,7 @@ description: Explore different ways of using and interacting with SQL Server 201
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 07/17/2017
+ms.date: 08/28/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -221,7 +221,7 @@ docker cp /tmp/mydb.mdf d6b75213ef80:/var/opt/mssql/data
 docker cp C:\Temp\mydb.mdf d6b75213ef80:/var/opt/mssql/data
 ```
 
-## Upgrade SQL Server in containers
+## <a id="upgrade"></a> Upgrade SQL Server in containers
 
 To upgrade the container image with Docker, pull the latest version from the registry. Use the `docker pull` command:
 
@@ -231,15 +231,51 @@ docker pull microsoft/mssql-server-linux:latest
 
 This updates the SQL Server image for any new containers you create, but it does not update SQL Server in any running containers. To do this, you must create a new container with the latest SQL Server container image and migrate your data to that new container.
 
-1. First, make sure you are using one of the [data persistence techniques](#persist) for your existing SQL Server container.
+1. First, get the latest SQL Server container image.
 
-2. Stop the SQL Server container with the `docker stop` command.
+   ```bash
+   docker pull microsoft/mssql-server-linux:latest
+   ```
 
-3. Create a new SQL Server container with `docker run` and specify either a mapped host directory or a data volume container. The new container now uses a new version of SQL Server with your existing SQL Server data.
+1. Make sure you are using one of the [data persistence techniques](#persist) for your existing SQL Server container. This enables you to start a new container with the same data.
 
-4. Verify your databases and data in the new container.
+1. Stop the SQL Server container with the `docker stop` command.
 
-5. Optionally, remove the old container with `docker rm`.
+1. Create a new SQL Server container with `docker run` and specify either a mapped host directory or a data volume container. The new container now uses a new version of SQL Server with your existing SQL Server data.
+
+   > [!IMPORTANT]
+   > Upgrade is only supported between RC1 and RC2 at this time.
+
+1. Verify your databases and data in the new container.
+
+1. Optionally, remove the old container with `docker rm`.
+
+## Run a specific SQL Server container image
+
+There are scenarios where you might not want to use the latest SQL Server container image. To run a specific SQL Server container image, use the following steps:
+
+1. Identify the Docker **tag** for the release you want to use. To view the available tags, see [the mssql-server-linux Docker hub page](https://hub.docker.com/r/microsoft/mssql-server-linux/tags/).
+
+1. Pull the SQL Server container image with the tag. For example, to pull the RC1 image, replace `<image_tag>` in the following command with `rc1`.
+
+   ```bash
+   docker pull microsoft/mssql-server-linux:<image_tag>
+   ```
+
+1. To run a new container with that image, specify the tag name in the `docker run` command. In the following command, replace `<image_tag>` with the version you want to run.
+
+   ```bash
+   docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1401:1433 -d microsoft/mssql-server-linux:<image_tag>
+   ```
+
+   ```PowerShell
+   docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1401:1433 -d microsoft/mssql-server-linux:<image_tag>
+   ```
+
+These steps can also be used to downgrade an existing container. For example, you might want to rollback or downgrade a running container for troubleshooting or testing. To downgrade a running container, you must be using a persistence technique for the data folder. Follow the same steps outlined in the [upgrade section](#upgrade), but specify the tag name of the older version when you run the new container.
+
+> [!IMPORTANT]
+> Upgrade and downgrade are only supported between RC1 and RC2 at this time.
 
 ## <a id="troubleshooting"></a> Troubleshooting
 

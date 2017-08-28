@@ -4,7 +4,7 @@ description: This quick start tutorial shows how to use Docker to run the SQL Se
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 07/17/2017
+ms.date: 08/28/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -60,6 +60,9 @@ The following steps increase the memory for Docker for Windows to 4 GB.
 
     > [!TIP]
     > For Linux, depending on your system and user configuration, you might need to preface each `docker` command with `sudo`.
+
+    > [!NOTE]
+    > The command above pulls the latest SQL Server container image. If you want to pull a specific image, you add a colon and the tag name (for example, `microsoft/mssql-server-linux:rc1`). To see all available images, see [the mssql-server-linux Docker hub page](https://hub.docker.com/r/microsoft/mssql-server-linux/tags/).
 
 1. To run the container image with Docker, you can use the following command from a bash shell (Linux/macOS):
 
@@ -253,6 +256,6 @@ Other common tools to connect to SQL Server include:
 
 ## Next steps
 
-To explore other scenarios, such as running multiple containers, data persistence, and troublehshooting, see [Configure SQL Server 2017 container images on Docker](sql-server-linux-configure-docker.md).
+To explore other scenarios, such as running multiple containers, data persistence, and troubleshooting, see [Configure SQL Server 2017 container images on Docker](sql-server-linux-configure-docker.md).
 
 Also, check out the [mssql-docker GitHub repository](https://github.com/Microsoft/mssql-docker) for resources, feedback, and known issues.

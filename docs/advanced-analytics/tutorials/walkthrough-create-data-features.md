@@ -1,7 +1,7 @@
 ---
 title: "Create data features using R and SQL (walkthrough) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/15/2017"
+ms.date: "08/23/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -21,7 +21,7 @@ manager: "jhubbard"
 ---
 # Create data features using R and SQL (walkthrough)
 
-Data engineering is an important part of machine learning. Data often needs to be transformed before you can use it for predictive modeling. If the data does not have the features you need, you can engineer them from existing values.
+Data engineering is an important part of machine learning. Data often requires transformation before you can use it for predictive modeling. If the data does not have the features you need, you can engineer them from existing values.
 
 For this modeling task, rather than using the raw latitude and longitude values of the pickup and drop-off location, you'd like to have the distance in miles between the two locations. To create this feature, you compute the direct linear distance between two points, by using the [haversine formula](https://en.wikipedia.org/wiki/Haversine_formula).
 
@@ -49,6 +49,10 @@ First, let's do it the way R users are accustomed to: get the data onto your lap
     ```R
     featureDataSource <- RxSqlServerData(sqlQuery = bigQuery,colClasses = c(pickup_longitude = "numeric", pickup_latitude = "numeric", dropoff_longitude = "numeric", dropoff_latitude = "numeric", passenger_count  = "numeric", trip_distance  = "numeric", trip_time_in_secs  = "numeric", direct_distance  = "numeric"), connectionString = connStr);
     ```
+
+    - [RxSqlServerData](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqlserverdata) can take either a query consisting of a valid SELECT query, provided as the argument to the _sqlQuery_ parameter, or the name of a table object, provided as the _table_ parameter.
+    
+    - If you want to sample data from a table, you must use the _sqlQuery_ parameter, define sampling parameters using the T-SQL TABLESAMPLE clause, and set the _rowBuffering_ argument to FALSE.
 
 3. Run the following code to create the custom R function. ComputeDist takes in two pairs of latitude and longitude values, and calculates the linear distance between them, returning the distance in miles.
 
@@ -103,9 +107,9 @@ First, let's do it the way R users are accustomed to: get the data onto your lap
     
     However, a couple of points worth noting regarding rxDataStep: 
     
-    In other data sources, you can use the arguments *varsToKeep* and *varsToDrop*, but these are not supported for SQL Server data sources. Therefore, in this example, we've used the _transforms_ argument to specify both the pass-through columns and the transformed columns. Another restriction tot be aware of is that when running in a SQL Server compute context, the _inData_ argument can only take a SQL Server data source.
+    In other data sources, you can use the arguments *varsToKeep* and *varsToDrop*, but these are not supported for SQL Server data sources. Therefore, in this example, we've used the _transforms_ argument to specify both the pass-through columns and the transformed columns. Also, when running in a SQL Server compute context, the _inData_ argument can only take a SQL Server data source.
 
-    The above code can also produce a warning message when run on larger data sets. When the number of rows times the number of columns being created exceeds a set value (the default is 3,000,000), rxDataStep returns a warning, and the number of rows in the returned data frame will be truncated. To remove the warning, you can modify the maxRowsByCols argument in the rxDataStep function. However, if  maxRowsByCols is set to be too large, you may experience problems from loading a huge data frame into memory.
+    The preceding code can also produce a warning message when run on larger data sets. When the number of rows times the number of columns being created exceeds a set value (the default is 3,000,000), rxDataStep returns a warning, and the number of rows in the returned data frame will be truncated. To remove the warning, you can modify the _maxRowsByCols_ argument in the rxDataStep function. However, if  _maxRowsByCols_ is too large, you might experience problems when loading the data frame into memory.
 
 7. Optionally, you can call [rxGetVarInfo](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxgetvarinfo) to inspect the schema of the transformed data source.
 
@@ -115,7 +119,7 @@ First, let's do it the way R users are accustomed to: get the data onto your lap
 
 ## Featurization using Transact-SQL
 
-Now you'll create a custom SQL function, *ComputeDist*, to accomplish the same task we set out to do using the custom R function.
+Now, create a custom SQL function, *ComputeDist*, to accomplish the same task as the custom R function.
 
 1. Define a new custom SQL function, named *fnCalculateDistance*. The code for this user-defined SQL function is provided as part of the PowerShell script you ran to create and configure the database.  The function should already exist in your database.
 
@@ -152,7 +156,7 @@ Now you'll create a custom SQL function, *ComputeDist*, to accomplish the same t
     pickup_latitude, pickup_longitude,  dropoff_latitude, dropoff_longitude
     FROM nyctaxi_sample
     ```
-3. Having defined this function, it would be very easy to create the features you want entirely in SQL and insert the values directly into a new table:
+3. Having defined this function, it would be easy to create the features you want by using SQL and then insert the values directly into a new table:
 
     ```
     SELECT tipped, fare_amount, passenger_count,trip_time_in_secs,trip_distance, pickup_datetime, dropoff_datetime,
@@ -174,7 +178,7 @@ Now you'll create a custom SQL function, *ComputeDist*, to accomplish the same t
     ```
   
     > [!TIP]
-    > This query has been modified to get a smaller sample of data, to make this walkthrough faster. You can remove the tablesample clause if you want to get all the data.
+    > This query has been modified to get a smaller sample of data, to make this walkthrough faster. You can remove the TABLESAMPLE clause if you want to get all the data; however, depending on your environment, it might not be possible to load the full datset into R, resulting in an error.
   
 5. Use the following lines of code to call the [!INCLUDE[tsql](../../includes/tsql-md.md)] function from your R environment and apply it to the data defined in *featureEngineeringQuery*.
   
@@ -232,7 +236,7 @@ You can try using this with the SQL custom function example to see how long the 
 Your times might vary significantly, depending on your network speed, and your hardware configuration. In the configurations we tested, the [!INCLUDE[tsql](../../includes/tsql-md.md)] function approach was faster than using a custom R function. Therefore, we've use the [!INCLUDE[tsql](../../includes/tsql-md.md)] function for these calculations in subsequent steps.
 
 > [!TIP]
-> Very often, feature engineering using [!INCLUDE[tsql](../../includes/tsql-md.md)] will be faster than R. For example, T-SQL includes very fast windowing and ranking functions that can be applied to common data science calculations such as rolling moving averages and *n*tiles. Choose the most efficient method based on your data and task.
+> Very often, feature engineering using [!INCLUDE[tsql](../../includes/tsql-md.md)] will be faster than R. For example, T-SQL includes fast windowing and ranking functions that can be applied to common data science calculations such as rolling moving averages and *n*-tiles. Choose the most efficient method based on your data and task.
 
 ## Next lesson
 

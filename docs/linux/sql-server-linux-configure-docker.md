@@ -250,7 +250,7 @@ This updates the SQL Server image for any new containers you create, but it does
 
 1. Optionally, remove the old container with `docker rm`.
 
-## Use a specific SQL Server container image
+## Run a specific SQL Server container image
 
 There are scenarios where you might not want to use the latest SQL Server container image. For example, you might want to rollback or downgrade to a previous release for troubleshooting or testing. To run a specific container image version, use the following steps:
 

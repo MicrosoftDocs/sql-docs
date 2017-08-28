@@ -1,6 +1,4 @@
 ---
-# required metadata
-
 title: Bulk copy data to SQL Server on Linux | Microsoft Docs
 description: 
 author: sanagama 
@@ -11,19 +9,10 @@ ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 7b93d0d7-7946-4b78-b33a-57d6307cdfa9
-
-# optional metadata
-# keywords: ""
-# ROBOTS: ""
-# audience: ""
-# ms.devlang: ""
-# ms.reviewer: ""
-# ms.suite: ""
-# ms.tgt_pltfrm: ""
-# ms.custom: ""
-
 ---
 # Bulk copy data with bcp to SQL Server on Linux
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 This topic shows how to use the [bcp](https://msdn.microsoft.com/en-us/library/ms162802.aspx) command line utility to bulk copy data between an instance of SQL Server 2017 RC2 on Linux and a data file in a user-specified format.
 

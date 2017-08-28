@@ -1,6 +1,4 @@
 ---
-# required metadata
-
 title: Disaster recovery for SQL Server on Linux | Microsoft Docs
 description: 
 author: mihaelab 
@@ -11,20 +9,10 @@ ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: c75717c8-c677-4033-8ca6-d0ac93aee04d
-
-
-# optional metadata
-# keywords: ""
-# ROBOTS: ""
-# audience: ""
-# ms.devlang: ""
-# ms.reviewer: ""
-# ms.suite: ""
-# ms.tgt_pltfrm: ""
-# ms.custom: ""
-
 ---
 # Business continuity and database recovery SQL Server on Linux
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 SQL Server on Linux allows organizations to achieve a wide array of service-level agreement goals to accommodate various business requirements.
 

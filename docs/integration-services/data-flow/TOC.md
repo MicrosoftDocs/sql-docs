@@ -45,7 +45,7 @@
 # [Flat File Custom Properties](flat-file-custom-properties.md)  
 # [OData Source](odata-source.md)  
 ## [Tutorial: Using the OData Source](tutorial-using-the-odata-source.md)  
-## [Modify OData Source Query at Runtime](modify-odata-source-query-at-runtime.md)  
+## [Provide an OData Source Query at Runtime](modify-odata-source-query-at-runtime.md)  
 ## [OData Source Properties](odata-source-properties.md)  
 # [ODBC Flow Components](odbc-flow-components.md)  
 ## [ODBC Destination](odbc-destination.md)  

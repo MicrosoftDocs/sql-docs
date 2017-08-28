@@ -1,5 +1,5 @@
 ---
-title: "Data science scenarios and solution templates for SQL Server| Microsoft Docs"
+title: "Data science scenarios and solution templates | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/22/2017"
 ms.prod: "sql-server-2016"
@@ -17,7 +17,7 @@ author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
 ---
-# Data science scenarios and solution templates for SQL Server
+# Data science scenarios and solution templates
 
 Templates are sample solutions that demonstrate best practices and provide building blocks to help you implement a solution fast. Each template is designed to solve a specific problem, for a specific vertical or industry. The tasks in each template extend from data preparation and feature engineering to model training and scoring. Use these templates to learn how [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] works. Then, feel free to customize the template to fit your own scenario and build a custom solution. 
 
@@ -38,6 +38,7 @@ Each solution includes sample data, R code or Python code, and SQL stored proced
 **What:** The ability to detect fraudulent transactions is important for online businesses. To reduce charge-back losses, businesses need to quickly identify transactions that were made using stolen payment instruments or credentials. When fraudulent transactions are discovered, businesses typically take measures to block certain accounts as soon as possible, to prevent further losses. In this scenario, you learn how to use data from online purchase transactions to identify likely fraud.
 
 **How:**  Fraud detection is solved as a binary classification problem. The methodology used in this template can be easily applied to fraud detection in other domains.
+
 
 ## Campaign optimization
 
@@ -88,6 +89,7 @@ See this announcement for more information: [New predictive maintenance template
 **What:**: Demand forecasting is an important problem in various domains including energy, retail, and services. Accurate demand forecasting helps companies conduct better production planning, resource allocation, and make other important business decisions. In the energy sector, demand forecasting is critical for reducing energy storage cost and balancing supply and demand.
 
 **How:** This template uses SQL Server R Services to predict demand for electricity. The model used for prediction is a random forest regression model based on **rxDForest**, a high-performance machine learning algorithm included in Microsoft R Server. The solution includes a demand simulator, all the R and T-SQL code needed to train a model, and stored procedures that you can use to generate and report predictions. 
+
 
 ## <a name="bkmk_HowTo"></a>How to use the templates
 

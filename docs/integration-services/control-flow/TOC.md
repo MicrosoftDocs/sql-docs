@@ -16,6 +16,7 @@
 ## [Azure HDInsight Create Cluster Task](azure-hdinsight-create-cluster-task.md)  
 ## [Azure HDInsight Delete Cluster Task](azure-hdinsight-delete-cluster-task.md)  
 ## [Azure SQL DW Upload Task](azure-sql-dw-upload-task.md)  
+## [Azure Data Lake Store File System Task](azure-data-lake-store-file-system-task.md) 
 ## [Back Up Database Task](back-up-database-task.md)  
 ## [Bulk Insert Task](bulk-insert-task.md)  
 ## [CDC Control Task](cdc-control-task.md)  

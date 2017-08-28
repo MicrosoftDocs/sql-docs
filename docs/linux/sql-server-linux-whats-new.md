@@ -12,7 +12,7 @@ ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
 ---
 # What's new for SQL Server 2017 on Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 This topic describes what's new for SQL Server 2017 running on Linux.
 

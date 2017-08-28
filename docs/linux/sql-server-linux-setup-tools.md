@@ -12,7 +12,7 @@ ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
 ---
 # Install sqlcmd and bcp the SQL Server command-line tools on Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 The following steps install the command-line tools, Microsoft ODBC drivers, and their dependencies. The **mssql-tools** package contains:
 

@@ -2,7 +2,7 @@
 title: "Azure Feature Pack for Integration Services (SSIS) | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
+ms.date: "08/22/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -22,7 +22,7 @@ manager: "jhubbard"
 # Azure Feature Pack for Integration Services (SSIS)
 SQL Server Integration Services (SSIS) Feature Pack for Azure is an extension that provides the components listed on this page for SSIS to connect to Azure services, transfer data between Azure and on-premises data sources, and process data stored in Azure.
 
-[![Download SSIS Feature Pack for Azure](../analysis-services/media/download.png)](http://go.microsoft.com/fwlink/?LinkID=626967) **Download**
+[![Download SSIS Feature Pack for Azure](../analysis-services/media/download.png)](https://www.microsoft.com/en-us/download/details.aspx?id=54798) **Download**
 
 - [SSIS Feature Pack for Azure](http://go.microsoft.com/fwlink/?LinkID=626967) for SQL Server 2016
 - [SSIS Feature Pack for Azure](https://www.microsoft.com/en-us/download/details.aspx?id=54798) for [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]
@@ -56,6 +56,8 @@ SQL Server Integration Services (SSIS) Feature Pack for Azure is an extension th
     
     -   [Azure SQL DW Upload Task](../integration-services/control-flow/azure-sql-dw-upload-task.md)
 
+    -   [Azure Data Lake Store File System Task](../integration-services/control-flow/azure-data-lake-store-file-system-task.md)
+
 -   Data Flow Components
 
     -   [Azure Blob Source](../integration-services/data-flow/azure-blob-source.md)
@@ -66,7 +68,7 @@ SQL Server Integration Services (SSIS) Feature Pack for Azure is an extension th
     
     -   [Azure Data Lake Store Destination](../integration-services/data-flow/azure-data-lake-store-destination.md)
 
--   Azure Blob Enumerator. See [Enumerator = Foreach Azure Blob Enumerator](http://msdn.microsoft.com/library/95a19dde-61ca-4d9b-aa3d-131fa4264296)
+-   Azure Blob & ADLS File Enumerator. See [Foreach Loop Container](http://msdn.microsoft.com/library/95a19dde-61ca-4d9b-aa3d-131fa4264296)
 
 ## Download the Feature Pack
  Download the SQL Server Integration Services (SSIS) Feature Pack for Azure.

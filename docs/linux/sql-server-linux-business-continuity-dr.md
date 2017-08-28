@@ -12,7 +12,7 @@ ms.assetid: c75717c8-c677-4033-8ca6-d0ac93aee04d
 ---
 # Business continuity and database recovery SQL Server on Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 SQL Server on Linux allows organizations to achieve a wide array of service-level agreement goals to accommodate various business requirements.
 

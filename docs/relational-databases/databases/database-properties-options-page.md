@@ -214,7 +214,7 @@ Read-only identifier.
  View the current state of the database. It is not editable. For more information about **Database State**, see [Database States](../../relational-databases/databases/database-states.md).  
 
  **Encryption Enabled**  
- When **True**, this database is enabled for database encryption. A Database Encryption Key is required for encryption. For more information, see [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption-tde.md).  
+ When **True**, this database is enabled for database encryption. A Database Encryption Key is required for encryption. For more information, see [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).  
  
  **Restrict Access**  
  Specify which users may access the database. Possible values are:  

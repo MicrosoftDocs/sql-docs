@@ -59,7 +59,7 @@ CREATE AVAILABILITY GROUP group_name
   | DTC_SUPPORT  = { PER_DB | NONE }  
   | BASIC  
   | DISTRIBUTED
-  | REQUIRED_SYNCHRONOUS_SECONDARIES_TO_COMMIT = { integer }
+  | REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT = { integer }
   | CLUSTER_TYPE = { WSFC | EXTERNAL | NONE } 
   
 <add_replica_spec>::=  
@@ -180,7 +180,7 @@ CREATE AVAILABILITY GROUP group_name
  DISTRIBUTED  
  Used to create a distributed availability group. This option is used with the AVAILABILITY GROUP ON parameter to connect two availability groups in separate Windows Server Failover Clusters.  For more information, see [Distributed Availability Groups &#40;Always On Availability Groups&#41;](../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md). Distributed availability groups are supported beginning in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. 
 
- REQUIRED_SYNCHRONOUS_SECONDARIES_TO_COMMIT   
+ REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT   
  Introduced in SQL Server 2017 CTP 2.2. Used to set a minimum number of synchronous secondary replicas required to commit before the primary commits a transaction. Guarantees that SQL Server transaction waits until the transaction logs are updated on the minimum number of secondary replicas. The default is 0 which gives the same behavior as SQL Server 2016. The minimum value is 0. The maximum value is the number of replicas minus 1. This option relates to replicas in synchronous commit mode. When replicas are in synchronous commit mode, writes on the primary replica wait until writes on the secondary synchronous replicas are committed to the replica database transaction log. If a SQL Server that hosts a secondary synchronous replica stops responding, the SQL Server that hosts the primary replica marks that secondary replica as NOT SYNCHRONIZED and proceed. When the unresponsive database comes back online it is in a "not synced" state and the replica marked as unhealthy until the primary can make it synchronous again. This setting guarantees that the primary replica waits until the minimum number of replicas have committed each transaction. If the minimum number of replicas is not available then commits on the primary fail. This setting applies to availability groups with cluster type `WSFC` and `EXTERNAL`. For cluster type `EXTERNAL` the setting is changed when the availability group is added to a cluster resource. See [High availability and data protection for availability group configurations](../../linux/sql-server-linux-availability-group-ha.md).
 
  CLUSTER_TYPE  

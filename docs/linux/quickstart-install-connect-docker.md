@@ -256,6 +256,6 @@ Other common tools to connect to SQL Server include:
 
 ## Next steps
 
-To explore other scenarios, such as running multiple containers, data persistence, and troublehshooting, see [Configure SQL Server 2017 container images on Docker](sql-server-linux-configure-docker.md).
+To explore other scenarios, such as running multiple containers, data persistence, and troubleshooting, see [Configure SQL Server 2017 container images on Docker](sql-server-linux-configure-docker.md).
 
 Also, check out the [mssql-docker GitHub repository](https://github.com/Microsoft/mssql-docker) for resources, feedback, and known issues.

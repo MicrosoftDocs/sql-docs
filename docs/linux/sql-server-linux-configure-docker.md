@@ -275,7 +275,7 @@ There are scenarios where you might not want to use the latest SQL Server contai
 1. If you want to downgrade a running container, you must be using a persistence technique. Follow the same steps outlined in the [upgrade section](#upgrade), but use the tag name when you run the new container.
 
    > [!IMPORTANT]
-   > Upgrade and downgrade is only supported between RC1 and RC2 at this time.
+   > Upgrade and downgrade are only supported between RC1 and RC2 at this time.
 
 ## <a id="troubleshooting"></a> Troubleshooting
 

@@ -281,7 +281,7 @@ CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140  (MAXSIZE = 100 MB, EDITION = 
       WITH CATALOG_COLLATION = DATABASE_DEFAULT 
 ```
   
-## See Also  
+## See also  
 
 -  [sys.dm_database_copies &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)
 

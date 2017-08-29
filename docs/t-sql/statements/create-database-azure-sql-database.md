@@ -66,6 +66,8 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
   
 
 ```  
+
+```
 To copy a database:  
 CREATE DATABASE database_name  
     AS COPY OF [source_server_name.] source_database_name  

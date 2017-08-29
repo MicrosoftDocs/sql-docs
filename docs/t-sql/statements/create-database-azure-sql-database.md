@@ -140,7 +140,7 @@ Specifies the default collation for the metadata catalog. *DATABASE_DEFAULT* spe
 -   If neither MAXSIZE nor EDITION is specified, the EDITION is set to Standard (S0), and MAXSIZE is set to 250 GB.  
   
  SERVICE_OBJECTIVE  
- Specifies the performance level. For service objective descriptions and more information about the size, editions, and the service objectives combinations, see [Azure SQL Database Service Tiers and Performance Levels](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/). If the specified SERVICE_OBJECTIVE is not supported by the EDITION you receive an error.  
+ Specifies the performance level. For service objective descriptions and more information about the size, editions, and the service objectives combinations, see [Azure SQL Database Service Tiers and Performance Levels](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/) and [SQL Database resource limits](https://azure.microsoft.com/documentation/articles/sql-database-resource-limits). If the specified SERVICE_OBJECTIVE is not supported by the EDITION you receive an error.  
   
  ELASTIC_POOL (name = \<elastic_pool_name>) 
  To create a new database in an elastic database pool, set the SERVICE_OBJECTIVE of the database to ELASTIC_POOL and provide the name of the pool. For more information, see [Create and manage a SQL Database elastic database pool (preview)](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/).  

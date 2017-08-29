@@ -48,7 +48,7 @@ ALTER DATABASE { database_name }
     | EDITION = { 'basic' | 'standard' | 'premium' | 'premiumrs' }   
     | SERVICE_OBJECTIVE =   
                  {  'S0' | 'S1' | 'S2' | 'S3'|
-                 | 'P1' | 'P2' | 'P3' | 'P4'| 'P6' | 'P11'  | 'P15' | 
+                 | 'P1' | 'P2' | 'P4'| 'P6' | 'P11'  | 'P15' | 
                  | 'PRS1' | 'PRS2' | 'PRS4' | 'PRS6' |
                  | { ELASTIC_POOL (name = <elastic_pool_name>) }   
                  }   

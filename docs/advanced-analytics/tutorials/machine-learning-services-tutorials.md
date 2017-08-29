@@ -28,7 +28,7 @@ This article provides a comprehensive list of the tutorials, demos, and sample a
 
 + [Python tutorials](../tutorials/sql-server-python-tutorials.md)
 
-+ [R tutorials](../tutorials/sql-server-python-tutorials.md)
++ [R tutorials](../tutorials/sql-server-r-tutorials.md)
 
 For more information about requirements and how to get set up, see [Prerequisites](#bkmk_prerequisites).
 
@@ -106,12 +106,11 @@ With SQL Server 2017, you can install either R or Python, or both. Otherwise the
 
 After running SQL Server setup, don't forget these important steps:
 
-+ Enable the external script execution feature by running `sp_configure 'external scripts enabled', 1`
-+ Restart the server
-+ Ensure that the service that calls the external runtime has necessary permissions
-+ Ensure that your SQL login or Windows user account has necessary permissions to connect to the server, to read data, and to create any database objects required by the sample
+1. Enable the external script execution feature by running `sp_configure 'external scripts enabled', 1`. Follow the instructions to reconfigure and restart SQL Server.
+2. Ensure that the Launchpad service is running, and that the worker accounts it uses can connect to the SQL Server instance.
+3. Review the permissions associated with the SQL logins and Windows user accounts that will be running R or Python scripts. All need permission to run R or Python scripts, and to connect to the instance. Depending on the sample, they might also need permissions to read and write data, and to create database objects.
 
-If you run into trouble, see this article for some common issues: [Troubleshooting Machine Learning Services](../machine-learning-troubleshooting-faq.md)
+For details, see this article for some common setup and configuration issues: [Troubleshooting Machine Learning Services](../machine-learning-troubleshooting-faq.md)
 
 > [!NOTE]
 > You cannot run these tutorials using another open source R or Python tool. Both your development environment and the SQL Server computer with machine learning must have the R or Python libraries provided by Microsoft, which support integration with SQL Server and use of remote compute contexts.

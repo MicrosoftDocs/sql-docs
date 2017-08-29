@@ -203,7 +203,7 @@ dtutil /SQL srcPackage /EXISTS
  To determine whether a package exists in the **msdb** database on a local instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] that uses [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication, use the following syntax:  
   
 ```dos
-dtutil SQL srcPackage /SOURCEUSER srcUserName /SOURCEPASSWORD *hY$d56b /EXISTS  
+dtutil /SQL srcPackage /SOURCEUSER srcUserName /SOURCEPASSWORD *hY$d56b /EXISTS  
 ```  
   
 > [!NOTE]  

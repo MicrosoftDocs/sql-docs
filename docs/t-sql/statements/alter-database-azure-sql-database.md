@@ -3,7 +3,7 @@ title: "ALTER DATABASE (Azure SQL Database) | Microsoft Docs"
 ms.custom: 
   - "MSDN content"
   - "MSDN - SQL DB"
-ms.date: "07/20/2017"
+ms.date: "08/290/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.service: "sql-database"

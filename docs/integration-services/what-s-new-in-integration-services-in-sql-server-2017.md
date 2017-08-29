@@ -21,6 +21,16 @@ This topic describes the features that have been added or updated in [!INCLUDE[s
 >   [!NOTE]
 > SQL Server 2017 also includes the features of SQL Server 2016 and the features added in SQL Server 2016 updates. For info about the new SSIS features in SQL Server 2016, see [What's New in Integration Services in SQL Server 2016](../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md).
 
+## Highlights of this release
+
+Here are the most important new features in Integration Services for SQL Server 2017.
+
+-   **Scale Out**. Distribute SSIS package execution more easily across multiple worker computers, and manage executions and workers from a single master computer. For more info, see [Integration Services Scale Out](../integration-services/scale-out/integration-services-ssis-scale-out.md).
+
+-   **Integration Services on Linux**. Run SSIS packages on Linux computers. For more info, see [Extract, transform, and load data on Linux with SSIS](../linux/sql-server-linux-migrate-ssis.md).
+
+-   **Connectivity improvements**. Connect to the OData feeds of Microsoft Dynamics AX Online and Microsoft Dynamics CRM Online with the updated OData components. In addition to these connectivity improvements in SQL Server, the Integration Services Feature Pack for Azure has added support for Azure Data Lake Store. For more info, see [Azure Feature Pack for Integration Services (SSIS)](azure-feature-pack-for-integration-services-ssis.md).
+
 ## New in SSIS in SQL Server 2017 RC1
 
 ### New and changed features in Scale Out for SSIS
@@ -73,7 +83,7 @@ The Scale Out feature makes it much easier to run [!INCLUDE[ssIS_md](../includes
    
 After installing the Scale Out Master and Workers, the package can be distributed to execute on different Workers automatically. If the execution is terminated unexpectedly, the execution is retried automatically. Also, all the executions and Workers can be centrally managed using the Master.
    
-For more information, see [Integration Services Scale Out](../integration-services/integration-services-ssis-scale-out.md).
+For more information, see [Integration Services Scale Out](../integration-services/scale-out/integration-services-ssis-scale-out.md).
    
 ### Support for Microsoft Dynamics Online Resources
 

@@ -91,7 +91,7 @@ description: Learn about SQL
                                                 <ul>
                                                     <li><a href="/sql/ssms/download-sql-server-management-studio-ssms">SQL Server Management Studio (SSMS)</a></li>
                                                     <li><a href="/sql/ssdt/download-sql-server-data-tools-ssdt">SQL Server Data Tools (SSDT)</a></li>
-                                                    <li><a href="https://www.microsoft.com/download/details.aspx?id=55253">Power BI Report Server and tools</a></li>
+                                                    <li><a href="https://www.microsoft.com/download/details.aspx?id=55329">Power BI Report Server and tools</a></li>
                                                 </ul>
                                                 <h4 class="likeAnH3" style="margin: 1rem 0px;">Sample databases</h4>
                                                 <ul>
@@ -190,14 +190,14 @@ description: Learn about SQL
                                                 </div>
                                                 <h4 class="likeAnH3" style="margin: 1rem 0px;">Design</h4>
                                                 <ul>
-                                                    <li><a href="/sql/connect/sql-server-drivers">Connect with client applications</a></li>
+                                                    <li><a href="/sql/connect/sql-connection-libraries">Connect with client applications</a></li>
                                                     <li><a href="/sql/relational-databases/database-features">Relational database concepts</a></li>
                                                 </ul>
                                                 <h4 class="likeAnH3" style="margin: 1rem 0px;">Tools</h4>
                                                 <ul>
                                                     <li><a href="/sql/ssms/download-sql-server-management-studio-ssms">SQL Server Management Studio (SSMS)</a></li>
                                                     <li><a href="/sql/ssdt/download-sql-server-data-tools-ssdt">SQL Server Data Tools (SSDT)</a></li>
-                                                    <li><a href="/sql/tools/command-prompt-utility-reference-database-engine">See all SQL tools</a></li>
+                                                    <li><a href="/sql/tools/overview-sql-tools">See all SQL tools</a></li>
                                                 </ul>
                                                 <h4 class="likeAnH3" style="margin: 1rem 0px;">Reference</h4>
                                                 <ul>
@@ -233,19 +233,20 @@ description: Learn about SQL
                                                 <div style="height:135px; border-bottom-color: #dbdbdb; border-bottom-width: 1px; border-bottom-style: solid; position: relative;">
                                                    <h3 style="bottom: 20px; color: rgb(110, 110, 110); font-family: segoe-ui_light,Segoe UI Light,Segoe WP,Helvetica Neue,Helvetica,sans-serif; font-size: 2rem; vertical-align: bottom; position: absolute;">Migrate a database</h3>
                                                 </div>
-                                                <h4 class="likeAnH3" style="margin: 1rem 0px;">Download migration tools</h4>
+                                                <h4 class="likeAnH3" style="margin: 1rem 0px;">Upgrade your SQL Server database</h4>
                                                 <ul>
-                                                    <li><a href="https://www.microsoft.com/download/details.aspx?id=53595">Data Migration Assistant</a></li>
-                                                    <li><a href="https://www.microsoft.com/en-us/download/details.aspx?id=54255">SSMA for Access</a></li>
-                                                    <li><a href="https://www.microsoft.com/en-us/download/details.aspx?id=54254">SSMA for DB2</a></li>
-                                                    <li><a href="https://www.microsoft.com/en-us/download/details.aspx?id=54257">SSMA for MySql</a></li>
-                                                    <li><a href="https://www.microsoft.com/en-us/download/details.aspx?id=54258">SSMA for Oracle</a></li>
-                                                    <li><a href="https://www.microsoft.com/en-us/download/details.aspx?id=54256">SSMA for SAP ASE</a></li>
+                                                    <li><a href="https://www.microsoft.com/en-us/download/details.aspx?id=54090">Database Experimentation Assistant</a></li> 
                                                 </ul>
-                                                <h4 class="likeAnH3" style="margin: 1rem 0px;">Migrate your SQL Server database</h4>
+												<h4 class="likeAnH3" style="margin: 1rem 0px;">Migration tools and services</h4>
                                                 <ul>
-                                                    <li><a href="/azure/sql-database/sql-database-migrate-your-sql-server-database">To Azure SQL Database</a></li>
-                                                    <li><a href="/azure/sql-data-warehouse/sql-data-warehouse-overview-migrate">To Azure SQL Data Warehouse</a></li>
+												    <li><a href="http://sqldatabase-migrationpreview.azurewebsites.net">Azure Database Migration Service (Private preview)</a></li>
+                                                    <li><a href="https://www.microsoft.com/download/details.aspx?id=53595">Data Migration Assistant</a></li>
+                                                    <li><a href="/sql/ssma/sql-server-migration-assistant">SQL Server Migration Assistant</a></li>
+                                                </ul>
+                                                <h4 class="likeAnH3" style="margin: 1rem 0px;">Migrate your database to Azure</h4>
+                                                <ul>
+                                                    <li><a href="/azure/sql-database/sql-database-migrate-your-sql-server-database">Migrate to Azure SQL Database</a></li>
+                                                    <li><a href="/azure/sql-data-warehouse/sql-data-warehouse-overview-migrate">Migrate to Azure SQL Data Warehouse</a></li>
                                                 </ul>
                                             </div>
                                         </div>

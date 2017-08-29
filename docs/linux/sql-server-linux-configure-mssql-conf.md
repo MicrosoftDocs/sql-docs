@@ -14,7 +14,7 @@ ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 ---
 # Configure SQL Server on Linux with the mssql-conf tool
 
-**mssql-conf** is a configuration script that installs with SQL Server 2017 RC1 for Red Hat Enterprise Linux, SUSE Linux Enterprise Server, and Ubuntu. You can use this utility to set the following parameters:
+**mssql-conf** is a configuration script that installs with SQL Server 2017 RC2 for Red Hat Enterprise Linux, SUSE Linux Enterprise Server, and Ubuntu. You can use this utility to set the following parameters:
 
 |||
 |---|---|
@@ -186,7 +186,7 @@ The first phase capture is controlled by the **coredump.coredumptype** setting, 
     sudo /opt/mssql/bin/mssql-conf set coredump.captureminiandfull <true or false>
     ```
 
-    Default: **true**
+    Default: **false**
 
 1. Specify the type of dump file with the **coredump.coredumptype** setting.
 

@@ -2,7 +2,7 @@
 title: "Create a Domain-Based Attribute (Master Data Services) | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
+ms.date: "07/25/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -83,7 +83,7 @@ manager: "jhubbard"
   
 9. From the **Attribute type** list, select **Domain-based**.  
   
-10. From the **Domain Entity** list, choose the entity to be used to populate the attribute values.  
+10. From the **Domain Entity** list, choose the entity to be used to populate the attribute values. 
   
 11. **Optional, for domain-based attributes for leaf members.** Select a filter parent attribute that is used to constrain the allowed values for the domain-based attribute.  
   

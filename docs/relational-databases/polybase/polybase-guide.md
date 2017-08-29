@@ -1,6 +1,6 @@
 ---
 title: "PolyBase Guide | Microsoft Docs"
-ms.date: "5/30/2017"
+ms.date: "05/30/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -18,7 +18,6 @@ helpviewer_keywords:
   - "Hadoop export"
   - "Hadoop export, PolyBase overview"
   - "Hadoop import, PolyBase overview"
-ms.assetid: b42b7d48-328a-4046-abe9-f73fd83212dc
 caps.latest.revision: 26
 author: "barbkess"
 ms.author: "barbkess"

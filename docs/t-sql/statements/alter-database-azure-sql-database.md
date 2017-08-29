@@ -1,10 +1,10 @@
----
+﻿---
 title: "ALTER DATABASE (Azure SQL Database) | Microsoft Docs"
 ms.custom: 
   - "MSDN content"
   - "MSDN - SQL DB"
-ms.date: "08/28/2017"
-ms.prod: "sql-non-specified"
+ms.date: "08/07/2017"
+ms.prod: 
 ms.reviewer: ""
 ms.service: "sql-database"
 ms.suite: ""
@@ -44,11 +44,19 @@ ALTER DATABASE { database_name }
   
 <edition_options> ::=   
 {  
+<<<<<<< HEAD
       MAXSIZE = { 100 MB | 250 MB | 500 MB | 1 … 1024 … 4096 GB }     
     | EDITION = { 'basic' | 'standard' | 'premium' | 'premiumrs' }   
     | SERVICE_OBJECTIVE =   
                  {  'S0' | 'S1' | 'S2' | 'S3'|
                  | 'P1' | 'P2' | 'P4'| 'P6' | 'P11'  | 'P15' | 
+=======
+      MAXSIZE = { 100 MB | 250 MB | 500 MB |1 | 1024 … 4096 } GB    
+    | EDITION = { 'basic' | 'standard' | 'premium' | 'premiumrs' }   
+    | SERVICE_OBJECTIVE =   
+                 {  'S0' | 'S1' | 'S2' | 'S3'| 'S4'| 'S6'| 'S7'| 'S9'| 'S12' |
+                 | 'P1' | 'P2' | 'P3' | 'P4'| 'P6' | 'P11'  | 'P15' | 
+>>>>>>> df3152bafa1c29f7529549322d61a944d96c5a1f
                  | 'PRS1' | 'PRS2' | 'PRS4' | 'PRS6' |
                  | { ELASTIC_POOL (name = <elastic_pool_name>) }   
                  }   
@@ -57,7 +65,7 @@ ALTER DATABASE { database_name }
    {  
       ALLOW_CONNECTIONS = { ALL | NO }  
      | SERVICE_OBJECTIVE =   
-                 {  'S0' | 'S1' | 'S2' | 'S3' |
+                 {  'S0' | 'S1' | 'S2' | 'S3' | 'S4'| 'S6'| 'S7'| 'S9'| 'S12' |
                  | 'P1' | 'P2' | 'P3' | 'P4'| 'P6' | 'P11' | 'P15' |
                  | 'PRS1' | 'PRS2' | 'PRS4' | 'PRS6' |  
                  | { ELASTIC_POOL ( name = <elastic_pool_name>) }   
@@ -188,10 +196,10 @@ COMPATIBILITY_LEVEL = { 130 | 120 | 110 | 100 }
  MODIFY (EDITION **=** [ 'basic' | 'standard' | 'premium' | 'premiumrs' ] )    
  Changes the service tier of the database.  EDITION change will fail if the MAXSIZE property for the database is set to a value outside the valid range supported by that edition.  
   
- MODIFY (MAXSIZE **=** [100 MB | 500 MB | 1 | 5 | 10 | 20 | 30 … 150…500] GB)  
+ MODIFY (MAXSIZE **=** [100 MB | 500 MB | 1 | 1024…4096] GB)  
  Specifies the maximum size of the database. The maximum size must comply with the valid set of values for the EDITION property of the database. Changing the maximum size of the database may cause the database EDITION to be changed. Following table lists the supported MAXSIZE values and the defaults (D) for the [!INCLUDE[ssSDS](../../includes/sssds-md.md)] service tiers.  
   
-|**MAXSIZE**|**Basic**|**S0-S2**|**S3**|**P1-P6 and PRS1-PRS6**| **P11-P15** 
+|**MAXSIZE**|**Basic**|**S0-S2**|**S3-S12**|**P1-P6 and PRS1-PRS6**| **P11-P15** 
 |-----------------|---------------|------------------|-----------------|-----------------|-----------------|-----------------|  
 |100 MB|√|√|√|√|√|  
 |250 MB|√|√|√|√|√|  
@@ -208,14 +216,14 @@ COMPATIBILITY_LEVEL = { 130 | 120 | 110 | 100 }
 |150 GB|N/A|√|√|√|√|  
 |200 GB|N/A|√|√|√|√|  
 |250 GB|N/A|√ (D)|√ (D)|√|√|  
-|300 GB|N/A|N/A|√|√|√|  
-|400 GB|N/A|N/A|√|√|√|
-|500 GB|N/A|N/A|√|√ (D)|√|
-|750 GB|N/A|N/A|√|√|√|
-|1024 GB|N/A|N/A|√|√|√ (D)|
-|From 1024 GB up to 4096 GB in increments of 256 GB|N/A|N/A|N/A|N/A| √ \* |√|  
+|300 GB|N/A|√|√|√|√|  
+|400 GB|N/A|√|√|√|√|
+|500 GB|N/A|√|√|√ (D)|√|
+|750 GB|N/A|√|√|√|√|
+|1024 GB|N/A|√|√|√|√ (D)|
+|From 1024 GB up to 4096 GB in increments of 256 GB*|N/A|N/A|N/A|N/A|√|√|  
   
- \* Premium P11 and P15 allow a larger MAXSIZE of up to 4 TB, with 1024 GB being the default size. Customers using P11 and P15 performance levels can use up to 4 TB of included storage at no additional charge. This 4 TB option is currently in public preview in the following regions: US East2, West US, US Gov Virginia, West Europe, Germany Central, South East Asia, Japan East, Australia East, Canada Central, and Canada East. For current limitations, see [Single databases](https://docs.microsoft.com/azure/sql-database-single-database-resources) and [Elastic pools](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-pool).  
+ \* P11 and P15 allow MAXSIZE up to 4 TB with 1024 GB being the default size.  P11 and P15 can use up to 4 TB of included storage at no additional charge. In the Premium tier, MAXSIZE greater than 1 TB is currently available in the following regions: US East2, West US, US Gov Virginia, West Europe, Germany Central, South East Asia, Japan East, Australia East, Canada Central, and Canada East. For current limitations, see [Single databases](https://docs.microsoft.com/azure/sql-database-single-database-resources).  
 
   
  The following rules apply to MAXSIZE and EDITION arguments:  
@@ -226,28 +234,28 @@ COMPATIBILITY_LEVEL = { 130 | 120 | 110 | 100 }
   
 -   If neither MAXSIZE nor EDITION is specified, the EDITION is set to Standard (S0), and MAXSIZE is set to 250 GB.  
   
- MODIFY SERVICE_OBJECTIVE {  'S0' | 'S1' | 'S2' | 'S3' | 'P1' | 'P2' | 'P3' | 'P4'| 'P6' | 'P11' | 'P15' | 'PRS1' | 'PRS2' | 'PRS4' | 'PRS6' |  
+ MODIFY SERVICE_OBJECTIVE {  'S0' | 'S1' | 'S2' | 'S3' | 'S4'| 'S6'| 'S7'| 'S9'| 'S12' | 'P1' | 'P2' | 'P3' | 'P4'| 'P6' | 'P11' | 'P15' | 'PRS1' | 'PRS2' | 'PRS4' | 'PRS6' |  
  Specifies the performance level. For service objective descriptions and more information about the size, editions, and the service objectives combinations, see [Azure SQL Database Service Tiers and Performance Levels](http://msdn.microsoft.com/library/azure/dn741336.aspx). If the specified SERVICE_OBJECTIVE is not supported by the EDITION, you receive an error. To change the SERVICE_OBJECTIVE value from one tier to another (for example from S1 to P1), you must also change the EDITION value.  
   
- ELASTIC_POOL (name = <elastic_pool_name>)  
+ELASTIC_POOL (name = \<elastic_pool_name>)
  To add an existing database to an elastic pool, set the SERVICE_OBJECTIVE of the database to ELASTIC_POOL and provide the name of the elastic pool. You can also use this option to change the database to a different elastic pool within the same server. For more information, see [Create and manage a SQL Database elastic pool](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/). To remove a database from an elastic pool, use ALTER DATABASE to set the SERVICE_OBJECTIVE to a single database performance level.  
 
- ADD SECONDARY ON SERVER <partner_server_name>  
+ ADD SECONDARY ON SERVER \<partner_server_name>  
  Creates a geo-replication secondary database with the same name  on a partner server, making the local database into a geo-replication primary, and begins asynchronously replicating data from the primary to the new secondary. If a database with the same name already exists on the secondary, the command will fail. The command is executed on the master database on the server hosting the local database that will become the primary.  
   
  WITH ALLOW_CONNECTIONS { ALL | **NO** }  
  When ALLOW_CONNECTIONS is not specified, it is set to NO by default. If it is set ALL, it will be a read-only database that will allow all logins with the appropriate permissions to connect.  
   
- WITH SERVICE_OBJECTIVE {  'S0' | 'S1' | 'S2' | 'S3' | 'P1' | 'P2' | 'P3' | 'P4'| 'P6' | 'P11' | 'P15' | 'PRS1' | 'PRS2' | 'PRS4' | 'PRS6' }  
+ WITH SERVICE_OBJECTIVE {  'S0' | 'S1' | 'S2' | 'S3' | 'S4'| 'S6'| 'S7'| 'S9'| 'S12' | 'P1' | 'P2' | 'P3' | 'P4'| 'P6' | 'P11' | 'P15' | 'PRS1' | 'PRS2' | 'PRS4' | 'PRS6' }  
  When SERVICE_OBJECTIVE is not specified, the secondary database will be created at the same service level as the primary database. When SERVICE_OBJECTIVE is  specified, the secondary database will be created at the specified level. This option supports creating geo-replicated secondaries with less expensive service levels. The SERVICE_OBJECTIVE specified must be within the same edition as the source, e.g. you cannot specify S0 if the edition is premium.  
   
- ELASTIC_POOL ( name = <elastic_pool_name>)  
+ ELASTIC_POOL ( name = \<elastic_pool_name>)  
  When ELASTIC_POOL is not specified, the secondary database will not be created in an elastic pool. When ELASTIC_POOL is specified, the secondary database will be created in the specified pool.  
   
 > [!IMPORTANT]  
 >  The user executing the ADD SECONDARY command must be DBManager on primary server, have db_owner membership in local database, and DBManager on secondary server.  
   
- REMOVE SECONDARY ON SERVER  <partner_server_name>  
+ REMOVE SECONDARY ON SERVER  \<partner_server_name>  
  Removes the specified geo-replicated secondary database on the specified server. The command is executed on the master database on the server hosting the primary database.  
   
 > [!IMPORTANT]  

@@ -6,7 +6,7 @@ ms.custom:
 ms.date: "06/28/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
-ms.service: "sql-database"
+ms.service: 
 ms.suite: ""
 ms.technology: 
   - "database-engine"

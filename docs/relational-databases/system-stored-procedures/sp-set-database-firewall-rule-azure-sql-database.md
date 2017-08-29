@@ -3,8 +3,8 @@ title: "sp_set_database_firewall_rule (Azure SQL Database) | Microsoft Docs"
 ms.custom: 
   - "MSDN content"
   - "MSDN - SQL DB"
-ms.date: "07/27/2016"
-ms.prod: "sql-non-specified"
+ms.date: "08/04/2017"
+ms.prod: 
 ms.reviewer: ""
 ms.service: "sql-database"
 ms.suite: ""
@@ -29,9 +29,9 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # sp_set_database_firewall_rule (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx_md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  Creates or updates the database-level firewall rules for your [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] or [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]. Database firewall rules can be configured for the **master** database, and for user databases on [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Database firewall rules are particularly useful when using contained database users. For more information, see [Contained Database Users - Making Your Database Portable](../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
+  Creates or updates the database-level firewall rules for your [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Database firewall rules can be configured for the **master** database, and for user databases on [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Database firewall rules are particularly useful when using contained database users. For more information, see [Contained Database Users - Making Your Database Portable](../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
   
 ## Syntax  
   
@@ -45,7 +45,7 @@ sp_set_database_firewall_rule [@name = ] [N]'name'
   
 ## Arguments  
  **[@name** = ] [N]'*name*'  
- The name used to describe and distinguish the database-level firewall setting. *name* is **nvarchar(128)** with no default value. The Unicode identifier `N` is required for [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] but optional for [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. 
+ The name used to describe and distinguish the database-level firewall setting. *name* is **nvarchar(128)** with no default value. The Unicode identifier `N` is optional for [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. 
   
  **[@start_ip_address** =] '*start_ip_address*'  
  The lowest IP address in the range of the database-level firewall setting. IP addresses equal to or greater than this can attempt to connect to the [!INCLUDE[ssSDS](../../includes/sssds-md.md)] instance. The lowest possible IP address is `0.0.0.0`. *start_ip_address* is **varchar(50)** with no default value.  

@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "data processing extensions [Reporting Services], debugging"
 ms.assetid: e963e205-9ae0-446d-97df-028a1d2727d9
 caps.latest.revision: 40
-author: "sabotta"
-ms.author: "carlasab"
+author: "guyinacube"
+ms.author: "asaxton"
 manager: "erikre"
 ---
 # Debugging Data Processing Extension Code

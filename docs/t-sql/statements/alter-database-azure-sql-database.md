@@ -44,7 +44,7 @@ ALTER DATABASE { database_name }
   
 <edition_options> ::=   
 {  
-      MAXSIZE = { 100 MB | 500 MB |1 | 5 | 10 | 20 | 30 … 150 … 4096 } GB    
+      MAXSIZE = { 100 MB | 250 MB | 500 MB | 1 … 1024 … 4096 GB }     
     | EDITION = { 'basic' | 'standard' | 'premium' | 'premiumrs' }   
     | SERVICE_OBJECTIVE =   
                  {  'S0' | 'S1' | 'S2' | 'S3'|

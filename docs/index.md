@@ -240,7 +240,7 @@ description: Learn about SQL
 												<h4 class="likeAnH3" style="margin: 1rem 0px;">Migration tools and services</h4>
                                                 <ul>
 												    <li><a href="http://sqldatabase-migrationpreview.azurewebsites.net">Azure Database Migration Service (Private preview)</a></li>
-                                                    <li><a href="https://www.microsoft.com/download/details.aspx?id=53595">Data Migration Assistant</a></li>
+                                                    <li><a href="/sql/dma/dma-overview">Data Migration Assistant</a></li>
                                                     <li><a href="/sql/ssma/sql-server-migration-assistant">SQL Server Migration Assistant</a></li>
                                                 </ul>
                                                 <h4 class="likeAnH3" style="margin: 1rem 0px;">Migrate your database to Azure</h4>

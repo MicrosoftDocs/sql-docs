@@ -33,7 +33,7 @@ Here are the most important new features in Integration Services for SQL Server 
 
 ## New in the Azure Feature Pack
 
-In addition to the connectivity improvements in SQL Server, the Integration Services Feature Pack for Azure has added support for Azure Data Lake Store. For more info, see [Azure Feature Pack for Integration Services (SSIS)](azure-feature-pack-for-integration-services-ssis.md).
+In addition to the connectivity improvements in SQL Server, the Integration Services Feature Pack for Azure has added support for Azure Data Lake Store. For more info, see the blog post [New Azure Feature Pack Release Strengthening ADLS Connectivity](https://blogs.msdn.microsoft.com/ssis/2017/08/29/new-azure-feature-pack-release-strengthening-adls-connectivity/). Also see [Azure Feature Pack for Integration Services (SSIS)](azure-feature-pack-for-integration-services-ssis.md).
 
 ## New in SQL Server Data Tools (SSDT)
 

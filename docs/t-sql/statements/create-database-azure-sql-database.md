@@ -58,9 +58,10 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
             | 'PRS1' | 'PRS2' | 'PRS4' | 'PRS6' 
             | { ELASTIC_POOL(name = <elastic_pool_name>) } }  ) 
 }  
-[;]  
+ [;]  
   
 ```  
+__--
   
 ```  
 To copy a database:  
@@ -72,7 +73,8 @@ CREATE DATABASE database_name
             | 'PRS1' | 'PRS2' | 'PRS4' | 'PRS6' 
             | { ELASTIC_POOL(name = <elastic_pool_name>) } } )  
     ]  
-[;]  
+ [;] 
+ 
 ```  
   
 ## Arguments  

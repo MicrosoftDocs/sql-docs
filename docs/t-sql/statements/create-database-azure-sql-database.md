@@ -38,7 +38,7 @@ manager: "jhubbard"
 # CREATE DATABASE (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  Creates a new database. You must be connected to the master database to create a new database.  
+  Creates a new database.  
   
 ## Syntax  
   
@@ -135,7 +135,7 @@ Specifies the default collation for the metadata catalog. *DATABASE_DEFAULT* spe
   
 -   The MAXSIZE value, if specified, has to be a valid value shown in the table above.  
   
--   If EDITION is specified but MAXSIZE is not specified, the default value for the edition is used. For example, is the EDITION is set to Standard, and the MAXSIZE is not specified, then the MAXSIZE is automatically set to 500 MB.  
+-   If EDITION is specified but MAXSIZE is not specified, the default value for the edition is used. For example, if the EDITION is set to Standard, and the MAXSIZE is not specified, then the MAXSIZE is automatically set to 250 MB.  
   
 -   If neither MAXSIZE nor EDITION is specified, the EDITION is set to Standard (S0), and MAXSIZE is set to 250 GB.  
   
@@ -176,7 +176,7 @@ Specifies the default collation for the metadata catalog. *DATABASE_DEFAULT* spe
  MAXSIZE provides the ability to limit the size of the database. If the size of the database reaches its MAXSIZE you will receive error code 40544. When this occurs, you cannot insert or update data, or create new objects (such as tables, stored procedures, views, and functions). However, you can still read and delete data, truncate tables, drop tables and indexes, and rebuild indexes. You can then update MAXSIZE to a value larger than your current database size or delete some data to free storage space. There may be as much as a fifteen-minute delay before you can insert new data.  
   
 > [!IMPORTANT]  
->  The `CREATE DATABASE` statement must be the only statement in a [!INCLUDE[tsql](../../includes/tsql-md.md)] batch. You must be connected to the **master** database when executing the `CREATE DATABASE` statement.  
+>  The `CREATE DATABASE` statement must be the only statement in a [!INCLUDE[tsql](../../includes/tsql-md.md)] batch. 
   
  To change the size, edition, or service objective values later, use [ALTER DATABASE &#40;Azure SQL Database&#41;](../../t-sql/statements/alter-database-azure-sql-database.md).  
 
@@ -215,7 +215,7 @@ The CATALOG_COLLATION argument is only available during database creation.
  **Additional requirements for using `CREATE DATABASE ... AS COPY OF` syntax:** The login executing the statement on the local server must also be at least the `db_owner` on the source server. If the login  is based on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentication, the login executing the statement on the local server must have a matching login on the source [!INCLUDE[ssSDS](../../includes/sssds-md.md)] server, with an identical name and password.  
   
 ## Examples  
- All examples must be executed while connected to the **master** database. For more information, see [How to connect to an Azure SQL database with SSMS](https://azure.microsoft.com/documentation/articles/sql-database-connect-to-database/).  
+For a quick start tutorial showing you how to connect to an Azure SQL database using SQL Server Management Studio, see [Azure SQL Database: Use SQL Server Management Studio to connect and query data](/azure/sql-database/sql-database-connect-query-ssms).  
   
 ### Simple Example  
  A simple example for creating a database.  

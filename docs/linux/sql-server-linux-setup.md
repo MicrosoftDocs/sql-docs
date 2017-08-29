@@ -91,7 +91,7 @@ To rollback or downgrade SQL Server to a previous release, use the following ste
 
 When you install or upgrade SQL Server, you get the latest version of SQL Server from your configured Microsoft repository. It is important to note that there are two main types of repositories for each distribution:
 
-- **Cumulative Updates (CU)**: The Cumulative Update (CU) respository contains packages for the base SQL Server release and any bug fixes or improvements since that release. Cumulative updates are specific to a release version, such as SQL Server 2017. They are released on a regular cadence.
+- **Cumulative Updates (CU)**: The Cumulative Update (CU) repository contains packages for the base SQL Server release and any bug fixes or improvements since that release. Cumulative updates are specific to a release version, such as SQL Server 2017. They are released on a regular cadence.
 
 - **GDR**: The GDR repository contains packages for the base SQL Server release and only critical fixes and security updates since that release. These updates are also added to the next CU release.
 
@@ -121,7 +121,8 @@ To change from one source repository (CU or GDR) to another, use the following s
 
 1. [Install](#platforms) or [update](#upgrade) SQL Server from the new repository.
 
-   > [!IMPORTANT] At this point, if you choose to perform a full installation using the [quickstart tutorials](#platforms), remember that you have just configured the target repository. Do not repeat those steps in the tutorials.
+   > [!IMPORTANT]
+   > At this point, if you choose to perform a full installation using the [quickstart tutorials](#platforms), remember that you have just configured the target repository. Do not repeat those steps in the tutorials.
 
 ## <a id="uninstall"></a> Uninstall SQL Server
 

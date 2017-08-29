@@ -1,7 +1,7 @@
 ---
 title: "Non-SQL Server Subscribers | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "0/29/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -25,8 +25,10 @@ author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
 ---
-# Non-SQL Server Subscribers
-  The following non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers can subscribe to snapshot and transactional publications using push subscriptions. Subscriptions are supported for the two most recent versions of each database listed using the most recent version of the OLE DB provider listed.  
+# Non-SQL Server Subscribers  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]  
+
+The following non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers can subscribe to snapshot and transactional publications using push subscriptions. Subscriptions are supported for the two most recent versions of each database listed using the most recent version of the OLE DB provider listed.  
   
  Heterogeneous replication to non-SQL Server subscribers is deprecated. Oracle Publishing is deprecated. To move data, create solutions using change data capture and [!INCLUDE[ssIS](../../../includes/ssis-md.md)].  
   
@@ -37,8 +39,22 @@ manager: "jhubbard"
 |--------------|----------------------|--------------|  
 |Oracle|All platforms that Oracle supports|Oracle OLE DB provider (supplied by Oracle)|  
 |IBM DB2|MVS, AS400, Unix, Linux, Windows excluding 9.x|Microsoft Host Integration Server (HIS) OLE DB provider|  
+
+Oracle version information:  
+[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supports the following heterogeneous scenarios for transactional and snapshot replication:  
   
- For information about creating subscriptions to Oracle and IBM DB2, see [Oracle Subscribers](../../../relational-databases/replication/non-sql/oracle-subscribers.md) and [IBM DB2 Subscribers](../../../relational-databases/replication/non-sql/ibm-db2-subscribers.md).  
+-   Publishing data from [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] to non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers.  
+
+-   Publishing data to and from Oracle has the following restrictions:  
+  | |2016 or earlier |2017 or later |
+  |-------|-------|--------|
+  |Replication from Oracle |Only support Oracle 10g or earlier |Only support Oracle 10g or earlier |
+  |Replication to Oracle |Up to Oracle 12c |Not supported |
+
+
+ Heterogeneous replication to non-SQL Server subscribers is deprecated. Oracle Publishing is deprecated. To move data, create solutions using change data capture and [!INCLUDE[ssIS](../../../includes/ssis-md.md)].  
+
+For information about creating subscriptions to Oracle and IBM DB2, see [Oracle Subscribers](../../../relational-databases/replication/non-sql/oracle-subscribers.md) and [IBM DB2 Subscribers](../../../relational-databases/replication/non-sql/ibm-db2-subscribers.md).  
   
 ## Considerations for Non-SQL Server Subscribers  
  Keep the following considerations in mind when replicating to non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers:  

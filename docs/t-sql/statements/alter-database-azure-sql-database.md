@@ -54,7 +54,8 @@ ALTER DATABASE { database_name }
                  | { ELASTIC_POOL (name = <elastic_pool_name>) }   
                  }   
 }  
-\<add-secondary-option> ::=  
+
+<add-secondary-option> ::=  
    {  
       ALLOW_CONNECTIONS = { ALL | NO }  
      | SERVICE_OBJECTIVE =   

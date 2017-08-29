@@ -52,14 +52,17 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
   
 <edition_options> ::=   
 {  
-      MAXSIZE = { 100 MB | 500 MB | 1 | 5 | 10 | 20 | 30 … 150…500 } GB    
-    | ( EDITION = {  'basic' | 'standard' | 'premium' | 'premiumrs'}   
+      MAXSIZE = { 100 MB | 500 MB | 1 | 5 | 10 | 20 | 30 … 500 GB }
+    | EDITION = { 'basic' | 'standard' | 'premium' | 'premiumrs' }   
     | SERVICE_OBJECTIVE =   
-          {  'basic' | 'S0' | 'S1' | 'S2' | 'S3'   
-            | 'P1' | 'P2' | 'P3' | 'P4'| 'P6' | 'P11'  | 'P15'  
+          {  'basic' | 'S0' | 'S1' | 'S2' | 'S3' | 'S4' | 'S6' | 'S7' | 'S9' | 'S12'
+            | 'P1' | 'P2' | 'P4' | 'P6' | 'P11' | 'P15'  
             | 'PRS1' | 'PRS2' | 'PRS4' | 'PRS6' 
-            | { ELASTIC_POOL(name = <elastic_pool_name>) } }  ) 
-}  
+            | { ELASTIC_POOL(name = <elastic_pool_name>) } }
+}
+
+[ AS COPY OF [source_server_name.]source_database_name ]
+
 [;]  
   
 ```
@@ -108,13 +111,13 @@ Specifies the default collation for the metadata catalog. *DATABASE_DEFAULT* spe
 |400 GB|||√|√|  
 |500 GB|||√ (D) \* |√|  
   
- \* Premium P11 and P15 allow a larger MAXSIZE of up to 4 TB, with 1024 GB being the default size. Customers using P11 and P15 performance levels can use up to 4 TB of included storage at no additional charge. This 4 TB option is currently in public preview in the following regions: US East2, West US, West Europe, South East Asia, Japan East, Australia East, Canada Central, and Canada East. For current limitations, see [Current 4 TB limitations](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-service-tiers#current-limitations-of-p11-and-p15-databases-with-4-tb-maxsize).  
+ \* Premium P11 and P15 allow a larger MAXSIZE of up to 4 TB, with 1024 GB being the default size. Customers using P11 and P15 performance levels can use up to 4 TB of included storage at no additional charge. This 4 TB option is generally available in the following regions: US East2, West US, US Gov Virginia, West Europe, Germany Central, South East Asia, Japan East, Australia East, Canada Central, and Canada East. For current limitations, see [Current 4 TB limitations](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-service-tiers#current-limitations-of-p11-and-p15-databases-with-4-tb-maxsize).  
   
  The following rules apply to MAXSIZE and EDITION arguments:  
   
 -   The MAXSIZE value, if specified, has to be a valid value shown in the table above.  
   
--   If EDITION is specified but MAXSIZE is not specified, the default value for the edition is used. For example, is the EDITION is set to Standard, and the MAXSIZE is not specified, then the MAXSIZE is automatically set to 500 MB.  
+-   If EDITION is specified but MAXSIZE is not specified, the default value for the edition is used. For example, if the EDITION is set to Standard, and the MAXSIZE is not specified, then the MAXSIZE is automatically set to 250 GB.  
   
 -   If neither MAXSIZE nor EDITION is specified, the EDITION is set to Standard (S0), and MAXSIZE is set to 250 GB.  
   
@@ -155,7 +158,7 @@ Specifies the default collation for the metadata catalog. *DATABASE_DEFAULT* spe
  MAXSIZE provides the ability to limit the size of the database. If the size of the database reaches its MAXSIZE you will receive error code 40544. When this occurs, you cannot insert or update data, or create new objects (such as tables, stored procedures, views, and functions). However, you can still read and delete data, truncate tables, drop tables and indexes, and rebuild indexes. You can then update MAXSIZE to a value larger than your current database size or delete some data to free storage space. There may be as much as a fifteen-minute delay before you can insert new data.  
   
 > [!IMPORTANT]  
->  The `CREATE DATABASE` statement must be the only statement in a [!INCLUDE[tsql](../../includes/tsql-md.md)] batch. You must be connected to the **master** database when executing the `CREATE DATABASE` statement.  
+>  The `CREATE DATABASE` statement must be the only statement in a [!INCLUDE[tsql](../../includes/tsql-md.md)] batch.  
   
  To change the size, edition, or service objective values later, use [ALTER DATABASE &#40;Azure SQL Database&#41;](../../t-sql/statements/alter-database-azure-sql-database.md).  
 
@@ -179,8 +182,8 @@ The CATALOG_COLLATION argument is only available during database creation.
 -   After the copying completes, the destination database must be managed as an independent database. You can execute the `ALTER DATABASE` and `DROP DATABASE` statements against the new database independently of the source database. You can also copy the new database to another new database.  
   
 -   The source database may continue to be accessed while the database copy is in progress.  
-  
- For more information, see [Create a copy of an Azure SQL database using Transact-SQL](https://azure.microsoft.com/documentation/articles/sql-database-copy-transact-sql/).  
+
+For more information, see [Create a copy of an Azure SQL database using Transact-SQL](https://azure.microsoft.com/documentation/articles/sql-database-copy-transact-sql/).  
   
 ## Permissions  
  To create a database a login must be one of the following:  
@@ -194,7 +197,7 @@ The CATALOG_COLLATION argument is only available during database creation.
  **Additional requirements for using `CREATE DATABASE ... AS COPY OF` syntax:** The login executing the statement on the local server must also be at least the `db_owner` on the source server. If the login  is based on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentication, the login executing the statement on the local server must have a matching login on the source [!INCLUDE[ssSDS](../../includes/sssds-md.md)] server, with an identical name and password.  
   
 ## Examples  
- All examples must be executed while connected to the **master** database. For more information, see [How to connect to an Azure SQL database with SSMS](https://azure.microsoft.com/documentation/articles/sql-database-connect-to-database/).  
+For more information, see [How to connect to an Azure SQL database with SSMS](https://azure.microsoft.com/documentation/articles/sql-database-connect-to-database/).  
   
 ### Simple Example  
  A simple example for creating a database.  

@@ -26,37 +26,23 @@ This article provides a comprehensive list of the tutorials, demos, and sample a
 
 ## Start here
 
-+ [**Python tutorials**](#bkmk_pythontutorials)
++ [Python tutorials](../tutorials/sql-server-python-tutorials.md)
 
-+ [**R tutorials**](#bkmk_rtutorials)
-
-### Related resources
-
-+ [Samples](#bkmk_samples) are real-world scenarios for embedding machine learning in applications. All samples include code that you can download, modify, and use in production.
-
-+ [Solutions](#bkmk_solutions) from the Microsoft Data Science team demonstrate end-to-end scenarios. Most are designed to run either in SQL Server or in a cloud environment such as Azure Machine Learning.
++ [R tutorials](../tutorials/sql-server-python-tutorials.md)
 
 For more information about requirements and how to get set up, see [Prerequisites](#bkmk_prerequisites).
 
-## <a name="bkmk_prerequisites"></a>Prerequisites
+## Samples and solutions
 
-To use these tutorials and samples, you must have installed one of the following server products:
++ [Samples](#bkmk_samples) 
 
-+ SQL Server 2016 R Services (In-Database)
-  
-  Supports R. Be sure to install the machine learning features, and then enable external scripting.
+    These real-world scenarios from the SQL Server development team demonstrate how to embed machine learning in applications. All samples include code that you can download, modify, and use in production.
 
-+ SQL Server 2017 Machine Learning Services (In-Database)
-  
-  Supports either R or Python. You must select the machine learning feature and the language to install, and then enable external scripting.
++ [Solutions](#bkmk_solutions) 
 
-For more information about setup, see [Prerequisites](#bkmk_Prerequisites).
+    Templates from the Microsoft Data Science team are customizable, to get you started fast with machine learning. Each solution is tailored to a specific task or industry problem; moreover, most solutions are designed to run either in SQL Server or in a cloud environment such as Azure Machine Learning. Other solution can run on Microsoft R Server or HDI Spark clusters.
 
-> [!NOTE]
->
-> Support for Python is a new feature in SQL Server 2017. Although the feature is in pre-release and not supported for production environments, we invite you to try it out and send feedback.
-
-## <a name ="bkmk_samples"></a>SQL Server product samples
+### <a name ="bkmk_samples"></a>SQL Server product samples
 
 These samples and demos provided by the SQL Server and R Server development team highlight ways that you can use embedded analytics in real-world applications.
 
@@ -84,19 +70,7 @@ These samples and demos provided by the SQL Server and R Server development team
    
    Applies to: SQL Server 2017
 
-## Learn about Microsoft R
-
-Wondering what the RevoScaleR package offers? See these tutorials:
-
-+ [Tutorials and sample data for Microsoft R](https://docs.microsoft.com/r-server/r/tutorial-introduction)
-
-  These R Server tutorials demonstrate how you can write R code once and deploy anywhere, using RevoScaleR data sources and remote compute contexts.
-
-+ [Get started with MicrosoftML](https://docs.microsoft.com/r-server/r/concept-what-is-the-microsoftml-package)
-
-  Learn how to use the new algorithms in the MicrosoftML package for advanced modeling and scalable data transformations, optimized for multiple compute contexts.
-
-## <a name="bkmk_solutions"></a>Customizable solutions
+### <a name="bkmk_solutions"></a>Solution templates
 
 The Microsoft Data Science Team has provided solution templates that can be used to jump-start solutions for common scenarios. All code is provided, along with instructions on how to train and deploy a model for scoring using SQL Server stored procedures.
 
@@ -107,10 +81,19 @@ The Microsoft Data Science Team has provided solution templates that can be used
 
 For more information, see [Machine Learning Templates with SQL Server 2016 R Services](https://blogs.technet.microsoft.com/machinelearning/2016/03/23/machine-learning-templates-with-sql-server-2016-r-services/).
 
-## Resources and reading
+## More resources and reading
 
-+ Want to know the real story behind R Services? Read this article from the development and PM team: [Why did we build it?](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2017/01/10/sql-server-r-services-why-did-we-build-it/)
++ [Why did we build it?](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2017/01/10/sql-server-r-services-why-did-we-build-it/)
 
+    Want to know the real story behind R Services? Read this article from the development and PM team that explains the origin and goals of SQL Server R Services.
+
++ [Tutorials and sample data for Microsoft R](https://docs.microsoft.com/r-server/r/tutorial-introduction)
+
+    Learn about Microsoft R, and what the RevoScaleR package offers in this collection of quick tutorials. Learn how to write R code once and deploy anywhere, using RevoScaleR data sources and remote compute contexts.
+
++ [Get started with MicrosoftML](https://docs.microsoft.com/r-server/r/concept-what-is-the-microsoftml-package)
+
+  Learn how to use the new algorithms in the MicrosoftML package for advanced modeling and scalable data transformations, optimized for multiple compute contexts.
 
 ## <a name="bkmk_Prerequisites"></a>Prerequisites
 

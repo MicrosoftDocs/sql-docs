@@ -186,8 +186,8 @@ COMPATIBILITY_LEVEL = { 130 | 120 | 110 | 100 }
  MODIFY NAME **=***new_database_name*  
  Renames the database with the name specified as *new_database_name*.  
   
- MODIFY (EDITION **=** [ 'basic' | 'standard' | 'premium' | 'premiumrs' ] )    
- Changes the service tier of the database.  EDITION change will fail if the MAXSIZE property for the database is set to a value outside the valid range supported by that edition.  
+ MODIFY (EDITION **=** ['basic' | 'standard' | 'premium' | 'premiumrs'] )    
+ Changes the service tier of the database.  EDITION change fails if the MAXSIZE property for the database is set to a value outside the valid range supported by that edition.  
   
  MODIFY (MAXSIZE **=** [100 MB | 500 MB | 1 | 1024…4096] GB)  
  Specifies the maximum size of the database. The maximum size must comply with the valid set of values for the EDITION property of the database. Changing the maximum size of the database may cause the database EDITION to be changed. Following table lists the supported MAXSIZE values and the defaults (D) for the [!INCLUDE[ssSDS](../../includes/sssds-md.md)] service tiers.  
@@ -221,7 +221,7 @@ COMPATIBILITY_LEVEL = { 130 | 120 | 110 | 100 }
   
  The following rules apply to MAXSIZE and EDITION arguments:  
   
--   The MAXSIZE value, if specified, has to be a valid value shown in the table above.  
+-   The MAXSIZE value, if specified, has to be a valid value shown in the previous table.  
   
 -   If EDITION is specified but MAXSIZE is not specified, the default value for the edition is used. For example, is the EDITION is set to Standard, and the MAXSIZE is not specified, then the MAXSIZE is automatically set to 500 MB.  
   
@@ -234,16 +234,16 @@ ELASTIC_POOL (name = \<elastic_pool_name>)
  To add an existing database to an elastic pool, set the SERVICE_OBJECTIVE of the database to ELASTIC_POOL and provide the name of the elastic pool. You can also use this option to change the database to a different elastic pool within the same server. For more information, see [Create and manage a SQL Database elastic pool](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/). To remove a database from an elastic pool, use ALTER DATABASE to set the SERVICE_OBJECTIVE to a single database performance level.  
 
  ADD SECONDARY ON SERVER \<partner_server_name>  
- Creates a geo-replication secondary database with the same name  on a partner server, making the local database into a geo-replication primary, and begins asynchronously replicating data from the primary to the new secondary. If a database with the same name already exists on the secondary, the command will fail. The command is executed on the master database on the server hosting the local database that will become the primary.  
+ Creates a geo-replication secondary database with the same name  on a partner server, making the local database into a geo-replication primary, and begins asynchronously replicating data from the primary to the new secondary. If a database with the same name already exists on the secondary, the command fails. The command is executed on the master database on the server hosting the local database that becomes the primary.  
   
  WITH ALLOW_CONNECTIONS { ALL | **NO** }  
- When ALLOW_CONNECTIONS is not specified, it is set to NO by default. If it is set ALL, it will be a read-only database that will allow all logins with the appropriate permissions to connect.  
+ When ALLOW_CONNECTIONS is not specified, it is set to NO by default. If it is set ALL, it is a read-only database that allows all logins with the appropriate permissions to connect.  
   
  WITH SERVICE_OBJECTIVE {  'S0' | 'S1' | 'S2' | 'S3" | 'S4'| 'S6'| 'S7'| 'S9'| 'S12' | 'P1' | 'P2' | 'P4'| 'P6' | 'P11' | 'P15' | 'PRS1' | 'PRS2' | 'PRS4' | 'PRS6' }  
- When SERVICE_OBJECTIVE is not specified, the secondary database will be created at the same service level as the primary database. When SERVICE_OBJECTIVE is  specified, the secondary database will be created at the specified level. This option supports creating geo-replicated secondaries with less expensive service levels. The SERVICE_OBJECTIVE specified must be within the same edition as the source, e.g. you cannot specify S0 if the edition is premium.  
+ When SERVICE_OBJECTIVE is not specified, the secondary database is created at the same service level as the primary database. When SERVICE_OBJECTIVE is  specified, the secondary database is created at the specified level. This option supports creating geo-replicated secondaries with less expensive service levels. The SERVICE_OBJECTIVE specified must be within the same edition as the source. For example, you cannot specify S0 if the edition is premium.  
   
- ELASTIC_POOL ( name = \<elastic_pool_name>)  
- When ELASTIC_POOL is not specified, the secondary database will not be created in an elastic pool. When ELASTIC_POOL is specified, the secondary database will be created in the specified pool.  
+ ELASTIC_POOL (name = \<elastic_pool_name)  
+ When ELASTIC_POOL is not specified, the secondary database is not created in an elastic pool. When ELASTIC_POOL is specified, the secondary database is created in the specified pool.  
   
 > [!IMPORTANT]  
 >  The user executing the ADD SECONDARY command must be DBManager on primary server, have db_owner membership in local database, and DBManager on secondary server.  
@@ -263,13 +263,13 @@ ELASTIC_POOL (name = \<elastic_pool_name>)
   
 3.  The secondary becomes the primary and begins asynchronous geo-replication with the old primary / the new secondary.  
   
- This sequence ensures that no data loss will occur. The period during which both databases are unavailable is on the order of 0-25 seconds while the roles are switched. The total operation should take no longer than about one minute. If the primary database is unavailable when this command is issued, the command will fail with an error message indicating that the primary database is not available. If the failover process does not complete and appears stuck, you can use the force failover command and accept data loss - and then, if you need to recover the lost data, call devops (CSS) to recover the lost data.  
+ This sequence ensures that no data loss occurs. The period during which both databases are unavailable is on the order of 0-25 seconds while the roles are switched. The total operation should take no longer than about one minute. If the primary database is unavailable when this command is issued, the command fails with an error message indicating that the primary database is not available. If the failover process does not complete and appears stuck, you can use the force failover command and accept data loss - and then, if you need to recover the lost data, call devops (CSS) to recover the lost data.  
   
 > [!IMPORTANT]  
 >  The user executing the FAILOVER command must be DBManager on both the primary server and the secondary server.  
   
  FORCE_FAILOVER_ALLOW_DATA_LOSS  
- Promotes the secondary database in geo-replication partnership on which the command is executed to become the primary and demotes the current primary to become the new secondary. Use this command only when the current primaryh is no longer available. It is designed for disaster recovery only, when restoring availability is critical, and some data loss is acceptable.  
+ Promotes the secondary database in geo-replication partnership on which the command is executed to become the primary and demotes the current primary to become the new secondary. Use this command only when the current primary is no longer available. It is designed for disaster recovery only, when restoring availability is critical, and some data loss is acceptable.  
   
  During a forced failover:  
   
@@ -277,9 +277,9 @@ ELASTIC_POOL (name = \<elastic_pool_name>)
   
 2.  When the original primary can reconnect with the new primary, an incremental backup is taken on the original primary, and the original primary becomes a new secondary.  
   
-3.  To recover data from this incremental backup on the old primary, the user will engage devops/CSS.  
+3.  To recover data from this incremental backup on the old primary, the user engages devops/CSS.  
   
-4.  If there are additional secondaries, they will be automatically reconfigured to become secondaries of the new primary. This process is asynchronous and there may be a delay until this process completes. Until the reconfiguration has completed the secondaries will continue to be secondaries of the old primary.  
+4.  If there are additional secondaries, they are automatically reconfigured to become secondaries of the new primary. This process is asynchronous and there may be a delay until this process completes. Until the reconfiguration has completed, the secondaries continue to be secondaries of the old primary.  
   
 > [!IMPORTANT]  
 >  The user executing the FORCE_FAILOVER_ALLOW_DATA_LOSS command must be DBManager on both the primary server and the secondary server.  
@@ -331,7 +331,7 @@ ALTER DATABASE [db1] MODIFY (EDITION = 'Premium', MAXSIZE = 1024 GB, SERVICE_OBJ
 ```
 
 ### C. Moving a database to a different elastic pool  
- Moves an existing databases into pool named pool1:  
+ Moves an existing database into a pool named pool1:  
   
 ```  
 ALTER DATABASE db1   

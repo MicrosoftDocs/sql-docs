@@ -100,7 +100,7 @@ Specifies the default collation for the metadata catalog. *DATABASE_DEFAULT* spe
  *EDITION*  
  Specifies the service tier of the database. The available values are: 'basic', 'standard', 'premium', and 'premiumrs'.  
   
- When EDITION is specified but MAXSIZE is not specified, MAXSIZE will be set to the most restrictive size that the edition supports.  
+ When EDITION is specified but MAXSIZE is not specified, MAXSIZE is set to the most restrictive size that the edition supports.  
   
  *MAXSIZE*  
  Specifies the maximum size of the database. MAXSIZE must be valid for the specified EDITION (service tier) Following are the supported MAXSIZE values and defaults (D) for the service tiers.  
@@ -173,7 +173,7 @@ Specifies the default collation for the metadata catalog. *DATABASE_DEFAULT* spe
 ## Remarks  
  Databases in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] have several default settings that are set when the database is created. For more information about these default settings, see the list of values in [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md).  
   
- MAXSIZE provides the ability to limit the size of the database. If the size of the database reaches its MAXSIZE you will receive error code 40544. When this occurs, you cannot insert or update data, or create new objects (such as tables, stored procedures, views, and functions). However, you can still read and delete data, truncate tables, drop tables and indexes, and rebuild indexes. You can then update MAXSIZE to a value larger than your current database size or delete some data to free storage space. There may be as much as a fifteen-minute delay before you can insert new data.  
+ MAXSIZE provides the ability to limit the size of the database. If the size of the database reaches its MAXSIZE, you receive error code 40544. When this occurs, you cannot insert or update data, or create new objects (such as tables, stored procedures, views, and functions). However, you can still read and delete data, truncate tables, drop tables and indexes, and rebuild indexes. You can then update MAXSIZE to a value larger than your current database size or delete some data to free storage space. There may be as much as a fifteen-minute delay before you can insert new data.  
   
 > [!IMPORTANT]  
 >  The `CREATE DATABASE` statement must be the only statement in a [!INCLUDE[tsql](../../includes/tsql-md.md)] batch. 
@@ -183,7 +183,7 @@ Specifies the default collation for the metadata catalog. *DATABASE_DEFAULT* spe
 The CATALOG_COLLATION argument is only available during database creation. 
   
 ## Database Copies  
- Copying a database using the `CREATE DATABASE` statement is an asynchronous operation. Therefore, a connection to the [!INCLUDE[ssSDS](../../includes/sssds-md.md)] server is not needed for the full duration of the copy process. The `CREATE DATABASE` statement will return control to the user after the entry in sys.databases is created but before the database copy operation is complete. In other words, the `CREATE DATABASE` statement returns successfully when the database copy is still in progress.  
+ Copying a database using the `CREATE DATABASE` statement is an asynchronous operation. Therefore, a connection to the [!INCLUDE[ssSDS](../../includes/sssds-md.md)] server is not needed for the full duration of the copy process. The `CREATE DATABASE` statement returns control to the user after the entry in sys.databases is created but before the database copy operation is complete. In other words, the `CREATE DATABASE` statement returns successfully when the database copy is still in progress.  
   
 -   Monitoring the copy process on an [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] server: Query the `percentage_complete` or `replication_state_desc` columns in the [dm_database_copies](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md) or the `state` column in the **sys.databases** view. The [sys.dm_operation_status](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md) view can be used as well as it returns the status of database operations including database copy.  
   
@@ -191,7 +191,7 @@ The CATALOG_COLLATION argument is only available during database creation.
   
  The following syntax and semantic rules apply to your use of the `AS COPY OF` argument:  
   
--   The source server name and the server name for the copy target may be the same or different. When they are the same, this parameter is optional and the server context of the current session will be used by default.  
+-   The source server name and the server name for the copy target may be the same or different. When they are the same, this parameter is optional and the server context of the current session is used by default.  
   
 -   The source and destination database names must be specified, unique, and comply with the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rules for identifiers. For more information, see [Identifiers](http://go.microsoft.com/fwlink/p/?LinkId=180386).  
   

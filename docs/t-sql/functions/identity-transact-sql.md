@@ -56,7 +56,7 @@ manager: "jhubbard"
  Replication may affect the @@IDENTITY value, since it is used within the replication triggers and stored procedures. @@IDENTITY is not a reliable indicator of the most recent user-created identity if the column is part of a replication article. You can use the SCOPE_IDENTITY() function syntax instead of @@IDENTITY. For more information, see [SCOPE_IDENTITY &#40;Transact-SQL&#41;](../../t-sql/functions/scope-identity-transact-sql.md)  
   
 > [!NOTE]  
->  The calling stored procedure or [!INCLUDE[tsql](../../includes/tsql-md.md)] statement must be rewritten to use the SCOPE_IDENTITY() function which will return the latest identity used within the scope of that user statement, and not the identity within the scope of the nested trigger used by replication.  
+>  The calling stored procedure or [!INCLUDE[tsql](../../includes/tsql-md.md)] statement must be rewritten to use the `SCOPE_IDENTITY()` function, which returns the latest identity used within the scope of that user statement, and not the identity within the scope of the nested trigger used by replication.  
   
 ## Examples  
  The following example inserts a row into a table with an identity column (`LocationID`) and uses `@@IDENTITY` to display the identity value used in the new row.  

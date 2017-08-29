@@ -24,7 +24,7 @@ author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
 ---
-# \@\@ERROR (Transact-SQL)
+# \@\@ERROR or <@@ERROR> or  <@@>ERROR or @@ERROR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Returns the error number for the last [!INCLUDE[tsql](../../includes/tsql-md.md)] statement executed.  

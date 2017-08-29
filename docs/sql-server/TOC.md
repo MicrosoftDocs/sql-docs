@@ -35,6 +35,7 @@
 # [Master Data Services](../master-data-services/master-data-services-overview-mds.md)
 # [Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)
 # [SQL Server Migration Assistant](../ssma/sql-server-migration-assistant.md)
+# [Data Migration Assistant](../dma/dma-overview.md)
 # [Stretch Database](../sql-server/stretch-database/stretch-database.md)
 # [Tutorials for SQL Server](tutorials-for-sql-server-2016.md)
 # [Local content with Help Viewer](../release-notes/sql-server-help-installation.md)

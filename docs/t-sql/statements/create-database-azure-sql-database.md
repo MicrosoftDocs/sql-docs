@@ -53,19 +53,12 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
   
 <edition_options> ::=   
 {  
-<<<<<<< HEAD
-      MAXSIZE = { 100 MB | 250 MB | 500 MB | 1 … 1024 … 4096 GB }      
-    | ( EDITION = {  'basic' | 'standard' | 'premium' | 'premiumrs'}   
-    | SERVICE_OBJECTIVE =   
-          {  'basic' | 'S0' | 'S1' | 'S2' | 'S3'   
-            | 'P1' | 'P2' | 'P4'| 'P6' | 'P11'  | 'P15'  
-=======
-      MAXSIZE = { 100 MB | 250 MB | 500 MB | 1 | 1024…4096 } GB    
+
+      MAXSIZE = { 100 MB | 250 MB | 500 MB | 1 … 1024 … 4096 GB }    
     | ( EDITION = {  'basic' | 'standard' | 'premium' | 'premiumrs'}   
     | SERVICE_OBJECTIVE =   
           {  'basic' | 'S0' | 'S1' | 'S2' | 'S3' | 'S4'| 'S6'| 'S7'| 'S9'| 'S12' | 
-            | 'P1' | 'P2' | 'P3' | 'P4'| 'P6' | 'P11'  | 'P15'  
->>>>>>> df3152bafa1c29f7529549322d61a944d96c5a1f
+            | 'P1' | 'P2' | 'P4'| 'P6' | 'P11'  | 'P15'  
             | 'PRS1' | 'PRS2' | 'PRS4' | 'PRS6' 
             | { ELASTIC_POOL(name = <elastic_pool_name>) } }  ) 
 }  

@@ -65,7 +65,7 @@ All system date and time values are derived from the operating system of the com
 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] obtains the date and time values by using the GetSystemTimeAsFileTime() Windows API. The accuracy depends on the computer hardware and version of Windows on which the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is running. The precision of this API is fixed at 100 nanoseconds. The accuracy can be determined by using the GetSystemTimeAdjustment() Windows API.
   
 |Function|Syntax|Return value|Return data type|Determinism|  
-|---|---|---|---|
+|---|---|---|---|---|
 |[SYSDATETIME](../../t-sql/functions/sysdatetime-transact-sql.md)|SYSDATETIME ()|Returns a **datetime2(7)** value that contains the date and time of the computer on which the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is running. The time zone offset is not included.|**datetime2(7)**|Nondeterministic|  
 |[SYSDATETIMEOFFSET](../../t-sql/functions/sysdatetimeoffset-transact-sql.md)|SYSDATETIMEOFFSET ( )|Returns a **datetimeoffset(7)** value that contains the date and time of the computer on which the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is running. The time zone offset is included.|**datetimeoffset(7)**|Nondeterministic|  
 |[SYSUTCDATETIME](../../t-sql/functions/sysutcdatetime-transact-sql.md)|SYSUTCDATETIME ( )|Returns a **datetime2(7)** value that contains the date and time of the computer on which the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is running. The date and time is returned as UTC time (Coordinated Universal Time).|**datetime2(7)**|Nondeterministic|  
@@ -91,7 +91,7 @@ All system date and time values are derived from the operating system of the com
 ###  <a name="fromParts"></a> Functions that get Date and Time values from their parts
   
 |Function|Syntax|Return value|Return data type|Determinism|  
-|---|---|---|---|
+|---|---|---|---|---|
 |[DATEFROMPARTS](../../t-sql/functions/datefromparts-transact-sql.md)|DATEFROMPARTS  ( *year*, *month*, *day* )|Returns a **date** value for the specified year, month, and day.|**date**|Deterministic|  
 |[DATETIME2FROMPARTS](../../t-sql/functions/datetime2fromparts-transact-sql.md)|DATETIME2FROMPARTS  ( *year*, *month*, *day*, *hour*, *minute*, *seconds*, *fractions*, *precision* )|Returns a **datetime2** value for the specified date and time and with the specified precision.|**datetime2(** *precision* **)**|Deterministic|  
 |[DATETIMEFROMPARTS](../../t-sql/functions/datetimefromparts-transact-sql.md)|DATETIMEFROMPARTS  ( *year*, *month*, *day*, *hour*, *minute*, *seconds*, *milliseconds* )|Returns a **datetime** value for the specified date and time.|**datetime**|Deterministic|  
@@ -102,7 +102,7 @@ All system date and time values are derived from the operating system of the com
 ###  <a name="GetDateandTimeDifference"></a> Functions that get Date and Time difference
   
 |Function|Syntax|Return value|Return data type|Determinism|  
-|---|---|---|---|
+|---|---|---|---|---|
 |[DATEDIFF](../../t-sql/functions/datediff-transact-sql.md)|DATEDIFF ( *datepart* , *startdate* , *enddate* )|Returns the number of date or time *datepart* boundaries that are crossed between two specified dates.|**int**|Deterministic|  
 |[DATEDIFF_BIG](../../t-sql/functions/datediff-big-transact-sql.md)|DATEDIFF_BIG ( *datepart* , *startdate* , *enddate* )|Returns the number of date or time *datepart* boundaries that are crossed between two specified dates.|**bigint**|Deterministic|  
   

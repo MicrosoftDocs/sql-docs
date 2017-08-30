@@ -88,7 +88,7 @@ CREATE TABLE dbo.MyTable
   
 GO  
   
-INSERT INTO dbo.MyTable VALUES (9223372036854775807, 214483647,32767,255);  
+INSERT INTO dbo.MyTable VALUES (9223372036854775807, 2147483647,32767,255);  
  GO  
 SELECT MyBigIntColumn, MyIntColumn, MySmallIntColumn, MyTinyIntColumn  
 FROM dbo.MyTable;  
@@ -99,7 +99,7 @@ FROM dbo.MyTable;
 ```sql
 MyBigIntColumn       MyIntColumn MySmallIntColumn MyTinyIntColumn  
 -------------------- ----------- ---------------- ---------------  
-9223372036854775807  214483647   32767            255  
+9223372036854775807  2147483647  32767            255  
   
 (1 row(s) affected)  
 ```  

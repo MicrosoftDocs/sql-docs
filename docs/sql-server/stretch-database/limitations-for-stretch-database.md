@@ -56,8 +56,8 @@ Stretch-enabled tables have the following limitations.
   
 -   Memory-optimized tables  
   
- ### Data types  
- -   text, ntext and image  
+### Data types  
+-   text, ntext and image  
   
 -   timestamp  
   

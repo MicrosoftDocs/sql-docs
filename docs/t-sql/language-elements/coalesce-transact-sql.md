@@ -60,9 +60,9 @@ COALESCE ( expression [ ,...n ] )
  END  
  ```  
   
- This means that the input values (*expression1*, *expression2*, *expressionN*, etc.) will be evaluated multiple times. Also, in compliance with the SQL standard, a value expression that contains a subquery is considered non-deterministic and the subquery is evaluated twice. In either case, different results can be returned between the first evaluation and subsequent evaluations.  
+ This means that the input values (*expression1*, *expression2*, *expressionN*, etc.) are evaluated multiple times. Also, in compliance with the SQL standard, a value expression that contains a subquery is considered non-deterministic and the subquery is evaluated twice. In either case, different results can be returned between the first evaluation and subsequent evaluations.  
   
- For example, when the code `COALESCE((subquery), 1)` is executed, the subquery is evaluated twice. As a result, you can get different results depending on the isolation level of the query. For example, the code can return `NULL` under the `READ COMMITTED` isolation level in a multi-user environment. To ensure stable results are returned, use the `SNAPSHOT ISOLATION` isolation level, or replace `COALESE` with the `ISNULL` function. Alternatively, you can rewrite the query to push the subquery into a subselect as shown in the following example.  
+ For example, when the code `COALESCE((subquery), 1)` is executed, the subquery is evaluated twice. As a result, you can get different results depending on the isolation level of the query. For example, the code can return `NULL` under the `READ COMMITTED` isolation level in a multi-user environment. To ensure stable results are returned, use the `SNAPSHOT ISOLATION` isolation level, or replace `COALESE` with the `ISNULL` function. Alternatively, you can rewrite the query to push the subquery into a subselect as shown in the following example:  
   
 ```sql  
 SELECT CASE WHEN x IS NOT NULL THEN x ELSE 1 END  
@@ -80,7 +80,7 @@ SELECT (SELECT Nullable FROM Demo WHERE SomeCol = 1) AS x
   
 2.  Data type determination of the resulting expression is different. `ISNULL` uses the data type of the first parameter, `COALESCE` follows the `CASE` expression rules and returns the data type of value with the highest precedence.  
   
-3.  The NULLability of the result expression is different for `ISNULL` and `COALESCE`. The `ISNULL` return value is always considered NOT NULLable (assuming the return value is a non-nullable one) whereas `COALESCE` with non-null parameters is considered to be `NULL`. So the expressions `ISNULL(NULL, 1)` and `COALESCE(NULL, 1)` although equivalent have different nullability values. This makes a difference if you are using these expressions in computed columns, creating key constraints or making the return value of a scalar UDF deterministic so that it can be indexed as shown in the following example.  
+3.  The NULLability of the result expression is different for `ISNULL` and `COALESCE`. The `ISNULL` return value is always considered NOT NULLable (assuming the return value is a non-nullable one) whereas `COALESCE` with non-null parameters is considered to be `NULL`. So the expressions `ISNULL(NULL, 1)` and `COALESCE(NULL, 1)`, although equivalent, have different nullability values. This makes a difference if you are using these expressions in computed columns, creating key constraints or making the return value of a scalar UDF deterministic so that it can be indexed as shown in the following example:  
   
     ```sql  
     USE tempdb;  
@@ -108,7 +108,7 @@ SELECT (SELECT Nullable FROM Demo WHERE SomeCol = 1) AS x
   
 4.  Validations for `ISNULL` and `COALESCE` are also different. For example, a `NULL` value for `ISNULL` is converted to **int** whereas for `COALESCE`, you must provide a data type.  
   
-5.  `ISNULL` takes only 2 parameters whereas `COALESCE` takes a variable number of parameters.  
+5.  `ISNULL` takes only two parameters whereas `COALESCE` takes a variable number of parameters.  
   
 ## Examples  
   

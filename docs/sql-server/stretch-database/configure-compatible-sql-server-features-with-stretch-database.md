@@ -45,3 +45,4 @@ If TDE is enabled on your local database, it will not be automatically enabled o
 If you're using temporal tables, you can enable Stretch Database on the history table, but not on the current table.
 -   For guidance about using temporal tables with Stretch Database, see [Manage Retention of Historical Data in System-Versioned Temporal Tables](../../relational-databases/tables/manage-retention-of-historical-data-in-system-versioned-temporal-tables.md).
 -   To filter rows to migrate from the history table by using a sliding window, see [Select rows to migrate by using a filter function](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md).
+-   You can't enable Stretch Database on the temporal history table if the table is memory-optimized. Memory-optimized tables are not supported.

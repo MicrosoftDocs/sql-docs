@@ -62,6 +62,9 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
             | 'PRS1' | 'PRS2' | 'PRS4' | 'PRS6' 
             | { ELASTIC_POOL(name = <elastic_pool_name>) } }  ) 
 }  
+
+[ AS COPY OF [source_server_name.]source_database_name ]
+
  [;]  
   
 

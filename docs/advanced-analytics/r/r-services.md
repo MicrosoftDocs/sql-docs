@@ -118,6 +118,6 @@ The Azure Marketplace contains several virtual machines that support data scienc
 
 [Getting started with Machine Learning Services](getting-started-with-sql-server-r-services.md)
 
-[Getting started with Machiine Learning Server](getting-started-with-microsoft-r-server-standalone.md)
+[Getting started with Machine Learning Server](getting-started-with-microsoft-r-server-standalone.md)
 
 [Install the SQL Server database engine](../../database-engine/install-windows/install-sql-server-database-engine.md)

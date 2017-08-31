@@ -107,7 +107,7 @@ When you run R jobs from a remote data-science workstation by using Windows inte
 
 To fix the issue, we recommend that you upgrade to a later service release.
 
-If you cannot upgrade, you can use a SQL login to run remote R jobs that might require embedded ODBC calls.
+If you cannot upgrade, you can use a SQL logon to run remote R jobs that might require embedded ODBC calls.
 
 **Applies to:** SQL Server 2016 R Services Express Edition
 

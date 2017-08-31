@@ -1,7 +1,7 @@
 ---
 title: "KILL (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/26/2017"
+ms.date: "08/31/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -65,10 +65,16 @@ KILL 'session_id'
 ## Arguments  
  *session ID*  
  Is the session ID of the process to terminate. *session ID* is a unique integer (**int**) that is assigned to each user connection when the connection is made. The session ID value is tied to the connection for the duration of the connection. When the connection ends, the integer value is released and can be reassigned to a new connection.  
+The following query can help you identify the `session_id` that you want to kill:  
+ ```sql  
+ SELECT conn.session_id, host_name, program_name,
+     nt_domain, login_name, connect_time, last_request_end_time 
+FROM sys.dm_exec_sessions AS sess
+JOIN sys.dm_exec_connections AS conn
+    ON sess.session_id = conn.session_id;
+```  
   
- Use KILL *session ID* to terminate regular nondistributed and distributed transactions that are associated with a specified session ID.  
-  
- *UOW*  
+*UOW*  
 **Applies to**: ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  Identifies the Unit of Work ID (UOW) of distributed transactions. *UOW* is a GUID that may be obtained from the request_owner_guid column of the sys.dm_tran_locks dynamic management view. *UOW* also can be obtained from the error log or through the MS DTC monitor. For more information about monitoring distributed transactions, see the MS DTC documentation.  
@@ -84,16 +90,12 @@ KILL 'session_id'
  Use KILL very carefully, especially when critical processes are running. You cannot kill your own process. Other processes you should not kill include the following:  
   
 -   AWAITING COMMAND  
-  
 -   CHECKPOINT SLEEP  
-  
 -   LAZY WRITER  
-  
 -   LOCK MONITOR  
-  
 -   SIGNAL HANDLER  
   
- Use @@SPID to display the session ID value for the current session.  
+Use @@SPID to display the session ID value for the current session.  
   
  To obtain a report of active session ID values, you can query the session_id column of the sys.dm_tran_locks, sys.dm_exec_sessions, and sys.dm_exec_requests dynamic management views. You can also view the SPID column that is returned by the sp_who system stored procedure. If a rollback is in progress for a specific SPID, the cmd column in the sp_who result set for that SPID will indicate KILLED/ROLLBACK.  
   
@@ -109,7 +111,6 @@ KILL 'session_id'
  If the rollback of the session ID or UOW has finished when the KILL *session ID*|*UOW* WITH STATUSONLY statement is executed, or if no session ID or UOW is being rolled back, KILL *session ID*|*UOW* WITH STATUSONLY will return the following error:  
   
  `"Msg 6120, Level 16, State 1, Line 1"`  
-  
  `"Status report cannot be obtained. Rollback operation for Process ID <session ID> is not in progress."`  
   
  The same status report can be obtained by repeating the same KILL *session ID*|*UOW* statement without using the WITH STATUSONLY option; however, we do not recommend doing this. Repeating a KILL *session ID* statement might terminate a new process if the rollback had finished and the session ID was reassigned to a new task before the new KILL statement is run. Specifying WITH STATUSONLY prevents this from happening.  
@@ -124,7 +125,7 @@ KILL 'session_id'
 ### A. Using KILL to terminate a session  
  The following example shows how to terminate session ID `53`.  
   
-```  
+```sql  
 KILL 53;  
 GO  
 ```  
@@ -132,7 +133,7 @@ GO
 ### B. Using KILL session ID WITH STATUSONLY to obtain a progress report  
  The following example generates a status of the rollback process for the specific session ID.  
   
-```  
+```sql  
 KILL 54;  
 KILL 54 WITH STATUSONLY;  
 GO  
@@ -144,18 +145,10 @@ spid 54: Transaction rollback in progress. Estimated rollback completion: 80% Es
 ### C. Using KILL to terminate an orphaned distributed transaction  
  The following example shows how to terminate an orphaned distributed transaction (session ID = -2) with a *UOW* of `D5499C66-E398-45CA-BF7E-DC9C194B48CF`.  
   
-```  
+```sql  
 KILL 'D5499C66-E398-45CA-BF7E-DC9C194B48CF';  
 ```  
-  
-## Examples: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### D. Using KILL to terminate a session  
- The following example shows how to terminate session ID `SID535`.  
-  
-```  
-KILL 'SID535';  
-```  
+
   
 ## See Also  
  [KILL STATS JOB &#40;Transact-SQL&#41;](../../t-sql/language-elements/kill-stats-job-transact-sql.md)   
@@ -170,4 +163,3 @@ KILL 'SID535';
  [sp_who &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "Known issues in Machine Learning services | Microsoft Docs"
+title: "Known issues in Machine Learning Services | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
 ms.date: "06/16/2017"
@@ -16,22 +16,22 @@ author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
 ---
-# Known issues in Machine Learning services
+# Known issues in Machine Learning Services
 
-This article describes known problems or limitations with machine learning components that are provided as an option in SQL Server 2016 and SQL Server 2017.
+This article describes known problems or limitations with Machine Learning components that are provided as an option in SQL Server 2016 and SQL Server 2017.
 
 The information here applies to all of the following, unless specifically indicated:
 
 * SQL Server 2016
 
-  - Microsoft R services (in-database)
-  - Microsoft R Server (standalone)
+  - Microsoft R services (In-Database)
+  - Microsoft R Server (Standalone)
 
 * SQL Server 2017
 
-  - Machine Learning services for R (in-database)
-  - Machine Learning services for Python (in-database)
-  - Machine Learning server (standalone)
+  - Machine Learning Services for R (In-Database)
+  - Machine Learning Services for Python (In-Database)
+  - Machine Learning Server (Standalone)
 
 ## Setup and configuration issues
 
@@ -39,7 +39,7 @@ For a description of processes and common questions that are related to initial 
 
 ### Unable to install Python components in offline installations of SQL Server 2017
 
-If you install SQL Server 2017 on a computer without internet access, the installer might fail to display the page that prompts for the location of the downloaded Python components. In such an instance, you can install the Machine Learning services feature, but not the Python components.
+If you install SQL Server 2017 on a computer without internet access, the installer might fail to display the page that prompts for the location of the downloaded Python components. In such an instance, you can install the Machine Learning Services feature, but not the Python components.
 
 This issue will be fixed in an upcoming release. As a workaround, you can temporarily enable internet access for the duration of the setup. This limitation does not apply to R.
 
@@ -63,7 +63,7 @@ To avoid problems with R packages, you can also upgrade the version of the R lib
 
 ### <a name="bkmk_sqlbindr"></a> Warning of incompatible version when you connect to an older version of SQL Server R Services from a client by using [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]
 
-If you installed Microsoft R Server on a client computer by using the setup wizard for [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] or the new standalone installer for [Microsoft R Server](https://msdn.microsoft.com/microsoft-r/rserver-install-windows), and run R code in a compute context that uses an earlier version of SQL Server R Services, you might see an error like the following:
+If you installed Microsoft R Server on a client computer by using the setup wizard for [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] or the new Standalone installer for [Microsoft R Server](https://msdn.microsoft.com/microsoft-r/rserver-install-windows), and run R code in a compute context that uses an earlier version of SQL Server R Services, you might see an error like the following:
 
 >*You are running version 9.0.0 of Microsoft R Client on your computer, which is incompatible with the Microsoft R Server version 8.0.3. Download and install a compatible version.*
 
@@ -111,7 +111,7 @@ If you cannot upgrade, you can use a SQL login to run remote R jobs that might r
 
 **Applies to:** SQL Server 2016 R Services Express Edition
 
-### Performance limits when R libraries are called from standalone R tools
+### Performance limits when R libraries are called from Standalone R tools
 
 It is possible to call the R tools and libraries that are installed for SQL Server R Services from an external R application such as RGui. This call might be handy when you install new packages, or when you run ad hoc tests on very short code samples.
 
@@ -120,7 +120,7 @@ However, be aware that outside of SQL Server, performance will be limited. For e
 * Avoid calling the R libraries that are used by SQL Server from external R tools.
 * If you need to run extensive R code on the SQL Server computer without using SQL Server, install a separate instance of R, such as Microsoft R Client, and then ensure that your R development tools point to the new library.
 
-For more information, see [Create a standalone R Server](r/create-a-standalone-r-server.md).
+For more information, see [Create a Standalone R Server](r/create-a-standalone-r-server.md).
 
 ### The R script is throttled due to resource governance default values
 
@@ -266,7 +266,7 @@ Parallelism for `rxExec` across multiple processes will be added in an upcoming 
 
 ### Increase the maximum parameter size to support rxGetVarInfo
 
-If you use data sets with extremely large numbers of variables (for example, over 40,000), you should set the `max-ppsize` flag when you start R in order to use functions such as `rxGetVarInfo`. The `max-ppsize` flag specifies the maximum size of the pointer protection stack.
+If you use data sets with extremely large numbers of variables (for example, over 40,000), set the `max-ppsize` flag when you start R to use functions such as `rxGetVarInfo`. The `max-ppsize` flag specifies the maximum size of the pointer protection stack.
 
 If you are using the R console (for example, in rgui.exe or rterm.exe), you can set the value of max-ppsize to 500000 by typing:
 
@@ -298,9 +298,9 @@ Installing Revolution R Enterprise side by side with any version of [!INCLUDE[rs
 
 If you have a license to use a different version of Revolution R Enterprise, you must put it on a separate computer from both the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance and any workstation that you want to use to connect to the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance.
 
-### Use of R productivity environment is not supported
+### The use of an R productivity environment is not supported
 
-Some pre-release versions of [!INCLUDE[rsql_productname](../includes/rsql-productname-md.md)] included an R development environment for Windows that was created by Revolution Analytics. This tool is not longer provided and is not supported.
+Some pre-release versions of [!INCLUDE[rsql_productname](../includes/rsql-productname-md.md)] included an R development environment for Windows that was created by Revolution Analytics. This tool is no longer provided, and it is not supported.
 
 For compatibility with [!INCLUDE[rsql_productname](../includes/rsql-productname-md.md)], we strongly recommend that you install Microsoft R Client or Microsoft R Server instead of the Revolution Analytics tools. [R Tools for Visual Studio](https://www.visualstudio.com/vs/rtvs/) is another recommended client that supports Microsoft R solutions.
 

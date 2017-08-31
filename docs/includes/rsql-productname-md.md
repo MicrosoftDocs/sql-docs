@@ -1,1 +1,1 @@
- R Services (in-database) 
+ R Services (In-Database) 

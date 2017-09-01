@@ -1,7 +1,7 @@
 ---
-title: "Run from Command Line (SQL Server Data Migration Assistant) | Microsoft Docs"
+title: "Run from command line (SQL Server Data Migration Assistant) | Microsoft Docs"
 ms.custom: 
-ms.date: "08/24/2017"
+ms.date: "08/31/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -19,14 +19,14 @@ ms.author: "carlasab"
 manager: "craigg"
 ---
 
-# Run Data Migration Assistant from Command Line
-With DMA v2.1 and above when you install DMA, it will also install dmacmd.exe in *%ProgramFiles%\\Microsoft Data Migration Assistant\\. Use dmacmd.exe to assess your databases in an unattended mode. This is especially useful when assessing several databases or huge databases. Output the result to JSON or CSV file.
+# Run Data Migration Assistant from command line
+With version 2.1 and above, when you install Data Migration Assistant, it will also install dmacmd.exe in *%ProgramFiles%\\Microsoft Data Migration Assistant\\. Use dmacmd.exe to assess your databases in an unattended mode, and output the result to JSON or CSV file. This is especially useful when assessing several databases or huge databases. 
 
 > [!NOTE]
 > Dmacmd.exe supports running assessments only. Migrations are not supported at this time.
 
 
-## Command line arguments
+## Command-line arguments
 
 ```
 DmaCmd.exe /AssessmentName="string"
@@ -45,7 +45,7 @@ DmaCmd.exe /AssessmentName="string"
 |`/AssessmentDatabases`     | Space delimited list of connection strings. Database name (Initial Catalog) is case sensitive. | Y
 |`/AssessmentTargetPlatform`     | Target platform for the assessment, supported values: SqlServer2012, SqlServer2014, SqlServer2016 and AzureSqlDatabaseV12. Default is SqlServer2016   | N
 |`/AssessmentEvaluateFeatureParity`  | Run feature parity rules  | N
-|`/AssessmentEvaluateCompatibilityIssues`     | Run compatibility rules.  | Y <br> (Either AssessmentEvaluateCompatibilityIssues or AssessmentEvaluateRecommendations is required.)
+|`/AssessmentEvaluateCompatibilityIssues`     | Run compatibility rules  | Y <br> (Either AssessmentEvaluateCompatibilityIssues or AssessmentEvaluateRecommendations is required.)
 |`/AssessmentEvaluateRecommendations`     | Run feature recommendations        | Y <br> (Either AssessmentEvaluateCompatibilityIssues or AssessmentEvaluateRecommendationsis required)
 |`/AssessmentOverwriteResult`     | Overwrite the result file    | N
 |`/AssessmentResultJson`     | Full path to the JSON result file     | Y <br> (Either AssessmentResultJson or AssessmentResultCsv is required)
@@ -127,6 +127,6 @@ Catalog=DatabaseName3;Integrated Security=true"***
 
 
 
-## See Also
+## See also
 
 [Data Migration Assistant Download](https://www.microsoft.com/download/details.aspx?id=53595)

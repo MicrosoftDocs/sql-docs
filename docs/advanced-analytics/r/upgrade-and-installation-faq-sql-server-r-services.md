@@ -100,27 +100,27 @@ When all setup files have been copied to a local directory, start the setup util
 
 For more information, see this blog by the support team: [Deploying R Services on Computers without Internet Access](https://blogs.msdn.microsoft.com/sqlcat/2016/10/20/do-it-right-deploying-sql-server-r-services-on-computers-without-internet-access/)
 
-### Upgrading R components offline
+### Upgrade R components offline
 
 If you install or upgrade servers that are not connected to the Internet, you must download an updated version of the R components manually before beginning the refresh. For more information, see [Installing R Components without Internet Access](../../advanced-analytics/r-services/installing-ml-components-without-internet-access.md).
 
 ### Schedule for update of R components
 
-As hotfixes or improvements to SQL Server 2016 are released, R components are upgraded or refreshed as well, if your instance already includes the R Services feature.
+As hotfixes or improvements to SQL Server 2016 are released, R components are also upgraded or refreshed, if your instance already includes the R Services feature.
 
 If you are using SQL Server 2017, upgrades to R components are automatically installed.
 
-As of December 2016, it is also possible to upgrade R components on a faster cadence than the SQL Server release cycle, by *binding* an instance of R Services to the Modern Software Lifecycle policy. Currently support is provided only for upgrade of 2016 instances. However, when a new version of R Server is released, you will be able to upgraded 2017 instances as well.
+As of December 2016, you can upgrade R components on a faster cadence than the SQL Server release cycle. Do this by *binding* an instance of R Services to the Modern Software Lifecycle policy. Currently support is provided only for upgrade of 2016 instances. When a new version of R Server is released, you will be able to upgrade to 2017 instances as well.
 
-For more information, see [Use SqlBindR to Upgrade an Instance of SQL Server R Services](../../advanced-analytics/r-services/use-sqlbindr-exe-to-upgrade-an-instance-of-r-services.md)
+For more information, see [Use SqlBindR to Upgrade an Instance of SQL Server R Services](../../advanced-analytics/r-services/use-sqlbindr-exe-to-upgrade-an-instance-of-r-services.md).
 
-### Upgrading from a pre-release version of SQL Server 2016
+### Upgrade from a pre-release version of SQL Server 2016
 
 In general, in-place upgrades are not supported for any pre-release versions.
 
-To install R Services successfully, you must uninstall any previous versions of [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] and its related R components, including SQL Server 2016 CTP3, CTP3.1, CTP3.2, RC0, or RC1.
+To install R Services successfully, you must uninstall any previous versions of [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] and its related R components. This includes SQL Server 2016 CTP3, CTP3.1, CTP3.2, RC0, or RC1.
 
-Uninstalling of a pre-release version can be complex and require running a special script; we recommend that you contact technical support for assistance.
+Uninstalling a pre-release version can be complex and require running a special script. Contact technical support for assistance.
 
 The following versions were installed with pre-release versions of SQL Server 2016.
 
@@ -136,32 +136,32 @@ The following versions were installed with pre-release versions of SQL Server 20
 
 If you have any doubt about which version you are using, run `@@VERSION` from SQL Server Management Studio.
 
-### Problems with Setup of R Server (Standalone)
+### Problems with setup of R Server (Standalone)
 
-This section describes issues specific to installation of Microsoft R Server (Standalone) using SQL Server 2016 setup. For more general issues related to R Server upgrades, see the MSDN site for [Microsoft R Server](https://msdn.microsoft.com/microsoft-r/).
+This section describes issues specific to installations of Microsoft R Server (Standalone) that use SQL Server 2016 setup. For more general issues related to R Server upgrades, see [Microsoft R Server](https://msdn.microsoft.com/microsoft-r/) on MSDN.
 
 #### Failure to install localized versions
 
-When performing an offline install of R Server, pre-release versions do not allow you to use localized languages.
+When you install R Server offline, pre-release versions do not allow you to use localized languages.
 
-Generally, when the server does not have Internet access, before running setup you must download all the installation packages for R Server, and then specify the location of the files during the installation.
+Generally, when the server does not have Internet access, before running setup you must download all the installation packages for R Server. Then you specify the location of the files during the installation.
 
-However, if the language identifier associated with the installer package is not the same as the SQL Server setup language, when you reach the page for the R component install, the **Next** button is disabled and you cannot proceed with the installation. As a workaround, you can rename the package to use a matching identifier.
+However, if the language identifier associated with the installer package is not the same as the SQL Server setup language, a problem occurs. When you reach the page for the R component installation, the **Next** button is disabled and you cannot proceed with the installation. As a workaround, you can rename the package to use a matching identifier.
 
 For example, the name of the installation packages might be `SRO_3.2.2.0_1031.cab`.
 To install the 104 language on SQL Server, rename the file to `SRO_3.2.2.0_1041.cab`.
 
 #### Installing R Services and R Server Standalone on the same computer
 
-Generally, it is not recommended to install both R Services (In-Database) and R Server (Standalone) on the same computer. However, if the server has sufficient capacity, R Server Standalone might be useful as a development tool. You might also need to use the operationalization features of R Server and access SQL Server data from R Server without data movement.
+Generally, you do not install both R Services (In-Database) and R Server (Standalone) on the same computer. However, if the server has sufficient capacity, R Server Standalone might be useful as a development tool. You might also need to use the operationalization features of R Server, and access SQL Server data from R Server without data movement.
 
-Note that if you install both R Server and R Services on the same computer, two separate sets of the same R libraries are installed: one for use by the SQL server instance, and one for development use or use by R Server.
+Note that if you install both R Server and R Services on the same computer, two separate sets of the same R libraries are installed. One is for use by the SQL Server instance, and one is for development use or use by R Server.
 
 In earlier versions of SQL Server 2016, installing both R Server (Standalone) and R Services (In-Database) at the same time could cause setup to fail with an “access denied” message. This issue was fixed in Service Pack 1 for SQL Server 2016.
 
-If you encountered this error, and need to upgrade these features, we recommend that you perform a slipstream install of SQL Server 2016 with SP1. There are two ways to resolve the issue, both of which require uninstall and reinstall.
+If you encountered this error, and need to upgrade these features, perform a slipstream installation of SQL Server 2016 with SP1. There are two ways to resolve the issue, both of which require uninstalling and reinstalling.
 
-1. Uninstall R Services (In-Database) and make sure the user accounts for SQLRUserGroup are removed.
+1. Uninstall R Services (In-Database), and make sure the user accounts for SQLRUserGroup are removed.
 
 2. Restart the server, and then reinstall R Server (Standalone).
 
@@ -169,7 +169,7 @@ If you encountered this error, and need to upgrade these features, we recommend 
 
 4. Choose the instance, and then select the **R Services (In-Database)** option to add.
 
-In some cases, this procedure will fail to clear up the earlier failed installation. In that case, you should uninstall and reinstall as follows:
+In some cases, this procedure fails to resolve the problem. Try the following workaround:
 
 1. Uninstall R Services (In-Database) and R Server (Standalone) at the same time.
 
@@ -177,9 +177,9 @@ In some cases, this procedure will fail to clear up the earlier failed installat
 
 3. Restart the server.
 
-4. Run SQL Server setup and add the R Services (In-Database) feature only. Do not select **R Server (Standalone)**.
+4. Run SQL Server setup, and add the R Services (In-Database) feature only. Do not select **R Server (Standalone)**.
 
-## See Also
+## See also
 
  [Getting Started with SQL Server R Services](../r/getting-started-with-sql-server-r-services.md)
 

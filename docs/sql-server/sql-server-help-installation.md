@@ -55,9 +55,9 @@ The following table lists the tools that install Help Viewer, based on the SQL S
 1. Open Help Viewer by launching SQL Server Management Studio or Visual Studio, and clicking **Add and Remove Help Content** on the **Help** menu.  
 2. Click the **Manage Content** tab.  
 3. To install the Help from an online source, click **Online** in the **Installation source** area.  
-![HelpViewer2_ManageContent_OnlineSource](../release-notes/media/helpviewer2-managecontent-onlinesource.png)  
+![HelpViewer2_ManageContent_OnlineSource](../sql-server/media/helpviewer2-managecontent-onlinesource.png)  
 7. Click **Add** next to the documentation you want to install, and then click **Update**.  
-![HelpViewer2_ManageContent_AddContent](../release-notes/media/helpviewer2-managecontent-addcontent.png)     
+![HelpViewer2_ManageContent_AddContent](../sql-server/media/helpviewer2-managecontent-addcontent.png)     
   
    >[!IMPORTANT] 
    >In SQL Server Management Studio and Visual Studio, the Help Viewer application may freeze (hang) during the process of adding the documentation. To resolve this issue, do the following. For more information about this issue, see [Visual Studio Help Viewer freezes](https://msdn.microsoft.com/library/mt654096.aspx).  
@@ -65,11 +65,11 @@ The following table lists the tools that install Help Viewer, based on the SQL S
    >>>Cache LastRefreshed="12/31/2017 00:00:00"  
   
     The table of contents in the left pane automatically updates to include the documentation you've added.  
-![HelpViewer2_withContentInstalled](../release-notes/media/helpviewer2-withcontentinstalled.png)
+![HelpViewer2_withContentInstalled](../sql-server/media/helpviewer2-withcontentinstalled.png)
 
 1. (Optional) The **Local store path** box on the **Manage Content** tab shows where the documentation is installed on the local computer. To move the documentation to a different location, click **Move**, enter a folder path in the **To** field of the **Move Content** dialog box, and then click **Ok**.
 
-   ![HelpViewer2_Move Content Dialog](../release-notes/media/helpviewer2-move-content-dialog.png)
+   ![HelpViewer2_Move Content Dialog](../sql-server/media/helpviewer2-move-content-dialog.png)
 
    After the content is moved, the new location is displayed in the **Local store path**.
       
@@ -91,7 +91,7 @@ The following table lists the tools that install Help Viewer, based on the SQL S
   
      Select Install content from disk  |Browse to Help content file   
      ---------|---------  
-     ![HelpLibraryManager_MainPage_InstallFromDisk](../release-notes/media/helplibrarymanager-mainpage-installfromdisk.png)    | ![HelpLibraryManager_InstallContentFromDisk_dialog1](../release-notes/media/helplibrarymanager-installcontentfromdisk-dialog1.png)          
+     ![HelpLibraryManager_MainPage_InstallFromDisk](../sql-server/media/helplibrarymanager-mainpage-installfromdisk.png)    | ![HelpLibraryManager_InstallContentFromDisk_dialog1](../sql-server/media/helplibrarymanager-installcontentfromdisk-dialog1.png)          
   
      >[!IMPORTANT]
      > To avoid installing local Help content that has only a partial table of contents, use the **Install content from disk** option in the **Help Library Manager**.  
@@ -100,32 +100,32 @@ The following table lists the tools that install Help Viewer, based on the SQL S
 8. Click the HelpContentSetup.msha file, click **Open**, and then click **Next**.  
 9. Click **Add** next to the documentation you want to install, and then click **Update**.  
   
-   ![HelpLibraryManager_InstallContentFromDisk_dialog2](../release-notes/media/helplibrarymanager-installcontentfromdisk-dialog2.png)  
+   ![HelpLibraryManager_InstallContentFromDisk_dialog2](../sql-server/media/helplibrarymanager-installcontentfromdisk-dialog2.png)  
 10. Click **Finish**, click **Exit**.
 11. Open **Help Library Manager** again, click **Choose online or local help**, and then click **I want to use local help**.
 12. Open the Help Viewer to see the content by clicking **View Help** on the **Help** menu. You should see the content you've installed listed in the table of contents, in the left pane.  
   
-    ![HelpViewer1_withContentInstalled_ZoomedIn](../release-notes/media/helpviewer1-withcontentinstalled-zoomedin.png)  
+    ![HelpViewer1_withContentInstalled_ZoomedIn](../sql-server/media/helpviewer1-withcontentinstalled-zoomedin.png)  
   
 ## View Online Content in Help Viewer
 
 In Help Viewer v2.x, you can view online content by doing one of the following.
 
 - In SQL Server Management Studio, click **View Help** on the **Help** menu. Documentation displays in a browser.
-![HelpViewer2_SSMS_ChooseOnlineORLocalHelp](../release-notes/media/helpviewer2-ssms-chooseonlineorlocalhelp.png)
+![HelpViewer2_SSMS_ChooseOnlineORLocalHelp](../sql-server/media/helpviewer2-ssms-chooseonlineorlocalhelp.png)
 
 - In Visual Studio, click **Set Help Preference** on the **Help** menu, and click **Launch in Browser**. When you click **View Help** on the **Help** menu, documentation displays in a browser.
 
-![HelpViewer2_VisualStudio_ChooseOnlineORLocalHelp](../release-notes/media/helpviewer2-visualstudio-chooseonlineorlocalhelp.png)   
+![HelpViewer2_VisualStudio_ChooseOnlineORLocalHelp](../sql-server/media/helpviewer2-visualstudio-chooseonlineorlocalhelp.png)   
 
 In Help Viewer v1.x, you can view online content by doing the following.
 1. Open the **Help Library Manager** by clicking **Manage Help Settings** on the **Help** menu.  
 2. In the **Help Library Manager** dialog box, click **Choose online or local help**.  
   
-   ![HelpLibraryManager_MainPage_ChooseOnlineORLocal.png](../release-notes/media/helplibrarymanager-mainpage-chooseonlineorlocal.png.png)  
+   ![HelpLibraryManager_MainPage_ChooseOnlineORLocal.png](../sql-server/media/helplibrarymanager-mainpage-chooseonlineorlocal.png.png)  
 3. Click **I want to use online help**, click **OK**, and click **Exit**.  
 
-   ![HelpLibraryManager_ChooseOnlineORLocalHelp_OnlineHelpSelected_dialog](../release-notes/media/helplibrarymanager-chooseonlineorlocalhelp-onlinehelpselected-dialog.png)
+   ![HelpLibraryManager_ChooseOnlineORLocalHelp_OnlineHelpSelected_dialog](../sql-server/media/helplibrarymanager-chooseonlineorlocalhelp-onlinehelpselected-dialog.png)
 
 ## F1 Help and other Tips
 

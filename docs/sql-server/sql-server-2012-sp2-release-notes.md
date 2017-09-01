@@ -10,8 +10,8 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 67cb8b3e-3d82-47f4-840d-0f12a3bff565
 caps.latest.revision: 6
-author: "JennieHubbard"
-ms.author: "jhubbard"
+author: "craigg-msft"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # SQL Server 2012 SP2 Release Notes

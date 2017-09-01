@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "Release Notes, SQL Server 2008 R2 SP2"
 ms.assetid: e2bd3de7-674c-4ea7-8d53-bb40bba86fae
 caps.latest.revision: 17
-author: "byham"
-ms.author: "rickbyh"
+author: "craigg-msft"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # SQL Server 2008 R2 SP2 Release Notes

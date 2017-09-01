@@ -10,8 +10,8 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 72171357-28de-4edd-bdfd-194f97225a6f
 caps.latest.revision: 49
-author: "byham"
-ms.author: "rickbyh"
+author: "craigg-msft"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # SQL Server 2012 SP1 Release Notes
@@ -70,7 +70,7 @@ Use the following table to determine which file to download and install. Verify 
 |No 64-bit version of SQL Server 2012 RTM Express|Install 64-bit SQL Server 2012 Express including SP1|SQLEXPR_x64_ENU.exe from [here](http://go.microsoft.com/fwlink/p/?LinkID=267905)|  
 |A 64-bit installation of **SQL Server 2008** or **SQL Server 2008 R2**|**In place upgrade** to 64-bit SQL Server 2012 including SP1|SQLServer2012SP1-FullSlipstream-x64-ENU.exe **and** SQLServer2012SP1-FullSlipstream-x64-ENU.box from [here](http://go.microsoft.com/fwlink/p/?LinkID=268158)|  
   
-![Arrow icon used with Back to Top link](../sql-server/media/uparrow16x16.gif "Arrow icon used with Back to Top link")[Contents](#bkmk_top)  
+![Arrow icon used with Back to Top link](../release-notes/media/uparrow16x16.gif "Arrow icon used with Back to Top link")[Contents](#bkmk_top)  
   
 ## <a name="bkmk_AS"></a>2.0 Analysis Services and PowerPivot  
   
@@ -90,7 +90,7 @@ Use the following table to determine which file to download and install. Verify 
   
 **Workaround:** To use PowerPivot for Excel 2013 you must enable the COM add-in. From Excel 2013, select **File** | **Options** | **Add-Ins**. From the **Manage** drop-down box, select **COM Add-ins** and click **Go**. From **COM Add-ins**, select **Microsoft Office PowerPivot for Excel 2013** and click **Okay**.  
   
-![Arrow icon used with Back to Top link](../sql-server/media/uparrow16x16.gif "Arrow icon used with Back to Top link")[Contents](#bkmk_top)  
+![Arrow icon used with Back to Top link](../release-notes/media/uparrow16x16.gif "Arrow icon used with Back to Top link")[Contents](#bkmk_top)  
   
 ## <a name="bkmk_RS"></a>3.0 Reporting Services  
   
@@ -130,14 +130,14 @@ The inner error details will contain a message similar to the following:
   
 **Workaround**: If you are using DQS in a nonsupported edition, either upgrade to a supported edition or remove the dependency on this feature from your applications.  
   
-![Arrow icon used with Back to Top link](../sql-server/media/uparrow16x16.gif "Arrow icon used with Back to Top link")[Contents](#bkmk_top)  
+![Arrow icon used with Back to Top link](../release-notes/media/uparrow16x16.gif "Arrow icon used with Back to Top link")[Contents](#bkmk_top)  
   
 ## <a name="bkmk_Express"></a>5.0 SQL Server Express  
   
 ### 5.1 Full Version of SQL Server Management Studio Available in SQL Server 2012 Express SP1  
 The SQL Server 2012 Express Service Pack 1 (SP1) release includes the full version of SQL Server 2012 Management Studio (which was previously available only on the SQL Server 2012 DVD) instead of SQL Server 2012 Management Studio Express. To download and install SQL Server 2012 Express SP1, see [SQL Server 2012 Express Service Pack 1](http://go.microsoft.com/fwlink/p/?linkid=267905).  
   
-![Arrow icon used with Back to Top link](../sql-server/media/uparrow16x16.gif "Arrow icon used with Back to Top link")[Contents](#bkmk_top)  
+![Arrow icon used with Back to Top link](../release-notes/media/uparrow16x16.gif "Arrow icon used with Back to Top link")[Contents](#bkmk_top)  
   
 ## <a name="bkmk_CDC"></a>6.0 Change Data Capture Service and Designer for Oracle by Attunity  
   
@@ -150,7 +150,7 @@ The SQL Server 2012 Express Service Pack 1 (SP1) release includes the full versi
   
 2.  Run the .msi file.  
   
-![Arrow icon used with Back to Top link](../sql-server/media/uparrow16x16.gif "Arrow icon used with Back to Top link")[Contents](#bkmk_top)  
+![Arrow icon used with Back to Top link](../release-notes/media/uparrow16x16.gif "Arrow icon used with Back to Top link")[Contents](#bkmk_top)  
   
 ## <a name="DACFx"></a>7.0 SQL Server Data-Tier Application Framework (DACFx)  
 **In-place Upgrade Support**  

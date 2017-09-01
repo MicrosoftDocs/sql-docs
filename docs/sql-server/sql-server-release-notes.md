@@ -53,5 +53,5 @@ The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Release Notes topics 
   
 [SQL Server 2008 SP3 Release Notes](http://social.technet.microsoft.com/wiki/contents/articles/4937.microsoft-sql-server-2008-sp3-release-notes.aspx)  
   
-![MS_Logo_X-Small](../sql-server/media/ms-logo-x-small.png "MS_Logo_X-Small")  
+![MS_Logo_X-Small](../release-notes/media/ms-logo-x-small.png "MS_Logo_X-Small")  
   

@@ -1,7 +1,7 @@
 ---
 title: "Report on your Consolidated Assessments using Power BI (SQL Server Data Migration Assistant) | Microsoft Docs"
 ms.custom: 
-ms.date: "08/24/2017"
+ms.date: "09/01/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -28,7 +28,7 @@ For information on consolidating migration assessments using Data Migration Assi
 
 You can download at https://powerbi.microsoft.com/.
 
-## Example Power BI Reports
+## Sample Power BI reports
 
 To download examples of Power BI reports for consolidated migration assessments, click [here](https://msdnshared.blob.core.windows.net/media/2017/03/DMA-Reports-V3.11.zip).
 
@@ -71,7 +71,7 @@ You can modify these reports to work with your environment by changing the data 
 
    ![Refresh Power BI report](../dma/media/RefreshReport.png)
 
-### Dashboard Report -- Details
+### Dashboard Report: Details
 
 ![Dashboard Report](../dma/media/DashboardReport.png)
 
@@ -89,7 +89,7 @@ This view becomes even more powerful when first filtering by a specific database
 
 ![Breaking changes for HR database](../dma/media/BreakingChanges.png)
 
-### On Premises Upgrade Readiness Report -- Details
+### On-Premises Upgrade Readiness Report: Details
 
 ![On Premises Upgrade Readiness Report](../dma/media/OnPremisesUpgradeReadinessReport.png)
 
@@ -99,7 +99,7 @@ Filtering by instance and database name and using the score cards at the top, yo
 
 ![Upgrade success factor for AdventureWorks database](../dma/media/UpgradeSuccessFactor.png)
 
-### On Premise Feature Parity Report -- Details
+### On-Premises Feature Parity Report: Details
 
 ![On Premises Feature Parity Report](../dma/media/OnPremisesFeatureParityReport.png)
 
@@ -109,13 +109,13 @@ By selecting a feature in the funnel chart, the data at the bottom highlights wh
 
 ![Feature recommendation for Stretch Database](../dma/media/FeatureRecommend_StretchDatabase.png)
 
-### Azure SQL DB Upgrade Readiness Report -- Details
+### Azure SQL DB Upgrade Readiness Report: Details
 
 ![Azure SQL DB Upgrade Readiness Report](../dma/media/AzureSQLDBUpgradeReadinessReport.png)
 
 This report shows the database readiness to migrate to Azure SQL Database V12.  The data from this report comes from the dbo.UpgradeSuccessRanking view in the DMAReporting database.
 
-### Azure Features Parity Report -- Details
+### Azure Features Parity Report: Details
 
 ![Azure Features Parity Report](../dma/media/AzureFeaturesParityReport.png)
 
@@ -126,7 +126,7 @@ By selecting a feature in the funnel chart, the data at the bottom lists the ins
 ![Always on Availability Group feature](../dma/media/Feature_AlwaysOnAvailability.png)
 
  
-### Azure SQL DB Unsupported Features Report -- Details
+### Azure SQL DB Unsupported Features Report: Details
 
 ![Azure SQL DB Unsupported Features Report](../dma/media/AzureSQLDBUnsupportedFeaturesReport.png)
 
@@ -138,7 +138,7 @@ For example, filtering by the DTC database and **Read-only databases cannot be u
 
 ![Read-only databases cannot be upgraded issue](../dma/media/ReadOnlyDatabases.png)
 
-## See Also
+## See also
 
 [Overview of Data Migration Assistant](../dma/dma-overview.md)
 

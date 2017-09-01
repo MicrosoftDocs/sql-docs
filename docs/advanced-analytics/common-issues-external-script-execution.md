@@ -75,9 +75,9 @@ If the volume where you are installing R does not support short file names, the 
 
 As a workaround, you can enable the 8dot3 notation on the volume where SQL Server is installed and where R Services is installed. You must then provide the short name for the working directory in the R Services configuration file.
 
-1. To enable 8dot3 notation, run the fsutil utility with the *8dot3name* argument as described here: [fsutil 8dot3name](https://technet.microsoft.com/library/ff621566(v=ws.11).aspx).
+1. To enable 8dot3 notation, run the fsutil utility with the *8dot3name* argument as described in [fsutil 8dot3name](https://technet.microsoft.com/library/ff621566(v=ws.11).aspx).
 
-2. After the 8dot3 notation is enabled, open the RLauncher.config file and note the property of `WORKING_DIRECTORY`. For information about how to find this file, see [Data collection for Machine Learning troubleshooting](data-collection-ml-troubleshooting-process.md).
+2. After the 8dot3 notation is enabled, open the RLauncher.config file and note the property of `WORKING_DIRECTORY`. For information about how to find this file, see [Troubleshoot data collection for machine learning](data-collection-ml-troubleshooting-process.md).
 
 3. Use the fsutil utility with the *file* argument to specify a short file path for the folder that's specified in WORKING_DIRECTORY.
 
@@ -90,7 +90,7 @@ As a workaround, you can enable the 8dot3 notation on the volume where SQL Serve
 
 #### The user group for Launchpad cannot log on locally
 
-During setup of Machine Learning services, SQL Server creates the Windows user group **SQLRUserGroup** and then provisions it with all rights necessary for Launchpad to connect to SQL Server and run external script jobs. If this user group is enabled, it is also used to execute Python scripts.
+During setup of Machine Learning Services, SQL Server creates the Windows user group **SQLRUserGroup** and then provisions it with all rights necessary for Launchpad to connect to SQL Server and run external script jobs. If this user group is enabled, it is also used to execute Python scripts.
 
 However, in organizations where more restrictive security policies are enforced, the rights that are required by this group might have been manually removed, or they might be automatically revoked by policy. If the rights have been removed, Launchpad can no longer connect to SQL Server, and SQL Server cannot call the external runtime.
 
@@ -100,7 +100,7 @@ For more information, see [Configure Windows Service Accounts and Permissions](h
 
 #### Improper setup leading to mismatched DLLs
 
-If you install the database engine with other features, patch the server, and then later add the Machine Learning feature using the original media, the wrong version of the Machine Learning components might be installed. When Launchpad detects a version mismatch, it shuts down and creates a dump file.
+If you install the database engine with other features, patch the server, and then add the machine-learning feature by using the original media, the wrong version of the machine learning components might be installed. When Launchpad detects a version mismatch, it shuts down and creates a dump file.
 
 To avoid this problem, be sure to install any new features at the same patch level as the server instance.
 
@@ -108,7 +108,7 @@ To avoid this problem, be sure to install any new features at the same patch lev
 
 1. Install SQL Server 2016 without R Services.
 2. Upgrade SQL Server 2016 Cumulative Update 2.
-3. Install R Services (in-database) using the RTM media.
+3. Install R Services (In-Database) by using the RTM media.
 
 **The correct way to upgrade**:
 

@@ -37,4 +37,4 @@
 # [Data Migration Assistant](../dma/dma-overview.md)
 # [Stretch Database](../sql-server/stretch-database/stretch-database.md)
 # [Tutorials for SQL Server](tutorials-for-sql-server-2016.md)
-# [Local content with Help Viewer](../sql-server-help-installation.md)
+# [Local content with Help Viewer](sql-server-help-installation.md)

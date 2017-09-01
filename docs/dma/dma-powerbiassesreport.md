@@ -69,7 +69,7 @@ You can modify these reports to work with your environment by changing the data 
 
    ![Refresh Power BI report](../dma/media/RefreshReport.png)
 
-### Dashboard report details
+### Dashboard report
 
 ![Dashboard Report](../dma/media/DashboardReport.png)
 
@@ -87,7 +87,7 @@ This view becomes even more powerful when you first filter by a specific databas
 
 ![Breaking changes for HR database](../dma/media/BreakingChanges.png)
 
-### On-premises upgrade readiness report details
+### On-premises upgrade readiness report
 
 ![On-premises upgrade readiness report](../dma/media/OnPremisesUpgradeReadinessReport.png)
 
@@ -97,7 +97,7 @@ Filtering by instance and database name, and using the score cards at the top, y
 
 ![Upgrade success factor for AdventureWorks database](../dma/media/UpgradeSuccessFactor.png)
 
-### On-premises feature parity report details
+### On-premises feature parity report
 
 ![On-premises feature parity report](../dma/media/OnPremisesFeatureParityReport.png)
 
@@ -107,13 +107,13 @@ When you select a feature in the funnel chart, the data at the bottom highlights
 
 ![Feature recommendation for Stretch Database](../dma/media/FeatureRecommend_StretchDatabase.png)
 
-### Azure SQL DB upgrade readiness report details
+### Azure SQL DB upgrade readiness report
 
 ![Azure SQL DB upgrade readiness report](../dma/media/AzureSQLDBUpgradeReadinessReport.png)
 
 This report shows the database readiness to migrate to Azure SQL Database V12. The data from this report comes from the dbo.UpgradeSuccessRanking view in the DMAReporting database.
 
-### Azure features parity report details
+### Azure features parity report
 
 ![Azure features parity report](../dma/media/AzureFeaturesParityReport.png)
 
@@ -124,7 +124,7 @@ When you select a feature in the funnel chart, the data at the bottom lists the 
 ![Always on Availability Group feature](../dma/media/Feature_AlwaysOnAvailability.png)
 
  
-### Azure SQL DB unsupported features report details
+### Azure SQL DB unsupported features report
 
 ![Azure SQL DB unsupported features report](../dma/media/AzureSQLDBUnsupportedFeaturesReport.png)
 

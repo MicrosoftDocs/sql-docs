@@ -1,5 +1,5 @@
 ---
-title: "Deployment and Version Support in SQL Server Data Tools (SSRS) | Microsoft Docs"
+title: "Deployment and Version Support in SQL Server Data Tools (SSDT) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: "sql-server-2016"
@@ -16,7 +16,7 @@ author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
 ---
-# Deployment and Version Support in SQL Server Data Tools (SSRS)
+# Deployment and Version Support in SQL Server Data Tools (SSDT)
   [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] supports the following scenarios:  
   
 -   Open report definitions (*.rdl) and report server projects (\*.rptproj).  

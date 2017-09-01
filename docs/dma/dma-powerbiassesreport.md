@@ -69,13 +69,13 @@ You can modify these reports to work with your environment by changing the data 
 
    ![Refresh Power BI report](../dma/media/RefreshReport.png)
 
-### Dashboard report -- details
+### Dashboard report details
 
 ![Dashboard Report](../dma/media/DashboardReport.png)
 
 The dashboard shows details about all of your assessments. You can use the slicers on the left hand side to filter by instance or database. You can use the bar chart to drill down into specific categories to see where the issues lie.
 
-To drill down, select the circle with the down arrow in the top right of corner of the bar chart.
+To drill down, select the circle with the down arrow at the top-right corner of the bar chart.
 
 ![Category Drilldown](../dma/media/CategoryDrillDown.png)
 
@@ -83,11 +83,11 @@ The drilldown sequence is set as shown in the following image (under **Axis**).�
 
 ![Visualizations, bar chart axis](../dma/media/VisualizationsAxis.png)
 
-This view becomes even more powerful when you first filter by a specific database, and then drill down into the specific category issues. In the following example, the HR database is selected for instance **SQL01** to view all objects that are preventing migrations (breaking changes).
+This view becomes even more powerful when you first filter by a specific database and then drill down to the specific category issues. In the following example, the HR database is selected for instance **SQL01** to view all objects that are preventing migrations (breaking changes).
 
 ![Breaking changes for HR database](../dma/media/BreakingChanges.png)
 
-### On-premises upgrade readiness report -- details
+### On-premises upgrade readiness report details
 
 ![On-premises upgrade readiness report](../dma/media/OnPremisesUpgradeReadinessReport.png)
 
@@ -97,34 +97,34 @@ Filtering by instance and database name, and using the score cards at the top, y
 
 ![Upgrade success factor for AdventureWorks database](../dma/media/UpgradeSuccessFactor.png)
 
-### On-premises feature parity report -- details
+### On-premises feature parity report details
 
 ![On-premises feature parity report](../dma/media/OnPremisesFeatureParityReport.png)
 
-Use this report to highlight what new features can be used for the database in the target SQL Server version.
+Use this report to highlight new features that can be used for the database in the target SQL Server version.
 
 When you select a feature in the funnel chart, the data at the bottom highlights which objects are affected by the feature. In the following example, the **Stretch database for storage savings** feature is selected, and a table is listed that could benefit from this feature.
 
 ![Feature recommendation for Stretch Database](../dma/media/FeatureRecommend_StretchDatabase.png)
 
-### Azure SQL DB upgrade readiness report -- details
+### Azure SQL DB upgrade readiness report details
 
 ![Azure SQL DB upgrade readiness report](../dma/media/AzureSQLDBUpgradeReadinessReport.png)
 
 This report shows the database readiness to migrate to Azure SQL Database V12. The data from this report comes from the dbo.UpgradeSuccessRanking view in the DMAReporting database.
 
-### Azure features parity report -- details
+### Azure features parity report details
 
 ![Azure features parity report](../dma/media/AzureFeaturesParityReport.png)
 
 Use this report to highlight the *instance level features* that are not supported by Azure SQL Database V12.
 
-When you select a feature in the funnel chart, the data at the bottom lists the instance(s) and database features that are not supported. In the following example, this feature is selected: **Always on Availability group configuration is not supported in Azure SQL Database**.  
+When you select a feature in the funnel chart, the data at the bottom lists the instances and database features that are not supported. In the following example, this feature is selected: **Always on Availability group configuration is not supported in Azure SQL Database**.  
 
 ![Always on Availability Group feature](../dma/media/Feature_AlwaysOnAvailability.png)
 
  
-### Azure SQL DB unsupported features report -- details
+### Azure SQL DB unsupported features report details
 
 ![Azure SQL DB unsupported features report](../dma/media/AzureSQLDBUnsupportedFeaturesReport.png)
 
@@ -140,6 +140,6 @@ For example, filtering by the DTC database and **Read-only databases cannot be u
 
 [Overview of Data Migration Assistant](../dma/dma-overview.md)
 
-[Data Migration Assistant Download](https://www.microsoft.com/download/details.aspx?id=53595)
+[Data Migration Assistant download](https://www.microsoft.com/download/details.aspx?id=53595)
 
-[Power BI Download](https://powerbi.microsoft.com/)
+[Power BI download](https://powerbi.microsoft.com/)

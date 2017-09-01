@@ -2974,11 +2974,51 @@
             "source_path": "docs/ssms/visual-database-tools/open-table-designer-visual-database-tools.md",
             "redirect_url": "/sql/ssms/visual-db-tools/design-tables-visual-database-tools",
             "redirect_document_id": false
-          },        
-		  {
+          },
+        {
             "source_path": "docs/ssms/visual-database-tools/save-your-work-in-table-designer-visual-database-tools.md",
             "redirect_url": "/sql/ssms/visual-db-tools/design-tables-visual-database-tools",
             "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/release-notes/sql-server-2008-r2-sp2-release-notes.md",
+            "redirect_url": "/sql/sql-server/sql-server-2008-r2-sp2-release-notes",
+            "redirect_document_id": false   
+        },
+        {
+            "source_path": "docs/release-notes/sql-server-2012-release-notes.md",
+            "redirect_url": "/sql/sql-server/sql-server-2012-release-notes",
+            "redirect_document_id": false 
+        },
+        {
+            "source_path": "docs/release-notes/sql-server-2012-sp1-release-notes.md",
+            "redirect_url": "/sql/sql-server/sql-server-2012-sp1-release-notes",
+            "redirect_document_id": false 
+        },
+        {
+            "source_path": "docs/release-notes/sql-server-2012-sp2-release-notes.md",
+            "redirect_url": "/sql/sql-server/sql-server-2012-sp2-release-notes",
+            "redirect_document_id": false 
+        },
+        {
+            "source_path": "docs/release-notes/sql-server-2012-sp3-release-notes.md",
+            "redirect_url": "/sql/sql-server/sql-server-2012-sp3-release-notes",
+            "redirect_document_id": false   
+        },
+        {
+            "source_path": "docs/release-notes/sql-server-2014-release-notes.md",
+            "redirect_url": "/sql/sql-server/sql-server-2014-release-notes",
+            "redirect_document_id": false 
+        },
+        {
+            "source_path": "docs/release-notes/sql-server-help-installation.md",
+            "redirect_url": "/sql/sql-server/sql-server-help-installation",
+            "redirect_document_id": false 
+        },
+        {
+            "source_path": "docs/release-notes/sql-server-release-notes.md",
+            "redirect_url": "/sql/sql-server/sql-server-release-notes",
+            "redirect_document_id": false  
         }
     ]
 }

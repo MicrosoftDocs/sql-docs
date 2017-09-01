@@ -14,17 +14,16 @@
 
 # Release Notes
 
-## [Microsoft SQL Server](../release-notes/microsoft-sql-server.md)
-## [SQL Server Release Notes](../release-notes/sql-server-release-notes.md)
+## [SQL Server Release Notes](sql-server-release-notes.md)
 ## [SQL Server 2016 Release Notes](sql-server-2016-release-notes.md)
 ## [SQL Server 2017 Release Notes](sql-server-2017-release-notes.md)
 
-## [SQL Server 2014 Release Notes](../release-notes/sql-server-2014-release-notes.md)
-## [SQL Server 2012 Release Notes](../release-notes/sql-server-2012-release-notes.md)
-## [SQL Server 2012 SP1 Release Notes](../release-notes/sql-server-2012-sp1-release-notes.md)
-## [SQL Server 2012 SP2 Release Notes](../release-notes/sql-server-2012-sp2-release-notes.md)
-## [SQL Server 2012 SP3 Release Notes](../release-notes/sql-server-2012-sp3-release-notes.md)
-## [SQL Server 2008 R2 SP2 Release Notes](../release-notes/sql-server-2008-r2-sp2-release-notes.md)
+## [SQL Server 2014 Release Notes](sql-server-2014-release-notes.md)
+## [SQL Server 2012 Release Notes](sql-server-2012-release-notes.md)
+## [SQL Server 2012 SP1 Release Notes](sql-server-2012-sp1-release-notes.md)
+## [SQL Server 2012 SP2 Release Notes](sql-server-2012-sp2-release-notes.md)
+## [SQL Server 2012 SP3 Release Notes](sql-server-2012-sp3-release-notes.md)
+## [SQL Server 2008 R2 SP2 Release Notes](sql-server-2008-r2-sp2-release-notes.md)
 
 # [Analysis Services](../analysis-services/analysis-services.md)
 # [Database Engine](../database-engine/sql-server-database-engine-overview.md)
@@ -38,4 +37,4 @@
 # [Data Migration Assistant](../dma/dma-overview.md)
 # [Stretch Database](../sql-server/stretch-database/stretch-database.md)
 # [Tutorials for SQL Server](tutorials-for-sql-server-2016.md)
-# [Local content with Help Viewer](../release-notes/sql-server-help-installation.md)
+# [Local content with Help Viewer](sql-server-help-installation.md)

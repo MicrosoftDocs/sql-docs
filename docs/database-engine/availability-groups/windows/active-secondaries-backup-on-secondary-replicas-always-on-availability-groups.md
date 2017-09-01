@@ -1,8 +1,10 @@
 ---
 title: "Active Secondaries Backup on Secondary Replicas-Always On Availability | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
+ms.date: "09/01/2017"
+ms.prod: 
+ - "sql-server-2016"
+ - "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -27,7 +29,9 @@ manager: "jhubbard"
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   The [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] active secondary capabilities include support for performing backup operations on secondary replicas. Backup operations can put significant strain on I/O and CPU (with backup compression). Offloading backups to a synchronized or synchronizing secondary replica allows you to use the resources on server instance that hosts the primary replica for your tier-1 workloads.  
-  
+
+  In a distributed availability group, backups can be performed on secondary replicas in the same availability group as the active primary replica, or on the primary replica of any secondary availability groups. Backups cannot be performed on a secondary replica in a secondary availability group.
+
 > [!NOTE]  
 >  RESTORE statements are not allowed on either the primary or secondary databases of an availability group.  
   

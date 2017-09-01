@@ -1007,9 +1007,6 @@
             - name: Security
               href: /sql/relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/
               homepage: /sql/relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/sqlxml-4-0-security-considerations
-    - name: SQL Server Release Notes
-      href: /sql/release-notes/
-      homepage: /sql/release-notes/sql-server-release-notes
     - name: DMX
       href: /sql/dmx/
       homepage: /sql/dmx/data-mining-extensions-dmx-reference

@@ -1,5 +1,5 @@
 ---
-title: "Known issues in Machine Learning Services - SQL Server | Microsoft Docs"
+title: "Known issues in machine learning services - SQL Server | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
 ms.date: "06/16/2017"
@@ -18,7 +18,7 @@ manager: "jhubbard"
 ---
 # Known issues in Machine Learning Services
 
-This article describes known problems or limitations with Machine Learning components that are provided as an option in SQL Server 2016 and SQL Server 2017.
+This article describes known problems or limitations with machine learning components that are provided as an option in SQL Server 2016 and SQL Server 2017.
 
 The information here applies to all of the following, unless specifically indicated:
 
@@ -79,7 +79,7 @@ As a workaround, you can install the service release by using the command line a
 
 `C:\<path to installation media>\SQLServer2016-KB3164674-x64.exe /Action=Patch /IACCEPTROPENLICENSETERMS /MRCACHEDIRECTORY=<path to CU1 CAB files>`
 
-To get the latest installers, see [Installing Machine Learning components without internet access](r/installing-ml-components-without-internet-access.md).
+To get the latest installers, see [Install machine learning components without internet access](r/installing-ml-components-without-internet-access.md).
 
 **Applies to:** SQL Server 2016 R Services, with R Server version 9.0.0 or earlier
 
@@ -97,7 +97,7 @@ To view a list of the R version numbers that are required for each release of SQ
 
 ### Remote compute contexts are blocked by a firewall in SQL Server instances that are running on Azure virtual machines
 
-If you have installed [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] on a Windows Azure virtual machine, you might not be able to use compute contexts that require the use of the virtual machine's workspace. The reason is that, by default, the Azure VM firewall includes a rule that blocks network access for local R user accounts.
+If you have installed [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] on an Azure virtual machine, you might not be able to use compute contexts that require the use of the virtual machine's workspace. The reason is that, by default, the Azure VM firewall includes a rule that blocks network access for local R user accounts.
 
 As a workaround, on the Azure VM, open **Windows Firewall with Advanced Security**, select **Outbound Rules**, and disable the following rule: **Block network access for R local user accounts in SQL Server instance MSSQLSERVER**.
 
@@ -120,7 +120,7 @@ However, be aware that outside of SQL Server, performance will be limited. For e
 * Avoid calling the R libraries that are used by SQL Server from external R tools.
 * If you need to run extensive R code on the SQL Server computer without using SQL Server, install a separate instance of R, such as Microsoft R Client, and then ensure that your R development tools point to the new library.
 
-For more information, see [Create a Standalone R Server](r/create-a-standalone-r-server.md).
+For more information, see [Create a standalone R Server](r/create-a-standalone-r-server.md).
 
 ### The R script is throttled due to resource governance default values
 
@@ -138,7 +138,7 @@ For additional known issues that might affect R solutions, go to the [Microsoft 
 
 ### Limitations on processor affinity for R jobs
 
-In the initial release build of SQL Server 2016, you could set processor affinity only for CPUs in the first k-group. For example, if the server is a two-socket machine with two k-groups, only processors from the first k-group are used for the R processes. The same limitation applies when you configure resource governance for R script jobs.
+In the initial release build of SQL Server 2016, you can set processor affinity for CPUs in the first k-group only. For example, if the server is a two-socket machine with two k-groups, only processors from the first k-group are used for the R processes. The same limitation applies when you configure resource governance for R script jobs.
 
 This issue is fixed in SQL Server 2016 Service Pack 1.
 

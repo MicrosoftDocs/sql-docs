@@ -1,7 +1,7 @@
 ---
-title: "Assess your SQL Server Migration (Data Migration Assistant) | Microsoft Docs"
+title: "Assess your SQL Server migration (Data Migration Assistant) | Microsoft Docs"
 ms.custom: 
-ms.date: "08/24/2017"
+ms.date: "08/31/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -19,8 +19,8 @@ ms.author: "carlasab"
 manager: "craigg"
 ---
 
-# Assess your SQL Server Migration
-The following step-by-step instructions will help you to perform your first assessment for migrating to either on-premises SQL Server or SQL Server running on Azure VM or Azure SQL Server database by using DMA.
+# Assess your SQL Server migration
+The following step-by-step instructions will help you to perform your first assessment for migrating to either on-premises SQL Server or SQL Server running on Azure VM, or to Azure SQL Server database, by using Data Migration Assistant.
 
 # Create new assessment
 
@@ -68,7 +68,7 @@ SQL Database**.
 
 1.  Click on **Add Sources** to open the connection fly-out.
 
-2.  Enter SQL server instance name, choose the Authentication type, set
+2.  Enter the SQL server instance name, choose the Authentication type, set
     the correct connection properties, and then click **Connect**.
 
 3.  Select the databases to assess, and then click **Add**.
@@ -99,19 +99,19 @@ Compatibility issues can be reviewed by analyzing the impacted object and its de
 
 ![View assessment results](../dma/media/ReviewResults.png)
 
-Similarly, you can review features’ recommendation across **Performance**, **Storage** and **Security** areas.
+Similarly, you can review feature recommendation across **Performance**, **Storage** and **Security** areas.
 
 Feature recommendations cover a variety of features such as In-Memory OLTP and Columnstore, Stretch Database, Always Encrypted (AE), Dynamic Data Masking (DDM), and Transparent Data Encryption (TDE).
 
 ![View feature recommendations](../dma/media/FeatureRecommendations.png)
 
-For "Azure SQL Database," the assessments provides migration blocking issues and feature parity issues.  Review the results for both categories by selecting the specific options.
+For Azure SQL Database, the assessments provide migration blocking issues and feature parity issues.  Review the results for both categories by selecting the specific options.
 
-- The **SQL Server feature parity** category provides, currently in use at the source SQL Server. It then provides a comprehensive set of recommendations, alternative approaches available in Azure, and mitigating steps so that customers can plan this effort into their migration projects.
+- The **SQL Server feature parity** category provides a comprehensive set of recommendations, alternative approaches available in Azure, and mitigating steps so that you can plan this effort into your migration projects.
 
   ![View information for SQL Server feature parity](../dma/media/SQLFeatureParity.png)
 
-- The **Compatibility issues** category provides partially or unsupported features that are the compatibility issues that block migrating on-premises SQL Server database(s)s to Azure SQL Database(s). It then provides recommendations to help customers remediate those issues.
+- The **Compatibility issues** category provides partially or unsupported features that are the compatibility issues that block migrating on-premises SQL Server database(s) to Azure SQL Database(s. It then provides recommendations to help you address those issues.
 
   ![View compatibility issues](../dma/media/CompatibilityIssues.png)
 

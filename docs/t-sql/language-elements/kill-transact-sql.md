@@ -41,7 +41,7 @@ manager: "jhubbard"
 # KILL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Terminates a user process that is based on the session ID or unit of work (UOW). If the specified session ID or UOW has a lot of work to undo, the KILL statement may take some time to complete, particularly when it involves rolling back a long transaction.  
+  Terminates a user process that is based on the session ID or unit of work (UOW). If the specified session ID or UOW has much work to undo, the KILL statement may take some time to complete, particularly when it involves rolling back a long transaction.  
   
  KILL can be used to terminate a normal connection, which internally terminates the transactions that are associated with the specified session ID. The statement can also be used to terminate orphaned and in-doubt distributed transactions when [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator (MS DTC) is in use.  
   
@@ -87,7 +87,7 @@ JOIN sys.dm_exec_connections AS conn
 ## Remarks  
  KILL is commonly used to terminate a process that is blocking other important processes with locks, or a process that is executing a query that is using necessary system resources. System processes and processes running an extended stored procedure cannot be terminated.  
   
- Use KILL very carefully, especially when critical processes are running. You cannot kill your own process. Other processes you should not kill include the following:  
+ Use KILL carefully, especially when critical processes are running. You cannot kill your own process. Other processes you should not kill include the following:  
   
 -   AWAITING COMMAND  
 -   CHECKPOINT SLEEP  
@@ -97,9 +97,9 @@ JOIN sys.dm_exec_connections AS conn
   
 Use @@SPID to display the session ID value for the current session.  
   
- To obtain a report of active session ID values, you can query the session_id column of the sys.dm_tran_locks, sys.dm_exec_sessions, and sys.dm_exec_requests dynamic management views. You can also view the SPID column that is returned by the sp_who system stored procedure. If a rollback is in progress for a specific SPID, the cmd column in the sp_who result set for that SPID will indicate KILLED/ROLLBACK.  
+ To obtain a report of active session ID values, you can query the session_id column of the sys.dm_tran_locks, sys.dm_exec_sessions, and sys.dm_exec_requests dynamic management views. You can also view the SPID column that is returned by the sp_who system stored procedure. If a rollback is in progress for a specific SPID, the cmd column in the sp_who result set for that SPID indicates KILLED/ROLLBACK.  
   
- When a particular connection has a lock on a database resource and blocks the progress of another connection, the session ID of the blocking connection shows up in the blocking_session_id column of sys.dm_exec_requests or the blk column returned by sp_who.  
+ When a particular connection has a lock on a database resource and blocks the progress of another connection, the session ID of the blocking connection shows up in the `blocking_session_id` column of `sys.dm_exec_requests` or the `blk` column returned by `sp_who`.  
   
  The KILL command can be used to resolve in-doubt distributed transactions. These transactions are unresolved distributed transactions that occur because of unplanned restarts of the database server or MS DTC coordinator. For more information about in-doubt transactions, see the "Two-Phase Commit" section in [Use Marked Transactions to Recover Related Databases Consistently &#40;Full Recovery Model&#41;](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md).  
   
@@ -108,7 +108,7 @@ Use @@SPID to display the session ID value for the current session.
   
  `Spid|UOW <xxx>: Transaction rollback in progress. Estimated rollback completion: <yy>% Estimated time left: <zz> seconds`  
   
- If the rollback of the session ID or UOW has finished when the KILL *session ID*|*UOW* WITH STATUSONLY statement is executed, or if no session ID or UOW is being rolled back, KILL *session ID*|*UOW* WITH STATUSONLY will return the following error:  
+ If the rollback of the session ID or UOW has finished when the KILL *session ID*|*UOW* WITH STATUSONLY statement is executed, or if no session ID or UOW is being rolled back, KILL *session ID*|*UOW* WITH STATUSONLY returns the following error:  
   
  `"Msg 6120, Level 16, State 1, Line 1"`  
  `"Status report cannot be obtained. Rollback operation for Process ID <session ID> is not in progress."`  

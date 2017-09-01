@@ -102,7 +102,7 @@ All system date and time values are derived from the operating system of the com
 ###  <a name="GetDateandTimeDifference"></a> Functions that get Date and Time difference
   
 |Function|Syntax|Return value|Return data type|Determinism|  
-|---|---|---|---|
+|---|---|---|---|---|  
 |[DATEDIFF](../../t-sql/functions/datediff-transact-sql.md)|DATEDIFF ( *datepart* , *startdate* , *enddate* )|Returns the number of date or time *datepart* boundaries that are crossed between two specified dates.|**int**|Deterministic|  
 |[DATEDIFF_BIG](../../t-sql/functions/datediff-big-transact-sql.md)|DATEDIFF_BIG ( *datepart* , *startdate* , *enddate* )|Returns the number of date or time *datepart* boundaries that are crossed between two specified dates.|**bigint**|Deterministic|  
   

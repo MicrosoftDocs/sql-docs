@@ -30,8 +30,6 @@ manager: "jhubbard"
 
   The [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] active secondary capabilities include support for performing backup operations on secondary replicas. Backup operations can put significant strain on I/O and CPU (with backup compression). Offloading backups to a synchronized or synchronizing secondary replica allows you to use the resources on server instance that hosts the primary replica for your tier-1 workloads.  
 
-  In a distributed availability group, backups can be performed on secondary replicas in the same availability group as the active primary replica, or on the primary replica of any secondary availability groups. Backups cannot be performed on a secondary replica in a secondary availability group.
-
 > [!NOTE]  
 >  RESTORE statements are not allowed on either the primary or secondary databases of an availability group.  
   
@@ -52,7 +50,9 @@ manager: "jhubbard"
      A consistent log chain is ensured across log backups taken on any of the replicas (primary or secondary), irrespective of their availability mode (synchronous-commit or asynchronous-commit).  
   
 -   To back up a secondary database, a secondary replica must be able to communicate with the primary replica and must be **SYNCHRONIZED** or **SYNCHRONIZING**.  
-  
+
+  In a distributed availability group, backups can be performed on secondary replicas in the same availability group as the active primary replica, or on the primary replica of any secondary availability groups. Backups cannot be performed on a secondary replica in a secondary availability group.
+
 ##  <a name="WhereBuJobsRun"></a> Configuring Where Backup Jobs Run  
  Performing backups on a secondary replica to offload the backup workload from the primary production server is a great benefit. However, performing backups on secondary replicas introduce significant complexity to the process of determining where backup jobs should run. To address this, configure where backup jobs run as follows:  
   

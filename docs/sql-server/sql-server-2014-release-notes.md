@@ -10,8 +10,8 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: bf4c4922-80b3-4be3-bf71-228247f97004
 caps.latest.revision: 100
-author: "byham"
-ms.author: "rickbyh"
+author: "craigg-msft"
+ms.author: "craigg"
 manager: "jhubbard"
 ---
 # SQL Server 2014 Release Notes
@@ -68,7 +68,7 @@ This is not supported.
   
 **Workaround:** There is no workaround for downgrade. We recommend that you back-up the database before upgrading to SQL Server 2014 RTM.  
   
-![Arrow icon used with Back to Top link](../release-notes/media/uparrow16x16.gif "Arrow icon used with Back to Top link")[Top](#top)  
+![Arrow icon used with Back to Top link](../sql-server/media/uparrow16x16.gif "Arrow icon used with Back to Top link")[Top](#top)  
   
 ## 1.3 Incorrect version of StreamInsight Client on SQL Server 2014 media/ISO/CAB  
 The wrong version of StreamInsight.msi and StreamInsightClient.msi is located in the following path on the SQL Server media/ISO/CAB (StreamInsight\\\<Architecture\>\\\<Language ID\>).  
@@ -121,7 +121,7 @@ In [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], this content was available on
   
 **Workaround:** None.  
   
-![Arrow icon used with Back to Top link](../release-notes/media/uparrow16x16.gif "Arrow icon used with Back to Top link")[Top](#top)  
+![Arrow icon used with Back to Top link](../sql-server/media/uparrow16x16.gif "Arrow icon used with Back to Top link")[Top](#top)  
   
 ## <a name="DBEngine"></a>3.0 Database Engine  
   
@@ -273,7 +273,7 @@ If you already have the issue with mismatched instance_id values, the only way t
   
     `update` sysdac_history_internal `set` instance_id = '\<value from step 3\>' `where` \<expression that matches the rows you want to update\>  
   
-![Arrow icon used with Back to Top link](../release-notes/media/uparrow16x16.gif "Arrow icon used with Back to Top link")[Top](#top)  
+![Arrow icon used with Back to Top link](../sql-server/media/uparrow16x16.gif "Arrow icon used with Back to Top link")[Top](#top)  
   
 ## <a name="SSRS"></a>4.0 Reporting Services  
   
@@ -323,7 +323,7 @@ For more information, see [SQL Server 2014 Reporting Services Tips, Tricks, and 
   
 For more information, see [SQL Server 2014 Reporting Services Tips, Tricks, and Troubleshooting](http://go.microsoft.com/fwlink/?LinkID=391254)  
   
-![Arrow icon used with Back to Top link](../release-notes/media/uparrow16x16.gif "Arrow icon used with Back to Top link")[Top](#top)  
+![Arrow icon used with Back to Top link](../sql-server/media/uparrow16x16.gif "Arrow icon used with Back to Top link")[Top](#top)  
   
 ## <a name="AzureVM"></a>5.0 SQL Server 2014 RTM on Windows Azure Virtual Machines  
   
@@ -340,7 +340,7 @@ This is because Availability Group Listeners require assigning one IP address in
   
 2.  After the Wizard completes, you will need to finish the configuration of the Listener in Windows Azure as described in [Listener Configuration for AlwaysOn Availability Groups in Windows Azure](http://msdn.microsoft.com/library/dn376546.aspx)  
   
-![Arrow icon used with Back to Top link](../release-notes/media/uparrow16x16.gif "Arrow icon used with Back to Top link")[Top](#top)  
+![Arrow icon used with Back to Top link](../sql-server/media/uparrow16x16.gif "Arrow icon used with Back to Top link")[Top](#top)  
   
 ## <a name="SSAS"></a>6.0 Analysis Services  
   
@@ -387,7 +387,7 @@ This is because Availability Group Listeners require assigning one IP address in
   
 -   When you update a data refresh schedule for a workbook, if the serialized length of the refresh schedule is smaller than the original schedule, the buffer size is not correctly updated and the new schedule information is merged with the old schedule information resulting in a corrupt schedule.  
   
-![Arrow icon used with Back to Top link](../release-notes/media/uparrow16x16.gif "Arrow icon used with Back to Top link")[Top](#top)  
+![Arrow icon used with Back to Top link](../sql-server/media/uparrow16x16.gif "Arrow icon used with Back to Top link")[Top](#top)  
   
 ## <a name="DQS"></a>7.0 Data Quality Services  
   
@@ -400,7 +400,7 @@ This is because Availability Group Listeners require assigning one IP address in
   
 **Workaround:** Use the same version of Master Data Services as the Database Engine database and Data Quality Services.  
   
-![Arrow icon used with Back to Top link](../release-notes/media/uparrow16x16.gif "Arrow icon used with Back to Top link")[Top](#top)  
+![Arrow icon used with Back to Top link](../sql-server/media/uparrow16x16.gif "Arrow icon used with Back to Top link")[Top](#top)  
   
 ## <a name="UA"></a>8.0 Upgrade Advisor Issues  
   
@@ -420,5 +420,5 @@ Culture=neutral, PublicKeyToken=89845dcd8080cc91
   
 **Workaround:** This issue is fixed in the SQL Server Upgrade Advisor provided in the [SQL Server 2014 Feature Pack for SSUA](http://go.microsoft.com/fwlink/?LinkID=306709).  
   
-![Arrow icon used with Back to Top link](../release-notes/media/uparrow16x16.gif "Arrow icon used with Back to Top link")[Top](#top)  
+![Arrow icon used with Back to Top link](../sql-server/media/uparrow16x16.gif "Arrow icon used with Back to Top link")[Top](#top)  
   

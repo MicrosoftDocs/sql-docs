@@ -79,7 +79,7 @@ Documentation to help you install, configure, and use SQL Server. The content in
 - [SQL Server samples on GitHub](https://github.com/Microsoft/sql-server-samples) 
    
  ## More information   
-+ To view SQL Server documentation offline, see [Help Viewer and Offline Content for SQL Server](../release-notes/sql-server-help-installation.md).
++ To view SQL Server documentation offline, see [Help Viewer and Offline Content for SQL Server](sql-server-help-installation.md).
 + [SQL Server Configuration Manager](../relational-databases/sql-server-configuration-manager.md)
 + [SQL Server Update Center - links and information for all supported versions](https://msdn.microsoft.com/library/ff803383.aspx)
   

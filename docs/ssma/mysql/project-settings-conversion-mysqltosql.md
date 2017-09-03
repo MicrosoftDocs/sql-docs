@@ -14,9 +14,9 @@ applies_to:
   - "SQL Server"
 ms.assetid: 7ad5fe44-6445-4ba8-a457-5af792631f11
 caps.latest.revision: 19
-author: "sabotta"
-ms.author: "carlasab"
-manager: "lonnyb"
+author: “Shamikg”
+ms.author: “Shamikg”
+manager: "jhubbard"
 ---
 # Project Settings (Conversion) (MySQLToSQL)
 The Conversion page of the **Project Settings** dialog box contains settings that customize how SSMA converts MySQL syntax to SQL Server or SQL Azure syntax.  

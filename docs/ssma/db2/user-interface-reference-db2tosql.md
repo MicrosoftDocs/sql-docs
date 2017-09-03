@@ -14,9 +14,9 @@ applies_to:
   - "SQL Server"
 ms.assetid: 98ecc4ff-9416-48a2-af0f-86852cf69dab
 caps.latest.revision: 5
-author: "sabotta"
-ms.author: "carlasab"
-manager: "lonnyb"
+author: “Shamikg”
+ms.author: “Shamikg”
+manager: "jhubbard"
 ---
 # User Interface Reference (DB2ToSQL)
 This section includes Help topics for [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) for DB2.  

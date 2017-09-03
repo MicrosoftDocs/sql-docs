@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 43989355-cebf-4d8b-ba3d-fa8546e70230
 caps.latest.revision: 3
-author: "sabotta"
-ms.author: "carlasab"
+author: “Shamikg”
+ms.author: “Shamikg”
 manager: "v-pelars"
 ---
 # Global Settings (Dialogs)  (OracleToSQL)

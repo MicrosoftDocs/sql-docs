@@ -14,8 +14,8 @@ applies_to:
   - "SQL Server"
 ms.assetid: ef94e843-9f88-45a2-86c4-a0af268738c4
 caps.latest.revision: 16
-author: "sabotta"
-ms.author: "carlasab"
+author: “Shamikg”
+ms.author: “Shamikg”
 manager: "murato"
 ---
 # Working with SSMA for Access Console (AccessToSQL)

@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "recommended migration process"
 ms.assetid: 76a3abcf-2998-4712-9490-fe8d872c89ca
 caps.latest.revision: 23
-author: "sabotta"
-ms.author: "carlasab"
+author: “Shamikg”
+ms.author: “Shamikg”
 manager: "murato"
 ---
 # Migrating Access databases to SQL Server - Azure SQL DB (AccessToSQL)

@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "Oracle Console, Launching Console"
 ms.assetid: 667a5e4a-6848-4973-a72d-1287f64718ac
 caps.latest.revision: 31
-author: "sabotta"
-ms.author: "carlasab"
+author: “Shamikg”
+ms.author: “Shamikg”
 manager: "v-thobro"
 ---
 # Getting Started with SSMA  for Oracle Console (OracleToSQL)

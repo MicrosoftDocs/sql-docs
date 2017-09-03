@@ -14,9 +14,9 @@ applies_to:
   - "SQL Server"
 ms.assetid: 7f9d9530-6c04-41d9-bbe7-d91820a30066
 caps.latest.revision: 4
-author: "sabotta"
-ms.author: "carlasab"
-manager: "lonnyb"
+author: “Shamikg”
+ms.author: “Shamikg”
+manager: "jhubbard"
 ---
 # Edit Type Mapping (AccessToSQL)
 The **Edit Type Mapping** dialog box lets you specify how types are mapped between the source and destination database objects.  

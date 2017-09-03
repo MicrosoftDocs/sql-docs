@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 9211013a-ab24-4c52-9b26-87994b35e502
 caps.latest.revision: 7
-author: "sabotta"
-ms.author: "carlasab"
+author: “Shamikg”
+ms.author: “Shamikg”
 manager: "v-thobro"
 ---
 # Installing SSMA  for Oracle (OracleToSQL)

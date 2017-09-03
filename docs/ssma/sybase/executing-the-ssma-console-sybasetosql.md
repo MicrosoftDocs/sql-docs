@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "Sybase Console,Script Generation Commands"
 ms.assetid: ea8950b7-fabc-4aa4-89f8-9573a2617d70
 caps.latest.revision: 22
-author: "sabotta"
-ms.author: "carlasab"
-manager: "lonnyb"
+author: “Shamikg”
+ms.author: “Shamikg”
+manager: "jhubbard"
 ---
 # Executing the SSMA Console (SybaseToSQL)
 Microsoft provides you with a robust set of script file commands to execute and control SSMA activities. The ensuing sections detail the same.  

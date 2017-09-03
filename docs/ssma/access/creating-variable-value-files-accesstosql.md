@@ -14,8 +14,8 @@ applies_to:
   - "SQL Server"
 ms.assetid: 808595c3-8ef1-40bd-a93e-5cf237950e08
 caps.latest.revision: 15
-author: "sabotta"
-ms.author: "carlasab"
+author: “Shamikg”
+ms.author: “Shamikg”
 manager: "murato"
 ---
 # Creating Variable Value Files (AccessToSQL)

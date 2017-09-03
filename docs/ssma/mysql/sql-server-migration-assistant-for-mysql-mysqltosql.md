@@ -14,8 +14,8 @@ applies_to:
   - "SQL Server"
 ms.assetid: 2793bc33-38d3-46ed-8277-b8580cf78ced
 caps.latest.revision: 13
-author: "sabotta"
-ms.author: "carlasab"
+author: “Shamikg”
+ms.author: “Shamikg”
 manager: "murato"
 ---
 # SQL Server Migration Assistant for MySQL (MySQLToSQL)

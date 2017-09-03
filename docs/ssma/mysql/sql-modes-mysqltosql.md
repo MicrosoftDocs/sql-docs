@@ -14,9 +14,9 @@ applies_to:
   - "SQL Server"
 ms.assetid: d840ee51-b863-4e77-84aa-37d3f094bfed
 caps.latest.revision: 4
-author: "sabotta"
-ms.author: "carlasab"
-manager: "lonnyb"
+author: “Shamikg”
+ms.author: “Shamikg”
+manager: "jhubbard"
 ---
 # SQL Modes (MySQLToSQL)
 The SSMA for MySQL can operate in different SQL Modes, and can apply these modes differently for different clients.  

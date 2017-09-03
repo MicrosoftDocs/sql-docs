@@ -14,9 +14,9 @@ applies_to:
   - "SQL Server"
 ms.assetid: 95b95de2-db05-4422-825d-43968ecfd01c
 caps.latest.revision: 4
-author: "sabotta"
-ms.author: "carlasab"
-manager: "lonnyb"
+author: “Shamikg”
+ms.author: “Shamikg”
+manager: "jhubbard"
 ---
 # New GUI Features in SSMA for Access to SQL
 This chapter describes new features of SSMA User Interface  

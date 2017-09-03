@@ -14,8 +14,8 @@ applies_to:
   - "SQL Server"
 ms.assetid: 64dfe192-965c-49d4-a3ea-848fbc5f619f
 caps.latest.revision: 21
-author: "sabotta"
-ms.author: "carlasab"
+author: “Shamikg”
+ms.author: “Shamikg”
 manager: "murato"
 ---
 # Creating script files (AccessToSQL)

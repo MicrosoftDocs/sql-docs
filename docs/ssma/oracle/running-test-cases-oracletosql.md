@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: fc208cdb-7373-4f6b-8f6c-cdff9d3dcd02
 caps.latest.revision: 6
-author: "sabotta"
-ms.author: "carlasab"
+author: “Shamikg”
+ms.author: “Shamikg”
 manager: "v-thobro"
 ---
 # Running Test Cases (OracleToSQL)

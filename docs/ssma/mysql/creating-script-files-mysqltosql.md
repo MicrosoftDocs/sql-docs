@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "Creating script files, server connection parameters"
 ms.assetid: b4608fe7-c777-4ba5-b853-4402f02109e3
 caps.latest.revision: 22
-author: "sabotta"
-ms.author: "carlasab"
-manager: "lonnyb"
+author: “Shamikg”
+ms.author: “Shamikg”
+manager: "jhubbard"
 ---
 # Creating Script Files (MySQLToSQL)
 The first step before launching the SSMA console application is to create the script file and if required creating the variable value file and the server connection file.  

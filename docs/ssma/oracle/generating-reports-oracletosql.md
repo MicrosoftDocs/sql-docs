@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Report Generation in Oracle Console,write-summary-report-to"
 ms.assetid: ccad6262-01e1-447a-bd2b-c105154c80ce
 caps.latest.revision: 17
-author: "sabotta"
-ms.author: "carlasab"
+author: “Shamikg”
+ms.author: “Shamikg”
 manager: "v-thobro"
 ---
 # Generating Reports (OracleToSQL)

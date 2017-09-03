@@ -14,9 +14,9 @@ applies_to:
   - "SQL Server"
 ms.assetid: 1ac003b5-493a-49a5-be2b-fedbc6e2cc11
 caps.latest.revision: 3
-author: "sabotta"
-ms.author: "carlasab"
-manager: "lonnyb"
+author: “Shamikg”
+ms.author: “Shamikg”
+manager: "jhubbard"
 ---
 # Global Settings (Editor) (MySQLToSQL)
 Use the Editor page of the **Global Settings** dialog box to specify settings for code editor windows.  

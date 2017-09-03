@@ -14,9 +14,9 @@ applies_to:
   - "SQL Server"
 ms.assetid: f4ea1ced-9f9f-4a9d-88ab-81dbab64adc3
 caps.latest.revision: 6
-author: "sabotta"
-ms.author: "carlasab"
-manager: "lonnyb"
+author: “Shamikg”
+ms.author: “Shamikg”
+manager: "jhubbard"
 ---
 # Loading Converted Database Objects into SQL Server (DB2ToSQL)
 After you have converted DB2 schemas to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], you can load the resulting database objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. You can either have SSMA create the objects, or you can script the objects and run the scripts yourself. Also, SSMA lets you update target metadata with the actual contents of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database.  

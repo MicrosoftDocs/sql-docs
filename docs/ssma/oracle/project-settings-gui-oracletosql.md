@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 9727df6d-b0f5-464b-a349-d32b626cedef
 caps.latest.revision: 3
-author: "sabotta"
-ms.author: "carlasab"
+author: “Shamikg”
+ms.author: “Shamikg”
 manager: "v-thobro"
 ---
 # Project Settings (GUI) (OracleToSQL)

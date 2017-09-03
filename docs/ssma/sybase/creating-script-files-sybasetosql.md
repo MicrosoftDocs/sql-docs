@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "Sybase Console,Server Connection Parameters"
 ms.assetid: e6baf106-abbd-4200-b3de-33b4b4f1b294
 caps.latest.revision: 24
-author: "sabotta"
-ms.author: "carlasab"
-manager: "lonnyb"
+author: “Shamikg”
+ms.author: “Shamikg”
+manager: "jhubbard"
 ---
 # Creating Script Files (SybaseToSQL)
 The first step before launching the SSMA console application is to create the script file and if required creating the variable value file and the server connection file.  

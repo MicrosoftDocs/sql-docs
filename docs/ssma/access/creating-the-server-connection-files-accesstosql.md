@@ -14,8 +14,8 @@ applies_to:
   - "SQL Server"
 ms.assetid: 829153be-aa8e-4162-87e8-69882feecf19
 caps.latest.revision: 10
-author: "sabotta"
-ms.author: "carlasab"
+author: “Shamikg”
+ms.author: “Shamikg”
 manager: "murato"
 ---
 # Creating the server connection files (AccessToSQL)

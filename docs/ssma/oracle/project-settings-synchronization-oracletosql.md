@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: e223fb7d-05ec-4fa5-8973-d845c33a23dd
 caps.latest.revision: 5
-author: "sabotta"
-ms.author: "carlasab"
+author: “Shamikg”
+ms.author: “Shamikg”
 manager: "v-thobro"
 ---
 # Project Settings(Synchronization) (OracleToSQL)

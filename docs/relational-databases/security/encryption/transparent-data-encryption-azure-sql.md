@@ -1,24 +1,23 @@
 ---
-title: 'TDE for Azure SQL Database and Data Warehouse | Microsoft Docs'
-description: An overview of Transparent Data Encryption for SQL Database and Data Warehouse. The document covers its benefits, and the options for configuration, including Service-managed TDE and Bring Your Own Key.
+title: "TDE for Azure SQL Database and Data Warehouse | Microsoft Docs"
+description: "An overview of Transparent Data Encryption for SQL Database and Data Warehouse. The document covers its benefits, and the options for configuration, including Service-managed TDE and Bring Your Own Key."
 keywords:
-services: sql-database
-documentationcenter: ''
-author: becczhang
-manager: jhubbard
-editor: ''
-
-ms.assetid: 
-ms.service: sql-database
-ms.custom: security
+services: "sql-database"
+documentationcenter: ""
+author: "becczhang"
+manager: "jhubbard"
+editor: ""
+ms.assetid:
+ms.service: "sql-database"
+ms.custom: "security"
 ms.workload:
 ms.tgt_pltfrm:
-ms.devlang: na
-ms.topic: article
-ms.date: 08/07/2017
-ms.author: rebeccaz
+ms.devlang: "na"
+ms.topic: "article"
+ms.date: "08/07/2017"
+ms.author: "rebeccaz"
+---
 
---- 
 
 # Transparent Data Encryption for Azure SQL Database and Data Warehouse
 

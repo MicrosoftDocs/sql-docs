@@ -1,7 +1,7 @@
 ---
 title: "RESTORE Arguments (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/10/2017"
+ms.date: "09/05/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -356,6 +356,8 @@ manager: "jhubbard"
  **Supported by:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
   
  Specifies the largest unit of transfer in bytes to be used between the backup media and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The possible values are multiples of 65536 bytes (64 KB) ranging up to 4194304 bytes (4 MB).  
+> [!NOTE]  
+>  When the database has configured FILESTREAM, or includes or In-Memory OLTP File Groups, `MAXTRANSFERSIZE` at the time of restore should be greater than or equal to what was used when the backup was created.  
   
 ##### Error Management Options  
  These options allow you to determine whether backup checksums are enabled for the restore operation and whether the operation will stop on encountering an error.  

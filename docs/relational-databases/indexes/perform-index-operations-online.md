@@ -18,6 +18,8 @@ caps.latest.revision: 32
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.product_service: sql-server-2016, sql-database
+ms.component: dbe-indexes
 ---
 # Perform Index Operations Online
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

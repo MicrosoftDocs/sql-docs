@@ -50,12 +50,12 @@ The following table provides the user action that is appropriate for the specifi
   
 |Error state|User action|  
 |---------------|---------------|  
-|State 0|Restore from backup.|  
-|State 1|Contact [!INCLUDE[msCoName](../../includes/msconame-md.md)] Customer Service and Support (CSS).|  
-|State 2|Restore from backup.|  
+|State 1|Restore from backup.|  
+|State 2|Contact [!INCLUDE[msCoName](../../includes/msconame-md.md)] Customer Service and Support (CSS).|  
 |State 3|Restore from backup.|  
+|State 4|Restore from backup.|  
 |State 4|Contact CSS.|  
-|State 5|Run the command again. If the problem persists, contact CSS.|  
+|State 6|Run the command again. If the problem persists, contact CSS.|  
   
 ## See Also  
 [DBCC &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-transact-sql.md)  

@@ -65,7 +65,7 @@ manager: "jhubbard"
   
  Is the database that the log or complete database is restored into. If supplied as a variable (**@***database_name_var*), this name can be specified either as a string constant (**@***database_name_var* = *database*_*name*) or as a variable of character string data type, except for the **ntext** or **text** data types.  
   
- \<file_or_filegroup_or_page> [ **,**...*n* ] 
+ \<file_or_filegroup_or_page> [ **,**...*n* ]  
  **Supported by:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
   
  Specifies the name of a logical file or filegroup or page to include in a RESTORE DATABASE or RESTORE LOG statement. You can specify a list of files or filegroups.  
@@ -131,7 +131,7 @@ FROM { \<backup_device> [ **,**...*n* ]| \<database_snapshot> }
  Is the logical name, which must follow the rules for identifiers, of the backup device(s) created by **sp_addumpdevice** from which the database is restored. If supplied as a variable (**@***logical_backup_device_name_var*), the backup device name can be specified either as a string constant (**@***logical_backup_device_name_var* = *logical_backup_device_name*) or as a variable of character string data type, except for the **ntext** or **text** data types.  
   
  {DISK | TAPE } **=** { **'***physical_backup_device_name***'** | **@***physical_backup_device_name_var* }  
- Allows backups to be restored from the named disk or tape device. The device types of disk and tape should be specified with the actual name (for example, complete path and file name) of the device: DISK ='Z:\SQLServerBackups\AdventureWorks.bak' or TAPE ='\\\\.\TAPE0'. If specified as a variable (**@***physical_backup_device_name_var*), the device name can be specified either as a string constant (**@***physical_backup_device_name_var* = '*physcial_backup_device_name*') or as a variable of character string data type, except for the **ntext** or **text** data types.  
+ Allows backups to be restored from the named disk or tape device. The device types of disk and tape should be specified with the actual name (for example, complete path and file name) of the device: `DISK ='Z:\SQLServerBackups\AdventureWorks.bak'` or `TAPE ='\\\\.\TAPE0'`. If specified as a variable (**@***physical_backup_device_name_var*), the device name can be specified either as a string constant (**@***physical_backup_device_name_var* = '*physcial_backup_device_name*') or as a variable of character string data type, except for the **ntext** or **text** data types.  
   
  If using a network server with a UNC name (which must contain machine name), specify a device type of disk. For more information about how to use UNC names, see [Backup Devices &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
   
@@ -470,7 +470,7 @@ Use KEEP_REPLICATION when setting up replication to work with log shipping. It p
   
  For information about using change data capture with database mirroring, see [Change Data Capture and Other SQL Server Features](../../relational-databases/track-changes/change-data-capture-and-other-sql-server-features.md).  
   
-#### <service_broker_WITH_options>  
+#### \<service_broker_WITH_options>  
  Turns [!INCLUDE[ssSB](../../includes/sssb-md.md)] message delivery on or off or sets a new [!INCLUDE[ssSB](../../includes/sssb-md.md)] identifier. This option is relevant only if [!INCLUDE[ssSB](../../includes/sssb-md.md)] was enabled (activated) for the database when the backup was created.  
   
  { ENABLE_BROKER  | ERROR_BROKER_CONVERSATIONS  | NEW_BROKER }  
@@ -485,7 +485,7 @@ Use KEEP_REPLICATION when setting up replication to work with log shipping. It p
  NEW_BROKER  
  Specifies that the database be assigned a new Service Broker identifier. Because the database is considered to be a new Service Broker, existing conversations in the database are immediately removed without producing end dialog messages. Any route referencing the old Service Broker identifier must be recreated with the new identifier.  
   
-#### <point_in_time_WITH_options>  
+#### \<point_in_time_WITH_options>  
  **Supported by:**  [RESTORE {DATABASE|LOG}](../../t-sql/statements/restore-statements-transact-sql.md) and only for the full or bulk-logged recovery models.  
   
  You can restore a database to a specific point in time or transaction, by specifying the target recovery point in a STOPAT, STOPATMARK, or STOPBEFOREMARK clause. A specified time or transaction is always restored from a log backup. In every RESTORE LOG statement of the restore sequence, you must specify your target time or transaction in an identical STOPAT, STOPATMARK, or STOPBEFOREMARK clause.  
@@ -495,7 +495,8 @@ Use KEEP_REPLICATION when setting up replication to work with log shipping. It p
 > [!NOTE]  
 >  The RESTORE_DATABASE and RESTORE_LOG point-in-time WITH options are similar, but only RESTORE LOG supports the *mark_name* argument.  
   
- { STOPAT | STOPATMARK | STOPBEFOREMARK }  
+ { STOPAT | STOPATMARK | STOPBEFOREMARK }   
+ 
  STOPAT **=** { **'***datetime***'** | **@***datetime_var* }  
  Specifies that the database be restored to the state it was in as of the date and time specified by the *datetime* or **@***datetime_var* parameter. For information about specifying a date and time, see [Date and Time Data Types and Functions &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
   

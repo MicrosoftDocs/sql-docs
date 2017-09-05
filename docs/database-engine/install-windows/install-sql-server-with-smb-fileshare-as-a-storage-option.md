@@ -1,8 +1,10 @@
 ---
 title: "Install SQL Server with SMB Fileshare as a Storage Option | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.date: "09/05/2017"
+ms.prod: 
+ - "sql-server-2016"
+ - "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,7 +18,7 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # Install SQL Server with SMB Fileshare as a Storage Option
-  Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], system databases (Master, Model, MSDB, and TempDB), and [!INCLUDE[ssDE](../../includes/ssde-md.md)] user databases can be installed with Server Message Block (SMB) file server as a storage option. This applies to both [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stand-alone and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster installations (FCI).  
+Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], system databases (Master, Model, MSDB, and TempDB), and [!INCLUDE[ssDE](../../includes/ssde-md.md)] user databases can be installed with Server Message Block (SMB) file server as a storage option. This applies to both [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stand-alone and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster installations (FCI).  
   
 > [!NOTE]  
 >  Filestream is currently not supported on an SMB file share.  
@@ -30,7 +32,7 @@ manager: "jhubbard"
   
 -   \\\ServerName\ShareName  
   
- For more information about Universal Naming Convention, see [UNC](http://go.microsoft.com/fwlink/?LinkId=245534) (http://go.microsoft.com/fwlink/?LinkId=245534).  
+ For more information about Universal Naming Convention, see [UNC](https://msdn.microsoft.com/en-us/library/gg465305.aspx).  
   
  The loopback UNC path (a UNC path whose server name is localhost, 127.0.0.1, or the local machine name) is not supported. As a special case, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] using File Server Cluster which is hosted on the same node [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is running is also not supported. To prevent this situation, it is recommended that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and File Server Cluster to be created on separated Windows Clusters.  
   

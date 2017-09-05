@@ -1,8 +1,10 @@
 ---
 title: "Install SQL Server 2016 on Server Core | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/10/2016"
-ms.prod: "sql-server-2016"
+ms.date: "09/05/2017"
+ms.prod: 
+ - "sql-server-2016"
+ - "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,9 +18,9 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # Install SQL Server on Server Core
-  You can install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on a Server Core installation. This topic provides setup-specific details for installing [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] on Server Core.  
+You can install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on a Server Core installation.   
   
- The Server Core installation option provides a minimal environment for running specific server roles. This helps to reduce maintenance and management requirements and the attack surface for those server roles. For more information on Server Core, see [Install Server Core](https://technet.microsoft.com/en-us/windows-server-docs/get-started/getting-started-with-server-core). For more information on Server Core as implemented on [!INCLUDE[win8srv](../../includes/win8srv-md.md)], see [Server Core for Windows Server 2012](http://msdn.microsoft.com/library/hh846323\(VS.85\).aspx) (http://msdn.microsoft.com/library/hh846323(VS.85).aspx).  
+The Server Core installation option provides a minimal environment for running specific server roles. This helps to reduce maintenance and management requirements and the attack surface for those server roles. For more information on Server Core, see [Install Server Core](http://docs.microsoft.com/windows-server/get-started/getting-started-with-server-core). For more information on Server Core as implemented on [!INCLUDE[win8srv](../../includes/win8srv-md.md)], see [Server Core for Windows Server 2012](http://msdn.microsoft.com/library/hh846323\(VS.85\).aspx) (http://msdn.microsoft.com/library/hh846323(VS.85).aspx).  
   
  For a list of currently supported operating systems, see [Hardware and Software Requirements for Installing SQL Server](https://docs.microsoft.com/en-us/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server).
 
@@ -293,7 +295,7 @@ To enable remote connections, use SQLCMD.exe locally and execute the following s
   
 4.  In the **Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell** window, run the following script to enable the TCP/IP protocol:  
   
-```  
+```powershell  
 $smo = 'Microsoft.SqlServer.Management.Smo.'  
 $wmi = new-object ($smo + 'Wmi.ManagedComputer')  
 # Enable the TCP protocol on the default instance.  If the instance is named, replace MSSQLSERVER with the instance name in the following line.  
@@ -325,9 +327,9 @@ If you accidentally close the command prompt, you can start a new command prompt
 3.  In the **Create New Task** dialog box, type **cmd** in the **Open** field and then [!INCLUDE[clickOK](../../includes/clickok-md.md)].  
   
 ## See also  
- [Install SQL Server 2016 Using a Configuration File](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md)   
- [Install SQL Server 2016 from the Command Prompt](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
- [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)   
+ [Install SQL Server Using a Configuration File](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md)   
+ [Install SQL Server from the Command Prompt](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
+ [Editions and supported features of SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md)   
  [Install Server Core](http://technet.microsoft.com/windows-server-docs/get-started/getting-started-with-server-core)   
  [Configure a Server Core installation of Windows Server 2016 with Sconfig.cmd](http://technet.microsoft.com/windows-server-docs/get-started/sconfig-on-ws2016)   
  [Failover Cluster Cmdlets in Windows PowerShell](http://technet.microsoft.com/itpro/powershell/windows/failover-clusters/index)   

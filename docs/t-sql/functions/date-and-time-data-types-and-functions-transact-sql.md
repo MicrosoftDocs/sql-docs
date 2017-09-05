@@ -1,7 +1,7 @@
 ---
 title: "Date and Time Data Types and Functions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/29/2017"
+ms.date: "09/01/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -40,8 +40,8 @@ The following sections in this topic provide an overview of all [!INCLUDE[tsql](
     -   [Functions That Validate Date and Time Values](#ValidateDateandTimeValues)  
 -   [Date and Time–Related Topics](#DateandTimeRelatedTopics)  
   
-##  <a name="DateandTimeDataTypes"></a> Date and Time data tyes
-The [!INCLUDE[tsql](../../includes/tsql-md.md)] date and time data types are listed in the following table.
+##  <a name="DateandTimeDataTypes"></a> Date and Time data types
+The [!INCLUDE[tsql](../../includes/tsql-md.md)] date and time data types are listed in the following table:
   
 |Data type|Format|Range|Accuracy|Storage size (bytes)|User-defined fractional second precision|Time zone offset|  
 |---|---|---|---|---|---|---|
@@ -53,7 +53,7 @@ The [!INCLUDE[tsql](../../includes/tsql-md.md)] date and time data types are lis
 |[datetimeoffset](../../t-sql/data-types/datetimeoffset-transact-sql.md)|YYYY-MM-DD hh:mm:ss[.nnnnnnn] [+&#124;-]hh:mm|0001-01-01 00:00:00.0000000 through 9999-12-31 23:59:59.9999999 (in UTC)|100 nanoseconds|8 to 10|Yes|Yes|  
   
 > [!NOTE]  
->  The [!INCLUDE[tsql](../../includes/tsql-md.md)][rowversion](../../t-sql/data-types/rowversion-transact-sql.md) data type is not a date or time data type. **timestamp** is a deprecated synonym for **rowversion**.  
+>  The [!INCLUDE[tsql](../../includes/tsql-md.md)] [rowversion](../../t-sql/data-types/rowversion-transact-sql.md) data type is not a date or time data type. **timestamp** is a deprecated synonym for **rowversion**.  
   
 ##  <a name="DateandTimeFunctions"></a> Date and Time functions  
 The [!INCLUDE[tsql](../../includes/tsql-md.md)] date and time functions are listed in the following tables. For more information about determinism, see [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).
@@ -65,7 +65,7 @@ All system date and time values are derived from the operating system of the com
 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] obtains the date and time values by using the GetSystemTimeAsFileTime() Windows API. The accuracy depends on the computer hardware and version of Windows on which the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is running. The precision of this API is fixed at 100 nanoseconds. The accuracy can be determined by using the GetSystemTimeAdjustment() Windows API.
   
 |Function|Syntax|Return value|Return data type|Determinism|  
-|---|---|---|---|
+|---|---|---|---|--|  
 |[SYSDATETIME](../../t-sql/functions/sysdatetime-transact-sql.md)|SYSDATETIME ()|Returns a **datetime2(7)** value that contains the date and time of the computer on which the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is running. The time zone offset is not included.|**datetime2(7)**|Nondeterministic|  
 |[SYSDATETIMEOFFSET](../../t-sql/functions/sysdatetimeoffset-transact-sql.md)|SYSDATETIMEOFFSET ( )|Returns a **datetimeoffset(7)** value that contains the date and time of the computer on which the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is running. The time zone offset is included.|**datetimeoffset(7)**|Nondeterministic|  
 |[SYSUTCDATETIME](../../t-sql/functions/sysutcdatetime-transact-sql.md)|SYSUTCDATETIME ( )|Returns a **datetime2(7)** value that contains the date and time of the computer on which the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is running. The date and time is returned as UTC time (Coordinated Universal Time).|**datetime2(7)**|Nondeterministic|  
@@ -84,25 +84,25 @@ All system date and time values are derived from the operating system of the com
 |--------------|------------|------------------|----------------------|-----------------|  
 |[DATENAME](../../t-sql/functions/datename-transact-sql.md)|DATENAME ( *datepart* , *date* )|Returns a character string that represents the specified *datepart* of the specified date.|**nvarchar**|Nondeterministic|  
 |[DATEPART](../../t-sql/functions/datepart-transact-sql.md)|DATEPART ( *datepart* , *date* )|Returns an integer that represents the specified *datepart* of the specified *date*.|**int**|Nondeterministic|  
-|[DAY](../../t-sql/functions/day-transact-sql.md)|DAY ( *date* )|Returns an integer that represents the day day part of the specified *date*.|**int**|Deterministic|  
+|[DAY](../../t-sql/functions/day-transact-sql.md)|DAY ( *date* )|Returns an integer that represents the day part of the specified *date*.|**int**|Deterministic|  
 |[MONTH](../../t-sql/functions/month-transact-sql.md)|MONTH ( *date* )|Returns an integer that represents the month part of a specified *date*.|**int**|Deterministic|  
 |[YEAR](../../t-sql/functions/year-transact-sql.md)|YEAR ( *date* )|Returns an integer that represents the year part of a specified *date*.|**int**|Deterministic|  
   
 ###  <a name="fromParts"></a> Functions that get Date and Time values from their parts
   
 |Function|Syntax|Return value|Return data type|Determinism|  
-|---|---|---|---|
+|---|---|---|---|---|   
 |[DATEFROMPARTS](../../t-sql/functions/datefromparts-transact-sql.md)|DATEFROMPARTS  ( *year*, *month*, *day* )|Returns a **date** value for the specified year, month, and day.|**date**|Deterministic|  
-|[DATETIME2FROMPARTS](../../t-sql/functions/datetime2fromparts-transact-sql.md)|DATETIME2FROMPARTS  ( *year*, *month*, *day*, *hour*, *minute*, *seconds*, *fractions*, *precision* )|Returns a **datetime2** value for the specified date and time and with the specified precision.|**datetime2(** *precision* **)**|Deterministic|  
-|[DATETIMEFROMPARTS](../../t-sql/functions/datetimefromparts-transact-sql.md)|DATETIMEFROMPARTS  ( *year*, *month*, *day*, *hour*, *minute*, *seconds*, *milliseconds* )|Returns a **datetime** value for the specified date and time.|**datetime**|Deterministic|  
-|[DATETIMEOFFSETFROMPARTS](../../t-sql/functions/datetimeoffsetfromparts-transact-sql.md)|DATETIMEOFFSETFROMPARTS  ( *year*, *month*, *day*, *hour*, *minute*, *seconds*, *fractions*, *hour_offset*, *minute_offset*, *precision* )|Returns a **datetimeoffset** value for the specified date and time and with the specified offsets and precision.|**datetime(** *precision* **)**|Deterministic|  
+|[DATETIME2FROMPARTS](../../t-sql/functions/datetime2fromparts-transact-sql.md)|DATETIME2FROMPARTS  ( *year*, *month*, *day*, *hour*, *minute*, *seconds*, *fractions*, *precision*)|Returns a **datetime2** value for the specified date and time and with the specified precision.|**datetime2(** *precision* **)**|Deterministic|  
+|[DATETIMEFROMPARTS](../../t-sql/functions/datetimefromparts-transact-sql.md)|DATETIMEFROMPARTS  ( *year*, *month*, *day*, *hour*, *minute*, *seconds*, *milliseconds*)|Returns a **datetime** value for the specified date and time.|**datetime**|Deterministic|  
+|[DATETIMEOFFSETFROMPARTS](../../t-sql/functions/datetimeoffsetfromparts-transact-sql.md)|DATETIMEOFFSETFROMPARTS  ( *year*, *month*, *day*, *hour*, *minute*, *seconds*, *fractions*, *hour_offset*, *minute_offset*, *precision*)|Returns a **datetimeoffset** value for the specified date and time and with the specified offsets and precision.|**datetime(** *precision* **)**|Deterministic|  
 |[SMALLDATETIMEFROMPARTS](../../t-sql/functions/smalldatetimefromparts-transact-sql.md)|SMALLDATETIMEFROMPARTS  ( *year*, *month*, *day*, *hour*, *minute* )|Returns a **smalldatetime** value for the specified date and time.|**smalldatetime**|Deterministic|  
 |[TIMEFROMPARTS](../../t-sql/functions/timefromparts-transact-sql.md)|TIMEFROMPARTS  ( *hour*, *minute*, *seconds*, *fractions*, *precision* )|Returns a **time** value for the specified time and with the specified precision.|**time(** *precision* **)**|Deterministic|  
   
 ###  <a name="GetDateandTimeDifference"></a> Functions that get Date and Time difference
   
 |Function|Syntax|Return value|Return data type|Determinism|  
-|---|---|---|---|
+|---|---|---|---|---|  
 |[DATEDIFF](../../t-sql/functions/datediff-transact-sql.md)|DATEDIFF ( *datepart* , *startdate* , *enddate* )|Returns the number of date or time *datepart* boundaries that are crossed between two specified dates.|**int**|Deterministic|  
 |[DATEDIFF_BIG](../../t-sql/functions/datediff-big-transact-sql.md)|DATEDIFF_BIG ( *datepart* , *startdate* , *enddate* )|Returns the number of date or time *datepart* boundaries that are crossed between two specified dates.|**bigint**|Deterministic|  
   

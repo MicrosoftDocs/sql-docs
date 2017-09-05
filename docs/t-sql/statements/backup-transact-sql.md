@@ -1,7 +1,7 @@
 ---
 title: "BACKUP (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/07/2017"
+ms.date: "09/05/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -226,7 +226,7 @@ TO \<backup_device> [ **,**...*n* ]
  Specifies a disk file or tape device, or a Windows Azure Blob storage service. The URL format is used for creating backups to the Windows Azure storage service. For more information and examples, see [SQL Server Backup and Restore with Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). For a tutorial, see [Tutorial: SQL Server Backup and Restore to Windows Azure Blob Storage Service](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md).  
   
 > [!IMPORTANT]  
->  With [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 until [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], you can only backup to a single device when backing up to URL. In order to backup to multiple devices when backing up to URL you must use [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and you must use Shared Access Signature (SAS) tokens. For examples creating a Shared Access Signature, see [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md) and [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with Powershell](http://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx).  
+>  With [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 until [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], you can only backup to a single device when backing up to URL. In order to backup to multiple devices when backing up to URL, you must use [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and you must use Shared Access Signature (SAS) tokens. For examples creating a Shared Access Signature, see [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md) and [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with Powershell](http://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx).  
   
 **URL applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
@@ -241,7 +241,7 @@ TO \<backup_device> [ **,**...*n* ]
  Is a placeholder that indicates that up to 64 backup devices may be specified in a comma-separated list.  
   
 MIRROR TO \<backup_device> [ **,**...*n* ]
- Specifies a set of up to three secondary backup devices, each of which will mirror the backups devices specified in the TO clause. The MIRROR TO clause must be specify the same type and number of the backup devices as the TO clause. The maximum number of MIRROR TO clauses is three.  
+ Specifies a set of up to three secondary backup devices, each of which mirrors the backups devices specified in the TO clause. The MIRROR TO clause must specify the same type and number of the backup devices as the TO clause. The maximum number of MIRROR TO clauses is three.  
   
  This option is available only in the Enterprise edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -300,7 +300,7 @@ See "\<backup_device>," earlier in this section.
 -   SERVER ASYMMETRIC KEY = Encryptor_Name  
   
     > [!WARNING]  
-    >  When encryption is used in conjunction with the FILE_SNAPSHOT argument, the metadata file itself is encrypted using the specified encryption algorithm and the system verifies that TDE was completed for the database. No additional encryption happens for the data itself. The backup will fail if the database was not encrypted or if the encryption was not completed before the backup statement was issued.  
+    >  When encryption is used in conjunction with the FILE_SNAPSHOT argument, the metadata file itself is encrypted using the specified encryption algorithm and the system verifies that TDE was completed for the database. No additional encryption happens for the data itself. The backup fails if the database was not encrypted or if the encryption was not completed before the backup statement was issued.  
   
  **Backup Set Options**  
   
@@ -453,10 +453,12 @@ See "\<backup_device>," earlier in this section.
   
  MAXTRANSFERSIZE **=** { *maxtransfersize* | **@***maxtransfersize_variable* }  
  Specifies the largest unit of transfer in bytes to be used between [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and the backup media. The possible values are multiples of 65536 bytes (64 KB) ranging up to 4194304 bytes (4 MB).  
+> [!NOTE]  
+>  When using SQL Writer (VSS\VDI) if the `MAXTRANSFER` size is set to 4 MB on backup, then 4 MB must be used on restore, otherwise they encounter the following error: **RESTORE requires MAXTRANSFERSIZE=4194304 but 65536 was specified.**  This only happens on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases where FileStream or In-Memory OLTP File Groups are involved.
   
  **Error Management Options**  
   
- These options allow you to determine whether backup checksums are enabled for the backup operation and whether the operation will stop on encountering an error.  
+ These options allow you to determine whether backup checksums are enabled for the backup operation and whether the operation stops on encountering an error.  
   
  { **NO_CHECKSUM** | CHECKSUM }  
  Controls whether backup checksums are enabled.  
@@ -465,7 +467,7 @@ See "\<backup_device>," earlier in this section.
  Explicitly disables the generation of backup checksums (and the validation of page checksums). This is the default behavior.  
   
  CHECKSUM  
- Specifies that the backup operation will verify each page for checksum and torn page, if enabled and available, and generate a checksum for the entire backup.  
+ Specifies that the backup operation verifies each page for checksum and torn page, if enabled and available, and generate a checksum for the entire backup.  
   
  Using backup checksums may affect workload and backup throughput.  
   
@@ -502,7 +504,7 @@ See "\<backup_device>," earlier in this section.
   
  { **REWIND** | NOREWIND }  
  REWIND  
- Specifies that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will release and rewind the tape. REWIND is the default.  
+ Specifies that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] releases and rewinds the tape. REWIND is the default.  
   
  NOREWIND  
  Specifies that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will keep the tape open after the backup operation. You can use this option to help improve performance when performing multiple backup operations to a tape.  
@@ -520,7 +522,7 @@ See "\<backup_device>," earlier in this section.
  Specifies that the tape is automatically rewound and unloaded when the backup is finished. UNLOAD is the default when a session begins. 
   
  NOUNLOAD  
- Specifies that after the BACKUP operation the tape will remain loaded on the tape drive.  
+ Specifies that after the BACKUP operation the tape remains loaded on the tape drive.  
   
 > [!NOTE]  
 >  For a backup to a tape backup device, the BLOCKSIZE option to affect the performance of the backup operation. This option typically affects performance only when writing to tape devices.  
@@ -546,7 +548,7 @@ See "\<backup_device>," earlier in this section.
  This file holds the rolled back changes, which must be reversed if RESTORE LOG operations are to be subsequently applied. There must be enough disk space for the standby file to grow so that it can contain all the distinct pages from the database that were modified by rolling back uncommitted transactions.  
   
  NO_TRUNCATE  
- Specifies that the log not be truncated and causes the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to attempt the backup regardless of the state of the database. Consequently, a backup taken with NO_TRUNCATE might have incomplete metadata. This option allows backing up the log in situations where the database is damaged.  
+ Specifies that the is log not truncated and causes the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to attempt the backup regardless of the state of the database. Consequently, a backup taken with NO_TRUNCATE might have incomplete metadata. This option allows backing up the log in situations where the database is damaged.  
   
  The NO_TRUNCATE option of BACKUP LOG is equivalent to specifying both COPY_ONLY and CONTINUE_AFTER_ERROR.  
   
@@ -625,7 +627,7 @@ GO
   
  After a backup device is defined as part of a stripe set, it cannot be used for a single-device backup unless FORMAT is specified. Similarly, a backup device that contains nonstriped backups cannot be used in a stripe set unless FORMAT is specified. To split a striped backup set, use FORMAT.  
   
- If neither MEDIANAME nor MEDIADESCRIPTION is specified when a media header is written, the media header field corresponding to the blank item is empty.  
+ If neither MEDIANAME or MEDIADESCRIPTION is specified when a media header is written, the media header field corresponding to the blank item is empty.  
   
 #### Working with a Mirrored Media Set  
  Typically, backups are unmirrored, and BACKUP statements simply include a TO clause. However, a total of four mirrors is possible per media set. For a mirrored media set, the backup operation writes to multiple groups of backup devices. Each group of backup devices comprises a single mirror within the mirrored media set. Every mirror must use the same quantity and type of physical backup devices, which must all have the same properties.  

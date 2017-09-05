@@ -1,24 +1,23 @@
 ---
-title: 'PowerShell: Enable TDE using your own Azure Key Vault key | Microsoft Docs'
-description: Learn how to configure an Azure SQL Database and Data Warehouse to start using Transparent Data Encryption (TDE) for encryption-at-rest using PowerShell. 
-keywords: 
-services: sql-database
-documentationcenter: ''
-author: becczhang
-manager: jhubbard
-editor: ''
-
-ms.assetid: 
-ms.service: sql-database
-ms.custom: security
+title: "PowerShell: Enable TDE using your own Azure Key Vault key | Microsoft Docs"
+description: "Learn how to configure an Azure SQL Database and Data Warehouse to start using Transparent Data Encryption (TDE) for encryption-at-rest using PowerShell."
+keywords:
+services: "sql-database"
+documentationcenter:
+author: "becczhang"
+manager: "jhubbard"
+editor:
+ms.assetid:
+ms.service: "sql-database"
+ms.custom: "security"
 ms.workload:
 ms.tgt_pltfrm:
-ms.devlang: na
-ms.topic: article
-ms.date: 08/07/2017
-ms.author: rebeccaz
+ms.devlang: "na"
+ms.topic: "article"
+ms.date: "08/07/2017"
+ms.author: "rebeccaz"
+---
 
---- 
 
 # PowerShell: Enable Transparent Data Encryption using your own key from Azure Key Vault
 

@@ -18,30 +18,30 @@ manager: "jhubbard"
 ---
 # Troubleshoot data collection for machine learning
 
-This article describes the kind of data that you should collect when you attempt to resolve problems with the setup, configuration, or performance of machine learning in SQL Server. Such data includes logs, error messages, and system information.
+This article discusses the kind of data that you should collect when you attempt to resolve problems with the setup, configuration, or performance of machine learning in SQL Server. Such data includes logs, error messages, and system information.
 
-The goal is to describe the sources of information that will be most useful when you perform diagnostics on a self-help basis. Collection of this information will also be useful when you request technical support for issues related to SQL Server machine-learning features.
+The article describes the sources of information that are the most useful when you perform diagnostics on a self-help basis. Collecting this information is also useful when you request technical support for issues related to SQL Server machine-learning features.
 
 **Applies to:** SQL Server 2016 R Services, SQL Server 2017 Machine Learning Services (R and Python)
 
 ## SQL Server and R versions
 
-Note whether the version is a new installation or an upgrade. For upgrades, determine how the upgrade was performed:
+Note whether the version is a new installation or an upgrade. If it's an upgrade, determine how it was performed:
 
 - Which version did you upgrade from? 
 - Did you remove old components, or did you upgrade in place?
-- Did you change any feature selections when you upgraded? 
+- Did you change any feature selections during the upgrade? 
 
-### Which version of SQL Server is installed? Which edition? 
+### Which edition of SQL Server is installed, and which version? 
 
 SQL Server R Services was introduced in SQL Server 2016. Previous versions do not support machine learning. Moreover, subsequent service packs for the 2016 release included many bug fixes and improvements. AS a first step, you should consider installing Service Pack 1 or later.
 
 In SQL Server 2017, support is extended to the Python language. Support for Python was not provided in earlier releases.
 
-If you need help determining which version and edition you have, see this article, which lists the build numbers for each of the
-[SQL Server Versions](https://social.technet.microsoft.com/wiki/contents/articles/783.sql-server-versions.aspx#Service_Pack_editions)
+If you need help to determine which edition and version you have, see this article, which lists the build numbers for each of the
+[SQL Server versions](https://social.technet.microsoft.com/wiki/contents/articles/783.sql-server-versions.aspx#Service_Pack_editions).
 
-Depending on the **edition** of SQL Server that you are using, some machine-learning functionality might be unavailable, or limited.
+Depending on the edition of SQL Server you're using, some machine-learning functionality might be unavailable, or limited.
 
 See the following topics for a list of machine-learning features in Enterprise, Developer, Standard, and Express editions.
 
@@ -54,9 +54,7 @@ In general, the version of Microsoft R that is installed when you select the R S
 
 For a list of releases and links to R component downloads, see [Install machine learning components without internet access](https://docs.microsoft.com/sql/advanced-analytics/r/installing-ml-components-without-internet-access). On computers with internet access, the required version of R is identified and installed automatically.
 
-However, it is possible to upgrade the R Server components separately from the SQL Server database engine, in a process known as binding. 
-
-Therefore, the version of R that you use when you run R code in SQL Server might differ depending both on the installed version of SQL Server and whether you have migrated the server to the latest R version.
+It's possible to upgrade the R Server components separately from the SQL Server database engine, in a process known as binding. Therefore, the version of R that you use when you run R code in SQL Server might differ depending on both the installed version of SQL Server and whether you have migrated the server to the latest R version.
 
 #### Determine the R version
 
@@ -138,7 +136,7 @@ OutputDataSet = pandas.DataFrame(
 with result sets ((PropertyName nvarchar(100), PropertyValue nvarchar(4000)));
 ```
 
-If Machine Learning Services is not running, you can determine the Python version that was installed by looking at the pythonlauncher.config file. We recommend that you make and open a copy of the file so that you don't accidentally change any properties.
+If Machine Learning Services is not running, you can determine the installed Python version by looking at the pythonlauncher.config file. We recommend that you make and open a copy of the file so that you don't accidentally change any properties.
 
 1. For SQL Server 2017 only: `C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\MSSQL\Log\ExtensibilityLog\pythonlauncher.config `
 2. Get the value for **PYTHONHOME**.
@@ -150,10 +148,10 @@ If Machine Learning Services is not running, you can determine the Python versio
 
 ### Are multiple instances of R or Python installed?
 
-Check to see whether more than one copy of the R libraries is installed on the computer. This can happen if:
+Check to see whether more than one copy of the R libraries is installed on the computer. This duplication can happen if:
 
-* During setup you select both R Services (In-Database) and R Server (Standalone) 
-* You install Microsoft R Client in addition to SQL Server
+* During setup you select both R Services (In-Database) and R Server (Standalone). 
+* You install Microsoft R Client in addition to SQL Server.
 * A different set of R libraries was installed by using R Tools for Visual Studio, R Studio, Microsoft R Client, or another R IDE.
 * The computer hosts multiple instances of SQL Server, and more than one instance uses machine learning.
 
@@ -220,7 +218,7 @@ go
 
 ### What errors are generated by the extensibility framework?
 
-SQL Server generates separate logs for the external script language runtimes. These errors are not generated by the Python or R language, but rather from the extensibility components in SQL Server, including language-specific launchers and their satellite processes.
+SQL Server generates separate logs for the external script language runtimes. These errors are not generated by the Python or R language but, rather, from the extensibility components in SQL Server, including language-specific launchers and their satellite processes.
 
 You can get these logs from the following default locations:
 
@@ -237,17 +235,17 @@ You can get these logs from the following default locations:
 
 For example, the following log messages are related to the extensibility framework:
 
-* "LogonUser Failed for user MSSQLSERVER01"
+* *LogonUser Failed for user MSSQLSERVER01*
   
   This might indicate that the worker accounts that run external scripts cannot access the instance.
 
-* "InitializePhysicalUsersPool Failed" 
+* *InitializePhysicalUsersPool Failed* 
   
   This message might mean that your security settings are preventing setup from creating the pool of worker accounts that are needed to run external scripts.
 
-* "Security Context Manager initialization failed" 
+* *Security Context Manager initialization failed* 
 
-* "Satellite Session Manager initialization failed"
+* *Satellite Session Manager initialization failed*
 
 ### Are there any related system events?
 
@@ -270,7 +268,7 @@ If you are knowledgeable about debugging, you can use the dump files to analyze 
 2. Open the bootstrap log subfolder that is specific to extensibility.
 3. If you need to submit a support request, add the entire contents of this folder to a zipped file. For example, C:\Program Files\Microsoft SQL Server\130\Setup Bootstrap\Log\LOG\ExtensibilityLog.
   
-The exact location might differ on your system, and it might be on drive other than your C drive. Be sure to get the logs for the instance where Machine Learning is installed. 
+The exact location might differ on your system, and it might be on a drive other than your C drive. Be sure to get the logs for the instance where machine learning is installed. 
 
 
 ## Related tools and configuration

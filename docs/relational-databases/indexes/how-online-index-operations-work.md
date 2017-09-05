@@ -21,6 +21,8 @@ caps.latest.revision: 28
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.product_service: sql-server-2016, sql-database
+ms.component: dbe-indexes
 ---
 # How Online Index Operations Work
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

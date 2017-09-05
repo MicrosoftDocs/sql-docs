@@ -454,7 +454,7 @@ See "\<backup_device>," earlier in this section.
  MAXTRANSFERSIZE **=** { *maxtransfersize* | **@***maxtransfersize_variable* }  
  Specifies the largest unit of transfer in bytes to be used between [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and the backup media. The possible values are multiples of 65536 bytes (64 KB) ranging up to 4194304 bytes (4 MB).  
 > [!NOTE]  
->  When using SQL Writer (VSS\VDI) if the `MAXTRANSFER` size is set to 4 MB on backup, then 4 MB must be used on restore, otherwise they encounter the following error: **RESTORE requires MAXTRANSFERSIZE=4194304 but 65536 was specified.**  This only happens on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases where FileStream or In-Memory OLTP File Groups are involved.
+>  When the database has configured FILESTREAM, or includes or In-Memory OLTP File Groups, `MAXTRANSFERSIZE` at the time of restore should be greater than or equal to what was used when the backup was created.  
   
  **Error Management Options**  
   

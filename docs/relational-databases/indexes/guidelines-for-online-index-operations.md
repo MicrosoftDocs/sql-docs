@@ -21,6 +21,8 @@ caps.latest.revision: 64
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.product_service: sql-server-2016, sql-database
+ms.component: dbe-indexes
 ---
 # Guidelines for Online Index Operations
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

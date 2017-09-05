@@ -1,7 +1,7 @@
 ---
 title: "MSSQLSERVER_5235 | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/04/2017"
+ms.date: "09/05/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -37,12 +37,13 @@ The following table lists and defines the error states.
   
 |Error state|Definition|  
 |---------------|--------------|  
-|State 0|The statement was terminated because of a fatal metadata corruption. This message will be accompanied by one or more instances of error 8930.|  
-|State 1|The statement was terminated because of an internal check failure. This message will be accompanied by one or more instances of error 8967.|  
-|State 2|Basic system table checks of the core storage engine system tables failed. This message will be accompanied by one or more instances of error [7984](../../relational-databases/errors-events/mssqlserver-7984-database-engine-error.md), 7985, [7986](~/relational-databases/errors-events/mssqlserver-7986-database-engine-error.md), [7987](~/relational-databases/errors-events/mssqlserver-7987-database-engine-error.md), or [7988](~/relational-databases/errors-events/mssqlserver-7988-database-engine-error.md).|  
-|State 3|DBCC emergency-mode repair failed because the database could not be started after rebuilding the transaction log. This message will be accompanied by error 7909.|  
-|State 4|A failed assertion or access violation occurred during the execution of the command.|  
-|State 5|An unknown failure occurred that unexpectedly terminated the DBCC command.|  
+|State 1|The statement was terminated because of a fatal metadata corruption. This message will be accompanied by one or more instances of error 8930.|  
+|State 2|The statement was terminated because of an internal check failure. This message will be accompanied by one or more instances of error 8967.|  
+|State 3|Basic system table checks of the core storage engine system tables failed. This message will be accompanied by one or more instances of error [7984](../../relational-databases/errors-events/mssqlserver-7984-database-engine-error.md), 7985, [7986](~/relational-databases/errors-events/mssqlserver-7986-database-engine-error.md), [7987](~/relational-databases/errors-events/mssqlserver-7987-database-engine-error.md), or [7988](~/relational-databases/errors-events/mssqlserver-7988-database-engine-error.md).|  
+|State 4|DBCC emergency-mode repair failed because the database could not be started after rebuilding the transaction log. This message will be accompanied by error 7909.|  
+|State 5|A failed assertion or access violation occurred during the execution of the command.|  
+|State 6|An unknown failure occurred that unexpectedly terminated the DBCC command.|  
+|State 7|An abnormal termination due to error on the replica (Always On).|  
   
 ## User Action  
 The following table provides the user action that is appropriate for the specified error state.  

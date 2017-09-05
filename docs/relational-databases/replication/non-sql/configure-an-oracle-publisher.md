@@ -22,9 +22,9 @@ manager: "jhubbard"
   
 1.  Create a replication administrative user within the Oracle database using the supplied script.  
   
-2.  For the tables that you will publish, grant SELECT permission directly on each of them (not through a role) to the Oracle administrative user you created in step one.  
+2.  For the tables that you publish, grant SELECT permission directly on each of them (not through a role) to the Oracle administrative user you created in step one.  
   
-3.  Install the Oracle client software and OLE DB provider on the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributor, and then stop and restart the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance. If the Distributor is running on a 64 bit platform, you must use the 64 bit version of the Oracle OLE DB provider.  
+3.  Install the Oracle client software and OLE DB provider on the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributor, and then stop and restart the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance. If the Distributor is running on a 64-bit platform, you must use the 64-bit version of the Oracle OLE DB provider.  
   
 4.  Configure the Oracle database as a Publisher at the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributor.  
 
@@ -54,7 +54,7 @@ manager: "jhubbard"
   
  A sample script has been provided to aid in the setup of the Oracle replication user schema. The script is available in the following directory after installation of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: *\<drive>*:\\\Program Files\Microsoft SQL Server\\*\<InstanceName>*\MSSQL\Install\oracleadmin.sql. It is also included in the topic [Script to Grant Oracle Permissions](../../../relational-databases/replication/non-sql/script-to-grant-oracle-permissions.md).  
   
- Connect to the Oracle database using an account with DBA privileges and execute the script. This script prompts for the user and password for the replication administrative user schema as well as the default tablespace in which to create the objects (the tablespace must already exist in the Oracle database). For information about specifying other tablespaces for objects, see [Manage Oracle Tablespaces](../../../relational-databases/replication/non-sql/manage-oracle-tablespaces.md). Choose any user name and strong password, but make note of both because you will be prompted for this information later when you configure the Oracle database as a Publisher. It is recommended that the schema be used only for objects required by replication; do not create tables to be published in this schema.  
+ Connect to the Oracle database using an account with DBA privileges and execute the script. This script prompts for the user and password for the replication administrative user schema as well as the default tablespace in which to create the objects (the tablespace must already exist in the Oracle database). For information about specifying other tablespaces for objects, see [Manage Oracle Tablespaces](../../../relational-databases/replication/non-sql/manage-oracle-tablespaces.md). Choose any user name and strong password, but make note of both because you must provide this information later when you configure the Oracle database as a Publisher. It is recommended that the schema be used only for objects required by replication; do not create tables to be published in this schema.  
   
 ### Creating the User Schema Manually  
  If you create the replication administrative user schema manually, you must grant the schema the following permissions, either directly or through a database role.  
@@ -83,7 +83,7 @@ manager: "jhubbard"
   
  The most straightforward way to install and configure the client networking software is to use the Oracle Universal Installer and Net Configuration Assistant on the Oracle Client disk.  
   
- In the Oracle Universal Installer, you will supply the following information:  
+ In the Oracle Universal Installer, you must supply the following information:  
   
 |Information|Description|  
 |-----------------|-----------------|  
@@ -104,7 +104,7 @@ manager: "jhubbard"
  The account under which the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service on the Distributor runs must be granted read and execute permissions for the directory (and all subdirectories) in which the Oracle client networking software is installed.  
   
 ### Testing Connectivity Between the SQL Server Distributor and the Oracle Publisher  
- Near the end of the Net Configuration Assistant there might be an option to test the connection to the Oracle Publisher. Before you test the connection, ensure that the Oracle database instance is online and that the Oracle Listener is running. If the test is unsuccessful, contact the Oracle DBA responsible for the database to which you are trying to connect.  
+ Near the end of the Net Configuration Assistant, there might be an option to test the connection to the Oracle Publisher. Before you test the connection, ensure that the Oracle database instance is online and that the Oracle Listener is running. If the test is unsuccessful, contact the Oracle DBA responsible for the database to which you are trying to connect.  
   
  After you have made a successful connection to the Oracle Publisher, attempt to log in to the database using the account and password associated with the replication administrative user schema you created. The following must be performed while running under the same Windows account that the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service uses:  
   
@@ -118,7 +118,7 @@ manager: "jhubbard"
   
      For example: `sqlplus replication/$tr0ngPasswerd@Oracle90Server`  
   
-4.  If the networking configuration was successful, the login will succeed and you will see a `SQL` prompt.  
+4.  If the networking configuration was successful, the login succeeds and you will see a `SQL` prompt.  
   
 5.  If you experience problems connecting to the Oracle database, see the section "The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributor cannot connect to the Oracle database instance" in [Troubleshooting Oracle Publishers](../../../relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md).  
   

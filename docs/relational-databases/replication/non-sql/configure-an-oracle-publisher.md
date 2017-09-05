@@ -1,7 +1,7 @@
 ---
 title: "Configure an Oracle Publisher | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "09/05/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -27,7 +27,20 @@ manager: "jhubbard"
 3.  Install the Oracle client software and OLE DB provider on the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributor, and then stop and restart the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance. If the Distributor is running on a 64 bit platform, you must use the 64 bit version of the Oracle OLE DB provider.  
   
 4.  Configure the Oracle database as a Publisher at the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributor.  
+
+[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supports the following heterogeneous scenarios for transactional and snapshot replication:  
   
+-   Publishing data from [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] to non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers.  
+
+-   Publishing data to and from Oracle has the following restrictions:  
+  | |2016 or earlier |2017 or later |
+  |-------|-------|--------|
+  |Replication from Oracle |Only support Oracle 10g or earlier |Only support Oracle 10g or earlier |
+  |Replication to Oracle |Up to Oracle 12c |Not supported |
+
+ Heterogeneous replication to non-SQL Server subscribers is deprecated. Oracle Publishing is deprecated. To move data, create solutions using change data capture and [!INCLUDE[ssIS](../../../includes/ssis-md.md)].  
+
+
  For a list of objects that can be replicated from an Oracle database, see [Design Considerations and Limitations for Oracle Publishers](../../../relational-databases/replication/non-sql/design-considerations-and-limitations-for-oracle-publishers.md).  
   
 > [!NOTE]  

@@ -61,7 +61,7 @@ Figure 2: Node and edge table representation
 ## Metadata
 Use these metadata views to see attributes of a node or edge table.
  
-### SYS.TABLES
+### sys.tables
 The following new, bit type, columns will be added to SYS.TABLES. If `is_node` is set to 1, that indicates that the table is a node table and if `is_edge` is set to 1, that indicates that the table is an edge table.
  
 |Column Name |Data Type |Description |
@@ -69,7 +69,7 @@ The following new, bit type, columns will be added to SYS.TABLES. If `is_node` i
 |is_node |bit |1 = this is a node table |
 |is_edge |bit |1 = this is an edge table |
  
-### SYS.COLUMNS
+### sys.columns
 The `sys.columns` view contains additional columns `graph_type` and `graph_type_desc`, that indicate the type of the column in node and edge tables.
  
 |Column Name |Data Type |Description |

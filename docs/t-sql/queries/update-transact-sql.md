@@ -1029,7 +1029,7 @@ GO
 EXEC HumanResources.Update_VacationHours 40;  
 ```  
   
-#### B. Using UPDATE in a TRY…CATCH Block  
+#### AC. Using UPDATE in a TRY…CATCH Block  
  The following example uses an UPDATE statement in a TRY…CATCH block to handle execution errors that may occur during the update operation.  
   
 ```sql  
@@ -1063,7 +1063,7 @@ GO
   
 ## Examples: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### AC. Using a simple UPDATE statement  
+### AD. Using a simple UPDATE statement  
  The following examples show how all rows can be affected when a WHERE clause is not used to specify the row (or rows) to update.  
   
  This example updates the values in the `EndDate` and `CurrentFlag` columns for all rows in the `DimEmployee` table.  
@@ -1084,7 +1084,7 @@ UPDATE DimEmployee
 SET BaseRate = BaseRate * 2;  
 ```  
   
-### AD. Using the UPDATE statement with a WHERE clause  
+### AE. Using the UPDATE statement with a WHERE clause  
  The following example uses the WHERE clause to specify which rows to update.  
   
 ```sql  
@@ -1095,7 +1095,7 @@ SET FirstName = 'Gail'
 WHERE EmployeeKey = 500;  
 ```  
   
-### AE. Using the UPDATE statement with label  
+### AF. Using the UPDATE statement with label  
  The following example shows use of a LABEL for the UPDATE statement.  
   
 ```sql  
@@ -1107,7 +1107,7 @@ WHERE ProductKey = 313
 OPTION (LABEL = N'label1');  
 ```  
   
-### AF. Using the UPDATE statement with information from another table  
+### AG. Using the UPDATE statement with information from another table  
  This example creates a table to store total sales by year. It updates the total sales for the year 2004 by running a SELECT statement against the FactInternetSales table.  
   
 ```sql  
@@ -1130,7 +1130,7 @@ WHERE Year=2004;
 SELECT * FROM YearlyTotalSales;   
 ```  
 
-### AG. ANSI join replacement for update statements
+### AH. ANSI join replacement for update statements
 You may find you have a complex update that joins more than two tables together using ANSI joining syntax to perform the UPDATE or DELETE.  
 
 Imagine you had to update this table:  

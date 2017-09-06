@@ -23,7 +23,7 @@ This topic describes how to set up Machine Learning Services in SQL Server by us
 
 **Applies to:** SQL Server 2016 R Services (R only), SQL Server 2017 Machine Learning Services (R and Python)
 
-## Machine-learning options in SQL Server setup
+## Machine learning options in SQL Server setup
 
 SQL Server setup provides the following options for installing machine learning:
 
@@ -37,9 +37,9 @@ SQL Server setup provides the following options for installing machine learning:
   * In SQL Server 2017, select **Machine Learning Services (In-Database)**.
 
 
-* Install a standalone machine-learning server
+* Install a standalone machine learning server
 
-  This option creates a development environment for machine-learning solutions that does not require or use SQL Server. Therefore, we generally recommend that you install this option on a different computer than the one hosting SQL Server. For more information about this option, see [Create a Standalone R Server](../r/create-a-standalone-r-server.md).
+  This option creates a development environment for machine learning solutions that does not require or use SQL Server. Therefore, we generally recommend that you install this option on a different computer than the one hosting SQL Server. For more information about this option, see [Create a Standalone R Server](../r/create-a-standalone-r-server.md).
 
 The installation process requires multiple steps, some of which are optional. The optional aspects depend on both how you plan to use machine learning and the status of your security environment. 
 
@@ -49,14 +49,14 @@ The installation process requires multiple steps, some of which are optional. Th
 
 * If you used any earlier versions of the Revolution Analytics development environment or the RevoScaleR packages, or if you installed any pre-release versions of SQL Server 2016, you must uninstall them. Side-by-side installation is not supported. For help removing previous versions, see [Upgrade and Installation FAQ for SQL Server R Services](../r/upgrade-and-installation-faq-sql-server-r-services.md).
 
-  You cannot install Machine Learning Services on a failover cluster. The reason is that the security mechanism that's used for isolating external script processes is not compatible with a Windows Server failover cluster environment. As a workaround, you can do either of the following:
+* You cannot install Machine Learning Services on a failover cluster. The reason is that the security mechanism that's used for isolating external script processes is not compatible with a Windows Server failover cluster environment. As a workaround, you can do either of the following:
     * Use replication to copy necessary tables to a standalone SQL Server instance with R Services.
     * Install [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] on a standalone computer that uses Always On and is part of an availability group.
 
 > [!IMPORTANT]
-> After setup is complete, some additional steps are required to enable the machine-learning feature. You might also need to grant users permissions to specific databases, change or configure accounts, or set up a remote data-science client.
+> After setup is complete, some additional steps are required to enable the machine learning feature. You might also need to grant users permissions to specific databases, change or configure accounts, or set up a remote data science client.
 
-##  <a name="bkmk_installExt"></a>Step 1: Install the extensibility features and choose a machine-learning language
+##  <a name="bkmk_installExt"></a>Step 1: Install the extensibility features and choose a machine learning language
 
 To use machine learning, you must install SQL Server 2016 or later. To use [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)], at least one instance of the database engine is required. You can use either a default or named instance.
 
@@ -68,19 +68,17 @@ To use machine learning, you must install SQL Server 2016 or later. To use [!INC
    
 3. On the **Feature Selection** page, to install the database services used by R jobs and installs the extensions that support external scripts and processes, select the following options:
 
-   **SQL Server 2016**
+    **SQL Server 2016**
+    - Select **Database Engine Services**.
+    - Select **R Services (In-Database)**.
+    
+    **SQL Server 2017**
+    - Select **Database Engine Services**.
+    - Select **Machine Learning Services (In-Database)**.
+    - Select at least one machine learning language to enable. You can select only R, or you can add both R and Python.
 
-   - Select **Database Engine Services**.
-   - Select **R Services (In-Database)**.
-
-   **SQL Server 2017**
-
-   - Select **Database Engine Services**.
-   - Select **Machine Learning Services (In-Database)**.
-   - Select at least one machine-learning language to enable. You can select only R, or you can add both R and Python.
-
-   >[!NOTE]
-   >If you do not select either the R or Python language option, the setup wizard installs only the extensibility framework, which includes SQL Server Trusted Launchpad, but it does not install any language-specific components. This option is for binding the SQL Server instance to R or Python as a part of the modern lifecycle support policy. For more information, see [Use SqlBindR to upgrade an instance of R Services](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
+    > [!NOTE]
+    > If you do not select either the R or Python language options, the setup wizard installs only the extensibility framework, which includes SQL Server Trusted Launchpad, but it does not install any language-specific components. This option is for binding the SQL Server instance to R or Python as a part of the modern lifecycle support policy. For more information, see [Use SqlBindR to upgrade an instance of R Services](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
 
 4.  On the **Consent to Install Microsoft R Open** page, select **Accept**.
   
@@ -92,17 +90,14 @@ To use machine learning, you must install SQL Server 2016 or later. To use [!INC
 5. Select **Next**.
 
 6. On the **Ready to Install** page, verify that the following items are included, and then select **Install**.
+     **SQL Server 2016**
+     - Database Engine Services
+     - R Services (In-Database)
 
-   **SQL Server 2016**
-
-   - Database Engine Services
-   - R Services (In-Database)
-
-   **SQL Server 2017**
-
-   - Database Engine Services
-   - Machine Learning Services (In-Database)
-   - R or Python, or both
+     **SQL Server 2017**
+     - Database Engine Services
+     - Machine Learning Services (In-Database)
+     - R or Python, or both
   
 7. When the installation is complete, restart your computer.
 
@@ -170,7 +165,7 @@ Common scenarios that require additional changes include:
 * Changing firewall rules to allow inbound connections to SQL Server.
 * Enabling additional network protocols.
 * Ensuring that the server supports remote connections.
-* Enabling *implied authentication*, if users will access SQL Server data from a remote R development terminal and execute Microsoft R Open Database Connectivity (ODBC) calls from your R code.
+* Enabling *implied authentication*, if users access SQL Server data from a remote R development terminal and execute R code by using the RODBC package or other Microsoft Open Database Connectivity (ODBC) provider.
 * Giving users permissions to run R script or use databases.
 * Fixing security issues that prevent communication with the Launchpad service.
 * Ensuring that users have permission to run R code or install packages.
@@ -192,17 +187,17 @@ However, if you need to run R scripts from a remote data science client and are 
 4. In **Enter the object name to select**, type **SQLRUserGroup**,  and then select **Check Names**.  
     The name of the local group that's associated with the instance's Launchpad service should resolve to something like *instancename\SQLRUserGroup*. 
 5. Select **OK**.
-6. By default, the logon is assigned to the **public** role and has permission to connect to the database engine.
+6. By default, the login is assigned to the **public** role and has permission to connect to the database engine.
 7. Select **OK**.
 
 ### <a name="bkmk_AllowLogon"></a>Give users permission to run external scripts
 
 > [!NOTE]
-> If you use a SQL logon for running R scripts in a SQL Server compute context, this step is not required.
+> If you use a SQL login for running R scripts in a SQL Server compute context, this step is not required.
 
 If you installed [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and are running R scripts in your own instance, you are usually executing scripts as an administrator, or at least as a database owner, and thus have implicit permissions for various operations, all data in the database, and the ability to install new R packages as needed.
 
-However, in an enterprise scenario, most users, including users who access the database by using SQL logons, do not have such elevated permissions. Therefore, for each user who will be running R or Python scripts, you must grant the user permissions to run scripts in each database where external scripts will be used.
+However, in an enterprise scenario, most users, including users who access the database by using SQL logins, do not have such elevated permissions. Therefore, for each user who will be running R or Python scripts, you must grant the user permissions to run scripts in each database where external scripts will be used.
 
 ```SQL
 USE <database_name>
@@ -221,11 +216,11 @@ Also check to see whether the firewall allows access to SQL Server. By default, 
 
 ### Give your users read, write, or DDL permissions to the database
 
-While it is running R scripts, the user account or SQL logon might need to read data from other databases, create new tables to store results, and write data into tables.
+While it is running R scripts, the user account or SQL login might need to read data from other databases, create new tables to store results, and write data into tables.
 
-For each user account or SQL logon that will be executing R scripts, be sure that the account or logon has the appropriate permissions on the database: *db_datareader*, *db_datawriter*, or *db_ddladmin*.
+For each user account or SQL login that will be executing R scripts, be sure that the account or login has the appropriate permissions on the database: *db_datareader*, *db_datawriter*, or *db_ddladmin*.
 
-For example, the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement gives the SQL logon *MySQLLogin* the rights to run T-SQL queries in the *RSamples* database. To run this statement, the SQL logon must already exist in the security context of the server.
+For example, the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement gives the SQL login *MySQLLogin* the rights to run T-SQL queries in the *RSamples* database. To run this statement, the SQL login must already exist in the security context of the server.
 
 ```SQL
 USE RSamples
@@ -241,11 +236,11 @@ If you installed Machine Learning Services (or R Services) on an Azure virtual m
 
 ### Create an ODBC data source for the instance on your data science client
 
-If you create an R solution on a data-science client computer and need to run code by using the SQL Server computer as the compute context, you can use either a SQL logon or integrated Windows authentication.
+If you create an R solution on a data science client computer and need to run code by using the SQL Server computer as the compute context, you can use either a SQL login or integrated Windows authentication.
 
-* For SQL logons: Ensure that the logon has appropriate permissions on the database where you will be reading data. You can do so by adding *Connect to* and *SELECT* permissions, or by adding the logon to the *db_datareader* role. For logons that need to create objects, add *DDL_admin* rights. For logons that must save data to tables, add the logon to the *db_datawriter* role.
+* For SQL logins: Ensure that the login has appropriate permissions on the database where you will be reading data. You can do so by adding *Connect to* and *SELECT* permissions, or by adding the login to the *db_datareader* role. For logins that need to create objects, add *DDL_admin* rights. For logins that must save data to tables, add the login to the *db_datawriter* role.
 
-* For Windows authentication: You might need to configure an ODBC data source on the data-science client that specifies the instance name and other connection information. For more information, see [ODBC data source administrator](https://docs.microsoft.com/sql/odbc/admin/odbc-data-source-administrator).
+* For Windows authentication: You might need to configure an ODBC data source on the data science client that specifies the instance name and other connection information. For more information, see [ODBC data source administrator](https://docs.microsoft.com/sql/odbc/admin/odbc-data-source-administrator).
 
 ## Next steps
 
@@ -263,7 +258,7 @@ If you think you might use R heavily, or if you expect many users to be running 
 
 The default settings for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup are intended to optimize the balance of the server for a variety of services that are supported by the database engine, which might include extract, transform, and load (ETL) processes, reporting, auditing, and applications that use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data. Therefore, under the default settings, you might find that resources for machine learning are sometimes restricted or throttled, particularly in memory-intensive operations.
 
-To ensure that machine-learning jobs are prioritized and resourced appropriately, we recommend that you use SQL Server Resource Governor to configure an external resource pool. You might also want to change the amount of memory that's allocated to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database engine, or increase the number of accounts that run under the [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] service.
+To ensure that machine learning jobs are prioritized and resourced appropriately, we recommend that you use SQL Server Resource Governor to configure an external resource pool. You might also want to change the amount of memory that's allocated to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database engine, or increase the number of accounts that run under the [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] service.
 
 - To configure a resource pool for managing external resources, see [Create an external resource pool](../../t-sql/statements/create-external-resource-pool-transact-sql.md).
   
@@ -271,7 +266,7 @@ To ensure that machine-learning jobs are prioritized and resourced appropriately
   
 - To change the number of R accounts that can be started by [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)], see [Modify the user account pool for machine learning](modify-the-user-account-pool-for-sql-server-r-services.md).
 
-If you are using Standard Edition and do not have Resource Governor, you can use Analysis Services Dynamic Management Views (DMVs) and SQL Server Extended Events, as well as Windows event monitoring, to help you manage server resources used by R. For more information, see [Monitoring and managing R Services](managing-and-monitoring-r-solutions.md).
+If you are using Standard Edition and do not have Resource Governor, you can use Dynamic Management Views (DMVs) and Extended Events, as well as Windows event monitoring, to help manage the server resources that are used by R. For more information, see [Monitoring and managing R Services](managing-and-monitoring-r-solutions.md).
 
 ### Install additional R packages
 
@@ -281,11 +276,11 @@ Packages that you want to use from SQL Server must be installed in the default l
 
 You can also set up user groups to share packages on a per-database level, or configure database roles to enable users to install their own packages. For more information, see [Package management](r-package-management-for-sql-server-r-services.md).
 
-### Upgrade the machine-learning components
+### Upgrade the machine learning components
 
-When you install R Services using SQL Server 2016, you get the version of the R components that was up to date when the release or service pack was published. Each time you patch or upgrade the server, the machine-learning components are upgraded as well.
+When you install R Services using SQL Server 2016, you get the version of the R components that was up to date when the release or service pack was published. Each time you patch or upgrade the server, the machine learning components are upgraded as well.
 
-However, you can upgrade the machine-learning components on a faster schedule than is supported by SQL Server releases, by installing Microsoft R Server and binding your instance. When you upgrade, you also get the following new features, which are supported in recent releases of Microsoft R Server:
+However, you can upgrade the machine learning components on a faster schedule than is supported by SQL Server releases, by installing Microsoft R Server and binding your instance. When you upgrade, you also get the following new features, which are supported in recent releases of Microsoft R Server:
 
 * New R packages, including [sqlrutils](https://docs.microsoft.com/r-server/r-reference/sqlrutils/sqlrutils), [olapR](https://docs.microsoft.com/r-server/r-reference/olapr/olapr), and [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package).
 * [Pretrained models](https://docs.microsoft.com/r-server/install/microsoftml-install-pretrained-models) for image classification and text analysis.

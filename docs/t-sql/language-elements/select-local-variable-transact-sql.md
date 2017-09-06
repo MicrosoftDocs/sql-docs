@@ -53,9 +53,9 @@ SELECT { @local_variable { = | += | -= | *= | /= | %= | &= | ^= | |= } expressio
 Assign the value on the right to the variable on the left.  
   
 Compound assignment operator:  
-  |operator |effect |   
+  |operator |action |   
   |-----|-----|  
-  | = | Assignes the expression that follows, to the variable. |  
+  | = | Assigns the expression that follows, to the variable. |  
   | += | Add and assign |   
   | -= | Subtract and assign |  
   | \*= | Multiply and assign |  

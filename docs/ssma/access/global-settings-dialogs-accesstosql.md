@@ -14,8 +14,8 @@ applies_to:
   - "SQL Server"
 ms.assetid: 6c2204f2-d49e-49ba-9c0f-f14cf07fa561
 caps.latest.revision: 3
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Global Settings (Dialogs) (AccessToSQL)

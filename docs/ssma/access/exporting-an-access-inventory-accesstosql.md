@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "querying exported metadata"
 ms.assetid: 7e1941fb-3d14-4265-aff6-c77a4026d0ed
 caps.latest.revision: 18
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Exporting an Access Inventory (AccessToSQL)

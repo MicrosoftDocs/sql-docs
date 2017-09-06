@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "Find Databases Wizard"
 ms.assetid: 2f574a34-4bab-40a4-89a8-ad4907ffc3fd
 caps.latest.revision: 13
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Find Databases Wizard (Select Files) (AccessToSQL)

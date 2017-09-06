@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "Selection of Affected Objects"
 ms.assetid: 545eeda2-9829-4187-a858-619a96b4b71d
 caps.latest.revision: 8
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "v-thobro"
 ---
 # Selecting and Configuring Affected Objects (OracleToSQL)

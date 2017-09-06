@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "Synchronization,Scripting Objects"
 ms.assetid: a8ae33b2-1883-4785-922b-ea0e31c0b37a
 caps.latest.revision: 10
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "v-thobro"
 ---
 # Loading Converted Database Objects into SQL Server (OracleToSQL)

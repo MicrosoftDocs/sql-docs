@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "Connecting to SQL Server,Synchronizing SQL Server Metadata"
 ms.assetid: 1b2a8059-1829-4904-a82f-9c06de1e245f
 caps.latest.revision: 16
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "v-thobro"
 ---
 # Connecting to SQL Server (OracleToSQL)

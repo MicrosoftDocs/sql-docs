@@ -14,8 +14,8 @@ applies_to:
   - "SQL Server"
 ms.assetid: eb996b7c-1eef-4f73-b5e6-2fa6faf7336c
 caps.latest.revision: 7
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Assessing Sybase ASE Database Objects for Conversion (SybaseToSQL)

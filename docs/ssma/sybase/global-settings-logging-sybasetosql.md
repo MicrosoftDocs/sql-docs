@@ -14,8 +14,8 @@ applies_to:
   - "SQL Server"
 ms.assetid: 4cb4da20-3b99-4aae-8c80-329ee23e796e
 caps.latest.revision: 4
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Global Settings (Logging) (SybaseToSQL)

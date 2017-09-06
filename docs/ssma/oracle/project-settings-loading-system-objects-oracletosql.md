@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 9418cb34-d869-4d24-95b3-6cb9db949bb0
 caps.latest.revision: 4
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "v-thobro"
 ---
 # Project Settings(Loading System objects) (OracleToSQL)

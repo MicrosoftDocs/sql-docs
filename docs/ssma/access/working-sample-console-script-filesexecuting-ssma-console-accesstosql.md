@@ -14,8 +14,8 @@ applies_to:
   - "SQL Server"
 ms.assetid: ad75b648-d119-4119-98f0-d18f058be68d
 caps.latest.revision: 10
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Working with the Sample Console Script FilesExecuting the SSMA Console (AccessToSQL)

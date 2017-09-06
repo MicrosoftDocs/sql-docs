@@ -14,8 +14,8 @@ applies_to:
   - "SQL Server"
 ms.assetid: bac234ef-bc16-47e6-8a7c-aa6e76d860c5
 caps.latest.revision: 4
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Data Migration Report (SybaseToSQL)

@@ -14,8 +14,8 @@ applies_to:
   - "SQL Server"
 ms.assetid: 237354e9-25c4-4386-9d1f-ca0618d4a9a0
 caps.latest.revision: 6
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Command Line Options in SSMA Console (DB2ToSQL)

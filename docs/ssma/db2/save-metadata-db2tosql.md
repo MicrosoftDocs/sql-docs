@@ -14,8 +14,8 @@ applies_to:
   - "SQL Server"
 ms.assetid: 9a76083e-4902-449e-b125-7e9259fc37f7
 caps.latest.revision: 3
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Save Metadata (DB2ToSQL)

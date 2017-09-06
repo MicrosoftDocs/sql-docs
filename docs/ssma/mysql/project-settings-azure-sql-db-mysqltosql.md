@@ -14,8 +14,8 @@ applies_to:
   - "SQL Server"
 ms.assetid: 8c06420a-533b-4de0-948d-a0c6b368c544
 caps.latest.revision: 10
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Project Settings (Azure SQL DB) (MySQLToSQL)

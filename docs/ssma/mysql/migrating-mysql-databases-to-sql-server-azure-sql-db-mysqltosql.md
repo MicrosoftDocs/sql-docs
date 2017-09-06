@@ -14,8 +14,8 @@ applies_to:
   - "SQL Server"
 ms.assetid: 8006f9a0-394d-4238-8dc5-44255134628b
 caps.latest.revision: 12
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Migrating MySQL Databases to SQL Server - Azure SQL DB (MySQLToSql)

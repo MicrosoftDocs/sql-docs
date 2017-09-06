@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "Test Results Repository"
 ms.assetid: f941cce4-d3e3-4aeb-a88a-4f101a97a9f4
 caps.latest.revision: 8
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "v-thobro"
 ---
 # Using Test Repositories (OracleToSQL)

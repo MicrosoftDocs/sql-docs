@@ -14,8 +14,8 @@ applies_to:
   - "SQL Server"
 ms.assetid: 4ee0d698-6246-48eb-b963-d62be81cab6a
 caps.latest.revision: 6
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Removing SSMA for DB2 Components (DB2ToSQL)

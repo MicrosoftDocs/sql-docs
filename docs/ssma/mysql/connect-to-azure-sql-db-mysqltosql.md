@@ -14,8 +14,8 @@ applies_to:
   - "SQL Server"
 ms.assetid: 81623d27-25af-444f-9779-1edb8c6fb470
 caps.latest.revision: 8
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Connect to Azure SQL DB (MySQLToSQL)

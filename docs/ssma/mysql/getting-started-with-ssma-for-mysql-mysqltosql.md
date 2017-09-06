@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "Getting started,Installing and licensing"
 ms.assetid: 8ebfa061-be6f-4a07-923f-8dc832a82f70
 caps.latest.revision: 19
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Getting Started with SSMA for MySQL (MySQLToSQL)

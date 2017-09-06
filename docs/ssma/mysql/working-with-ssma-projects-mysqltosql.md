@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "Working with SSMA projects, Save project"
 ms.assetid: 9e4394e9-f177-41d9-839e-5d53a9c9b840
 caps.latest.revision: 20
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Working with SSMA Projects (MySQLToSQL)

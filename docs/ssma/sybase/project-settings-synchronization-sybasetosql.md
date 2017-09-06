@@ -14,8 +14,8 @@ applies_to:
   - "SQL Server"
 ms.assetid: 2cd6bc01-b8e5-4312-83a4-eac66dc1d460
 caps.latest.revision: 3
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Project Settings (Synchronization) (SybaseToSQL)

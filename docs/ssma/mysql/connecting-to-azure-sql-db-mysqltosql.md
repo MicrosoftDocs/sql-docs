@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "Connecting to SQL Azure, synchronization"
 ms.assetid: d0b6f16a-1880-459d-a0c7-28b7ef15c56a
 caps.latest.revision: 10
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Connecting to Azure SQL DB (MySQLToSQL)

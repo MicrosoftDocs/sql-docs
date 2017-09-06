@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "Command Line Options,Script File Option"
 ms.assetid: bf4a9313-349e-4ebf-9c89-9f5bb515f9ff
 caps.latest.revision: 12
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "v-thobro"
 ---
 # Command Line Options in SSMA Console (OracleToSQL)

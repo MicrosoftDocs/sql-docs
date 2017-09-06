@@ -14,8 +14,8 @@ applies_to:
   - "SQL Server"
 ms.assetid: 57002374-0d4d-43c1-b4e9-cbec02355a9c
 caps.latest.revision: 4
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Project Settings (Azure SQL DB ) (SybaseToSQL)

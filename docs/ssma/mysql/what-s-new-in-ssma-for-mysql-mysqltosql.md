@@ -14,8 +14,8 @@ applies_to:
   - "SQL Server"
 ms.assetid: 1451a0b0-6713-4d0c-954f-ea3d8fce1d31
 caps.latest.revision: 21
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "craigg"
 ---
 # What&#39;s New in SSMA for MySQL (MySQLToSql)

@@ -14,8 +14,8 @@ applies_to:
   - "SQL Server"
 ms.assetid: 5c3080c3-d074-4f99-a5f5-219ebeddc474
 caps.latest.revision: 6
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Working with the Sample Console Script Files (DB2ToSQL)

@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "Migrating data,Server Side Data Migration"
 ms.assetid: 54a39f5e-9250-4387-a3ae-eae47c799811
 caps.latest.revision: 15
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Migrating Sybase ASE Data into SQL Server - Azure SQL DB  (SybaseToSQL)

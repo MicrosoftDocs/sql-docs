@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "Installing client,Licensing"
 ms.assetid: ede3128c-370d-45a5-a815-3d94eecaea30
 caps.latest.revision: 22
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Installing SSMA for MySQL Client (MySQLToSQL)

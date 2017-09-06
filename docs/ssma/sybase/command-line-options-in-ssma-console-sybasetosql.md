@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "Sybase Console,Command Line Options"
 ms.assetid: 337cbd26-67b7-4c88-9deb-d0a69a3d7714
 caps.latest.revision: 11
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Command Line Options in SSMA Console (SybaseToSQL)

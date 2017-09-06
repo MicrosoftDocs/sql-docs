@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 0edeaa08-9c5d-4e3a-bc15-b9a1f0c8a9dc
 caps.latest.revision: 8
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "v-thobro"
 ---
 # Mapping Oracle Schemas to SQL Server Schemas (OracleToSQL)

@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "Sybase Console,Server Connection File Validation"
 ms.assetid: 35ef396f-9f98-429d-9fc5-4f413d08fb37
 caps.latest.revision: 14
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Creating the Server Connection Files (SybaseToSQL)

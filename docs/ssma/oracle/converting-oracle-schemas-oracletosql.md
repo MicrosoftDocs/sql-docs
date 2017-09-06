@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "Conversion Results"
 ms.assetid: e021182d-31da-443d-b110-937f5db27272
 caps.latest.revision: 14
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "v-thobro"
 ---
 # Converting Oracle Schemas (OracleToSQL)

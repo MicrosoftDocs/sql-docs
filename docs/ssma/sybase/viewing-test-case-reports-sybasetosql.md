@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "Tester Component,Test Case Reports"
 ms.assetid: cb75d281-43ef-4f4a-b754-2c4ee3b62ae7
 caps.latest.revision: 5
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Viewing Test Case Reports (SybaseToSQL)

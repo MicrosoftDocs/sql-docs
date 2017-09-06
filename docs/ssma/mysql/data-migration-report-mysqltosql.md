@@ -14,8 +14,8 @@ applies_to:
   - "SQL Server"
 ms.assetid: 5524a575-67dd-4ef6-9d17-3412df9b9f9c
 caps.latest.revision: 4
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Data Migration Report  (MySQLToSQL)

@@ -14,8 +14,8 @@ applies_to:
   - "SQL Server"
 ms.assetid: 66437b45-4686-4fc7-a91b-ebde45e0f1b0
 caps.latest.revision: 4
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # New Project (DB2ToSQL)

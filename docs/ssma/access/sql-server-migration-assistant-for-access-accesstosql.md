@@ -14,8 +14,8 @@ applies_to:
   - "SQL Server"
 ms.assetid: 40c1eb02-26b2-44ba-969d-6c430c61c281
 caps.latest.revision: 22
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "murato"
 ---
 # SQL Server Migration Assistant for Access (AccessToSQL)

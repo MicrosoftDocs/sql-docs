@@ -14,8 +14,8 @@ applies_to:
   - "SQL Server"
 ms.assetid: 573e673e-a194-4cb2-9aba-aaac6e1a225c
 caps.latest.revision: 4
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Data Migration Settings (DB2ToSQL)

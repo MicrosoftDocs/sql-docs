@@ -14,8 +14,8 @@ applies_to:
   - "SQL Server"
 ms.assetid: 2a3cba9e-cd54-4a8b-b858-8fc4cf2580d9
 caps.latest.revision: 14
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Project Settings (Migration) (MySQLToSQL)

@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "Sybase Console,Variable Value File Validation"
 ms.assetid: 395be464-4b19-44f7-91e5-b8876d6743dc
 caps.latest.revision: 15
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Creating Variable Value Files (SybaseToSQL)

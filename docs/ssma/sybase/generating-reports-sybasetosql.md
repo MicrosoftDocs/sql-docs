@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "Sybase Console,synchronize-target report"
 ms.assetid: 19278f6a-6d58-4867-9d71-c6228040466e
 caps.latest.revision: 6
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Generating Reports (SybaseToSQL)

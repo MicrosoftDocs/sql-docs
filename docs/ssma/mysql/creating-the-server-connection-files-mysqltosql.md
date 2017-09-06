@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "Server connection files"
 ms.assetid: df0e970c-da0b-4118-b359-c9dcbbad16d6
 caps.latest.revision: 18
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Creating the Server Connection Files (MySQLToSQL)

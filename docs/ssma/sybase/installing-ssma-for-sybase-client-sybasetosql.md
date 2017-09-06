@@ -14,8 +14,8 @@ applies_to:
   - "SQL Server"
 ms.assetid: e770c2f2-52b9-4471-a207-0d35df41399c
 caps.latest.revision: 18
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Installing SSMA  for Sybase Client (SybaseToSQL)

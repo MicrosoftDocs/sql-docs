@@ -14,8 +14,8 @@ applies_to:
   - "SQL Server"
 ms.assetid: 42061ff7-e6e7-497b-a0d9-440b9cf5986c
 caps.latest.revision: 3
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Project Settings (Synchronization) (MySQLToSQL)

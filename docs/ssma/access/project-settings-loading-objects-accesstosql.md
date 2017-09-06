@@ -14,8 +14,8 @@ applies_to:
   - "SQL Server"
 ms.assetid: 9ec1c1e8-a3e1-4e81-bf49-631f87daa209
 caps.latest.revision: 4
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Project Settings (Loading Objects) (AccessToSQL)

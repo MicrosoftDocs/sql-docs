@@ -14,8 +14,8 @@ applies_to:
   - "SQL Server"
 ms.assetid: d840ee51-b863-4e77-84aa-37d3f094bfed
 caps.latest.revision: 4
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # SQL Modes (MySQLToSQL)

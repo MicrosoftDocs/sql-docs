@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "target database"
 ms.assetid: 69bee937-7b2c-49ee-8866-7518c683fad4
 caps.latest.revision: 17
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Mapping Source and Target Databases (AccessToSQL)

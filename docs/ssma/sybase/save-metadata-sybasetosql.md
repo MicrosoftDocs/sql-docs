@@ -14,8 +14,8 @@ applies_to:
   - "SQL Server"
 ms.assetid: b2517735-dd19-449f-8cee-08e68ca89d3a
 caps.latest.revision: 3
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Save Metadata  (SybaseToSQL)

@@ -14,8 +14,8 @@ applies_to:
   - "SQL Server"
 ms.assetid: 184f7ab2-725f-491e-a15b-b889f2fb6a68
 caps.latest.revision: 4
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Edit Type Mapping (MySQLToSQL)

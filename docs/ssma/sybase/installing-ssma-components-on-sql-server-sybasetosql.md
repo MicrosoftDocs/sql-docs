@@ -14,8 +14,8 @@ applies_to:
   - "SQL Server"
 ms.assetid: 5ad9e12c-2cdb-4dd2-8703-05a23242d19d
 caps.latest.revision: 10
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Installing SSMA Components on SQL Server (SybaseToSQL)

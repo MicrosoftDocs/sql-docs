@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "Creating script files, server connection parameters"
 ms.assetid: b4608fe7-c777-4ba5-b853-4402f02109e3
 caps.latest.revision: 22
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Creating Script Files (MySQLToSQL)

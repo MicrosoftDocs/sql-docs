@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "SQL Server, migrating data into"
 ms.assetid: f3b18af7-1af0-499d-a00d-a0af94895625
 caps.latest.revision: 17
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Migrating Access Data into SQL Server - Azure SQL DB (AccessToSQL)

@@ -14,8 +14,8 @@ applies_to:
   - "SQL Server"
 ms.assetid: 360e01bb-6347-4e2b-acda-0daa161ed33b
 caps.latest.revision: 3
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Global Settings (Dialogs) (DB2ToSQL)

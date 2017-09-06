@@ -14,8 +14,8 @@ applies_to:
   - "SQL Server"
 ms.assetid: 0e59e2dc-1e4a-47c0-a5c3-ae7b5f5e469c
 caps.latest.revision: 4
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # New GUI Features in SSMA for MySQL (MySQLToSQL)

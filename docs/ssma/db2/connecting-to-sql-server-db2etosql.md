@@ -14,8 +14,8 @@ applies_to:
   - "SQL Server"
 ms.assetid: b59803cb-3cc6-41cc-8553-faf90851410e
 caps.latest.revision: 8
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Connecting to SQL Server (DB2eToSQL)

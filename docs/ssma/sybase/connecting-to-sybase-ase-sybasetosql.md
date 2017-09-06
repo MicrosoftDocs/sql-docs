@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "Connecting to Sybase ASE"
 ms.assetid: a45a2330-9175-4c9e-af38-ef920e350614
 caps.latest.revision: 8
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Connecting to Sybase ASE (SybaseToSQL)

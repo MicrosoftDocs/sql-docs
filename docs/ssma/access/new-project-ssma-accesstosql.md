@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "New Project dialog box"
 ms.assetid: ca294f6d-eeb5-42ca-9306-156281a3f0f3
 caps.latest.revision: 15
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # New Project (SSMA) (AccessToSQL)

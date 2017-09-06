@@ -24,8 +24,8 @@ helpviewer_keywords:
   - "Command line options, XML output option"
 ms.assetid: a2310b10-68ad-4285-a08b-c8694cf84416
 caps.latest.revision: 12
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Command Line Options in SSMA Console (MySQLToSQL)

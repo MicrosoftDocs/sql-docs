@@ -14,8 +14,8 @@ applies_to:
   - "SQL Server"
 ms.assetid: fa4ce8ad-9935-4195-90f9-3fdac587a4ee
 caps.latest.revision: 3
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Save Metadata (AcessToSQL)

@@ -14,8 +14,8 @@ applies_to:
   - "SQL Server"
 ms.assetid: ca098c15-c343-4d7d-a284-c2fc405eb991
 caps.latest.revision: 4
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Advanced Object Selection (DB2ToSQL)

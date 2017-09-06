@@ -14,8 +14,8 @@ applies_to:
   - "SQL Server"
 ms.assetid: 1ca622b2-55d8-4666-b80a-8d9791cd3d3b
 caps.latest.revision: 4
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Menu commands and other shortcut keys (Sybase To SQL)

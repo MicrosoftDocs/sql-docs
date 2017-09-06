@@ -14,8 +14,8 @@ applies_to:
   - "SQL Server"
 ms.assetid: 0d033492-5ec3-473a-8de1-821894ec9518
 caps.latest.revision: 4
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Global Settings (Logging)  (MySQLToSQL)

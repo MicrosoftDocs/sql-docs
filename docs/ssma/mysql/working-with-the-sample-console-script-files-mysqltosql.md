@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "Sample console script files"
 ms.assetid: 7e6aaa8a-5f5c-414d-9fb8-21e56b9ffaef
 caps.latest.revision: 10
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Working with the Sample Console Script Files (MySQLToSQL)

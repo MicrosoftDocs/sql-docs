@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "MySQL Console, output conventions"
 ms.assetid: 218d502c-059f-4d48-9aea-61e553d74303
 caps.latest.revision: 23
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Getting Started with SSMA for MySQL Console (MySQLToSQL)

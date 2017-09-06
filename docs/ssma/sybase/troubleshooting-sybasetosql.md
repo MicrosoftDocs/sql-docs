@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "Sybase Console,Troubleshooting"
 ms.assetid: 8684ed23-c36b-46f6-9687-30ad7f47f876
 caps.latest.revision: 3
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Troubleshooting (SybaseToSQL)

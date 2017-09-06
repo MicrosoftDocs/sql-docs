@@ -14,8 +14,8 @@ applies_to:
   - "SQL Server"
 ms.assetid: cf426c69-6a8e-4d19-951d-6661d5ae2562
 caps.latest.revision: 5
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Project Settings (Type Mapping) (DB2ToSQL)

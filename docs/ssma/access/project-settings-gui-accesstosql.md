@@ -14,8 +14,8 @@ applies_to:
   - "SQL Server"
 ms.assetid: e0f611ac-7b67-4245-8d1c-804c1c44c935
 caps.latest.revision: 3
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Project Settings (GUI) (AccessToSQL)

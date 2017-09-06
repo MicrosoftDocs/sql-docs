@@ -14,8 +14,8 @@ applies_to:
   - "SQL Server"
 ms.assetid: 7947efc3-ca86-4ec5-87ce-7603059c75a0
 caps.latest.revision: 9
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Converting DB2 Schemas (DB2ToSQL)

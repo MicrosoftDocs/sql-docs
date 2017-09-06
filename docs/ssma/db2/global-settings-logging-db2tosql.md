@@ -14,8 +14,8 @@ applies_to:
   - "SQL Server"
 ms.assetid: d314a2ca-ea2e-46e0-ae5e-8774841da91b
 caps.latest.revision: 4
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Global Settings (Logging) (DB2ToSQL)

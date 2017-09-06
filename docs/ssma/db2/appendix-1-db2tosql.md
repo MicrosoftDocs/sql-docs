@@ -14,8 +14,8 @@ applies_to:
   - "SQL Server"
 ms.assetid: c6a30367-d56f-4fcc-8920-c6a6b0335a67
 caps.latest.revision: 6
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Appendix - 1 (DB2ToSQL)

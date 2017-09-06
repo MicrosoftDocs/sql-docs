@@ -14,8 +14,8 @@ applies_to:
   - "SQL Server"
 ms.assetid: cb20a327-e565-49a3-a5d0-4cc79a48c179
 caps.latest.revision: 4
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Shortcut Keys (DB2ToSQL)

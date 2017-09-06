@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "Tester Component,Execution Steps"
 ms.assetid: 195ffdef-cfde-4bf4-a3ae-e7402bb07972
 caps.latest.revision: 6
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Running Test Cases (SybaseToSQL)

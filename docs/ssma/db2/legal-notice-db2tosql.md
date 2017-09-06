@@ -14,8 +14,8 @@ applies_to:
   - "SQL Server"
 ms.assetid: d2e558b8-7208-44b4-82b3-4b411a34a8c9
 caps.latest.revision: 6
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Legal Notice (DB2toSQL)

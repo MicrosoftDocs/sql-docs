@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "Tester Component,Customizing Calls Order"
 ms.assetid: 47f160ce-f8f2-489e-9c3a-690c9fa25259
 caps.latest.revision: 5
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Customizing Calls Order (SybaseToSQL)

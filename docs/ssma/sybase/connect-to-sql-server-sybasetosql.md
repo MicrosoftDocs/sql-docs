@@ -14,8 +14,8 @@ applies_to:
   - "SQL Server"
 ms.assetid: 30179b25-409b-4e23-bc73-2f226657098f
 caps.latest.revision: 3
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Connect to SQL Server (SybaseToSQL)

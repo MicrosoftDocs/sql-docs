@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Script File Creation, Script File Validation"
 ms.assetid: 55e5bc68-3040-4f07-bb00-0408a17c9821
 caps.latest.revision: 37
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "v-thobro"
 ---
 # Creating Script Files (OracleToSQL)

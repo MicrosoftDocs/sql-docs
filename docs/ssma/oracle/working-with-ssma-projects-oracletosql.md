@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "Customizing Project Settings"
 ms.assetid: ee5d94c0-c7a6-4779-bd32-729bdaf61e1b
 caps.latest.revision: 11
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "v-thobro"
 ---
 # Working with SSMA Projects (OracleToSQL)

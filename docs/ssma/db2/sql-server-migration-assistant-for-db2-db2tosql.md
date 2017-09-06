@@ -14,8 +14,8 @@ applies_to:
   - "SQL Server"
 ms.assetid: 7633f631-ffad-469a-8441-8831a6a9f932
 caps.latest.revision: 10
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "murato"
 ---
 # SQL Server Migration Assistant for DB2 (DB2ToSQL)

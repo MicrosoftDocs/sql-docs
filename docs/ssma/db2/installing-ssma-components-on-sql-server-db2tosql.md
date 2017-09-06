@@ -14,8 +14,8 @@ applies_to:
   - "SQL Server"
 ms.assetid: cf2b724b-4ca7-470a-8dd7-fa95b1e060a4
 caps.latest.revision: 6
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Installing SSMA Components on SQL Server (DB2ToSQL)

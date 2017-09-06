@@ -14,8 +14,8 @@ applies_to:
   - "SQL Server"
 ms.assetid: 9a545233-1b0a-488a-a1ec-c33aa608dcc1
 caps.latest.revision: 4
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Project Settings(Loading System objects) (DB2ToSQL)

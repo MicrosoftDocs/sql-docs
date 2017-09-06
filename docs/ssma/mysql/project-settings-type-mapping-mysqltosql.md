@@ -14,8 +14,8 @@ applies_to:
   - "SQL Server"
 ms.assetid: 136fdf6d-657f-447b-af41-49bbc6e0e93e
 caps.latest.revision: 13
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Project Settings (Type Mapping) (MySQLToSQL)

@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "Project Settings dialog box, Conversion"
 ms.assetid: bcebc635-c638-4ddb-924c-b9ccfef86388
 caps.latest.revision: 16
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Project Settings (Conversion) (AccessToSQL)

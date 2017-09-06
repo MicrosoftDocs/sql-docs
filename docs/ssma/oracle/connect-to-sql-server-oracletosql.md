@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 4ef384ea-5f3e-4f70-ad7c-b62d7b0da628
 caps.latest.revision: 3
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "v-pelars"
 ---
 # Connect to SQL Server  (OracleToSQL)

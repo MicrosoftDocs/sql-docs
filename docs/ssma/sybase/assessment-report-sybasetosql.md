@@ -14,8 +14,8 @@ applies_to:
   - "SQL Server"
 ms.assetid: af24f2c4-5e86-4135-a4f3-a24faaeeefe7
 caps.latest.revision: 4
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Assessment Report (SybaseToSQL)

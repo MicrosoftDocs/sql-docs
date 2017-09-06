@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "Tester component,Test Case Wizard"
 ms.assetid: b52dfd93-95af-4299-bc8f-83f2a7a6a518
 caps.latest.revision: 5
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Creating Test Cases (SybaseToSQL)

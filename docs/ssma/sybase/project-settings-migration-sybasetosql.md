@@ -14,8 +14,8 @@ applies_to:
   - "SQL Server"
 ms.assetid: 82f8857f-7ab1-4738-ab6e-b1e95ea94924
 caps.latest.revision: 9
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Project Settings (Migration) (SybaseToSQL)

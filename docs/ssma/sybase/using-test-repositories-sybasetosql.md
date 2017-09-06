@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "Tester Component,Test Repositories"
 ms.assetid: c359c25c-db2a-4a20-afa9-62d87a62df72
 caps.latest.revision: 7
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Using Test Repositories (SybaseToSQL)

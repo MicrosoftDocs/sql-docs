@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "Mapping, Type mapping"
 ms.assetid: 14f98054-13b4-4231-a6b0-2452f3b9941d
 caps.latest.revision: 15
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Mapping MySQL and SQL Server Data Types (MySQLToSQL)

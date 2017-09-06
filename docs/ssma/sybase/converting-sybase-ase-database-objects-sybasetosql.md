@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "Converting Database Objects"
 ms.assetid: 509cb65d-2f54-427a-83d7-37919cc4e3e3
 caps.latest.revision: 8
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Converting Sybase ASE Database Objects (SybaseToSQL)

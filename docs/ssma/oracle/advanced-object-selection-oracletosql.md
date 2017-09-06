@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: c978fba4-c953-4ed0-a21d-1b38e7225552
 caps.latest.revision: 4
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "v-pelars"
 ---
 # Advanced Object Selection  (OracleToSQL)

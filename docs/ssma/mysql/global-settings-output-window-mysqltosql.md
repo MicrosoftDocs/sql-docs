@@ -14,8 +14,8 @@ applies_to:
   - "SQL Server"
 ms.assetid: 9355fb1b-5cd4-49a2-839c-4b06057ea6c4
 caps.latest.revision: 3
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Global Settings (Output Window) (MySQLToSQL)

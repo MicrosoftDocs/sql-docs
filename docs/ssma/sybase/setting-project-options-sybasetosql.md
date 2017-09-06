@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "Project Options Setting"
 ms.assetid: 97b70fc8-1f68-4f15-8e22-db5b784ea4ec
 caps.latest.revision: 9
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Setting Project Options (SybaseToSQL)

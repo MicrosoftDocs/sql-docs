@@ -14,8 +14,8 @@ applies_to:
   - "SQL Server"
 ms.assetid: b099d0f9-dd37-4c87-8b6f-ed0177881ea4
 caps.latest.revision: 13
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Managing Passwords (AccessToSQL)

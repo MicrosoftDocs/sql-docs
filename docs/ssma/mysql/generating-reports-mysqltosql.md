@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "Generating reports"
 ms.assetid: 1c0202e8-546d-4cb3-a37f-1d2e35d53839
 caps.latest.revision: 6
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Generating Reports (MySQLToSQL)

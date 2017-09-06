@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "Tester Component,Selecting Objects"
 ms.assetid: 89c23aad-bfee-4917-bc16-175288390ac0
 caps.latest.revision: 7
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Selecting and Configuring Objects to Test (SybaseToSQL)

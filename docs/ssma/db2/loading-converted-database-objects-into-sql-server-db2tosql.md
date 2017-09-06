@@ -14,8 +14,8 @@ applies_to:
   - "SQL Server"
 ms.assetid: f4ea1ced-9f9f-4a9d-88ab-81dbab64adc3
 caps.latest.revision: 6
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Loading Converted Database Objects into SQL Server (DB2ToSQL)

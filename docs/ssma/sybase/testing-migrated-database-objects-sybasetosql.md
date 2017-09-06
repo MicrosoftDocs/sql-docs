@@ -14,8 +14,8 @@ applies_to:
   - "SQL Server"
 ms.assetid: 4937f6b4-86bd-4070-88df-3d216306c33a
 caps.latest.revision: 7
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Testing Migrated Database Objects (SybaseToSQL)

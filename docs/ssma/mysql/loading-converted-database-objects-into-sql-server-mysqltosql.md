@@ -14,8 +14,8 @@ applies_to:
   - "SQL Server"
 ms.assetid: ac993a6d-0283-4823-8793-6b217677dfa3
 caps.latest.revision: 8
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Loading Converted Database Objects into SQL Server (MySQLToSQL)

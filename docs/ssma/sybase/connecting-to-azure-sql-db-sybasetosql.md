@@ -14,8 +14,8 @@ applies_to:
   - "SQL Server"
 ms.assetid: 9e77e4b0-40c0-455c-8431-ca5d43849aa7
 caps.latest.revision: 7
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Connecting to Azure SQL DB (SybaseToSQL)

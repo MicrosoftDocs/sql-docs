@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 4e47bb04-cf9b-41a0-923e-bdab9ba0c51d
 caps.latest.revision: 19
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "v-thobro"
 ---
 # Working with SSMA for Oracle Console (OracleToSQL)

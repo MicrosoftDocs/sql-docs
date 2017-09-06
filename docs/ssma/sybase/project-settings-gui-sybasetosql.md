@@ -14,8 +14,8 @@ applies_to:
   - "SQL Server"
 ms.assetid: cbd6ddc9-8abd-4fa9-bffd-631e54894ce8
 caps.latest.revision: 3
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Project Settings (GUI) (SybaseToSQL)

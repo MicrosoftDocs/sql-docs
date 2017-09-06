@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "Connecting to MySQL,reconnecting"
 ms.assetid: 084c7020-f729-4f91-90e0-143f85fa68d1
 caps.latest.revision: 13
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Connecting to MySQL (MySQLToSQL)

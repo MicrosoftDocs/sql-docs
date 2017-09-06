@@ -14,8 +14,8 @@ applies_to:
   - "SQL Server"
 ms.assetid: 7a3846ee-b221-47a5-ac8c-d08a962931af
 caps.latest.revision: 10
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # New Project (SSMA) (MySQLToSQL)

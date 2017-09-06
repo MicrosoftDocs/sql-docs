@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "schemas"
 ms.assetid: 0a7304df-2f35-4453-96ef-7ac83dea1167
 caps.latest.revision: 20
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Setting Conversion and Migration Options (AccessToSQL)

@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "Sybase Console,Server Connection Parameters"
 ms.assetid: e6baf106-abbd-4200-b3de-33b4b4f1b294
 caps.latest.revision: 24
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Creating Script Files (SybaseToSQL)

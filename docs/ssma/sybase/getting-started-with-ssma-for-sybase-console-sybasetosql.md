@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "Sybase Console,Procedure for Using Console"
 ms.assetid: 43219dbe-bcfa-427d-9242-f07b1455f15f
 caps.latest.revision: 22
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Getting Started with SSMA for Sybase Console (SybaseToSQL)

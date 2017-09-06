@@ -14,8 +14,8 @@ applies_to:
   - "SQL Server"
 ms.assetid: 2fad3fa2-5729-4b96-99d4-2c6edfab0a54
 caps.latest.revision: 18
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # User Interface Reference (MySQLToSQL)

@@ -14,8 +14,8 @@ applies_to:
   - "SQL Server"
 ms.assetid: f551cf6e-1575-4206-9cca-975b5b43a6b8
 caps.latest.revision: 10
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Conversion Settings (MySQLToSQL)

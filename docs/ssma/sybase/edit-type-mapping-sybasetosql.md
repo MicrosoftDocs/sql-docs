@@ -14,8 +14,8 @@ applies_to:
   - "SQL Server"
 ms.assetid: 513f071a-d5e6-4ed5-acca-269bf76323c5
 caps.latest.revision: 4
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Edit Type Mapping (SybaseToSQL)

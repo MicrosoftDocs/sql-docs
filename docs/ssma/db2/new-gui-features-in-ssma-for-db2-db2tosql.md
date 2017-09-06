@@ -14,8 +14,8 @@ applies_to:
   - "SQL Server"
 ms.assetid: a8ed33e9-185a-492d-a4cf-2fded1aa5c70
 caps.latest.revision: 4
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # New GUI features in SSMA for DB2 (DB2ToSQL)

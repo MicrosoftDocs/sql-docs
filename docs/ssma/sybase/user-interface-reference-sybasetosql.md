@@ -14,8 +14,8 @@ applies_to:
   - "SQL Server"
 ms.assetid: 3f8c07a6-5542-495b-ad29-487ed64f0101
 caps.latest.revision: 9
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # User Interface Reference (SybaseToSQL)

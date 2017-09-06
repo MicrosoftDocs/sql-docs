@@ -14,8 +14,8 @@ applies_to:
   - "SQL Server"
 ms.assetid: d0233525-a83b-4279-813e-c554042abd0e
 caps.latest.revision: 18
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "craigg"
 ---
 # SQL Server Migration Assistant

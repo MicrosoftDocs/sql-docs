@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "Tester Component,Affected Objects"
 ms.assetid: a219df74-543a-4aec-aeeb-79f90ac3e2ee
 caps.latest.revision: 8
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Selecting and Configuring Affected Objects (SybaseToSQL)

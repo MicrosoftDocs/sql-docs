@@ -14,8 +14,8 @@ applies_to:
   - "SQL Server"
 ms.assetid: 9435f6c2-16e7-41b1-906d-d9f09b336f8f
 caps.latest.revision: 3
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Troubleshooting (MySQLToSQL)

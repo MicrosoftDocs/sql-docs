@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "Type Mapping settings"
 ms.assetid: b87b9683-abed-4677-8c50-18bdba704655
 caps.latest.revision: 16
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Project Settings (Type Mapping) (AccessToSQL)

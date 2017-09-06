@@ -14,8 +14,8 @@ applies_to:
   - "SQL Server"
 ms.assetid: 29d8787c-632e-4ff7-9ccc-3f7ad40480ec
 caps.latest.revision: 5
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Working with SSMA for Oracle Console (DB2ToSQL)

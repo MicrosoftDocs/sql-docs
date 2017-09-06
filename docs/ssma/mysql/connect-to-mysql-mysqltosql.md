@@ -14,8 +14,8 @@ applies_to:
   - "SQL Server"
 ms.assetid: 94099d01-ab19-4d58-a172-340c86b4a0f3
 caps.latest.revision: 9
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Connect to MySQL (MySQLToSQL)

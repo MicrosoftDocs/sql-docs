@@ -14,8 +14,8 @@ applies_to:
   - "SQL Server"
 ms.assetid: 240aaad1-d65d-4dea-b60b-315cb1ac733d
 caps.latest.revision: 19
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Working with SSMA for MySQL Console (MySQLToSQL)

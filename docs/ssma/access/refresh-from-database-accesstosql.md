@@ -14,8 +14,8 @@ applies_to:
   - "SQL Server"
 ms.assetid: 3b671f49-c4cc-44fd-801e-e738a8c79415
 caps.latest.revision: 4
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Refresh from Database (AccessToSQL)

@@ -14,8 +14,8 @@ applies_to:
   - "SQL Server"
 ms.assetid: 05ff7bd4-e60b-4f48-a893-bc2346aa9a8a
 caps.latest.revision: 5
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Mapping DB2 Schemas to SQL Server Schemas (DB2ToSQL)

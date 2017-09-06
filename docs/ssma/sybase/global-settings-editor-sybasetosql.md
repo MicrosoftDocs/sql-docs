@@ -14,8 +14,8 @@ applies_to:
   - "SQL Server"
 ms.assetid: 0bc0d5e8-b092-413e-a0ee-7ef2c516d324
 caps.latest.revision: 3
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Global Settings (Editor) (SybaseToSQL)

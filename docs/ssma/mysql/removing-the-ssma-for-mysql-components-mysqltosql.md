@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "Uninstalling, SSMA for MySQL client"
 ms.assetid: 87cdbd49-a0c9-4b00-8a93-34188b18d11a
 caps.latest.revision: 10
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Removing the SSMA for MySQL Components (MySQLToSql)

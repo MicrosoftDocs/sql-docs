@@ -32,8 +32,8 @@ helpviewer_keywords:
   - "validation rules"
 ms.assetid: 99d45b9c-e3b9-4d56-8c25-b594b887ace1
 caps.latest.revision: 18
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Incompatible Access Features (AccessToSQL)

@@ -41,7 +41,7 @@ manager: "jhubbard"
 
 ## Get the installation media
 
-[!INCLUDE[GetInstallationMedia](../../includes/getssmedia.md))
+[!INCLUDE[GetInstallationMedia](../../includes/getssmedia.md)]
   
 ## Prerequisites  
  Before you install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], review topics in [Planning a SQL Server Installation](../../sql-server/install/planning-a-sql-server-installation.md).  

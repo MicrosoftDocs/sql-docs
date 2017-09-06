@@ -43,7 +43,7 @@ manager: "jhubbard"
 
 ## Get the installation media
 
-[!INCLUDE[GetInstallationMedia](../../includes/getssmedia.md))
+[!INCLUDE[GetInstallationMedia](../../includes/getssmedia.md)]
 
 ## How to install [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]
  

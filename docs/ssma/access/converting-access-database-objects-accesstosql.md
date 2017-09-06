@@ -34,8 +34,8 @@ helpviewer_keywords:
   - "translating Access to SQL Server"
 ms.assetid: e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c
 caps.latest.revision: 22
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Converting Access Database Objects (AccessToSQL)

@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "Data Migration Assistant, on-premises SQL Server"
 ms.assetid: ""
 caps.latest.revision: ""
-author: “HJToland3”
-ms.author: “jtoland”
+author: "HJToland3"
+ms.author: "jtoland"
 manager: "craigg"
 ---
 

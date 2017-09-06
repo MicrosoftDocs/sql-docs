@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "one-click migration"
 ms.assetid: 4ec83e96-88a5-4b7b-8d5a-f3429d9a936b
 caps.latest.revision: 12
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Convert, Load, and Migrate (AccessToSQL)

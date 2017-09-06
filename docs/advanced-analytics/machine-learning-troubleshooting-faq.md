@@ -16,7 +16,7 @@ manager: "jhubbard"
 
 # Troubleshoot machine learning
 
-This article includes links to troubleshooting setup and configuration changes. It also links to known issues and release notes, and to articles that provide general advice about troubleshooting and performance analysis for machine learning solutions in SQL Server.
+This article provides troubleshooting information related to setup and configuration of machine learning features in SQL Server. The information includes links to setup guides, known issues, and release notes. Other articles linked to from this article provide advice about performance optimization for machine learning solutions in SQL Server.
 
 Use this page as a starting point for finding known issues, common setup questions, and procedures for troubleshooting.
 
@@ -26,9 +26,9 @@ Use this page as a starting point for finding known issues, common setup questio
 
 The following articles list known issues with the current release, or describe issues with previous releases:
 
-+ [Known Issues for R Services](../advanced-analytics/known-issues-for-sql-server-machine-learning-services.md)
-+ [SQL Server 2016 Release Notes](../sql-server/sql-server-2016-release-notes.md)
-+ [SQL Server 2017 Release Notes](../sql-server/sql-server-2017-release-notes.md)
++ [Known issues for R Services](../advanced-analytics/known-issues-for-sql-server-machine-learning-services.md)
++ [SQL Server 2016 release notes](../sql-server/sql-server-2016-release-notes.md)
++ [SQL Server 2017 release notes](../sql-server/sql-server-2017-release-notes.md)
 
 ## Troubleshooting prerequisites
 
@@ -36,7 +36,7 @@ If you have encountered an error, or need to understand an issue in your environ
 
 The following article provides a list of information that facilitates self-help troubleshooting, or a request for technical support.
 
-+ [Data Collection for Machine Learning Troubleshooting](data-collection-ml-troubleshooting-process.md)
++ [Data collection for machine learning troubleshooting](data-collection-ml-troubleshooting-process.md)
 
 ## Setup and configuration guides
 
@@ -45,23 +45,23 @@ Start here if you have not set up machine learning with SQL Server, or if you wa
 + [Set up R Services or Machine Learning Services with R](../advanced-analytics/r/set-up-sql-server-r-services-in-database.md)
 + [Set up Machine Learning Services with Python](../advanced-analytics/python/setup-python-machine-learning-services.md)
 + [Setup FAQ](../advanced-analytics/r/upgrade-and-installation-faq-sql-server-r-services.md)
-+ [Use SqlBindR to Upgrade an Instance of R services](../advanced-analytics/r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
++ [Use SqlBindR to upgrade an instance of R services](../advanced-analytics/r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
 
-The following articles describe the offline setup process for machine learning services:
+The following articles describe the additional steps required for offline setup of machine learning features in SQL Server:
 
-+ [Unattended Installation of R Services](../advanced-analytics/r/unattended-installs-of-sql-server-r-services.md) 
-+ [Unattended Installation of Machine Learning Services with Python](../advanced-analytics/python/unattended-installs-of-sql-server-python-services.md)
++ [Unattended installation of R Services](../advanced-analytics/r/unattended-installs-of-sql-server-r-services.md) 
++ [Unattended installation of Machine Learning Services with Python](../advanced-analytics/python/unattended-installs-of-sql-server-python-services.md)
 
-If you need to install machine learning services on a computer with no Internet connection, use the links in this article to download the R and Python components:
+If you need to install the machine learning features on a computer with no Internet connection, use the links in this article to download the R and Python components before beginning setup:
 
-+ [Installing Machine Learning Components without Internet Access](../advanced-analytics/r/installing-ml-components-without-internet-access.md)
++ [Installing machine learning components without Internet access](../advanced-analytics/r/installing-ml-components-without-internet-access.md)
 
 ### Configuration
 
 The following articles contain information about defaults, and how to customize the configuration for machine learning on an instance:
 
-+ [Modify the User Account Pool for SQL Server R Services](../advanced-analytics/r/modify-the-user-account-pool-for-sql-server-r-services.md)  
-+ [Configure and Manage Advanced Analytics Extensions](../advanced-analytics/r/configure-and-manage-advanced-analytics-extensions.md)  
++ [Modify the user account pool for SQL Server R Services](../advanced-analytics/r/modify-the-user-account-pool-for-sql-server-r-services.md)  
++ [Configure and manage advanced analytics extensions](../advanced-analytics/r/configure-and-manage-advanced-analytics-extensions.md)  
 + [How to create a resource pool](r/how-to-create-a-resource-pool-for-r.md)
 + [Optimization for R workloads](r/operationalizing-your-r-code.md)
 

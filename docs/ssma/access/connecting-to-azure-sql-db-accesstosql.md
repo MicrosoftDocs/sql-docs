@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "SQL Azure, synchronizing metadata"
 ms.assetid: 1ba0d113-dc05-4431-8689-e14a8821bafd
 caps.latest.revision: 21
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Connecting to Azure SQL DB (AccessToSQL)

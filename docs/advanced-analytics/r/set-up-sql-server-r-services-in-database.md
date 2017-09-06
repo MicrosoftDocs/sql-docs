@@ -49,7 +49,7 @@ The installation process requires multiple steps, some of which are optional. Th
 
 * If you used any earlier versions of the Revolution Analytics development environment or the RevoScaleR packages, or if you installed any pre-release versions of SQL Server 2016, you must uninstall them. Side-by-side installation is not supported. For help removing previous versions, see [Upgrade and Installation FAQ for SQL Server R Services](../r/upgrade-and-installation-faq-sql-server-r-services.md).
 
-* You cannot install Machine Learning Services on a failover cluster. The reason is that the security mechanism that's used for isolating external script processes is not compatible with a Windows Server failover cluster environment. As a workaround, you can do either of the following:
+  You cannot install Machine Learning Services on a failover cluster. The reason is that the security mechanism that's used for isolating external script processes is not compatible with a Windows Server failover cluster environment. As a workaround, you can do either of the following:
     * Use replication to copy necessary tables to a standalone SQL Server instance with R Services.
     * Install [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] on a standalone computer that uses Always On and is part of an availability group.
 
@@ -71,15 +71,12 @@ To use machine learning, you must install SQL Server 2016 or later. To use [!INC
    **SQL Server 2016**
 
    - Select **Database Engine Services**.
-
    - Select **R Services (In-Database)**.
 
    **SQL Server 2017**
 
    - Select **Database Engine Services**.
-
    - Select **Machine Learning Services (In-Database)**.
-
    - Select at least one machine-learning language to enable. You can select only R, or you can add both R and Python.
 
    >[!NOTE]
@@ -97,10 +94,12 @@ To use machine learning, you must install SQL Server 2016 or later. To use [!INC
 6. On the **Ready to Install** page, verify that the following items are included, and then select **Install**.
 
    **SQL Server 2016**
+
    - Database Engine Services
    - R Services (In-Database)
 
    **SQL Server 2017**
+
    - Database Engine Services
    - Machine Learning Services (In-Database)
    - R or Python, or both

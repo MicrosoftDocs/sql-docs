@@ -77,8 +77,8 @@ To use machine learning, you must install SQL Server 2016 or later. To use [!INC
    - Select **Machine Learning Services (In-Database)**.
    - Select at least one machine-learning language to enable. You can select only R, or you can add both R and Python.
 
-    > [!NOTE]
-    > If you do not select either the R or Python language options, the setup wizard installs only the extensibility framework, which includes SQL Server Trusted Launchpad, but it does not install any language-specific components. This option is for binding the SQL Server instance to R or Python as a part of the modern lifecycle support policy. For more information, see [Use SqlBindR to upgrade an instance of R Services](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
+   > [!NOTE]
+   > If you do not select either the R or Python language options, the setup wizard installs only the extensibility framework, which includes SQL Server Trusted Launchpad, but it does not install any language-specific components. This option is for binding the SQL Server instance to R or Python as a part of the modern lifecycle support policy. For more information, see [Use SqlBindR to upgrade an instance of R Services](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
 
 4.  On the **Consent to Install Microsoft R Open** page, select **Accept**.
   

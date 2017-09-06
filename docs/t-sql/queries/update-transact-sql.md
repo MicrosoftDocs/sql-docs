@@ -118,7 +118,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  Common table expressions can also be used with the SELECT, INSERT, DELETE, and CREATE VIEW statements. For more information, see [WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
   
  TOP **(** *expression***)** [ PERCENT ]  
- Specifies the number or percent of rows that will be updated. *expression* can be either a number or a percent of the rows.  
+ Specifies the number or percent of rows that are updated. *expression* can be either a number or a percent of the rows.  
   
  The rows referenced in the TOP expression used with INSERT, UPDATE, or DELETE are not arranged in any order.  
   
@@ -339,7 +339,7 @@ You cannot use the **.**WRITE clause to update a NULL column or set the value of
   
 For best performance, we recommend that data be inserted or updated in chunk sizes that are multiples of 8040 bytes.  
   
-If the column modified by the **.**WRITE clause is referenced in an OUTPUT clause, the complete value of the column, either the before image in **deleted.***column_name* or the after image in **inserted.***column_name*, is returned to the specified column in the table variable. See example G that follows.  
+If the column modified by the **.**WRITE clause is referenced in an OUTPUT clause, the complete value of the column, either the before image in **deleted.***column_name* or the after image in **inserted.***column_name*, is returned to the specified column in the table variable. See example R that follows.  
   
 To achieve the same functionality of **.**WRITE with other character or binary data types, use the [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md).  
   
@@ -507,7 +507,7 @@ GO
 ###  <a name="LimitingValues"></a> Limiting the Rows that Are Updated  
  Examples in this section demonstrate ways that you can use to limit the number of rows affected by the UPDATE statement.  
   
-#### A. Using the WHERE clause  
+#### C. Using the WHERE clause  
  The following example uses the WHERE clause to specify which rows to update. The statement updates the value in the `Color` column of the `Production.Product` table for all rows that have an existing value of 'Red' in the `Color` column and have a value in the `Name` column that starts with 'Road-250'.  
   
 ```sql  
@@ -519,7 +519,7 @@ WHERE Name LIKE N'Road-250%' AND Color = N'Red';
 GO  
 ```  
   
-#### B. Using the TOP clause  
+#### D. Using the TOP clause  
  The following examples use the TOP clause to limit the number of rows that are modified in an UPDATE statement. When a TOP (*n*) clause is used with UPDATE, the update operation is performed on a random selection of '*n*' number of rows. The following example updates the `VacationHours` column by 25 percent for 10 random rows in the `Employee` table.  
   
 ```sql  
@@ -541,7 +541,7 @@ WHERE HumanResources.Employee.BusinessEntityID = th.BusinessEntityID;
 GO  
 ```  
   
-#### C. Using the WITH common_table_expression clause  
+#### E. Using the WITH common_table_expression clause  
  The following example updates the `PerAssemnblyQty` value for all parts and components that are used directly or indirectly to create the `ProductAssemblyID 800`. The common table expression returns a hierarchical list of parts that are used directly to build `ProductAssemblyID 800` and parts that are used to build those components, and so on. Only the rows returned by the common table expression are modified.  
   
 ```sql  
@@ -569,7 +569,7 @@ JOIN Parts AS d ON c.ProductAssemblyID = d.AssemblyID
 WHERE d.ComponentLevel = 0;  
 ```  
   
-#### D. Using the WHERE CURRENT OF clause  
+#### F. Using the WHERE CURRENT OF clause  
  The following example uses the WHERE CURRENT OF clause to update only the row on which the cursor is positioned. When a cursor is based on a join, only the `table_name` specified in the UPDATE statement is modified. Other tables participating in the cursor are not affected.  
   
 ```sql  
@@ -595,7 +595,7 @@ GO
 ###  <a name="ColumnValues"></a> Setting Column Values  
  Examples in this section demonstrate updating columns by using computed values, subqueries, and DEFAULT values.  
   
-#### A. Specifying a computed value  
+#### G. Specifying a computed value  
  The following examples uses computed values in an UPDATE statement. The example doubles the value in the `ListPrice` column for all rows in the `Product` table.  
   
 ```sql  
@@ -606,7 +606,7 @@ SET ListPrice = ListPrice * 2;
 GO  
 ```  
   
-#### B. Specifying a compound operator  
+#### H. Specifying a compound operator  
  The following example uses the variable `@NewPrice` to increment the price of all red bicycles by taking the current price and adding 10 to it.  
   
 ```sql  
@@ -629,7 +629,7 @@ SET Name += ' - tool malfunction'
 WHERE ScrapReasonID BETWEEN 10 and 12;  
 ```  
   
-#### C. Specifying a subquery in the SET clause  
+#### I. Specifying a subquery in the SET clause  
  The following example uses a subquery in the SET clause to determine the value that is used to update the column. The subquery must return only a scalar value (that is, a single value per row). The example modifies the `SalesYTD` column in the `SalesPerson` table to reflect the most recent sales recorded in the `SalesOrderHeader` table. The subquery aggregates the sales for each salesperson in the `UPDATE` statement.  
   
 ```sql  
@@ -647,7 +647,7 @@ SET SalesYTD = SalesYTD +
 GO  
 ```  
   
-#### D. Updating rows using DEFAULT values  
+#### J. Updating rows using DEFAULT values  
  The following example sets the `CostRate` column to its default value (0.00) for all rows that have a `CostRate` value greater than `20.00`.  
   
 ```sql  
@@ -661,7 +661,7 @@ WHERE CostRate > 20.00;
 ###  <a name="TargetObjects"></a> Specifying Target Objects Other Than Standard Tables  
  Examples in this section demonstrate how to update rows by specifying a view, table alias, or table variable.  
   
-#### A. Specifying a view as the target object  
+#### K. Specifying a view as the target object  
  The following example updates rows in a table by specifying a view as the target object. The view definition references multiple tables, however, the UPDATE statement succeeds because it references columns from only one of the underlying tables. The UPDATE statement would fail if columns from both tables were specified. For more information, see [Modify Data Through a View](../../relational-databases/views/modify-data-through-a-view.md).  
   
 ```sql  
@@ -672,7 +672,7 @@ SET CountryRegionName = 'United States of America'
 WHERE CountryRegionName = 'United States';  
 ```  
   
-#### B. Specifying a table alias as the target object  
+#### L. Specifying a table alias as the target object  
  The follow example updates rows in the table `Production.ScrapReason`. The table alias assigned to `ScrapReason` in the FROM clause is specified as the target object in the UPDATE clause.  
   
 ```sql  
@@ -686,7 +686,7 @@ JOIN Production.WorkOrder AS wo
      AND wo.ScrappedQty > 300;  
 ```  
   
-#### C. Specifying a table variable as the target object  
+#### M. Specifying a table variable as the target object  
  The following example updates rows in a table variable.  
   
 ```sql  
@@ -718,7 +718,7 @@ GO
 ###  <a name="OtherTables"></a> Updating Data Based on Data From Other Tables  
  Examples in this section demonstrate methods of updating rows from one table based on information in another table.  
   
-#### A. Using the UPDATE statement with information from another table  
+#### N. Using the UPDATE statement with information from another table  
  The following example modifies the `SalesYTD` column in the `SalesPerson` table to reflect the most recent sales recorded in the `SalesOrderHeader` table.  
   
 ```sql  
@@ -757,7 +757,7 @@ GO
 ###  <a name="RemoteTables"></a> Updating Rows in a Remote Table  
  Examples in this section demonstrate how to update rows in a remote target table by using a [linked server](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) or a [rowset function](../../t-sql/functions/rowset-functions-transact-sql.md) to reference the remote table.  
   
-#### A. Updating data in a remote table by using a linked server  
+#### O. Updating data in a remote table by using a linked server  
  The following example updates a table on a remote server. The example begins by creating a link to the remote data source by using [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md). The linked server name, `MyLinkServer`, is then specified as part of the four-part object name in the form server.catalog.schema.object. Note that you must specify a valid server name for `@datasrc`.  
   
 ```sql  
@@ -782,7 +782,7 @@ SET GroupName = N'Public Relations'
 WHERE DepartmentID = 4;  
 ```  
   
-#### B. Updating data in a remote table by using the OPENQUERY function  
+#### P. Updating data in a remote table by using the OPENQUERY function  
  The following example updates a row in a remote table by specifying the [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) rowset function. The linked server name created in the previous example is used in this example.  
   
 ```sql  
@@ -790,7 +790,7 @@ UPDATE OPENQUERY (MyLinkServer, 'SELECT GroupName FROM HumanResources.Department
 SET GroupName = 'Sales and Marketing';  
 ```  
   
-#### C. Updating data in a remote table by using the OPENDATASOURCE function  
+#### Q. Updating data in a remote table by using the OPENDATASOURCE function  
  The following example inserts a row into a remote table by specifying the [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) rowset function. Specify a valid server name for the data source by using the format *server_name* or *server_name\instance_name*. You may need to configure the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for Ad Hoc Distributed Queries. For more information, see [ad hoc distributed queries Server Configuration Option](../../database-engine/configure-windows/ad-hoc-distributed-queries-server-configuration-option.md).  
   
 ```sql  
@@ -801,7 +801,7 @@ SET GroupName = 'Sales and Marketing';
 ###  <a name="LOBValues"></a> Updating Large Object Data Types  
  Examples in this section demonstrate methods of updating values in columns that are defined with large object (LOB) data types.  
   
-#### A. Using UPDATE with .WRITE to modify data in an nvarchar(max) column  
+#### R. Using UPDATE with .WRITE to modify data in an nvarchar(max) column  
  The following example uses the .WRITE clause to update a partial value in `DocumentSummary`, an **nvarchar(max)** column in the `Production.Document` table. The word `components` is replaced with the word `features` by specifying the replacement word, the starting location (offset) of the word to be replaced in the existing data, and the number of characters to be replaced (length). The example also uses the OUTPUT clause to return the before and after images of the `DocumentSummary` column to the `@MyTableVar` table variable.  
   
 ```sql  
@@ -821,7 +821,7 @@ FROM @MyTableVar;
 GO  
 ```  
   
-#### B. Using UPDATE with .WRITE to add and remove data in an nvarchar(max) column  
+#### S. Using UPDATE with .WRITE to add and remove data in an nvarchar(max) column  
  The following examples add and remove data from an **nvarchar(max)** column that has a value currently set to NULL. Because the .WRITE clause cannot be used to modify a NULL column, the column is first populated with temporary data. This data is then replaced with the correct data by using the .WRITE clause. The additional examples append data to the end of the column value, remove (truncate) data from the column and, finally, remove partial data from the column. The SELECT statements display the data modification generated by each UPDATE statement.  
   
 ```sql  
@@ -878,7 +878,7 @@ WHERE Title = N'Crank Arm and Tire Maintenance';
 GO  
 ```  
   
-#### C. Using UPDATE with OPENROWSET to modify a varbinary(max) column  
+#### T. Using UPDATE with OPENROWSET to modify a varbinary(max) column  
  The following example replaces an existing image stored in a **varbinary(max)** column with a new image. The [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) function is used with the BULK option to load the image into the column. This example assumes that a file named `Tires.jpg` exists in the specified file path.  
   
 ```sql  
@@ -892,7 +892,7 @@ WHERE ProductPhotoID = 1;
 GO  
 ```  
   
-#### D. Using UPDATE to modify FILESTREAM data  
+#### U. Using UPDATE to modify FILESTREAM data  
  The following example uses the UPDATE statement to modify the data in the file system file. We do not recommend this method for streaming large amounts of data to a file. Use the appropriate Win32 interfaces. The following example replaces any text in the file record with the text `Xray 1`. For more information, see [FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md).  
   
 ```sql  
@@ -904,7 +904,7 @@ WHERE [SerialNumber] = 2;
 ###  <a name="UDTs"></a> Updating User-defined Types  
  The following examples modify values in CLR user-defined type (UDT) columns. Three methods are demonstrated. For more information about user-defined columns, see [CLR User-Defined Types](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md).  
   
-#### A. Using a system data type  
+#### V. Using a system data type  
  You can update a UDT by supplying a value in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] system data type, as long as the user-defined type supports implicit or explicit conversion from that type. The following example shows how to update a value in a column of user-defined type `Point`, by explicitly converting from a string.  
   
 ```sql  
@@ -913,7 +913,7 @@ SET Location = CONVERT(Point, '12.3:46.2')
 WHERE Name = 'Anchorage';  
 ```  
   
-#### B. Invoking a method  
+#### W. Invoking a method  
  You can update a UDT by invoking a method, marked as a mutator, of the user-defined type, to perform the update. The following example invokes a mutator method of type `Point` named `SetXY`. This updates the state of the instance of the type.  
   
 ```sql  
@@ -922,7 +922,7 @@ SET Location.SetXY(23.5, 23.5)
 WHERE Name = 'Anchorage';  
 ```  
   
-#### C. Modifying the value of a property or data member  
+#### X. Modifying the value of a property or data member  
  You can update a UDT by modifying the value of a registered property or public data member of the user-defined type. The expression supplying the value must be implicitly convertible to the type of the property. The following example modifies the value of property `X` of user-defined type `Point`.  
   
 ```sql  
@@ -937,7 +937,7 @@ WHERE Name = 'Anchorage';
 > [!CAUTION]  
 >  Because the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] query optimizer typically selects the best execution plan for a query, we recommend that hints be used only as a last resort by experienced developers and database administrators.  
   
-#### A. Specifying a table hint  
+#### Y. Specifying a table hint  
  The following example specifies the [table hint](../../t-sql/queries/hints-transact-sql-table.md) TABLOCK. This hint specifies that a shared lock is taken on the table `Production.Product` and held until the end of the UPDATE statement.  
   
 ```sql  
@@ -950,7 +950,7 @@ WHERE ProductNumber LIKE 'BK-%';
 GO  
 ```  
   
-#### B. Specifying a query hint  
+#### Z. Specifying a query hint  
  The following example specifies the [query hint](../../t-sql/queries/hints-transact-sql-query.md)`OPTIMIZE FOR (@variable)` in the UPDATE statement. This hint instructs the query optimizer to use a particular value for a local variable when the query is compiled and optimized. The value is used only during query optimization, and not during query execution.  
   
 ```sql  
@@ -972,7 +972,7 @@ EXEC Production.uspProductUpdate 'BK-%';
 ###  <a name="CaptureResults"></a> Capturing the Results of the UPDATE Statement  
  Examples in this section demonstrate how to use the [OUTPUT Clause](../../t-sql/queries/output-clause-transact-sql.md) to return information from, or expressions based on, each row affected by an UPDATE statement. These results can be returned to the processing application for use in such things as confirmation messages, archiving, and other such application requirements.  
   
-#### A. Using UPDATE with the OUTPUT clause  
+#### AA. Using UPDATE with the OUTPUT clause  
  The following example updates the column `VacationHours` in the `Employee` table by 25 percent for the first 10 rows and also sets the value in the column `ModifiedDate` to the current date. The `OUTPUT` clause returns the value of `VacationHours` that exists before applying the `UPDATE` statement in the `deleted.VacationHours` column and the updated value in the `inserted.VacationHours` column to the `@MyTableVar` table variable.  
   
  Two `SELECT` statements follow that return the values in `@MyTableVar` and the results of the update operation in the `Employee` table. For more examples using the OUTPUT clause, see [OUTPUT Clause &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md).  
@@ -1006,7 +1006,7 @@ GO
 ###  <a name="Other"></a> Using UPDATE in other statements  
  Examples in this section demonstrate how to use UPDATE in other statements.  
   
-#### A. Using UPDATE in a stored procedure  
+#### AB. Using UPDATE in a stored procedure  
  The following example uses an UPDATE statement in a stored procedure. The procedure takes one input parameter, `@NewHours` and one output parameter `@RowCount`. The `@NewHours` parameter value is used in the UPDATE statement to update the column `VacationHours` in the table `HumanResources.Employee`. The `@RowCount` output parameter is used to return the number of rows affected to a local variable. The CASE expression is used in the SET clause to conditionally determine the value that is set for `VacationHours`. When the employee is paid hourly (`SalariedFlag` = 0), `VacationHours` is set to the current number of hours plus the value specified in `@NewHours`; otherwise, `VacationHours` is set to the value specified in `@NewHours`.  
   
 ```sql  
@@ -1030,7 +1030,7 @@ EXEC HumanResources.Update_VacationHours 40;
 ```  
   
 #### B. Using UPDATE in a TRY…CATCH Block  
- The following example uses an UPDATE statement in a TRY…CATCH block to handle execution errors that may occur during the an update operation.  
+ The following example uses an UPDATE statement in a TRY…CATCH block to handle execution errors that may occur during the update operation.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -1063,7 +1063,7 @@ GO
   
 ## Examples: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### A. Using a simple UPDATE statement  
+### AC. Using a simple UPDATE statement  
  The following examples show how all rows can be affected when a WHERE clause is not used to specify the row (or rows) to update.  
   
  This example updates the values in the `EndDate` and `CurrentFlag` columns for all rows in the `DimEmployee` table.  
@@ -1084,7 +1084,7 @@ UPDATE DimEmployee
 SET BaseRate = BaseRate * 2;  
 ```  
   
-### B. Using the UPDATE statement with a WHERE clause  
+### AD. Using the UPDATE statement with a WHERE clause  
  The following example uses the WHERE clause to specify which rows to update.  
   
 ```sql  
@@ -1095,7 +1095,7 @@ SET FirstName = 'Gail'
 WHERE EmployeeKey = 500;  
 ```  
   
-### C. Using the UPDATE statement with label  
+### AE. Using the UPDATE statement with label  
  The following example shows use of a LABEL for the UPDATE statement.  
   
 ```sql  
@@ -1107,7 +1107,7 @@ WHERE ProductKey = 313
 OPTION (LABEL = N'label1');  
 ```  
   
-### D. Using the UPDATE statement with information from another table  
+### AF. Using the UPDATE statement with information from another table  
  This example creates a table to store total sales by year. It updates the total sales for the year 2004 by running a SELECT statement against the FactInternetSales table.  
   
 ```sql  
@@ -1130,7 +1130,7 @@ WHERE Year=2004;
 SELECT * FROM YearlyTotalSales;   
 ```  
 
-### E. ANSI join replacement for update statements
+### AG. ANSI join replacement for update statements
 You may find you have a complex update that joins more than two tables together using ANSI joining syntax to perform the UPDATE or DELETE.  
 
 Imagine you had to update this table:  

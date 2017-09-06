@@ -14,8 +14,8 @@ applies_to:
   - "SQL Server"
 ms.assetid: ceb77a97-d6d5-4a92-90a6-342e97d12b54
 caps.latest.revision: 3
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Connect to SQL Server (AccessToSQL)

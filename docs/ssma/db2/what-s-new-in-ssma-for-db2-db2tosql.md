@@ -14,8 +14,8 @@ applies_to:
   - "SQL Server"
 ms.assetid: 1cc38f85-3caa-42d0-8c76-a380c1d15c67
 caps.latest.revision: 8
-author: "sabotta"
-ms.author: "carlasab"
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "craigg"
 ---
 # What&#39;s New in SSMA for DB2 (DB2ToSQL)

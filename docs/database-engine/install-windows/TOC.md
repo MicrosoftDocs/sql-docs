@@ -26,7 +26,7 @@
 ## [Check Parameters for the System Configuration Checker](check-parameters-for-the-system-configuration-checker.md)  
 ## [Configure SQL Server on a Server Core Installation](configure-sql-server-on-a-server-core-installation.md)  
 ## [Install SQL Server on Server Core](install-sql-server-on-server-core.md)  
-## [Install SQL Server from the Installation Wizard (Setup)](install-sql-server-from-the-installation-wizard-setup.md)  
+<!--## [Install SQL Server from the Installation Wizard (Setup)](install-sql-server-from-the-installation-wizard-setup.md)-->  
 ## [Install SQL Server from the Command Prompt](install-sql-server-2016-from-the-command-prompt.md)  
 ## [Install SQL Server Using a Configuration File](install-sql-server-2016-using-a-configuration-file.md)  
 ## [Install SQL Server Using SysPrep](install-sql-server-using-sysprep.md)  

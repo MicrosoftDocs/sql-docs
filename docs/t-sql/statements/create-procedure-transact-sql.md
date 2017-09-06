@@ -75,7 +75,8 @@ Jump to [Simple Examples](#Simple) to skip the details of the syntax and get to 
 ```  
 -- Transact-SQL Syntax for Stored Procedures in SQL Server and Azure SQL Database  
   
-CREATE [ OR ALTER ] { PROC | PROCEDURE } [schema_name.] procedure_name [ ; number ]   
+CREATE [ OR ALTER ] { PROC | PROCEDURE } 
+    [schema_name.] procedure_name [ ; number ]   
     [ { @parameter [ type_schema_name. ] data_type }  
         [ VARYING ] [ = default ] [ OUT | OUTPUT | [READONLY]  
     ] [ ,...n ]   
@@ -93,7 +94,8 @@ AS { [ BEGIN ] sql_statement [;] [ ...n ] [ END ] }
 ```  
 -- Transact-SQL Syntax for CLR Stored Procedures  
   
-CREATE [ OR ALTER ] { PROC | PROCEDURE } [schema_name.] procedure_name [ ; number ]   
+CREATE [ OR ALTER ] { PROC | PROCEDURE } 
+    [schema_name.] procedure_name [ ; number ]   
     [ { @parameter [ type_schema_name. ] data_type }   
         [ = default ] [ OUT | OUTPUT ] [READONLY]  
     ] [ ,...n ]   
@@ -195,9 +197,9 @@ VARYING
  Specifies the result set supported as an output parameter. This parameter is dynamically constructed by the procedure and its contents may vary. Applies only to **cursor** parameters. This option is not valid for CLR procedures.  
   
 *default*  
- A default value for a parameter. If a default value is defined for a parameter, the procedure can be executed without specifying a value for that parameter. The default value must be a constant or it can be NULL. The constant value can be in the form of a wildcard, making it possible to use the LIKE keyword when passing the parameter into the procedure. See Example C below.  
+ A default value for a parameter. If a default value is defined for a parameter, the procedure can be executed without specifying a value for that parameter. The default value must be a constant or it can be NULL. The constant value can be in the form of a wildcard, making it possible to use the LIKE keyword when passing the parameter into the procedure.   
   
- Default values are recorded in the **sys.parameters.default** column only for CLR procedures. That column will be NULL for [!INCLUDE[tsql](../../includes/tsql-md.md)] procedure parameters.  
+ Default values are recorded in the **sys.parameters.default** column only for CLR procedures. That column is NULL for [!INCLUDE[tsql](../../includes/tsql-md.md)] procedure parameters.  
   
 OUT | OUTPUT  
  Indicates that the parameter is an output parameter. Use OUTPUT parameters to return values to the caller of the procedure. **text**, **ntext**, and **image** parameters cannot be used as OUTPUT parameters, unless the procedure is a CLR procedure. An output parameter can be a cursor placeholder, unless the procedure is a CLR procedure. A table-value data type cannot be specified as an OUTPUT parameter of a procedure.  
@@ -213,7 +215,7 @@ RECOMPILE
 ENCRYPTION  
  **Applies to**: SQL Server ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
- Indicates that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will convert the original text of the CREATE PROCEDURE statement to an obfuscated format. The output of the obfuscation is not directly visible in any of the catalog views in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Users who have no access to system tables or database files cannot retrieve the obfuscated text. However, the text will be available to privileged users who can either access system tables over the [DAC port](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md) or directly access database files. Also, users who can attach a debugger to the server process can retrieve the decrypted procedure from memory at runtime. For more information about accessing system metadata, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ Indicates that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] converts the original text of the CREATE PROCEDURE statement to an obfuscated format. The output of the obfuscation is not directly visible in any of the catalog views in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Users who have no access to system tables or database files cannot retrieve the obfuscated text. However, the text is available to privileged users who can either access system tables over the [DAC port](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md) or directly access database files. Also, users who can attach a debugger to the server process can retrieve the decrypted procedure from memory at runtime. For more information about accessing system metadata, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
  This option is not valid for CLR procedures.  
   
@@ -231,7 +233,7 @@ FOR REPLICATION
   
  Specifies that the procedure is created for replication. Consequently, it cannot be executed on the Subscriber. A procedure created with the FOR REPLICATION option is used as a procedure filter and is executed only during replication. Parameters cannot be declared if FOR REPLICATION is specified. FOR REPLICATION cannot be specified for CLR procedures. The RECOMPILE option is ignored for procedures created with FOR REPLICATION.  
   
- A `FOR REPLICATION` procedure will have an object type **RF** in **sys.objects** and **sys.procedures**.  
+ A `FOR REPLICATION` procedure has an object type **RF** in **sys.objects** and **sys.procedures**.  
   
  { [ BEGIN ] *sql_statement* [;] [ ...*n* ] [ END ] }  
  One or more [!INCLUDE[tsql](../../includes/tsql-md.md)] statements comprising the body of the procedure. You can use the optional BEGIN and END keywords to enclose the statements. For information, see the Best Practices, General Remarks, and Limitations and Restrictions sections that follow.  
@@ -281,7 +283,7 @@ SCHEMABINDING
   
  Ensures that tables that are referenced by a procedure cannot be dropped or altered. SCHEMABINDING is required in natively compiled stored procedures. (For more information, see [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).) The SCHEMABINDING restrictions are the same as they are for user-defined functions. For more information, see the SCHEMABINDING section in [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md).  
   
-LANGUAGE = [N] ‘language’  
+LANGUAGE = [N] 'language'  
  **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Equivalent to [SET LANGUAGE &#40;Transact-SQL&#41;](../../t-sql/statements/set-language-transact-sql.md) session option. LANGUAGE = [N] 'language' is required.  
@@ -294,16 +296,16 @@ TRANSACTION ISOLATION LEVEL
  For more information about these options, see [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
   
 REPEATABLE READ  
- Specifies that statements cannot read data that has been modified but not yet committed by other transactions. If another transaction modifies data that has been read by the current transaction, the current transaction will fail.  
+ Specifies that statements cannot read data that has been modified but not yet committed by other transactions. If another transaction modifies data that has been read by the current transaction, the current transaction fails.  
   
 SERIALIZABLE  
  Specifies the following:  
 -   Statements cannot read data that has been modified but not yet committed by other transactions.  
--   If another transactions modifies data that has been read by the current transaction, the current transaction will fail.  
--   If another transaction inserts new rows with key values that would fall in the range of keys read by any statements in the current transaction, the current transaction will fail.  
+-   If another transactions modifies data that has been read by the current transaction, the current transaction fails.  
+-   If another transaction inserts new rows with key values that would fall in the range of keys read by any statements in the current transaction, the current transaction fails.  
   
 SNAPSHOT  
- Specifies that data read by any statement in a transaction will be the transactionally consistent version of the data that existed at the start of the transaction.  
+ Specifies that data read by any statement in a transaction is the transactionally consistent version of the data that existed at the start of the transaction.  
   
 DATEFIRST = *number*  
  **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
@@ -344,7 +346,7 @@ CREATE PROC What_DB_is_that @ID int
 AS    
 SELECT DB_NAME(@ID) AS ThatDB;   
 ```   
-Provide a database id number when you call the procedure. For example `EXEC What_DB_is_that 2;` returns `tempdb`.   
+Provide a database id number when you call the procedure. For example, `EXEC What_DB_is_that 2;` returns `tempdb`.   
 
 See [Examples](#Examples) towards the end of this topic for many more examples.     
     
@@ -353,13 +355,13 @@ See [Examples](#Examples) towards the end of this topic for many more examples.
   
 -   Use the SET NOCOUNT ON statement as the first statement in the body of the procedure. That is, place it just after the AS keyword. This turns off messages that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sends back to the client after any SELECT, INSERT, UPDATE, MERGE, and DELETE statements are executed. Overall performance of the database and application is improved by eliminating this unnecessary network overhead. For information, see [SET NOCOUNT &#40;Transact-SQL&#41;](../../t-sql/statements/set-nocount-transact-sql.md).  
   
--   Use schema names when creating or referencing database objects in the procedure. It will take less processing time for the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to resolve object names if it does not have to search multiple schemas. It will also prevent permission and access problems caused by a user’s default schema being assigned when objects are created without specifying the schema.  
+-   Use schema names when creating or referencing database objects in the procedure. It takes less processing time for the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to resolve object names if it does not have to search multiple schemas. It also prevents permission and access problems caused by a user’s default schema being assigned when objects are created without specifying the schema.  
   
 -   Avoid wrapping functions around columns specified in the WHERE and JOIN clauses. Doing so makes the columns non-deterministic and prevents the query processor from using indexes.  
   
 -   Avoid using scalar functions in SELECT statements that return many rows of data. Because the scalar function must be applied to every row, the resulting behavior is like row-based processing and degrades performance.  
   
--   Avoid the use of SELECT *. Instead, specify the required column names. This can prevent some [!INCLUDE[ssDE](../../includes/ssde-md.md)] errors that stop procedure execution. For example, a SELECT \* statement that returns data from a 12 column table and then inserts that data into a 12 column temporary table will succeed until the number or order of columns in either table is changed.  
+-   Avoid the use of `SELECT *`. Instead, specify the required column names. This can prevent some [!INCLUDE[ssDE](../../includes/ssde-md.md)] errors that stop procedure execution. For example, a `SELECT *` statement that returns data from a 12 column table and then inserts that data into a 12 column temporary table succeeds until the number or order of columns in either table is changed.  
   
 -   Avoid processing or returning too much data. Narrow the results as early as possible in the procedure code so that any subsequent operations performed by the procedure are done using the smallest data set possible. Send just the essential data to the client application. It is more efficient than sending extra data across the network and forcing the client application to work through unnecessarily large result sets.  
   
@@ -367,11 +369,11 @@ See [Examples](#Examples) towards the end of this topic for many more examples.
   
 -   Use the [!INCLUDE[tsql](../../includes/tsql-md.md)] TRY…CATCH feature for error handling inside a procedure. TRY…CATCH can encapsulate an entire block of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements. This not only creates less performance overhead, it also makes error reporting more accurate with significantly less programming.  
   
--   Use the DEFAULT keyword on all table columns that are referenced by CREATE TABLE or ALTER TABLE [!INCLUDE[tsql](../../includes/tsql-md.md)] statements in the body of the procedure. This will prevent passing NULL to columns that do not allow null values.  
+-   Use the DEFAULT keyword on all table columns that are referenced by CREATE TABLE or ALTER TABLE [!INCLUDE[tsql](../../includes/tsql-md.md)] statements in the body of the procedure. This prevents passing NULL to columns that do not allow null values.  
   
 -   Use NULL or NOT NULL for each column in a temporary table. The ANSI_DFLT_ON and ANSI_DFLT_OFF options control the way the [!INCLUDE[ssDE](../../includes/ssde-md.md)] assigns the NULL or NOT NULL attributes to columns when these attributes are not specified in a CREATE TABLE or ALTER TABLE statement. If a connection executes a procedure with different settings for these options than the connection that created the procedure, the columns of the table created for the second connection can have different nullability and exhibit different behavior. If NULL or NOT NULL is explicitly stated for each column, the temporary tables are created by using the same nullability for all connections that execute the procedure.  
   
--   Use modification statements that convert nulls and include logic that eliminates rows with null values from queries. Be aware that in [!INCLUDE[tsql](../../includes/tsql-md.md)], NULL is not an empty or “nothing” value. It is a placeholder for an unknown value and can cause unexpected behavior, especially when querying for result sets or using AGGREGATE functions.  
+-   Use modification statements that convert nulls and include logic that eliminates rows with null values from queries. Be aware that in [!INCLUDE[tsql](../../includes/tsql-md.md)], NULL is not an empty or "nothing" value. It is a placeholder for an unknown value and can cause unexpected behavior, especially when querying for result sets or using AGGREGATE functions.  
   
 -   Use the UNION ALL operator instead of the UNION or OR operators, unless there is a specific need for distinct values. The UNION ALL operator requires less processing overhead because duplicates are not filtered out of the result set.  
   
@@ -411,7 +413,7 @@ See [Examples](#Examples) towards the end of this topic for many more examples.
 |CREATE or ALTER PROCEDURE|SET PARSEONLY||  
 |CREATE RULE|SET SHOWPLAN_ALL||  
   
- A procedure can reference tables that do not yet exist. At creation time, only syntax checking is performed. The procedure is not compiled until it is executed for the first time. Only during compilation are all objects referenced in the procedure resolved. Therefore, a syntactically correct procedure that references tables that do not exist can be created successfully; however, the procedure will fail at execution time if the referenced tables do not exist.  
+ A procedure can reference tables that do not yet exist. At creation time, only syntax checking is performed. The procedure is not compiled until it is executed for the first time. Only during compilation are all objects referenced in the procedure resolved. Therefore, a syntactically correct procedure that references tables that do not exist can be created successfully; however, the procedure fails at execution time if the referenced tables do not exist.  
   
  You cannot specify a function name as a parameter default value or as the value passed to a parameter when executing a procedure. However, you can pass a function as a variable as shown in the following example.  
   
@@ -910,7 +912,7 @@ WHERE object_id = OBJECT_ID('HumanResources.uspEncryptThis');
  Examples in this section use the WITH RECOMPILE clause to force the procedure to recompile every time it is executed.  
   
 #### L. Using the WITH RECOMPILE option  
- The `WITH RECOMPILE` clause is helpful when the parameters supplied to the procedure will not be typical, and when a new execution plan should not be cached or stored in memory.  
+ The `WITH RECOMPILE` clause is helpful when the parameters supplied to the procedure are not typical, and when a new execution plan should not be cached or stored in memory.  
   
 ```sql  
 IF OBJECT_ID ( 'dbo.uspProductByVendor', 'P' ) IS NOT NULL   

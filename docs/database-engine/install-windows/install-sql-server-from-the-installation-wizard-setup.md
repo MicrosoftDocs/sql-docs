@@ -1,8 +1,10 @@
 ---
 title: "Install SQL Server 2016 from the Installation Wizard (Setup) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/31/2016"
-ms.prod: "sql-server-2016"
+ms.date: "09/06/2016"
+ms.prod: 
+ - "sql-server-2016"
+ - "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,23 +23,25 @@ manager: "jhubbard"
 ---
 # Install SQL Server from the Installation Wizard (Setup)
 
- > For content related to previous versions of SQL Server, see [Install SQL Server 2014 from the Installation Wizard (Setup)](https://msdn.microsoft.com/en-US/library/ms143219(SQL.120).aspx).
+ > This article explains how to install SQL Server with the Installation Wizard. It applies to SQL Server 2016 [!INCLUDE[SQLServer2016](../../includes/sssql15-md.md)], and [!INCLUDE[SQLServer2017](../../includes/sssqlv14-md.md)]. For content related to previous versions of SQL Server, see [Install SQL Server 2014 from the Installation Wizard (Setup)](https://msdn.microsoft.com/en-US/library/ms143219(SQL.120).aspx).
 
-  This topic provides a step-by-step procedure for installing a new instance of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] using the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup installation wizard. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation Wizard provides a single feature tree for installation of all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components so that you do not have to install them individually. For more information on various components that can be installed, see [Installation for SQL Server 2016](../../database-engine/install-windows/installation-for-sql-server-2016.md).  For more information about how to install the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components individually, see [Install SQL Server 2016](../../database-engine/install-windows/install-sql-server.md).  
+This topic provides a step-by-step procedure for installing a new instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] using the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup installation wizard. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation Wizard provides a single feature tree for installation of all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components so that you do not have to install them individually. For more information on various components that can be installed, see [SQL Server Installation](../../database-engine/install-windows/installation-for-sql-server-2016.md).  For more information about how to install the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components individually, see [Install SQL Server](../../database-engine/install-windows/install-sql-server.md).  
 
  These additional topics document other ways to install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
 
--   [Install SQL Server 2016 from the Command Prompt](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)  
+-   [Install SQL Server from the Command Prompt](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)  
   
--   [Install SQL Server 2016 Using a Configuration File](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md)  
+-   [Install SQL Server Using a Configuration File](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md)  
   
--   [Install SQL Server 2016 Using SysPrep](../../database-engine/install-windows/install-sql-server-using-sysprep.md)  
+-   [Install SQL Server Using SysPrep](../../database-engine/install-windows/install-sql-server-using-sysprep.md)  
   
 -   [Create a New SQL Server Failover Cluster &#40;Setup&#41;](../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)  
   
--   [Upgrade to SQL Server 2016 Using the Installation Wizard &#40;Setup&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md) 
+-   [Upgrade SQL Server Using the Installation Wizard &#40;Setup&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md) 
 
--   [Install Free Editions of SQL Server 2016 Directly from the Internet](../../database-engine/install-windows/install-sql-server.md) 
+## Get the installation media
+
+[!INCLUDE[GetInstallationMedia](../../includes/getssmedia.md)]
   
 ## Prerequisites  
  Before you install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], review topics in [Planning a SQL Server Installation](../../sql-server/install/planning-a-sql-server-installation.md).  
@@ -49,7 +53,7 @@ manager: "jhubbard"
 
 Microsoft has identified a problem with the specific version of Microsoft VC++ 2013 Runtime binaries that are installed as a prerequisite by SQL Server 2016. If this update to the VC runtime binaries is not installed, SQL Server 2016 may experience stability issues in certain scenarios. Before you install SQL Server 2016 follow the instructions at [SQL Server 2016 Release Notes](../../sql-server/sql-server-2016-release-notes.md#bkmk_ga_instalpatch) to see if your computer requires a patch for the VC runtime binaries. 
   
-## To install [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+## To install [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)]  
   
 1.  Insert the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation media. From the root folder, double-click Setup.exe. To install from a network share, locate the root folder on the share, and then double-click Setup.exe.  
   
@@ -94,11 +98,11 @@ Microsoft has identified a problem with the specific version of Microsoft VC++ 2
      **Instance ID** — By default, the instance name is used as the Instance ID. This is used to identify installation directories and registry keys for your instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. This is the case for default instances and named instances. For a default instance, the instance name and instance ID would be MSSQLSERVER. To use a non-default instance ID, specify a different value for **Instance ID** text box.  
   
     > [!NOTE]  
-    >  Typical stand-alone instances of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], whether default or named instances, do not use a non-default value for the **Instance ID**.  
+    >  Typical stand-alone instances of [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)], whether default or named instances, do not use a non-default value for the **Instance ID**.  
   
      All [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service packs and upgrades will apply to every component of an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-     **Installed instances** — The grid shows instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that are on the computer where Setup is running. If a default instance is already installed on the computer, you must install a named instance of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+     **Installed instances** — The grid shows instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that are on the computer where Setup is running. If a default instance is already installed on the computer, you must install a named instance of [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)].  
   
      The Work flow for the rest of the installation depends on the features that you have specified for your installation. You might not see all the pages, depending on your selections.  
   

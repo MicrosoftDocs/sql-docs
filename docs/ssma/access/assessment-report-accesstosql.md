@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "Conversion Report dialog box"
 ms.assetid: ba6f53aa-0049-4c49-8bb8-607a8bfaa737
 caps.latest.revision: 14
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Assessment Report (AccessToSQL)

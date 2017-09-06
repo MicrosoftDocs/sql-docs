@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "Data Migration Assistant, Best Practices"
 ms.assetid: ""
 caps.latest.revision: ""
-author: “HJToland3”
-ms.author: “jtoland”
+author: "HJToland3"
+ms.author: "jtoland"
 manager: "craigg"
 ---
 

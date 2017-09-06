@@ -67,15 +67,15 @@ To use machine learning, you must install SQL Server 2016 or later. To use [!INC
 2. On the **Installation** tab, select **New SQL Server stand-alone installation or add features to an existing installation**.
    
 3. On the **Feature Selection** page, to install the database services used by R jobs and installs the extensions that support external scripts and processes, select the following options:
+   
+   **SQL Server 2016**
+   - Select **Database Engine Services**.
+   - Select **R Services (In-Database)**.
 
-    **SQL Server 2016**
-    - Select **Database Engine Services**.
-    - Select **R Services (In-Database)**.
-    
-    **SQL Server 2017**
-    - Select **Database Engine Services**.
-    - Select **Machine Learning Services (In-Database)**.
-    - Select at least one machine learning language to enable. You can select only R, or you can add both R and Python.
+   **SQL Server 2017**
+   - Select **Database Engine Services**.
+   - Select **Machine Learning Services (In-Database)**.
+   - Select at least one machine learning language to enable. You can select only R, or you can add both R and Python.
 
     > [!NOTE]
     > If you do not select either the R or Python language options, the setup wizard installs only the extensibility framework, which includes SQL Server Trusted Launchpad, but it does not install any language-specific components. This option is for binding the SQL Server instance to R or Python as a part of the modern lifecycle support policy. For more information, see [Use SqlBindR to upgrade an instance of R Services](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
@@ -90,14 +90,15 @@ To use machine learning, you must install SQL Server 2016 or later. To use [!INC
 5. Select **Next**.
 
 6. On the **Ready to Install** page, verify that the following items are included, and then select **Install**.
-     **SQL Server 2016**
-     - Database Engine Services
-     - R Services (In-Database)
 
-     **SQL Server 2017**
-     - Database Engine Services
-     - Machine Learning Services (In-Database)
-     - R or Python, or both
+   **SQL Server 2016**
+   - Database Engine Services
+   - R Services (In-Database)
+
+   **SQL Server 2017**
+   - Database Engine Services
+   - Machine Learning Services (In-Database)
+   - R or Python, or both
   
 7. When the installation is complete, restart your computer.
 

@@ -19,13 +19,13 @@ manager: "jhubbard"
 ---
 # Set up SQL Server Machine Learning Services (In-Database)
 
-This topic describes how to set up Machine Learning Services in SQL Server with the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup wizard.
+This topic describes how to set up Machine Learning Services in SQL Server by using the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup wizard.
 
 **Applies to:** SQL Server 2016 R Services (R only), SQL Server 2017 Machine Learning Services (R and Python)
 
 ## Machine-learning options in SQL Server setup
 
-SQL Server setup provides these options for installing machine learning:
+SQL Server setup provides the following options for installing machine learning:
 
 * Install machine learning with the SQL Server database
 
@@ -67,24 +67,22 @@ To use machine learning, you must install SQL Server 2016 or later. To use [!INC
 2. On the **Installation** tab, select **New SQL Server stand-alone installation or add features to an existing installation**.
    
 3. On the **Feature Selection** page, to install the database services used by R jobs and installs the extensions that support external scripts and processes, select the following options:
-  
+
     **SQL Server 2016**
-    
     - Select **Database Engine Services**.
     - Select **R Services (In-Database)**.
-
-    **SQL Server 2017**
     
+    **SQL Server 2017**
     - Select **Database Engine Services**.
     - Select **Machine Learning Services (In-Database)**.
-    - Select at least one machine-learning language to enable. You can select just R, or you can add both R and Python.
+    - Select at least one machine-learning language to enable. You can select only R, or you can add both R and Python.
 
     > [!NOTE]
     > If you do not select either the R or Python language options, the setup wizard installs only the extensibility framework, which includes SQL Server Trusted Launchpad, but it does not install any language-specific components. This option is for binding the SQL Server instance to R or Python as a part of the modern lifecycle support policy. For more information, see [Use SqlBindR to upgrade an instance of R Services](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
 
 4.  On the **Consent to Install Microsoft R Open** page, select **Accept**.
   
-     This license agreement is required to download Microsoft R Open, which include a distribution of the open source R base packages and tools, together with enhanced R packages and connectivity providers from Revolution Analytics.
+     This license agreement is required to download Microsoft R Open, which includes a distribution of the open source R base packages and tools, together with enhanced R packages and connectivity providers from Revolution Analytics.
   
     > [!NOTE]
     >  If the computer that you're using does not have internet access, you can pause setup at this point to download the installers separately, as described in [Install R components without internet access](installing-ml-components-without-internet-access.md).
@@ -92,7 +90,6 @@ To use machine learning, you must install SQL Server 2016 or later. To use [!INC
 5. Select **Next**.
 
 6. On the **Ready to Install** page, verify that the following items are included, and then select **Install**.
-  
      **SQL Server 2016**
      - Database Engine Services
      - R Services (In-Database)

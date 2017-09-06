@@ -14,9 +14,9 @@ applies_to:
   - "SQL Server"
 ms.assetid: bc14a072-8949-4ee0-a4b4-ada55fe8df5c
 caps.latest.revision: 3
-author: "sabotta"
-ms.author: "carlasab"
-manager: "lonnyb"
+author: “Shamikg”
+ms.author: “Shamikg”
+manager: "jhubbard"
 ---
 # Connect to SQL Server (DB2ToSQL)
 Use the **Connect to SQL Server** dialog box to connect to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] that you want to migrate to. To access the **Connect to SQL Server** dialog box, on the **File** menu, click **Connect to SQL Server**.  

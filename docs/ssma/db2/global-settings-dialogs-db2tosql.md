@@ -14,9 +14,9 @@ applies_to:
   - "SQL Server"
 ms.assetid: 360e01bb-6347-4e2b-acda-0daa161ed33b
 caps.latest.revision: 3
-author: "sabotta"
-ms.author: "carlasab"
-manager: "lonnyb"
+author: “Shamikg”
+ms.author: “Shamikg”
+manager: "jhubbard"
 ---
 # Global Settings (Dialogs) (DB2ToSQL)
 Use the Dialogs page of the **Global Settings** dialog box to specify the default user action and warning settings for SSMA.  

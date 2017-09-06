@@ -14,9 +14,9 @@ applies_to:
   - "SQL Server"
 ms.assetid: 8d5a4ce6-b747-46e3-9184-645d56e8b35c
 caps.latest.revision: 6
-author: "sabotta"
-ms.author: "carlasab"
-manager: "lonnyb"
+author: “Shamikg”
+ms.author: “Shamikg”
+manager: "jhubbard"
 ---
 # Installing SSMA  for Sybase (SybaseToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) for Sybase consists of a client application that you use to perform a migration from Sybase Adaptive Server Enterprise (ASE) to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure. It also contains an extension pack that supports data migration and the use of ASE system functions in your migrated databases.  

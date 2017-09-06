@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "Script File Commands,Project Commands"
 ms.assetid: 7228ccba-c69f-4b4c-8664-01a2750183c5
 caps.latest.revision: 43
-author: "sabotta"
-ms.author: "carlasab"
+author: “Shamikg”
+ms.author: “Shamikg”
 manager: "v-thobro"
 ---
 # Executing the SSMA Console (OracleToSQL)

@@ -14,9 +14,9 @@ applies_to:
   - "SQL Server"
 ms.assetid: 3f8c07a6-5542-495b-ad29-487ed64f0101
 caps.latest.revision: 9
-author: "sabotta"
-ms.author: "carlasab"
-manager: "lonnyb"
+author: “Shamikg”
+ms.author: “Shamikg”
+manager: "jhubbard"
 ---
 # User Interface Reference (SybaseToSQL)
 This section includes Help topics for [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) for Sybase.  

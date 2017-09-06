@@ -14,9 +14,9 @@ applies_to:
   - "SQL Server"
 ms.assetid: 5524a575-67dd-4ef6-9d17-3412df9b9f9c
 caps.latest.revision: 4
-author: "sabotta"
-ms.author: "carlasab"
-manager: "lonnyb"
+author: “Shamikg”
+ms.author: “Shamikg”
+manager: "jhubbard"
 ---
 # Data Migration Report  (MySQLToSQL)
 The **Data Migration Report** dialog box appears after you migrate data to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  

@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 16849cfd-050c-4ac7-bd3d-a929aebb5010
 caps.latest.revision: 8
-author: "sabotta"
-ms.author: "carlasab"
+author: “Shamikg”
+ms.author: “Shamikg”
 manager: "v-thobro"
 ---
 # New Project (OracleToSQL)

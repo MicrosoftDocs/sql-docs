@@ -14,9 +14,9 @@ applies_to:
   - "SQL Server"
 ms.assetid: f325a606-97ac-48bc-b344-b55f5e086a48
 caps.latest.revision: 5
-author: "sabotta"
-ms.author: "carlasab"
-manager: "lonnyb"
+author: “Shamikg”
+ms.author: “Shamikg”
+manager: "jhubbard"
 ---
 # Setting Project Options (DB2ToSQL)
 For each SSMA project you can set project level options. These options specify object conversion, object loading, user interface and data migration settings. Before you convert objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or migrate data into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], verify that the configuration options are appropriate for the project.  

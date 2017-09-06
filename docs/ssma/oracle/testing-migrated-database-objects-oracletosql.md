@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: f03ef5e1-66e6-4c84-ada2-252dd5ada82f
 caps.latest.revision: 7
-author: "sabotta"
-ms.author: "carlasab"
+author: “Shamikg”
+ms.author: “Shamikg”
 manager: "v-thobro"
 ---
 # Testing Migrated Database Objects (OracleToSQL)

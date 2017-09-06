@@ -14,9 +14,9 @@ applies_to:
   - "SQL Server"
 ms.assetid: 6f0b9cea-5a24-4e42-8bbf-c4516b00da23
 caps.latest.revision: 7
-author: "sabotta"
-ms.author: "carlasab"
-manager: "lonnyb"
+author: “Shamikg”
+ms.author: “Shamikg”
+manager: "jhubbard"
 ---
 # Global Settings (Tester) (SybaseToSQL)
 Use the Tester page of the **Global Settings** dialog box to specify settings for SSMA Tester.  

@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "Managing passwords in Oracle, Securing Password"
 ms.assetid: 8c7d9f8e-06bb-476c-bbd2-15b61d5bba3c
 caps.latest.revision: 24
-author: "sabotta"
-ms.author: "carlasab"
+author: “Shamikg”
+ms.author: “Shamikg”
 manager: "v-thobro"
 ---
 # Managing Passwords (OracleToSQL)

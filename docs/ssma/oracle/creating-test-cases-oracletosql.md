@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "Test Case Wizard"
 ms.assetid: 22f38901-ec35-4707-a911-784e6ad8dafb
 caps.latest.revision: 7
-author: "sabotta"
-ms.author: "carlasab"
+author: “Shamikg”
+ms.author: “Shamikg”
 manager: "v-thobro"
 ---
 # Creating Test Cases (OracleToSQL)

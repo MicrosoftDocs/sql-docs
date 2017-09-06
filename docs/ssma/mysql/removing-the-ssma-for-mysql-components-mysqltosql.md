@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "Uninstalling, SSMA for MySQL client"
 ms.assetid: 87cdbd49-a0c9-4b00-8a93-34188b18d11a
 caps.latest.revision: 10
-author: "sabotta"
-ms.author: "carlasab"
-manager: "lonnyb"
+author: “Shamikg”
+ms.author: “Shamikg”
+manager: "jhubbard"
 ---
 # Removing the SSMA for MySQL Components (MySQLToSql)
 When you have finished migrating databases from MySQL to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], you might want to uninstall SSMA components. You can uninstall the client components at any time. However, if you uninstall the extension pack from [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , then, SSMA will no longer support migration of data from MySQL to the target database (SQL Server/SQL Azure) using the Server-Side Data Migration Engine.  

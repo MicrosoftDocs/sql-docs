@@ -14,8 +14,8 @@ applies_to:
   - "SQL Server"
 ms.assetid: a24d3fc0-6911-4bfa-828a-197abf222e02
 caps.latest.revision: 37
-author: "sabotta"
-ms.author: "carlasab"
+author: “Shamikg”
+ms.author: “Shamikg”
 manager: "craigg"
 ---
 # What&#39;s New in SSMA for Access (AccessToSQL)

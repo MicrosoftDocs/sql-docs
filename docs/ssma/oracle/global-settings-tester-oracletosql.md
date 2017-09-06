@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 4acc0f2a-85ba-4c99-856a-89030f5c418e
 caps.latest.revision: 6
-author: "sabotta"
-ms.author: "carlasab"
+author: “Shamikg”
+ms.author: “Shamikg”
 manager: "v-thobro"
 ---
 # Global Settings (Tester) (OracleToSQL)

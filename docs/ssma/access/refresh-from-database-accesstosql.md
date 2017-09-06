@@ -14,9 +14,9 @@ applies_to:
   - "SQL Server"
 ms.assetid: 3b671f49-c4cc-44fd-801e-e738a8c79415
 caps.latest.revision: 4
-author: "sabotta"
-ms.author: "carlasab"
-manager: "lonnyb"
+author: “Shamikg”
+ms.author: “Shamikg”
+manager: "jhubbard"
 ---
 # Refresh from Database (AccessToSQL)
 The **Refresh from Database** dialog box lets you select which objects to refresh from the Access database. Rows in the dialog box are color coded based on the state of the metadata:  

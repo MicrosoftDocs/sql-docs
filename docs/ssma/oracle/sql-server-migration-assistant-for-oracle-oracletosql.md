@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 84abdd92-682c-404b-879d-7879bdf5b468
 caps.latest.revision: 10
-author: "sabotta"
-ms.author: "carlasab"
+author: “Shamikg”
+ms.author: “Shamikg”
 manager: "murato"
 ---
 # SQL Server Migration Assistant for Oracle (OracleToSQL)

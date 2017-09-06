@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "legal notice"
 ms.assetid: d614b508-48ad-459e-ae86-79ee9d027a73
 caps.latest.revision: 14
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Legal Notice (SSMA for Access)

@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "saving projects"
 ms.assetid: f2d1f0b0-5394-4adb-b3f3-abd71eb68ca7
 caps.latest.revision: 22
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Creating and Managing Projects (AccessToSQL)

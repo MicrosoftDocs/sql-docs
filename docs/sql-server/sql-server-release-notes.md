@@ -24,25 +24,25 @@ The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Release Notes topics 
 ## Release Notes  
   
 ### SQL Server 2016 
-[SQL Server 2016 Release Notes](https://msdn.microsoft.com/library/dn876712.aspx)  
+[SQL Server 2016 Release Notes](what-s-new-in-sql-server-2016.md)  
   
 ### SQL Server 2014  
-[SQL Server 2014 Release Notes](../release-notes/sql-server-2014-release-notes.md)  
+[SQL Server 2014 Release Notes](sql-server-2014-release-notes.md)  
   
 ### SQL Server 2012  
-[SQL Server 2012 Release Notes](../release-notes/sql-server-2012-release-notes.md)  
+[SQL Server 2012 Release Notes](sql-server-2012-release-notes.md)  
   
-[SQL Server 2012 SP1 Release Notes](../release-notes/sql-server-2012-sp1-release-notes.md)  
+[SQL Server 2012 SP1 Release Notes](sql-server-2012-sp1-release-notes.md)  
   
-[SQL Server 2012 SP2 Release Notes](../release-notes/sql-server-2012-sp2-release-notes.md)  
-[SQL Server 2012 SP3 Release Notes](../release-notes/sql-server-2012-sp3-release-notes.md)
+[SQL Server 2012 SP2 Release Notes](sql-server-2012-sp2-release-notes.md)  
+[SQL Server 2012 SP3 Release Notes](sql-server-2012-sp3-release-notes.md)
     
 ### SQL Server 2008 R2  
 [SQL Server 2008 R2 Release Notes](http://download.microsoft.com/download/E/7/D/E7DED7E4-5059-4E3E-82C5-B28BF3FD0AAC/SQLServer2008R2ReleaseNotes.htm)  
   
 [SQL Server 2008 R2 SP1 Release Notes](http://social.technet.microsoft.com/wiki/contents/articles/2973.microsoft-sql-server-2008-r2-sp1-release-notes.aspx)  
   
-[SQL Server 2008 R2 SP2 Release Notes](../release-notes/sql-server-2008-r2-sp2-release-notes.md)  
+[SQL Server 2008 R2 SP2 Release Notes](sql-server-2008-r2-sp2-release-notes.md)  
   
 ### SQL Server 2008  
 [SQL Server 2008 Release Notes](http://download.microsoft.com/download/4/9/e/49eeb41a-a769-4520-80d6-671b8ae2bd06/SQLServer2008ReleaseNotes.htm)  
@@ -53,5 +53,5 @@ The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Release Notes topics 
   
 [SQL Server 2008 SP3 Release Notes](http://social.technet.microsoft.com/wiki/contents/articles/4937.microsoft-sql-server-2008-sp3-release-notes.aspx)  
   
-![MS_Logo_X-Small](../release-notes/media/ms-logo-x-small.png "MS_Logo_X-Small")  
+![MS_Logo_X-Small](media/ms-logo-x-small.png "MS_Logo_X-Small")  
   

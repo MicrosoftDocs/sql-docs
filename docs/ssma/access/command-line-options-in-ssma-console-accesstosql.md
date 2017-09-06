@@ -14,8 +14,8 @@ applies_to:
   - "SQL Server"
 ms.assetid: c1f3b3f0-0f3e-4e07-b745-2fbdde85c67e
 caps.latest.revision: 11
-author: "sabotta"
-ms.author: "carlasab"
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "murato"
 ---
 # Command-line options in the SSMA Console (AccessToSQL)

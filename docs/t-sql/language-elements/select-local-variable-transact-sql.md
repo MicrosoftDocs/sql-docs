@@ -1,7 +1,7 @@
 ---
 title: "SELECT @local_variable (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/03/2017"
+ms.date: "09/06/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -41,36 +41,29 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for SQL Server and Azure SQL Database  
-    
-SELECT { @local_variable { = | += | -= | *= | /= | %= | &= | ^= | |= } expression } [ ,...n ] [ ; ]  
+SELECT { @local_variable { = | += | -= | *= | /= | %= | &= | ^= | |= } expression } 
+    [ ,...n ] [ ; ]  
 ```  
   
 ## Arguments  
- @*local_variable*  
+@*local_variable*  
  Is a declared variable for which a value is to be assigned.  
   
- =  
- Assign the value on the right to the variable on the left.  
+{= | += | -= | \*= | /= | %= | &= | ^= | |= }   
+Assign the value on the right to the variable on the left.  
   
- {= | += | -= | *= | /= | %= | &= | ^= | |= }  
- Compound assignment operator:  
-  
- +=                    Add and assign  
-  
- -=                     Subtract and assign  
-  
- *=                     Multiply and assign  
-  
- /=                      Divide and assign  
-  
- %=                    Modulo and assign  
-  
- &=                     Bitwise AND and assign  
-  
- ^=                     Bitwise XOR and assign  
-  
- |=                      Bitwise OR and assign  
+Compound assignment operator:  
+  |operator |action |   
+  |-----|-----|  
+  | = | Assigns the expression that follows, to the variable. |  
+  | += | Add and assign |   
+  | -= | Subtract and assign |  
+  | \*= | Multiply and assign |  
+  | /= | Divide and assign |  
+  | %= | Modulo and assign |  
+  | &= | Bitwise AND and assign |  
+  | ^= | Bitwise XOR and assign |  
+  | \|= | Bitwise OR and assign |  
   
  *expression*  
  Is any valid [expression](../../t-sql/language-elements/expressions-transact-sql.md). This includes a scalar subquery.  
@@ -90,7 +83,7 @@ SELECT { @local_variable { = | += | -= | *= | /= | %= | &= | ^= | |= } expressio
 ### A. Use SELECT @local_variable to return a single value  
  In the following example, the variable `@var1` is assigned `Generic Name` as its value. The query against the `Store` table returns no rows because the value specified for `CustomerID` does not exist in the table. The variable retains the `Generic Name` value.  
   
-```  
+```sql  
 -- Uses AdventureWorks    
   
 DECLARE @var1 varchar(30);         
@@ -103,16 +96,16 @@ SELECT @var1 AS 'Company Name';
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Company Name`  
-  
- `------------------------------`  
-  
- `Generic Name`  
+ ```  
+ Company Name  
+ ------------------------------  
+ Generic Name  
+ ```  
   
 ### B. Use SELECT @local_variable to return null  
  In the following example, a subquery is used to assign a value to `@var1`. Because the value requested for `CustomerID` does not exist, the subquery returns no value and the variable is set to `NULL`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 DECLARE @var1 varchar(30)   
@@ -125,11 +118,11 @@ SELECT @var1 AS 'Company Name' ;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Company Name`  
-  
- `----------------------------`  
-  
- `NULL`  
+```  
+Company Name  
+----------------------------  
+NULL  
+```  
   
 ## See Also  
  [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   

@@ -1,7 +1,7 @@
 ---
 title: "CREATE EXTERNAL DATA SOURCE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/10/2017"
+ms.date: "09/06/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -93,7 +93,7 @@ CREATE EXTERNAL DATA SOURCE data_source_name
 [;]
   
 -- Elastic Database query only: a shard map manager as data source   
--- (only on Azure SQL Database v12 or later)  
+-- (only on Azure SQL Database)  
 CREATE EXTERNAL DATA SOURCE data_source_name  
     WITH (   
         TYPE = SHARD_MAP_MANAGER,  
@@ -105,7 +105,7 @@ CREATE EXTERNAL DATA SOURCE data_source_name
 [;]  
   
 -- Elastic Database query only: a remote database on Azure SQL Database as data source   
--- (only on Azure SQL Database v12 or later)  
+-- (only on Azure SQL Database)  
 CREATE EXTERNAL DATA SOURCE data_source_name  
     WITH (   
         TYPE = RDBMS,  
@@ -116,7 +116,7 @@ CREATE EXTERNAL DATA SOURCE data_source_name
 [;]  
 
 -- Bulk operations only: Azure Storage Blob as data source   
--- (on SQL Server 2017 and Azure SQL Database).
+-- (on SQL Server 2017 or later, and Azure SQL Database).
 CREATE EXTERNAL DATA SOURCE data_source_name  
     WITH (   
         TYPE = BLOB_STORAGE,  

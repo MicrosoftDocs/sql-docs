@@ -41,8 +41,8 @@ helpviewer_keywords:
   - "tables, inventory"
 ms.assetid: fdd3cff2-4d62-4395-8acf-71ea8f17f524
 caps.latest.revision: 17
-author: “Shamikg”
-ms.author: “Shamikg”
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "jhubbard"
 ---
 # Access Inventory Schemas (AccessToSQL)

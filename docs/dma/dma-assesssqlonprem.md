@@ -1,7 +1,7 @@
 ---
 title: "Assess your SQL Server migration (Data Migration Assistant) | Microsoft Docs"
 ms.custom: 
-ms.date: "08/31/2017"
+ms.date: "09/01/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -54,7 +54,7 @@ SQL Database**.
 
        ![Select an assessment report type](../dma/media/AssessmentTypes.png)
 
-1.  When you are assessing your source SQL Server migrating to Azure SQL
+3.  When you are assessing your source SQL Server migrating to Azure SQL
     Database(s), you can choose one or both from the following
     assessment report types:
 

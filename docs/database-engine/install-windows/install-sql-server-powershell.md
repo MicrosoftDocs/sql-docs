@@ -19,9 +19,8 @@ manager: "jhubbard"
 ---
 # Install SQL Server PowerShell
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup automatically configures PowerShell components.  
-  
-## Installing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell Support  
-You install the software that provides [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] support for Windows PowerShell by using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup. When you select any [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] features that require PowerShell support Setup installs the following [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell components:  
+
+You install the software that provides [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] support for Windows PowerShell by using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup. When you select any [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] features that require PowerShell support, Setup installs the following [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell components:  
   
 - The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell snap-ins. The snap-ins are dll files that implement two types of Windows PowerShell support for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
@@ -34,8 +33,9 @@ You install the software that provides [!INCLUDE[ssNoVersion](../../includes/ssn
 - [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] supports starting Windows PowerShell sessions from the Object Explorer tree. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent supports Windows PowerShell job steps.  
   
 Windows Server 2012 and later and Windows 8 and later come with PowerShell installed and configured. For information about installing Windows PowerShell see [Installing Windows PowerShell](http://docs.microsoft.com/powershell/scripting/setup/installing-windows-powershell).  
-  
-## See Also  
-[SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)  
+
+For more information, see:   
+
+- [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)  
   
   

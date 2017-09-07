@@ -14,9 +14,9 @@ applies_to:
   - "SQL Server"
 ms.assetid: d3c60e8c-f0a7-4590-8ece-c68ceaeaea4a
 caps.latest.revision: 4
-author: "sabotta"
-ms.author: "carlasab"
-manager: "lonnyb"
+author: "Shamikg"
+ms.author: "Shamikg"
+manager: "jhubbard"
 ---
 # New GUI Features in SSMA For Sybase (SybaseToSQL)
 This chapter describes new features of SSMA User Interface.  

@@ -15,9 +15,9 @@ helpviewer_keywords:
   - "subscription views [Master Data Services], about subscription views"
 ms.assetid: 8b74409a-ea70-45f8-84c7-da6905e4901a
 caps.latest.revision: 12
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
+author: "smartysanthosh"
+ms.author: "nagavo"
+manager: "craigg"
 ---
 # Overview: Exporting Data (Master Data Services)
   This article introduces the types of subscription view formats and how to determine when views need to be edited due to changes to model objects.  

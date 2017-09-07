@@ -82,10 +82,5 @@ Documentation to help you install, configure, and use SQL Server. The content in
 + To view SQL Server documentation offline, see [Help Viewer and Offline Content for SQL Server](sql-server-help-installation.md).
 + [SQL Server Configuration Manager](../relational-databases/sql-server-configuration-manager.md)
 + [SQL Server Update Center - links and information for all supported versions](https://msdn.microsoft.com/library/ff803383.aspx)
-  
-##  ![info_tip](../sql-server/media/info-tip.png) Get Help 
-- [Stack Overflow (tag sql-server) - ask SQL development questions](http://stackoverflow.com/questions/tagged/sql-server)
-- [MSDN Forums - ask technical questions](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)
-- [Microsoft Connect - report bugs and request features](https://connect.microsoft.com/SQLServer/Feedback)
-- [Reddit - general discussion about SQL Server](https://www.reddit.com/r/SQLServer/)
-- [Microsoft SQL Server License Terms and Information](https://www.microsoft.com/en-us/download/details.aspx?id=39299) 
+
+[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

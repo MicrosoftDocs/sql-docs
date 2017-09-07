@@ -1,7 +1,7 @@
 ---
 title: "CAST and CONVERT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/06/2017"
+ms.date: "09/07/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -105,7 +105,7 @@ When *expression* is a date or time data type,  *style* can be one of the values
 |-|**21** or **121** (<sup>2</sup>)|ODBC canonical (with milliseconds) default for time, date, datetime2, and datetimeoffset|yyyy-mm-dd hh:mi:ss.mmm(24h)|  
 |-|**126** (<sup>4</sup>)|ISO8601|yyyy-mm-ddThh:mi:ss.mmm (no spaces)<br /> Note: When the value for milliseconds (mmm) is 0, the millisecond value is not displayed. For example, the value '2012-11-07T18:26:20.000 is displayed as '2012-11-07T18:26:20'.|  
 |-|**127**(<sup>6, 7</sup>)|ISO8601 with time zone Z.|yyyy-mm-ddThh:mi:ss.mmmZ (no spaces)<br /> Note: When the value for milliseconds (mmm) is 0, the milliseconds value is not displayed. For example, the value '2012-11-07T18:26:20.000 is displayed as '2012-11-07T18:26:20'.|  
-|-|**130** (<sup>1,</sup><sup>2</sup>)|Hijri (<sup>5</sup>)|dd mon yyyy hh:mi:ss:mmmAM<br /> In this style, mon represents a multi-token Hijri unicode representation of the full month's name. This value will not render correctly on a default US installation of SSMS.|  
+|-|**130** (<sup>1,</sup><sup>2</sup>)|Hijri (<sup>5</sup>)|dd mon yyyy hh:mi:ss:mmmAM<br /> In this style, mon represents a multi-token Hijri unicode representation of the full month's name. This value does not render correctly on a default US installation of SSMS.|  
 |-|**131** (<sup>2</sup>)|Hijri (<sup>5</sup>)|dd/mm/yyyy hh:mi:ss:mmmAM|  
   
 <sup>1</sup> These style values return nondeterministic results. Includes all (yy) (without century) styles and a subset of (yyyy) (with century) styles.
@@ -157,7 +157,7 @@ When *expression* is **xml***, style* can be one of the values shown in the foll
 |---|---|
 |**0** (default)|Use default parsing behavior that discards insignificant white space and does not allow for an internal DTD subset.<br /> **Note:** When you convert to the **xml** data type, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] insignificant white space is handled differently than in XML 1.0. For more information, see [Create Instances of XML Data](../../relational-databases/xml/create-instances-of-xml-data.md).|  
 |**1**|Preserve insignificant white space. This style setting sets the default **xml:space** handling to behave the same as if **xml:space="preserve"** has been specified instead.|  
-|**2**|Enable limited internal DTD subset processing.<br /><br /> If enabled, the server can use the following information that is provided in an internal DTD subset to perform nonvalidating parse operations.<br /> -Defaults for attributes are applied.<br /> -Internal entity references are resolved and expanded.<br /> -The DTD content model will be checked for syntactical correctness.<br /> The parser will ignore external DTD subsets. It also does not evaluate the XML declaration to see whether the **standalone** attribute is set **yes** or **no**, but instead parses the XML instance as if it is a stand-alone document.|  
+|**2**|Enable limited internal DTD subset processing.<br /><br /> If enabled, the server can use the following information that is provided in an internal DTD subset to perform nonvalidating parse operations.<br /> - Defaults for attributes are applied.<br /> - Internal entity references are resolved and expanded.<br /> - The DTD content model is checked for syntactical correctness.<br /> The parser ignores external DTD subsets. It also does not evaluate the XML declaration to see whether the **standalone** attribute is set **yes** or **no**, but instead parses the XML instance as if it is a stand-alone document.|  
 |**3**|Preserve insignificant white space and enable limited internal DTD subset processing.|  
   
 ## Binary styles
@@ -166,7 +166,7 @@ When *expression* is **binary(n)**, **varbinary(n)**, **char(n)**, or **varchar(
 |Value|Output|  
 |---|---|
 |**0** (default)|Translates ASCII characters to binary bytes or binary bytes to ASCII characters. Each character or byte is converted 1:1.<br /> If the *data_type* is a binary type, the characters 0x are added to the left of the result.|  
-|**1**, **2**|If the *data_type* is a binary type, the expression must be a character expression. The *expression* must be composed of an even number of hexadecimal digits (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F, a, b, c, d, e, f). If the *style* is set to 1 the characters 0x must be the first two characters in the expression. If the expression contains an odd number of characters or if any of the characters are invalid an error is raised.<br /> If the length of the converted expression is greater than the length of the *data_type* the result will be right truncated.<br /> Fixed length *data_types* that are larger then the converted result will have zeros added to the right of the result.<br /> If the data_type is a character type, the expression must be a binary expression. Each binary character is converted into two hexadecimal characters. If the length of the converted expression is greater than the *data_type* length it will be right truncated.<br /> If the *data_type* is a fix sized character type and the length of the converted result is less than its length of the *data_type*; spaces are added to the right of the converted expression to maintain an even number of hexadecimal digits.<br /> The characters 0x will be added to the left of the converted result for *style* 1.|  
+|**1**, **2**|If the *data_type* is a binary type, the expression must be a character expression. The *expression* must be composed of an even number of hexadecimal digits (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F, a, b, c, d, e, f). If the *style* is set to 1 the characters 0x must be the first two characters in the expression. If the expression contains an odd number of characters or if any of the characters are invalid an error is raised.<br /> If the length of the converted expression is greater than the length of the *data_type* the result is right truncated.<br /> Fixed length *data_types* that are larger than the converted result has zeros added to the right of the result.<br /> If the data_type is a character type, the expression must be a binary expression. Each binary character is converted into two hexadecimal characters. If the length of the converted expression is greater than the *data_type* length, it will be right truncated.<br /> If the *data_type* is a fix sized character type and the length of the converted result is less than its length of the *data_type*; spaces are added to the right of the converted expression to maintain an even number of hexadecimal digits.<br /> The characters 0x will be added to the left of the converted result for *style* 1.|  
   
 ## Implicit conversions
 Implicit conversions are those conversions that occur without specifying either the CAST or CONVERT function. Explicit conversions are those conversions that require the CAST or CONVERT function to be specified. The following illustration shows all explicit and implicit data type conversions that are allowed for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] system-supplied data types. These include **xml**, **bigint**, and **sql_variant**. There is no implicit conversion on assignment from the **sql_variant** data type, but there is implicit conversion to **sql_variant**.
@@ -184,7 +184,7 @@ When you convert between **datetimeoffset** and the character types **char**, **
 ## Large-value data types
 Large-value data types exhibit the same implicit and explicit conversion behavior as their smaller counterparts, specifically the **varchar**, **nvarchar** and **varbinary** data types. However, you should consider the following guidelines:
 -   Conversion from **image** to **varbinary(max)** and vice-versa is an implicit conversion, and so are conversions between **text** and **varchar(max)**, and **ntext** and **nvarchar(max)**.  
--   Conversion from large-value data types, such as **varchar(max)**, to a smaller counterpart data type, such as **varchar**, is an implicit conversion, but truncation will occur if the large value is too big for the specified length of the smaller data type.  
+-   Conversion from large-value data types, such as **varchar(max)**, to a smaller counterpart data type, such as **varchar**, is an implicit conversion, but truncation occurs if the large value is too big for the specified length of the smaller data type.  
 -   Conversion from **varchar**, **nvarchar**, or **varbinary** to their corresponding large-value data types is performed implicitly.  
 -   Conversion from the **sql_variant** data type to the large-value data types is an explicit conversion.  
 -   Large-value data types cannot be converted to the **sql_variant** data type.  
@@ -220,7 +220,7 @@ When you convert character or binary expressions (**char**, **nchar**, **nvarcha
   
 \* = Result length too short to display. E = Error returned because result length is too short to display.
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] guarantees that only roundtrip conversions, conversions that convert a data type from its original data type and back again, will yield the same values from version to version. The following example shows such a roundtrip conversion:
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] guarantees that only roundtrip conversions, conversions that convert a data type from its original data type and back again, yield the same values from version to version. The following example shows such a roundtrip conversion:
   
 ```sql
 DECLARE @myval decimal (5, 2);  
@@ -722,9 +722,9 @@ FROM dbo.DimCustomer;
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
 ```  
-UnconvertedDateTime         UsingCast                      UsingConvertTo_ISO8601
------------------------     ------------------------------ ------------------------------
-07/20/2010 1:44:31 PM       2010-07-20 13:44:31.5879025    2010-07-20T13:44:31.5879025  
+UnconvertedDateTime     UsingCast                     UsingConvertTo_ISO8601  
+---------------------   ---------------------------   ---------------------------  
+07/20/2010 1:44:31 PM   2010-07-20 13:44:31.5879025   2010-07-20T13:44:31.5879025  
 ```  
   
 The following example is approximately the opposite of the previous example. The example displays a date and time as character data, uses CAST to change the character data to the **datetime** data type, and then uses CONVERT to change the character data to the **datetime** data type. Uses AdventureWorksDW.

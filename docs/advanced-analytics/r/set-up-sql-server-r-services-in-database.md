@@ -51,7 +51,7 @@ The installation process requires multiple steps, some of which are optional. Th
 
 * You cannot install Machine Learning Services on a failover cluster. The reason is that the security mechanism that's used for isolating external script processes is not compatible with a Windows Server failover cluster environment. As a workaround, you can do either of the following:
     * Use replication to copy necessary tables to a standalone SQL Server instance with R Services.
-    * Install [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] on a standalone computer that uses Always On and is part of an availability group.
+    * Install [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] on a standalone computer that uses AlwaysOn and is part of an availability group.
 
 > [!IMPORTANT]
 > After setup is complete, some additional steps are required to enable the machine learning feature. You might also need to grant users permissions to specific databases, change or configure accounts, or set up a remote data science client.

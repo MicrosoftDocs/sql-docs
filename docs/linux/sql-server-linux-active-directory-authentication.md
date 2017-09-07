@@ -24,6 +24,7 @@ AD Authentication has the following advantages over [!INCLUDE[ssNoVersion](../in
 * Each user has a single identity across your organization, so you don’t have to keep track of which [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] logins correspond to which people.   
 * AD enables you to enforce a centralized password policy across your organization.   
 
+## Checklist
 
 > [!div class="checklist"]
 > * Prerequisites
@@ -50,114 +51,114 @@ Before you configure AD Authentication, you need to:
 
 1. Use **[realmd](https://www.freedesktop.org/software/realmd/docs/guide-active-directory-join.html)** to join your host machine to your AD Domain. If you haven't already, install both the realmd and Kerberos client packages on the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] host machine using your Linux distribution's package manager:
 
-```bash
-# RHEL
-sudo yum install realmd krb5-workstation
+  ```bash
+  # RHEL
+  sudo yum install realmd krb5-workstation
 
-# SUSE
-sudo zypper install realmd krb5-client
+  # SUSE
+  sudo zypper install realmd krb5-client
 
-# Ubuntu
-sudo apt-get install realmd krb5-user software-properties-common python-software-properties packagekit
-```
+  # Ubuntu
+  sudo apt-get install realmd krb5-user software-properties-common python-software-properties packagekit
+  ```
 
 2. If the Kerberos client package installation prompts you for a realm name, enter your domain name in uppercase.
 
-> [!NOTE]
-> This walkthrough uses "contoso.com" and "CONTOSO.COM" as example domain and realm names, respectively. You should replace these with your own values. These commands are case-sensitive, so make sure you use uppercase wherever it is used in this walkthrough.
+  > [!NOTE]
+  > This walkthrough uses "contoso.com" and "CONTOSO.COM" as example domain and realm names, respectively. You should replace these with your own values. These commands are case-sensitive, so make sure you use uppercase wherever it is used in this walkthrough.
 
-4. Configure your [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] host machine to use your AD domain controller's IP address as a DNS nameserver. 
+3. Configure your [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] host machine to use your AD domain controller's IP address as a DNS nameserver. 
 
-4.1 Ubuntu
+  3.1 Ubuntu
 
-Edit the `/etc/network/interfaces` file so that your AD domain controller's IP address is listed as a dns-nameserver. For example: 
+  Edit the `/etc/network/interfaces` file so that your AD domain controller's IP address is listed as a dns-nameserver. For example: 
 
-```/etc/network/interfaces
-<...>
-# The primary network interface
-auth eth0
-iface eth0 inet dhcp
-dns-nameservers **<AD domain controller IP address>**
-dns-search **<AD domain name>**
-```
+  ```/etc/network/interfaces
+  <...>
+  # The primary network interface
+  auth eth0
+  iface eth0 inet dhcp
+  dns-nameservers **<AD domain controller IP address>**
+  dns-search **<AD domain name>**
+  ```
 
-> [!NOTE]
-> The network interface (eth0) might differ for differnet machines. To find out which one you are using, run ifconfig and copy the interface that has an IP address and transmitted and received bytes.
+  > [!NOTE]
+  > The network interface (eth0) might differ for differnet machines. To find out which one you are using, run ifconfig and copy the interface that has an IP address and transmitted and received bytes.
 
-After editing this file, restart the network service:
+  After editing this file, restart the network service:
 
-```bash
-sudo ifdown eth0 && sudo ifup eth0
-```
+  ```bash
+  sudo ifdown eth0 && sudo ifup eth0
+  ```
 
-Now check that your `/etc/resolv.conf` file contains a line like the following:  
+  Now check that your `/etc/resolv.conf` file contains a line like the following:  
 
-```Code
-nameserver **<AD domain controller IP address>**
-```
+  ```Code
+  nameserver **<AD domain controller IP address>**
+  ```
 
-4.2 RHEL
+    3.2 RHEL
 
-Edit the `/etc/sysconfig/network-scripts/ifcfg-eth0` file (or other interface config file as appropriate) so that your AD domain controller's IP address is listed as a DNS server:
+  Edit the `/etc/sysconfig/network-scripts/ifcfg-eth0` file (or other interface config file as appropriate) so that your AD domain controller's IP address is listed as a DNS server:
 
-```/etc/sysconfig/network-scripts/ifcfg-eth0
-<...>
-PEERDNS=no
-DNS1=**<AD domain controller IP address>**
-```
+  ```/etc/sysconfig/network-scripts/ifcfg-eth0
+  <...>
+  PEERDNS=no
+  DNS1=**<AD domain controller IP address>**
+  ```
 
-After editing this file, restart the network service:
+  After editing this file, restart the network service:
 
-```bash
-sudo systemctl restart network
-```
+  ```bash
+  sudo systemctl restart network
+  ```
 
-Now check that your `/etc/resolv.conf` file contains a line like the following:  
+  Now check that your `/etc/resolv.conf` file contains a line like the following:  
 
-```Code
-nameserver **<AD domain controller IP address>**
-```
+  ```Code
+  nameserver **<AD domain controller IP address>**
+  ```
 
 5. Join the domain
 
-Once you've confirmed that your DNS is configured properly, join the domain by running the command below. You'll need to authenticate using an AD account that has sufficient privileges in AD to join a new machine to the domain.
+  Once you've confirmed that your DNS is configured properly, join the domain by running the command below. You'll need to authenticate using an AD account that has sufficient privileges in AD to join a new machine to the domain.
 
-Specifically, this command will create a new computer account in AD, create the `/etc/krb5.keytab` host keytab file, and configure the domain in `/etc/sssd/sssd.conf`:
+  Specifically, this command will create a new computer account in AD, create the `/etc/krb5.keytab` host keytab file, and configure the domain in `/etc/sssd/sssd.conf`:
 
-```bash
-sudo realm join contoso.com -U 'user@CONTOSO.COM' -v
-<...>
- * Successfully enrolled machine in realm
-```
+  ```bash
+  sudo realm join contoso.com -U 'user@CONTOSO.COM' -v
+  <...>
+   * Successfully enrolled machine in realm
+  ```
 
-> [!NOTE]
-> If you see an error, "Necessary packages are not installed," then you should install those packages using your Linux distribution's package manager before running the `realm join` command again.
->
-> If you receive an error, "Insufficient permissions to join the domain," then you will need to check with a domain administrator that you have sufficient permissions to join Linux machines to your domain.
+  > [!NOTE]
+  > If you see an error, "Necessary packages are not installed," then you should install those packages using your Linux distribution's package manager before running the `realm join` command again.
+  >
+  > If you receive an error, "Insufficient permissions to join the domain," then you will need to check with a domain administrator that you have sufficient permissions to join Linux machines to your domain.
 
 6. Verify that you can now gather information about a user from the domain, and that you can acquire a Kerberos ticket as that user.
 
-We will use **id**, **[kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html)** and **[klist](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/klist.html)** commands for this.
+  We will use **id**, **[kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html)** and **[klist](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/klist.html)** commands for this.
 
-```bash
-id user@contoso.com
-uid=1348601103(user@contoso.com) gid=1348600513(domain group@contoso.com) groups=1348600513(domain group@contoso.com)
+  ```bash
+  id user@contoso.com
+  uid=1348601103(user@contoso.com) gid=1348600513(domain group@contoso.com) groups=1348600513(domain group@contoso.com)
 
-kinit user@CONTOSO.COM
-Password for user@CONTOSO.COM:
+  kinit user@CONTOSO.COM
+  Password for user@CONTOSO.COM:
 
-klist
-Ticket cache: FILE:/tmp/krb5cc_1000
-Default principal: user@CONTOSO.COM
-<...>
-```
+  klist
+  Ticket cache: FILE:/tmp/krb5cc_1000
+  Default principal: user@CONTOSO.COM
+  <...>
+  ```
 
-> [!NOTE]
-> If `id user@contoso.com` returns, "No such user," make sure that the SSSD service started successfully by running the command `sudo systemctl status sssd`. If the service is running and you still see the "No such user" error, try enabling verbose logging for SSSD. For more information, see the Red Hat documentation for [Troubleshooting SSSD](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/System-Level_Authentication_Guide/trouble.html#SSSD-Troubleshooting).
->
-> If `kinit user@CONTOSO.COM` returns, "KDC reply did not match expectations while getting initial credentials," make sure you specified the realm in uppercase.
+  > [!NOTE]
+  > If `id user@contoso.com` returns, "No such user," make sure that the SSSD service started successfully by running the command `sudo systemctl status sssd`. If the service is running and you still see the "No such user" error, try enabling verbose logging for SSSD. For more information, see the Red Hat documentation for [Troubleshooting SSSD](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/System-Level_Authentication_Guide/trouble.html#SSSD-Troubleshooting).
+  >
+  > If `kinit user@CONTOSO.COM` returns, "KDC reply did not match expectations while getting initial credentials," make sure you specified the realm in uppercase.
 
-For more information, see the Red Hat documentation for [Discovering and Joining Identity Domains](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/Windows_Integration_Guide/realmd-domain.html). 
+  For more information, see the Red Hat documentation for [Discovering and Joining Identity Domains](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/Windows_Integration_Guide/realmd-domain.html). 
 
 ## Create AD user for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and set SPN
 

@@ -1,10 +1,10 @@
 ---
 title: Get started with SQL Server 2017 on SUSE Linux Enterprise Server | Microsoft Docs
 description:  This quick start tutorial shows how to install SQL Server 2017 on SUSE Linux Enterprise Server and then create and query a database with sqlcmd.
-author: sabotta 
-ms.author: carlasab 
-manager: craigg
-ms.date: 07/24/2017
+author: rothja 
+ms.author: jroth 
+manager: jhubbard
+ms.date: 09/07/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -44,7 +44,7 @@ To configure SQL Server on SLES, run the following commands in a terminal to ins
    sudo zypper install -y mssql-server
    ```
 
-1. After the package installation finishes, run **mssql-conf setup** and follow the prompts to set the SA password and chose your edition.
+1. After the package installation finishes, run **mssql-conf setup** and follow the prompts to set the SA password and choose your edition.
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf setup

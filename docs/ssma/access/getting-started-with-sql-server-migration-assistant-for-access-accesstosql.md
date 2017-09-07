@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "user interface overview"
 ms.assetid: 462a731f-08f1-44e1-9eeb-4deac6d2f6c5
 caps.latest.revision: 24
-author: "sabotta"
-ms.author: "carlasab"
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "murato"
 ---
 # Getting started with SQL Server Migration Assistant for Access (AccessToSQL)

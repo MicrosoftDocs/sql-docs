@@ -1,7 +1,7 @@
 ---
 title: "Consolidate assessment reports (SQL Server Data Migration Assistant) | Microsoft Docs"
 ms.custom: 
-ms.date: "09/01/2017"
+ms.date: "09/07/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "Data Migration Assistant, Assess"
 ms.assetid: ""
 caps.latest.revision: ""
-author: "sabotta"
-ms.author: "carlasab"
+author: "HJToland3"
+ms.author: "jtoland"
 manager: "craigg"
 ---
 
@@ -23,16 +23,16 @@ manager: "craigg"
 
 You can use the command line to perform migration assessments in unattended mode, starting with Data Migration Assistant v2.1. This feature helps you to run the assessments at scale.  The assessment results in the form of a JSON or CSV file.
 
-You can assess multiple databases in a single instantiation of the Data Migration Assistant command line utility and export all the assessments results into a single JSON file. Or, you can assess one database at time and later consolidate the results from these multiple JSON files into a SQL database.
+You can assess multiple databases in a single instantiation of the Data Migration Assistant command-line utility and export all the assessments results into a single JSON file. Or, you can assess one database at time and later consolidate the results from these multiple JSON files into a SQL database.
 
 For information on how to run Data Migration Assistant from the command line, see [Run Data Migration Assistant from Command Line](../dma/dma-commandline.md). 
 
 
 ## Import assessment results into a SQL Server database
 
-Use the PowerShell script available at https://msdnshared.blob.core.windows.net/media/2017/03/DMA_Processor_V5.0.zip to import the assessment results from JSON files into a SQL Server database.
+Use the PowerShell script available in this [Github repository](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/data-migration-assistant) to import the assessment results from JSON files into a SQL Server database.
 
-You will need to provide the following information when you execute the script. 
+When you execute the script, you need to provide the following information: 
 
 - **serverName**:  SQL Server instance name that you want to import the assessment results from JSON files.
 
@@ -42,7 +42,7 @@ You will need to provide the following information when you execute the script.
 
 - **processTo**:  SQLServer
 
-Add the above values in the
+Add the preceding values in the
 "EXECUTE FUNCTIONS" section, as follows.
 
 ```
@@ -90,7 +90,7 @@ The PowerShell script creates the following objects in the SQL instance you have
 
   - Used to hold the Azure feature parity results for azure assessments and pass to the AzureFeatureParityResults\_Insert stored procedure
 
-The PowerShell script will create a **Processed** directory inside the directory you provided that contains the JSON files that are to be processed.
+The PowerShell script creates a **Processed** directory inside the directory you provided that contains the JSON files that are to be processed.
 
 After the script completes, the results are imported into the table, ReportData.
 
@@ -108,11 +108,11 @@ To see a list of databases and their percentage (%) success rank, select the dbo
 
 ![Data in UpgradeSuccessRaning_OnPrem view](../dma/media/UpgradeSuccessRankingView.png)
 
-Here we can see for a given database what is the upgrade success chance for different compatibility levels.  So, for example, the HR database was assessed against compatibility levels 100, 110, 120 and 130.  This helps you visually see how much effort is involved in migrating to a later version of SQL Server from the current version that the database is currently on.
+Here we can see for a given database what is the upgrade success chance for different compatibility levels.  So, for example, the HR database was assessed against compatibility levels 100, 110, 120 and 130.  This assessment helps you visually see how much effort is involved in migrating to a later version of SQL Server from the current version that the database is currently on.
 
-Usually the metric we care about is how many breaking changes there are for a given database.  In the above example, we can see that the HR database has a 50% upgrade success factor for compatibility levels 100, 110, 120 and 130.
+Usually the metric we care about is how many breaking changes there are for a given database.  In the preceding example, we can see that the HR database has a 50% upgrade success factor for compatibility levels 100, 110, 120 and 130.
 
-This metrics can be influenced by altering the weighting values in the dbo.BreakingChangeWeighting table.
+This metric can be influenced by altering the weighting values in the dbo.BreakingChangeWeighting table.
 
 In the following example, the effort involved in fixing the syntax issue in the HR database is considered high so a value of 3 is assigned to **Effort**. Because it wouldn’t take long to fix the syntax issue, a value of 1 is assigned to **FixTime**. Because there would be some cost involved in making the change, a value of 2 is assigned to **Cost**.  This changes the blended Changerank to 2.
 

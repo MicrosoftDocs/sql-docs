@@ -14,8 +14,8 @@ applies_to:
   - "SQL Server"
 ms.assetid: 2be0cf8d-6dbe-443a-abbd-036249922205
 caps.latest.revision: 21
-author: "sabotta"
-ms.author: "carlasab"
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "craigg"
 ---
 # What&#39;s New in SSMA  for Sybase (SybaseToSQL)

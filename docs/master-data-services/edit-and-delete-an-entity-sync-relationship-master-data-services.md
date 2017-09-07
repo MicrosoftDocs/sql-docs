@@ -12,9 +12,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 9a5e37f3-352e-45a6-b4a0-6f98f83b4bd8
 caps.latest.revision: 6
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
+author: "smartysanthosh"
+ms.author: "nagavo"
+manager: "craigg"
 ---
 # Edit and Delete an Entity Sync Relationship (Master Data Services)
   Entity sync is a one-way and repeatable synchronization between entity versions. It provides a way to share entity data between different models. You can edit and delete a sync relationship that you've created.  

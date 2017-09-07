@@ -203,6 +203,7 @@ description: Learn about SQL
                                                 <ul>
                                                     <li><a href="/sql/t-sql/language-reference">T-SQL</a></li>
                                                     <li><a href="/sql/relational-databases/system-dynamic-management-views/system-dynamic-management-views">DMVs</a></li>
+                                                    <li><a href="https://docs.microsoft.com/powershell/sql-server/overview?view=sqlserver-ps">PowerShell</a></li>
                                                     <li><a href="/sql/xquery/xquery-language-reference-sql-server">XQuery</a></li>
                                                 </ul>
                                             </div>

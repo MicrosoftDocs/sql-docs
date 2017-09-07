@@ -20,7 +20,7 @@ manager: "jhubbard"
 
 This article discusses the kind of data that you should collect when you attempt to resolve problems with the setup, configuration, or performance of machine learning in SQL Server. Such data includes logs, error messages, and system information.
 
-The article describes the sources of information that are the most useful when you perform diagnostics on a self-help basis. Collecting this information is also useful when you request technical support for issues related to SQL Server machine-learning features.
+The article describes the sources of information that are the most useful when you perform diagnostics on a self-help basis. Collecting this information is also useful when you request technical support for issues related to SQL Server machine learning features.
 
 **Applies to:** SQL Server 2016 R Services, SQL Server 2017 Machine Learning Services (R and Python)
 
@@ -41,9 +41,9 @@ In SQL Server 2017, support is extended to the Python language. Support for Pyth
 If you need help to determine which edition and version you have, see this article, which lists the build numbers for each of the
 [SQL Server versions](https://social.technet.microsoft.com/wiki/contents/articles/783.sql-server-versions.aspx#Service_Pack_editions).
 
-Depending on the edition of SQL Server you're using, some machine-learning functionality might be unavailable, or limited.
+Depending on the edition of SQL Server you're using, some machine learning functionality might be unavailable, or limited.
 
-See the following topics for a list of machine-learning features in Enterprise, Developer, Standard, and Express editions.
+See the following topics for a list of machine learning features in Enterprise, Developer, Standard, and Express editions.
 
 * [Editions and supported features of SQL Server](https://docs.microsoft.com/sql/sql-server/editions-and-components-of-sql-server-2016)
 * [Differences in R features between editions of SQL Server](https://docs.microsoft.com/sql/advanced-analytics/r/differences-in-r-features-between-editions-of-sql-server)
@@ -133,7 +133,7 @@ OutputDataSet = pandas.DataFrame(
                     "property_value": [sys.executable[:-10], sys.version, pkg_resources.get_distribution("revoscalepy").version, str(sys.path)]}
 )
 '
-with result sets ((PropertyName nvarchar(100), PropertyValue nvarchar(4000)));
+with WITH RESULT SETS (SQL keywords) ((PropertyName nvarchar(100), PropertyValue nvarchar(4000)));
 ```
 
 If Machine Learning Services is not running, you can determine the installed Python version by looking at the pythonlauncher.config file. We recommend that you make and open a copy of the file so that you don't accidentally change any properties.
@@ -169,7 +169,7 @@ The errors that you see when you attempt to run R code can come from any of the 
 - Providers, such as Microsoft Open Database Connectivity (ODBC)
 - R language
 
-When you work with the service for the first time, it can be difficult to tell which messages originate from which services. We recommend that you capture not only the exact message text, but the context in which you saw the message. Note the client software you're using to run Machine Learning code:
+When you work with the service for the first time, it can be difficult to tell which messages originate from which services. We recommend that you capture not only the exact message text, but the context in which you saw the message. Note the client software that you're using to run machine learning code:
 
 - Are you using Management Studio? An external application?
 - Are you running R code in a remote client, or directly in a stored procedure?
@@ -295,7 +295,7 @@ For worker accounts:
 
 For individual user accounts:
 
-1. Determine whether the instance supports Mixed Mode authentication, SQL logons only, or Windows authentication only. This setting affects your R or Python code requirements.
+1. Determine whether the instance supports Mixed Mode authentication, SQL logins only, or Windows authentication only. This setting affects your R or Python code requirements.
 2. For each user who needs to run R code, determine the required level of permissions on each database where objects will be written from R, data will be accessed, or objects will be created.
 3. To enable script execution, create roles or add users to the following roles, as necessary:
 
@@ -304,7 +304,7 @@ For individual user accounts:
    - *db_ddladmin*: To create new objects. 
    - *db_datareader*: To read data that's used by R or Python code. 
 4. Note whether you changed any default startup accounts when you installed SQL 2016.
-5. If a user needs to install new R packages or use R packages that were installed by other users, you might need to enable package management on the instance and then assign additional permissions. For more information, see LINK.
+5. If a user needs to install new R packages or use R packages that were installed by other users, you might need to enable package management on the instance and then assign additional permissions. For more information, see [Enable or disable R package management](advanced-analytics\r\r-package-how-to-enable-or-disable).
 
 ### What folders are subject to locking by antivirus software?
 
@@ -330,7 +330,7 @@ A base installation of R includes multiple tools that you can use to run an R sc
 
 If the R runtime is functioning but your script returns errors, we recommend that you try debugging the script in a dedicated R development environment, such as  R Tools for Visual Studio.
 
-We also recommend that you review and slightly rewrite the script to correct data-type issues that might arise when you move data between R and the database engine. For more information, see [R libraries and data types](r/r-libraries-and-data-types.md).
+We also recommend that you review and slightly rewrite the script to correct any problems with data types that might arise when you move data between R and the database engine. For more information, see [R libraries and data types](r/r-libraries-and-data-types.md).
 
 Additionally, you can use the sqlrutils package to bundle your R script in a format that is more easily consumed as a stored procedure. For more information, see:
 * [Generate a stored procedure for R code by using the sqlrutils package](r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md)

@@ -1,7 +1,7 @@
 ---
 title: "What's new in SQL Server 2017 | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/07/2017"
+ms.date: "08/31/2017"
 ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
@@ -18,7 +18,7 @@ manager: "jhubbard"
 # What's new in SQL Server 2017
 SQL Server 2017 represents a major step towards making SQL Server a platform that gives you choices of development languages, data types, on-premises or cloud, and operating systems by bringing the power of SQL Server to Linux, Linux-based Docker containers, and Windows. This topic summarizes what is new for specific feature areas in the most recent SQL Server 2017 Release Candidate (RC2, August 2017) and Community Technical Preview (CTP) releases.
 
-**Try it out:** [Download the latest SQL Server 2017 Release: RC2, August 2017](http://go.microsoft.com/fwlink/?LinkID=829477).
+[![Download from Evaluation Center](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) **Try it out:** [Download the latest SQL Server 2017 Release: RC2, August 2017](http://go.microsoft.com/fwlink/?LinkID=829477).
 This release contains bug fixes and performance improvements.
 
 >**Run SQL Server on Linux!** For more information, see [SQL Server on Linux Documentation](https://docs.microsoft.com/sql/linux/).
@@ -28,6 +28,7 @@ SQL Server 2017 includes many new Database Engine features, enhancements, and pe
 - **CLR assemblies** can now be added to a whitelist, as a workaround for the `clr strict security` feature described in CTP 2.0. [sp_add_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md), [sp_drop_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md), and [sys.trusted_asssemblies](../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md) are added to support the white list of trusted assemblies (RC1).  
 - **Resumable online index rebuild** resumes an online index rebuild operation from where it stopped after a failure (such as a failover to a replica or insufficient disk space), or pauses and later resumes an online index rebuild operation. See [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md) and [Guidelines for online index operations](../relational-databases/indexes/guidelines-for-online-index-operations.md). (CTP 2.0)
 - The **IDENTITY_CACHE** option for ALTER DATABASE SCOPED CONFIGURATION allows you to avoid gaps in the values of identity columns if a server restarts unexpectedly or fails over to a secondary server. See [ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md). (CTP 2.0)
+- A new generation of query processing improvements that will adapt optimization strategies to your application workload’s runtime conditions. For this first version of the **adaptive query processing** feature family, we have three new improvements: **batch mode adaptive joins**, **batch mode memory grant feedback**, and **interleaved execution** for multi-statement table valued functions.  See [Adaptive query processing in SQL databases](../relational-databases/performance/adaptive-query-processing.md).
 - **Automatic database tuning** provides insight into potential query performance problems, recommends solutions, and can automatically fix identified problems. See [Automatic tuning](../relational-databases/automatic-tuning/automatic-tuning.md). (CTP 2.0)
 - New **graph database capabilities** for modeling many-to-many relationships include new [CREATE TABLE](../t-sql/statements/create-table-sql-graph.md) syntax for creating node and edge tables, and the keyword [MATCH](../t-sql/queries/match-sql-graph.md) for queries. See [Graph Processing with SQL Server 2017](../relational-databases/graphs/sql-graph-overview.md). (CTP 2.0)
 - An sp_configure option called `clr strict security` is enabled by default to enhance the security of CLR assemblies. See [CLR strict security](../database-engine/configure-windows/clr-strict-security.md). (CTP 2.0)
@@ -106,11 +107,12 @@ SQL Server developers now have access to the extensive Python ML and AI librarie
 
 For more information, see [What's new in SQL Server Machine Learning Services](~/advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md).
 
-##  ![info_tip](../sql-server/media/info-tip.png) Engage with the SQL Server engineering team 
-- [Stack Overflow (tag sql-server) - ask technical questions](http://stackoverflow.com/questions/tagged/sql-server)
+##  ![info_tip](../sql-server/media/info-tip.png) Get Help 
+- [Stack Overflow (tag sql-server) - ask SQL development questions](http://stackoverflow.com/questions/tagged/sql-server)
 - [MSDN Forums - ask technical questions](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)
 - [Microsoft Connect - report bugs and request features](https://connect.microsoft.com/SQLServer/Feedback)
 - [Reddit - general discussion about SQL Server](https://www.reddit.com/r/SQLServer/)
+- [Microsoft SQL Server License Terms and Information](https://www.microsoft.com/en-us/download/details.aspx?id=39299) 
 
 ## Next steps
 - See the [SQL Server 2017 Release Notes](sql-server-2017-release-notes.md).

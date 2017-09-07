@@ -12,9 +12,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: ea84a9aa-aeec-411b-ab8d-bc1b14f864a3
 caps.latest.revision: 13
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
+author: "smartysanthosh"
+ms.author: "nagavo"
+manager: "craigg"
 ---
 # Overview: Importing Data from Excel (MDS Add-in for Excel)
   In the [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], publish data to the MDS repository when you want to share it with other users. As soon as data is published, it is available for other users of the Add-in to download.  

@@ -1,7 +1,7 @@
 ---
 title: "sys.databases (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/31/2017"
+ms.date: "03/09/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -91,7 +91,7 @@ manager: "jhubbard"
 |**log_reuse_wait_desc**|**nvarchar(60)**|Description of reuse of transaction log space is currently waiting on as of the last checkpoint.|  
 |**is_date_correlation_on**|**bit**|1 = DATE_CORRELATION_OPTIMIZATION is ON<br /> 0 = DATE_CORRELATION_OPTIMIZATION is OFF|  
 |**is_cdc_enabled**|**bit**|1 = Database is enabled for change data capture. For more information, see [sys.sp_cdc_enable_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md).|  
-|**is_encrypted**|**bit**|Indicates whether the database is encrypted (reflects the state last set by using the ALTER DATABASE SET ENCRYPTION clause). Can be one of the following values:<br /> 1 = Encrypted<br /> 0 = Not Encrypted<br /> For more information about database encryption, see [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption-tde.md).<br /> If the database is in the process of being decrypted, **is_encrypted** shows a value of 0. You can see the state of the encryption process by using the [sys.dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) dynamic management view.|  
+|**is_encrypted**|**bit**|Indicates whether the database is encrypted (reflects the state last set by using the ALTER DATABASE SET ENCRYPTION clause). Can be one of the following values:<br /> 1 = Encrypted<br /> 0 = Not Encrypted<br /> For more information about database encryption, see [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).<br /> If the database is in the process of being decrypted, **is_encrypted** shows a value of 0. You can see the state of the encryption process by using the [sys.dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) dynamic management view.|  
 |**is_honor_broker_priority_on**|**bit**|Indicates whether the database honors conversation priorities (reflects the state last set by using the ALTER DATABASE SET HONOR_BROKER_PRIORITY clause). Can be one of the following values:<br /> 1 = HONOR_BROKER_PRIORITY is ON<br /> 0 = HONOR_BROKER_PRIORITY is OFF|  
 |**replica_id**|**uniqueidentifier**|Unique identifier of the local [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] availability replica of the availability group, if any, in which the database is participating.<br /> NULL = database is not part of an availability replica of in availability group.<br /> **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**group_database_id**|**uniqueidentifier**|Unique identifier of the database within an Always On availability group, if any, in which the database is participating. **group_database_id** is the same for this database on the primary replica and on every secondary replica on which the database has been joined to the availability group.<br /> NULL = database is not part of an availability replica in any availability group.<br /> **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
@@ -152,7 +152,7 @@ WHERE a.state = 7;
 ### C. Check the temporal retention policy status in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
  The following example queries the `sys.databases` to return information whether temporal retention cleanup task is enabled. Be aware that after restore operation temporal retention is disabled by default. Use `ALTER DATABASE` to enable it explicitly.
   
-**Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
+**Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
 ```  
 -- Execute from the master database.  

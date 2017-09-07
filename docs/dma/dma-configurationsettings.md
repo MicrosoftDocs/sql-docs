@@ -1,7 +1,7 @@
 ---
-title: "Configuration Settings (SQL Server Data Migration Assistant) | Microsoft Docs"
+title: "Configuration settings (SQL Server Data Migration Assistant) | Microsoft Docs"
 ms.custom: 
-ms.date: "08/24/2017"
+ms.date: "08/31/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -14,14 +14,14 @@ helpviewer_keywords:
   - "Data Migration Assistant, Assess"
 ms.assetid: ""
 caps.latest.revision: ""
-author: "sabotta"
-ms.author: "carlasab"
+author: "HJToland3"
+ms.author: "jtoland"
 manager: "craigg"
 ---
 
-# Configuration Settings for Data Migration Assistant
+# Configuration settings for Data Migration Assistant
 
-You can fine-tune certain behavior of Data Migration Assistant using configuration values in the dma.exe.config file. Here are few key configuration values.
+You can fine-tune certain behavior of Data Migration Assistant using configuration values in the dma.exe.config file. This article describes key configuration values.
 
 You can find the dma.exe.config file for the Data Migration Assistant desktop application and the command line utility, in the following folders on your machine.
 
@@ -33,11 +33,11 @@ You can find the dma.exe.config file for the Data Migration Assistant desktop ap
 
   %ProgramFiles%\\Microsoft Data Migration Assistant\\dmacmd.exe.config 
 
-Be sure to save a copy of the original config file before making any modification. After making changes, restart Data Migration Assistant for the new configuration values to take effect.
+Be sure to save a copy of the original config file before making any modifications. After making changes, restart Data Migration Assistant for the new configuration values to take effect.
 
 ## Number of databases to assess in parallel
 
-DMA assesses multiple databases in parallel. During assessment DMA extracts data-tier application (dacpac) to understand the database schema. This operation can time-out if several databases on the same server are assessed in parallel. 
+Data Migration Assistant assesses multiple databases in parallel. During assessment Data Migration Assistant extracts data-tier application (dacpac) to understand the database schema. This operation can time-out if several databases on the same server are assessed in parallel. 
 
 Starting with Data Migration Assistant v2.0, you can controll this by setting the parallelDatabases configuration value. Default value is 8.
 
@@ -58,7 +58,7 @@ Starting with Data Migration Assistant v2.0, you can controll this by setting th
 
 ## Number of databases to migrate in parallel
 
-Data Migration Assistant migrates multiple databases in parallel, before migrating logins. During migration, DMA will take a backup of the source database, optionally copy the backup, and then restore it on the target server. You may encounter timeout failures when several databases are selected for migration. 
+Data Migration Assistant migrates multiple databases in parallel, before migrating logins. During migration, Data Migration Assistant will take a backup of the source database, optionally copy the backup, and then restore it on the target server. You may encounter timeout failures when several databases are selected for migration. 
 
 Starting with Data Migration Assistant v2.0, if you experience this problem you can reduce the parallelDatabases configuration value. You can increase the value to reduce the overall migration time.
 
@@ -92,7 +92,7 @@ During assessment, Data Migration Assistant extracts data-tier application (dacp
 
 - maxDataReaderDegreeOfParallelism
 
-   Number of Sql connection pool connections to use. (Default=8)
+   Number of SQL connection pool connections to use. (Default=8)
 
 ```
 <advisorGroup>
@@ -108,12 +108,12 @@ maxDataReaderDegreeOfParallelism="8"/>
 ```
 
 
-## Stretch Database: recommendation threshold
+## Stretch Database: Recommendation threshold
 
 With [SQL Server Stretch
-Database](https://docs.microsoft.com/sql/sql-server/stretch-database/stretch-database), you can dynamically stretch warm and cold transactional data from Microsoft SQL Server 2016 to Azure. Stretch Database targets transactional databases with large amounts of cold data. The Stretch Database recommendation under Storage feature recommendation first identifies tables that it thinks will benefit from stretch, and then it identifies changes that need to be made to enable the table for stretch. 
+Database](https://docs.microsoft.com/sql/sql-server/stretch-database/stretch-database), you can dynamically stretch warm and cold transactional data from Microsoft SQL Server 2016 to Azure. Stretch Database targets transactional databases with large amounts of cold data. The Stretch Database recommendation, under Storage feature recommendation, first identifies tables that it thinks will benefit from this feature, and then it identifies changes that need to be made to enable the table for this feature.
 
-Starting with Data Migration Assistant v2.0, you can control this threshold for a table to qualify for stretch could using the recommendedNumberOfRows configuration value. Default value is 100,000 rows. If you want to analyze the stretch capabilities for even smaller tables, then lower the value accordingly.
+Starting with Data Migration Assistant v2.0, you can control this threshold for a table to qualify for the Stretch Database feature using the recommendedNumberOfRows configuration value. Default value is 100,000 rows. If you want to analyze the stretch capabilities for even smaller tables, then lower the value accordingly.
 
 ```
 <advisorGroup>
@@ -132,7 +132,7 @@ Starting with Data Migration Assistant v2.0, you can control this threshold for 
 
 You can control the [SQL connection
 time-out](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.connectiontimeout(v=vs.110).aspx)
-for source and target instances while running assessment or migration, by setting the connection timeout value to a specified number of seconds. The default value is 15 seconds.
+for source and target instances while running an assessment or migration, by setting the connection timeout value to a specified number of seconds. The default value is 15 seconds.
 
 ```
 <appSettings>
@@ -143,6 +143,6 @@ for source and target instances while running assessment or migration, by settin
 ```
 
 
-## See Also
+## See also
 
 [Data Migration Assistant Download](https://www.microsoft.com/download/details.aspx?id=53595)

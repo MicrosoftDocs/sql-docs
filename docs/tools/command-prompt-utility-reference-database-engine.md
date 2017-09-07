@@ -1,5 +1,5 @@
 ---
-title: "Command Prompt Utility Reference (Database Engine) | Microsoft Docs"
+title: "SQL Command Prompt Utilities (Database Engine) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: "sql-server-2016"
@@ -17,11 +17,11 @@ helpviewer_keywords:
   - "command prompt [SQL Server], utilities"
 ms.assetid: 48364bd9-6ea7-45e9-a332-acf3d81bbfae
 caps.latest.revision: 90
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: "craigg"
 ---
-# Command Prompt Utility Reference (Database Engine)
+# SQL Command Prompt Utilities (Database Engine)
   Command prompt utilities enable you to script [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] operations. The following table contains a list of command prompt utilities that ship with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 |**Utility**|**Description**|**Installed in**|  
@@ -47,11 +47,7 @@ manager: "jhubbard"
 |[sqlservr Application](../tools/sqlservr-application.md)|Used to start and stop an instance of [!INCLUDE[ssDE](../includes/ssde-md.md)] from the command prompt for troubleshooting.|\<drive>:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn|  
 |[Ssms Utility](../tools/sql-server-management-studio/ssms-utility.md)|Used to start [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] from a command prompt.|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn\VSShell\Common7\IDE|  
 |[tablediff Utility](../tools/tablediff-utility.md)|Used to compare the data in two tables for non-convergence, which is useful when troubleshooting a replication topology.|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]COM|  
-  
- **To access [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager Using [!INCLUDE[win8](../includes/win8-md.md)]**  
-  
- Because [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager is a snap-in for the [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console program and not a stand-alone program, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager not does not appear as an application when running [!INCLUDE[win8](../includes/win8-md.md)]. To open [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager, in the **Search** charm, under **Apps**, type **SQLServerManager12.msc** (for [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]) or **SQLServerManager11.msc** for ([!INCLUDE[ssSQL11](../includes/sssql11-md.md)]), and then press **Enter**.  
-  
+
 ## Command Prompt Utilities Syntax Conventions  
   
 |**Convention**|**Used for**|  

@@ -1,7 +1,7 @@
 ---
 title: "Table Hints (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/11/2017"
+ms.date: "08/31/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -417,6 +417,9 @@ GO
  NOEXPAND applies only to *indexed views*. An indexed view is a view with a unique clustered index created on it. If a query contains references to columns that are present both in an indexed view and base tables, and the query optimizer determines that using the indexed view provides the best method for executing the query, the query optimizer uses the index on the view. This functionality is called *indexed view matching*. Prior to [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1, automatic use of an indexed view by the query optimizer is supported only in specific editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  However, for the optimizer to consider indexed views for matching, or use an indexed view that is referenced with the NOEXPAND hint, the following SET options must be set to ON.  
+ 
+> [!NOTE]  
+>  Azure SQL Database supports automatic use of indexed views without specifying the NOEXPAND hint.
   
 ||||  
 |-|-|-|  

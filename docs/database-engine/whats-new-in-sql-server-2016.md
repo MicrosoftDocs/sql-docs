@@ -36,7 +36,8 @@ To review what is new in the other SQL Server components, see [What's New in SQL
 
 - Have an Azure account?  Then go **[Here](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/)** to spin up a Virtual Machine with [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] already installed.
 
-![note](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "note") For the current release notes, see [SQL Server 2016 Release Notes](../sql-server/sql-server-2016-release-notes.md).
+> [!NOTE]
+> For the current release notes, see [SQL Server 2016 Release Notes](../sql-server/sql-server-2016-release-notes.md).
   
 ## SQL Server 2016 Service Pack 1 (SP1)  
 -  `CREATE OR ALTER <object>` syntax is now available for [procedures](../t-sql/statements/create-procedure-transact-sql.md), [views](../t-sql/statements/create-view-transact-sql.md), [functions](../t-sql/statements/create-function-transact-sql.md), and [triggers](../t-sql/statements/create-trigger-transact-sql.md).
@@ -244,7 +245,7 @@ For overall information, see:
 
 - [Using Multiple Active Result Sets &#40;MARS&#41;](../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md) connections  can now access memory-optimized tables and natively compiled stored procedures.
 
-- [Transparent Data Encryption (TDE)](../relational-databases/security/encryption/transparent-data-encryption-tde.md) support. If a database is configured for ENCRYPTION, files in the[The Memory Optimized Filegroup](../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md) are now also encrypted.
+- [Transparent Data Encryption (TDE)](../relational-databases/security/encryption/transparent-data-encryption.md) support. If a database is configured for ENCRYPTION, files in the[The Memory Optimized Filegroup](../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md) are now also encrypted.
 
 For more information, see [In-Memory OLTP &#40;In-Memory Optimization&#41;](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).
 

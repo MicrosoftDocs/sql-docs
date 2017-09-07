@@ -40,7 +40,6 @@
 # [Row Count Transformation](row-count-transformation.md)  
 # [Row Sampling Transformation](row-sampling-transformation.md)  
 # [Script Component](script-component.md)  
-## [Select Script Component Type](select-script-component-type.md)  
 # [Slowly Changing Dimension Transformation](slowly-changing-dimension-transformation.md)  
 ## [Configure Outputs Using the Slowly Changing Dimension Wizard](configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
 ## [Slowly Changing Dimension Wizard F1 Help](slowly-changing-dimension-wizard-f1-help.md)  

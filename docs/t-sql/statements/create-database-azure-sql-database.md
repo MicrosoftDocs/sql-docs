@@ -3,8 +3,9 @@ title: "CREATE DATABASE (Azure SQL Database) | Microsoft Docs"
 ms.custom: 
   - "MSDN content"
   - "MSDN - SQL DB"
+
+ms.date: "08/28/2017"
 ms.prod: 
-ms.date: "08/10/2017"
 ms.reviewer: ""
 ms.service: "sql-database"
 ms.suite: ""
@@ -37,11 +38,11 @@ manager: "jhubbard"
 # CREATE DATABASE (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  Creates a new database. You must be connected to the master database to create a new database.  
+  Creates a new database.  
   
 ## Syntax  
   
-```  
+``` 
   
 CREATE DATABASE database_name [ COLLATE collation_name ]  
 {  
@@ -52,17 +53,36 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
   
 <edition_options> ::=   
 {  
-      MAXSIZE = { 100 MB | 500 MB | 1 | 5 | 10 | 20 | 30 … 150…500 } GB    
+
+      MAXSIZE = { 100 MB | 250 MB | 500 MB | 1 … 1024 … 4096 GB }    
     | ( EDITION = {  'basic' | 'standard' | 'premium' | 'premiumrs'}   
     | SERVICE_OBJECTIVE =   
-          {  'basic' | 'S0' | 'S1' | 'S2' | 'S3'   
-            | 'P1' | 'P2' | 'P3' | 'P4'| 'P6' | 'P11'  | 'P15'  
+          {  'basic' | 'S0' | 'S1' | 'S2' | 'S3' | 'S4'| 'S6'| 'S7'| 'S9'| 'S12' | 
+            | 'P1' | 'P2' | 'P4'| 'P6' | 'P11'  | 'P15'  
             | 'PRS1' | 'PRS2' | 'PRS4' | 'PRS6' 
             | { ELASTIC_POOL(name = <elastic_pool_name>) } }  ) 
 }  
-[;]  
+
+[ AS COPY OF [source_server_name.]source_database_name ]
+
+ [;]  
   
+
+```  
+
 ```
+To copy a database:  
+CREATE DATABASE database_name  
+    AS COPY OF [source_server_name.] source_database_name  
+    [ ( SERVICE_OBJECTIVE =   
+          {  'basic' | 'S0' | 'S1' | 'S2' | 'S3' | 'S4'| 'S6'| 'S7'| 'S9'| 'S12' |  
+            | 'P1' | 'P2' | 'P4'| 'P6' | 'P11' | 'P15'  
+            | 'PRS1' | 'PRS2' | 'PRS4' | 'PRS6' 
+            | { ELASTIC_POOL(name = <elastic_pool_name>) } } )  
+    ]  
+ [;] 
+ 
+```  
   
 ## Arguments  
  This syntax diagram demonstrates the supported arguments in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
@@ -83,43 +103,47 @@ Specifies the default collation for the metadata catalog. *DATABASE_DEFAULT* spe
  *EDITION*  
  Specifies the service tier of the database. The available values are: 'basic', 'standard', 'premium', and 'premiumrs'.  
   
- When EDITION is specified but MAXSIZE is not specified, MAXSIZE will be set to the most restrictive size that the edition supports.  
+ When EDITION is specified but MAXSIZE is not specified, MAXSIZE is set to the most restrictive size that the edition supports.  
   
  *MAXSIZE*  
  Specifies the maximum size of the database. MAXSIZE must be valid for the specified EDITION (service tier) Following are the supported MAXSIZE values and defaults (D) for the service tiers.  
   
-|**MAXSIZE**|**Basic**|**Standard**|**Premium**| **Premium RS** 
-|-----------------|---------------|------------------|-----------------|-----------------|  
-|100 MB|√|√|√|√|  
-|500 MB|√|√|√|√|  
-|1 GB|√|√|√|√|  
-|2 GB|√ (D)|√|√|√|  
-|5 GB||√|√|√|  
-|10 GB||√|√|√|  
-|20 GB||√|√|√|  
-|30 GB||√|√|√|  
-|40 GB||√|√|√|  
-|50 GB||√|√|√|  
-|100 GB||√|√|√|  
-|150 GB||√|√|√|  
-|200 GB||√|√|√|  
-|250 GB||√ (D)|√|√|  
-|300 GB|||√|√|  
-|400 GB|||√|√|  
-|500 GB|||√ (D) \* |√|  
+|**MAXSIZE**|**Basic**|**S0-S2**|**S3-S12**|**P1-P6 and PRS1-PRS6**| **P11-P15** 
+|-----------------|---------------|------------------|-----------------|-----------------|-----------------|-----------------|  
+|100 MB|√|√|√|√|√|  
+|250 MB|√|√|√|√|√|  
+|500 MB|√|√|√|√|√|  
+|1 GB|√|√|√|√|√|  
+|2 GB|√ (D)|√|√|√|√|  
+|5 GB|N/A|√|√|√|√|  
+|10 GB|N/A|√|√|√|√|  
+|20 GB|N/A|√|√|√|√|  
+|30 GB|N/A|√|√|√|√|  
+|40 GB|N/A|√|√|√|√|  
+|50 GB|N/A|√|√|√|√|  
+|100 GB|N/A|√|√|√|√|  
+|150 GB|N/A|√|√|√|√|  
+|200 GB|N/A|√|√|√|√|  
+|250 GB|N/A|√ (D)|√ (D)|√|√|  
+|300 GB|N/A|√|√|√|√|  
+|400 GB|N/A|√|√|√|√|
+|500 GB|N/A|√|√|√ (D)|√|
+|750 GB|N/A|√|√|√|√|
+|1024 GB|N/A|√|√|√|√ (D)|
+|From 1024 GB up to 4096 GB in increments of 256 GB* |N/A|N/A|N/A|N/A|√|√|  
   
- \* Premium P11 and P15 allow a larger MAXSIZE of up to 4 TB, with 1024 GB being the default size. Customers using P11 and P15 performance levels can use up to 4 TB of included storage at no additional charge. This 4 TB option is currently in public preview in the following regions: US East2, West US, West Europe, South East Asia, Japan East, Australia East, Canada Central, and Canada East. For current limitations, see [Current 4 TB limitations](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-service-tiers#current-limitations-of-p11-and-p15-databases-with-4-tb-maxsize).  
+ \* P11 and P15 allow MAXSIZE up to 4 TB with 1024 GB being the default size.  P11 and P15 can use up to 4 TB of included storage at no additional charge. In the Premium tier, MAXSIZE greater than 1 TB is currently available in the following regions: US East2, West US, US Gov Virginia, West Europe, Germany Central, South East Asia, Japan East, Australia East, Canada Central, and Canada East. For current limitations, see [Single databases](https://docs.microsoft.com/azure/sql-database-single-database-resources).  
   
  The following rules apply to MAXSIZE and EDITION arguments:  
   
 -   The MAXSIZE value, if specified, has to be a valid value shown in the table above.  
   
--   If EDITION is specified but MAXSIZE is not specified, the default value for the edition is used. For example, is the EDITION is set to Standard, and the MAXSIZE is not specified, then the MAXSIZE is automatically set to 500 MB.  
+-   If EDITION is specified but MAXSIZE is not specified, the default value for the edition is used. For example, if the EDITION is set to Standard, and the MAXSIZE is not specified, then the MAXSIZE is automatically set to 250 MB.  
   
 -   If neither MAXSIZE nor EDITION is specified, the EDITION is set to Standard (S0), and MAXSIZE is set to 250 GB.  
   
  SERVICE_OBJECTIVE  
- Specifies the performance level. For service objective descriptions and more information about the size, editions, and the service objectives combinations, see [Azure SQL Database Service Tiers and Performance Levels](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/). If the specified SERVICE_OBJECTIVE is not supported by the EDITION you receive an error.  
+ Specifies the performance level. For service objective descriptions and more information about the size, editions, and the service objectives combinations, see [Azure SQL Database Service Tiers and Performance Levels](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/) and [SQL Database resource limits](https://azure.microsoft.com/documentation/articles/sql-database-resource-limits). If the specified SERVICE_OBJECTIVE is not supported by the EDITION you receive an error.  
   
  ELASTIC_POOL (name = \<elastic_pool_name>) 
  To create a new database in an elastic database pool, set the SERVICE_OBJECTIVE of the database to ELASTIC_POOL and provide the name of the pool. For more information, see [Create and manage a SQL Database elastic database pool (preview)](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/).  
@@ -152,17 +176,17 @@ Specifies the default collation for the metadata catalog. *DATABASE_DEFAULT* spe
 ## Remarks  
  Databases in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] have several default settings that are set when the database is created. For more information about these default settings, see the list of values in [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md).  
   
- MAXSIZE provides the ability to limit the size of the database. If the size of the database reaches its MAXSIZE you will receive error code 40544. When this occurs, you cannot insert or update data, or create new objects (such as tables, stored procedures, views, and functions). However, you can still read and delete data, truncate tables, drop tables and indexes, and rebuild indexes. You can then update MAXSIZE to a value larger than your current database size or delete some data to free storage space. There may be as much as a fifteen-minute delay before you can insert new data.  
+ MAXSIZE provides the ability to limit the size of the database. If the size of the database reaches its MAXSIZE, you receive error code 40544. When this occurs, you cannot insert or update data, or create new objects (such as tables, stored procedures, views, and functions). However, you can still read and delete data, truncate tables, drop tables and indexes, and rebuild indexes. You can then update MAXSIZE to a value larger than your current database size or delete some data to free storage space. There may be as much as a fifteen-minute delay before you can insert new data.  
   
 > [!IMPORTANT]  
->  The `CREATE DATABASE` statement must be the only statement in a [!INCLUDE[tsql](../../includes/tsql-md.md)] batch. You must be connected to the **master** database when executing the `CREATE DATABASE` statement.  
+>  The `CREATE DATABASE` statement must be the only statement in a [!INCLUDE[tsql](../../includes/tsql-md.md)] batch. 
   
  To change the size, edition, or service objective values later, use [ALTER DATABASE &#40;Azure SQL Database&#41;](../../t-sql/statements/alter-database-azure-sql-database.md).  
 
 The CATALOG_COLLATION argument is only available during database creation. 
   
 ## Database Copies  
- Copying a database using the `CREATE DATABASE` statement is an asynchronous operation. Therefore, a connection to the [!INCLUDE[ssSDS](../../includes/sssds-md.md)] server is not needed for the full duration of the copy process. The `CREATE DATABASE` statement will return control to the user after the entry in sys.databases is created but before the database copy operation is complete. In other words, the `CREATE DATABASE` statement returns successfully when the database copy is still in progress.  
+ Copying a database using the `CREATE DATABASE` statement is an asynchronous operation. Therefore, a connection to the [!INCLUDE[ssSDS](../../includes/sssds-md.md)] server is not needed for the full duration of the copy process. The `CREATE DATABASE` statement returns control to the user after the entry in sys.databases is created but before the database copy operation is complete. In other words, the `CREATE DATABASE` statement returns successfully when the database copy is still in progress.  
   
 -   Monitoring the copy process on an [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] server: Query the `percentage_complete` or `replication_state_desc` columns in the [dm_database_copies](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md) or the `state` column in the **sys.databases** view. The [sys.dm_operation_status](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md) view can be used as well as it returns the status of database operations including database copy.  
   
@@ -170,7 +194,7 @@ The CATALOG_COLLATION argument is only available during database creation.
   
  The following syntax and semantic rules apply to your use of the `AS COPY OF` argument:  
   
--   The source server name and the server name for the copy target may be the same or different. When they are the same, this parameter is optional and the server context of the current session will be used by default.  
+-   The source server name and the server name for the copy target may be the same or different. When they are the same, this parameter is optional and the server context of the current session is used by default.  
   
 -   The source and destination database names must be specified, unique, and comply with the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rules for identifiers. For more information, see [Identifiers](http://go.microsoft.com/fwlink/p/?LinkId=180386).  
   
@@ -194,7 +218,7 @@ The CATALOG_COLLATION argument is only available during database creation.
  **Additional requirements for using `CREATE DATABASE ... AS COPY OF` syntax:** The login executing the statement on the local server must also be at least the `db_owner` on the source server. If the login  is based on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentication, the login executing the statement on the local server must have a matching login on the source [!INCLUDE[ssSDS](../../includes/sssds-md.md)] server, with an identical name and password.  
   
 ## Examples  
- All examples must be executed while connected to the **master** database. For more information, see [How to connect to an Azure SQL database with SSMS](https://azure.microsoft.com/documentation/articles/sql-database-connect-to-database/).  
+For a quick start tutorial showing you how to connect to an Azure SQL database using SQL Server Management Studio, see [Azure SQL Database: Use SQL Server Management Studio to connect and query data](/azure/sql-database/sql-database-connect-query-ssms).  
   
 ### Simple Example  
  A simple example for creating a database.  
@@ -260,7 +284,7 @@ CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140  (MAXSIZE = 100 MB, EDITION = 
       WITH CATALOG_COLLATION = DATABASE_DEFAULT 
 ```
   
-## See Also  
+## See also  
 
 -  [sys.dm_database_copies &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)
 

@@ -11,9 +11,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: b82f6f81-6e9c-4918-9ea9-4ab5f5d11b15
 caps.latest.revision: 5
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
+author: "smartysanthosh"
+ms.author: "nagavo"
+manager: "craigg"
 ---
 # Automatically Generate Attribute Values Other Than Code (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], automatically generate values for an entity’s attribute values when you want an integer to be automatically assigned as the value each time business rules are applied.  

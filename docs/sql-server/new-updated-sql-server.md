@@ -164,7 +164,7 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 
 ## Similar Articles
 
-This section lists very similar articles for recently updated articles in other subject areas, within the same GitHub.com repository: [MicrosoftDocs/**sql-docs-pr**](https://github.com/microsoftdocs/sql-docs-pr/).
+This section lists very similar articles for recently updated articles in other subject areas, within the same GitHub.com repository: [MicrosoftDocs/**sql-docs**](https://github.com/microsoftdocs/sql-docs/).
 
 <!--  20170717-1101  -->
 

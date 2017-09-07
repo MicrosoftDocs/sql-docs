@@ -14,9 +14,9 @@ applies_to:
   - "SQL Server"
 ms.assetid: 613a8368-b372-443f-8252-fb6dc31a003d
 caps.latest.revision: 5
-author: "sabotta"
-ms.author: "carlasab"
-manager: "lonnyb"
+author: "Shamikg"
+ms.author: "Shamikg"
+manager: "jhubbard"
 ---
 # Refresh from Database (DB2ToSQL)
 The **Refresh from Database** dialog box lets you select which objects to refresh from the DB2 database. Rows in the dialog box are color coded based on the state of the metadata:  

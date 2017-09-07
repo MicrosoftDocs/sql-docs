@@ -1,7 +1,7 @@
 ---
 title: "sys.objects (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "0/30/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -64,6 +64,12 @@ manager: "jhubbard"
 -   parent_object_id is the object_id of the base table.  
   
 -   is_ms_shipped, is_published and is_schema_published columns are set to 0.  
+
+**Related useful system views**  
+Subsets of the objects can be viewed by using system views for a specific type of object, such as:  
+- [sys.tables](sys-tables-transact-sql.md)  
+- [sys.views](sys-views-transact-sql.md)  
+- [sys.procedures](sys-procedures-transact-sql.md)  
   
 ## Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
@@ -73,7 +79,7 @@ manager: "jhubbard"
 ### A. Returning all the objects that have been modified in the last N days  
  Before you run the following query, replace `<database_name>` and `<n_days>` with valid values.  
   
-```  
+```sql  
 USE <database_name>;  
 GO  
 SELECT name AS object_name   
@@ -85,13 +91,12 @@ FROM sys.objects
 WHERE modify_date > GETDATE() - <n_days>  
 ORDER BY modify_date;  
 GO  
-  
 ```  
   
 ### B. Returning the parameters for a specified stored procedure or function  
  Before you run the following query, replace `<database_name>` and `<schema_name.object_name>` with valid names.  
   
-```  
+```sql  
 USE <database_name>;  
 GO  
 SELECT SCHEMA_NAME(schema_id) AS schema_name  
@@ -109,13 +114,12 @@ INNER JOIN sys.parameters AS p ON o.object_id = p.object_id
 WHERE o.object_id = OBJECT_ID('<schema_name.object_name>')  
 ORDER BY schema_name, object_name, p.parameter_id;  
 GO  
-  
 ```  
   
 ### C. Returning all the user-defined functions in a database  
  Before you run the following query, replace `<database_name>` with a valid database name.  
   
-```  
+```sql  
 USE <database_name>;  
 GO  
 SELECT name AS function_name   
@@ -126,13 +130,12 @@ SELECT name AS function_name
 FROM sys.objects  
 WHERE type_desc LIKE '%FUNCTION%';  
 GO  
-  
 ```  
   
 ### D. Returning the owner of each object in a schema.  
  Before you run the following query, replace all occurrences of `<database_name>` and `<schema_name>` with valid names.  
   
-```  
+```sql  
 USE <database_name>;  
 GO  
 SELECT 'OBJECT' AS entity_type  
@@ -152,7 +155,6 @@ FROM sys.xml_schema_collections AS xsc JOIN sys.schemas AS s
     ON s.schema_id = xsc.schema_id  
 WHERE s.name = '<schema_name>';  
 GO  
-  
 ```  
   
 ## See Also  

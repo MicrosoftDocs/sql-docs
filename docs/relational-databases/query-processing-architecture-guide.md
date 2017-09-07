@@ -1036,4 +1036,5 @@ GO
 ##  <a name="Additional_Reading"></a> Additional Reading  
  [Showplan Logical and Physical Operators Reference](../relational-databases/showplan-logical-and-physical-operators-reference.md)  
  [Extended Events](../relational-databases/extended-events/extended-events.md)  
- [Best Practice with the Query Store](../relational-databases/performance/best-practice-with-the-query-store.md)
+ [Best Practice with the Query Store](../relational-databases/performance/best-practice-with-the-query-store.md)  
+ [Cardinality Estimation](../relational-databases/performance/cardinality-estimation-sql-server.md)  

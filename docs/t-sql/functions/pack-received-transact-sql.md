@@ -24,7 +24,7 @@ author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
 ---
-# @@PACK_RECEIVED (Transact-SQL)
+# &#x40;&#x40;PACK_RECEIVED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Returns the number of input packets read from the network by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] since it was last started.  
@@ -34,7 +34,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
-  
 @@PACK_RECEIVED  
 ```  
   

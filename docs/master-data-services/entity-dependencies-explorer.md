@@ -13,9 +13,9 @@ keywords:
   - "master data services"
 ms.assetid: 9d922118-1412-4a9d-9c02-70d6c48d6c0d
 caps.latest.revision: 5
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
+author: "smartysanthosh"
+ms.author: "nagavo"
+manager: "craigg"
 ---
 # Entity Dependencies Explorer
   

@@ -1,7 +1,7 @@
 ---
-title: "What's New in Data Migration Assistant v3.1 (SQL Server) | Microsoft Docs"
+title: "What's new in Data Migration Assistant v3.1 (SQL Server) | Microsoft Docs"
 ms.custom: 
-ms.date: "08/24/2017"
+ms.date: "08/31/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -14,18 +14,18 @@ helpviewer_keywords:
   - "Data Migration Assistant, new features"
 ms.assetid: ""
 caps.latest.revision: ""
-author: "sabotta"
-ms.author: "carlasab"
+author: "HJToland3"
+ms.author: "jtoland"
 manager: "craigg"
 ---
 
-# What's New in Data Migration Assistant v3.1
+# What's new in Data Migration Assistant v3.1
 
-Data Migration Assistant v3.1 is a minor version update and includes following additions:
+Data Migration Assistant v3.1 is a minor version update and includes the following additions:
 
-- Improved assessment recommendations for Azure SQL Databases around database collations, use of unsupported system stored procedures, and CLR objects.
+- Improved assessment recommendations for Azure SQL Databases, in terms of database collations, use of unsupported system stored procedures, and CLR objects.
 
-- Added assessment guidance for compatibility levels 130, 120, 110 and 100 migrating to Azure SQL Databases.
+- Added assessment guidance for compatibility levels 130, 120, 110 and 100 when migrating to Azure SQL Databases.
 
 Data Migration Assistant enables you to upgrade to a modern data platform by detecting compatibility issues that can impact database functionality on your new version of SQL Server. Data Migration Assistant recommends performance and reliability improvements for your target environment, and allows you to move your schema, data, and uncontained objects from your source server to your target server.
 
@@ -49,8 +49,8 @@ Data Migration Assistant replaces all previous versions of SQL Server Upgrade Ad
 
 ## Installation
 
-You can download [Data Migration Assistant](https://www.microsoft.com/download/details.aspx?id=53595) from the Microsoft Download Center and then run **DataMigrationAssistant.msi** to install.
+You download [Data Migration Assistant](https://www.microsoft.com/download/details.aspx?id=53595) from the Microsoft Download Center and then run **DataMigrationAssistant.msi** to install.
 
-## See Also
+## See also
 
 [Overview of Data Migration Assistant](../dma/dma-overview.md)

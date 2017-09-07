@@ -14,9 +14,9 @@ helpviewer_keywords:
   - "locking versions [Master Data Services]"
 ms.assetid: 7bb62a84-12d8-4b29-9b6e-6aa25410618e
 caps.latest.revision: 7
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
+author: "smartysanthosh"
+ms.author: "nagavo"
+manager: "craigg"
 ---
 # Lock a Version (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], lock a version of a model to prevent changes to the model's members and their attributes.  

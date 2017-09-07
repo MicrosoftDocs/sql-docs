@@ -1,7 +1,7 @@
 ---
-title: "Installation for SQL Server | Microsoft Docs"
+title: "SQL Server Installation | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/17/2017"
+ms.date: "09/06/2017"
 ms.prod: 
   - "sql-server-2016"
   - "sql-server-2017"
@@ -23,7 +23,7 @@ author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---
-# Installation for SQL Server
+# SQL Server Installation
 
 The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation Wizard provides a single feature tree to install all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components:  
   

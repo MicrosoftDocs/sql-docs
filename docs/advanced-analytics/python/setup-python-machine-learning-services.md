@@ -32,7 +32,7 @@ After the installation is complete, reconfigure the instance to allow execution 
 + Prerequisites are installed as part of the Python component setup.
 + You cannot install machine learning with Python services on a failover cluster. The security mechanism used for isolating Python processes is not compatible with a Windows Server failover cluster environment.
    
-  As a workaround, you can use replication to copy necessary tables to a standalone SQL Server instance that uses Python services. Alternatively, you can install machine learning with Python services on a standalone computer that uses the Always On setting, and is part of an availability group.
+  As a workaround, you can use replication to copy necessary tables to a standalone SQL Server instance that uses Python services. Alternatively, you can install machine learning with Python services on a standalone computer that uses the AlwaysOn setting, and is part of an availability group.
 
 + Side-by-side installation with other versions of Python is possible, because the SQL Server instance uses its own copy of the Anaconda distribution. However, running code that uses Python on the SQL Server computer outside of SQL Server can lead to various problems:
     + You use a different library and different executable, and get different results, than you do when you are running in SQL Server.
@@ -132,9 +132,9 @@ Take a moment to verify that all components used to launch Python script are run
     
 2. Open the **Services** panel or SQL Server Configuration Manager, and verify that the Launchpad service for your instance is running. If the Launchpad is not running, restart the service.
   
-    If you have installed multiple instances of SQL Server, instances that use either R or Python, each instance has its own Launchpad service.
+    If you have installed multiple instances of SQL Server, any instance that has either R or Python enabled has its own Launchpad service.
 
-    However, if you install R and Python on a single instance, only one Launchpad is installed. A separate, language-specific launcher DLL is added for each language. For more information, see [Components to Support Python Integration](new-components-in-sql-server-to-support-python-integration.md). 
+    However, if you install R and Python on a single instance, only one Launchpad is installed. A separate, language-specific launcher DLL is added for each language. For more information, see [Components to support Python integration](new-components-in-sql-server-to-support-python-integration.md). 
    
 3. If Launchpad is running, you should be able to run simple Python scripts like the following in  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:
     
@@ -216,11 +216,11 @@ GO
 EXEC sp_addrolemember 'db_datareader', 'MySQLLogin'
 ```
 
-For more information about the permissions included in each role, see [Database-Level Roles](../../relational-databases/security/authentication-access/database-level-roles.md).
+For more information about the permissions included in each role, see [Database-level roles](../../relational-databases/security/authentication-access/database-level-roles.md).
 
 ### Ensure that the SQL Server installation supports remote connections
 
-If you cannot connect from a remote computer, check whether the firewall allows access to SQL Server. In a default installation, remote connections might be disabled, or the specific port used by SQL Server might be blocked by the firewall. For more information, see [Configure Windows Firewall for Database Engine Access](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md).
+If you cannot connect from a remote computer, check whether the firewall allows access to SQL Server. In a default installation, remote connections might be disabled, or the specific port used by SQL Server might be blocked by the firewall. For more information, see [Configure Windows Firewall for database engine access](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md).
 
 ### Create an ODBC data source for the instance on your data science client
 
@@ -228,7 +228,7 @@ You might create a machine learning solution on a data science client computer. 
 
 + For SQL sign-ins: Ensure that the sign-in has appropriate permissions on the database where you are reading data. You can do this by adding *Connect to* and *SELECT* permissions, or by adding the sign-in to the `db_datareader` role. Sign-ins that create objects need `DDL_admin` rights. Sign-ins that must save data to tables should be added to the `db_datawriter` role.
 
-+ For Windows authentication: You might need to create an ODBC data source on the data science client that specifies the instance name and other connection information. For more information, see [ODBC Data Source Administrator](https://docs.microsoft.com/sql/odbc/admin/odbc-data-source-administrator).
++ For Windows authentication: You might need to create an ODBC data source on the data science client that specifies the instance name and other connection information. For more information, see [ODBC data source administrator](https://docs.microsoft.com/sql/odbc/admin/odbc-data-source-administrator).
 
 
 ## Additional configuration
@@ -237,7 +237,7 @@ Now that you have everything working, you might also want to optimize the server
 
 ### Add more worker accounts
 
-If you expect many users to be running scripts concurrently, you can increase the number of worker accounts that are assigned to the Launchpad service. For more information, see [Modify the User Account Pool for SQL Server R Services](../r/modify-the-user-account-pool-for-sql-server-r-services.md).
+If you expect many users to be running scripts concurrently, you can increase the number of worker accounts that are assigned to the Launchpad service. For more information, see [Modify the user account pool for SQL Server R Services](../r/modify-the-user-account-pool-for-sql-server-r-services.md).
 
 ### Optimize the server for script execution
 
@@ -256,13 +256,13 @@ If you have SQL Server Enterprise Edition, use resource governor to configure an
   
 -   Change the amount of memory reserved for the database engine
   
-     [Server Memory Server Configuration Options](../../database-engine/configure-windows/server-memory-server-configuration-options.md)
+     [Server memory server configuration options](../../database-engine/configure-windows/server-memory-server-configuration-options.md)
   
 -   Change the number of worker accounts that can be started by [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]
   
-     [Modify the User Account Pool for SQL Server R Services](../r/modify-the-user-account-pool-for-sql-server-r-services.md)
+     [Modify the user account pool for SQL Server R Services](../r/modify-the-user-account-pool-for-sql-server-r-services.md)
 
-If you are using SQL Server Standard Edition and do not have resource governor, you can use dynamic management views and extended events to help you manage server resources. You can also use Windows event monitoring for this purpose. For more information, see [Monitoring and Managing R Services](../r/managing-and-monitoring-r-solutions.md).
+If you are using SQL Server Standard Edition and do not have resource governor, you can use dynamic management views and extended events to help you manage server resources. You can also use Windows event monitoring for this purpose. For more information, see [Monitoring and managing R Services](../r/managing-and-monitoring-r-solutions.md).
 
 ### Upgrade the machine learning components
 

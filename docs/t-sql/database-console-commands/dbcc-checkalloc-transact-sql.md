@@ -1,7 +1,7 @@
 ---
 title: "DBCC CHECKALLOC (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/16/2017"
+ms.date: "09/07/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -97,7 +97,7 @@ DBCC CHECKALLOC
   
 ## Remarks  
 DBCC CHECKALLOC checks the allocation of all pages in the database, regardless of the type of page or type of object to which they belong. It also validates the various internal structures that are used to keep track of these pages and the relationships between them.
-If NO_INFOMSGS is not specified, DBCC CHECKALLOC collects space usage information for all objects in the database. This information will then be printed together with any errors that are found.
+If NO_INFOMSGS is not specified, DBCC CHECKALLOC collects space usage information for all objects in the database. This information is printed together with any errors that are found.
   
 > [!NOTE]  
 >The DBCC CHECKALLOC functionality is included in [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) and [DBCC CHECKFILEGROUP](../../t-sql/database-console-commands/dbcc-checkfilegroup-transact-sql.md). This means that you do not have to run DBCC CHECKALLOC separately from these statements.   DBCC CHECKALLOC does not check FILESTREAM data. FILESTREAM stores binary large objects (BLOBS) on the file system.  
@@ -233,10 +233,10 @@ The following example executes `DBCC CHECKALLOC` for the current database and fo
   
 ```sql  
 -- Check the current database.  
-DBCC CHECKCATALOG;  
+DBCC CHECKALLOC;  
 GO  
 -- Check the AdventureWorks2012 database.  
-DBCC CHECKCATALOG (AdventureWorks2012);  
+DBCC CHECKALLOC (AdventureWorks2012);  
 GO  
 ```  
   

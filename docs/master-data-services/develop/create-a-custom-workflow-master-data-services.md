@@ -13,9 +13,9 @@ applies_to:
   - "SQL Server 2016 Preview"
 ms.assetid: 8e4403e9-595c-4b6b-9d0c-f6ae1b2bc99d
 caps.latest.revision: 8
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
+author: "smartysanthosh"
+ms.author: "nagavo"
+manager: "craigg"
 ---
 # Create a Custom Workflow (Master Data Services)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] uses business rules to create basic workflow solutions, such as to automatically update and validate data and have e-mail notifications sent, based on conditions you specify. When you require processing that is more complex than what the built-in workflow actions provide, use a custom workflow. A custom workflow is a .NET assembly that you create. When your workflow assembly is called, your code can take whatever action your situation requires. For example, if your workflow requires complex event processing, such as multi-tiered approvals or complicated decision trees, you can configure [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] to start a custom workflow that analyzes the data and determines where to send it for approval.  

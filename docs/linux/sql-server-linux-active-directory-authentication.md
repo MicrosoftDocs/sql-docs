@@ -167,25 +167,25 @@ Before you configure AD Authentication, you need to:
 
 1. On your domain controller, run the [New-ADUser](https://technet.microsoft.com/library/ee617253.aspx) PowerShell command to create a new AD user with a password that never expires. This example names the account "mssql," but the account name can be anything you like. You will be prompted to enter a new password for the account:
 
-```PowerShell
-Import-Module ActiveDirectory
+  ```PowerShell
+  Import-Module ActiveDirectory
 
-New-ADUser mssql -AccountPassword (Read-Host -AsSecureString "Enter Password") -PasswordNeverExpires $true -Enabled $true
-```
+  New-ADUser mssql -AccountPassword (Read-Host -AsSecureString "Enter Password") -PasswordNeverExpires $true -Enabled $true
+  ```
 
-> [!NOTE]
-> It is a security best practice to have a dedicated AD account for SQL Server, so that SQL Server's credentials aren't shared with other services using the same account. However, you can reuse an existing AD account if you prefer, if you know the account's password (required to generate a keytab file in the next step).
+  > [!NOTE]
+  > It is a security best practice to have a dedicated AD account for SQL Server, so that SQL Server's credentials aren't shared with other services using the same account. However, you can reuse an existing AD account if you prefer, if you know the account's password (required to generate a keytab file in the next step).
 
 2. Set the ServicePrincipalName (SPN) for this account using the `setspn.exe` tool. The SPN must be formatted exactly as specified in the following example: You can find the fully qualified domain name of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] host machine by running `hostname --all-fqdns` on the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] host, and the TCP port should be 1433 unless you have configured [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to use a different port number.
 
-```PowerShell
-setspn -A MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>** mssql
-```
+  ```PowerShell
+  setspn -A MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>** mssql
+  ```
 
-> [!NOTE]
-> If you receive an error, "Insufficient access rights," then you need to check with a domain administrator that you have sufficient permissions to set an SPN on this account.
->
-> If you change the TCP port in the future, then you will need to run the setspn command again with the new port number. You will also need to add the new SPN to the SQL Server service keytab by following the steps in the next section.
+  > [!NOTE]
+  > If you receive an error, "Insufficient access rights," then you need to check with a domain administrator that you have sufficient permissions to set an SPN on this account.
+  >
+  > If you change the TCP port in the future, then you will need to run the setspn command again with the new port number. You will also need to add the new SPN to the SQL Server service keytab by following the steps in the next section.
 
 3. For more information, see [Register a Service Principal Name for Kerberos Connections](../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md).
 
@@ -193,56 +193,56 @@ setspn -A MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port
 
 1. Check the Key Version Number (kvno) for the AD account created in the previous step. Usually it will be 2, but it could be another integer if you changed the account's password multiple times. On the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] host machine, run the following:
 
-```bash
-kinit user@CONTOSO.COM
+  ```bash
+  kinit user@CONTOSO.COM
 
-kvno MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**
-```
+  kvno MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**
+  ```
 
 2. Create a keytab file for the AD user you created in the previous step. To do so we will use **[ktutil](https://web.mit.edu/kerberos/krb5-1.12/doc/admin/admin_commands/ktutil.html)**. When prompted, enter the password for that AD account.
 
-```bash
-sudo ktutil
+  ```bash
+  sudo ktutil
 
-ktutil: addent -password -p MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**@CONTOSO.COM -k **<kvno from above>** -e aes256-cts-hmac-sha1-96
+  ktutil: addent -password -p MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**@CONTOSO.COM -k **<kvno from above>** -e aes256-cts-hmac-sha1-96
 
-ktutil: addent -password -p MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**@CONTOSO.COM -k **<kvno from above>** -e rc4-hmac
+  ktutil: addent -password -p MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**@CONTOSO.COM -k **<kvno from above>** -e rc4-hmac
 
-ktutil: wkt /var/opt/mssql/secrets/mssql.keytab
+  ktutil: wkt /var/opt/mssql/secrets/mssql.keytab
 
-quit
-```
+  quit
+  ```
 
-> [!NOTE]
-> The ktutil tool does not validate the password, so make sure you enter it correctly.
+  > [!NOTE]
+  > The ktutil tool does not validate the password, so make sure you enter it correctly.
 
 3. Anyone with access to this `keytab` file can impersonate [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on the domain, so make sure you restrict access to the file such that only the `mssql` account has read access:
 
-```bash
-sudo chown mssql:mssql /var/opt/mssql/secrets/mssql.keytab
-sudo chmod 400 /var/opt/mssql/secrets/mssql.keytab
-```
+  ```bash
+  sudo chown mssql:mssql /var/opt/mssql/secrets/mssql.keytab
+  sudo chmod 400 /var/opt/mssql/secrets/mssql.keytab
+  ```
 
 4. Configure [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to use this `keytab` file for Kerberos authentication:
 
-```bash
-sudo /opt/mssql/bin/mssql-conf set network.kerberoskeytabfile /var/opt/mssql/secrets/mssql.keytab
-sudo systemctl restart mssql-server
-```
+  ```bash
+  sudo /opt/mssql/bin/mssql-conf set network.kerberoskeytabfile /var/opt/mssql/secrets/mssql.keytab
+  sudo systemctl restart mssql-server
+  ```
 
 ## Create AD-based logins in Transact-SQL
 
 1. Connect to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and create a new, AD-based login:
 
-```sql
-CREATE LOGIN [CONTOSO\user] FROM WINDOWS;
-```
+  ```sql
+  CREATE LOGIN [CONTOSO\user] FROM WINDOWS;
+  ```
 
 2. Verify that the login is now listed in the [sys.server_principals](../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) system catalog view:
 
-```sql
-SELECT name FROM sys.server_principals;
-```
+  ```sql
+  SELECT name FROM sys.server_principals;
+  ```
 
 ## Connect to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] using AD Authentication
 
@@ -252,24 +252,24 @@ The specific connection string parameter for clients to use AD Authentication de
 
 1. `sqlcmd` on a domain-joined Linux client
 
-Log in to a domain-joined Linux client using `ssh` and your domain credentials:
+  Log in to a domain-joined Linux client using `ssh` and your domain credentials:
 
-```bash
-ssh -l user@contoso.com client.contoso.com
-```
+  ```bash
+  ssh -l user@contoso.com client.contoso.com
+  ```
 
-Make sure you've installed the [mssql-tools](sql-server-linux-setup-tools.md) package, then connect using `sqlcmd` without specifying any credentials:
+  Make sure you've installed the [mssql-tools](sql-server-linux-setup-tools.md) package, then connect using `sqlcmd` without specifying any credentials:
 
-```bash
-sqlcmd -S mssql.contoso.com
-```
+  ```bash
+  sqlcmd -S mssql.contoso.com
+  ```
 
 2. SSMS on a domain-joined Windows client
 
-Log in to a domain-joined Windows client using your domain credentials. Make sure [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)] is installed, then connect to your [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance by specifying **Windows Authentication** in the **Connect to Server** dialog.
+  Log in to a domain-joined Windows client using your domain credentials. Make sure [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)] is installed, then connect to your [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance by specifying **Windows Authentication** in the **Connect to Server** dialog.
 
 3. AD Authentication using other client drivers
 
-* JDBC: [Using Kerberos Integrated Authentication to Connect SQL Server](https://docs.microsoft.com/sql/connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server)
-* ODBC: [Using Integrated Authentication](https://docs.microsoft.com/sql/connect/odbc/linux/using-integrated-authentication)
-* ADO.NET: [Connection String Syntax](https://docs.microsoft.com/dotnet/framework/data/adonet/connection-string-syntax)
+  * JDBC: [Using Kerberos Integrated Authentication to Connect SQL Server](https://docs.microsoft.com/sql/connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server)
+  * ODBC: [Using Integrated Authentication](https://docs.microsoft.com/sql/connect/odbc/linux/using-integrated-authentication)
+  * ADO.NET: [Connection String Syntax](https://docs.microsoft.com/dotnet/framework/data/adonet/connection-string-syntax)

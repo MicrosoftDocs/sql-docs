@@ -1,7 +1,7 @@
 ---
 title: "SQL Server 2017 Release Notes | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/25/2017"
+ms.date: "09/06/2017"
 ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
@@ -20,11 +20,21 @@ This topic describes limitations and issues with SQL Server 2017. For related in
 - [What's New in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md).
 - [SQL Server on Linux release notes](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-release-notes).
 
-[![Download from Evaluation Center](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) **Try it out:** [Download SQL Server 2017 - October 2017](http://go.microsoft.com/fwlink/?LinkID=829477).
+**Try SQL Server!**
+- [![Download from Evaluation Center](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [Download SQL Server 2017](http://go.microsoft.com/fwlink/?LinkID=829477)
+- [![Create Virtual Machine](../includes/media/azure-vm.png)](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [Spin up a Virtual Machine with SQL Server 2017](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
 
 ## SQL Server 2017 - general availability release (October 2017)
 ### Database Engine
 ### Master Data Services (MDS)
+- **Issue / customer impact:** 
+On the user permissions page, when granting permission to the root level in the entity tree view, you see the following error:
+`"The model permission cannot be saved. The object guid is not valid"`
+
+- **Workarounds:** 
+  - Grant permission on the sub nodes in the tree view instead of the root level.
+  - or
+  - Run the script described in this MDS team blog [error applying permission on entity level](http://sqlblog.com/blogs/mds_team/archive/2017/09/05/sql-server-2016-sp1-cu4-regression-error-while-applying-permission-on-entity-level-quick-workaround.aspx)
 
 ![horizontal_bar](../sql-server/media/horizontal-bar.png)
 ## SQL Server 2017 Release Candidate (RC2 - August 2017)

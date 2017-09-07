@@ -1,7 +1,7 @@
 ---
 title: "DBCC CHECKALLOC (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/16/2017"
+ms.date: "09/07/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -233,10 +233,10 @@ The following example executes `DBCC CHECKALLOC` for the current database and fo
   
 ```sql  
 -- Check the current database.  
-DBCC CHECKCATALOG;  
+DBCC CHECKALLOC;  
 GO  
 -- Check the AdventureWorks2012 database.  
-DBCC CHECKCATALOG (AdventureWorks2012);  
+DBCC CHECKALLOC (AdventureWorks2012);  
 GO  
 ```  
   

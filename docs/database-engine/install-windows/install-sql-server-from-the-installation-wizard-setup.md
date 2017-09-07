@@ -49,9 +49,9 @@ This topic provides a step-by-step procedure for installing a new instance of [!
 > [!NOTE]  
 >  For local installations, you must run Setup as an administrator. If you install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from a remote share, you must use a domain account that has read and execute permissions on the remote share.  
  
- ###  <a name="bkmk_ga_instalpatch"></a> Install Patch Requirement 
+ ###  <a name="bkmk_ga_instalpatch"></a> Install patch requirement 
 
-Microsoft has identified a problem with the specific version of Microsoft VC++ 2013 Runtime binaries that are installed as a prerequisite by SQL Server 2016. If this update to the VC runtime binaries is not installed, SQL Server 2016 may experience stability issues in certain scenarios. Before you install SQL Server 2016 follow the instructions at [SQL Server 2016 Release Notes](../../sql-server/sql-server-2016-release-notes.md#bkmk_ga_instalpatch) to see if your computer requires a patch for the VC runtime binaries. 
+Microsoft has identified a problem with the specific version of Microsoft VC++ 2013 Runtime binaries that are installed as a prerequisite by SQL Server. If this update to the VC runtime binaries is not installed, SQL Server may experience stability issues in certain scenarios. Before you install SQL Server follow the instructions at [SQL Server Release Notes](../../sql-server/sql-server-2016-release-notes.md#bkmk_ga_instalpatch) to see if your computer requires a patch for the VC runtime binaries.  
   
 ## To install [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)]  
   
@@ -183,12 +183,12 @@ Microsoft has identified a problem with the specific version of Microsoft VC++ 2
   
 22. If you are instructed to restart the computer, do so now. It is important to read the message from the Installation Wizard when you have finished with Setup. For more information, see [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
   
-## Next Steps  
+## Next steps  
  Configure your new [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation.  
   
  To reduce the attackable surface area of a system, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] selectively installs and enables key services and features. For more information, see [Surface Area Configuration](../../relational-databases/security/surface-area-configuration.md).  
   
-## See Also  
+## See also  
  [Validate a SQL Server Installation](../../database-engine/install-windows/validate-a-sql-server-installation.md)   
  [Repair a Failed SQL Server 2016 Installation](../../database-engine/install-windows/repair-a-failed-sql-server-installation.md)   
  [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)   

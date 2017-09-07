@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "SQL Azure, synchronizing metadata"
 ms.assetid: 1ba0d113-dc05-4431-8689-e14a8821bafd
 caps.latest.revision: 21
-author: "sabotta"
-ms.author: "carlasab"
-manager: "lonnyb"
+author: "Shamikg"
+ms.author: "Shamikg"
+manager: "jhubbard"
 ---
 # Connecting to Azure SQL DB (AccessToSQL)
 To migrate Access databases to SQL Azure, you must connect to the target instance of SQL Azure. When you connect, SSMA obtains metadata about all the databases in the instance of SQL Azure and displays database metadata in the SQL Azure Metadata Explorer. SSMA stores information about which instance of SQL Azure you are connected to, but does not store passwords.  

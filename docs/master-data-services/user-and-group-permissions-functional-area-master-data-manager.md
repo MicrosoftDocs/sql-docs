@@ -11,9 +11,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 320d417e-a370-48fc-a05b-444d85fd24c0
 caps.latest.revision: 7
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
+author: "smartysanthosh"
+ms.author: "nagavo"
+manager: "craigg"
 ---
 # User and Group Permissions Functional Area (Master Data Manager)
   In the User and Group Permissions functional area, administrators can grant permission to functional areas, to attributes (on the Models tab), and to members (on the Hierarchy Members tab). Overlapping permissions are resolved to determine a user’s permission to each individual attribute value.  

@@ -14,8 +14,8 @@ applies_to:
   - "SQL Server"
 ms.assetid: 59e63eac-8a7e-4d54-be1c-0633a9bf510d
 caps.latest.revision: 11
-author: "sabotta"
-ms.author: "carlasab"
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "murato"
 ---
 # SQL Server Migration Assistant for Sybase (SybaseToSQL)

@@ -13,9 +13,9 @@ f1_keywords:
   - "sql13.mds.configmanager.srvconnect.f1"
 ms.assetid: b2f8c9b9-c31e-4f0d-9095-978709423190
 caps.latest.revision: 10
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
+author: "smartysanthosh"
+ms.author: "nagavo"
+manager: "craigg"
 ---
 # Connect to a Master Data Services Database Dialog Box
   Use the **Connect to a Master Data Services Database** dialog box to select a [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database.  

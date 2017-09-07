@@ -13,9 +13,9 @@ f1_keywords:
   - "sql13.mds.configmanager.webconfigpg.f1"
 ms.assetid: 7b900778-0169-4e42-9faf-98dc1c01313e
 caps.latest.revision: 10
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
+author: "smartysanthosh"
+ms.author: "nagavo"
+manager: "craigg"
 ---
 # Web Configuration Page (Master Data Services Configuration Manager)
   Use the **Web Configuration** page to configure a website and web application. You can also enable Data Quality Services.  

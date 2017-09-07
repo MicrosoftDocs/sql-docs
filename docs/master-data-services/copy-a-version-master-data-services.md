@@ -14,9 +14,9 @@ helpviewer_keywords:
   - "copying versions [Master Data Services]"
 ms.assetid: f4678a02-bbe9-4f21-9e32-627eae053fe7
 caps.latest.revision: 6
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
+author: "smartysanthosh"
+ms.author: "nagavo"
+manager: "craigg"
 ---
 # Copy a Version (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], copy a version of the model to create a new version of it.  

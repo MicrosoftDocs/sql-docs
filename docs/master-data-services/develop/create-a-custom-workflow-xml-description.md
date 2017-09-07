@@ -13,9 +13,9 @@ applies_to:
   - "SQL Server 2016 Preview"
 ms.assetid: e267e5f4-38bb-466d-82e8-871eabeec07e
 caps.latest.revision: 7
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
+author: "smartysanthosh"
+ms.author: "nagavo"
+manager: "craigg"
 ---
 # Create a Custom Workflow - XML Description
   In [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)], the <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A>method is called by SQL Server MDS Workflow Integration Service when a workflow starts. This method receives metadata and data about the item that triggered the workflow business rule as a block of XML. For example code that implements a workflow handler, see [Custom Workflow Example &#40;Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-example.md).  

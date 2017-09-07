@@ -1,21 +1,22 @@
 ---
-title: 'TDE - Bring your own key - Azure SQL | Microsoft Docs'
-description: An overview of bring your own key support for Transparent Data Encryption with Azure Key Vault for SQL Database and Data Warehouse. The document covers the benefits of the feature, how it works, considerations, and recomendations.
-keywords:
-services: sql-database
-documentationcenter: ''
-author: becczhang
-manager: jhubbard
-editor: ''
-ms.assetid: 
-ms.service: sql-database
-ms.custom: security
-ms.workload:
-ms.tgt_pltfrm:
-ms.devlang: na
-ms.topic: article
-ms.date: 08/07/2017
-ms.author: rebeccaz
+title: "TDE - Bring your own key - Azure SQL | Microsoft Docs"
+description: "An overview of bring your own key support for Transparent Data Encryption with Azure Key Vault for SQL Database and Data Warehouse. The document covers the benefits of the feature, how it works, considerations, and recomendations."
+keywords: ""
+services: "sql-database"
+documentationcenter: ""
+author: "becczhang"
+manager: "jhubbard"
+editor: ""
+ms.assetid: ""
+ms.service: "sql-database"
+ms.custom: 
+  - "security"
+ms.workload: ""
+ms.tgt_pltfrm: ""
+ms.devlang: "na"
+ms.topic: "article"
+ms.date: "08/07/2017"
+ms.author: "rebeccaz"
 --- 
 
 # Transparent Data Encryption with Bring Your Own Key support for Azure SQL Database and Data Warehouse

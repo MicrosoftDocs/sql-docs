@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "user interface"
 ms.assetid: af24c303-4a41-449b-9c86-d6558a97e839
 caps.latest.revision: 21
-author: "sabotta"
-ms.author: "carlasab"
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "murato"
 ---
 # User Interface Reference (AccessToSQL)

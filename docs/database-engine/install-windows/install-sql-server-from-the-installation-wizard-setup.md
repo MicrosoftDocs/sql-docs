@@ -23,7 +23,7 @@ manager: "jhubbard"
 ---
 # Install SQL Server from the Installation Wizard (Setup)
 
- > This article explains how to install SQL Server with the Installation Wizard. It applies to [!INCLUDE[SQLServer2016](../../includes/sssql15-md.md)], and [!INCLUDE[SQLServer2017](../../includes/sssqlv14-md.md)]. For content related to previous versions of SQL Server, see [Install SQL Server 2014 from the Installation Wizard (Setup)](https://msdn.microsoft.com/en-US/library/ms143219(SQL.120).aspx).
+ > This article explains how to install SQL Server with the Installation Wizard. It applies to [!INCLUDE[SQLServer2016](../../includes/sssql15-md.md)], and [!INCLUDE[SQLServer2017](../../includes/sssqlv14-md.md)]. For content related to previous versions of SQL Server, see [Install SQL Server 2014 from the Installation Wizard (Setup)](http://msdn.microsoft.com/library/ms143219(SQL.120).aspx).
 
 This topic provides a step-by-step procedure for installing a new instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] using the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup installation wizard. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation Wizard provides a single feature tree for installation of all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components so that you do not have to install them individually. For more information about how to install the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components individually, see [Install SQL Server](../../database-engine/install-windows/install-sql-server.md#how-to-install-individual-components).  
 

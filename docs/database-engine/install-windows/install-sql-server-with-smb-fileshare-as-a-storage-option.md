@@ -32,7 +32,7 @@ Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], system database
   
 -   \\\ServerName\ShareName  
   
- For more information about Universal Naming Convention, see [UNC](https://msdn.microsoft.com/en-us/library/gg465305.aspx).  
+ For more information about Universal Naming Convention, see [UNC](http://msdn.microsoft.com/library/gg465305.aspx).  
   
  The loopback UNC path (a UNC path whose server name is localhost, 127.0.0.1, or the local machine name) is not supported. As a special case, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] using File Server Cluster which is hosted on the same node [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is running is also not supported. To prevent this situation, it is recommended that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and File Server Cluster to be created on separated Windows Clusters.  
   

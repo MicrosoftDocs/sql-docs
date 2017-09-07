@@ -260,7 +260,7 @@ DATA_COMPRESSION = COLUMNSTORE_ARCHIVE ON PARTITIONS (2, 4, 6 TO 8)
 MAX_DURATION = *time* [**MINUTES** ]  
  The wait time (an integer value specified in minutes) that the **SWITCH** or online index rebuild lock that must be acquired will wait when executing the DDL command. The SWITCH or online index rebuild operation attempts to complete immediately. If the operation is blocked for the **MAX_DURATION** time, one of the **ABORT_AFTER_WAIT** actions will be executed. **MAX_DURATION** time is always in minutes, and the word **MINUTES** can be omitted.  
   
-ABOUT_AFTER_WAIT = [**NONE** | **SELF** | **BLOCKERS** } ]  
+ABORT_AFTER_WAIT = [**NONE** | **SELF** | **BLOCKERS** } ]  
  NONE  
  Continues the **SWITCH** or online index rebuild operation without changing the lock priority (using regular priority).  
   

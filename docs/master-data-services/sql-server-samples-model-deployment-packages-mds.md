@@ -14,8 +14,8 @@ keywords:
   - "sample"
 ms.assetid: 9b31b7b6-319b-4840-b67d-eb383e7762b1
 caps.latest.revision: 21
-author: "sabotta"
-ms.author: "carlasab"
+author: "smartysanthosh"
+ms.author: "nagavo"
 manager: "craigg"
 ---
 # SQL Server Examples: Model Deployment Packages (MDS)

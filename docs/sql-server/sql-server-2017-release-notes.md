@@ -17,8 +17,8 @@ manager: "jhubbard"
 ---
 # SQL Server 2017 Release Notes
 This topic describes limitations and issues with SQL Server 2017. For related information, see:
-- [What's New in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md).
-- [SQL Server on Linux release notes](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-release-notes).
+- [What's New in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)
+- [SQL Server on Linux release notes](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-release-notes)
 
 **Try SQL Server!**
 - [![Download from Evaluation Center](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [Download SQL Server 2017](http://go.microsoft.com/fwlink/?LinkID=829477)

@@ -1,7 +1,7 @@
 ---
 title: "Bitwise Operators (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/10/2017"
+ms.date: "09/07/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -33,7 +33,7 @@ manager: "jhubbard"
 |operator|bitwise math|
 |---- |---- |
 |AND <br> If bits at any location are both 1, the result is 1. |1010 1010 = 170 <br>0100 1011 = 75 <br>----------------  <br> 0000 1010 = 10 |
-|OR <br> If either bit at any location is 1, the result is 1. |1010 1010 = 170 <br>0100 1011 = 75 <br>----------------  <br> 1110 1011 = 2795|
+|OR <br> If either bit at any location is 1, the result is 1. |1010 1010 = 170 <br>0100 1011 = 75 <br>----------------  <br> 1110 1011 = 235|
 |NOT  <br> Reverses the bit value at every bit location. |1010 1010 = 170 <br>---------------- <br>  0101 0101 = 85 |
   
 See the following topics:   

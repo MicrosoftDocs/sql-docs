@@ -58,21 +58,21 @@ If you use the command line to upgrade an instance of SQL Server, make sure that
 
 ### Offline installation of R components for a localized version of SQL Server
 
-When you install R Services on a computer that does not have Internet access, you must take two additional steps. Download the R component installer to a local folder before you run SQL Server setup, and edit the installer file to ensure that the correct language is installed.
+When you install R Services on a computer that does not have internet access, you must take two additional steps. Download the R component installer to a local folder before you run SQL Server setup, and edit the installer file to ensure that the correct language is installed.
 
 The language identifier used for the R components must be the same as the SQL Server setup language, or the **Next** button is disabled and you cannot complete setup.
 
-For more information, see [Installing R Components without Internet access](../../advanced-analytics/r-services/installing-ml-components-without-internet-access.md).
+For more information, see [Installing R Components without internet access](../../advanced-analytics/r-services/installing-ml-components-without-internet-access.md).
 
 ## Post-installation configuration
 
 To use machine learning with R or Python, some additional configuration is required after running SQL Server setup. Additional steps might be required depending on the security level of the server and of your SQL Server instance and databases. Review these steps from the setup instructions to determine if any additional configuration might be needed.
 
-[Set up Sql Server R Services In-Database](set-up-sql-server-r-services-in-database.md)
+[Set up SQL Server R Services In-Database](set-up-sql-server-r-services-in-database.md)
 
 - The feature that supports running external scripts, such as R or Python, is disabled by default for database security, and must be enabled.
 
-- Ensure that the worker accounts that are used by Launchpad to run R or Python have access to the instance. See [Enable implied authentication for Launchpad account group].
+- Ensure that the worker accounts that are used by Launchpad to run R or Python have access to the instance.
 
 - You might need to enable remote access on the server, or create a firewall rule allowing inbound communication with SQL Server.
 
@@ -88,21 +88,21 @@ Upgrades from a pre-release version of SQL Server 2016 R Services are no longer 
 
 Slipstream setup refers to the ability to apply a patch or update to a failed instance installation, to repair existing problems. The advantage of this method is that SQL Server is updated at the same time that you perform setup, avoiding a separate restart later.
 
-If the server does not have Internet access, be sure to download the SQL Server installer. You must also separately download matching versions of the R component installers *before* beginning the update process. 
+If the server does not have internet access, be sure to download the SQL Server installer. You must also separately download matching versions of the R component installers *before* beginning the update process. 
 
-For download locations, see [Installing R components without Internet access](installing-ml-components-without-internet-access.md).
+For download locations, see [Installing R components without internet access](installing-ml-components-without-internet-access.md).
 
 When all setup files have been copied to a local directory, start the setup utility by typing SETUP.EXE from the command line.
 
-- Use the */UPDATESOURCE* argument to specify the location of a local file containing the SQL Server update, such as a cumulative update or service pack release.
+- Use the */UPDATESOURCE* argument to specify the location of a local file that contains the SQL Server update, such as a cumulative update or service pack release.
 
-- Use the */MRCACHEDIRECTORY* argument to specify the folder containing the R component CAB files.
+- Use the */MRCACHEDIRECTORY* argument to specify the folder that contains the R component CAB files.
 
-For more information, see this blog by the support team: [Deploying R Services on computers without Internet access](https://blogs.msdn.microsoft.com/sqlcat/2016/10/20/do-it-right-deploying-sql-server-r-services-on-computers-without-internet-access/)
+For more information, see this blog by the support team: [Deploying R Services on computers without internet access](https://blogs.msdn.microsoft.com/sqlcat/2016/10/20/do-it-right-deploying-sql-server-r-services-on-computers-without-internet-access/).
 
 ### Upgrade R components offline
 
-If you install or upgrade servers that are not connected to the Internet, you must download an updated version of the R components manually before beginning the refresh. For more information, see [Installing R components without Internet access](../../advanced-analytics/r-services/installing-ml-components-without-internet-access.md).
+If you install or upgrade servers that are not connected to the internet, you must download an updated version of the R components manually before beginning the refresh. For more information, see [Installing R components without internet access](../../advanced-analytics/r-services/installing-ml-components-without-internet-access.md).
 
 ### Schedule for update of R components
 
@@ -144,7 +144,7 @@ This section describes issues specific to installations of Microsoft R Server (S
 
 When you install R Server offline, pre-release versions do not allow you to use localized languages.
 
-Generally, when the server does not have Internet access, before running setup you must download all the installation packages for R Server. Then you specify the location of the files during the installation.
+Generally, when the server does not have internet access, before running setup you must download all the installation packages for R Server. Then you specify the location of the files during the installation.
 
 However, if the language identifier associated with the installer package is not the same as the SQL Server setup language, a problem occurs. When you reach the page for the R component installation, the **Next** button is disabled and you cannot proceed with the installation. As a workaround, you can rename the package to use a matching identifier.
 
@@ -157,7 +157,7 @@ Generally, you do not install both R Services (In-Database) and R Server (Standa
 
 Note that if you install both R Server and R Services on the same computer, two separate sets of the same R libraries are installed. One is for use by the SQL Server instance, and one is for development use or use by R Server.
 
-In earlier versions of SQL Server 2016, installing both R Server (Standalone) and R Services (In-Database) at the same time could cause setup to fail with an “access denied” message. This issue was fixed in Service Pack 1 for SQL Server 2016.
+In earlier versions of SQL Server 2016, installing both R Server (Standalone) and R Services (In-Database) at the same time might cause setup to fail with an “access denied” message. This issue was fixed in Service Pack 1 for SQL Server 2016.
 
 If you encountered this error, and need to upgrade these features, perform a slipstream installation of SQL Server 2016 with SP1. There are two ways to resolve the issue, both of which require uninstalling and reinstalling.
 

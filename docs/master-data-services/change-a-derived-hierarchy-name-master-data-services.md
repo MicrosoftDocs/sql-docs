@@ -13,9 +13,9 @@ helpviewer_keywords:
   - "derived hierarchies, changing name"
 ms.assetid: 5765e710-d273-4675-aee2-5718273bfdc4
 caps.latest.revision: 6
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
+author: "smartysanthosh"
+ms.author: "nagavo"
+manager: "craigg"
 ---
 # Change a Derived Hierarchy Name (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], you can change the name of a derived hierarchy.  

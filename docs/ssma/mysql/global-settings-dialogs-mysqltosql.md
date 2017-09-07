@@ -14,9 +14,9 @@ applies_to:
   - "SQL Server"
 ms.assetid: 6df20fbb-e92d-475f-a94d-aaf70b06eb9b
 caps.latest.revision: 3
-author: "sabotta"
-ms.author: "carlasab"
-manager: "lonnyb"
+author: "Shamikg"
+ms.author: "Shamikg"
+manager: "jhubbard"
 ---
 # Global Settings (Dialogs) (MySQLToSQL)
 Use the Dialogs page of the **Global Settings** dialog box to specify the default user action and warning settings for SSMA.  

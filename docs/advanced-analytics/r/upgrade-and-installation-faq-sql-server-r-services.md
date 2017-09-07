@@ -18,7 +18,7 @@ manager: "jhubbard"
 ---
 # Upgrade and installation FAQ (SQL Server R Services)
 
-This topic provides answers to some common questions about installation of machine learning services in SQL Server. It also covers common questions about upgrades. Some problems occur only with upgrades from pre-release versions. Therefore, we recommend that you identify your version and edition first, and upgrade to the most current release or service release as soon as possible.
+This topic provides answers to some common questions about installation of machine learning features in SQL Server. It also covers common questions about upgrades. Some problems occur only with upgrades from pre-release versions. Therefore, we recommend that you identify your version and edition first, and upgrade to the most current release or service release as soon as possible.
 
 **Applies to:** SQL Server 2016 R Services, SQL Server 2017 Machine Learning Services (In-Database)
 
@@ -62,7 +62,7 @@ When you install R Services on a computer that does not have Internet access, yo
 
 The language identifier used for the R components must be the same as the SQL Server setup language, or the **Next** button is disabled and you cannot complete setup.
 
-For more information, see [Installing R Components without Internet Access](../../advanced-analytics/r-services/installing-ml-components-without-internet-access.md).
+For more information, see [Installing R Components without Internet access](../../advanced-analytics/r-services/installing-ml-components-without-internet-access.md).
 
 ## Post-installation configuration
 
@@ -90,7 +90,7 @@ Slipstream setup refers to the ability to apply a patch or update to a failed in
 
 If the server does not have Internet access, be sure to download the SQL Server installer. You must also separately download matching versions of the R component installers *before* beginning the update process. 
 
-For download locations, see [Installing R Components without Internet Access](installing-ml-components-without-internet-access.md).
+For download locations, see [Installing R components without Internet access](installing-ml-components-without-internet-access.md).
 
 When all setup files have been copied to a local directory, start the setup utility by typing SETUP.EXE from the command line.
 
@@ -98,11 +98,11 @@ When all setup files have been copied to a local directory, start the setup util
 
 - Use the */MRCACHEDIRECTORY* argument to specify the folder containing the R component CAB files.
 
-For more information, see this blog by the support team: [Deploying R Services on Computers without Internet Access](https://blogs.msdn.microsoft.com/sqlcat/2016/10/20/do-it-right-deploying-sql-server-r-services-on-computers-without-internet-access/)
+For more information, see this blog by the support team: [Deploying R Services on computers without Internet access](https://blogs.msdn.microsoft.com/sqlcat/2016/10/20/do-it-right-deploying-sql-server-r-services-on-computers-without-internet-access/)
 
 ### Upgrade R components offline
 
-If you install or upgrade servers that are not connected to the Internet, you must download an updated version of the R components manually before beginning the refresh. For more information, see [Installing R Components without Internet Access](../../advanced-analytics/r-services/installing-ml-components-without-internet-access.md).
+If you install or upgrade servers that are not connected to the Internet, you must download an updated version of the R components manually before beginning the refresh. For more information, see [Installing R components without Internet access](../../advanced-analytics/r-services/installing-ml-components-without-internet-access.md).
 
 ### Schedule for update of R components
 
@@ -112,7 +112,7 @@ If you are using SQL Server 2017, upgrades to R components are automatically ins
 
 As of December 2016, you can upgrade R components on a faster cadence than the SQL Server release cycle. Do this by *binding* an instance of R Services to the Modern Software Lifecycle policy. Currently support is provided only for upgrade of 2016 instances. When a new version of R Server is released, you will be able to upgrade to 2017 instances as well.
 
-For more information, see [Use SqlBindR to Upgrade an Instance of SQL Server R Services](../../advanced-analytics/r-services/use-sqlbindr-exe-to-upgrade-an-instance-of-r-services.md).
+For more information, see [Use SqlBindR to upgrade an instance of SQL Server R Services](../../advanced-analytics/r-services/use-sqlbindr-exe-to-upgrade-an-instance-of-r-services.md).
 
 ### Upgrade from a pre-release version of SQL Server 2016
 
@@ -181,6 +181,6 @@ In some cases, this procedure fails to resolve the problem. Try the following wo
 
 ## See also
 
- [Getting Started with SQL Server R Services](../r/getting-started-with-sql-server-r-services.md)
+ [Getting started with SQL Server R Services](../r/getting-started-with-sql-server-r-services.md)
 
- [Getting Started with Microsoft R Server Standalone](../r/getting-started-with-microsoft-r-server-standalone.md)
+ [Getting started with Microsoft R Server Standalone](../r/getting-started-with-microsoft-r-server-standalone.md)

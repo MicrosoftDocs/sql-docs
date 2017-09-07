@@ -1,3 +1,4 @@
+![info_tip](../includes/media/small-seperator.png)
 ##  ![info_tip](../sql-server/media/info-tip.png) Get Help 
 - [Stack Overflow (tag sql-server) - ask SQL development questions](http://stackoverflow.com/questions/tagged/sql-server)
 - [MSDN Forums - ask technical questions](https://social.msdn.microsoft.com/Forums/en-us/home?forum=sqldatabaseengine%2Csqlsetupandupgrade)
@@ -6,3 +7,4 @@
 - [Microsoft SQL Server License Terms and Information](https://www.microsoft.com/en-us/download/details.aspx?id=39299)
 - [Support options for business users](https://support.microsoft.com/gp/support-options-for-business)
 - [Contact Microsoft](https://support.microsoft.com/gp/contactus81?Audience=Commercial)
+![info_tip](../includes/media/small-seperator.png)

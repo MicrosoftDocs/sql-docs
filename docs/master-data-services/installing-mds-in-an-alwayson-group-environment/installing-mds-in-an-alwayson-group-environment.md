@@ -12,8 +12,8 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: ""
 caps.latest.revision: ""
-author: "sabotta"
-ms.author: "carlasab"
+author: "smartysanthosh"
+ms.author: "nagavo"
 manager: "craigg"
 ---
 

@@ -304,7 +304,7 @@ For individual user accounts:
    - *db_ddladmin*: To create new objects. 
    - *db_datareader*: To read data that's used by R or Python code. 
 4. Note whether you changed any default startup accounts when you installed SQL 2016.
-5. If a user needs to install new R packages or use R packages that were installed by other users, you might need to enable package management on the instance and then assign additional permissions. For more information, see [Enable or disable R package management](advanced-analytics\r\r-package-how-to-enable-or-disable).
+5. If a user needs to install new R packages or use R packages that were installed by other users, you might need to enable package management on the instance and then assign additional permissions. For more information, see [Enable or disable R package management](advanced-analytics\r\r-package-how-to-enable-or-disable.md).
 
 ### What folders are subject to locking by antivirus software?
 

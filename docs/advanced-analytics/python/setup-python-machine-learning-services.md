@@ -21,7 +21,7 @@ manager: "jhubbard"
 
 Choose the **Machine Learning Services** feature, and select **Python** as the language.
 
-The **Shared Features** section contains a separate installation option, **Machine Learning Server (Standalone)**. This option supports operationalization of Python code on a server that does not have SQL Server, or that does not require use of SQL Server compute contexts. Thus, we recommend that you **do not** install this on the same computer as a SQL Server instance. Instead, install Machine Learning Server (Standalone) on a separate computer.
+The **Shared Features** section contains a separate installation option, **Machine Learning Server (Standalone)**. This option supports operationalization of Python code on a server that does not have SQL Server, or that does not require use of SQL Server compute contexts. Thus, we recommend that you *do not* install this on the same computer as a SQL Server instance. Instead, install Machine Learning Server (Standalone) on a separate computer.
 
 After the installation is complete, reconfigure the instance to allow execution of scripts that use an external executable. You might need to make additional changes to the server to support machine learning workloads. Configuration changes generally require a restart of the instance, or a restart of the Launchpad service.
 
@@ -34,7 +34,7 @@ After the installation is complete, reconfigure the instance to allow execution 
    
   As a workaround, you can use replication to copy necessary tables to a standalone SQL Server instance that uses Python services. Alternatively, you can install machine learning with Python services on a standalone computer that uses the AlwaysOn setting, and is part of an availability group.
 
-+ Side-by-side installation with other versions of Python is possible, because the SQL Server instance uses its own copy of the Anaconda distribution. However, running code that uses Python on the SQL Server computer outside of SQL Server can lead to various problems:
++ Side-by-side installation with other versions of Python is possible, because the SQL Server instance uses its own copy of the Anaconda distribution. However, running code that uses Python on the SQL Server computer outside SQL Server can lead to various problems:
     + You use a different library and different executable, and get different results, than you do when you are running in SQL Server.
     + Python scripts running in external libraries cannot be managed by SQL Server, leading to resource contention.
   
@@ -51,7 +51,7 @@ To perform an unattended installation, use the command-line options for SQL Serv
   
 2. On the **Installation** tab, select **New SQL Server stand-alone installation or add features to an existing installation**.
    
-3. On the **Feature Selection** page, select both of these options:
+3. On the **Feature Selection** page, select these options:
   
     -   **Database Engine Services**
   
@@ -76,7 +76,7 @@ To perform an unattended installation, use the command-line options for SQL Serv
      ![Agreement to Python license](media/ml-svcs-license-python.png "License agreement for Python")
   
     > [!NOTE]
-    >  If the computer you are using does not have Internet access, you can pause setup at this point to download the installers separately. For more information, see [Installing Components without Internet Access](../r/installing-ml-components-without-internet-access.md)
+    >  If the computer you are using does not have internet access, you can pause setup at this point to download the installers separately. For more information, see [Installing components without internet access](../r/installing-ml-components-without-internet-access.md).
   
      Select **Accept**, wait until the **Next** button becomes active, and then select **Next**.
   
@@ -120,7 +120,7 @@ To perform an unattended installation, use the command-line options for SQL Serv
 
 ## Step 3: Verify that the external script execution feature is running
 
-Take a moment to verify that all components used to launch Python script are running.
+Take a moment to verify that all components used to launch the Python script are running.
 
 1. In SQL Server Management Studio, open a new query window, and run the following command:
     
@@ -231,7 +231,7 @@ You might create a machine learning solution on a data science client computer. 
 + For Windows authentication: You might need to create an ODBC data source on the data science client that specifies the instance name and other connection information. For more information, see [ODBC data source administrator](https://docs.microsoft.com/sql/odbc/admin/odbc-data-source-administrator).
 
 
-## Additional configuration
+## Additional optimizations
 
 Now that you have everything working, you might also want to optimize the server to support machine learning, or install pretrained models.
 
@@ -248,7 +248,7 @@ If you use the default settings, you might find that resources for running exter
 + Reducing the amount of memory allocated to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database engine.
 + Increasing the number of accounts running under the [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] service. This does not increase the number of resources, but does increase the number of scripts that can run concurrently.
 
-If you have SQL Server Enterprise Edition, use resource governor to configure an external resource pool specific for Python. For more information, see the following articles:
+If you have SQL Server Enterprise Edition, use resource governor to configure an external resource pool for Python. For more information, see the following articles:
 
 -   Configure a resource pool for managing external resources
   

@@ -32,9 +32,9 @@ manager: "jhubbard"
 
 |operator|bitwise math|
 |---- |---- |
-|AND <br> If bits at any location are both 1, the result is 1. |1010 1010 = 170 <br>0100 1011 = 75 <br>----------------  <br> 0000 1010 = 10 |
-|OR <br> If either bit at any location is 1, the result is 1. |1010 1010 = 170 <br>0100 1011 = 75 <br>----------------  <br> 1110 1011 = 235|
-|NOT  <br> Reverses the bit value at every bit location. |1010 1010 = 170 <br>---------------- <br>  0101 0101 = 85 |
+|AND <br> If bits at any location are both 1, the result is 1. |1010 1010 = 170 <br>0100 1011 =  75 <br>-----------------  <br> 0000 1010 =  10 |
+|OR <br> If either bit at any location is 1, the result is 1. |1010 1010 = 170 <br>0100 1011 =  75 <br>-----------------  <br> 1110 1011 = 235|
+|NOT  <br> Reverses the bit value at every bit location. |1010 1010 = 170 <br>----------------- <br>  0101 0101 =   85 |
   
 See the following topics:   
 * [& (Bitwise AND)](../../t-sql/language-elements/bitwise-and-transact-sql.md)  
@@ -42,7 +42,7 @@ See the following topics:
 * [&#124; (Bitwise OR)](../../t-sql/language-elements/bitwise-or-transact-sql.md)  
 * [&#124;= (Bitwise OR EQUALS)](../../t-sql/language-elements/bitwise-or-equals-transact-sql.md)   
 * [^ (Bitwise Exclusive OR)](../../t-sql/language-elements/bitwise-exclusive-or-transact-sql.md)  
-* [^= (Bitwise Exclusive OR EQUALS)](../../t-sql/language-elements/bitwise-exclusive-or-equals-transact-sql.md)   
+* [^= (Bitwise Exclusive OR EQUALS)](../../t-sql/language-elements/bitwise-exclusive-or-equals-transact-sql.md)  
 * [~ (Bitwise NOT)](../../t-sql/language-elements/bitwise-not-transact-sql.md)  
   
  The operands for bitwise operators can be any one of the data types of the integer or binary string data type categories (except for the **image** data type), except that both operands cannot be any one of the data types of the binary string data type category. The following table shows the supported operand data types.  

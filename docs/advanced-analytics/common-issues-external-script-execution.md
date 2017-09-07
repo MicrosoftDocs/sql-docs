@@ -41,7 +41,7 @@ As part of the troubleshooting process, begin by answering the following questio
 
 2. Make a note of the service account that Launchpad is running under. Each instance where R or Python is enabled should have its own instance of the Launchpad service. For example, the service for a named instance might be something like _MSSQLLaunchpad$InstanceName_.
 
-3. If the service is stopped, restart it. On restarting, if there are any issues with configuration, enter a message in the system event log before the service stops again.
+3. If the service is stopped, restart it. On restarting, if there are any issues with configuration, a message is published in the system event log, and the service is stopped again. Check the system event log for details about why the service stopped.
 
 4. Review the contents of RSetup.log, and make sure that there are no errors in the setup. For example, the message *Exiting with code 0* indicates failure of the service to start.
 
@@ -49,7 +49,7 @@ As part of the troubleshooting process, begin by answering the following questio
 
 ### Check the Launchpad service account
 
-The default service account might be NT Service\$SQL2016 or NT Service\$SQL2017. The final few characters might vary, depending on your SQL instance name.
+The default service account might be "NT Service\$SQL2016" or "NT Service\$SQL2017". The final part might vary, depending on your SQL instance name.
 
 The Launchpad service (Launchpad.exe) runs by using a low-privilege service account. However, to start R and Python and communicate with the database instance, the Launchpad service account requires the following user rights:
 
@@ -61,7 +61,7 @@ The Launchpad service (Launchpad.exe) runs by using a low-privilege service acco
 For information about these user rights, see the "Windows privileges and rights" section in [Configure Windows service accounts and permissions](https://msdn.microsoft.com/library/ms143504.aspx).
 
 > [!TIP]
-> If you are an advanced user who's familiar with the use of the Support Diagnostics Platform (SDP) tool for SQL Server diagnostics, you can check the current permissions on the account by using the tool. Review the output file with the name MachineName_UserRights.txt.
+> If you are familiar with the use of the Support Diagnostics Platform (SDP) tool for SQL Server diagnostics, you can use SDP to review the output file with the name MachineName_UserRights.txt.
 
 ### Review Launchpad requirements
 
@@ -75,13 +75,13 @@ If the volume where you are installing R does not support short file names, the 
 
 As a workaround, you can enable the 8dot3 notation on the volume where SQL Server is installed and where R Services is installed. You must then provide the short name for the working directory in the R Services configuration file.
 
-1. To enable 8dot3 notation, run the fsutil utility with the *8dot3name* argument as described in [fsutil 8dot3name](https://technet.microsoft.com/library/ff621566(v=ws.11).aspx).
+1. To enable 8dot3 notation, run the fsutil utility with the *8dot3name* argument as described here: [fsutil 8dot3name](https://technet.microsoft.com/library/ff621566(v=ws.11).aspx).
 
-2. After the 8dot3 notation is enabled, open the RLauncher.config file and note the property of `WORKING_DIRECTORY`. For information about how to find this file, see [Troubleshoot data collection for machine learning](data-collection-ml-troubleshooting-process.md).
+2. After the 8dot3 notation is enabled, open the RLauncher.config file and note the property of `WORKING_DIRECTORY`. For information about how to find this file, see [Data collection for Machine Learning troubleshooting](data-collection-ml-troubleshooting-process.md).
 
 3. Use the fsutil utility with the *file* argument to specify a short file path for the folder that's specified in WORKING_DIRECTORY.
 
-4. Edit the configuration file to use the short name for `WORKING_DIRECTORY`. Alternatively, you can specify a different directory for `WORKING_DIRECTORY` with a path that's compatible with the 8dot3 notation.
+4. Edit the configuration file to specify the same working directory that you entered in the WORKING_DIRECTORY property. Alternatively, you can specify a different working directory and choose an existing path that's already compatible with the 8dot3 notation.
 
 > [!NOTE] 
 > This restriction has been removed in later releases. If you experience this issue, install one of the following:
@@ -90,7 +90,7 @@ As a workaround, you can enable the 8dot3 notation on the volume where SQL Serve
 
 #### The user group for Launchpad cannot log on locally
 
-During setup of Machine Learning Services, SQL Server creates the Windows user group **SQLRUserGroup** and then provisions it with all rights necessary for Launchpad to connect to SQL Server and run external script jobs. If this user group is enabled, it is also used to execute Python scripts.
+During setup of Machine Learning services, SQL Server creates the Windows user group **SQLRUserGroup** and then provisions it with all rights necessary for Launchpad to connect to SQL Server and run external script jobs. If this user group is enabled, it is also used to execute Python scripts.
 
 However, in organizations where more restrictive security policies are enforced, the rights that are required by this group might have been manually removed, or they might be automatically revoked by policy. If the rights have been removed, Launchpad can no longer connect to SQL Server, and SQL Server cannot call the external runtime.
 
@@ -100,7 +100,7 @@ For more information, see [Configure Windows Service Accounts and Permissions](h
 
 #### Improper setup leading to mismatched DLLs
 
-If you install the database engine with other features, patch the server, and then add the machine-learning feature by using the original media, the wrong version of the machine learning components might be installed. When Launchpad detects a version mismatch, it shuts down and creates a dump file.
+If you install the database engine with other features, patch the server, and then later add the Machine Learning feature using the original media, the wrong version of the Machine Learning components might be installed. When Launchpad detects a version mismatch, it shuts down and creates a dump file.
 
 To avoid this problem, be sure to install any new features at the same patch level as the server instance.
 
@@ -108,12 +108,12 @@ To avoid this problem, be sure to install any new features at the same patch lev
 
 1. Install SQL Server 2016 without R Services.
 2. Upgrade SQL Server 2016 Cumulative Update 2.
-3. Install R Services (In-Database) by using the RTM media.
+3. Install R Services (in-database) using the RTM media.
 
 **The correct way to upgrade**:
 
 1. Install SQL Server 2016 without R Services.
-2. Upgrade SQL Server 2016 to the desired patch level. For example, install SP1 and then Cumulative Update 2.
+2. Upgrade SQL Server 2016 to the desired patch level. For example, install Service Pack 1 and then Cumulative Update 2.
 3. To add the feature at the correct patch level, run SP1 and CU2 setup again, and then choose R Services (In-Database). 
 
 #### Check to see whether a user has rights to run external scripts
@@ -122,7 +122,7 @@ Even if Launchpad is configured correctly, it returns an error if the user does 
 
 If you installed SQL Server as a database administrator or you are a database owner, you are automatically granted this permission. However, other users usually have more limited permissions. If they try to run an R script, they would get a Launchpad error.
 
-To correct the problem, in SQL Server Management Studio, a security administrator can modify the SQL logon or Windows user account by running the following script:
+To correct the problem, in SQL Server Management Studio, a security administrator can modify the SQL login or Windows user account by running the following script:
 
 ```SQL
 GRANT EXECUTE ANY EXTERNAL SCRIPT
@@ -154,7 +154,7 @@ If the Windows group for R users (also used for Python) cannot log on to the ins
 For information about how to grant this user group the necessary permissions, see [Set up SQL Server R Services](r/set-up-sql-server-r-services-in-database.md).
 
 > [!NOTE]
-> This limitation does not apply if you use SQL logons to run R scripts from a remote workstation.
+> This limitation does not apply if you use SQL logins to run R scripts from a remote workstation.
 
 #### Error: *Logon failure: the user has not been granted the requested logon type*
 
@@ -173,7 +173,7 @@ To grant the necessary permissions to the new service account, use the Local Sec
 
 #### Error: *Unable to communicate with the Launchpad service*
 
-If you have installed and then enabled the Machine Learning services, but you get this error when you try to run an R script, the Launchpad service for the instance might have stopped running.
+If you have installed and then enabled machine learning, but you get this error when you try to run an R or Python script, the Launchpad service for the instance might have stopped running.
 
 1. From a Windows command prompt, open the SQL Server Configuration Manager. For more information, see [SQL Server Configuration Manager](https://docs.microsoft.com/sql/relational-databases/sql-server-configuration-manager).
 
@@ -181,7 +181,7 @@ If you have installed and then enabled the Machine Learning services, but you ge
 
 3. Select the **Service** tab, and then verify that the service is running. If it is not running, change the **Start Mode** to **Automatic**, and then select **Apply**.
 
-4. Restarting the service usually fixes the problem so that Machine Learning scripts can run. If the restart does not fix the issue, note the path and the arguments in the **Binary Path** property, and do the following:
+4. Restarting the service usually fixes the problem so that machine learning scripts can run. If the restart does not fix the issue, note the path and the arguments in the **Binary Path** property, and do the following:
 
     a. Review the launcher's .config file and ensure that the working directory is valid.
 
@@ -191,7 +191,7 @@ If you have installed and then enabled the Machine Learning services, but you ge
 
 #### Error: *Fatal error creation of tmpFile failed*
 
-In this scenario, you have successfully installed the Machine Learning services, and Launchpad is running. You try to run some simple R or Python code, but Launchpad fails with an error like the following: 
+In this scenario, you have successfully installed machine learning features, and Launchpad is running. You try to run some simple R or Python code, but Launchpad fails with an error like the following: 
 
 >*Unable to communicate with the runtime for R script. Please check the requirements of R runtime.*
 
@@ -199,11 +199,11 @@ At the same time, the external script runtime writes the following message as pa
 
 >*Fatal error: creation of tmpfile failed.*
 
-This error indicates that the account that Launchpad is attempting to use does not have permission to log on to the database. This situation can happen when strict security policies are implemented. To determine whether this is the case, review the SQL Server logs, and check to see whether the MSSQLSERVER01 account was denied at logon. The same information is provided in the logs that are specific to R\_SERVICES or PYTHON\_SERVICES. Look for ExtLaunchError.log.
+This error indicates that the account that Launchpad is attempting to use does not have permission to log on to the database. This situation can happen when strict security policies are implemented. To determine whether this is the case, review the SQL Server logs, and check to see whether the MSSQLSERVER01 account was denied at login. The same information is provided in the logs that are specific to R\_SERVICES or PYTHON\_SERVICES. Look for ExtLaunchError.log.
 
-By default, 20 accounts are set up and associated with the Launchpad.exe process, with the names MSSQLSERVER01 through MSSQLSERVER20. If you make heavy use of R or Python, the number of accounts might increase.
+By default, 20 accounts are set up and associated with the Launchpad.exe process, with the names MSSQLSERVER01 through MSSQLSERVER20. If you make heavy use of R or Python, you can increase the number of accounts.
 
-To resolve the issue, ensure that the group has *Allow log on locally* permissions to the local instance where Machine Learning is used. In some environments, this permission level might require a GPO exception from the network administrator.
+To resolve the issue, ensure that the group has *Allow Log on Locally* permissions to the local instance where machine learning features have been installed and enabled. In some environments, this permission level might require a GPO exception from the network administrator.
 
 ## R script issues
 
@@ -213,7 +213,7 @@ This section contains some common issues that are specific to R script execution
 
 It is easy to install multiple distributions of R on the same computer, or to install multiple copies of the same R package in different versions. For example, if you install both Machine Learning Server (Standalone) and Machine Learning Services (In-Database), the installers create separate versions of the R libraries. 
 
-The duplication can become confusing when you try to run a script from a command line and you're not sure which libraries you are using. It can also be confusing if you install a package to the wrong library and cannot find it when you run it from SQL Server.
+The duplication can become confusing when you try to run a script from a command line and you're not sure which libraries you are using. It can also be confusing if you install a package to the wrong library and cannot find the package when you try to run it from SQL Server.
 
 + Avoid direct use of the R libraries and tools that are installed for the use of the SQL Server instance, except in limited cases such as troubleshooting or installation of new packages. 
 + If you need to use an R command-line tool, you can install [Microsoft R Client](https://docs.microsoft.com/r-server/r-client/what-is-microsoft-r-client).
@@ -237,7 +237,7 @@ If there are multiple variables to delete, we suggest that you save the names of
 
 If you connect to the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] computer to run R commands by using the **RevoScaleR** functions, you might get an error when you use ODBC calls that write data to the server. This error happens only when you're using Windows authentication.
 
-The reason is that the worker accounts that are created for R Services do not have permission to connect to the server. Therefore, ODBC calls cannot be executed on your behalf. The problem does not occur with SQL logons because, with SQL logons, the credentials are passed explicitly from the R client to the SQL Server instance and then to ODBC. However, using SQL logons is also less secure than using Windows authentication.
+The reason is that the worker accounts that are created for R Services do not have permission to connect to the server. Therefore, ODBC calls cannot be executed on your behalf. The problem does not occur with SQL logins because, with SQL logins, the credentials are passed explicitly from the R client to the SQL Server instance and then to ODBC. However, using SQL logins is also less secure than using Windows authentication.
 
 To enable your Windows credentials to be passed securely from a script that's initiated remotely, SQL Server must emulate your credentials. This process is termed _implied authentication_. To make this work, the worker accounts that run R or Python scripts on the SQL Server computer must have the correct permissions.
 
@@ -262,15 +262,15 @@ However, sometimes code that works perfectly in an external IDE or utility might
 
 1. Check to see whether Launchpad is running.
 
-2. Review messages to see whether either the input data or output data contains columns with incompatible or unsupported data types. For example, queries on a SQl database often return GUIDs or RowGUIDs, both of which are unsupported. For more information, see [R Libraries and Data Types](r/r-libraries-and-data-types.md).
+2. Review messages to see whether either the input data or output data contains columns with incompatible or unsupported data types. For example, queries on a SQL database often return GUIDs or RowGUIDs, both of which are unsupported. For more information, see [R libraries and data types](r/r-libraries-and-data-types.md).
 
-3. Review the help pages for individual R functions to determine whether all parameters are supported for the SQL Server compute context. For ScaleR help, use the inline R help commands, or see [Package Reference](https://msdn.microsoft.com/microsoft-r/package-reference).
+3. Review the help pages for individual R functions to determine whether all parameters are supported for the SQL Server compute context. For ScaleR help, use the inline R help commands, or see [Package Reference](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler).
 
-### A variety of results running in SQL and in other environments
+### You get different results from the same script when running in SQL compared to other environments
 
-Varied results can happen for several reasons:
+R scripts can return different values in a SQL Server context, for several reasons:
 
-- Some type conversion might be performed implicitly when data is passed between SQL Server and R. For more information, see [R libraries and data types](r/r-libraries-and-data-types.md).
+- Implicit type conversion is automatically performed on some data types, when the data is passed between SQL Server and R. For more information, see [R libraries and data types](r/r-libraries-and-data-types.md).
 
 - Determine whether bitness is a factor. For example, there are often differences in the results of math operations for 32-bit and 64-bit floating point libraries.
 
@@ -307,7 +307,7 @@ EXEC sp_execute_external_script @language = N'R',
 
 #### Sample results
 
-*STDOUT messages from an external script:*
+*STDOUT message(s) from external script:*
 
 *[1] "C:\\Program Files\\Microsoft SQL Server\\MSSQL13.SQL2016\\R_SERVICES"*
 

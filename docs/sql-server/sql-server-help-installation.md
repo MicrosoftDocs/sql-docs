@@ -14,8 +14,9 @@ applies_to:
   - "SQL Server 2017"
 ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
 caps.latest.revision: 8
-author: "sabotta"
-ms.author: "carlasab"
+author: "craigg-msft"
+ms.author: "craigg"
+manager: "jhubbard"
 ---
 # Help Viewer and Offline Content for SQL Server
   

@@ -1,7 +1,7 @@
 ---
 title: "Migrate on-premises SQL Server (Data Migration Assistant) | Microsoft Docs"
 ms.custom: 
-ms.date: "08/31/2017"
+ms.date: "09/01/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""

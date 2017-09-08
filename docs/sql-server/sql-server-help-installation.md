@@ -133,6 +133,7 @@ When you press F1, the corresponding topic appears online. The topic can not be 
 
 Also, the Help Viewer does not support proxy settings, and does not support the ISO format. 
 
-
 ## Additional information
 [Microsoft Help Viewer - Visual Studio 2015](https://msdn.microsoft.com/library/hh580782.aspx)
+
+[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

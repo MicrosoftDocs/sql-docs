@@ -3032,7 +3032,7 @@
         },
         {
             "source_path": "docs/dma/dma-whatsnew.md",
-            "redirect_url": "/sql/dma/ dma-whatsnew",
+            "redirect_url": "/sql/dma/dma-whatsnew",
             "redirect_document_id": false  
         }
 

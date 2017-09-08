@@ -422,3 +422,4 @@ Culture=neutral, PublicKeyToken=89845dcd8080cc91
   
 ![Arrow icon used with Back to Top link](../sql-server/media/uparrow16x16.gif "Arrow icon used with Back to Top link")[Top](#top)  
   
+[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

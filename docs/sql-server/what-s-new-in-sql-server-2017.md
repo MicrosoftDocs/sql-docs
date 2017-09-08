@@ -16,10 +16,9 @@ ms.author: "craigg"
 manager: "jhubbard"
 ---
 # What's new in SQL Server 2017
-SQL Server 2017 represents a major step towards making SQL Server a platform that gives you choices of development languages, data types, on-premises or cloud, and operating systems by bringing the power of SQL Server to Linux, Linux-based Docker containers, and Windows. This topic summarizes what is new for specific feature areas in the most recent SQL Server 2017 Release Candidate (RC2, August 2017) and Community Technical Preview (CTP) releases.
+SQL Server 2017 represents a major step towards making SQL Server a platform that gives you choices of development languages, data types, on-premises or cloud, and operating systems by bringing the power of SQL Server to Linux, Linux-based Docker containers, and Windows. This topic summarizes what is new for specific feature areas and includes links to additional details.
 
-[![Download from Evaluation Center](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) **Try it out:** [Download the latest SQL Server 2017 Release: RC2, August 2017](http://go.microsoft.com/fwlink/?LinkID=829477).
-This release contains bug fixes and performance improvements.
+[![Download from Evaluation Center](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) **Try it out:** [Download SQL Server 2017 Release - October 2017:](http://go.microsoft.com/fwlink/?LinkID=829477).
 
 >**Run SQL Server on Linux!** For more information, see [SQL Server on Linux Documentation](https://docs.microsoft.com/sql/linux/).
 
@@ -107,14 +106,9 @@ SQL Server developers now have access to the extensive Python ML and AI librarie
 
 For more information, see [What's new in SQL Server Machine Learning Services](~/advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md).
 
-##  ![info_tip](../sql-server/media/info-tip.png) Get Help 
-- [Stack Overflow (tag sql-server) - ask SQL development questions](http://stackoverflow.com/questions/tagged/sql-server)
-- [MSDN Forums - ask technical questions](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)
-- [Microsoft Connect - report bugs and request features](https://connect.microsoft.com/SQLServer/Feedback)
-- [Reddit - general discussion about SQL Server](https://www.reddit.com/r/SQLServer/)
-- [Microsoft SQL Server License Terms and Information](https://www.microsoft.com/en-us/download/details.aspx?id=39299) 
-
 ## Next steps
 - See the [SQL Server 2017 Release Notes](sql-server-2017-release-notes.md).
 - Find out [What's new for SQL Server 2017 on Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-whats-new).
 - Find out [What's new in SQL Server 2016](what-s-new-in-sql-server-2016.md).
+
+[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

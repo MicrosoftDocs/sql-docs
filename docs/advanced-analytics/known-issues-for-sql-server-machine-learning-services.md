@@ -24,7 +24,7 @@ The information here applies to all of the following, unless specifically indica
 
 * SQL Server 2016
 
-  - SQL Server R Services (In-Database)
+  - R Services (In-Database)
   - Microsoft R Server (Standalone)
 
 * SQL Server 2017
@@ -190,8 +190,6 @@ You cannot use in an R script the following types of query results:
 ### Arguments *varsToKeep* and *varsToDrop* are not supported for SQL Server data sources
 
 When you use the rxDataStep function to write results to a table, using the *varsToKeep* and *varsToDrop* is a handy way of specifying the columns to include or exclude as part of the operation. Currently, these arguments are not supported for SQL Server data sources.
-
-This limitation will be removed in a later release.
 
 ### Limited support for SQL data types in `sp_execute_external_script`
 

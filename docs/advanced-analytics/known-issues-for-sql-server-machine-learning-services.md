@@ -64,12 +64,12 @@ To avoid problems with R packages, you can also upgrade the version of the R lib
 ### <a name="bkmk_sqlbindr"></a> Warning of incompatible version when you connect to an older version of SQL Server R Services from a client by using [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]
 
 When you run R code in a SQL Server 2016 compute context, and either of the following two statements is true, you might see an error like the following:
-* You installed R Server (Standalone) on a client computer by using the setup wizard for [!INCLUDEssSQLv14_md].
+* You installed R Server (Standalone) on a client computer by using the setup wizard for [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)].
 * You installed Microsoft R Server by using the [separate Windows installer](https://docs.microsoft.com/r-server/install/r-server-install-windows).
 
 >*You are running version 9.0.0 of Microsoft R Client on your computer, which is incompatible with the Microsoft R Server version 8.0.3. Download and install a compatible version.*
 
-The SqlBindR.exe tool is provided in the Microsoft R Server 9.0 release to support the upgrade of SQL Server instances to a compatible 9.0 version. Support for the upgrade of R services instances to 9.0 will be added in SQL Server as part of an upcoming service release. Versions that are candidates for future upgrade include SQL Server 2016 RTM CU3* and SP1+, and SQL Server 2017 CTP 1.1.
+The SqlBindR.exe tool is provided in the Microsoft R Server 9.0 release to support the upgrade of SQL Server instances to a compatible 9.0 version. Support for the upgrade of R services instances to 9.0 will be added in SQL Server as part of an upcoming service release. Versions that are candidates for future upgrade include SQL Server 2016 RTM CU3 and SP1+, and SQL Server 2017 CTP 1.1.
 
 **Applies to:** SQL Server 2016 R Services, with R Server version 9.0.0 or earlier
 

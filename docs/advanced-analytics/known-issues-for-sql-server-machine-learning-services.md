@@ -140,7 +140,7 @@ For additional known issues that might affect R solutions, go to the [Microsoft 
 
 ### Limitations on processor affinity for R jobs
 
-In the initial release build of SQL Server 2016, you could set processor affinity only for CPUs in the first k-group. For example, if the server is a 2-socket machine with 2 k-groups, only processors from the first k-group are used for the R processes. The same limitation applies when you configure resource governance for R script jobs.
+In the initial release build of SQL Server 2016, you could set processor affinity only for CPUs in the first k-group. For example, if the server is a 2-socket machine with two k-groups, only processors from the first k-group are used for the R processes. The same limitation applies when you configure resource governance for R script jobs.
 
 This issue is fixed in SQL Server 2016 Service Pack 1.
 
@@ -199,7 +199,7 @@ For more information, see [R Libraries and Data Types](r/r-libraries-and-data-ty
 
 ### Possible string corruption
 
-Any round-trip of string data from [!INCLUDE[tsql](../includes/tsql-md.md)] to R and then to [!INCLUDE[tsql](../includes/tsql-md.md)] again can result in corruption. This is due to the different encodings used in R and in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], as well as the various collations and languages that are supported in R and [!INCLUDE[tsql](../includes/tsql-md.md)]. Any string in a non-ASCII encoding can potentially be handled incorrectly.
+Any round trip of string data from [!INCLUDE[tsql](../includes/tsql-md.md)] to R and then to [!INCLUDE[tsql](../includes/tsql-md.md)] again can result in corruption. This is due to the different encodings used in R and in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], as well as the various collations and languages that are supported in R and [!INCLUDE[tsql](../includes/tsql-md.md)]. Any string in a non-ASCII encoding can potentially be handled incorrectly.
 
 When you send string data to R, convert it to an ASCII representation, if possible.
 
@@ -239,7 +239,7 @@ g <- function(y) {
 ```  
 
 
-To avoid the error, rewrite as follows:
+To avoid the error, rewrite the definition as follows:
 
 ```  
 g <- function(y){  
@@ -252,9 +252,9 @@ g <- function(y){
 
 ### Data import and manipulation using RevoScaleR
 
-When the **varchar** columns are read from a database, white space is trimmed. To prevent this, enclose strings in non-white-space characters.
+When **varchar** columns are read from a database, white space is trimmed. To prevent this, enclose strings in non-white-space characters.
 
-When functions such as `rxDataStep` are used to create database tables with **varchar** columns, the column width is estimated based on a sample of the data. If the width can vary, it might be necessary to pad all strings to a common length.
+When functions such as `rxDataStep` are used to create database tables that have **varchar** columns, the column width is estimated based on a sample of the data. If the width can vary, it might be necessary to pad all strings to a common length.
 
 Using a transform to change a variable's data type is not supported when repeated calls to `rxImport` or `rxTextToXdf` are used to import and append rows, combining multiple input files into a single .xdf file.
 

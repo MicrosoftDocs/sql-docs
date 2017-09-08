@@ -14,8 +14,9 @@ applies_to:
   - "SQL Server 2017"
 ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
 caps.latest.revision: 8
-author: "sabotta"
-ms.author: "carlasab"
+author: "craigg-msft"
+ms.author: "craigg"
+manager: "jhubbard"
 ---
 # Help Viewer and Offline Content for SQL Server
   
@@ -133,6 +134,7 @@ When you press F1, the corresponding topic appears online. The topic can not be 
 
 Also, the Help Viewer does not support proxy settings, and does not support the ISO format. 
 
-
 ## Additional information
 [Microsoft Help Viewer - Visual Studio 2015](https://msdn.microsoft.com/library/hh580782.aspx)
+
+[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

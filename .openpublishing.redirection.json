@@ -3024,13 +3024,18 @@
             "source_path": "docs/release-notes/index.md", 
             "redirect_url": "/sql/sql-server/index", 
             "redirect_document_id": false  
-          },
-          {
+        },
+        {
             "source_path": "docs/sql-server/sql-server-release-notes.md", 
             "redirect_url": "/sql/sql-server/sql-server-2017-release-notes", 
             "redirect_document_id": false  
-          }
-          
+        },
+        {
+            "source_path": "docs/dma/dma-whatsnew.md",
+            "redirect_url": "/sql/dma/ dma-whatsnew",
+            "redirect_document_id": false  
+        }
+
           
     ]
 }

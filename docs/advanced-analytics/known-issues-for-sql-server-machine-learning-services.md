@@ -81,7 +81,7 @@ As a workaround, you can install the service release by using the command line a
 
 `C:\<path to installation media>\SQLServer2016-KB3164674-x64.exe /Action=Patch /IACCEPTROPENLICENSETERMS /MRCACHEDIRECTORY=<path to CU1 CAB files>`
 
-To get the latest installers, see [Installing Machine Learning components without internet access](r/installing-ml-components-without-internet-access.md).
+To get the latest installers, see [Install machine learning components without internet access](r/installing-ml-components-without-internet-access.md).
 
 **Applies to:** SQL Server 2016 R Services, with R Server version 9.0.0 or earlier
 
@@ -95,7 +95,7 @@ For example, this error might occur if you install the database engine by using 
 
 To avoid this problem, make sure that all components have the same version number. If you upgrade one component, be sure to apply the same upgrade to all other installed components.
 
-To view a list of the R version numbers that are required for each release of SQL Server 2016, see [Installing R components without internet access](r/installing-ml-components-without-internet-access.md).
+To view a list of the R version numbers that are required for each release of SQL Server 2016, see [Install R components without internet access](r/installing-ml-components-without-internet-access.md).
 
 ### Remote compute contexts are blocked by a firewall in SQL Server instances that are running on Azure virtual machines
 
@@ -211,13 +211,13 @@ Support for multiple **raw** outputs will be added in subsequent releases.
 
 If you want to use multiple output sets, one possible workaround is to do multiple calls of the stored procedure and send the result sets back to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] by using ODBC.
 
-You can return parameter values along with the results of the stored procedure simply by adding the OUTPUT keyword. For more information, see [Returning Data by Using OUTPUT Parameters](https://technet.microsoft.com/library/ms187004.aspx).
+You can return parameter values along with the results of the stored procedure simply by adding the OUTPUT keyword. For more information, see [Return data by using OUTPUT parameters](https://technet.microsoft.com/library/ms187004.aspx).
 
 ### Loss of precision
 
 Because [!INCLUDE[tsql](../includes/tsql-md.md)] and R support various data types, numeric data types can suffer loss of precision during conversion.
 
-For more information about implicit data-type conversion, see [Working with R data types](r/r-libraries-and-data-types.md).
+For more information about implicit data-type conversion, see [Work with R data types](r/r-libraries-and-data-types.md).
 
 ### Variable scoping error when you use the transformFunc parameter: *The sample data set for the analysis has no variables*
 

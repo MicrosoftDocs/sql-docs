@@ -27,19 +27,18 @@ manager: "jhubbard"
     
  The following Microsoft JDBC Drivers are supported, until the indicated End of Support date.  
   
-|||||  
+|Driver Name|Driver Package Version|Applicable JAR(s)|End of Mainstream Support|
 |-|-|-|-|  
-|Driver Name|Driver Package Version|Applicable JAR(s)|End of Support|
-|Microsoft JDBC Driver 6.0 for SQL Server|6.0|sqljdbc42.jar<br>sqljdbc41.jar|July 14, 2026|    
+|Microsoft JDBC Driver 6.2 for SQL Server|6.2|mssql-jdbc-6.2.1.jre8.jar<br> mssql-jdbc-6.2.1.jre7.jar|June 30, 2022|    
+|Microsoft JDBC Driver 6.0 for SQL Server|6.0|sqljdbc42.jar<br>sqljdbc41.jar|July 14, 2021|    
 |Microsoft JDBC Driver 4.2 for SQL Server|4.2|sqljdbc42.jar<br>sqljdbc41.jar|August 24, 2020|  
 |Microsoft JDBC Driver 4.1 for SQL Server|4.1|sqljdbc41.jar|December 12, 2019|  
-|Microsoft JDBC Driver 4.0 for SQL Server|4.0|sqljdbc4.jar|March 6, 2017|  
   
  The following Microsoft JDBC Drivers are no longer supported.  
-  
-||||  
-|-|-|-|  
-|Driver Name|Driver Package Version|End of Support|  
+ 
+|Driver Name|Driver Package Version|End of Mainstream Support|  
+|-|-|-|
+|Microsoft JDBC Driver 4.0 for SQL Server|4.0|March 6, 2017|  
 |Microsoft SQL Server JDBC Driver 3.0|3.0|April 23, 2015|  
 |Microsoft SQL Server JDBC Driver 2.0|2.0|December 31, 2012|  
 |Microsoft SQL Server 2005 JDBC Driver 1.2|1.2|June 25, 2011|  
@@ -50,7 +49,9 @@ manager: "jhubbard"
 ## SQL Version Compatibility  
   
 |Driver Version|SQL Server 2008|SQL Server 2008R2|SQL Server 2012|Azure SQL Database|PDW 2008R2 AU3<sup>4</sup>|SQL Server 2014|SQL Server 2016|  
-|-|-|-|-|-|-|-|-|  
+|-|-|-|-|-|-|-|-| 
+|6.2|Y|Y|Y|Y|Y|Y|Y|  
+|6.1|Y|Y|Y|Y|Y|Y|Y|  
 |6.0|Y|Y|Y|Y|Y|Y|Y|  
 |4.2|Y|Y|Y|Y|Y|Y|Y|  
 |4.1|Y|Y|Y|Y|Y|Y|Y|  
@@ -74,9 +75,10 @@ manager: "jhubbard"
   
 ## Java and JDBC Specification Support  
   
-||||  
+|JDBC Driver Version|JRE Versions|JDBC API Version| 
 |-|-|-|  
-|JDBC Driver Version|JRE Versions|JDBC API Version|  
+|6.2|1.7, 1.8|4.1, 4.2|  
+|6.1|1.7, 1.8|4.1, 4.2|  
 |6.0|1.7, 1.8|4.1, 4.2|  
 |4.2|1.7, 1.8|4.1, 4.2|  
 |4.1|1.7|4.0|  

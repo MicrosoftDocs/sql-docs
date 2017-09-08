@@ -1,7 +1,7 @@
 ﻿---
 title: "Quick Start 1: In-Memory OLTP Technologies for Faster Transact-SQL Performance | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/02/2016"
+ms.date: 09/05/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -130,7 +130,7 @@ A [Memory-optimized tables](../../relational-databases/in-memory-oltp/memory-opt
   
 #### Natively compiled modules  
   
-The T-SQL keyword NATIVE_COMPILATION, on the CREATE PROCEDURE statement, is how a native proc is created. The T-SQL statements are compiled to machine code on first use of the native proc each time the database is cycled online. The T-SQL instructions no longer endure slow interpretation of every instruction.  
+The T-SQL keyword NATIVE_COMPILATION, on the CREATE PROCEDURE statement, is how a natively compiled stored procedure is created. The T-SQL statements are compiled to machine code on first use of the native proc each time the database is cycled online. The T-SQL instructions no longer endure slow interpretation of every instruction.  
   
 - We have seen native compilation result in durations that are 1/100th of the interpreted duration.  
   
@@ -212,14 +212,12 @@ On Microsoft SQL Server, before you can create a memory-optimized table you must
 On Azure SQL Database, you need not and cannot create such a FILEGROUP.  
 
 The following sample T-SQL script enables a database for In-Memory OLTP and configures all recommended settings. It works with both SQL Server and Azure SQL Database: [enable-in-memory-oltp.sql](https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/in-memory/t-sql-scripts/enable-in-memory-oltp.sql).
-  
+
+Note that not all SQL Server features are supported for databases with a MEMORY_OPTIMIZED_DATA filegroup. For details on limitations see: [Unsupported SQL Server Features for In-Memory OLTP](unsupported-sql-server-features-for-in-memory-oltp.md)
   
 <a name="create-a-memory-optimized-table-26y"></a>  
   
 ## 4. Create a memory-optimized table  
-  
-  
-  
   
 The crucial Transact-SQL keyword is the keyword MEMORY_OPTIMIZED.  
   
@@ -296,6 +294,7 @@ The crucial keyword is NATIVE_COMPILATION.
   
 The keyword SCHEMABINDING means the tables referenced in the native proc cannot be dropped unless the native proc is dropped first. For details see [Creating Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/creating-natively-compiled-stored-procedures.md).  
   
+Note that you do not need to create a natively compiled stored procedure to access a memory-optimized table. You can also reference memory-optimized tables from traditional stored procedures and ad hoc batches.
   
 <a name="execute-the-native-proc-31e"></a>  
   
@@ -497,8 +496,10 @@ Here are links to other articles that discuss special considerations for memory-
 <a name="documentation-guide-for-native-procs-42b"></a>  
   
 ## Documentation guide for native procs  
-  
-  
+
+The following article, and its children articles in the table of contents (TOC), explain the details about natively compiled stored procedures.
+
+- [Natively compiled stored procedures](natively-compiled-stored-procedures.md)
   
 <a name="related-links-43f"></a>  
   
@@ -511,105 +512,3 @@ Here are articles that offer code to demonstrate the performance gains you can a
   
 - [Demonstration: Performance Improvement of In-Memory OLTP](../../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md) offers a small-scale demonstration of the larger potential performance gains.  
 - [Sample Database for In-Memory OLTP](../../relational-databases/in-memory-oltp/sample-database-for-in-memory-oltp.md) offers a larger scale demonstration.  
-  
-  
-  
-\<!--  
-  
-e1328615-6b59-4473-8a8d-4f360f73187d , dn817827.aspx ,  "Get started with Columnstore for real time operational analytics"  
-  
-f98af4a5-4523-43b1-be8d-1b03c3217839 , gg492088.aspx , "Columnstore Indexes Guide"  
-  
-14dddf81-b502-49dc-a6b6-d18b1ae32d2b , dn133165.aspx , "Memory-Optimized Tables"  
-  
-d5ed432c-10c5-4e4f-883c-ef4d1fa32366 , dn133184.aspx , "Natively compiled stored procedures"  
-  
-14106cc9-816b-493a-bcb9-fe66a1cd4630 , dn639109.aspx , "The Memory Optimized Filegroup"  
-  
-f222b1d5-d2fa-4269-8294-4575a0e78636 , dn465873.aspx , "Bind a Database with Memory-Optimized Tables to a Resource Pool"  
-  
-86805eeb-6972-45d8-8369-16ededc535c7 , dn511012.aspx , "Indexes on Memory-Optimized Tables"  
-  
-16ef63a4-367a-46ac-917d-9eebc81ab29b , dn133166.aspx , "Guidelines for Using Indexes on Memory-Optimized Tables"  
-  
-e3f8009c-319d-4d7b-8993-828e55ccde11 , dn246937.aspx , "Transact-SQL Constructs Not Supported by In-Memory OLTP"  
-  
-2cd07d26-a1f1-4034-8d6f-f196eed1b763 , dn133169.aspx , "Transactions in Memory-Optimized Tables"  
-NOTE: SEE mt668425.aspx "Behaviors and Guidelines for Transactions with Memory-Optimized Tables", its soon replacement for these!  
-f2a35c37-4449-49ee-8bba-928028f1de66 , dn169141.aspx , "Guidelines for Retry Logic for Transactions on Memory-Optimized Tables"  
-  
-7a458b9c-3423-4e24-823d-99573544c877 , dn465869.aspx , "Monitor and Troubleshoot Memory Usage"  
-  
-5c5cc1fc-1fdf-4562-9443-272ad9ab5ba8 , dn282389.aspx , "Estimate Memory Requirements for Memory-Optimized Tables"  
-  
-b0a248a4-4488-4cc8-89fc-46906a8c24a1 , dn205318.aspx , "Table and Row Size in Memory-Optimized Tables"  
-  
-162d1392-39d2-4436-a4d9-ee5c47864c5a , dn296452.aspx , "Application-Level Partitioning"  
-  
-3f867763-a8e6-413a-b015-20e9672cc4d1 , dn133171.aspx , "Application Pattern for Partitioning Memory-Optimized Tables"  
-  
-86805eeb-6972-45d8-8369-16ededc535c7 , dn511012.aspx , "Indexes on Memory-Optimized Tables"  
-  
-d82f21fa-6be1-4723-a72e-f2526fafd1b6 , dn465872.aspx , "Managing Memory for Memory-Optimized OLTP"  
-  
-622aabe6-95c7-42cc-8768-ac2e679c5089 , dn133174.aspx , "Creating and Managing Storage for Memory-Optimized Objects"  
-  
-bd102e95-53e2-4da6-9b8b-0e4f02d286d3 , dn535766.aspx , "Memory-Optimized Table Variables"; "table variable of a memory-optimized table"  
-OBSOLETE. Instead see 38512a22-7e63-436f-9c13-dde7cf5c2202 , mt718711.aspx , "Faster temp table and table variable by using memory optimization"  
-  
-  
-f0d5dd10-73fd-4e05-9177-07f56552bdf7 , ms191320.aspx , "Create User-defined Functions (Database Engine)"; "table-valued functions"  
-  
-d2546e40-fdfc-414b-8196-76ed1f124bf5 , dn935012.aspx , "Scalar User-Defined Functions for In-Memory OLTP"; "scalar user-defined functions"  
-  
-405cdac5-a0d4-47a4-9180-82876b773b82 , dn247639.aspx , "Migrating to In-Memory OLTP"  
-  
-3f083347-0fbb-4b19-a6fb-1818d545e281 , dn624160.aspx , "Backup, Restore, and Recovery of Memory-Optimized Tables"  
-  
-690b70b7-5be1-4014-af97-54e531997839 , dn269114.aspx , "Altering Memory-Optimized Tables"  
-  
-  
-b1cc7c30-1747-4c21-88ac-e95a5e58baac , dn133080.aspx , "New and Updated Properties, System Views, Stored Procedures, Wait Types, and DMVs for In-Memory OLTP"  
-. . . . .  
-ALSO: "Transact-SQL Support for In-Memory OLTP"  
-  
-  
-c1ef96f1-290d-4952-8369-2f49f27afee2 , dn205133.aspx , "Determining if a Table or Stored Procedure Should Be Ported to In-Memory OLTP"  
-  
-181989c2-9636-415a-bd1d-d304fc920b8a , dn284308.aspx , "Memory Optimization Advisor"  
-  
-55548cb2-77a8-4953-8b5a-f2778a4f13cf , dn452282.aspx , "Monitoring Performance of Natively Compiled Stored Procedures"  
-  
-d3898a47-2985-4a08-bc70-fd8331a01b7b , dn358355.aspx , "Native Compilation Advisor"  
-  
-f43faad4-2182-4b43-a76a-0e3b405816d1 , dn296678.aspx , "Migration Issues for Natively Compiled Stored Procedures"  
-  
-e1d03d74-2572-4a55-afd6-7edf0bc28bdb , dn133186.aspx , "In-Memory OLTP (In-Memory Optimization)"  
-  
-c6def45d-d2d4-4d24-8068-fab4cd94d8cc , dn530757.aspx , "Demonstration: Performance Improvement of In-Memory OLTP"  
-  
-405cdac5-a0d4-47a4-9180-82876b773b82 , dn247639.aspx , "Migrating to In-Memory OLTP"  
-  
-f76fbd84-df59-4404-806b-8ecb4497c9cc , bb522682.aspx , "ALTER DATABASE SET Options (Transact-SQL)"  
-  
-e6b34010-cf62-4f65-bbdf-117f291cde7b , dn452286.aspx , "Creating Natively Compiled Stored Procedures"  
-  
-df347f9b-b950-4e3a-85f4-b9f21735eae3 , mt465764.aspx , "Sample Database for In-Memory OLTP"  
-  
-38512a22-7e63-436f-9c13-dde7cf5c2202 , mt718711.aspx , "Faster temp table and table variable by using memory optimization"  
-  
-38512a22-7e63-436f-9c13-dde7cf5c2202 , mt718711.aspx , "Faster temp table and table variable by using memory optimization"  
-  
-  
-  
-  
-H1 # Quick Start 1: In-Memory technologies for faster transactional workloads  
-{1c25a164-547d-43c4-8484-6b5ee3cbaf3a} in CAPS  
-mt718711.aspx on MSDN  
-  
-GeneMi , 2016-05-07  00:07am  
--->  
-  
-  
-  
-

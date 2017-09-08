@@ -11,6 +11,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "sql13.dts.designer.bulkinserttask.f1"
+  - "sql13.dts.designer.bulkinserttask.connection.f1"
+  - "sql13.dts.designer.bulkinserttask.general.f1"
+  - "sql13.dts.designer.bulkinserttask.options.f1"
 helpviewer_keywords: 
   - "Bulk Insert task"
   - "copying data [Integration Services]"
@@ -85,13 +88,7 @@ manager: "jhubbard"
   
  You can set properties through [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer or programmatically.  
   
- For more information about the properties that you can set in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click one of the following topics:  
-  
--   [Bulk Insert Task Editor &#40;General Page&#41;](../../integration-services/control-flow/bulk-insert-task-editor-general-page.md)  
-  
--   [Bulk Insert Task Editor &#40;Connection Page&#41;](../../integration-services/control-flow/bulk-insert-task-editor-connection-page.md)  
-  
--   [Bulk Insert Task Editor &#40;Options Page&#41;](../../integration-services/control-flow/bulk-insert-task-editor-options-page.md)  
+ For more information about the properties that you can set in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click the following topic:  
   
 -   [Expressions Page](../../integration-services/expressions/expressions-page.md)  
   
@@ -115,4 +112,102 @@ manager: "jhubbard"
   
 -   Technical article, [Using SQL Server Integration Services to Bulk Load Data](http://go.microsoft.com/fwlink/?LinkId=233701), on simple-talk.com.  
   
+## Bulk Insert Task Editor (Connection Page)
+  Use the **Connection** page of the **Bulk Insert Task Editor** dialog box to specify the source and destination of the bulk insert operation and the format to use.  
+  
+ To learn about working with bulk inserts, see [Bulk Insert Task](../../integration-services/control-flow/bulk-insert-task.md) and [Format Files for Importing or Exporting Data &#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md).  
+  
+### Options  
+ **Connection**  
+ Select an OLE DB connection manager in the list, or click \<**New connection...**> to create a new connection.  
+  
+ **Related Topics:** [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md)  
+  
+ **DestinationTable**  
+ Type the name of the destination table or view or select a table or view in the list.  
+  
+ **Format**  
+ Select the source of the format for the bulk insert. This property has the options listed in the following table.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**Use File**|Select a file containing the format specification. Selecting this option displays the dynamic option, **FormatFile**.|  
+|**Specify**|Specify the format. Selecting this option displays the dynamic options, **RowDelimiter** and **ColumnDelimiter**.|  
+  
+ **File**  
+ Select a File or Flat File connection manager in the list, or click \<**New connection...**> to create a new connection.  
+  
+ The file location is relative to the SQL Server Database Engine specified in the connection manager for this task. The text file must be accessible by the SQL Server Database Engine either on a local hard drive on the server, or via a share or mapped drive to the SQL Server. The file is not accessed by the SSIS Runtime.  
+  
+ If you access the source file by using a Flat File connection manager, the Bulk Insert task does not use the format specified in the Flat File connection manager. Instead, the Bulk Insert task uses either the format specified in a format file or the values of the RowDelimiter and ColumnDelimiter properties of the task.  
+  
+ **Related Topics:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [Flat File Connection Manager](../../integration-services/connection-manager/flat-file-connection-manager.md) 
+  
+ **Refresh Tables**  
+ Refresh the list of tables and views.  
+  
+### Format Dynamic Options  
+  
+#### Format = Use File  
+ **FormatFile**  
+ Type the path of the format file or click the ellipsis button **(…)** to locate the format file.  
+  
+#### Format = Specify  
+ **RowDelimiter**  
+ Specify the row delimiter in the source file. The default value is **{CR}{LF}**.  
+  
+ **ColumnDelimiter**  
+ Specify the column delimiter in the source file. The default is **Tab**.  
+  
+## Bulk Insert Task Editor (General Page)
+  Use the **General** page of the **Bulk Insert Task Editor** dialog box to name and describe the Bulk Insert task.  
+  
+### Options  
+ **Name**  
+ Provide a unique name for the Bulk Insert task. This name is used as the label in the task icon.  
+  
+> [!NOTE]  
+>  Task names must be unique within a package.  
+  
+ **Description**  
+ Type a description of the Bulk Insert task.  
+ 
+## Bulk Insert Task Editor (Options Page)
+  Use the **Options** page of the **Bulk Insert Task Editor** dialog box to set properties for the bulk insert operation. The Bulk Insert task copies large amounts of data into a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table or view.  
+  
+ To learn about working with bulk inserts, see [Bulk Insert Task](../../integration-services/control-flow/bulk-insert-task.md) and [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md).  
+  
+### Options  
+ **CodePage**  
+ Specify the code page of the data in the data file.  
+  
+ **DataFileType**  
+ Specify the data-type value to use in the load operation.  
+  
+ **BatchSize**  
+ Specify the number of rows in a batch. The default is the entire data file. If you set **BatchSize** to zero, the data is loaded in a single batch.  
+  
+ **LastRow**  
+ Specify the last row to copy.  
+  
+ **FirstRow**  
+ Specify the first row from which to start copying.  
+  
+ **Options**  
+ |Term|Definition|  
+|----------|----------------|  
+|**Check constraints**|Select to check the table and column constraints.|  
+|**Keep nulls**|Select to retain null values during the bulk insert operation, instead of inserting any default values for empty columns.|  
+|**Enable identity insert**|Select to insert existing values into an identity column.|  
+|**Table lock**|Select to lock the table during the bulk insert.|  
+|**Fire triggers**|Select to fire any insert, update, or delete triggers on the table.|  
+  
+ **SortedData**  
+ Specify the ORDER BY clause in the bulk insert statement. The column name that you supply must be a valid column in the destination table. The default is **false**. This means that the data is not sorted by an ORDER BY clause.  
+  
+ **MaxErrors**  
+ Specify the maximum number of errors that can occur before the bulk insert operation is canceled. A value of 0 indicates that an infinite number of errors are allowed.  
+  
+> [!NOTE]  
+>  Each row that cannot be imported by the bulk load operation is counted as one error.  
   

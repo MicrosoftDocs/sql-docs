@@ -21,6 +21,9 @@ manager: "erikre"
 
   Process a cube using a specific processing type variable.  
   
+>[!NOTE] 
+>This article may contain outdated information and examples. Use the Get-Help cmdlet for the latest.
+  
 ## Syntax  
  `Invoke-ProcessCube [-Name] <System.String> [-Database] <System.String> [-ProcessType] <Microsoft.AnalysisServices.ProcessType> [<CommonParameters>]`  
   
@@ -94,10 +97,6 @@ manager: "erikre"
 ## Example 2  
  `PS SQL SERVER:\sqlas\locahost\default > Invoke-ProcessCube “Adventure Works” –database AWTEST –ProcessType:ProcessDefault`  
   
- This command processes the Adventure Works cube in the AWTEST database.  
-  
-## See Also  
- [PowerShell scripting in Analysis Services](../../analysis-services/instances/powershell-scripting-in-analysis-services.md)   
- [Manage Tabular Models Using PowerShell](http://go.microsoft.com/fwlink/?linkID=227685)  
+ This command processes the Adventure Works cube in the AWTEST database.   
   
   

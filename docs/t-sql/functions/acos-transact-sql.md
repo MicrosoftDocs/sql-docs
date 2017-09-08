@@ -1,7 +1,7 @@
 ---
 title: "ACOS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/15/2017"
+ms.date: "07/24/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -27,65 +27,66 @@ manager: "jhubbard"
 # ACOS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  A mathematical function that returns the angle, in radians, whose cosine is the specified **float** expression; also called arccosine.  
+A mathematical function that returns the angle, in radians, whose cosine is the specified **float** expression; also called arccosine.
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## Syntax  
   
-```  
+```sql
 -- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
   
 ACOS ( float_expression )  
 ```  
   
 ## Arguments  
- *float_expression*  
- Is an expression of the type **float** or of a type that can be implicitly converted to **float**, with a value from -1 through 1. Values outside this range return NULL and report a domain error.  
+*float_expression*  
+Is an expression of the type **float** or of a type that can be implicitly converted to **float**, with a value from -1 through 1. Values outside this range return NULL and report a domain error.
   
 ## Return Types  
- **float**  
+**float**
   
 ## Examples  
- The following example returns the ACOS of the specified number.  
+The following example returns the ACOS of the specified number.
   
-```  
+```sql
 SET NOCOUNT OFF;  
 DECLARE @cos float;  
 SET @cos = -1.0;  
 SELECT 'The ACOS of the number is: ' + CONVERT(varchar, ACOS(@cos));  
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```  
+```sql
 ---------------------------------   
 The ACOS of the number is: 3.14159   
   
 (1 row(s) affected)  
 ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- The following example returns the ACOS of the specified number.  
+### [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 
+
+The following example returns the ACOS of the specified number.
   
-```  
+```sql
 DECLARE @cos float;  
 SET @cos = -1.0;  
 SELECT 'The ACOS of the number is: ' + CONVERT(varchar, ACOS(@cos));  
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-```  
+```sql
 ---------------------------------   
 The ACOS of the number is: 3.14159   
   
 (1 row(s) affected)  
 ```  
   
-## See Also  
- [Mathematical Functions &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)   
- [Functions](../../t-sql/functions/functions.md)  
+## See also
+[Mathematical Functions &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
+[Functions](../../t-sql/functions/functions.md)
   
   
 

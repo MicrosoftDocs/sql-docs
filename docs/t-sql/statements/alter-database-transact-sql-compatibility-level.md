@@ -1,7 +1,7 @@
 ---
 title: "ALTER DATABASE Compatibility Level (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/28/2017"
+ms.date: "08/07/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -109,8 +109,19 @@ SELECT name, compatibility_level FROM sys.databases;
  When a stored procedure executes, it uses the current compatibility level of the database in which it is defined. When the compatibility setting of a database is changed, all of its stored procedures are automatically recompiled accordingly.  
 
 ## Differences Between Compatibility Level 130 and Level 140  
-This section describes new behaviors introduced with compatibility level 140.     
-Customers running in this level will get the latest language features and query optimizer behaviors (including changes in each pre-release version that Microsoft releases).    
+This section describes new behaviors introduced with compatibility level 140.
+
+|Compatibility-level setting of 130 or lower|Compatibility-level setting of 140|  
+|--------------------------------------------------|-----------------------------------------|  
+|Cardinality estimates for statements referencing multi-statement table valued functions use a fixed row guess.|Cardinality estimates for eligible statements referencing multi-statement table valued functions will use the actual cardinality of the function output.  This is enabled via **interleaved execution** for multi-statement table valued functions.|
+|Batch-mode queries that request insufficient memory grant sizes that result in spills to disk may continue to have issues on consecutive executions.|Batch-mode queries that request insufficient memory grant sizes that result in spills to disk may have improved performance on consecutive executions.  This is enabled via **batch mode memory grant feedback** which will update the memory grant size of a cached plan if spills have occurred for batch mode operators. |
+|Batch-mode queries that request an excessive memory grant size that results in concurrency issues may continue to have issues on consecutive executions.|Batch-mode queries that request an excessive memory grant size that results in concurrency issues may have improved concurrency on consecutive executions.  This is enabled via **batch mode memory grant feedback** which will update the memory grant size of a cached plan if an excessive amount was originally requested.|
+|Batch-mode queries that contain join operators are eligible for three physical join algorithms, including nested loop, hash join and merge join.  If cardinality estimates are incorrect for join inputs, an inappropriate join algorithm may be selected.  If this occurs, performance will suffer and the inappropriate join algorithm will remain in-use until the cached plan is recompiled.|There is an additional join operator called **adaptive join**. If cardinality estimates are incorrect for the outer build join input, an inappropriate join algorithm may be selected.  If this occurs and the statement is eligible for an adaptive join, a nested loop will be used for smaller join inputs and a hash join will be used for larger join inputs dynamically without requiring recompilation. |
+|Trivial plans referencing Columnstore indexes are not eligible for batch mode execution. |A trivial plan referencing Columnstore indexes will be discarded in favor of a plan that is eligible for batch mode execution.|
+|The sp_execute_external_script UDX operator can only run in row mode.|The sp_execute_external_script UDX operator is eligible for batch mode execution.|  
+|Multi-statement TVF's do not have interleaved execution |Interleaved execution for multi-statement TVFs to improve plan quality . |
+
+Fixes that were under  trace flag 4199 in earlier versions of SQL Server prior to SQL Server 2017 are now enabled by default. With compatibility mode 140. Trace flag 4199 will still be applicable for new query optimizer fixes that are released after SQL Server 2017. For information about Trace Flag 4199, see [Trace Flag 4199](https://support.microsoft.com/en-us/kb/974006).  
   
 ## Differences Between Compatibility Level 120 and Level 130  
 This section describes new behaviors introduced with compatibility level 130.   
@@ -169,7 +180,7 @@ Fixes that were under  trace flag 4199 in earlier versions of [!INCLUDE[ssNoVers
 |Full-text predicates are allowed in the OUTPUT clause.|Full-text predicates are not allowed in the OUTPUT clause.|Low|  
 |CREATE FULLTEXT STOPLIST, ALTER FULLTEXT STOPLIST, and DROP FULLTEXT STOPLIST are not supported. The system stoplist is automatically associated with new full-text indexes.|CREATE FULLTEXT STOPLIST, ALTER FULLTEXT STOPLIST, and DROP FULLTEXT STOPLIST are supported.|Low|  
 |MERGE is not enforced as a reserved keyword.|MERGE is a fully reserved keyword. The MERGE statement is supported under both 100 and 90 compatibility levels.|Low|  
-|Using the <dml_table_source> argument of the INSERT statement raises a syntax error.|You can capture the results of an OUTPUT clause in a nested INSERT, UPDATE, DELETE, or MERGE statement, and insert those results into a target table or view. This is done using the <dml_table_source> argument of the INSERT statement.|Low|  
+|Using the \<dml_table_source> argument of the INSERT statement raises a syntax error.|You can capture the results of an OUTPUT clause in a nested INSERT, UPDATE, DELETE, or MERGE statement, and insert those results into a target table or view. This is done using the \<dml_table_source> argument of the INSERT statement.|Low|
 |Unless NOINDEX is specified, DBCC CHECKDB or DBCC CHECKTABLE performs both physical and logical consistency checks on a single table or indexed view and on all its nonclustered and XML indexes. Spatial indexes are not supported.|Unless NOINDEX is specified, DBCC CHECKDB or DBCC CHECKTABLE performs both physical and logical consistency checks on a single table and on all its nonclustered indexes. However, on XML indexes, spatial indexes, and indexed views, only physical consistency checks are performed by default.<br /><br /> If WITH EXTENDED_LOGICAL_CHECKS is specified, logical checks are performed on indexed views, XML indexes, and spatial indexes, where present. By default, physical consistency checks are performed before the logical consistency checks. If NOINDEX is also specified, only the logical checks are performed.|Low|  
 |When an OUTPUT clause is used with a data manipulation language (DML) statement and a run-time error occurs during statement execution, the entire transaction is terminated and rolled back.|When an OUTPUT clause is used with a data manipulation language (DML) statement and a run-time error occurs during statement execution, the behavior depends on the SET XACT_ABORT setting. If SET XACT_ABORT is OFF, a statement abort error generated by the DML statement using the OUTPUT clause will terminate the statement, but the execution of the batch continues and the transaction is not rolled back. If SET XACT_ABORT is ON, all run-time errors generated by the DML statement using the OUTPUT clause will terminate the batch, and the transaction is rolled back.|Low|  
 |CUBE and ROLLUP are not enforced as reserved keywords.|CUBE and ROLLUP are reserved keywords within the GROUP BY clause.|Low|  

@@ -31,4 +31,3 @@
 ## [Complete the Wizard (SQL Server Import and Export Wizard)](complete-the-wizard-sql-server-import-and-export-wizard.md)  
 ## [Performing Operation (SQL Server Import and Export Wizard)](performing-operation-sql-server-import-and-export-wizard.md)  
 # [Data Type Mapping in the SQL Server Import and Export Wizard](data-type-mapping-in-the-sql-server-import-and-export-wizard.md)  
-# [Import data from Excel to SQL](import-data-from-excel-to-sql.md)

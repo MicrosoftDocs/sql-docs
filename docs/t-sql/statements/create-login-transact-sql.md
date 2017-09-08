@@ -1,7 +1,7 @@
 ---
 title: "CREATE LOGIN (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/05/2017"
+ms.date: "06/15/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -94,7 +94,7 @@ CREATE LOGIN loginName { WITH <option_list1> | FROM WINDOWS }
   
 ## Arguments  
  *login_name*  
- Specifies the name of the login that is created. There are four types of logins: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logins, Windows logins, certificate-mapped logins, and asymmetric key-mapped logins. When you are creating logins that are mapped from a Windows domain account, you must use the pre-Windows 2000 user logon name in the format [\<domainName>\\<login_name>]. You cannot use a UPN in the format login_name@DomainName. For an example, see example D later in this topic. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentication logins are type **sysname** and must conform to the rules for [Identifiers](http://msdn.microsoft.com/library/ms175874.aspx) and cannot contain a '**\\**'. Windows logins can contain a '**\\**'.  
+ Specifies the name of the login that is created. There are four types of logins: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logins, Windows logins, certificate-mapped logins, and asymmetric key-mapped logins. When you are creating logins that are mapped from a Windows domain account, you must use the pre-Windows 2000 user logon name in the format [\<domainName>\\<login_name>]. You cannot use a UPN in the format login_name@DomainName. For an example, see example D later in this topic. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentication logins are type **sysname** and must conform to the rules for [Identifiers](http://msdn.microsoft.com/library/ms175874.aspx) and cannot contain a '**\\**'. Windows logins can contain a '**\\**'. Logins based on Active Directory users, are limited to names of less than 21 characters.  
   
  PASSWORD **='***password***'**  
  Applies to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logins only. Specifies the password for the login that is being created. You should use a strong password. For more information see [Strong Passwords](../../relational-databases/security/strong-passwords.md) and [Password Policy](../../relational-databases/security/password-policy.md). Beginning with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], stored password information is calculated using SHA-512 of the salted password.  
@@ -128,22 +128,22 @@ CREATE LOGIN loginName { WITH <option_list1> | FROM WINDOWS }
   
 -   [!INCLUDE[ssSDS](../../includes/sssds-md.md)] login SID: a SID structure valid for [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Typically this is a 32 byte (**binary(32)**) literal consisting of `0x01060000000000640000000000000000` plus 16 bytes representing a GUID. For example `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`.  
   
- DEFAULT_DATABASE **=***database*  
+DEFAULT_DATABASE **=***database*  
  **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Specifies the default database to be assigned to the login. If this option is not included, the default database is set to master.  
   
- DEFAULT_LANGUAGE **=***language*  
+DEFAULT_LANGUAGE **=***language*  
  **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Specifies the default language to be assigned to the login. If this option is not included, the default language is set to the current default language of the server. If the default language of the server is later changed, the default language of the login remains unchanged.  
   
- CHECK_EXPIRATION **=** { ON | **OFF** }  
+CHECK_EXPIRATION **=** { ON | **OFF** }  
  **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Applies to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logins only. Specifies whether password expiration policy should be enforced on this login. The default value is OFF.  
   
- CHECK_POLICY **=** { **ON** | OFF }  
+CHECK_POLICY **=** { **ON** | OFF }  
  **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Applies to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logins only. Specifies that the Windows password policies of the computer on which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is running should be enforced on this login. The default value is ON.  
@@ -151,24 +151,21 @@ CREATE LOGIN loginName { WITH <option_list1> | FROM WINDOWS }
  If the Windows policy requires strong passwords, passwords must contain at least three of the following four characteristics:  
   
 -   An uppercase character (A-Z).  
-  
 -   A lowercase character (a-z).  
-  
 -   A digit (0-9).  
-  
 -   One of the non-alphanumeric characters, such as a space, _, @, *, ^, %, !, $, #, or &.  
   
- WINDOWS  
+WINDOWS  
  **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Specifies that the login be mapped to a Windows login.  
   
- CERTIFICATE *certname*  
+CERTIFICATE *certname*  
  **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Specifies the name of a certificate to be associated with this login. This certificate must already occur in the master database.  
   
- ASYMMETRIC KEY *asym_key_name*  
+ASYMMETRIC KEY *asym_key_name*  
  **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Specifies the name of an asymmetric key to be associated with this login. This key must already occur in the master database.  

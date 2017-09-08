@@ -1,7 +1,7 @@
 ---
 title: "BACKUP (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/26/2016"
+ms.date: "09/05/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -59,8 +59,7 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```  
-  
+``` 
 Backing Up a Whole Database   
 BACKUP DATABASE { database_name | @database_name_var }   
   TO <backup_device> [ ,...n ]   
@@ -174,13 +173,13 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
 > [!NOTE]  
 >  After a typical log backup, some transaction log records become inactive, unless you specify WITH NO_TRUNCATE or COPY_ONLY. The log is truncated after all the records within one or more virtual log files become inactive. If the log is not being truncated after routine log backups, something might be delaying log truncation. For more information, see.  
   
- { *database_name*| **@***database_name_var* }  
+ { *database_name*| **@**database_name_var* }  
  Is the database from which the transaction log, partial database, or complete database is backed up. If supplied as a variable (**@***database_name_var*), this name can be specified either as a string constant (**@***database_name_var***=***database name*) or as a variable of character string data type, except for the **ntext** or **text** data types.  
   
 > [!NOTE]  
 >  The mirror database in a database mirroring partnership cannot be backed up.  
   
- <file_or_filegroup> [ **,**...*n* ]  
+\<file_or_filegroup> [ **,**...*n* ]
  Used only with BACKUP DATABASE, specifies a database file or filegroup to include in a file backup, or specifies a read-only file or filegroup to include in a partial backup.  
   
  FILE **=** { *logical_file_name*| **@***logical_file_name_var* }  
@@ -193,7 +192,7 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
 >  Consider using file backups when the database size and performance requirements make a database backup impractical.  
   
  *n*  
- Is a placeholder that indicates that multiple files and filegroups can be specified in a comma-separated list. The number is unlimited.  
+ Is a placeholder that indicates that multiple files and filegroups can be specified in a comma-separated list. The number is unlimited. 
   
  For more information, see: [Full File Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-file-backups-sql-server.md) and [Back Up Files and Filegroups &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md).  
   
@@ -207,17 +206,17 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
 >  Explicitly listing the read/write filegroups by using FILEGROUP instead of READ_WRITE_FILEGROUPS creates a file backup.  
   
  FILEGROUP = { *logical_filegroup_name*| **@***logical_filegroup_name_var* }  
- Is the logical name of a read-only filegroup or a variable whose value equates to the logical name of a read-only filegroup that is to be included in the partial backup. For more information, see "<file_or_filegroup>," earlier in this topic.  
+Is the logical name of a read-only filegroup or a variable whose value equates to the logical name of a read-only filegroup that is to be included in the partial backup. For more information, see "\<file_or_filegroup>," earlier in this topic.
   
  *n*  
  Is a placeholder that indicates that multiple read-only filegroups can be specified in a comma-separated list.  
   
  For more information about partial backups, see [Partial Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/partial-backups-sql-server.md).  
   
- TO <backup_device> [ **,**...*n* ]  
+TO \<backup_device> [ **,**...*n* ]
  Indicates that the accompanying set of [backup devices](../../relational-databases/backup-restore/backup-devices-sql-server.md) is either an unmirrored media set or the first of the mirrors within a mirrored media set (for which one or more MIRROR TO clauses are declared).  
   
- <backup_device>  
+\<backup_device>
  Specifies a logical or physical backup device to use for the backup operation.  
   
  { *logical_device_name* | **@***logical_device_name_var* }  
@@ -226,12 +225,10 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
  { DISK | TAPE | URL} **=** { **'***physical_device_name***'** | **@***physical_device_name_var* }  
  Specifies a disk file or tape device, or a Windows Azure Blob storage service. The URL format is used for creating backups to the Windows Azure storage service. For more information and examples, see [SQL Server Backup and Restore with Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). For a tutorial, see [Tutorial: SQL Server Backup and Restore to Windows Azure Blob Storage Service](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md).  
   
-> [!WARNING]  
->  With [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 until [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], you can only backup to a single device when backing up to URL. In order to backup to multiple devices when backing up to URL you must use [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)) and you must use Shared Access Signature (SAS) tokens. For examples creating a Shared Access Signature, see [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md) and [Simplifying creation of SQL Credentials with Shared Access Signature ( SAS ) tokens on Azure Storage with Powershell](http://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx).  
+> [!IMPORTANT]  
+>  With [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 until [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], you can only backup to a single device when backing up to URL. In order to backup to multiple devices when backing up to URL, you must use [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and you must use Shared Access Signature (SAS) tokens. For examples creating a Shared Access Signature, see [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md) and [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with Powershell](http://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx).  
   
-||  
-|-|  
-|**URL:Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
+**URL applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
  A disk device does not have to exist before it is specified in a BACKUP statement. If the physical device exists and the INIT option is not specified in the BACKUP statement, the backup is appended to the device.  
   
@@ -243,16 +240,16 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
  *n*  
  Is a placeholder that indicates that up to 64 backup devices may be specified in a comma-separated list.  
   
- MIRROR TO <backup_device> [ **,**...*n* ]  
- Specifies a set of up to three secondary backup devices, each of which will mirror the backups devices specified in the TO clause. The MIRROR TO clause must be specify the same type and number of the backup devices as the TO clause. The maximum number of MIRROR TO clauses is three.  
+MIRROR TO \<backup_device> [ **,**...*n* ]
+ Specifies a set of up to three secondary backup devices, each of which mirrors the backups devices specified in the TO clause. The MIRROR TO clause must specify the same type and number of the backup devices as the TO clause. The maximum number of MIRROR TO clauses is three.  
   
  This option is available only in the Enterprise edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
 >  For MIRROR TO = DISK, BACKUP automatically determines the appropriate block size for disk devices. For more information about block size, see "BLOCKSIZE" later in this table.  
   
- <backup_device>  
- See "<backup_device>," earlier in this section.  
+\<backup_device>
+See "\<backup_device>," earlier in this section.
   
  *n*  
  Is a placeholder that indicates that up to 64 backup devices may be specified in a comma-separated list. The number of devices in the MIRROR TO clause must equal the number of devices in the TO clause.  
@@ -268,16 +265,12 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
  CREDENTIAL  
  Used only when creating a backup to the Windows Azure Blob storage service.  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
  FILE_SNAPSHOT  
  Used to create an Azure snapshot of the database files when all of the SQL Server database files are stored using the Azure Blob storage service. For more information, see [SQL Server Data Files in Microsoft Azure](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Snapshot Backup takes Azure snapshots of the database files (data and log files) at a consistent state. A consistent set of Azure snapshots make up a backup and are recorded in the backup file. The only difference between **BACKUP DATABASE TO URL WITH FILE_SNAPSHOT** and **BACKUP LOG TO URL WITH FILE_SNAPSHOT** is that the latter also truncates the transaction log while the former does not. With [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Snapshot Backup, after the initial full backup that is required by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to establish the backup chain, only a single transaction log backup is required to restore a database to the point in time of the transaction log backup. Furthermore, only two transaction log backups are required to restore a database to a point in time between the time of the two transaction log backups.  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
  DIFFERENTIAL  
  Used only with BACKUP DATABASE, specifies that the database or file backup should consist only of the portions of the database or file changed since the last full backup. A differential backup usually takes up less space than a full backup. Use this option so that all individual log backups performed since the last full backup do not have to be applied.  
@@ -307,14 +300,14 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
 -   SERVER ASYMMETRIC KEY = Encryptor_Name  
   
     > [!WARNING]  
-    >  When encryption is used in conjunction with the FILE_SNAPSHOT argument, the metadata file itself is encrypted using the specified encryption algorithm and the system verifies that TDE was completed for the database. No additional encryption happens for the data itself. The backup will fail if the database was not encrypted or if the encryption was not completed before the backup statement was issued.  
+    >  When encryption is used in conjunction with the FILE_SNAPSHOT argument, the metadata file itself is encrypted using the specified encryption algorithm and the system verifies that TDE was completed for the database. No additional encryption happens for the data itself. The backup fails if the database was not encrypted or if the encryption was not completed before the backup statement was issued.  
   
  **Backup Set Options**  
   
  These options operate on the backup set that is created by this backup operation.  
   
 > [!NOTE]  
->  To specify a backup set for a restore operation, use the FILE **=***<backup_set_file_number>* option. For more information about how to specify a backup set, see "Specifying a Backup Set" in [RESTORE Arguments &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
+>  To specify a backup set for a restore operation, use the FILE **=***\<backup_set_file_number>* option. For more information about how to specify a backup set, see "Specifying a Backup Set" in [RESTORE Arguments &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).
   
  COPY_ONLY  
  Specifies that the backup is a *copy-only backup*, which does not affect the normal sequence of backups. A copy-only backup is created independently of your regularly scheduled, conventional backups. A copy-only backup does not affect your overall backup and restore procedures for the database.  
@@ -460,10 +453,12 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
   
  MAXTRANSFERSIZE **=** { *maxtransfersize* | **@***maxtransfersize_variable* }  
  Specifies the largest unit of transfer in bytes to be used between [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and the backup media. The possible values are multiples of 65536 bytes (64 KB) ranging up to 4194304 bytes (4 MB).  
+> [!NOTE]  
+>  When the database has configured FILESTREAM, or includes or In-Memory OLTP File Groups, `MAXTRANSFERSIZE` at the time of restore should be greater than or equal to what was used when the backup was created.  
   
  **Error Management Options**  
   
- These options allow you to determine whether backup checksums are enabled for the backup operation and whether the operation will stop on encountering an error.  
+ These options allow you to determine whether backup checksums are enabled for the backup operation and whether the operation stops on encountering an error.  
   
  { **NO_CHECKSUM** | CHECKSUM }  
  Controls whether backup checksums are enabled.  
@@ -472,7 +467,7 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
  Explicitly disables the generation of backup checksums (and the validation of page checksums). This is the default behavior.  
   
  CHECKSUM  
- Specifies that the backup operation will verify each page for checksum and torn page, if enabled and available, and generate a checksum for the entire backup.  
+ Specifies that the backup operation verifies each page for checksum and torn page, if enabled and available, and generate a checksum for the entire backup.  
   
  Using backup checksums may affect workload and backup throughput.  
   
@@ -509,7 +504,7 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
   
  { **REWIND** | NOREWIND }  
  REWIND  
- Specifies that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will release and rewind the tape. REWIND is the default.  
+ Specifies that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] releases and rewinds the tape. REWIND is the default.  
   
  NOREWIND  
  Specifies that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will keep the tape open after the backup operation. You can use this option to help improve performance when performing multiple backup operations to a tape.  
@@ -524,10 +519,10 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
 >  UNLOAD/NOUNLOAD is a session setting that persists for the life of the session or until it is reset by specifying the alternative.  
   
  UNLOAD  
- Specifies that the tape is automatically rewound and unloaded when the backup is finished. UNLOAD is the default when a session begins.  
+ Specifies that the tape is automatically rewound and unloaded when the backup is finished. UNLOAD is the default when a session begins. 
   
  NOUNLOAD  
- Specifies that after the BACKUP operation the tape will remain loaded on the tape drive.  
+ Specifies that after the BACKUP operation the tape remains loaded on the tape drive.  
   
 > [!NOTE]  
 >  For a backup to a tape backup device, the BLOCKSIZE option to affect the performance of the backup operation. This option typically affects performance only when writing to tape devices.  
@@ -553,7 +548,7 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
  This file holds the rolled back changes, which must be reversed if RESTORE LOG operations are to be subsequently applied. There must be enough disk space for the standby file to grow so that it can contain all the distinct pages from the database that were modified by rolling back uncommitted transactions.  
   
  NO_TRUNCATE  
- Specifies that the log not be truncated and causes the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to attempt the backup regardless of the state of the database. Consequently, a backup taken with NO_TRUNCATE might have incomplete metadata. This option allows backing up the log in situations where the database is damaged.  
+ Specifies that the is log not truncated and causes the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to attempt the backup regardless of the state of the database. Consequently, a backup taken with NO_TRUNCATE might have incomplete metadata. This option allows backing up the log in situations where the database is damaged.  
   
  The NO_TRUNCATE option of BACKUP LOG is equivalent to specifying both COPY_ONLY and CONTINUE_AFTER_ERROR.  
   
@@ -619,7 +614,7 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
   
  The following example writes a backup of the [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] database to a new striped media set that uses three disk files.  
   
-```  
+```tsql  
 BACKUP DATABASE AdventureWorks2012  
 TO DISK='X:\SQLServerBackups\AdventureWorks1.bak',   
 DISK='Y:\SQLServerBackups\AdventureWorks2.bak',   
@@ -632,7 +627,7 @@ GO
   
  After a backup device is defined as part of a stripe set, it cannot be used for a single-device backup unless FORMAT is specified. Similarly, a backup device that contains nonstriped backups cannot be used in a stripe set unless FORMAT is specified. To split a striped backup set, use FORMAT.  
   
- If neither MEDIANAME nor MEDIADESCRIPTION is specified when a media header is written, the media header field corresponding to the blank item is empty.  
+ If neither MEDIANAME or MEDIADESCRIPTION is specified when a media header is written, the media header field corresponding to the blank item is empty.  
   
 #### Working with a Mirrored Media Set  
  Typically, backups are unmirrored, and BACKUP statements simply include a TO clause. However, a total of four mirrors is possible per media set. For a mirrored media set, the backup operation writes to multiple groups of backup devices. Each group of backup devices comprises a single mirror within the mirrored media set. Every mirror must use the same quantity and type of physical backup devices, which must all have the same properties.  
@@ -641,7 +636,7 @@ GO
   
  For a mirrored media set, each MIRROR TO clause must list the same number and type of devices as the TO clause. The following example writes to a mirrored media set that contains two mirrors and uses three devices per mirror:  
   
-```  
+```tsql  
 BACKUP DATABASE AdventureWorks2012  
 TO DISK='X:\SQLServerBackups\AdventureWorks1a.bak',   
 DISK='Y:\SQLServerBackups\AdventureWorks2a.bak',   
@@ -767,7 +762,7 @@ GO
 ###  <a name="backing_up_db"></a> A. Backing up a complete database  
  The following example backs up the [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] database to a disk file.  
   
-```  
+```tsql  
 BACKUP DATABASE AdventureWorks2012   
  TO DISK = 'Z:\SQLServerBackups\AdvWorksData.bak'  
    WITH FORMAT;  
@@ -781,7 +776,7 @@ GO
   
  The example then creates a full database backup to `AdvWorksData`, and after a period of update activity, backs up the log to `AdvWorksLog`.  
   
-```  
+```tsql  
 -- To permit log backups, before the full database backup, modify the database   
 -- to use the full recovery model.  
 USE master;  
@@ -814,7 +809,7 @@ GO
 ###  <a name="full_file_backup"></a> C. Creating a full file backup of the secondary filegroups  
  The following example creates a full file backup of every file in both of the secondary filegroups.  
   
-```  
+```tsql  
 --Back up the files in SalesGroup1:  
 BACKUP DATABASE Sales  
    FILEGROUP = 'SalesGroup1',  
@@ -826,7 +821,7 @@ GO
 ###  <a name="differential_file_backup"></a> D. Creating a differential file backup of the secondary filegroups  
  The following example creates a differential file backup of every file in both of the secondary filegroups.  
   
-```  
+```tsql  
 --Back up the files in SalesGroup1:  
 BACKUP DATABASE Sales  
    FILEGROUP = 'SalesGroup1',  
@@ -840,7 +835,7 @@ GO
 ###  <a name="create_single_family_mirrored_media_set"></a> E. Creating and backing up to a single-family mirrored media set  
  The following example creates a mirrored media set containing a single media family and four mirrors and backs up the [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] database to them.  
   
-```  
+```tsql  
 BACKUP DATABASE AdventureWorks2012  
 TO TAPE = '\\.\tape0'  
 MIRROR TO TAPE = '\\.\tape1'  
@@ -854,7 +849,7 @@ WITH
 ###  <a name="create_multifamily_mirrored_media_set"></a> F. Creating and backing up to a multifamily mirrored media set  
  The following example creates a mirrored media set in which each mirror consists of two media families. The example then backs up the [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] database to both mirrors.  
   
-```  
+```tsql  
 BACKUP DATABASE AdventureWorks2012  
 TO TAPE = '\\.\tape0', TAPE = '\\.\tape1'  
 MIRROR TO TAPE = '\\.\tape2', TAPE = '\\.\tape3'  
@@ -866,7 +861,7 @@ WITH
 ###  <a name="existing_mirrored_media_set"></a> G. Backing up to an existing mirrored media set  
  The following example appends a backup set to the media set created in the preceding example.  
   
-```  
+```tsql  
 BACKUP LOG AdventureWorks2012  
 TO TAPE = '\\.\tape0', TAPE = '\\.\tape1'  
 MIRROR TO TAPE = '\\.\tape2', TAPE = '\\.\tape3'  
@@ -881,7 +876,7 @@ WITH
 ###  <a name="creating_compressed_backup_new_media_set"></a> H. Creating a compressed backup in a new media set  
  The following example formats the media, creating a new media set, and perform a compressed full backup of the [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] database.  
   
-```  
+```tsql  
 BACKUP DATABASE AdventureWorks2012 TO DISK='Z:\SQLServerBackups\AdvWorksData.bak'   
 WITH   
    FORMAT,   

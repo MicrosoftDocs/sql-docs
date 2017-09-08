@@ -1,7 +1,7 @@
 ---
 title: "ALTER AVAILABILITY GROUP (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/17/2017"
+ms.date: "08/07/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -65,7 +65,7 @@ ALTER AVAILABILITY GROUP group_name
   | FAILURE_CONDITION_LEVEL  = { 1 | 2 | 3 | 4 | 5 }   
   | HEALTH_CHECK_TIMEOUT = milliseconds  
   | DB_FAILOVER  = { ON | OFF }   
-  | REQUIRED_SYNCHRONOUS_SECONDARIES_TO_COMMIT = { integer }
+  | REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT = { integer }
   
 <server_instance> ::=   
  { 'system_name[\instance_name]' | 'FCI_network_name[\instance_name]' }  
@@ -114,7 +114,7 @@ ALTER AVAILABILITY GROUP group_name
 <add_availability_group_spec>::=  
  <ag_name> WITH  
     (  
-       LISTENER = 'TCP://system-address:port',  
+       LISTENER_URL = 'TCP://system-address:port',  
        AVAILABILITY_MODE = { SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT },  
        FAILOVER_MODE = MANUAL,  
        SEEDING_MODE = { AUTOMATIC | MANUAL }  
@@ -219,7 +219,7 @@ ALTER AVAILABILITY GROUP group_name
  For more information regarding this setting, see [Database Level Health Detection Option](../../database-engine/availability-groups/windows/sql-server-always-on-database-health-detection-failover-option.md) 
 
  
- REQUIRED_SYNCHRONOUS_SECONDARIES_TO_COMMIT   
+ REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT   
  Introduced in SQL Server 2017 CTP 2.2. Used to set a minimum number of synchronous secondary replicas required to commit before the primary commits a transaction. Guarantees that SQL Server transactions will wait until the transaction logs are updated on the minimum number of secondary replicas. The default is 0 which gives the same behavior as SQL Server 2016. The minimum value is 0. The maximum value is the number of replicas minus 1. This option relates to replicas in synchronous commit mode. When replicas are in synchronous commit mode, writes on the primary replica wait until writes on the secondary synchronous replicas are committed to the replica database transaction log. If a SQL Server that hosts a secondary synchronous replica stops responding, the SQL Server that hosts the primary replica will mark that secondary replica as NOT SYNCHRONIZED and proceed. When the unresponsive database comes back online it will be in a "not synced" state and the replica will be marked as unhealthy until the primary can make it synchronous again. This setting guarantees that the primary replica will not proceed until the minimum number of replicas have committed each transaction. If the minimum number of replicas is not available then commits on the primary will fail. This setting applies to availability groups with cluster type `WSFC` and `EXTERNAL`. For cluster type `EXTERNAL` the setting is changed when the availability group is added to a cluster resource. See [High availability and data protection for availability group configurations](../../linux/sql-server-linux-availability-group-ha.md).
   
  ADD DATABASE *database_name*  
@@ -242,7 +242,7 @@ ALTER AVAILABILITY GROUP group_name
   
  You need to join every new secondary replica to the availability group. For more information, see the description of the JOIN option, later in this section.  
   
- <server_instance>  
+ \<server_instance>  
  Specifies the address of the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that is the host for a replica. The address format depends on whether the instance is the default instance or a named instance and whether it is a standalone instance or a failover cluster instance (FCI). The syntax is as follows:  
   
  { '*system_name*[\\*instance_name*]' | '*FCI_network_name*[\\*instance_name*]' }  
@@ -366,7 +366,7 @@ ALTER AVAILABILITY GROUP group_name
  ALL  
  All connections are allowed to the databases in the primary replica. This is the default behavior.  
   
- READ_ONLY_ROUTING_LIST **=** { **(‘**<server_instance>**’** [ **,**...*n* ] **)** | NONE }  
+ READ_ONLY_ROUTING_LIST **=** { **(‘**\<server_instance>**’** [ **,**...*n* ] **)** | NONE }  
  Specifies a comma-separated list of server instances that host availability replicas for this availability group that meet the following requirements when running under the secondary role:  
   
 -   Be configured to allow all connections or read-only connections (see the ALLOW_CONNECTIONS argument of the SECONDARY_ROLE option, above).  
@@ -375,7 +375,7 @@ ALTER AVAILABILITY GROUP group_name
   
  The READ_ONLY_ROUTING_LIST values are as follows:  
   
- <server_instance>  
+ \<server_instance>  
  Specifies the address of the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that is the host for an availability replica that is a readable secondary replica when running under the secondary role.  
   
  Use a comma-separated list to specify all of the server instances that might host a readable secondary replica. Read-only routing will follow the order in which server instances are specified in the list. If you include a replica's host server instance on the replica's read-only routing list, placing this server instance at the end of the list is typically a good practice, so that read-intent connections go to a secondary replica, if one is available.  
@@ -436,7 +436,7 @@ ALTER AVAILABILITY GROUP group_name
   
  For information about the limitations, prerequisites and recommendations for forcing failover and the effect of a forced failover on the former primary databases in the availability group, see [Perform a Forced Manual Failover of an Availability Group &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md).  
   
- ADD LISTENER **‘***dns_name***’(** <add_listener_option> **)**  
+ ADD LISTENER **‘***dns_name***’(** \<add_listener_option> **)**  
  Defines a new availability group listener for this availability group. Supported only on the primary replica.  
   
 > [!IMPORTANT]  
@@ -460,7 +460,7 @@ ALTER AVAILABILITY GROUP group_name
  JOIN AVAILABILITY GROUP ON  
  Joins to a *distributed availability group*. When you create a distributed availability group, the availability group on the cluster where it is created is the primary availability group. The availability group that joins the distributed availability group is the secondary availability group.  
   
- <ag_name>  
+ \<ag_name>  
  Specifies the name  of the availability group that makes up one half of the distributed availability group.  
   
  LISTENER **='**TCP**://***system-address***:***port***'**  
@@ -517,7 +517,7 @@ ALTER AVAILABILITY GROUP group_name
  DENY CREATE ANY DATABASE  
  Removes the ability of the availability group to create databases on behalf of the primary replica.  
   
- <add_listener_option>  
+ \<add_listener_option>  
  ADD LISTENER takes one of the following options:  
   
  WITH DHCP [ ON { **(‘***four_part_ipv4_address***’,‘***four_part_ipv4_mask***’)** } ]  
@@ -553,10 +553,10 @@ ALTER AVAILABILITY GROUP group_name
   
  For example: `WITH IP ( ('2001::4898:23:1002:20f:1fff:feff:b3a3') ) , PORT = 7777`  
   
- MODIFY LISTENER **‘***dns_name***’(** <modify_listener_option> **)**  
+ MODIFY LISTENER **‘***dns_name***’(** \<modify_listener_option> **)**  
  Modifies an existing availability group listener for this availability group. Supported only on the primary replica.  
   
- <modify_listener_option>  
+ \<modify_listener_option>  
  MODIFY LISTENER takes one of the following options:  
   
  ADD IP { **(‘***four_part_ipv4_address***’,‘***four_part_ipv4_mask***’)** | **(‘**dns_name*ipv6_address***’)** }  

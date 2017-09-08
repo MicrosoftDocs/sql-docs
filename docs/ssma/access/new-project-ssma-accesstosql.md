@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "New Project dialog box"
 ms.assetid: ca294f6d-eeb5-42ca-9306-156281a3f0f3
 caps.latest.revision: 15
-author: "sabotta"
-ms.author: "carlasab"
-manager: "lonnyb"
+author: "Shamikg"
+ms.author: "Shamikg"
+manager: "jhubbard"
 ---
 # New Project (SSMA) (AccessToSQL)
 Use the **New Project** dialog box to create a new SSMA project. To access the **New Project** dialog box, on the **File** menu, click **New Project**.  

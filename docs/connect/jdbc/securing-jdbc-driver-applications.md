@@ -30,6 +30,7 @@ manager: "jhubbard"
 |[Validating User Input](../../connect/jdbc/validating-user-input.md)|Describes techniques to validate user input.|  
 |[Application Security](../../connect/jdbc/application-security.md)|Describes how to use Java policy permissions to help secure a JDBC driver application.|  
 |[Using SSL Encryption](../../connect/jdbc/using-ssl-encryption.md)|Describes how to establish a secure communication channel with a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database using Secure Sockets Layer (SSL).|  
+|[FIPS Mode](../../connect/jdbc/fips-mode.md)|Describes how to use JDBC driver in FIPS complainant mode.| 
   
 ## See Also  
  [Overview of the JDBC Driver](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

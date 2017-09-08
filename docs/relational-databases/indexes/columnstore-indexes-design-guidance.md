@@ -18,7 +18,7 @@ manager: "jhubbard"
 # Columnstore indexes - design guidance
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-High-level recommendations for designing columnstore indexes. A small number of good decision decisions helps you achieve the high data compression and query performance that columnstore indexes are designed to provide. 
+High-level recommendations for designing columnstore indexes. A small number of good design decisions helps you achieve the high data compression and query performance that columnstore indexes are designed to provide. 
 
 ## Prerequisites
 

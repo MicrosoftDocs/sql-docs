@@ -9,11 +9,14 @@ ms.technology:
   - "database-engine"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
+f1_keywords: 
+  - "sql13.swb.connectionproperties.f1"
 helpviewer_keywords: 
   - "viewing server properties"
   - "server properties [SQL Server]"
   - "displaying server properties"
   - "servers [SQL Server], viewing"
+  - "Connection Properties dialog box"
 ms.assetid: 55f3ac04-5626-4ad2-96bd-a1f1b079659d
 caps.latest.revision: 32
 author: "BYHAM"

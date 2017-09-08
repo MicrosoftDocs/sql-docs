@@ -14,9 +14,9 @@ applies_to:
   - "SQL Server"
 ms.assetid: 04cd7ffa-5402-4aba-90dd-8b562dd4b0bb
 caps.latest.revision: 3
-author: "sabotta"
-ms.author: "carlasab"
-manager: "lonnyb"
+author: "Shamikg"
+ms.author: "Shamikg"
+manager: "jhubbard"
 ---
 # Troubleshooting (AccessToSQL)
 It is not uncommon to run into migration issues midway executing the console scripts or commands.  

@@ -63,7 +63,7 @@ manager: "jhubbard"
   
     -   Can import a DACPAC into a database project and continue to design the database.  
   
-SQL Server Data Tools also supports a Local DB for unconnected, client-side database application development. The developer can take a snapshot of this local database to create DACPAC contained in a .dacpac file.  
+        SQL Server Data Tools also supports a Local DB for unconnected, client-side database application development. The developer can take a snapshot of this local database to create DACPAC contained in a .dacpac file.  
   
     -   Independently, the developer can publish a database project directly to a database without even generating a DACPAC. The publish operation follows similar behavior as the deploy operation from other tools.  
   

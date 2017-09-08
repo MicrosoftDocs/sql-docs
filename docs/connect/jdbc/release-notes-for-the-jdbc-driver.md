@@ -18,7 +18,36 @@ manager: "jhubbard"
 # Release Notes for the JDBC Driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-    
+## Updates in Microsoft JDBC Driver 6.2 for SQL Server
+The Microsoft JDBC Driver 6.2 for SQL Server is fully compliant with JDBC specifications 4.1 and 4.2. The jars contained in the 6.0 package are named according to Java version compatibility. For example, the mssql-jdbc-6.2.1.jre8.jar file from the 6.2 package is recommended to be used with Java 8. 
+
+**Note:** An issue with the metadata caching improvement was found in the JDBC 6.2 RTW released on June 29, 2017. The improvement was rolled back and new jars (version 6.2.1) were released on July 17, 2017 on the [Microsoft Download Center](https://go.microsoft.com/fwlink/?linkid=852460), [GitHub](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.1), and [Maven Central](http://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22com.microsoft.sqlserver%22%20AND%20a%3A%22mssql-jdbc%22). Please update your projects to use the 6.2.1 release jars. Please view [release notes](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.1) for more details.
+
+**Azure Active Directory (AAD) support for Linux**
+
+Connect your Linux applications to Azure SQL Database using AAD authentication via username/password and access token methods.
+
+**Federal Information Processing Standard (FIPS) enabled JVMs**
+
+The JDBC Driver can now be used on JVMs that run in FIPS 140 compliance mode to meet federal standards and compliance. 
+
+**Kerberos Authentication Improvements** 
+
+The JDBC Driver now has support for: 
+* Principal/Password method for applications where the Kerberos configuration cannot be modified or unable to retrieve a new token or keytab. This method can be used for authenticating to a SQL Server that only allows Kerberos authentication. 
+* Cross-realm authentication using Kerberos Integrated authentication without explicitly setting the server SPN. The driver now automatically computes the REALM even when it has not been provided.
+* Kerberos Constrained Delegation by accepting impersonated user credentials as a GSS Credential object via data source. This impersonated credential is then used to establish a Kerberos connection. 
+
+**Added Timeouts**
+
+The JDBC Driver now supports the following configurable timeouts you can change based on your application’s needs: 
+* Query Timeout to control the number of seconds to wait before a timeout occurs when running a query. 
+* Socket Timeout to specify the number of milliseconds to wait before a timeout occurs on a socket read or accept. 
+
+## Updates in Microsoft JDBC Driver 6.1 for SQL Server
+
+The Microsoft JDBC Driver 6.1 for SQL Server is fully compliant with JDBC specifications 4.1 and 4.2. This is the initial open source release of the JDBC Driver and contains the mssql-jdbc-6.1.0.jre8.jar mssql-jdbc-6.1.0.jre7.jar files, which correspond to the Java version compatibility. 
+
 ## Updates in Microsoft JDBC Driver 6.0 for SQL Server
 
 The Microsoft JDBC Driver 6.0 for SQL Server is fully compliant with JDBC specifications 4.1 and 4.2. The jars contained in the 6.0 package are named according to their compliance with the JDBC API version. For example, the sqljdbc42.jar file from the 6.0 package is JDBC API 4.2 compliant. Similarly, the sqljdbc41.jar file is compliant with JDBC API 4.1.

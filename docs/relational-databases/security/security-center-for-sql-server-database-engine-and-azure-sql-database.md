@@ -3,10 +3,10 @@ title: "Security Center for SQL Server Database Engine and Azure SQL Database | 
 ms.custom: 
   - "MSDN content"
   - "MSDN - SQL DB"
-ms.date: "01/31/2017"
+ms.date: "06/28/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
-ms.service: "sql-database"
+ms.service: 
 ms.suite: ""
 ms.technology: 
   - "database-engine"
@@ -23,7 +23,7 @@ ms.assetid: dfb39d16-722a-4734-94bb-98e61e014ee7
 caps.latest.revision: 55
 author: "BYHAM"
 ms.author: "rickbyh"
-manager: "jhubbard"
+manager: "craigg"
 ---
 # Security Center for SQL Server Database Engine and Azure SQL Database
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -54,7 +54,7 @@ manager: "jhubbard"
   
 |||  
 |-|-|  
-|**Encrypting Files**<br /><br /> ![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") BitLocker Encryption (Drive Level)<br /><br /> ![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") NTFS Encryption (Folder Level)<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") Transparent Data Encryption (File Level)<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") Backup Encryption (File Level)|[BitLocker (Drive Level)](http://support.microsoft.com/kb/2855131)<br /><br /> [NTFS Encryption (Folder Level)](http://msdn.microsoft.com/library/dd163562.aspx)<br /><br /> [Transparent Data Encryption (File Level)](../../relational-databases/security/encryption/transparent-data-encryption-tde.md)<br /><br /> [Backup Encryption (File Level)](../../relational-databases/backup-restore/backup-encryption.md)|  
+|**Encrypting Files**<br /><br /> ![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") BitLocker Encryption (Drive Level)<br /><br /> ![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") NTFS Encryption (Folder Level)<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") Transparent Data Encryption (File Level)<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") Backup Encryption (File Level)|[BitLocker (Drive Level)](http://support.microsoft.com/kb/2855131)<br /><br /> [NTFS Encryption (Folder Level)](http://msdn.microsoft.com/library/dd163562.aspx)<br /><br /> [Transparent Data Encryption (File Level)](../../relational-databases/security/encryption/transparent-data-encryption.md)<br /><br /> [Backup Encryption (File Level)](../../relational-databases/backup-restore/backup-encryption.md)|  
 |**Encrypting Sources**<br /><br /> ![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") Extensible Key Management Module<br /><br /> ![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") Keys Stored in the Azure Key Vault<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") Always Encrypted|[Extensible Key Management Module](../../relational-databases/security/encryption/extensible-key-management-ekm.md)<br /><br /> [Keys Stored in the Azure Key Vault](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)<br /><br /> [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)|  
 |**Column, Data, & Key Encryption**<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") Encrypt by Certificate<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") Encrypt by Symmetric Key<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") Encrypt by Asymmetric Key<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") Encrypt by Passphrase|[Encrypt by Certificate](../../t-sql/functions/encryptbycert-transact-sql.md)<br /><br /> [Encrypt by Asymmetric Key](../../t-sql/functions/encryptbyasymkey-transact-sql.md)<br /><br /> [Encrypt by Symmetric Key](../../t-sql/functions/encryptbykey-transact-sql.md)<br /><br /> [Encrypt by Passphrase](../../t-sql/functions/encryptbypassphrase-transact-sql.md)<br /><br /> [Encrypt a Column of Data](../../relational-databases/security/encryption/encrypt-a-column-of-data.md)|  
   
@@ -95,5 +95,4 @@ manager: "jhubbard"
  [TRUSTWORTHY Database Property](../../relational-databases/security/trustworthy-database-property.md)   
  [Database Engine Features and Tasks](http://msdn.microsoft.com/library/d9efe145-3306-4d61-bd77-e2af43e19c34)  
  [Protecting Your SQL Server Intellectual Property](../../relational-databases/security/protecting-your-sql-server-intellectual-property.md)   
-  
   

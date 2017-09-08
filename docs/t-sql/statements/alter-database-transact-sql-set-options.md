@@ -3,7 +3,7 @@ title: "ALTER DATABASE SET Options (Transact-SQL) | Microsoft Docs"
 description: Learn about how to set database options such as automatic tuning, encryption, query store in a SQL Server and Azure SQL Database
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "04/27/2017"
+ms.date: "08/07/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -45,7 +45,7 @@ manager: "jhubbard"
   
 -   [ALTER DATABASE &#40;Parallel Data Warehouse&#41;](../../t-sql/statements/alter-database-parallel-data-warehouse.md)  
   
- Database mirroring, [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], and compatibility levels are `SET` options but are described in separate topics because of their length. For more information, see [ALTER DATABASE Database Mirroring &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md), [ALTER DATABASE SET HADR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-hadr.md), and [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
+Database mirroring, [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], and compatibility levels are `SET` options but are described in separate topics because of their length. For more information, see [ALTER DATABASE Database Mirroring &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md), [ALTER DATABASE SET HADR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-hadr.md), and [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
 > [!NOTE]  
 >  Many database set options can be configured for the current session by using [SET Statements &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md) and are often configured by applications when they connect. Session level set options override the **ALTER DATABASE SET** values. The database options described below are values that can be set for sessions that do not explicitly provide other set option values.  
@@ -367,17 +367,17 @@ SET
   
  For more information that describes when to use synchronous or asynchronous statistics updates, see the section "Using the Database-Wide Statistics Options" in [Statistics](../../relational-databases/statistics/statistics.md).  
   
- **\<automatic\_tuning\_option> ::=**  
+ **\<automatic_tuning_option> ::=**  
  **Applies to**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].  
 
  Enables or disables `FORCE_LAST_GOOD_PLAN` [automatic tuning](../../relational-databases/automatic-tuning/automatic-tuning.md) option.  
   
- FORCE\_LAST\_GOOD\_PLAN = { ON | **OFF** }  
+ FORCE_LAST_GOOD_PLAN = { ON | OFF }  
  ON  
  The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] automatically forces the last known good plan on the [!INCLUDE[tsql_md](../../includes/tsql_md.md)] queries where new SQL plan causes performance regressions. The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] continously monitors query performance of the [!INCLUDE[tsql_md](../../includes/tsql_md.md)] query with the forced plan. If there are performance gains, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] will keep using last known good plan. If performance gains are not detected, the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] will produce a new SQL plan. The statement will fail if Query Store is not enabled or if it is not in *Read-Write* mode.   
 
  OFF  
- The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] reports potential query performance regressions caused by SQL plan changes in [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) view. However, these recommendations are not automatically applied. User can monitor active recomendations and fix identified problems by applying [!INCLUDE[tsql_md](../../includes/tsql_md.md)] scripts that are shown in the view.
+ The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] reports potential query performance regressions caused by SQL plan changes in [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) view. However, these recommendations are not automatically applied. User can monitor active recomendations and fix identified problems by applying [!INCLUDE[tsql_md](../../includes/tsql_md.md)] scripts that are shown in the view. This is the default value.
 
  **\<change_tracking_option> ::=**  
   
@@ -388,19 +388,19 @@ SET
  ON  
  Enables change tracking for the database. When you enable change tracking, you can also set the AUTO CLEANUP and CHANGE RETENTION options.  
   
- AUTO_CLEANUP = { **ON** | OFF }  
+ AUTO_CLEANUP = { ON | OFF }  
  ON  
  Change tracking information is automatically removed after the specified retention period.  
   
  OFF  
  Change tracking data is not removed from the database.  
   
- CHANGE_RETENTION =*retention_period* { **DAYS** | HOURS | MINUTES }  
+ CHANGE_RETENTION =*retention_period* { DAYS | HOURS | MINUTES }  
  Specifies the minimum period for keeping change tracking information in the database. Data is removed only when the AUTO_CLEANUP value is ON.  
   
  *retention_period* is an integer that specifies the numerical component of the retention period.  
   
- The default retention period is 2 days. The minimum retention period is 1 minute.  
+ The default retention period is 2 days. The minimum retention period is 1 minute. The default retention type is DAYS.  
   
  OFF  
  Disables change tracking for the database. You must disable change tracking on all tables before you can disable change tracking off the database.  
@@ -411,7 +411,7 @@ SET
   
  Controls database containment options.  
   
- CONTAINMENT **=** { NONE | PARTIAL}  
+ CONTAINMENT = { NONE | PARTIAL}  
  NONE  
  The database is not a contained database.  
   
@@ -479,7 +479,7 @@ SET
  Controls the database encryption state.  
   
  ENCRYPTION {ON | OFF}  
- Sets the database to be encrypted (ON) or not encrypted (OFF). For more information about database encryption, see [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption-tde.md), and [Transparent Data Encryption with Azure SQL Database](../../relational-databases/security/encryption/transparent-data-encryption-with-azure-sql-database.md).  
+ Sets the database to be encrypted (ON) or not encrypted (OFF). For more information about database encryption, see [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md), and [Transparent Data Encryption with Azure SQL Database](../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md).  
   
  When encryption is enabled at the database level all filegroups will be encrypted. Any new filegroups will inherit the encrypted property. If any filegroups in the database are set to **READ ONLY**, the database encryption operation will fail.  
   
@@ -671,7 +671,7 @@ MULTI_USER
   
  This setting is ON for all system databases. **tempdb** is the only system database that supports OFF.  
   
- **\<parameterization_option> ::=**  
+ **\<PARAMETERIZATION_option> ::=**  
   
  Controls the parameterization option.  
   
@@ -688,17 +688,17 @@ MULTI_USER
   
  **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
-> [!IMPORTANT]  
->  This is currently a preview feature. To use the Query Store you must acknowledge and agree that implementation of Query Store is subject to the preview terms in your license agreement (e.g. the Enterprise Agreement, Microsoft Azure Agreement, or Microsoft Online Subscription Agreement), as well as any applicable [Supplemental Terms of Use for Microsoft Azure Preview](http://azure.microsoft.com/en-us/support/legal/preview-supplemental-terms/).  
-  
  ON | OFF | CLEAR [ ALL ]  
  Controls if the query store is enabled in this database, and also controls removing the contents of the query store.  
   
--   ON enables the query store.  
+ON  
+ Enables the query store.  
   
--   OFF disables the query store.  
+OFF  
+ Disables the query store.  This is the default value.   
   
--   CLEAR remove the contents of the query store.  
+CLEAR  
+ Remove the contents of the query store.  
   
 OPERATION_MODE  
  Describes the operation mode of the query store. Valid values are READ_ONLY and READ_WRITE. In READ_WRITE mode, the query store collects and persists query plan and runtime execution statistics information. In READ_ONLY mode, information can be read from the query store, but new information is not added. If the maximum allocated space of the query store has been exhausted, the query store will change is operation mode to READ_ONLY.  
@@ -718,20 +718,25 @@ OPERATION_MODE
  SIZE_BASED_CLEANUP_MODE  
  Controls whether cleanup will be automatically activated when total amount of data gets close to maximum size:  
   
- OFF – size based cleanup won’t be automatically activated. 
+ OFF  
+ Size based cleanup won’t be automatically activated. 
   
- AUTO – size based cleanup will be automatically activated when size on disk reaches 90% of **max_storage_size_mb**. Size based cleanup removes the least expensive and oldest queries first. It stops at approximately 80% of **max_storage_size_mb**.  This is the default configuration value.  
+ AUTO  
+ Size based cleanup will be automatically activated when size on disk reaches 90% of **max_storage_size_mb**. Size based cleanup removes the least expensive and oldest queries first. It stops at approximately 80% of **max_storage_size_mb**.  This is the default configuration value.  
   
  SIZE_BASED_CLEANUP_MODE is type **nvarchar**.  
   
  QUERY_CAPTURE_MODE  
  Designates the currently active query capture mode:  
   
- ALL – all queries are captured. This is the default configuration value.  This is the default configuration value for [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]
+ ALL 
+ All queries are captured. This is the default configuration value.  This is the default configuration value for [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]
   
- AUTO – capture relevant queries based on execution count and resource consumption.  This is the default configuration value for [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
+ AUTO 
+ Capture relevant queries based on execution count and resource consumption.  This is the default configuration value for [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
   
- NONE – stop capturing new queries. Query Store will continue to collect compile and runtime statistics for queries that were captured already. Use this configuration with caution since you may miss to capture important queries.  
+ NONE 
+ Stop capturing new queries. Query Store will continue to collect compile and runtime statistics for queries that were captured already. Use this configuration with caution since you may miss to capture important queries.  
   
  QUERY_CAPTURE_MODE is type **nvarchar**.  
   
@@ -811,7 +816,7 @@ OPERATION_MODE
   
  Enables or disables Stretch Database for the database. For more info, see [Stretch Database](../../sql-server/stretch-database/stretch-database.md).  
   
- REMOTE_DATA_ARCHIVE = { ON ( SERVER = <server_name> , { CREDENTIAL = <db_scoped_credential_name> | FEDERATED_SERVICE_ACCOUNT =  ON | OFF } )| OFF  
+REMOTE_DATA_ARCHIVE = { ON ( SERVER = \<server_name> , { CREDENTIAL = \<db_scoped_credential_name> | FEDERATED_SERVICE_ACCOUNT =  ON | OFF } )| OFF
  ON  
  Enables Stretch Database for the database. For more info, including additional prerequisites, see [Enable Stretch Database for a database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md).  
   

@@ -272,4 +272,4 @@ The specific connection string parameter for clients to use AD Authentication de
 
   * JDBC: [Using Kerberos Integrated Authentication to Connect SQL Server](https://docs.microsoft.com/sql/connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server)
   * ODBC: [Using Integrated Authentication](https://docs.microsoft.com/sql/connect/odbc/linux/using-integrated-authentication)
-  * ADO.NET: [Connection String Syntax](https://docs.microsoft.com/dotnet/framework/data/adonet/connection-string-syntax)
+  * ADO.NET: [Connection String Syntax](https://msdn.microsoft.com/en-us/library/system.data.sqlclient.sqlauthenticationmethod(v=vs.110).aspx)

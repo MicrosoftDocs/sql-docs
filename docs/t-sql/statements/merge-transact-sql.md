@@ -1,7 +1,7 @@
 ---
 title: "MERGE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/17/2017"
+ms.date: "08/10/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -48,7 +48,6 @@ WHERE NOT EXISTS (SELECT col FROM tbl_A A2 WHERE A2.col = tbl_B.col);
 ## Syntax  
   
 ```  
-  
 [ WITH <common_table_expression> [,...n] ]  
 MERGE   
     [ TOP ( expression ) [ PERCENT ] ]   
@@ -155,11 +154,10 @@ SET
 <column_name> ::=  
     { DELETED | INSERTED | from_table_name } . { * | column_name }  
     | $action  
-  
 ```  
   
 ## Arguments  
- WITH <common_table_expression>  
+ WITH \<common_table_expression>  
  Specifies the temporary named result set or view, also known as common table expression, defined within the scope of the MERGE statement. The result set is derived from a simple query and is referenced by the MERGE statement. For more information, see [WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
   
  TOP ( *expression* ) [ PERCENT ]  
@@ -176,7 +174,7 @@ SET
  Is the name of the schema to which *target_table* belongs.  
   
  *target_table*  
- Is the table or view against which the data rows from <table_source> are matched based on <clause_search_condition>. *target_table* is the target of any insert, update, or delete operations specified by the WHEN clauses of the MERGE statement.  
+ Is the table or view against which the data rows from \<table_source> are matched based on \<clause_search_condition>. *target_table* is the target of any insert, update, or delete operations specified by the WHEN clauses of the MERGE statement.  
   
  If *target_table* is a view, any actions against it must satisfy the conditions for updating views. For more information, see [Modify Data Through a View](../../relational-databases/views/modify-data-through-a-view.md).  
   
@@ -185,38 +183,38 @@ SET
  [ AS ] *table_alias*  
  Is an alternative name used to reference a table.  
   
- USING <table_source>  
- Specifies the data source that is matched with the data rows in *target_table* based on <merge_search condition>. The result of this match dictates the actions to take by the WHEN clauses of the MERGE statement. <table_source> can be a remote table or a derived table that accesses remote tables.  
+ USING \<table_source>  
+ Specifies the data source that is matched with the data rows in *target_table* based on \<merge_search condition>. The result of this match dictates the actions to take by the WHEN clauses of the MERGE statement. \<table_source> can be a remote table or a derived table that accesses remote tables. 
   
- <table_source> can be a derived table that uses the [!INCLUDE[tsql](../../includes/tsql-md.md)] [table value constructor](../../t-sql/queries/table-value-constructor-transact-sql.md) to construct a table by specifying multiple rows.  
+ \<table_source> can be a derived table that uses the [!INCLUDE[tsql](../../includes/tsql-md.md)] [table value constructor](../../t-sql/queries/table-value-constructor-transact-sql.md) to construct a table by specifying multiple rows.  
   
  For more information about the syntax and arguments of this clause, see [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md).  
   
- ON <merge_search_condition>  
- Specifies the conditions on which <table_source> is joined with *target_table* to determine where they match.  
+ ON \<merge_search_condition>  
+ Specifies the conditions on which \<table_source> is joined with *target_table* to determine where they match. 
   
 > [!CAUTION]  
 >  It is important to specify only the columns from the target table that are used for matching purposes. That is, specify columns from the target table that are compared to the corresponding column of the source table. Do not attempt to improve query performance by filtering out rows in the target table in the ON clause, such as by specifying `AND NOT target_table.column_x = value`. Doing so may return unexpected and incorrect results.  
   
- WHEN MATCHED THEN <merge_matched>  
- Specifies that all rows of *target_table* that match the rows returned by <table_source> ON <merge_search_condition>, and satisfy any additional search condition, are either updated or deleted according to the <merge_matched> clause.  
+ WHEN MATCHED THEN \<merge_matched>  
+ Specifies that all rows of *target_table* that match the rows returned by \<table_source> ON \<merge_search_condition>, and satisfy any additional search condition, are either updated or deleted according to the \<merge_matched> clause.  
   
- The MERGE statement can have at most two WHEN MATCHED clauses. If two clauses are specified, then the first clause must be accompanied by an AND <search_condition> clause. For any given row, the second WHEN MATCHED clause is only applied if the first is not. If there are two WHEN MATCHED clauses, then one must specify an UPDATE action and one must specify a DELETE action. If UPDATE is specified in the <merge_matched> clause, and more than one row of <table_source>matches a row in *target_table* based on <merge_search_condition>, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] returns an error. The MERGE statement cannot update the same row more than once, or update and delete the same row.  
+ The MERGE statement can have at most two WHEN MATCHED clauses. If two clauses are specified, then the first clause must be accompanied by an AND \<search_condition> clause. For any given row, the second WHEN MATCHED clause is only applied if the first is not. If there are two WHEN MATCHED clauses, then one must specify an UPDATE action and one must specify a DELETE action. If UPDATE is specified in the \<merge_matched> clause, and more than one row of \<table_source>matches a row in *target_table* based on \<merge_search_condition>, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] returns an error. The MERGE statement cannot update the same row more than once, or update and delete the same row.  
   
- WHEN NOT MATCHED [ BY TARGET ] THEN <merge_not_matched>  
- Specifies that a row is inserted into *target_table* for every row returned by <table_source> ON <merge_search_condition> that does not match a row in *target_table*, but does satisfy an additional search condition, if present. The values to insert are specified by the <merge_not_matched> clause. The MERGE statement can have only one WHEN NOT MATCHED clause.  
+ WHEN NOT MATCHED [ BY TARGET ] THEN \<merge_not_matched>  
+ Specifies that a row is inserted into *target_table* for every row returned by \<table_source> ON \<merge_search_condition> that does not match a row in *target_table*, but does satisfy an additional search condition, if present. The values to insert are specified by the \<merge_not_matched> clause. The MERGE statement can have only one WHEN NOT MATCHED clause.  
   
- WHEN NOT MATCHED BY SOURCE THEN <merge_matched>  
- Specifies that all rows of *target_table* that do not match the rows returned by <table_source> ON <merge_search_condition>, and that satisfy any additional search condition, are either updated or deleted according to the <merge_matched> clause.  
+ WHEN NOT MATCHED BY SOURCE THEN \<merge_matched>  
+ Specifies that all rows of *target_table* that do not match the rows returned by \<table_source> ON \<merge_search_condition>, and that satisfy any additional search condition, are either updated or deleted according to the \<merge_matched> clause.  
   
- The MERGE statement can have at most two WHEN NOT MATCHED BY SOURCE clauses. If two clauses are specified, then the first clause must be accompanied by an AND <clause_search_condition> clause. For any given row, the second WHEN NOT MATCHED BY SOURCE clause is only applied if the first is not. If there are two WHEN NOT MATCHED BY SOURCE clauses, then one must specify an UPDATE action and one must specify a DELETE action. Only columns from the target table can be referenced in <clause_search_condition>.  
+ The MERGE statement can have at most two WHEN NOT MATCHED BY SOURCE clauses. If two clauses are specified, then the first clause must be accompanied by an AND \<clause_search_condition> clause. For any given row, the second WHEN NOT MATCHED BY SOURCE clause is only applied if the first is not. If there are two WHEN NOT MATCHED BY SOURCE clauses, then one must specify an UPDATE action and one must specify a DELETE action. Only columns from the target table can be referenced in \<clause_search_condition>.  
   
- When no rows are returned by <table_source>, columns in the source table cannot be accessed. If the update or delete action specified in the <merge_matched> clause references columns in the source table, error 207 (Invalid column name) is returned. For example, the clause `WHEN NOT MATCHED BY SOURCE THEN UPDATE SET TargetTable.Col1 = SourceTable.Col1` may cause the statement to fail because `Col1` in the source table is inaccessible.  
+ When no rows are returned by \<table_source>, columns in the source table cannot be accessed. If the update or delete action specified in the \<merge_matched> clause references columns in the source table, error 207 (Invalid column name) is returned. For example, the clause `WHEN NOT MATCHED BY SOURCE THEN UPDATE SET TargetTable.Col1 = SourceTable.Col1` may cause the statement to fail because `Col1` in the source table is inaccessible.  
   
- AND <clause_search_condition>  
+ AND \<clause_search_condition>  
  Specifies any valid search condition. For more information, see [Search Condition &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md).  
   
- <table_hint_limited>  
+ \<table_hint_limited>  
  Specifies one or more table hints that are applied on the target table for each of the insert, update, or delete actions that are performed by the MERGE statement. The WITH keyword and the parentheses are required.  
   
  NOLOCK and READUNCOMMITTED are not allowed. For more information about table hints, see [Table Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
@@ -229,16 +227,16 @@ SET
  INDEX ( index_val [ ,...n ] )  
  Specifies the name or ID of one or more indexes on the target table for performing an implicit join with the source table. For more information, see [Table Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
- <output_clause>  
+ \<output_clause>  
  Returns a row for every row in *target_table* that is updated, inserted, or deleted, in no particular order. **$action** can be specified in the output clause. **$action** is a column of type **nvarchar(10)** that returns one of three values for each row: 'INSERT', 'UPDATE', or 'DELETE', according to the action that was performed on that row. For more information about the arguments of this clause, see [OUTPUT Clause &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md).  
   
- OPTION ( <query_hint> [ ,...n ] )  
+ OPTION ( \<query_hint> [ ,...n ] )  
  Specifies that optimizer hints are used to customize the way the Database Engine processes the statement. For more information, see [Query Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
   
- <merge_matched>  
- Specifies the update or delete action that is applied to all rows of *target_table* that do not match the rows returned by <table_source> ON <merge_search_condition>, and that satisfy any additional search condition.  
+ \<merge_matched>  
+ Specifies the update or delete action that is applied to all rows of *target_table* that do not match the rows returned by \<table_source> ON \<merge_search_condition>, and that satisfy any additional search condition.  
   
- UPDATE SET <set_clause>  
+ UPDATE SET \<set_clause>  
  Specifies the list of column or variable names to be updated in the target table and the values with which to update them.  
   
  For more information about the arguments of this clause, see [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md). Setting a variable to the same value as a column is not permitted.  
@@ -246,7 +244,7 @@ SET
  DELETE  
  Specifies that the rows matching rows in *target_table* are deleted.  
   
- <merge_not_matched>  
+ \<merge_not_matched>  
  Specifies the values to insert into the target table.  
   
  (*column_list*)  
@@ -261,7 +259,7 @@ SET
  For more information about this clause, see [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md).  
   
  \<search condition>  
- Specifies the search conditions used to specify <merge_search_condition> or <clause_search_condition>. For more information about the arguments for this clause, see [Search Condition &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md).  
+ Specifies the search conditions used to specify \<merge_search_condition> or \<clause_search_condition>. For more information about the arguments for this clause, see [Search Condition &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md).  
   
 ## Remarks  
  At least one of the three MATCHED clauses must be specified, but they can be specified in any order. A variable cannot be updated more than once in the same MATCHED clause.  
@@ -294,7 +292,6 @@ SET
  A common scenario is updating one or more columns in a table if a matching row exists, or inserting the data as a new row if a matching row does not exist. This is usually done by passing parameters to a stored procedure that contains the appropriate UPDATE and INSERT statements. With the MERGE statement, you can perform both tasks in a single statement. The following example shows a stored procedure in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]database that contains both an INSERT statement and an UPDATE statement. The procedure is then modified to perform the equivalent operations by using a single MERGE statement.  
   
 ```  
-  
 CREATE PROCEDURE dbo.InsertUnitMeasure  
     @UnitMeasureCode nchar(3),  
     @Name nvarchar(25)  
@@ -319,8 +316,10 @@ SELECT UnitMeasureCode, Name FROM Production.UnitMeasure
 WHERE UnitMeasureCode = 'ABC';  
 GO  
   
--- Rewrite the procedure to perform the same operations using the MERGE statement.  
--- Create a temporary table to hold the updated or inserted values from the OUTPUT clause.  
+-- Rewrite the procedure to perform the same operations using the 
+-- MERGE statement.  
+-- Create a temporary table to hold the updated or inserted values 
+-- from the OUTPUT clause.  
 CREATE TABLE #MyTempTable  
     (ExistingCode nchar(3),  
      ExistingName nvarchar(50),  
@@ -365,9 +364,6 @@ GO
  The following example uses MERGE to update the `ProductInventory` table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] sample database on a daily basis, based on orders that are processed in the `SalesOrderDetail` table. The `Quantity` column of the `ProductInventory` table is updated by subtracting the number of orders placed each day for each product in the `SalesOrderDetail` table. If the number of orders for a product drops the inventory level of a product to 0 or less, the row for that product is deleted from the `ProductInventory` table.  
   
 ```  
-  
-IF OBJECT_ID (N'Production.usp_UpdateInventory', N'P') IS NOT NULL DROP PROCEDURE Production.usp_UpdateInventory;  
-GO  
 CREATE PROCEDURE Production.usp_UpdateInventory  
     @OrderDate datetime  
 AS  
@@ -383,7 +379,8 @@ WHEN MATCHED AND target.Quantity - source.OrderQty <= 0
 WHEN MATCHED   
     THEN UPDATE SET target.Quantity = target.Quantity - source.OrderQty,   
                     target.ModifiedDate = GETDATE()  
-OUTPUT $action, Inserted.ProductID, Inserted.Quantity, Inserted.ModifiedDate, Deleted.ProductID,  
+OUTPUT $action, Inserted.ProductID, Inserted.Quantity, 
+    Inserted.ModifiedDate, Deleted.ProductID,  
     Deleted.Quantity, Deleted.ModifiedDate;  
 GO  
   
@@ -398,7 +395,8 @@ EXECUTE Production.usp_UpdateInventory '20030501'
 DECLARE @SummaryOfChanges TABLE(Change VARCHAR(20));  
   
 MERGE INTO Sales.SalesReason AS Target  
-USING (VALUES ('Recommendation','Other'), ('Review', 'Marketing'), ('Internet', 'Promotion'))  
+USING (VALUES ('Recommendation','Other'), ('Review', 'Marketing'), 
+              ('Internet', 'Promotion'))  
        AS Source (NewName, NewReasonType)  
 ON Target.Name = Source.NewName  
 WHEN MATCHED THEN  
@@ -436,8 +434,10 @@ FROM
         THEN UPDATE SET pi.Quantity = pi.Quantity - src.OrderQty  
     WHEN MATCHED AND pi.Quantity - src.OrderQty <= 0   
         THEN DELETE  
-    OUTPUT $action, Inserted.ProductID, Inserted.LocationID, Inserted.Quantity AS NewQty, Deleted.Quantity AS PreviousQty)  
- AS Changes (Action, ProductID, LocationID, NewQty, PreviousQty) WHERE Action = 'UPDATE';  
+    OUTPUT $action, Inserted.ProductID, Inserted.LocationID, 
+        Inserted.Quantity AS NewQty, Deleted.Quantity AS PreviousQty)  
+ AS Changes (Action, ProductID, LocationID, NewQty, PreviousQty) 
+ WHERE Action = 'UPDATE';  
 GO  
 ```  
   
@@ -452,3 +452,4 @@ GO
  [Table Value Constructor &#40;Transact-SQL&#41;](../../t-sql/queries/table-value-constructor-transact-sql.md)  
   
   
+

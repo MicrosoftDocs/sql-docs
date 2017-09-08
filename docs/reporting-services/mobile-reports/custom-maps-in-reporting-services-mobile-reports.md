@@ -1,7 +1,7 @@
 ---
 title: "Custom maps in Reporting Services mobile reports | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: "03/30/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -16,9 +16,9 @@ ms.author: "maggies"
 manager: "erikre"
 ---
 # Custom maps in Reporting Services mobile reports
-Geographic maps in [!INCLUDE[PRODUCT_NAME](../../includes/product-name.md)] are defined in a format known as *ESRI shapefiles*.  
+Geographic maps in SQL Server Mobile Report Publisher are defined in a format known as *ESRI shapefiles*.  
   
-Initially designed by a private company, this is now a widespread semi-open format used in a large portion of GIS applications. In accordance with this format, [!INCLUDE[PRODUCT_NAME](../../includes/short-product-name.md)] requires two files to be provided when defining a map:  
+Initially designed by a private company, this is now a widespread semi-open format used in a large portion of GIS applications. In accordance with this format, Mobile Report Publisher requires two files to be provided when defining a map:  
   
 - A .SHP file for shape geometries  
 - A .DBF file for metadata  

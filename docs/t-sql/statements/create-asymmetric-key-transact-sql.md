@@ -1,7 +1,7 @@
 ---
 title: "CREATE ASYMMETRIC KEY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/08/2016"
+ms.date: "08/07/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -40,23 +40,18 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
-  
 CREATE ASYMMETRIC KEY Asym_Key_Name   
    [ AUTHORIZATION database_principal_name ]  
-   {  
-      [ FROM <Asym_Key_Source> ]  
-      |  
-      WITH <key_option>  
-   [ ENCRYPTION BY <encrypting_mechanism> ]  
+   [ FROM <Asym_Key_Source> ]  
+   [ WITH <key_option> ] 
+   [ ENCRYPTION BY <encrypting_mechanism> ] 
+   [ ; ]
   
 <Asym_Key_Source>::=  
-   FILE = 'path_to_strong-name_file'  
-   |  
-   EXECUTABLE FILE = 'path_to_executable_file'  
-   |  
-   ASSEMBLY Assembly_Name  
-   |  
-   PROVIDER Provider_Name  
+     FILE = 'path_to_strong-name_file'  
+   | EXECUTABLE FILE = 'path_to_executable_file'  
+   | ASSEMBLY Assembly_Name  
+   | PROVIDER Provider_Name  
   
 <key_option> ::=  
    ALGORITHM = <algorithm>  
@@ -94,7 +89,7 @@ CREATE ASYMMETRIC KEY Asym_Key_Name
  ASSEMBLY *Assembly_Name*  
  Specifies the name of an assembly from which to load the public key.  
   
- ENCRYPTION BY *<key_name_in_provider>*  
+ENCRYPTION BY *\<key_name_in_provider>*
  Specifies how the key is encrypted. Can be a certificate, password, or asymmetric key.  
   
  KEY_NAME ='*key_name_in_provider*'  

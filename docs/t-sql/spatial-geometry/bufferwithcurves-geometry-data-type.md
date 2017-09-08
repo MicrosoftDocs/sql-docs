@@ -20,7 +20,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # BufferWithCurves (geometry Data Type)
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   Returns a **geometry** instance that represents the set of all points whose distance from the calling **geometry** instance is less than or equal to the *distance* parameter.  
   
@@ -59,7 +59,7 @@ SQL Server return type: **geometry**
 |distance Value|Type Dimensions|Spatial Type Returned|  
 |--------------------|---------------------|---------------------------|  
 |distance < 0|Zero or One|Empty **GeometryCollection** instance|  
-|distance \< 0|Two or More|A **CurvePolygon** or **GeometryCollection** instance with a negative buffer. **Note:** A negative buffer may create an empty **GeometryCollection**|  
+|distance < 0|Two or More|A **CurvePolygon** or **GeometryCollection** instance with a negative buffer. **Note:** A negative buffer may create an empty **GeometryCollection**|  
 |distance = 0|All dimensions|Copy of the invoking **geometry** instance|  
 |distance > 0|All dimensions|**CurvePolygon** or **GeometryCollection** instance|  
   

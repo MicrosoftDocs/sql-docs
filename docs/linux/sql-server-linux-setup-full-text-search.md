@@ -1,30 +1,18 @@
 ---
-# required metadata
-
 title: Install SQL Server Full-Text Search on Linux | Microsoft Docs
 description: This topic describes how to install SQL Server Full-Text Search on Linux.
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 03/17/2017
+ms.date: 07/17/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
-
-# optional metadata
-
-# keywords: ""
-# ROBOTS: ""
-# audience: ""
-# ms.devlang: ""
-# ms.reviewer: ""
-# ms.suite: ""
-# ms.tgt_pltfrm: ""
-# ms.custom: ""
-
 ---
 # Install SQL Server Full-Text Search on Linux
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 The following steps install [SQL Server Full-Text Search](https://msdn.microsoft.com/library/ms142571.aspx) (**mssql-server-fts**) on Linux. Full-Text Search enables you to run full-text queries against character-based data in SQL Server tables. For known issues for this release, see the [Release Notes](sql-server-linux-release-notes.md).
 
@@ -53,6 +41,8 @@ sudo yum check-update
 sudo yum update mssql-server-fts
 ```
 
+If you need an offline installation, locate the Full-text Search package download in the [Release notes](sql-server-linux-release-notes.md). Then use the same offline installation steps described in the topic [Install SQL Server](sql-server-linux-setup.md#offline).
+
 ## <a name="ubuntu">Install on Ubuntu</a>
 
 Use the following commands to install the **mssql-server-fts** on Ubuntu. 
@@ -69,6 +59,8 @@ sudo apt-get update
 sudo apt-get install -y mssql-server-fts 
 ```
 
+If you need an offline installation, locate the Full-text Search package download in the [Release notes](sql-server-linux-release-notes.md). Then use the same offline installation steps described in the topic [Install SQL Server](sql-server-linux-setup.md#offline).
+
 ## <a name="SLES">Install on SLES</a>
 
 Use the following commands to install the **mssql-server-fts** on SUSE Linux Enterprise Server. 
@@ -83,9 +75,12 @@ If you already have **mssql-server-fts** installed, you can update to the latest
 sudo zypper refresh
 sudo zypper update mssql-server-fts
 ```
+
+If you need an offline installation, locate the Full-text Search package download in the [Release notes](sql-server-linux-release-notes.md). Then use the same offline installation steps described in the topic [Install SQL Server](sql-server-linux-setup.md#offline).
+
 ## Supported languages
 
-Full-Text Search uses [word breakers](https://msdn.microsoft.com/library/ms142509.aspx) that determine how to identify individual words based on language. You can get a list of registered word breakers by querying the **sys.fulltext_languages** catalog view. Word breakers for the following languages are installed with SQL Server vNext CTP 1.4:
+Full-Text Search uses [word breakers](https://msdn.microsoft.com/library/ms142509.aspx) that determine how to identify individual words based on language. You can get a list of registered word breakers by querying the **sys.fulltext_languages** catalog view. Word breakers for the following languages are installed with SQL Server 2017 RC2:
 
 | Language | Language ID |
 |---|---|
@@ -147,7 +142,7 @@ Full-Text Search uses [word breakers](https://msdn.microsoft.com/library/ms14250
 
 Full-Text Search also works with text stored in binary files. But in this case, an installed filter is required to process the file. For more information about filters, see [Configure and Manage Filters for Search](https://msdn.microsoft.com/library/ms142499.aspx).
 
-You can see a list of installed filters by calling **sp_help_fulltext_system_components 'filter'**. For SQL Server vNext CTP 1.4, the following filters are installed:
+You can see a list of installed filters by calling **sp_help_fulltext_system_components 'filter'**. For SQL Server 2017 RC2, the following filters are installed:
 
 | Component Name | Class ID | Version |
 |---|---|---|
@@ -271,7 +266,7 @@ In order to use Semantic Search, you must first download and attach the [Semanti
 3. Move the database and log files to your Linux SQL Server machine.
 
     > [!TIP]
-    > For guidance on how to move files from Windows to Linux, see [Transfer a file to Linux](sql-server-linux-migrate-restore-database.md#transfer-the-backup-file-to-linux).
+    > For guidance on how to move files from Windows to Linux, see [Transfer a file to Linux](sql-server-linux-migrate-restore-database.md#scp).
 
 4. Run the following Transact-SQL command on your Linux SQL Server instance to attach the language statistics database.
 
@@ -292,4 +287,4 @@ In order to use Semantic Search, you must first download and attach the [Semanti
 
 ## Next steps
 
-For information about Full-Text Search, see [SQL Server Full-Text Search](https://msdn.microsoft.com/library/ms142571.aspx). 
+For information about Full-Text Search, see [SQL Server Full-Text Search](../relational-databases/search/full-text-search.md). 

@@ -356,7 +356,7 @@ manager: "jhubbard"
 |0xC001F206|-1073614330|DTS_E_DTSNAME_BEGINSWITHALPHA|Object name "%1" is not valid. Name must begin with an alphabetical character.|  
 |0xC001F207|-1073614329|DTS_E_DTSNAME_BEGINSWITHALPHAUNDERBAR|Object name "%1" is not valid. Name must begin with an alphabetical character or underscore "_".|  
 |0xC001F208|-1073614328|DTS_E_DTSNAME_ALPHADIGITUNDERBAR|Object name "%1" is not valid. Name must contain only alphanumeric characters or underscores "_".|  
-|0xC001F209|-1073614327|DTS_E_DTSNAME_VALIDFILENAME|Object name "%1" is not valid. The name cannot contain any of the following characters: / \ : ? " \< > &#124;|  
+|0xC001F209|-1073614327|DTS_E_DTSNAME_VALIDFILENAME|Object name "%1" is not valid. The name cannot contain any of the following characters: / \ : ? " < > &#124;|  
 |0xC001F420|-1073613792|DTS_E_FAILLOADINGPROPERTY|Failed to load the value property "%1" using default persistence.|  
 |0xC001F422|-1073613790|DTS_E_NODELISTENUM_INVALIDCONNMGRTYPE|Connection manager "%1" is not of type "%2"|  
 |0xC001F423|-1073613789|DTS_E_NODELISTENUM_XPATHISEMPTY|"%1" is empty|  

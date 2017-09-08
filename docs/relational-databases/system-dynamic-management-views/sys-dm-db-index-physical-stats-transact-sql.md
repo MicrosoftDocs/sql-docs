@@ -342,7 +342,7 @@ WHILE (1=1)
         WHERE object_id = @objectid AND index_id = @indexid;  
   
 -- 30 is an arbitrary decision point at which to switch between reorganizing and rebuilding.  
-        IF @frag \< 30.0  
+        IF @frag < 30.0  
             SET @command = N'ALTER INDEX ' + @indexname + N' ON ' + @schemaname + N'.' + @objectname + N' REORGANIZE';  
         IF @frag >= 30.0  
             SET @command = N'ALTER INDEX ' + @indexname + N' ON ' + @schemaname + N'.' + @objectname + N' REBUILD';  

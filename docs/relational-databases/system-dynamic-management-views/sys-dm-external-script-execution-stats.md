@@ -58,9 +58,9 @@ Therefore, the counters tracked by this DMV are kept running, and state for sys.
    
   
 ### R Counter Values
- Currently the only external script language supported in [!INCLUDE[ssCurrent_md](../../includes/sscurrent-md.md)] is R. External script requests for the R language are handled by [!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)]. For more information about how external script requests interact with SQL Server, see [Architecture Overview](../../advanced-analytics/r-services/architecture-overview-sql-server-r-services.md). 
+ Currently the only external script language supported in [!INCLUDE[ssCurrent_md](../../includes/sscurrent-md.md)] is R. External script requests for the R language are handled by [!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)]. 
 
-For SQL Server R Services, this DMV tracks how many R calls are made on an instance. For example, if `rxLinMod` is called and run in parallel, the counter is incremented by 1.
+For R, this DMV tracks the number of R calls that are made on an instance. For example, if `rxLinMod` is called and run in parallel, the counter is incremented by 1.
  
 For the R language, the counter values displayed in the *counter_name* field represent the names of registered ScaleR functions. The values in the *counter_value* field represent the cumulative number of instances that the specific ScaleR function. 
 

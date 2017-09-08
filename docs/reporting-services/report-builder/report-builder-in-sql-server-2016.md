@@ -1,7 +1,7 @@
 ---
 title: "Report Builder in SQL Server 2016 | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/06/2015"
+ms.date: "03/30/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -23,8 +23,6 @@ manager: "erikre"
 ---
 # Report Builder in SQL Server 2016
   [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] is a tool for authoring paginated reports, for business users who prefer to work in a stand-alone environment instead of using Report Designer in Visual Studio.  When you design a paginated report, you're creating a report definition that specifies where to get the data, which data to get, and how to display the data. When you run the report, the report processor takes the report definition you have specified, retrieves the data, and combines it with the report layout to generate the report. You can preview your report in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] and publish your report to a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server in native mode or  in SharePoint integrated mode, where others can run it.  
-  
- [Start Report Builder](../../reporting-services/report-builder/start-report-builder.md)  
   
  ![rs_GettingStartedReport](../../reporting-services/report-builder/media/rs-gettingstartedreport.png "rs_GettingStartedReport")  
   
@@ -69,11 +67,14 @@ manager: "erikre"
 > [!NOTE]  
 >  Published reports are managed on a report server or a report server in SharePoint integrated mode by a report server administrator. Report server administrators can define security, set properties, and schedule operations such as report history and e-mail report delivery. They can create shared schedules and shared data sources and make them available for general use. Administrators also manage all of the report server folders. The ability to perform management tasks depends on user permissions.  
   
-##  <a name="InThisSection"></a> In This Section  
- [What's New in Reporting Services and Report Builder for SQL Server 2016](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)  
-  Describes the new features in this version of [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] and [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)].  
+## See Also  
+  [Start Report Builder](../../reporting-services/report-builder/start-report-builder.md)  
   
- [Tutorial: Creating a Quick Chart Report Offline](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
+  [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md)
+
+  [What's New in Reporting Services and Report Builder for SQL Server 2016](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)  
+  Describes the new features in this version of [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] and [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)].   
+  [Tutorial: Creating a Quick Chart Report Offline](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
  Introduces [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] and the wizards available to help you create reports. The tutorial provides a set of data for you to work with so you do not need to connect to a data source to get started.  
   
  [Planning a Report &#40;Report Builder&#41;](../../reporting-services/report-design/planning-a-report-report-builder.md)  
@@ -90,9 +91,5 @@ manager: "erikre"
   
  [Keyboard Shortcuts &#40;Report Builder&#41;](../../reporting-services/report-builder/keyboard-shortcuts-report-builder.md)  
  Outlines the shortcut keys available for navigating and designing reports in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)].  
-  
-## See Also  
- [Start Report Builder](../../reporting-services/report-builder/start-report-builder.md)  
-  
   
 

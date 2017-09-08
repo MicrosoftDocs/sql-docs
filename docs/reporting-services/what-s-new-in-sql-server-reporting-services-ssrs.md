@@ -1,7 +1,7 @@
 ---
-title: "What&#39;s new in Reporting Services (SSRS) | Microsoft Docs"
-ms.date: "03/16/2017"
-ms.prod: "sql-vnext"
+title: "What's new in Reporting Services (SSRS) | Microsoft Docs"
+ms.date: "07/02/2017"
+ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +20,14 @@ author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
 ---
-# What&#39;s new in SQL Server Reporting Services (SSRS)
+
+# What's new in SQL Server Reporting Services (SSRS)
+
+[!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../includes/ssrs-appliesto-not-pbirs.md)]
+
 Learn about what's new in SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. This covers the major feature areas and is updated as new items are released.
   
-  For information on what's new in other areas of SQL Server, see [What's New in SQL Server vNext](../sql-server/what-s-new-in-sql-server-vnext.md) or [What's New in SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md).
+  For information on what's new in other areas of SQL Server, see [What's New in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md) or [What's New in SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md).
   
  **Download** ![download](../analysis-services/media/download.png "download")
  
@@ -31,9 +35,11 @@ Learn about what's new in SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsno
   
 -   To download [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], go to  **[Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**.  
   
--   Have an Azure account?  Then go **[Here](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016sp1enterprisewindowsserver2016/)** to spin up a Virtual Machine with [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] already installed.  
-  
- ![note](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "note") For the current release notes, see [Technical Preview of Power BI reports in SSRS - Release notes](../reporting-services/reporting-services-release-notes.md) or  [SQL Server 2016 Release Notes](../sql-server/sql-server-2016-release-notes.md).  
+-   Have an Azure account?  Then go **[Here](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016sp1enterprisewindowsserver2016/)** to spin up a Virtual Machine with SQL Server already installed.  
+
+ ![note](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "note") For the current release notes, see [SQL Server 2016 Release Notes](../sql-server/sql-server-2016-release-notes.md) or [Power BI Report Server release notes](https://powerbi.microsoft.com/documentation/reportserver-release-notes/).
+
+For information about Power BI Report Server, see [Get started with Power BI Report Server](https://powerbi.microsoft.com/documentation/reportserver-get-started/).
 
 ## Query designer support for DAX now in Report Builder and SQL Server Data Tools
 
@@ -45,28 +51,6 @@ Read more on the [Reporting Services blog](https://blogs.msdn.microsoft.com/sqlr
 * Download [SQL Server Data Tools - Release Candidate](https://docs.microsoft.com/sql/ssdt/sql-server-data-tools-ssdt-release-candidate).
 
 > **Note**: You can only use the query designer for DAX with SSAS tabular data sources built in SQL Server 2016+.
-
-## What's new in the January 2017 Technical Preview of Power BI reports in SQL Server Reporting Services
-
-### Reporting Services has a new setup experience
-
-Reporting Services can now be installed outside of the SQL Server setup. The setup experience has fewer steps and is more lightweight. Setup will install the files for Reporting Services. You can then configure the database for your report server. This does require that you have access to a SQL Server Database Engine server in your environment.
-
-![ssrs-standalone-setup1](../reporting-services/media/ssrs-standalone-setup1.png)
-
-For more information, see [Install the January 2017 Technical Preview of Power BI reports in SQL Server Reporting Services](../reporting-services/install-windows/install-january-2017-technical-preview-power-bi-reports.md).
-
-### Host Power BI reports within the web portal
-
-You can now upload your Power BI Desktop files to Reporting Services and view reports directly in the web portal.
-
-![ssrs-powerbi-report-config-render](../reporting-services/media/ssrs-powerbi-report-config-render.png)
-
-You will need to download the Power BI Desktop release (SQL Server Reporting Services). Currently the preview only supports reports created in this version of Power BI Desktop. Power BI Desktop (SQL Server Reporting Services) can exist side by side with the Power BI Desktop for the Power BI service. To download Power BI Desktop (SQL Server Reporting services), go to the Microsoft download center. 
-
-Currently, you are limited to creating a Power BI report against live connections to Analysis Services (tabular or multidimensional). We plan on adding support for other data sources and using Power Query features in a future preview.
-
-For more information, see [Power BI reports in Reporting Services](../reporting-services/power-bi-reports-in-reporting-services.md).
  
 ## What's new in SQL Server 2016
   
@@ -185,19 +169,21 @@ http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportf
  ![Parameter list in Report Data pane and in parameters pane](../reporting-services/media/ssrs-customizeparameter-parameterlist-reportdatapane.png "Parameter list in Report Data pane and in parameters pane")  
 
   
-**High DPI Support:** [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion-md.md)] for [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] supports High DPI (Dots Per Inch) scaling and devices.  For more information on High DPI, see the following:  
+**High DPI Support:** [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion-md.md)] supports High DPI (Dots Per Inch) scaling and devices.  For more information on High DPI, see the following:  
   
 -   [Windows 8.1 DPI Scaling Enhancements](https://blogs.windows.com/windowsexperience/2013/07/15/windows-8-1-dpi-scaling-enhancements/)  
   
 -   [High DPI and Windows 8.1](http://technet.microsoft.com/library/dn528848.aspx)  
-  
-## See Also  
- [What's New in Analysis Services](http://msdn.microsoft.com/en-us/aa69c299-b8f4-4969-86d8-b3292fe13f08)  
- [Technical Preview of Power BI reports in SSRS - Release notes](../reporting-services/reporting-services-release-notes.md)  
- [SQL Server 2016 Release Notes](../sql-server/sql-server-2016-release-notes.md)   
- [Backward Compatibility](http://msdn.microsoft.com/en-us/675b0e0e-cfee-4790-9675-80fc3ea6d30f)   
- [Reporting Services Features Supported by the Editions of SQL Server 2016](http://msdn.microsoft.com/en-us/39f03d2d-6e48-4b34-a9d3-07f86313b937)   
- [Upgrade and Migrate Reporting Services](../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
- [Reporting Services &#40;SSRS&#41;](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)  
-  
-  
+
+## Next steps
+
+[What's New in Analysis Services](http://msdn.microsoft.com/en-us/aa69c299-b8f4-4969-86d8-b3292fe13f08)  
+[Technical Preview of Power BI reports in SSRS - Release notes](../reporting-services/reporting-services-release-notes.md)  
+[SQL Server 2016 Release Notes](../sql-server/sql-server-2016-release-notes.md)   
+[Backward Compatibility](http://msdn.microsoft.com/en-us/675b0e0e-cfee-4790-9675-80fc3ea6d30f)   
+[Reporting Services Features Supported by the Editions of SQL Server 2016](http://msdn.microsoft.com/en-us/39f03d2d-6e48-4b34-a9d3-07f86313b937)   
+[Upgrade and Migrate Reporting Services](../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
+[Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)  
+[Power BI Report Server](https://powerbi.microsoft.com/documentation/reportserver-get-started/)  
+
+More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)

@@ -16,7 +16,13 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Remove-PowerPivotSystemServiceInstance cmdlet
+
+[!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
+
   Removes a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] System Service instance from the farm.  
+
+>[!NOTE] 
+>This article may contain outdated information and examples. Use the Get-Help cmdlet for the latest.
   
  **Applies To:** SharePoint 2010 and SharePoint 2013.  
   

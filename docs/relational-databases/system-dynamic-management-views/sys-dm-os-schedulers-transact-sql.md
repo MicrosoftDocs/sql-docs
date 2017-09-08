@@ -120,7 +120,7 @@ active_workers_count work_queue_count
   
  The output provides the following information:  
   
--   There are five schedules. Two schedulers have an ID value \< 1048576. Schedulers with ID >= 1048576are known as hidden schedulers. Scheduler `255` represents the dedicated administrator connection (DAC). There is one DAC scheduler per instance. Resource monitors that coordinate memory pressure use scheduler `257` and scheduler `258`, one per NUMA node  
+-   There are five schedules. Two schedulers have an ID value < 1048576. Schedulers with ID >= 1048576are known as hidden schedulers. Scheduler `255` represents the dedicated administrator connection (DAC). There is one DAC scheduler per instance. Resource monitors that coordinate memory pressure use scheduler `257` and scheduler `258`, one per NUMA node  
   
 -   There are 23 active tasks in the output. These tasks include user requests in addition to resource management tasks that have been started by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Examples of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tasks are RESOURCE MONITOR (one per NUMA node), LAZY WRITER (one per NUMA node), LOCK MONITOR, CHECKPOINT, and LOG WRITER.  
   

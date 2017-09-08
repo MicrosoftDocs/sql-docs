@@ -6,7 +6,7 @@ ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
-  - "setup-install"
+  - "integration-services"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -28,7 +28,7 @@ manager: "erikre"
  With this side-by-side install, multiple versions of dtexec utility are installed. To ensure that you run the correct version of the utility, at the command prompt run the utility by entering the full path (\<drive>:\Program Files\Microsoft SQL Server\\<version\>\DTS\Binn). For more information about dtexec, see [dtexec Utility](../../integration-services/packages/dtexec-utility.md).  
   
 > [!NOTE]  
->  In previous versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], by default when you installed [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] all users in the Users group had access to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service. When you install [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], users do not have access to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service. The service is secure by default. After [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] is installed, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] administrator must run the DCOM Configuration tool (Dcomcnfg.exe) to grant specific users access to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service. For more information, see [Grant Permissions to Integration Services Service](../../integration-services/service/grant-permissions-to-integration-services-service.md).  
+>  In previous versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], by default when you installed [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] all users in the Users group had access to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service. When you install [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], users do not have access to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service. The service is secure by default. After [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] is installed, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] administrator must run the DCOM Configuration tool (Dcomcnfg.exe) to grant specific users access to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service. For more information, see [Integration Services Service &#40;SSIS Service&#41;](../../integration-services/service/integration-services-service-ssis-service.md).  
   
 ## Before Upgrading Integration Services  
  We recommended that you run Upgrade Advisor before you upgrade to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Upgrade Advisor reports issues that you might encounter if you migrate existing [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages to the new package format that [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] uses.  

@@ -1,7 +1,7 @@
 ---
 title: "CREATE ASSEMBLY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/09/2016"
+ms.date: "8/07/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -32,12 +32,14 @@ manager: "jhubbard"
 
   Creates a managed application module that contains class metadata and managed code as an object in an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. By referencing this module, common language runtime (CLR) functions, stored procedures, triggers, user-defined aggregates, and user-defined types can be created in the database.  
   
+>  [!WARNING]
+>  CLR uses Code Access Security (CAS) in the .NET Framework, which is no longer supported as a security boundary. A CLR assembly created with `PERMISSION_SET = SAFE` may be able to access external system resources, call unmanaged code, and acquire sysadmin privileges. Beginning with [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], an `sp_configure` option called `clr strict security` is introduced to enhance the security of CLR assemblies. `clr strict security` is enabled by default, and treats `SAFE` and `EXTERNAL_ACCESS` assemblies as if they were marked `UNSAFE`. The `clr strict security` option can be disabled for backward compatibility, but this is not recommended. Microsoft recommends that all assemblies be signed by a certificate or asymmetric key with a corresponding login that has been granted `UNSAFE ASSEMBLY` permission in the master database. For more information, see [CLR strict security](../../database-engine/configure-windows/clr-strict-security.md).  
+  
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
 ```  
-  
 CREATE ASSEMBLY assembly_name  
 [ AUTHORIZATION owner_name ]  
 FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }  
@@ -58,12 +60,12 @@ FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }
  AUTHORIZATION *owner_name*  
  Specifies the name of a user or role as owner of the assembly. *owner_name* must either be the name of a role of which the current user is a member, or the current user must have IMPERSONATE permission on *owner_name*. If not specified, ownership is given to the current user.  
   
- <client_assembly_specifier>  
- Specifies the local path or network location where the assembly that is being uploaded is located, and also the manifest file name that corresponds to the assembly.  <client_assembly_specifier> can be expressed as a fixed string or an expression evaluating to a fixed string, with variables. CREATE ASSEMBLY does not support loading multimodule assemblies. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] also looks for any dependent assemblies of this assembly in the same location and also uploads them with the same owner as the root level assembly. If these dependent assemblies are not found and they are not already loaded in the current database, CREATE ASSEMBLY fails. If the dependent assemblies are already loaded in the current database, the owner of those assemblies must be the same as the owner of the newly created assembly.  
+ \<client_assembly_specifier>  
+Specifies the local path or network location where the assembly that is being uploaded is located, and also the manifest file name that corresponds to the assembly.  \<client_assembly_specifier> can be expressed as a fixed string or an expression evaluating to a fixed string, with variables. CREATE ASSEMBLY does not support loading multimodule assemblies. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] also looks for any dependent assemblies of this assembly in the same location and also uploads them with the same owner as the root level assembly. If these dependent assemblies are not found and they are not already loaded in the current database, CREATE ASSEMBLY fails. If the dependent assemblies are already loaded in the current database, the owner of those assemblies must be the same as the owner of the newly created assembly.
   
- <client_assembly_specifier> cannot be specified if the logged in user is being impersonated.  
+ \<client_assembly_specifier> cannot be specified if the logged in user is being impersonated.  
   
- <assembly_bits>  
+ \<assembly_bits>  
  Is the list of binary values that make up the assembly and its dependent assemblies. The first value in the list is considered the root-level assembly. The values corresponding to the dependent assemblies can be supplied in any order. Any values that do not correspond to dependencies of the root assembly are ignored.  
   
 > [!NOTE]  
@@ -76,6 +78,9 @@ FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }
  Is an expression of type **varbinary**.  
   
  PERMISSION_SET { **SAFE** | EXTERNAL_ACCESS | UNSAFE }  
+ >  [!IMPORTANT]  
+ >  The `PERMISSION_SET` option is affected by the `clr strict security` option, described in the opening warning. When `clr strict security` is enabled, all assemblies are treated as `UNSAFE`.
+ 
  Specifies a set of code access permissions that are granted to the assembly when it is accessed by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. If not specified, SAFE is applied as the default.  
   
  We recommend using SAFE. SAFE is the most restrictive permission set. Code executed by an assembly with SAFE permissions cannot access external system resources such as files, the network, environment variables, or the registry.  
@@ -101,10 +106,12 @@ FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }
   
 ## Remarks  
  CREATE ASSEMBLY uploads an assembly that was previously compiled as a .dll file from managed code for use inside an instance of SQL Server.  
+ 
+When enabled, the `PERMISSION_SET` option in the `CREATE ASSEMBLY` and `ALTER ASSEMBLY` statements is ignored at run-time, but the `PERMISSION_SET` options are preserved in metadata. Ignoring the option, minimizes breaking existing code statements.
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not allow registering different versions of an assembly with the same name, culture and public key.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not allow registering different versions of an assembly with the same name, culture and public key.  
-  
- When attempting to access the assembly specified in <client_assembly_specifier>, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] impersonates the security context of the current Windows login. If <client_assembly_specifier> specifies a network location (UNC path), the impersonation of the current login is not carried forward to the network location because of delegation limitations. In this case, access is made using the security context of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account. For more information, see [Credentials &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md).  
+When attempting to access the assembly specified in \<client_assembly_specifier>, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] impersonates the security context of the current Windows login. If \<client_assembly_specifier> specifies a network location (UNC path), the impersonation of the current login is not carried forward to the network location because of delegation limitations. In this case, access is made using the security context of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account. For more information, see [Credentials &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md).
   
  Besides the root assembly specified by *assembly_name*, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tries to upload any assemblies that are referenced by the root assembly being uploaded. If a referenced assembly is already uploaded to the database because of an earlier CREATE ASSEMBLY statement, this assembly is not uploaded but is available to the root assembly. If a dependent assembly was not previously uploaded, but [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cannot locate its manifest file in the source directory, CREATE ASSEMBLY returns an error.  
   
@@ -141,6 +148,14 @@ FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }
  If PERMISSION_SET = EXTERNAL_ACCESS is specified, requires**EXTERNAL ACCESS ASSEMBLY** permission on the server. If PERMISSION_SET = UNSAFE is specified, requires **UNSAFE ASSEMBLY** permission on the server.  
   
  User must be the owner of any assemblies that are referenced by the assembly that are to be uploaded if the assemblies already exist in the database. To upload an assembly by using a file path, the current user must be a Windows authenticated login or a member of the **sysadmin** fixed server role. The Windows login of the user that executes CREATE ASSEMBLY must have read permission on the share and the files being loaded in the statement.  
+
+### Permissions with CLR strict security    
+The following permissions required to create a CLR assembly when `CLR strict security` is enabled:
+
+- The user must have the `CREATE ASSEMBLY` permission  
+- And one of the following conditions must also be true:  
+  - The assembly is signed with a certificate or asymmetric key that has a corresponding login with the `UNSAFE ASSEMBLY` permission on the server. Signing the assembly is recommended.  
+  - The database has the `TRUSTWORTHY` property set to `ON`, and the database is owned by a login that has the `UNSAFE ASSEMBLY` permission on the server. This option is not recommended.  
   
  For more information about assembly permission sets, see [Designing Assemblies](../../relational-databases/clr-integration/assemblies-designing.md).  
   
@@ -148,9 +163,7 @@ FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }
   
 ### Example A: Creating an assembly from a dll  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  The following example assumes that the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] samples are installed in the default location of the local computer and the HelloWorld.csproj sample application is compiled. For more information, see [Hello World Sample](http://msdn.microsoft.com/library/fed6c358-f5ee-4d4c-9ad6-089778383ba7).  
   
@@ -162,9 +175,7 @@ WITH PERMISSION_SET = SAFE;
   
 ### Example B: Creating an assembly from assembly bits  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Replace the sample bits (which are not complete or valid) with your assembly bits.  
   

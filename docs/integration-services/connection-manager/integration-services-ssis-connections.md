@@ -72,7 +72,7 @@ A connection manager can be created at the package level or at the project level
 > [!NOTE]  
 >  If you want to use data sources in your package, you need to convert the project to the package deployment model.  
 >   
->  For more information about the two models, see [Deploy Integration Services (SSIS) Projects and Packages](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md). For more information about converting a project to the project deployment model, see [Deploy Projects to Integration Services Server](../../integration-services/packages/deploy-projects-to-integration-services-server.md).  
+>  For more information about the two models, and about converting a project to the project deployment model, see [Deploy Integration Services (SSIS) Projects and Packages](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).
 
 ### Built-in Connection Managers  
  The following table lists the connection manager types that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] provides.  
@@ -81,8 +81,8 @@ A connection manager can be created at the package level or at the project level
 |----------|-----------------|-----------|  
 |ADO|Connects to ActiveX Data Objects (ADO) objects.|[ADO Connection Manager](../../integration-services/connection-manager/ado-connection-manager.md)|  
 |ADO.NET|Connects to a data source by using a .NET provider.|[ADO.NET Connection Manager](../../integration-services/connection-manager/ado-net-connection-manager.md)|  
-|CACHE|Reads data from the data flow or from a cache file (.caw), and can save data to the cache file.|[Cache Connection Manager](../../integration-services/data-flow/transformations/cache-connection-manager.md)|  
-|DQS|Connects to a Data Quality Services server and a Data Quality Services database on the server.|[DQS Cleansing Connection Manager](../../integration-services/data-flow/transformations/dqs-cleansing-connection-manager.md)|  
+|CACHE|Reads data from the data flow or from a cache file (.caw), and can save data to the cache file.|[Cache Connection Manager](../../integration-services/connection-manager/cache-connection-manager.md)|  
+|DQS|Connects to a Data Quality Services server and a Data Quality Services database on the server.|[DQS Cleansing Connection Manager](../../integration-services/connection-manager/dqs-cleansing-connection-manager.md)|  
 |EXCEL|Connects to an Excel workbook file.|[Excel Connection Manager](../../integration-services/connection-manager/excel-connection-manager.md)|  
 |FILE|Connects to a file or a folder.|[File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)|  
 |FLATFILE|Connect to data in a single flat file.|[Flat File Connection Manager](../../integration-services/connection-manager/flat-file-connection-manager.md)|  

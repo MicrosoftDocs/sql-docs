@@ -1,7 +1,7 @@
 ---
 title: "Add gauges to mobile reports | Reporting Services | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: "03/30/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -22,7 +22,7 @@ Gauges are the most basic and widely used visuals in mobile reports. They displa
   
 *Gauge visualizations in the Layout tab*  
   
-In [!INCLUDE[PRODUCT_NAME](../../includes/product-name.md)], all gauges have at least one property in common: a main value, set to a numeric field in one of the data tables in the mobile report.  
+All gauges in SQL Server Mobile Report Publisher have at least one property in common: a main value, set to a numeric field in one of the data tables in the mobile report.  
 
 All the gauges except the Number gauge can also display a comparison, or *delta*, value -- the relationship between the main and a comparison value. The comparison value is the often the goal, and the gauge is a visual indicator of progress to that goal, or the delta between the actual and the goal.
 

@@ -1,7 +1,7 @@
 ---
-title: "Add  sample data to a DirectQuery model in Design Mode | Microsoft Docs"
+title: "Add sample data to a DirectQuery model in Design Mode | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: "07/06/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -15,7 +15,10 @@ author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
 ---
-# Add  sample data to a DirectQuery model in Design Mode
+# Add sample data to a DirectQuery model in Design Mode
+
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
  In DirectQuery mode, table partitions are used to either create sample data subsets used during model design, or create alternatives of a full data view.
  
  When you deploy a DirectQuery tabular model, only one partition is allowed per table, and that partition by necessity must be full data view. Any additional partition is either a substitute for a full data view or sample data. In this topic, we're going to describe creating a sample partition, with a subset of data.
@@ -28,7 +31,7 @@ You can, however, add a smaller amount of sample data to your model's working da
 >  Even in DirectQuery mode on an empty model, you can always view a small built-in rowset for each table. In [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], click **Table** > **Table Properties** to view the 50-row dataset.  
   
 ## Create a sample partition
- These instructions are for tabular models created at or upgraded to compatibility level 1200. Models at lower compatibility levels use different properties to get cached data. See [Enable DirectQuery mode in SSMS](../../analysis-services/tabular-models/enable-directquery-mode-in-ssms.md) for property descriptions.  
+ These instructions are for tabular models created at or upgraded to compatibility level 1200 or higher. Models at lower compatibility levels use different properties to get cached data. See [Enable DirectQuery mode in SSMS](../../analysis-services/tabular-models/enable-directquery-mode-in-ssms.md) for property descriptions.  
   
 1.  In SQL Server Data Tools, in Diagram or Data View, click a fact table to open its properties page. Fact tables provide the aggregated, numeric data and measures in your model. You might have more than one.  
   

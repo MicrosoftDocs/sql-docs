@@ -1,7 +1,7 @@
 ---
 title: "DROP INDEX (Selective XML Indexes) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "08/10/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -49,7 +49,7 @@ DROP INDEX index_name ON <object>
  *index_name*  
  Is the name of the existing index to drop.  
   
- *\< object>*  
+ *\< object>* 
  Is the table that contains the indexed XML column. Use one of the following formats:  
   
 -   `database_name.schema_name.table_name`  
@@ -60,7 +60,7 @@ DROP INDEX index_name ON <object>
   
 -   `table_name`  
   
- *<drop_index_option>*  
+ *\<drop_index_option>* 
  For information about the drop index options, see [DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md).  
   
 ## Security  
@@ -80,3 +80,4 @@ DROP INDEX sxi_index ON tbl;
  [Create, Alter, and Drop Selective XML Indexes](../../relational-databases/xml/create-alter-and-drop-selective-xml-indexes.md)  
   
   
+

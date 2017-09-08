@@ -11,6 +11,10 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "sql13.dts.designer.messagequeuetask.f1"
+  - "sql13.dts.designer.msgqueuetask.general.f1"
+  - "sql13.dts.designer.msgqueuetask.send.f1"
+  - "sql13.dts.designer.msgqueuetask.receive.f1"
+  - "sql13.dts.designer.selectvariables.f1"
 helpviewer_keywords: 
   - "Message Queue task [Integration Services]"
   - "receiving messages"
@@ -70,7 +74,7 @@ manager: "jhubbard"
 -   Saving the message file to a different file name, if the message uses the **Data file message** type.  
   
 ## Custom Logging Messages Available on the Message Queue Task  
- The following table lists the custom log entries for the Message Queue task. For more information, see [Integration Services &#40;SSIS&#41; Logging](../../integration-services/performance/integration-services-ssis-logging.md) and [Custom Messages for Logging](../../integration-services/performance/custom-messages-for-logging.md).  
+ The following table lists the custom log entries for the Message Queue task. For more information, see [Integration Services &#40;SSIS&#41; Logging](../../integration-services/performance/integration-services-ssis-logging.md).  
   
 |Log entry|Description|  
 |---------------|-----------------|  
@@ -84,13 +88,7 @@ manager: "jhubbard"
 |**MSMQTaskTimeOut**|Indicates that the task timed out.|  
   
 ## Configuration of the Message Queue Task  
- You can set properties through [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer or programmatically. For information about the properties that you can set in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click one of the following topics:  
-  
--   [Message Queue Task Editor &#40;General Page&#41;](../../integration-services/control-flow/message-queue-task-editor-general-page.md)  
-  
--   [Message Queue Task Editor &#40;Receive Page&#41;](../../integration-services/control-flow/message-queue-task-editor-receive-page.md)  
-  
--   [Message Queue Task Editor &#40;Send Page&#41;](../../integration-services/control-flow/message-queue-task-editor-send-page.md)  
+ You can set properties through [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer or programmatically. For information about the properties that you can set in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click the following topic:  
   
 -   [Expressions Page](../../integration-services/expressions/expressions-page.md)  
   
@@ -99,6 +97,202 @@ manager: "jhubbard"
 ## Related Tasks  
  For more information about how to set these properties in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, see [Set the Properties of a Task or Container](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
   
+## Message Queue Task Editor (General Page)
+  Use the **General page** of the **Message Queue Task Editor** dialog box to name and describe the Message Queue task, to specify the message format, and to indicate whether the task sends or receives messages.  
+  
+### Options  
+ **Name**  
+ Provide a unique name for the Message Queue task. This name is used as the label in the task icon.  
+  
+> [!NOTE]  
+>  Task names must be unique within a package.  
+  
+ **Description**  
+ Type a description of the Message Queue task.  
+  
+ **Use2000Format**  
+ Indicate whether to use the 2000 format of Message Queuing (also known as MSMQ). The default is **False**.  
+  
+ **MSMQConnection**  
+ Select an existing MSMQ connection manager or click \<**New connection...**> to create a new connection manager.  
+  
+ **Related Topics**: [MSMQ Connection Manager](../../integration-services/connection-manager/msmq-connection-manager.md), [MSMQ Connection Manager Editor](../../integration-services/connection-manager/msmq-connection-manager-editor.md)  
+  
+ **Message**  
+ Specify whether the Message Queue task sends or receive messages. If you select **Send message**, the Send page is listed in the left pane of the dialog box; if you select **Receive message**, the Receive page is listed. By default, this value is set to **Send message**.  
+  
+## Message Queue Task Editor (Send Page)
+  Use the **Send** page of the **Message Queue Task Editor** dialog box to configure a Message Queue task to send messages from a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package.  
+  
+### Options  
+ **UseEncryption**  
+ Indicate whether to encrypt the message. The default is **False**.  
+  
+ **EncryptionAlgorithm**  
+ If you choose to use encryption, specify the name of the encryption algorithm to use. The Message Queue task can use the RC2 and RC4 algorithms. The default is **RC2**.  
+  
+> [!NOTE]  
+>  The RC4 algorithm is only supported for backward compatibility. New material can only be encrypted using RC4 or RC4_128 when the database is in compatibility level 90 or 100. (Not recommended.) Use a newer algorithm such as one of the AES algorithms instead. In the current release of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], material encrypted using RC4 or RC4_128 can be decrypted in any compatibility level.  
+  
+> [!IMPORTANT]  
+>  These are the encryption algorithms that the Message Queuing (also known as MSMQ) technology supports. Both of these encryption algorithms are now considered cryptographically weak compared to newer algorithms, which Message Queuing does not yet support. Therefore, you should consider your cryptography needs carefully when sending messages using the Message Queue task.  
+  
+ **MessageType**  
+ Select the message type. This property has the options listed in the following table.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**Data file message**|The message is stored in a file. Selecting the value displays the dynamic option, **DataFileMessage**.|  
+|**Variable message**|The message is stored in a variable. Selecting the value displays the dynamic option, **VariableMessage**.|  
+|**String message**|The message is stored in the Message Queue task. Selecting the value displays the dynamic option, **StringMessage**.|  
+  
+### MessageType Dynamic Options  
+  
+#### MessageType = Data file message  
+ **DataFileMessage**  
+ Type the path of the data file, or click the ellipsis **(…)** and then locate the file.  
+  
+#### MessageType = Variable message  
+ **VariableMessage**  
+ Type the variable names, or click the ellipsis **(…)** and then select the variables. Variables are separated by commas.  
+  
+ **Related Topics:** Select Variables  
+  
+#### MessageType = String message  
+ **StringMessage**  
+ Type the string message, or click the ellipsis **(…)** and then type the message in the **Enter String Message** dialog box.  
+  
+## Message Queue Task Editor (Receive Page)
+  Use the **Receive** page of the **Message Queue Task Editor** dialog box to configure a Message Queue task to receive [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing (MSMQ) messages.  
+  
+### Options  
+ **RemoveFromMessageQueue**  
+ Indicate whether to remove the message from the queue after it is received. By default, this value is set to **False**.  
+  
+ **ErrorIfMessageTimeOut**  
+ Indicate whether the task fails when the message times out, displaying an error message. The default is **False**.  
+  
+ **TimeoutAfter**  
+ If you choose to display an error message on task failure, specify the number of seconds to wait before displaying the time-out message.  
+  
+ **MessageType**  
+ Select the message type. This property has the options listed in the following table.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**Data file message**|The message is stored in a file. Selecting the value displays the dynamic option, **DataFileMessage**.|  
+|**Variable message**|The message is stored in a variable. Selecting the value displays the dynamic option, **VariableMessage**.|  
+|**String message**|The message is stored in the Message Queue task. Selecting the value displays the dynamic option, **StringMessage**.|  
+|**String message to variable**|The message<br /><br /> Selecting the value displays the dynamic option, **StringMessage**.|  
+  
+### MessageType Dynamic Options  
+  
+#### MessageType = Data file message  
+ **SaveFileAs**  
+ Type the path of the file to use, or click the ellipsis button **(…)** and then locate the file.  
+  
+ **Overwrite**  
+ Indicate whether to overwrite the data in an existing file when saving the contents of a data file message. The default is **False**.  
+  
+ **Filter**  
+ Specify whether to apply a filter to the message. This property has the options listed in the following table.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**No filter**|The task does not filter messages. Selecting the value displays the dynamic option, **IdentifierReadOnly**.|  
+|**From package**|The message receives only messages from the specified package. Selecting the value displays the dynamic option, **Identifier**.|  
+  
+#### Filter Dynamic Options  
+  
+##### Filter = No filter  
+ **IdentifierReadOnly**  
+ This option is read-only. It may be blank or contain the GUID of a package when the Filter property was previously set.  
+  
+##### Filter = From package  
+ **Identifier**  
+ If you choose to apply a filter, type the unique identifier of the package from which messages can be received, or click the ellipsis button **(…)** and then specify the package.  
+  
+ **Related Topics:** [Select a Package](../../integration-services/control-flow/select-a-package.md)  
+  
+#### MessageType = Variable message  
+ **Filter**  
+ Specify whether to apply a filter to messages. This property has the options listed in the following table.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**No filter**|The task does not filter messages. Selecting the value displays the dynamic option, **IdentifierReadOnly**.|  
+|**From package**|The message receives only messages from the specified package. Selecting the value displays the dynamic option, **Identifier**.|  
+  
+ **Variable**  
+ Type the variable name, or click \<**New variable…**> and then configure a new variable.  
+  
+ **Related Topics:** [Add Variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+  
+#### Filter Dynamic Options  
+  
+##### Filter = No filter  
+ **IdentifierReadOnly**  
+ This option is blank.  
+  
+##### Filter = From package  
+ **Identifier**  
+ If you choose to apply a filter, type the unique identifier of the package from which messages can be received, or click the ellipsis button **(…)** and then specify the package.  
+  
+ **Related Topics:** [Select a Package](../../integration-services/control-flow/select-a-package.md)  
+  
+#### MessageType = String message  
+ **Compare**  
+ Specify whether to apply a filter to messages. This property has the options listed in the following table.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**None**|Messages are not compared.|  
+|**Exact match**|Messages must match exactly the string in the **CompareString** option.|  
+|**Ignore case**|Message must match the string in the **CompareString** option, but the comparison is not case sensitive.|  
+|**Containing**|Message must contain the string in the **CompareString** option.|  
+  
+ **CompareString**  
+ Unless the **Compare** option is set to **None**, provide the string to which the message is compared.  
+  
+#### MessageType = String message to variable  
+ **Compare**  
+ Specify whether to apply a filter to messages. This property has the options listed in the following table.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**None**|Messages are not compared.|  
+|**Exact match**|The message must match exactly the string in the **CompareString** option.|  
+|**Ignore case**|The message must match the string in the **CompareString** option but the comparison is not case sensitive.|  
+|**Containing**|The message must contain the string in the **CompareString** option.|  
+  
+ **CompareString**  
+ Unless the **Compare** option is set to **None**, provide the string to which the message is compared.  
+  
+ **Variable**  
+ Type the name of the variable to hold the received message, or click \<**New variable…**> and then configure a new variable.  
+  
+ **Related Topics:** [Add Variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+  
+## Select Variables
+  Use the **Select Variables** dialog box to specify the variables to use in a send message operation in the Message Queue task. The **Available Variables** list includes system and user-defined variables that are in the scope of the Message Queue task or its parent container. The task uses the variables in the **Selected Variables** list.  
+  
+### Options  
+ **Available Variables**  
+ Select one or more variables.  
+  
+ **Selected Variables**  
+ Select one or more variables.  
+  
+ **Right Arrows**  
+ Move selected variables to the **Selected Variables** list.  
+  
+ **Left Arrows**  
+ Move selected variables back to the **Available Variables** list.  
+  
+ **New Variable**  
+ Create a new variable.  
+  
+ **Related Topics:** [Add Variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
 ## See Also  
  [Integration Services Tasks](../../integration-services/control-flow/integration-services-tasks.md)   
  [Control Flow](../../integration-services/control-flow/control-flow.md)  

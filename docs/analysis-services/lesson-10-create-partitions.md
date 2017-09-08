@@ -18,6 +18,8 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Lesson 10: Create Partitions
+[!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
+
 In this lesson, you will create partitions to divide the FactInternetSales table into smaller logical parts that can be processed (refreshed) independent of other partitions. By default, every table you include in your model has one partition which includes all of the table’s columns and rows. For the FactInternetSales table, we want to divide the data by year; one partition for each of the table’s five years. Each partition can then be processed independently. To learn more, see [Partitions](../analysis-services/tabular-models/partitions-ssas-tabular.md).  
   
 Estimated time to complete this lesson: **15 minutes**  
@@ -113,7 +115,14 @@ This topic is part of a tabular modeling tutorial, which should be completed in 
     ```  
     WHERE (([OrderDate] >= N'2014-01-01 00:00:00') AND ([OrderDate] < N'2015-01-01 00:00:00'))  
     ```  
-  
+
+## Delete the FactInternetSales partition
+Now that you have partitions for each year, you can delete the FactInternetSales partition. This prevents overlap when choosing Process all when processing partitions.
+#### To delete the FactInternetSales partition
+-  Click the FactInternetSales partition, and then click **Delete**.
+
+
+
 ## Process partitions  
 In Partition Manager, notice the **Last Processed** column for each of the new partitions you just created shows these partitions have never been processed. When you create new partitions, you should run a Process Partitions or Process Table operation to refresh the data in those partitions.  
   

@@ -5,7 +5,6 @@ ms.custom:
 ms.date: "08/05/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
-ms.service: "sql-server-stretch-database"
 ms.suite: ""
 ms.technology: 
   - "dbe-stretch"
@@ -28,7 +27,7 @@ ms.assetid: 855dd9fc-f80c-4dbc-bf46-55a9736bfe15
 caps.latest.revision: 39
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ---
 # Get started by running the Enable Database for Stretch Wizard
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

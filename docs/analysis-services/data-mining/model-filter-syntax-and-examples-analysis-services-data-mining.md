@@ -24,7 +24,7 @@ manager: "jhubbard"
 # Model Filter Syntax and Examples (Analysis Services - Data Mining)
   This section provides detailed information about the syntax for model filters, together with sample expressions.  
   
- [Filter syntax](#bkmk_syntax)  
+ [Filter syntax](#bkmk_Syntax)  
   
  [Filters on case attributes](#bkmk_Ex1)  
   

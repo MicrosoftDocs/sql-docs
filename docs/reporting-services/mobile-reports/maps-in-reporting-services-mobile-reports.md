@@ -1,7 +1,7 @@
 ---
 title: "Maps in Reporting Services mobile reports | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: "03/30/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -56,7 +56,7 @@ To display real data in your map, you need to set values for at least two of the
   
 1. Select the **Data** tab in the upper-left corner.  
   
-2. Select **Add Data**, then either **Local Excel **or **SSRS Server**.  
+2. Select **Add Data**, then either **Local Excel** or **SSRS Server**.  
   
    > **Tip**: Make sure the [data is in a format that works for mobile reports](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md).  
   

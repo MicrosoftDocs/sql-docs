@@ -101,7 +101,7 @@ manager: "jhubbard"
   
  The data and log files for the database are permanently deleted.  
   
- **\< Previous** - Returns to the **Introduction** page.  
+ **< Previous** - Returns to the **Introduction** page.  
   
  **Next >** - Proceeds to the **Summary** page.  
   
@@ -114,7 +114,7 @@ manager: "jhubbard"
   
  **Review your selection summary** - Review the DAC, database, and deletion method displayed in the box. If the information is correct, select either **Next** or **Finish** to delete the DAC. If the DAC and database information is not correct, select **Cancel** and select the correct DAC. If the deletion method is not correct, select **Previous** to return to the **Choose Method** page and select a different method.  
   
- **\< Previous** - Returns to the **Choose Method** page to choose a different delete method.  
+ **< Previous** - Returns to the **Choose Method** page to choose a different delete method.  
   
  **Next >** - Deletes the DAC instance using the method you chose on the previous page, and proceeds to the **Delete Data-tier Application** page.  
   

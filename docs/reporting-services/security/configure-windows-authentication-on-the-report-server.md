@@ -125,7 +125,7 @@ manager: "erikre"
   
  You can detect the error if you enabled Kerberos logging. Another symptom of the error is that you are prompted for credentials multiple times and then see an empty browser window.  
   
- You can confirm that you are encountering a Kerberos authentication error by removing \< **RSWindowsNegotiate** /> from your configuration file and reattempting the connection.  
+ You can confirm that you are encountering a Kerberos authentication error by removing < **RSWindowsNegotiate** /> from your configuration file and reattempting the connection.  
   
  After you confirm the problem, you can address it in the following ways:  
   

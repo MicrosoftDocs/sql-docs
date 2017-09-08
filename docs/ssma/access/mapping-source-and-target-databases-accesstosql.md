@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "target database"
 ms.assetid: 69bee937-7b2c-49ee-8866-7518c683fad4
 caps.latest.revision: 17
-author: "sabotta"
-ms.author: "carlasab"
-manager: "lonnyb"
+author: "Shamikg"
+ms.author: "Shamikg"
+manager: "jhubbard"
 ---
 # Mapping Source and Target Databases (AccessToSQL)
 When you connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure, you need to specify a target database for migration. If you have multiple Access databases you can map them to multiple [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] databases (or schemas) or to multiple schemas under the connected SQL Azure database.  

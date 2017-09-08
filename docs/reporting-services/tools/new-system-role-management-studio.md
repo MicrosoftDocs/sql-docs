@@ -28,7 +28,7 @@ manager: "erikre"
  **Name**  
  Type the name of the role definition. A role definition name must be unique within the report server namespace. A name must contain at least one alphanumeric character. It can also include spaces and some symbols. Do not use the following characters when specifying a name:  
   
- ; ? : @ & = + , $ / * \< >  
+ ; ? : @ & = + , $ / * < >  
   
  " /  
   

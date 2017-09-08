@@ -1,5 +1,5 @@
 ---
-title: "Add Features to an Instance of SQL Server 2016 (Setup) | Microsoft Docs"
+title: "Add Features to an Instance of SQL Server (Setup) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: "sql-server-2016"
@@ -19,7 +19,7 @@ author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---
-# Add Features to an Instance of SQL Server 2016 (Setup)
+# Add Features to an Instance of SQL Server (Setup)
   This topic provides a step-by-step procedure for adding features to an instance of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Some [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components or services are specific to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. These are also known as instance-aware. They share the same version as the instance that hosts them, and are used exclusively for that instance. You can add the instance-aware components to an instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], along with the shared components of if they are not already installed. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  To add features to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from the command prompt, see [Install SQL Server 2016 from the Command Prompt](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).  

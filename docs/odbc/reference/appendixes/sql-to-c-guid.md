@@ -29,7 +29,7 @@ The identifier for the GUID ODBC SQL data type is:
 |C type identifier|Test|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
 |SQL_C_CHAR|*BufferLength* > Character byte length|Data|36|n/a|  
-||*BufferLength* \< 37|Undefined|Undefined|22003|  
+||*BufferLength* < 37|Undefined|Undefined|22003|  
 |SQL_C_WCHAR|*BufferLength* > Character length|Data|36|n/a|  
 ||*BufferLength* < 37|Undefined|Undefined|22003|  
 |SQL_C_BINARY|Byte length of data \<= *BufferLength*|Data|Length of data in bytes|n/a|  

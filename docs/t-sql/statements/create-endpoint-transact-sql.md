@@ -1,7 +1,7 @@
 ---
 title: "CREATE ENDPOINT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/09/2016"
+ms.date: "08/10/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -58,7 +58,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
-  
 CREATE ENDPOINT endPointName [ AUTHORIZATION login ]  
 [ STATE = { STARTED | STOPPED | DISABLED } ]  
 AS { TCP } (  
@@ -90,10 +89,7 @@ FOR SERVICE_BROKER (
    [ [ , ] MESSAGE_FORWARD_SIZE = forward_size ]  
 )  
   
-```  
-  
-```  
-  
+
 <FOR DATABASE_MIRRORING_language_specific_arguments> ::=  
 FOR DATABASE_MIRRORING (  
    [ AUTHENTICATION = {   
@@ -107,7 +103,6 @@ FOR DATABASE_MIRRORING (
     ]   
    [ , ] ROLE = { WITNESS | PARTNER | ALL }  
 )  
-  
 ```  
   
 ## Arguments  
@@ -162,7 +157,7 @@ FOR DATABASE_MIRRORING (
 > [!NOTE]  
 >  For options that are specific to SERVICE_BROKER, see "SERVICE_BROKER Options," later in this section. For options that are specific to DATABASE_MIRRORING, see "DATABASE_MIRRORING Options," later in this section.  
   
- AUTHENTICATION **=** <authentication_options>  
+ AUTHENTICATION **=** \<authentication_options> 
  Specifies the TCP/IP authentication requirements for connections for this endpoint. The default is WINDOWS.  
   
  The supported authentication methods include NTLM and or Kerberos or both.  
@@ -170,7 +165,7 @@ FOR DATABASE_MIRRORING (
 > [!IMPORTANT]  
 >  All mirroring connections on a server instance use a single database mirroring endpoint. Any attempt to create an additional database mirroring endpoint will fail.  
   
- **<authentication_options> ::=**  
+ **\<authentication_options> ::=**  
   
  **WINDOWS** [ { NTLM | KERBEROS | **NEGOTIATE** } ]  
  Specifies that the endpoint is to connect using Windows Authentication protocol to authenticate the endpoints. This is the default.  
@@ -297,3 +292,4 @@ GO
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   
+

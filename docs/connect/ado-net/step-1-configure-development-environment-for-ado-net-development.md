@@ -1,7 +1,7 @@
 ---
 title: "Step 1: Configure development environment for ADO.NET development | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/30/2017"
+ms.date: "08/08/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -17,27 +17,23 @@ manager: "jhubbard"
 ---
 # Step 1: Configure development environment for ADO.NET development
 
-- Next article:&nbsp;&nbsp;&nbsp;[Step 2: Create a SQL database for ADO.NET development](../../connect/ado-net/step-2-create-a-sql-database-for-ado-net-development.md)  
+- Next article:&nbsp;&nbsp;&nbsp;[Step 2: Create a SQL database for ADO.NET development](step-2-create-a-sql-database-for-ado-net-development.md)  
 
-## Windows
-  
-1. [Download](https://www.microsoft.com/net) and install the .Net framework  
-  
-2. Install Visual Studio Community, or a similar integrated development environment (IDE) for writing and compiling C# source code.  Microsoft now provides Visual Studio Community for *free*.  
-      - [Download Visual Studio Community](http://www.visualstudio.com/products/visual-studio-community-vs)  
-      - [More options for free Visual Studio](http://www.visualstudio.com/products/free-developer-offers-vs.aspx)  
-  
-  
-## Ubuntu Linux  
-  
-Download .NET Framework from the [Mono Project][linkid-mono-project]
-  
-## Mac  
-  
-Download .NET Framework from the [Mono Project][linkid-mono-project]
+## Download a .NET SQL driver
+
+Our current code example uses ADO.NET of the .NET Framework, for Windows. The .NET Core is available for Linux and MacOS (in addition to Windows).
+
+### ADO.NET, for Windows
+
+1. ![Download-DownArrow-Circled](../../ssdt/media/download.png)[To download and install .NET Framework, including ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+
+2. Install Visual Studio Community, or a similar integrated development environment (IDE) for writing and compiling C# source code. Microsoft now provides Visual Studio Community for *free*.  
+    - [Download Visual Studio Community](http://www.visualstudio.com/products/visual-studio-community-vs)  
+    - [More options for free Visual Studio](http://www.visualstudio.com/products/free-developer-offers-vs.aspx)  
 
 
-\<!-- Repeatable link IDs. 
--->
+### .NET Core, for Linux-Ubuntu and MacOS
 
-[linkid-mono-project]: http://www.mono-project.com/
+Links to download .NET Core, for a variety of operating systems, are available at:
+
+- ![Download-DownArrow-Circled](../../ssdt/media/download.png)[To download and install .NET Core](../sql-connection-libraries.md#anchor-20-drivers-relational-access)

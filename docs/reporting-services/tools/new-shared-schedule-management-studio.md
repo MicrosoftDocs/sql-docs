@@ -34,7 +34,7 @@ manager: "erikre"
  **Name**  
  Type a name for the shared schedule. This name appears in drop-down lists when users select a shared schedule for reports and subscriptions. Be sure to provide a descriptive name that fits easily within a list and that easily distinguishes one shared schedule from another. A name must contain at least one alphanumeric character. It can also include spaces and some symbols. Do not use the following characters when specifying a name:  
   
- ; ? : @ & = + , $ / * \< >  
+ ; ? : @ & = + , $ / * < >  
   
  " /  
   

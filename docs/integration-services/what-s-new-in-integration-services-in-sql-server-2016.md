@@ -22,7 +22,7 @@ manager: "jhubbard"
 # What&#39;s New in Integration Services in SQL Server 2016
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
- This topic describes the features that have been added or updated in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
+ This topic describes the features that have been added or updated in SQL Server 2016 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   
 ## Improvements grouped by category  
   
@@ -143,16 +143,16 @@ manager: "jhubbard"
   
 -   You restored the database from an older version of SQL Server.  
   
--   You did not remove the database from an Always On Availability Group before upgrading the SQL Server instance. This prevents the automatic upgrade of the database. For more info, see [Upgrading SSISDB in an availability group](../integration-services/service/always-on-for-ssis-catalog-ssisdb.md#Upgrade).  
+-   You did not remove the database from an Always On Availability Group before upgrading the SQL Server instance. This prevents the automatic upgrade of the database. For more info, see [Upgrading SSISDB in an availability group](../integration-services/service/ssis-catalog.md#Upgrade).  
   
- For more info, see [Upgrade the SSIS Catalog &#40;SSISDB&#41;](../integration-services/service/upgrade-the-ssis-catalog-ssisdb.md). 
+ For more info, see [SSIS Catalog &#40;SSISDB&#41;](../integration-services/service/ssis-catalog.md). 
 
 ####  <a name="AlwaysOn"></a> Support for Always On in the SSIS Catalog  
  The Always On Availability Groups feature is a high-availability and disaster-recovery solution that provides an enterprise-level alternative to database mirroring. An availability group supports a failover environment for a discrete set of user databases known as availability databases that fail over together. For more information, see [Always On Availability Groups](https://msdn.microsoft.com/library/hh510230.aspx).  
   
- In [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], SSIS introduces new capabilities that let you easily deploy to a centralized SSIS Catalog (i.e. SSISDB user database). In order to provide high availability for the SSISDB database and its contents - projects, packages, execution logs, and so on - you can add the SSISDB database to an Always On Availability Group, just like any other user database. When a failover occurs, one of the secondary nodes automatically becomes the new primary node.  
+ In SQL Server 2016, SSIS introduces new capabilities that let you easily deploy to a centralized SSIS Catalog (i.e. SSISDB user database). In order to provide high availability for the SSISDB database and its contents - projects, packages, execution logs, and so on - you can add the SSISDB database to an Always On Availability Group, just like any other user database. When a failover occurs, one of the secondary nodes automatically becomes the new primary node.  
   
- For a detailed overview and step-by-step instructions for enabling Always On for SSISDB, see [Always On for SSIS Catalog &#40;SSISDB&#41;](../integration-services/service/always-on-for-ssis-catalog-ssisdb.md).  
+ For a detailed overview and step-by-step instructions for enabling Always On for SSISDB, see [SSIS Catalog](../integration-services/service/ssis-catalog.md).  
 
 ####  <a name="IncrementalDeployment"></a> Incremental package deployment  
 The Incremental Package Deployment feature lets you deploy one or more packages to an existing or new project without deploying the whole project. You can incrementally deploy packages by using the following tools.  
@@ -167,7 +167,7 @@ The Incremental Package Deployment feature lets you deploy one or more packages 
   
 -   The Management Object Model (MOM) API  
   
- For more info, see [Deploy Packages to Integration Services Server](../integration-services/packages/deploy-packages-to-integration-services-server.md) .  
+ For more info, see [Deploy Integration Services (SSIS) Projects and Packages](../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md.  
 
 ####  <a name="encrypted"></a> Support for Always Encrypted in the SSIS Catalog  
  SSIS already supports the Always Encrypted feature in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. For more info, see the following blog posts.  
@@ -187,7 +187,7 @@ The Incremental Package Deployment feature lets you deploy one or more packages 
  The new **RuntimeLineage** logging level in the SSIS catalog collects the data required to track lineage information in the data flow. You can parse this lineage information to map the lineage relationship between tasks. ISVs and developers  can build custom lineage mapping tools with this information. 
 
 ####  <a name="CustomLogging"></a> New custom logging level in the SSIS catalog  
- Previous versions of the SSIS catalog let you choose from four built-in logging levels when you run a package: **None, Basic, Performance, or Verbose**. [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] adds the **RuntimeLineage** logging level. In addition, you can now create and save multiple customized logging levels in the SSIS catalog, and pick the logging level to use every time you run a package. For each customized logging level,  select only the statistics and events you want to capture. Optionally include the event context to see variable values, connection strings, and task properties. For more info, see [Enable Logging for Package Execution on the SSIS Server](../integration-services/performance/enable-logging-for-package-execution-on-the-ssis-server.md). 
+ Previous versions of the SSIS catalog let you choose from four built-in logging levels when you run a package: **None, Basic, Performance, or Verbose**. SQL Server 2016 adds the **RuntimeLineage** logging level. In addition, you can now create and save multiple customized logging levels in the SSIS catalog, and pick the logging level to use every time you run a package. For each customized logging level,  select only the statistics and events you want to capture. Optionally include the event context to see variable values, connection strings, and task properties. For more info, see [Enable Logging for Package Execution on the SSIS Server](../integration-services/performance/integration-services-ssis-logging.md#server_logging). 
 
 ####  <a name="ErrorColumn"></a> Column names for errors in the data flow  
  When you redirect rows in the data flow that contain errors to an error output, the output contains a numeric identifier for the column in which the error occurred, but does not display the name of the column. There are now several ways to find or display the name of the column in which the error occurred.  
@@ -283,10 +283,7 @@ The destination adapters for loading data into PDW with AU5 have been released. 
 ### Expanded connectivity to the cloud
 
 ####  <a name="AFP2016"></a> Azure Feature Pack for SSIS released for SQL Server 2016  
- The Azure Feature Pack for Integration Services has been released for [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. The feature pack contains connection managers to connect to Azure data sources and tasks to do common Azure operations. For more info, see [Azure Feature Pack for Integration Services &#40;SSIS&#41;](../integration-services/azure-feature-pack-for-integration-services-ssis.md).  
-
->   [!NOTE]
-> To ensure that the Azure Storage Connection Manager and the components that use it - that is, the Blob Source, the Blob Destination, the Blob Upload Task, and the Blob Download Task - can connect to both general-purpose storage accounts and to blob storage accounts, make sure you download the latest version of the Azure Feature Pack [here](https://www.microsoft.com/download/details.aspx?id=49492). For more info about these two types of storage accounts, see [Introduction to Microsoft Azure Storage](https://azure.microsoft.com/en-us/documentation/articles/storage-introduction/#general-purpose-storage-accounts).
+ The Azure Feature Pack for Integration Services has been released for SQL Server 2016. The feature pack contains connection managers to connect to Azure data sources and tasks to do common Azure operations. For more info, see [Azure Feature Pack for Integration Services &#40;SSIS&#41;](../integration-services/azure-feature-pack-for-integration-services-ssis.md).  
 
 #### <a name="dynamics"></a> Support for Microsoft Dynamics online resources released in Service Pack 1
 
@@ -305,7 +302,7 @@ The latest version of the Azure Feature Pack includes the Azure SQL DW Upload ta
 ### Better install experience
 
 ####  <a name="Upgrade"></a> Upgrade blocked when SSISDB belongs to an Availability Group  
- If the SSIS catalog database (SSISDB) belongs to an Always On Availability Group, you have to remove SSISDB from the availability group, upgrade SQL Server, then add SSISDB back to the availability group. For more info, see [Upgrading SSISDB in an availability group](../integration-services/service/always-on-for-ssis-catalog-ssisdb.md#Upgrade).  
+ If the SSIS catalog database (SSISDB) belongs to an Always On Availability Group, you have to remove SSISDB from the availability group, upgrade SQL Server, then add SSISDB back to the availability group. For more info, see [Upgrading SSISDB in an availability group](../integration-services/service/ssis-catalog.md#Upgrade).  
 
 ### Better design experience
 
@@ -334,9 +331,6 @@ The latest version of the Azure Feature Pack includes the Azure SQL DW Upload ta
 
 ####  <a name="AzureBlob"></a> Support for Azure Blob Storage in the SQL Server Import and Export Wizard  
  The SQL Server Import and Export Wizard can now import data from, and save data to, Azure Blob Storage. For more info, see [Choose a Data Source &#40;SQL Server Import and Export Wizard&#41;](../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md) and [Choose a Destination &#40;SQL Server Import and Export Wizard&#41;](../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md). 
-
->   [!NOTE]
-> To ensure that the Azure Storage Connection Manager and the components that use it - that is, the Blob Source, the Blob Destination, the Blob Upload Task, and the Blob Download Task - can connect to both general-purpose storage accounts and to blob storage accounts, make sure you download the latest version of the Azure Feature Pack [here](https://www.microsoft.com/download/details.aspx?id=49492). For more info about these two types of storage accounts, see [Introduction to Microsoft Azure Storage](https://azure.microsoft.com/en-us/documentation/articles/storage-introduction/#general-purpose-storage-accounts).
 
 ####  <a name="CDCOracle"></a> Change Data Capture Designer and Service for Oracle for Microsoft SQL Server 2016 released  
  The Microsoft® Change Data Capture Designer and Service for Oracle by Attunity for Microsoft SQL Server® 2016 have been released as part of the SQL Server 2016 Feature Pack.  These components now support Oracle 12c in classic installation. (Multitenant installation is not supported) To download components of the Feature Pack, see [Microsoft® SQL Server® 2016 Feature Pack](http://go.microsoft.com/fwlink/?LinkID=746297).  

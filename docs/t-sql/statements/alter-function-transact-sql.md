@@ -1,7 +1,7 @@
 ---
 title: "ALTER FUNCTION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/21/2017"
+ms.date: "08/07/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -115,7 +115,7 @@ RETURNS @return_variable TABLE <table_type_definition>
     { PRIMARY KEY | UNIQUE }  
       [ CLUSTERED | NONCLUSTERED ]   
         [ WITH FILLFACTOR = fillfactor   
-        | WITH ( \< index_option > [ , ...n ] )  
+        | WITH ( < index_option > [ , ...n ] )  
       [ ON { filegroup | "default" } ]  
   | [ CHECK ( logical_expression ) ] [ ,...n ]  
 }  
@@ -260,10 +260,8 @@ RETURNS return_data_type
  *select-stmt*  
  Is the single SELECT statement that defines the return value of an inline table-valued function.  
   
- EXTERNAL NAME <method_specifier>*assembly_name.class_name*.*method_name*  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+ EXTERNAL NAME \<method_specifier>*assembly_name.class_name*.*method_name*  
+ **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Specifies the method of an assembly to bind with the function. *assembly_name* must match an existing assembly in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in the current database with visibility on. *class_name* must be a valid [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identifier and must exist as a class in the assembly. If the class has a namespace-qualified name that uses a period (**.**) to separate namespace parts, the class name must be delimited by using brackets (**[]**) or quotation marks (**""**). *method_name* must be a valid [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identifier and must exist as a static method in the specified class.  
   
@@ -273,13 +271,11 @@ RETURNS return_data_type
 > [!NOTE]  
 >  This option is not available in a contained database.  
   
- *\<*table_type_definition*>***(** { <column_definition> <column_constraint>   | <computed_column_definition> }   [ <table_constraint> ] [ **,**...*n* ]**)**  
+ *\<*table_type_definition*>***(** { \<column_definition> \<column_constraint> | \<computed_column_definition> } [ \<table_constraint> ] [ **,**...*n* ]**)**  
  Defines the table data type for a [!INCLUDE[tsql](../../includes/tsql-md.md)] function. The table declaration includes column definitions and column or table constraints.  
   
- \< clr_table_type_definition > **(** { *column_name**data_type* } [ **,**...*n* ] **)**  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Preview in some regions](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).|  
+\< clr_table_type_definition > **(** { *column_name**data_type* } [ **,**...*n* ] **)**
+ **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Preview in some regions](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).  
   
  Defines the table data types for a CLR function. The table declaration includes only column names and data types.  
   
@@ -297,14 +293,12 @@ RETURNS return_data_type
  SCHEMABINDING  
  The SCHEMABINDING argument is required for natively compiled, scalar user-defined functions.  
   
- **<function_option>::= and <clr_function_option>::=**  
+ **\<function_option>::= and \<clr_function_option>::=**  
   
  Specifies the function will have one or more of the following options.  
   
  ENCRYPTION  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+ **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Indicates that the [!INCLUDE[ssDE](../../includes/ssde-md.md)] encrypts the catalog view columns that contains the text of the ALTER FUNCTION statement. Using ENCRYPTION prevents the function from being published as part of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] replication. ENCRYPTION cannot be specified for CLR functions.  
   
@@ -317,12 +311,12 @@ RETURNS return_data_type
   
 -   The function is modified by using the ALTER statement with the SCHEMABINDING option not specified.  
   
- For a list of conditions that must be met before a function can be schema bound, see [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md).  
+For a list of conditions that must be met before a function can be schema bound, see [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md).  
   
  RETURNS NULL ON NULL INPUT | CALLED ON NULL INPUT  
  Specifies the **OnNULLCall** attribute of a scalar-valued function. If not specified, CALLED ON NULL INPUT is implied by default. This means that the function body executes even if NULL is passed as an argument.  
   
- If RETURNS NULL ON NULL INPUT is specified in a CLR function, it indicates that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can return NULL when any of the arguments it receives is NULL, without actually invoking the body of the function. If the method specified in <method_specifier> already has a custom attribute that indicates RETURNS NULL ON NULL INPUT, but the ALTER FUNCTION statement indicates CALLED ON NULL INPUT, the ALTER FUNCTION statement takes precedence. The **OnNULLCall** attribute cannot be specified for CLR table-valued functions.  
+ If RETURNS NULL ON NULL INPUT is specified in a CLR function, it indicates that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can return NULL when any of the arguments it receives is NULL, without actually invoking the body of the function. If the method specified in \<method_specifier> already has a custom attribute that indicates RETURNS NULL ON NULL INPUT, but the ALTER FUNCTION statement indicates CALLED ON NULL INPUT, the ALTER FUNCTION statement takes precedence. The **OnNULLCall** attribute cannot be specified for CLR table-valued functions.  
   
  EXECUTE AS Clause  
  Specifies the security context under which the user-defined function is executed. Therefore, you can control which user account [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses to validate permissions on any database objects referenced by the function.  
@@ -332,7 +326,7 @@ RETURNS return_data_type
   
  For more information, see [EXECUTE AS Clause &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md).  
   
- **\< column_definition >::=**  
+**\< column_definition >::=**
   
  Defines the table data type. The table declaration includes column definitions and constraints. For CLR functions, only *column_name* and *data_type* can be specified.  
   
@@ -368,7 +362,7 @@ RETURNS return_data_type
  *increment*  
  Is the integer value to add to the *seed* value for successive rows in the table.  
   
- **\< column_constraint >::= and \< table_constraint>::=**  
+**\< column_constraint >::= and \< table_constraint>::=**
   
  Defines the constraint for a specified column or table. For CLR functions, the only constraint type allowed is NULL. Named constraints are not allowed.  
   
@@ -394,7 +388,7 @@ RETURNS return_data_type
  *logical_expression*  
  Is a logical expression that returns TRUE or FALSE.  
   
- **<computed_column_definition>::=**  
+ **\<computed_column_definition>::=**  
   
  Specifies a computed column. For more information about computed columns, see [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).  
   
@@ -404,7 +398,7 @@ RETURNS return_data_type
  *computed_column_expression*  
  Is an expression that defines the value of a computed column.  
   
- **<index_option>::=**  
+ **\<index_option>::=**  
   
  Specifies the index options for the PRIMARY KEY or UNIQUE index. For more information about index options, see [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
@@ -432,15 +426,10 @@ RETURNS return_data_type
  The following Service Broker statements cannot be included in the definition of a [!INCLUDE[tsql](../../includes/tsql-md.md)] user-defined function:  
   
 -   BEGIN DIALOG CONVERSATION  
-  
 -   END CONVERSATION  
-  
 -   GET CONVERSATION GROUP  
-  
 -   MOVE CONVERSATION  
-  
 -   RECEIVE  
-  
 -   SEND  
   
 ## Permissions  

@@ -48,6 +48,5 @@ manager: "jhubbard"
   
 ## See Also  
  [Integration Services &#40;SSIS&#41; Logging](../../integration-services/performance/integration-services-ssis-logging.md)   
- [Enable Package Logging in SQL Server Data Tools](../../integration-services/performance/enable-package-logging-in-sql-server-data-tools.md)  
   
   

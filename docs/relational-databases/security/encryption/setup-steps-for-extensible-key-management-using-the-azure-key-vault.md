@@ -211,10 +211,10 @@ SQL Server Version  |Redistributable Install Link
     ### Create a new key
 
     ##### Example:  
-    If you'd like, you can create a new encryption key directly in Azure Key vault and have it be either software-protected or HSM-protected. In this example, let’s create a software-protected key using the `Add-AzureRmKeyVaultKey cmdlet`:  
+    If you'd like, you can create a new encryption key directly in Azure Key vault and have it be either software-protected or HSM-protected. In this example, let’s create a software-protected key using the `Add-AzureKeyVaultKey cmdlet`:  
 
     ``` powershell  
-    Add-AzureRmKeyVaultKey -VaultName 'ContosoDevKeyVault' `  
+    Add-AzureKeyVaultKey -VaultName 'ContosoDevKeyVault' `  
       -Name 'ContosoRSAKey0' -Destination 'Software'  
     ```  
   

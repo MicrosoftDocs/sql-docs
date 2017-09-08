@@ -13,9 +13,9 @@ helpviewer_keywords:
   - "change tracking [SQL Server]"
 ms.assetid: 5e879c65-0d38-454f-9a20-62a6e72c89f7
 caps.latest.revision: 7
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
+author: "smartysanthosh"
+ms.author: "nagavo"
+manager: "craigg"
 ---
 # Change Tracking (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], you can use change tracking groups to take action when an attribute value changes. Use change tracking when you don’t know what the new value will be, but instead want to know if any change occurred.  

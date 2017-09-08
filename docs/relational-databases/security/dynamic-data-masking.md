@@ -100,7 +100,7 @@ As an example, consider a database principal that has sufficient privileges to r
 
 ```
 SELECT ID, Name, Salary FROM Employees
-WHERE Salary > 99999 and Salary \< 100001;
+WHERE Salary > 99999 and Salary < 100001;
 ```
 
 >    |  Id | Name| Salary |   

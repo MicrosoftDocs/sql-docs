@@ -5,7 +5,6 @@ ms.custom:
 ms.date: "08/05/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
-ms.service: "sql-server-stretch-database"
 ms.suite: ""
 ms.technology: 
   - "dbe-stretch"
@@ -18,7 +17,7 @@ ms.assetid: c1bbb24e-47e3-46aa-b786-fcadf9fb65ce
 caps.latest.revision: 33
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ---
 # Disable Stretch Database and bring back remote data
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -65,9 +64,9 @@ manager: "jhubbard"
     This command can't be canceled.  
   
     ```tsql  
-    USE \<Stretch-enabled database name>;
+    USE <Stretch-enabled database name>;
     GO
-    ALTER TABLE \<Stretch-enabled table name>  
+    ALTER TABLE <Stretch-enabled table name>  
        SET ( REMOTE_DATA_ARCHIVE ( MIGRATION_STATE = INBOUND ) ) ; 
     GO 
     ```  
@@ -78,9 +77,9 @@ manager: "jhubbard"
 -   To disable Stretch for a table and abandon the remote data, run the following command.  
   
     ```tsql  
-    USE \<Stretch-enabled database name>;
+    USE <Stretch-enabled database name>;
     GO
-    ALTER TABLE \<Stretch-enabled table name>  
+    ALTER TABLE <Stretch-enabled table name>  
        SET ( REMOTE_DATA_ARCHIVE = OFF_WITHOUT_DATA_RECOVERY ( MIGRATION_STATE = PAUSED ) ) ; 
     GO
     ```  
@@ -104,7 +103,7 @@ manager: "jhubbard"
  Run the following command.  
   
 ```tsql  
-ALTER DATABASE \<Stretch-enabled database name>  
+ALTER DATABASE <Stretch-enabled database name>  
     SET REMOTE_DATA_ARCHIVE = OFF ;  
 GO 
 ```  

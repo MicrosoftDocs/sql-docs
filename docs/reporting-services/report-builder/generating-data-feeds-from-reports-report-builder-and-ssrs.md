@@ -1,7 +1,7 @@
 ---
 title: "Generating Data Feeds from Reports (Report Builder and SSRS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: "05/30/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -16,8 +16,10 @@ author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "erikre"
 ---
+
 # Generating Data Feeds from Reports (Report Builder and SSRS)
-  The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Atom rendering extension generates an Atom service document that lists the data feeds available from a paginated report and the data feeds from the data regions in a report. You use this extension to generate Atom-compliant data feeds that are readable and exchangeable with applications that can consume data feeds generated from reports. For example, you can use the Atom rendering extension to generated data feeds that you can then use in the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] client.  
+
+  The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Atom rendering extension generates an Atom service document that lists the data feeds available from a paginated report and the data feeds from the data regions in a report. You use this extension to generate Atom-compliant data feeds that are readable and exchangeable with applications that can consume data feeds generated from reports. For example, you can use the Atom rendering extension to generated data feeds that you can then use in Power Pivot or Power BI.  
   
  The Atom service document lists at least one data feed for each data region in a report. Depending on the type of data region and the data that the data region displays, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] might generate multiple data feeds from a data region. For example, a matrix or chart can provide multiple data feeds. When the Atom rendering extension creates the Atom service document, a unique identifier is created for each data feed and you use the identifier in the URL to access the content of the data feed.  
   
@@ -111,7 +113,7 @@ manager: "erikre"
   
  The data rows for nested data regions are typically wide, especially if the nested tables and matrices include groups and totals. You might find it useful to export the report to a data feed and view the data feed to verify that the data generated is what you expected.  
   
- When the Atom rendering extension creates the Atom service document, a unique identifier is created for the data feed and you use the identifier in the URL to view the content of the data feed. The sample Atom service document, shown above, includes the URL http://ServerName/ReportServer?%2fProduct+Sales+Summary&rs%3aCommand=Render&rs%3aFormat=ATOM&rc%3aDataFeed=xAx0x1". The URL identifies the report (Product Sales Summary), the Atom rendering format (ATOM), and the name of the data feed (xAx0x1).  
+ When the Atom rendering extension creates the Atom service document, a unique identifier is created for the data feed and you use the identifier in the URL to view the content of the data feed. The sample Atom service document, shown above, includes the URL `http://ServerName/ReportServer?%2fProduct+Sales+Summary&rs%3aCommand=Render&rs%3aFormat=ATOM&rc%3aDataFeed=xAx0x1`. The URL identifies the report (Product Sales Summary), the Atom rendering format (ATOM), and the name of the data feed (xAx0x1).  
   
  Report item names default to the report definition language (RDL) element names of the report items and often they are not intuitive or easy to remember. For example, the default name of the first matrix placed in a report is Tablix 1. The data feeds use these names.  
   
@@ -183,10 +185,10 @@ manager: "erikre"
   
 ##  <a name="DeviceInfo"></a> Device Information Settings  
  You can change some default settings for this renderer, including the encoding schema to use. For more information, see [ATOM Device Information Settings](../../reporting-services/atom-device-information-settings.md).  
-  
-  
-## See Also  
- [Exporting to a CSV File &#40;Report Builder and SSRS&#41;](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md)   
- [Export Reports &#40;Report Builder and SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)  
-  
-  
+
+## Next steps
+
+[Exporting to a CSV File](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md)   
+[Export Reports](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)  
+
+More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)

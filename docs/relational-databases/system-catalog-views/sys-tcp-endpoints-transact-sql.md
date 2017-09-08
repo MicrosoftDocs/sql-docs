@@ -32,7 +32,7 @@ manager: "jhubbard"
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|**\< inherited columns>**||Inherits columns from [sys.endpoints](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md).|  
+|**< inherited columns>**||Inherits columns from [sys.endpoints](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md).|  
 |**port**|int|The port number that the endpoint is listening on. Is not nullable.|  
 |**is_dynamic_port**|bit|1 = Port number was dynamically assigned.<br /><br /> Is not nullable.|  
 |**ip_address**|**nvarchar(45)**|Listener IP address as specified by the LISTENER_IP clause. Is nullable.|  

@@ -75,8 +75,7 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```  
-  
+```dos
 dtutil /option [value] [/option [value]]...  
 ```  
   
@@ -106,7 +105,7 @@ dtutil /option [value] [/option [value]]...
 |/M[ove] {*SQL* &#124; *File* &#124; *DTS*}; *pathandname*|Specifies a move action on an [!INCLUDE[ssIS](../includes/ssis-md.md)] package. To use this parameter, first specify the location of the package using the **/FI**, **/SQ**, or **/DT** option. Next, specify the **Move** action. This action requires two arguments, which are separated by a semicolon:<br /><br /> The destination argument can specify *SQL*, *FILE*, or *DTS*. A *SQL* destination can include the *DESTUSER*, *DESTPASSWORD*, and *DESTSERVER* options.<br /><br /> The *pathandname* argument specifies the package location: *SQL* uses the package path and package name, *FILE* uses a UNC or local path, and *DTS* uses a location that is relative to the root of the [!INCLUDE[ssIS](../includes/ssis-md.md)] Package Store. When the destination is *FILE* or *DTS*, the path argument does not include the file name. Instead, it uses the package name at the specified location as the file name.<br /><br /> <br /><br /> When the **MOVE** action encounters an existing package at the destination, **dtutil** prompts you to confirm that you want to overwrite the package. The **Y** reply overwrites the package and the **N** reply ends the program. When the command includes the *QUIET* option, no prompt appears and any existing package is overwritten.|  
 |/Q[uiet]|Stops the confirmation prompts that can appear when a command including the **COPY**, **MOVE**, or **SIGN** option is executed. These prompts appear if a package with the same name as the specified package already exists at the destination computer or if the specified package is already signed.|  
 |/R[emark] *text*|Adds a comment to the command line. The comment argument is optional. If the comment text includes spaces, the text must be enclosed in quotation marks. You can include multiple REM options in a command line.|  
-|/Si[gn] {*SQL* &#124; *File* &#124; *DTS*}; *path*; *hash*|Signs an [!INCLUDE[ssIS](../includes/ssis-md.md)] package. This action uses three required arguments, which are separated by semicolons; destination, path, and hash:<br /><br /> The destination argument can specify *SQL*, *FILE*, or *DTS*. A SQL destination can include the *DESTUSER*, *DESTPASSWORD* and *DESTSERVER* options.<br /><br /> The path argument specifies the location of the package to take action on.<br /><br /> The hash argument specifies a certificate identifier expressed as a hexadecimal string of varying length.<br /><br /> For more information, see [Identify the Source of Packages with Digital Signatures](../integration-services/packages/identify-the-source-of-packages-with-digital-signatures.md).<br /><br /> <br /><br /> **\*\* Important \*\*** When configured to check the signature of the package, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] only checks whether the digital signature is present, is valid, and is from a trusted source. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] does *not* check whether the package has been changed.|  
+|/Si[gn] {*SQL* &#124; *File* &#124; *DTS*}; *path*; *hash*|Signs an [!INCLUDE[ssIS](../includes/ssis-md.md)] package. This action uses three required arguments, which are separated by semicolons; destination, path, and hash:<br /><br /> The destination argument can specify *SQL*, *FILE*, or *DTS*. A SQL destination can include the *DESTUSER*, *DESTPASSWORD* and *DESTSERVER* options.<br /><br /> The path argument specifies the location of the package to take action on.<br /><br /> The hash argument specifies a certificate identifier expressed as a hexadecimal string of varying length.<br /><br /> For more information, see [Identify the Source of Packages with Digital Signatures](../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md).<br /><br /> <br /><br /> **\*\* Important \*\*** When configured to check the signature of the package, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] only checks whether the digital signature is present, is valid, and is from a trusted source. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] does *not* check whether the package has been changed.|  
 |/SourceP[assword] *password*|Specifies the password that is used with the *SQL* and *SOURCEUSER* options to enable the retrieval of an [!INCLUDE[ssIS](../includes/ssis-md.md)] package that is stored in a database on a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance that uses [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication. It is an error to specify *SOURCEPASSWORD* in a command line that does not include the **SOURCEUSER** option.<br /><br /> Note: [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]|  
 |/SourceS[erver] *server_instance*|Specifies the server name that is used with the **SQL** option to enable the retrieval of an [!INCLUDE[ssIS](../includes/ssis-md.md)] package that is stored in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. It is an error to specify *SOURCESERVER* in a command line that does not include the *SIGN SQL*, *COPY* *SQL*, or *MOVE* *SQL* option.<br /><br /> A [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance name can be specified by adding a backslash and the instance name to the server name.|  
 |/SourceU[ser] *username*|Specifies the user name that is used with the *SOURCESERVER* option to enable the retrieval of an [!INCLUDE[ssIS](../includes/ssis-md.md)] package stored in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] using [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication. It is an error to specify *SOURCEUSER* in a command line that does not include the *SIGN SQL*, *COPY SQL*, or *MOVE SQL* option.<br /><br /> Note: [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]|  
@@ -134,19 +133,19 @@ dtutil /option [value] [/option [value]]...
 ### Copy Examples  
  To copy a package that is stored in the **msdb** database on a local instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] using Windows Authentication to the SSIS Package Store, use the following syntax:  
   
-```  
+```dos
 dtutil /SQL srcPackage /COPY DTS;destFolder\destPackage   
 ```  
   
  To copy a package from a location on the File system to another location and give the copy a different name, use the following syntax:  
   
-```  
+```dos
 dtutil /FILE c:\myPackages\mypackage.dtsx /COPY FILE;c:\myTestPackages\mynewpackage.dtsx  
 ```  
   
  To copy a package on the local file system to an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] hosted on another computer, use the following syntax:  
   
-```  
+```dos
 dtutil /FILE c:\sourcepkg.dtsx /DestServer <servername> /COPY SQL;destpkgname  
 ```  
   
@@ -154,13 +153,13 @@ dtutil /FILE c:\sourcepkg.dtsx /DestServer <servername> /COPY SQL;destpkgname
   
  To create a new ID for a package after it is copied, use the following syntax:  
   
-```  
+```dos
 dtutil /I /FILE copiedpkg.dtsx   
 ```  
   
  To create a new ID for all the packages in a specific folder, use the following syntax:  
   
-```  
+```dos
 for %%f in (C:\test\SSISPackages\*.dtsx) do dtutil.exe /I /FILE %%f  
 ```  
   
@@ -169,13 +168,13 @@ for %%f in (C:\test\SSISPackages\*.dtsx) do dtutil.exe /I /FILE %%f
 ### Delete Examples  
  To delete a package that is stored in the **msdb** database on an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] that uses Windows Authentication, use the following syntax:  
   
-```  
+```dos
 dtutil /SQL delPackage /DELETE  
 ```  
   
  To delete a package that is stored in the **msdb** database on an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] that uses [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication, use the following syntax:  
   
-```  
+```dos
 dtutil /SQL delPackage /SOURCEUSER srcUserName /SOURCEPASSWORD #8nGs*w7F /DELETE  
 ```  
   
@@ -184,27 +183,27 @@ dtutil /SQL delPackage /SOURCEUSER srcUserName /SOURCEPASSWORD #8nGs*w7F /DELETE
   
  To delete a package that is stored in the SSIS Package Store, use the following syntax:  
   
-```  
+```dos
 dtutil /DTS delPackage.dtsx /DELETE  
 ```  
   
  To delete a package that is stored in the file system, use the following syntax:  
   
-```  
+```dos
 dtutil /FILE c:\delPackage.dtsx /DELETE  
 ```  
   
 ### Exists Examples  
  To determine whether a package exists in the **msdb** database on a local instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] that uses Windows Authentication, use the following syntax:  
   
-```  
+```dos
 dtutil /SQL srcPackage /EXISTS  
 ```  
   
  To determine whether a package exists in the **msdb** database on a local instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] that uses [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication, use the following syntax:  
   
-```  
-dtutil SQL srcPackage /SOURCEUSER srcUserName /SOURCEPASSWORD *hY$d56b /EXISTS  
+```dos
+dtutil /SQL srcPackage /SOURCEUSER srcUserName /SOURCEPASSWORD *hY$d56b /EXISTS  
 ```  
   
 > [!NOTE]  
@@ -212,26 +211,26 @@ dtutil SQL srcPackage /SOURCEUSER srcUserName /SOURCEPASSWORD *hY$d56b /EXISTS
   
  To determine whether a package exists in the local package store, use the following syntax:  
   
-```  
+```dos
 dtutil /DTS srcPackage.dtsx /EXISTS  
 ```  
   
  To determine whether a package exists in the local file system, use the following syntax:  
   
-```  
+```dos
 dtutil /FILE c:\srcPackage.dtsx /EXISTS  
 ```  
   
 ### Move Examples  
  To move a package that is stored in the SSIS Package Store to the **msdb** database on a local instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] that uses Windows Authentication, use the following syntax:  
   
-```  
+```dos
 dtutil /DTS srcPackage.dtsx /MOVE SQL;destPackage  
 ```  
   
  To move a package that is stored in the **msdb** database on a local instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] that uses [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication to the **msdb** database on another local instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] that uses [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication, use the following syntax:  
   
-```  
+```dos
 dtutil /SQL srcPackage /SOURCEUSER srcUserName /SOURCEPASSWORD $Hj45jhd@X /MOVE SQL;destPackage /DESTUSER destUserName /DESTPASSWORD !38dsFH@v  
 ```  
   
@@ -240,20 +239,20 @@ dtutil /SQL srcPackage /SOURCEUSER srcUserName /SOURCEPASSWORD $Hj45jhd@X /MOVE 
   
  To move a package that is stored in the SSIS Package Store, use the following syntax:  
   
-```  
+```dos
 dtutil /DTS srcPackage.dtsx /MOVE DTS;destPackage.dtsx  
 ```  
   
  To move a package that is stored in the file system, use the following syntax:  
   
-```  
+```dos
 dtutil /FILE c:\srcPackage.dtsx /MOVE FILE;c:\destPackage.dtsx  
 ```  
   
 ### Sign Examples  
  To sign a package that is stored in a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database on a local instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] that uses Windows Authentication, use the following syntax:  
   
-```  
+```dos
 dtutil /FILE srcPackage.dtsx /SIGN FILE;destpkg.dtsx;1767832648918a9d989fdac9819873a91f919  
 ```  
   
@@ -267,11 +266,11 @@ dtutil /FILE srcPackage.dtsx /SIGN FILE;destpkg.dtsx;1767832648918a9d989fdac9819
 ### Encrypt Examples  
  The following sample encrypts the file-based PackageToEncrypt.dtsx to the file-based EncryptedPackage.dts using full package encryption, with a password. The password that is used for the encryption is *EncPswd*.  
   
-```  
+```dos
 dtutil /FILE PackageToEncrypt.dtsx /ENCRYPT file;EncryptedPackage.dtsx;3;EncPswd  
 ```  
   
 ## See Also  
- [Run a Package in SQL Server Data Tools](../integration-services/packages/run-a-package-in-sql-server-data-tools.md)  
+[Run Integration Services (SSIS) Packages](../integration-services/packages/run-integration-services-ssis-packages.md)  
   
   

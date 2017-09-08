@@ -59,7 +59,7 @@ manager: "jhubbard"
   
  An availability group listener consists of a Domain Name System (DNS) listener name, listener port designation, and one or more IP addresses. Only the TCP protocol is supported by availability group listener.  The DNS name of the listener must also be unique in the domain and in NetBIOS.  When you create a new availability group listener it becomes a resource in a cluster with an associated virtual network name (VNN), virtual IP (VIP), and availability group dependency. A client uses DNS to resolve the VNN into multiple IP addresses and then tries to connect to each address, until a connection request succeeds or until the connection requests time out.  
   
- If read-only routing is configured for one or more[readable secondary replicas](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md), read-intent client connections to the primary replica are redirected to a readable secondary replica. Also, if the primary replica goes offline on one instance of SQL Server, and a new primary replica comes online on another instance of SQL Server, the availability group listener enables clients to connect to the new primary replica.  
+ If read-only routing is configured for one or more [readable secondary replicas](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md), read-intent client connections to the primary replica are redirected to a readable secondary replica. Also, if the primary replica goes offline on one instance of SQL Server, and a new primary replica comes online on another instance of SQL Server, the availability group listener enables clients to connect to the new primary replica.  
   
  For essential information about availability group listeners, see [Create or Configure an Availability Group Listener &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).  
   
@@ -185,7 +185,7 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;Appli
   
  The **MultiSubnetFailover** connection option only works with the TCP network protocol and is only supported when connecting to an availability group listener and for any virtual network name connecting to [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
- An example of a for the ADO.NET provider (System.Data.SqlClient) connection string that enables multi-subnet failover is as follows:  
+ An example of the ADO.NET provider (System.Data.SqlClient) connection string that enables multi-subnet failover is as follows:  
   
 ```  
 Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI; MultiSubnetFailover=True  

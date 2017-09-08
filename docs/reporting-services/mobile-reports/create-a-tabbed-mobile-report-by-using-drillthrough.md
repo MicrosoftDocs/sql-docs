@@ -1,7 +1,7 @@
 ---
 title: "Create a tabbed mobile report by using drillthrough | Reporting Services mobile reports | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/05/2016"
+ms.date: "03/30/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -99,9 +99,8 @@ In this section, you set each gauge (other than the Sales gauge) as a drillthrou
 
 ### See also
 	
-* [Add parameters to a mobile report](assetId:///113cb057-deec-40eb-abc8-f35d3900eaa6]
-* [Add drillthrough from a mobile report to other mobile reports or URLs](assetId:///	
-30d0a3fd-5588-417e-b25d-cc5b7624cdb1)
+* [Add parameters to a mobile report](../../reporting-services/mobile-reports/add-parameters-to-a-mobile-report-reporting-services.md)
+* [Add drillthrough from a mobile report to other mobile reports or URLs](../../reporting-services/mobile-reports/add-drillthrough-from-a-mobile-report-to-other-mobile-reports-or-urls.md)
 
 
 

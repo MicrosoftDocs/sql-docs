@@ -2,7 +2,7 @@
 title: "Database-Level Roles | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "12/16/2016"
+ms.date: "06/29/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -65,7 +65,7 @@ For a list of all the permissions, see the [Database Engine Permissions](http://
 
 ## Fixed-Database Roles
   
- The following table shows the fixed-database roles and their capabilities. These roles exist in all databases. The permissions assigned to the fixed-database roles cannot be changed.   
+ The following table shows the fixed-database roles and their capabilities. These roles exist in all databases. Except for the **public** database role, the permissions assigned to the fixed-database roles cannot be changed.   
   
 |Fixed-Database role name|Description|  
 |-------------------------------|-----------------|  
@@ -81,7 +81,7 @@ For a list of all the permissions, see the [Database Engine Permissions](http://
 
 The permissions assigned to the fixed-database roles cannot be changed. The following figure shows the permissions assigned to the fixed-database roles:
 
-![fixed_database_role_permissions](../../../relational-databases/security/authentication-access/media/fixed-database-role-permissions.jpg)
+![fixed_database_role_permissions](../../../relational-databases/security/authentication-access/media/permissions-of-database-roles.png)
 
 ## Special Roles for [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] and [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]
 
@@ -100,7 +100,7 @@ These database roles exist only in the virtual master database. Their permission
   
 |msdb role name|Description|  
 |--------------------|-----------------|  
-|**db_ssisadmin**<br /><br /> **db_ssisoperator**<br /><br /> **db_ssisltduser**|Members of these database roles can administer and use [!INCLUDE[ssIS](../../../includes/ssis-md.md)]. Instances of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that are upgraded from an earlier version might contain an older version of the role that was named using Data Transformation Services (DTS) instead of [!INCLUDE[ssIS](../../../includes/ssis-md.md)]. For more information, see [Integration Services Roles &#40;SSIS Service&#41;](../../../integration-services/service/integration-services-roles-ssis-service.md).|  
+|**db_ssisadmin**<br /><br /> **db_ssisoperator**<br /><br /> **db_ssisltduser**|Members of these database roles can administer and use [!INCLUDE[ssIS](../../../includes/ssis-md.md)]. Instances of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that are upgraded from an earlier version might contain an older version of the role that was named using Data Transformation Services (DTS) instead of [!INCLUDE[ssIS](../../../includes/ssis-md.md)]. For more information, see [Integration Services Roles &#40;SSIS Service&#41;](../../../integration-services/security/integration-services-roles-ssis-service.md).|  
 |**dc_admin**<br /><br /> **dc_operator**<br /><br /> **dc_proxy**|Members of these database roles can administer and use the data collector. For more information, see [Data Collection](../../../relational-databases/data-collection/data-collection.md).|  
 |**PolicyAdministratorRole**|Members of the **db_ PolicyAdministratorRole** database role can perform all configuration and maintenance activities on Policy-Based Management policies and conditions. For more information, see [Administer Servers by Using Policy-Based Management](../../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md).|  
 |**ServerGroupAdministratorRole**<br /><br /> **ServerGroupReaderRole**|Members of these database roles can administer and use registered server groups.|  

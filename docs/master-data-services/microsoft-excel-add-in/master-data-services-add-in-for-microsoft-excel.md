@@ -2,7 +2,7 @@
 title: "Master Data Services Add-in for Microsoft Excel | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "11/30/2016"
+ms.date: "07/25/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -12,9 +12,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 33d9c8fc-9602-494d-b9ab-8f0f42785974
 caps.latest.revision: 30
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
+author: "smartysanthosh"
+ms.author: "nagavo"
+manager: "craigg"
 ---
 # Master Data Services Add-in for Microsoft Excel
   With the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], you can load filtered lists of data from MDS into Excel, where you can work with it just as you would any other data. When you are done, you can publish the data back to MDS, where it is centrally stored. Security determines which data you can view and update.  
@@ -24,8 +24,8 @@ manager: "jhubbard"
  In the [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], you can use Data Quality Services (DQS) to match data before loading it into MDS. This helps to prevent duplicate data in MDS.  
 
 ## Downloads 
->*  Download the [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] for [!INCLUDE[ssCurrent_md](../../includes/sscurrent-md.md)] SP1 from [this Microsoft Download Center page](https://go.microsoft.com/fwlink/?linkid=836866).
->* Download the [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] for SQL Server vNext CTP1 from [this Microsoft Download Center page](https://go.microsoft.com/fwlink/?linkid=836867).
+>*  Download the Master Data Services Add-in for Excel for SQL Server 2016 SP1 from [this Microsoft Download Center page](https://go.microsoft.com/fwlink/?linkid=836866). 
+>* Download the [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] for SQL Server 2017 CTP1 from [this Microsoft Download Center page](https://go.microsoft.com/fwlink/?linkid=836867). This add-in also works for SQL Server 2017 RC1.
 
  
   

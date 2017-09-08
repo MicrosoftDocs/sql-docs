@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_db_stats_properties (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/28/2016"
+ms.date: "06/05/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -53,7 +53,8 @@ sys.dm_db_stats_properties (object_id, stats_id)
 |rows_sampled|**bigint**|Total number of rows sampled for statistics calculations.|  
 |steps|**int**|Number of steps in the histogram. For more information, see [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md).|  
 |unfiltered_rows|**bigint**|Total number of rows in the table before applying the filter expression (for filtered statistics). If statistics are not filtered, unfiltered_rows is equal to the value returns in the rows column.|  
-|modification_counter|**bigint**|Total number of modifications for the leading statistics column (the column on which the histogram is built) since the last time statistics were updated.<br /><br /> This column does not contain information for memory-optimized tables.|  
+|modification_counter|**bigint**|Total number of modifications for the leading statistics column (the column on which the histogram is built) since the last time statistics were updated.<br /><br /> Memory-optimized tables: starting [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] this column contains: total number of modifications for the table since the last time statistics were updated or the database was restarted.|  
+|persisted_sample_percent|**float**|Persisted sample percentage used for statistic updates that do not explicitly specify a sampling percentage. If value is zero, then no persisted sample percentage is set for this statistic.<br /><br /> **Applies to:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4|  
   
 ## Remarks  
  **sys.dm_db_stats_properties** returns an empty rowset under any of the following conditions:  

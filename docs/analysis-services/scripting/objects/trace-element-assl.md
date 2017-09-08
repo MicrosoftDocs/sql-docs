@@ -65,7 +65,8 @@ manager: "erikre"
       <ID>...</ID>  
       <Description>...</Description>  
       <CreatedTimestamp>...</CreatedTimestamp>  
-      <LastSchemaUpdate>...</LastSchemaUpdate>  
+      <LastSchemaUpdate>...</LastSchemaUpdate> 
+      <AutoRestart>...</AutoRestart>
       <XEvent>...</XEvent>  
       <Annotations>...</Annotations>  
    </Trace>  

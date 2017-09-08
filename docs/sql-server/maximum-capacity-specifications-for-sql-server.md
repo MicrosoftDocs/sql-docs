@@ -26,6 +26,9 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # Maximum Capacity Specifications for SQL Server
+
+ > For content related to previous versions of SQL Server, see [Maximum Capacity Specifications for SQL Server](https://msdn.microsoft.com/en-US/library/ms143432(SQL.120).aspx).
+
   The following tables specify maximum sizes and numbers of various objects defined in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] components. To navigate to the table for a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] technology, click on its link:  
   
  [SQL Server Database Engine Objects](#Engine)  
@@ -62,7 +65,7 @@ manager: "jhubbard"
 |Columns per nonwide table||1,024||  
 |Columns per wide table||30,000||  
 |Columns per SELECT statement||4,096||  
-|Columns per INSERT statement||4096||  
+|Columns per INSERT statement||4,096||  
 |Connections per client||Maximum value of configured connections||  
 |Database size||524,272 terabytes||  
 |Databases per instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]||32,767||  
@@ -131,14 +134,14 @@ manager: "jhubbard"
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Replication object||Maximum sizes/numbers SQL Server (64-bit)|  
 |--------------------------------------------------|-|---------------------------------------------------|  
-|Articles (merge publication)||256|  
+|Articles (merge publication)||2048|  
 |Articles (snapshot or transactional publication)||32,767|  
 |Columns in a table* (merge publication)||246|  
 |Columns in a table** ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] snapshot or transactional publication)||1,000|  
 |Columns in a table** (Oracle snapshot or transactional publication)||995|  
 |Bytes for a column used in a row filter (merge publication)||1,024|  
 |Bytes for a column used in a row filter (snapshot or transactional publication)||8,000|  
-  
+
  *If row tracking is used for conflict detection (the default), the base table can include a maximum of 1,024 columns, but columns must be filtered from the article so that a maximum of 246 columns is published. If column tracking is used, the base table can include a maximum of 246 columns.  
   
  **The base table can include the maximum number of columns allowable in the publication database (1,024 for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]), but columns must be filtered from the article if they exceed the maximum specified for the publication type.  

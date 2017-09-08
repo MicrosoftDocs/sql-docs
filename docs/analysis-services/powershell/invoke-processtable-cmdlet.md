@@ -16,9 +16,13 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Invoke-ProcessTable cmdlet
+
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
   Conducts the **Process** operation on a **Table** with a specific **RefreshType**.  
-  
- This cmdlet applies only to   Tabular models at SQL Server 2016 compatibility level 1200.  
+
+>[!NOTE] 
+>This article may contain outdated information and examples. Use the Get-Help cmdlet for the latest.
   
 ## Syntax  
  `Invoke-ProcessTable [-DatabaseName] <string> [-TableName] <string> [-RefreshType] <RefreshType> {Full |     ClearValues | Calculate | DataOnly | Automatic | Add | Defragment} [-Server <string>] [-Credential <pscredential>     [-WhatIf] [-Confirm]  [<CommonParameters>]`  
@@ -61,7 +65,7 @@ manager: "erikre"
 |Accept wildcard characters?|false|  
   
 ### -RefreshType \<Microsoft.AnalysisServices.RefreshType>  
- Specifies the process type for a Tabular database at compatibility level 1200.  Valid values are  Full, ClearValues, Calculate, DataOnly,  Automatic, Add, and  Defragment. See [Process Database, Table, or Partition &#40;Analysis Services&#41;](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md) for descriptions and guidance.  
+ Specifies the process type for a Tabular database.  Valid values are  Full, ClearValues, Calculate, DataOnly,  Automatic, Add, and  Defragment. See [Process Database, Table, or Partition &#40;Analysis Services&#41;](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md) for descriptions and guidance.  
   
 |||  
 |-|-|  
@@ -113,8 +117,5 @@ manager: "erikre"
  `PS SQLSERVER:\SQLAS\MachineName\Instance\Databases\DB1\> Invoke-ProcessTable -TableName "myTable" -Database "DB1"  -RefreshType [Microsoft.AnalysisServices.Tabular.RefreshType]::Full`  
   
  This command processes a tabular metadata table using an **enum** refresh type.  
-  
-## See Also  
- [Compatibility Level for Tabular models in Analysis Services](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)  
   
   

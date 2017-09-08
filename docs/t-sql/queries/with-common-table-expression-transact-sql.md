@@ -1,7 +1,7 @@
 ---
 title: "WITH common_table_expression (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/16/2017"
+ms.date: "08/09/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -53,7 +53,7 @@ manager: "jhubbard"
   
 ## Arguments  
  *expression_name*  
- Is a valid identifier for the common table expression. *expression_name* must be different from the name of any other common table expression defined in the same WITH <common_table_expression> clause, but *expression_name* can be the same as the name of a base table or view. Any reference to *expression_name* in the query uses the common table expression and not the base object.  
+Is a valid identifier for the common table expression. *expression_name* must be different from the name of any other common table expression defined in the same WITH \<common_table_expression> clause, but *expression_name* can be the same as the name of a base table or view. Any reference to *expression_name* in the query uses the common table expression and not the base object.
   
  *column_name*  
  Specifies a column name in the common table expression. Duplicate names within a single CTE definition are not allowed. The number of column names specified must match the number of columns in the result set of the *CTE_query_definition*. The list of column names is optional only if distinct names for all resulting columns are supplied in the query definition.  

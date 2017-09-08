@@ -1,8 +1,9 @@
 ---
 title: "Create mobile reports with SQL Server Mobile Report Publisher | Microsoft Docs"
+description: "Learn about Reporting Services mobile reports for mobile devices, connected to on-premises data, with an assortment of data visualizations."
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "11/08/2016"
+ms.date: "03/30/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -19,7 +20,8 @@ manager: "erikre"
 # Create mobile reports with SQL Server Mobile Report Publisher
 Learn about [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] mobile reports, optimized for mobile devices and connected to on-premises data, with an assortment of data visualizations. 
 
-> **Note:** Do you need to migrate Datazen Server content such as dashboards and KPIs to a SQL Server 2016 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] server? Try the [SQL Server Migration Assistant for Datazen](https://www.microsoft.com/en-us/download/details.aspx?id=53128). 
+>[!NOTE]
+>  Do you need to migrate Datazen Server content such as dashboards and KPIs to a SQL Server 2016 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] server? Try the [SQL Server Migration Assistant for Datazen](https://www.microsoft.com/en-us/download/details.aspx?id=53128). 
  
 ![SS_MRP_LayoutTabSm](../../reporting-services/media/ss-mrp-layouttabsm.png)  
 
@@ -27,7 +29,7 @@ With [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)], you can 
 
 * Connect your mobile reports to a range of data sources, including on-premises SQL Server and Analysis Services data. 
 * Lay out your mobile reports on a design surface with adjusting grid rows and columns, and flexible mobile report elements that scale well to any screen size. 
-* Then save these mobile reports to a Reporting Service server, and view and interact with them in a browser or in the Power BI mobile app on iPads, iPhones, Android phones, and Windows 10 devices.
+* Then save these mobile reports to a Reporting Services server, and view and interact with them in a browser or in the Power BI mobile app on iPads, iPhones, Android phones and tablets, and Windows 10 devices.
   
 ## Create [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]  mobile reports  
   
@@ -45,12 +47,11 @@ These articles will help you get started.
   
 ## SSRS mobile reports in the Power BI mobile apps
 
--  View [Reporting Services mobile reports and KPIs in the iPad app](https://powerbi.microsoft.com/documentation/powerbi-mobile-ipad-kpis-mobile-reports)  (Power BI for iOS)  
--  View [Reporting Services mobile reports and KPIs in the iPhone app](https://powerbi.microsoft.com/documentation/powerbi-mobile-iphone-kpis-mobile-reports) (Power BI for iOS)  
--  View [Reporting Services mobile reports and KPIs in the Power BI app for Android phones](https://powerbi.microsoft.com/documentation/powerbi-mobile-android-kpis-mobile-reports)
+-  View [Reporting Services mobile reports and KPIs in the iOS mobile app](https://powerbi.microsoft.com/documentation/powerbi-mobile-iphone-kpis-mobile-reports)
+-  View [Reporting Services mobile reports and KPIs in the Power BI app for Android devices](https://powerbi.microsoft.com/documentation/powerbi-mobile-android-kpis-mobile-reports)
 -  View [Reporting Services  mobile reports and KPIs in the Power BI app for Windows 10 devices](https://powerbi.microsoft.com/documentation/powerbi-mobile-win10-kpis-mobile-reports/)    
 
-### See also  
+## See Also  
   
 -   [Create, Modify, and Delete Shared Data Sources (SSRS)](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)  
 -   [Manage Shared Datasets](../../reporting-services/report-data/manage-shared-datasets.md)  

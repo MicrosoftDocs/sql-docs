@@ -1,7 +1,7 @@
 ---
 title: "CREATE TYPE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/22/2017"
+ms.date: "04/11/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -46,8 +46,7 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
-  
-      Disk-Based Type Syntax  
+-- Disk-Based Type Syntax  
 CREATE TYPE [ schema_name. ] type_name  
 {   
     FROM base_type   
@@ -113,11 +112,12 @@ column_name AS computed_column_expression
 ```  
   
 ```  
-  
-      Memory-Optimized Table Type Syntax  
+-- Memory-Optimized Table Type Syntax  
 CREATE TYPE [schema_name. ] type_name  
 AS TABLE ( { <column_definition> }  
-    |  [ <table_constraint> ] [ ,... n ]    | [ <table_index> ] [ ,... n ]    } )    [ WITH ( <table_option> [ ,... n ] ) ]  
+    |  [ <table_constraint> ] [ ,... n ]    
+    | [ <table_index> ] [ ,... n ]    } )
+    [ WITH ( <table_option> [ ,... n ] ) ]  
  [ ; ]  
   
 <column_definition> ::=  
@@ -131,18 +131,23 @@ column_name <data_type>
  [type_schema_name . ] type_name [ (precision [ , scale ]) ]  
   
 <column_constraint> ::=  
-{ PRIMARY KEY { NONCLUSTERED HASH WITH (BUCKET_COUNT = bucket_count) | NONCLUSTERED } }  
+{ PRIMARY KEY {   NONCLUSTERED HASH WITH (BUCKET_COUNT = bucket_count) 
+                | NONCLUSTERED } }  
   
-\< table_constraint > ::=  
-{ PRIMARY KEY { NONCLUSTERED HASH (column [ ,... n ] ) WITH (BUCKET_COUNT = bucket_count) |  NONCLUSTERED  (column [ ASC | DESC ] [ ,... n ] )  } }  
+< table_constraint > ::=  
+{ PRIMARY KEY { NONCLUSTERED HASH (column [ ,... n ] ) 
+                   WITH (BUCKET_COUNT = bucket_count) 
+               | NONCLUSTERED  (column [ ASC | DESC ] [ ,... n ] )  } }  
   
 <column_index> ::=  
   INDEX index_name  
-{ { [ NONCLUSTERED ] HASH WITH (BUCKET_COUNT = bucket_count) | NONCLUSTERED } }  
+{ { [ NONCLUSTERED ] HASH WITH (BUCKET_COUNT = bucket_count) 
+     | NONCLUSTERED } }  
   
-\< table_index > ::=  
+< table_index > ::=  
   INDEX constraint_name  
-{ { [ NONCLUSTERED ] HASH (column [ ,... n ] ) WITH (BUCKET_COUNT = bucket_count) |  [NONCLUSTERED]  (column [ ASC | DESC ] [ ,... n ] )} }  
+{ { [ NONCLUSTERED ] HASH (column [ ,... n ] ) WITH (BUCKET_COUNT = bucket_count) 
+ |  [NONCLUSTERED]  (column [ ASC | DESC ] [ ,... n ] )} }  
   
 <table_option> ::=  
 {  
@@ -182,9 +187,7 @@ column_name <data_type>
  Specifies whether the type can hold a null value. If not specified, NULL is the default.  
   
  *assembly_name*  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+ **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Specifies the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assembly that references the implementation of the user-defined type in the common language runtime. *assembly_name* should match an existing assembly in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in the current database.  
   
@@ -192,51 +195,43 @@ column_name <data_type>
 >  EXTERNAL_NAME is not available in a contained database.  
   
  **[.** *class_name*  **]**  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+ **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Specifies the class within the assembly that implements the user-defined type. *class_name* must be a valid identifier and must exist as a class in the assembly with assembly visibility. *class_name* is case-sensitive, regardless of the database collation, and must exactly match the class name in the corresponding assembly. The class name can be a namespace-qualified name enclosed in square brackets (**[ ]**) if the programming language that is used to write the class uses the concept of namespaces, such as C#. If *class_name* is not specified, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assumes it is the same as *type_name*.  
   
- <column_definition>  
+ \<column_definition>  
  Defines the columns for a user-defined table type.  
   
  \<data type>  
  Defines the data type in a column for a user-defined table type. For more information about data types, see [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md). For more information about tables, see [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).  
   
- <column_constraint>  
+ \<column_constraint>  
  Defines the column constraints for a user-defined table type. Supported constraints include PRIMARY KEY, UNIQUE, and CHECK. For more information about tables, see [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).  
   
- <computed_column_definition>  
+ \<computed_column_definition>  
  Defines a computed column expression as a column in a user-defined table type. For more information about tables, see [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).  
   
- <table_constraint>  
+ \<table_constraint>  
  Defines a table constraint on a user-defined table type. Supported constraints include PRIMARY KEY, UNIQUE, and CHECK.  
   
- <index_option>  
+ \<index_option>  
  Specifies the error response to duplicate key values in a multiple-row insert operation on a unique clustered or unique nonclustered index. For more information about index options, see [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
  INDEX  
  You must specify column and table indexes as part of the CREATE TABLE statement. CREATE INDEX and DROP INDEX are not supported for memory-optimized tables.  
   
  MEMORY_OPTIMIZED  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
+ **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Indicates whether the table type is memory optimized. This option is off by default; the table (type) is not a memory optimized table (type). Memory optimized table types are memory-optimized user tables, the schema of which is persisted on disk similar to other user tables.  
   
  BUCKET_COUNT  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
+ **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Indicates the number of buckets that should be created in the hash index. The maximum value for BUCKET_COUNT in hash indexes is 1,073,741,824. For more information about bucket counts, see [Indexes for Memory-Optimized Tables](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md). *bucket_count* is a required argument.  
   
  HASH  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
+ **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Indicates that a HASH index is created. Hash indexes are supported only on memory optimized tables.  
   
@@ -280,9 +275,7 @@ FROM varchar(11) NOT NULL ;
 ### B. Creating a user-defined type  
  The following example creates a type `Utf8String` that references class `utf8string` in the assembly `utf8string`. Before creating the type, assembly `utf8string` is registered in the local database. Replace the binary portion of the CREATE ASSEMBLY statement with a valid description.  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 ```  
 CREATE ASSEMBLY utf8string  
@@ -298,7 +291,6 @@ GO
  The following example creates a user-defined table type that has two columns. For more information about how to create and use table-valued parameters, see [Use Table-Valued Parameters &#40;Database Engine&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md).  
   
 ```  
-/* Create a user-defined table type */  
 CREATE TYPE LocationTableType AS TABLE   
     ( LocationName VARCHAR(50)  
     , CostRate INT );  

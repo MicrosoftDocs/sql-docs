@@ -1,7 +1,7 @@
 ---
 title: "CREATE LOGIN (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/23/2016"
+ms.date: "06/15/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -94,7 +94,7 @@ CREATE LOGIN loginName { WITH <option_list1> | FROM WINDOWS }
   
 ## Arguments  
  *login_name*  
- Specifies the name of the login that is created. There are four types of logins: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logins, Windows logins, certificate-mapped logins, and asymmetric key-mapped logins. When you are creating logins that are mapped from a Windows domain account, you must use the pre-Windows 2000 user logon name in the format [\<domainName>\\<login_name>]. You cannot use a UPN in the format login_name@DomainName. For an example, see example D later in this topic. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentication logins are type **sysname** and must conform to the rules for [Identifiers](http://msdn.microsoft.com/library/ms175874.aspx) and cannot contain a '**\\**'. Windows logins can contain a '**\\**'.  
+ Specifies the name of the login that is created. There are four types of logins: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logins, Windows logins, certificate-mapped logins, and asymmetric key-mapped logins. When you are creating logins that are mapped from a Windows domain account, you must use the pre-Windows 2000 user logon name in the format [\<domainName>\\<login_name>]. You cannot use a UPN in the format login_name@DomainName. For an example, see example D later in this topic. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentication logins are type **sysname** and must conform to the rules for [Identifiers](http://msdn.microsoft.com/library/ms175874.aspx) and cannot contain a '**\\**'. Windows logins can contain a '**\\**'. Logins based on Active Directory users, are limited to names of less than 21 characters.  
   
  PASSWORD **='***password***'**  
  Applies to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logins only. Specifies the password for the login that is being created. You should use a strong password. For more information see [Strong Passwords](../../relational-databases/security/strong-passwords.md) and [Password Policy](../../relational-databases/security/password-policy.md). Beginning with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], stored password information is calculated using SHA-512 of the salted password.  
@@ -102,30 +102,22 @@ CREATE LOGIN loginName { WITH <option_list1> | FROM WINDOWS }
  Passwords are case-sensitive. Passwords should always be at least 8 characters long, and cannot exceed 128 characters.  Passwords can include a-z, A-Z, 0-9, and most non-alphanumeric characters. Passwords cannot contain single quotes, or the *login_name*.  
   
  PASSWORD **=***hashed_password*  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+ **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Applies to the HASHED keyword only. Specifies the hashed value of the password for the login that is being created.  
   
  HASHED  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+ **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Applies to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logins only. Specifies that the password entered after the PASSWORD argument is already hashed. If this option is not selected, the string entered as password is hashed before it is stored in the database. This option should only be used for migrating databases from one server to another. Do not use the HASHED option to create new logins. The HASHED option cannot be used with hashes created by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7 or earlier,  
   
  MUST_CHANGE  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+ **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Applies to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logins only. If this option is included, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prompts the user for a new password the first time the new login is used.  
   
  CREDENTIAL **=***credential_name*  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+ **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  The name of a credential to be mapped to the new [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login. The credential must already exist in the server. Currently this option only links the credential to a login. A credential cannot be mapped to the System Administrator (sa) login.  
   
@@ -136,62 +128,45 @@ CREATE LOGIN loginName { WITH <option_list1> | FROM WINDOWS }
   
 -   [!INCLUDE[ssSDS](../../includes/sssds-md.md)] login SID: a SID structure valid for [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Typically this is a 32 byte (**binary(32)**) literal consisting of `0x01060000000000640000000000000000` plus 16 bytes representing a GUID. For example `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`.  
   
- DEFAULT_DATABASE **=***database*  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+DEFAULT_DATABASE **=***database*  
+ **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Specifies the default database to be assigned to the login. If this option is not included, the default database is set to master.  
   
- DEFAULT_LANGUAGE **=***language*  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+DEFAULT_LANGUAGE **=***language*  
+ **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Specifies the default language to be assigned to the login. If this option is not included, the default language is set to the current default language of the server. If the default language of the server is later changed, the default language of the login remains unchanged.  
   
- CHECK_EXPIRATION **=** { ON | **OFF** }  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+CHECK_EXPIRATION **=** { ON | **OFF** }  
+ **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Applies to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logins only. Specifies whether password expiration policy should be enforced on this login. The default value is OFF.  
   
- CHECK_POLICY **=** { **ON** | OFF }  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+CHECK_POLICY **=** { **ON** | OFF }  
+ **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Applies to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logins only. Specifies that the Windows password policies of the computer on which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is running should be enforced on this login. The default value is ON.  
   
  If the Windows policy requires strong passwords, passwords must contain at least three of the following four characteristics:  
   
 -   An uppercase character (A-Z).  
-  
 -   A lowercase character (a-z).  
-  
 -   A digit (0-9).  
-  
 -   One of the non-alphanumeric characters, such as a space, _, @, *, ^, %, !, $, #, or &.  
   
- WINDOWS  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+WINDOWS  
+ **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Specifies that the login be mapped to a Windows login.  
   
- CERTIFICATE *certname*  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+CERTIFICATE *certname*  
+ **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Specifies the name of a certificate to be associated with this login. This certificate must already occur in the master database.  
   
- ASYMMETRIC KEY *asym_key_name*  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+ASYMMETRIC KEY *asym_key_name*  
+ **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Specifies the name of an asymmetric key to be associated with this login. This key must already occur in the master database.  
   
@@ -261,9 +236,7 @@ GO
 ### B. Creating a login with a password  
  The following example creates a login for a particular user and assigns a password. The `MUST_CHANGE` option requires users to change this password the first time they connect to the server.  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 ```  
 CREATE LOGIN <login_name> WITH PASSWORD = '<enterStrongPasswordHere>' MUST_CHANGE;  
@@ -273,9 +246,7 @@ GO
 ### C. Creating a login mapped to a credential  
  The following example creates the login for a particular user, using the user. This login is mapped to the credential.  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 ```  
 CREATE LOGIN <login_name> WITH PASSWORD = '<enterStrongPasswordHere>',   
@@ -286,9 +257,7 @@ GO
 ### D. Creating a login from a certificate  
  The following example creates login for a particular user from a certificate in master.  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 ```  
 USE MASTER;  
@@ -303,9 +272,7 @@ GO
 ### E. Creating a login from a Windows domain account  
  The following example creates a login from a Windows domain account.  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 ```  
 CREATE LOGIN [<domainName>\<login_name>] FROM WINDOWS;  

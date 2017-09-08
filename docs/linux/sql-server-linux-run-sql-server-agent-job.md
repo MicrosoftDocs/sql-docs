@@ -1,6 +1,4 @@
 ---
-# required metadata
-
 title: Create and run jobs for SQL Server on Linux | Microsoft Docs
 description: This tutorial shows how to run SQL Server Agent job on Linux.
 author: rothja 
@@ -11,21 +9,11 @@ ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 1d93d95e-9c89-4274-9b3f-fa2608ec2792
-
-# optional metadata
-
-# keywords: ""
-# ROBOTS: ""
-# audience: ""
-# ms.devlang: ""
-# ms.reviewer: ""
-# ms.suite: ""
-# ms.tgt_pltfrm: ""
-# ms.custom: ""
-
 ---
-
 # Create and run SQL Server Agent jobs on Linux
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+
 SQL Server jobs are used to regularly perform the same sequence of commands in your SQL Server database. This topic provides examples of how to create SQL Server Agent jobs on Linux using both Transact-SQL and SQL Server Management Studio (SSMS).
 
 For known issues with SQL Server Agent in this release, see the [Release Notes](sql-server-linux-release-notes.md).
@@ -39,7 +27,7 @@ The following steps provide an example of how to create a SQL Server Agent job o
 
 
 > [!TIP]
-> You can use any T-SQL client to run these commands. For example, on Linux you can use [sqlcmd](sql-server-linux-connect-and-query-sqlcmd.md) or [Visual Studio Code](sql-server-linux-develop-use-vscode.md). From a remote Windows Server, you can also run queries in SQL Server Management Studio (SSMS) or use the UI interface for job management, which is described in the next section.
+> You can use any T-SQL client to run these commands. For example, on Linux you can use [sqlcmd](sql-server-linux-setup-tools.md) or [Visual Studio Code](sql-server-linux-develop-use-vscode.md). From a remote Windows Server, you can also run queries in SQL Server Management Studio (SSMS) or use the UI interface for job management, which is described in the next section.
 
 1. **Create the job**. The following example uses [sp_add_job](https://msdn.microsoft.com/library/ms182079.aspx) to create a job named `Daily AdventureWorks Backup`.
 

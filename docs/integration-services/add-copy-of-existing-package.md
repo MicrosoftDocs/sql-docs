@@ -43,9 +43,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Save Copy of Package](http://msdn.microsoft.com/library/7b44c0d7-d8fa-4491-8836-0899f621d3a8)   
- [Import Package Dialog Box UI Reference](../integration-services/service/import-package-dialog-box-ui-reference.md)   
- [Export Package Dialog Box UI Reference](../integration-services/service/export-package-dialog-box-ui-reference.md)   
  [Save Packages](../integration-services/save-packages.md)   
- [Import and Export Packages &#40;SSIS Service&#41;](../integration-services/service/import-and-export-packages-ssis-service.md)  
+ [Integration Services Service &#40;SSIS Service&#41;](../integration-services/service/integration-services-service-ssis-service.md)
   
   

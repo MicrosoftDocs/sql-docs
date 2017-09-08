@@ -65,7 +65,7 @@ sp_trace_setfilter [ @traceid = ] trace_id
 |**0**|= (Equal)|  
 |**1**|<> (Not Equal)|  
 |**2**|> (Greater Than)|  
-|**3**|\< (Less Than)|  
+|**3**|< (Less Than)|  
 |**4**|>= (Greater Than Or Equal)|  
 |**5**|<= (Less Than Or Equal)|  
 |**6**|LIKE|  

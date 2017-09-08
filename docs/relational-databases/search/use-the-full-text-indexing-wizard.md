@@ -94,11 +94,11 @@ manager: "jhubbard"
      Specify the filegroup on which to create the full-text index.  
   
      e. Select a value:  
-    |Value|Description|  
-    |-----------|-----------------|
-      |**\<default>**| If the table or view is not partitioned, select to use the same filegroup as the underlying table or view. If the table or view is partitioned, the primary filegroup is used|
+      |Value|Description|  
+      |-----------|-----------------|
+      |**<default>**| If the table or view is not partitioned, select to use the same filegroup as the underlying table or view. If the       table or view is partitioned, the primary filegroup is used|
       |**PRIMARY**|Select to use the primary filegroup for the new full-text index.|
-             *user-specified default filegroup*|If a user-defined default stoplist exists, select its name from the list to use that filegroup for the new full-text index.|  
+      *user-specified default filegroup*|If a user-defined default stoplist exists, select its name from the list to use that filegroup       for the new full-text index.|   
   
      
  11. **Select full-text stoplist**  
@@ -110,8 +110,8 @@ manager: "jhubbard"
   
    |Value|Description|  
     |-----------|-----------------|  
-    |**\<system>**|Select to use the system stoplist on the new full-text index. This is the default|  
-    |**\<off>**|Select to disable stoplists for the new full-text index.|  
+    |**<system>**|Select to use the system stoplist on the new full-text index. This is the default|  
+    |**<off>**|Select to disable stoplists for the new full-text index.|  
     |*user-defined-stoplist-name*|The list displays the name of each user-defined stoplist, if any, that has been created on the database. Select any user-defined stoplist to use for the new full-text index.|  
   
   Click Next

@@ -1,7 +1,7 @@
 ---
 title: "ALTER CERTIFICATE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "04/12/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -40,18 +40,14 @@ manager: "jhubbard"
 -- Syntax for SQL Server and Azure SQL Database  
   
 ALTER CERTIFICATE certificate_name   
-    REMOVE PRIVATE KEY  
-    |  
-    WITH PRIVATE KEY ( <private_key_spec> [ ,... ] )  
-    |  
-    WITH ACTIVE FOR BEGIN_DIALOG = [ ON | OFF ]  
+      REMOVE PRIVATE KEY  
+    | WITH PRIVATE KEY ( <private_key_spec> [ ,... ] )  
+    | WITH ACTIVE FOR BEGIN_DIALOG = [ ON | OFF ]  
   
 <private_key_spec> ::=   
-    FILE = 'path_to_private_key'   
-    |  
-    DECRYPTION BY PASSWORD = 'key_password'   
-    |  
-    ENCRYPTION BY PASSWORD = 'password'   
+      FILE = 'path_to_private_key'   
+    | DECRYPTION BY PASSWORD = 'key_password'   
+    | ENCRYPTION BY PASSWORD = 'password'   
 ```  
   
 ```  
@@ -59,13 +55,11 @@ ALTER CERTIFICATE certificate_name
   
 ALTER CERTIFICATE certificate_name   
 {  
-    REMOVE PRIVATE KEY  
-    |  
-    WITH PRIVATE KEY (   
+      REMOVE PRIVATE KEY  
+    | WITH PRIVATE KEY (   
         FILE = '<path_to_private_key>',  
-        DECRYPTION BY PASSWORD = '<key password>'  
-    )}  
-  
+        DECRYPTION BY PASSWORD = '<key password>' )
+}  
 ```  
   
 ## Arguments  

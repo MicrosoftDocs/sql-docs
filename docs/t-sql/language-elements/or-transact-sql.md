@@ -88,7 +88,7 @@ WHERE Department = 'Quality Assurance'
   
 SELECT FirstName, LastName, BaseRate, HireDate   
 FROM DimEmployee  
-WHERE BaseRate \< 10 OR HireDate >= '2001-01-01';  
+WHERE BaseRate < 10 OR HireDate >= '2001-01-01';  
 ```  
   
 ## See Also  

@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "client-side printing"
 ms.assetid: 8c0bdd18-8905-4e22-9774-a240fc81a8a7
 caps.latest.revision: 31
-author: "sabotta"
-ms.author: "carlasab"
+author: "guyinacube"
+ms.author: "asaxton"
 manager: "erikre"
 ---
 # Using the RSClientPrint Control in Custom Applications
@@ -105,7 +105,7 @@ manager: "erikre"
   
 |Argument|I/O|Type|Description|  
 |--------------|----------|----------|-----------------|  
-|ServerPath|In|String|Specifies the report server virtual directory (for example, https://adventure-works/reportserver).|  
+|ServerPath|In|String|Specifies the report server virtual directory (for example, `https://adventure-works/reportserver`).|  
 |ReportPathParameters|In|String|Specifies the full name to the report in the report server folder namespace, including parameters. Reports are retrieved through URL access. For example: "/AdventureWorks Sample Reports/Employee Sales Summary&EmpID=1234"|  
 |ReportName|In|String|The short name of the report (in the example above, the short name is Employee Sales Summary). It appears in the Print dialog box and in the print queue.|  
   

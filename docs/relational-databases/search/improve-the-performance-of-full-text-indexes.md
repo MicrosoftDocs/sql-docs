@@ -78,9 +78,9 @@ The crawl log file follows the following naming scheme:
 `SQLFT<DatabaseID\><FullTextCatalogID\>.LOG[<n\>]`
   
 The variable parts of the crawl log file name are the following.
--   \<**DatabaseID**> - The ID of a database. \<**dbid**> is a five digit number with leading zeros.  
--   \<**FullTextCatalogID**> - Full-text catalog ID. \<**catid**> is a five digit number with leading zeros.  
--   \<**n**> - Is an integer that indicates one or more crawl logs of the same full-text catalog exist.  
+-   <**DatabaseID**> - The ID of a database. <**dbid**> is a five digit number with leading zeros.  
+-   <**FullTextCatalogID**> - Full-text catalog ID. <**catid**> is a five digit number with leading zeros.  
+-   <**n**> - Is an integer that indicates one or more crawl logs of the same full-text catalog exist.  
   
  For example, `SQLFT0000500008.2` is the crawl log file for a database with database ID = 5, and full-text catalog ID = 8. The 2 at the end of the file name indicates that there are two crawl log files for this database/catalog pair.  
 
@@ -107,7 +107,7 @@ The variable parts of the crawl log file name are the following.
   
  The amount of memory (in bytes) consumed by the filter daemon host can be roughly estimated by using the following formula:  
   
-`number_of_crawl_ranges* \**ism_size***max_outstanding_isms*\* 2`  
+`number_of_crawl_ranges * ism_size * max_outstanding_isms * 2`  
   
  The default values of the variables in the preceding formula are as follows:  
   
@@ -129,8 +129,8 @@ For essential information about the following formulas, see the notes that follo
   
 |Platform|Estimating fdhost.exe memory requirements in MB—*F*^1|Formula for calculating max server memory—*M*^2|  
 |--------------|-----------------------------------------------------------|-----------------------------------------------------|  
-|x86|*F* **=** *Number of crawl ranges* **\*** 50|*M* **=minimum(** *T* **,** 2000**)–***F***–** 500|  
-|x64|*F* **=** *Number of crawl ranges* **\*** 10 **\*** 8|*M* **=** *T* **–** *F* **–** 500|  
+|x86|*F* = *Number of crawl ranges* * 50|*M* =minimum(*T*, 2000) – F – 500|  
+|x64|*F* = *Number of crawl ranges* * 10 * 8|*M* = *T* – *F* – 500|  
 
 **Notes about the formulas**
 1.  If multiple full populations are in progress, calculate the fdhost.exe memory requirements of each separately, as *F1*, *F2*, and so forth. Then calculate *M* as *T***–** sigma**(***F*i**)**.  

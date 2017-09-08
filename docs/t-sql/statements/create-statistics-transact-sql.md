@@ -1,7 +1,7 @@
 ---
 title: "CREATE STATISTICS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/03/2016"
+ms.date: "08/10/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -55,7 +55,9 @@ ON { table_or_indexed_view_name } ( column [ ,...n ] )
     [ WHERE <filter_predicate> ]  
     [ WITH   
         [ [ FULLSCAN   
+            [ [ , ] PERSIST_SAMPLE_PERCENT = { ON | OFF } ]    
           | SAMPLE number { PERCENT | ROWS }   
+            [ [ , ] PERSIST_SAMPLE_PERCENT = { ON | OFF } ]    
           | STATS_STREAM = stats_stream ] ]   
         [ [ , ] NORECOMPUTE ]   
         [ [ , ] INCREMENTAL = { ON | OFF } ]  
@@ -125,7 +127,7 @@ CREATE STATISTICS statistics_name
   
 -   CLR user-defined type columns can be specified if the type supports binary ordering. Computed columns defined as method invocations of a user-defined type column can be specified if the methods are marked deterministic.  
   
- WHERE <filter_predicate>  
+ WHERE \<filter_predicate> 
  Specifies an expression for selecting a subset of rows to include when creating the statistics object. Statistics that are created with a filter predicate are called filtered statistics. The filter predicate uses simple comparison logic and cannot reference a computed column, a UDT column, a spatial data type column, or a **hierarchyID** data type column. Comparisons using NULL literals are not allowed with the comparison operators. Use the IS NULL and IS NOT NULL operators instead.  
   
  Here are some examples of filter predicates for the Production.BillOfMaterials table:  
@@ -151,6 +153,11 @@ CREATE STATISTICS statistics_name
  SAMPLE cannot be used with the FULLSCAN option. When neither SAMPLE nor FULLSCAN is specified, the query optimizer uses sampled data and computes the sample size by default.  
   
  We recommend against specifying 0 PERCENT or 0 ROWS. When 0 PERCENT or ROWS is specified, the statistics object is created but does not contain statistics data.  
+ 
+ PERSIST_SAMPLE_PERCENT = { ON | OFF }  
+ When **ON**, the statistics will retain the creation sampling percentage for subsequent updates that do not explicitly specify a sampling percentage. When **OFF**, statistics sampling percentage will get reset to default sampling in subsequent updates that do not explicitly specify a sampling percentage. The default is **OFF**. 
+ 
+ **Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4.  
   
  STATS_STREAM **=***stats_stream*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
@@ -184,9 +191,7 @@ CREATE STATISTICS statistics_name
   
 -   Statistics created with spatial indexes or XML indexes.  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 ## Permissions  
  Requires one of these permissions:  
@@ -217,38 +222,31 @@ CREATE STATISTICS statistics_name
 *  You can list up to 64 columns per statistics object.
   
 ## Examples  
-  
+
+### Examples use the AdventureWorks database.  
+
 ### A. Using CREATE STATISTICS with SAMPLE number PERCENT  
  The following example creates the `ContactMail1` statistics, using a random sample of 5 percent of the `BusinessEntityID` and `EmailPromotion` columns of the `Contact` table of the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]database.  
   
-```  
+```t-sql  
 CREATE STATISTICS ContactMail1  
     ON Person.Person (BusinessEntityID, EmailPromotion)  
     WITH SAMPLE 5 PERCENT;  
-  
 ```  
   
 ### B. Using CREATE STATISTICS with FULLSCAN and NORECOMPUTE  
  The following example creates the `ContactMail2` statistics for all rows in the `BusinessEntityID` and `EmailPromotion` columns of the `Contact` table and disables automatic recomputing of statistics.  
   
-```  
+```t-sql  
 CREATE STATISTICS NamePurchase  
     ON AdventureWorks2012.Person.Person (BusinessEntityID, EmailPromotion)  
     WITH FULLSCAN, NORECOMPUTE;  
-  
 ```  
   
 ### C. Using CREATE STATISTICS to create filtered statistics  
  The following example creates the filtered statistics `ContactPromotion1`. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] samples 50 percent of the data and then selects the rows with `EmailPromotion` equal to 2.  
   
-```  
-USE AdventureWorks2012;  
-GO  
-IF EXISTS (SELECT name FROM sys.stats  
-    WHERE name = N'ContactPromotion1'  
-    AND object_id = OBJECT_ID(N'Person.Person'))  
-DROP STATISTICS Person.Person.ContactPromotion1;  
-GO  
+```t-sql  
 CREATE STATISTICS ContactPromotion1  
     ON Person.Person (BusinessEntityID, LastName, EmailPromotion)  
 WHERE EmailPromotion = 2  
@@ -261,54 +259,46 @@ GO
   
  Since [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] imports data from the external table into a temporary table to create statistics, the full scan option will take much longer. For a large table, the default sampling method is usually sufficient.  
   
-```  
+```t-sql  
 --Create statistics on an external table and use default sampling.  
 CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress);  
   
 --Create statistics on an external table and scan all the rows  
 CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress) WITH FULLSCAN;  
-  
 ```  
+
+### E. Using CREATE STATISTICS with FULLSCAN and PERSIST_SAMPLE_PERCENT  
+ The following example creates the `ContactMail2` statistics for all rows in the `BusinessEntityID` and `EmailPromotion` columns of the `Contact` table and sets a 100 percent sampling percentage for all subsequent updates that do not explicitely specify a sampling percentage.  
+  
+```t-sql  
+CREATE STATISTICS NamePurchase  
+    ON AdventureWorks2012.Person.Person (BusinessEntityID, EmailPromotion)  
+    WITH FULLSCAN, PERSIST_SAMPLE_PERCENT = ON;  
+```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+### Examples using AdventureWorksDW database. 
   
-### E. Create statistics on two columns  
+### F. Create statistics on two columns  
  The following example creates the `CustomerStats1` statistics, based on the `CustomerKey` and `EmailAddress` columns of the `DimCustomer` table. The statistics are created based on a statistically significant sampling of the rows in the `Customer` table.  
   
-```  
+```t-sql  
 CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress);  
 ```  
   
-### F. Create statistics by using a full scan  
+### G. Create statistics by using a full scan  
  The following example creates the `CustomerStatsFullScan` statistics, based on scanning all of the rows in the `DimCustomer` table.  
   
-```  
-CREATE STATISTICS CustomerStatsFullScan ON DimCustomer (CustomerKey, EmailAddress) WITH FULLSCAN;  
+```t-sql  
+CREATE STATISTICS CustomerStatsFullScan 
+ON DimCustomer (CustomerKey, EmailAddress) WITH FULLSCAN;  
 ```  
   
-### G. Create statistics by specifying the sample percentage  
+### H. Create statistics by specifying the sample percentage  
  The following example creates the `CustomerStatsSampleScan` statistics, based on scanning 50 percent of the rows in the `DimCustomer` table.  
   
-```  
-CREATE STATISTICS CustomerStatsSampleScan ON DimCustomer (CustomerKey, EmailAddress) WITH SAMPLE 50 PERCENT;  
-```  
-  
-### H. Create filtered statistics  
- The following example creates the filtered statistics `ContactPromotion1`. [!INCLUDE[ssDW](../../includes/ssdw-md.md)] samples 50 percent of the data and then selects the rows with `EmailPromotion` equal to 2.  
-  
-```  
--- Uses AdventureWorks  
-  
-IF EXISTS (SELECT name FROM sys.stats  
-    WHERE name = N'ContactPromotion1'  
-    AND object_id = OBJECT_ID(N'Person.Person'))  
-DROP STATISTICS Person.Person.ContactPromotion1;  
-GO  
-CREATE STATISTICS ContactPromotion1  
-    ON Person.Person (BusinessEntityID, LastName, EmailPromotion)  
-WHERE EmailPromotion = 2  
-WITH SAMPLE 50 PERCENT;  
-GO  
+```t-sql  
+CREATE STATISTICS CustomerStatsSampleScan 
+ON DimCustomer (CustomerKey, EmailAddress) WITH SAMPLE 50 PERCENT;  
 ```  
   
 ## See Also  
@@ -321,3 +311,4 @@ GO
  [sys.stats_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)  
   
   
+

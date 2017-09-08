@@ -2,7 +2,7 @@
 title: "Define partitions in DirectQuery models (SSAS Tabular) | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
+ms.date: "07/06/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -16,7 +16,10 @@ author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
 ---
-# Define partitions in DirectQuery models (SSAS Tabular)
+# Define partitions in DirectQuery models
+
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
   This section explains how partitions are used in DirectQuery models. For more general information about partitions in tabular models, see [Partitions &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/partitions-ssas-tabular.md).  
   
 > [!NOTE]  
@@ -71,10 +74,10 @@ manager: "erikre"
 |**Connection String** property|**Processing Option** property|Notes|  
 |------------------------------------|------------------------------------|-----------|  
 |DirectQuery|Never process this partition|When the model is using DirectQuery only, processing is never necessary.<br /><br /> In hybrid models, you can configure the DirectQuery partition to never be processed. For example, if you are operating over a very large data set and do not want the full results added to the cache, you can specify that the DirectQuery partition include the union of results for all other partitions in the table, and then never process the union. Queries that go to the relational source will not be affected, and queries against cached data will combine data from the other partitions|  
-|DataView=Sample<br /><br /> Applies to Tabular 1200 models using sample data views|Allow partition to be processed|If the model is using sample data, you can process the table to return a filtered dataset that provides visual cues during model design.|  
+|DataView=Sample<br /><br /> Applies to Tabular models using sample data views|Allow partition to be processed|If the model is using sample data, you can process the table to return a filtered dataset that provides visual cues during model design.|  
 |DirectQueryUsage=InMemory With DirectQuery<br /><br /> Applies to Tabular 1100 or 1103 models  running in a combination of in-memory and DirectQuery mode|Allow partition to be processed|If the model is using hybrid mode, you should use the same partition for queries against the in-memory and DirectQuery data source.|  
   
-## See Also  
+## See also  
  [Partitions &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/partitions-ssas-tabular.md)  
   
   

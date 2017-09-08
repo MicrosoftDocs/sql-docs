@@ -1,6 +1,6 @@
 ---
 title: "Working with KPIs in Reporting Services | Microsoft Docs"
-ms.date: "02/24/2017"
+ms.date: "07/02/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -14,7 +14,11 @@ author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
 ---
+
 # Working with KPIs in Reporting Services
+
+[!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
+
 A Key Performance Indicator (KPI) is a visual cue that communicates the amount of progress made toward a goal.  Key Performance Indicators are valuable for teams, managers, and businesses to evaluate quickly the progress made against measurable goals.   
   
 By using KPIs in SQL Server 2016 Reporting Services, you can easily visualize answers to the following questions:  
@@ -64,7 +68,7 @@ To use data from a shared dataset, you can do the following.
   
     ![rsCreateKPI3](../reporting-services/media/rscreatekpi3.png)  
   
-2.  Select the **ellipse (…)** in the data box. This will bring up the **Pick a Dataset** screen.  
+2.  Select the **ellipsis (…)** in the data box. This will bring up the **Pick a Dataset** screen.  
   
     ![rsCreateKPI4](../reporting-services/media/rscreatekpi4.png)  
   
@@ -86,7 +90,7 @@ To use data from a shared dataset, you can do the following.
   
 To remove a KPI, you can do the following.  
   
-1.  Select the **ellipse (…)** of the KPI you want to remove. Select **Manage**.  
+1.  Select the **ellipsis (…)** of the KPI you want to remove. Select **Manage**.  
   
     ![rsRemoveKPI1](../reporting-services/media/rsremovekpi1.png)  
   
@@ -96,16 +100,11 @@ To remove a KPI, you can do the following.
   
 ## Refreshing a KPI  
   
-To refresh the KPI, you will need to configure a caching for the shared dataset. For more information regarding cache refresh plans, see [Work with Shared Datasets - web portal](../reporting-services/work-with-shared-datasets-web-portal.md).  
+To refresh the KPI, you will need to configure a caching for the shared dataset. For more information regarding cache refresh plans, see [Work with Shared Datasets](../reporting-services/work-with-shared-datasets-web-portal.md).  
   
-## See also  
+## Next steps
   
-- [Web portal (SSRS Native Mode)](../reporting-services/web-portal-ssrs-native-mode.md)  
-- [Work with Shared Datasets - web portal](../reporting-services/work-with-shared-datasets-web-portal.md)
-- More questions? [Try the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)  
-  
-    
-  
-  
-  
+[Web portal](../reporting-services/web-portal-ssrs-native-mode.md)  
+[Work with Shared Datasets](../reporting-services/work-with-shared-datasets-web-portal.md)
 
+More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)

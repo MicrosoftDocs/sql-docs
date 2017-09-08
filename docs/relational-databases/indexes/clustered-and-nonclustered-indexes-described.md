@@ -1,7 +1,7 @@
 ---
 title: "Clustered and Nonclustered Indexes Described | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/01/2016"
+ms.date: "08/17/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -21,6 +21,9 @@ manager: "jhubbard"
 # Clustered and Nonclustered Indexes Described
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
+ > For content related to previous versions of SQL Server, see [Clustered and Nonclustered Indexes Described](https://msdn.microsoft.com/en-US/library/ms190457(SQL.120).aspx).
+
+
   An index is an on-disk structure associated with a table or view that speeds retrieval of rows from the table or view. An index contains keys built from one or more columns in the table or view. These keys are stored in a structure (B-tree) that enables [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to find the row or rows associated with the key values quickly and efficiently.  
   
  A table or view can contain the following types of indexes:  
@@ -37,7 +40,7 @@ manager: "jhubbard"
   
     -   The pointer from an index row in a nonclustered index to a data row is called a row locator. The structure of the row locator depends on whether the data pages are stored in a heap or a clustered table. For a heap, a row locator is a pointer to the row. For a clustered table, the row locator is the clustered index key.  
   
-    -   You can add nonkey columns to the leaf level of the nonclustered index to by-pass existing index key limits, 900 bytes and 16 key columns, and execute fully covered, indexed, queries. For more information, see [Create Indexes with Included Columns](../../relational-databases/indexes/create-indexes-with-included-columns.md).  
+    -   You can add nonkey columns to the leaf level of the nonclustered index to by-pass existing index key limits, and execute fully covered, indexed, queries. For more information, see [Create Indexes with Included Columns](../../relational-databases/indexes/create-indexes-with-included-columns.md). For details about index key limits see [Maximum Capacity Specifications for SQL Server](../../sql-server/maximum-capacity-specifications-for-sql-server.md). 
   
  Both clustered and nonclustered indexes can be unique. This means no two rows can have the same value for the index key. Otherwise, the index is not unique and multiple rows can share the same key value. For more information, see [Create Unique Indexes](../../relational-databases/indexes/create-unique-indexes.md).  
   

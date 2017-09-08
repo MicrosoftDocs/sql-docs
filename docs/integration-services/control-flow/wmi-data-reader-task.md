@@ -11,6 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "sql13.dts.designer.wmidatareadertask.f1"
+  - "sql13.dts.designer.wmidatareadertask.general.f1"
+  - "sql13.dts.designer.wmidatareadertask.wmiquery.f1"
 helpviewer_keywords: 
   - "WQL [Integration Services]"
   - "WMI Data Reader task [Integration Services]"
@@ -70,7 +72,7 @@ Select * FROM Win32_QuickFixEngineering
 ```  
   
 ## Custom Logging Messages Available on the WMI Data Reader Task  
- The following table lists the custom log entries for the WMI Data Reader task. For more information, see [Integration Services &#40;SSIS&#41; Logging](../../integration-services/performance/integration-services-ssis-logging.md) and [Custom Messages for Logging](../../integration-services/performance/custom-messages-for-logging.md).  
+ The following table lists the custom log entries for the WMI Data Reader task. For more information, see [Integration Services &#40;SSIS&#41; Logging](../../integration-services/performance/integration-services-ssis-logging.md).  
   
 |Log entry|Description|  
 |---------------|-----------------|  
@@ -80,9 +82,7 @@ Select * FROM Win32_QuickFixEngineering
 ## Configuration of the WMI Data Reader Task  
  You can set properties programmatically or through [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer.  
   
- For information about the properties that you can set in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click one of the following topics:  
-  
--   [WMI Data Reader Task Editor &#40;WMI Options Page&#41;](../../integration-services/control-flow/wmi-data-reader-task-editor-wmi-options-page.md)  
+ For information about the properties that you can set in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click the following topic:  
   
 -   [Expressions Page](../../integration-services/expressions/expressions-page.md)  
   
@@ -94,6 +94,87 @@ Select * FROM Win32_QuickFixEngineering
  For more information about how to set these properties in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click the following topic:  
   
 -   [Set the Properties of a Task or Container](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+  
+## WMI Data Reader Task Editor (General Page)
+  Use the **General** page of the **WMI Data Reader Task Editor** dialog box to name and describe the WMI Data Reader task.  
+  
+  For more information about WMI Query Language (WQL), see the Windows Management Instrumentation topic, [Querying with WQL](http://go.microsoft.com/fwlink/?LinkId=79045), in the MSDN Library.  
+  
+### Options  
+ **Name**  
+ Provide a unique name for the WMI Data Reader task. This name is used as the label in the task icon.  
+  
+> [!NOTE]  
+>  Task names must be unique within a package.  
+  
+ **Description**  
+ Type a description of the WMI Data Reader task.  
+  
+## WMI Data Reader Task Editor (WMI Options Page)
+  Use the **WMI Options** page of the **WMI Data Reader Task Editor** dialog box to specify the source of the Windows Management Instrumentation Query Language (WQL) query and the destination of the query result.  
+  
+ For more information about WMI Query Language (WQL), see the Windows Management Instrumentation topic, [Querying with WQL](http://go.microsoft.com/fwlink/?LinkId=79045), in the MSDN Library.  
+  
+### Static Options  
+ **WMIConnectionName**  
+ Select a WMI connection manager in the list, or click \<**New WMI Connection…**> to create a new connection manager.  
+  
+ **Related Topics:** [WMI Connection Manager](../../integration-services/connection-manager/wmi-connection-manager.md), [WMI Connection Manager Editor](../../integration-services/connection-manager/wmi-connection-manager-editor.md)  
+  
+ **WQLQuerySourceType**  
+ Select the source type of the WQL query that the task runs. This property has the options listed in the following table.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**Direct input**|Set the source to a WQL query. Selecting this value displays the dynamic option **WQLQuerySourceType**.|  
+|**File connection**|Select a file that contains the WQL query. Selecting this value displays the dynamic option **WQLQuerySourceType**.|  
+|**Variable**|Set the source to a variable that defines the WQL query. Selecting this value displays the dynamic option **WQLQuerySourceType**.|  
+  
+ **OutputType**  
+ Specify whether the output should be a data table, property value, or property name and value.  
+  
+ **OverwriteDestination**  
+ Specifies whether to keep, overwrite, or append to the original data in the destination file or variable.  
+  
+ **DestinationType**  
+ Select the destination type of the WQL query that the task runs. This property has the options listed in the following table.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**File connection**|Select a file to save the results of the WQL query in. Selecting this value displays the dynamic option, **DestinationType**.|  
+|**Variable**|Set the variable to store the results of the WQL query in. Selecting this value displays the dynamic option, **DestinationType**.|  
+  
+### WQLQuerySourceType Dynamic Options  
+  
+#### WQLQuerySourceType = Direct input  
+ **WQLQuerySource**  
+ Provide a query, or click the ellipsis (…) and enter a query using the **WQL Query** dialog box.  
+  
+#### WQLQuerySourceType = File connection  
+ **WQLQuerySource**  
+ Select a File connection manager in the list, or click \<**New connection...**> to create a new connection manager.  
+  
+ **Related Topics:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+  
+#### WQLQuerySourceType = Variable  
+ **WQLQuerySource**  
+ Select a variable in the list, or click \<**New variable...**> to create a new variable.  
+  
+ **Related Topics:** [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+  
+### DestinationType Dynamic Options  
+  
+#### DestinationType = File connection  
+ **Destination**  
+ Select a File connection manager in the list, or click \<**New connection...**> to create a new connection manager.  
+  
+ **Related Topics:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+  
+#### DestinationType = Variable  
+ **Destination**  
+ Select a variable in the list, or click \<**New variable...**> to create a new variable.  
+  
+ **Related Topics:** [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 ## See Also  
  [Integration Services Tasks](../../integration-services/control-flow/integration-services-tasks.md)   

@@ -1,7 +1,7 @@
 ---
-title: "Install SQL Server 2016 from the Command Prompt | Microsoft Docs"
+title: "Install SQL Server from the Command Prompt | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/04/2016"
+ms.date: "07/11/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -89,7 +89,7 @@ author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---
-# Install SQL Server 2016 from the Command Prompt
+# Install SQL Server from the Command Prompt
   Before you run SQL Server Setup, review [Planning a SQL Server Installation](../../sql-server/install/planning-a-sql-server-installation.md).  
   
  Installing a new instance of SQL Server at the command prompt enables you to specify the features to install and how they should be configured. You can also specify silent, basic, or full interaction with the Setup user interface.  
@@ -240,10 +240,10 @@ manager: "jhubbard"
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBDIR<br /><br /> **Optional**|Specifies the directories for tempdb data files. When specifying more than one directory, separate the directories with a blank space. If multiple directories are specified the tempdb data files will be spread across the directories in a round-robin fashion.<br /><br /> Default value: \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Data(System Data Directory)<br /><br /> NOTE: This parameter is added to RebuildDatabase scenario as well.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGDIR<br /><br /> **Optional**|Specifies the directory for  tempdb  log file.<br /><br /> Default value: \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Data(System Data Directory)<br /><br /> Note: This parameter is added to RebuildDatabase scenario as well.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILECOUNT<br /><br /> **Optional**|Specifies the number of tempdb data files to be added by setup. This value can be increased up to the number of cores. Default value:<br /><br /> 1  for [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]<br /><br /> 8 or the number of cores, whichever is lower for all other editions<br /><br /> **\*\* Important \*\*** The primary database file for tempdb will still be tempdb.mdf. The additional tempdb files are named as tempdb_mssql_#.ndf where # represents a unique number for each additional tempdb database file created during setup. The purpose of this naming convention is to make them unique. Uninstalling an instance of SQL Server deletes the files with naming convention tempdb_mssql_#.ndf. Do not use tempdb_mssql_*.ndf naming convention for user database files.|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILESIZE<br /><br /> **Optional**|Specifies the initial size of each tempdb data file in MB. Setup allows the size up to 1024 MB. Default value = 8<br /><br /> Allowed range: Min = 8, Max = 1024.|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILEGROWTH<br /><br /> **Optional**|Specifies the file growth increment of each tempdb data file in MB. A value of 0 indicates that automatic growth is off and no additional space is allowed. Setup allows the size up to 1024 MB.<br /><br /> Default value: 64.  Allowed range: Min = 0, Max = 1024|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILESIZE<br /><br /> **Optional**|Specifies the initial size of the tempdb log file in MB. Setup allows the size up to 1024 MB. <br />Default value: 8<br /><br /> Allowed range: Min = 8, Max = 1024|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILEGROWTH<br /><br /> **Optional**|Specifies the file growth increment of each tempdb data file in MB. A value of 0 indicates that automatic growth is off and no additional space is allowed. Setup allows the size up to 1024 MB.<br /><br /> Default value: 64.  Allowed range: Min = 0, Max = 1024|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILESIZE<br /><br /> **Optional**|Introduced in [!INCLUDE[SQL VERSION](../../includes/sssql15-md.md)]. Specifies the initial size of each tempdb data file.<br/><br/>Default = 4 MB for [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], 8 MB for all other editions.<br/><br/>Min = (4 or 8 MB).<br/><br/>Max = 1024 MB (262,144 MB for [!INCLUDE[SQL VERSION](../../includes/sssqlv14-md.md)])|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILEGROWTH<br /><br /> **Optional**|Specifies the file growth increment of each tempdb data file in MB. A value of 0 indicates that automatic growth is off and no additional space is allowed. Setup allows the size up to 1024 .<br /><br /> Default value: 64. Allowed range: Min = 0, Max = 1024|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILESIZE<br /><br /> **Optional**|Introduced in [!INCLUDE[SQL VERSION](../../includes/sssql15-md.md)]. Specifies the initial size of each tempdb log file.<br/><br/>Default = 4 MB for [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], 8 MB for all other editions.<br/><br/>Min = (4 or 8 MB).<br/><br/>Max = 1024 MB (262,144 MB for [!INCLUDE[SQL VERSION](../../includes/sssqlv14-md.md)])|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILEGROWTH<br /><br /> **Optional**|Specifies the file growth increment of each tempdb data file in MB. A value of 0 indicates that automatic growth is off and no additional space is allowed. Setup allows the size up to 1024.<br /><br /> Default value: 64. Allowed range: Min = 0, Max = 1024|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBDIR<br /><br /> **Optional**|Specifies the directory for the data files for user databases.<br /><br /> Default value: \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Data|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCINSTANTFILEINIT<br /><br /> **Optional**|Enables instant file initialization for SQL Server service account. For security and performance considerations, see [Database Instant File Initialization](../../relational-databases/databases/database-instant-file-initialization.md).<br /><br /> Default value: "False"<br /><br /> Optional value: "True"|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBLOGDIR<br /><br /> **Optional**|Specifies the directory for the log files for user databases.<br /><br /> Default value: \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Data|  
@@ -263,7 +263,7 @@ manager: "jhubbard"
 |R Services (In-Database)|MRCACHEDIRECTORY|Use this parameter to specify the Cache directory for Microsoft R Open and Microsoft R Server components as described in [this section](https://msdn.microsoft.com/library/mt695942.aspx). This setting is typically used when installing SQL Server R Services from the command line on a computer without Internet access.|  
   
 ###### Sample Syntax:  
- To install a new, stand-alone instance with the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], Replication, and Full-Text Search components and enable instant file initialization for [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
+ To install a new, stand-alone instance with the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], Replication, and Full-Text Search components and enable instant file initialization for [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. 
   
 ```  
   
@@ -274,10 +274,10 @@ Setup.exe /q /ACTION=Install /FEATURES=SQL /INSTANCENAME=MSSQLSERVER /SQLSVCACCO
 ##  <a name="SysPrep"></a> SysPrep Parameters  
  For more information about SQL Server SysPrep, see  
   
- [Install SQL Server 2016 Using SysPrep](../../database-engine/install-windows/install-sql-server-using-sysprep.md).  
+ [Install SQL Server 2016 Using SysPrep](../../database-engine/install-windows/install-sql-server-using-sysprep.md). 
   
 #### Prepare Image Parameters  
- Use the parameters in the following table to develop command-line scripts for preparing an instance of SQL Server without configuring it.  
+ Use the parameters in the following table to develop command-line scripts for preparing an instance of SQL Server without configuring it. 
   
 |SQL Server component|Parameter|Description|  
 |-----------------------------------------|---------------|-----------------|  
@@ -303,14 +303,14 @@ Setup.exe /q /ACTION=Install /FEATURES=SQL /INSTANCENAME=MSSQLSERVER /SQLSVCACCO
 |SQL Server Setup Control|/QS<br /><br /> **Optional**|Specifies that Setup runs and shows progress through the UI, but does not accept any input or show any error messages.|  
   
 ###### Sample Syntax:  
- To prepare a new, stand-alone instance with the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], Replication, and Full-Text Search components, and [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+ To prepare a new, stand-alone instance with the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], Replication, and Full-Text Search components, and [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. 
   
 ```  
 Setup.exe /q /ACTION=PrepareImage /FEATURES=SQL,RS /InstanceID =<MYINST> /IACCEPTSQLSERVERLICENSETERMS  
 ```  
   
 #### Complete Image Parameters  
- Use the parameters in the following table to develop command-line scripts for completing and configuring a prepared instance of SQL Server.  
+ Use the parameters in the following table to develop command-line scripts for completing and configuring a prepared instance of SQL Server. 
   
 |SQL Server component|Parameter|Description|  
 |-----------------------------------------|---------------|-----------------|  
@@ -349,10 +349,10 @@ Setup.exe /q /ACTION=PrepareImage /FEATURES=SQL,RS /InstanceID =<MYINST> /IACCEP
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSYSADMINACCOUNTS<br /><br /> **Required**|Use this parameter to provision logins to be members of the sysadmin role.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBDIR<br /><br /> **Optional**|Specifies the directories for tempdb data files. When specifying more than one directory, separate the directories with a blank space. If multiple directories are specified the tempdb data files will be spread across the directories in a round-robin fashion.<br /><br /> Default value: \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Data(System Data Directory)<br /><br /> NOTE: This parameter is added to RebuildDatabase scenario as well.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGDIR<br /><br /> **Optional**|Specifies the directory for  tempdb  log file.<br /><br /> Default value: \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Data(System Data Directory)<br /><br /> Note: This parameter is added to RebuildDatabase scenario as well.|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILESIZE<br /><br /> **Optional**|Specifies the initial size of each tempdb data file in MB. Setup allows the size up to 1024 MB.<br /><br /> Default value:<br /><br /> 4  for [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]<br /><br /> 8  for all other editions<br /><br /> Allowed range: Min = default value (4 or 8), Max = 1024|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILEGROWTH<br /><br /> **Optional**|Specifies the file growth increment of each tempdb data file in MB. A value of 0 indicates that automatic growth is off and no additional space is allowed. Setup allows the size up to 1024 MB.<br /><br /> Default value: 64<br /><br /> Allowed range: Min = 0, Max = 1024|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILESIZE<br /><br /> **Optional**|Specifies the initial size of the tempdb log file in MB. Setup allows the size up to 1024 MB.<br /><br /> Default value:<br /><br /> 4  for [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]<br /><br /> 8  for all other editions<br /><br /> Allowed range: Min = default value (4 or 8), Max = 1024|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILEGROWTH<br /><br /> **Optional**|Specifies the file growth increment of each tempdb data file in MB. A value of 0 indicates that automatic growth is off and no additional space is allowed. Setup allows the size up to 1024 MB.<br /><br /> Default value: 64<br /><br /> Allowed range: Min = 0, Max = 1024|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILESIZE<br /><br /> **Optional**|Introduced in [!INCLUDE[SQL VERSION](../../includes/sssql15-md.md)]. Specifies the initial size of each tempdb data file.<br/><br/>Default = 4 MB for [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], 8 MB for all other editions.<br/><br/>Min = (4 or 8 MB).<br/><br/>Max = 1024 MB (262,144 MB for [!INCLUDE[SQL VERSION](../../includes/sssqlv14-md.md)]).|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILEGROWTH<br /><br /> **Optional**|Specifies the file growth increment of each tempdb data file in MB. A value of 0 indicates that automatic growth is off and no additional space is allowed. Setup allows the size up to 1024.<br /><br /> Default value: 64<br /><br /> Allowed range: Min = 0, Max = 1024|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILESIZE<br /><br /> **Optional**|Specifies the initial size of the tempdb log file in MB. Setup allows the size up to 1024.<br /><br /> Default value:<br /><br /> 4  for [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]<br /><br /> 8  for all other editions<br /><br /> Allowed range: Min = default value (4 or 8), Max = 1024|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILEGROWTH<br /><br /> **Optional**|Introduced in [!INCLUDE[SQL VERSION](../../includes/sssql15-md.md)]. Specifies the initial size of each tempdb log file.<br/><br/>Default = 4 MB for [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], 8 MB for all other editions.<br/><br/>Min = (4 or 8 MB).<br/><br/>Max = 1024 MB (262,144 MB for [!INCLUDE[SQL VERSION](../../includes/sssqlv14-md.md)])|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILECOUNT<br /><br /> **Optional**|Specifies the number of tempdb data files to be added by setup. This value can be increased up to the number of cores. Default value:<br /><br /> 1  for [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]<br /><br /> 8 or the number of cores, whichever is lower for all other editions<br /><br /> **\*\* Important \*\*** The primary database file for tempdb will still be tempdb.mdf. The additional tempdb files are named as tempdb_mssql_#.ndf where # represents a unique number for each additional tempdb database file created during setup. The purpose of this naming convention is to make them unique. Uninstalling an instance of SQL Server deletes the files with naming convention tempdb_mssql_#.ndf. Do not use tempdb_mssql_\*.ndf naming convention for user database files.<br /><br /> **\*\* Warning \*\*** [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]is not supported for configuring this parameter. Setup installs only 1 tempdb data file.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBDIR<br /><br /> **Optional**|Specifies the directory for the data files for user databases.<br /><br /> Default value: \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Data|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBLOGDIR<br /><br /> **Optional**|Specifies the directory for the log files for user databases.<br /><br /> Default value: \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Data|  
@@ -368,7 +368,7 @@ Setup.exe /q /ACTION=PrepareImage /FEATURES=SQL,RS /InstanceID =<MYINST> /IACCEP
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCStartupType<br /><br /> **Optional**|Specifies the [startup](#Accounts) mode for [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
   
 ###### Sample Syntax:  
- To complete a prepared, stand-alone instance that includes [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], Replication, and Full-Text Search components.  
+ To complete a prepared, stand-alone instance that includes [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], Replication, and Full-Text Search components. 
   
 ```  
   
@@ -377,7 +377,7 @@ setup.exe /q /ACTION=CompleteImage /INSTANCENAME=MYNEWINST /INSTANCEID=<MYINST> 
 ```  
   
 ##  <a name="Upgrade"></a> Upgrade Parameters  
- Use the parameters in the following table to develop command-line scripts for upgrade.  
+ Use the parameters in the following table to develop command-line scripts for upgrade. 
   
 |SQL Server component|Parameter|Description|  
 |-----------------------------------------|---------------|-----------------|  
@@ -415,7 +415,7 @@ Setup.exe /q /ACTION=upgrade /INSTANCEID = <INSTANCEID>/INSTANCENAME=MSSQLSERVER
 ```  
   
 ##  <a name="Repair"></a> Repair Parameters  
- Use the parameters in the following table to develop command-line scripts for repair.  
+ Use the parameters in the following table to develop command-line scripts for repair. 
   
 |SQL Server component|Parameter|Description|  
 |-----------------------------------------|---------------|-----------------|  
@@ -432,14 +432,14 @@ Setup.exe /q /ACTION=upgrade /INSTANCEID = <INSTANCEID>/INSTANCENAME=MSSQLSERVER
 |SQL Server Setup Control|/HIDECONSOLE<br /><br /> **Optional**|Specifies that the console window is hidden or closed.|  
   
 ###### Sample Syntax:  
- Repair an instance and shared components.  
+ Repair an instance and shared components. 
   
 ```  
 Setup.exe /q /ACTION=Repair /INSTANCENAME=<instancename>  
 ```  
   
 ##  <a name="Rebuild"></a> Rebuild System Database Parameters  
- Use the parameters in the following table to develop command-line scripts for rebuilding the master, model, msdb, and tempdb system databases. For more information, see [Rebuild System Databases](../../relational-databases/databases/rebuild-system-databases.md).  
+ Use the parameters in the following table to develop command-line scripts for rebuilding the master, model, msdb, and tempdb system databases. For more information, see [Rebuild System Databases](../../relational-databases/databases/rebuild-system-databases.md). 
   
 |SQL Server component|Parameter|Description|  
 |-----------------------------------------|---------------|-----------------|  
@@ -452,13 +452,13 @@ Setup.exe /q /ACTION=Repair /INSTANCENAME=<instancename>
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBDIR<br /><br /> **Optional**|Specifies the directories for tempdb data files. When specifying more than one directory, separate the directories with a blank space. If multiple directories are specified the tempdb data files will be spread across the directories in a round-robin fashion.<br /><br /> Default value: \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Data(System Data Directory)<br /><br /> NOTE: This parameter is added to RebuildDatabase scenario as well.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGDIR<br /><br /> **Optional**|Specifies the directory for  tempdb  log file.<br /><br /> Default value: \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Data(System Data Directory)<br /><br /> Note: This parameter is added to RebuildDatabase scenario as well.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILECOUNT<br /><br /> **Optional**|Specifies the number of tempdb data files to be added by setup. This value can be increased up to the number of cores. Default value:<br /><br /> 1  for [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]<br /><br /> 8 or the number of cores, whichever is lower for all other editions<br /><br /> **\*\* Important \*\*** The primary database file for tempdb will still be tempdb.mdf. The additional tempdb files are named as tempdb_mssql_#.ndf where # represents a unique number for each additional tempdb database file created during setup. The purpose of this naming convention is to make them unique. Uninstalling an instance of SQL Server deletes the files with naming convention tempdb_mssql_#.ndf. Do not use tempdb_mssql_\*.ndf naming convention for user database files.<br /><br /> **\*\* Warning \*\*** [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]is not supported for configuring this parameter. Setup installs only 1 tempdb data file.|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILESIZE<br /><br /> **Optional**|Specifies the initial size of each tempdb data file in MB. Setup allows the size up to 1024 MB. Default value:<br /><br /> 4  for [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]<br /><br /> 8  for all other editions<br /><br /> Allowed range: Min = default value (4 or 8), Max = 1024|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILEGROWTH<br /><br /> **Optional**|Specifies the file growth increment of each tempdb data file in MB. A value of 0 indicates that automatic growth is off and no additional space is allowed. Setup allows the size up to 1024 MB.<br /><br /> Default value: 64<br /><br /> Allowed range: Min = 0, Max = 1024|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILESIZE<br /><br /> **Optional**|Specifies the initial size of the tempdb log file in MB. Setup allows the size up to 1024 MB. Default value:<br /><br /> 4  for [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]<br /><br /> 8  for all other editions<br /><br /> Allowed range: Min = default value (4 or 8), Max = 1024|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILEGROWTH<br /><br /> **Optional**|Specifies the file growth increment of each tempdb data file in MB. A value of 0 indicates that automatic growth is off and no additional space is allowed. Setup allows the size up to 1024 MB.<br /><br /> Default value: 64<br /><br /> Allowed range: Min = 0, Max = 1024|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILESIZE<br /><br /> **Optional**|Introduced in [!INCLUDE[SQL VERSION](../../includes/sssql15-md.md)]. Specifies the initial size of each tempdb data file.<br/><br/>Default = 4 MB for [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], 8 MB for all other editions.<br/><br/>Min = (4 or 8 MB).<br/><br/>Max = 1024 MB (262,144 MB for [!INCLUDE[SQL VERSION](../../includes/sssqlv14-md.md)]).|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILEGROWTH<br /><br /> **Optional**|Specifies the file growth increment of each tempdb data file in MB. A value of 0 indicates that automatic growth is off and no additional space is allowed. Setup allows the size up to 1024.<br /><br /> Default value: 64<br /><br /> Allowed range: Min = 0, Max = 1024|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILESIZE<br /><br /> **Optional**|Specifies the initial size of the tempdb log file in MB. Setup allows the size up to 1024. Default value:<br /><br /> 4  for [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]<br /><br /> 8  for all other editions<br /><br /> Allowed range: Min = default value (4 or 8), Max = 1024|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILEGROWTH<br /><br /> **Optional**|Introduced in [!INCLUDE[SQL VERSION](../../includes/sssql15-md.md)]. Specifies the initial size of each tempdb log file.<br/><br/>Default = 4 MB for [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], 8 MB for all other editions.<br/><br/>Min = (4 or 8 MB).<br/><br/>Max = 1024 MB (262,144 MB for [!INCLUDE[SQL VERSION](../../includes/sssqlv14-md.md)])|  
   
 ##  <a name="Uninstall"></a> Uninstall Parameters  
- Use the parameters in the following table to develop command-line scripts for uninstallation.  
+ Use the parameters in the following table to develop command-line scripts for uninstallation. 
   
 |SQL Server component|Parameter|Description|  
 |-----------------------------------------|---------------|-----------------|  
@@ -472,13 +472,13 @@ Setup.exe /q /ACTION=Repair /INSTANCENAME=<instancename>
 |SQL Server Setup Control|/HIDECONSOLE<br /><br /> **Optional**|Specifies that the console window is hidden or closed.|  
   
 ###### Sample Syntax:  
- To uninstall an existing instance of SQL Server.  
+ To uninstall an existing instance of SQL Server. 
   
 ```  
 Setup.exe /Action=Uninstall /FEATURES=SQL,AS,RS,IS,Tools /INSTANCENAME=MSSQLSERVER  
 ```  
   
- To remove a named instance, specify the name of the instance instead of "MSSQLSERVER" in the example that was mentioned earlier in this topic.  
+ To remove a named instance, specify the name of the instance instead of "MSSQLSERVER" in the example that was mentioned earlier in this topic. 
   
 ##  <a name="ClusterInstall"></a> Failover Cluster Parameters  
  Before you install a SQL Server failover cluster instance, review the following topics:  
@@ -492,16 +492,16 @@ Setup.exe /Action=Uninstall /FEATURES=SQL,AS,RS,IS,Tools /INSTANCENAME=MSSQLSERV
 -   [Always On Failover Cluster Instances &#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)  
   
     > [!IMPORTANT]  
-    >  All failover cluster installation commands require an underlying Windows cluster. All the nodes that will be part of a SQL Server failover cluster must be part of the same Windows cluster.  
+    >  All failover cluster installation commands require an underlying Windows cluster. All the nodes that will be part of a SQL Server failover cluster must be part of the same Windows cluster. 
   
- Test and modify the following failover cluster installation scripts to meet the needs of your organization.  
+ Test and modify the following failover cluster installation scripts to meet the needs of your organization. 
   
 #### Integrated Install Failover Cluster Parameters  
- Use the parameters in the following table to develop command-line scripts for failover cluster installation.  
+ Use the parameters in the following table to develop command-line scripts for failover cluster installation. 
   
- For more information about Integrated Installation, see [Always On Failover Cluster Instances &#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
+ For more information about Integrated Installation, see [Always On Failover Cluster Instances &#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md). 
   
-> **NOTE:** To add more nodes after the installation, use [Add Node](#AddNode) action.  
+> **NOTE:** To add more nodes after the installation, use [Add Node](#AddNode) action. 
   
 |SQL Server component|Parameter|Details|  
 |-----------------------------------------|---------------|-------------|  
@@ -557,10 +557,10 @@ Setup.exe /Action=Uninstall /FEATURES=SQL,AS,RS,IS,Tools /INSTANCENAME=MSSQLSERV
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBDIR<br /><br /> **Optional**|Specifies the directories for tempdb data files. When specifying more than one directory, separate the directories with a blank space. If multiple directories are specified the tempdb data files will be spread across the directories in a round-robin fashion.<br /><br /> Default value: \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Data(System Data Directory)<br /><br /> NOTE: This parameter is added to RebuildDatabase scenario as well.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGDIR<br /><br /> **Optional**|Specifies the directory for  tempdb  log file.<br /><br /> Default value: \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Data(System Data Directory)<br /><br /> Note: This parameter is added to RebuildDatabase scenario as well.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILECOUNT<br /><br /> **Optional**|Specifies the number of tempdb data files to be added by setup. This value can be increased up to the number of cores. Default value:<br /><br /> 1  for [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]<br /><br /> 8 or the number of cores, whichever is lower for all other editions<br /><br /> **\*\* Important \*\*** The primary database file for tempdb will still be tempdb.mdf. The additional tempdb files are named as tempdb_mssql_#.ndf where # represents a unique number for each additional tempdb database file created during setup. The purpose of this naming convention is to make them unique. Uninstalling an instance of SQL Server deletes the files with naming convention tempdb_mssql_#.ndf. Do not use tempdb_mssql_\*.ndf naming convention for user database files.<br /><br /> **\*\* Warning \*\*** [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]is not supported for configuring this parameter. Setup installs only 1 tempdb data file.|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILESIZE<br /><br /> **Optional**|Specifies the initial size of each tempdb data file in MB. Setup allows the size up to 1024 MB. Default value:<br /><br /> 4  for [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]<br /><br /> 8  for all other editions<br /><br /> Allowed range: Min = default value (4 or 8), Max = 1024|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILEGROWTH<br /><br /> **Optional**|Specifies the file growth increment of each tempdb data file in MB. A value of 0 indicates that automatic growth is off and no additional space is allowed. Setup allows the size up to 1024 MB.<br /><br /> Default value: 64<br /><br /> Allowed range: Min = 0, Max = 1024|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILESIZE<br /><br /> **Optional**|Specifies the initial size of the tempdb log file in MB. Setup allows the size up to 1024 MB. <br /> Default value:<br /><br /> 4  for [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]<br /><br /> 8  for all other editions<br /><br /> Allowed range: Min = default value (4 or 8), Max = 1024|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILEGROWTH<br /><br /> **Optional**|Specifies the file growth increment of each tempdb data file in MB. A value of 0 indicates that automatic growth is off and no additional space is allowed. Setup allows the size up to 1024 MB.<br /><br /> Default value: 64<br /><br /> Allowed range: Min = 0, Max = 1024|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILESIZE<br /><br /> **Optional**|Introduced in [!INCLUDE[SQL VERSION](../../includes/sssql15-md.md)]. Specifies the initial size of each tempdb data file.<br/><br/>Default =  8 MB.<br/><br/>Min =  8 MB.<br/><br/>Max = 1024 MB (262,144 MB for [!INCLUDE[SQL VERSION](../../includes/sssqlv14-md.md)]).|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILEGROWTH<br /><br /> **Optional**|Specifies the file growth increment of each tempdb data file in MB. A value of 0 indicates that automatic growth is off and no additional space is allowed. Setup allows the size up to 1024.<br /><br /> Default value: 64<br /><br /> Allowed range: Min = 0, Max = 1024|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILESIZE<br /><br /> **Optional**|Specifies the initial size of the tempdb log file in MB. Setup allows the size up to 1024. <br /> Default value:<br /><br /> 4  for [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]<br /><br /> 8  for all other editions<br /><br /> Allowed range: Min = default value (4 or 8), Max = 1024|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILEGROWTH<br /><br /> **Optional**|Introduced in [!INCLUDE[SQL VERSION](../../includes/sssql15-md.md)]. Specifies the initial size of each tempdb log file.<br/><br/>Default = 4 MB for [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], 8 MB for all other editions.<br/><br/>Min = (4 or 8 MB).<br/><br/>Max = 1024 MB (262,144 MB for [!INCLUDE[SQL VERSION](../../includes/sssqlv14-md.md)])|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBLOGDIR<br /><br /> **Optional**|Specifies the directory for the log files for user databases.<br /><br /> Default value: \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Data|  
 |FILESTREAM|/FILESTREAMLEVEL<br /><br /> **Optional**|Specifies the access level for the FILESTREAM feature. Supported values:<br /><br /> 0 =Disable FILESTREAM support for this instance. (Default value)<br /><br /> 1=Enable FILESTREAM for [!INCLUDE[tsql](../../includes/tsql-md.md)] access.<br /><br /> 2=Enable FILESTREAM for [!INCLUDE[tsql](../../includes/tsql-md.md)] and file I/O streaming access. (Not valid for cluster scenarios)<br /><br /> 3=Allow remote clients to have streaming access to FILESTREAM data.|  
 |FILESTREAM|/FILESTREAMSHARENAME<br /><br /> **Optional**<br /><br /> **Requiredwhen FILESTREAMLEVEL is greater than 1.**|Specifies the name of the windows share in which the FILESTREAM data will be stored.|  
@@ -574,20 +574,20 @@ Setup.exe /Action=Uninstall /FEATURES=SQL,AS,RS,IS,Tools /INSTANCENAME=MSSQLSERV
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCPASSWORD<br /><br /> [Required](#Accounts)|Specifies the password for the startup account for [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service.|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCStartupType<br /><br /> **Optional**|Specifies the [startup](#Accounts) mode for [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
   
- We recommend that you use Service SID instead of domain groups.  
+ We recommend that you use Service SID instead of domain groups. 
   
 ##### Additional Notes:  
- The [!INCLUDE[ssDE](../../includes/ssde-md.md)] and [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] are the only components that are cluster-aware. Other features are not cluster-aware and do not have high availability through failover.  
+ The [!INCLUDE[ssDE](../../includes/ssde-md.md)] and [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] are the only components that are cluster-aware. Other features are not cluster-aware and do not have high availability through failover. 
   
 ###### Sample Syntax:  
- To install a single-node SQL Server failover cluster instance with the [!INCLUDE[ssDE](../../includes/ssde-md.md)] and [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], default instance.  
+ To install a single-node SQL Server failover cluster instance with the [!INCLUDE[ssDE](../../includes/ssde-md.md)] and [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], default instance. 
   
 ```  
 setup.exe /q /ACTION=InstallFailoverCluster /InstanceName=MSSQLSERVER /INDICATEPROGRESS /ASSYSADMINACCOUNTS="<DomainName\UserName>" /ASDATADIR=<Drive>:\OLAP\Data /ASLOGDIR=<Drive>:\OLAP\Log /ASBACKUPDIR=<Drive>:\OLAP\Backup /ASCONFIGDIR=<Drive>:\OLAP\Config /ASTEMPDIR=<Drive>:\OLAP\Temp /FAILOVERCLUSTERDISKS="<Cluster Disk Resource Name - for example, 'Disk S:'" /FAILOVERCLUSTERNETWORKNAME="<Insert Network Name>" /FAILOVERCLUSTERIPADDRESSES="IPv4;xx.xxx.xx.xx;Cluster Network;xxx.xxx.xxx.x" /FAILOVERCLUSTERGROUP="MSSQLSERVER" /Features=AS,SQL /ASSVCACCOUNT="<DomainName\UserName>" /ASSVCPASSWORD="xxxxxxxxxxx" /AGTSVCACCOUNT="<DomainName\UserName>" /AGTSVCPASSWORD="xxxxxxxxxxx" /INSTALLSQLDATADIR="<Drive>:\<Path>\MSSQLSERVER" /SQLCOLLATION="SQL_Latin1_General_CP1_CS_AS" /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="xxxxxxxxxxx" /SQLSYSADMINACCOUNTS="<DomainName\UserName> /IACCEPTSQLSERVERLICENSETERMS  
 ```  
   
 #### Prepare Failover Cluster Parameters  
- Use the parameters in the following table to develop command-line scripts for failover cluster prepare. This is the first step in advanced cluster installation, where you have to prepare the failover cluster instances on all the nodes of the failover cluster. For more information, see [Always On Failover Cluster Instances &#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
+ Use the parameters in the following table to develop command-line scripts for failover cluster prepare. This is the first step in advanced cluster installation, where you have to prepare the failover cluster instances on all the nodes of the failover cluster. For more information, see [Always On Failover Cluster Instances &#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md). 
   
 |SQL Server component|Parameter|Description|  
 |-----------------------------------------|---------------|-----------------|  
@@ -634,10 +634,10 @@ setup.exe /q /ACTION=InstallFailoverCluster /InstanceName=MSSQLSERVER /INDICATEP
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCPASSWORD<br /><br /> [Required](#Accounts)|Specifies the password for the startup account for [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service.|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCStartupType<br /><br /> **Optional**|Specifies the [startup](#Accounts) mode for [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
   
- We recommend that you use Service SID instead of domain groups.  
+ We recommend that you use Service SID instead of domain groups. 
   
 ###### Sample Syntax:  
- To perform the "Preparation" step of a failover cluster advanced installation scenario for the [!INCLUDE[ssDE](../../includes/ssde-md.md)] and [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+ To perform the "Preparation" step of a failover cluster advanced installation scenario for the [!INCLUDE[ssDE](../../includes/ssde-md.md)] and [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. 
   
  Run the following command at the command prompt to prepare a default instance:  
   
@@ -652,7 +652,7 @@ setup.exe /q /ACTION=PrepareFailoverCluster /InstanceName="<Insert Instance name
 ```  
   
 #### Complete Failover Cluster Parameters  
- Use the parameters in the following table to develop command-line scripts for failover cluster complete. This is the second step in the advanced failover cluster install option. After you have run prepare on all the failover cluster nodes, you run this command on the node that owns the shared disks. For more information, see [Always On Failover Cluster Instances &#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
+ Use the parameters in the following table to develop command-line scripts for failover cluster complete. This is the second step in the advanced failover cluster install option. After you have run prepare on all the failover cluster nodes, you run this command on the node that owns the shared disks. For more information, see [Always On Failover Cluster Instances &#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md). 
   
 |SQL Server component|Parameter|Description|  
 |-----------------------------------------|---------------|-----------------|  
@@ -694,13 +694,13 @@ setup.exe /q /ACTION=PrepareFailoverCluster /InstanceName="<Insert Instance name
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBDIR<br /><br /> **Optional**|Specifies the directories for tempdb data files. When specifying more than one directory, separate the directories with a blank space. If multiple directories are specified the tempdb data files will be spread across the directories in a round-robin fashion.<br /><br /> Default value: \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Data(System Data Directory)<br /><br /> NOTE: This parameter is added to RebuildDatabase scenario as well.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGDIR<br /><br /> **Optional**|Specifies the directory for  tempdb  log file.<br /><br /> Default value: \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Data(System Data Directory)<br /><br /> Note: This parameter is added to RebuildDatabase scenario as well.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILECOUNT<br /><br /> **Optional**|Specifies the number of tempdb data files to be added by setup. This value can be increased up to the number of cores. Default value:<br /><br /> 1  for [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]<br /><br /> 8 or the number of cores, whichever is lower for all other editions.<br /><br /> **\*\* Important \*\*** The primary database file for tempdb will still be tempdb.mdf. The additional tempdb files are named as tempdb_mssql_#.ndf where # represents a unique number for each additional tempdb database file created during setup. The purpose of this naming convention is to make them unique. Uninstalling an instance of SQL Server deletes the files with naming convention tempdb_mssql_#.ndf. Do not use tempdb_mssql_\*.ndf naming convention for user database files.<br /><br /> **\*\* Warning \*\*** [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]is not supported for configuring this parameter. Setup installs only 1 tempdb data file.|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILESIZE<br /><br /> **Optional**|Specifies the initial size of each tempdb data file in MB. Setup allows the size up to 1024 MB. Default value:<br /><br /> 4  for [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]<br /><br /> 8  for all other editions<br /><br /> Allowed range: Min = default value (4 or 8), Max = 1024|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILEGROWTH<br /><br /> **Optional**|Specifies the file growth increment of each tempdb data file in MB. A value of 0 indicates that automatic growth is off and no additional space is allowed. Setup allows the size up to 1024 MB.<br /><br /> Default value: 64<br /><br /> Allowed range: Min = 0, Max = 1024|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILESIZE<br /><br /> **Optional**|Specifies the initial size of the tempdb log file in MB. Setup allows the size up to 1024 MB. <br /> Default value:<br /><br /> 4  for [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]<br /><br /> 8  for all other editions<br /><br /> Allowed range: Min = default value (4 or 8), Max = 1024|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILEGROWTH<br /><br /> **Optional**|Specifies the file growth increment of each tempdb data file in MB. A value of 0 indicates that automatic growth is off and no additional space is allowed. Setup allows the size up to 1024 MB.<br /><br /> Default value: 64<br /><br /> Allowed range: Min = 0, Max = 1024|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILESIZE<br /><br /> **Optional**|Introduced in [!INCLUDE[SQL VERSION](../../includes/sssql15-md.md)]. Specifies the initial size of each tempdb data file.<br/><br/>Default = 8 MB.<br/><br/>Min = 8 MB.<br/><br/>Max = 1024 MB (262,144 MB for [!INCLUDE[SQL VERSION](../../includes/sssqlv14-md.md)]).|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILEGROWTH<br /><br /> **Optional**|Specifies the file growth increment of each tempdb data file in MB. A value of 0 indicates that automatic growth is off and no additional space is allowed. Setup allows the size up to 1024.<br /><br /> Default value: 64<br /><br /> Allowed range: Min = 0, Max = 1024|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILESIZE<br /><br /> **Optional**|Specifies the initial size of the tempdb log file in MB. Setup allows the size up to 1024. <br /> Default value:<br /><br /> 4  for [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]<br /><br /> 8  for all other editions<br /><br /> Allowed range: Min = default value (4 or 8), Max = 1024|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILEGROWTH<br /><br /> **Optional**|Introduced in [!INCLUDE[SQL VERSION](../../includes/sssql15-md.md)]. Specifies the initial size of each tempdb log file.<br/><br/>Default = 4 MB for [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], 8 MB for all other editions.<br/><br/>Min = (4 or 8 MB).<br/><br/>Max = 1024 MB (262,144 MB for [!INCLUDE[SQL VERSION](../../includes/sssqlv14-md.md)])|  
   
 ###### Sample Syntax:  
- To perform the "Completion" step of a failover cluster advanced installation scenario for the [!INCLUDE[ssDE](../../includes/ssde-md.md)] and [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Run the following command on the computer that will be the active node in the failover cluster to make it usable. You must run the "CompleteFailoverCluster" action on the node that owns the shared disk in the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] failover cluster.  
+ To perform the "Completion" step of a failover cluster advanced installation scenario for the [!INCLUDE[ssDE](../../includes/ssde-md.md)] and [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Run the following command on the computer that will be the active node in the failover cluster to make it usable. You must run the "CompleteFailoverCluster" action on the node that owns the shared disk in the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] failover cluster. 
   
  Run the following command at the command prompt to complete failover cluster installation for a default instance:  
   
@@ -715,7 +715,7 @@ setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName="<Insert Instance Nam
 ```  
   
 #### Upgrade Failover Cluster Parameters  
- Use the parameters in the following table to develop command-line scripts for failover cluster upgrade. For more information, see [Upgrade a SQL Server Failover Cluster Instance &#40;Setup&#41;](../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance-setup.md) and [Always On Failover Cluster Instances &#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
+ Use the parameters in the following table to develop command-line scripts for failover cluster upgrade. For more information, see [Upgrade a SQL Server Failover Cluster Instance &#40;Setup&#41;](../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance-setup.md) and [Always On Failover Cluster Instances &#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md). 
   
 |SQL Server component|Parameter|Description|  
 |-----------------------------------------|---------------|-----------------|  
@@ -745,7 +745,7 @@ setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName="<Insert Instance Nam
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSUPGRADEPASSWORD<br /><br /> **Optional**|Password of the existing Report Server service account.|  
   
 ####  <a name="AddNode"></a> Add Node Parameters  
- Use the parameters in the following table to develop command-line scripts for AddNode.  
+ Use the parameters in the following table to develop command-line scripts for AddNode. 
   
 |SQL Server component|Parameter|Description|  
 |-----------------------------------------|---------------|-----------------|  
@@ -780,17 +780,17 @@ setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName="<Insert Instance Nam
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCPASSWORD<br /><br /> [Required](#Accounts)|Specifies the startup account password for the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service.|  
   
 ##### Additional Notes:  
- The [!INCLUDE[ssDE](../../includes/ssde-md.md)] and [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] are the only components that are cluster-aware. Other features are not cluster-aware and do not have high availability through failover.  
+ The [!INCLUDE[ssDE](../../includes/ssde-md.md)] and [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] are the only components that are cluster-aware. Other features are not cluster-aware and do not have high availability through failover. 
   
 ###### Sample Syntax:  
- To add a node to an existing failover cluster instance with the [!INCLUDE[ssDE](../../includes/ssde-md.md)] and [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+ To add a node to an existing failover cluster instance with the [!INCLUDE[ssDE](../../includes/ssde-md.md)] and [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. 
   
 ```  
 setup.exe /q /ACTION=AddNode /INSTANCENAME="<Insert Instance Name>" /SQLSVCACCOUNT="<SQL account that is used on other nodes>" /SQLSVCPASSWORD="<password for SQL account>" /AGTSVCACCOUNT="<SQL Server Agent account that is used on other nodes>", /AGTSVCPASSWORD="<SQL Server Agent account password>" /ASSVCACCOUNT="<AS account that is used on other nodes>" /ASSVCPASSWORD=”<password for AS account>” /INDICATEPROGRESS /IACCEPTSQLSERVERLICENSETERMS /FAILOVERCLUSTERIPADDRESSES="IPv4;xx.xxx.xx.xx;ClusterNetwork1;xxx.xxx.xxx.x" /CONFIRMIPDEPENDENCYCHANGE=0  
 ```  
   
 #### Remove Node Parameters  
- Use the parameters in the following table to develop command-line scripts for RemoveNode. To uninstall a failover cluster, you must run RemoveNode on each failover cluster node. For more information, see [Always On Failover Cluster Instances &#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
+ Use the parameters in the following table to develop command-line scripts for RemoveNode. To uninstall a failover cluster, you must run RemoveNode on each failover cluster node. For more information, see [Always On Failover Cluster Instances &#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md). 
   
 |SQL Server component|Parameter|Description|  
 |-----------------------------------------|---------------|-----------------|  
@@ -805,18 +805,18 @@ setup.exe /q /ACTION=AddNode /INSTANCENAME="<Insert Instance Name>" /SQLSVCACCOU
 |SQL Server Setup Control|/CONFIRMIPDEPENDENCYCHANGE<br /><br /> **Required**|Indicates the consent to set the IP address resource dependency from OR to AND for multi-subnet failover clusters. For more information, see [Add or Remove Nodes in a SQL Server Failover Cluster &#40;Setup&#41;](../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md). Supported values:<br /><br /> 0 = False (Default)<br /><br /> 1 = True|  
   
 ###### Sample Syntax:  
- To remove a node from an existing failover cluster instance with the [!INCLUDE[ssDE](../../includes/ssde-md.md)] and [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+ To remove a node from an existing failover cluster instance with the [!INCLUDE[ssDE](../../includes/ssde-md.md)] and [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. 
   
 ```  
 setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICATEPROGRESS] /CONFIRMIPDEPENDENCYCHANGE=0  
 ```  
   
 ##  <a name="Accounts"></a> Service Account Parameters  
- You can configure the SQL Server services by using a built-in account, local account, or domain account.  
+ You can configure the SQL Server services by using a built-in account, local account, or domain account. 
   
-> **NOTE:** When you use a managed service account, virtual account, or a built-in account, you should not specify the corresponding password parameters. For more information about these service accounts, see **New Account Types Available with [!INCLUDE[win7](../../includes/win7-md.md)] and [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)]** section in [Configure Windows Service Accounts and Permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
+> **NOTE:** When you use a managed service account, virtual account, or a built-in account, you should not specify the corresponding password parameters. For more information about these service accounts, see **New Account Types Available with [!INCLUDE[win7](../../includes/win7-md.md)] and [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)]** section in [Configure Windows Service Accounts and Permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md). 
   
- For more information about service account configuration, see [Configure Windows Service Accounts and Permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
+ For more information about service account configuration, see [Configure Windows Service Accounts and Permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md). 
   
 |SQL Server component|Account parameter|Password parameter|Startup type|  
 |-----------------------------------------|-----------------------|------------------------|------------------|  
@@ -827,7 +827,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCACCOUNT|/RSSVCPASSWORD|/RSSVCSTARTUPTYPE|  
   
 ##  <a name="Feature"></a> Feature Parameters  
- To install specific features, use the /FEATURES parameter and specify the parent feature or feature values in the following table. For a list of features that are supported by the editions of SQL Server, see [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+ To install specific features, use the /FEATURES parameter and specify the parent feature or feature values in the following table. For a list of features that are supported by the editions of SQL Server, see [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md). 
   
 |Parent feature parameter|Feature parameter|Description|  
 |:---|:---|:---|  
@@ -839,14 +839,15 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 ||PolyBase|Installs PolyBase components.|  
 ||AdvancedAnalytics|Installs R Services (In-Database).|  
 |AS||Installs all [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] components.|  
-|RS||Installs all [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] components.|  
-|DQC||Installs [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)].|  
+|RS||Installs all [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] components.|  
+|RS_SHP||Installs [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] components for SharePoint.|  
+|RS_SHPWFE||Installs [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Add-In for SharePoint products. |  
+|DQC||Installs [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)].|  
 |IS||Installs all [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] components.|  
 |MDS||Installs [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].|  
 |SQL_SHARED_MR||Installs Microsoft R Server.|  
 |Tools*||Installs client tools and SQL Server Books Online components.|  
 ||BC|Installs backward compatibility components.|  
-||BOL|Installs SQL Server Books Online components to view and manage help content.|
 ||Conn|Installs connectivity components.|
 ||DREPLAY_CTLR|Installs Distributed Replay controller|  
 ||DREPLAY_CLT|Installs Distributed Replay client|  
@@ -856,7 +857,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 
 *SQL Server Management Tools (SSMS) is now in a stand-alone installer that is separate from the SQL Server installer. For details, see [Install SQL Server Management Studio from the command line](https://msdn.microsoft.com/library/bb500441.aspx#Anchor_1).
 
- **LocalDB is an option when installing any SKU of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Express. For more information, see [SQL Server 2016 Express LocalDB](../../database-engine/configure-windows/sql-server-2016-express-localdb.md).  
+ **LocalDB is an option when installing any SKU of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Express. For more information, see [SQL Server 2016 Express LocalDB](../../database-engine/configure-windows/sql-server-2016-express-localdb.md). 
   
 ### Feature parameter examples:  
   
@@ -866,12 +867,12 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 |/FEATURES=SQLEngine, FullText|Installs the [!INCLUDE[ssDE](../../includes/ssde-md.md)] and full-text.|  
 |/FEATURES=SQL, Tools|Installs the complete [!INCLUDE[ssDE](../../includes/ssde-md.md)] and all tools.|  
 |/FEATURES=BOL|Installs SQL Server Books Online components to view and manage help content.|  
-|/FEATURES=SQLEngine, PolBase|Intalls the PolyBase engine.|  
+|/FEATURES=SQLEngine, PolyBase|Intalls the PolyBase engine.|  
   
 ##  <a name="RoleParameters"></a> Role Parameters  
- The setup role or /Role parameter is used to install a preconfigured selection of features. The [!INCLUDE[ssAS_md](../../includes/ssas-md.md)] roles install an [!INCLUDE[ssAS_md](../../includes/ssas-md.md)] instance in either an existing SharePoint farm, or a new un-configured farm. Two setup roles are provided to support each scenario. You can only choose one setup role to install at a time. If you choose a setup role, Setup installs the features and components that belong to the role. You cannot vary the features and components that are designated for that role. For more information about how to use the feature role parameter, see [Install Power Pivot from the Command Prompt](http://msdn.microsoft.com/en-us/7f1f2b28-c9f5-49ad-934b-02f2fa6b9328).  
+ The setup role or /Role parameter is used to install a preconfigured selection of features. The [!INCLUDE[ssAS_md](../../includes/ssas-md.md)] roles install an [!INCLUDE[ssAS_md](../../includes/ssas-md.md)] instance in either an existing SharePoint farm, or a new un-configured farm. Two setup roles are provided to support each scenario. You can only choose one setup role to install at a time. If you choose a setup role, Setup installs the features and components that belong to the role. You cannot vary the features and components that are designated for that role. For more information about how to use the feature role parameter, see [Install Power Pivot from the Command Prompt](http://msdn.microsoft.com/en-us/7f1f2b28-c9f5-49ad-934b-02f2fa6b9328). 
   
- The AllFeatures_WithDefaults role is the default behavior for editions of [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] and reduces the number of dialog boxes presented to the user. It can be specified from the command line when installing a SQL Server edition that is not [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)].  
+ The AllFeatures_WithDefaults role is the default behavior for editions of [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] and reduces the number of dialog boxes presented to the user. It can be specified from the command line when installing a SQL Server edition that is not [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. 
   
 |Role|Description|Installs…|  
 |----------|-----------------|---------------|  
@@ -880,18 +881,18 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 |AllFeatures_WithDefaults|Installs all features that are available with the current edition.<br /><br /> Adds the current user to the SQL Server **sysadmin** fixed server role.<br /><br /> On [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] or higher and when the operating system is not a domain controller, the [!INCLUDE[ssDE](../../includes/ssde-md.md)], and [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] are defaulted to use the NTAUTHORITY\NETWORK SERVICE account, and [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] is defaulted to use the NTAUTHORITY\NETWORK SERVICE account.<br /><br /> This role is enabled by default in editions of [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. For all other editions, this role is not enabled but can be specified through the UI or with command line parameters.|For editions of [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], installs only those features available in the edition. For other editions, installs all SQL Server features.<br /><br /> The **AllFeatures_WithDefaults** parameter can be combined with other parameters which override the **AllFeatures_WithDefaults** parameter settings. For example, using the **AllFeatures_WithDefaults** parameter and the **/Features=RS** parameter overrides the command to install all features and only installs [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], but honors the **AllFeatures_WithDefaults** parameter to use the default service account for [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].<br /><br /> When using the **AllFeatures_WithDefaults** parameter along with the **/ADDCURRENTUSERASSQLADMIN=FALSE** the provisioning dialog is not auto populated with the current user. Add **/AGTSVCACCOUNT** and **/AGTSVCPASSWORD** to specify a service account and password for the SQL Server Agent.|  
   
 ##  <a name="RollOwnership"></a> Controlling Failover Behavior using the /FAILOVERCLUSTERROLLOWNERSHIP Parameter  
- To upgrade a SQL Server failover cluster to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], you must run the Setup on one failover cluster node at a time, starting with the passive nodes. Setup determines when to fail over to the upgraded node, depending on the total number of nodes in the failover cluster instance, and the number of nodes that have already been upgraded. When half of the nodes or more have already been upgraded, Setup by default will cause a failover to an upgraded node.  
+ To upgrade a SQL Server failover cluster to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], you must run the Setup on one failover cluster node at a time, starting with the passive nodes. Setup determines when to fail over to the upgraded node, depending on the total number of nodes in the failover cluster instance, and the number of nodes that have already been upgraded. When half of the nodes or more have already been upgraded, Setup by default will cause a failover to an upgraded node. 
   
  To control the failover behavior of cluster nodes during the upgrade process, run the upgrade operation at the command prompt and use the /FAILOVERCLUSTERROLLOWNERSHIP parameter to control the failover behavior before the upgrade operation takes the node offline. Use of this parameter is as follows:  
   
--   /FAILOVERCLUSTERROLLOWNERSHIP=0 will not roll cluster ownership (move group) to upgraded nodes, and does not add this node to the list of possible owners of the SQL Server cluster at the end of upgrade.  
+-   /FAILOVERCLUSTERROLLOWNERSHIP=0 will not roll cluster ownership (move group) to upgraded nodes, and does not add this node to the list of possible owners of the SQL Server cluster at the end of upgrade. 
   
--   /FAILOVERCLUSTERROLLOWNERSHIP=1 will roll cluster ownership (move group) to upgraded nodes, and will add this node to the list of possible owners of the SQL Server cluster at the end of upgrade.  
+-   /FAILOVERCLUSTERROLLOWNERSHIP=1 will roll cluster ownership (move group) to upgraded nodes, and will add this node to the list of possible owners of the SQL Server cluster at the end of upgrade. 
   
--   /FAILOVERCLUSTERROLLOWNERSHIP=2 is the default setting. It will be used if this parameter is not specified. This setting indicates that SQL Server Setup will manage cluster ownership (move group) as needed.  
+-   /FAILOVERCLUSTERROLLOWNERSHIP=2 is the default setting. It will be used if this parameter is not specified. This setting indicates that SQL Server Setup will manage cluster ownership (move group) as needed. 
   
 ##  <a name="InstanceID"></a> Instance ID or InstanceID Configuration  
- The Instance ID or /InstanceID parameter is used for specifying where you can install the instance components and the registry path of the instance. The value of "INSTANCEID" is a string and should be unique.  
+ The Instance ID or /InstanceID parameter is used for specifying where you can install the instance components and the registry path of the instance. The value of "INSTANCEID" is a string and should be unique. 
   
 -   SQL Instance ID:MSSQL13.\<INSTANCEID>  
   
@@ -907,7 +908,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
   
  %Program Files Microsoft SQL Server\\<RSInstanceID\>  
   
-> **NOTE:** If INSTANCEID is not specified on the command line, then by default Setup substitute \<INSTANCEID> with the \<INSTANCENAME>.  
+> **NOTE:** If INSTANCEID is not specified on the command line, then by default Setup substitute \<INSTANCEID> with the \<INSTANCENAME>. 
   
 ## See Also  
  [Install SQL Server 2016 from the Installation Wizard](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)   

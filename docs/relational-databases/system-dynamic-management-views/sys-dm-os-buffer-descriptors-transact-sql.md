@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_os_buffer_descriptors (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/13/2017"
+ms.date: "08/14/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -25,7 +25,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # sys.dm_os_buffer_descriptors (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Returns information about all the data pages that are currently in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] buffer pool. The output of this view can be used to determine the distribution of database pages in the buffer pool according to database, object, or type. In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], this dynamic management view also returns information about the data pages in the buffer pool extension file. For more information, see [Buffer Pool Extension](../../database-engine/configure-windows/buffer-pool-extension.md).  
   
@@ -45,8 +45,9 @@ manager: "jhubbard"
 |free_space_in_bytes|**int**|Amount of available free space, in bytes, on the page. Is nullable.|  
 |is_modified|**bit**|1 = Page has been modified after it was read from the disk. Is nullable.|  
 |numa_node|**int**|Nonuniform Memory Access node for the buffer. Is nullable.|  
-|read_microsec|**bigint**|The actual time (in microseconds) required to read the page into the buffer. This number is reset when the buffer is reused. Is nullable.|  
-|pdw_node_id|**int**|**Applies to**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> The identifier for the node that this distribution is on.|  
+|read_microsec|**bigint**|The actual time (in microseconds) required to read the page into the buffer. This number is reset when the buffer is reused. Is nullable.|  
+|is_in_bpool_extension|**bit**|1 = Page is in buffer pool extension. Is nullable.|  
+|pdw_node_id|**int**|**Applies to**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> The identifier for the node that this distribution is on.|  
   
 ## Permissions  
 On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   

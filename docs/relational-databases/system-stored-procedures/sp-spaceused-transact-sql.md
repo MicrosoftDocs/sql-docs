@@ -2,7 +2,7 @@
 title: "sp_spaceused (Transact-SQL) | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "10/18/2016"
+ms.date: "08/14/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -24,7 +24,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # sp_spaceused (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-all_md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
   Displays the number of rows, disk space reserved, and disk space used by a table, indexed view, or [!INCLUDE[ssSB](../../includes/sssb-md.md)] queue in the current database, or displays the disk space reserved and used by the whole database.  
   
@@ -33,31 +33,24 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Applies to SQL Server and Azure SQL Database 
 sp_spaceused [[ @objname = ] 'objname' ]   
 [, [ @updateusage = ] 'updateusage' ]  
 [, [ @mode = ] 'mode' ]  
 [, [ @oneresultset = ] oneresultset ]  
+[, [ @include_total_xtp_storage = ] include_total_xtp_storage ]
 ```  
-```  
--- Applies to Azure SQL Data Warehouse and Parallel Data Warehouse 
-sp_spaceused   -- works on databases, not tables 
-[, [ @updateusage = ] 'updateusage' ]  
-[, [ @mode = ] 'mode' ]  
-[, [ @oneresultset = ] oneresultset ]  
-```
- 
- 
   
 ## Arguments  
+
+For [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)], `sp_spacedused` must specify named parameters (for example `sp_spacedused (@objname= N'Table1');` rather than relying upon the ordinal position of parameters. 
+
  [ **@objname=**] **'***objname***'** 
- Applies to: SQL Server, Azure SQL Database
-  
+   
  Is the qualified or nonqualified name of the table, indexed view, or queue for which space usage information is requested. Quotation marks are required only if a qualified object name is specified. If a fully qualified object name (including a database name) is provided, the database name must be the name of the current database.  
-  
- If *objname* is not specified, results are returned for the whole database.  
-  
- *objname* is **nvarchar(776)**, with a default of NULL.  
+If *objname* is not specified, results are returned for the whole database.  
+*objname* is **nvarchar(776)**, with a default of NULL.  
+> [!NOTE]  
+> [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)] and [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)] only support database and table objects.
   
  [ **@updateusage=**] **'***updateusage***'**  
  Indicates DBCC UPDATEUSAGE should be run to update space usage information. When *objname* is not specified, the statement is run on the whole database; otherwise, the statement is run on *objname*. Values can be **true** or **false**. *updateusage* is **varchar(5)**, with a default of **false**.  
@@ -65,7 +58,7 @@ sp_spaceused   -- works on databases, not tables
  [ **@mode=**] **'***mode***'**  
  Indicates the scope of the results. For a stretched table or database, the *mode* parameter lets you include or exclude the remote portion of the object. For more info, see [Stretch Database](../../sql-server/stretch-database/stretch-database.md).  
   
- The *mode* argument can have the following values.  
+ The *mode* argument can have the following values:  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -76,15 +69,20 @@ sp_spaceused   -- works on databases, not tables
  *mode* is **varchar(11)**, with a default of **N'ALL'**.  
   
  [ **@oneresultset=**] *oneresultset*  
- Indicates whether to return a single result set. The *oneresultset* argument can have the following values.  
+ Indicates whether to return a single result set. The *oneresultset* argument can have the following values:  
   
 |Value|Description|  
 |-----------|-----------------|  
-|0|When *@objname* is null or is not specified, two result sets are returned. This is the current and default behavior.|  
+|0|When *@objname* is null or is not specified, two result sets are returned. Two result sets is the default behavior.|  
 |1|When *@objname* = null or is not specified, a single result set is returned.|  
   
  *oneresultset* is **bit**, with a default of **0**.  
+
+[ **@include_total_xtp_storage**] **'***include_total_xtp_storage***'**  
+**Applies to:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], [!INCLUDE[sssds-md](../../includes/sssds-md.md)].  
   
+ When @oneresultset=1, the parameter @include_total_xtp_storage determines whether the single resultset includes columns for MEMORY_OPTIMIZED_DATA storage. The default value is 0, that is, by default (if the parameter is omitted) the XTP columns are not included in the resultset.  
+
 ## Return Code Values  
  0 (success) or 1 (failure)  
   
@@ -126,9 +124,49 @@ sp_spaceused   -- works on databases, not tables
 |**data**|**varchar(18)**|Total amount of space used by data in *objname*.|  
 |**index_size**|**varchar(18)**|Total amount of space used by indexes in *objname*.|  
 |**unused**|**varchar(18)**|Total amount of space reserved for *objname* but not yet used.|  
-  
+ 
+This is the default mode, when no parameters are specified. The following result sets are returned detailing on-disk database size information. 
+
+|Column name|Data type|Description|  
+|-----------------|---------------|-----------------|  
+|**database_name**|**nvarchar(128)**|Name of the current database.|  
+|**database_size**|**varchar(18)**|Size of the current database in megabytes. **database_size** includes both data and log files. If the database has a MEMORY_OPTIMIZED_DATA filegroup, this includes the total on-disk size of all checkpoint files in the filegroup.|  
+|**unallocated space**|**varchar(18)**|Space in the database that has not been reserved for database objects. If the database has a MEMORY_OPTIMIZED_DATA filegroup, this includes the total on-disk size of the checkpoint files with state PRECREATED in the filegroup.|  
+
+Space used by tables in the database: (this resultset does not reflect memory-optimized tables, as there is no per-table accounting of disk usage) 
+
+|Column name|Data type|Description|  
+|-----------------|---------------|-----------------|  
+|**reserved**|**varchar(18)**|Total amount of space allocated by objects in the database.|  
+|**data**|**varchar(18)**|Total amount of space used by data.|  
+|**index_size**|**varchar(18)**|Total amount of space used by indexes.|  
+|**unused**|**varchar(18)**|Total amount of space reserved for objects in the database, but not yet used.|
+
+The following result set is returned **ONLY IF** the database has a MEMORY_OPTIMIZED_DATA filegroup with at least one container: 
+
+|Column name|Data type|Description|  
+|-----------------|---------------|-----------------|  
+|**xtp_precreated**|**varchar(18)**|Total size of checkpoint files with state PRECREATED, in KB. Counts towards the unallocated space in the database as a whole. [For example, if there is 600,000 KB of precreated checkpoint files, this column contains '600000 KB']|  
+|**xtp_used**|**varchar(18)**|Total size of checkpoint files with states UNDER CONSTRUCTION, ACTIVE, and MERGE TARGET, in KB. This is the disk space actively used for data in memory-optimized tables.|  
+|**xtp_pending_truncation**|**varchar(18)**|Total size of checkpoint files with state WAITING_FOR_LOG_TRUNCATION, in KB. This is the disk space used for checkpoint files that are awaiting cleanup, once log truncation happens.|
+
+If *objname* is omitted, the value of oneresultset is 1, and *include_total_xtp_storage* is 1, the following single result set is returned to provide current database size information. If `include_total_xtp_storage` is 0 (the default), the last three columns are omitted. 
+
+|Column name|Data type|Description|  
+|-----------------|---------------|-----------------|  
+|**database_name**|**nvarchar(128)**|Name of the current database.|  
+|**database_size**|**varchar(18)**|Size of the current database in megabytes. **database_size** includes both data and log files. If the database has a MEMORY_OPTIMIZED_DATA filegroup, this includes the total on-disk size of all checkpoint files in the filegroup.|
+|**unallocated space**|**varchar(18)**|Space in the database that has not been reserved for database objects. If the database has a MEMORY_OPTIMIZED_DATA filegroup, this includes the total on-disk size of the checkpoint files with state PRECREATED in the filegroup.|  
+|**reserved**|**varchar(18)**|Total amount of space allocated by objects in the database.|  
+|**data**|**varchar(18)**|Total amount of space used by data.|  
+|**index_size**|**varchar(18)**|Total amount of space used by indexes.|  
+|**unused**|**varchar(18)**|Total amount of space reserved for objects in the database, but not yet used.|
+|**xtp_precreated**|**varchar(18)**|Total size of checkpoint files with state PRECREATED, in KB. This counts towards the unallocated space in the database as a whole. Returns NULL if the database does not have a memory_optimized_data filegroup with at least one container. *This column is only included if @include_total_xtp_storage=1*.| 
+|**xtp_used**|**varchar(18)**|Total size of checkpoint files with states UNDER CONSTRUCTION, ACTIVE, and MERGE TARGET, in KB. This is the disk space actively used for data in memory-optimized tables. Returns NULL if the database does not have a memory_optimized_data filegroup with at least one container. *This column is only included if @include_total_xtp_storage=1*.| 
+|**xtp_pending_truncation**|**varchar(18)**|Total size of checkpoint files with state WAITING_FOR_LOG_TRUNCATION, in KB. This is the disk space used for checkpoint files that are awaiting cleanup, once log truncation happens. Returns NULL if the database does not have a memory_optimized_data filegroup with at least one container. This column is only included if `@include_total_xtp_storage=1`.|
+
 ## Remarks  
- **database_size** will always be larger than the sum of **reserved** + **unallocated space** because it includes the size of log files, but **reserved** and **unallocated_space** consider only data pages.  
+ **database_size** is always larger than the sum of **reserved** + **unallocated space** because it includes the size of log files, but **reserved** and **unallocated_space** consider only data pages.  
   
  Pages that are used by XML indexes and full-text indexes are included in **index_size** for both result sets. When *objname* is specified, the pages for the XML indexes and full-text indexes for the object are also counted in the total **reserved** and **index_size** results.  
   
@@ -147,7 +185,7 @@ sp_spaceused   -- works on databases, not tables
 ### A. Displaying disk space information about a table  
  The following example reports disk space information for the `Vendor` table and its indexes.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_spaceused N'Purchasing.Vendor';  
@@ -157,7 +195,7 @@ GO
 ### B. Displaying updated space information about a database  
  The following example summarizes space used in the current database and uses the optional parameter `@updateusage` to ensure current values are returned.  
   
-```  
+```sql  
 USE AdventureWorks008R2;  
 GO  
 EXEC sp_spaceused @updateusage = N'TRUE';  
@@ -167,7 +205,7 @@ GO
 ### C. Displaying space usage information about the remote table associated with a Stretch-enabled table  
  The following example summarizes the space used by the remote table associated with a Stretch-enabled table by using the **@mode** argument to specify the remote target. For more info, see [Stretch Database](../../sql-server/stretch-database/stretch-database.md).  
   
-```tsql  
+```sql  
 USE StretchedAdventureWorks2016  
 GO  
 EXEC sp_spaceused N'Purchasing.Vendor', @mode = 'REMOTE_ONLY'  
@@ -176,12 +214,37 @@ EXEC sp_spaceused N'Purchasing.Vendor', @mode = 'REMOTE_ONLY'
 ### D. Displaying space usage information for a database in a single result set  
  The following example summarizes space usage for the current database in a single result set.  
   
-```tsql  
+```sql  
 USE AdventureWorks2016  
 GO  
 EXEC sp_spaceused @oneresultset = 1  
 ```  
-  
+
+### E. Displaying space usage information for a database with at least one MEMORY_OPTIMIZED file group in a single result set 
+ The following example summarizes space usage for the current database with at least one MEMORY_OPTIMIZED file group in a single result set.
+ 
+```sql
+USE WideWorldImporters
+GO
+EXEC sp_spaceused @updateusage = 'FALSE', @mode = 'ALL', @oneresultset = '1', @include_total_xtp_storage = '1';
+GO
+``` 
+
+### F. Displaying space usage information for a MEMORY_OPTIMIZED table object in a database.
+ The following example summarizes space usage for a MEMORY_OPTIMIZED table object in the current database with at least one MEMORY_OPTIMIZED file group.
+ 
+```sql
+USE WideWorldImporters
+GO
+EXEC sp_spaceused
+@objname = N'VehicleTemparatures',
+@updateusage = 'FALSE',
+@mode = 'ALL',
+@oneresultset = '0',
+@include_total_xtp_storage = '1';
+GO
+```  
+
 ## See Also  
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   

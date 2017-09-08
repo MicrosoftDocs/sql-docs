@@ -43,7 +43,7 @@ This following table describes the SQL Server **Deprecated Features** performanc
 |SQL Server Deprecated Features counter instances|Description|  
 |------------------------------------------------------|-----------------|  
 |'#' and '##' as the name of temporary tables and stored procedures|An identifier was encountered that did not contain any characters other than #. Use at least one additional character. Occurs once per compilation.|  
-|'::' function calling syntax|The :: function calling syntax was encountered for a table-valued function. Replace with `SELECT column_list FROM` *\< function_name>*`()`. For example, replace `SELECT * FROM ::fn_virtualfilestats(2,1)`with `SELECT * FROM sys.fn_virtualfilestats(2,1)`. Occurs once per compilation.|  
+|'::' function calling syntax|The :: function calling syntax was encountered for a table-valued function. Replace with `SELECT column_list FROM` *< function_name>*`()`. For example, replace `SELECT * FROM ::fn_virtualfilestats(2,1)`with `SELECT * FROM sys.fn_virtualfilestats(2,1)`. Occurs once per compilation.|  
 |'@' and names that start with '@@' as [!INCLUDE[tsql](../../includes/tsql-md.md)] identifiers|An identifier was encountered that began with @ or @@. Do not use @ or @@ or names that begin with @@ as identifiers. Occurs once per compilation.|  
 |ADDING TAPE DEVICE|The deprecated feature sp_addumpdevice'**tape**' was encountered. Use sp_addumpdevice'**disk**' instead. Occurs once per use.|  
 |ALL Permission|Total number of times the GRANT ALL, DENY ALL, or REVOKE ALL syntax was encountered. Modify the syntax to deny specific permissions. Occurs once per query.|  

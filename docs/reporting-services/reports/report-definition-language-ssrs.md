@@ -44,7 +44,7 @@ manager: "erikre"
   
  For example, the schema includes the RDL element **ReportParameters**, which is the complex type **ReportParametersType**. By convention, a complex type for an element is the name of the element follow by the word **Type**. A **ReportParameters** element can be contained by the **Report** element (a complex type), and can contain **ReportParameter** elements. A **ReportParameterType** is a simple type that can only be one of the following values: **Boolean**, **DateTime**, **Integer**, **Float**, or **String**. For more information about XML Schema datatypes, see [XML Schema Part 2: Datatypes Second Edition](http://go.microsoft.com/fwlink/?linkid=4871).  
   
- The RDL XSD is available in the ReportDefinition.xsd file, located in the Extras folder on the product CD-ROM. It is also available on the report server through the following URL: http://servername/reportserver/reportdefinition.xsd.  
+ The RDL XSD is available in the ReportDefinition.xsd file, located in the Extras folder on the product CD-ROM. It is also available on the report server through the following URL: `http://servername/reportserver/reportdefinition.xsd`.  
   
 ##  <a name="bkmk_Creating_RDL"></a> Creating RDL  
  Because of the open and extensible nature of RDL, a variety of tools and applications can be built that generate RDL based on its XML schema.  

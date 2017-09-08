@@ -1,7 +1,7 @@
 ---
 title: "Calculated Columns (SSAS Tabular) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: "05/22/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -17,21 +17,12 @@ author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
 ---
-# SSAS Calculated Columns
-  Calculated columns, in tabular models, allow you to add new data to your model. Instead of pasting or importing values into the column, you create a DAX formula that defines the column’s row level values. The calculated column can then be used in a report, PivotTable, or PivotChart as would any other column.  
+# Calculated Columns
+  Calculated columns, in tabular models, enable you to add new data to your model. Instead of pasting or importing values into the column, you create a DAX formula that defines the column’s row level values. The calculated column can then be used in a report, PivotTable, or PivotChart as would any other column.  
   
 > [!NOTE]  
->  Calculated columns are not supported for tabular models in DirectQuery mode. For more information, see [DirectQuery Mode &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md).  
+>  Calculated columns are not supported for tabular models in DirectQuery mode. For more information, see [DirectQuery Mode](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md).  
   
- Sections in this topic:  
-  
--   [Benefits](#bkmk_understanding)  
-  
--   [Naming a Calculated Column](#bkmk_naming)  
-  
--   [Performance of Calculated Columns](#bkmk_perf)  
-  
--   [Related Tasks](#bkmk_rel_tasks)  
   
 ##  <a name="bkmk_understanding"></a> Benefits  
  Formulas in calculated columns are much like formulas in Excel. Unlike Excel, however, you cannot create different formulas for different rows in a table; instead, the DAX formula is automatically applied to the entire column.  
@@ -51,7 +42,7 @@ manager: "erikre"
   
  This formula extracts the month from the StartDate column. It then calculates the end of the month value for each row in the table. The second parameter specifies the number of months before or after the month in StartDate; in this case, 0 means the same month. For example, if the value in the StartDate column is 6/1/2001, the value in the calculated column will be 6/30/2001.  
   
-##  <a name="bkmk_naming"></a> Naming a Calculated Column  
+##  <a name="bkmk_naming"></a> Naming a calculated column  
  By default, new calculated columns are added to the right of other columns in a table, and the column is automatically assigned the default name of **CalculatedColumn1**, **CalculatedColumn2**, and so forth. You can also right click a column, and then click Insert Column to create a new column between two existing columns. You can rearrange columns within the same table by clicking and dragging, and you can rename columns after they are created; however, you should be aware of the following restrictions on changes to calculated columns:  
   
 -   Each column name must be unique within a table.  
@@ -62,7 +53,7 @@ manager: "erikre"
   
 -   There are some characters that cannot be used within the names of columns. For more information, see "Naming Requirements" in [DAX Syntax Reference](http://msdn.microsoft.com/en-us/098630f4-7d1d-467e-976c-99b2279430d5).  
   
-##  <a name="bkmk_perf"></a> Performance of Calculated Columns  
+##  <a name="bkmk_perf"></a> Performance of calculated columns  
  The formula for a calculated column can be more resource-intensive than the formula used for a measure. One reason is that the result for a calculated column is always calculated for each row in a table, whereas a measure is only calculated for the cells defined by the filter used in a report, PivotTable, or PivotChart. For example, a table with a million rows will always have a calculated column with a million results, and a corresponding effect on performance. However, a PivotTable generally filters data by applying row and column headings; therefore, a measure is calculated only for the subset of data in each cell of the PivotTable.  
   
  A formula has dependencies on the objects that are referenced in the formula, such as other columns or expressions that evaluate values. For example, a calculated column that is based on another column, or a calculation that contains an expression with a column reference, cannot be evaluated until the other column is evaluated. By default, automatic refresh is enabled in workbooks; therefore, all such dependencies can affect performance while values are updated and formulas refreshed.  
@@ -77,15 +68,15 @@ manager: "erikre"
   
 -   If you create a formula that contains a circular or self-referencing dependency, an error will occur.  
   
-##  <a name="bkmk_rel_tasks"></a> Related Tasks  
+##  <a name="bkmk_rel_tasks"></a> Related tasks  
   
 |Topic|Description|  
 |-----------|-----------------|  
-|[Create a Calculated Column &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/ssas-calculated-columns-create-a-calculated-column.md)|Tasks in this topic describe how to add a new calculated column to a table.|  
+|[Create a Calculated Column](../../analysis-services/tabular-models/ssas-calculated-columns-create-a-calculated-column.md)|Tasks in this topic describe how to add a new calculated column to a table.|  
   
-## See Also  
- [Tables and Columns &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/tables-and-columns-ssas-tabular.md)   
- [Measures &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
- [Calculations &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/calculations-ssas-tabular.md)  
+## See also  
+ [Tables and Columns](../../analysis-services/tabular-models/tables-and-columns-ssas-tabular.md)   
+ [Measures](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
+ [Calculations](../../analysis-services/tabular-models/calculations-ssas-tabular.md)  
   
   

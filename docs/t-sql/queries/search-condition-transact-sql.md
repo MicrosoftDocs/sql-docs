@@ -1,7 +1,7 @@
 ---
 title: "Search Condition (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/16/2017"
+ms.date: "08/09/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -59,7 +59,7 @@ manager: "jhubbard"
 [ ,...n ]   
   
 <predicate> ::=   
-    { expression { = | \< > | ! = | > | > = | ! > | < | < = | ! < } expression   
+    { expression { = | < > | ! = | > | > = | ! > | < | < = | ! < } expression   
     | string_expression [ NOT ] LIKE string_expression   
   [ ESCAPE 'escape_character' ]   
     | expression [ NOT ] BETWEEN expression AND expression   
@@ -68,7 +68,7 @@ manager: "jhubbard"
   ( { column | * } , '<contains_search_condition>' )   
     | FREETEXT ( { column | * } , 'freetext_string' )   
     | expression [ NOT ] IN ( subquery | expression [ ,...n ] )   
-    | expression { = | \< > | ! = | > | > = | ! > | < | < = | ! < }   
+    | expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }   
   { ALL | SOME | ANY} ( subquery )   
     | EXISTS ( subquery )     }   
 ```  
@@ -76,13 +76,13 @@ manager: "jhubbard"
 ```  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
-\< search_condition > ::=   
+< search_condition > ::=   
     { [ NOT ] <predicate> | ( <search_condition> ) }   
     [ { AND | OR } [ NOT ] { <predicate> | ( <search_condition> ) } ]   
 [ ,...n ]   
   
 <predicate> ::=   
-    { expression { = | \< > | ! = | > | > = | < | < = } expression   
+    { expression { = | < > | ! = | > | > = | < | < = } expression   
     | string_expression [ NOT ] LIKE string_expression   
     | expression [ NOT ] BETWEEN expression AND expression   
     | expression IS [ NOT ] NULL   
@@ -91,7 +91,7 @@ manager: "jhubbard"
 ```  
   
 ## Arguments  
- <search_condition>  
+ \<search_condition>  
  Specifies the conditions for the rows returned in the result set for a SELECT statement, query expression, or subquery. For an UPDATE statement, specifies the rows to be updated. For a DELETE statement, specifies the rows to be deleted. There is no limit to the number of predicates that can be included in a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement search condition.  
   
  NOT  
@@ -164,7 +164,7 @@ manager: "jhubbard"
  Specifies the search for an expression, based on whether the expression is included in or excluded from a list. The search expression can be a constant or a column name, and the list can be a set of constants or, more typically, a subquery. Enclose the list of values in parentheses. For more information, see [IN &#40;Transact-SQL&#41;](../../t-sql/language-elements/in-transact-sql.md).  
   
  *subquery*  
- Can be considered a restricted SELECT statement and is similar to <query_expresssion> in the SELECT statement. The ORDER BY clause and the INTO keyword are not allowed. For more information, see [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md).  
+ Can be considered a restricted SELECT statement and is similar to \<query_expresssion> in the SELECT statement. The ORDER BY clause and the INTO keyword are not allowed. For more information, see [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md).  
   
  ALL  
  Used with a comparison operator and a subquery. Returns TRUE for \<predicate> when all values retrieved for the subquery satisfy the comparison operation, or FALSE when not all values satisfy the comparison or when the subquery returns no rows to the outer statement. For more information, see [ALL &#40;Transact-SQL&#41;](../../t-sql/language-elements/all-transact-sql.md).  

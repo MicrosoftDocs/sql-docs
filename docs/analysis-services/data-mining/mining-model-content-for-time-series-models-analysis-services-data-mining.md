@@ -56,7 +56,7 @@ manager: "jhubbard"
   
  If the node does not have any children, this means that no significant conditions were found that would justify dividing the cases into further subgroups. The branch ends at this point and the node is termed a *leaf node*. The leaf node contains the attributes, coefficients, and values that are the building blocks of the ARTXP formula.  
   
- Some branches may have additional splits, similar to a decision trees model. For example, the branch of the tree that represents sales for the Europe region splits into two branches. A split occurs when a condition is found that causes a significant difference between the two groups. The parent node tells you the name of the attribute that caused the split, such as [Amount], and how many cases there are in the parent node. The leaf nodes provide more detail: the value of the attribute, such as [Sales] >10,000 vs. [Sales] \< 10,000), the number of cases that support each condition, and the ARTXP formula.  
+ Some branches may have additional splits, similar to a decision trees model. For example, the branch of the tree that represents sales for the Europe region splits into two branches. A split occurs when a condition is found that causes a significant difference between the two groups. The parent node tells you the name of the attribute that caused the split, such as [Amount], and how many cases there are in the parent node. The leaf nodes provide more detail: the value of the attribute, such as [Sales] >10,000 vs. [Sales] < 10,000), the number of cases that support each condition, and the ARTXP formula.  
   
 > [!NOTE]  
 >  If you want to view the formulas, you can find the complete regression formula at the leaf node level, but not in an intermediate or root node.  

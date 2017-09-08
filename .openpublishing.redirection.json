@@ -1,326 +1,3036 @@
 {
- "redirections":
- [
-
-  {
-   "source_path" : "docs/linux/sql-server-linux-shared-disk-cluster-red-hat-7-troubleshoot.md",
-   "redirect_url": "/sql/linux/sql-server-linux-shared-disk-cluster-red-hat-7-operate",
-   "redirect_document_id": true
-  },
-
-
-  {
-   "source_path" : "docs/ado/guide/appendixes/using-ado-with-microsoft-visual-j.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": true
-  },
-  {
-   "source_path" : "docs/ado/guide/data/ado-event-instantiation-visual-j.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/guide/data/handline-errors-in-visual-j.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/guide/remote-data-service/rds-tutorial-visual-j.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/ado-code-examples-in-visual-j.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/rds-api/rds-code-examples-in-visual-j.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-
-
-  {
-   "source_path" : "docs/ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/absoluteposition-and-cursorlocation-properties-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/activecommand-property-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/actualsize-and-definedsize-properties-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/addnew-method-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/append-and-createparameter-methods-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/appendchunk-and-getchunk-methods-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/attributes-and-name-properties-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/cachesize-property-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/cancel-method-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/clone-method-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/comparebookmarks-method-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/count-property-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/cursortype-locktype-and-editmode-properties-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/delete-method-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/execute-requery-and-clear-methods-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/filter-and-recordcount-properties-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/find-method-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/getrows-method-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/getstring-method-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/handler-property-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/internettimeout-property-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/isolationlevel-and-mode-properties-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/item-property-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/marshaloptions-property-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/maxrecords-property-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/move-method-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/nextrecordset-method-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/numericscale-and-precision-properties-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/open-and-close-methods-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/openschema-method-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/optimize-property-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/originalvalue-and-underlyingvalue-properties-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/prepared-property-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/provider-and-defaultdatabase-properties-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/refresh-method-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/resync-method-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/save-and-open-methods-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/sort-property-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/source-property-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/state-property-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/status-property-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/stayinsync-property-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/supports-method-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/type-property-example-field-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/type-property-example-property-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/update-and-cancelupdate-methods-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/updatebatch-and-cancelbatch-methods-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/value-property-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  },
-  {
-   "source_path" : "docs/ado/reference/ado-api/version-property-example-vj.md",
-   "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
-   "redirect_document_id": false
-  }
-
- ]
+    "redirections": [
+        {
+            "source_path": "docs/linux/sql-server-linux-export-import-with-sqlpackage.md",
+            "redirect_url": "/sql/linux/sql-server-linux-migrate-ssms",
+            "redirect_document_id": false
+        },       
+        {
+            "source_path": "docs/linux/sql-server-linux-migrate-sqlpackage.md",
+            "redirect_url": "/sql/linux/sql-server-linux-migrate-ssms",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/linux/sql-server-linux-get-started-tutorial.md",
+            "redirect_url": "/sql/linux/sql-server-linux-overview",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/linux/sql-server-linux-connect-and-query-sqlcmd.md",
+            "redirect_url": "/sql/linux/sql-server-linux-setup-tools",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/linux/sql-server-linux-setup-suse-linux-enterprise-server.md",
+            "redirect_url": "/sql/linux/quickstart-install-connect-suse",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/linux/sql-server-linux-setup-red-hat.md",
+            "redirect_url": "/sql/linux/quickstart-install-connect-red-hat",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/linux/sql-server-linux-setup-ubuntu.md",
+            "redirect_url": "/sql/linux/quickstart-install-connect-ubuntu",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/linux/sql-server-linux-setup-docker.md",
+            "redirect_url": "/sql/linux/quickstart-install-connect-docker",
+            "redirect_document_id": true
+        },                                        
+        {
+            "source_path": "docs/relational-databases/relational-databases-new-updated-sql-docs-pr.md",
+            "redirect_url": "/sql/relational-databases/new-updated-relational-databases",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/sql-server/sql-server-new-updated-sql-docs-pr.md",
+            "redirect_url": "/sql/sql-server/new-updated-sql-server",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/t-sql/t-sql-new-updated-sql-docs-pr.md",
+            "redirect_url": "/sql/t-sql/new-updated-t-sql",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/linux/sql-server-linux-shared-disk-cluster-red-hat-7-troubleshoot.md",
+            "redirect_url": "/sql/linux/sql-server-linux-shared-disk-cluster-red-hat-7-operate",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/ado/guide/appendixes/using-ado-with-microsoft-visual-j.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/ado/guide/data/ado-event-instantiation-visual-j.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/guide/data/handline-errors-in-visual-j.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/guide/remote-data-service/rds-tutorial-visual-j.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/ado-code-examples-in-visual-j.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/rds-api/rds-code-examples-in-visual-j.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/absoluteposition-and-cursorlocation-properties-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/activecommand-property-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/actualsize-and-definedsize-properties-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/addnew-method-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/append-and-createparameter-methods-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/appendchunk-and-getchunk-methods-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/attributes-and-name-properties-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/cachesize-property-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/cancel-method-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/clone-method-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/comparebookmarks-method-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/count-property-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/cursortype-locktype-and-editmode-properties-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/delete-method-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/execute-requery-and-clear-methods-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/filter-and-recordcount-properties-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/find-method-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/getrows-method-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/getstring-method-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/handler-property-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/internettimeout-property-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/isolationlevel-and-mode-properties-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/item-property-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/marshaloptions-property-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/maxrecords-property-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/move-method-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/nextrecordset-method-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/numericscale-and-precision-properties-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/open-and-close-methods-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/openschema-method-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/optimize-property-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/originalvalue-and-underlyingvalue-properties-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/prepared-property-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/provider-and-defaultdatabase-properties-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/refresh-method-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/resync-method-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/save-and-open-methods-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/sort-property-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/source-property-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/state-property-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/status-property-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/stayinsync-property-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/supports-method-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/type-property-example-field-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/type-property-example-property-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/update-and-cancelupdate-methods-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/updatebatch-and-cancelbatch-methods-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/value-property-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ado/reference/ado-api/version-property-example-vj.md",
+            "redirect_url": "/sql/ado/microsoft-activex-data-objects-ado",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r/operationalization-with-mrsdeploy.md",
+            "redirect_url": "/sql/advanced-analytics/operationalization-with-mrsdeploy",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/architecture-overview-sql-server-r.md",
+            "redirect_url": "/sql/advanced-analytics/r/architecture-overview-sql-server-r",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/configuration-sql-server-r-services.md",
+            "redirect_url": "/sql/advanced-analytics/r/configuration-sql-server-r-services",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/configure-and-manage-advanced-analytics-extensions.md",
+            "redirect_url": "/sql/advanced-analytics/r/configure-and-manage-advanced-analytics-extensions",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/converting-r-code-for-use-in-r-services.md",
+            "redirect_url": "/sql/advanced-analytics/r/converting-r-code-for-use-in-sql-server",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/create-a-local-package-repository-using-minicran.md",
+            "redirect_url": "/sql/advanced-analytics/r/create-a-local-package-repository-using-minicran",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/create-a-standalone-r-server.md",
+            "redirect_url": "/sql/advanced-analytics/r/create-a-standalone-r-server",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/creating-workflows-that-use-r-in-sql-server.md",
+            "redirect_url": "/sql/advanced-analytics/r/creating-workflows-that-use-r-in-sql-server",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/data-exploration-and-predictive-modeling-with-r.md",
+            "redirect_url": "/sql/advanced-analytics/r/data-exploration-and-predictive-modeling-with-r",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/data-science-scenarios-and-solution-templates.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/data-science-scenarios-and-solution-templates",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/determine-which-packages-are-installed-on-sql-server.md",
+            "redirect_url": "/sql/advanced-analytics/r/determine-which-packages-are-installed-on-sql-server",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/differences-in-r-features-between-editions-of-sql-server.md",
+            "redirect_url": "/sql/advanced-analytics/r/differences-in-r-features-between-editions-of-sql-server",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/dmvs-for-sql-server-r-services.md",
+            "redirect_url": "/sql/advanced-analytics/r/dmvs-for-sql-server-r-services",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/extended-events-for-sql-server-r-services.md",
+            "redirect_url": "/sql/advanced-analytics/r/extended-events-for-sql-server-r-services",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md",
+            "redirect_url": "/sql/advanced-analytics/r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/getting-started-with-microsoft-r-server-standalone.md",
+            "redirect_url": "/sql/advanced-analytics/r/getting-started-with-microsoft-r-server-standalone",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/getting-started-with-sql-server-r-services.md",
+            "redirect_url": "/sql/advanced-analytics/r/getting-started-with-sql-server-r-services",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/how-to-create-a-resource-pool-for-r.md",
+            "redirect_url": "/sql/advanced-analytics/r/how-to-create-a-resource-pool-for-r",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/how-to-create-a-stored-procedure-using-sqlrutils.md",
+            "redirect_url": "/sql/advanced-analytics/r/how-to-create-a-stored-procedure-using-sqlrutils",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/how-to-create-mdx-queries-using-olapr.md",
+            "redirect_url": "/sql/advanced-analytics/r/how-to-create-mdx-queries-using-olapr",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/index.md",
+            "redirect_url": "/sql/advanced-analytics/r/index",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/install-additional-r-packages-on-sql-server.md",
+            "redirect_url": "/sql/advanced-analytics/r/install-additional-r-packages-on-sql-server",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/install-microsoft-r-server-from-the-command-line.md",
+            "redirect_url": "/sql/advanced-analytics/r/install-microsoft-r-server-from-the-command-line",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/installing-and-managing-r-packages.md",
+            "redirect_url": "/sql/advanced-analytics/r/installing-and-managing-r-packages",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/installing-ml-components-without-internet-access.md",
+            "redirect_url": "/sql/advanced-analytics/r/installing-ml-components-without-internet-access",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/installing-sql-server-r-services-on-an-azure-virtual-machine.md",
+            "redirect_url": "/sql/advanced-analytics/r/installing-sql-server-r-services-on-an-azure-virtual-machine",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/known-issues-for-sql-server-r-services.md",
+            "redirect_url": "/sql/advanced-analytics/known-issues-for-sql-server-machine-learning-services",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/data-science-deep-dive-using-the-revoscaler-packages.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/lesson-1-work-with-sql-server-data-using-r-data-science-deep-dive.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/deepdive-work-with-sql-server-data-using-r",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/lesson-1-1-create-sql-server-data-objects-using-rxsqlserverdata.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/deepdive-create-sql-server-data-objects-using-rxsqlserverdata",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/lesson-1-2-query-and-modify-the-sql-server-data.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/deepdive-query-and-modify-the-sql-server-data",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/lesson-1-3-define-and-use-compute-contexts.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/deepdive-define-and-use-compute-contexts",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/lesson-2-create-and-run-r-scripts-data-science-deep-dive.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/deepdive-create-and-run-r-scripts",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/lesson-2-1-visualize-sql-server-data-using-r.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/deepdive-visualize-sql-server-data-using-r",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/lesson-2-2-create-models.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/deepdive-create-models",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/lesson-2-3-score-new-data.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/deepdive-score-new-data",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/lesson-3-transform-data-using-r-data-science-deep-dive.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/deepdive-transform-data-using-r",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/lesson-3-1-load-data-into-memory-using-rximport.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/deepdive-load-data-into-memory-using-rximport",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/lesson-3-2-create-new-sql-server-table-using-rxdatastep.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/deepdive-create-new-sql-server-table-using-rxdatastep",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/lesson-3-3-perform-chunking-analysis-using-rxdatastep.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/deepdive-perform-chunking-analysis-using-rxdatastep",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/lesson-4-analyze-data-in-local-compute-context-data-science-deep-dive.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/deepdive-analyze-data-in-local-compute-context",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/lesson-4-1-move-data-between-sql-server-and-xdf-file.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/deepdive-move-data-between-sql-server-and-xdf-file",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/lesson-5-create-a-simple-simulation-data-science-deep-dive.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/deepdive-create-a-simple-simulation",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/data-science-end-to-end-walkthrough.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/walkthrough-data-science-end-to-end-walkthrough",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/prerequisites-for-data-science-walkthroughs-sql-server-r-services.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/walkthrough-prerequisites-for-data-science-walkthroughs",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/lesson-1-prepare-the-data-data-science-end-to-end-walkthrough.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/walkthrough-prepare-the-data",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/lesson-2-view-and-explore-the-data-data-science-end-to-end-walkthrough.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/walkthrough-view-and-explore-the-data",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/lesson-2-1-view-and-summarize-data-using-r.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/walkthrough-view-and-summarize-data-using-r",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/lesson-2-2-create-graphs-and-plots-using-r.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/walkthrough-create-graphs-and-plots-using-r",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/lesson-3-create-data-features-data-science-end-to-end-walkthrough.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/walkthrough-create-data-features",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/lesson-4-build-and-save-the-model-data-science-end-to-end-walkthrough.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/walkthrough-build-and-save-the-model",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/lesson-5-deploy-and-use-the-model-data-science-end-to-end-walkthrough.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/walkthrough-deploy-and-use-the-model",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/managing-and-monitoring-r-solutions.md",
+            "redirect_url": "/sql/advanced-analytics/r/managing-and-monitoring-r-solutions",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/modify-the-user-account-pool-for-sql-server-r-services.md",
+            "redirect_url": "/sql/advanced-analytics/r/modify-the-user-account-pool-for-sql-server-r-services",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/monitor-r-services-using-custom-reports-in-management-studio.md",
+            "redirect_url": "/sql/advanced-analytics/r/monitor-r-services-using-custom-reports-in-management-studio",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/monitoring-r-services.md",
+            "redirect_url": "/sql/advanced-analytics/r/monitoring-r-services",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/new-components-in-sql-server-to-support-r.md",
+            "redirect_url": "/sql/advanced-analytics/r/new-components-in-sql-server-to-support-r",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/operationalizing-your-r-code.md",
+            "redirect_url": "/sql/advanced-analytics/r/operationalizing-your-r-code",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/packages-installed-in-user-libraries.md",
+            "redirect_url": "/sql/advanced-analytics/r/packages-installed-in-user-libraries",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/performance-case-study-r-services.md",
+            "redirect_url": "/sql/advanced-analytics/r/performance-case-study-r-services",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/using-r-code-in-transact-sql-sql-server-r-services.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/rtsql-using-r-code-in-transact-sql-quickstart",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/working-with-inputs-and-outputs-r-in-t-sql-tutorial.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/rtsql-working-with-inputs-and-outputs",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/r-and-sql-data-types-and-data-objects-r-in-t-sql-tutorial.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/rtsql-r-and-sql-data-types-and-data-objects",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/using-r-functions-with-sql-server-data-r-in-t-sql-tutorial.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/rtsql-using-r-functions-with-sql-server-data",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/create-a-predictive-model-r-in-t-sql-tutorial.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/rtsql-create-a-predictive-model-r",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/predict-and-plot-from-model-r-in-t-sql-tutorial.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/rtsql-predict-and-plot-from-model",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure.md",
+            "redirect_url": "/sql/advanced-analytics/r/provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/r-and-data-optimization-r-services.md",
+            "redirect_url": "/sql/advanced-analytics/r/r-and-data-optimization-r-services",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/r-interoperability-in-sql-server.md",
+            "redirect_url": "/sql/advanced-analytics/r/r-interoperability-in-sql-server",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/r-package-how-to-enable-or-disable.md",
+            "redirect_url": "/sql/advanced-analytics/r/r-package-how-to-enable-or-disable",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/r-package-management-for-sql-server-r-services.md",
+            "redirect_url": "/sql/advanced-analytics/r/r-package-management-for-sql-server-r-services",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/r-server-standalone.md",
+            "redirect_url": "/sql/advanced-analytics/r/r-server-standalone",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/r-services.md",
+            "redirect_url": "/sql/advanced-analytics/r/r-services",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/resource-governance-for-r-services.md",
+            "redirect_url": "/sql/advanced-analytics/r/resource-governance-for-r-services",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/save-and-load-r-objects-from-sql-server-using-odbc.md",
+            "redirect_url": "/sql/advanced-analytics/r/save-and-load-r-objects-from-sql-server-using-odbc",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/scaler-functions-for-working-with-sql-server-data.md",
+            "redirect_url": "/sql/advanced-analytics/r/scaler-functions-for-working-with-sql-server-data",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/security-considerations-for-the-r-runtime-in-sql-server.md",
+            "redirect_url": "/sql/advanced-analytics/r/security-considerations-for-the-r-runtime-in-sql-server",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/security-overview-sql-server-r.md",
+            "redirect_url": "/sql/advanced-analytics/r/security-overview-sql-server-r",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/set-up-a-data-science-client.md",
+            "redirect_url": "/sql/advanced-analytics/r/set-up-a-data-science-client",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/set-up-sql-server-r-services-in-database.md",
+            "redirect_url": "/sql/advanced-analytics/r/set-up-sql-server-r-services-in-database",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/setup-or-configure-r-tools.md",
+            "redirect_url": "/sql/advanced-analytics/r/setup-or-configure-r-tools",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/sql-server-configuration-r-services.md",
+            "redirect_url": "/sql/advanced-analytics/r/sql-server-configuration-r-services",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/sql-server-r-services-features-and-tasks.md",
+            "redirect_url": "/sql/advanced-analytics/r/sql-server-r-services-features-and-tasks",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/sql-server-r-services-performance-tuning.md",
+            "redirect_url": "/sql/advanced-analytics/r/sql-server-r-services-performance-tuning",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/sql-server-r-services-tutorials.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/machine learning-services-tutorials",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/sql-server-r-services.md",
+            "redirect_url": "/sql/advanced-analytics/r/sql-server-r-services",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/in-database-advanced-analytics-for-sql-developers-tutorial.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/sqldev-in-database-advanced-analytics-for-sql-developers",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/step-1-download-the-sample-data-in-database-advanced-analytics-tutorial.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/sqldev-download-the-sample-data",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/step-2-import-data-to-sql-server-using-powershell.md",
+            "redirect_url": "/sql/advanced-analytics/r/sqldev-import-data-to-sql-server-using-powershell",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/step-3-explore-and-visualize-the-data-in-database-advanced-analytics-tutorial.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/sqldev-explore-and-visualize-the-data",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/step-4-create-data-features-using-t-sql-in-database-advanced-analytics-tutorial.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/sqldev-create-data-features-using-t-sql",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/step-5-train-and-save-a-model-using-t-sql.md",
+            "redirect_url": "/sql/advanced-analytics/r/sqldev-train-and-save-a-model-using-t-sql",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/step-6-operationalize-the-model-in-database-advanced-analytics-tutorial.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/sqldev-operationalize-the-model",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/unattended-installs-of-sql-server-r-services.md",
+            "redirect_url": "/sql/advanced-analytics/r/unattended-installs-of-sql-server-r-services",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/upgrade-and-installation-faq-sql-server-r-services.md",
+            "redirect_url": "/sql/advanced-analytics/r/upgrade-and-installation-faq-sql-server-r-services",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/use-sqlbindr-exe-to-upgrade-an-instance-of-r-services.md",
+            "redirect_url": "/sql/advanced-analytics/r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/using-data-from-olap-cubes-in-r.md",
+            "redirect_url": "/sql/advanced-analytics/r/using-data-from-olap-cubes-in-r",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/using-r-code-profiling-functions.md",
+            "redirect_url": "/sql/advanced-analytics/r/using-r-code-profiling-functions",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/using-the-microsoftml-package-with-sql-server-r-services.md",
+            "redirect_url": "/sql/advanced-analytics/using-the-microsoftml-package",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/what-s-new-in-sql-server-r-services.md",
+            "redirect_url": "/sql/advanced-analytics/what-s-new-in-sql-server-machine-learning-services",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r-services/working-with-r-data-types.md",
+            "redirect_url": "/sql/advanced-analytics/r/working-with-r-data-types",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/connect/php/download-microsoft-php-driver-for-sql-server.md",
+            "redirect_url": "/sql/connect/php/microsoft-php-driver-for-sql-server",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/connect/odbc/using-azure-key-vault-odbc.md",
+            "redirect_url": "/sql/connect/odbc/using-always-encrypted-with-the-odbc-driver",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/connect/odbc/connecting-with-bcp.md",
+            "redirect_url": "/sql/connect/odbc/linux-mac/connecting-with-bcp",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/connect/odbc/windows/using-transparent-network-ip-resolution.md",
+            "redirect_url": "/sql/connect/odbc/using-transparent-network-ip-resolution",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/connect/odbc/linux/connecting-with-bcp.md",
+            "redirect_url": "/sql/connect/odbc/linux-mac/connecting-with-bcp",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/connect/odbc/linux/connecting-with-sqlcmd.md",
+            "redirect_url": "/sql/connect/odbc/linux-mac/connecting-with-sqlcmd",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/connect/odbc/linux/connection-string-keywords-and-data-source-names-dsns.md",
+            "redirect_url": "/sql/connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/connect/odbc/linux/custom-keystore-providers.md",
+            "redirect_url": "/sql/connect/odbc/custom-keystore-providers",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/connect/odbc/linux/data-access-tracing-with-the-odbc-driver-on-linux.md",
+            "redirect_url": "/sql/connect/odbc/linux-mac/data-access-tracing-with-the-odbc-driver-on-linux",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/connect/odbc/linux/frequently-asked-questions-faq-for-odbc-linux.md",
+            "redirect_url": "/sql/connect/odbc/linux-mac/frequently-asked-questions-faq-for-odbc-linux",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/connect/odbc/linux/index.md",
+            "redirect_url": "/sql/connect/odbc/linux-mac/index",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/connect/odbc/linux/installing-the-driver-manager.md",
+            "redirect_url": "/sql/connect/odbc/linux-mac/installing-the-driver-manager",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/connect/odbc/linux/installing-the-microsoft-odbc-driver-for-sql-server-on-linux.md",
+            "redirect_url": "/sql/connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/connect/odbc/linux/known-issues-in-this-version-of-the-driver.md",
+            "redirect_url": "/sql/connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/connect/odbc/linux/microsoft-odbc-driver-for-sql-server-on-linux.md",
+            "redirect_url": "/sql/connect/odbc/microsoft-odbc-driver-for-sql-server",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/connect/odbc/linux/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md",
+            "redirect_url": "/sql/connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/connect/odbc/linux/programming-guidelines.md",
+            "redirect_url": "/sql/connect/odbc/linux-mac/programming-guidelines",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/connect/odbc/linux/release-notes-for-the-microsoft-odbc-driver-for-sql-server-on-linux.md",
+            "redirect_url": "/sql/connect/odbc/linux-mac/release-notes",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/connect/odbc/linux/system-requirements.md",
+            "redirect_url": "/sql/connect/odbc/linux-mac/system-requirements",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/connect/odbc/linux/using-always-encrypted-with-the-linux-odbc-driver.md",
+            "redirect_url": "/sql/connect/odbc/using-always-encrypted-with-the-odbc-driver",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/connect/odbc/linux/using-integrated-authentication.md",
+            "redirect_url": "/sql/connect/odbc/linux-mac/using-integrated-authentication",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/connect/odbc/linux/using-transparent-network-ip-resolution.md",
+            "redirect_url": "/sql/connect/odbc/using-transparent-network-ip-resolution",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/connect/odbc/mac/connection-string-keywords-and-data-source-names-dsns.md",
+            "redirect_url": "/sql/connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/connect/odbc/mac/frequently-asked-questions-for-odbc-macos.md",
+            "redirect_url": "/sql/connect/odbc/linux-mac/frequently-asked-questions-faq-for-odbc-linux",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/connect/odbc/mac/index.md",
+            "redirect_url": "/sql/connect/odbc/linux-mac/index",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/connect/odbc/mac/installing-the-microsoft-odbc-driver-for-sql-server-on-macos.md",
+            "redirect_url": "/sql/connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/connect/odbc/mac/known-issues-in-this-version-of-the-driver.md",
+            "redirect_url": "/sql/connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/connect/odbc/mac/microsoft-odbc-driver-for-sql-server-on-mac.md",
+            "redirect_url": "/sql/connect/odbc/microsoft-odbc-driver-for-sql-server",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/connect/odbc/mac/programming-guidelines.md",
+            "redirect_url": "/sql/connect/odbc/linux-mac/programming-guidelines",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/connect/odbc/mac/release-notes.md",
+            "redirect_url": "/sql/connect/odbc/linux-mac/release-notes",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/connect/odbc/mac/system-requirements.md",
+            "redirect_url": "/sql/connect/odbc/linux-mac/system-requirements",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/t-sql/statements/alter-statements-transact-sql.md",
+            "redirect_url": "/sql/t-sql/statements/statements",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/t-sql/statements/backup-and-restore-statements-transact-sql.md",
+            "redirect_url": "/sql/t-sql/statements/statements",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/t-sql/statements/create-statements-transact-sql.md",
+            "redirect_url": "/sql/t-sql/statements/statements",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/t-sql/statements/drop-statements-transact-sql.md",
+            "redirect_url": "/sql/t-sql/statements/statements",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/t-sql/statements/security-statements.md",
+            "redirect_url": "/sql/t-sql/statements/statements",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/t-sql/statements/service-broker-statements.md",
+            "redirect_url": "/sql/t-sql/statements/statements",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/t-sql/transact-sql-reference-database-engine.md",
+            "redirect_url": "/sql/t-sql/language-reference",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/variable-grid-options.md",
+            "redirect_url": "/sql/integration-services/variables-window",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/integration-services/service/configure-the-integration-services-service-as-a-cluster-resource.md",
+            "redirect_url": "/sql/integration-services/service/integration-services-ssis-in-a-cluster",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/integration-services/service/view-events-for-the-integration-services-service.md",
+            "redirect_url": "/sql/integration-services/service/events-logged-by-the-integration-services-service",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/integration-services/service/import-and-export-packages-ssis-service.md",
+            "redirect_url": "/sql/integration-services/service/package-management-ssis-service",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/service/import-package-dialog-box-ui-reference.md",
+            "redirect_url": "/sql/integration-services/service/package-management-ssis-service",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/service/export-package-dialog-box-ui-reference.md",
+            "redirect_url": "/sql/integration-services/service/package-management-ssis-service",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/service/package-backup-and-restore-ssis-service.md",
+            "redirect_url": "/sql/integration-services/service/package-management-ssis-service",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/service/view-integration-services-packages-in-sql-server-management-studio-ssis-service.md",
+            "redirect_url": "/sql/integration-services/service/package-management-ssis-service",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/service/manage-the-integration-services-service.md",
+            "redirect_url": "/sql/integration-services/service/integration-services-service-ssis-service",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/service/set-the-properties-of-the-integration-services-service.md",
+            "redirect_url": "/sql/integration-services/service/integration-services-service-ssis-service",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/service/grant-permissions-to-integration-services-service.md",
+            "redirect_url": "/sql/integration-services/service/integration-services-service-ssis-service",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/service/configuring-the-integration-services-service-ssis-service.md",
+            "redirect_url": "/sql/integration-services/service/integration-services-service-ssis-service",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/service/connect-to-integration-services.md",
+            "redirect_url": "/sql/integration-services/service/integration-services-service-ssis-service",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/service/connect-to-a-remote-integration-services-server-ssis-service.md",
+            "redirect_url": "/sql/integration-services/service/integration-services-service-ssis-service",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/service/configure-a-windows-firewall-for-access-to-the-ssis-service.md",
+            "redirect_url": "/sql/integration-services/service/integration-services-service-ssis-service",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/service/create-the-ssis-catalog.md",
+            "redirect_url": "/sql/integration-services/service/ssis-catalog",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/service/catalog-properties-dialog-box.md",
+            "redirect_url": "/sql/integration-services/service/ssis-catalog",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/service/backup-restore-and-move-the-ssis-catalog.md",
+            "redirect_url": "/sql/integration-services/service/ssis-catalog",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/service/upgrade-the-ssis-catalog-ssisdb.md",
+            "redirect_url": "/sql/integration-services/service/ssis-catalog",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/service/always-on-for-ssis-catalog-ssisdb.md",
+            "redirect_url": "/sql/integration-services/service/ssis-catalog",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/packages/package-configurations.md",
+            "redirect_url": "/sql/integration-services/packages/legacy-package-deployment-ssis",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/packages/create-package-configurations.md",
+            "redirect_url": "/sql/integration-services/packages/legacy-package-deployment-ssis",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/packages/package-configurations-organizer.md",
+            "redirect_url": "/sql/integration-services/packages/legacy-package-deployment-ssis",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/packages/package-configuration-wizard-ui-reference.md",
+            "redirect_url": "/sql/integration-services/packages/legacy-package-deployment-ssis",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/packages/create-a-deployment-utility.md",
+            "redirect_url": "/sql/integration-services/packages/legacy-package-deployment-ssis",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/packages/deploy-packages-by-using-the-deployment-utility.md",
+            "redirect_url": "/sql/integration-services/packages/legacy-package-deployment-ssis",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/packages/redeployment-of-packages.md",
+            "redirect_url": "/sql/integration-services/packages/legacy-package-deployment-ssis",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/packages/package-installation-wizard-ui-reference.md",
+            "redirect_url": "/sql/integration-services/packages/legacy-package-deployment-ssis",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/packages/deploy-projects-to-integration-services-server.md",
+            "redirect_url": "/sql/integration-services/packages/deploy-integration-services-ssis-projects-and-packages",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/packages/deploy-packages-to-integration-services-server.md",
+            "redirect_url": "/sql/integration-services/packages/deploy-integration-services-ssis-projects-and-packages",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/packages/convert-to-package-deployment-model-dialog-box.md",
+            "redirect_url": "/sql/integration-services/packages/deploy-integration-services-ssis-projects-and-packages",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/packages/integration-services-deployment-wizard.md",
+            "redirect_url": "/sql/integration-services/packages/deploy-integration-services-ssis-projects-and-packages",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/packages/create-and-map-a-server-environment.md",
+            "redirect_url": "/sql/integration-services/packages/deploy-integration-services-ssis-projects-and-packages",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/packages/deploy-and-execute-ssis-packages-using-stored-procedures.md",
+            "redirect_url": "/sql/integration-services/packages/deploy-integration-services-ssis-projects-and-packages",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/packages/integration-services-project-conversion-wizard.md",
+            "redirect_url": "/sql/integration-services/packages/deploy-integration-services-ssis-projects-and-packages",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/packages/run-a-package-in-sql-server-data-tools.md",
+            "redirect_url": "/sql/integration-services/packages/run-integration-services-ssis-packages",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/packages/run-a-package-on-the-ssis-server-using-sql-server-management-studio.md",
+            "redirect_url": "/sql/integration-services/packages/run-integration-services-ssis-packages",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/packages/execute-package-dialog-box.md",
+            "redirect_url": "/sql/integration-services/packages/run-integration-services-ssis-packages",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/packages/configure-checkpoints-for-restarting-a-failed-package.md",
+            "redirect_url": "/sql/integration-services/packages/restart-packages-by-using-checkpoints",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/integration-services/packages/schedule-a-package-by-using-sql-server-agent.md",
+            "redirect_url": "/sql/integration-services/packages/sql-server-agent-jobs-for-packages",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/integration-services/packages/implementation-of-child-packages.md",
+            "redirect_url": "/sql/integration-services/packages/load-balancing-packages-on-remote-servers-by-using-sql-server-agent",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/packages/implementation-of-the-parent-package.md",
+            "redirect_url": "/sql/integration-services/packages/load-balancing-packages-on-remote-servers-by-using-sql-server-agent",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/packages/logging-for-load-balanced-packages-on-remote-servers.md",
+            "redirect_url": "/sql/integration-services/packages/load-balancing-packages-on-remote-servers-by-using-sql-server-agent",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/packages/use-the-values-of-variables-and-parameters-in-a-child-package.md",
+            "redirect_url": "/sql/integration-services/packages/legacy-package-deployment-ssis",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/walkthrough-set-up-integration-services-scale-out.md",
+            "redirect_url": "/sql/integration-services/integration-services-ssis-scale-out",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/integration-services-ssis-scale-out-master.md",
+            "redirect_url": "/sql/integration-services/integration-services-ssis-scale-out",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/integration-services-ssis-scale-out-worker.md",
+            "redirect_url": "/sql/integration-services/integration-services-ssis-scale-out",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/run-packages-in-integration-services-ssis-scale-out.md",
+            "redirect_url": "/sql/integration-services/integration-services-ssis-scale-out",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/troubleshooting/debug-a-package-by-setting-breakpoints-on-a-task-or-a-container.md",
+            "redirect_url": "/sql/integration-services/troubleshooting/debugging-control-flow",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/troubleshooting/set-breakpoints.md",
+            "redirect_url": "/sql/integration-services/troubleshooting/debugging-control-flow",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/performance/analysis-of-data-flow.md",
+            "redirect_url": "/sql/integration-services/troubleshooting/debugging-data-flow",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/troubleshooting/configure-an-error-output-in-a-data-flow-component.md",
+            "redirect_url": "/sql/integration-services/troubleshooting/debugging-data-flow",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/troubleshooting/add-a-data-viewer-to-a-data-flow.md",
+            "redirect_url": "/sql/integration-services/troubleshooting/debugging-data-flow",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/performance/data-flow-taps.md",
+            "redirect_url": "/sql/integration-services/troubleshooting/debugging-data-flow",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/performance/add-a-log-for-data-flow-performance-counters.md",
+            "redirect_url": "/sql/integration-services/performance/performance-counters",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/integration-services/performance/view-log-entries-in-the-log-events-window.md",
+            "redirect_url": "/sql/integration-services/performance/events-logged-by-an-integration-services-package",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/integration-services/performance/active-operations-dialog-box.md",
+            "redirect_url": "/sql/integration-services/performance/monitor-running-packages-and-other-operations",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/performance/viewing-and-stopping-packages-running-on-the-integration-services-server.md",
+            "redirect_url": "/sql/integration-services/performance/monitor-running-packages-and-other-operations",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/performance/reports-for-the-integration-services-server.md",
+            "redirect_url": "/sql/integration-services/performance/monitor-running-packages-and-other-operations",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/performance/view-reports-for-the-integration-services-server.md",
+            "redirect_url": "/sql/integration-services/performance/monitor-running-packages-and-other-operations",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/performance/enable-package-logging-in-sql-server-data-tools.md",
+            "redirect_url": "/sql/integration-services/performance/integration-services-ssis-logging",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/performance/configure-ssis-logs-dialog-box.md",
+            "redirect_url": "/sql/integration-services/performance/integration-services-ssis-logging",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/performance/configure-logging-by-using-a-saved-configuration-file.md",
+            "redirect_url": "/sql/integration-services/performance/integration-services-ssis-logging",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/performance/enable-logging-for-package-execution-on-the-ssis-server.md",
+            "redirect_url": "/sql/integration-services/performance/integration-services-ssis-logging",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/performance/custom-messages-for-logging.md",
+            "redirect_url": "/sql/integration-services/performance/integration-services-ssis-logging",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ssdt/sql-server-data-tools-ssdt-release-candidate.md",
+            "redirect_url": "/sql/ssdt/download-sql-server-data-tools-ssdt",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ssms/sql-server-management-studio-ssms-release-candidate.md",
+            "redirect_url": "/sql/ssms/download-sql-server-management-studio-ssms",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/security/threat-and-vulnerability-mitigation-integration-services.md",
+            "redirect_url": "/sql/integration-services/security/security-overview-integration-services",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/security/access-to-files-used-by-packages.md",
+            "redirect_url": "/sql/integration-services/security/security-overview-integration-services",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/security/access-to-the-integration-services-service.md",
+            "redirect_url": "/sql/integration-services/security/security-overview-integration-services",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/packages/access-control-for-sensitive-data-in-packages.md",
+            "redirect_url": "/sql/integration-services/security/access-control-for-sensitive-data-in-packages",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/security/set-or-change-the-protection-level-of-packages.md",
+            "redirect_url": "/sql/integration-services/security/access-control-for-sensitive-data-in-packages",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/security/package-and-project-protection-level-dialog-box.md",
+            "redirect_url": "/sql/integration-services/security/access-control-for-sensitive-data-in-packages",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/security/package-and-project-password.md",
+            "redirect_url": "/sql/integration-services/security/access-control-for-sensitive-data-in-packages",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/packages/identify-the-source-of-packages-with-digital-signatures.md",
+            "redirect_url": "/sql/integration-services/security/identify-the-source-of-packages-with-digital-signatures",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/packages/implement-a-signing-policy-by-setting-a-registry-value.md",
+            "redirect_url": "/sql/integration-services/security/identify-the-source-of-packages-with-digital-signatures",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/packages/sign-a-package-by-using-a-digital-certificate.md",
+            "redirect_url": "/sql/integration-services/security/identify-the-source-of-packages-with-digital-signatures",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/packages/digital-signing-dialog-box-ui-reference.md",
+            "redirect_url": "/sql/integration-services/security/identify-the-source-of-packages-with-digital-signatures",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/packages/integration-services-roles-ssis-service.md",
+            "redirect_url": "/sql/integration-services/security/integration-services-roles-ssis-service",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/packages/assign-a-reader-and-writer-role-to-a-package.md",
+            "redirect_url": "/sql/integration-services/security/integration-services-roles-ssis-service",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/packages/create-a-user-defined-role.md",
+            "redirect_url": "/sql/integration-services/security/integration-services-roles-ssis-service",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/packages/package-roles-dialog-box-ui-reference.md",
+            "redirect_url": "/sql/integration-services/security/integration-services-roles-ssis-service",
+            "redirect_document_id": false
+        },
+        {
+            "source_path" : "docs/ado/guide/appendixes/ado-appendixes.md",
+            "redirect_url": "/sql/ado/guide/appendixes/appendix-a-providers",
+            "redirect_document_id": true
+        },
+        {
+            "source_path" : "docs/ado/guide/data/activex-data-objects-ado.md",
+            "redirect_url": "/sql/ado/guide/data/ado-fundamentals",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/ado/reference/ado-md-api/ado-md-api-reference.md",
+            "redirect_url": "/sql/ado/reference/ado-md-api/ado-md-object-model",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/ado/reference/adox-api/adox-api-reference.md",
+            "redirect_url": "/sql/ado/reference/adox-api/adox-object-model",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/database-engine/configure-windows/what-s-new-in-sql-server-vnext-database-engine.md",
+            "redirect_url": "/sql/database-engine/configure-windows/what-s-new-in-sql-server-2017-database-engine",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/sql-server/sql-server-vnext-release-notes.md",
+            "redirect_url": "/sql/sql-server/sql-server-2017-release-notes",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/sql-server/what-s-new-in-sql-server-vnext.md",
+            "redirect_url": "/sql/sql-server/what-s-new-in-sql-server-2017",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/integration-services/what-s-new-in-integration-services-in-sql-server-vnext.md",
+            "redirect_url": "/sql/integration-services/what-s-new-in-integration-services-in-sql-server-2017",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/analysis-services/what-s-new-in-sql-server-analysis-services-vnext.md",
+            "redirect_url": "/sql/analysis-services/what-s-new-in-sql-server-analysis-services-2017",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/whitepapers/introducing-microsoft-technologies-for-data-storage-movement-and-transformation.md",
+            "redirect_url": "sql/whitepapers/microsoft-white-papers",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/analysis-services/troubleshooting-analysis-services.md",
+            "redirect_url": "/sql/analysis-services/analysis-services",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/analysis-services/troubleshoot-process-data-ssas-tabular.md",
+            "redirect_url": "/sql/analysis-services/analysis-services",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/analysis-services/deprecated-analysis-services-features-in-sql-server-2016.md",
+            "redirect_url": "/sql/analysis-services/analysis-services-backward-compatibility",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/analysis-services/discontinued-analysis-services-functionality-in-sql-server-2016.md",
+            "redirect_url": "/sql/analysis-services/analysis-services-backward-compatibility",
+            "redirect_document_id": false
+        },
+                {
+            "source_path": "docs/analysis-services/breaking-changes-to-analysis-services-features-in-sql-server-2016.md",
+            "redirect_url": "/sql/analysis-services/analysis-services-backward-compatibility",
+            "redirect_document_id": false
+        },
+                {
+            "source_path": "docs/analysis-services/behavior-changes-to-analysis-services-features-in-sql-server-2016.md",
+            "redirect_url": "/sql/analysis-services/analysis-services-backward-compatibility",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/analysis-services/troubleshoot-a-power-pivot-for-sharepoint-installation.md",
+            "redirect_url": "/sql/analysis-services/analysis-services",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/reporting-services/report-server/configure-kerberos-to-use-power-bi-reports.md",
+            "redirect_url": "https://powerbi.microsoft.com/documentation/reportserver-configure-kerberos-powerbi-reports/",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/reporting-services/report-server/configure-report-manager-native-mode.md",
+            "redirect_url": "/sql/reporting-services/report-server/configure-web-portal",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/reporting-services/install-windows/install-january-2017-technical-preview-power-bi-reports.md",
+            "redirect_url": "https://powerbi.microsoft.com/documentation/reportserver-install-report-server/",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/reporting-services/power-bi-reports-in-reporting-services.md",
+            "redirect_url": "https://powerbi.microsoft.com/documentation/reportserver-quickstart-powerbi-report/",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/reporting-services/reporting-services-release-notes.md",
+            "redirect_url": "https://powerbi.microsoft.com/documentation/reportserver-release-notes/",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/reporting-services/security/grant-user-access-to-a-report-server-report-manager.md",
+            "redirect_url": "/sql/reporting-services/security/grant-user-access-to-a-report-server",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/release-notes/microsoft-sql-server.md",
+            "redirect_url": "/sql/sql-server/sql-server-technical-documentation",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/sql-server/editions-and-supported-features-for-sql-server-2016.md",
+            "redirect_url": "/sql/sql-server/editions-and-components-of-sql-server-2016",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/connect/sql-server-driver-documentation.md",
+            "redirect_url": "/sql/connect/sql-connection-libraries",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/connect/sql-server-drivers.md",
+            "redirect_url": "/sql/connect/sql-connection-libraries",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/whitepapers/microsoft-sql-and-the-gdpr-requirements.md",
+            "redirect_url": "/sql/relational-databases/security/microsoft-sql-and-the-gdpr-requirements",
+            "redirect_document_id": false
+        },     
+        {
+            "source_path": "docs/whitepapers/sql-server-in-memory-oltp-internals-for-sql-server-2016.md",
+            "redirect_url": "/sql/relational-databases/in-memory-oltp/sql-server-in-memory-oltp-internals-for-sql-server-2016",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/whitepapers/installing-mds-in-an-alwayson-group-environment/installing-mds-in-an-alwayson-group-environment.md",
+            "redirect_url": "/sql/master-data-services/installing-mds-in-an-alwayson-group-environment/installing-mds-in-an-alwayson-group-environment",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md",
+            "redirect_url": "/sql/ssms/sql-server-management-studio-keyboard-shortcuts",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/sql-server-management-studio/ssms-utility.md",
+            "redirect_url": "/sql/ssms/ssms-utility",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/sql-server-management-studio/change-a-server-s-registration-sql-server-management-studio.md",
+            "redirect_url": "/sql/ssms/register-servers/change-a-server-s-registration-sql-server-management-studio",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/sql-server-management-studio/change-the-name-of-registered-server-or-registered-server-group.md",
+            "redirect_url": "/sql/ssms/register-servers/change-the-name-of-registered-server-or-registered-server-group",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/sql-server-management-studio/connect-to-a-registered-server-sql-server-management-studio.md",
+            "redirect_url": "/sql/ssms/register-servers/connect-to-a-registered-server-sql-server-management-studio",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/sql-server-management-studio/create-a-central-management-server-and-server-group.md",
+            "redirect_url": "/sql/ssms/register-servers/create-a-central-management-server-and-server-group",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/sql-server-management-studio/create-a-new-registered-server-sql-server-management-studio.md",
+            "redirect_url": "/sql/ssms/register-servers/create-a-new-registered-server-sql-server-management-studio",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/sql-server-management-studio/create-or-edit-a-server-group-sql-server-management-studio.md",
+            "redirect_url": "/sql/ssms/register-servers/create-or-edit-a-server-group-sql-server-management-studio",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/sql-server-management-studio/disconnect-from-a-registered-server-sql-server-management-studio.md",
+            "redirect_url": "/sql/ssms/register-servers/disconnect-from-a-registered-server-sql-server-management-studio",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/sql-server-management-studio/execute-statements-against-multiple-servers-simultaneously.md",
+            "redirect_url": "/sql/ssms/register-servers/execute-statements-against-multiple-servers-simultaneously",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/sql-server-management-studio/export-registered-server-information-sql-server-management-studio.md",
+            "redirect_url": "/sql/ssms/register-servers/export-registered-server-information-sql-server-management-studio",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/sql-server-management-studio/import-registered-server-information-sql-server-management-studio.md",
+            "redirect_url": "/sql/ssms/register-servers/import-registered-server-information-sql-server-management-studio",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/sql-server-management-studio/move-a-registered-server-or-registered-server-group.md",
+            "redirect_url": "/sql/ssms/register-servers/move-a-registered-server-or-registered-server-group",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/sql-server-management-studio/register-a-connected-server-sql-server-management-studio.md",
+            "redirect_url": "/sql/ssms/register-servers/register-a-connected-server-sql-server-management-studio",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/sql-server-management-studio/registered-servers-f1-help.md",
+            "redirect_url": "/sql/ssms/register-servers/registered-servers-f1-help",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/sql-server-management-studio/register-servers.md",
+            "redirect_url": "/sql/ssms/register-servers/register-servers",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/sql-server-management-studio/remove-a-registered-server-sql-server-management-studio.md",
+            "redirect_url": "/sql/ssms/register-servers/remove-a-registered-server-sql-server-management-studio",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/sql-server-management-studio/remove-a-server-group-sql-server-management-studio.md",
+            "redirect_url": "/sql/ssms/register-servers/remove-a-server-group-sql-server-management-studio",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/sql-server-management-studio/view-registered-servers-in-sql-server-management-studio.md",
+            "redirect_url": "/sql/ssms/register-servers/view-registered-servers-in-sql-server-management-studio",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/sql-server-management-studio/lesson-1-1-start-sql-server-management-studio.md",
+            "redirect_url": "/sql/ssms/tutorials/lesson-1-1-start-sql-server-management-studio",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/sql-server-management-studio/lesson-1-2-connect-with-registered-servers-and-object-explorer.md",
+            "redirect_url": "/sql/ssms/tutorials/lesson-1-2-connect-with-registered-servers-and-object-explorer",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/sql-server-management-studio/lesson-1-3-change-the-environment-layout.md",
+            "redirect_url": "/sql/ssms/tutorials/lesson-1-3-change-the-environment-layout",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/sql-server-management-studio/lesson-1-4-display-the-query-window.md",
+            "redirect_url": "/sql/ssms/tutorials/lesson-1-4-display-the-query-window",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/sql-server-management-studio/lesson-1-5-show-the-object-explorer-details-page.md",
+            "redirect_url": "/sql/ssms/tutorials/lesson-1-5-show-the-object-explorer-details-page",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/sql-server-management-studio/lesson-1-6-select-the-keyboard-shortcut-scheme.md",
+            "redirect_url": "/sql/ssms/tutorials/lesson-1-6-select-the-keyboard-shortcut-scheme",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/sql-server-management-studio/lesson-1-7-set-the-startup-options.md",
+            "redirect_url": "/sql/ssms/tutorials/lesson-1-7-set-the-startup-options",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/sql-server-management-studio/lesson-1-8-restore-the-default-sql-server-management-studio-configuration.md",
+            "redirect_url": "/sql/ssms/tutorials/lesson-1-8-restore-the-default-sql-server-management-studio-configuration",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/sql-server-management-studio/lesson-1-9-summary-basic-navigation.md",
+            "redirect_url": "/sql/ssms/tutorials/lesson-1-9-summary-basic-navigation",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/sql-server-management-studio/lesson-1-basic-navigation-in-sql-server-management-studio.md",
+            "redirect_url": "/sql/ssms/tutorials/lesson-1-basic-navigation-in-sql-server-management-studio",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/sql-server-management-studio/lesson-2-1-connecting-with-query-editor.md",
+            "redirect_url": "/sql/ssms/tutorials/lesson-2-1-connecting-with-query-editor",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/sql-server-management-studio/lesson-2-2-adding-indentation.md",
+            "redirect_url": "/sql/ssms/tutorials/lesson-2-2-adding-indentation",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/sql-server-management-studio/lesson-2-3-maximizing-query-editor.md",
+            "redirect_url": "/sql/ssms/tutorials/lesson-2-3-maximizing-query-editor",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/sql-server-management-studio/lesson-2-4-using-comments.md",
+            "redirect_url": "/sql/ssms/tutorials/lesson-2-4-using-comments",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/sql-server-management-studio/lesson-2-5-other-ways-of-viewing-the-code-window.md",
+            "redirect_url": "/sql/ssms/tutorials/lesson-2-5-other-ways-of-viewing-the-code-window",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/sql-server-management-studio/lesson-2-6-script-a-table.md",
+            "redirect_url": "/sql/ssms/tutorials/lesson-2-6-script-a-table",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/sql-server-management-studio/lesson-2-writing-transact-sql.md",
+            "redirect_url": "/sql/ssms/tutorials/lesson-2-writing-transact-sql",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/sql-server-management-studio/lesson-3-1-create-scripts-using-templates.md",
+            "redirect_url": "/sql/ssms/tutorials/lesson-3-1-create-scripts-using-templates",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/sql-server-management-studio/lesson-3-2-create-custom-templates.md",
+            "redirect_url": "/sql/ssms/tutorials/lesson-3-2-create-custom-templates",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/sql-server-management-studio/lesson-3-3-save-scripts-as-projects-or-solutions.md",
+            "redirect_url": "/sql/ssms/tutorials/lesson-3-3-save-scripts-as-projects-or-solutions",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/sql-server-management-studio/lesson-3-4-summary-solutions-and-script-projects.md",
+            "redirect_url": "/sql/ssms/tutorials/lesson-3-4-summary-solutions-and-script-projects",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/sql-server-management-studio/lesson-3-working-with-templates-solutions-and-script-projects.md",
+            "redirect_url": "/sql/ssms/tutorials/lesson-3-working-with-templates-solutions-and-script-projects",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/sql-server-management-studio/tutorial-sql-server-management-studio.md",
+            "redirect_url": "/sql/ssms/tutorials/tutorial-sql-server-management-studio",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ssms/f1-help/browse-for-servers-local-servers.md",
+            "redirect_url": "/sql/tools/configuration-manager/sql-server-browser-service",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ssms/f1-help/browse-for-servers-network-servers.md",
+            "redirect_url": "/sql/tools/configuration-manager/sql-server-browser-service",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ssms/f1-help/connect-to-server-additional-connection-parameters-page.md",
+            "redirect_url": "/sql/relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ssms/f1-help/connect-to-server-analysis-services.md",
+            "redirect_url": "/sql/analysis-services/instances/connect-from-client-applications-analysis-services",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ssms/f1-help/connect-to-server-connection-properties-page-analysis-services.md",
+            "redirect_url": "/sql/analysis-services/instances/connect-from-client-applications-analysis-services",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ssms/f1-help/connect-to-server-connection-properties-page-integration-services.md",
+            "redirect_url": "/sql/integration-services/service/integration-services-service-ssis-service",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ssms/f1-help/connect-to-server-connection-properties-page-reporting-services.md",
+            "redirect_url": "/sql/reporting-services/tools/connect-to-a-report-server-in-management-studio",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ssms/f1-help/connect-to-server-integration-services.md",
+            "redirect_url": "/sql/integration-services/service/integration-services-service-ssis-service",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ssms/f1-help/connect-to-server-login-page-analysis-services.md",
+            "redirect_url": "/sql/analysis-services/instances/connect-from-client-applications-analysis-services",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ssms/f1-help/connect-to-server-login-page-integration-services.md",
+            "redirect_url": "/sql/integration-services/service/integration-services-service-ssis-service",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ssms/f1-help/connect-to-server-login-page-reporting-services.md",
+            "redirect_url": "/sql/reporting-services/tools/connect-to-a-report-server-in-management-studio",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ssms/f1-help/connect-to-server-reporting-services.md",
+            "redirect_url": "/sql/reporting-services/tools/connect-to-a-report-server-in-management-studio",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ssms/f1-help/connection-properties-dialog-box.md",
+            "redirect_url": "/sql/database-engine/configure-windows/view-or-change-server-properties-sql-server",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ssms/f1-help/password-expired.md",
+            "redirect_url": "/sql/relational-databases/security/choose-an-authentication-mode",
+            "redirect_document_id": false
+        },
+        {
+            "source_path":"docs/sql-server/sql-server-documentation-offline-access.md",
+            "redirect_url":"/sql/release-notes/sql-server-help-installation",
+            "redirect_document_id":false
+        },
+        {
+            "source_path": "docs/sql/relational-databases/security/encryption/transparent-data-encryption-with-azure-sql-database.md",
+            "redirect_url": "/sql/relational-databases/security/encryption/transparent-data-encryption-azure-sql",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/sql/relational-databases/security/encryption/transparent-data-encryption-tde.md",
+            "redirect_url": "/sql/relational-databases/security/encryption/transparent-data-encryption",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/analysis-services/instances/script-administrative-tasks-in-analysis-services.md",
+            "redirect_url": "/sql/analysis-services/analysis-services",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/analysis-services/powershell/amo-powershell-example.md",
+            "redirect_url": "/sql/analysis-services/analysis-services",
+            "redirect_document_id": false
+        },
+        {
+            "source_path":"docs/tools/sql-server-profiler/run-sql-server-profiler.md",
+            "redirect_url":"/sql/tools/sql-server-profiler/start-sql-server-profiler",
+            "redirect_document_id":false
+        },
+                {
+            "source_path": "docs/relational-databases/system-dynamic-management-views/linux-process-dynamic-management-views-transact-sql.md",
+            "redirect_url": "/sql/relational-databases/system-dynamic-management-views/system-dynamic-management-views",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/relational-databases/system-dynamic-management-views/sys-dm-linux-proc-all-stat-transact-sql.md",
+            "redirect_url": "/sql/relational-databases/system-dynamic-management-views/system-dynamic-management-views",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/relational-databases/system-dynamic-management-views/sys-dm-linux-proc-cpuinfo-transact-sql.md",
+            "redirect_url": "/sql/relational-databases/system-dynamic-management-views/system-dynamic-management-views",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/relational-databases/system-dynamic-management-views/sys-dm-linux-proc-meminfo-transact-sql.md",
+            "redirect_url": "/sql/relational-databases/system-dynamic-management-views/system-dynamic-management-views",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/relational-databases/system-dynamic-management-views/sys-dm-linux-proc-sql-maps-transact-sql.md",
+             "redirect_url": "/sql/relational-databases/system-dynamic-management-views/system-dynamic-management-views",
+           "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/relational-databases/system-dynamic-management-views/sys-dm-linux-proc-sql-threads-transact-sql.md",
+            "redirect_url": "/sql/relational-databases/system-dynamic-management-views/system-dynamic-management-views",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/sql-hub-menu.md",
+            "redirect_url": "/sql/index",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/microsoft-sql-documentation-table-of-contents.md",
+            "redirect_url": "/sql/index",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/sql-server-profiler/correlate-a-trace-with-windows-performance-log-data-sql-server-profiler.md",
+            "redirect_url": "/sql/tools/sql-server-profiler/correlate-a-trace-with-windows-performance-log-data",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/sql-server-profiler/modify-a-trace-template-sql-server-profiler.md",
+            "redirect_url": "/sql/tools/sql-server-profiler/modify-trace-templates",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/whitepapers/microsoft-white-papers.md",
+            "redirect_url": "/sql/index",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/database-engine/install-windows/installation-for-sql-server-2016.md",
+            "redirect_url": "/sql/database-engine/install-windows/installation-for-sql-server",
+            "redirect_document_id": false
+        },
+		{
+            "source_path": "docs/integration-services/integration-services-ssis-scale-out.md",
+            "redirect_url": "/sql/integration-services/scale-out/integration-services-ssis-scale-out",
+            "redirect_document_id": true
+	    },
+		{
+            "source_path": "docs/ssdt/sql-server-tools.md",
+            "redirect_url": "/sql/tools/overview-sql-tools",
+            "redirect_document_id": false
+	    },
+        {
+            "source_path": "docs/integration-services/data-flow/transformations/cache-connection-manager.md",
+            "redirect_url": "/sql/integration-services/connection-manager/cache-connection-manager",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/integration-services/data-flow/transformations/cache-connection-manager-editor.md",
+            "redirect_url": "/sql/integration-services/connection-manager/cache-connection-manager-editor",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/integration-services/data-flow/transformations/dqs-cleansing-connection-manager.md",
+            "redirect_url": "/sql/integration-services/connection-manager/dqs-cleansing-connection-manager",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md",
+            "redirect_url": "/sql/integration-services/connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-ole-db-connection-manager.md",
+            "redirect_url": "/sql/integration-services/connection-manager/lookup-transformation-full-cache-mode-ole-db-connection-manager",
+            "redirect_document_id": true
+        },
+		{
+            "source_path": "docs/relational-databases/database-engine-cross-instance-features.md",
+            "redirect_url": "/sql/relational-databases/database-features",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/relational-databases/technical-reference-database-engine.md",
+            "redirect_url": "/sql/relational-databases/database-features",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/integration-services/import-export-data/import-data-from-excel-to-sql.md",
+            "redirect_url": "/sql/relational-databases/import-export/import-data-from-excel-to-sql",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/database-engine/configure-windows/sql-server-database-engine.md",
+            "redirect_url": "/sql/database-engine/sql-server-database-engine-overview",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/database-engine/configure-windows/what-s-new-in-sql-server-2016-database-engine.md",
+            "redirect_url": "/sql/database-engine/whats-new-in-sql-server-2016",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/database-engine/configure-windows/what-s-new-in-sql-server-2017-database-engine.md",
+            "redirect_url": "/sql/database-engine/whats-new-in-sql-server-2017",
+            "redirect_document_id": true
+        },
+		{
+            "source_path": "docs/ssms/use-sql-server-management-studio.md",
+            "redirect_url": "/sql/ssms/sql-server-management-studio-ssms",
+            "redirect_document_id": false
+        },
+		{
+            "source_path": "docs/ssms/features-in-sql-server-management-studio.md",
+            "redirect_url": "/sql/ssms/sql-server-management-studio-ssms",
+            "redirect_document_id": false
+        },
+       	{
+            "source_path": "docs/sql-server/sql-server-resources.md",
+            "redirect_url": "/sql/sql-server/sql-server-technical-documentation",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ssms/previous-sql-server-management-studio-releases.md",
+            "redirect_url": "/sql/ssms/sql-server-management-studio-changelog-ssms",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ssms/sql-server-management-studio-release-notes.md",
+            "redirect_url": "/sql/ssms/download-sql-server-management-studio-ssms#release-notes",
+            "redirect_document_id": false
+        },
+       {
+            "source_path": "docs/integration-services/connection-manager/cache-connection-manager-editor.md",
+            "redirect_url": "/sql/integration-services/connection-manager/cache-connection-manager",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/connection-manager/configure-ado-net-connection-manager.md",
+            "redirect_url": "/sql/integration-services/connection-manager/ado-net-connection-manager",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/connection-manager/configure-ole-db-connection-manager.md",
+            "redirect_url": "/sql/integration-services/connection-manager/ole-db-connection-manager",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/connection-manager/excel-connection-manager-editor.md",
+            "redirect_url": "/sql/integration-services/connection-manager/excel-connection-manager",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/connection-manager/file-connection-manager-editor.md",
+            "redirect_url": "/sql/integration-services/connection-manager/file-connection-manager",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/connection-manager/flat-file-connection-manager-editor-general-page.md",
+            "redirect_url": "/sql/integration-services/connection-manager/flat-file-connection-manager",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/connection-manager/flat-file-connection-manager-editor-columns-page.md",
+            "redirect_url": "/sql/integration-services/connection-manager/flat-file-connection-manager",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/connection-manager/flat-file-connection-manager-editor-preview-page.md",
+            "redirect_url": "/sql/integration-services/connection-manager/flat-file-connection-manager",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/connection-manager/flat-file-connection-manager-editor-advanced-page.md",
+            "redirect_url": "/sql/integration-services/connection-manager/flat-file-connection-manager",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/connection-manager/ftp-connection-manager-editor.md",
+            "redirect_url": "/sql/integration-services/connection-manager/ftp-connection-manager",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/connection-manager/http-connection-manager-editor-proxy-page.md",
+            "redirect_url": "/sql/integration-services/connection-manager/http-connection-manager",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/connection-manager/http-connection-manager-editor-server-page.md",
+            "redirect_url": "/sql/integration-services/connection-manager/http-connection-manager",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/connection-manager/msmq-connection-manager-editor.md",
+            "redirect_url": "/sql/integration-services/connection-manager/msmq-connection-manager",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/connection-manager/multiple-flat-files-connection-manager-editor-general-page.md",
+            "redirect_url": "/sql/integration-services/connection-manager/multiple-flat-files-connection-manager",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/connection-manager/multiple-flat-files-connection-manager-editor-columns-page.md",
+            "redirect_url": "/sql/integration-services/connection-manager/multiple-flat-files-connection-manager",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/connection-manager/multiple-flat-files-connection-manager-editor-preview-page.md",
+            "redirect_url": "/sql/integration-services/connection-manager/multiple-flat-files-connection-manager",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/connection-manager/multiple-flat-files-connection-manager-editor-advanced-page.md",
+            "redirect_url": "/sql/integration-services/connection-manager/multiple-flat-files-connection-manager",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/connection-manager/odata-connection-manager-editor.md",
+            "redirect_url": "/sql/integration-services/connection-manager/odata-connection-manager",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/connection-manager/odbc-connection-manager-ui-reference.md",
+            "redirect_url": "/sql/integration-services/connection-manager/odbc-connection-manager",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/connection-manager/sap-bw-connection-manager-editor.md",
+            "redirect_url": "/sql/integration-services/connection-manager/sap-bw-connection-manager",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/connection-manager/smo-connection-manager-editor.md",
+            "redirect_url": "/sql/integration-services/connection-manager/smo-connection-manager",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/connection-manager/smtp-connection-manager-editor.md",
+            "redirect_url": "/sql/integration-services/connection-manager/smtp-connection-manager",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/connection-manager/sql-server-compact-edition-connection-manager-editor-all-page.md",
+            "redirect_url": "/sql/integration-services/connection-manager/sql-server-compact-edition-connection-manager",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/connection-manager/sql-server-compact-edition-connection-manager-editor-connection-page.md",
+            "redirect_url": "/sql/integration-services/connection-manager/sql-server-compact-edition-connection-manager",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/connection-manager/wmi-connection-manager-editor.md",
+            "redirect_url": "/sql/integration-services/connection-manager/wmi-connection-manager",
+            "redirect_document_id": false
+          },
+        {
+            "source_path": "docs/relational-databases/server-management-objects-smo/how-to-create-a-visual-basic-smo-project-in-visual-studio-net.md",
+            "redirect_url": "sql/relational-databases/server-management-objects-smo/overview-smo",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/relational-databases/server-management-objects-smo/smo-programming-getting-started-in-visual-basic-net.md",
+            "redirect_url": "sql/relational-databases/server-management-objects-smo/overview-smo",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/relational-databases/server-management-objects-smo/sql-dmo-mapping-to-smo.md",
+            "redirect_url": "sql/relational-databases/server-management-objects-smo/overview-smo",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/relational-databases/server-management-objects-smo/system-requirements.md",
+            "redirect_url": "sql/relational-databases/server-management-objects-smo/overview-smo",
+            "redirect_document_id": false
+        },
+       {
+            "source_path": "docs/integration-services/control-flow/analysis-services-execute-ddl-task-editor-general-page.md",
+            "redirect_url": "/sql/integration-services/control-flow/analysis-services-execute-ddl-task",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/control-flow/analysis-services-execute-ddl-task-editor-ddl-page.md",
+            "redirect_url": "/sql/integration-services/control-flow/analysis-services-execute-ddl-task",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/control-flow/analysis-services-processing-task-editor-general-page.md",
+            "redirect_url": "/sql/integration-services/control-flow/analysis-services-processing-task",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/control-flow/analysis-services-processing-task-editor-analysis-services-page.md",
+            "redirect_url": "/sql/integration-services/control-flow/analysis-services-processing-task",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/control-flow/bulk-insert-task-editor-general-page.md",
+            "redirect_url": "/sql/integration-services/control-flow/bulk-insert-task",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/control-flow/bulk-insert-task-editor-connection-page.md",
+            "redirect_url": "/sql/integration-services/control-flow/bulk-insert-task",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/control-flow/bulk-insert-task-editor-options-page.md",
+            "redirect_url": "/sql/integration-services/control-flow/bulk-insert-task",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/control-flow/cdc-control-task-editor.md",
+            "redirect_url": "/sql/integration-services/control-flow/cdc-control-task",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/control-flow/data-mining-query-task-editor-query-tab.md",
+            "redirect_url": "/sql/integration-services/control-flow/data-mining-query-task",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/control-flow/data-mining-query-task-editor-mining-model-tab.md",
+            "redirect_url": "/sql/integration-services/control-flow/data-mining-query-task",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/control-flow/data-mining-query-task-editor-output-tab.md",
+            "redirect_url": "/sql/integration-services/control-flow/data-mining-query-task",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/control-flow/data-profile-viewer-f1-help.md",
+            "redirect_url": "/sql/integration-services/control-flow/data-profile-viewer",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/control-flow/execute-package-task-editor.md",
+            "redirect_url": "/sql/integration-services/control-flow/execute-package-task",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/control-flow/execute-process-task-editor-general-page.md",
+            "redirect_url": "/sql/integration-services/control-flow/execute-process-task",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/control-flow/execute-process-task-editor-process-page.md",
+            "redirect_url": "/sql/integration-services/control-flow/execute-process-task",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/control-flow/file-system-task-editor-general-page.md",
+            "redirect_url": "/sql/integration-services/control-flow/file-system-task",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/control-flow/ftp-task-editor-general-page.md",
+            "redirect_url": "/sql/integration-services/control-flow/ftp-task",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/control-flow/ftp-task-editor-file-transfer-page.md",
+            "redirect_url": "/sql/integration-services/control-flow/ftp-task",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/control-flow/message-queue-task-editor-general-page.md",
+            "redirect_url": "/sql/integration-services/control-flow/message-queue-task",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/control-flow/message-queue-task-editor-send-page.md",
+            "redirect_url": "/sql/integration-services/control-flow/message-queue-task",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/control-flow/message-queue-task-editor-receive-page.md",
+            "redirect_url": "/sql/integration-services/control-flow/message-queue-task",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/control-flow/select-variables.md",
+            "redirect_url": "/sql/integration-services/control-flow/message-queue-task",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/control-flow/script-task-editor-general-page.md",
+            "redirect_url": "/sql/integration-services/control-flow/script-task",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/control-flow/script-task-editor-script-page.md",
+            "redirect_url": "/sql/integration-services/control-flow/script-task",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/control-flow/send-mail-task-editor-general-page.md",
+            "redirect_url": "/sql/integration-services/control-flow/send-mail-task",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/control-flow/send-mail-task-editor-mail-page.md",
+            "redirect_url": "/sql/integration-services/control-flow/send-mail-task",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/control-flow/transfer-database-task-editor-general-page.md",
+            "redirect_url": "/sql/integration-services/control-flow/transfer-database-task",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/control-flow/transfer-database-task-editor-databases-page.md",
+            "redirect_url": "/sql/integration-services/control-flow/transfer-database-task",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/control-flow/source-database-files.md",
+            "redirect_url": "/sql/integration-services/control-flow/transfer-database-task",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/control-flow/destination-database-files.md",
+            "redirect_url": "/sql/integration-services/control-flow/transfer-database-task",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/control-flow/transfer-error-messages-task-editor-general-page.md",
+            "redirect_url": "/sql/integration-services/control-flow/transfer-error-messages-task",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/control-flow/transfer-error-messages-task-editor-messages-page.md",
+            "redirect_url": "/sql/integration-services/control-flow/transfer-error-messages-task",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/control-flow/transfer-jobs-task-editor-general-page.md",
+            "redirect_url": "/sql/integration-services/control-flow/transfer-jobs-task",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/control-flow/transfer-jobs-task-editor-jobs-page.md",
+            "redirect_url": "/sql/integration-services/control-flow/transfer-jobs-task",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/control-flow/transfer-logins-task-editor-general-page.md",
+            "redirect_url": "/sql/integration-services/control-flow/transfer-logins-task",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/control-flow/transfer-logins-task-editor-logins-page.md",
+            "redirect_url": "/sql/integration-services/control-flow/transfer-logins-task",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/control-flow/transfer-master-stored-procedures-task-editor-general-page.md",
+            "redirect_url": "/sql/integration-services/control-flow/transfer-master-stored-procedures-task",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/control-flow/transfer-master-stored-procedures-task-editor-stored-procedures-page.md",
+            "redirect_url": "/sql/integration-services/control-flow/transfer-master-stored-procedures-task",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/control-flow/transfer-sql-server-objects-task-editor-general-page.md",
+            "redirect_url": "/sql/integration-services/control-flow/transfer-sql-server-objects-task",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/control-flow/transfer-sql-server-objects-task-editor-objects-page.md",
+            "redirect_url": "/sql/integration-services/control-flow/transfer-sql-server-objects-task",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/control-flow/web-service-task-editor-general-page.md",
+            "redirect_url": "/sql/integration-services/control-flow/web-service-task",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/control-flow/web-service-task-editor-input-page.md",
+            "redirect_url": "/sql/integration-services/control-flow/web-service-task",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/control-flow/web-service-task-editor-output-page.md",
+            "redirect_url": "/sql/integration-services/control-flow/web-service-task",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/control-flow/wmi-data-reader-task-editor-general-page.md",
+            "redirect_url": "/sql/integration-services/control-flow/wmi-data-reader-task",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/control-flow/wmi-data-reader-task-editor-wmi-options-page.md",
+            "redirect_url": "/sql/integration-services/control-flow/wmi-data-reader-task",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/control-flow/wmi-event-watcher-task-editor-general-page.md",
+            "redirect_url": "/sql/integration-services/control-flow/wmi-event-watcher-task",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/control-flow/wmi-event-watcher-task-editor-wmi-options-page.md",
+            "redirect_url": "/sql/integration-services/control-flow/wmi-event-watcher-task",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/control-flow/xml-task-editor-general-page.md",
+            "redirect_url": "/sql/integration-services/control-flow/xml-task",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/ado-net-source-editor-connection-manager-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/ado-net-source",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/ado-net-source-editor-columns-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/ado-net-source",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/ado-net-source-editor-error-output-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/ado-net-source",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/cdc-source-editor-connection-manager-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/cdc-source",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/cdc-source-editor-columns-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/cdc-source",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/cdc-source-editor-error-output-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/cdc-source",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/excel-source-editor-connection-manager-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/excel-source",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/excel-source-editor-columns-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/excel-source",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/excel-source-editor-error-output-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/excel-source",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/flat-file-source-editor-connection-manager-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/flat-file-source",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/flat-file-source-editor-columns-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/flat-file-source",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/flat-file-source-editor-error-output-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/flat-file-source",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/odata-source-editor-connection-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/odata-source",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/odata-source-editor-columns-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/odata-source",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/odata-source-editor-error-output-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/odata-source",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/odbc-source-editor-connection-manager-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/odbc-source",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/odbc-source-editor-columns-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/odbc-source",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/odbc-source-editor-error-output-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/odbc-source",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/ole-db-source-editor-connection-manager-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/ole-db-source",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/ole-db-source-editor-columns-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/ole-db-source",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/ole-db-source-editor-error-output-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/ole-db-source",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/raw-file-source-editor-connection-manager-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/raw-file-source",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/raw-file-source-editor-columns-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/raw-file-source",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/xml-source-editor-connection-manager-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/xml-source",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/xml-source-editor-columns-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/xml-source",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/xml-source-editor-error-output-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/xml-source",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/ado-net-destination-editor-connection-manager-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/ado-net-destination",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/ado-net-destination-editor-mappings-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/ado-net-destination",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/ado-net-destination-editor-error-output-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/ado-net-destination",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/data-mining-model-training-editor-connection-tab.md",
+            "redirect_url": "/sql/integration-services/data-flow/data-mining-model-training-destination",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/data-mining-model-training-editor-columns-tab.md",
+            "redirect_url": "/sql/integration-services/data-flow/data-mining-model-training-destination",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/configure-data-streaming-destination.md",
+            "redirect_url": "/sql/integration-services/data-flow/data-streaming-destination",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/dimension-processing-destination-editor-connection-manager-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/dimension-processing-destination",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/dimension-processing-destination-editor-mappings-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/dimension-processing-destination",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/dimension-processing-destination-editor-advanced-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/dimension-processing-destination",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/excel-destination-editor-connection-manager-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/excel-destination",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/excel-destination-editor-mappings-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/excel-destination",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/excel-destination-editor-error-output-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/excel-destination",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/flat-file-destination-editor-connection-manager-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/flat-file-destination",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/flat-file-destination-editor-mappings-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/flat-file-destination",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/odbc-destination-editor-connection-manager-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/odbc-destination",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/odbc-destination-editor-mappings-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/odbc-destination",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/odbc-destination-editor-error-output-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/odbc-destination",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/ole-db-destination-editor-connection-manager-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/ole-db-destination",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/ole-db-destination-editor-mappings-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/ole-db-destination",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/ole-db-destination-editor-error-output-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/ole-db-destination",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/partition-processing-destination-editor-connection-manager-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/partition-processing-destination",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/partition-processing-destination-editor-mappings-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/partition-processing-destination",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/partition-processing-destination-editor-advanced-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/partition-processing-destination",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/raw-file-destination-editor-connection-manager-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/raw-file-destination",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/raw-file-destination-editor-columns-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/raw-file-destination",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/sql-destination-editor-connection-manager-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/sql-server-destination",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/sql-destination-editor-mappings-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/sql-server-destination",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/sql-destination-editor-advanced-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/sql-server-destination",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/transformations/aggregate-transformation-editor-aggregations-tab.md",
+            "redirect_url": "/sql/integration-services/data-flow/transformations/aggregate-transformation",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/transformations/aggregate-transformation-editor-advanced-tab.md",
+            "redirect_url": "/sql/integration-services/data-flow/transformations/aggregate-transformation",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/transformations/audit-transformation-editor.md",
+            "redirect_url": "/sql/integration-services/data-flow/transformations/audit-transformation",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/transformations/cache-transformation-editor-connection-manager-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/transformations/cache-transform",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/transformations/cache-transformation-editor-mappings-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/transformations/cache-transform",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/transformations/character-map-transformation-editor.md",
+            "redirect_url": "/sql/integration-services/data-flow/transformations/character-map-transformation",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/transformations/conditional-split-transformation-editor.md",
+            "redirect_url": "/sql/integration-services/data-flow/transformations/conditional-split-transformation",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/transformations/copy-column-transformation-editor.md",
+            "redirect_url": "/sql/integration-services/data-flow/transformations/copy-column-transformation",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/transformations/data-conversion-transformation-editor.md",
+            "redirect_url": "/sql/integration-services/data-flow/transformations/data-conversion-transformation",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/transformations/data-mining-query-transformation-editor-mining-model-tab.md",
+            "redirect_url": "/sql/integration-services/data-flow/transformations/data-mining-query-transformation",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/transformations/data-mining-query-transformation-editor-query-tab.md",
+            "redirect_url": "/sql/integration-services/data-flow/transformations/data-mining-query-transformation",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/transformations/derived-column-transformation-editor.md",
+            "redirect_url": "/sql/integration-services/data-flow/transformations/derived-column-transformation",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/transformations/dqs-cleansing-transformation-editor-dialog-box.md",
+            "redirect_url": "/sql/integration-services/data-flow/transformations/dqs-cleansing-transformation",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/transformations/export-column-transformation-editor-columns-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/transformations/export-column-transformation",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/transformations/export-column-transformation-editor-error-output-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/transformations/export-column-transformation",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/transformations/fuzzy-grouping-transformation-editor-connection-manager-tab.md",
+            "redirect_url": "/sql/integration-services/data-flow/transformations/fuzzy-grouping-transformation",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/transformations/fuzzy-grouping-transformation-editor-columns-tab.md",
+            "redirect_url": "/sql/integration-services/data-flow/transformations/fuzzy-grouping-transformation",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/transformations/fuzzy-grouping-transformation-editor-advanced-tab.md",
+            "redirect_url": "/sql/integration-services/data-flow/transformations/fuzzy-grouping-transformation",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/transformations/fuzzy-lookup-transformation-editor-reference-table-tab.md",
+            "redirect_url": "/sql/integration-services/data-flow/transformations/fuzzy-lookup-transformation",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/transformations/fuzzy-lookup-transformation-editor-columns-tab.md",
+            "redirect_url": "/sql/integration-services/data-flow/transformations/fuzzy-lookup-transformation",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/transformations/fuzzy-lookup-transformation-editor-advanced-tab.md",
+            "redirect_url": "/sql/integration-services/data-flow/transformations/fuzzy-lookup-transformation",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/transformations/lookup-transformation-editor-general-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/transformations/lookup-transformation",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/transformations/lookup-transformation-editor-connection-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/transformations/lookup-transformation",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/transformations/lookup-transformation-editor-columns-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/transformations/lookup-transformation",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/transformations/lookup-transformation",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/transformations/lookup-transformation-editor-advanced-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/transformations/lookup-transformation",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/transformations/merge-join-transformation-editor.md",
+            "redirect_url": "/sql/integration-services/data-flow/transformations/merge-join-transformation",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/transformations/merge-transformation-editor.md",
+            "redirect_url": "/sql/integration-services/data-flow/transformations/merge-transformation",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/transformations/multicast-transformation-editor.md",
+            "redirect_url": "/sql/integration-services/data-flow/transformations/multicast-transformation",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/transformations/configure-the-ole-db-command-transformation.md",
+            "redirect_url": "/sql/integration-services/data-flow/transformations/ole-db-command-transformation",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/transformations/percentage-sampling-transformation-editor.md",
+            "redirect_url": "/sql/integration-services/data-flow/transformations/percentage-sampling-transformation",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/transformations/row-sampling-transformation-editor-sampling-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/transformations/row-sampling-transformation",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/transformations/select-script-component-type.md",
+            "redirect_url": "/sql/integration-services/data-flow/transformations/script-component",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/transformations/script-transformation-editor-connection-managers-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/transformations/script-component",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/transformations/script-transformation-editor-input-columns-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/transformations/script-component",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/transformations/script-transformation-editor-inputs-and-outputs-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/transformations/script-component",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/transformations/script-transformation-editor-script-page.md",
+            "redirect_url": "/sql/integration-services/data-flow/transformations/script-component",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/transformations/sort-transformation-editor.md",
+            "redirect_url": "/sql/integration-services/data-flow/transformations/sort-transformation",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/transformations/term-extraction-transformation-editor-term-extraction-tab.md",
+            "redirect_url": "/sql/integration-services/data-flow/transformations/term-extraction-transformation",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/transformations/term-extraction-transformation-editor-exclusion-tab.md",
+            "redirect_url": "/sql/integration-services/data-flow/transformations/term-extraction-transformation",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/transformations/term-extraction-transformation-editor-advanced-tab.md",
+            "redirect_url": "/sql/integration-services/data-flow/transformations/term-extraction-transformation",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/transformations/term-lookup-transformation-editor-term-lookup-tab.md",
+            "redirect_url": "/sql/integration-services/data-flow/transformations/term-lookup-transformation",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/transformations/term-lookup-transformation-editor-reference-table-tab.md",
+            "redirect_url": "/sql/integration-services/data-flow/transformations/term-lookup-transformation",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/transformations/term-lookup-transformation-editor-advanced-tab.md",
+            "redirect_url": "/sql/integration-services/data-flow/transformations/term-lookup-transformation",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/transformations/union-all-transformation-editor.md",
+            "redirect_url": "/sql/integration-services/data-flow/transformations/union-all-transformation",
+            "redirect_document_id": false
+          },
+       {
+            "source_path": "docs/integration-services/data-flow/transformations/unpivot-transformation-editor.md",
+            "redirect_url": "/sql/integration-services/data-flow/transformations/unpivot-transformation",
+            "redirect_document_id": false
+          },
+	      {
+            "source_path": "docs/ssms/visual-database-tools/open-table-designer-visual-database-tools.md",
+            "redirect_url": "/sql/ssms/visual-db-tools/design-tables-visual-database-tools",
+            "redirect_document_id": false
+          },
+        {
+            "source_path": "docs/ssms/visual-database-tools/save-your-work-in-table-designer-visual-database-tools.md",
+            "redirect_url": "/sql/ssms/visual-db-tools/design-tables-visual-database-tools",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/release-notes/sql-server-2008-r2-sp2-release-notes.md",
+            "redirect_url": "/sql/sql-server/sql-server-2008-r2-sp2-release-notes",
+            "redirect_document_id": false   
+        },
+        {
+            "source_path": "docs/release-notes/sql-server-2012-release-notes.md",
+            "redirect_url": "/sql/sql-server/sql-server-2012-release-notes",
+            "redirect_document_id": false 
+        },
+        {
+            "source_path": "docs/release-notes/sql-server-2012-sp1-release-notes.md",
+            "redirect_url": "/sql/sql-server/sql-server-2012-sp1-release-notes",
+            "redirect_document_id": false 
+        },
+        {
+            "source_path": "docs/release-notes/sql-server-2012-sp2-release-notes.md",
+            "redirect_url": "/sql/sql-server/sql-server-2012-sp2-release-notes",
+            "redirect_document_id": false 
+        },
+        {
+            "source_path": "docs/release-notes/sql-server-2012-sp3-release-notes.md",
+            "redirect_url": "/sql/sql-server/sql-server-2012-sp3-release-notes",
+            "redirect_document_id": false   
+        },
+        {
+            "source_path": "docs/release-notes/sql-server-2014-release-notes.md",
+            "redirect_url": "/sql/sql-server/sql-server-2014-release-notes",
+            "redirect_document_id": false 
+        },
+        {
+            "source_path": "docs/release-notes/sql-server-help-installation.md",
+            "redirect_url": "/sql/sql-server/sql-server-help-installation",
+            "redirect_document_id": false 
+        },
+        {
+            "source_path": "docs/release-notes/sql-server-release-notes.md",
+            "redirect_url": "/sql/sql-server/sql-server-release-notes",
+            "redirect_document_id": false  
+        },
+        {
+            "source_path": "docs/release-notes/index.md", 
+            "redirect_url": "/sql/sql-server/index", 
+            "redirect_document_id": false  
+          },
+          {
+            "source_path": "docs/sql-server/sql-server-release-notes.md", 
+            "redirect_url": "/sql/sql-server/sql-server-2017-release-notes", 
+            "redirect_document_id": false  
+          }
+          
+          
+    ]
 }

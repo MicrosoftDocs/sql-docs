@@ -1,7 +1,7 @@
 ---
 title: "Step 3: Proof of concept connecting to SQL using ADO.NET | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/30/2017"
+ms.date: "08/08/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -16,21 +16,18 @@ ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Step 3: Proof of concept connecting to SQL using ADO.NET
-[!INCLUDE[Driver_ADODotNet_Download](../../includes/driver_adodotnet_download.md)]
 
-
-- Previous article:&nbsp;&nbsp;&nbsp;[Step 2: Create a SQL database for ADO.NET development](../../connect/ado-net/step-2-create-a-sql-database-for-ado-net-development.md)  
-- Next article:&nbsp;&nbsp;&nbsp;[Step 4: Connect resiliently to SQL with ADO.NET](../../connect/ado-net/step-4-connect-resiliently-to-sql-with-ado-net.md)  
+- Previous article:&nbsp;&nbsp;&nbsp;[Step 2: Create a SQL database for ADO.NET development](step-2-create-a-sql-database-for-ado-net-development.md)  
+- Next article:&nbsp;&nbsp;&nbsp;[Step 4: Connect resiliently to SQL with ADO.NET](step-4-connect-resiliently-to-sql-with-ado-net.md)  
 
   
 This C# code example should be considered a proof of concept only. The sample code is simplified for clarity, and does not necessarily represent best practices recommended by Microsoft.  
   
-## Step 1: Connect  
+## Step 1: Connect
   
-The method SqlConnection.Open is used to connect to your SQL database.  
-  
-  
-  
+The method **SqlConnection.Open** is used to connect to your SQL database.  
+
+
 ```CSharp  
     // C# , ADO.NET  
     using System;
@@ -43,7 +40,10 @@ The method SqlConnection.Open is used to connect to your SQL database.
             static public void Main()  
             {  
                 using (var connection = new QC.SqlConnection(  
-                    "Server=tcp:YOUR_SERVER_NAME_HERE.database.windows.net,1433;Database=AdventureWorksLT;User ID=YOUR_LOGIN_NAME_HERE;Password=YOUR_PASSWORD_HERE;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"  
+                    "Server=tcp:YOUR_SERVER_NAME_HERE.database.windows.net,1433;" +
+                    "Database=AdventureWorksLT;User ID=YOUR_LOGIN_NAME_HERE;" +
+                    "Password=YOUR_PASSWORD_HERE;Encrypt=True;" +
+                    "TrustServerCertificate=False;Connection Timeout=30;"  
                     ))  
                 {  
                     connection.Open();  
@@ -60,9 +60,8 @@ The method SqlConnection.Open is used to connect to your SQL database.
     Press any key to finish...  
     ****/  
 ```  
-  
-  
-  
+
+
 ## Step 2:  Execute a query  
   
 The method SqlCommand.ExecuteReader:  
@@ -84,7 +83,10 @@ The method SqlCommand.ExecuteReader:
             static public void Main()  
             {  
                 using (var connection = new QC.SqlConnection(  
-                    "Server=tcp:YOUR_SERVER_NAME_HERE.database.windows.net,1433;Database=AdventureWorksLT;User ID=YOUR_LOGIN_NAME_HERE;Password=YOUR_PASSWORD_HERE;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"  
+                    "Server=tcp:YOUR_SERVER_NAME_HERE.database.windows.net,1433;" +
+                    "Database=AdventureWorksLT;User ID=YOUR_LOGIN_NAME_HERE;" +
+                    "Password=YOUR_PASSWORD_HERE;Encrypt=True;" +
+                    "TrustServerCertificate=False;Connection Timeout=30;"  
                     ))  
                 {  
                     connection.Open();  
@@ -169,7 +171,10 @@ This example demonstrates how to:
             static public void Main()  
             {  
                 using (var connection = new QC.SqlConnection(  
-                    "Server=tcp:YOUR_SERVER_NAME_HERE.database.windows.net,1433;Database=AdventureWorksLT;User ID=YOUR_LOGIN_NAME_HERE;Password=YOUR_PASSWORD_HERE;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"  
+                    "Server=tcp:YOUR_SERVER_NAME_HERE.database.windows.net,1433;" +
+                    "Database=AdventureWorksLT;User ID=YOUR_LOGIN_NAME_HERE;" +
+                    "Password=YOUR_PASSWORD_HERE;Encrypt=True;" +
+                    "TrustServerCertificate=False;Connection Timeout=30;"  
                     ))  
                 {  
                     connection.Open();  
@@ -235,5 +240,4 @@ This example demonstrates how to:
     The generated ProductID = 1000.  
     Press any key to finish...  
     ****/  
-```  
-  
+```

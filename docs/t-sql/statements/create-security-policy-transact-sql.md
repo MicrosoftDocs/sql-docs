@@ -1,7 +1,7 @@
 ---
 title: "CREATE SECURITY POLICY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/30/2015"
+ms.date: "08/10/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -39,13 +39,13 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```tsql  
+```     
 CREATE SECURITY POLICY [schema_name. ] security_policy_name    
-    { ADD { FILTER | BLOCK } PREDICATE tvf_schema_name.security_predicate_function_name   
-      ( { column_name | arguments } [ , …n] ) ON table_schema_name. table_name }   
-      [ <block_dml_operation> ] } , [ , …n]   
+    { ADD [ FILTER | BLOCK ] } PREDICATE tvf_schema_name.security_predicate_function_name   
+      ( { column_name | arguments } [ , …n] ) ON table_schema_name. table_name    
+      [ <block_dml_operation> ] , [ , …n] 
     [ WITH ( STATE = { ON | OFF }  [,] [ SCHEMABINDING = { ON | OFF } ] ) ]  
-    [ NOT FOR REPLICATION ]  
+    [ NOT FOR REPLICATION ] 
 [;]  
   
 <block_dml_operation>  
@@ -72,7 +72,7 @@ CREATE SECURITY POLICY [schema_name. ] security_policy_name
  *table_schema_name.table_name*  
  Is the target table to which the security predicate will be applied. Multiple disabled security policies can target a single table for a particular DML operation, but only one can be enabled at any given time.  
   
- *<block_dml_operation>*  
+ *\<block_dml_operation>* 
  The particular DML operation for which the block predicate will be applied. AFTER specifies that the predicate will be evaluated on the values of the rows after the DML operation was performed (INSERT or UPDATE). BEFORE specifies that the predicate will be evaluated on the values of the rows before the DML operation is performed (UPDATE or DELETE). If no operation is specified, the predicate will apply to all operations.  
   
  [ STATE = { ON | **OFF** } ]  
@@ -146,3 +146,4 @@ CREATE SECURITY POLICY rls.SecPol
  [sys.security_predicates &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-security-predicates-transact-sql.md)  
   
   
+

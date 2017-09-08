@@ -2,7 +2,7 @@
 title: "Enable DirectQuery mode in SSMS | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
+ms.date: "07/06/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -17,11 +17,14 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Enable DirectQuery mode in SSMS
+
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
   You can  change the data access properties of a tabular model that has already been deployed, enabling DirectQuery mode, where queries execute against a backend relational data source rather than cached data residing in-memory.  
   
  In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], steps for DirectQuery configuration differ based on the model's compatibility level. Below you'll find steps that work for all compatibility levels.  
   
- This topic assumes that you have created and validated an in-memory tabular model at compatibility level 1200, and only need to enable DirectQuery access and update connection strings. If you're starting from a lower compatibility level, you need to manually upgrade it first. See [Upgrade Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md) for steps.  
+ This topic assumes that you have created and validated an in-memory tabular model at compatibility level 1200 or higher, and only need to enable DirectQuery access and update connection strings. If you're starting from a lower compatibility level, you need to manually upgrade it first. See [Upgrade Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md) for steps.  
   
 > [!IMPORTANT]  
 >  We recommend using [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] instead of Management Studio to switch data storage modes. When you use  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] to change  model, and then follow that up with deployment to the server,  the model and database stay in sync. Moreover, changing the storage modes in the model lets you review any validation errors that occur. When using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] as described in this article, validation errors are not reported.  
@@ -123,7 +126,7 @@ manager: "erikre"
   
 3.  In the trace, you should see evidence of query execution on the relational database.  
   
-## See Also  
+## See also  
  [Compatibility Level for Tabular models in Analysis Services](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)   
  [Data Sources Supported &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)   
  [Extended Events](../../relational-databases/extended-events/extended-events.md)   

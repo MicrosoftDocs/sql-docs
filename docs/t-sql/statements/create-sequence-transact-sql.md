@@ -1,7 +1,7 @@
 ---
 title: "CREATE SEQUENCE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/08/2015"
+ms.date: "04/11/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -41,7 +41,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
-  
 CREATE SEQUENCE [schema_name . ] sequence_name  
     [ AS [ built_in_integer_type | user-defined_integer_type ] ]  
     [ START WITH <constant> ]  
@@ -184,7 +183,7 @@ GRANT CREATE SEQUENCE ON SCHEMA::Test TO [AdventureWorks\Larry]
  To create the Test schema, execute the following statement.  
   
 ```  
--- CREATE SCHEMA Test ;  
+CREATE SCHEMA Test ;  
 GO  
 ```  
   

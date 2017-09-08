@@ -9,6 +9,9 @@ ms.technology:
   - "database-engine"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
+f1_keywords: 
+  - "sql13.swb.browseservers.local.f1"
+  - "sql13.swb.browseservers.network.f1"
 helpviewer_keywords: 
   - "services [SQL Server], security"
   - "SQL Browser service (See SQL Server Browser Service)"

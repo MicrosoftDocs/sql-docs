@@ -3,10 +3,10 @@ title: "Hash Indexes for Memory-Optimized Tables | Microsoft Docs"
 ms.custom: 
   - "MSDN content"
   - "MSDN - SQL DB"
-ms.date: "08/29/2016"
+ms.date: "06/12/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
-ms.service: "sql-database"
+ms.service:
 ms.suite: ""
 ms.technology: 
   - "database-engine-imoltp"
@@ -173,7 +173,8 @@ Too *many* buckets has the following drawbacks:
   - Empty buckets use memory, though each bucket uses only 8 bytes.  
     
   
-> [AZURE.NOTE] Adding more buckets does nothing to reduce the chaining together of entries that share a duplicate value. The rate of value duplication is used to decide whether a hash is the appropriate index type, not to calculate the bucket count.  
+> [!NOTE]
+> Adding more buckets does nothing to reduce the chaining together of entries that share a duplicate value. The rate of value duplication is used to decide whether a hash is the appropriate index type, not to calculate the bucket count.  
   
   
   
@@ -432,29 +433,3 @@ Your two column index could be a nonclustered index or a hash index. Suppose the
 The hash index needs the WHERE clause to specify an equality test for each of the columns in its key. Else the hash index is not useful to the optimizer.  
   
 Neither index type is useful if the WHERE clause specifies only the second column in the index key.  
-  
-  
-  
-\<!--   
-Hash_Indexes_for_Memory-Optimized_Tables.md , which is....  
-CAPS guid: {e922cc3a-3d6e-453b-8d32-f4b176e98488}  
-CAPS guid of parent is: {eecc5821-152b-4ed5-888f-7c0e6beffed9}  
-  
-  
-  
-  
-| IndexName | total_bucket_count | empty_bucket_count | EmptyBucketPercent | avg_chain_length | max_chain_length |  
-| :-------- | -----------------: | -----------------: | -----------------: | ---------------: | ---------------: |  
-| ix_OrderSequence | 32768 | 13 | 0 | 8 | 26 |  
-| ix_StatusCode | 8 | 4 | 50 | 65536 | 65536 |  
-| PK_SalesOrd_B14003E308C1A23C | 262144 | 96525 | 36 | 1 | 8 |  
-  
-  
-  
-  
-GeneMi  ,  2016-05-05  Thursday  15:01pm  
--->  
-  
-  
-  
-

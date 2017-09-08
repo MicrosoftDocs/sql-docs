@@ -29,7 +29,7 @@ The identifier for the GUID ODBC C data type is:
 |SQL type identifier|Test|SQLSTATE|  
 |-------------------------|----------|--------------|  
 |SQL_CHAR|Column byte length >= 36|n/a|  
-|SQL_VARCHAR|Column byte length \< 36|22001|  
+|SQL_VARCHAR|Column byte length < 36|22001|  
 |SQL_LONGVARCHAR|Data value is not a valid GUID|22018|  
 |SQL_WCHAR|Column character length >= 36|n/a|  
 |SQL_WVARCHAR|Column character length < 36|22001|  

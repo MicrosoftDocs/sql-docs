@@ -17,9 +17,12 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Install, distribute, and reference the Tabular Object Model
+
+[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
+
 This article explains how to download, reference, and redistribute Analysis Services Tabular Object Model (TOM), a C# library for creating and managing Tabular models and databases in managed code.  
   
-TOM is an extension of the AMO client library (Microsoft.AnalysisServices.dll) that ships with SQL Server 2016. It works with Tabular models targeting the Tabular metadata engine in the SQL Server 2016 release. To use TOM, the model and database must be at compatibility level 1200 and above.  
+TOM is an extension of the AMO client library (Microsoft.AnalysisServices.dll) that ships with SQL Server 2016. It works with Tabular models targeting the Tabular metadata engine in the SQL Server 2016 release. To use TOM, the model and database must be at compatibility level 1200 or higher.  
 
 ## AMO-TOM Assemblies
 
@@ -48,7 +51,7 @@ You can't distribute Microsoft.AnalysisServices.dll without Microsoft.AnalysisSe
 
 In the [object hierarchy](../../analysis-services/tabular-model-programming-compatibility-level-1200/introduction-to-the-tabular-object-model-tom-in-analysis-services-amo.md) , any object below Database is either a Tabular metadata construction via the Model object, or a Multidimensional metadata construction via a Cube, Dimension, or MeasureGroup object. For high-level operations at the Server, Database, Role, or Trace level, the choice of which namespace to reference will depend on the workloads your code needs to support.
 
-* Use Tabular.Server or Tabular.Database if your solution is compatibility level 1200, and the Database object you work with must provide access to Model, Table, Columns, and other objects expressed as Tabular metadata constructions.
+* Use Tabular.Server or Tabular.Database if your solution is compatibility level 1200 or higher, and the Database object you work with must provide access to Model, Table, Columns, and other objects expressed as Tabular metadata constructions.
 * Use AnalysisServices.Server or AnalysisServices.Database if downstream code references Multidimensional objects such as Cubes, DataSources, DataSourceViews, and Dimensions.
 
 You'll need both namespaces for tools and applications supporting a mix of databases and model types. 
@@ -99,7 +102,7 @@ Referencing the Core namespace in your code is unnecessary; the classes in Core 
   
 3. Click **OK**.  In **Solution Explorer**, confirm the assemblies exist in the References folder.
   
-4. In your code page, add the Microsoft.AnalysisServces.Tabular namespace if databases and models are Tabular compatibility level 1200. 
+4. In your code page, add the Microsoft.AnalysisServces.Tabular namespace if databases and models are Tabular 1200 or higher compatibility level. 
   
    ```   
    using Microsoft.AnalysisServices; 

@@ -110,7 +110,7 @@ C:\>osql
  Specifies the number of rows to print between column headings. The default is to print headings one time for each set of query results. Use -1 to specify that no headers will be printed. If –1 is used, there must be no space between the parameter and the setting (**-h-1**, not **-h -1**).  
   
  **-s** *col_separator*  
- Specifies the column-separator character, which is a blank space by default. To use characters that have special meaning to the operating system (for example, | ; & \< >), enclose the character in double quotation marks (").  
+ Specifies the column-separator character, which is a blank space by default. To use characters that have special meaning to the operating system (for example, | ; & < >), enclose the character in double quotation marks (").  
   
  **-w** *column_width*  
  Allows the user to set the screen width for output. The default is 80 characters. When an output line has reached its maximum screen width, it is broken into multiple lines.  

@@ -58,8 +58,8 @@ manager: "erikre"
   
 |URL Reservation in HTTP.SYS|URL|Explanation|  
 |---------------------------------|---------|-----------------|  
-|http://+:80/reportserver|http://\<computername>/reportserver<br /><br /> http://\<IPAddress>/reportserver<br /><br /> http://localhost/reportserver|The URL reservation specifies a wildcard (+) on port 80. This puts into the report server queue any incoming request that specifies a host that resolves to the report server computer on port 80. Notice that with this URL reservation, any number of URLs can be used to access the report server.<br /><br /> This is the default URL reservation for a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server for most operating systems.|  
-|http://123.45.67.0:80/reportserver|http://123.45.67.0/reportserver|This URL reservation specifies an IP address and is much more restrictive than the wildcard URL reservation. Only URLs that include the IP address can be used to connect to the report server. Given this URL reservation, a request to a report server at http://\<computername>/reportserver or http://localhost/reportserver would fail.|  
+|`http://+:80/reportserver`|`http://<computername>/reportserver`<br /><br /> `http://<IPAddress>/reportserver`<br /><br /> `http://localhost/reportserver`|The URL reservation specifies a wildcard (+) on port 80. This puts into the report server queue any incoming request that specifies a host that resolves to the report server computer on port 80. Notice that with this URL reservation, any number of URLs can be used to access the report server.<br /><br /> This is the default URL reservation for a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server for most operating systems.|  
+|`http://123.45.67.0:80/reportserver`|`http://123.45.67.0/reportserver`|This URL reservation specifies an IP address and is much more restrictive than the wildcard URL reservation. Only URLs that include the IP address can be used to connect to the report server. Given this URL reservation, a request to a report server at `http://<computername>/reportserver` or `http://localhost/reportserver` would fail.|  
   
 ##  <a name="DefaultURLs"></a> Default URLs  
  If you install [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in the default configuration, Setup will reserve URLs for the Report Server Web service and the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]. You can also accept these default values when you define URL reservations in the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool. Default URLs will include an instance name if you install [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] or if you install [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] as a named instance.  
@@ -83,12 +83,12 @@ manager: "erikre"
   
 |Instance Type|Application|Default URL|Actual URL reservation in HTTP.SYS|  
 |-------------------|-----------------|-----------------|----------------------------------------|  
-|Default instance|Report Server Web service|http://\<servername>/reportserver|http://\<servername>:80/reportserver|  
-|Default instance|Web portal|http://\<servername>/reportserver|http://\<servername>:80/reportserver|  
-|Named instance|Report Server Web service|http://\<servername>/reportserver_\<instancename>|http://\<servername>:80/reportserver_\<instancename>|  
-|Named instance|Web portal|http://\<servername>/reports_\<instancename>|http://\<servername>:80/reports_\<instancename>|  
-|SQL Server Express|Report Server Web service|http://\<servername>/reportserver_SQLExpress|http://\<servername>:80/reportserver_SQLExpress|  
-|SQL Server Express|Web portal|http://\<servername>/reports_SQLExpress|http://\<servername>:80/reports_SQLExpress|  
+|Default instance|Report Server Web service|`http://\<servername>/reportserver`|`http://<servername>:80/reportserver`|  
+|Default instance|Web portal|`http://<servername>/reportserver`|`http://<servername>:80/reportserver`|  
+|Named instance|Report Server Web service|`http://<servername>/reportserver_<instancename>`|`http://<servername>:80/reportserver_<instancename>`|  
+|Named instance|Web portal|`http://<servername>/reports_<instancename>`|`http://<servername>:80/reports_<instancename>`|  
+|SQL Server Express|Report Server Web service|`http://<servername>/reportserver_SQLExpress`|`http://<servername>:80/reportserver_SQLExpress`|  
+|SQL Server Express|Web portal|`http://<servername>/reports_SQLExpress`|`http://<servername>:80/reports_SQLExpress`|  
   
 ##  <a name="URLPermissionsAccounts"></a> Authentication and Service Identity for Reporting Services URLs  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL reservations specify the service account of the Report Server service. The account under which the service runs is used for all URLs that are created for the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] applications that run in the same instance. The service identity of the report server instance is stored in the RSReportServer.config file.  
@@ -98,9 +98,9 @@ manager: "erikre"
  Anonymous access is disabled because the default security is **RSWindowsNegotiate**. For intranet access, report server URLs use network computer names. If you want to configure [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] for Internet connections, you must use different settings. For more information about authentication, see [Authentication with the Report Server](../../reporting-services/security/authentication-with-the-report-server.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
   
 ##  <a name="URLlocalAdmin"></a> URLs for Local Administration  
- You can use http://localhost/reportserver or http://localhost/reports if you specified a strong or weak wildcard for the URL reservation.  
+ You can use `http://localhost/reportserver` or `http://localhost/reports` if you specified a strong or weak wildcard for the URL reservation.  
   
- The http://localhost URL is interpreted as http://127.0.0.1. If you pegged the URL reservation to a computer name or single IP address, you cannot use localhost unless you create an additional reservation for 127.0.0.1 on the local computer. Similarly, if localhost or 127.0.0.1 is disabled on your computer, you cannot use that URL.  
+ The `http://localhost` URL is interpreted as `http://127.0.0.1`. If you pegged the URL reservation to a computer name or single IP address, you cannot use localhost unless you create an additional reservation for 127.0.0.1 on the local computer. Similarly, if localhost or 127.0.0.1 is disabled on your computer, you cannot use that URL.  
   
  [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)], [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] and later include new security features to minimize the risk of accidentally running programs with elevated privileges. Additional steps are necessary to enable local administration on these operating systems. For more information, see [Configure a Native Mode Report Server for Local Administration &#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   

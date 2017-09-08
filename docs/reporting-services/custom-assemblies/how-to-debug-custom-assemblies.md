@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "troubleshooting [Reporting Services], custom assemblies"
 ms.assetid: 3a3215b3-548c-4474-81ba-3a98dd3912bf
 caps.latest.revision: 44
-author: "sabotta"
-ms.author: "carlasab"
+author: "guyinacube"
+ms.author: "asaxton"
 manager: "erikre"
 ---
 # How to: Debug Custom Assemblies

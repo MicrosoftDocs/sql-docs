@@ -1,11 +1,20 @@
-# Overview
-## [SQL Server Database Engine Backward Compatibility](sql-server-database-engine-backward-compatibility.md)  
-## [Deprecated Database Engine Features in SQL Server 2016](deprecated-database-engine-features-in-sql-server-2016.md)  
-## [Discontinued Database Engine Functionality in SQL Server 2016](discontinued-database-engine-functionality-in-sql-server-2016.md)  
-## [Breaking Changes to Database Engine Features in SQL Server 2016](breaking-changes-to-database-engine-features-in-sql-server-2016.md)  
+# [Overview](sql-server-database-engine-overview.md) 
 
-# [Install](install-windows/index.md)
-# [Availability groups](availability-groups/windows/index.md)
-# [Configure](configure-windows/index.md)
-# [Database mirroring](database-mirroring/index.md)
-# [Log shipping](log-shipping/index.md)
+# [What's New - SQL Server 2017](whats-new-in-sql-server-2017.md)  
+# [What's New - SQL Server 2016](whats-new-in-sql-server-2016.md) 
+
+
+# Release notes
+## [Backward compatibility](sql-server-database-engine-backward-compatibility.md)
+## [Deprecated features in SQL Server 2017](deprecated-database-engine-features-in-sql-server-2017.md)  
+## [Deprecated in SQL Server 2016](deprecated-database-engine-features-in-sql-server-2016.md)  
+## [Discontinued functionality in SQL Server 2016](discontinued-database-engine-functionality-in-sql-server-2016.md)  
+## [Breaking changes in SQL Server 2017](breaking-changes-to-database-engine-features-in-sql-server-2017.md)  
+## [Breaking changes in SQL Server 2016](breaking-changes-to-database-engine-features-in-sql-server-2016.md)  
+## [New and recently updated articles](new-updated-database-engine.md)
+
+# [Install](../database-engine/install-windows/installation-for-sql-server-2016.md)
+# [Availability groups](../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)
+# [Configure](../database-engine/configure-windows/configure-database-engine-instances-sql-server.md)
+# [Database mirroring](../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)
+# [Log shipping](../database-engine/log-shipping/about-log-shipping-sql-server.md)

@@ -54,7 +54,7 @@ manager: "jhubbard"
   
 8.  Optionally, update the names of output columns by editing values in the **Output Column** list.  
   
-9. To configure the error output, click **Error Output**. For more information, see [Configure an Error Output in a Data Flow Component](../../integration-services/troubleshooting/configure-an-error-output-in-a-data-flow-component.md).  
+9. To configure the error output, click **Error Output**. For more information, see [Debugging Data Flow](../../integration-services/troubleshooting/debugging-data-flow.md).  
   
 10. You can click **Preview** to view up to 200 rows of the data extracted by the OLE DB source.  
   

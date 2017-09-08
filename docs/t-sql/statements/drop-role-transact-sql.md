@@ -2,7 +2,7 @@
 title: "DROP ROLE (Transact-SQL) | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "10/28/2015"
+ms.date: "05/11/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -51,9 +51,7 @@ DROP ROLE role_name
   
 ## Arguments  
  *IF EXISTS*  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
+ **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
  Conditionally drops the role only if it already exists.  
   
@@ -78,23 +76,13 @@ DROP ROLE role_name
  Requires **ALTER ANY ROLE** permission on the database, or **CONTOL** permission on the role, or membership in the **db_securityadmin**.  
   
 ## Examples  
- The following example drops the database role `purchasing` from `AdventureWorks2012`.  
+ The following example drops the database role `purchasing` from the `AdventureWorks2012` database.  
   
 ```  
-USE AdventureWorks2012;  
 DROP ROLE purchasing;  
 GO  
 ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- The following example drops the database role `purchasing` from `AdventureWorks2008R2`.  
-  
-```  
--- Uses AdventureWorks  
-  
-DROP ROLE purchasing;  
-GO  
-```  
   
 ## See Also  
  [CREATE ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-role-transact-sql.md)   

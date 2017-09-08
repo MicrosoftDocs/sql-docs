@@ -6,7 +6,7 @@ ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
-  - "setup-install"
+  - "integration-services"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 helpviewer_keywords: 
@@ -21,7 +21,7 @@ manager: "erikre"
 # Upgrade Integration Services Packages
   When you upgrade an instance of [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] to the current release of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], your existing [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] packages are not automatically upgraded to the package format that the current release [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] uses. You will have to select an upgrade method and manually upgrade your packages.  
   
- For information on upgrading packages when you convert a project to the project deployment model, see [Deploy Projects to Integration Services Server](../../integration-services/packages/deploy-projects-to-integration-services-server.md).  
+ For information on upgrading packages when you convert a project to the project deployment model, see [Deploy Integration Services (SSIS) Projects and Packages](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)
   
 ## Selecting an Upgrade Method  
  You can use various methods to upgrade [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], or [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] packages. For some of these methods, the upgrade is only temporary. For others, the upgrade is permanent. The following table describes each of these methods and whether the upgrade is temporary or permanent.  

@@ -2,7 +2,7 @@
 title: "Always Encrypted (Database Engine) | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "01/13/2017"
+ms.date: "04/24/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -120,33 +120,32 @@ Use the [Always Encrypted Wizard](../../../relational-databases/security/encrypt
 
 -   After changing the definition of an encrypted object, execute [sp_refresh_parameter_encryption](../../../relational-databases/system-stored-procedures/sp-refresh-parameter-encryption-transact-sql.md) to update the Always Encrypted metadata for the object.
   
- Always Encrypted is not supported for the columns with the below characteristics (e.g. the *Encrypted WITH* clause cannot be used in **CREATE TABLE/ALTER TABLE** for a column, if any of the following conditions apply to the column):  
+Always Encrypted is not supported for the columns with the below characteristics (e.g. the *Encrypted WITH* clause cannot be used in **CREATE TABLE/ALTER TABLE** for a column, if any of the following conditions apply to the column):  
   
 -   Columns using one of the following datatypes: **xml**, **timestamp**/**rowversion**, **image**, **ntext**, **text**, **sql_variant**, **hierarchyid**, **geography**, **geometry**, alias, user defined-types.  
-  
 - FILESTREAM columns  
-  
-- Columns with ROWGUIDCOL property
-- String (varchar, char, etc.) columns with non-bin2 collations
-- Columns that are keys for nonclustered indices using a randomized encrypted column as a key column (deterministic encrypted columns are fine)
-- Columns that are keys for clustered indices using a randomized encrypted column as a key column (deterministic encrypted columns are fine)
-- Columns that are keys for fulltext indices containing encrypted columns both randomized and deterministic
-- Columns referenced by computed columns (when the expression does unsupported operations for Always Encrypted)
-- Sparse column set
-- Columns that are referenced by statistics
-- Columns using alias type
-- Partitioning columns
-- Columns with default constraints
-- Columns referenced by unique constraints when using randomized encryption (deterministic encryption is supported)
-- Primary key columns when using randomized encryption (deterministic encryption is supported)
-- Referencing columns in foreign key constraints when using randomized encryption or when using deterministic encryption, if the referenced and referencing columns use different keys or algorithms
-- Columns referenced by check constraints
-- Columns in tables that use change data capture
-- Primary key columns on tables that have change tracking
-- Columns that are masked (using Dynamic Data Masking)
-- Columns in Stretch Database tables. (Tables with columns encrypted with Always Encrypted can be enabled for Stretch.)
-- Columns in external (PolyBase) tables (note: using external tables and tables with encrypted columns in the same query is supported)
-- Table-valued parameters targeting encrypted columns are not supported.
+- Columns with the IDENTITY property  
+- Columns with ROWGUIDCOL property  
+- String (varchar, char, etc.) columns with non-bin2 collations  
+- Columns that are keys for nonclustered indices using a randomized encrypted column as a key column (deterministic encrypted columns are fine)  
+- Columns that are keys for clustered indices using a randomized encrypted column as a key column (deterministic encrypted columns are fine)  
+- Columns that are keys for fulltext indices containing encrypted columns both randomized and deterministic  
+- Columns referenced by computed columns (when the expression does unsupported operations for Always Encrypted)  
+- Sparse column set  
+- Columns that are referenced by statistics  
+- Columns using alias type  
+- Partitioning columns  
+- Columns with default constraints  
+- Columns referenced by unique constraints when using randomized encryption (deterministic encryption is supported)  
+- Primary key columns when using randomized encryption (deterministic encryption is supported)  
+- Referencing columns in foreign key constraints when using randomized encryption or when using deterministic encryption, if the referenced and referencing columns use different keys or algorithms  
+- Columns referenced by check constraints  
+- Columns in tables that use change data capture  
+- Primary key columns on tables that have change tracking  
+- Columns that are masked (using Dynamic Data Masking)  
+- Columns in Stretch Database tables. (Tables with columns encrypted with Always Encrypted can be enabled for Stretch.)  
+- Columns in external (PolyBase) tables (note: using external tables and tables with encrypted columns in the same query is supported)  
+- Table-valued parameters targeting encrypted columns are not supported.  
 
 The following clauses cannot be used for encrypted columns:
 

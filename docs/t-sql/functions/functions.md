@@ -1,7 +1,7 @@
 ---
-title: "Functions | Microsoft Docs"
+title: "What are the Microsoft SQL database functions? | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/16/2017"
+ms.date: "06/28/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -24,36 +24,45 @@ author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
 ---
-# Functions
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
+# What are the SQL database functions?
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw_md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides many built-in functions and also lets you create user-defined functions. The categories of built-in functions are listed on this page.  
+Learn about the categories of built-in functions you can use with SQL databases. You can use the built-in functions or create your own user-defined functions.
   
-## Types of Functions  
-  
-|Function|Description|  
-|--------------|-----------------|  
-|[Rowset Functions](../../t-sql/functions/rowset-functions-transact-sql.md)|Return an object that can be used like table references in an SQL statement.|  
-|[Aggregate Functions](../../t-sql/functions/aggregate-functions-transact-sql.md)|Operate on a collection of values but return a single, summarizing value.|  
-|[Ranking Functions](../../t-sql/functions/ranking-functions-transact-sql.md)|Return a ranking value for each row in a partition.|  
-|Scalar Functions (Described below)|Operate on a single value and then return a single value. Scalar functions can be used wherever an expression is valid.|  
-  
-## Scalar Functions  
+## Aggregate functions
+
+Aggregate functions perform a calculation on a set of values and return a single value. They are allowed in the select list or the HAVING clause of a SELECT statement. You can use an aggregation in combination with the GROUP BY clause to calculate the aggregation on categories of rows. Use the OVER clause to calculate the aggregation on a specific range of value. The OVER clause cannot follow the GROUPING or GROUPING_ID aggregations.
+
+All aggregate functions are deterministic, which means they always return the same value when they run on the same input values. For more information, see [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).|
+
+## Analytic functions
+Analytic functions compute an aggregate value based on a group of rows. However, unlike aggregate functions, analytic functions can return multiple rows for each group. You can use analytic functions to compute moving averages, running totals, percentages, or top-N results within a group.
+
+## Ranking functions
+Ranking functions return a ranking value for each row in a partition. Depending on the function that is used, some rows might receive the same value as other rows. Ranking functions are nondeterministic.
+
+## Rowset functions
+Rowset functions Return an object that can be used like table references in an SQL statement.
+
+## Scalar functions
+Operate on a single value and then return a single value. Scalar functions can be used wherever an expression is valid.
+
+### Categories of scalar functions
   
 |Function category|Description|  
 |-----------------------|-----------------|  
-|[Configuration Functions](../../t-sql/functions/configuration-functions-transact-sql.md)|Return information about the current configuration.|  
-|[Conversion Functions](../../t-sql/functions/conversion-functions-transact-sql.md)|Support data type casting and converting.|  
-|[Cursor Functions](../../t-sql/functions/cursor-functions-transact-sql.md)|Return information about cursors.|  
-|[Date and Time Data Types and Functions](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)|Perform operations on a date and time input values and return string, numeric, or date and time values.|  
-|[JSON Functions](../../t-sql/functions/json-functions-transact-sql.md)|Validate, query, or change JSON data.|  
+|[Configuration Functions](configuration-functions-transact-sql.md)|Return information about the current configuration.|  
+|[Conversion Functions](conversion-functions-transact-sql.md)|Support data type casting and converting.|  
+|[Cursor Functions](cursor-functions-transact-sql.md)|Return information about cursors.|  
+|[Date and Time Data Types and Functions](date-and-time-data-types-and-functions-transact-sql.md)|Perform operations on a date and time input values and return string, numeric, or date and time values.|  
+|[JSON Functions](json-functions-transact-sql.md)|Validate, query, or change JSON data.|  
 |[Logical Functions](http://msdn.microsoft.com/library/5b2b4546-951b-462d-91d5-e41fc5acd6f9)|Perform logical operations.|  
-|[Mathematical Functions](../../t-sql/functions/mathematical-functions-transact-sql.md)|Perform calculations based on input values provided as parameters to the functions, and return numeric values.|  
-|[Metadata Functions](../../t-sql/functions/metadata-functions-transact-sql.md)|Return information about the database and database objects.|  
-|[Security Functions](../../t-sql/functions/security-functions-transact-sql.md)|Return information about users and roles.|  
-|[String Functions](../../t-sql/functions/string-functions-transact-sql.md)|Perform operations on a string (**char** or **varchar**) input value and return a string or numeric value.|  
+|[Mathematical Functions](mathematical-functions-transact-sql.md)|Perform calculations based on input values provided as parameters to the functions, and return numeric values.|  
+|[Metadata Functions](metadata-functions-transact-sql.md)|Return information about the database and database objects.|  
+|[Security Functions](security-functions-transact-sql.md)|Return information about users and roles.|  
+|[String Functions](string-functions-transact-sql.md)|Perform operations on a string (**char** or **varchar**) input value and return a string or numeric value.|  
 |[System Functions](../../relational-databases/system-functions/system-functions-for-transact-sql.md)|Perform operations and return information about values, objects, and settings in an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|[System Statistical Functions](../../t-sql/functions/system-statistical-functions-transact-sql.md)|Return statistical information about the system.|  
+|[System Statistical Functions](system-statistical-functions-transact-sql.md)|Return statistical information about the system.|  
 |[Text and Image Functions](http://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)|Perform operations on text or image input values or columns, and return information about the value.|  
   
 ## Function Determinism  

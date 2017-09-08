@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Sample Console Script Files,VariableValueFileSample.xml"
 ms.assetid: c6202dcc-b994-457b-9b2f-0cd89e79792d
 caps.latest.revision: 9
-author: "sabotta"
-ms.author: "carlasab"
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "v-thobro"
 ---
 # Working with the Sample Console Script Files (OracleToSQL)

@@ -61,7 +61,7 @@ fn_syscollector_get_execution_details ( log_id )
  Requires SELECT permission for **dc_operator**.  
   
 ## See Also  
- [Enable Package Logging in SQL Server Data Tools](../../integration-services/performance/enable-package-logging-in-sql-server-data-tools.md)   
+ [Enable Package Logging in SQL Server Data Tools](../../integration-services/performance/integration-services-ssis-logging.md#server_logging)   
  [Data Collection](../../relational-databases/data-collection/data-collection.md)  
   
   

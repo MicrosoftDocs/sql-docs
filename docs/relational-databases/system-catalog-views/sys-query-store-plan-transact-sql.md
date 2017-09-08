@@ -51,10 +51,32 @@ manager: "jhubbard"
 |**count_compiles**|**bigint**|Plan compilation statistics.|  
 |**initial_compile_start_time**|**datetimeoffset**|Plan compilation statistics.|  
 |**last_compile_start_time**|**datetimeoffset**|Plan compilation statistics.|  
-|**last_execution_time**|**datetimeoffset**|Last execution time.|  
+|**last_execution_time**|**datetimeoffset**|Last execution time refers to the last end time of the query/plan.|  
 |**avg_compile_duration**|**float**|Plan compilation statistics.|  
 |**last_compile_duration**|**bigint**|Plan compilation statistics.|  
   
+## Plan forcing limitations
+Query Store has a mechanism to enforce Query Optimizer to use certain execution plan. 
+However, there are some limitations that can prevent a plan to be enforced. 
+
+First, if the plan contains following constructions:
+* Insert bulk statement.
+* Insert bulk statement.
+* Reference to an external table
+* Distributed query or full-text operations
+* Use of Global queries 
+* Cursors
+* Invalid star join specification 
+
+Second, when objects that plan relies on, are no longer available:
+* Database (if Database, where plan originated, does not exist anymore)
+* Index (no longer there or disabled)
+
+Finally, problems with the plan itself:
+* Not legal for query
+* Query Optimizer exceeded number of allowed operations
+* Incorrectly formed plan XML
+
 ## Permissions  
  Requires the **VIEW DATABASE STATE** permission.  
   
@@ -64,6 +86,7 @@ manager: "jhubbard"
  [sys.query_store_query &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)   
  [sys.query_store_query_text &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)   
  [sys.query_store_runtime_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)   
+ [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)  
  [sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
  [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   

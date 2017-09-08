@@ -1,8 +1,8 @@
 ---
-title: "DirectQuery Mode (SSAS Tabular) | Microsoft Docs"
+title: "DirectQuery Mode | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
+ms.date: "07/06/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -18,8 +18,12 @@ author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
 ---
-# DirectQuery Mode (SSAS Tabular)
-  This topic describes *DirectQuery mode* for Analysis Services tabular models at the 1200 compatibility level. DirectQuery mode can be turned on for models you're designing in SSDT, or for tabular models that have already been deployed, you can change to DirectQuery mode in SSMS. Before choosing DirectQuery mode, it's important to understand both the benefits and restrictions.
+# DirectQuery Mode
+
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
+  This topic describes *DirectQuery mode* for Analysis Services tabular models at the 1200 and higher compatibility levels
+  . DirectQuery mode can be turned on for models you're designing in SSDT, or for tabular models that have already been deployed, you can change to DirectQuery mode in SSMS. Before choosing DirectQuery mode, it's important to understand both the benefits and restrictions.
   
 ##  <a name="bkmk_Benefits"></a> Benefits
  By default, tabular models use an in-memory cache to store and query data. When tabular models query data residing in-memory, even complex queries can be incredibly fast. However, there are some limitations to using cached data. Namely, large data sets can exceed available memory, and data freshness requirements can be difficult if not impossible to achieve on a regular processing schedule.  
@@ -30,7 +34,7 @@ manager: "erikre"
   
 -   Datasets can be larger than the memory capacity of an Analysis Services server.  
   
--   DirectQuery can take advantage of provider-side query acceleration, such as that provided by xVelocity memory optimized column indexes.  
+-   DirectQuery can take advantage of provider-side query acceleration, such as that provided by memory optimized column indexes.  
   
 -   Security can be enforced by the back-end database , using row-level security features from the database (alternatively, you can use row-level security in the model via DAX).  
   
@@ -55,7 +59,7 @@ Tabular models in DirectQuery mode have some restrictions. Before switching mode
 |**MDX limitations**|No relative object names. All object names must be fully qualified.<br /><br /> No session-scope MDX statements (named sets, calculated members, calculated cells, visual totals, default members, and so forth), but you can use query-scope constructs, such as the 'WITH' clause.<br /><br /> No tuples with members from different levels in MDX subselect clauses.<br /><br /> No user-defined hierarchies.<br /><br /> No native SQL queries (normally, Analysis Services supports a T-SQL subset, but not for DirectQuery models).|  
 
 ## Data sources supported for DirectQuery
-DirectQuery tabular models at compatibility level 1200 are compatible with the following data sources and providers:
+DirectQuery tabular models at compatibility level 1200 and higher are compatible with the following data sources and providers:
 
 Data source   |Versions  |Providers
 ---------|---------|---------

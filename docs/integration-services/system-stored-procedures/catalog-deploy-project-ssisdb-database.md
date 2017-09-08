@@ -39,7 +39,7 @@ deploy_project [ @folder_name = ] folder_name
  [ @projectstream = ] *projectstream*  
  The binary contents of an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project deployment file (.ispac extension).  
   
- You can use a SELECT statement with the OPENROWSET function and the BULK rowset provider to retrieve the binary contents of the file. For an example, see [Deploy and Execute SSIS Packages using Stored Procedures](../../integration-services/packages/deploy-and-execute-ssis-packages-using-stored-procedures.md). For more information about OPENROWSET, see [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md).  
+ You can use a SELECT statement with the OPENROWSET function and the BULK rowset provider to retrieve the binary contents of the file. For an example, see [Deploy Integration Services (SSIS) Projects and Packages](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md). For more information about OPENROWSET, see [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md).  
   
  The *projectstream* is **varbinary(MAX)**  
   

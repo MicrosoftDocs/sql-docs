@@ -1,7 +1,7 @@
 ---
 title: "STBuffer (geometry Data Type) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "08/03/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -25,11 +25,7 @@ manager: "jhubbard"
 # STBuffer (geometry Data Type)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Returns a geometric object that represents the union of all points whose distance from a **geometry** instance is less than or equal to a specified value.  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
+Returns a geometric object that represents the union of all points whose distance from a **geometry** instance is less than or equal to a specified value.
   
 ## Syntax  
   
@@ -57,7 +53,7 @@ manager: "jhubbard"
   
  When *distance* = 0, then a copy of the calling **geometry** instance is returned.  
   
- When *distance* \< 0, then  
+ When *distance* < 0, then  
   
 -   an empty **GeometryCollection** instance is returned when the dimensions of the instance are 0 or 1.  
   
@@ -162,3 +158,4 @@ manager: "jhubbard"
  [OGC Methods on Geometry Instances](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   
+

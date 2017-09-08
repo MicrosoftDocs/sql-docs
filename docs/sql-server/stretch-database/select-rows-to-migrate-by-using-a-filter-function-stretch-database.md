@@ -5,7 +5,6 @@ ms.custom:
 ms.date: "06/27/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
-ms.service: "sql-server-stretch-database"
 ms.suite: ""
 ms.technology: 
   - "dbe-stretch"
@@ -20,7 +19,7 @@ ms.assetid: 090890ee-7620-4a08-8e15-d2fbc71dd12f
 caps.latest.revision: 43
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ---
 # Select rows to migrate by using a filter function (Stretch Database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -351,7 +350,7 @@ COMMIT ;
     WITH SCHEMABINDING   
     AS   
     RETURN  SELECT 1 AS is_eligible  
-        WHERE @column1 < CONVERT(datetime, '1/1/2015', 101) AND (@column2 \< -100 OR @column2 > 100 OR @column2 IS NULL) AND @column3 IN (N'Completed', N'Returned', N'Cancelled')  
+        WHERE @column1 < CONVERT(datetime, '1/1/2015', 101) AND (@column2 < -100 OR @column2 > 100 OR @column2 IS NULL) AND @column3 IN (N'Completed', N'Returned', N'Cancelled')  
     GO  
   
     ```  
@@ -391,7 +390,7 @@ COMMIT ;
     WITH SCHEMABINDING   
     AS   
     RETURN  SELECT 1 AS is_eligible  
-            WHERE @column1 >= 0 AND @column1 <= 100 AND (@column2 \< 200 OR @column2 > 300 OR @column1 = 50)  
+            WHERE @column1 >= 0 AND @column1 <= 100 AND (@column2 < 200 OR @column2 > 300 OR @column1 = 50)  
     GO  
   
     ```  
@@ -479,7 +478,7 @@ COMMIT ;
     WITH SCHEMABINDING   
     AS   
     RETURN  SELECT 1 AS is_eligible  
-            WHERE (@column1 >= 1 AND @column1 \<= 200 OR @column1 = 300) AND @column2 > 1000  
+            WHERE (@column1 >= 1 AND @column1 <= 200 OR @column1 = 300) AND @column2 > 1000  
     GO  
   
     ```  
@@ -525,7 +524,7 @@ WITH SCHEMABINDING
 AS   
 RETURN  SELECT 1 AS is_eligible  
         WHERE @column1 < CONVERT(datetime, '1/1/2016', 101)  
-            AND (@column2 \< -100 OR @column2 > 100)  
+            AND (@column2 < -100 OR @column2 > 100)  
 GO  
   
 ```  
@@ -539,7 +538,7 @@ WITH SCHEMABINDING
 AS   
 RETURN  SELECT 1 AS is_eligible  
         WHERE @column1 < CONVERT(datetime, '2/1/2016', 101)  
-            AND (@column2 \< -50 OR @column2 > 50)  
+            AND (@column2 < -50 OR @column2 > 50)  
 GO  
   
 ```  
@@ -554,7 +553,7 @@ WITH SCHEMABINDING
 AS   
 RETURN  SELECT 1 AS is_eligible  
         WHERE @column1 < CONVERT(datetime, '1/1/2015', 101)  
-            AND (@column2 \< -100 OR @column2 > 100)  
+            AND (@column2 < -100 OR @column2 > 100)  
 GO  
   
 ```  
@@ -582,7 +581,7 @@ WITH SCHEMABINDING
 AS   
 RETURN  SELECT 1 AS is_eligible  
         WHERE @column1 < CONVERT(datetime, '1/1/2016', 101)  
-            AND (@column2 \< -100 OR @column2 > 100)  
+            AND (@column2 < -100 OR @column2 > 100)  
             AND (@column2 <> 0)  
 GO  
   

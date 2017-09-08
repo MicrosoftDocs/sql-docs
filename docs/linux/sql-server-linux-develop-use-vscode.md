@@ -1,6 +1,4 @@
 ---
-# required metadata
-
 title: Use the Visual Studio Code mssql extension for SQL Server | Microsoft Docs
 description: This tutorial shows how to use the mssql extension for VS Code. This extension allows you to edit and run Transact-SQL scripts in VS Code.
 author: erickangMSFT 
@@ -11,20 +9,11 @@ ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 9766ee75-32d3-4045-82a6-4c7968bdbaa6
-
-# optional metadata
-
-# keywords: ""
-# ROBOTS: ""
-# audience: ""
-# ms.devlang: ""
-# ms.reviewer: ""
-# ms.suite: ""
-# ms.tgt_pltfrm: ""
 ms.custom: H1Hack27Feb2017
-
 ---
 # Use Visual Studio Code to create and run Transact-SQL scripts for SQL Server
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 This topic shows how to use the **mssql** extension for Visual Studio Code (VS Code) to develop SQL Server databases.
 
@@ -241,7 +230,7 @@ The following steps show how to connect to SQL Server with VS Code.
 
    <img src="./media/sql-server-linux-develop-use-vscode/vscode-grid-context-menu.png" alt="Context menu" style="width: 500px;" />
 
-4. Select **Save All**.
+4. Select **Select All**.
 
 5. Open the grid context menu and select **Save as JSON** to save the result to a .json file.
 

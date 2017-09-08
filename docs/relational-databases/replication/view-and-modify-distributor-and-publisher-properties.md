@@ -74,7 +74,7 @@ manager: "jhubbard"
   
 2.  Right-click the **Replication** folder, and then click **Publisher Properties**.  
   
-3.  View and modify properties in the **Publisher Properties - \< Publisher >** dialog box.  
+3.  View and modify properties in the **Publisher Properties - < Publisher >** dialog box.  
   
     -   A user in the **sysadmin** fixed server role can enable databases for replication on the **Publication Databases** page. Enabling a database does not publish that database; rather, it allows any user in the **db_owner** fixed database role for that database to create one or more publications in the database.  
   

@@ -60,7 +60,7 @@ manager: "jhubbard"
 |------|---------|---------|  
 |**MoveFirst**, **MoveLast**|Set to **True**|Set to **True**|  
 |**Move** 0|No change|No change|  
-|**MovePrevious**, **Move** \< 0|Set to **True**|No change|  
+|**MovePrevious**, **Move** < 0|Set to **True**|No change|  
 |**MoveNext**, **Move** > 0|No change|Set to **True**|  
   
 ## Applies To  

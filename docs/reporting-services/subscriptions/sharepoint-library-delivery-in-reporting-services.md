@@ -67,13 +67,13 @@ manager: "erikre"
  Note that you cannot specify output formats that are for internal use only, or that are not supported for report servers that run in SharePoint integrated mode. These formats include Null, RGDI and HTMLOWC.  
   
  File name and extension  
- Specify the file name and extension of the report as you want it to appear in the target library. If you do not specify a file extension, the report server will create one based on the report output format. This value is required. The file name must not include the following characters: : \ / * ? " \< > | # { } %  
+ Specify the file name and extension of the report as you want it to appear in the target library. If you do not specify a file extension, the report server will create one based on the report output format. This value is required. The file name must not include the following characters: : \ / * ? " < > | # { } %  
   
  Title  
  Specifies an optional **Title** property for the report in the target library. This is a standard property for all items stored in a library. Users can specify whether to show or hide this property when viewing library contents on a SharePoint site.  
   
  Path  
- Specifies a fully qualified URL to the SharePoint library, including the SharePoint Web application and site. For example: http://mySharePointWeb/MySite/MyDocLib; where "http://mySharePointWeb" indicates the Web application, "MySite" is the SharePoint site, and "MyDocLib" is the SharePoint library where the report will be delivered.  
+ Specifies a fully qualified URL to the SharePoint library, including the SharePoint Web application and site. For example: `http://mySharePointWeb/MySite/MyDocLib`; where `http://mySharePointWeb` indicates the Web application, "MySite" is the SharePoint site, and "MyDocLib" is the SharePoint library where the report will be delivered.  
   
  You cannot specify a page, site, or list. The target container must be a library in the same site or farm.  
   

@@ -1,7 +1,7 @@
 ---
 title: "ENABLE TRIGGER (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "05/12/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -37,7 +37,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
-  
 ENABLE TRIGGER { [ schema_name . ] trigger_name [ ,...n ] | ALL }  
 ON { object_name | DATABASE | ALL SERVER } [ ; ]  
 ```  
@@ -59,9 +58,7 @@ ON { object_name | DATABASE | ALL SERVER } [ ; ]
  For a DDL trigger, indicates that *trigger_name* was created or modified to execute with database scope.  
   
  ALL SERVER  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+ **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  For a DDL trigger, indicates that *trigger_name* was created or modified to execute with server scope. ALL SERVER also applies to logon triggers.  
   
@@ -79,26 +76,19 @@ ON { object_name | DATABASE | ALL SERVER } [ ; ]
 ## Examples  
   
 ### A. Enabling a DML trigger on a table  
- The following example disables trigger `uAddress` that was created on table `Address`, and then enables it.  
+ The following example disables trigger `uAddress` that was created on table `Address` in the AdventureWorks database, and then enables it.  
   
 ```  
-USE AdventureWorks2012;  
-GO  
 DISABLE TRIGGER Person.uAddress ON Person.Address;  
 GO  
 ENABLE Trigger Person.uAddress ON Person.Address;  
 GO  
-  
 ```  
   
 ### B. Enabling a DDL trigger  
- The following example creates a DDL trigger `safety` with database scope, and then disables it.  
+ The following example creates a DDL trigger `safety` with database scope, and then disable and enables it.  
   
 ```  
-IF EXISTS (SELECT * FROM sys.triggers  
-    WHERE parent_class = 0 AND name = 'safety')  
-DROP TRIGGER safety ON DATABASE;  
-GO  
 CREATE TRIGGER safety   
 ON DATABASE   
 FOR DROP_TABLE, ALTER_TABLE   
@@ -110,22 +100,16 @@ DISABLE TRIGGER safety ON DATABASE;
 GO  
 ENABLE TRIGGER safety ON DATABASE;  
 GO  
-  
 ```  
   
 ### C. Enabling all triggers that were defined with the same scope  
  The following example enables all DDL triggers that were created at the server scope.  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 ```  
-USE AdventureWorks2012;  
-GO  
 ENABLE Trigger ALL ON ALL SERVER;  
 GO  
-  
 ```  
   
 ## See Also  

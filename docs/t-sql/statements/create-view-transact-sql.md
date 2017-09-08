@@ -1,7 +1,7 @@
 ---
 title: "CREATE VIEW (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/22/2017"
+ms.date: "08/10/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -87,9 +87,7 @@ AS <select_statement>
   
 ## Arguments
 OR ALTER  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1).|   
+ **Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1).   
   
  Conditionally alters the view only if it already exists. 
  
@@ -130,7 +128,7 @@ OR ALTER
   
 -   A reference to a temporary table or a table variable.  
   
- Because *select_statement* uses the SELECT statement, it is valid to use <join_hint> and <table_hint> hints as specified in the FROM clause. For more information, see [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md) and [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md).  
+ Because *select_statement* uses the SELECT statement, it is valid to use \<join_hint> and \<table_hint> hints as specified in the FROM clause. For more information, see [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md) and [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md). 
   
  Functions and multiple SELECT statements separated by UNION or UNION ALL can be used in *select_statement*.  
   
@@ -141,9 +139,7 @@ OR ALTER
 >  Any updates performed directly to a view's underlying tables are not verified against the view, even if CHECK OPTION is specified.  
   
  ENCRYPTION  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
+ **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Encrypts the entries in [sys.syscomments](../../relational-databases/system-compatibility-views/sys-syscomments-transact-sql.md) that contain the text of the CREATE VIEW statement. Using WITH ENCRYPTION prevents the view from being published as part of SQL Server replication.  
   
@@ -255,13 +251,13 @@ FROM Tn;
          Constraint `C1` defined on table `T1` must be of the following form:  
   
         ```  
-        C1 ::= \< simple_interval > [ OR \< simple_interval > OR ...]  
-        \< simple_interval > :: =   
-        \< col > { \< | > | \<= | >= | = \< value >}   
-        | \< col > BETWEEN \< value1 > AND \< value2 >  
-        | \< col > IN ( value_list )  
-        | \< col > { > | >= } \< value1 > AND  
-        \< col > { < | <= } \< value2 >  
+        C1 ::= < simple_interval > [ OR < simple_interval > OR ...]  
+        < simple_interval > :: =   
+        < col > { < | > | \<= | >= | = < value >}   
+        | < col > BETWEEN < value1 > AND < value2 >  
+        | < col > IN ( value_list )  
+        | < col > { > | >= } < value1 > AND  
+        < col > { < | <= } < value2 >  
         ```  
   
     -   The constraints should be in such a way that any specified value of `<col>` can satisfy, at most, one of the constraints `C1, ..., Cn` so that the constraints should form a set of disjointed or nonoverlapping intervals. The column `<col>` on which the disjointed constraints are defined is called the partitioning column. Note that the partitioning column may have different names in the underlying tables. The constraints should be in an enabled and trusted state for them to meet the previously mentioned conditions of the partitioning column. If the constraints are disabled, re-enable constraint checking by using the CHECK CONSTRAINT *constraint_name* option of ALTER TABLE, and using the WITH CHECK option to validate them.  
@@ -269,7 +265,7 @@ FROM Tn;
          The following examples show valid sets of constraints:  
   
         ```  
-        { [col \< 10], [col between 11 and 20] , [col > 20] }  
+        { [col < 10], [col between 11 and 20] , [col > 20] }  
         { [col between 11 and 20], [col between 21 and 30], [col between 31 and 100] }  
         ```  
   
@@ -351,16 +347,13 @@ FROM Tn;
  Requires CREATE VIEW permission in the database and ALTER permission on the schema in which the view is being created.  
   
 ## Examples  
-  
+
+The following examples use the AdventureWorks 2012 or AdventureWorksDW database.  
+
 ### A. Using a simple CREATE VIEW  
  The following example creates a view by using a simple `SELECT` statement. A simple view is helpful when a combination of columns is queried frequently. The data from this view comes from the `HumanResources.Employee` and `Person.Person` tables of the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database. The data provides name and hire date information for the employees of [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)]. The view could be created for the person in charge of tracking work anniversaries but without giving this person access to all the data in these tables.  
   
 ```  
-USE AdventureWorks2012 ;  
-GO  
-IF OBJECT_ID ('hiredate_view', 'V') IS NOT NULL  
-DROP VIEW hiredate_view ;  
-GO  
 CREATE VIEW hiredate_view  
 AS   
 SELECT p.FirstName, p.LastName, e.BusinessEntityID, e.HireDate  
@@ -373,16 +366,9 @@ GO
 ### B. Using WITH ENCRYPTION  
  The following example uses the `WITH ENCRYPTION` option and shows computed columns, renamed columns, and multiple columns.  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|  
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
 ```  
-USE AdventureWorks2012 ;  
-GO  
-IF OBJECT_ID ('Purchasing.PurchaseOrderReject', 'V') IS NOT NULL  
-    DROP VIEW Purchasing.PurchaseOrderReject ;  
-GO  
 CREATE VIEW Purchasing.PurchaseOrderReject  
 WITH ENCRYPTION  
 AS  
@@ -399,11 +385,6 @@ GO
  The following example shows a view named `SeattleOnly` that references five tables and allows for data modifications to apply only to employees who live in Seattle.  
   
 ```  
-USE AdventureWorks2012 ;  
-GO  
-IF OBJECT_ID ('dbo.SeattleOnly', 'V') IS NOT NULL  
-    DROP VIEW dbo.SeattleOnly ;  
-GO  
 CREATE VIEW dbo.SeattleOnly  
 AS  
 SELECT p.LastName, p.FirstName, e.JobTitle, a.City, sp.StateProvinceCode  
@@ -419,18 +400,12 @@ ON p.BusinessEntityID = e.BusinessEntityID
 WHERE a.City = 'Seattle'  
 WITH CHECK OPTION ;  
 GO  
-  
 ```  
   
 ### D. Using built-in functions within a view  
  The following example shows a view definition that includes a built-in function. When you use functions, you must specify a column name for the derived column.  
   
 ```  
-USE AdventureWorks2012 ;  
-GO  
-IF OBJECT_ID ('Sales.SalesPersonPerform', 'V') IS NOT NULL  
-    DROP VIEW Sales.SalesPersonPerform ;  
-GO  
 CREATE VIEW Sales.SalesPersonPerform  
 AS  
 SELECT TOP (100) SalesPersonID, SUM(TotalDue) AS TotalSales  
@@ -438,7 +413,7 @@ FROM Sales.SalesOrderHeader
 WHERE OrderDate > CONVERT(DATETIME,'20001231',101)  
 GROUP BY SalesPersonID;  
 GO  
-  
+
 ```  
   
 ### E. Using partitioned data  
@@ -473,17 +448,16 @@ CREATE VIEW dbo.all_supplier_view
 WITH SCHEMABINDING  
 AS  
 SELECT supplyID, supplier  
-FROM dbo.SUPPLY1  
+  FROM dbo.SUPPLY1  
 UNION ALL  
 SELECT supplyID, supplier  
-FROM dbo.SUPPLY2  
+  FROM dbo.SUPPLY2  
 UNION ALL  
 SELECT supplyID, supplier  
-FROM dbo.SUPPLY3  
+  FROM dbo.SUPPLY3  
 UNION ALL  
 SELECT supplyID, supplier  
-FROM dbo.SUPPLY4;  
-  
+  FROM dbo.SUPPLY4;  
 ```  
   
 ## Examples: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
@@ -492,8 +466,6 @@ FROM dbo.SUPPLY4;
  The following example creates a view by selecting only some of the columns from the source table.  
   
 ```  
--- Uses AdventureWorks  
-  
 CREATE VIEW DimEmployeeBirthDates AS  
 SELECT FirstName, LastName, BirthDate   
 FROM DimEmployee;  
@@ -503,10 +475,10 @@ FROM DimEmployee;
  The following example creates a view by using a `SELECT` statement with an `OUTER JOIN`. The results of the join query populate the view.  
   
 ```  
--- Uses AdventureWorks  
-  
 CREATE VIEW view1  
-AS SELECT fis.CustomerKey, fis.ProductKey, fis.OrderDateKey, fis.SalesTerritoryKey, dst.SalesTerritoryRegion  
+AS 
+SELECT fis.CustomerKey, fis.ProductKey, fis.OrderDateKey, 
+  fis.SalesTerritoryKey, dst.SalesTerritoryRegion  
 FROM FactInternetSales AS fis   
 LEFT OUTER JOIN DimSalesTerritory AS dst   
 ON (fis.SalesTerritoryKey=dst.SalesTerritoryKey);  
@@ -530,3 +502,4 @@ ON (fis.SalesTerritoryKey=dst.SalesTerritoryKey);
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   
+

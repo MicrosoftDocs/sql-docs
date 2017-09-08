@@ -49,7 +49,7 @@ manager: "jhubbard"
      The system creates the file when you run the package.  
   
     > [!NOTE]  
-    >  The protection level of the package does not apply to the cache file. If the cache file contains sensitive information, use an access control list (ACL) to restrict access to the location or folder in which you store the file. You should enable access only to certain accounts. For more information, see [Access to Files Used by Packages](../../../integration-services/security/access-to-files-used-by-packages.md).  
+    >  The protection level of the package does not apply to the cache file. If the cache file contains sensitive information, use an access control list (ACL) to restrict access to the location or folder in which you store the file. You should enable access only to certain accounts. For more information, see [Access to Files Used by Packages](../../../integration-services/security/security-overview-integration-services.md#files).  
   
 6.  Click the **Columns** tab, and then specify which columns are the index columns by using the **Index Position** option.  
   

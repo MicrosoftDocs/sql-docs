@@ -1,4 +1,4 @@
----
+﻿---
 title: "System Settings (Master Data Services) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -14,9 +14,9 @@ helpviewer_keywords:
   - "system settings [Master Data Services]"
 ms.assetid: 83075cdf-f059-4646-8ba2-19be8202f130
 caps.latest.revision: 17
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
+author: "smartysanthosh"
+ms.author: "nagavo"
+manager: "craigg"
 ---
 # System Settings (Master Data Services)
   For all web applications and web services associated with a [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database, you can configure system settings.  
@@ -102,7 +102,7 @@ manager: "jhubbard"
   
 |Configuration Manager Setting|System Setting|Description|  
 |-----------------------------------|--------------------|-----------------|  
-|**Master Data Manager URL for notifications**|**MDMRootURL**|The URL for the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] web application, which is used in the link in email notifications, for example http://constoso/mds.|  
+|**Master Data Manager URL for notifications**|**MDMRootURL**|The URL for the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] web application, which is used in the link in email notifications, for example `http://constoso/mds`.|  
 |**Notification email interval**|**NotificationInterval**|The frequency, in seconds, that email notifications are sent. The default value is **120** seconds (2 minutes).|  
 |**Number of notifications in a single email**|**NotificationsPerEmail**|The maximum number of validation issues that will be listed in a single notification email. Additional issues, if they exist, are not included in the email, but are available in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].|  
 |**Default email format**|**EmailFormat**|The format for all email notifications. The default value is **HTML** or **1**. The database setting of **2** indicates **Text**.<br /><br /> Note: You can override this for an individual user in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], by changing and saving the **Email format** on the user's **General** tab.|  

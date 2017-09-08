@@ -1,7 +1,7 @@
 ---
 title: "Tutorial: How to Locate and Start Reporting Services Tools (SSRS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/01/2016"
+ms.date: "05/30/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -26,7 +26,9 @@ author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "erikre"
 ---
+
 # Tutorial: How to Locate and Start Reporting Services Tools (SSRS)
+
   This tutorial introduces the tools used to configure a report server, manage report server content and operations, and create and publish paginated and mobile [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] reports. If you are already familiar with the tools, you can move on to other tutorials to learn skills for using [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. For other tutorials, see [Reporting Services Tutorials &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md).  
   
   
@@ -58,7 +60,7 @@ manager: "erikre"
   
      If you specify a remote computer, click **Find** to establish a connection. The report server must be configured for remote administration in advance. For more information, see [Configure a Report Server for Remote Administration](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md).  
   
-3.  In **Instance Name**, choose the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] instance that you want to configure. Only [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], and [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] report server instances appear in the list. You cannot configure earlier versions of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+3.  In **Instance Name**, choose the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] instance that you want to configure. Only SQL Server 2008 and later report server instances appear in the list. You cannot configure earlier versions of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
 4.  Click **Connect**.  
   
@@ -79,7 +81,7 @@ manager: "erikre"
   
 1.  Open your browser. For information on supported browsers and browser versions, see [Browser Support for Reporting Services and Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md).  
   
-2.  In the address bar of the Web browser, type the Web Portal URL. By default, the URL is **http://\<serverName>/reports**. You can use the Reporting Services Configuration tool to confirm the server name and URL. For more information about URLs used in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], see [Configure Report Server URLs  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md).  
+2.  In the address bar of the Web browser, type the Web Portal URL. By default, the URL is `http://<serverName>/reports`. You can use the Reporting Services Configuration tool to confirm the server name and URL. For more information about URLs used in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], see [Configure Report Server URLs  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md).  
   
 3.  The Web Portal opens in the browser window. The startup page is the Home folder. Depending on permissions, you might see additional folders, hyperlinks to reports, and resource files within the startup page. You might also see additional buttons and commands on the toolbar.  
   
@@ -168,14 +170,15 @@ Download [SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714).
      [Download SQL Server Mobile Report Publisher](http://go.microsoft.com/fwlink/?LinkID=733527) from the Microsoft Download Center.  
   
 3.  [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short-md.md)] opens and you can create or open a mobile report.  
-  
-## See Also  
-*  [Download SQL Server Mobile Report Publisher](http://go.microsoft.com/fwlink/?LinkID=733527)   
-*  [Download Report Builder](http://go.microsoft.com/fwlink/?LinkID=219138)  
-*  [Download SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714) 
-*  [Install Reporting Services SharePoint Mode](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)   
-*  [Reporting Services Report Server](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)   
-*  [Query Design Tools &#40;SSRS&#41;](../../reporting-services/report-data/query-design-tools-ssrs.md)   
-*  [Reporting Services Tutorials &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)  
-  
-  
+
+## Next steps
+
+[Download SQL Server Mobile Report Publisher](http://go.microsoft.com/fwlink/?LinkID=733527)   
+[Download Report Builder](http://go.microsoft.com/fwlink/?LinkID=219138)  
+[Download SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714) 
+[Install Reporting Services SharePoint Mode](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)   
+[Reporting Services Report Server](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)   
+[Query Design Tools](../../reporting-services/report-data/query-design-tools-ssrs.md)   
+[Reporting Services Tutorials](../../reporting-services/reporting-services-tutorials-ssrs.md)  
+
+More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)

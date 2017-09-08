@@ -1,7 +1,7 @@
 ---
 title: "Migrate a Reporting Services Installation (SharePoint Mode) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/29/2016"
+ms.date: "08/17/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -16,14 +16,14 @@ author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
 ---
+
 # Migrate a Reporting Services Installation (SharePoint Mode)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
+
   This topic is an overview of the steps needed to migrate a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode deployment from one SharePoint environment to another. The specific steps can be different depending on the version you are migrating from. For more information on Upgrade and Migration scenarios for SharePoint mode, see [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md). If you only want to copy the report items from one server to another, see [Sample Reporting Services rs.exe Script to Copy Content between Report Servers](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
   
  For information on migrating a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] native mode deployment, see [Migrate a Reporting Services Installation &#40;Native Mode&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md).  
-  
-||  
-|-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013 and SharePoint 2016|  
   
  A common reason you complete a migration is when you want to upgrade your SharePoint 2010 deployment to SharePoint 2013/2016. SharePoint 2013/2016 does not support in-place upgrade from SharePoint 2010 and you must complete the procedure of **database-attach upgrade** or a content only migration.  
   
@@ -44,7 +44,7 @@ manager: "erikre"
 -   [Move content databases in SharePoint 2013](http://technet.microsoft.com/library/cc262792.aspx).
   
 ##  <a name="bkmk_prior_versions"></a> Migrate from Reporting Services SharePoint mode versions prior to SQL Server 2012  
- The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode architecture changed in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], including the service application database schema. If you want to migrate to [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] SharePoint mode from a version prior to [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], first create the new SharePoint environment by installing SharePoint and [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode. For more information, see [Install Reporting Services SharePoint Mode](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md).  
+ The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode architecture changed in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], including the service application database schema. If you want to migrate to [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] SharePoint mode from a version prior to [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], first create the new SharePoint environment by installing SharePoint and SQL Server 2016 Reporting Services SharePoint mode. For more information, see [Install Reporting Services SharePoint Mode](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md).  
   
  Once the new SharePoint environment is running, you can choose between a content only migration or a full migration at the database level that includes content databases.  
   
@@ -56,7 +56,7 @@ manager: "erikre"
 -   **Reporting Services Migration Tool:** The tool can copy your report items from a native mode server to a SharePoint mode server. For more information, see [Reporting Services Migration Tool](http://www.microsoft.com/download/details.aspx?id=29560) (http://www.microsoft.com/download/details.aspx?id=29560).  
   
 ###  <a name="bkmk_full_migration"></a> Full Migration  
- **Full Migration:** If you are migrating SharePoint content databases along with the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] catalog databases to a new farm you can follow a series of backup and restore options summarized in this topic. In some cases you will need to use a different tool for the restore phase than you used for the backup phase. For example you can use [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager to backup encryption keys from a previous version of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] but you need to use SharePoint Central administration or PowerShell to restore the encryption keys to a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode installation.  
+ **Full Migration:** If you are migrating SharePoint content databases along with the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] catalog databases to a new farm you can follow a series of backup and restore options summarized in this topic. In some cases you will need to use a different tool for the restore phase than you used for the backup phase. For example you can use [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager to backup encryption keys from a previous version of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] but you need to use SharePoint Central administration or PowerShell to restore the encryption keys to a SQL Server 2016 Reporting Services SharePoint mode installation.  
   
 ####  <a name="bkmk_databases"></a> Databases you will see in the completed migration  
  The following table describes the SQL Server Databases related to [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] you will have after you successfully migrate your [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint installation:  
@@ -89,7 +89,7 @@ manager: "erikre"
 ||Objects|Method|Notes|  
 |-|-------------|------------|-----------|  
 |**1**|Restore SharePoint Content databases to the new farm.|SharePoint “Database attach upgrade“ Method.|Basic Steps:<br /><br /> 1) Restore the database on the new server.<br /><br /> 2) Attach the content database to a web application by indicating the URL.<br /><br /> 3) Get-SPWebapplication lists all web applications and the URLs.<br /><br /> <br /><br /> See the section “Database attach upgrade “ in [Determine upgrade approach (SharePoint Server 2010) (http://technet.microsoft.com/library/cc263447.aspx)](http://technet.microsoft.com/library/cc263447.aspx)and [Attach databases and upgrade to SharePoint Server 2010 (http://technet.microsoft.com/library/cc263299.aspx)](http://technet.microsoft.com/library/cc263299.aspx).|  
-|**2**|Restore the SQL Server database that is the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] catalog database (ReportServer).|SQL Database backup and restore.<br /><br /> **or**<br /><br /> SQL Server database attached and detach.|The first time the database is used, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] will update the database schema as needed so it will work with the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] environment.|  
+|**2**|Restore the SQL Server database that is the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] catalog database (ReportServer).|SQL Database backup and restore.<br /><br /> **or**<br /><br /> SQL Server database attached and detach.|The first time the database is used, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] will update the database schema as needed so it will work with the SQL Server 2016 environment.|  
 |**3**|Create a new [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application.|Create a new [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application.|When you create the new service application, configure it to use the report server database you copied over.<br /><br /> For more information on using SharePoint Central Administration, see the “Step 3: Create a Reporting Services Service Application” section in [Install The First Report Server in SharePoint Mode](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md).<br /><br /> For examples using PowerShell, see the section “To create a Reporting Services Service Application using PowerShell” in [Reporting Services SharePoint Service and Service Applications](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md).|  
 |**4**|Restore [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] configuration files.|Simple file copy.|Example of the default location of the files: C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServices\Reporting.|  
 |||||  
@@ -125,9 +125,10 @@ manager: "erikre"
 -   [Get started with upgrades to SharePoint 2013 (http://technet.microsoft.com/library/ee833948.aspx)](http://technet.microsoft.com/library/ee833948.aspx).  
   
 -   [Overview of the upgrade process to SharePoint 2013 (http://technet.microsoft.com/library/cc262483.aspx)](http://technet.microsoft.com/library/cc262483.aspx).  
-  
-## See Also  
- [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
- [Migrate a Reporting Services Installation &#40;Native Mode&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)  
-  
-  
+
+## Next steps
+
+[Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
+[Migrate a Reporting Services Installation](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)  
+
+More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)

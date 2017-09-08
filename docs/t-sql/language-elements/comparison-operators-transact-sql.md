@@ -34,12 +34,12 @@ manager: "jhubbard"
 |--------------|-------------|  
 |[= (Equals)](../../t-sql/language-elements/equals-transact-sql.md)|Equal to|  
 |[> (Greater Than)](../../t-sql/language-elements/greater-than-transact-sql.md)|Greater than|  
-|[\< (Less Than)](../../t-sql/language-elements/less-than-transact-sql.md)|Less than|  
+|[< (Less Than)](../../t-sql/language-elements/less-than-transact-sql.md)|Less than|  
 |[>= (Greater Than or Equal To)](../../t-sql/language-elements/greater-than-or-equal-to-transact-sql.md)|Greater than or equal to|  
 |[<= (Less Than or Equal To)](../../t-sql/language-elements/less-than-or-equal-to-transact-sql.md)|Less than or equal to|  
 |[<> (Not Equal To)](../../t-sql/language-elements/not-equal-to-transact-sql-traditional.md)|Not equal to|  
 |[!= (Not Equal To)](../../t-sql/language-elements/not-equal-to-transact-sql-exclamation.md)|Not equal to (not ISO standard)|  
-|[!\< (Not Less Than)](../../t-sql/language-elements/not-less-than-transact-sql.md)|Not less than (not ISO standard)|  
+|[!< (Not Less Than)](../../t-sql/language-elements/not-less-than-transact-sql.md)|Not less than (not ISO standard)|  
 |[!> (Not Greater Than)](../../t-sql/language-elements/not-greater-than-transact-sql.md)|Not greater than (not ISO standard)|  
   
 ## Boolean Data Type  

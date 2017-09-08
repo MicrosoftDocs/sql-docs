@@ -40,8 +40,13 @@
 ## [nchar and nvarchar](nchar-and-nvarchar-transact-sql.md)  
 ## [ntext, text, and image](ntext-text-and-image-transact-sql.md)  
 
+# [Spatial geography](../../t-sql/spatial-geography/spatial-types-geography.md)
+# [Spatial geometry](../../t-sql/spatial-geometry/spatial-types-geometry-transact-sql.md)
+
 # [sql_variant](sql-variant-transact-sql.md)  
 
 # [Table](table-transact-sql.md)  
 
 # [uniqueidentifier](uniqueidentifier-transact-sql.md)  
+
+# [XML](../../t-sql/xml/xml-transact-sql.md)

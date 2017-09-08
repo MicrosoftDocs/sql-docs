@@ -1,7 +1,7 @@
 ---
 title: "Use SQL Server Connector with SQL Encryption Features | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/25/2016"
+ms.date: "04/04/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -78,7 +78,7 @@ You will need to create a credential and a login, and create a database encrypti
     -- for the Database engine to use when it loads a database   
     -- encrypted by TDE.  
     CREATE LOGIN TDE_Login   
-    FROM ASYMMETRIC KEY ContosoRSAKey0;  
+    FROM ASYMMETRIC KEY CONTOSO_KEY;  
     GO   
   
     -- Alter the TDE Login to add the credential for use by the   
@@ -98,7 +98,7 @@ You will need to create a credential and a login, and create a database encrypti
   
     CREATE DATABASE ENCRYPTION KEY   
     WITH ALGORITHM = AES_256   
-    ENCRYPTION BY SERVER ASYMMETRIC KEY ContosoRSAKey0;  
+    ENCRYPTION BY SERVER ASYMMETRIC KEY CONTOSO_KEY;  
     GO  
     ```  
   

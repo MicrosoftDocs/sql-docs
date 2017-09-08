@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_os_windows_info (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
+ms.date: "03/30/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -40,7 +40,7 @@ manager: "jhubbard"
   
   
 ## Permissions  
- Requires VIEW SERVER STATE permission on the server.  
+The SELECT permission on sys.dm_os_windows_info is granted to the public role by default. If revoked, requires VIEW SERVER STATE permission on the server.  
 
 ## Limitations and Restrictions
 To see informaton for SQL running on a non-Windows host, such as Linux, use [sys.dm_os_host_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-host-info-transact-sql.md). 

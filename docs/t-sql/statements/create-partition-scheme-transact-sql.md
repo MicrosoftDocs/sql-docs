@@ -1,7 +1,7 @@
 ---
 title: "CREATE PARTITION SCHEME (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/06/2017"
+ms.date: "04/10/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -43,7 +43,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
-  
 CREATE PARTITION SCHEME partition_scheme_name  
 AS PARTITION partition_function_name  
 [ ALL ] TO ( { file_group_name | [ PRIMARY ] } [ ,...n ] )  
@@ -148,9 +147,8 @@ TO (test1fg, test2fg, test3fg, test4fg, test5fg)
   
  Executing the statement returns the following message.  
   
-```  
 Partition scheme 'myRangePS4' has been created successfully. 'test5fg' is marked as the next used filegroup in partition scheme 'myRangePS4'.  
-```  
+  
   
  If partition function `myRangePF4` is changed to add a partition, filegroup `test5fg` receives the newly created partition.  
 

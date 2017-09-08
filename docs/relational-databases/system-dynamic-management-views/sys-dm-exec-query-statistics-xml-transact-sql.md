@@ -89,7 +89,7 @@ GO
   
 ```  
 --Run this in a different session than the session in which your query is running.
-SELECT * FROM sys.dm_exec_query_statistics_xml(\< copied session_id >);  
+SELECT * FROM sys.dm_exec_query_statistics_xml(< copied session_id >);  
 GO  
 ```   
 

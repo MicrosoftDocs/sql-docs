@@ -82,11 +82,7 @@ You can connect to an on-premises Analysis Services tabular model database from 
  The principal interfaces that are used for interacting with [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tabular models are the schema rowsets, XMLA, and the query clients and query tools provided by [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] and [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
   
 ### Data and Metadata  
- You can retrieve data and metadata from tabular models in managed applications using ADOMD.NET. For examples of applications that create and modify objects in a tabular model, see the following resources:  
-  
--   Tabular Model AMO Sample on Codeplex  
-  
--   AdventureWorks samples on CodePlex  
+ You can retrieve data and metadata from tabular models in managed applications using ADOMD.NET. 
   
 -   [Use Dynamic Management Views &#40;DMVs&#41; to Monitor Analysis Services](../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
   
@@ -99,13 +95,6 @@ You can connect to an on-premises Analysis Services tabular model database from 
 ### Manipulate Analysis Services Objects  
  You can create, modify, delete, and process tabular models and objects in them, including tables, columns, perspectives, measures, and partitions, using XMLA commands, or by using AMO. Both AMO and XMLA have been updated to support additional properties that are used in tabular models for enhanced reporting and modeling.  
   
- For examples of how tabular objects can be scripted using AMO and XMLA, see the following resources:  
-  
--   Tabular Model AMO Sample on Codeplex  
-  
--   AdventureWorks Samples on CodePlex  
-  
- You can use PowerShell to manage and monitor instances of Analysis Services, as well as for creating and monitoring security used for tabular model access. For more information, see [PowerShell scripting in Analysis Services](../../analysis-services/instances/powershell-scripting-in-analysis-services.md).  
   
 ### Schema Rowsets  
  Client applications can use the schema rowsets to examine the metadata of tabular models and to retrieve support and monitoring information from the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] server. In this release of SQL Server new schema rowsets have been added and existing schema rowsets extended to support features related to tabular models and to enhance monitoring and performance analysis across [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  

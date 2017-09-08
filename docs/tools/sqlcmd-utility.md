@@ -1,7 +1,7 @@
-﻿---
+---
 title: "sqlcmd Utility | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/29/2016"
+ms.date: "07/27/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -34,10 +34,13 @@ manager: "jhubbard"
 # sqlcmd Utility
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-_md](../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
 
+ > For SQL Server 2014 and lower, see [sqlcmd Utility](https://msdn.microsoft.com/en-US/library/ms162773(SQL.120).aspx).
+
+
   The **sqlcmd** utility lets you enter Transact-SQL statements, system procedures, and script files at the command prompt, in **Query Editor** in SQLCMD mode, in a Windows script file or in an operating system (Cmd.exe) job step of a  SQL Server  Agent job. This utility uses ODBC to execute Transact-SQL batches. 
   
 > [!NOTE]
-> The most recent versions of the sqlcmd utility is available as a web release from the [Download Center](http://go.microsoft.com/fwlink/?LinkID=825643). At least version 13.1 is required to support Always Encrypted (`-g`) and Azure Active Directory authentication (`-G`). (You may have several versions of sqlcmd.exe installed on your computer. Be sure you are using the correct version. To determine the version, execute `sqlcmd -?`.)
+> The most recent versions of the sqlcmd utility is available as a web release from the [Download Center](http://go.microsoft.com/fwlink/?LinkID=825643). You need version 13.1 or higher to support Always Encrypted (`-g`) and Azure Active Directory authentication (`-G`). (You may have several versions of sqlcmd.exe installed on your computer. Be sure you are using the correct version. To determine the version, execute `sqlcmd -?`.)
 
   To run sqlcmd statements in SSMS, select SQLCMD Mode from the top navigation Query Menu dropdown.  
   
@@ -106,7 +109,7 @@ sqlcmd
 ## Command-line Options  
  **Login-Related Options**  
   **-A**  
- Logs in to  SQL Server  with a Dedicated Administrator Connection (DAC). This kind of connection is used to troubleshoot a server. This will only work with server computers that support DAC. If DAC is not available, **sqlcmd** generates an error message and then exits. For more information about DAC, see [Diagnostic Connection for Database Administrators](../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md).  
+ Logs in to  SQL Server  with a Dedicated Administrator Connection (DAC). This kind of connection is used to troubleshoot a server. This will only work with server computers that support DAC. If DAC is not available, **sqlcmd** generates an error message and then exits. For more information about DAC, see [Diagnostic Connection for Database Administrators](../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md). The -A option is not supported with the -G option. When connecting to SQL Database using -A, you must be a SQL server administrator. The DAC is not availble for an Azure Active Directory adminstrator.
   
  **-C**  
  This switch is used by the client to configure it to implicitly trust the server certificate without validation. This option is equivalent to the ADO.NET option `TRUSTSERVERCERTIFICATE = true`.  
@@ -126,7 +129,7 @@ sqlcmd
 Sets the Column Encryption Setting to `Enabled`. For more information, see [Always Encrypted](../relational-databases/security/encryption/always-encrypted-database-engine.md). Only master keys stored in Windows Certificate Store are supported. The -g switch requires at least **sqlcmd** version [13.1](http://go.microsoft.com/fwlink/?LinkID=825643). To determine your version, execute `sqlcmd -?`.
 
  **-G**  
- This switch is used by the client when connecting to SQL Database or SQL Data Warehouse to specify that the user be authenticated using Azure Active Directory authentication. This option sets the **sqlcmd** scripting variable SQLCMDUSEAAD = true. The -G switch requires at least **sqlcmd** version [13.1](http://go.microsoft.com/fwlink/?LinkID=825643). To determine your version, execute `sqlcmd -?`. For more information, see [Connecting to SQL Database or SQL Data Warehouse By Using Azure Active Directory Authentication](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/).
+ This switch is used by the client when connecting to SQL Database or SQL Data Warehouse to specify that the user be authenticated using Azure Active Directory authentication. This option sets the **sqlcmd** scripting variable SQLCMDUSEAAD = true. The -G switch requires at least **sqlcmd** version [13.1](http://go.microsoft.com/fwlink/?LinkID=825643). To determine your version, execute `sqlcmd -?`. For more information, see [Connecting to SQL Database or SQL Data Warehouse By Using Azure Active Directory Authentication](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/). The -A option is not supported with the -G option.
 
 > [!IMPORTANT]
 > The **-G** option only applies to Azure SQL Database and Azure Data Warehouse. 
@@ -135,7 +138,7 @@ Sets the Column Encryption Setting to `Enabled`. For more information, see [Alwa
 
     When you want to use an Azure Active Directory user name and password, you can provide the **-G** option and also use the user name and password by providing the **-U** and **-P** options.
     ``` 
-    Sqlcmd -S Target_DB_or_DW.testsrv.database.windows.net -U bob@contoso.com -P MyAADPassword -G 
+    Sqlcmd -S testsrv.database.windows.net -d Target_DB_or_DW -U bob@contoso.com -P MyAADPassword -G 
     ``` 
     This will generate the following connection string in the backend: 
 
@@ -275,7 +278,7 @@ Prints raw error messages to the screen.
  Path examples:  
 
 ```  
--o C:\< filename>  
+-o C:< filename>  
 -o \\<Server>\<Share$>\<filename>  
 -o "C:\Some Folder\<file name>"  
  ``` 
@@ -718,7 +721,7 @@ Prints raw error messages to the screen.
   
  `:connect $(myservername) $(myusername)`  
   
- [**:**] **!!**\< *command*>  
+ [**:**] **!!**< *command*>  
  Executes operating system commands. To execute an operating system command, start a line with two exclamation marks (**!!**) followed by the operating system command. For example:  
   
  `:!! Dir`  

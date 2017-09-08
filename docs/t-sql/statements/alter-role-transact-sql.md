@@ -1,7 +1,7 @@
 ---
 title: "ALTER ROLE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2016"
+ms.date: "05/01/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -75,7 +75,7 @@ ALTER ROLE role_name
   
 -   *database_principal* cannot be a fixed database role or a server principal.  
   
- DROP MEMBER *database_principal*  
+DROP MEMBER *database_principal*  
  **APPLIES TO:**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with 2012), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  Specifies to remove a database principal from the membership of a database role.  
@@ -84,7 +84,7 @@ ALTER ROLE role_name
   
 -   *database_principal* cannot be a fixed database role or a server principal.  
   
- WITH NAME = *new_name*  
+WITH NAME = *new_name*  
  **APPLIES TO:**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with 2008), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  Specifies to change the name of a user-defined database role. The new name must not already exist in the database.  
@@ -95,12 +95,10 @@ ALTER ROLE role_name
  To run this command you need one or more of these permissions or memberships:  
   
 -   **ALTER** permission on the role  
-  
 -   **ALTER ANY ROLE** permission on the database  
-  
 -   Membership in the **db_securityadmin** fixed database role  
   
- Additionally, to change the membership in a fixed database role you need:  
+Additionally, to change the membership in a fixed database role you need:  
   
 -   Membership in the **db_owner** fixed database role  
   

@@ -2,7 +2,7 @@
 title: "sp_execute_external_script (Transact-SQL) | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "02/28/2017"
+ms.date: "08/18/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -28,7 +28,7 @@ manager: "jhubbard"
 # sp_execute_external_script (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Executes the script provided as argument at an external location. The script must be written in a supported and registered language. The query tree is controlled by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and users cannot perform arbitrary operations on the query. To execute **sp_execute_external_script** you must first enable external scripts by using the `sp_configure 'external scripts enabled', 1;` statement.  
+  Executes the script provided as argument at an external location. The script must be written in a supported and registered language. The query tree is controlled by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and users cannot perform arbitrary operations on the query. To execute **sp_execute_external_script**, you must first enable external scripts by using the `sp_configure 'external scripts enabled', 1;` statement.  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -75,13 +75,13 @@ sp_execute_external_script
  [ @language =    ] '*language*'  
 Indicates the script language. *language* is **sysname**.  
 
- Valid values are `R`.
+ Valid values are `Python` or `R`. 
   
  [ @script = ]    '*script*'  
  External language  script specified as a literal or variable input. *script* is **nvarchar(max)**.  
   
  [ @input_data_1_name = ] '*input_data_1_name*'  
- Specifies the name of the variable used to represent the query defined by @input_data_1. The data type of the variable in the external script depends on the language. In case of R, this variable will be a data frame.  *input_data_1_name* is **sysname**.  
+ Specifies the name of the variable used to represent the query defined by @input_data_1. The data type of the variable in the external script depends on the language. In case of R, the input variable is a data frame. In the case of Python, input must be tabular. *input_data_1_name* is **sysname**.  
   
  Default value is "InputDataSet".  
   
@@ -89,21 +89,21 @@ Indicates the script language. *language* is **sysname**.
  Specifies the input data used by the external script in the form of a [!INCLUDE[tsql](../../includes/tsql-md.md)] query. *input_data_1* is **nvarchar(max)**.  
   
  [ @output_data_1_name = ] '*output_data_1_name*'  
- Specifies the name of the variable in the external script that will contain the data to be returned to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] upon completion of the stored procedure call. The data type of the variable in the external script depends on the language. In case of R, this variable will be a data frame. *output_data_1_name* is **sysname**.  
+ Specifies the name of the variable in the external script that contains the data to be returned to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] upon completion of the stored procedure call. The data type of the variable in the external script depends on the language. In the case of R, the output must be a data frame. In the case of Python, the output must be a pandas data frame. *output_data_1_name* is **sysname**.  
   
  Default value is "OutputDataSet".  
   
  [ @parallel = ] 0 | 1  
  Enable parallel execution of R scripts by setting the `@parallel` parameter to 1. The default for this parameter is 0 (no parallelism).  
   
- For R scripts that do not use RevoScaleR functions, using the  `@parallel` parameter can be beneficial for processing large datasets, assuming the script can be trivially parallelized. For example, when using the R `predict` function with a model to generate new predictions, set `@parallel = 1` as a hint to the query engine. If the query can be parallelized, rows will be distributed according to the **MAXDOP** setting.  
+ For R scripts that do not use RevoScaleR functions, using the  `@parallel` parameter can be beneficial for processing large datasets, assuming the script can be trivially parallelized. For example, when using the R `predict` function with a model to generate new predictions, set `@parallel = 1` as a hint to the query engine. If the query can be parallelized, rows are distributed according to the **MAXDOP** setting.  
   
  If `@parallel = 1` and the output is being streamed directly to the client machine, then the `WITH RESULTS SETS` clause is required and an output schema must be specified.  
   
  For R scripts that use RevoScaleR functions, parallel processing is handled automatically and you should not specify `@parallel = 1` to the **sp_execute_external_script** call.  
   
  [ @params = ] N'*@parameter_name data_type* [ OUT | OUTPUT ] [ ,...n ]'  
- A list of input parameter declarations that will be used in the external script.  
+ A list of input parameter declarations that are used in the external script.  
   
  [ @parameter1 = ] '*value1*'  [ OUT | OUTPUT ] [ ,...n ]  
  A list of values for the input parameters used by the external script.  
@@ -138,17 +138,18 @@ SELECT tipped, passenger_count, trip_time_in_secs, trip_distance, d.direct_dista
         , @params = N'@modelbin varbinary(max) OUTPUT'  
         , @modelbin = @model OUTPUT;  
 ```  
-  
+
+
 ## Streaming execution for R script  
  Streaming execution of R script is supported by specifying `@r_rowsPerRead int parameter` in `@params` collection.  Streaming allows R scripts to work with data that doesn’t fit in memory. For example, if there are billion rows to score using predict function the new `@r_rowsPerRead` parameter can be used to split the execution into one stream at a time. Because this parameter controls the number of rows that are sent to the R processes, it can also be used to throttle the number of rows being read at one time. This might be useful to mitigate server performance issues if, for example, a large model is being trained. Note that this parameter can only be used in cases where the output of the R script doesn’t depend on reading or looking at the entire set of rows.  
   
  Both the `@r_rowsPerRead` parameter for streaming and the `@parallel` argument should be considered hints. For the hint to be applied, it must be possible to generate a SQL query plan that includes parallel processing. If this is not possible, parallel processing cannot be enabled.  
   
 > [!NOTE]  
->  Streaming and parallel processing are supported only in Enterprise Edition. You can include the parameters in your queries in Standard Edition without raising an error, but the parameters will have no effect and R scripts will run in a single process.  
+>  Streaming and parallel processing are supported only in Enterprise Edition. You can include the parameters in your queries in Standard Edition without raising an error, but the parameters have no effect and R scripts run in a single process.  
   
 ## Restrictions  
- **Data types:** The following data types are not supported when used in the input query or parameters of `sp_execute_external_script` procedure, and will return an unsupported type error.  
+ **Data types:** The following data types are not supported when used in the input query or parameters of `sp_execute_external_script` procedure, and return an unsupported type error.  
   
  As a workaround, **CAST** the column or value to a supported type in [!INCLUDE[tsql](../../includes/tsql-md.md)] and send it to R.  
   
@@ -170,15 +171,15 @@ SELECT tipped, passenger_count, trip_time_in_secs, trip_distance, d.direct_dista
   
  `WITH RESULTS SETS`  clause is mandatory if you are returning a result set from R . The specified column data types need to match the types supported in R (**bit**, **int**, **float**, **datetime**, **varchar**)  
   
- **datetime** values in the input will be converted to NA on the R side for values that do not fit the permissible range of values in R. this is required because [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permits a larger range of values than is supported in the R language.  
+ **datetime** values in the input are converted to NA on the R side for values that do not fit the permissible range of values in R. this is required because [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permits a larger range of values than is supported in the R language.  
   
- Float values (for example, +Inf, -Inf, NaN) are not supported in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] even though both languages use IEEE 754. Current behavior just sends the values to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] directly and as a result sqlclient in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] throws error. We should convert these values to **NULL**.  
+ Float values (for example, +Inf, -Inf, NaN) are not supported in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] even though both languages use IEEE 754. Current behavior just sends the values to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] directly and as a result sqlclient in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] throws error. These values convert to **NULL**.  
   
- When using the `WITH RESULTS SET` clause, an error will be raised in the following conditions:  
+ When using the `WITH RESULTS SET` clause, an error is raised in the following conditions:  
   
 -   The number of columns doesn’t match the number of columns in the R data frame.  
   
--   Any [!INCLUDE[tsql](../../includes/tsql-md.md)] data type that cannot be mapped to an R data type will transfer as NULL. Any R result set that cannot be mapped to a [!INCLUDE[tsql](../../includes/tsql-md.md)] data type will transfer as NULL.  
+-   Any [!INCLUDE[tsql](../../includes/tsql-md.md)] data type that cannot be mapped to an R data type is transfered as NULL. Any R result set that cannot be mapped to a [!INCLUDE[tsql](../../includes/tsql-md.md)] data type, transfers as NULL.  
   
 ## Permissions  
  Requires **EXECUTE ANY EXTERNAL SCRIPT** database permission.  
@@ -187,7 +188,7 @@ SELECT tipped, passenger_count, trip_time_in_secs, trip_distance, d.direct_dista
  This section contains examples of how this stored procedure can be used to execute R scripts using [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 ### A. Return a data set from R to SQL Server  
- The following example create a stored procedure that uses **sp_execute_external_script** to return an iris dataset from R to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ The following example creates a stored procedure that uses **sp_execute_external_script** to return an iris dataset from R to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ```  
 DROP PROC IF EXISTS get_iris_dataset;  
@@ -209,7 +210,7 @@ go
 ```  
   
 ### B. Generate a model based on data from SQL Server  
- The following example create a stored procedure that uses **sp_execute_external_script** to generate an iris model and return the model to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ The following example creates a stored procedure that uses **sp_execute_external_script** to generate an iris model and return the model to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
 >  This example requires installing the e1071 package. For more information, see [Install Additional R Packages on SQL Server](../../advanced-analytics/r-services/install-additional-r-packages-on-sql-server.md).  
@@ -238,15 +239,15 @@ go
   
 ## See Also  
  [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Python Libraries and Data Types](../../advanced-analytics/python/python-libraries-and-data-types.md)  
+ [R Libraries and R Data Types](../../advanced-analytics/r/r-libraries-and-data-types.md)  
+ [SQL Server R Services](../../advanced-analytics/r-services/sql-server-r-services.md)   
+ [Known Issues for SQL Server R Services](../../advanced-analytics/r-services/known-issues-for-sql-server-r-services.md)   
+ [CREATE EXTERNAL LIBRARY &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-library-transact-sql.md)  
  [sp_prepare &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-prepare-transact-sql.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [external scripts enabled Server Configuration Option](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md)   
  [SERVERPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/serverproperty-transact-sql.md)   
- [SQL Server R Services](../../advanced-analytics/r-services/sql-server-r-services.md)   
- [Known Issues for SQL Server R Services](../../advanced-analytics/r-services/known-issues-for-sql-server-r-services.md)   
- [CREATE EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-resource-pool-transact-sql.md)   
- [sys.resource_governor_external_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md)   
- [sys.dm_resource_governor_external_resource_pool_affinity &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md)   
  [SQL Server, External Scripts Object](../../relational-databases/performance-monitor/sql-server-external-scripts-object.md)  
 [sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md)  
 [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md) 

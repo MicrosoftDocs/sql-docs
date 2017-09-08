@@ -82,7 +82,7 @@ shared data source icon
   
 3.  Click **New Data Source**. The **New Data Source** page opens.  
   
-4.  Type a name for the item. A name must contain at least one character and it must start with a letter. It can also include certain symbols, but not spaces or the characters ; ? : @ & = + , $ / * \< > | " /.  
+4.  Type a name for the item. A name must contain at least one character and it must start with a letter. It can also include certain symbols, but not spaces or the characters ; ? : @ & = + , $ / * < > | " /.  
   
 5.  Optionally type a description to provide users with information about the connection. This description will appear on the **Contents** page in Report Manager.  
   

@@ -1,5 +1,5 @@
 ---
-title: "LANGUAGE and FORMAT_STRING on FORMATED_VALUE | Microsoft Docs"
+title: "LANGUAGE and FORMAT_STRING on FORMATTED_VALUE | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/13/2017"
 ms.prod: "sql-server-2016"

@@ -1,8 +1,8 @@
----
+﻿---
 title: "FROM (Transact-SQL) | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "03/16/2017"
+ms.date: "08/09/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -56,7 +56,7 @@ manager: "jhubbard"
 {  
     table_or_view_name [ [ AS ] table_alias ]   
         [ <tablesample_clause> ]   
-        [ WITH ( \< table_hint > [ [ , ]...n ] ) ]   
+        [ WITH ( < table_hint > [ [ , ]...n ] ) ]   
     | rowset_function [ [ AS ] table_alias ]   
         [ ( bulk_column_alias [ ,...n ] ) ]   
     | user_defined_function [ [ AS ] table_alias ]  
@@ -120,7 +120,6 @@ manager: "jhubbard"
   
     <end_date_time>::=  
         <date_time_literal> | @date_time_variable  
-  
 ```  
   
 ```  
@@ -138,7 +137,8 @@ FROM { <table_source> [ ,...n ] }
 <joined_table> ::=   
 {  
     <table_source> <join_type> <table_source> ON search_condition   
-    | <table_source> CROSS JOIN <table_source>     | left_table_source { CROSS | OUTER } APPLY right_table_source   
+    | <table_source> CROSS JOIN <table_source> 
+    | left_table_source { CROSS | OUTER } APPLY right_table_source   
     | [ ( ] <joined_table> [ ) ]   
 }  
   
@@ -152,15 +152,14 @@ FROM { <table_source> [ ,...n ] }
     REDUCE  
     | REPLICATE  
     | REDISTRIBUTE  
-  
 ```  
   
 ## Arguments  
- <table_source>  
+\<table_source>  
  Specifies a table, view, table variable, or derived table source, with or without an alias, to use in the [!INCLUDE[tsql](../../includes/tsql-md.md)] statement. Up to 256 table sources can be used in a statement, although the limit varies depending on available memory and the complexity of other expressions in the query. Individual queries may not support up to 256 table sources.  
   
 > [!NOTE]  
->  Query performance may suffer with lots of tables referenced in a query. Compilation and optimization time is also affected by additional factors. These include the presence of indexes and indexed views on each <table_source> and the size of the <select_list> in the SELECT statement.  
+>  Query performance may suffer with lots of tables referenced in a query. Compilation and optimization time is also affected by additional factors. These include the presence of indexes and indexed views on each \<table_source> and the size of the \<select_list> in the SELECT statement.  
   
  The order of table sources after the FROM keyword does not affect the result set that is returned. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] returns errors when duplicate names appear in the FROM clause.  
   
@@ -176,22 +175,22 @@ FROM { <table_source> [ ,...n ] }
   
  When a derived table, rowset or table-valued function, or operator clause (such as PIVOT or UNPIVOT) is used, the required *table_alias* at the end of the clause is the associated table name for all columns, including grouping columns, returned.  
   
- WITH (<table_hint> )  
+ WITH (\<table_hint> )  
  Specifies that the query optimizer use an optimization or locking strategy with this table and for this statement. For more information, see [Table Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
  *rowset_function*  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].|  
+
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+
   
  Specifies one of the rowset functions, such as OPENROWSET, that returns an object that can be used instead of a table reference. For more information about a list of rowset functions, see [Rowset Functions &#40;Transact-SQL&#41;](../../t-sql/functions/rowset-functions-transact-sql.md).  
   
  Using the OPENROWSET and OPENQUERY functions to specify a remote object depends on the capabilities of the OLE DB provider that accesses the object.  
   
  *bulk_column_alias*  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].|  
+
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+
   
  Is an optional alias to replace a column name in the result set. Column aliases are allowed only in SELECT statements that use the OPENROWSET function with the BULK option. When you use *bulk_column_alias*, specify an alias for every table column in the same order as the columns in the file.  
   
@@ -201,10 +200,10 @@ FROM { <table_source> [ ,...n ] }
  *user_defined_function*  
  Specifies a table-valued function.  
   
- OPENXML <openxml_clause>  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].|  
+ OPENXML \<openxml_clause>  
+
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+
   
  Provides a rowset view over an XML document. For more information, see [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md).  
   
@@ -216,14 +215,14 @@ FROM { <table_source> [ ,...n ] }
  *column_alias*  
  Is an optional alias to replace a column name in the result set of the derived table. Include one column alias for each column in the select list, and enclose the complete list of column aliases in parentheses.  
   
- *table_or_view_name* FOR SYSTEM_TIME <system_time>  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].|  
+ *table_or_view_name* FOR SYSTEM_TIME \<system_time>  
+
+**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+
   
  Specifies that a specific version of data is returned from the specified temporal table and its linked system-versioned history table  
   
- <tablesample_clause>  
+\<tablesample_clause>  
  Specifies that a sample of data from the table is returned. The sample may be approximate. This clause can be used on any primary or joined table in a SELECT, UPDATE, or DELETE statement. TABLESAMPLE cannot be specified with views.  
   
 > [!NOTE]  
@@ -247,10 +246,10 @@ FROM { <table_source> [ ,...n ] }
  *repeat_seed*  
  Is a constant integer expression used by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to generate a random number. *repeat_seed* is **bigint**. If *repeat_seed* is not specified, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assigns a value at random. For a specific *repeat_seed* value, the sampling result is always the same if no changes have been applied to the table. The *repeat_seed* expression must evaluate to an integer greater than zero.  
   
- <joined_table>  
+ \<joined_table>  
  Is a result set that is the product of two or more tables. For multiple joins, use parentheses to change the natural order of the joins.  
   
- <join_type>  
+\<join_type>  
  Specifies the type of join operation.  
   
  **INNER**  
@@ -265,7 +264,7 @@ FROM { <table_source> [ ,...n ] }
  RIGHT [OUTER]  
  Specifies all rows from the right table not meeting the join condition are included in the result set, and output columns that correspond to the other table are set to NULL, in addition to all rows returned by the inner join.  
   
- <join_hint>  
+\<join_hint>  
  For [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDS](../../includes/sssds-md.md)], specifies that the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] query optimizer use one join hint, or execution algorithm, per join specified in the query FROM clause. For more information, see [Join Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-join.md).  
   
  For [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], these join hints apply to INNER joins on two distribution incompatible columns. They can improve query performance by restricting the amount of data movement that occurs during query processing. The allowable join hints for [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] are as follows:  
@@ -282,10 +281,10 @@ FROM { <table_source> [ ,...n ] }
  JOIN  
  Indicates that the specified join operation should occur between the specified table sources or views.  
   
- ON <search_condition>  
+ ON \<search_condition>  
  Specifies the condition on which the join is based. The condition can specify any predicate, although columns and comparison operators are frequently used, for example:  
   
-```  
+```tsql
 SELECT p.ProductID, v.BusinessEntityID  
 FROM Production.Product AS p   
 JOIN Purchasing.ProductVendor AS v  
@@ -317,7 +316,7 @@ ON (p.ProductID = v.ProductID);
  *right_table_source*  
  Is a table source as defined in the previous argument. For more information, see the Remarks section.  
   
- *table_source* PIVOT <pivot_clause>  
+ *table_source* PIVOT \<pivot_clause>  
  Specifies that the *table_source* is pivoted based on the *pivot_column*. *table_source* is a table or table expression. The output is a table that contains all columns of the *table_source* except the *pivot_column* and *value_column*. The columns of the *table_source*, except the *pivot_column* and *value_column*, are called the grouping columns of the pivot operator. For more information about PIVOT and UNPIVOT, see [Using PIVOT and UNPIVOT](../../t-sql/queries/from-using-pivot-and-unpivot.md).  
   
  PIVOT performs a grouping operation on the input table with regard to the grouping columns and returns one row for each group. Additionally, the output contains one column for each value specified in the *column_list* that appears in the *pivot_column* of the *input_table*.  
@@ -348,31 +347,30 @@ ON (p.ProductID = v.ProductID);
  UNPIVOT \< unpivot_clause >  
  Specifies that the input table is narrowed from multiple columns in *column_list* into a single column called *pivot_column*. For more information about PIVOT and UNPIVOT, see [Using PIVOT and UNPIVOT](../../t-sql/queries/from-using-pivot-and-unpivot.md).  
   
- AS OF <date_time>  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].|  
+ AS OF \<date_time>  
+
+**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+
   
- Returns a table with single record for each row containing the values that were actual (current) at the specified point in time in the past. Internally, a union is performed between the temporal table and its history table and the results are filtered to return the values in the row that was valid at the point in time specified by the *<date_time>* parameter. The value for a row is deemed valid if the *system_start_time_column_name* value is less than or equal to the *<date_time>* parameter value and the *system_end_time_column_name* value is greater than the *<date_time>* parameter value.   
+ Returns a table with single record for each row containing the values that were actual (current) at the specified point in time in the past. Internally, a union is performed between the temporal table and its history table and the results are filtered to return the values in the row that was valid at the point in time specified by the *\<date_time>* parameter. The value for a row is deemed valid if the *system_start_time_column_name* value is less than or equal to the *\<date_time>* parameter value and the *system_end_time_column_name* value is greater than the *\<date_time>* parameter value.   
   
- FROM <start_date_time> TO <end_date_time>  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].|  
+ FROM \<start_date_time> TO \<end_date_time>
+
+**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
+
   
- Returns a table with the values for all record versions that were active within the specified time range, regardless of whether they started being active before the *<start_date_time>* parameter value for the FROM argument or ceased being active after the *<end_date_time>* parameter value for the TO argument. Internally, a union is performed between the temporal table and its history table and the results are filtered to return the values for all row versions that were active at any time during the time range specified. Rows that became active exactly on the lower boundary defined by the FROM endpoint are included and rows that became active exactly on the upper boundary defined by the TO endpoint are not included.  
+ Returns a table with the values for all record versions that were active within the specified time range, regardless of whether they started being active before the *\<start_date_time>* parameter value for the FROM argument or ceased being active after the *\<end_date_time>* parameter value for the TO argument. Internally, a union is performed between the temporal table and its history table and the results are filtered to return the values for all row versions that were active at any time during the time range specified. Rows that became active exactly on the lower boundary defined by the FROM endpoint are included and rows that became active exactly on the upper boundary defined by the TO endpoint are not included.  
   
- BETWEEN <start_date_time> AND <end_date_time>  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].|  
+ BETWEEN \<start_date_time> AND \<end_date_time>  
+
+**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
- Same as above in the  **FROM <start_date_time> TO <end_date_time>** description, except it includes rows that became active on the upper boundary defined by the <end_date_time> endpoint.  
+ Same as above in the  **FROM \<start_date_time> TO \<end_date_time>** description, except it includes rows that became active on the upper boundary defined by the \<end_date_time> endpoint.  
   
- CONTAINED IN (<start_date_time> , <end_date_time>)  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].|  
+ CONTAINED IN (\<start_date_time> , \<end_date_time>)  
+
+**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+
   
  Returns a table with the values for all record versions that were opened and closed within the specified time range defined by the two datetime values for the CONTAINED IN argument. Rows that became active exactly on the lower boundary or ceased being active exactly on the upper boundary are included.  
   
@@ -431,8 +429,7 @@ ON (p.ProductID = v.ProductID);
 ### A. Using a simple FROM clause  
  The following example retrieves the `TerritoryID` and `Name` columns from the `SalesTerritory` table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] sample database.  
   
-```tsql  
-  
+```tsql    
 SELECT TerritoryID, Name  
 FROM Sales.SalesTerritory  
 ORDER BY TerritoryID ;  
@@ -459,8 +456,7 @@ TerritoryID Name
 ### B. Using the TABLOCK and HOLDLOCK optimizer hints  
  The following partial transaction shows how to place an explicit shared table lock on `Employee` and how to read the index. The lock is held throughout the whole transaction.  
   
-```tsql  
-  
+```tsql    
 BEGIN TRAN  
 SELECT COUNT(*)   
 FROM HumanResources.Employee WITH (TABLOCK, HOLDLOCK) ;  
@@ -469,8 +465,7 @@ FROM HumanResources.Employee WITH (TABLOCK, HOLDLOCK) ;
 ### C. Using the SQL-92 CROSS JOIN syntax  
  The following example returns the cross product of the two tables `Employee` and `Department` in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database. A list of all possible combinations of `BusinessEntityID` rows and all `Department` name rows are returned.  
   
-```wql  
-  
+```wql    
 SELECT e.BusinessEntityID, d.Name AS Department  
 FROM HumanResources.Employee AS e  
 CROSS JOIN HumanResources.Department AS d  
@@ -492,8 +487,7 @@ ORDER BY p.Name ;
 ### E. Using the SQL-92 LEFT OUTER JOIN syntax  
  The following example joins two tables on `ProductID` and preserves the unmatched rows from the left table. The `Product` table is matched with the `SalesOrderDetail` table on the `ProductID` columns in each table. All products, ordered and not ordered, appear in the result set.  
   
-```tsql  
-  
+```tsql    
 SELECT p.Name, sod.SalesOrderID  
 FROM Production.Product AS p  
 LEFT OUTER JOIN Sales.SalesOrderDetail AS sod  
@@ -504,8 +498,7 @@ ORDER BY p.Name ;
 ### F. Using the SQL-92 INNER JOIN syntax  
  The following example returns all product names and sales order IDs.  
   
-```tsql  
-  
+```tsql    
 -- By default, SQL Server performs an INNER JOIN if only the JOIN   
 -- keyword is specified.  
 SELECT p.Name, sod.SalesOrderID  
@@ -518,8 +511,7 @@ ORDER BY p.Name ;
 ### G. Using the SQL-92 RIGHT OUTER JOIN syntax  
  The following example joins two tables on `TerritoryID` and preserves the unmatched rows from the right table. The `SalesTerritory` table is matched with the `SalesPerson` table on the `TerritoryID` column in each table. All salespersons appear in the result set, whether or not they are assigned a territory.  
   
-```tsql  
-  
+```tsql    
 SELECT st.Name AS Territory, sp.BusinessEntityID  
 FROM Sales.SalesTerritory AS st   
 RIGHT OUTER JOIN Sales.SalesPerson AS sp  
@@ -532,8 +524,7 @@ ON st.TerritoryID = sp.TerritoryID ;
 > [!IMPORTANT]  
 >  After a join hint is specified, the INNER keyword is no longer optional and must be explicitly stated for an INNER JOIN to be performed.  
   
-```tsql  
-  
+```tsql    
 SELECT p.Name AS ProductName, v.Name AS VendorName  
 FROM Production.Product AS p   
 INNER MERGE JOIN Purchasing.ProductVendor AS pv   
@@ -546,8 +537,7 @@ ORDER BY p.Name, v.Name ;
 ### I. Using a derived table  
  The following example uses a derived table, a `SELECT` statement after the `FROM` clause, to return the first and last names of all employees and the cities in which they live.  
   
-```tsql  
-  
+```tsql    
 SELECT RTRIM(p.FirstName) + ' ' + LTRIM(p.LastName) AS Name, d.City  
 FROM Person.Person AS p  
 INNER JOIN HumanResources.Employee e ON p.BusinessEntityID = e.BusinessEntityID   
@@ -563,8 +553,7 @@ ORDER BY p.LastName, p.FirstName;
 ### J. Using TABLESAMPLE to read data from a sample of rows in a table  
  The following example uses `TABLESAMPLE` in the `FROM` clause to return approximately `10` percent of all the rows in the `Customer` table.  
   
-```tsql  
-  
+```tsql    
 SELECT *  
 FROM Sales.Customer TABLESAMPLE SYSTEM (10 PERCENT) ;  
 ```  
@@ -582,14 +571,14 @@ FROM Sales.Customer TABLESAMPLE SYSTEM (10 PERCENT) ;
   
  The example uses `APPLY` to return all departments and all employees in that department. If a particular department does not have any employees, there will not be any rows returned for that department.  
   
-```  
+```tsql
 SELECT DeptID, DeptName, DeptMgrID, EmpID, EmpLastName, EmpSalary  
 FROM Departments d CROSS APPLY dbo.GetReports(d.DeptMgrID) ;  
 ```  
   
  If you want the query to produce rows for those departments without employees, which will produce null values for the `EmpID`, `EmpLastName` and `EmpSalary` columns, use `OUTER APPLY` instead.  
   
-```  
+```tsql
 SELECT DeptID, DeptName, DeptMgrID, EmpID, EmpLastName, EmpSalary  
 FROM Departments d OUTER APPLY dbo.GetReports(d.DeptMgrID) ;  
 ```  
@@ -597,7 +586,7 @@ FROM Departments d OUTER APPLY dbo.GetReports(d.DeptMgrID) ;
 ### L. Using CROSS APPLY  
  The following example retrieves a snapshot of all query plans residing in the plan cache, by querying the `sys.dm_exec_cached_plans` dynamic management view to retrieve the plan handles of all query plans in the cache. Then the `CROSS APPLY` operator is specified to pass the plan handles to `sys.dm_exec_query_plan`. The XML Showplan output for each plan currently in the plan cache is in the `query_plan` column of the table that is returned.  
   
-```  
+```tsql
 USE master;  
 GO  
 SELECT dbid, object_id, query_plan   
@@ -608,63 +597,61 @@ GO
   
 ### M. Using FOR SYSTEM_TIME  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].|  
+**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  The following example uses the FOR SYSTEM_TIME AS OF date_time_literal_or_variable argument to return table rows that were actual (current) as of January 1, 2014.  
   
-```  
+```tsql
 SELECT DepartmentNumber,   
     DepartmentName,   
     ManagerID,   
     ParentDepartmentNumber   
 FROM DEPARTMENT  
 FOR SYSTEM_TIME AS OF '2014-01-01'  
-WHERE ManagerID = 5  
+WHERE ManagerID = 5;
 ```  
   
  The following example uses the FOR SYSTEM_TIME FROM date_time_literal_or_variable TO date_time_literal_or_variable argument to return all rows that were active during the period defined as starting with January 1, 2013 and ending with January 1, 2014, exclusive of the upper boundary.  
   
-```  
+```tsql
 SELECT DepartmentNumber,   
     DepartmentName,   
     ManagerID,   
     ParentDepartmentNumber   
 FROM DEPARTMENT  
 FOR SYSTEM_TIME FROM '2013-01-01' TO '2014-01-01'  
-WHERE ManagerID = 5  
+WHERE ManagerID = 5;
 ```  
   
  The following example uses the FOR SYSTEM_TIME BETWEEN date_time_literal_or_variable AND date_time_literal_or_variable argument to return all rows that were active during the period defined as starting with January 1, 2013 and ending with January 1, 2014, inclusive of the upper boundary.  
   
-```  
+```tsql
 SELECT DepartmentNumber,   
     DepartmentName,   
     ManagerID,   
     ParentDepartmentNumber   
 FROM DEPARTMENT  
 FOR SYSTEM_TIME BETWEEN '2013-01-01' AND '2014-01-01'  
-WHERE ManagerID = 5  
+WHERE ManagerID = 5;
 ```  
   
  The following example uses the FOR SYSTEM_TIME CONTAINED IN ( date_time_literal_or_variable, date_time_literal_or_variable ) argument to return all rows that were opened and closed during the period defined as starting with January 1, 2013 and ending with January 1, 2014.  
   
-```  
+```tsql
 SELECT DepartmentNumber,   
     DepartmentName,   
     ManagerID,   
     ParentDepartmentNumber   
 FROM DEPARTMENT  
 FOR SYSTEM_TIME CONTAINED IN ( '2013-01-01', '2014-01-01' )  
-WHERE ManagerID = 5  
+WHERE ManagerID = 5;
 ```  
   
  The following example uses a variable rather than a literal to provide the date boundary values for the query.  
   
-```  
-DECLARE @AsOfFrom datetime2 = dateadd(month,-12, sysutcdatetime())  
-DECLARE @AsOfTo datetime2 = dateadd(month,-6, sysutcdatetime())  
+```tsql
+DECLARE @AsOfFrom datetime2 = dateadd(month,-12, sysutcdatetime());
+DECLARE @AsOfTo datetime2 = dateadd(month,-6, sysutcdatetime());
   
 SELECT DepartmentNumber,   
     DepartmentName,   
@@ -672,8 +659,7 @@ SELECT DepartmentNumber,
     ParentDepartmentNumber   
 FROM DEPARTMENT  
 FOR SYSTEM_TIME FROM @AsOfFrom TO @AsOfTo  
-WHERE ManagerID = 5  
-  
+WHERE ManagerID = 5;
 ```  
   
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
@@ -681,7 +667,7 @@ WHERE ManagerID = 5
 ### N. Using a simple FROM clause  
  The following example retrieves the `SalesTerritoryID` and `SalesTerritoryRegion` columns from the `DimSalesTerritory` table.  
   
-```  
+```tsql
 -- Uses AdventureWorks  
   
 SELECT SalesTerritoryKey, SalesTerritoryRegion  
@@ -692,32 +678,35 @@ ORDER BY SalesTerritoryKey;
 ### O. Using the INNER JOIN syntax  
  The following example returns the `SalesOrderNumber`, `ProductKey`, and `EnglishProductName` columns from the `FactInternetSales` and `DimProduct` tables where the join key, `ProductKey`, matches in both tables. The `SalesOrderNumber` and `EnglishProductName` columns each exist in one of the tables only, so it is not necessary to specify the table alias with these columns, as is shown; these aliases are included for readability. The word **AS** before an alias name is not required but is recommended for readability and to conform to the ANSI standard.  
   
-```  
+```tsql
 -- Uses AdventureWorks  
   
 SELECT fis.SalesOrderNumber, dp.ProductKey, dp.EnglishProductName  
-FROM FactInternetSales AS fis INNER JOIN DimProduct AS dp  
-ON dp.ProductKey = fis.ProductKey;  
+FROM FactInternetSales AS fis 
+INNER JOIN DimProduct AS dp  
+    ON dp.ProductKey = fis.ProductKey;  
 ```  
   
  Since the `INNER` keyword is not required for inner joins, this same query could be written as:  
   
-```  
+```tsql
 -- Uses AdventureWorks  
   
 SELECT fis.SalesOrderNumber, dp.ProductKey, dp.EnglishProductName  
-FROM FactInternetSales fis JOIN DimProduct dp  
+FROM FactInternetSales AS fis 
+JOIN DimProduct AS dp  
 ON dp.ProductKey = fis.ProductKey;  
 ```  
   
  A `WHERE` clause could also be used with this query to limit results. This example limits results to `SalesOrderNumber` values higher than ‘SO5000’:  
   
-```  
+```tsql
 -- Uses AdventureWorks  
   
 SELECT fis.SalesOrderNumber, dp.ProductKey, dp.EnglishProductName  
-FROM FactInternetSales AS fis JOIN DimProduct AS dp  
-ON dp.ProductKey = fis.ProductKey  
+FROM FactInternetSales AS fis 
+JOIN DimProduct AS dp  
+    ON dp.ProductKey = fis.ProductKey  
 WHERE fis.SalesOrderNumber > 'SO50000'  
 ORDER BY fis.SalesOrderNumber;  
 ```  
@@ -725,86 +714,93 @@ ORDER BY fis.SalesOrderNumber;
 ### P. Using the LEFT OUTER JOIN and RIGHT OUTER JOIN syntax  
  The following example joins the `FactInternetSales` and `DimProduct` tables on the `ProductKey` columns. The left outer join syntax preserves the unmatched rows from the left (`FactInternetSales`) table. Since the `FactInternetSales` table does not contain any `ProductKey` values that do not match the `DimProduct` table, this query returns the same rows as the first inner join example above.  
   
-```  
+```tsql
 -- Uses AdventureWorks  
   
 SELECT fis.SalesOrderNumber, dp.ProductKey, dp.EnglishProductName  
-FROM FactInternetSales AS fis LEFT OUTER JOIN DimProduct AS dp  
-ON dp.ProductKey = fis.ProductKey;  
+FROM FactInternetSales AS fis 
+LEFT OUTER JOIN DimProduct AS dp  
+    ON dp.ProductKey = fis.ProductKey;  
 ```  
   
  This query could also be written without the `OUTER` keyword.  
   
  In right outer joins, the unmatched rows from the right table are preserved. The following example returns the same rows as the left outer join example above.  
   
-```  
+```tsql
 -- Uses AdventureWorks  
   
 SELECT fis.SalesOrderNumber, dp.ProductKey, dp.EnglishProductName  
-FROM DimProduct AS dp RIGHT OUTER JOIN FactInternetSales AS fis  
-ON dp.ProductKey = fis.ProductKey;  
+FROM DimProduct AS dp 
+RIGHT OUTER JOIN FactInternetSales AS fis  
+    ON dp.ProductKey = fis.ProductKey;  
 ```  
   
  The following query uses the `DimSalesTerritory` table as the left table in a left outer join. It retrieves the `SalesOrderNumber` values from the `FactInternetSales` table. If there are no orders for a particular `SalesTerritoryKey`, the query will return a NULL for the `SalesOrderNumber` for that row. This query is ordered by the `SalesOrderNumber` column, so that any NULLs in this column will appear at the top of the results.  
   
-```  
+```tsql
 -- Uses AdventureWorks  
   
 SELECT dst.SalesTerritoryKey, dst.SalesTerritoryRegion, fis.SalesOrderNumber  
-FROM DimSalesTerritory AS dst LEFT OUTER JOIN FactInternetSales AS fis  
-ON dst.SalesTerritoryKey = fis.SalesTerritoryKey  
+FROM DimSalesTerritory AS dst 
+LEFT OUTER JOIN FactInternetSales AS fis  
+    ON dst.SalesTerritoryKey = fis.SalesTerritoryKey  
 ORDER BY fis.SalesOrderNumber;  
 ```  
   
  This query could be rewritten with a right outer join to retrieve the same results:  
   
-```  
+```tsql
 -- Uses AdventureWorks  
   
 SELECT dst.SalesTerritoryKey, dst.SalesTerritoryRegion, fis.SalesOrderNumber  
-FROM FactInternetSales AS fis RIGHT OUTER JOIN DimSalesTerritory AS dst  
-ON fis.SalesTerritoryKey = dst.SalesTerritoryKey  
+FROM FactInternetSales AS fis 
+RIGHT OUTER JOIN DimSalesTerritory AS dst  
+    ON fis.SalesTerritoryKey = dst.SalesTerritoryKey  
 ORDER BY fis.SalesOrderNumber;  
 ```  
   
 ### Q. Using the FULL OUTER JOIN syntax  
  The following example demonstrates a full outer join, which returns all rows from both joined tables but returns NULL for values that do not match from the other table.  
   
-```  
+```tsql
 -- Uses AdventureWorks  
   
 SELECT dst.SalesTerritoryKey, dst.SalesTerritoryRegion, fis.SalesOrderNumber  
-FROM DimSalesTerritory AS dst FULL OUTER JOIN FactInternetSales AS fis  
-ON dst.SalesTerritoryKey = fis.SalesTerritoryKey  
+FROM DimSalesTerritory AS dst 
+FULL OUTER JOIN FactInternetSales AS fis  
+    ON dst.SalesTerritoryKey = fis.SalesTerritoryKey  
 ORDER BY fis.SalesOrderNumber;  
 ```  
   
  This query could also be written without the `OUTER` keyword.  
   
-```  
+```tsql
 -- Uses AdventureWorks  
   
 SELECT dst.SalesTerritoryKey, dst.SalesTerritoryRegion, fis.SalesOrderNumber  
-FROM DimSalesTerritory AS dst FULL JOIN FactInternetSales AS fis  
-ON dst.SalesTerritoryKey = fis.SalesTerritoryKey  
+FROM DimSalesTerritory AS dst 
+FULL JOIN FactInternetSales AS fis  
+    ON dst.SalesTerritoryKey = fis.SalesTerritoryKey  
 ORDER BY fis.SalesOrderNumber;  
 ```  
   
 ### R. Using the CROSS JOIN syntax  
  The following example returns the cross-product of the `FactInternetSales` and `DimSalesTerritory` tables. A list of all possible combinations of `SalesOrderNumber` and  `SalesTerritoryKey` are returned. Notice the absence of the `ON` clause in the cross join query.  
   
-```  
+```tsql
 -- Uses AdventureWorks  
   
 SELECT dst.SalesTerritoryKey, fis.SalesOrderNumber  
-FROM DimSalesTerritory AS dst CROSS JOIN FactInternetSales AS fis  
+FROM DimSalesTerritory AS dst 
+CROSS JOIN FactInternetSales AS fis  
 ORDER BY fis.SalesOrderNumber;  
 ```  
   
 ### S. Using a derived table  
  The following example uses a derived table (a `SELECT` statement after the `FROM` clause) to return the `CustomerKey` and `LastName` columns of all customers in the `DimCustomer` table with `BirthDate` values later than January 1, 1970 and the last name ‘Smith’.  
   
-```  
+```tsql
 -- Uses AdventureWorks  
   
 SELECT CustomerKey, LastName  
@@ -818,7 +814,7 @@ ORDER BY LastName;
 ### T. REDUCE join hint example  
  The following example uses the `REDUCE` join hint to alter the processing of the derived table within the query. When using the `REDUCE` join hint in this query, the `fis.ProductKey` is projected, replicated and made distinct, and then joined to `DimProduct` during the shuffle of `DimProduct` on `ProductKey`. The resulting derived table is distributed on `fis.ProductKey`.  
   
-```  
+```tsql
 -- Uses AdventureWorks  
   
 EXPLAIN SELECT SalesOrderNumber  
@@ -826,7 +822,7 @@ FROM
    (SELECT fis.SalesOrderNumber, dp.ProductKey, dp.EnglishProductName  
     FROM DimProduct AS dp   
       INNER REDUCE JOIN FactInternetSales AS fis   
-      ON dp.ProductKey = fis.ProductKey  
+          ON dp.ProductKey = fis.ProductKey  
    ) AS dTable  
 ORDER BY SalesOrderNumber;  
 ```  
@@ -834,7 +830,7 @@ ORDER BY SalesOrderNumber;
 ### U. REPLICATE join hint example  
  This next example shows the same query as the previous example, except that a `REPLICATE` join hint is used instead of the `REDUCE` join hint. Use of the `REPLICATE` hint causes the values in the `ProductKey` (joining) column from the `FactInternetSales` table to be replicated to all nodes. The `DimProduct` table is joined to the replicated version of those values.  
   
-```  
+```tsql
 -- Uses AdventureWorks  
   
 EXPLAIN SELECT SalesOrderNumber  
@@ -842,7 +838,7 @@ FROM
    (SELECT fis.SalesOrderNumber, dp.ProductKey, dp.EnglishProductName  
     FROM DimProduct AS dp   
       INNER REPLICATE JOIN FactInternetSales AS fis  
-      ON dp.ProductKey = fis.ProductKey  
+          ON dp.ProductKey = fis.ProductKey  
    ) AS dTable  
 ORDER BY SalesOrderNumber;  
 ```  
@@ -852,13 +848,14 @@ ORDER BY SalesOrderNumber;
   
  In the following example, the REDISTRIBUTE hint forces a Shuffle move on the FactInternetSales table because ProductKey is the distribution column for DimProduct, and is not the distribution column for FactInternetSales.  
   
-```  
+```tsql
 -- Uses AdventureWorks  
   
 EXPLAIN  
 SELECT dp.ProductKey, fis.SalesOrderNumber, fis.TotalProductCost  
-FROM DimProduct dp INNER REDISTRIBUTE JOIN FactInternetSales fis  
-ON dp.ProductKey = fis.ProductKey;  
+FROM DimProduct AS dp 
+INNER REDISTRIBUTE JOIN FactInternetSales AS fis  
+    ON dp.ProductKey = fis.ProductKey;  
 ```  
   
 ## See Also  
@@ -871,7 +868,3 @@ ON dp.ProductKey = fis.ProductKey;
  [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   
  [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  
-  
-  
-
-

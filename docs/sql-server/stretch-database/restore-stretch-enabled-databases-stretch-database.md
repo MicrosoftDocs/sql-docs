@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "07/06/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
-ms.service: "sql-server-stretch-database"
 ms.suite: ""
 ms.technology: 
   - "dbe-stretch"
@@ -14,7 +13,7 @@ ms.assetid: cebc1f6d-d5ea-460d-ae60-d047d29c2723
 caps.latest.revision: 15
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ---
 # Restore Stretch-enabled databases (Stretch Database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +68,7 @@ To restore a deleted Azure database to the point when it was deletedby using the
     -   Specify whether to make a copy of the remote data and connect to the copy (recommended).  
   
     ```tsql  
-    USE \<Stretch-enabled database name>;
+    USE <Stretch-enabled database name>;
     GO
     EXEC sp_rda_reauthorize_db
         @credential = N'<existing_database_scoped_credential_name>',

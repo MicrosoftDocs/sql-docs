@@ -1,7 +1,7 @@
 ---
 title: "DBCC CHECKIDENT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/24/2016"
+ms.date: "07/16/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -34,7 +34,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # DBCC CHECKIDENT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Checks the current identity value for the specified table in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and, if it is needed, changes the identity value. You can also use DBCC CHECKIDENT to manually set a new current identity value for the identity column.  
    
@@ -100,11 +100,11 @@ DBCC CHECKIDENT
 ## Result Sets  
  Whether or not any of the options are specified for a table that contains an identity column, DBCC CHECKIDENT returns the following message for all operations except when specifying a new seed value.  
   
- `Checking identity information: current identity value '<current identity value>', current column value '<current column value>'. DBCC execution completed. If DBCC printed error messages, contact your system administrator.`  
+`Checking identity information: current identity value '\<current identity value>', current column value '\<current column value>'. DBCC execution completed. If DBCC printed error messages, contact your system administrator.`
   
  When DBCC CHECKIDENT is used to specify a new seed value by using RESEED *new_reseed_value*, the following message is returned.  
   
- `Checking identity information: current identity value '<current identity value>'. DBCC execution completed. If DBCC printed error messages, contact your system administrator.`  
+`Checking identity information: current identity value '\<current identity value>'. DBCC execution completed. If DBCC printed error messages, contact your system administrator.`
   
 ## Permissions  
  Caller must own the schema that contains the table, or be a member of the **sysadmin** fixed server role, the **db_owner** fixed database role, or the **db_ddladmin** fixed database role.  
@@ -144,13 +144,13 @@ GO
 ```  
   
 ## See Also  
- [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
- [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
- [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)   
- [IDENTITY &#40;Property&#41; &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql-identity-property.md)   
- [Replicate Identity Columns](../../relational-databases/replication/publish/replicate-identity-columns.md)   
- [USE &#40;Transact-SQL&#41;](../../t-sql/language-elements/use-transact-sql.md)   
- [IDENT_SEED &#40;Transact-SQL&#41;](../../t-sql/functions/ident-seed-transact-sql.md)   
- [IDENT_INCR &#40;Transact-SQL&#41;](../../t-sql/functions/ident-incr-transact-sql.md)  
+[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
+[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  
+[DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
+[IDENTITY &#40;Property&#41; &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql-identity-property.md)  
+[Replicate Identity Columns](../../relational-databases/replication/publish/replicate-identity-columns.md)  
+[USE &#40;Transact-SQL&#41;](../../t-sql/language-elements/use-transact-sql.md)  
+[IDENT_SEED &#40;Transact-SQL&#41;](../../t-sql/functions/ident-seed-transact-sql.md)  
+[IDENT_INCR &#40;Transact-SQL&#41;](../../t-sql/functions/ident-incr-transact-sql.md)  
   
   

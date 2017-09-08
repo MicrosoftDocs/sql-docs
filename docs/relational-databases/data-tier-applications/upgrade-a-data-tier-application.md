@@ -122,7 +122,7 @@ manager: "jhubbard"
   
  **Description** - A read-only box that displays the description written when the DAC was authored or extracted from a database.  
   
- **\< Previous** - Returns to the **Introduction** page.  
+ **< Previous** - Returns to the **Introduction** page.  
   
  **Next >** - Displays a progress bar as the wizard confirms that the selected file is a valid DAC package.  
   
@@ -133,7 +133,7 @@ manager: "jhubbard"
   
  **Validating the contents of the DAC** - The progress bar that reports the current status of the validation process.  
   
- **\< Previous** - Returns to the initial state of the **Select Package** page.  
+ **< Previous** - Returns to the initial state of the **Select Package** page.  
   
  **Next >** - Proceeds to the final version of the **Select Package** page.  
   
@@ -146,7 +146,7 @@ manager: "jhubbard"
   
  **Ignore policy violations** - Use this check box to proceed with the upgrade if one or more of the policy conditions failed. Only select this option if you are sure that all of the conditions which failed will not prevent the successful operation of the DAC.  
   
- **\< Previous** - Returns to the **Select Package** page.  
+ **< Previous** - Returns to the **Select Package** page.  
   
  **Next >** - Proceeds to the **Detect Change** page.  
   
@@ -167,7 +167,7 @@ manager: "jhubbard"
   
  **Save Report** - Click the button to save a report of the changes the wizard detected between the objects in the database and their counterparts in the DAC definition. You can then review the report to determine if you need to take actions after the upgrade completes to incorporate some or all of the objects listed in the report into the new database.  
   
- **\< Previous** - Returns to the **Select DAC Package** page.  
+ **< Previous** - Returns to the **Select DAC Package** page.  
   
  **Next >** - Proceeds to the **Options** page.  
   
@@ -180,7 +180,7 @@ manager: "jhubbard"
   
  **Restore Defaults** - Returns the option to its default setting of false.  
   
- **\< Previous** - Returns to the **Detect Change** page.  
+ **< Previous** - Returns to the **Detect Change** page.  
   
  **Next >** - Proceeds to the **Review the Upgrade Plan** page.  
   
@@ -201,7 +201,7 @@ manager: "jhubbard"
   
  **Restore Defaults** - Returns the option to its default setting of false.  
   
- **\< Previous** - Returns to the **Detect Change** page.  
+ **< Previous** - Returns to the **Detect Change** page.  
   
  **Next >** - Proceeds to the **Summary** page.  
   
@@ -212,7 +212,7 @@ manager: "jhubbard"
   
  **The following settings will be used to upgrade your DAC.** - Review the information displayed to ensure the actions taken will be correct. The window displays the DAC you selected to be upgraded, and the DAC package containing the new version of the DAC. The window also displays whether the current version of the database is the same as the current DAC definition, or if the database has changed.  
   
- **\< Previous** - Returns you to the **Review the Upgrade Plan** page.  
+ **< Previous** - Returns you to the **Review the Upgrade Plan** page.  
   
  **Next >** - Deploys the DAC and displays the results in the **Upgrade DAC** page.  
   
@@ -245,7 +245,7 @@ manager: "jhubbard"
 7.  Close the file stream used to read the DAC package file.  
   
 ### Example (PowerShell)  
- The following example upgrades a DAC named MyApplication on a default instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)], using a new DAC version in a MyApplicationVNext.dacpac package.  
+ The following example upgrades a DAC named MyApplication on a default instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)], using a new DAC version in a MyApplication2017.dacpac package.  
   
 ```  
 ## Set a SMO Server object to the default instance on the local computer.  
@@ -258,7 +258,7 @@ $serverconnection.Connect()
 $dacstore = New-Object Microsoft.SqlServer.Management.Dac.DacStore($serverconnection)  
   
 ## Load the DAC package file.  
-$dacpacPath = "C:\MyDACs\MyApplicationVNext.dacpac"  
+$dacpacPath = "C:\MyDACs\MyApplication2017.dacpac"  
 $fileStream = [System.IO.File]::Open($dacpacPath,[System.IO.FileMode]::OpenOrCreate)  
 $dacType = [Microsoft.SqlServer.Management.Dac.DacType]::Load($fileStream)  
   

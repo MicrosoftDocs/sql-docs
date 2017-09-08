@@ -1,7 +1,7 @@
 ---
-title: "Prereqs, Restrictions, Recommendations - Always On Availability | Microsoft Docs"
+title: "Prereqs, Restrictions, Recommendations - Always On Availability Groups | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/30/2016"
+ms.date: "05/02/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -24,10 +24,10 @@ author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---
-# Prereqs, Restrictions, Recommendations - Always On Availability
+# Prereqs, Restrictions, Recommendations - Always On Availability Groups
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  This topic describes considerations for deploying [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], including prerequisites, restrictions, and recommendations for host computers, Windows Server Failover Clustering (WSFC) clusters, server instances, and availability groups. For each of these components security considerations and required permissions, if any, are indicated.  
+  This topic describes considerations for deploying [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], including prerequisites, restrictions, and recommendations for host computers, Windows Server failover clusters (WSFC), server instances, and availability groups. For each of these components security considerations and required permissions, if any, are indicated.  
   
 > [!IMPORTANT]  
 >  Before you deploy [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], we strongly recommend that you read every section of this topic.  
@@ -59,8 +59,8 @@ manager: "jhubbard"
 |------|-----------------|----------|  
 |![Checkbox](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Ensure that the system is not a domain controller.|Availability groups are not supported on domain controllers.|  
 |![Checkbox](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Ensure that each computer is running Windows Server 2012 or later versions.|[Hardware and Software Requirements for Installing SQL Server 2016](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)|  
-|![Checkbox](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Ensure that each computer is a node in a Windows Server Failover Clustering (WSFC) cluster.|[Windows Server Failover Clustering &#40;WSFC&#41; with SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)|  
-|![Checkbox](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Ensure that the WSFC cluster contains sufficient nodes to support your availability group configurations.|A WSFC node can host only one availability replica for a given availability group. On a given WSFC node, one or more instances of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] can host availability replicas for many availability groups.<br /><br /> Ask your database administrators how many WSFC nodes are required for to support the availability replicas of the planned availability groups.<br /><br /> [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).|  
+|![Checkbox](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Ensure that each computer is a node in a WSFC.|[Windows Server Failover Clustering &#40;WSFC&#41; with SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)|  
+|![Checkbox](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Ensure that the WSFC contains sufficient nodes to support your availability group configurations.|A cluster node can host only one availability replica for a given availability group. On a given cluster node, one or more instances of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] can host availability replicas for many availability groups.<br /><br /> Ask your database administrators how many cluster nodes are required for to support the availability replicas of the planned availability groups.<br /><br /> [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).|  
   
 > [!IMPORTANT]  
 >  Also ensure that your environment is correctly configured for connecting to an availability group. For more information, see [Always On Client Connectivity &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md).  
@@ -74,7 +74,7 @@ manager: "jhubbard"
 -   **Sufficient disk space:**  Every computer on which a server instance hosts an availability replica must possess sufficient disk space for all the databases in the availability group. Keep in mind that as primary databases grow, their corresponding secondary databases grow the same amount.  
   
 ###  <a name="PermissionsWindows"></a> Permissions (Windows System)  
- To administer a WSFC cluster, the user must be a system administrator on every cluster node.  
+ To administer a WSFC, the user must be a system administrator on every cluster node.  
   
  For more information about the account for administering the cluster, see [Appendix A: Failover Cluster Requirements](http://technet.microsoft.com/library/dd197454.aspx).  
   
@@ -140,12 +140,12 @@ manager: "jhubbard"
   
 ||Prerequisite|Links|  
 |-|------------------|-----------|  
-|![Checkbox](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|The host computer must be a Windows Server Failover Clustering (WSFC) node. The instances of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that host availability replicas for a given availability group reside on separate nodes of a single WSFC cluster. An availability group can temporarily straddle two clusters while being migrated to another WSFC cluster. SQL Server 2016 introduces distributed availability groups. In a distributed availability group two availability groups reside on different WSFC clusters.|[Windows Server Failover Clustering &#40;WSFC&#41; with SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)<br /><br /> [Failover Clustering and Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)<br/> <br/> [Distributed Availability Groups (Always On Availability Groups)](../../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md)|  
+|![Checkbox](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|The host computer must be a WSFC node. The instances of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that host availability replicas for a given availability group reside on separate nodes of the cluster. An availability group can temporarily straddle two clusters while being migrated to different cluster. SQL Server 2016 introduces distributed availability groups. In a distributed availability group two availability groups reside on different clusters.|[Windows Server Failover Clustering &#40;WSFC&#41; with SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)<br /><br /> [Failover Clustering and Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)<br/> <br/> [Distributed Availability Groups (Always On Availability Groups)](../../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md)|  
 |![Checkbox](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|If you want an availability group to work with Kerberos:<br /><br /> All server instances that host an availability replica for the availability group must use the same SQL Server service account.<br /><br /> The domain administrator needs to manually register a Service Principal Name (SPN) with Active Directory on the SQL Server service account for the virtual network name (VNN) of the availability group listener. If the SPN is registered on an account other than the SQL Server service account, authentication will fail.<br /><br /> <br /><br /> **\*\* Important \*\*** If you change the SQL Server service account, the domain administrator will need to manually re-register the SPN.|[Register a Service Principal Name for Kerberos Connections](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)<br /><br /> **Brief explanation:**<br /><br /> Kerberos and SPNs enforce mutual authentication. The SPN maps to the Windows account that starts the SQL Server services. If the SPN is not registered correctly or if it fails, the Windows security layer cannot determine the account associated with the SPN, and Kerberos authentication cannot be used.<br /><br /> <br /><br /> Note: NTLM does not have this requirement.|  
 |![Checkbox](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|If you plan to use a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster instance (FCI) to host an availability replica, ensure that you understand the FCI restrictions and that the FCI requirements are met.|[Prerequisites and Requirements on Using a SQL Server Failover Cluster Instance (FCI) to Host an Availability Replica](#FciArLimitations) (later in this topic)|  
 |![Checkbox](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Each server instance must be running the Enterprise Edition of [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].|[Editions and Supported Features for SQL Server 2016](../../../sql-server/editions-and-supported-features-for-sql-server-2016.md)|  
 |![Checkbox](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|All the server instances that host availability replicas for an availability group must use the same [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] collation.|[Set or Change the Server Collation](../../../relational-databases/collations/set-or-change-the-server-collation.md)|  
-|![Checkbox](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Enable the [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] feature on each server instance that will host an availability replica for any availability group. On a given computer, you can enable as many server instances for [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] as your [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installation supports.|[Enable and Disable Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)<br /><br /> <br /><br /> **\*\* Important \*\*** If you delete and re-create a WSFC cluster, you must disable and re-enable the [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] feature on each server instance that was enabled for [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] on the original WSFC cluster.|  
+|![Checkbox](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Enable the [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] feature on each server instance that will host an availability replica for any availability group. On a given computer, you can enable as many server instances for [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] as your [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installation supports.|[Enable and Disable Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)<br /><br /> <br /><br /> **\*\* Important \*\*** If you destroy and re-create a WSFC, you must disable and re-enable the [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] feature on each server instance that was enabled for [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] on the original cluster.|  
 |![Checkbox](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Each server instance requires a database mirroring endpoint. Note that this endpoint is shared by all the availability replicas and database mirroring partners and witnesses on the server instance.<br /><br /> If a server instance that you select to host an availability replica is running under a domain user account and does not yet have a database mirroring endpoint, the [New Availability Group Wizard](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md) (or [Add Replica to Availability Group Wizard](../../../database-engine/availability-groups/windows/use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)) can create the endpoint and grant CONNECT permission to the server instance service account. However, if the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service is running as a built-in account, such as Local System, Local Service, or Network Service, or a nondomain account, you must use certificates for endpoint authentication, and the wizard will be unable to create a database mirroring endpoint on the server instance. In this case, we recommend that you create the database mirroring endpoints manually before you launch the wizard.<br /><br /> <br /><br /> **\*\* Security Note \*\*** Transport security for [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] is the same as for database mirroring.|[The Database Mirroring Endpoint &#40;SQL Server&#41;](../../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)<br /><br /> [Transport Security for Database Mirroring and Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)|  
 |![Checkbox](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|If any databases that use FILESTREAM will be added to an availability group, ensure that FILESTREAM is enabled on every server instance that will host an availability replica for the availability group.|[Enable and Configure FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md)|  
 |![Checkbox](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|If any contained databases will be added to an availability group, ensure that the **contained database authentication** server option is set to **1** on every server instance that will host an availability replica for the availability group.|[contained database authentication Server Configuration Option](../../../database-engine/configure-windows/contained-database-authentication-server-configuration-option.md)<br /><br /> [Server Configuration Options &#40;SQL Server&#41;](../../../database-engine/configure-windows/server-configuration-options-sql-server.md)|  
@@ -181,7 +181,7 @@ manager: "jhubbard"
 |Task|Required Permissions|  
 |----------|--------------------------|  
 |Creating the database mirroring endpoint|Requires CREATE ENDPOINT permission, or membership in the **sysadmin** fixed server role.  Also requires CONTROL ON ENDPOINT permission. For more information, see [GRANT Endpoint Permissions &#40;Transact-SQL&#41;](../../../t-sql/statements/grant-endpoint-permissions-transact-sql.md).|  
-|Enabling [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]|Requires membership in the **Administrator** group on the local computer and full control on the WSFC cluster.|  
+|Enabling [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]|Requires membership in the **Administrator** group on the local computer and full control on the WSFC.|  
   
 ###  <a name="RelatedTasksSI"></a> Related Tasks (Server Instance)  
   
@@ -196,9 +196,9 @@ manager: "jhubbard"
 -   [Always On - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](http://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
 ##  <a name="NetworkConnect"></a> Network Connectivity Recommendations  
- We strongly recommend that you use the same network links for communications between WSFC cluster members and communications between availability replicas.  Using separate network links can cause unexpected behaviors if some of links fail (even intermittently).  
+ We strongly recommend that you use the same network links for communications between WSFC nodes and communications between availability replicas.  Using separate network links can cause unexpected behaviors if some of links fail (even intermittently).  
   
- For example, for an availability group to support automatic failover, the secondary replica that is the automatic-failover partner must be in the SYNCHRONIZED state. If the network link to this secondary replica fails (even intermittently), the replica enters the UNSYNCHRONIZED state and cannot begin to resynchronize until the link is restored. If the WSFC cluster requests an automatic failover while the secondary replica is unsynchronized, automatic failover will not occur.  
+ For example, for an availability group to support automatic failover, the secondary replica that is the automatic-failover partner must be in the SYNCHRONIZED state. If the network link to this secondary replica fails (even intermittently), the replica enters the UNSYNCHRONIZED state and cannot begin to resynchronize until the link is restored. If the WSFC requests an automatic failover while the secondary replica is unsynchronized, automatic failover will not occur.  
   
 ##  <a name="ClientConnSupport"></a> Client Connectivity Support  
  For information about [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] support for client connectivity, see [Always On Client Connectivity &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md).  
@@ -219,9 +219,9 @@ manager: "jhubbard"
 > [!NOTE]  
 > Failover Cluster Instances supports Clustered Shared Volumes (CSV). For more information on CSV, see [Understanding Cluster Shared Volumes in a Failover Cluster](http://technet.microsoft.com/library/dd759255.aspx).  
   
--   **The cluster nodes of an FCI can host only one replica for a given availability group:**  If you add an availability replica on an FCI, the WSFC cluster nodes that are possible FCI owners cannot host another replica for the same availability group.  
+-   **The cluster nodes of an FCI can host only one replica for a given availability group:**  If you add an availability replica on an FCI, the WSFC nodes that are possible FCI owners cannot host another replica for the same availability group.  
   
-     Furthermore, every other replica must be hosted by an instance of SQL Server 2016 that resides on a different WSFC node in the same WSFC cluster. The only exception is that while being migrated to another WSFC cluster, an availability group can temporarily straddle two clusters.  
+     Furthermore, every other replica must be hosted by an instance of SQL Server 2016 that resides on a different cluster node in the same Windows Server failoer cluster. The only exception is that while being migrated to another cluster, an availability group can temporarily straddle two clusters.  
   
 -   **FCIs do not support automatic failover by availability groups:**  FCIs do not support automatic failover by availability groups, so any availability replica that is hosted by an FCI can be configured for manual failover only.  
   
@@ -260,12 +260,12 @@ manager: "jhubbard"
   
 ###  <a name="RestrictionsAG"></a> Restrictions (Availability Groups)  
   
--   **Availability replicas must be hosted by different nodes of one WSFC cluster:**  For a given availability group, availability replicas must be hosted by server instances running on different nodes of the same WSFC cluster. The only exception is that while being migrated to another WSFC cluster, an availability group can temporarily straddle two clusters.  
+-   **Availability replicas must be hosted by different nodes of one WSFC:**  For a given availability group, availability replicas must be hosted by server instances running on different nodes of the same WSFC. The only exception is that while being migrated to another cluster, an availability group can temporarily straddle two clusters.  
   
     > [!NOTE]  
     >  Virtual machines on the same physical computer can each host an availability replica for the same availability group because each virtual machine acts as a separate computer.  
   
--   **Unique availability group name:**  Each availability group name must be unique on the WSFC cluster. The maximum length for an availability group name is 128 characters.  
+-   **Unique availability group name:**  Each availability group name must be unique on the WSFC. The maximum length for an availability group name is 128 characters.  
   
 -   **Availability replicas:**  Each availability group supports one primary replica and up to eight secondary replicas. All of the replicas can run under asynchronous-commit mode, or up to three of them can run under synchronous-commit mode (one primary replica with two synchronous secondary replicas).  
   
@@ -288,17 +288,17 @@ manager: "jhubbard"
   
 ###  <a name="SecurityAG"></a> Security (Availability Groups)  
   
--   Security is inherited from the Windows Server Failover Clustering (WSFC) cluster. WSFC provides two levels of user security at granularity of entire WSFC cluster APIs:  
+-   Security is inherited from the WSFC. Windows Server failover clustering provides two levels of user security at the granularity of entire cluster:  
   
     -   Read-only access  
   
     -   Full control  
   
-         [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] needs full control, and enabling [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] on an instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] gives it full control of the WSFC cluster (through Service SID).  
+         [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] need full control, and enabling [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] on an instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] gives it full control of the cluster (through Service SID).  
   
-         You cannot directly add or remove security for a server instance in the WSFC Failover Cluster Manager. To manage WSFC security sessions, use the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager or the WMI equivalent from [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+         You cannot directly add or remove security for a server instance in Cluster Manager. To manage cluster security sessions, use the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager or the WMI equivalent from [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
--   Each instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] must have permissions to access the registry, cluster, and soforth.  
+-   Each instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] must have permissions to access the registry, cluster, and so forth.  
   
 -   We recommend that you use encryption for connections between server instances that host [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] availability replicas.  
   

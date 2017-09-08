@@ -26,7 +26,7 @@ manager: "jhubbard"
 # Save Packages
   In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] you build packages by using [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer and save the packages to the file system as XML files (.dtsx files). You can also save copies of the package XML file to the msdb database in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] or to the package store. The package store represents the folders in the file system location that the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] service manages.  
   
- If you save a package to the file system, you can later use the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] service to import the package to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] or to the package store. For more information, see [Import and Export Packages &#40;SSIS Service&#41;](../integration-services/service/import-and-export-packages-ssis-service.md).  
+ If you save a package to the file system, you can later use the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] service to import the package to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] or to the package store. For more information, see [Integration Services Service &#40;SSIS Service&#41;](../integration-services/service/integration-services-service-ssis-service.md).  
   
  You can also use a command prompt utility, **dtutil**, to copy a package between the file system and msdb. For more information, see [dtutil Utility](../integration-services/dtutil-utility.md).  
 ## Save a package to the file system  

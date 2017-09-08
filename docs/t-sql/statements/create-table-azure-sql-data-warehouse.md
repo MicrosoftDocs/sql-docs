@@ -1,7 +1,7 @@
 ---
 title: "CREATE TABLE (Azure SQL Data Warehouse) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/15/2017"
+ms.date: "07/14/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.service: "sql-data-warehouse"
@@ -28,10 +28,6 @@ To understand tables and how to use them, see [Tables in SQL Data Warehouse](htt
 NOTE: Discussions about SQL Data Warehouse in this article apply to both SQL Data Warehouse and Parallel Data Warehouse unless otherwise noted. 
  
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-
-\<!-- Some browsers jump to the line after an H2 when jumping to a bookmark.  Putting this 2 lines above the H2.
-     H3's seem to render correctly, so their bookmarks can be on the same line.
--->
 
 <a name="Syntax"></a>   
 ## Syntax  
@@ -61,7 +57,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
     { 
         DISTRIBUTION = HASH ( distribution_column_name ) 
       | DISTRIBUTION = ROUND_ROBIN -- default for SQL Data Warehouse
-      | DISTRIBUTION = REPLICATE -- default and only available in Parallel Data Warehouse
+      | DISTRIBUTION = REPLICATE -- default for Parallel Data Warehouse
     }   
     | PARTITION ( partition_column_name RANGE [ LEFT | RIGHT ] -- default is LEFT  
         FOR VALUES ( [ boundary_value [,...n] ] ) )  
@@ -125,7 +121,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
   
 
 ### <a name="TableOptions"></a> Table structure options
-For guidance on choosing the type of table, see [Indexing tables in Azure SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-index/).
+For guidance on choosing the type of table, see [Indexing tables in Azure SQL Data Warehouse](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-tables-index/).
   
  `CLUSTERED COLUMNSTORE INDEX`  
 Stores the table as a clustered columnstore index. The clustered columnstore index applies to all of the table data. This is the default for [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].   
@@ -148,8 +144,8 @@ Assigns each row to one distribution by hashing the value stored in *distributio
 `DISTRIBUTION = ROUND_ROBIN`   
 Distributes the rows evenly across all the distributions in a round-robin fashion. This is the default for [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].
 
-`DISTRIBUTION = REPLICATE` -- Applies only to [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].    
-Stores one copy of the table in full on each Compute node. Within each Compute node, the table is stored in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] filegroup that spans the Compute node. This is the default for [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
+`DISTRIBUTION = REPLICATE`    
+Stores one copy of the table on each Compute node. For [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] the table is stored on a distribution database on each Compute node. For [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], the table is stored in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] filegroup that spans the Compute node. This is the default for [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
   
 ### <a name="TablePartitionOptions"></a> Table partition options
 For guidance on using table partitions, see [Partitioning tables in SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-partition/).
@@ -339,7 +335,6 @@ For more information, see these articles:
 ## Locking behavior  
  Takes an exclusive lock on the table. Takes a shared lock on the DATABASE, SCHEMA, and SCHEMARESOLUTION objects.  
  
-\<!-- Column example sections are H2 so they will show up in the right navigation -->
 
 <a name="ExamplesColumn"></a>   
 ## Examples for columns
@@ -419,7 +414,7 @@ WITH
 ## Examples for table distribution
 
 ### <a name="RoundRobin"></a> E. Create a ROUND_ROBIN table  
- The following example creates a ROUND_ROBIN table with three columns and without partitions. The `id` column includes a NOT NULL constraint. The table is created with a CLUSTERED COLUMNSTORE INDEX, which gives better performance and data compression than a heap or rowstore clustered index.  
+ The following example creates a ROUND_ROBIN table with three columns and without partitions. The data is spread across all distributions. The table is created with a CLUSTERED COLUMNSTORE INDEX, which gives better performance and data compression than a heap or rowstore clustered index.  
   
 ```  
 CREATE TABLE myTable   
@@ -432,7 +427,7 @@ WITH ( CLUSTERED COLUMNSTORE INDEX );
 ```  
   
 ### <a name="HashDistributed"></a> F. Create a hash-distributed table  
- The following example creates the same table as the previous example. However, this table is distributed (on the `id` column) instead of replicated. The table is created with a CLUSTERED COLUMNSTORE INDEX, which gives better performance and data compression than a heap or rowstore clustered index.  
+ The following example creates the same table as the previous example. However, for this table, rows are distributed (on the `id` column) instead of randomly spread like a ROUND_ROBIN table. The table is created with a CLUSTERED COLUMNSTORE INDEX, which gives better performance and data compression than a heap or rowstore clustered index.  
   
 ```  
 CREATE TABLE myTable   
@@ -447,11 +442,28 @@ WITH
     CLUSTERED COLUMNSTORE INDEX  
   );  
 ```  
+  
+### <a name="Replicated"></a> G. Create a replicated table  
+ The following example creates a replicated table similar to the previous examples. Replicated tables are copied in full to each Compute node. With this copy on each Compute node, data movement is reduced for queries. This example is created with a CLUSTERED INDEX, which gives better data compression than a heap and may not contain enough rows to achieve good CLUSTERED COLUMNSTORE INDEX compression.  
+  
+```  
+CREATE TABLE myTable   
+  (  
+    id int NOT NULL,  
+    lastName varchar(20),  
+    zipCode varchar(6)  
+  )  
+WITH  
+  (   
+    DISTRIBUTION = REPLICATE,   
+    CLUSTERED INDEX (lastName)  
+  );  
+```  
 
 <a name="ExTablePartitions"></a> 
 ## Examples for table partitions
 
-###  <a name="PartitionedTable"></a> G. Create a partitioned table  
+###  <a name="PartitionedTable"></a> H. Create a partitioned table  
  The following example creates the same table as shown in example A, with the addition of RANGE LEFT partitioning on the `id` column. It specifies four partition boundary values, which results in five partitions.  
   
 ```  
@@ -485,7 +497,7 @@ WITH
 -   Partition 4: 30 <= col < 40   
 -   Partition 5: 40 <= col  
   
-### <a name="OnePartition"></a> H. Create a partitioned table with one partition  
+### <a name="OnePartition"></a> I. Create a partitioned table with one partition  
  The following example creates a partitioned table with one partition. It does not specify any boundary values, which results in one partition.  
   
 ```  
@@ -501,7 +513,7 @@ WITH
 ;  
 ```  
   
-### <a name="DatePartition"></a> I. Create a table with date partitioning  
+### <a name="DatePartition"></a> J. Create a table with date partitioning  
  The following example creates a new table named `myTable`, with partitioning on a `date` column. By using RANGE RIGHT and dates for the boundary values, it puts a month of data in each partition.  
   
 ```  

@@ -1,4 +1,4 @@
----
+﻿---
 title: "Configure HTTP Access to Analysis Services on IIS 8.0 | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
@@ -261,7 +261,7 @@ manager: "erikre"
 ##  <a name="bkmk_test"></a> Step 6: Test your configuration  
  The connection string syntax for MSMDPUMP is the URL to the MSMDPUMP.dll file.  
   
- If the web application is listening on a fixed port, append the port number to the server name or IP address (for example, http://my-web-srv01:8080/OLAP/msmdpump.dll or http://123.456.789.012:8080/OLAP/msmdpump.dll.  
+ If the web application is listening on a fixed port, append the port number to the server name or IP address (for example, `http://my-web-srv01:8080/OLAP/msmdpump.dll` or `http://123.456.789.012:8080/OLAP/msmdpump.dll`.  
   
  To quickly test the connection, you can open a connection using Internet Explorer, Microsoft Excel, or SQL Server Management Studio.  
   
@@ -273,7 +273,7 @@ manager: "erikre"
   
 1.  In **Internet Explorer** > **Internet Options** > **Advanced**, clear the checkbox for **Show Friendly HTTP messages**.  
   
-2.  Retry the connection (for example, http://my-web-srv01:8080/OLAP/msmdpump.dll)  
+2.  Retry the connection (for example, `http://my-web-srv01:8080/OLAP/msmdpump.dll`)  
   
  If you see an ERROR XML displayed in the browser window, you can eliminate MSMDPUMP as the potential cause and shift your focus to the  certificate.  
   

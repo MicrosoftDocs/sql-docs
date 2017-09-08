@@ -2,7 +2,7 @@
 title: "Temporal Table Usage Scenarios | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "01/13/2017"
+ms.date: "05/16/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -20,17 +20,7 @@ manager: "jhubbard"
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Temporal Tables are generally useful in scenarios that require tracking history of data changes.    
-We recommend you to consider Temporal Tables in the following use cases, because of huge productivity benefits:  
-  
--   [Data Audit](https://msdn.microsoft.com/library/mt631669.aspx#Anchor_0)  
-  
--   [Point in Time Analysis (Time Travel)](https://msdn.microsoft.com/library/mt631669.aspx#Anchor_1)  
-  
--   [Anomaly Detection](https://msdn.microsoft.com/library/mt631669.aspx#Anchor_2)  
-  
--   [Slowly-Changing Dimensions](https://msdn.microsoft.com/library/mt631669.aspx#Anchor_3)  
-  
--   [Repairing Row-Level Data Corruption](https://msdn.microsoft.com/library/mt631669.aspx#Anchor_4)  
+We recommend you to consider Temporal Tables in the following use cases for major productivity benefits.  
   
 ## Data Audit  
  Use temporal system-versioning on tables that store critical information for which you need to keep track of what has changed and when, and to perform data forensics at any point in time.    
@@ -144,9 +134,9 @@ FROM Employee
   
 > [!TIP]  
 >  Filtering conditions specified in temporal clauses with FOR SYSTEM_TIME are SARG-able (i.e SQL Server can utilize underlying clustered index to perform a seek instead of a scan operation.   
-> If you query the history table directly, make sure that your filtering condition is also SARG-able by specifying filters in form of \<period column>  {\< | > | =, …} date_condition AT TIME ZONE ‘UTC’.  
+> If you query the history table directly, make sure that your filtering condition is also SARG-able by specifying filters in form of \<period column>  {< | > | =, …} date_condition AT TIME ZONE ‘UTC’.  
 > If you apply AT TIME ZONE to period columns, SQL Server will perform a table/index scan, which can be very expensive. Avoid this type of condition in your queries:  
-> \<period column>  AT TIME ZONE ‘\<your time zone>’  >  {\< | > | =, …} date_condition.  
+> \<period column>  AT TIME ZONE ‘\<your time zone>’  >  {< | > | =, …} date_condition.  
   
  See also: [Querying Data in a System-Versioned Temporal Table](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md).  
   
@@ -319,9 +309,9 @@ ALTER TABLE Product
 ALTER TABLE [Location]  
 ADD   
     SysStartTime datetime2 (2) GENERATED ALWAYS AS ROW START HIDDEN    
-        constraint DF_ValidFrom DEFAULT DATEADD(second, -1, SYSUTCDATETIME())  
+        constraint DFValidFrom DEFAULT DATEADD(second, -1, SYSUTCDATETIME())  
     , SysEndTime datetime2 (2)  GENERATED ALWAYS AS ROW END HIDDEN     
-        constraint DF_ValidTo DEFAULT '9999.12.31 23:59:59.99'  
+        constraint DFValidTo DEFAULT '9999.12.31 23:59:59.99'  
     , PERIOD FOR SYSTEM_TIME (SysStartTime, SysEndTime);  
   
 ALTER TABLE [Location]    

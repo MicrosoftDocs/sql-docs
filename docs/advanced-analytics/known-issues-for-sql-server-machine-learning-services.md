@@ -1,5 +1,5 @@
 ---
-title: "Known issues in machine learning services - SQL Server | Microsoft Docs"
+title: "Known issues in Machine Learning Services | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
 ms.date: "06/16/2017"
@@ -18,13 +18,13 @@ manager: "jhubbard"
 ---
 # Known issues in Machine Learning Services
 
-This article describes known problems or limitations with machine learning components that are provided as an option in SQL Server 2016 and SQL Server 2017.
+This article describes known problems or limitations with Machine Learning components that are provided as an option in SQL Server 2016 and SQL Server 2017.
 
 The information here applies to all of the following, unless specifically indicated:
 
 * SQL Server 2016
 
-  - Microsoft R Services (In-Database)
+  - SQL Server R Services (In-Database)
   - Microsoft R Server (Standalone)
 
 * SQL Server 2017
@@ -35,13 +35,13 @@ The information here applies to all of the following, unless specifically indica
 
 ## Setup and configuration issues
 
-For a description of processes and common questions that are related to initial setup and configuration, see [Upgrade and installation FAQ](r/upgrade-and-installation-faq-sql-server-r-services.md). This FAQ article contains information about upgrades, side-by-side installation, and installation of new R or Python components.
+For a description of processes and common questions that are related to initial setup and configuration, see [Upgrade and installation FAQ](r/upgrade-and-installation-faq-sql-server-r-services.md). It contains information about upgrades, side-by-side installation, and installation of new R or Python components.
 
-### Unable to install Python components in offline installations of SQL Server 2017
+### Unable to install Python components in offline installations of SQL Server 2017 CTP 2.0 or later
 
-If you install SQL Server 2017 on a computer without internet access, the installer might fail to display the page that prompts for the location of the downloaded Python components. In such an instance, you can install the Machine Learning Services feature, but not the Python components.
+If you install a pre-release version of SQL Server 2017 on a computer without internet access, the installer might fail to display the page that prompts for the location of the downloaded Python components. In such an instance, you can install the Machine Learning Services feature, but not the Python components.
 
-This issue will be fixed in an upcoming release. As a workaround, you can temporarily enable internet access for the duration of the setup. This limitation does not apply to R.
+This issue is fixed in the release version. If you encounter this issue, as a workaround, you can temporarily enable internet access for the duration of the setup. This limitation does not apply to R.
 
 **Applies to:** SQL Server 2017 with Python
 
@@ -63,11 +63,13 @@ To avoid problems with R packages, you can also upgrade the version of the R lib
 
 ### <a name="bkmk_sqlbindr"></a> Warning of incompatible version when you connect to an older version of SQL Server R Services from a client by using [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]
 
-If you installed Microsoft R Server on a client computer by using the setup wizard for [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] or the new Standalone installer for [Microsoft R Server](https://msdn.microsoft.com/microsoft-r/rserver-install-windows), and run R code in a compute context that uses an earlier version of SQL Server R Services, you might see an error like the following:
+When you run R code in a SQL Server 2016 compute context, and either of the following two statements is true, you might see an error like the following:
+* You installed R Server (Standalone) on a client computer by using the setup wizard for [!INCLUDEssSQLv14_md].
+* You installed Microsoft R Server by using the [separate Windows installer](https://docs.microsoft.com/r-server/install/r-server-install-windows).
 
 >*You are running version 9.0.0 of Microsoft R Client on your computer, which is incompatible with the Microsoft R Server version 8.0.3. Download and install a compatible version.*
 
-The SqlBindR.exe tool is provided in the Microsoft R Server 9.0 release to support the upgrade of SQL Server instances to a compatible 9.0 version. Support for the upgrade of R Services instances to 9.0 will be added in SQL Server as part of an upcoming service release. Versions that are candidates for future upgrade include SQL Server 2016 RTM CU3* and SP1+, and SQL Server 2017 CTP 1.1.
+The SqlBindR.exe tool is provided in the Microsoft R Server 9.0 release to support the upgrade of SQL Server instances to a compatible 9.0 version. Support for the upgrade of R services instances to 9.0 will be added in SQL Server as part of an upcoming service release. Versions that are candidates for future upgrade include SQL Server 2016 RTM CU3* and SP1+, and SQL Server 2017 CTP 1.1.
 
 **Applies to:** SQL Server 2016 R Services, with R Server version 9.0.0 or earlier
 
@@ -79,17 +81,17 @@ As a workaround, you can install the service release by using the command line a
 
 `C:\<path to installation media>\SQLServer2016-KB3164674-x64.exe /Action=Patch /IACCEPTROPENLICENSETERMS /MRCACHEDIRECTORY=<path to CU1 CAB files>`
 
-To get the latest installers, see [Install machine learning components without internet access](r/installing-ml-components-without-internet-access.md).
+To get the latest installers, see [Installing Machine Learning components without internet access](r/installing-ml-components-without-internet-access.md).
 
 **Applies to:** SQL Server 2016 R Services, with R Server version 9.0.0 or earlier
 
-### The Launchpad service fails to start if the version is different from the R version
+### Launchpad services fails to start if the version is different from the R version
 
-If you install R Services separately from the database engine, and the build versions are different, you might see the following error in the system log in Event Viewer: 
+If you install R services separately from the database engine, and the build versions are different, you might see the following error in the System Event log: 
 
 >_The SQL Server Launchpad service failed to start due to the following error: The service did not respond to the start or control request in a timely fashion._
 
-For example, this error might occur if you install the database engine by using the release version, apply a patch to upgrade the database engine, and then add R Services by using the release version.
+For example, this error might occur if you install the database engine by using the release version, apply a patch to upgrade the database engine, and then add R services by using the release version.
 
 To avoid this problem, make sure that all components have the same version number. If you upgrade one component, be sure to apply the same upgrade to all other installed components.
 
@@ -97,17 +99,17 @@ To view a list of the R version numbers that are required for each release of SQ
 
 ### Remote compute contexts are blocked by a firewall in SQL Server instances that are running on Azure virtual machines
 
-If you have installed [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] on an Azure virtual machine, you might not be able to use compute contexts that require the use of the virtual machine's workspace. The reason is that, by default, the Azure VM firewall includes a rule that blocks network access for local R user accounts.
+If you have installed [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] on a Windows Azure virtual machine, you might not be able to use compute contexts that require the use of the virtual machine's workspace. The reason is that, by default, the Azure VM firewall includes a rule that blocks network access for local R user accounts.
 
 As a workaround, on the Azure VM, open **Windows Firewall with Advanced Security**, select **Outbound Rules**, and disable the following rule: **Block network access for R local user accounts in SQL Server instance MSSQLSERVER**.
 
 ### Implied authentication in SQLEXPRESS
 
-When you run R jobs from a remote data-science workstation by using Windows integrated authentication, SQL Server uses *implied authentication* to generate any local Microsoft Open Database Connectivity (ODBC) calls that might be required by the script. However, this feature did not work in the RTM build of SQL Server Express Edition.
+When you run R jobs from a remote data-science workstation by using Windows integrated authentication, SQL Server uses *implied authentication* to generate any local ODBC calls that might be required by the script. However, this feature did not work in the RTM build of SQL Server Express Edition.
 
 To fix the issue, we recommend that you upgrade to a later service release.
 
-If you cannot upgrade, you can use a SQL logon to run remote R jobs that might require embedded ODBC calls.
+If you cannot upgrade, you can use a SQL login to run remote R jobs that might require embedded ODBC calls.
 
 **Applies to:** SQL Server 2016 R Services Express Edition
 
@@ -120,7 +122,7 @@ However, be aware that outside of SQL Server, performance will be limited. For e
 * Avoid calling the R libraries that are used by SQL Server from external R tools.
 * If you need to run extensive R code on the SQL Server computer without using SQL Server, install a separate instance of R, such as Microsoft R Client, and then ensure that your R development tools point to the new library.
 
-For more information, see [Create a standalone R Server](r/create-a-standalone-r-server.md).
+For more information, see [Create a Standalone R Server](r/create-a-standalone-r-server.md).
 
 ### The R script is throttled due to resource governance default values
 
@@ -138,7 +140,7 @@ For additional known issues that might affect R solutions, go to the [Microsoft 
 
 ### Limitations on processor affinity for R jobs
 
-In the initial release build of SQL Server 2016, you can set processor affinity for CPUs in the first k-group only. For example, if the server is a two-socket machine with two k-groups, only processors from the first k-group are used for the R processes. The same limitation applies when you configure resource governance for R script jobs.
+In the initial release build of SQL Server 2016, you could set processor affinity only for CPUs in the first k-group. For example, if the server is a 2-socket machine with 2 k-groups, only processors from the first k-group are used for the R processes. The same limitation applies when you configure resource governance for R script jobs.
 
 This issue is fixed in SQL Server 2016 Service Pack 1.
 
@@ -164,16 +166,16 @@ As a workaround, you can rewrite the SQL query to use CAST or CONVERT and presen
 
 ### Avoid clearing workspaces when you execute R code in a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] compute context
 
-If you use the R command to clear your workspace of objects while you're running R code in a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] compute context, or if you clear the workspace as part of an R script that's called by using [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md), you might get this error: 
+If you use the R command to clear your workspace of objects while running R code in a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] compute context, or if you clear the workspace as part of an R script called by using [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md), you might get this error: 
 
 >*workspace object 'revoScriptConnection' not found*
 
-`revoScriptConnection` is an object in the R workspace that contains information about an R session that's called from [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. However, if your R code includes a command to clear the workspace (such as `rm(list=ls()))`), all information about the session and other objects in the R workspace is cleared as well.
+`revoScriptConnection` is an object in the R workspace that contains information about an R session that is called from [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. However, if your R code includes a command to clear the workspace (such as `rm(list=ls()))`, all information about the session and other objects in the R workspace is cleared as well.
 
-As a workaround, avoid indiscriminate clearing of variables and other objects while you're running R in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Although clearing the workspace is common when you're working in the R console, doing so can have unintended consequences.
+As a workaround, avoid indiscriminate clearing of variables and other objects while you're running R in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Although clearing the workspace is common when working in the R console,  it can have unintended consequences.
 
 * To delete specific variables, use the R *remove* function: `remove('name1', 'name2', ...)`.
-* If there are multiple variables to delete, save the names of temporary variables to a list, and then perform periodic garbage collection.
+* If there are multiple variables to delete, save the names of temporary variables to a list and perform periodic garbage collection.
 
 ### Restrictions on data that can be provided as input to an R script
 
@@ -193,13 +195,13 @@ This limitation will be removed in a later release.
 
 ### Limited support for SQL data types in `sp_execute_external_script`
 
-Not all data types that are supported in SQL can be used in R. As a workaround, consider casting the unsupported data type to a supported data type before you pass the data to sp_execute_external_script.
+Not all data types that are supported in SQL can be used in R. As a workaround, consider casting the unsupported data type to a supported data type before passing the data to sp_execute_external_script.
 
 For more information, see [R Libraries and Data Types](r/r-libraries-and-data-types.md).
 
 ### Possible string corruption
 
-Any round trip of string data from [!INCLUDE[tsql](../includes/tsql-md.md)] to R and then to [!INCLUDE[tsql](../includes/tsql-md.md)] again can result in corruption. This corruption results from the various encodings that are used in R and in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], as well as from the various collations and languages that are supported in R and [!INCLUDE[tsql](../includes/tsql-md.md)]. Any string in a non-ASCII encoding can potentially be handled incorrectly.
+Any round-trip of string data from [!INCLUDE[tsql](../includes/tsql-md.md)] to R and then to [!INCLUDE[tsql](../includes/tsql-md.md)] again can result in corruption. This is due to the different encodings used in R and in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], as well as the various collations and languages that are supported in R and [!INCLUDE[tsql](../includes/tsql-md.md)]. Any string in a non-ASCII encoding can potentially be handled incorrectly.
 
 When you send string data to R, convert it to an ASCII representation, if possible.
 
@@ -209,23 +211,23 @@ When a binary data type (the R **raw** data type) is returned from R, the value 
 
 Support for multiple **raw** outputs will be added in subsequent releases.
 
-If you want to use multiple output sets, one possible workaround is to do multiple calls of the stored procedure and then send the result sets back to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] by using ODBC.
+If you want to use multiple output sets, one possible workaround is to do multiple calls of the stored procedure and send the result sets back to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] by using ODBC.
 
 You can return parameter values along with the results of the stored procedure simply by adding the OUTPUT keyword. For more information, see [Returning Data by Using OUTPUT Parameters](https://technet.microsoft.com/library/ms187004.aspx).
 
 ### Loss of precision
 
-Because [!INCLUDE[tsql](../includes/tsql-md.md)] and R support a variety of data types, numeric data types can suffer a loss of precision during the conversion.
+Because [!INCLUDE[tsql](../includes/tsql-md.md)] and R support various data types, numeric data types can suffer loss of precision during conversion.
 
 For more information about implicit data-type conversion, see [Working with R data types](r/r-libraries-and-data-types.md).
 
-### Variable scoping error (*The sample data set for the analysis has no variables*) when you use the transformFunc parameter
+### Variable scoping error when you use the transformFunc parameter: *The sample data set for the analysis has no variables*
 
-To transform the data while you are modeling it, you can pass a *transformFunc* argument in a function such as `rxLinmod` or `rxLogit`. However, nested function calls can lead to scoping errors in the SQL Server compute context, even if the calls work correctly in the local compute context.
+To transform the data while you are modeling, you can pass a *transformFunc* argument in a function such as `rxLinmod` or `rxLogit`. However, nested function calls can lead to scoping errors in the SQL Server compute context, even if the calls work correctly in the local compute context.
 
 For example, assume that you have defined two functions, `f` and `g`, in your local global environment, and `g` calls `f`. In distributed or remote calls involving `g`, the call to `g` might fail because `f` cannot be found, even if you have passed both `f` and `g` to the remote call.
 
-If you encounter this problem, you can work around the issue by embedding the definition of `f` inside your definition of `g`, anywhere that `g` would ordinarily call `f`.
+If you encounter this problem, you can work around the issue by embedding the definition of `f` inside your definition of `g`, anywhere before `g` would ordinarily call `f`.
 
 For example:
 
@@ -239,7 +241,7 @@ g <- function(y) {
 ```  
 
 
-To avoid the error, rewrite the functions as follows:
+To avoid the error, rewrite as follows:
 
 ```  
 g <- function(y){  
@@ -252,11 +254,11 @@ g <- function(y){
 
 ### Data import and manipulation using RevoScaleR
 
-When **varchar** columns are read from a database, white space is trimmed. To prevent this trimming, enclose strings in non-white-space characters.
+When the **varchar** columns are read from a database, white space is trimmed. To prevent this, enclose strings in non-white-space characters.
 
-When you use functions such as `rxDataStep` to create database tables with **varchar** columns, the column width is estimated based on a sample of the data. If the width can vary, it might be necessary to pad all strings to a common length.
+When functions such as `rxDataStep` are used to create database tables with **varchar** columns, the column width is estimated based on a sample of the data. If the width can vary, it might be necessary to pad all strings to a common length.
 
-Using a transform to change a variable's data type is not supported when you use repeated calls to `rxImport` or `rxTextToXdf` to import and append rows, combining multiple input files into a single .xdf file.
+Using a transform to change a variable's data type is not supported when repeated calls to `rxImport` or `rxTextToXdf` are used to import and append rows, combining multiple input files into a single .xdf file.
 
 ### Limited support for rxExec
 
@@ -268,7 +270,7 @@ Parallelism for `rxExec` across multiple processes will be added in an upcoming 
 
 If you use data sets with extremely large numbers of variables (for example, over 40,000), set the `max-ppsize` flag when you start R to use functions such as `rxGetVarInfo`. The `max-ppsize` flag specifies the maximum size of the pointer protection stack.
 
-If you are using the R console (for example, in rgui.exe or rterm.exe), you can set the value of max-ppsize to 500000 by entering the following:
+If you are using the R console (for example, in rgui.exe or rterm.exe), you can set the value of max-ppsize to 500000 by typing:
 
 ```  
 R --max-ppsize=500000  

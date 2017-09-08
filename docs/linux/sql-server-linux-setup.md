@@ -97,7 +97,10 @@ When you install or upgrade SQL Server, you get the latest version of SQL Server
 
 Each CU and GDR release contains the full SQL Server package and all previous updates for that repository. Updating from a GDR release to a CU release is supported by changing your configured repository for SQL Server. You can also [downgrade](#rollback) to any release within your major version (ex: 2017).
 
-To change from one source repository (CU or GDR) to another, use the following steps:
+> [!NOTE]
+> Updating from a CU release to a GDR release is not supported. 
+
+To change from the GDR repository to the CU repository use the following steps:
 
 1. Remove the previously configured repository.
 
@@ -111,12 +114,12 @@ To change from one source repository (CU or GDR) to another, use the following s
 
    | Platform | Repository | Command |
    |-----|-----|-----|
-   | RHEL | CU | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo` |
-   | RHEL | GDR | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017-gdr.repo` |
-   | SLES | CU  | `sudo zypper addrepo -fc https://repo.corp.microsoft.com/sles12/config/mssql-server-2017.repo` |
-   | SLES | GDR | `sudo zypper addrepo -fc https://repo.corp.microsoft.com/sles12/config/mssql-server-2017-gdr.repo` |
-   | Ubuntu | CU | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"` |
-   | Ubuntu | GDR | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017-gdr.list)"` |
+   | RHEL | CU | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://repo.microsoft.com/config/rhel/7/mssql-server-2017.repo` |
+   | RHEL | GDR | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://repo.microsoft.com/config/rhel/7/mssql-server-2017-gdr.repo` |
+   | SLES | CU  | `sudo zypper addrepo -fc https://repo.microsoft.com/sles12/config/mssql-server-2017.repo` |
+   | SLES | GDR | `sudo zypper addrepo -fc https://repo.microsoft.com/sles12/config/mssql-server-2017-gdr.repo` |
+   | Ubuntu | CU | `sudo add-apt-repository "$(curl https://repo.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"` |
+   | Ubuntu | GDR | `sudo add-apt-repository "$(curl https://repo.microsoft.com/config/ubuntu/16.04/mssql-server-2017-gdr.list)"` |
 
 1. Update your system.
 

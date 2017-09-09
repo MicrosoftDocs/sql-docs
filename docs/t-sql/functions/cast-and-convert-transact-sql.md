@@ -1,7 +1,7 @@
 ---
 title: "CAST and CONVERT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/07/2017"
+ms.date: "09/08/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -42,7 +42,19 @@ manager: "jhubbard"
 # CAST and CONVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Converts an expression of one data type to another.
+Converts an expression of one data type to another.  
+For example, the following examples change the input datatype, into two other datatypes, with different levels of precision.
+```sql  
+SELECT 9.5 AS Original, CAST(9.5 AS int) AS int, 
+    CAST(9.5 AS decimal(6,4)) AS decimal;
+SELECT 9.5 AS Original, CONVERT(int, 9.5) AS int, 
+    CONVERT(decimal(6,4), 9.5) AS decimal;
+```  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+|Original	|int	|decimal |  
+|----|----|----|  
+|9.5 |9 |9.5000 |  
+
 > [!TIP]
 > Many [examples](#BKMK_examples) are at the bottom of this topic.  
   
@@ -69,17 +81,13 @@ Is the target data type. This includes **xml**, **bigint**, and **sql_variant**.
 Is an optional integer that specifies the length of the target data type. The default value is 30.
   
 *style*  
-Is an integer expression that specifies how the CONVERT function is to translate *expression*. If style is NULL, NULL is returned. The range is determined by *data_type*. For more information, see the Remarks section.
+Is an integer expression that specifies how the CONVERT function is to translate *expression*. If style is NULL, NULL is returned. The range is determined by *data_type*. 
   
 ## Return types
 Returns *expression* translated to *data_type*.
 
-[Jump to the 15 examples at the end of this topic](#BKMK_examples)
-  
-## Remarks  
-  
 ## Date and Time Styles  
-When *expression* is a date or time data type,  *style* can be one of the values shown in the following table. Other values are processed as 0. . Beginning with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], the only styles that are supported when converting from date and time types to **datetimeoffset** are 0 or 1. All other conversion styles return error 9809.
+When *expression* is a date or time data type,  *style* can be one of the values shown in the following table. Other values are processed as 0. Beginning with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], the only styles that are supported when converting from date and time types to **datetimeoffset** are 0 or 1. All other conversion styles return error 9809.
   
 >  [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports the date format in Arabic style by using the Kuwaiti algorithm.

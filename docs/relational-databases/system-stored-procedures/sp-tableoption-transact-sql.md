@@ -1,7 +1,7 @@
 ---
 title: "sp_tableoption (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/23/2016"
+ms.date: "09/11/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -30,10 +30,7 @@ manager: "jhubbard"
 > [!IMPORTANT]  
 >  The text in row feature will be removed in a future version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. To store large value data, we recommend that you use of the **varchar(max)**, **nvarchar(max)** and **varbinary(max)** data types.  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
-  
+
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
@@ -111,7 +108,7 @@ sp_tableoption [ @TableNamePattern = ] 'table'
 ### A. Storing xml data out of the row  
  The following example specifies that the **xml** data in the `HumanResources.JobCandidate` table be stored out of row.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_tableoption 'HumanResources.JobCandidate', 'large value types out of row', 1;  
@@ -119,12 +116,8 @@ EXEC sp_tableoption 'HumanResources.JobCandidate', 'large value types out of row
   
 ### B. Enabling vardecimal storage format on a table  
  The following example modifies the `Production.WorkOrderRouting` table to store the `decimal` data type in the `vardecimal``storage format`.  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
-  
-```  
+
+```sql  
 USE master;  
 GO  
 -- The database must be enabled for vardecimal storage format  

@@ -22,7 +22,7 @@ manager: "jhubbard"
   You can use partitioning on both the current and the history table independently. However, partitioning cannot be used to change the content of the data without system-versioning.  
   
 > [!NOTE]  
->  Partitioning is an Enterprise Edition feature.  
+>  Partitioning is an Enterprise Edition feature in SQL Server 2016 prior to Service Pack 1 and earlier versions. Partitioning is supported in all editions in SQL Server 2016 Service Pack 1 and later versions.
   
 -   **Current Table:**  
   

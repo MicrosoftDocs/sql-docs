@@ -62,8 +62,8 @@ manager: "jhubbard"
 -   The index key is unique and it does not contain the partitioning column of the table.  
   
 -   You want the base table to participate in collocated joins with more tables using different join columns.  
-  
- Partition elimination  
+
+ Partition elimination
  The process by which the query optimizer accesses only the relevant partitions to satisfy the filter criteria of the query.  
   
 ## Performance Guidelines  

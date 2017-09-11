@@ -169,7 +169,7 @@ Each execution of Setup creates log files are created with a new timestamped log
 ### Location  
  It is located at %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\.  
   
-## See aalso  
+## See also  
  [Install SQL Server 2016](../../database-engine/install-windows/install-sql-server.md)  
   
   

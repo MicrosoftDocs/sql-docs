@@ -115,7 +115,7 @@ EXEC sp_tableoption 'HumanResources.JobCandidate', 'large value types out of row
 ```  
   
 ### B. Enabling vardecimal storage format on a table  
- The following example modifies the `Production.WorkOrderRouting` table to store the `decimal` data type in the `vardecimal``storage format`.  
+ The following example modifies the `Production.WorkOrderRouting` table to store the `decimal` data type in the `vardecimal` storage format.  
 
 ```sql  
 USE master;  

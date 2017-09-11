@@ -39,7 +39,7 @@ manager: "jhubbard"
 -   [Post-Installation Tasks](#PostInstallationTasks): Perform these tasks after finishing with the SQL Server Setup to finish installing DQS.  
   
 > [!NOTE]  
->  This topic does not include instructions for running Setup from the command line. For information about command-line options for installing [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] and client, see [Feature Parameters](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md#Feature) in [Install SQL Server 2016 from the Command Prompt](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).  
+>  This topic does not include instructions for running Setup from the command line. For information about command-line options for installing [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] and client, see [Feature Parameters](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Feature) in [Install SQL Server from the Command Prompt](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
   
 ##  <a name="PreInstallationTasks"></a> Pre-Installation Tasks  
  Before installing DQS, make sure that your computer meets the minimum system requirements. The following table provides information about the minimum system requirements for the DQS components:  

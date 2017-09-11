@@ -22,7 +22,7 @@ You can install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on a S
   
 The Server Core installation option provides a minimal environment for running specific server roles. This helps to reduce maintenance and management requirements and the attack surface for those server roles. For more information on Server Core, see [Install Server Core](http://docs.microsoft.com/windows-server/get-started/getting-started-with-server-core). For more information on Server Core as implemented on [!INCLUDE[win8srv](../../includes/win8srv-md.md)], see [Server Core for Windows Server 2012](http://msdn.microsoft.com/library/hh846323\(VS.85\).aspx) (http://msdn.microsoft.com/library/hh846323(VS.85).aspx).  
   
- For a list of currently supported operating systems, see [Hardware and Software Requirements for Installing SQL Server](https://docs.microsoft.com/en-us/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server).
+ For a list of currently supported operating systems, see [Hardware and Software Requirements for Installing SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).
 
 ## Prerequisites  
   

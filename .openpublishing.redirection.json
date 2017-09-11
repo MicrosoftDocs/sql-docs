@@ -3044,8 +3044,11 @@
             "source_path": "docs/database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md",
             "redirect_url": "/sql/database-engine/install-windows/install-sql-server-using-a-configuration-file",
             "redirect_document_id": false  
+        },
+        {
+            "source_path": "docs/database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md",
+            "redirect_url": "/sql/database-engine/install-windows/add-features-to-an-instance-of-sql-server-setup",
+            "redirect_document_id": false  
         }
-
-
     ]
 }

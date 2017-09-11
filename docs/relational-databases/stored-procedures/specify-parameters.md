@@ -83,7 +83,7 @@ GO
   
  If no value can be specified appropriately as a default for the parameter, specify NULL as the default. It is a good idea to have the procedure return a customized message if the procedure is executed without a value for the parameter.  
   
- The following example creates the `usp_GetSalesYTD` procedure with one input parameter, `@SalesPerson`. NULL is assigned as the default value for the parameter and is used in error handling statements to return a custom error message for cases when the procedure is executed without a value for the `@SalesPerson` parameter.  
+ The following example creates the `uspGetSalesYTD` procedure with one input parameter, `@SalesPerson`. NULL is assigned as the default value for the parameter and is used in error handling statements to return a custom error message for cases when the procedure is executed without a value for the `@SalesPerson` parameter.  
   
 ```  
 USE AdventureWorks2012;  

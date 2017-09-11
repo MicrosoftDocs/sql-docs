@@ -30,7 +30,7 @@
 ## [Install SQL Server from the Command Prompt](install-sql-server-from-the-command-prompt.md)  
 ## [Install SQL Server Using a Configuration File](install-sql-server-using-a-configuration-file.md)  
 ## [Install SQL Server Using SysPrep](install-sql-server-using-sysprep.md)  
-## [Add Features to an Instance of SQL Server (Setup)](add-features-to-an-instance-of-sql-server-2016-setup.md)  
+## [Add Features to an Instance of SQL Server (Setup)](add-features-to-an-instance-of-sql-server-setup.md)  
 ## [Repair a Failed SQL Server Installation](repair-a-failed-sql-server-installation.md)  
 ## [Rename a Computer that Hosts a Stand-Alone Instance of SQL Server](rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)  
 ## [Install SQL Server Servicing Updates](install-sql-server-servicing-updates.md)  

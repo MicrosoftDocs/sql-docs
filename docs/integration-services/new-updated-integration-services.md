@@ -152,7 +152,7 @@ For these and other reasons, do not copy code from these excerpts, and do not ta
 
 **Excel Connection Manager Editor**
 
-  Use the **Excel Connection Manager Editor** dialog box to add a connection to an existing or a new [!INCLUDE[ofprexcel--../../includes/ofprexcel-md.md)] workbook file.
+  Use the **Excel Connection Manager Editor** dialog box to add a connection to an existing or a new ..!NCLUDE..ofprexcel--../../includes/ofprexcel-md.md)] workbook file.
 
  To learn more about the Excel connection manager, see [Excel Connection Manager--../../integration-services/connection-manager/excel-connection-manager.md).
 
@@ -215,7 +215,7 @@ If the computer has a 32-bit version of Office, then you have to install the 32-
   Use the **File Connection Manager Editor** dialog box to specify the properties used to connect to a file or a folder.
 
 > [!NOTE]
->  You can set the ConnectionString property for the File connection manager by specifying an expression in the Properties window of [!INCLUDE[ssBIDevStudioFull--../../includes/ssbidevstudiofull-md.md)]. However, to avoid a validation error when you use an expression to specify the file or folder, in the **File Connection Manager Editor**, for **File/Folder**, add a file or folder path.
+>  You can set the ConnectionString property for the File connection manager by specifying an expression in the Properties window of ..!NCLUDE..ssBIDevStudioFull--../../includes/ssbidevstudiofull-md.md)]. However, to avoid a validation error when you use an expression to specify the file or folder, in the **File Connection Manager Editor**, for **File/Folder**, add a file or folder path.
 
  To learn more about the File connection manager, see [File Connection Manager--../../integration-services/connection-manager/file-connection-manager.md).
 
@@ -471,7 +471,7 @@ If the computer has a 32-bit version of Office, then you have to install the 32-
 **Options**
 
  **Name**
- Provide a unique name for the MSMQ connection manager in the workflow. The name provided will be displayed within [!INCLUDE[ssIS--../../includes/ssis-md.md)] Designer.
+ Provide a unique name for the MSMQ connection manager in the workflow. The name provided will be displayed within ..!NCLUDE..ssIS--../../includes/ssis-md.md)] Designer.
 
  **Description**
  Describe the connection manager. As a best practice, describe the connection manager in terms of its purpose, to make packages self-documenting and easier to maintain.
@@ -672,9 +672,9 @@ Select one of the following options:
   Use the **Configure OLE DB Connection Manager** dialog box to add a connection to a data source, which can be either a new connection or a copy of an existing connection.
 
 > [!NOTE]
->  If the data source is [!INCLUDE[msCoName--../../includes/msconame-md.md)] Office Excel 2007, the data source requires a different connection manager than earlier versions of Excel. For more information, see [Connect to an Excel Workbook--../../integration-services/connection-manager/connect-to-an-excel-workbook.md).
+>  If the data source is ..!NCLUDE..msCoName--../../includes/msconame-md.md)] Office Excel 2007, the data source requires a different connection manager than earlier versions of Excel. For more information, see [Connect to an Excel Workbook--../../integration-services/connection-manager/connect-to-an-excel-workbook.md).
 >
->  If the data source is [!INCLUDE[msCoName--../../includes/msconame-md.md)] Office Access 2007, the data source requires a different OLE DB provider than earlier versions of Access. For more information, see [Connect to an Access Database--../../integration-services/connection-manager/connect-to-an-access-database.md).
+>  If the data source is ..!NCLUDE..msCoName--../../includes/msconame-md.md)] Office Access 2007, the data source requires a different OLE DB provider than earlier versions of Access. For more information, see [Connect to an Access Database--../../integration-services/connection-manager/connect-to-an-access-database.md).
 
  To learn more about the OLE DB connection manager, see [OLE DB Connection Manager--../../integration-services/connection-manager/ole-db-connection-manager.md).
 
@@ -720,14 +720,14 @@ Select one of the following options:
 
   Use the **SAP BW Connection Manager Editor** to specify the properties to use to connect to an SAP Netweaver BW version 7 system.
 
- The SAP BW connection manager provides connectivity to an SAP Netweaver BW 7 system for use by the SAP BW source or destination. To learn more about the SAP BW connection manager of the [!INCLUDE[msCoName--../../includes/msconame-md.md)] Connector 1.1 for SAP BW, see [SAP BW Connection Manager--../../integration-services/connection-manager/sap-bw-connection-manager.md).
+ The SAP BW connection manager provides connectivity to an SAP Netweaver BW 7 system for use by the SAP BW source or destination. To learn more about the SAP BW connection manager of the ..!NCLUDE..msCoName--../../includes/msconame-md.md)] Connector 1.1 for SAP BW, see [SAP BW Connection Manager--../../integration-services/connection-manager/sap-bw-connection-manager.md).
 
 > [!IMPORTANT]
 >  The documentation for the Microsoft Connector 1.1 for SAP BW assumes familiarity with the SAP Netweaver BW environment. For more information about SAP Netweaver BW, or for information about how to configure SAP Netweaver BW objects and processes, see your SAP documentation.
 
  **To open the SAP BW Connection Manager Editor**
 
-1.  In [!INCLUDE[ssBIDevStudioFull--../../includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion--../../includes/ssisnoversion-md.md)] package that contains the SAP BW connection manager.
+1.  In ..!NCLUDE..ssBIDevStudioFull--../../includes/ssbidevstudiofull-md.md)], open the ..!NCLUDE..ssISnoversion--../../includes/ssisnoversion-md.md)] package that contains the SAP BW connection manager.
 
 2.  In the Connection Managers area on the **Control Flow** tab, do one of the following steps:
 
@@ -782,29 +782,29 @@ Select one of the following options:
 
 **SMO Connection Manager Editor**
 
-  Use the **SMO Connection Manager Editor** to configure a [!INCLUDE[ssNoVersion--../../includes/ssnoversion-md.md)] connection for use by the various tasks that transfer [!INCLUDE[ssNoVersion--../../includes/ssnoversion-md.md)] objects.
+  Use the **SMO Connection Manager Editor** to configure a ..!NCLUDE..ssNoVersion--../../includes/ssnoversion-md.md)] connection for use by the various tasks that transfer ..!NCLUDE..ssNoVersion--../../includes/ssnoversion-md.md)] objects.
 
  To learn more about the SMO connection manager, see [SMO Connection Manager--../../integration-services/connection-manager/smo-connection-manager.md).
 
 **Options**
 
  **Server name**
- Type the name of the [!INCLUDE[ssNoVersion--../../includes/ssnoversion-md.md)] instance or select the server name from the list.
+ Type the name of the ..!NCLUDE..ssNoVersion--../../includes/ssnoversion-md.md)] instance or select the server name from the list.
 
  **Refresh**
- Refresh the list of available [!INCLUDE[ssNoVersion--../../includes/ssnoversion-md.md)] instances that can be detected on the network.
+ Refresh the list of available ..!NCLUDE..ssNoVersion--../../includes/ssnoversion-md.md)] instances that can be detected on the network.
 
  **Use Windows Authentication**
- Use Windows Authentication to connect to the selected [!INCLUDE[ssNoVersion--../../includes/ssnoversion-md.md)] instance.
+ Use Windows Authentication to connect to the selected ..!NCLUDE..ssNoVersion--../../includes/ssnoversion-md.md)] instance.
 
  **Use SQL Server Authentication**
- Use [!INCLUDE[ssNoVersion--../../includes/ssnoversion-md.md)] Authentication to connect to the selected [!INCLUDE[ssNoVersion--../../includes/ssnoversion-md.md)] instance.
+ Use ..!NCLUDE..ssNoVersion--../../includes/ssnoversion-md.md)] Authentication to connect to the selected ..!NCLUDE..ssNoVersion--../../includes/ssnoversion-md.md)] instance.
 
  **User name**
- If you have selected [!INCLUDE[ssNoVersion--../../includes/ssnoversion-md.md)] authentication, enter the [!INCLUDE[ssNoVersion--../../includes/ssnoversion-md.md)] user name.
+ If you have selected ..!NCLUDE..ssNoVersion--../../includes/ssnoversion-md.md)] authentication, enter the ..!NCLUDE..ssNoVersion--../../includes/ssnoversion-md.md)] user name.
 
  **Password**
- If you have selected [!INCLUDE[ssNoVersion--../../includes/ssnoversion-md.md)] authentication, enter the password.
+ If you have selected ..!NCLUDE..ssNoVersion--../../includes/ssnoversion-md.md)] authentication, enter the password.
 
  **Test Connection**
  Test the connection as configured.
@@ -888,27 +888,27 @@ Select one of the following options:
 **Options**
 
  **Enter the database file name and path**
- Enter the path and filename for the [!INCLUDE[ssNoVersion--../../includes/ssnoversion-md.md)] Compact database.
+ Enter the path and filename for the ..!NCLUDE..ssNoVersion--../../includes/ssnoversion-md.md)] Compact database.
 
  **Browse**
- Locate the desired [!INCLUDE[ssNoVersion--../../includes/ssnoversion-md.md)] Compact database file by using the **Select SQL Server Compact Edition database** dialog box.
+ Locate the desired ..!NCLUDE..ssNoVersion--../../includes/ssnoversion-md.md)] Compact database file by using the **Select SQL Server Compact Edition database** dialog box.
 
  **Enter the database password**
- Enter the password for the [!INCLUDE[ssNoVersion--../../includes/ssnoversion-md.md)] Compact database.
+ Enter the password for the ..!NCLUDE..ssNoVersion--../../includes/ssnoversion-md.md)] Compact database.
 
 **SQL Server Compact Edition Connection Manager Editor (All Page)**
 
-  Use the **SQL Server Compact Edition Connection Manager** dialog box to specify properties for connecting to a [!INCLUDE[ssNoVersion--../../includes/ssnoversion-md.md)] Compact database.
+  Use the **SQL Server Compact Edition Connection Manager** dialog box to specify properties for connecting to a ..!NCLUDE..ssNoVersion--../../includes/ssnoversion-md.md)] Compact database.
 
- To learn more about the [!INCLUDE[ssNoVersion--../../includes/ssnoversion-md.md)] Compact Edition connection manager, see [SQL Server Compact Edition Connection Manager--../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md).
+ To learn more about the ..!NCLUDE..ssNoVersion--../../includes/ssnoversion-md.md)] Compact Edition connection manager, see [SQL Server Compact Edition Connection Manager--../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md).
 
 **Options**
 
  **AutoShrink Threshold**
- Specify the amount of free space, as a percentage, that is allowed in the [!INCLUDE[ssNoVersion--../../includes/ssnoversion-md.md)] Compact database before the autoshrink process runs.
+ Specify the amount of free space, as a percentage, that is allowed in the ..!NCLUDE..ssNoVersion--../../includes/ssnoversion-md.md)] Compact database before the autoshrink process runs.
 
  **Default Lock Escalation**
- Specify the number of database locks that the [!INCLUDE[ssNoVersion--../../includes/ssnoversion-md.md)] Compact database acquires before it tries to escalate locks.
+ Specify the number of database locks that the ..!NCLUDE..ssNoVersion--../../includes/ssnoversion-md.md)] Compact database acquires before it tries to escalate locks.
 
  **Default Lock Timeout**
  Specify the default interval, in milliseconds, that a transaction will wait for a lock.
@@ -917,7 +917,7 @@ Select one of the following options:
  Specify the interval, in seconds, between committed transactions to flush data to disk.
 
  **Locale Identifier**
- Specify the Locale ID (LCID) of the [!INCLUDE[ssNoVersion--../../includes/ssnoversion-md.md)] Compact database.
+ Specify the Locale ID (LCID) of the ..!NCLUDE..ssNoVersion--../../includes/ssnoversion-md.md)] Compact database.
 
 
 
@@ -1002,27 +1002,27 @@ Select one of the following options:
 
 **Analysis Services Execute DDL Task Editor (General Page)**
 
-  Use the **General** pageof the **Analysis Services Execute DDL Task Editor** dialog box to name and describe the [!INCLUDE[ssASnoversion--../../includes/ssasnoversion-md.md)] Execute DDL task.
+  Use the **General** pageof the **Analysis Services Execute DDL Task Editor** dialog box to name and describe the ..!NCLUDE..ssASnoversion--../../includes/ssasnoversion-md.md)] Execute DDL task.
 
 **Options**
 
  **Name**
- Provide a unique name for the [!INCLUDE[ssASnoversion--../../includes/ssasnoversion-md.md)] Execute DDL task. This name is used as the label in the task icon.
+ Provide a unique name for the ..!NCLUDE..ssASnoversion--../../includes/ssasnoversion-md.md)] Execute DDL task. This name is used as the label in the task icon.
 
 > [!NOTE]
 >  Task names must be unique within a package.
 
  **Description**
- Type a description of the [!INCLUDE[ssASnoversion--../../includes/ssasnoversion-md.md)] Execute DDL task.
+ Type a description of the ..!NCLUDE..ssASnoversion--../../includes/ssasnoversion-md.md)] Execute DDL task.
 
 **Analysis Services Execute DDL Task Editor (DDL Page)**
 
-  Use the **DDL** page of the **Analysis Services Execute DDL Task Editor** dialog box to specify a connection to an [!INCLUDE[ssASnoversion--../../includes/ssasnoversion-md.md)] project or an [!INCLUDE[ssASnoversion--../../includes/ssasnoversion-md.md)] database and to provide information about the source of data definition language (DDL) statements.
+  Use the **DDL** page of the **Analysis Services Execute DDL Task Editor** dialog box to specify a connection to an ..!NCLUDE..ssASnoversion--../../includes/ssasnoversion-md.md)] project or an ..!NCLUDE..ssASnoversion--../../includes/ssasnoversion-md.md)] database and to provide information about the source of data definition language (DDL) statements.
 
 **Static Options**
 
  **Connection**
- Select an [!INCLUDE[ssASnoversion--../../includes/ssasnoversion-md.md)] project or an [!INCLUDE[ssASnoversion--../../includes/ssasnoversion-md.md)] connection manager in the list, or click \<**New connection...**> and use the **Add Analysis Services Connection Manager** dialog box to create a new connection.
+ Select an ..!NCLUDE..ssASnoversion--../../includes/ssasnoversion-md.md)] project or an ..!NCLUDE..ssASnoversion--../../includes/ssasnoversion-md.md)] connection manager in the list, or click \<**New connection...**> and use the **Add Analysis Services Connection Manager** dialog box to create a new connection.
 
  **Related Topics:** [Add Analysis Services Connection Manager Dialog Box UI Reference--../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md), [Analysis Services Connection Manager--../../integration-services/connection-manager/analysis-services-connection-manager.md)
 
@@ -1179,21 +1179,21 @@ Select one of the following options:
 
  **To open the CDC Control Task Editor**
 
-1.  In [!INCLUDE[ssBIDevStudio--../../includes/ssbidevstudio-md.md)], open the [!INCLUDE[ssISCurrent--../../includes/ssiscurrent-md.md)] package that has the CDC Control task.
+1.  In ..!NCLUDE..ssBIDevStudio--../../includes/ssbidevstudio-md.md)], open the ..!NCLUDE..ssISCurrent--../../includes/ssiscurrent-md.md)] package that has the CDC Control task.
 
 2.  On the **Control Flow** tab, double-click the CDC Control task.
 
 **Options**
 
  **SQL Server CDC database ADO.NET connection manager**
- Select an existing connection manager from the list, or click **New** to create a new connection. The connection must be to a [!INCLUDE[ssNoVersion--../../includes/ssnoversion-md.md)] database that is enabled for CDC and where the selected change table is located.
+ Select an existing connection manager from the list, or click **New** to create a new connection. The connection must be to a ..!NCLUDE..ssNoVersion--../../includes/ssnoversion-md.md)] database that is enabled for CDC and where the selected change table is located.
 
  **CDC Control Operation**
  Select the operation to run for this task. All operations use the state variable that is stored in an SSIS package variable that stores the state and passes it between the different components in the package.
 
 -   **Mark initial load start**: This operation is used when executing an initial load from an active database without a snapshot. It is invoked at the beginning of an initial-load package to record the current LSN in the source database before the initial-load package starts reading the source tables. This requires a connection to the source database.
 
-     If you select **Mark Initial Load Start** when working on [!INCLUDE[ssCurrent--../../includes/sscurrent-md.md)] CDC (that is, not Oracle) the user specified in the connection manager must be either  **db_owner** or **sysadmin**.
+     If you select **Mark Initial Load Start** when working on ..!NCLUDE..ssCurrent--../../includes/sscurrent-md.md)] CDC (that is, not Oracle) the user specified in the connection manager must be either  **db_owner** or **sysadmin**.
 
 -   **Mark initial load end**: This operation is used when executing an initial load from an active database without a snapshot. It is invoked at the end of an initial-load package to record the current LSN in the source database after the initial-load package finished reading the source tables. This LSN is determined by recording nthe current time when this operation occurred and then querying the `cdc.lsn_time_`mapping table in the CDC database looking for a change that occurred after that time
 
@@ -1241,12 +1241,12 @@ Select one of the following options:
 **Mining Model Tab Options**
 
  **Connection**
- Select an [!INCLUDE[ssASnoversion--../../includes/ssasnoversion-md.md)] connection manager in the list or click **New** to create a new connection manager.
+ Select an ..!NCLUDE..ssASnoversion--../../includes/ssasnoversion-md.md)] connection manager in the list or click **New** to create a new connection manager.
 
  **Related Topics:**  [Analysis Services Connection Manager--../../integration-services/connection-manager/analysis-services-connection-manager.md)
 
  **New**
- Create a new [!INCLUDE[ssASnoversion--../../includes/ssasnoversion-md.md)] connection manager.
+ Create a new ..!NCLUDE..ssASnoversion--../../includes/ssasnoversion-md.md)] connection manager.
 
  **Related Topics:** [Add Analysis Services Connection Manager Dialog Box UI Reference--../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)
 
@@ -1351,7 +1351,7 @@ Select one of the following options:
 
 **Execute Package Task Editor**
 
-  Use the Execute Package Task Editor to configure the Execute Package Task. The Execute Package task extends the enterprise capabilities of [!INCLUDE[ssISnoversion--../../includes/ssisnoversion-md.md)] by letting packages run other packages as part of a workflow.
+  Use the Execute Package Task Editor to configure the Execute Package Task. The Execute Package task extends the enterprise capabilities of ..!NCLUDE..ssISnoversion--../../includes/ssisnoversion-md.md)] by letting packages run other packages as part of a workflow.
 
  **What do you want to do?**
 
@@ -1366,7 +1366,7 @@ Select one of the following options:
 **<a name="open"></a> Open the Execute Package Task Editor**
 
 
-1.  Open an [!INCLUDE[ssISnoversion--../../includes/ssisnoversion-md.md)] project in [!INCLUDE[vsprvs--../../includes/vsprvs-md.md)] that contains an Execute Package task.
+1.  Open an ..!NCLUDE..ssISnoversion--../../includes/ssisnoversion-md.md)] project in ..!NCLUDE..vsprvs--../../includes/vsprvs-md.md)] that contains an Execute Package task.
 
 2.  Right-click the task in the SSIS Designer, and then click **Edit**.
 
@@ -1492,7 +1492,7 @@ Select one of the following options:
 
   Use the **General** page of the **File System Task Editor** dialog to configure the file system operation that the task performs.
 
- You must specify a source and destination connection manager by setting the SourceConnection and DestinationConnection properties. You can either provide the names of File connection managers that point to the files that the task uses as a source or destination, or if the paths of the files are stored in variables, you can provide the names of the variables. To use variables to store the file paths, you must set first set the IsSourcePathVariable option for the source connection and the IsDestinationPatheVariable option for the destination connection to **True**. You can then choose the existing system or user-defined variables to use, or you can create new variables. In the **Add Variable** dialog box, you can configure and specify the scope of the variables. The scope must be the File System task or a parent container. For more information see, [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md) and [Use Variables in Packages](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).
+ You must specify a source and destination connection manager by setting the SourceConnection and DestinationConnection properties. You can either provide the names of File connection managers that point to the files that the task uses as a source or destination, or if the paths of the files are stored in variables, you can provide the names of the variables. To use variables to store the file paths, you must set first set the IsSourcePathVariable option for the source connection and the IsDestinationPatheVariable option for the destination connection to **True**. You can then choose the existing system or user-defined variables to use, or you can create new variables. In the **Add Variable** dialog box, you can configure and specify the scope of the variables. The scope must be the File System task or a parent container. For more information see, [Integration Services &#40;SSIS&#41; Variables--(../../integration-services/integration-services-ssis-variables.md) and [Use Variables in Packages](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).
 
 > [!NOTE]
 >  To override the variables you selected for the **SourceConnection** and **DestinationConnection** properties, enter an expression for the **Source** and **Destination** properties. You enter expressions on the **Expressions** page of the **File System Task Editor**. For example, to set the path of the files that the task uses as a destination, you may want to use variable A under certain conditions and use variable B under other conditions.
@@ -1622,7 +1622,7 @@ Select one of the following options:
 
 **Message Queue Task Editor (Send Page)**
 
-  Use the **Send** page of the **Message Queue Task Editor** dialog box to configure a Message Queue task to send messages from a [!INCLUDE[msCoName--../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion--../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion--../../includes/ssisnoversion-md.md)] package.
+  Use the **Send** page of the **Message Queue Task Editor** dialog box to configure a Message Queue task to send messages from a ..!NCLUDE..msCoName--../../includes/msconame-md.md)] ..!NCLUDE..ssNoVersion--../../includes/ssnoversion-md.md)] ..!NCLUDE..ssISnoversion--../../includes/ssisnoversion-md.md)] package.
 
 **Options**
 
@@ -1678,14 +1678,14 @@ Select one of the following options:
   Use the **Script** page of the **Script Task Editor** dialog box to set script properties and specify variables that can be accessed by the script.
 
 > [!NOTE]
->  In [!INCLUDE[ssISversion10--../../includes/ssisversion10-md.md)] and later versions, all scripts are precompiled. In earlier versions, you set a **PrecompileScriptIntoBinaryCode** property to specify that the script was precompiled.
+>  In ..!NCLUDE..ssISversion10--../../includes/ssisversion10-md.md)] and later versions, all scripts are precompiled. In earlier versions, you set a **PrecompileScriptIntoBinaryCode** property to specify that the script was precompiled.
 
  To learn more about the Script task, see [Script Task--../../integration-services/control-flow/script-task.md) and [Configuring the Script Task in the Script Task Editor--../../integration-services/extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md). To learn about programming the Script task, see [Extending the Package with the Script Task--../../integration-services/extending-packages-scripting/task/extending-the-package-with-the-script-task.md).
 
 **Options**
 
  **ScriptLanguage**
- Select the scripting language for the task, either [!INCLUDE[msCoName--../../includes/msconame-md.md)] Visual Basic or [!INCLUDE[msCoName--../../includes/msconame-md.md)] Visual C#.
+ Select the scripting language for the task, either ..!NCLUDE..msCoName--../../includes/msconame-md.md)] Visual Basic or ..!NCLUDE..msCoName--../../includes/msconame-md.md)] Visual C#.
 
 
 
@@ -1787,7 +1787,7 @@ Select one of the following options:
 
 **Transfer Database Task Editor (General Page)**
 
-  Use the **General** page of the **Transfer Database Task Editor** dialog box to name and describe the Transfer Database task. The Transfer Database task copies or moves a [!INCLUDE[ssNoVersion--../../includes/ssnoversion-md.md)] database between two instances of [!INCLUDE[ssNoVersion--../../includes/ssnoversion-md.md)]. This task can also be used to copy a database within the same server.
+  Use the **General** page of the **Transfer Database Task Editor** dialog box to name and describe the Transfer Database task. The Transfer Database task copies or moves a ..!NCLUDE..ssNoVersion--../../includes/ssnoversion-md.md)] database between two instances of ..!NCLUDE..ssNoVersion--../../includes/ssnoversion-md.md)]. This task can also be used to copy a database within the same server.
 
 **Options**
 
@@ -1802,7 +1802,7 @@ Select one of the following options:
 
 **Transfer Database Task Editor (Databases Page)**
 
-  Use the **Databases** page of the **Transfer Database Task Editor** dialog box to specify properties for the source and destination databases involved in the Transfer Database task. The Transfer Database task copies or moves a [!INCLUDE[ssNoVersion--../../includes/ssnoversion-md.md)] database between two instances of [!INCLUDE[ssNoVersion--../../includes/ssnoversion-md.md)]. This task can also be used to copy a database within the same server.
+  Use the **Databases** page of the **Transfer Database Task Editor** dialog box to specify properties for the source and destination databases involved in the Transfer Database task. The Transfer Database task copies or moves a ..!NCLUDE..ssNoVersion--../../includes/ssnoversion-md.md)] database between two instances of ..!NCLUDE..ssNoVersion--../../includes/ssnoversion-md.md)]. This task can also be used to copy a database within the same server.
 
 **Options**
 
@@ -1813,7 +1813,7 @@ Select one of the following options:
  Select a SMO connection manager in the list, or click **\<New connection...>** to create a new connection to the destination server.
 
  **DestinationDatabaseName**
- Specify the name of the [!INCLUDE[ssNoVersion--../../includes/ssnoversion-md.md)] database on the destination server.
+ Specify the name of the ..!NCLUDE..ssNoVersion--../../includes/ssnoversion-md.md)] database on the destination server.
 
  To automatically populate this field with the source database name, specify the **SourceConnection** and **SourceDatabaseName** first.
 
@@ -1845,7 +1845,7 @@ Select one of the following options:
 
 **Transfer Error Messages Task Editor (General Page)**
 
-  Use the **General** page of the **Transfer Error Messages Task Editor** dialog box to name and describe the Transfer Error Messages task. The Transfer Error Messages task transfers one or more [!INCLUDE[ssNoVersion--../../includes/ssnoversion-md.md)] user-defined error messages between instances of [!INCLUDE[ssNoVersion--../../includes/ssnoversion-md.md)].
+  Use the **General** page of the **Transfer Error Messages Task Editor** dialog box to name and describe the Transfer Error Messages task. The Transfer Error Messages task transfers one or more ..!NCLUDE..ssNoVersion--../../includes/ssnoversion-md.md)] user-defined error messages between instances of ..!NCLUDE..ssNoVersion--../../includes/ssnoversion-md.md)].
 
 **Options**
 
@@ -1860,7 +1860,7 @@ Select one of the following options:
 
 **Transfer Error Messages Task Editor (Messages Page)**
 
-  Use the **Messages** page of the **Transfer Error Messages Task Editor** dialog box to specify properties for copying one or more [!INCLUDE[ssNoVersion--../../includes/ssnoversion-md.md)] user-defined error messages from one instance of [!INCLUDE[ssNoVersion--../../includes/ssnoversion-md.md)] to another.
+  Use the **Messages** page of the **Transfer Error Messages Task Editor** dialog box to specify properties for copying one or more ..!NCLUDE..ssNoVersion--../../includes/ssnoversion-md.md)] user-defined error messages from one instance of ..!NCLUDE..ssNoVersion--../../includes/ssnoversion-md.md)] to another.
 
 **Options**
 
@@ -1909,7 +1909,7 @@ Select one of the following options:
   Use the **General** page of the **Transfer Jobs Task Editor** dialog box to name and describe the Transfer Jobs task.
 
 > [!NOTE]
->  Only members of the **sysadmin** fixed server role or one of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent fixed database roles on the destination server can successfully create jobs there. To access jobs on the source server, users must be a member of at least the **SQLAgentUserRole** fixed database role there. For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent fixed database roles and their permissions, see [SQL Server Agent Fixed Database Roles](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).
+>  Only members of the **sysadmin** fixed server role or one of the ..!NCLUDE..ssNoVersion](../../includes/ssnoversion-md.md)] Agent fixed database roles on the destination server can successfully create jobs there. To access jobs on the source server, users must be a member of at least the **SQLAgentUserRole** fixed database role there. For more information about ..!NCLUDE..ssNoVersion](../../includes/ssnoversion-md.md)] Agent fixed database roles and their permissions, see [SQL Server Agent Fixed Database Roles](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).
 
 **Options**
 
@@ -1924,10 +1924,10 @@ Select one of the following options:
 
 **Transfer Jobs Task Editor (Jobs Page)**
 
-  Use the **Jobs** page of the **Transfer Jobs Task Editor** dialog box to specify properties for copying one or more [!INCLUDE[ssNoVersion--../../includes/ssnoversion-md.md)] Agent jobs from one instance of [!INCLUDE[ssNoVersion--../../includes/ssnoversion-md.md)] to another.
+  Use the **Jobs** page of the **Transfer Jobs Task Editor** dialog box to specify properties for copying one or more ..!NCLUDE..ssNoVersion--../../includes/ssnoversion-md.md)] Agent jobs from one instance of ..!NCLUDE..ssNoVersion--../../includes/ssnoversion-md.md)] to another.
 
 > [!NOTE]
->  To access jobs on the source server, users must be a member of at least the **SQLAgentUserRole** fixed database role on the server. To successfully create jobs on the destination server, the user must be a member of the **sysadmin** fixed server role or one of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent fixed database roles. For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent fixed database roles and their permissions, see [SQL Server Agent Fixed Database Roles](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).
+>  To access jobs on the source server, users must be a member of at least the **SQLAgentUserRole** fixed database role on the server. To successfully create jobs on the destination server, the user must be a member of the **sysadmin** fixed server role or one of the ..!NCLUDE..ssNoVersion](../../includes/ssnoversion-md.md)] Agent fixed database roles. For more information about ..!NCLUDE..ssNoVersion](../../includes/ssnoversion-md.md)] Agent fixed database roles and their permissions, see [SQL Server Agent Fixed Database Roles](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).
 
 
 
@@ -1970,7 +1970,7 @@ Select one of the following options:
 
 **Transfer Logins Task Editor (Logins Page)**
 
-  Use the **Logins** page of the **Transfer Logins Task Editor** dialog box to specify properties for copying one or more [!INCLUDE[ssNoVersion--../../includes/ssnoversion-md.md)] logins from one instance of [!INCLUDE[ssNoVersion--../../includes/ssnoversion-md.md)] to another.
+  Use the **Logins** page of the **Transfer Logins Task Editor** dialog box to specify properties for copying one or more ..!NCLUDE..ssNoVersion--../../includes/ssnoversion-md.md)] logins from one instance of ..!NCLUDE..ssNoVersion--../../includes/ssnoversion-md.md)] to another.
 
 > [!IMPORTANT]
 >  When the Transfer Logins task is executed, logins are created on the destination server with random passwords and the passwords are disabled. To use these logins, a member of the **sysadmin** fixed server role must change the passwords and then enable them. The **sa** login cannot be transferred.
@@ -1984,11 +1984,11 @@ Select one of the following options:
  Select a SMO connection manager in the list, or click **\<New connection...>** to create a new connection to the destination server.
 
  **LoginsToTransfer**
- Select the [!INCLUDE[ssNoVersion--../../includes/ssnoversion-md.md)] logins to copy from the source to the destination server. This property has the options listed in the following table:
+ Select the ..!NCLUDE..ssNoVersion--../../includes/ssnoversion-md.md)] logins to copy from the source to the destination server. This property has the options listed in the following table:
 
 |Value|Description|
 |-----------|-----------------|
-|**AllLogins**|All [!INCLUDE[ssNoVersion--../../includes/ssnoversion-md.md)] logins on the source server will be copied to the destination server.|
+|**AllLogins**|All ..!NCLUDE..ssNoVersion--../../includes/ssnoversion-md.md)] logins on the source server will be copied to the destination server.|
 |**SelectedLogins**|Only logins specified with **LoginsList** will be copied to the destination server.|
 
 
@@ -2035,7 +2035,7 @@ Select one of the following options:
 
 **Transfer Master Stored Procedures Task Editor (Stored Procedures Page)**
 
-  Use the **Stored Procedures** page of the **Transfer Master Stored Procedures Task Editor** dialog box to specify properties for copying one or more user-defined stored procedures from the **master** database in one instance of [!INCLUDE[ssNoVersion--../../includes/ssnoversion-md.md)] instance to a **master** database in another instance of [!INCLUDE[ssNoVersion--../../includes/ssnoversion-md.md)].
+  Use the **Stored Procedures** page of the **Transfer Master Stored Procedures Task Editor** dialog box to specify properties for copying one or more user-defined stored procedures from the **master** database in one instance of ..!NCLUDE..ssNoVersion--../../includes/ssnoversion-md.md)] instance to a **master** database in another instance of ..!NCLUDE..ssNoVersion--../../includes/ssnoversion-md.md)].
 
 > [!NOTE]
 >  This task transfers only user-defined stored procedures owned by **dbo** from a **master** database on the source server to a **master** database on the destination server. Users must be granted the CREATE PROCEDURE permission in the **master** database on the destination server or be members of the **sysadmin** fixed server role on the destination server to create stored procedures there.
@@ -2066,28 +2066,28 @@ Select one of the following options:
 
 **Transfer SQL Server Objects Task Editor (General Page)**
 
-  Use the **General** page of the **Transfer SQL Server Objects Task Editor** dialog box to name and describe the Transfer [!INCLUDE[ssNoVersion--../../includes/ssnoversion-md.md)] Objects task.
+  Use the **General** page of the **Transfer SQL Server Objects Task Editor** dialog box to name and describe the Transfer ..!NCLUDE..ssNoVersion--../../includes/ssnoversion-md.md)] Objects task.
 
 > [!NOTE]
->  The user who creates the Transfer [!INCLUDE[ssNoVersion--../../includes/ssnoversion-md.md)] Objects task must have adequate permissions on the source server objects to select them for copying, and permission to access the destination server database where the objects will be transferred.
+>  The user who creates the Transfer ..!NCLUDE..ssNoVersion--../../includes/ssnoversion-md.md)] Objects task must have adequate permissions on the source server objects to select them for copying, and permission to access the destination server database where the objects will be transferred.
 
 **Options**
 
  **Name**
- Type a unique name for the Transfer [!INCLUDE[ssNoVersion--../../includes/ssnoversion-md.md)] Objects task. This name is used as the label in the task icon.
+ Type a unique name for the Transfer ..!NCLUDE..ssNoVersion--../../includes/ssnoversion-md.md)] Objects task. This name is used as the label in the task icon.
 
 > [!NOTE]
 >  Task names must be unique within a package.
 
  **Description**
- Type a description of the Transfer [!INCLUDE[ssNoVersion--../../includes/ssnoversion-md.md)] Objects task.
+ Type a description of the Transfer ..!NCLUDE..ssNoVersion--../../includes/ssnoversion-md.md)] Objects task.
 
 **Transfer SQL Server Objects Task Editor (Objects Page)**
 
-  Use the **Objects** page of the **Transfer SQL Server Objects Task Editor** dialog box to specify properties for copying one or more [!INCLUDE[ssNoVersion--../../includes/ssnoversion-md.md)] objects from one instance of [!INCLUDE[ssNoVersion--../../includes/ssnoversion-md.md)] to another. Tables, views, stored procedures, and user-defined functions are a few examples of [!INCLUDE[ssNoVersion--../../includes/ssnoversion-md.md)] objects that you can copy.
+  Use the **Objects** page of the **Transfer SQL Server Objects Task Editor** dialog box to specify properties for copying one or more ..!NCLUDE..ssNoVersion--../../includes/ssnoversion-md.md)] objects from one instance of ..!NCLUDE..ssNoVersion--../../includes/ssnoversion-md.md)] to another. Tables, views, stored procedures, and user-defined functions are a few examples of ..!NCLUDE..ssNoVersion--../../includes/ssnoversion-md.md)] objects that you can copy.
 
 > [!NOTE]
->  The user who creates the Transfer [!INCLUDE[ssNoVersion--../../includes/ssnoversion-md.md)] Objects task must have sufficient permissions on the source server objects to select them for copying, and permission to access the destination server database where the objects will be transferred.
+>  The user who creates the Transfer ..!NCLUDE..ssNoVersion--../../includes/ssnoversion-md.md)] Objects task must have sufficient permissions on the source server objects to select them for copying, and permission to access the destination server database where the objects will be transferred.
 
 **Static Options**
 
@@ -2304,7 +2304,7 @@ Select one of the following options:
 
   Use the **General Node** of the **XML Task Editor** dialog box to specify the operation type and configure the operation.
 
- To learn about this task, see [Validate XML with the XML Task](../../integration-services/control-flow/validate-xml-with-the-xml-task.md). For information about working with XML documents and data, see "[Employing XML in the .NET Framework](http://go.microsoft.com/fwlink/?LinkId=56214)" in the MSDN Library.
+ To learn about this task, see [Validate XML with the XML Task--../../integration-services/control-flow/validate-xml-with-the-xml-task.md). For information about working with XML documents and data, see "[Employing XML in the .NET Framework](http://go.microsoft.com/fwlink/?LinkId=56214)" in the MSDN Library.
 
 **Static Options**
 
@@ -2357,11 +2357,11 @@ Select one of the following options:
 
 **ADO NET Destination Editor (Connection Manager Page)**
 
-  Use the **Connection Manager** page of the **ADO NET Destination Editor** dialog box to select the [!INCLUDE[vstecado--../../includes/vstecado-md.md)] connection for the destination. This page also lets you select a table or view from the database.
+  Use the **Connection Manager** page of the **ADO NET Destination Editor** dialog box to select the ..!NCLUDE..vstecado--../../includes/vstecado-md.md)] connection for the destination. This page also lets you select a table or view from the database.
 
  **To open the Connection Manager page**
 
-1.  In [!INCLUDE[ssBIDevStudioFull--../../includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion--../../includes/ssisnoversion-md.md)] package that has the ADO NET destination.
+1.  In ..!NCLUDE..ssBIDevStudioFull--../../includes/ssbidevstudiofull-md.md)], open the ..!NCLUDE..ssISnoversion--../../includes/ssisnoversion-md.md)] package that has the ADO NET destination.
 
 2.  On the **Data Flow** tab, double-click the ADO NET destination.
 
@@ -2382,7 +2382,7 @@ Select one of the following options:
  Create a new table or view by using the **Create Table** dialog box.
 
 > [!NOTE]
->  When you click **New**, [!INCLUDE[ssISnoversion--../../includes/ssisnoversion-md.md)] generates a default CREATE TABLE statement based on the connected data source. This default CREATE TABLE statement will not include the FILESTREAM attribute even if the source table includes a column with the FILESTREAM attribute declared. To run an [!INCLUDE[ssISnoversion--../../includes/ssisnoversion-md.md)] component with the FILESTREAM attribute, first implement FILESTREAM storage on the destination database. Then, add the FILESTREAM attribute to the CREATE TABLE statement in the **Create Table** dialog box. For more information, see [Binary Large Object &#40;Blob&#41; Data &#40;SQL Server&#41;--../../relational-databases/blob/binary-large-object-blob-data-sql-server.md).
+>  When you click **New**, ..!NCLUDE..ssISnoversion--../../includes/ssisnoversion-md.md)] generates a default CREATE TABLE statement based on the connected data source. This default CREATE TABLE statement will not include the FILESTREAM attribute even if the source table includes a column with the FILESTREAM attribute declared. To run an ..!NCLUDE..ssISnoversion--../../includes/ssisnoversion-md.md)] component with the FILESTREAM attribute, first implement FILESTREAM storage on the destination database. Then, add the FILESTREAM attribute to the CREATE TABLE statement in the **Create Table** dialog box. For more information, see [Binary Large Object &#40;Blob&#41; Data &#40;SQL Server&#41;--../../relational-databases/blob/binary-large-object-blob-data-sql-server.md).
 
 
 
@@ -2410,13 +2410,13 @@ Select one of the following options:
 
 **ADO NET Source Editor (Connection Manager Page)**
 
-  Use the **Connection Manager** page of the **ADO NET Source Editor** dialog box to select the [!INCLUDE[vstecado--../../includes/vstecado-md.md)] connection manager for the source. This page also lets you select a table or view from the database.
+  Use the **Connection Manager** page of the **ADO NET Source Editor** dialog box to select the ..!NCLUDE..vstecado--../../includes/vstecado-md.md)] connection manager for the source. This page also lets you select a table or view from the database.
 
  To learn more about the ADO NET source, see [ADO NET Source--../../integration-services/data-flow/ado-net-source.md).
 
  **To open the Connection Manager page**
 
-1.  In [!INCLUDE[ssBIDevStudioFull--../../includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion--../../includes/ssisnoversion-md.md)] package that has the ADO NET source.
+1.  In ..!NCLUDE..ssBIDevStudioFull--../../includes/ssbidevstudiofull-md.md)], open the ..!NCLUDE..ssISnoversion--../../includes/ssisnoversion-md.md)] package that has the ADO NET source.
 
 2.  On the **Data Flow** tab, double-click the ADO NET source.
 
@@ -2435,14 +2435,14 @@ Select one of the following options:
 
 |Option|Description|
 |------------|-----------------|
-|Table or view|Retrieve data from a table or view in the [!INCLUDE[vstecado--../../includes/vstecado-md.md)] data source.|
-|SQL command|Retrieve data from the [!INCLUDE[vstecado--../../includes/vstecado-md.md)] data source by using a SQL query.|
+|Table or view|Retrieve data from a table or view in the ..!NCLUDE..vstecado--../../includes/vstecado-md.md)] data source.|
+|SQL command|Retrieve data from the ..!NCLUDE..vstecado--../../includes/vstecado-md.md)] data source by using a SQL query.|
 
  **Preview**
  Preview results by using the **Data View** dialog box. **Preview** can display up to 200 rows.
 
 > [!NOTE]
->  When you preview data, columns with a CLR user-defined type do not contain data. Instead the values \<value too big to display> or System.Byte[] display. The former displays when the data source is accessed by using the [!INCLUDE[vstecado--../../includes/vstecado-md.md)] provider, the latter when using the [!INCLUDE[ssNoVersion--../../includes/ssnoversion-md.md)] Native Client provider.
+>  When you preview data, columns with a CLR user-defined type do not contain data. Instead the values \<value too big to display> or System.Byte[] display. The former displays when the data source is accessed by using the ..!NCLUDE..vstecado--../../includes/vstecado-md.md)] provider, the latter when using the ..!NCLUDE..ssNoVersion--../../includes/ssnoversion-md.md)] Native Client provider.
 
 
 
@@ -2472,7 +2472,7 @@ Select one of the following options:
 
  **To open the CDC Source Editor Connection Manager Page**
 
-1.  In [!INCLUDE[ssBIDevStudio--../../includes/ssbidevstudio-md.md)], open the [!INCLUDE[ssISCurrent--../../includes/ssiscurrent-md.md)] package that has the CDC source.
+1.  In ..!NCLUDE..ssBIDevStudio--../../includes/ssbidevstudio-md.md)], open the ..!NCLUDE..ssISCurrent--../../includes/ssiscurrent-md.md)] package that has the CDC source.
 
 2.  On the **Data Flow** tab, double-click the CDC source.
 
@@ -2481,7 +2481,7 @@ Select one of the following options:
 **Options**
 
  **ADO.NET connection manager**
- Select an existing connection manager from the list, or click **New** to create a new connection. The connection must be to a [!INCLUDE[ssNoVersion--../../includes/ssnoversion-md.md)] database that is enabled for CDC and where the selected change table is located.
+ Select an existing connection manager from the list, or click **New** to create a new connection. The connection must be to a ..!NCLUDE..ssNoVersion--../../includes/ssnoversion-md.md)] database that is enabled for CDC and where the selected change table is located.
 
  **New**
  Click **New**. The **Configure ADO.NET Connection Manager Editor** dialog box opens where you can create a new connection manager
@@ -2532,7 +2532,7 @@ Select one of the following options:
 **Options**
 
  **Connection manager**
- Select from the list of existing [!INCLUDE[ssASnoversion--../../includes/ssasnoversion-md.md)] connections, or create a new [!INCLUDE[ssASnoversion--../../includes/ssasnoversion-md.md)] connection by using the **New** button described as follows.
+ Select from the list of existing ..!NCLUDE..ssASnoversion--../../includes/ssasnoversion-md.md)] connections, or create a new ..!NCLUDE..ssASnoversion--../../includes/ssasnoversion-md.md)] connection by using the **New** button described as follows.
 
  **New**
  Create a new connection by using the **Add Analysis Services Connection Manager** dialog box.
@@ -2671,7 +2671,7 @@ Select one of the following options:
 **Options**
 
  **Use default error configuration.**
- Specify whether to use the default [!INCLUDE[ssASnoversion--../../includes/ssasnoversion-md.md)] error handling. By default, this value is **True**.
+ Specify whether to use the default ..!NCLUDE..ssASnoversion--../../includes/ssasnoversion-md.md)] error handling. By default, this value is **True**.
 
  **Key error action**
  Specify how to handle records that have unacceptable key values.
@@ -2706,7 +2706,7 @@ Select one of the following options:
 
 **Excel Destination Editor (Connection Manager Page)**
 
-  Use the **Connection Manager** page of the **Excel Destination Editor** dialog box to specify data source information, and to preview the results. The Excel destination loads data into a worksheet or a named range in a [!INCLUDE[ofprexcel--../../includes/ofprexcel-md.md)] workbook.
+  Use the **Connection Manager** page of the **Excel Destination Editor** dialog box to specify data source information, and to preview the results. The Excel destination loads data into a worksheet or a named range in a ..!NCLUDE..ofprexcel--../../includes/ofprexcel-md.md)] workbook.
 
 > [!NOTE]
 >  The **CommandTimeout** property of the Excel destination is not available in the **Excel Destination Editor**, but can be set by using the **Advanced Editor**. In addition, certain Fast Load options are available only in the **Advanced Editor**. For more information on these properties, see the Excel Destination section of [Excel Custom Properties--../../integration-services/data-flow/excel-custom-properties.md).
@@ -2762,7 +2762,7 @@ Select one of the following options:
 
 **Excel Source Editor (Connection Manager Page)**
 
-  Use the **Connection Manager** node of the **Excel Source Editor** dialog box to select the [!INCLUDE[ofprexcel--../../includes/ofprexcel-md.md)] workbook for the source to use. The Excel source reads data from a worksheet or named range in an existing workbook.
+  Use the **Connection Manager** node of the **Excel Source Editor** dialog box to select the ..!NCLUDE..ofprexcel--../../includes/ofprexcel-md.md)] workbook for the source to use. The Excel source reads data from a worksheet or named range in an existing workbook.
 
 > [!NOTE]
 >  The **CommandTimeout** property of the Excel source is not available in the **Excel Source Editor**, but can be set by using the **Advanced Editor**. For more information on this property, see the Excel Source section of [Excel Custom Properties--../../integration-services/data-flow/excel-custom-properties.md).
@@ -2837,7 +2837,7 @@ Select one of the following options:
  **New**
  Create a new connection by using the **Flat File Format** and **Flat File Connection Manager Editor** dialog boxes.
 
- In addition to the standard flat file formats of delimited, fixed width, and ragged right, the **Flat File Format** dialog box has a fourth option, **Fixed width with row delimiters**. This option represents a special case of the ragged-right format in which [!INCLUDE[ssISnoversion--../../includes/ssisnoversion-md.md)] adds a dummy column as the final column of data. This dummy column ensures that the final column has a fixed width.
+ In addition to the standard flat file formats of delimited, fixed width, and ragged right, the **Flat File Format** dialog box has a fourth option, **Fixed width with row delimiters**. This option represents a special case of the ragged-right format in which ..!NCLUDE..ssISnoversion--../../includes/ssisnoversion-md.md)] adds a dummy column as the final column of data. This dummy column ensures that the final column has a fixed width.
 
  The **Fixed width with row delimiters** option is not available in the **Flat File Connection Manager Editor**. If necessary, you can emulate this option in the editor. To emulate this option, on the **General** page of the **Flat File Connection Manager Editor**, for **Format**, select **Ragged right**. Then on the **Advanced** page of the editor, add a new dummy column as the final column of data.
 
@@ -3006,7 +3006,7 @@ Select one of the following options:
 **Task List**
 
 
--   In [!INCLUDE[ssBIDevStudio--../../includes/ssbidevstudio-md.md)], open the [!INCLUDE[ssISCurrent--../../includes/ssiscurrent-md.md)] package that has the ODBC destination.
+-   In ..!NCLUDE..ssBIDevStudio--../../includes/ssbidevstudio-md.md)], open the ..!NCLUDE..ssISCurrent--../../includes/ssiscurrent-md.md)] package that has the ODBC destination.
 
 -   On the **Data Flow** tab, double-click the ODBC destination.
 
@@ -3058,7 +3058,7 @@ Select one of the following options:
 
 
 
--   In [!INCLUDE[ssBIDevStudio--../../includes/ssbidevstudio-md.md)], open the [!INCLUDE[ssISCurrent--../../includes/ssiscurrent-md.md)] package that has the ODBC source.
+-   In ..!NCLUDE..ssBIDevStudio--../../includes/ssbidevstudio-md.md)], open the ..!NCLUDE..ssISCurrent--../../includes/ssiscurrent-md.md)] package that has the ODBC source.
 
 -   On the **Data Flow** tab, double-click the ODBC source.
 
@@ -3123,7 +3123,7 @@ Select one of the following options:
   Use the **Connection Manager** page of the **OLE DB Destination Editor** dialog box to select the OLE DB connection for the destination. This page also lets you select a table or view from the database.
 
 > [!NOTE]
->  If the data source is [!INCLUDE[msCoName--../../includes/msconame-md.md)] Office Excel 2007, the data source requires a different connection manager than earlier versions of Excel. For more information, see [Connect to an Excel Workbook--../../integration-services/connection-manager/connect-to-an-excel-workbook.md).
+>  If the data source is ..!NCLUDE..msCoName--../../includes/msconame-md.md)] Office Excel 2007, the data source requires a different connection manager than earlier versions of Excel. For more information, see [Connect to an Excel Workbook--../../integration-services/connection-manager/connect-to-an-excel-workbook.md).
 
 > [!NOTE]
 >  The **CommandTimeout** property of the OLE DB destination is not available in the **OLE DB Destination Editor**, but can be set by using the **Advanced Editor**. In addition, certain fast load options are available only in the **Advanced Editor**. For more information on these properties, see the OLE DB Destination section of [OLE DB Custom Properties--../../integration-services/data-flow/ole-db-custom-properties.md).
@@ -3173,9 +3173,9 @@ Select one of the following options:
   Use the **Connection Manager** page of the **OLE DB Source Editor** dialog box to select the OLE DB connection manager for the source. This page also lets you select a table or view from the database.
 
 > [!NOTE]
->  To load data from a data source that uses [!INCLUDE[msCoName--../../includes/msconame-md.md)] Office Excel 2007, use an OLE DB source. You cannot use an Excel source to load data from an Excel 2007 data source. For more information, see [Configure OLE DB Connection Manager--../../integration-services/connection-manager/configure-ole-db-connection-manager.md).
+>  To load data from a data source that uses ..!NCLUDE..msCoName--../../includes/msconame-md.md)] Office Excel 2007, use an OLE DB source. You cannot use an Excel source to load data from an Excel 2007 data source. For more information, see [Configure OLE DB Connection Manager--../../integration-services/connection-manager/configure-ole-db-connection-manager.md).
 >
->  To load data from a data source that uses [!INCLUDE[msCoName--../../includes/msconame-md.md)] Office Excel 2003 or earlier, use an Excel source. For more information, see [Excel Source Editor &#40;Connection Manager Page&#41;--../../integration-services/data-flow/excel-source-editor-connection-manager-page.md).
+>  To load data from a data source that uses ..!NCLUDE..msCoName--../../includes/msconame-md.md)] Office Excel 2003 or earlier, use an Excel source. For more information, see [Excel Source Editor &#40;Connection Manager Page&#41;--../../integration-services/data-flow/excel-source-editor-connection-manager-page.md).
 
 > [!NOTE]
 >  The **CommandTimeout** property of the OLE DB source is not available in the **OLE DB Source Editor**, but can be set by using the **Advanced Editor**. For more information on this property, see the Excel Source section of [OLE DB Custom Properties--../../integration-services/data-flow/ole-db-custom-properties.md).
@@ -3183,7 +3183,7 @@ Select one of the following options:
 **Open the OLE DB Source Editor (Connection Manager Page)**
 
 
-1.  Add the OLE DB source to the [!INCLUDE[ssISnoversion--../../includes/ssisnoversion-md.md)] package, in [!INCLUDE[ssBIDevStudioFull--../../includes/ssbidevstudiofull-md.md)].
+1.  Add the OLE DB source to the ..!NCLUDE..ssISnoversion--../../includes/ssisnoversion-md.md)] package, in ..!NCLUDE..ssBIDevStudioFull--../../includes/ssbidevstudiofull-md.md)].
 
 2.  Right-click the source component and when click **Edit**.
 
@@ -3223,7 +3223,7 @@ Select one of the following options:
 
 **Partition Processing Destination Editor (Connection Manager Page)**
 
-  Use the **Connection Manager** page of the **Partition Processing Destination Editor** dialog box to specify a connection to a [!INCLUDE[ssNoVersion--../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion--../../includes/ssasnoversion-md.md)] project or to an instance of [!INCLUDE[ssASnoversion--../../includes/ssasnoversion-md.md)].
+  Use the **Connection Manager** page of the **Partition Processing Destination Editor** dialog box to specify a connection to a ..!NCLUDE..ssNoVersion--../../includes/ssnoversion-md.md)] ..!NCLUDE..ssASnoversion--../../includes/ssasnoversion-md.md)] project or to an instance of ..!NCLUDE..ssASnoversion--../../includes/ssasnoversion-md.md)].
 
 > [!NOTE]
 >  Tasks described here do not apply to Analysis Services tabular models.  You cannot map input columns to partition columns for tabular models. You can instead use the Analysis Services Execute DDL task [Analysis Services Execute DDL Task--../../integration-services/control-flow/analysis-services-execute-ddl-task.md) to process the partition.
@@ -3294,7 +3294,7 @@ Select one of the following options:
 **<a name="open"></a> Open the Raw File Destination Editor**
 
 
-1.  Add the Raw File destination to an [!INCLUDE[ssISnoversion--../../includes/ssisnoversion-md.md)] package, in [!INCLUDE[ssBIDevStudioFull--../../includes/ssbidevstudiofull-md.md)].
+1.  Add the Raw File destination to an ..!NCLUDE..ssISnoversion--../../includes/ssisnoversion-md.md)] package, in ..!NCLUDE..ssBIDevStudioFull--../../includes/ssbidevstudiofull-md.md)].
 
 2.  Right-click the component and then click **Edit**.
 
@@ -3347,7 +3347,7 @@ Select one of the following options:
 
 **SQL Destination Editor (Connection Manager Page)**
 
-  Use the **Connection Manager** page of the **SQL Destination Editor** dialog box to specify data source information, and to preview the results. The [!INCLUDE[ssNoVersion--../../includes/ssnoversion-md.md)] destination loads data into tables or views in a [!INCLUDE[msCoName--../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion--../../includes/ssnoversion-md.md)] database.
+  Use the **Connection Manager** page of the **SQL Destination Editor** dialog box to specify data source information, and to preview the results. The ..!NCLUDE..ssNoVersion--../../includes/ssnoversion-md.md)] destination loads data into tables or views in a ..!NCLUDE..msCoName--../../includes/msconame-md.md)] ..!NCLUDE..ssNoVersion--../../includes/ssnoversion-md.md)] database.
 
 **Options**
 
@@ -3364,7 +3364,7 @@ Select one of the following options:
  Create a new table by using the **Create Table** dialog box.
 
 > [!NOTE]
->  When you click **New**, [!INCLUDE[ssISnoversion--../../includes/ssisnoversion-md.md)] generates a default CREATE TABLE statement based on the connected data source. This default CREATE TABLE statement will not include the FILESTREAM attribute even if the source table includes a column with the FILESTREAM attribute declared. To run an [!INCLUDE[ssISnoversion--../../includes/ssisnoversion-md.md)] component with the FILESTREAM attribute, first implement FILESTREAM storage on the destination database. Then, add the FILESTREAM attribute to the CREATE TABLE statement in the **Create Table** dialog box. For more information, see [Binary Large Object &#40;Blob&#41; Data &#40;SQL Server&#41;--../../relational-databases/blob/binary-large-object-blob-data-sql-server.md).
+>  When you click **New**, ..!NCLUDE..ssISnoversion--../../includes/ssisnoversion-md.md)] generates a default CREATE TABLE statement based on the connected data source. This default CREATE TABLE statement will not include the FILESTREAM attribute even if the source table includes a column with the FILESTREAM attribute declared. To run an ..!NCLUDE..ssISnoversion--../../includes/ssisnoversion-md.md)] component with the FILESTREAM attribute, first implement FILESTREAM storage on the destination database. Then, add the FILESTREAM attribute to the CREATE TABLE statement in the **Create Table** dialog box. For more information, see [Binary Large Object &#40;Blob&#41; Data &#40;SQL Server&#41;--../../relational-databases/blob/binary-large-object-blob-data-sql-server.md).
 
  **Preview**
  Preview results by using the **Preview Query Results** dialog box. Preview can display up to 200 rows.
@@ -3452,7 +3452,7 @@ Select one of the following options:
 
 **Audit Transformation Editor**
 
-  The Audit transformation enables the data flow in a package to include data about the environment in which the package runs. For example, the name of the package, computer, and operator can be added to the data flow. [!INCLUDE[ssISnoversion--../../../includes/ssisnoversion-md.md)] includes system variables that provide this information.
+  The Audit transformation enables the data flow in a package to include data about the environment in which the package runs. For example, the name of the package, computer, and operator can be added to the data flow. ..!NCLUDE..ssISnoversion--../../../includes/ssisnoversion-md.md)] includes system variables that provide this information.
 
 **Options**
 
@@ -3836,7 +3836,7 @@ Select one of the following options:
 **<a name="open"></a> Open the DQS Cleansing Transformation Editor**
 
 
-1.  Add the DQS Cleansing Transformation to [!INCLUDE[ssISnoversion--../../../includes/ssisnoversion-md.md)] package, in [!INCLUDE[ssBIDevStudioFull--../../../includes/ssbidevstudiofull-md.md)].
+1.  Add the DQS Cleansing Transformation to ..!NCLUDE..ssISnoversion--../../../includes/ssisnoversion-md.md)] package, in ..!NCLUDE..ssBIDevStudioFull--../../../includes/ssbidevstudiofull-md.md)].
 
 2.  Right-click the component and then click **Edit**.
 
@@ -3852,7 +3852,7 @@ Select one of the following options:
  Select an existing DQS knowledge base for the connected data source. For more information about the DQS knowledge base, see [DQS Knowledge Bases and Domains--../../../data-quality-services/dqs-knowledge-bases-and-domains.md).
 
  **Encrypt connection**
- Specifiy whether to encrypt the connection, in order to encrypt the data transfer between the DQS Server and [!INCLUDE[ssISnoversion--../../../includes/ssisnoversion-md.md)].
+ Specifiy whether to encrypt the connection, in order to encrypt the data transfer between the DQS Server and ..!NCLUDE..ssISnoversion--../../../includes/ssisnoversion-md.md)].
 
 
 
@@ -3946,7 +3946,7 @@ Select one of the following options:
   Use the **Connection Manager** tab of the **Fuzzy Grouping Transformation Editor** dialog box to select an existing connection or create a new one.
 
 > [!NOTE]
->  The server specified by the connection must be running [!INCLUDE[ssNoVersion--../../../includes/ssnoversion-md.md)]. The Fuzzy Grouping transformation creates temporary data objects in tempdb that may be as large as the full input to the transformation. While the transformation executes, it issues server queries against these temporary objects. This can affect overall server performance.
+>  The server specified by the connection must be running ..!NCLUDE..ssNoVersion--../../../includes/ssnoversion-md.md)]. The Fuzzy Grouping transformation creates temporary data objects in tempdb that may be as large as the full input to the transformation. While the transformation executes, it issues server queries against these temporary objects. This can affect overall server performance.
 
 **Options**
 
@@ -4005,10 +4005,10 @@ Select one of the following options:
 
 **Fuzzy Lookup Transformation Editor (Reference Table Tab)**
 
-  Use the **Reference Table** tab of the **Fuzzy Lookup Transformation Editor** dialog box to specify the source table and the index to use for the lookup. The reference data source must be a table in a [!INCLUDE[ssNoVersion--../../../includes/ssnoversion-md.md)] database.
+  Use the **Reference Table** tab of the **Fuzzy Lookup Transformation Editor** dialog box to specify the source table and the index to use for the lookup. The reference data source must be a table in a ..!NCLUDE..ssNoVersion--../../../includes/ssnoversion-md.md)] database.
 
 > [!NOTE]
->  The Fuzzy Lookup transformation creates a working copy of the reference table. The indexes described below are created on this working table by using a special table, not an ordinary [!INCLUDE[ssNoVersion--../../../includes/ssnoversion-md.md)] index. The transformation does not modify the existing source tables unless you select **Maintain stored index**. In this case, it creates a trigger on the reference table that updates the working table and the lookup index table based on changes to the reference table.
+>  The Fuzzy Lookup transformation creates a working copy of the reference table. The indexes described below are created on this working table by using a special table, not an ordinary ..!NCLUDE..ssNoVersion--../../../includes/ssnoversion-md.md)] index. The transformation does not modify the existing source tables unless you select **Maintain stored index**. In this case, it creates a trigger on the reference table that updates the working table and the lookup index table based on changes to the reference table.
 
 > [!NOTE]
 >  The **Exhaustive** and the **MaxMemoryUsage** properties of the Fuzzy Lookup transformation are not available in the **Fuzzy Lookup Transformation Editor**, but can be set by using the **Advanced Editor**. In addition, a value greater than 100 for **MaxOutputMatchesPerInput** can be specified only in the **Advanced Editor**. For more information on these properties, see the Fuzzy Lookup Transformation section of [Transformation Custom Properties--../../../integration-services/data-flow/transformations/transformation-custom-properties.md).
@@ -4203,7 +4203,7 @@ Select one of the following options:
 
 
 
- You can configure the transformation by either using the [!INCLUDE[ssIS--../../../includes/ssis-md.md)] Designer or the object model. See the Developer Guide for details about programmatically configuring this transformation.
+ You can configure the transformation by either using the ..!NCLUDE..ssIS--../../../includes/ssis-md.md)] Designer or the object model. See the Developer Guide for details about programmatically configuring this transformation.
 
 **Configure the OLE DB Command Transformation**
 
@@ -4212,7 +4212,7 @@ Select one of the following options:
 **To configure the OLE DB Command transformation**
 
 
-1.  In [!INCLUDE[ssBIDevStudioFull--../../../includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion--../../../includes/ssisnoversion-md.md)] project that contains the package you want.
+1.  In ..!NCLUDE..ssBIDevStudioFull--../../../includes/ssbidevstudiofull-md.md)], open the ..!NCLUDE..ssISnoversion--../../../includes/ssisnoversion-md.md)] project that contains the package you want.
 
 2.  In Solution Explorer, double-click the package to open it.
 
@@ -4266,10 +4266,10 @@ Select one of the following options:
  The value of this property can be specified by using a property expression.
 
  **Sample output name**
- Provide a unique name for the output that will include the sampled rows. The name provided will be displayed within the [!INCLUDE[ssIS--../../../includes/ssis-md.md)] Designer.
+ Provide a unique name for the output that will include the sampled rows. The name provided will be displayed within the ..!NCLUDE..ssIS--../../../includes/ssis-md.md)] Designer.
 
  **Unselected output name**
- Provide a unique name for the output that will contain the rows excluded from the sampling. The name provided will be displayed within the [!INCLUDE[ssIS--../../../includes/ssis-md.md)] Designer.
+ Provide a unique name for the output that will contain the rows excluded from the sampling. The name provided will be displayed within the ..!NCLUDE..ssIS--../../../includes/ssis-md.md)] Designer.
 
  **Use the following random seed**
  Specify the sampling seed for the random number generator that the transformation uses to create a sample. This is only recommended for development and testing. The transformation uses the Microsoft Windows tick count if a random seed is not specified.

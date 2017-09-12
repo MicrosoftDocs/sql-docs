@@ -1,8 +1,10 @@
 ---
 title: "Install SQL Server from the Command Prompt | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/11/2017"
-ms.prod: "sql-server-2016"
+ms.date: "09/07/2017"
+ms.prod: 
+ - "sql-server-2016"
+ - "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -168,11 +170,11 @@ manager: "jhubbard"
   
 -   [Feature Parameters](#Feature)  
   
--   [Role Parameters](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md#RoleParameters)  
+-   [Role Parameters](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#RoleParameters)  
   
--   [Controlling Failover Behavior using the /FAILOVERCLUSTERROLLOWNERSHIP Parameter](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md#RollOwnership)  
+-   [Controlling Failover Behavior using the /FAILOVERCLUSTERROLLOWNERSHIP Parameter](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#RollOwnership)  
   
--   [Instance ID or InstanceID Configuration](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md#InstanceID) 
+-   [Instance ID or InstanceID Configuration](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#InstanceID) 
   
 ##  <a name="Install"></a> Installation Parameters  
  Use the parameters in the following table to develop command line scripts for installation.  
@@ -870,7 +872,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 |/FEATURES=SQLEngine, PolyBase|Intalls the PolyBase engine.|  
   
 ##  <a name="RoleParameters"></a> Role Parameters  
- The setup role or /Role parameter is used to install a preconfigured selection of features. The [!INCLUDE[ssAS_md](../../includes/ssas-md.md)] roles install an [!INCLUDE[ssAS_md](../../includes/ssas-md.md)] instance in either an existing SharePoint farm, or a new un-configured farm. Two setup roles are provided to support each scenario. You can only choose one setup role to install at a time. If you choose a setup role, Setup installs the features and components that belong to the role. You cannot vary the features and components that are designated for that role. For more information about how to use the feature role parameter, see [Install Power Pivot from the Command Prompt](http://msdn.microsoft.com/en-us/7f1f2b28-c9f5-49ad-934b-02f2fa6b9328). 
+ The setup role or /Role parameter is used to install a preconfigured selection of features. The [!INCLUDE[ssAS_md](../../includes/ssas-md.md)] roles install an [!INCLUDE[ssAS_md](../../includes/ssas-md.md)] instance in either an existing SharePoint farm, or a new un-configured farm. Two setup roles are provided to support each scenario. You can only choose one setup role to install at a time. If you choose a setup role, Setup installs the features and components that belong to the role. You cannot vary the features and components that are designated for that role. For more information about how to use the feature role parameter, see [Install Power Pivot from the Command Prompt](http://msdn.microsoft.com/7f1f2b28-c9f5-49ad-934b-02f2fa6b9328). 
   
  The AllFeatures_WithDefaults role is the default behavior for editions of [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] and reduces the number of dialog boxes presented to the user. It can be specified from the command line when installing a SQL Server edition that is not [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. 
   

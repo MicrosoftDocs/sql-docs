@@ -1,8 +1,10 @@
 ---
 title: "Add Features to an Instance of SQL Server (Setup) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.date: "09/07/2017"
+ms.prod: 
+ - "sql-server-2016"
+ - "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,9 +22,9 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # Add Features to an Instance of SQL Server (Setup)
-  This topic provides a step-by-step procedure for adding features to an instance of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Some [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components or services are specific to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. These are also known as instance-aware. They share the same version as the instance that hosts them, and are used exclusively for that instance. You can add the instance-aware components to an instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], along with the shared components of if they are not already installed. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+  This topic provides a step-by-step procedure for adding features to an instance of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Some [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components or services are specific to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. These are also known as instance-aware. They share the same version as the instance that hosts them, and are used exclusively for that instance. You can add the instance-aware components to an instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], along with the shared components of if they are not already installed. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and supported features of SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).  
   
- To add features to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from the command prompt, see [Install SQL Server 2016 from the Command Prompt](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).  
+ To add features to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from the command prompt, see [Install SQL Server from the Command Prompt](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).  
   
 ## Prerequisites  
  Before you continue, review topics in [Planning a SQL Server Installation](../../sql-server/install/planning-a-sql-server-installation.md).  
@@ -51,7 +53,7 @@ manager: "jhubbard"
   
 7.  On the Installation Type page, select the option **Add features to an existing instance of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]**, and select the instance you would like to update.  
   
-8.  On the Feature Selection page, select the components for your installation. A description for each component group appears in the right-hand pane after you select the feature name. You can select any combination of check boxes. For more information, see [Editions and Components of SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md). Each component can be installed only once on a given instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. To install multiple components, you must install an additional instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+8.  On the Feature Selection page, select the components for your installation. A description for each component group appears in the right-hand pane after you select the feature name. You can select any combination of check boxes. For more information, see [Editions and supported features of SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md). Each component can be installed only once on a given instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. To install multiple components, you must install an additional instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
      The prerequisites for the selected features are displayed on the right-hand pane. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup will install the prerequisite that are not already installed during the installation step described later in this procedure.  
   
@@ -146,7 +148,7 @@ manager: "jhubbard"
  [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)   
  [Validate a SQL Server Installation](../../database-engine/install-windows/validate-a-sql-server-installation.md)   
  [Repair a Failed SQL Server 2016 Installation](../../database-engine/install-windows/repair-a-failed-sql-server-installation.md)   
- [Upgrade to SQL Server 2016 Using the Installation Wizard &#40;Setup&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)   
- [Install SQL Server 2016 from the Command Prompt](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)  
+ [Upgrade SQL Server Using the Installation Wizard &#40;Setup&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)   
+ [Install SQL Server from the Command Prompt](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)  
   
   

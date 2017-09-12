@@ -31,12 +31,12 @@ manager: "jhubbard"
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   Returns information about supported time zones. All time zones installed on the computer are stored in the following registry hive:  
-**KEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones**.  
+`KEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones`.  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|**name**|**sysname**|Name of the time zone in Windows standard format. For example **Cen. Australia Standard Time** or **Central European Standard Time**.|  
-|**current_utc_offset**|**nvarchar(12)**|Current offset to UTC. For example **+01:00** or **-07:00**.|  
+|**name**|**sysname**|Name of the time zone in Windows standard format. For example, **Cen. Australia Standard Time** or **Central European Standard Time**.|  
+|**current_utc_offset**|**nvarchar(12)**|Current offset to UTC. For example, **+01:00** or **-07:00**.|  
 |**is_currently_dst**|**bit**|True if currently observing daylight savings time.|  
   
 ## See Also  

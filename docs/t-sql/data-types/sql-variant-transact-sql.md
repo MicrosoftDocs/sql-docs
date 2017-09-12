@@ -1,7 +1,7 @@
 ---
 title: "sql_variant (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/23/2017"
+ms.date: "09/12/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -26,11 +26,9 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # sql_variant (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 A data type that stores values of various [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-supported data types.
-  
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
   
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -64,7 +62,7 @@ The **sql_variant** data type belongs to the top of the data type hierarchy list
   
 |Data type hierarchy|Data type family|  
 |---|---|
-|**sql_variant**|**sql_variant**|  
+|**sql_variant**|sql_variant |  
 |**datetime2**|Date and time|  
 |**datetimeoffset**|Date and time|  
 |**datetime**|Date and time|  
@@ -87,7 +85,7 @@ The **sql_variant** data type belongs to the top of the data type hierarchy list
 |**char**|Unicode|  
 |**varbinary**|Binary|  
 |**binary**|Binary|  
-|**uniqueidentifier**|**Uniqueidentifier**|  
+|**uniqueidentifier**|Uniqueidentifier |  
   
 The following rules apply to **sql_variant** comparisons:
 -   When **sql_variant** values of different base data types are compared and the base data types are in different data type families, the value whose data type family is higher in the hierarchy chart is considered the greater of the two values.  

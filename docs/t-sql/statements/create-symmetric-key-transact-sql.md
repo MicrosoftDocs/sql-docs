@@ -1,7 +1,7 @@
 ---
 title: "CREATE SYMMETRIC KEY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/11/2017"
+ms.date: "09/12/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -110,7 +110,9 @@ CREATE SYMMETRIC KEY key_name
  Specifies an asymmetric key to be used to encrypt the key that is being created. This asymmetric key must already exist in the database.  
   
  \<algorithm>  
- Beginning with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], all algorithms other than AES_128, AES_192, and AES_256 are deprecated. To use older algorithms (not recommended) you must set the database to database compatibility level 120 or lower.  
+Specify the encrypting algorithm.   
+> [!WARNING]  
+> Beginning with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], all algorithms other than AES_128, AES_192, and AES_256 are deprecated. To use older algorithms (not recommended) you must set the database to database compatibility level 120 or lower.  
   
 ## Remarks  
  When a symmetric key is created, the symmetric key must be encrypted by using at least one of the following: certificate, password, symmetric key, asymmetric key, or PROVIDER. The key can have more than one encryption of each type. In other words, a single symmetric key can be encrypted by using multiple certificates, passwords, symmetric keys, and asymmetric keys at the same time.  

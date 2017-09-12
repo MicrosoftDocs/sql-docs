@@ -39,13 +39,26 @@ Recent updates are reported for the following date range and subject:
 
 ## New Articles Created Recently
 
-The following links jump to new articles which have been added recently.
+The following links jump to new articles that have been added recently.
 
 
 1. [PREDICT (Transact-SQL)](queries/predict-transact-sql.md)
 2. [ALTER EXTERNAL LIBRARY (Transact-SQL)](statements/alter-external-library-transact-sql.md)
 3. [CREATE EXTERNAL LIBRARY (Transact-SQL)](statements/create-external-library-transact-sql.md)
 4. [DROP EXTERNAL LIBRARY (Transact-SQL)](statements/drop-external-library-transact-sql.md)
+
+
+
+&nbsp;
+
+## Updated Articles with Excerpts
+
+This section displays the excerpts of updates gathered from articles that have recently experienced a large update.
+
+The excerpts displayed here appear separated from their proper semantic context. Also, sometimes an excerpt is separated from important markdown syntax that surrounds it in the actual article. Therefore these excerpts are for general guidance only. The excerpts only enable you to know whether your interests warrant taking the time to click and visit the actual article.
+
+For these and other reasons, do not copy code from these excerpts, and do not take as exact truth any text excerpt. Instead, visit the actual article.
+
 
 
 
@@ -56,19 +69,10 @@ The following links jump to new articles which have been added recently.
 
 ## Compact List of Articles Updated Recently
 
-This compact list provides links to all the updated articles which are listed in the Excerpts section.
+This compact list provides links to all the updated articles that are listed in the Excerpts section.
 
+1. [CAST and CONVERT (Transact-SQL)](#TitleNum_1)
 
-
-&nbsp;
-
-## Updated Articles with Excerpts
-
-This section displays the excerpts of updates gathered from articles which have recently experienced a large update.
-
-The excerpts displayed here appear separated from their proper semantic context. Also, sometimes an excerpt is separated from important markdown syntax that surrounds it in the actual article. Therefore these excerpts are for general guidance only. The excerpts only enable you to know whether your interests warrant taking the time to click and visit the actual article.
-
-For these and other reasons, do not copy code from these excerpts, and do not take as exact truth any text excerpt. Instead, visit the actual article.
 
 
 
@@ -103,7 +107,7 @@ WHERE SalesOrderNumber = 'SO47355'
       AND UnitPriceDiscountPct > .02;
 ```
 
-[!INCLUDE[ssResult--../../includes/ssresult-md.md)]
+..!NCLUDE-NotShown--ssResult--../../includes/ssresult-md.md)]
 
 ```
 ProductKey  UnitPrice  UnitPriceDiscountPct  DiscountPrice
@@ -125,7 +129,7 @@ FROM dbo.DimProduct
 WHERE ListPrice BETWEEN 350.00 AND 400.00;
 ```
 
-[!INCLUDE[ssResult--../../includes/ssresult-md.md)]
+..!NCLUDE-NotShown--ssResult--../../includes/ssresult-md.md)]
 
 ```
 ListPrice
@@ -146,6 +150,11 @@ SELECT DISTINCT CAST(EnglishProductName AS char(10)) AS Name, ListPrice
 FROM dbo.DimProduct
 WHERE EnglishProductName LIKE 'Long-Sleeve Logo Jersey, M';
 ```
+
+..!NCLUDE-NotShown--ssResult--../../includes/ssresult-md.md)]
+
+
+
 
 
 

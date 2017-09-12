@@ -39,10 +39,23 @@ Recent updates are reported for the following date range and subject:
 
 ## New Articles Created Recently
 
-The following links jump to new articles which have been added recently.
+The following links jump to new articles that have been added recently.
 
 
 1. [Output Window in SQL Server Management Studio](output-window.md)
+
+
+
+&nbsp;
+
+## Updated Articles with Excerpts
+
+This section displays the excerpts of updates gathered from articles that have recently experienced a large update.
+
+The excerpts displayed here appear separated from their proper semantic context. Also, sometimes an excerpt is separated from important markdown syntax that surrounds it in the actual article. Therefore these excerpts are for general guidance only. The excerpts only enable you to know whether your interests warrant taking the time to click and visit the actual article.
+
+For these and other reasons, do not copy code from these excerpts, and do not take as exact truth any text excerpt. Instead, visit the actual article.
+
 
 
 
@@ -53,19 +66,13 @@ The following links jump to new articles which have been added recently.
 
 ## Compact List of Articles Updated Recently
 
-This compact list provides links to all the updated articles which are listed in the Excerpts section.
+This compact list provides links to all the updated articles that are listed in the Excerpts section.
 
+1. [Download SQL Server Management Studio (SSMS)](#TitleNum_1)
+2. [Connect to a SQL Server or Azure SQL Database](#TitleNum_2)
+3. [SQL Server Management Studio - Changelog (SSMS)](#TitleNum_3)
+4. [Create and update database tables](#TitleNum_4)
 
-
-&nbsp;
-
-## Updated Articles with Excerpts
-
-This section displays the excerpts of updates gathered from articles which have recently experienced a large update.
-
-The excerpts displayed here appear separated from their proper semantic context. Also, sometimes an excerpt is separated from important markdown syntax that surrounds it in the actual article. Therefore these excerpts are for general guidance only. The excerpts only enable you to know whether your interests warrant taking the time to click and visit the actual article.
-
-For these and other reasons, do not copy code from these excerpts, and do not take as exact truth any text excerpt. Instead, visit the actual article.
 
 
 
@@ -115,7 +122,6 @@ Version 17.2 includes:
 
 
 
-
 &nbsp;
 
 &nbsp;
@@ -159,7 +165,6 @@ Version 17.2 includes:
 [Analysis Services](https://docs.microsoft.com/sql/analysis-services/instances/connect-to-analysis-services)
 [Integration Services](https://docs.microsoft.com/sql/integration-services/sql-server-integration-services)
 [Reporting Services](https://docs.microsoft.com/sql/reporting-services/tools/connect-to-a-report-server-in-management-studio)
-
 
 
 
@@ -212,7 +217,6 @@ Generally available | Build number: 14.0.17177.0
  For more information on the Active Directory authentication methods, see [Universal Authentication with SQL Database and SQL Data Warehouse (SSMS support for MFA)](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication) and [Configure Azure SQL Database multi-factor authentication for SQL Server Management Studio](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication-configure).
 
 - Output window has entries for queries run during expansion of Object Explorer nodes
-
 
 
 
@@ -274,6 +278,8 @@ Generally available | Build number: 14.0.17177.0
 [Indexes--../../relational-databases/indexes/indexes.md)
 [Data types (Transact-SQL)--../../t-sql/data-types/data-types-transact-sql.md)
 [Download SQL Server Management Studio (SSMS)--../download-sql-server-management-studio-ssms.md)
+
+
 
 
 

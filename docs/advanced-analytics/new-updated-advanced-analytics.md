@@ -40,12 +40,25 @@ Recent updates are reported for the following date range and subject:
 
 ## New Articles Created Recently
 
-The following links jump to new articles which have been added recently.
+The following links jump to new articles that have been added recently.
 
 
 1. [How to perform realtime scoring or native scoring in SQL Server](r/how-to-do-realtime-scoring.md)
 2. [Install pretrained machine learning models on SQL Server](r/install-pretrained-models-sql-server.md)
 3. [Native scoring](sql-native-scoring.md)
+
+
+
+&nbsp;
+
+## Updated Articles with Excerpts
+
+This section displays the excerpts of updates gathered from articles that have recently experienced a large update.
+
+The excerpts displayed here appear separated from their proper semantic context. Also, sometimes an excerpt is separated from important markdown syntax that surrounds it in the actual article. Therefore these excerpts are for general guidance only. The excerpts only enable you to know whether your interests warrant taking the time to click and visit the actual article.
+
+For these and other reasons, do not copy code from these excerpts, and do not take as exact truth any text excerpt. Instead, visit the actual article.
+
 
 
 
@@ -56,19 +69,21 @@ The following links jump to new articles which have been added recently.
 
 ## Compact List of Articles Updated Recently
 
-This compact list provides links to all the updated articles which are listed in the Excerpts section.
+This compact list provides links to all the updated articles that are listed in the Excerpts section.
 
+1. [Set up Python Machine Learning Services (In-Database)](#TitleNum_1)
+2. [Introducing revoscalepy](#TitleNum_2)
+3. [Differences in machine learning features between editions of SQL Server](#TitleNum_3)
+4. [Operationalize R code (Machine Learning Services)](#TitleNum_4)
+5. [Performance for R Services: results and resources](#TitleNum_5)
+6. [Performance for R Services - data optimization](#TitleNum_6)
+7. [R package management for SQL Server](#TitleNum_7)
+8. [Set up SQL Server Machine Learning Services (In-Database)](#TitleNum_8)
+9. [SQL Server configuration for use with R](#TitleNum_9)
+10. [Performance tuning for R in SQL Server](#TitleNum_10)
+11. [Data science scenarios and solution templates](#TitleNum_11)
+12. [What's new in Machine Learning Services in SQL Server](#TitleNum_12)
 
-
-&nbsp;
-
-## Updated Articles with Excerpts
-
-This section displays the excerpts of updates gathered from articles which have recently experienced a large update.
-
-The excerpts displayed here appear separated from their proper semantic context. Also, sometimes an excerpt is separated from important markdown syntax that surrounds it in the actual article. Therefore these excerpts are for general guidance only. The excerpts only enable you to know whether your interests warrant taking the time to click and visit the actual article.
-
-For these and other reasons, do not copy code from these excerpts, and do not take as exact truth any text excerpt. Instead, visit the actual article.
 
 
 
@@ -110,7 +125,6 @@ For information about how to upgrade an instance, see [Upgrade R components thro
 > [!NOTE]
 >
 > The current release version contains the latest version of all machine learning components. Therefore, although upgrades via Microsoft Machine Learning Server are supported for SQL Server 2017, the upgrade that is currently available applies only to SQL Server 2016 instances.
-
 
 
 
@@ -173,7 +187,6 @@ For details, see [Introduction to MicrosoftML](https://docs.microsoft.com/r-serv
 
 
 
-
 &nbsp;
 
 &nbsp;
@@ -213,7 +226,6 @@ The following machine learning languages are supported for all editions:
 + SQL Server 2016: R only
 
 Microsoft R Open is included with all editions.
-
 
 
 
@@ -269,7 +281,6 @@ For more information about how to improve performance in SQL Server Machine Lear
 
 
 
-
 &nbsp;
 
 &nbsp;
@@ -320,7 +331,6 @@ The following process was used to create this configuration:
 
 
 
-
 &nbsp;
 
 &nbsp;
@@ -360,7 +370,6 @@ Another common mistake that can affect performance is that a query retrieves mor
 
 
 This section provides miscellaneous tips and resources that are specific to RevoScaleR and other options in Microsoft R.
-
 
 
 
@@ -418,7 +427,6 @@ In addition, SQL Server 2017 supports the T-SQL statement, **CREATE EXTERNAL LIB
 
 
 
-
 &nbsp;
 
 &nbsp;
@@ -465,7 +473,6 @@ If you think you might use R heavily, or if you expect many users to be running 
 
 
 
-
 &nbsp;
 
 &nbsp;
@@ -506,7 +513,6 @@ For details, including sample code, see this tutorial: [SQL Optimization Tips an
 
 
 
-
 &nbsp;
 
 &nbsp;
@@ -541,10 +547,9 @@ For details, including sample code, see this tutorial: [SQL Optimization Tips an
 
 + [Performance tuning for R in SQL Server - hardware--..\r\sql-server-configuration-r-services.md)
 
-    Provides guidance for configuring the hardware that [!INCLUDE[ssNoVersion_md--..\..\includes\ssnoversion-md.md)] is installed on, and for configuring the SQL Server instance to better support external scripts. It is particularly useful for **database administrators**.
+    Provides guidance for configuring the hardware that ..!NCLUDE-NotShown--ssNoVersion_md--..\..\includes\ssnoversion-md.md)] is installed on, and for configuring the SQL Server instance to better support external scripts. It is particularly useful for **database administrators**.
 
 + [Performance tuning for R in SQL Server - code and data optimization--..\r\r-and-data-optimization-r-services.md)
-
 
 
 
@@ -593,7 +598,6 @@ For details, including sample code, see this tutorial: [SQL Optimization Tips an
 
 
 
-
 &nbsp;
 
 &nbsp;
@@ -637,6 +641,8 @@ But running Python in-database isn't just for machine learning; there are a myri
 + Remote compute contexts for Python
 
     This release supports use of multiple data sources and remote compute contexts. The data scientist or developer can execute Python code on a remote SQL Server, to explore data or build models without moving data. Use of remote compute contexts requires **revoscalepy**.
+
+
 
 
 

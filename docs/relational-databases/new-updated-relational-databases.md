@@ -39,7 +39,7 @@ Recent updates are reported for the following date range and subject:
 
 ## New Articles Created Recently
 
-The following links jump to new articles which have been added recently.
+The following links jump to new articles that have been added recently.
 
 
 1. [Import data from Excel to SQL Server or Azure SQL Database](import-export/import-data-from-excel-to-sql.md)
@@ -57,6 +57,19 @@ The following links jump to new articles which have been added recently.
 
 
 
+&nbsp;
+
+## Updated Articles with Excerpts
+
+This section displays the excerpts of updates gathered from articles that have recently experienced a large update.
+
+The excerpts displayed here appear separated from their proper semantic context. Also, sometimes an excerpt is separated from important markdown syntax that surrounds it in the actual article. Therefore these excerpts are for general guidance only. The excerpts only enable you to know whether your interests warrant taking the time to click and visit the actual article.
+
+For these and other reasons, do not copy code from these excerpts, and do not take as exact truth any text excerpt. Instead, visit the actual article.
+
+
+
+
 
 &nbsp;
 
@@ -64,19 +77,10 @@ The following links jump to new articles which have been added recently.
 
 ## Compact List of Articles Updated Recently
 
-This compact list provides links to all the updated articles which are listed in the Excerpts section.
+This compact list provides links to all the updated articles that are listed in the Excerpts section.
 
+1. [Automatic tuning](#TitleNum_1)
 
-
-&nbsp;
-
-## Updated Articles with Excerpts
-
-This section displays the excerpts of updates gathered from articles which have recently experienced a large update.
-
-The excerpts displayed here appear separated from their proper semantic context. Also, sometimes an excerpt is separated from important markdown syntax that surrounds it in the actual article. Therefore these excerpts are for general guidance only. The excerpts only enable you to know whether your interests warrant taking the time to click and visit the actual article.
-
-For these and other reasons, do not copy code from these excerpts, and do not take as exact truth any text excerpt. Instead, visit the actual article.
 
 
 
@@ -102,13 +106,13 @@ For these and other reasons, do not copy code from these excerpts, and do not ta
 **Automatic plan choice correction**
 
 
-[!INCLUDE[ssde_md--../../includes/ssde_md.md)] can automatically switch to the last known good plan whenever the plan choice regression is detected.
+..!NCLUDE-NotShown--ssde_md--../../includes/ssde_md.md)] can automatically switch to the last known good plan whenever the plan choice regression is detected.
 
 ![SQL plan choice correction--media/force-last-good-plan.png "SQL plan choice correction")
 
-[!INCLUDE[ssde_md--../../includes/ssde_md.md)] automatically detects any potential plan choice regression including the plan that should be used instead of the wrong plan.
-When the [!INCLUDE[ssde_md--../../includes/ssde_md.md)] applies the last known good plan, it automatically monitors the performance of the forced plan. If the forced plan is not better
-than the regressed plan, the new plan will be unforced and the [!INCLUDE[ssde_md--../../includes/ssde_md.md)] will compile a new plan. If [!INCLUDE[ssde_md--../../includes/ssde_md.md)] verifies
+..!NCLUDE-NotShown--ssde_md--../../includes/ssde_md.md)] automatically detects any potential plan choice regression including the plan that should be used instead of the wrong plan.
+When the ..!NCLUDE-NotShown--ssde_md--../../includes/ssde_md.md)] applies the last known good plan, it automatically monitors the performance of the forced plan. If the forced plan is not better
+than the regressed plan, the new plan will be unforced and the ..!NCLUDE-NotShown--ssde_md--../../includes/ssde_md.md)] will compile a new plan. If ..!NCLUDE-NotShown--ssde_md--../../includes/ssde_md.md)] verifies
 that the forced plan is better than regressed one, the forced plan will be retained until a recompile (for example, on next statistics or schema change) if it is better than the regressed plan.
 
 **Enabling automatic plan choice correction**
@@ -121,13 +125,15 @@ the following command:
 ALTER DATABASE current
 SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON );
 ```
-Once you turn-on this option, [!INCLUDE[ssde_md--../../includes/ssde_md.md)] will automatically force any recommendation where the estimated CPU gain is higher than 10 seconds, or the number of errors in the new plan is higher than the number of errors in the recommended plan, and verify that the forced plan is better than the current one.
+Once you turn-on this option, ..!NCLUDE-NotShown--ssde_md--../../includes/ssde_md.md)] will automatically force any recommendation where the estimated CPU gain is higher than 10 seconds, or the number of errors in the new plan is higher than the number of errors in the recommended plan, and verify that the forced plan is better than the current one.
 
 **Alternative - manual plan choice correction**
 
 
 Without automatic tuning, users must periodically monitor system and look for the queries that regressed. If any plan regressed, user should find some
-previous good plan and force it instead of the current one using `sp_query_store_force_plan` procedure. The best practice would be to force the last known good plan because older plans might be invalid due to statistic or index changes. The user who forces the last known good plan should monitor performance of the query that is executed using the forced plan and verify that forced plan works as expected. Depending on
+
+
+
 
 
 

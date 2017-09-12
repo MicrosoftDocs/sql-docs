@@ -39,10 +39,23 @@ Recent updates are reported for the following date range and subject:
 
 ## New Articles Created Recently
 
-The following links jump to new articles which have been added recently.
+The following links jump to new articles that have been added recently.
 
 
 1. [DB Mail and Email Alerts with SQL Agent on Linux](sql-server-linux-db-mail-sql-agent.md)
+
+
+
+&nbsp;
+
+## Updated Articles with Excerpts
+
+This section displays the excerpts of updates gathered from articles that have recently experienced a large update.
+
+The excerpts displayed here appear separated from their proper semantic context. Also, sometimes an excerpt is separated from important markdown syntax that surrounds it in the actual article. Therefore these excerpts are for general guidance only. The excerpts only enable you to know whether your interests warrant taking the time to click and visit the actual article.
+
+For these and other reasons, do not copy code from these excerpts, and do not take as exact truth any text excerpt. Instead, visit the actual article.
+
 
 
 
@@ -53,19 +66,17 @@ The following links jump to new articles which have been added recently.
 
 ## Compact List of Articles Updated Recently
 
-This compact list provides links to all the updated articles which are listed in the Excerpts section.
+This compact list provides links to all the updated articles that are listed in the Excerpts section.
 
+1. [Operate HA availability group for SQL Server on Linux](#TitleNum_1)
+2. [Configure SQL Server 2017 container images on Docker](#TitleNum_2)
+3. [Configure SQL Server on Linux with the mssql-conf tool](#TitleNum_3)
+4. [Customer Feedback for SQL Server on Linux](#TitleNum_4)
+5. [Migrate a SQL Server database from Windows to Linux using backup and restore](#TitleNum_5)
+6. [Release notes for SQL Server 2017 on Linux](#TitleNum_6)
+7. [Installation guidance for SQL Server on Linux](#TitleNum_7)
+8. [Install SQL Server Integration Services (SSIS) on Linux](#TitleNum_8)
 
-
-&nbsp;
-
-## Updated Articles with Excerpts
-
-This section displays the excerpts of updates gathered from articles which have recently experienced a large update.
-
-The excerpts displayed here appear separated from their proper semantic context. Also, sometimes an excerpt is separated from important markdown syntax that surrounds it in the actual article. Therefore these excerpts are for general guidance only. The excerpts only enable you to know whether your interests warrant taking the time to click and visit the actual article.
-
-For these and other reasons, do not copy code from these excerpts, and do not take as exact truth any text excerpt. Instead, visit the actual article.
 
 
 
@@ -120,7 +131,6 @@ When availability group replicas are on instances of SQL Server in Linux, the cl
 
 
 
-
 &nbsp;
 
 &nbsp;
@@ -163,7 +173,6 @@ When availability group replicas are on instances of SQL Server in Linux, the cl
 These steps can also be used to downgrade an existing container. For example, you might want to rollback or downgrade a running container for troubleshooting or testing. To downgrade a running container, you must be using a persistence technique for the data folder. Follow the same steps outlined in the [upgrade section--#upgrade), but specify the tag name of the older version when you run the new container.
 
 > [!IMPORTANT]
-
 
 
 
@@ -252,7 +261,6 @@ The **memory.memorylimitmb** setting controls the amount physical memory (in MB)
 
 
 
-
 &nbsp;
 
 &nbsp;
@@ -310,7 +318,6 @@ To enable Local Audit on docker you must have Docker [persist your data--sql-ser
 
 
 
-
 &nbsp;
 
 &nbsp;
@@ -351,7 +358,6 @@ There are several ways to create a backup file of a database on Windows. The fol
 1. In the connection dialog, enter **localhost**.
 
 1. In Object Explorer, expand **Databases**.
-
 
 
 
@@ -410,7 +416,6 @@ Package details and download locations for the RPM and Debian packages are liste
 
 
 
-
 &nbsp;
 
 &nbsp;
@@ -452,7 +457,6 @@ To rollback or downgrade SQL Server to a previous release, use the following ste
 
 > [!IMPORTANT]
 > Downgrade is only supported between RC2 and RC1 at this time.
-
 
 
 
@@ -526,6 +530,8 @@ To install the `mssql-server-is` package on RHEL, follow these steps:
 
 
 5.  After installation, please run `ssis-conf`.
+
+
 
 
 

@@ -129,7 +129,7 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |Columnstore <sup>1</sup>|Yes|Yes|Yes|Yes|Yes|  
 |Large object binaries in clustered columnstore indexes|Yes|Yes|Yes|Yes|Yes|  
 |Online non-clustered columnstore index rebuild|Yes|No|No|No|No|
-|In-Memory OLTP <sup>1</sup>|Yes|Yes|Yes|Yes, <sup>2</sup>|Yes|
+|In-Memory OLTP <sup>1</sup>|Yes|Yes|Yes|Yes|Yes|
 |Stretch Database|Yes|Yes|Yes|Yes|Yes|
 |Persistent Main Memory|Yes|Yes|Yes|Yes|Yes|
 |Multi-instance support|50|50|50|50|50|
@@ -151,8 +151,6 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 
 <sup>1</sup> In-Memory OLTP data size and Columnstore segment cache are limited to the amount of memory specified by edition in the Scale Limits section. The max degrees of parallelism is limited. The degrees of process parallelism (DOP) for an index build is limited to 2 DOP for the Standard Edition and 1 DOP for the Web and Express Editions. This refers to columnstore indexes created over disk-based tables and memory-optimized tables.
 
-<sup>2</sup> This feature is not included in the LocalDB installation option.
-
 ##  <a name="RDBMSS"></a> RDBMS security  
   
 |Feature|Enterprise|Standard|Web|Express|Express with Advanced Services|  
@@ -163,7 +161,6 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |Basic auditing|Yes|Yes|Yes|Yes|Yes| 
 |Fine grained auditing|Yes|Yes|Yes|Yes|Yes| 
 |Transparent database encryption|Yes|No|No|No|No|   
-|Extensible key management|Yes|No|No|No|No| 
 |User-defined roles|Yes|Yes|Yes|Yes|Yes| 
 |Contained databases|Yes|Yes|Yes|Yes|Yes| 
 |Encryption for backups|Yes|Yes|No|No|No|  
@@ -172,9 +169,7 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
   
 |Feature|Enterprise|Standard|Web|Express with Advanced Services|Express|   
 |-------------|----------------|--------------|---------|------------------------------------|------------------------| 
-|Heterogeneous subscribers|Yes|Yes|No|No|No|  
 |Merge replication|Yes|Yes|Yes (Subscriber only)|Yes (Subscriber only)|Yes (Subscriber only)|   
-|Oracle publishing|Yes|No|No|No|No| 
 |Peer to peer transactional replication|Yes|No|No|No|No|   
 |Snapshot replication|Yes|Yes|Yes (Subscriber only)|Yes (Subscriber only)|Yes (Subscriber only)|   
 |SQL Server change tracking|Yes|Yes|Yes|Yes|Yes| 
@@ -187,15 +182,12 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |Feature|Enterprise|Standard|Web|Express with Advanced Services|Express| 
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
 |SQL Management Objects (SMO)|Yes|Yes|Yes|Yes|Yes|  
-|SQL Configuration Manager|Yes|Yes|Yes|Yes|Yes|   
 |SQL CMD (Command Prompt tool)|Yes|Yes|Yes|Yes|Yes|      
 |Distributed Replay - Admin Tool|Yes|Yes|Yes|Yes|No|  
 |Distribute Replay - Client|Yes|Yes|Yes|No|No|  
 |Distributed Replay - Controller|Yes (Up to 16 clients)|Yes (1 client)|Yes (1 client)|No|No|   
 |SQL Profiler|Yes|Yes|No <sup>1</sup>|No <sup>1</sup>|No <sup>1</sup>|  
 |SQL Server Agent|Yes|Yes|Yes|No|No| 
-|Microsoft System Center Operations Manager Management Pack|Yes|Yes|Yes|No|No|  
-|Database Tuning Advisor (DTA)|Yes|Yes <sup>2</sup>|Yes <sup>2</sup>|No|No|      
   
  <sup>1</sup> SQL Server Web, SQL Server Express, SQL Server Express with Tools, and SQL Server Express with Advanced Services can be profiled using SQL Server Standard and SQL Server Enterprise editions.  
   
@@ -206,10 +198,8 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |Feature|Enterprise|Standard|Web|Express with Advanced Services|Express|   
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
 |User instances|No|No|No|Yes|Yes| 
-|LocalDB|No|No|No|Yes|No| 
 |Dedicated admin connection|Yes|Yes|Yes|Yes with trace flag|Yes with trace flag|   
 |PowerShell scripting support|Yes|Yes|Yes|Yes|Yes| 
-|SysPrep support <sup>1</sup>|Yes|Yes|Yes|Yes|Yes| 
 |Support for data-tier application component operations - extract, deploy, upgrade, delete|Yes|Yes|Yes|Yes|Yes| 
 |Policy automation (check on schedule and change)|Yes|Yes|Yes|No|No|   
 |Performance data collector|Yes|Yes|Yes|No|No| 
@@ -224,18 +214,7 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |Parallel consistency check|Yes|No|No|No|No| 
 |SQL Server Utility Control Point|Yes|No|No|No|No|    
 |Buffer pool extension|Yes|Yes|No|No|No| 
-  
- <sup>1</sup> For more information, see [Considerations for Installing SQL Server Using SysPrep](../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md).  
- 
-##  <a name="DevTools"></a> Development tools  
-  
-|Feature|Enterprise|Standard|Web|Express with Advanced Services|Express| 
-|-------------|----------------|--------------|---------|------------------------------------|------------------------| 
-|Microsoft Visual Studio integration|Yes|Yes|Yes|Yes|Yes| 
-|Intellisense (Transact-SQL and MDX)|Yes|Yes|Yes|Yes|Yes| 
-|SQL Server Data Tools (SSDT)|Yes|Yes|Yes|Yes|No|    
-|MDX edit, debug, and design tools|Yes|Yes|No|No|No|   
-  
+
 ##  <a name="Programmability"></a> Programmability  
   
 |Feature|Enterprise|Standard|Web|Express with Advanced Services|Express 
@@ -271,50 +250,6 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 
 For info about the Integration Services (SSIS) features supported by the editions of [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)], see [Integration Services Features Supported by the Editions of SQL Server](../integration-services/integration-services-features-supported-by-the-editions-of-sql-server.md).
 
-##  <a name="MDS"></a> Master Data Services  
- For information about the [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] and Data Quality Services features supported by the editions of [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)], see [Master Data Services and Data Quality Services Features Supported by the Editions of SQL Server](../master-data-services/master-data-services-and-data-quality-services-features-support.md). 
-
-  
-##  <a name="DW"></a> Data warehouse  
-  
-|Feature|Enterprise|Standard|Web|Express with Advanced Services|Express|   
-|-------------|----------------|--------------|---------|------------------------------------|------------------------| 
-|Create cubes without a database|Yes|Yes|No|No|No |   
-|Auto-generate staging and data warehouse schema|Yes|Yes|No|No|No| 
-|Change data capture|Yes|Yes|No|No|No| 
-|Star join query optimizations|Yes|No|No|No|No| 
-|Scalable read-only Analysis Services configuration|Yes|No|No|No|No| 
-|Parallel query processing on partitioned tables and indexes|Yes|No|No|No|No|   
-|Global batch aggregation|Yes|No|No|No|No| 
-
-##  <a name="SSAS"></a> Analysis Services  
-  
-For information about the Analysis Services features supported by the editions of [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)], see [Analysis Services Features Supported by the Editions of SQL Server](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md). 
-  
-##  <a name="BIMD"></a> BI semantic model (Multi Dimensional)  
-  
-For information about the Analysis Services features supported by the editions of [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)], see [Analysis Services Features Supported by the Editions of SQL Server](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md).
-   
-##  <a name="BIT"></a> BI semantic model (Tabular)  
-  
-For information about the Analysis Services features supported by the editions of [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)], see [Analysis Services Features Supported by the Editions of SQL Server](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md).
-  
-##  <a name="PPSP"></a> Power Pivot for SharePoint  
-  
-For information about the Power Pivot for SharePoint features supported by the editions of [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)], see [Analysis Services Features Supported by the Editions of SQL Server](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md).
-  
-##  <a name="DM"></a> Data mining  
-  
-For information about the Data Mining features supported by the editions of [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)], see [Analysis Services Features Supported by the Editions of SQL Server](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md).
-  
-##  <a name="SSRS"></a> Reporting Services  
-  
-For information about the Reporting Services features supported by the editions of [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)], see [Reporting Services Features Supported by the Editions of SQL Server](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md).
-
-##  <a name="BIC"></a> Business intelligence clients  
-
-For information about the Business Intelligence Client features supported by the editions of [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)], see [Analysis Services Features Supported by the Editions of SQL Server](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md) or [Reporting Services Features Supported by the Editions of SQL Server](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md).
-  
 ##  <a name="SLS"></a> Spatial and location services  
   
 |Feature Name|Enterprise|Standard|Web|Express with Advanced Services|Express|  

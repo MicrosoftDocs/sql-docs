@@ -134,7 +134,7 @@ decimal      8           2
 ```  
   
 ### B. Using a sql_variant as a variable   
- The following example, creates a variable useing the sql_variant data type, and then retrieves `SQL_VARIANT_PROPERTY` information about a variable named @v1.  
+ The following example, creates a variable using the sql_variant data type, and then retrieves `SQL_VARIANT_PROPERTY` information about a variable named @v1.  
   
 ```sql    
 DECLARE @v1 sql_variant;  

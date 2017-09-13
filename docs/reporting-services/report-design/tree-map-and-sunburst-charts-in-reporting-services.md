@@ -94,7 +94,8 @@ manager: "erikre"
   
 5.  Change the default chart title to "Categorized Sales by Territory, with sales reason".  
   
-6.  |||  
+6.  
+    |||  
     |-|-|  
     |![ssrs_sunburst_linetotalproperties](../../reporting-services/report-design/media/ssrs-sunburst-linetotalproperties.png "ssrs_sunburst_linetotalproperties")|To add the values of the category groups to the sunburst as labels, set the label property **Visible** = true and the **UseValueAsLabel**=False.<br /><br /> The label values that are displayed are affected by the size of the font, the size of the overall chart area, and the size of specific rectangles.  To see more of the labels, change the Label font property of LineTotal to 8pt instead of the default 10pt.|  
   

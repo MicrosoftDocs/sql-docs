@@ -48,7 +48,7 @@ ROLLBACK { TRAN | TRANSACTION }
   
 ## Arguments  
  *transaction_name*  
- Is the name assigned to the transaction on BEGIN TRANSACTION. *transaction_name* must conform to the rules for identifiers, but only the first 32 characters of the transaction name are used. When nesting transactions, *transaction_name* must be the name from the outermost BEGIN TRANSACTION statement. *transaction_name* is always case sensitive, even when the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is not case sensitive.  
+ Is the name assigned to the transaction on BEGIN TRANSACTION. *transaction_name* must conform to the rules for identifiers, but only the first 32 characters of the transaction name are used. When nesting transactions, *transaction_name* must be the name from the outermost BEGIN TRANSACTION statement. *transaction_name* is always case-sensitive, even when the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is not case-sensitive.  
   
  **@** *tran_name_variable*  
  Is the name of a user-defined variable containing a valid transaction name. The variable must be declared with a **char**, **varchar**, **nchar**, or **nvarchar** data type.  
@@ -67,7 +67,7 @@ ROLLBACK { TRAN | TRANSACTION }
   
  ROLLBACK TRANSACTION cannot reference a *savepoint_name* in distributed transactions started either explicitly with BEGIN DISTRIBUTED TRANSACTION or escalated from a local transaction.  
   
- A transaction cannot be rolled back after a COMMIT TRANSACTION statement is executed, except when the COMMIT TRANSACTION is associated with a nested transaction that is contained within the transaction being rolled back. In this instance, the nested transaction will also be rolled back, even if you have issued a COMMIT TRANSACTION for it.  
+ A transaction cannot be rolled back after a COMMIT TRANSACTION statement is executed, except when the COMMIT TRANSACTION is associated with a nested transaction that is contained within the transaction being rolled back. In this instance, the nested transaction will is rolled back, even if you have issued a COMMIT TRANSACTION for it.  
   
  Within a transaction, duplicate savepoint names are allowed, but a ROLLBACK TRANSACTION using the duplicate savepoint name rolls back only to the most recent SAVE TRANSACTION using that savepoint name.  
   
@@ -121,7 +121,7 @@ SELECT [value] FROM ValueTable;
   
 DROP TABLE ValueTable;  
 ```  
-[!INCLUDE[ssresults-md](../../includes/ssresults-md.md)]
+[!INCLUDE[ssresult-md](../../includes/ssresult-md.md)]
   
 |value |  
 |----- |  

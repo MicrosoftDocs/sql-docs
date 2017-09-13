@@ -41,11 +41,11 @@ manager: "jhubbard"
   
 ### Version Support
 
-#### SQL Server version
+#### SQL Server version support
 
 The CDC components for SSIS are supported on all supported versions of Microsoft SQL Server. Currently, this includes SQL Server 2012 through SQL Server 2017.
 
-#### Operating system support
+#### Operating system version support
   
 The CDC components for SSIS are supported on the following operating systems and platforms:  
   

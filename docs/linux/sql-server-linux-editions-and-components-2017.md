@@ -41,8 +41,8 @@ This topic provides details of features supported by the various editions of SQL
 Installation requirements vary based on your application needs. The different editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] accommodate the unique performance, runtime, and price requirements of organizations and individuals. The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] components that you install also depend on your specific requirements. The following sections help you understand how to make the best choice among the editions and components available in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
 
 For the latest release notes and what's new information, see the following:
-- [SQL Server on Linux release notes](..sql-server-linux-release-notes.md)
-- [What's new in SQL Server on Linux](../sql-server-linux-whats-new.md)
+- [SQL Server on Linux release notes](sql-server-linux-release-notes.md)
+- [What's new in SQL Server on Linux](sql-server-linux-whats-new.md)
 
 ### Try SQL Server!    
     
@@ -276,8 +276,8 @@ For info about the Integration Services (SSIS) features supported by the edition
 > [![Download SSMS](../analysis-services/media/download.png)](https://msdn.microsoft.com/library/mt238290.aspx) **[Download the latest version of SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx)**    
   
 ## Next steps 
- [SQL Server 2017 - Windows](editions-and-components-of-sql-server-2017.md).  
- [SQL Server 2016 - Windows](editions-and-components-of-sql-server-2016.md).  
+ [SQL Server 2017 - Windows](../sql-server/editions-and-components-of-sql-server-2017.md).  
+ [SQL Server 2016 - Windows](../sql-server/editions-and-components-of-sql-server-2016.md).  
  [SQL Server 2014 - Windows](http://msdn.microsoft.com/library/cc645993(v=sql.120).aspx).
  [Product Specifications for SQL Server](http://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)   
  [Installation for SQL Server](../database-engine/install-windows/installation-for-sql-server-2016.md)  

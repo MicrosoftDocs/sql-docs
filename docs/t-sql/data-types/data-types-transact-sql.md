@@ -1,7 +1,7 @@
 ---
 title: "Data types (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/23/2017"
+ms.date: "09/13/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -104,7 +104,8 @@ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], based on their sto
 |[cursor](../../t-sql/data-types/cursor-transact-sql.md)|[timestamp](../../t-sql/data-types/rowversion-transact-sql.md)|  
 |[hierarchyid](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)|[uniqueidentifier](../../t-sql/data-types/uniqueidentifier-transact-sql.md)|  
 |[sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md)|[xml](../../t-sql/xml/xml-transact-sql.md)|  
-|[table](../../t-sql/data-types/table-transact-sql.md)|[Spatial Types](http://msdn.microsoft.com/library/d1715574-34b1-4ce5-a29f-25e35027a54c)|  
+|[Spatial Geometry Types](../../t-sql/spatial-geometry/spatial-types-geometry-transact-sql.md) |[Spatial Geography Types](../../t-sql/spatial-geography/spatial-types-geography.md)|  
+|[table](../../t-sql/data-types/table-transact-sql.md) | |
   
 ## See also
 [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)  

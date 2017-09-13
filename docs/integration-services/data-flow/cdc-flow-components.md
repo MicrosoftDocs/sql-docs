@@ -37,36 +37,30 @@ manager: "jhubbard"
 ## Installation  
  This section describes the installation procedures for the CDC Components for Microsoft [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)].  
   
- The CDC Components for SSIS are packaged with the Microsoft® Change Data Capture Designer and Service for Oracle by Attunity for Microsoft SQL Server® 2016. This download is part of the SQL Server 2016 Feature Pack. Download components of the Feature Pack from the [SQL Server 2016 Feature Pack web page](http://go.microsoft.com/fwlink/?LinkId=746297).  
+ The CDC Components for SSIS are packaged with the Microsoft® Change Data Capture Designer and Service for Oracle by Attunity for Microsoft SQL Server®. This download is part of the SQL Server Feature Pack. Download components of the Feature Pack from the [SQL Server 2016 Feature Pack web page](http://go.microsoft.com/fwlink/?LinkId=746297).  
   
-### Version Support  
- The following Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] products are supported by the CDC components for SSIS:  
+### Version Support
+
+#### SQL Server version
+
+The CDC components for SSIS are supported on all supported versions of Microsoft SQL Server. Currently, this includes SQL Server 2012 through SQL Server 2017.
+
+#### Operating system support
   
--   Microsoft [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+The CDC components for SSIS are supported on the following operating systems and platforms:  
   
--   Microsoft [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] for Visual Studio 2015  
-  
- These versions are supported on the following operating systems and platforms:  
-  
--   Windows Vista with Service Pack 2  
-  
--   Windows 7  
-  
+-   Windows 8  and 8.1
 -   Windows 10  
-  
--   Windows Server 2008 with Service Pack 2  
-  
--   Windows Server 2008 R2  
-  
--   Windows Server 2012  
+-   Windows Server 2012 and 2012 R2
+-   Windows Server 2016
   
 ### Running the Installation Program  
  Before you run the installation wizard, be sure that the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] is closed. Then follow the directions in the installation wizard.  
   
-### Restart SSIS  
- After you install the CDC components, you must restart the SSIS service to be sure that that the components work correctly when developing packages in the SQL [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
+### Restart SSIS Service 
+After you install the CDC components, you must restart the SSIS service to be sure that that the components work correctly when developing packages in the SQL [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
   
- A message is displayed after you install the components. Click **Yes** when prompted.  
+A message is displayed after you install the components. Click **Yes** when prompted.  
   
 ### Uninstalling the Microsoft CDC Components  
  You uninstall the CDC source, CDC splitter, or CDC Control task, by using the uninstall wizard. Before you uninstall the components you must make sure of the following:  

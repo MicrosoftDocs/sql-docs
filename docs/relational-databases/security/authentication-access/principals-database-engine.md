@@ -77,6 +77,8 @@ Every login belongs to the `public` fixed server role, and every database user b
 -   \##MS_PolicyEventProcessingLogin##   
 -   \##MS_PolicySigningCertificate##   
 -   \##MS_PolicyTsqlExecutionLogin##   
+ 
+ These principal accounts do not have passwords that can be changed by administrators as they are based on certificates issued to Microsoft.
   
 ## The guest User  
  Each database includes a `guest`. Permissions granted to the `guest` user are inherited by users who have access to the database, but who do not have a user account in the database. The `guest` user cannot be dropped, but it can be disabled by revoking it's CONNECT permission. The CONNECT permission can be revoked by executing `REVOKE CONNECT FROM GUEST;` within any database other than `master` or `tempdb`.  

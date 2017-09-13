@@ -16,12 +16,12 @@ manager: "craigg"
 # Import Flat File to SQL Wizard
 > For content related to the Import and Export Wizard, see [SQL Server Import and Export Wizard](https://docs.microsoft.com/en-us/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard).
 
-Import Flat File Wizard is a simple way to copy data from a flat file (.csv, .txt) to a destination. This overview will describe the reasons for using this wizard, how to find this wizard, and a simple example to follow.
+Import Flat File Wizard is a simple way to copy data from a flat file (.csv, .txt) to a destination. This overview describes the reasons for using this wizard, how to find this wizard, and a simple example to follow.
 
 ## Why would I use this wizard?
-This wizard was created to improve the current import experience leveraging an intelligent framework known as Program Synthesis using Examples ([PROSE](https://microsoft.github.io/prose/)). For a user without specialized domain knowledge, importing data can often be a complex, error prone, and tedious task. This wizard will streamline the import process as simple as selecting an input file and unique table name, and the PROSE framework will handle the rest.
+This wizard was created to improve the current import experience leveraging an intelligent framework known as Program Synthesis using Examples ([PROSE](https://microsoft.github.io/prose/)). For a user without specialized domain knowledge, importing data can often be a complex, error prone, and tedious task. This wizard streamlines the import process as simple as selecting an input file and unique table name, and the PROSE framework handles the rest.
 
-PROSE analyzes data patterns in your input file to infer column names, types, delimiters, and more. This framework learns the structure of the file and does all of the hard work so our users don't have to. We will continue to add applications using this framework so please stay tuned.
+PROSE analyzes data patterns in your input file to infer column names, types, delimiters, and more. This framework learns the structure of the file and does all of the hard work so our users don't have to. We continue to add applications using this framework so please stay tuned.
  
 ## <a id="started"></a>Getting Started
 To access the Import Flat File Wizard, follow these steps:
@@ -32,10 +32,10 @@ To access the Import Flat File Wizard, follow these steps:
 
 ![Wizard menu](media/import-flat-file-wizard/importffmenu.png)
 
-To learn more about the different functions of the wizard, please follow the tutorial below.
+To learn more about the different functions of the wizard, please refer to the following tutorial.
 
 ## Tutorial
-For the purposes of this tutorial, feel free to use your own flat file. Otherwise, this tutorial will be using the following CSV from Excel which you are free to copy. If you use this CSV, please title it **example.csv** and make sure to save it as a csv in an easy location such as your desktop.
+For the purposes of this tutorial, feel free to use your own flat file. Otherwise, this tutorial is using the following CSV from Excel, which you are free to copy. If you use this CSV, please title it **example.csv** and make sure to save it as a csv in an easy location such as your desktop.
 
 ![Wizard Excel](media/import-flat-file-wizard/importffexample.png)
 
@@ -47,31 +47,31 @@ The first page of the wizard is the welcome page. If you do not want to see this
 ![Wizard Intro](media/import-flat-file-wizard/importffintro.png)
 
 ### Step 2: Specify Input File
-Click browse to select your input file. At default, the wizard will search for .csv and .txt files. 
+Click browse to select your input file. At default, the wizard searches for .csv and .txt files. 
 
-The new table name should be unique, and the wizard will not allow you to move further if not.
+The new table name should be unique, and the wizard does not allow you to move further if not.
 
 ![Wizard Specify](media/import-flat-file-wizard/importffspecify.png)
 
 ### Step 3: Preview Data
-The wizard will generate a preview that you can view for the first 50 rows. If there are any problems, click cancel, otherwise proceed to the next page.
+The wizard generates a preview that you can view for the first 50 rows. If there are any problems, click cancel, otherwise proceed to the next page.
 
 ![Wizard Preview](media/import-flat-file-wizard/importffpreview.png)
 
 ### Step 4: Modify Columns
-The wizard will identify what it believes are the correct column names, data types, etc. Here is where you can edit the fields if they are incorrect (i.e. data type should be a float instead of an int).
+The wizard identifies what it believes are the correct column names, data types, etc. Here is where you can edit the fields if they are incorrect (for example, data type should be a float instead of an int).
 
 Proceed when ready.
 
 ![Wizard Modify](media/import-flat-file-wizard/importffmodify.png)
 
 ### Step 5: Summary
-This is simply a summary page displaying your current configuration. If there are issues, you can go back to previous sections. Otherwise, clicking finish will attempt the import process.
+This is simply a summary page displaying your current configuration. If there are issues, you can go back to previous sections. Otherwise, clicking finish attempts the import process.
 
 ![Wizard Summary](media/import-flat-file-wizard/importffsummary.png)
 
 ### Step 6: Results
-This page will indicate whether the import was successful. If a green check mark appears, it was a success, otherwise you may need to review your configuration or input file for any errors.
+This page indicates whether the import was successful. If a green check mark appears, it was a success, otherwise you may need to review your configuration or input file for any errors.
 
 ![Wizard Results](media/import-flat-file-wizard/importffresults.png)
 

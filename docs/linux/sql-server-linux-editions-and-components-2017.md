@@ -66,14 +66,13 @@ For a list of SQL Server features not available on Linux, see [Unsupported featu
 
 You can install just the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] client components on a computer that is running client/server applications that connect directly to an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. A client components installation is also a good option if you administer an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on a database server, or if you plan to develop [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] applications.  
   
-## Deciding among [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] components  
-Use the Feature Selection page of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Installation Wizard to select the components to include in an installation of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. By default, none of the features in the tree are selected.  
-  
- Use the information in the following tables to determine the set of features that best fits your needs.  
+## [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] components  
+
+SQWL Server 2017 on Linux supports the SQL Server database engine. The following table describes the features in the database engine.   
   
 |Server components|Description|  
 |-----------------------|-----------------|  
-|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] includes the [!INCLUDE[ssDE](../includes/ssde-md.md)], the core service for storing, processing, and securing data, replication, full-text search, tools for managing relational and XML data, in database analytics integration, and Polybase integration for access to Hadoop and other heterogeneous data sources, and the [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) server.|  
+|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] includes the [!INCLUDE[ssDE](../includes/ssde-md.md)], the core service for storing, processing, and securing data, replication, full-text search, tools for managing relational and XML data, and in database analytics integration.|  
 
 **Developer and Evaluation Editions**  
 For features supported by Developer and Evaluation editions, see features listed for the SQL Server Enterprise Edition in the tables below.
@@ -99,14 +98,13 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
   
 |Feature|Enterprise|Standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|Server core support <sup>1</sup>|Yes|Yes|Yes|Yes|Yes|  
 |Log shipping|Yes|Yes|Yes|No|No|  
 |Database mirroring|Yes|Yes<br /><br /> Full safety only|Witness only|Witness only|Witness only| 
 |Backup compression|Yes|Yes|No|No|No| 
 |Database snapshot|Yes|Yes|Yes|Yes|Yes|
 |Always On failover cluster instances|Yes<br /><br /> Number of nodes is the operating system maximum|Yes<br /><br /> Support for 2 nodes|No|No|No|  
 |Always On availability groups|Yes<br /><br /> Up to 8 secondary replicas, including 2 synchronous secondary replicas|No|No|No|No|
-|Basic availability groups <sup>2</sup>|No|Yes<br /><br /> Support for 2 nodes|No|No|No|
+|Basic availability groups <sup>1</sup>|No|Yes<br /><br /> Support for 2 nodes|No|No|No|
 |Online page and file restore|Yes|No|No|No|No|
 |Online indexing|Yes|No|No|No|No|
 |Resumable online index rebuilds|Yes|No|No|No|No|
@@ -120,9 +118,7 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |Clusterless availability group|Yes|Yes|Yes|No|No|No|
 |Minimum replica commit availability group|Yes|Yes|Yes|No|No|No|
   
- <sup>1</sup> For more information on installing SQL Server on Server Core,  see [Install SQL Server on Server Core](../database-engine/install-windows/install-sql-server-on-server-core.md). 
-
-<sup>2</sup> For more information about Basic availability groups, see [Basic Availability Groups](../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md).  
+<sup>1</sup> For more information about Basic availability groups, see [Basic Availability Groups](../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md).  
 
 ##  <a name="RDBMSSP"></a> RDBMS scalability and performance  
   
@@ -132,7 +128,6 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |Large object binaries in clustered columnstore indexes|Yes|Yes|Yes|Yes|Yes|  
 |Online non-clustered columnstore index rebuild|Yes|No|No|No|No|
 |In-Memory OLTP <sup>1</sup>|Yes|Yes|Yes|Yes|Yes|
-|Stretch Database|Yes|Yes|Yes|Yes|Yes|
 |Persistent Main Memory|Yes|Yes|Yes|Yes|Yes|
 |Multi-instance support|50|50|50|50|50|
 |Table and index partitioning|Yes|Yes|Yes|Yes|Yes|  
@@ -141,7 +136,6 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |Partitioned Table Parallelism|Yes|No|No|No|No|
 |Multiple Filestream containers|Yes|Yes|Yes|Yes|Yes|
 |NUMA Aware and Large Page Memory and Buffer Array Allocation|Yes|No|No|No|No|
-|Buffer Pool Extension|Yes|Yes|No|No|No|
 |IO Resource Governance|Yes|No|No|No|No|  
 |Delayed Durability|Yes|Yes|Yes|Yes|Yes|
 |Automatic Tuning|Yes|No|No|No|No|
@@ -171,14 +165,11 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
   
 |Feature|Enterprise|Standard|Web|Express with Advanced Services|Express|   
 |-------------|----------------|--------------|---------|------------------------------------|------------------------| 
-|Merge replication|Yes|Yes|Yes (Subscriber only)|Yes (Subscriber only)|Yes (Subscriber only)|   
 |Peer to peer transactional replication|Yes|No|No|No|No|   
 |Snapshot replication|Yes|Yes|Yes (Subscriber only)|Yes (Subscriber only)|Yes (Subscriber only)|   
 |SQL Server change tracking|Yes|Yes|Yes|Yes|Yes| 
-|Transactional replication|Yes|Yes|Yes (Subscriber only)|Yes (Subscriber only)|Yes (Subscriber only)|   
-|Transactional replication to Azure|Yes|Yes|No|No|No|   
-|Transactional replication updateable subscription|Yes|No|No|No|No|  
-  
+
+
 ##  <a name="SSMS"></a> Management tools  
   
 |Feature|Enterprise|Standard|Web|Express with Advanced Services|Express| 
@@ -215,7 +206,6 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |Automatic use of indexed view by query optimizer|Yes|No|No|No|No| 
 |Parallel consistency check|Yes|No|No|No|No| 
 |SQL Server Utility Control Point|Yes|No|No|No|No|    
-|Buffer pool extension|Yes|Yes|No|No|No| 
 
 ##  <a name="Programmability"></a> Programmability  
   
@@ -226,17 +216,13 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |Basic Python integration|Yes|Yes|Yes|Yes|No|
 |Advanced Python integration|Yes|No|No|No|No| 
 |Machine Learning Server (Standalone)|Yes|No|No|No|No|   
-|Polybase compute node|Yes|Yes <sup>1</sup>|Yes <sup>1</sup>, <sup>2</sup>|Yes <sup>1</sup>,|Yes <sup>1</sup>, | 
-|Polybase head node|Yes|No|No|No|No| 
 |JSON|Yes|Yes|Yes|Yes|Yes|   
 |Query Store|Yes|Yes|Yes|Yes|Yes|   
 |Temporal|Yes|Yes|Yes|Yes|Yes|   
-|Common Language Runtime (CLR) Integration|Yes|Yes|Yes|Yes|Yes|   
 |Native XML support|Yes|Yes|Yes|Yes|Yes| 
 |XML indexing|Yes|Yes|Yes|Yes|Yes| 
 |MERGE & UPSERT capabilities|Yes|Yes|Yes|Yes|Yes|   
 |FILESTREAM support|Yes|Yes|Yes|Yes|Yes| 
-|FileTable|Yes|Yes|Yes|Yes|Yes| 
 |Date and Time datatypes|Yes|Yes|Yes|Yes|Yes|  
 |Internationalization support|Yes|Yes|Yes|Yes|Yes| 
 |Full-text and semantic search|Yes|Yes|Yes|Yes|No| 
@@ -260,22 +246,7 @@ For info about the Integration Services (SSIS) features supported by the edition
 |Planar and geodetic datatypes|Yes|Yes|Yes|Yes|Yes| 
 |Advanced spatial libraries|Yes|Yes|Yes|Yes|Yes|   
 |Import/export of industry-standard spatial data formats|Yes|Yes|Yes|Yes|Yes|   
-  
-##  <a name="ADS"></a> Additional database services  
-  
-|Feature Name|Enterprise|Standard|Web|Express with Advanced Services|Express|   
-|------------------|----------------|--------------|---------|------------------------------------|------------------------| 
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Migration Assistant|Yes|Yes|Yes|Yes|Yes|   
-|Database mail|Yes|Yes|Yes|No|No| 
-  
-##  <a name="Other"></a> Other components  
-  
-|Feature Name|Enterprise|Standard|Web|Express with Advanced Services|Express|   
-|------------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|StreamInsight|StreamInsight Premium Edition|StreamInsight Standard Edition|StreamInsight Standard Edition|No|No| 
-|StreamInsight HA|StreamInsight Premium Edition|No|No|No|No|   
-  
-> [![Download SSMS](../analysis-services/media/download.png)](https://msdn.microsoft.com/library/mt238290.aspx) **[Download the latest version of SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx)**    
+
   
 ## Next steps 
  [SQL Server 2017 - Windows](../sql-server/editions-and-components-of-sql-server-2017.md).  

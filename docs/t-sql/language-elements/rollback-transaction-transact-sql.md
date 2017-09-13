@@ -121,12 +121,13 @@ SELECT [value] FROM ValueTable;
   
 DROP TABLE ValueTable;  
 ```  
-[!INCLUDE[ssresult-md](../../includes/ssresult-md.md)]
-  
-|value |  
-|----- |  
-|3 |  
-|4 |  
+[!INCLUDE[ssresult-md](../../includes/ssresult-md.md)]  
+```  
+value  
+-----   
+3    
+4  
+```  
   
   
 ## See Also  

@@ -2,7 +2,7 @@
 title: "Homepage for SQL client programming | Microsoft Docs"
 description: "Hub page with annotated links to downloads and documentation for numerous combinations of languages and operating systems, for connecting to SQL Server or to Azure SQL Database."
 author: "MightyPen"
-ms.date: "08/14/2017"
+ms.date: "09/13/2017"
 ms.prod: "sql-non-specified"
 ms.technology: 
   - "drivers"
@@ -112,7 +112,7 @@ The [start page for Entity Framework](http://docs.microsoft.com/ef/) introduces 
 |     |     |
 | :-- | :-- |
 | [EF 6.x](http://docs.microsoft.com/ef/ef6/) | Microsoft first released EF in August 2008. In March 2015 Microsoft announced that EF 6.x was the final version that Microsoft would develop. Microsoft released the source code into the public domain.<br /><br />Initially EF was part of .NET Framework. But EF 6.x was removed from .NET Framework.<br /><br />[EF 6.x source code on Github, in repository *aspnet/EntityFramework6*](http://github.com/aspnet/EntityFramework6) |
-| [EF Core](http://docs.microsoft.com/ef/core/) | Microsoft released the newly developed EF Core in June 2016. EF Core is designed for better flexibility and portability. EF Core can run on operating systems beyond just Microsoft Windows. And EF Core can interact with databases beyond just Microsoft SQL Server and other relational databases. |
+| [EF Core](http://docs.microsoft.com/ef/core/) | Microsoft released the newly developed EF Core in June 2016. EF Core is designed for better flexibility and portability. EF Core can run on operating systems beyond just Microsoft Windows. And EF Core can interact with databases beyond just Microsoft SQL Server and other relational databases.<br /><br />**C&#x23; code examples:**<br />[Getting Started with Entity Framework Core](https://docs.microsoft.com/ef/core/get-started/index)<br />[Getting started with EF Core on .NET Framework with an Existing Database](https://docs.microsoft.com/ef/core/get-started/full-dotnet/existing-db) |
 | &nbsp; | <br /> |
 
 EF and related technologies are powerful, and are a lot to learn for the developer who wants to master the entire area.

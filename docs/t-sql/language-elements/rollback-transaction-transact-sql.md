@@ -1,7 +1,7 @@
 ---
 title: "ROLLBACK TRANSACTION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/10/2016"
+ms.date: "09/12/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -40,7 +40,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
-  
 ROLLBACK { TRAN | TRANSACTION }   
      [ transaction_name | @tran_name_variable  
      | savepoint_name | @savepoint_variable ]   
@@ -83,11 +82,11 @@ ROLLBACK { TRAN | TRANSACTION }
   
 -   The statements in the batch after the statement that fired the trigger are not executed.  
   
- @@TRANCOUNT is incremented by one when entering a trigger, even when in autocommit mode. (The system treats a trigger as an implied nested transaction.)  
+@@TRANCOUNT is incremented by one when entering a trigger, even when in autocommit mode. (The system treats a trigger as an implied nested transaction.)  
   
- ROLLBACK TRANSACTION statements in stored procedures do not affect subsequent statements in the batch that called the procedure; subsequent statements in the batch are executed. ROLLBACK TRANSACTION statements in triggers terminate the batch containing the statement that fired the trigger; subsequent statements in the batch are not executed.  
+ROLLBACK TRANSACTION statements in stored procedures do not affect subsequent statements in the batch that called the procedure; subsequent statements in the batch are executed. ROLLBACK TRANSACTION statements in triggers terminate the batch containing the statement that fired the trigger; subsequent statements in the batch are not executed.  
   
- The effect of a ROLLBACK on cursors is defined by these three rules:  
+The effect of a ROLLBACK on cursors is defined by these three rules:  
   
 1.  With CURSOR_CLOSE_ON_COMMIT set ON, ROLLBACK closes, but does not deallocate all open cursors.  
   
@@ -102,21 +101,15 @@ ROLLBACK { TRAN | TRANSACTION }
  Requires membership in the **public** role.  
   
 ## Examples  
- The following example shows the effect of rolling back a named transaction.  
+ The following example shows the effect of rolling back a named transaction. After creating a table, the following statements start a named transaction, insert two rows, and then roll back the transaction named in the variable @TransactionName. Another statement outside of the named transaction inserts two rows. The query returns the results of the previous statements.   
   
-```  
+```sql    
 USE tempdb;  
 GO  
-CREATE TABLE ValueTable ([value] int;)  
+CREATE TABLE ValueTable ([value] int);  
 GO  
   
 DECLARE @TransactionName varchar(20) = 'Transaction1';  
-  
---The following statements start a named transaction,  
---insert two rows, and then roll back  
---the transaction named in the variable @TransactionName.  
---Another statement outside of the named transaction inserts two rows.  
---The query returns the results of the previous statements.  
   
 BEGIN TRAN @TransactionName  
        INSERT INTO ValueTable VALUES(1), (2);  
@@ -127,13 +120,14 @@ INSERT INTO ValueTable VALUES(3),(4);
 SELECT [value] FROM ValueTable;  
   
 DROP TABLE ValueTable;  
-  
---Results  
---value  
--------------  
---3  
---4  
 ```  
+[!INCLUDE[ssresults-md](../../includes/ssresults-md.md)]
+  
+|value |  
+|----- |  
+|3 |  
+|4 |  
+  
   
 ## See Also  
  [BEGIN DISTRIBUTED TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-distributed-transaction-transact-sql.md)   

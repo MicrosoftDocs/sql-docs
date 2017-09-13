@@ -223,7 +223,6 @@ manager: "jhubbard"
  - When exporting data into an ORC File Format from SQL Server or Azure SQL Data Warehouse text heavy columns can be limited to as few as 50 columns due to java out of memory errors. To work around this, export only a subset of the columns.
  - Cannot Read or Write data encrypted at rest in Hadoop. This includes HDFS Encrypted Zones or Transparent Encryption.
  - PolyBase cannot connect to a Hortonworks instance if KNOX is enabled. 
- - PolyBase cannot connect to Hadoop instance if hadoop.RPC.Protection setting is set to anything other than "authenticate".
 
 [PolyBase doesn't install when you add a node to a SQL Server 2016 Failover Cluster](https://support.microsoft.com/en-us/help/3173087/fix-polybase-feature-doesn-t-install-when-you-add-a-node-to-a-sql-server-2016-failover-cluster)
 

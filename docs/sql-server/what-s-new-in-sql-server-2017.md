@@ -111,6 +111,7 @@ SQL Server developers now have access to the extensive Python ML and AI librarie
 - **Package management** - T-SQL now supports the CREATE EXTERNAL LIBRARY statement, to give DBAs greater management over R packages. Use roles to control prviate or shared package access, store R packages in the database and share them among users.
 - **Performance improvements** - The stored procedure `sp_execute_external_script` has been optimized to support batch mode execution for columnstore data.
 
+
 For more information, see [What's new in SQL Server Machine Learning Services](~/advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md).
 
 ## Next steps

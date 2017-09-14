@@ -20,6 +20,8 @@ The following guidelines contain recommendations for configuring both SQL Server
 
 It is recommended to perform the following configuration tasks after you install SQL Server on Linux to achieve best performance for your application.
 
+### Best practices
+
 - **Use PROCESS AFFINITY for Node and/or CPUs**
 
    It is recommended to use `ALTER SERVER CONFIGURATION` to set `PROCESS AFFINITY` for all the **NUMANODEs** and/or CPUs you are using for SQL Server (which is typically for all NODEs and CPUs) on a Linux Operating System. Using the **NUMANODE** option is the simplest method. Note, you should use **PROCESS AFFINITY** even if you have only a single NUMA Node on your computer.  See the [ALTER SERVER CONFIGURATION](../t-sql/statements/alter-server-configuration-transact-sql.md) documentation for more details on how to set **PROCESS AFFINITY**.
@@ -49,7 +51,7 @@ These are the recommended Linux Operating System settings related to high perfor
 > [!Note]
 > For Red Hat Enterprise Linux (RHEL) users, the throughput-performance profile will configure these settings automatically.
 
-**CPU Settings**
+The following table provides recommendations for CPU settings:
 
 | Setting | Value | More information |
 |---|---|---|
@@ -57,7 +59,7 @@ These are the recommended Linux Operating System settings related to high perfor
 | ENERGY_PERF_BIAS | performance | See the **x86_energy_perf_policy** command |
 | min_perf_pct | 100 | See your documentation on intel p-state |
 
-**Disk Settings**
+The following table provides recommendations for disk settings:
 
 | Setting | Value | More information |
 |---|---|---|
@@ -66,11 +68,7 @@ These are the recommended Linux Operating System settings related to high perfor
 
 ### Kernel setting auto numa balancing for multi-node NUMA systems
 
-If you install SQL Server on a multi-node **NUMA** systems, the following kernel setting will be enabled by default
-
-**kernel.numa_balancing**
-
-In order to allow SQL Server to operate at maximum efficiency on a **NUMA** system, disable auto numa balancing on a multi-node NUMA system:
+If you install SQL Server on a multi-node **NUMA** systems, the following **kernel.numa_balancing** kernel setting is enabled by default. To allow SQL Server to operate at maximum efficiency on a **NUMA** system, disable auto numa balancing on a multi-node NUMA system:
 
 ```bash
 sysctl -w kernel.numa_balancing=0

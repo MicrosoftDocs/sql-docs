@@ -112,7 +112,7 @@ The following built-in Integration Services components are supported and work as
 - Unpivot
 
 ### Components that are supported with limitations
-The following built-in Integration Services components are supported on Linux, but have the limitations described in the following tables.
+The following built-in Integration Services components are supported on Linux, but have the limitations described in the following tables:
 
 #### Control flow tasks
 | Task | Limitations |
@@ -133,7 +133,7 @@ The following built-in Integration Services components are supported on Linux, b
 | ODBC source and destination | Supports 64-bit Unicode ODBC drivers on Linux. Depends on the UnixODBC driver manager on Linux. |
 | OLE DB source and destination | Only support SQL Server Native Client 11.0 and Microsoft OLE DB Provider for SQL Server. |
 | OLE DB Command transformation | Same limitations as the OLE DB source and destination. |
-| Script component | Only supports standard .NET Framrework APIs. |
+| Script component | Only supports standard .NET Framework APIs. |
 | | |
 
 ## More about SSIS on Linux

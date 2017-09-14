@@ -70,7 +70,7 @@
 ### [Encrypting Connections](sql-server-linux-encrypted-connections.md)
 ### [Active Directory Authentication](sql-server-linux-active-directory-authentication.md)
 
-## [Performance]
+## Performance
 ### [Best practices](sql-server-linux-performance-best-practices.md)
 ### [Get started with performance features](sql-server-linux-performance-get-started.md)
 

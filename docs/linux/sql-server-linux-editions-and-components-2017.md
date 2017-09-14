@@ -80,119 +80,117 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
   
 ##  <a name="Cross-BoxScaleLimits"></a> Scale limits  
   
-|Feature|Enterprise|Standard|Web|Express with Advanced Services|Express| 
-|-------------|----------------|--------------|---------|------------------------------------|------------------------|
-|Maximum compute capacity used by a single instance - [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]<sup>1</sup>|Operating system maximum|Limited to lesser of 4 sockets or 24 cores|Limited to lesser of 4 sockets or 16 cores|Limited to lesser of 1 socket or 4 cores|Limited to lesser of 1 socket or 4 cores| 
-|Maximum compute capacity used by a single instance - [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] or [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|Operating system maximum|Limited to lesser of 4 sockets or 24 cores|Limited to lesser of 4 sockets or 16 cores|Limited to lesser of 1 socket or 4 cores|Limited to lesser of 1 socket or 4 cores|  
-|Maximum memory for buffer pool per instance of [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Operating System Maximum|128 GB|64 GB|1410 MB|1410 MB|
-|Maximum memory for Columnstore segment cache per instance of [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Unlimited memory| 32 GB| 16 GB| 352 MB| 352 MB|  
-|Maximum memory-optimized data size per database in [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Unlimited memory| 32 GB| 16 GB| 352 MB| 352 MB|  
-|Maximum memory utilized per instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]|Operating System Maximum|Tabular: 16 GB<br /><br /> MOLAP: 64 GB|N/A|N/A|N/A|  
-|Maximum memory utilized per instance of [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|Operating System Maximum|64 GB|64 GB|4 GB|N/A|
-|Maximum relational database size|524 PB|524 PB|524 PB|10 GB|10 GB|  
+|Feature|Enterprise|Standard|Web|Express| 
+|-------------|----------------|--------------|---------|------------------------|
+|Maximum compute capacity used by a single instance - [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]<sup>1</sup>|Operating system maximum|Limited to lesser of 4 sockets or 24 cores|Limited to lesser of 4 sockets or 16 cores|Limited to lesser of 1 socket or 4 cores| 
+|Maximum compute capacity used by a single instance - [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] or [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|Operating system maximum|Limited to lesser of 4 sockets or 24 cores|Limited to lesser of 4 sockets or 16 cores|Limited to lesser of 1 socket or 4 cores|
+|Maximum memory for buffer pool per instance of [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Operating System Maximum|128 GB|64 GB|1410 MB|
+|Maximum memory for Columnstore segment cache per instance of [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Unlimited memory| 32 GB| 16 GB| 352 MB|  
+|Maximum memory-optimized data size per database in [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Unlimited memory| 32 GB| 16 GB| 352 MB|
+|Maximum relational database size|524 PB|524 PB|524 PB|10 GB|  
   
 <sup>1</sup> Enterprise Edition with Server + Client Access License (CAL) based licensing (not available for new agreements) is limited to a maximum of 20 cores per SQL Server instance. There are no limits under the Core-based Server Licensing model. For more information, see [Compute Capacity Limits by Edition of SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
  
 ##  <a name="RDBMSHA"></a> RDBMS high availability  
   
-|Feature|Enterprise|Standard|Web|Express with Advanced Services|Express|  
-|-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|Log shipping|Yes|Yes|Yes|No|No|  
-|Backup compression|Yes|Yes|No|No|No| 
-|Database snapshot|Yes|No|No|No|No|
-|Always On failover cluster instance|Yes<br /><br /> Number of nodes is the operating system maximum|Yes<br /><br /> Support for 2 nodes|No|No|No|  
-|Always On availability groups|Yes<br /><br /> Up to 8 secondary replicas, including 2 synchronous secondary replicas|No|No|No|No|
-|Basic availability groups <sup>1</sup>|No|Yes<br /><br /> Support for 2 nodes|No|No|No|
-|Minimum replica commit availability group|Yes|Yes|No|No|No|No|
-|Clusterless availability group|Yes|Yes|No|No|No|No|
-|Online page and file restore|Yes|No|No|No|No|
-|Online indexing|Yes|No|No|No|No|
-|Resumable online index rebuilds|Yes|No|No|No|No|
-|Online schema change|Yes|No|No|No|No|
-|Fast recovery|Yes|No|No|No|No|
-|Mirrored backups|Yes|No|No|No|No|
-|Hot add memory and CPU|Yes|No|No|No|No|
-|Encrypted backup|Yes|Yes|No|No|No|
-|Hybrid backup to Windows Azure (backup to URL)|Yes|Yes|No|No|No|
+|Feature|Enterprise|Standard|Web|Express|  
+|-------------|----------------|--------------|---------|------------------------|  
+|Log shipping|Yes|Yes|Yes|No|  
+|Backup compression|Yes|Yes|No|No| 
+|Database snapshot|Yes|No|No|No|
+|Always On failover cluster instance|Yes<br /><br /> Number of nodes is the operating system maximum|Yes<br /><br /> Support for 2 nodes|No|No| 
+|Always On availability groups|Yes<br /><br /> Up to 8 secondary replicas, including 2 synchronous secondary replicas|No|No|No|
+|Basic availability groups <sup>1</sup>|No|Yes<br /><br /> Support for 2 nodes|No|No|
+|Minimum replica commit availability group|Yes|Yes|No|No|
+|Clusterless availability group|Yes|Yes|No|No|
+|Online page and file restore|Yes|No|No|No|
+|Online indexing|Yes|No|No|No|
+|Resumable online index rebuilds|Yes|No|No|No|
+|Online schema change|Yes|No|No|No|
+|Fast recovery|Yes|No|No|No|
+|Mirrored backups|Yes|No|No|No|
+|Hot add memory and CPU|Yes|No|No|No|
+|Encrypted backup|Yes|Yes|No|No|
+|Hybrid backup to Windows Azure (backup to URL)|Yes|Yes|No|No|
   
 <sup>1</sup> For more information about Basic availability groups, see [Basic Availability Groups](../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md).  
 
 ##  <a name="RDBMSSP"></a> RDBMS scalability and performance  
   
-|Feature|Enterprise|Standard|Web|Express with Advanced Services|Express|  
-|-------------|----------------|--------------|---------|------------------------------------|------------------------| 
-|Columnstore <sup>1</sup>|Yes|Yes|Yes|Yes|Yes|  
-|Large object binaries in clustered columnstore indexes|Yes|Yes|Yes|Yes|Yes|  
-|Online non-clustered columnstore index rebuild|Yes|No|No|No|No|
-|In-Memory OLTP <sup>1</sup>|Yes|Yes|Yes|Yes|Yes|
-|Persistent Main Memory|Yes|Yes|Yes|Yes|Yes|
-|Table and index partitioning|Yes|Yes|Yes|Yes|Yes|  
-|Data compression|Yes|Yes|Yes|Yes|Yes|
-|Resource Governor|Yes|No|No|No|No|  
-|Partitioned Table Parallelism|Yes|No|No|No|No|
-|Multiple Filestream containers|Yes|Yes|Yes|Yes|Yes|
-|NUMA Aware and Large Page Memory and Buffer Array Allocation|Yes|No|No|No|No|
-|IO Resource Governance|Yes|No|No|No|No|  
-|Delayed Durability|Yes|Yes|Yes|Yes|Yes|
-|Automatic Tuning|Yes|No|No|No|No|
-|Batch Mode Adaptive Joins|Yes|No|No|No|No|
-|Batch Mode Memory Grant Feedback|Yes|No|No|No|No|
-|Interleaved Execution for Multi-Statement Table Valued Functions|Yes|Yes|Yes|Yes|Yes|
-|Bulk insert improvements|Yes|Yes|Yes|Yes|Yes|
+|Feature|Enterprise|Standard|Web|Express|  
+|-------------|----------------|--------------|---------|------------------------| 
+|Columnstore <sup>1</sup>|Yes|Yes|Yes|Yes|  
+|Large object binaries in clustered columnstore indexes|Yes|Yes|Yes|Yes|  
+|Online non-clustered columnstore index rebuild|Yes|No|No|No|
+|In-Memory OLTP <sup>1</sup>|Yes|Yes|Yes|Yes|
+|Persistent Main Memory|Yes|Yes|Yes|Yes|
+|Table and index partitioning|Yes|Yes|Yes|Yes|  
+|Data compression|Yes|Yes|Yes|Yes|
+|Resource Governor|Yes|No|No|No|  
+|Partitioned Table Parallelism|Yes|No|No|No|
+|Multiple Filestream containers|Yes|Yes|Yes|Yes|
+|NUMA Aware and Large Page Memory and Buffer Array Allocation|Yes|No|No|No|
+|IO Resource Governance|Yes|No|No|No|  
+|Delayed Durability|Yes|Yes|Yes|Yes|
+|Automatic Tuning|Yes|No|No|No|
+|Batch Mode Adaptive Joins|Yes|No|No|No|
+|Batch Mode Memory Grant Feedback|Yes|No|No|No|
+|Interleaved Execution for Multi-Statement Table Valued Functions|Yes|Yes|Yes|Yes|
+|Bulk insert improvements|Yes|Yes|Yes|Yes|
 
 
 <sup>1</sup> In-Memory OLTP data size and Columnstore segment cache are limited to the amount of memory specified by edition in the Scale Limits section. The max degrees of parallelism is limited. The degrees of process parallelism (DOP) for an index build is limited to 2 DOP for the Standard Edition and 1 DOP for the Web and Express Editions. This refers to columnstore indexes created over disk-based tables and memory-optimized tables.
 
 ##  <a name="RDBMSS"></a> RDBMS security  
   
-|Feature|Enterprise|Standard|Web|Express|Express with Advanced Services|  
-|-------------|----------------|--------------|---------|-------------|------------------------------------| 
-|Row-level security|Yes|Yes|Yes|Yes|Yes|  
-|Always Encrypted|Yes|Yes|Yes|Yes|Yes| 
-|Dynamic data masking|Yes|Yes|Yes|Yes|Yes|   
-|Basic auditing|Yes|Yes|Yes|Yes|Yes| 
-|Fine grained auditing|Yes|Yes|Yes|Yes|Yes| 
-|Transparent database encryption|Yes|No|No|No|No|   
-|User-defined roles|Yes|Yes|Yes|Yes|Yes| 
-|Contained databases|Yes|Yes|Yes|Yes|Yes| 
-|Encryption for backups|Yes|Yes|No|No|No|  
+|Feature|Enterprise|Standard|Web|Express|
+|-------------|----------------|--------------|---------|------------------------------------| 
+|Row-level security|Yes|Yes|Yes|Yes|  
+|Always Encrypted|Yes|Yes|Yes|Yes| 
+|Dynamic data masking|Yes|Yes|Yes|Yes|   
+|Basic auditing|Yes|Yes|Yes|Yes| 
+|Fine grained auditing|Yes|Yes|Yes|Yes| 
+|Transparent database encryption|Yes|No|No|No|   
+|User-defined roles|Yes|Yes|Yes|Yes| 
+|Contained databases|Yes|Yes|Yes|Yes| 
+|Encryption for backups|Yes|Yes|No|No|  
 
 ##  <a name="RDBMSM"></a> RDBMS manageability  
   
-|Feature|Enterprise|Standard|Web|Express with Advanced Services|Express|   
-|-------------|----------------|--------------|---------|------------------------------------|------------------------|  
+|Feature|Enterprise|Standard|Web|Express|   
+|-------------|----------------|--------------|---------|------------------------|  
 |Dedicated admin connection|Yes|Yes|Yes|Yes with trace flag|Yes with trace flag|   
-|PowerShell scripting support|Yes|Yes|Yes|Yes|Yes| 
-|Support for data-tier application component operations - extract, deploy, upgrade, delete|Yes|Yes|Yes|Yes|Yes| 
+|PowerShell scripting support|Yes|Yes|Yes|Yes| 
+|Support for data-tier application component operations - extract, deploy, upgrade, delete|Yes|Yes|Yes|Yes| 
 |Policy automation (check on schedule and change)|Yes|Yes|Yes|No|No|   
 |Performance data collector|Yes|Yes|Yes|No|No| 
 |Standard performance reports|Yes|Yes|Yes|No|No| 
 |Plan guides and plan freezing for plan guides|Yes|Yes|Yes|No|No|   
-|Direct query of indexed views (using NOEXPAND hint)|Yes|Yes|Yes|Yes|Yes| 
+|Direct query of indexed views (using NOEXPAND hint)|Yes|Yes|Yes|Yes| 
 |Automatic indexed views maintenance|Yes|Yes|Yes|No|No| 
-|Distributed partitioned views|Yes|No|No|No|No| 
-|Parallel indexed operations|Yes|No|No|No|No|  
-|Automatic use of indexed view by query optimizer|Yes|No|No|No|No| 
-|Parallel consistency check|Yes|No|No|No|No| 
-|SQL Server Utility Control Point|Yes|No|No|No|No|    
+|Distributed partitioned views|Yes|No|No|No| 
+|Parallel indexed operations|Yes|No|No|No|  
+|Automatic use of indexed view by query optimizer|Yes|No|No|No| 
+|Parallel consistency check|Yes|No|No|No| 
+|SQL Server Utility Control Point|Yes|No|No|No|    
 
 ##  <a name="Programmability"></a> Programmability  
   
-|Feature|Enterprise|Standard|Web|Express with Advanced Services|Express 
-|-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|JSON|Yes|Yes|Yes|Yes|Yes|   
-|Query Store|Yes|Yes|Yes|Yes|Yes|   
-|Temporal|Yes|Yes|Yes|Yes|Yes|   
-|Native XML support|Yes|Yes|Yes|Yes|Yes| 
-|XML indexing|Yes|Yes|Yes|Yes|Yes| 
-|MERGE & UPSERT capabilities|Yes|Yes|Yes|Yes|Yes|   
-|Date and Time datatypes|Yes|Yes|Yes|Yes|Yes|  
-|Internationalization support|Yes|Yes|Yes|Yes|Yes| 
+|Feature|Enterprise|Standard|Web|Express 
+|-------------|----------------|--------------|---------|------------------------|  
+|JSON|Yes|Yes|Yes|Yes|   
+|Query Store|Yes|Yes|Yes|Yes|   
+|Temporal|Yes|Yes|Yes|Yes|   
+|Native XML support|Yes|Yes|Yes|Yes| 
+|XML indexing|Yes|Yes|Yes|Yes| 
+|MERGE & UPSERT capabilities|Yes|Yes|Yes|Yes|   
+|Date and Time datatypes|Yes|Yes|Yes|Yes|  
+|Internationalization support|Yes|Yes|Yes|Yes| 
 |Full-text and semantic search|Yes|Yes|Yes|Yes|No| 
 |Specification of language in query|Yes|Yes|Yes|Yes|No|   
 |Service Broker (messaging)|Yes|Yes|No (Client only)|No (Client only)|No (Client only)|   
 |Transact-SQL endpoints|Yes|Yes|Yes|No|No| 
-|Graph|Yes|Yes|Yes|Yes|Yes|  
+|Graph|Yes|Yes|Yes|Yes|  
 
 
 <sup>1</sup> Scale out with multiple compute nodes requires a head node.
@@ -203,12 +201,12 @@ For info about the Integration Services (SSIS) features supported by the edition
 
 ##  <a name="SLS"></a> Spatial and location services  
   
-|Feature Name|Enterprise|Standard|Web|Express with Advanced Services|Express|  
+|Feature Name|Enterprise|Standard|Web|Express|  
 |------------------|----------------|--------------|---------|------------------------------------|------------------------|
-|Spatial indexes|Yes|Yes|Yes|Yes|Yes|   
-|Planar and geodetic datatypes|Yes|Yes|Yes|Yes|Yes| 
-|Advanced spatial libraries|Yes|Yes|Yes|Yes|Yes|   
-|Import/export of industry-standard spatial data formats|Yes|Yes|Yes|Yes|Yes|   
+|Spatial indexes|Yes|Yes|Yes|Yes|   
+|Planar and geodetic datatypes|Yes|Yes|Yes|Yes| 
+|Advanced spatial libraries|Yes|Yes|Yes|Yes|   
+|Import/export of industry-standard spatial data formats|Yes|Yes|Yes|Yes|   
 
   
 ## Next steps 

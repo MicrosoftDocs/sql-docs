@@ -49,7 +49,7 @@ Standard and Enterprise Edition have some different limits. Availability groups 
 * The ability to run DBCC CHECKDB on the secondary replica
 * Support for distributed availability groups, described later in this paper
 
-The ability to scale out readable copies of a database while also providing availability is a key benefit of Enterprise Edition that is further enhanced in SQL Server 2017 and will be described later in this paper in the section “Read Scale Out”.  The listener can also provide access to the readable copies of the data providing one point of entry no matter what kind of workload is being run.
+The ability to scale out readable copies of a database while also providing availability is a key benefit of Enterprise Edition that is further enhanced in SQL Server 2017 and as described later in this paper in the section [Read Scale Out](#read-scale-out).  The listener can also provide access to the readable copies of the data providing one point of entry no matter what kind of workload is being run.
 
 When it comes to availability, availability groups can provide either automatic or manual failover. Automatic failover can occur if synchronous data movement is configured and the database on the primary and secondary replica are in a synchronized state. As long as the listener is used and the application uses a later version of .NET  (3.5 with an update, or 4.0 and above), the failover should be handled with minimal to no impact to end users if a listener is utilized. Failover to make a secondary replica the new primary replica can be configured to be automatic or manual, and generally is measured in seconds.
 
@@ -213,7 +213,7 @@ If an availability group is configured with a cluster type of None, it can span 
 
 Since log shipping is just based on backup and restore, and there are no differences in the databases, file structures, etc., for SQL Server on Windows Server versus SQL Server on Linux. This means that log shipping can be configured between a Windows Server-based SQL Server installation and a Linux one as well as between distributions of Linux. Everything else remains the same. The only caveat is that log shipping, just like an availability group, cannot work when the source is at a higher SQL Server major version availability groupainst a target that is at a lower version of SQL Server. 
 
-## Read Scale Out
+## <a name="read-scale-out"></a>Read Scale Out
 
 Since their introduction in SQL Server 2012, secondary replicas have had the ability to be used for read-only queries. There are two ways that can be achieved with an availability group: by allowing direct access to the secondary as well as configuring read only routing which requires the use of the listener.  SQL Server 2016 introduced the ability to load balance read-only connections via the listener using a round robin algorithm, allowing read-only requests to be spread across all readable replicas. 
 

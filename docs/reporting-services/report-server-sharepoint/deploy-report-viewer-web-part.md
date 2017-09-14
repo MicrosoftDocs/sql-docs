@@ -38,12 +38,6 @@ Use the following instructions to manually deploy the solution package that add 
 * SQL Server 2008 Reporting Services (Native mode) and later.
 * Power BI Report Server
 
-## Download the Report Viewer web part solution package
-
-The Report Viewer web part is available on the Microsoft Download Center.
-
-Download Report Viewer web part solution package
-
 ## Deploy the farm solution
 
 This section shows you how to deploy the solution package to your SharePoint farm. This task only needs to be performed once.

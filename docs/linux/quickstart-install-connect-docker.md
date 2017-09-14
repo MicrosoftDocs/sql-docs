@@ -229,7 +229,7 @@ Now, run a query to return data from the `Inventory` table.
 
 1. To exit the interactive command-prompt in your container, type `exit`. Your container continues to run after you exit the interactive bash shell.
 
-## Connect from outside the container
+## <a id="connectexternal"></a> Connect from outside the container
 
 You can also connect to the SQL Server instance on your Docker machine from any external Linux, Windows, or macOS tool that supports SQL connections.
 

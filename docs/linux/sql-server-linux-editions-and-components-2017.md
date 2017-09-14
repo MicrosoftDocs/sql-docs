@@ -59,8 +59,7 @@ For a list of SQL Server features not available on Linux, see [Unsupported featu
 |Standard|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Standard edition delivers basic data management for departments and small organizations to run their applications and supports common development tools for on-premise and cloud — enabling effective database management with minimal IT resources.|  
 |Web|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Web edition is a low total-cost-of-ownership option for Web hosters and Web VAPs to provide scalability, affordability, and manageability capabilities for small to large scale Web properties.|  
 |Developer|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Developer edition lets developers build any kind of application on top of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. It includes all the functionality of Enterprise edition, but is licensed for use as a development and test system, not as a production server. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer is an ideal choice for people who build and test applications.|  
-|Express editions|Express edition is the entry-level, free database and is ideal for learning and building desktop and small server data-driven applications. It is the best choice for independent software vendors, developers, and hobbyists building client applications. If you need more advanced database features, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express can be seamlessly upgraded to other higher end versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express LocalDB, a lightweight version of Express that has all of its programmability features, yet runs in user mode and has a fast, zero-configuration installation and a short list of prerequisites.|  
-  
+|Express edition|Express edition is the entry-level, free database and is ideal for learning and building desktop and small server data-driven applications. It is the best choice for independent software vendors, developers, and hobbyists building client applications. If you need more advanced database features, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express can be seamlessly upgraded to other higher end versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
   
 ## Using [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] with client/server applications  
 
@@ -68,14 +67,14 @@ You can install just the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 
   
 ## [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] components  
 
-SQWL Server 2017 on Linux supports the SQL Server database engine. The following table describes the features in the database engine.   
+SQL Server 2017 on Linux supports the SQL Server database engine. The following table describes the features in the database engine.   
   
 |Server components|Description|  
 |-----------------------|-----------------|  
 |[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] includes the [!INCLUDE[ssDE](../includes/ssde-md.md)], the core service for storing, processing, and securing data, replication, full-text search, tools for managing relational and XML data, and in database analytics integration.|  
 
-**Developer and Evaluation Editions**  
-For features supported by Developer and Evaluation editions, see features listed for the SQL Server Enterprise Edition in the tables below.
+**Developer, Enterprise Core, and  Evaluation Editions**  
+For features supported by Developer, Enterprise Core, and Evaluation editions, see features listed for the SQL Server Enterprise Edition in the tables below.
 
 The Developer edition continues to support only 1 client for [SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md). 
   
@@ -99,12 +98,13 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |Feature|Enterprise|Standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
 |Log shipping|Yes|Yes|Yes|No|No|  
-|Database mirroring|Yes|Yes<br /><br /> Full safety only|Witness only|Witness only|Witness only| 
 |Backup compression|Yes|Yes|No|No|No| 
-|Database snapshot|Yes|Yes|Yes|Yes|Yes|
-|Always On failover cluster instances|Yes<br /><br /> Number of nodes is the operating system maximum|Yes<br /><br /> Support for 2 nodes|No|No|No|  
+|Database snapshot|Yes|No|No|No|No|
+|Always On failover cluster instance|Yes<br /><br /> Number of nodes is the operating system maximum|Yes<br /><br /> Support for 2 nodes|No|No|No|  
 |Always On availability groups|Yes<br /><br /> Up to 8 secondary replicas, including 2 synchronous secondary replicas|No|No|No|No|
 |Basic availability groups <sup>1</sup>|No|Yes<br /><br /> Support for 2 nodes|No|No|No|
+|Minimum replica commit availability group|Yes|Yes|No|No|No|No|
+|Clusterless availability group|Yes|Yes|No|No|No|No|
 |Online page and file restore|Yes|No|No|No|No|
 |Online indexing|Yes|No|No|No|No|
 |Resumable online index rebuilds|Yes|No|No|No|No|
@@ -112,11 +112,8 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |Fast recovery|Yes|No|No|No|No|
 |Mirrored backups|Yes|No|No|No|No|
 |Hot add memory and CPU|Yes|No|No|No|No|
-|Database recovery advisor|Yes|Yes|Yes|Yes|Yes|
 |Encrypted backup|Yes|Yes|No|No|No|
 |Hybrid backup to Windows Azure (backup to URL)|Yes|Yes|No|No|No|
-|Clusterless availability group|Yes|Yes|Yes|No|No|No|
-|Minimum replica commit availability group|Yes|Yes|Yes|No|No|No|
   
 <sup>1</sup> For more information about Basic availability groups, see [Basic Availability Groups](../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md).  
 
@@ -129,7 +126,6 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |Online non-clustered columnstore index rebuild|Yes|No|No|No|No|
 |In-Memory OLTP <sup>1</sup>|Yes|Yes|Yes|Yes|Yes|
 |Persistent Main Memory|Yes|Yes|Yes|Yes|Yes|
-|Multi-instance support|50|50|50|50|50|
 |Table and index partitioning|Yes|Yes|Yes|Yes|Yes|  
 |Data compression|Yes|Yes|Yes|Yes|Yes|
 |Resource Governor|Yes|No|No|No|No|  
@@ -161,42 +157,15 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |Contained databases|Yes|Yes|Yes|Yes|Yes| 
 |Encryption for backups|Yes|Yes|No|No|No|  
 
-##  <a name="Replication"></a> Replication  
-  
-|Feature|Enterprise|Standard|Web|Express with Advanced Services|Express|   
-|-------------|----------------|--------------|---------|------------------------------------|------------------------| 
-|Peer to peer transactional replication|Yes|No|No|No|No|   
-|Snapshot replication|Yes|Yes|Yes (Subscriber only)|Yes (Subscriber only)|Yes (Subscriber only)|   
-|SQL Server change tracking|Yes|Yes|Yes|Yes|Yes| 
-
-
-##  <a name="SSMS"></a> Management tools  
-  
-|Feature|Enterprise|Standard|Web|Express with Advanced Services|Express| 
-|-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|SQL Management Objects (SMO)|Yes|Yes|Yes|Yes|Yes|  
-|SQL CMD (Command Prompt tool)|Yes|Yes|Yes|Yes|Yes|      
-|Distributed Replay - Admin Tool|Yes|Yes|Yes|Yes|No|  
-|Distribute Replay - Client|Yes|Yes|Yes|No|No|  
-|Distributed Replay - Controller|Yes (Up to 16 clients)|Yes (1 client)|Yes (1 client)|No|No|   
-|SQL Profiler|Yes|Yes|No <sup>1</sup>|No <sup>1</sup>|No <sup>1</sup>|  
-|SQL Server Agent|Yes|Yes|Yes|No|No| 
-  
- <sup>1</sup> SQL Server Web, SQL Server Express, SQL Server Express with Tools, and SQL Server Express with Advanced Services can be profiled using SQL Server Standard and SQL Server Enterprise editions.  
-  
- <sup>2</sup> Tuning enabled only on Standard edition features  
-  
 ##  <a name="RDBMSM"></a> RDBMS manageability  
   
 |Feature|Enterprise|Standard|Web|Express with Advanced Services|Express|   
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|User instances|No|No|No|Yes|Yes| 
 |Dedicated admin connection|Yes|Yes|Yes|Yes with trace flag|Yes with trace flag|   
 |PowerShell scripting support|Yes|Yes|Yes|Yes|Yes| 
 |Support for data-tier application component operations - extract, deploy, upgrade, delete|Yes|Yes|Yes|Yes|Yes| 
 |Policy automation (check on schedule and change)|Yes|Yes|Yes|No|No|   
 |Performance data collector|Yes|Yes|Yes|No|No| 
-|Able to enroll as a managed instance in multi-instance management|Yes|Yes|Yes|No|No|   
 |Standard performance reports|Yes|Yes|Yes|No|No| 
 |Plan guides and plan freezing for plan guides|Yes|Yes|Yes|No|No|   
 |Direct query of indexed views (using NOEXPAND hint)|Yes|Yes|Yes|Yes|Yes| 
@@ -211,18 +180,12 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
   
 |Feature|Enterprise|Standard|Web|Express with Advanced Services|Express 
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|Basic R integration|Yes|Yes|Yes|Yes|No|   
-|Advanced R integration|Yes|No|No|No|No| 
-|Basic Python integration|Yes|Yes|Yes|Yes|No|
-|Advanced Python integration|Yes|No|No|No|No| 
-|Machine Learning Server (Standalone)|Yes|No|No|No|No|   
 |JSON|Yes|Yes|Yes|Yes|Yes|   
 |Query Store|Yes|Yes|Yes|Yes|Yes|   
 |Temporal|Yes|Yes|Yes|Yes|Yes|   
 |Native XML support|Yes|Yes|Yes|Yes|Yes| 
 |XML indexing|Yes|Yes|Yes|Yes|Yes| 
 |MERGE & UPSERT capabilities|Yes|Yes|Yes|Yes|Yes|   
-|FILESTREAM support|Yes|Yes|Yes|Yes|Yes| 
 |Date and Time datatypes|Yes|Yes|Yes|Yes|Yes|  
 |Internationalization support|Yes|Yes|Yes|Yes|Yes| 
 |Full-text and semantic search|Yes|Yes|Yes|Yes|No| 

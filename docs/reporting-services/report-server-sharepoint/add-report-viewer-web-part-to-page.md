@@ -17,6 +17,8 @@ manager: "erikre"
 
 # Add Report Viewer web part to a SharePoint page
 
+[!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
+
 Display a report, from SQL Server Reporting Services or Power BI Report server, by adding a Report Viewer web part to a SharePoint page.
 
 ![Report Viewer web part on a SharePoint page](media/sharepoint-report-viewer-web-part-on-page.png)
@@ -27,11 +29,11 @@ Display a report, from SQL Server Reporting Services or Power BI Report server, 
 
 * The Report Viewer web part must be deployed to your SharePoint farm. For information on how to deploy the Report Viewer web part solution project, see [Deploy the Report Viewer web part on a SharePoint site](deploy-report-viewer-web-part.md).
 
-## Add web part 
+## Add web part
 
 1. In your SharePoint site, select the **gear** icon in the upper left and select **Add a page**.
 
-    ![Add a page to a sharepoint side from the gear icon.](media/sharepoint-add-a-page.png)
+    ![Add a page to a sharepoint site from the gear icon.](media/sharepoint-add-a-page.png)
 
 2. Give your page a name and select **Create**.
 

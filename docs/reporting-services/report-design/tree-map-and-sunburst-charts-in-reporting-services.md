@@ -31,7 +31,8 @@ manager: "erikre"
  ![ssrs_treemap_example](../../reporting-services/report-design/media/ssrs-treemap-example.png "ssrs_treemap_example")  
   
 ### To insert a tree map chart and configure for the sample Adventureworks data  
- **Note:** Before you add a chart to your report, create a data source and dataset.  For sample data and a sample query, see the section [Sample Adventureworks data](#bkmk_sample_data) in this topic.  
+   
+   [!NOTE] Before you add a chart to your report, create a data source and dataset.  For sample data and a sample query, see the section [Sample Adventureworks data](#bkmk_sample_data) in this topic.  
   
 1.  Right-click the design surface, click **Insert**, and then click **Chart** .  
   
@@ -74,7 +75,7 @@ manager: "erikre"
  ![ssrs_sunburst_example](../../reporting-services/report-design/media/ssrs-sunburst-example.png "ssrs_sunburst_example")  
   
 ### To insert a sunburst chart and configure for the sample Adventureworks data  
- **Note:** Before you add a chart to your report, create a data source and dataset.  For sample data and a sample query, see the section [Sample Adventureworks data](#bkmk_sample_data) in this topic.  
+ [!NOTE]  Before you add a chart to your report, create a data source and dataset.  For sample data and a sample query, see the section [Sample Adventureworks data](#bkmk_sample_data) in this topic.  
   
 1.  Right-click the design surface, click **Insert**, and then click **Chart** .  
   
@@ -94,7 +95,7 @@ manager: "erikre"
   
 5.  Change the default chart title to "Categorized Sales by Territory, with sales reason".  
   
-6.  
+6.
     |||  
     |-|-|  
     |![ssrs_sunburst_linetotalproperties](../../reporting-services/report-design/media/ssrs-sunburst-linetotalproperties.png "ssrs_sunburst_linetotalproperties")|To add the values of the category groups to the sunburst as labels, set the label property **Visible** = true and the **UseValueAsLabel**=False.<br /><br /> The label values that are displayed are affected by the size of the font, the size of the overall chart area, and the size of specific rectangles.  To see more of the labels, change the Label font property of LineTotal to 8pt instead of the default 10pt.|  

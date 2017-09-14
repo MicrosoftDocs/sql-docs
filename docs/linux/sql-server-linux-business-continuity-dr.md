@@ -30,7 +30,7 @@ The simplest solutions leverage virtualization technologies to achieve a high de
     - Disaster recovery protection
     - RTO in minutes to hours
 
-Standard high-availability and disaster recovery techniques provide instance-level protection combined with a reliable shared storage infrastructure. Advanced high availability and disaster recovery solutions in SQL Server 2017 for Linux include:
+Advanced high-availability and disaster recovery techniques provide instance-level protection combined with a reliable shared storage infrastructure. Advanced high availability and disaster recovery solutions in SQL Server 2017 for Linux include:
 
 - [**Always On failover cluster instances**](sql-server-linux-shared-disk-cluster-configure.md)
     - Instance level protection

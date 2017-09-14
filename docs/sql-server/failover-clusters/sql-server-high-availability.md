@@ -39,18 +39,18 @@ Standard and Enterprise Edition have some different limits. AGs in Standard Edit
 The ability to scale out readable copies of a database while also providing availability is a key benefit of Enterprise Edition that is further enhanced in SQL Server 2017 and will be described later in this paper in the section “Read Scale Out”.  The listener can also provide access to the readable copies of the data providing one point of entry no matter what kind of workload is being run.
 When it comes to availability, AGs can provide either automatic or manual failover. Automatic failover can occur if synchronous data movement is configured and the database on the primary and secondary replica are in a synchronized state. As long as the listener is used and the application uses a later version of .NET  (3.5 with an update, or 4.0 and above), the failover should be handled with minimal to no impact to end users if a listener is utilized. Failover to make a secondary replica the new primary replica can be configured to be automatic or manual, and generally is measured in seconds.
 The list below highlights some differences with AGs on Windows Server versus Linux:
-* * Due to differences in the way the underlying cluster works on Linux and Windows Server, all failovers (manual or automatic) of AGs are done via the cluster on Linux. On Windows Server-based AG deployments, manual failovers must be done via SQL Server. Automatic failovers are handled by the cluster mechanism. 
-* * In SQL Server 2017, the recommended configuration for AGs on Linux will be a minimum of three replicas. This is due to the way that the underlying clustering works. An improved solution for a two replica configuration will come post-release.
-* * On Linux, the common name used by each listener is defined in DNS and not in the cluster like it is on Windows Server.
+* Due to differences in the way the underlying cluster works on Linux and Windows Server, all failovers (manual or automatic) of AGs are done via the cluster on Linux. On Windows Server-based AG deployments, manual failovers must be done via SQL Server. Automatic failovers are handled by the cluster mechanism. 
+* In SQL Server 2017, the recommended configuration for AGs on Linux will be a minimum of three replicas. This is due to the way that the underlying clustering works. An improved solution for a two replica configuration will come post-release.
+* On Linux, the common name used by each listener is defined in DNS and not in the cluster like it is on Windows Server.
 In SQL Server 2017, there are some new features and enhancements to AGs:
-* * Enhanced Microsoft Distributor Transaction Coordinator (DTC) support for Windows Server-based configurations
-* * The new option REQUIRED_SECONDARIES_TO_COMMIT
-* * The addition of cluster types
-* * Additional scaling out of read only databases (described later in this paper)
+* Enhanced Microsoft Distributor Transaction Coordinator (DTC) support for Windows Server-based configurations
+* The new option REQUIRED_SECONDARIES_TO_COMMIT
+* The addition of cluster types
+* Additional scaling out of read only databases (described later in this paper)
 #### Enhanced Microsoft Distributed Transaction Coordinator Support
 Before SQL Server 2016, the only way to get availability in SQL Server for applications that require distributed transactions which use DTC underneath the covers was to deploy FCIs. A distributed transaction can be done in one of two ways:
-* * A transaction that spans more than one database in the same SQL Server instance
-* * A transaction that spans more than one SQL Server instance or possibly involves a non-SQL Server data source
+* A transaction that spans more than one database in the same SQL Server instance
+* A transaction that spans more than one SQL Server instance or possibly involves a non-SQL Server data source
 SQL Server 2016 introduced partial support for DTC with AGs that covered the latter scenario. SQL Server 2017 completes the story by supporting both scenarios with DTC. DTC support can only be configured on Windows Server-based AG deployments, not those on Linux. 
 Another enhancement to DTC support for AGs is that in SQL Server 2016, enabling support for DTC to an AG could only be done when the AG was created, and could not be added later. In SQL Server 2017, DTC support can also be added to an AG after it is created. 
 Database mirroring, which was deprecated in SQL Server 2012, is not available on the Linux version of SQL Server nor will it be added. Customers still using database mirroring should start planning to migrate to AGs, which is the replacement for database mirroring.
@@ -82,9 +82,9 @@ There is zero data loss with an FCI, but the underlying shared storage is a sing
 Like an AG, FCIs abstract which node of the underlying cluster is hosting it. An FCI always retains the same name. Applications and end users never connect to the nodes; the unique name assigned to the FCI is used. 
 An FCI can participate in an AG as one of the instances hosing either a primary or secondary replica.
 The list below highlights some differences with FCIs on Windows Server versus Linux:
-* * On Windows Server, an FCI is part of the installation process. An FCI on Linux is configured after installing SQL Server.
-* * Linux only supports a single installation of SQL Server per host, so all FCIs will be a default instance. Windows Server supports up to 25 FCIs per WSFC.
-* * The common name used by FCIs in Linux is defined in DNS, and should be the same as the resource create for the FCI.
+* On Windows Server, an FCI is part of the installation process. An FCI on Linux is configured after installing SQL Server.
+* Linux only supports a single installation of SQL Server per host, so all FCIs will be a default instance. Windows Server supports up to 25 FCIs per WSFC.
+* The common name used by FCIs in Linux is defined in DNS, and should be the same as the resource create for the FCI.
 ### Log Shipping
 If recovery point and recovery time objectives are more flexible, or databases are not considered to be highly mission critical, log shipping is another proven availability feature in SQL Server. Based on SQL Server’s native backups, the process for log shipping automatically generates transaction log backups, copies them to one or more instances known as a warm standby, and automatically applies the transaction log backups to that standby. Log shipping uses SQL Server Agent jobs to automate the process of backing up, copying, and applying the transaction log backups. 
  

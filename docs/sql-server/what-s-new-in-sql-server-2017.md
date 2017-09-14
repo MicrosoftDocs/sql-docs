@@ -104,6 +104,11 @@ SQL Server developers now have access to the extensive Python ML and AI librarie
 - **microsoftml** - This state-of-the-art package of machine learning algorithms and transforms with Python bindings includes deep neural networks, fast decision trees and decision forests, and optimized algorithms for linear and logistic regressions. You also get pre-trained models based on ResNet models that you can use for image extraction or sentiment analysis.
 - **Python operationalization with T-SQL** - Deploy Python code easily by using the stored procedure `sp_execute_external_script`. Get great performance by streaming data from SQL to Python processes and using MPI ring parallelization.
 - **Python in SQL Server compute contexts** - Data scientists and developers can execute Python code remotely from their development environments to explore data and develop models without moving data around.
+- **Native scoring**
+- The PREDICT function in Transact-SQL can be used for native scoring from any instance of SQL Server 2017. Support for models created using RevoScaleR and revoscalepy. The R runtime is not called.
+- **Package management** - The CREATE EXTERAL LIBRARY statement in T-SQL to install R packages. Support for storing R packages in the database. Supports private and public package management capabilities
+- **Performance improvements for sp_execute_external_script** - Batch mode execution for columnstore data.
+
 
 For more information, see [What's new in SQL Server Machine Learning Services](~/advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md).
 

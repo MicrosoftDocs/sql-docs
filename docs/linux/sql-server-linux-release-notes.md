@@ -18,6 +18,7 @@ The following table lists the releases of SQL Server 2017 covered in this topic.
 
 | Release | Version | Release date |
 |-----|-----|-----|
+| [RTM](#RTM) | tbd | 10-2017 |
 | [RC2](#RC2) | 14.0.900.75 | 8-2017 |
 | [RC1](#RC1) | 14.0.800.90 | 7-2017 |
 | [CTP 2.1](#ctp21) | 14.0.600.250 | 5-2017 |
@@ -27,6 +28,38 @@ The following table lists the releases of SQL Server 2017 covered in this topic.
 | [CTP 1.2](#ctp12) | 14.0.200.24 | 1-2017 |
 | [CTP 1.1](#ctp11) | 14.0.100.187 | 12-2016 |
 | [CTP 1.0](#ctp10) | 14.0.1.246 | 11-2016 |
+
+## <a id="RTM"></a> RTM (October 2017)
+
+### Known issues
+
+The following sections describe known issues with this release of SQL Server 2017 RTM on Linux.
+
+#### SQL Server Integration Services (SSIS)
+
+- The **mssql-server-is** package is not supported on SUSE in this release. It is currently supported on Ubuntu and on Red Hat Enterprise Linux (RHEL).
+
+- With SSIS on Linux CTP 2.1 Refresh and later, SSIS packages can use ODBC connections on Linux. This functionality has been tested with the SQL Server and the MySQL ODBC drivers, but is also expected to work with any Unicode ODBC driver that observes the ODBC specification. At design time, you can provide either a DSN or a connection string to connect to the ODBC data; you can also use Windows authentication. For more info, see the [blog post announcing ODBC support on Linux](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/).
+
+- The following features are not supported in this release when you run SSIS packages on Linux:
+  - SSIS Catalog database
+  - Scheduled package execution by SQL Agent
+  - Windows Authentication
+  - Third-party components
+  - Change Data Capture (CDC)
+  - SSIS Scale Out
+  - Azure Feature Pack for SSIS
+  - Hadoop and HDFS support
+  - Microsoft Connector for SAP BW
+
+For a list of built-in SSIS components that are not currently supported, or that are supported with limitations, see [Extract, transform, and load data on Linux with SSIS](sql-server-linux-migrate-ssis.md#components).
+
+For more info about SSIS on Linux, see the following articles:
+-   [Blog post announcing SSIS support for Linux](https://blogs.msdn.microsoft.com/ssis/2017/05/17/ssis-helsinki-is-available-in-sql-server-vnext-ctp2-1/).
+-   [Install SQL Server Integration Services (SSIS) on Linux](sql-server-linux-setup-ssis.md)
+-   [Extract, transform, and load data on Linux with SSIS](sql-server-linux-migrate-ssis.md)
+
+![Separation bar graphic](./media/sql-server-linux-release-notes/seperationbar3.png)
 
 ## <a id="RC2"></a> RC2 (August 2017)
 

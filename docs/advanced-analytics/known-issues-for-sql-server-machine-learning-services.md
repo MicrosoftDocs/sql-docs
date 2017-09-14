@@ -2,7 +2,7 @@
 title: "Known issues in Machine Learning Services | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "06/16/2017"
+ms.date: "09/13/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -75,7 +75,7 @@ The SqlBindR.exe tool is provided in the Microsoft R Server 9.0 release to suppo
 
 ### Setup for SQL Server 2016 service releases might fail to install newer versions of R components
 
-When you install a cumulative update or install a service pack for SQL Server 2016 on a computer that is not connected to the internet, the setup wizard might fail to display the prompt that lets you update the R components by using downloaded CAB files. This failure typically occurs when multiple components are installed together with the database engine.
+When you install a cumulative update or install a service pack for SQL Server 2016 on a computer that is not connected to the internet, the setup wizard might fail to display the prompt that lets you update the R components by using downloaded CAB files. This failure typically occurs when multiple components were installed together with the database engine.
 
 As a workaround, you can install the service release by using the command line and specifying the */MRCACHEDIRECTORY* argument as shown in this example, which installs CU1 updates:
 
@@ -87,7 +87,7 @@ To get the latest installers, see [Install machine learning components without i
 
 ### Launchpad services fails to start if the version is different from the R version
 
-If you install R services separately from the database engine, and the build versions are different, you might see the following error in the System Event log: 
+If you install R services separately from the database engine, and the build versions are different, you might see the following error in the System Event log:
 
 >_The SQL Server Launchpad service failed to start due to the following error: The service did not respond to the start or control request in a timely fashion._
 
@@ -101,7 +101,7 @@ To view a list of the R version numbers that are required for each release of SQ
 
 If you have installed [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] on a Windows Azure virtual machine, you might not be able to use compute contexts that require the use of the virtual machine's workspace. The reason is that, by default, the Azure VM firewall includes a rule that blocks network access for local R user accounts.
 
-As a workaround, on the Azure VM, open **Windows Firewall with Advanced Security**, select **Outbound Rules**, and disable the following rule: **Block network access for R local user accounts in SQL Server instance MSSQLSERVER**.
+As a workaround, on the Azure VM, open **Windows Firewall with Advanced Security**, select **Outbound Rules**, and disable the following rule: **Block network access for R local user accounts in SQL Server instance MSSQLSERVER**. You can also leave the rule enabled, but change the security property to **Allow if secure**.
 
 ### Implied authentication in SQLEXPRESS
 
@@ -113,9 +113,9 @@ If you cannot upgrade, you can use a SQL login to run remote R jobs that might r
 
 **Applies to:** SQL Server 2016 R Services Express Edition
 
-### Performance limits when R libraries are called from Standalone R tools
+### Performance limits when R libraries are called from other R tools
 
-It is possible to call the R tools and libraries that are installed for SQL Server R Services from an external R application such as RGui. This call might be handy when you install new packages, or when you run ad hoc tests on very short code samples.
+It is possible to call the R tools and libraries that are installed for SQL Server from an external R application such as RGui. This call might be handy when you install new packages, or when you run ad hoc tests on very short code samples.
 
 However, be aware that outside of SQL Server, performance will be limited. For example, even if you have purchased the Enterprise Edition of SQL Server, R will run in single-threaded mode when you run your R code by using external tools. Performance will be superior if you run your R code by initiating a SQL Server connection and using [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md), which will call the R libraries for you.
 
@@ -308,7 +308,21 @@ For compatibility with [!INCLUDE[rsql_productname](../includes/rsql-productname-
 
 Revision 0.92 of the SQLite ODBC driver is incompatible with RevoScaleR. Revisions 0.88-0.91 and 0.93 and later are known to be compatible.
 
+## Python code execution or package issues
+
+This section contains known issues that are specific to running Python on SQL Server, as well as issues that are related to the Python packages published by Microsoft, including [revoscalepy](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package) and [microsoftml](https://docs.microsoft.com/r-server/python-reference/microsoftml/microsoftml-package).
+
+### Content of varbinary(max) data type is truncated when passed to Python
+
+If you are using Python script in the CTP 2.0 release of SQL Server 2017, and pass data such as images using the varbinary(max) data type, the data might be truncated.
+
+The reason is that early preview releases did not provide the correct mapping of the SQL varbinary(max) data type to the Python byte data type. This issue will be fixed in an upcoming release. There are several workarounds:
+
++ Rather than trying to work with varbinary data as part of the input or output datasets, you can read and write image files by making a separate call to pyODBC inside your script.
++ Declare the varbinary data as a SQL variable and pass the variable to sp_execute_external_script.
+
 ## See also
 
 [What's new in SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)
 
+[Troubleshooting machine learning in SQL Server](machine-learning-troubleshooting-faq.md)

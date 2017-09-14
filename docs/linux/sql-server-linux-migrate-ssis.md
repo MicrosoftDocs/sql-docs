@@ -148,11 +148,11 @@ For more info about SSIS on Linux, see the following blog posts:
 Microsoft SQL Server Integration Services (SSIS) is a platform for building high-performance data integration solutions, including extraction, transformation, and loading (ETL) packages for data warehousing. For more info about SSIS, see [SQL Server Integration Services](/sql/integration-services/sql-server-integration-services.md).
 
 SSIS includes the following features:
-- graphical tools and wizards for building and debugging packages on Windows
-- a variety of tasks for performing workflow functions such as FTP operations, executing SQL statements, and sending e-mail messages
-- a variety of data sources and destinations for extracting and loading data
-- a variety of transformations for cleaning, aggregating, merging, and copying data
-- application programming interfaces (APIs) for extending SSIS with your own custom scripts and components
+- Graphical tools and wizards for building and debugging packages on Windows
+- A variety of tasks for performing workflow functions such as FTP operations, executing SQL statements, and sending e-mail messages
+- A variety of data sources and destinations for extracting and loading data
+- A variety of transformations for cleaning, aggregating, merging, and copying data
+- Application programming interfaces (APIs) for extending SSIS with your own custom scripts and components
 
 To get started with SSIS, download the latest version of [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md). Then follow the tutorial [SSIS How to Create an ETL Package](https://msdn.microsoft.com/en-us/library/ms169917.aspx).
 

@@ -36,15 +36,15 @@ Microsoft Machine Learning Server in SQL Server now provides comprehensive suppo
  
 ### In-database Python integration
 
-You can run Python in stored procedures, or execute Python remotely using the SQL Server computer as the compute context. This integration opens up new avenues for the vast community of Python developers and data scientists to use the power of SQL Server, and to explore innovations from Microsoft such as **revoscalepy** and **microsoftml**.
+You can run Python in stored procedures, or execute Python remotely using the SQL Server computer as the compute context. This integration opens up new avenues for the vast community of Python developers and data scientists to use the power of SQL Server. 
 
-SQL Server developers gain access to the extensive Python libraries from the open source ecosystem, including popular frameworks such as scikit-learn, Tensorflow, Caffe and Theano/Keras.
+SQL Server developers gain access to the extensive Python libraries from the open source ecosystem, including popular frameworks such as scikit-learn, Tensorflow, Caffe, and Theano/Keras. And be sure to explore innovations from Microsoft such as **revoscalepy** and **microsoftml**!
 
-But running Python in-database isn't just for machine learning; there are a myriad of other potential applications for integrating Python with SQL, leveraging the strengths of the respective languages to deliver more intelligent, powerful solutions.
+Running Python in-database isn't just about machine learning, by the way. There are a myriad of other potential applications for integrating Python with SQL, and using the power of each language to deliver more intelligent, powerful solutions.
 
 + **revoscalepy**
 
-    This release includes the final version of **revoscalepy**, which supplies Pythonic equivalents of the scalable, streaming algorithms in RevoScaleR. You can create Python models for linear and logistic regressions, decision trees, boosted trees, and random forests, all parallelizable, and capable of being run in remote compute contexts.
+    This release includes the final version of **revoscalepy**, which supplies Python equivalents of the algorithms in RevoScaleR. You can create Python models for linear and logistic regressions, decision trees, boosted trees, and random forests, all parallelizable, and capable of being run in remote compute contexts.
 
     For more information, see [What is revoscalepy](python/what-is-revoscalepy.md).
 
@@ -54,9 +54,9 @@ But running Python in-database isn't just for machine learning; there are a myri
 
 + Python support in Microsoft Machine Learning Server (Standalone)
 
-    SQL Server 2017 includes the option to install a standalone version of the Python and R platforms. By using Machine Learning Server, you can distribute and scale R or Python code without using SQL Server.
+    SQL Server 2017 includes the option to install a standalone version of the Microsoft machine learning platform. By using Machine Learning Server, you can distribute and scale R or Python code without using SQL Server.
 
-    For an example of Python use in Microsoft Machine Learning Server, see [Publish and consume Python code](python/publish-consume-python-code.md).
+    For an example of Python running in Microsoft Machine Learning Server, see [Publish and consume Python code](python/publish-consume-python-code.md).
 
 ### New algorithms
 

@@ -10,8 +10,8 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: c75717c8-c677-4033-8ca6-d0ac93aee04d
 ---
-# Business continuity and database recovery SQL Server on Linux
-
+# Business continuity and database recovery ~ SQL Server on Linux
+<!-->
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 SQL Server on Linux allows organizations to achieve a wide array of service-level agreement goals to accommodate various business requirements.
@@ -43,6 +43,6 @@ Advanced high-availability and disaster recovery techniques provide instance-lev
     - Data redundancy
     - Distribute read only workloads
     - RTO in seconds
-
+-->
 [!INCLUDE[HA-Story](../includes/sql-server-ha-story.md)]
 

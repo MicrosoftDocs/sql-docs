@@ -15,7 +15,7 @@ Availability groups, FCIs, and log shipping can be used in a variety of ways, an
 * Migrations and upgrades
 * Scaling out readable copies of one or more databases
 
-Each section will discuss the relevant features that can be used for that particular scenario. The one feature not covered is [SQL Server replication](https//docs.microsoft.com/sql/relational-databases/replication/sql-server-replication). While not officially designated as an availability feature under the Always On umbrella, it is often used for making data redundant in certain scenarios. Replication will be added to SQL Server on Linux in a future release.
+Each section will discuss the relevant features that can be used for that particular scenario. The one feature not covered is [SQL Server replication](http://docs.microsoft.com/sql/relational-databases/replication/sql-server-replication). While not officially designated as an availability feature under the Always On umbrella, it is often used for making data redundant in certain scenarios. Replication will be added to SQL Server on Linux in a future release.
 
 > [!IMPORTANT] 
 > The SQL Server availability features do not replace the requirement to have a robust, well tested backup and restore strategy, the most fundamental building block of any availability solution.

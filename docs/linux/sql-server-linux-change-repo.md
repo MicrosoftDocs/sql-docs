@@ -21,7 +21,7 @@ When you upgrade SQL Server 2017 from CTP 2.1, RC1, or RC2 to the General Availa
 It is important to note that there are two main types of repositories for each distribution:
 
   > [!IMPORTANT]
-  > Any version prior to CTP 2.1 must be upgraded to at least 2.1 before upgrading to RTM.
+  > Any version prior to CTP 2.1 must be upgraded to at least 2.1 before upgrading to GA.
 
 - **Cumulative Updates (CU)**: The Cumulative Update (CU) repository contains packages for the base SQL Server release and any bug fixes or improvements since that release. Cumulative updates are specific to a release version, such as SQL Server 2017. They are released on a regular cadence.
 
@@ -32,7 +32,7 @@ Each CU and GDR release contains the full SQL Server package and all previous up
 > [!NOTE]
 > You can update from a GDR release to CU release at any time by changing repositories. Updating from a CU release to a GDR release is not supported. 
 
-## Change to an RTM repository
+## Change to a GA repository
 
 To change from the preview repository to one source repository (CU or GDR), use the following steps:
 

@@ -100,7 +100,7 @@ Get-SPWebApplication "<web application url>" | Get-SPSite -Limit ALL |
         }
 ```
 
-## Remove the Solution
+## Remove the solution
 
 Although SharePoint Central Administration provides solution retraction, you do not need to retract the **ReportViewerWebPart.wsp** file unless you are systematically troubleshooting an installation or patch deployment problem.
 

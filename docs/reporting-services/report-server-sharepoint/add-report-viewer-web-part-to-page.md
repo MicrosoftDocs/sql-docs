@@ -23,7 +23,7 @@ Display a report, from SQL Server Reporting Services or Power BI Report Server, 
 
 ![Report Viewer web part on a SharePoint page](media/sharepoint-report-viewer-web-part-on-page.png)
 
-## Prerequisits
+## Prerequisites
 
 * For reports to load successfully, the Claims to Windows Token Service (C2WTS) needs to be configured for Kerberos constrained delegation. For more information on how to configure C2WTS, see [Claims to Windows Token Service (C2WTS) and Reporting Services](../install-windows/claims-to-windows-token-service-c2wts-and-reporting-services.md).
 

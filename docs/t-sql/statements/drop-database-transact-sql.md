@@ -99,10 +99,15 @@ DROP DATABASE database_name [;]
  Dropping a database enable for Stretch Database does not remove the remote data. If you want to delete the remote data, you have to remove it manually.  
   
 ### [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
- You must be connected to the master database to drop a database.  
+ You must be connected to the master database to drop a database.
   
- The DROP DATABASE statement must be the only statement in a SQL batch and you can drop only one database at a time.  
+ The DROP DATABASE statement must be the only statement in a SQL batch and you can drop only one database at a time.
   
+### [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]  
+ You must be connected to the master database to drop a database.
+  
+ The DROP DATABASE statement must be the only statement in a SQL batch and you can drop only one database at a time.
+
 ## Permissions  
   
 ### [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  

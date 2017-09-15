@@ -131,6 +131,8 @@ The list below highlights some differences with FCIs on Windows Server versus Li
 If recovery point and recovery time objectives are more flexible, or databases are not considered to be highly mission critical, log shipping is another proven availability feature in SQL Server. Based on SQL Server’s native backups, the process for log shipping automatically generates transaction log backups, copies them to one or more instances known as a warm standby, and automatically applies the transaction log backups to that standby. Log shipping uses SQL Server Agent jobs to automate the process of backing up, copying, and applying the transaction log backups. 
 > [!IMPORTANT] 
 > On Linux, SQL Server Agent jobs is not included as part of the installation of SQL Server itself. It is available in the packavailability groupe mssql-server-Agent jobs which must also be installed to use log shipping.
+
+![Log Shipping][LogShipping]
  
 Arguably the biggest advantavailability groupe to using log shipping in some capacity is that it accounts for human error. The application of transaction logs can be delayed. Therefore, if someone issues something like an UPDATE without a WHERE clause, the standby may not have the change so you could switch to that while you repair the primary system. While log shipping is easy to configure, switching from the primary to a warm standby, known as a role change, is always manual. A role change is initiated via Transact-SQL, and like an availability group, all objects not captured in the transaction log must be manually synchronized. Log shipping also needs to be configured per database, whereas a single availability group can contain multiple databases. 
 Unlike an availability group or FCI, log shipping has no abstraction for a role change. Applications must be able to handle this. Techniques such as a DNS alias (CNAME) could be employed, but there are pros and cons, such as the time it takes for DNS to refresh after the switch.
@@ -142,9 +144,13 @@ When your primary availability location experiences a catastrophic event like an
 #### Always On Availability Groups
 
 One of the benefits of availability groups is that both high availability and disaster recovery can be configured using a single feature. Without the requirement for ensuring that shared storage is also highly available, it is much easier to have replicas that are local in one data center for high availability, and remote ones in other data centers for disaster recovery each with separate storage. Having additional copies of the database is the tradeoff for ensuring redundancy. An example of an availability group that spans multiple data centers is shown below. One primary replica is responsible for keeping all secondary replicas synchronized.
+
+![Availability Group][AG]
  
 Outside of an availability group with a cluster type of none, an availability group requires that all replicas are part of the same underlying cluster whether it is a WSFC or Pacemaker. This means that in the picture above, the WSFC is stretched to work in two different data centers which adds complexity. regardless of the platform (Windows Server or Linux). Stretching clusters across distance adds complexity. 
 Introduced in SQL Server 2016, a distributed availability group allows an availability group to span availability groups configured on different clusters. This decouples the requirement to have the nodes all participate in the same cluster, which makes configuring disaster recovery much easier. For more information on distributed availability groups, see the official documentation.
+
+![Distributed Availability Group][DAG]
  
 #### Always On Failover Cluster Instances
 
@@ -237,13 +243,13 @@ One thing that should be noted for all read scale out scenarios with availabilit
 
 Instances and databases of SQL Server 2017 can be made highly available using the same features on both Windows Server and Linux. Besides standard availability scenarios of local high availability and disaster recovery, downtime associated with upgrades and migrations can be minimized with the availability features in SQL Server. Availability groups can also provide additional copies of a database as part of the same architecture to scale out readable copies. Whether you are deploying a new solution using SQL Server 2017 or considering an upgrade, SQL Server 2017 has the availability and reliability you require.
  
-[SimpleAG](media\sql-server-ha-story\image1.png)
+[SimpleAG]:media\sql-server-ha-story\image1.png
 [SSMSAGOptions](media\sql-server-ha-story\image2.png)
 [BasicFCI](media\sql-server-ha-story\image3.png)
 [PostFailoverFCI](media\sql-server-ha-story\image4.png)
-[image5](media\sql-server-ha-story\image5.png)
-[image6](media\sql-server-ha-story\image6.png)
-[image7](media\sql-server-ha-story\image7.png)
+[LogShipping](media\sql-server-ha-story\image5.png)
+[AG](media\sql-server-ha-story\image6.png)
+[DAG](media\sql-server-ha-story\image7.png)
 [image8](media\sql-server-ha-story\image8.png)
 [image9](media\sql-server-ha-story\image9.png)
 [image10](media\sql-server-ha-story\image10.png)

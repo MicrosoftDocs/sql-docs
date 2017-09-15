@@ -44,6 +44,8 @@ Advanced high-availability and disaster recovery techniques provide instance-lev
     - Distribute read only workloads
     - RTO in seconds
 
+[!INCLUDE[HA-Story](../includes/sql-server-ha-story.md)]
+
 ## Summary
 
 SQL Server 2017 on Linux includes virtualization, backup and restore, and failover cluster instances, and availability groups to support high-availability and disaster recovery. 

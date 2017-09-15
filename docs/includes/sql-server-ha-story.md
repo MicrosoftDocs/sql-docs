@@ -244,13 +244,13 @@ One thing that should be noted for all read scale out scenarios with availabilit
 Instances and databases of SQL Server 2017 can be made highly available using the same features on both Windows Server and Linux. Besides standard availability scenarios of local high availability and disaster recovery, downtime associated with upgrades and migrations can be minimized with the availability features in SQL Server. Availability groups can also provide additional copies of a database as part of the same architecture to scale out readable copies. Whether you are deploying a new solution using SQL Server 2017 or considering an upgrade, SQL Server 2017 has the availability and reliability you require.
  
 [SimpleAG]:media\sql-server-ha-story\image1.png
-[SSMSAGOptions](media\sql-server-ha-story\image2.png)
-[BasicFCI](media\sql-server-ha-story\image3.png)
-[PostFailoverFCI](media\sql-server-ha-story\image4.png)
-[LogShipping](media\sql-server-ha-story\image5.png)
-[AG](media\sql-server-ha-story\image6.png)
-[DAG](media\sql-server-ha-story\image7.png)
-[image8](media\sql-server-ha-story\image8.png)
-[image9](media\sql-server-ha-story\image9.png)
-[image10](media\sql-server-ha-story\image10.png)
+[SSMSAGOptions]:media\sql-server-ha-story\image2.png
+[BasicFCI]:media\sql-server-ha-story\image3.png
+[PostFailoverFCI]:media\sql-server-ha-story\image4.png
+[LogShipping]:media\sql-server-ha-story\image5.png
+[AG]:media\sql-server-ha-story\image6.png
+[DAG]:media\sql-server-ha-story\image7.png
+[image8]:media\sql-server-ha-story\image8.png
+[image9]:media\sql-server-ha-story\image9.png
+[image10]:media\sql-server-ha-story\image10.png
 

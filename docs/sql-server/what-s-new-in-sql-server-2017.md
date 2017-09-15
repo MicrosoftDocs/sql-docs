@@ -1,7 +1,7 @@
 ---
 title: "What's new in SQL Server 2017 | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/31/2017"
+ms.date: "09/14/2017"
 ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
@@ -16,6 +16,7 @@ ms.author: "craigg"
 manager: "jhubbard"
 ---
 # What's new in SQL Server 2017
+
 SQL Server 2017 represents a major step towards making SQL Server a platform that gives you choices of development languages, data types, on-premises or cloud, and operating systems by bringing the power of SQL Server to Linux, Linux-based Docker containers, and Windows. This topic summarizes what is new for specific feature areas in the most recent SQL Server 2017 Release Candidate (RC2, August 2017) and Community Technical Preview (CTP) releases.
 
 [![Download from Evaluation Center](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) **Try it out:** [Download the latest SQL Server 2017 Release: RC2, August 2017](http://go.microsoft.com/fwlink/?LinkID=829477).
@@ -23,7 +24,8 @@ This release contains bug fixes and performance improvements.
 
 >**Run SQL Server on Linux!** For more information, see [SQL Server on Linux Documentation](https://docs.microsoft.com/sql/linux/).
 
-## SQL Server 2017 Database Engine  
+## SQL Server 2017 Database Engine
+
 SQL Server 2017 includes many new Database Engine features, enhancements, and performance improvements. 
 - **CLR assemblies** can now be added to a whitelist, as a workaround for the `clr strict security` feature described in CTP 2.0. [sp_add_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md), [sp_drop_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md), and [sys.trusted_asssemblies](../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md) are added to support the white list of trusted assemblies (RC1).  
 - **Resumable online index rebuild** resumes an online index rebuild operation from where it stopped after a failure (such as a failover to a replica or insufficient disk space), or pauses and later resumes an online index rebuild operation. See [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md) and [Guidelines for online index operations](../relational-databases/indexes/guidelines-for-online-index-operations.md). (CTP 2.0)
@@ -95,19 +97,19 @@ As of CTP 2.1, SSRS is no longer available to install through SQL Server setup. 
 
 For more information, see [What's new in SQL Server Reporting Services (SSRS)](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md).
 
-## SQL Server 2017 Machine Learning Services
+## Machine Learning in SQL Server 2017 
+
 SQL Server R Services has been renamed **SQL Server Machine Learning Services**, to reflect support for Python in addition to the R language. You can use Machine Learning Services (In-Database) to run R or Python scripts in SQL Server, or install **Microsoft Machine Learning Server (Standalone)** to deploy and consume R and Python models that don't require SQL Server. 
 
-SQL Server developers now have access to the extensive Python ML and AI libraries available in the open-source ecosystem, along with the latest innovations from Microsoft: 
+SQL Server developers now have access to the extensive Python ML and AI libraries available in the open-source ecosystem, along with the latest innovations from Microsoft:
 
-- **revoscalepy** - This Pythonic version of RevoScaleR includes parallel algorithms for linear and logistic regressions, decision tree, boosted trees and random forests, as well as a rich set of APIs for data transformation and data movement, remote compute contexts, and data sources.
+- **revoscalepy** - This Python equivalent of RevoScaleR includes parallel algorithms for linear and logistic regressions, decision tree, boosted trees and random forests, as well as a rich set of APIs for data transformation and data movement, remote compute contexts, and data sources.
 - **microsoftml** - This state-of-the-art package of machine learning algorithms and transforms with Python bindings includes deep neural networks, fast decision trees and decision forests, and optimized algorithms for linear and logistic regressions. You also get pre-trained models based on ResNet models that you can use for image extraction or sentiment analysis.
 - **Python operationalization with T-SQL** - Deploy Python code easily by using the stored procedure `sp_execute_external_script`. Get great performance by streaming data from SQL to Python processes and using MPI ring parallelization.
 - **Python in SQL Server compute contexts** - Data scientists and developers can execute Python code remotely from their development environments to explore data and develop models without moving data around.
-- **Native scoring**
-- The PREDICT function in Transact-SQL can be used for native scoring from any instance of SQL Server 2017. Support for models created using RevoScaleR and revoscalepy. The R runtime is not called.
-- **Package management** - The CREATE EXTERAL LIBRARY statement in T-SQL to install R packages. Support for storing R packages in the database. Supports private and public package management capabilities
-- **Performance improvements for sp_execute_external_script** - Batch mode execution for columnstore data.
+- **Native scoring** -  The PREDICT function in Transact-SQL can be used to perform scoring in any instance of SQL Server 2017, even if R isn't installed. All that's required is that you train the model using one of the supported RevoScaleR and revoscalepy algorithms and save the model in a new, comact binary format.
+- **Package management** - T-SQL now supports the CREATE EXTERNAL LIBRARY statement, to give DBAs greater management over R packages. Use roles to control prviate or shared package access, store R packages in the database and share them among users.
+- **Performance improvements** - The stored procedure `sp_execute_external_script` has been optimized to support batch mode execution for columnstore data.
 
 
 For more information, see [What's new in SQL Server Machine Learning Services](~/advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md).

@@ -19,7 +19,7 @@ manager: "erikre"
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
-Display a report, from SQL Server Reporting Services or Power BI Report server, by adding a Report Viewer web part to a SharePoint page.
+Display a report, from SQL Server Reporting Services or Power BI Report Server, by adding a Report Viewer web part to a SharePoint page.
 
 ![Report Viewer web part on a SharePoint page](media/sharepoint-report-viewer-web-part-on-page.png)
 
@@ -41,11 +41,11 @@ Display a report, from SQL Server Reporting Services or Power BI Report server, 
 
     ![Insert a web part from the office ribbon.](media/sharepoint-insert-web-part.png)
 
-4. Under **Categories**, select **SQL Server REporting Services (Native mode). Under **Parts**, select **Report Viewer**. Then select **Add**.
+4. Under **Categories**, select **SQL Server Reporting Services (Native mode). Under **Parts**, select **Report Viewer**. Then select **Add**.
 
     ![Add Report Viewer Web Part.](media/sharepoint-report-viewer-web-part.png)
 
-    This may initially appear with an error. The error is because the default report server URl is set to *http://localhost* and may not be available at that location.
+    This may initially appear with an error. The error is because the default report server URL is set to *http://localhost* and may not be available at that location.
 
 ## Configure the Report Viewer web part
 

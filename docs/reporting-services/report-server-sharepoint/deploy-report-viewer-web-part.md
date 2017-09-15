@@ -23,7 +23,7 @@ The Report Viewer Web Part is a custom Web Part that can be used to view SQL Ser
 
 Use the following instructions to manually deploy the solution package that add the Report Viewer web part to a SharePoint Server 2013 or SharePoint Server 2016 environment. Deploying the solution is a required step for configuring the web part.
 
-**The Report Viewer web part is a stand alone solution package and is not associated with SharePoint integrated mode for SQL Server Reporting services.**
+**The Report Viewer web part is a standalone solution package and is not associated with SharePoint integrated mode for SQL Server Reporting Services.**
 
 ## Requirements
 
@@ -37,6 +37,12 @@ Use the following instructions to manually deploy the solution package that add 
 **Support Reporting Services versions:**  
 * SQL Server 2008 Reporting Services (Native mode) and later.
 * Power BI Report Server
+
+## Download the Report Viewer web part solution package
+
+The Report Viewer web part is available on the Microsoft Download Center.
+
+[Download Report Viewer web part solution package](https://www.microsoft.com/en-us/download/details.aspx?id=55949)
 
 ## Deploy the farm solution
 

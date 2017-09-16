@@ -53,7 +53,7 @@ The only way to make AG 2's primary replica accept inserts, updates, and deletio
 Distributed availability groups currently work only with availability groups that are created with the same major SQL Server version. For example, all availability groups that participate in a distributed availability group must currently be created with SQL Server 2016. Because the distributed availability groups feature did not exist in SQL Server 2012 or 2014, availability groups that were created with these versions cannot participate in distributed availability groups. 
 
 > [!NOTE]
-> Distributed availability groups can be configured with either the Standard or Enterprise edition, but mixing editions in a distributed availability group is not supported.
+> Distributed availability groups can not be configured with Standard edition or mix of Standard and Enterprise edition.
 
 Because there are two separate availability groups, the process of installing a service pack or cumulative update on a replica that's participating in a distributed availability group is slightly different from that of a traditional availability group:
 

@@ -85,7 +85,7 @@ To set this option at the instance level, see [Configure the max degree of paral
   
 PRIMARY  
   
-Can only be set for the secondaries and indicates that the configuration will be the one set for the primary. If the configuration for the primary changes, secondary will also adjust to the same value. **PRIMARY** is the default setting for the secondaries  
+Can only be set for the secondaries and indicates that the configuration will be the one set for the primary. If the configuration for the primary changes, the value on the secondaries will change accordingly without the need to set the secondaries value explicitely. **PRIMARY** is the default setting for the secondaries.  
   
 LEGACY_CARDINALITY_ESTIMATION **=** { ON | **OFF** | PRIMARY }  
 
@@ -93,7 +93,7 @@ Enables you to set the query optimizer cardinality estimation model to the SQL S
   
 PRIMARY  
   
-This value is only valid on secondaries and specifies that the query optimizer cardinality estimation model setting on all secondaries will be the value set for the primary. If the configuration on the primary for  the query optimizer cardinality estimation model changes, the value on the secondaries will change accordingly. **PRIMARY** is the default setting for the secondaries.  
+This value is only valid on secondaries and specifies that the query optimizer cardinality estimation model setting on all secondaries will be the value set for the primary. If the configuration on the primary for the query optimizer cardinality estimation model changes, the value on the secondaries will change accordingly. **PRIMARY** is the default setting for the secondaries.  
   
 PARAMETER_SNIFFING **=** { **ON** | OFF | PRIMARY}  
 
@@ -101,7 +101,7 @@ Enables or disables parameter sniffing. The default is ON. This is equivalent to
   
 PRIMARY  
   
-This value is only valid on secondaries and specifies that the value for this setting on all secondaries will be the vale set for the primary. If the configuration for the primary changes, the value on the secondaries will change accordingly. This is the default setting for the secondaries.  
+This value is only valid on secondaries and specifies that the value for this setting on all secondaries will be the vale set for the primary. If the configuration for the primary changes, the value on the secondaries will change accordingly without the need to set the secondaries value explicitely. This is the default setting for the secondaries.  
   
 QUERY_OPTIMIZER_HOTFIXES **=** { ON | **OFF** | PRIMARY }  
 
@@ -111,7 +111,7 @@ To set this at the instance level, see [Trace Flags (Transact-SQL)](../../t-sql/
   
 PRIMARY  
   
-This value is only valid on secondaries and specifies that the value for this setting on all secondaries will be the vale set for the primary. If the configuration for the primary changes, the value on the secondaries will change accordingly. This is the default setting for the secondaries.  
+This value is only valid on secondaries and specifies that the value for this setting on all secondaries will be the vale set for the primary. If the configuration for the primary changes, the value on the secondaries will change accordingly without the need to set the secondaries value explicitely. This is the default setting for the secondaries.  
   
 CLEAR PROCEDURE_CACHE  
 
@@ -165,7 +165,7 @@ on the database. This permission can be granted by a user with CONTROL permissio
   
  **DacFx**  
   
- Since ALTER DATABASE SCOPED CONFIGURATION is a new feature in Azure SQL Database and SQL Server 2016 that affects the database schema, exports of the schema (with or without data)  will not be able to be imported into an older version of SQL Server e.g. SQL Server 2012 or SQL Server 2014.   For example, an export to a [DACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_3) or a [BACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_4) from an Azure SQL Database or SQL Server 2016 database that used this new feature would not be able to be imported into a down-level server.  
+ Since ALTER DATABASE SCOPED CONFIGURATION is a new feature in Azure SQL Database and SQL Server 2016 that affects the database schema, exports of the schema (with or without data)  will not be able to be imported into an older version of SQL Server e.g. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] or [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)]. For example, an export to a [DACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_3) or a [BACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_4) from an [!INCLUDE[ssSDS](../../includes/sssds-md.md)] or [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] database that used this new feature would not be able to be imported into a down-level server.  
   
 ## Metadata  
 
@@ -192,10 +192,10 @@ ALTER DATABASE SCOPED CONFIGURATION SET MAXDOP = 1 ;
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP=4 ;  
 ```  
   
-This example sets MAXDOP for a secondary database as it is for its primary database in a geo-replication scenario.  
+This example sets MAXDOP for a secondary database to be the same as it is set for its primary database in a geo-replication scenario.  
   
 ```tsql  
-ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP=PRIMARY  
+ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP=PRIMARY ;
 ```  
   
 ### C. Set LEGACY_CARDINALITY_ESTIMATION  
@@ -203,15 +203,13 @@ ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP=PRIMARY
 This example sets LEGACY_CARDINALITY_ESTIMATION to ON for a secondary database in a geo-replication scenario.  
   
 ```tsql  
-ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY  
-SET LEGACY_CARDINALITY_ESTIMATION=ON ;  
+ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET LEGACY_CARDINALITY_ESTIMATION=ON ;  
 ```  
   
 This example sets LEGACY_CARDINALITY_ESTIMATION for a secondary database as it is for its primary database in a geo-replication scenario.  
   
 ```tsql  
-ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY      
-SET LEGACY_CARDINALITY_ESTIMATION=PRIMARY ;  
+ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET LEGACY_CARDINALITY_ESTIMATION=PRIMARY ;  
 ```  
   
 ### D. Set PARAMETER_SNIFFING  
@@ -225,16 +223,14 @@ ALTER DATABASE SCOPED CONFIGURATION SET PARAMETER_SNIFFING =OFF ;
 This example sets PARAMETER_SNIFFING to OFF for a primary database in a geo-replication scenario.  
   
 ```tsql  
-ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY      
-SET PARAMETER_SNIFFING=OFF  ;  
+ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING=OFF ;  
 ```  
   
 This example sets PARAMETER_SNIFFING for secondary database as it is on primary database   
 in a geo-replication scenario.  
   
 ```tsql  
-ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY      
-SET PARAMETER_SNIFFING =PRIMARY  ;  
+ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING =PRIMARY ;  
 ```  
   
 ### E. Set QUERY_OPTIMIZER_HOTFIXES  

@@ -38,11 +38,11 @@ manager: "jhubbard"
   
 - Set the query optimizer cardinality estimation model independent of the database to compatibility level.  
   
-- Enable or disable parameter sniffing at the database level.  
+- Enable or disable parameter sniffing at the database level.
   
-- Enable or disable query optimization hotfixes at the database level.  
+- Enable or disable query optimization hotfixes at the database level.
 
-- Enable or disable the identity cache at the database level.  
+- Enable or disable the identity cache at the database level.
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -81,37 +81,46 @@ Specifies the default MAXDOP setting that should be used for statements. 0 is th
 
 You can use the max degree of parallelism option to limit the number of processors to use in parallel plan execution. SQL Server considers parallel execution plans for queries, index data definition language (DDL) operations, parallel insert, online alter column, parallel stats collectiion, and static and keyset-driven cursor population.
  
-To set this option at the instance level, see [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). To accomplish this at the query level, add the **QUERYTRACEON** [query hint](https://msdn.microsoft.com/library/ms181714.aspx)  
+To set this option at the instance level, see [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). 
+
+> [!TIP] To accomplish this at the query level, add the **MAXDOP** [query hint](../../t-sql/queries/hints-transact-sql-query.md).  
   
 PRIMARY  
   
-Can only be set for the secondaries and indicates that the configuration will be the one set for the primary. If the configuration for the primary changes, the value on the secondaries will change accordingly without the need to set the secondaries value explicitely. **PRIMARY** is the default setting for the secondaries.  
+Can only be set for the secondaries, while the database in on the primary, and indicates that the configuration will be the one set for the primary. If the configuration for the primary changes, the value on the secondaries will change accordingly without the need to set the secondaries value explicitely. **PRIMARY** is the default setting for the secondaries.  
   
 LEGACY_CARDINALITY_ESTIMATION **=** { ON | **OFF** | PRIMARY }  
 
-Enables you to set the query optimizer cardinality estimation model to the SQL Server 2012 and earlier version independent of the compatibility level of the database. The default is **OFF**, which sets the query optimizer cardinality estimation model based on the compatibility level of the database. Setting this to **ON** is equivalent to [Trace Flag 9481](https://support.microsoft.com/en-us/kb/2801413). To set this at the instance level, see [Trace Flags (Transact-SQL)](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). To accomplish this at the query level, add the **QUERYTRACEON** [query hint](https://msdn.microsoft.com/library/ms181714.aspx).  
+Enables you to set the query optimizer cardinality estimation model to the SQL Server 2012 and earlier version independent of the compatibility level of the database. The default is **OFF**, which sets the query optimizer cardinality estimation model based on the compatibility level of the database. Setting this to **ON** is equivalent to enabling [Trace Flag 9481](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). 
+
+> [!TIP] To accomplish this at the query level, add the **QUERYTRACEON** [query hint](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). 
+> Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, to accomplish this at the query level, add the **USE HINT** [query hint](../../t-sql/queries/hints-transact-sql-query.md) instead of using the trace flag. 
   
 PRIMARY  
   
-This value is only valid on secondaries and specifies that the query optimizer cardinality estimation model setting on all secondaries will be the value set for the primary. If the configuration on the primary for the query optimizer cardinality estimation model changes, the value on the secondaries will change accordingly. **PRIMARY** is the default setting for the secondaries.  
+This value is only valid on secondaries while the database in on the primary, and specifies that the query optimizer cardinality estimation model setting on all secondaries will be the value set for the primary. If the configuration on the primary for the query optimizer cardinality estimation model changes, the value on the secondaries will change accordingly. **PRIMARY** is the default setting for the secondaries.  
   
 PARAMETER_SNIFFING **=** { **ON** | OFF | PRIMARY}  
 
-Enables or disables parameter sniffing. The default is ON. This is equivalent to [Trace Flag 4136](https://support.microsoft.com/en-us/kb/980653). To set  this at the instance level, see [Trace Flags (Transact-SQL)](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). To set this at the query level, see the **OPTIMIZE FOR UNKNOWN** [query hint](https://msdn.microsoft.com/library/ms181714.aspx).  
+Enables or disables [parameter sniffing](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing). The default is ON. This is equivalent to [Trace Flag 4136](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).   
+
+> [!TIP] To accomplish this at the query level, see the **OPTIMIZE FOR UNKNOWN** [query hint](../../t-sql/queries/hints-transact-sql-query.md). 
+> Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, to accomplish this at the query level, the **USE HINT** [query hint](../../t-sql/queries/hints-transact-sql-query.md) is also available. 
   
 PRIMARY  
   
-This value is only valid on secondaries and specifies that the value for this setting on all secondaries will be the vale set for the primary. If the configuration for the primary changes, the value on the secondaries will change accordingly without the need to set the secondaries value explicitely. This is the default setting for the secondaries.  
+This value is only valid on secondaries while the database in on the primary, and specifies that the value for this setting on all secondaries will be the value set for the primary. If the configuration on the primary for using [parameter sniffing](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing) changes, the value on the secondaries will change accordingly without the need to set the secondaries value explicitely. This is the default setting for the secondaries.  
   
 QUERY_OPTIMIZER_HOTFIXES **=** { ON | **OFF** | PRIMARY }  
 
-Enables or disables query optimization hotfixes regardless of the compatibility level of the database. The default is **OFF**. This is equivalent to [Trace Flag 4199](https://support.microsoft.com/en-us/kb/974006).   
+Enables or disables query optimization hotfixes regardless of the compatibility level of the database. The default is **OFF**. This is equivalent to enabling [Trace Flag 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).   
 
-To set this at the instance level, see [Trace Flags (Transact-SQL)](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). To accomplish this at the query level, add the **QUERYTRACEON** [query hint](https://msdn.microsoft.com/library/ms181714.aspx).  
+> [!TIP] To accomplish this at the query level, add the **QUERYTRACEON** [query hint](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). 
+> Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, to accomplish this at the query level, add the USE HINT [query hint](../../t-sql/queries/hints-transact-sql-query.md) instead of using the trace flag.  
   
 PRIMARY  
   
-This value is only valid on secondaries and specifies that the value for this setting on all secondaries will be the vale set for the primary. If the configuration for the primary changes, the value on the secondaries will change accordingly without the need to set the secondaries value explicitely. This is the default setting for the secondaries.  
+This value is only valid on secondaries while the database in on the primary, and specifies that the value for this setting on all secondaries will be the value set for the primary. If the configuration for the primary changes, the value on the secondaries will change accordingly without the need to set the secondaries value explicitely. This is the default setting for the secondaries.  
   
 CLEAR PROCEDURE_CACHE  
 

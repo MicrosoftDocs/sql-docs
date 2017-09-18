@@ -73,8 +73,8 @@ SQL Server 2017 on Linux supports the SQL Server database engine. The following 
 |-----------------------|-----------------|  
 |[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] includes the [!INCLUDE[ssDE](../includes/ssde-md.md)], the core service for storing, processing, and securing data, replication, full-text search, tools for managing relational and XML data, and in database analytics integration.|  
 
-**Developer, Enterprise Core, and  Evaluation Editions**  
-For features supported by Developer, Enterprise Core, and Evaluation editions, see features listed for the SQL Server Enterprise Edition in the tables below.
+**Developer, Enterprise Core, and  Evaluation editions**  
+For features supported by Developer, Enterprise Core, and Evaluation editions, see features listed for the SQL Server Enterprise edition in the tables below.
 
 The Developer edition continues to support only 1 client for [SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md). 
   
@@ -89,7 +89,7 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |Maximum memory-optimized data size per database in [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Unlimited memory| 32 GB| 16 GB| 352 MB|
 |Maximum relational database size|524 PB|524 PB|524 PB|10 GB|  
   
-<sup>1</sup> Enterprise Edition with Server + Client Access License (CAL) based licensing (not available for new agreements) is limited to a maximum of 20 cores per SQL Server instance. There are no limits under the Core-based Server Licensing model. For more information, see [Compute Capacity Limits by Edition of SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
+<sup>1</sup> Enterprise edition with Server + Client Access License (CAL) based licensing (not available for new agreements) is limited to a maximum of 20 cores per SQL Server instance. There are no limits under the Core-based Server Licensing model. For more information, see [Compute capacity limits by edition of SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
  
 ##  <a name="RDBMSHA"></a> RDBMS high availability  
   
@@ -113,11 +113,11 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |Encrypted backup|Yes|Yes|No|No|
 |Hybrid backup to Windows Azure (backup to URL)|Yes|Yes|No|No|
   
-<sup>1</sup> On Enterprise Edition, the number of nodes is the operating system maximum. On Standard edition there is support for two nodes. 
+<sup>1</sup> On Enterprise edition, the number of nodes is the operating system maximum. On Standard edition there is support for two nodes. 
 
-<sup>2</sup> On Enterprise Edition, provides support for up to 8 secondary replicas - including 2 synchronous secondary replicas. 
+<sup>2</sup> On Enterprise edition, provides support for up to 8 secondary replicas - including 2 synchronous secondary replicas. 
 
-<sup>3</sup> Standard Edition supports basic availability groups. A basic availability group supports two replicas, with one database. For more information about basic availability groups, see [Basic Availability Groups](../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md).    
+<sup>3</sup> Standard edition supports basic availability groups. A basic availability group supports two replicas, with one database. For more information about basic availability groups, see [Basic Availability Groups](../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md).    
 
 ##  <a name="RDBMSSP"></a> RDBMS scalability and performance  
   
@@ -142,7 +142,7 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |Bulk insert improvements|Yes|Yes|Yes|Yes|
 
 
-<sup>1</sup> In-Memory OLTP data size and Columnstore segment cache are limited to the amount of memory specified by edition in the Scale Limits section. The max degrees of parallelism is limited. The degrees of process parallelism (DOP) for an index build is limited to 2 DOP for the Standard Edition and 1 DOP for the Web and Express Editions. This refers to columnstore indexes created over disk-based tables and memory-optimized tables.
+<sup>1</sup> In-Memory OLTP data size and Columnstore segment cache are limited to the amount of memory specified by edition in the Scale Limits section. The max degrees of parallelism is limited. The degrees of process parallelism (DOP) for an index build is limited to 2 DOP for the Standard edition and 1 DOP for the Web and Express editions. This refers to columnstore indexes created over disk-based tables and memory-optimized tables.
 
 ##  <a name="RDBMSS"></a> RDBMS security  
   
@@ -200,7 +200,7 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 
 ## <a name="IS"></a> Integration Services
 
-For info about the Integration Services (SSIS) features supported by the editions of [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)], see [Integration Services Features Supported by the Editions of SQL Server](../integration-services/integration-services-features-supported-by-the-editions-of-sql-server.md).
+For info about the Integration Services (SSIS) features supported by the editions of [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)], see [Integration Services features supported by the editions of SQL Server](../integration-services/integration-services-features-supported-by-the-editions-of-sql-server.md).
 
 ##  <a name="SLS"></a> Spatial and location services  
   

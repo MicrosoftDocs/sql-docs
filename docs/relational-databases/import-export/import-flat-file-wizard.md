@@ -24,6 +24,9 @@ Import Flat File Wizard is a simple way to copy data from a flat file (.csv, .tx
 This wizard was created to improve the current import experience leveraging an intelligent framework known as Program Synthesis using Examples ([PROSE](https://microsoft.github.io/prose/)). For a user without specialized domain knowledge, importing data can often be a complex, error prone, and tedious task. This wizard streamlines the import process as simple as selecting an input file and unique table name, and the PROSE framework handles the rest.
 
 PROSE analyzes data patterns in your input file to infer column names, types, delimiters, and more. This framework learns the structure of the file and does all of the hard work so our users don't have to.
+
+## Prerequisites
+This feature is only available on SQL Server Management Studio (SSMS) v17.3 or later. Please make sure you are using the latest version. You can find the latest version [here.](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms)
  
 ## <a id="started"></a>Getting Started
 To access the Import Flat File Wizard, follow these steps:

@@ -82,7 +82,7 @@ manager: "erikre"
  For a Native mode report server, the e-mail delivery extension is configured through the Native mode [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager and by editing the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] configuration files. For a SharePoint mode report server, the e-mail delivery extension is configured in SharePoint management pages and PowerShell scripts.  
   
  
- For information on how to configure a native mode report server, see [email settings - Reporting Services Native mode (Configuration Manager)](https://msdn.microsoft.com/library/ms189342.aspx)
+ For information on how to configure a native mode report server, see [email settings - Reporting Services Native mode (Configuration Manager)](/sql-docs/docs/reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager)
  
  
  For information on how to configure a SharePoint mode report server, see the following:  

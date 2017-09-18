@@ -35,7 +35,7 @@ manager: "erikre"
  [Data Regions and Maps &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/data-regions-and-maps-report-builder-and-ssrs.md)  
  Describes the types of data regions that can be added to a report layout. Data regions determine the appearance of a report: tabular, matrix, list, or chart.  
   
- [Report Parameters Concept (Report Builder and SSRS)](https://msdn.microsoft.com/library/ee240844.aspx)  
+ [Report Parameters Concept (Report Builder and SSRS)](/sql-docs/docs/reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs)  
  Describes the ways to define and use report parameters, and how they are independently managed from the report definition on the report server.  
   
 ## See Also  

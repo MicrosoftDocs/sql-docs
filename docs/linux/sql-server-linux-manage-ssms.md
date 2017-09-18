@@ -15,9 +15,9 @@ ms.custom: H1Hack27Feb2017
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-This topic introduces [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/en-us/library/hh213248.aspx) and walks you through a couple of common tasks. SSMS is a Windows application, so use SSMS when you have a Windows machine that can connect to a remote SQL Server instance on Linux.
+This topic introduces [SQL Server Management Studio (SSMS)](/sql-docs/docs/ssms/sql-server-management-studio-ssms) and walks you through a couple of common tasks. SSMS is a Windows application, so use SSMS when you have a Windows machine that can connect to a remote SQL Server instance on Linux.
 
-[SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/en-us/library/hh213248.aspx) is part of a suite of SQL tools that Microsoft offers free of charge for your development and management needs. SSMS is an integrated environment to access, configure, manage, administer, and develop all components of SQL Server running on-premises or in the cloud, on Linux, Windows or Docker on macOS and Azure SQL Database and Azure SQL Data Warehouse. SSMS combines a broad group of graphical tools with a number of rich script editors to provide access to SQL Server to developers and administrators of all skill levels.
+[SQL Server Management Studio (SSMS)](/sql-docs/docs/ssms/sql-server-management-studio-ssms) is part of a suite of SQL tools that Microsoft offers free of charge for your development and management needs. SSMS is an integrated environment to access, configure, manage, administer, and develop all components of SQL Server running on-premises or in the cloud, on Linux, Windows or Docker on macOS and Azure SQL Database and Azure SQL Data Warehouse. SSMS combines a broad group of graphical tools with a number of rich script editors to provide access to SQL Server to developers and administrators of all skill levels.
 
 SSMS offers a broad set of development and management capabilities for SQL Server, including tools to:
 
@@ -33,7 +33,7 @@ See [Use SQL Server Management Studio](https://msdn.microsoft.com/en-us/library/
 
 ## Install the newest version of SQL Server Management Studio (SSMS)
 
-When working with SQL Server, you should always use the most recent version of SQL Server Management Studio (SSMS). The latest version of SSMS is continually updated and optimized and currently works with SQL Server 2017 on Linux. To download and install the latest version, see [Download SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx). To stay up-to-date, the latest version of SSMS prompts you when there is a new version available to download. 
+When working with SQL Server, you should always use the most recent version of SQL Server Management Studio (SSMS). The latest version of SSMS is continually updated and optimized and currently works with SQL Server 2017 on Linux. To download and install the latest version, see [Download SQL Server Management Studio](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms). To stay up-to-date, the latest version of SSMS prompts you when there is a new version available to download. 
 
 ## Before you begin
 - See [Use SSMS on Windows to connect to SQL Server on Linux](sql-server-linux-develop-use-ssms.md) for how to Connect and Query using SSMS
@@ -50,7 +50,7 @@ While connected to the *master* database, you can create databases on the server
 
 3. In the *New Database* dialog, enter a name for your new database, and then click *OK*
 
-The new database is successfully created in your server. If you prefer to create a new database using T-SQL, then see [CREATE DATABASE (SQL Server Transact-SQL)](https://msdn.microsoft.com/en-us/library/ms176061.aspx).
+The new database is successfully created in your server. If you prefer to create a new database using T-SQL, then see [CREATE DATABASE (SQL Server Transact-SQL)](/sql-docs/docs/t-sql/statements/create-database-sql-server-transact-sql).
 
 ### Drop a database
 
@@ -62,11 +62,11 @@ The new database is successfully created in your server. If you prefer to create
 
 4. In the *Delete Object* dialog, check *Close existing connections* and then click *OK*
 
-The database is successfully dropped from your server. If you prefer to drop a database using T-SQL, then see [DROP DATABASE (SQL Server Transact-SQL)](https://msdn.microsoft.com/en-us/library/ms178613.aspx).
+The database is successfully dropped from your server. If you prefer to drop a database using T-SQL, then see [DROP DATABASE (SQL Server Transact-SQL)](/sql-docs/docs/t-sql/statements/drop-database-transact-sql).
 
 ## Use Activity Monitor to see information about SQL Server activity
 
-The [Activity Monitor](https://msdn.microsoft.com/en-us/library/hh212951.aspx) tool is built-in into SQL Server Management Studio (SSMS) and displays information about SQL Server processes and how these processes affect the current instance of SQL Server.
+The [Activity Monitor](/sql-docs/docs/relational-databases/performance-monitor/activity-monitor) tool is built-in into SQL Server Management Studio (SSMS) and displays information about SQL Server processes and how these processes affect the current instance of SQL Server.
 
 1. Start SSMS and connect to your server in SQL Server 2017 RC2 on Linux
 
@@ -86,5 +86,5 @@ When a pane is expanded, Activity Monitor queries the instance for information. 
 - [Use SQL Server Management Studio](https://msdn.microsoft.com/en-us/library/ms174173.aspx)
 - [Export and Import a database with SSMS](sql-server-linux-migrate-ssms.md)
 - [Tutorial: SQL Server Management Studio](https://msdn.microsoft.com/en-us/library/bb934498.aspx)
-- [Tutorial: Writing Transact-SQL Statements](https://msdn.microsoft.com/en-us/library/ms365303.aspx)
-- [Server Performance and Activity Monitoring](https://msdn.microsoft.com/en-us/library/ms191511.aspx)
+- [Tutorial: Writing Transact-SQL Statements](/sql-docs/docs/t-sql/tutorial-writing-transact-sql-statements)
+- [Server Performance and Activity Monitoring](/sql-docs/docs/relational-databases/performance/server-performance-and-activity-monitoring)

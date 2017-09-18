@@ -47,9 +47,7 @@ For an overview of all [!INCLUDE[tsql](../../includes/tsql-md.md)] date and time
   
 ## Syntax  
   
-```sql
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
+```
 @@DATEFIRST  
 ```  
   

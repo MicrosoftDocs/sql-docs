@@ -94,7 +94,7 @@ Supported platforms are as follows:
   + [rxLogit](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxlogit)
   + [rxBTrees](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxbtrees)
   + [rxDtree](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdtree)
-  + [rxdForest](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdforest)
+  + [rxDForest](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdforest)
 
 If you need to use models from MicrosoftML, use realtime scoring with sp_rxPredict.
 

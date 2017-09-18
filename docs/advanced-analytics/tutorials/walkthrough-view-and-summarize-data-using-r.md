@@ -2,7 +2,7 @@
 title: "View and summarize data using R (walkthrough)| Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "07/14/2017"
+ms.date: "09/08/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -184,7 +184,7 @@ In this section, you'll try out several of the functions provided in [!INCLUDE[r
     **Results**
 
     ```
-    rxSummary(formula = ~fare_amount:F(passenger_count), data = inDataSource)
+    rxSummary(formula = ~fare_amount:F(passenger_count, 1,6), data = inDataSource)
     Data: inDataSource (RxSqlServerData Data Source)
     Number of valid observations: 1000
     Name  Mean    StdDev   Min Max ValidObs MissingObs

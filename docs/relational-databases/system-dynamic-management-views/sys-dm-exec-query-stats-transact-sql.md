@@ -109,7 +109,7 @@ manager: "jhubbard"
 |**max_columnstore_segment_skips**|**bigint**|The maximum number of columnstore segments ever skipped by the query during one execution. Cannot be null.<br /><br /> **Applies to**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].|  
 |**pdw_node_id**|**int**|**Applies to**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> The identifier for the node that this distribution is on.|  
   
-> [!NOTE] 
+> [!NOTE]
 > <sup>1</sup> For natively compiled stored procedures when statistics collection is enabled, worker time is collected in milliseconds. If the query executes in less than a millisecond, the value will be 0.  
   
 ## Permissions  

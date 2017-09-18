@@ -1,7 +1,7 @@
 ---
 title: "@@NESTLEVEL (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "09/17/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -34,7 +34,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
-  
 @@NESTLEVEL  
 ```  
   

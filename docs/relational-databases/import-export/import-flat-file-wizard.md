@@ -23,7 +23,7 @@ Import Flat File Wizard is a simple way to copy data from a flat file (.csv, .tx
 ## Why would I use this wizard?
 This wizard was created to improve the current import experience leveraging an intelligent framework known as Program Synthesis using Examples ([PROSE](https://microsoft.github.io/prose/)). For a user without specialized domain knowledge, importing data can often be a complex, error prone, and tedious task. This wizard streamlines the import process as simple as selecting an input file and unique table name, and the PROSE framework handles the rest.
 
-PROSE analyzes data patterns in your input file to infer column names, types, delimiters, and more. This framework learns the structure of the file and does all of the hard work so our users don't have to. We continue to add applications using this framework so please stay tuned.
+PROSE analyzes data patterns in your input file to infer column names, types, delimiters, and more. This framework learns the structure of the file and does all of the hard work so our users don't have to.
  
 ## <a id="started"></a>Getting Started
 To access the Import Flat File Wizard, follow these steps:
@@ -81,6 +81,6 @@ This page indicates whether the import was successful. If a green check mark app
 
 Learn more about the wizard.
 
+- **Learn more about importing other sources** If you are looking to import more than flat files, see [SQL Server Import and Export Wizard](https://docs.microsoft.com/en-us/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard).
 - **Learn more about PROSE.** If you are looking for an overview of the intelligent framework used by this wizard, see [PROSE SDK](https://microsoft.github.io/prose/).
-- **Learn more about importing other sources** If you are looking to import more than flat files, see [SQL Server Import and Export Wizard](https://docs.microsoft.com/en-us/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard). 
 

@@ -29,6 +29,7 @@
 ### [Use a Format File to Skip a Table Column](use-a-format-file-to-skip-a-table-column-sql-server.md)  
 ### [Use a Format File to Skip a Data Field](use-a-format-file-to-skip-a-data-field-sql-server.md)  
 ### [Use a Format File to Map Table Columns to Data-File Fields](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)
+# [Import Flat File with the Import Flat File Wizard](import-flat-file-wizard.md)
 # [Import and Export with the Import and Export Wizard](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)
 # [Import from Excel](import-data-from-excel-to-sql.md) 
 # [Import JSON Documents](../json/import-json-documents-into-sql-server.md)

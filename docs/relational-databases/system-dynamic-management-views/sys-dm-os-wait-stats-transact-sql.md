@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_os_wait_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/13/2017"
+ms.date: "09/18/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -162,7 +162,10 @@ This command resets all counters to 0.
 |CONNECTION_ENDPOINT_LOCK |TBD <br /> **APPLIES TO**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |COUNTRECOVERYMGR |TBD <br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |CREATE_DATINISERVICE |TBD <br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|CXPACKET |Occurs with parallel query plans when trying to synchronize the query processor exchange iterator. If waiting is excessive and cannot be reduced by tuning the query (such as adding indexes), consider adjusting the cost threshold for parallelism or lowering the degree of parallelism.| 
+|CXCONSUMER |Occurs with parallel query plans when a consumer thread waits for a producer thread to send rows. This is a normal part of parallel query execution. <br /> **Applies to**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]| 
+|CXPACKET |Occurs with parallel query plans when synchronizing the query processor exchange iterator, and when producing and consuming rows. If waiting is excessive and cannot be reduced by tuning the query (such as adding indexes), consider adjusting the cost threshold for parallelism or lowering the degree of parallelism.
+> [!NOTE]
+> Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], CXPACKET only refers to synchronizing the query processor exchange iterator, and to producing rows for consumer threads. Consumer threads are tracked separately in the CXCONSUMER wait type.| 
 |CXROWSET_SYNC |Occurs during a parallel range scan.| 
 |DAC_INIT |Occurs while the dedicated administrator connection is initializing.| 
 |DBCC_SCALE_OUT_EXPR_CACHE |TBD <br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 

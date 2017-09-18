@@ -98,9 +98,9 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |Log shipping|Yes|Yes|Yes|No|  
 |Backup compression|Yes|Yes|No|No| 
 |Database snapshot|Yes|No|No|No|
-|Always On failover cluster instance|Yes<br /><br /> Number of nodes is the operating system maximum|Yes<br /><br /> Support for 2 nodes|No|No| 
-|Always On availability groups|Yes<br /><br /> Up to 8 secondary replicas, including 2 synchronous secondary replicas|No|No|No|
-|Basic availability groups <sup>1</sup>|No|Yes<br /><br /> Support for 2 nodes|No|No|
+|Always On failover cluster instance<sup>1</sup>|Yes|Yes|No|No| 
+|Always On availability groups<sup>2</sup>|Yes|No|No|No|
+|Basic availability groups <sup>3</sup>|No|Yes|No|No|
 |Minimum replica commit availability group|Yes|Yes|No|No|
 |Clusterless availability group|Yes|Yes|No|No|
 |Online page and file restore|Yes|No|No|No|
@@ -113,7 +113,11 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |Encrypted backup|Yes|Yes|No|No|
 |Hybrid backup to Windows Azure (backup to URL)|Yes|Yes|No|No|
   
-<sup>1</sup> For more information about Basic availability groups, see [Basic Availability Groups](../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md).  
+<sup>1</sup> On Enterprise Edition, the number of nodes is the operating system maximum. On Standard edition there is support for two nodes. 
+
+<sup>2</sup> On Enterprise Edition, provides support for up to 8 secondary replicas - including 2 synchronous secondary replicas. 
+
+<sup>3</sup> Standard Edition supports basic availability groups. A basic availability group supports two replicas, with one database. For more information about basic availability groups, see [Basic Availability Groups](../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md).    
 
 ##  <a name="RDBMSSP"></a> RDBMS scalability and performance  
   

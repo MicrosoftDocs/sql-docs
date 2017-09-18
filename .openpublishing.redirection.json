@@ -3049,6 +3049,16 @@
             "source_path": "docs/database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md",
             "redirect_url": "/sql/database-engine/install-windows/add-features-to-an-instance-of-sql-server-setup",
             "redirect_document_id": false  
+        },
+        {
+            "source_path": "docs/reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md",
+            "redirect_url": "/sql/reporting-services/report-server-sharepoint/deploy-report-viewer-web-part",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/relational-databases/security/encryption/transparent-data-encryption-tde.md",
+            "redirect_url": "/sql/relational-databases/security/encryption/transparent-data-encryption",
+            "redirect_document_id": false
         }
     ]
 }

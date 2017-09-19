@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "sys.sp_drop_trusted_assembly"
 ms.assetid: 
 caps.latest.revision: 
-author: "tmullaney"
-ms.author: "thmullan;rickbyh"
+author: "byham"
+ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # sys.sp_drop_trusted_assembly (Transact-SQL)  
@@ -41,7 +41,7 @@ sp_drop_trusted_assembly
 ## Arguments
 
 [ @hash = ] '*value*'  
-The SHA2_512 hash value of the assembly to add to the list of trusted assemblies for the server. Trusted assemblies may load when clr strict security is enabled, even if the assembly is unsigned or the database is not marked as trustworthy.
+The SHA2_512 hash value of the assembly to drop from the list of trusted assemblies for the server. Trusted assemblies may load when clr strict security is enabled, even if the assembly is unsigned or the database is not marked as trustworthy.
 
 ## Remarks  
 

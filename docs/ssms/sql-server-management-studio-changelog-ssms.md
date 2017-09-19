@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Management Studio - Changelog (SSMS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/07/2017"
+ms.date: "09/15/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -19,8 +19,76 @@ manager: "craigg"
 
 This article provides details about updates, improvements, and bug fixes for the current and previous versions of SSMS. Download [previous SSMS versions below](#previous-ssms-releases).
 
-## [SSMS 17.2](download-sql-server-management-studio-ssms.md)
 
+## [SSMS 17.3](download-sql-server-management-studio-ssms.md)
+Generally available | Build number: NEEDED
+
+### Enhancements
+
+- Removed all "RC" branding
+- New "Import Flat File" wizard added to streamline import experience of CSV files with an intelligent framework, requiring minimal user intervention or specialized domain knowledge.
+- Updated waits filtering and categorization in Performance Dashboard historical waits report.
+- Added the syntax check of the "Predict" function
+- Added the syntax check of the External Library Management queries.
+- Added  SMO support for External Library Management
+- Added "Start PowerShell" support to "Registered Servers" window (requires a new SQL PowerShell module)
+- Always On: added "Read only routing" support for AG 
+- Added "XEvent Profiler" node to Object Explorer
+- Added ADAL tracing to Output Window (off by default; needs to be turned on in user settings under "Options | Azure Services | Azure Cloud | ADAL Output Window Trace Level")
+- Query Store: 
+  - Query Store UI will be accessible even when QDS is OFF as long as QDS have recorded any data.
+  - QueryStore UI now exposes waits categorization in all the existing reports. This will let customers unlock the scenarios of Top Waiting Queries and many more.
+
+
+
+### Bug Fixes
+
+- XEvent: Fixed issue where SSMS opens only part of the events in .xel file
+- Always On: Fixed issue where "Restore log backups" may fail with error "The log in this backup set terminates at LSN x, which is too early to apply to the database"
+- Job Activity Monitor: fixed inconsistent icons - [Connect item 3133100](https://connect.microsoft.com/SQLServer/feedback/details/3133100).
+- Query Store: Fixed Issue where user cannot choose "custom" date range for Query Store reports. Linked to below connect items.
+   - [Connect item 3139842](https://connect.microsoft.com/SQLServer/feedback/details/3139842)
+   - [Connect item 3139399](http://connect.microsoft.com/SQLServer/feedback/details/3139399)
+- Fixed issue where connection dialog doesn't "clear" the most recently used DB when saved info has named DB and user selects <default>
+- Object Scripting:
+	- Fixed an issue where "Generate database script" not working and throwing an error when the user has a paused DW database on the server, but selected another non-DW database and tried t script it
+	- Fixed issue where the header for scripted Stored Procedures was not matching the script settings, resulting in a misleading script
+		[Connect item 3139784](http://connect.microsoft.com/SQLServer/feedback/details/3139784)
+	- Re-enabled the "Script button" when targeting SQL Azure objects
+	- Fixed issue where SSMS was not allowing scripting for "Alter" or "Execute" on some objects (UDF, View, SP, Trigger) when connected to a SQL Azure DB.
+		[Connect item 3136386](https://connect.microsoft.com/SQLServer/feedback/details/3136386)
+	- Made inclusion of the scripting parameters headers optional (off by default;  can be enabled in user settings under "Options | SQL Server Object Explorer | Scripting | Include scripting parameters header") - [Connect item 3139199](https://connect.microsoft.com/SQLServer/feedback/details/3139199)
+- Query editor:
+  - Improved intellisense when targeting SQL Azure DBs
+  - Fixed an issue where queries failed due to expired authentication token (Universal Authentication)
+- Always On:
+   - Added seeding mode settings to Always On dashboard
+   - Fixed issue where it was not possible to create a Linux AG when primary is on Windows [Connect item 3139856](https://connect.microsoft.com/SQLServer/feedback/details/3139856)
+- Fixed several "Out of Memory" issues in SSMS when running queries
+	[Connect item 2845190](https://connect.microsoft.com/SQLServer/feedback/details/2845190)
+	[Connect item 3123864](https://connect.microsoft.com/SQLServer/feedback/details/3123864)
+- Profiler: fixed issue were Profiler was not working when targeting SQL 2005
+- Activity Monitor: fixed an issue where Activity Monitor does not work when pointed at SQL Server running on Linux
+
+**Analysis Services (AS)**
+
+- Fixed a number of issues with Deployment Wizard to support tabular 1400 compat-level models and Power Query data sources
+- Deployment Wizard can now deploy to AS Azure when running from Command line
+- When using Windows Auth in AS Azure the user will now see in name of the user account in the Object Explorer correctly
+
+
+### Known issues in this release:
+
+**Integration Services (IS)**
+
+- The [execution_path] in [catalog].[event_messagea] is not correct for package executions in Scale Out. The [execution_path] starts with “\Package” instead of the object name of the package executable. When viewing the overview report of package executions in SSMS, the link of “Execution Path” in Execution Overview cannot work. The workaround is to click “View Messages” on overview report to check all event messages.
+
+
+## Previous SSMS releases
+
+Download previous SSMS versions by clicking the title links in the following sections.
+
+## ![download](../ssdt/media/download.png) [SSMS 17.2](https://go.microsoft.com/fwlink/?linkid=854085)
 Generally available | Build number: 14.0.17177.0
 
 ### Enhancements
@@ -71,11 +139,11 @@ Generally available | Build number: 14.0.17177.0
   - Use CTRL+F
 
 
-### Analysis Services (AS)
+**Analysis Services (AS)**
 
 - New AAD role member selection for users without email addresses in AS Azure models in SSMS
 
-### Integration Services (IS)
+**Integration Services (IS)**
 
 - Added new column ("Executed Count") to the execution report for SSIS
 
@@ -94,7 +162,7 @@ The connection is broken and recovery is not possible. The client driver attempt
   - The **Registered Server** component does not support Azure AD authentication.
   - The **Database Engine Tuning Advisor** is not supported for Azure AD authentication. There is a known issue where the error message presented to the user is less than helpful: *Could not load file or assembly 'Microsoft.IdentityModel.Clients.ActiveDirectory,…* instead of the expected *Database Engine Tuning Advisor does not support Microsoft Azure SQL Database. (DTAClient)*.
 
-**AS**
+**Analysis Services (AS)**
 
 - Object Explorer in SSAS will not show the Windows Auth username in AS Azure connection properties.
 
@@ -134,7 +202,8 @@ The connection is broken and recovery is not possible. The client driver attempt
 - DTA: Fixed an issue where DTAEngine.exe terminates with Heap Corruption when evaluating Partition Function with Certain Boundary Values.
 
 
-Analysis Services (AS)
+**Analysis Services (AS)**
+
 - Fixed an issue where AS Restore Database would fail with an error if the DB had a different Name than ID
 - Fixed an issue causing the DAX query window to disregard the menu option for toggling IntelliSense Enabled
 - Fixed an issue that prevented connecting to SSAS through msmdpump IIS http/https addresses
@@ -143,14 +212,9 @@ Analysis Services (AS)
 - Fixed an extremely rare issue that could cause the delete database dialog to raise an error when loading
 - Fixed an issue that may occur when attempting to view partitions in 1400-compat level model containing a mix of SQL query and M partition definitions
 
-Integration Services (IS)
+**Integration Services (IS)**
 - Fixed issue where the execution information reports of SSISDB catalog can't be displayed
 - Addressed issues in SSMS related to poor performance with large number of projects/packages
-
-
-## Previous SSMS releases
-
-Download previous SSMS versions by clicking the title links in the following sections.
 
 ## ![download](../ssdt/media/download.png) [SSMS 17.1](https://go.microsoft.com/fwlink/?linkid=849819)
 Generally available | Build number: 14.0.17119.0

@@ -1,7 +1,7 @@
 ---
 title: "Download SQL Server Management Studio (SSMS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/07/2017"
+ms.date: "09/15/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -38,9 +38,9 @@ Use SQL Server Management Studio (SSMS) to query, design, and manage your databa
 
 SSMS 17.x is the latest generation of *SQL Server Management Studio* and provides support for SQL Server 2017.
 
-**[![download](../ssdt/media/download.png) Download SQL Server Management Studio 17.2](https://go.microsoft.com/fwlink/?linkid=854085)**
+**[![download](../ssdt/media/download.png) Download SQL Server Management Studio 17.3](https://go.microsoft.com/fwlink/?linkid=NEEDED)**
 
-**[![download](../ssdt/media/download.png) Download SQL Server Management Studio 17.2 Upgrade Package (upgrades 17.x to 17.2)](https://go.microsoft.com/fwlink/?linkid=854087)**
+**[![download](../ssdt/media/download.png) Download SQL Server Management Studio 17.3 Upgrade Package (upgrades 17.x to 17.3)](https://go.microsoft.com/fwlink/?linkid=NEEDED)**
 
 The SSMS 17.x installation does not upgrade or replace SSMS versions 16.x or earlier. SSMS 17.x installs side by side with previous versions so both versions are available for use.
 If a computer contains side by side installations of SSMS, verify you start the correct version for your specific needs. The latest version is labeled *Microsoft SQL Server Management Studio 17*, and has a new icon: 
@@ -55,59 +55,30 @@ If a computer contains side by side installations of SSMS, verify you start the 
 
 **Version Information**
 
-The release number: 17.2
-The build number for this release: 14.0.17177.0
+The release number: 17.3
+The build number for this release: NEEDED
 
 ## New in this Release
 
-SSMS 17.2 is the latest version of SQL Server Management Studio. The 17.x generation of SSMS provides support for almost all feature areas on SQL Server 2008 through SQL Server 2017. Version 17.x also supports SQL Analysis Service PaaS.
+SSMS 17.3 is the latest version of SQL Server Management Studio. The 17.x generation of SSMS provides support for almost all feature areas on SQL Server 2008 through SQL Server 2017. Version 17.x also supports SQL Analysis Service PaaS.
 
-Version 17.2 includes:
+Version 17.3 includes:
 
-- Multi-Factor Authentication (MFA)
-  - Multiple-user Azure AD authentication for Universal Authentication with Multi-factor authentication (UA with MFA)
-  - A new user credential input field was added for Universal Authentication with MFA to support multi-user authentication.
-- The connection dialog box now supports the following 5 authentication methods:
-  - Windows Authentication
-  - SQL Server Authentication
-  - Active Directory - Universal with MFA support
-  - Active Directory - Password
-  - Active Directory - Integrated
 
-- Database import/export for DacFx wizard can now use Universal Authentication with MFA.
-- For API support, see [IUniversalAuthProvider Interface](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.iuniversalauthprovider.aspx).
-- ADAL managed library used by Azure AD Universal Authentication with MFA was upgraded to version 3.13.9.
-- A new CLI interface supporting Azure AD admin setting for SQL Database and SQL Data Warehouse.
+- Removed all "RC" branding
+- New "Import Flat File" wizard added to streamline import experience of CSV files with an intelligent framework, requiring minimal user intervention or specialized domain knowledge.
+- Updated waits filtering and categorization in Performance Dashboard historical waits report.
+- Added the syntax check of the "Predict" function.
+- Added the syntax check of the External Library Management queries.
+- Added  SMO support for External Library Management.
+- Added "Start PowerShell" support to "Registered Servers" window (requires a new SQL PowerShell module).
+- Always On: added "Read only routing" support for AG.
+- Added "XEvent Profiler" node to Object Explorer.
+- Added ADAL tracing to Output Window (off by default; needs to be turned on in user settings under "Options | Azure Services | Azure Cloud | ADAL Output Window Trace Level").
+- Query Store: 
+  - Query Store UI will be accessible even when QDS is OFF as long as QDS have recorded any data.
+  - QueryStore UI now exposes waits categorization in all the existing reports. This will let customers unlock the scenarios of Top Waiting Queries and many more.
 
- For more information on the Active Directory authentication methods, see [Universal Authentication with SQL Database and SQL Data Warehouse (SSMS support for MFA)](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication) and [Configure Azure SQL Database multi-factor authentication for SQL Server Management Studio](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication-configure).
-
-- Output window has entries for queries run during expansion of Object Explorer nodes
-- Enabled View designer for Azure SQL Databases
-- The default scripting options for scripting objects from Object Explorer in SSMS have changed:
-  - Previously, the default on a new install was to have the generated script target the latest version of SQL Server (currently SQL Server 2017).
-  - In SSMS 17.2 a new option has been added: *Match Script Settings to Source*. When set to *True*, the generated script targets the same version, engine type, and engine edition as the server the object being scripted is from.
-  - The *Match Script Settings to Source* value is set to *True* by default, so new installs of SSMS will automatically default to always scripting objects to the same target as the original server.
-  - When the *Match Script Settings to Source* value is set to *False*, the normal scripting target options will be enabled and function as they did previously.
-  - Additionally, all the scripting options have been moved to their own section - *Version Options*. They are no longer under *General Scripting Options*.
-
-- Added support for National Clouds in "Restore from URL"
-- QueryStoreUI reports now supports additional metrics (RowCount, DOP, CLR Time etc.) from sys.query_store_runtime_stats.
-- IntelliSense is now supported for Azure SQL Database
-	- https://connect.microsoft.com/SQLServer/feedback/details/3100677/ssms-2016-would-be-nice-to-have-intellisense-on-azure-sql-databases
-- Security: connection dialog will default to not trusting server certificates and to requesting encryption for Azure SQL Database connections
-- General improvements around support for SQL Server on Linux:
- - Database Mail node is back
- - Addressed some issues related to paths
- - Activity Monitor stability improvements
- - Connection Properties dialog displays the correct platform
-- Performance Dashboard server report now available as a default report:
-  - Can connect to SQL Server 2008 and newer versions.
-  - Missing indexes sub-report uses scoring to assist in identifying most useful indexes.
-  - Historical wait stats sub-report now aggregates waits be category. Idle and sleep waits filtered out by default.
-  - New Historical latches sub-report.
-- Showplan node search allows searching in plan properties. Easily look for any operator property such as table name. To use this option when viewing a plan:
-  - Right-click on plan, and in the context menu click on Find Node option
-  - Use CTRL+F
 
 For the full list of changes, see [SQL Server Management Studio - Changelog (SSMS)](../ssms/sql-server-management-studio-changelog-ssms.md).
 

@@ -38,9 +38,7 @@ The list of data providers may contain several entries for Microsoft Access. Sel
 |Microsoft Access (Microsoft Jet Database Engine)|Office versions earlier than Office 2007|
 
 > [!IMPORTANT]
-> You may have to download and install additional files to connect to the version of Access that you select. See [Get the files you need to connect to Access](#officeDownloads) on this page for more info.
-
-If you have a problem when you specify a version, try specifying a different version, even an earlier version. For example, you may not be able to install the Office 2016 data providers because you have a Microsoft Office 365 subscription. You can only install the data providers for Access 2016 and Excel 2016 with a desktop version of Microsoft Office. In this case, you can specify Access 2013 instead of Access 2016. The two versions of the provider are functionally equivalent. This limitation of the Office 2016 runtime is mentioned in [this blog post](https://blogs.office.com/2015/12/16/access-2016-runtime-is-now-available-for-download/).
+> You may have to download and install additional files to connect to Access databases. See [Get the files you need to connect to Access](#officeDownloads) on this page for more info.
 
  **File name**  
 Specify the path and file name for the Access file. For example, **C:\\MyData.mdb** for a file on the local computer, or **\\\\Sales\\Database\\Northwind.mdb** for a file on a network share. Or, click **Browse**. 
@@ -64,20 +62,21 @@ Specify advanced options, such as the database password or a non-default workgro
 
 ## I don't see Access in the list of data sources
 If you don't see Access in the list of data sources, are you running the 64-bit wizard? The providers for Excel and Access are typically 32-bit and aren't visible in the 64-bit wizard. Run the 32-bit wizard instead.
-  
+
+> [!NOTE]
+> To use the 64-bit version of the SQL Server Import and Export Wizard, you have to install SQL Server. SQL Server Data Tools (SSDT) and SQL Server Management Studio (SSMS) are 32-bit applications and only install 32-bit files, including the 32-bit version of the wizard.
+
 ## <a name="officeDownloads"></a>Get the files you need to connect to Access  
-You may have to download the connectivity components for Microsoft Office data sources, including Excel and Access, if they're not already installed.
+You may have to download the connectivity components for Microsoft Office data sources, including Access and Excel, if they're not already installed. Download the latest version of the connectivity components for both Access and Excel files here:
+[Microsoft Access Database Engine 2016 Redistributable](https://www.microsoft.com/download/details.aspx?id=54920).
+  
+The latest version of the components can open files created by earlier versions of Access.
 
-Later versions of the components can open files created by earlier versions of the programs. In many cases, earlier versions of the components can also open files created by later versions of the programs. For example, if you can't install the Office 2016 components, use the Office 2013 components instead. The two versions of the provider are functionally equivalent. This limitation of the Office 2016 runtime is mentioned in [this blog post](https://blogs.office.com/2015/12/16/access-2016-runtime-is-now-available-for-download/).
+If the computer has a 32-bit version of Office, then you have to install the 32-bit version of the components, and you also have to ensure that you run the package in 32-bit mode.
 
-If the computer has a 32-bit version of Office - this is typical, even on 64-bit computers - then you have to install the 32-bit version of the components. You also have to ensure that you run the 32-bit wizard, or run the SQL Server Integration Services package that the wizard creates in 32-bit mode.
+If you have an Office 365 subscription, make sure that you download the Access Database Engine 2016 Redistributable and not the Microsoft Access 2016 Runtime. When you run the installer, you may see an error message that you can't install the download side-by-side with Office click-to-run components. To bypass this error message, run the installation in quiet mode by opening a Command Prompt window and running the .EXE file that you downloaded with the `/quiet` switch. For example:
 
-|Microsoft Office version|Download|  
-|------------------------------|--------------|  
-|2016|[Microsoft Access 2016 Runtime](https://www.microsoft.com/download/details.aspx?id=50040)|
-|2013|[Microsoft Access 2013 Runtime](http://www.microsoft.com/download/details.aspx?id=39358)|
-|2010|[Microsoft Access 2010 Runtime](https://www.microsoft.com/download/details.aspx?id=10910)|  
-|2007|[2007 Office System Driver: Data Connectivity Components](https://www.microsoft.com/download/details.aspx?id=23734)|    
+`C:\Users\<user name>\Downloads\AccessDatabaseEngine.exe /quiet`
 
 ## <a name="database_password"></a> Is the database file password-protected?
 In some cases, an Access database is password-protected, but isn't using a workgroup information file. All users have to provide the same password, but don't have to enter a user name. To provide a database password, do the following.

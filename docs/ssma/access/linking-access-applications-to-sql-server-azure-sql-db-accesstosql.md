@@ -2,7 +2,7 @@
 title: "Link Access Applications to SQL Server - Azure SQL DB | Microsoft Docs"
 ms.prod: "sql-non-specified"
 ms.custom: ""
-ms.date: "08/15/2017"
+ms.date: "08/17/2017"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -27,8 +27,8 @@ helpviewer_keywords:
   - "unlinking tables"
 ms.assetid: 82374ad2-7737-4164-a489-13261ba393d4
 caps.latest.revision: 19
-author: "sabotta"
-ms.author: "carlasab"
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "murato"
 ---
 # Linking Access applications to SQL Server - Azure SQL DB (AccessToSQL)
@@ -41,7 +41,7 @@ If you want to use your existing Access applications with [!INCLUDE[ssNoVersion]
 When you link an Access table to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure table, the Jet database engine stores connection information and table metadata, but the data is stored in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure. This linking allows your Access applications operate against the Access tables even though the actual tables and data are in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure.  
   
 > [!NOTE]  
-> If you use [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Authentication, your password will be stored in clear text on the linked Access tables. We recommend using Windows Authentication.  
+> If you use [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Authentication, your password is stored in clear text on the linked Access tables. We recommend using Windows Authentication.  
   
 **To link tables**  
   
@@ -108,7 +108,7 @@ The following sections list issues that might occur in existing Access applicati
   
 -   Queries that update or delete many rows are sent by Jet as a parameterized query for each row.  
   
-**Resolution:** Convert the slow-running queries to pass-through queries, stored procedures, or views. Converting to pass-through queries will have the following issues:  
+**Resolution:** Convert the slow-running queries to pass-through queries, stored procedures, or views. Converting to pass-through queries has the following issues:  
   
 -   Pass-through queries cannot be modified. Modifying the query result or adding new records must be done in an alternative way, such as by having explicit **Modify** or **Add** buttons on your form that is bound to the query.  
   
@@ -154,6 +154,6 @@ Recordset.LastModified
   
 **Resolution:** You can define an Access query that returns only those rows with supported data types.  
   
-## See Also  
+## See also  
 [Migrating Access Databases to SQL Server](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
   

@@ -70,6 +70,8 @@ grant_permission [ @object_type = ] object_type
 -   Membership to the **ssis_admin** database role  
   
 -   Membership to the **sysadmin** server role  
+
+This procedure cannot be called by logins that were authenticated by SQL Server. It cannot be called by the sa login.
   
 ## Remarks  
  This stored procedure allows you to grant the permission types described in the following table:  

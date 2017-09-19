@@ -1,6 +1,4 @@
 ---
-# required metadata
-
 title: Release notes for SQL Server 2017 on Linux | Microsoft Docs
 description: This topic contains the release notes and supported features for SQL Server 2017 running on Linux. Release notes are included for RC2 and prior versions.
 author: rothja 
@@ -11,18 +9,6 @@ ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-
-# optional metadata
-
-# keywords: ""
-# ROBOTS: ""
-# audience: ""
-# ms.devlang: ""
-# ms.reviewer: ""
-# ms.suite: ""
-# ms.tgt_pltfrm: ""
-# ms.custom: ""
-
 ---
 # Release notes for SQL Server 2017 on Linux
 

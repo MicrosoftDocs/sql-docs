@@ -1,30 +1,18 @@
 ---
-# required metadata
-
 title: Install SQL Server 2017 on Linux | Microsoft Docs
 description: Install, update, and uninstall SQL Server on Linux. This topic covers online, offline, and unattended scenarios. 
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 08/11/2017
+ms.date: 08/28/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
-
-# optional metadata
-
-# keywords: ""
-# ROBOTS: ""
-# audience: ""
-# ms.devlang: ""
-# ms.reviewer: ""
-# ms.suite: ""
-# ms.tgt_pltfrm: ""
-# ms.custom: ""
-
 ---
 # Installation guidance for SQL Server on Linux
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 This topic explains how to install, update, and uninstall SQL Server 2017 on Linux. SQL Server 2017 RC2 is supported on Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES), and Ubuntu. It is also available as a Docker image, which can run on Docker Engine on Linux or Docker for Windows/Mac.
 
@@ -67,9 +55,9 @@ You can install SQL Server on Linux from the command-line. For instructions, see
 - [Install on Ubuntu](quickstart-install-connect-ubuntu.md)
 - [Run on Docker](quickstart-install-connect-docker.md)
 
-## <a id="upgrade"></a> Upgrade SQL Server
+## <a id="upgrade"></a> Update SQL Server
 
-To upgrade the **mssql-server** package on Linux, use one of the following commands based on your platform:
+To update the **mssql-server** package to the latest release, use one of the following commands based on your platform:
 
 | Platform | Package update command(s) |
 |-----|-----|
@@ -78,6 +66,26 @@ To upgrade the **mssql-server** package on Linux, use one of the following comma
 | Ubuntu | `sudo apt-get update`<br/>`sudo apt-get install mssql-server` |
 
 These commands download the newest package and replace the binaries located under `/opt/mssql/`. The user generated databases and system databases are not affected by this operation.
+
+## <a id="rollback"></a> Rollback SQL Server
+
+To rollback or downgrade SQL Server to a previous release, use the following steps:
+
+1. Identify the version number for the SQL Server package you want to downgrade to. For a list of package numbers, see the [Release notes](sql-server-linux-release-notes.md).
+
+1. Downgrade to a previous version of SQL Server. In the following commands, replace `<version_number>` with the SQL Server version number you identified in step one.
+
+   | Platform | Package update command(s) |
+   |-----|-----|
+   | RHEL | `sudo yum downgrade mssql-server-<version_number>.x86_64` |
+   | SLES | `sudo zypper install --oldpackage mssql-server=<version_number>` |
+   | Ubuntu | `sudo apt-get install mssql-server=<version_number>`<br/>`sudo systemctl start mssql-server` |
+
+> [!NOTE]
+> It is only supported to downgrade to a release within the same major version, such as SQL Server 2017.
+
+> [!IMPORTANT]
+> Downgrade is only supported between RC2 and RC1 at this time.
 
 ## <a id="uninstall"></a> Uninstall SQL Server
 

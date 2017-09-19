@@ -1,7 +1,7 @@
 ---
 title: "Distributed availability groups (SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/20/2017"
+ms.date: "08/17/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -39,8 +39,7 @@ The following figure shows a high-level view of a distributed availability group
 <a name="fig1"></a>
 ![High-level view of a distributed availability group][1]
 
-You can configure the data movement in distributed availability groups as synchronous or asynchronous. However, data movement is slightly different within distributed availability groups compared to a traditional availability group. Although each availability group has a primary replica, there is only one copy of the databases participating in a distributed availability group that can accept inserts, updates, and deletions. As shown in the following figure, AG 1 is the primary availability group. Its primary replica sends transactions to both the secondary replicas of AG 1 and the primary replica of AG 2. The primary replica of AG 2 then keeps the secondary replicas of AG 2 updated. 
-
+You can configure the data movement in distributed availability groups as synchronous or asynchronous. However, data movement is slightly different within distributed availability groups compared to a traditional availability group. Although each availability group has a primary replica, there is only one copy of the databases participating in a distributed availability group that can accept inserts, updates, and deletions. As shown in the following figure, AG 1 is the primary availability group. Its primary replica sends transactions to both the secondary replicas of AG 1 and the primary replica of AG 2. The primary replica of AG 2 is also known as a *forwarder*. A forwarder is a primary replica in a secondary availability group in a distributed availability group. The forwarder receives transactions from the primary replica in the primary availability group and forwards them to the secondary replicas in its own availability group.  The forwarder then keeps the secondary replicas of AG 2 updated. 
 
 ![Distributed availability group and its data movement][2]
 
@@ -54,7 +53,7 @@ The only way to make AG 2's primary replica accept inserts, updates, and deletio
 Distributed availability groups currently work only with availability groups that are created with the same major SQL Server version. For example, all availability groups that participate in a distributed availability group must currently be created with SQL Server 2016. Because the distributed availability groups feature did not exist in SQL Server 2012 or 2014, availability groups that were created with these versions cannot participate in distributed availability groups. 
 
 > [!NOTE]
-> Distributed availability groups can be configured with either the Standard or Enterprise edition, but mixing editions in a distributed availability group is not supported.
+> Distributed availability groups can not be configured with Standard edition or mix of Standard and Enterprise edition.
 
 Because there are two separate availability groups, the process of installing a service pack or cumulative update on a replica that's participating in a distributed availability group is slightly different from that of a traditional availability group:
 
@@ -114,7 +113,7 @@ Because distributed availability groups support two completely different availab
 
 The ability to migrate is especially useful in scenarios where you're changing or upgrading the underlying OS while you keep the same SQL Server version. Although Windows Server 2016 does allow a rolling upgrade from Windows Server 2012 R2 on the same hardware, most users choose to deploy new hardware or virtual machines. 
 
-To complete the migration to the new configuration, at the end of the process, stop all data traffic to the original availability group, and change the distributed availability group to synchronous data movement. This action ensures that the primary replica of the second availability group is fully synchronized, so there would be no data loss. After you've verified the synchronization, fail over the distributed availability group to the second availability group in the [Fail over to a secondary availability group](https://msdn.microsoft.com/en-US/library/mt651673.aspx) section.
+To complete the migration to the new configuration, at the end of the process, stop all data traffic to the original availability group, and change the distributed availability group to synchronous data movement. This action ensures that the primary replica of the second availability group is fully synchronized, so there would be no data loss. After you've verified the synchronization, fail over the distributed availability group to the secondary availability group. For more information, see [Fail over to a secondary availability group](configure-distributed-availability-groups.md#failover).
 
 Post-migration, where the second availability group is now the new primary availability group, you might need to do either of the following:
 
@@ -130,7 +129,7 @@ Distributed availability groups can help you scale out a read-only farm more tha
 * You can use the primary replica of the second availability group in a distributed availability group to create another distributed availability group, even though the database is not in RECOVERY.
 * You can also use the primary replica of the first availability group to create another distributed availability group.
 
-In other words, a primary replica can participate in two different distributed availability groups. The following figure shows AG 1 and AG 2 both participating in Distributed AG 1, while AG 2 and AG 3 are participating in Distributed AG 2. The primary replica of AG 2 is both a secondary replica for Distributed AG 1 and a primary replica of Distributed AG 2.
+In other words, a primary replica can participate in two different distributed availability groups. The following figure shows AG 1 and AG 2 both participating in Distributed AG 1, while AG 2 and AG 3 are participating in Distributed AG 2. The primary replica (or forwarder) of AG 2 is both a secondary replica for Distributed AG 1 and a primary replica of Distributed AG 2.
 
 ![Scaling out reads with distributed availability groups][5]
 
@@ -169,6 +168,7 @@ As mentioned earlier, a distributed availability group is a SQL Server-only cons
 
 <!-- ![Two WSFC clusters with multiple availability groups through PowerShell Get-ClusterGroup command][7]  -->
 <a name="fig7"></a>
+
 ```
 PS C:\> Get-ClusterGroup -Cluster CLUSTER_A
 
@@ -206,10 +206,12 @@ As shown in the following figure, secondary replicas show nothing in SQL Server 
 
 The same concepts hold true when you use the dynamic management views. By using the following query, you can see all the availability groups (regular and distributed) and the nodes participating in them. This result is displayed only if you query the primary replica in one of the WSFC clusters that are participating in the distributed availability group. There is a new column in the dynamic management view `sys.availability_groups` named `is_distributed`, which is 1 when the availability group is a distributed availability group. To see this column:
 
-```
-SELECT ag.[name] as 'AG Name', ag.Is_Distributed, ar.replica_server_name as 'Replica Name'
+```sql
+SELECT ag.[name] as 'AG Name', 
+    ag.Is_Distributed, 
+    ar.replica_server_name as 'Replica Name'
 FROM 	sys.availability_groups ag, 
-sys.availability_replicas ar       
+    sys.availability_replicas ar       
 WHERE	ag.group_id = ar.group_id
 ```
 
@@ -219,7 +221,7 @@ An example of output from the second WSFC cluster that's participating in a dist
 
 In SQL Server Management Studio, any status shown on the Dashboard and other areas are for local synchronization only within that availability group. To display the health of a distributed availability group, query the dynamic management views. The following example query extends and refines the previous query:
 
-```
+```sql
 SELECT ag.[name] as 'AG Name', ag.is_distributed, ar.replica_server_name as 'Underlying AG', ars.role_desc as 'Role', ars.synchronization_health_desc as 'Sync Status'
 FROM 	sys.availability_groups ag, 
 sys.availability_replicas ar,       

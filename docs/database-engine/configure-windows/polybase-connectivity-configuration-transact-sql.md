@@ -18,7 +18,7 @@ ms.author: "barbkess"
 manager: "jhubbard"
 ---
 # PolyBase Connectivity Configuration (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Displays or changes global configuration settings for PolyBase Hadoop and Azure blob storage connectivity.  
   

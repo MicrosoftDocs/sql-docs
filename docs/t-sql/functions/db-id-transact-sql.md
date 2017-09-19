@@ -50,7 +50,7 @@ Is the database name used to return the corresponding database ID. *database_nam
 **int**
   
 ## Permissions  
-If the caller of **DB)ID** is not the owner of the database and the database is not **master** or **tempdb**, the minimum permissions required to see the corresponding row are ALTER ANY DATABASE or VIEW ANY DATABASE server-level permission, or CREATE DATABASE permission in the **master** database. The database to which the caller is connected can always be viewed in **sys.databases**.
+If the caller of **DB_ID** is not the owner of the database and the database is not **master** or **tempdb**, the minimum permissions required to see the corresponding row are ALTER ANY DATABASE or VIEW ANY DATABASE server-level permission, or CREATE DATABASE permission in the **master** database. The database to which the caller is connected can always be viewed in **sys.databases**.
   
 > [!IMPORTANT]  
 >  By default, the public role has the VIEW ANY DATABASE permission, allowing all logins to see database information. To block a login from the ability to detect a database, REVOKE the VIEW ANY DATABASE permission from public, or DENY the VIEW ANY DATABASE permission for individual logins.  

@@ -11,6 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "sql13.dts.designer.rawfilesource.f1"
+  - "sql13.dts.designer.rawfilesourceconnectionmanager.f1"
+  - "sql13.dts.designer.rawfilesourcecolumns.f1"
 helpviewer_keywords: 
   - "sources [Integration Services], Raw File"
   - "raw data [Integration Services]"
@@ -51,6 +53,10 @@ manager: "jhubbard"
   
 -   Blog entry, [Raw Files Are Awesome](http://www.sqlservercentral.com/blogs/stratesql/archive/2011/1/1/31-days-of-ssis-_1320_-raw-files-are-awesome-_2800_1_2F00_31_2900_.aspx), on sqlservercentral.com  
   
+## Raw File Source Editor (Connection Manager Page)
+  The Raw File source reads raw data from a file. Because the representation of the data is native to the source, the data requires no translation and almost no parsing.   
+## Raw File Source Editor (Columns Page)
+  The Raw File source reads raw data from a file. Because the representation of the data is native to the source, the data requires no translation and almost no parsing.   
 ## See Also  
  [Raw File Destination](../../integration-services/data-flow/raw-file-destination.md)   
  [Data Flow](../../integration-services/data-flow/data-flow.md)  

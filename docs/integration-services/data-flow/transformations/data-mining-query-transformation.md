@@ -11,6 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "sql13.dts.designer.dataminingquerytrans.f1"
+  - "sql13.dts.designer.dmquerytransformation.miningmodel.f1"
+  - "sql13.dts.designer.dmquerytransformation.query.f1"
 helpviewer_keywords: 
   - "Data Mining Query transformation"
   - "prediction queries [Integration Services]"
@@ -32,12 +34,6 @@ manager: "jhubbard"
   
  You can set properties through [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer or programmatically.  
   
- For more information about the properties that you can set in the **Data Mining Query Transformation Editor** dialog box, click one of the following topics:  
-  
--   [Data Mining Query Transformation Editor &#40;Mining Model Tab&#41;](../../../integration-services/data-flow/transformations/data-mining-query-transformation-editor-mining-model-tab.md)  
-  
--   [Data Mining Query Transformation Editor &#40;Mining Model Tab&#41;](../../../integration-services/data-flow/transformations/data-mining-query-transformation-editor-mining-model-tab.md)  
-  
  The **Advanced Editor** dialog box reflects the properties that can be set programmatically. For more information about the properties that you can set in the **Advanced Editor** dialog box or programmatically, click one of the following topics:  
   
 -   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -46,4 +42,29 @@ manager: "jhubbard"
   
  For more information about how to set properties, see [Set the Properties of a Data Flow Component](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
+## Data Mining Query Transformation Editor (Mining Model Tab)
+  Use the **Mining Model** tab of the **Data Mining Query Transformation Editor** dialog box to select the data mining structure and its mining models.  
+  
+### Options  
+ **Connection**  
+ Select an existing Analysis Services connection by using the list box, or create a new connection by using the **New** button described as follows.  
+  
+ **New**  
+ Create a new connection by using the **Add Analysis Services Connection Manager** dialog box.  
+  
+ **Mining structure**  
+ Select from the list of available mining model structures.  
+  
+ **Mining models**  
+ View the list of mining models associated with the selected data mining structure.  
+  
+## Data Mining Query Transformation Editor (Query Tab)
+  Use the **Query** tab of the **Data Mining Query Transformation Editor** dialog box to create a prediction query.  
+  
+### Options  
+ **Data mining query**  
+ Type a Data Mining Extensions (DMX) query directly into the text box.  
+  
+ **Build New Query**  
+ Click **Build New Query** to create a Data Mining Extensions (DMX) query by using the graphical query builder.  
   

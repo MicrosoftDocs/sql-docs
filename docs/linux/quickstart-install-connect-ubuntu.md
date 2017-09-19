@@ -4,13 +4,15 @@ description: This quick start tutorial shows how to install SQL Server 2017 on U
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 07/24/2017
+ms.date: 09/07/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
 ---
 # Install SQL Server and create a database on Ubuntu
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 In this quick start tutorial, you first install SQL Server 2017 RC2 on Ubuntu 16.04. Then connect with **sqlcmd** to create your first database and run queries.
 
@@ -48,7 +50,7 @@ To configure SQL Server on Ubuntu, run the following commands in a terminal to i
    sudo apt-get install -y mssql-server
    ```
 
-1. After the package installation finishes, run **mssql-conf setup** and follow the prompts to set the SA password and chose your edition.
+1. After the package installation finishes, run **mssql-conf setup** and follow the prompts to set the SA password and choose your edition.
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf setup

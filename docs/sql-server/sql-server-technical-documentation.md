@@ -41,14 +41,11 @@ Documentation to help you install, configure, and use SQL Server. The content in
 - [What's New in SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)
     
 **Try SQL Server!**    
-- [![Download from Evaluation Center](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [**Download SQL Server 2017**](http://go.microsoft.com/fwlink/?LinkID=829477)
-- [![Download from Evaluation Center](../includes/media/download2.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) [**Download SQL Server 2016**](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) 
-- **[Spin up a Virtual Machine with SQL Server 2016 already installed](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)**   
-- [![Download from Evaluation Center](../includes/media/download2.png)](https://msdn.microsoft.com/library/mt238290.aspx) [**Download SQL Server Management Studio (SSMS)**](https://msdn.microsoft.com/library/mt238290.aspx)   
-- [![Download from Evaluation Center](../includes/media/download2.png)](../ssdt/download-sql-server-data-tools-ssdt.md) [**Download SQL Server Data Tools (SSDT)**](../ssdt/download-sql-server-data-tools-ssdt.md)
- 
-**Supporting information**
-- [Microsoft SQL Server License Terms and Information](https://www.microsoft.com/en-us/download/details.aspx?id=39299) 
+- [![Download from Evaluation Center](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [Download SQL Server 2017](http://go.microsoft.com/fwlink/?LinkID=829477)
+- [![Download from Evaluation Center](../includes/media/download2.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) [Download SQL Server 2016](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) 
+- [Spin up a Virtual Machine with SQL Server 2016 already installed](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
+- [![Download from Evaluation Center](../includes/media/download2.png)](https://msdn.microsoft.com/library/mt238290.aspx) [Download SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx)   
+- [![Download from Evaluation Center](../includes/media/download2.png)](../ssdt/download-sql-server-data-tools-ssdt.md) [Download SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
     
 ## SQL Server Technologies    
     
@@ -82,12 +79,8 @@ Documentation to help you install, configure, and use SQL Server. The content in
 - [SQL Server samples on GitHub](https://github.com/Microsoft/sql-server-samples) 
    
  ## More information   
-+ To view SQL Server documentation offline, see [Help Viewer and Offline Content for SQL Server](../release-notes/sql-server-help-installation.md).
++ To view SQL Server documentation offline, see [Help Viewer and Offline Content for SQL Server](sql-server-help-installation.md).
 + [SQL Server Configuration Manager](../relational-databases/sql-server-configuration-manager.md)
 + [SQL Server Update Center - links and information for all supported versions](https://msdn.microsoft.com/library/ff803383.aspx)
-  
-##  ![info_tip](../sql-server/media/info-tip.png) Get Help 
-- [Stack Overflow (tag sql-server) - ask technical questions](http://stackoverflow.com/questions/tagged/sql-server)
-- [MSDN Forums - ask technical questions](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)
-- [Microsoft Connect - report bugs and request features](https://connect.microsoft.com/SQLServer/Feedback)
-- [Reddit - general discussion about SQL Server](https://www.reddit.com/r/SQLServer/)
+
+[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

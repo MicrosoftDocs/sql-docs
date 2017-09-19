@@ -38,6 +38,8 @@ You start the wizard from the Microsoft SQL Server 2016 group on the Windows Sta
 
 > [!NOTE]
 > For this example, you pick the 32-bit wizard because you have the 32-bit version of Microsoft Office installed. As a result, you have to use the 32-bit data provider to connect to Excel. For many other data sources, you can typically pick the 64-bit wizard.
+>
+> To use the 64-bit version of the SQL Server Import and Export Wizard, you have to install SQL Server. SQL Server Data Tools (SSDT) and SQL Server Management Studio (SSMS) are 32-bit applications and only install 32-bit files, including the 32-bit version of the wizard.
 
 For more info, see [Start the SQL Server Import and Export Wizard](../../integration-services/import-export-data/start-the-sql-server-import-and-export-wizard.md).
 
@@ -52,9 +54,6 @@ You probably don't want to see this page again, so go ahead and click **Do not s
 On the next page, **Choose a Data Source**, you pick Microsoft Excel as your data source. Then you browse to pick the Excel file. Finally you specify the Excel version that you used to create the file.
 
 ![Choose the Excel data source](../../integration-services/import-export-data/media/choose-the-excel-data-source.jpg)
-
-> [!NOTE]
-> Typically you specify Microsoft Excel 2016 as the version, and download the files for connecting to Excel 2016 and Access 2016. If you have a Microsoft Office 365 subscription, however, you can't install the Office 2016 runtime. You can only install the data providers for Excel 2016 and Access 2016 with a desktop version of Microsoft Office. So you simply specify the prior version of Excel, Excel 2013. If necessary, you download the files for connecting to Excel 2013 and Access 2013. This limitation of the Office 2016 runtime is mentioned in [this blog post](https://blogs.office.com/2015/12/16/access-2016-runtime-is-now-available-for-download/).
 
 For more info about connecting to Excel, see [Connect to an Excel Data Source](../../integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md). For more info about this page of the wizard, see [Choose a Data Source](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md).
 

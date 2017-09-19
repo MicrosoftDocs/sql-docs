@@ -13,7 +13,7 @@ ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
 caps.latest.revision: 40
 author: "BYHAM"
 ms.author: "rickbyh"
-manager: "erikre"
+manager: "craigg"
 ---
 # Tutorials for SQL Server
 [!INCLUDE[feedback_stackoverflow_msdn_connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
@@ -45,3 +45,4 @@ manager: "erikre"
   
  - [Tutorials for SQL Server 2008 R2](http://msdn.microsoft.com/library/ms167593.aspx)   
 
+[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

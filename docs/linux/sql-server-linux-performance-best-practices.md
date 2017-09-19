@@ -24,7 +24,7 @@ It is recommended to perform the following configuration tasks after you install
 
 - **Use PROCESS AFFINITY for Node and/or CPUs**
 
-   It is recommended to use `ALTER SERVER CONFIGURATION` to set `PROCESS AFFINITY` for all the **NUMANODEs** and/or CPUs you are using for SQL Server (which is typically for all NODEs and CPUs) on a Linux Operating System. Using the **NUMANODE** option is the simplest method. Note, you should use **PROCESS AFFINITY** even if you have only a single NUMA Node on your computer.  See the [ALTER SERVER CONFIGURATION](../t-sql/statements/alter-server-configuration-transact-sql.md) documentation for more details on how to set **PROCESS AFFINITY**.
+   It is recommended to use `ALTER SERVER CONFIGURATION` to set `PROCESS AFFINITY` for all the **NUMANODEs** and/or CPUs you are using for SQL Server (which is typically for all NODEs and CPUs) on a Linux Operating System. Processor affinity helps maintain efficient Linux and SQL Scheduling behavior. Using the **NUMANODE** option is the simplest method. Note, you should use **PROCESS AFFINITY** even if you have only a single NUMA Node on your computer.  See the [ALTER SERVER CONFIGURATION](../t-sql/statements/alter-server-configuration-transact-sql.md) documentation for more details on how to set **PROCESS AFFINITY**.
 
 - **Configure multiple tempdb data files**
 
@@ -49,7 +49,7 @@ Consider using the following Linux Operating System configuration settings to ex
 These are the recommended Linux Operating System settings related to high performance and throughput for a SQL Server installation. See your Linux Operating System documentation for the process to configure these settings.
 
 > [!Note]
-> For Red Hat Enterprise Linux (RHEL) users, the throughput-performance profile will configure these settings automatically.
+> For Red Hat Enterprise Linux (RHEL) users, the throughput-performance profile will configure these settings automatically (except for C-States).
 
 The following table provides recommendations for CPU settings:
 
@@ -58,6 +58,7 @@ The following table provides recommendations for CPU settings:
 | CPU frequency governor | performance | See the **cpupower** command |
 | ENERGY_PERF_BIAS | performance | See the **x86_energy_perf_policy** command |
 | min_perf_pct | 100 | See your documentation on intel p-state |
+| C-States | C1 only | See your Linux or system documentation on how to ensure C-States is set to C1 only |
 
 The following table provides recommendations for disk settings:
 

@@ -1,8 +1,8 @@
 ---
 title: "Native scoring| Microsoft Docs"
 ms.custom: ""
-ms.date: "07/16/2017"
-ms.prod: "sql-server-2016"
+ms.date: "09/19/2017"
+ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -34,9 +34,10 @@ To support fast scoring, SQL Server Machine Learning Services (and Microsoft Mac
 
 **Native scoring**
 
-+ The PREDICT function in Transact-SQL can be used for _native scoring_ from any instance of SQL Server 2017. It requires only that you have a model already trained and saved in a table or can be called via T-SQL. It is a kind of realtime scoring that uses native T-SQL functions; no additional configuration required.
++ The PREDICT function in Transact-SQL can be used for _native scoring_ from any instance of SQL Server 2017. It requires only that you have a model already trained and saved in a table or can be called via T-SQL. It is a kind of realtime scoring that uses native T-SQL functions, with these advantages:
 
-   The R runtime is not called and does not need to be installed.
+    + No additional configuration is required.
+    + The R runtime is not called and does not need to be installed.
 
 **Realtime scoring**
 
@@ -64,6 +65,11 @@ The function returns predictions for the input data, together with any columns o
 For code samples, along with instructions on how to prepare the models in the required binary format, see this article:
 
 + [How to perform realtime scoring](r/how-to-do-realtime-scoring.md)
+
+For a complete solution that includes native scoring, see these samples from the SQL Server development team:
+
++ Deploy your ML script: [Using a Python model](https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/step/3.html)
++ Deploy your ML script: [Using an R model](https://microsoft.github.io/sql-ml-tutorials/R/rentalprediction/step/3.html)
 
 ## Requirements
 

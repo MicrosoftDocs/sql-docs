@@ -37,7 +37,7 @@ Generally available | Build number: NEEDED
 - Added ADAL tracing to Output Window (off by default; needs to be turned on in user settings under "Options | Azure Services | Azure Cloud | ADAL Output Window Trace Level")
 - Query Store: 
   - Query Store UI will be accessible even when QDS is OFF as long as QDS have recorded any data.
-  - QueryStore UI now exposes waits categorization in all the existing reports. This will let customers unlock the scenarios of Top Waiting Queries and many more.
+  - Query Store UI now exposes waits categorization in all the existing reports. This will let customers unlock the scenarios of Top Waiting Queries and many more.
 
 
 
@@ -603,7 +603,7 @@ Generally available | Version number: 13.0.15500.91
 
 * *Edit, July 5:* Improved support for SQL Server 2016 (1200 compatibility level) tabular databases in the Analysis Services Process dialog and the Analysis Services deployment wizard.
 
-* *Edit, July 5:* New option in SSMS 'query execution options' dialog to set 'XACT_ABORT'. This option is enabled by default in this release of SSMS and instructs SQL Server to rollback the entire transaction and abort the batch if a run-time error occurs.
+* *Edit, July 5:* New option in SSMS 'query execution options' dialog to set 'XACT_ABORT'. This option is enabled by default in this release of SSMS and instructs SQL Server to roll back the entire transaction and abort the batch if a run-time error occurs.
 
 * Support for Azure SQL Data Warehouse in SSMS.
 

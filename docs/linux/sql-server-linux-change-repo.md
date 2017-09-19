@@ -4,7 +4,7 @@ description: Change repositories from the preview SQL Server 2017 repository to 
 author: annashres 
 ms.author: anshrest 
 manager: jhubbard
-ms.date: 09/15/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine

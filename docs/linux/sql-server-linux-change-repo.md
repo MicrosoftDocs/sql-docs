@@ -13,9 +13,6 @@ ms.technology: database-engine
 
 When you upgrade SQL Server 2017 from CTP 2.1, RC1, or RC2 to the General Availability (GA) release you have to switch repositories. The following sections explain your choice of repositories and how to make the change before upgrading.
 
-> [!IMPORTANT]
-> This article applies to the upcoming GA release of SQL Server 2017 to explain what the process will look like for GA. It is meant to help you prepare for the release. The steps in this article will not work until the official release. To view information about the current release, see the [release notes](sql-server-linux-release-notes.md).
-
 ## Repository choices
 
 It is important to note that there are two main types of repositories for each distribution:
@@ -41,8 +38,8 @@ To change from the preview repository to one source repository (CU or GDR), use 
    | Platform | Repository removal command |
    |-----|-----|
    | RHEL | `sudo rm -rf /etc/yum.repos.d/mssql-server.repo` |
-   | SLES | `sudo zypper rr <repo-name>` |
-   | Ubuntu | `sudo rm -rf /etc/apt/sources.list.d/<repo-name>.list` |
+   | SLES | `sudo zypper removerepo 'packages-microsoft-com-mssql-server'` |
+   | Ubuntu | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server xenial main'` |
 
 1. Configure the new repository.
 
@@ -69,8 +66,5 @@ To change from the preview repository to one source repository (CU or GDR), use 
    > At this point, if you choose to perform a full installation using the [quickstart tutorials](sql-server-linux-setup.md#platforms), remember that you have just configured your target repository (CU or GDR). Do not repeat those steps in the tutorials.
 
 ## Next steps
-
-> [!IMPORTANT]
-> This article applies to the upcoming GA release of SQL Server 2017 and details are subject to change.
 
 For more information on how to install SQL Server 2017 on Linux, see [Installation guidance for SQL Server on Linux](sql-server-linux-setup.md).

@@ -126,7 +126,7 @@ manager: "jhubbard"
  For more information, see "Understanding the Use of Delimiters and Symbols" earlier in this topic.  
   
  **Symbols**  
- List the symbols that should be retained as part of patterns. Examples might include "/" for dates, ":" for times, and "@" for e-mail addresses. By default, the list of **Symbols** contains the following characters: `,.;:-"'`~=&/@!?()<>[]{}|#*^%`.  
+ List the symbols that should be retained as part of patterns. Examples might include "/" for dates, ":" for times, and "@" for e-mail addresses. By default, the list of **Symbols** contains the following characters: `,.;:-"'~=&/@!?()<>[]{}|#*^%`.  
   
  For more information, see "Understanding the Use of Delimiters and Symbols" earlier in this topic.  
   

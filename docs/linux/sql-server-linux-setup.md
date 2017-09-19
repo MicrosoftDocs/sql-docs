@@ -4,7 +4,7 @@ description: Install, update, and uninstall SQL Server on Linux. This topic cove
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 08/28/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -102,13 +102,13 @@ Each CU and GDR release contains the full SQL Server package and all previous up
 
 To change from the GDR repository to the CU repository use the following steps:
 
-1. Remove the previously configured repository.
+1. Remove the previously configured preview repository.
 
    | Platform | Repository removal command |
    |-----|-----|
    | RHEL | `sudo rm -rf /etc/yum.repos.d/mssql-server.repo` |
-   | SLES | `sudo zypper rr <repo-name>` |
-   | Ubuntu | `sudo rm -rf /etc/apt/sources.list.d/<repo-name>.list` |
+   | SLES | `sudo zypper removerepo 'packages-microsoft-com-mssql-server'` |
+   | Ubuntu | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server xenial main'` |
 
 1. Configure the new repository.
 

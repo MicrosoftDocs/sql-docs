@@ -72,7 +72,7 @@ Monitor log space use by using [DBCC SQLPERF (LOGSPACE)](https://docs.microsoft.
 -   To change the current file size in KB, MB, GB, and TB units, use the SIZE option.  
   -   To change the growth increment, use the FILEGROWTH option. A value of 0 indicates that automatic growth is set to off and no additional space is permitted. A small autogrowth increment on a log file can reduce performance. The file growth increment on a log file should be sufficiently large to avoid frequent expansion. The default growth increment of 10 percent is generally suitable.  
 
-For information on changing the file-growth property on a log file, see [ALTER DATABASE (Transact-SQL)](https://msdn.microsoft.com/library/ms174269.aspx).  
+For information on changing the file-growth property on a log file, see [ALTER DATABASE (Transact-SQL)](/sql-docs/docs/t-sql/statements/alter-database-transact-sql).  
   
 -   To control the maximum the size of a log file in KB, MB, GB, and TB units or to set growth to UNLIMITED, use the MAXSIZE option.  
   

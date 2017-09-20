@@ -52,7 +52,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
- [Create an Updatable Subscription to a Transactional Publication](https://msdn.microsoft.com/library/mt740635.aspx)   
+ [Create an Updatable Subscription to a Transactional Publication](/sql-docs/docs/relational-databases/replication/publish/create-updatable-subscription-to-transactional-publication)   
  [View and Modify Distributor and Publisher Properties](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
  [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [Manage Logins and Passwords in Replication](../../relational-databases/replication/security/manage-logins-and-passwords-in-replication.md)   

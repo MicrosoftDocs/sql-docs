@@ -115,5 +115,5 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
     >  You must start the Performance Logs and Alerts service using a local account or a domain account that is a member of the Administrators group.  
 
 ## See Also  
- [Execution of Projects and Packages](https://msdn.microsoft.com/library/ms141708.aspx)
+ [Execution of Projects and Packages](/sql-docs/docs/integration-services/packages/run-integration-services-ssis-packages)
  [Events Logged by an Integration Services Package](../../integration-services/performance/events-logged-by-an-integration-services-package.md)  

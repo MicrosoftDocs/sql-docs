@@ -35,7 +35,7 @@ The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] ships with a vari
   
 ### Basic Tools  
   
--   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) is the principal tool for administering the [!INCLUDE[ssDE](../includes/ssde-md.md)] and writing [!INCLUDE[tsql](../includes/tsql-md.md)] code. It is hosted in the [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] shell. SSMS is available as a free download from [Microsoft Download Center](https://msdn.microsoft.com/library/mt238290.aspx). The latest version can be used with older versions of the [!INCLUDE[ssDE_md](../includes/ssde-md.md)].  
+-   [!INCLUDE[ssManStudioFull](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms). The latest version can be used with older versions of the [!INCLUDE[ssDE_md](../includes/ssde-md.md)].  
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager installs with both [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and the client tools. It lets you enable server protocols, configure protocol options such as TCP ports, configure server services to start automatically, and configure client computers to connect in your preferred manner. This tool configures the more advanced connectivity elements but does not enable features.  
   

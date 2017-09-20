@@ -32,7 +32,7 @@ This page provides summary information and links to more detailed SQL Server 201
 
  **Try SQL Server today!** 
 - Download the **free** [**SQL Server 2016 Developer edition!**](https://www.microsoft.com/en-us/cloud-platform/sql-server-editions-developers).
-- Download the latest version of [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx). 
+- Download the latest version of [SQL Server Management Studio (SSMS)](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms). 
 - Have an Azure account? Spin up a [Virtual Machine with SQL Server 2016 already installed](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/).
 
 ## SQL Server 2016 Database Engine
@@ -93,7 +93,7 @@ Microsoft has thoroughly revamped Reporting Services in this release.
 - **Redesigned report rendering engine** that supports HTML5 
 - New treemap and sunburst **chart types** 
 
-See [Reporting Services (SSRS)](https://msdn.microsoft.com/library/ms170438.aspx).
+See [Reporting Services (SSRS)](/sql-docs/docs/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs).
 
 ## Next steps   
 - [SQL Server setup](../database-engine/install-windows/installation-for-sql-server-2016.md)   

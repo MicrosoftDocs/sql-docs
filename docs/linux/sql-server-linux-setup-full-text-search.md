@@ -267,7 +267,7 @@ In order to use Semantic Search, you must first restore the Semantic Language St
    ```
 
    > [!NOTE]
-   > Update the paths in the previous RESTORE command as needed to adjust for your configuration.
+   > If necessary, update the paths in the previous RESTORE command to adjust for your configuration.
 
 1. Run the following Transact-SQL command to register the semantic language statistics database.
 

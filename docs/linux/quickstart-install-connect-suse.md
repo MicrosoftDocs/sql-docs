@@ -4,7 +4,7 @@ description:  This quick start tutorial shows how to install SQL Server 2017 on 
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 09/07/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -14,7 +14,7 @@ ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-In this quick start tutorial, you first install SQL Server 2017 RC2 on SUSE Linux Enterprise Server (SLES) v12 SP2. Then connect with **sqlcmd** to create your first database and run queries.
+In this quick start tutorial, you first install SQL Server 2017 on SUSE Linux Enterprise Server (SLES) v12 SP2. Then connect with **sqlcmd** to create your first database and run queries.
 
 > [!TIP]
 > This tutorial requires user input and an internet connection. If you are interested in the [unattended](sql-server-linux-setup.md#unattended) or [offline](sql-server-linux-setup.md#offline) installation procedures, see [Installation guidance for SQL Server on Linux](sql-server-linux-setup.md).
@@ -54,11 +54,11 @@ To configure SQL Server on SLES, run the following commands in a terminal to ins
    > Make sure to specify a strong password for the SA account (Minimum length 8 characters, including uppercase and lowercase letters, base 10 digits and/or non-alphanumeric symbols).
 
    > [!TIP]
-   > When installing RC2, no purchased licenses are required to try any of the editions. Because it is a release candidate, the following message appears regardless of the edition you select:
+   > When installing, no purchased licenses are required to try any of the editions. Because it is a release candidate, the following message appears regardless of the edition you select:
    >
    > `This is an evaluation version.  There are [175] days left in the evaluation period.`
    >
-   > This message does not reflect the edition you selected. It relates to the preview period for RC2.
+   > This message does not reflect the edition you selected. It relates to the preview period for.
 
 1. Once the configuration is done, verify that the service is running:
 

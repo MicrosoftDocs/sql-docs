@@ -4,7 +4,7 @@ description: Describes how SQL Server customer feedback is collected and configu
 author: annashres 
 ms.author: anshrest 
 manager: jhubbard
-ms.date: 07/17/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine

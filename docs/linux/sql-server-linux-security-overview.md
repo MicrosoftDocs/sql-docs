@@ -4,7 +4,7 @@ description: This topic describes SQL Server on Linux restrictions.
 author: BYHAM 
 ms.author: rickbyh 
 manager: jhubbard
-ms.date: 07/17/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine

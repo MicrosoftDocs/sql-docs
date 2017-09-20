@@ -278,7 +278,7 @@ Before adding a database to an availability group with automatic seeding, evalua
 
 ## Resources
 
-[CREATE AVAILABILITY GROUP (Transact-SQL)](https://msdn.microsoft.com/library/ff878399.aspx)
+[CREATE AVAILABILITY GROUP (Transact-SQL)](/sql-docs/docs/t-sql/statements/create-availability-group-transact-sql)
 
 [AlwaysOn Availability Groups Troubleshooting and Monitoring Guide](http://technet.microsoft.com/library/dn135328.aspx)
 

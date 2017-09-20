@@ -115,7 +115,7 @@ Microsoft Python Server    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/fwl
 ### <a name="bkmk_2016Installers"></a>Downloads for SQL Server 2016
 
 > [IMPORTANT]
-> If installing SQL Server 2016 SP1 Cumulative Update 4 when offline, the file downloaded from FWLINK 831785 contains SRO_3.2.2.13000_1033.cab. To use this file in setup, rename it as SRO_3.2.2.16000_1033.cab before installing the Cumulative Update.
+> When installing SQL Server 2016 SP1 CU4 or SP1 CU5 offline, download SRO_3.2.2.16000_1033.cab. If you downloaded SRO_3.2.2.13000_1033.cab from FWLINK 831785 as indicated in the setup dialog box, rename the file as SRO_3.2.2.16000_1033.cab before installing the Cumulative Update.
 
 Release  |Download link  |
 ---------|---------|
@@ -158,6 +158,9 @@ Microsoft R Server     |no change; use previous|
 **SQL Server 2016 SP 1 CU4 and GDR**     |
 Microsoft R Open     |no change; use previous|
 Microsoft R Server    |[SRS_8.0.3.17000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=850317)
+**SQL Server 2016 SP 1 CU5**     |
+Microsoft R Open     |no change; use previous|
+Microsoft R Server    |no change; use previous |
 
 If you would like to view the source code for Microsoft R, it is available for download as an archive in .tar format: [Download R Server installers](https://docs.microsoft.com/r-server/install/r-server-install-windows#download)
 

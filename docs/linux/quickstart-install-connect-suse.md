@@ -4,7 +4,7 @@ description:  This quick start tutorial shows how to install SQL Server 2017 on 
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 09/07/2017
+ms.date: 09/20/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -66,7 +66,11 @@ To configure SQL Server on SLES, run the following commands in a terminal to ins
    systemctl status mssql-server
    ```
 
-1. If you plan to connect remotely, you might also need to open the SQL Server TCP port (default 1433) on your firewall.
+1. If you plan to connect remotely, you might also need to open the SQL Server TCP port (default 1433) on your firewall. If you are using the SuSE firewall, you need to edit the **/etc/sysconfig/SuSEfirewall2** configuration file. Modify the **FW_SERVICES_EXT_TCP** entry to include the SQL Server port number.
+
+   ```
+   FW_SERVICES_EXT_TCP="1433"
+   ```
 
 At this point, SQL Server is running on your SLES machine and is ready to use!
 

@@ -12,8 +12,7 @@ ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
 ---
 # SQL Server on Linux
 
-SQL Server 2017 runs on Linux, and in
-many ways, it is simply SQL Server. It’s the same SQL Server database engine, with many similar features and services regardless of your operating system.
+SQL Server 2017 now runs on Linux. It’s the same SQL Server database engine, with many similar features and services regardless of your operating system.
 
 ## Install
 

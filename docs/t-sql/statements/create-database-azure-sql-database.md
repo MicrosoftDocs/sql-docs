@@ -125,11 +125,11 @@ Specifies the default collation for the metadata catalog. *DATABASE_DEFAULT* spe
 |150 GB|N/A|√|√|√|√|  
 |200 GB|N/A|√|√|√|√|  
 |250 GB|N/A|√ (D)|√ (D)|√|√|  
-|300 GB|N/A|√|√|√|√|  
-|400 GB|N/A|√|√|√|√|
-|500 GB|N/A|√|√|√ (D)|√|
-|750 GB|N/A|√|√|√|√|
-|1024 GB|N/A|√|√|√|√ (D)|
+|300 GB|N/A|N/A|√|√|√|  
+|400 GB|N/A|N/A|√|√|√|
+|500 GB|N/A|N/A|√|√ (D)|√|
+|750 GB|N/A|N/A|√|√|√|
+|1024 GB|N/A|N/A|√|√|√ (D)|
 |From 1024 GB up to 4096 GB in increments of 256 GB* |N/A|N/A|N/A|N/A|√|√|  
   
  \* P11 and P15 allow MAXSIZE up to 4 TB with 1024 GB being the default size.  P11 and P15 can use up to 4 TB of included storage at no additional charge. In the Premium tier, MAXSIZE greater than 1 TB is currently available in the following regions: US East2, West US, US Gov Virginia, West Europe, Germany Central, South East Asia, Japan East, Australia East, Canada Central, and Canada East. For current limitations, see [Single databases](https://docs.microsoft.com/azure/sql-database-single-database-resources).  

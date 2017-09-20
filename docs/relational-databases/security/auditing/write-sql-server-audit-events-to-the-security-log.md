@@ -22,7 +22,6 @@ manager: "jhubbard"
 ---  
 
 # Write SQL Server Audit Events to the Security Log  
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
 In a high security environment, the Windows Security log is the appropriate location to write events that record object access. Other audit locations are supported but are more subject to tampering.  
   

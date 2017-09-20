@@ -18,9 +18,9 @@ author: "MightyPen"
 # Using Always Encrypted with the ODBC Driver 13.1 for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
 
-This article provides information on how to develop ODBC applications using [Always Encrypted (Database Engine)](https://msdn.microsoft.com/library/mt163865.aspx) and the [ODBC Driver 13.1 for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md).
+This article provides information on how to develop ODBC applications using [Always Encrypted (Database Engine)](/sql-docs/docs/relational-databases/security/encryption/always-encrypted-database-engine) and the [ODBC Driver 13.1 for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md).
 
-Always Encrypted allows client applications to encrypt sensitive data and never reveal the data or the encryption keys to SQL Server or Azure SQL Database. An Always Encrypted enabled driver, such as the ODBC Driver 13.1 for SQL Server, achieves this by transparently encrypting and decrypting sensitive data in the client application. The driver automatically determines which query parameters correspond to sensitive database columns (protected using Always Encrypted), and encrypts the values of those parameters before passing the data to SQL Server or Azure SQL Database. Similarly, the driver transparently decrypts data retrieved from encrypted database columns in query results. For more information, see [Always Encrypted (Database Engine)](https://msdn.microsoft.com/library/mt163865.aspx).
+Always Encrypted allows client applications to encrypt sensitive data and never reveal the data or the encryption keys to SQL Server or Azure SQL Database. An Always Encrypted enabled driver, such as the ODBC Driver 13.1 for SQL Server, achieves this by transparently encrypting and decrypting sensitive data in the client application. The driver automatically determines which query parameters correspond to sensitive database columns (protected using Always Encrypted), and encrypts the values of those parameters before passing the data to SQL Server or Azure SQL Database. Similarly, the driver transparently decrypts data retrieved from encrypted database columns in query results. For more information, see [Always Encrypted (Database Engine)](/sql-docs/docs/relational-databases/security/encryption/always-encrypted-database-engine).
 
 ### Prerequisites
 
@@ -234,7 +234,7 @@ This section describes common categories of errors when querying encrypted colum
 
 ##### Unsupported data type conversion errors
 
-Always Encrypted supports few conversions for encrypted data types. See [Always Encrypted (Database Engine)](https://msdn.microsoft.com/library/mt163865.aspx) for the detailed list of supported type conversions. To avoid data type conversion errors, make sure that you observe the following points when using SQLBindParameter with parameters targeting encrypted columns:
+Always Encrypted supports few conversions for encrypted data types. See [Always Encrypted (Database Engine)](/sql-docs/docs/relational-databases/security/encryption/always-encrypted-database-engine) for the detailed list of supported type conversions. To avoid data type conversion errors, make sure that you observe the following points when using SQLBindParameter with parameters targeting encrypted columns:
 
 - The SQL type of the parameter is either exactly the same as the type of the targeted column, or the conversion from the SQL type to the type of the column is supported.
 
@@ -278,7 +278,7 @@ This section describes the built-in performance optimizations in the ODBC Driver
 
 ### Controlling Round-trips to Retrieve Metadata for Query Parameters
 
-If Always Encrypted is enabled for a connection, the ODBC Driver 13.1 for SQL Server will, by default, call [sys.sp_describe_parameter_encryption](https://msdn.microsoft.com/library/mt631693.aspx) for each parameterized query, passing the query statement (without any parameter values) to SQL Server. This stored procedure analyzes the query statement to find out if any parameters need to be encrypted, and if so, returns the encryption-related information for each parameter to allow the driver to encrypt them. The above behavior ensures a high-level of transparency to the client application: The application (and the application developer) does not need to be aware of which queries access encrypted columns, as long as the values targeting encrypted columns are passed to the driver in parameters.
+If Always Encrypted is enabled for a connection, the ODBC Driver 13.1 for SQL Server will, by default, call [sys.sp_describe_parameter_encryption](/sql-docs/docs/relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql) for each parameterized query, passing the query statement (without any parameter values) to SQL Server. This stored procedure analyzes the query statement to find out if any parameters need to be encrypted, and if so, returns the encryption-related information for each parameter to allow the driver to encrypt them. The above behavior ensures a high-level of transparency to the client application: The application (and the application developer) does not need to be aware of which queries access encrypted columns, as long as the values targeting encrypted columns are passed to the driver in parameters.
 
 ### Per-Statement Always Encrypted Behavior
 
@@ -338,7 +338,7 @@ The ODBC Driver 13.1 for SQL Server comes with the following built-in keystore p
 |Azure Key Vault |Stores CMKs in an Azure Key Vault | `AZURE_KEY_VAULT` |Windows, macOS, Linux|
 |Windows Certificate Store|Stores CMKs locally in the Windows keystore| `MSSQL_CERTIFICATE_STORE`|Windows|
 
-- You (or your DBA) need to make sure that the provider name, configured in the column master key metadata, is correct and the column master key path complies with the key path format for the given provider. It is recommended that you configure the keys using tools such as SQL Server Management Studio, which automatically generates the valid provider names and key paths when issuing the [CREATE COLUMN MASTER KEY (Transact-SQL)](https://msdn.microsoft.com/library/mt146393.aspx) statement.
+- You (or your DBA) need to make sure that the provider name, configured in the column master key metadata, is correct and the column master key path complies with the key path format for the given provider. It is recommended that you configure the keys using tools such as SQL Server Management Studio, which automatically generates the valid provider names and key paths when issuing the [CREATE COLUMN MASTER KEY (Transact-SQL)](/sql-docs/docs/t-sql/statements/create-column-master-key-transact-sql) statement.
 
 - You need to ensure your application can access the key in the keystore. This may involve granting your application access to the key and/or the keystore, depending on the keystore, or performing other keystore-specific configuration steps. For example, to access an Azure Key Vault, you need to provide the correct credentials to the keystore.
 
@@ -508,10 +508,10 @@ For an example of implementing your own keystore provider, see [Custom Keystore 
 ## Limitations of the ODBC driver when using Always Encrypted
 
 ### Bulk Copy Function Usage
-Use of the [SQL Bulk Copy functions](https://msdn.microsoft.com/library/ms130792.aspx) is not supported when using the ODBC driver with Always Encrypted. No transparent encryption/decryption will occur on encrypted columns that are used with the SQL Bulk Copy functions.
+Use of the [SQL Bulk Copy functions](/sql-docs/docs/relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc) is not supported when using the ODBC driver with Always Encrypted. No transparent encryption/decryption will occur on encrypted columns that are used with the SQL Bulk Copy functions.
 
 ### Asynchronous Operations
-While the ODBC driver will allow the use of [asynchronous operations](https://msdn.microsoft.com/library/ms131658.aspx) with Always Encrypted, there is a performance impact on the operations when Always Encrypted is enabled. The call to `sys.sp_describe_parameter_encryption` to determine encryption metadata for the statement is blocking and will cause the driver to wait for the server to return the metadata before returning `SQL_STILL_EXECUTING`.
+While the ODBC driver will allow the use of [asynchronous operations](/sql-docs/docs/relational-databases/native-client/odbc/creating-a-driver-application-asynchronous-mode-and-sqlcancel) with Always Encrypted, there is a performance impact on the operations when Always Encrypted is enabled. The call to `sys.sp_describe_parameter_encryption` to determine encryption metadata for the statement is blocking and will cause the driver to wait for the server to return the metadata before returning `SQL_STILL_EXECUTING`.
 
 ## Always Encrypted API Summary
 
@@ -546,6 +546,6 @@ While the ODBC driver will allow the use of [asynchronous operations](https://ms
 
 ## See Also
 
-- [Always Encrypted (Database Engine)](https://msdn.microsoft.com/library/mt163865.aspx)
+- [Always Encrypted (Database Engine)](/sql-docs/docs/relational-databases/security/encryption/always-encrypted-database-engine)
 - [Always Encrypted blog](http://blogs.msdn.com/b/sqlsecurity/archive/tags/always-encrypted/)
 

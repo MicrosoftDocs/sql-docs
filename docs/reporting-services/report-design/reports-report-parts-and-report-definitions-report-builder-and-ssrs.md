@@ -48,7 +48,7 @@ manager: "erikre"
  A published report is secured through role assignments using the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] role-based security model. Published reports are accessed through URLs, SharePoint Web parts, or the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] web portal, or you can navigate to and open them in Report Builder.  
   
 ### Report Snapshots  
- A report can also be published as a snapshot that contains both layout information and data as of the time the report was initially run. Report snapshots are not saved in a particular rendering format. Instead, report snapshots are rendered in a final viewing format (such as HTML) only when a user or an application requests it. For more information, see [Finding and Viewing Reports in Report Manager &#40;Report Builder and SSRS&#41;](https://msdn.microsoft.com/library/dd255286.aspx).  
+ A report can also be published as a snapshot that contains both layout information and data as of the time the report was initially run. Report snapshots are not saved in a particular rendering format. Instead, report snapshots are rendered in a final viewing format (such as HTML) only when a user or an application requests it. For more information, see [Finding and Viewing Reports in Report Manager &#40;Report Builder and SSRS&#41;](/sql-docs/docs/reporting-services/report-builder/finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs).  
   
 ## Rendered Reports  
  A rendered report is a fully processed report that contains both data and layout information in a format suitable for viewing (such as HTML). Until a report is rendered into an output format, it cannot be viewed. You can render a report by doing one of the following:  

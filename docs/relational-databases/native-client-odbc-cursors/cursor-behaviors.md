@@ -49,6 +49,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Using Cursors (ODBC)](../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md) 
- [Cursor Properties](https://msdn.microsoft.com/library/ms131693.aspx) 
+ [Cursor Properties](/sql-docs/docs/relational-databases/native-client-odbc-cursors/properties/cursor-properties) 
   
   

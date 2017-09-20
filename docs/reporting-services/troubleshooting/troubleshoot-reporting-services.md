@@ -33,7 +33,7 @@ manager: "erikre"
 
 +  [Troubleshoot Publishing or Viewing a Report on a Native Mode Report Server](../../reporting-services/troubleshooting/troubleshoot-publishing-or-viewing-a-report-on-a-native-mode-report-server.md)  
 
-+  [Troubleshoot Server and Database Connection Problems with Reporting Serivces](https://msdn.microsoft.com/library/mt650905.aspx)  
++  [Troubleshoot Server and Database Connection Problems with Reporting Serivces](/sql-docs/docs/reporting-services/troubleshooting/troubleshoot-server-and-database-connection-problems-with-reporting-services)  
 
  ![Small File Folder Icon](../../reporting-services/troubleshooting/media/filefolder-small.png)   **Error and Events Reference**  
  + [Errors and Events Reference &#40;Reporting Services&#41;](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  

@@ -32,7 +32,7 @@ manager: "erikre"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## See Also  
- [Finding and Viewing Reports in Report Manager &#40;Report Builder and SSRS&#41;](https://msdn.microsoft.com/library/dd255286.aspx)   
+ [Finding and Viewing Reports in Report Manager &#40;Report Builder and SSRS&#41;](/sql-docs/docs/reporting-services/report-builder/finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs)   
  [Using My Reports &#40;Report Builder and SSRS&#41;](../../reporting-services/report-builder/using-my-reports-report-builder-and-ssrs.md)   
  [Finding, Viewing, and Managing Reports &#40;Report Builder and SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Open and Close a Report &#40;Report Manager&#41;](../../reporting-services/reports/open-and-close-a-report-report-manager.md)  

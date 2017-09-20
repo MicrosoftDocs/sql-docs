@@ -114,7 +114,8 @@ Microsoft Python Server    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/fwl
 
 ### <a name="bkmk_2016Installers"></a>Downloads for SQL Server 2016
 
-> [IMPORTANT]
+> [!IMPORTANT]
+> 
 > When installing SQL Server 2016 SP1 CU4 or SP1 CU5 offline, download SRO_3.2.2.16000_1033.cab. If you downloaded SRO_3.2.2.13000_1033.cab from FWLINK 831785 as indicated in the setup dialog box, rename the file as SRO_3.2.2.16000_1033.cab before installing the Cumulative Update.
 
 Release  |Download link  |

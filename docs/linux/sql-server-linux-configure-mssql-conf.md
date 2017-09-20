@@ -49,7 +49,9 @@ ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 
 The **set-collation** option changes the collation value to any of the supported collations.
 
-> [!IMPORTANT] Before you change the SQL Server collation, you must prepare for the change in several ways, including detaching user databases. For all requirements, see [Changing the Server Collation](../relational-databases/collations/set-or-change-the-database-collation.md).
+1. First [backup any user databases](sql-server-linux-backup-and-restore-database.md) on your server.
+
+1. Then use the [sp_detach_db](../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md) stored procedure to detach the user databases.
 
 1. Run the **set-collation** option and follow the prompts:
 
@@ -58,6 +60,8 @@ The **set-collation** option changes the collation value to any of the supported
    ```
 
 1. The mssql-conf utility will attempt to change to the specified collation value and restart the service. If there are any errors, it rolls back the collation to the previous value.
+
+1. Retore your user database backups.
 
 For a list of supported collations, run the [sys.fn_helpcollations](../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md) function: `SELECT Name from sys.fn_helpcollations()`.
 

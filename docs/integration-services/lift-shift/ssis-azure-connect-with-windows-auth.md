@@ -10,7 +10,7 @@ ms.author: "douglasl"
 manager: "craigg"
 ---
 # Connect to on-premises data sources with Windows Authentication
-This article describes how to configure the SSIS Catalog on Azure SQL Database to run packages that connect to on-premises data sources with Windows Authentication.
+This article describes how to configure the SSIS Catalog on Azure SQL Database to run packages that use Windows Authentication to connect to on-premises data sources.
 
 The domain credentials that you provide when you follow the steps in this article apply to all package executions on the SQL Database instance until you change or remove the credentials.
 
@@ -28,9 +28,9 @@ Before you set up domain credentials for Windows Authentication, check whether a
 3.  From SSMS, check whether you can connect to the on-premises SQL Server that you want to use.
 
 ## Provide domain credentials
-To provide domain credentials that let packages connect to on-premises data sources with Windows Authentication, do the following things:
+To provide domain credentials that let packages use Windows Authentication to connect to on-premises data sources, do the following things:
 
-1.  With SQL Server Management Studio (SSMS) or another tool, connect to the SQL Database that hosts the SSIS Catalog database (SSISDB).
+1.  With SQL Server Management Studio (SSMS) or another tool, connect to the SQL Database that hosts the SSIS Catalog database (SSISDB). For more info, see [Connect to the SSISDB Catalog database on Azure](ssis-azure-connect-to-catalog-database.md).
 
 2.  With SSISDB as the current database, open a query window.
 
@@ -70,10 +70,6 @@ To clear and remove the credentials that you provided as described in this artic
     ```
 
 ## Next steps
-- Deploy a package. For more info, see the following articles:
-    - [Deploy from SSMS](ssis-everest-quickstart-deploy-ssms.md)
-    - [Deploy with T-SQL from SSMS](ssis-everest-quickstart-deploy-tsql-ssms.md)
-- Run a package. For more info, see the following articles:
-    - [Run from SSMS](ssis-everest-quickstart-run-ssms.md)
-    - [Run with T-SQL from SSMS](ssis-everest-quickstart-run-tsql-ssms.md)
-- Schedule a package. For more info, see [Schedule page](ssis-everest-howto-schedule-package.md)
+- Deploy a package. For more info, see [Deploy an SSIS project with SQL Server Management Studio (SSMS)](ssis-everest-quickstart-deploy-ssms.md).
+- Run a package. For more info, see [Run an SSIS package with SQL Server Management Studio (SSMS)](ssis-everest-quickstart-run-ssms.md).
+- Schedule a package. For more info, see [Schedule SSIS package execution on Azure](ssis-azure-schedule-packages.md)

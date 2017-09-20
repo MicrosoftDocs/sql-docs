@@ -1,5 +1,5 @@
 ---
-title: "Schedule  | Microsoft Docs"
+title: "Schedule SSIS package execution on Azure | Microsoft Docs"
 ms.date: "09/25/2017"
 ms.topic: "article"
 ms.prod: "sql-server-2017"
@@ -9,8 +9,8 @@ author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
 ---
-# Schedule execution of an SSIS package on Azure SQL Database
-You can schedule the execution of packages on Azure SQL Database by choosing one of the following scheduling options:
+# Schedule the execution of an SSIS package on Azure
+You can schedule the execution of packages stored in the SSISDB Catalog database on an Azure SQL Database server by choosing one of the following scheduling options:
 -   [SQL Server Agent](#agent)
 -   [SQL Database elastic jobs](#elastic)
 -   [The Azure Data Factory SQL Server Stored Procedure activity](#sproc)
@@ -19,13 +19,13 @@ You can schedule the execution of packages on Azure SQL Database by choosing one
 
 ### Prerequisite
 
-Before you can use SQL Server Agent on-premises to schedule package execution in SSIS Everest, you have to add the SQL Database or the SQL Server Managed Instance as a linked server. For more info, see [Create Linked Servers](../relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md) and [Linked Servers](../relational-databases/linked-servers/linked-servers-database-engine.md).
+Before you can use SQL Server Agent on premises to schedule execution of packages stored on an Azure SQL Database server, you have to add the SQL Database server as a linked server. For more info, see [Create Linked Servers](../relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md) and [Linked Servers](../relational-databases/linked-servers/linked-servers-database-engine.md).
 
 ### Create a SQL Server Agent job
 
-To schedule a package with SQL Server Agent, create a job with a job step that calls the SSIS Catalog stored procedures `[catalog].[create_execution]` and then `[catalog].[start_execution]`.
+To schedule a package with SQL Server Agent on premises , create a job with a job step that calls the SSIS Catalog stored procedures `[catalog].[create_execution]` and then `[catalog].[start_execution]`. For more info, see [SQL Server Agent Jobs for Packages](../packages/sql-server-agent-jobs-for-packages.md).
 
-1.  In SQL Server Management Studio, connect to the on-premises SQL Server database in which you want to create the job.
+1.  In SQL Server Management Studio, connect to the on-premises SQL Server database on which you want to create the job.
 
 2.  Right-click on the **SQL Server Agent** node, select **New**, and then select **Job** to open the **New Job** dialog box.
 
@@ -56,11 +56,11 @@ For more info about elastic jobs on SQL Database, see [Managing scaled-out cloud
 
 ### Prerequisites
 
-Before you can use elastic jobs to schedule SSIS packages on SQL Database, you have to do the following things.
+Before you can use elastic jobs to schedule SSIS packages stored in the SSISDB Catalog database on an Azure SQL Database server, you have to do the following things.
 
 1.  Install and configure the Elastic Database jobs components. For more info, see [Installing Elastic Database jobs overview](/azure/sql-database/sql-database-elastic-jobs-service-installation.md).
 
-2. Create database-scoped credentials that jobs can use to send commands to the SSIS Catalog database.
+2. Create database-scoped credentials that jobs can use to send commands to the SSIS Catalog database. For more info, see [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).
 
 ### Create an elastic job
 
@@ -79,7 +79,7 @@ EXEC jobs.sp_add_target_group_member @target_group_name='TargetGroup', 
 EXEC jobs.sp_add_job @job_name='ExecutePackageJob', @description='Description', 
 	@schedule_interval_type='Minutes', @schedule_interval_count=60
 
--- Add a job step to create/start SSIS package execution using SSISDB sprocs
+-- Add a job step to create/start SSIS package execution using SSISDB catalog stored procedures
 EXEC jobs.sp_add_jobstep @job_name='ExecutePackageJob', 
 	@command=N'DECLARE @exe_id bigint 
 		EXEC [SSISDB].[catalog].[create_execution]
@@ -96,9 +96,9 @@ EXEC jobs.sp_update_job @job_name='ExecutePackageJob', @enabled=1, 
 	@schedule_interval_type='Minutes', @schedule_interval_count=60 
 ```
 
-## <a name="sproc"></a> Schedule a package with the Data Factory SQL Server Stored Procedure activity
+## <a name="sproc"></a> Schedule a package with the Azure Data Factory SQL Server Stored Procedure activity
 
-To schedule a package with the Data Factory SQL Server Stored Procedure activity, do the following things:
+To schedule a package with the Azure Data Factory SQL Server Stored Procedure activity, do the following things:
 1.  Create a Data Factory.
 2.  Created a linked service for the SQL Database that hosts SSISDB.
 3.  Create an output dataset that drives the scheduling.
@@ -154,7 +154,7 @@ The pipeline uses the SQL Server Stored Procedure activity to run the SSIS packa
 			"typeProperties": {
 				"storedProcedureName": "sp_executesql",
 				"storedProcedureParameters": {
-					"stmt": "Transact-SQL script to create and start SSIS package execution using SSISDB stored procedures"
+					"stmt": "Transact-SQL script to create and start SSIS package execution using SSISDB catalog stored procedures"
 				}
 			},
 			"outputs": [{
@@ -175,7 +175,7 @@ The pipeline uses the SQL Server Stored Procedure activity to run the SSIS packa
 You don't have to create a new stored procedure to encapsulate the Transact-SQL commands required to create and start SSIS package execution. You can simply provide the script as the value of the `stmt` parameter in the preceding JSON sample. Here is a sample script:
 
 ```sql
--- T-SQL script to create and start SSIS package execution using SSISDB sprocs
+-- T-SQL script to create and start SSIS package execution using SSISDB catalog stored procedures
 DECLARE @return_value INT,@exe_id BIGINT,@err_msg NVARCHAR(150)
 
 EXEC @return_value=[SSISDB].[catalog].[create_execution] @folder_name=N'folderName', @project_name=N'projectName', @package_name=N'packageName', @use32bitruntime=0, @runincluster=1,@useanyworker=1, @execution_id=@exe_id OUTPUT
@@ -213,3 +213,6 @@ GO
 For more info about the code in this script, see [Deploy and Execute SSIS Packages using Stored Procedures](https://docs.microsoft.com/en-us/sql/integration-services/packages/deploy-integration-services-ssis-projects-and-packages#deploy-and-execute-ssis-packages-using-stored-procedures).
 
 ## Next steps
+For more info about SQL Server Agent, see [SQL Server Agent Jobs for Packages](../packages/sql-server-agent-jobs-for-packages.md).
+
+For more info about elastic jobs on SQL Database, see [Managing scaled-out cloud databases](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-jobs-overview).

@@ -32,7 +32,7 @@ Use SQL Server Management Studio to connect to the SSIS Catalog on your Azure SQ
    | Setting       | Suggested value | Description | 
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Server type** | Database Engine | This value is required. |
-   | **Server name** | The fully qualified server name | The name should be something like this: **mysqldbserver.database.windows.net**. If you need the server name, see [Connect to the SSISDB Catalog database on Azure](ssis-azure-connect-to-catalog-database.md). |
+   | **Server name** | The fully qualified server name | The name should be in this format: **mysqldbserver.database.windows.net**. If you need the server name, see [Connect to the SSISDB Catalog database on Azure](ssis-azure-connect-to-catalog-database.md). |
    | **Authentication** | SQL Server Authentication | This quickstart uses SQL authentication. |
    | **Login** | The server admin account | This is the account that you specified when you created the server. |
    | **Password** | The password for your server admin account | This is the password that you specified when you created the server. |
@@ -50,7 +50,7 @@ Use SQL Server Management Studio to connect to the SSIS Catalog on your Azure SQ
 
 2.  Select the **Projects** node.
 
-3.  Right-click on the **Projects** node and select **Deploy project**. The Integration Services Deployment Wizard opens. You can deploy a project from the an SSIS Catalog database or from the file system.
+3.  Right-click on the **Projects** node and select **Deploy project**. The Integration Services Deployment Wizard opens. You can deploy a project from an SSIS Catalog database or from the file system.
 
 ### Deploy a project with the Deployment Wizard
 1. On the **Introduction** page of the Deployment Wizard, review the introduction. Select **Next** to open the **Select Source** page.
@@ -61,7 +61,7 @@ Use SQL Server Management Studio to connect to the SSIS Catalog on your Azure SQ
     -   Select **Next** to see the **Select Destination** page.
   
 3.  On the **Select Destination** page, select the destination for the project.
-    -   Enter the fully-qualified server name in the format `<server_name>.database.windows.net`.
+    -   Enter the fully qualified server name in the format `<server_name>.database.windows.net`.
     -   Then select **Browse** to select the target folder in SSISDB.
     -   Select **Next** to open the **Review** page.  
   
@@ -94,7 +94,7 @@ For more info about how to monitor running packages in SSMS, see [Monitor Runnin
 
 ## Monitor the Azure-SSIS Integration Runtime
 
-To get status info about the Azure-SSIS Integration Runtime in which packages are running, use the following PowerShell commands. For each of the commands, provide the names of the Data Factory, the Azure-SSIS IR, and the resource group.
+To get status info about the Azure-SSIS Integration Runtime in which packages are running, use the following PowerShell commands: For each of the commands, provide the names of the Data Factory, the Azure-SSIS IR, and the resource group.
 
 ### Get metadata about the Azure-SSIS Integration Runtime
 

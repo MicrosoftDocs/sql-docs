@@ -23,7 +23,7 @@ Before you can use SQL Server Agent on premises to schedule execution of package
 
 ### Create a SQL Server Agent job
 
-To schedule a package with SQL Server Agent on premises , create a job with a job step that calls the SSIS Catalog stored procedures `[catalog].[create_execution]` and then `[catalog].[start_execution]`. For more info, see [SQL Server Agent Jobs for Packages](../packages/sql-server-agent-jobs-for-packages.md).
+To schedule a package with SQL Server Agent on premises, create a job with a job step that calls the SSIS Catalog stored procedures `[catalog].[create_execution]` and then `[catalog].[start_execution]`. For more info, see [SQL Server Agent Jobs for Packages](../packages/sql-server-agent-jobs-for-packages.md).
 
 1.  In SQL Server Management Studio, connect to the on-premises SQL Server database on which you want to create the job.
 
@@ -56,7 +56,7 @@ For more info about elastic jobs on SQL Database, see [Managing scaled-out cloud
 
 ### Prerequisites
 
-Before you can use elastic jobs to schedule SSIS packages stored in the SSISDB Catalog database on an Azure SQL Database server, you have to do the following things.
+Before you can use elastic jobs to schedule SSIS packages stored in the SSISDB Catalog database on an Azure SQL Database server, you have to do the following things:
 
 1.  Install and configure the Elastic Database jobs components. For more info, see [Installing Elastic Database jobs overview](/azure/sql-database/sql-database-elastic-jobs-service-installation.md).
 
@@ -64,7 +64,7 @@ Before you can use elastic jobs to schedule SSIS packages stored in the SSISDB C
 
 ### Create an elastic job
 
-Create the job by using a Transact-SQL script similar to the script shown in the following example.
+Create the job by using a Transact-SQL script similar to the script shown in the following example:
 
 ```sql
 -- Create Elastic Jobs target group 
@@ -172,7 +172,7 @@ The pipeline uses the SQL Server Stored Procedure activity to run the SSIS packa
 }
 ```
 
-You don't have to create a new stored procedure to encapsulate the Transact-SQL commands required to create and start SSIS package execution. You can simply provide the script as the value of the `stmt` parameter in the preceding JSON sample. Here is a sample script:
+You don't have to create a new stored procedure to encapsulate the Transact-SQL commands required to create and start SSIS package execution. You can provide the script as the value of the `stmt` parameter in the preceding JSON sample. Here is a sample script:
 
 ```sql
 -- T-SQL script to create and start SSIS package execution using SSISDB catalog stored procedures

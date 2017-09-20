@@ -22,11 +22,11 @@ Before you start, make sure you have version 17.2 or later of SQL Server Managem
 ## Get the connection info from the Azure portal
 1. Log in to the [Azure portal](https://portal.azure.com/).
 2. In the Azure portal, select **SQL Databases** from the left-hand menu, and then select the `SSISDB` database on the **SQL databases** page. 
-3. On the **Overview** page for the `SSISDB` database, review the fully-qualified server name as shown in the image below. Hover over the server name to bring up the **Click to copy** option.
+3. On the **Overview** page for the `SSISDB` database, review the fully qualified server name as shown in the following image. Hover over the server name to bring up the **Click to copy** option.
 
     ![Server connection information](media/ssis-azure-connect-to-catalog-database/server-name.png) 
 
-4. If you have forgotten the login information for the SQL Database server, navigate to the SQL Database server page to view the server admin name and, if necessary, to reset the password.
+4. If you have forgotten the login information for the SQL Database server, navigate to the SQL Database server page. There you can view the server admin name and, if necessary, reset the password.
 
 ## Connect with SSMS
 1. Open SQL Server Management Studio.
@@ -36,7 +36,7 @@ Before you start, make sure you have version 17.2 or later of SQL Server Managem
    | Setting       | Suggested value | Description | 
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Server type** | Database Engine | This value is required. |
-   | **Server name** | The fully qualified server name | The name should be something like this: **mysqldbserver.database.windows.net**. |
+   | **Server name** | The fully qualified server name | The name should be in this format: **mysqldbserver.database.windows.net**. |
    | **Authentication** | SQL Server Authentication | This quickstart uses SQL authentication. |
    | **Login** | The server admin account | This is the account that you specified when you created the server. |
    | **Password** | The password for your server admin account | This is the password that you specified when you created the server. |

@@ -17,7 +17,7 @@ The domain credentials that you provide when you follow the steps in this articl
 ## Prerequisite
 Before you set up domain credentials for Windows Authentication, check whether a non-domain-joined computer can connect to your on-premises data sources in `runas` mode. For example, to check whether you can connect to an on-premises SQL Server, do the following things:
 
-1.  Find a non-domain-joined computer to run this test.
+1.  To run this test, fFind a non-domain-joined computer.
 
 2.  On the non-domain-joined computer, run the following command to start SQL Server Management Studio (SSMS) with the domain credentials that you want to use:
 

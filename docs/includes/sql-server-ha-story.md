@@ -233,7 +233,7 @@ Readable secondary replicas is a feature only in Enterprise Edition, and each in
 
 Scaling readable copies of a database via availability groups was first introduced with distributed availability groups in SQL Server 2016. This would allow companies to have read-only copies of the database not only locally, but regionally and globally with a minimal amount of configuration and reduce network traffic and latency by having queries executed locally. Each primary replica of an availability group can seed two other availability groups even if it is not the fully read/write copy, so each distributed availability group can support up to 27 copies of the data that are readable. 
 
-<!--cascading pic for distributed availability groups should go here-->
+![Distributed Availability Group][DAG]
 
 Starting with SQL Server 2017, It is possible to create a near-real time, read-only solution with availability groups configured with a cluster type of None. If the goal is to use availability groups for readable secondary replicas and not availability, doing this removes the complexity of using a WSFC or Pacemaker, and gives the readable benefits of an availability group in a simpler deployment method. 
 
@@ -259,4 +259,4 @@ Instances and databases of SQL Server 2017 can be made highly available using th
 [AlwaysOnFCI]:media\sql-server-ha-story\image8.png
 [BasicDAG]:media\sql-server-ha-story\image9.png
 [image10]:media\sql-server-ha-story\image10.png
-
+[DAG]:media\sql-server-ha-story\image11.png

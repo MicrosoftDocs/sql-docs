@@ -40,7 +40,7 @@ manager: "jhubbard"
   
 -   [How To: Connect to SQL Server Using SQL Authentication in ASP.NET 2.0](https://msdn.microsoft.com/library/ff648340.aspx)  
   
--   [Connecting to an Instance of SQL Server](https://msdn.microsoft.com/library/ms162132.aspx)  
+-   [Connecting to an Instance of SQL Server](/sql-docs/docs/relational-databases/server-management-objects-smo/create-program/connecting-to-an-instance-of-sql-server)  
   
 -   [How to: Create Connections to SQL Server Databases](https://msdn.microsoft.com/library/s4yys16a.aspx)  
   

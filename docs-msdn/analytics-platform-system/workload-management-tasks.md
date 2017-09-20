@@ -36,7 +36,7 @@ If a login is not in this list, its requests will receive the default resources.
 The resource allocations are listed in the [Workload Management](workload-management.md) topic.  
   
 ## Change the System Resources Allocated to a Request
-Describes how to figure out which resource class a SQL Server PDW request is running under, and then how to change the system resources for that request. Changing the resources for a request requires changing the resource class membership of the login submitting the request, by using the [ALTER SERVER ROLE](https://msdn.microsoft.com/library/ee677634.aspx) statement.  
+Describes how to figure out which resource class a SQL Server PDW request is running under, and then how to change the system resources for that request. Changing the resources for a request requires changing the resource class membership of the login submitting the request, by using the [ALTER SERVER ROLE](/sql-docs/docs/t-sql/statements/alter-server-role-transact-sql) statement.  
   
 ### Step 1: Determine the resource class for the login running the request.  
 This query displays logins which are members of the resource class server role memberships. There are three resource classes, **mediumrc**, **largerc**, and **xlargerc**.  
@@ -94,7 +94,7 @@ Ching is now a member of the mediumrc server role.  The following example change
 ALTER SERVER ROLE mediumrc DROP MEMBER Ching;  
 ```  
   
-For more information about changing resource class role membership, see [ALTER SERVER ROLE](https://msdn.microsoft.com/library/ee677634.aspx).  
+For more information about changing resource class role membership, see [ALTER SERVER ROLE](/sql-docs/docs/t-sql/statements/alter-server-role-transact-sql).  
 
 ## Change a login to the default system resources for its requests
 Describes how to change the system resource allocations assigned to a SQL Server PDW login to the default amounts. This affects the system resources that SQL Server PDW assigns to requests submitted by the login.  

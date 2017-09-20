@@ -50,7 +50,7 @@ manager: "jhubbard"
   
 |New Feature|Description|  
 |-----------------|-----------------|  
-|New Escape Function<br /><br /> Limited Return Rows Escape|Partially supported<br /><br /> Escape syntax: LIMIT \<rows> [OFFSET <row_offset>]<br /><br /> The escape syntax has two parts: the mandatory part ‘rows’ specifies the number of rows to return, the optional part ‘row_offset’ specifies the number of rows to skip before beginning to return rows<br /><br /> The driver will support only the mandatory part by transforming the query to using ‘TOP’ instead of LIMIT (SQL Server does not support ‘LIMIT’).<br /><br /> The driver will throw an exception if the optional part ‘row_offset’ is used as SQL Server does not have any built-in construct for supporting that.<br /><br /> For details, see [Using SQL Escape Sequences](https://msdn.microsoft.com/en-us/library/ms378045.aspx).|  
+|New Escape Function<br /><br /> Limited Return Rows Escape|Partially supported<br /><br /> Escape syntax: LIMIT \<rows> [OFFSET <row_offset>](/sql-docs/docs/connect/jdbc/using-sql-escape-sequences).|  
   
  The Java Database Connectivity API 4.1 specification is supported by the Microsoft JDBC Driver 4.2 for SQL Server, with the following Data Type Mappings.  
   

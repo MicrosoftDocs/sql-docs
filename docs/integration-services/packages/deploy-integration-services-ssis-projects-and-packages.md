@@ -266,7 +266,7 @@ static void Main()
   
 2.  If the project and all packages pass the compatibility test, then click **OK** to convert the package.  
   
-> **NOTE:** To convert a project to the project deployment model, use the **Integration Services Project Conversion Wizard**. For more information, see [Integration Services Project Conversion Wizard](https://msdn.microsoft.com/library/hh213290.aspx).  
+> **NOTE:** To convert a project to the project deployment model, use the **Integration Services Project Conversion Wizard**. For more information, see [Integration Services Project Conversion Wizard](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages).  
 
 ## Integration Services Deployment Wizard
   The **Integration Services Deployment Wizard** supports two deployment models:
@@ -398,7 +398,7 @@ Launch the wizard by either:
 14. Click **OK** twice to save your changes.  
 
 ## Deploy and Execute SSIS Packages using Stored Procedures
-  When you configure an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project to use the project deployment model, you can use stored procedures in the [!INCLUDE[ssIS](../../includes/ssis-md.md)] catalog to deploy the project and execute the packages. For information about the project deployment model, see [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx).  
+  When you configure an [!INCLUDE[ssISnoversion](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages).  
   
  You can also use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] to deploy the project and execute the packages. For more information, see the topics in the **See Also** section.  
   

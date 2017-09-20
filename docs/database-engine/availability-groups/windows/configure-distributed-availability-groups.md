@@ -228,7 +228,10 @@ Only manual failover is supported at this time. The following Transact-SQL state
         );  
        
       ```  
-  
+   >[!NOTE]
+   >Similarly to regular availability groups, the synchronization status between two availability groups replicas part of a distributed      availability group, depends on the availability mode of both replicas. For example, for synchronous commit to occur, both the current    primary availability group and the secondary availability group must be configured with synchronous_commit availability mode.  
+
+
 1. Wait until the status of the distributed availability group has changed to `SYNCHRONIZED`. Run the following query on the SQL Server that hosts the primary replica of the primary availability group. 
     
       ```sql  

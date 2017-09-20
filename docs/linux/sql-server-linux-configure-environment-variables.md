@@ -14,7 +14,7 @@ ms.assetid:
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-You can use several different environment variables to configure SQL Server 2017 RC2 on Linux. These variables are used in two scenarios:
+You can use several different environment variables to configure SQL Server 2017 on Linux. These variables are used in two scenarios:
 
 - To configure initial setup with the `mssql-conf setup` command.
 - To configure a new [SQL Server container in Docker](quickstart-install-connect-docker.md).

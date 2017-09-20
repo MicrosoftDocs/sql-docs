@@ -16,9 +16,9 @@ ms.assetid: 9dab69c7-73af-4340-aef0-de057356b791
 
 This topic describes how to run SQL Server Integration Services (SSIS) packages on Linux. SSIS solves complex data integration problems by loading data from multiple sources and formats, transforming and cleansing the data, and updating multiple destinations. 
 
-SSIS packages running on Linux can connect to Microsoft SQL Server running on Windows on-premises or in the cloud, on Linux, or in Docker. They can also connect to Azure SQL Database, Azure SQL Data Warehouse, and ODBC data sources.
+SSIS packages running on Linux can connect to Microsoft SQL Server running on Windows on-premises or in the cloud, on Linux, or in Docker. They can also connect to Azure SQL Database, Azure SQL Data Warehouse, ODBC data sources, flat files, and other data sources including ADO.NET sources, XML files, and OData services.
 
-You can use SSIS to run packages on Linux when you also have a Windows computer to create and maintain packages. The SSIS design and management tools are Windows applications. 
+You can run SSIS packages on Linux when you also have a Windows computer to create and maintain packages. The SSIS design and management tools are Windows applications. 
 
 ## Prerequisites
 

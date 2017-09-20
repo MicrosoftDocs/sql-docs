@@ -45,7 +45,7 @@
 ### [Export and import a BACPAC from Windows](sql-server-linux-migrate-ssms.md)
 ### [Migrate with SQL Server Migration Assistant](sql-server-linux-migrate-ssma.md)
 ### [Bulk copy with bcp](sql-server-linux-migrate-bcp.md)
-### [Load data with (SSIS)](sql-server-linux-migrate-ssis.md)
+### [Extract, transform, and load data with SSIS](sql-server-linux-migrate-ssis.md)
 
 ## [Configure Business Continuity](sql-server-linux-business-continuity-dr.md)
 ### [Backup and Restore](sql-server-linux-backup-and-restore-database.md)

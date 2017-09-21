@@ -90,6 +90,8 @@ The following features and services are not available on Linux at this time. The
 | &nbsp; | Managed Backup |
 | **High Availability** | Database mirroring  |
 | **Security** | Extensible Key Management |
+| &nbsp; | AD Authentication for Linked Servers | 
+| &nbsp; | AD Authenticatin for Availibility Groups (AGs) | 
 | **Services** | SQL Server Browser |
 | &nbsp; | SQL Server R services |
 | &nbsp; | StreamInsight |

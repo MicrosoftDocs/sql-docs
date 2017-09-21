@@ -151,11 +151,11 @@ SQL Server supports natively compiled stored procedures that access memory-optim
 ### Learn More About In-Memory OLTP
 For more information about In-Memory OLTP, see the following topics:
 
-- [Quick Start 1: In-Memory OLTP Technologies for Faster Transact-SQL Performance](https://msdn.microsoft.com/library/mt694156.aspx)
-- [Migrating to In-Memory OLTP](https://msdn.microsoft.com/library/dn247639.aspx)
-- [Faster temp table and table variable by using memory optimization](https://msdn.microsoft.com/library/mt718711.aspx)
-- [Monitor and Troubleshoot Memory Usage](https://msdn.microsoft.com/library/dn465869.aspx)
-- [In-Memory OLTP (In-Memory Optimization)](https://msdn.microsoft.com/library/dn133186.aspx)
+- [Quick Start 1: In-Memory OLTP Technologies for Faster Transact-SQL Performance](/sql-docs/docs/relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp)
+- [Migrating to In-Memory OLTP](/sql-docs/docs/relational-databases/in-memory-oltp/migrating-to-in-memory-oltp)
+- [Faster temp table and table variable by using memory optimization](/sql-docs/docs/relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization)
+- [Monitor and Troubleshoot Memory Usage](/sql-docs/docs/relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage)
+- [In-Memory OLTP (In-Memory Optimization)](/sql-docs/docs/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization)
 
 ## Use Query Store
 Query Store collects detailed performance information about queries, execution plans, and runtime statistics.

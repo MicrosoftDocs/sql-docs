@@ -29,7 +29,7 @@ To begin this tutorial, let's take a look at [!INCLUDE[ssManStudioFull](../../in
   * For older versions of Windows, on the **Start** menu, point to **All Programs**, point to [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], and then click **SQL Server Management Studio**. Alternately from the **Run** dialog box, type **SSMS.exe** and then click **OK**.  
   
     > [!NOTE]  
-    >  If SSMS doesn't appear, you may not have successfully installed SSMS. Install SSMS from the [download center](https://msdn.microsoft.com/library/mt238290.aspx). SSMS is not automatically installed with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016. Use the latest version to access all of the features.  
+    >  If SSMS doesn't appear, you may not have successfully installed SSMS. Install SSMS from the [download center](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms). SSMS is not automatically installed with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016. Use the latest version to access all of the features.  
   
 2.  In the next step, you connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] using the **Object Explorer** component of SSMS. If the Object Explorer pane is not visible, on the **View** menu, click **Object Explorer**. In the Object Explorer menu, click the **Connect** button, and then click **Database Engine**. The **Connect to Server** dialog box should appear. (If you have previously installed SSMS, the user settings might be causing the **Connect to Server** dialog box to appear automatically.)  
   

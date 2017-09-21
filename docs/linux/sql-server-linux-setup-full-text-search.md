@@ -80,7 +80,7 @@ If you need an offline installation, locate the Full-text Search package downloa
 
 ## Supported languages
 
-Full-Text Search uses [word breakers](https://msdn.microsoft.com/library/ms142509.aspx) that determine how to identify individual words based on language. You can get a list of registered word breakers by querying the **sys.fulltext_languages** catalog view. Word breakers for the following languages are installed with SQL Server 2017 RC2:
+Full-Text Search uses [word breakers](/sql-docs/docs/relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search) that determine how to identify individual words based on language. You can get a list of registered word breakers by querying the **sys.fulltext_languages** catalog view. Word breakers for the following languages are installed with SQL Server 2017 RC2:
 
 | Language | Language ID |
 |---|---|
@@ -140,7 +140,7 @@ Full-Text Search uses [word breakers](https://msdn.microsoft.com/library/ms14250
 
 ## <a id="filters"></a> Filters
 
-Full-Text Search also works with text stored in binary files. But in this case, an installed filter is required to process the file. For more information about filters, see [Configure and Manage Filters for Search](https://msdn.microsoft.com/library/ms142499.aspx).
+Full-Text Search also works with text stored in binary files. But in this case, an installed filter is required to process the file. For more information about filters, see [Configure and Manage Filters for Search](/sql-docs/docs/relational-databases/search/configure-and-manage-filters-for-search).
 
 You can see a list of installed filters by calling **sp_help_fulltext_system_components 'filter'**. For SQL Server 2017 RC2, the following filters are installed:
 
@@ -252,9 +252,9 @@ You can see a list of installed filters by calling **sp_help_fulltext_system_com
 |.xml | 41B9BE05-B3AF-460C-BF0B-2CDD44A093B1 | 12.0.9735.0 |
 
 ## Semantic search
-[Semantic Search](https://msdn.microsoft.com/library/gg492075.aspx) builds on the Full-Text Search feature to extract and index statistically relevant *key phrases*. This enables you to query the meaning within documents in your database. It also helps to identify documents that are similar.
+[Semantic Search](/sql-docs/docs/relational-databases/search/semantic-search-sql-server) builds on the Full-Text Search feature to extract and index statistically relevant *key phrases*. This enables you to query the meaning within documents in your database. It also helps to identify documents that are similar.
 
-In order to use Semantic Search, you must first download and attach the [Semantic Language Statistics database](https://msdn.microsoft.com/library/gg509085.aspx).
+In order to use Semantic Search, you must first download and attach the [Semantic Language Statistics database](/sql-docs/docs/relational-databases/search/install-and-configure-semantic-search).
 
 1. On a Windows machine, [download the .MSI file for the Semantic Language Statistics database](https://www.microsoft.com/download/details.aspx?id=54277).
 

@@ -433,7 +433,7 @@ Direct seeding allows a secondary replica to be automatically seeded over the ne
 ###  <a name="Tools"></a> Tools Enhancements
 
 ####  <a name="SSMS"></a> Management Studio
-Download the latest [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx)
+Download the latest [SQL Server Management Studio (SSMS)](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms)
 
 - [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] supports the Active Directory Authentication Library (ADAL) which is under development for connecting to Microsoft Azure. This replaces the certificate-based authentication used in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)][!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].
 - [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] installation requires installing .NET 4.6 as a pre-requisite. .NET 4.6 will be automatically installed by setup when [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] is installed.

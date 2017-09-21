@@ -19,7 +19,7 @@ Instant file initialization is a SQL Server feature that allows data file operat
 Instant file initialization is not available when TDE is enabled.  
   
 ## Add Permission for the Backup Account  
-The backup process requires a network credential (Windows user account) that can access the backup storage location. You authorize PDW to use account by using the [sp_pdw_add_network_credentials](https://msdn.microsoft.com/library/mt204011.aspx) procedure. See [BACKUP DATABASE](https://msdn.microsoft.com/library/mt631607.aspx) for the entire backup process. To use instant file initialization, the backup account must be granted the `Perform volume maintenance tasks` permission.  
+The backup process requires a network credential (Windows user account) that can access the backup storage location. You authorize PDW to use account by using the [sp_pdw_add_network_credentials](/sql-docs/docs/relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse) procedure. See [BACKUP DATABASE](/sql-docs/docs/t-sql/statements/backup-database-parallel-data-warehouse) for the entire backup process. To use instant file initialization, the backup account must be granted the `Perform volume maintenance tasks` permission.  
   
 1.  On the backup server, open the **Local Security Policy** application (`secpol.msc`).  
   

@@ -120,7 +120,7 @@ manager: "erikre"
   
     2.  Report server configuration tools and utilities that are upgraded to the new version include the Native Mode [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool, command line utilities such as RS.exe, and Report Builder.  
   
-    3.  Other client tools such as [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] are a separate download and need to be upgraded separately. For more information, see [Download SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx).
+    3.  Other client tools such as [!INCLUDE[ssManStudioFull](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms).
   
     4.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] is a separate download. For more information, see [SQL Server Data Tools in Visual Studio 2015](https://msdn.microsoft.com/mt186501).  
   

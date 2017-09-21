@@ -88,7 +88,7 @@ manager: "jhubbard"
   
     -   If the value of **allow_pull** is **0**, execute [sp_changepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md), specifying **allow_pull** for **@property** and **true** for **@value**.  
   
-2.  At the Subscriber, execute [sp_addpullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md). Specify **@publisher** and **@publication**. For information about updating subscriptions, see [Create an Updatable Subscription to a Transactional Publication](https://msdn.microsoft.com/library/ms152769.aspx).  
+2.  At the Subscriber, execute [sp_addpullsubscription &#40;Transact-SQL&#41;](/sql-docs/docs/relational-databases/replication/publish/create-an-updatable-subscription-to-a-transactional-publication).  
   
 3.  At the Subscriber, execute [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md). Specify the following:  
   
@@ -134,7 +134,7 @@ manager: "jhubbard"
   
     -   (Optional) A value of **0** for **@publisher_security_mode** and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login information for **@publisher_login** and **@publisher_password**, if you need to use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication when connecting to the Publisher.  
   
-    -   A schedule for the Merge Agent job for this subscription. For more information, see [Create an Updatable Subscription to a Transactional Publication](https://msdn.microsoft.com/library/ms152769.aspx).  
+    -   A schedule for the Merge Agent job for this subscription. For more information, see [Create an Updatable Subscription to a Transactional Publication](/sql-docs/docs/relational-databases/replication/publish/create-an-updatable-subscription-to-a-transactional-publication).  
   
 4.  At the Publisher, execute [sp_addmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md). Specify **@publication**, **@subscriber**, **@subscriber_db**, and a value of **pull** for **@subscription_type**. This registers the pull subscription.  
   

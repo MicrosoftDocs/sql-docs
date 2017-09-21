@@ -23,6 +23,7 @@ This topic lists SSMA for MySQL changes in each release.
 
 ## SSMA v7.5
 The v7.5 release of SSMA for MySQL has been enhanced with several improvements to ensure greater accessibility for people with disabilities.
+
 > [!IMPORTANT]
 > .Net 4.5.2 is a pre-requisite for installing SSMA v7.5. In addition, beginning with v7.4, the 32-bit version of SSMA is being discontinued.
 

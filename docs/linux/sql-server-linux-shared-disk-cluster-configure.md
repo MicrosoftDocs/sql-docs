@@ -1,5 +1,5 @@
 ---
-title: Configure failover cluster instance - SQL Server on Linux | Microsoft Docs
+title: Configure failover cluster instance - SQL Server on Linux (RHEL) | Microsoft Docs
 description: 
 author: MikeRayMSFT 
 ms.author: mikeray 
@@ -10,11 +10,21 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85 
 ---
-# Configure failover cluster instance - SQL Server on Linux
+# Configure failover cluster instance - SQL Server on Linux (RHEL)
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-This article explains how to create a two-node shared disk failover cluster instance (FCI) for SQL Server. The article includes instructions and script examples for Red Hat Enterprise Linux (RHEL) or Suse Linux Enterprise Server (SLES). Ubuntu distributions are similar to RHEL so the script examples will normally also work on Ubuntu. 
+A SQL Server two-node shared disk failover cluster instance provides server-level redundancy for high availability. In this tutorial, you learn how to create a two-node failover cluster instance of SQL Server on Linux. The specific steps that you will complete include:
+
+> [!div class="checklist"]
+> * Set up and configure Linux
+> * Install and configure SQL Server
+> * Configure the hosts file
+> * Configure shared storage and move the database files
+> * Install and configure Pacemaker on each cluster node
+> * Configure the failover cluster instance
+
+This article explains how to create a two-node shared disk failover cluster instance (FCI) for SQL Server. The article includes instructions and script examples for Red Hat Enterprise Linux (RHEL). Ubuntu distributions are similar to RHEL so the script examples will normally also work on Ubuntu. 
 
 For conceptual information, see [SQL Server Failover Cluster Instance (FCI) on Linux](sql-server-linux-shared-disk-cluster-concepts.md).
 
@@ -22,16 +32,15 @@ For conceptual information, see [SQL Server Failover Cluster Instance (FCI) on L
 
 To complete the end-to-end scenario below you need two machines to deploy the two nodes cluster and another server for storage. Below steps outline how these servers will be configured.
 
-## Setup and configure Linux
+## Set up and configure Linux
 
 The first step is to configure the operating system on the cluster nodes. On each node in the cluster, configure a linux distribution. Use the same distribution and version on both nodes. Use either one or the other of the following distributions:
     
 * RHEL with a valid subscription for the HA add-on
-* SLES with SUSE Linux Enterprise High Availability Extension 12 SP2.  
 
 ## Install and configure SQL Server
 
-1. Install and setup SQL Server on both nodes.  For detailed instructions see [Install SQL Server on Linux](sql-server-linux-setup.md).
+1. Install and set up SQL Server on both nodes.  For detailed instructions see [Install SQL Server on Linux](sql-server-linux-setup.md).
 1. Designate one node as primary and the other as secondary, for purposes of configuration. Use these terms for the following this guide.  
 1. On the secondary node, stop and disable SQL Server.
     The following example stops and disables SQL Server: 
@@ -41,7 +50,7 @@ The first step is to configure the operating system on the cluster nodes. On eac
     ```
 
     > [!NOTE] 
-    > At setup time, a Server Master Key is generated for the SQL Server instance and placed at `var/opt/mssql/secrets/machine-key`. On Linux, SQL Server always runs as a local account called mssql. Because it’s a local account, its identity isn’t shared across nodes. Therefore, you need to copy the encryption key from primary node to each secondary node so each local mssql account can access it to decrypt the Server Master Key. 
+    > At set up time, a Server Master Key is generated for the SQL Server instance and placed at `var/opt/mssql/secrets/machine-key`. On Linux, SQL Server always runs as a local account called mssql. Because it’s a local account, its identity isn’t shared across nodes. Therefore, you need to copy the encryption key from primary node to each secondary node so each local mssql account can access it to decrypt the Server Master Key. 
 
 1.  On the primary node, create a SQL server login for Pacemaker and grant the login permission to run `sp_server_diagnostics`. Pacemaker will use this account to verify which node is running SQL Server. 
 
@@ -144,8 +153,7 @@ You need to provide storage that both nodes can access. You can use iSCSI, NFS, 
    sudo yum install mssql-server-ha
    ```
 
-<!--#####################################################################################################################-->
-## Configure the Failover Cluster Instance
+## Configure the failover cluster instance
 
 The FCI will be created in a resource group. This is a little bit easier since the resource group alleviates the need for constraints. However, add the resources into the resource group in the order they should start. The order they should start is: 
 
@@ -262,8 +270,19 @@ This example will create an FCI in the group NewLinFCIGrp. The name of the resou
 |**Red Hat Enterprise Linux with HA add-on** |[Configure](sql-server-linux-shared-disk-cluster-red-hat-7-configure.md)<br/>[Operate](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)
 |**SUSE Linux Enterprise Server with HA add-on** |[Configure](sql-server-linux-shared-disk-cluster-sles-configure.md)
 -->
+## Summary
 
-## Next Steps
+In this tutorial you completed the following tasks.
+
+> [!div class="checklist"]
+> * Set up and configure Linux
+> * Install and configure SQL Server
+> * Configure the hosts file
+> * Configure shared storage and move the database files
+> * Install and configure Pacemaker on each cluster node
+> * Configure the failover cluster instance
+
+## Next steps
 
 - [Operate failover cluster instance - SQL Server on Linux](sql-server-linux-shared-disk-cluster-operate.md)
 

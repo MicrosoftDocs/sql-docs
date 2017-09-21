@@ -46,25 +46,25 @@ Here are some tips and notes for successfully using SMB:
 
 4. For system databases or anything stored in the default data location follow these steps. Otherwise skip to step 5. 
 
-    a)	Ensure that SQL Server is stopped on the server that you are working on.
+   *	Ensure that SQL Server is stopped on the server that you are working on.
     ```bash
     sudo systemctl stop mssql-server
     sudo systemctl status mssql-server
     ```
 
-    b)	Switch fully to be the superuser. You will not receive any acknowledgement if successful.
+   *	Switch fully to be the superuser. You will not receive any acknowledgement if successful.
 
     ```bash
     sudo -i
     ```
 
-    c)	Switch to be the mssql user. You will not receive any acknowledgement if successful.
+   *	Switch to be the mssql user. You will not receive any acknowledgement if successful.
 
     ```bash
     su mssql
     ```
 
-    d)	Create a temporary directory to store the SQL Server data and log files. You will not receive any acknowledgement if successful.
+   *	Create a temporary directory to store the SQL Server data and log files. You will not receive any acknowledgement if successful.
 
     ```bash
     mkdir <TempDir>
@@ -76,7 +76,7 @@ Here are some tips and notes for successfully using SMB:
     mkdir /var/opt/mssql/tmp
     ```
 
-    e)	Copy the SQL Server data and log files to the temporary directory. You will not receive any acknowledgement if successful.
+   *	Copy the SQL Server data and log files to the temporary directory. You will not receive any acknowledgement if successful.
 
     ```bash
     cp /var/opt/mssql/data/* <TempDir>
@@ -84,7 +84,7 @@ Here are some tips and notes for successfully using SMB:
 
     \<TempDir> is the name of the folder from the previous step.
     
-    f)	Verify that the files are in the directory.
+   *	Verify that the files are in the directory.
 
     ```bash
     ls <TempDir>
@@ -92,21 +92,21 @@ Here are some tips and notes for successfully using SMB:
 
     \<TempDir> is the name of the folder from Step d.
     
-    g)	Delete the files from the existing SQL Server data directory. You will not receive any acknowledgement if successful.
+   *	Delete the files from the existing SQL Server data directory. You will not receive any acknowledgement if successful.
  
     ```bash
     rm – f /var/opt/mssql/data/*
     ```
 
-    h)	Verify that the files have been deleted. 
+   *	Verify that the files have been deleted. 
 
     ```bash
     ls /var/opt/mssql/data
     ```
  
-    i)	Type exit to switch back to the root user.
+   *	Type exit to switch back to the root user.
 
-    j)	Mount the SMB share in the SQL Server data folder. You will not receive any acknowledgement if successful. This example shows the syntax for connecting to a Windows Server-based SMB 3.0 share.
+   *	Mount the SMB share in the SQL Server data folder. You will not receive any acknowledgement if successful. This example shows the syntax for connecting to a Windows Server-based SMB 3.0 share.
 
     ```bash
     Mount -t cifs //<ServerName>/<ShareName> /var/opt/mssql/data -o vers=3.0,username=<UserName>,password=<Password>,domain=<domain>,uid=<mssqlUID>,gid=<mssqlGID>,file_mode=0777,dir_mode=0777
@@ -126,53 +126,53 @@ Here are some tips and notes for successfully using SMB:
  
     \<mssqlGID> is the GID of the mssql user
  
-    k)	Check to see that the mount was successful by issuing mount with no switches.
+   *	Check to see that the mount was successful by issuing mount with no switches.
 
     ```bash
     mount
     ```
  
-    l)	Switch to the mssql user. You will not receive any acknowledgement if successful.
+   *	Switch to the mssql user. You will not receive any acknowledgement if successful.
 
     ```bash
     su mssql
     ```
 
-    m)	Copy the files from the temporary directory /var/opt/mssql/data. You will not receive any acknowledgement if successful.
+   *	Copy the files from the temporary directory /var/opt/mssql/data. You will not receive any acknowledgement if successful.
 
     ```bash
     cp /var/opt/mssql/tmp/* /var/opt/mssql/data
     ```
 
-    n)	Verify the files are there.
+   *	Verify the files are there.
 
     ```bash
     ls /var/opt/mssql/data
     ```
 
-    o)	Enter exit to not be mssql 
+   *	Enter exit to not be mssql 
 
-    p)	Enter exit to not be root
+   *	Enter exit to not be root
 
-    q)	Start SQL Server. If everything was copied correctly and security applied correctly, SQL Server should show as started.
+   *	Start SQL Server. If everything was copied correctly and security applied correctly, SQL Server should show as started.
 
     ```bash
     sudo systemctl start mssql-server
     sudo systemctl status mssql-server
     ```
  
-    r)	To test further, create a database to ensure the permissions are fine. The example below uses Transact-SQL; you can use SSMS.
+   *	To test further, create a database to ensure the permissions are fine. The example below uses Transact-SQL; you can use SSMS.
 
     ![10_testcreatedb][2] 
   
-    s)	Stop SQL Server and verify it is shut down. If you are going to be adding or testing other disks, do not shut down SQL Server until those are added and tested.
+   *	Stop SQL Server and verify it is shut down. If you are going to be adding or testing other disks, do not shut down SQL Server until those are added and tested.
 
     ```bash
     sudo systemctl stop mssql-server
     sudo systemctl status mssql-server
     ```
 
-    t)	Only if finished, unmount the share. If not, unmount after finishing testing/adding any additional disks.
+   *	Only if finished, unmount the share. If not, unmount after finishing testing/adding any additional disks.
 
     ```bash
     sudo umount //<IPAddressorServerName>/<ShareName /<FolderMountedIn>
@@ -186,13 +186,13 @@ Here are some tips and notes for successfully using SMB:
 
 5.	For things other than system databases, such as user databases or backups, follow these steps. If only using the default location, skip to Step 14.
     
-    a)	Switch to be the superuser. You will not receive any acknowledgement if successful.
+   *	Switch to be the superuser. You will not receive any acknowledgement if successful.
 
     ```bash
     sudo -i
     ```
     
-    b)	Create a folder that will be used by SQL Server. 
+   *	Create a folder that will be used by SQL Server. 
 
     ```bash
     mkdir <FolderName>
@@ -204,7 +204,7 @@ Here are some tips and notes for successfully using SMB:
     mkdir /var/opt/mssql/userdata
     ```
 
-    c)	Mount the SMB share in the SQL Server data folder. You will not receive any acknowledgement if successful. This example shows the syntax for connecting to a Samba-based SMB 3.0 share.
+   *	Mount the SMB share in the SQL Server data folder. You will not receive any acknowledgement if successful. This example shows the syntax for connecting to a Samba-based SMB 3.0 share.
 
     ```bash
     Mount -t cifs //<ServerName>/<ShareName> <FolderName> -o vers=3.0,username=<UserName>,password=<Password>,uid=<mssqlUID>,gid=<mssqlGID>,file_mode=0777,dir_mode=0777
@@ -224,13 +224,13 @@ Here are some tips and notes for successfully using SMB:
 
     \<mssqlGID> is the GID of the mssql user.
  
-    d) Check to see that the mount was successful by issuing mount with no switches.
+   * Check to see that the mount was successful by issuing mount with no switches.
  
-    e) Type exit to no longer be the superuser.
+   * Type exit to no longer be the superuser.
 
-    f) To test, create a database in that folder. The example shown below uses sqlcmd to create a database, switch context to it, verify the files exist at the OS level, and then deletes the temporary location. You can use SSMS.
+   * To test, create a database in that folder. The example shown below uses sqlcmd to create a database, switch context to it, verify the files exist at the OS level, and then deletes the temporary location. You can use SSMS.
  
-    g) Unmount the share 
+   * Unmount the share 
 
     ```bash
     sudo umount //<IPAddressorServerName>/<ShareName> /<FolderMountedIn>
@@ -246,7 +246,7 @@ Here are some tips and notes for successfully using SMB:
 
 You are now ready to configure the FCI.
 
-## Next Steps
+## Next steps
 
 [Configure failover cluster instance - SQL Server on Linux](sql-server-linux-shared-disk-cluster-configure.md)
 

@@ -14,15 +14,17 @@ ms.assetid: 9dab69c7-73af-4340-aef0-de057356b791
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-This topic describes how to run SQL Server Integration Services (SSIS) packages on Linux. SSIS solves complex data integration problems by loading data from multiple sources and formats, transforming and cleansing the data, and updating multiple destinations. 
+This topic describes how to run SQL Server Integration Services (SSIS) packages on Linux. SSIS solves complex data integration problems by extracting data from multiple sources and formats, transforming and cleansing the data, and loading the data into multiple destinations. 
 
 SSIS packages running on Linux can connect to Microsoft SQL Server running on Windows on-premises or in the cloud, on Linux, or in Docker. They can also connect to Azure SQL Database, Azure SQL Data Warehouse, ODBC data sources, flat files, and other data sources including ADO.NET sources, XML files, and OData services.
 
-You can run SSIS packages on Linux when you also have a Windows computer to create and maintain packages. The SSIS design and management tools are Windows applications. 
+For more info about the capabilities of SSIS, see [SQL Server Integration Services](../integration-services/sql-server-integration-services.md).
 
 ## Prerequisites
 
-To run SSIS packages on a Linux computer, first you have to install SQL Server Integration Services. For installation instructions, see [Install SQL Server Integration Services](sql-server-linux-setup-ssis.md).
+To run SSIS packages on a Linux computer, first you have to install SQL Server Integration Services. SSIS is not included in the installation of SQL Server for Linux computers. For installation instructions, see [Install SQL Server Integration Services](sql-server-linux-setup-ssis.md).
+
+You also have to have a Windows computer to create and maintain packages. The SSIS design and management tools are Windows applications that are not currently available for Linux computers. 
 
 ## Run an SSIS package
 
@@ -33,16 +35,17 @@ To run an SSIS package on a Linux computer, do the following things:
     ```
     $ dtexec /F \<package name \> /DE <protection password>
     ```
+## Connect to ODBC sources and destinations
+
+With SSIS on Linux CTP 2.1 Refresh and later, SSIS packages can use ODBC connections on Linux. This functionality has been tested with the SQL Server and the MySQL ODBC drivers, but is also expected to work with any Unicode ODBC driver that observes the ODBC specification. At design time, you can provide either a DSN or a connection string to connect to the ODBC data; you can also use Windows authentication. For more info, see the [blog post announcing ODBC support on Linux](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/).
 
 ## Limitations and known issues
-
-**ODBC connections**. With SSIS on Linux CTP 2.1 Refresh and later, SSIS packages can use ODBC connections on Linux. This functionality has been tested with the SQL Server and the MySQL ODBC drivers, but is also expected to work with any Unicode ODBC driver that observes the ODBC specification. At design time, you can provide either a DSN or a connection string to connect to the ODBC data; you can also use Windows authentication. For more info, see the [blog post announcing ODBC support on Linux](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/).
 
 **Paths**. SSIS on Linux does not support Linux-style paths, but maps Windows-style paths to Linux-style paths at run time. Provide Windows-style paths in your SSIS packages. Then, for example, SSIS on Linux maps the Windows-style path `C:\test` to the Linux-style path `/test`.
 
 **Deploying packages**. You can only store packages in the file system on Linux in this release. The SSIS Catalog database and the legacy SSIS service are not available on Linux for package deployment and storage.
 
-**Scheduling packages**. You can't use SQL Agent on Linux to schedule package execution in this release.
+**Scheduling packages**. You can't use SQL Agent on Linux to schedule package execution in this release. You can use Linux system scheduling tools such as `cron` to schedule packages.
 
 **Other limitations and known issues**. The following features are not supported in this release when you run SSIS packages on Linux:
   - SSIS Catalog database

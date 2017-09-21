@@ -1,7 +1,7 @@
 ---
 title: "Changelog for SQL Server Data Tools (SSDT) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/23/2017"
+ms.date: "09/21/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -19,6 +19,91 @@ manager: "craigg"
 This change log is for [SQL Server Data Tools (SSDT)](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt).  
   
 For detailed posts about what's new and changed, see [the SSDT Team blog](https://blogs.msdn.microsoft.com/ssdt/)
+
+## SSDT for Visual Studio 2017 (15.3.??? preview)
+Build number: NEEDED
+  
+### What's New?
+???
+
+
+## SSDT 17.3 for Visual Studio 2015
+Build number: NEEDED
+
+### What's New?
+
+**Analysis Services (AS)**
+
+- Cosmos DB and HDI Spark are enabled in 1400 models.
+- Tabular data source properties.
+- "Blank Query" is now a supported option for creating a new Query in the Query Editor for models at the 1400 compatibility level.
+- The Query Editor for 1400-mode models now allows for saving queries without new tables automatically being processed.
+
+**Reporting Services (RS)**
+
+- Projects will now prompt on open to upgraded format to support using MSBuild to build and deploy.
+
+### Known Issues
+
+**Analysis Services (AS)**
+
+- Models of 1400 compatibility level in Direct Query mode that have perspectives will fail on querying or discovering metadata.
+
+### Bug Fixes
+
+**Analysis Services (AS)**
+
+- Vastly improved performance when loading tabular model diagram view.
+- Fixed a number of issues to improve PowerQuery integration and experience in 1400-compat level models.
+   - Fixed an issue that prevented editing permissions for File sources.
+   - Fixed an issue Can't change the source for File sources.
+   - Fixed an issue Wrong UI displayed for File sources.
+- Fixed an issue that caused the "JoinOnDate" property to be removed when a "Join on Date" relationship was made inactive .
+- New Query option in Query Builder now allows creating a new blank query.
+- Fixed an issue that caused edits to an existing data source query to not update the model definition of the table in 1400-compat level.
+- Fixed issues with custom context expressions that may have caused exceptions.
+- When importing new table with duplicate name in 1400 tabular models, user will now be notified that there was a name conflict and the name adjusted to be unique.
+- Current User impersonation mode has been removed from models in Import mode, as it is not a supported scenario.
+- PowerQuery integration now supports Options for Additional Data Sources (OData.Feed, Odbc.DataSource, Access.Database, SapBusinessWarehouse.Cubes).
+- PowerQuery Options strings for Data Sources will now correctly show localized text based on client locale.
+- Diagram view now shows newly created columns from M Query Editor in 1400-compat level models.
+- Power Query Editor now gives the option to not import data.
+- Fixed an issue with installing a data cartridge used to import tables from Oracle in multi-dimensional models in VS2017.
+- Fixed an issue that may have led to a crash when mouse cursor leaving the tabular formula bar in rare cases .
+- Fixed an issue in Edit Table Properties dialog where changing the table name incorrectly changed source table name causing an unexpected error.
+- Fixed a crash that could occur in VS2017 when trying to invoke Test Cube Security in the Roles designer Cell Data tab designer in multi-dimensional projects.
+- SSDT: Properties are uneditable for tabular data sources.
+- Fixed an issue that may have caused MSBuild and DevEnv builds to not work correctly in some cases with solution files.
+
+- Vastly improved performance when committing model changes (DAX edits for measures, calculated columns) when tabular model contains larger metadata
+- Fixed a number of issues with importing data using PowerQuery in 1400-compat level models
+   - Import takes a long time after clicking Import and UI shows no status
+   - Large list of tables on Navigator view when trying to select tables to import very slow
+   - Query Editor poor performance working with list of 35 queries in Query editor view (issue in PBI desktop too)
+   - Importing multiple tables disabled toolbar and may never finish in certain situations 
+   - Model designer appeared disabled and showed no data after import of table using PQ
+   - Unselecting "Create new Table" in PQ UI still resulted in a new table being created
+   - Folder data source not prompting for credentials 
+   - Object reference not set exception that may occur trying to get updated credentials on structured data source
+   - Opening partition manager with M-expression was very slow
+   - Selecting Properties on table in PQ editor didn’t show the properties
+- Improved robustness in Power Query UI integration to catch top level exceptions and show in Output window
+- Fixed an issue with ChangeSource on structure datasource not persisting changes when context expression
+- Fixed an issue where M expression errors may cause failures to update the model without error message shown
+- Fixed an issue closing SSDT with error "The build must be stopped before the solution can be closed"
+- Fixed an issue where VS may appear to hang when setting wrong impersonation mode in 1400 compat-level model 
+- Detail rows property will now only be serialized to JSON when it is not empty (changed from default)
+- Oracle OLEDB driver now available in the list for tabular Direct Query mode
+- Adding M-Expressions in 1400-compat tabular models now appear\refresh in the Tabular Model Explorer (TME)
+- Fixed an issue that caused MSOLAP provider to not show up in VS2017 when trying to import using “Other” datasource in pre-1400 compat level models
+- Fixed an issue where adding a translation through TME may cause issues 
+- Fixed an issue in the Object Level Security interface that caused the tab to appear\hide incorrectly in certain cases
+- Fixed an issue where failure could occur attempting to open previously loaded multi-dimensional model using Connect to Database dialog
+- Fixed an issue that caused an error when adding custom assemblies to a multi-dimensional model
+
+**Reporting Services (RS)**
+
+- Fixed an issue with compile and build of RDLC in VS 2017
 
 ## SSDT for Visual Studio 2017 (15.3.0 preview)
 Build number: 14.0.16121.0

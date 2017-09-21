@@ -1,7 +1,7 @@
 ---
 title: "Download SQL Server Data Tools (SSDT) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/23/2017"
+ms.date: "09/21/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -25,7 +25,7 @@ The preview version of SSDT for Visual Studio 2017 (15.3.0 preview) is now avail
 
 | SSDT for Visual Studio 2017 (preview) | SSDT for Visual Studio 2015 | 
 |:--|:--|
-|[![download](../ssdt/media/download.png) Download SSDT for Visual Studio 2017 (15.3.0 preview) ](https://go.microsoft.com/fwlink/?linkid=853836) | [![download](../ssdt/media/download.png) Download SSDT for Visual Studio 2015 (17.2)](https://go.microsoft.com/fwlink/?linkid=852922)|
+|[![download](../ssdt/media/download.png) Download SSDT for Visual Studio 2017 (15.3.0 preview) ](https://go.microsoft.com/fwlink/?linkid=853836) | [![download](../ssdt/media/download.png) Download SSDT for Visual Studio 2015 (17.3)](https://go.microsoft.com/fwlink/?linkid=852922)|
 |||
 
 > [!IMPORTANT]
@@ -33,15 +33,15 @@ The preview version of SSDT for Visual Studio 2017 (15.3.0 preview) is now avail
 > 
 
 
-SSDT for Visual Studio 2015, and SSDT for Visual Studio 2017 both use DacFx 17.2: [Download Data-Tier Application Framework (DacFx) 17.2](https://www.microsoft.com/download/details.aspx?id=55713)
+SSDT for Visual Studio 2015, and SSDT for Visual Studio 2017 both use DacFx 17.3: [Download Data-Tier Application Framework (DacFx) 17.3](https://www.microsoft.com/download/details.aspx?id=55713)
 
 
 
 ## SSDT for Visual Studio 2017
 **Version Information**  
   
-The release number: 15.3.0 preview  
-The build number for this release: 14.0.16121.0
+The release number: 15.3.0 preview???  
+The build number for this release: ???14.0.16121.0
 
 For a complete list of changes, see the [changelog](changelog-for-sql-server-data-tools-ssdt.md).
 
@@ -56,8 +56,8 @@ SSDT for Visual Studio 2017 has the same system requirements as installing VS, s
 ## SSDT for Visual Studio 2015
 **Version Information**  
   
-The release number: 17.2  
-The build number for this release: 14.0.61707.300
+The release number: 17.3  
+The build number for this release: NEEDED
   
 For a complete list of changes, see the [changelog](changelog-for-sql-server-data-tools-ssdt.md).
 

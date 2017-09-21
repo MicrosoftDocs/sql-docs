@@ -4,7 +4,7 @@ description: Convert sample Oracle schema to SQL Server on Linux
 author: edmacauley
 ms.author: edmacauley
 manager: jhubbard
-ms.date: 09/12/2017
+ms.date: 09/21/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine

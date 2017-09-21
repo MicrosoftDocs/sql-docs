@@ -36,6 +36,17 @@ On the user permissions page, when granting permission to the root level in the 
   - or
   - Run the script described in this MDS team blog [error applying permission on entity level](http://sqlblog.com/blogs/mds_team/archive/2017/09/05/sql-server-2016-sp1-cu4-regression-error-while-applying-permission-on-entity-level-quick-workaround.aspx)
 
+### Analysis Services
+- **Issue and customer impact:** For tabular models at the 1400 compatibility level, when using Get Data, data connectors for some data sources such as  Amazon Redshift, IBM Netezza, and Impala, are not yet available.
+- **Workaround:** Additional data connectors will be available in upcoming CU’s.   
+
+- **Issue and customer impact:** Direct Query models at the 1400 compatibility level with perspectives can fail on querying or discovering metadata.
+- **Workaround:** Remove perspectives and re-deploy. This bug will be fixed in the next CU.
+
+![horizontal_bar](../sql-server/media/horizontal-bar.png)
+## SQL Server 2017 Release Candidate (RC2 - August 2017)
+There are no SQL Server on Windows release notes for this release. See [SQL Server on Linux Release notes](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-release-notes).
+
 ![horizontal_bar](../sql-server/media/horizontal-bar.png)
 ## SQL Server 2017 Release Candidate (RC2 - August 2017)
 There are no SQL Server on Windows release notes for this release. See [SQL Server on Linux Release notes](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-release-notes).

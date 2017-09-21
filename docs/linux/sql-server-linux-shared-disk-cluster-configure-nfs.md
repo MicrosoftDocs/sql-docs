@@ -45,25 +45,25 @@ Ensure that your security standards are enforced for accessing. When configuring
 
 3. For system databases or anything stored in the default data location, follow these steps. Otherwise, skip to Step 4.
  
-    a) Ensure that SQL Server is stopped on the server that you are working on.
+   * Ensure that SQL Server is stopped on the server that you are working on.
 
     ```bash
     sudo systemctl stop mssql-server
     sudo systemctl status mssql-server
     ```
-    b) Switch fully to be the superuser. You will not receive any acknowledgement if successful.
+   * Switch fully to be the superuser. You will not receive any acknowledgement if successful.
 
     ```bash
     sudo -i
     ```
 
-    c) Switch to be the mssql user. You will not receive any acknowledgement if successful.
+   * Switch to be the mssql user. You will not receive any acknowledgement if successful.
 
     ```bash
     su mssql
     ```
 
-    d) Create a temporary directory to store the SQL Server data and log files. You will not receive any acknowledgement if successful.
+   * Create a temporary directory to store the SQL Server data and log files. You will not receive any acknowledgement if successful.
 
     ```bash
     mkdir <TempDir>
@@ -75,7 +75,7 @@ Ensure that your security standards are enforced for accessing. When configuring
     mkdir /var/opt/mssql/tmp
     ```
 
-    e) Copy the SQL Server data and log files to the temporary directory. You will not receive any acknowledgement if successful.
+   * Copy the SQL Server data and log files to the temporary directory. You will not receive any acknowledgement if successful.
     
     ```bash
     cp /var/opt/mssql/data/* <TempDir>
@@ -83,7 +83,7 @@ Ensure that your security standards are enforced for accessing. When configuring
 
     \<TempDir> is the name of the folder from the previous step.
 
-    f) Verify that the files are in the directory.
+   * Verify that the files are in the directory.
 
     ```bash
     ls TempDir
@@ -91,21 +91,21 @@ Ensure that your security standards are enforced for accessing. When configuring
 
     \<TempDir> is the name of the folder from Step d.
 
-    g) Delete the files from the existing SQL Server data directory. You will not receive any acknowledgement if successful.
+   * Delete the files from the existing SQL Server data directory. You will not receive any acknowledgement if successful.
 
     ```bash
     rm – f /var/opt/mssql/data/*
     ```
 
-    h) Verify that the files have been deleted. 
+   * Verify that the files have been deleted. 
 
     ```bash
     ls /var/opt/mssql/data
     ```
     
-    i) Type exit to switch back to the root user.
+   * Type exit to switch back to the root user.
 
-    j) Mount the NFS share in the SQL Server data folder. You will not receive any acknowledgement if successful.
+   * Mount the NFS share in the SQL Server data folder. You will not receive any acknowledgement if successful.
 
     ```bash
     mount -t nfs4 <IPAddressOfNFSServer>:<FolderOnNFSServer> /var/opt/mssql/data -o nfsvers=4.2,timeo=14,intr
@@ -119,7 +119,7 @@ Ensure that your security standards are enforced for accessing. When configuring
     mount -t nfs4 200.201.202.63:/var/nfs/fci1 /var/opt/mssql/data -o nfsvers=4.2,timeo=14,intr
     ```
 
-    k) Check to see that the mount was successful by issuing mount with no switches.
+   * Check to see that the mount was successful by issuing mount with no switches.
 
     ```bash
     mount
@@ -127,47 +127,47 @@ Ensure that your security standards are enforced for accessing. When configuring
 
     ![10-mountnoswitches][2]
 
-    l) Switch to the mssql user. You will not receive any acknowledgement if successful.
+   * Switch to the mssql user. You will not receive any acknowledgement if successful.
 
     ```bash
     su mssql
     ```
 
-    m) Copy the files from the temporary directory /var/opt/mssql/data. You will not receive any acknowledgement if successful.
+   * Copy the files from the temporary directory /var/opt/mssql/data. You will not receive any acknowledgement if successful.
 
     ```bash
     cp /var/opt/mssql/tmp/* /var/opt/mssqldata
     ```
 
-    n) Verify the files are there.
+   * Verify the files are there.
 
     ```bash
     ls /var/opt/mssql/data
     ```
 
-    o) Enter exit to not be mssql 
+   * Enter exit to not be mssql 
     
-    p) Enter exit to not be root
+   * Enter exit to not be root
 
-    q) Start SQL Server. If everything was copied correctly and security applied correctly, SQL Server should show as started.
+   * Start SQL Server. If everything was copied correctly and security applied correctly, SQL Server should show as started.
 
     ```bash
     sudo systemctl start mssql-server
     sudo systemctl status mssql-server
     ```
     
-    r) Create a database to test that security is set up properly. The example below will show that being done via Transact-SQL; it can be done via SSMS.
+   * Create a database to test that security is set up properly. The example below will show that being done via Transact-SQL; it can be done via SSMS.
  
     ![CreateTestdatabase][3]
 
-    s) Stop SQL Server and verify it is shut down.
+   * Stop SQL Server and verify it is shut down.
 
     ```bash
     sudo systemctl stop mssql-server
     sudo systemctl status mssql-server
     ```
 
-    t) If you are not creating any other NFS mounts, unmount the share. If you are, do not unmount.
+   * If you are not creating any other NFS mounts, unmount the share. If you are, do not unmount.
 
     ```bash
     sudo umount <IPAddressOfNFSServer>:<FolderOnNFSServer> <FolderToMountIn>
@@ -181,13 +181,13 @@ Ensure that your security standards are enforced for accessing. When configuring
 
 4. For things other than system databases, such as user databases or backups, follow these steps. If only using the default location, skip to Step 5.
 
-    a) Switch to be the superuser. You will not receive any acknowledgement if successful.
+   * Switch to be the superuser. You will not receive any acknowledgement if successful.
 
     ```bash
     sudo -i
     ```
 
-    b) Create a folder that will be used by SQL Server. 
+   * Create a folder that will be used by SQL Server. 
 
     ```bash
     mkdir <FolderName>
@@ -199,7 +199,7 @@ Ensure that your security standards are enforced for accessing. When configuring
     mkdir /var/opt/mssql/userdata
     ```
 
-    c) Mount the NFS share in the folder that was created in the previous step. You will not receive any acknowledgement if successful.
+   * Mount the NFS share in the folder that was created in the previous step. You will not receive any acknowledgement if successful.
 
     ```bash
     Mount -t nfs4 <IPAddressOfNFSServer>:<FolderOnNFSServer> <FolderToMountIn> -o nfsvers=4.2,timeo=14,intr
@@ -215,15 +215,15 @@ Ensure that your security standards are enforced for accessing. When configuring
     mount -t nfs4 200.201.202.63:/var/nfs/fci2 /var/opt/mssql/userdata -o nfsvers=4.2,timeo=14,intr
     ```
 
-    d) Check to see that the mount was successful by issuing mount with no switches.
+   * Check to see that the mount was successful by issuing mount with no switches.
   
-    e) Type exit to no longer be the superuser.
+   * Type exit to no longer be the superuser.
 
-    f) To test, create a database in that folder. The example shown below uses sqlcmd to create a database, switch context to it, verify the files exist at the OS level, and then deletes the temporary location. You can use SSMS.
+   * To test, create a database in that folder. The example shown below uses sqlcmd to create a database, switch context to it, verify the files exist at the OS level, and then deletes the temporary location. You can use SSMS.
 
     ![15-createtestdatabase][4]
  
-    g) Unmount the share 
+   * Unmount the share 
 
     ```bash
     sudo umount <IPAddressOfNFSServer>:<FolderOnNFSServer> <FolderToMountIn>

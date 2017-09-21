@@ -140,14 +140,14 @@ The following built-in Integration Services components are supported on Linux, b
 | Script component | Only supports standard .NET Framework APIs. |
 | | |
 
-## More about SSIS on Linux
+## More info about SSIS on Linux
 
 For more info about SSIS on Linux, see the following blog posts:
 
 -   [SSIS on Linux is available in SQL Server 2017 CTP2.1](https://blogs.msdn.microsoft.com/ssis/2017/05/17/ssis-helsinki-is-available-in-sql-server-vnext-ctp2-1/)
 -   [ODBC is supported in SSIS on Linux (SQL Server 2017 CTP 2.1 refresh)](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/)
 
-## More about SSIS
+## More info about SSIS
 
 Microsoft SQL Server Integration Services (SSIS) is a platform for building high-performance data integration solutions, including extraction, transformation, and loading (ETL) packages for data warehousing. For more info about SSIS, see [SQL Server Integration Services](/sql/integration-services/sql-server-integration-services.md).
 

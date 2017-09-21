@@ -11,6 +11,12 @@
 ## [Install & Connect - Ubuntu](quickstart-install-connect-ubuntu.md)
 ## [Run & Connect - Docker](quickstart-install-connect-docker.md)
 
+# Tutorials
+## [Create FCI](sql-server-linux-shared-disk-cluster-configure.md)
+### [iSCSI](sql-server-linux-shared-disk-cluster-configure-iscsi.md)
+### [NFS](sql-server-linux-shared-disk-cluster-configure-nfs.md)
+### [SMB](sql-server-linux-shared-disk-cluster-configure-smb.md)
+
 # Concepts
 ## Install
 ### [Install SQL Server](sql-server-linux-setup.md)
@@ -50,7 +56,7 @@
 ## [Configure Business Continuity](sql-server-linux-business-continuity-dr.md)
 ### [Backup and Restore](sql-server-linux-backup-and-restore-database.md)
 #### [Virtual Device Interface - Linux](sql-server-linux-backup-vdi-specification.md)
-### [Failover Cluster Instance](sql-server-linux-shared-disk-cluster-configure.md)
+### [Failover Cluster Instance](sql-server-linux-shared-disk-cluster-concepts.md)
 #### [Red Hat Enterprise Linux]()
 ##### [Configure (HA add-on)](sql-server-linux-shared-disk-cluster-red-hat-7-configure.md)
 ##### [Operate (HA add-on)](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)

@@ -26,6 +26,13 @@ This topic describes limitations and issues with SQL Server 2017. For related in
 
 ## SQL Server 2017 - general availability release (October 2017)
 ### Database Engine
+
+- **Issue/ customer impact:**
+After upgrade, the existing FILESTREAM network share may be no longer available.
+
+- **Workaround:**
+Reboot the operating system if FILESTREAM network share is not available after upgrade. If the share is still not available after reboot, you can re-enable it using SQL Server Configuration Manager. To do this, first clear **Enable FILESTREAM for file I/O streaming access** in the **Properties**, **FILESTREAM** tab of the affected SQL Server instance. Then, click **Apply**. Check **Enable FILESTREAM for file I/O streaming access** again with the original Windows Share name. Then, click **Apply**.
+
 ### Master Data Services (MDS)
 - **Issue / customer impact:** 
 On the user permissions page, when granting permission to the root level in the entity tree view, you see the following error:

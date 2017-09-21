@@ -18,7 +18,7 @@ This article explains how to configure iSCSI storage for a failover cluster inst
 ## Configure iSCSI 
 iSCSI uses networking to present disks from a server known as a target to servers. The servers connecting to the iSCSI target require that an iSCSI initiator is configured. The disks on the target are given explicit permissions so that only the initiators that should be able to access them can do so. The target itself should be highly available and reliable.
 
-## Important iSCSI Target Information
+### Important iSCSI target information
 While this section will not cover how to configure an iSCSI target since it is specific to the type of source you will be using, ensure that the security for the disks that will be used by the cluster nodes is configured.  
 
 The target should never be configured on any of the FCI nodes if using a Linux-based iSCSI target. For performance and availability, iSCSI networks should be separate from those used by regular network traffic on both the source and the client servers. Networks used for iSCSI should be fast. Remember that network does consume some processor bandwidth, so plan accordingly if using a regular server.
@@ -26,7 +26,7 @@ The most important thing to ensure is completed on the target is that the disks 
 
 ![Initiator][1]
 
-## Instructions
+### Instructions
 
 This section will cover how to configure an iSCSI initiator on the servers that will serve as nodes for the FCI. The instructions should work as is on RHEL and Ubuntu.
 
@@ -131,26 +131,26 @@ For additional information on iSCSI initiator for the supported distributions, c
 
 12.	For system databases or anything stored in the default data location, follow these steps. Otherwise, skip to Step 13.
 
-    a)	Ensure that SQL Server is stopped on the server that you are working on.
+   *	Ensure that SQL Server is stopped on the server that you are working on.
 
     ```bash
     sudo systemctl stop mssql-server
     sudo systemctl status mssql-server
     ```
 
-    b)	Switch fully to be the superuser. You will not receive any acknowledgement if successful.
+   *	Switch fully to be the superuser. You will not receive any acknowledgement if successful.
 
     ```bash
     sudo -i
     ```
 
-    c)	Switch to be the mssql user. You will not receive any acknowledgement if successful.
+   *	Switch to be the mssql user. You will not receive any acknowledgement if successful.
 
     ```bash
     su mssql
     ```
 
-    d)	Create a temporary directory to store the SQL Server data and log files. You will not receive any acknowledgement if successful.
+   *	Create a temporary directory to store the SQL Server data and log files. You will not receive any acknowledgement if successful.
 
     ```bash
     mkdir <TempDir>
@@ -162,7 +162,7 @@ For additional information on iSCSI initiator for the supported distributions, c
     mkdir /var/opt/mssql/TempDir
     ```
     
-    e)	Copy the SQL Server data and log files to the temporary directory. You will not receive any acknowledgement if successful.
+   *	Copy the SQL Server data and log files to the temporary directory. You will not receive any acknowledgement if successful.
 
     ```bash
     cp /var/opt/mssql/data/* <TempDir>
@@ -170,20 +170,20 @@ For additional information on iSCSI initiator for the supported distributions, c
 
     \<TempDir> is the name of the folder from the previous step.
     
-    f)	Verify that the files are in the directory.
+   *	Verify that the files are in the directory.
 
     ```bash
     ls \<TempDir>
     ```
     \<TempDir> is the name of the folder from Step d.
 
-    g)	Delete the files from the existing SQL Server data directory. You will not receive any acknowledgement if successful.
+   *	Delete the files from the existing SQL Server data directory. You will not receive any acknowledgement if successful.
 
     ```bash
     rm – f /var/opt/mssql/data/*
     ```
 
-    h)	Verify that the files have been deleted. The picture below shows an example of the entire sequence from c through h.
+   *	Verify that the files have been deleted. The picture below shows an example of the entire sequence from c through h.
 
     ```bash
     ls /var/opt/mssql/data
@@ -191,9 +191,9 @@ For additional information on iSCSI initiator for the supported distributions, c
 
     ![45-CopyMove][8]
  
-    i)	Type `exit` to switch back to the root user.
+   *	Type `exit` to switch back to the root user.
 
-    j)	Mount the iSCSI logical volume in the SQL Server data folder. You will not receive any acknowledgement if successful.
+   *	Mount the iSCSI logical volume in the SQL Server data folder. You will not receive any acknowledgement if successful.
 
     ```bash
     mount /dev/<VolumeGroupName>/<LogicalVolumeName> /var/opt/mssql/data
@@ -205,48 +205,48 @@ For additional information on iSCSI initiator for the supported distributions, c
     mount /dev/FCIDataVG1/FCIDataLV1 /var/opt/mssql/data
     ``` 
 
-    k)	Change the owner of the mount to mssql. You will not receive any acknowledgement if successful.
+   *	Change the owner of the mount to mssql. You will not receive any acknowledgement if successful.
 
     ```bash
     chown mssql /var/opt/mssql/data
     ```
 
-    l)	Change ownership of the group of the mount to mssql. You will not receive any acknowledgement if successful.
+   *	Change ownership of the group of the mount to mssql. You will not receive any acknowledgement if successful.
 
     ```bash
     chgrp mssql /var/opt/mssql/data
     ``` 
 
-    m)	Switch to the mssql user. You will not receive any acknowledgement if successful.
+   *	Switch to the mssql user. You will not receive any acknowledgement if successful.
 
     ```bash
     su mssql
     ``` 
 
-    n)	Copy the files from the temporary directory /var/opt/mssql/data. You will not receive any acknowledgement if successful.
+   *	Copy the files from the temporary directory /var/opt/mssql/data. You will not receive any acknowledgement if successful.
 
     ```bash
     cp /var/opt/mssql/TempDir/* /var/opt/mssql/data
     ``` 
 
-    o)	Verify the files are there.
+   *	Verify the files are there.
 
     ```bash
     ls /var/opt/mssql/data
     ``` 
  
-    p)	Enter `exit` to not be mssql.
+   *	Enter `exit` to not be mssql.
     
-    q)	Enter `exit` to not be root.
+   *	Enter `exit` to not be root.
 
-    r)	Start SQL Server. If everything was copied correctly and security applied correctly, SQL Server should show as started.
+   *	Start SQL Server. If everything was copied correctly and security applied correctly, SQL Server should show as started.
 
     ```bash
     sudo systemctl start mssql-server
     sudo systemctl status mssql-server
     ``` 
  
-    s)	Stop SQL Server and verify it is shut down.
+   *	Stop SQL Server and verify it is shut down.
 
     ```bash
     sudo systemctl stop mssql-server
@@ -255,13 +255,13 @@ For additional information on iSCSI initiator for the supported distributions, c
 
 13.	For things other than system databases, such as user databases or backups, follow these steps. If only using the default location, skip to Step 14.
 
-    a)	Switch to be the superuser. You will not receive any acknowledgement if successful.
+   *	Switch to be the superuser. You will not receive any acknowledgement if successful.
 
     ```bash
     sudo -i
     ```
 
-    b)	Create a folder that will be used by SQL Server. 
+   *	Create a folder that will be used by SQL Server. 
 
     ```bash
     mkdir <FolderName>
@@ -273,7 +273,7 @@ For additional information on iSCSI initiator for the supported distributions, c
     mkdir /var/opt/mssql/userdata
     ```
 
-    c)	Mount the iSCSI logical volume in the folder that was created in the previous step. You will not receive any acknowledgement if successful.
+   *	Mount the iSCSI logical volume in the folder that was created in the previous step. You will not receive any acknowledgement if successful.
     
     ```bash
     mount /dev/<VolumeGroupName>/<LogicalVolumeName> <FolderName>
@@ -285,7 +285,7 @@ For additional information on iSCSI initiator for the supported distributions, c
     mount /dev/FCIDataVG2/FCIDataLV2 /var/opt/mssql/userdata 
     ```
 
-    d)	Change ownership of the folder created to mssql. You will not receive any acknowledgement if successful.
+   *	Change ownership of the folder created to mssql. You will not receive any acknowledgement if successful.
 
     ```bash
     chown mssql <FolderName>
@@ -297,7 +297,7 @@ For additional information on iSCSI initiator for the supported distributions, c
     chown mssql /var/opt/mssql/userdata
     ```
   
-    e)	Change the group of the folder created to mssql. You will not receive any acknowledgement if successful.
+   *	Change the group of the folder created to mssql. You will not receive any acknowledgement if successful.
 
     ```bash
     chown mssql <FolderName>
@@ -309,13 +309,13 @@ For additional information on iSCSI initiator for the supported distributions, c
     chown mssql /var/opt/mssql/userdata
     ```
 
-    f)	Type `exit` to no longer be the superuser.
+   *	Type `exit` to no longer be the superuser.
 
-    g)	To test, create a database in that folder. The example shown below uses sqlcmd to create a database, switch context to it, verify the files exist at the OS level, and then deletes the temporary location. You can use SSMS.
+   *	To test, create a database in that folder. The example shown below uses sqlcmd to create a database, switch context to it, verify the files exist at the OS level, and then deletes the temporary location. You can use SSMS.
   
     ![50-ExampleCreateSSMS][9]
 
-    h)	Unmount the share 
+   *	Unmount the share 
 
     ```bash
     sudo umount /dev/<VolumeGroupName>/<LogicalVolumeName> <FolderName>
@@ -386,10 +386,10 @@ You are now ready to configure the FCI.
 
 |Distribution |Topic 
 |----- |-----
-|**Red Hat Enterprise Linux with HA add-on** |[Configure](sql-server-linux-shared-disk-cluster-red-hat-7-configure.md)<br/>[Operate](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)
+|**Red Hat Enterprise Linux with HA add-on** |[Configure](sql-server-linux-shared-disk-cluster-configure.md)<br/>[Operate](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)
 |**SUSE Linux Enterprise Server with HA add-on** |[Configure](sql-server-linux-shared-disk-cluster-sles-configure.md)
 
-## Next Steps
+## Next steps
 
 [Configure failover cluster instance - SQL Server on Linux](sql-server-linux-shared-disk-cluster-configure.md)
 

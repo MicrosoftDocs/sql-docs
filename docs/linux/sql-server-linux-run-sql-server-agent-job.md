@@ -4,7 +4,7 @@ description: This tutorial shows how to run SQL Server Agent job on Linux.
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 03/17/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -14,16 +14,65 @@ ms.assetid: 1d93d95e-9c89-4274-9b3f-fa2608ec2792
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-SQL Server jobs are used to regularly perform the same sequence of commands in your SQL Server database. This topic provides examples of how to create SQL Server Agent jobs on Linux using both Transact-SQL and SQL Server Management Studio (SSMS).
+SQL Server jobs are used to regularly perform the same sequence of commands in your SQL Server database. This tutorial provides an example of how to create a SQL Server Agent job on Linux using both Transact-SQL and SQL Server Management Studio (SSMS).
 
-For known issues with SQL Server Agent in this release, see the [Release Notes](sql-server-linux-release-notes.md).
+> [!div class="checklist"]
+> * Install SQL Server Agent on Linux
+> * Create a new job to perform daily database backups
+> * Schedule and run the job
+> * Perform the same steps in SSMS (optional)
 
-## Prerequisites 
-To create and run jobs, you must first install the SQL Server Agent service. For installation instructions, see the [SQL Server Agent installation topic](sql-server-linux-setup-sql-agent.md).
+For known issues with SQL Server Agent on Linux, see the [Release Notes](sql-server-linux-release-notes.md).
+
+## Prerequisites
+
+The following prerequisites are required to complete this tutorial:
+
+* Linux machine with the following installed:
+  * SQL Server 2017 ([RHEL](quickstart-install-connect-red-hat.md), [SLES](quickstart-install-connect-suse.md), or [Ubuntu](quickstart-install-connect-ubuntu.md)) with command-line tools.
+
+* Windows machine for optional SSMS steps with the following:
+  * [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) installed.
+
+## Install SQL Server Agent
+
+To use SQL Server Agent on Linux, you must first install the **mssql-server-agent** package on a machine that already has SQL Server 2017 installed.
+
+1. Install **mssql-server-agent** with the appropriate command for your Linux OS.
+
+   | Platform | Installation command(s) |
+   |-----|-----|
+   | RHEL | `sudo yum install mssql-server-agent` |
+   | SLES | `sudo zypper refresh`<br/>`sudo zypper update mssql-server-agent` |
+   | Ubuntu | `sudo apt-get update`<br/>`sudo apt-get install mssql-server-agent` |
+
+1. Restart SQL Server with the following command.
+
+   ```bash
+   sudo systemctl restart mssql-server
+   ```
+
+## Create a sample database
+
+Use the following steps to create a sample database named **SampleDB**. This database will be used for the daily backup job.
+
+1. On your Linux machine, open a bash terminal session.
+
+1. Use **sqlcmd** to run a Transact-SQL **CREATE DATABASE** command.
+
+   ```bash
+   /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -Q 'CREATE DATABASE SampleDB'
+   ```
+
+1. Verify the database is created by listing the databases on your server.
+
+   ```bash
+   /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -Q 'SELECT Name FROM sys.Databases'
+   ```
 
 ## Create a job with Transact-SQL
 
-The following steps provide an example of how to create a SQL Server Agent job on Linux with Transact-SQL commands. These job in this example runs a daily backup on a sample database `SampleDB`. 
+The following steps provide an example of how to create a SQL Server Agent job on Linux with Transact-SQL commands. These job in this example runs a daily backup on a sample database `SampleDB`.
 
 
 > [!TIP]

@@ -2,7 +2,7 @@
 title: "What&#39;s New in SSMA  for DB2 (DB2ToSQL) | Microsoft Docs"
 ms.prod: "sql-non-specified"
 ms.custom: ""
-ms.date: "08/17/2017"
+ms.date: "09/22/2017"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,6 +20,11 @@ manager: "craigg"
 ---
 # What&#39;s New in SSMA for DB2 (DB2ToSQL)
 This topic lists SSMA for DB2 changes in each release.  
+
+## SSMA v7.5
+The v7.5 release of SSMA for DB2 has been enhanced with several improvements to ensure greater accessibility for people with disabilities.
+> [!IMPORTANT]
+> .Net 4.5.2 is a pre-requisite for installing SSMA v7.5. In addition, beginning with v7.4, the 32-bit version of SSMA is being discontinued.
 
 ## SSMA v7.4
 The v7.4 release of SSMA for DB2 contains the following changes:

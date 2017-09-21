@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Management Studio - Changelog (SSMS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/15/2017"
+ms.date: "09/21/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -25,59 +25,89 @@ Generally available | Build number: NEEDED
 
 ### Enhancements
 
-- Removed all "RC" branding
-- New "Import Flat File" wizard added to streamline import experience of CSV files with an intelligent framework, requiring minimal user intervention or specialized domain knowledge.
+- Removed all "RC" branding.
+- New "Import Flat File" wizard added to streamline the import experience of CSV files with an intelligent framework, requiring minimal user intervention or specialized domain knowledge.
 - Updated waits filtering and categorization in Performance Dashboard historical waits report.
-- Added the syntax check of the "Predict" function
+- Added the syntax check of the "Predict" function.
 - Added the syntax check of the External Library Management queries.
-- Added  SMO support for External Library Management
+- Added SMO support for External Library Management.
 - Added "Start PowerShell" support to "Registered Servers" window (requires a new SQL PowerShell module)
-- Always On: added "Read only routing" support for AG 
-- Added "XEvent Profiler" node to Object Explorer
-- Added ADAL tracing to Output Window (off by default; needs to be turned on in user settings under "Options | Azure Services | Azure Cloud | ADAL Output Window Trace Level")
+- Always On: added [read-only routing support](../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md) for availability groups.
+- Added "XEvent Profiler" node to Object Explorer.
+- Added ADAL tracing to Output Window (off by default; needs to be turned on in user settings under "Tools > Options > Azure Services > Azure Cloud > ADAL Output Window Trace Level").
 - Query Store: 
   - Query Store UI will be accessible even when QDS is OFF as long as QDS have recorded any data.
   - Query Store UI now exposes waits categorization in all the existing reports. This will let customers unlock the scenarios of Top Waiting Queries and many more.
-
+- Made inclusion of the scripting parameters headers optional (off by default;  can be enabled in user settings under "Tools > Options > SQL Server Object Explorer > Scripting > Include scripting parameters header") - [Connect item 3139199](https://connect.microsoft.com/SQLServer/feedback/details/3139199).
 
 
 ### Bug Fixes
 
-- XEvent: Fixed issue where SSMS opens only part of the events in .xel file
-- Always On: Fixed issue where "Restore log backups" may fail with error "The log in this backup set terminates at LSN x, which is too early to apply to the database"
+**General SSMS**
+
+- XEvent: Fixed issue where SSMS opens only part of the events in .xel file.
+- Always On: Fixed issue where "Restore log backups" may fail with error "The log in this backup set terminates at LSN x, which is too early to apply to the database".
 - Job Activity Monitor: fixed inconsistent icons - [Connect item 3133100](https://connect.microsoft.com/SQLServer/feedback/details/3133100).
 - Query Store: Fixed Issue where user cannot choose "custom" date range for Query Store reports. Linked to below connect items.
    - [Connect item 3139842](https://connect.microsoft.com/SQLServer/feedback/details/3139842)
    - [Connect item 3139399](http://connect.microsoft.com/SQLServer/feedback/details/3139399)
-- Fixed issue where connection dialog doesn't "clear" the most recently used DB when saved info has named DB and user selects <default>
+- Fixed issue where connection dialog doesn't "clear" the most recently used database when saved info has named database and user selects <default>.
 - Object Scripting:
-	- Fixed an issue where "Generate database script" not working and throwing an error when the user has a paused DW database on the server, but selected another non-DW database and tried t script it
-	- Fixed issue where the header for scripted Stored Procedures was not matching the script settings, resulting in a misleading script
-		[Connect item 3139784](http://connect.microsoft.com/SQLServer/feedback/details/3139784)
-	- Re-enabled the "Script button" when targeting SQL Azure objects
-	- Fixed issue where SSMS was not allowing scripting for "Alter" or "Execute" on some objects (UDF, View, SP, Trigger) when connected to a SQL Azure DB.
-		[Connect item 3136386](https://connect.microsoft.com/SQLServer/feedback/details/3136386)
-	- Made inclusion of the scripting parameters headers optional (off by default;  can be enabled in user settings under "Options | SQL Server Object Explorer | Scripting | Include scripting parameters header") - [Connect item 3139199](https://connect.microsoft.com/SQLServer/feedback/details/3139199)
+	- Fixed an issue where "Generate database script" not working and throwing an error when the user has a paused DW database on the server, but selected another non-DW database and tried t script it.
+	- Fixed issue where the header for scripted Stored Procedures was not matching the script settings, resulting in a misleading script - 
+		[Connect item 3139784](http://connect.microsoft.com/SQLServer/feedback/details/3139784).
+	- Re-enabled the "Script button" when targeting SQL Azure objects.
+	- Fixed issue where SSMS was not allowing scripting for "Alter" or "Execute" on some objects (UDF, View, SP, Trigger) when connected to an Azure SQL database - 
+		[Connect item 3136386](https://connect.microsoft.com/SQLServer/feedback/details/3136386).
 - Query editor:
-  - Improved intellisense when targeting SQL Azure DBs
-  - Fixed an issue where queries failed due to expired authentication token (Universal Authentication)
+  - Improved intellisense when targeting Azure SQL databases.
+  - Fixed an issue where queries failed due to an expired authentication token (Universal Authentication).
+  - Improved intellisense when working against Azure SQL databases (particularly, when connecting to Azure SQL Database, the latest T-SQL grammar (140) will be used).
+  - Fixed issue where open a query window with a connection to a non-DataWarehouse database on a server would cause all subsequent query windows for that server to DataWarehouse databases to throw various errors about unsupported types/options.
 - Always On:
-   - Added seeding mode settings to Always On dashboard
-   - Fixed issue where it was not possible to create a Linux AG when primary is on Windows [Connect item 3139856](https://connect.microsoft.com/SQLServer/feedback/details/3139856)
-- Fixed several "Out of Memory" issues in SSMS when running queries
-	[Connect item 2845190](https://connect.microsoft.com/SQLServer/feedback/details/2845190)
-	[Connect item 3123864](https://connect.microsoft.com/SQLServer/feedback/details/3123864)
-- Profiler: fixed issue were Profiler was not working when targeting SQL 2005
-- Activity Monitor: fixed an issue where Activity Monitor does not work when pointed at SQL Server running on Linux
+   - Added seeding mode column to Always On dashboard and AG properties page.
+   - Fixed issue where it was not possible to create a Linux AG when primary is on Windows - [Connect item 3139856](https://connect.microsoft.com/SQLServer/feedback/details/3139856).
+- Fixed several "Out of Memory" issues in SSMS when running queries - 
+	[Connect item 2845190](https://connect.microsoft.com/SQLServer/feedback/details/2845190), 
+	[Connect item 3123864](https://connect.microsoft.com/SQLServer/feedback/details/3123864).
+- Profiler: 
+   - Fixed issue were Profiler was not working when targeting SQL 2005.
+   - Fixed issue where Profiler was not honoring the "trust server certificate" connection option.
+- Activity Monitor: fixed an issue where Activity Monitor does not work when pointed at SQL Server running on Linux.
+- Fixed an issue with the SMO Transfer class where it wouldn’t transfer External Data Source or External File Format objects, objects of those types should now correctly be included in the transfer.
+- Registered Servers:
+   - Enabled multiserver query for UA servers (it will try to use the same token for every UA server in the group).
+- AD Universal Authentication:
+   - Fixed issue where Azure AD authentication was not supported.
+   - Fixed issue where table/view designer was not working.
+   - Fixed issue where "Select Top 1000 rows" and "Edit Top 200 rows" were not working.
+- Database restore: fixed an issue where restore omits the last folder in the path when moving files to an alternate location.
+- Compress wizard:
+   - Fixed an issue with manage compression wizard for indexes; fixed issue where compress data wizards was broken for SQL 2016 and lower.
+		https://connect.microsoft.com/SQLServer/feedback/details/3139342
+   - Added Compress wizard to Azure tables and indexes.
+- Showplan:
+   - Fixed issue where PDW operators were not recognized.
+   - Fixed issue where the SBSFileUrl attribute was not displayed.
+- Server Properties:
+   - Fixed issue with not being able to modify server processor affinity.
+
 
 **Analysis Services (AS)**
 
-- Fixed a number of issues with Deployment Wizard to support tabular 1400 compat-level models and Power Query data sources
-- Deployment Wizard can now deploy to AS Azure when running from Command line
-- When using Windows Auth in AS Azure the user will now see in name of the user account in the Object Explorer correctly
+- Fixed a number of issues with Deployment Wizard to support tabular 1400 compat-level models and Power Query data sources.
+- Deployment Wizard can now deploy to AS Azure when running from Command line.
+- When using Windows Auth in AS Azure the user will now see the name of the user account in Object Explorer correctly.
 
 
 ### Known issues in this release:
+
+**General SSMS**
+
+- The following SSMS functionality is not supported for Azure AD auth using UA with MFA:
+   - Database Engine Tuning Advisor is not supported for Azure AD auth; there is a known issue where the error message presented to the user is a bit cryptic "Could not load file or assembly 'Microsoft.IdentityModel.Clients.ActiveDirectory,…" instead of the expected "Database Engine Tuning Advisor does not support Microsoft Azure SQL Database. (DTAClient)".
+- Trying to analyze a query in DTA results in an error: "Object must implement IConvertible. (mscorlib)".
+
 
 **Integration Services (IS)**
 
@@ -613,7 +643,7 @@ Generally available | Version number: 13.0.15500.91
 
 * Significantly improved connection times to Azure SQL databases.
 
-* New ‘Backup to URL’ dialog to support the creation of Azure storage credentials for SQL Server 2016 database backups. This dialog provides a more streamlined experience for storing database backups in an Azure storage account.
+* New "Backup to URL" dialog to support the creation of Azure storage credentials for SQL Server 2016 database backups. This dialog provides a more streamlined experience for storing database backups in an Azure storage account.
  
 * New Restore dialog to streamline restoring a SQL Server 2016 database backup from the Microsoft Azure storage service.
  

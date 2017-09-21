@@ -1,7 +1,7 @@
 ---
 title: "Download SQL Server Management Studio (SSMS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/15/2017"
+ms.date: "09/21/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -64,21 +64,20 @@ SSMS 17.3 is the latest version of SQL Server Management Studio. The 17.x genera
 
 Version 17.3 includes:
 
-
-- Removed all "RC" branding
-- New "Import Flat File" wizard added to streamline import experience of CSV files with an intelligent framework, requiring minimal user intervention or specialized domain knowledge.
+- Removed all "RC" branding.
+- New "Import Flat File" wizard added to streamline the import experience of CSV files with an intelligent framework, requiring minimal user intervention or specialized domain knowledge.
 - Updated waits filtering and categorization in Performance Dashboard historical waits report.
 - Added the syntax check of the "Predict" function.
 - Added the syntax check of the External Library Management queries.
-- Added  SMO support for External Library Management.
-- Added "Start PowerShell" support to "Registered Servers" window (requires a new SQL PowerShell module).
-- Always On: added "Read only routing" support for AG.
+- Added SMO support for External Library Management.
+- Added "Start PowerShell" support to "Registered Servers" window (requires a new SQL PowerShell module)
+- Always On: added [read-only routing support](../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md) for availability groups.
 - Added "XEvent Profiler" node to Object Explorer.
-- Added ADAL tracing to Output Window (off by default; needs to be turned on in user settings under "Options | Azure Services | Azure Cloud | ADAL Output Window Trace Level").
+- Added ADAL tracing to Output Window (off by default; needs to be turned on in user settings under "Tools > Options > Azure Services > Azure Cloud > ADAL Output Window Trace Level").
 - Query Store: 
   - Query Store UI will be accessible even when QDS is OFF as long as QDS have recorded any data.
-  - QueryStore UI now exposes waits categorization in all the existing reports. This will let customers unlock the scenarios of Top Waiting Queries and many more.
-
+  - Query Store UI now exposes waits categorization in all the existing reports. This will let customers unlock the scenarios of Top Waiting Queries and many more.
+- Made inclusion of the scripting parameters headers optional (off by default;  can be enabled in user settings under "Tools > Options > SQL Server Object Explorer > Scripting > Include scripting parameters header") - [Connect item 3139199](https://connect.microsoft.com/SQLServer/feedback/details/3139199).
 
 For the full list of changes, see [SQL Server Management Studio - Changelog (SSMS)](../ssms/sql-server-management-studio-changelog-ssms.md).
 
@@ -124,33 +123,28 @@ This release of SSMS supports the following 64-bit platforms when used with the 
 
 This release of SSMS can be installed in the following languages:
 
-SQL Server Management Studio 17.2:<br>
+SQL Server Management Studio 17.3:<br>
 [Chinese (People's Republic of China)](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x804) | [Chinese (Taiwan)](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x40a)
 
-SQL Server Management Studio 17.2 Upgrade Package (upgrades 17.x to 17.2):<br>
+SQL Server Management Studio 17.3 Upgrade Package (upgrades 17.x to 17.3):<br>
 [Chinese (People's Republic of China)](https://go.microsoft.com/fwlink/?linkid=854087&clcid=0x804) | [Chinese (Taiwan)](https://go.microsoft.com/fwlink/?linkid=854087&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=854087&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=854087&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=854087&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=854087&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=854087&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=854087&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=854087&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=854087&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=854087&clcid=0x40a)
 
 ## Release Notes
 
-The following are issues and limitations with this 17.2 release:
+The following are issues and limitations with this 17.3 release:
 
-- Query windows using "Active Directory - Universal with MFA Support" authentication may experience an error similar to the following, when attempting to execute a query after being open for about an hour or more:
+**General SSMS**
 
-   `Msg 0, Level 11, State 0, Line 0
-The connection is broken and recovery is not possible. The client driver attempted to recover the connection one or more times and all attempts failed. Increase the value of *ConnectRetryCount* to increase the number of recovery attempts.`
+- The following SSMS functionality is not supported for Azure AD auth using UA with MFA:
+   - Database Engine Tuning Advisor is not supported for Azure AD auth; there is a known issue where the error message presented to the user is a bit cryptic "Could not load file or assembly 'Microsoft.IdentityModel.Clients.ActiveDirectory,…" instead of the expected "Database Engine Tuning Advisor does not support Microsoft Azure SQL Database. (DTAClient)".
+- Trying to analyze a query in DTA results in an error: "Object must implement IConvertible. (mscorlib)".
 
-   Re-running the query should get past the error and succeed.
 
-- The following SSMS functionality is not supported for Azure AD using Universal Authentication with MFA:
-  - The **New Table/View** designer shows the old-style login prompt, and does not work for Azure AD authentication.
-  - The **Edit Top 200 Rows** feature doesn't support Azure AD authentication.
-  - The **Registered Server** component does not support Azure AD authentication.
-  - The **Database Engine Tuning Advisor** is not supported for Azure AD authentication. There is a known issue where the error message presented to the user is less than helpful: *Could not load file or assembly 'Microsoft.IdentityModel.Clients.ActiveDirectory,…* instead of the expected *Database Engine Tuning Advisor does not support Microsoft Azure SQL Database. (DTAClient)*.
+**Integration Services (IS)**
 
-**AS**
+- The [execution_path] in [catalog].[event_messagea] is not correct for package executions in Scale Out. The [execution_path] starts with “\Package” instead of the object name of the package executable. When viewing the overview report of package executions in SSMS, the link of “Execution Path” in Execution Overview cannot work. The workaround is to click “View Messages” on overview report to check all event messages.
 
-- Object Explorer in SSAS will not show the Windows Auth username in AS Azure connection properties.
-For more information, see the [SSMS changelog](sql-server-management-studio-changelog-ssms.md).
+
 
 ## Previous releases
 

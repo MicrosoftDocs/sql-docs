@@ -1,6 +1,6 @@
 ---
-title: "Deploy a project with .NET code (C#) | Microsoft Docs"
-ms.date: "08/21/2017"
+title: "Deploy an SSIS project with .NET code (C#) | Microsoft Docs"
+ms.date: "09/25/2017"
 ms.topic: "article"
 ms.prod: "sql-server-2017"
 ms.technology: 
@@ -10,21 +10,20 @@ ms.author: "douglasl"
 manager: "craigg"
 ---
 # Deploy an SSIS project with C# code in a .NET app
-This quick start tutorial demonstrates how to write C# code to connect to an Azure SQL database and deploy an SSIS project.
+This quick start tutorial demonstrates how to write C# code to connect to a database server and deploy an SSIS project.
 
-You can use Visual Studio, Visual Studio Code, or another tool of your choice to create a C# app.
-
-> [!NOTE] Only the project deployment model is supported. For more info about SSIS deployment, and about converting a project to the project deployment model, see [Deploy Integration Services (SSIS) Projects and Packages](https://docs.microsoft.com/en-us/sql/integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).
+To create a C# app, you can use Visual Studio, Visual Studio Code, or another tool of your choice.
 
 ## Prerequisites
 
 Before you start, make sure you have Visual Studio or Visual Studio Code installed. Download the free Community edition of Visual Studio, or the free Visual Studio Code, from [Visual Studio Downloads](https://www.visualstudio.com/downloads/).
 
-You also have to have a server-level firewall rule for the public IP address of the computer you use for this quick start tutorial. To create a server-level firewall rule, see [Create a server-level firewall rule](sql-database-get-started-portal.md#create-a-server-level-firewall-rule).
+> [!NOTE]
+> An Azure SQL Database server listens on port 1433. If you're trying to connect to an Azure SQL Database server from within a corporate firewall, this port must be open in the corporate firewall for you to connect successfully.
 
-## Get the SSISDB connection information
+## For SQL Database, get the connection info
 
-Get the connection information you need to connect to the SSIS Catalog database (SSISDB) on SQL database. You need the fully qualified server name and login information in the next procedures.
+If your packages are deployed to an Azure SQL Database, get the connection information you need to connect to the SSIS Catalog database (SSISDB). You need the fully qualified server name and login information in the procedures that follow.
 
 1. Log in to the [Azure portal](https://portal.azure.com/).
 2. Select **SQL Databases** from the left-hand menu, and click the SSISDB database on the **SQL databases** page. 
@@ -55,6 +54,9 @@ Get the connection information you need to connect to the SSIS Catalog database 
 1. Open **Program.cs**.
 
 2. Replace the contents of **Program.cs** with the following code. Add the appropriate values for your server, database, user, and password.
+
+> [!NOTE]
+> The following example uses Windows Authentication. To use SQL Server authentication, replace the `Integrated Security=SSPI;` argument with `User ID=<user name>;Password=<password>;`.
 
 ```csharp
 using Microsoft.SqlServer.Management.IntegrationServices;
@@ -107,11 +109,10 @@ namespace deploy_ssis_project
 2. In SSMS, verify that the project has been deployed.
 
 ## Next steps
-- Run a package. To run a package, you can choose from several tools and languages. For more info, see the following articles:
-    - [Run from SSMS](ssis-everest-quickstart-run-ssms.md)
-    - [Run with T-SQL from SSMS](ssis-everest-quickstart-run-tsql-ssms.md)
-    - [Run with T-SQL from VS Code](ssis-everest-quickstart-run-tsql-vscode.md)
-    - [Run from command prompt](ssis-everest-quickstart-run-cmdline.md)
-    - [Run from PowerShell](ssis-everest-quickstart-run-powershell.md)
-    - [Run from C# app](ssis-everest-quickstart-run-dotnet.md) 
-- Schedule a package. For more info, see [Schedule page](ssis-everest-howto-schedule-package.md)
+- Run a deployed package. To run a package, you can choose from several tools and languages. For more info, see the following articles:
+    - [Run an SSIS package with SSMS](./ssis-quickstart-run-ssms.md)
+    - [Run an SSIS package with Transact-SQL (SSMS)](./ssis-quickstart-run-tsql-ssms.md)
+    - [Run an SSIS package with Transact-SQL (VS Code)](ssis-quickstart-run-tsql-vscode.md)
+    - [Run an SSIS package from the command prompt](./ssis-quickstart-run-cmdline.md)
+    - [Run an SSIS package with PowerShell](ssis-quickstart-run-powershell.md)
+    - [Run an SSIS package with C#](./ssis-quickstart-run-dotnet.md) 

@@ -17,7 +17,7 @@ This article explains how to configure NFS storage for a failover cluster instan
 
 NFS, or network file system, is a common method for sharing disks in the Linux world but not the Windows one. Similar to iSCSI, NFS can be configured on a server or some sort of appliance or storage unit as long as it meets the storage requirements for SQL Server.
 
-## Important NFS Server Information
+## Important NFS server information
 
 The source hosting NFS (either a Linux server or something else) must be using/compliant with version 4.2 or later. Earlier versions will not work with SQL Server on Linux.
 
@@ -238,7 +238,7 @@ Ensure that your security standards are enforced for accessing. When configuring
 5. Repeat the steps on the other node(s).
 
 
-## Next Steps
+## Next steps
 
 [Configure failover cluster instance - SQL Server on Linux](sql-server-linux-shared-disk-cluster-configure.md)
 

@@ -87,9 +87,8 @@ Generally available | Build number:
    - Fixed an issue with manage compression wizard for indexes; fixed issue where compress data wizards was broken for SQL 2016 and lower.
 		https://connect.microsoft.com/SQLServer/feedback/details/3139342
    - Added Compress wizard to Azure tables and indexes.
-- Showplan:
+- Showplan: 
    - Fixed issue where PDW operators were not recognized.
-   - Fixed issue where the SBSFileUrl attribute was not displayed.
 - Server Properties:
    - Fixed issue with not being able to modify server processor affinity.
 

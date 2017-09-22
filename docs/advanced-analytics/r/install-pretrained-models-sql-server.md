@@ -31,8 +31,8 @@ Pre-trained models have been made available to support customers who need to per
 
 Currently the models that are available are deep neural network (DNN) models for sentiment analysis and image classification. All four pretrained models were trained on CNTK. The configuration of each network was based on the following reference implementations:
 
-+ Resnet-18
-+ Resnet-50
++ ResNet-18
++ ResNet-50
 + ResNet-101
 + AlexNet
 

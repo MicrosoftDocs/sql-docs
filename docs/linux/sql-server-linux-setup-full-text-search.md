@@ -4,7 +4,7 @@ description: This topic describes how to install SQL Server Full-Text Search on 
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 07/17/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -80,7 +80,7 @@ If you need an offline installation, locate the Full-text Search package downloa
 
 ## Supported languages
 
-Full-Text Search uses [word breakers](https://msdn.microsoft.com/library/ms142509.aspx) that determine how to identify individual words based on language. You can get a list of registered word breakers by querying the **sys.fulltext_languages** catalog view. Word breakers for the following languages are installed with SQL Server 2017 RC2:
+Full-Text Search uses [word breakers](https://msdn.microsoft.com/library/ms142509.aspx) that determine how to identify individual words based on language. You can get a list of registered word breakers by querying the **sys.fulltext_languages** catalog view. Word breakers for the following languages are installed with SQL Server 2017:
 
 | Language | Language ID |
 |---|---|
@@ -142,7 +142,7 @@ Full-Text Search uses [word breakers](https://msdn.microsoft.com/library/ms14250
 
 Full-Text Search also works with text stored in binary files. But in this case, an installed filter is required to process the file. For more information about filters, see [Configure and Manage Filters for Search](https://msdn.microsoft.com/library/ms142499.aspx).
 
-You can see a list of installed filters by calling **sp_help_fulltext_system_components 'filter'**. For SQL Server 2017 RC2, the following filters are installed:
+You can see a list of installed filters by calling **sp_help_fulltext_system_components 'filter'**. For SQL Server 2017, the following filters are installed:
 
 | Component Name | Class ID | Version |
 |---|---|---|
@@ -254,35 +254,26 @@ You can see a list of installed filters by calling **sp_help_fulltext_system_com
 ## Semantic search
 [Semantic Search](https://msdn.microsoft.com/library/gg492075.aspx) builds on the Full-Text Search feature to extract and index statistically relevant *key phrases*. This enables you to query the meaning within documents in your database. It also helps to identify documents that are similar.
 
-In order to use Semantic Search, you must first download and attach the [Semantic Language Statistics database](https://msdn.microsoft.com/library/gg509085.aspx).
+In order to use Semantic Search, you must first restore the Semantic Language Statistics database to your machine.
 
-1. On a Windows machine, [download the .MSI file for the Semantic Language Statistics database](https://www.microsoft.com/download/details.aspx?id=54277).
+1. Use a tool, such as [sqlcmd](sql-server-linux-setup-tools.md), to run the following Transact-SQL command on your Linux SQL Server instance. This command restores the Language Statistics database.
 
-    > [!NOTE]
-    > At this time the download for the database is a .MSI file, so a Windows machine is required for this step.
+   ```sql
+   RESTORE DATABASE [semanticsdb] FROM
+   DISK = N'/opt/mssql/misc/semanticsdb.bak' WITH FILE = 1,
+   MOVE N'semanticsdb' TO N'/var/opt/mssql/data/semanticsDB.mdf',
+   MOVE N'semanticsdb_log' TO N'/var/opt/mssql/data/semanticsdb_log.ldf', NOUNLOAD, STATS = 5
+   GO
+   ```
 
-2. Run the .MSI file to extract the database and log files.
+   > [!NOTE]
+   > If necessary, update the paths in the previous RESTORE command to adjust for your configuration.
 
-3. Move the database and log files to your Linux SQL Server machine.
+1. Run the following Transact-SQL command to register the semantic language statistics database.
 
-    > [!TIP]
-    > For guidance on how to move files from Windows to Linux, see [Transfer a file to Linux](sql-server-linux-migrate-restore-database.md#scp).
-
-4. Run the following Transact-SQL command on your Linux SQL Server instance to attach the language statistics database.
-
-    ```tsql
-    CREATE DATABASE semanticsdb  
-            ON ( FILENAME = N'var/opt/mssql/data/semanticsdb.mdf' )  
-            LOG ON ( FILENAME = N'var/opt/mssql/data/semanticsdb_log.ldf' )  
-            FOR ATTACH;  
-    GO  
-    ```
-
-5. Run the following Transact-SQL command to register the semantic language statistics database.
-
-    ```tsql
+    ```sql
     EXEC sp_fulltext_semantic_register_language_statistics_db @dbname = N'semanticsdb';  
-    GO  
+    GO
     ```
 
 ## Next steps

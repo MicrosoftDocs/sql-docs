@@ -4,7 +4,7 @@ description: This topic describes how to install SQL Server Integration Services
 author: leolimsft 
 ms.author: lle 
 manager: craigg
-ms.date: 07/17/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: integration-services

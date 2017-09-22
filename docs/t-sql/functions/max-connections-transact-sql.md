@@ -1,7 +1,7 @@
 ---
 title: "@@MAX_CONNECTIONS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "09/18/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -26,7 +26,7 @@ author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
 ---
-# @@MAX_CONNECTIONS (Transact-SQL)
+# &#x40;&#x40;MAX_CONNECTIONS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Returns the maximum number of simultaneous user connections allowed on an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The number returned is not necessarily the number currently configured.  
@@ -36,7 +36,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
-  
 @@MAX_CONNECTIONS  
 ```  
   

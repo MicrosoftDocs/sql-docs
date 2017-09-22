@@ -78,18 +78,18 @@ Therefore it is necessary to have a table hint on the memory-optimized table. Th
   
   
   
-    SET TRANSACTION ISOLATION LEVEL READ COMMITTED;  
-    GO  
+      SET TRANSACTION ISOLATION LEVEL READ COMMITTED;  
+      GO  
   
-    BEGIN TRANSACTION;  -- Explicit transaction.  
+      BEGIN TRANSACTION;  -- Explicit transaction.  
   
       -- Order_mo  is a memory-optimized table.  
-    SELECT *  
+      SELECT *  
        FROM  
                 dbo.Order_mo  as o  WITH (SNAPSHOT)  -- Table hint.  
            JOIN dbo.Customer  as c  on c.CustomerId = o.CustomerId;  
       
-    COMMIT TRANSACTION;  
+      COMMIT TRANSACTION;  
   
 Note that the need for the `WITH (SNAPSHOT)` hint can be avoided through the use of the database option `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT`. When this option is set to `ON`, access to a memory-optimized table under a lower isolation level is automatically elevated to SNAPSHOT isolation.  
   

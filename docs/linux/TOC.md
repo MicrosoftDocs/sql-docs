@@ -11,6 +11,15 @@
 ## [Install & Connect - Ubuntu](quickstart-install-connect-ubuntu.md)
 ## [Run & Connect - Docker](quickstart-install-connect-docker.md)
 
+# Tutorials
+## [1_Migrate from Windows](sql-server-linux-migrate-restore-database.md)
+## [2_Migrate from Oracle](../ssma/oracle/sql-server-linux-convert-from-oracle.md?toc=%2fsql%2flinux%2ftoc.json)
+## [3_Create a job](sql-server-linux-run-sql-server-agent-job.md)
+## [4_Create FCI](sql-server-linux-shared-disk-cluster-configure.md)
+### [iSCSI](sql-server-linux-shared-disk-cluster-configure-iscsi.md)
+### [NFS](sql-server-linux-shared-disk-cluster-configure-nfs.md)
+### [SMB](sql-server-linux-shared-disk-cluster-configure-smb.md)
+
 # Concepts
 ## Install
 ### [Install SQL Server](sql-server-linux-setup.md)
@@ -19,6 +28,7 @@
 ### [Install SQL Server Full-Text Search](sql-server-linux-setup-full-text-search.md)
 ### [Install SQL Server Integration Services](sql-server-linux-setup-ssis.md)
 ### [Provision a SQL VM in Azure](sql-server-linux-azure-virtual-machine.md)
+### [Register GA repository](sql-server-linux-change-repo.md)
 
 ## Configure
 ### [Configure with mssql-conf](sql-server-linux-configure-mssql-conf.md)
@@ -35,21 +45,19 @@
 ## [Manage](sql-server-linux-management-overview.md)
 ### [Use SSMS to manage](sql-server-linux-manage-ssms.md)
 ### [Use PowerShell to manage](sql-server-linux-manage-powershell.md)
-### [Create and run jobs](sql-server-linux-run-sql-server-agent-job.md)
 ### [Use log shipping](sql-server-linux-use-log-shipping.md)
 ### [Use DB Mail and email alerts](sql-server-linux-db-mail-sql-agent.md)
 
 ## [Migrate](sql-server-linux-migrate-overview.md)
-### [Restore from Windows](sql-server-linux-migrate-restore-database.md)
 ### [Export and import a BACPAC from Windows](sql-server-linux-migrate-ssms.md)
 ### [Migrate with SQL Server Migration Assistant](sql-server-linux-migrate-ssma.md)
 ### [Bulk copy with bcp](sql-server-linux-migrate-bcp.md)
-### [Load data with (SSIS)](sql-server-linux-migrate-ssis.md)
+### [Extract, transform, and load data with SSIS](sql-server-linux-migrate-ssis.md)
 
 ## [Configure Business Continuity](sql-server-linux-business-continuity-dr.md)
 ### [Backup and Restore](sql-server-linux-backup-and-restore-database.md)
 #### [Virtual Device Interface - Linux](sql-server-linux-backup-vdi-specification.md)
-### [Failover Cluster Instance](sql-server-linux-shared-disk-cluster-configure.md)
+### [Failover Cluster Instance](sql-server-linux-shared-disk-cluster-concepts.md)
 #### [Red Hat Enterprise Linux]()
 ##### [Configure (HA add-on)](sql-server-linux-shared-disk-cluster-red-hat-7-configure.md)
 ##### [Operate (HA add-on)](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)
@@ -70,7 +78,9 @@
 ### [Encrypting Connections](sql-server-linux-encrypted-connections.md)
 ### [Active Directory Authentication](sql-server-linux-active-directory-authentication.md)
 
-## [Optimize Performance](sql-server-linux-performance-get-started.md)
+## Performance
+### [Best practices](sql-server-linux-performance-best-practices.md)
+### [Get started with performance features](sql-server-linux-performance-get-started.md)
 
 # Samples
 ## Unattended Install

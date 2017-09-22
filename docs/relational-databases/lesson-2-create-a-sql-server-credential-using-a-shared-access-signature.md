@@ -40,7 +40,7 @@ To create a SQL Server credential, follow these steps:
     ```Transact-SQL  
   
     USE master  
-    CREATE CREDENTIAL 'https://<mystorageaccountname>.blob.core.windows.net/<mystorageaccountcontainername>' – this name must match the container path, start with https and must not contain a forward slash.  
+    CREATE CREDENTIAL [https://<mystorageaccountname>.blob.core.windows.net/<mystorageaccountcontainername>] – this name must match the container path, start with https and must not contain a forward slash.  
        WITH IDENTITY='SHARED ACCESS SIGNATURE' -- this is a mandatory string and do not change it.   
        , SECRET = 'sharedaccesssignature' –- this is the shared access signature key that you obtained in Lesson 1.   
     GO  

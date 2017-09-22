@@ -144,14 +144,23 @@ fn_get_audit_file ( file_pattern,
 
 - **Azure SQL Database**
 
-  This example reads from a file that is named `ShiraServer/MayaDB/SqlDbAuditing_Audit/2017-07-14/10_45_22_173_1.xel`.  
+  This example reads from a file that is named `ShiraServer/MayaDB/SqlDbAuditing_Audit/2017-07-14/10_45_22_173_1.xel`:  
   
   ```  
   SELECT * FROM sys.fn_get_audit_file ('https://mystorage.blob.core.windows.net/sqldbauditlogs/ShiraServer/MayaDB/SqlDbAuditing_Audit/2017-07-14/10_45_22_173_1.xel',default,default);
   GO  
   ```  
 
-  This example reads all audit logs from servers that begin with `Sh`.  
+  This example reads from the same file as above, but with additional T-SQL clauses (**TOP**, **ORDER BY**, and **WHERE** clause for filtering the audit records returned by the function):
+  
+  ```  
+  SELECT TOP 10 * FROM sys.fn_get_audit_file ('https://mystorage.blob.core.windows.net/sqldbauditlogs/ShiraServer/MayaDB/SqlDbAuditing_Audit/2017-07-14/10_45_22_173_1.xel',default,default)
+  WHERE server_principal_name = 'admin1'
+  ORDER BY event_time
+  GO
+  ```  
+
+  This example reads all audit logs from servers that begin with `Sh`: 
   
   ```  
   SELECT * FROM sys.fn_get_audit_file ('https://mystorage.blob.core.windows.net/sqldbauditlogs/Sh',default,default);

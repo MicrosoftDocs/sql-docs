@@ -4,7 +4,7 @@ description: This quick start tutorial shows how to install SQL Server 2017 on U
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 09/07/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -14,7 +14,7 @@ ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-In this quick start tutorial, you first install SQL Server 2017 RC2 on Ubuntu 16.04. Then connect with **sqlcmd** to create your first database and run queries.
+In this quick start tutorial, you first install SQL Server 2017 on Ubuntu 16.04. Then connect with **sqlcmd** to create your first database and run queries.
 
 > [!TIP]
 > This tutorial requires user input and an internet connection. If you are interested in the [unattended](sql-server-linux-setup.md#unattended) or [offline](sql-server-linux-setup.md#offline) installation procedures, see [Installation guidance for SQL Server on Linux](sql-server-linux-setup.md).
@@ -31,6 +31,9 @@ For other system requirements, see [System requirements for SQL Server on Linux]
 
 To configure SQL Server on Ubuntu, run the following commands in a terminal to install the **mssql-server** package.
 
+> [!IMPORTANT]
+> If you have previously installed a CTP or RC release of SQL Server 2017, you must first remove the old repository before registering one of the GA repositories. For more information, see [Change repositories from the preview repository to the GA repository](sql-server-linux-change-repo.md)
+
 1. Import the public repository GPG keys:
 
    ```bash
@@ -40,8 +43,11 @@ To configure SQL Server on Ubuntu, run the following commands in a terminal to i
 1. Register the Microsoft SQL Server Ubuntu repository:
 
    ```bash
-   sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server.list)"
+   sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"
    ```
+
+   > [!NOTE]
+   > This is the Cumulative Update (CU) repository. For more information about your repository options and their differences, see [Change source repositories](sql-server-linux-setup.md#repositories).
 
 1. Run the following commands to install SQL Server:
 
@@ -60,11 +66,11 @@ To configure SQL Server on Ubuntu, run the following commands in a terminal to i
    > Make sure to specify a strong password for the SA account (Minimum length 8 characters, including uppercase and lowercase letters, base 10 digits and/or non-alphanumeric symbols).
 
    > [!TIP]
-   > When installing RC2, no purchased licenses are required to try any of the editions. Because it is a release candidate, the following message appears regardless of the edition you select:
+   > When installing, no purchased licenses are required to try any of the editions. Because it is a release candidate, the following message appears regardless of the edition you select:
    >
    > `This is an evaluation version.  There are [175] days left in the evaluation period.`
    >
-   > This message does not reflect the edition you selected. It relates to the preview period for RC2.
+   > This message does not reflect the edition you selected. It relates to the preview period for.
 
 1. Once the configuration is done, verify that the service is running:
 

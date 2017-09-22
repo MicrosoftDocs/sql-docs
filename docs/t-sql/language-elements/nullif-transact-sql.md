@@ -1,7 +1,7 @@
 ---
 title: "NULLIF (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/16/2017"
+ms.date: "09/08/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -28,7 +28,7 @@ manager: "jhubbard"
 # NULLIF (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Returns a null value if the two specified expressions are equal.  
+  Returns a null value if the two specified expressions are equal. For example, `SELECT NULLIF(4,4) AS Same, NULLIF(5,7) AS Different;` returns NULL for the first column (4 and 4) because the two input values are the same. The second column returns the first value (5) because the two input values are different. 
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

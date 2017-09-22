@@ -4,7 +4,7 @@ description: Install, update, and uninstall SQL Server on Linux. This topic cove
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 08/28/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -14,7 +14,7 @@ ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-This topic explains how to install, update, and uninstall SQL Server 2017 on Linux. SQL Server 2017 RC2 is supported on Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES), and Ubuntu. It is also available as a Docker image, which can run on Docker Engine on Linux or Docker for Windows/Mac.
+This topic explains how to install, update, and uninstall SQL Server 2017 on Linux. SQL Server 2017 is supported on Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES), and Ubuntu. It is also available as a Docker image, which can run on Docker Engine on Linux or Docker for Windows/Mac.
 
 > [!TIP]
 > To get started quickly, jump to one of the quick start tutorials for [RHEL](quickstart-install-connect-red-hat.md), [SLES](quickstart-install-connect-suse.md), [Ubuntu](quickstart-install-connect-ubuntu.md), or [Docker](quickstart-install-connect-docker.md).
@@ -85,7 +85,7 @@ To rollback or downgrade SQL Server to a previous release, use the following ste
 > It is only supported to downgrade to a release within the same major version, such as SQL Server 2017.
 
 > [!IMPORTANT]
-> Downgrade is only supported between RC2 and RC1 at this time.
+> Downgrade is only supported between RTM, RC2, and RC1 at this time.
 
 ## <a id="repositories"></a> Change source repositories
 
@@ -98,28 +98,28 @@ When you install or upgrade SQL Server, you get the latest version of SQL Server
 Each CU and GDR release contains the full SQL Server package and all previous updates for that repository. Updating from a GDR release to a CU release is supported by changing your configured repository for SQL Server. You can also [downgrade](#rollback) to any release within your major version (ex: 2017).
 
 > [!NOTE]
-> Updating from a CU release to a GDR release is not supported. 
+> Updating from a CU release to a GDR release is not supported.
 
 To change from the GDR repository to the CU repository use the following steps:
 
-1. Remove the previously configured repository.
+1. Remove the previously configured preview repository.
 
    | Platform | Repository removal command |
    |-----|-----|
    | RHEL | `sudo rm -rf /etc/yum.repos.d/mssql-server.repo` |
-   | SLES | `sudo zypper rr <repo-name>` |
-   | Ubuntu | `sudo rm -rf /etc/apt/sources.list.d/<repo-name>.list` |
+   | SLES | `sudo zypper removerepo 'packages-microsoft-com-mssql-server'` |
+   | Ubuntu | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server xenial main'` |
 
 1. Configure the new repository.
 
    | Platform | Repository | Command |
    |-----|-----|-----|
-   | RHEL | CU | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://repo.microsoft.com/config/rhel/7/mssql-server-2017.repo` |
-   | RHEL | GDR | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://repo.microsoft.com/config/rhel/7/mssql-server-2017-gdr.repo` |
-   | SLES | CU  | `sudo zypper addrepo -fc https://repo.microsoft.com/sles12/config/mssql-server-2017.repo` |
-   | SLES | GDR | `sudo zypper addrepo -fc https://repo.microsoft.com/sles12/config/mssql-server-2017-gdr.repo` |
-   | Ubuntu | CU | `sudo add-apt-repository "$(curl https://repo.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"` |
-   | Ubuntu | GDR | `sudo add-apt-repository "$(curl https://repo.microsoft.com/config/ubuntu/16.04/mssql-server-2017-gdr.list)"` |
+   | RHEL | CU | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo` |
+   | RHEL | GDR | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017-gdr.repo` |
+   | SLES | CU  | `sudo zypper addrepo -fc https://repo.corp.microsoft.com/sles12/config/mssql-server-2017.repo` |
+   | SLES | GDR | `sudo zypper addrepo -fc https://repo.corp.microsoft.com/sles12/config/mssql-server-2017-gdr.repo` |
+   | Ubuntu | CU | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"` |
+   | Ubuntu | GDR | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017-gdr.list)"` |
 
 1. Update your system.
 
@@ -133,7 +133,7 @@ To change from the GDR repository to the CU repository use the following steps:
 1. [Install](#platforms) or [update](#upgrade) SQL Server from the new repository.
 
    > [!IMPORTANT]
-   > At this point, if you choose to perform a full installation using the [quickstart tutorials](#platforms), remember that you have just configured the target repository. Do not repeat those steps in the tutorials.
+   > At this point, if you choose to perform a full installation using the [quickstart tutorials](#platforms), remember that you have just configured the target repository. Do not repeat that step in the tutorials. This is especially true if you configure the GDR repository, because the quickstart tutorials use the CU repository.
 
 ## <a id="uninstall"></a> Uninstall SQL Server
 

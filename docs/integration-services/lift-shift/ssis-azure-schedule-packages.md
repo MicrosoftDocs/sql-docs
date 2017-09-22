@@ -19,7 +19,7 @@ You can schedule the execution of packages stored in the SSISDB Catalog database
 
 ### Prerequisite
 
-Before you can use SQL Server Agent on premises to schedule execution of packages stored on an Azure SQL Database server, you have to add the SQL Database server as a linked server. For more info, see [Create Linked Servers](../relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md) and [Linked Servers](../relational-databases/linked-servers/linked-servers-database-engine.md).
+Before you can use SQL Server Agent on premises to schedule execution of packages stored on an Azure SQL Database server, you have to add the SQL Database server as a linked server. For more info, see [Create Linked Servers](../../relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md) and [Linked Servers](../../relational-databases/linked-servers/linked-servers-database-engine.md).
 
 ### Create a SQL Server Agent job
 
@@ -52,7 +52,7 @@ To schedule a package with SQL Server Agent on premises, create a job with a job
 
 ## <a name="elastic"></a> Schedule a package with SQL Database Elastic Jobs
 
-For more info about elastic jobs on SQL Database, see [Managing scaled-out cloud databases](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-jobs-overview).
+For more info about elastic jobs on SQL Database, see [Managing scaled-out cloud databases](/azure/sql-database/sql-database-elastic-jobs-overview.md).
 
 ### Prerequisites
 
@@ -104,7 +104,7 @@ To schedule a package with the Azure Data Factory SQL Server Stored Procedure ac
 3.  Create an output dataset that drives the scheduling.
 4.  Create a Data Factory pipeline that uses the SQL Server Stored Procedure activity to run the SSIS package.
 
-This section provides an overview of these steps. A complete Data Factory tutorial is beyond the scope of this article. For more info, see [SQL Server Stored Procedure Activity](https://docs.microsoft.com/en-us/azure/data-factory/data-factory-stored-proc-activity).
+This section provides an overview of these steps. A complete Data Factory tutorial is beyond the scope of this article. For more info, see [SQL Server Stored Procedure Activity](/azure/data-factory/data-factory-stored-proc-activity.md).
 
 ### Created a linked service for the SQL Database that hosts SSISDB
 The linked service lets Data Factory connect to SSISDB.
@@ -210,9 +210,9 @@ END
 GO
 ```
 
-For more info about the code in this script, see [Deploy and Execute SSIS Packages using Stored Procedures](https://docs.microsoft.com/en-us/sql/integration-services/packages/deploy-integration-services-ssis-projects-and-packages#deploy-and-execute-ssis-packages-using-stored-procedures).
+For more info about the code in this script, see [Deploy and Execute SSIS Packages using Stored Procedures](../packages/deploy-integration-services-ssis-projects-and-packages#deploy-and-execute-ssis-packages-using-stored-procedures.md).
 
 ## Next steps
 For more info about SQL Server Agent, see [SQL Server Agent Jobs for Packages](../packages/sql-server-agent-jobs-for-packages.md).
 
-For more info about elastic jobs on SQL Database, see [Managing scaled-out cloud databases](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-jobs-overview).
+For more info about elastic jobs on SQL Database, see [Managing scaled-out cloud databases](/azure/sql-database/sql-database-elastic-jobs-overview.md).

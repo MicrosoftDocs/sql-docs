@@ -1,7 +1,7 @@
 ---
 title: "@@DBTS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/30/2017"
+ms.date: "09/18/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -23,7 +23,7 @@ author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
 ---
-# @@DBTS (Transact-SQL)
+# &#x40;&#x40;DBTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Returns the value of the current **timestamp** data type for the current database. This timestamp is guaranteed to be unique in the database.
@@ -32,7 +32,7 @@ Returns the value of the current **timestamp** data type for the current databas
   
 ## Syntax  
   
-```sql
+```
 @@DBTS  
 ```  
   

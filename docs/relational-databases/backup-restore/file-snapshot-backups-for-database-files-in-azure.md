@@ -45,7 +45,7 @@ manager: "jhubbard"
 >  After the initial full backup that is required to establish the transaction log backup chain (which can be a file-snapshot backup), you only need to perform transaction log backups because each transaction log file-snapshot backup set contains file-snapshots of all database files and can be used to perform a database restore or a log restore. After the initial full database backup, you do not need additional full or differential backups because the Azure Blob storage service handles the differences between each file-snapshot and the current state of the base blob for each database file.  
   
 > [!NOTE]  
->  For a tutorial on using SQL Server 2016 with the Microsoft Azure Blob storage service, see [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases](https://msdn.microsoft.com/library/dn466438.aspx)  
+>  For a tutorial on using SQL Server 2016 with the Microsoft Azure Blob storage service, see [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases](/sql-docs/docs/relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016)  
   
 ### Restore using file-snapshot backups  
  Because each file-snapshot backup set contains a file-snapshot of each database file, a restore process requires at most adjacent two file-snapshot backup sets. This is true regardless of whether the backup set is from a full database backup or a log backup. This is very different than the restore process when using traditional streaming backup files to perform the restore process. With traditional streaming backup, the restore process requires the use of an entire chain of backup sets: the full backup, a differential backup and one or more transaction log backups. The recovery portion of the restore process remains the same regardless of whether the restore is using a file-snapshot backup or a streaming backup set.  
@@ -178,6 +178,6 @@ GO
  What information are you looking for, and did you find it? We’re listening to your feedback to improve the content. Please submit your comments to [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20File-Snapshot%20Backups%20for%20Database%20Files%20in%20Azure%20page)  
   
 ## See Also  
- [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases](https://msdn.microsoft.com/library/dn466438.aspx)  
+ [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases](/sql-docs/docs/relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016)  
   
   

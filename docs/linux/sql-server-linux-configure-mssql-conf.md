@@ -1,10 +1,10 @@
 ---
 title: Configure SQL Server settings on Linux | Microsoft Docs
 description: This topic describes how to use the mssql-conf tool to  configure SQL Server 2017 settings on Linux.
-author: luisbosquez 
-ms.author: lbosq 
+author: rothja 
+ms.author: jroth 
 manager: jhubbard
-ms.date: 08/24/2017
+ms.date: 09/20/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine

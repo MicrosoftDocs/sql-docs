@@ -21,7 +21,7 @@ Before you start, make sure you have Visual Studio or Visual Studio Code install
 > [!NOTE]
 > An Azure SQL Database server listens on port 1433. If you're trying to connect to an Azure SQL Database server from within a corporate firewall, this port must be open in the corporate firewall for you to connect successfully.
 
-## Get the connection info, if deployed to SQL Database, 
+## Get the connection info if deployed to SQL Database 
 
 If your packages are deployed to an Azure SQL Database, get the connection information you need to connect to the SSIS Catalog database (SSISDB). You need the fully qualified server name and login information in the procedures that follow.
 

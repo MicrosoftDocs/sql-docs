@@ -34,7 +34,9 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
-sp_filestream_force_garbage_collection [ @dbname = ]  'database_name'  , @filename = 'logical_file_name' ]  
+sp_filestream_force_garbage_collection  
+    [ @dbname = ]  'database_name',  
+    [ @filename = ] 'logical_file_name' ]  
 ```  
   
 ## Arguments  

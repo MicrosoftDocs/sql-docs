@@ -63,7 +63,7 @@ To change from the preview repository to one source repository (CU or GDR), use 
 1. [Install](sql-server-linux-setup.md#platforms) or [update](sql-server-linux-setup.md#upgrade) SQL Server using the GA repository.
 
    > [!IMPORTANT]
-   > At this point, if you choose to perform a full installation using the [quickstart tutorials](sql-server-linux-setup.md#platforms), remember that you have just configured your target repository (CU or GDR). Do not repeat those steps in the tutorials.
+   > At this point, if you choose to perform a full installation using the [quickstart tutorials](#platforms), remember that you have just configured the target repository. Do not repeat that step in the tutorials. This is especially true if you configure the GDR repository, because the quickstart tutorials use the CU repository.
 
 ## Next steps
 

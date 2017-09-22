@@ -109,6 +109,12 @@ namespace deploy_ssis_project
 2. In SSMS, verify that the project has been deployed.
 
 ## Next steps
+- Consider other ways to deploy a package.
+    - [Deploy an SSIS package with SSMS](./ssis-quickstart-deploy-ssms.md)
+    - [Deploy an SSIS package with Transact-SQL (SSMS)](./ssis-quickstart-deploy-tsql-ssms.md)
+    - [Deploy an SSIS package with Transact-SQL (VS Code)](ssis-quickstart-deploy-tsql-vscode.md)
+    - [Deploy an SSIS package from the command prompt](./ssis-quickstart-deploy-cmdline.md)
+    - [Deploy an SSIS package with PowerShell](ssis-quickstart-deploy-powershell.md)
 - Run a deployed package. To run a package, you can choose from several tools and languages. For more info, see the following articles:
     - [Run an SSIS package with SSMS](./ssis-quickstart-run-ssms.md)
     - [Run an SSIS package with Transact-SQL (SSMS)](./ssis-quickstart-run-tsql-ssms.md)

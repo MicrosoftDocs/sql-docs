@@ -115,4 +115,3 @@ namespace run_ssis_package
     - [Run an SSIS package with Transact-SQL (VS Code)](ssis-quickstart-run-tsql-vscode.md)
     - [Run an SSIS package from the command prompt](./ssis-quickstart-run-cmdline.md)
     - [Run an SSIS package with PowerShell](ssis-quickstart-run-powershell.md)
-    - [Run an SSIS package with C#](./ssis-quickstart-run-dotnet.md) 

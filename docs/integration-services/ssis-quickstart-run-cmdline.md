@@ -36,6 +36,5 @@ With the parameter values used in the following example, the program runs the pa
     - [Run an SSIS package with SSMS](./ssis-quickstart-run-ssms.md)
     - [Run an SSIS package with Transact-SQL (SSMS)](./ssis-quickstart-run-tsql-ssms.md)
     - [Run an SSIS package with Transact-SQL (VS Code)](ssis-quickstart-run-tsql-vscode.md)
-    - [Run an SSIS package from the command prompt](./ssis-quickstart-run-cmdline.md)
     - [Run an SSIS package with PowerShell](ssis-quickstart-run-powershell.md)
     - [Run an SSIS package with C#](./ssis-quickstart-run-dotnet.md) 

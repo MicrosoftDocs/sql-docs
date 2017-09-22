@@ -81,6 +81,12 @@ EXEC catalog.deploy_project @folder_name = '<target_folder>', @project_name = '<
 ```
 
 ## Next steps
+- Consider other ways to deploy a package.
+    - [Deploy an SSIS package with SSMS](./ssis-quickstart-deploy-ssms.md)
+    - [Deploy an SSIS package with Transact-SQL (SSMS)](./ssis-quickstart-deploy-tsql-ssms.md)
+    - [Deploy an SSIS package from the command prompt](./ssis-quickstart-deploy-cmdline.md)
+    - [Deploy an SSIS package with PowerShell](ssis-quickstart-deploy-powershell.md)
+    - [Deploy an SSIS package with C#](./ssis-quickstart-deploy-dotnet.md) 
 - Run a deployed package. To run a package, you can choose from several tools and languages. For more info, see the following articles:
     - [Run an SSIS package with SSMS](./ssis-quickstart-run-ssms.md)
     - [Run an SSIS package with Transact-SQL (SSMS)](./ssis-quickstart-run-tsql-ssms.md)

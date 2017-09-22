@@ -44,6 +44,12 @@ For more info about the Integration Services Deployment Wizard, see [Integration
     -   Click **Close** to exit the wizard.
 
 ## Next steps
+- Consider other ways to deploy a package.
+    - [Deploy an SSIS package with SSMS](./ssis-quickstart-deploy-ssms.md)
+    - [Deploy an SSIS package with Transact-SQL (SSMS)](./ssis-quickstart-deploy-tsql-ssms.md)
+    - [Deploy an SSIS package with Transact-SQL (VS Code)](ssis-quickstart-deploy-tsql-vscode.md)
+    - [Deploy an SSIS package with PowerShell](ssis-quickstart-deploy-powershell.md)
+    - [Deploy an SSIS package with C#](./ssis-quickstart-deploy-dotnet.md) 
 - Run a deployed package. To run a package, you can choose from several tools and languages. For more info, see the following articles:
     - [Run an SSIS package with SSMS](./ssis-quickstart-run-ssms.md)
     - [Run an SSIS package with Transact-SQL (SSMS)](./ssis-quickstart-run-tsql-ssms.md)

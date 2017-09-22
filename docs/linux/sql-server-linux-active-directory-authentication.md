@@ -272,9 +272,9 @@ The specific connection string parameter for clients to use AD Authentication de
   * ODBC: [Using Integrated Authentication](https://docs.microsoft.com/sql/connect/odbc/linux/using-integrated-authentication)
   * ADO.NET: [Connection String Syntax](https://msdn.microsoft.com/en-us/library/system.data.sqlclient.sqlauthenticationmethod(v=vs.110).aspx)
   
-  ## Next steps
+## Next steps
 
-In this tutorial, you learned how to setup Active Directory authentication with SQL Server on Linux. You learned how to:
+In this tutorial, we walked through how to setup Active Directory authentication with SQL Server on Linux. You learned how to:
 > [!div class="checklist"]
 > * Join [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] host to AD domain
 > * Create AD user for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and set SPN

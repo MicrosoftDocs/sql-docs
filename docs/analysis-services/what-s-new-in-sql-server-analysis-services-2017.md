@@ -41,7 +41,7 @@ To upgrade an existing tabular model in SSDT, in Solution Explorer, right-click 
 
 ![AS_Model_Properties](../analysis-services/media/as-model-properties.png)
 
-It's important to keep in mind, once you upgrade an existing model to 1400, you can't downgrade. Be sure to keep a backup of your 1200 model database, just in-case.
+It's important to keep in mind, once you upgrade an existing model to 1400, you can't downgrade. Be sure to keep a backup of your 1200 model database.
 
 ## Modern Get Data experience
 When it comes to ingesting data from data sources into your tabular models, SQL Server Data Tools (SSDT) introduces the modern **Get Data** experience for models at the 1400 compatibility level. This new feature is based on similar functionality in Power BI Desktop and Microsoft Excel 2016. The modern Get Data experience provides immense data transformation and data mashup capabilities by using the Get Data query builder and M expressions.
@@ -235,7 +235,7 @@ Filtered Sales:=CALCULATE (
 ```
 
 ## Additional improvements
-In addition to all the new features, Analysis Services, SSDT, and SSMS also include to following improvements:
+In addition to all the new features, Analysis Services, SSDT, and SSMS also include the following improvements:
 
 * Hierarchy and column reuse surfaced in more helpful locations in the Power BI field list.
 * Date relationships to easily create relationships to date dimensions based on date fields.

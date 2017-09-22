@@ -70,7 +70,7 @@ GO
 ALTER ROLE db_datareader ADD MEMBER Jerry;   
 ```   
 
-For a list of the fixed database roles, see [Database-Level Roles](/sql-docs/docs/relational-databases/security/authentication-access/database-level-roles).
+For a list of the fixed database roles, see [Database-Level Roles](../relational-databases/security/authentication-access/database-level-roles.md).
 
 Later, when you are ready to configure more precise access to your data (highly recommended), create your own user-defined database roles using [CREATE ROLE](../t-sql/statements/create-role-transact-sql.md) statement. Then assign specific granular permissions to you custom roles.
 
@@ -89,7 +89,7 @@ For more information about the permission system, see [Getting Started with Data
 
 ## Configure row-level security  
 
-[Row-Level Security](/sql-docs/docs/relational-databases/security/row-level-security) enables you to restrict access to rows in a database based on the user executing a query. This feature is useful for scenarios like ensuring that customers can only access their own data or that workers can only access data that is pertinent to their department.   
+[Row-Level Security](../relational-databases/security/row-level-security.md) enables you to restrict access to rows in a database based on the user executing a query. This feature is useful for scenarios like ensuring that customers can only access their own data or that workers can only access data that is pertinent to their department.   
 
 The steps below walk through setting up two Users with different row-level access to the `Sales.SalesOrderHeader` table. 
 
@@ -244,7 +244,7 @@ The encryption and decryption operations are scheduled on background threads by 
 >  [!WARNING]
 >  Backup files of databases that have TDE enabled are also encrypted by using the database encryption key. As a result, when you restore these backups, the certificate protecting the database encryption key must be available. This means that in addition to backing up the database, you have to make sure that you maintain backups of the server certificates to prevent data loss. Data loss will result if the certificate is no longer available. For more information, see [SQL Server Certificates and Asymmetric Keys](../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).  
 
-For more information about TDE, see [Transparent Data Encryption (TDE)](/sql-docs/docs/relational-databases/security/encryption/transparent-data-encryption-tde).   
+For more information about TDE, see [Transparent Data Encryption (TDE)](../relational-databases/security/encryption/transparent-data-encryption-tde.md).   
 
 
 ## Configure backup encryption

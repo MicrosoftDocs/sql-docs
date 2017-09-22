@@ -22,7 +22,7 @@ manager: "jhubbard"
   Execute a user defined function using Transact-SQL.
   
 
-> **Note:** Visit  [user defined function](user-defined-functions.md) and [Create Function (Transact SQL](/sql-docs/docs/t-sql/statements/create-function-transact-sql) for more information about user defined functions. 
+> **Note:** Visit  [user defined function](user-defined-functions.md) and [Create Function (Transact SQL](../../t-sql/statements/create-function-transact-sql.md) for more information about user defined functions. 
   
  
 ##  <a name="BeforeYouBegin"></a> Before you begin  

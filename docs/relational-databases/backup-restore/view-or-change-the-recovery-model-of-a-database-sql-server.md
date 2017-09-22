@@ -36,7 +36,7 @@ manager: "jhubbard"
 ##  <a name="BeforeYouBegin"></a> Before you begin  
   
 
--   [Back up the transaction log](back-up-a-transaction-log-sql-server.md) **before** switching from the [full recovery or bulk-logged recovery model](/sql-docs/docs/relational-databases/backup-restore/recovery-models-sql-server).  
+-   [Back up the transaction log](back-up-a-transaction-log-sql-server.md) **before** switching from the [full recovery or bulk-logged recovery model](recovery-models-sql-server.md).  
   
 -   Point-in-time recovery is not possible with bulk-logged model. Running transactions under the bulk-logged recovery model that require a transaction log restore can exposed them to data loss. To maximize data recoverability in a disaster-recovery scenario, switch to the bulk-logged recovery model only under the following conditions:  
   

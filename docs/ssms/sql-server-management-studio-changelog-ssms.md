@@ -475,7 +475,7 @@ Generally available | Version number: 13.0.15700.28
 
 * [New authentication option **'Active Directory Universal Authentication'**](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/). This is a token-based authentication mechanism driven by Azure Active Directory that supports multi-factor, password, and integrated authentication mechanisms.
 
-* New Extended Events templates matching the functionality of SQL Server Profiler templates [(Microsoft Connect item #2543925).](/sql-docs/docs/tools/sql-server-profiler/sql-server-profiler-templates).
+* New Extended Events templates matching the functionality of SQL Server Profiler templates [(Microsoft Connect item #2543925).](../tools/sql-server-profiler/sql-server-profiler-templates.md).
 
 * New Create database and database properties dialogs for Azure SQL databases.
 

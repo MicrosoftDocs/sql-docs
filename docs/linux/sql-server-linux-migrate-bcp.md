@@ -133,4 +133,4 @@ This should display the following in your terminal window:
 - [bcp utility](../tools/bcp-utility.md)
 - [Data Formats for Compatibility when Using bcp](../relational-databases/import-export/specify-data-formats-for-compatibility-when-using-bcp-sql-server.md)
 - [Import Bulk Data by Using BULK INSERT](../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)
-- [BULK INSERT (Transact-SQL)](/sql-docs/docs/t-sql/statements/bulk-insert-transact-sql)
+- [BULK INSERT (Transact-SQL)](../t-sql/statements/bulk-insert-transact-sql.md)

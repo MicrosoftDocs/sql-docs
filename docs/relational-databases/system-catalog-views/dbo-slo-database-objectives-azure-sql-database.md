@@ -66,4 +66,4 @@ INNER JOIN sys.databases AS database_name  ON database_slo.database_id = databas
   
 ## See Also  
  [Managing Premium Databases](http://go.microsoft.com/fwlink/?LinkID=311927)  
-[sys.dm_operation_status (Azure SQL Database)](/sql-docs/docs/relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database) 
+[sys.dm_operation_status (Azure SQL Database)](../system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md) 

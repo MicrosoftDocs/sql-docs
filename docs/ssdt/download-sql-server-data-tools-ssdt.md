@@ -117,11 +117,11 @@ After installing SSDT, work through these tutorials to learn how to create datab
   
 -   [Project-Oriented Offline Database Development](https://msdn.microsoft.com/library/hh272702(v=vs.103).aspx)  
   
--   [SSIS Tutorial: Create a Simple ETL Package](/sql-docs/docs/integration-services/ssis-how-to-create-an-etl-package)  
+-   [SSIS Tutorial: Create a Simple ETL Package](../integration-services/ssis-how-to-create-an-etl-package.md)  
   
 -   [Analysis Services tutorials](../analysis-services/analysis-services-tutorials-ssas.md)  
   
--   [Create a Basic Table Report (SSRS Tutorial)](/sql-docs/docs/reporting-services/create-a-basic-table-report-ssrs-tutorial)  
+-   [Create a Basic Table Report (SSRS Tutorial)](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)  
   
 
 

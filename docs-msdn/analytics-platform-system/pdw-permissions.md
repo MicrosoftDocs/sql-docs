@@ -28,7 +28,7 @@ Database Users
 Logins are granted access to a database by creating a database user in a database and mapping that database user to a login. Typically the database user name is the same as the login name, though it does not have to be the same. Each database user maps to a single login. A login can be mapped to only one user in a database, but can be mapped as a database user in several different databases.  
   
 Fixed Database Roles  
-Fixed database roles are a set of preconfigured roles that provide convenient group of database-level permissions. Database users and user-defined database roles can be added to the fixed database roles using the [sp_addrolemember](/sql-docs/docs/relational-databases/system-stored-procedures/sp-addrolemember-transact-sql) procedure. For more information about fixed database roles, see [Fixed Database Roles](#fixed-database-roles).  
+Fixed database roles are a set of preconfigured roles that provide convenient group of database-level permissions. Database users and user-defined database roles can be added to the fixed database roles using the [sp_addrolemember](../../docs/relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) procedure. For more information about fixed database roles, see [Fixed Database Roles](#fixed-database-roles).  
   
 User-defined Database Roles  
 Users with the **CREATE ROLE** permission can create new user-defined database roles to represent groups of users with common permissions. Typically permissions are granted or denied to the entire role, simplifying permissions management and monitoring.  
@@ -47,9 +47,9 @@ The following example represents a common and recommended method of configuring 
   
 5.  Grant permissions to the user-defined database roles.  
   
-Logins are server-level objects and can be listed by viewing [sys.server_principals](/sql-docs/docs/relational-databases/system-catalog-views/sys-server-principals-transact-sql). Only server-level permissions can be granted to server principals.  
+Logins are server-level objects and can be listed by viewing [sys.server_principals](../../docs/relational-databases/system-catalog-views/sys-server-principals-transact-sql.md). Only server-level permissions can be granted to server principals.  
   
-Users and database roles are database-level objects and can be listed by viewing [sys.database_principals](/sql-docs/docs/relational-databases/system-catalog-views/sys-database-principals-transact-sql). Only database-level permissions can be granted to database principals.  
+Users and database roles are database-level objects and can be listed by viewing [sys.database_principals](../../docs/relational-databases/system-catalog-views/sys-database-principals-transact-sql.md). Only database-level permissions can be granted to database principals.  
   
 ## <a name="BackupTypes"></a>Default Permissions  
 The following list describes the default permissions:  
@@ -83,7 +83,7 @@ All new appliance logins automatically belong to the PUBLIC role. The PUBLIC ser
 Whether or not a login has permission to perform a specific action depends on the permissions granted or denied to login, user, and roles the user is a member of. Server-level permissions (such as **CREATE LOGIN** and **VIEW SERVER STATE**) are available to server-level principals (logins). Database-level permissions (such as **SELECT** from a table or **EXECUTE** on a procedure) are available to database-level principals (users and database roles).  
   
 ### Implicit and Explicit Permissions  
-An *explicit permission* is a **GRANT** or **DENY** permission given to a principal by a **GRANT** or **DENY** statement. Database-level permissions are listed in the [sys.database_permissions](/sql-docs/docs/relational-databases/system-catalog-views/sys-database-permissions-transact-sql) view. Server-level permissions are listed in the [sys.server_permissions](/sql-docs/docs/relational-databases/system-catalog-views/sys-server-permissions-transact-sql) view.  
+An *explicit permission* is a **GRANT** or **DENY** permission given to a principal by a **GRANT** or **DENY** statement. Database-level permissions are listed in the [sys.database_permissions](../../docs/relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) view. Server-level permissions are listed in the [sys.server_permissions](../../docs/relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) view.  
   
 An *implicit permission* is a **GRANT** or **DENY** permission that a principal (login or server role) has inherited. A permission can be inherited in the following ways.  
   

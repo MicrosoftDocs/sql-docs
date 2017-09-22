@@ -64,12 +64,12 @@ Transact-SQL (T-SQL) statements for Analytic Platform System (APS) SQL Server Pa
 * [DBCC SHRINKLOG](https://msdn.microsoft.com/library/mt204020.aspx)
 * [DBCC PDW_SHOWEXECUTIONPLAN](https://msdn.microsoft.com/library/mt204017.aspx)
 * [DBCC PDW_SHOWPARTITIONSTATS](https://msdn.microsoft.com/library/mt204013.aspx)
-* [DBCC PDW_SHOWSPACEUSED](/sql-docs/docs/t-sql/database-console-commands/dbcc-pdw-showspaceused-transact-sql)
+* [DBCC PDW_SHOWSPACEUSED](../../docs/t-sql/database-console-commands/dbcc-pdw-showspaceused-transact-sql.md)
 * [DBCC SHOW_STATISTICS](https://msdn.microsoft.com/library/mt204043.aspx)
 
 ## Query statements
 * [SELECT](../../docs/t-sql/queries/select-transact-sql.md)
-* [WITH common_table_expression](/sql-docs/docs/t-sql/queries/with-common-table-expression-transact-sql)
+* [WITH common_table_expression](../../docs/t-sql/queries/with-common-table-expression-transact-sql.md)
 * [EXCEPT and INTERSECT](../../docs/t-sql/language-elements/set-operators-except-and-intersect-transact-sql.md)
 * [EXPLAIN](../../docs/t-sql/queries/explain-transact-sql.md)
 * [FROM](../../docs/t-sql/queries/from-transact-sql.md)

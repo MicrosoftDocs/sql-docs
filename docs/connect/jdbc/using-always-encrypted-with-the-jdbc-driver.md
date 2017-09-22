@@ -147,7 +147,7 @@ The following example demonstrates filtering data based on encrypted values, and
 - All values printed by the program will be in plaintext, as the Microsoft JDBC Driver for SQL Server will transparently decrypt the data retrieved from the SSN and BirthDate columns.
 
 > [!NOTE]  
->  Queries can perform equality comparisons on columns if they are encrypted using deterministic encryption. For more information, see the **Selecting Deterministic or Randomized encryption** section of the [Always Encrypted (Database Engine)](/sql-docs/docs/relational-databases/security/encryption/always-encrypted-database-engine) topic.  
+>  Queries can perform equality comparisons on columns if they are encrypted using deterministic encryption. For more information, see the **Selecting Deterministic or Randomized encryption** section of the [Always Encrypted (Database Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) topic.  
 
 ```
 String connectionString =  "jdbc:sqlserver://localhost:1433;databaseName=Clinic;user=sa;password=******;columnEncryptionSetting=Enabled;" ;
@@ -209,7 +209,7 @@ This section describes common categories of errors when querying encrypted colum
 
 ### Unsupported Data Type Conversion Errors
 
-Always Encrypted supports few conversions for encrypted data types. See [Always Encrypted (Database Engine)](/sql-docs/docs/relational-databases/security/encryption/always-encrypted-database-engine) for the detailed list of supported type conversions. Here is what you can do to avoid data type conversion errors, make sure that:
+Always Encrypted supports few conversions for encrypted data types. See [Always Encrypted (Database Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) for the detailed list of supported type conversions. Here is what you can do to avoid data type conversion errors, make sure that:
 
 - you use the proper setter methods when passing values for the parameters targeting encrypted columns, so that the SQL Server data type of the parameter is either exactly the same as the type of the target column, or a conversion of the SQL Server data type of the parameter to the target type of the column is supported. Note that new API methods have been added to SQLServerPreparedStatement, SQLServerCallableStatement and SQLServerResultSet classes to pass parameters corresponding to specific SQL Server data types. For example, if a column is unencrypted you can use setTimestamp() method to pass a parameter to a datetime2 or to a datetime column. But when a column is encrypted you will have to use the exact method representing the type of the column in the database. For example, use setTimestamp() to pass values to an encrypted datetime2 column and use setDateTime() to pass values to an encrypted datetime column. See [Always Encrypted API Reference for the JDBC Driver](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md) for a complete list of new APIs. 
 - the precision and scale of parameters targeting columns of the decimal and numeric SQL Server data types is the same as the precision and scale configured for the target column. Note that new API methods have been added to SQLServerPreparedStatement, SQLServerCallableStatement and SQLServerResultSet classes to accept precision and scale along with data values for parameters/columns representing decimal and numeric data types. See [Always Encrypted API Reference for the JDBC Driver](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md) for a complete list of new/overloaded APIs.  
@@ -646,6 +646,6 @@ With SQLServerBulkCopy, you can copy data, which is already encrypted and stored
 Note: Use caution when specifying AllowEncryptedValueModifications as this may lead to corrupting the database because the Microsoft JDBC Driver for SQL Server does not check if the data is indeed encrypted, or if it is correctly encrypted using the same encryption type, algorithm and key as the target column.
 
 ## See Also  
- [Always Encrypted (Database Engine)](/sql-docs/docs/relational-databases/security/encryption/always-encrypted-database-engine)  
+ [Always Encrypted (Database Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)  
   
   

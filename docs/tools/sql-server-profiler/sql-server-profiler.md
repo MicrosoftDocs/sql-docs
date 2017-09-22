@@ -43,7 +43,7 @@ manager: "jhubbard"
 
  ## Where is the Profiler?
  
- You can start the Profiler in a number of ways from within SSMS. [Here is a topic that lists the ways to start the Profiler.](/sql-docs/docs/tools/sql-server-profiler/start-sql-server-profiler)
+ You can start the Profiler in a number of ways from within SSMS. [Here is a topic that lists the ways to start the Profiler.](start-sql-server-profiler.md)
   
 ## Capture and replay trace data 
 The following table shows the features we recommend using in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] to capture and replay your trace data.

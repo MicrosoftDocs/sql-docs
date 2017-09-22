@@ -48,7 +48,7 @@ Skip to examples:
 -   [Examples for nonclustered columnstore indexes](../../t-sql/statements/create-columnstore-index-transact-sql.md#nonclustered)  
   
 Go to scenarios:  
--   [Columnstore indexes for real-time operational analytics](/sql-docs/docs/relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics)  
+-   [Columnstore indexes for real-time operational analytics](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)  
 -   [Columnstore indexes for data warehousing](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)  
   
 Learn more:  

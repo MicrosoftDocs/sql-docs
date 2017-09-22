@@ -28,7 +28,7 @@ To retrieve component status by using the Admin Console:
     ![PDW Admin Console State](./media/monitor-appliance-health-state/SQL_Server_PDW_AdminConsol_State.png "SQL_Server_PDW_AdminConsol_State")  
   
 ### Monitor Component Status By Using System Views  
-To retrieve component status by using system views, use [sys.dm_pdw_component_health_status](/sql-docs/docs/relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-status-transact-sql). For example, the following query retrieves the status for all components.  
+To retrieve component status by using system views, use [sys.dm_pdw_component_health_status](../../docs/relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-status-transact-sql.md). For example, the following query retrieves the status for all components.  
   
 ```  
 SELECT   

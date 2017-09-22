@@ -181,7 +181,7 @@ EVALUATE DETAILROWS([Internet Total Sales])
 ```
 
 ## DAX enhancements
-This release includes an `IN` operator for DAX expressions. This is similar to the [`TSQL IN`](/sql-docs/docs/t-sql/language-elements/in-transact-sql) operator commonly used to specify multiple values in a `WHERE` clause.
+This release includes an `IN` operator for DAX expressions. This is similar to the [`TSQL IN`](../t-sql/language-elements/in-transact-sql.md) operator commonly used to specify multiple values in a `WHERE` clause.
 
 Previously, it was common to specify multi-value filters using the logical `OR` operator, like in the following measure expression:
 

@@ -117,7 +117,7 @@ CREATE CERTIFICATE [InstanceB_Cert]
 AUTHORIZATION InstanceB_User
 FROM FILE = 'Restore_path\InstanceB_Cert.cer'
 ```
-12. Create the endpoint that will be used by the availability group on each instance that will be a replica. For availability groups, the endpoint must have a type of DATABASE_MIRRORING. The endpoint uses the certificate created in Step 4 for that instance for authentication. Example syntax is shown below to create an endpoint using a certificate. Use the appropriate encryption method and other options relevant to your environment. For more information on the options available see [CREATE ENDPOINT (Transact-SQL)](/sql-docs/docs/t-sql/statements/create-endpoint-transact-sql).
+12. Create the endpoint that will be used by the availability group on each instance that will be a replica. For availability groups, the endpoint must have a type of DATABASE_MIRRORING. The endpoint uses the certificate created in Step 4 for that instance for authentication. Example syntax is shown below to create an endpoint using a certificate. Use the appropriate encryption method and other options relevant to your environment. For more information on the options available see [CREATE ENDPOINT (Transact-SQL)](../../../t-sql/statements/create-endpoint-transact-sql.md).
 ```
 CREATE ENDPOINT DIAG_EP
 STATE = STARTED

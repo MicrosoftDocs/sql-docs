@@ -16,7 +16,7 @@ ms.author: "sstein"
 manager: "craigg"
 ---
 # Changelog for SQL Server Data Tools (SSDT)
-This change log is for [SQL Server Data Tools (SSDT)](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt).  
+This change log is for [SQL Server Data Tools (SSDT)](download-sql-server-data-tools-ssdt.md).  
   
 For detailed posts about what's new and changed, see [the SSDT Team blog](https://blogs.msdn.microsoft.com/ssdt/)
 
@@ -450,6 +450,6 @@ SSDT General Availability (GA) is now released. The SSDT GA update for June 2016
 [Download SQL Server Data Tools &#40;SSDT&#41;](../ssdt/download-sql-server-data-tools-ssdt.md)  
 [Previous releases of SQL Server Data Tools &#40;SSDT and SSDT-BI&#41;](../ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md)  
 [What's New in Database Engine](https://msdn.microsoft.com/library/bb510411.aspx)  
-[What's New in Analysis Services](/sql-docs/docs/analysis-services/what-s-new-in-analysis-services)  
-[What's New in Integration Services](/sql-docs/docs/integration-services/what-s-new-in-integration-services-in-sql-server-2016)  
+[What's New in Analysis Services](../analysis-services/what-s-new-in-analysis-services.md)  
+[What's New in Integration Services](../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md)  
   

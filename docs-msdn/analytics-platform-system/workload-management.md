@@ -136,15 +136,15 @@ The resource classes govern memory and concurrency allocations.  They do not gov
 ## <a name="Metadata"></a>Metadata  
 DMVs that contain information about resource classes and resource class members.  
   
--   [sys.server_role_members](/sql-docs/docs/relational-databases/system-catalog-views/sys-server-role-members-transact-sql)  
+-   [sys.server_role_members](../../docs/relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)  
   
--   [sys.server_principals](/sql-docs/docs/relational-databases/system-catalog-views/sys-server-principals-transact-sql)  
+-   [sys.server_principals](../../docs/relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)  
   
 DMVs that contain information about the state of requests and the resources they require:  
   
--   [sys.dm_pdw_lock_waits](/sql-docs/docs/relational-databases/system-dynamic-management-views/sys-dm-pdw-lock-waits-transact-sql)  
+-   [sys.dm_pdw_lock_waits](../../docs/relational-databases/system-dynamic-management-views/sys-dm-pdw-lock-waits-transact-sql.md)  
   
--   [sys.dm_pdw_resource_waits](/sql-docs/docs/relational-databases/system-dynamic-management-views/sys-dm-pdw-resource-waits-transact-sql)  
+-   [sys.dm_pdw_resource_waits](../../docs/relational-databases/system-dynamic-management-views/sys-dm-pdw-resource-waits-transact-sql.md)  
   
 Related system views exposed from the SQL Server DMVs on the Compute nodes. See [SQL Server Dynamic Management Views](../../docs/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) for links to these DMVs on MSDN.  
   

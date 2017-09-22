@@ -32,7 +32,7 @@ The following table maps workloads for data analysis and reporting to the Micros
 |Perform self-service predictive analytics||||||[Data Mining Add-Ins for Excel](http://msdn.microsoft.com/library/dn282385.aspx) (Excel 2016 supported)|  
 |Visualize and explore data||[Power View](https://support.office.com/article/Power-View-Explore-visualize-and-present-your-data-98268d31-97e2-42aa-a52b-a68cf460472e)<br /><br /> [3D Maps](https://support.office.com/article/Visualize-your-data-in-3D-Maps-ce6b1d5c-4602-4dae-b487-91ec0268e75d)|||[Power BI Desktop](https://powerbi.microsoft.com/documentation/powerbi-desktop-get-the-desktop/)||  
 |Ask questions using natural language query|||||[Q & A](https://powerbi.microsoft.com/documentation/powerbi-service-q-and-a/)||  
-|Access reports using mobile devices||||[HTML 5 (supports viewing <10MB files)](/sql-docs/docs/reporting-services/create-deploy-and-manage-mobile-and-paginated-reports)<br/>(using the Power BI apps for mobile devices)|  
+|Access reports using mobile devices||||[HTML 5 (supports viewing <10MB files)](create-deploy-and-manage-mobile-and-paginated-reports.md)<br/>(using the Power BI apps for mobile devices)|  
 |Collaborate and share|||[SharePoint Sites](http://go.microsoft.com/fwlink/?LinkId=391849)|[SharePoint Team Sites](http://go.microsoft.com/fwlink/?LinkId=391850)|||  
 |**Corporate BI**|IT Pro||||||  
 |Create multi-dimensional/tabular corporate models||||||[Analysis Services](../analysis-services/analysis-services.md)|  

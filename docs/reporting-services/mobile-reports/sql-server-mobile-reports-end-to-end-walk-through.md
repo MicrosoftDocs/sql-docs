@@ -31,7 +31,7 @@ This article walks you through:
 ## Before we start  
 To follow along, you need these products:  
   
-* To create data sources and KPIs, and publish datasets and mobile reports, you need access to a [!INCLUDE[ssRSCurrent_md](/sql-docs/docs/reporting-services/install-windows/install-reporting-services-native-mode-report-server).  
+* To create data sources and KPIs, and publish datasets and mobile reports, you need access to a [!INCLUDE[ssRSCurrent_md](../install-windows/install-reporting-services-native-mode-report-server.md).  
 * To [create shared datasets](../install-windows/install-report-builder.md).  
 * To create mobile reports, [install SQL Server Mobile Report Publisher](http://go.microsoft.com/fwlink/?LinkId=717766).  
 * [AdventureWorks sample databases and scripts](http://msftdbprodsamples.codeplex.com/).  

@@ -12,7 +12,9 @@
 ## [Run & Connect - Docker](quickstart-install-connect-docker.md)
 
 # Tutorials
-## [Create FCI](sql-server-linux-shared-disk-cluster-configure.md)
+## [1_Migrate from Windows](sql-server-linux-migrate-restore-database.md)
+## [2_Create a job](sql-server-linux-run-sql-server-agent-job.md)
+## [3_Create FCI](sql-server-linux-shared-disk-cluster-configure.md)
 ### [iSCSI](sql-server-linux-shared-disk-cluster-configure-iscsi.md)
 ### [NFS](sql-server-linux-shared-disk-cluster-configure-nfs.md)
 ### [SMB](sql-server-linux-shared-disk-cluster-configure-smb.md)
@@ -42,12 +44,10 @@
 ## [Manage](sql-server-linux-management-overview.md)
 ### [Use SSMS to manage](sql-server-linux-manage-ssms.md)
 ### [Use PowerShell to manage](sql-server-linux-manage-powershell.md)
-### [Create and run jobs](sql-server-linux-run-sql-server-agent-job.md)
 ### [Use log shipping](sql-server-linux-use-log-shipping.md)
 ### [Use DB Mail and email alerts](sql-server-linux-db-mail-sql-agent.md)
 
 ## [Migrate](sql-server-linux-migrate-overview.md)
-### [Restore from Windows](sql-server-linux-migrate-restore-database.md)
 ### [Export and import a BACPAC from Windows](sql-server-linux-migrate-ssms.md)
 ### [Migrate with SQL Server Migration Assistant](sql-server-linux-migrate-ssma.md)
 ### [Bulk copy with bcp](sql-server-linux-migrate-bcp.md)

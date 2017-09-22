@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Management Studio - Changelog (SSMS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/21/2017"
+ms.date: "09/22/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -21,31 +21,32 @@ This article provides details about updates, improvements, and bug fixes for the
 
 
 ## [SSMS 17.3](download-sql-server-management-studio-ssms.md)
-Generally available | Build number: NEEDED
+Generally available | Build number: 
 
 ### Enhancements
 
-- Removed all "RC" branding.
 - New "Import Flat File" wizard added to streamline the import experience of CSV files with an intelligent framework, requiring minimal user intervention or specialized domain knowledge.
+- Added "XEvent Profiler" node to Object Explorer.
 - Updated waits filtering and categorization in Performance Dashboard historical waits report.
 - Added the syntax check of the "Predict" function.
 - Added the syntax check of the External Library Management queries.
 - Added SMO support for External Library Management.
 - Added "Start PowerShell" support to "Registered Servers" window (requires a new SQL PowerShell module)
 - Always On: added [read-only routing support](../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md) for availability groups.
-- Added "XEvent Profiler" node to Object Explorer.
 - Added ADAL tracing to Output Window (off by default; needs to be turned on in user settings under "Tools > Options > Azure Services > Azure Cloud > ADAL Output Window Trace Level").
 - Query Store: 
   - Query Store UI will be accessible even when QDS is OFF as long as QDS have recorded any data.
   - Query Store UI now exposes waits categorization in all the existing reports. This will let customers unlock the scenarios of Top Waiting Queries and many more.
 - Made inclusion of the scripting parameters headers optional (off by default;  can be enabled in user settings under "Tools > Options > SQL Server Object Explorer > Scripting > Include scripting parameters header") - [Connect item 3139199](https://connect.microsoft.com/SQLServer/feedback/details/3139199).
-
+- Removed "RC" branding.
 
 ### Bug Fixes
 
 **General SSMS**
 
-- XEvent: Fixed issue where SSMS opens only part of the events in .xel file.
+- XEvent: 
+   - Fixed issue where SSMS opens only part of the events in .xel file.
+   - Improved “Watch Live Data” experience when default database is not 'master' - [Connect item 1222582](https://connect.microsoft.com/SQLServer/feedback/details/1222582).
 - Always On: Fixed issue where "Restore log backups" may fail with error "The log in this backup set terminates at LSN x, which is too early to apply to the database".
 - Job Activity Monitor: fixed inconsistent icons - [Connect item 3133100](https://connect.microsoft.com/SQLServer/feedback/details/3133100).
 - Query Store: Fixed Issue where user cannot choose "custom" date range for Query Store reports. Linked to below connect items.

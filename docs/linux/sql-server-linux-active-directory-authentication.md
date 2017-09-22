@@ -248,7 +248,7 @@ Log in to a client machine using your domain credentials. Now you can connect to
 
 The specific connection string parameter for clients to use AD Authentication depends on which driver you are using. A few examples are below.
 
-1. `sqlcmd` on a domain-joined Linux client
+* `sqlcmd` on a domain-joined Linux client
 
   Log in to a domain-joined Linux client using `ssh` and your domain credentials:
 
@@ -262,11 +262,11 @@ The specific connection string parameter for clients to use AD Authentication de
   sqlcmd -S mssql.contoso.com
   ```
 
-2. SSMS on a domain-joined Windows client
+* SSMS on a domain-joined Windows client
 
   Log in to a domain-joined Windows client using your domain credentials. Make sure [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)] is installed, then connect to your [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance by specifying **Windows Authentication** in the **Connect to Server** dialog.
 
-3. AD Authentication using other client drivers
+* AD Authentication using other client drivers
 
   * JDBC: [Using Kerberos Integrated Authentication to Connect SQL Server](https://docs.microsoft.com/sql/connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server)
   * ODBC: [Using Integrated Authentication](https://docs.microsoft.com/sql/connect/odbc/linux/using-integrated-authentication)

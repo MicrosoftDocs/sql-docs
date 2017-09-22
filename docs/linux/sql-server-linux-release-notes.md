@@ -110,6 +110,8 @@ The following sections describe known issues with this release of SQL Server 201
 
 #### General
 
+- Upgrades to SQL 
+
 - The length of the hostname where SQL Server is installed needs to be 15 characters or less. 
 
     - **Resolution**: Change the name in /etc/hostname to something 15 characters long or less.
@@ -154,10 +156,6 @@ The following sections describe known issues with this release of SQL Server 201
       ```
 
 - SQL Server 2014 databases on Windows that use In-memory OLTP cannot be restored on SQL Server 2017 on Linux. To restore a SQL Server 2014 database that uses in-memory OLTP, first upgrade the databases to SQL Server 2016 or SQL Server 2017 on Windows before moving them to SQL Server on Linux via backup/restore or detach/attach.
-
-#### Remote database files
-
-- Hosting database files on a NFS server is not supported in this release. This includes using NFS for shared disk failover clustering as well as databases on non-clustered instances. We are working on enabling NFS server support in the upcoming releases.
 
 #### Localization
 
@@ -340,7 +338,7 @@ The following sections describe known issues with this release of SQL Server 201
 
       1. Restart SQL Server with the following command.
    
-      ```
+      ```bash
       sudo systemctl restart mssql-server
       ```
 

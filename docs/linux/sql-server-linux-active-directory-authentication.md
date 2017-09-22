@@ -15,7 +15,7 @@ helpviewer_keywords:
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-This document explains how to configure [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux to support Active Directory (AD) authentication, also known as integrated authentication. AD Authentication enables domain-joined clients on either Windows or Linux to authenticate to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] using their domain credentials and the Kerberos protocol.
+This tutorial explains how to configure [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux to support Active Directory (AD) authentication, also known as integrated authentication. AD Authentication enables domain-joined clients on either Windows or Linux to authenticate to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] using their domain credentials and the Kerberos protocol.
 
 AD Authentication has the following advantages over [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication:
 
@@ -24,10 +24,8 @@ AD Authentication has the following advantages over [!INCLUDE[ssNoVersion](../in
 * Each user has a single identity across your organization, so you don’t have to keep track of which [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] logins correspond to which people.   
 * AD enables you to enforce a centralized password policy across your organization.   
 
-## Checklist
 
 > [!div class="checklist"]
-> * Prerequisites
 > * Join [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] host to AD domain
 > * Create AD user for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and set SPN
 > * Configure [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] service keytab
@@ -51,21 +49,21 @@ Before you configure AD Authentication, you need to:
 
 1. Use **[realmd](https://www.freedesktop.org/software/realmd/docs/guide-active-directory-join.html)** to join your host machine to your AD Domain. If you haven't already, install both the realmd and Kerberos client packages on the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] host machine using your Linux distribution's package manager:
 
-  ```bash
-  # RHEL
-  sudo yum install realmd krb5-workstation
+   ```bash
+   # RHEL
+   sudo yum install realmd krb5-workstation
 
-  # SUSE
-  sudo zypper install realmd krb5-client
+   # SUSE
+   sudo zypper install realmd krb5-client
 
-  # Ubuntu
-  sudo apt-get install realmd krb5-user software-properties-common python-software-properties packagekit
-  ```
+   # Ubuntu
+   sudo apt-get install realmd krb5-user software-properties-common python-software-properties packagekit
+   ```
 
 2. If the Kerberos client package installation prompts you for a realm name, enter your domain name in uppercase.
 
-  > [!NOTE]
-  > This walkthrough uses "contoso.com" and "CONTOSO.COM" as example domain and realm names, respectively. You should replace these with your own values. These commands are case-sensitive, so make sure you use uppercase wherever it is used in this walkthrough.
+   > [!NOTE]
+   > This walkthrough uses "contoso.com" and "CONTOSO.COM" as example domain and realm names, respectively. You should replace these with your own values. These commands are case-sensitive, so make sure you use uppercase wherever it is used in this walkthrough.
 
 3. Configure your [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] host machine to use your AD domain controller's IP address as a DNS nameserver. 
 
@@ -73,14 +71,14 @@ Before you configure AD Authentication, you need to:
 
   Edit the `/etc/network/interfaces` file so that your AD domain controller's IP address is listed as a dns-nameserver. For example: 
 
-  ```/etc/network/interfaces
-  <...>
-  # The primary network interface
-  auth eth0
-  iface eth0 inet dhcp
-  dns-nameservers **<AD domain controller IP address>**
-  dns-search **<AD domain name>**
-  ```
+   ```/etc/network/interfaces
+   <...>
+   # The primary network interface
+   auth eth0
+   iface eth0 inet dhcp
+   dns-nameservers **<AD domain controller IP address>**
+   dns-search **<AD domain name>**
+   ```
 
   > [!NOTE]
   > The network interface (eth0) might differ for differnet machines. To find out which one you are using, run ifconfig and copy the interface that has an IP address and transmitted and received bytes.

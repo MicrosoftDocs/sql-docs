@@ -31,6 +31,9 @@ For other system requirements, see [System requirements for SQL Server on Linux]
 
 To configure SQL Server on Ubuntu, run the following commands in a terminal to install the **mssql-server** package.
 
+> [!IMPORTANT]
+> If you have previously installed a CTP or RC release of SQL Server 2017, you must first remove the old repository before registering one of the GA repositories. For more information, see [Change repositories from the preview repository to the GA repository](sql-server-linux-change-repo.md)
+
 1. Import the public repository GPG keys:
 
    ```bash
@@ -40,8 +43,11 @@ To configure SQL Server on Ubuntu, run the following commands in a terminal to i
 1. Register the Microsoft SQL Server Ubuntu repository:
 
    ```bash
-   sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server.list)"
+   sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"
    ```
+
+   > [!NOTE]
+   > This is the Cumulative Update (CU) repository. For more information about your repository options and their differences, see [Change source repositories](sql-server-linux-setup.md#repositories).
 
 1. Run the following commands to install SQL Server:
 

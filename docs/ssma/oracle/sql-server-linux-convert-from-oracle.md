@@ -46,8 +46,13 @@ Use the following steps to create a new SSMA project:
 
 1. Choose "SQL Server 2017 (Linux) - Preview" in the **Migrate To** field.
 
-> [!IMPORTANT]
-> SSMA for Oracle does not use the Oracle sample schemas by default. To enable the HR schema, open SSMA, select the **Tools** drop-down and **Default Project Settings**.  Then choose **Loading System Objects**, and make sure **HR** is checked, and choose **OK**.
+SSMA for Oracle does not use the Oracle sample schemas by default. To enable the HR schema, use the following steps:
+
+1. In SSMA, select the **Tools** menu.
+
+1. Select **Default Project Settings**, and then choose **Loading System Objects**.
+
+1. Make sure **HR** is checked, and choose **OK**.
 
 ## Connect to Oracle
 
@@ -71,9 +76,10 @@ Use the following steps to generate a migration report.
 
    ![Oracle Metadata Explorer Create Report](./media/sql-server-linux-convert-from-oracle/CreateReport.png)
 
-1. A new browser window opens with a report that lists all of the warnings and errors associated with the conversion.  
+1. A new browser window opens with a report that lists all of the warnings and errors associated with the conversion.
 
-   > [NOTE] You don't need to do anything with that list for this tutorial. If you perform these steps for your own Oracle database, you should review the report to address any important conversion problems for your database.
+   > [!NOTE]
+   > You don't need to do anything with that list for this tutorial. If you perform these steps for your own Oracle database, you should review the report to address any important conversion problems for your database.
 
    ![Sample Migration Report](./media/sql-server-linux-convert-from-oracle/SSMAReport.png)
 
@@ -101,13 +107,21 @@ Next, synchronize your database.
 
 ## Migrate data
 
-In the **Oracle Metadata Explorer**, right-click on **HR** and select **Migrate Data**.  The data migration step requires that you reenter your Oracle and SQL Server credentials.  When it's finished, a data migration report similar to the following image appears:
+The final step is to migrate your data.
 
-![Data Migration Report](./media/sql-server-linux-convert-from-oracle/DataMigrationReport.png)
+1. In the **Oracle Metadata Explorer**, right-click on **HR**, and select **Migrate Data**.
+
+1. The data migration step requires that you reenter your Oracle and SQL Server credentials.
+
+1. When finished, review the data migration report, which should look similar to the following screenshot:
+
+   ![Data Migration Report](./media/sql-server-linux-convert-from-oracle/DataMigrationReport.png)
 
 ## Next steps
 
-In this tutorial, you learned how the SSMA tool can help to migrate an Oracle schema to SQL Server. You learned how to:
+For a more complex Orcale schema, the conversion process would involve more time, testing, and possible changes to client applications. The purpose of this tutorial is to show how you can use SSMA for Oracle as a part of your overall migration process.
+
+In this tutorial, you learned how to:
 > [!div class="checklist"]
 > * Install SSMA on Windows
 > * Create a new SSMA project

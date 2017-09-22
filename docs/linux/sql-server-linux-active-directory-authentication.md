@@ -67,7 +67,7 @@ Before you configure AD Authentication, you need to:
 
 3. Configure your [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] host machine to use your AD domain controller's IP address as a DNS nameserver. 
 
-  3.1 Ubuntu
+  ### Ubuntu
 
   Edit the `/etc/network/interfaces` file so that your AD domain controller's IP address is listed as a dns-nameserver. For example: 
 
@@ -95,7 +95,7 @@ Before you configure AD Authentication, you need to:
    nameserver **<AD domain controller IP address>**
    ```
 
-    3.2 RHEL
+    ### RHEL
 
   Edit the `/etc/sysconfig/network-scripts/ifcfg-eth0` file (or other interface config file as appropriate) so that your AD domain controller's IP address is listed as a DNS server:
 

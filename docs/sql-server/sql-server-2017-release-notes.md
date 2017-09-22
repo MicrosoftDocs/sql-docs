@@ -1,7 +1,7 @@
 ---
 title: "SQL Server 2017 Release Notes | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/06/2017"
+ms.date: "09/22/2017"
 ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
@@ -27,18 +27,16 @@ This topic describes limitations and issues with SQL Server 2017. For related in
 ## SQL Server 2017 - general availability release (October 2017)
 ### Database Engine
 
-- **Issue/ customer impact:**
-After upgrade, the existing FILESTREAM network share may be no longer available.
+- **Issue and customer impact:** After upgrade, the existing FILESTREAM network share may be no longer available.
 
-- **Workaround:**
-    First, reboot the operating system if FILESTREAM network share is not available after upgrade. If the share is still not available after reboot, you can re-enable it. To re-enable FILESTREAM:
+- **Workaround:** First, reboot the operating system if FILESTREAM network share is not available after upgrade. If the share is still not available after reboot, you can re-enable it. To re-enable FILESTREAM:
 
     1. In SQL Server Configuration Manager, right click the SQL Server instance, and click **Properties**. 
     2. In the **FILESTREAM** tab clear **Enable FILESTREAM for file I/O streaming access** , then click **Apply**.
     3. Check **Enable FILESTREAM for file I/O streaming access** again with the original share name and click **Apply**.
 
 ### Master Data Services (MDS)
-- **Issue / customer impact:** 
+- **Issue and customer impact:** 
 On the user permissions page, when granting permission to the root level in the entity tree view, you see the following error:
 `"The model permission cannot be saved. The object guid is not valid"`
 
@@ -53,6 +51,11 @@ On the user permissions page, when granting permission to the root level in the 
 
 - **Issue and customer impact:** Direct Query models at the 1400 compatibility level with perspectives can fail on querying or discovering metadata.
 - **Workaround:** Remove perspectives and re-deploy. This bug will be fixed in the next CU.
+
+### Tools
+- **Issue and customer impact:** Running *DReplay* fails with the following message: "Error DReplay Unexpected error occurred!".
+- **Workaround:** A fix will be available in an upcoming CU.
+
 
 ![horizontal_bar](../sql-server/media/horizontal-bar.png)
 ## SQL Server 2017 Release Candidate (RC2 - August 2017)

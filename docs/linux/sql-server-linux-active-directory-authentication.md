@@ -24,6 +24,7 @@ AD Authentication has the following advantages over [!INCLUDE[ssNoVersion](../in
 * Each user has a single identity across your organization, so you don’t have to keep track of which [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] logins correspond to which people.   
 * AD enables you to enforce a centralized password policy across your organization.   
 
+This tutorial consists of the following tasks:
 
 > [!div class="checklist"]
 > * Join [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] host to AD domain

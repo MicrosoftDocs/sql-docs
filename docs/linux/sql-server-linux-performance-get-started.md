@@ -153,8 +153,8 @@ For more information about In-Memory OLTP, see the following topics:
 
 - [Quick Start 1: In-Memory OLTP Technologies for Faster Transact-SQL Performance](/sql-docs/docs/relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp)
 - [Migrating to In-Memory OLTP](/sql-docs/docs/relational-databases/in-memory-oltp/migrating-to-in-memory-oltp)
-- [Faster temp table and table variable by using memory optimization](/sql-docs/docs/relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization)
-- [Monitor and Troubleshoot Memory Usage](/sql-docs/docs/relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage)
+- [Faster temp table and table variable by using memory optimization](../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md)
+- [Monitor and Troubleshoot Memory Usage](../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md)
 - [In-Memory OLTP (In-Memory Optimization)](/sql-docs/docs/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization)
 
 ## Use Query Store

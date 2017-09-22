@@ -22,7 +22,7 @@ Logins are individual user accounts for logging on to the SQL Server PDW. SQL Se
 Members of the **sysadmin** fixed server role (such as the **sa** login) can connect to a database without having being mapped to a database user. They are mapped to the **dbo** user. The owner of the database is also mapped as the **dbo** user.  
   
 Server Roles  
-There are four special server roles with a set of preconfigured roles that provide convenient group of server-level permissions. The **sysadmin**, **MediumRC**, **LargeRC**, and **XLargeRCfixed** server roles are the only server roles currently implemented in SQL Server PDW. The **sa** login is the only member of the **sysadmin** fixed server role, and additional logins cannot be added to the **sysadmin** role. Logins can be granted the **CONTROL SERVER** permission, which is similar, though not identical, to the **sysadmin** fixed server role. Use [ALTER SERVER ROLE](/sql-docs/docs/t-sql/statements/alter-server-role-transact-sql) to add members to the other server roles. SQL Server PDW does not support user-defined server roles.  
+There are four special server roles with a set of preconfigured roles that provide convenient group of server-level permissions. The **sysadmin**, **MediumRC**, **LargeRC**, and **XLargeRCfixed** server roles are the only server roles currently implemented in SQL Server PDW. The **sa** login is the only member of the **sysadmin** fixed server role, and additional logins cannot be added to the **sysadmin** role. Logins can be granted the **CONTROL SERVER** permission, which is similar, though not identical, to the **sysadmin** fixed server role. Use [ALTER SERVER ROLE](../../docs/t-sql/statements/alter-server-role-transact-sql.md) to add members to the other server roles. SQL Server PDW does not support user-defined server roles.  
   
 Database Users  
 Logins are granted access to a database by creating a database user in a database and mapping that database user to a login. Typically the database user name is the same as the login name, though it does not have to be the same. Each database user maps to a single login. A login can be mapped to only one user in a database, but can be mapped as a database user in several different databases.  
@@ -60,7 +60,7 @@ The following list describes the default permissions:
   
 -   All principals, including the PUBLIC role, have no explicit or implicit permissions by default because implicit permissions are inherited from explicit permissions. Therefore, when no explicit permissions are present, there can also be no implicit permissions.  
   
--   When a login becomes the owner of an object or database, the login always has all permissions on the object or database. The ownership permissions are not visible as explicit permissions. The **GRANT**, **REVOKE**, and **DENY** statements have no effect on ownership permissions. Ownership can be changed by using the [ALTER AUTHORIZATION](/sql-docs/docs/t-sql/statements/alter-authorization-transact-sql) statement.  
+-   When a login becomes the owner of an object or database, the login always has all permissions on the object or database. The ownership permissions are not visible as explicit permissions. The **GRANT**, **REVOKE**, and **DENY** statements have no effect on ownership permissions. Ownership can be changed by using the [ALTER AUTHORIZATION](../../docs/t-sql/statements/alter-authorization-transact-sql.md) statement.  
   
 -   The sa login has all permissions on the appliance. Similar to ownership permissions, the sa permissions cannot be changed and are not visible as explicit permissions. The **GRANT**, **REVOKE**, and **DENY** statements have no effect on sa permissions.  
   
@@ -206,7 +206,7 @@ The system of fixed server roles and fixed database roles is a legacy system ori
   
 ### Related Content  
   
--   To create user-defined roles, see [CREATE ROLE](/sql-docs/docs/t-sql/statements/create-role-transact-sql).  
+-   To create user-defined roles, see [CREATE ROLE](../../docs/t-sql/statements/create-role-transact-sql.md).  
   
   
 ## Fixed Server Roles

@@ -58,7 +58,7 @@ This tutorial is intended for users who are already familiar with fundamental fi
 - SQL Server
 - Sample data, completed packages, configurations, and a Readme. These files are installed together if you download the [Adventure Works 2014 Sample Databases](https://msftdbprodsamples.codeplex.com/releases/view/125550). 
     
-- [SQL Server Management Studio](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms).    
+- [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md).    
     
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].    
     

@@ -141,7 +141,7 @@ This section describes how to grant permissions to manage logins, database users
 ### <a name="PermsAdminConsole"></a>Grant Permissions to Manage Logins  
 **Add or Manage Logins**  
   
-The following SQL statements create a Login named KimAbercrombie  that can create new logins by using the [CREATE LOGIN](/sql-docs/docs/t-sql/statements/create-login-transact-sql) statement and alter existing logins by using the [ALTER LOGIN](/sql-docs/docs/t-sql/statements/alter-login-transact-sql) statement.  
+The following SQL statements create a Login named KimAbercrombie  that can create new logins by using the [CREATE LOGIN](../../docs/t-sql/statements/create-login-transact-sql.md) statement and alter existing logins by using the [ALTER LOGIN](../../docs/t-sql/statements/alter-login-transact-sql.md) statement.  
   
 The **ALTER ANY LOGIN** permission grants the ability to create new logins and drop exisiting. Once a login exists, the login can be managed by logins with the **ALTER ANY LOGIN** permission or the **ALTER** permission on that login. A login can change the password and default database for its own login.  
   
@@ -238,7 +238,7 @@ GO
 To create admin logins, see [Fixed Server Roles](pdw-permissions.md#fixed-server-roles).  
   
 ## See also
-[CREATE LOGIN](/sql-docs/docs/t-sql/statements/create-login-transact-sql)  
-[CREATE USER](/sql-docs/docs/t-sql/statements/create-user-transact-sql)  
-[CREATE ROLE](/sql-docs/docs/t-sql/statements/create-role-transact-sql)  
+[CREATE LOGIN](../../docs/t-sql/statements/create-login-transact-sql.md)  
+[CREATE USER](../../docs/t-sql/statements/create-user-transact-sql.md)  
+[CREATE ROLE](../../docs/t-sql/statements/create-role-transact-sql.md)  
 [Load](load-overview.md)  

@@ -35,7 +35,7 @@ The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] ships with a vari
   
 ### Basic Tools  
   
--   [!INCLUDE[ssManStudioFull](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms). The latest version can be used with older versions of the [!INCLUDE[ssDE_md](../includes/ssde-md.md)].  
+-   [!INCLUDE[ssManStudioFull](../ssms/download-sql-server-management-studio-ssms.md). The latest version can be used with older versions of the [!INCLUDE[ssDE_md](../includes/ssde-md.md)].  
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager installs with both [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and the client tools. It lets you enable server protocols, configure protocol options such as TCP ports, configure server services to start automatically, and configure client computers to connect in your preferred manner. This tool configures the more advanced connectivity elements but does not enable features.  
   

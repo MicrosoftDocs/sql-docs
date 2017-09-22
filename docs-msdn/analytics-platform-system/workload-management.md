@@ -146,7 +146,7 @@ DMVs that contain information about the state of requests and the resources they
   
 -   [sys.dm_pdw_resource_waits](/sql-docs/docs/relational-databases/system-dynamic-management-views/sys-dm-pdw-resource-waits-transact-sql)  
   
-Related system views exposed from the SQL Server DMVs on the Compute nodes. See [SQL Server Dynamic Management Views](/sql-docs/docs/relational-databases/system-dynamic-management-views/system-dynamic-management-views) for links to these DMVs on MSDN.  
+Related system views exposed from the SQL Server DMVs on the Compute nodes. See [SQL Server Dynamic Management Views](../../docs/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) for links to these DMVs on MSDN.  
   
 -   sys.dm_pdw_nodes_resource_governor_resource_pools  
   

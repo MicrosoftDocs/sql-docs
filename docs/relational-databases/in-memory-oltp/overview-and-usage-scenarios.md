@@ -57,8 +57,8 @@ Common workload scenarios are: trading of financial instruments, sports betting,
 Use memory-optimized tables for your core transaction tables, i.e., the tables with the most performance-critical transactions. Use natively compiled stored procedures to optimize execution of the logic associated with the business transaction. The more of the logic you can push down into stored procedures in the database, the more benefit you will see from In-Memory OLTP.
 
 To get started in an existing application:
-1. use the [transaction performance analysis report](/sql-docs/docs/relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp) to identify the objects you want to migrate, 
-2. and use the [memory-optimization](/sql-docs/docs/relational-databases/in-memory-oltp/memory-optimization-advisor) and [native compilation](/sql-docs/docs/relational-databases/in-memory-oltp/native-compilation-advisor) advisors to help with migration.
+1. use the [transaction performance analysis report](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md) to identify the objects you want to migrate, 
+2. and use the [memory-optimization](/sql-docs/docs/relational-databases/in-memory-oltp/memory-optimization-advisor) and [native compilation](native-compilation-advisor.md) advisors to help with migration.
 
 #### Customer Case Studies
 
@@ -76,7 +76,7 @@ Common application patterns are: Ingesting sensor readings and events, to allow 
 
 Use a memory-optimized table for the data ingestion. If the ingestion consists mostly of inserts (rather than updates) and In-Memory OLTP storage footprint of the data is a concern, either
 
-- Use a job to regularly batch-offload data to a disk-based table with a [Clustered Columnstore index](/sql-docs/docs/relational-databases/indexes/columnstore-indexes-overview), using a job that does `INSERT INTO <disk-based table> SELECT FROM <memory-optimized table>`; or
+- Use a job to regularly batch-offload data to a disk-based table with a [Clustered Columnstore index](../indexes/columnstore-indexes-overview.md), using a job that does `INSERT INTO <disk-based table> SELECT FROM <memory-optimized table>`; or
 - Use a [temporal memory-optimized table](/sql-docs/docs/relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables) to manage historical data – in this mode, historical data lives on disk, and data movement is managed by the system.
 
 The SQL Server samples repository contains a smart grid application that uses a temporal memory-optimized table, a memory-optimized table type, and a natively compiled stored procedure, to speed up data ingestion, while managing the In-Memory OLTP storage footprint of the sensor data: 

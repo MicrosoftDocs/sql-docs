@@ -47,7 +47,7 @@ manager: "jhubbard"
  A number of third-party storage solution vendors have developed RBS providers that conform to these standard APIs and support BLOB storage on various storage platforms.  
   
 ## RBS Requirements  
- RBS requires [!INCLUDE[ssNoVersion](/sql-docs/docs/connect/odbc/download-odbc-driver-for-sql-server).   
+ RBS requires [!INCLUDE[ssNoVersion](../../connect/odbc/download-odbc-driver-for-sql-server.md).   
   
  RBS includes a FILESTREAM provider that lets you use RBS to store BLOBs on an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. If you want use RBS to store BLOBs in a different storage solution, you have to use a third party RBS provider developed for that storage solution, or develop a custom RBS provider using the RBS API. A sample provider that stores BLOBs in the NTFS file system is available as a learning resource on [Codeplex](http://go.microsoft.com/fwlink/?LinkId=210190).  
   

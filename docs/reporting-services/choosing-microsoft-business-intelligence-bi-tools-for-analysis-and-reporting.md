@@ -35,14 +35,14 @@ The following table maps workloads for data analysis and reporting to the Micros
 |Access reports using mobile devices||||[HTML 5 (supports viewing <10MB files)](/sql-docs/docs/reporting-services/create-deploy-and-manage-mobile-and-paginated-reports)<br/>(using the Power BI apps for mobile devices)|  
 |Collaborate and share|||[SharePoint Sites](http://go.microsoft.com/fwlink/?LinkId=391849)|[SharePoint Team Sites](http://go.microsoft.com/fwlink/?LinkId=391850)|||  
 |**Corporate BI**|IT Pro||||||  
-|Create multi-dimensional/tabular corporate models||||||[Analysis Services](/sql-docs/docs/analysis-services/analysis-services)|  
+|Create multi-dimensional/tabular corporate models||||||[Analysis Services](../analysis-services/analysis-services.md)|  
 |Create ad-hoc data visualizations|||[Power View for SharePoint](http://go.microsoft.com/fwlink/?LinkId=391858)||||  
 |Create dashboards|||[SharePoint Dashboards](http://go.microsoft.com/fwlink/?LinkId=391859)<br /><br /> [PerformancePoint Services](http://technet.microsoft.com/library/ee424392.aspx)||[Dashboards in Power BI](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)||  
-|Create operational reports||||||*[Reporting Services](/sql-docs/docs/reporting-services/create-deploy-and-manage-mobile-and-paginated-reports)|  
-|Create custom and embedded reports|||||[Power BI Embedded](/sql-docs/docs/reporting-services/create-deploy-and-manage-mobile-and-paginated-reports)|  
+|Create operational reports||||||*[Reporting Services](create-deploy-and-manage-mobile-and-paginated-reports.md)|  
+|Create custom and embedded reports|||||[Power BI Embedded](create-deploy-and-manage-mobile-and-paginated-reports.md)|  
 |**Advanced Analytics**|Data Scientist||||||  
 |Perform self-service predictive analytics||||||[Data Mining Add-Ins for Excel](http://msdn.microsoft.com/library/dn282385.aspx) (Excel 2016 supported)|  
-|Use data mining algorithms||||||[Data Mining in Analysis Services](/sql-docs/docs/analysis-services/data-mining/data-mining-ssas)<br/><br/>[SQL Server R Services](https://msdn.microsoft.com/library/mt604845.aspx)|  
+|Use data mining algorithms||||||[Data Mining in Analysis Services](../analysis-services/data-mining/data-mining-ssas.md)<br/><br/>[SQL Server R Services](https://msdn.microsoft.com/library/mt604845.aspx)|  
   
  *Reporting Services has a number features that support delivering modern, paginated reports.  
   

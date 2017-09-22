@@ -49,11 +49,11 @@ Skip to examples:
   
 Go to scenarios:  
 -   [Columnstore indexes for real-time operational analytics](/sql-docs/docs/relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics)  
--   [Columnstore indexes for data warehousing](/sql-docs/docs/relational-databases/indexes/columnstore-indexes-data-warehouse)  
+-   [Columnstore indexes for data warehousing](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)  
   
 Learn more:  
--   [Columnstore indexes guide](/sql-docs/docs/relational-databases/indexes/columnstore-indexes-overview)  
--   [Columnstore indexes feature summary](/sql-docs/docs/relational-databases/indexes/columnstore-indexes-what-s-new)  
+-   [Columnstore indexes guide](../../relational-databases/indexes/columnstore-indexes-overview.md)  
+-   [Columnstore indexes feature summary](../../relational-databases/indexes/columnstore-indexes-what-s-new.md)  
   
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

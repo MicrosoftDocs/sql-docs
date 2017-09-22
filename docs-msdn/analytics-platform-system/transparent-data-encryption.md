@@ -117,10 +117,10 @@ The following table provides links and explanations of TDE commands and function
   
 |Command or function|Purpose|  
 |-----------------------|-----------|  
-|[CREATE DATABASE ENCRYPTION KEY](/sql-docs/docs/t-sql/statements/create-database-encryption-key-transact-sql)|Creates a key that is used to encrypt a database.|  
-|[ALTER DATABASE ENCRYPTION KEY](/sql-docs/docs/t-sql/statements/alter-database-encryption-key-transact-sql)|Changes the key that is used to encrypt a database.|  
-|[DROP DATABASE ENCRYPTION KEY](/sql-docs/docs/t-sql/statements/drop-database-encryption-key-transact-sql)|Removes the key that was used to encrypt a database.|  
-|[ALTER DATABASE](/sql-docs/docs/t-sql/statements/alter-database-parallel-data-warehouse)|Explains the **ALTER DATABASE** option that is used to enable TDE.|  
+|[CREATE DATABASE ENCRYPTION KEY](../../docs/t-sql/statements/create-database-encryption-key-transact-sql.md)|Creates a key that is used to encrypt a database.|  
+|[ALTER DATABASE ENCRYPTION KEY](../../docs/t-sql/statements/alter-database-encryption-key-transact-sql.md)|Changes the key that is used to encrypt a database.|  
+|[DROP DATABASE ENCRYPTION KEY](../../docs/t-sql/statements/drop-database-encryption-key-transact-sql.md)|Removes the key that was used to encrypt a database.|  
+|[ALTER DATABASE](../../docs/t-sql/statements/alter-database-parallel-data-warehouse.md)|Explains the **ALTER DATABASE** option that is used to enable TDE.|  
   
 ## Catalog Views and Dynamic Management Views  
 The following table shows TDE catalog views and dynamic management views.  
@@ -267,18 +267,18 @@ The performance impact of TDE varies with the type of data you have, how it is s
 ## Related Content  
 The following links contain general information about how SQL Server manages encryption. These topics can help you understand SQL Server encryption, but these topics do not have information specific to SQL Server PDW and they discuss features that are not present in SQL Server PDW.  
   
--   [SQL Server Encryption](/sql-docs/docs/relational-databases/security/encryption/sql-server-encryption)  
+-   [SQL Server Encryption](../../docs/relational-databases/security/encryption/sql-server-encryption.md)  
   
--   [Encryption Hierarchy](/sql-docs/docs/relational-databases/security/encryption/encryption-hierarchy)  
+-   [Encryption Hierarchy](../../docs/relational-databases/security/encryption/encryption-hierarchy.md)  
   
--   [SQL Server and Database Encryption Keys](/sql-docs/docs/relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine)  
+-   [SQL Server and Database Encryption Keys](../../docs/relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)  
 
   
 ## See Also  
-[ALTER DATABASE](/sql-docs/docs/t-sql/statements/alter-database-parallel-data-warehouse)  
-[CREATE MASTER KEY](/sql-docs/docs/t-sql/statements/create-master-key-transact-sql)  
-[CREATE DATABASE ENCRYPTION KEY](/sql-docs/docs/t-sql/statements/create-database-encryption-key-transact-sql)  
-[BACKUP CERTIFICATE](/sql-docs/docs/t-sql/statements/backup-certificate-transact-sql)  
+[ALTER DATABASE](../../docs/t-sql/statements/alter-database-parallel-data-warehouse.md)  
+[CREATE MASTER KEY](../../docs/t-sql/statements/create-master-key-transact-sql.md)  
+[CREATE DATABASE ENCRYPTION KEY](../../docs/t-sql/statements/create-database-encryption-key-transact-sql.md)  
+[BACKUP CERTIFICATE](../../docs/t-sql/statements/backup-certificate-transact-sql.md)  
 [sp_pdw_database_encryption](/sql-docs/docs/relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse)  
 [sp_pdw_database_encryption_regenerate_system_keys](/sql-docs/docs/relational-databases/system-stored-procedures/sp-pdw-database-encryption-regenerate-system-keys-sql-data-warehouse)  
 [sp_pdw_log_user_data_masking](/sql-docs/docs/relational-databases/system-stored-procedures/sp-pdw-log-user-data-masking-sql-data-warehouse)  

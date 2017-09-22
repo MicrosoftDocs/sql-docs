@@ -101,11 +101,11 @@ A very long-running transaction can cause the transaction log to fill. To look f
  - **[sys.dm_tran_database_transactions](/sql-docs/docs/relational-databases/system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql).**
 This dynamic management view returns information about transactions at the database level. For a long-running transaction, columns of particular interest include the time of the first log record [(database_transaction_begin_time)](/sql-docs/docs/relational-databases/system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql), the current state of the transaction [(database_transaction_state)](/sql-docs/docs/relational-databases/system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql), and the [log sequence number (LSN)](/sql-docs/docs/relational-databases/backup-restore/recover-to-a-log-sequence-number-sql-server) of the begin record in the transaction log [(database_transaction_begin_lsn)](/sql-docs/docs/relational-databases/system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql).
 
- - **[DBCC OPENTRAN](/sql-docs/docs/t-sql/database-console-commands/dbcc-opentran-transact-sql).**
+ - **[DBCC OPENTRAN](../../t-sql/database-console-commands/dbcc-opentran-transact-sql.md).**
 This statement lets you identify the user ID of the owner of the transaction, so you can potentially track down the source of the transaction for a more orderly termination (committing it rather than rolling it back).
 
 ### Kill a transaction
-Sometimes you just have to end the process; you may have to use the [KILL](/sql-docs/docs/t-sql/language-elements/kill-transact-sql) statement. Please use this statement very carefully,  especially when critical processes are running that you don't want to kill. For more information, see [KILL (Transact-SQL)](/sql-docs/docs/t-sql/language-elements/kill-transact-sql)
+Sometimes you just have to end the process; you may have to use the [KILL](../../t-sql/language-elements/kill-transact-sql.md) statement. Please use this statement very carefully,  especially when critical processes are running that you don't want to kill. For more information, see [KILL (Transact-SQL)](/sql-docs/docs/t-sql/language-elements/kill-transact-sql)
 
 ## See also  
 [KB support article - A transaction log grows unexpectedly or becomes full in SQL Server](https://support.microsoft.com/en-us/kb/317375)

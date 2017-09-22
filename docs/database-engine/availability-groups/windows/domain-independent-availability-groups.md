@@ -39,7 +39,7 @@ The next figure shows an example of a Domain Independent Availability Group wher
 
 ![Workgroup Cluster with two nodes that are joined to a domain][2]
 
-A Domain Independent Availability Group is not just for multi-site or disaster recovery scenarios. It can be deployed in a single data center and even used with a [Basic Availability Group](/sql-docs/docs/database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups) (also known as a Standard Edition availability group) to provide a similar architecture to what used to be achieved using Database Mirroring with certificates as shown.
+A Domain Independent Availability Group is not just for multi-site or disaster recovery scenarios. It can be deployed in a single data center and even used with a [Basic Availability Group](basic-availability-groups-always-on-availability-groups.md) (also known as a Standard Edition availability group) to provide a similar architecture to what used to be achieved using Database Mirroring with certificates as shown.
 
 
 ![High-level view of an AG in Standard Edition][3]
@@ -135,7 +135,7 @@ FOR DATABASE_MIRRORING (
 GRANT CONNECT ON ENDPOINT::DIAG_EP TO 'InstanceX_User';
 GO
 ```
-14. Once the underlying certificates and endpoint security are configured, create the availability group using your preferred method. It is recommended to manually back up, copy, and restore the backup used to initialize the secondary, or use [automatic seeding](/sql-docs/docs/database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group). Using the Wizard to initialize the secondary replicas involves the use of Server Message Block (SMB) files, which may not work when using a non-domain-joined Workgroup Cluster.
+14. Once the underlying certificates and endpoint security are configured, create the availability group using your preferred method. It is recommended to manually back up, copy, and restore the backup used to initialize the secondary, or use [automatic seeding](automatically-initialize-always-on-availability-group.md). Using the Wizard to initialize the secondary replicas involves the use of Server Message Block (SMB) files, which may not work when using a non-domain-joined Workgroup Cluster.
 15. If creating a listener, make sure that both its name and its IP address are registered in DNS.
 
 ### Next steps 

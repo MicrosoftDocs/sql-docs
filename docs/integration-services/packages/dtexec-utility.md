@@ -211,7 +211,7 @@ dtexec /option [value] [/option [value]]...
   
      For several examples of the **/ConsoleLog** option, see the **Remarks** section.  
   
--   **/D[ts](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages).  
+-   **/D[ts](deploy-integration-services-ssis-projects-and-packages.md).  
   
      The *package_path* argument specifies the relative path of the [!INCLUDE[ssIS](../../includes/ssis-md.md)] package, starting at the root of the SSIS Package Store, and includes the name of the [!INCLUDE[ssIS](../../includes/ssis-md.md)] package. If the path or file name specified in the *package_path* argument contains a space, you must put quotation marks around the *package_path* argument.  
   
@@ -257,7 +257,7 @@ dtexec /option [value] [/option [value]]...
   
      This parameter is used by SQL Server Agent.  
   
--   **/F[ile](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages)  
+-   **/F[ile](deploy-integration-services-ssis-projects-and-packages.md)  
   
      The *filespec* argument specifies the path and file name of the package. You can specify the path as either a Universal Naming Convention (UNC) path or a local path. If the path or file name specified in the *filespec* argument contains a space, you must put quotation marks around the *filespec* argument.  
   
@@ -407,7 +407,7 @@ dtexec /option [value] [/option [value]]...
   
      The **/Ser[ver]** option is required when the **/ISServer** option is specified.  
   
--   **/SQ[L](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages).  
+-   **/SQ[L](deploy-integration-services-ssis-projects-and-packages.md).  
   
      The *package_path* argument specifies the name of the package to retrieve. If folders are included in the path, they are terminated with backslashes ("\\"). The *package_path* value can be quoted. If the path or file name specified in the *package_path* argument contains a space, you must put quotation marks around the *package_path* argument.  
   

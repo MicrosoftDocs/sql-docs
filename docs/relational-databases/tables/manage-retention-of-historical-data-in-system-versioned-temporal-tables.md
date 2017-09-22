@@ -42,7 +42,7 @@ manager: "jhubbard"
 
  With each of these approaches, the logic for migrating or cleaning history data is based on the column that corresponds to end of period in the current table. The end of period value for each row determines the moment when the row version becomes “closed”, i.e. when it lands in the history table. For example, the condition `SysEndTime < DATEADD (DAYS, -30, SYSUTCDATETIME ())` specifies that historical data older than one month needs to be removed or moved out from the history table.  
   
-> **NOTE:**  The examples in this topic use this [Temporal Table example](/sql-docs/docs/relational-databases/tables/creating-a-system-versioned-temporal-table).  
+> **NOTE:**  The examples in this topic use this [Temporal Table example](creating-a-system-versioned-temporal-table.md).  
   
 ## Using Stretch Database approach  
   
@@ -105,7 +105,7 @@ SET (REMOTE_DATA_ARCHIVE = ON (MIGRATION_STATE = OUTBOUND));
 ```  
   
 ### Using Transact-SQL to stretch a portion of the history table  
- To stretch only a portion of the history table, you start by creating an [inline predicate function](/sql-docs/docs/sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database). For this example, let’s assume that you configured inline predicate function for the first time on December 1, 2015 and want to stretch to Azure all history date older than November 1, 2015. To accomplish this, start by creating the following function:  
+ To stretch only a portion of the history table, you start by creating an [inline predicate function](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md). For this example, let’s assume that you configured inline predicate function for the first time on December 1, 2015 and want to stretch to Azure all history date older than November 1, 2015. To accomplish this, start by creating the following function:  
   
 ```  
 CREATE FUNCTION dbo.fn_StretchBySystemEndTime20151101(@systemEndTime datetime2)   
@@ -159,7 +159,7 @@ COMMIT ;
  Use SQL Server Agent or some other scheduling mechanism to ensure valid predicate function definition all the time.  
   
 ## Using Table Partitioning Approach  
- [Table partitioning](/sql-docs/docs/relational-databases/partitions/create-partitioned-tables-and-indexes) can make large tables more manageable and scalable. Using the table partitioning approach, you can use history table partitions to  implement custom data cleanup or offline archival based on a time condition. Table partitioning will also give you performance benefits when querying  temporal tables on a subset of data history by using partition elimination.  
+ [Table partitioning](../partitions/create-partitioned-tables-and-indexes.md) can make large tables more manageable and scalable. Using the table partitioning approach, you can use history table partitions to  implement custom data cleanup or offline archival based on a time condition. Table partitioning will also give you performance benefits when querying  temporal tables on a subset of data history by using partition elimination.  
   
  With table partitioning, you can implement a sliding window approach to move out oldest portion of the historical data from the history table and keep the size of the retained part constant in terms of age - maintaining data in the history table equal to required retention period. The operation of switching data out from the history table is supported while SYSTEM_VERSIONING is ON, which means that you can clean a portion of the history data without introducing a maintenance windows or blocking your regular workloads.  
   

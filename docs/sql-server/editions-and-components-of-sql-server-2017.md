@@ -387,7 +387,7 @@ For information about the Business Intelligence Client features supported by the
 |StreamInsight|StreamInsight Premium Edition|StreamInsight Standard Edition|StreamInsight Standard Edition|No|No| 
 |StreamInsight HA|StreamInsight Premium Edition|No|No|No|No|   
   
-> [![Download SSMS](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms) **[Download the latest version of SQL Server Management Studio](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms)**    
+> [![Download SSMS](../ssms/download-sql-server-management-studio-ssms.md) **[Download the latest version of SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)**    
   
 ## Next steps 
  [Product Specifications for SQL Server](http://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)   

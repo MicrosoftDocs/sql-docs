@@ -30,13 +30,13 @@ manager: "jhubbard"
   
   A *recovery model* is a database property that controls how transactions are logged, whether the transaction log requires (and allows) backing up, and what kinds of restore operations are available. Three recovery models exist: simple, full, and bulk-logged. Typically, a database uses the full recovery model or simple recovery model. A database can be switched to another recovery model at any time. The **model** database sets the default recovery model of new databases.  
   
-  For a more in depth explanation of [recovery models](/sql-docs/docs/relational-databases/backup-restore/recovery-models-sql-server), see [SQL Server Recovery Models](https://www.mssqltips.com/sqlservertutorial/2/sql-server-recovery-models/) provided by the folks at [MSSQLTips!](https://www.mssqltips.com/)
+  For a more in depth explanation of [recovery models](recovery-models-sql-server.md), see [SQL Server Recovery Models](https://www.mssqltips.com/sqlservertutorial/2/sql-server-recovery-models/) provided by the folks at [MSSQLTips!](https://www.mssqltips.com/)
   
   
 ##  <a name="BeforeYouBegin"></a> Before you begin  
   
 
--   [Back up the transaction log](/sql-docs/docs/relational-databases/backup-restore/back-up-a-transaction-log-sql-server) **before** switching from the [full recovery or bulk-logged recovery model](/sql-docs/docs/relational-databases/backup-restore/recovery-models-sql-server).  
+-   [Back up the transaction log](back-up-a-transaction-log-sql-server.md) **before** switching from the [full recovery or bulk-logged recovery model](/sql-docs/docs/relational-databases/backup-restore/recovery-models-sql-server).  
   
 -   Point-in-time recovery is not possible with bulk-logged model. Running transactions under the bulk-logged recovery model that require a transaction log restore can exposed them to data loss. To maximize data recoverability in a disaster-recovery scenario, switch to the bulk-logged recovery model only under the following conditions:  
   

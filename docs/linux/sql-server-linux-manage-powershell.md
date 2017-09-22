@@ -18,7 +18,7 @@ This topic introduces [SQL Server PowerShell](https://msdn.microsoft.com/en-us/l
 
 ## Install the newest version of SQL PowerShell on Windows
 
-[SQL PowerShell](https://msdn.microsoft.com/en-us/library/mt740629.aspx) on Windows is included with [SQL Server Management Studio (SSMS)](/sql-docs/docs/ssms/sql-server-management-studio-ssms). When working with SQL Server, you should always use the most recent version of SSMS and SQL PowerShell. The latest version of SSMS is continually updated and optimized and currently works with SQL Server 2017 RC2 on Linux. To download and install the latest version, see [Download SQL Server Management Studio](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms). To stay up-to-date, the latest version of SSMS prompts you when there is a new version available to download. 
+[SQL PowerShell](https://msdn.microsoft.com/en-us/library/mt740629.aspx) on Windows is included with [SQL Server Management Studio (SSMS)](/sql-docs/docs/ssms/sql-server-management-studio-ssms). When working with SQL Server, you should always use the most recent version of SSMS and SQL PowerShell. The latest version of SSMS is continually updated and optimized and currently works with SQL Server 2017 RC2 on Linux. To download and install the latest version, see [Download SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md). To stay up-to-date, the latest version of SSMS prompts you when there is a new version available to download. 
 
 ## Before you begin
 
@@ -117,4 +117,4 @@ Get-SqlErrorLog -ServerInstance $serverInstance -Credential $credential -Since Y
 # done
 ```
 ## See also
-- [SQL Server PowerShell](/sql-docs/docs/relational-databases/scripting/sql-server-powershell)
+- [SQL Server PowerShell](../relational-databases/scripting/sql-server-powershell.md)

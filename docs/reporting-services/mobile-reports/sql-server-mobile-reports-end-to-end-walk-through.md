@@ -32,10 +32,10 @@ This article walks you through:
 To follow along, you need these products:  
   
 * To create data sources and KPIs, and publish datasets and mobile reports, you need access to a [!INCLUDE[ssRSCurrent_md](/sql-docs/docs/reporting-services/install-windows/install-reporting-services-native-mode-report-server).  
-* To [create shared datasets](/sql-docs/docs/reporting-services/install-windows/install-report-builder).  
+* To [create shared datasets](../install-windows/install-report-builder.md).  
 * To create mobile reports, [install SQL Server Mobile Report Publisher](http://go.microsoft.com/fwlink/?LinkId=717766).  
 * [AdventureWorks sample databases and scripts](http://msftdbprodsamples.codeplex.com/).  
-*  OR: World Wide Importers sample database, available from the [Microsoft SQL Server Samples](/sql-docs/docs/sample/microsoft-sql-server-samples) page.
+*  OR: World Wide Importers sample database, available from the [Microsoft SQL Server Samples](../../sample/microsoft-sql-server-samples.md) page.
 * To view the result: 
   *   [Sign up for the Power BI service](http://go.microsoft.com/fwlink/?LinkID=513879) and
   *  [Download the Power BI mobile app](https://powerbi.microsoft.com/en-us/documentation/powerbi-power-bi-apps-for-mobile-devices/) to your mobile device: iOS, Android phone, or Windows 10 device.  
@@ -43,7 +43,7 @@ To follow along, you need these products:
   
 ## Create a shared data source  
   
-You can create a shared data source for your mobile reports from any of the data sources Reporting Services supports. See the [list of supported data sources](/sql-docs/docs/reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs).  
+You can create a shared data source for your mobile reports from any of the data sources Reporting Services supports. See the [list of supported data sources](../report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
 1. From your [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] web portal, click **New** > **Data Source**.  
   
@@ -60,7 +60,7 @@ You can create a shared data source for your mobile reports from any of the data
   
    ![PBI_SSMRP_PortlDataSource](../../reporting-services/mobile-reports/media/pbi-ssmrp-portldatasource.png)  
   
-Read more about [shared data sources in Reporting Services](/sql-docs/docs/reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs).  
+Read more about [shared data sources in Reporting Services](../report-data/create-modify-and-delete-shared-data-sources-ssrs.md).  
    
 ## <a name="shared-dataset">Create a shared dataset</a>  
   

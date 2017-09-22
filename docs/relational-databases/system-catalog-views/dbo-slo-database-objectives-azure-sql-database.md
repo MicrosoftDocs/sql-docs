@@ -35,7 +35,7 @@ manager: "jhubbard"
 > [!IMPORTANT]  
 >  **This applies only to [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]V11.**  
 >   
->  For [!INCLUDE[ssSDSfull](/sql-docs/docs/relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database) (on master) for the operation ALTER DATABASE.   
+>  For [!INCLUDE[ssSDSfull](../system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md) (on master) for the operation ALTER DATABASE.   
   
  Returns the assignment status of a Service Level Objective (SLO) in a SQL Database.  
   

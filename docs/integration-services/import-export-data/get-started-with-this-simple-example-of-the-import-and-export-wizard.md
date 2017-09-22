@@ -19,7 +19,7 @@ manager: "jhubbard"
 Learn what to expect in the SQL Server Import and Export Wizard by walking through a common scenario - importing data from an Excel spreadsheet to a SQL Server database. Even if you plan to use a different source and a different destination, this topic shows you most of what you need to know about running the wizard.
 
 ## Prerequisite - Is the wizard installed on your computer?
-If you want to run the wizard, but you don't have [!INCLUDE[msCoName](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt).
+If you want to run the wizard, but you don't have [!INCLUDE[msCoName](../../ssdt/download-sql-server-data-tools-ssdt.md).
 
 ## Here's the Excel source data for this example
 Here's the source data that you're going to copy - a small two-column table in the WizardWalkthrough worksheet of the WizardWalkthrough.xlsx Excel workbook.

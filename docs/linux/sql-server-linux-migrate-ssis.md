@@ -76,6 +76,6 @@ SSIS includes the following features:
 To get started with SSIS, download the latest version of [SQL Server Data Tools (SSDT)](/sql-docs/docs/integration-services/ssis-how-to-create-an-etl-package).
 
 ## See also
-- [Learn more about SQL Server Integration Services](/sql-docs/docs/integration-services/sql-server-integration-services)
+- [Learn more about SQL Server Integration Services](../integration-services/sql-server-integration-services.md)
 - [SQL Server Integration Services (SSIS) Development and Management Tools](/sql-docs/docs/integration-services/integration-services-ssis-development-and-management-tools)
-- [SQL Server Integration Services Tutorials](/sql-docs/docs/integration-services/integration-services-tutorials)
+- [SQL Server Integration Services Tutorials](../integration-services/integration-services-tutorials.md)

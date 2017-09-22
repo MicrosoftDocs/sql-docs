@@ -72,7 +72,7 @@ WHERE (es.status='Active' OR es.status='Idle') AND
 ```  
   
 ### To End Sessions by Using SQL Commands  
-Use the [KILL](/sql-docs/docs/t-sql/language-elements/kill-transact-sql) command to end a current session. You will need the session ID for the process to terminate, which can be obtained using the [sys.dm_pdw_exec_sessions](/sql-docs/docs/relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql) view.  
+Use the [KILL](../../docs/t-sql/language-elements/kill-transact-sql.md) command to end a current session. You will need the session ID for the process to terminate, which can be obtained using the [sys.dm_pdw_exec_sessions](/sql-docs/docs/relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql) view.  
   
 In this example, select the login_name, session_id, and status values to find a session based on the login name.  
   

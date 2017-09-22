@@ -20,7 +20,7 @@ After successfully connecting, you run a simple Transact-SQL (T-SQL) query to ve
 
 ## Install the newest version of SQL Server Management Studio
 
-When working with SQL Server, you should always use the most recent version of SQL Server Management Studio (SSMS). The latest version of SSMS is continually updated and optimized and currently works with SQL Server 2017 on Linux. To download and install the latest version, see [Download SQL Server Management Studio](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms). To stay up-to-date, the latest version of SSMS prompts you when there is a new version available to download. 
+When working with SQL Server, you should always use the most recent version of SQL Server Management Studio (SSMS). The latest version of SSMS is continually updated and optimized and currently works with SQL Server 2017 on Linux. To download and install the latest version, see [Download SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md). To stay up-to-date, the latest version of SSMS prompts you when there is a new version available to download. 
 
 ## Connect to SQL Server on Linux
 

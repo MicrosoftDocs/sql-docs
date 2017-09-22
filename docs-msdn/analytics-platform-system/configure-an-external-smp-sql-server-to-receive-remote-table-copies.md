@@ -42,7 +42,7 @@ To configure SQL Server, use the following steps:
 ## <a name="BPSQLConfig"></a>Best Practices for SMP SQL Server Configuration for Remote Table Copy  
 When configuring the SMP SQL Server to receive remote table copies, use the following best practices to improve performance.  
   
-1.  Follow best practices as documented in SQL Server product documentation. For example, enable data encryption. For more information about securing SQL Server, see [Securing SQL Server](/sql-docs/docs/relational-databases/security/securing-sql-server) on MSDN.  
+1.  Follow best practices as documented in SQL Server product documentation. For example, enable data encryption. For more information about securing SQL Server, see [Securing SQL Server](../../docs/relational-databases/security/securing-sql-server.md) on MSDN.  
   
 2.  Use the bulk-logged or simple recovery model.  
   

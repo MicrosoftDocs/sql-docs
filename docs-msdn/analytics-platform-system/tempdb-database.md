@@ -80,7 +80,7 @@ Any user can create temporary objects in tempdb. Users can only access their own
   
 |Tasks|Description|  
 |---------|---------------|  
-|Create a table in **tempdb**.|You can create a user temporary table with the CREATE TABLE and CREATE TABLE AS SELECT statements. For more information, see [CREATE TABLE](/sql-docs/docs/t-sql/statements/create-table-azure-sql-data-warehouse) and [CREATE TABLE AS SELECT](/sql-docs/docs/t-sql/statements/create-table-as-select-azure-sql-data-warehouse).|  
+|Create a table in **tempdb**.|You can create a user temporary table with the CREATE TABLE and CREATE TABLE AS SELECT statements. For more information, see [CREATE TABLE](../../docs/t-sql/statements/create-table-azure-sql-data-warehouse.md) and [CREATE TABLE AS SELECT](../../docs/t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md).|  
 |View a list of existing tables in **tempdb**.|`SELECT * FROM tempdb.sys.tables;`|  
 |View a list of existing columns in **tempdb**.|`SELECT * FROM tempdb.sys.columns;`|  
 |View a list of existing objects in **tempdb**.|`SELECT * FROM tempdb.sys.objects;`|  

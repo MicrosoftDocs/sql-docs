@@ -55,10 +55,10 @@ RESTORE DATABASE AdventureWorksPDW2012
 ```  
   
 ## See Also  
-[BACKUP DATABASE](/sql-docs/docs/t-sql/statements/backup-database-parallel-data-warehouse)  
-[CREATE MASTER KEY](/sql-docs/docs/t-sql/statements/create-master-key-transact-sql) 
+[BACKUP DATABASE](../../docs/t-sql/statements/backup-database-parallel-data-warehouse.md)  
+[CREATE MASTER KEY](../../docs/t-sql/statements/create-master-key-transact-sql.md) 
 [sp_pdw_add_network_credentials](/sql-docs/docs/relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse)  
 [sp_pdw_database_encryption](/sql-docs/docs/relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse)  
-[CREATE CERTIFICATE](/sql-docs/docs/t-sql/statements/create-certificate-transact-sql)  
-[RESTORE DATABASE](/sql-docs/docs/t-sql/statements/restore-database-parallel-data-warehouse)
+[CREATE CERTIFICATE](../../docs/t-sql/statements/create-certificate-transact-sql.md)  
+[RESTORE DATABASE](../../docs/t-sql/statements/restore-database-parallel-data-warehouse.md)
   

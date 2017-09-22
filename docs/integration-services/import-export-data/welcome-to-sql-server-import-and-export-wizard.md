@@ -24,7 +24,7 @@ manager: "jhubbard"
 > This topic describes only the **first page** the wizard. If you're looking for something else, see [Related tasks and content](#related).
 
 ## Prerequisite - Is the wizard installed on your computer?
-If you want to run the wizard, but you don't have [!INCLUDE[msCoName](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt).
+If you want to run the wizard, but you don't have [!INCLUDE[msCoName](../../ssdt/download-sql-server-data-tools-ssdt.md).
 
 ## Screen shot of the Welcome page  
 The following screen shot shows the **Welcome to SQL Server Import and Export Wizard** page of the wizard.  
@@ -56,6 +56,6 @@ The following screen shot shows the **Welcome to SQL Server Import and Export Wi
 
 -   **Start the wizard.** If you're ready to run the wizard and just want to know how to start it, see [Start the SQL Server Import and Export Wizard](../../integration-services/import-export-data/start-the-sql-server-import-and-export-wizard.md).
 
--   **Get the wizard.** If you want to run the wizard, but you don't have [!INCLUDE[msCoName](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt).
+-   **Get the wizard.** If you want to run the wizard, but you don't have [!INCLUDE[msCoName](../../ssdt/download-sql-server-data-tools-ssdt.md).
 
 

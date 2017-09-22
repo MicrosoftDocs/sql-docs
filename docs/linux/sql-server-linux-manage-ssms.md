@@ -33,7 +33,7 @@ See [Use SQL Server Management Studio](https://msdn.microsoft.com/en-us/library/
 
 ## Install the newest version of SQL Server Management Studio (SSMS)
 
-When working with SQL Server, you should always use the most recent version of SQL Server Management Studio (SSMS). The latest version of SSMS is continually updated and optimized and currently works with SQL Server 2017 on Linux. To download and install the latest version, see [Download SQL Server Management Studio](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms). To stay up-to-date, the latest version of SSMS prompts you when there is a new version available to download. 
+When working with SQL Server, you should always use the most recent version of SQL Server Management Studio (SSMS). The latest version of SSMS is continually updated and optimized and currently works with SQL Server 2017 on Linux. To download and install the latest version, see [Download SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md). To stay up-to-date, the latest version of SSMS prompts you when there is a new version available to download. 
 
 ## Before you begin
 - See [Use SSMS on Windows to connect to SQL Server on Linux](sql-server-linux-develop-use-ssms.md) for how to Connect and Query using SSMS
@@ -66,7 +66,7 @@ The database is successfully dropped from your server. If you prefer to drop a d
 
 ## Use Activity Monitor to see information about SQL Server activity
 
-The [Activity Monitor](/sql-docs/docs/relational-databases/performance-monitor/activity-monitor) tool is built-in into SQL Server Management Studio (SSMS) and displays information about SQL Server processes and how these processes affect the current instance of SQL Server.
+The [Activity Monitor](../relational-databases/performance-monitor/activity-monitor.md) tool is built-in into SQL Server Management Studio (SSMS) and displays information about SQL Server processes and how these processes affect the current instance of SQL Server.
 
 1. Start SSMS and connect to your server in SQL Server 2017 RC2 on Linux
 
@@ -87,4 +87,4 @@ When a pane is expanded, Activity Monitor queries the instance for information. 
 - [Export and Import a database with SSMS](sql-server-linux-migrate-ssms.md)
 - [Tutorial: SQL Server Management Studio](https://msdn.microsoft.com/en-us/library/bb934498.aspx)
 - [Tutorial: Writing Transact-SQL Statements](/sql-docs/docs/t-sql/tutorial-writing-transact-sql-statements)
-- [Server Performance and Activity Monitoring](/sql-docs/docs/relational-databases/performance/server-performance-and-activity-monitoring)
+- [Server Performance and Activity Monitoring](../relational-databases/performance/server-performance-and-activity-monitoring.md)

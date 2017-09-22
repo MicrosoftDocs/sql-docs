@@ -46,7 +46,7 @@ For more information, see [Grant Permissions to load data](grant-permissions-to-
   
 1.  There should only be one staging database per appliance. This can be shared by all load jobs for all destination databases.  
   
-2.  The size of the staging database is customer-specific. Initially, when first populating the appliance, the staging database should be large enough to accommodate the initial load jobs. These load jobs tend to be large because multiple loads can occur concurrently. After initial load jobs have completed and the system is in production, the size of each load job is likely to be smaller. When this occurs, you can reduce the size of the staging database to accommodate the smaller load sizes. To reduce the size, you can drop the staging database and create it again with smaller size allocations, or you can use the [ALTER DATABASE](/sql-docs/docs/t-sql/statements/alter-database-parallel-data-warehouse) statement.  
+2.  The size of the staging database is customer-specific. Initially, when first populating the appliance, the staging database should be large enough to accommodate the initial load jobs. These load jobs tend to be large because multiple loads can occur concurrently. After initial load jobs have completed and the system is in production, the size of each load job is likely to be smaller. When this occurs, you can reduce the size of the staging database to accommodate the smaller load sizes. To reduce the size, you can drop the staging database and create it again with smaller size allocations, or you can use the [ALTER DATABASE](../../docs/t-sql/statements/alter-database-parallel-data-warehouse.md) statement.  
   
     When creating the staging database, use the following guidelines.  
   

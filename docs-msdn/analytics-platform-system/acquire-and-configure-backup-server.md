@@ -117,9 +117,9 @@ FROM DISK = '\\10.172.14.255\backups\yearly\Invoices2013Full'
   
 For more information, see: 
   
--   [BACKUP DATABASE](/sql-docs/docs/t-sql/statements/backup-database-parallel-data-warehouse)   
+-   [BACKUP DATABASE](../../docs/t-sql/statements/backup-database-parallel-data-warehouse.md)   
   
--   [RESTORE DATABASE](/sql-docs/docs/t-sql/statements/restore-database-parallel-data-warehouse)  
+-   [RESTORE DATABASE](../../docs/t-sql/statements/restore-database-parallel-data-warehouse.md)  
   
 ## <a name="Security"></a>Security notices  
 The backup server is not joined to the private domain for the appliance. It is in your own network, and there is no trust relationship between your own domain and private appliance domain.  

@@ -30,7 +30,7 @@ manager: "jhubbard"
   
      Call this stored procedure to cause a running package to pause and create a dump file.  
   
- If you are using the package deployment model, you create the debug dump files by using either the **dtexec** utility or the **dtutil** utility to specify a debug dump option in the command line. For more information, see [dtexec Utility](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages) and [Legacy Package Deployment &#40;SSIS&#41;](../../integration-services/packages/legacy-package-deployment-ssis.md).  
+ If you are using the package deployment model, you create the debug dump files by using either the **dtexec** utility or the **dtutil** utility to specify a debug dump option in the command line. For more information, see [dtexec Utility](../packages/deploy-integration-services-ssis-projects-and-packages.md) and [Legacy Package Deployment &#40;SSIS&#41;](../../integration-services/packages/legacy-package-deployment-ssis.md).  
   
 ## Debug dump file format  
  When you specify a debug dump option, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] creates the following debug dump files:  

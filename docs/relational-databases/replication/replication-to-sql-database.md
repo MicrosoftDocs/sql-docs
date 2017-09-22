@@ -51,7 +51,7 @@ manager: "jhubbard"
   
  The [!INCLUDE[ssSDS](../../includes/sssds-md.md)] subscriber must be at least V12 and can be in any region.  
   
- To use all the features of [!INCLUDE[ssSDS](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms) and [SQL Server Data Tools](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt).  
+ To use all the features of [!INCLUDE[ssSDS](../../ssms/download-sql-server-management-studio-ssms.md) and [SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md).  
   
 ## Remarks  
  Replication can be configured by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or by executing [!INCLUDE[tsql](../../includes/tsql-md.md)] statements on the publisher. You cannot configure replication by using the [!INCLUDE[ssSDS](../../includes/sssds-md.md)] portal.  

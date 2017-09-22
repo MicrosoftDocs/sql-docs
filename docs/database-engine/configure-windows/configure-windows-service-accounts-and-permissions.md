@@ -183,7 +183,7 @@ Managed service accounts, group managed service accounts, and virtual accounts a
   
 -   <a name="VA_Desc"></a>**Virtual Accounts**  
   
-     Virtual accounts (beginning with Windows Server 2008 R2 and Windows 7) are *managed local accounts* that provide the following features to simplify service administration. The virtual account is auto-managed, and the virtual account can access the network in a domain environment. If the default value is used for the service accounts during [!INCLUDE[ssNoVersion](/sql-docs/docs/database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections).  
+     Virtual accounts (beginning with Windows Server 2008 R2 and Windows 7) are *managed local accounts* that provide the following features to simplify service administration. The virtual account is auto-managed, and the virtual account can access the network in a domain environment. If the default value is used for the service accounts during [!INCLUDE[ssNoVersion](register-a-service-principal-name-for-kerberos-connections.md).  
   
     > [!NOTE]  
     >  Virtual accounts cannot be used for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Failover Cluster Instance, because the virtual account would not have the same SID on each node of the cluster.  

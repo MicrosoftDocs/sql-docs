@@ -271,3 +271,18 @@ The specific connection string parameter for clients to use AD Authentication de
   * JDBC: [Using Kerberos Integrated Authentication to Connect SQL Server](https://docs.microsoft.com/sql/connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server)
   * ODBC: [Using Integrated Authentication](https://docs.microsoft.com/sql/connect/odbc/linux/using-integrated-authentication)
   * ADO.NET: [Connection String Syntax](https://msdn.microsoft.com/en-us/library/system.data.sqlclient.sqlauthenticationmethod(v=vs.110).aspx)
+  
+  ## Next steps
+
+In this tutorial, you learned how to setup Active Directory authentication with SQL Server on Linux. You learned how to:
+> [!div class="checklist"]
+> * Join [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] host to AD domain
+> * Create AD user for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and set SPN
+> * Configure [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] service keytab
+> * Create AD-based logins in Transact-SQL
+> * Connect to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] using AD Authentication
+
+Next, explore other security scenarios for SQL Server on Linux. 
+
+> [!div class="nextstepaction"]
+>[Encrypting Connections to SQL Server on Linux](sql-server-linux-encrypted-connections.md)

@@ -61,10 +61,13 @@ Run the following Transact-SQL code to deploy an SSIS project.
 ```sql
 DECLARE @ProjectBinary AS varbinary(max)
 DECLARE @operation_id AS bigint
-SET @ProjectBinary = (SELECT * FROM OPENROWSET(BULK '<project_file_path>.ispac', SINGLE_BLOB) AS BinaryData)
+SET @ProjectBinary =
+    (SELECT * FROM OPENROWSET(BULK '<project_file_path>.ispac', SINGLE_BLOB) AS BinaryData)
 
-EXEC catalog.deploy_project @folder_name = '<target_folder>', @project_name = '<project_name',
-    @Project_Stream = @ProjectBinary, @operation_id = @operation_id out
+EXEC catalog.deploy_project @folder_name = '<target_folder>',
+    @project_name = '<project_name',
+    @Project_Stream = @ProjectBinary,
+    @operation_id = @operation_id out
 ```
 
 ## Next steps

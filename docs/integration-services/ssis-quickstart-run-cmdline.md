@@ -17,15 +17,15 @@ This quick start tutorial demonstrates how to run an SSIS package from the comma
 
 For more info about `DTExec.exe`, see [dtexec Utility](https://docs.microsoft.com/en-us/sql/integration-services/packages/dtexec-utility).
 
-## Steps
+## Run a package with dtexec
 
-If the folder that contains `DTExec.exe` is not in your `path` environment variable, you may have to use the `cd` command to change to its directory. For SQL Server 2017, this is typically `C:\Program Files (x86)\Microsoft SQL Server\140\DTS\Binn`.
+If the folder that contains `DTExec.exe` is not in your `path` environment variable, you may have to use the `cd` command to change to its directory. For SQL Server 2017, this folder is typically `C:\Program Files (x86)\Microsoft SQL Server\140\DTS\Binn`.
 
 With the parameter values used in the following example, the program runs the package in the specified folder path on the SSIS server - that is, the server that hosts the SSIS Catalog database (SSISDB). The `/Server` parameter provides the server name. The program connects as the current user with Windows Integrated Authentication. To use SQL Authentication, specify the `/User` and `Password` parameters with appropriate values.
 
 1. Open a Command Prompt window.
 
-2. Run `DTExec.exe` and provide values at least for the `ISServer` and the `Server` parameters, as shown in the following example.
+2. Run `DTExec.exe` and provide values at least for the `ISServer` and the `Server` parameters, as shown in the following example:
 
     ```cmd
     dtexec /ISServer "\SSISDB\Project1Folder\Integration Services Project1\Package.dtsx" /Server "localhost"

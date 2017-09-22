@@ -19,7 +19,7 @@ For more info about the Integration Services Deployment Wizard, see [Integration
 
 2. Run `ISDeploymentWizard.exe`. The Integration Services Deployment Wizard opens.
 
-    If the folder that contains `ISDeploymentWizard.exe` is not in your `path` environment variable, you may have to use the `cd` command to change to its directory. For SQL Server 2017, this is typically `C:\Program Files (x86)\Microsoft SQL Server\140\DTS\Binn`.
+    If the folder that contains `ISDeploymentWizard.exe` is not in your `path` environment variable, you may have to use the `cd` command to change to its directory. For SQL Server 2017, this folder is typically `C:\Program Files (x86)\Microsoft SQL Server\140\DTS\Binn`.
 
 ## Deploy a project with the wizard
 1. On the **Introduction** page of the wizard, review the introduction. Click **Next** to open the **Select Source** page.
@@ -30,7 +30,7 @@ For more info about the Integration Services Deployment Wizard, see [Integration
     Click **Next** to see the **Select Destination** page.
   
 3.  On the **Select Destination** page, select the destination for the project.
-    -   Enter the fully-qualified server name. If the target server is an Azure SQL Database server, the name is in this format: `<server_name>.database.windows.net`.
+    -   Enter the fully qualified server name. If the target server is an Azure SQL Database server, the name is in this format: `<server_name>.database.windows.net`.
     -   Then click **Browse** to select the target folder in SSISDB.
     Click **Next** to open the **Review** page.  
   

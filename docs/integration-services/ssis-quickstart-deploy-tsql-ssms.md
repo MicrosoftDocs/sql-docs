@@ -56,7 +56,7 @@ Run the following Transact-SQL code to deploy an SSIS project.
 
 4.  Run the script.
 
-5. In Object Explorer, refresh the contents of **SSISDB** if necessary and check for the project that you just deployed.
+5. In Object Explorer, refresh the contents of **SSISDB** if necessary and check for the project that you deployed.
 
 ```sql
 DECLARE @ProjectBinary AS varbinary(max)

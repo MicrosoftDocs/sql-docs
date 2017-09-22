@@ -161,8 +161,8 @@ Before you configure AD Authentication, you need to:
 
 ## Create AD user for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and set SPN
 
-   > [!NOTE]
-   > In the next steps we will use your [fully qualified domain name](https://en.wikipedia.org/wiki/Fully_qualified_domain_name). If you are on **Azure**, you will have to **[create one](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/portal-create-fqdn)** before you proceed.
+    > [!NOTE]
+    > In the next steps we will use your [fully qualified domain name](https://en.wikipedia.org/wiki/Fully_qualified_domain_name). If you are on **Azure**, you will have to **[create one](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/portal-create-fqdn)** before you proceed.
 
 1. On your domain controller, run the [New-ADUser](https://technet.microsoft.com/library/ee617253.aspx) PowerShell command to create a new AD user with a password that never expires. This example names the account "mssql," but the account name can be anything you like. You will be prompted to enter a new password for the account:
 

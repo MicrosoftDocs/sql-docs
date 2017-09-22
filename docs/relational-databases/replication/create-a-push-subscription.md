@@ -89,7 +89,7 @@ manager: "jhubbard"
   
     -   If the value of **allow_push** is **0**, execute [sp_changepublication](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md), specifying **allow_push** for **@property** and **true** for **@value**.  
   
-2.  At the Publisher on the publication database, execute [sp_addsubscription](https://msdn.microsoft.com/library/ms181702.aspx). Specify **@publication**, **@subscriber** and **@destination_db**. Specify a value of **push** for **@subscription_type**. For information about how to update subscriptions, see [Create an Updatable Subscription to a Transactional Publication](https://msdn.microsoft.com/library/ms152769.aspx).  
+2.  At the Publisher on the publication database, execute [sp_addsubscription](/sql-docs/docs/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql). Specify **@publication**, **@subscriber** and **@destination_db**. Specify a value of **push** for **@subscription_type**. For information about how to update subscriptions, see [Create an Updatable Subscription to a Transactional Publication](/sql-docs/docs/relational-databases/replication/publish/create-an-updatable-subscription-to-a-transactional-publication).  
   
 3.  At the Publisher on the publication database, execute [sp_addpushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md). Specify the following:  
   

@@ -183,7 +183,7 @@ manager: "jhubbard"
     >  When you name the schedule, consider using a name that is unique and descriptive so you can more easily distinguish the schedule from other [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent schedules.  
 
 ## See Also  
- [Execution of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx)  
+ [Execution of Projects and Packages](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages)  
 
 ## External Resources  
   

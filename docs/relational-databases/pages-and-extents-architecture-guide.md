@@ -39,7 +39,7 @@ The following table shows the page types used in the data files of a SQL Server 
 |-------|-------|
 |Data |Data rows with all data, except text, ntext, image, nvarchar(max), varchar(max), varbinary(max), and xml data, when text in row is set to ON. |
 |Index |Index entries. |
-|Test/Image |Large object data types: (text, ntext, image, nvarchar(max), varchar(max), varbinary(max), and xml data) <br> Variable length columns when the data row exceeds 8 KB: (varchar, nvarchar, varbinary, and sql_variant) |
+|Text/Image |Large object data types: (text, ntext, image, nvarchar(max), varchar(max), varbinary(max), and xml data) <br> Variable length columns when the data row exceeds 8 KB: (varchar, nvarchar, varbinary, and sql_variant) |
 |Global Allocation Map, Shared Global Allocation Map |Information about whether extents are allocated. |
 |Page Free Space (PFS) |Information about page allocation and free space available on pages. |
 |Index Allocation Map |Information about extents used by a table or index per allocation unit. |

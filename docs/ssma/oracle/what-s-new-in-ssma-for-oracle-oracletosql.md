@@ -2,7 +2,7 @@
 title: "What&#39;s New in SSMA  for Oracle (OracleToSQL) | Microsoft Docs"
 ms.prod: "sql-non-specified"
 ms.custom: ""
-ms.date: "08/17/2017"
+ms.date: "09/22/2017"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,8 +15,16 @@ author: "Shamikg"
 ms.author: "Shamikg"
 manager: "craigg"
 ---
-# What&#39;s New in SSMA  for Oracle (OracleToSQL)
+# What&#39;s New in SSMA for Oracle (OracleToSQL)
 This topic lists SSMA for Oracle changes in each release.  
+
+## SSMA v7.5
+The v7.5 release of SSMA for Oracle contains the following changes:
+- Enhanced with several improvements to ensure greater accessibility for people with disabilities.
+- Updated to improve the quality and conversion metric with targeted fixes, such as improved handling of date and float data types during data migration, based on customer feedback.
+
+> [!IMPORTANT]
+> .Net 4.5.2 is a pre-requisite for installing SSMA v7.5. In addition, beginning with v7.4, the 32-bit version of SSMA is being discontinued.
 
 ## SSMA v7.4
 The v7.4 release of SSMA for Oracle contains the following changes:
@@ -59,7 +67,7 @@ The v7.2 release of SSMA for Oracle contains the following changes:
 - Telemetry enhancements to provide better data points to troubleshoot customer issues and improve SSMA’s conversion rates.
 
 ## SSMA v7.1
-The v7.1 release of SSMA for Access contains the following changes:
+The v7.1 release of SSMA for Oracle contains the following changes:
 - SQL Server 2017 on Windows and Linux CTP1 is now a supported target platform for migration. This feature is in technical preview and allows schema and data movement to target SQL servers.
 - SSMA now supports automatic updates to download the latest version of SSMA as soon as it is available.
 - SSMA installable binaries are now delivered through Windows installer package files (.msi).

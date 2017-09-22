@@ -1,7 +1,7 @@
 ---
 title: "@@OPTIONS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/11/2016"
+ms.date: "09/18/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -24,7 +24,7 @@ author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
 ---
-# @@OPTIONS (Transact-SQL)
+# &#x40;&#x40;OPTIONS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Returns information about the current SET options.  
@@ -34,7 +34,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
-  
 @@OPTIONS  
 ```  
   

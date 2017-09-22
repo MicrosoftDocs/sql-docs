@@ -24,7 +24,7 @@ manager: "jhubbard"
   
  This topic introduces concepts and considerations that are central to storing SQL Server data files in Microsoft Azure Storage Service.  
   
- For a practical hands-on experience on how to use this new feature, see [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases ](https://msdn.microsoft.com/library/dn466438.aspx).  
+ For a practical hands-on experience on how to use this new feature, see [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases ](/sql-docs/docs/relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016).  
   
 ## Why use SQL Server Data Files in Microsoft Azure? 
   
@@ -128,7 +128,7 @@ ON
 ### SQL Server Management Studio support  
  SQL Server Management Studio allows you to use this feature via several dialog windows. For example, you can type the URL path of the storage container, such as > https://teststorageaccnt.blob.core.windows.net/testcontainer/ :
  
- as a **Path** in several dialog windows, such as **New Database**, **Attach Database**, and **Restore Database**. For more information, see [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases](https://msdn.microsoft.com/library/dn466438.aspx).  
+ as a **Path** in several dialog windows, such as **New Database**, **Attach Database**, and **Restore Database**. For more information, see [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases](/sql-docs/docs/relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016).  
   
 ### SQL Server Management Objects support  
  When using the SQL Server Data Files in Azure feature, all SQL Server Management Objects (SMO) are supported. If an SMO object requires a file path, use the BLOB URL format instead of a local file path, such as `https://teststorageaccnt.blob.core.windows.net/testcontainer/`. For more information about SQL Server Management Objects (SMO), see [SQL Server Management Objects &#40;SMO&#41; Programming Guide](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md) in SQL Server Books Online.  
@@ -149,10 +149,10 @@ ON
     Resolution: You may see this error when you try to drop a credential that is still being used by an active database file in Azure Storage. To drop the credential, first you must delete the associated blob that has this database file. To delete a blob that has an active lease, you must first break the lease.  
   
 -   *Shared Access Signature has not been created on the container correctly.*   
-     Resolution: Make sure that you have created a Shared Access Signature on the container correctly. Review the instructions given in Lesson 2 in [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases ](https://msdn.microsoft.com/library/dn466435.aspx).  
+     Resolution: Make sure that you have created a Shared Access Signature on the container correctly. Review the instructions given in Lesson 2 in [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases ](/sql-docs/docs/relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature).  
   
 -   *SQL Server credential has not been not created correctly.*   
-    Resolution: Make sure that you have used 'Shared Access Signature' for the **Identity** field and created a secret correctly. Review the instructions given in Lesson 3 in [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases](https://msdn.microsoft.com/library/dn466436.aspx).  
+    Resolution: Make sure that you have used 'Shared Access Signature' for the **Identity** field and created a secret correctly. Review the instructions given in Lesson 3 in [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases](/sql-docs/docs/relational-databases/lesson-3-database-backup-to-url).  
   
  **Lease blob errors:**  
   
@@ -161,10 +161,10 @@ ON
  **Database errors**  
   
 1.  *Errors when creating a database*   
-    Resolution: Review the instructions given in Lesson 4 in [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases](https://msdn.microsoft.com/library/dn466431.aspx).  
+    Resolution: Review the instructions given in Lesson 4 in [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases](/sql-docs/docs/relational-databases/lesson-4-restore-database-to-virtual-machine-from-url).  
   
 2.  *Errors when running the Alter statement*   
-    Resolution: Make sure to execute the Alter Database statement when the database is online. When copying the data files to Azure Storage, always create a page blob not a block blob. Otherwise, ALTER Database will fail. Review the instructions given in Lesson 7 in [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases](https://msdn.microsoft.com/library/dn466438.aspx).  
+    Resolution: Make sure to execute the Alter Database statement when the database is online. When copying the data files to Azure Storage, always create a page blob not a block blob. Otherwise, ALTER Database will fail. Review the instructions given in Lesson 7 in [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases](/sql-docs/docs/relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016).  
   
 3.  *Error code 5120 Unable to open the physical file "%.\*ls". Operating system error %d: "%ls"*   
     Resolution: Currently, this new enhancement does not support more than one SQL Server instance accessing the same database files in Azure Storage at the same time. If ServerA is online with an active database file and if ServerB is accidently started, and it also has a database which points to the same data file, the second server will fail to start the database with an error *code 5120 Unable to open the physical file "%.\*ls". Operating system error %d: "%ls"*.  

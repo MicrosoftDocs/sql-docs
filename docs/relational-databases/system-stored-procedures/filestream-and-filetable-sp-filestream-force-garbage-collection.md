@@ -99,7 +99,8 @@ EXEC sp_filestream_force_garbage_collection @dbname = N'FSDB';
 ```sql  
 USE FSDB;  
 GO  
-EXEC sp_filestream_force_garbage_collection @dbname = N'FSDB' @filename = N'FSContainer';  
+EXEC sp_filestream_force_garbage_collection @dbname = N'FSDB',
+    @filename = N'FSContainer';  
 ```  
   
 ## See Also  

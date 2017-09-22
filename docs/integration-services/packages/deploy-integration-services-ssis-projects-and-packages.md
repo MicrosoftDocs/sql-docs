@@ -398,7 +398,7 @@ Launch the wizard by either:
 14. Click **OK** twice to save your changes.  
 
 ## Deploy and Execute SSIS Packages using Stored Procedures
-  When you configure an [!INCLUDE[ssISnoversion](deploy-integration-services-ssis-projects-and-packages.md).  
+  When you configure an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project to use the project deployment model, you can use stored procedures in the [!INCLUDE[ssIS](../../includes/ssis-md.md)] catalog to deploy the project and execute the packages. For information about the project deployment model, see [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx).  
   
  You can also use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] to deploy the project and execute the packages. For more information, see the topics in the **See Also** section.  
   

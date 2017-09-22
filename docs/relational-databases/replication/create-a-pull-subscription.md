@@ -88,7 +88,7 @@ manager: "jhubbard"
   
     -   If the value of **allow_pull** is **0**, execute [sp_changepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md), specifying **allow_pull** for **@property** and **true** for **@value**.  
   
-2.  At the Subscriber, execute [sp_addpullsubscription &#40;Transact-SQL&#41;](/sql-docs/docs/relational-databases/replication/publish/create-an-updatable-subscription-to-a-transactional-publication).  
+2.  At the Subscriber, execute [sp_addpullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md). Specify **@publisher** and **@publication**. For information about updating subscriptions, see [Create an Updatable Subscription to a Transactional Publication](https://msdn.microsoft.com/library/ms152769.aspx).   
   
 3.  At the Subscriber, execute [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md). Specify the following:  
   

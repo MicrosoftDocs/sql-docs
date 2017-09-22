@@ -64,7 +64,7 @@ Read more about [shared data sources in Reporting Services](../report-data/creat
    
 ## <a name="shared-dataset">Create a shared dataset</a>  
   
-Use an existing [!INCLUDE[PRODUCT_NAME](/sql-docs/docs/reporting-services/install-windows/install-report-builder), or launch it from your web portal. You'll create three datasets, one each for: the KPI value, the KPI trend, and one with more fields for the Reporting Services mobile report.   
+Use an existing [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] client tool, such as Report Designer in [!INCLUDE[ssBIDevStudioFull_md](../../includes/ssbidevstudiofull-md.md)], to create the shared dataset.  This walkthrough uses [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]. [Install Report Builder](https://msdn.microsoft.com/library/ff519551.aspx), or launch it from your web portal. You'll create three datasets, one each for: the KPI value, the KPI trend, and one with more fields for the Reporting Services mobile report.     
   
 1. From your [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] web portal, click **New** > **Paginated Report** to start [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)].  
   

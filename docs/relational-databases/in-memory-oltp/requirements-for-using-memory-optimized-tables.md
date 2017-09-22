@@ -38,7 +38,7 @@ manager: "jhubbard"
   
 -   In-Memory OLTP is installed as part of **Database Engine Services**.  
   
-     To install report generation ([Determining if a Table or Stored Procedure Should Be Ported to In-Memory OLTP](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms).  
+     To install report generation ([Determining if a Table or Stored Procedure Should Be Ported to In-Memory OLTP](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) and [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (to manage In-Memory OLTP via [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Object Explorer), [Download SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx).   
   
 ## Important Notes on Using [!INCLUDE[hek_2](../../includes/hek-2-md.md)]  
   

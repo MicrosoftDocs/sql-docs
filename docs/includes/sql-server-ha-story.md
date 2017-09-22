@@ -22,7 +22,7 @@ Each section will discuss the relevant features that can be used for that partic
 
 ### High availability
 
-Ensuring that SQL Server instances or database are available in the case of a problem that is local to a data center or single region in the cloud region is [!IMPORTANT]. This section will cover how the SQL Server availability features can assist in that task. All of the features described are available both on Windows Server as well as on Linux. 
+Ensuring that SQL Server instances or database are available in the case of a problem that is local to a data center or single region in the cloud region is important. This section will cover how the SQL Server availability features can assist in that task. All of the features described are available both on Windows Server as well as on Linux. 
 
 #### Always on availability groups
 

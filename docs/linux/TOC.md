@@ -13,8 +13,9 @@
 
 # Tutorials
 ## [1_Migrate from Windows](sql-server-linux-migrate-restore-database.md)
-## [2_Create a job](sql-server-linux-run-sql-server-agent-job.md)
-## [3_Create FCI](sql-server-linux-shared-disk-cluster-configure.md)
+## [2_Migrate from Oracle](../ssma/oracle/sql-server-linux-convert-from-oracle.md?toc=%2fsql%2flinux%2ftoc.json)
+## [3_Create a job](sql-server-linux-run-sql-server-agent-job.md)
+## [4_Create FCI](sql-server-linux-shared-disk-cluster-configure.md)
 ### [iSCSI](sql-server-linux-shared-disk-cluster-configure-iscsi.md)
 ### [NFS](sql-server-linux-shared-disk-cluster-configure-nfs.md)
 ### [SMB](sql-server-linux-shared-disk-cluster-configure-smb.md)

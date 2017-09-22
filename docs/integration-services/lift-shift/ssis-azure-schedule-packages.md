@@ -210,7 +210,7 @@ END
 GO
 ```
 
-For more info about the code in this script, see [Deploy and Execute SSIS Packages using Stored Procedures](../packages/deploy-integration-services-ssis-projects-and-packages#deploy-and-execute-ssis-packages-using-stored-procedures.md).
+For more info about the code in this script, see [Deploy and Execute SSIS Packages using Stored Procedures](../packages/deploy-integration-services-ssis-projects-and-packages.md#deploy-and-execute-ssis-packages-using-stored-procedures).
 
 ## Next steps
 For more info about SQL Server Agent, see [SQL Server Agent Jobs for Packages](../packages/sql-server-agent-jobs-for-packages.md).

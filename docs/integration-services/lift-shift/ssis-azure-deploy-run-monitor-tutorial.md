@@ -109,4 +109,4 @@ Get-AzureRmDataFactoryV2IntegrationRuntimeStatus -DataFactoryName $DataFactoryNa
 ```
 
 ## Next steps
-- Learn how to schedule package execution. For more info, see [Schedule SSIS package execution on Azure](ssis-everest-howto-schedule-package.md)
+- Learn how to schedule package execution. For more info, see [Schedule SSIS package execution on Azure](ssis-azure-schedule-packages.md)

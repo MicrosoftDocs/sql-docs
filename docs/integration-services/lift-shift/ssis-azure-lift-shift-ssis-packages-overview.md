@@ -76,7 +76,7 @@ To schedule the execution of packages stored in SQL Database, you can use the fo
 -   SQL Server Agent on-premises
 -   The Data Factory SQL Server Stored Procedure activity
 
-For more info, see [Schedule packages](ssis-everest-howto-schedule-package.md).
+For more info, see [Schedule SSIS package execution on Azure](ssis-azure-schedule-packages.md).
 
 ## Next steps
 To get started with SSIS workloads on Azure, see the following articles:

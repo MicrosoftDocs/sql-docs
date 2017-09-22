@@ -48,6 +48,6 @@ Before you start, make sure you have version 17.2 or later of SQL Server Managem
 5. In Object Explorer, expand **Integration Services Catalogs** and then expand **SSISDB** to view the objects in the SSIS Catalog database.
 
 ## Next steps
-- Deploy a package. For more info, see [Deploy an SSIS project with SQL Server Management Studio (SSMS)](../ssis-everest-quickstart-deploy-ssms.md).
-- Run a package. For more info, see [Run an SSIS package with SQL Server Management Studio (SSMS)](../ssis-everest-quickstart-run-ssms.md).
+- Deploy a package. For more info, see [Deploy an SSIS project with SQL Server Management Studio (SSMS)](../ssis-quickstart-deploy-ssms.md).
+- Run a package. For more info, see [Run an SSIS package with SQL Server Management Studio (SSMS)](../ssis-quickstart-run-ssms.md).
 - Schedule a package. For more info, see [Schedule SSIS package execution on Azure](ssis-azure-schedule-packages.md)

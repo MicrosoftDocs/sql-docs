@@ -1,7 +1,7 @@
 ---
 title: "sp_filestream_force_garbage_collection (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "07/22/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -24,20 +24,16 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Filestream and FileTable - sp_filestream_force_garbage_collection
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Forces the FILESTREAM garbage collector to run, deleting any unneeded FILESTREAM files.  
   
  A FILESTREAM container cannot be removed until all the deleted files within it have been cleaned up by the garbage collector. The FILESTREAM garbage collector runs automatically. However, if you need to remove a container before the garbage collector has run, you can use sp_filestream_force_garbage_collection to run the garbage collector manually.  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
 ## Syntax  
   
 ```  
-  
 sp_filestream_force_garbage_collection [ @dbname = ]  'database_name'  , @filename = 'logical_file_name' ]  
 ```  
   
@@ -75,8 +71,13 @@ sp_filestream_force_garbage_collection [ @dbname = ]  'database_name'  , @filena
 > [!NOTE]  
 >  It is recommended that this operation be run only when necessary and outside usual operation hours.  
   
- Multiple invocations of this stored procedure can be run simultaneously only on separate containers or separate databases.  
-  
+Multiple invocations of this stored procedure can be run simultaneously only on separate containers or separate databases.  
+
+Due to 2-phase operations, the stored procedure should be run twice to actually delete underlying Filestream files.  
+
+Garbage Collection (GC) relies on log truncation. Therefore, if files were deleted recently on a database using Full Recovery model, they are GC-ed only after a log backup of those transaction log portions is taken and the log portion is marked inactive. On a database using Simple recovery model, a log truncation occurs after a `CHECKPOINT` has been issued against the database.  
+
+
 ## Permissions  
  Requires membership in the db_owner database role.  
   
@@ -85,7 +86,7 @@ sp_filestream_force_garbage_collection [ @dbname = ]  'database_name'  , @filena
   
 ### A. Specifying no container  
   
-```  
+```sql  
 USE FSDB;  
 GO  
 EXEC sp_filestream_force_garbage_collection @dbname = N'FSDB';  
@@ -93,7 +94,7 @@ EXEC sp_filestream_force_garbage_collection @dbname = N'FSDB';
   
 ### B. Specifying a container  
   
-```  
+```sql  
 USE FSDB;  
 GO  
 EXEC sp_filestream_force_garbage_collection @dbname = N'FSDB' @filename = N'FSContainer';  

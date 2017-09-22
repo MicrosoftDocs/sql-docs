@@ -34,7 +34,7 @@ After upgrade, the existing FILESTREAM network share may be no longer available.
     First, reboot the operating system if FILESTREAM network share is not available after upgrade. If the share is still not available after reboot, you can re-enable it. To re-enable FILESTREAM:
 
     1. In SQL Server Configuration Manager, right click the SQL Server instance, and click **Properties**. 
-    2. In the **FILESTREAM** tab clear **Enable FILESTREAM for file I/O streaming access** , then click **Apply**. Next c
+    2. In the **FILESTREAM** tab clear **Enable FILESTREAM for file I/O streaming access** , then click **Apply**.
     3. Check **Enable FILESTREAM for file I/O streaming access** again with the original share name and click **Apply**.
 
 ### Master Data Services (MDS)

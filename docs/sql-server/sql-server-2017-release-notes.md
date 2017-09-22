@@ -61,9 +61,6 @@ On the user permissions page, when granting permission to the root level in the 
 ## SQL Server 2017 Release Candidate (RC2 - August 2017)
 There are no SQL Server on Windows release notes for this release. See [SQL Server on Linux Release notes](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-release-notes).
 
-![horizontal_bar](../sql-server/media/horizontal-bar.png)
-## SQL Server 2017 Release Candidate (RC2 - August 2017)
-There are no SQL Server on Windows release notes for this release. See [SQL Server on Linux Release notes](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-release-notes).
 
 ![horizontal_bar](../sql-server/media/horizontal-bar.png)
 ## SQL Server 2017 Release Candidate (RC1 - July 2017)
@@ -86,7 +83,7 @@ There are no SQL Server on Windows release notes for this release. See [SQL Serv
 ### SQL Server Reporting Services (CTP 2.1)
 
 - **Issue and customer impact:** If you have both SQL Server Reporting Services and Power BI Report Server on the same machine and uninstall one of them, you will not be able to connect to the remaining report server with Report Server Configuration Manager.
-- **Work around** To work around this issue, you must perform the following operations after uninstalling one of the servers.
+- **Workaround** To work around this issue, you must perform the following operations after uninstalling one of the servers.
 
     1. Launch a command prompt in Administrator mode.
     2. Go to the directory where the remaining report server is installed.
@@ -115,7 +112,7 @@ There are no SQL Server on Windows release notes for this release. See [SQL Serv
 
    In addition, attempts to reinstall a 2016 version of TSqlLanguageService.msi fail with the message: *Installation of Microsoft SQL Server 2016 T-SQL Language Service failed because a higher version already exists on the machine*.
 
-- **Work around** To work around this issue and fix an application that depends on the v13 version of the assemblies follow these steps:
+- **Workaround** To work around this issue and fix an application that depends on the v13 version of the assemblies follow these steps:
 
    1. Go to **Add/Remove Programs**
    2. Find *Microsoft SQL Server vNext T-SQL Language Service CTP2.1*, right-click it, and select **Uninstall**.

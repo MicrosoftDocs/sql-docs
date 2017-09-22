@@ -104,11 +104,9 @@ The following features and services are not available on Linux at this time. The
 
 The following sections describe known issues with the Genera Availability (GA) release of SQL Server 2017 on Linux.
 
-### Known issues
-
-The following sections describe known issues with this release of SQL Server 2017 RC2 on Linux.
-
 #### General
+
+- Upgrades to the GA release of SQL Server 2017 are supported only from CTP 2.1 or higher. 
 
 - The length of the hostname where SQL Server is installed needs to be 15 characters or less. 
 
@@ -155,9 +153,27 @@ The following sections describe known issues with this release of SQL Server 201
 
 - SQL Server 2014 databases on Windows that use In-memory OLTP cannot be restored on SQL Server 2017 on Linux. To restore a SQL Server 2014 database that uses in-memory OLTP, first upgrade the databases to SQL Server 2016 or SQL Server 2017 on Windows before moving them to SQL Server on Linux via backup/restore or detach/attach.
 
-#### Remote database files
+- User permission **ADMINISTER BULK OPERATIONS** is not supported on Linux at this time.
 
-- Hosting database files on a NFS server is not supported in this release. This includes using NFS for shared disk failover clustering as well as databases on non-clustered instances. We are working on enabling NFS server support in the upcoming releases.
+#### Networking
+
+Features that involve outbound TCP connections from the sqlservr process, such as linked servers or Availability Groups, might not work if both the following conditions are met:
+
+1. The target server is specified as a hostname and not an IP address.
+
+1. The source instance has IPv6 disabled in the kernel. To verify if your system has IPv6 enabled in the kernel, all the following tests must pass:
+
+   - `cat /proc/cmdline` will print the boot cmdline of the current kernel. The output must not contain `ipv6.disable=1`.
+   - The /proc/sys/net/ipv6/ directory must exist.
+   - A C program that calls `socket(AF_INET6, SOCK_STREAM, IPPROTO_IP)` should succeed - the syscall must return an fd != -1 and not fail with EAFNOSUPPORT.
+
+The exact error depends on the feature. For linked servers, this manifests as a login timeout error. For Availbility Groups, the `ALTER AVAILABILITY GROUP JOIN` DDL on the secondary will fail after 5 minutes with a download configuration timeout error.
+
+To work around this issue, do one of the following:
+
+1. Use IPs instead of hostnames to specify the target of the TCP connection.
+
+1. Enable IPv6 in the kernel by removing `ipv6.disable=1` from the boot cmdline. The way to do this depends on the Linux distribution and the bootloader, such as grub. If you do want IPv6 to be disabled, you can still disable it by setting `net.ipv6.conf.all.disable_ipv6 = 1` in the `sysctl` configuration (eg `/etc/sysctl.conf`). This will still prevent the system's network adapter from getting an IPv6 address, but allow the sqlservr features to work.
 
 #### Localization
 
@@ -172,6 +188,8 @@ The following sections describe known issues with this release of SQL Server 201
    ```bash
    sudo MSSQL_LCID=<LcidValue> /opt/mssql/bin/mssql-conf setup
    ```
+
+- When running mssql-conf setup, and performing a non-English installation of SQL Server, incorrect extended characters are displayed after the localized text, "Configuring SQL Server...". Or, for non-Latin based installations, the sentence might be missing completely. The missing sentence should display the following localized string: "The licensing PID was successfully processed.  The new edition is [<Name> edition]”. This string is output for information purposes only, and the next SQL Server Cumulative Update will address this for all languages. This does not affect the successful installation of SQL Server in any way. 
 
 #### Full-Text Search
 
@@ -340,7 +358,7 @@ The following sections describe known issues with this release of SQL Server 201
 
       1. Restart SQL Server with the following command.
    
-      ```
+      ```bash
       sudo systemctl restart mssql-server
       ```
 

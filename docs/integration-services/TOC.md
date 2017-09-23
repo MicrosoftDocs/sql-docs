@@ -6,6 +6,13 @@
 ## [New and recently updated articles](new-updated-integration-services.md)
 ## [Integration Services Features Supported by the Editions of SQL Server](integration-services-features-supported-by-the-editions-of-sql-server.md)
 ## [Integration Services Backward Compatibility](integration-services-backward-compatibility.md)
+
+# [Lift and shift SSIS packages to Azure](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)
+## [Tutorial - Deploy, run, and monitor a package on Azure](lift-shift/ssis-azure-deploy-run-monitor-tutorial.md)
+## [Connect to the SSIS Catalog on Azure](lift-shift/ssis-azure-connect-to-catalog-database.md)
+## [Schedule package execution on Azure](lift-shift/ssis-azure-schedule-packages.md)
+## [Connect to data sources with Windows Authentication](lift-shift/ssis-azure-connect-with-windows-auth.md)
+
 # [Install or upgrade](../integration-services/install-windows/install-integration-services.md)
 
 # [Development and management Tools](integration-services-ssis-development-and-management-tools.md)

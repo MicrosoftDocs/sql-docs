@@ -37,6 +37,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Choosing a Network Protocol](https://msdn.microsoft.com/library/ms187892(v=sql.130).aspx)   
- [Creating a Valid Connection String Using TCP IP](https://msdn.microsoft.com/library/ms191260.aspx)  
+ [Creating a Valid Connection String Using TCP IP](/sql-docs/docs/tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip)  
   
   

@@ -51,14 +51,14 @@ This tutorial is intended for users who are already familiar with fundamental fi
 - Sample data, completed packages, configurations, and a Readme. These files are installed together if you download the [Adventure Works 2014 Sample Databases](https://msftdbprodsamples.codeplex.com/releases/view/125550).     
 > **Note!** Make sure you have permission to create and drop tables in AdventureWorks or other data you use.         
     
--   [SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx).    
+-   [SQL Server Data Tools (SSDT)](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt).    
     
 **Destination computer.** The computer to which you deploy packages **must have the following components installed:**    
     
 - SQL Server
 - Sample data, completed packages, configurations, and a Readme. These files are installed together if you download the [Adventure Works 2014 Sample Databases](https://msftdbprodsamples.codeplex.com/releases/view/125550). 
     
-- [SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx).    
+- [SQL Server Management Studio](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms).    
     
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].    
     

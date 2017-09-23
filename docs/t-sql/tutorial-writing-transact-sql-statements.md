@@ -48,7 +48,7 @@ Your system must have the following installed:
   
 -   Any edition of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
--  [SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx)  
+-  [SQL Server Management Studio](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms)  
   
 
  

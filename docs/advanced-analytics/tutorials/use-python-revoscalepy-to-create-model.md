@@ -2,8 +2,8 @@
 title: "Use Python with revoscalepy to Create a Model| Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "07/03/2017"
-ms.prod: "sql-server-2016"
+ms.date: "09/19/2017"
+ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,11 +17,11 @@ manager: "jhubbard"
 ---
 # Use Python with revoscalepy to create a model
 
-This example demonstrates how you can create a logistic regression model in SQL Server, using an algorithm from the **revoscalepy** package.
+This example demonstrates how you can create a linear regression model in SQL Server, using an algorithm from the **revoscalepy** package.
 
 The **revoscalepy** package for Python contains objects, transformations, and algorithms similar to those provided for the **RevoScaleR** package for the R language. With this library, you can create a compute context, move data between compute contexts, transform data, and train predictive models using popular algorithms such as logistic and linear regression, decision trees, and more.
 
-For more information, see [What is revoscalepy?](../python/what-is-revoscalepy.md)
+For more information, see [What is revoscalepy?](../python/what-is-revoscalepy.md) and the [Python function reference](https://docs.microsoft.com/r-server/python-reference/introducing-python-package-reference)
 
 ## Prerequisites
 
@@ -108,8 +108,8 @@ Let's review the code and highlight some key steps.
 
 A data source is different from a compute context. The _data source_ defines the data used in your code. The _compute context_ defines where the code will be executed.
 
-1. Create Python variables, such as `sql_query` and `sql_connection_string`, that define the source and the data you want to use. Pass these variables to the RxSqlServerData constructor to  implement the **data source object** named `data_source`.
-2. Create a compute context object by using the **RxInSqlServer** constructor. In this example, you pass the same connection string you defined earlier, on the assumption that the data is on the same SQL Server instance that you will be using as the compute context. However, the data source and the compute context could be on different servers. The resulting **compute context object** is named `sql_cc`.
+1. Create Python variables, such as `sql_query` and `sql_connection_string`, that define the source and the data you want to use. Pass these variables to the [RxSqlServerData](https://docs.microsoft.com/r-server/python-reference/revoscalepy/rxsqlserverdata) constructor to implement the **data source object** named `data_source`.
+2. Create a compute context object by using the [RxInSqlServer](https://docs.microsoft.com/r-server/python-reference/revoscalepy/rxinsqlserverdata) constructor. In this example, you pass the same connection string you defined earlier, on the assumption that the data is on the same SQL Server instance that you will be using as the compute context. However, the data source and the compute context could be on different servers. The resulting **compute context object** is named `sql_cc`.
 3. Choose the active compute context. By default, operations are run locally, which means that if you don't specify a different compute context, the data will be fetched from the data source, and the model-fitting will run in your current Python environment.
 
 ### Changing compute contexts
@@ -122,23 +122,20 @@ The same applies in the call to **rxsummary**, where the compute context is reus
 
 `summary = rx_summary("ArrDelay ~ DayOfWeek", data = data_source, compute_context = sql_compute_context)`
 
-You can also use the function **rxsetcomputecontext** to toggle between compute contexts that have already been defined. 
+You can also use the function [rx_set_computecontext](https://docs.microsoft.com/r-server/python-reference/revoscalepy/rx-set-compute-context) to toggle between compute contexts that have already been defined.
 
 ### Setting the degree of parallelism
 
-When you define the compute context, you can also set parameters that control how the data is handled by the compute context. These parameters differ depending on the data source type. 
+When you define the compute context, you can also set parameters that control how the data is handled by the compute context. These parameters differ depending on the data source type.
 
 For SQL Server compute contexts, you can set the batch size, or provide hints about the degree of parallelism to use in running tasks.
 
-The sample was run on a computer with four processors, so we set the *num_tasks* parameter to 4. If you set this value to 0, SQL Server uses the default, which is to run as many tasks in parallel as possible, under the current MAXDOP settings for the server. 
-However, even in servers with many processors, the exact number of tasks that might be allocated depends on many other factors, such as server settings, and other jobs that are running. 
-
-For more information, see [RxInSqlServer](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxinsqlserver).
+The sample was run on a computer with four processors, so we set the *num_tasks* parameter to 4. If you set this value to 0, SQL Server uses the default, which is to run as many tasks in parallel as possible, under the current MAXDOP settings for the server.However, even in servers with many processors, the exact number of tasks that might be allocated depends on many other factors, such as server settings, and other jobs that are running.
 
 ## Related samples
 
 See these Python samples and tutorials for advanced tips and end-to-end demos.
 
-+ [In-Database Python for SQL Developers](sqldev-in-database-python-for-sql-developers.md)
++ [In-Database Python for SQL developers](sqldev-in-database-python-for-sql-developers.md)
 + [Build a predictive model using Python and SQL Server](https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/)
-+ [Deploy and Consume Python Models](../python/publish-consume-python-code.md)
++ [Deploy and consume Python Models](../python/publish-consume-python-code.md)

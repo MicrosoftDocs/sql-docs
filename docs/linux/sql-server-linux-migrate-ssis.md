@@ -73,9 +73,9 @@ SSIS includes the following features:
 - a variety of transformations for cleaning, aggregating, merging, and copying data
 - application programming interfaces (APIs) for extending SSIS with your own custom scripts and components
 
-To get started with SSIS, download the latest version of [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md). Then follow the tutorial [SSIS How to Create an ETL Package](https://msdn.microsoft.com/en-us/library/ms169917.aspx).
+To get started with SSIS, download the latest version of [SQL Server Data Tools (SSDT)](/sql-docs/docs/integration-services/ssis-how-to-create-an-etl-package).
 
 ## See also
-- [Learn more about SQL Server Integration Services](https://msdn.microsoft.com/en-us/library/ms141026.aspx)
-- [SQL Server Integration Services (SSIS) Development and Management Tools](https://msdn.microsoft.com/en-us/library/ms140028.aspx)
-- [SQL Server Integration Services Tutorials](https://msdn.microsoft.com/en-us/library/jj720568.aspx)
+- [Learn more about SQL Server Integration Services](/sql-docs/docs/integration-services/sql-server-integration-services)
+- [SQL Server Integration Services (SSIS) Development and Management Tools](/sql-docs/docs/integration-services/integration-services-ssis-development-and-management-tools)
+- [SQL Server Integration Services Tutorials](/sql-docs/docs/integration-services/integration-services-tutorials)

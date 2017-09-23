@@ -201,6 +201,12 @@ ALTER AVAILABILITY GROUP [distributedag]
 GO  
 ```  
 
+## Join the database to the seondary of the second availability group
+After the database is in a restoring state on the secondary the database has to be joined to the distrbuted availability group.
+  
+```sql  
+ALTER DATABASE db1 SET HADR AVAILABILITY GROUP = distributedag;
+```  
   
 ## <a name="failover"></a> Fail over to a secondary availability group  
 Only manual failover is supported at this time. The following Transact-SQL statement fails over the distributed availability group named `distributedag`:  

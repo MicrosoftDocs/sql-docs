@@ -4,6 +4,7 @@
 ## [Release notes](sql-server-linux-release-notes.md)
 ## [What's new in this release?](sql-server-linux-whats-new.md)
 ## [New and recently updated articles](new-updated-linux.md)
+## [Editions and supported features](sql-server-linux-editions-and-components-2017.md)
 
 # Quickstarts
 ## [Install & Connect - Red Hat](quickstart-install-connect-red-hat.md)

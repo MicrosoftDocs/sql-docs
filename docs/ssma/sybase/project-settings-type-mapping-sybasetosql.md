@@ -63,7 +63,7 @@ The following table contains the default type mapping between ASE and [!INCLUDE[
 |**char varying[\*..8000]**|**varchar[\*]**|  
 |**char varying[8001..\*]**|**varchar(max)**|  
 |**char[\*..8000]**|**char[\*]**|  
-|**char[8001..\&#42;]**|**varchar(max)**|  
+|**char[8001..\*;]**|**varchar(max)**|  
 |**character**|**char**|  
 |**character varying**|**varchar**|  
 |**character varying[\*..8000]**|**varchar[\*]**|  

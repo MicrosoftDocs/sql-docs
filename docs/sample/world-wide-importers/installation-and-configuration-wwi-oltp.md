@@ -22,7 +22,7 @@ Wide World Importers OLTP database installation and configuration instructions.
 ## Prerequisites
 
 - [SQL Server 2016](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) (or higher) or [Azure SQL Database](https://azure.microsoft.com/services/sql-database/). For the Full version of the sample, use SQL Server Evaluation/Developer/Enterprise Edition.
-- [SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx). For the best results use the June 2016 release or later.
+- [SQL Server Management Studio](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms). For the best results use the June 2016 release or later.
 
 ## Download
 

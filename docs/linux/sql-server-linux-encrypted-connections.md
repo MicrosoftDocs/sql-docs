@@ -54,7 +54,7 @@ Open a command terminal on the Linux machine where [!INCLUDE[ssNoVersion](../inc
 - Restrict access to `mssql`  
    ```  
    sudo chown mssql:mssql mssql.pem mssql.key 
-   sudo chmod 400 mssql.pem mssql.key 
+   sudo chmod 600 mssql.pem mssql.key 
    ```  
  
 - Move to system SSL directories (optional)  

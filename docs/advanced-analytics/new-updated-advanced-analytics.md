@@ -13,7 +13,7 @@ ms.custom: UpdArt.exe
 ms.tgt_pltfrm: na
 ms.devlang: na
 ms.topic: updart-autogen
-ms.date: 07/17/2017
+ms.date: 09/11/2017
 ms.author: genemi
 ms.workload: advanced-analytics
 ---
@@ -29,9 +29,10 @@ Recent updates are reported for the following date range and subject:
 
 
 
-- *Date range of updates:* &nbsp; **2017-05-23** &nbsp; -to- &nbsp; **2017-07-17**
+- *Date range of updates:* &nbsp; **2017-07-18** &nbsp; -to- &nbsp; **2017-09-11**
 - *Subject area:* &nbsp; **Advanced Analytics for SQL Server**.
 
+<!-- Repo = 'MicrosoftDocs/sql-docs'.   Branch = 'live'. -->
 
 
 
@@ -39,13 +40,25 @@ Recent updates are reported for the following date range and subject:
 
 ## New Articles Created Recently
 
-The following links jump to new articles which have been added recently.
+The following links jump to new articles that have been added recently.
 
 
-1. [Common Issues with External Script Execution](common-issues-external-script-execution.md)
-2. [Data Collection for Machine Learning Troubleshooting](data-collection-ml-troubleshooting-process.md)
-3. [SQL Server Python Tutorials](tutorials/sql-server-python-tutorials.md)
-4. [SQL Server R Tutorials](tutorials/sql-server-r-tutorials.md)
+1. [How to perform realtime scoring or native scoring in SQL Server](r/how-to-do-realtime-scoring.md)
+2. [Install pretrained machine learning models on SQL Server](r/install-pretrained-models-sql-server.md)
+3. [Native scoring](sql-native-scoring.md)
+
+
+
+&nbsp;
+
+## Updated Articles with Excerpts
+
+This section displays the excerpts of updates gathered from articles that have recently experienced a large update.
+
+The excerpts displayed here appear separated from their proper semantic context. Also, sometimes an excerpt is separated from important markdown syntax that surrounds it in the actual article. Therefore these excerpts are for general guidance only. The excerpts only enable you to know whether your interests warrant taking the time to click and visit the actual article.
+
+For these and other reasons, do not copy code from these excerpts, and do not take as exact truth any text excerpt. Instead, visit the actual article.
+
 
 
 
@@ -56,19 +69,21 @@ The following links jump to new articles which have been added recently.
 
 ## Compact List of Articles Updated Recently
 
-This compact list provides links to all the updated articles which are listed in the Excerpts section.
+This compact list provides links to all the updated articles that are listed in the Excerpts section.
 
+1. [Set up Python Machine Learning Services (In-Database)](#TitleNum_1)
+2. [Introducing revoscalepy](#TitleNum_2)
+3. [Differences in machine learning features between editions of SQL Server](#TitleNum_3)
+4. [Operationalize R code (Machine Learning Services)](#TitleNum_4)
+5. [Performance for R Services: results and resources](#TitleNum_5)
+6. [Performance for R Services - data optimization](#TitleNum_6)
+7. [R package management for SQL Server](#TitleNum_7)
+8. [Set up SQL Server Machine Learning Services (In-Database)](#TitleNum_8)
+9. [SQL Server configuration for use with R](#TitleNum_9)
+10. [Performance tuning for R in SQL Server](#TitleNum_10)
+11. [Data science scenarios and solution templates](#TitleNum_11)
+12. [What's new in Machine Learning Services in SQL Server](#TitleNum_12)
 
-
-&nbsp;
-
-## Updated Articles with Excerpts
-
-This section displays the excerpts of updates gathered from articles which have recently experienced a large update.
-
-The excerpts displayed here appear separated from their proper semantic context. Also, sometimes an excerpt is separated from important markdown syntax that surrounds it in the actual article. Therefore these excerpts are for general guidance only. The excerpts only enable you to know whether your interests warrant taking the time to click and visit the actual article.
-
-For these and other reasons, do not copy code from these excerpts, and do not take as exact truth any text excerpt. Instead, visit the actual article.
 
 
 
@@ -78,43 +93,38 @@ For these and other reasons, do not copy code from these excerpts, and do not ta
 
 <a name="TitleNum_1"/>
 
-### 1. &nbsp; [Introducing revoscalepy](python/what-is-revoscalepy.md)
+### 1. &nbsp; [Set up Python Machine Learning Services (In-Database)](python/setup-python-machine-learning-services.md)
 
-*Updated: 2017-06-23* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Next](#TitleNum_2))
+*Updated: 2017-09-07* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Next](#TitleNum_2))
 
-<!-- Source markdown line 112.  ms.author= "jeannt".  -->
+<!-- Source markdown line 263.  ms.author= "jeannt".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 cab7330ac9944508aaa360e00cbc2e866455776d 33f4e0e2421fa79fc11931dc7f29bff4432c6f5a  (PR=2171  ,  Filename=what-is-revoscalepy.md  ,  Dirpath=docs\advanced-analytics\python\  ,  MergeCommitSha40=7d2dbe0bdc4cbd05f11eacf938b35a9c35ace2e7) -->
+<!-- git diff --ignore-all-space --unified=0 fbe2ef55a5caecd64bb21ce854617a10b2d65567 8cd65baf77f27db00a0a4f07f3129a4231edb48b  (PR=3084  ,  Filename=setup-python-machine-learning-services.md  ,  Dirpath=docs\advanced-analytics\python\  ,  MergeCommitSha40=05976158e43d7dfafaf02289462d1537f5beeb36) -->
 
 
 
-**Using revoscalepy with MicrosoftML**
+     [Modify the user account pool for SQL Server R Services--../r/modify-the-user-account-pool-for-sql-server-r-services.md)
+
+If you are using SQL Server Standard Edition and do not have resource governor, you can use dynamic management views and extended events to help you manage server resources. You can also use Windows event monitoring for this purpose. For more information, see [Monitoring and managing R Services--../r/managing-and-monitoring-r-solutions.md).
+
+**Upgrade the machine learning components**
 
 
-The Python functions for MicrosoftML are integrated with the compute contexts and data sources that are provided in revoscalepy. Therefore, you could use an MicrosoftML algorithm to define and train a model in Python, and use the revoscalepy functions to execute the Python code either locally or in a SQl Server compute context.
+When you install Machine Learning Services by using SQL Server 2017, you get the version of the components at the time the release was published. Each time you patch or upgrade the SQL Server instance, the machine learning components are upgraded as well.
 
-Just import the modules in your Python code, and then reference the individual functions you need.
+You can upgrade the machine learning components on a faster schedule than is supported by SQL Server releases, by installing Microsoft Machine Learning Server. When you do so, you also get any new features supported in the latest release of Machine Learning Server, such as:
 
-```
-from microsoftml.modules.logistic_regression.rx_logistic_regression import rx_logistic_regression
-from revoscalepy.functions.RxSummary import rx_summary
-from revoscalepy.etl.RxImport import rx_import_datasource
-```
++ Updates to Python packages for [revoscalepy](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package) and [microsoftml for Python](https://docs.microsoft.com/r-server/python-reference/microsoftml/microsoftml-package).
++ [Pretrained models](https://docs.microsoft.com/r-server/install/microsoftml-install-pretrained-models) for image classification and text analysis.
 
-**Requirements**
-
-
-To run Python code in SQL Server, you must have installed SQL Server 2017 together with the feature **Machine Learning Services**, and enabled the Python language. Earlier versions of SQL Server do not support Python integration.
+For information about how to upgrade an instance, see [Upgrade R components through binding--..\r\use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
 
 > [!NOTE]
-> Open source distributions of Python do not support SQL Server compute contexts. However, if you need to publish and consume Python applications from Windows, you can install Microsoft Machine Learning Server without installing SQL Server. For more information, see [Create a Standalone R Server--../r/create-a-standalone-r-server.md)
-
-**Get more help**
-
-
+>
+> The current release version contains the latest version of all machine learning components. Therefore, although upgrades via Microsoft Machine Learning Server are supported for SQL Server 2017, the upgrade that is currently available applies only to SQL Server 2016 instances.
 
 
 
@@ -126,53 +136,54 @@ To run Python code in SQL Server, you must have installed SQL Server 2017 togeth
 
 <a name="TitleNum_2"/>
 
-### 2. &nbsp; [Step 5: Train and Save a Model using T-SQL](tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md)
+### 2. &nbsp; [Introducing revoscalepy](python/what-is-revoscalepy.md)
 
-*Updated: 2017-06-01* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_1) | [Next](#TitleNum_3))
+*Updated: 2017-08-23* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_1) | [Next](#TitleNum_3))
 
-<!-- Source markdown line 121.  ms.author= "jeannt".  -->
+<!-- Source markdown line 79.  ms.author= "jeannt".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 5c1cbe92282b96105ffdb69efa803f58dc0ac7e2 e4077a2154a90de468c435efa5b2225125d5b0e7  (PR=1904  ,  Filename=sqldev-py5-train-and-save-a-model-using-t-sql.md  ,  Dirpath=docs\advanced-analytics\tutorials\  ,  MergeCommitSha40=dbf91e0d6f8257227cfe8ac6d13c484d0a566f57) -->
+<!-- git diff --ignore-all-space --unified=0 33f4e0e2421fa79fc11931dc7f29bff4432c6f5a d2eac3313a74bc5d5afd754fc357b3693e6801e1  (PR=2939  ,  Filename=what-is-revoscalepy.md  ,  Dirpath=docs\advanced-analytics\python\  ,  MergeCommitSha40=91098c850b0f6affb8e4831325d0f18fd163d71a) -->
 
 
 
-1. In [!INCLUDE[ssManStudio--../../includes/ssmanstudio-md.md)], open a new Query window and run the following statement to create the stored procedure _TrainTipPredictionModelRxPy_.  This model will be based on the training data you just prepared. Because the stored procedure already includes a definition of the input data, you don't need to provide an input query.
+| (column_1) | (column_2) | (column_3) |
+| :-- | :-- | :-- |
+|`rx_btrees` | Fit stochastic gradient boosted decision trees|`rx_btrees_ex` in CTP 2.0|
+|`rx_dforest` | Fit classification and regression decision forests|`rx_dforest_ex` in CTP 2.0|
+|`rx_dtree` | Fit classification and regression trees |`rx_dtree_ex` in CTP 2.0|
+|`rx_lin_mod` | Create a linear model|`rx_lin_mod_ex` in CTP 2.0|
+|`rx_logit` | Create a logistic regression model|`rx_logit_ex` in CTP 2.0|
+|`rx_predict` | Generate predictions from a trained model|`rx_predict_ex` in CTP 2.0|
+|`rx_summary` | Generate a summary of the model||
 
-    ```SQL
-    DROP PROCEDURE IF EXISTS TrainTipPredictionModelRxPy;
-    GO
+New machine learning algorithms are also provided by the Python version of [MicrosoftML](https://docs.microsoft.com/en-us/r-server/python-reference/microsoftml/microsoftml-package):
 
-    CREATE PROCEDURE [dbo].[TrainTipPredictionModelRxPy] (@trained_model varbinary(max) OUTPUT)
-    AS
-    BEGIN
-    EXEC sp_execute_external_script 
-      @language = N'Python',
-      @script = N'
-    import numpy
-    import pickle
-    import pandas
-    from revoscalepy.functions.RxLogit import rx_logit_ex
-    
-    ## Create a logistic regression model using rx_logit_ex function from revoscalepy package
-    logitObj = rx_logit_ex("tipped ~ passenger_count + trip_distance + trip_time_in_secs + direct_distance", data = InputDataSet);
-    
-    ## Serialize model
-    trained_model = pickle.dumps(logitObj)
-    ',
-    @input_data_1 = N'
-    select tipped, fare_amount, passenger_count, trip_time_in_secs, trip_distance, 
-    dbo.fnCalculateDistance(pickup_latitude, pickup_longitude,  dropoff_latitude, dropoff_longitude) as direct_distance
-    from nyctaxi_sample_training
-    ',
-    @input_data_1_name = N'InputDataSet',
-    @params = N'@trained_model varbinary(max) OUTPUT',
-    @trained_model = @trained_model OUTPUT;
-    ;
-    END;
-    ```
+| Function| Description|
+| ------ | ------ |
+|`rx_fast_forest` |Create a decision forest model|
+|`rx_fast_linear` | Linear regression with stochastic dual coordinate ascent|
+|`rx_fast_trees` | Create a boosted tree model |
+|`rx_logistic_regression` | Create a logistic regression model|
+|`rx_neural_network` | Create a customizable neural network model |
+|`rx_oneclass_svm` | Creates a SVM model on an imbalanced dataset, for use in anomaly detection|
+
+> [!TIP]
+> Many of these algorithms are already provided as modules in Azure Machine Learning.
+
+MicrosoftML for Python also includes a variety of transformations and helper functions, such as:
+
++ `rx_predict` generates predictions from a trained model and can be used for realtime scoring
++ image featurization functions
++ functions for text processing and sentiment extraction
+
+For details, see [Introduction to MicrosoftML](https://docs.microsoft.com/r-server/r/concept-what-is-the-microsoftml-package)
+
+
+> [!NOTE]
+> The Python community uses coding conventions that might be different than what you're used to, including all lowercase letters and underscores rather than camel casing for parameter names. Also, maybe you've noticed that the **revoscalepy** library is always lowercase. That's right! Another Python convention.
 
 
 
@@ -184,51 +195,37 @@ To run Python code in SQL Server, you must have installed SQL Server 2017 togeth
 
 <a name="TitleNum_3"/>
 
-### 3. &nbsp; [Step 6: Operationalize the Model](tutorials/sqldev-py6-operationalize-the-model.md)
+### 3. &nbsp; [Differences in machine learning features between editions of SQL Server](r/differences-in-r-features-between-editions-of-sql-server.md)
 
-*Updated: 2017-06-01* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_2) | [Next](#TitleNum_4))
+*Updated: 2017-08-28* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_2) | [Next](#TitleNum_4))
 
-<!-- Source markdown line 236.  ms.author= "jeannt".  -->
+<!-- Source markdown line 47.  ms.author= "jeannt".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 1eb50ac902d4e80bafb1dd7fdf8f607dcdf0d33f 57d5abdc6119db1ecd81587d625054a5bbfb5fc8  (PR=1904  ,  Filename=sqldev-py6-operationalize-the-model.md  ,  Dirpath=docs\advanced-analytics\tutorials\  ,  MergeCommitSha40=dbf91e0d6f8257227cfe8ac6d13c484d0a566f57) -->
+<!-- git diff --ignore-all-space --unified=0 b5890e212063f3ef228e69afe54e226320d2467f 4e0357701d960c0b8dbda1ac8d56a82f3335c77f  (PR=2964  ,  Filename=differences-in-r-features-between-editions-of-sql-server.md  ,  Dirpath=docs\advanced-analytics\r\  ,  MergeCommitSha40=7b4f037616e0559ac62bbae5dbe04aeffe529b06) -->
 
 
 
-Here is the definition of the stored procedure that performs scoring using the **revoscalepy** model.
+     Only Express Edition with Advanced Services includes the machine learning features. The performance limitations are similar to Standard Edition. Web edition is not intended for tasks such as creating machine learning models; however, you can use the PREDICT function to perform scoring using models trained elsewhere.
 
-```
-CREATE PROCEDURE [dbo].[PredictTipSingleModeRxPy] (@model varchar(50), @passenger_count int = 0,
-  @trip_distance float = 0,
-  @trip_time_in_secs int = 0,
-  @pickup_latitude float = 0,
-  @pickup_longitude float = 0,
-  @dropoff_latitude float = 0,
-  @dropoff_longitude float = 0)
-AS
-BEGIN
-  DECLARE @inquery nvarchar(max) = N'
-    SELECT * FROM [dbo].[fnEngineerFeatures-- 
-      @passenger_count,
-      @trip_distance,
-      @trip_time_in_secs,
-      @pickup_latitude,
-      @pickup_longitude,
-      @dropoff_latitude,
-      @dropoff_longitude)
-    '
-  DECLARE @lmodel2 varbinary(max) = (select model from nyc_taxi_models2 where name = @model);
-  EXEC sp_execute_external_script 
-    @language = N'Python',
-    @script = N'
-      import pickle;
-      import numpy;
-      import pandas;
-      from revoscalepy.functions.RxPredict import rx_predict_ex;
-```
+-   **Azure SQL Database**
 
+     Machine learning features such as R and Python scripting are currently not supported in Azure SQL Database.
+
+     For more information, and announcements about when this feature will be available, see the SQL Server blog: [Python in SQL Server 2017: enhanced in-database machine learning](https://blogs.technet.microsoft.com/dataplatforminsider/2017/04/19/python-in-sql-server-2017-enhanced-in-database-machine-learning/)
+
+
+**Languages supported in all editions**
+
+
+The following machine learning languages are supported for all editions:
+
++ SQL Server 2017: R and Python
++ SQL Server 2016: R only
+
+Microsoft R Open is included with all editions.
 
 
 
@@ -240,84 +237,453 @@ BEGIN
 
 <a name="TitleNum_4"/>
 
-### 4. &nbsp; [Use Python with revoscalepy to Create a Model](tutorials/use-python-revoscalepy-to-create-model.md)
+### 4. &nbsp; [Operationalize R code (Machine Learning Services)](r/operationalizing-your-r-code.md)
 
-*Updated: 2017-06-21* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_3))
+*Updated: 2017-07-27* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_3) | [Next](#TitleNum_5))
 
-<!-- Source markdown line 119.  ms.author= "jeannt".  -->
+<!-- Source markdown line 56.  ms.author= "jeannt".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 7e11d9a5db93932ec89ca96b5337aa4ea03c1d13 0779f06444b5b73ae2dff8bc190d0e388b4ae8e7  (PR=2660  ,  Filename=operationalizing-your-r-code.md  ,  Dirpath=docs\advanced-analytics\r\  ,  MergeCommitSha40=70a1fd4dbec68d22187585de69a1d603c39e259e) -->
+
+
+
++ [Realtime--../real-time-scoring.md) scoring, optimized  for small batches
++ Single-row scoring, for calling from an application
++ [Native scoring--../sql-native-scoring.md), for fast batch prediction from SQL Server without calling R
+
+This walkthrough provides examples of scoring using a stored procedure in both batch and single-row modes:
+
++ [End to end data science walkthrough for R in SQL Server--../tutorials/walkthrough-data-science-end-to-end-walkthrough.md)
+
+See these solution templates for examples of how to integrate scoring in an application:
+
++ [Retail forecasting](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/RetailForecasting/Introduction.md)
++ [Fraud detection](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/FraudDetection/Introduction.md)
++ [Customer clustering](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/r-services/getting-started/customer-clustering)
+
+**Boost performance and scale**
+
+
+Although the open source R language is known to have limitations, the RevoScaleR package APIs can operate on large datasets and benefit from multi-threaded, multi-core, multi-process in-database computations.
+
+If your R solution uses complex aggregations or involves large datasets, you can leverage SQL Server's highly efficient in-memory aggregations and columnstore indexes, and let the R code handle the statistical computations and scoring.
+
+For more information about how to improve performance in SQL Server Machine Learning, see:
+
++ [Performance tuning for SQL Server R Services--../../advanced-analytics/r/sql-server-r-services-performance-tuning.md)
++ [Performance optimization tips and tricks](https://gallery.cortanaintelligence.com/Tutorial/SQL-Server-Optimization-Tips-and-Tricks-for-Analytics-Services)
+
+**Adapt R code for other platforms or compute contexts**
+
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_5"/>
+
+### 5. &nbsp; [Performance for R Services: results and resources](r/performance-case-study-r-services.md)
+
+*Updated: 2017-07-19* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_4) | [Next](#TitleNum_6))
+
+<!-- Source markdown line 282.  ms.author= "jeannt".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 0886939f86fe12d7ff7b339689a02c7fc75e0786 23dd469349a05d535063aab3c14aec152ed2cd7b  (PR=2141  ,  Filename=use-python-revoscalepy-to-create-model.md  ,  Dirpath=docs\advanced-analytics\tutorials\  ,  MergeCommitSha40=76839e39427e24688609353b8708d59fee772d28) -->
+<!-- git diff --ignore-all-space --unified=0 40c8cd255ead88edc60531d45dd0377ecbaf7c9b eeca5eed96e2223508910b246dbff18173eecea3  (PR=2565  ,  Filename=performance-case-study-r-services.md  ,  Dirpath=docs\advanced-analytics\r\  ,  MergeCommitSha40=cf8509cab2424529ca0ed16c936fa63a139dfca4) -->
 
 
 
-**Review the code**
+Both the RevoScaleR and MicrosoftML packages were used to train a predictive model in a complex R solution involving large datasets. SQL queries and R code were identical. All tests were conducted on a single Azure VM with SQL Server installed. The author then compared scoring times with and without these optimizations provided by SQL Server:
+
+- In-memory tables
+- Soft-NUMA
+- Resource Governor
+
+To assess the effect of soft-NUMA on R script execution, the data science team tested the solution on an Azure virtual machine with 20 physical cores. On these physical cores, four soft-NUMA nodes were created automatically, such that each node contained five cores.
+
+CPU affinitization was enforced in the resume-matching scenario, to assess the impact on R jobs. Four **SQL resource pools** and four **external resource pools** were created, and CPU affinity was specified to ensure that the same set of CPUs would be used in each node.
+
+Each of the resource pools was assigned to a different workload group, to optimize hardware utilization. The reason is that Soft-NUMA and CPU affinity cannot divide physical memory in the physical NUMA nodes; therefore, by definition all soft NUMA nodes that are based on the same physical NUMA node must use memory in the same OS memory block. In other words, there is no
+memory-to-processor affinity.
+
+The following process was used to create this configuration:
+
+1. Reduce the amount of memory allocated by default to SQL Server.
+
+2. Create four new pools for running the R jobs in parallel.
+
+3. Create four workload groups such that each workload group is associated with a resource pool.
+
+4. Restart Resource Governor with the new workload groups and assignments.
+
+5. Create a user-defined classifier function (UDF) to assign different tasks on different workload groups.
+
+6. Update the Resource Governor configuration to use the function for appropriate workload groups.
 
 
-Let's review the code and highlight some key steps.
-
-**Defining a data source and compute context**
-
-
-This is an important part of using **revoscalepy** and its related R package **RevoScaleR**. A data source is different from a compute context. The _data source_ defines the data used in your code. The _compute context_ defines where the code will be executed.
-
-> [!NOTE]
-> Support for some data source types supported in RevoScaleR might be limited in the pre-release version. For more information about functions included in the latest release, see [What is revoscalepy--../python/what-is-revoscalepy.md).
-
-The overall process for creating and using a data source and compute context is as follows:
-
-1. Create Python variables, such as _sqlQuery_ and _connectionString_, that define the source and the data you want to use. Pass these variables to the **RxSqlServerData** constructor to  implement the **data source object** named _dataSource_.
-2. Create a compute context object by using the **RxInSqlServer** constructor. In this example, you pass the same connection string you defined earlier, on the assumption that the data is on the same SQL Server instance that you will be using as the compute context. However, the data source and the compute context could be on different servers. The resulting **compute context object** is named _computeContext_.
-3. Choose the active compute context. By default, operations are run locally, which means that if you don't specify a different compute context, the data will be fetched from the data source, and the model-fitting will run in your current Python environment.
-
-    In RevoScaleR, you can also use the function `rxSetComputeContext` to toggle between compute contexts. The function is not implemented yet in the preview version of **revoscalepy**, but you can specify the compute context as an argument to **rx_lin_mod_ex**.
-
-
-
-
-
-<a name="similars2"/>
 
 &nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_6"/>
+
+### 6. &nbsp; [Performance for R Services - data optimization](r/r-and-data-optimization-r-services.md)
+
+*Updated: 2017-07-19* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_5) | [Next](#TitleNum_7))
+
+<!-- Source markdown line 107.  ms.author= "jeannt".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 2ae2e54e8c5c8a3ec92fd2017088dd6ee879a9a1 9cb06bdce4ad6dfa2e9dc19da49103a6cd9817b3  (PR=2565  ,  Filename=r-and-data-optimization-r-services.md  ,  Dirpath=docs\advanced-analytics\r\  ,  MergeCommitSha40=cf8509cab2424529ca0ed16c936fa63a139dfca4) -->
+
+
+
+> If a table is specified in the data source instead of a query, R Services uses internal heuristics to determines the necessary columns to fetch from the table; however, this approach is unlikely to result in parallel execution.
+
+To ensure that the data can be analyzed in parallel, the query used to retrieve the data should be framed in such a way that the database engine can create a parallel query plan. If the code or algorithm uses large volumes of data, make sure that the query given to `RxSqlServerData` is optimized for parallel execution. A query that does not result in a parallel execution plan can result in a single process for computation.
+
+If you need to work with large datasets, use Management Studio or another SQL query analyzer before you run your R code, to analyze the execution plan. Then, take any recommended steps to improve the performance of the query. For example, a missing index on a table can affect the time taken to execute a query. For more information, see [Monitor and Tune for Performance--../../relational-databases/performance/monitor-and-tune-for-performance.md).
+
+Another common mistake that can affect performance is that a query retrieves more columns than are required. For example, if a formula is based on only three columns, but your source table has 30 columns, you are moving data unnecessarily.
+
+ + Avoid using `SELECT *`!
+ + Take some time to review the columns in the dataset and identify only the ones needed for analysis
+ + Remove from your queries any columns that contain data types that are incompatible with R code, such as GUIDS and rowguids
+ + Check for unsupported date and time formats
+ + Rather than load a table, create a view that selects certain values or casts columns to avoid conversion errors
+
+**Optimizing the machine learning algorithm**
+
+
+This section provides miscellaneous tips and resources that are specific to RevoScaleR and other options in Microsoft R.
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_7"/>
+
+### 7. &nbsp; [R package management for SQL Server](r/r-package-management-for-sql-server-r-services.md)
+
+*Updated: 2017-08-23* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_6) | [Next](#TitleNum_8))
+
+<!-- Source markdown line 22.  ms.author= "jeannt".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 2add5a7e1aef02487ac875e353c51161658050a4 5da92dd8b5402266a837172bda9aaabed3162ce8  (PR=2939  ,  Filename=r-package-management-for-sql-server-r-services.md  ,  Dirpath=docs\advanced-analytics\r\  ,  MergeCommitSha40=91098c850b0f6affb8e4831325d0f18fd163d71a) -->
+
+
+
+This topic describes the package management features that you can use to manage R packages that are running on an instance of SQL Server.
+
+**Applies to:** SQL Server 2016 R Services, SQL Server 2017 Machine Learning Services
+
+**Package management using T-SQL**
+
+
+You can continue to install R packages as an administrator on the computer, if you have those privileges, and if you are the only person using the server for machine learning jobs.
+
+However, if you need to share packages with others, or if multiple people need to run machine learning jobs on the server, it is more efficient to set up a shared package library. SQL Server supports this through database roles.
+
+The database administrator is responsible for setting up roles and adding users to the roles. Through roles, the database administrator can control who has permission to add or remove R packages from the SQL Server environment, and can audit package installation.
+
+**Database roles for package management**
+
+
+The following new database roles support secure installation and R package management in SQL Server:
+
+- `rpkgs-users`: Allows users to use any shared packages that were installed by members of the `rpkgs-shared` role.
+
+- `rpkgs-private`: Provides access to shared packages with the same permissions as the `rpkgs-users` role. Members of this role can also install, remove and use privately scoped packages.
+
+-  `rpkgs-shared`: Provides the same permissions as the `rpkgs-private` role. Users who are members of this role can also install or remove shared packages.
+
+- `db_owner`: Has the same permissions as the `rpkgs-shared` role. Can also grant users the right to install or remove both shared and private packages.
+
+**Creating an external package library using T-SQL**
+
+
+In addition, SQL Server 2017 supports the T-SQL statement, **CREATE EXTERNAL LIBRARY**, to support management by database administrator of external libraries. Currently you can use this statement to create Windows-based libraries for R. Additional support is planned in future for Python packages, and for packages written for execution on other platforms, such as Linux.
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_8"/>
+
+### 8. &nbsp; [Set up SQL Server Machine Learning Services (In-Database)](r/set-up-sql-server-r-services-in-database.md)
+
+*Updated: 2017-09-07* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_7) | [Next](#TitleNum_9))
+
+<!-- Source markdown line 240.  ms.author= "jeannt".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 452dc36b4d0097f9562642238ba49eea0373d25b 4d355f6494b417dd90dce3943e7176eaece7336e  (PR=3070  ,  Filename=set-up-sql-server-r-services-in-database.md  ,  Dirpath=docs\advanced-analytics\r\  ,  MergeCommitSha40=0b832a9306244210e693bde7c476269455e9b6d8) -->
+
+
+
+If you create an R solution on a data science client computer and need to run code by using the SQL Server computer as the compute context, you can use either a SQL login or integrated Windows authentication.
+
+* For SQL logins: Ensure that the login has appropriate permissions on the database where you will be reading data. You can do so by adding *Connect to* and *SELECT* permissions, or by adding the login to the *db_datareader* role. For logins that need to create objects, add *DDL_admin* rights. For logins that must save data to tables, add the login to the *db_datawriter* role.
+
+* For Windows authentication: You might need to configure an ODBC data source on the data science client that specifies the instance name and other connection information. For more information, see [ODBC data source administrator](https://docs.microsoft.com/sql/odbc/admin/odbc-data-source-administrator).
+
+**Next steps**
+
+
+After you have verified that the script-execution feature works in SQL Server, you can run R and Python commands from SQL Server Management Studio, Visual Studio Code, or any other client that can send T-SQL statements to the server.
+
+However, you might want to make some changes to the system configuration to support heavy use of machine learning, or add new R packages.
+
+This section lists some common modifications you can make to support machine learning.
+
+**Add more worker accounts**
+
+
+If you think you might use R heavily, or if you expect many users to be running scripts concurrently, you can increase the number of worker accounts that are assigned to the Launchpad service. For more information, see [Modify the user account pool for SQL Server R Services--modify-the-user-account-pool-for-sql-server-r-services.md).
+
+**<a name="bkmk_optimize"></a>Optimize the server for external script execution**
+
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_9"/>
+
+### 9. &nbsp; [SQL Server configuration for use with R](r/sql-server-configuration-r-services.md)
+
+*Updated: 2017-07-27* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_8) | [Next](#TitleNum_10))
+
+<!-- Source markdown line 149.  ms.author= "jeannt".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 3f57bae70e3c118c1e2bcd57017322940bae83f8 f296242d470db47077cba4215ef420bd0c60bf33  (PR=2660  ,  Filename=sql-server-configuration-r-services.md  ,  Dirpath=docs\advanced-analytics\r\  ,  MergeCommitSha40=70a1fd4dbec68d22187585de69a1d603c39e259e) -->
+
+
+
+If the query returns a single memory node (node 0), either you do not have hardware NUMA, or the hardware is configured as interleaved (non-NUMA). SQL Server also ignores hardware NUMA when there four or fewer CPUs, or if at least one node has only one CPU.
+
+If your computer has multiple processors but does not have hardware-NUMA, you can also use [Soft-NUMA](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server) to subdivide CPUs into smaller groups.  In both SQL Server 2016 and SQL Server 2017, the Soft-NUMA feature is automatically enabled when starting the SQL Server service.
+
+When Soft-NUMA is enabled, SQL Server automatically manages the nodes for you; however, to optimize for specific workloads, you can disable _soft affinity_ and manually configure CPU affinity for the soft NUMA nodes. This can give you more control over which workloads are assigned to which nodes, particularly if you are using an edition of SQL Server that supports resource governance. By specifying CPU affinity and aligning resource pools with groups of CPUs, you can reduce latency, and ensure that related processes are performed within the same NUMA node.
+
+The overall process for configuring soft-NUMA and CPU affinity to support R workloads is as follows:
+
+1. Enable soft-NUMA, if available
+2. Define processor affinity
+3. Create resource pools for external processes, using [Resource Governor--../r/resource-governance-for-r-services.md)
+4. Assign the [workload groups--../../relational-databases/resource-governor/resource-governor-workload-group.md) to specific affinity groups
+
+For details, including sample code, see this tutorial: [SQL Optimization Tips and Tricks (Ke Huang)](https://gallery.cortanaintelligence.com/Tutorial/SQL-Server-Optimization-Tips-and-Tricks-for-Analytics-Services)
+
+**Other resources:**
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_10"/>
+
+### 10. &nbsp; [Performance tuning for R in SQL Server](r/sql-server-r-services-performance-tuning.md)
+
+*Updated: 2017-07-19* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_9) | [Next](#TitleNum_11))
+
+<!-- Source markdown line 76.  ms.author= "jeannt".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 9c30753efdec81e499d5654b5b7a07f0cfe5b003 136a9f483bc8c9e1f69cf9d340d1472c21a52ec4  (PR=2565  ,  Filename=sql-server-r-services-performance-tuning.md  ,  Dirpath=docs\advanced-analytics\r\  ,  MergeCommitSha40=cf8509cab2424529ca0ed16c936fa63a139dfca4) -->
+
+
+
+- Configure the SQL Server instance to balance database engine operations and R or Python script execution at appropriate levels. This can include changing SQL Server defaults for memory and CPU usage, NUMA and processor affinity settings, and creation of resource groups.
+
+- Optimize the server computer to support efficient use of external scripts. This can include increasing the number of accounts used for external script execution, enabling package management, and assigning users to related security roles.
+
+- Applying optimizations specific to data storage and transfer in SQL Server, including indexing and statistics strategies, query design and query optimization, and the design of tables that are used for machine learning. You might also analyze data sources and data transport methods, or modify ETL processes to optimize feature extraction.
+
+- Tune the analytical model to avoid inefficiencies. The scope of the optimizations that are possible depend on the complexity of your R code and the packages and data you are using. Key tasks include eliminating costly data transformations or offloading data preparation or feature engineering tasks from R or Python to ETL processes or SQL. You might also refactor scripts, eliminate in-line package installs, divide R code into separate procedures for training, scoring, and evaluation, or simplify code to work more efficiently as a stored procedure.
+
+**Articles in this series**
+
+
++ [Performance tuning for R in SQL Server - hardware--..\r\sql-server-configuration-r-services.md)
+
+    Provides guidance for configuring the hardware that ..!NCLUDE-NotShown--ssNoVersion_md--..\..\includes\ssnoversion-md.md)] is installed on, and for configuring the SQL Server instance to better support external scripts. It is particularly useful for **database administrators**.
+
++ [Performance tuning for R in SQL Server - code and data optimization--..\r\r-and-data-optimization-r-services.md)
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_11"/>
+
+### 11. &nbsp; [Data science scenarios and solution templates](tutorials/data-science-scenarios-and-solution-templates.md)
+
+*Updated: 2017-08-28* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_10) | [Next](#TitleNum_12))
+
+<!-- Source markdown line 45.  ms.author= "jeannt".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 22c621731015f2192cb0b8d61b22062a4be50e70 6cf9e3f0a3803ed2bce9c4ffadfd7314f15f6b51  (PR=2964  ,  Filename=data-science-scenarios-and-solution-templates.md  ,  Dirpath=docs\advanced-analytics\tutorials\  ,  MergeCommitSha40=7b4f037616e0559ac62bbae5dbe04aeffe529b06) -->
+
+
+
+[Predict how and when to contact leads](https://microsoft.github.io/r-server-campaign-optimization/)
+
+**What:** This solution uses insurance industry data to predict leads based on demographics, historical response data, and product-specific details.  Recommendations are also generated to indicate the best channel and time to approach users to influence purchase behavior.
+
+**How:** The solution creates and compares multiple models. The solution also demonstrates automated data integration and data preparation using stored procedures. Parallel samples are provided for SQL Server in-database, in Azure, and HDInsight Spark.
+
+**Health care: predict length of stay in hospital**
+
+
+[Predicting length of stay in hospitals](https://gallery.cortanaintelligence.com/Solution/Predicting-Length-of-Stay-in-Hospitals-1)
+
+**What:** Accurately predicting which patients might require long-term hospitalization is an important part of both care and planning. Administrators need to be able to determine which facilities require more resources, and caregivers want to guarantee that they can meet the needs of patients.
+
+**How:** This solution uses the Data Science Virtual Machine, and includes an instance of SQL Server with machine learning enabled. It also includes a set of Power BI reports that you can use to interact with a deployed model.
+
+**Customer churn**
+
+
+[Customer churn prediction template (SQL Server R Services)](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/Churn/Introduction.md)
+
+**What:** Analyzing and predicting customer churn is important in any industry where the loss of customers to competitors must be managed and prevented:  banking, telecommunications, and retail, to name a few. The goal of churn analysis is to identify which customers are likely to churn, and then take appropriate actions to retain such customers and keep their business.
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_12"/>
+
+### 12. &nbsp; [What's new in Machine Learning Services in SQL Server](what-s-new-in-sql-server-machine-learning-services.md)
+
+*Updated: 2017-08-02* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_11))
+
+<!-- Source markdown line 33.  ms.author= "jeannt".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 025e68a93895a3788a63847cd91bff068775acf3 6dc0be2920c670235038a126d135e08d6f16ec3a  (PR=2712  ,  Filename=what-s-new-in-sql-server-machine-learning-services.md  ,  Dirpath=docs\advanced-analytics\  ,  MergeCommitSha40=ea75391663eb4d509c10fb785fcf321558ff0b6e) -->
+
+
+
+> Machine learning services, including use of R or Python, are currently not supported when running SQL Server on Linux, or in Azure SQL database. Look for changes in a later release.
+>
+> However, native scoring using the PREDICT function is currently supported in the Linux edition.
+
+**In-database Python integration**
+
+
+You can run Python in stored procedures, or execute Python remotely using the SQL Server computer as the compute context. This integration opens up new avenues for the vast community of Python developers and data scientists to use the power of SQL Server, and to explore innovations from Microsoft such as **revoscalepy** and **microsoftml**.
+
+SQL Server developers gain access to the extensive Python libraries from the open source ecosystem, including popular frameworks such as scikit-learn, Tensorflow, Caffe and Theano/Keras.
+
+But running Python in-database isn't just for machine learning; there are a myriad of other potential applications for integrating Python with SQL, leveraging the strengths of the respective languages to deliver more intelligent, powerful solutions.
+
++ **revoscalepy**
+
+    This release includes the final version of **revoscalepy**, which supplies Pythonic equivalents of the scalable, streaming algorithms in RevoScaleR. You can create Python models for linear and logistic regressions, decision trees, boosted trees, and random forests, all parallelizable, and capable of being run in remote compute contexts.
+
+    For more information, see [What is revoscalepy--python/what-is-revoscalepy.md).
+
++ Remote compute contexts for Python
+
+    This release supports use of multiple data sources and remote compute contexts. The data scientist or developer can execute Python code on a remote SQL Server, to explore data or build models without moving data. Use of remote compute contexts requires **revoscalepy**.
+
+
+
+
+
+
 
 ## Similar Articles
 
-This section lists very similar articles for recently updated articles in other subject areas, within the same GitHub.com repository: [MicrosoftDocs/**sql-docs-pr**](https://github.com/microsoftdocs/sql-docs-pr/).
+<!--  HOW TO:
+    Refresh this file's line items with the latest 'Count-in-Similars*' content.
+    Then run Run-533-*.BAT
+-->
 
-<!--  20170717-1101  -->
+This section lists very similar articles for recently updated articles in other subject areas, within our public GitHub.com repository: [MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/).
 
 #### Subject areas which do have new or recently updated articles
 
-- [New + Updated (4+4) : **Advanced Analytics for SQL** docs](../advanced-analytics/new-updated-advanced-analytics.md)
-- [New + Updated (2+0) : **Analysis Services for SQL** docs](../analysis-services/new-updated-analysis-services.md)
-- [New + Updated (1+2) : **Connect to SQL** docs](../connect/new-updated-connect.md)
-- [New + Updated (6+0) : **Database Engine for SQL** docs](../database-engine/new-updated-database-engine.md)
-- [New + Updated (13+2): **Linux for SQL** docs](../linux/new-updated-linux.md)
-- [New + Updated (1+0) : **Master Data Services (MDS) for SQL** docs](../master-data-services/new-updated-master-data-services.md)
-- [New + Updated (1+0) : **ODBC (Open Database Connectivity) for SQL** docs](../odbc/new-updated-odbc.md)
-- [New + Updated (8+4) : **Relational Databases for SQL** docs](../relational-databases/new-updated-relational-databases.md)
-- [New + Updated (2+2) : **Microsoft SQL Server** docs](../sql-server/new-updated-sql-server.md)
-- [New + Updated (0+1) : **SQL Server Management Studio (SSMS)** docs](../ssms/new-updated-ssms.md)
-- [New + Updated (1+0) : **Transact-SQL** docs](../t-sql/new-updated-t-sql.md)
-- [New + Updated (1+0) : **Tools for SQL** docs](../tools/new-updated-tools.md)
-
+- [New + Updated (3+12) : **Advanced Analytics for SQL** docs](../advanced-analytics/new-updated-advanced-analytics.md)
+- [New + Updated (5+0)  : **Connect to SQL** docs](../connect/new-updated-connect.md)
+- [New + Updated (5+1)  : **Database Engine for SQL** docs](../database-engine/new-updated-database-engine.md)
+- [New + Updated (19+82): **Integration Services for SQL** docs](../integration-services/new-updated-integration-services.md)
+- [New + Updated (1+8)  : **Linux for SQL** docs](../linux/new-updated-linux.md)
+- [New + Updated (12+1) : **Relational Databases for SQL** docs](../relational-databases/new-updated-relational-databases.md)
+- [New + Updated (0+1)  : **Reporting Services for SQL** docs](../reporting-services/new-updated-reporting-services.md)
+- [New + Updated (7+1)  : **Microsoft SQL Server** docs](../sql-server/new-updated-sql-server.md)
+- [New + Updated (1+1)  : **SQL Server Data Tools (SSDT)** docs](../ssdt/new-updated-ssdt.md)
+- [New + Updated (0+2)  : **SQL Server Migration Assistant (SSMA)** docs](../ssma/new-updated-ssma.md)
+- [New + Updated (1+4)  : **SQL Server Management Studio (SSMS)** docs](../ssms/new-updated-ssms.md)
+- [New + Updated (4+1)  : **Transact-SQL** docs](../t-sql/new-updated-t-sql.md)
+- [New + Updated (0+1)  : **Tools for SQL** docs](../tools/new-updated-tools.md)
 
 #### Subject areas which have no new or recently updated articles
 
 - [New + Updated (0+0): **ActiveX Data Objects (ADO) for SQL** docs](../ado/new-updated-ado.md)
+- [New + Updated (0+0): **Analysis Services for SQL** docs](../analysis-services/new-updated-analysis-services.md)
 - [New + Updated (0+0): **Data Quality Services for SQL** docs](../data-quality-services/new-updated-data-quality-services.md)
 - [New + Updated (0+0): **Data Mining Extensions (DMX) for SQL** docs](../dmx/new-updated-dmx.md)
-- [New + Updated (0+0): **Integration Services for SQL** docs](../integration-services/new-updated-integration-services.md)
+- [New + Updated (0+0): **Master Data Services (MDS) for SQL** docs](../master-data-services/new-updated-master-data-services.md)
 - [New + Updated (0+0): **Multidimensional Expressions (MDX) for SQL** docs](../mdx/new-updated-mdx.md)
+- [New + Updated (0+0): **ODBC (Open Database Connectivity) for SQL** docs](../odbc/new-updated-odbc.md)
 - [New + Updated (0+0): **PowerShell for SQL** docs](../powershell/new-updated-powershell.md)
-- [New + Updated (0+0): **Reporting Services for SQL** docs](../reporting-services/new-updated-reporting-services.md)
 - [New + Updated (0+0): **Samples for SQL** docs](../sample/new-updated-sample.md)
-- [New + Updated (0+0): **SQL Server Data Tools (SSDT)** docs](../ssdt/new-updated-ssdt.md)
-- [New + Updated (0+0): **SQL Server Migration Assistant (SSMA)** docs](../ssma/new-updated-ssma.md)
 - [New + Updated (0+0): **XQuery for SQL** docs](../xquery/new-updated-xquery.md)
 
-
-&nbsp;
 

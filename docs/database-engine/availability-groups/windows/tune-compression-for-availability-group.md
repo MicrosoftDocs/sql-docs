@@ -45,4 +45,4 @@ Trace flag | Description
 
 [Automatic Seeding](https://msdn.microsoft.com/library/mt735149(SQL.130).aspx)
 
-[Always On Prerequisites](https://msdn.microsoft.com/library/ff878487.aspx) 
+[Always On Prerequisites](/sql-docs/docs/database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability) 

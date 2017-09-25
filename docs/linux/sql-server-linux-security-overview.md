@@ -21,7 +21,7 @@ SQL Server on Linux currently has the following limitations:
 * Using keys stored in the Azure Key Vault is not supported.
 * SQL Server generates its own self-signed certificate for encrypting connections. Currently, SQL Server cannot be configured to use a user provided certificate for SSL or TLS. 
 
-For more infomation about security features available in SQL Server, see the [Security Center for SQL Server Database Engine and Azure SQL Database](https://msdn.microsoft.com/library/bb510589.aspx).
+For more infomation about security features available in SQL Server, see the [Security Center for SQL Server Database Engine and Azure SQL Database](/sql-docs/docs/relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database).
 
 ## Next steps
 

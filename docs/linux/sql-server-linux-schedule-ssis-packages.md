@@ -64,7 +64,7 @@ To understand the format of the sample command, review the information in the fo
 
 The following image shows the format description of the job line added to the `crontab` file.
 
-![](ssis-linux-cron-job-definition.png)
+![](media/sql-server-linux-schedule-ssis-packages/ssis-linux-cron-job-definition.png)
 
 To get a more detailed description of the `crontab' file format, use the following command:
 
@@ -72,4 +72,4 @@ To get a more detailed description of the `crontab' file format, use the followi
 
 Here's an example of the output:
 
-![](ssis-linux-cron-crontab-format.png)
+![](media/sql-server-linux-schedule-ssis-packages/ssis-linux-cron-crontab-format.png)

@@ -15,7 +15,8 @@
 ## [1_Migrate from Windows](sql-server-linux-migrate-restore-database.md)
 ## [2_Migrate from Oracle](../ssma/oracle/sql-server-linux-convert-from-oracle.md?toc=%2fsql%2flinux%2ftoc.json)
 ## [3_Create a job](sql-server-linux-run-sql-server-agent-job.md)
-## [4_Create FCI](sql-server-linux-shared-disk-cluster-configure.md)
+## [4_Setup AD Authentication](sql-server-linux-active-directory-authentication.md)
+## [5_Create FCI](sql-server-linux-shared-disk-cluster-configure.md)
 ### [iSCSI](sql-server-linux-shared-disk-cluster-configure-iscsi.md)
 ### [NFS](sql-server-linux-shared-disk-cluster-configure-nfs.md)
 ### [SMB](sql-server-linux-shared-disk-cluster-configure-smb.md)
@@ -76,7 +77,6 @@
 ## [Security](sql-server-linux-security-overview.md)
 ### [Get started with security features](sql-server-linux-security-get-started.md)
 ### [Encrypting Connections](sql-server-linux-encrypted-connections.md)
-### [Active Directory Authentication](sql-server-linux-active-directory-authentication.md)
 
 ## Performance
 ### [Best practices](sql-server-linux-performance-best-practices.md)

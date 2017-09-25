@@ -33,8 +33,6 @@ Returns the property of a specified collation in [!INCLUDE[ssCurrent](../../incl
 ## Syntax  
   
 ```sql
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 COLLATIONPROPERTY( collation_name , property )  
 ```  
   

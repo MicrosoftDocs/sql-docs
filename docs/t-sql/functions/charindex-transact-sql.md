@@ -35,8 +35,6 @@ Searches an expression for another expression and returns its starting position 
 ## Syntax  
   
 ```sql
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 CHARINDEX ( expressionToFind , expressionToSearch [ , start_location ] )   
 ```  
   

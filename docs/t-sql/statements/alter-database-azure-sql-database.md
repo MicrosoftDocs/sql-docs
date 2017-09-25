@@ -68,11 +68,11 @@ ALTER DATABASE { database_name }
 
 ```  
   
- 
-SET OPTIONS AVAILABLE FOR SQL Database  
-Full descriptions of the set options are available in the topic   
-ALTER DATABASE SET Options. The supported syntax is listed here.  
 ```
+-- SET OPTIONS AVAILABLE FOR SQL Database  
+-- Full descriptions of the set options are available in the topic   
+-- ALTER DATABASE SET Options. The supported syntax is listed here.  
+
 <optionspec> ::=   
 {  
     <auto_option>   
@@ -204,7 +204,7 @@ EDITION change fails if the MAXSIZE property for the database is set to a value 
  MODIFY (MAXSIZE **=** [100 MB | 500 MB | 1 | 1024…4096] GB)  
  Specifies the maximum size of the database. The maximum size must comply with the valid set of values for the EDITION property of the database. Changing the maximum size of the database may cause the database EDITION to be changed. Following table lists the supported MAXSIZE values and the defaults (D) for the [!INCLUDE[ssSDS](../../includes/sssds-md.md)] service tiers.  
   
-|**MAXSIZE**|**Basic**|**S0-S2**|**S3-S12**|**P1-P6 and PRS1-PRS6**| **P11-P15** |
+|**MAXSIZE**|**Basic**|**S0-S2**|**S3-S12**|**P1-P6 and PRS1-PRS6**|**P11-P15**|  
 |-----------------|---------------|------------------|-----------------|-----------------|-----------------|-----------------|  
 |100 MB|√|√|√|√|√|  
 |250 MB|√|√|√|√|√|  
@@ -334,7 +334,7 @@ ALTER DATABASE current
   
 ## Examples  
   
-### A. Check the values of the edition, size and service objective for an existing database, and change them:
+### A. Check the edition options and change them:
 
 ```
 SELECT Edition = DATABASEPROPERTYEX('db1', 'EDITION'),

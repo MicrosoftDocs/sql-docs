@@ -1,7 +1,7 @@
 ---
 title: "Transactions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "09/25/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -26,7 +26,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Transactions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   A transaction is a single unit of work. If a transaction is successful, all of the data modifications made during the transaction are committed and become a permanent part of the database. If a transaction encounters errors and must be canceled or rolled back, then all of the data modifications are erased.  
   
@@ -43,7 +43,10 @@ manager: "jhubbard"
   
  Batch-scoped transactions  
  Applicable only to multiple active result sets (MARS), a [!INCLUDE[tsql](../../includes/tsql-md.md)] explicit or implicit transaction that starts under a MARS session becomes a batch-scoped transaction. A batch-scoped transaction that is not committed or rolled back when a batch completes is automatically rolled back by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-  
+
+> [!NOTE] 
+> For special considerations related to Data Warehouse products, see [Transactions (SQL Data Warehouse)](transactions-sql-data-warehouse.md).   
+
 ## In This Section  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides the following transaction statements.  
   

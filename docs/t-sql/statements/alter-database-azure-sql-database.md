@@ -3,7 +3,7 @@ title: "ALTER DATABASE (Azure SQL Database) | Microsoft Docs"
 ms.custom: 
   - "MSDN content"
   - "MSDN - SQL DB"
-ms.date: "08/07/2017"
+ms.date: "09/25/2017"
 ms.prod: 
 ms.reviewer: ""
 ms.service: "sql-database"
@@ -28,11 +28,10 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
-  
-      -- Azure SQL Database Syntax  
+-- Azure SQL Database Syntax  
 ALTER DATABASE { database_name }  
 {  
-    MODIFY NAME =new_database_name  
+    MODIFY NAME = new_database_name  
   | MODIFY ( <edition_options> [, ... n] )   
   | SET { <option_spec> [ ,... n ] }   
   | ADD SECONDARY ON SERVER <partner_server_name>  
@@ -41,16 +40,15 @@ ALTER DATABASE { database_name }
   | FAILOVER  
   | FORCE_FAILOVER_ALLOW_DATA_LOSS  
 }  
-  
+[;] 
+
 <edition_options> ::=   
 {  
 
       MAXSIZE = { 100 MB | 250 MB | 500 MB | 1 … 1024 … 4096 GB }    
     | EDITION = { 'basic' | 'standard' | 'premium' | 'premiumrs' }   
-    | SERVICE_OBJECTIVE =   
-                 {  'S0' | 'S1' | 'S2' | 'S3'| 'S4'| 'S6'| 'S7'| 'S9'| 'S12' |
-                 | 'P1' | 'P2' | 'P4'| 'P6' | 'P11'  | 'P15' | 
-                 | 'PRS1' | 'PRS2' | 'PRS4' | 'PRS6' |
+    | SERVICE_OBJECTIVE = 
+                 {  <service-objective>
                  | { ELASTIC_POOL (name = <elastic_pool_name>) }   
                  }   
 }  
@@ -59,14 +57,15 @@ ALTER DATABASE { database_name }
    {  
       ALLOW_CONNECTIONS = { ALL | NO }  
      | SERVICE_OBJECTIVE =   
-                 {  'S0' | 'S1' | 'S2' | 'S3' | 'S4'| 'S6'| 'S7'| 'S9'| 'S12' |
-                 | 'P1' | 'P2' | 'P4'| 'P6' | 'P11' | 'P15' |
-                 | 'PRS1' | 'PRS2' | 'PRS4' | 'PRS6' |  
+                 {  <service-objective> 
                  | { ELASTIC_POOL ( name = <elastic_pool_name>) }   
                  }   
    }  
-  
- [;]  
+
+<service-objective> ::=  'S0' | 'S1' | 'S2' | 'S3'| 'S4'| 'S6'| 'S7'| 'S9'| 'S12' |
+                 | 'P1' | 'P2' | 'P4'| 'P6' | 'P11'  | 'P15' | 
+                 | 'PRS1' | 'PRS2' | 'PRS4' | 'PRS6' |
+
 ```  
   
 ```  
@@ -185,11 +184,23 @@ COMPATIBILITY_LEVEL = { 130 | 120 | 110 | 100 }
  Designates that the current database in use should be altered.  
   
  MODIFY NAME **=***new_database_name*  
- Renames the database with the name specified as *new_database_name*.  
-  
+ Renames the database with the name specified as *new_database_name*. The following example changes the name of a database `db1` to `db2`:   
+
+```  
+ALTER DATABASE db1  
+    MODIFY Name = db2 ;  
+```    
+
  MODIFY (EDITION **=** ['basic' | 'standard' | 'premium' | 'premiumrs'] )    
- Changes the service tier of the database.  EDITION change fails if the MAXSIZE property for the database is set to a value outside the valid range supported by that edition.  
+ Changes the service tier of the database. The following example changes edition to `premium`:
   
+```  
+ALTER DATABASE current 
+    MODIFY (EDITION = 'premium');
+``` 
+
+EDITION change fails if the MAXSIZE property for the database is set to a value outside the valid range supported by that edition.  
+
  MODIFY (MAXSIZE **=** [100 MB | 500 MB | 1 | 1024…4096] GB)  
  Specifies the maximum size of the database. The maximum size must comply with the valid set of values for the EDITION property of the database. Changing the maximum size of the database may cause the database EDITION to be changed. Following table lists the supported MAXSIZE values and the defaults (D) for the [!INCLUDE[ssSDS](../../includes/sssds-md.md)] service tiers.  
   
@@ -227,11 +238,17 @@ COMPATIBILITY_LEVEL = { 130 | 120 | 110 | 100 }
 -   If EDITION is specified but MAXSIZE is not specified, the default value for the edition is used. For example, is the EDITION is set to Standard, and the MAXSIZE is not specified, then the MAXSIZE is automatically set to 500 MB.  
   
 -   If neither MAXSIZE nor EDITION is specified, the EDITION is set to Standard (S0), and MAXSIZE is set to 250 GB.  
+
+ MODIFY (SERVICE_OBJECTIVE = \<service-objective>)
+ Specifies the performance level. The following example changes service objectove of a premium database to `P6`:
+ 
+```  
+ALTER DATABASE current 
+    MODIFY (SERVICE_OBJECTIVE = 'P6');
+```  
+ Available values for service objective are:  `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`, `PRS1`, `PRS2`, `PRS4`, and `PRS6`. For service objective descriptions and more information about the size, editions, and the service objectives combinations, see [Azure SQL Database Service Tiers and Performance Levels](http://msdn.microsoft.com/library/azure/dn741336.aspx). If the specified SERVICE_OBJECTIVE is not supported by the EDITION, you receive an error. To change the SERVICE_OBJECTIVE value from one tier to another (for example from S1 to P1), you must also change the EDITION value.  
   
- MODIFY SERVICE_OBJECTIVE {  'S0' | 'S1' | 'S2' | 'S3" | 'S4'| 'S6'| 'S7'| 'S9'| 'S12' | 'P1' | 'P2' | 'P4'| 'P6' | 'P11' | 'P15' | 'PRS1' | 'PRS2' | 'PRS4' | 'PRS6' |  
- Specifies the performance level. For service objective descriptions and more information about the size, editions, and the service objectives combinations, see [Azure SQL Database Service Tiers and Performance Levels](http://msdn.microsoft.com/library/azure/dn741336.aspx). If the specified SERVICE_OBJECTIVE is not supported by the EDITION, you receive an error. To change the SERVICE_OBJECTIVE value from one tier to another (for example from S1 to P1), you must also change the EDITION value.  
-  
-ELASTIC_POOL (name = \<elastic_pool_name>)
+ MODIFY (SERVICE_OBJECTIVE = ELASTIC\_POOL (name = \<elastic_pool_name>) 
  To add an existing database to an elastic pool, set the SERVICE_OBJECTIVE of the database to ELASTIC_POOL and provide the name of the elastic pool. You can also use this option to change the database to a different elastic pool within the same server. For more information, see [Create and manage a SQL Database elastic pool](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/). To remove a database from an elastic pool, use ALTER DATABASE to set the SERVICE_OBJECTIVE to a single database performance level.  
 
  ADD SECONDARY ON SERVER \<partner_server_name>  
@@ -317,21 +334,17 @@ ELASTIC_POOL (name = \<elastic_pool_name>)
   
 ## Examples  
   
-### A. Changing the name of a database  
- The following example changes the name of the `db1` database to `db2`.  
-  
-```  
-ALTER DATABASE db1  
-Modify Name = db2 ;  
-```    
-
-### B. Changing the edition, size and service objective for an existing database
+### A. Check the values of the edition, size and service objective for an existing database, and change them:
 
 ```
+SELECT Edition = DATABASEPROPERTYEX('db1', 'EDITION'),
+        ServiceObjective = DATABASEPROPERTYEX('db1', 'ServiceObjective'),
+        MaxSizeInBytes =  DATABASEPROPERTYEX('db1', 'MaxSizeInBytes');
+
 ALTER DATABASE [db1] MODIFY (EDITION = 'Premium', MAXSIZE = 1024 GB, SERVICE_OBJECTIVE = 'P15');
 ```
 
-### C. Moving a database to a different elastic pool  
+### B. Moving a database to a different elastic pool  
  Moves an existing database into a pool named pool1:  
   
 ```  
@@ -339,7 +352,7 @@ ALTER DATABASE db1
 MODIFY ( SERVICE_OBJECTIVE = ELASTIC_POOL ( name = pool1 ) ) ;  
 ```  
   
-### D. Add a Geo-Replication Secondary  
+### B. Add a Geo-Replication Secondary  
  Creates a non-readable secondary database db1 on server secondaryserver of the db1 on the local server.  
   
 ```  
@@ -348,7 +361,7 @@ ADD SECONDARY ON SERVER secondaryserver
 WITH ( ALLOW_CONNECTIONS = NO )  
 ```  
   
-### E. Remove a Geo-Replication Secondary  
+### D. Remove a Geo-Replication Secondary  
  Removes the secondary database db1 on server secondaryserver.  
   
 ```  
@@ -356,7 +369,7 @@ ALTER DATABASE db1
 REMOVE SECONDARY ON SERVER testsecondaryserver   
 ```  
   
-### F. Failover to a Geo-Replication Secondary  
+### E. Failover to a Geo-Replication Secondary  
  Promotes a secondary database db1 on server secondaryserver to become the new primary database when executed on server secondaryserver.  
   
 ```  

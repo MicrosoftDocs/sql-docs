@@ -43,8 +43,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 OPEN MASTER KEY DECRYPTION BY PASSWORD = 'password'   
 ```  
   

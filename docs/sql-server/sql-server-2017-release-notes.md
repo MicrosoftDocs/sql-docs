@@ -22,6 +22,13 @@ This topic describes limitations and issues with [!INCLUDE[ssSQLv14_md](../inclu
 
 [![Download from Evaluation Center](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) **Try it out:** [Download the latest SQL Server 2017 Release: RC2, August 2017](http://go.microsoft.com/fwlink/?LinkID=829477).
 
+## SQL Server 2017 GA (October 2017)
+
+> [TIP]
+> The general availability of SQL Server 2017 has been [announced this week at the Microsoft Ignite conference](https://blogs.technet.microsoft.com/dataplatforminsider/2017/09/25/microsoft-for-the-modern-data-estate/)! The SQL Server 2017 GA downloads and updated documentation will be available on **October 2nd**.
+
+![horizontal_bar](../sql-server/media/horizontal-bar.png)
+
 ## SQL Server 2017 Release Candidate (RC2 - August 2017)
 There are no SQL Server on Windows release notes for this release. See [SQL Server on Linux Release notes](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-release-notes).
 

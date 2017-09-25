@@ -16,6 +16,9 @@ The following release notes apply to SQL Server 2017 running on Linux. This rele
 
 The following table lists the releases of SQL Server 2017 covered in this topic.
 
+> [TIP]
+> The general availability of SQL Server 2017 has been [announced this week at the Microsoft Ignite conference](https://blogs.technet.microsoft.com/dataplatforminsider/2017/09/25/microsoft-for-the-modern-data-estate/)! The SQL Server 2017 GA downloads and updated documentation will be available on **October 2nd**.
+
 | Release | Version | Release date |
 |-----|-----|-----|
 | [RC2](#RC2) | 14.0.900.75 | 8-2017 |

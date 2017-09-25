@@ -35,7 +35,7 @@ Documentation to help you install, configure, and use SQL Server. The content in
 - [SQL Server 2017 Release Notes](../sql-server/sql-server-2017-release-notes.md)
 - [What's New in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)
 
-> [TIP]
+> [!TIP]
 > The general availability of SQL Server 2017 has been [announced this week at the Microsoft Ignite conference](https://blogs.technet.microsoft.com/dataplatforminsider/2017/09/25/microsoft-for-the-modern-data-estate/)! The SQL Server 2017 GA downloads and updated documentation will be available on **October 2nd**.
 
 **SQL Server 2016**

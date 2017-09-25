@@ -24,7 +24,7 @@ This topic describes limitations and issues with [!INCLUDE[ssSQLv14_md](../inclu
 
 ## SQL Server 2017 GA (October 2017)
 
-> [TIP]
+> [!TIP]
 > The general availability of SQL Server 2017 has been [announced this week at the Microsoft Ignite conference](https://blogs.technet.microsoft.com/dataplatforminsider/2017/09/25/microsoft-for-the-modern-data-estate/)! The SQL Server 2017 GA downloads and updated documentation will be available on **October 2nd**.
 
 ![horizontal_bar](../sql-server/media/horizontal-bar.png)

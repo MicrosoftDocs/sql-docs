@@ -67,7 +67,7 @@ Package details and download locations for the RPM and Debian packages are liste
 | [SQL Server Data Tools for Visual Studio](https://go.microsoft.com/fwlink/?linkid=846626) | 17.0 |
 | [Visual Studio Code](https://code.visualstudio.com) with the [mssql extension](https://aka.ms/mssql-marketplace) | Latest |
 
-### Unsupported features and services
+### <a name="Unsupported"></a> Unsupported features and services
 
 The following features and services are not available on Linux at this time. The support of these features will be increasingly enabled during the monthly updates cadence of the preview program.
 

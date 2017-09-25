@@ -191,7 +191,7 @@ ALTER DATABASE db1
     MODIFY Name = db2 ;  
 ```    
 
- MODIFY (EDITION **=** ['basic' | 'standard' | 'premium' | 'premiumrs'] )    
+ MODIFY (EDITION **=** ['basic' | 'standard' | 'premium' | 'premiumrs'])    
  Changes the service tier of the database. The following example changes edition to `premium`:
   
 ```  

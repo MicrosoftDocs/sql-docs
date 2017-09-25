@@ -60,6 +60,6 @@ manager: "jhubbard"
   
 ## See Also  
  [DQS Cleansing Transformation](../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)   
- [Integration Services(SSIS)Projects](https://msdn.microsoft.com/library/ms138028.aspx)  
+ [Integration Services(SSIS)Projects](/sql-docs/docs/integration-services/integration-services-ssis-projects-and-solutions)  
   
   

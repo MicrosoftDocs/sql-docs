@@ -29,7 +29,7 @@ The following steps provide an example of how to create a SQL Server Agent job o
 > [!TIP]
 > You can use any T-SQL client to run these commands. For example, on Linux you can use [sqlcmd](sql-server-linux-setup-tools.md) or [Visual Studio Code](sql-server-linux-develop-use-vscode.md). From a remote Windows Server, you can also run queries in SQL Server Management Studio (SSMS) or use the UI interface for job management, which is described in the next section.
 
-1. **Create the job**. The following example uses [sp_add_job](https://msdn.microsoft.com/library/ms182079.aspx) to create a job named `Daily AdventureWorks Backup`.
+1. **Create the job**. The following example uses [sp_add_job](/sql-docs/docs/relational-databases/system-stored-procedures/sp-add-job-transact-sql) to create a job named `Daily AdventureWorks Backup`.
 
     ```tsql
      -- Adds a new job executed by the SQLServerAgent service 
@@ -43,7 +43,7 @@ The following steps provide an example of how to create a SQL Server Agent job o
 
     ```
 
-2. **Add one or more job steps**. The following Transact-SQL script uses [sp_add_jobstep](https://msdn.microsoft.com/library/ms187358.aspx) to create a job step that creates a backup of the `AdventureWlorks2014` database.
+2. **Add one or more job steps**. The following Transact-SQL script uses [sp_add_jobstep](/sql-docs/docs/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql) to create a job step that creates a backup of the `AdventureWlorks2014` database.
 
     ```tsql
     -- Adds a step (operation) to the job  
@@ -59,7 +59,7 @@ The following steps provide an example of how to create a SQL Server Agent job o
  	GO
     ```
 
-3. **Create a job schedule**. This example uses [sp_add_schedule](https://msdn.microsoft.com/library/ms366342.aspx) to create a daily schedule for the job.
+3. **Create a job schedule**. This example uses [sp_add_schedule](/sql-docs/docs/relational-databases/system-stored-procedures/sp-add-jobschedule-transact-sql) to create a daily schedule for the job.
 
     ```tsql
     -- Creates a schedule called 'Daily'  
@@ -72,7 +72,7 @@ The following steps provide an example of how to create a SQL Server Agent job o
    GO
     ```
 
-4. **Attach the job schedule to the job**. Use [sp_attach_schedule](https://msdn.microsoft.com/library/ms186766.aspx) to attach the job schedule to the job.
+4. **Attach the job schedule to the job**. Use [sp_attach_schedule](/sql-docs/docs/relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql) to attach the job schedule to the job.
 
     ```tsql
     -- Sets the 'Daily' schedule to the 'Daily AdventureWorks Backup' Job  
@@ -82,7 +82,7 @@ The following steps provide an example of how to create a SQL Server Agent job o
     GO
     ```
 
-5. **Assign the job to a target server**. Assign the job to a target server with [sp_add_jobserver](https://msdn.microsoft.com/library/ms178625.aspx). In this example, the local server is the target.
+5. **Assign the job to a target server**. Assign the job to a target server with [sp_add_jobserver](/sql-docs/docs/relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql). In this example, the local server is the target.
 
     ```tsql
     EXEC dbo.sp_add_jobserver  

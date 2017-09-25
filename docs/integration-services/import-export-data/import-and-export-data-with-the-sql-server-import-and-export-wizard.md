@@ -35,7 +35,7 @@ manager: "jhubbard"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard is a simple way to copy data from a source to a destination. This overview describes the data sources that the wizard can use as sources and destinations, as well as the permissions you need to run the wizard.
 
 ## Get the wizard
-If you want to run the wizard, but you don't have [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installed on your computer, you can install the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard  by installing SQL Server Data Tools (SSDT). For more info, see [Download SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx).
+If you want to run the wizard, but you don't have [!INCLUDE[msCoName](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt).
 
 ## What happens when I run the wizard?
 -    **See the list of steps.** For a description of the steps in the wizard, see [Steps in the SQL Server Import and Export Wizard](../../integration-services/import-export-data/steps-in-the-sql-server-import-and-export-wizard.md). There's also a separate page of documentation for each page of the wizard.  

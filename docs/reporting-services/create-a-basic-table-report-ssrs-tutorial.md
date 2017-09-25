@@ -37,7 +37,7 @@ Your system must have the following installed to use this tutorial:
   
 -   The [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] database.  For more information, see [Adventure Works 2014 Sample Databases)](https://msftdbprodsamples.codeplex.com/releases/view/125550).  
   
- -   [SQL Server Data Tools](https://msdn.microsoft.com/library/mt204009.aspx) with the "SQL Server Reporting Services" components installed so you have the Report Designer.    
+ -   [SQL Server Data Tools](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt) with the "SQL Server Reporting Services" components installed so you have the Report Designer.    
   
 You must also have read-only permissions to retrieve data from the [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] database.
 

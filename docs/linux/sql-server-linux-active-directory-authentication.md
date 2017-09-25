@@ -1,9 +1,9 @@
 ---
 title: Active Directory Authentication with SQL Server on Linux | Microsoft Docs
-description: Configuration steps for AAD authentication for SQL Server on Linux
-author: tmullaney
-ms.date: 08/23/2017
-ms.author: rickbyh 
+description: This tutorial provides the configuration steps for AAD authentication for SQL Server on Linux.
+author: meet-bhagdev
+ms.date: 09/25/2017
+ms.author: meetb 
 manager: jhubbard
 ms.topic: article
 ms.prod: sql-linux
@@ -48,6 +48,8 @@ Before you configure AD Authentication, you need to:
 
 ## Join [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] host to AD domain
 
+Use the following steps to join a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] host to an Active Directory domain:
+
 1. Use **[realmd](https://www.freedesktop.org/software/realmd/docs/guide-active-directory-join.html)** to join your host machine to your AD Domain. If you haven't already, install both the realmd and Kerberos client packages on the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] host machine using your Linux distribution's package manager:
 
    ```bash
@@ -61,68 +63,68 @@ Before you configure AD Authentication, you need to:
    sudo apt-get install realmd krb5-user software-properties-common python-software-properties packagekit
    ```
 
-2. If the Kerberos client package installation prompts you for a realm name, enter your domain name in uppercase.
+1. If the Kerberos client package installation prompts you for a realm name, enter your domain name in uppercase.
 
    > [!NOTE]
    > This walkthrough uses "contoso.com" and "CONTOSO.COM" as example domain and realm names, respectively. You should replace these with your own values. These commands are case-sensitive, so make sure you use uppercase wherever it is used in this walkthrough.
 
-3. Configure your [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] host machine to use your AD domain controller's IP address as a DNS nameserver. 
+1. Configure your [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] host machine to use your AD domain controller's IP address as a DNS nameserver. 
 
-  ### Ubuntu
+   - **Ubuntu**:
 
-  Edit the `/etc/network/interfaces` file so that your AD domain controller's IP address is listed as a dns-nameserver. For example: 
+      Edit the `/etc/network/interfaces` file so that your AD domain controller's IP address is listed as a dns-nameserver. For example: 
 
-   ```/etc/network/interfaces
-   <...>
-   # The primary network interface
-   auth eth0
-   iface eth0 inet dhcp
-   dns-nameservers **<AD domain controller IP address>**
-   dns-search **<AD domain name>**
-   ```
+      ```/etc/network/interfaces
+      <...>
+      # The primary network interface
+      auth eth0
+      iface eth0 inet dhcp
+      dns-nameservers **<AD domain controller IP address>**
+      dns-search **<AD domain name>**
+      ```
 
-  > [!NOTE]
-  > The network interface (eth0) might differ for differnet machines. To find out which one you are using, run ifconfig and copy the interface that has an IP address and transmitted and received bytes.
+      > [!NOTE]
+      > The network interface (eth0) might differ for differnet machines. To find out which one you are using, run ifconfig and copy the interface that has an IP address and transmitted and received bytes.
 
-  After editing this file, restart the network service:
+      After editing this file, restart the network service:
 
-   ```bash
-   sudo ifdown eth0 && sudo ifup eth0
-   ```
+      ```bash
+      sudo ifdown eth0 && sudo ifup eth0
+      ```
 
-  Now check that your `/etc/resolv.conf` file contains a line like the following:  
+      Now check that your `/etc/resolv.conf` file contains a line like the following:  
 
-   ```Code
-   nameserver **<AD domain controller IP address>**
-   ```
+      ```Code
+      nameserver **<AD domain controller IP address>**
+      ```
 
-    ### RHEL
+   - **RHEL**:
 
-  Edit the `/etc/sysconfig/network-scripts/ifcfg-eth0` file (or other interface config file as appropriate) so that your AD domain controller's IP address is listed as a DNS server:
+     Edit the `/etc/sysconfig/network-scripts/ifcfg-eth0` file (or other interface config file as appropriate) so that your AD domain controller's IP address is listed as a DNS server:
 
-   ```/etc/sysconfig/network-scripts/ifcfg-eth0
-   <...>
-   PEERDNS=no
-   DNS1=**<AD domain controller IP address>**
-   ```
+     ```/etc/sysconfig/network-scripts/ifcfg-eth0
+     <...>
+     PEERDNS=no
+     DNS1=**<AD domain controller IP address>**
+     ```
 
-  After editing this file, restart the network service:
+     After editing this file, restart the network service:
 
-   ```bash
-   sudo systemctl restart network
-   ```
+     ```bash
+     sudo systemctl restart network
+     ```
 
-  Now check that your `/etc/resolv.conf` file contains a line like the following:  
+     Now check that your `/etc/resolv.conf` file contains a line like the following:  
 
-   ```Code
-   nameserver **<AD domain controller IP address>**
-   ```
+     ```Code
+     nameserver **<AD domain controller IP address>**
+     ```
 
-5. Join the domain
+1. Join the domain
 
-  Once you've confirmed that your DNS is configured properly, join the domain by running the command below. You'll need to authenticate using an AD account that has sufficient privileges in AD to join a new machine to the domain.
+   Once you've confirmed that your DNS is configured properly, join the domain by running the command below. You'll need to authenticate using an AD account that has sufficient privileges in AD to join a new machine to the domain.
 
-  Specifically, this command will create a new computer account in AD, create the `/etc/krb5.keytab` host keytab file, and configure the domain in `/etc/sssd/sssd.conf`:
+   Specifically, this command will create a new computer account in AD, create the `/etc/krb5.keytab` host keytab file, and configure the domain in `/etc/sssd/sssd.conf`:
 
    ```bash
    sudo realm join contoso.com -U 'user@CONTOSO.COM' -v
@@ -135,9 +137,9 @@ Before you configure AD Authentication, you need to:
    >
    > If you receive an error, "Insufficient permissions to join the domain," then you will need to check with a domain administrator that you have sufficient permissions to join Linux machines to your domain.
 
-6. Verify that you can now gather information about a user from the domain, and that you can acquire a Kerberos ticket as that user.
+1. Verify that you can now gather information about a user from the domain, and that you can acquire a Kerberos ticket as that user.
 
-  We will use **id**, **[kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html)** and **[klist](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/klist.html)** commands for this.
+   We will use **id**, **[kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html)** and **[klist](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/klist.html)** commands for this.
 
    ```bash
    id user@contoso.com
@@ -157,7 +159,7 @@ Before you configure AD Authentication, you need to:
    >
    > If `kinit user@CONTOSO.COM` returns, "KDC reply did not match expectations while getting initial credentials," make sure you specified the realm in uppercase.
 
-  For more information, see the Red Hat documentation for [Discovering and Joining Identity Domains](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/Windows_Integration_Guide/realmd-domain.html). 
+For more information, see the Red Hat documentation for [Discovering and Joining Identity Domains](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/Windows_Integration_Guide/realmd-domain.html). 
 
 ## Create AD user for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and set SPN
 
@@ -251,13 +253,13 @@ The specific connection string parameter for clients to use AD Authentication de
 
 * `sqlcmd` on a domain-joined Linux client
 
-  Log in to a domain-joined Linux client using `ssh` and your domain credentials:
+   Log in to a domain-joined Linux client using `ssh` and your domain credentials:
 
    ```bash
    ssh -l user@contoso.com client.contoso.com
    ```
 
-  Make sure you've installed the [mssql-tools](sql-server-linux-setup-tools.md) package, then connect using `sqlcmd` without specifying any credentials:
+   Make sure you've installed the [mssql-tools](sql-server-linux-setup-tools.md) package, then connect using `sqlcmd` without specifying any credentials:
 
    ```bash
    sqlcmd -S mssql.contoso.com
@@ -265,7 +267,7 @@ The specific connection string parameter for clients to use AD Authentication de
 
 * SSMS on a domain-joined Windows client
 
-  Log in to a domain-joined Windows client using your domain credentials. Make sure [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)] is installed, then connect to your [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance by specifying **Windows Authentication** in the **Connect to Server** dialog.
+   Log in to a domain-joined Windows client using your domain credentials. Make sure [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)] is installed, then connect to your [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance by specifying **Windows Authentication** in the **Connect to Server** dialog.
 
 * AD Authentication using other client drivers
 
@@ -283,7 +285,7 @@ In this tutorial, we walked through how to setup Active Directory authentication
 > * Create AD-based logins in Transact-SQL
 > * Connect to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] using AD Authentication
 
-Next, explore other security scenarios for SQL Server on Linux. 
+Next, explore other security scenarios for SQL Server on Linux.
 
 > [!div class="nextstepaction"]
 >[Encrypting Connections to SQL Server on Linux](sql-server-linux-encrypted-connections.md)

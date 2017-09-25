@@ -1,3 +1,15 @@
+---
+title: Configure SSIS on Linux with ssis-conf | Microsoft Docs
+description: This article shows how to configure SQL Server Integration Services on Linux with the ssis-conf utility.
+author: douglaslMS
+ms.author: douglasl 
+manager: craigg
+ms.date: 09/26/2017
+ms.topic: article
+ms.prod: sql-linux
+ms.technology: integration-services
+ms.assetid: 
+---
 # Configure SQL Server Integration Services on Linux with ssis-conf
 
 `ssis-conf' is a configuration script that's when you install SQL Server Integration Services (SSIS) for Red Hat Enterprise Linux and Ubuntu. You can use this utility to configure the following properties:

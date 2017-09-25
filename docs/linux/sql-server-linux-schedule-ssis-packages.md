@@ -1,3 +1,15 @@
+---
+title: Schedule SSIS packages on Linux with cron | Microsoft Docs
+description: This article shows how to schedule SQL Server Integration Services packages on Linux with the cron service.
+author: douglaslMS
+ms.author: douglasl 
+manager: craigg
+ms.date: 09/26/2017
+ms.topic: article
+ms.prod: sql-linux
+ms.technology: integration-services
+ms.assetid: 
+---
 # Schedule SQL Server Integration Services package execution on Linux with cron
 
 When you run SQL Server Integration Services (SSIS) and SQL Server on Windows, you can automate the execution of SSIS packages by using SQL Server Agent. When you run SQL Server and SSIS on Linux, however, the SQL Server Agent utility isn't available to schedule jobs on Linux. Instead you use **Cron** service that's widely used on Linux platforms to automate package execution.

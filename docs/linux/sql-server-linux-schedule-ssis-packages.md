@@ -45,11 +45,11 @@ Here is a simple example of a shell script that contains only single command to 
 
 After you have defined your jobs, you can schedule them to run automatically by using the Cron service.
 
-To add your job for Cron to run, you have to add the job in the `crontab` file. To open the `crontab` file in an editor where you can add or update the job, use the following command.
+To add your job for Cron to run, you have to add the job in the `crontab` file. To open the `crontab` file in an editor where you can add or update the job, use the following command:
 
 `crontab -e`
 
-To schedule the previously described job to run daily at 2:10 a.m., add following line to the `crontab` file.
+To schedule the previously described job to run daily at 2:10 a.m., add following line to the `crontab` file:
 
 ```
 # run SSIS package Name at 2:10AM every day
@@ -66,7 +66,7 @@ The following image shows the format description of the job line added to the `c
 
 ![](ssis-linux-cron-job-definition.png)
 
-To get a more detailed description of the `crontab' file format, use the following command.
+To get a more detailed description of the `crontab' file format, use the following command:
 
 `man 5 crontab`
 

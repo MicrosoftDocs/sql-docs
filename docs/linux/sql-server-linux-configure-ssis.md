@@ -102,7 +102,7 @@ about your hardware configuration and how you use SQL Server Integration Service
 
 If choose **Yes**, the telemetry service is enabled and starts running. The service auto-starts after each boot. If choose **No**, the telemetry service stops and is disabled.
 
-## Use setup to initialize and setup Microsoft SQL Server Integration Services
+## Use setup to initialize and set up Microsoft SQL Server Integration Services
 
 Use the `setup` command every time you install SSIS.
 
@@ -110,7 +110,7 @@ Enter the following command:
 
 `sudo /opt/ssis/bin/ssis-conf setup`
 
-The utility prompts you to finish provide acknowledge several items and to provide several values for the following items:
+The utility prompts you to acknowledge or to provide values for the following items:
 -   Product license
 -   EULA agreement
 -   Telemetry service

@@ -62,9 +62,9 @@ ALTER DATABASE { database_name }
                  }   
    }  
 
-<service-objective> ::=  'S0' | 'S1' | 'S2' | 'S3'| 'S4'| 'S6'| 'S7'| 'S9'| 'S12' |
+<service-objective> ::=  { 'S0' | 'S1' | 'S2' | 'S3'| 'S4'| 'S6'| 'S7'| 'S9'| 'S12' |
                  | 'P1' | 'P2' | 'P4'| 'P6' | 'P11'  | 'P15' | 
-                 | 'PRS1' | 'PRS2' | 'PRS4' | 'PRS6' |
+                 | 'PRS1' | 'PRS2' | 'PRS4' | 'PRS6' | }
 
 ```  
   
@@ -100,7 +100,7 @@ ALTER DATABASE { database_name }
 }  
   
 <compatibility_level_option>::=  
-COMPATIBILITY_LEVEL = { 130 | 120 | 110 | 100 }  
+COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 }  
   
 <cursor_option> ::=   
 {  
@@ -238,9 +238,10 @@ EDITION change fails if the MAXSIZE property for the database is set to a value 
 -   If EDITION is specified but MAXSIZE is not specified, the default value for the edition is used. For example, is the EDITION is set to Standard, and the MAXSIZE is not specified, then the MAXSIZE is automatically set to 500 MB.  
   
 -   If neither MAXSIZE nor EDITION is specified, the EDITION is set to Standard (S0), and MAXSIZE is set to 250 GB.  
+ 
 
  MODIFY (SERVICE_OBJECTIVE = \<service-objective>)  
- Specifies the performance level. The following example changes service objectove of a premium database to `P6`:
+ Specifies the performance level. The following example changes service objective of a premium database to `P6`:
  
 ```  
 ALTER DATABASE current 
@@ -353,7 +354,7 @@ MODIFY ( SERVICE_OBJECTIVE = ELASTIC_POOL ( name = pool1 ) ) ;
 ```  
   
 ### B. Add a Geo-Replication Secondary  
- Creates a non-readable secondary database db1 on server secondaryserver of the db1 on the local server.  
+ Creates a non-readable secondary database db1 on server `secondaryserver` of the db1 on the local server.  
   
 ```  
 ALTER DATABASE db1   
@@ -362,7 +363,7 @@ WITH ( ALLOW_CONNECTIONS = NO )
 ```  
   
 ### D. Remove a Geo-Replication Secondary  
- Removes the secondary database db1 on server secondaryserver.  
+ Removes the secondary database db1 on server `secondaryserver`.  
   
 ```  
 ALTER DATABASE db1   
@@ -370,7 +371,7 @@ REMOVE SECONDARY ON SERVER testsecondaryserver
 ```  
   
 ### E. Failover to a Geo-Replication Secondary  
- Promotes a secondary database db1 on server secondaryserver to become the new primary database when executed on server secondaryserver.  
+ Promotes a secondary database db1 on server `secondaryserver` to become the new primary database when executed on server `secondaryserver`.  
   
 ```  
 ALTER DATABASE db1 FAILOVER  

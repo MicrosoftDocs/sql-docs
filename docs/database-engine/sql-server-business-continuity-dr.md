@@ -10,7 +10,7 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: c75717c8-c677-4033-8ca6-d0ac93aee04d
 ---
-# Business continuity and database recovery ~ SQL Server
+# Business continuity and database recovery - SQL Server
 
 [!INCLUDE[HA-Story](../includes/sql-server-ha-story.md)]
 

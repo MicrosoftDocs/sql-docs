@@ -35,8 +35,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 NTILE (integer_expression) OVER ( [ <partition_by_clause> ] < order_by_clause > )  
 ```  
   

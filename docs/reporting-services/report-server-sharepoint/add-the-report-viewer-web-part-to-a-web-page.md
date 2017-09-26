@@ -1,7 +1,7 @@
 ---
 title: "Add the Report Viewer Web Part to a Web Page | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/25/2017"
+ms.date: "09/26/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

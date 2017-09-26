@@ -1,7 +1,7 @@
 ---
 title: "Deploy the Report Viewer web part on a SharePoint site | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/25/2017"
+ms.date: "09/26/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -26,9 +26,6 @@ Use the following instructions to manually deploy the solution package that add 
 **The Report Viewer web part is a standalone solution package and is not associated with SharePoint integrated mode for SQL Server Reporting Services.**
 
 ## Requirements
-
-**Supported operating systems:**  
-* Windows Server 2008 R2 SP1 and later
 
 **Support SharePoint Server versions:**  
 * SharePoint Server 2016
@@ -129,6 +126,22 @@ Retracting the solution does not remove the Report Viewer web part from the list
     ![Edit and delete the Report Viewer Native Mode web part](media/report-viewer-native-mode-edit-delete.png)
 
 Deletion of the web part can be attempted by using PowerShell, but there is not a direct command for it. For a script example, see [How to delete Web Parts from the Web Part Gallery](https://gallery.technet.microsoft.com/office/How-to-delete-Web-Parts-1132701f).
+
+## Supported languages
+
+The following languages are supported with the web part:
+
+* English (en)
+* German (de)
+* Spanish (sp)
+* French (fr)
+* Italian (it)
+* Japanese (ja)
+* Korean (ko)
+* Portuguese (pt)
+* Russian (ru)
+* Chinese (Simplified - zh-HANS and zh-CHS)
+* Chinese (Traditional - zh-HANT and zh-CHT)
 
 ## Next steps
 

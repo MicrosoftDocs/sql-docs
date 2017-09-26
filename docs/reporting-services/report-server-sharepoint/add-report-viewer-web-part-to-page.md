@@ -1,7 +1,7 @@
 ---
 title: "Add Report Viewer web part to a SharePoint page | Microsoft Docs"
 ms.custom: "Add the Report Viewer web part to a page within your SharePoint site."
-ms.date: "09/25/2017"
+ms.date: "09/26/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -74,6 +74,5 @@ To configure the web part to point to your specific report, do the following.
 * The Report Viewer web part cannot be used on modern pages within SharePoint.
 * Power BI reports can't be used with the Report Viewer web part.
 * If you don't see the Report Viewer web part, to add to your page, make sure you have [deployed the Report Viewer web part](deploy-report-viewer-web-part.md).
-* The link at the top of the web part produces an error and does not navigate you anywhere.
 
 More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)

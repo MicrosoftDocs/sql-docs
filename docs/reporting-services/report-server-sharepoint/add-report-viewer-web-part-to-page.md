@@ -1,7 +1,7 @@
 ---
 title: "Add Report Viewer web part to a SharePoint page | Microsoft Docs"
 ms.custom: "Add the Report Viewer web part to a page within your SharePoint site."
-ms.date: "09/15/2017"
+ms.date: "09/25/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

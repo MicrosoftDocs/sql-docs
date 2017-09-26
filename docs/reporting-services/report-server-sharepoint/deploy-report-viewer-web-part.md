@@ -1,7 +1,7 @@
 ---
 title: "Deploy the Report Viewer web part on a SharePoint site | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/15/2017"
+ms.date: "09/25/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

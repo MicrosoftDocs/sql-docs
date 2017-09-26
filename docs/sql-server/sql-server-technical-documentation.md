@@ -35,6 +35,9 @@ Documentation to help you install, configure, and use SQL Server. The content in
 - [SQL Server 2017 Release Notes](../sql-server/sql-server-2017-release-notes.md)
 - [What's New in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)
 
+> [!TIP]
+> The general availability of SQL Server 2017 has been [announced this week at the Microsoft Ignite conference](https://blogs.technet.microsoft.com/dataplatforminsider/2017/09/25/microsoft-for-the-modern-data-estate/)! The SQL Server 2017 GA downloads and updated documentation will be available on **October 2nd**.
+
 **SQL Server 2016**
 
 - [SQL Server 2016 Release Notes](../sql-server/sql-server-2016-release-notes.md)
@@ -44,7 +47,7 @@ Documentation to help you install, configure, and use SQL Server. The content in
 - [![Download from Evaluation Center](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [Download SQL Server 2017](http://go.microsoft.com/fwlink/?LinkID=829477)
 - [![Download from Evaluation Center](../includes/media/download2.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) [Download SQL Server 2016](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) 
 - [Spin up a Virtual Machine with SQL Server 2016 already installed](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
-- [![Download from Evaluation Center](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms) [Download SQL Server Management Studio (SSMS)](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms)   
+- [![Download from Evaluation Center](../includes/media/download2.png)](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms) [Download SQL Server Management Studio (SSMS)](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms)
 - [![Download from Evaluation Center](../includes/media/download2.png)](../ssdt/download-sql-server-data-tools-ssdt.md) [Download SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
     
 ## SQL Server Technologies    

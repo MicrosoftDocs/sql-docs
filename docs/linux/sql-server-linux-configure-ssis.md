@@ -12,7 +12,7 @@ ms.assetid:
 ---
 # Configure SQL Server Integration Services on Linux with ssis-conf
 
-`ssis-conf' is a configuration script that's when you install SQL Server Integration Services (SSIS) for Red Hat Enterprise Linux and Ubuntu. You can use this utility to configure the following properties:
+`ssis-conf` is a configuration script that's when you install SQL Server Integration Services (SSIS) for Red Hat Enterprise Linux and Ubuntu. You can use this utility to configure the following properties:
 
 | Command | Description |
 |-------------|---------------------------------------------------------------------|
@@ -25,11 +25,11 @@ ms.assetid:
 
 The examples in this article run `ssis-conf` by specify the full path: `/opt/ssis/bin/ssis-conf`. If you navigate to that path before you run `ssis-conf`, you can run the utility in the context of the current directory: `./ssis-conf`.
 
-All listed commands should run as root.
+Make sure that you run the commands described in this article with root privilege. For example, run `sudo /opt/ssis/bin/ssis-conf setup` and not `/opt/ssis/bin/ssis-conf setup`.
 
 To run these commands with prompts in the language that you prefer, you can specify a locale. For example, to see prompts in Chinese, run the following command:
 
-`sudo LC\_ALL=zh\_CN.UTF-8 /opt/ssis/bin/ssis-conf setup`.
+`sudo LC_ALL=zh_CN.UTF-8 /opt/ssis/bin/ssis-conf setup`.
 
 ## Use set-edition to set the edition of SQL Server Integration Services
 
@@ -116,7 +116,7 @@ The utility prompts you to acknowledge or to provide values for the following it
 -   Telemetry service
 -   The language used by Integration Services
 
-To run the `setup` command with prompts in the language that you prefer, you can specify a locale. For example, to see prompts in Chinese, run: `sudo LC\_ALL=zh\_CN.UTF-8 /opt/ssis/bin/ssis-conf setup`.
+To run the `setup` command with prompts in the language that you prefer, you can specify a locale. For example, to see prompts in Chinese, run the following command: `sudo LC_ALL=zh_CN.UTF-8 /opt/ssis/bin/ssis-conf setup`.
 
 ## ssis.conf format
 
@@ -127,21 +127,21 @@ For SQL Server, you can change system settings by changing the values in the `ms
 Here is a sample `ssis.conf` file. Each field corresponds to the result of one setup step.
 
 ```
-LICENSE          
+[LICENSE]
                        
 registered = Y        
                        
 pid = enterprisecore  
                        
-EULA              
+[EULA]
                        
 accepteula = Y        
                        
-TELEMETRY         
+[TELEMETRY]
                        
 enabled = Y           
                        
-language          
+[language]
                        
 lcid = 2052
 ```

@@ -66,10 +66,10 @@ The following image shows the format description of the job line added to the `c
 
 ![](media/sql-server-linux-schedule-ssis-packages/ssis-linux-cron-job-definition.png)
 
-To get a more detailed description of the `crontab' file format, use the following command:
+To get a more detailed description of the `crontab` file format, use the following command:
 
 `man 5 crontab`
 
-Here's an example of the output:
+Here's a partial example of the output that helps to explain the example in this article:
 
 ![](media/sql-server-linux-schedule-ssis-packages/ssis-linux-cron-crontab-format.png)

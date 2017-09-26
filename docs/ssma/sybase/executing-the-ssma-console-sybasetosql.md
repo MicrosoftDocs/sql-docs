@@ -1,7 +1,7 @@
 ---
 title: "Executing the SSMA Console (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "09/27/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -45,7 +45,7 @@ This command creates a new SSMA project.
   
 -   `overwrite-if-exists`Optional attribute indicates whether an existing project should be overwritten. {boolean}  
   
--   `project-type:`Optional attribute. Indicates the project typ, that is “sql-server-2005” project or “sql-server-2008” project or “sql-server-2012” project or “sql-server-2014” project or “sql-azure” project. Default is “sql-server-2008.”  
+-   `project-type:`Optional attribute. Indicates the project type, that is “sql-server-2005” project or “sql-server-2008” project or “sql-server-2012” project or “sql-server-2014” project or “sql-azure” project. Default is “sql-server-2008.”  
   
 **Syntax example:**  
   
@@ -314,7 +314,7 @@ or
 ```  
   
 ### migrate-data  
-THis command migrates the source data to the target.  
+This command migrates the source data to the target.  
   
 -   `object-name:` Specifies the source object(s) considered for migrating data (supports individual object names or a group object name).  
   
@@ -592,7 +592,7 @@ This command converts the SQL statement.
   
     -   verbose (="true/false", with default as "false" (optional attributes)).  
   
-THis command requires one or several metabase nodes as command-line parameter.  
+This command requires one or several metabase nodes as command-line parameter.  
   
 **Syntax example:**  
   
@@ -662,10 +662,10 @@ or
 />  
 ```  
   
-## Next Step  
-For information on command-line options, see [Command-Line Options in SSMA Console &#40;SybaseToSQL).  
+## Next steps  
+For information on command-line options, see [Command-line options in the SSMA Console (AccessToSQL)](../access/command-line-options-in-ssma-console-accesstosql.md).  
   
-For information on Sample console script file, see [Working with the Sample Console Script Files &#40;SybaseToSQL&#41;](../../ssma/sybase/working-with-the-sample-console-script-files-sybasetosql.md)  
+For information on a sample console script file, see [Working with the Sample Console Script Files &#40;SybaseToSQL&#41;](../../ssma/sybase/working-with-the-sample-console-script-files-sybasetosql.md)  
   
 The next step depends on your project requirements:  
   

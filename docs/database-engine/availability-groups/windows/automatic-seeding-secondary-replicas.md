@@ -17,7 +17,7 @@ helpviewer_keywords:
 - "Automatic seeding [SQL Server], secondary replica"
 ms.assetid: 
 caps.latest.revision: 
-author: "MikeRayMSFT"
+author: "allanhirt"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---
@@ -271,8 +271,6 @@ The following table lists extended events related to automatic seeding.
 [CREATE AVAILABILITY GROUP (Transact-SQL)](/sql-docs/docs/t-sql/statements/create-availability-group-transact-sql)
 
 [Always On Availability Groups Troubleshooting and Monitoring Guide](http://technet.microsoft.com/library/dn135328.aspx)
-
-> [Allan Hirt](http://mvp.microsoft.com/en-us/PublicProfile/4025254?fullName=Allan%20Hirt), Microsoft Most Valued Professional, contributed to this article.
 
 <!--Image references-->
 [1]: ./media/auto-seed-new-availability-group.png

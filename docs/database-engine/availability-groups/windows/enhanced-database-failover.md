@@ -14,7 +14,7 @@ helpviewer_keywords:
 - "Availability Groups [SQL Server], failover"
 ms.assetid: 
 caps.latest.revision: 
-author: "MikeRayMSFT"
+author: "allanhirt"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---
@@ -82,4 +82,3 @@ To see whether an availability group has enhanced database failover enabled, que
  
 - [Create an availability group with Transact-SQL](create-an-availability-group-transact-sql.md)
 
->This content written by [Allan Hirt](http://mvp.microsoft.com/en-us/PublicProfile/4025254?fullName=Allan%20%20Hirt), Microsoft Most Valued Professional.

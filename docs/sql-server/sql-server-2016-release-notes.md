@@ -110,11 +110,11 @@ Additionally, consider manual cleanup options to prevent Query Store from transi
 
 Also, execute the following Query Store stored procedures periodically to clean runtime statistics, specific queries or plans:
 
--    ```sp_query_store_reset_exec_stats```
+- `sp_query_store_reset_exec_stats`
 
--    ```sp_query_store_remove_plan```
+- `sp_query_store_remove_plan`
 
--    ```sp_query_store_remove_query```
+- `sp_query_store_remove_query`
 
 
 ###  <a name="bkmk_ga_docs"></a> Product Documentation (GA) 

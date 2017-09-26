@@ -60,14 +60,6 @@ This section shows you how to deploy the solution package to your SharePoint far
 
 3. Run the [Install-SPSolution](https://technet.microsoft.com/library/ff607534(v=office.16).aspx) cmdlet to deploy the farm solution.
 
-    **SharePoint 2013**
-
-    ```
-    Install-SPSolution –Identity ReportViewerWebPart.wsp -CompatibilityLevel "14,15" -GACDeployment -WebApplication {URL to web application}
-    ```
-
-    **SharePoint 2016**
-
     ```
     Install-SPSolution –Identity ReportViewerWebPart.wsp -GACDeployment -WebApplication {URL to web application}
     ```
@@ -104,31 +96,66 @@ Get-SPWebApplication "<web application url>" | Get-SPSite -Limit ALL |
 
 Although SharePoint Central Administration provides solution retraction, you do not need to retract the **ReportViewerWebPart.wsp** file unless you are systematically troubleshooting an installation or patch deployment problem.
 
+### Disable the **Report Viewer Web Part** feature in each SharePoint site with the Report Viewer Web Part enabled
+
+1. Select the **gear** icon in the upper left and select **Site Settings*.
+
+    ![Site settings from the gear icon.](media/sharepoint-site-settings.png)
+
+    By default, SharePoint web applications are accessed through port 80. This means that you can often access a SharePoint site by entering *http://<computer name>* to open the root site collection.
+
+2. Under **Site Collection Administration**, select **Site collection features**.
+
+3. Click **Deactivate** next to the **Report Viewer Web Part** feature
+
+### Retract the solution from the farm
+
 1. In SharePoint Central Administration, in **System Settings**, select **Manage farm solutions**.
 
 2. Select **ReportViewerWebPart.wsp**.
 
 3. Select Retract Solution.
 
-### Remove the web part from Site settings
+### Removing the solution in PowerShell
 
-Retracting the solution does not remove the Report Viewer web part from the list of web parts within your SharePoint site. To remove the Report Viewer web part, do the following.
+Disabling all features and retracting the solution can be done in SharePoint Management Shell by using the [Disable-SPFeature](https://technet.microsoft.com/en-us/library/ff607879.aspx), [Uninstall-SPSolution](https://technet.microsoft.com/en-us/library/ff607873.aspx), and [Remove-SPSolution](https://technet.microsoft.com/en-us/library/ff607748.aspx) cmdlets. An example script can be found below:
 
-1. In your SharePoint site, select the **gear** icon in the upper left and select **Site Settings*.
+```
+$solutionId = "reportviewerwebpart.wsp"
+$featureId = "ReportViewerWebPart"
 
-    ![Site settings from the gear icon.](media/sharepoint-site-settings.png)
+Write-Host "Searching for solution"
+$feature = Get-SPFeature -Identity $featureId -ErrorAction SilentlyContinue
+$solution = Get-SPSolution -Identity $solutionId -ErrorAction SilentlyContinue
 
-    By default, SharePoint web applications are accessed through port 80. This means that you can often access a SharePoint site by entering *http://<computer name>* to open the root site collection.
+if ($solution -ne $null) {
 
-2. Under **Web Designer Galleries**, select **Web parts**.
+    if ($feature -ne $null) {
+        Get-SPWebApplication | Get-SPSite -Limit ALL | 
+            ForEach-Object {
+                Write-Host "Disabling feature for $($_.URL)"
+                Disable-SPFeature -identity $featureId -URL $_.URL -confirm:$false -ErrorAction SilentlyContinue
+            }    
+    }
 
-3. Select the **edit icon** next to **ReportViewerNativeMode.dwp**. It may not be listed on the first page of results.
+    if ($solution.Deployed) {
+        Write-Host "Uninstalling solution"
+        Uninstall-SPSolution -Identity $solutionId -AllWebApplications -confirm:$false
 
-4. Select **Delete Item**.
+        while ($solution.JobExists) {
+            Start-Sleep -Seconds 3
+        }
+    }
 
-    ![Edit and delete the Report Viewer Native Mode web part](media/report-viewer-native-mode-edit-delete.png)
+    Write-Host "Removing solution"
+    Remove-SPSolution -Identity $solutionId -confirm:$false
 
-Deletion of the web part can be attempted by using PowerShell, but there is not a direct command for it. For a script example, see [How to delete Web Parts from the Web Part Gallery](https://gallery.technet.microsoft.com/office/How-to-delete-Web-Parts-1132701f).
+    while ($solution.JobExists) {
+        Start-Sleep -Seconds 3
+    }
+}
+
+```
 
 ## Next steps
 

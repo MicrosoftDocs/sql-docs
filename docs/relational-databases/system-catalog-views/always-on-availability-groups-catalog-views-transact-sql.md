@@ -38,10 +38,10 @@ manager: "jhubbard"
 >  For information about joined availability databases, see the **replica_id** and **group_database_id** columns in [sys.databases (Transact-SQL);](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).  
   
 ## See Also  
- [sys.databases (Transact-SQL)](/sql-docs/docs/relational-databases/system-catalog-views/sys-databases-transact-sql)   
- [sys.database_mirroring_endpoints (Transact-SQL)](/sql-docs/docs/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql)   
- [Always On Availability Groups (SQL Server)](/sql-docs/docs/database-engine/availability-groups/windows/always-on-availability-groups-sql-server)   
- [Monitor Availability Groups (Transact-SQL);](/sql-docs/docs/database-engine/availability-groups/windows/monitor-availability-groups-transact-sql)   
- [Always On Availability Groups Dynamic Management Views and Functions (Transact-SQL)](/sql-docs/docs/relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions)  
+ [sys.databases (Transact-SQL)](sys-databases-transact-sql.md)   
+ [sys.database_mirroring_endpoints (Transact-SQL)](sys-database-mirroring-endpoints-transact-sql.md)   
+ [Always On Availability Groups (SQL Server)](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
+ [Monitor Availability Groups (Transact-SQL);](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
+ [Always On Availability Groups Dynamic Management Views and Functions (Transact-SQL)](../system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)  
   
   

@@ -57,8 +57,8 @@ Common workload scenarios are: trading of financial instruments, sports betting,
 Use memory-optimized tables for your core transaction tables, i.e., the tables with the most performance-critical transactions. Use natively compiled stored procedures to optimize execution of the logic associated with the business transaction. The more of the logic you can push down into stored procedures in the database, the more benefit you will see from In-Memory OLTP.
 
 To get started in an existing application:
-1. use the [transaction performance analysis report](/sql-docs/docs/relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp) to identify the objects you want to migrate, 
-2. and use the [memory-optimization](/sql-docs/docs/relational-databases/in-memory-oltp/memory-optimization-advisor) and [native compilation](/sql-docs/docs/relational-databases/in-memory-oltp/native-compilation-advisor) advisors to help with migration.
+1. use the [transaction performance analysis report](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md) to identify the objects you want to migrate, 
+2. and use the [memory-optimization](memory-optimization-advisor.md) and [native compilation](native-compilation-advisor.md) advisors to help with migration.
 
 #### Customer Case Studies
 
@@ -76,8 +76,8 @@ Common application patterns are: Ingesting sensor readings and events, to allow 
 
 Use a memory-optimized table for the data ingestion. If the ingestion consists mostly of inserts (rather than updates) and In-Memory OLTP storage footprint of the data is a concern, either
 
-- Use a job to regularly batch-offload data to a disk-based table with a [Clustered Columnstore index](/sql-docs/docs/relational-databases/indexes/columnstore-indexes-overview), using a job that does `INSERT INTO <disk-based table> SELECT FROM <memory-optimized table>`; or
-- Use a [temporal memory-optimized table](/sql-docs/docs/relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables) to manage historical data – in this mode, historical data lives on disk, and data movement is managed by the system.
+- Use a job to regularly batch-offload data to a disk-based table with a [Clustered Columnstore index](../indexes/columnstore-indexes-overview.md), using a job that does `INSERT INTO <disk-based table> SELECT FROM <memory-optimized table>`; or
+- Use a [temporal memory-optimized table](../tables/system-versioned-temporal-tables-with-memory-optimized-tables.md) to manage historical data – in this mode, historical data lives on disk, and data movement is managed by the system.
 
 The SQL Server samples repository contains a smart grid application that uses a temporal memory-optimized table, a memory-optimized table type, and a natively compiled stored procedure, to speed up data ingestion, while managing the In-Memory OLTP storage footprint of the sensor data: 
 
@@ -222,9 +222,9 @@ The following script illustrates In-Memory OLTP objects you can create in your d
 - Perf demo using In-Memory OLTP can be found at: [in-memory-oltp-perf-demo-v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/in-memory-oltp-demo-v1.0)
 - [17-minute video explaining In-Memory OLTP and showing the demo](https://www.youtube.com/watch?v=l5l5eophmK4) (demo is at 8:25)
 - [Script to enable In-Memory OLTP and set recommended options](https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/in-memory/t-sql-scripts/enable-in-memory-oltp.sql)
-- [Main In-Memory OLTP documentation](/sql-docs/docs/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization)
+- [Main In-Memory OLTP documentation](in-memory-oltp-in-memory-optimization.md)
 - [Performance and resource utilization benefits of In-Memory OLTP in Azure SQL Database](https://azure.microsoft.com/blog/in-memory-oltp-in-azure-sql-database/)
 - [Improving temp table and table variable performance using memory optimization](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/21/improving-temp-table-and-table-variable-performance-using-memory-optimization/)
 [Optimize Performance using In-Memory Technologies in SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-in-memory)
-- [System-Versioned Temporal Tables with Memory-Optimized Tables](/sql-docs/docs/relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables)
+- [System-Versioned Temporal Tables with Memory-Optimized Tables](../tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)
 - [In-Memory OLTP – Common Workload Patterns and Migration Considerations](http://msdn.microsoft.com/library/dn673538.aspx). 

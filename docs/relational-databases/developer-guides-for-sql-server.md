@@ -44,6 +44,6 @@ manager: "craigg"
 ## More resources 
 
  [Transact-SQL Reference](../t-sql/language-reference.md)   
- [SQL Server Technical Documentation](/sql-docs/docs/sql-server/sql-server-technical-documentation)   
+ [SQL Server Technical Documentation](../sql-server/sql-server-technical-documentation.md)   
  [SQL Server Tutorials](../sql-server/tutorials-for-sql-server-2016.md)  
   

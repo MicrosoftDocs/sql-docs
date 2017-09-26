@@ -21,10 +21,10 @@ SQL Server Data Tools (SSDT) provides project templates and design surfaces for 
   
 It's based on a Visual Studio shell and co-released with SQL Server. New versions of SSDT integrate the latest features of SQL Server. Older versions include the templates and design environment that were current for that release.  
   
-SSDT is backwards compatible, so you can always use [the newest SSDT](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt) to design and deploy databases, models, reports, and packages that run on older versions of SQL Server.  
+SSDT is backwards compatible, so you can always use [the newest SSDT](download-sql-server-data-tools-ssdt.md) to design and deploy databases, models, reports, and packages that run on older versions of SQL Server.  
   
 > [!NOTE]  
-> Historically, the Visual Studio shell used to create SQL Server content types has been released under various names, including **SQL Server Data Tools**, **SQL Server Data Tools - Business Intelligence**, and **Business Intelligence Development Studio**. Previous versions came with distinct sets of project templates. To get all of the project templates together in one SSDT, you need [the newest version](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt). Otherwise, you will probably need to install multiple previous versions to get all of the templates used in SQL Server.  Only one shell is installed per version of Visual Studio; installing a second SSDT just adds the missing templates.  
+> Historically, the Visual Studio shell used to create SQL Server content types has been released under various names, including **SQL Server Data Tools**, **SQL Server Data Tools - Business Intelligence**, and **Business Intelligence Development Studio**. Previous versions came with distinct sets of project templates. To get all of the project templates together in one SSDT, you need [the newest version](download-sql-server-data-tools-ssdt.md). Otherwise, you will probably need to install multiple previous versions to get all of the templates used in SQL Server.  Only one shell is installed per version of Visual Studio; installing a second SSDT just adds the missing templates.  
 
 ## Recent downloads
 

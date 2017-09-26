@@ -53,9 +53,9 @@ SELECT d.name, d.compatibility_level
 go  
 ```  
   
- For a SQL Server database set at compatibility level 120, activation of the [trace flag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481 forces the system to use the CE version 70.  
+ For a SQL Server database set at compatibility level 120 or above, activation of the [trace flag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481 forces the system to use the CE version 70.  
   
- **Legacy CE:** For a SQL Server database set at compatibility level 130, the CE version 70 can be can be activated by using the at the database level by using the [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
+ **Legacy CE:** For a SQL Server database set at compatibility level 120 and above, the CE version 70 can be can be activated by using the at the database level by using the [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
   
 ```tsql  
 ALTER DATABASE
@@ -68,7 +68,7 @@ SELECT name, value
     WHERE name = 'LEGACY_CARDINALITY_ESTIMATION';  
 ```  
  
- Or starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, the [Query Hint](../../t-sql/queries/hints-transact-sql-query.md) `FORCE_LEGACY_CARDINALITY_ESTIMATION`.
+ Or starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, the [Query Hint](../../t-sql/queries/hints-transact-sql-query.md) `USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION')`.
  
  ```tsql  
 SELECT CustomerId, OrderAddedDate  

@@ -57,7 +57,7 @@ manager: "erikre"
  [Tabular Model Solution Deployment](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
   
 ## See Also  
- [Download SQL Server Data Tools (SSDT)](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt)   
+ [Download SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md)   
  [Tools and applications used in Analysis Services](../../analysis-services/tools-and-applications-used-in-analysis-services.md)  
   
   

@@ -99,7 +99,7 @@ This compact list provides links to all the updated articles that are listed in 
 
 
 - Download the **free** [**SQL Server 2016 Developer edition!**](https://www.microsoft.com/en-us/cloud-platform/sql-server-editions-developers).
-- Download the latest version of [SQL Server Management Studio (SSMS)](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms).
+- Download the latest version of [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md).
 - Have an Azure account? Spin up a [Virtual Machine with SQL Server 2016 already installed](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/).
 
 **SQL Server 2016 Database Engine**

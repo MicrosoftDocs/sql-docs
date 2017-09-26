@@ -1,7 +1,7 @@
 ---
-title: "Customize the Report Viewer Web Part | Microsoft Docs"
+title: "Customize the Report Viewer web part | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/07/2017"
+ms.date: "09/25/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -10,19 +10,21 @@ ms.technology:
   - "reporting-services-native"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-helpviewer_keywords: 
-  - "SharePoint integration [Reporting Services], viewing reports"
-  - "Web Parts [Reporting Services]"
-  - "Report Viewer Web Part [Reporting Services]"
-ms.assetid: 086d6546-7299-41bc-bca9-083a15a53679
-caps.latest.revision: 14
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
 ---
-# Customize the Report Viewer Web Part
-  You can use the Report Viewer Web Part to view reports that run on a report server that is configured for SharePoint integration. Reports that you can display include report definition (.rdl) files and Report Builder reports. Reports open in the Report Viewer Web Part in a new page automatically, but you can also add a Report Viewer Web Part to an existing Web page or site if you want a particular report to always be visible on that page.  
-  
+# Customize the Report Viewer web part
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
+
+[!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
+
+You can use the Report Viewer Web Part to view reports that run on a report server that is configured for SharePoint integration. Reports that you can display include report definition (.rdl) files and Report Builder reports. Reports open in the Report Viewer Web Part in a new page automatically, but you can also add a Report Viewer Web Part to an existing Web page or site if you want a particular report to always be visible on that page.
+
+> [!NOTE]
+> Although they have identical names, the Report Viewer Web Part that is installed through the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Add-in is different from the Report Viewer Web Part that is included in the RSWebParts.cab file. The instructions in this topic are specifically for the Report Viewer Web Part that is installed through the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Add-in.
+
  You can customize the Report Viewer Web Part in the following ways:  
   
 -   Change the appearance of the Web Part by setting properties.  
@@ -32,11 +34,13 @@ manager: "erikre"
 -   Specify which view areas are available. The Report Viewer Web Part has a report view area, a Parameters area, and a Credentials area.  
   
  You cannot extend the Report Viewer Web Part to support different file types, and you cannot replace the report toolbar with a custom toolbar or add new functionality to the existing toolbar. If you require customization of the standard features, you should create a custom Web Part.  
-  
-## Setting Web Part Properties  
+
+## Setting web part properties
+
  A Web Part has custom properties that are used to configure specific functionality. A Web Part also has common properties that are standard for every Web Part.  
   
-### Change Default Properties  
+### Change default properties
+
  The Report Viewer Web Part has default properties that are ideally suited for opening reports on demand from a library or folder. By default, all available controls are displayed on the toolbar, and height and width are set to use all of the available space on the Web page. If you want to modify the default properties, you can customize the Web Part through **Site Settings**.  
   
 1.  On the **Site Actions** menu, click **Site Settings**.  
@@ -47,12 +51,14 @@ manager: "erikre"
   
 4.  Open the tool pane and set the properties you want to use.  
   
-### Customize an Embedded Report Viewer in a Web Page  
+### Customize an embedded Report Viewer in a web page
+
  You can set properties to make the Report Viewer fit within a Web page. The report viewer can use the same style and colors as the page that contains it. You can hide all or part of the toolbar, document map, and parameters area to maximize the report viewing area within the allocated space. The report always uses the styles that are defined for it when it was created; you cannot customize report appearance after it is published to a SharePoint library.  
   
  If you are embedding the Report Viewer Web Part in a Web page, you should set the **Report URL** property to a specific report. If you do not, the Report Viewer will display instructions for linking to a report. You cannot customize or remove the instructions.  
   
-### Custom Properties of the Report Viewer Web Part  
+### Custom properties of the Report Viewer web part
+
  When setting custom properties, be aware that some properties are used only when the Report Viewer Web Part is embedded in a page. Examples include Title, Height, Width, Chrome type, and Zone. Other properties, such as Toolbar settings and Parameters settings, are used regardless of whether the Report Viewer appears within a page or opens a report in full-page mode.  
   
  The custom properties of the Report Viewer Web Part are listed below.  
@@ -79,19 +85,22 @@ manager: "erikre"
 |Document Map|A report navigation control that is defined in the report and used to provide one-click access to specific sections of a report. It is available in HTML reports. The document map is displayed in a collapsible area next to the report viewing area. Valid values include **Displayed**, **Collapsed**, and **Hidden**. If a document map is defined for a report, the area is expanded by default unless marked as hidden or collapsed in the Web Part properties. If the document map is collapsed, you can click the arrow to expand it.|  
 |Document Map Area Width|You can choose the measurement and value. The default is 200 pixels. The only requirement for this property is that it is greater than zero.|  
 |Load Parameters|Retrieve parameter properties for the report. Not all reports have parameters. If the report does not have parameters, no values will be returned. If you are setting properties for a report that you just uploaded, you might get an error indicating that the data source connection has been deleted. If this occurs, reset the connection and then finish setting parameter properties after the connection is specified. For more information about how to set the connection, see [Create and Manage Shared Data Sources &#40;Reporting Services in SharePoint Integrated Mode&#41;](http://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76).<br /><br /> For best results, click **Apply** before clicking Load Parameters.<br /><br /> After you load parameter properties, you can set them the same way you would in the parameter property pages of the report. For more information about how to set parameters, see [Set Parameters on a Published Report &#40;Reporting Services in SharePoint Integrated Mode&#41;](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).|  
-  
-## Customizing the Toolbar  
+
+## Customizing the toolbar
+
  The toolbar appears beneath the title and extends across the top of the report. The toolbar provides an **Actions** menu, page navigation for paginated reports, refresh, and zoom. It includes a document map control for reports that have a document map. The **Actions** menu includes commands for exporting the report, searching for text or numbers within a report, printing the report, and, opening the report in Report Builder.  
   
  You cannot add new commands to the  **Actions** menu but you can customize it by changing the options that are visible to users. To change the visibility of toolbar buttons and controls, you change options in the **ToolBar Items Visibility** section of the Web part. You can also remove the **Print** command or specific export formats by making these features unavailable on the report server. Page navigation controls are available for reports that have page breaks; otherwise, the report is a single page of variable length. **Refresh** re-processes the report using the parameters that are current for the report. To display all the controls on one line, set the overall width of the Web Part to at least 400 pixels.  
-  
-## Customizing the Viewing Area  
+
+## Customizing the viewing area
+
  The view area is used to display reports. The report view area is shared with the Parameters and Credentials area, if they are used. If credentials are required, the Credentials area is displayed next to an empty report view area. The Credentials area closes after the user provides credentials and runs the report. To customize the text that prompts users to set credentials, modify the data source connection properties. For more information, see [Create and Manage Shared Data Sources &#40;Reporting Services in SharePoint Integrated Mode&#41;](http://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76).  
   
  The Parameters area provides fields for entering values before running the report. It is only used when a report definition includes parameters. When either the Parameters or Credentials areas are displayed, the report view is adjusted to use the remaining width of the Web Part. You can set properties on the Web Part to customize the width of Parameters. You can also define the labels that appear next to individual parameters on the page. For more information about how to modify parameter labels, see [Set Parameters on a Published Report &#40;Reporting Services in SharePoint Integrated Mode&#41;](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).  
   
-## See Also  
+## See also
+
  [Report Viewer Web Part on a SharePoint Site](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)   
  [Add the Report Viewer Web Part to a Web Page &#40;Reporting Services in SharePoint Integrated Mode&#41;](../../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md)  
-  
-  
+
+More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)

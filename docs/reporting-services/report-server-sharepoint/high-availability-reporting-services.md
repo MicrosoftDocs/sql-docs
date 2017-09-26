@@ -1,7 +1,7 @@
 ---
-title: "High Availability (Reporting Services) | Microsoft Docs"
+title: "High Availability in Reporting Services | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "09/25/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -10,18 +10,13 @@ ms.technology:
   - "reporting-services-native"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-helpviewer_keywords: 
-  - "high availability [SQL Server], Reporting Services"
-  - "high availability [Reporting Services]"
-  - "Reporting Services, high availability"
-ms.assetid: 50e0813f-f591-4688-9cd1-e6389a3808e5
-caps.latest.revision: 16
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
 ---
-# High Availability (Reporting Services)
-  A [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server is a stateless server that stores application data, content, properties, and session information in two [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] relational databases. As such, the best way to ensure the availability of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] functionality is to do the following:  
+# High Availability in Reporting Services
+
+A [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server is a stateless server that stores application data, content, properties, and session information in two [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] relational databases. As such, the best way to ensure the availability of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] functionality is to do the following:  
   
 -   Use the high availability features of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] to maximize the uptime of the report server databases. If you configure a [!INCLUDE[ssDE](../../includes/ssde-md.md)] instance to run in a failover cluster, you can select that instance when you create a report server database.  
   
@@ -35,8 +30,9 @@ manager: "erikre"
   
  The Report Server Web service and Windows service are tightly integrated and run together as a single report server instance. You cannot configure availability for one service separately from the other.  
   
-## See Also  
+## See also
+
  [High Availability Solutions &#40;SQL Server&#41;](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md)   
  [Scale-out Deployment  - Reporting Services Native mode &#40;Configuration Manager&#41;](http://msdn.microsoft.com/library/4df38294-6f9d-4b40-9f03-1f01c1f0700c)  
-  
-  
+
+More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)

@@ -1,7 +1,7 @@
 ---
-title: "Configuration and Administration of a Report Server | Microsoft Docs"
+title: "Configuration and administration of a report server | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/17/2017"
+ms.date: "09/25/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -10,19 +10,22 @@ ms.technology:
   - "reporting-services-native"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-ms.assetid: 846e86d0-fbbb-426c-97f9-f179cd42b390
-caps.latest.revision: 10
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
 ---
+# Configuration and administration of a report server
 
-# Configuration and Administration of a Report Server
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 
-SQL Server Reporting Services is a server-based reporting platform that provides a full range of ready-to-use tools and services to help you create, deploy, and manage reports for your organization, as well as programming features that enable you to extend and customize your reporting functionality. You can integrate your reporting environment with a SharePoint product to experience the benefits of using the collaborative environment provided by SharePoint sites.  
-  
-## In this section  
- Use the following sections to help you understand concepts, deployment scenarios, procedures, and more for integrating your [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] environment with a SharePoint product or technology:  
+[!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
+
+SQL Server Reporting Services is a server-based reporting platform that provides a full range of ready-to-use tools and services to help you create, deploy, and manage reports for your organization, as well as programming features that enable you to extend and customize your reporting functionality. You can integrate your reporting environment with a SharePoint product to experience the benefits of using the collaborative environment provided by SharePoint sites.
+
+> [!NOTE]
+> Reporting Services integration with SharePoint is no longer available after SQL Server 2016.
+
+Use the following sections to help you understand concepts, deployment scenarios, procedures, and more for integrating your Reporting Services environment with a SharePoint product or technology:  
   
 -   Menu options in a SharePoint document library  
   
@@ -56,6 +59,6 @@ SQL Server Reporting Services is a server-based reporting platform that provides
   
 -   [Set Processing Options &#40;Reporting Services in SharePoint Integrated Mode&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)  
   
- For more general information about [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], see [Reporting Services](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online. For information about other [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components, tools, and resources, see [SQL Server Books Online](../../sql-server/sql-server-technical-documentation.md).  
+ For more general information about Reporting Services, see [Reporting Services](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online. For information about other [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components, tools, and resources, see [SQL Server Books Online](../../sql-server/sql-server-technical-documentation.md).  
 
 More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)

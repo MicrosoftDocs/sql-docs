@@ -1,7 +1,7 @@
 ---
-title: "Backup and Restore Reporting Services SharePoint Service Applications | Microsoft Docs"
+title: "Backup and restore Reporting Services SharePoint service applications | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: "09/25/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -10,31 +10,29 @@ ms.technology:
   - "reporting-services-native"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-ms.assetid: dfb4ed77-90e5-4273-b690-89a945508ed2
-caps.latest.revision: 12
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
 ---
-# Backup and Restore Reporting Services SharePoint Service Applications
-  This topic describes how to backup and restore a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] services application using SharePoint Central Administration or PowerShell. The topic contains:  
-  
--   [Limitations and Restrictions](#bkmk_Restrictions)  
-  
--   [Recommendations](#bkmk_recommendations)  
-  
--   [Backup The Service application](#bkmk_backup)  
-  
--   [Restore the Service Application](#bkmk_restore)  
-  
-##  <a name="bkmk_BeforeYouBegin"></a> Before You Begin  
-  
-###  <a name="bkmk_Restrictions"></a> Limitations and Restrictions  
-  
-> [!NOTE]  
->  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service applications can partially be backed up and restored using the SharePoint backup and restore functionality. **Additional steps are required** and the steps are documented in this topic. Currently the backup process **does not** backup encryption keys and credentials for unattended execution accounts (UEA) or windows authentication to the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] database.  
-  
-###  <a name="bkmk_recommendations"></a> Recommendations  
+# Backup and restore Reporting Services SharePoint service applications
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
+
+[!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
+
+This topic describes how to backup and restore a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] services application using SharePoint Central Administration or PowerShell.
+
+> [!NOTE]
+> Reporting Services integration with SharePoint is no longer available after SQL Server 2016.
+
+## Before you begin
+
+### Limitations and restrictions
+
+> [!NOTE]
+>  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service applications can partially be backed up and restored using the SharePoint backup and restore functionality. **Additional steps are required** and the steps are documented in this topic. Currently the backup process **does not** backup encryption keys and credentials for unattended execution accounts (UEA) or windows authentication to the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] database.
+
+### Recommendations
   
 -   Backup the encryption keys before starting the SharePoint backup. If you do not backup the encryption keys, then you will not be able to access your encrypted data, following the restore of the service application. You will need to delete your encrypted data.  
   
@@ -42,7 +40,8 @@ manager: "erikre"
   
 -   Review the SharePoint backup log is created in the same folder as the backup file. The file is typically named **spbackup.log**  
   
-##  <a name="bkmk_backup"></a> Backup The Service application  
+## Backup the service application
+
  Complete the following steps in order:  
   
 1.  Backup the encryption keys  
@@ -50,12 +49,14 @@ manager: "erikre"
 2.  Backup the Service application  
   
 3.  Verify if you service application uses an UEA or Windows authentication for database access. If it does, make a note of the credentials so you can use them to configure the service application after it is restored.  
-  
-### Backup the Encryption Keys using Central Administration  
- For information on backing up the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] encryption keys, see the “Encryption Keys” section of [Manage a Reporting Services SharePoint Service Application](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md).  
-  
-###  <a name="bkmk_centraladmin"></a> Backup the Service application Using SharePoint Central Administration  
- To back up the Service Application, complete the following steps:  
+
+### Backup the encryption keys using SharePoint Central Administration
+
+For information on backing up the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] encryption keys, see the “Encryption Keys” section of [Manage a Reporting Services SharePoint Service Application](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md).  
+
+### Backup the service application using SharePoint Central Administration
+
+To back up the Service Application, complete the following steps:  
   
 1.  In SharePoint Central Administration Click **Perform a backup** in the **Backup and Restore** group.  
   
@@ -73,7 +74,8 @@ manager: "erikre"
   
  [Back up a service application (SharePoint Server 2010)](http://technet.microsoft.com/library/ee428318.aspx)  
   
-### Verify Execution Account and Database Authentication  
+### Verify execution account and database authentication
+
  **Execution Account:** To verify if your service application is using an execution account:  
   
 1.  In SharePoint Central Administration, click **Manage Service Applications** in the **Application Management** group.  
@@ -94,7 +96,8 @@ manager: "erikre"
   
 4.  If Windows Authentication is configured, you need to know the credentials so you can configure the service application after you restore it. Do not proceed with the backup and restore procedure until you know the correct credentials.  
   
-##  <a name="bkmk_restore"></a> Restore the Service Application  
+## Restore the service application
+
  Complete the following steps in order:  
   
 1.  Restore the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application.  
@@ -103,7 +106,7 @@ manager: "erikre"
   
 3.  If your service application was using an execution account or Windows authentication for database access, configure the credentials.  
   
-### Restore the Service application Using SharePoint Central Administration  
+### Restore the service application using SharePoint Central Administration
   
 1.  In SharePoint Central Administration Click **Restore from a backup** in the **Backup and Restore** group.  
   
@@ -124,11 +127,13 @@ manager: "erikre"
  [Restore a service application (SharePoint Foundation 2010)](http://msdn.microsoft.com/library/ee748615.aspx).  
   
  [Restore a service application (SharePoint Server 2010)](https://technet.microsoft.com/library/ee428305.aspx).  
-  
-### Restore the Encryption Keys using Central Administration  
+
+### Restore the encryption keys using SharePoint Central Administration
+
  For information on restoring the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] encryption keys, see the “Encryption Keys” section of [Manage a Reporting Services SharePoint Service Application](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md).  
-  
-### Configure the Execution Account and Database Authentication  
+
+### Configure the execution account and database authentication
+
  **Execution Account:** If your service application was using an execution account complete the following steps to configure it:  
   
 1.  In SharePoint Central Administration, click **Manage Service Applications** in the **Application Management** group.  
@@ -153,6 +158,6 @@ manager: "erikre"
   
 5.  Type the account and password. Select **Use as Windows Credentials** if appropriate.  
   
-6.  Click **Ok**  
-  
-  
+6.  Click **Ok**
+
+More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)

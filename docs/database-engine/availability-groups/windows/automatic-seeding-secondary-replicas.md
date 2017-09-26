@@ -3,7 +3,7 @@ title: "Automatic seeding for secondary replicas (SQL Server) | Microsoft Docs"
 description: "Use automatic seeding to initialize secondary replicas."
 services: data-lake-analytics
 ms.custom: ""
-ms.date: "08/17/2017"
+ms.date: "09/25/2017"
 ms.prod: 
  - "sql-server-2016"
  - "sql-server-2017"

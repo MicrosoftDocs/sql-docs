@@ -1,7 +1,7 @@
 ---
 title: "Domain Independent Availability Groups (SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/12/2017"
+ms.date: "09/25/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

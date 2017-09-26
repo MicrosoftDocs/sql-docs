@@ -16,15 +16,15 @@ manager: "erikre"
 ---
 # Configure Reporting Services to use a subject alternative name
 
-This topic explains how to configure [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) to use a subject alternative name (SAN) by modifying the rsreportserver.config file and using the Netsh.exe tool.
+This topic explains how to configure Reporting Services (SSRS) to use a subject alternative name (SAN) by modifying the rsreportserver.config file and using the Netsh.exe tool.
 
 The instructions apply to the Reporting Service URL as well as a Web Service URL.
 
 To use a SAN, the SSL certificate must be registered on the server, signed, and have the private key. You cannot use a self-signed certificate  
   
- URLs in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] can be configured to use an SSL certificate. A certificate normally has just a subject name, which allows only one URL for an SSL (Secure Sockets Layer) session. The SAN is an additional field in the certificate that allows an SSL service to listen and be valid for many URLs, and to share the SSL port with other applications. The SAN looks something like the following: www.s2.com.  
+ URLs in Reporting Services can be configured to use an SSL certificate. A certificate normally has just a subject name, which allows only one URL for an SSL (Secure Sockets Layer) session. The SAN is an additional field in the certificate that allows an SSL service to listen for many URLs, and to share the SSL port with other applications. The SAN looks something like `www.s2.com`.  
   
- For more information about SSL settings for [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], see [Configure SSL Connections on a Native Mode Report Server](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).  
+ For more information about SSL settings for Reporting Services, see [Configure SSL Connections on a Native Mode Report Server](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).  
   
 ## Configure SSRS to use a subject alternative name for web service URL
   
@@ -40,7 +40,7 @@ To use a SAN, the SSL certificate must be registered on the server, signed, and 
   
 3.  Open the rsreportserver.config file.  
   
-     For SSRS Native mode, the file is located by default in the following folder.  
+     For SSRS Native mode, the file is located by default in the following folder:  
   
     ```  
     \Program Files\Microsoft SQL Server\MSRS11.MSSQLSERVER\Reporting Services\ReportServer  
@@ -48,7 +48,7 @@ To use a SAN, the SSL certificate must be registered on the server, signed, and 
   
 4.  Copy the URL section for the Report Server Web Service application.  
   
-     For example, the following is the original URL section.  
+     For example, the following original URL section is:  
   
     ```  
         <URL>  
@@ -59,7 +59,7 @@ To use a SAN, the SSL certificate must be registered on the server, signed, and 
   
     ```  
   
-     The following is the modified URL section.  
+     The following modified URL section is:
   
     ```  
     <URL>  
@@ -89,7 +89,7 @@ To use a SAN, the SSL certificate must be registered on the server, signed, and 
     Netsh>http  
     ```  
   
-8.  Show the existing urlacls by typing the following.  
+8.  Show the existing urlacls by typing the following:
   
     ```  
     Netsh http>show urlacl  

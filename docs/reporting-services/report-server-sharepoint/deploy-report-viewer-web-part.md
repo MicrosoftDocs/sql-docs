@@ -96,7 +96,7 @@ Get-SPWebApplication "<web application url>" | Get-SPSite -Limit ALL |
 
 Although SharePoint Central Administration provides solution retraction, you do not need to retract the **ReportViewerWebPart.wsp** file unless you are systematically troubleshooting an installation or patch deployment problem.
 
-### Disable the **Report Viewwer Web Part** feature in each SharePoint site with the Report Viewer Web Part enabled
+### Disable the **Report Viewer Web Part** feature in each SharePoint site with the Report Viewer Web Part enabled
 
 1. Select the **gear** icon in the upper left and select **Site Settings*.
 
@@ -108,7 +108,7 @@ Although SharePoint Central Administration provides solution retraction, you do 
 
 3. Click **Deactivate** next to the **Report Viewer Web Part** feature
 
-### Retract the solution from the Farm
+### Retract the solution from the farm
 
 1. In SharePoint Central Administration, in **System Settings**, select **Manage farm solutions**.
 
@@ -116,9 +116,9 @@ Although SharePoint Central Administration provides solution retraction, you do 
 
 3. Select Retract Solution.
 
-### Removing the Solution in PowerShell
+### Removing the solution in PowerShell
 
-Disabling all features and retracting the solution can be done in SharePoint Management Shell by using the Disable-SPFeature, Uninstall-SPSolution, and Remove-SPSolution cmdlets. An example script can be found below:
+Disabling all features and retracting the solution can be done in SharePoint Management Shell by using the [Disable-SPFeature](https://technet.microsoft.com/en-us/library/ff607879.aspx), [Uninstall-SPSolution](https://technet.microsoft.com/en-us/library/ff607873.aspx), and [Remove-SPSolution](https://technet.microsoft.com/en-us/library/ff607748.aspx) cmdlets. An example script can be found below:
 
 ```
 $solutionId = "reportviewerwebpart.wsp"

@@ -14,6 +14,7 @@
 ### [Upload Documents to a SharePoint Library](upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)  
 ### [Set Processing Options](set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)  
 ## [Report Viewer Web Part on a SharePoint Site](report-viewer-web-part-on-a-sharepoint-site.md)  
+### [Report Viewer web part on a SharePoint Site](report-viewer-web-part-sharepoint-site.md)  
 ### [Deploy the Report Viewer web part](deploy-report-viewer-web-part.md)
 ### [Add Report Viewer web part to a web page](add-report-viewer-web-part-to-page.md)
 ### [Connect Filter or Documents Web Part](connect-filter-or-documents-web-part-sharepoint-integrated-mode.md)  

@@ -36,19 +36,23 @@ To run an SSIS package on a Linux computer, do the following things:
     $ dtexec /F \<package name \> /DE <protection password>
     ```
 
-## Connect to ODBC sources and destinations
+## Other common SSIS tasks
 
-With SSIS on Linux CTP 2.1 Refresh and later, SSIS packages can use ODBC connections on Linux. This functionality has been tested with the SQL Server and the MySQL ODBC drivers, but is also expected to work with any Unicode ODBC driver that observes the ODBC specification. At design time, you can provide either a DSN or a connection string to connect to the ODBC data; you can also use Windows authentication. For more info, see the [blog post announcing ODBC support on Linux](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/).
+-   **Design packages**.
+
+    -   **Connect to ODBC data sources**. With SSIS on Linux CTP 2.1 Refresh and later, SSIS packages can use ODBC connections on Linux. This functionality has been tested with the SQL Server and the MySQL ODBC drivers, but is also expected to work with any Unicode ODBC driver that observes the ODBC specification. At design time, you can provide either a DSN or a connection string to connect to the ODBC data; you can also use Windows authentication. For more info, see the [blog post announcing ODBC support on Linux](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/).
+
+    -   **Paths**. Provide Windows-style paths in your SSIS packages. SSIS on Linux does not support Linux-style paths, but maps Windows-style paths to Linux-style paths at run time. Then, for example, SSIS on Linux maps the Windows-style path `C:\test` to the Linux-style path `/test`.
+
+-   **Deploy packages**. You can only store packages in the file system on Linux in this release. The SSIS Catalog database and the legacy SSIS service are not available on Linux for package deployment and storage.
+
+-   **Schedule packages**. You can use Linux system scheduling tools such as `cron` to schedule packages. You can't use SQL Agent on Linux to schedule package execution in this release. 
 
 ## Limitations and known issues
 
-**Paths**. SSIS on Linux does not support Linux-style paths, but maps Windows-style paths to Linux-style paths at run time. Provide Windows-style paths in your SSIS packages. Then, for example, SSIS on Linux maps the Windows-style path `C:\test` to the Linux-style path `/test`.
+### General limitations and known issues
 
-**Deploying packages**. You can only store packages in the file system on Linux in this release. The SSIS Catalog database and the legacy SSIS service are not available on Linux for package deployment and storage.
-
-**Scheduling packages**. You can't use SQL Agent on Linux to schedule package execution in this release. You can use Linux system scheduling tools such as `cron` to schedule packages.
-
-**Other limitations and known issues**. The following features are not supported in this release when you run SSIS packages on Linux:
+The following features are not supported in this release of SSIS on Linux:
   - SSIS Catalog database
   - Scheduled package execution by SQL Agent
   - Windows Authentication
@@ -61,16 +65,13 @@ With SSIS on Linux CTP 2.1 Refresh and later, SSIS packages can use ODBC connect
 
 For other limitations and known issues with SSIS on Linux, see the [Release Notes](sql-server-linux-release-notes.md#ssis).
 
-## <a name="components"></a> Supported and unsupported components
+### <a name="components"></a> Supported and unsupported components
 
 The following built-in Integration Services components are supported on Linux. Some of them have limitations on the Linux platform, as described in the following tables.
 
 Built-in components that are not listed here are not supported on Linux.
 
-### Supported components
-The following built-in Integration Services components are supported and work as expected on Linux.
-
-**Supported control flow tasks**
+#### Supported control flow tasks
 - Bulk Insert Task
 - Data Flow Task
 - Data Profiling Task
@@ -81,16 +82,38 @@ The following built-in Integration Services components are supported and work as
 - Web Service Task
 - XML Task
 
-**Supported control flow containers**
+#### Control flow tasks supported with limitations
+
+| Task | Limitations |
+|------------|---|
+| Execute Process task | Only supports in-process mode. |
+| File System task | The *Move directory* and *Set file attributes* actions are not supported. |
+| Script task | Only supports standard .NET Framework APIs. |
+| Send Mail task | Only supports anonymous user mode. |
+| Transfer Database task | UNC paths are not supported. |
+| | |
+
+#### Supported control flow containers
 - Sequence Container
 - For Loop Container
 - Foreach Loop Container
 
-**Supported data flow sources and destinations**
+#### Supported data flow sources and destinations
 - Raw File source and destination
 - XML Source
 
-**Supported data flow transformations**
+#### Data flow sources and destinations supported with limitations
+
+| Component | Limitations |
+|------------|---|
+| ADO.NET source and destination | Only support the SQLClient data provider. |
+| Flat File source and destination | Only support Windows-style file paths, to which the default path mapping rule is applied. For example `D:\home\ssis\travel.csv` becomes `/home/ssis/travel.csv`. |
+| OData source | Only supports Basic authentication. |
+| ODBC source and destination | Supports 64-bit Unicode ODBC drivers on Linux. Depends on the UnixODBC driver manager on Linux. |
+| OLE DB source and destination | Only support SQL Server Native Client 11.0 and Microsoft OLE DB Provider for SQL Server. |
+| | |
+
+#### Supported data flow transformations
 - Aggregate
 - Audit
 - Balanced Data Distributor
@@ -115,30 +138,22 @@ The following built-in Integration Services components are supported and work as
 - Union All
 - Unpivot
 
-### Components that are supported with limitations
-The following built-in Integration Services components are supported on Linux, but have the limitations described in the following tables:
+#### Data flow transformations supported with limitations
 
-#### Control flow tasks
-| Task | Limitations |
-|------------|---|
-| Execute Process task | Only supports in-process mode. |
-| File System task | The *Move directory* and *Set file attributes* actions are not supported. |
-| Script task | Only supports standard .NET Framework APIs. |
-| Send Mail task | Only supports anonymous user mode. |
-| Transfer Database task | UNC paths are not supported. |
-| | |
-
-#### Data flow sources, transformations, and destinations
 | Component | Limitations |
 |------------|---|
-| ADO.NET source and destination | Only support the SQLClient data provider. |
-| Flat File source and destination | Only support Windows-style file paths, to which the default path mapping rule is applied. For example `D:\home\ssis\travel.csv` becomes `/home/ssis/travel.csv`. |
-| OData source | Only supports Basic authentication. |
-| ODBC source and destination | Supports 64-bit Unicode ODBC drivers on Linux. Depends on the UnixODBC driver manager on Linux. |
-| OLE DB source and destination | Only support SQL Server Native Client 11.0 and Microsoft OLE DB Provider for SQL Server. |
 | OLE DB Command transformation | Same limitations as the OLE DB source and destination. |
 | Script component | Only supports standard .NET Framework APIs. |
 | | |
+
+### Supported and unsupported log providers
+All the built-in SSIS log providers are supported on Linux except the Windows Event Log provider.
+
+The SQL Server log provider supports only SQL Authentication; it does not support Windows Authentication.
+
+The SSIS log providers for Text files, for XML files, and for SQL Server Profiler write their output to a file that you specify. The following considerations apply to the file path:
+-   If you don't provide a path, the log provider writes to the current directory of the host. If the current user doesn't have permission to write to the current directory of the host, the log provider raises an error.
+-   You can't use an environment variable in a file path. If you specify an environment variable, the literal text that you specify appears in the file path. For example, if you specify `%TMP%/log.txt`, the log  provider appends the literal text `/%TMP%/log.txt` to the current host directory.
 
 ## More info about SSIS on Linux
 

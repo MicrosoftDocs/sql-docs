@@ -43,9 +43,9 @@ This command creates a new SSMA project.
   
 -   `project-name` indicates the name of the project. {string}  
   
--   `overwrite-if-exists`Optional attribute indicates if an existing project should be overwritten. {boolean}  
+-   `overwrite-if-exists`Optional attribute indicates whether an existing project should be overwritten. {boolean}  
   
--   `project-type:`Optional attribute. Indicates the project type i.e. “sql-server-2005” project or “sql-server-2008” project or “sql-server-2012” project or “sql-server-2014” project or “sql-azure” project. Default is “sql-server-2008”.  
+-   `project-type:`Optional attribute. Indicates the project typ, that is “sql-server-2005” project or “sql-server-2008” project or “sql-server-2012” project or “sql-server-2014” project or “sql-azure” project. Default is “sql-server-2008.”  
   
 **Syntax example:**  
   
@@ -84,7 +84,7 @@ This command opens the project.
 />  
 ```  
 > [!NOTE]  
-> The SSMA for SAP ASE Console Application supports backward compatibility. You will be able to open projects created by previous version of SSMA.  
+> The SSMA for SAP ASE Console Application supports backward compatibility. You can use it to open projects created by previous version of SSMA.  
   
 ### save-project  
 This command saves the migration project.  
@@ -132,7 +132,7 @@ This command loads the source metadata, and it is useful for working on migratio
   
 If the connection to the source/target cannot be established, an error is generated and the console application stops further execution.  
   
-This command requires one or several metabase nodes as command line parameter.  
+This command requires one or several metabase nodes as command-line parameter.  
   
 **Syntax example:**  
   
@@ -156,7 +156,7 @@ If (re)connection with the source cannot be established, an error is generated a
 ```  
   
 ### connect-target-database  
-This command connects to the target SQL Server database and loads high level metadata of the target database but not the metadata entirely.  
+This command connects to the target SQL Server database and loads high-level metadata of the target database but not the metadata entirely.  
   
 If the connection to the target cannot be established, an error is generated and the console application stops further execution.  
   
@@ -191,9 +191,9 @@ If the source database connection is not performed before executing this command
   
 Failure to connect to the source database server during the command execution, also results in terminating the console application.  
   
--   `conversion-report-folder:` Specifies the folder in which the assessment report can to be stored. (optional attribute)  
+-   `conversion-report-folder:` Specifies the folder in which the assessment report can be stored. (optional attribute)  
   
--   `object-name:` Specifies the object(s) considered for assessment report generation (supports indivdual object names or a group object name).  
+-   `object-name:` Specifies the object(s) considered for assessment report generation (supports individual object names or a group object name).  
   
 -   `object-type:` Specifies the type of the object called out in the object-name attribute (if object category is specified, then object type will be "category").  
   
@@ -205,7 +205,7 @@ Failure to connect to the source database server during the command execution, a
   
     If only the folder path is mentioned, then file by name **AssessmentReport&lt;n&gt;.XML** is created. (optional attribute)  
   
-    Report creation has two further sub-categories:  
+    Report creation has two further subcategories:  
   
     -   `report-errors` (="true/false", with default as "false" (optional attributes))  
   
@@ -257,9 +257,9 @@ This command performs schema conversion from source to the target schema.
   
 If the source or target database connection is not performed before executing this command or the connection to the source or target database server fails during the command execution, an error is generated and the console application exits.  
   
--   `conversion-report-folder:` Specifies folder in which the assessment report can to be stored. (optional attribute)  
+-   `conversion-report-folder:` Specifies folder in which the assessment report can be stored. (optional attribute)  
   
--   `object-name:` Specifies the source object(s) considered for converting schema (supports indivdual object names or a group object name).  
+-   `object-name:` Specifies the source object(s) considered for converting schema (supports individual object names or a group object name).  
   
 -   `object-type:` Specifies the type of the object called out in the object-name attribute (if object category is specified, then object type will be "category").  
   
@@ -269,9 +269,9 @@ If the source or target database connection is not performed before executing th
   
 -   `write-summary-report-to:` Specifies the path at which the summary report will be generated.  
   
-    If only the folder path is mentioned,then file by name **SchemaConversionReport&lt;n&gt;.XML** is created. (optional attribute)  
+    If only the folder path is mentioned, then file by name **SchemaConversionReport&lt;n&gt;.XML** is created. (optional attribute)  
   
-    Report creation has two further sub-categories:  
+    Report creation has two further subcategories:  
   
     -   `report-errors` (="true/false", with default as "false" (optional attributes))  
   
@@ -316,15 +316,15 @@ or
 ### migrate-data  
 THis command migrates the source data to the target.  
   
--   `object-name:` Specifies the source object(s) considered for migrating data (supports indivdual object names or a group object name).  
+-   `object-name:` Specifies the source object(s) considered for migrating data (supports individual object names or a group object name).  
   
 -   `object-type:` specifies the type of the object called out in the object-name attribute (if object category is specified then object type will be "category").  
   
 -   `write-summary-report-to:` Specifies the path at which the report will be generated.  
   
-    If only the folder path is mentioned,then file by name **DataMigrationReport&lt;n&gt;.XML** is created. (optional attribute)  
+    If only the folder path is mentioned, then file by name **DataMigrationReport&lt;n&gt;.XML** is created. (optional attribute)  
   
-    Report creation has two further sub-categories:  
+    Report creation has two further subcategories:  
   
     -   `report-errors` (="true/false", with default as "false" (optional attributes))  
   
@@ -388,7 +388,7 @@ This command provides the schema mapping of the source database to the target sc
 sql-server-schema="<target-schema>"/>  
 ```  
   
-## Manageability sommands  
+## Manageability commands  
 The Manageability commands help synchronize the target database objects with the source database.  
   
 > [!NOTE]  
@@ -401,7 +401,7 @@ If this command is executed against the source database, an error is encountered
   
 If the target database connection is not performed before executing this command or the connection to the target database server fails during the command execution, an error is generated and the console application exits.  
   
--   `object-name:` Specifies the target object(s) considered for synchronizing with target database (supports indivdual object names or a group object name).  
+-   `object-name:` Specifies the target object(s) considered for synchronizing with target database (supports individual object names or a group object name).  
   
 -   `object-type:` Specifies the type of the object called out in the object-name attribute (if object category is specified then object type will be "category").  
   
@@ -460,9 +460,9 @@ This command refreshes the source objects from database.
   
 If this command is executed against the target database, an error is generated.  
   
-This command requires one or several metabase nodes as command line parameter.  
+This command requires one or several metabase nodes as command-line parameter.  
   
--   `object-name:` Specifies the source object(s) considered for refreshing from source database (supports indivdual object names or a group object name).  
+-   `object-name:` Specifies the source object(s) considered for refreshing from source database (supports individual object names or a group object name).  
   
 -   `object-type:` Specifies the type of the object specified in the object-name attribute (if object category is specified then object type will be "category").  
   
@@ -516,11 +516,11 @@ or
 The Script Generation commands perform dual tasks: they help save the console output in a script file, and they record the T-SQL output to the console or a file based on the parameter you specify.  
   
 ### save-as-script  
-This command is used to save the Scripts of the objects to a file mentioned when metabase=target, This is an alternative to synchronization command in that we get the scripts and execute the same on the target database.  
+This command is used to save the Scripts of the objects to a file mentioned when metabase=target. This is an alternative to synchronization command in that we get the scripts and execute the same on the target database.  
   
-This command requires one or several metabase nodes as command line parameter.  
+This command requires one or several metabase nodes as command-line parameter.  
   
--   `object-name:` Specifies the object(s) whose scripts are to be saved (supports indivdual object names or a group object name).  
+-   `object-name:` Specifies the object(s) whose scripts are to be saved (supports individual object names or a group object name).  
   
 -   `object-type:` Specifies the type of the object called out in the object-name attribute (if object category is specified, then object type will be "category").  
   
@@ -528,7 +528,7 @@ This command requires one or several metabase nodes as command line parameter.
   
 -   `destination:` Specifies the path or the folder in which the script must be saved. If the file name is not given, then a file name in the format (object_name   attribute value).out will be provided.
   
--   `overwrite:` If true, then it overwrites the same filename if it exist. It can have the values (true/false).  
+-   `overwrite:` If true, then it overwrites the same filename if it exists. It can have the values (true/false).  
   
 **Syntax example:**  
   
@@ -572,27 +572,27 @@ This command converts the SQL statement.
   
     If this attribute is not specified, then the converted T-SQL statement is displayed on the console. (optional attribute)  
   
--   `conversion-report-folder` Specifies the folder in which the assessment report can to be stored. (optional attribute)  
+-   `conversion-report-folder` Specifies the folder in which the assessment report can be stored. (optional attribute)  
   
 -   `conversion-report-overwrite` Specifies whether to overwrite the assessment report folder if it already exists.  
   
     **Default value:** false. (optional attribute)  
   
--   `write-converted-sql-to` specifies the file (or) folder path to which the converted T-SQL should be stored. When a folder path is specified along with the `sql-files` attribute, each source file will have a corresponding target T-SQL file created under the specified folder. When a folder path is specified along with the `sql` attribute, the converted T-SQL is written to a file named Result.out under the specified folder.  
+-   `write-converted-sql-to` specifies the file (or) folder path to which the converted T-SQL should be stored. When a folder path is specified along with the `sql-files` attribute, each source file has a corresponding target T-SQL file created under the specified folder. When a folder path is specified along with the `sql` attribute, the converted T-SQL is written to a file named Result.out under the specified folder.  
   
--   `sql` specifies the Sybase sql statements to be converted, one or more statements can be seperated using a ";"  
+-   `sql` specifies the Sybase sql statements to be converted, one or more statements can be separated using a ";"  
   
--   `sql-files` specifies the path of the sql files which has to be converted to T-SQL code.  
+-   `sql-files` specifies the path of the sql files that has to be converted to T-SQL code.  
   
--   `write-summary-report-to` specifies the path where the summary report will be generated. If only the folder path is mentioned,then file by name **ConvertSQLReport.XML** is created. (optional attribute)  
+-   `write-summary-report-to` specifies the path where the summary report will be generated. If only the folder path is mentioned, then file by name **ConvertSQLReport.XML** is created. (optional attribute)  
   
-    Summary report creation has 2 further sub-categories, viz..,:  
+    Summary report creation has two further subcategories, namely:  
   
     -   report-errors (="true/false", with default as "false" (optional attributes)).  
   
     -   verbose (="true/false", with default as "false" (optional attributes)).  
   
-THis command requires one or several metabase nodes as command line parameter.  
+THis command requires one or several metabase nodes as command-line parameter.  
   
 **Syntax example:**  
   
@@ -663,7 +663,7 @@ or
 ```  
   
 ## Next Step  
-For information on command line options, see [Command Line Options in SSMA Console &#40;SybaseToSQL&#41;](../../ssma/sybase/command-line-options-in-ssma-console-sybasetosql.md) .  
+For information on command-line options, see [Command-Line Options in SSMA Console &#40;SybaseToSQL).  
   
 For information on Sample console script file, see [Working with the Sample Console Script Files &#40;SybaseToSQL&#41;](../../ssma/sybase/working-with-the-sample-console-script-files-sybasetosql.md)  
   

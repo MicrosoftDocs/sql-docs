@@ -50,7 +50,7 @@ manager: "jhubbard"
   
 |New Feature|Description|  
 |-----------------|-----------------|  
-|New Escape Function<br /><br /> Limited Return Rows Escape|Partially supported<br /><br /> Escape syntax: LIMIT \<rows> [OFFSET <row_offset>](/sql-docs/docs/connect/jdbc/using-sql-escape-sequences).|  
+|New Escape Function<br /><br /> Limited Return Rows Escape|Partially supported<br /><br /> Escape syntax: LIMIT \<rows> [OFFSET <row_offset>](using-sql-escape-sequences.md).|  
   
  The Java Database Connectivity API 4.1 specification is supported by the Microsoft JDBC Driver 4.2 for SQL Server, with the following Data Type Mappings.  
   

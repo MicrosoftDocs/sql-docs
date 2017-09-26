@@ -30,7 +30,7 @@ manager: "jhubbard"
 
   A transaction is a single unit of work. If a transaction is successful, all of the data modifications made during the transaction are committed and become a permanent part of the database. If a transaction encounters errors and must be canceled or rolled back, then all of the data modifications are erased.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] operates in the following transaction modes.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] operates in the following transaction modes:  
   
  Autocommit transactions  
  Each individual statement is a transaction.  
@@ -48,7 +48,7 @@ manager: "jhubbard"
 > For special considerations related to Data Warehouse products, see [Transactions (SQL Data Warehouse)](transactions-sql-data-warehouse.md).   
 
 ## In This Section  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides the following transaction statements.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides the following transaction statements:  
   
 |||  
 |-|-|  

@@ -349,7 +349,7 @@ The following issues were fixed this release:
 
 * Fixed an issue introduced in SSMS 16.5.2 which was causing the expansion of the 'Table' node when the table had more than one sparse column.
 
-* Users can deploy SSIS packages containing OData Connection Manager which connect to a Microsoft Dynamics AX/CRM Online resource to SSIS catalog. For more information, see [OData Connection Manager](/sql-docs/docs/integration-services/connection-manager/odata-connection-manager).
+* Users can deploy SSIS packages containing OData Connection Manager which connect to a Microsoft Dynamics AX/CRM Online resource to SSIS catalog. For more information, see [OData Connection Manager](../integration-services/connection-manager/odata-connection-manager.md).
 
 * Configuring Always Encrypted on an existing table fails with errors on unrelated objects. [Connect ID 3103181](https://connect.microsoft.com/SQLServer/feedback/details/3103181/setting-up-always-encrypted-on-an-existing-table-fails-with-errors-on-unrelated-objects)
 
@@ -475,7 +475,7 @@ Generally available | Version number: 13.0.15700.28
 
 * [New authentication option **'Active Directory Universal Authentication'**](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/). This is a token-based authentication mechanism driven by Azure Active Directory that supports multi-factor, password, and integrated authentication mechanisms.
 
-* New Extended Events templates matching the functionality of SQL Server Profiler templates [(Microsoft Connect item #2543925).](/sql-docs/docs/tools/sql-server-profiler/sql-server-profiler-templates).
+* New Extended Events templates matching the functionality of SQL Server Profiler templates [(Microsoft Connect item #2543925).](../tools/sql-server-profiler/sql-server-profiler-templates.md).
 
 * New Create database and database properties dialogs for Azure SQL databases.
 

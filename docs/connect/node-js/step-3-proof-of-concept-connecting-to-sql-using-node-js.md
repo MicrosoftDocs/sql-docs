@@ -95,7 +95,7 @@ All SQL statements are executed using the **new Request()** function. If the sta
   
 ## Step 3: Insert a row  
   
-In this example you will see how to execute an [INSERT](/sql-docs/docs/t-sql/statements/insert-transact-sql) statement safely, pass parameters which protect your application from [SQL injection](/sql-docs/docs/relational-databases/tables/primary-and-foreign-key-constraints) value.    
+In this example you will see how to execute an [INSERT](../../t-sql/statements/insert-transact-sql.md) statement safely, pass parameters which protect your application from [SQL injection](../../relational-databases/tables/primary-and-foreign-key-constraints.md) value.    
   
   
 ```javascript  

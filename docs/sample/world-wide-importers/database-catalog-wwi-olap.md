@@ -175,7 +175,7 @@ These are the procedures used by a client application, such as a Web front-end.
 
 ### Integration Schema
 
-The stored procedures in this schema are used by the ETL process. They obtain the data needed from various tables for the timeframe required by the [ETL package](/sql-docs/docs/sample/world-wide-importers/etl-workflow).
+The stored procedures in this schema are used by the ETL process. They obtain the data needed from various tables for the timeframe required by the [ETL package](etl-workflow.md).
 
 ### DataLoadSimulation Schema
 

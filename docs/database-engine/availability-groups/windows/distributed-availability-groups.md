@@ -13,7 +13,7 @@ helpviewer_keywords:
 - "Availability Groups [SQL Server], distributed"
 ms.assetid: 
 caps.latest.revision: 
-author: "MikeRayMSFT"
+author: "allanhirt"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---
@@ -261,8 +261,6 @@ and	ag.is_distributed = 1
 * [Use the new availability group dialog box (SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)
  
 * [Create an availability group with Transact-SQL](create-an-availability-group-transact-sql.md)
-
-This content was written by [Allan Hirt](http://mvp.microsoft.com/en-us/PublicProfile/4025254?fullName=Allan%20Hirt), Microsoft Most Valued Professional.
 
 <!--Image references-->
 [1]: ./media/dag-01-high-level-view-distributed-ag.png

@@ -1,7 +1,7 @@
 ---
 title: "Domain Independent Availability Groups (SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/12/2017"
+ms.date: "09/25/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -13,7 +13,7 @@ helpviewer_keywords:
 - "Availability Groups [SQL Server], domain independent"
 ms.assetid: 
 caps.latest.revision: 
-author: "MikeRayMSFT"
+author: "allanhirt"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---
@@ -145,8 +145,6 @@ GO
 - [Use the New Availability Group Dialog Box (SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)
  
 - [Create an availability group with Transact-SQL](create-an-availability-group-transact-sql.md)
-
->This content written by [Allan Hirt](http://mvp.microsoft.com/en-us/PublicProfile/4025254?fullName=Allan%20Hirt), Microsoft Most Valued Professional.
 
 <!--Image references-->
 [1]: ./media/diag-wsfc-two-data-centers-same-domain.png

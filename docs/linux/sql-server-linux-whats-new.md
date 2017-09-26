@@ -16,6 +16,11 @@ ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
 
 This topic describes what's new for SQL Server 2017 running on Linux.
 
+## GA
+
+> [!TIP]
+> The general availability of SQL Server 2017 has been [announced this week at the Microsoft Ignite conference](https://blogs.technet.microsoft.com/dataplatforminsider/2017/09/25/microsoft-for-the-modern-data-estate/)! The SQL Server 2017 GA downloads and updated documentation will be available on **October 2nd**.
+
 ## RC2
 
 The RC2 release contains miscellaneous bug fixes and improvements.

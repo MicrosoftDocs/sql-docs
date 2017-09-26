@@ -3,7 +3,7 @@ title: "Editions and supported features of SQL Server 2017 | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
   - "SQL2017_New_Updated"
-ms.date: "07/14/2017"
+ms.date: "09/14/2017"
 ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
@@ -51,8 +51,6 @@ For information about older versions, see:
 * [SQL Server 2016](editions-and-components-of-sql-server-2016.md).  
 * [SQL Server 2014](http://msdn.microsoft.com/library/cc645993(v=sql.120).aspx).
 
->[!NOTE]
->All of the information in this article is subject to change because it applies to a preliminary release of SQL Server 2017. 
   
 Installation requirements vary based on your application needs. The different editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] accommodate the unique performance, runtime, and price requirements of organizations and individuals. The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] components that you install also depend on your specific requirements. The following sections help you understand how to make the best choice among the editions and components available in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
 
@@ -78,7 +76,7 @@ For the latest release notes and what's new information, see the following:
 |Enterprise|The premium offering, [!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Enterprise edition delivers comprehensive high-end datacenter capabilities with blazing-fast performance, unlimited virtualization, and end-to-end business intelligence — enabling high service levels for mission-critical workloads and end user access to data insights.|  
 |Standard|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Standard edition delivers basic data management and business intelligence database for departments and small organizations to run their applications and supports common development tools for on-premise and cloud — enabling effective database management with minimal IT resources.|  
 |Web|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Web edition is a low total-cost-of-ownership option for Web hosters and Web VAPs to provide scalability, affordability, and manageability capabilities for small to large scale Web properties.|  
-|Developer|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Developer edition lets developers build any kind of application on top of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. It includes all the functionality of Enterprise edition, but is licensed for use as a development and test system, not as a production server. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer is an ideal choice for people who build<br />                [!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] and test applications.|  
+|Developer|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Developer edition lets developers build any kind of application on top of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. It includes all the functionality of Enterprise edition, but is licensed for use as a development and test system, not as a production server. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer is an ideal choice for people who build and test applications.|  
 |Express editions|Express edition is the entry-level, free database and is ideal for learning and building desktop and small server data-driven applications. It is the best choice for independent software vendors, developers, and hobbyists building client applications. If you need more advanced database features, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express can be seamlessly upgraded to other higher end versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express LocalDB, a lightweight version of Express that has all of its programmability features, yet runs in user mode and has a fast, zero-configuration installation and a short list of prerequisites.|  
   
 ## Using [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] with an Internet Server  
@@ -151,9 +149,9 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |Database mirroring|Yes|Yes<br /><br /> Full safety only|Witness only|Witness only|Witness only| 
 |Backup compression|Yes|Yes|No|No|No| 
 |Database snapshot|Yes|Yes|Yes|Yes|Yes|
-|Always On failover cluster instances|Yes<br /><br /> Number of nodes is the operating system maximum|Yes<br /><br /> Support for 2 nodes|No|No|No|  
-|Always On availability groups|Yes<br /><br /> Up to 8 secondary replicas, including 2 synchronous secondary replicas|No|No|No|No|
-|Basic availability groups <sup>2</sup>|No|Yes<br /><br /> Support for 2 nodes|No|No|No|
+|Always On failover cluster instances<sup>2</sup>|Yes|Yes|No|No|No|  
+|Always On availability groups<sup>3</sup>|Yes|No|No|No|No|
+|Basic availability groups <sup>4</sup>|No|Yes|No|No|No|
 |Online page and file restore|Yes|No|No|No|No|
 |Online indexing|Yes|No|No|No|No|
 |Resumable online index rebuilds|Yes|No|No|No|No|
@@ -164,12 +162,18 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |Database recovery advisor|Yes|Yes|Yes|Yes|Yes|
 |Encrypted backup|Yes|Yes|No|No|No|
 |Hybrid backup to Windows Azure (backup to URL)|Yes|Yes|No|No|No|
-|Clusterless availability group|Yes|Yes|Yes|No|No|No|
+|Clusterless availability group|Yes|Yes|No|No|No|No|
 |Minimum replica commit availability group|Yes|Yes|Yes|No|No|No|
   
- <sup>1</sup> For more information on installing SQL Server on Server Core,  see [Install SQL Server on Server Core](../database-engine/install-windows/install-sql-server-on-server-core.md). 
 
-<sup>2</sup> For more information about Basic availability groups, see [Basic Availability Groups](../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md).  
+<sup>1</sup> For more information on installing SQL Server on Server Core,  see [Install SQL Server on Server Core](../database-engine/install-windows/install-sql-server-on-server-core.md). 
+
+<sup>2</sup> On Enterprise Edition, the number of nodes is the operating system maximum. On Standard edition there is support for two nodes. 
+
+<sup>3</sup> On Enterprise Edition, provides support for up to 8 secondary replicas - including 2 synchronous secondary replicas. 
+
+<sup>4</sup> Standard Edition supports basic availability groups. A basic availability group supports two replicas, with one database. For more information about basic availability groups, see [Basic Availability Groups](../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md).  
+
 
 ##  <a name="RDBMSSP"></a> RDBMS scalability and performance  
   
@@ -257,8 +261,8 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |User instances|No|No|No|Yes|Yes| 
 |LocalDB|No|No|No|Yes|No| 
 |Dedicated admin connection|Yes|Yes|Yes|Yes with trace flag|Yes with trace flag|   
-|PowerShell scripting support|Yes|Yes|Yes|Yes|Yes| 
 |SysPrep support <sup>1</sup>|Yes|Yes|Yes|Yes|Yes| 
+|PowerShell scripting support<sup>2</sup>|Yes|Yes|Yes|Yes|Yes| 
 |Support for data-tier application component operations - extract, deploy, upgrade, delete|Yes|Yes|Yes|Yes|Yes| 
 |Policy automation (check on schedule and change)|Yes|Yes|Yes|No|No|   
 |Performance data collector|Yes|Yes|Yes|No|No| 
@@ -276,6 +280,7 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
   
  <sup>1</sup> For more information, see [Considerations for Installing SQL Server Using SysPrep](../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md).  
  
+ <sup>2</sup> On Linux, PowerShell scripts are supported, from Windows computers targeting SQL Servers on Linux. 
 ##  <a name="DevTools"></a> Development tools  
   
 |Feature|Enterprise|Standard|Web|Express with Advanced Services|Express| 

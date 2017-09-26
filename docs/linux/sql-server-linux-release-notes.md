@@ -16,6 +16,9 @@ The following release notes apply to SQL Server 2017 running on Linux. This rele
 
 The following table lists the releases of SQL Server 2017 covered in this topic.
 
+> [!TIP]
+> The general availability of SQL Server 2017 has been [announced this week at the Microsoft Ignite conference](https://blogs.technet.microsoft.com/dataplatforminsider/2017/09/25/microsoft-for-the-modern-data-estate/)! The SQL Server 2017 GA downloads and updated documentation will be available on **October 2nd**.
+
 | Release | Version | Release date |
 |-----|-----|-----|
 | [RC2](#RC2) | 14.0.900.75 | 8-2017 |
@@ -67,7 +70,7 @@ Package details and download locations for the RPM and Debian packages are liste
 | [SQL Server Data Tools for Visual Studio](https://go.microsoft.com/fwlink/?linkid=846626) | 17.0 |
 | [Visual Studio Code](https://code.visualstudio.com) with the [mssql extension](https://aka.ms/mssql-marketplace) | Latest |
 
-### Unsupported features and services
+### <a name="Unsupported"></a> Unsupported features and services
 
 The following features and services are not available on Linux at this time. The support of these features will be increasingly enabled during the monthly updates cadence of the preview program.
 

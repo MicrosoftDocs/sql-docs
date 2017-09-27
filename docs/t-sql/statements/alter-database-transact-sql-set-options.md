@@ -39,7 +39,7 @@ manager: "jhubbard"
   
 -   [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)  
 
--   [ALTER DATABASE &#40;Azure SQL Database&#41;](https://msdn.microsoft.com/library/mt574871.aspx) 
+-   [ALTER DATABASE &#40;Azure SQL Database&#41;](alter-database-azure-sql-database.md) 
 
 -   [ALTER DATABASE &#40;Azure SQL Data Warehouse&#41;](../../t-sql/statements/alter-database-azure-sql-data-warehouse.md)  
   

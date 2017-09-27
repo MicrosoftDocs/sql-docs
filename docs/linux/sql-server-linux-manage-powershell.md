@@ -4,7 +4,7 @@ description: This topic provides an overview of using PowerShell on Windows with
 author: sanagama 
 ms.author: sanagama 
 manager: jhubbard
-ms.date: 03/17/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -18,7 +18,7 @@ This topic introduces [SQL Server PowerShell](https://msdn.microsoft.com/en-us/l
 
 ## Install the newest version of SQL PowerShell on Windows
 
-[SQL PowerShell](https://msdn.microsoft.com/en-us/library/mt740629.aspx) on Windows is included with [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/en-us/library/hh213248.aspx). When working with SQL Server, you should always use the most recent version of SSMS and SQL PowerShell. The latest version of SSMS is continually updated and optimized and currently works with SQL Server 2017 on Linux. To download and install the latest version, see [Download SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx). To stay up-to-date, the latest version of SSMS prompts you when there is a new version available to download. 
+[SQL PowerShell](https://msdn.microsoft.com/en-us/library/mt740629.aspx) on Windows is included with [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md). When working with SQL Server, you should always use the most recent version of SSMS and SQL PowerShell. The latest version of SSMS is continually updated and optimized and currently works with SQL Server 2017 on Linux. To download and install the latest version, see [Download SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md). To stay up-to-date, the latest version of SSMS prompts you when there is a new version available to download.
 
 ## Before you begin
 
@@ -117,4 +117,4 @@ Get-SqlErrorLog -ServerInstance $serverInstance -Credential $credential -Since Y
 # done
 ```
 ## See also
-- [SQL Server PowerShell](https://msdn.microsoft.com/en-us/library/hh245198.aspx)
+- [SQL Server PowerShell](../relational-databases/scripting/sql-server-powershell.md)

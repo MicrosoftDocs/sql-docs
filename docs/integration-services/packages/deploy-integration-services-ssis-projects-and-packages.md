@@ -266,7 +266,7 @@ static void Main()
   
 2.  If the project and all packages pass the compatibility test, then click **OK** to convert the package.  
   
-> **NOTE:** To convert a project to the project deployment model, use the **Integration Services Project Conversion Wizard**. For more information, see [Integration Services Project Conversion Wizard](https://msdn.microsoft.com/library/hh213290.aspx).  
+> **NOTE:** To convert a project to the project deployment model, use the **Integration Services Project Conversion Wizard**. For more information, see [Integration Services Project Conversion Wizard](deploy-integration-services-ssis-projects-and-packages.md).  
 
 ## Integration Services Deployment Wizard
   The **Integration Services Deployment Wizard** supports two deployment models:

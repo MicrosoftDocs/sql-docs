@@ -72,7 +72,11 @@ To configure SQL Server on SLES, run the following commands in a terminal to ins
    systemctl status mssql-server
    ```
 
-1. If you plan to connect remotely, you might also need to open the SQL Server TCP port (default 1433) on your firewall.
+1. If you plan to connect remotely, you might also need to open the SQL Server TCP port (default 1433) on your firewall. If you are using the SuSE firewall, you need to edit the **/etc/sysconfig/SuSEfirewall2** configuration file. Modify the **FW_SERVICES_EXT_TCP** entry to include the SQL Server port number.
+
+   ```
+   FW_SERVICES_EXT_TCP="1433"
+   ```
 
 At this point, SQL Server is running on your SLES machine and is ready to use!
 

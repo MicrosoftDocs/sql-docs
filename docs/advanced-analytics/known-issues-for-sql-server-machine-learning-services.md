@@ -2,7 +2,7 @@
 title: "Known issues in Machine Learning Services | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "09/13/2017"
+ms.date: "09/19/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -303,15 +303,10 @@ For compatibility with [!INCLUDE[rsql_productname](../includes/rsql-productname-
 
 Revision 0.92 of the SQLite ODBC driver is incompatible with RevoScaleR. Revisions 0.88-0.91 and 0.93 and later are known to be compatible.
 
-## Python code execution or package issues
+## Python code execution or Python package issues
 
 This section contains known issues that are specific to running Python on SQL Server, as well as issues that are related to the Python packages published by Microsoft, including [revoscalepy](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package) and [microsoftml](https://docs.microsoft.com/r-server/python-reference/microsoftml/microsoftml-package).
 
-### Content of varbinary(max) data type is truncated when passed to Python
-
-If you are using Python script in the CTP 2.0 release of SQL Server 2017, and pass data such as images using the varbinary(max) data type, the data might be truncated.
-
-The reason is that early preview releases did not provide the correct mapping of the SQL varbinary(max) data type to the Python byte data type. This issue is fixed in the RTM version. We recommend that you upgrade as soon as possible.
 
 ## See also
 

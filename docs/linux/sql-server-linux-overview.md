@@ -14,6 +14,9 @@ ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
 
 SQL Server 2017 now runs on Linux. It’s the same SQL Server database engine, with many similar features and services regardless of your operating system.
 
+> [!TIP]
+> The general availability of SQL Server 2017 has been [announced this week at the Microsoft Ignite conference](https://blogs.technet.microsoft.com/dataplatforminsider/2017/09/25/microsoft-for-the-modern-data-estate/)! The SQL Server 2017 GA downloads and updated documentation will be available on **October 2nd**.
+
 ## Install
 
 To get started, install SQL Server on Linux using one of the following quick start tutorials:

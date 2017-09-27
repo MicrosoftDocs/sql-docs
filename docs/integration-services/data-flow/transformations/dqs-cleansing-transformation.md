@@ -49,7 +49,7 @@ manager: "jhubbard"
   
 ## Related Content  
   
--   [Open, Unlock, Rename, and Delete a Data Quality Project](https://msdn.microsoft.com/library/hh510417.aspx)  
+-   [Open, Unlock, Rename, and Delete a Data Quality Project](../../../data-quality-services/open-unlock-rename-and-delete-a-data-quality-project.md)  
   
 -   Article, [Cleansing complex data using composite domains](http://social.technet.microsoft.com/wiki/contents/articles/13324.using-dqs-cleansing-complex-data-using-composite-domains.aspx), on social.technet.microsoft.com.  
   

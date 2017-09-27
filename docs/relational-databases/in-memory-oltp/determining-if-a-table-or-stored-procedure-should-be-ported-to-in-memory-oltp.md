@@ -37,7 +37,7 @@ manager: "jhubbard"
     > [!IMPORTANT]  
     >  The performance of a database system is dependent on a variety of factors, not all of which the transaction performance collector can observe and measure. Therefore, the transaction performance analysis report does not guarantee actual performance gains will match its predictions, if any predictions are made.  
   
- The Transaction Performance Analysis report and the migration advisors are installed as part of SQL Server Management Studio (SSMS) when you select **Management Tools—Basic** or **Management Tools—Advanced** when you install [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], or when you [Download SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx).  
+ The Transaction Performance Analysis report and the migration advisors are installed as part of SQL Server Management Studio (SSMS) when you select **Management Tools—Basic** or **Management Tools—Advanced** when you install [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], or when you [Download SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx).    
   
 ## Transaction Performance Analysis Reports  
  You can generate transaction performance analysis reports in **Object Explorer** by right-clicking on the database, selecting **Reports**, then **Standard Reports**, and then **Transaction Performance Analysis Overview**. The database needs to have an active workload, or a recent run of a workload, in order to generate a meaningful analysis report.  

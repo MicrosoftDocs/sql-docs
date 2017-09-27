@@ -197,5 +197,5 @@ manager: "jhubbard"
     -   **All Connections**  
 
 ## See Also  
- [Execution of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx)   
- [Troubleshooting Reports for Package Execution](https://msdn.microsoft.com/library/gg471512.aspx)  
+ [Execution of Projects and Packages](../packages/deploy-integration-services-ssis-projects-and-packages.md)   
+ [Troubleshooting Reports for Package Execution](../troubleshooting/troubleshooting-reports-for-package-execution.md)  

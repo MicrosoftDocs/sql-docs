@@ -13,7 +13,7 @@ ms.custom: UpdArt.exe
 ms.tgt_pltfrm: na
 ms.devlang: na
 ms.topic: updart-autogen
-ms.date: 07/17/2017
+ms.date: 09/11/2017
 ms.author: genemi
 ms.workload: ssma-sql-server-migration-assistant
 ---
@@ -29,7 +29,7 @@ Recent updates are reported for the following date range and subject:
 
 
 
-- *Date range of updates:* &nbsp; **2017-05-23** &nbsp; -to- &nbsp; **2017-07-17**
+- *Date range of updates:* &nbsp; **2017-07-18** &nbsp; -to- &nbsp; **2017-09-11**
 - *Subject area:* &nbsp; **SQL Server Migration Assistant**.
 
 
@@ -39,10 +39,23 @@ Recent updates are reported for the following date range and subject:
 
 ## New Articles Created Recently
 
-The following links jump to new articles which have been added recently.
+The following links jump to new articles that have been added recently.
 
 
 ***There are no new articles to list, this time.***
+
+
+
+&nbsp;
+
+## Updated Articles with Excerpts
+
+This section displays the excerpts of updates gathered from articles that have recently experienced a large update.
+
+The excerpts displayed here appear separated from their proper semantic context. Also, sometimes an excerpt is separated from important markdown syntax that surrounds it in the actual article. Therefore these excerpts are for general guidance only. The excerpts only enable you to know whether your interests warrant taking the time to click and visit the actual article.
+
+For these and other reasons, do not copy code from these excerpts, and do not take as exact truth any text excerpt. Instead, visit the actual article.
+
 
 
 
@@ -53,68 +66,147 @@ The following links jump to new articles which have been added recently.
 
 ## Compact List of Articles Updated Recently
 
-This compact list provides links to all the updated articles which are listed in the Excerpts section.
+This compact list provides links to all the updated articles that are listed in the Excerpts section.
 
+1. [What&#39;s New in SSMA for DB2 (DB2ToSQL)](#TitleNum_1)
+2. [SQL Server Migration Assistant](#TitleNum_2)
 
-
-&nbsp;
-
-## Updated Articles with Excerpts
-
-This section displays the excerpts of updates gathered from articles which have recently experienced a large update.
-
-The excerpts displayed here appear separated from their proper semantic context. Also, sometimes an excerpt is separated from important markdown syntax that surrounds it in the actual article. Therefore these excerpts are for general guidance only. The excerpts only enable you to know whether your interests warrant taking the time to click and visit the actual article.
-
-For these and other reasons, do not copy code from these excerpts, and do not take as exact truth any text excerpt. Instead, visit the actual article.
 
 
 
 &nbsp;
 
-***No articles in this area were updated recently, this time.***
+&nbsp;
 
+<a name="TitleNum_1"/>
 
+### 1. &nbsp; [What&#39;s New in SSMA for DB2 (DB2ToSQL)](db2/what-s-new-in-ssma-for-db2-db2tosql.md)
 
-<a name="similars2"/>
+*Updated: 2017-09-07* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Next](#TitleNum_2))
+
+<!-- Source markdown line 24.  ms.author= "Shamikg".  -->
 
 &nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 c5dfb378ac578f54935a8a1fa7194398f3631017 f4427d1857894ad348cef5c92fbf6b51d00ee652  (PR=3070  ,  Filename=what-s-new-in-ssma-for-db2-db2tosql.md  ,  Dirpath=docs\ssma\db2\  ,  MergeCommitSha40=0b832a9306244210e693bde7c476269455e9b6d8) -->
+
+
+
+**SSMA v7.4**
+
+The v7.4 release of SSMA for DB2 contains the following changes:
+- The **Query timeout** option is now available during schema object discovery at source and target.
+![query timeout option--../media/query-timeout_red.png)
+
+- The quality and conversion metric has been improved with targeted fixes, based on customer feedback.
+
+> [!IMPORTANT]
+> .Net 4.5.2 is a pre-requisite for installing SSMA v7.4. In addition, beginning with v7.4, the 32-bit version of SSMA is being discontinued.
+
+**SSMA v7.3**
+
+The v7.3 release of SSMA for DB2 contains the following changes:
+- Improved quality and conversion metric with targeted fixes based on customer feedback.
+- SSMA extensibility framework exposed via the following items:
+  - Export functionality to a SQL Server Data Tools (SSDT) project.
+    -   You can now export schema scripts from SSMA to an SSDT project. You can use the schema scripts to make additional schema changes and deploy your database.
+![Save as SSDT project command--../media/export-schema-scripts_red.png)
+  - Libraries that can be consumed by SSMA for performing custom conversions.
+    - You can now construct code that can handle custom syntax conversions and conversions that weren't previously handled by SSMA.
+      - Instructions on how to construct a custom converter are available in this blog post, [Extending SQL Server Migration Assistant's conversion capabilities](https://blogs.msdn.microsoft.com/datamigration/2017/02/21/2185/).
+      - Sample project for conversion can be download this [blog post](https://blogs.msdn.microsoft.com/datamigration/ssmafororacleconversionsample/).
+
+**SSMA v7.2**
+
+The v7.2 release of SSMA for DB2 contains the following changes:
+- Improved quality and conversion metric with targeted fixes based on customer feedback.
+- Telemetry enhancements to provide better data points to troubleshoot customer issues and improve SSMA's conversion rates.
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_2"/>
+
+### 2. &nbsp; [SQL Server Migration Assistant](sql-server-migration-assistant.md)
+
+*Updated: 2017-09-07* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_1))
+
+<!-- Source markdown line 36.  ms.author= "Shamikg".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 340d718e85fa73c6722862a0a7ba90239b247389 b29f4be2b6d208fd6038c2f9e1c7f0b7bd6b9ed7  (PR=3070  ,  Filename=sql-server-migration-assistant.md  ,  Dirpath=docs\ssma\  ,  MergeCommitSha40=0b832a9306244210e693bde7c476269455e9b6d8) -->
+
+
+
+**Supported Sources and Target Versions**
+
+For supported sources, review the information on the Download Center for the SSMA download.
+
+The following target versions are supported for SSMA.
+
+- SQL Server 2008
+- SQL Server 2008 R2
+- SQL Server 2012
+- SQL Server 2014
+- SQL Server 2016
+- Azure SQL Database
+- SQL Server 2017 on Windows and Linux (Preview)
+- **Azure SQL Data Warehouse
+
+** This target is supported only by SSMA for Oracle.
+
+
+
+
+
+
+
+
 
 ## Similar Articles
 
-This section lists very similar articles for recently updated articles in other subject areas, within the same GitHub.com repository: [MicrosoftDocs/**sql-docs-pr**](https://github.com/microsoftdocs/sql-docs-pr/).
+<!--  HOW TO:
+    Refresh this file's line items with the latest 'Count-in-Similars*' content.
+    Then run Run-533-*.BAT
+-->
 
-<!--  20170717-1101  -->
+This section lists very similar articles for recently updated articles in other subject areas, within our public GitHub.com repository: [MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/).
 
 #### Subject areas which do have new or recently updated articles
 
-- [New + Updated (4+4) : **Advanced Analytics for SQL** docs](../advanced-analytics/new-updated-advanced-analytics.md)
-- [New + Updated (2+0) : **Analysis Services for SQL** docs](../analysis-services/new-updated-analysis-services.md)
-- [New + Updated (1+2) : **Connect to SQL** docs](../connect/new-updated-connect.md)
-- [New + Updated (6+0) : **Database Engine for SQL** docs](../database-engine/new-updated-database-engine.md)
-- [New + Updated (13+2): **Linux for SQL** docs](../linux/new-updated-linux.md)
-- [New + Updated (1+0) : **Master Data Services (MDS) for SQL** docs](../master-data-services/new-updated-master-data-services.md)
-- [New + Updated (1+0) : **ODBC (Open Database Connectivity) for SQL** docs](../odbc/new-updated-odbc.md)
-- [New + Updated (8+4) : **Relational Databases for SQL** docs](../relational-databases/new-updated-relational-databases.md)
-- [New + Updated (2+2) : **Microsoft SQL Server** docs](../sql-server/new-updated-sql-server.md)
-- [New + Updated (0+1) : **SQL Server Management Studio (SSMS)** docs](../ssms/new-updated-ssms.md)
-- [New + Updated (1+0) : **Transact-SQL** docs](../t-sql/new-updated-t-sql.md)
-- [New + Updated (1+0) : **Tools for SQL** docs](../tools/new-updated-tools.md)
-
+- [New + Updated (3+12) : **Advanced Analytics for SQL** docs](../advanced-analytics/new-updated-advanced-analytics.md)
+- [New + Updated (5+0)  : **Connect to SQL** docs](../connect/new-updated-connect.md)
+- [New + Updated (5+1)  : **Database Engine for SQL** docs](../database-engine/new-updated-database-engine.md)
+- [New + Updated (19+82): **Integration Services for SQL** docs](../integration-services/new-updated-integration-services.md)
+- [New + Updated (1+8)  : **Linux for SQL** docs](../linux/new-updated-linux.md)
+- [New + Updated (12+1) : **Relational Databases for SQL** docs](../relational-databases/new-updated-relational-databases.md)
+- [New + Updated (0+1)  : **Reporting Services for SQL** docs](../reporting-services/new-updated-reporting-services.md)
+- [New + Updated (7+1)  : **Microsoft SQL Server** docs](../sql-server/new-updated-sql-server.md)
+- [New + Updated (1+1)  : **SQL Server Data Tools (SSDT)** docs](../ssdt/new-updated-ssdt.md)
+- [New + Updated (0+2)  : **SQL Server Migration Assistant (SSMA)** docs](../ssma/new-updated-ssma.md)
+- [New + Updated (1+4)  : **SQL Server Management Studio (SSMS)** docs](../ssms/new-updated-ssms.md)
+- [New + Updated (4+1)  : **Transact-SQL** docs](../t-sql/new-updated-t-sql.md)
+- [New + Updated (0+1)  : **Tools for SQL** docs](../tools/new-updated-tools.md)
 
 #### Subject areas which have no new or recently updated articles
 
 - [New + Updated (0+0): **ActiveX Data Objects (ADO) for SQL** docs](../ado/new-updated-ado.md)
+- [New + Updated (0+0): **Analysis Services for SQL** docs](../analysis-services/new-updated-analysis-services.md)
 - [New + Updated (0+0): **Data Quality Services for SQL** docs](../data-quality-services/new-updated-data-quality-services.md)
 - [New + Updated (0+0): **Data Mining Extensions (DMX) for SQL** docs](../dmx/new-updated-dmx.md)
-- [New + Updated (0+0): **Integration Services for SQL** docs](../integration-services/new-updated-integration-services.md)
+- [New + Updated (0+0): **Master Data Services (MDS) for SQL** docs](../master-data-services/new-updated-master-data-services.md)
 - [New + Updated (0+0): **Multidimensional Expressions (MDX) for SQL** docs](../mdx/new-updated-mdx.md)
+- [New + Updated (0+0): **ODBC (Open Database Connectivity) for SQL** docs](../odbc/new-updated-odbc.md)
 - [New + Updated (0+0): **PowerShell for SQL** docs](../powershell/new-updated-powershell.md)
-- [New + Updated (0+0): **Reporting Services for SQL** docs](../reporting-services/new-updated-reporting-services.md)
 - [New + Updated (0+0): **Samples for SQL** docs](../sample/new-updated-sample.md)
-- [New + Updated (0+0): **SQL Server Data Tools (SSDT)** docs](../ssdt/new-updated-ssdt.md)
-- [New + Updated (0+0): **SQL Server Migration Assistant (SSMA)** docs](../ssma/new-updated-ssma.md)
 - [New + Updated (0+0): **XQuery for SQL** docs](../xquery/new-updated-xquery.md)
 
-
-&nbsp;
 

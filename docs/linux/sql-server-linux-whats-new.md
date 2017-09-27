@@ -1,10 +1,10 @@
 ---
-title: What's New for SQL Server 2017 RC1 on Linux | Microsoft Docs
+title: What's New for SQL Server 2017 on Linux | Microsoft Docs
 description: This topic highlights what's new for the current release of SQL Server 2017 on Linux.
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 08/02/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -15,6 +15,13 @@ ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 This topic describes what's new for SQL Server 2017 running on Linux.
+
+## GA
+
+The General Availaiblity (GA) release contains the following improvements and fixes:
+
+- Database files can now be hosted on NFS. This fixes problems with NFS shared disk scenarios, mounting remote storage for container platforms, and mounting folders for Docker for Windows.
+- Other miscellaneous bug fixes and improvements.
 
 ## RC2
 
@@ -125,7 +132,7 @@ Under compatibility mode 140:
 [Improvements from Service Pack 1](https://blogs.msdn.microsoft.com/sqlreleaseservices/sql-server-2016-service-pack-1-sp1-released/) in this CTP1.1 release:
 - Database cloning for CLR, Filestream/Filetable, In-memory and Query Store objects.
 - **CREATE** or **ALTER** operators for programmability objects.
-- New **USE HINT** query option to provide hints for the query processor. Learn more here: [Query Hints](https://msdn.microsoft.com/en-us/library/ms181714.aspx).
+- New **USE HINT** query option to provide hints for the query processor. Learn more here: [Query Hints](../t-sql/queries/hints-transact-sql-query.md).
 - SQL service account can now programmatically identify Enable Lock Pages in Memory and Instant File Initialization permissions.
 - Support for TempDB file count, file size and file growth settings.
 - Extended diagnostics in showplan XML.

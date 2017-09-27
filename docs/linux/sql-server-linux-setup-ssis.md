@@ -4,7 +4,7 @@ description: This topic describes how to install SQL Server Integration Services
 author: leolimsft 
 ms.author: lle 
 manager: craigg
-ms.date: 07/17/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: integration-services
@@ -30,7 +30,7 @@ To install the `mssql-server-is` package on Ubuntu, follow these steps:
 1.  Import the public repository GPG keys.
 
     ```bash
-    curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add –
+    curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
     ```
 
 

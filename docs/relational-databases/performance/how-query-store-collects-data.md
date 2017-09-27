@@ -39,7 +39,7 @@ manager: "jhubbard"
 |**sys.query_store_runtime_stats_interval**|Query Store divides time into automatically generated time windows (intervals) and stores aggregated statistics on that interval for every executed plan. The size of the interval is controlled by the configuration option Statistics Collection Interval (in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]) or `INTERVAL_LENGTH_MINUTES` using [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).|  
 |**sys.query_store_runtime_stats**|Aggregated runtime statistics for executed plans. All captured metrics are expressed in form of 4 statistic functions: Average, Minimum, Maximum, and Standard Deviation.|  
   
- For additional details on Query Store views, see the **Related Views, Functions, and Procedures** section of [Monitoring Performance By Using the Query Store](https://msdn.microsoft.com/library/dn817826.aspx).  
+ For additional details on Query Store views, see the **Related Views, Functions, and Procedures** section of [Monitoring Performance By Using the Query Store](monitoring-performance-by-using-the-query-store.md).  
   
 ## Query Processing  
  Query store interacts with the query processing pipeline at the following key points:  

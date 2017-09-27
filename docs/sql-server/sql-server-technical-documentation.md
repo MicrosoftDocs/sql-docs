@@ -1,6 +1,6 @@
 ---
 title: "SQL Server Technical Documentation | Microsoft Docs"
-ms.date: "08/07/2017"
+ms.date: "10/02/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -43,8 +43,8 @@ Documentation to help you install, configure, and use SQL Server. The content in
 **Try SQL Server!**    
 - [![Download from Evaluation Center](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [Download SQL Server 2017](http://go.microsoft.com/fwlink/?LinkID=829477)
 - [![Download from Evaluation Center](../includes/media/download2.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) [Download SQL Server 2016](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) 
-- [Spin up a Virtual Machine with SQL Server 2016 already installed](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
-- [![Download from Evaluation Center](../includes/media/download2.png)](https://msdn.microsoft.com/library/mt238290.aspx) [Download SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx)   
+- [![Create Virtual Machine](../includes/media/azure-vm.png)](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [Spin up a Virtual Machine with SQL Server 2016 SP1 or SQL Server 2017](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
+- [![Download from Evaluation Center](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) [Download SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
 - [![Download from Evaluation Center](../includes/media/download2.png)](../ssdt/download-sql-server-data-tools-ssdt.md) [Download SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
     
 ## SQL Server Technologies    

@@ -88,7 +88,7 @@ During assessment, Data Migration Assistant extracts data-tier application (dacp
 
 - databaseLockTimeout
 
-   This is equivalent to [SET LOCK\_TIMEOUT timeout\_period ](https://msdn.microsoft.com/library/ms189470.aspx) in *milliseconds*. (Default=5000)
+   This is equivalent to [SET LOCK\_TIMEOUT timeout\_period ](../t-sql/statements/set-lock-timeout-transact-sql.md) in *milliseconds*. (Default=5000)
 
 - maxDataReaderDegreeOfParallelism
 

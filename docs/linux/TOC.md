@@ -4,12 +4,23 @@
 ## [Release notes](sql-server-linux-release-notes.md)
 ## [What's new in this release?](sql-server-linux-whats-new.md)
 ## [New and recently updated articles](new-updated-linux.md)
+## [Editions and supported features](sql-server-linux-editions-and-components-2017.md)
 
 # Quickstarts
 ## [Install & Connect - Red Hat](quickstart-install-connect-red-hat.md)
 ## [Install & Connect - SUSE](quickstart-install-connect-suse.md)
 ## [Install & Connect - Ubuntu](quickstart-install-connect-ubuntu.md)
 ## [Run & Connect - Docker](quickstart-install-connect-docker.md)
+
+# Tutorials
+## [1_Migrate from Windows](sql-server-linux-migrate-restore-database.md)
+## [2_Migrate from Oracle](../ssma/oracle/sql-server-linux-convert-from-oracle.md?toc=%2fsql%2flinux%2ftoc.json)
+## [3_Create a job](sql-server-linux-run-sql-server-agent-job.md)
+## [4_Setup AD Authentication](sql-server-linux-active-directory-authentication.md)
+## [5_Create FCI](sql-server-linux-shared-disk-cluster-configure.md)
+### [iSCSI](sql-server-linux-shared-disk-cluster-configure-iscsi.md)
+### [NFS](sql-server-linux-shared-disk-cluster-configure-nfs.md)
+### [SMB](sql-server-linux-shared-disk-cluster-configure-smb.md)
 
 # Concepts
 ## Install
@@ -19,6 +30,7 @@
 ### [Install SQL Server Full-Text Search](sql-server-linux-setup-full-text-search.md)
 ### [Install SQL Server Integration Services](sql-server-linux-setup-ssis.md)
 ### [Provision a SQL VM in Azure](sql-server-linux-azure-virtual-machine.md)
+### [Register GA repository](sql-server-linux-change-repo.md)
 
 ## Configure
 ### [Configure with mssql-conf](sql-server-linux-configure-mssql-conf.md)
@@ -35,21 +47,22 @@
 ## [Manage](sql-server-linux-management-overview.md)
 ### [Use SSMS to manage](sql-server-linux-manage-ssms.md)
 ### [Use PowerShell to manage](sql-server-linux-manage-powershell.md)
-### [Create and run jobs](sql-server-linux-run-sql-server-agent-job.md)
 ### [Use log shipping](sql-server-linux-use-log-shipping.md)
 ### [Use DB Mail and email alerts](sql-server-linux-db-mail-sql-agent.md)
 
 ## [Migrate](sql-server-linux-migrate-overview.md)
-### [Restore from Windows](sql-server-linux-migrate-restore-database.md)
 ### [Export and import a BACPAC from Windows](sql-server-linux-migrate-ssms.md)
 ### [Migrate with SQL Server Migration Assistant](sql-server-linux-migrate-ssma.md)
 ### [Bulk copy with bcp](sql-server-linux-migrate-bcp.md)
-### [Load data with (SSIS)](sql-server-linux-migrate-ssis.md)
+
+## [Extract, transform, load](sql-server-linux-migrate-ssis.md)
+### [Configure SSIS](sql-server-linux-configure-ssis.md)
+### [Schedule SSIS packages](sql-server-linux-schedule-ssis-packages.md)
 
 ## [Configure Business Continuity](sql-server-linux-business-continuity-dr.md)
 ### [Backup and Restore](sql-server-linux-backup-and-restore-database.md)
 #### [Virtual Device Interface - Linux](sql-server-linux-backup-vdi-specification.md)
-### [Failover Cluster Instance](sql-server-linux-shared-disk-cluster-configure.md)
+### [Failover Cluster Instance](sql-server-linux-shared-disk-cluster-concepts.md)
 #### [Red Hat Enterprise Linux]()
 ##### [Configure (HA add-on)](sql-server-linux-shared-disk-cluster-red-hat-7-configure.md)
 ##### [Operate (HA add-on)](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)
@@ -68,9 +81,10 @@
 ## [Security](sql-server-linux-security-overview.md)
 ### [Get started with security features](sql-server-linux-security-get-started.md)
 ### [Encrypting Connections](sql-server-linux-encrypted-connections.md)
-### [Active Directory Authentication](sql-server-linux-active-directory-authentication.md)
 
-## [Optimize Performance](sql-server-linux-performance-get-started.md)
+## Performance
+### [Best practices](sql-server-linux-performance-best-practices.md)
+### [Get started with performance features](sql-server-linux-performance-get-started.md)
 
 # Samples
 ## Unattended Install
@@ -81,6 +95,11 @@
 # Resources
 ## [Troubleshoot](sql-server-linux-troubleshooting-guide.md)
 ## [SQL Server Documentation](../sql-server/sql-server-technical-documentation.md)
+## Partners
+### [Monitoring](../sql-server/partner-monitor-sql-server.md)
+### [High availability and disaster recovery](../sql-server/partner-hadr-sql-server.md)
+### [Management](../sql-server/partner-management-sql-server.md)
+### [Development](../sql-server/partner-dev-sql-server.md)
 ## [DBA Stack Exchange](https://dba.stackexchange.com/questions/tagged/sql-server)
 ## [Stack Overflow](http://stackoverflow.com/questions/tagged/sql-server)
 ## [MSDN Forums](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)

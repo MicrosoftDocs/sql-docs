@@ -147,7 +147,7 @@ The following example demonstrates filtering data based on encrypted values, and
 - All values printed by the program will be in plaintext, as the Microsoft JDBC Driver for SQL Server will transparently decrypt the data retrieved from the SSN and BirthDate columns.
 
 > [!NOTE]  
->  Queries can perform equality comparisons on columns if they are encrypted using deterministic encryption. For more information, see the **Selecting Deterministic or Randomized encryption** section of the [Always Encrypted (Database Engine)](https://msdn.microsoft.com/library/mt163865.aspx) topic.  
+>  Queries can perform equality comparisons on columns if they are encrypted using deterministic encryption. For more information, see the **Selecting Deterministic or Randomized encryption** section of the [Always Encrypted (Database Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) topic.  
 
 ```
 String connectionString =  "jdbc:sqlserver://localhost:1433;databaseName=Clinic;user=sa;password=******;columnEncryptionSetting=Enabled;" ;
@@ -209,7 +209,7 @@ This section describes common categories of errors when querying encrypted colum
 
 ### Unsupported Data Type Conversion Errors
 
-Always Encrypted supports few conversions for encrypted data types. See [Always Encrypted (Database Engine)](https://msdn.microsoft.com/library/mt163865.aspx) for the detailed list of supported type conversions. Here is what you can do to avoid data type conversion errors, make sure that:
+Always Encrypted supports few conversions for encrypted data types. See [Always Encrypted (Database Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) for the detailed list of supported type conversions. Here is what you can do to avoid data type conversion errors, make sure that:
 
 - you use the proper setter methods when passing values for the parameters targeting encrypted columns, so that the SQL Server data type of the parameter is either exactly the same as the type of the target column, or a conversion of the SQL Server data type of the parameter to the target type of the column is supported. Note that new API methods have been added to SQLServerPreparedStatement, SQLServerCallableStatement and SQLServerResultSet classes to pass parameters corresponding to specific SQL Server data types. For example, if a column is unencrypted you can use setTimestamp() method to pass a parameter to a datetime2 or to a datetime column. But when a column is encrypted you will have to use the exact method representing the type of the column in the database. For example, use setTimestamp() to pass values to an encrypted datetime2 column and use setDateTime() to pass values to an encrypted datetime column. See [Always Encrypted API Reference for the JDBC Driver](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md) for a complete list of new APIs. 
 - the precision and scale of parameters targeting columns of the decimal and numeric SQL Server data types is the same as the precision and scale configured for the target column. Note that new API methods have been added to SQLServerPreparedStatement, SQLServerCallableStatement and SQLServerResultSet classes to accept precision and scale along with data values for parameters/columns representing decimal and numeric data types. See [Always Encrypted API Reference for the JDBC Driver](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md) for a complete list of new/overloaded APIs.  
@@ -309,7 +309,7 @@ SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
 >  [azure-activedirectory-library-for-java libraries](https://github.com/AzureAD/azure-activedirectory-library-for-java)  
   
 ### Using Windows Certificate Store Provider
-The SQLServerColumnEncryptionCertificateStoreProvider can be used to store column master keys in the Windows Certificate Store. Use the SQL Server Management Studio (SSMS) Always Encrypted wizard or other supported tools to create the column master key and column encryption key definitions in the database. The same wizard can be used to generate a self signed certificate in the Windows Certificate Store that be used as a column master key for the always encrypted data. For more information on column master key and column encryption key T-SQL syntax visit [CREATE COLUMN MASTER KEY](https://msdn.microsoft.com/library/mt146393.aspx) and [CREATE COLUMN ENCRPTION KEY](https://msdn.microsoft.com/library/mt146372.aspx) respectively.
+The SQLServerColumnEncryptionCertificateStoreProvider can be used to store column master keys in the Windows Certificate Store. Use the SQL Server Management Studio (SSMS) Always Encrypted wizard or other supported tools to create the column master key and column encryption key definitions in the database. The same wizard can be used to generate a self signed certificate in the Windows Certificate Store that be used as a column master key for the always encrypted data. For more information on column master key and column encryption key T-SQL syntax visit [CREATE COLUMN MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md) and [CREATE COLUMN ENCRPTION KEY](../../t-sql/statements/create-column-encryption-key-transact-sql.md) respectively.
 
 The name of the SQLServerColumnEncryptionCertificateStoreProvider is "MSSQL_CERTIFICATE_STORE" and can be queried by the getName() API of the provider object. It is automatically registered by the driver and can be used seamlessly without any application change.
 
@@ -351,7 +351,7 @@ Note that if the keystore is of type PKCS12 then the keytool utility does not pr
 
 You can also export a certificate from the Windows Certificate store in .pfx format and use that with the SQLServerColumnEncryptionJavaKeyStoreProvider. The exported certificate can also be imported to the Java Key Store as a JKS keystore type. 
 
-After creating the keytool entry you will have to create the column master key meta data in the database which needs the key store provider name and the key path. For more information on how to create column master key meta data visit [CREATE COLUMN MASTER KEY](https://msdn.microsoft.com/library/mt146393.aspx). For SQLServerColumnEncryptionJavaKeyStoreProvider, the key path is just the alias of the key. And the name of the SQLServerColumnEncryptionJavaKeyStoreProvider is 'MSSQL_JAVA_KEYSTORE'. You can also query this name using the getName() public API of the SQLServerColumnEncryptionJavaKeyStoreProvider class. 
+After creating the keytool entry you will have to create the column master key meta data in the database which needs the key store provider name and the key path. For more information on how to create column master key meta data visit [CREATE COLUMN MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md). For SQLServerColumnEncryptionJavaKeyStoreProvider, the key path is just the alias of the key. And the name of the SQLServerColumnEncryptionJavaKeyStoreProvider is 'MSSQL_JAVA_KEYSTORE'. You can also query this name using the getName() public API of the SQLServerColumnEncryptionJavaKeyStoreProvider class. 
 
 The T-SQL syntax for creating the column master key is:
 
@@ -424,7 +424,7 @@ SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
   
 ## Using Column Master Key Store Providers for Programmatic Key Provisioning
 
-When accessing encrypted columns, the Microsoft JDBC Driver for SQL Server transparently finds and calls the right column master key store provider to decrypt column encryption keys. Typically, your normal application code does not directly call column master key store providers. You may, however, instantiate and call a provider explicitly to programmatically provision and manage Always Encrypted keys: to generate an encrypted column encryption key and decrypt a column encryption key (e.g. as part column master key rotation). For more information, see [Overview of Key Management for Always Encrypted](https://msdn.microsoft.com/library/mt708953.aspx).
+When accessing encrypted columns, the Microsoft JDBC Driver for SQL Server transparently finds and calls the right column master key store provider to decrypt column encryption keys. Typically, your normal application code does not directly call column master key store providers. You may, however, instantiate and call a provider explicitly to programmatically provision and manage Always Encrypted keys: to generate an encrypted column encryption key and decrypt a column encryption key (e.g. as part column master key rotation). For more information, see [Overview of Key Management for Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md).
 Note that implementing your own key management tools may be required only if you use a custom key store provider. When using keys stored in Windows Certificate Store or in  Azure Key Vault, you can use existing tools, such as SQL Server Management Studio or PowerShell, to manage and provision keys. When using keys stored in the Java Key Store, you need to provision keys programatically. 
 The below example, illustrates using SQLServerColumnEncryptionJavaKeyStoreProvider Class to encrypt the key with a key stored in the Java Key Store.
 
@@ -646,6 +646,6 @@ With SQLServerBulkCopy, you can copy data, which is already encrypted and stored
 Note: Use caution when specifying AllowEncryptedValueModifications as this may lead to corrupting the database because the Microsoft JDBC Driver for SQL Server does not check if the data is indeed encrypted, or if it is correctly encrypted using the same encryption type, algorithm and key as the target column.
 
 ## See Also  
- [Always Encrypted (Database Engine)](https://msdn.microsoft.com/library/mt163865.aspx)  
+ [Always Encrypted (Database Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)  
   
   

@@ -1,10 +1,10 @@
 ---
 title: Configure SQL Server settings on Linux | Microsoft Docs
 description: This topic describes how to use the mssql-conf tool to  configure SQL Server 2017 settings on Linux.
-author: luisbosquez 
-ms.author: lbosq 
+author: rothja 
+ms.author: jroth 
 manager: jhubbard
-ms.date: 08/24/2017
+ms.date: 09/20/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -14,7 +14,7 @@ ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-**mssql-conf** is a configuration script that installs with SQL Server 2017 RC2 for Red Hat Enterprise Linux, SUSE Linux Enterprise Server, and Ubuntu. You can use this utility to set the following parameters:
+**mssql-conf** is a configuration script that installs with SQL Server 2017 for Red Hat Enterprise Linux, SUSE Linux Enterprise Server, and Ubuntu. You can use this utility to set the following parameters:
 
 |||
 |---|---|
@@ -47,7 +47,11 @@ ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 
 ## <a id="collation"></a> Change the SQL Server collation
 
-The **set-collation** option changes the collation value to any of the supported collations:
+The **set-collation** option changes the collation value to any of the supported collations.
+
+1. First [backup any user databases](sql-server-linux-backup-and-restore-database.md) on your server.
+
+1. Then use the [sp_detach_db](../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md) stored procedure to detach the user databases.
 
 1. Run the **set-collation** option and follow the prompts:
 
@@ -55,7 +59,9 @@ The **set-collation** option changes the collation value to any of the supported
    sudo /opt/mssql/bin/mssql-conf set-collation
    ```
 
-1. The mssql-conf utility will try to restore the databases using the specified collation and restart the service. If there are any errors, it rolls back the collation to the previous value.
+1. The mssql-conf utility will attempt to change to the specified collation value and restart the service. If there are any errors, it rolls back the collation to the previous value.
+
+1. Retore your user database backups.
 
 For a list of supported collations, run the [sys.fn_helpcollations](../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md) function: `SELECT Name from sys.fn_helpcollations()`.
 

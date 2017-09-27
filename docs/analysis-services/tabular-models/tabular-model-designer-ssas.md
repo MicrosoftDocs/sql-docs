@@ -19,7 +19,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Tabular Model Designer (SSAS)
-  The tabular model designer is part of [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], integrated with Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], with additional project type templates specifically for developing professional tabular model solutions.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] is installed as a free web download. See [Download SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx) for details.   
+The tabular model designer is part of [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], integrated with Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], with additional project type templates specifically for developing professional tabular model solutions.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] is installed as a free web download. See [Download SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md) for details.    
   
 ##  <a name="bkmk_benefits"></a> Benefits  
  When you install [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], new project templates for creating tabular models are added to the available project types. After creating a new tabular model project by using one of the templates, you can begin model authoring by using the tabular model designer tools and wizards.  

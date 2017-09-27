@@ -14,7 +14,7 @@ ms.assetid:
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-You can use several different environment variables to configure SQL Server 2017 RC2 on Linux. These variables are used in two scenarios:
+You can use several different environment variables to configure SQL Server 2017 on Linux. These variables are used in two scenarios:
 
 - To configure initial setup with the `mssql-conf setup` command.
 - To configure a new [SQL Server container in Docker](quickstart-install-connect-docker.md).
@@ -65,13 +65,13 @@ This example docker command uses the following environment variables to create a
 If you are running Docker on Linux/macOS, use the following syntax with single quotes:
 
 ```bash
-docker run -e ACCEPT_EULA=Y -e MSSQL_PID='Developer' -e MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>' -e MSSQL_TCP_PORT=1234 --cap-add SYS_PTRACE -p 1234:1234 -d microsoft/mssql-server-linux
+docker run -e ACCEPT_EULA=Y -e MSSQL_PID='Developer' -e MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>' -e MSSQL_TCP_PORT=1234 -p 1234:1234 -d microsoft/mssql-server-linux
 ```
 
 If you are running Docker on Windows, use the following syntax with double quotes:
 
 ```bash
-docker run -e ACCEPT_EULA=Y -e MSSQL_PID="Developer" -e MSSQL_SA_PASSWORD="<YourStrong!Passw0rd>" -e MSSQL_TCP_PORT=1234 --cap-add SYS_PTRACE -p 1234:1234 -d microsoft/mssql-server-linux
+docker run -e ACCEPT_EULA=Y -e MSSQL_PID="Developer" -e MSSQL_SA_PASSWORD="<YourStrong!Passw0rd>" -e MSSQL_TCP_PORT=1234 -p 1234:1234 -d microsoft/mssql-server-linux
 ```
 
 ## Next steps

@@ -279,7 +279,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE=OFF ;
 * [Recommendations and guidelines for the "max degree of parallelism" configuration option in SQL Server ](https://support.microsoft.com/en-us/kb/2806535) 
 
 ### LEGACY_CARDINALITY_ESTIMATION Resources    
-* [Cardinality Estimation (SQL Server)](https://msdn.microsoft.com/library/dn600374.aspx)
+* [Cardinality Estimation (SQL Server)](../../relational-databases/performance/cardinality-estimation-sql-server.md)
 * [Optimizing Your Query Plans with the SQL Server 2014 Cardinality Estimator](https://msdn.microsoft.com/library/dn673537.aspx)
 
 ### PARAMETER_SNIFFING Resources    

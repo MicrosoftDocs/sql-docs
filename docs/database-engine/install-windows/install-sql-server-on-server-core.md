@@ -46,7 +46,7 @@ The Server Core installation option provides a minimal environment for running s
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|No||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Tools (SSDT)|No||  
 |Client Tools Connectivity|Yes||  
-|Integration Services Server|Yes|For more information about the new Integration Services Server and its features in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], see [Integration Services (SSIS) Server](https://msdn.microsoft.com/library/bb522534.aspx).|  
+|Integration Services Server|Yes|For more information about the new Integration Services Server and its features in [!INCLUDE[ssCurrent](../../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md).|  
 |Client Tools Backward Compatibility|No||  
 |Client Tools SDK|No||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online|No||  

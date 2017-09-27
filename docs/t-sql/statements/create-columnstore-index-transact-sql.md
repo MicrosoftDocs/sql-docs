@@ -48,12 +48,12 @@ Skip to examples:
 -   [Examples for nonclustered columnstore indexes](../../t-sql/statements/create-columnstore-index-transact-sql.md#nonclustered)  
   
 Go to scenarios:  
--   [Columnstore indexes for real-time operational analytics](https://msdn.microsoft.com/library/dn817827.aspx)  
--   [Columnstore indexes for data warehousing](https://msdn.microsoft.com/library/dn913734.aspx)  
+-   [Columnstore indexes for real-time operational analytics](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)  
+-   [Columnstore indexes for data warehousing](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)  
   
 Learn more:  
--   [Columnstore indexes guide](https://msdn.microsoft.com/library/gg492088.aspx)  
--   [Columnstore indexes feature summary](https://msdn.microsoft.com/library/dn934994.aspx)  
+-   [Columnstore indexes guide](../../relational-databases/indexes/columnstore-indexes-overview.md)  
+-   [Columnstore indexes feature summary](../../relational-databases/indexes/columnstore-indexes-what-s-new.md)  
   
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

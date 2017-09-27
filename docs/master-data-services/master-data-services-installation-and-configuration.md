@@ -134,7 +134,7 @@ If you're interested in making changes to the installation of [!INCLUDE[ssCurren
 
     ![mds_2016ConfigManager_CreateDatabaseWizard_DatabasePage](../master-data-services/media/mds-2016configmanager-createdatabasewizard-databasepage.png)  
   
-     For more information about Windows collation, see [Windows Collation Name (Transact-SQL)](https://msdn.microsoft.com/library/ms188046.aspx).  
+     For more information about Windows collation, see [Windows Collation Name (Transact-SQL)](../t-sql/statements/windows-collation-name-transact-sql.md).  
   
 5.  In the **User name** field, specify  the Windows account of the user that will be the default Super User for Master Data Services. A Super User has access to all functional areas and can add, delete, and update all models.  
 

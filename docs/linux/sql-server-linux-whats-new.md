@@ -132,7 +132,7 @@ Under compatibility mode 140:
 [Improvements from Service Pack 1](https://blogs.msdn.microsoft.com/sqlreleaseservices/sql-server-2016-service-pack-1-sp1-released/) in this CTP1.1 release:
 - Database cloning for CLR, Filestream/Filetable, In-memory and Query Store objects.
 - **CREATE** or **ALTER** operators for programmability objects.
-- New **USE HINT** query option to provide hints for the query processor. Learn more here: [Query Hints](https://msdn.microsoft.com/en-us/library/ms181714.aspx).
+- New **USE HINT** query option to provide hints for the query processor. Learn more here: [Query Hints](../t-sql/queries/hints-transact-sql-query.md).
 - SQL service account can now programmatically identify Enable Lock Pages in Memory and Instant File Initialization permissions.
 - Support for TempDB file count, file size and file growth settings.
 - Extended diagnostics in showplan XML.

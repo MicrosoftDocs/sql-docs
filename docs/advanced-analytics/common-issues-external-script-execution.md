@@ -58,7 +58,7 @@ The Launchpad service (Launchpad.exe) runs by using a low-privilege service acco
 - Bypass traverse checking (SeChangeNotifyPrivilege)
 - Adjust memory quotas for a process (SeIncreaseQuotaSizePrivilege)
 
-For information about these user rights, see the "Windows privileges and rights" section in [Configure Windows service accounts and permissions](https://msdn.microsoft.com/library/ms143504.aspx).
+For information about these user rights, see the "Windows privileges and rights" section in [Configure Windows service accounts and permissions](../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).
 
 > [!TIP]
 > If you are familiar with the use of the Support Diagnostics Platform (SDP) tool for SQL Server diagnostics, you can use SDP to review the output file with the name MachineName_UserRights.txt.

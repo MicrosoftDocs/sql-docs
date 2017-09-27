@@ -1,7 +1,7 @@
 ---
 title: "SQL Server 2017 Release Notes | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/22/2017"
+ms.date: "10/02/2017"
 ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""

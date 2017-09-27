@@ -302,7 +302,7 @@ In the following Transact-SQL code example:
   
 - No explicit transaction control statements are allowed within the body of a native proc. BEGIN TRANSACTION, ROLLBACK TRANSACTION and so on are all disallowed.  
   
-- For more information about transaction control with ATOMIC blocks see [Atomic Blocks](https://msdn.microsoft.com/library/dn452281.aspx)  
+- For more information about transaction control with ATOMIC blocks see [Atomic Blocks](atomic-blocks-in-native-procedures.md)  
   
 <a name="othertxnlinks44ni"/>  
   

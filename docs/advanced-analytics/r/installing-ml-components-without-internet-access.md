@@ -1,7 +1,7 @@
 ---
 title: "Installing machine learning components without internet access | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/14/2017"
+ms.date: "09/22/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -27,11 +27,11 @@ This topic provides the download locations for the installers and an overview of
 
 Typically, setup of the machine components used in SQL Server 2016 and SQL Server 2017 requires an internet connection. When SQL Server setup runs, if you have selected any of the machine learning options, setup checks for the Python or R installers, as well as any other required components.
 
-+ **If the computer has an internet connection
++ **If the computer has an internet connection**
 
     SQL Server locates and download the components for you, then installs them during setup. You must accept the license terms separately for each open source component (R or Python) that you install.
 
-+ If the computer does not have internet access
++ **If the computer does not have internet access**
 
     You must download additional installers before continuing with setup. At minimum, download the R or Python installers that are supported for the version of SQL Server that you are installing.
 
@@ -96,23 +96,22 @@ Microsoft R Open     |[SRO_3.3.3.0_1033.cab](https://go.microsoft.com/fwlink/?Li
 Microsoft R Server     |[SRS_9.1.0.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=842799)
 Microsoft Python Open     |[SPO_9.1.0.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=842828)
 Microsoft Python Server    |[SPS_9.1.0.0__1033.cab](https://go.microsoft.com/fwlink/?LinkId=842848)
-**SQL Server 2017 CTP 3.0** |
-Microsoft R Open     |no change; use CTP 2.0|
-Microsoft R Server     |no change; use CTP 2.0|
-Microsoft Python Open     |no change; use CTP 2.0|
-Microsoft Python Server    |no change; use CTP 2.0|
-**SQL Server 2017 CTP 4.0** |
-Microsoft R Open     |no change; use CTP 2.0|
-Microsoft R Server     |no change; use CTP 2.0|
-Microsoft Python Open     |no change; use CTP 2.0|
-Microsoft Python Server    |no change; use CTP 2.0|
-**SQL Server 2017 RTM** |
-Microsoft R Open     |[SRO_3.3.3.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851496)|
-Microsoft R Server      |[SRS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851507)|
-Microsoft Python Open     |[SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502) |
-Microsoft Python Server    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851508) |
+**SQL Server 2017 RC1** |
+Microsoft R Open     |[SRO_3.3.3.22_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851503)|
+Microsoft R Server     |[SRS_9.2.0.22_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851498)|
+Microsoft Python Open     |[SPO_9.2.0.22_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851499)|
+Microsoft Python Server    |[SPS_9.2.0.22_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851504)|
+**SQL Server 2017 RC 2** |
+Microsoft R Open     |[SRO_3.3.3.23_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851493)|
+Microsoft R Server     |[SRS_9.2.0.23_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851505)|
+Microsoft Python Open     |[SPO_9.2.0.23_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851506)|
+Microsoft Python Server    |[SPS_9.2.0.23_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851497)|
 
 ### <a name="bkmk_2016Installers"></a>Downloads for SQL Server 2016
+
+> [!IMPORTANT]
+> 
+> When installing SQL Server 2016 SP1 CU4 or SP1 CU5 offline, download SRO_3.2.2.16000_1033.cab. If you downloaded SRO_3.2.2.13000_1033.cab from FWLINK 831785 as indicated in the setup dialog box, rename the file as SRO_3.2.2.16000_1033.cab before installing the Cumulative Update.
 
 Release  |Download link  |
 ---------|---------|
@@ -155,6 +154,9 @@ Microsoft R Server     |no change; use previous|
 **SQL Server 2016 SP 1 CU4 and GDR**     |
 Microsoft R Open     |no change; use previous|
 Microsoft R Server    |[SRS_8.0.3.17000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=850317)
+**SQL Server 2016 SP 1 CU5**     |
+Microsoft R Open     |no change; use previous|
+Microsoft R Server    |no change; use previous |
 
 If you would like to view the source code for Microsoft R, it is available for download as an archive in .tar format: [Download R Server installers](https://docs.microsoft.com/r-server/install/r-server-install-windows#download)
 

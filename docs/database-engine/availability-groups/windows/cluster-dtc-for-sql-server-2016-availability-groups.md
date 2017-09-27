@@ -53,9 +53,9 @@ Once you have created your Availability Group resource, create a clustered DTC r
 
 [More Information on Testing DTC on Availability Groups:](https://blogs.technet.microsoft.com/dataplatform/2016/01/25/sql-server-2016-dtc-support-in-availability-groups/)
 
-[Monitoring Always on Availability groups system views](https://msdn.microsoft.com/library/ff878305.aspx)
+[Monitoring Always on Availability groups system views](monitor-availability-groups-transact-sql.md)
 
-[Create Availability Group Step by Step](https://msdn.microsoft.com/library/ff878307.aspx)
+[Create Availability Group Step by Step](create-an-availability-group-transact-sql.md)
 
 
 [SQL Server 2016 DTC Support in Availability Groups](http://blogs.technet.microsoft.com/dataplatform/2016/01/25/sql-server-2016-dtc-support-in-availability-groups/) 

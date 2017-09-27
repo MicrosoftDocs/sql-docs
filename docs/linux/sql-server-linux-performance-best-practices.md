@@ -48,6 +48,8 @@ Consider using the following Linux Operating System configuration settings to ex
 
 These are the recommended Linux Operating System settings related to high performance and throughput for a SQL Server installation. See your Linux Operating System documentation for the process to configure these settings.
 
+
+
 > [!Note]
 > For Red Hat Enterprise Linux (RHEL) users, the throughput-performance profile will configure these settings automatically (except for C-States).
 
@@ -90,6 +92,14 @@ Use the **noatime** attribute with any file system that is used to store SQL Ser
 ### Leave Transparent Huge Pages (THP) enabled
 
 Most Linux installations should have this option on by default. We recommend for the most consistent performance experience to leave this configuration option enabled.
+
+### swapfile
+
+Ensure you have a properly configured swapfile to avoid any out of memory issues. Consult your Linux documentation for how to create and properly size a swapfile.
+
+### Virtual Machines and Dynamic Memory
+
+If you are running SQL Server on Linux in a virtual machine, ensure you select options to fix the amount of memory reserved for the virtual machine. Do not use features like Hyper-V Dynamic Memory.
 
 ## Next steps
 

@@ -9,3 +9,9 @@
 # [Driver-Aware Connection Pooling in the ODBC Driver for SQL Server](driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md)
 
 # [Asynchronous Execution (Notification Method) Sample](asynchronous-execution-notification-method-sample.md)
+
+# [Data Source Wizard Screen 1](dsn-wizard-1.md)
+# [Data Source Wizard Screen 2](dsn-wizard-2.md)
+# [Data Source Wizard Screen 3](dsn-wizard-3.md)
+# [Data Source Wizard Screen 4](dsn-wizard-4.md)
+# [SQL Server Login Dialog](sql-server-login-dialog.md)

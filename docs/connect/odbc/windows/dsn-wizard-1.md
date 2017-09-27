@@ -33,9 +33,9 @@ The data source name used by an ODBC application when it requests a connection t
 
 The name of an instance of SQL Server on your network. You will need to specify a server in the next edit box.
 
-In most cases, the SQL Server Native Client ODBC driver can connect by using the default protocol order and the server name supplied in this box. Use SQL Server Configuration Manager if you want to create an alias for the server or configure client network libraries.
+In most cases, the ODBC driver can connect by using the default protocol order and the server name supplied in this box. Use SQL Server Configuration Manager if you want to create an alias for the server or configure client network libraries.
 
-You can enter "(local)" in the server box when you are using the same computer as SQL Server. The user can then connect to the local instance of SQL Server, even when running a non-networked version of SQL Server. Multiple instances of SQL Server can run on the same computer. To specify a named instance of SQL Server, the server name is specified as _ServerName_\_InstanceName_.
+You can enter "(local)" in the server box when you are using the same computer as SQL Server. The user can then connect to the local instance of SQL Server, even when running a non-networked version of SQL Server. Multiple instances of SQL Server can run on the same computer. To specify a named instance of SQL Server, the server name is specified as _ServerName_\\_InstanceName_.
 
 For more information about server names for different types of networks, see the SQL Server installation documentation in SQL Server Books Online.
 

@@ -39,7 +39,7 @@ When this check box is cleared, no translation of extended characters in ANSI ch
 
 Specifies that the driver use the regional settings of the client computer for formatting currency, numbers, dates, and times in character output strings. The driver uses the default regional setting for the Windows login account of the user connecting through the data source. Select this option for applications that only display data, not for applications that process data.
 
-### **Save long running queries to the log file **
+### **Save long running queries to the log file**
 
 Specifies that the driver log any query that takes longer than the Long query time value. Long-running queries are logged to the specified file. To specify a log file, either type the full path and file name in the box, or click **Browse** to select a log file by navigating through existing file directories.
 

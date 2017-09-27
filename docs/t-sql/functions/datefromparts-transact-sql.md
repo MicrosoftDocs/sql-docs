@@ -32,8 +32,6 @@ Returns a **date** value for the specified year, month, and day.
 ## Syntax  
   
 ```sql
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 DATEFROMPARTS ( year, month, day )  
 ```  
   

@@ -34,8 +34,6 @@ Returns the smallest integer greater than, or equal to, the specified numeric ex
 ## Syntax  
   
 ```sql
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 CEILING ( numeric_expression )  
 ```  
   

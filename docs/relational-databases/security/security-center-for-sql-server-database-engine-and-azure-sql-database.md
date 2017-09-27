@@ -3,7 +3,7 @@ title: "Security Center for SQL Server Database Engine and Azure SQL Database | 
 ms.custom: 
   - "MSDN content"
   - "MSDN - SQL DB"
-ms.date: "06/28/2017"
+ms.date: "09/27/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.service: 
@@ -69,7 +69,7 @@ manager: "craigg"
   
 |||  
 |-|-|  
-|**Automated Auditing**<br /><br /> ![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit (Server and DB Level)<br /><br /> ![security-center-sqldb](../../relational-databases/security/media/security-center-sqldb.png "security-center-sqldb") [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Audit (Database Level)<br /><br /> ![security-center-sqldb](../../relational-databases/security/media/security-center-sqldb.png "security-center-sqldb") Threat Detection|[SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)<br /><br /> [SQL Database Auditing](http://azure.microsoft.com/documentation/articles/sql-database-auditing-get-started/)<br /><br /> [Get started with SQL Database Threat Detection](https://azure.microsoft.com/documentation/articles/sql-database-threat-detection-get-started/)|  
+|**Automated Auditing**<br /><br /> ![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit (Server and DB Level)<br /><br /> ![security-center-sqldb](../../relational-databases/security/media/security-center-sqldb.png "security-center-sqldb") [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Audit (Database Level)<br /><br /> ![security-center-sqldb](../../relational-databases/security/media/security-center-sqldb.png "security-center-sqldb") Threat Detection| <br /><br /> [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)<br /><br /> [SQL Database Auditing](http://azure.microsoft.com/documentation/articles/sql-database-auditing-get-started/)<br /><br /> [Get started with SQL Database Threat Detection](https://azure.microsoft.com/documentation/articles/sql-database-threat-detection-get-started/) <br /><br /> [SQL Database Vulnerability Assessment](https://docs.microsoft.com/en-us/azure/sql-database/sql-vulnerability-assessment) |  
 |**Custom Audit**<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") Triggers|Custom Audit Implementation: Creating [DDL Triggers](../../relational-databases/triggers/ddl-triggers.md) and [DML Triggers](../../relational-databases/triggers/dml-triggers.md)|  
 |**Compliance**<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") Compliance|SQL Server:<br />                        [Common Criteria](http://go.microsoft.com/fwlink/?LinkId=616319)<br /><br /> SQL Database:<br />                        [Microsoft Azure Trust Center: Compliance by Feature](http://azure.microsoft.com/support/trust-center/services/)|  
   

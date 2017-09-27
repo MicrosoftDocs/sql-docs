@@ -2,7 +2,7 @@
 title: "sys.query_store_plan (Transact-SQL) | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "03/29/2016"
+ms.date: "09/12/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -35,7 +35,7 @@ manager: "jhubbard"
 |-----------------|---------------|-----------------|  
 |**plan_id**|**bigint**|Primary key.|  
 |**query_id**|**bigint**|Foreign key. Joins to [sys.query_store_query &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md).|  
-|**plan_group_id**|**bigint**|ID of the plan group. Cursor queries typically require multiple (populate and fetch) plans. Populate and fetch plans that are compiled together have are in the same group.<br /><br /> 0 means plan is not in a group.|  
+|**plan_group_id**|**bigint**|ID of the plan group. Cursor queries typically require multiple (populate and fetch) plans. Populate and fetch plans that are compiled together are in the same group.<br /><br /> 0 means plan is not in a group.|  
 |**engine_version**|**nvarchar(32)**|Version of the engine used to compile the plan in **'major.minor.build.revision'** format.|  
 |**compatibility_level**|**smallint**|Database compatibility level of the database referenced in the query.|  
 |**query_plan_hash**|**binary(8)**|MD5 hash of the individual plan.|  

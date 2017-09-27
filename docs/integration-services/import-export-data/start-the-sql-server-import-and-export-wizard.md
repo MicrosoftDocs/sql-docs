@@ -38,6 +38,9 @@ You can start the wizard:
 ## Prerequisite - Is the wizard installed on your computer?
 If you want to run the wizard, but you don't have [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installed on your computer, you can install the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard  by installing SQL Server Data Tools (SSDT). For more info, see [Download SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx).
 
+> [!NOTE]
+> To use the 64-bit version of the SQL Server Import and Export Wizard, you have to install SQL Server. SQL Server Data Tools (SSDT) and SQL Server Management Studio (SSMS) are 32-bit applications and only install 32-bit files, including the 32-bit version of the wizard.
+
 ## <a name="startStart"></a> Start menu  
 ### Start the SQL Server Import and Export Wizard from the Start menu
 1.  On the **Start** menu, find and expand **Microsoft SQL Server 2016**.
@@ -78,7 +81,7 @@ Run the 64-bit version of the wizard unless you know that your data source requi
 
     ![Start wizard SSMS](../../integration-services/import-export-data/media/start-wizard-ssms.jpg) 
 
-If you don't have SQL Server installed, or you have SQL Server but don't have SQL Server Management Studio installed, see [Download SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx).
+If you don't have SQL Server installed, or you have SQL Server but don't have SQL Server Management Studio installed, see [Download SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md).
   
 ## <a name="startVS"></a> Visual Studio
 ### Start the SQL Server Import and Export Wizard from Visual Studio with SQL Server Data Tools (SSDT) 
@@ -94,7 +97,7 @@ If you don't have SQL Server installed, or you have SQL Server but don't have SQ
 
     ![Start wizard Packages](../../integration-services/import-export-data/media/start-wizard-packages.jpg)
 
-If you don't have Visual Studio installed, or you have Visual Studio but don't have SQL Server Data Tools installed, see [Download SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx).
+If you don't have Visual Studio installed, or you have Visual Studio but don't have SQL Server Data Tools installed, see [Download SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md).
 
 ## Get the wizard
 If you want to run the wizard, but you don't have [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installed on your computer, you can install the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard  by installing SQL Server Data Tools (SSDT). For more info, see [Download SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx).

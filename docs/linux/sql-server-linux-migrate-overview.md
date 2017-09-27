@@ -1,6 +1,4 @@
 ---
-# required metadata
-
 title: Migrate databases to SQL Server on Linux | Microsoft Docs
 description: This topic describes the different options for migrating databases and data to SQL Server on Linux.
 author: rothja 
@@ -11,22 +9,13 @@ ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 1619489d-377a-4f32-8930-d4f536539689
-
-# optional metadata
-
-# keywords: ""
-# ROBOTS: ""
-# audience: ""
-# ms.devlang: ""
-# ms.reviewer: ""
-# ms.suite: ""
-# ms.tgt_pltfrm: ""
 ms.custom: H1Hack27Feb2017
-
 ---
 # Migrate databases and structured data to SQL Server on Linux 
 
-You can migrate your databases and data to SQL Server 2017 CTP 2.1 running on Linux. The method you choose to use depends on the source data and your specific scenario. The following sections provide best practices for various migration scenarios.
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+
+You can migrate your databases and data to SQL Server 2017 RC2 running on Linux. The method you choose to use depends on the source data and your specific scenario. The following sections provide best practices for various migration scenarios.
 
 ## Migrate from SQL Server on Windows
 If you want to migrate SQL Server databases on Windows to SQL Server 2017 on Linux, the recommended technique is to use SQL Server backup and restore.
@@ -41,8 +30,7 @@ For a tutorial on migrating a database with backup and restore, see the followin
 
 It is also possible to export your database to a BACPAC file (a compressed file that contains your database schema and data). If you have a BACPAC file, you can transfer this file to your Linux machine and then import it to SQL Server. For more information, see the following topics:
 
-- [Export and import a database with sqlpackage](sql-server-linux-migrate-sqlpackage.md)
-- [Export and import a database with SSMS](sql-server-linux-migrate-ssms.md)
+- [Export and import a database with SSMS or SqlPackage.exe](sql-server-linux-migrate-ssms.md)
 
 ## Migrate from other database servers
 You can migrate databases on other database systems to SQL Server 2017 on Linux. This includes Microsoft Access, DB2, MySQL, Oracle, and Sybase databases. In this scenario, use the SQL Server Management Assistant (SSMA) to automate the migration to SQL Server on Linux. For more information, see [Use SSMA to migrate databases to SQL Server on Linux](sql-server-linux-migrate-ssma.md).  

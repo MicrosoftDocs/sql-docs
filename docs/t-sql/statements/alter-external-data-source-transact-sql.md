@@ -24,14 +24,16 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # ALTER EXTERNAL DATA SOURCE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   Modifies an external data source used to create an external table. The external data source can be Hadoop or Azure blob storage (WASB).  
   
 ## Syntax  
   
 ```  
---Modify an external data source   
+-- Modify an external data source
+-- Applies to: SQL Server (2016 or later), Azure SQL Data Warehouse,
+               Parallel Data Warehouse    
 ALTER EXTERNAL DATA SOURCE data_source_name SET  
     {   
         LOCATION = 'server_name_or_IP' [,] |  
@@ -41,6 +43,8 @@ ALTER EXTERNAL DATA SOURCE data_source_name SET
     [;]  
 
 -- Modify an external data source pointing to Azure Blob storage
+-- Applies to: SQL Server (starting with 2017), Azure SQL Database,
+               Azure SQL Data Warehouse, Parallel Data Warehouse
 ALTER EXTERNAL DATA SOURCE data_source_name  
     WITH (   
         TYPE = BLOB_STORAGE,  

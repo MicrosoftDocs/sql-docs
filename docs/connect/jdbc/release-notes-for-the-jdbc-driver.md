@@ -19,11 +19,9 @@ manager: "jhubbard"
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
 ## Updates in Microsoft JDBC Driver 6.2 for SQL Server
-The Microsoft JDBC Driver 6.2 for SQL Server is fully compliant with JDBC specifications 4.1 and 4.2. The jars contained in the 6.0 package are named according to Java version compatibility. For example, the mssql-jdbc-6.2.0.jre8.jar file from the 6.2 package is recommended to be used with Java 8. 
+The Microsoft JDBC Driver 6.2 for SQL Server is fully compliant with JDBC specifications 4.1 and 4.2. The jars contained in the 6.0 package are named according to Java version compatibility. For example, the mssql-jdbc-6.2.1.jre8.jar file from the 6.2 package is recommended to be used with Java 8. 
 
-**Performance improvements for Prepared Statements**
-
-Improved performance for Prepared Statements through caching (including prepared statement handle re-use). This behavior can be tuned using new properties to fit your application’s needs.    
+**Note:** An issue with the metadata caching improvement was found in the JDBC 6.2 RTW released on June 29, 2017. The improvement was rolled back and new jars (version 6.2.1) were released on July 17, 2017 on the [Microsoft Download Center](https://go.microsoft.com/fwlink/?linkid=852460), [GitHub](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.1), and [Maven Central](http://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22com.microsoft.sqlserver%22%20AND%20a%3A%22mssql-jdbc%22). Please update your projects to use the 6.2.1 release jars. Please view [release notes](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.1) for more details.
 
 **Azure Active Directory (AAD) support for Linux**
 
@@ -45,6 +43,10 @@ The JDBC Driver now has support for:
 The JDBC Driver now supports the following configurable timeouts you can change based on your application’s needs: 
 * Query Timeout to control the number of seconds to wait before a timeout occurs when running a query. 
 * Socket Timeout to specify the number of milliseconds to wait before a timeout occurs on a socket read or accept. 
+
+## Updates in Microsoft JDBC Driver 6.1 for SQL Server
+
+The Microsoft JDBC Driver 6.1 for SQL Server is fully compliant with JDBC specifications 4.1 and 4.2. This is the initial open source release of the JDBC Driver and contains the mssql-jdbc-6.1.0.jre8.jar mssql-jdbc-6.1.0.jre7.jar files, which correspond to the Java version compatibility. 
 
 ## Updates in Microsoft JDBC Driver 6.0 for SQL Server
 

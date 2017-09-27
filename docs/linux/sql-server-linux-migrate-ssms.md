@@ -1,31 +1,21 @@
 ---
-# required metadata
-
-title: Export and import a database on Linux with SSMS | Microsoft Docs
+title: Export and import a database on Linux | Microsoft Docs
 description: 
 author: sanagama 
 ms.author: sanagama 
 manager: jhubbard
-ms.date: 03/17/2017
+ms.date: 07/17/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 2210cfc3-c23a-4025-a551-625890d6845f
-
-# optional metadata
-# keywords: ""
-# ROBOTS: ""
-# audience: ""
-# ms.devlang: ""
-# ms.reviewer: ""
-# ms.suite: ""
-# ms.tgt_pltfrm: ""
 ms.custom: H1Hack27Feb2017
-
 ---
-# Export and import a database on Linux with SQL Server Management Studio on Windows
+# Export and import a database on Linux with SSMS or SqlPackage.exe on Windows
 
-This topic shows how to use [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx) to export and import a database on SQL Server 2017 CTP 2.1 on Linux. SSMS is a Windows application, so use SSMS when you have a Windows machine that can connect to a remote SQL Server instance on Linux. 
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+
+This topic shows how to use [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) and [SqlPackage.exe](https://msdn.microsoft.com/library/hh550080.aspx) to export and import a database on SQL Server 2017 RC2 on Linux. SSMS and SqlPackage.exe are Windows applications, so use this technique when you have a Windows machine that can connect to a remote SQL Server instance on Linux.
 
 You should always install and use the most recent version of SQL Server Management Studio (SSMS) as described in [Use SSMS on Windows to connect to SQL Server on Linux](sql-server-linux-develop-use-ssms.md)
 
@@ -68,5 +58,22 @@ The *.BACPAC file is successfully created at the location you chose and you are 
 
 The *.BACPAC file is imported to create a new database in the target server you specified.
 
+## <a id="sqlpackage"></a> SqlPackage command-line option
+
+It is also possible to use the SQL Server Data Tools (SSDT) command-line tool, [SqlPackage.exe](https://msdn.microsoft.com/library/hh550080.aspx), to export and import BACPAC files.
+
+The following example command exports a BACPAC file:
+
+```bash
+SqlPackage.exe /a:Export /ssn:tcp:<your_server> /sdn:<your_database> /su:<username> /sp:<password> /tf:<path_to_bacpac>
+```
+
+Use the following command to import database schema and user data from a .BACPAC file:
+
+```bash
+SqlPackage.exe /a:Import /tsn:tcp:<your_server> /tdn:<your_database> /tu:<username> /tp:<password> /sf:<path_to_bacpac>
+
+```
+
 ## See also
-For more information on how to use SSMS, see [Use SQL Server Management Studio](https://msdn.microsoft.com/library/ms174173.aspx).
+For more information on how to use SSMS, see [Use SQL Server Management Studio](https://msdn.microsoft.com/library/ms174173.aspx). For more information on SqlPackage.exe, see the [SqlPackage reference documentation](https://msdn.microsoft.com/library/hh550080.aspx).

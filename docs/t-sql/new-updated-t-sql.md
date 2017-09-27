@@ -13,7 +13,7 @@ ms.custom: UpdArt.exe
 ms.tgt_pltfrm: na
 ms.devlang: na
 ms.topic: updart-autogen
-ms.date: 06/30/2017
+ms.date: 09/11/2017
 ms.author: genemi
 ms.workload: t-sql
 ---
@@ -29,7 +29,7 @@ Recent updates are reported for the following date range and subject:
 
 
 
-- *Date range of updates:* &nbsp; **2017-05-17** &nbsp; -to- &nbsp; **2017-06-30**
+- *Date range of updates:* &nbsp; **2017-07-18** &nbsp; -to- &nbsp; **2017-09-11**
 - *Subject area:* &nbsp; **T-SQL**.
 
 
@@ -39,10 +39,13 @@ Recent updates are reported for the following date range and subject:
 
 ## New Articles Created Recently
 
-The following links jump to new articles which have been added recently.
+The following links jump to new articles that have been added recently.
 
 
-1. [MATCH (Transact-SQL)](queries/match-sql-graph.md)
+1. [PREDICT (Transact-SQL)](queries/predict-transact-sql.md)
+2. [ALTER EXTERNAL LIBRARY (Transact-SQL)](statements/alter-external-library-transact-sql.md)
+3. [CREATE EXTERNAL LIBRARY (Transact-SQL)](statements/create-external-library-transact-sql.md)
+4. [DROP EXTERNAL LIBRARY (Transact-SQL)](statements/drop-external-library-transact-sql.md)
 
 
 
@@ -50,17 +53,13 @@ The following links jump to new articles which have been added recently.
 
 ## Updated Articles with Excerpts
 
-This section displays the excerpts of updates gathered from articles which have recently experienced a large update.
+This section displays the excerpts of updates gathered from articles that have recently experienced a large update.
 
 The excerpts displayed here appear separated from their proper semantic context. Also, sometimes an excerpt is separated from important markdown syntax that surrounds it in the actual article. Therefore these excerpts are for general guidance only. The excerpts only enable you to know whether your interests warrant taking the time to click and visit the actual article.
 
 For these and other reasons, do not copy code from these excerpts, and do not take as exact truth any text excerpt. Instead, visit the actual article.
 
 
-
-&nbsp;
-
-*No articles in this area were updated recently, this time.*
 
 
 
@@ -70,52 +69,132 @@ For these and other reasons, do not copy code from these excerpts, and do not ta
 
 ## Compact List of Articles Updated Recently
 
-This compact list provides links to all the updated articles which are listed in the preceding section.
+This compact list provides links to all the updated articles that are listed in the Excerpts section.
+
+1. [CAST and CONVERT (Transact-SQL)](#TitleNum_1)
 
 
 
-
-
-<a name="sisters2"/>
 
 &nbsp;
 
-## Sister Articles
+&nbsp;
 
-This section lists very similar articles for recently updated articles in other subject areas, within the same GitHub.com repository: [MicrosoftDocs/**sql-docs-pr**](https://github.com/microsoftdocs/sql-docs-pr/).
+<a name="TitleNum_1"/>
 
-<!--  20170630-1150  -->
+### 1. &nbsp; [CAST and CONVERT (Transact-SQL)](functions/cast-and-convert-transact-sql.md)
+
+*Updated: 2017-09-08* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+
+<!-- Source markdown line 647.  ms.author= "rickbyh".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 b805ecddecda72ffc026c3866b5284a79b69fb3f f2906eaf87c7cdf1409922d4efba8cd1c5635674  (PR=0  ,  Filename=cast-and-convert-transact-sql.md  ,  Dirpath=docs\t-sql\functions\  ,  MergeCommitSha40=b97cc9723d563b19c85661f5ad7049a96fc904ff) -->
+
+
+
+**K. Using CAST with arithmetic operators**
+
+The following example calculates a single column computation by dividing the product unit price (`UnitPrice`) by the discount percentage (`UnitPriceDiscountPct`). This result is converted to an `int` data type after being rounded to the nearest whole number. Uses AdventureWorksDW.
+
+```
+SELECT ProductKey, UnitPrice,UnitPriceDiscountPct,
+       CAST(ROUND (UnitPrice*UnitPriceDiscountPct,0) AS int) AS DiscountPrice
+FROM dbo.FactResellerSales
+WHERE SalesOrderNumber = 'SO47355'
+      AND UnitPriceDiscountPct > .02;
+```
+
+..!NCLUDE-NotShown--ssResult--../../includes/ssresult-md.md)]
+
+```
+ProductKey  UnitPrice  UnitPriceDiscountPct  DiscountPrice
+----------  ---------  --------------------  -------------
+323         430.6445   0.05                  22
+213         18.5043    0.05                  1
+456         37.4950    0.10                  4
+456         37.4950    0.10                  4
+216         18.5043    0.05                  1
+```
+
+**L. Using CAST to concatenate**
+
+The following example concatenates noncharacter expressions by using CAST. Uses AdventureWorksDW.
+
+```
+SELECT 'The list price is ' + CAST(ListPrice AS varchar(12)) AS ListPrice
+FROM dbo.DimProduct
+WHERE ListPrice BETWEEN 350.00 AND 400.00;
+```
+
+..!NCLUDE-NotShown--ssResult--../../includes/ssresult-md.md)]
+
+```
+ListPrice
+------------------------
+The list price is 357.06
+The list price is 364.09
+The list price is 364.09
+The list price is 364.09
+The list price is 364.09
+```
+
+**M. Using CAST to produce more readable text**
+
+The following example uses CAST in the SELECT list to convert the `Name` column to a **char(10)** column. Uses AdventureWorksDW.
+
+```
+SELECT DISTINCT CAST(EnglishProductName AS char(10)) AS Name, ListPrice
+FROM dbo.DimProduct
+WHERE EnglishProductName LIKE 'Long-Sleeve Logo Jersey, M';
+```
+
+..!NCLUDE-NotShown--ssResult--../../includes/ssresult-md.md)]
+
+
+
+
+
+
+
+## Similar Articles
+
+<!--  HOW TO:
+    Refresh this file's line items with the latest 'Count-in-Similars*' content.
+    Then run Run-533-*.BAT
+-->
+
+This section lists very similar articles for recently updated articles in other subject areas, within our public GitHub.com repository: [MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/).
 
 #### Subject areas which do have new or recently updated articles
 
-- [New + Updated (12+2): **Advanced Analystics for SQL** docs](../advanced-analytics/new-updated-advanced-analytics.md)
-- [New + Updated (1+0):  **Analysis Services for SQL** docs](../analysis-services/new-updated-analysis-services.md)
-- [New + Updated (0+2):  **Connect to SQL** docs](../connect/new-updated-connect.md)
-- [New + Updated (3+0):  **Database Engine for SQL** docs](../database-engine/new-updated-database-engine.md)
-- [New + Updated (1+2):  **Integration Services for SQL** docs](../integration-services/new-updated-integration-services.md)
-- [New + Updated (2+8):  **Linux for SQL** docs](../linux/new-updated-linux.md)
-- [New + Updated (1+0):  **Master Data Services (MDS) for SQL** docs](../master-data-services/new-updated-master-data-services.md)
-- [New + Updated (5+5):  **Relational Databases for SQL** docs](../relational-databases/new-updated-relational-databases.md)
-- [New + Updated (2+0):  **Reporting Services for SQL** docs](../reporting-services/new-updated-reporting-services.md)
-- [New + Updated (0+4):  **Microsoft SQL Server** docs](../sql-server/new-updated-sql-server.md)
-- [New + Updated (0+1):  **SQL Server Data Tools (SSDT)** docs](../ssdt/new-updated-ssdt.md)
-- [New + Updated (0+1):  **SQL Server Management Studio (SSMS)** docs](../ssms/new-updated-ssms.md)
-- [New + Updated (1+0):  **Tools for SQL** docs](../tools/new-updated-tools.md)
-
+- [New + Updated (3+12) : **Advanced Analytics for SQL** docs](../advanced-analytics/new-updated-advanced-analytics.md)
+- [New + Updated (5+0)  : **Connect to SQL** docs](../connect/new-updated-connect.md)
+- [New + Updated (5+1)  : **Database Engine for SQL** docs](../database-engine/new-updated-database-engine.md)
+- [New + Updated (19+82): **Integration Services for SQL** docs](../integration-services/new-updated-integration-services.md)
+- [New + Updated (1+8)  : **Linux for SQL** docs](../linux/new-updated-linux.md)
+- [New + Updated (12+1) : **Relational Databases for SQL** docs](../relational-databases/new-updated-relational-databases.md)
+- [New + Updated (0+1)  : **Reporting Services for SQL** docs](../reporting-services/new-updated-reporting-services.md)
+- [New + Updated (7+1)  : **Microsoft SQL Server** docs](../sql-server/new-updated-sql-server.md)
+- [New + Updated (1+1)  : **SQL Server Data Tools (SSDT)** docs](../ssdt/new-updated-ssdt.md)
+- [New + Updated (0+2)  : **SQL Server Migration Assistant (SSMA)** docs](../ssma/new-updated-ssma.md)
+- [New + Updated (1+4)  : **SQL Server Management Studio (SSMS)** docs](../ssms/new-updated-ssms.md)
+- [New + Updated (4+1)  : **Transact-SQL** docs](../t-sql/new-updated-t-sql.md)
+- [New + Updated (0+1)  : **Tools for SQL** docs](../tools/new-updated-tools.md)
 
 #### Subject areas which have no new or recently updated articles
 
 - [New + Updated (0+0): **ActiveX Data Objects (ADO) for SQL** docs](../ado/new-updated-ado.md)
+- [New + Updated (0+0): **Analysis Services for SQL** docs](../analysis-services/new-updated-analysis-services.md)
 - [New + Updated (0+0): **Data Quality Services for SQL** docs](../data-quality-services/new-updated-data-quality-services.md)
 - [New + Updated (0+0): **Data Mining Extensions (DMX) for SQL** docs](../dmx/new-updated-dmx.md)
+- [New + Updated (0+0): **Master Data Services (MDS) for SQL** docs](../master-data-services/new-updated-master-data-services.md)
 - [New + Updated (0+0): **Multidimensional Expressions (MDX) for SQL** docs](../mdx/new-updated-mdx.md)
 - [New + Updated (0+0): **ODBC (Open Database Connectivity) for SQL** docs](../odbc/new-updated-odbc.md)
 - [New + Updated (0+0): **PowerShell for SQL** docs](../powershell/new-updated-powershell.md)
 - [New + Updated (0+0): **Samples for SQL** docs](../sample/new-updated-sample.md)
-- [New + Updated (0+0): **SQL Server Migration Assistant (SSMA)** docs](../ssma/new-updated-ssma.md)
-- [New + Updated (0+0): **Transact-SQL** docs](../t-sql/new-updated-t-sql.md)
 - [New + Updated (0+0): **XQuery for SQL** docs](../xquery/new-updated-xquery.md)
 
-
-&nbsp;
 

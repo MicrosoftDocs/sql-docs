@@ -81,8 +81,8 @@ A connection manager can be created at the package level or at the project level
 |----------|-----------------|-----------|  
 |ADO|Connects to ActiveX Data Objects (ADO) objects.|[ADO Connection Manager](../../integration-services/connection-manager/ado-connection-manager.md)|  
 |ADO.NET|Connects to a data source by using a .NET provider.|[ADO.NET Connection Manager](../../integration-services/connection-manager/ado-net-connection-manager.md)|  
-|CACHE|Reads data from the data flow or from a cache file (.caw), and can save data to the cache file.|[Cache Connection Manager](../../integration-services/data-flow/transformations/cache-connection-manager.md)|  
-|DQS|Connects to a Data Quality Services server and a Data Quality Services database on the server.|[DQS Cleansing Connection Manager](../../integration-services/data-flow/transformations/dqs-cleansing-connection-manager.md)|  
+|CACHE|Reads data from the data flow or from a cache file (.caw), and can save data to the cache file.|[Cache Connection Manager](../../integration-services/connection-manager/cache-connection-manager.md)|  
+|DQS|Connects to a Data Quality Services server and a Data Quality Services database on the server.|[DQS Cleansing Connection Manager](../../integration-services/connection-manager/dqs-cleansing-connection-manager.md)|  
 |EXCEL|Connects to an Excel workbook file.|[Excel Connection Manager](../../integration-services/connection-manager/excel-connection-manager.md)|  
 |FILE|Connects to a file or a folder.|[File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)|  
 |FLATFILE|Connect to data in a single flat file.|[Flat File Connection Manager](../../integration-services/connection-manager/flat-file-connection-manager.md)|  
@@ -135,7 +135,7 @@ A connection manager can be created at the package level or at the project level
   
  At run time, the correct version is used, and it does not matter that you specified the 32-bit version of the provider at design time. The 64-bit version of the provider can be run even if the package is run in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
- Both versions of the provider have the same ID. To specify whether the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] runtime uses an available 64-bit version of the provider, you set the Run64BitRuntime property of the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project. If the Run64BitRuntime property is set to **true**, the runtime finds and uses the 64-bit provider; if Run64BitRuntime is **false**, the runtime finds and uses the 32-bit provider. For more information about properties you can set on [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] projects, see [Integration Services &(SSIS) and Studio Environments](https://msdn.microsoft.com/library/ms140028.aspx).  
+  Both versions of the provider have the same ID. To specify whether the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] runtime uses an available 64-bit version of the provider, you set the Run64BitRuntime property of the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project. If the Run64BitRuntime property is set to **true**, the runtime finds and uses the 64-bit provider; if Run64BitRuntime is **false**, the runtime finds and uses the 32-bit provider. For more information about properties you can set on [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] projects, see [Integration Services &(SSIS) and Studio Environments](https://msdn.microsoft.com/library/ms140028.aspx).   
 
 ## Add a connection manager
 ###  <a name="wizard"></a> Add a connection manager when you create a package  

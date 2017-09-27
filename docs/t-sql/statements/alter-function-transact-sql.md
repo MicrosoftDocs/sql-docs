@@ -1,7 +1,7 @@
 ---
 title: "ALTER FUNCTION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/27/2017"
+ms.date: "08/07/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -274,7 +274,7 @@ RETURNS return_data_type
  *\<*table_type_definition*>***(** { \<column_definition> \<column_constraint> | \<computed_column_definition> } [ \<table_constraint> ] [ **,**...*n* ]**)**  
  Defines the table data type for a [!INCLUDE[tsql](../../includes/tsql-md.md)] function. The table declaration includes column definitions and column or table constraints.  
   
- < clr_table_type_definition > **(** { *column_name**data_type* } [ **,**...*n* ] **)**  
+\< clr_table_type_definition > **(** { *column_name**data_type* } [ **,**...*n* ] **)**
  **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Preview in some regions](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).  
   
  Defines the table data types for a CLR function. The table declaration includes only column names and data types.  
@@ -326,7 +326,7 @@ For a list of conditions that must be met before a function can be schema bound,
   
  For more information, see [EXECUTE AS Clause &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md).  
   
- **< column_definition >::=**  
+**\< column_definition >::=**
   
  Defines the table data type. The table declaration includes column definitions and constraints. For CLR functions, only *column_name* and *data_type* can be specified.  
   
@@ -362,7 +362,7 @@ For a list of conditions that must be met before a function can be schema bound,
  *increment*  
  Is the integer value to add to the *seed* value for successive rows in the table.  
   
- **< column_constraint >::= and < table_constraint>::=**  
+**\< column_constraint >::= and \< table_constraint>::=**
   
  Defines the constraint for a specified column or table. For CLR functions, the only constraint type allowed is NULL. Named constraints are not allowed.  
   

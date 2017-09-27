@@ -13,7 +13,7 @@ ms.custom: UpdArt.exe
 ms.tgt_pltfrm: na
 ms.devlang: na
 ms.topic: updart-autogen
-ms.date: 06/30/2017
+ms.date: 09/11/2017
 ms.author: genemi
 ms.workload: ssdt-sql-server-data-tools
 ---
@@ -29,7 +29,7 @@ Recent updates are reported for the following date range and subject:
 
 
 
-- *Date range of updates:* &nbsp; **2017-05-17** &nbsp; -to- &nbsp; **2017-06-30**
+- *Date range of updates:* &nbsp; **2017-07-18** &nbsp; -to- &nbsp; **2017-09-11**
 - *Subject area:* &nbsp; **SQL Server Data Tools (SSDT)**.
 
 
@@ -39,10 +39,10 @@ Recent updates are reported for the following date range and subject:
 
 ## New Articles Created Recently
 
-The following links jump to new articles which have been added recently.
+The following links jump to new articles that have been added recently.
 
 
-*There are no new articles to list, this time.*
+1. [SQL Server Data Tools - License Terms](sql-server-data-tools-license-terms-vs2017.md)
 
 
 
@@ -50,65 +50,11 @@ The following links jump to new articles which have been added recently.
 
 ## Updated Articles with Excerpts
 
-This section displays the excerpts of updates gathered from articles which have recently experienced a large update.
+This section displays the excerpts of updates gathered from articles that have recently experienced a large update.
 
 The excerpts displayed here appear separated from their proper semantic context. Also, sometimes an excerpt is separated from important markdown syntax that surrounds it in the actual article. Therefore these excerpts are for general guidance only. The excerpts only enable you to know whether your interests warrant taking the time to click and visit the actual article.
 
 For these and other reasons, do not copy code from these excerpts, and do not take as exact truth any text excerpt. Instead, visit the actual article.
-
-
-
-&nbsp;
-
-&nbsp;
-
-<a name="TitleNum_1"/>
-
-### 1. &nbsp; [Changelog for SQL Server Data Tools (SSDT)](changelog-for-sql-server-data-tools-ssdt.md)
-
-*Updated: 2017-05-19* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-
-<!-- Source markdown line 21.  ms.author= "sstein".  -->
-
-&nbsp;
-
-
-<!-- git diff --ignore-all-space --unified=0 cf17883ce0daf75fdf88881171bf4042558b1cf4 536fe0fe41b023a4186f494a509fa14fcbafccf4  (PR=1777  ,  Filename=changelog-for-sql-server-data-tools-ssdt.md  ,  Dirpath=docs\ssdt\  ,  MergeCommitSha40=5bd0e1d3955d898824d285d28979089e2de6f322) -->
-
-
-
-For detailed posts about what's new and changed, please visit [the SSDT Team blog](https://blogs.msdn.microsoft.com/ssdt/)
-
-**SSDT 17.1**
-
-Build number: 14.0.61705.170
-
-**What's New?**
-
-**AS projects:**
-- Users can set encoding hints on columns in the UI on 1400 models
-- Non-model-related IntelliSense is now available in offline mode
-- Tabular Model Explorer now contains a node to represent named M expressions available across the model (1400 compat-level tabular models)
-- Azure Active Directory People Picker similar to Microsoft Azure Portal's IAM now available when setting up Role Members in Tabular Models
-
-**Database projects:**
-- Updated to DacFx 17.1
-
-**Bug Fixes**
-
-- Fixed an issue where the Business Intelligence Designers group name was displayed incorrectly in Visual Studio Options in VS2017
-- Fixed an issue where a crash could occur generating a Code Map for a solution with a Report Project or AS Project
-- Fixed a number of issues with PowerQuery integration for Analysis Services 1400 compat-level tabular models
-- Fixed an issue in the new DAX editor tool window where the assignment operator could not be on a separate line when defining a measure
-- Fixed an issue that prevented the tabular measure display from updating when renaming measures in perspective
-- Updated Analysis Services integrated workspace engine and Tabular Object Model that fixes a regression that caused 1200 tabular projects containing translations to fail on deploy to SQL Server 2016 Analysis Services server
-- Fixed a performance issue that made creation\deletion of new 1400 tabular data sources very slow
-- Fixed an issue where the DSV diagram in multi-dimensional models could stop rendering if changing view quickly between different DSVs
-
-**DacFx 17.1**
-
-- Fixed an issue when encrypting a column with memory-optimized tables with other identity columns
-- SQLDOM support for CATALOG_COLLATION option for CREATE DATABASE
 
 
 
@@ -120,53 +66,119 @@ Build number: 14.0.61705.170
 
 ## Compact List of Articles Updated Recently
 
-This compact list provides links to all the updated articles which are listed in the preceding section.
+This compact list provides links to all the updated articles that are listed in the Excerpts section.
 
 1. [Changelog for SQL Server Data Tools (SSDT)](#TitleNum_1)
 
 
 
 
-<a name="sisters2"/>
+&nbsp;
 
 &nbsp;
 
-## Sister Articles
+<a name="TitleNum_1"/>
 
-This section lists very similar articles for recently updated articles in other subject areas, within the same GitHub.com repository: [MicrosoftDocs/**sql-docs-pr**](https://github.com/microsoftdocs/sql-docs-pr/).
+### 1. &nbsp; [Changelog for SQL Server Data Tools (SSDT)](changelog-for-sql-server-data-tools-ssdt.md)
 
-<!--  20170630-1150  -->
+*Updated: 2017-08-23* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+
+<!-- Source markdown line 23.  ms.author= "sstein".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 536fe0fe41b023a4186f494a509fa14fcbafccf4 e5bc7b76c1755f5a1af77f6cd63d8e8691dafe7b  (PR=2927  ,  Filename=changelog-for-sql-server-data-tools-ssdt.md  ,  Dirpath=docs\ssdt\  ,  MergeCommitSha40=71a2cbf181c94c4c1aff877614aadf890b2496e0) -->
+
+
+
+**SSDT for Visual Studio 2017 (15.3.0 preview)**
+
+Build number: 14.0.16121.0
+
+**What's New?**
+
+
+This preview is the first version of SSDT for Visual Studio 2017. This release introduces a standalone web installation experience for SQL Server Database, Analysis Services, Reporting Services, and Integration Services projects in Visual Studio 2017 15.3 or later.
+
+
+**Known Issues**
+
+- The installer is not localized.
+- SSIS is not localized.
+- SSIS Execute Package Task doesn't support debugging when *ExecuteOutofProcess* is set to *True*. This issue only applies to debugging. Save, deploy, and execution via DTExec.exe or SSIS catalog is not impacted.
+- For a complete list of changes, see the [changelog--changelog-for-sql-server-data-tools-ssdt.md).
+- Report issues at the [SSDT Connect Feedback](https://connect.microsoft.com/SQLServer/Feedback) site.
+- SSIS Packages containing 3rd party extensions cannot be switched to target other server versions.
+
+
+**SSDT 17.2 for Visual Studio 2015**
+
+Build number: 14.0.61707.300
+
+**What's New?**
+
+
+
+**AS projects:**
+- Object Level Security can now be configured in the *Roles* dialog for advanced security in 1400 compatability level tabular models.
+- New AAD role member selection for users without email addresses in AS Azure models in SSDT AS projects for VS2017.
+- New AS Azure "Always Prompt" project property in SSDT AS tabular projects to customize behavior of ADAL credential caching.
+
+
+**Bug Fixes**
+
+
+**General**
+- Updated branding references for SQL Server 2017.
+
+**AS projects**
+- Significant performance fixes made to improve experience when committing DAX measure changes and other model edits.
+- Fixed a number of issues with Power Query integration in Analysis Services projects using 1400-compatability level tabular models.
+- Fixed an issue in Multi-Dimensional projects in VS2017 only where Design Aggregation designer may fail to load.
+
+
+
+
+
+
+
+## Similar Articles
+
+<!--  HOW TO:
+    Refresh this file's line items with the latest 'Count-in-Similars*' content.
+    Then run Run-533-*.BAT
+-->
+
+This section lists very similar articles for recently updated articles in other subject areas, within our public GitHub.com repository: [MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/).
 
 #### Subject areas which do have new or recently updated articles
 
-- [New + Updated (12+2): **Advanced Analystics for SQL** docs](../advanced-analytics/new-updated-advanced-analytics.md)
-- [New + Updated (1+0):  **Analysis Services for SQL** docs](../analysis-services/new-updated-analysis-services.md)
-- [New + Updated (0+2):  **Connect to SQL** docs](../connect/new-updated-connect.md)
-- [New + Updated (3+0):  **Database Engine for SQL** docs](../database-engine/new-updated-database-engine.md)
-- [New + Updated (1+2):  **Integration Services for SQL** docs](../integration-services/new-updated-integration-services.md)
-- [New + Updated (2+8):  **Linux for SQL** docs](../linux/new-updated-linux.md)
-- [New + Updated (1+0):  **Master Data Services (MDS) for SQL** docs](../master-data-services/new-updated-master-data-services.md)
-- [New + Updated (5+5):  **Relational Databases for SQL** docs](../relational-databases/new-updated-relational-databases.md)
-- [New + Updated (2+0):  **Reporting Services for SQL** docs](../reporting-services/new-updated-reporting-services.md)
-- [New + Updated (0+4):  **Microsoft SQL Server** docs](../sql-server/new-updated-sql-server.md)
-- [New + Updated (0+1):  **SQL Server Data Tools (SSDT)** docs](../ssdt/new-updated-ssdt.md)
-- [New + Updated (0+1):  **SQL Server Management Studio (SSMS)** docs](../ssms/new-updated-ssms.md)
-- [New + Updated (1+0):  **Tools for SQL** docs](../tools/new-updated-tools.md)
-
+- [New + Updated (3+12) : **Advanced Analytics for SQL** docs](../advanced-analytics/new-updated-advanced-analytics.md)
+- [New + Updated (5+0)  : **Connect to SQL** docs](../connect/new-updated-connect.md)
+- [New + Updated (5+1)  : **Database Engine for SQL** docs](../database-engine/new-updated-database-engine.md)
+- [New + Updated (19+82): **Integration Services for SQL** docs](../integration-services/new-updated-integration-services.md)
+- [New + Updated (1+8)  : **Linux for SQL** docs](../linux/new-updated-linux.md)
+- [New + Updated (12+1) : **Relational Databases for SQL** docs](../relational-databases/new-updated-relational-databases.md)
+- [New + Updated (0+1)  : **Reporting Services for SQL** docs](../reporting-services/new-updated-reporting-services.md)
+- [New + Updated (7+1)  : **Microsoft SQL Server** docs](../sql-server/new-updated-sql-server.md)
+- [New + Updated (1+1)  : **SQL Server Data Tools (SSDT)** docs](../ssdt/new-updated-ssdt.md)
+- [New + Updated (0+2)  : **SQL Server Migration Assistant (SSMA)** docs](../ssma/new-updated-ssma.md)
+- [New + Updated (1+4)  : **SQL Server Management Studio (SSMS)** docs](../ssms/new-updated-ssms.md)
+- [New + Updated (4+1)  : **Transact-SQL** docs](../t-sql/new-updated-t-sql.md)
+- [New + Updated (0+1)  : **Tools for SQL** docs](../tools/new-updated-tools.md)
 
 #### Subject areas which have no new or recently updated articles
 
 - [New + Updated (0+0): **ActiveX Data Objects (ADO) for SQL** docs](../ado/new-updated-ado.md)
+- [New + Updated (0+0): **Analysis Services for SQL** docs](../analysis-services/new-updated-analysis-services.md)
 - [New + Updated (0+0): **Data Quality Services for SQL** docs](../data-quality-services/new-updated-data-quality-services.md)
 - [New + Updated (0+0): **Data Mining Extensions (DMX) for SQL** docs](../dmx/new-updated-dmx.md)
+- [New + Updated (0+0): **Master Data Services (MDS) for SQL** docs](../master-data-services/new-updated-master-data-services.md)
 - [New + Updated (0+0): **Multidimensional Expressions (MDX) for SQL** docs](../mdx/new-updated-mdx.md)
 - [New + Updated (0+0): **ODBC (Open Database Connectivity) for SQL** docs](../odbc/new-updated-odbc.md)
 - [New + Updated (0+0): **PowerShell for SQL** docs](../powershell/new-updated-powershell.md)
 - [New + Updated (0+0): **Samples for SQL** docs](../sample/new-updated-sample.md)
-- [New + Updated (0+0): **SQL Server Migration Assistant (SSMA)** docs](../ssma/new-updated-ssma.md)
-- [New + Updated (0+0): **Transact-SQL** docs](../t-sql/new-updated-t-sql.md)
 - [New + Updated (0+0): **XQuery for SQL** docs](../xquery/new-updated-xquery.md)
 
-
-&nbsp;
 

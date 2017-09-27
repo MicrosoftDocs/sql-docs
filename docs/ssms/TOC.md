@@ -2,14 +2,10 @@
 # [What is SSMS?](sql-server-management-studio-ssms.md)
 
 # What's New
-## [SSMS Changelog](sql-server-management-studio-changelog-ssms.md)
-## [Release notes](sql-server-management-studio-release-notes.md)
+## [SSMS Changelog & Previous Releases](sql-server-management-studio-changelog-ssms.md)
+## [Release Notes](download-sql-server-management-studio-ssms.md#release-notes)
 ## [New and recently updated articles](new-updated-ssms.md)
-## [Previous SSMS Releases](previous-sql-server-management-studio-releases.md)
 
-# [Use SSMS](use-sql-server-management-studio.md)
-# [Features in SSMS](features-in-sql-server-management-studio.md)
-# [Usage Feedback Collection](sql-server-management-studio-telemetry-ssms.md)
 # [Download SQL Server PowerShell Module](download-sql-server-ps-module.md)
 
 # [SQL Server Agent +](../ssms/agent/sql-server-agent.md)
@@ -36,6 +32,7 @@
 # [The SSMS Environment](the-sql-server-management-studio-environment.md)
 # [Property Pages in SSMS](property-pages-in-sql-server-management-studio.md)
 # [Properties Window in SSMS](properties-window-management-studio.md)
+# [Output Window in SSMS](output-window.md)
 
 # [About Dialog Box](about-dialog-box.md)
 # [SSMS Web Browser](sql-server-management-studio-web-browser.md)
@@ -49,4 +46,4 @@
 
 # [Ssms Utility](ssms-utility.md)  
 # [SSMS Keyboard Shortcuts](sql-server-management-studio-keyboard-shortcuts.md)  
-
+# [Anonymous Usage Data](sql-server-management-studio-telemetry-ssms.md)

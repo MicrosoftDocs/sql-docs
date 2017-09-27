@@ -14,9 +14,9 @@ applies_to:
   - "SQL Server"
 ms.assetid: 9c396df4-5676-4f32-9c57-70d4f15f9b7a
 caps.latest.revision: 9
-author: "sabotta"
-ms.author: "carlasab"
-manager: "lonnyb"
+author: "Shamikg"
+ms.author: "Shamikg"
+manager: "jhubbard"
 ---
 # Data Migration Settings (MySQLToSQL)
   

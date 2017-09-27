@@ -42,7 +42,7 @@ manager: "jhubbard"
 
  With each of these approaches, the logic for migrating or cleaning history data is based on the column that corresponds to end of period in the current table. The end of period value for each row determines the moment when the row version becomes “closed”, i.e. when it lands in the history table. For example, the condition `SysEndTime < DATEADD (DAYS, -30, SYSUTCDATETIME ())` specifies that historical data older than one month needs to be removed or moved out from the history table.  
   
-> **NOTE:**  The examples in this topic use this [Temporal Table example](https://msdn.microsoft.com/library/mt590957.aspx).  
+> **NOTE:**  The examples in this topic use this [Temporal Table example](creating-a-system-versioned-temporal-table.md).  
   
 ## Using Stretch Database approach  
   
@@ -57,7 +57,7 @@ manager: "jhubbard"
   
 -   **Stretch a portion of the history table:** Configure Stretch Database for only a portion of your history table to improve performance if your main scenario involves primarily querying recent historical data, but you wish to preserve the option to query older historical data when needed while storing this data remotely at a lower cost. With Transact-SQL, you can  accomplish this by specifying a predicate function to select the rows that will be migrated from the history table rather than migrating all of the rows.  When you work with temporal tables, it typically makes sense to move data based on time condition (i.e. based on age of the row version in the history table).    
     Using a deterministic predicate function, you can keep portion of history in the same database with the current data, while the rest is migrated to Azure.    
-    For examples and limitations, see [Select rows to migrate by using a filter function (Stretch Database)](https://msdn.microsoft.com/library/mt613432.aspx). Because non-deterministic functions are not valid, if you want to transfer history data in sliding window manner, you would need to regularly alter definition of the inline predicate function so that window of rows you keep locally is constant in terms of age. Sliding window allows you to constantly move historical data older than one month to Azure. An example of this approach appears below.  
+    For examples and limitations, see [Select rows to migrate by using a filter function (Stretch Database)](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md). Because non-deterministic functions are not valid, if you want to transfer history data in sliding window manner, you would need to regularly alter definition of the inline predicate function so that window of rows you keep locally is constant in terms of age. Sliding window allows you to constantly move historical data older than one month to Azure. An example of this approach appears below.  
   
 > **NOTE:** Stretch Database migrates data to Azure. Therefore, you have to have an Azure account and a subscription for billing. To get  a free trial Azure account, click [Free One-Month Trial](https://azure.microsoft.com/pricing/free-trial/).  
   
@@ -105,7 +105,7 @@ SET (REMOTE_DATA_ARCHIVE = ON (MIGRATION_STATE = OUTBOUND));
 ```  
   
 ### Using Transact-SQL to stretch a portion of the history table  
- To stretch only a portion of the history table, you start by creating an [inline predicate function](https://msdn.microsoft.com/library/mt613432.aspx). For this example, let’s assume that you configured inline predicate function for the first time on December 1, 2015 and want to stretch to Azure all history date older than November 1, 2015. To accomplish this, start by creating the following function:  
+ To stretch only a portion of the history table, you start by creating an [inline predicate function](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md). For this example, let’s assume that you configured inline predicate function for the first time on December 1, 2015 and want to stretch to Azure all history date older than November 1, 2015. To accomplish this, start by creating the following function:  
   
 ```  
 CREATE FUNCTION dbo.fn_StretchBySystemEndTime20151101(@systemEndTime datetime2)   
@@ -159,7 +159,7 @@ COMMIT ;
  Use SQL Server Agent or some other scheduling mechanism to ensure valid predicate function definition all the time.  
   
 ## Using Table Partitioning Approach  
- [Table partitioning](https://msdn.microsoft.com/library/ms188730.aspx) can make large tables more manageable and scalable. Using the table partitioning approach, you can use history table partitions to  implement custom data cleanup or offline archival based on a time condition. Table partitioning will also give you performance benefits when querying  temporal tables on a subset of data history by using partition elimination.  
+ [Table partitioning](../partitions/create-partitioned-tables-and-indexes.md) can make large tables more manageable and scalable. Using the table partitioning approach, you can use history table partitions to  implement custom data cleanup or offline archival based on a time condition. Table partitioning will also give you performance benefits when querying  temporal tables on a subset of data history by using partition elimination.  
   
  With table partitioning, you can implement a sliding window approach to move out oldest portion of the historical data from the history table and keep the size of the retained part constant in terms of age - maintaining data in the history table equal to required retention period. The operation of switching data out from the history table is supported while SYSTEM_VERSIONING is ON, which means that you can clean a portion of the history data without introducing a maintenance windows or blocking your regular workloads.  
   

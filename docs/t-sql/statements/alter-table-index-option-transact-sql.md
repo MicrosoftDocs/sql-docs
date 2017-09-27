@@ -1,7 +1,7 @@
 ---
 title: "index_option (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/05/2017"
+ms.date: "09/08/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -87,10 +87,10 @@ manager: "jhubbard"
  Specifies the error response when an insert operation attempts to insert duplicate key values into a unique index. The IGNORE_DUP_KEY option applies only to insert operations after the index is created or rebuilt. The option has no effect when executing [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md), [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md), or [UPDATE](../../t-sql/queries/update-transact-sql.md). The default is OFF.  
   
  ON  
- A warning message will occur when duplicate key values are inserted into a unique index. Only the rows violating the uniqueness constraint will fail.  
+ A warning message occurs when duplicate key values are inserted into a unique index. Only the rows violating the uniqueness constraint fail.  
   
  OFF  
- An error message will occur when duplicate key values are inserted into a unique index. The entire INSERT operation will be rolled back.  
+ An error message occurs when duplicate key values are inserted into a unique index. The entire INSERT operation is rolled back.  
   
  IGNORE_DUP_KEY cannot be set to ON  for indexes created on a view, non-unique indexes, XML indexes, spatial indexes, and filtered indexes.  
   
@@ -169,14 +169,9 @@ manager: "jhubbard"
   
  *max_degree_of_parallelism* can be:  
   
- 1  
- Suppresses parallel plan generation.  
-  
- \>1  
- Restricts the maximum number of processors used in a parallel index operation to the specified number.  
-  
- 0 (default)  
- Uses the actual number of processors or fewer based on the current system workload.  
+ - 1 - Suppresses parallel plan generation.  
+ - \>1 - Restricts the maximum number of processors used in a parallel index operation to the specified number.  
+ - 0 (default) - Uses the actual number of processors or fewer based on the current system workload.  
   
  For more information, see [Configure Parallel Index Operations](../../relational-databases/indexes/configure-parallel-index-operations.md).  
   
@@ -186,7 +181,7 @@ manager: "jhubbard"
  DATA_COMPRESSION  
  **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Specifies the data compression option for the specified table, partition number or range of partitions. The options are as follows:  
+ Specifies the data compression option for the specified table, partition number, or range of partitions. The options are as follows:  
   
  NONE  
  Table or specified partitions are not compressed. Applies only to rowstore tables; does not apply to columnstore tables.  
@@ -200,33 +195,31 @@ manager: "jhubbard"
  COLUMNSTORE  
  **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Applies only to columnstore tables. COLUMNSTORE specifies to decompress a partition that was compressed with the COLUMNSTORE_ARCHIVE option. When the data is restored, it will continue to be compressed with the columnstore compression that is used for all columnstore tables.  
+ Applies only to columnstore tables. COLUMNSTORE specifies to decompress a partition that was compressed with the COLUMNSTORE_ARCHIVE option. When the data is restored, the COLUMNSTORE index continues to be compressed with the columnstore compression that is used for all columnstore tables.  
   
  COLUMNSTORE_ARCHIVE  
  **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Applies only to columnstore tables, which are tables stored with a clustered columnstore index. COLUMNSTORE_ARCHIVE will further compress the specified partition to a smaller size. This can be used for archival, or for other situations that require less storage and can afford more time for storage and retrieval  
+ Applies only to columnstore tables, which are tables stored with a clustered columnstore index. COLUMNSTORE_ARCHIVE further compresses the specified partition to a smaller size. This can be used for archival, or for other situations that require less storage and can afford more time for storage and retrieval  
   
  For more information about compression, see [Data Compression](../../relational-databases/data-compression/data-compression.md).  
   
- ON PARTITIONS **(** { <partition_number_expression> | \<range> } [ **,**...*n* ] **)**  
+ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [ **,**...*n* ] **)**
  **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Specifies the partitions to which the DATA_COMPRESSION setting applies. If the table is not partitioned, the ON PARTITIONS argument will generate an error. If the ON PARTITIONS clause is not provided, the DATA_COMPRESSION option will apply to all partitions of a partitioned table.  
+ Specifies the partitions to which the DATA_COMPRESSION setting applies. If the table is not partitioned, the ON PARTITIONS argument generates an error. If the ON PARTITIONS clause is not provided, the DATA_COMPRESSION option applies to all partitions of a partitioned table.  
   
 \<partition_number_expression> can be specified in the following ways:  
   
 -   Provide the number a partition, for example: ON PARTITIONS (2).  
-  
 -   Provide the partition numbers for several individual partitions separated by commas, for example: ON PARTITIONS (1, 5).  
-  
 -   Provide both ranges and individual partitions, for example: ON PARTITIONS (2, 4, 6 TO 8).  
   
- \<range> can be specified as partition numbers separated by the word TO, for example: ON PARTITIONS (6 TO 8).  
+\<range> can be specified as partition numbers separated by the word TO, for example: ON PARTITIONS (6 TO 8).  
   
  To set different types of data compression for different partitions, specify the DATA_COMPRESSION option more than once, for example:  
   
-```  
+```sql  
 --For rowstore tables  
 REBUILD WITH   
 (  
@@ -247,20 +240,18 @@ DATA_COMPRESSION = COLUMNSTORE_ARCHIVE ON PARTITIONS (2, 4, 6 TO 8)
  In most cases, rebuilding an index rebuilds all partitions of a partitioned index. The following options, when applied to a single partition, do not rebuild all partitions.  
   
 -   SORT_IN_TEMPDB  
-  
 -   MAXDOP  
-  
 -   DATA_COMPRESSION  
   
 **low_priority_lock_wait**  
  **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- A **SWITCH** or online index rebuild completes as soon as there are no blocking operations for this table. *WAIT_AT_LOW_PRIORITY* indicates that if the **SWITCH** or online index rebuild operation cannot be completed immediately it will wait. The operation will hold low priority locks, allowing other operations that hold locks conflicting with the DDL statement to proceed. Omitting the **WAIT AT LOW PRIORITY** option is equivalent to `WAIT_AT_LOW_PRIORITY ( MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`.  
+ A **SWITCH** or online index rebuild completes as soon as there are no blocking operations for this table. *WAIT_AT_LOW_PRIORITY* indicates that if the **SWITCH** or online index rebuild operation cannot be completed immediately, it waits. The operation holds low priority locks, allowing other operations that hold locks conflicting with the DDL statement to proceed. Omitting the **WAIT AT LOW PRIORITY** option is equivalent to `WAIT_AT_LOW_PRIORITY ( MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`.  
   
 MAX_DURATION = *time* [**MINUTES** ]  
- The wait time (an integer value specified in minutes) that the **SWITCH** or online index rebuild lock that must be acquired will wait when executing the DDL command. The SWITCH or online index rebuild operation attempts to complete immediately. If the operation is blocked for the **MAX_DURATION** time, one of the **ABORT_AFTER_WAIT** actions will be executed. **MAX_DURATION** time is always in minutes, and the word **MINUTES** can be omitted.  
+ The wait time (an integer value specified in minutes) that the **SWITCH** or online index rebuild lock that must be acquired, waits when executing the DDL command. The SWITCH or online index rebuild operation attempts to complete immediately. If the operation is blocked for the **MAX_DURATION** time, one of the **ABORT_AFTER_WAIT** actions is executed. **MAX_DURATION** time is always in minutes, and the word **MINUTES** can be omitted.  
   
-ABOUT_AFTER_WAIT = [**NONE** | **SELF** | **BLOCKERS** } ]  
+ABORT_AFTER_WAIT = [**NONE** | **SELF** | **BLOCKERS** } ]  
  NONE  
  Continues the **SWITCH** or online index rebuild operation without changing the lock priority (using regular priority).  
   

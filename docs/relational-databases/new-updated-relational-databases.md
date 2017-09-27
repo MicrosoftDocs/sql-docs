@@ -14,7 +14,7 @@ ms.workload: relational-databases
 ms.tgt_pltfrm: na
 ms.devlang: na
 ms.topic: updart-autogen
-ms.date: 06/30/2017
+ms.date: 09/11/2017
 ms.author: genemi
 ---
 # New and Recently Updated: Relational Databases docs
@@ -29,7 +29,7 @@ Recent updates are reported for the following date range and subject:
 
 
 
-- *Date range of updates:* &nbsp; **2017-05-17** &nbsp; -to- &nbsp; **2017-06-30**
+- *Date range of updates:* &nbsp; **2017-07-18** &nbsp; -to- &nbsp; **2017-09-11**
 - *Subject area:* &nbsp; **Relational Databases**.
 
 
@@ -39,14 +39,21 @@ Recent updates are reported for the following date range and subject:
 
 ## New Articles Created Recently
 
-The following links jump to new articles which have been added recently.
+The following links jump to new articles that have been added recently.
 
 
-1. [SQL Server In-Memory OLTP Internals for SQL Server 2016](in-memory-oltp/sql-server-in-memory-oltp-internals-for-sql-server-2016.md)
-2. [Adaptive query processing in SQL databases](performance/adaptive-query-processing.md)
-3. [Guide to enhancing privacy and addressing GDPR requirements with the Microsoft SQL platform](security/microsoft-sql-and-the-gdpr-requirements.md)
-4. [sys.dm_db_log_stats (Transact-SQL)](system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md)
-5. [sys.dm_exec_query_parallel_workers (Transact-SQL)](system-dynamic-management-views/sys-dm-exec-query-parallel-workers-transact-sql.md)
+1. [Import data from Excel to SQL Server or Azure SQL Database](import-export/import-data-from-excel-to-sql.md)
+2. [Troubleshoot PolyBase Kerberos connectivity](polybase/polybase-troubleshoot-connectivity.md)
+3. [Transparent Data Encryption (TDE)](security/encryption/transparent-data-encryption.md)
+4. [Transparent Data Encryption for Azure SQL Database and Data Warehouse](security/encryption/transparent-data-encryption-azure-sql.md)
+5. [Transparent Data Encryption with Bring Your Own Key support for Azure SQL Database and Data Warehouse](security/encryption/transparent-data-encryption-byok-azure-sql.md)
+6. [PowerShell: Enable Transparent Data Encryption using your own key from Azure Key Vault](security/encryption/transparent-data-encryption-byok-azure-sql-configure.md)
+7. [Rotate the Transparent Data Encryption (TDE) protector using PowerShell](security/encryption/transparent-data-encryption-byok-azure-sql-key-rotation.md)
+8. [Remove a Transparent Data Encryption (TDE) protector using PowerShell](security/encryption/transparent-data-encryption-byok-azure-sql-remove-tde-protector.md)
+9. [SQL Server Shared Management Objects (SMO) License Terms](server-management-objects-smo/smo-license-terms.md)
+10. [sys.external_libraries (Transact-SQL)](system-catalog-views/sys-external-libraries-transact-sql.md)
+11. [sys.external_library_files (Transact-SQL)](system-catalog-views/sys-external-library-files-transact-sql.md)
+12. [sp_rxPredict](system-stored-procedures/sp-rxpredict-transact-sql.md)
 
 
 
@@ -54,224 +61,11 @@ The following links jump to new articles which have been added recently.
 
 ## Updated Articles with Excerpts
 
-This section displays the excerpts of updates gathered from articles which have recently experienced a large update.
+This section displays the excerpts of updates gathered from articles that have recently experienced a large update.
 
 The excerpts displayed here appear separated from their proper semantic context. Also, sometimes an excerpt is separated from important markdown syntax that surrounds it in the actual article. Therefore these excerpts are for general guidance only. The excerpts only enable you to know whether your interests warrant taking the time to click and visit the actual article.
 
 For these and other reasons, do not copy code from these excerpts, and do not take as exact truth any text excerpt. Instead, visit the actual article.
-
-
-
-&nbsp;
-
-&nbsp;
-
-<a name="TitleNum_1"/>
-
-### 1. &nbsp; [Altering Memory-Optimized Tables](in-memory-oltp/altering-memory-optimized-tables.md)
-
-*Updated: 2017-06-23* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Next](#TitleNum_2))
-
-<!-- Source markdown line 82.  ms.author= "genemi".  -->
-
-&nbsp;
-
-
-<!-- git diff --ignore-all-space --unified=0 8359700b5db24838f1bb273526794c2865bbbe11 41d77cf0bbcf53a1b64d6524a24e5736c5a073da  (PR=2171  ,  Filename=altering-memory-optimized-tables.md  ,  Dirpath=docs\relational-databases\in-memory-oltp\  ,  MergeCommitSha40=7d2dbe0bdc4cbd05f11eacf938b35a9c35ace2e7) -->
-
-
-
-**Logging of ALTER TABLE on memory-optimized tables**
-
-On a memory-optimized table, most ALTER TABLE scenarios now run in parallel and result in an optimization of writes to the transaction log. The optimization is achieved by only logging the metadata changes to the transaction log. However, the following ALTER TABLE operations run single-threaded and are not log-optimized.
-
-The single-threaded operation in this case would log the entire content of the altered table to the transaction log. A list of single-threaded operations follows:
-
-- Alter or add a column to use a large object (LOB) type: nvarchar(max), varchar(max), or varbinary(max).
-
-- Add or drop a COLUMNSTORE index.
-
-- Almost anything that affects an [off-row column--../../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md).
-
-    - Cause an on-row column to move off-row.
-
-    - Cause an off-row column to move on-row.
-
-    - Create a new off-row column.
-
-    - *Exception:* Lengthening an already off-row column is logged in the optimized way. 
-  
-
-
-
-
-&nbsp;
-
-&nbsp;
-
----
-
-<a name="TitleNum_2"/>
-
-### 2. &nbsp; [Table and Row Size in Memory-Optimized Tables](in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)
-
-*Updated: 2017-06-22* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_1) | [Next](#TitleNum_3))
-
-<!-- Source markdown line 114.  ms.author= "genemi".  -->
-
-&nbsp;
-
-
-<!-- git diff --ignore-all-space --unified=0 27ce0fa2e7bb464f9c3d6e32dd195de3b79abfcd 0a3cacd86024e2b734704ffd37e55ca0b17a0c94  (PR=2163  ,  Filename=table-and-row-size-in-memory-optimized-tables.md  ,  Dirpath=docs\relational-databases\in-memory-oltp\  ,  MergeCommitSha40=fe6de2b16b9792a5399b1c014af72a2a5ee52377) -->
-
-
-
- 
-  
- The calculation of [row body size] is discussed in the following table.  
-  
- There are two different computations for row body size: computed size and the actual size:  
-  
--   The computed size, denoted with [computed row body size], is used to determine if the row size limitation of 8,060 bytes is exceeded.  
-  
--   The actual size, denoted with [actual row body size], is the actual storage size of the row body in memory and in the checkpoint files.  
-  
- Both [computed row body size] and [actual row body size] are calculated similarly. The only difference is the calculation of the size of (n)varchar(i) and varbinary(i) columns, as reflected at the bottom of the following table. The computed row body size uses the declared size *i* as the size of the column, while the actual row body size uses the actual size of the data.  
-  
- The following table describes the calculation of the row body size, given as [actual row body size] = SUM([size of shallow types]) + 2 + 2 * [number of deep type columns].  
-  
-|Section|Size|Comments|  
-|-------------|----------|--------------|  
-|Shallow type columns|SUM([size of shallow types]). Size in bytes of the individual types is as follows:<br /><br /> **Bit**: 1<br /><br /> **Tinyint**: 1<br /><br /> **Smallint**: 2<br /><br /> **Int**: 4<br /><br /> **Real**: 4<br /><br /> **Smalldatetime**: 4<br /><br /> **Smallmoney**: 4<br /><br /> **Bigint**: 8<br /><br /> **Datetime**: 8<br /><br /> **Datetime2**: 8<br /><br /> **Float**: 8<br /><br /> **Money**: 8<br /><br /> **Numeric** (precision <=18): 8<br /><br /> **Time**: 8<br /><br /> **Numeric**(precision>18): 16<br /><br /> **Uniqueidentifier**: 16||  
-|Shallow column padding|Possible values are:<br /><br /> 1 if there are deep type columns and the total data size of the shallow columns is as odd number.<br /><br /> 0 otherwise|Deep types are the types (var)binary and (n)(var)char.|  
-
-
-
-
-&nbsp;
-
-&nbsp;
-
----
-
-<a name="TitleNum_3"/>
-
-### 3. &nbsp; [Post-migration Validation and Optimization Guide](post-migration-validation-and-optimization-guide.md)
-
-*Updated: 2017-06-21* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_2) | [Next](#TitleNum_4))
-
-<!-- Source markdown line 27.  ms.author= "harinid".  -->
-
-&nbsp;
-
-
-<!-- git diff --ignore-all-space --unified=0 faa2e3dd8be3aeb475bf8c7f71617ebf17969892 f2760dfecda10baeb121929b72a4d8164e81185b  (PR=2126  ,  Filename=post-migration-validation-and-optimization-guide.md  ,  Dirpath=docs\relational-databases\  ,  MergeCommitSha40=dcbeda6b8372b358b6497f78d6139cad91c8097c) -->
-
-
-
-Below are some of the common performance scenarios encountered after migrating to [!INCLUDE[ssNoVersion--../includes/ssnoversion-md.md)] Platform and how to resolve them. These include scenarios that are specific to [!INCLUDE[ssNoVersion--../includes/ssnoversion-md.md)] to [!INCLUDE[ssNoVersion--../includes/ssnoversion-md.md)] migration (older versions to newer versions), as well as foreign platform (such as Oracle, DB2, MySQL and Sybase) to [!INCLUDE[ssNoVersion--../includes/ssnoversion-md.md)] migration.
-
-**<a name="CEUpgrade"></a> Query regressions due to change in CE version**
-
-
-**Applies to:** [!INCLUDE[ssNoVersion--../includes/ssnoversion-md.md)] to [!INCLUDE[ssNoVersion--../includes/ssnoversion-md.md)] migration.
-
-When migrating from an older versions of [!INCLUDE[ssNoVersion--../includes/ssnoversion-md.md)] to [!INCLUDE[ssSQL14--../includes/sssql14-md.md)] or newer, and upgrading the [database compatibility level--../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) to the latest one, a workload may be exposed to the risk of performance regression.
-
-This is because starting with [!INCLUDE[ssSQL14--../includes/sssql14-md.md)], all Query Optimizer changes are tied to the latest [database compatibility level--../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md), so plans are not changed right at point of upgrade but rather when a user changes the `COMPATIBILITY_LEVEL` database option to the latest one. This capability, in combination with Query Store gives you a great level of control over the query performance in the upgrade process. 
-
-For more information on Query Optimizer changes introduced in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], see [Optimizing Your Query Plans with the SQL Server 2014 Cardinality Estimator](http://msdn.microsoft.com/library/dn673537.aspx).
-
-
-
-
-&nbsp;
-
-&nbsp;
-
----
-
-<a name="TitleNum_4"/>
-
-### 4. &nbsp; [sys.query_store_plan (Transact-SQL)](system-catalog-views/sys-query-store-plan-transact-sql.md)
-
-*Updated: 2017-06-05* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_3) | [Next](#TitleNum_5))
-
-<!-- Source markdown line 58.  ms.author= "rickbyh".  -->
-
-&nbsp;
-
-
-<!-- git diff --ignore-all-space --unified=0 1b77e34309ba7033578b3c82ed83c8c2fbc93e24 ce4ade9ab906c35cb87068a1fb91c4e1d7549aac  (PR=1940  ,  Filename=sys-query-store-plan-transact-sql.md  ,  Dirpath=docs\relational-databases\system-catalog-views\  ,  MergeCommitSha40=1d363db8e8bd0e1460cdea3c3a7add68e48714c9) -->
-
-
-
-**Plan forcing limitations**
-
-Query Store has a mechanism to enforce Query Optimizer to use certain execution plan. 
-However, there are some limitations that can prevent a plan to be enforced. 
-
-First, if the plan contains following constructions:
-* Insert bulk statement.
-* Insert bulk statement.
-* Reference to an external table
-* Distributed query or full-text operations
-* Use of Global queries 
-* Cursors
-* Invalid star join specification 
-
-Second, when objects that plan relies on, are no longer available:
-* Database (if Database, where plan originated, does not exist anymore)
-* Index (no longer there or disabled)
-
-Finally, problems with the plan itself:
-* Not legal for query
-* Query Optimizer exceeded number of allowed operations
-* Incorrectly formed plan XML
-
-
-
-
-&nbsp;
-
-&nbsp;
-
----
-
-<a name="TitleNum_5"/>
-
-### 5. &nbsp; [Manage Retention of Historical Data in System-Versioned Temporal Tables](tables/manage-retention-of-historical-data-in-system-versioned-temporal-tables.md)
-
-*Updated: 2017-05-19* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_4))
-
-<!-- Source markdown line 425.  ms.author= "carlrab".  -->
-
-&nbsp;
-
-
-<!-- git diff --ignore-all-space --unified=0 ee69beb6a46913934d4a322f5d95343cc86f2ec4 94da98fec4ab16636a4581c16eb4456e2d1ff66b  (PR=1777  ,  Filename=manage-retention-of-historical-data-in-system-versioned-temporal-tables.md  ,  Dirpath=docs\relational-databases\tables\  ,  MergeCommitSha40=5bd0e1d3955d898824d285d28979089e2de6f322) -->
-
-
-
-**Using Temporal History Retention Policy Approach**
-
-> **NOTE:**  Using the Temporal History Retention Policy approach applies to [!INCLUDE[sqldbesa--../../includes/sqldbesa-md.md)] and SQL Server 2017 starting from CTP 1.3.  
-
-Temporal history retention can be configured at the individual table level, which allows users to create flexible aging polices. Applying temporal retention is simple: it requires only one parameter to be set during table creation or schema change.
-
-After you define retention policy, Azure SQL Database starts checking regularly if there are historical rows that are eligible for automatic data cleanup. Identification of matching rows and their removal from the history table occur transparently, in the background task that is scheduled and run by the system. Age condition for the history table rows is checked based on the column representing end of SYSTEM_TIME period. If retention period, for example, is set to six months, table rows eligible for cleanup satisfy the following condition:
-```
-ValidTo < DATEADD (MONTH, -6, SYSUTCDATETIME())
-```
-In the preceding example, we assumed that ValidTo column corresponds to the end of SYSTEM_TIME period.
-**How to configure retention policy?**
-
-Before you configure retention policy for a temporal table, check first whether temporal historical retention is enabled at the database level:
-```
-SELECT is_temporal_history_retention_enabled, name
-FROM sys.databases
-```
-Database flag **is_temporal_history_retention_enabled** is set to ON by default, but users can change it with ALTER DATABASE statement. It is also automatically set to OFF after point in time restore operation. To enable temporal history retention cleanup for your database, execute the following statement:
 
 
 
@@ -283,57 +77,103 @@ Database flag **is_temporal_history_retention_enabled** is set to ON by default,
 
 ## Compact List of Articles Updated Recently
 
-This compact list provides links to all the updated articles which are listed in the preceding section.
+This compact list provides links to all the updated articles that are listed in the Excerpts section.
 
-1. [Altering Memory-Optimized Tables](#TitleNum_1)
-2. [Table and Row Size in Memory-Optimized Tables](#TitleNum_2)
-3. [Post-migration Validation and Optimization Guide](#TitleNum_3)
-4. [sys.query_store_plan (Transact-SQL)](#TitleNum_4)
-5. [Manage Retention of Historical Data in System-Versioned Temporal Tables](#TitleNum_5)
+1. [Automatic tuning](#TitleNum_1)
 
 
 
-
-<a name="sisters2"/>
 
 &nbsp;
 
-## Sister Articles
+&nbsp;
 
-This section lists very similar articles for recently updated articles in other subject areas, within the same GitHub.com repository: [MicrosoftDocs/**sql-docs-pr**](https://github.com/microsoftdocs/sql-docs-pr/).
+<a name="TitleNum_1"/>
 
-<!--  20170630-1150  -->
+### 1. &nbsp; [Automatic tuning](automatic-tuning/automatic-tuning.md)
+
+*Updated: 2017-08-16* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+
+<!-- Source markdown line 64.  ms.author= "jovanpop".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 be765a1acf9bdfd5485520d16160677583e81f8e 135d926227094374e6ec5484e7babee625b44bb2  (PR=2860  ,  Filename=automatic-tuning.md  ,  Dirpath=docs\relational-databases\automatic-tuning\  ,  MergeCommitSha40=e4a6157cb56c6db911406585f841046a431eef99) -->
+
+
+
+**Automatic plan choice correction**
+
+
+..!NCLUDE-NotShown--ssde_md--../../includes/ssde_md.md)] can automatically switch to the last known good plan whenever the plan choice regression is detected.
+
+![SQL plan choice correction--media/force-last-good-plan.png "SQL plan choice correction")
+
+..!NCLUDE-NotShown--ssde_md--../../includes/ssde_md.md)] automatically detects any potential plan choice regression including the plan that should be used instead of the wrong plan.
+When the ..!NCLUDE-NotShown--ssde_md--../../includes/ssde_md.md)] applies the last known good plan, it automatically monitors the performance of the forced plan. If the forced plan is not better
+than the regressed plan, the new plan will be unforced and the ..!NCLUDE-NotShown--ssde_md--../../includes/ssde_md.md)] will compile a new plan. If ..!NCLUDE-NotShown--ssde_md--../../includes/ssde_md.md)] verifies
+that the forced plan is better than regressed one, the forced plan will be retained until a recompile (for example, on next statistics or schema change) if it is better than the regressed plan.
+
+**Enabling automatic plan choice correction**
+
+
+You can enable automatic tuning per database and specify that last good plan should be forced whenever some plan change regression is detected. Automatic tuning is enabled using
+the following command:
+
+```
+ALTER DATABASE current
+SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON );
+```
+Once you turn-on this option, ..!NCLUDE-NotShown--ssde_md--../../includes/ssde_md.md)] will automatically force any recommendation where the estimated CPU gain is higher than 10 seconds, or the number of errors in the new plan is higher than the number of errors in the recommended plan, and verify that the forced plan is better than the current one.
+
+**Alternative - manual plan choice correction**
+
+
+Without automatic tuning, users must periodically monitor system and look for the queries that regressed. If any plan regressed, user should find some
+
+
+
+
+
+
+
+## Similar Articles
+
+<!--  HOW TO:
+    Refresh this file's line items with the latest 'Count-in-Similars*' content.
+    Then run Run-533-*.BAT
+-->
+
+This section lists very similar articles for recently updated articles in other subject areas, within our public GitHub.com repository: [MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/).
 
 #### Subject areas which do have new or recently updated articles
 
-- [New + Updated (12+2): **Advanced Analystics for SQL** docs](../advanced-analytics/new-updated-advanced-analytics.md)
-- [New + Updated (1+0):  **Analysis Services for SQL** docs](../analysis-services/new-updated-analysis-services.md)
-- [New + Updated (0+2):  **Connect to SQL** docs](../connect/new-updated-connect.md)
-- [New + Updated (3+0):  **Database Engine for SQL** docs](../database-engine/new-updated-database-engine.md)
-- [New + Updated (1+2):  **Integration Services for SQL** docs](../integration-services/new-updated-integration-services.md)
-- [New + Updated (2+8):  **Linux for SQL** docs](../linux/new-updated-linux.md)
-- [New + Updated (1+0):  **Master Data Services (MDS) for SQL** docs](../master-data-services/new-updated-master-data-services.md)
-- [New + Updated (5+5):  **Relational Databases for SQL** docs](../relational-databases/new-updated-relational-databases.md)
-- [New + Updated (2+0):  **Reporting Services for SQL** docs](../reporting-services/new-updated-reporting-services.md)
-- [New + Updated (0+4):  **Microsoft SQL Server** docs](../sql-server/new-updated-sql-server.md)
-- [New + Updated (0+1):  **SQL Server Data Tools (SSDT)** docs](../ssdt/new-updated-ssdt.md)
-- [New + Updated (0+1):  **SQL Server Management Studio (SSMS)** docs](../ssms/new-updated-ssms.md)
-- [New + Updated (1+0):  **Tools for SQL** docs](../tools/new-updated-tools.md)
-
+- [New + Updated (3+12) : **Advanced Analytics for SQL** docs](../advanced-analytics/new-updated-advanced-analytics.md)
+- [New + Updated (5+0)  : **Connect to SQL** docs](../connect/new-updated-connect.md)
+- [New + Updated (5+1)  : **Database Engine for SQL** docs](../database-engine/new-updated-database-engine.md)
+- [New + Updated (19+82): **Integration Services for SQL** docs](../integration-services/new-updated-integration-services.md)
+- [New + Updated (1+8)  : **Linux for SQL** docs](../linux/new-updated-linux.md)
+- [New + Updated (12+1) : **Relational Databases for SQL** docs](../relational-databases/new-updated-relational-databases.md)
+- [New + Updated (0+1)  : **Reporting Services for SQL** docs](../reporting-services/new-updated-reporting-services.md)
+- [New + Updated (7+1)  : **Microsoft SQL Server** docs](../sql-server/new-updated-sql-server.md)
+- [New + Updated (1+1)  : **SQL Server Data Tools (SSDT)** docs](../ssdt/new-updated-ssdt.md)
+- [New + Updated (0+2)  : **SQL Server Migration Assistant (SSMA)** docs](../ssma/new-updated-ssma.md)
+- [New + Updated (1+4)  : **SQL Server Management Studio (SSMS)** docs](../ssms/new-updated-ssms.md)
+- [New + Updated (4+1)  : **Transact-SQL** docs](../t-sql/new-updated-t-sql.md)
+- [New + Updated (0+1)  : **Tools for SQL** docs](../tools/new-updated-tools.md)
 
 #### Subject areas which have no new or recently updated articles
 
 - [New + Updated (0+0): **ActiveX Data Objects (ADO) for SQL** docs](../ado/new-updated-ado.md)
+- [New + Updated (0+0): **Analysis Services for SQL** docs](../analysis-services/new-updated-analysis-services.md)
 - [New + Updated (0+0): **Data Quality Services for SQL** docs](../data-quality-services/new-updated-data-quality-services.md)
 - [New + Updated (0+0): **Data Mining Extensions (DMX) for SQL** docs](../dmx/new-updated-dmx.md)
+- [New + Updated (0+0): **Master Data Services (MDS) for SQL** docs](../master-data-services/new-updated-master-data-services.md)
 - [New + Updated (0+0): **Multidimensional Expressions (MDX) for SQL** docs](../mdx/new-updated-mdx.md)
 - [New + Updated (0+0): **ODBC (Open Database Connectivity) for SQL** docs](../odbc/new-updated-odbc.md)
 - [New + Updated (0+0): **PowerShell for SQL** docs](../powershell/new-updated-powershell.md)
 - [New + Updated (0+0): **Samples for SQL** docs](../sample/new-updated-sample.md)
-- [New + Updated (0+0): **SQL Server Migration Assistant (SSMA)** docs](../ssma/new-updated-ssma.md)
-- [New + Updated (0+0): **Transact-SQL** docs](../t-sql/new-updated-t-sql.md)
 - [New + Updated (0+0): **XQuery for SQL** docs](../xquery/new-updated-xquery.md)
 
-
-&nbsp;
 

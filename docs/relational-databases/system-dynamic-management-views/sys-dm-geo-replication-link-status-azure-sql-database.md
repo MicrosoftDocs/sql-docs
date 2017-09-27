@@ -4,7 +4,7 @@ ms.custom:
   - "MSDN content"
   - "MSDN - SQL DB"
 ms.date: "10/13/2016"
-ms.prod: "sql-non-specified"
+ms.prod: 
 ms.reviewer: ""
 ms.service: "sql-database"
 ms.suite: ""
@@ -20,6 +20,7 @@ f1_keywords:
 helpviewer_keywords: 
   - "dm_geo_replication_link_status dynamic management view"
   - "sys.dm_geo_replication_link_status dynamic management view"
+
 ms.assetid: d763d679-470a-4c21-86ab-dfe98d37e9fd
 caps.latest.revision: 15
 author: "CarlRabeler"
@@ -44,6 +45,7 @@ manager: "jhubbard"
 |role_desc|**nvarchar(256)**|PRIMARY<br /><br /> SECONDARY|  
 |secondary_allow_connections|**tinyint**|The secondary type, one of:<br /><br /> 0 = No direct connections are allowed to the secondary database and the database is not available for read access.<br /><br /> 2 = All connections are allowed to the database in the secondary repl;ication for read-only access.|  
 |secondary_allow_connections_desc|**nvarchar(256)**|No<br /><br /> All|  
+|last_commit|**datetimeoffset**|The time of last transaction committed to the database. If retrieved on the secondary database when the primary of the replication link is down, it indicates until what point the secondary has caught up.|
   
 > [!NOTE]  
 >  If the replication relationship is terminated by removing the secondary database (section 4.2), the row for that database in the **sys.dm_geo_replication_link_status** view disappears.  

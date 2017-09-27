@@ -1,30 +1,18 @@
 ---
-# required metadata
-
 title: Always On availability group for SQL Server on Linux | Microsoft Docs
 description: 
 author: MikeRayMSFT 
 ms.author: mikeray 
 manager: jhubbard
-ms.date: 05/17/2017
+ms.date: 06/14/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: e37742d4-541c-4d43-9ec7-a5f9b2c0e5d1 
-
-# optional metadata
-# keywords: ""
-# ROBOTS: ""
-# audience: ""
-# ms.devlang: ""
-# ms.reviewer: ""
-# ms.suite: ""
-# ms.tgt_pltfrm: ""
-# ms.custom: ""
-
 ---
-
 # Availability groups for SQL Server on Linux
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 A SQL Server Always On availability group is a high-availability (HA), disaster-recovery (DR), and scale-out solution. It provides HA for groups of databases on direct attached storage. It supports multiple secondaries for integrated HA and DR, automatic failure detection, fast transparent failover, and read load balancing. This broad set of capabilities allows you to achieve optimal availability SLAs for your workloads.
 
@@ -105,7 +93,7 @@ For more information about these options, see [CREATE AVAILABILITY GROUP](http:/
 
 **Guarantee commits on synchronous secondary replicas**
 
-Use `REQUIRED_COPIES_TO_COMMIT` with `CREATE AVAILABILITY GROUP` or `ALTER AVAILABILITY GROUP`. When REQUIRED_COPIES_TO_COMMIT is set to a value higher than 0, transactions at the primary replica databases will wait until the transaction is committed on the specified number of **synchronous secondary** replica database transaction logs. If enough synchronous secondary replicas are not online, all connections to primary replica will be rejected until communication with sufficient secondary replicas resume.
+Use `required_synchronized_secondaries_to_commit`with `CREATE AVAILABILITY GROUP` or `ALTER AVAILABILITY GROUP`. When `required_synchronized_secondaries_to_commit` is set to a value higher than 0, transactions at the primary replica databases will wait until the transaction is committed on the specified number of **synchronous secondary** replica database transaction logs. If enough synchronous secondary replicas are not online, all connections to primary replica will be rejected until communication with sufficient secondary replicas resume.
 
 **Read-scale availability groups**
 

@@ -16,7 +16,7 @@
         items:
         - name: ADO appendixes
           href: /sql/ado/guide/appendixes/
-          homepage: /sql/ado/guide/ado-programmer-s-guide
+          homepage: /sql/ado/guide/appendixes/appendix-a-providers
         - name: ADO data
           href: /sql/ado/guide/data/
           homepage: /sql/ado/guide/data/ado-fundamentals
@@ -71,10 +71,10 @@
         items:
         - name: Linux and Mac
           href: /sql/connect/odbc/linux-mac/
-          homepage: /sql/connect/odbc/linux-mac/connecting-with-bcp
+          homepage: /sql/connect/odbc/linux-mac/system-requirements
         - name: Windows
           href: /sql/connect/odbc/windows/
-          homepage: /sql/connect/odbc/windows/asynchronous-execution-notification-method-sample
+          homepage: /sql/connect/odbc/windows/microsoft-odbc-driver-for-sql-server-on-windows
         - name: ODBC advanced
           href: /sql/odbc/
           homepage: /sql/odbc/microsoft-open-database-connectivity-odbc
@@ -135,6 +135,10 @@
       - name: Failover clusters
         href: /sql/sql-server/failover-clusters/
         homepage: /sql/sql-server/failover-clusters/high-availability-solutions-sql-server
+        items:
+        - name: Install
+          href: /sql/sql-server/failover-clusters/install/
+          homepage: /sql/sql-server/failover-clusters/install/sql-server-failover-cluster-installation
       - name: Install
         href: /sql/sql-server/install/
         homepage: /sql/sql-server/install/planning-a-sql-server-installation
@@ -285,14 +289,14 @@
             homepage: /sql/analysis-services/xmla/xml-data-types/xml-data-types-xmla
       - name: Database Engine
         href: /sql/database-engine/
-        homepage: /sql/database-engine/sql-server-database-engine-backward-compatibility
+        homepage: /sql/database-engine/sql-server-database-engine-overview
         items:
         - name: Availability groups
           href: /sql/database-engine/availability-groups/windows/
           homepage: /sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server
         - name: Configure on Windows
           href: /sql/database-engine/configure-windows/
-          homepage: /sql/database-engine/configure-windows/sql-server-database-engine
+          homepage: /sql/database-engine/configure-windows/configure-database-engine-instances-sql-server
         - name: Database mirroring
           href: /sql/database-engine/database-mirroring/
           homepage: /sql/database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server
@@ -563,7 +567,7 @@
         homepage: /sql/relational-databases/graphs/sql-graph-overview
       - name: Import and export
         href: /sql/relational-databases/import-export/
-        homepage: /sql/relational-databases/import-export/bulk-import-and-export-of-data-sql-server
+        homepage: /sql/relational-databases/import-export/overview-import-export
       - name: In-memory OLTP
         href: /sql/relational-databases/in-memory-oltp/
         homepage: /sql/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization
@@ -1003,9 +1007,6 @@
             - name: Security
               href: /sql/relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/
               homepage: /sql/relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/sqlxml-4-0-security-considerations
-    - name: SQL Server Release Notes
-      href: /sql/release-notes/
-      homepage: /sql/release-notes/sql-server-release-notes
     - name: DMX
       href: /sql/dmx/
       homepage: /sql/dmx/data-mining-extensions-dmx-reference

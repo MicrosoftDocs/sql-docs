@@ -14,7 +14,7 @@ ms.workload: sql-server
 ms.tgt_pltfrm: na
 ms.devlang: na
 ms.topic: updart-autogen
-ms.date: 06/30/2017
+ms.date: 09/11/2017
 ms.author: genemi
 ---
 # New and Recently Updated: SQL Server docs
@@ -29,7 +29,7 @@ Recent updates are reported for the following date range and subject:
 
 
 
-- *Date range of updates:* &nbsp; **2017-05-17** &nbsp; -to- &nbsp; **2017-06-30**
+- *Date range of updates:* &nbsp; **2017-07-18** &nbsp; -to- &nbsp; **2017-09-11**
 - *Subject area:* &nbsp; **SQL Server**.
 
 
@@ -39,10 +39,16 @@ Recent updates are reported for the following date range and subject:
 
 ## New Articles Created Recently
 
-The following links jump to new articles which have been added recently.
+The following links jump to new articles that have been added recently.
 
 
-*There are no new articles to list, this time.*
+1. [SQL Server 2008 R2 SP2 Release Notes](sql-server-2008-r2-sp2-release-notes.md)
+2. [SQL Server 2012 Release Notes](sql-server-2012-release-notes.md)
+3. [SQL Server 2012 SP1 Release Notes](sql-server-2012-sp1-release-notes.md)
+4. [SQL Server 2012 SP2 Release Notes](sql-server-2012-sp2-release-notes.md)
+5. [SQL Server 2012 SP3 Release Notes](sql-server-2012-sp3-release-notes.md)
+6. [SQL Server 2014 Release Notes](sql-server-2014-release-notes.md)
+7. [Help Viewer and Offline Content for SQL Server](sql-server-help-installation.md)
 
 
 
@@ -50,203 +56,11 @@ The following links jump to new articles which have been added recently.
 
 ## Updated Articles with Excerpts
 
-This section displays the excerpts of updates gathered from articles which have recently experienced a large update.
+This section displays the excerpts of updates gathered from articles that have recently experienced a large update.
 
 The excerpts displayed here appear separated from their proper semantic context. Also, sometimes an excerpt is separated from important markdown syntax that surrounds it in the actual article. Therefore these excerpts are for general guidance only. The excerpts only enable you to know whether your interests warrant taking the time to click and visit the actual article.
 
 For these and other reasons, do not copy code from these excerpts, and do not take as exact truth any text excerpt. Instead, visit the actual article.
-
-
-
-&nbsp;
-
-&nbsp;
-
-<a name="TitleNum_1"/>
-
-### 1. &nbsp; [Customer Experience Improvement Program for SQL Server Data Tools](customer-experience-improvement-program-for-sql-server-data-tools.md)
-
-*Updated: 2017-06-14* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Next](#TitleNum_2))
-
-<!-- Source markdown line 25.  ms.author= "sstein".  -->
-
-&nbsp;
-
-
-<!-- git diff --ignore-all-space --unified=0 e35a35aaa3c8ee8a4419b6318ebff9db027aa73d 16a623cf0ab4c9e6d7a17f4617804432c863ac86  (PR=2038  ,  Filename=customer-experience-improvement-program-for-sql-server-data-tools.md  ,  Dirpath=docs\sql-server\  ,  MergeCommitSha40=be884b2d1b316506592f939167c5be91ddc2a9f6) -->
-
-
-
- The Customer Experience Improvement Program is a program designed to help Microsoft improve its products over time. This program collects information about computer hardware and how people use our product, without interrupting the users in their tasks at the computer. The information that is collected helps Microsoft identify which features to improve. In this document we will cover how to opt-in or out of CEIP for SQL Server Data Tools (SSDT) for Visual Studio 2017, Visual Studio 2015, and Visual Studio 2013.  
-
-**Choice and Control over  CEIP and SQL Server Data Tools for Visual Studio 2017  **
-
- SSDT for Visual Studio 2017 is the data modeling tool that ships with SQL Server 2017. It uses the CEIP options  that are built into Visual Studio 2017. You can learn more about how to submit feedback through  CEIP in Visual Studio 2017 from this [help document from Visual Studio](https://www.visualstudio.com/en-us/docs/work/connect/give-feedback).  
-  
- For preview versions of SQL Server 2017, CEIP is turned on by default. You can turn it off, or back on again, by following the instructions below.  
-  
- **In Visual Studio (applies to full language installations of Visual Studio 2017)**  
-  
- If you run SSDT Setup on a computer that already has Visual Studio, only the SQL Server and Business Intelligence project templates are added. For this scenario, customer feedback options that Visual Studio provides can be used to opt in or out of CEIP.  
-  
-1.  Start Visual Studio.  
-  
-2.  From the Help menu, select **Send Feedback** > **Settings**.  
-  
-3.  To turn CEIP off, click **No, I would not like to participate**, and then click **OK**.  
-  
-     To turn CEIP on, click **Yes, I am willing to participate**, and then click **OK**.  
-  
-
-  
- **Use a registry-based policy or Group Policy**  
-
-
-
-
-&nbsp;
-
-&nbsp;
-
----
-
-<a name="TitleNum_2"/>
-
-### 2. &nbsp; [Editions and supported features of SQL Server](editions-and-components-of-sql-server-2016.md)
-
-*Updated: 2017-06-16* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_1) | [Next](#TitleNum_3))
-
-<!-- Source markdown line 113.  ms.author= "mikeray".  -->
-
-&nbsp;
-
-
-<!-- git diff --ignore-all-space --unified=0 471ad35ebf1898470033d43c7bd43cbac5ddfece 7814e4d7428907161a9a2567280fb9fe20d5f273  (PR=2064  ,  Filename=editions-and-components-of-sql-server-2016.md  ,  Dirpath=docs\sql-server\  ,  MergeCommitSha40=727d9ccd8cd1e40d89cfe74291edae92988b407c) -->
-
-
-
-**Developer and Evaluation Editions**  
-For features supported by Developer and Evaluation editions, see features listed for the SQL Server Enterprise Edition in the tables below.
-For a list of features that were added to the Developer edition for [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1, see [SQL Server 2016 SP1 editions](https://aka.ms/uw6cw4).  
-
-The Developer edition continues to support only 1 client for [SQL Server Distributed Replay--../tools/distributed-replay/sql-server-distributed-replay.md). 
-  
-**<a name="Cross-BoxScaleLimits"></a> Scale Limits  **
-
-  
-|Feature|Enterprise|Standard|Web|Express with Advanced Services|Express| 
-|-------------|----------------|--------------|---------|------------------------------------|------------------------|
-|Maximum compute capacity used by a single instance - [!INCLUDE[ssDEnoversion--../includes/ssdenoversion-md.md)]<sup>1</sup>|Operating system maximum|Limited to lesser of 4 sockets or 24 cores|Limited to lesser of 4 sockets or 16 cores|Limited to lesser of 1 socket or 4 cores|Limited to lesser of 1 socket or 4 cores| 
-|Maximum compute capacity used by a single instance - [!INCLUDE[ssASnoversion--../includes/ssasnoversion-md.md)] or [!INCLUDE[ssRSnoversion--../includes/ssrsnoversion-md.md)]|Operating system maximum|Limited to lesser of 4 sockets or 24 cores|Limited to lesser of 4 sockets or 16 cores|Limited to lesser of 1 socket or 4 cores|Limited to lesser of 1 socket or 4 cores|  
-|Maximum memory for buffer pool per instance of [!INCLUDE[ssDEnoversion--../includes/ssdenoversion-md.md)]|Operating System Maximum|128 GB|64 GB|1410 MB|1410 MB|
-|Maximum memory for Columnstore segment cache per instance of [!INCLUDE[ssDEnoversion--../includes/ssdenoversion-md.md)]|Unlimited memory| 32 GB<sup>2</sup>| 16 GB<sup>2</sup>| 352 MB<sup>2</sup>| 352 MB<sup>2</sup>|  
-
-
-
-
-&nbsp;
-
-&nbsp;
-
----
-
-<a name="TitleNum_3"/>
-
-### 3. &nbsp; [SQL Server 2017 Release Notes](sql-server-2017-release-notes.md)
-
-*Updated: 2017-05-17* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_2) | [Next](#TitleNum_4))
-
-<!-- Source markdown line 28.  ms.author= "craigg".  -->
-
-&nbsp;
-
-
-<!-- git diff --ignore-all-space --unified=0 84e7a2a49f2893d49380db1ad75695d9a4fd59b2 27a145ad30c10fd667f926d2e092b88c0ba586c5  (PR=1737  ,  Filename=sql-server-2017-release-notes.md  ,  Dirpath=docs\sql-server\  ,  MergeCommitSha40=67c1c0f3a9da6cc5d050da5db8a493f5da934c2a) -->
-
-
-
-**SQL Server 2017 CTP 2.1 (May  2017)**
-
-**Documentation (CTP 2.1)**
-
-- **Issue and customer impact:** Documentation for [!INCLUDE[ssSQLv14_md--../includes/sssqlv14-md.md)] is limited and content is included with the [!INCLUDE[ssSQL15_md--../includes/sssql15-md.md)] documentation set.  Content in articles that is specific to [!INCLUDE[ssSQLv14_md--../includes/sssqlv14-md.md)] will be noted with **Applies To**. 
-- **Issue and customer impact:** No offline content is available for [!INCLUDE[ssSQLv14_md--../includes/sssqlv14-md.md)].
-
-**SQL Server Reporting Services (CTP 2.1)**
-
-
-- **Issue and customer impact:** If you have both SQL Server Reporting Services and Power BI Report Server on the same machine and uninstall one of them, you will no longer be able to connect to the remaining report server with Report Server Configuration Manager.
-- **Workaround** To work around this issue, you must perform the following operations after uninstalling one of the servers.
-
-    1. Launch a command prompt in Administrator mode.
-    2. Go to the directory where the remaining report server is installed.
-
-        *Default location for Power BI Report Server: C:\Program Files\Microsoft Power BI Report Server*
-
-        *Default location for SQL Server Reporting Services: C:\Program Files\Microsoft SQL Server Reporting Services*
-
-    3. Then go to the next folder. This will either be *SSRS* or *PBIRS* depending on what is remaining.
-    4. Go to the WMI folder.
-    5. Run the following command:
-
-        ```
-        regsvr32 /i ReportingServicesWMIProvider.dll
-        ```
-
-        You can ignore the following error, if you see it.
-
-        ```
-        The module "ReportingServicesWMIProvider.dll" was loaded but the entry-point DLLInstall was not found. Make sure that "ReportingServicesWMIProvider.dll" is a valid DLL or OCX file and then try again.
-        ```
-
-
-
-
-&nbsp;
-
-&nbsp;
-
----
-
-<a name="TitleNum_4"/>
-
-### 4. &nbsp; [What&#39;s New in SQL Server 2017](what-s-new-in-sql-server-2017.md)
-
-*Updated: 2017-06-19* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_3))
-
-<!-- Source markdown line 31.  ms.author= "craigg".  -->
-
-&nbsp;
-
-
-<!-- git diff --ignore-all-space --unified=0 41ed3624662404aa63ade007d1ea987fe72a3ab5 921f698ae101f7e6b53d268621b868e1a7e7ada7  (PR=2075  ,  Filename=what-s-new-in-sql-server-2017.md  ,  Dirpath=docs\sql-server\  ,  MergeCommitSha40=aa08b5e7de9bb317fd781a98ee5d829431b92df6) -->
-
-
-
-**What's New in SQL Server 2017 CTP 2.1 (May 2017)**
-
-**SQL Server Database Engine  **
-
-- A new DMF, [sys.dm_db_log_stats--../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md), is introduced to expose summary level attributes and information on transaction log files; useful for monitoring the health of the transaction log.  
-- This CTP contains bug fixes and performance improvements for the Database Engine.
-- For a detailed list of 2017 CTP enhancements in previous CTP releases, see [What's New in SQL Server 2017 (Database Engine)--../database-engine/configure-windows/what-s-new-in-sql-server-2017-database-engine.md).
-
-**SQL Server Reporting Services (SSRS)**
-
-- SQL Server Reporting Services is no longer available to install through SQL Server's setup as of CTP 2.1.
-- Comments are now available for reports. Comments allow you to add perspective to what is in a report and collaborate with others in your organization. You can also include attachments with your comment.
-- For more detailed SSRS what's new information, including details from previous releases, see [What's new in Reporting Services--../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md). 
-- For information about Power BI Report Server, see [Get started with Power BI Report Server](https://powerbi.microsoft.com/documentation/reportserver-get-started/).
-
-**SQL Server Machine Learning Services**
-
-- There are no new Machine Learning Services features in this CTP.
-- For more detailed Machine Learning Services what's new information, including details from previous CTPs, see [What's New in SQL Server Machine Learning Services--../advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md).  
-
-**SQL Server Analysis Services (SSAS)**
-
-- There are no new SSAS features in this CTP.  
-- For more details about improvements and bug fixes in this release, see [What's New in SQL Server 2017 Analysis Services--../analysis-services/what-s-new-in-sql-server-analysis-services-2017.md).  
 
 
 
@@ -258,56 +72,93 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 
 ## Compact List of Articles Updated Recently
 
-This compact list provides links to all the updated articles which are listed in the preceding section.
+This compact list provides links to all the updated articles that are listed in the Excerpts section.
 
-1. [Customer Experience Improvement Program for SQL Server Data Tools](#TitleNum_1)
-2. [Editions and supported features of SQL Server](#TitleNum_2)
-3. [SQL Server 2017 Release Notes](#TitleNum_3)
-4. [What&#39;s New in SQL Server 2017](#TitleNum_4)
+1. [What's new in SQL Server 2016](#TitleNum_1)
 
 
 
-
-<a name="sisters2"/>
 
 &nbsp;
 
-## Sister Articles
+&nbsp;
 
-This section lists very similar articles for recently updated articles in other subject areas, within the same GitHub.com repository: [MicrosoftDocs/**sql-docs-pr**](https://github.com/microsoftdocs/sql-docs-pr/).
+<a name="TitleNum_1"/>
 
-<!--  20170630-1150  -->
+### 1. &nbsp; [What's new in SQL Server 2016](what-s-new-in-sql-server-2016.md)
+
+*Updated: 2017-09-08* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+
+<!-- Source markdown line 34.  ms.author= "craigg".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 e5bc0c05f120289f09a535400a4d521e4113ae55 0607d0a9af1c9a8dd9d3d7b0606895ff23bbffdc  (PR=0  ,  Filename=what-s-new-in-sql-server-2016.md  ,  Dirpath=docs\sql-server\  ,  MergeCommitSha40=b97cc9723d563b19c85661f5ad7049a96fc904ff) -->
+
+
+
+- Download the **free** [**SQL Server 2016 Developer edition!**](https://www.microsoft.com/en-us/cloud-platform/sql-server-editions-developers).
+- Download the latest version of [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md).
+- Have an Azure account? Spin up a [Virtual Machine with SQL Server 2016 already installed](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/).
+
+**SQL Server 2016 Database Engine**
+
+- You can now configure **multiple tempDB** database files during SQL Server installation and setup.
+- New **Query Store** stores query texts, execution plans, and performance metrics within the database, allowing easy monitoring and troubleshooting of performance issues. A dashboard shows which queries consumed the most time, memory or CPU resources.
+- **Temporal tables** are history tables which record all data changes, complete with the date and time they occurred.
+- New built-in **JSON support** in SQL Server supports JSON imports, exports, parsing and storing.
+- New **PolyBase** query engine integrates SQL Server with external data in Hadoop or Azure Blob storage. You can import and export data as well as executing queries.
+- The new **Stretch Database** feature lets you dynamically, securely archive data from a local SQL Server database to an Azure SQL database in the cloud. SQL Server automatically queries both local and remote data in the linked databases.
+- **In-memory OLTP:**
+    - Now supports FOREIGN KEY, UNIQUE and CHECK constraints, and native compiled stored procedures OR, NOT, SELECT DISTINCT, OUTER JOIN, and subqueries in SELECT.
+    - Supports tables up to 2TB (up from 256GB).
+    - Has column store index enhancements for sorting and Always On Availability Group support.
+- New security features:
+    - **Always Encrypted:** When enabled, only the application that has the encryption key can access the encrypted sensitive data in the SQL Server 2016 database. The key is never passed to SQL Server.
+
+
+
+
+
+
+
+## Similar Articles
+
+<!--  HOW TO:
+    Refresh this file's line items with the latest 'Count-in-Similars*' content.
+    Then run Run-533-*.BAT
+-->
+
+This section lists very similar articles for recently updated articles in other subject areas, within our public GitHub.com repository: [MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/).
 
 #### Subject areas which do have new or recently updated articles
 
-- [New + Updated (12+2): **Advanced Analystics for SQL** docs](../advanced-analytics/new-updated-advanced-analytics.md)
-- [New + Updated (1+0):  **Analysis Services for SQL** docs](../analysis-services/new-updated-analysis-services.md)
-- [New + Updated (0+2):  **Connect to SQL** docs](../connect/new-updated-connect.md)
-- [New + Updated (3+0):  **Database Engine for SQL** docs](../database-engine/new-updated-database-engine.md)
-- [New + Updated (1+2):  **Integration Services for SQL** docs](../integration-services/new-updated-integration-services.md)
-- [New + Updated (2+8):  **Linux for SQL** docs](../linux/new-updated-linux.md)
-- [New + Updated (1+0):  **Master Data Services (MDS) for SQL** docs](../master-data-services/new-updated-master-data-services.md)
-- [New + Updated (5+5):  **Relational Databases for SQL** docs](../relational-databases/new-updated-relational-databases.md)
-- [New + Updated (2+0):  **Reporting Services for SQL** docs](../reporting-services/new-updated-reporting-services.md)
-- [New + Updated (0+4):  **Microsoft SQL Server** docs](../sql-server/new-updated-sql-server.md)
-- [New + Updated (0+1):  **SQL Server Data Tools (SSDT)** docs](../ssdt/new-updated-ssdt.md)
-- [New + Updated (0+1):  **SQL Server Management Studio (SSMS)** docs](../ssms/new-updated-ssms.md)
-- [New + Updated (1+0):  **Tools for SQL** docs](../tools/new-updated-tools.md)
-
+- [New + Updated (3+12) : **Advanced Analytics for SQL** docs](../advanced-analytics/new-updated-advanced-analytics.md)
+- [New + Updated (5+0)  : **Connect to SQL** docs](../connect/new-updated-connect.md)
+- [New + Updated (5+1)  : **Database Engine for SQL** docs](../database-engine/new-updated-database-engine.md)
+- [New + Updated (19+82): **Integration Services for SQL** docs](../integration-services/new-updated-integration-services.md)
+- [New + Updated (1+8)  : **Linux for SQL** docs](../linux/new-updated-linux.md)
+- [New + Updated (12+1) : **Relational Databases for SQL** docs](../relational-databases/new-updated-relational-databases.md)
+- [New + Updated (0+1)  : **Reporting Services for SQL** docs](../reporting-services/new-updated-reporting-services.md)
+- [New + Updated (7+1)  : **Microsoft SQL Server** docs](../sql-server/new-updated-sql-server.md)
+- [New + Updated (1+1)  : **SQL Server Data Tools (SSDT)** docs](../ssdt/new-updated-ssdt.md)
+- [New + Updated (0+2)  : **SQL Server Migration Assistant (SSMA)** docs](../ssma/new-updated-ssma.md)
+- [New + Updated (1+4)  : **SQL Server Management Studio (SSMS)** docs](../ssms/new-updated-ssms.md)
+- [New + Updated (4+1)  : **Transact-SQL** docs](../t-sql/new-updated-t-sql.md)
+- [New + Updated (0+1)  : **Tools for SQL** docs](../tools/new-updated-tools.md)
 
 #### Subject areas which have no new or recently updated articles
 
 - [New + Updated (0+0): **ActiveX Data Objects (ADO) for SQL** docs](../ado/new-updated-ado.md)
+- [New + Updated (0+0): **Analysis Services for SQL** docs](../analysis-services/new-updated-analysis-services.md)
 - [New + Updated (0+0): **Data Quality Services for SQL** docs](../data-quality-services/new-updated-data-quality-services.md)
 - [New + Updated (0+0): **Data Mining Extensions (DMX) for SQL** docs](../dmx/new-updated-dmx.md)
+- [New + Updated (0+0): **Master Data Services (MDS) for SQL** docs](../master-data-services/new-updated-master-data-services.md)
 - [New + Updated (0+0): **Multidimensional Expressions (MDX) for SQL** docs](../mdx/new-updated-mdx.md)
 - [New + Updated (0+0): **ODBC (Open Database Connectivity) for SQL** docs](../odbc/new-updated-odbc.md)
 - [New + Updated (0+0): **PowerShell for SQL** docs](../powershell/new-updated-powershell.md)
 - [New + Updated (0+0): **Samples for SQL** docs](../sample/new-updated-sample.md)
-- [New + Updated (0+0): **SQL Server Migration Assistant (SSMA)** docs](../ssma/new-updated-ssma.md)
-- [New + Updated (0+0): **Transact-SQL** docs](../t-sql/new-updated-t-sql.md)
 - [New + Updated (0+0): **XQuery for SQL** docs](../xquery/new-updated-xquery.md)
 
-
-&nbsp;
 

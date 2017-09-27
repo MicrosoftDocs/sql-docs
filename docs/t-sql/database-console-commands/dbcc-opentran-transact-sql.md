@@ -1,7 +1,7 @@
 ---
 title: "DBCC OPENTRAN (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "07/16/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -33,17 +33,16 @@ manager: "jhubbard"
 # DBCC OPENTRAN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  DBCC OPENTRAN helps to identify active transactions that may be preventing log truncation. DBCC OPENTRAN displays information about the oldest active transaction and the oldest distributed and nondistributed replicated transactions, if any, within the transaction log of the specified database. Results are displayed only if there is an active transaction that exists in the log or if the database contains replication information. An informational message is displayed if there are no active transactions in the log.  
+DBCC OPENTRAN helps to identify active transactions that may be preventing log truncation. DBCC OPENTRAN displays information about the oldest active transaction and the oldest distributed and nondistributed replicated transactions, if any, within the transaction log of the specified database. Results are displayed only if there is an active transaction that exists in the log or if the database contains replication information. An informational message is displayed if there are no active transactions in the log.
   
 > [!NOTE]  
 >  DBCC OPENTRAN is not supported for non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publishers.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## Syntax  
   
-```  
-  
+```sql
 DBCC OPENTRAN   
 [   
     ( [ database_name | database_id | 0 ] ) ]  
@@ -64,25 +63,24 @@ DBCC OPENTRAN
  Suppresses all informational messages.  
   
 ## Remarks  
- Use DBCC OPENTRAN to determine whether an open transaction exists within the transaction log. When you use the BACKUP LOG statement, only the inactive part of the log can be truncated; an open transaction can prevent the log from truncating completely. To identify an open transaction, use sp_who to obtain the system process ID.  
+Use DBCC OPENTRAN to determine whether an open transaction exists within the transaction log. When you use the BACKUP LOG statement, only the inactive part of the log can be truncated; an open transaction can prevent the log from truncating completely. To identify an open transaction, use sp_who to obtain the system process ID.
   
 ## Result Sets  
- DBCC OPENTRAN returns the following result set when there are no open transactions:  
+DBCC OPENTRAN returns the following result set when there are no open transactions:
   
-```  
+```sql
 No active open transactions.  
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
 ## Permissions  
- Requires membership in the **sysadmin** fixed server role or the **db_owner** fixed database role.  
+Requires membership in the **sysadmin** fixed server role or the **db_owner** fixed database role.
   
 ## Examples  
-  
 ### A. Returning the oldest active transaction  
- The following example obtains transaction information for the current database. Results may vary.  
+The following example obtains transaction information for the current database. Results may vary.
   
-```tsql  
+```sql  
 CREATE TABLE T1(Col1 int, Col2 char(3));  
 GO  
 BEGIN TRAN  
@@ -95,33 +93,33 @@ DROP TABLE T1;
 GO  
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
- `Transaction information for database 'master'.`  
+`Transaction information for database 'master'.`
   
- `Oldest active transaction:`  
+`Oldest active transaction:`
   
- `SPID (server process ID) : 52`  
+`SPID (server process ID) : 52`
   
- `UID (user ID) : -1`  
+`UID (user ID) : -1`
   
- `Name          : user_transaction`  
+`Name          : user_transaction`
   
- `LSN           : (518:1576:1)`  
+`LSN           : (518:1576:1)`
   
- `Start time    : Jun  1 2004  3:30:07:197PM`  
+`Start time    : Jun  1 2004  3:30:07:197PM`
   
- `SID           : 0x010500000000000515000000a065cf7e784b9b5fe77c87709e611500`  
+`SID           : 0x010500000000000515000000a065cf7e784b9b5fe77c87709e611500`
   
- `DBCC execution completed. If DBCC printed error messages, contact your system administrator.`  
+`DBCC execution completed. If DBCC printed error messages, contact your system administrator.`
   
 > [!NOTE]  
 >  The "UID (user ID)" result is meaningless and will be removed in a future version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ### B. Specifying the WITH TABLERESULTS option  
- The following example loads the results of the DBCC OPENTRAN command into a temporary table.  
+The following example loads the results of the DBCC OPENTRAN command into a temporary table.
   
-```tsql  
+```sql  
 -- Create the temporary table to accept the results.  
 CREATE TABLE #OpenTranStatus (  
    ActiveTransaction varchar(25),  
@@ -137,10 +135,10 @@ GO
 ```  
   
 ## See Also  
- [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
- [COMMIT TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-transaction-transact-sql.md)   
- [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)   
- [DB_ID &#40;Transact-SQL&#41;](../../t-sql/functions/db-id-transact-sql.md)   
- [ROLLBACK TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/rollback-transaction-transact-sql.md)  
+[BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)  
+[COMMIT TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-transaction-transact-sql.md)  
+[DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
+[DB_ID &#40;Transact-SQL&#41;](../../t-sql/functions/db-id-transact-sql.md)  
+[ROLLBACK TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/rollback-transaction-transact-sql.md)
   
   

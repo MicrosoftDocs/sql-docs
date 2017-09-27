@@ -1,7 +1,7 @@
 ---
 title: "CREATE EXTERNAL DATA SOURCE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/05/2017"
+ms.date: "09/06/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -93,7 +93,7 @@ CREATE EXTERNAL DATA SOURCE data_source_name
 [;]
   
 -- Elastic Database query only: a shard map manager as data source   
--- (only on Azure SQL Database v12 or later)  
+-- (only on Azure SQL Database)  
 CREATE EXTERNAL DATA SOURCE data_source_name  
     WITH (   
         TYPE = SHARD_MAP_MANAGER,  
@@ -105,7 +105,7 @@ CREATE EXTERNAL DATA SOURCE data_source_name
 [;]  
   
 -- Elastic Database query only: a remote database on Azure SQL Database as data source   
--- (only on Azure SQL Database v12 or later)  
+-- (only on Azure SQL Database)  
 CREATE EXTERNAL DATA SOURCE data_source_name  
     WITH (   
         TYPE = RDBMS,  
@@ -116,7 +116,7 @@ CREATE EXTERNAL DATA SOURCE data_source_name
 [;]  
 
 -- Bulk operations only: Azure Storage Blob as data source   
--- (on SQL Server 2017 and Azure SQL Database).
+-- (on SQL Server 2017 or later, and Azure SQL Database).
 CREATE EXTERNAL DATA SOURCE data_source_name  
     WITH (   
         TYPE = BLOB_STORAGE,  
@@ -129,9 +129,9 @@ CREATE EXTERNAL DATA SOURCE data_source_name
  *data_source_name*   Specifies the user-defined name for the data source. The name must be unique within the database in SQL Server, Azure SQL Database, and Azure SQL Data Warehouse. The name must be unique within the server in Parallel Data Warehouse.
   
  TYPE = [ HADOOP | SHARD_MAP_MANAGER | RDBMS | BLOB_STORAGE]  
- Specifies the data source type. Use HADOOP when the external data source is Hadoop or Azure Storage blob for Hadoop. Use SHARD_MAP_MANAGER when creating an external data source for Elastic Database query for sharding on Azure SQL Database. Use RDBMS with external data sources for cross-database queries with Elastic Database query on Azure SQL Database.  Use BLOB_STORAGE when performing bulk operations using [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) or [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) with [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 or later.
+ Specifies the data source type. Use HADOOP when the external data source is Hadoop or Azure Storage blob for Hadoop. Use SHARD_MAP_MANAGER when creating an external data source for Elastic Database query for sharding on Azure SQL Database. Use RDBMS with external data sources for cross-database queries with Elastic Database query on Azure SQL Database.  Use BLOB_STORAGE when performing bulk operations using [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) or [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) with [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].
   
-LOCATION = <location_path>  
+LOCATION = \<location_path> 
 **HADOOP**    
 For HADOOP, specifies the Uniform Resource Indicator (URI) for a Hadoop cluster.  
 `LOCATION = 'hdfs:\/\/*NameNode\_URI*\[:*port*\]'`  
@@ -496,7 +496,7 @@ CREATE EXTERNAL DATA SOURCE MyAzureStorage WITH (
 
 ## Examples: Bulk Operations   
 ### L. Create an external data source for bulk operations retrieving data from Azure Blob storage.   
-**Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
+**Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].   
 Use the following data source for bulk operations using [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) or [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md). The credential used, must be created using `SHARED ACCESS SIGNATURE` as the identity. For more information on shared access signatures, see [Using Shared Access Signatures (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1).   
 ```tsql
 CREATE EXTERNAL DATA SOURCE MyAzureInvoices
@@ -517,3 +517,4 @@ To see this example in use, see [BULK INSERT](../../t-sql/statements/bulk-insert
 [sys.external_data_sources (Transact-SQL)](../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md)  
   
   
+

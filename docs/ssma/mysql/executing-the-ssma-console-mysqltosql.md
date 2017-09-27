@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "Script file commands, Script generation commands"
 ms.assetid: e3e9f7e4-0619-4861-a202-3d5d39953b26
 caps.latest.revision: 25
-author: "sabotta"
-ms.author: "carlasab"
-manager: "lonnyb"
+author: "Shamikg"
+ms.author: "Shamikg"
+manager: "jhubbard"
 ---
 # Executing the SSMA Console (MySQLToSQL)
 Microsoft provides you with a robust set of script file commands to execute and control SSMA activities.  

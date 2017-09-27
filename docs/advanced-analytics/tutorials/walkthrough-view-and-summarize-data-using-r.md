@@ -1,8 +1,8 @@
 ---
-title: "View and summarize data using R (SQL-R walkthrough)| Microsoft Docs"
+title: "View and summarize data using R (walkthrough)| Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "07/05/2017"
+ms.date: "09/08/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -15,7 +15,7 @@ applies_to:
 dev_langs: 
   - "R"
 ms.assetid: 358e1431-8f47-4d32-a02f-f90e519eef49
-caps.latest.revision: 21
+caps.latest.revision: 22
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
@@ -91,7 +91,7 @@ The following steps are all part of the R code and should be run in an R environ
     sqlcc <- RxInSqlServer(connectionString = connStr, shareDir = sqlShareDir, wait = sqlWait, consoleOutput = sqlConsoleOutput)
     ```
 
-4. By default, the compute context is local, so you need to explicitly set the *active* compute context.
+5. By default, the compute context is local, so you need to explicitly set the *active* compute context.
 
     ```R
     rxSetComputeContext(sqlcc)
@@ -109,6 +109,7 @@ In Microsoft R, a *data source* is an object you create using RevoScaleR functio
 Earlier you defined a connection string, and saved that information in an R variable. You can re-use that connection information to specify the data you want to get.
 
 1. Save a SQL query as a string variable. The query defines the data for training the model.
+
     ```R
     sampleDataQuery <- "SELECT TOP 1000 tipped, fare_amount, passenger_count,trip_time_in_secs,trip_distance, pickup_datetime, dropoff_datetime, pickup_longitude, pickup_latitude, dropoff_longitude, dropoff_latitude FROM nyctaxi_sample"
     ```
@@ -176,7 +177,6 @@ In this section, you'll try out several of the functions provided in [!INCLUDE[r
       Elapsed Time=", round(used.time[3],2),
       " seconds to summarize the inDataSource.", sep=""))
     ```
-
     + The first argument to rxSummary specifies the formula or term to summarize by. Here, the `F()` function is used to convert the values in _passenger\_count_ into factors before summarizing. You also have to specify the minimum value (1) and maximum value (6) for the _passenger\_count_ factor variable.
     + If you do not specify the statistics to output, by default rxSummary outputs Mean, StDev, Min, Max, and the number of valid and missing observations.
     + This example also includes some code to track the time the function starts and completes, so that you can compare performance.
@@ -184,7 +184,7 @@ In this section, you'll try out several of the functions provided in [!INCLUDE[r
     **Results**
 
     ```
-    rxSummary(formula = ~fare_amount:F(passenger_count), data = inDataSource)
+    rxSummary(formula = ~fare_amount:F(passenger_count, 1,6), data = inDataSource)
     Data: inDataSource (RxSqlServerData Data Source)
     Number of valid observations: 1000
     Name  Mean    StdDev   Min Max ValidObs MissingObs

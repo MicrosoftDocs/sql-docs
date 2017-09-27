@@ -13,7 +13,7 @@ ms.custom: UpdArt.exe
 ms.tgt_pltfrm: na
 ms.devlang: na
 ms.topic: updart-autogen
-ms.date: 06/30/2017
+ms.date: 09/11/2017
 ms.author: genemi
 ms.workload: integration-services
 ---
@@ -29,7 +29,7 @@ Recent updates are reported for the following date range and subject:
 
 
 
-- *Date range of updates:* &nbsp; **2017-05-17** &nbsp; -to- &nbsp; **2017-06-30**
+- *Date range of updates:* &nbsp; **2017-07-18** &nbsp; -to- &nbsp; **2017-09-11**
 - *Subject area:* &nbsp; **Integration Services for SQL Server**.
 
 
@@ -39,10 +39,28 @@ Recent updates are reported for the following date range and subject:
 
 ## New Articles Created Recently
 
-The following links jump to new articles which have been added recently.
+The following links jump to new articles that have been added recently.
 
 
-1. [Microsoft Connectors for Oracle and Teradata by Attunity for Integration Services (SSIS)](attunity-connectors.md)
+1. [Cache Connection Manager](connection-manager/cache-connection-manager.md)
+2. [DQS Cleansing Connection Manager](connection-manager/dqs-cleansing-connection-manager.md)
+3. [Lookup Transformation Full Cache Mode - Cache Connection Manager](connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)
+4. [Lookup Transformation Full Cache Mode - OLE DB Connection Manager](connection-manager/lookup-transformation-full-cache-mode-ole-db-connection-manager.md)
+5. [Azure Data Lake Store File System Task](control-flow/azure-data-lake-store-file-system-task.md)
+6. [Add a Scale Out Worker with Scale Out Manager](scale-out/add-scale-out-worker.md)
+7. [Change the account for Scale Out logging](scale-out/change-logdb-account.md)
+8. [Deal with certificates in SQL Server Integration Services Scale Out](scale-out/deal-with-certificates-in-ssis-scale-out.md)
+9. [Get started with Integration Services (SSIS) Scale Out on a single computer](scale-out/get-started-with-ssis-scale-out-onebox.md)
+10. [Integration Services (SSIS) Scale Out](scale-out/integration-services-ssis-scale-out.md)
+11. [Integration Services Scale Out Manager](scale-out/integration-services-ssis-scale-out-manager.md)
+12. [Integration Services (SSIS) Scale Out Master](scale-out/integration-services-ssis-scale-out-master.md)
+13. [Integration Services (SSIS) Scale Out Worker](scale-out/integration-services-ssis-scale-out-worker.md)
+14. [Run packages in Integration Services (SSIS) Scale Out](scale-out/run-packages-in-integration-services-ssis-scale-out.md)
+15. [Scale Out support for high availability](scale-out/scale-out-support-for-high-availability.md)
+16. [Troubleshooting Scale Out](scale-out/troubleshooting-scale-out.md)
+17. [Walkthrough: Set up Integration Services Scale Out](scale-out/walkthrough-set-up-integration-services-scale-out.md)
+18. [catalog.update_logdb_info (SSISDB Database)](system-stored-procedures/catalog-update-logdb-info.md)
+19. [catalog.update_master_address (SSISDB Database)](system-stored-procedures/catalog-update-master-address.md)
 
 
 
@@ -50,109 +68,11 @@ The following links jump to new articles which have been added recently.
 
 ## Updated Articles with Excerpts
 
-This section displays the excerpts of updates gathered from articles which have recently experienced a large update.
+This section displays the excerpts of updates gathered from articles that have recently experienced a large update.
 
 The excerpts displayed here appear separated from their proper semantic context. Also, sometimes an excerpt is separated from important markdown syntax that surrounds it in the actual article. Therefore these excerpts are for general guidance only. The excerpts only enable you to know whether your interests warrant taking the time to click and visit the actual article.
 
 For these and other reasons, do not copy code from these excerpts, and do not take as exact truth any text excerpt. Instead, visit the actual article.
-
-
-
-&nbsp;
-
-&nbsp;
-
-<a name="TitleNum_1"/>
-
-### 1. &nbsp; [Deploy Integration Services (SSIS) Projects and Packages](packages/deploy-integration-services-ssis-projects-and-packages.md)
-
-*Updated: 2017-05-19* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Next](#TitleNum_2))
-
-<!-- Source markdown line 67.  ms.author= "douglasl".  -->
-
-&nbsp;
-
-
-<!-- git diff --ignore-all-space --unified=0 0ed0da5bfcd515a39aec27ee69c7d48220c8cae2 568fcd18fd19eb01b814d5c477c5044dec1b0d4a  (PR=1768  ,  Filename=deploy-integration-services-ssis-projects-and-packages.md  ,  Dirpath=docs\integration-services\packages\  ,  MergeCommitSha40=926c0c51b5a55a2869b73666f5620fa56e139cca) -->
-
-
-
-**Permissions Required to Deploy SSIS Projects and Packages**
-
-
-If you change the SSIS service account from the default, you may have to give additional permissions to the non-default service account before you can deploy packages successfully. If the non-default service account doesn't have the required permissions, you may see the following error message.
-
-*A .NET Framework error occurred during execution of user-defined routine or aggregate "deploy_project_internal":
-System.ComponentModel.Win32Exception: A required privilege is not held by the client.*
-
-This error is typically the result of missing DCOM permissions. To fix the error, do the following things.
-
-1.  Open the **Component Services** console (or run Dcomcnfg.exe).
-2.  In the **Component Services** console, expand **Component Services** > **Computers** > **My Computer** > **DCOM Config**.
-3.  In the list, locate **Microsoft SQL Server Integration Services xx.0** for the version of SQL Server that you're using. For example, SQL Server 2016 is version 13.
-4.  Right-click and select **Properties**.
-5.  In the **Microsoft SQL Server Integration Services 13.0 Properties** dialog box, select the **Security** tab.
-6.  For each of the three sets of permissions - Launch and Activation, Access, and Configuration - select **Customize**, then select **Edit** to open the **Permission** dialog box.
-7.  In the **Permission** dialog box, add the non-default service account and grant **Allow** permissions as required. Typically, an account has **Local Launch** and **Local Activation** permissions.
-8.  Click **OK** twice, then close the **Component Services** console.
-
-For more info about the error described in this section and about the permissions required by the SSIS service account, see the following blog post.  
-[System.ComponentModel.Win32Exception: A required privilege is not held by the client while Deploying SSIS Project](https://blogs.msdn.microsoft.com/dataaccesstechnologies/2013/08/20/system-componentmodel-win32exception-a-required-privilege-is-not-held-by-the-client-while-deploying-ssis-project/)
-
-
-
-
-&nbsp;
-
-&nbsp;
-
----
-
-<a name="TitleNum_2"/>
-
-### 2. &nbsp; [What&#39;s New in Integration Services in SQL Server 2017](what-s-new-in-integration-services-in-sql-server-2017.md)
-
-*Updated: 2017-05-17* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_1))
-
-<!-- Source markdown line 24.  ms.author= "douglasl".  -->
-
-&nbsp;
-
-
-<!-- git diff --ignore-all-space --unified=0 9e3cce3af1366495668cf3f34c0548b958b8d4dd c1d0860a94591bfd64311e38a56d27abb363d577  (PR=1737  ,  Filename=what-s-new-in-integration-services-in-sql-server-2017.md  ,  Dirpath=docs\integration-services\  ,  MergeCommitSha40=67c1c0f3a9da6cc5d050da5db8a493f5da934c2a) -->
-
-
-
-**New in SSIS in SQL Server 2017 CTP 2.1**
-
-
-**New features in Scale Out for SSIS**
-
-
-1.	You can now use the **Use32BitRuntime** parameter when you trigger execution in Scale Out.
-2.	The performance of logging to SSISDB for package executions in Scale Out has been improved. The Event Message and Message Context logs are now written to SSISDB in batch mode instead of one by one. Here are some additional notes about this improvement:        
-    - Some reports in the current version of SQL Server Management Studio (SSMS) don't currently display these logs for executions in Scale Out. We anticipate that they will be supported in the next release of SSMS. The affected reports include the *All Connections* report, the *Error Context* report, and the *Connection Information* section in the Integration Service Dashboard.
-    - A new column **event_message_guid** has been added. Use this column to join the [catalog].[event_message_context] view and the [catalog].[event_messages] view instead of using **event_message_id** when you query these logs of executions in Scale Out.
-
-**New in SSIS in SQL Server 2017 CTP 2.0**
-
-
-There are no new SSIS features in SQL Server 2017 CTP 2.0.
-
-**New in SSIS in SQL Server 2017 CTP 1.4**
-
-
-There are no new SSIS features in SQL Server 2017 CTP 1.4.
-
-**New in SSIS in SQL Server 2017 CTP 1.3**
-
-
-There are no new SSIS features in SQL Server 2017 CTP 1.3.
-
-**New in SSIS in SQL Server 2017 CTP 1.2**
-
-
-There are no new SSIS features in SQL Server 2017 CTP 1.2.
 
 
 
@@ -164,54 +84,4682 @@ There are no new SSIS features in SQL Server 2017 CTP 1.2.
 
 ## Compact List of Articles Updated Recently
 
-This compact list provides links to all the updated articles which are listed in the preceding section.
+This compact list provides links to all the updated articles that are listed in the Excerpts section.
 
-1. [Deploy Integration Services (SSIS) Projects and Packages](#TitleNum_1)
-2. [What&#39;s New in Integration Services in SQL Server 2017](#TitleNum_2)
+1. [ADO.NET Connection Manager](#TitleNum_1)
+2. [Excel Connection Manager](#TitleNum_2)
+3. [File Connection Manager](#TitleNum_3)
+4. [Flat File Connection Manager](#TitleNum_4)
+5. [FTP Connection Manager](#TitleNum_5)
+6. [HTTP Connection Manager](#TitleNum_6)
+7. [MSMQ Connection Manager](#TitleNum_7)
+8. [Multiple Flat Files Connection Manager](#TitleNum_8)
+9. [OData Connection Manager](#TitleNum_9)
+10. [ODBC Connection Manager](#TitleNum_10)
+11. [OLE DB Connection Manager](#TitleNum_11)
+12. [SAP BW Connection Manager](#TitleNum_12)
+13. [SMO Connection Manager](#TitleNum_13)
+14. [SMTP Connection Manager](#TitleNum_14)
+15. [SQL Server Compact Edition Connection Manager](#TitleNum_15)
+16. [WMI Connection Manager](#TitleNum_16)
+17. [Analysis Services Execute DDL Task](#TitleNum_17)
+18. [Analysis Services Processing Task](#TitleNum_18)
+19. [Bulk Insert Task](#TitleNum_19)
+20. [CDC Control Task](#TitleNum_20)
+21. [Data Mining Query Task](#TitleNum_21)
+22. [Data Profile Viewer](#TitleNum_22)
+23. [Execute Package Task](#TitleNum_23)
+24. [Execute Process Task](#TitleNum_24)
+25. [File System Task](#TitleNum_25)
+26. [FTP Task](#TitleNum_26)
+27. [Message Queue Task](#TitleNum_27)
+28. [Script Task](#TitleNum_28)
+29. [Send Mail Task](#TitleNum_29)
+30. [Transfer Database Task](#TitleNum_30)
+31. [Transfer Error Messages Task](#TitleNum_31)
+32. [Transfer Jobs Task](#TitleNum_32)
+33. [Transfer Logins Task](#TitleNum_33)
+34. [Transfer Master Stored Procedures Task](#TitleNum_34)
+35. [Transfer SQL Server Objects Task](#TitleNum_35)
+36. [Web Service Task](#TitleNum_36)
+37. [WMI Data Reader Task](#TitleNum_37)
+38. [WMI Event Watcher Task](#TitleNum_38)
+39. [XML Task](#TitleNum_39)
+40. [ADO NET Destination](#TitleNum_40)
+41. [ADO NET Source](#TitleNum_41)
+42. [CDC Source](#TitleNum_42)
+43. [Data Mining Model Training Destination](#TitleNum_43)
+44. [Data Streaming Destination](#TitleNum_44)
+45. [Dimension Processing Destination](#TitleNum_45)
+46. [Excel Destination](#TitleNum_46)
+47. [Excel Source](#TitleNum_47)
+48. [Flat File Destination](#TitleNum_48)
+49. [Flat File Source](#TitleNum_49)
+50. [OData Source](#TitleNum_50)
+51. [ODBC Destination](#TitleNum_51)
+52. [ODBC Source](#TitleNum_52)
+53. [OLE DB Destination](#TitleNum_53)
+54. [OLE DB Source](#TitleNum_54)
+55. [Partition Processing Destination](#TitleNum_55)
+56. [Raw File Destination](#TitleNum_56)
+57. [SQL Server Destination](#TitleNum_57)
+58. [Aggregate Transformation](#TitleNum_58)
+59. [Audit Transformation](#TitleNum_59)
+60. [Character Map Transformation](#TitleNum_60)
+61. [Conditional Split Transformation](#TitleNum_61)
+62. [Copy Column Transformation](#TitleNum_62)
+63. [Data Conversion Transformation](#TitleNum_63)
+64. [Data Mining Query Transformation](#TitleNum_64)
+65. [Derived Column Transformation](#TitleNum_65)
+66. [DQS Cleansing Transformation](#TitleNum_66)
+67. [Export Column Transformation](#TitleNum_67)
+68. [Fuzzy Grouping Transformation](#TitleNum_68)
+69. [Fuzzy Lookup Transformation](#TitleNum_69)
+70. [Lookup Transformation](#TitleNum_70)
+71. [Merge Join Transformation](#TitleNum_71)
+72. [Merge Transformation](#TitleNum_72)
+73. [OLE DB Command Transformation](#TitleNum_73)
+74. [Percentage Sampling Transformation](#TitleNum_74)
+75. [Row Sampling Transformation](#TitleNum_75)
+76. [Script Component](#TitleNum_76)
+77. [Sort Transformation](#TitleNum_77)
+78. [Term Extraction Transformation](#TitleNum_78)
+79. [Term Lookup Transformation](#TitleNum_79)
+80. [Unpivot Transformation](#TitleNum_80)
+81. [XML Source](#TitleNum_81)
+82. [What&#39;s New in Integration Services in SQL Server 2017](#TitleNum_82)
 
 
 
-
-<a name="sisters2"/>
 
 &nbsp;
 
-## Sister Articles
+&nbsp;
 
-This section lists very similar articles for recently updated articles in other subject areas, within the same GitHub.com repository: [MicrosoftDocs/**sql-docs-pr**](https://github.com/microsoftdocs/sql-docs-pr/).
+<a name="TitleNum_1"/>
 
-<!--  20170630-1150  -->
+### 1. &nbsp; [ADO.NET Connection Manager](connection-manager/ado-net-connection-manager.md)
+
+*Updated: 2017-08-09* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Next](#TitleNum_2))
+
+<!-- Source markdown line 65.  ms.author= "douglasl".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 d1b82df6250389ae661db58595c4b72d1cac42b6 6a83f39e4965195fa04c78fb546fcadce3d37084  (PR=2796  ,  Filename=ado-net-connection-manager.md  ,  Dirpath=docs\integration-services\connection-manager\  ,  MergeCommitSha40=8397673c7ed9dfe8ae02871f9077ed7286e49863) -->
+
+
+
+**Configure ADO.NET Connection Manager**
+
+  Use the **Configure ADO.NET Connection Manager** dialog box to add a connection to a data source that can be accessed by using a .NET Framework data provider, such as the SqlClient provider. The connection manager can use an existing connection, or you can create a new one.
+
+ To learn more about the ADO.NET connection manager, see [ADO.NET Connection Manager--../../integration-services/connection-manager/ado-net-connection-manager.md).
+
+**Options**
+
+ **Data connections**
+ Select an existing ADO.NET data connection from the list.
+
+ **Data connection properties**
+ View properties and values for the selected ADO.NET data connection.
+
+ **New**
+ Create an ADO.NET data connection by using the **Connection Manager** dialog box.
+
+ **Delete**
+ Select a connection, and then delete it by using the **Delete** button.
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_2"/>
+
+### 2. &nbsp; [Excel Connection Manager](connection-manager/excel-connection-manager.md)
+
+*Updated: 2017-08-16* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_1) | [Next](#TitleNum_3))
+
+<!-- Source markdown line 55.  ms.author= "douglasl".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 6eda19033dbee302b99700d7eb066b8610092555 20428171a4feb138b82ed5f9f5b75e82d63dec72  (PR=2863  ,  Filename=excel-connection-manager.md  ,  Dirpath=docs\integration-services\connection-manager\  ,  MergeCommitSha40=2800075091835b2d6f2b07ee34e9b897fe86634e) -->
+
+
+
+**Excel Connection Manager Editor**
+
+  Use the **Excel Connection Manager Editor** dialog box to add a connection to an existing or a new ..!NCLUDE-NotShown--ofprexcel--../../includes/ofprexcel-md.md)] workbook file.
+
+ To learn more about the Excel connection manager, see [Excel Connection Manager--../../integration-services/connection-manager/excel-connection-manager.md).
+
+**Options**
+
+ **Excel file path**
+ Type the path and file name of an existing or a new Excel workbook file (.xls).
+
+> [!NOTE]
+>  You cannot connect to a password-protected Excel file.
+
+> [!WARNING]
+>  The **Excel Destination Editor** automatically creates the Excel file when you select an **Excel Connection** that points to a new or non-existent file and then click **New** for **Name of the Excel Sheet**.
+
+ **Browse**
+ Use the **Open** dialog box to navigate to the folder in which the excel file exists or where you want to create the new file.
+
+ **Excel version**
+ Specify the version of Microsoft Excel that was used to create the file.
+
+ **First row has column names**
+ Specify whether the first row of data in the selected worksheet contains column names. The default value of this option is **True**.
+
+**Connectivity components for Microsoft Excel and Access files**
+
+
+You may have to download the connectivity components for Microsoft Office files if they're not already installed. Download the latest version of the connectivity components for both Excel and Access files here:
+[Microsoft Access Database Engine 2016 Redistributable](https://www.microsoft.com/download/details.aspx?id=54920).
+
+The latest version of the components can open files created by earlier versions of Excel.
+
+If the computer has a 32-bit version of Office, then you have to install the 32-bit version of the components, and you also have to ensure that you run the package in 32-bit mode.
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_3"/>
+
+### 3. &nbsp; [File Connection Manager](connection-manager/file-connection-manager.md)
+
+*Updated: 2017-08-09* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_2) | [Next](#TitleNum_4))
+
+<!-- Source markdown line 64.  ms.author= "douglasl".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 2985f3a6cde131cb653798c1a596d29543688fd0 0afc5cf044d05afb975dfb34d71f54ebdd5abb4f  (PR=2796  ,  Filename=file-connection-manager.md  ,  Dirpath=docs\integration-services\connection-manager\  ,  MergeCommitSha40=8397673c7ed9dfe8ae02871f9077ed7286e49863) -->
+
+
+
+**File Connection Manager Editor**
+
+  Use the **File Connection Manager Editor** dialog box to specify the properties used to connect to a file or a folder.
+
+> [!NOTE]
+>  You can set the ConnectionString property for the File connection manager by specifying an expression in the Properties window of ..!NCLUDE-NotShown--ssBIDevStudioFull--../../includes/ssbidevstudiofull-md.md)]. However, to avoid a validation error when you use an expression to specify the file or folder, in the **File Connection Manager Editor**, for **File/Folder**, add a file or folder path.
+
+ To learn more about the File connection manager, see [File Connection Manager--../../integration-services/connection-manager/file-connection-manager.md).
+
+**Options**
+
+ **Usage Type**
+ Specify whether the **File Connection Manager** connects to an existing file or folder or creates a new file or folder.
+
+|Value|Description|
+|-----------|-----------------|
+|Create file|Create a new file at run time.|
+|Existing file|Use an existing file.|
+|Create folder|Create a new folder at run time.|
+|Existing folder|Use an existing folder.|
+
+ **File / Folder**
+ If **File**, specify the file to use.
+
+ If **Folder**, specify the folder to use.
+
+ **Browse**
+ Select the file or folder by using the **Select File** or **Browse for Folder** dialog box.
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_4"/>
+
+### 4. &nbsp; [Flat File Connection Manager](connection-manager/flat-file-connection-manager.md)
+
+*Updated: 2017-08-09* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_3) | [Next](#TitleNum_5))
+
+<!-- Source markdown line 89.  ms.author= "douglasl".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 222b29cdb4edb3df0b3085d33cdeb48a8b4ff2c0 121c788499acb94655c18e499b52c4d520715c38  (PR=2796  ,  Filename=flat-file-connection-manager.md  ,  Dirpath=docs\integration-services\connection-manager\  ,  MergeCommitSha40=8397673c7ed9dfe8ae02871f9077ed7286e49863) -->
+
+
+
+ **File name**
+ Type the path and file name to use in the flat file connection.
+
+ **Browse**
+ Locate the file name to use in the flat file connection.
+
+ **Locale**
+ Specify the locale to provide language-specific information for ordering and for date and time formats.
+
+ **Unicode**
+ Indicate whether to use Unicode. If you use Unicode, you cannot specify a code page.
+
+ **Code page**
+ Specify the code page for non-Unicode text.
+
+ **Format**
+ Indicate whether the file uses delimited, fixed width, or ragged right formatting.
+
+|Value|Description|
+|-----------|-----------------|
+|Delimited|Columns are separated by delimiters, specified on the **Columns** page.|
+|Fixed width|Columns have a fixed width.|
+|Ragged right|Ragged right files are files in which every column has a fixed width, except for the last column. It is delimited by the row delimiter.|
+
+ **Text qualifier**
+ Specify the text qualifier to use. For example, you can specify that text fields are enclosed in quotation marks.
+
+> [!NOTE]
+>  After you select a text qualifier, you cannot re-select the **None** option. Type **None** to de-select the text qualifier.
+
+ **Header row delimiter**
+ Select from the list of delimiters for header rows, or enter the delimiter text.
+
+|Value|Description|
+|-----------|-----------------|
+|**{CR}{LF}**|The header row is delimited by a carriage return-line feed combination.|
+|**{CR}**|The header row is delimited by a carriage return.|
+|**{LF}**|The header row is delimited by a line feed.|
+|**Semicolon {;}**|The header row is delimited by a semicolon.|
+|**Colon {:}**|The header row is delimited by a colon.|
+|**Comma {,}**|The header row is delimited by a comma.|
+|**Tab {t}**|The header row is delimited by a tab.|
+|**Vertical bar {&#124;}**|The header row is delimited by a vertical bar.|
+
+ **Header rows to skip**
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_5"/>
+
+### 5. &nbsp; [FTP Connection Manager](connection-manager/ftp-connection-manager.md)
+
+*Updated: 2017-08-09* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_4) | [Next](#TitleNum_6))
+
+<!-- Source markdown line 60.  ms.author= "douglasl".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 aac1b62532e2321907aa80acaf359cba5831a914 3ffb370ef5baac810ae97b0eea3ec682a9fe35ec  (PR=2796  ,  Filename=ftp-connection-manager.md  ,  Dirpath=docs\integration-services\connection-manager\  ,  MergeCommitSha40=8397673c7ed9dfe8ae02871f9077ed7286e49863) -->
+
+
+
+**FTP Connection Manager Editor**
+
+  Use the **FTP Connection Manager Editor** dialog box to specify properties for connecting to an FTP server.
+
+> [!IMPORTANT]
+>  The FTP connection manager supports only anonymous authentication and basic authentication. It does not support Windows Authentication.
+
+ To learn more about the FTP connection manager, see [FTP Connection Manager--../../integration-services/connection-manager/ftp-connection-manager.md).
+
+**Options**
+
+ **Server name**
+ Provide the name of the FTP server.
+
+ **Server port**
+ Specify the port number on the FTP server to use for the connection. The default value of this property is **21**.
+
+ **User name**
+ Provide a user name to access the FTP server. The default value of this property is **anonymous**.
+
+ **Password**
+ Provide the password to access the FTP server.
+
+ **Time-out (in seconds)**
+ Specify the number of seconds the task takes before timing out. A value of **0** indicates an infinite amount of time. The default value of this property is **60**.
+
+ **Use passive mode**
+ Specify whether the server or the client initiates the connection. The server initiates the connection in active mode, and the client activates the connection in passive mode. The default value of this property is **active mode**.
+
+ **Retries**
+ Specify the number of times the task attempts to make a connection. A value of **0** indicates no limit to the number of attempts.
+
+ **Chunk size (in KB)**
+ Provide a chunk size in kilobytes for transmitting data.
+
+ **Test Connection**
+ After configuring the FTP Connection Manager, confirm that the connection is viable by clicking **Test Connection**.
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_6"/>
+
+### 6. &nbsp; [HTTP Connection Manager](connection-manager/http-connection-manager.md)
+
+*Updated: 2017-08-09* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_5) | [Next](#TitleNum_7))
+
+<!-- Source markdown line 58.  ms.author= "douglasl".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 6f9081ba20c72241633adfb2adb7160eb214f3b6 2ec2ee592ddd992f25c83b375491742e9fee1069  (PR=2796  ,  Filename=http-connection-manager.md  ,  Dirpath=docs\integration-services\connection-manager\  ,  MergeCommitSha40=8397673c7ed9dfe8ae02871f9077ed7286e49863) -->
+
+
+
+ To learn more about the HTTP connection manager, see [HTTP Connection Manager--../../integration-services/connection-manager/http-connection-manager.md). To learn more about a common usage scenario for the HTTP Connection Manager, see [Web Service Task--../../integration-services/control-flow/web-service-task.md).
+
+**Options**
+
+ **Server URL**
+ Type the URL for the server.
+
+ If you plan to use the **Download WSDL** button on the **General** page of the **Web Service Task Editor** to download a WSDL file, type the URL for the WSDL file. This URL ends with "?wsdl".
+
+ **Use credentials**
+ Specify whether you want the HTTP Connection Manager to use the user's security credentials for authentication.
+
+ **User name**
+ If the HTTP Connection Manager uses credentials, you must specify a user name, password, and domain.
+
+ **Password**
+ If the HTTP Connection Manager uses credentials, you must specify a user name, password, and domain.
+
+ **Domain**
+ If the HTTP Connection Manager uses credentials, you must specify a user name, password, and domain.
+
+ **Use client certificate**
+ Specify whether you want the HTTP Connection Manager to use a client certificate for authentication.
+
+ **Certificate**
+ Select a certificate from the list by using the **Select Certificate** dialog box. The text box displays the name associated with this certificate.
+
+ **Time-out (in seconds)**
+ Provide a time-out for connecting to the Web server. The default value of this property is 30 seconds.
+
+ **Chunk size (in KB)**
+ Provide a chunk size for writing data.
+
+ **Test Connection**
+ After configuring the HTTP Connection Manager, confirm that the connection is viable by clicking **Test Connection**.
+
+**HTTP Connection Manager Editor (Proxy Page)**
+
+  Use the **Proxy** tab of the **HTTP Connection Manager Editor** dialog box to configure the HTTP Connection Manager to use a proxy server. An HTTP connection enables a package to access a Web server by using HTTP to send or receive files.
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_7"/>
+
+### 7. &nbsp; [MSMQ Connection Manager](connection-manager/msmq-connection-manager.md)
+
+*Updated: 2017-08-09* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_6) | [Next](#TitleNum_8))
+
+<!-- Source markdown line 52.  ms.author= "douglasl".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 3bc7f19e62fb3fd0156659920818889ca4900eec 64e5878ccef127cd373d90e92ded47e3b2c92a59  (PR=2796  ,  Filename=msmq-connection-manager.md  ,  Dirpath=docs\integration-services\connection-manager\  ,  MergeCommitSha40=8397673c7ed9dfe8ae02871f9077ed7286e49863) -->
+
+
+
+**MSMQ Connection Manager Editor**
+
+  Use the **MSMQ Connection Manager** dialog box to specify the path to a Message Queuing (also known as MSMQ) message queue.
+
+ To learn more about the MSMQ connection manager, see [MSMQ Connection Manager--../../integration-services/connection-manager/msmq-connection-manager.md).
+
+> [!NOTE]
+>  The MSMQ connection manager supports local public and private queues and remote public queues. It does not support remote private queues. For a workaround that uses the Script Task, see [Sending to a Remote Private Message Queue with the Script Task--../../integration-services/extending-packages-scripting-task-examples/sending-to-a-remote-private-message-queue-with-the-script-task.md).
+
+**Options**
+
+ **Name**
+ Provide a unique name for the MSMQ connection manager in the workflow. The name provided will be displayed within ..!NCLUDE-NotShown--ssIS--../../includes/ssis-md.md)] Designer.
+
+ **Description**
+ Describe the connection manager. As a best practice, describe the connection manager in terms of its purpose, to make packages self-documenting and easier to maintain.
+
+ **Path**
+ Type the complete path of the message queue. The format of the path depends on the type of queue.
+
+|Queue type|Sample path|
+|----------------|-----------------|
+|Public|\<computer name>\\<queue name\>|
+|Private|\<computer name>\Private$\\<queue name\>|
+
+ You can use "." to represent the local computer.
+
+ **Test**
+ After configuring the MSMQ connection manager, confirm that the connection is viable by clicking **Test**.
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_8"/>
+
+### 8. &nbsp; [Multiple Flat Files Connection Manager](connection-manager/multiple-flat-files-connection-manager.md)
+
+*Updated: 2017-08-09* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_7) | [Next](#TitleNum_9))
+
+<!-- Source markdown line 80.  ms.author= "douglasl".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 d329bf9984e55bf57a3821b7d4c4b1306ba72688 ddd86dfdb1d2205c655c215f09ec124151bb32b8  (PR=2796  ,  Filename=multiple-flat-files-connection-manager.md  ,  Dirpath=docs\integration-services\connection-manager\  ,  MergeCommitSha40=8397673c7ed9dfe8ae02871f9077ed7286e49863) -->
+
+
+
+ **File names**
+ Type the path and file names to use in the Multiple Flat Files connection. You can specify multiple files by using wildcard characters, as in the example "C:\\*.txt", or by using the vertical pipe character (|) to separate multiple file names. All files must have the same data format.
+
+ **Browse**
+ Browse the file names to use in the Multiple Flat Files connection. You can select multiple files. All files must have the same data format.
+
+ **Locale**
+ Specify the location to provide information for ordering and for date and time conversion.
+
+ **Unicode**
+ Indicate whether to use Unicode. Using Unicode precludes specifying a code page.
+
+ **Code page**
+ Specify the code page for non-Unicode text.
+
+ **Format**
+ Indicate whether to use delimited, fixed width, or ragged right formatting. All files must have the same data format.
+
+|Value|Description|
+|-----------|-----------------|
+|Delimited|Columns are separated by delimiters, specified on the **Columns** page.|
+|Fixed width|Columns have a fixed width, specified by dragging marker lines on the **Columns** page.|
+|Ragged right|Ragged right files are files in which every column has a fixed width, except for the last column, which is delimited by the row delimiter, specified on the **Columns** page.|
+
+ **Text qualifier**
+ Specify the text qualifier to use. For example, you can specify to enclose text with quotation marks.
+
+ **Header row delimiter**
+ Select from the list of delimiters for header rows, or enter the delimiter text.
+
+|Value|Description|
+|-----------|-----------------|
+|**{CR}{LF}**|The header row is delimited by a carriage return-line feed combination.|
+|**{CR}**|The header row is delimited by a carriage return.|
+|**{LF}**|The header row is delimited by a line feed.|
+|**Semicolon {;}**|The header row is delimited by a semicolon.|
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_9"/>
+
+### 9. &nbsp; [OData Connection Manager](connection-manager/odata-connection-manager.md)
+
+*Updated: 2017-08-25* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_8) | [Next](#TitleNum_10))
+
+<!-- Source markdown line 61.  ms.author= "douglasl".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 9786fa57a49916b6d6ae922f7aef33114de17751 6efc590195cbf55d547c2d14416a6fbd46990c4d  (PR=2961  ,  Filename=odata-connection-manager.md  ,  Dirpath=docs\integration-services\connection-manager\  ,  MergeCommitSha40=21f0cfd102a6fcc44dfc9151750f1b3c936aa053) -->
+
+
+
+| (column_1) | (column_2) | (column_3) 
+| :-- | :-- | :-- 
+|UserName|User name to use for authentication, if required.|
+|Password|Password to use for authentication, if required.|
+|ConnectionString|Includes other properties of the connection manager.|
+
+**OData Connection Manager Editor**
+
+  Use the **OData Connection Manager Editor** dialog box to add a connection or edit an existing connection to an OData data source.
+
+**Options**
+
+ **Connection manager name**
+ Name of the connection manager.
+
+ **Service document location**
+ URL for the OData service. For example: http://services.odata.org/V3/Northwind/Northwind.svc/.
+
+ **Authentication**
+Select one of the following options:
+-   **Windows Authentication**. For anonymous access, select this option.
+-   **Basic Authentication**
+-   **Microsoft Dynamics AX Online** for Dynamics AX Online
+-   **Microsoft Dynamics CRM Online** for Dynamics CRM Online
+-   **Microsoft Online Services** for Microsoft Online Services
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_10"/>
+
+### 10. &nbsp; [ODBC Connection Manager](connection-manager/odbc-connection-manager.md)
+
+*Updated: 2017-08-09* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_9) | [Next](#TitleNum_11))
+
+<!-- Source markdown line 49.  ms.author= "douglasl".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 a5a45251b6d922042dfec13569501500426aa6d2 3c7252c17ce423401afb246fae16ef043f9ef4b2  (PR=2796  ,  Filename=odbc-connection-manager.md  ,  Dirpath=docs\integration-services\connection-manager\  ,  MergeCommitSha40=8397673c7ed9dfe8ae02871f9077ed7286e49863) -->
+
+
+
+**ODBC Connection Manager UI Reference**
+
+  Use the **Configure ODBC Connection Manager** dialog box to add a connection to an ODBC data source.
+
+ To learn more about the ODBC connection manager, see [ODBC Connection Manager--../../integration-services/connection-manager/odbc-connection-manager.md).
+
+**Options**
+
+ **Data connections**
+ Select an existing ODBC connection manager from the list.
+
+ **Data connection properties**
+ View properties and values for the selected ODBC connection manager.
+
+ **New**
+ Create an ODBC connection manager by using the **Connection Manager** dialog box. This dialog box also lets you create a new ODBC data source if it is required.
+
+ **Delete**
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_11"/>
+
+### 11. &nbsp; [OLE DB Connection Manager](connection-manager/ole-db-connection-manager.md)
+
+*Updated: 2017-08-09* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_10) | [Next](#TitleNum_12))
+
+<!-- Source markdown line 64.  ms.author= "douglasl".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 ffc07de2f8e5fdd55b47150bf26f0d038d6ab7b6 74d313912d7b349ddf56b142aff15ddc5ee52128  (PR=2796  ,  Filename=ole-db-connection-manager.md  ,  Dirpath=docs\integration-services\connection-manager\  ,  MergeCommitSha40=8397673c7ed9dfe8ae02871f9077ed7286e49863) -->
+
+
+
+**Configure OLE DB Connection Manager**
+
+  Use the **Configure OLE DB Connection Manager** dialog box to add a connection to a data source, which can be either a new connection or a copy of an existing connection.
+
+> [!NOTE]
+>  If the data source is ..!NCLUDE-NotShown--msCoName--../../includes/msconame-md.md)] Office Excel 2007, the data source requires a different connection manager than earlier versions of Excel. For more information, see [Connect to an Excel Workbook--../../integration-services/connection-manager/connect-to-an-excel-workbook.md).
+>
+>  If the data source is ..!NCLUDE-NotShown--msCoName--../../includes/msconame-md.md)] Office Access 2007, the data source requires a different OLE DB provider than earlier versions of Access. For more information, see [Connect to an Access Database--../../integration-services/connection-manager/connect-to-an-access-database.md).
+
+ To learn more about the OLE DB connection manager, see [OLE DB Connection Manager--../../integration-services/connection-manager/ole-db-connection-manager.md).
+
+**Options**
+
+ **Data connections**
+ Select an existing OLE DB data connection from the list.
+
+ **Data connection properties**
+ View properties and values for the selected OLE DB data connection.
+
+ **New**
+ Create an OLE DB data connection by using the **Connection Manager** dialog box.
+
+ **Delete**
+ Select a data connection, and then delete it by using the **Delete** button.
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_12"/>
+
+### 12. &nbsp; [SAP BW Connection Manager](connection-manager/sap-bw-connection-manager.md)
+
+*Updated: 2017-08-09* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_11) | [Next](#TitleNum_13))
+
+<!-- Source markdown line 53.  ms.author= "douglasl".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 118a2b192779cfbef13863ccbfa5cc847575b5e2 3a97ef663f3452072ca9712a4ea8d3fc3c4e0e81  (PR=2796  ,  Filename=sap-bw-connection-manager.md  ,  Dirpath=docs\integration-services\connection-manager\  ,  MergeCommitSha40=8397673c7ed9dfe8ae02871f9077ed7286e49863) -->
+
+
+
+**SAP BW Connection Manager Editor**
+
+  Use the **SAP BW Connection Manager Editor** to specify the properties to use to connect to an SAP Netweaver BW version 7 system.
+
+ The SAP BW connection manager provides connectivity to an SAP Netweaver BW 7 system for use by the SAP BW source or destination. To learn more about the SAP BW connection manager of the ..!NCLUDE-NotShown--msCoName--../../includes/msconame-md.md)] Connector 1.1 for SAP BW, see [SAP BW Connection Manager--../../integration-services/connection-manager/sap-bw-connection-manager.md).
+
+> [!IMPORTANT]
+>  The documentation for the Microsoft Connector 1.1 for SAP BW assumes familiarity with the SAP Netweaver BW environment. For more information about SAP Netweaver BW, or for information about how to configure SAP Netweaver BW objects and processes, see your SAP documentation.
+
+ **To open the SAP BW Connection Manager Editor**
+
+1.  In ..!NCLUDE-NotShown--ssBIDevStudioFull--../../includes/ssbidevstudiofull-md.md)], open the ..!NCLUDE-NotShown--ssISnoversion--../../includes/ssisnoversion-md.md)] package that contains the SAP BW connection manager.
+
+2.  In the Connection Managers area on the **Control Flow** tab, do one of the following steps:
+
+    -   Double-click the SAP BW connection manager.
+
+         ΓÇöorΓÇö
+
+    -   Right-click the SAP BW connection manager, and then select **Edit**.
+
+**Options**
+
+
+> [!NOTE]
+>  If you do not know all the values that are required to configure the connection manager, you might have to ask your SAP administrator.
+
+ **Client**
+ Specify the client number of the system.
+
+ **Language**
+ Specify the language that the system uses. For example, specify **EN** for English.
+
+ **User name**
+ Specify the user name that will be used to connect to the system.
+
+ **Password**
+ Specify the password that will be used with the user name.
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_13"/>
+
+### 13. &nbsp; [SMO Connection Manager](connection-manager/smo-connection-manager.md)
+
+*Updated: 2017-08-09* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_12) | [Next](#TitleNum_14))
+
+<!-- Source markdown line 42.  ms.author= "douglasl".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 618785ca66e50821b863a2326e99975eb3d928cf 8d3bb013cff36c46d6ba0d48379dca2689b83f41  (PR=2796  ,  Filename=smo-connection-manager.md  ,  Dirpath=docs\integration-services\connection-manager\  ,  MergeCommitSha40=8397673c7ed9dfe8ae02871f9077ed7286e49863) -->
+
+
+
+**SMO Connection Manager Editor**
+
+  Use the **SMO Connection Manager Editor** to configure a ..!NCLUDE-NotShown--ssNoVersion--../../includes/ssnoversion-md.md)] connection for use by the various tasks that transfer ..!NCLUDE-NotShown--ssNoVersion--../../includes/ssnoversion-md.md)] objects.
+
+ To learn more about the SMO connection manager, see [SMO Connection Manager--../../integration-services/connection-manager/smo-connection-manager.md).
+
+**Options**
+
+ **Server name**
+ Type the name of the ..!NCLUDE-NotShown--ssNoVersion--../../includes/ssnoversion-md.md)] instance or select the server name from the list.
+
+ **Refresh**
+ Refresh the list of available ..!NCLUDE-NotShown--ssNoVersion--../../includes/ssnoversion-md.md)] instances that can be detected on the network.
+
+ **Use Windows Authentication**
+ Use Windows Authentication to connect to the selected ..!NCLUDE-NotShown--ssNoVersion--../../includes/ssnoversion-md.md)] instance.
+
+ **Use SQL Server Authentication**
+ Use ..!NCLUDE-NotShown--ssNoVersion--../../includes/ssnoversion-md.md)] Authentication to connect to the selected ..!NCLUDE-NotShown--ssNoVersion--../../includes/ssnoversion-md.md)] instance.
+
+ **User name**
+ If you have selected ..!NCLUDE-NotShown--ssNoVersion--../../includes/ssnoversion-md.md)] authentication, enter the ..!NCLUDE-NotShown--ssNoVersion--../../includes/ssnoversion-md.md)] user name.
+
+ **Password**
+ If you have selected ..!NCLUDE-NotShown--ssNoVersion--../../includes/ssnoversion-md.md)] authentication, enter the password.
+
+ **Test Connection**
+ Test the connection as configured.
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_14"/>
+
+### 14. &nbsp; [SMTP Connection Manager](connection-manager/smtp-connection-manager.md)
+
+*Updated: 2017-08-09* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_13) | [Next](#TitleNum_15))
+
+<!-- Source markdown line 51.  ms.author= "douglasl".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 d1272e69a07d186109dedf5bb31ade93be7f5664 01774ddc992a7fa42565e99fd458c38fb5df7c12  (PR=2796  ,  Filename=smtp-connection-manager.md  ,  Dirpath=docs\integration-services\connection-manager\  ,  MergeCommitSha40=8397673c7ed9dfe8ae02871f9077ed7286e49863) -->
+
+
+
+**SMTP Connection Manager Editor**
+
+  Use the **SMTP Connection Manager Editor** dialog box to specify a Simple Mail Transfer Protocol (SMTP) server.
+
+ To learn more about the SMTP connection manager, see [SMTP Connection Manager--../../integration-services/connection-manager/smtp-connection-manager.md).
+
+**Options**
+
+ **Name**
+ Provide a unique name for the connection manager.
+
+ **Description**
+ Describe the connection manager. As a best practice, describe the connection manager in terms of its purpose, to make packages self-documenting and easier to maintain.
+
+ **SMTP server**
+ Provide the name of the SMTP server.
+
+ **Use Windows Authentication**
+ Select to send mail using an SMTP server that uses Windows Authentication to authenticate access to the server.
+
+> [!IMPORTANT]
+>  The SMTP connection manager supports only anonymous authentication and Windows Authentication. It does not support basic authentication.
+
+> [!NOTE]
+>  When using Microsoft Exchange as the SMTP server, you may need to set **Use Windows Authentication** to **True**. Exchange servers may be configured to disallow unauthenticated SMTP connections.
+
+ **Enable Secure Sockets Layer (SSL)**
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_15"/>
+
+### 15. &nbsp; [SQL Server Compact Edition Connection Manager](connection-manager/sql-server-compact-edition-connection-manager.md)
+
+*Updated: 2017-08-09* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_14) | [Next](#TitleNum_16))
+
+<!-- Source markdown line 55.  ms.author= "douglasl".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 28dd9e9ec5f41b0863ac3810ecebba7010cc16b0 ec2a40bb1e384e61daffa80d510c23f48b250ac6  (PR=2796  ,  Filename=sql-server-compact-edition-connection-manager.md  ,  Dirpath=docs\integration-services\connection-manager\  ,  MergeCommitSha40=8397673c7ed9dfe8ae02871f9077ed7286e49863) -->
+
+
+
+**Options**
+
+ **Enter the database file name and path**
+ Enter the path and filename for the ..!NCLUDE-NotShown--ssNoVersion--../../includes/ssnoversion-md.md)] Compact database.
+
+ **Browse**
+ Locate the desired ..!NCLUDE-NotShown--ssNoVersion--../../includes/ssnoversion-md.md)] Compact database file by using the **Select SQL Server Compact Edition database** dialog box.
+
+ **Enter the database password**
+ Enter the password for the ..!NCLUDE-NotShown--ssNoVersion--../../includes/ssnoversion-md.md)] Compact database.
+
+**SQL Server Compact Edition Connection Manager Editor (All Page)**
+
+  Use the **SQL Server Compact Edition Connection Manager** dialog box to specify properties for connecting to a ..!NCLUDE-NotShown--ssNoVersion--../../includes/ssnoversion-md.md)] Compact database.
+
+ To learn more about the ..!NCLUDE-NotShown--ssNoVersion--../../includes/ssnoversion-md.md)] Compact Edition connection manager, see [SQL Server Compact Edition Connection Manager--../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md).
+
+**Options**
+
+ **AutoShrink Threshold**
+ Specify the amount of free space, as a percentage, that is allowed in the ..!NCLUDE-NotShown--ssNoVersion--../../includes/ssnoversion-md.md)] Compact database before the autoshrink process runs.
+
+ **Default Lock Escalation**
+ Specify the number of database locks that the ..!NCLUDE-NotShown--ssNoVersion--../../includes/ssnoversion-md.md)] Compact database acquires before it tries to escalate locks.
+
+ **Default Lock Timeout**
+ Specify the default interval, in milliseconds, that a transaction will wait for a lock.
+
+ **Flush Interval**
+ Specify the interval, in seconds, between committed transactions to flush data to disk.
+
+ **Locale Identifier**
+ Specify the Locale ID (LCID) of the ..!NCLUDE-NotShown--ssNoVersion--../../includes/ssnoversion-md.md)] Compact database.
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_16"/>
+
+### 16. &nbsp; [WMI Connection Manager](connection-manager/wmi-connection-manager.md)
+
+*Updated: 2017-08-09* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_15) | [Next](#TitleNum_17))
+
+<!-- Source markdown line 44.  ms.author= "douglasl".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 d4b070ecb42cbd8aa237c64b026a43726b04116f 5815c10e30ae9abf705cca68097c302477027001  (PR=2796  ,  Filename=wmi-connection-manager.md  ,  Dirpath=docs\integration-services\connection-manager\  ,  MergeCommitSha40=8397673c7ed9dfe8ae02871f9077ed7286e49863) -->
+
+
+
+**WMI Connection Manager Editor**
+
+  Use the **WMI Connection Manager** dialog box to specify a Microsoft Windows Management Instrumentation (WMI) connection to a server.
+
+ To learn more about the WMI connection manager, see [WMI Connection Manager--../../integration-services/connection-manager/wmi-connection-manager.md).
+
+**Options**
+
+ **Name**
+ Provide a unique name for the connection manager.
+
+ **Description**
+ Describe the connection manager. As a best practice, describe the connection manager in terms of its purpose, to make packages self-documenting and easier to maintain.
+
+ **Server name**
+ Provide the name of the server to which you want to make the WMI connection.
+
+ **Namespace**
+ Specify the WMI namespace.
+
+ **Use Windows authentication**
+ Select to use Windows Authentication. If you use Windows Authentication, you do not need to provide a user name or password for the connection.
+
+ **User name**
+ If you do not use Windows Authentication, you must provide a user name for the connection.
+
+ **Password**
+ If you do not use Windows Authentication, you must provide the password for the connection.
+
+ **Test**
+ Test the connection manager settings.
+
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_17"/>
+
+### 17. &nbsp; [Analysis Services Execute DDL Task](control-flow/analysis-services-execute-ddl-task.md)
+
+*Updated: 2017-08-11* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_16) | [Next](#TitleNum_18))
+
+<!-- Source markdown line 232.  ms.author= "douglasl".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 d89334e119bc9a852115b5fc3ba42353938e180f 03a3b2fe9e8b36ab78f064ff7d674bbb0878d716  (PR=2816  ,  Filename=analysis-services-execute-ddl-task.md  ,  Dirpath=docs\integration-services\control-flow\  ,  MergeCommitSha40=8806c102eaec2c2540374bfaddc33b76d8f6e584) -->
+
+
+
+**Analysis Services Execute DDL Task Editor (General Page)**
+
+  Use the **General** pageof the **Analysis Services Execute DDL Task Editor** dialog box to name and describe the ..!NCLUDE-NotShown--ssASnoversion--../../includes/ssasnoversion-md.md)] Execute DDL task.
+
+**Options**
+
+ **Name**
+ Provide a unique name for the ..!NCLUDE-NotShown--ssASnoversion--../../includes/ssasnoversion-md.md)] Execute DDL task. This name is used as the label in the task icon.
+
+> [!NOTE]
+>  Task names must be unique within a package.
+
+ **Description**
+ Type a description of the ..!NCLUDE-NotShown--ssASnoversion--../../includes/ssasnoversion-md.md)] Execute DDL task.
+
+**Analysis Services Execute DDL Task Editor (DDL Page)**
+
+  Use the **DDL** page of the **Analysis Services Execute DDL Task Editor** dialog box to specify a connection to an ..!NCLUDE-NotShown--ssASnoversion--../../includes/ssasnoversion-md.md)] project or an ..!NCLUDE-NotShown--ssASnoversion--../../includes/ssasnoversion-md.md)] database and to provide information about the source of data definition language (DDL) statements.
+
+**Static Options**
+
+ **Connection**
+ Select an ..!NCLUDE-NotShown--ssASnoversion--../../includes/ssasnoversion-md.md)] project or an ..!NCLUDE-NotShown--ssASnoversion--../../includes/ssasnoversion-md.md)] connection manager in the list, or click \<**New connection...**> and use the **Add Analysis Services Connection Manager** dialog box to create a new connection.
+
+ **Related Topics:** [Add Analysis Services Connection Manager Dialog Box UI Reference--../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md), [Analysis Services Connection Manager--../../integration-services/connection-manager/analysis-services-connection-manager.md)
+
+ **SourceType**
+ Specify the source type of the DDL statements. This property has the options listed in the following table:
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_18"/>
+
+### 18. &nbsp; [Analysis Services Processing Task](control-flow/analysis-services-processing-task.md)
+
+*Updated: 2017-08-11* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_17) | [Next](#TitleNum_19))
+
+<!-- Source markdown line 80.  ms.author= "douglasl".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 5a96cc6765e8506712f79c633e584837735c16f2 6f82b4f87c16ad8f7a80b9171153dc19af4817da  (PR=2816  ,  Filename=analysis-services-processing-task.md  ,  Dirpath=docs\integration-services\control-flow\  ,  MergeCommitSha40=8806c102eaec2c2540374bfaddc33b76d8f6e584) -->
+
+
+
+**Analysis Services Processing Task Editor (General Page)**
+
+  Use the **General** pageof the **Analysis Services Processing Task Editor** dialog box to name and describe the Analysis Services Processing task.
+
+**Options**
+
+ **Name**
+ Provide a unique name for the Analysis Services Processing task. This name is used as the label in the task icon.
+
+> [!NOTE]
+>  Task names must be unique within a package.
+
+ **Description**
+ Type a description of the Analysis Services Processing task.
+
+**Analysis Services Processing Task Editor (Analysis Services Page)**
+
+  Use the **Analysis Services** page of the **Analysis Services Processing Task Editor** dialog box to specify an Analysis Services connection manager, select the analytic objects to process, and set processing and error handling options.
+
+ When processing tabular models, keep the following in mind:
+
+1.  You cannot perform impact analysis on tabular models.
+
+2.  Some processing options for tabular mode are not exposed, such as Process Defrag and Process Recalc. You can perform these functions by using the Execute DDL task.
+
+3.  Some processing options provided, such as process indexes, are not appropriate for tabular models and should not be used.
+
+4.  Batch settings are ignored for tabular models.
+
+**Options**
+
+ **Analysis Services connection manager**
+ Select an existing Analysis Services connection manager in the list or click **New** to create a new connection manager.
+
+ **New**
+ Create a new Analysis Services connection manager.
+
+ **Related Topics:** [Analysis Services Connection Manager--../../integration-services/connection-manager/analysis-services-connection-manager.md), [Add Analysis Services Connection Manager Dialog Box UI Reference--../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_19"/>
+
+### 19. &nbsp; [Bulk Insert Task](control-flow/bulk-insert-task.md)
+
+*Updated: 2017-08-11* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_18) | [Next](#TitleNum_20))
+
+<!-- Source markdown line 115.  ms.author= "douglasl".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 006924c47a6bbc6d5993e91b7d8f575124094454 4cddb6e01fd4a960cb043f781885245f76044fa3  (PR=2816  ,  Filename=bulk-insert-task.md  ,  Dirpath=docs\integration-services\control-flow\  ,  MergeCommitSha40=8806c102eaec2c2540374bfaddc33b76d8f6e584) -->
+
+
+
+**Bulk Insert Task Editor (Connection Page)**
+
+  Use the **Connection** page of the **Bulk Insert Task Editor** dialog box to specify the source and destination of the bulk insert operation and the format to use.
+
+ To learn about working with bulk inserts, see [Bulk Insert Task--../../integration-services/control-flow/bulk-insert-task.md) and [Format Files for Importing or Exporting Data &#40;SQL Server&#41;--../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md).
+
+**Options**
+
+ **Connection**
+ Select an OLE DB connection manager in the list, or click \<**New connection...**> to create a new connection.
+
+ **Related Topics:** [OLE DB Connection Manager--../../integration-services/connection-manager/ole-db-connection-manager.md)
+
+ **DestinationTable**
+ Type the name of the destination table or view or select a table or view in the list.
+
+ **Format**
+ Select the source of the format for the bulk insert. This property has the options listed in the following table.
+
+|Value|Description|
+|-----------|-----------------|
+|**Use File**|Select a file containing the format specification. Selecting this option displays the dynamic option, **FormatFile**.|
+|**Specify**|Specify the format. Selecting this option displays the dynamic options, **RowDelimiter** and **ColumnDelimiter**.|
+
+ **File**
+ Select a File or Flat File connection manager in the list, or click \<**New connection...**> to create a new connection.
+
+ The file location is relative to the SQL Server Database Engine specified in the connection manager for this task. The text file must be accessible by the SQL Server Database Engine either on a local hard drive on the server, or via a share or mapped drive to the SQL Server. The file is not accessed by the SSIS Runtime.
+
+ If you access the source file by using a Flat File connection manager, the Bulk Insert task does not use the format specified in the Flat File connection manager. Instead, the Bulk Insert task uses either the format specified in a format file or the values of the RowDelimiter and ColumnDelimiter properties of the task.
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_20"/>
+
+### 20. &nbsp; [CDC Control Task](control-flow/cdc-control-task.md)
+
+*Updated: 2017-08-11* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_19) | [Next](#TitleNum_21))
+
+<!-- Source markdown line 84.  ms.author= "douglasl".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 91f91f56979ddab61a7fd0003979037d470a382e 7f240d791719f544101b90712204d0ed9cfb4cf4  (PR=2816  ,  Filename=cdc-control-task.md  ,  Dirpath=docs\integration-services\control-flow\  ,  MergeCommitSha40=8806c102eaec2c2540374bfaddc33b76d8f6e584) -->
+
+
+
+**CDC Control Task Editor**
+
+  Use the **CDC Control Task Editor** dialog box to configure the CDC Control task. The CDC Control task configuration includes defining a connection to the CDC database, the CDC task operation and the state management information.
+
+ To learn more about the CDC Control task, see [CDC Control Task--../../integration-services/control-flow/cdc-control-task.md).
+
+ **To open the CDC Control Task Editor**
+
+1.  In ..!NCLUDE-NotShown--ssBIDevStudio--../../includes/ssbidevstudio-md.md)], open the ..!NCLUDE-NotShown--ssISCurrent--../../includes/ssiscurrent-md.md)] package that has the CDC Control task.
+
+2.  On the **Control Flow** tab, double-click the CDC Control task.
+
+**Options**
+
+ **SQL Server CDC database ADO.NET connection manager**
+ Select an existing connection manager from the list, or click **New** to create a new connection. The connection must be to a ..!NCLUDE-NotShown--ssNoVersion--../../includes/ssnoversion-md.md)] database that is enabled for CDC and where the selected change table is located.
+
+ **CDC Control Operation**
+ Select the operation to run for this task. All operations use the state variable that is stored in an SSIS package variable that stores the state and passes it between the different components in the package.
+
+-   **Mark initial load start**: This operation is used when executing an initial load from an active database without a snapshot. It is invoked at the beginning of an initial-load package to record the current LSN in the source database before the initial-load package starts reading the source tables. This requires a connection to the source database.
+
+     If you select **Mark Initial Load Start** when working on ..!NCLUDE-NotShown--ssCurrent--../../includes/sscurrent-md.md)] CDC (that is, not Oracle) the user specified in the connection manager must be either  **db_owner** or **sysadmin**.
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_21"/>
+
+### 21. &nbsp; [Data Mining Query Task](control-flow/data-mining-query-task.md)
+
+*Updated: 2017-08-11* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_20) | [Next](#TitleNum_22))
+
+<!-- Source markdown line 65.  ms.author= "douglasl".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 dd681572ddfa36378141a2187ab19565d0010284 d6c9319bf0ffb384ca2dcf514f528d03b4407943  (PR=2816  ,  Filename=data-mining-query-task.md  ,  Dirpath=docs\integration-services\control-flow\  ,  MergeCommitSha40=8806c102eaec2c2540374bfaddc33b76d8f6e584) -->
+
+
+
+**Data Mining Query Task Editor (Mining Model Tab)**
+
+  Use the **Mining Model** tab of the **Data Mining Query Task** dialog box to specify the mining structure and mining model to use.
+
+ To learn about implementing data mining in packages, see [Data Mining Query Task--../../integration-services/control-flow/data-mining-query-task.md) and [Data Mining Solutions--../../analysis-services/data-mining/data-mining-solutions.md).
+
+**General Options**
+
+ **Name**
+ Provide a unique name for the Data Mining Query task. This name is used as the label in the task icon.
+
+> [!NOTE]
+>  Task names must be unique within a package.
+
+ **Description**
+ Type a description of the Data Mining Query task.
+
+**Mining Model Tab Options**
+
+ **Connection**
+ Select an ..!NCLUDE-NotShown--ssASnoversion--../../includes/ssasnoversion-md.md)] connection manager in the list or click **New** to create a new connection manager.
+
+ **Related Topics:**  [Analysis Services Connection Manager--../../integration-services/connection-manager/analysis-services-connection-manager.md)
+
+ **New**
+ Create a new ..!NCLUDE-NotShown--ssASnoversion--../../includes/ssasnoversion-md.md)] connection manager.
+
+ **Related Topics:** [Add Analysis Services Connection Manager Dialog Box UI Reference--../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)
+
+ **Mining structure**
+ Select a mining structure in the list.
+
+ **Mining models**
+ Select a mining model built on the selected mining structure.
+
+**Data Mining Query Task Editor (Query Tab)**
+
+  Use the **Query** tab of the **Data Mining Query Task** dialog box to create prediction queries based on a mining model. In this dialog box you can also bind parameters and result sets to variables.
+
+ To learn about implementing data mining in packages, see [Data Mining Query Task--../../integration-services/control-flow/data-mining-query-task.md) and [Data Mining Solutions--../../analysis-services/data-mining/data-mining-solutions.md).
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_22"/>
+
+### 22. &nbsp; [Data Profile Viewer](control-flow/data-profile-viewer.md)
+
+*Updated: 2017-08-11* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_21) | [Next](#TitleNum_23))
+
+<!-- Source markdown line 67.  ms.author= "douglasl".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 7d6697f858f8237453063893223ba823b25ae74a a72af074f60e80e9d425d4fdf4db909e4ea8378d  (PR=2816  ,  Filename=data-profile-viewer.md  ,  Dirpath=docs\integration-services\control-flow\  ,  MergeCommitSha40=8806c102eaec2c2540374bfaddc33b76d8f6e584) -->
+
+
+
+**Data Profile Viewer F1 Help**
+
+  Use the Data Profile Viewer to view the output of the Data Profiling task.
+
+ For more information about how to use the Data Profile Viewer, see [Data Profile Viewer--../../integration-services/control-flow/data-profile-viewer.md). For more information about how to use the Data Profiling task, which creates the profile output that you analyze in the Data Profile Viewer, see [Setup of the Data Profiling Task--../../integration-services/control-flow/setup-of-the-data-profiling-task.md).
+
+**Static Options**
+
+ **Open**
+ Click to browse for the saved file that contains the output of the Data Profiling task.
+
+ **Profiles** pane
+ Expand the tree in the **Profiles** pane to see the profiles that are included in the output. Select a profile to view the results for that profile.
+
+ **Message** pane
+ Displays status messages.
+
+ **Drilldown** pane
+ Displays the rows of data that match a value in the output, if the data source that is used by the Data Profiling task is available.
+
+ For example, if you are viewing the output of a Column Value Distribution profile for a US State column, the **Detailed Value Distribution** pane might contain a row for "WA". Double-click the row in the **Detailed Value Distribution** pane to see the rows of data where the value of the state column is "WA" in the drilldown pane.
+
+**Dynamic Options**
+
+
+**Profile Type = Column Length Distribution Profile**
+
+
+**Column Length Distribution Profile - \<column> pane**
+
+ **Minimum Length**
+ Displays the minimum length of values in this column.
+
+ **Maximum Length**
+ Displays the maximum length of values in this column.
+
+ **Ignore Leading Spaces**
+ Displays whether this profile was computed with an **IgnoreLeadingSpaces** value of True or False. This property was set on the **Profile Requests** page of the Data Profiling Task Editor.
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_23"/>
+
+### 23. &nbsp; [Execute Package Task](control-flow/execute-package-task.md)
+
+*Updated: 2017-08-11* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_22) | [Next](#TitleNum_24))
+
+<!-- Source markdown line 121.  ms.author= "douglasl".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 cbc6fe3b6fb5c806a8ac4777dd3d4e08f4a25763 9f8487e336cee8f92b9268b4ce149317d6c41847  (PR=2816  ,  Filename=execute-package-task.md  ,  Dirpath=docs\integration-services\control-flow\  ,  MergeCommitSha40=8806c102eaec2c2540374bfaddc33b76d8f6e584) -->
+
+
+
+**Execute Package Task Editor**
+
+  Use the Execute Package Task Editor to configure the Execute Package Task. The Execute Package task extends the enterprise capabilities of ..!NCLUDE-NotShown--ssISnoversion--../../includes/ssisnoversion-md.md)] by letting packages run other packages as part of a workflow.
+
+ **What do you want to do?**
+
+-   [Open the Execute Package Task Editor--#open)
+
+-   [Set the Options on the General Page--#general)
+
+-   [Set the Options on the Package Page--#package)
+
+-   [Set the Options on the Parameter Bindings Page--#parameter)
+
+**<a name="open"></a> Open the Execute Package Task Editor**
+
+
+1.  Open an ..!NCLUDE-NotShown--ssISnoversion--../../includes/ssisnoversion-md.md)] project in ..!NCLUDE-NotShown--vsprvs--../../includes/vsprvs-md.md)] that contains an Execute Package task.
+
+2.  Right-click the task in the SSIS Designer, and then click **Edit**.
+
+**<a name="general"></a> Set the Options on the General Page**
+
+ **Name**
+ Provide a unique name for the Execute Package task. This name is used as the label in the task icon.
+
+> [!NOTE]
+>  Task names must be unique within a package.
+
+ **Description**
+ Type a description of the Execute Package task.
+
+**<a name="package"></a> Set the Options on the Package Page**
+
+ **ReferenceType**
+ Select **Project Reference** for child packages that are in the project. Select **External Reference** for child packages that are located outside the package
+
+> [!NOTE]
+>  The **ReferenceType** option is ready-only and set to **External Reference** if the project that contains the package has not been converted to the project deployment model. [Deploy Integration Services (SSIS) Projects and Packages--../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).
+
+ **Password**
+ If the child package is password protected, provide the password for the child package, or click the ellipsis button (ΓÇª) and create a new password for the child package.
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_24"/>
+
+### 24. &nbsp; [Execute Process Task](control-flow/execute-process-task.md)
+
+*Updated: 2017-08-11* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_23) | [Next](#TitleNum_25))
+
+<!-- Source markdown line 83.  ms.author= "douglasl".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 81257ddde16903bbcec0ccda0c787419f00f27b7 0b2e64eaf322f3ab33c22c381ee9432cadce2ab0  (PR=2816  ,  Filename=execute-process-task.md  ,  Dirpath=docs\integration-services\control-flow\  ,  MergeCommitSha40=8806c102eaec2c2540374bfaddc33b76d8f6e584) -->
+
+
+
+**Execute Process Task Editor (General Page)**
+
+  Use the **General** pageof the **Execute Process Task Editor** dialog box to name and describe the Execute Process task.
+
+**Options**
+
+ **Name**
+ Provide a unique name for the Execute Process task. This name is used as the label in the task icon.
+
+> [!NOTE]
+>  Task names must be unique within a package.
+
+ **Description**
+ Type a description of the Execute Process task.
+
+**Execute Process Task Editor (Process Page)**
+
+  Use the **Process** page of the **Execute Process Task Editor** dialog box to configure the options that execute the process. These options include the executable to run, its location, command prompt arguments, and the variables that provide input and capture output.
+
+**Options**
+
+ **RequireFullFileName**
+ Indicate whether the task should fail if the executable is not found at the specified location.
+
+ **Executable**
+ Type the name of the executable to run.
+
+ **Arguments**
+ Provide command prompt arguments.
+
+ **WorkingDirectory**
+ Type the path of the folder that contains the executable, or click the browse button **(ΓÇª)** and locate the folder.
+
+ **StandardInputVariable**
+ Select a variable to provide the input to the process, or click \<**New variable...**> to create a new variable:
+
+ **Related Topics:** [Add Variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)
+
+ **StandardOutputVariable**
+ Select a variable to capture the output of the process, or click \<**New variable...**> to create a new variable.
+
+ **StandardErrorVariable**
+ Select a variable to capture the error output of the processor, or click \<**New variable...**> to create a new variable.
+
+ **FailTaskIfReturnCodeIsNotSuccessValue**
+ Indicate whether the task fails if the process exit code is different from the value specified in **SuccessValue**.
+
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_25"/>
+
+### 25. &nbsp; [File System Task](control-flow/file-system-task.md)
+
+*Updated: 2017-08-11* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_24) | [Next](#TitleNum_26))
+
+<!-- Source markdown line 79.  ms.author= "douglasl".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 fb19ebc80c0272dca0d21fa97e6767d09737a3cd 7aa4c36df67a97495e95ce9df232ddfcf5182968  (PR=2816  ,  Filename=file-system-task.md  ,  Dirpath=docs\integration-services\control-flow\  ,  MergeCommitSha40=8806c102eaec2c2540374bfaddc33b76d8f6e584) -->
+
+
+
+**File System Task Editor (General Page)**
+
+  Use the **General** page of the **File System Task Editor** dialog to configure the file system operation that the task performs.
+
+ You must specify a source and destination connection manager by setting the SourceConnection and DestinationConnection properties. You can either provide the names of File connection managers that point to the files that the task uses as a source or destination, or if the paths of the files are stored in variables, you can provide the names of the variables. To use variables to store the file paths, you must set first set the IsSourcePathVariable option for the source connection and the IsDestinationPatheVariable option for the destination connection to **True**. You can then choose the existing system or user-defined variables to use, or you can create new variables. In the **Add Variable** dialog box, you can configure and specify the scope of the variables. The scope must be the File System task or a parent container. For more information see, [Integration Services &#40;SSIS&#41; Variables--../../integration-services/integration-services-ssis-variables.md) and [Use Variables in Packages](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).
+
+> [!NOTE]
+>  To override the variables you selected for the **SourceConnection** and **DestinationConnection** properties, enter an expression for the **Source** and **Destination** properties. You enter expressions on the **Expressions** page of the **File System Task Editor**. For example, to set the path of the files that the task uses as a destination, you may want to use variable A under certain conditions and use variable B under other conditions.
+
+> [!NOTE]
+>  The File System task operates on a single file or directory. Therefore, this task does not support the use of wildcard characters to perform the same operation on multiple files or directories. To have the File System task repeat an operation on multiple files or directories, put the File System task in a Foreach Loop container. For more information, see [File System Task--../../integration-services/control-flow/file-system-task.md).
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_26"/>
+
+### 26. &nbsp; [FTP Task](control-flow/ftp-task.md)
+
+*Updated: 2017-08-11* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_25) | [Next](#TitleNum_27))
+
+<!-- Source markdown line 77.  ms.author= "douglasl".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 5e209ea768fc0098b8c18773c2ff76313a9c15cd 1554c3944bdd247f1b51978c7991de813776412f  (PR=2816  ,  Filename=ftp-task.md  ,  Dirpath=docs\integration-services\control-flow\  ,  MergeCommitSha40=8806c102eaec2c2540374bfaddc33b76d8f6e584) -->
+
+
+
+**FTP Task Editor (General Page)**
+
+  Use the **General** page of the **FTP Task Editor** dialog box to specify the FTP connection manager that connects to the FTP server that the task communicates with. You can also name and describe the FTP task.
+
+**Options**
+
+ **FtpConnection**
+ Select an existing FTP connection manager, or click \<**New connection...**> to create a connection manager.
+
+> [!IMPORTANT]
+>  The FTP connection manager supports only anonymous authentication and basic authentication. It does not support Windows Authentication.
+
+ **Related Topics**: [FTP Connection Manager--../../integration-services/connection-manager/ftp-connection-manager.md), [FTP Connection Manager Editor--../../integration-services/connection-manager/ftp-connection-manager-editor.md)
+
+ **StopOnFailure**
+ Indicate whether the FTP task terminates if an FTP operation fails.
+
+ **Name**
+ Provide a unique name for the FTP task. This name is used as the label in the task icon.
+
+> [!NOTE]
+>  Task names must be unique within a package.
+
+ **Description**
+ Type a description of the FTP task.
+
+**FTP Task Editor (File Transfer Page)**
+
+  Use the **File Transfer** page of the **FTP Task Editor** dialog box to configure the FTP operation that the task performs.
+
+**Options**
+
+ **IsRemotePathVariable**
+ Indicate whether the remote path is stored in a variable. This property has the options listed in the following table.
+
+|Value|Description|
+|-----------|-----------------|
+|**True**|The destination path is stored in a variable. Selecting the value displays the dynamic option, **RemoteVariable**.|
+|**False**|The destination path is specified in a File connection manager. Selecting the value displays the dynamic option, **RemotePath**.|
+
+ **OverwriteFileAtDestination**
+ Specify whether a file at the destination can be overwritten.
+
+ **IsLocalPathVariable**
+ Indicate whether the local path is stored in a variable. This property has the options listed in the following table.
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_27"/>
+
+### 27. &nbsp; [Message Queue Task](control-flow/message-queue-task.md)
+
+*Updated: 2017-08-11* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_26) | [Next](#TitleNum_28))
+
+<!-- Source markdown line 100.  ms.author= "douglasl".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 e4642701920985918fdea7bfb26a4ef36a37503f f42a4994d003565d96c3bda6b7b47bb1ea41a1f2  (PR=2816  ,  Filename=message-queue-task.md  ,  Dirpath=docs\integration-services\control-flow\  ,  MergeCommitSha40=8806c102eaec2c2540374bfaddc33b76d8f6e584) -->
+
+
+
+**Message Queue Task Editor (General Page)**
+
+  Use the **General page** of the **Message Queue Task Editor** dialog box to name and describe the Message Queue task, to specify the message format, and to indicate whether the task sends or receives messages.
+
+**Options**
+
+ **Name**
+ Provide a unique name for the Message Queue task. This name is used as the label in the task icon.
+
+> [!NOTE]
+>  Task names must be unique within a package.
+
+ **Description**
+ Type a description of the Message Queue task.
+
+ **Use2000Format**
+ Indicate whether to use the 2000 format of Message Queuing (also known as MSMQ). The default is **False**.
+
+ **MSMQConnection**
+ Select an existing MSMQ connection manager or click \<**New connection...**> to create a new connection manager.
+
+ **Related Topics**: [MSMQ Connection Manager--../../integration-services/connection-manager/msmq-connection-manager.md), [MSMQ Connection Manager Editor--../../integration-services/connection-manager/msmq-connection-manager-editor.md)
+
+ **Message**
+ Specify whether the Message Queue task sends or receive messages. If you select **Send message**, the Send page is listed in the left pane of the dialog box; if you select **Receive message**, the Receive page is listed. By default, this value is set to **Send message**.
+
+**Message Queue Task Editor (Send Page)**
+
+  Use the **Send** page of the **Message Queue Task Editor** dialog box to configure a Message Queue task to send messages from a ..!NCLUDE-NotShown--msCoName--../../includes/msconame-md.md)] ..!NCLUDE-NotShown--ssNoVersion--../../includes/ssnoversion-md.md)] ..!NCLUDE-NotShown--ssISnoversion--../../includes/ssisnoversion-md.md)] package.
+
+**Options**
+
+ **UseEncryption**
+ Indicate whether to encrypt the message. The default is **False**.
+
+ **EncryptionAlgorithm**
+ If you choose to use encryption, specify the name of the encryption algorithm to use. The Message Queue task can use the RC2 and RC4 algorithms. The default is **RC2**.
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_28"/>
+
+### 28. &nbsp; [Script Task](control-flow/script-task.md)
+
+*Updated: 2017-08-11* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_27) | [Next](#TitleNum_29))
+
+<!-- Source markdown line 90.  ms.author= "douglasl".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 ba76fabe19eb2d873c7f6884018f9d2ba9329cd8 8b4e1aae23ae4d4cf6b83428b9faf87bd7d102ae  (PR=2816  ,  Filename=script-task.md  ,  Dirpath=docs\integration-services\control-flow\  ,  MergeCommitSha40=8806c102eaec2c2540374bfaddc33b76d8f6e584) -->
+
+
+
+**Script Task Editor (General Page)**
+
+  Use the **General** page of the **Script Task Editor** dialog box to name and describe the Script task.
+
+ To learn more about the Script task, see [Script Task--../../integration-services/control-flow/script-task.md) and [Configuring the Script Task in the Script Task Editor--../../integration-services/extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md). To learn about programming the Script task, see [Extending the Package with the Script Task--../../integration-services/extending-packages-scripting/task/extending-the-package-with-the-script-task.md).
+
+**Options**
+
+ **Name**
+ Provide a unique name for the Script task. This name is used as the label in the task icon.
+
+> [!NOTE]
+>  Task names must be unique within a package.
+
+ **Description**
+ Type a description of the Script task.
+
+**Script Task Editor (Script Page)**
+
+  Use the **Script** page of the **Script Task Editor** dialog box to set script properties and specify variables that can be accessed by the script.
+
+> [!NOTE]
+>  In ..!NCLUDE-NotShown--ssISversion10--../../includes/ssisversion10-md.md)] and later versions, all scripts are precompiled. In earlier versions, you set a **PrecompileScriptIntoBinaryCode** property to specify that the script was precompiled.
+
+ To learn more about the Script task, see [Script Task--../../integration-services/control-flow/script-task.md) and [Configuring the Script Task in the Script Task Editor--../../integration-services/extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md). To learn about programming the Script task, see [Extending the Package with the Script Task--../../integration-services/extending-packages-scripting/task/extending-the-package-with-the-script-task.md).
+
+**Options**
+
+ **ScriptLanguage**
+ Select the scripting language for the task, either ..!NCLUDE-NotShown--msCoName--../../includes/msconame-md.md)] Visual Basic or ..!NCLUDE-NotShown--msCoName--../../includes/msconame-md.md)] Visual C#.
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_29"/>
+
+### 29. &nbsp; [Send Mail Task](control-flow/send-mail-task.md)
+
+*Updated: 2017-08-11* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_28) | [Next](#TitleNum_30))
+
+<!-- Source markdown line 85.  ms.author= "douglasl".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 d5bbc4a11b82d13afc861e2c657e3479e684c668 078a829e460f09734537907e3bbca2b8ea925b59  (PR=2816  ,  Filename=send-mail-task.md  ,  Dirpath=docs\integration-services\control-flow\  ,  MergeCommitSha40=8806c102eaec2c2540374bfaddc33b76d8f6e584) -->
+
+
+
+**Send Mail Task Editor (General Page)**
+
+  Use the **General page** of the **Send Mail Task Editor** dialog box to name and describe the Send Mail task.
+
+**Options**
+
+ **Name**
+ Provide a unique name for the Send Mail task. This name is used as the label in the task icon.
+
+ **Note** Task names must be unique within a package.
+
+ **Description**
+ Type a description of the Send Mail task.
+
+**Send Mail Task Editor (Mail Page)**
+
+  Use the **Mail** page of the **Send Mail Task Editor** dialog box to specify recipients, message type, and priority for a message. You can also attach files to the message. The message text can be a string you provide, a file connection to a file that contains the text, or the name of a variable that contains the text.
+
+**Options**
+
+ **SMTPConnection**
+ Select an SMTP connection manager in the list, or click **\<New connectionΓÇª>** to create a new connection manager.
+
+> [!IMPORTANT]
+>  The SMTP connection manager supports only anonymous authentication and Windows Authentication. It does not support basic authentication.
+
+ **Related Topics:** [SMTP Connection Manager--../../integration-services/connection-manager/smtp-connection-manager.md)
+
+ **From**
+ Specify the e-mail address of the sender.
+
+ **To**
+ Provide the e-mail addresses of the recipients, delimited by semicolons.
+
+ **Cc**
+ Specify the e-mail addresses, delimited by semicolons, of individuals who also receive copies of the message.
+
+ **Bcc**
+ Specify the e-mail addresses, delimited by semicolons, of individuals who receive blind carbon copies (Bcc) copies of the message.
+
+ **Subject**
+ Provide a subject for the e-mail message.
+
+ **MessageSourceType**
+ Select the source type of the message. This property has the options listed in the following table.
+
+|Value|Description|
+|-----------|-----------------|
+|**Direct input**|Set the source to the message text. Selecting this value displays the dynamic option, **MessageSource**.|
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_30"/>
+
+### 30. &nbsp; [Transfer Database Task](control-flow/transfer-database-task.md)
+
+*Updated: 2017-08-11* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_29) | [Next](#TitleNum_31))
+
+<!-- Source markdown line 87.  ms.author= "douglasl".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 0fcada8d067090d5783103998f31e27ba414c8fe 31243e65a259a8e0b90bcc3f10a7646272769daa  (PR=2816  ,  Filename=transfer-database-task.md  ,  Dirpath=docs\integration-services\control-flow\  ,  MergeCommitSha40=8806c102eaec2c2540374bfaddc33b76d8f6e584) -->
+
+
+
+**Transfer Database Task Editor (General Page)**
+
+  Use the **General** page of the **Transfer Database Task Editor** dialog box to name and describe the Transfer Database task. The Transfer Database task copies or moves a ..!NCLUDE-NotShown--ssNoVersion--../../includes/ssnoversion-md.md)] database between two instances of ..!NCLUDE-NotShown--ssNoVersion--../../includes/ssnoversion-md.md)]. This task can also be used to copy a database within the same server.
+
+**Options**
+
+ **Name**
+ Type a unique name for the Transfer Database task. This name is used as the label in the task icon.
+
+> [!NOTE]
+>  Task names must be unique within a package.
+
+ **Description**
+ Type a description of the Transfer Database task.
+
+**Transfer Database Task Editor (Databases Page)**
+
+  Use the **Databases** page of the **Transfer Database Task Editor** dialog box to specify properties for the source and destination databases involved in the Transfer Database task. The Transfer Database task copies or moves a ..!NCLUDE-NotShown--ssNoVersion--../../includes/ssnoversion-md.md)] database between two instances of ..!NCLUDE-NotShown--ssNoVersion--../../includes/ssnoversion-md.md)]. This task can also be used to copy a database within the same server.
+
+**Options**
+
+ **SourceConnection**
+ Select a SMO connection manager in the list, or click **\<New connection...>** to create a new connection to the source server.
+
+ **DestinationConnection**
+ Select a SMO connection manager in the list, or click **\<New connection...>** to create a new connection to the destination server.
+
+ **DestinationDatabaseName**
+ Specify the name of the ..!NCLUDE-NotShown--ssNoVersion--../../includes/ssnoversion-md.md)] database on the destination server.
+
+ To automatically populate this field with the source database name, specify the **SourceConnection** and **SourceDatabaseName** first.
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_31"/>
+
+### 31. &nbsp; [Transfer Error Messages Task](control-flow/transfer-error-messages-task.md)
+
+*Updated: 2017-08-11* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_30) | [Next](#TitleNum_32))
+
+<!-- Source markdown line 79.  ms.author= "douglasl".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 999755b04df7feec6b2459f51778b028954a2e0e 979a96617096a091ea06d9b796eee9e95be99ba9  (PR=2816  ,  Filename=transfer-error-messages-task.md  ,  Dirpath=docs\integration-services\control-flow\  ,  MergeCommitSha40=8806c102eaec2c2540374bfaddc33b76d8f6e584) -->
+
+
+
+**Transfer Error Messages Task Editor (General Page)**
+
+  Use the **General** page of the **Transfer Error Messages Task Editor** dialog box to name and describe the Transfer Error Messages task. The Transfer Error Messages task transfers one or more ..!NCLUDE-NotShown--ssNoVersion--../../includes/ssnoversion-md.md)] user-defined error messages between instances of ..!NCLUDE-NotShown--ssNoVersion--../../includes/ssnoversion-md.md)].
+
+**Options**
+
+ **Name**
+ Type a unique name for the Transfer Error Messages task. This name is used as the label in the task icon.
+
+> [!NOTE]
+>  Task names must be unique within a package.
+
+ **Description**
+ Type a description of the Transfer Error Messages task.
+
+**Transfer Error Messages Task Editor (Messages Page)**
+
+  Use the **Messages** page of the **Transfer Error Messages Task Editor** dialog box to specify properties for copying one or more ..!NCLUDE-NotShown--ssNoVersion--../../includes/ssnoversion-md.md)] user-defined error messages from one instance of ..!NCLUDE-NotShown--ssNoVersion--../../includes/ssnoversion-md.md)] to another.
+
+**Options**
+
+ **SourceConnection**
+ Select a SMO connection manager in the list, or click **\<New connection...>** to create a new connection to the source server.
+
+ **DestinationConnection**
+ Select a SMO connection manager in the list, or click **\<New connection...>** to create a new connection to the destination server.
+
+ **IfObjectExists**
+ Select whether the task should overwrite existing user-defined error messages, skip existing messages, or fail if error messages of the same name already exist on the destination server.
+
+ **TransferAllErrorMessages**
+ Select whether the task should copy all or only the specified user-defined messages from the source server to the destination server.
+
+ This property has the options listed in the following table:
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_32"/>
+
+### 32. &nbsp; [Transfer Jobs Task](control-flow/transfer-jobs-task.md)
+
+*Updated: 2017-08-11* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_31) | [Next](#TitleNum_33))
+
+<!-- Source markdown line 76.  ms.author= "douglasl".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 e9204b664b818dd6346754fab1b40233b702975a 0c8b9d88d6d01dcd6098a746ab1009df0d714534  (PR=2816  ,  Filename=transfer-jobs-task.md  ,  Dirpath=docs\integration-services\control-flow\  ,  MergeCommitSha40=8806c102eaec2c2540374bfaddc33b76d8f6e584) -->
+
+
+
+**Transfer Jobs Task Editor (General Page)**
+
+  Use the **General** page of the **Transfer Jobs Task Editor** dialog box to name and describe the Transfer Jobs task.
+
+> [!NOTE]
+>  Only members of the **sysadmin** fixed server role or one of the ..!NCLUDE-NotShown--ssNoVersion](../../includes/ssnoversion-md.md)] Agent fixed database roles on the destination server can successfully create jobs there. To access jobs on the source server, users must be a member of at least the **SQLAgentUserRole** fixed database role there. For more information about ..!NCLUDE-NotShown--ssNoVersion](../../includes/ssnoversion-md.md)] Agent fixed database roles and their permissions, see [SQL Server Agent Fixed Database Roles](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).
+
+**Options**
+
+ **Name**
+ Type a unique name for the Transfer Jobs task. This name is used as the label in the task icon.
+
+> [!NOTE]
+>  Task names must be unique within a package.
+
+ **Description**
+ Type a description of the Transfer Jobs task.
+
+**Transfer Jobs Task Editor (Jobs Page)**
+
+  Use the **Jobs** page of the **Transfer Jobs Task Editor** dialog box to specify properties for copying one or more ..!NCLUDE-NotShown--ssNoVersion--../../includes/ssnoversion-md.md)] Agent jobs from one instance of ..!NCLUDE-NotShown--ssNoVersion--../../includes/ssnoversion-md.md)] to another.
+
+> [!NOTE]
+>  To access jobs on the source server, users must be a member of at least the **SQLAgentUserRole** fixed database role on the server. To successfully create jobs on the destination server, the user must be a member of the **sysadmin** fixed server role or one of the ..!NCLUDE-NotShown--ssNoVersion](../../includes/ssnoversion-md.md)] Agent fixed database roles. For more information about ..!NCLUDE-NotShown--ssNoVersion](../../includes/ssnoversion-md.md)] Agent fixed database roles and their permissions, see [SQL Server Agent Fixed Database Roles](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_33"/>
+
+### 33. &nbsp; [Transfer Logins Task](control-flow/transfer-logins-task.md)
+
+*Updated: 2017-08-11* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_32) | [Next](#TitleNum_34))
+
+<!-- Source markdown line 82.  ms.author= "douglasl".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 ccb42ae78ccbda8471be85fd5ed747e1f8c16bfd 7c4fb7964429d451e6f817c5035cd5171712e109  (PR=2816  ,  Filename=transfer-logins-task.md  ,  Dirpath=docs\integration-services\control-flow\  ,  MergeCommitSha40=8806c102eaec2c2540374bfaddc33b76d8f6e584) -->
+
+
+
+**Transfer Logins Task Editor (General Page)**
+
+  Use the **General** page of the **Transfer Logins Task Editor** dialog box to name and describe the Transfer Logins task.
+
+**Options**
+
+ **Name**
+ Type a unique name for the Transfer Logins task. This name is used as the label in the task icon.
+
+> [!NOTE]
+>  Task names must be unique within a package.
+
+ **Description**
+ Type a description of the Transfer Logins task.
+
+**Transfer Logins Task Editor (Logins Page)**
+
+  Use the **Logins** page of the **Transfer Logins Task Editor** dialog box to specify properties for copying one or more ..!NCLUDE-NotShown--ssNoVersion--../../includes/ssnoversion-md.md)] logins from one instance of ..!NCLUDE-NotShown--ssNoVersion--../../includes/ssnoversion-md.md)] to another.
+
+> [!IMPORTANT]
+>  When the Transfer Logins task is executed, logins are created on the destination server with random passwords and the passwords are disabled. To use these logins, a member of the **sysadmin** fixed server role must change the passwords and then enable them. The **sa** login cannot be transferred.
+
+**Options**
+
+ **SourceConnection**
+ Select a SMO connection manager in the list, or click **\<New connection...>** to create a new connection to the source server.
+
+ **DestinationConnection**
+ Select a SMO connection manager in the list, or click **\<New connection...>** to create a new connection to the destination server.
+
+ **LoginsToTransfer**
+ Select the ..!NCLUDE-NotShown--ssNoVersion--../../includes/ssnoversion-md.md)] logins to copy from the source to the destination server. This property has the options listed in the following table:
+
+|Value|Description|
+|-----------|-----------------|
+|**AllLogins**|All ..!NCLUDE-NotShown--ssNoVersion--../../includes/ssnoversion-md.md)] logins on the source server will be copied to the destination server.|
+|**SelectedLogins**|Only logins specified with **LoginsList** will be copied to the destination server.|
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_34"/>
+
+### 34. &nbsp; [Transfer Master Stored Procedures Task](control-flow/transfer-master-stored-procedures-task.md)
+
+*Updated: 2017-08-11* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_33) | [Next](#TitleNum_35))
+
+<!-- Source markdown line 80.  ms.author= "douglasl".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 dc2bb4e5e45a0c210de7d51fb5afc0a11616fabf 98d0f869e4e882ca73eb44b4ab2650fdc72d2369  (PR=2816  ,  Filename=transfer-master-stored-procedures-task.md  ,  Dirpath=docs\integration-services\control-flow\  ,  MergeCommitSha40=8806c102eaec2c2540374bfaddc33b76d8f6e584) -->
+
+
+
+**Transfer Master Stored Procedures Task Editor (General Page)**
+
+  Use the **General** page of the **Transfer Master Stored Procedures Task Editor** dialog box to name and describe the Transfer Master Stored Procedures task.
+
+> [!NOTE]
+>  This task transfers only user-defined stored procedures owned by **dbo** from a **master** database on the source server to a **master** database on the destination server. Users must be granted the CREATE PROCEDURE permission in the **master** database on the destination server or be members of the **sysadmin** fixed server role on the destination server to create stored procedures there.
+
+**Options**
+
+ **Name**
+ Type a unique name for the Transfer Master Stored Procedures task. This name is used as the label in the task icon.
+
+> [!NOTE]
+>  Task names must be unique within a package.
+
+ **Description**
+ Type a description of the Transfer Master Stored Procedures task.
+
+**Transfer Master Stored Procedures Task Editor (Stored Procedures Page)**
+
+  Use the **Stored Procedures** page of the **Transfer Master Stored Procedures Task Editor** dialog box to specify properties for copying one or more user-defined stored procedures from the **master** database in one instance of ..!NCLUDE-NotShown--ssNoVersion--../../includes/ssnoversion-md.md)] instance to a **master** database in another instance of ..!NCLUDE-NotShown--ssNoVersion--../../includes/ssnoversion-md.md)].
+
+> [!NOTE]
+>  This task transfers only user-defined stored procedures owned by **dbo** from a **master** database on the source server to a **master** database on the destination server. Users must be granted the CREATE PROCEDURE permission in the **master** database on the destination server or be members of the **sysadmin** fixed server role on the destination server to create stored procedures there.
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_35"/>
+
+### 35. &nbsp; [Transfer SQL Server Objects Task](control-flow/transfer-sql-server-objects-task.md)
+
+*Updated: 2017-08-11* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_34) | [Next](#TitleNum_36))
+
+<!-- Source markdown line 121.  ms.author= "douglasl".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 f053082839b18a9f770ddb8016509a60f7a31e18 76a3469b4c686c9fe2e04df29345d0b3a57f4a5b  (PR=2816  ,  Filename=transfer-sql-server-objects-task.md  ,  Dirpath=docs\integration-services\control-flow\  ,  MergeCommitSha40=8806c102eaec2c2540374bfaddc33b76d8f6e584) -->
+
+
+
+**Transfer SQL Server Objects Task Editor (General Page)**
+
+  Use the **General** page of the **Transfer SQL Server Objects Task Editor** dialog box to name and describe the Transfer ..!NCLUDE-NotShown--ssNoVersion--../../includes/ssnoversion-md.md)] Objects task.
+
+> [!NOTE]
+>  The user who creates the Transfer ..!NCLUDE-NotShown--ssNoVersion--../../includes/ssnoversion-md.md)] Objects task must have adequate permissions on the source server objects to select them for copying, and permission to access the destination server database where the objects will be transferred.
+
+**Options**
+
+ **Name**
+ Type a unique name for the Transfer ..!NCLUDE-NotShown--ssNoVersion--../../includes/ssnoversion-md.md)] Objects task. This name is used as the label in the task icon.
+
+> [!NOTE]
+>  Task names must be unique within a package.
+
+ **Description**
+ Type a description of the Transfer ..!NCLUDE-NotShown--ssNoVersion--../../includes/ssnoversion-md.md)] Objects task.
+
+**Transfer SQL Server Objects Task Editor (Objects Page)**
+
+  Use the **Objects** page of the **Transfer SQL Server Objects Task Editor** dialog box to specify properties for copying one or more ..!NCLUDE-NotShown--ssNoVersion--../../includes/ssnoversion-md.md)] objects from one instance of ..!NCLUDE-NotShown--ssNoVersion--../../includes/ssnoversion-md.md)] to another. Tables, views, stored procedures, and user-defined functions are a few examples of ..!NCLUDE-NotShown--ssNoVersion--../../includes/ssnoversion-md.md)] objects that you can copy.
+
+> [!NOTE]
+>  The user who creates the Transfer ..!NCLUDE-NotShown--ssNoVersion--../../includes/ssnoversion-md.md)] Objects task must have sufficient permissions on the source server objects to select them for copying, and permission to access the destination server database where the objects will be transferred.
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_36"/>
+
+### 36. &nbsp; [Web Service Task](control-flow/web-service-task.md)
+
+*Updated: 2017-08-11* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_35) | [Next](#TitleNum_37))
+
+<!-- Source markdown line 79.  ms.author= "douglasl".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 02ee0d1ec1052f15e91ae32c36d9fc5e13b21f81 aa8f84b87494178031c8adc0e434392d6b3c4e74  (PR=2816  ,  Filename=web-service-task.md  ,  Dirpath=docs\integration-services\control-flow\  ,  MergeCommitSha40=8806c102eaec2c2540374bfaddc33b76d8f6e584) -->
+
+
+
+**Web Service Task Editor (General Page)**
+
+  Use the **General** page of the **Web Services Task Editor** dialog box to specify an HTTP connection manager, specify the location of the Web Services Description Language (WSDL) file the Web Service task uses, describe the Web Services task, and download the WSDL file.
+
+**Options**
+
+ **HTTPConnection**
+ Select a connection manager in the list, or click \<**New connectionΓÇª**> to create a new connection manager.
+
+> [!IMPORTANT]
+>  The HTTP connection manager supports only anonymous authentication and basic authentication. It does not support Windows Authentication.
+
+ **Related Topics:**  [HTTP Connection Manager--../../integration-services/connection-manager/http-connection-manager.md), [HTTP Connection Manager Editor &#40;Server Page&#41;--../../integration-services/connection-manager/http-connection-manager-editor-server-page.md)
+
+ **WSDLFile**
+ Type the fully qualified path of a WSDL file that is local to the computer, or click the browse button **(ΓÇª)** and locate this file.
+
+ If you have already manually downloaded the WSDL file to the computer, select this file. However, if the WSDL file has not yet been downloaded, follow these steps:
+
+-   Create an empty file that has the ".wsdl" file name extension.
+
+-   Select this empty file for the **WSDLFile** option.
+
+-   Set the value of **OverwriteWSDLFile** to **True** to enable the empty file to be overwritten with the actual WSDL file.
+
+-   Click **Download WSDL** to download the actual WSDL file and overwrite the empty file.
+
+    > [!NOTE]
+    >  The **Download WSDL** option is not enabled until you provide the name of an existing local file in the **WSDLFile** box.
+
+ **OverwriteWSDLFile**
+ Indicate whether the WSDL file for the Web Service task can be overwritten.
+
+ If you intend to download the WSDL file by using the **Download WSDL** button, set this value to **True**.
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_37"/>
+
+### 37. &nbsp; [WMI Data Reader Task](control-flow/wmi-data-reader-task.md)
+
+*Updated: 2017-08-11* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_36) | [Next](#TitleNum_38))
+
+<!-- Source markdown line 98.  ms.author= "douglasl".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 38442dc4c1e01ea2bfa2eaec138816884a08f26b 998a1b4e41d8178408b7b40538472ad59a5b7f42  (PR=2816  ,  Filename=wmi-data-reader-task.md  ,  Dirpath=docs\integration-services\control-flow\  ,  MergeCommitSha40=8806c102eaec2c2540374bfaddc33b76d8f6e584) -->
+
+
+
+**WMI Data Reader Task Editor (General Page)**
+
+  Use the **General** page of the **WMI Data Reader Task Editor** dialog box to name and describe the WMI Data Reader task.
+
+  For more information about WMI Query Language (WQL), see the Windows Management Instrumentation topic, [Querying with WQL](http://go.microsoft.com/fwlink/?LinkId=79045), in the MSDN Library.
+
+**Options**
+
+ **Name**
+ Provide a unique name for the WMI Data Reader task. This name is used as the label in the task icon.
+
+> [!NOTE]
+>  Task names must be unique within a package.
+
+ **Description**
+ Type a description of the WMI Data Reader task.
+
+**WMI Data Reader Task Editor (WMI Options Page)**
+
+  Use the **WMI Options** page of the **WMI Data Reader Task Editor** dialog box to specify the source of the Windows Management Instrumentation Query Language (WQL) query and the destination of the query result.
+
+ For more information about WMI Query Language (WQL), see the Windows Management Instrumentation topic, [Querying with WQL](http://go.microsoft.com/fwlink/?LinkId=79045), in the MSDN Library.
+
+**Static Options**
+
+ **WMIConnectionName**
+ Select a WMI connection manager in the list, or click \<**New WMI ConnectionΓÇª**> to create a new connection manager.
+
+ **Related Topics:** [WMI Connection Manager--../../integration-services/connection-manager/wmi-connection-manager.md), [WMI Connection Manager Editor--../../integration-services/connection-manager/wmi-connection-manager-editor.md)
+
+ **WQLQuerySourceType**
+ Select the source type of the WQL query that the task runs. This property has the options listed in the following table.
+
+|Value|Description|
+|-----------|-----------------|
+|**Direct input**|Set the source to a WQL query. Selecting this value displays the dynamic option **WQLQuerySourceType**.|
+|**File connection**|Select a file that contains the WQL query. Selecting this value displays the dynamic option **WQLQuerySourceType**.|
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_38"/>
+
+### 38. &nbsp; [WMI Event Watcher Task](control-flow/wmi-event-watcher-task.md)
+
+*Updated: 2017-08-11* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_37) | [Next](#TitleNum_39))
+
+<!-- Source markdown line 105.  ms.author= "douglasl".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 704e02f9f80adc441407ebd08ac91112f497524b a5d0fb9fe8d8d412d37cbf29850f876127b89fac  (PR=2816  ,  Filename=wmi-event-watcher-task.md  ,  Dirpath=docs\integration-services\control-flow\  ,  MergeCommitSha40=8806c102eaec2c2540374bfaddc33b76d8f6e584) -->
+
+
+
+**WMI Event Watcher Task Editor (General Page)**
+
+  Use the **General** page of the **WMI Event Watcher Task Editor** dialog box to name and describe the WMI Event Watcher task.
+
+ For more information about WMI Query Language (WQL), see the Windows Management Instrumentation topic, [Querying with WQL](http://go.microsoft.com/fwlink/?LinkId=79045), in the MSDN Library.
+
+**Options**
+
+ **Name**
+ Provide a unique name for the WMI Event Watcher task. This name is used as the label in the task icon.
+
+> [!NOTE]
+>  Task names must be unique within a package.
+
+ **Description**
+ Type a description of the WMI Event Watcher task.
+
+**WMI Event Watcher Task Editor (WMI Options Page)**
+
+  Use the **WMI Options** page of the **WMI Event Watcher Task Editor** dialog box to specify the source of the Windows Management Instrumentation Query Language (WQL) query and how the WMI Event Watcher task responds to Microsoft Windows Instrumentation (WMI) events.
+
+ For more information about WMI Query Language (WQL), see the Windows Management Instrumentation topic, [Querying with WQL](http://go.microsoft.com/fwlink/?LinkId=79045), in the MSDN Library.
+
+**Static Options**
+
+ **WMIConnectionName**
+ Select a WMI connection manager in the list, or click \<**New WMI ConnectionΓÇª**> to create a new connection manager.
+
+ **Related Topics:** [WMI Connection Manager--../../integration-services/connection-manager/wmi-connection-manager.md), [WMI Connection Manager Editor--../../integration-services/connection-manager/wmi-connection-manager-editor.md)
+
+ **WQLQuerySourceType**
+ Select the source type of the WQL query that the task runs. This property has the options listed in the following table.
+
+|Value|Description|
+|-----------|-----------------|
+|**Direct input**|Set the source to a WQL query. Selecting this value displays the dynamic option, **WQLQuerySource**.|
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_39"/>
+
+### 39. &nbsp; [XML Task](control-flow/xml-task.md)
+
+*Updated: 2017-08-11* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_38) | [Next](#TitleNum_40))
+
+<!-- Source markdown line 137.  ms.author= "douglasl".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 e83766b84be9c3eb8c5e3af020b0fb3ae33389cf d642ed459704c76257e3d8e37ab1ccd7f81e8b4c  (PR=2816  ,  Filename=xml-task.md  ,  Dirpath=docs\integration-services\control-flow\  ,  MergeCommitSha40=8806c102eaec2c2540374bfaddc33b76d8f6e584) -->
+
+
+
+**XML Task Editor (General Page)**
+
+  Use the **General Node** of the **XML Task Editor** dialog box to specify the operation type and configure the operation.
+
+ To learn about this task, see [Validate XML with the XML Task--../../integration-services/control-flow/validate-xml-with-the-xml-task.md). For information about working with XML documents and data, see "[Employing XML in the .NET Framework](http://go.microsoft.com/fwlink/?LinkId=56214)" in the MSDN Library.
+
+**Static Options**
+
+ **OperationType**
+ Select the operation type from the list. This property has the options listed in the following table.
+
+|Value|Description|
+|-----------|-----------------|
+|**Validate**|Validates the XML document against a Document Type Definition (DTD) or XML Schema definition (XSD) schema. Selecting this option displays the dynamic options in section, **Validate**.|
+|**XSLT**|Performs XSL transformations on XML documents. Selecting this option displays the dynamic options in section, **XSLT**.|
+|**XPATH**|Performs XPath queries and evaluations. Selecting this option displays the dynamic options in section, **XPATH**.|
+|**Merge**|Merges two XML documents. Selecting this option displays the dynamic options in section, **Merge**.|
+|**Diff**|Compares two XML documents. Selecting this option displays the dynamic options in section, **Diff**.|
+|**Patch**|Applies the output from the Diff operation to create a new document. Selecting this option displays the dynamic options in section, **Patch**.|
+
+ **SourceType**
+ Select the source type of the XML document. This property has the options listed in the following table.
+
+|Value|Description|
+|-----------|-----------------|
+|**Direct input**|Set the source to an XML document.|
+|**File connection**|Select a file that contains the XML document.|
+|**Variable**|Set the source to a variable that contains the XML document.|
+
+ **Source**
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_40"/>
+
+### 40. &nbsp; [ADO NET Destination](data-flow/ado-net-destination.md)
+
+*Updated: 2017-08-17* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_39) | [Next](#TitleNum_41))
+
+<!-- Source markdown line 57.  ms.author= "douglasl".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 fb72399b01f96ad392844c5c6293f45aebcc66d3 c134466ca7102b89dd5d7aa8f231a43f3f14171a  (PR=2871  ,  Filename=ado-net-destination.md  ,  Dirpath=docs\integration-services\data-flow\  ,  MergeCommitSha40=48361ad1e135f0a145682a69ecc6901f3c313bfb) -->
+
+
+
+**ADO NET Destination Editor (Connection Manager Page)**
+
+  Use the **Connection Manager** page of the **ADO NET Destination Editor** dialog box to select the ..!NCLUDE-NotShown--vstecado--../../includes/vstecado-md.md)] connection for the destination. This page also lets you select a table or view from the database.
+
+ **To open the Connection Manager page**
+
+1.  In ..!NCLUDE-NotShown--ssBIDevStudioFull--../../includes/ssbidevstudiofull-md.md)], open the ..!NCLUDE-NotShown--ssISnoversion--../../includes/ssisnoversion-md.md)] package that has the ADO NET destination.
+
+2.  On the **Data Flow** tab, double-click the ADO NET destination.
+
+3.  In the **ADO NET Destination Editor**, click **Connection Manager**.
+
+**Static Options**
+
+ **Connection manager**
+ Select an existing connection manager from the list, or create a new connection by clicking **New**.
+
+ **New**
+ Create a new connection manager by using the **Configure ADO.NET Connection Manager** dialog box.
+
+ **Use a table or view**
+ Select an existing table or view from the list, or create a new table by clicking **New**..
+
+ **New**
+ Create a new table or view by using the **Create Table** dialog box.
+
+> [!NOTE]
+>  When you click **New**, ..!NCLUDE-NotShown--ssISnoversion--../../includes/ssisnoversion-md.md)] generates a default CREATE TABLE statement based on the connected data source. This default CREATE TABLE statement will not include the FILESTREAM attribute even if the source table includes a column with the FILESTREAM attribute declared. To run an ..!NCLUDE-NotShown--ssISnoversion--../../includes/ssisnoversion-md.md)] component with the FILESTREAM attribute, first implement FILESTREAM storage on the destination database. Then, add the FILESTREAM attribute to the CREATE TABLE statement in the **Create Table** dialog box. For more information, see [Binary Large Object &#40;Blob&#41; Data &#40;SQL Server&#41;--../../relational-databases/blob/binary-large-object-blob-data-sql-server.md).
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_41"/>
+
+### 41. &nbsp; [ADO NET Source](data-flow/ado-net-source.md)
+
+*Updated: 2017-08-17* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_40) | [Next](#TitleNum_42))
+
+<!-- Source markdown line 89.  ms.author= "douglasl".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 8b016d13f56f33fd8815370dececac55cefac2a3 340fd66a8cf02aba3f89f0352fe6842c3261f350  (PR=2871  ,  Filename=ado-net-source.md  ,  Dirpath=docs\integration-services\data-flow\  ,  MergeCommitSha40=48361ad1e135f0a145682a69ecc6901f3c313bfb) -->
+
+
+
+**ADO NET Source Editor (Connection Manager Page)**
+
+  Use the **Connection Manager** page of the **ADO NET Source Editor** dialog box to select the ..!NCLUDE-NotShown--vstecado--../../includes/vstecado-md.md)] connection manager for the source. This page also lets you select a table or view from the database.
+
+ To learn more about the ADO NET source, see [ADO NET Source--../../integration-services/data-flow/ado-net-source.md).
+
+ **To open the Connection Manager page**
+
+1.  In ..!NCLUDE-NotShown--ssBIDevStudioFull--../../includes/ssbidevstudiofull-md.md)], open the ..!NCLUDE-NotShown--ssISnoversion--../../includes/ssisnoversion-md.md)] package that has the ADO NET source.
+
+2.  On the **Data Flow** tab, double-click the ADO NET source.
+
+3.  In the **ADO NET Source Editor**, click **Connection Manager**.
+
+**Static Options**
+
+ **ADO.NET connection manager**
+ Select an existing connection manager from the list, or create a new connection by clicking **New**.
+
+ **New**
+ Create a new connection manager by using the **Configure ADO.NET Connection Manager** dialog box.
+
+ **Data access mode**
+ Specify the method for selecting data from the source.
+
+|Option|Description|
+|------------|-----------------|
+|Table or view|Retrieve data from a table or view in the ..!NCLUDE-NotShown--vstecado--../../includes/vstecado-md.md)] data source.|
+|SQL command|Retrieve data from the ..!NCLUDE-NotShown--vstecado--../../includes/vstecado-md.md)] data source by using a SQL query.|
+
+ **Preview**
+ Preview results by using the **Data View** dialog box. **Preview** can display up to 200 rows.
+
+> [!NOTE]
+>  When you preview data, columns with a CLR user-defined type do not contain data. Instead the values \<value too big to display> or System.Byte[] display. The former displays when the data source is accessed by using the ..!NCLUDE-NotShown--vstecado--../../includes/vstecado-md.md)] provider, the latter when using the ..!NCLUDE-NotShown--ssNoVersion--../../includes/ssnoversion-md.md)] Native Client provider.
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_42"/>
+
+### 42. &nbsp; [CDC Source](data-flow/cdc-source.md)
+
+*Updated: 2017-08-17* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_41) | [Next](#TitleNum_43))
+
+<!-- Source markdown line 126.  ms.author= "douglasl".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 4df9f5b68f45881c4fe01372b48edad4f9a8663f da79a16ce3419ce6c7148d6484846c5c27cb09c5  (PR=2871  ,  Filename=cdc-source.md  ,  Dirpath=docs\integration-services\data-flow\  ,  MergeCommitSha40=48361ad1e135f0a145682a69ecc6901f3c313bfb) -->
+
+
+
+**Task List**
+
+ **To open the CDC Source Editor Connection Manager Page**
+
+1.  In ..!NCLUDE-NotShown--ssBIDevStudio--../../includes/ssbidevstudio-md.md)], open the ..!NCLUDE-NotShown--ssISCurrent--../../includes/ssiscurrent-md.md)] package that has the CDC source.
+
+2.  On the **Data Flow** tab, double-click the CDC source.
+
+3.  In the **CDC Source Editor**, click **Connection Manager**.
+
+**Options**
+
+ **ADO.NET connection manager**
+ Select an existing connection manager from the list, or click **New** to create a new connection. The connection must be to a ..!NCLUDE-NotShown--ssNoVersion--../../includes/ssnoversion-md.md)] database that is enabled for CDC and where the selected change table is located.
+
+ **New**
+ Click **New**. The **Configure ADO.NET Connection Manager Editor** dialog box opens where you can create a new connection manager
+
+ **CDC Table**
+ Select the CDC source table that contains the captured changes that you want read and feed to downstream SSIS components for processing.
+
+ **Capture instance**
+ Select or type in the name of the CDC capture instance with the CDC table to be read.
+
+ A captured source table can have one or two captured instances to handle seamless transitioning of table definition through schema changes. If more than one capture instance is defined for the source table being captured, select the capture instance you want to use here. The default capture instance name for a table [schema].[table] is \<schema>_\<table> but that actual capture instance names in use may be different. The actual table that is read from is the CDC table **cdc .\<capture-instance>_CT**.
+
+ **CDC Processing Mode**
+ Select the processing mode that best handles your processing needs. The possible options are:
+
+-   **All**: Returns the changes in the current CDC range without the **Before Update** values.
+
+-   **All with old values**: Returns the changes in the current CDC processing range including the old values (**Before Update**). For each Update operation, there will be two rows, one with the before-update values and one with the after-update value.
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_43"/>
+
+### 43. &nbsp; [Data Mining Model Training Destination](data-flow/data-mining-model-training-destination.md)
+
+*Updated: 2017-08-17* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_42) | [Next](#TitleNum_44))
+
+<!-- Source markdown line 50.  ms.author= "douglasl".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 954c795fa454986e5894565824c0b90049953238 add8df0423c0bd0a8be8e0e8ebef805ec19cc655  (PR=2871  ,  Filename=data-mining-model-training-destination.md  ,  Dirpath=docs\integration-services\data-flow\  ,  MergeCommitSha40=48361ad1e135f0a145682a69ecc6901f3c313bfb) -->
+
+
+
+**Data Mining Model Training Editor (Connection Tab)**
+
+  Use the **Connection** page of the **Data Mining Model Training Editor** dialog box to select a mining model to train.
+
+**Options**
+
+ **Connection manager**
+ Select from the list of existing ..!NCLUDE-NotShown--ssASnoversion--../../includes/ssasnoversion-md.md)] connections, or create a new ..!NCLUDE-NotShown--ssASnoversion--../../includes/ssasnoversion-md.md)] connection by using the **New** button described as follows.
+
+ **New**
+ Create a new connection by using the **Add Analysis Services Connection Manager** dialog box.
+
+ **Mining structure**
+ Select from the list of available mining structures, or create a new structure by clicking **New**.
+
+ **New**
+ Create a new mining structure and mining model by using the **Data Mining Wizard**.
+
+ **Mining models**
+ View the list of mining models associated with the selected mining structure.
+
+**Data Mining Model Training Editor (Columns Tab)**
+
+  Use the **Columns** page of the **Data Mining Model Training Editor** dialog box to map input columns to columns in the mining structure.
+
+**Options**
+
+ **Available Input Columns**
+ View the list of available input columns. Drag input columns to map them to mining structure columns.
+
+ **Mining Structure Columns**
+ View the list of mining structure columns. Drag mining structure columns to map them to available input columns.
+
+ **Input Column**
+ View input columns selected from the table above. To change or remove a mapping selection, use the list of **Available Input Columns**.
+
+ **Mining Structure Columns**
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_44"/>
+
+### 44. &nbsp; [Data Streaming Destination](data-flow/data-streaming-destination.md)
+
+*Updated: 2017-08-17* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_43) | [Next](#TitleNum_45))
+
+<!-- Source markdown line 61.  ms.author= "douglasl".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 102b334f559add575e4246aa41c871865d847b34 d68116e835e81755bd6389e151e8a0fdde50f6f7  (PR=2871  ,  Filename=data-streaming-destination.md  ,  Dirpath=docs\integration-services\data-flow\  ,  MergeCommitSha40=48361ad1e135f0a145682a69ecc6901f3c313bfb) -->
+
+
+
+**Configure Data Streaming Destination**
+
+  Configure the Data Streaming Destination by using the **Advanced Editor for Data Streaming Destination** dialog box. Open this dialog box by double clicking the component or by right-clicking the component in the data flow designer and then clicking **Edit**.
+
+ This dialog box has three tabs: **Component Properties**, **Input Columns**, and **Input and Output Properties**.
+
+**Component Properties tab**
+
+ This tab has the following editable fields:
+
+|Field|Description|
+|-----------|-----------------|
+|Name|Name of the data streaming destination component in the package.|
+|ValidateExternalMetadata|Indicates whether the component is validated using external data sources at design time. If set to false, validation against external data sources is delayed until runtime.|
+|IDColumnName|The view generated by the Data Feed Publish Wizard has this additional ID column. The ID column serves as the EntityKey for the output data from the data flow when the data is consumed as an OData feed by other applications.<br /><br /> The default name for this column is _ID. You can specify a different name for the ID column.|
+
+**Input Columns tab**
+
+ In the top pane of this tab, you see all the available input columns. Select the columns that you want to include in the output of this component. The selected columns are displayed in a list in the bottom pane. You can change the name of the output column by entering the new name for the **Output Alias** field in the list.
+
+**Input Output Properties tab**
+
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_45"/>
+
+### 45. &nbsp; [Dimension Processing Destination](data-flow/dimension-processing-destination.md)
+
+*Updated: 2017-08-17* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_44) | [Next](#TitleNum_46))
+
+<!-- Source markdown line 64.  ms.author= "douglasl".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 5c2e11709a80e2baa177d51c701b377be0939dbd e33c8fca2054d8a70d7e99bdf2969681b35ea5cc  (PR=2871  ,  Filename=dimension-processing-destination.md  ,  Dirpath=docs\integration-services\data-flow\  ,  MergeCommitSha40=48361ad1e135f0a145682a69ecc6901f3c313bfb) -->
+
+
+
+ **List of available dimensions**
+ Select the dimension to process.
+
+ **Processing method**
+ Select the processing method to apply to the dimension selected in the list. The default value of this option is **Full**.
+
+|Value|Description|
+|-----------|-----------------|
+|**Add (incremental)**|Perform an incremental processing of the dimension.|
+|**Full**|Perform full processing of the dimension.|
+|**Update**|Perform an update processing of the dimension.|
+
+**Dimension Processing Destination Editor (Mappings Page)**
+
+  Use the **Mappings** page of the **Dimension Processing Destination Editor** dialog box to map input columns to dimension columns.
+
+**Options**
+
+ **Available Input Columns**
+ View the list of available input columns. Use a drag-and-drop operation to map available input columns in the table to destination columns.
+
+ **Available Destination Columns**
+ View the list of available destination columns. Use a drag-and-drop operation to map available destination columns in the table to input columns.
+
+ **Input Column**
+ View input columns selected from the table above. You can change the mappings by using the list of **Available Input Columns**.
+
+ **Destination Column**
+ View each available destination column, and whether it is mapped or not.
+
+**Dimension Processing Destination Editor (Advanced Page)**
+
+  Use the **Advanced** page of the **Dimension Processing Destination Editor** dialog box to configure error handling.
+
+**Options**
+
+ **Use default error configuration.**
+ Specify whether to use the default ..!NCLUDE-NotShown--ssASnoversion--../../includes/ssasnoversion-md.md)] error handling. By default, this value is **True**.
+
+ **Key error action**
+ Specify how to handle records that have unacceptable key values.
+
+|Value|Description|
+|-----------|-----------------|
+|**ConvertToUnknown**|Convert the unacceptable key value to the **UnknownMember** value.|
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_46"/>
+
+### 46. &nbsp; [Excel Destination](data-flow/excel-destination.md)
+
+*Updated: 2017-08-17* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_45) | [Next](#TitleNum_47))
+
+<!-- Source markdown line 107.  ms.author= "douglasl".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 beaa9e8fd28f4803e09a00073388856652a2baa9 d85742237a074dbe0752a68980c966c3791350eb  (PR=2871  ,  Filename=excel-destination.md  ,  Dirpath=docs\integration-services\data-flow\  ,  MergeCommitSha40=48361ad1e135f0a145682a69ecc6901f3c313bfb) -->
+
+
+
+**Excel Destination Editor (Connection Manager Page)**
+
+  Use the **Connection Manager** page of the **Excel Destination Editor** dialog box to specify data source information, and to preview the results. The Excel destination loads data into a worksheet or a named range in a ..!NCLUDE-NotShown--ofprexcel--../../includes/ofprexcel-md.md)] workbook.
+
+> [!NOTE]
+>  The **CommandTimeout** property of the Excel destination is not available in the **Excel Destination Editor**, but can be set by using the **Advanced Editor**. In addition, certain Fast Load options are available only in the **Advanced Editor**. For more information on these properties, see the Excel Destination section of [Excel Custom Properties--../../integration-services/data-flow/excel-custom-properties.md).
+
+**Static Options**
+
+ **Excel connection manager**
+ Select an existing Excel connection manager from the list, or create a new connection by clicking **New**.
+
+ **New**
+ Create a new connection manager by using the **Excel Connection Manager** dialog box.
+
+ **Data access mode**
+ Specify the method for selecting data from the source.
+
+|Option|Description|
+|------------|-----------------|
+|Table or view|Loads data into a worksheet or named range in the Excel data source.|
+|Table name or view name variable|Specify the worksheet or range name in a variable.<br /><br /> **Related information**: [Use Variables in Packages](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|
+|SQL command|Load data into the Excel destination by using an SQL query.|
+
+ **Name of the Excel sheet**
+ Select the excel destination from the drop-down list. If the list is empty, click **New**.
+
+ **New**
+ Click **New** to launch the **Create Table** dialog box. When you click **OK**, the dialog box creates the excel file that the **Excel Connection Manager** points to.
+
+ **View Existing Data**
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_47"/>
+
+### 47. &nbsp; [Excel Source](data-flow/excel-source.md)
+
+*Updated: 2017-08-17* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_46) | [Next](#TitleNum_48))
+
+<!-- Source markdown line 102.  ms.author= "douglasl".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 4f7aed9a65d0d2545ffa2f5bceb6f5fb491632dc 754057f2c07c95a0a1af732eb083be44f28259f9  (PR=2871  ,  Filename=excel-source.md  ,  Dirpath=docs\integration-services\data-flow\  ,  MergeCommitSha40=48361ad1e135f0a145682a69ecc6901f3c313bfb) -->
+
+
+
+**Excel Source Editor (Connection Manager Page)**
+
+  Use the **Connection Manager** node of the **Excel Source Editor** dialog box to select the ..!NCLUDE-NotShown--ofprexcel--../../includes/ofprexcel-md.md)] workbook for the source to use. The Excel source reads data from a worksheet or named range in an existing workbook.
+
+> [!NOTE]
+>  The **CommandTimeout** property of the Excel source is not available in the **Excel Source Editor**, but can be set by using the **Advanced Editor**. For more information on this property, see the Excel Source section of [Excel Custom Properties--../../integration-services/data-flow/excel-custom-properties.md).
+
+**Static Options**
+
+ **OLE DB connection manager**
+ Select an existing Excel connection manager from the list, or create a new connection by clicking **New**.
+
+ **New**
+ Create a new connection manager by using the **Excel Connection Manager** dialog box.
+
+ **Data access mode**
+ Specify the method for selecting data from the source.
+
+|Value|Description|
+|-----------|-----------------|
+|Table or view|Retrieve data from a worksheet or named range in the Excel file.|
+|Table name or view name variable|Specify the worksheet or range name in a variable.<br /><br /> **Related information:** [Use Variables in Packages](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|
+|SQL command|Retrieve data from the Excel file by using a SQL query. |
+|SQL command from variable|Specify the SQL query text in a variable.|
+
+ **Preview**
+ Preview results by using the **Data View** dialog box. Preview can display up to 200 rows.
+
+**Data Access Mode Dynamic Options**
+
+
+**Data access mode = Table or view**
+
+ **Name of the Excel sheet**
+ Select the name of the worksheet or named range from a list of those available in the Excel workbook.
+
+**Data access mode = Table name or view name variable**
+
+ **Variable name**
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_48"/>
+
+### 48. &nbsp; [Flat File Destination](data-flow/flat-file-destination.md)
+
+*Updated: 2017-08-17* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_47) | [Next](#TitleNum_49))
+
+<!-- Source markdown line 54.  ms.author= "douglasl".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 7e5c916412951fd8724cffe32b808e2e8b8e1a65 bf7997cce0d4ed6f4eacec0bf05e71f5db3d887a  (PR=2871  ,  Filename=flat-file-destination.md  ,  Dirpath=docs\integration-services\data-flow\  ,  MergeCommitSha40=48361ad1e135f0a145682a69ecc6901f3c313bfb) -->
+
+
+
+**Flat File Destination Editor (Connection Manager Page)**
+
+  Use the **Connection Manager** page of the **Flat File Destination Editor** dialog box to select the flat file connection for the destination, and to specify whether to overwrite or append to the existing destination file. The flat file destination writes data to a text file. This text file can be in delimited, fixed width, fixed width with row delimiter, or ragged right format.
+
+**Options**
+
+ **Flat File connection manager**
+ Select an existing connection manager by using the list box, or create a new connection by clicking **New**.
+
+ **New**
+ Create a new connection by using the **Flat File Format** and **Flat File Connection Manager Editor** dialog boxes.
+
+ In addition to the standard flat file formats of delimited, fixed width, and ragged right, the **Flat File Format** dialog box has a fourth option, **Fixed width with row delimiters**. This option represents a special case of the ragged-right format in which ..!NCLUDE-NotShown--ssISnoversion--../../includes/ssisnoversion-md.md)] adds a dummy column as the final column of data. This dummy column ensures that the final column has a fixed width.
+
+ The **Fixed width with row delimiters** option is not available in the **Flat File Connection Manager Editor**. If necessary, you can emulate this option in the editor. To emulate this option, on the **General** page of the **Flat File Connection Manager Editor**, for **Format**, select **Ragged right**. Then on the **Advanced** page of the editor, add a new dummy column as the final column of data.
+
+ **Overwrite data in the file**
+ Indicate whether to overwrite an existing file, or to append data to it.
+
+ **Header**
+ Type a block of text to insert into the file before any data is written. Use this option to include additional information, such as column headings.
+
+ **Preview**
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_49"/>
+
+### 49. &nbsp; [Flat File Source](data-flow/flat-file-source.md)
+
+*Updated: 2017-08-17* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_48) | [Next](#TitleNum_50))
+
+<!-- Source markdown line 66.  ms.author= "douglasl".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 0d6ab23b93d13fdd91297f212a30ab88fccb2887 94c0219966db426ce694d85c2d26968f4c060b39  (PR=2871  ,  Filename=flat-file-source.md  ,  Dirpath=docs\integration-services\data-flow\  ,  MergeCommitSha40=48361ad1e135f0a145682a69ecc6901f3c313bfb) -->
+
+
+
+**Flat File Source Editor (Connection Manager Page)**
+
+  Use the **Connection Manager** page of the **Flat File Source Editor** dialog box to select the connection manager that the Flat File source will use. The Flat File source reads data from a text file, which can be in a delimited, fixed width, or mixed format.
+
+ A Flat File source can use one of the following types of connection managers:
+
+-   A Flat File connection manager if the source is a single flat file. For more information, see [Flat File Connection Manager--../../integration-services/connection-manager/flat-file-connection-manager.md).
+
+-   A Multiple Flat Files connection manager if the source is multiple flat files and the Data Flow task is inside a loop container, such as the For Loop container. On each loop of the container, the Flat File source loads data from the next file name that the Multiple Flat Files connection manager provides. For more information, see [Multiple Flat Files Connection Manager--../../integration-services/connection-manager/multiple-flat-files-connection-manager.md).
+
+**Options**
+
+ **Flat file connection manager**
+ Select an existing connection manager from the list, or create a new connection manager by clicking **New**.
+
+ **New**
+ Create a new connection manager by using the **Flat File Connection Manager Editor** dialog box.
+
+ **Retain null values from the source as null values in the data flow**
+ Specify whether to keep null values when data is extracted. The default value of this property is **false**. When this value is f**alse**, the Flat File source replaces null values from the source data with appropriate default values for each column, such as empty strings for string columns and zero for numeric columns.
+
+ **Preview**
+ Preview results by using the **Data View** dialog box. Preview can display up to 200 rows.
+
+**Flat File Source Editor (Columns Page)**
+
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_50"/>
+
+### 50. &nbsp; [OData Source](data-flow/odata-source.md)
+
+*Updated: 2017-08-22* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_49) | [Next](#TitleNum_51))
+
+<!-- Source markdown line 56.  ms.author= "douglasl".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 7f3befb3bea3c6bcd24a86bfd900b13d2b212266 e091dca73f7d576c78712105bd0c8a32e72f6aff  (PR=2918  ,  Filename=odata-source.md  ,  Dirpath=docs\integration-services\data-flow\  ,  MergeCommitSha40=ee79d0f1b31963b7d13aa07bf4603246139c3a7c) -->
+
+
+
+ After you select or create a connection manager, the dialog box displays the OData protocol version that the connection manager is using.
+
+ **New**
+ Create a new connection manager by using the **OData Connection Manager Editor** dialog box.
+
+ **Use collection or resource path**
+ Specify the method for selecting data from the source.
+
+|Option|Description|
+|------------|-----------------|
+|Collection|Retrieve data from the OData source by using a collection name.|
+|Resource Path|Retrieve data from the OData source by using a resource path.|
+
+ **Query options**
+ Specify options for the query. For example: `$top=5`
+
+ **Feed url**
+ Displays the read-only feed URL based on options you selected on this dialog box.
+
+ **Preview**
+ Preview results by using the **Preview** dialog box. **Preview** can display up to 20 rows.
+
+**Dynamic Options**
+
+
+**Use collection or resource path = Collection**
+
+ **Collection**
+ Select a collection from the drop-down list.
+
+**Use collection or resource path = Resource Path**
+
+ **Resource path**
+ Type a resource path. For example: Employees
+
+**OData Source Editor (Columns Page)**
+
+  Use the **Columns** page of the **OData Source Editor** dialog box to select external (source) columns to be included in the output and map them to output columns.
+
+**Options**
+
+ **Available External Columns**
+ View the list of available source columns in the data source. Use check boxes in the list to add to or remove columns to the table at the bottom of the page. The selected columns are added to the output.
+
+ **External Column**
+ View source columns that you chose to be included in the output.
+
+ **Output Column**
+ Provide a unique name for each output column. The default is the name of the selected external (source) column; however, you can choose any unique, descriptive name.
+
+**OData Source Editor (Error Output Page)**
+
+  Use the **Error Output** page of the **OData Source Editor** dialog box to select error handling options and to set properties on error output columns.
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_51"/>
+
+### 51. &nbsp; [ODBC Destination](data-flow/odbc-destination.md)
+
+*Updated: 2017-08-17* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_50) | [Next](#TitleNum_52))
+
+<!-- Source markdown line 88.  ms.author= "douglasl".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 369c98c09dd4d9ede4f40ca5404cfd46ae85da14 f78b3f733224fb756079466e7ff1026160045abf  (PR=2871  ,  Filename=odbc-destination.md  ,  Dirpath=docs\integration-services\data-flow\  ,  MergeCommitSha40=48361ad1e135f0a145682a69ecc6901f3c313bfb) -->
+
+
+
+**Task List**
+
+
+-   In ..!NCLUDE-NotShown--ssBIDevStudio--../../includes/ssbidevstudio-md.md)], open the ..!NCLUDE-NotShown--ssISCurrent--../../includes/ssiscurrent-md.md)] package that has the ODBC destination.
+
+-   On the **Data Flow** tab, double-click the ODBC destination.
+
+-   In the **ODBC Destination Editor**, click **Connection Manager**.
+
+**Options**
+
+
+**Connection manager**
+
+ Select an existing ODBC connection manager from the list, or click New to create a new connection. The connection can be to any ODBC-supported database.
+
+**New**
+
+ Click **New**. The **Configure ODBC Connection Manager Editor** dialog box opens where you can create a new connection manager.
+
+**Data Access Mode**
+
+ Select the method for loading data to the destination. The options are shown in the following table:
+
+|Option|Description|
+|------------|-----------------|
+|Table Name - Batch|Select this option to configure the ODBC destination to work in batch mode. When you select this option the following options are available:|
+||**Name of the table or the view**: Select an available table or view from the list.<br /><br /> This list contains the first 1000 tables only. If your database contains more than 1000 tables, you can type the beginning of a table name or use the (\*) wild card to enter any part of the name to display the table or tables you want to use.<br /><br /> **Batch size**: Type the size of the batch for bulk loading. This is the number of rows loaded as a batch|
+|Table Name - Row by Row|Select this option to configure the ODBC destination to insert each of the rows into the destination table one at a time. When you select this option the following option is available:|
+||**Name of the table or the view**: Select an available table or view from the database from the list.<br /><br /> This list contains the first 1000 tables only. If your database contains more than 1000 tables, you can type the beginning of a table name or use the (*) wild card to enter any part of the name to display the table or tables you want to use.|
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_52"/>
+
+### 52. &nbsp; [ODBC Source](data-flow/odbc-source.md)
+
+*Updated: 2017-08-17* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_51) | [Next](#TitleNum_53))
+
+<!-- Source markdown line 92.  ms.author= "douglasl".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 d55bd4e5e4aeb6776e6329f37a195752ffa76c4b 05f5cac4877f4655bea8bb971dc8105d8070d45e  (PR=2871  ,  Filename=odbc-source.md  ,  Dirpath=docs\integration-services\data-flow\  ,  MergeCommitSha40=48361ad1e135f0a145682a69ecc6901f3c313bfb) -->
+
+
+
+-   In ..!NCLUDE-NotShown--ssBIDevStudio--../../includes/ssbidevstudio-md.md)], open the ..!NCLUDE-NotShown--ssISCurrent--../../includes/ssiscurrent-md.md)] package that has the ODBC source.
+
+-   On the **Data Flow** tab, double-click the ODBC source.
+
+**Options**
+
+
+**Connection manager**
+
+ Select an existing ODBC connection manager from the list, or click **New** to create a new connection. The connection can be to any ODBC-supported database.
+
+**New**
+
+ Click **New**. The **Configure ODBC Connection Manager Editor** dialog box opens where you can create a new ODBC connection manager.
+
+**Data Access Mode**
+
+ Select the method for selecting data from the source. The options are shown in the following table:
+
+|Option|Description|
+|------------|-----------------|
+|Table Name|Retrieve data from a table or view in the ODBC data source. When you select this option, select a value from the list for the following:|
+||**Name of the table or the view**: Select an available table or view from the list or type a regular expression to identify the table.|
+||This list contains the first 1000 tables only. If your database contains more than 1000 tables, you can type the beginning of a table name or use the (*) wild card to enter any part of the name to display the table or tables you want to use.|
+|SQL command|Retrieve data from the ODBC data source by using an SQL query. You should write the query in the syntax of the source database you are working with. When you select this option, enter a query in one of the following ways:|
+||Enter the text of the SQL query in the **SQL command text** field.|
+||Click **Browse** to load the SQL query from a text file.|
+||Click **Parse query** to verify the syntax of the query text.|
+
+**Preview**
+
+ Click **Preview** to view up to the first 200 rows of the data extracted from the table or view you selected.
+
+**ODBC Source Editor (Columns Page)**
+
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_53"/>
+
+### 53. &nbsp; [OLE DB Destination](data-flow/ole-db-destination.md)
+
+*Updated: 2017-08-17* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_52) | [Next](#TitleNum_54))
+
+<!-- Source markdown line 118.  ms.author= "douglasl".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 d6f4ec8e7b645ffc73fc1709944ace91726d0aa3 174822294da7799699322221b4972e62d6f8a8ff  (PR=2871  ,  Filename=ole-db-destination.md  ,  Dirpath=docs\integration-services\data-flow\  ,  MergeCommitSha40=48361ad1e135f0a145682a69ecc6901f3c313bfb) -->
+
+
+
+**OLE DB Destination Editor (Connection Manager Page)**
+
+  Use the **Connection Manager** page of the **OLE DB Destination Editor** dialog box to select the OLE DB connection for the destination. This page also lets you select a table or view from the database.
+
+> [!NOTE]
+>  If the data source is ..!NCLUDE-NotShown--msCoName--../../includes/msconame-md.md)] Office Excel 2007, the data source requires a different connection manager than earlier versions of Excel. For more information, see [Connect to an Excel Workbook--../../integration-services/connection-manager/connect-to-an-excel-workbook.md).
+
+> [!NOTE]
+>  The **CommandTimeout** property of the OLE DB destination is not available in the **OLE DB Destination Editor**, but can be set by using the **Advanced Editor**. In addition, certain fast load options are available only in the **Advanced Editor**. For more information on these properties, see the OLE DB Destination section of [OLE DB Custom Properties--../../integration-services/data-flow/ole-db-custom-properties.md).
+
+**Static Options**
+
+ **OLE DB connection manager**
+ Select an existing connection manager from the list, or create a new connection by clicking **New**.
+
+ **New**
+ Create a new connection manager by using the **Configure OLE DB Connection Manager** dialog box.
+
+ **Data access mode**
+ Specify the method for loading data into the destination. Loading double-byte character set (DBCS) data requires use of one of the fast load options. For more information about the fast load data access modes, which are optimized for bulk inserts, see [OLE DB Destination--../../integration-services/data-flow/ole-db-destination.md).
+
+|Option|Description|
+|------------|-----------------|
+|Table or view|Load data into a table or view in the OLE DB destination.|
+|Table or view - fast load|Load data into a table or view in the OLE DB destination and use the fast load option. For more information about the fast load data access modes, which are optimized for bulk inserts, see [OLE DB Destination--../../integration-services/data-flow/ole-db-destination.md).|
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_54"/>
+
+### 54. &nbsp; [OLE DB Source](data-flow/ole-db-source.md)
+
+*Updated: 2017-08-17* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_53) | [Next](#TitleNum_55))
+
+<!-- Source markdown line 114.  ms.author= "douglasl".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 7924d5bda29e6b1c37754960e6bb5d96943f0eef 2c41de561d37cab4db9c793477ca4e998b058d36  (PR=2871  ,  Filename=ole-db-source.md  ,  Dirpath=docs\integration-services\data-flow\  ,  MergeCommitSha40=48361ad1e135f0a145682a69ecc6901f3c313bfb) -->
+
+
+
+**OLE DB Source Editor (Connection Manager Page)**
+
+  Use the **Connection Manager** page of the **OLE DB Source Editor** dialog box to select the OLE DB connection manager for the source. This page also lets you select a table or view from the database.
+
+> [!NOTE]
+>  To load data from a data source that uses ..!NCLUDE-NotShown--msCoName--../../includes/msconame-md.md)] Office Excel 2007, use an OLE DB source. You cannot use an Excel source to load data from an Excel 2007 data source. For more information, see [Configure OLE DB Connection Manager--../../integration-services/connection-manager/configure-ole-db-connection-manager.md).
+>
+>  To load data from a data source that uses ..!NCLUDE-NotShown--msCoName--../../includes/msconame-md.md)] Office Excel 2003 or earlier, use an Excel source. For more information, see [Excel Source Editor &#40;Connection Manager Page&#41;--../../integration-services/data-flow/excel-source-editor-connection-manager-page.md).
+
+> [!NOTE]
+>  The **CommandTimeout** property of the OLE DB source is not available in the **OLE DB Source Editor**, but can be set by using the **Advanced Editor**. For more information on this property, see the Excel Source section of [OLE DB Custom Properties--../../integration-services/data-flow/ole-db-custom-properties.md).
+
+**Open the OLE DB Source Editor (Connection Manager Page)**
+
+
+1.  Add the OLE DB source to the ..!NCLUDE-NotShown--ssISnoversion--../../includes/ssisnoversion-md.md)] package, in ..!NCLUDE-NotShown--ssBIDevStudioFull--../../includes/ssbidevstudiofull-md.md)].
+
+2.  Right-click the source component and when click **Edit**.
+
+3.  Click **Connection Manager**.
+
+**Static Options**
+
+ **OLE DB connection manager**
+ Select an existing connection manager from the list, or create a new connection by clicking **New**.
+
+ **New**
+ Create a new connection manager by using the **Configure OLE DB Connection Manager** dialog box.
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_55"/>
+
+### 55. &nbsp; [Partition Processing Destination](data-flow/partition-processing-destination.md)
+
+*Updated: 2017-08-17* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_54) | [Next](#TitleNum_56))
+
+<!-- Source markdown line 58.  ms.author= "douglasl".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 dfe1daeafbedc0fa1367198d058148f7673c9c00 0c3e1d4fab7bfb8be13b9b63f5fc555a99b64076  (PR=2871  ,  Filename=partition-processing-destination.md  ,  Dirpath=docs\integration-services\data-flow\  ,  MergeCommitSha40=48361ad1e135f0a145682a69ecc6901f3c313bfb) -->
+
+
+
+**Partition Processing Destination Editor (Connection Manager Page)**
+
+  Use the **Connection Manager** page of the **Partition Processing Destination Editor** dialog box to specify a connection to a ..!NCLUDE-NotShown--ssNoVersion--../../includes/ssnoversion-md.md)] ..!NCLUDE-NotShown--ssASnoversion--../../includes/ssasnoversion-md.md)] project or to an instance of ..!NCLUDE-NotShown--ssASnoversion--../../includes/ssasnoversion-md.md)].
+
+> [!NOTE]
+>  Tasks described here do not apply to Analysis Services tabular models.  You cannot map input columns to partition columns for tabular models. You can instead use the Analysis Services Execute DDL task [Analysis Services Execute DDL Task--../../integration-services/control-flow/analysis-services-execute-ddl-task.md) to process the partition.
+
+**Options**
+
+ **Connection manager**
+ Select an existing connection manager from the list, or create a new connection by clicking **New**.
+
+ **New**
+ Create a new connection by using the **Add Analysis Services Connection Manager** dialog box.
+
+ **List of available partitions**
+ Select the partition to process.
+
+ **Processing method**
+ Select the processing method. The default value of this option is **Full**.
+
+|Value|Description|
+|-----------|-----------------|
+|Add (incremental)|Perform an incremental processing of the partition.|
+|Full|Perform full processing of the partition.|
+|Data only|Perform an update processing of the partition.|
+
+**Partition Processing Destination Editor (Mappings Page)**
+
+  Use the **Mappings** page of the **Partition Processing Destination Editor** dialog box to map input columns to partition columns.
+
+> [!NOTE]
+>  Tasks described here do not apply to Analysis Services tabular models.  You cannot map input columns to partition columns for tabular models. You can instead use the Analysis Services Execute DDL task [Analysis Services Execute DDL Task--../../integration-services/control-flow/analysis-services-execute-ddl-task.md) to process the partition.
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_56"/>
+
+### 56. &nbsp; [Raw File Destination](data-flow/raw-file-destination.md)
+
+*Updated: 2017-08-17* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_55) | [Next](#TitleNum_57))
+
+<!-- Source markdown line 135.  ms.author= "douglasl".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 70c028618a6c4fb99b3a0f64533298103319f2f1 3eef4b68305d9053f759bbbad8142a42f55a9aae  (PR=2871  ,  Filename=raw-file-destination.md  ,  Dirpath=docs\integration-services\data-flow\  ,  MergeCommitSha40=48361ad1e135f0a145682a69ecc6901f3c313bfb) -->
+
+
+
+**Raw File Destination Editor (Connection Manager Page)**
+
+  Use the Raw File Destination Editor to configure the Raw File destination to write raw data to a file.
+
+ **What do you want to do?**
+
+-   [Open the Raw File Destination Editor--#open)
+
+-   [Set options on the Connection Manager tab--#connection)
+
+-   [Set options on the Columns tab--#mapping)
+
+**<a name="open"></a> Open the Raw File Destination Editor**
+
+
+1.  Add the Raw File destination to an ..!NCLUDE-NotShown--ssISnoversion--../../includes/ssisnoversion-md.md)] package, in ..!NCLUDE-NotShown--ssBIDevStudioFull--../../includes/ssbidevstudiofull-md.md)].
+
+2.  Right-click the component and then click **Edit**.
+
+**<a name="connection"></a> Set options on the Connection Manager tab**
+
+ **Access mode**
+ Select how the file name is specified. Select **File name** to enter the file name and path directly, of **File name from variable** to specify a variable that contains the file name.
+
+ **File name** or **Variable name**
+ Enter the name and path of the raw file, or select the variable that contains the file name.
+
+ **Write option**
+ Select the method used to create and write to the file.
+
+ **Generate initial raw file**
+ Click the button to generate an empty raw file that contains only the columns (metadata-only file), without having to run the package. The file contains the columns that you selected on the **Columns** page of the **Raw File Destination Editor**. You can point the Raw File source to this metadata-only file.
+
+ When you click **Generate initial raw file**, a message box appears. Click **OK** to proceed with creating the file. Click **Cancel** to select a different list of columns on the **Columns** page.
+
+**<a name="mapping"></a> Set options on the Columns tab**
+
+ **Available Input Columns**
+ Select one or more input columns to write to the raw file.
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_57"/>
+
+### 57. &nbsp; [SQL Server Destination](data-flow/sql-server-destination.md)
+
+*Updated: 2017-08-17* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_56) | [Next](#TitleNum_58))
+
+<!-- Source markdown line 119.  ms.author= "douglasl".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 302fefb2df0cdd3ff2968f6e49569baab71eb96b 737b9b90d12cbe9a87d2ff339f56906920ebaf2c  (PR=2871  ,  Filename=sql-server-destination.md  ,  Dirpath=docs\integration-services\data-flow\  ,  MergeCommitSha40=48361ad1e135f0a145682a69ecc6901f3c313bfb) -->
+
+
+
+**SQL Destination Editor (Connection Manager Page)**
+
+  Use the **Connection Manager** page of the **SQL Destination Editor** dialog box to specify data source information, and to preview the results. The ..!NCLUDE-NotShown--ssNoVersion--../../includes/ssnoversion-md.md)] destination loads data into tables or views in a ..!NCLUDE-NotShown--msCoName--../../includes/msconame-md.md)] ..!NCLUDE-NotShown--ssNoVersion--../../includes/ssnoversion-md.md)] database.
+
+**Options**
+
+ **OLE DB connection manager**
+ Select an existing connection from the list, or create a new connection by clicking **New**.
+
+ **New**
+ Create a new connection by using the **Configure OLE DB Connection Manager** dialog box.
+
+ **Use a table or view**
+ Select an existing table or view from the list, or create a new connection by clicking **New**.
+
+ **New**
+ Create a new table by using the **Create Table** dialog box.
+
+> [!NOTE]
+>  When you click **New**, ..!NCLUDE-NotShown--ssISnoversion--../../includes/ssisnoversion-md.md)] generates a default CREATE TABLE statement based on the connected data source. This default CREATE TABLE statement will not include the FILESTREAM attribute even if the source table includes a column with the FILESTREAM attribute declared. To run an ..!NCLUDE-NotShown--ssISnoversion--../../includes/ssisnoversion-md.md)] component with the FILESTREAM attribute, first implement FILESTREAM storage on the destination database. Then, add the FILESTREAM attribute to the CREATE TABLE statement in the **Create Table** dialog box. For more information, see [Binary Large Object &#40;Blob&#41; Data &#40;SQL Server&#41;--../../relational-databases/blob/binary-large-object-blob-data-sql-server.md).
+
+ **Preview**
+ Preview results by using the **Preview Query Results** dialog box. Preview can display up to 200 rows.
+
+**SQL Destination Editor (Mappings Page)**
+
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_58"/>
+
+### 58. &nbsp; [Aggregate Transformation](data-flow/transformations/aggregate-transformation.md)
+
+*Updated: 2017-08-18* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_57) | [Next](#TitleNum_59))
+
+<!-- Source markdown line 130.  ms.author= "douglasl".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 2a885e6909e56bd78b1f1e946d5613632aeca9d9 21870c85ceaa8d237cf7c8bd64550bba5ea0e386  (PR=2889  ,  Filename=aggregate-transformation.md  ,  Dirpath=docs\integration-services\data-flow\transformations\  ,  MergeCommitSha40=0f62d1b2f4dd7f11e5ecfb72dbba46d4e896f92e) -->
+
+
+
+**Aggregate Transformation Editor (Aggregations Tab)**
+
+  Use the **Aggregations** tab of the **Aggregate Transformation Editor** dialog box to specify columns for aggregation and aggregation properties. You can apply multiple aggregations. This transformation does not generate an error output.
+
+> [!NOTE]
+>  The options for key count, key scale, distinct key count, and distinct key scale apply at the component level when specified on the **Advanced** tab, at the output level when specified in the advanced display of the **Aggregations** tab, and at the column level when specified in the column list at the bottom of the **Aggregations** tab.
+>
+>  In the Aggregate transformation, **Keys** and **Keys scale** refer to the number of groups that are expected to result from a **Group by** operation. **Count distinct keys** and **Count distinct scale** refer to the number of distinct values that are expected to result from a **Distinct count** operation.
+
+**Options**
+
+ **Advanced / Basic**
+ Display or hide options to configure multiple aggregations for multiple outputs. By default, the Advanced options are hidden.
+
+ **Aggregation Name**
+ In the Advanced display, type a friendly name for the aggregation.
+
+ **Group By Columns**
+ In the Advanced display, select columns for grouping by using the **Available Input Columns** list as described below.
+
+ **Key Scale**
+ In the Advanced display, optionally specify the approximate number of keys that the aggregation can write. By default, the value of this option is **Unspecified**. If both the **Key Scale** and **Keys** properties are set, the value of **Keys** takes precedence.
+
+|Value|Description|
+|-----------|-----------------|
+|Unspecified|The Key Scale property is not used.|
+|Low|Aggregation can write approximately 500,000 keys.|
+|Medium|Aggregation can write approximately 5,000,000 keys.|
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_59"/>
+
+### 59. &nbsp; [Audit Transformation](data-flow/transformations/audit-transformation.md)
+
+*Updated: 2017-08-18* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_58) | [Next](#TitleNum_60))
+
+<!-- Source markdown line 57.  ms.author= "douglasl".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 9a07d4ce227d26813951621373f581a11d1db1f5 c8fed3dd1ac5fded663e6bc8c4576170875a3686  (PR=2889  ,  Filename=audit-transformation.md  ,  Dirpath=docs\integration-services\data-flow\transformations\  ,  MergeCommitSha40=0f62d1b2f4dd7f11e5ecfb72dbba46d4e896f92e) -->
+
+
+
+**Audit Transformation Editor**
+
+  The Audit transformation enables the data flow in a package to include data about the environment in which the package runs. For example, the name of the package, computer, and operator can be added to the data flow. ..!NCLUDE-NotShown--ssISnoversion--../../../includes/ssisnoversion-md.md)] includes system variables that provide this information.
+
+**Options**
+
+ **Output column name**
+ Provide the name for a new output column that will contain the audit information.
+
+ **Audit type**
+ Select an available system variable to supply the audit information.
+
+|Value|Description|
+|-----------|-----------------|
+|**Execution instance GUID**|Insert the GUID that uniquely identifies the execution instance of the package.|
+|**Package ID**|Insert the GUID that uniquely identifies the package.|
+|**Package name**|Insert the package name.|
+|**Version ID**|Insert the GUID that uniquely identifies the version of the package.|
+|**Execution start time**|Insert the time at which package execution started.|
+|**Machine name**|Insert the name of the computer on which the package was launched.|
+|**User name**|Insert the login name of the user who launched the package.|
+|**Task name**|Insert the name of the Data Flow task with which the Audit transformation is associated.|
+|**Task ID**|Insert the GUID that uniquely identifies the Data Flow task with which the Audit transformation is associated.|
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_60"/>
+
+### 60. &nbsp; [Character Map Transformation](data-flow/transformations/character-map-transformation.md)
+
+*Updated: 2017-08-18* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_59) | [Next](#TitleNum_61))
+
+<!-- Source markdown line 84.  ms.author= "douglasl".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 886cd5885bf6183a1543b271789bc4648f3b1cf0 1441675254bc78fd44e240829f80c9757d4a23c4  (PR=2889  ,  Filename=character-map-transformation.md  ,  Dirpath=docs\integration-services\data-flow\transformations\  ,  MergeCommitSha40=0f62d1b2f4dd7f11e5ecfb72dbba46d4e896f92e) -->
+
+
+
+**Character Map Transformation Editor**
+
+  Use the **Character Map Transformation Editor** dialog box to select the string functions to apply to column data and to specify whether mapping is an in-place change or added as a new column.
+
+**Options**
+
+ **Available Input Columns**
+ Use the check boxes to select the columns to transform using string functions. Your selections appear in the table below.
+
+ **Input Column**
+ View input columns selected from the table above. You can also change or remove a selection by using the list of available input columns.
+
+ **Destination**
+ Specify whether to save the results of the string operations in place, using the existing column, or to save the modified data as a new column.
+
+|Value|Description|
+|-----------|-----------------|
+|New column|Save the data in a new column. Assign the column name under **Output Alias**.|
+|In-place change|Save the modified data in the existing column.|
+
+ **Operation**
+ Select from the list the string functions to apply to column data.
+
+|Value|Description|
+|-----------|-----------------|
+|Lowercase|Convert to lower case.|
+|Uppercase|Convert to upper case.|
+|Byte reversal|Convert by reversing byte order.|
+|Hiragana|Convert Japanese katakana characters to hiragana.|
+|Katakana|Convert Japanese hiragana characters to katakana.|
+|Half width|Convert full-width characters to half width.|
+|Full width|Convert half-width characters to full width.|
+|Linguistic casing|Apply linguistic rules of casing (Unicode simple case mapping for Turkic and other locales) instead of the system rules.|
+|Simplified Chinese|Convert traditional Chinese characters to simplified Chinese.|
+|Traditional Chinese|Convert simplified Chinese characters to traditional Chinese.|
+
+ **Output Alias**
+ Type an alias for each output column. The default is **Copy of** followed by the input column name; however, you can choose any unique, descriptive name.
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_61"/>
+
+### 61. &nbsp; [Conditional Split Transformation](data-flow/transformations/conditional-split-transformation.md)
+
+*Updated: 2017-08-18* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_60) | [Next](#TitleNum_62))
+
+<!-- Source markdown line 69.  ms.author= "douglasl".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 d6afd3857be0b31e01980b78aaf45edda0db57c4 fb791fe68081e0986a93d135402861e246ea67ee  (PR=2889  ,  Filename=conditional-split-transformation.md  ,  Dirpath=docs\integration-services\data-flow\transformations\  ,  MergeCommitSha40=0f62d1b2f4dd7f11e5ecfb72dbba46d4e896f92e) -->
+
+
+
+**Conditional Split Transformation Editor**
+
+  Use the **Conditional Split Transformation Editor** dialog box to create expressions, set the order in which expressions are evaluated, and name the outputs of a conditional split. This dialog box includes mathematical, string, and date/time functions and operators that you can use to build expressions. The first condition that evaluates as true determines the output to which a row is directed.
+
+> [!NOTE]
+>  The Conditional Split transformation directs each input row to one output only. If you enter multiple conditions, the transformation sends each row to the first output for which the condition is true and disregards subsequent conditions for that row. If you need to evaluate several conditions successively, you may need to concatenate multiple Conditional Split transformations in the data flow.
+
+**Options**
+
+ **Order**
+ Select a row and use the arrow keys at right to change the order in which to evaluate expressions.
+
+ **Output Name**
+ Provide an output name. The default is a numbered list of cases; however, you can choose any unique, descriptive name.
+
+ **Condition**
+ Type an expression or build one by dragging from the list of available columns, variables, functions, and operators.
+
+ The value of this property can be specified by using a property expression.
+
+ **Related topics:**  [Integration Services &#40;SSIS&#41; Expressions--../../../integration-services/expressions/integration-services-ssis-expressions.md), [Operators &#40;SSIS Expression&#41;--../../../integration-services/expressions/operators-ssis-expression.md), and [Functions &#40;SSIS Expression&#41;--../../../integration-services/expressions/functions-ssis-expression.md)
+
+ **Default output name**
+ Type a name for the default output, or use the default.
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_62"/>
+
+### 62. &nbsp; [Copy Column Transformation](data-flow/transformations/copy-column-transformation.md)
+
+*Updated: 2017-08-18* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_61) | [Next](#TitleNum_63))
+
+<!-- Source markdown line 43.  ms.author= "douglasl".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 40ca866a0f1fde848e745c112e3c45c276fe9603 061a9a291bdac798060ecb7fdc97f70a986704b2  (PR=2889  ,  Filename=copy-column-transformation.md  ,  Dirpath=docs\integration-services\data-flow\transformations\  ,  MergeCommitSha40=0f62d1b2f4dd7f11e5ecfb72dbba46d4e896f92e) -->
+
+
+
+**Copy Column Transformation Editor**
+
+  Use the **Copy Column Transformation Editor** dialog box to select columns to copy and to assign names for the new output columns.
+
+> [!NOTE]
+>  When you are simply copying all of your source data to a destination, it may not be necessary to use the Copy Column transformation. In some scenarios, you can connect a source directly to a destination, when no data transformation is required. In these circumstances it is often preferable to use the SQL Server Import and Export Wizard to create your package for you. Later you can enhance and reconfigure the package as needed. For more information, see [SQL Server Import and Export Wizard--~/integration-services/import-export-data/welcome-to-sql-server-import-and-export-wizard.md).
+
+**Options**
+
+ **Available Input Columns**
+ Select columns to copy by using the check boxes. Your selections add input columns to the table below.
+
+ **Input Column**
+ Select columns to copy from the list of available input columns. Your selections are reflected in the check box selections in the **Available Input Columns** table.
+
+ **Output Alias**
+ Type an alias for each new output column. The default is **Copy of**, followed by the name of the input column; however, you can choose any unique, descriptive name.
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_63"/>
+
+### 63. &nbsp; [Data Conversion Transformation](data-flow/transformations/data-conversion-transformation.md)
+
+*Updated: 2017-08-18* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_62) | [Next](#TitleNum_64))
+
+<!-- Source markdown line 52.  ms.author= "douglasl".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 5693fdb46ca7692423d3cec01efbca29ed209ce0 7dbfc43bb13e6fa98c49b235dadeb7f67893ccb3  (PR=2889  ,  Filename=data-conversion-transformation.md  ,  Dirpath=docs\integration-services\data-flow\transformations\  ,  MergeCommitSha40=0f62d1b2f4dd7f11e5ecfb72dbba46d4e896f92e) -->
+
+
+
+**Data Conversion Transformation Editor**
+
+  Use the **Data Conversion Transformation Editor** dialog box to select the columns to convert, select the data type to which the column is converted, and set conversion attributes.
+
+> [!NOTE]
+>  The **FastParse** property of the output columns of the Data Conversion transformation is not available in the **Data Conversion Transformation Editor**, but can be set by using the **Advanced Editor**. For more information on this property, see the Data Conversion Transformation section of [Transformation Custom Properties--../../../integration-services/data-flow/transformations/transformation-custom-properties.md).
+
+**Options**
+
+ **Available Input Columns**
+ Select columns to convert by using the check boxes. Your selections add input columns to the table below.
+
+ **Input Column**
+ Select columns to convert from the list of available input columns. Your selections are reflected in the check box selections above.
+
+ **Output Alias**
+ Type an alias for each new column. The default is **Copy of** followed by the input column name; however, you can choose any unique, descriptive name.
+
+ **Data Type**
+ Select an available data type from the list. For more information, see [Integration Services Data Types--../../../integration-services/data-flow/integration-services-data-types.md).
+
+ **Length**
+ Set the column length for string data.
+
+ **Precision**
+ Set the precision for numeric data.
+
+ **Scale**
+ Set the scale for numeric data.
+
+ **Code page**
+ Select the appropriate code page for columns of type DT_STR.
+
+ **Configure error output**
+ Specify how to handle row-level errors by using the [Configure Error Output](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) dialog box.
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_64"/>
+
+### 64. &nbsp; [Data Mining Query Transformation](data-flow/transformations/data-mining-query-transformation.md)
+
+*Updated: 2017-08-18* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_63) | [Next](#TitleNum_65))
+
+<!-- Source markdown line 45.  ms.author= "douglasl".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 39e98e5453dfad65f56e1fa9994d8615828a4533 7a196a71e07a412dcbdb118cff69edef54091e2c  (PR=2889  ,  Filename=data-mining-query-transformation.md  ,  Dirpath=docs\integration-services\data-flow\transformations\  ,  MergeCommitSha40=0f62d1b2f4dd7f11e5ecfb72dbba46d4e896f92e) -->
+
+
+
+**Data Mining Query Transformation Editor (Mining Model Tab)**
+
+  Use the **Mining Model** tab of the **Data Mining Query Transformation Editor** dialog box to select the data mining structure and its mining models.
+
+**Options**
+
+ **Connection**
+ Select an existing Analysis Services connection by using the list box, or create a new connection by using the **New** button described as follows.
+
+ **New**
+ Create a new connection by using the **Add Analysis Services Connection Manager** dialog box.
+
+ **Mining structure**
+ Select from the list of available mining model structures.
+
+ **Mining models**
+ View the list of mining models associated with the selected data mining structure.
+
+**Data Mining Query Transformation Editor (Query Tab)**
+
+  Use the **Query** tab of the **Data Mining Query Transformation Editor** dialog box to create a prediction query.
+
+**Options**
+
+ **Data mining query**
+ Type a Data Mining Extensions (DMX) query directly into the text box.
+
+ **Build New Query**
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_65"/>
+
+### 65. &nbsp; [Derived Column Transformation](data-flow/transformations/derived-column-transformation.md)
+
+*Updated: 2017-08-18* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_64) | [Next](#TitleNum_66))
+
+<!-- Source markdown line 74.  ms.author= "douglasl".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 c064550178ca664a88a562fa21ab253524b38947 62375d863d7d668c1fd44bd6627a38b518f73104  (PR=2889  ,  Filename=derived-column-transformation.md  ,  Dirpath=docs\integration-services\data-flow\transformations\  ,  MergeCommitSha40=0f62d1b2f4dd7f11e5ecfb72dbba46d4e896f92e) -->
+
+
+
+**Derived Column Transformation Editor**
+
+  Use the **Derived Column Transformation Editor** dialog box to create expressions that populate new or replacement columns.
+
+**Options**
+
+ **Variables and Columns**
+ Build an expression that uses a variable or an input column by dragging the variable or column from the list of available variables and columns to an existing table row in the pane below, or to a new row at the bottom of the list.
+
+ **Functions and Operators**
+ Build an expression that uses a function or an operator to evaluate input data and direct output data by dragging functions and operators from the list to the pane below.
+
+ **Derived Column Name**
+ Provide a derived column name. The default is a numbered list of derived columns; however, you can choose any unique, descriptive name.
+
+ **Derived Column**
+ Select a derived column from the list. Choose whether to add the derived column as a new output column, or to replace the data in an existing column.
+
+ **Expression**
+ Type an expression or build one by dragging from the previous list of available columns, variables, functions, and operators.
+
+ The value of this property can be specified by using a property expression.
+
+ **Related topics**: [Integration Services &#40;SSIS&#41; Expressions--../../../integration-services/expressions/integration-services-ssis-expressions.md), [Operators &#40;SSIS Expression&#41;--../../../integration-services/expressions/operators-ssis-expression.md), and [Functions &#40;SSIS Expression&#41;--../../../integration-services/expressions/functions-ssis-expression.md)
+
+ **Data Type**
+ If adding data to a new column, the **Derived Column TransformationEditor** dialog box automatically evaluates the expression and sets the data type appropriately. The value of this column is read-only. For more information, see [Integration Services Data Types--../../../integration-services/data-flow/integration-services-data-types.md).
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_66"/>
+
+### 66. &nbsp; [DQS Cleansing Transformation](data-flow/transformations/dqs-cleansing-transformation.md)
+
+*Updated: 2017-08-18* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_65) | [Next](#TitleNum_67))
+
+<!-- Source markdown line 56.  ms.author= "douglasl".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 2bfb2e2556166501aefb8a17d8d481c730ce69e7 01ddf77b25dc8222f15e45aecea00947d0af74e7  (PR=2889  ,  Filename=dqs-cleansing-transformation.md  ,  Dirpath=docs\integration-services\data-flow\transformations\  ,  MergeCommitSha40=0f62d1b2f4dd7f11e5ecfb72dbba46d4e896f92e) -->
+
+
+
+**DQS Cleansing Transformation Editor Dialog Box**
+
+  Use the **DQS Cleansing Transformation Editor** dialog box to correct data using Data Quality Services (DQS). For more information, see [Data Quality Services Concepts--../../../data-quality-services/data-quality-services-concepts.md).
+
+ **What do you want to do?**
+
+-   [Open the DQS Cleansing Transformation Editor--#open)
+
+-   [Set options on the Connection Manager tab--#connection)
+
+-   [Set options on the Mapping tab--#mapping)
+
+-   [Set options on the Advanced tab--#advanced)
+
+-   [Set the options in the DQS Cleansing Connection Manager dialog box--#manager)
+
+**<a name="open"></a> Open the DQS Cleansing Transformation Editor**
+
+
+1.  Add the DQS Cleansing Transformation to ..!NCLUDE-NotShown--ssISnoversion--../../../includes/ssisnoversion-md.md)] package, in ..!NCLUDE-NotShown--ssBIDevStudioFull--../../../includes/ssbidevstudiofull-md.md)].
+
+2.  Right-click the component and then click **Edit**.
+
+**<a name="connection"></a> Set options on the Connection Manager tab**
+
+ **Data quality connection manager**
+ Select an existing DQS connection manager from the list, or create a new connection by clicking **New**.
+
+ **New**
+ Create a new connection manager by using the **DQS Cleansing Connection Manager** dialog box. See [Set the options in the DQS Cleansing Connection Manager dialog box--#manager)
+
+ **Data Quality Knowledge Base**
+ Select an existing DQS knowledge base for the connected data source. For more information about the DQS knowledge base, see [DQS Knowledge Bases and Domains--../../../data-quality-services/dqs-knowledge-bases-and-domains.md).
+
+ **Encrypt connection**
+ Specifiy whether to encrypt the connection, in order to encrypt the data transfer between the DQS Server and ..!NCLUDE-NotShown--ssISnoversion--../../../includes/ssisnoversion-md.md)].
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_67"/>
+
+### 67. &nbsp; [Export Column Transformation](data-flow/transformations/export-column-transformation.md)
+
+*Updated: 2017-08-18* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_66) | [Next](#TitleNum_68))
+
+<!-- Source markdown line 72.  ms.author= "douglasl".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 ed179f16df56632a6de204f5dfea25f983404907 a099ece6209da3dd086fdf74af3c0f5c3ef6c0b5  (PR=2889  ,  Filename=export-column-transformation.md  ,  Dirpath=docs\integration-services\data-flow\transformations\  ,  MergeCommitSha40=0f62d1b2f4dd7f11e5ecfb72dbba46d4e896f92e) -->
+
+
+
+**Export Column Transformation Editor (Columns Page)**
+
+  Use the **Columns** page of the **Export Column Transformation Editor** dialog box to specify columns in the data flow to extract to files. You can specify whether the Export Column transformation appends data to a file or overwrites an existing file.
+
+**Options**
+
+ **Extract Column**
+ Select from the list of input columns that contain text or image data. All rows should have definitions for **Extract Column** and **File Path Column**.
+
+ **File Path Column**
+ Select from the list of input columns that contain file paths and file names. All rows should have definitions for **Extract Column** and **File Path Column**.
+
+ **Allow Append**
+ Specify whether the transformation appends data to existing files. The default is **false**.
+
+ **Force Truncate**
+ Specify whether the transformation deletes the contents of existing files before writing data. The default is **false**.
+
+ **Write BOM**
+ Specify whether to write a byte-order mark (BOM) to the file. A BOM is only written if the data has the **DT_NTEXT** or DT_WSTR data type and is not appended to an existing data file.
+
+**Export Column Transformation Editor (Error Output Page)**
+
+  Use the **Error Output** page of the **Export Column Transformation Editor** dialog box to specify how to handle errors.
+
+**Options**
+
+ **Input/Output**
+ View the name of the output. Click the name to expand the view to include columns.
+
+ **Column**
+ View the output columns that you selected on the **Columns** page of the **Export Column Transformation Editor** dialog box.
+
+ **Error**
+ Specify what you want to happen if an error occurs: ignore the failure, redirect the row, or fail the component.
+
+ **Truncation**
+ Specify what you want to happen if a truncation occurs: ignore the failure, redirect the row, or fail the component.
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_68"/>
+
+### 68. &nbsp; [Fuzzy Grouping Transformation](data-flow/transformations/fuzzy-grouping-transformation.md)
+
+*Updated: 2017-08-18* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_67) | [Next](#TitleNum_69))
+
+<!-- Source markdown line 98.  ms.author= "douglasl".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 fdafdae6700e5f83d72d80938caf422f8ae1e692 a76ad2437a1e3fb90393097db0dcc7c25c942733  (PR=2889  ,  Filename=fuzzy-grouping-transformation.md  ,  Dirpath=docs\integration-services\data-flow\transformations\  ,  MergeCommitSha40=0f62d1b2f4dd7f11e5ecfb72dbba46d4e896f92e) -->
+
+
+
+**Fuzzy Grouping Transformation Editor (Connection Manager Tab)**
+
+  Use the **Connection Manager** tab of the **Fuzzy Grouping Transformation Editor** dialog box to select an existing connection or create a new one.
+
+> [!NOTE]
+>  The server specified by the connection must be running ..!NCLUDE-NotShown--ssNoVersion--../../../includes/ssnoversion-md.md)]. The Fuzzy Grouping transformation creates temporary data objects in tempdb that may be as large as the full input to the transformation. While the transformation executes, it issues server queries against these temporary objects. This can affect overall server performance.
+
+**Options**
+
+ **OLE DB connection manager**
+ Select an existing OLE DB connection manager by using the list box, or create a new connection by using the **New** button.
+
+ **New**
+ Create a new connection by using the **Configure OLE DB Connection Manager** dialog box.
+
+**Fuzzy Grouping Transformation Editor (Columns Tab)**
+
+  Use the **Columns** tab of the **Fuzzy Grouping Transformation Editor** dialog box to specify the columns used to group rows with duplicate values.
+
+**Options**
+
+ **Available Input Columns**
+ Select from this list the input columns used to group rows with duplicate values.
+
+ **Name**
+ View the names of available input columns.
+
+ **Pass Through**
+ Select whether to include the input column in the output of the transformation. All columns used for grouping are automatically copied to the output. You can include additional columns by checking this column.
+
+ **Input Column**
+ Select one of the input columns selected earlier in the **Available Input Columns** list.
+
+ **Output Alias**
+ Enter a descriptive name for the corresponding output column. By default, the output column name is the same as the input column name.
+
+ **Group Output Alias**
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_69"/>
+
+### 69. &nbsp; [Fuzzy Lookup Transformation](data-flow/transformations/fuzzy-lookup-transformation.md)
+
+*Updated: 2017-08-18* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_68) | [Next](#TitleNum_70))
+
+<!-- Source markdown line 137.  ms.author= "douglasl".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 44718fe5a5b6bbb2a22ca6f2050c6587ca6e79d7 d7cd3cef0f78c90fa2e331f171a4ed67b09ff998  (PR=2889  ,  Filename=fuzzy-lookup-transformation.md  ,  Dirpath=docs\integration-services\data-flow\transformations\  ,  MergeCommitSha40=0f62d1b2f4dd7f11e5ecfb72dbba46d4e896f92e) -->
+
+
+
+**Fuzzy Lookup Transformation Editor (Reference Table Tab)**
+
+  Use the **Reference Table** tab of the **Fuzzy Lookup Transformation Editor** dialog box to specify the source table and the index to use for the lookup. The reference data source must be a table in a ..!NCLUDE-NotShown--ssNoVersion--../../../includes/ssnoversion-md.md)] database.
+
+> [!NOTE]
+>  The Fuzzy Lookup transformation creates a working copy of the reference table. The indexes described below are created on this working table by using a special table, not an ordinary ..!NCLUDE-NotShown--ssNoVersion--../../../includes/ssnoversion-md.md)] index. The transformation does not modify the existing source tables unless you select **Maintain stored index**. In this case, it creates a trigger on the reference table that updates the working table and the lookup index table based on changes to the reference table.
+
+> [!NOTE]
+>  The **Exhaustive** and the **MaxMemoryUsage** properties of the Fuzzy Lookup transformation are not available in the **Fuzzy Lookup Transformation Editor**, but can be set by using the **Advanced Editor**. In addition, a value greater than 100 for **MaxOutputMatchesPerInput** can be specified only in the **Advanced Editor**. For more information on these properties, see the Fuzzy Lookup Transformation section of [Transformation Custom Properties--../../../integration-services/data-flow/transformations/transformation-custom-properties.md).
+
+**Options**
+
+ **OLE DB connection manager**
+ Select an existing OLE DB connection manager from the list, or create a new connection by clicking **New**.
+
+ **New**
+ Create a new connection by using the **Configure OLE DB Connection Manager** dialog box.
+
+ **Generate new index**
+ Specify that the transformation should create a new index to use for the lookup.
+
+ **Reference table name**
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_70"/>
+
+### 70. &nbsp; [Lookup Transformation](data-flow/transformations/lookup-transformation.md)
+
+*Updated: 2017-08-18* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_69) | [Next](#TitleNum_71))
+
+<!-- Source markdown line 141.  ms.author= "douglasl".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 045c3a6e586ac7d5acb7f3bd88e1f07a037b6b15 ad46f2df4a170fb4e4e22f6f2d271bf98a5484ab  (PR=2889  ,  Filename=lookup-transformation.md  ,  Dirpath=docs\integration-services\data-flow\transformations\  ,  MergeCommitSha40=0f62d1b2f4dd7f11e5ecfb72dbba46d4e896f92e) -->
+
+
+
+**Lookup Transformation Editor (General Page)**
+
+  Use the **General** page of the Lookup Transformation Editor dialog box to select the cache mode, select the connection type, and specify how to handle rows with no matching entries.
+
+**Options**
+
+ **Full cache**
+ Generate and load the reference dataset into cache before the Lookup transformation is executed.
+
+ **Partial cache**
+ Generate the reference dataset during the execution of the Lookup transformation. Load the rows with matching entries in the reference dataset and the rows with no matching entries in the dataset into cache.
+
+ **No cache**
+ Generate the reference dataset during the execution of the Lookup transformation. No data is loaded into cache.
+
+ **Cache connection manager**
+ Configure the Lookup transformation to use a Cache connection manager. This option is available only if the Full cache option is selected.
+
+ **OLE DB connection manager**
+ Configure the Lookup transformation to use an OLE DB connection manager.
+
+ **Specify how to handle rows with no matching entries**
+ Select an option for handling rows that do not match at least one entry in the reference dataset.
+
+ When you select **Redirect rows to no match output**, the rows are redirected to a no match output and are not handled as errors. The **Error** option on the **Error Output** page of the **Lookup Transformation Editor** dialog box is not available.
+
+ When you select any other option in the **Specify how to handle rows with no matching entries** list box, the rows are handled as errors. The **Error** option on the **Error Output** page is available.
+
+**External Resources**
+
+ Blog entry, [Lookup cache modes](http://go.microsoft.com/fwlink/?LinkId=219518) on blogs.msdn.com
+
+**Lookup Transformation Editor (Connection Page)**
+
+  Use the **Connection** page of the **Lookup Transformation Editor** dialog box to select a connection manager. If you select an OLE DB connection manager, you also select a query, table, or view to generate the reference dataset.
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_71"/>
+
+### 71. &nbsp; [Merge Join Transformation](data-flow/transformations/merge-join-transformation.md)
+
+*Updated: 2017-08-18* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_70) | [Next](#TitleNum_72))
+
+<!-- Source markdown line 63.  ms.author= "douglasl".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 d09b8c348920c4f91e715dd176922ad9f56ffe99 8dfb973cb92345a24e60a8a26a872fd7209c3cb4  (PR=2889  ,  Filename=merge-join-transformation.md  ,  Dirpath=docs\integration-services\data-flow\transformations\  ,  MergeCommitSha40=0f62d1b2f4dd7f11e5ecfb72dbba46d4e896f92e) -->
+
+
+
+**Merge Join Transformation Editor**
+
+  Use the **Merge Join Transformation Editor** dialog box to specify the join type, the join columns, and the output columns for merging two inputs combined by a join.
+
+> [!IMPORTANT]
+>  The Merge Join Transformation requires sorted data for its inputs. For more information about this important requirement, see [Sort Data for the Merge and Merge Join Transformations--../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).
+
+**Options**
+
+ **Join type**
+ Specify whether you want to use an inner join, left outer join, or full join.
+
+ **Swap Inputs**
+ Switch the order between inputs by using the **Swap Inputs** button. This selection may be useful with the Left outer join option.
+
+ **Input**
+ For each column that you want in the merged output, first select from the list of available inputs.
+
+ Inputs are displayed in two separate tables. Select columns to include in the output. Drag columns to create a join between the tables. To delete a join, select it and then press the DELETE key.
+
+ **Input Column**
+ Select a column to include in the merged output from the list of available columns on the selected input.
+
+ **Output Alias**
+ Type an alias for each output column. The default is the name of the input column; however, you can choose any unique, descriptive name.
+
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_72"/>
+
+### 72. &nbsp; [Merge Transformation](data-flow/transformations/merge-transformation.md)
+
+*Updated: 2017-08-18* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_71) | [Next](#TitleNum_73))
+
+<!-- Source markdown line 71.  ms.author= "douglasl".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 3b4beef12d46a55b9bfb97c35698d40427d2fee9 4200193a2a54157def1bcb90cafaa857a87e5af2  (PR=2889  ,  Filename=merge-transformation.md  ,  Dirpath=docs\integration-services\data-flow\transformations\  ,  MergeCommitSha40=0f62d1b2f4dd7f11e5ecfb72dbba46d4e896f92e) -->
+
+
+
+**Merge Transformation Editor**
+
+  Use the **Merge Transformation Editor** to specify columns from two sorted sets of data to be merged.
+
+> [!IMPORTANT]
+>  The Merge Transformation requires sorted data for its inputs. For more information about this important requirement, see [Sort Data for the Merge and Merge Join Transformations--../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).
+
+**Options**
+
+ **Output Column Name**
+ Specify the name of the output column.
+
+ **Merge Input 1**
+ Select the column to merge as Merge Input 1.
+
+ **Merge Input 2**
+ Select the column to merge as Merge Input 2.
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_73"/>
+
+### 73. &nbsp; [OLE DB Command Transformation](data-flow/transformations/ole-db-command-transformation.md)
+
+*Updated: 2017-08-18* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_72) | [Next](#TitleNum_74))
+
+<!-- Source markdown line 48.  ms.author= "douglasl".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 0c6e23c0566087075157ff1dab201845da76a617 a7cacbaabfc2e208e7506bd827aab241a80ea5f1  (PR=2889  ,  Filename=ole-db-command-transformation.md  ,  Dirpath=docs\integration-services\data-flow\transformations\  ,  MergeCommitSha40=0f62d1b2f4dd7f11e5ecfb72dbba46d4e896f92e) -->
+
+
+
+ You can configure the transformation by either using the ..!NCLUDE-NotShown--ssIS--../../../includes/ssis-md.md)] Designer or the object model. See the Developer Guide for details about programmatically configuring this transformation.
+
+**Configure the OLE DB Command Transformation**
+
+  To add and configure an OLE DB Command transformation, the package must already include at least one Data Flow task and a source such as a Flat File source or an OLE DB source. This transformation is typically used for running parameterized queries.
+
+**To configure the OLE DB Command transformation**
+
+
+1.  In ..!NCLUDE-NotShown--ssBIDevStudioFull--../../../includes/ssbidevstudiofull-md.md)], open the ..!NCLUDE-NotShown--ssISnoversion--../../../includes/ssisnoversion-md.md)] project that contains the package you want.
+
+2.  In Solution Explorer, double-click the package to open it.
+
+3.  Click the **Data Flow** tab, and then, from the **Toolbox**, drag the OLE DB Command transformation to the design surface.
+
+4.  Connect the OLE DB Command transformation to the data flow by dragging a connectorΓÇöthe green or red arrowΓÇöfrom a data source or a previous transformation to the OLE DB Command transformation.
+
+5.  Right-click the component and select Edit or Show **Advanced Editor**.
+
+6.  On the **Connection Managers** tab, select an OLE DB connection manager in the **Connection Manager** list. For more information, see [OLE DB Connection Manager--../../../integration-services/connection-manager/ole-db-connection-manager.md).
+
+7.  Click the **Component Properties** tab and click the ellipsis button **(ΓÇª)** in the **SqlCommand** box.
+
+8.  In the **String Value Editor**, type the parameterized SQL statement using a question mark (?) as the parameter marker for each parameter.
+
+9. Click **Refresh**. When you click **Refresh**, the transformation creates a column for each parameter in the External Columns collection and sets the DBParamInfoFlags property.
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_74"/>
+
+### 74. &nbsp; [Percentage Sampling Transformation](data-flow/transformations/percentage-sampling-transformation.md)
+
+*Updated: 2017-08-18* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_73) | [Next](#TitleNum_75))
+
+<!-- Source markdown line 58.  ms.author= "douglasl".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 0329dfb5bc043d830c72f5e90054090254c66077 23a7f5e62bac4333f08fcf2d1ccfe639d25dc708  (PR=2889  ,  Filename=percentage-sampling-transformation.md  ,  Dirpath=docs\integration-services\data-flow\transformations\  ,  MergeCommitSha40=0f62d1b2f4dd7f11e5ecfb72dbba46d4e896f92e) -->
+
+
+
+**Percentage Sampling Transformation Editor**
+
+  Use the **Percentage Sampling Transformation Editor** dialog box to split part of an input into a sample using a specified percentage of rows. This transformation divides the input into two separate outputs.
+
+**Options**
+
+ **Percentage of rows**
+ Specify the percentage of rows in the input to use as a sample.
+
+ The value of this property can be specified by using a property expression.
+
+ **Sample output name**
+ Provide a unique name for the output that will include the sampled rows. The name provided will be displayed within the ..!NCLUDE-NotShown--ssIS--../../../includes/ssis-md.md)] Designer.
+
+ **Unselected output name**
+ Provide a unique name for the output that will contain the rows excluded from the sampling. The name provided will be displayed within the ..!NCLUDE-NotShown--ssIS--../../../includes/ssis-md.md)] Designer.
+
+ **Use the following random seed**
+ Specify the sampling seed for the random number generator that the transformation uses to create a sample. This is only recommended for development and testing. The transformation uses the Microsoft Windows tick count if a random seed is not specified.
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_75"/>
+
+### 75. &nbsp; [Row Sampling Transformation](data-flow/transformations/row-sampling-transformation.md)
+
+*Updated: 2017-08-18* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_74) | [Next](#TitleNum_76))
+
+<!-- Source markdown line 58.  ms.author= "douglasl".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 f9710d887dc31bcd9307969acfc6c429693a95e9 8f59e916f613e8e5143911de7f11f50e0982258d  (PR=2889  ,  Filename=row-sampling-transformation.md  ,  Dirpath=docs\integration-services\data-flow\transformations\  ,  MergeCommitSha40=0f62d1b2f4dd7f11e5ecfb72dbba46d4e896f92e) -->
+
+
+
+**Row Sampling Transformation Editor (Sampling Page)**
+
+  Use the **Row Sampling Transformation Editor** dialog box to split a portion of an input into a sample using a specified number of rows. This transformation divides the input into two separate outputs.
+
+**Options**
+
+ **Number of rows**
+ Specify the number of rows from the input to use as a sample.
+
+ The value of this property can be specified by using a property expression.
+
+ **Sample output name**
+ Provide a unique name for the output that will include the sampled rows. The name provided will be displayed within SSIS Designer.
+
+ **Unselected output name**
+ Provide a unique name for the output that will contain the rows excluded from the sampling. The name provided will be displayed within SSIS Designer.
+
+ **Use the following random seed**
+ Specify the sampling seed for the random number generator that the transformation uses to create a sample. This is only recommended for development and testing. The transformation uses the Microsoft Windows tick count as a seed if a random seed is not specified.
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_76"/>
+
+### 76. &nbsp; [Script Component](data-flow/transformations/script-component.md)
+
+*Updated: 2017-08-18* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_75) | [Next](#TitleNum_77))
+
+<!-- Source markdown line 109.  ms.author= "douglasl".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 7a9765beb4b5f49ff16ea760935abb701e107947 0f89d894800210b361bf1b61ba3bdfbebf83517f  (PR=2889  ,  Filename=script-component.md  ,  Dirpath=docs\integration-services\data-flow\transformations\  ,  MergeCommitSha40=0f62d1b2f4dd7f11e5ecfb72dbba46d4e896f92e) -->
+
+
+
+**Select Script Component Type**
+
+  Use the **Select Script Component Type** dialog box to specify whether to create a Script Transformation that is preconfigured for use as a source, a transformation, or a destination.
+
+ To learn more about the Script component, see [Configuring the Script Component in the Script Component Editor--../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). To learn about programming the Script component, see [Extending the Data Flow with the Script Component--../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).
+
+**Options**
+
+ Your selection of **Source**, **Destination**, or **Transformation** affects the configuration of the Script Transformation and the pages of the Script Transformation Editor.
+
+**Script Transformation Editor (Connection Managers Page)**
+
+  Use the **Connection Managers** page of the **Script Transformation Editor** to specify any connections that will be used by the script.
+
+ To learn more about the Script component, see [Configuring the Script Component in the Script Component Editor--../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). To learn about programming the Script component, see [Extending the Data Flow with the Script Component--../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).
+
+**Options**
+
+ **Connection managers**
+ View the list of connections available for use by the script.
+
+ **Name**
+ Type a unique and descriptive name for the connection.
+
+ **Connection Manager**
+ Select from the list of available connection managers, or select **\<New connection>** to open the **Add SSIS Connection Manager** dialog box.
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_77"/>
+
+### 77. &nbsp; [Sort Transformation](data-flow/transformations/sort-transformation.md)
+
+*Updated: 2017-08-18* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_76) | [Next](#TitleNum_78))
+
+<!-- Source markdown line 57.  ms.author= "douglasl".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 b8241bc48e6db15ab695173c10538aa58db4bf6c 02281605a06776af6a88c95ddeeecd348b0ba071  (PR=2889  ,  Filename=sort-transformation.md  ,  Dirpath=docs\integration-services\data-flow\transformations\  ,  MergeCommitSha40=0f62d1b2f4dd7f11e5ecfb72dbba46d4e896f92e) -->
+
+
+
+**Sort Transformation Editor**
+
+  Use the **Sort Transformation Editor** dialog box to select the columns to sort, set the sort order, and specify whether duplicates are removed.
+
+**Options**
+
+ **Available Input Columns**
+ Using the check boxes, specify the columns to sort.
+
+ **Name**
+ View the name of each available input column.
+
+ **Passthrough**
+ Indicate whether to include the column in the sorted output.
+
+ **Input Column**
+ Select from the list of available input columns for each row. Your selections are reflected in the check box selections in the **Available Input Columns** table.
+
+ **Output Alias**
+ Type an alias for each output column. The default is the name of the input column; however, you can choose any unique, descriptive name.
+
+ **Sort Type**
+ Indicate whether to sort in ascending or descending order.
+
+ **Sort Order**
+ Indicate the order in which to sort columns. This must be set manually for each column.
+
+ **Comparison Flags**
+ For information about the string comparison options, see [Comparing String Data--../../../integration-services/data-flow/comparing-string-data.md).
+
+ **Remove rows with duplicate sort values**
+ Indicate whether the transformation copies duplicate rows to the transformation output, or creates a single entry for all duplicates, based on the specified string comparison options.
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_78"/>
+
+### 78. &nbsp; [Term Extraction Transformation](data-flow/transformations/term-extraction-transformation.md)
+
+*Updated: 2017-08-18* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_77) | [Next](#TitleNum_79))
+
+<!-- Source markdown line 183.  ms.author= "douglasl".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 1405c5d195563c28618a807035bae645463da43f 74ff7fa033b460a892f9613ac0f1d7a2603a5085  (PR=2889  ,  Filename=term-extraction-transformation.md  ,  Dirpath=docs\integration-services\data-flow\transformations\  ,  MergeCommitSha40=0f62d1b2f4dd7f11e5ecfb72dbba46d4e896f92e) -->
+
+
+
+**Term Extraction Transformation Editor (Term Extraction Tab)**
+
+  Use the **Term Extraction** tab of the **Term Extraction Transformation Editor** dialog box to specify a text column that contains text to be extracted.
+
+**Options**
+
+ **Available Input Columns**
+ Using the check boxes, select a single text column to use for term extraction.
+
+ **Term**
+ Provide a name for the output column that will contain the extracted terms.
+
+ **Score**
+ Provide a name for the output column that will contain the score for each extracted term.
+
+ **Configure Error Output**
+ Use the [Configure Error Output](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) dialog box to specify error handling for rows that cause errors.
+
+**Term Extraction Transformation Editor (Exclusion Tab)**
+
+  Use the **Exclusion** tab of the **Term Extraction Transformation Editor** dialog box to set up a connection to an exclusion table and specify the columns that contain exclusion terms.
+
+**Options**
+
+ **Use exclusion terms**
+ Indicate whether to exclude specific terms during term extraction by specifying a column that contains exclusion terms. You must specify the following source properties if you choose to exclude terms.
+
+ **OLE DB connection manager**
+ Select an existing OLE DB connection manager, or create a new connection by clicking **New**.
+
+ **New**
+ Create a new connection to a database by using the **Configure OLE DB Connection Manager** dialog box.
+
+ **Table or view**
+ Select the table or view that contains the exclusion terms.
+
+ **Column**
+ Select the column in the table or view that contains the exclusion terms.
+
+ **Configure Error Output**
+ Use the [Configure Error Output](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) dialog box to specify error handling for rows that cause errors.
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_79"/>
+
+### 79. &nbsp; [Term Lookup Transformation](data-flow/transformations/term-lookup-transformation.md)
+
+*Updated: 2017-08-18* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_78) | [Next](#TitleNum_80))
+
+<!-- Source markdown line 104.  ms.author= "douglasl".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 f0cdd980a6411964df15a253b1004816ae9c51d9 1470895cbbee74f5dcf4a003cf617c367b02329d  (PR=2889  ,  Filename=term-lookup-transformation.md  ,  Dirpath=docs\integration-services\data-flow\transformations\  ,  MergeCommitSha40=0f62d1b2f4dd7f11e5ecfb72dbba46d4e896f92e) -->
+
+
+
+**Term Lookup Transformation Editor (Term Lookup Tab)**
+
+  Use the **Term Lookup** tab of the **Term Lookup Transformation Editor** dialog box to map an input column to a lookup column in a reference table and to provide an alias for each output column.
+
+**Options**
+
+ **Available Input Columns**
+ Using the check boxes, select input columns to pass through to the output unchanged. Drag an input column to the **Available Reference Columns** list to map it to a lookup column in the reference table. The input and lookup columns must have matching, supported data types, either DT_NTEXT or DT_WSTR. Select a mapping line and right-click to edit the mappings in the [Create Relationships--../../../integration-services/data-flow/transformations/create-relationships.md) dialog box.
+
+ **Available Reference Columns**
+ View the available columns in the reference table. Choose the column that contains the list of terms to match.
+
+ **Pass-Through Column**
+ Select from the list of available input columns. Your selections are reflected in the check box selections in the **Available Input Columns** table.
+
+ **Output Column Alias**
+ Type an alias for each output column. The default is the name of the column; however, you can choose any unique, descriptive name.
+
+ **Configure Error Output**
+ Use the [Configure Error Output](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) dialog box to specify error handling options for rows that cause errors.
+
+**Term Lookup Transformation Editor (Reference Table Tab)**
+
+  Use the **Reference Table** tab of the **Term Lookup Transformation Editor** dialog box to specify the connection to the reference (lookup) table.
+
+**Options**
+
+ **OLE DB connection manager**
+ Select an existing connection manager from the list, or create a new connection by clicking **New**.
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_80"/>
+
+### 80. &nbsp; [Unpivot Transformation](data-flow/transformations/unpivot-transformation.md)
+
+*Updated: 2017-08-18* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_79) | [Next](#TitleNum_81))
+
+<!-- Source markdown line 54.  ms.author= "douglasl".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 719d1f00fac1e6c6eddb743569be57a7ac640b6f 76ecbe9cfe864c8a3e25d4311ade4e16fb1e4f69  (PR=2889  ,  Filename=unpivot-transformation.md  ,  Dirpath=docs\integration-services\data-flow\transformations\  ,  MergeCommitSha40=0f62d1b2f4dd7f11e5ecfb72dbba46d4e896f92e) -->
+
+
+
+**Unpivot Transformation Editor**
+
+  Use the **Unpivot Transformation Editor** dialog box to select the columns to pivot into rows, and to specify the data column and the new pivot value output column.
+
+> [!NOTE]
+>  This topic relies on the Unpivot scenario described in [Unpivot Transformation--../../../integration-services/data-flow/transformations/unpivot-transformation.md) to illustrate the use of the options.
+
+**Options**
+
+ **Available Input Columns**
+ Using the check boxes, specify the columns to pivot into rows.
+
+ **Name**
+ View the name of the available input column.
+
+ **Pass Through**
+ Indicate whether to include the column in the unpivoted output.
+
+ **Input Column**
+ Select from the list of available input columns for each row. Your selections are reflected in the check box selections in the **Available Input Columns** table.
+
+ In the Unpivot scenario described in [Unpivot Transformation--../../../integration-services/data-flow/transformations/unpivot-transformation.md), the Input Columns are the **Ham**, **Soda**, **Milk**, **Beer**, and **Chips** columns.
+
+ **Destination Column**
+ Provide a name for the data column.
+
+ In the Unpivot scenario described in [Unpivot Transformation--../../../integration-services/data-flow/transformations/unpivot-transformation.md), the Destination Column is the quantity (**Qty**) column.
+
+ **Pivot Key Value**
+ Provide a name for the pivot value. The default is the name of the input column; however, you can choose any unique, descriptive name.
+
+ The value of this property can be specified by using a property expression.
+
+ In the Unpivot scenario described in [Unpivot Transformation--../../../integration-services/data-flow/transformations/unpivot-transformation.md), the Pivot Values will appear in the new Product column designated by the **Pivot Key Value Column Name** option, as the text values **Ham**, **Soda**, **Milk**, **Beer**, and **Chips**.
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_81"/>
+
+### 81. &nbsp; [XML Source](data-flow/xml-source.md)
+
+*Updated: 2017-08-17* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_80) | [Next](#TitleNum_82))
+
+<!-- Source markdown line 87.  ms.author= "douglasl".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 2e736c2673e98325b6090468397d41e28f6fda0b 3d2b0553db9b3b5572a497328661b3baa6dde19a  (PR=2871  ,  Filename=xml-source.md  ,  Dirpath=docs\integration-services\data-flow\  ,  MergeCommitSha40=48361ad1e135f0a145682a69ecc6901f3c313bfb) -->
+
+
+
+**XML Source Editor (Connection Manager Page)**
+
+  Use the **Connection Manager** page of the **XML Source Editor** to specify an XML file and the XSD that transforms the XML data.
+
+**Static Options**
+
+ **Data access mode**
+ Specify the method for selecting data from the source.
+
+|Value|Description|
+|-----------|-----------------|
+|XML file location|Retrieve data from an XML file.|
+|XML file from variable|Specify the XML file name in a variable.<br /><br /> **Related information**: [Use Variables in Packages](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|
+|XML data from variable|Retrieve XML data from a variable.|
+
+ **Use inline schema**
+ Specify whether the XML source data itself contains the XSD schema that defines and validates its structure and data.
+
+ **XSD location**
+ Type the path and file name of the XSD schema file, or locate the file by clicking **Browse**.
+
+ **Browse**
+ Use the **Open** dialog box to locate the XSD schema file.
+
+ **Generate XSD**
+ Use the **Save As** dialog box to select a location for the auto-generated XSD schema file. The editor infers the schema from the structure of the XML data.
+
+**Data Access Mode Dynamic Options**
+
+
+**Data access mode = XML file location**
+
+ **XML location**
+ Type the path and file name of the XML data file, or locate the file by clicking **Browse**.
+
+ **Browse**
+ Use the **Open** dialog box to locate the XML data file.
+
+**Data access mode = XML file from variable**
+
+ **Variable name**
+ Select the variable that contains the path and file name of the XML file.
+
+**Data access mode = XML data from variable**
+
+ **Variable name**
+ Select the variable that contains the XML data.
+
+**XML Source Editor (Columns Page)**
+
+  Use the **Columns** node of the **XML Source Editor** dialog box to map an output column to an external (source) column.
+
+**Options**
+
+ **Available External Columns**
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_82"/>
+
+### 82. &nbsp; [What&#39;s New in Integration Services in SQL Server 2017](what-s-new-in-integration-services-in-sql-server-2017.md)
+
+*Updated: 2017-08-29* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_81))
+
+<!-- Source markdown line 24.  ms.author= "douglasl".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 951c144f799644a7302332b7db16a3a24657a16e 31f1245d57cfa788281d9bca5e93aaf687aa0165  (PR=2982  ,  Filename=what-s-new-in-integration-services-in-sql-server-2017.md  ,  Dirpath=docs\integration-services\  ,  MergeCommitSha40=8cd44c8b384019418a2a913e5f8d13d82120eac2) -->
+
+
+
+**Highlights of this release**
+
+
+Here are the most important new features in Integration Services for SQL Server 2017.
+
+-   **Scale Out**. Distribute SSIS package execution more easily across multiple worker computers, and manage executions and workers from a single master computer. For more info, see [Integration Services Scale Out--../integration-services/scale-out/integration-services-ssis-scale-out.md).
+
+-   **Integration Services on Linux**. Run SSIS packages on Linux computers. For more info, see [Extract, transform, and load data on Linux with SSIS--../linux/sql-server-linux-migrate-ssis.md).
+
+-   **Connectivity improvements**. Connect to the OData feeds of Microsoft Dynamics AX Online and Microsoft Dynamics CRM Online with the updated OData components.
+
+**New in the Azure Feature Pack**
+
+
+In addition to the connectivity improvements in SQL Server, the Integration Services Feature Pack for Azure has added support for Azure Data Lake Store. For more info, see the blog post [New Azure Feature Pack Release Strengthening ADLS Connectivity](https://blogs.msdn.microsoft.com/ssis/2017/08/29/new-azure-feature-pack-release-strengthening-adls-connectivity/). Also see [Azure Feature Pack for Integration Services (SSIS)](azure-feature-pack-for-integration-services-ssis.md).
+
+**New in SQL Server Data Tools (SSDT)**
+
+
+You can now develop SSIS projects and packages that target SQL Server versions 2012 through 2017 in Visual Studio 2017 or in Visual Studio 2015. For more info, see [Download SQL Server Data Tools (SSDT)--../ssdt/download-sql-server-data-tools-ssdt.md).
+
+
+
+
+
+
+
+
+## Similar Articles
+
+<!--  HOW TO:
+    Refresh this file's line items with the latest 'Count-in-Similars*' content.
+    Then run Run-533-*.BAT
+-->
+
+This section lists very similar articles for recently updated articles in other subject areas, within our public GitHub.com repository: [MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/).
 
 #### Subject areas which do have new or recently updated articles
 
-- [New + Updated (12+2): **Advanced Analystics for SQL** docs](../advanced-analytics/new-updated-advanced-analytics.md)
-- [New + Updated (1+0):  **Analysis Services for SQL** docs](../analysis-services/new-updated-analysis-services.md)
-- [New + Updated (0+2):  **Connect to SQL** docs](../connect/new-updated-connect.md)
-- [New + Updated (3+0):  **Database Engine for SQL** docs](../database-engine/new-updated-database-engine.md)
-- [New + Updated (1+2):  **Integration Services for SQL** docs](../integration-services/new-updated-integration-services.md)
-- [New + Updated (2+8):  **Linux for SQL** docs](../linux/new-updated-linux.md)
-- [New + Updated (1+0):  **Master Data Services (MDS) for SQL** docs](../master-data-services/new-updated-master-data-services.md)
-- [New + Updated (5+5):  **Relational Databases for SQL** docs](../relational-databases/new-updated-relational-databases.md)
-- [New + Updated (2+0):  **Reporting Services for SQL** docs](../reporting-services/new-updated-reporting-services.md)
-- [New + Updated (0+4):  **Microsoft SQL Server** docs](../sql-server/new-updated-sql-server.md)
-- [New + Updated (0+1):  **SQL Server Data Tools (SSDT)** docs](../ssdt/new-updated-ssdt.md)
-- [New + Updated (0+1):  **SQL Server Management Studio (SSMS)** docs](../ssms/new-updated-ssms.md)
-- [New + Updated (1+0):  **Tools for SQL** docs](../tools/new-updated-tools.md)
-
+- [New + Updated (3+12) : **Advanced Analytics for SQL** docs](../advanced-analytics/new-updated-advanced-analytics.md)
+- [New + Updated (5+0)  : **Connect to SQL** docs](../connect/new-updated-connect.md)
+- [New + Updated (5+1)  : **Database Engine for SQL** docs](../database-engine/new-updated-database-engine.md)
+- [New + Updated (19+82): **Integration Services for SQL** docs](../integration-services/new-updated-integration-services.md)
+- [New + Updated (1+8)  : **Linux for SQL** docs](../linux/new-updated-linux.md)
+- [New + Updated (12+1) : **Relational Databases for SQL** docs](../relational-databases/new-updated-relational-databases.md)
+- [New + Updated (0+1)  : **Reporting Services for SQL** docs](../reporting-services/new-updated-reporting-services.md)
+- [New + Updated (7+1)  : **Microsoft SQL Server** docs](../sql-server/new-updated-sql-server.md)
+- [New + Updated (1+1)  : **SQL Server Data Tools (SSDT)** docs](../ssdt/new-updated-ssdt.md)
+- [New + Updated (0+2)  : **SQL Server Migration Assistant (SSMA)** docs](../ssma/new-updated-ssma.md)
+- [New + Updated (1+4)  : **SQL Server Management Studio (SSMS)** docs](../ssms/new-updated-ssms.md)
+- [New + Updated (4+1)  : **Transact-SQL** docs](../t-sql/new-updated-t-sql.md)
+- [New + Updated (0+1)  : **Tools for SQL** docs](../tools/new-updated-tools.md)
 
 #### Subject areas which have no new or recently updated articles
 
 - [New + Updated (0+0): **ActiveX Data Objects (ADO) for SQL** docs](../ado/new-updated-ado.md)
+- [New + Updated (0+0): **Analysis Services for SQL** docs](../analysis-services/new-updated-analysis-services.md)
 - [New + Updated (0+0): **Data Quality Services for SQL** docs](../data-quality-services/new-updated-data-quality-services.md)
 - [New + Updated (0+0): **Data Mining Extensions (DMX) for SQL** docs](../dmx/new-updated-dmx.md)
+- [New + Updated (0+0): **Master Data Services (MDS) for SQL** docs](../master-data-services/new-updated-master-data-services.md)
 - [New + Updated (0+0): **Multidimensional Expressions (MDX) for SQL** docs](../mdx/new-updated-mdx.md)
 - [New + Updated (0+0): **ODBC (Open Database Connectivity) for SQL** docs](../odbc/new-updated-odbc.md)
 - [New + Updated (0+0): **PowerShell for SQL** docs](../powershell/new-updated-powershell.md)
 - [New + Updated (0+0): **Samples for SQL** docs](../sample/new-updated-sample.md)
-- [New + Updated (0+0): **SQL Server Migration Assistant (SSMA)** docs](../ssma/new-updated-ssma.md)
-- [New + Updated (0+0): **Transact-SQL** docs](../t-sql/new-updated-t-sql.md)
 - [New + Updated (0+0): **XQuery for SQL** docs](../xquery/new-updated-xquery.md)
 
-
-&nbsp;
 

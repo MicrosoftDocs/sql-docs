@@ -2,7 +2,7 @@
 title: "SQL Server Migration Assistant for MySQL (MySQLToSQL) | Microsoft Docs"
 ms.prod: "sql-non-specified"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "08/09/2017"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,12 +14,12 @@ applies_to:
   - "SQL Server"
 ms.assetid: 2793bc33-38d3-46ed-8277-b8580cf78ced
 caps.latest.revision: 13
-author: "sabotta"
-ms.author: "carlasab"
-manager: "lonnyb"
+author: "Shamikg"
+ms.author: "Shamikg"
+manager: "murato"
 ---
 # SQL Server Migration Assistant for MySQL (MySQLToSQL)
-[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) for MySQL is a tool for migrating MySQL databases to [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005 / [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008 / [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012 / [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014 / [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016 / Azure [!INCLUDE[msCoName](../../includes/msconame_md.md)] DB. SSMA for MySQL converts MySQL database objects to SQL Server database objects, creates these objects in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], and then migrates data from MySQL to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) for MySQL is a tool for migrating MySQL databases to [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005 / [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008 / [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012 / [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014 / [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016 / [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2017 on Windows and Linux (Preview) / Azure [!INCLUDE[msCoName](../../includes/msconame_md.md)] DB. SSMA for MySQL converts MySQL database objects to SQL Server database objects, creates these objects in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], and then migrates data from MySQL to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
   
 This documentation introduces you to SSMA for MySQL and provides step-by-step instructions for migrating MySQL databases to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. The following table shows topics to help you learn more:  
   

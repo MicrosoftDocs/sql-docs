@@ -1,7 +1,7 @@
 ---
 title: "Integration Services Features Supported by the Editions of SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/10/2017"
+ms.date: "07/26/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -15,7 +15,7 @@ author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
 ---
-# Integration Services Features Supported by the Editions of SQL Server
+# Integration Services features supported by the editions of SQL Server
  This topic provides details about the features of SQL Server Integration Services (SSIS) supported by the different editions of [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)].  
 
 For features supported by Evaluation and Developer editions, see features listed for Enterprise Edition in the following tables.
@@ -31,17 +31,17 @@ The SQL Server Evaluation edition is available for a 180-day trial period.
     
 > [![Download from Evaluation Center](../analysis-services/media/download.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) **[Download SQL Server 2016  from the Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**    
     
-## <a name="ISNew"></a> New Integration Services Features in SQL Server 2017
+## <a name="ISNew"></a> New Integration Services features in SQL Server 2017
   
 |Feature|Enterprise|Standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
 |Scale Out Master|Yes|||||
-|Scale Out Worker|Yes|Yes <sup>2</sup>|TBD|TBD|TBD|
-|Support for Microsoft Dynamics AX and Microsoft Dynamics CRM in OData components <sup>1</sup>|Yes|Yes||||
+|Scale Out Worker|Yes|Yes <sup>1</sup>|TBD|TBD|TBD|
+|Support for Microsoft Dynamics AX and Microsoft Dynamics CRM in OData components <sup>2</sup>|Yes|Yes||||
 
-<sup>1</sup> This feature is also supported in SQL Server 2016 with Service Pack 1.
+<sup>1</sup> If you run packages that require Enterprise-only features in Scale Out, the Scale Out Workers must also run on instances of SQL Server Enterprise.
 
-<sup>2</sup> If you run packages that require Enterprise-only features in Scale Out, the Scale Out Workers must also run on instances of SQL Server Enterprise.
+<sup>2</sup> This feature is also supported in SQL Server 2016 with Service Pack 1.
 
 ## <a name="IEWiz"></a> SQL Server Import and Export Wizard
 
@@ -55,6 +55,7 @@ The SQL Server Evaluation edition is available for a 180-day trial period.
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
 |Built-in data source connectors|Yes|Yes|||| 
 |Built in tasks and transformations|Yes|Yes||||  
+|ODBC source and destination by Attunity|Yes|Yes|||| 
 |Azure data source connectors and tasks|Yes|Yes||||  
 |Hadoop/HDFS connectors and tasks|Yes|Yes||||  
 |Basic data profiling tools|Yes|Yes|||| 
@@ -63,18 +64,21 @@ The SQL Server Evaluation edition is available for a 180-day trial period.
   
 |Feature|Enterprise|Standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|High-performance Oracle destination|Yes|||||  
-|High-performance Teradata Destination|Yes|||||  
+|High-performance Oracle destination by Attunity|Yes|||||  
+|High-performance Teradata Destination by Attunity|Yes|||||  
 |SAP BW source and destination|Yes|||||  
 |Data mining model training destination|Yes|||||  
 |Dimension processing destination|Yes|||||  
 |Partition processing destination|Yes|||||  
   
-## <a name="ISAT"></a> Integration Services - Advanced transformations  
+## <a name="ISAT"></a> Integration Services - Advanced tasks and transformations  
   
 |Feature|Enterprise|Standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
 |Persistent (high-performance) lookups|Yes|||||  
+|Change Data Capture components by Attunity <sup>1</sup>|Yes|||||  
 |Data mining query transformation|Yes|||||  
 |Fuzzy grouping and fuzzy lookup transformations|Yes|||||  
 |Term extraction and term lookup transformations|Yes|||||  
+
+<sup>1</sup> The Change Data Capture components by Attunity require Enterprise edition. The Change Data Capture Service and the Change Data Capture Designer, however, do not require Enterprise edition. You can use the Designer and the Service on a computer where SSIS is not installed.

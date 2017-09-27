@@ -1,28 +1,15 @@
 ---
-# required metadata
-
 title: Get started with SQL Server security on Linux | Microsoft Docs 
 description: This topic describes typical security actions.  
 author: BYHAM   
 ms.author: rickbyh   
 manager: jhubbard  
-ms.date: 03/17/2017
+ms.date: 07/17/2017
 ms.topic: article  
 ms.prod: sql-linux   
 ms.technology: database-engine  
 ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0  
-
-# optional metadata
-
-# keywords: ""
-# ROBOTS: ""
-# audience: ""
-# ms.devlang: ""
-# ms.reviewer: ""
-# ms.suite: ""
-# ms.tgt_pltfrm: ""
 ms.custom: H1Hack27Feb2017
-
 ---
 # Walkthrough for the security features of SQL Server on Linux
 
@@ -34,7 +21,7 @@ If you are a Linux user who is new to SQL Server, the following tasks walk you t
 
 ## Create a login and a database user 
 
-Grant others access to SQL Server by creating a login in the master database using the [CREATE LOGIN](https://msdn.microsoft.com/library/ms189751.aspx) statement. For example:
+Grant others access to SQL Server by creating a login in the master database using the [CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md) statement. For example:
 
 ```
 CREATE LOGIN Larry WITH PASSWORD = '************';  
@@ -43,7 +30,7 @@ CREATE LOGIN Larry WITH PASSWORD = '************';
 >  [!NOTE]
 >  Always use a strong password in place of the asterisks above.
 
-Logins can connect to SQL Server and have access (with limited permissions) to the master database. To connect to a user-database, a login needs a corresponding identity at the database level, called a database user. Users are specific to each database and must be separately created in each database to grant them access. The following example moves you into the AdventureWorks2014 database, and then uses the [CREATE USER](https://msdn.microsoft.com/library/ms173463.aspx) statement to create a user named Larry that is associated with the login named Larry. Though the login and the user are related (mapped to each other), they are different objects. The login is a server-level principle. The user is a database-level principal.
+Logins can connect to SQL Server and have access (with limited permissions) to the master database. To connect to a user-database, a login needs a corresponding identity at the database level, called a database user. Users are specific to each database and must be separately created in each database to grant them access. The following example moves you into the AdventureWorks2014 database, and then uses the [CREATE USER](../t-sql/statements/create-user-transact-sql.md) statement to create a user named Larry that is associated with the login named Larry. Though the login and the user are related (mapped to each other), they are different objects. The login is a server-level principle. The user is a database-level principal.
 
 ```
 USE AdventureWorks2014;
@@ -74,7 +61,7 @@ Now the login Jerry can create more logins, and the user Jerry can create more u
 
 The first people to connect to a user-database will be the administrator and database owner accounts. However these users have all the the permissions available on the database. This is more permission than most users should have. 
 
-When you are just getting started, you can assign some general categories of permissions by using the built-in *fixed database roles*. For example, the `db_datareader` fixed database role can read all tables in the database, but make no changes. Grant membership in a fixed database role by using the [ALTER ROLE](https://msdn.microsoft.com/library/ms189775.aspx) statement. The following example add the user `Jerry` to the `db_datareader` fixed database role.   
+When you are just getting started, you can assign some general categories of permissions by using the built-in *fixed database roles*. For example, the `db_datareader` fixed database role can read all tables in the database, but make no changes. Grant membership in a fixed database role by using the [ALTER ROLE](../t-sql/statements/alter-role-transact-sql.md) statement. The following example add the user `Jerry` to the `db_datareader` fixed database role.   
    
 ```   
 USE AdventureWorks2014;   
@@ -83,9 +70,9 @@ GO
 ALTER ROLE db_datareader ADD MEMBER Jerry;   
 ```   
 
-For a list of the fixed database roles, see [Database-Level Roles](https://msdn.microsoft.com/library/ms189121.aspx).
+For a list of the fixed database roles, see [Database-Level Roles](../relational-databases/security/authentication-access/database-level-roles.md).
 
-Later, when you are ready to configure more precise access to your data (highly recommended), create your own user-defined database roles using [CREATE ROLE](https://msdn.microsoft.com/library/ms187936.aspx) statement. Then assign specific granular permissions to you custom roles.
+Later, when you are ready to configure more precise access to your data (highly recommended), create your own user-defined database roles using [CREATE ROLE](../t-sql/statements/create-role-transact-sql.md) statement. Then assign specific granular permissions to you custom roles.
 
 For example, the following statements create a database role named `Sales`, grants the `Sales` group the ability to see, update, and delete rows from the `Orders` table, and then adds the user `Jerry` to the `Sales` role.   
    
@@ -97,12 +84,12 @@ GRANT DELETE ON Object::Sales TO Orders;  
 ALTER ROLE Sales ADD MEMBER Jerry;   
 ```   
 
-For more information about the permission system, see [Getting Started with Database Engine Permissions](https://msdn.microsoft.com/library/mt667986.aspx).
+For more information about the permission system, see [Getting Started with Database Engine Permissions](../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).
 
 
 ## Configure row-level security  
 
-[Row-Level Security](https://msdn.microsoft.com/library/dn765131.aspx) enables you to restrict access to rows in a database based on the user executing a query. This feature is useful for scenarios like ensuring that customers can only access their own data or that workers can only access data that is pertinent to their department.   
+[Row-Level Security](../relational-databases/security/row-level-security.md) enables you to restrict access to rows in a database based on the user executing a query. This feature is useful for scenarios like ensuring that customers can only access their own data or that workers can only access data that is pertinent to their department.   
 
 The steps below walk through setting up two Users with different row-level access to the `Sales.SalesOrderHeader` table. 
 
@@ -172,7 +159,7 @@ WITH (STATE = OFF);
 
 ## Enable dynamic data masking
 
-[Dynamic Data Masking](https://msdn.microsoft.com/library/mt130841.aspx) enables you to limit the exposure of sensitive data to users of an application by fully or partially masking certain columns. 
+[Dynamic Data Masking](../relational-databases/security/dynamic-data-masking.md) enables you to limit the exposure of sensitive data to users of an application by fully or partially masking certain columns. 
 
 Use an `ALTER TABLE` statement to add a masking function to the `EmailAddress` column in the `Person.EmailAddress` table: 
  
@@ -184,7 +171,7 @@ ALTER COLUMN EmailAddress
 ADD MASKED WITH (FUNCTION = 'email()');
 ``` 
  
-Create a new user `TestUser` with `SEELCT` permission on the table, then execute a query as `TestUser` to view the masked data:   
+Create a new user `TestUser` with `SELECT` permission on the table, then execute a query as `TestUser` to view the masked data:   
 
 ```  
 CREATE USER TestUser WITHOUT LOGIN;   
@@ -255,9 +242,9 @@ To remove TDE, execute `ALTER DATABASE AdventureWorks2014 SET ENCRYPTION OFF;`
 The encryption and decryption operations are scheduled on background threads by SQL Server. You can view the status of these operations using the catalog views and dynamic management views in the list that appears later in this topic.   
 
 >  [!WARNING]
->  Backup files of databases that have TDE enabled are also encrypted by using the database encryption key. As a result, when you restore these backups, the certificate protecting the database encryption key must be available. This means that in addition to backing up the database, you have to make sure that you maintain backups of the server certificates to prevent data loss. Data loss will result if the certificate is no longer available. For more information, see [SQL Server Certificates and Asymmetric Keys](https://msdn.microsoft.com/library/bb895327.aspx).  
+>  Backup files of databases that have TDE enabled are also encrypted by using the database encryption key. As a result, when you restore these backups, the certificate protecting the database encryption key must be available. This means that in addition to backing up the database, you have to make sure that you maintain backups of the server certificates to prevent data loss. Data loss will result if the certificate is no longer available. For more information, see [SQL Server Certificates and Asymmetric Keys](../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).  
 
-For more information about TDE, see [Transparent Data Encryption (TDE)](https://msdn.microsoft.com/en-us/library/bb934049.aspx).   
+For more information about TDE, see [Transparent Data Encryption (TDE)](../relational-databases/security/encryption/transparent-data-encryption-tde.md).   
 
 
 ## Configure backup encryption
@@ -287,9 +274,9 @@ WITH
 GO  
 ```
 
-For more information, see [Backup Encryption](https://msdn.microsoft.com/library/dn449489.aspx).
+For more information, see [Backup Encryption](../relational-databases/backup-restore/backup-encryption.md).
 
 
 ## Next steps
 
-For more information about the security features of SQL Server, see [Security Center for SQL Server Database Engine and Azure SQL Database](https://msdn.microsoft.com/library/bb510589.aspx).
+For more information about the security features of SQL Server, see [Security Center for SQL Server Database Engine and Azure SQL Database](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md).

@@ -1,7 +1,7 @@
 ---
 title: "Domain Independent Availability Groups (SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/12/2017"
+ms.date: "09/25/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -13,7 +13,7 @@ helpviewer_keywords:
 - "Availability Groups [SQL Server], domain independent"
 ms.assetid: 
 caps.latest.revision: 
-author: "MikeRayMSFT"
+author: "allanhirt"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---
@@ -39,7 +39,7 @@ The next figure shows an example of a Domain Independent Availability Group wher
 
 ![Workgroup Cluster with two nodes that are joined to a domain][2]
 
-A Domain Independent Availability Group is not just for multi-site or disaster recovery scenarios. It can be deployed in a single data center and even used with a [Basic Availability Group](https://msdn.microsoft.com/library/mt614935.aspx) (also known as a Standard Edition availability group) to provide a similar architecture to what used to be achieved using Database Mirroring with certificates as shown.
+A Domain Independent Availability Group is not just for multi-site or disaster recovery scenarios. It can be deployed in a single data center and even used with a [Basic Availability Group](basic-availability-groups-always-on-availability-groups.md) (also known as a Standard Edition availability group) to provide a similar architecture to what used to be achieved using Database Mirroring with certificates as shown.
 
 
 ![High-level view of an AG in Standard Edition][3]
@@ -117,7 +117,7 @@ CREATE CERTIFICATE [InstanceB_Cert]
 AUTHORIZATION InstanceB_User
 FROM FILE = 'Restore_path\InstanceB_Cert.cer'
 ```
-12. Create the endpoint that will be used by the availability group on each instance that will be a replica. For availability groups, the endpoint must have a type of DATABASE_MIRRORING. The endpoint uses the certificate created in Step 4 for that instance for authentication. Example syntax is shown below to create an endpoint using a certificate. Use the appropriate encryption method and other options relevant to your environment. For more information on the options available see [CREATE ENDPOINT (Transact-SQL)](https://msdn.microsoft.com/library/ms181591.aspx).
+12. Create the endpoint that will be used by the availability group on each instance that will be a replica. For availability groups, the endpoint must have a type of DATABASE_MIRRORING. The endpoint uses the certificate created in Step 4 for that instance for authentication. Example syntax is shown below to create an endpoint using a certificate. Use the appropriate encryption method and other options relevant to your environment. For more information on the options available see [CREATE ENDPOINT (Transact-SQL)](../../../t-sql/statements/create-endpoint-transact-sql.md).
 ```
 CREATE ENDPOINT DIAG_EP
 STATE = STARTED
@@ -135,7 +135,7 @@ FOR DATABASE_MIRRORING (
 GRANT CONNECT ON ENDPOINT::DIAG_EP TO 'InstanceX_User';
 GO
 ```
-14. Once the underlying certificates and endpoint security are configured, create the availability group using your preferred method. It is recommended to manually back up, copy, and restore the backup used to initialize the secondary, or use [automatic seeding](https://msdn.microsoft.com/library/mt735149.aspx). Using the Wizard to initialize the secondary replicas involves the use of Server Message Block (SMB) files, which may not work when using a non-domain-joined Workgroup Cluster.
+14. Once the underlying certificates and endpoint security are configured, create the availability group using your preferred method. It is recommended to manually back up, copy, and restore the backup used to initialize the secondary, or use [automatic seeding](automatically-initialize-always-on-availability-group.md). Using the Wizard to initialize the secondary replicas involves the use of Server Message Block (SMB) files, which may not work when using a non-domain-joined Workgroup Cluster.
 15. If creating a listener, make sure that both its name and its IP address are registered in DNS.
 
 ### Next steps 
@@ -145,8 +145,6 @@ GO
 - [Use the New Availability Group Dialog Box (SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)
  
 - [Create an availability group with Transact-SQL](create-an-availability-group-transact-sql.md)
-
->This content written by [Allan Hirt](http://mvp.microsoft.com/en-us/PublicProfile/4025254?fullName=Allan%20Hirt), Microsoft Most Valued Professional.
 
 <!--Image references-->
 [1]: ./media/diag-wsfc-two-data-centers-same-domain.png

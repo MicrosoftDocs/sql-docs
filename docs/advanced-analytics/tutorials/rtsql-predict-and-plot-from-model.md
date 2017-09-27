@@ -1,7 +1,7 @@
 ---
-title: "Predict and Plot from Model (R in T-SQL Tutorial) | Microsoft Docs"
+title: "Predict and plot from model (R in SQL quickstart) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/03/2017"
+ms.date: "08/20/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -18,15 +18,15 @@ author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
 ---
-# Use SQL to Predict and Plot from an R Model
+# Predict and plot from model (R in SQL quickstart)
 
-To perform _scoring_ using new data, you'll get one of the trained models from the table, and then call a new set of data on which to base predictions. Scoring is a term sometimes used in data science to mean generating predictions, probabilities, or other values based on new data fed into a trained model.
+To perform _scoring_ using new data, get one of the trained models from the table, and then call a new set of data on which to base predictions. Scoring is a term sometimes used in data science to mean generating predictions, probabilities, or other values based on new data fed into a trained model.
 
 ## Create the table of new speeds
 
 Did you notice that the original training data stops at a speed of 25 miles per hour? That's because the original data was based on an experiment from 1920!
 
-You might wonder, how long would it take an automobile from the 1920s to stop, assuming it could get going as fast as 60 mph or even 100 mph? To answer this question, you will provide some new speed values.
+You might wonder, how long would it take an automobile from the 1920s to stop, assuming it could get going as fast as 60 mph or even 100 mph? To answer this question, you must provide some new speed values.
 
 ```sql
 CREATE TABLE [dbo].[NewCarSpeed]([speed] [int] NOT NULL,
@@ -48,10 +48,10 @@ To get predictions based on one specific model, you must write a SQL script that
 2. Gets the new input data
 3. Calls an R prediction function that is compatible with that model
 
-In this example, because your model is based on the **rxLinMod** algorithm provided as part of the **RevoScaleR** package, you should call the `rxPredict` function, rather than the generic R `predict` function.
+In this example, because your model is based on the **rxLinMod** algorithm provided as part of the **RevoScaleR** package, you call the [rxPredict](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxpredict) function, rather than the generic R `predict` function.
 
 ```sql
-DECLARE @speedmodel varbinary(max) = (SELECT model FROM [dbo].[stopping_distance_models] WHERE model_name = 'default model');
+DECLARE @speedmodel varbinary(max) = (SELECT model FROM [dbo].[stopping_distance_models] WHERE model_name = 'latest model');
 EXEC sp_execute_external_script
     @language = N'R'
     , @script = N'
@@ -70,6 +70,9 @@ WITH RESULT SETS (([new_speed] INT, [predicted_distance] INT))
 
 + Use a SELECT statement to get a single model from the table, and pass it as an input parameter.
 +  After retrieving the model from the table, call the `unserialize` function on the model.
+
+    > [!TIP] 
+    > Also check out the new [serialization functions](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxserializemodel) provided by RevoScaleR, which support [realtime scoring](../../advanced-analytics/real-time-scoring.md).
 +  Apply the `rxPredict` function with appropriate arguments to the model, and provide the new input data.
 +  In the example, the `str` function is added during the testing phase, to check the schema of data being returned from R. You can remove the statement later.
 + The column names used in the R script are not necessarily passed to the stored procedure output. Here we've used the WITH RESULTS clause to define some new column names.
@@ -137,12 +140,12 @@ The following example demonstrates how to create a simple graphic using a plotti
   WITH RESULT SETS ((plot varbinary(max)));
 ```
 
-+ The `tempfile` function returns a string that can be used as a file name, but the file is not actually generated yet.
-+ For arguments to `tempfile`, you can specify a prefix and file extension, as well as a tmpdir. To verify the file name and path, print a message using `str()`.
++ The `tempfile` function returns a string that can be used as a file name, but the file has not been generated yet.
++ For arguments to `tempfile`, you can specify a prefix and file extension, as well as the directory. To verify the complete file name and path, print a message using `str()`.
 + The `jpeg` function creates an R device with the specified parameters.
 + After you create the plot, you can add more visual features to it. In this case, a regression line is added using `abline`.
 + When you are done adding plot features, you must close the graphics device using the `dev.off()` function.
-+ The `readBin` function takes a file to read, a format specification, and the number of records. The **rb** keyword indicates that the file is binary rather than containing text.
++ The `readBin` function takes a file to read, a format specification, and the number of records. The `rb`**` keyword indicates that the file is binary rather than text.
 
 **Results**
 
@@ -151,17 +154,19 @@ The following example demonstrates how to create a simple graphic using a plotti
 If you want to do some more elaborate plots, using some of the great graphics packages for R, we recommend these articles. Both require the popular **ggplot2** package.
 
 + [Loan Classification using SQL Server 2016 R Services](https://blogs.msdn.microsoft.com/microsoftrservertigerteam/2016/09/27/loan-classification-using-sql-server-2016-r-services/): End-to-end scenario based on insurance data. Requires the **reshape** package.
-+ [Create Graphs and Plots Using R](/walkthrough-create-graphs-and-plots-using-r.md)
++ [Create Graphs and Plots Using R](../../advanced-analytics/tutorials/walkthrough-create-graphs-and-plots-using-r.md)
 
 ## Conclusions
 
-Integration of R with SQL Server makes it easier to deploy R solutions at scale, leveraging the best features of R and relational databases, for high-performance data handling and rapid R analytics. See these additional resources for more R samples:
+Integration of R with SQL Server makes it easier to deploy R solutions at scale, leveraging the best features of R and relational databases, for high-performance data handling and rapid R analytics. 
 
-+  [SQL Server R tutorials](/sql-server-r-tutorials.md)
+See these additional resources for more R samples:
+
++  [SQL Server R tutorials](../../advanced-analytics/tutorials/sql-server-r-tutorials.md)
 
     Continue learning about solutions using R with SQL Server, through end-to-end scenarios created by the Microsoft Data Science and R Services development teams.
 
-+ [SQL Server Python tutorials](sql-server-python-tutorials.md)
++ [SQL Server Python tutorials](../../advanced-analytics/tutorials/sql-server-python-tutorials.md)
 
     For SQL Server 2017, use the power of remote compute context and scalable algorithm with the Python language.
 

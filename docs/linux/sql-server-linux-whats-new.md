@@ -1,32 +1,41 @@
-
 ---
-# required metadata
-
-title: What's New for SQL Server 2017 CTP 2.1 on Linux | Microsoft Docs
+title: What's New for SQL Server 2017 RC1 on Linux | Microsoft Docs
 description: This topic highlights what's new for the current release of SQL Server 2017 on Linux.
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 05/17/2017
+ms.date: 08/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
-
-# optional metadata
-
-# keywords: ""
-# ROBOTS: ""
-# audience: ""
-# ms.devlang: ""
-# ms.reviewer: ""
-# ms.suite: ""
-# ms.tgt_pltfrm: ""
-# ms.custom: ""
 ---
 # What's new for SQL Server 2017 on Linux
 
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+
 This topic describes what's new for SQL Server 2017 running on Linux.
+
+## GA
+
+> [!TIP]
+> The general availability of SQL Server 2017 has been [announced this week at the Microsoft Ignite conference](https://blogs.technet.microsoft.com/dataplatforminsider/2017/09/25/microsoft-for-the-modern-data-estate/)! The SQL Server 2017 GA downloads and updated documentation will be available on **October 2nd**.
+
+## RC2
+
+The RC2 release contains miscellaneous bug fixes and improvements.
+
+## RC1
+
+The RC1 release contains the following improvements and fixes:
+
+- Enabled Transparent Layer Security (TLS) for encrypted connections. For more information, see [Encrypting Connections to SQL Server on Linux](sql-server-linux-encrypted-connections.md).
+- Enabled [Active Directory Authentication](sql-server-linux-active-directory-authentication.md).
+- Enabled [DB Mail](../relational-databases/database-mail/database-mail.md).
+- Added IPV6 support.
+- Added environment variables for initial SQL Server setup. For more information, see [Configure SQL Server settings with environment variables on Linux](sql-server-linux-configure-environment-variables.md).
+- Removed **sqlpackage** from installed binaries. SqlPackage can still be run against Linux remotely from Windows.
+- Shared disk cluster resource agent sets the resource name like it does on a Windows SQL Server failover cluster instance. `@@ServerName` returns the SQL Server shared disk cluster resource name; prior to RC1 it returned the name of the cluster node that owned the resource.
 
 ## CTP 2.1
 
@@ -88,7 +97,7 @@ The CTP 1.3 release contains the following improvements and fixes:
 
 The CTP 1.2 release contains the following improvements and fixes:
 
-- Support for [SUSE Linux Enterprise Server v12 SP2](sql-server-linux-setup-suse-linux-enterprise-server.md).
+- Support for [SUSE Linux Enterprise Server v12 SP2](quickstart-install-connect-suse.md).
 - Bug fixes for core engine and stability improvements.
 - Docker image: 
   - Fixed [issue #1](https://github.com/Microsoft/mssql-docker/issues/1) by adding Python to the image.
@@ -121,7 +130,7 @@ Under compatibility mode 140:
 [Improvements from Service Pack 1](https://blogs.msdn.microsoft.com/sqlreleaseservices/sql-server-2016-service-pack-1-sp1-released/) in this CTP1.1 release:
 - Database cloning for CLR, Filestream/Filetable, In-memory and Query Store objects.
 - **CREATE** or **ALTER** operators for programmability objects.
-- New **USE HINT** query option to provide hints for the query processor. Learn more here: [Query Hints](https://msdn.microsoft.com/en-us/library/ms181714.aspx).
+- New **USE HINT** query option to provide hints for the query processor. Learn more here: [Query Hints](../t-sql/queries/hints-transact-sql-query.md).
 - SQL service account can now programmatically identify Enable Lock Pages in Memory and Instant File Initialization permissions.
 - Support for TempDB file count, file size and file growth settings.
 - Extended diagnostics in showplan XML.

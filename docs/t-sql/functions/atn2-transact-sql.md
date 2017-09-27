@@ -34,8 +34,6 @@ Returns the angle, in radians, between the positive x-axis and the ray from the 
 ## Syntax  
   
 ```sql
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 ATN2 ( float_expression , float_expression )  
 ```  
   

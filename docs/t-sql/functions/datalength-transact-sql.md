@@ -36,8 +36,6 @@ Returns the number of bytes used to represent any expression.
 ## Syntax  
   
 ```sql
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 DATALENGTH ( expression )   
 ```  
   

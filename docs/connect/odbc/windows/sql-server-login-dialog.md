@@ -21,7 +21,7 @@ When you call an ODBC connection without specifying enough information for the d
 
 ## Options
 
-### **Server**
+### Server
 
 The name of an instance of SQL Server on your network. Select a server\instance name from the list, or type the server\instance name in the **Server** box. Optionally, you can create a server alias on the client computer using **SQL Server Configuration Manager**, and type that name in the **Server** box.
 
@@ -29,7 +29,7 @@ You can enter "(local)" when you are using the same computer as SQL Server. You 
 
 For more information about server names for different types of networks, see the SQL Server installation documentation in SQL Server Books Online.
 
-### **Authentication Mode**
+### Authentication Mode
 
 Selects the authentication mode from one of the following:
 - **SQL Server** with login ID and password
@@ -39,61 +39,62 @@ Selects the authentication mode from one of the following:
 
 See [Data Source Wizard Screen 2](../../../connect/odbc/windows/dsn-wizard-2.md) for more information on the authentication modes.
 
-### **Server SPN**
+### Server SPN
 
 If you use a trusted connection, you can specify a service principal name (SPN) for the server.
 
-### **Login ID**
+### Login ID
 
 Specifies the SQL Server or Azure Active Directory login ID to use for the connection if **Authentication Mode** is set to **SQL Server** or **Active Directory Password**. Otherwise, the **Login ID** box is disabled.
 
-### **Password**
+### Password
 
 Specifies the password for the SQL Server or Azure Active Directory login ID used for the connection if **Authentication Mode** is set to **SQL Server** or **Active Directory Password**. Otherwise, the **Password** box is disabled.
 
-### **Options**
+### Options
 
 Displays or hides the **Options** group. The **Options** button is enabled if **Server** has a value.
 
-### **Change Password**
+### Change Password
 
 When this box is selected, displays the **New Password** and **Confirm New Password** boxes.
 
-### **New Password**
+### New Password
 
 Specifies the new password.
 
-### **Confirm New Password**
+### Confirm New Password
 
 Specifies the new password a second time, for confirmation.
 
-### **Database**
+### Database
 
 Specifies the default database to use on the connection. This setting overrides the default database specified for the login on the server. If no database is specified, the connection uses the default database specified for the login on the server.
 
-### **Mirror Server**
+### Mirror Server
+
 Specifies the name of the failover partner of the database to be mirrored.
 
-### **Mirror SPN**
+### Mirror SPN
 
 Optionally, you can specify an SPN for the mirror server. The SPN for the mirror server is used for mutual authentication between client and server.
 
-### **Language**
+### Language
 
 Specifies the national language to use for SQL Server system messages. The computer running SQL Server must have the language installed. This setting overrides the default language specified for the login on the server. If no language is specified, the connection uses the default language specified for the login on the server.
 
-### **Application Name**
+### Application Name
 
 (Optional) Specifies the application name to be stored in the **program_name** column in the row for this connection in **sys.sysprocesses**.
 
-### **Workstation ID**
+### Workstation ID
 
 (Optional) Specifies the workstation ID to be stored in the **hostname** column in the row for this connection in **sys.sysprocesses**.
 
-### **Use strong encryption for data**
+### Use strong encryption for data
 
 When selected, data that is passed through the connection will be encrypted. Logins are encrypted by default, even if the check box is cleared.
 
-### **Trust server certificate**
+### Trust server certificate
 
 This option is applicable only when **Use strong encryption for data** is enabled. When selected, the server's certificate will not be validated to have the correct hostname of the server and be issued by a trusted certificate authority.

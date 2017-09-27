@@ -29,6 +29,10 @@ Each instance of SQL Server can have multiple sets of system messages, with each
 
 When selected, data that is passed through connections that are made using this DSN will be encrypted. Logins are encrypted by default, even if the check box is cleared.
 
+### **Trust server certificate**
+
+This option is applicable only when **Use strong encryption for data** is enabled. When selected, the server's certificate will not be validated to have the correct hostname of the server and be issued by a trusted certificate authority. 
+
 ### **Perform translation for character data**
 
 When this check box is selected, the ODBC driver for SQL Server converts ANSI strings sent between the client computer and SQL Server by using Unicode. The ODBC driver sometimes converts between the SQL Server code page and Unicode on the client computer. This requires that the code page used by SQL Server be one of the code pages available on the client computer.
@@ -52,3 +56,19 @@ Specifies a threshold value, in milliseconds, for long-running query logging. An
 Specifies that statistics be logged. Statistics are logged to the specified file. To specify a log file, either type the full path and file name in the box or click **Browse** to select a log file by navigating through existing file directories.
 
 The statistics log is a tab-delimited file that can be analyzed in Microsoft Excel or any other application that supports tab-delimited files.
+
+### **Connect retry count**
+
+Specifies the number of times to retry an unsuccessful connection attempt.
+
+### **Connect retry interval (seconds)**
+
+Specifies the number of seconds between each connection retry attempt. For more information on the operation of this and the **Connect retry count** options, see [Connection Resiliency in the Windows ODBC Driver](../../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md).
+
+## [< Back](../../../connect/odbc/windows/dsn-wizard-3.md)
+
+Click this button to go back to the previous page of the wizard.
+
+## Finish
+
+If the information specified on this screen is complete, you can click Finish. The DSN is created using all attributes specified on this and other screens of the wizard, and you are given an opportunity to test the newly-created DSN.

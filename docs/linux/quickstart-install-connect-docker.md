@@ -4,11 +4,7 @@ description: This quick start tutorial shows how to use Docker to run the SQL Se
 author: rothja
 ms.author: jroth
 manager: jhubbard
-<<<<<<< HEAD
 ms.date: 10/02/2017
-=======
-ms.date: 09/20/2017
->>>>>>> master
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine

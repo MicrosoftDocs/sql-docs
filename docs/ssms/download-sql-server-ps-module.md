@@ -24,8 +24,34 @@ Full documentation about installing the latest version of the Windows Management
 
 The PowerShell command to install the SQL Server module is:
 
-> Install-module -Name SqlServer -Scope CurrentUser
+> Install-Module -Name SqlServer
+
+This command will install the module for all users of the computer. You will need to be running the PowerShell process as admin.
+
+> Install-Module -Name SqlServer -Scope CurrentUser
+
+This command will install the module for the user running the current process of PowerShell. You do not need to be running the PowerShell process with Administrator rights.
 
 If there are previous versions of SQL Server PowerShell modules on the machine, it may be necessary to provide the "-AllowClobber" parameter.  
 
-The versions of the SQL Server PowerShell module shipped to the PowerShell Gallery support versioning and require PowerShell version 5.0 or greater.
+If running as administrator and to install the module for all users of the computer
+
+> Install-Module -Name SqlServer -AllowClobber
+
+If not able to run as adminsitrator or to install only for the current user
+
+> Install-Module -Name SqlServer -Scope CurrentUser -AllowClobber
+
+When updated versions of the SqlServer module are available, you will be able to update the version using the Update-Module command
+
+> Update-Module -Name SqlServer
+
+To view the versions of the module installed on the machine you can use
+
+> Get-Module SqlServer -ListAvailable
+
+To use a specific version of the module in your scripts you can import it with
+
+> Import-Module SqlServer -Version 21.0.17178
+
+The versions of the SQL Server PowerShell module shipped to the PowerShell Gallery support versioning and require PowerShell version 5.0 or greater. You can find the SqlServer module on the [PowerShell Gallery](https://www.powershellgallery.com/packages/Sqlserver/) 

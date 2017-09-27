@@ -23,19 +23,21 @@ When you call an ODBC connection without specifying enough information for the d
 
 ### **Server**
 
-Each instance of SQL Server can have multiple sets of system messages, with each set in a different language (for example, English, Spanish, French, The name of an instance of SQL Server on your network. Select a server\instance name from the list, or type the server\instance name in the **Server** box. Optionally, you can create a server alias on the client computer using **SQL Server Configuration Manager**, and type that name in the **Server** box.
+The name of an instance of SQL Server on your network. Select a server\instance name from the list, or type the server\instance name in the **Server** box. Optionally, you can create a server alias on the client computer using **SQL Server Configuration Manager**, and type that name in the **Server** box.
 
 You can enter "(local)" when you are using the same computer as SQL Server. You can then connect to a local instance of SQL Server, even when running a non-networked version of SQL Server.
 
 For more information about server names for different types of networks, see the SQL Server installation documentation in SQL Server Books Online.
 
-### **Use Trusted Connection**
+### **Authentication Mode**
 
-When this box is selected, specifies that the ODBC driver request a secure (or trusted) connection to an instance of SQL Server running on Microsoft Windows. SQL Server uses integrated login security to establish connections using this data source, regardless of the current login security mode at the server. Any login ID or password supplied is ignored. The SQL Server system administrator must have associated your Windows network ID with a SQL Server login ID.
+Selects the authentication mode from one of the following:
+- **SQL Server** with login ID and password
+- **Windows Integrated** authentication using the currently logged-in user's account
+- **Active Directory Password** with login ID and password
+- **Active Directory Integrated** authentication using the currently logged-in user's account
 
-When this box is cleared, SQL Server uses standard login security to establish connections using this data source. You must specify a login ID and a password for all connection requests.
-
-**Important** Trusted Connections, using Windows Authentication, are much more secure than connections authenticated using SQL Server Authentication. Use Trusted Connections whenever possible.
+See [Data Source Wizard Screen 2](../../../connect/odbc/windows/dsn-wizard-2.md) for more information on the authentication modes.
 
 ### **Server SPN**
 
@@ -43,11 +45,11 @@ If you use a trusted connection, you can specify a service principal name (SPN) 
 
 ### **Login ID**
 
-Specifies the SQL Server login ID to use for the connection if **Use Trusted Connection** is cleared. If **Use Trusted Connection** is selected, the **Login ID** box is disabled.
+Specifies the SQL Server or Azure Active Directory login ID to use for the connection if **Authentication Mode** is set to **SQL Server** or **Active Directory Password**. Otherwise, the **Login ID** box is disabled.
 
 ### **Password**
 
-Specifies the password for the SQL Server login ID used for the connection if **Use Trusted Connection** is cleared. If **Use Trusted Connection** is selected, the **Password** box is disabled.
+Specifies the password for the SQL Server or Azure Active Directory login ID used for the connection if **Authentication Mode** is set to **SQL Server** or **Active Directory Password**. Otherwise, the **Password** box is disabled.
 
 ### **Options**
 
@@ -87,3 +89,11 @@ Specifies the national language to use for SQL Server system messages. The compu
 ### **Workstation ID**
 
 (Optional) Specifies the workstation ID to be stored in the **hostname** column in the row for this connection in **sys.sysprocesses**.
+
+### **Use strong encryption for data**
+
+When selected, data that is passed through the connection will be encrypted. Logins are encrypted by default, even if the check box is cleared.
+
+### **Trust server certificate**
+
+This option is applicable only when **Use strong encryption for data** is enabled. When selected, the server's certificate will not be validated to have the correct hostname of the server and be issued by a trusted certificate authority.

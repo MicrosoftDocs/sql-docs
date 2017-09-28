@@ -42,11 +42,6 @@ This documentation for the Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../.
 -   [Using Always Encrypted with the ODBC Driver](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)
 -   [Using Azure Active Directory with the ODBC Driver](../../../connect/odbc/using-azure-active-directory.md) 
 -   [Using Transparent Network IP Resolution](../../../connect/odbc/using-transparent-network-ip-resolution.md)   
--   [Data Source Wizard Screen 1](../../../connect/odbc/windows/dsn-wizard-1.md)   
--   [Data Source Wizard Screen 2](../../../connect/odbc/windows/dsn-wizard-2.md)   
--   [Data Source Wizard Screen 3](../../../connect/odbc/windows/dsn-wizard-3.md)   
--   [Data Source Wizard Screen 4](../../../connect/odbc/windows/dsn-wizard-4.md)   
--   [SQL Server Login Dialog](../../../connect/odbc/windows/sql-server-login-dialog.md)   
 
 ## Community  
 - [Microsoft ODBC Driver For SQL Server Team blog](http://blogs.msdn.com/sqlnativeclient/default.aspx)  

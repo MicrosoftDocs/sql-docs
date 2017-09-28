@@ -97,7 +97,7 @@ This compact list provides links to all the updated articles that are listed in 
  - In addition, ..!NCLUDE-NotShown--ssNoVersion--../../includes/ssnoversion-md.md)] supports the **geography** data type, which stores ellipsoidal (round-earth) data, such as GPS latitude and longitude coordinates.
  -
  -> [!IMPORTANT]
- ->  For a detailed description and examples of spatial features introduced in ..!NCLUDE-NotShown--ssSQL11](../../includes/sssql11-md.md)], including enhancements to the spatial data types, download the white paper, [New Spatial Features in SQL Server Code-Named "Denali"](http://go.microsoft.com/fwlink/?LinkId=226407).
+ ->  For a detailed description and examples of spatial features introduced in ..!NCLUDE-NotShown--ssSQL11--../../includes/sssql11-md.md)], including enhancements to the spatial data types, download the white paper, [New Spatial Features in SQL Server Code-Named "Denali"](http://go.microsoft.com/fwlink/?LinkId=226407).
  -
  -##  <a name="objects"></a> Spatial Data Objects
  - The **geometry** and **geography** data types support sixteen spatial data objects, or instance types. However, only eleven of these instance types are *instantiable*; you can create and work with these instances (or instantiate them) in a database. These instances derive certain properties from their parent data types that distinguish them as **Points**, **LineStrings, CircularStrings**, **CompoundCurves**, **Polygons**, **CurvePolygons** or as multiple **geometry** or **geography** instances in a **GeometryCollection**. **Geography** type has an additional instance type, **FullGlobe**.

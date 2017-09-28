@@ -26,7 +26,7 @@ manager: "jhubbard"
     
 [![Azure Virtual Machine small](../analysis-services/media/azure-virtual-machine-small.png)](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/) Have an Azure account?  Then go **[Here](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/)** to spin up a Virtual Machine with SQL Server 2016 SP1 already installed.
     
-[![Download SSMS](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms) **SSMS:** To get the latest version of SQL Server Management Studio, see **[Download SQL Server Management Studio (SSMS)](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms)**.   
+[![Download SSMS](../ssms/download-sql-server-management-studio-ssms.md) **SSMS:** To get the latest version of SQL Server Management Studio, see **[Download SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)**.   
     
  For information on what's new, see [What's New in SQL Server 2016](http://msdn.microsoft.com/library/8223c19b-4b0d-4b1d-a042-9a726c18e708).
     
@@ -110,11 +110,11 @@ Additionally, consider manual cleanup options to prevent Query Store from transi
 
 Also, execute the following Query Store stored procedures periodically to clean runtime statistics, specific queries or plans:
 
--    ```sp_query_store_reset_exec_stats```
+- `sp_query_store_reset_exec_stats`
 
--    ```sp_query_store_remove_plan```
+- `sp_query_store_remove_plan`
 
--    ```sp_query_store_remove_query```
+- `sp_query_store_remove_query`
 
 
 ###  <a name="bkmk_ga_docs"></a> Product Documentation (GA) 

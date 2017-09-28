@@ -66,9 +66,9 @@ manager: "jhubbard"
 ## Troubleshoot Package Execution by Using Logging  
  You can track much of what occurs in your running packages by enabling logging. Log providers capture information about the specified events for later analysis, and save that information in a database table, a flat file, an XML file, or another supported output format.  
   
--   **Enable logging**. You can refine the logging output by selecting only the events and only the items of information that you want to capture. For more information, see [Integration Services (SSIS) Logging](/sql-docs/docs/integration-services/performance/integration-services-ssis-logging).  
+-   **Enable logging**. You can refine the logging output by selecting only the events and only the items of information that you want to capture. For more information, see [Integration Services (SSIS) Logging](../performance/integration-services-ssis-logging.md).  
   
--   **Select the package's Diagnostic event to troubleshoot provider issues.** There are logging messages that help you troubleshoot a package's interaction with external data sources. For more information, see [Troubleshooting Tools Package Connectivity](/sql-docs/docs/integration-services/troubleshooting/troubleshooting-tools-for-package-connectivity).  
+-   **Select the package's Diagnostic event to troubleshoot provider issues.** There are logging messages that help you troubleshoot a package's interaction with external data sources. For more information, see [Troubleshooting Tools Package Connectivity](troubleshooting-tools-for-package-connectivity.md).  
   
 -   **Enhance the default logging output**. Logging typically appends rows to the logging destination each time that a package is run. Although each row of logging output identifies the package by its name and unique identifier, and also identifies the execution of the package by a unique ExecutionID, the large quantity of logging output in a single list can become difficult to analyze.  
   

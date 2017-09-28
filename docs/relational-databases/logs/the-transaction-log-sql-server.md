@@ -113,11 +113,11 @@ Characteristics of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.
 |14|OTHER_TRANSIENT|This value is currently not used.|  
   
 ##  <a name="MinimallyLogged"></a> Operations that can be minimally logged  
- *Minimal logging* involves logging only the information that is required to recover the transaction without supporting point-in-time recovery. This topic identifies the operations that are minimally logged under the bulk-logged [recovery model](/sql-docs/docs/relational-databases/backup-restore/recovery-models-sql-server) (as well as under the simple recovery model, except when a backup is running).  
+ *Minimal logging* involves logging only the information that is required to recover the transaction without supporting point-in-time recovery. This topic identifies the operations that are minimally logged under the bulk-logged [recovery model](../backup-restore/recovery-models-sql-server.md) (as well as under the simple recovery model, except when a backup is running).  
   
 > **NOTE!!** Minimal logging is not supported for memory-optimized tables.  
   
-> **ANOTHER NOTE!** Under the full [recovery model](/sql-docs/docs/relational-databases/backup-restore/recovery-models-sql-server), all bulk operations are fully logged. However, you can minimize logging for a set of bulk operations by switching the database to the bulk-logged recovery model temporarily for bulk operations. Minimal logging is more efficient than full logging, and it reduces the possibility of a large-scale bulk operation filling the available transaction log space during a bulk transaction. However, if the database is damaged or lost when minimal logging is in effect, you cannot recover the database to the point of failure.  
+> **ANOTHER NOTE!** Under the full [recovery model](../backup-restore/recovery-models-sql-server.md), all bulk operations are fully logged. However, you can minimize logging for a set of bulk operations by switching the database to the bulk-logged recovery model temporarily for bulk operations. Minimal logging is more efficient than full logging, and it reduces the possibility of a large-scale bulk operation filling the available transaction log space during a bulk transaction. However, if the database is damaged or lost when minimal logging is in effect, you cannot recover the database to the point of failure.  
   
  The following operations, which are fully logged under the full recovery model, are minimally logged under the simple and bulk-logged recovery model:  
   

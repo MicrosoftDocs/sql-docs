@@ -16,7 +16,7 @@ ms.author: "sstein"
 manager: "craigg"
 ---
 # Changelog for SQL Server Data Tools (SSDT)
-This change log is for [SQL Server Data Tools (SSDT)](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt).  
+This change log is for [SQL Server Data Tools (SSDT)](download-sql-server-data-tools-ssdt.md).  
   
 For detailed posts about what's new and changed, see [the SSDT Team blog](https://blogs.msdn.microsoft.com/ssdt/)
 
@@ -362,7 +362,7 @@ Build number: 14.0.60812.0
 
 - **Release Versioning & Numbering:** Releases are now tagged numerically rather than by month. This aligns with the new SSMS policy and simplifies cases where we have multiple releases or hotfixes in a month. This release is 16.3 which means the third update after the RTM release. Any hotfix will be 16.3.1 and so on, with our next update (planned for next month) being 16.4.
 - **Analysis Services – Tabular Model Explorer:** Tabular Model Explorer lets you conveniently navigate through the various metadata objects in a model, such as data sources, tables, measures, and relationships. It is implemented as a separate tools window that you can display by opening the View menu in Visual Studio, pointing to Other Windows, and then clicking Tabular Model Explorer. The Tabular Model Explorer appears by default in the Solution Explorer area on a separate tab. Tabular Model Explorer organizes the metadata objects in a tree structure that closely resembles the schema of a tabular 1200 model and many more new features.
-- **Database Tools – Always Encrypted**:  This release provides new [Always Encrypted Key management](/sql-docs/docs/relational-databases/security/encryption/overview-of-key-management-for-always-encrypted) dialogs to easily add Column Master Keys or Column Encryption Keys to your database project, or a live database in SQL Server Object Explorer. This release supports certificates in Windows Certificate Store. In upcoming releases, Azure Key Vault and CNG Providers will be supported.
+- **Database Tools – Always Encrypted**:  This release provides new [Always Encrypted Key management](../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md) dialogs to easily add Column Master Keys or Column Encryption Keys to your database project, or a live database in SQL Server Object Explorer. This release supports certificates in Windows Certificate Store. In upcoming releases, Azure Key Vault and CNG Providers will be supported.
     - While creating Column Master Key or Column Encryption Key, you may experience that the changes are not reflected on SQL Server Object Explorer immediately after clicking Update Database. To workaround, refresh the database node in SQL Server Object Explorer.
     - If you try to encrypt a column in a table with data from SQL Server Object Explorer, you may experience a failure. This feature is currently supported only in SSDT database projects and SSMS. Support for SQL Server Object Explorer will be enabled in a later release.
 
@@ -450,6 +450,6 @@ SSDT General Availability (GA) is now released. The SSDT GA update for June 2016
 [Download SQL Server Data Tools &#40;SSDT&#41;](../ssdt/download-sql-server-data-tools-ssdt.md)  
 [Previous releases of SQL Server Data Tools &#40;SSDT and SSDT-BI&#41;](../ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md)  
 [What's New in Database Engine](https://msdn.microsoft.com/library/bb510411.aspx)  
-[What's New in Analysis Services](/sql-docs/docs/analysis-services/what-s-new-in-analysis-services)  
-[What's New in Integration Services](/sql-docs/docs/integration-services/what-s-new-in-integration-services-in-sql-server-2016)  
+[What's New in Analysis Services](../analysis-services/what-s-new-in-analysis-services.md)  
+[What's New in Integration Services](../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md)  
   

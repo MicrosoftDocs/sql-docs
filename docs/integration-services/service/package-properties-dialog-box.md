@@ -21,7 +21,7 @@ manager: "jhubbard"
 # Package Properties Dialog Box
   Use the **Package Properties** dialog box to view properties for packages that are stored on the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server.  
   
- For more information, see [Integration Services &#40;SSIS&#41; Server](/sql-docs/docs/integration-services/integration-services-ssis-packages).  
+ For more information, see [Integration Services &#40;SSIS&#41; Server](../integration-services-ssis-packages.md).  
   
  **What do you want to do?**  
   

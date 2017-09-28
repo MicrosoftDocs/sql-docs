@@ -39,9 +39,9 @@ To use TDE, follow these steps. The first three steps are only done once, when p
   
 1.  Create a master key in the master database.  
   
-2.  Use **sp_pdw_database_encryption** to enable TDE on the SQL Server PDW. This operation modifies the temporary databases in order to ensure the protection of future temporary data, and will fail if attempted when there are any active sessions that have temporary tables. **sp_pdw_database_encryption** turns on user data masking in PDW system logs. (For more information about user data masking in PDW system logs, see [sp_pdw_log_user_data_masking](/sql-docs/docs/relational-databases/system-stored-procedures/sp-pdw-log-user-data-masking-sql-data-warehouse).)  
+2.  Use **sp_pdw_database_encryption** to enable TDE on the SQL Server PDW. This operation modifies the temporary databases in order to ensure the protection of future temporary data, and will fail if attempted when there are any active sessions that have temporary tables. **sp_pdw_database_encryption** turns on user data masking in PDW system logs. (For more information about user data masking in PDW system logs, see [sp_pdw_log_user_data_masking](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-pdw-log-user-data-masking-sql-data-warehouse).)  
   
-3.  Use [sp_pdw_add_network_credentials](/sql-docs/docs/relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse) to create a credential that can authenticate and write to the share where the backup of the certificate will be stored. If a credential already exist for the intended storage server, the existing credential can be used.  
+3.  Use [sp_pdw_add_network_credentials](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse) to create a credential that can authenticate and write to the share where the backup of the certificate will be stored. If a credential already exist for the intended storage server, the existing credential can be used.  
   
 4.  In the master database, create a certificate protected by the master key.  
   
@@ -117,19 +117,19 @@ The following table provides links and explanations of TDE commands and function
   
 |Command or function|Purpose|  
 |-----------------------|-----------|  
-|[CREATE DATABASE ENCRYPTION KEY](/sql-docs/docs/t-sql/statements/create-database-encryption-key-transact-sql)|Creates a key that is used to encrypt a database.|  
-|[ALTER DATABASE ENCRYPTION KEY](/sql-docs/docs/t-sql/statements/alter-database-encryption-key-transact-sql)|Changes the key that is used to encrypt a database.|  
-|[DROP DATABASE ENCRYPTION KEY](/sql-docs/docs/t-sql/statements/drop-database-encryption-key-transact-sql)|Removes the key that was used to encrypt a database.|  
-|[ALTER DATABASE](/sql-docs/docs/t-sql/statements/alter-database-parallel-data-warehouse)|Explains the **ALTER DATABASE** option that is used to enable TDE.|  
+|[CREATE DATABASE ENCRYPTION KEY](https://docs.microsoft.com/sql/t-sql/statements/create-database-encryption-key-transact-sql)|Creates a key that is used to encrypt a database.|  
+|[ALTER DATABASE ENCRYPTION KEY](https://docs.microsoft.com/sql/t-sql/statements/alter-database-encryption-key-transact-sql)|Changes the key that is used to encrypt a database.|  
+|[DROP DATABASE ENCRYPTION KEY](https://docs.microsoft.com/sql/t-sql/statements/drop-database-encryption-key-transact-sql)|Removes the key that was used to encrypt a database.|  
+|[ALTER DATABASE](https://docs.microsoft.com/sql/t-sql/statements/alter-database-parallel-data-warehouse)|Explains the **ALTER DATABASE** option that is used to enable TDE.|  
   
 ## Catalog Views and Dynamic Management Views  
 The following table shows TDE catalog views and dynamic management views.  
   
 |Catalog view or dynamic management view|Purpose|  
 |-------------------------------------------|-----------|  
-|[sys.databases](/sql-docs/docs/relational-databases/system-catalog-views/sys-databases-transact-sql)|Catalog view that displays database information.|  
-|[sys.certificates](/sql-docs/docs/relational-databases/system-catalog-views/sys-certificates-transact-sql)|Catalog view that shows the certificates in a database.|  
-|[sys.dm_pdw_nodes_database_encryption_keys](/sql-docs/docs/relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-database-encryption-keys-transact-sql)|Dynamic management view that provides information for each node, about the encryption keys used in a database, and the state of encryption of a database.|  
+|[sys.databases](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)|Catalog view that displays database information.|  
+|[sys.certificates](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-certificates-transact-sql)|Catalog view that shows the certificates in a database.|  
+|[sys.dm_pdw_nodes_database_encryption_keys](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-database-encryption-keys-transact-sql)|Dynamic management view that provides information for each node, about the encryption keys used in a database, and the state of encryption of a database.|  
   
 ## Permissions  
 Each TDE feature and command has individual permission requirements, described in the tables shown earlier.  
@@ -197,7 +197,7 @@ All data written to the transaction log before a change in the database encrypti
 SQL Server PDW maintains a set of logs intended for troubleshooting. (Note, this is not the transaction log, the SQL Server error log or the Windows event log.) These PDW activity logs can contain full statements in clear text, some of which can contain user data. Typical examples are **INSERT** and **UPDATE** statements. Masking of user data can be explicitly turned on or off by using **sp_pdw_log_user_data_masking**. Enabling encryption on SQL Server PDW automatically turns on the masking of user data in PDW activity logs in order to protect them. **sp_pdw_log_user_data_masking** can also be used to mask statements when not using TDE, but that is not recommended because it significantly reduces the ability of the Microsoft Support Team to analyze problems.  
   
 ### Transparent Data Encryption and the tempdb System Database  
-The tempdb system database is encrypted when encryption is enabled by using [sp_pdw_database_encryption](/sql-docs/docs/relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse). This is required before any database can use TDE. This might have a performance effect for unencrypted databases on the same instance of SQL Server PDW.  
+The tempdb system database is encrypted when encryption is enabled by using [sp_pdw_database_encryption](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse). This is required before any database can use TDE. This might have a performance effect for unencrypted databases on the same instance of SQL Server PDW.  
   
 ## Key Management  
 The database encryption key (DEK) is protected by the certificates stored in the master database. These certificates are protected by the database master key (DMK) of the master database. The DMK needs to be protected by the service master key (SMK) in order to be used for TDE.  
@@ -267,21 +267,21 @@ The performance impact of TDE varies with the type of data you have, how it is s
 ## Related Content  
 The following links contain general information about how SQL Server manages encryption. These topics can help you understand SQL Server encryption, but these topics do not have information specific to SQL Server PDW and they discuss features that are not present in SQL Server PDW.  
   
--   [SQL Server Encryption](/sql-docs/docs/relational-databases/security/encryption/sql-server-encryption)  
+-   [SQL Server Encryption](https://docs.microsoft.com/sql/relational-databases/security/encryption/sql-server-encryption)  
   
--   [Encryption Hierarchy](/sql-docs/docs/relational-databases/security/encryption/encryption-hierarchy)  
+-   [Encryption Hierarchy](https://docs.microsoft.com/sql/relational-databases/security/encryption/encryption-hierarchy)  
   
--   [SQL Server and Database Encryption Keys](/sql-docs/docs/relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine)  
+-   [SQL Server and Database Encryption Keys](https://docs.microsoft.com/sql/relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine)  
 
   
 ## See Also  
-[ALTER DATABASE](/sql-docs/docs/t-sql/statements/alter-database-parallel-data-warehouse)  
-[CREATE MASTER KEY](/sql-docs/docs/t-sql/statements/create-master-key-transact-sql)  
-[CREATE DATABASE ENCRYPTION KEY](/sql-docs/docs/t-sql/statements/create-database-encryption-key-transact-sql)  
-[BACKUP CERTIFICATE](/sql-docs/docs/t-sql/statements/backup-certificate-transact-sql)  
-[sp_pdw_database_encryption](/sql-docs/docs/relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse)  
-[sp_pdw_database_encryption_regenerate_system_keys](/sql-docs/docs/relational-databases/system-stored-procedures/sp-pdw-database-encryption-regenerate-system-keys-sql-data-warehouse)  
-[sp_pdw_log_user_data_masking](/sql-docs/docs/relational-databases/system-stored-procedures/sp-pdw-log-user-data-masking-sql-data-warehouse)  
-[sys.certificates](/sql-docs/docs/relational-databases/system-catalog-views/sys-certificates-transact-sql)  
-[sys.dm_pdw_nodes_database_encryption_keys](/sql-docs/docs/relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-database-encryption-keys-transact-sql)  
+[ALTER DATABASE](https://docs.microsoft.com/sql/t-sql/statements/alter-database-parallel-data-warehouse)  
+[CREATE MASTER KEY](https://docs.microsoft.com/sql/t-sql/statements/create-master-key-transact-sql)  
+[CREATE DATABASE ENCRYPTION KEY](https://docs.microsoft.com/sql/t-sql/statements/create-database-encryption-key-transact-sql)  
+[BACKUP CERTIFICATE](https://docs.microsoft.com/sql/t-sql/statements/backup-certificate-transact-sql)  
+[sp_pdw_database_encryption](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse)  
+[sp_pdw_database_encryption_regenerate_system_keys](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-pdw-database-encryption-regenerate-system-keys-sql-data-warehouse)  
+[sp_pdw_log_user_data_masking](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-pdw-log-user-data-masking-sql-data-warehouse)  
+[sys.certificates](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-certificates-transact-sql)  
+[sys.dm_pdw_nodes_database_encryption_keys](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-database-encryption-keys-transact-sql)  
   

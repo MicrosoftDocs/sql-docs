@@ -1,7 +1,7 @@
 ---
 title: "What&#39;s New in Integration Services in SQL Server 2017 | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/11/2017"
+ms.date: "09/28/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -23,13 +23,23 @@ This topic describes the features that have been added or updated in [!INCLUDE[s
 
 ## Highlights of this release
 
-Here are the most important new features in Integration Services for SQL Server 2017.
+Here are the most important new features of Integration Services in SQL Server 2017.
 
 -   **Scale Out**. Distribute SSIS package execution more easily across multiple worker computers, and manage executions and workers from a single master computer. For more info, see [Integration Services Scale Out](../integration-services/scale-out/integration-services-ssis-scale-out.md).
 
 -   **Integration Services on Linux**. Run SSIS packages on Linux computers. For more info, see [Extract, transform, and load data on Linux with SSIS](../linux/sql-server-linux-migrate-ssis.md).
 
 -   **Connectivity improvements**. Connect to the OData feeds of Microsoft Dynamics AX Online and Microsoft Dynamics CRM Online with the updated OData components. 
+
+## New in Azure Data Factory
+
+With the public preview of Azure Data Factory version 2 in September, 2017, you can now do the following things:
+-   Deploy packages to the SSIS Catalog database (SSISDB) on Azure SQL Database.
+-   Run packages deployed to Azure on the Azure-SSIS Integration Runtime, a component of Azure Data Factory version 2.
+
+For more info, see [Lift and shift SQL Server Integration Services workloads to the cloud](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md).
+
+These new capabilities require SQL Server Data Tools (SSDT) version 17.2 or later, but do not require SQL Server 2017 or SQL Server 2016. When you deploy packages to Azure, the Package Deployment Wizard always upgrades the packages to the latest package format.
 
 ## New in the Azure Feature Pack
 

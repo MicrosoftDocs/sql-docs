@@ -33,7 +33,7 @@ Here are the most important new features of Integration Services in SQL Server 2
 
 ## New in Azure Data Factory
 
-With the public preview of Azure Data Factory version 2 in September, 2017, you can now do the following things:
+With the public preview of Azure Data Factory version 2 in September 2017, you can now do the following things:
 -   Deploy packages to the SSIS Catalog database (SSISDB) on Azure SQL Database.
 -   Run packages deployed to Azure on the Azure-SSIS Integration Runtime, a component of Azure Data Factory version 2.
 

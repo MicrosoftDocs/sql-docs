@@ -1,7 +1,7 @@
 ---
 title: "Changelog for SQL Server Data Tools (SSDT) | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/21/2017"
+ms.date: "09/28/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -21,7 +21,7 @@ This change log is for [SQL Server Data Tools (SSDT)](download-sql-server-data-t
 For detailed posts about what's new and changed, see [the SSDT Team blog](https://blogs.msdn.microsoft.com/ssdt/)
 
 ## SSDT for Visual Studio 2017 (15.3.??? preview)
-Build number: NEEDED
+Build number: ???
   
 ### What's New?
 ???
@@ -74,7 +74,6 @@ Build number: NEEDED
 - Fixed a crash that could occur in VS2017 when trying to invoke Test Cube Security in the Roles designer Cell Data tab designer in multi-dimensional projects.
 - SSDT: Properties are uneditable for tabular data sources.
 - Fixed an issue that may have caused MSBuild and DevEnv builds to not work correctly in some cases with solution files.
-
 - Vastly improved performance when committing model changes (DAX edits for measures, calculated columns) when tabular model contains larger metadata
 - Fixed a number of issues with importing data using PowerQuery in 1400-compat level models
    - Import takes a long time after clicking Import and UI shows no status

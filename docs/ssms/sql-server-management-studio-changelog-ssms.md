@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Management Studio - Changelog (SSMS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/22/2017"
+ms.date: "09/28/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -31,9 +31,9 @@ Generally available | Build number:
 - Added the syntax check of the "Predict" function.
 - Added the syntax check of the External Library Management queries.
 - Added SMO support for External Library Management.
-- Added "Start PowerShell" support to "Registered Servers" window (requires a new SQL PowerShell module)
+- Added "Start PowerShell" support to "Registered Servers" window (requires a new SQL PowerShell module).
 - Always On: added [read-only routing support](../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md) for availability groups.
-- Added ADAL tracing to Output Window (off by default; needs to be turned on in user settings under "Tools > Options > Azure Services > Azure Cloud > ADAL Output Window Trace Level").
+- Added an option to send tracing details to the Output Window for "Active Directory - Universal with MFA support" logins (off by default; needs to be turned on in user settings under "Tools > Options > Azure Services > Azure Cloud > ADAL Output Window Trace Level"). 
 - Query Store: 
   - Query Store UI will be accessible even when QDS is OFF as long as QDS have recorded any data.
   - Query Store UI now exposes waits categorization in all the existing reports. This will let customers unlock the scenarios of Top Waiting Queries and many more.
@@ -100,7 +100,7 @@ Generally available | Build number:
 - When using Windows Auth in AS Azure the user will now see the name of the user account in Object Explorer correctly.
 
 
-### Known issues in this release:
+### Known issues in this 17.3 release:
 
 **General SSMS**
 

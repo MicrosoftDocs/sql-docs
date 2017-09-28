@@ -4,7 +4,7 @@ description: This tutorial shows how restore a SQL Server database backup in a n
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 09/11/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -24,7 +24,7 @@ This tutorial demonstrates how to move and restore a SQL Server backup file into
 
 ## Prerequisites
 
-* Docker Engine 1.8+ on any supported Linux distribution or Docker for Mac/Windows.
+* Docker Engine 1.8+ on any supported Linux distribution or Docker for Mac/Windows. For more information, see [Install Docker](https://docs.docker.com/engine/installation/).
 * Minimum of 4 GB of disk space
 * Minimum of 4 GB of RAM
 * [System requirements for SQL Server on Linux](sql-server-linux-setup.md#system).
@@ -34,37 +34,63 @@ This tutorial demonstrates how to move and restore a SQL Server backup file into
 
 ## Pull and run the container image
 
+1. Open a bash terminal on Linux/Mac or an elevated PowerShell session on Windows.
+
 1. Pull the SQL Server 2017 Linux container image from Docker Hub.
 
     ```bash
+    sudo docker pull microsoft/mssql-server-linux
+    ```
+
+    ```PowerShell
     docker pull microsoft/mssql-server-linux
     ```
 
     > [!TIP]
-    > For Linux, depending on your system and user configuration, you might need to preface each `docker` command with `sudo`.
+    > Throughout this tutorial, docker command examples are given for both the bash shell (Linux/Mac) and PowerShell (Windows).
 
-1. To run the container image with Docker, you can use the following command from a bash shell (Linux/macOS):
+1. To run the container image with Docker, you can use the following command:
 
     ```bash
-    docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' --name 'sqlcontianer1' -e 'MSSQL_PID=Developer' -p 1401:1433 -d microsoft/mssql-server-linux
+    sudo docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=Your.StrongPwd1' --name 'sql1' -e 'MSSQL_PID=Developer' -p 1401:1433 -v sql1data:/var/opt/mssql -d microsoft/mssql-server-linux
     ```
-
-    If you are using Docker for Windows, run an elevated PowerShell command prompt and use double-quotes for the string values:
 
     ```PowerShell
-    docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" --name "sqlcontianer1" -e "MSSQL_PID=Developer" -p 1401:1433 -d microsoft/mssql-server-linux
+    docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=Your.StrongPwd1" --name "sql1" -e "MSSQL_PID=Developer" -p 1401:1433 -v sql1data:/var/opt/mssql -d microsoft/mssql-server-linux
     ```
 
-    > [!NOTE]
-    > This command creates a SQL Server 2017 container with the Developer Edition. SQL Server port 1433 is exposed on the host as port 1401. This means that to connect from outside from the container, you would also need to specify port 1401. Connecting externally is not part of this tutorial, but you can see an example in the [Docker quickstart](quickstart-install-connect-docker.md#connectexternal).
+    This command creates a SQL Server 2017 container with the **Developer** Edition. SQL Server port **1433** is exposed on the host as port **1401**. The optional `-v sql1data:/var/opt/mssql` parameter creates a data volume container named **sql1ddata**. This is used to persist the data created by SQL Server.
 
 1. To view your Docker containers, use the `docker ps` command.
 
     ```bash
-    docker ps -a
+    sudo docker ps -a
     ```
 
+    ```PowerShell
+    docker ps -a
+    ```
+ 
 1. If the **STATUS** column shows a status of **Up**, then SQL Server is running in the container and listening on the port specified in the **PORTS** column. If the **STATUS** column for your SQL Server container shows **Exited**, see the [Troubleshooting section of the configuration guide](sql-server-linux-configure-docker.md#troubleshooting).
+
+   ```
+   $ sudo docker ps -a
+   
+   CONTAINER ID        IMAGE                          COMMAND                  CREATED             STATUS              PORTS                    NAMES
+   941e1bdf8e1d        microsoft/mssql-server-linux   "/bin/sh -c /opt/m..."   About an hour ago   Up About an hour    0.0.0.0:1401->1433/tcp   sql1
+   ```
+
+## Change the SA password
+
+[!INCLUDE [Change docker password](../includes/sql-server-linux-change-docker-password.md)]
+
+## Copy the backup file into the container
+
+For this tutorial, 
+
+## Connect external
+
+This means that to connect from outside from the container, you would also need to specify port 1401. Connecting externally is not part of this tutorial, but you can see an example in the [Docker quickstart](quickstart-install-connect-docker.md#connectexternal)
 
 ## Next steps
 
@@ -76,3 +102,4 @@ Next, explore other migration scenarios for SQL Server on Linux.
 
 > [!div class="nextstepaction"]
 >[Configuration guide for SQL Server 2017 on Docker](sql-server-linux-configure-docker.md)
+

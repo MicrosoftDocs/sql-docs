@@ -41,8 +41,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 [ WITH <common_table_expression> [ ,...n ] ]  
   
 <common_table_expression>::=  

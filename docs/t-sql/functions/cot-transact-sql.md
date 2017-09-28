@@ -33,8 +33,6 @@ A mathematical function that returns the trigonometric cotangent of the specifie
 ## Syntax  
   
 ```sql
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 COT ( float_expression )  
 ```  
   

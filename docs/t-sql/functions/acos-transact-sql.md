@@ -34,8 +34,6 @@ A mathematical function that returns the angle, in radians, whose cosine is the 
 ## Syntax  
   
 ```sql
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 ACOS ( float_expression )  
 ```  
   

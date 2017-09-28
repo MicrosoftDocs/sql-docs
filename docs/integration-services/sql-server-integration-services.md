@@ -40,7 +40,7 @@ manager: "jhubbard"
  
 - [MSDN forum for SSIS - ask questions](https://social.msdn.microsoft.com/Forums/en-us/home?forum=sqlintegrationservices)
 - [MSDN forum for SSDT and SSMS - ask questions](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqltool)
-- [Stack Overflow (tag `ssis`) - ask questions](http://stackoverflow.com/questions/tagged/ssis)
+- [Stack Overflow (tag *ssis*) - ask questions](http://stackoverflow.com/questions/tagged/ssis)
 - [Microsoft Connect - report bugs and request features](https://connect.microsoft.com/SQLServer/Feedback)
 - [Reddit - general discussion about SSIS](https://www.reddit.com/r/SQLServer/search?q=ssis&restrict_sr=on)
 - [Microsoft support options for business users](https://support.microsoft.com/gp/support-options-for-business)

@@ -24,10 +24,10 @@ Dynamic data masking limits (DDM) sensitive data exposure by masking it to non-p
 
 Dynamic data masking helps prevent unauthorized access to sensitive data by enabling customers to designate how much of the sensitive data to reveal with minimal impact on the application layer. DDM can be configured on the database to hide sensitive data in the result sets of queries over designated database fields, while the data in the database is not changed. Dynamic data masking is easy to use with existing applications, since masking rules are applied in the query results. Many applications can mask sensitive data without modifying existing queries.
 
-* 	A central data masking policy acts directly on sensitive fields in the database.
-* 	Designate privileged users or roles that do have access to the sensitive data.
-* 	DDM features full masking and partial masking functions, as well as a random mask for numeric data.
-* 	Simple [!INCLUDE[tsql_md](../../includes/tsql-md.md)] commands define and manage masks.
+* A central data masking policy acts directly on sensitive fields in the database.
+* Designate privileged users or roles that do have access to the sensitive data.
+* DDM features full masking and partial masking functions, as well as a random mask for numeric data.
+* Simple [!INCLUDE[tsql_md](../../includes/tsql-md.md)] commands define and manage masks.
 
 As an example, a call center support person may identify callers by several digits of their social security number or credit card number, but those data items should not be fully exposed to the support person. A masking rule can be defined that masks all but the last four digits of any social security number or credit card number in the result set of any query. For another example, by using the appropriate data mask to protect personally identifiable information (PII) data, a developer can query production environments for troubleshooting purposes without violating compliance regulations.
 

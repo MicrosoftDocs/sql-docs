@@ -33,8 +33,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 LAG (scalar_expression [,offset] [,default])  
     OVER ( [ partition_by_clause ] order_by_clause )  
 ```  

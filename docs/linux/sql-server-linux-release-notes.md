@@ -16,9 +16,6 @@ The following release notes apply to SQL Server 2017 running on Linux. This rele
 
 The following table lists the releases of SQL Server 2017. This topic provides release notes for RC1 and greater.
 
-> [!TIP]
-> The general availability of SQL Server 2017 has been [announced this week at the Microsoft Ignite conference](https://blogs.technet.microsoft.com/dataplatforminsider/2017/09/25/microsoft-for-the-modern-data-estate/)! The SQL Server 2017 GA downloads and updated documentation will be available on **October 2nd**.
-
 | Release | Version | Release date |
 |-----|-----|-----|
 | [GA](#GA) | 14.0.1000.169 | 10-2017 |
@@ -177,6 +174,13 @@ To work around this issue, do one of the following:
 1. Use IPs instead of hostnames to specify the target of the TCP connection.
 
 1. Enable IPv6 in the kernel by removing `ipv6.disable=1` from the boot cmdline. The way to do this depends on the Linux distribution and the bootloader, such as grub. If you do want IPv6 to be disabled, you can still disable it by setting `net.ipv6.conf.all.disable_ipv6 = 1` in the `sysctl` configuration (eg `/etc/sysctl.conf`). This will still prevent the system's network adapter from getting an IPv6 address, but allow the sqlservr features to work.
+
+#### Network File System (NFS)
+If you use **Network File System (NFS)** remote shares in production, note the following support requirements:
+
+- Use NFS version **4.2 or higher**. Older versions of NFS do not support required features, such as fallocate and sparse file creation, common to modern file systems.
+- Locate only the **/var/opt/mssql** directories on the NFS mount. Other files, such as the SQL Server system binaries, are not supported.
+- Ensure that NFS clients use the 'nolock' option when mounting the remote share.
 
 #### Localization
 

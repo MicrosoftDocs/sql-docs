@@ -102,7 +102,7 @@ For example, as the database administrator, you may want to ensure that certain 
   
 ## Links to specific tasks 
 
- - [Store Policy-Based Management policies.](/sql-docs/docs/relational-databases/policy-based-management/policy-based-management-storage)|  
+ - [Store Policy-Based Management policies.](policy-based-management-storage.md)|  
  - [Configure Alerts to Notify Policy Administrators of Policy Failures](../../relational-databases/policy-based-management/configure-alerts-to-notify-policy-administrators-of-policy-failures.md)  
  - [Create a New Policy-Based Management Condition](../../relational-databases/policy-based-management/create-a-new-policy-based-management-condition.md) 
  - [Delete a Policy-Based Management Condition](../../relational-databases/policy-based-management/delete-a-policy-based-management-condition.md)
@@ -115,8 +115,8 @@ For example, as the database administrator, you may want to ensure that certain 
 
   
  ## Examples
- - [Create the Off By Default Policy](/sql-docs/docs/relational-databases/policy-based-management/lesson-1-1-create-the-off-by-default-policy)
-  - [Configure a Server to Run the Off By Default Policy](/sql-docs/docs/relational-databases/policy-based-management/lesson-1-2-configure-a-server-to-run-the-off-by-default-policy)
+ - [Create the Off By Default Policy](lesson-1-1-create-the-off-by-default-policy.md)
+  - [Configure a Server to Run the Off By Default Policy](lesson-1-2-configure-a-server-to-run-the-off-by-default-policy.md)
 ## See also  
  [Policy-Based Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
   

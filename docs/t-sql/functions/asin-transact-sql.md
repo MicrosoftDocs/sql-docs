@@ -34,8 +34,6 @@ Returns the angle, in radians, whose sine is the specified **float** expression.
 ## Syntax  
   
 ```sql
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 ASIN ( float_expression )  
 ```  
   

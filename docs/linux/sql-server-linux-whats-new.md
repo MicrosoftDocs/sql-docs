@@ -16,6 +16,11 @@ ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
 
 This topic describes what's new for SQL Server 2017 running on Linux.
 
+## GA
+
+> [!TIP]
+> The general availability of SQL Server 2017 has been [announced this week at the Microsoft Ignite conference](https://blogs.technet.microsoft.com/dataplatforminsider/2017/09/25/microsoft-for-the-modern-data-estate/)! The SQL Server 2017 GA downloads and updated documentation will be available on **October 2nd**.
+
 ## RC2
 
 The RC2 release contains miscellaneous bug fixes and improvements.
@@ -125,7 +130,7 @@ Under compatibility mode 140:
 [Improvements from Service Pack 1](https://blogs.msdn.microsoft.com/sqlreleaseservices/sql-server-2016-service-pack-1-sp1-released/) in this CTP1.1 release:
 - Database cloning for CLR, Filestream/Filetable, In-memory and Query Store objects.
 - **CREATE** or **ALTER** operators for programmability objects.
-- New **USE HINT** query option to provide hints for the query processor. Learn more here: [Query Hints](/sql-docs/docs/t-sql/queries/hints-transact-sql-query).
+- New **USE HINT** query option to provide hints for the query processor. Learn more here: [Query Hints](../t-sql/queries/hints-transact-sql-query.md).
 - SQL service account can now programmatically identify Enable Lock Pages in Memory and Instant File Initialization permissions.
 - Support for TempDB file count, file size and file growth settings.
 - Extended diagnostics in showplan XML.

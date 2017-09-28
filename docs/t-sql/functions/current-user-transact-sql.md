@@ -36,8 +36,6 @@ Returns the name of the current user. This function is equivalent to USER_NAME()
 ## Syntax  
   
 ```sql
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 CURRENT_USER  
 ```  
 

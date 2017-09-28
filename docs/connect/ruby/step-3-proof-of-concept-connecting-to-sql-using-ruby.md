@@ -52,7 +52,7 @@ In the code sample, the [TinyTds::Result](https://github.com/rails-sqlserver/tin
   
 ## Step 3:  Insert a row  
   
-In this example you will see how to execute an [INSERT](/sql-docs/docs/t-sql/statements/insert-transact-sql) statement safely, pass parameters which protect your application from [SQL injection](/sql-docs/docs/relational-databases/tables/primary-and-foreign-key-constraints) value.    
+In this example you will see how to execute an [INSERT](../../t-sql/statements/insert-transact-sql.md) statement safely, pass parameters which protect your application from [SQL injection](../../relational-databases/tables/primary-and-foreign-key-constraints.md) value.    
   
 To use TinyTDS with Azure, it is recommended that you execute several `SET` statements to change how the current session handles specific information. Recommended `SET` statements are provided in the code sample. For example, `SET ANSI_NULL_DFLT_ON` will allow new columns created to allow null values even if the nullability status of the column is not explicitly stated.  
   

@@ -35,8 +35,6 @@ Returns the name of a column from a specified corresponding table identification
 ## Syntax  
   
 ```sql
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 COL_NAME ( table_id , column_id )  
 ```  
   

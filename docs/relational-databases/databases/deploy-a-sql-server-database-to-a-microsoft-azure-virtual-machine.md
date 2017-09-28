@@ -177,7 +177,7 @@ This deployment feature is for use only with an Azure Storage Account created th
   
             -   CleanupDisabled = False /> \<!-- Wizard will not delete intermediate files and Windows Azure objects (VM, CS, SA). -->  
   
-        -   <PublishProfile \<!-- The last used publish profile information. -->  
+        -   \<PublishProfile \<!-- The last used publish profile information. -->  
   
             -   Certificate="12A34B567890123ABCD4EF567A8" \<!-- The certificate for use in the wizard. -->  
   

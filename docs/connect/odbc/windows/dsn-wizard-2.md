@@ -49,7 +49,7 @@ Specifies the password the driver uses when connecting to SQL Server if **With S
 
 Both the **Login ID** and **Password** boxes are disabled if **With Integrated Windows authentication** or **With Active Directory Integrated authentication** is selected.
 
-## See also
+## Next steps
 
 [< Back](../../../connect/odbc/windows/dsn-wizard-1.md)
 

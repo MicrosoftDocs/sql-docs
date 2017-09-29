@@ -353,7 +353,7 @@ ALTER DATABASE db1
 MODIFY ( SERVICE_OBJECTIVE = ELASTIC_POOL ( name = pool1 ) ) ;  
 ```  
   
-### B. Add a Geo-Replication Secondary  
+### C. Add a Geo-Replication Secondary  
  Creates a non-readable secondary database db1 on server `secondaryserver` of the db1 on the local server.  
   
 ```  

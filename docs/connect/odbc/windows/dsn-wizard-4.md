@@ -45,7 +45,7 @@ Specifies that the driver use the regional settings of the client computer for f
 
 ### Save long running queries to the log file
 
-Specifies that the driver log any query that takes longer than the Long query time value. Long-running queries are logged to the specified file. To specify a log file, either type the full path and file name in the box, or click **Browse** to select a log file by navigating through existing file directories.
+Specifies that the driver log any query that takes longer than the **Long query time** value. Long-running queries are logged to the specified file. To specify a log file, either type the full path and file name in the box, or click **Browse** to select a log file by navigating through existing file directories.
 
 ### Long query time (milliseconds)
 

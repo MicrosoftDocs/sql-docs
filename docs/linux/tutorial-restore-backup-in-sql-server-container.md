@@ -77,7 +77,7 @@ This tutorial demonstrates how to move and restore a SQL Server backup file into
  
 1. If the **STATUS** column shows a status of **Up**, then SQL Server is running in the container and listening on the port specified in the **PORTS** column. If the **STATUS** column for your SQL Server container shows **Exited**, see the [Troubleshooting section of the configuration guide](sql-server-linux-configure-docker.md#troubleshooting).
 
-   ```text
+   ```
    $ sudo docker ps -a
 
    CONTAINER ID        IMAGE                          COMMAND                  CREATED             STATUS              PORTS                    NAMES
@@ -147,7 +147,7 @@ The backup file is now located inside the container. Before restoring the backup
 
    You should see output similar to the following:
 
-   ```text
+   ```
    LogicalName   PhysicalName
    ------------------------------------------
    WWI_Primary   D:\Data\WideWorldImporters.mdf
@@ -172,7 +172,7 @@ The backup file is now located inside the container. Before restoring the backup
 
    You should see output similar to the following:
 
-   ```text
+   ```
    Processed 1464 pages for database 'WideWorldImporters', file 'WWI_Primary' on file 1.
    Processed 53096 pages for database 'WideWorldImporters', file 'WWI_UserData' on file 1.
    Processed 33 pages for database 'WideWorldImporters', file 'WWI_Log' on file 1.
@@ -236,7 +236,7 @@ The following steps make a change in the database.
 
    You should see a list of item identifiers and names:
 
-   ```text
+   ```
    StockItemID StockItemName
    ----------- -----------------
              1 USB missile launcher (Green)
@@ -265,6 +265,15 @@ The following steps make a change in the database.
       -Q "UPDATE WideWorldImporters.Warehouse.StockItems SET StockItemName='USB missile launcher (Dark Green)' WHERE StockItemID=1; SELECT StockItemID, StockItemName FROM WideWorldImporters.Warehouse.StockItems WHERE StockItemID=1"
    ```
 
+   You should see output similar to the following text:
+
+   ```
+   (1 rows affected)
+   StockItemID StockItemName
+   ----------- ------------------------------------
+             1 USB missile launcher (Dark Green)
+   ```
+
 ## Create a new backup
 
 After you've restored your database into a container, you might also want to regularly create database backups inside the running container. The steps follow a similar pattern to the previous steps but in reverse.
@@ -285,7 +294,7 @@ After you've restored your database into a container, you might also want to reg
 
    You should see output similar to the following:
 
-   ```text
+   ```
    10 percent processed.
    20 percent processed.
    30 percent processed.

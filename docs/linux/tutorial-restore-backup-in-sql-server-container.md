@@ -52,11 +52,15 @@ This tutorial demonstrates how to move and restore a SQL Server backup file into
 1. To run the container image with Docker, you can use the following command:
 
     ```bash
-    sudo docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' --name 'sql1' -e 'MSSQL_PID=Developer' -p 1401:1433 -v sql1data:/var/opt/mssql -d microsoft/mssql-server-linux
+    sudo docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
+       --name 'sql1' -e 'MSSQL_PID=Developer' -p 1401:1433 \
+       -v sql1data:/var/opt/mssql -d microsoft/mssql-server-linux
     ```
 
     ```PowerShell
-    docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" --name "sql1" -e "MSSQL_PID=Developer" -p 1401:1433 -v sql1data:/var/opt/mssql -d microsoft/mssql-server-linux
+    docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
+       --name "sql1" -e "MSSQL_PID=Developer" -p 1401:1433 `
+       -v sql1data:/var/opt/mssql -d microsoft/mssql-server-linux
     ```
 
     This command creates a SQL Server 2017 container with the **Developer** Edition. SQL Server port **1433** is exposed on the host as port **1401**. The optional `-v sql1data:/var/opt/mssql` parameter creates a data volume container named **sql1ddata**. This is used to persist the data created by SQL Server.

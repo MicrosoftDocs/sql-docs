@@ -43,6 +43,8 @@ For more information about server names for different types of networks, see the
 
 If the information specified on this screen is all that is needed to connect to SQL Server, you can click **Finish**. Defaults are used for all attributes specified on other screens of the wizard.
 
-## [Next >](../../../connect/odbc/windows/dsn-wizard-2.md)
+## Next steps
+
+[Next >](../../../connect/odbc/windows/dsn-wizard-2.md)
 
 To proceed to the next screen of the wizard, click **Next**.

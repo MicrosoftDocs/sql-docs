@@ -1,9 +1,10 @@
 ---
 title: Extract, transform, and load data on Linux with SSIS | Microsoft Docs
 description: 
-author: sanagama
-ms.author: sanagama 
-manager: jhubbard
+author: leolimsft 
+ms.author: lle 
+ms.reviewer: douglasl
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
@@ -45,8 +46,6 @@ To run an SSIS package on a Linux computer, do the following things:
     -   **Paths**. Provide Windows-style paths in your SSIS packages. SSIS on Linux does not support Linux-style paths, but maps Windows-style paths to Linux-style paths at run time. Then, for example, SSIS on Linux maps the Windows-style path `C:\test` to the Linux-style path `/test`.
 
 -   **Deploy packages**. You can only store packages in the file system on Linux in this release. The SSIS Catalog database and the legacy SSIS service are not available on Linux for package deployment and storage.
-
--   **Schedule packages**. You can use Linux system scheduling tools such as `cron` to schedule packages. You can't use SQL Agent on Linux to schedule package execution in this release. 
 
 ## Limitations and known issues
 

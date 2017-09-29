@@ -1,5 +1,5 @@
 ---
-title: "Data Source Wizard Screen 2 | Microsoft Docs"
+title: "Data Source Wizard Screen 2 (ODBC Driver for SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/27/2017"
 ms.prod: "sql-non-specified"

@@ -75,6 +75,10 @@ Alters the behavior of **Multi-subnet failover** to allow for faster reconnectio
 
 Enables automatic decryption and encryption of data transfers to and from columns encrypted with the [Always Encrypted](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md) feature available in SQL Server 2016 and later.
 
-## [< Back](../../../connect/odbc/windows/dsn-wizard-2.md) [Next >](../../../connect/odbc/windows/dsn-wizard-4.md)
+## Next steps
+
+[< Back](../../../connect/odbc/windows/dsn-wizard-2.md)
+
+[Next >](../../../connect/odbc/windows/dsn-wizard-4.md)
 
 Use these buttons to go to the previous or next page in the wizard.

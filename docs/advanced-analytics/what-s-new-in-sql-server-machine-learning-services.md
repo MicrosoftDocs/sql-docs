@@ -2,7 +2,7 @@
 title: "What&#39;s new in Machine Learning Services | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "09/08/2017"
+ms.date: "09/29/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -24,16 +24,13 @@ In SQL Server 2017, machine learning becomes even more powerful, with addition o
 
 Catch the latest announcement here! [Python in SQL Server 2017: enhanced in-database machine learning](https://blogs.technet.microsoft.com/dataplatforminsider/2017/04/19/python-in-sql-server-2017-enhanced-in-database-machine-learning/)
 
+[!NOTE]
+> Now you can run R in Azure SQL databases! For more information, see [this article](r/using-r-in-azure-sql-database.md), or this blog from the SQL Server development team: [Announcing preview of Machine Learning Services with R support in Azure SQL Database](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2017/09/25/announcing-preview-of-machine-learning-services-with-r-support-in-azure-sql-database/).
+
 ## What's new in SQL Server 2017
 
 Microsoft Machine Learning Server in SQL Server now provides comprehensive support for building and deploying machine learning solutions in either R or Python. Here are the highlights of this release:
 
-> [!IMPORTANT]
-> 
-> Machine learning services, including use of R or Python, are currently not supported when running SQL Server on Linux, or in Azure SQL database. Look for changes in a later release.
-> 
-> Native scoring using the PREDICT function is currently supported in the Linux edition.
- 
 ### In-database Python integration
 
 You can run Python in stored procedures, or execute Python remotely using the SQL Server computer as the compute context. This integration opens up new avenues for the vast community of Python developers and data scientists to use the power of SQL Server. 
@@ -54,9 +51,13 @@ Running Python in-database isn't just about machine learning, by the way. There 
 
 + Python support in Microsoft Machine Learning Server (Standalone)
 
-    SQL Server 2017 includes the option to install a standalone version of the Microsoft machine learning platform. By using Machine Learning Server, you can distribute and scale R or Python code without using SQL Server.
+    SQL Server 2017 includes the option to install a standalone version of the Microsoft Machine Learning Server. By using Machine Learning Server, you can distribute and scale R or Python code without using SQL Server.
 
-    For an example of Python running in Microsoft Machine Learning Server, see [Publish and consume Python code](python/publish-consume-python-code.md).
+### Linux support
+
+Machine learning using R or Python in-database is not currently supported in SQL Server on Linux. Look for announcements in a later release.
+
+However, on Linux you can perform [native scoring](sql-native-scoring.md) using the T-SQL PREDICT function. Native scoring lets you score from a pretrained model very fast, without calling or even requiring an R runtime. This means you can use SQL Server on Linux to generate predictions very fast, to serve client applications.
 
 ### New algorithms
 

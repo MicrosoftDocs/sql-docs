@@ -56,13 +56,14 @@ To install the `mssql-server-is` package on Ubuntu, follow these steps:
     ```bash
     export PATH=/opt/ssis/bin:$PATH
     ```
-
+### Update SSIS
 If you already have `mssql-server-is` installed, you can update to the latest version with the following command:
 
 ```bash
 sudo apt-get install mssql-server-is
 ```
 
+### Remove SSIS
 To remove `mssql-server-is`, you can run following command:
 ```bash
 sudo apt-get remove msssql-server-is
@@ -113,14 +114,14 @@ To install the `mssql-server-is` package on RHEL, follow these steps:
     export PATH=/opt/ssis/bin:$PATH
     ```
 
-
+### Update SSIS
 If you already have `mssql-server-is` installed, you can update to the latest version with the following command:
 
 ```bash
 sudo yum update mssql-server-is
 ```
 
-
+### Remove SSIS
 To remove `mssql-server-is`, you can run following command:
 ```bash
 sudo yum remove msssql-server-is

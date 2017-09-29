@@ -1,7 +1,7 @@
 ---
 title: "Set up SQL Server Machine Learning Services (In-Database) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/29/2017"
+ms.date: "09/28/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -91,15 +91,15 @@ To use machine learning, you must install SQL Server 2016 or later. To use [!INC
 
 6. On the **Ready to Install** page, verify that the following items are included, and then select **Install**.
 
-   **SQL Server 2016**
-   - Database Engine Services
-   - R Services (In-Database)
-
    **SQL Server 2017**
    - Database Engine Services
    - Machine Learning Services (In-Database)
    - R or Python, or both
-    
+
+   **SQL Server 2016**
+   - Database Engine Services
+   - R Services (In-Database)
+
 7. When the installation is complete, restart your computer.
 
 ##  <a name="bkmk_enableFeature"></a>Step 2: Enable external script services
@@ -184,12 +184,15 @@ However, if you need to run R scripts from a remote data science client and are 
 
 1. In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], in Object Explorer, expand **Security**, right-click **Logins**, and select **New Login**.
 2. In the **Login - New** dialog box, select **Search**.
-3. Select the **Object Types** and **Groups** check boxes, and clear all other check boxes. 
-4. In **Enter the object name to select**, type **SQLRUserGroup**,  and then select **Check Names**.  
-    The name of the local group that's associated with the instance's Launchpad service should resolve to something like *instancename\SQLRUserGroup*. 
-5. Select **OK**.
-6. By default, the login is assigned to the **public** role and has permission to connect to the database engine.
-7. Select **OK**.
+3. Select the **Object Types** and **Groups** check boxes, and clear all other check boxes.
+4. Click **Advanced**, verify that the location to search is the current computer, and then click **Find Now**.
+5. Scroll through the list of group accounts on the server until you find one beginning with `SQLRUserGroup`.
+    
+    + The name of the group that's associated with the Launchpad service for the _default instance_ is always just **SQLRUserGroup**. Select this account only for the default instance.
+    + If you are using a _named instance_, the instance name is appended to the default name, `SQLRUserGroup`. Hence, if your instance is named "MLTEST", the default user group name for this instance would be **SQLRUserGroupMLTest**.
+5. Click **OK** to close the advanced search dialog box, and verify that you've selected the correct account for the instance. Each instance can use only its own Launchpad service and the group created for that service.
+6. Click **OK** once more to close the **Select User or Group** dialog box.
+7. In the **Login - New** dialog box, click **OK**. By default, the login is assigned to the **public** role and has permission to connect to the database engine.
 
 ### <a name="bkmk_AllowLogon"></a>Give users permission to run external scripts
 

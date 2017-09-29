@@ -15,9 +15,10 @@
 # Tutorials
 ## [1_Migrate from Windows](sql-server-linux-migrate-restore-database.md)
 ## [2_Migrate from Oracle](../ssma/oracle/sql-server-linux-convert-from-oracle.md?toc=%2fsql%2flinux%2ftoc.json)
-## [3_Create a job](sql-server-linux-run-sql-server-agent-job.md)
-## [4_Setup AD Authentication](sql-server-linux-active-directory-authentication.md)
-## [5_Create FCI](sql-server-linux-shared-disk-cluster-configure.md)
+## [3_Migrate to Docker](tutorial-restore-backup-in-sql-server-container.md)
+## [4_Create a job](sql-server-linux-run-sql-server-agent-job.md)
+## [5_Setup AD Authentication](sql-server-linux-active-directory-authentication.md)
+## [6_Create failover cluster instance](sql-server-linux-shared-disk-cluster-configure.md)
 ### [iSCSI](sql-server-linux-shared-disk-cluster-configure-iscsi.md)
 ### [NFS](sql-server-linux-shared-disk-cluster-configure-nfs.md)
 ### [SMB](sql-server-linux-shared-disk-cluster-configure-smb.md)
@@ -35,7 +36,7 @@
 ## Configure
 ### [Configure with mssql-conf](sql-server-linux-configure-mssql-conf.md)
 ### [Environment variables](sql-server-linux-configure-environment-variables.md)
-### [Docker](sql-server-linux-configure-docker.md)
+### [Configure Docker containers](sql-server-linux-configure-docker.md)
 ### [Customer Feedback](sql-server-linux-customer-feedback.md)
 
 ## [Develop](sql-server-linux-develop-overview.md)

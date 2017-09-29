@@ -51,9 +51,7 @@ Running Python in-database isn't just about machine learning, by the way. There 
 
 + Python support in Microsoft Machine Learning Server (Standalone)
 
-    SQL Server 2017 includes the option to install a standalone version of the Microsoft machine learning platform. By using Machine Learning Server, you can distribute and scale R or Python code without using SQL Server.
-
-    For an example of Python running in Microsoft Machine Learning Server, see [Publish and consume Python code](python/publish-consume-python-code.md).
+    SQL Server 2017 includes the option to install a standalone version of the Microsoft Machine Learning Server. By using Machine Learning Server, you can distribute and scale R or Python code without using SQL Server.
 
 ### Linux support
 

@@ -11,8 +11,8 @@
 # [Asynchronous Execution (Notification Method) Sample](asynchronous-execution-notification-method-sample.md)
 
 # Help Topics
-## [Data Source Wizard Screen 1](dsn-wizard-1.md)
-## [Data Source Wizard Screen 2](dsn-wizard-2.md)
-## [Data Source Wizard Screen 3](dsn-wizard-3.md)
-## [Data Source Wizard Screen 4](dsn-wizard-4.md)
-## [SQL Server Login Dialog](sql-server-login-dialog.md)
+## [Data Source Wizard screen 1](dsn-wizard-1.md)
+## [Data Source Wizard screen 2](dsn-wizard-2.md)
+## [Data Source Wizard screen 3](dsn-wizard-3.md)
+## [Data Source Wizard screen 4](dsn-wizard-4.md)
+## [SQL Server Login dialog](sql-server-login-dialog.md)

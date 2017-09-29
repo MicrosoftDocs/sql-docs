@@ -19,7 +19,7 @@ manager: "jhubbard"
 # Temporal Tables
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  SQL Server 2016 introduces support for system-versioned temporal tables as a database feature that brings built-in support for providing information about data stored in the table at any point in time rather than only the data that is correct at the current moment in time. Temporal is a database feature that was introduced in ANSI SQL 2011 and is now supported in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+  SQL Server 2016 introduces support for system-versioned temporal tables as a database feature that brings built-in support for providing information about data stored in the table at any point in time rather than only the data that is correct at the current moment in time. Temporal is a database feature that was introduced in ANSI SQL 2011 and is now supported in [!INCLUDE[ss2016](../../includes/sscurrent-md.md)].  
   
  **Quick Start**  
   
@@ -56,7 +56,7 @@ manager: "jhubbard"
 -   **Video:** For a 20 minute discussion of temporal, see [Temporal in SQL Server 2016](http://channel9.msdn.com/Shows/Data-Exposed/Temporal-in-SQL-Server-2016).  
   
 ## What is a system-versioned temporal table?  
- A system-versioned temporal table is a new type of user table in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], designed to keep a full history of data changes and allow easy point in time analysis. This type of temporal table is referred to as a system-versioned temporal table because the period of validity for each row is managed by the system (i.e. database engine).  
+ A system-versioned temporal table is a new type of user table in [!INCLUDE[ss2016](../../includes/sscurrent-md.md)], designed to keep a full history of data changes and allow easy point in time analysis. This type of temporal table is referred to as a system-versioned temporal table because the period of validity for each row is managed by the system (i.e. database engine).  
   
  Every temporal table has two explicitly defined columns, each with a **datetime2** data type. These columns are referred to as period columns. These period columns are used exclusively by the system to record period of validity for each row whenever a row is modified.  
   

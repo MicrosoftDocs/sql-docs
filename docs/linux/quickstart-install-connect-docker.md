@@ -52,28 +52,28 @@ The following steps increase the memory for Docker for Windows to 4 GB.
 
 ## Pull and run the container image
 
-1. Pull the container image from Docker Hub.
+1. Pull the SQL Server 2017 Linux container image from Docker Hub.
 
     ```bash
-    docker pull microsoft/mssql-server-linux
+    docker pull microsoft/mssql-server-linux:2017
     ```
 
     > [!TIP]
     > For Linux, depending on your system and user configuration, you might need to preface each `docker` command with `sudo`.
 
     > [!NOTE]
-    > The command above pulls the latest SQL Server container image. If you want to pull a specific image, you add a colon and the tag name (for example, `microsoft/mssql-server-linux:rc1`). To see all available images, see [the mssql-server-linux Docker hub page](https://hub.docker.com/r/microsoft/mssql-server-linux/tags/).
+    > The command above pulls the SQL Server 2017 GA container image. If you want to pull a specific image, you add a colon and the tag name (for example, `microsoft/mssql-server-linux:rc1`). To see all available images, see [the mssql-server-linux Docker hub page](https://hub.docker.com/r/microsoft/mssql-server-linux/tags/).
 
 1. To run the container image with Docker, you can use the following command from a bash shell (Linux/macOS):
 
     ```bash
-    docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -e 'MSSQL_PID=Developer' -p 1401:1433 --name sql1 -d microsoft/mssql-server-linux
+    docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -e 'MSSQL_PID=Developer' -p 1401:1433 --name sql1 -d microsoft/mssql-server-linux:2017
     ```
 
     If you are using Docker for Windows, use the following command from an elevated PowerShell command-prompt:
 
     ```PowerShell
-    docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -e "MSSQL_PID=Developer" -p 1401:1433 --name sql1 -d microsoft/mssql-server-linux
+    docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -e "MSSQL_PID=Developer" -p 1401:1433 --name sql1 -d microsoft/mssql-server-linux:2017
     ```
 
     > [!NOTE]
@@ -88,7 +88,7 @@ The following steps increase the memory for Docker for Windows to 4 GB.
     | **-e 'MSSQL_PID=Developer'** | Specifies the edition or product key. In this example, the freely licensed Developer Edition is used for non-production testing. For other values, see [Configure SQL Server settings with environment variables on Linux](sql-server-linux-configure-environment-variables.md). |
     | **-p 1401:1433** | Map a TCP port on the host environment (first value) with a TCP port in the container (second value). In this example, SQL Server is listening on TCP 1433 in the container and this is exposed to the port, 1401, on the host. |
     | **--name sql1** | Specify a custom name for the container rather than a randomly generated one. If you run more than one container, you can't reuse this same name. |
-    | **microsoft/mssql-server-linux** | The SQL Server Linux container image. Unless otherwise specified, this defaults to the **latest** image. |
+    | **microsoft/mssql-server-linux:2017** | The SQL Server 2017 Linux container image. |
 
 
 1. To view your Docker containers, use the `docker ps` command.

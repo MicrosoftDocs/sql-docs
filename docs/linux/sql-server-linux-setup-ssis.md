@@ -56,6 +56,7 @@ To install the `mssql-server-is` package on Ubuntu, follow these steps:
     ```bash
     export PATH=/opt/ssis/bin:$PATH
     ```
+
 ### Update SSIS
 If you already have `mssql-server-is` installed, you can update to the latest version with the following command:
 

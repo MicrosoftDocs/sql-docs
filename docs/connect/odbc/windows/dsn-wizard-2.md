@@ -49,10 +49,17 @@ Specifies the password the driver uses when connecting to SQL Server if **With S
 
 Both the **Login ID** and **Password** boxes are disabled if **With Integrated Windows authentication** or **With Active Directory Integrated authentication** is selected.
 
+### Next
+
+Proceeds to the next screen of the wizard.
+
+### Back
+
+Returns to the previous screen of the wizard.
+
 ## Next steps
 
-[< Back](../../../connect/odbc/windows/dsn-wizard-1.md)
+[Data Source Wizard Screen 1](../../../connect/odbc/windows/dsn-wizard-1.md)
 
-[Next >](../../../connect/odbc/windows/dsn-wizard-3.md)
+[Data Source Wizard Screen 3](../../../connect/odbc/windows/dsn-wizard-3.md)
 
-Use these buttons to go to the previous or next page in the wizard.

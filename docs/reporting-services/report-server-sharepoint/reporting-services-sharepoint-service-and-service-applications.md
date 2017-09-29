@@ -29,7 +29,7 @@ manager: "erikre"
 
  You can use SharePoint Central Administration or PowerShell scripts to create the Reporting Services services applications. For more information on using SharePoint Central Administration, see the “Create a Reporting Services Service Application” section in [Install Reporting Services SharePoint Mode for SharePoint 2010](http://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c). See the PowerShell section later in this topic for a sample PowerShell script for creating service applications.  
   
-## Modify the Associations of the service application with a proxy group
+## Modify the associations of the service application with a proxy group
 
  The New page for creating a services application contains the section **Web Application Association**. The section allows you to associate your service application as you create it. Use the following steps to change the association and assign a customer configuration to the service application. The same general process can also be used to add the proxy to the default group rather than changing the association of the service application to a custom group.  
   
@@ -75,7 +75,7 @@ manager: "erikre"
     Get-SPRSServiceApplication –name MyServiceApplication | New-SPRSServiceApplicationProxy “MyServiceApplicationProxy”  
     ```  
   
-## Related Tasks
+## Related tasks
   
 |Task|Link|  
 |----------|----------|  

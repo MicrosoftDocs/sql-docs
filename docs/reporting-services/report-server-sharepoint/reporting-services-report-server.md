@@ -79,9 +79,11 @@ A Reporting Services report server runs in one of two deployment modes; Native m
  Third-party developers can create additional extensions to replace or extend the processing capability of the report server. To learn more about the programmatic interfaces available to application developers, see the [Technical Reference](../../reporting-services/technical-reference-ssrs.md).  
   
 ### Native mode with SharePoint web parts
+
  Reporting Services provides two web parts that you can install and register on an instance of [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 2.0 or later, or [!INCLUDE[spPortalServ](../../includes/spportalserv-md.md)] 2003 or later. From a SharePoint site, you can use the web parts to find and view reports that are stored and processed on a report server that runs in native mode. These web parts were introduced in earlier releases of Reporting Services.  
   
 ## SharePoint mode
+
  In SharePoint mode, a report server must run within a SharePoint server farm. The report server processing, rendering, and management features are represented by a SharePoint application server running the Reporting Services SharePoint shared service and one or more Reporting Services service applications. A SharePoint site provides the front-end access to report server content and operations.  
   
  SharePoint mode requires:  

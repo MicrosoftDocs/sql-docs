@@ -1,5 +1,5 @@
 ---
-title: "Add the Report Viewer web part to a Web Page | Microsoft Docs"
+title: "Add the Report Viewer web part to a web page | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/26/2017"
 ms.prod: "sql-server-2016"
@@ -14,7 +14,7 @@ author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
 ---
-# Add the Report Viewer web part to a Web Page
+# Add the Report Viewer web part to a web page
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 
@@ -22,12 +22,12 @@ manager: "erikre"
 
 You can use the Report Viewer web part to view reports that run on report server that is configured to run in SharePoint integrated mode. You can use the web part to display report definition (.rdl) files that you created in Report Builder or Report Designer and uploaded to a library.
 
-You can add the Report Viewer web part to a Web page if you want to embed a report on that page.
+You can add the Report Viewer web part to a web page if you want to embed a report on that page.
 
 > [!NOTE]
 > This article is specific to the Report Viewer web part that shipped with the Reporting Services Add-in for SharePoint products. Reporting Services integration with SharePoint is no longer available after SQL Server 2016.
 
-To add a web part to a Web page, you must have the Add and Customize Pages permission at the site level. If you are using default security settings, this permission is granted to members of the **Owners** group who have the Full Control level of permission.
+To add a web part to a web page, you must have the Add and Customize Pages permission at the site level. If you are using default security settings, this permission is granted to members of the **Owners** group who have the Full Control level of permission.
 
 ## To embed a report in a web page
 

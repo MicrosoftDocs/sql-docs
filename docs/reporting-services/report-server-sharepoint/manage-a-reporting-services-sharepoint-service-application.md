@@ -35,7 +35,7 @@ manager: "erikre"
   
  For more information on service application properties, see [Step 3: Create a Reporting Services Service Application](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_create_serrviceapplication).  
   
-##  Open service application management pages
+## Open service application management pages
 
  To open the management pages for a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application, complete the following:  
   
@@ -45,7 +45,7 @@ manager: "erikre"
   
 3.  Alternatively, you could click near the name or on the **type** column for your service application, which will select the entire row, and then click **Manage** in the SharePoint ribbon.  
   
-##  System settings page
+## System settings page
 
  The systems settings page allows you to configure the behavior and user experience of your service application including various timeouts.
   

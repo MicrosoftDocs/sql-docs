@@ -74,10 +74,10 @@ The RDL (Report Definition Language) sandboxing feature lets you detect and rest
 |**Types**|The list of members to allow within RDL expressions.|  
 |**Allow**|A type or set of types to allow in RDL expressions.|  
 |**Namespace**|Attribute for **Allow** that is the namespace that contains one or more types that apply to Value. This property is case-insensitive.|  
-|**AllowNew**|Boolean attribute for **Allow** that controls whether new instances of the type are allowed to be created in RDL expressions or in an RDL **\<Class>** element.<br /><br /> Note: When **RDLSandboxing** is enabled, new arrays cannot be created in RDL expressions, regardless of the setting of **AllowNew**.|  
+|**AllowNew**|Boolean attribute for **Allow** that controls whether new instances of the type are allowed to be created in RDL expressions or in an RDL **\<Class>** element.<br /><br /> When **RDLSandboxing** is enabled, new arrays cannot be created in RDL expressions, regardless of the setting of **AllowNew**.|  
 |**Value**|Value for **Allow** that is the name of the type to allow in RDL expressions. The value **\*** indicates that all types in the namespace are allowed. This property is case-insensitive.|  
 |**Members**|For the list of types that are include in the **\<Types>** element, the list of member names that are not allowed in RDL expressions.|  
-|**Deny**|The name of a member that is not allowed in RDL expressions. This property is case-insensitive.<br /><br /> Note: When **Deny** is specified for a member, all members with this name for all types are not allowed.|  
+|**Deny**|The name of a member that is not allowed in RDL expressions. This property is case-insensitive.<br /><br /> When **Deny** is specified for a member, all members with this name for all types are not allowed.|  
   
 ## Working with expressions when RDL sandboxing is enabled
 
@@ -176,7 +176,7 @@ You can modify the RDL Sandboxing feature to help manage the resources that are 
   
 ## See also
 
- [RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
- [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)  
+ [RsReportServer.config configuration file](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
+ [Report Server Service trace log](../../reporting-services/report-server/report-server-service-trace-log.md)  
 
 More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)

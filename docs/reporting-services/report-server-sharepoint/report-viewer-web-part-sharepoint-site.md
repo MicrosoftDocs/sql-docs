@@ -1,5 +1,5 @@
 ---
-title: "Report Viewer web part on a SharePoint Site | Microsoft Docs"
+title: "Report Viewer web part on a SharePoint site | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/25/2017"
 ms.prod: "sql-server-2016"
@@ -14,7 +14,7 @@ author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
 ---
-# Report Viewer web part on a SharePoint Site
+# Report Viewer web part on a SharePoint site
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 

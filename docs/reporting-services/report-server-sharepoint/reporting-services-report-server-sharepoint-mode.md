@@ -28,9 +28,9 @@ manager: "erikre"
 
  For more information on installing and configuring, see the following:  
   
--   [Install Reporting Services SharePoint Mode for SharePoint 2010](http://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c).  
+-   [Install Reporting Services SharePoint mode for SharePoint 2010](http://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c).  
   
--   [Add an Additional Report Server to a Farm &#40;SSRS Scale-out&#41;](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).  
+-   [Add an additional Report Server to a farm](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).  
   
 ## Feature summary
 
@@ -64,7 +64,7 @@ manager: "erikre"
 
  The SQL Server 2008 R2 release introduced a new *local mode* for viewing reports from a SharePoint 2010 server that has the Microsoft SQL Server 2008 R2 or later Reporting Services Add-In for SharePoint 2010 products installed.  
   
--   *Local Mode*: Local mode allows reports to be rendered locally from the SharePoint document library, without integration with a Reporting Services report server. The Reporting Services add-in for SharePoint products is required but a Reporting Services report server is not. The add-in can be installed several different ways, including the SharePoint 2010 products preparation tool. For more information on local mode, see [Local Mode vs. Connected Mode Reports in the Report Viewer &#40;Reporting Services in SharePoint Mode&#41;](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md) and [Where to find the Reporting Services add-in for SharePoint Products](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
+-   *Local Mode*: Local mode allows reports to be rendered locally from the SharePoint document library, without integration with a Reporting Services report server. The Reporting Services add-in for SharePoint products is required but a Reporting Services report server is not. The add-in can be installed several different ways, including the SharePoint 2010 products preparation tool. For more information on local mode, see [Local mode vs. connected mode reports in the Report Viewer](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md) and [Where to find the Reporting Services add-in for SharePoint products](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
   
 -   *Connected Mode*: Connected mode is supported by integrating a Reporting Services report server into the SharePoint farm using SharePoint Central Administration. The integration with a report server enables full end-to-end reporting, providing the collaboration features of SharePoint 2010 and the server based features of a report server including: Subscriptions, Snapshots, and server based processing.  
   
@@ -88,7 +88,7 @@ manager: "erikre"
   
 ## Supported combinations of the SharePoint add-in and report server
 
- Not all features are supported in all combinations of report server, Reporting Services add-in for SharePoint, and SharePoint Products. For more information, see [Supported Combinations of SharePoint and Reporting Services Server and Add-in &#40;SQL Server 2016&#41;](../../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)  
+ Not all features are supported in all combinations of report server, Reporting Services add-in for SharePoint, and SharePoint Products. For more information, see [Supported combinations of SharePoint and Reporting Services Server and add-in](../../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)  
   
 > [!NOTE]  
 >  The correct version of the Reporting Services add-in must be used with the corresponding version of SharePoint Products.  
@@ -100,7 +100,7 @@ manager: "erikre"
  Integration is provided through [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and the Reporting Services Add-in for SharePoint Products. The Reporting Services Add-in is a freely distributable component that you can download and then install on a server that is running the appropriate version of SharePoint.  
   
 > [!TIP]  
->  Not all features are supported in all combinations of report server, Reporting Services add-in for SharePoint, and SharePoint Products. For more information see, [Supported Combinations of SharePoint and Reporting Services Server and Add-in &#40;SQL Server 2016&#41;](../../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md).  
+>  Not all features are supported in all combinations of report server, Reporting Services add-in for SharePoint, and SharePoint Products. For more information see, [Supported combinations of SharePoint and Reporting Services Server and add-in](../../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md).  
   
 -   On SharePoint, the Reporting Services Add-in provides the ReportServer proxy endpoint, a Report Viewer web part, and application pages so that you can view, store, and manage report server content on a SharePoint site or farm.  
   
@@ -116,7 +116,7 @@ manager: "erikre"
   
 -   All application pages, tools, errors, warnings, and messages that originate from Reporting Services will appear in the language used by the Reporting Services instance in one of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] languages.  
   
--   Application pages that you open on a SharePoint site, the Report Viewer web part, and Report Builder will appear in one of the supported languages for the Reporting Services Add-in. To view the list of supported languages, go to [SQL Server Downloads](http://msdn.microsoft.com/sql/downloads/) and find the download page for the SQL Server 2016 Reporting Services Add-in.  
+-   Application pages that you open on a SharePoint site, the Report Viewer web part, and Report Builder will appear in one of the supported languages for the Reporting Services Add-in. To view the list of supported languages, go to [SQL Server downloads](http://msdn.microsoft.com/sql/downloads/) and find the download page for the SQL Server 2016 Reporting Services Add-in.  
   
 -   SharePoint sites, SharePoint Central Administration, online help, and messages are available in the languages supported by Office Server products.  
   
@@ -128,16 +128,16 @@ manager: "erikre"
   
 |**Task**|**Link**|  
 |--------------|--------------|  
-|Detailed steps for installing and configuring Reporting Services in SharePoint mode.|[Install Reporting Services SharePoint Mode for SharePoint 2010](http://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c) and [Add an Additional Report Server to a Farm &#40;SSRS Scale-out&#41;](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).|  
-|Scale-out your Reporting Services SharePoint deployment by adding additional report servers.|[Add an Additional Report Server to a Farm &#40;SSRS Scale-out&#41;](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md) and [Deployment Topologies for SQL Server BI Features in SharePoint](http://msdn.microsoft.com/library/39f76bc7-94e6-4dbc-bfa5-d56f4430bb26).|  
-|Add additional SharePoint web front-ends that have the Reporting Services components installed for viewing and report items.|[Add an Additional Reporting Services Web Front-end to a Farm](../../reporting-services/install-windows/add-an-additional-reporting-services-web-front-end-to-a-farm.md)|  
-|Configure e-mail for your report server within SharePoint.|[Configure E-mail for a Reporting Services Service Application](../install-windows/configure-e-mail-for-a-reporting-services-service-application.md)|
-|Recent information for this release, found on the TechNet Wiki.|[SQL Server 2012 Reporting Services Tips, Tricks, and Troubleshooting](http://go.microsoft.com/fwlink/?LinkId=221297).|  
+|Detailed steps for installing and configuring Reporting Services in SharePoint mode.|[Install Reporting Services SharePoint mode for SharePoint 2010](http://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c) and [Add an additional Report Server to a farm](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).|  
+|Scale-out your Reporting Services SharePoint deployment by adding additional report servers.|[Add an additional Report Server to a Farm](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md) and [Deployment topologies for SQL Server BI features in SharePoint](http://msdn.microsoft.com/library/39f76bc7-94e6-4dbc-bfa5-d56f4430bb26).|  
+|Add additional SharePoint web front-ends that have the Reporting Services components installed for viewing and report items.|[Add an additional Reporting Services web front-end to a farm](../../reporting-services/install-windows/add-an-additional-reporting-services-web-front-end-to-a-farm.md)|  
+|Configure e-mail for your report server within SharePoint.|[Configure e-mail for a Reporting Services service application](../install-windows/configure-e-mail-for-a-reporting-services-service-application.md)|
+|Recent information for this release, found on the TechNet Wiki.|[SQL Server 2012 Reporting Services tips, tricks, and troubleshooting](http://go.microsoft.com/fwlink/?LinkId=221297).|  
 
 ## Next steps
 
-[Install or Uninstall the Reporting Services Add-in for SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
-[Report Viewer web part on a SharePoint Site](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)   
-[Quiz: Configuring SSRS 2012 for SharePoint Integration](http://go.microsoft.com/fwlink/?LinkId=306443)  
+[Install or uninstall the Reporting Services sdd-in for SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
+[Report Viewer web part on a SharePoint site](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)   
+[Quiz: Configuring SSRS 2012 for SharePoint integration](http://go.microsoft.com/fwlink/?LinkId=306443)  
 
 More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)

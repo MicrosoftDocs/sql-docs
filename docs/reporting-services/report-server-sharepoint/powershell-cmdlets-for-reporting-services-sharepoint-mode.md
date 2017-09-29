@@ -70,7 +70,7 @@ When you install SQL Server 2016 Reporting Services SharePoint mode, PowerShell 
   
 |Cmdlet|Description|  
 |------------|-----------------|  
-|Install-SPRSService|Installs and registers, or uninstalls, the Reporting Services shared service. This can be done only on the machine that has an installation of SQL Server Reporting Services in SharePoint mode. For installation, two operations occur:<br /><br /> -The Reporting Services service is installed in the farm.<br /><br /> -The Reporting Services service instance is installed to the current machine.<br /><br /> For Uninstallation, two operations occur:<br /><br /> -The Reporting Services service is uninstalled from the current machine.<br /><br /> -The Reporting Services service is uninstalled from the farm.<br /><br /> <br /><br /> NOTE: If there are any other machines in the farm that have the Reporting Services service installed, or if there are still Reporting Services service applications running in the farm, a warning message is displayed.|  
+|Install-SPRSService|Installs and registers, or uninstalls, the Reporting Services shared service. This can be done only on the machine that has an installation of SQL Server Reporting Services in SharePoint mode. For installation, two operations occur:<br /><br /> -The Reporting Services service is installed in the farm.<br /><br /> -The Reporting Services service instance is installed to the current machine.<br /><br /> For Uninstallation, two operations occur:<br /><br /> -The Reporting Services service is uninstalled from the current machine.<br /><br /> -The Reporting Services service is uninstalled from the farm.<br /><br /> <br /><br /> If there are any other machines in the farm that have the Reporting Services service installed, or if there are still Reporting Services service applications running in the farm, a warning message is displayed.|  
 |Install-SPRSServiceProxy|Installs and registers, or uninstalls, the Reporting Services service proxy in the SharePoint farm.|  
 |Get-SPRSProxyUrl|Gets the URL(s) for accessing the Reporting Services service.|  
 |Get-SPRSServiceApplicationServers|Gets all servers in the local SharePoint farm that contain an installation of the Reporting Services shared service. This cmdlet is useful for Reporting Services upgrades, to determine which servers run the shared service and therefore need to be upgraded.|  
@@ -147,7 +147,7 @@ get-spserviceinstance -all |where {$_.TypeName -like "SQL Server Reporting*"} | 
 Get-content -path C:\Users\testuser\AppData\Local\Temp\rs_sp_0.log | select-string "ssrscustomactionerror"  
 ```  
   
-## Detailed Samples
+## Detailed samples
 
  In addition to the following samples, see the section “Windows PowerShell Script” in the topic [Windows PowerShell script for Steps 1–4](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_full_script).  
   
@@ -284,12 +284,12 @@ Get-SPRSExtension -identity $app -ExtensionType “Data” | select name,extensi
   
 ### Change and list Reporting Services subscription owners
 
- See [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md).  
+ See [Use PowerShell to change and list Reporting Services subscription owners and run a subscription](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md).  
   
 ## Next steps
 
-[Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)  
-[CheckList: Use PowerShell to Verify Power Pivot for SharePoint](../../analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md)   
-[Get Help SQL Server PowerShell](../../relational-databases/scripting/get-help-sql-server-powershell.md)   
+[Use PowerShell to change and list Reporting Services subscription owners and run a subscription](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)  
+[CheckList: Use PowerShell to verify Power Pivot for SharePoint](../../analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md)   
+[Get help SQL Server PowerShell](../../relational-databases/scripting/get-help-sql-server-powershell.md)   
 
 More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)

@@ -1,5 +1,5 @@
 ---
-title: "Install The First Report Server in SharePoint Mode | Microsoft Docs"
+title: "Install the first Report Server in SharePoint mode | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
 ms.date: "09/25/2017"
@@ -14,7 +14,7 @@ author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
 ---
-# Install The First Report Server in SharePoint Mode
+# Install the first Report Server in SharePoint mode
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 
@@ -31,7 +31,8 @@ manager: "erikre"
   
  A single server installation is useful for development and testing scenarios but it is not recommended for production environments.  
   
-##  <a name="bkmk_singleserver"></a> Example Single-Server Deployment  
+##  <a name="bkmk_singleserver"></a> Example single-server deployment
+
  A single-server installation is useful for development and testing scenarios but a single-server is not recommended for a production environment. The single-server environment refers to a single computer that has SharePoint and Reporting Services components installed on the same computer. The topic does not cover scale-out with multiple Reporting Services servers.  
   
  The following diagram illustrates the components that are part of a single server Reporting Services deployment.  
@@ -51,7 +52,8 @@ manager: "erikre"
 > [!TIP]  
 >  For more complex deployment examples, see [Deployment Topologies for SQL Server BI Features in SharePoint](http://msdn.microsoft.com/library/39f76bc7-94e6-4dbc-bfa5-d56f4430bb26).  
   
-##  <a name="bkmk_setupaccounts"></a> Setup accounts  
+##  <a name="bkmk_setupaccounts"></a> Setup accounts
+
  This section describes the accounts and permissions used for the primary deployment steps of Reporting Services in SharePoint mode.  
   
  **Installation and registering the Reporting Services Service:**  
@@ -64,7 +66,8 @@ manager: "erikre"
   
      It is security best practice that SharePoint farm administrator accounts are not also local operating system administrator accounts. If you add a farm admin account to the local administrators group as part of your installation process, it is recommended you remove the account from the local administrators group after installation is complete.  
   
-##  <a name="bkmk_install_SSRS"></a> Step 1: Install Reporting Services Report Server in SharePoint mode  
+##  <a name="bkmk_install_SSRS"></a> Step 1: Install Reporting Services Report Server in SharePoint mode
+
  This step installs a Reporting Services report server in SharePoint mode and the Reporting Services add-in for SharePoint products. Depending on what is already installed on your computer, you may not see some of the installation pages described in the following steps.  
  
  > [!IMPORTANT]
@@ -73,7 +76,7 @@ manager: "erikre"
  > [!NOTE]
  > If you plan to install the Power Pivot service as well, on SharePoint 2016, install that prior to installing Reporting Services. The Power Pivot service cannot be installed on a SharePoint server in the **Custom** role. This will avoid having to switch roles multiple times.
  
- ### Apply the Custom server role to a SharePoint 2016 server
+ ### Apply the custom server role to a SharePoint 2016 server
  
  > [!NOTE]
  > This does not apply to SharePoint 2013.
@@ -160,7 +163,7 @@ manager: "erikre"
   
 15. The installation will take several minutes. You will see the **Complete** page with the features listed and the status of each feature. You may see an information dialog indicating the computer needs to be restarted.  
   
-##  <a name="bkmk_install_SSRS_sharedservice"></a> Step 2: Register and Start the Reporting Services SharePoint Service  
+##  <a name="bkmk_install_SSRS_sharedservice"></a> Step 2: Register and start the Reporting Services SharePoint Service  
  ![PowerShell related content](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell related content")  
   
 > [!NOTE]
@@ -221,7 +224,7 @@ manager: "erikre"
     > [!NOTE]  
     >  If the Reporting Services service stays in the **Starting** status and does not change to **Started**, verify the ‘SharePoint 2013 Administration’ service is started in Windows Server Manager.  
   
-##  <a name="bkmk_create_serrviceapplication"></a> Step 3: Create a Reporting Services Service Application  
+##  <a name="bkmk_create_serrviceapplication"></a> Step 3: Create a Reporting Services service application  
  This section provides the steps to create a service application and a description of the properties, if you are reviewing an existing service application.  
   
 1.  In SharePoint Central Administration, in the **Application Management** group, select **Manage Service Applications**.  
@@ -257,13 +260,13 @@ manager: "erikre"
   
 -   Topic [To create a Reporting Services Service Application using PowerShell](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md).  
 
-##  <a name="bkmk_powerview"></a> Step 4: Activate the Power View Site Collection Feature.
+##  <a name="bkmk_powerview"></a> Step 4: Activate the Power View site collection feature.
 
  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], a feature of SQL Server 2016 Reporting Services Add-in for [!INCLUDE[msCoName](../../includes/msconame-md.md)] SharePoint Products, is a site collection feature. The feature is activated automatically for root site collections and site collections created after the Reporting Services add-in is installed. If you plan to use [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], verify that the feature is activated.  
   
  If you install the Reporting Services add-in for SharePoint Products after the installation of the SharePoint Server, then the Report Server integration feature and the Power View integration feature will only be activated for root site collections. For other site collections, manually activate the features.  
   
-#### To Activate or Verify the Power View Site Collection Feature  
+#### To activate or verify the Power View site collection feature  
   
 1.  The following steps assume your SharePoint site is configured for the 2013 **experience version**, for SharePoint 2013.  
   
@@ -281,7 +284,7 @@ manager: "erikre"
   
  This procedure is completed per site collection. For more information, see [Activate the Report Server and Power View Integration Features in SharePoint](../../reporting-services/report-server-sharepoint/site-collection-features-report-server-and-power-view.md).  
   
-##  <a name="bkmk_full_script"></a> Windows PowerShell script for Steps 1–4  
+##  <a name="bkmk_full_script"></a> Windows PowerShell script for steps 1–4  
  The PowerShells script in this section are the equivalent of completing steps 1 to 4 in the previous sections. The script completes the following:  
   
 -   Installs Reporting Services service and service proxy, and starts the service.  
@@ -380,7 +383,7 @@ Enable-SPfeature -identity "reportserver" -Url http://server/sites/bi
   
 ```  
   
-##  <a name="bkmk_additional_config"></a> Additional Configuration  
+##  <a name="bkmk_additional_config"></a> Additional configuration  
  This section describes additional configuration steps that are important in most SharePoint deployments.  
   
 ###  <a name="bkmk_configure_ECS"></a> Configure Excel Services and Power Pivot  
@@ -400,16 +403,16 @@ Enable-SPfeature -identity "reportserver" -Url http://server/sites/bi
 
 Also, the application pool security account used by the Reporting Services service application, must be an administrator on the Analysis Services Server.
   
-###  <a name="bkmk_provision_agent"></a> Provision Subscriptions and Alerts  
+###  <a name="bkmk_provision_agent"></a> Provision subscriptions and alerts  
  The Reporting Services subscription and data alert features may require the configuration of SQL Server Agent permissions. If you see an error message that indicates SQL Server Agent is required and you have verified SQL Server Agent is running, update the permissions. You can click the link **Provision Subscriptions and Alerts** on the create service application success page to go to another page for provisioning SQL Server Agent. The provision step is needed if your deployment crosses computer boundaries, for example when the SQL Server database instance is on a different computer. For more information, see [Provision Subscriptions and Alerts for SSRS Service Applications](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)  
   
-### Configure E-mail for SSRS Service Applications  
+### Configure e-mail for SSRS service applications  
  The Reporting Services data alerts feature sends alerts in e-mail messages. To send e-mail you may need to configure your Reporting Services service application and you may need to modify the e-mail delivery extension for the service application. If you plan to use the e-mail delivery extension for the Reporting Services subscription feature, the e-mail settings are required. For more information, see [Configure E-mail for a Reporting Services Service Application &#40;SharePoint 2013 and SharePoint 2016&#41;](http://msdn.microsoft.com/en-us/38fc34a6-aae7-4dde-9ad2-f1eee0c42a9f). 
   
-### Add Reporting Services Content Types to Content Libraries  
+### Add Reporting Services content types to content libraries  
  Reporting Services provides predefined content types that are used to manage shared data source (.rsds) files, report models (.smdl), and Report Builder report definition (.rdl) files. Adding a **Report Builder Report**, **Report Model**, and **Report Data Source** content type to a library enables the **New** command so that you can create new documents of that type. For more information, see [Add Reporting Services Content Types to a SharePoint Library](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md).  
   
-### Activate the Report Server File sync Feature  
+### Activate the Report Server File Sync Feature  
  If users will frequently upload published report items directly to SharePoint document libraries, the **Report Server File Sync** site level feature will be beneficial. The file sync feature will synchronize the report server catalog with items in document libraries on a more frequent basis. For more information, see [Activate the Report Server File Sync Feature in SharePoint Central Administration](../../reporting-services/report-server-sharepoint/activate-the-report-server-file-sync-feature-in-sharepoint-ca.md).  
   
 ##  <a name="bkmk_verify_installation"></a> Verify the installation  

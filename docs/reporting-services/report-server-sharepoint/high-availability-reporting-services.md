@@ -1,5 +1,5 @@
 ---
-title: "High Availability in Reporting Services | Microsoft Docs"
+title: "High availability in Reporting Services | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/25/2017"
 ms.prod: "sql-server-2016"
@@ -14,7 +14,7 @@ author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
 ---
-# High Availability in Reporting Services
+# High availability in Reporting Services
 
 A [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server is a stateless server that stores application data, content, properties, and session information in two [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] relational databases. As such, the best way to ensure the availability of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] functionality is to do the following:  
   
@@ -32,7 +32,7 @@ A [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server is
   
 ## See also
 
- [High Availability Solutions &#40;SQL Server&#41;](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md)   
- [Scale-out Deployment  - Reporting Services Native mode &#40;Configuration Manager&#41;](http://msdn.microsoft.com/library/4df38294-6f9d-4b40-9f03-1f01c1f0700c)  
+ [High availability solutions](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md)   
+ [Scale-out deployment  - Reporting Services Native mode](http://msdn.microsoft.com/library/4df38294-6f9d-4b40-9f03-1f01c1f0700c)  
 
 More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)

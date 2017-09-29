@@ -1,5 +1,5 @@
 ---
-title: "Local Mode vs. Connected Mode Reports in the Report Viewer | Microsoft Docs"
+title: "Local mode vs. connected mode reports in the Report Viewer | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/25/2017"
 ms.prod: "sql-server-2016"
@@ -82,6 +82,6 @@ manager: "erikre"
   
 ## See also
 
- [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)  
+ [Data sources supported by Reporting Services](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)  
 
 More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)

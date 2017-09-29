@@ -1,5 +1,5 @@
 ---
-title: "Report Viewer Web Part on a SharePoint Site | Microsoft Docs"
+title: "Report Viewer web part on a SharePoint Site | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/25/2017"
 ms.prod: "sql-server-2016"
@@ -38,7 +38,7 @@ While the Page Viewer web part suffices to embed a paginated report into a Share
 
 The Report Viewer web part is available on the Microsoft Download Center.
 
-[Download Report Viewer web part solution package](https://www.microsoft.com/en-us/download/details.aspx?id=55949)
+[Download Report Viewer web part solution package](https://www.microsoft.com/download/details.aspx?id=55949)
 
 ## Considerations and limitations
 

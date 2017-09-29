@@ -27,7 +27,7 @@ manager: "erikre"
   
 ## Creating a Reporting Services service application
 
- You can use SharePoint Central Administration or PowerShell scripts to create the Reporting Services services applications. For more information on using SharePoint Central Administration, see the “Create a Reporting Services Service Application” section in [Install Reporting Services SharePoint Mode for SharePoint 2010](http://msdn.microsoft.com/en-us/47efa72e-1735-4387-8485-f8994fb08c8c). See the PowerShell section later in this topic for a sample PowerShell script for creating service applications.  
+ You can use SharePoint Central Administration or PowerShell scripts to create the Reporting Services services applications. For more information on using SharePoint Central Administration, see the “Create a Reporting Services Service Application” section in [Install Reporting Services SharePoint Mode for SharePoint 2010](http://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c). See the PowerShell section later in this topic for a sample PowerShell script for creating service applications.  
   
 ## Modify the Associations of the service application with a proxy group
 

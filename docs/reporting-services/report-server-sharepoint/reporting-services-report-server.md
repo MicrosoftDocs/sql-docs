@@ -40,7 +40,7 @@ A Reporting Services report server runs in one of two deployment modes; Native m
   
  A Reporting Services report server supports two modes of deployment for report server instances:  
   
--   **Native mode**: including native mode with SharePoint Web Parts, where a report server runs as an application server that provides all processing and management capability exclusively through Reporting Services components. You configure a native mode report server with Reporting Services configuration manager and SQL Server Management Studio.  
+-   **Native mode**: including native mode with SharePoint web parts, where a report server runs as an application server that provides all processing and management capability exclusively through Reporting Services components. You configure a native mode report server with Reporting Services configuration manager and SQL Server Management Studio.  
   
 -   **SharePoint mode**: where a report server is installed as part of a SharePoint server farm.  Deploy and configure SharePoint mode by using PowerShell commands or SharePoint content management pages.  
   
@@ -79,7 +79,7 @@ A Reporting Services report server runs in one of two deployment modes; Native m
  Third-party developers can create additional extensions to replace or extend the processing capability of the report server. To learn more about the programmatic interfaces available to application developers, see the [Technical Reference](../../reporting-services/technical-reference-ssrs.md).  
   
 ### Native mode with SharePoint web parts
- Reporting Services provides two Web Parts that you can install and register on an instance of [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 2.0 or later, or [!INCLUDE[spPortalServ](../../includes/spportalserv-md.md)] 2003 or later. From a SharePoint site, you can use the Web Parts to find and view reports that are stored and processed on a report server that runs in native mode. These Web parts were introduced in earlier releases of Reporting Services.  
+ Reporting Services provides two web parts that you can install and register on an instance of [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 2.0 or later, or [!INCLUDE[spPortalServ](../../includes/spportalserv-md.md)] 2003 or later. From a SharePoint site, you can use the web parts to find and view reports that are stored and processed on a report server that runs in native mode. These web parts were introduced in earlier releases of Reporting Services.  
   
 ## SharePoint mode
  In SharePoint mode, a report server must run within a SharePoint server farm. The report server processing, rendering, and management features are represented by a SharePoint application server running the Reporting Services SharePoint shared service and one or more Reporting Services service applications. A SharePoint site provides the front-end access to report server content and operations.  
@@ -136,7 +136,7 @@ A Reporting Services report server runs in one of two deployment modes; Native m
 |Task|Link|  
 |----------|----------|  
 |Review Hardware and software requirements.|[Hardware and Software Requirements for Reporting Services in SharePoint Mode](http://msdn.microsoft.com/library/ed91877d-4f74-4266-a932-b824b4810c99).|  
-|Install Reporting Services in SharePoint mode.|[Install Reporting Services SharePoint Mode for SharePoint 2010](http://msdn.microsoft.com/en-us/47efa72e-1735-4387-8485-f8994fb08c8c)|  
+|Install Reporting Services in SharePoint mode.|[Install Reporting Services SharePoint Mode for SharePoint 2010](http://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c)|  
 |If you are a Web developer or have expertise in creating cascading style sheets, you can modify the default styles at your own risk to change the colors, fonts, and layout of the toolbar or Report Manager. Neither the default style sheets nor instructions for modifying the style sheets are documented in this release.|[Customize Style Sheets for HTML Viewer and Report Manager](http://msdn.microsoft.com/library/df805cff-b1de-4062-b2ac-423f37390fbd)|  
 |Web developers who are familiar with HTML styles and Cascade Style Sheets (CSS) can use the information in this topic to determine which files can be modified to customize the appearance of Report Manager.|[Configure the Web Portal to Pass Custom Authentication Cookies](assetid:///91aeb053-149e-4562-ae4c-a688d0e1b2ba)|  
 |Explains how to tune the memory settings for the Report Server Web service and Windows service.|[Configure Available Memory for Report Server Applications](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)|  

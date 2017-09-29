@@ -155,7 +155,7 @@ manager: "erikre"
   
 8.  When you finish adding content types, click **OK**.  
   
-##  <a name="bkmk_enable_multiple_sites"></a> To enable Content types and content management for multiple BI sites  
+##  <a name="bkmk_enable_multiple_sites"></a> To enable content types and content management for multiple BI sites  
   
 1.  For SQL Server Reporting Services 2008 and 2008 R2 report servers, you can enable content types and content management for multiple Business Intelligence Center sites:  
   
@@ -169,7 +169,7 @@ manager: "erikre"
   
 4.  Click **Ok**.  
   
-## See Also  
+## See also  
  [SharePoint Site and List Permission Reference for Report Server Items](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)   
  [Start Report Builder](../../reporting-services/report-builder/start-report-builder.md)  
   

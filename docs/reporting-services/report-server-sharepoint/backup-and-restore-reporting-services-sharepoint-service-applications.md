@@ -14,13 +14,13 @@ author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
 ---
-# Backup and restore Reporting Services SharePoint service applications
+# Back up and restore Reporting Services SharePoint service applications
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-This topic describes how to backup and restore a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] services application using SharePoint Central Administration or PowerShell.
+This topic describes how to back up and restore a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] services application using SharePoint Central Administration or PowerShell.
 
 > [!NOTE]
 > Reporting Services integration with SharePoint is no longer available after SQL Server 2016.
@@ -40,7 +40,7 @@ This topic describes how to backup and restore a [!INCLUDE[ssRSnoversion](../../
   
 -   Review the SharePoint backup log is created in the same folder as the backup file. The file is typically named **spbackup.log**  
   
-## Backup the service application
+## Back up the service application
 
  Complete the following steps in order:  
   
@@ -50,11 +50,11 @@ This topic describes how to backup and restore a [!INCLUDE[ssRSnoversion](../../
   
 3.  Verify if you service application uses an UEA or Windows authentication for database access. If it does, make a note of the credentials so you can use them to configure the service application after it is restored.  
 
-### Backup the encryption keys using SharePoint Central Administration
+### Back up the encryption keys using SharePoint Central Administration
 
 For information on backing up the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] encryption keys, see the “Encryption Keys” section of [Manage a Reporting Services SharePoint Service Application](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md).  
 
-### Backup the service application using SharePoint Central Administration
+### Back up the service application using SharePoint Central Administration
 
 To back up the Service Application, complete the following steps:  
   

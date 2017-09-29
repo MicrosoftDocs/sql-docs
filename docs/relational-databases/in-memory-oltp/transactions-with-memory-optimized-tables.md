@@ -3,7 +3,7 @@ title: "Transactions with Memory-Optimized Tables | Microsoft Docs"
 ms.custom: 
   - "MSDN content"
   - "MSDN - SQL DB"
-ms.date: "06/12/2017"
+ms.date: "09/29/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.service:
@@ -66,35 +66,37 @@ SQL Server has the following modes for transaction initiation:
   
 The following interpreted Transact-SQL script uses:  
   
-- An explicit transaction.  
-  
-- A memory-optimized table, named dbo.Order_mo.  
-  
+- An explicit transaction.
+- A memory-optimized table, named dbo.Order_mo.
 - The READ COMMITTED transaction isolation level context.  
   
 Therefore it is necessary to have a table hint on the memory-optimized table. The hint must be for SNAPSHOT or an even more isolating level. In the case of the code example, the hint is WITH (SNAPSHOT). If this hint is removed, the script would suffer an error 41368, for which an automated retry would be inappropriate:  
-  
-- 41368: Accessing memory optimized tables using the READ COMMITTED isolation level is supported only for autocommit transactions. It is not supported for explicit or implicit transactions. Provide a supported isolation level for the memory-optimized table using a table hint, such as WITH (SNAPSHOT).  
-  
-  
-  
-      SET TRANSACTION ISOLATION LEVEL READ COMMITTED;  
-      GO  
-  
-      BEGIN TRANSACTION;  -- Explicit transaction.  
-  
-      -- Order_mo  is a memory-optimized table.  
-      SELECT *  
-       FROM  
-                dbo.Order_mo  as o  WITH (SNAPSHOT)  -- Table hint.  
-           JOIN dbo.Customer  as c  on c.CustomerId = o.CustomerId;  
-      
-      COMMIT TRANSACTION;  
+
+#### Error 41368
+
+Accessing memory optimized tables using the READ COMMITTED isolation level is supported only for autocommit transactions. It is not supported for explicit or implicit transactions. Provide a supported isolation level for the memory-optimized table using a table hint, such as WITH (SNAPSHOT).
+
+```sql
+SET TRANSACTION ISOLATION LEVEL READ COMMITTED;  
+GO  
+
+BEGIN TRANSACTION;  -- Explicit transaction.  
+
+-- Order_mo  is a memory-optimized table.  
+SELECT * FROM  
+           dbo.Order_mo  as o  WITH (SNAPSHOT)  -- Table hint.  
+      JOIN dbo.Customer  as c  on c.CustomerId = o.CustomerId;  
+     
+COMMIT TRANSACTION;
+```
   
 Note that the need for the `WITH (SNAPSHOT)` hint can be avoided through the use of the database option `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT`. When this option is set to `ON`, access to a memory-optimized table under a lower isolation level is automatically elevated to SNAPSHOT isolation.  
-  
-    ALTER DATABASE CURRENT SET MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT=ON  
-  
+
+```sql
+ALTER DATABASE CURRENT
+    SET MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT = ON;
+```
+
 <a name="rowver28ni"/>  
   
 ## Row Versioning  
@@ -178,61 +180,63 @@ Retry logic can be implemented at the client or server side. The general recomme
   
 Server-side retry logic using T-SQL should only be used for transactions that do not return result sets to the client, since retries can potentially result on additional result sets being returned to the client that may not be anticipated.  
   
-The following interpreted T-SQL script illustrates what retry logic can look like for the errors associated with transaction conflicts involving memory-optimized tables.  
-  
-      -- Retry logic, in Transact-SQL.  
-    DROP PROCEDURE If Exists usp_update_salesorder_dates;  
-    GO  
-  
-    CREATE PROCEDURE usp_update_salesorder_dates  
-    AS  
-    BEGIN  
-        DECLARE @retry INT = 10;  
-  
-        WHILE (@retry > 0)  
-        BEGIN  
-            BEGIN TRY  
-                BEGIN TRANSACTION;  
-  
-                UPDATE dbo.SalesOrder_mo WITH (SNAPSHOT)  
-                    set OrderDate = GetUtcDate()  
-                    where CustomerId = 42;  
-  
-                UPDATE dbo.SalesOrder_mo WITH (SNAPSHOT)  
-                    set OrderDate = GetUtcDate()  
-                    where CustomerId = 43;  
-  
-                COMMIT TRANSACTION;  
-                SET @retry = 0;  -- //Stops the loop.  
-            END TRY  
-  
-            BEGIN CATCH  
-                SET @retry -= 1;  
-  
-                IF (@retry > 0 AND  
-                    ERROR_NUMBER() in (41302, 41305, 41325, 41301, 41839, 1205)  
-                    )  
-                BEGIN  
-                    IF XACT_STATE() = -1  
-                        ROLLBACK TRANSACTION;  
-  
-                    WAITFOR DELAY '00:00:00.001';  
-                END  
-                ELSE  
-                BEGIN  
-                    PRINT 'Suffered an error for which Retry is inappropriate.';  
-                    THROW;  
-                END  
-            END CATCH  
-  
-        END -- //While loop  
-    END;  
-    GO  
-  
-      --  EXECUTE usp_update_salesorder_dates;  
-  
-  
-  
+The following interpreted T-SQL script illustrates what retry logic can look like for the errors associated with transaction conflicts involving memory-optimized tables.
+
+```sql
+-- Retry logic, in Transact-SQL.
+DROP PROCEDURE If Exists usp_update_salesorder_dates;
+GO
+
+CREATE PROCEDURE usp_update_salesorder_dates
+AS
+BEGIN
+    DECLARE @retry INT = 10;
+
+    WHILE (@retry > 0)
+    BEGIN
+        BEGIN TRY
+            BEGIN TRANSACTION;
+
+            UPDATE dbo.SalesOrder_mo WITH (SNAPSHOT)
+                set OrderDate = GetUtcDate()
+                where CustomerId = 42;
+
+            UPDATE dbo.SalesOrder_mo WITH (SNAPSHOT)
+                set OrderDate = GetUtcDate()
+                where CustomerId = 43;
+
+            COMMIT TRANSACTION;
+
+            SET @retry = 0;  -- //Stops the loop.
+        END TRY
+
+        BEGIN CATCH
+            SET @retry -= 1;
+
+            IF (@retry > 0 AND
+                ERROR_NUMBER() in (41302, 41305, 41325, 41301, 41839, 1205)
+                )
+            BEGIN
+                IF XACT_STATE() = -1
+                    ROLLBACK TRANSACTION;
+
+                WAITFOR DELAY '00:00:00.001';
+            END
+            ELSE
+            BEGIN
+                PRINT 'Suffered an error for which Retry is inappropriate.';
+                THROW;
+            END
+        END CATCH
+
+    END -- //While loop
+END;
+GO
+
+--  EXECUTE usp_update_salesorder_dates;
+```
+
+
 <a name="crossconttxn38ni"/>  
   
 ## Cross-Container Transaction  
@@ -251,36 +255,35 @@ In the following Transact-SQL code example:
   
 - The disk-based table, Table_D1, is accessed using the READ COMMITTED isolation level.  
 - The memory-optimized table Table_MO7 is accessed using the SERIALIZABLE isolation level. Table_MO6 does not have a specific associated isolation level, since inserts are always consistent and executed essentially under serializable isolation.  
-  
-  
-  
-      -- Different isolation levels for  
-      -- disk-based tables versus memory-optimized tables,  
-      -- within one explicit transaction.  
-  
-    SET TRANSACTION ISOLATION LEVEL READ COMMITTED;  
-    go  
-  
-    BEGIN TRANSACTION;  
-  
-        -- Table_D1 is a traditional disk-based table, accessed using READ COMMITTED isolation.  
-        --  
-        SELECT * FROM Table_D1;  
-  
-  
-  
-        -- Table_MO6 and Table_MO7 are memory-optimized tables. Table_MO7 is accessed using SERIALIZABLE isolation,  
-    --   while Table_MO6 does not have a specific   
-        --  
-        INSERT Table_MO6  
-            SELECT * FROM Table_MO7 WITH (SERIALIZABLE);  
-  
-  
-    COMMIT TRANSACTION;  
-    go  
-  
-  
-  
+
+
+```sql
+-- Different isolation levels for
+-- disk-based tables versus memory-optimized tables,
+-- within one explicit transaction.
+
+SET TRANSACTION ISOLATION LEVEL READ COMMITTED;
+go
+
+BEGIN TRANSACTION;
+
+    -- Table_D1 is a traditional disk-based table, accessed using READ COMMITTED isolation.
+
+    SELECT * FROM Table_D1;
+
+
+    -- Table_MO6 and Table_MO7 are memory-optimized tables.
+    -- Table_MO7 is accessed using SERIALIZABLE isolation,
+    --   while Table_MO6 does not have a specific isolation level.
+
+    INSERT Table_MO6
+        SELECT * FROM Table_MO7 WITH (SERIALIZABLE);
+
+COMMIT TRANSACTION;
+go
+```
+
+
 <a name="limitations40ni"/>  
   
 ## Limitations  

@@ -44,7 +44,7 @@ Here is a summary of the options and recommendations.
 | Columnstore option | Recommendations for when to use | Compression |
 | :----------------- | :------------------- | :---------- |
 | Clustered columnstore index | Use for:<br></br>1) Traditional data warehouse workload with a star or snowflake schema<br></br>2) Internet of Things (IOT) workloads that insert large volumes of data with minimal updates and deletes. | Average of 10x |
-| Nonclustered btree indexes on a clustered columnstore index | Use to:<br></br>    1) Enforce primary key and foreign key constraints on a clustered columnstore index.<br></br>    2) Speedup queries that search for specific values or small ranges of values.<br></br>    3) Speedup updates and deletes of specific rows.| 10x on average plus some additional storage for the NCIs.|
+| Nonclustered btree indexes on a clustered columnstore index | Use to:<br></br>    1) Enforce primary key and foreign key constraints on a clustered columnstore index.<br></br>    2) Speed up queries that search for specific values or small ranges of values.<br></br>    3) Speed up updates and deletes of specific rows.| 10x on average plus some additional storage for the NCIs.|
 | Nonclustered columnstore index on a disk-based heap or btree index | Use for: <br></br>1) An OLTP workload that has some analytics queries. You can drop btree indexes created for analytics and replace them with one nonclustered columnstore index.<br></br>2) Many traditional OLTP workloads that perform Extract Transform and Load (ETL) operations to move data to a separate data warehouse. You can eliminate ETL and a separate data warehouse by creating a nonclustered columnstore index on some of the OLTP tables. | NCCI is an additional index that requires 10% more storage on average.|
 | Columnstore index on an in-memory table | Same recommendations as nonclustered columnstore index on a disk-based table, except the base table is an in-memory table. | Columnstore index is an additional index.|
 
@@ -107,7 +107,7 @@ For large tables, the only practical way to manage ranges of data is by using pa
 
 For example, both rowstore and columnstore tables use partitions to:
 
-- Control the size of incremental backups. You can backup partitions to separate filegroups and then mark them as read-only. By doing this, future backups will skip the read-only filegroups. 
+- Control the size of incremental backups. You can back up partitions to separate filegroups and then mark them as read-only. By doing this, future backups will skip the read-only filegroups. 
 - Save storage costs by moving an older partition to less expensive storage. For example, you could use partition switching to move a partition to a less expensive storage location.
 - Perform operations efficiently by limiting the operations to a partition. For example, you can target only the fragmented partitions for index maintenance.
 
@@ -121,11 +121,11 @@ By using partitions, you can limit your queries to scan only specific partitions
 
 ### Use fewer partitions for a columnstore index
 
-Unless you have a large enough data size, a columnstore index performs best with fewer partitions than you what you might use for a rowstore index. If you don't have at least one million rows per partition, most of your rows might go to the deltastore where they don't receive the performance benefit of columnstore compression. For example, if you load one million rows into a table with 10 partitions and each partition receives 100,000 rows, all of the rows will go to delta rowgroups. 
+Unless you have a large enough data size, a columnstore index performs best with fewer partitions than what you might use for a rowstore index. If you don't have at least one million rows per partition, most of your rows might go to the deltastore where they don't receive the performance benefit of columnstore compression. For example, if you load one million rows into a table with 10 partitions and each partition receives 100,000 rows, all of the rows will go to delta rowgroups. 
 
 Example:
 * Load 1,000,000 rows into one partition or a non-partitioned table. You get one compressed rowgroup with 1,000,000 rows. This is great for high data compression and fast query performance.
-* Load 1,000,000 rows evenly into 10 partitions. Each partition gets 100,000 rows which is less than the minimum threshold for columnstore compression. As a result the columnstore index could have 10 delta rowgroups with 100,000 rows in each. There are ways to force the delta rowgroups into the columnstore. However, if these are the only rows in the columnstore index, the comrpessed rowgroups will be too small for best compression and query performance.
+* Load 1,000,000 rows evenly into 10 partitions. Each partition gets 100,000 rows, which is less than the minimum threshold for columnstore compression. As a result the columnstore index could have 10 delta rowgroups with 100,000 rows in each. There are ways to force the delta rowgroups into the columnstore. However, if these are the only rows in the columnstore index, the comrpessed rowgroups will be too small for best compression and query performance.
 
 For more information about partitioning, see Sunil Agarwal's blog post, [Should I partition my columnstore index?](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/10/04/columnstore-index-should-i-partition-my-columnstore-index/).
 
@@ -160,7 +160,7 @@ To preserve the sorted order during conversion:
     ```sql
     CREATE CLUSTERED COLUMNSTORE INDEX ClusteredIndex_d473567f7ea04d7aafcac5364c241e09  
     ON MyFactTable  
-    WITH DROP_EXISTING = ON;  
+    WITH (DROP_EXISTING = ON);  
     ```
 
 ## Related Tasks  

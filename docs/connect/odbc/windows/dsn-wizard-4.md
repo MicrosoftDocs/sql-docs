@@ -65,12 +65,14 @@ Specifies the number of times to retry an unsuccessful connection attempt.
 
 Specifies the number of seconds between each connection retry attempt. For more information on the operation of this and the **Connect retry count** options, see [Connection Resiliency in the Windows ODBC Driver](../../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md).
 
-## Next steps
-
-[< Back](../../../connect/odbc/windows/dsn-wizard-3.md)
+### Back
 
 Click this button to go back to the previous page of the wizard.
 
 ### Finish
 
 If the information specified on this screen is complete, you can click **Finish**. The DSN is created using all attributes specified on this and other screens of the wizard, and you are given an opportunity to test the newly-created DSN.
+
+## Next steps
+
+[Data Source Wizard Screen 3](../../../connect/odbc/windows/dsn-wizard-3.md)

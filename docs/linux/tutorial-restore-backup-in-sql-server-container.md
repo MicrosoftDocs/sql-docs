@@ -203,11 +203,15 @@ The backup file is now located inside the container. Before restoring the backup
 Run the following query to display a list of database names in your container:
 
 ```bash
-sudo docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P '<YourNewStrong!Passw0rd>' -Q 'SELECT Name FROM sys.Databases'
+sudo docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd \
+   -S localhost -U SA -P '<YourNewStrong!Passw0rd>' \
+   -Q 'SELECT Name FROM sys.Databases'
 ```
 
 ```PowerShell
-docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P "<YourNewStrong!Passw0rd>" -Q "SELECT Name FROM sys.Databases"
+docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
+   -S localhost -U SA -P "<YourNewStrong!Passw0rd>" `
+   -Q "SELECT Name FROM sys.Databases"
 ```
 
 You should see **WideWorldImporters** in the list of databases.
@@ -219,11 +223,15 @@ The following steps make a change in the database.
 1. Run a query to view the top 10 items in the **Warehouse.StockItems** table.
 
    ```bash
-   sudo docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P '<YourNewStrong!Passw0rd>' -Q 'SELECT TOP 10 StockItemID, StockItemName FROM WideWorldImporters.Warehouse.StockItems ORDER BY StockItemID'
+   sudo docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd \
+      -S localhost -U SA -P '<YourNewStrong!Passw0rd>' \
+      -Q 'SELECT TOP 10 StockItemID, StockItemName FROM WideWorldImporters.Warehouse.StockItems ORDER BY StockItemID'
    ```
 
    ```PowerShell
-   docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P "<YourNewStrong!Passw0rd>" -Q "SELECT TOP 10 StockItemID, StockItemName FROM WideWorldImporters.Warehouse.StockItems ORDER BY StockItemID"
+   docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
+      -S localhost -U SA -P "<YourNewStrong!Passw0rd>" `
+      -Q "SELECT TOP 10 StockItemID, StockItemName FROM WideWorldImporters.Warehouse.StockItems ORDER BY StockItemID"
    ```
 
    You should see a list of item identifiers and names:

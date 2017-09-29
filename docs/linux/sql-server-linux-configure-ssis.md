@@ -27,19 +27,15 @@ The examples in this article run `ssis-conf` by specifying the full path: `/opt/
 
 Be sure to run the commands that are described in this article with root privileges. For example, run `sudo /opt/ssis/bin/ssis-conf setup` and not `/opt/ssis/bin/ssis-conf setup`.
 
-To run these commands with prompts in the language that you prefer, you can specify a locale. For example, to receive prompts in Chinese, run the following command:
-
-`sudo LC_ALL=zh_CN.UTF-8 /opt/ssis/bin/ssis-conf setup`.
+To run these commands with prompts in the language that you prefer, you can specify a locale. For example, to receive prompts in Chinese, run the following command: `sudo LC_ALL=zh_CN.UTF-8 /opt/ssis/bin/ssis-conf setup`.
 
 ## Use set-edition to set the edition of SQL Server Integration Services
 
 The edition of SSIS is aligned with the edition of SQL Server.
 
-Enter the following command:
+Enter the following command: `$ sudo /opt/ssis/bin/ssis-conf set-edition`.
 
-`$ sudo /opt/ssis/bin/ssis-conf set-edition`
-
-After you enter the command, you receive the following prompt:
+After you enter the command, you'll receive the following prompt:
 
 ```
 Choose an edition of SQL Server:
@@ -60,7 +56,7 @@ Choose an edition of SQL Server:
 
 8) I bought a license through a retail sales channel and have a product key to enter.
 
-Details about editions can be found at https://go.microsoft.com/fwlink/?LinkId=852748&clcid=0x409
+Details about editions can be found at https://go.microsoft.com/fwlink/?LinkId=852748&clcid=0x409.
 
 Use of PAID editions of this software requires separate licensing through a Microsoft Volume Licensing program.
 
@@ -69,7 +65,7 @@ By choosing a PAID edition, you are verifying that you have the appropriate numb
 Enter your edition (1-8):
 ```
 
-If you enter a value from 1 to 7, the system configures a free or paid edition. If you enter 8, the utility prompts you to enter the product key that you bought:
+If you enter a value from 1 to 7, the system configures a free or PAID edition. If you enter 8, the utility prompts you to enter the product key that you bought:
 
 ```
 Enter the 25-character product key:
@@ -81,26 +77,25 @@ The `telemetry` command determines whether SSIS sends feedback to Microsoft.
 
 For free editions (that is, Express, Developer, and Evaluation editions), the telemetry service is always enabled. If you have a free edition, you can’t use the `telemetry` command to disable telemetry.
 
-Enter the following command: `$ sudo /opt/ssis/bin/ssis-conf telemetry`
+Enter the following command: `$ sudo /opt/ssis/bin/ssis-conf telemetry`.
 
-For paid editions, after you enter the command, you receive the following prompt:
+For PAID editions, after you enter the command, you'll receive the following prompt:
 
 ```
-Send feature usage data to Microsoft. Feature usage data includes information
-about your hardware configuration and how you use SQL Server Integration Services.
+Send feature usage data to Microsoft. Feature usage data includes information about your hardware configuration and how you use SQL Server Integration Services.
 
 [Yes/No]:
 ```
 
-If you select **Yes**, the telemetry service is enabled and starts running. The service auto-starts after each boot. If you select **No**, the telemetry service stops and is disabled.
+If you select **Yes**, the telemetry service is enabled and starts running. The service starts automatically after each boot. If you select **No**, the telemetry service stops and is disabled.
 
 ## Use setup to initialize and set up Microsoft SQL Server Integration Services
 
 Use the `setup` command every time you install SSIS.
 
-Enter the following command: `sudo /opt/ssis/bin/ssis-conf setup`
+Enter the following command: `sudo /opt/ssis/bin/ssis-conf setup`.
 
-The utility prompts you to acknowledge or to provide values for the following items:
+The utility prompts you to acknowledge or provide values for the following items:
 -   Product license
 -   EULA agreement
 -   Telemetry service

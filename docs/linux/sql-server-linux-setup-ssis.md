@@ -1,10 +1,10 @@
 ---
 title: Install SQL Server Integration Services on Linux | Microsoft Docs
 description: This topic describes how to install SQL Server Integration Services on Linux.
-manager: craigg
 author: leolimsft 
 ms.author: lle 
 ms.reviewer: douglasl
+manager: craigg
 ms.date: 09/29/2017
 ms.topic: article
 ms.prod: sql-linux

@@ -1,6 +1,6 @@
 ---
 title: Release notes for SQL Server 2017 on Linux | Microsoft Docs
-description: This topic contains the release notes and supported features for SQL Server 2017 running on Linux. Release notes are included for RC2 and prior versions.
+description: This topic contains the release notes and supported features for SQL Server 2017 running on Linux. Release notes are included for the most recent release and several previous releases.
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
@@ -12,9 +12,9 @@ ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 ---
 # Release notes for SQL Server 2017 on Linux
 
-The following release notes apply to SQL Server 2017 running on Linux. This release supports many of the SQL Server database engine features for Linux. The topic below is broken into sections for each release, beginning with the most recent release back to the RC1 release. See the information in each section for supported platforms, tools, features, and known issues.
+The following release notes apply to SQL Server 2017 running on Linux. This release supports many of the SQL Server database engine features for Linux. The topic below is broken into sections for each release, beginning with the most recent general availability (GA) release and the previous two releases. See the information in each section for supported platforms, tools, features, and known issues.
 
-The following table lists the releases of SQL Server 2017. This topic provides release notes for RC1 and greater.
+The following table lists the release history for SQL Server 2017.
 
 | Release | Version | Release date |
 |-----|-----|-----|

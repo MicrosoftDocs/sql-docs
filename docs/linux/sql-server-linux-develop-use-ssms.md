@@ -4,7 +4,7 @@ description: This tutorial shows how to use SQL Server Management Studio on Wind
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 03/17/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -14,7 +14,7 @@ ms.assetid: 30cc4564-f389-4707-9b25-8ba782cc5150
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-This topic shows how to use [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) to connect to SQL Server 2017 RC2 on Linux. SSMS is a Windows application, so use SSMS when you have a Windows machine that can connect to a remote SQL Server instance on Linux. 
+This topic shows how to use [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) to connect to SQL Server 2017 on Linux. SSMS is a Windows application, so use SSMS when you have a Windows machine that can connect to a remote SQL Server instance on Linux.
 
 After successfully connecting, you run a simple Transact-SQL (T-SQL) query to verify communication with the database.
 

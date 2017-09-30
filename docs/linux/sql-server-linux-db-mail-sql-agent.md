@@ -4,7 +4,7 @@ description: This topic describes how to use DB Mail and Email Alerts with SQL S
 author: meet-bhagdev
 ms.author: meetb
 manager: jhubbard
-ms.date: 07/17/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -17,11 +17,12 @@ ms.assetid: tbd
 The following steps show you how to set up DB Mail and use it with SQL Server Agent (**mssql-server-agent**) on Linux. 
 
 > [!NOTE]
-> To use DB Mail with SQL Server on Linux, you need to use SQL Server 2017 RC2 or later.
+> To use DB Mail with SQL Server on Linux, you need to use SQL Server 2017 RC1 or later.
 
 ## Prerequisites
--   SQL Server 2017 RC2 and above
--   SQL Server Agent v14.0.800.90-2 and above (if you plan to use email for alerts)
+
+- SQL Server 2017 RC1 and above
+- SQL Server Agent v14.0.800.90-2 and above (if you plan to use email for alerts)
 
 ## 1. Enable DB Mail
 

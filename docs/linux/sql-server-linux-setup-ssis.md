@@ -5,7 +5,7 @@ author: leolimsft
 ms.author: lle 
 ms.reviewer: douglasl
 manager: craigg
-ms.date: 09/29/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: integration-services

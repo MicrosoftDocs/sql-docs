@@ -40,8 +40,8 @@ ms.technology:
                                                 </div>
                                                 <h4 class="likeAnH3" style="margin: 1rem 0px;">SQL Server</h4>
                                                 <ul>
-                                                    <li><a href="/sql/sql-server/what-s-new-in-sql-server-2017">SQL Server 2017 Preview</a></li>
-                                                    <li><a href="https://docs.microsoft.com/sql/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs">SQL Server 2017 Reporting Services Preview</a></li>
+                                                    <li><a href="/sql/sql-server/what-s-new-in-sql-server-2017">SQL Server 2017</a></li>
+                                                    <li><a href="https://docs.microsoft.com/sql/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs">SQL Server 2017 Reporting Services</a></li>
                                                     <li><a href="/sql/linux/sql-server-linux-whats-new">SQL Server on Linux</a></li>
                                                 </ul>
                                             </div>
@@ -89,7 +89,7 @@ ms.technology:
                                                 <h4 class="likeAnH3" style="margin: 1rem 0px;">SQL Server</h4>
                                                 <ul>
                                                     <li><a href="https://www.microsoft.com/en-us/sql-server/sql-server-downloads">SQL Server 2016</a></li>
-                                                    <li><a href="https://www.microsoft.com/en-us/sql-server/sql-server-2017">SQL Server 2017 Preview</a></li>
+                                                    <li><a href="https://www.microsoft.com/en-us/sql-server/sql-server-2017">SQL Server 2017</a></li>
                                                     <li><a href="https://docs.microsoft.com/sql/reporting-services/install-windows/install-reporting-services">SQL Server Reporting Services (SSRS)</a></li>
                                                 </ul>
                                                 <h4 class="likeAnH3" style="margin: 1rem 0px;">Tools</h4>

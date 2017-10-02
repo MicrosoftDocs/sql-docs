@@ -28,7 +28,7 @@ If the service is not active (that is, it is not running), consult your administ
 
 A cron job is a task that you can configure to run regularly at a specified interval. The job can be as simple as a command that you would normally type directly in the console or run as a shell script.
 
-For easy management and maintenance purposes, we recommend that you put your package execution commands in a script that contains a descriptive name.
+For easy management and maintenance purposes, we recommend that you put your package-execution commands in a script that contains a descriptive name.
 
 Here is an example of a simple shell script for running a package. It contains only a single command, but you can add more commands as required.
 

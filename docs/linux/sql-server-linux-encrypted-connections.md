@@ -52,11 +52,14 @@ TLS is used to encrypt connections from a client application to [!INCLUDE[ssNoVe
 
     -   If you are using CA signed certificate you have to copy the Certificate Authority (CA) certificate instead of the user certificate to the client machine. 
     -   If you are using the self-signed certificate just copy the .pem file to the following folders respective to distribution and execute the commands to enable them 
-        -   Ubuntu : Copy cert to /usr/share/ca-certificates/  rename extension to .crt  use dpkg-reconfigure ca-certificates to enable it as system CA certificate. 
-        -   RHEL : Copy cert to /etc/pki/ca-trust/source/anchors/ use update-ca-trust to enable it as system CA certificate.
-        -   SUSE : Copy cert to /usr/share/pki/trust/anchors/ use update-ca-certificates to enable its as system CA certificate.
-        -   Windows:  Import the .pem file as a certificate under current user -> trusted root certification authorities -> certificates
-        -   macOS: TBD
+        - Ubuntu : Copy cert to /usr/share/ca-certificates/  rename extension to .crt  use dpkg-reconfigure ca-certificates to enable it as system CA certificate. 
+        - RHEL : Copy cert to ```/etc/pki/ca-trust/source/anchors/``` use update-ca-trust to enable it as system CA certificate.
+        - SUSE : Copy cert to ```/usr/share/pki/trust/anchors/``` use update-ca-certificates to enable its as system CA certificate.
+        - Windows:  Import the .pem file as a certificate under current user -> trusted root certification authorities -> certificates
+        - macOS: 
+           - Copy the cert to ```/usr/local/etc/openssl/certs```
+           - Run the following command to get the hash value: ```/usr/local/Cellar/openssql/1.0.2l/openssql x509 -hash -in mssql.pem -noout```
+           - Rename the cert to value. For example: ```mv mssql.pem dc2dd900.0```. Make sure dc2dd900.0 is in /usr/local/etc/openssl/certs
     
 -	Example connection strings 
 

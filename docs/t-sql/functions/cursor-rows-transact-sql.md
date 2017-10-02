@@ -75,11 +75,15 @@ Here are the result sets.
 ```
 -----------
 0  
+```
 
+```
 LastName
 ---------------
 Sanchez
+```
 
+```
 -----------
 -1
 ```  

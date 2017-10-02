@@ -102,10 +102,10 @@ GO
   
 ```
 -----------
+67  
   
- `67`  
-  
-`(1 row(s) affected)`
+(1 row(s) affected)
+```
   
 ### B. Using COUNT(*)  
 The following example finds the total number of employees who work at [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)].

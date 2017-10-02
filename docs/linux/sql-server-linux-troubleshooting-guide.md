@@ -14,7 +14,7 @@ ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-This document describes how to troubleshoot Microsoft SQL Server running on Linux or in a Docker container. When troubleshooting SQL Server on Linux, please make remember the limitations of this private preview release. You can find a list of these in the [Release Notes](sql-server-linux-release-notes.md).
+This document describes how to troubleshoot Microsoft SQL Server running on Linux or in a Docker container. When troubleshooting SQL Server on Linux, please remember to review the supported features and known limitations in the [SQL Server on Linux Release Notes](sql-server-linux-release-notes.md).
 
 ## <a id="connection"></a> Troubleshoot connection failures
 If you are having difficulty connecting to your Linux SQL Server, there are a few things to check. 
@@ -32,11 +32,11 @@ If you are having difficulty connecting to your Linux SQL Server, there are a fe
    >   ```bash
    >   sudo ip addr show eth0 | grep "inet"
    >   ```
-   > One exception to this technique relates to Azure VMs. For Azure VMs, [find the public IP for the VM in the Azure portal](sql-server-linux-azure-virtual-machine.md#connect).
+   > One exception to this technique relates to Azure VMs. For Azure VMs, [find the public IP for the VM in the Azure portal](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine#connect).
 
 - If applicable, check that you have opened the SQL Server port (default 1433) on the firewall.
 
-- For Azure VMs, check that you have a [network security group rule for the default SQL Server port](sql-server-linux-azure-virtual-machine.md#remote).
+- For Azure VMs, check that you have a [network security group rule for the default SQL Server port](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine#remote).
 
 - Verify that the user name and password do not contain any typos or extra spaces or incorrect casing.
 

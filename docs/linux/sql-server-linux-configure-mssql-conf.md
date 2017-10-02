@@ -14,7 +14,7 @@ ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-**mssql-conf** is a configuration script that installs with SQL Server 2017 RC2 for Red Hat Enterprise Linux, SUSE Linux Enterprise Server, and Ubuntu. You can use this utility to set the following parameters:
+**mssql-conf** is a configuration script that installs with SQL Server 2017 for Red Hat Enterprise Linux, SUSE Linux Enterprise Server, and Ubuntu. You can use this utility to set the following parameters:
 
 |||
 |---|---|

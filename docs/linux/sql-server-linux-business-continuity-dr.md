@@ -4,7 +4,7 @@ description:
 author: mihaelab 
 ms.author: mihaelab 
 manager: jhubbard
-ms.date: 09/14/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine

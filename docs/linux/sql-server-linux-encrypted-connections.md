@@ -63,19 +63,19 @@ TLS is used to encrypt connections from a client application to [!INCLUDE[ssNoVe
     
 -	Example connection strings 
 
-    - [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)]   
+    - **[!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)]**   
   ![SSMS connection dialog](media/sql-server-linux-encrypted-connections/ssms-encrypt-connection.png "SSMS connection dialog")  
   
-    - SQLCMD 
+    - **SQLCMD** 
 
             sqlcmd  -S <sqlhostname> -N -U sa -P '<YourPassword>' 
-    - ADO.NET 
+    - **ADO.NET** 
 
             "Encrypt=True; TrustServerCertificate=False;" 
-    - ODBC 
+    - **ODBC** 
 
             "Encrypt=Yes; TrustServerCertificate=no;" 
-    - JDBC 
+    - **JDBC** 
     
             "encrypt=true; trustServerCertificate=false;" 
 
@@ -100,16 +100,16 @@ TLS is used to encrypt connections from a client application to [!INCLUDE[ssNoVe
         
 -	Example connection strings 
 
-    - SQLCMD 
+    - **SQLCMD**
 
             sqlcmd  -S <sqlhostname> -U sa -P '<YourPassword>' 
-    - ADO.NET 
+    - **ADO.NET** 
 
             "Encrypt=False; TrustServerCertificate=False;" 
-    - ODBC 
+    - **ODBC** 
 
             "Encrypt=no; TrustServerCertificate=no;"  
-    - JDBC 
+    - **JDBC** 
     
             "encrypt=false; trustServerCertificate=false;" 
             

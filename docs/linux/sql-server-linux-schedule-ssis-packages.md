@@ -45,7 +45,7 @@ After you have defined your jobs, you can schedule them to run automatically by 
 
 To add your job for cron to run, add the job in the crontab file. To open the crontab file in an editor where you can add or update the job, use the following command: `crontab -e`.
 
-To schedule the previously described job to run daily at 2:10 AM, add following line to the crontab file:
+To schedule the previously described job to run daily at 2:10 AM, add the following line to the crontab file:
 
 ```
 # run <SSIS package name> at 2:10 AM every day

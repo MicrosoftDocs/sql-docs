@@ -56,14 +56,10 @@ To configure SQL Server on RHEL, run the following commands in a terminal to ins
    sudo /opt/mssql/bin/mssql-conf setup
    ```
    > [!TIP]
-   > Make sure to specify a strong password for the SA account (Minimum length 8 characters, including uppercase and lowercase letters, base 10 digits and/or non-alphanumeric symbols).
+   > If you are trying SQL Server 2017 in this tutorial, the following editions are freely licensed: Evaluation, Developer, and Express.
 
-   > [!TIP]
-   > When installing, no purchased licenses are required to try any of the editions. Because it is a release candidate, the following message appears regardless of the edition you select:
-   >
-   > `This is an evaluation version.  There are [175] days left in the evaluation period.`
-   >
-   > This message does not reflect the edition you selected. It relates to the preview period for.
+   > [!NOTE]
+   > Make sure to specify a strong password for the SA account (Minimum length 8 characters, including uppercase and lowercase letters, base 10 digits and/or non-alphanumeric symbols).
 
 1. Once the configuration is done, verify that the service is running:
 

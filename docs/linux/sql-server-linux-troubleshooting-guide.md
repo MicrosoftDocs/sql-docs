@@ -14,7 +14,7 @@ ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-This document describes how to troubleshoot Microsoft SQL Server running on Linux or in a Docker container. When troubleshooting SQL Server on Linux, please make remember the limitations of this private preview release. You can find a list of these in the [Release Notes](sql-server-linux-release-notes.md).
+This document describes how to troubleshoot Microsoft SQL Server running on Linux or in a Docker container. When troubleshooting SQL Server on Linux, please remember to review the supported features and known limitations in the [SQL Server on Linux Release Notes](sql-server-linux-release-notes.md).
 
 ## <a id="connection"></a> Troubleshoot connection failures
 If you are having difficulty connecting to your Linux SQL Server, there are a few things to check. 

@@ -15,7 +15,7 @@ This quick start demonstrates how to use Visual Studio Code to connect to the SS
 > [!NOTE]
 > The method described in this article is not available when you connect to an Azure SQL Database server with VS Code. The `catalog.deploy_project` stored procedure expects path to the `.ispac` file in the local (on premises) file system.
 
-Visual Studio Code is a code editor for Windows, macOS, and Linux that supports extensions, including the `mssql` extension for connecting to Microsoft SQL Server, Azure SQL Database, or Azure SQL Data Warehouse. For more info about VS Code, see [Visual Studio Cod](https://code.visualstudio.com/).
+Visual Studio Code is a code editor for Windows, macOS, and Linux that supports extensions, including the `mssql` extension for connecting to Microsoft SQL Server, Azure SQL Database, or Azure SQL Data Warehouse. For more info about VS Code, see [Visual Studio Code](https://code.visualstudio.com/).
 
 ## Prerequisites
 
@@ -25,7 +25,7 @@ Before you start, make sure you have installed the latest version of Visual Stud
 
 ## Set language mode to SQL in VS Code
 
-To enable `mssql` commands and T-SQL IntelliSense, set the language mode is set to **SQL** in Visual Studio Code.
+To enable `mssql` commands and T-SQL IntelliSense, set the language mode to **SQL** in Visual Studio Code.
 
 1. Open Visual Studio Code and then open a new window. 
 

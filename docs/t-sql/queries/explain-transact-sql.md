@@ -26,8 +26,6 @@ manager: "jhubbard"
   
 
 ```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
 EXPLAIN SQL_statement  
 [;]  
 ```  

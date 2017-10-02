@@ -36,7 +36,7 @@ The syntax for inserting into a Node table is same as that of a regular table.
 
 ```  
 -- Syntax for SQL Server and Azure SQL Database  
-
+  
 [ WITH <common_table_expression> [ ,...n ] ]  
 INSERT   
 {  

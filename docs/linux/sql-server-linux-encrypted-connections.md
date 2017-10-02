@@ -63,6 +63,9 @@ TLS is used to encrypt connections from a client application to [!INCLUDE[ssNoVe
     
 -	Example connection strings 
 
+    - [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)]   
+  ![SSMS connection dialog](media/sql-server-linux-encrypted-connections/ssms-encrypt-connection.png "SSMS connection dialog")  
+  
     - SQLCMD 
 
             sqlcmd  -S <sqlhostname> -N -U sa -P '<YourPassword>' 

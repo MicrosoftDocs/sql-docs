@@ -98,11 +98,11 @@ GO
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`Column Length`
-  
-------------\-
-  
- `50`  
+```
+Column Length
+-------------
+50
+```  
   
 ## See also
 [Metadata Functions &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)  

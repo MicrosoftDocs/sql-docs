@@ -77,7 +77,7 @@ The default location for this utility is `<SQLInstancePath>\R_SERVICES\library\R
         ON o.schema_id = s.schema_id;
     ```
 
-4.  After the feature has been enabled, any user with the appropriate permissions can use the [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) statement in T-SQL to add packages. For an example of how this works, see [Install additional packages on SQL Server](install-additional-r-packages-on-sql-server).
+4.  After the feature has been enabled, any user with the appropriate permissions can use the [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) statement in T-SQL to add packages. For an example of how this works, see [Install additional packages on SQL Server](install-additional-r-packages-on-sql-server.md).
 
 ## <a name="bkmk_disable"></a> To disable package management
 

@@ -55,7 +55,7 @@ If you take the package management approach based on database roles, it is not n
 
 ## Tips for avoiding “package not found” errors
 
-+ Modify code to eliminate dependencies on user libraries. When you migrate R solutions to run in [!INCLUDE[ssNoVersion_md](file:///C:\includes\ssnoversion-md.md)], it is important that you do the following:
++ Modify code to eliminate dependencies on user libraries. When you migrate R solutions to run in [!INCLUDE[ssNoVersion_md](..\..\includes\ssnoversion-md.md)], it is important that you do the following:
 
     + Install any packages that you need to the default library associated with the instance.
 

@@ -72,7 +72,7 @@ You begin by creating a miniCRAN repository to use as a source. You should creat
     local_repo <- "~/miniCRAN"
     ```
 
-    >   [!NOTE] The tilde expansion operator returns an environment variable, with results equivalent to `Sys.getenv("R_USER")`.
+    The tilde expansion operator returns an environment variable, with results equivalent to `Sys.getenv("R_USER")`.
 
 ### Step 3. Add packages to the repository
 

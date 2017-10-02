@@ -1,8 +1,10 @@
 ---
 title: "SQL Server Data Files in Microsoft Azure | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/31/2016"
-ms.prod: "sql-server-2016"
+ms.date: "10/02/2016"
+ms.prod: 
+ - "sql-server-2016"
+ - "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -44,7 +46,7 @@ manager: "jhubbard"
 ### Azure Storage Concepts  
  When using SQL Server Data Files in Windows Azure feature, you need to create a storage account and a container in Windows Azure. Then, you need to create a SQL Server credential, which includes information on the policy of the container as well as a shared access signature that is necessary to access the container.  
   
- In [Microsoft Azure](https://azure.microsoft.com), an [Azure storage](https://azure.microsoft.com/services/storage/) account represents the highest level of the namespace for accessing Blobs. A storage account can contain an unlimited number of containers, as long as their total size is under 500 TB. For the latest information on storage limits, see [Azure Subscription and Service Limits, Quotas, and Constraints](http://azure.microsoft.com/documentation/articles/azure-subscription-service-limits/). A container provides a grouping of a set of [Blobs](https://azure.microsoft.com/documentation/articles/storage-introduction/#blob-storage). All Blobs must be in a container. An account can contain an unlimited number of containers. Similarly, a container can store an unlimited number of Blobs as well. There are two types of blobs that can be stored in Azure Storage: block and page blobs. This new feature uses Page blobs, which are more efficient when ranges of bytes in a file are modified frequently. You can access Blobs using the following URL format: `http://storageaccount.blob.core.windows.net/<container>/<blob>`.  
+ In [Microsoft Azure](https://azure.microsoft.com), an [Azure storage](https://azure.microsoft.com/services/storage/) account represents the highest level of the namespace for accessing Blobs. A storage account can contain an unlimited number of containers, as long as their total size is below the storage limits. For the latest information on storage limits, see [Azure Subscription and Service Limits, Quotas, and Constraints](http://docs.microsoft.com/azure/azure-subscription-service-limits). A container provides a grouping of a set of [Blobs](http://docs.microsoft.com/azure/storage/common/storage-introduction#blob-storage). All Blobs must be in a container. An account can contain an unlimited number of containers. Similarly, a container can store an unlimited number of Blobs as well. There are two types of blobs that can be stored in Azure Storage: block and page blobs. This new feature uses Page blobs, which are more efficient when ranges of bytes in a file are modified frequently. You can access Blobs using the following URL format: `http://storageaccount.blob.core.windows.net/<container>/<blob>`.  
   
 ### Azure Billing Considerations  
  Estimating the cost of using Azure Services is an important matter in the decision making and planning process. When storing SQL Server data files in Azure Storage, you need to pay costs associated with storage and transactions. In addition, the implementation of SQL Server Data Files in Azure Storage feature requires a renewal of Blob lease every 45 to 60 seconds implicitly. This also results in transaction costs per database file, such as .mdf or .ldf. Use the information on the [Azure Pricing](http://azure.microsoft.com/pricing/) page to help estimate the monthly costs associated with the use of Azure Storage and Azure Virtual Machines.  
@@ -107,7 +109,7 @@ ON
   
 -   When using the SQL Server Data Files in Azure feature, geo-replication for your storage account is not supported. If a storage account is geo-replicated and a geo-failover happened, database corruption could occur.  
   
--   For capacity limitations, see [Understanding Block Blobs, Append Blobs, and Page Blobs](http://docs.microsoft.com/rest/api/storageservices/Understanding-Block-Blobs--Append-Blobs--and-Page-Blobs).  
+-   For capacity limitations, see [Understanding Block Blobs, Append Blobs, and Page Blobs](http://docs.microsoft.com/azure/storage/blobs/storage-blobs-introduction).  
   
 -   It is not possible to store In-Memory OLTP data in Azure Blob using the SQL Server Data Files in Azure Storage feature. This is because In-Memory OLTP has a dependency on **FileStream** and, in the current release of this feature, storing **FileStream** data in Azure Storage is not supported.  
   

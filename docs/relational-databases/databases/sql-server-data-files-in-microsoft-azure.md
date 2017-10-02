@@ -109,7 +109,7 @@ ON
   
 -   When using the SQL Server Data Files in Azure feature, geo-replication for your storage account is not supported. If a storage account is geo-replicated and a geo-failover happened, database corruption could occur.  
   
--   For capacity limitations, see [Understanding Block Blobs, Append Blobs, and Page Blobs](http://docs.microsoft.com/azure/storage/blobs/storage-blobs-introduction).  
+-   For capacity limitations, see [Introduction to Blob storage](http://docs.microsoft.com/azure/storage/blobs/storage-blobs-introduction).  
   
 -   It is not possible to store In-Memory OLTP data in Azure Blob using the SQL Server Data Files in Azure Storage feature. This is because In-Memory OLTP has a dependency on **FileStream** and, in the current release of this feature, storing **FileStream** data in Azure Storage is not supported.  
   

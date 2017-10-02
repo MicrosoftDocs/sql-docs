@@ -23,7 +23,7 @@ This image consists of SQL Server running on Linux based on Ubuntu 16.04. It can
 
 ## <a id="requirements"></a> Prerequisites
 
-- Docker Engine 1.8+ on any supported Linux distribution or Docker for Mac/Windows.
+- Docker Engine 1.8+ on any supported Linux distribution or Docker for Mac/Windows. For more information, see [Install Docker](https://docs.docker.com/engine/installation/).
 - Minimum of 4 GB of disk space
 - Minimum of 4 GB of RAM
 - [System requirements for SQL Server on Linux](sql-server-linux-setup.md#system).

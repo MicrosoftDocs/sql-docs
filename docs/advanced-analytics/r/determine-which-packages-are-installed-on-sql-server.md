@@ -17,14 +17,13 @@ manager: "jhubbard"
 ---
 # Determine which R packages are installed on SQL Server
 
-When you install Machine Learning Services with the R language option, or install
-[!INCLUDE[rsql_productname](file:///C:\includes\rsql-productname-md.md)], setup creates an R package library associated with the instance. Each instance has a separate package library. Package libraries are **not** shared across instances, so it is possible for different packages to be installed on different instances.
+When you install machine learning in SQL Server with the R language option, setup creates an R package library associated with the instance. Each instance has a separate package library. Package libraries are **not** shared across instances, so it is possible for different packages to be installed on different instances.
 
-This article describes how you can determine which R packages are installed for a specific the [!INCLUDE[ssNoVersion](file:///C:\includes\ssnoversion-md.md)] instance.
+This article describes how you can determine which R packages are installed for a specific instance.
 
 ## Generate R package list using a stored procedure
 
-The following example uses the base R function `installed.packages()` in a [!INCLUDE[tsql](file:///C:\includes\tsql-md.md)] stored procedure to get a matrix of packages that have been installed in the R_SERVICES library for the current instance. To avoid parsing the fields in the DESCRIPTION file, only the name is returned.
+The following example uses the R function `installed.packages()` in a [!INCLUDE[tsql](..\..\includes\tsql-md.md)] stored procedure to get a matrix of packages that have been installed in the R_SERVICES library for the current instance. To avoid parsing the fields in the DESCRIPTION file, only the name is returned.
 
 ```SQL
 EXECUTE sp_execute_external_script
@@ -52,7 +51,7 @@ GO
 
 This example looks for and loads the RevoScaleR library.
 
-+ If the package is found, the message returned should be something like "Commands completed successfully".
++ If the package is found, the message returned should be something like "Commands completed successfully."
 
 + If the package cannot be located or loaded, you get an error like this: "An external script error occurred: Error in library("RevoScaleR"): there is no package called RevoScaleR"
 

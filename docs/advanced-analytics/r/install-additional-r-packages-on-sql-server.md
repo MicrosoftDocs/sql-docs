@@ -30,10 +30,11 @@ The process differs slightly depending on the version of SQL Server you are runn
 
     See [Getting the correct package version and format](#packageVersion) for details.
 
-2.  If the server does not have internet access, you'll need to download the binaries in zipped format in advance. 
+2.  If the server does not have internet access, download the binaries in advance.
+
     See [Download zip files](#bkmk_zipPreparation) for details.
 
-3. If installing offline, check for package dependencies and get any related packages that might be needed during installation. Using the [miniCRAN package](#bkmk_packageDependencies) is an easy way to prepare a collection of packages and their dependeicnies.
+3. If installing offline, check for package dependencies and get any related packages that might be needed during installation. Using the [miniCRAN package](#bkmk_packageDependencies) is an easy way to prepare a collection of packages and their dependencies.
 
 4.  Package installation methods differ depending on whether the server has internet access, and on your version of SQL Server. The recommended methods are as follows:
 
@@ -59,7 +60,7 @@ The process differs slightly depending on the version of SQL Server you are runn
 
 There are multiple sources for R packages, the best known among them being CRAN and Bioconductor. The official site for the R language (<https://www.r-project.org/>) lists many of these resources. Many packages are also published to GitHub, where you can obtain the source code. However, you may also have been given R packages that were developed by someone in your company.
 
-Regardless of the source, you must ensure that the package you want to install has a binary format for the Windows platform. Otherwise the downloaded package will not run in the SLQ Server environment.
+Regardless of the source, you must ensure that the package you want to install has a binary format for the Windows platform. Otherwise the downloaded package cannot run in the SQL Server environment.
 
 You should also determine whether the package is compatible with the version of R that is running in SQL Server.
 
@@ -91,7 +92,7 @@ If you need to install multiple packages, or want to ensure that everyone in you
 
 If you are an experienced R user, you might be accustomed to installing packages from the command line without special permissions, or without downloading them in advance. However, most servers do not have an internet connection and access to file shares or storage might be restricted.
 
-This section describes the different level of permissions required for installing pckages in SQL Server 2016 and SQl Server 2017. Installation can  be done using either R tools or SQL Server, but the process and permissions differ slightly.
+This section describes the different level of permissions required for installing packages in SQL Server 2016 and SQl Server 2017. Installation can  be done using either R tools or SQL Server, but the process and permissions differ slightly.
 
 -   SQL Server 2016
 
@@ -107,7 +108,7 @@ This section describes the different level of permissions required for installin
 
 > [!IMPORTANT]
 > 
-> Experienced R users are accustomed to installing packages in a user library, and then referencing the package in that folder as part of the R solution, by specifying a file path. This practice will not work in SQL Server. For more information and workarounds, see [How to use packages in user libraries](packages-installed-in-user-libraries.md).
+> Experienced R users are accustomed to installing packages in a user library, and then referencing the package in that folder as part of the R solution, by specifying a file path. This practice is not supported in SQL Server. For more information and workarounds, see [How to use packages in user libraries](packages-installed-in-user-libraries.md).
 
 ### Comparing package management methods
 

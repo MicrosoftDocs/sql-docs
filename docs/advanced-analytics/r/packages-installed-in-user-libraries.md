@@ -17,13 +17,13 @@ manager: "jhubbard"
 ---
 # Avoiding errors on R packages installed in user libraries
 
-Experienced R users are accustomed to installing R packages in a user library, if the default library is blocked or not available. However, this approach is not supported in SQL Server, and installation to a user library usually ends in a “package not found” error.
+Experienced R users are accustomed to installing R packages in a user library, whenever the default library is blocked or not available. However, this approach is not supported in SQL Server, and installation to a user library usually ends in a “package not found” error.
 
 This topic provides workarounds to help you avoid this error. It explains how you can modify your R code, and suggests the correct R package installation process for using R packages from a SQL Server instance.
 
 ## Why R user libraries cannot be accessed from SQL Server
 
-R developers who need to install new R packages are accustomed to installing packages at will, and using a private, user library whenever the default library is not available, or if the developer is not an administrator on the computer.
+R developers who need to install new R packages are accustomed to installing packages at will, and using a private, user library whenever the default library is not available, or when the developer is not an administrator on the computer.
 
 For example, in a typical R development environment, the user would add the  location of the package to the R environment variable `libPath`, or reference the full package path, like this:
 
@@ -31,11 +31,11 @@ For example, in a typical R development environment, the user would add the  loc
 library("c:/Users/<username>/R/win-library/packagename")  
 ```
 
-However, this can never work when running R solutions in SQL Server, because R packages must be installed to a specific default library that is associated with the instance. 
+However, this can never work when running R solutions in SQL Server, because R packages must be installed to a specific default library that is associated with the instance.
 
 If the package is not installed in the default library, you might get this error when you try to call the package:
 
-*Error in library(xxx) : there is no package called 'xxx'*
+*Error in library(xxx) : there is no package called 'package-name'*
 
 It is also a bad development practice to install required R packages to a custom user library, as it can lead to errors if a solution is run by another user who does not have access to the library location.
 

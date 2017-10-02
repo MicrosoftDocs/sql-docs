@@ -21,7 +21,7 @@ manager: "jhubbard"
 
 Microsoft R Server release 9.0.1 introduced new RevoScaleR functions that support working with installed packages in a SQL Server compute context. These new functions make it easier for a data scientist to run R code in SQL Server without direct access to the server.
 
-Each data scientist can install private packages that are not visible to others, creating a private sandbox for R packages. Because packages can be scoped to a database and each user gets an isolated package sandbox in each database, it is easier to install different versions of the same R package.
+Each data scientist can install private packages that are not visible to others. Because packages can be scoped to a database and each user gets an isolated package sandbox in each database, it is easier to install different versions of the same R package.
 
 If you migrate your working database to a new server, you can also use the package synchronization function to read a list of all your packages and install them in a database on the new server.
 
@@ -65,14 +65,14 @@ For information about these functions, see the RevoScaleR function reference pag
 
 This section contains examples of how to use the package management functions with a SQL Server instance or database. 
 
-+ The package installation functions check for dependencies and ensure that any related packages can be installed to SQL Server, just like R package installation in the local compute context.
++ The package installation functions check for dependencies and ensures that any related packages can be installed to SQL Server, just like R package installation in the local compute context.
 
 + The function that _uninstalls_ packages also computes dependencies and ensures that packages that are no longer used by other packages on SQL Server are removed, to free up resources.
 
 + You can use a combination of users and scope to find packages or add packages to a particular database:
 
     + Packages in **shared scope** can be installed by users belonging to the `rpkgs-shared` role in a specified database. All users in this role can uninstall shared packages.
-    + Packages in **private scope** can be installed by any user belonging to the `rpkgs-private` role in a database. However, each user can see and uninstall only his own packages.
+    + Packages in **private scope** can be installed by any user belonging to the `rpkgs-private` role in a database. However, users can see and uninstall only their own packages.
     + Database owners can work with shared or private packages.
 
 **From R code**

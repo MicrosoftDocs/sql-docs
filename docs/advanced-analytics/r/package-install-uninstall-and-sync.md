@@ -46,7 +46,7 @@ Before you can use package synchronization, you must have the appropriate versio
 
 This feature is available in SQL Server 2017 CTP 2 or later.
 
-Because this feature uses R functions in Microsoft R version 9.1.0, you can add this feature to a instance of SQL Server 2016 by upgrading the instance to use the latest version of Microsoft R. For more information, see [Use SqlBindR.exe to Upgrade SQL Server R Services](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
+Because this feature uses R functions in Microsoft R version 9.1.0, you can add this feature to an instance of SQL Server 2016 by upgrading the instance to use the latest version of Microsoft R. For more information, see [Use SqlBindR.exe to Upgrade SQL Server R Services](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
 
 ### Enable the package management feature
 
@@ -63,7 +63,7 @@ Whenever you add a new package using the package management functions, both the 
 > You cannot use package synchronization if you have been installing R packages the traditional way, using R tools to install packages directly into the file system.
 ### Permissions
 
-+ The person who executes the package snchronization function must be a security principal on the SQL
++ The person who executes the package synchronization function must be a security principal on the SQL
     Server instance and database that has the packages.
 
 + The caller of the function must be a member of one of these package management roles: **rpkgs-shared** or **rpkgs-private**.
@@ -103,13 +103,13 @@ rxSyncPackages(computeContext=computeContext, verbose=TRUE)
 
 ### Example 2. Restrict synchronized packages by scope
 
-The following examples synchonize only the packages in the specified scope.
+The following examples synchronize only the packages in the specified scope.
 
 ```R
 #Shared scope
 rxSyncPackages(computeContext=computeContext, scope="shared", verbose=TRUE)
 
-#Private scope**
+#Private scope
 rxSyncPackages(computeContext=computeContext, scope="private", verbose=TRUE)
 ```
 

@@ -27,28 +27,23 @@ There are two ways that you can prepare R packages for installation onto a serve
 
 -   [Manually download and copy packages one by one](#bkmk_manual)
 
-This article describes how you can create an R package repository using both methods, with particualr emphasis on the **miniCRAN** package.
+This article describes how you can create an R package repository using both methods, and recommends use of the **miniCRAN** package.
 
 ## Prepare packages using miniCRAN
 
 The goal of creating a local package repository is to provide a single location that a server administrator or other users in the organization can use to install new R packages on a server that does not have internet access.
 
-The miniCRAN package for R was written by Andre de Vries to make it easier to create a consistent, managed set of R packages for an organization.
-
-After creating the repository, you can modify it by adding new packages or upgrading the version of existing packages.
-
--   For details, see [miniCRAN](https://cran.r-project.org/web/packages/miniCRAN/index.html)
-
--   For a walkthrough of the repository creation process, see [How to install R packages on an off-line SQL Server 2016 instance](http://blog.revolutionanalytics.com/2016/05/minicran-sql-server.html)
-
+The [miniCRAN](https://cran.r-project.org/web/packages/miniCRAN/index.html) package for R was written by [Andre de Vries](http://blog.revolutionanalytics.com/2016/05/minicran-sql-server.html) to make it easier to create a consistent, managed set of R packages for an organization. 
 
 There are many advantages to using miniCRAN to create the repository:
 
--   **Security**: Many R users are accustomed to downloading and installing new R packages at will, from CRAN or one of its mirror sites. However, for security reasons, production servers running [!INCLUDE[ssNoVersion_md](file:///C:\includes\ssnoversion-md.md)] typically do not have internet connectivity.
+-   **Security**: Many R users are accustomed to downloading and installing new R packages at will, from CRAN or one of its mirror sites. However, for security reasons, production servers running [!INCLUDE[ssNoVersion_md](..\..\includes\ssnoversion-md.md)] typically do not have internet connectivity.
 
 -   **Easier offline installation**: To install package to an offline server requires that you also download all package dependencies, Using miniCRAN makes it easier to get all dependencies in the correct format.
 
 -   **Improved version management**: In a multiuser environment, there are good reasons to avoid unrestricted installation of multiple package versions on the server.
+
+After creating the repository, you can modify it by adding new packages or upgrading the version of existing packages.
 
 ### Step 1. Install the miniCRAN package
 
@@ -83,7 +78,7 @@ You begin by creating a miniCRAN repository to use as a source. You should creat
 
 1.  After miniCRAN is installed, create a list that specifies the additional packages you want to download.
 
-    Do not include dependencies; the **igraph** package used by miniCRAN generates the list of dependencies for you. For more information about how to use this graph, see [Using miniCRAN to identify package
+    Do not add dependencies to this initial list; the **igraph** package used by miniCRAN generates the list of dependencies for you. For more information about how to use this graph, see [Using miniCRAN to identify package
     dependencies](https://cran.r-project.org/web/packages/miniCRAN/vignettes/miniCRAN-dependency-graph.html).
 
     The following R script demonstrates how to get the target packages, "zoo"
@@ -105,7 +100,7 @@ You begin by creating a miniCRAN repository to use as a source. You should creat
     makeRepo(pkgs_expanded, path = local_repo, repos = CRAN_mirror, type = "win.binary", Rversion = "3.3")
     ```
 
-    From this information, the miniCRAN package creates the folder structure that you need to copy the packages to the [!INCLUDE[ssNoVersion_md](file:///C:\includes\ssnoversion-md.md)] later.
+    From this information, the miniCRAN package creates the folder structure that you need to copy the packages to the [!INCLUDE[ssNoVersion_md](..\..\includes\ssnoversion-md.md)] later.
 
 4. At this point you should have a folder containing the packages you needed, and any additional packages that were required.
 
@@ -192,7 +187,7 @@ After downloading the packages, you install the R packages from the zipped file 
 
 1.  Download the packages zip files, and save them in a local folder
 
-2.  Copy that folder to the [!INCLUDE[ssNoVersion_md](file:///C:\includes\ssnoversion-md.md)] computer.
+2.  Copy that folder to the [!INCLUDE[ssNoVersion_md](..\..\includes\ssnoversion-md.md)] computer.
 
 3.  Install the packages into the SQL Server instance library.
 

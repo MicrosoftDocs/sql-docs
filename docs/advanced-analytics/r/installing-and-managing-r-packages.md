@@ -63,21 +63,21 @@ Installation of R in SQL Server 2016 and SQL Server 2017 also includes the **Rev
 
 ## Permissions required for installing R packages
 
-In SQL Server 2016, an administrator had to istall new R packages on an instance-wide basis. In SQL Server 2017, new database features were added that give the database administrator the ability to delegate package management to selected users.
+In SQL Server 2016, an administrator had to install new R packages on an instance-wide basis. In SQL Server 2017, new database features were added that give the database administrator the ability to delegate package management to selected users.
 
 This section describes the permissions required to install and manage packages per version.
 
 + SQL Server 2016 R Services (In-Database)
 
-    To install a new R package on a computer that is running [!INCLUDE[ssCurrent](file:///C:\includes\sscurrent-md.md)], you must have administrative rights to the computer. It is the task of the database administrator or other administrator on the server to ensure that all required packages are installed on the [!INCLUDE[ssNoVersion_md](file:///C:\includes\ssnoversion-md.md)] instance.
+    To install a new R package on a computer that is running [!INCLUDE[ssCurrent](..\..\includes\sscurrent-md.md)], you must have administrative rights to the computer. It is the task of the database administrator or other administrator on the server to ensure that all required packages are installed on the [!INCLUDE[ssNoVersion_md](..\..\includes\ssnoversion-md.md)] instance.
 
-    If you do not have administrative privileges on the computer that hosts the [!INCLUDE[ssNoVersion_md](file:///C:\includes\ssnoversion-md.md)] instance, you can provide to the administrator information about how to install R packages, and provide access to a secure package repository where packages requested by users can be obtained.
+    If you do not have administrative privileges on the computer that hosts the [!INCLUDE[ssNoVersion_md](..\..\includes\ssnoversion-md.md)] instance, you can provide to the administrator information about how to install R packages, and provide access to a secure package repository where packages requested by users can be obtained.
 
 + SQL Server 2017 Machine Learning Services
 
-    This release includes package management functions that let database administrator delegate package installation rights to selected users. If this feature has been enabled, request that your database administrator add you to one of the new pakcage roles. For more information, see [R package management for SQL Server](r-package-management-for-sql-server-r-services.md).
+    This release includes package management functions that let database administrator delegate package installation rights to selected users. If this feature has been enabled, request that your database administrator add you to one of the new package roles. For more information, see [R package management for SQL Server](r-package-management-for-sql-server-r-services.md).
 
-    If you are an administrator on the SQL Server instance, you can install new packages at will. Just be sure to use the default library that is associated with the instance, or the package might not run when called from a stored procedure, or as part of a remote SQL Server compute context.
+    If you are an administrator on the SQL Server instance, you can install new packages at will. Just be sure to use the default library that is associated with the instance. Packages installed to other locations cannot run when called from a stored procedure. Any R code that runs using the SQL Server as a compute context also requires that packages be available in the instance library.
 
 + R Server (Standalone)
 
@@ -85,7 +85,7 @@ This section describes the permissions required to install and manage packages p
 
 + Other client environments
 
-    If you are installing a new R package on a computer that is being used as an R workstation and the computer does **not** have an instance of [!INCLUDE[ssNoVersion_md](file:///C:\includes\ssnoversion-md.md)] installed, you still need administrative rights to the computer to install the package. After you have installed the package, you can run it locally.
+    If you are installing a new R package on a computer that is being used as an R workstation and the computer does **not** have an instance of [!INCLUDE[ssNoVersion_md](..\..\includes\ssnoversion-md.md)] installed, you still need administrative rights to the computer to install the package. After you have installed the package, you can run it locally.
 
 ## Managing or viewing installed packages
 

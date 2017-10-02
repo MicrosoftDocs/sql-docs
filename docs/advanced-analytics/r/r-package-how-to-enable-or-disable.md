@@ -21,7 +21,7 @@ This article describes the process of enabling or disabling the new package mana
 
 By default, the external package management feature for SQL Server is disabled, even if machine learning features have been installed.
 
-To [enable](#bkmk_enable) this feature is a two-step process which must be performed by a database administrator:
+To [enable](#bkmk_enable) this feature is a two-step process and requires some help from a database administrator:
 
 1.  Enable package management on the SQL Server instance (once per SQL Server
     instance)

@@ -114,7 +114,7 @@ For example, you could create multiple copies of your R project, each for a diff
 A "library" is basically a collection of external packages that you want to make available to users under a single name. For example, you might publish any of the following to SQL Server as an external library:
 
 + A single R package you’ve written, with no dependencies
-+ A package you want ot install, and dependencies required for installation
++ A package you want to install, and dependencies required for installation
 + A collection of R packages related to a specific task or project, with their dependencies
 
 The library name is for managing the package or collection of packages in SQL Server, and can be independent of the packages that are installed. However, library names must be unique across an instance.
@@ -126,7 +126,7 @@ To use this statement, the package management feature must have been enabled on 
 
 After the external library has been uploaded to the server, you must install it to the R package library associated with the instance. There are several ways to do this:
 
-+ Run the standard R command `install.packages` inside sp_execute_external_script, while logged into an account with appropriate permissions.
++ Run the standard R command `install.packages` inside sp_execute_external_script. Be sure to connect using an account that has permissions to install packages.
 
 + Connect to SQL Server from a remote R client and run [rxInstallPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinstallpackages) in the SQL Server compute context. Again, you must have permissions to install packages either in private or shared scope to do this.
 

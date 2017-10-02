@@ -13,7 +13,7 @@ ms.custom: UpdArt.exe
 ms.tgt_pltfrm: na
 ms.devlang: na
 ms.topic: updart-autogen
-ms.date: 09/11/2017
+ms.date: 09/27/2017
 ms.author: genemi
 ms.workload: ssms-sql-server-management-studio
 ---
@@ -29,7 +29,7 @@ Recent updates are reported for the following date range and subject:
 
 
 
-- *Date range of updates:* &nbsp; **2017-07-18** &nbsp; -to- &nbsp; **2017-09-11**
+- *Date range of updates:* &nbsp; **2017-09-11** &nbsp; -to- &nbsp; **2017-09-27**
 - *Subject area:* &nbsp; **SQL Server Management Studio (SSMS)**.
 
 
@@ -42,7 +42,7 @@ Recent updates are reported for the following date range and subject:
 The following links jump to new articles that have been added recently.
 
 
-1. [Output Window in SQL Server Management Studio](output-window.md)
+***There are no new articles to list, this time.***
 
 
 
@@ -64,14 +64,11 @@ For these and other reasons, do not copy code from these excerpts, and do not ta
 
 <a name="compactupdatedlist"/>
 
-## Compact List of Articles Updated Recently
+### Compact List of Articles Updated Recently
 
 This compact list provides links to all the updated articles that are listed in the Excerpts section.
 
-1. [Download SQL Server Management Studio (SSMS)](#TitleNum_1)
-2. [Connect to a SQL Server or Azure SQL Database](#TitleNum_2)
-3. [SQL Server Management Studio - Changelog (SSMS)](#TitleNum_3)
-4. [Create and update database tables](#TitleNum_4)
+1. [Download SQL Server PowerShell Module](#TitleNum_1)
 
 
 
@@ -82,202 +79,39 @@ This compact list provides links to all the updated articles that are listed in 
 
 <a name="TitleNum_1"/>
 
-### 1. &nbsp; [Download SQL Server Management Studio (SSMS)](download-sql-server-management-studio-ssms.md)
+### 1. &nbsp; [Download SQL Server PowerShell Module](download-sql-server-ps-module.md)
 
-*Updated: 2017-08-07* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Next](#TitleNum_2))
+*Updated: 2017-09-26* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
 
-<!-- Source markdown line 63.  ms.author= "sstein".  -->
-
-&nbsp;
-
-
-<!-- git diff --ignore-all-space --unified=0 23260f301f86651061b47065bee43d42c92a7be4 0c2178d96b621b96bfcd2fbb782f24792debb407  (PR=2775  ,  Filename=download-sql-server-management-studio-ssms.md  ,  Dirpath=docs\ssms\  ,  MergeCommitSha40=3f12671ace99d5fefc199c7b1c2db31e5b3cfade) -->
-
-
-
-SSMS 17.2 is the latest version of SQL Server Management Studio. The 17.x generation of SSMS provides support for almost all feature areas on SQL Server 2008 through SQL Server 2017. Version 17.x also supports SQL Analysis Service PaaS.
-
-Version 17.2 includes:
-
-- Multi-Factor Authentication (MFA)
-  - Multiple-user Azure AD authentication for Universal Authentication with Multi-factor authentication (UA with MFA)
-  - A new user credential input field was added for Universal Authentication with MFA to support multi-user authentication.
-- The connection dialog box now supports the following 5 authentication methods:
-  - Windows Authentication
-  - SQL Server Authentication
-  - Active Directory - Universal with MFA support
-  - Active Directory - Password
-  - Active Directory - Integrated
-
-- Database import/export for DacFx wizard can now use Universal Authentication with MFA.
-- For API support, see [IUniversalAuthProvider Interface](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.iuniversalauthprovider.aspx).
-- ADAL managed library used by Azure AD Universal Authentication with MFA was upgraded to version 3.13.9.
-- A new CLI interface supporting Azure AD admin setting for SQL Database and SQL Data Warehouse.
-
- For more information on the Active Directory authentication methods, see [Universal Authentication with SQL Database and SQL Data Warehouse (SSMS support for MFA)](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication) and [Configure Azure SQL Database multi-factor authentication for SQL Server Management Studio](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication-configure).
-
-- Output window has entries for queries run during expansion of Object Explorer nodes
-- Enabled View designer for Azure SQL Databases
-- The default scripting options for scripting objects from Object Explorer in SSMS have changed:
-
-
-
-&nbsp;
-
-&nbsp;
-
----
-
-<a name="TitleNum_2"/>
-
-### 2. &nbsp; [Connect to a SQL Server or Azure SQL Database](object/connect-to-an-instance-from-object-explorer.md)
-
-*Updated: 2017-08-25* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_1) | [Next](#TitleNum_3))
-
-<!-- Source markdown line 40.  ms.author= "sstein".  -->
+<!-- Source markdown line 37.  ms.author= "sstein".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 cfd72893c35c87df96dc8605807e542be28936e2 840981d3a115a15774a8e47ee2f6a0e5c4177b01  (PR=2961  ,  Filename=connect-to-an-instance-from-object-explorer.md  ,  Dirpath=docs\ssms\object\  ,  MergeCommitSha40=21f0cfd102a6fcc44dfc9151750f1b3c936aa053) -->
+<!-- git diff --ignore-all-space --unified=0 3953870af5dca04eb3753e88a34fae69d365d6eb 10085b77284e957e34e5302975e5bc9cfd23fd0c  (PR=105  ,  Filename=download-sql-server-ps-module.md  ,  Dirpath=docs\ssms\  ,  MergeCommitSha40=ed34b77d3f23e46c7736ef96c775990261290870) -->
 
 
 
-   ![firewall--../media/connect-to-server/new-firewall-rule.png)
+If running as administrator and to install the module for all users of the computer
 
-1. To create the firewall rule and connect to the server, click **OK**.
+> Install-Module -Name SqlServer -AllowClobber
 
-1. The server appears in **Object Explorer** after successfully connecting:
+If not able to run as adminsitrator or to install only for the current user
 
-   ![connected--../media/connect-to-server/connected.png)
+> Install-Module -Name SqlServer -Scope CurrentUser -AllowClobber
 
-**Next Steps**
+When updated versions of the SqlServer module are available, you will be able to update the version using the Update-Module command
 
+> Update-Module -Name SqlServer
 
-[Design, Create, and Update Tables--../visual-db-tools/design-tables-visual-database-tools.md)
+To view the versions of the module installed on the machine you can use
 
-**See Also**
+> Get-Module SqlServer -ListAvailable
 
+To use a specific version of the module in your scripts you can import it with
 
-[SQL Server Management Studio (SSMS)--../sql-server-management-studio-ssms.md)
-[Download SQL Server Management Studio (SSMS)--../download-sql-server-management-studio-ssms.md)
+> Import-Module SqlServer -Version 21.0.17178
 
-[Analysis Services](https://docs.microsoft.com/sql/analysis-services/instances/connect-to-analysis-services)
-[Integration Services](https://docs.microsoft.com/sql/integration-services/sql-server-integration-services)
-[Reporting Services](https://docs.microsoft.com/sql/reporting-services/tools/connect-to-a-report-server-in-management-studio)
-
-
-
-&nbsp;
-
-&nbsp;
-
----
-
-<a name="TitleNum_3"/>
-
-### 3. &nbsp; [SQL Server Management Studio - Changelog (SSMS)](sql-server-management-studio-changelog-ssms.md)
-
-*Updated: 2017-08-07* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_2) | [Next](#TitleNum_4))
-
-<!-- Source markdown line 20.  ms.author= "sstein".  -->
-
-&nbsp;
-
-
-<!-- git diff --ignore-all-space --unified=0 1733ce3c556db1e51cb27bf830429f2c42e8f97e 2abb24fd6547e438181039d095cbad027473a57e  (PR=2775  ,  Filename=sql-server-management-studio-changelog-ssms.md  ,  Dirpath=docs\ssms\  ,  MergeCommitSha40=3f12671ace99d5fefc199c7b1c2db31e5b3cfade) -->
-
-
-
-This article provides details about updates, improvements, and bug fixes for the current and previous versions of SSMS. Download [previous SSMS versions below--#previous-ssms-releases).
-
-**[SSMS 17.2--download-sql-server-management-studio-ssms.md)**
-
-
-Generally available | Build number: 14.0.17177.0
-
-**Enhancements**
-
-
-- Multi-Factor Authentication (MFA)
-  - Multiple-user Azure AD authentication for Universal authentication with Multi-factor authentication (UA with MFA)
-  - A new user credential input field was added for Universal Authentication with MFA to support multi-user authentication.
-- The connection dialog box now supports the following 5 authentication methods:
-  - Windows Authentication
-  - SQL Server Authentication
-  - Active Directory - Universal with MFA support
-  - Active Directory - Password
-  - Active Directory - Integrated
-
-- Database export/import for DacFx wizard using Universal Authentication with MFA.
-- For API support, see [IUniversalAuthProvider Interface](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.iuniversalauthprovider.aspx).
-- ADAL managed library used by Azure AD Universal Authentication with MFA was upgraded to 3.13.9 version.
-- In addition a new CLI interface was delivered supporting Azure AD admin setting for SQL Database and SQL Data Warehouse.
-
- For more information on the Active Directory authentication methods, see [Universal Authentication with SQL Database and SQL Data Warehouse (SSMS support for MFA)](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication) and [Configure Azure SQL Database multi-factor authentication for SQL Server Management Studio](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication-configure).
-
-- Output window has entries for queries run during expansion of Object Explorer nodes
-
-
-
-&nbsp;
-
-&nbsp;
-
----
-
-<a name="TitleNum_4"/>
-
-### 4. &nbsp; [Create and update database tables](visual-db-tools/design-tables-visual-database-tools.md)
-
-*Updated: 2017-08-25* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_3))
-
-<!-- Source markdown line 30.  ms.author= "sstein".  -->
-
-&nbsp;
-
-
-<!-- git diff --ignore-all-space --unified=0 f63884ac2d04889e70c505cb5262c8dd81d73ee7 4b4c7aa5e8a0548405f02d11a66b722219fa78f0  (PR=2961  ,  Filename=design-tables-visual-database-tools.md  ,  Dirpath=docs\ssms\visual-db-tools\  ,  MergeCommitSha40=21f0cfd102a6fcc44dfc9151750f1b3c936aa053) -->
-
-
-
-**Create a table**
-
-
-1. Right-click the **Tables** node in your database and select  **New** > **Table**:
-
-    ![New table--../media/design-tables/new-table.png)
-
-1. Add [columns--column-properties-visual-database-tools.md) to your table:
-
-    ![design table--../media/design-tables/new-table2.png)
-
-1. Close the designer and save your changes.
-
-**Update a table**
-
-
-1. Right-click the table under the **Tables** node of your database and select **Design**:
-
-   ![Update table--../media/design-tables/update-table.png)
-
-1. Update the desired table settings:
-
-   ![--../media/design-tables/update-table2.png)
-
-1. Close the designer and save your changes.
-
-**See Also**
-
-
-[Tables](http://msdn.microsoft.com/82d7819c-b801-4309-a849-baa63083e83f)
-[Table Properties &#40;Visual Database Tools&#41;--../../ssms/visual-db-tools/table-properties-visual-database-tools.md)
-[Column Properties--column-properties-visual-database-tools.md)
-[Add Columns to a Table--../../relational-databases/tables/add-columns-to-a-table-database-engine.md)
-[Primary and Foreign Keys--../../relational-databases/tables/primary-and-foreign-key-constraints.md)
-[Indexes--../../relational-databases/indexes/indexes.md)
-[Data types (Transact-SQL)--../../t-sql/data-types/data-types-transact-sql.md)
-[Download SQL Server Management Studio (SSMS)--../download-sql-server-management-studio-ssms.md)
 
 
 
@@ -296,24 +130,20 @@ This section lists very similar articles for recently updated articles in other 
 
 #### Subject areas which do have new or recently updated articles
 
-- [New + Updated (3+12) : **Advanced Analytics for SQL** docs](../advanced-analytics/new-updated-advanced-analytics.md)
-- [New + Updated (5+0)  : **Connect to SQL** docs](../connect/new-updated-connect.md)
-- [New + Updated (5+1)  : **Database Engine for SQL** docs](../database-engine/new-updated-database-engine.md)
-- [New + Updated (19+82): **Integration Services for SQL** docs](../integration-services/new-updated-integration-services.md)
-- [New + Updated (1+8)  : **Linux for SQL** docs](../linux/new-updated-linux.md)
-- [New + Updated (12+1) : **Relational Databases for SQL** docs](../relational-databases/new-updated-relational-databases.md)
-- [New + Updated (0+1)  : **Reporting Services for SQL** docs](../reporting-services/new-updated-reporting-services.md)
-- [New + Updated (7+1)  : **Microsoft SQL Server** docs](../sql-server/new-updated-sql-server.md)
-- [New + Updated (1+1)  : **SQL Server Data Tools (SSDT)** docs](../ssdt/new-updated-ssdt.md)
-- [New + Updated (0+2)  : **SQL Server Migration Assistant (SSMA)** docs](../ssma/new-updated-ssma.md)
-- [New + Updated (1+4)  : **SQL Server Management Studio (SSMS)** docs](../ssms/new-updated-ssms.md)
-- [New + Updated (4+1)  : **Transact-SQL** docs](../t-sql/new-updated-t-sql.md)
-- [New + Updated (0+1)  : **Tools for SQL** docs](../tools/new-updated-tools.md)
+- [New + Updated (0+1): **Advanced Analytics for SQL** docs](../advanced-analytics/new-updated-advanced-analytics.md)
+- [New + Updated (0+1): **Analysis Services for SQL** docs](../analysis-services/new-updated-analysis-services.md)
+- [New + Updated (4+1): **Database Engine for SQL** docs](../database-engine/new-updated-database-engine.md)
+- [New + Updated (17+0): **Integration Services for SQL** docs](../integration-services/new-updated-integration-services.md)
+- [New + Updated (3+0): **Linux for SQL** docs](../linux/new-updated-linux.md)
+- [New + Updated (1+1): **Relational Databases for SQL** docs](../relational-databases/new-updated-relational-databases.md)
+- [New + Updated (2+0): **Reporting Services for SQL** docs](../reporting-services/new-updated-reporting-services.md)
+- [New + Updated (0+1): **SQL Server Management Studio (SSMS)** docs](../ssms/new-updated-ssms.md)
+- [New + Updated (0+1): **Transact-SQL** docs](../t-sql/new-updated-t-sql.md)
 
 #### Subject areas which have no new or recently updated articles
 
 - [New + Updated (0+0): **ActiveX Data Objects (ADO) for SQL** docs](../ado/new-updated-ado.md)
-- [New + Updated (0+0): **Analysis Services for SQL** docs](../analysis-services/new-updated-analysis-services.md)
+- [New + Updated (0+0): **Connect to SQL** docs](../connect/new-updated-connect.md)
 - [New + Updated (0+0): **Data Quality Services for SQL** docs](../data-quality-services/new-updated-data-quality-services.md)
 - [New + Updated (0+0): **Data Mining Extensions (DMX) for SQL** docs](../dmx/new-updated-dmx.md)
 - [New + Updated (0+0): **Master Data Services (MDS) for SQL** docs](../master-data-services/new-updated-master-data-services.md)
@@ -321,6 +151,10 @@ This section lists very similar articles for recently updated articles in other 
 - [New + Updated (0+0): **ODBC (Open Database Connectivity) for SQL** docs](../odbc/new-updated-odbc.md)
 - [New + Updated (0+0): **PowerShell for SQL** docs](../powershell/new-updated-powershell.md)
 - [New + Updated (0+0): **Samples for SQL** docs](../sample/new-updated-sample.md)
+- [New + Updated (0+0): **Microsoft SQL Server** docs](../sql-server/new-updated-sql-server.md)
+- [New + Updated (0+0): **SQL Server Data Tools (SSDT)** docs](../ssdt/new-updated-ssdt.md)
+- [New + Updated (0+0): **SQL Server Migration Assistant (SSMA)** docs](../ssma/new-updated-ssma.md)
+- [New + Updated (0+0): **Tools for SQL** docs](../tools/new-updated-tools.md)
 - [New + Updated (0+0): **XQuery for SQL** docs](../xquery/new-updated-xquery.md)
 
 

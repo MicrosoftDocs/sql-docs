@@ -4,7 +4,7 @@ description:  This quick start tutorial shows how to install SQL Server 2017 on 
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 09/07/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -14,7 +14,7 @@ ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-In this quick start tutorial, you first install SQL Server 2017 RC2 on Red Hat Enterprise Linux (RHEL) 7.3. Then connect with **sqlcmd** to create your first database and run queries.
+In this quick start tutorial, you first install SQL Server 2017 on Red Hat Enterprise Linux (RHEL) 7.3. Then connect with **sqlcmd** to create your first database and run queries.
 
 > [!TIP]
 > This tutorial requires user input and an internet connection. If you are interested in the [unattended](sql-server-linux-setup.md#unattended) or [offline](sql-server-linux-setup.md#offline) installation procedures, see [Installation guidance for SQL Server on Linux](sql-server-linux-setup.md).
@@ -31,11 +31,17 @@ For other system requirements, see [System requirements for SQL Server on Linux]
 
 To configure SQL Server on RHEL, run the following commands in a terminal to install the **mssql-server** package:
 
+> [!IMPORTANT]
+> If you have previously installed a CTP or RC release of SQL Server 2017, you must first remove the old repository before registering one of the GA repositories. For more information, see [Change repositories from the preview repository to the GA repository](sql-server-linux-change-repo.md)
+
 1. Download the Microsoft SQL Server Red Hat repository configuration file:
 
    ```bash
-   sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server.repo
+   sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo
    ```
+
+   > [!NOTE]
+   > This is the Cumulative Update (CU) repository. For more information about your repository options and their differences, see [Change source repositories](sql-server-linux-setup.md#repositories).
 
 1. Run the following commands to install SQL Server:
 
@@ -53,11 +59,11 @@ To configure SQL Server on RHEL, run the following commands in a terminal to ins
    > Make sure to specify a strong password for the SA account (Minimum length 8 characters, including uppercase and lowercase letters, base 10 digits and/or non-alphanumeric symbols).
 
    > [!TIP]
-   > When installing RC2, no purchased licenses are required to try any of the editions. Because it is a release candidate, the following message appears regardless of the edition you select:
+   > When installing, no purchased licenses are required to try any of the editions. Because it is a release candidate, the following message appears regardless of the edition you select:
    >
    > `This is an evaluation version.  There are [175] days left in the evaluation period.`
    >
-   > This message does not reflect the edition you selected. It relates to the preview period for RC2.
+   > This message does not reflect the edition you selected. It relates to the preview period for.
 
 1. Once the configuration is done, verify that the service is running:
 

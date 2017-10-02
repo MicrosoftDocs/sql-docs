@@ -107,6 +107,9 @@ TLS is used to encrypt connections from a client application to [!INCLUDE[ssNoVe
     
             "encrypt=false; trustServerCertificate=false;" 
             
+> [!NOTE]
+> Set **TrustServerCertificate** to True if the client cannot connect to CA to validate the authenticity of the cert
+
 ## Common connection errors  
 
 |Error message |Fix |

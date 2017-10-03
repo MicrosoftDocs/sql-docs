@@ -70,7 +70,7 @@ In a database mirroring scenario, every update to a database, the principal data
 ##  <a name="Characteristics"></a>Transaction Log characteristics
 
 Characteristics of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] transaction log: 
--  The transaction log is implemented as a separate file or set of files in the database. The log cache is managed separately from the buffer cache for data pages, which results in simple, fast, and robust code within the Database Engine. For more information, see [Transaction Log Physical Architecture](../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch).
+-  The transaction log is implemented as a separate file or set of files in the database. The log cache is managed separately from the buffer cache for data pages, which results in simple, fast, and robust code within the Database Engine. For more information, see [Transaction Log Physical Architecture](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch).
 -  The format of log records and pages is not constrained to follow the format of data pages.
 -  The transaction log can be implemented in several files. The files can be defined to expand automatically by setting the FILEGROWTH value for the log. This reduces the potential of running out of space in the transaction log, while at the same time reducing administrative overhead. For more information, see [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).
 -  The mechanism to reuse the space within the log files is quick and has minimal effect on transaction throughput.

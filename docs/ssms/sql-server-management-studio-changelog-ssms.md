@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Management Studio - Changelog (SSMS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/28/2017"
+ms.date: "10/01/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -25,8 +25,8 @@ Generally available | Build number:
 
 ### Enhancements
 
-- New "Import Flat File" wizard added to streamline the import experience of CSV files with an intelligent framework, requiring minimal user intervention or specialized domain knowledge.
-- Added "XEvent Profiler" node to Object Explorer.
+- New "Import Flat File" wizard added to streamline the import experience of CSV files with an intelligent framework, requiring minimal user intervention or specialized domain knowledge. For details, see [Import Flat File to SQL Wizard](../relational-databases/import-export/import-flat-file-wizard.md).
+- Added "XEvent Profiler" node to Object Explorer. For details, see [Use the SSMS XEvent Profiler](../relational-databases/extended-events/use-the-ssms-xe-profiler.md).
 - Updated waits filtering and categorization in Performance Dashboard historical waits report.
 - Added the syntax check of the "Predict" function.
 - Added the syntax check of the External Library Management queries.

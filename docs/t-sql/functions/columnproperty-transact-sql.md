@@ -106,7 +106,6 @@ Column Length
   
 ## See also
 [Metadata Functions &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)  
-ms.date: "07/24/2017"
 [TYPEPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/typeproperty-transact-sql.md)
   
   

@@ -7,7 +7,7 @@ manager: craigg
 ms.date: 09/26/2017
 ms.topic: article
 ms.prod: sql-linux
-ms.technology: integration-services
+ms.technology: database-engine
 ms.assetid: 
 ---
 # Configure SQL Server Integration Services on Linux with ssis-conf

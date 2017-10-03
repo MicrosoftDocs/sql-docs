@@ -7,7 +7,7 @@ manager: craigg
 ms.date: 09/26/2017
 ms.topic: article
 ms.prod: sql-linux
-ms.technology: integration-services
+ms.technology: database-engine
 ms.assetid: 
 ---
 # Schedule SQL Server Integration Services package execution on Linux with cron
@@ -34,7 +34,7 @@ For easy management and maintenance purposes, it's recommended to put your packa
 
 Here is a simple example of a shell script that contains only single command to run a package. You can add more commands as required.
 
-```
+```bash
 # A simple shell script that contains a simple package execution command
 # Script name: SSISpackageName.daily
 

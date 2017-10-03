@@ -20,12 +20,12 @@ For tabular 1400 models, the new Get Data experience in Visual Studio Analysis S
 
 In order to complete the tasks described in this article, make sure you're using the latest version of SSDT. If you're using Visual Studio 2017, make sure you've downloaded and installed the September 2017 or later Microsoft Analysis Services Projects VSIX.
 
-**[Download and install SSDT]**(../../ssdt/download-sql-server-data-tools-ssdt.md)
+[Download and install SSDT](../../ssdt/download-sql-server-data-tools-ssdt.md)
 
-**[Download Microsoft Analysis Services Projects VSIX]** (https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftAnalysisServicesModelingProjects)
+[Download Microsoft Analysis Services Projects VSIX](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftAnalysisServicesModelingProjects)
 
 ## Create a datasource connection
-If you don't already have a connection to your datasource, you will need to create one.
+If you don't already have a connection to your datasource, you need to create one.
 
 1. In Visual Studio > **Tabular Model Explorer**, right-click **Data Sources**, and then click **New Data Source**.
 2. In **Get Data**, select your datasource type, and then click **Connect**. Follow any additional steps required to connect to your datasource.
@@ -42,7 +42,7 @@ If you don't already have a connection to your datasource, you will need to crea
 
 
 ## Example
-This native query creates an Employee table in the model which includes all columns from the Dimension.Employee table at the datasource.
+This native query creates an Employee table in the model that includes all columns from the Dimension.Employee table at the datasource.
 
 ```
 = Value.NativeQuery(#"SQL/myserver;WideWorldImportersDW", "SELECT * FROM Dimension.Employee")
@@ -52,7 +52,7 @@ This native query creates an Employee table in the model which includes all colu
 
 After importing, a table named Employees is created in the model.   
 
-![Query edirot](media/ssas-import-query-example-table.png)
+![Query editor](media/ssas-import-query-example-table.png)
 
 
 ## See also  

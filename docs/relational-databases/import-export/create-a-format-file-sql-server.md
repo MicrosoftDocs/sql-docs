@@ -67,7 +67,7 @@ manager: "jhubbard"
   
  At the Windows command prompt, enter the following `bcp` command:  
   
-```  
+```cmd
 bcp AdventureWorks2012.HumanResources.Department format nul -T -n -f Department-n.fmt  
 ```  
   
@@ -97,7 +97,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -n -f Department-
   
  At the Windows command prompt, enter the following `bcp` command:  
   
-```  
+```cmd
 bcp AdventureWorks2012.HumanResources.Department format nul -c -f Department-c.fmt -T  
 ```  
   
@@ -197,13 +197,13 @@ The following is an example of the format file without the collation info.
   
  At the Windows command prompt, enter the following `bcp` command:  
   
-```  
+```cmd
 bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-c..xml –t, -T  
 ```  
   
  The generated format file, `Department-c.xml`, contains the following XML elements:  
   
-```  
+```xml
 <?xml version="1.0"?>  
 <BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
  <RECORD>  
@@ -236,13 +236,13 @@ bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-
   
  At the Windows command prompt, enter the following `bcp` command:  
   
-```  
+```cmd
 bcp AdventureWorks2012.HumanResources.Department format nul -x -f Department-n..xml -n -T  
 ```  
   
  The generated format file, `Department-n.xml`, contains the following XML elements:  
   
-```  
+```xml
 <?xml version="1.0"?>  
 <BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
  <RECORD>  

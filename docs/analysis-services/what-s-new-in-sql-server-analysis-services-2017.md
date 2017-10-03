@@ -1,31 +1,28 @@
 ---
-title: "What&#39;s new in SQL Server 2017 Analysis Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/21/2017"
+title: "What's new in SQL Server 2017 Analysis Services | Microsoft Docs"
+ms.date: "10/03/2017"
 ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
   - "analysis-services"
-ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 1eb6afc9-76ed-45a2-a188-374a4fc23224
-caps.latest.revision: 17
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
 ---
 
-# What&#39;s new in SQL Server 2017 Analysis Services
+# What's new in SQL Server 2017 Analysis Services
 [!INCLUDE[ssas-appliesto-sql2017](../includes/ssas-appliesto-sql2017.md)]
 
-SQL Server 2017 Analysis Services sees some of the most important enhancements since SQL Server 2012. Building on the success of Tabular mode (first introduced in SQL Server 2012 Analysis Services), this release makes tabular models more powerful than ever.
+SQL Server 2017 Analysis Services see some of the most important enhancements since SQL Server 2012. Building on the success of Tabular mode (first introduced in SQL Server 2012 Analysis Services), this release makes tabular models more powerful than ever.
 
 Multidimensional mode and Power Pivot for SharePoint mode are a staple for many Analysis Services deployments. In the Analysis Services product lifecycle, these modes are mature. There are no new features for either of these modes in this release. However, bug fixes and performance improvements are included.
 
-The features described here are included in SQL Server 2017 Analysis Services. But in order to take advantage of them, you must also use the latest versions of [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md) (SSDT) and [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md) (SSMS). SSDT and SSMS are updated monthly with new and improved features that typically conincide with new functionality in SQL Server.  
+The features described here are included in SQL Server 2017 Analysis Services. But in order to take advantage of them, you must also use the latest versions of [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md) (SSDT) and [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md) (SSMS). SSDT and SSMS are updated monthly with new and improved features that typically coincide with new functionality in SQL Server.  
 
-While it's fun to take the wrappers off all the new features, it's also important to know what is being deprecated and discontinued in this release and future releases. Be sure to check out [Backward compatibility (SQL Server 2017 Analysis Services)](analysis-services-backward-compatibility-sql2017.md).
+While it's important to learn about all the new features, it's also important to know what is being deprecated and discontinued in this release and future releases. Be sure to check out [Backward compatibility (SQL Server 2017 Analysis Services)](analysis-services-backward-compatibility-sql2017.md).
 
 Let's take a look at some of the key new features in this release.
 
@@ -50,12 +47,12 @@ The modern Get Data experience provided support for a wide range of additional d
 
 ![AS_Get_Data_in_SSDT](../analysis-services/media/as-get-data-in-ssdt.png)
 
- A powerful and intuitive user interface make selecting your data and data transformation/mashup capabilities easier than ever.
+ A powerful and intuitive user interface makes selecting your data and data transformation/mashup capabilities easier than ever.
 
 ![Advanced mashup](../analysis-services/media/as-get-data-advanced.png)
 
 
-The modern Get Data experience and M mashup capabilities do not apply to existing tabular models ugraded from the 1200 compatibility level to 1400. The new experience only applies to new models created at the 1400 compatibility level.
+The modern Get Data experience and M mashup capabilities do not apply to existing tabular models upraded from the 1200 compatibility level to 1400. The new experience only applies to new models created at the 1400 compatibility level.
 
 ## Encoding hints
 This release introduces encoding hints, an advanced feature used to optimize processing (data refresh) of large in-memory tabular models. To better understand encoding, see [Performance Tuning of Tabular Models in SQL Server 2012 Analysis Services](https://msdn.microsoft.com/library/dn393915.aspx) whitepaper to better understand encoding.
@@ -64,9 +61,9 @@ This release introduces encoding hints, an advanced feature used to optimize pro
 
 * Hash encoding is preferred for group-by columns (often dimension-table values) and foreign keys. String columns are always hash encoded.
 
-Numeric columns can use either of these encoding methods. When Analysis Services starts processing a table, if either the table is empty (with or without partitions) or a full-table processing operation is being performed, samples values are taken for each numeric column to determine whether to apply value or hash encoding. By default, value encoding is chosen when the sample of distinct values in the column is large enough – otherwise hash encoding will usually provide better compression. It is possible for Analysis Services to change the encoding method after the column is partially processed based on further information about the data distribution, and restart the encoding process. This of course increases processing time and is inefficient. The performance-tuning whitepaper discusses re-encoding in more detail and describes how to detect it using SQL Server Profiler.
+Numeric columns can use either of these encoding methods. When Analysis Services starts processing a table, if either the table is empty (with or without partitions) or a full-table processing operation is being performed, samples values are taken for each numeric column to determine whether to apply value or hash encoding. By default, value encoding is chosen when the sample of distinct values in the column is large enough – otherwise hash encoding usually provides better compression. It is possible for Analysis Services to change the encoding method after the column is partially processed based on further information about the data distribution, and restart the encoding process; however, this increases processing time and is inefficient. The performance-tuning whitepaper discusses re-encoding in more detail and describes how to detect it using SQL Server Profiler.
 
-Encoding hints allow the modeler to specify a preference for the encoding method given prior knowledge from data profiling and/or in response to re-encoding trace events. Since aggregation over hash-encoded columns is slower than over value-encoded columns, value encoding may be specified as a hint for such columns. It is not guaranteed that the preference will be applied; hence it is a hint as opposed to a setting. To specify an encoding hint, set the EncodingHint property on the column. Possible values are “Default”, “Value” and “Hash”. The following snippet of JSON-based metadata from the Model.bim file specifies value encoding for the Sales Amount column.
+Encoding hints allow the modeler to specify a preference for the encoding method given prior knowledge from data profiling and/or in response to re-encoding trace events. Since aggregation over hash-encoded columns is slower than over value-encoded columns, value encoding may be specified as a hint for such columns. It is not guaranteed that the preference is applied. It is a hint as opposed to a setting. To specify an encoding hint, set the EncodingHint property on the column. Possible values are “Default”, “Value” and “Hash”. The following snippet of JSON-based metadata from the Model.bim file specifies value encoding for the Sales Amount column.
 
 ```
 {
@@ -110,7 +107,7 @@ The **Detail Rows Expression** property for measures allows model authors to cus
 
 ![AS_Detail_Rows_Expression_Property](../analysis-services/media/as-detail-rows-expression-property.png)
 
-The [SELECTCOLUMNS](https://msdn.microsoft.com/library/mt761759.aspx) DAX function will be commonly used in a Detail Rows Expression. The following example defines the columns to be returned for rows in the Internet Sales table in the sample Adventure Works tabular model:
+The [SELECTCOLUMNS](https://msdn.microsoft.com/library/mt761759.aspx) DAX function is commonly used in a Detail Rows Expression. The following example defines the columns to be returned for rows in the Internet Sales table in the sample Adventure Works tabular model:
 
 ```
 SELECTCOLUMNS(
@@ -127,7 +124,7 @@ With the property defined and the model deployed, a custom row set is returned w
 ![AS_Detail_Rows](../analysis-services/media/as-detail-rows.png)
 
 #### Default Detail Rows Expression property for tables
-In addition to measures, tables also have a property to define a detail rows expression. The **Default Detail Rows Expression** property acts as the default for all measures within the table. Measures that do not have their own expression defined will inherit the expression from the table and show the row set defined for the table. This allows reuse of expressions, and new measures added to the table later will automatically inherit the expression.
+In addition to measures, tables also have a property to define a detail rows expression. The **Default Detail Rows Expression** property acts as the default for all measures within the table. Measures that do not have their own expression defined inherits the expression from the table and show the row set defined for the table. This allows reuse of expressions, and new measures added to the table later automatically inherits the expression.
 
 ![AS_Default_Detail_Rows_Expression](../analysis-services/media/as-default-detail-rows-expression.png)
  
@@ -240,7 +237,7 @@ In addition to all the new features, Analysis Services, SSDT, and SSMS also incl
 * Hierarchy and column reuse surfaced in more helpful locations in the Power BI field list.
 * Date relationships to easily create relationships to date dimensions based on date fields.
 * Default installation option for Analysis Services is now for tabular mode.
-* New Get Data (Power Qery) data sources.
+* New Get Data (Power Query) data sources.
 * DAX Editor for SSDT.
 * Existing DirectQuery data sources support for M queries.
 * SSMS improvements, such as viewing, editing, and scripting support for structured data sources.

@@ -33,7 +33,9 @@ This feature is only available on SQL Server Management Studio (SSMS) v17.3 or l
 To access the XEvent Profiler, follow these steps:
 
 1. Open **SQL Server Management Studio**.
+
 2. Connect to an instance of the SQL Server Database Engine or localhost.
+
 3. In Object Explorer, find the XE Profiler menu item and expand it by clicking the '+' sign.
 
    ![XEProfiler Menu](media/xevents-xe-profiler-menu.png)

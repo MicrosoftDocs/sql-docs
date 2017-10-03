@@ -31,7 +31,7 @@ TLS is used to encrypt connections from a client application to [!INCLUDE[ssNoVe
 
 
 ## Client Side Encryption 
-- Generate certificate (/CN should match your SQL Server host fully-qualified domain name)
+- **Generate certificate** (/CN should match your SQL Server host fully-qualified domain name)
         
         openssl req -x509 -nodes -newkey rsa:2048 -subj '/CN=mssql.contoso.com' -keyout mssql.key -out mssql.pem -days 365 
         sudo chown mssql:mssql mssql.pem mssql.key 
@@ -39,7 +39,7 @@ TLS is used to encrypt connections from a client application to [!INCLUDE[ssNoVe
         sudo mv mssql.pem /etc/ssl/certs/ 
         sudo mv mssql.key /etc/ssl/private/ 
 
-- Configure SQL Server
+- **Configure SQL Server**
 
         systemctl stop mssql-server 
         cat /var/opt/mssql/mssql.conf 
@@ -48,7 +48,7 @@ TLS is used to encrypt connections from a client application to [!INCLUDE[ssNoVe
         sudo /opt/mssql/bin/mssql-conf set network.tlsprotocols 1.2 
         sudo /opt/mssql/bin/mssql-conf set network.forceencryption 0 
 
-- Register the certificate on your client machine (Windows, Linux or macOS)
+- **Register the certificate on your client machine (Windows, Linux or macOS)**
 
     -   If you are using CA signed certificate you have to copy the Certificate Authority (CA) certificate instead of the user certificate to the client machine. 
     -   If you are using the self-signed certificate just copy the .pem file to the following folders respective to distribution and execute the commands to enable them 
@@ -61,7 +61,7 @@ TLS is used to encrypt connections from a client application to [!INCLUDE[ssNoVe
            - Run the following command to get the hash value: ```/usr/local/Cellar/openssql/1.0.2l/openssql x509 -hash -in mssql.pem -noout```
            - Rename the cert to value. For example: ```mv mssql.pem dc2dd900.0```. Make sure dc2dd900.0 is in ```/usr/local/etc/openssl/certs```
     
--	Example connection strings 
+-	**Example connection strings** 
 
     - **[!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)]**   
   ![SSMS connection dialog](media/sql-server-linux-encrypted-connections/ssms-encrypt-connection.png "SSMS connection dialog")  
@@ -81,7 +81,7 @@ TLS is used to encrypt connections from a client application to [!INCLUDE[ssNoVe
 
 ## Server Side Encryption 
 
-- Generate certificate (/CN should match your SQL Server host fully-qualified domain name)
+- **Generate certificate** (/CN should match your SQL Server host fully-qualified domain name)
         
         openssl req -x509 -nodes -newkey rsa:2048 -subj '/CN=mssql.contoso.com' -keyout mssql.key -out mssql.pem -days 365 
         sudo chown mssql:mssql mssql.pem mssql.key 
@@ -89,7 +89,7 @@ TLS is used to encrypt connections from a client application to [!INCLUDE[ssNoVe
         sudo mv mssql.pem /etc/ssl/certs/ 
         sudo mv mssql.key /etc/ssl/private/ 
 
-- Configure SQL Server
+- **Configure SQL Server**
 
         systemctl stop mssql-server 
         cat /var/opt/mssql/mssql.conf 
@@ -98,7 +98,7 @@ TLS is used to encrypt connections from a client application to [!INCLUDE[ssNoVe
         sudo /opt/mssql/bin/mssql-conf set network.tlsprotocols 1.2 
         sudo /opt/mssql/bin/mssql-conf set network.forceencryption 1 
         
--	Example connection strings 
+-	**Example connection strings** 
 
     - **SQLCMD**
 

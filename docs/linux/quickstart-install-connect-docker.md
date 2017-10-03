@@ -23,7 +23,7 @@ This image consists of SQL Server running on Linux based on Ubuntu 16.04. It can
 
 ## <a id="requirements"></a> Prerequisites
 
-- Docker Engine 1.8+ on any supported Linux distribution or Docker for Mac/Windows.
+- Docker Engine 1.8+ on any supported Linux distribution or Docker for Mac/Windows. For more information, see [Install Docker](https://docs.docker.com/engine/installation/).
 - Minimum of 4 GB of disk space
 - Minimum of 4 GB of RAM
 - [System requirements for SQL Server on Linux](sql-server-linux-setup.md#system).
@@ -131,7 +131,7 @@ The following steps use the SQL Server command-line tool, **sqlcmd**, inside the
 1. Once inside the container, connect locally with sqlcmd. Sqlcmd is not in the path by default, so you have to specify the full path.
 
     ```bash
-    /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P '<YourPassword>'
+    /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P '<YourNewStrong!Passw0rd>'
     ```
 
    > [!TIP]
@@ -230,11 +230,11 @@ The following steps use **sqlcmd** outside of your container to connect to SQL S
 1. Run sqlcmd specifying the IP address and the port mapped to port 1433 in your container. In this example, that is port 1401 on the host machine.
 
    ```bash
-   sqlcmd -S 10.3.2.4,1401 -U SA -P '<YourPassword>'
+   sqlcmd -S 10.3.2.4,1401 -U SA -P '<YourNewStrong!Passw0rd>'
    ```
 
    ```PowerShell
-   sqlcmd -S 10.3.2.4,1401 -U SA -P "<YourPassword>"
+   sqlcmd -S 10.3.2.4,1401 -U SA -P "<YourNewStrong!Passw0rd>"
    ```
 
 1. Run Transact-SQL commands. When finished, type `QUIT`.

@@ -57,7 +57,7 @@ fi
 
 echo Adding Microsoft repositories...
 sudo curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
-repoargs="$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server.list)"
+repoargs="$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"
 sudo add-apt-repository "${repoargs}"
 repoargs="$(curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list)"
 sudo add-apt-repository "${repoargs}"

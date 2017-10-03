@@ -36,15 +36,15 @@ To access the XEvent Profiler, follow these steps:
 2. Connect to an instance of the SQL Server Database Engine or localhost.
 3. In Object Explorer, find the XE Profiler menu item and expand it by clicking the '+' sign.
 
-![XEProfiler Menu](media/xevents-xe-profiler-menu.png)
+   ![XEProfiler Menu](media/xevents-xe-profiler-menu.png)
 
 4. Double-click **Standard** if you want to view all extended events in this session. Click **T-SQL** if you want to view the logged SQL statements. If a session is not already created, a session is created for you.
 
-![XEProfiler Session](media/xevents-xe-profiler-start-session.png)
+   ![XEProfiler Session](media/xevents-xe-profiler-start-session.png)
 
 5. You can now view your Extended Events.
 
-![XEProfiler Viewer](media/xevents-xe-profiler-start-viewer.png)
+   ![XEProfiler Viewer](media/xevents-xe-profiler-start-viewer.png)
 
 ## See Also
 [Extended Events](../../relational-databases/extended-events/extended-events.md)  

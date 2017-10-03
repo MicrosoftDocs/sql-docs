@@ -38,7 +38,7 @@ If you don't already have a connection to your datasource, you need to create on
     ```
     = Value.NativeQuery(#"DATA SOURCE NAME", "SELECT * FROM …")
     ```
-4. To create a table, in **Queries**, right-click the query, and then select **Create New Table**. The new table will have the same name as the query.Emp
+4. To create a table, in **Queries**, right-click the query, and then select **Create New Table**. The new table will have the same name as the query.
 
 
 ## Example

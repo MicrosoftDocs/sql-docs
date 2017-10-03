@@ -20,7 +20,6 @@ helpviewer_keywords:
 
 ## Requirements for Certificates 
 Before we get started, you need to make sure your certificates follow these requirements:
-- The certificate must be in either the local computer certificate store or the current user certificate store.
 - The current system time must be after the Valid from property of the certificate and before the Valid to property of the certificate.
 - The certificate must be meant for server authentication. This requires the Enhanced Key Usage property of the certificate to specify Server Authentication (1.3.6.1.5.5.7.3.1).
 - The certificate must be created by using the KeySpec option of AT_KEYEXCHANGE. Usually, the certificate's key usage property (KEY_USAGE) will also include key encipherment (CERT_KEY_ENCIPHERMENT_KEY_USAGE).

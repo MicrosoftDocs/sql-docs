@@ -34,10 +34,11 @@ The following features are deprecated in this release:
 |||  
 |-|-|  
 |**Mode/Category**|**Feature**|
-|Tabular|Remote linked measure groups|
+|Multidimensional|Data Mining|
+|Multidimensional|Remote linked measure groups|
 |Tabular|Models at the 1100 and 1103 compatibility level|
 |Tabular|Tabular Object Model properties: Column.TableDetailPosition, Column.IsDefaultLabel, Column.IsDefaultImage|
-|Multidimensional|Data Mining|
+
 
 ## Discontinued features
 A *discontinued feature* was deprecated in an earlier release. It may continue to be included in the current release, but is no longer supported. Discontinued features may be removed entirely in a future release or update.
@@ -64,7 +65,7 @@ There are no breaking changes in this release.
 ## Behavior changes
 A *behavior change* affects how the same feature works in the current release as compared to the previous release. Only significant behavior changes are described. Changes in  user interface are not included.
 
-There are no behavior changes in this release.
+Changes to MDSCHEMA_MEASUREGROUP_DIMENSIONS and DISCOVER_CALC_DEPENDENCY, detailed in the [What’s new in SQL Server 2017 CTP 2.1 for Analysis Services](https://blogs.msdn.microsoft.com/analysisservices/2017/05/18/whats-new-in-sql-server-2017-ctp-2-1-for-analysis-services/) announcement.
 
 
 ## See also

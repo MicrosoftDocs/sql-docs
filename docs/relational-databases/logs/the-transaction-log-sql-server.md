@@ -140,7 +140,8 @@ When transactional replication is enabled, SELECT INTO operations are fully logg
   
 -   [WRITETEXT](../../t-sql/queries/writetext-transact-sql.md) and [UPDATETEXT](../../t-sql/queries/updatetext-transact-sql.md) statements when inserting or appending new data into the **text**, **ntext**, and **image** data type columns. Note that minimal logging is not used when existing values are updated.  
   
-    >  The WRITETEXT and UPDATETEXT statements are **deprecated**; avoid using them in new applications.  
+    > [!IMPORTANT]
+    > The WRITETEXT and UPDATETEXT statements are **deprecated**; avoid using them in new applications.  
   
 -   If the database is set to the simple or bulk-logged recovery model, some index DDL operations are minimally logged whether the operation is executed offline or online. The minimally logged index operations are as follows:  
   

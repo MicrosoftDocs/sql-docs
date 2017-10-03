@@ -1,7 +1,7 @@
 ---
 title: "Import Flat File to SQL | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/12/2017"
+ms.date: "09/25/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: "douglasl"
 ms.suite: ""

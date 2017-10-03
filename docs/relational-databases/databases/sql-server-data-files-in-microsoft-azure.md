@@ -1,5 +1,5 @@
 ---
-title: "SQL Server Data Files in Microsoft Azure | Microsoft Docs"
+title: "SQL Server data files in Microsoft Azure | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/02/2017"
 ms.prod: 
@@ -17,7 +17,7 @@ author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---
-# SQL Server Data Files in Microsoft Azure
+# SQL Server data files in Microsoft Azure
   ![Data files on Azure](../../relational-databases/databases/media/data-files-on-azure.png "Data files on Azure")  
   
  SQL Server Data Files in Microsoft Azure enables native support for SQL Server database files stored as Microsoft Azure Blobs. It allows you to create a database in SQL Server running in on-premises or in a virtual machine in Microsoft Azure with a dedicated storage location for your data in Microsoft Azure Blob Storage. This enhancement especially simplifies to move databases between machines by using detach and attach operations. In addition, it provides an alternative storage location for your database backup files by allowing you to restore from or to Microsoft Azure Storage. Therefore, it enables several hybrid solutions by providing several benefits for data virtualization, data movement, security and availability, and any easy low costs and maintenance for high-availability and elastic scaling.
@@ -29,7 +29,7 @@ manager: "jhubbard"
   
  For a practical hands-on experience on how to use this new feature, see [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases ](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
   
-## Why use SQL Server Data Files in Microsoft Azure? 
+## Why use SQL Server data files in Microsoft Azure? 
   
 -   **Easy and fast migration benefits:** This feature simplifies the migration process by moving one database at a time between machines in on-premises as well as between on-premises and cloud environments without any application changes. Therefore, it supports an incremental migration while maintaining your existing on-premises infrastructure in place. In addition, having access to a centralized data storage simplifies the application logic when an application needs to run in multiple locations in an on-premises environment. In some cases, you may need to rapidly setup computer centers in geographically dispersed locations, which gather data from many different sources. By using this new enhancement, instead of moving data from one location to another, you can store many databases as Microsoft Azure blobs, and then run Transact-SQL scripts to create databases on the local machines or virtual machines.  
   
@@ -48,10 +48,10 @@ manager: "jhubbard"
   
  In [Microsoft Azure](https://azure.microsoft.com), an [Azure storage](https://azure.microsoft.com/services/storage/) account represents the highest level of the namespace for accessing Blobs. A storage account can contain an unlimited number of containers, as long as their total size is below the storage limits. For the latest information on storage limits, see [Azure Subscription and Service Limits, Quotas, and Constraints](http://docs.microsoft.com/azure/azure-subscription-service-limits). A container provides a grouping of a set of [Blobs](http://docs.microsoft.com/azure/storage/common/storage-introduction#blob-storage). All Blobs must be in a container. An account can contain an unlimited number of containers. Similarly, a container can store an unlimited number of Blobs as well. There are two types of blobs that can be stored in Azure Storage: block and page blobs. This new feature uses Page blobs, which are more efficient when ranges of bytes in a file are modified frequently. You can access Blobs using the following URL format: `http://storageaccount.blob.core.windows.net/<container>/<blob>`.  
   
-### Azure Billing Considerations  
+### Azure billing considerations  
  Estimating the cost of using Azure Services is an important matter in the decision making and planning process. When storing SQL Server data files in Azure Storage, you need to pay costs associated with storage and transactions. In addition, the implementation of SQL Server Data Files in Azure Storage feature requires a renewal of Blob lease every 45 to 60 seconds implicitly. This also results in transaction costs per database file, such as .mdf or .ldf. Use the information on the [Azure Pricing](http://azure.microsoft.com/pricing/) page to help estimate the monthly costs associated with the use of Azure Storage and Azure Virtual Machines.  
   
-### SQL Server Concepts  
+### SQL Server concepts  
  When using this new enhancement, you are required to do the followings:  
   
 -   You must create a policy on a container and also generate a shared access signature (SAS) key.  
@@ -60,16 +60,13 @@ manager: "jhubbard"
   
 -   You must store the information regarding Azure Storage container, its associated policy name, and SAS key in the SQL Server credential store.  
   
- The following example assumes that an Azure storage container has been created, and a policy has been created with read, write, list, rights. Creating a policy on a container generates a SAS key which is safe to keep unencrypted in memory and needed by SQL Server to access the blob files in the container. In the following code snippet, replace `'your SAS key'` with an entry similar to the following: `'sr=c&si=<MYPOLICYNAME>&sig=<THESHAREDACCESSSIGNATURE>'`. For more information, see [Manage Access to Azure Storage Resources](http://azure.microsoft.com/en-us/documentation/articles/storage-manage-access-to-resources/)  
+ The following example assumes that an Azure storage container has been created, and a policy has been created with read, write, list, rights. Creating a policy on a container generates a SAS key which is safe to keep unencrypted in memory and needed by SQL Server to access the blob files in the container. In the following code snippet, replace `'<your SAS key>'` with an entry similar to the following: `'sr=c&si=<MYPOLICYNAME>&sig=<THESHAREDACCESSSIGNATURE>'`. For more information, see [Manage Access to Azure Storage Resources](http://docs.microsoft.com/azure/storage/blobs/storage-manage-access-to-resources)  
   
-```  
-  
--- Create a credential  
+```sql
 CREATE CREDENTIAL [https://testdb.blob.core.windows.net/data]  
 WITH IDENTITY='SHARED ACCESS SIGNATURE',  
-SECRET = 'your SAS key'  
+SECRET = '<your SAS key>'  
   
--- Create database with data and log files in Windows Azure container.  
 CREATE DATABASE testdb   
 ON  
 ( NAME = testdb_dat,  
@@ -77,7 +74,6 @@ ON
  LOG ON  
 ( NAME = testdb_log,  
     FILENAME =  'https://testdb.blob.core.windows.net/data/TestLog.ldf')  
-  
 ```  
   
  **Important note:** If there are any active references to data files in a container, attempts to delete the corresponding SQL Server credential fails.  
@@ -91,12 +87,12 @@ ON
   
 -   In addition, we recommend that you continue implementing the traditional on-premises security practices for your databases.  
   
-### Installation Prerequisites  
+### Installation prerequisites  
  The followings are installation prerequisites when storing SQL Server Data Files in Azure.  
   
--   **SQL Server on-premises:** SQL Server 2016 version includes this feature. To learn how to download SQL Server 2016, see [SQL Server 2016](https://www.microsoft.com/en-us/cloud-platform/sql-server).  
+-   **SQL Server on-premises:** SQL Server 2016 and later include this feature. To learn how to download the latest version of SQL Server, see [SQL Server](http://www.microsoft.com/sql-server/sql-server-downloads).  
   
--   SQL Server running in an Azure virtual machine: If you are installing [SQL Server on an Azure Virtual Machine](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm), install SQL Server 2016, or update your existing instance. Similarly, you can also create a new virtual machine in Azure using SQL Server 2016 platform image.
+-   SQL Server running in an Azure virtual machine: If you are installing [SQL Server on an Azure Virtual Machine](http://azuremarketplace.microsoft.com/marketplace/apps?search=sql%20server&page=1), install SQL Server 2016, or update your existing instance. Similarly, you can also create a new virtual machine in Azure using SQL Server 2016 platform image.
 
   
 ###  <a name="bkmk_Limitations"></a> Limitations  
@@ -115,7 +111,7 @@ ON
   
 -   When using SQL Server Data Files in Azure feature, SQL Server performs all URL or file path comparisons using the Collation set in the **master** database.  
   
--   **Always On Availability Groups** are supported as long as you do not add new database files to the primary database. If a database operation requires a new file to be created in the primary database, first disable Always On Availability Groups in the secondary node. Then, perform the database operation on the primary database and backup the database in the primary node. Next, restore the database to the secondary node, and enable Always On Availability Groups in the secondary node. Note that Always On Failover Cluster Instances is not supported when using the SQL Server Data Files in Azure feature.  
+-   **Always On availability groups** are supported as long as you do not add new database files to the primary database. If a database operation requires a new file to be created in the primary database, first disable Always On availability groups in the secondary node. Then, perform the database operation on the primary database and backup the database in the primary node. Next, restore the database to the secondary node, and enable Always On availability groups in the secondary node. Note that Always On failover cluster instances is not supported when using the SQL Server data files in Azure feature.  
   
 -   During normal operation, SQL Server uses temporary leases to reserve Blobs for storage with a renewal of each Blob lease every 45 to 60 seconds. If a server crashes and another instance of SQL Server configured to use the same blobs is started, the new instance will wait up to 60 seconds for the existing lease on the Blob to expire. If you want to attach the database to another instance and you cannot wait for the lease to expire within 60 seconds, you can explicitly break the lease on the Blob to avoid any failures in attach operations.  
   
@@ -125,7 +121,7 @@ ON
 ### PowerShell support  
  Use PowerShell cmdlets to store SQL Server data files in Azure Blob Storage service by referencing a Blob Storage URL path instead of a file path. Access Blobs using the following URL format: `http://storageaccount.blob.core.windows.net/<container>/<blob>` .  
   
-### SQL Server Object and performance counters support  
+### SQL Server object and performance counters support  
  Starting with SQL Server 2014, a new SQL Server object has been added to be used with SQL Server Data Files in Azure Storage feature. The new SQL Server object is called as [SQL Server, HTTP_STORAGE_OBJECT](../../relational-databases/performance-monitor/sql-server-http-storage-object.md) and it can be used by System Monitor to monitor activity when running SQL Server with Windows Azure Storage.  
   
 ### SQL Server Management Studio support  
@@ -133,7 +129,7 @@ ON
  
  as a **Path** in several dialog windows, such as **New Database**, **Attach Database**, and **Restore Database**. For more information, see [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
   
-### SQL Server Management Objects support  
+### SQL Server Management Objects (SMO) support  
  When using the SQL Server Data Files in Azure feature, all SQL Server Management Objects (SMO) are supported. If an SMO object requires a file path, use the BLOB URL format instead of a local file path, such as `https://teststorageaccnt.blob.core.windows.net/testcontainer/`. For more information about SQL Server Management Objects (SMO), see [SQL Server Management Objects &#40;SMO&#41; Programming Guide](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md) in SQL Server Books Online.  
   
 ### Transact-SQL support  
@@ -182,5 +178,6 @@ ON
   
     4.  Set the database online.  
 
+## Next steps  
   
-  
+[Create a database](create-a-database.md)

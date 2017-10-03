@@ -64,7 +64,7 @@ manager: "jhubbard"
 
 > [!NOTE]
 > VLF creation follows this method:
-> -	If the next growth is less than 1/8 of current log physical size, then create 1 VLF that covers the growth size (Starting with [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)])
+> -	If the next growth is less than 1/8 of current log physical size, then create 1 VLF that covers the growth size (Starting with [!INCLUDE[ssSQL14](../includes/sssql14-md.md)])
 > -	If growth is less than 64MB, create 4 VLFs that cover the growth size (e.g. for 1 MB growth, create four 256KB VLFs)
 > -	If growth is from 64MB up to 1GB, create 8 VLFs that cover the growth size (e.g. for 512MB growth, create eight 64MB VLFs)
 > -	If growth is larger than 1GB, create 16 VLFs that cover the growth size (e.g. for 8 GB growth, create sixteen 512MB VLFs)

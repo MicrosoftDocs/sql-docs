@@ -22,7 +22,7 @@ manager: "jhubbard"
 ---
 
 # INSERT (SQL Graph)
-[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]  
+[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]  
 
   Adds one or more rows to a `node` or `edge` table in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
 
@@ -35,8 +35,6 @@ manager: "jhubbard"
 The syntax for inserting into a Node table is same as that of a regular table. 
 
 ```  
--- Syntax for SQL Server and Azure SQL Database  
-
 [ WITH <common_table_expression> [ ,...n ] ]  
 INSERT   
 {  

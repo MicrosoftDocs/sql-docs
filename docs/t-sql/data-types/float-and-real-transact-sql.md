@@ -60,7 +60,7 @@ Values of **float** are truncated when they are converted to any integer type.
   
 When you want to convert from **float** or **real** to character data, using the STR string function is usually more useful than CAST( ). This is because STR enables more control over formatting. For more information, see [STR &#40;Transact-SQL&#41;](../../t-sql/functions/str-transact-sql.md) and [Functions &#40;Transact-SQL&#41;](../../t-sql/functions/functions.md).
   
-Conversion of **float** values that use scientific notation to **decimal** or **numeric** is restricted to values of precision 17 digits only. Any value with precision higher than 17 rounds to zero.
+Conversion of **float** values that use scientific notation to **decimal** or **numeric** is restricted to values of precision 17 digits only. Any value < 5E-18 rounds down to 0.
   
 ## See also
 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  

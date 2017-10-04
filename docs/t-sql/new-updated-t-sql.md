@@ -13,7 +13,7 @@ ms.custom: UpdArt.exe
 ms.tgt_pltfrm: na
 ms.devlang: na
 ms.topic: updart-autogen
-ms.date: 09/11/2017
+ms.date: 09/27/2017
 ms.author: genemi
 ms.workload: t-sql
 ---
@@ -29,7 +29,7 @@ Recent updates are reported for the following date range and subject:
 
 
 
-- *Date range of updates:* &nbsp; **2017-07-18** &nbsp; -to- &nbsp; **2017-09-11**
+- *Date range of updates:* &nbsp; **2017-09-11** &nbsp; -to- &nbsp; **2017-09-27**
 - *Subject area:* &nbsp; **T-SQL**.
 
 
@@ -42,10 +42,7 @@ Recent updates are reported for the following date range and subject:
 The following links jump to new articles that have been added recently.
 
 
-1. [PREDICT (Transact-SQL)](queries/predict-transact-sql.md)
-2. [ALTER EXTERNAL LIBRARY (Transact-SQL)](statements/alter-external-library-transact-sql.md)
-3. [CREATE EXTERNAL LIBRARY (Transact-SQL)](statements/create-external-library-transact-sql.md)
-4. [DROP EXTERNAL LIBRARY (Transact-SQL)](statements/drop-external-library-transact-sql.md)
+***There are no new articles to list, this time.***
 
 
 
@@ -67,11 +64,11 @@ For these and other reasons, do not copy code from these excerpts, and do not ta
 
 <a name="compactupdatedlist"/>
 
-## Compact List of Articles Updated Recently
+### Compact List of Articles Updated Recently
 
 This compact list provides links to all the updated articles that are listed in the Excerpts section.
 
-1. [CAST and CONVERT (Transact-SQL)](#TitleNum_1)
+1. [sql_variant (Transact-SQL)](#TitleNum_1)
 
 
 
@@ -82,76 +79,58 @@ This compact list provides links to all the updated articles that are listed in 
 
 <a name="TitleNum_1"/>
 
-### 1. &nbsp; [CAST and CONVERT (Transact-SQL)](functions/cast-and-convert-transact-sql.md)
+### 1. &nbsp; [sql_variant (Transact-SQL)](data-types/sql-variant-transact-sql.md)
 
-*Updated: 2017-09-08* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+*Updated: 2017-09-13* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
 
-<!-- Source markdown line 647.  ms.author= "rickbyh".  -->
+<!-- Source markdown line 111.  ms.author= "rickbyh".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 b805ecddecda72ffc026c3866b5284a79b69fb3f f2906eaf87c7cdf1409922d4efba8cd1c5635674  (PR=0  ,  Filename=cast-and-convert-transact-sql.md  ,  Dirpath=docs\t-sql\functions\  ,  MergeCommitSha40=b97cc9723d563b19c85661f5ad7049a96fc904ff) -->
+<!-- git diff --ignore-all-space --unified=0 659578de7de33d8672ceb9542093862107d13526 c80026de2b0deedab3722a874e9124c2cfefa049  (PR=0  ,  Filename=sql-variant-transact-sql.md  ,  Dirpath=docs\t-sql\data-types\  ,  MergeCommitSha40=5cd78481b3fac55ec34b59e7b1ad25e0e14d2a00) -->
 
 
 
-**K. Using CAST with arithmetic operators**
+**Examples**
 
-The following example calculates a single column computation by dividing the product unit price (`UnitPrice`) by the discount percentage (`UnitPriceDiscountPct`). This result is converted to an `int` data type after being rounded to the nearest whole number. Uses AdventureWorksDW.
 
-```
-SELECT ProductKey, UnitPrice,UnitPriceDiscountPct,
-       CAST(ROUND (UnitPrice*UnitPriceDiscountPct,0) AS int) AS DiscountPrice
-FROM dbo.FactResellerSales
-WHERE SalesOrderNumber = 'SO47355'
-      AND UnitPriceDiscountPct > .02;
-```
+**A. Using a sql_variant in a table**
 
-..!NCLUDE-NotShown--ssResult--../../includes/ssresult-md.md)]
+ The following example, creates a table with a sql_variant data type. Then the example retrieves `SQL_VARIANT_PROPERTY` information about the `colA` value `46279.1` where `colB` =`1689`, given that `tableA` has `colA` that is of type `sql_variant` and `colB`.
 
 ```
-ProductKey  UnitPrice  UnitPriceDiscountPct  DiscountPrice
-----------  ---------  --------------------  -------------
-323         430.6445   0.05                  22
-213         18.5043    0.05                  1
-456         37.4950    0.10                  4
-456         37.4950    0.10                  4
-216         18.5043    0.05                  1
+CREATE   TABLE tableA(colA sql_variant, colB int)
+INSERT INTO tableA values ( cast (46279.1 as decimal(8,2)), 1689)
+SELECT   SQL_VARIANT_PROPERTY(colA,'BaseType') AS 'Base Type',
+         SQL_VARIANT_PROPERTY(colA,'Precision') AS 'Precision',
+         SQL_VARIANT_PROPERTY(colA,'Scale') AS 'Scale'
+FROM      tableA
+WHERE      colB = 1689
 ```
 
-**L. Using CAST to concatenate**
-
-The following example concatenates noncharacter expressions by using CAST. Uses AdventureWorksDW.
+ ..!NCLUDE-NotShown--ssResult--../../includes/ssresult-md.md)] Note that each of these three values is a **sql_variant**.
 
 ```
-SELECT 'The list price is ' + CAST(ListPrice AS varchar(12)) AS ListPrice
-FROM dbo.DimProduct
-WHERE ListPrice BETWEEN 350.00 AND 400.00;
+Base Type    Precision    Scale
+---------    ---------    -----
+decimal      8           2
+
+(1 row(s) affected)
 ```
 
-..!NCLUDE-NotShown--ssResult--../../includes/ssresult-md.md)]
+**B. Using a sql_variant as a variable**
+
+ The following example, creates a variable using the sql_variant data type, and then retrieves `SQL_VARIANT_PROPERTY` information about a variable named @v1.
 
 ```
-ListPrice
-------------------------
-The list price is 357.06
-The list price is 364.09
-The list price is 364.09
-The list price is 364.09
-The list price is 364.09
+DECLARE @v1 sql_variant;
+SET @v1 = 'ABC';
+SELECT @v1;
+SELECT SQL_VARIANT_PROPERTY(@v1, 'BaseType');
+SELECT SQL_VARIANT_PROPERTY(@v1, 'MaxLength');
 ```
 
-**M. Using CAST to produce more readable text**
-
-The following example uses CAST in the SELECT list to convert the `Name` column to a **char(10)** column. Uses AdventureWorksDW.
-
-```
-SELECT DISTINCT CAST(EnglishProductName AS char(10)) AS Name, ListPrice
-FROM dbo.DimProduct
-WHERE EnglishProductName LIKE 'Long-Sleeve Logo Jersey, M';
-```
-
-..!NCLUDE-NotShown--ssResult--../../includes/ssresult-md.md)]
 
 
 
@@ -170,24 +149,20 @@ This section lists very similar articles for recently updated articles in other 
 
 #### Subject areas which do have new or recently updated articles
 
-- [New + Updated (3+12) : **Advanced Analytics for SQL** docs](../advanced-analytics/new-updated-advanced-analytics.md)
-- [New + Updated (5+0)  : **Connect to SQL** docs](../connect/new-updated-connect.md)
-- [New + Updated (5+1)  : **Database Engine for SQL** docs](../database-engine/new-updated-database-engine.md)
-- [New + Updated (19+82): **Integration Services for SQL** docs](../integration-services/new-updated-integration-services.md)
-- [New + Updated (1+8)  : **Linux for SQL** docs](../linux/new-updated-linux.md)
-- [New + Updated (12+1) : **Relational Databases for SQL** docs](../relational-databases/new-updated-relational-databases.md)
-- [New + Updated (0+1)  : **Reporting Services for SQL** docs](../reporting-services/new-updated-reporting-services.md)
-- [New + Updated (7+1)  : **Microsoft SQL Server** docs](../sql-server/new-updated-sql-server.md)
-- [New + Updated (1+1)  : **SQL Server Data Tools (SSDT)** docs](../ssdt/new-updated-ssdt.md)
-- [New + Updated (0+2)  : **SQL Server Migration Assistant (SSMA)** docs](../ssma/new-updated-ssma.md)
-- [New + Updated (1+4)  : **SQL Server Management Studio (SSMS)** docs](../ssms/new-updated-ssms.md)
-- [New + Updated (4+1)  : **Transact-SQL** docs](../t-sql/new-updated-t-sql.md)
-- [New + Updated (0+1)  : **Tools for SQL** docs](../tools/new-updated-tools.md)
+- [New + Updated (0+1): **Advanced Analytics for SQL** docs](../advanced-analytics/new-updated-advanced-analytics.md)
+- [New + Updated (0+1): **Analysis Services for SQL** docs](../analysis-services/new-updated-analysis-services.md)
+- [New + Updated (4+1): **Database Engine for SQL** docs](../database-engine/new-updated-database-engine.md)
+- [New + Updated (17+0): **Integration Services for SQL** docs](../integration-services/new-updated-integration-services.md)
+- [New + Updated (3+0): **Linux for SQL** docs](../linux/new-updated-linux.md)
+- [New + Updated (1+1): **Relational Databases for SQL** docs](../relational-databases/new-updated-relational-databases.md)
+- [New + Updated (2+0): **Reporting Services for SQL** docs](../reporting-services/new-updated-reporting-services.md)
+- [New + Updated (0+1): **SQL Server Management Studio (SSMS)** docs](../ssms/new-updated-ssms.md)
+- [New + Updated (0+1): **Transact-SQL** docs](../t-sql/new-updated-t-sql.md)
 
 #### Subject areas which have no new or recently updated articles
 
 - [New + Updated (0+0): **ActiveX Data Objects (ADO) for SQL** docs](../ado/new-updated-ado.md)
-- [New + Updated (0+0): **Analysis Services for SQL** docs](../analysis-services/new-updated-analysis-services.md)
+- [New + Updated (0+0): **Connect to SQL** docs](../connect/new-updated-connect.md)
 - [New + Updated (0+0): **Data Quality Services for SQL** docs](../data-quality-services/new-updated-data-quality-services.md)
 - [New + Updated (0+0): **Data Mining Extensions (DMX) for SQL** docs](../dmx/new-updated-dmx.md)
 - [New + Updated (0+0): **Master Data Services (MDS) for SQL** docs](../master-data-services/new-updated-master-data-services.md)
@@ -195,6 +170,10 @@ This section lists very similar articles for recently updated articles in other 
 - [New + Updated (0+0): **ODBC (Open Database Connectivity) for SQL** docs](../odbc/new-updated-odbc.md)
 - [New + Updated (0+0): **PowerShell for SQL** docs](../powershell/new-updated-powershell.md)
 - [New + Updated (0+0): **Samples for SQL** docs](../sample/new-updated-sample.md)
+- [New + Updated (0+0): **Microsoft SQL Server** docs](../sql-server/new-updated-sql-server.md)
+- [New + Updated (0+0): **SQL Server Data Tools (SSDT)** docs](../ssdt/new-updated-ssdt.md)
+- [New + Updated (0+0): **SQL Server Migration Assistant (SSMA)** docs](../ssma/new-updated-ssma.md)
+- [New + Updated (0+0): **Tools for SQL** docs](../tools/new-updated-tools.md)
 - [New + Updated (0+0): **XQuery for SQL** docs](../xquery/new-updated-xquery.md)
 
 

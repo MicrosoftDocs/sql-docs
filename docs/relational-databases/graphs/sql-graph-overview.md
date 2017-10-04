@@ -1,5 +1,5 @@
 ---
-title: "SQL Graph overview | Microsoft Docs"
+title: "Graph processing with SQL Server and Azure SQL Database | Microsoft Docs"
 ms.custom: 
 ms.date: "07/18/2017"
 ms.prod: "sql-server-2017"

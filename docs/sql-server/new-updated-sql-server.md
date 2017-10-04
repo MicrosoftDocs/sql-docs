@@ -14,7 +14,7 @@ ms.workload: sql-server
 ms.tgt_pltfrm: na
 ms.devlang: na
 ms.topic: updart-autogen
-ms.date: 09/11/2017
+ms.date: 09/27/2017
 ms.author: genemi
 ---
 # New and Recently Updated: SQL Server docs
@@ -29,7 +29,7 @@ Recent updates are reported for the following date range and subject:
 
 
 
-- *Date range of updates:* &nbsp; **2017-07-18** &nbsp; -to- &nbsp; **2017-09-11**
+- *Date range of updates:* &nbsp; **2017-09-11** &nbsp; -to- &nbsp; **2017-09-27**
 - *Subject area:* &nbsp; **SQL Server**.
 
 
@@ -42,13 +42,7 @@ Recent updates are reported for the following date range and subject:
 The following links jump to new articles that have been added recently.
 
 
-1. [SQL Server 2008 R2 SP2 Release Notes](sql-server-2008-r2-sp2-release-notes.md)
-2. [SQL Server 2012 Release Notes](sql-server-2012-release-notes.md)
-3. [SQL Server 2012 SP1 Release Notes](sql-server-2012-sp1-release-notes.md)
-4. [SQL Server 2012 SP2 Release Notes](sql-server-2012-sp2-release-notes.md)
-5. [SQL Server 2012 SP3 Release Notes](sql-server-2012-sp3-release-notes.md)
-6. [SQL Server 2014 Release Notes](sql-server-2014-release-notes.md)
-7. [Help Viewer and Offline Content for SQL Server](sql-server-help-installation.md)
+***There are no new articles to list, this time.***
 
 
 
@@ -70,53 +64,17 @@ For these and other reasons, do not copy code from these excerpts, and do not ta
 
 <a name="compactupdatedlist"/>
 
-## Compact List of Articles Updated Recently
+### Compact List of Articles Updated Recently
 
 This compact list provides links to all the updated articles that are listed in the Excerpts section.
 
-1. [What's new in SQL Server 2016](#TitleNum_1)
 
 
 
 
 &nbsp;
 
-&nbsp;
-
-<a name="TitleNum_1"/>
-
-### 1. &nbsp; [What's new in SQL Server 2016](what-s-new-in-sql-server-2016.md)
-
-*Updated: 2017-09-08* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-
-<!-- Source markdown line 34.  ms.author= "craigg".  -->
-
-&nbsp;
-
-
-<!-- git diff --ignore-all-space --unified=0 e5bc0c05f120289f09a535400a4d521e4113ae55 0607d0a9af1c9a8dd9d3d7b0606895ff23bbffdc  (PR=0  ,  Filename=what-s-new-in-sql-server-2016.md  ,  Dirpath=docs\sql-server\  ,  MergeCommitSha40=b97cc9723d563b19c85661f5ad7049a96fc904ff) -->
-
-
-
-- Download the **free** [**SQL Server 2016 Developer edition!**](https://www.microsoft.com/en-us/cloud-platform/sql-server-editions-developers).
-- Download the latest version of [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md).
-- Have an Azure account? Spin up a [Virtual Machine with SQL Server 2016 already installed](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/).
-
-**SQL Server 2016 Database Engine**
-
-- You can now configure **multiple tempDB** database files during SQL Server installation and setup.
-- New **Query Store** stores query texts, execution plans, and performance metrics within the database, allowing easy monitoring and troubleshooting of performance issues. A dashboard shows which queries consumed the most time, memory or CPU resources.
-- **Temporal tables** are history tables which record all data changes, complete with the date and time they occurred.
-- New built-in **JSON support** in SQL Server supports JSON imports, exports, parsing and storing.
-- New **PolyBase** query engine integrates SQL Server with external data in Hadoop or Azure Blob storage. You can import and export data as well as executing queries.
-- The new **Stretch Database** feature lets you dynamically, securely archive data from a local SQL Server database to an Azure SQL database in the cloud. SQL Server automatically queries both local and remote data in the linked databases.
-- **In-memory OLTP:**
-    - Now supports FOREIGN KEY, UNIQUE and CHECK constraints, and native compiled stored procedures OR, NOT, SELECT DISTINCT, OUTER JOIN, and subqueries in SELECT.
-    - Supports tables up to 2TB (up from 256GB).
-    - Has column store index enhancements for sorting and Always On Availability Group support.
-- New security features:
-    - **Always Encrypted:** When enabled, only the application that has the encryption key can access the encrypted sensitive data in the SQL Server 2016 database. The key is never passed to SQL Server.
-
+***No articles in this area were updated recently, this time.***
 
 
 
@@ -134,24 +92,20 @@ This section lists very similar articles for recently updated articles in other 
 
 #### Subject areas which do have new or recently updated articles
 
-- [New + Updated (3+12) : **Advanced Analytics for SQL** docs](../advanced-analytics/new-updated-advanced-analytics.md)
-- [New + Updated (5+0)  : **Connect to SQL** docs](../connect/new-updated-connect.md)
-- [New + Updated (5+1)  : **Database Engine for SQL** docs](../database-engine/new-updated-database-engine.md)
-- [New + Updated (19+82): **Integration Services for SQL** docs](../integration-services/new-updated-integration-services.md)
-- [New + Updated (1+8)  : **Linux for SQL** docs](../linux/new-updated-linux.md)
-- [New + Updated (12+1) : **Relational Databases for SQL** docs](../relational-databases/new-updated-relational-databases.md)
-- [New + Updated (0+1)  : **Reporting Services for SQL** docs](../reporting-services/new-updated-reporting-services.md)
-- [New + Updated (7+1)  : **Microsoft SQL Server** docs](../sql-server/new-updated-sql-server.md)
-- [New + Updated (1+1)  : **SQL Server Data Tools (SSDT)** docs](../ssdt/new-updated-ssdt.md)
-- [New + Updated (0+2)  : **SQL Server Migration Assistant (SSMA)** docs](../ssma/new-updated-ssma.md)
-- [New + Updated (1+4)  : **SQL Server Management Studio (SSMS)** docs](../ssms/new-updated-ssms.md)
-- [New + Updated (4+1)  : **Transact-SQL** docs](../t-sql/new-updated-t-sql.md)
-- [New + Updated (0+1)  : **Tools for SQL** docs](../tools/new-updated-tools.md)
+- [New + Updated (0+1): **Advanced Analytics for SQL** docs](../advanced-analytics/new-updated-advanced-analytics.md)
+- [New + Updated (0+1): **Analysis Services for SQL** docs](../analysis-services/new-updated-analysis-services.md)
+- [New + Updated (4+1): **Database Engine for SQL** docs](../database-engine/new-updated-database-engine.md)
+- [New + Updated (17+0): **Integration Services for SQL** docs](../integration-services/new-updated-integration-services.md)
+- [New + Updated (3+0): **Linux for SQL** docs](../linux/new-updated-linux.md)
+- [New + Updated (1+1): **Relational Databases for SQL** docs](../relational-databases/new-updated-relational-databases.md)
+- [New + Updated (2+0): **Reporting Services for SQL** docs](../reporting-services/new-updated-reporting-services.md)
+- [New + Updated (0+1): **SQL Server Management Studio (SSMS)** docs](../ssms/new-updated-ssms.md)
+- [New + Updated (0+1): **Transact-SQL** docs](../t-sql/new-updated-t-sql.md)
 
 #### Subject areas which have no new or recently updated articles
 
 - [New + Updated (0+0): **ActiveX Data Objects (ADO) for SQL** docs](../ado/new-updated-ado.md)
-- [New + Updated (0+0): **Analysis Services for SQL** docs](../analysis-services/new-updated-analysis-services.md)
+- [New + Updated (0+0): **Connect to SQL** docs](../connect/new-updated-connect.md)
 - [New + Updated (0+0): **Data Quality Services for SQL** docs](../data-quality-services/new-updated-data-quality-services.md)
 - [New + Updated (0+0): **Data Mining Extensions (DMX) for SQL** docs](../dmx/new-updated-dmx.md)
 - [New + Updated (0+0): **Master Data Services (MDS) for SQL** docs](../master-data-services/new-updated-master-data-services.md)
@@ -159,6 +113,10 @@ This section lists very similar articles for recently updated articles in other 
 - [New + Updated (0+0): **ODBC (Open Database Connectivity) for SQL** docs](../odbc/new-updated-odbc.md)
 - [New + Updated (0+0): **PowerShell for SQL** docs](../powershell/new-updated-powershell.md)
 - [New + Updated (0+0): **Samples for SQL** docs](../sample/new-updated-sample.md)
+- [New + Updated (0+0): **Microsoft SQL Server** docs](../sql-server/new-updated-sql-server.md)
+- [New + Updated (0+0): **SQL Server Data Tools (SSDT)** docs](../ssdt/new-updated-ssdt.md)
+- [New + Updated (0+0): **SQL Server Migration Assistant (SSMA)** docs](../ssma/new-updated-ssma.md)
+- [New + Updated (0+0): **Tools for SQL** docs](../tools/new-updated-tools.md)
 - [New + Updated (0+0): **XQuery for SQL** docs](../xquery/new-updated-xquery.md)
 
 

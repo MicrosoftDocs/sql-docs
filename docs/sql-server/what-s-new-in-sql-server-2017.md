@@ -1,7 +1,7 @@
 ---
 title: "What's new in SQL Server 2017 | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/14/2017"
+ms.date: "10/02/2017"
 ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
@@ -16,14 +16,9 @@ ms.author: "craigg"
 manager: "jhubbard"
 ---
 # What's new in SQL Server 2017
+SQL Server 2017 represents a major step towards making SQL Server a platform that gives you choices of development languages, data types, on-premises or cloud, and operating systems by bringing the power of SQL Server to Linux, Linux-based Docker containers, and Windows. This topic summarizes what is new for specific feature areas and includes links to additional details.
 
-SQL Server 2017 represents a major step towards making SQL Server a platform that gives you choices of development languages, data types, on-premises or cloud, and operating systems by bringing the power of SQL Server to Linux, Linux-based Docker containers, and Windows. This topic summarizes what is new for specific feature areas in the most recent SQL Server 2017 Release Candidate (RC2, August 2017) and Community Technical Preview (CTP) releases.
-
-> [!TIP]
-> The general availability of SQL Server 2017 has been [announced this week at the Microsoft Ignite conference](https://blogs.technet.microsoft.com/dataplatforminsider/2017/09/25/microsoft-for-the-modern-data-estate/)! The SQL Server 2017 GA downloads and updated documentation will be available on **October 2nd**.
-
-[![Download from Evaluation Center](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) **Try it out:** [Download the latest SQL Server 2017 Release: RC2, August 2017](http://go.microsoft.com/fwlink/?LinkID=829477).
-This release contains bug fixes and performance improvements.
+[![Download from Evaluation Center](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) **Try it out:** [Download SQL Server 2017 Release - October 2017:](http://go.microsoft.com/fwlink/?LinkID=829477).
 
 >**Run SQL Server on Linux!** For more information, see [SQL Server on Linux Documentation](https://docs.microsoft.com/sql/linux/).
 

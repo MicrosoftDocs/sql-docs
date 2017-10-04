@@ -2,7 +2,7 @@
 title: "What&#39;s New in Integration Services in SQL Server 2016 | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "03/16/2017"
+ms.date: "09/28/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -22,9 +22,19 @@ manager: "jhubbard"
 # What&#39;s New in Integration Services in SQL Server 2016
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
- This topic describes the features that have been added or updated in SQL Server 2016 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
-  
-## Improvements grouped by category  
+This topic describes the features that have been added or updated in SQL Server 2016 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. It also includes features added or updated in the [Azure Feature Pack for Integration Services &#40;SSIS&#41;](../integration-services/azure-feature-pack-for-integration-services-ssis.md) during the SQL Server 2016 time frame.  
+
+## New for SSIS in Azure Data Factory
+
+With the public preview of Azure Data Factory version 2 in September 2017, you can now do the following things:
+-   Deploy packages to the SSIS Catalog database (SSISDB) on Azure SQL Database.
+-   Run packages deployed to Azure on the Azure-SSIS Integration Runtime, a component of Azure Data Factory version 2.
+
+For more info, see [Lift and shift SQL Server Integration Services workloads to the cloud](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md).
+
+These new capabilities require SQL Server Data Tools (SSDT) version 17.2 or later, but do not require SQL Server 2017 or SQL Server 2016. When you deploy packages to Azure, the Package Deployment Wizard always upgrades the packages to the latest package format.
+
+## 2016 improvements by category  
   
 -   **Manageability**  
   

@@ -90,46 +90,19 @@ If *startdate* and *enddate* are of different date data types and one has more t
   
 ## datepart boundaries
 The following statements have the same *startdate* and the same *endate*. Those dates are adjacent and differ in time by .0000001 second. The difference between the *startdate* and *endate* in each statement crosses one calendar or time boundary of its *datepart*. Each statement returns 1. If different years are used for this example and if both *startdate* and *endate* are in the same calendar week, the return value for **week** would be 0.
-  
-`SELECT DATEDIFF_BIG(year, '2005-12-31 23:59:59.9999999'`
-  
-`, '2006-01-01 00:00:00.0000000');`
-  
-`SELECT DATEDIFF_BIG(quarter, '2005-12-31 23:59:59.9999999'`
-  
-`, '2006-01-01 00:00:00.0000000');`
-  
-`SELECT DATEDIFF_BIG(month, '2005-12-31 23:59:59.9999999'`
-  
-`, '2006-01-01 00:00:00.0000000');`
-  
-`SELECT DATEDIFF_BIG(dayofyear, '2005-12-31 23:59:59.9999999'`
-  
-`, '2006-01-01 00:00:00.0000000');`
-  
-`SELECT DATEDIFF_BIG(day, '2005-12-31 23:59:59.9999999'`
-  
-`, '2006-01-01 00:00:00.0000000');`
-  
-`SELECT DATEDIFF_BIG(week, '2005-12-31 23:59:59.9999999'`
-  
-`, '2006-01-01 00:00:00.0000000');`
-  
-`SELECT DATEDIFF_BIG(hour, '2005-12-31 23:59:59.9999999'`
-  
-`, '2006-01-01 00:00:00.0000000');`
-  
-`SELECT DATEDIFF_BIG(minute, '2005-12-31 23:59:59.9999999'`
-  
-`, '2006-01-01 00:00:00.0000000');`
-  
-`SELECT DATEDIFF_BIG(second, '2005-12-31 23:59:59.9999999'`
-  
-`, '2006-01-01 00:00:00.0000000');`
-  
-`SELECT DATEDIFF_BIG(millisecond, '2005-12-31 23:59:59.9999999'`
-  
-`, '2006-01-01 00:00:00.0000000');`
+
+```sql
+SELECT DATEDIFF_BIG(year, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
+SELECT DATEDIFF_BIG(quarter, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
+SELECT DATEDIFF_BIG(month, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
+SELECT DATEDIFF_BIG(dayofyear, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
+SELECT DATEDIFF_BIG(day, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
+SELECT DATEDIFF_BIG(week, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
+SELECT DATEDIFF_BIG(hour, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
+SELECT DATEDIFF_BIG(minute, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
+SELECT DATEDIFF_BIG(second, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
+SELECT DATEDIFF_BIG(millisecond, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
+```
   
 ## Remarks  
 DATEDIFF_BIG can be used in the select list, WHERE, HAVING, GROUP BY and ORDER BY clauses.

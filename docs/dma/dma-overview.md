@@ -1,7 +1,7 @@
 ---
 title: "Overview of Data Migration Assistant (SQL Server) | Microsoft Docs"
 ms.custom: 
-ms.date: "09/08/2017"
+ms.date: "10/04/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -79,7 +79,7 @@ DMA replaces all previous versions of SQL Server Upgrade Advisor and should be u
 
 ## Installation
 
-To install DMA, download the latest version of the [tool](https://www.microsoft.com/download/details.aspx?id=53595) from the Microsoft Download Center, and then run the **DataMigrationAssistant.msi** file.
+To install DMA, download the latest version of the tool from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53595), and then run the **DataMigrationAssistant.msi** file.
 
 ## See also
 

@@ -154,7 +154,7 @@ At this point both instances of SQL Server are configured to run with the databa
 4. **Install the FCI resource agent for SQL Server**. Run the following commands on both nodes:
 
     ```bash
-    sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server.repo
+    sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017.repo
     sudo zypper --gpg-auto-import-keys refresh
     sudo zypper install mssql-server-ha
     ```

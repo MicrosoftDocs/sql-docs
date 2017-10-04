@@ -34,8 +34,8 @@ manager: "jhubbard"
 |[- &#40;Subtract&#41; &#40;SSIS Expression&#41;](../../integration-services/expressions/subtract-ssis-expression.md)|Subtracts the second numeric expression from the first one.|  
 |[- &#40;Negate&#41; &#40;SSIS Expression&#41;](../../integration-services/expressions/negate-ssis-expression.md)|Negates a numeric expression.|  
 |[&#42; &#40;Multiply&#41; &#40;SSIS Expression&#41;](../../integration-services/expressions/multiply-ssis-expression.md)|Multiplies two numeric expressions.|  
-|[/Divide &#40;SSIS Expression&#41;](../../integration-services/expressions/divide-ssis-expression.md)|Divides the first numeric expression by the second one.|  
-|[&#40;Modulo&#41; &#40;SSIS Expression&#41;](../../integration-services/expressions/modulo-ssis-expression.md)|Provides the integer remainder after dividing the first numeric expression by the second one.|  
+|[/ (Divide) &#40;SSIS Expression&#41;](../../integration-services/expressions/divide-ssis-expression.md)|Divides the first numeric expression by the second one.|  
+|[% &#40;Modulo&#41; &#40;SSIS Expression&#41;](../../integration-services/expressions/modulo-ssis-expression.md)|Provides the integer remainder after dividing the first numeric expression by the second one.|  
 |[&#124;&#124; &#40;Logical OR&#41; &#40;SSIS Expression&#41;](../../integration-services/expressions/logical-or-ssis-expression.md)|Performs a logical OR operation.|  
 |[&& &#40;Logical AND&#41; &#40;SSIS Expression&#41;](../../integration-services/expressions/logical-and-ssis-expression.md)|Performs a logical AND operation.|  
 |[\! &#40;Logical Not&#41; &#40;SSIS Expression&#41;](../../integration-services/expressions/logical-not-ssis-expression.md)|Negates a Boolean operand.|  

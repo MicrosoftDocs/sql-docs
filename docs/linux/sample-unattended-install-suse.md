@@ -59,7 +59,7 @@ then
 fi
 
 echo Adding Microsoft repositories...
-sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server.repo
+sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017.repo
 sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/prod.repo 
 sudo zypper --gpg-auto-import-keys refresh
 

@@ -4,7 +4,7 @@ description: This topic contains the release notes and supported features for SQ
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 10/02/2017
+ms.date: 10/04/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine

@@ -1,7 +1,7 @@
 ---
 title: "SQL Server data files in Microsoft Azure | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/04/2017"
+ms.date: "10/02/2017"
 ms.prod: 
  - "sql-server-2016"
  - "sql-server-2017"

@@ -21,7 +21,7 @@ manager: "erikre"
   Calculated columns, in tabular models, enable you to add new data to your model. Instead of pasting or importing values into the column, you create a DAX formula that defines the column’s row level values. The calculated column can then be used in a report, PivotTable, or PivotChart as would any other column.  
   
 > [!NOTE]  
->  Calculated columns are not supported for tabular models in DirectQuery mode. For more information, see [DirectQuery Mode](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md).  
+>  Calculated columns are not supported for tabular models in the 1103 compatibility mode in DirectQuery mode. For more information, see [DirectQuery Mode](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md). However for models in the 1200 Compatibility mode or greater they are supported with some caveats see [DAX formula compatibility in DirectQuery mode SSAS 2016](dax-formula-compatibility-in-directquery-mode-ssas-2016) 
   
   
 ##  <a name="bkmk_understanding"></a> Benefits  

@@ -1,7 +1,7 @@
 ---
 title: "The Transaction Log (SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/01/2017"
+ms.date: "10/03/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -22,10 +22,13 @@ manager: "jhubbard"
 # The Transaction Log (SQL Server)
   Every SQL Server database has a transaction log that records all transactions and the database modifications made by each transaction.
   
-The transaction log is a critical component of the database. If there is a system failure, you will need that log to bring your database back to a consistent state. Never delete or move this log unless you fully understand the ramifications of doing so. 
+The transaction log is a critical component of the database. If there is a system failure, you will need that log to bring your database back to a consistent state. 
 
-  
- > **Fun fact!** Known good points from which to begin applying transaction logs during database recovery are created by checkpoints. For more information, see [Database Checkpoints (SQL Server)](../../relational-databases/logs/database-checkpoints-sql-server.md).  
+> [!IMPORTANT] 
+> Never delete or move this log unless you fully understand the ramifications of doing so. 
+
+> [!TIP]
+> Known good points from which to begin applying transaction logs during database recovery are created by checkpoints. For more information, see [Database Checkpoints (SQL Server)](../../relational-databases/logs/database-checkpoints-sql-server.md).  
   
 ## Operations supported by the transaction log  
  The transaction log supports the following operations:  
@@ -67,9 +70,9 @@ In a database mirroring scenario, every update to a database, the principal data
 ##  <a name="Characteristics"></a>Transaction Log characteristics
 
 Characteristics of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] transaction log: 
--  The transaction log is implemented as a separate file or set of files in the database. The log cache is managed separately from the buffer cache for data pages, which results in simple, fast, and robust code within the Database Engine.
+-  The transaction log is implemented as a separate file or set of files in the database. The log cache is managed separately from the buffer cache for data pages, which results in simple, fast, and robust code within the Database Engine. For more information, see [Transaction Log Physical Architecture](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch).
 -  The format of log records and pages is not constrained to follow the format of data pages.
--  The transaction log can be implemented in several files. The files can be defined to expand automatically by setting the FILEGROWTH value for the log. This reduces the potential of running out of space in the transaction log, while at the same time reducing administrative overhead. For more information, see [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md).
+-  The transaction log can be implemented in several files. The files can be defined to expand automatically by setting the FILEGROWTH value for the log. This reduces the potential of running out of space in the transaction log, while at the same time reducing administrative overhead. For more information, see [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).
 -  The mechanism to reuse the space within the log files is quick and has minimal effect on transaction throughput.
 
 ##  <a name="Truncation"></a> Transaction log truncation  
@@ -85,12 +88,14 @@ Characteristics of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.
   
  For more information, see [Factors That Can Delay Log Truncation](#FactorsThatDelayTruncation), later in this topic.  
   
-> **NOTE!** Log truncation does not reduce the size of the physical log file. To reduce the physical size of a physical log file, you must shrink the log file. For information about shrinking the size of the physical log file, see [Manage the Size of the Transaction Log File](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md).  
+> [!NOTE]
+> Log truncation does not reduce the size of the physical log file. To reduce the physical size of a physical log file, you must shrink the log file. For information about shrinking the size of the physical log file, see [Manage the Size of the Transaction Log File](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md).  
   
 ##  <a name="FactorsThatDelayTruncation"></a> Factors that can delay log truncation  
  When log records remain active for a long time, transaction log truncation is delayed, and the transaction log can fill up, as we mentioned earlier in this long topic.  
   
-> **IMPORTANT!!** For information about how to respond to a full transaction log, see [Troubleshoot a Full Transaction Log &#40;SQL Server Error 9002&#41;](../../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md).  
+> [!IMPORTANT}
+> For information about how to respond to a full transaction log, see [Troubleshoot a Full Transaction Log &#40;SQL Server Error 9002&#41;](../../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md).  
   
  Really, Log truncation can be delayed by a variety of reasons. Learn what, if anything, is preventing your log truncation by querying the **log_reuse_wait** and **log_reuse_wait_desc** columns of the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view. The following table describes the values of these columns.  
   
@@ -115,9 +120,11 @@ Characteristics of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.
 ##  <a name="MinimallyLogged"></a> Operations that can be minimally logged  
  *Minimal logging* involves logging only the information that is required to recover the transaction without supporting point-in-time recovery. This topic identifies the operations that are minimally logged under the bulk-logged [recovery model](../backup-restore/recovery-models-sql-server.md) (as well as under the simple recovery model, except when a backup is running).  
   
-> **NOTE!!** Minimal logging is not supported for memory-optimized tables.  
+> [!NOTE]
+> Minimal logging is not supported for memory-optimized tables.  
   
-> **ANOTHER NOTE!** Under the full [recovery model](../backup-restore/recovery-models-sql-server.md), all bulk operations are fully logged. However, you can minimize logging for a set of bulk operations by switching the database to the bulk-logged recovery model temporarily for bulk operations. Minimal logging is more efficient than full logging, and it reduces the possibility of a large-scale bulk operation filling the available transaction log space during a bulk transaction. However, if the database is damaged or lost when minimal logging is in effect, you cannot recover the database to the point of failure.  
+> [!NOTE]
+> Under the full [recovery model](../backup-restore/recovery-models-sql-server.md), all bulk operations are fully logged. However, you can minimize logging for a set of bulk operations by switching the database to the bulk-logged recovery model temporarily for bulk operations. Minimal logging is more efficient than full logging, and it reduces the possibility of a large-scale bulk operation filling the available transaction log space during a bulk transaction. However, if the database is damaged or lost when minimal logging is in effect, you cannot recover the database to the point of failure.  
   
  The following operations, which are fully logged under the full recovery model, are minimally logged under the simple and bulk-logged recovery model:  
   
@@ -133,7 +140,8 @@ When transactional replication is enabled, SELECT INTO operations are fully logg
   
 -   [WRITETEXT](../../t-sql/queries/writetext-transact-sql.md) and [UPDATETEXT](../../t-sql/queries/updatetext-transact-sql.md) statements when inserting or appending new data into the **text**, **ntext**, and **image** data type columns. Note that minimal logging is not used when existing values are updated.  
   
-    >  The WRITETEXT and UPDATETEXT statements are **deprecated**; avoid using them in new applications.  
+    > [!IMPORTANT]
+    > The WRITETEXT and UPDATETEXT statements are **deprecated**; avoid using them in new applications.  
   
 -   If the database is set to the simple or bulk-logged recovery model, some index DDL operations are minimally logged whether the operation is executed offline or online. The minimally logged index operations are as follows:  
   
@@ -141,7 +149,8 @@ When transactional replication is enabled, SELECT INTO operations are fully logg
   
     -   [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) REBUILD or DBCC DBREINDEX operations.  
   
-        > The **DBCC DBREINDEX statement** is **deprecated**; Dont use it in new applications.  
+        > [!IMPORTANT]
+        > The **DBCC DBREINDEX statement** is **deprecated**; Do not use it in new applications.  
   
     -   DROP INDEX new heap rebuild (if applicable). (Index page deallocation during a [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) operation is **always** fully logged.)
   

@@ -43,9 +43,6 @@ SQL Server 2017 has the following system requirements for Linux:
 | **Processor cores** | 2 cores |
 | **Processor type** | x64-compatible only |
 
-> [!NOTE]
-> SQL Server Engine has been tested up to 1 TB of memory at this time.
-
 If you use **Network File System (NFS)** remote shares in production, note the following support requirements:
 
 - Use NFS version **4.2 or higher**. Older versions of NFS do not support required features, such as fallocate and sparse file creation, common to modern file systems.

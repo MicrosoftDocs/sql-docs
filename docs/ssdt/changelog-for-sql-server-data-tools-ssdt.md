@@ -50,6 +50,12 @@ Build number: NEEDED
  
    To work around this issue, click **Use solution binding**  every time the solution is opened.
 
+- After upgrading your project to the new MSBuild format, save may fail with a message similar to the following:
+
+   *"Parameter "unevaluatedValue" cannot be null."*
+
+   To work around this issue, please update your *Project Configurations* and populate the *Platform* property.
+
 ### Bug Fixes
 
 **Analysis Services (AS)**

@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "Web references [Reporting Services]"
 ms.assetid: 4eac4e40-dafb-4403-acde-13df317c8ec8
 caps.latest.revision: 36
-author: "sabotta"
-ms.author: "carlasab"
+author: "guyinacube"
+ms.author: "asaxton"
 manager: "erikre"
 ---
 # Setting the Url Property of the Web Service

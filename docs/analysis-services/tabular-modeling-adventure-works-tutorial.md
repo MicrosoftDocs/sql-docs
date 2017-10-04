@@ -1,7 +1,7 @@
 ---
 title: "Tabular Modeling (Adventure Works Tutorial) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/27/2017"
+ms.date: "04/19/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -23,8 +23,12 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Tabular Modeling (Adventure Works Tutorial)
+[!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
+
 This tutorial provides lessons on how to create an Analysis Services tabular model at the [1200 compatibility level](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md) by using [SQL Server Data Tools (SSDT)](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt), and deploy your model to an Analysis Services server on-premises or in Azure.  
-  
+ 
+If you are using SQL Server 2017 or Azure Analysis Services, and you want to create your model at the 1400 compatibility level, use the [Azure Analysis Services - Adventure Works tutorial](https://review.docs.microsoft.com/azure/analysis-services/tutorials/aas-adventure-works-tutorial?branch=master). This updated version uses the new, modern Get Data feature to connect and import source data, and uses the M language to configure partitions.
+ 
   
 ## What you'll learn   
   
@@ -58,7 +62,7 @@ This tutorial does not provide lessons or information about managing a deployed 
 ## Prerequisites  
 In order to complete this tutorial, you'll need the following prerequisites:  
   
--   The latest version of [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. [Get the latest version](https://msdn.microsoft.com/library/mt204009.aspx).
+-   The latest version of [!INCLUDE[ssBIDevStudioFull](../ssdt/download-sql-server-data-tools-ssdt.md).
 
 -   The latest version of SQL Server Management Studio. [Get the latest version](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms). 
   

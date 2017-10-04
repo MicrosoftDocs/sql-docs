@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_exec_query_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/16/2017"
+ms.date: "08/21/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -25,7 +25,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # sys.dm_exec_query_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Returns aggregate performance statistics for cached query plans in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The view contains one row per query statement within the cached plan, and the lifetime of the rows are tied to the plan itself. When a plan is removed from the cache, the corresponding rows are eliminated from this view.  
   
@@ -73,8 +73,8 @@ manager: "jhubbard"
 |**last_rows**|**bigint**|Number of rows returned by the last execution of the query. Cannot be null.<br /><br /> Will always be 0 when a natively compiled stored procedure queries a memory-optimized table.|  
 |**min_rows**|**bigint**|Minimum number of rows returned by the query over the number of times that the plan has been executed since it was last compiled. Cannot be null.<br /><br /> Will always be 0 when a natively compiled stored procedure queries a memory-optimized table.|  
 |**max_rows**|**bigint**|Maximum number of rows returned by the query over the number of times that the plan has been executed since it was last compiled. Cannot be null.<br /><br /> Will always be 0 when a natively compiled stored procedure queries a memory-optimized table.|  
-|**statement_sql_handle**|**varbinary(64)**|**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Reserved for future use.|  
-|**statement_context_id**|**bigint**|**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Reserved for future use.|  
+|**statement_sql_handle**|**varbinary(64)**|**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Populated with non-NULL values only if Query Store is turned on and collecting the stats for that particular query.|  
+|**statement_context_id**|**bigint**|**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Populated with non-NULL values only if Query Store is turned on and collecting the stats for that particular query.|  
 |**total_dop**|**bigint**|The total sum of degree of parallelism this plan used since it was compiled. It will always be 0 for querying a memory-optimized table.<br /><br /> **Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
 |**last_dop**|**bigint**|The degree of parallelism when this plan ran last time. It will always be 0 for querying a memory-optimized table.<br /><br /> **Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
 |**min_dop**|**bigint**|The minimum degree of parallelism this plan ever used during one run.  It will always be 0 for querying a memory-optimized table.<br /><br /> **Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  

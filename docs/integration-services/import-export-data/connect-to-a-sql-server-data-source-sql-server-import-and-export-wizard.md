@@ -24,6 +24,9 @@ This topic shows you how to connect to a **Microsoft SQL Server** data source fr
 ## Connect to SQL Server with the .NET Framework Data Provider for SQL Server 
 After you select **.NET Framework Data Provider for SQL Server** on the **Choose a Data Source** or **Choose a Destination** page of the wizard, the page displays a grouped list of options for the provider. Many of these are unfriendly names and unfamiliar settings. Fortunately, to connect to any enterprise database, you typically have to provide only a few pieces of information. You can ignore the default values for the other settings.
 
+> [!NOTE]
+> The connection options for this data provider are the same whether SQL Server is your source or your destination. That is, the options you see are the same on both the **Choose a Data Source** and the **Choose a Destination** pages of the wizard.
+
 |Required info|.Net Framework Data Provider for SQL Server property|
 |---|---|
 |Server name|**Data Source**|
@@ -32,10 +35,11 @@ After you select **.NET Framework Data Provider for SQL Server** on the **Choose
 
 ![Connect to SQL with .NET provider](../../integration-services/import-export-data/media/connect-to-sql-with-net-provider.jpg)
 
+### Options to specify (.NET Framework Data Provider for SQL Server)
+
 > [!NOTE]
 > The connection options for this data provider are the same whether SQL Server is your source or your destination. That is, the options you see are the same on both the **Choose a Data Source** and the **Choose a Destination** pages of the wizard.
 
-### Options to specify (.NET Framework Data Provider for SQL Server)
 **Data Source**  
  Enter the name or IP address of the source or destination server, or select a server from the drop-down list.  
  
@@ -64,6 +68,10 @@ Here's the generic screen that you see immediately after selecting the .NET Fram
 ![Connect to SQL with ODBC before](../../integration-services/import-export-data/media/connect-to-sql-with-odbc-before.jpg)
 
 ### Options to specify (ODBC driver for SQL Server)
+
+> [!NOTE]
+> The connection options for the ODBC driver are the same whether SQL Server is your source or your destination. That is, the options you see are the same on both the **Choose a Data Source** and the **Choose a Destination** pages of the wizard.
+
 To connect to SQL Server with the latest ODBC driver, assemble a connection string that includes the following settings and their values. The format of a complete connection string immediately follows the list of settings.
 
 > [!TIP]
@@ -100,9 +108,6 @@ The following example uses this connection string.
 Here's the screen that you see after entering the connection string.
 
 ![Connect to SQL with ODBC after](../../integration-services/import-export-data/media/connect-to-sql-with-odbc-after.jpg)
-
-> [!NOTE]
-> The connection options for this data provider and ODBC driver are the same whether SQL Server is your source or your destination. That is, the options you see are the same on both the **Choose a Data Source** and the **Choose a Destination** pages of the wizard.
 
 ## Connect to SQL Server with the Microsoft OLE DB Provider for SQL Server or SQL Server Native Client
 

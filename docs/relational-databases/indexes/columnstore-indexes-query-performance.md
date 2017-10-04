@@ -110,13 +110,17 @@ manager: "jhubbard"
  ¹Applies to SQL Server 2016, SQL Database V12 Premium Edition, and SQL Data Warehouse    
     
 ### Aggregate Pushdown    
- A normal execution path for aggregate computation to fetch the qualifying rows from the SCAN  node and aggregate the values in Batch Mode.  While this delivers good performance,     but with SQL Server 2016, the aggregate operation can be pushed to the SCAN node  to improve  the performance of aggregate computation by orders of magnitude on top of Batch Mode execution provided the following conditions are met    
-    
--   Supported aggregate operators are MIN, MAX, SUM, COUNT, AVG    
-    
--   Any datatype <= 64 bits is supported.  For example,  bigint is supported as its size is 8 bytes but decimal (38,6) is not because its size is 17 bytes. Also, no string types are supported    
-    
--   Aggregate operator must be on top of SCAN node or SCAN node with group by    
+ A normal execution path for aggregate computation to fetch the qualifying rows from the SCAN  node and aggregate the values in Batch Mode.  While this delivers good performance,     but with SQL Server 2016, the aggregate operation can be pushed to the SCAN node  to improve  the performance of aggregate computation by orders of magnitude on top of Batch Mode execution provided the following conditions are met 
+ 
+-	 The aggregates are MIN, MAX, SUM, COUNT and COUNT(*). 
+-  Aggregate operator must be on top of SCAN node or SCAN node with group by.
+-  This aggregate is not a distinct aggregate.
+-  The aggregate column is not a string column.
+-  The aggregate column is not a virtual column. 
+-  The input and output datatype must be one of the following and must fit within 64 bits.
+    -  Tiny int, int, big int, small int, bit
+    -  Small money, money, decimal and numeric which has precision <= 18
+    -  Small date, date, datetime, datetime2, time
     
  Aggregate push down is further accelerated by efficient Aggregation on compressed/encoded data in cache-friendly execution and by leveraging SIMD    
     

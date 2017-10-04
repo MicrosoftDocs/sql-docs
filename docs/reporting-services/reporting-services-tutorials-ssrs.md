@@ -1,7 +1,7 @@
 ---
 title: "Reporting Services Tutorials (SSRS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/27/2016"
+ms.date: "05/25/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -21,6 +21,9 @@ ms.author: "maggies"
 manager: "erikre"
 ---
 # Reporting Services Tutorials (SSRS)
+
+[!INCLUDE[ssrs-appliesto-sql2016-preview](../includes/ssrs-appliesto-sql2016-preview.md)]
+
 Explore the capabilities of [!INCLUDE[ssRSCurrent_md](../includes/ssrscurrent-md.md)], [!INCLUDE[ssBIDevStudioFull_md](../includes/ssbidevstudiofull-md.md)], and Report Builder with sample data in these tutorials.  
   
   

@@ -1,4 +1,6 @@
 # [Overview](analysis-services-language-reference.md)  
+# [New and recently updated articles](new-updated-mdx.md)
+
 # [Multidimensional Expressions (MDX) Reference](multidimensional-expressions-mdx-reference.md)  
 ## [MDX Syntax Elements](mdx-syntax-elements-mdx.md)  
 ### [Identifiers](identifiers-mdx.md)  
@@ -241,4 +243,5 @@
 #### [Wtd](wtd-mdx.md)  
 #### [Ytd](ytd-mdx.md)  
 ### [MDX Reserved Words](mdx-reserved-words.md)  
+
 # [VBA functions in MDX and DAX](vba-functions-in-mdx-and-dax.md)  

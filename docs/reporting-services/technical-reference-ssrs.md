@@ -1,7 +1,7 @@
 ---
 title: "Technical Reference (SSRS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "05/30/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -21,8 +21,10 @@ author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
 ---
+
 # Technical Reference (SSRS)
-  Find the tools and PowerShell reference documentation for using or administering [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
+
+  Find the tools and PowerShell reference documentation for using or administering SQL Server Reporting Services.  
   
  ![Small File Folder Icon](../analysis-services/media/filefolder-small.png "Small File Folder Icon") **Errors and Events**  
  [Cause and Resolution of Reporting Services Errors](../reporting-services/troubleshooting/cause-and-resolution-of-reporting-services-errors.md)  
@@ -49,9 +51,5 @@ manager: "erikre"
   
  ![Small File Folder Icon](../analysis-services/media/filefolder-small.png "Small File Folder Icon") **Reporting Services WMI Provider Class Library**  
  [Reporting Services WMI Provider Library Reference &#40;SSRS&#41;](../reporting-services/wmi-provider-library-reference/reporting-services-wmi-provider-library-reference-ssrs.md)  
-  
-## See Also  
- [TechNet wiki articles about Toubleshooting Reporting Services](http://go.microsoft.com/fwlink/?LinkID=209153)   
- [TechNet wiki artilces about Toubleshooting Reporting Services SharePoint mode](http://go.microsoft.com/fwlink/?LinkID=209158)  
-  
-  
+
+More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)

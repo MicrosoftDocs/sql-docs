@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "extensions [Reporting Services], custom security"
 ms.assetid: d2327e7c-0d48-49e3-bcd9-3bba4e67a68b
 caps.latest.revision: 40
-author: "sabotta"
-ms.author: "carlasab"
+author: "guyinacube"
+ms.author: "asaxton"
 manager: "erikre"
 ---
 # Implementing a Security Extension

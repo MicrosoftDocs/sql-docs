@@ -13,7 +13,7 @@ ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
 caps.latest.revision: 44
 author: "MightyPen"
 ms.author: "genemi"
-manager: "jhubbard"
+manager: "craigg"
 ---
 # SQL Server Managed Backup to Microsoft Azure
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -105,6 +105,10 @@ manager: "jhubbard"
  For a database, if there is an existing full database backup job running, then [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] waits for the current job to be completed before doing another full database backup for the same database. Similarly, only one transaction log backup can be running at a given time. However, a full database backup and a transaction log backup can run concurrently. Failures are logged as Extended Events.  
   
  If more than 10 concurrent full database backups are scheduled, a warning is issued through the debug channel of Extended Events. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] then maintains a priority queue for the remaining databases that require a backup until the all backups are scheduled and completed.  
+
+> [!NOTE]
+> SQL Server Managed Backup is not supported with proxy servers.
+>
   
 ##  <a name="support_limits"></a> Supportability  
  The following support limitations and considerations are specific to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]:  

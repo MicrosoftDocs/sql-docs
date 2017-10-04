@@ -1,7 +1,7 @@
 ---
 title: "Bulk Import and Export of Data (SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/28/2016"
+ms.date: "06/20/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -44,13 +44,13 @@ manager: "jhubbard"
 |[bcp utility](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)|A command-line utility (Bcp.exe) that bulk exports and bulk imports data and generates format files.|Yes|Yes|  
 |[BULK INSERT statement](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)|A [!INCLUDE[tsql](../../includes/tsql-md.md)] statement that imports data directly from a data file into a database table or nonpartitioned view.|Yes|No|  
 |[INSERT ... SELECT * FROM OPENROWSET(BULK...) statement](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)|A [!INCLUDE[tsql](../../includes/tsql-md.md)] statement that uses the OPENROWSET bulk rowset provider to bulk import data into a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table by specifying the OPENROWSET(BULK…) function to select data in an INSERT statement.|Yes|No| 
-|[SQL Server Import and Export Wizard](https://msdn.microsoft.com/library/ms141209.aspx)|The wizard creates simple packages that import and export data between many popular data formats including databases, spreadsheets, and text files.|Yes|Yes|  
+|[SQL Server Import and Export Wizard](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)|The wizard creates simple packages that import and export data between many popular data formats including databases, spreadsheets, and text files.|Yes|Yes|  
   
 > [!IMPORTANT]
 > Comma-separated value (CSV) files are not supported by SQL Server bulk-import operations. However, in some cases you can use a CSV file  as the data file for a bulk import of data into SQL Server. Note that the field terminator of a CSV file does not have to be a comma. For more information, see [Prepare Data for Bulk Export or Import (SQL Server)](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md).
 
 > [!NOTE]
-> Only the bcp utility is suppported by Azure SQL Database and Azure SQL DW for importing and exporting delimited files.
+> Only the bcp utility is supported by Azure SQL Database and Azure SQL DW for importing and exporting delimited files.
   
 ##  <a name="FFs"></a> Format files  
  The [bcp utility](../../tools/bcp-utility.md), [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md), and [INSERT ... SELECT * FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) all support the use of a specialized *format file* that stores format information for each field in a data file. A format file might also contain information about the corresponding [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table. The format file can be used to provide all the format information that is required to bulk export data from and bulk import data to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

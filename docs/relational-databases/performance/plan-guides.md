@@ -36,12 +36,12 @@ manager: "jhubbard"
 ## Types of Plan Guides  
  The following types of plan guides can be created.  
   
- OBJECT plan guide  
+ ### OBJECT plan guide  
  An OBJECT plan guide matches queries that execute in the context of [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedures, scalar user-defined functions, multi-statement table-valued user-defined functions, and DML triggers.  
   
- Suppose the following stored procedure, which takes the `@Country`_`region` parameter, is in a database application that is deployed against the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database:  
+ Suppose the following stored procedure, which takes the `@Country_region` parameter, is in a database application that is deployed against the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database:  
   
-```  
+```t-sql  
 CREATE PROCEDURE Sales.GetSalesOrderByCountry (@Country_region nvarchar(60))  
 AS  
 BEGIN  
@@ -54,11 +54,11 @@ BEGIN
 END;  
 ```  
   
- Assume that this stored procedure has been compiled and optimized for `@Country`_`region = N'AU'` (Australia). However, because there are relatively few sales orders that originate from Australia, performance decreases when the query executes using parameter values of countries with more sales orders. Because the most sales orders originate in the United States, a query plan that is generated for `@Country`\_`region = N'US'` would likely perform better for all possible values of the `@Country`\_`region` parameter.  
+ Assume that this stored procedure has been compiled and optimized for `@Country_region = N'AU'` (Australia). However, because there are relatively few sales orders that originate from Australia, performance decreases when the query executes using parameter values of countries with more sales orders. Because the most sales orders originate in the United States, a query plan that is generated for `@Country_region = N'US'` would likely perform better for all possible values of the `@Country_region` parameter.  
   
  You could address this problem by modifying the stored procedure to add the `OPTIMIZE FOR` query hint to the query. However, because the stored procedure is in a deployed application, you cannot directly modify the application code. Instead, you can create the following plan guide in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.  
   
-```  
+```t-sql  
 sp_create_plan_guide   
 @name = N'Guide1',  
 @stmt = N'SELECT *FROM Sales.SalesOrderHeader AS h,  
@@ -75,16 +75,16 @@ sp_create_plan_guide
   
  When the query specified in the `sp_create_plan_guide` statement executes, the query is modified before optimization to include the `OPTIMIZE FOR (@Country = N''US'')` clause.  
   
- SQL plan guide  
+ ### SQL plan guide  
  An SQL plan guide matches queries that execute in the context of stand-alone [!INCLUDE[tsql](../../includes/tsql-md.md)] statements and batches that are not part of a database object. SQL-based plan guides can also be used to match queries that parameterize to a specified form. SQL plan guides apply to stand-alone [!INCLUDE[tsql](../../includes/tsql-md.md)] statements and batches. Frequently, these statements are submitted by an application by using the [sp_executesql](../../relational-databases/system-stored-procedures/sp-executesql-transact-sql.md) system stored procedure. For example, consider the following stand-alone batch:  
   
-```  
+```t-sql  
 SELECT TOP 1 * FROM Sales.SalesOrderHeader ORDER BY OrderDate DESC;  
 ```  
   
  To prevent a parallel execution plan from being generated on this query, create the following plan guide and set the `MAXDOP` query hint to `1` in the `@hints` parameter.  
   
-```  
+```t-sql  
 sp_create_plan_guide   
 @name = N'Guide2',   
 @stmt = N'SELECT TOP 1 * FROM Sales.SalesOrderHeader ORDER BY OrderDate DESC',  
@@ -99,25 +99,28 @@ sp_create_plan_guide
   
  SQL plan guides can also be created on queries that parameterize to the same form when the PARAMETERIZATION database option is SET to FORCED, or when a TEMPLATE plan guide is created specifying that a parameterized class of queries.  
   
- TEMPLATE plan guide  
+ ### TEMPLATE plan guide  
  A TEMPLATE plan guide matches stand-alone queries that parameterize to a specified form. These plan guides are used to override the current PARAMETERIZATION database SET option of a database for a class of queries.  
   
  You can create a TEMPLATE plan guide in either of the following situations:  
   
--   The PARAMETERIZATION database option is SET to FORCED, but there are queries you want compiled according to the rules of simple parameterization.  
+-   The PARAMETERIZATION database option is SET to FORCED, but there are queries you want compiled according to the rules of [Simple Parameterization](../../relational-databases/query-processing-architecture-guide.md#SimpleParam).  
   
--   The PARAMETERIZATION database option is SET to SIMPLE (the default setting), but you want forced parameterization to be tried on a class of queries.  
+-   The PARAMETERIZATION database option is SET to SIMPLE (the default setting), but you want [Forced Parameterization](../../relational-databases/query-processing-architecture-guide.md#ForcedParam) to be tried on a class of queries.  
   
 ## Plan Guide Matching Requirements  
  Plan guides are scoped to the database in which they are created. Therefore, only plan guides that are in the database that is current when a query executes can be matched to the query. For example, if [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] is the current database and the following query executes:  
   
- `SELECT FirstName, LastName FROM Person.Person;`  
+ ```t-sql
+ SELECT FirstName, LastName FROM Person.Person;
+ ```  
   
  Only plan guides in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database are eligible to be matched to this query. However, if [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] is the current database and the following statements are run:  
   
- `USE DB1;`  
-  
- `SELECT FirstName, LastName FROM Person.Person;`  
+ ```t-sql
+ USE DB1; 
+ SELECT FirstName, LastName FROM Person.Person;
+ ```  
   
  Only plan guides in `DB1` are eligible to be matched to the query because the query is executing in the context of `DB1`.  
   

@@ -1,5 +1,6 @@
 # [Deploy Integration Services (SSIS) Projects and Packages](deploy-integration-services-ssis-projects-and-packages.md)  
-## [Legacy Package Deployment (SSIS)](legacy-package-deployment-ssis.md)  
+# [Legacy Package Deployment (SSIS)](legacy-package-deployment-ssis.md)  
+
 # [Run Integration Services (SSIS) Packages](run-integration-services-ssis-packages.md)  
 ## [Execute Package Utility (dtexecui)](execute-package-utility-dtexecui-ui-reference.md)  
 ## [dtexec Utility](dtexec-utility.md)  

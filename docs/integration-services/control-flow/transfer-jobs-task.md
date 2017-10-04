@@ -11,6 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "sql13.dts.designer.transferjobstask.f1"
+  - "sql13.dts.designer.transferjobstask.general.f1"
+  - "sql13.dts.designer.transferjobstask.jobs.f1"
 helpviewer_keywords: 
   - "Transfer Jobs task [Integration Services]"
 ms.assetid: 1bf33885-9c5b-47e4-a549-f5920b66a1de
@@ -58,11 +60,7 @@ manager: "jhubbard"
 ## Configuration of the Transfer Jobs Task  
  You can set properties through [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer or programmatically.  
   
- For information about the properties that you can set in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click one of the following topics:  
-  
--   [Transfer Jobs Task Editor &#40;General Page&#41;](../../integration-services/control-flow/transfer-jobs-task-editor-general-page.md)  
-  
--   [Transfer Jobs Task Editor &#40;Jobs Page&#41;](../../integration-services/control-flow/transfer-jobs-task-editor-jobs-page.md)  
+ For information about the properties that you can set in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click the following topic:  
   
 -   [Expressions Page](../../integration-services/expressions/expressions-page.md)  
   
@@ -74,6 +72,74 @@ manager: "jhubbard"
  For more information about how to set these properties in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click the following topic:  
   
 -   [Set the Properties of a Task or Container](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+  
+## Transfer Jobs Task Editor (General Page)
+  Use the **General** page of the **Transfer Jobs Task Editor** dialog box to name and describe the Transfer Jobs task.  
+  
+> [!NOTE]  
+>  Only members of the **sysadmin** fixed server role or one of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent fixed database roles on the destination server can successfully create jobs there. To access jobs on the source server, users must be a member of at least the **SQLAgentUserRole** fixed database role there. For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent fixed database roles and their permissions, see [SQL Server Agent Fixed Database Roles](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+  
+### Options  
+ **Name**  
+ Type a unique name for the Transfer Jobs task. This name is used as the label in the task icon.  
+  
+> [!NOTE]  
+>  Task names must be unique within a package.  
+  
+ **Description**  
+ Type a description of the Transfer Jobs task.  
+  
+## Transfer Jobs Task Editor (Jobs Page)
+  Use the **Jobs** page of the **Transfer Jobs Task Editor** dialog box to specify properties for copying one or more [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent jobs from one instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to another.  
+  
+> [!NOTE]  
+>  To access jobs on the source server, users must be a member of at least the **SQLAgentUserRole** fixed database role on the server. To successfully create jobs on the destination server, the user must be a member of the **sysadmin** fixed server role or one of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent fixed database roles. For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent fixed database roles and their permissions, see [SQL Server Agent Fixed Database Roles](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+  
+### Options  
+ **SourceConnection**  
+ Select a SMO connection manager in the list, or click **\<New connection...>** to create a new connection to the source server.  
+  
+ **DestinationConnection**  
+ Select a SMO connection manager in the list, or click **\<New connection...>** to create a new connection to the destination server.  
+  
+ **TransferAllJobs**  
+ Select whether the task should copy all or only the specified [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent jobs from the source to the destination server.  
+  
+ This property has the options listed in the following table:  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**True**|Copy all jobs.|  
+|**False**|Copy only the specified jobs.|  
+  
+ **JobsList**  
+ Click the browse button **(…)** to select the jobs to copy. At least one job must be selected.  
+  
+> [!NOTE]  
+>  Specify the **SourceConnection** before selecting jobs to copy.  
+  
+ The **JobsList** option is unavailable when **TransferAllJobs** is set to **True**.  
+  
+ **IfObjectExists**  
+ Select how the task should handle jobs of the same name that already exist on the destination server.  
+  
+ This property has the options listed in the following table:  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**FailTask**|Task fails if jobs of the same name already exist on the destination server.|  
+|**Overwrite**|Task overwrites jobs of the same name on the destination server.|  
+|**Skip**|Task skips jobs of the same name that exist on the destination server.|  
+  
+ **EnableJobsAtDestination**  
+ Select whether the jobs copied to the destination server should be enabled.  
+  
+ This property has the options listed in the following table:  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**True**|Enable jobs on destination server.|  
+|**False**|Disable jobs on destination server.|  
   
 ## See Also  
  [Integration Services Tasks](../../integration-services/control-flow/integration-services-tasks.md)   

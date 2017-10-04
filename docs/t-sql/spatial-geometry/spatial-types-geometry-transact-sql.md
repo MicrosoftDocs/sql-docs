@@ -31,11 +31,6 @@ manager: "jhubbard"
  
  The error tolerance for the geometry methods can be as large as 1.0e-7 * extents. The extents refer to the approximate maximal distance between points of the **geometry**object.
   
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
-  
 ## Registering the geometry Type  
  The **geometry** type is predefined and available in each database. You can create table columns of type **geometry** and operate on **geometry** data in the same manner as you would use other CLR types. Can be used in persisted and non-persisted computed columns.  
   
@@ -44,7 +39,7 @@ manager: "jhubbard"
 ### A. Showing how to add and query geometry data  
  The following two examples show how to add and query geometry data. The first example creates a table with an identity column and a `geometry` column, `GeomCol1`. A third column renders the `geometry` column into its Open Geospatial Consortium (OGC) Well-Known Text (WKT) representation, and uses the `STAsText()` method. Two rows are then inserted: one row contains a `LineString` instance of `geometry`, and one row contains a `Polygon` instance.  
   
-```  
+```tsql 
 IF OBJECT_ID ( 'dbo.SpatialTable', 'U' ) IS NOT NULL   
     DROP TABLE dbo.SpatialTable;  
 GO  
@@ -66,7 +61,7 @@ GO
 ### B. Returning the intersection of two geometry instances  
  The second example uses the `STIntersection()` method to return the points where the two previously inserted `geometry` instances intersect.  
   
-```  
+```tsql  
 DECLARE @geom1 geometry;  
 DECLARE @geom2 geometry;  
 DECLARE @result geometry;  
@@ -80,7 +75,7 @@ SELECT @result.STAsText();
 ### C. Using geometry in a computed column  
  The following example creates a table with a persisted computed column using a **geometry** type.  
   
-```  
+```tsql  
 IF OBJECT_ID ( 'dbo.SpatialTable', 'U' ) IS NOT NULL   
     DROP TABLE dbo.SpatialTable;  
 GO  

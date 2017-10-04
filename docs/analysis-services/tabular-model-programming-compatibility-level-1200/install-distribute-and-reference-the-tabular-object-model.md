@@ -17,6 +17,9 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Install, distribute, and reference the Tabular Object Model
+
+[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
+
 This article explains how to download, reference, and redistribute Analysis Services Tabular Object Model (TOM), a C# library for creating and managing Tabular models and databases in managed code.  
   
 TOM is an extension of the AMO client library (Microsoft.AnalysisServices.dll) that ships with SQL Server 2016. It works with Tabular models targeting the Tabular metadata engine in the SQL Server 2016 release. To use TOM, the model and database must be at compatibility level 1200 or higher.  

@@ -2,7 +2,7 @@
 title: "Install Reporting Services | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "05/10/2017"
+ms.date: "07/02/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -19,7 +19,9 @@ manager: "erikre"
 ---
 # Install Reporting Services
 
-[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installation involves server components for storing report items, rendering reports, and processing of subscription and other report services.  The steps for a server installation are different for a native mode report server versus as SharePoint mode report server. This section includes detailed topics for installing and verifying core [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] scenarios.
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
+
+SQL Server Reporting Services installation involves server components for storing report items, rendering reports, and processing of subscription and other report services.  The steps for a server installation are different for a native mode report server versus as SharePoint mode report server. This section includes detailed topics for installing and verifying core [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] scenarios.
 
 > [!NOTE]
 > Looking for Power BI Report Server? See [Install Power BI Report Server](https://powerbi.microsoft.com/documentation/reportserver-install-report-server/).

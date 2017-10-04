@@ -2,7 +2,7 @@
 title: "Database-Level Roles | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "12/16/2016"
+ms.date: "06/29/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -65,7 +65,7 @@ For a list of all the permissions, see the [Database Engine Permissions](http://
 
 ## Fixed-Database Roles
   
- The following table shows the fixed-database roles and their capabilities. These roles exist in all databases. The permissions assigned to the fixed-database roles cannot be changed.   
+ The following table shows the fixed-database roles and their capabilities. These roles exist in all databases. Except for the **public** database role, the permissions assigned to the fixed-database roles cannot be changed.   
   
 |Fixed-Database role name|Description|  
 |-------------------------------|-----------------|  
@@ -81,7 +81,7 @@ For a list of all the permissions, see the [Database Engine Permissions](http://
 
 The permissions assigned to the fixed-database roles cannot be changed. The following figure shows the permissions assigned to the fixed-database roles:
 
-![fixed_database_role_permissions](../../../relational-databases/security/authentication-access/media/fixed-database-role-permissions.jpg)
+![fixed_database_role_permissions](../../../relational-databases/security/authentication-access/media/permissions-of-database-roles.png)
 
 ## Special Roles for [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] and [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]
 

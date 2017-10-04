@@ -1,6 +1,8 @@
-# [Overview](master-data-services-overview-mds.md)  
+# [Introduction](master-data-services-overview-mds.md)  
 
+# Overview
 ## [What's New in Master Data Services (MDS)](what-s-new-in-master-data-services-mds.md)  
+## [New and recently updated articles](new-updated-master-data-services.md)
 ## [Learn SQL Server Master Data Services](learn-sql-server-master-data-services.md)  
 ## [SQL Server Samples: Model Deployment Packages (MDS)](sql-server-samples-model-deployment-packages-mds.md)  
 ## [Master Data Services and Data Quality Services Features Supported by the Editions of SQL Server 2016](master-data-services-and-data-quality-services-features-support.md)  
@@ -10,6 +12,7 @@
 
 # [Install and configure](master-data-services-installation-and-configuration.md)
 ## [Install-windows](../master-data-services/install-windows/install-master-data-services.md)
+## [Install on AlwaysOn whitepaper](installing-mds-in-an-alwayson-group-environment/installing-mds-in-an-alwayson-group-environment.md)
 ## [Master Data Services Server Configuration Page](server-configuration-mds-configuration-manager.md)  
 ## [Database Configuration Page](database-configuration-page-master-data-services-configuration-manager.md)  
 

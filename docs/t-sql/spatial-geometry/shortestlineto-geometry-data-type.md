@@ -1,7 +1,7 @@
 ---
 title: "ShortestLineTo (geometry Data Type) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "08/03/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -22,11 +22,7 @@ manager: "jhubbard"
 # ShortestLineTo (geometry Data Type)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Returns a **LineString** instance with two points that represent the shortest distance between the two **geometry** instances. The length of the **LineString** instance returned is the distance between the two **geometry** instances.  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [current version](http://msdn.microsoft.com/library/bb500435.aspx)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
+Returns a **LineString** instance with two points that represent the shortest distance between the two **geometry** instances. The length of the **LineString** instance returned is the distance between the two **geometry** instances.
   
 ## Syntax  
   
@@ -71,3 +67,4 @@ manager: "jhubbard"
  [ShortestLineTo &#40;geography Data Type&#41;](../../t-sql/spatial-geography/shortestlineto-geography-data-type.md)  
   
   
+

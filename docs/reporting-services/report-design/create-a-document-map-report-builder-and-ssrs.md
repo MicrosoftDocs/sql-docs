@@ -1,7 +1,7 @@
 ---
 title: "Create a Document Map (Report Builder and SSRS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/07/2017"
+ms.date: "05/30/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -16,8 +16,10 @@ author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "erikre"
 ---
+
 # Create a Document Map (Report Builder and SSRS)
-  A document map provides a set of navigational links to report items in a rendered report. When you view a report that includes a document map, a separate side pane appears next to the report. A user can click links in the document map to jump to the report page that displays that item. Report sections and groups are arranged in a hierarchy of links. Clicking items in the document map refreshes the report and displays the area of the report that corresponds to the item in the document map.  
+
+A document map provides a set of navigational links to report items in a rendered report. When you view a report that includes a document map, a separate side pane appears next to the report. A user can click links in the document map to jump to the report page that displays that item. Report sections and groups are arranged in a hierarchy of links. Clicking items in the document map refreshes the report and displays the area of the report that corresponds to the item in the document map.  
   
  To add links to the document map, you set the **DocumentMapLabel** property of the report item to text that you create or to an expression that evaluates to the text that you want display in the document map. You can also add the unique values for a table or matrix group to the document map. For example, for a group based on color, each unique color is a link to the report page that displays the group instance for that color.  
   
@@ -108,10 +110,9 @@ manager: "erikre"
 4.  Paste the URL in Report Manager, and then press ENTER. The report runs, and the document map is hidden.  
   
 > [!NOTE]  
->  For more information about downloading sample reports, see [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][Report Builder and Report Designer sample reports](http://go.microsoft.com/fwlink/?LinkId=198283).  
+>  For more information about downloading sample reports, see [Report Builder and Report Designer sample reports](http://go.microsoft.com/fwlink/?LinkId=198283).  
 >   
 >  For more information, see "URL Access" in the [Reporting Services documentation](http://go.microsoft.com/fwlink/?linkid=121312) in SQL Server Books Online.  
-  
 
-  
-  
+
+More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)

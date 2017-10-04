@@ -25,8 +25,8 @@ helpviewer_keywords:
   - "named permission sets [Reporting Services]"
 ms.assetid: a9bf043a-139a-4929-9a58-244815323df0
 caps.latest.revision: 32
-author: "sabotta"
-ms.author: "carlasab"
+author: "guyinacube"
+ms.author: "asaxton"
 manager: "erikre"
 ---
 # Understanding Security Policies

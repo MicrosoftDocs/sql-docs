@@ -11,6 +11,7 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "sql13.dts.designer.unionalltrans.f1"
+  - "sql13.dts.designer.unionalltransformation.f1"
 helpviewer_keywords: 
   - "merging datasets [Integration Services]"
   - "combining datasets"
@@ -39,13 +40,24 @@ manager: "jhubbard"
 ## Configuration of the Union All Transformation  
  You can set properties through [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer or programmatically.  
   
- For more information about the properties that you can set in the **Union All Transformation Editor** dialog box, see [Union All Transformation Editor](../../../integration-services/data-flow/transformations/union-all-transformation-editor.md).  
-  
  For more information about the properties that you can set programmatically, see [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796).  
   
  For more information about how to set properties, click one of the following topics:  
   
 -   [Set the Properties of a Data Flow Component](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
+  
+## Union All Transformation Editor
+  Use the **Union All Transformation Editor** dialog box to merge several input rowsets into a single output rowset. By including the Union All transformation in a data flow, you can merge data from multiple data flows, create complex datasets by nesting Union All transformations, and re-merge rows after you correct errors in the data.  
+  
+### Options  
+ **Output Column Name**  
+ Type an alias for each column. The default is the name of the input column from the first (reference) input; however, you can choose any unique, descriptive name.  
+  
+ **Union All Input 1**  
+ Select from the list of available input columns in the first (reference) input. The metadata of mapped columns must match.  
+  
+ **Union All Input n**  
+ Select from the list of available input columns in the second and additional inputs. The metadata of mapped columns must match.  
   
 ## Related Tasks  
  [Merge Data by Using the Union All Transformation](../../../integration-services/data-flow/transformations/merge-data-by-using-the-union-all-transformation.md)  

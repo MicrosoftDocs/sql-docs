@@ -35,16 +35,14 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 DENSE_RANK ( ) OVER ( [ <partition_by_clause> ] < order_by_clause > )  
 ```  
   
 ## Arguments  
- <partition_by_clause>  
+ \<partition_by_clause>  
  Divides the result set produced by the [FROM](../../t-sql/queries/from-transact-sql.md) clause into partitions to which the DENSE_RANK function is applied. For the PARTITION BY syntax, see [OVER Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
- <order_by_clause>  
+ \<order_by_clause>  
  Determines the order in which the DENSE_RANK function is applied to the rows in a partition.  
   
 ## Return Types  

@@ -11,6 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "sql13.dts.designer.asprocessingtask.f1"
+  - "sql13.dts.designer.asprocessingtask.general.f1"
+  - "sql13.dts.designer.asprocessingtask.as.f1"
 helpviewer_keywords: 
   - "Analysis Services Processing task"
   - "processing objects [Integration Services]"
@@ -62,11 +64,7 @@ manager: "jhubbard"
 ## Configuration of the Analysis Services Processing Task  
  You can set properties through [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer or programmatically.  
   
- For more information about the properties that you can set in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click one of the following topics:  
-  
--   [Analysis Services Processing Task Editor &#40;General Page&#41;](../../integration-services/control-flow/analysis-services-processing-task-editor-general-page.md)  
-  
--   [Analysis Services Processing Task Editor &#40;Analysis Services Page&#41;](../../integration-services/control-flow/analysis-services-processing-task-editor-analysis-services-page.md)  
+ For more information about the properties that you can set in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click the following topic:  
   
 -   [Expressions Page](../../integration-services/expressions/expressions-page.md)  
   
@@ -75,8 +73,75 @@ manager: "jhubbard"
 -   [Set the Properties of a Task or Container](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## Programmatic Configuration of the Analysis Services Processing Task  
- For more information about programmatically setting these properties, click one of the following topics:  
+ For more information about programmatically setting these properties, click the following topic:  
   
 -   <xref:Microsoft.DataTransformationServices.Tasks.DTSProcessingTask.DTSProcessingTask>  
   
+## Analysis Services Processing Task Editor (General Page)
+  Use the **General** pageof the **Analysis Services Processing Task Editor** dialog box to name and describe the Analysis Services Processing task.  
+  
+### Options  
+ **Name**  
+ Provide a unique name for the Analysis Services Processing task. This name is used as the label in the task icon.  
+  
+> [!NOTE]  
+>  Task names must be unique within a package.  
+  
+ **Description**  
+ Type a description of the Analysis Services Processing task.  
+  
+## Analysis Services Processing Task Editor (Analysis Services Page)
+  Use the **Analysis Services** page of the **Analysis Services Processing Task Editor** dialog box to specify an Analysis Services connection manager, select the analytic objects to process, and set processing and error handling options.  
+  
+ When processing tabular models, keep the following in mind:  
+  
+1.  You cannot perform impact analysis on tabular models.  
+  
+2.  Some processing options for tabular mode are not exposed, such as Process Defrag and Process Recalc. You can perform these functions by using the Execute DDL task.  
+  
+3.  Some processing options provided, such as process indexes, are not appropriate for tabular models and should not be used.  
+  
+4.  Batch settings are ignored for tabular models.  
+  
+### Options  
+ **Analysis Services connection manager**  
+ Select an existing Analysis Services connection manager in the list or click **New** to create a new connection manager.  
+  
+ **New**  
+ Create a new Analysis Services connection manager.  
+  
+ **Related Topics:** [Analysis Services Connection Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md), [Add Analysis Services Connection Manager Dialog Box UI Reference](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
+  
+ **Object list**  
+ |Property|Description|  
+|--------------|-----------------|  
+|**Object Name**|Lists the specified object names.|  
+|**Type**|Lists the types of the specified objects.|  
+|**Process Options**|Select a processing option in the list.<br /><br /> **Related Topics**: [Processing a multidimensional model &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)|  
+|**Settings**|Lists processing settings for the specified objects.|  
+  
+ **Add**  
+ Add an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] object to the list.  
+  
+ **Remove**  
+ Select an object, and then click **Delete**.  
+  
+ **Impact Analysis**  
+ Perform impact analysis on the selected object.  
+  
+ **Related Topics:** [Impact Analysis Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](http://msdn.microsoft.com/library/208268eb-4e14-44db-9c64-6f74b776adb6)  
+  
+ **Batch Settings Summary**  
+ |Property|Description|  
+|--------------|-----------------|  
+|**Processing order**|Specifies whether objects are processed sequentially or in a batch; if parallel processing is used, specifies the number of objects to process concurrently.|  
+|**Transaction mode**|Specifies the transaction mode for sequential processing.|  
+|**Dimension errors**|Specifies the task behavior when errors occur.|  
+|**Dimension key error log path**|Specifies the path of the file to which errors are logged.|  
+|**Process affected objects**|Indicates whether dependent or affected objects are also processed.|  
+  
+ **Change Settings**  
+ Change the processing options and the handling of errors in dimension keys.  
+  
+ **Related Topics:** [Change Settings Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](http://msdn.microsoft.com/library/0041e042-d7ce-48f9-a690-a6dc65471ff3)  
   

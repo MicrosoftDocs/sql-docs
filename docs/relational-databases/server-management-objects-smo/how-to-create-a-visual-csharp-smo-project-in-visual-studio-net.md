@@ -1,7 +1,7 @@
 ---
 title: "Create a Visual C# SMO Project in Visual Studio .NET | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/27/2016"
+ms.date: "08/06/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -24,46 +24,21 @@ manager: "jhubbard"
   
 ### Creating a Visual C# SMO project in Visual Studio.NET  
   
-1.  Start Visual Studio 2015. 
+1. Start Visual Studio
   
-2.  On the **File** menu, click **New** and then **Project**.  The **New Project** dialog box appears.   
+2. On the **File** menu, click **New** and then **Project**.  The **New Project** dialog box appears.   
   
-3.  In the [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] **Installed** pane, navigate to **Templates**\\**Visual C#**\\**Windows** and select **Console Application**.  
+3. In the [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] **Installed** pane, navigate to **Templates**\\**Visual C#**\\**Windows** and select **Console Application**.  
   
-4.  (Optional) In the **Name** text box, type the name of the new application.  
+4. (Optional) In the **Name** text box, type the name of the new application.  
 
-5.  Click **OK** to load the console application template.  
+5. Click **OK** to load the console application template.  
 
-6.  On the **Project** menu, select **Add Reference**. The **Reference Manager** dialog box appears.  
-   
-7.  Click **Browse** to locate the SMO assemblies.  Navigate to C:\Program Files\Microsoft SQL Server\130\SDK\Assemblies and then select the following files. These are three of four minimum files that are required to build an SMO application:  
-
-    - Microsoft.SqlServer.Management.Sdk.Sfc
-     
-    - Microsoft.SqlServer.Smo.dll
-     
-    - Microsoft.SqlServer.SqlEnum.dll
+6. Follow the instructions on [Installing SMO](installing-smo.md) to install the package for your project to reference.
   
-    > [!NOTE]  
-    >  Use the **Ctrl** key to select more than one file.  
+7. On the **View** menu, click **Code**.
     
-8.  Click **Add**.
-  
-9.  Click **Browse** to locate an additional SMO assembly.  Navigate to C:\Program Files (x86)\Microsoft SQL Server\130\SDK\Assemblies and then select the file referenced below.  This is the fourth minimum file required to build an SMO application.
-
-    - Microsoft.SqlServer.ConnectionInfo.dll
-
-10.  Click **Add**. 
-  
-11.  Add any additional SMO assemblies that are required. For example, if you are specifically programming [!INCLUDE[ssSB](../../includes/sssb-md.md)], add the following assemblies:  
-  
-      - Microsoft.SqlServer.ServiceBrokerEmum.dll  
-     
-12. Click **OK**.
-  
-13. On the **View** menu, click **Code**.
-    
-14. In the code, before the namespace statement, type the following **using** statements to qualify the types in the SMO namespace:  
+8. In the code, before the namespace statement, type the following **using** statements to qualify the types in the SMO namespace:
   
     ```  
     using Microsoft.SqlServer.Management.Smo;  

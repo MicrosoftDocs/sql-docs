@@ -2,7 +2,7 @@
 title: "DROP DATABASE (Transact-SQL) | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "05/10/2017"
+ms.date: "09/15/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -31,7 +31,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # DROP DATABASE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw_md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
 
   Removes one or more user databases or database snapshots from an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -45,7 +45,7 @@ DROP DATABASE [ IF EXISTS ] { database_name | database_snapshot_name } [ ,...n ]
 ```  
   
 ```  
--- Azure SQL Database and Parallel Data Warehouse Syntax   
+-- Azure SQL Database, Azure SQL Data Warehouse and Parallel Data Warehouse Syntax   
 DROP DATABASE database_name [;]  
 ```  
   
@@ -99,10 +99,15 @@ DROP DATABASE database_name [;]
  Dropping a database enable for Stretch Database does not remove the remote data. If you want to delete the remote data, you have to remove it manually.  
   
 ### [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
- You must be connected to the master database to drop a database.  
+ You must be connected to the master database to drop a database.
   
- The DROP DATABASE statement must be the only statement in a SQL batch and you can drop only one database at a time.  
+ The DROP DATABASE statement must be the only statement in a SQL batch and you can drop only one database at a time.
   
+### [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]  
+ You must be connected to the master database to drop a database.
+  
+ The DROP DATABASE statement must be the only statement in a SQL batch and you can drop only one database at a time.
+
 ## Permissions  
   
 ### [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  

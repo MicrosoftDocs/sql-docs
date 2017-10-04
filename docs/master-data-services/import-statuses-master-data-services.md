@@ -11,9 +11,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 306577c5-e7d7-4cff-aff4-efb5c6354036
 caps.latest.revision: 10
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
+author: "smartysanthosh"
+ms.author: "nagavo"
+manager: "craigg"
 ---
 # Import Statuses (Master Data Services)
   In the **Integration Management** functional area, on the **Staging Batches** page, the following statuses are possible.  

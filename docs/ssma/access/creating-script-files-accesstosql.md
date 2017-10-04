@@ -2,7 +2,7 @@
 title: "Creating Script Files (AccessToSQL) | Microsoft Docs"
 ms.prod: "sql-non-specified"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "08/17/2017"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,11 +14,11 @@ applies_to:
   - "SQL Server"
 ms.assetid: 64dfe192-965c-49d4-a3ea-848fbc5f619f
 caps.latest.revision: 21
-author: "sabotta"
-ms.author: "carlasab"
-manager: "lonnyb"
+author: "Shamikg"
+ms.author: "Shamikg"
+manager: "murato"
 ---
-# Creating Script Files (AccessToSQL)
+# Creating script files (AccessToSQL)
 The first step before launching the SSMA console application is to create the script file and if required creating the variable value file and the server connection file.  
   
 The script file can be divided into three sections, viz..,:  
@@ -31,14 +31,14 @@ The script file can be divided into three sections, viz..,:
   
 Each section is described in detail below:  
   
-## Configuring Access Console Settings  
+## Configuring Access console settings  
 The configurations of a script are displayed in the console script file.  
   
 If any of the elements are specified in the configuration node, they are set as the global setting i.e. they are applicable for all script commands. These configuration elements can also be set within each command in the script-command section if the user wants to override the global setting.  
   
 The user-configurable options include:  
   
-1.  **Output Window Provider:** If suppress-messages attribute is set to ‘true’, the command-specific messages do not get displayed on the console. The Attributes description is given below:  
+1.  **Output window provider:** If suppress-messages attribute is set to ‘true’, the command-specific messages do not get displayed on the console. The Attributes description is given below:  
   
     -   destination: Specifies whether the output needs to get printed to a file or stdout. This is false by default.  
   
@@ -347,7 +347,7 @@ The script file contains a sequence of migration workflow commands in the XML fo
   
 For example, a typical data migration of a specific table in an Access database follows the hierarchy of: Database-&gt; Table.  
   
-When all the commands in the script file are executed successfully, the SSMA console application exits and returns the control to the user. The contents of a script file are more or less static with variable information contained either in a [Variable Value Files](http://msdn.microsoft.com/en-us/808595c3-8ef1-40bd-a93e-5cf237950e08) or, in a separate section within the script file for variable values.  
+When all the commands in the script file are executed successfully, the SSMA console application exits and returns the control to the user. The contents of a script file are more or less static with variable information contained either in a [Variable Value Files](http://msdn.microsoft.com/808595c3-8ef1-40bd-a93e-5cf237950e08) or, in a separate section within the script file for variable values.  
   
 **Example:**  
   
@@ -388,12 +388,12 @@ You can execute the templates (files) after changing the parameters displayed th
   
 Complete list of script-commands can be found in [Executing the SSMA Console &#40;AccessToSQL&#41;](../../ssma/access/executing-the-ssma-console-accesstosql.md)  
   
-## Script File Validation  
+## Script file validation  
 The user can easily validate his/her script file against the schema definition file **‘A2SSConsoleScriptSchema.xsd’** available in the ‘Schemas’ folder.  
   
-## Next Step  
+## Next step
 The next step in operating the console is [Creating Variable Value Files &#40;AccessToSQL&#41;](../../ssma/access/creating-variable-value-files-accesstosql.md).  
   
-## See Also  
+## See also  
 [Creating Variable Value Files &#40;AccessToSQL&#41;](../../ssma/access/creating-variable-value-files-accesstosql.md)  
   

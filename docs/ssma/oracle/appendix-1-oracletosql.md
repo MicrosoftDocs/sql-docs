@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: e01f8be5-ce68-4c9f-bd13-d65e73a16470
 caps.latest.revision: 15
-author: "sabotta"
-ms.author: "carlasab"
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "v-thobro"
 ---
 # Appendix - 1 (OracleToSQL)

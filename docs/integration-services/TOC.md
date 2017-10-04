@@ -1,9 +1,34 @@
-# [Overview](sql-server-integration-services.md)
+# [SQL Server Integration Services](sql-server-integration-services.md)
+
+# Overview
 ## [What's New in Integration Services in SQL Server 2016](what-s-new-in-integration-services-in-sql-server-2016.md)
 ## [What's New in Integration Services in SQL Server 2017](what-s-new-in-integration-services-in-sql-server-2017.md)
+## [New and recently updated articles](new-updated-integration-services.md)
 ## [Integration Services Features Supported by the Editions of SQL Server](integration-services-features-supported-by-the-editions-of-sql-server.md)
 ## [Integration Services Backward Compatibility](integration-services-backward-compatibility.md)
-# [Install or upgrade](../integration-services/install-windows/upgrade-integration-services.md)
+
+# Quickstarts
+## Deploy
+### [Deploy with SSMS](./ssis-quickstart-deploy-ssms.md)
+### [Deploy with Transact-SQL (SSMS)](./ssis-quickstart-deploy-tsql-ssms.md)
+### [Deploy with Transact-SQL (VS Code)](ssis-quickstart-deploy-tsql-vscode.md)
+### [Deploy from the command prompt](./ssis-quickstart-deploy-cmdline.md)
+### [Deploy with PowerShell](ssis-quickstart-deploy-powershell.md)
+### [Deploy with C#](./ssis-quickstart-deploy-dotnet.md) 
+## Run
+### [Run with SSMS](./ssis-quickstart-run-ssms.md)
+### [Run with Transact-SQL (SSMS)](./ssis-quickstart-run-tsql-ssms.md)
+### [Run with Transact-SQL (VS Code)](ssis-quickstart-run-tsql-vscode.md)
+### [Run from the command prompt](./ssis-quickstart-run-cmdline.md)
+### [Run with PowerShell](ssis-quickstart-run-powershell.md)
+### [Run with C#](./ssis-quickstart-run-dotnet.md) 
+
+# [Lift and shift SSIS packages to Azure](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)
+## [Tutorial - Deploy, run, and monitor a package on Azure](lift-shift/ssis-azure-deploy-run-monitor-tutorial.md)
+## [Connect to the SSIS Catalog on Azure](lift-shift/ssis-azure-connect-to-catalog-database.md)
+## [Schedule package execution on Azure](lift-shift/ssis-azure-schedule-packages.md)
+## [Connect to data sources with Windows Authentication](lift-shift/ssis-azure-connect-with-windows-auth.md)
+# [Install or upgrade](../integration-services/install-windows/install-integration-services.md)
 
 # [Development and management Tools](integration-services-ssis-development-and-management-tools.md)
 # [Projects and solutions](integration-services-ssis-projects-and-solutions.md)
@@ -42,30 +67,16 @@
 # [Event Handlers](integration-services-ssis-event-handlers.md)
 # [Queries](integration-services-ssis-queries.md)
 # [Transactions](integration-services-transactions.md)
-
-# [Catalog and Server](service/integration-services-ssis-server-and-catalog.md)  
-## [SSIS Catalog](service/ssis-catalog.md)  
-## [Integration Services (SSIS) Catalog Transact-SQL Reference](service/integration-services-ssis-catalog-transact-sql-reference.md)  
-## [View the List of Packages on the Integration Services Server](service/view-the-list-of-packages-on-the-integration-services-server.md)  
-## [Project Properties Dialog Box](service/project-properties-dialog-box.md)  
-## [Project Versions Dialog Box](service/project-versions-dialog-box.md)  
-## [Browse All Principals Dialog Box](service/browse-all-principals-dialog-box.md)  
-## [Package Properties Dialog Box](service/package-properties-dialog-box.md)  
-## [Validate Dialog Box](service/validate-dialog-box.md)  
-## [Configure Dialog Box](service/configure-dialog-box.md)  
-## [Set Parameter Value Dialog Box](service/set-parameter-value-dialog-box.md)  
-## [Folder Properties Dialog Box](service/folder-properties-dialog-box.md)  
-
-# [Scale Out](integration-services-ssis-scale-out.md)
+# [Deploy Packages](packages/deploy-integration-services-ssis-projects-and-packages.md)
+# [Scale Out](scale-out/integration-services-ssis-scale-out.md)
 
 # [Service (legacy)](../integration-services/service/integration-services-service-ssis-service.md)
-
 # [Security](../integration-services/security/security-overview-integration-services.md)
 # [Performance](../integration-services/performance/monitor-running-packages-and-other-operations.md)
 # [Troubleshooting](../integration-services/troubleshooting/troubleshoot-integration-services-ssis-packages.md)
-
 # [System views](../integration-services/system-views/views-integration-services-catalog.md)
 # [System stored procedures](../integration-services/system-stored-procedures/stored-procedures-integration-services-catalog.md)
+
 # [System function - dm_execution_performance_counters](functions-dm-execution-performance-counters.md)
 
 # [Errors and Events Reference](errors-and-events-reference-integration-services.md)
@@ -75,15 +86,17 @@
 ## [Integration Services Programming Overview](integration-services-programming-overview.md)
 ## [Understanding Synchronous and Asynchronous Transformations](understanding-synchronous-and-asynchronous-transformations.md)
 ## [Working with Connection Managers Programmatically](working-with-connection-managers-programmatically.md)
-## [Extend packages with scripting](../integration-services/extending-packages-scripting/comparing-scripting-solutions-and-custom-objects.md)
-## [Extend packages with custom objects](../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md)
+## [Extend packages with scripting](../integration-services/extending-packages-scripting/extending-packages-with-scripting.md)
+## [Extend packages with custom objects](../integration-services/extending-packages-custom-objects/extending-packages-with-custom-objects.md)
 ## [Build packages programmatically](../integration-services/building-packages-programmatically/adding-connections-programmatically.md)
-## [Run and manage packages programmatically](../integration-services/run-manage-packages-programmatically/enumerating-available-packages-programmatically.md)
+## [Run and manage packages programmatically](../integration-services/run-manage-packages-programmatically/running-and-managing-packages-programmatically.md)
 # [Integration Services Language Reference](integration-services-language-reference.md)
 
 # [Azure Feature Pack for Integration Services (SSIS)](azure-feature-pack-for-integration-services-ssis.md)
 
 # [Hadoop and HDFS Support in Integration Services (SSIS)](hadoop-and-hdfs-support-in-integration-services-ssis.md)
+
+# [Microsoft Connectors for Oracle and Teradata by Attunity](attunity-connectors.md)
 
 # [Import and export data](../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)
 

@@ -17,6 +17,9 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # List existing databases on a Tabular server (Analysis Services AMO-TOM)
+
+[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
+
 When you have a **Server** object that is connected to an Analysis Services instance, you can iterate over **Server.Databases** collection to list all databases hosted by the Anlaysis Services instance. 
 
 The **Server.Databases** collection contains one **Database** object for every database hosted on the server, regardless of server mode (Multidimensional or Tabular) or database type (Multidimensional, Tabular pre-1200, or Tabular 1200 and higher). 

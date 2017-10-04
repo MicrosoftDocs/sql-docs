@@ -1,7 +1,7 @@
 ---
 title: "nodes() Method (xml Data Type) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "07/26/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -30,10 +30,6 @@ manager: "jhubbard"
  The result of the **nodes()** method is a rowset that contains logical copies of the original XML instances. In these logical copies, the context node of every row instance is set to one of the nodes identified with the query expression, so that subsequent queries can navigate relative to these context nodes.  
   
  You can retrieve multiple values from the rowset. For example, you can apply the **value()** method to the rowset returned by **nodes()** and retrieve multiple values from the original XML instance. Note that the **value()** method, when applied to the XML instance, returns only one value.  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
   
 ## Syntax  
   

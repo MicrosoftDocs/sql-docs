@@ -24,8 +24,8 @@ helpviewer_keywords:
   - "Web service [Reporting Services], client creation"
 ms.assetid: 92a9678c-bc4f-4d7a-ba44-85989bfe27ca
 caps.latest.revision: 38
-author: "sabotta"
-ms.author: "carlasab"
+author: "guyinacube"
+ms.author: "asaxton"
 manager: "erikre"
 ---
 # Building Applications Using the Web Service and the .NET Framework

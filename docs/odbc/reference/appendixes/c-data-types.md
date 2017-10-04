@@ -1,7 +1,7 @@
 ---
 title: "C Data Types | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "07/12/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -135,7 +135,7 @@ struct tagSQLGUID {
   
  [e]   A number is stored in the *val* field of the SQL_NUMERIC_STRUCT structure as a scaled integer, in little endian mode (the leftmost byte being the least-significant byte). For example, the number 10.001 base 10, with a scale of 4, is scaled to an integer of 100010. Because this is 186AA in hexadecimal format, the value in SQL_NUMERIC_STRUCT would be "AA 86 01 00 00 ... 00", with the number of bytes defined by the SQL_MAX_NUMERIC_LEN **#define**.  
   
- For more information about **SQL_NUMERIC_STRUCT**, see [HOWTO: Retrieving Numeric Data with SQL_NUMERIC_STRUCT](http://go.microsoft.com/fwlink/?LinkId=147596).  
+ For more information about **SQL_NUMERIC_STRUCT**, see [HOWTO: Retrieving Numeric Data with SQL_NUMERIC_STRUCT](retrieve-numeric-data-sql-numeric-struct-kb222831.md).  
   
  [f]   The precision and scale fields of the SQL_C_NUMERIC data type areused for input from an application and for output from the driver to the application. When the driver writes a numeric value into the SQL_NUMERIC_STRUCT, it will use its own driver-specific default as the value for the *precision* field, and it will use the value in the SQL_DESC_SCALE field of the application descriptor (which defaults to 0) for the *scale* field. An application can provide its own values for precision and scale by setting the SQL_DESC_PRECISION and SQL_DESC_SCALE fields of the application descriptor.  
   

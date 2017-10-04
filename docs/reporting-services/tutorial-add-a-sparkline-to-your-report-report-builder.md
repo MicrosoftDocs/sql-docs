@@ -1,7 +1,7 @@
 ---
 title: "Tutorial: Add a Sparkline to Your Report (Report Builder) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/15/2016"
+ms.date: "05/30/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -17,7 +17,9 @@ author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "erikre"
 ---
+
 # Tutorial: Add a Sparkline to Your Report (Report Builder)
+
 In this tutorial in [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)], you create a basic table with a sparkline chart in a [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] paginated report.   
   
 Sparklines and data bars are small, simple charts that convey a lot of information in a little space, often in tables and matrices in [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] reports. The following illustration shows a report similar to the one that you will create.  
@@ -44,7 +46,7 @@ For more information about requirements, see [Prerequisites for Tutorials &#40;R
 4.  On the **Choose a dataset** page, select **Create a dataset** > **Next**. The **Choose a connection to a data source** page opens.  
   
     > [!NOTE]  
-    > This tutorial doesn't need specific data; it just needs a connection to a [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] database. If you already have a data source connection listed under **Data Source Connections**, you can select it and go to step 10. For more information, see [Alternative Ways to Get a Data Connection &#40;Report Builder&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
+    > This tutorial doesn't need specific data; it just needs a connection to a SQL Server database. If you already have a data source connection listed under **Data Source Connections**, you can select it and go to step 10. For more information, see [Alternative Ways to Get a Data Connection &#40;Report Builder&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
 5.  Click **New**. The **Data Source Properties** dialog box opens.  
   
@@ -316,10 +318,10 @@ The report is saved to the report server. The name of report server that you are
 4.  Click **Save**.  
   
 ## Next Steps  
-This concludes the tutorial for creating a table report with sparkline charts. For more information about sparklines, see [Sparklines and Data Bars &#40;Report Builder and SSRS&#41;](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
+
+This concludes the tutorial for creating a table report with sparkline charts. For more information about sparklines, see [Sparklines and Data Bars](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
-## See Also  
 [Report Builder Tutorials](../reporting-services/report-builder-tutorials.md) 
 [Report Builder in SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
-  
 
+More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)

@@ -19,9 +19,10 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # CSDL Annotations for Business Intelligence (CSDLBI)
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supports the presentation of the definition of a tabular model in an XML format called Conceptual Schema Definition Language with Business Intelligence annotations (CSDLBI).  
-  
- This topic provides an overview of CSDLBI and how it is used with [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data models.  
+
+[!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
+
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supports the presentation of the definition of a tabular model in an XML format called Conceptual Schema Definition Language with Business Intelligence annotations (CSDLBI). This topic provides an overview of CSDLBI and how it is used with [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data models.  
   
 ## Understanding the Role of CSDL  
  The Conceptual Schema Data Language (CSDL) is an XML-based language that describes entities, relationships, and functions. CSDL is defined as part of the Entity Data Framework. The BI annotations are an extension designed to support data modeling using [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  

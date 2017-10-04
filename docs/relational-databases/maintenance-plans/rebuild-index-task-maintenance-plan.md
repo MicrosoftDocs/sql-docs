@@ -1,7 +1,7 @@
 ---
 title: "Rebuild Index Task (Maintenance Plan) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "07/21/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "Rebuild Index Task dialog box"
 ms.assetid: 33e2940b-139f-4563-b0cb-5683f08bd879
 caps.latest.revision: 42
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ---
 # Rebuild Index Task (Maintenance Plan)
   Use the **Rebuild Index Task** dialog to re-create the indexes on the tables in the database with a new fill factor. The fill factor determines the amount of empty space on each page in the index, to accommodate future expansion. As data is added to the table, the free space fills because the fill factor is not maintained. Reorganizing data and index pages can re-establish the free space.  
@@ -98,6 +98,10 @@ manager: "jhubbard"
   
 > [!NOTE]  
 >  When the number of objects affected is large, this display can take a considerable amount of time.  
+
+
+[!INCLUDE[index-stats-options-reorg-5589131-2999104](../../includes/paragraph-content/index-stats-options-reorganize-maintenance-plan-include.md)]
+
   
 ## New Connection Dialog Box  
  **Connection name**  

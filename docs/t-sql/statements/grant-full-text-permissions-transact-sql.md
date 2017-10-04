@@ -1,7 +1,7 @@
 ---
 title: "GRANT Full-Text Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "06/17/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -24,20 +24,17 @@ ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # GRANT Full-Text Permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Grants permissions on a full-text catalog or full-text stoplist.  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].|  
+
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
 ```  
-  
 GRANT permission [ ,...n ] ON  
     FULLTEXT   
         {  
@@ -64,41 +61,27 @@ GRANT permission [ ,...n ] ON
  Specifies the principal to which the permission is being granted. One of the following:  
   
 -   database user  
-  
 -   database role  
-  
 -   application role  
-  
 -   database user mapped to a Windows login  
-  
 -   database user mapped to a Windows group  
-  
 -   database user mapped to a certificate  
-  
 -   database user mapped to an asymmetric key  
-  
 -   database user not mapped to a server principal.  
   
- GRANT OPTION  
+GRANT OPTION  
  Indicates that the principal will also be given the ability to grant the specified permission to other principals.  
   
- AS *granting_principal*  
+AS *granting_principal*  
  Specifies a principal from which the principal executing this query derives its right to grant the permission. One of the following:  
   
 -   database user  
-  
 -   database role  
-  
 -   application role  
-  
 -   database user mapped to a Windows login  
-  
 -   database user mapped to a Windows group  
-  
 -   database user mapped to a certificate  
-  
 -   database user mapped to an asymmetric key  
-  
 -   database user not mapped to a server principal.  
   
 ## Remarks  

@@ -1,7 +1,7 @@
 ---
 title: "Design Reports with Report Designer (SSRS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/01/2016"
+ms.date: "05/30/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -18,10 +18,12 @@ author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "erikre"
 ---
+
 # Design Reporting Services Paginated Reports with Report Designer (SSRS)
+
 Use Report Designer to create full-featured [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] paginated reports and reporting solutions. Report Designer provides a graphical interface in which you can define data sources, datasets and queries, report layout positions for data regions and fields, and interactive features such as parameters and sets of reports that work together.  
 
-Report Designer is a feature of  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], a Microsoft Visual Studio environment for creating business intelligence solutions. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] is not included with [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Download [SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714). 
+Report Designer is a feature of  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], a Microsoft Visual Studio environment for creating business intelligence solutions. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] is not included with SQL Server. Download [SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714). 
   
 ## Benefits of Report Projects  
 Report projects act as containers for report definitions and resources. Use projects to:  
@@ -177,10 +179,12 @@ Paginated reports are files that are stored in a report project. Reports can be 
 |4|Used only for publishing warnings.|  
   
  When you attempt to preview or deploy a report that contains report items new in [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)],  those report items can be removed from the report. By default, the ErrorLevel property of the configuration is set to 2, which would cause the build of the report to fail when the map is removed. However, if you change the value of the ErrorLevel property to 0 or 1, the map is dropped, a warning issued, and the build process continues.  
-   
-## See Also  
-*  [Download SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714)  [Reporting Services in SQL Server Data Tools &#40;SSDT&#41;](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md)   
-*  [Query Design Tools &#40;SSRS&#41;](../../reporting-services/report-data/query-design-tools-ssrs.md)   
-*  [Deployment and Version Support in SQL Server Data Tools &#40;SSRS&#41;](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
-  
-  
+
+## Next steps
+
+[Download SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714)  
+[Reporting Services in SQL Server Data Tools](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md)   
+[Query Design Tools](../../reporting-services/report-data/query-design-tools-ssrs.md)   
+[Deployment and Version Support in SQL Server Data Tools](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
+
+More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)

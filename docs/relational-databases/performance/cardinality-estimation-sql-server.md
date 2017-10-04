@@ -1,7 +1,7 @@
 ---
 title: "Cardinality Estimation (SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/04/2016"
+ms.date: "09/06/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -23,11 +23,11 @@ manager: "jhubbard"
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   
-This article illustrates how you can assess and choose the best cardinality estimation (CE) configuration for your SQL system. Most systems benefit from the latest CE because it is the most accurate. The CE predicts how many rows your query will likely return. The cardinality prediction is used by the query optimizer to generate the optimal query plan. The more accurate the CE, the more optimal the query plan, usually.  
+This article illustrates how you can assess and choose the best cardinality estimation (CE) configuration for your SQL system. Most systems benefit from the latest CE because it is the most accurate. The CE predicts how many rows your query will likely return. The cardinality prediction is used by the Query Optimizer to generate the optimal query plan. With more accurate estimations, the Query Optimizer can usually do a better job of producing a more optimal query plan.  
   
 Your application system could possibly have an important query whose plan is changed to a slower plan due to the new CE. Such a query might be like one of the following:  
   
-- An OLTP query that runs so frequently that multiple instance of it often run concurrently.  
+- An OLTP (online transaction processing) query that runs so frequently that multiple instance of it often run concurrently.  
 - A SELECT with substantial aggregation that runs during your OLTP business hours.  
   
 You have techniques for identifying a query that performs slower with the new CE. And you have options for how to address the performance issue.  
@@ -35,7 +35,7 @@ You have techniques for identifying a query that performs slower with the new CE
   
 ## Versions of the CE  
   
- In 1998, a major update of the CE was part of Microsoft SQL Server 7.0, for which the compatibility level was 70. Subsequent updates came with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016, meaning compatibility levels 120 and 130. The CE updates for levels 120 and 130 incorporate assumptions and algorithms that work well on modern data warehousing workloads and on OLTP (online transaction processing).  
+ In 1998, a major update of the CE was part of Microsoft SQL Server 7.0, for which the compatibility level was 70. Subsequent updates started with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], meaning compatibility levels 120 and above. The CE updates for levels 120 and above incorporate assumptions and algorithms that work well on modern data warehousing and on OLTP workloads.  
   
  **Compatibility level:** You can ensure your database is at a particular level by using the following Transact-SQL code for [COMPATIBILITY_LEVEL](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
 
@@ -47,16 +47,15 @@ ALTER DATABASE <yourDatabase>
     SET COMPATIBILITY_LEVEL = 130;  
 go  
   
-SELECT    d.name, d.compatibility_level  
-    FROM  sys.databases AS d  
+SELECT d.name, d.compatibility_level  
+    FROM sys.databases AS d  
     WHERE d.name = 'yourDatabase';  
 go  
 ```  
   
- For a SQL Server database set at compatibility level 120, activation of the trace flag 9481 forces the system to use the CE for level 70.  
+ For a SQL Server database set at compatibility level 120 or above, activation of the [trace flag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481 forces the system to use the CE version 70.  
   
- **Legacy CE:** For a SQL Server database set at compatibility level 130, the level 70 CE can be can be activated by using the following Transact-SQL statement about [SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)
-.
+ **Legacy CE:** For a SQL Server database set at compatibility level 120 and above, the CE version 70 can be can be activated by using the at the database level by using the [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
   
 ```tsql  
 ALTER DATABASE
@@ -64,12 +63,21 @@ ALTER DATABASE
         SET LEGACY_CARDINALITY_ESTIMATION = ON;  
 go  
   
-SELECT  name, value  
-    FROM  sys.database_scoped_configurations  
+SELECT name, value  
+    FROM sys.database_scoped_configurations  
     WHERE name = 'LEGACY_CARDINALITY_ESTIMATION';  
 ```  
-  
- **Query store:**Starting with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 the query store is a handy tool for examining the performance of your queries.  In SQL Server Management Studio (SSMS.exe), in the **Object Explorer** under your database node, a **Query Store** node is displayed  when the query store is ON.  
+ 
+ Or starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, the [Query Hint](../../t-sql/queries/hints-transact-sql-query.md) `USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION')`.
+ 
+ ```tsql  
+SELECT CustomerId, OrderAddedDate  
+    FROM OrderTable  
+    WHERE OrderAddedDate >= '2016-05-01'; 
+    OPTION (USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION'));  
+```
+ 
+ **Query store:**Starting with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 the query store is a handy tool for examining the performance of your queries.  In [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] (SSMS.exe), in the **Object Explorer** under your database node, a **Query Store** node is displayed  when the query store is ON.  
   
 ```tsql  
 ALTER DATABASE <yourDatabase>  
@@ -77,7 +85,7 @@ ALTER DATABASE <yourDatabase>
 go  
   
 SELECT  
-        q.actual_state_desc    AS [actual_state_desc-ofQueryStore],  
+        q.actual_state_desc AS [actual_state_desc-ofQueryStore],  
         q.desired_state_desc,  
         q.query_capture_mode_desc  
     FROM  
@@ -88,9 +96,10 @@ ALTER DATABASE <yourDatabase>
     SET QUERY_STORE CLEAR;  
 ```  
   
- *Tip:* We recommend that each month you install the latest release of [(SSMS.exe)](http://msdn.microsoft.com/library/mt238290.aspx).  
+ > [!TIP] 
+ > We recommend that each month you install the latest release of [(SSMS.exe)](http://msdn.microsoft.com/library/mt238290.aspx).  
   
- Another option for tracking the cardinality predictions of the CE is to use the extended event named **query_optimizer_estimate_cardinality**.  The following T-SQL code sample runs on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. It writes a .xel file to C:\Temp\ (although you can change the path). When you open the .xel file in SSMS, its detailed information is displayed in a user friendly manner.  
+ Another option for tracking the cardinality estimation process is to use the extended event named **query_optimizer_estimate_cardinality**.  The following T-SQL code sample runs on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. It writes a .xel file to C:\Temp\ (although you can change the path). When you open the .xel file in SSMS, its detailed information is displayed in a user friendly manner.  
   
 ```tsql  
 DROP EVENT SESSION Test_the_CE_qoec_1 ON SERVER;  
@@ -126,21 +135,21 @@ go
   
  Next are steps you can use to assess whether any of your most important queries perform less well under the latest CE. Some of the steps are performed by running a code sample presented in a preceding section.  
   
-1.  Open SSMS. Ensure your  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]database is set to the highest available compatibility level.  
+1.  Open [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)]. Ensure your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]database is set to the highest available compatibility level.  
   
 2.  Perform the following preliminary steps:  
   
-    1.  Open SSMS.  
+    1.  Open [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)].  
   
-    2.  Run the T-SQL to ensure that your  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database is set to the highest available compatibility level.  
+    2.  Run the T-SQL to ensure that your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database is set to the highest available compatibility level.  
   
-    3.  Ensure that your database has its LEGACY_CARDINALITY_ESTIMATION configuration turned OFF.  
+    3.  Ensure that your database has its `LEGACY_CARDINALITY_ESTIMATION` configuration turned OFF.  
   
     4.  CLEAR your query store. Of course, ensure your query store is ON.  
   
-    5.  Run the statement: \`SET NoCount OFF;`  
+    5.  Run the statement: `SET NOCOUNT OFF;`  
   
-3.  Run the statement: \`SET STATISTICS XML ON;`  
+3.  Run the statement: `SET STATISTICS XML ON;`  
   
 4.  Run your important query.  
   
@@ -164,7 +173,7 @@ go
   
 9. Compare the estimated number of rows to the actual number of rows. Is the CE inaccurate by 1% (high or low), or by 10%?  
   
-10. Run: \`SET STATISTICS XML OFF;`  
+10. Run: `SET STATISTICS XML OFF;`  
   
 11. Run the T-SQL to decrease the compatibility level of your database by one level (such as from 130 down to 120).  
   
@@ -190,13 +199,13 @@ Suppose that with the new CE a slower query plan is generated for your query. He
   
 You could set the compatibility level to a value lower than the latest available, for your whole database.  
   
-- This activates the older CE, but it makes all queries subject to the older and less accurate CE.  
+- This activates the Legacy CE, but it makes all queries subject to the older and less accurate CE.  
   
-- Further the older level also loses excellent improvements in the query optimizer.  
+- Further the previous level compatibility also loses excellent improvements in the query optimizer.  
   
-You could use LEGACY_CARDINALITY_ESTIMATION to have the whole database use the older CE, while retaining the improvements in the query optimizer.  
+You could use `LEGACY_CARDINALITY_ESTIMATION` to have the whole database use the older CE, or just a specific query, while retaining the improvements in the query optimizer.  
   
-The the finest control, you could *force* the SQL system to use the plan that was generated with the older CE during your testing. After you *pin* your preferred plan, you can set your whole database to use the latest compatibility level and CE. The option is elaborated next.  
+For the finest control, you could *force* the SQL system to use the plan that was generated with the older CE during your testing. After you *pin* your preferred plan, you can set your whole database to use the latest compatibility level and CE. The option is elaborated next.  
   
 ### How to force a particular query plan  
   
@@ -204,12 +213,12 @@ The query store gives you different ways that you can force the system to use a 
   
 - Execute **sp_query_store_force_plan**.  
   
-- In the SSMS, expand your **Query Store** node, right-click **Top Resource Consuming Nodes**, and then click **View Top Resource Consuming Nodes**. The display shows buttons labeled **Force Plan** and **Unforce Plan**.  
+- In [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)], expand your **Query Store** node, right-click **Top Resource Consuming Nodes**, and then click **View Top Resource Consuming Nodes**. The display shows buttons labeled **Force Plan** and **Unforce Plan**.  
   
  For more information about the query store, see [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md).  
   
   
-## Descriptions of advance CE  
+## Examples of CE improvements  
   
 This section describes example queries that benefit from the enhancements implemented in the CE in recent releases. This is background information that does not call for specific action on your part.  
   
@@ -225,20 +234,19 @@ SELECT CustomerId, OrderAddedDate
   
 ### Example B. CE understands that filtered predicates on the same table are often correlated  
   
-In the following SELECT we see filtered predicates on Make and Model. We intuitively understand that when Make is 'Honda' there is a chance the Model is 'Civic', given that Honda makes the Civic.  
+In the following SELECT we see filtered predicates on Model and ModelVariant. We intuitively understand that when Model is 'Xbox' there is a chance the ModelVariant is 'One', given that Xbox has a variant called One.  
   
-The level 120 CE understands there might be a correlation between the two columns on the same table, Make and Model. The CE makes a more accurate estimation of how many rows will be returned by the query, and the query optimizer generates a more optimal plan.  
+The level 120 CE understands there might be a correlation between the two columns on the same table, Model and ModelVariant. The CE makes a more accurate estimation of how many rows will be returned by the query, and the query optimizer generates a more optimal plan.  
   
 ```tsql  
-SELECT Model_Year, Purchase_Price  
-    FROM dbo.Cars  
+SELECT Model, Purchase_Price  
+    FROM dbo.Hardware  
     WHERE  
-        Make  = 'Honda'  AND  
-        Model = 'Civic';  
+        Model  = 'Xbox'  AND  
+        ModelVariant = 'One';  
 ```  
   
-### Example C. CE no longer assumes any correlation between filtered predicates from different tables  
-  
+### Example C. CE no longer assumes any correlation between filtered predicates from different tablescc 
 With extense new research on modern workloads and actual business data reveal that predicate filters from different tables usually do not correlate with each other. In the following query, the CE assumes there is no correlation between s.type and r.date. Therefore the CE makes a lower estimate of the number of rows returned.  
   
 ```tsql  
@@ -255,5 +263,7 @@ SELECT s.ticket, s.customer, r.store
   
 ## See Also  
  [Monitor and Tune for Performance](../../relational-databases/performance/monitor-and-tune-for-performance.md)  
-  
-
+  [Optimizing Your Query Plans with the SQL Server 2014 Cardinality Estimator](http://msdn.microsoft.com/library/dn673537.aspx)  
+ [Query Hints](../../t-sql/queries/hints-transact-sql-query.md)  
+ [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
+ [Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md)

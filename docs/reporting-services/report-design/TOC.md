@@ -1,5 +1,5 @@
 # [Planning a Report](planning-a-report-report-builder.md)  
-## [Report Design Tips](report-design-tips-report-builder-and-ssrs.md)  
+# [Report Design Tips](report-design-tips-report-builder-and-ssrs.md)  
 # [Report Authoring Concepts](report-authoring-concepts-report-builder-and-ssrs.md)  
 ## [Reports, Report Parts, and Report Definitions](reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)  
 ## [Data Regions and Maps](data-regions-and-maps-report-builder-and-ssrs.md)  

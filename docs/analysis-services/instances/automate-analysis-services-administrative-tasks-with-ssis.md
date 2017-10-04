@@ -42,6 +42,5 @@ manager: "erikre"
  [Dimension Processing Destination](../../integration-services/data-flow/dimension-processing-destination.md)   
  [Data Mining Query Transformation](../../integration-services/data-flow/transformations/data-mining-query-transformation.md)   
  [Processing a multidimensional model &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
- [Script Administrative Tasks in Analysis Services](../../analysis-services/instances/script-administrative-tasks-in-analysis-services.md)  
   
   

@@ -1,7 +1,7 @@
 ---
 title: "Column Properties (SSAS Tabular) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: "05/23/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -22,14 +22,17 @@ manager: "erikre"
 # Column Properties (SSAS Tabular)
   This topic describes tabular model column properties.  
   
- Sections in this topic:  
-  
--   [Column Properties](#bkmk_properties)  
-  
--   [Configure column property settings](#bkmk_config_prop)  
+>  [!NOTE]  
+>  Some properties are not supported in all compatibility levels.    
   
 ##  <a name="bkmk_properties"></a> Column Properties  
- **Basic**  
+**Advanced**  
+  
+|Property|Default Setting|Description|  
+|--------------|---------------------|-----------------|  
+|**Display Folder**||A single or nested folder for organizing columns in a client application field list.|  
+
+**Basic**  
   
 |Property|Default Setting|Description|  
 |--------------|---------------------|-----------------|  
@@ -39,10 +42,14 @@ manager: "erikre"
 |**Description**||A text description for the column.<br /><br /> In certain reporting clients, if an end-user places the cursor over this column in the field list, the description appears as a tooltip.|  
 |**Hidden**|False|Specifies whether the column is hidden from reporting client field lists.<br /><br /> Set this property to **True** to hide this column in the display. For example, columns that contain identifiers or keys are typically not useful to the end user.<br /><br /> If you hide a column from the reporting client, the field is not suppressed in the model data. The field is still visible if you create a query against the model. A hidden column can still be used for grouping or sorting.<br /><br /> The **Hidden** property does not provide any form of data security. To secure data, use row filters in Roles. For more information, see [Roles &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/roles-ssas-tabular.md).|  
 |**Sort By Column**||Specifies another column to sort the values in this column. A relationship must exist between the two columns.<br /><br /> This value must be the name of an existing column. You cannot specify a formula or measure.|  
+
+ **Misc.**  
   
+|Property|Default Setting|Description|  
+|--------------|---------------------|-----------------|  
+|**Encoding Hints**|Default|Specifies encoding to optimize processing. Value encoding can improve query performance for numeric columns typically used in aggregations. Hash encoding is for group-by columns (often dimension-table values) and foreign keys. String columns are always hash encoded.|  
+
  **Reporting Properties**  
-  
- For detailed information on setting [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] table behavior properties, see [Configure Table Behavior Properties for Power View Reports &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/power-view-configure-table-behavior-properties-for-reports.md).  
   
 |Property|Default Setting|Description|  
 |--------------|---------------------|-----------------|  
@@ -61,8 +68,8 @@ manager: "erikre"
 2.  In the **Properties** window, click on a property, and then type a value or click the down arrow to select a setting option.  
   
 ## See Also  
- [Power View Reporting Properties &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/power-view-reporting-properties-ssas-tabular.md)   
- [Hide or Freeze Columns &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/hide-or-freeze-columns-ssas-tabular.md)   
- [Add Columns to a Table &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/add-columns-to-a-table-ssas-tabular.md)  
+ [Power View Reporting Properties](../../analysis-services/tabular-models/power-view-reporting-properties-ssas-tabular.md)   
+ [Hide or Freeze Columns](../../analysis-services/tabular-models/hide-or-freeze-columns-ssas-tabular.md)   
+ [Add Columns to a Table](../../analysis-services/tabular-models/add-columns-to-a-table-ssas-tabular.md)  
   
   

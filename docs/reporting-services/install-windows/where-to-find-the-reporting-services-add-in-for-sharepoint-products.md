@@ -2,7 +2,7 @@
 title: "Where to find the Reporting Services add-in for SharePoint Products | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "06/01/2016"
+ms.date: "05/30/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -18,8 +18,10 @@ author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
 ---
+
 # Where to find the Reporting Services add-in for SharePoint Products
-  The [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) add-in for SharePoint Products and Technologies (rssharepoint.msi) is a Web download that provides features to integrate a report server with a deployment of SharePoint.  
+
+The [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) add-in for SharePoint Products and Technologies (rssharepoint.msi) is a Web download that provides features to integrate a report server with a deployment of SharePoint.  
   
 > [!IMPORTANT]  
 >  For a list of the supported combinations of the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] add-in, report server, and SharePoint, see [Supported Combinations of SharePoint and Reporting Services Server and Add-in &#40;SQL Server 2016&#41;](../../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md).  
@@ -54,12 +56,14 @@ manager: "erikre"
 -   **SP1 add-in:**  [Microsoft® SQL Server® 2012 SP1 Reporting Services Add-in for Microsoft® SharePoint®](http://www.microsoft.com/download/details.aspx?id=35583)(http://www.microsoft.com/download/details.aspx?id=35583).  
   
 -   **SP1:**  [Microsoft® SQL Server® 2012 Service Pack 1 (SP1)](http://go.microsoft.com/fwlink/p/?LinkID=255906) (http://go.microsoft.com/fwlink/p/?LinkID=255906).  
-  
-##  <a name="bkmk_sql11"></a> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Reporting Services Add-in for SharePoint 2010 Products  
- Starting with the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] release the add-in can be installed as part of the SQL Server Installation wizard, in the Feature Selection page. If you want to download and install the add-in separately, the most up-to-date version of this file is available online at the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Download Center at [Microsoft® SQL Server® 2012 Reporting Services Add-in for Microsoft® SharePoint® Technologies 2010](http://go.microsoft.com/fwlink/?LinkID=207242) page.   
-  
-## See Also  
- [Install or Uninstall the Reporting Services Add-in for SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
- [You are not able to browse SharePoint pages in non-default zone after uninstalling Reporting Services add-in](http://support.microsoft.com/kb/2009212)  
-  
-  
+
+##  <a name="bkmk_sql11"></a> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Reporting Services Add-in for SharePoint 2010 Products
+
+In the SQL Server 2016 release, the add-in can be installed as part of the SQL Server Installation wizard, in the Feature Selection page. If you want to download and install the add-in separately, the most up-to-date version of this file is available online at the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Download Center at [Microsoft® SQL Server® 2012 Reporting Services Add-in for Microsoft® SharePoint® Technologies 2010](http://go.microsoft.com/fwlink/?LinkID=207242) page.
+
+## Next steps
+
+[Install or Uninstall the Reporting Services Add-in for SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
+[You are not able to browse SharePoint pages in non-default zone after uninstalling Reporting Services add-in](http://support.microsoft.com/kb/2009212)  
+
+More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)

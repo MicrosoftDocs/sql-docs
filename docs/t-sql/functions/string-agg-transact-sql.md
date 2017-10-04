@@ -30,7 +30,7 @@ Concatenates the values of string expressions and places separator values betwee
 ## Syntax  
   
 ```  
-STRING_AGG ( expression, separator [ <order_clause> ] )
+STRING_AGG ( expression, separator ) [ <order_clause> ]
 
 <order_clause> ::=   
     WITHIN GROUP ( ORDER BY <order_by_expression_list> [ ASC | DESC ] )   

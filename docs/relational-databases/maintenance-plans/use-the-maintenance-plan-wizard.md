@@ -1,6 +1,6 @@
 ---
 title: "Use the Maintenance Plan Wizard | Microsoft Docs"
-ms.date: "08/19/2016"
+ms.date: "06/20/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -39,18 +39,18 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Use the Maintenance Plan Wizard
-  This topic describes how to create a single  or multiserver maintenance plan using the Maintenance Plan Wizard in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. The Maintenance Plan Wizard creates a maintenance plan that [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent can run on a regular basis. This allows you to perform various database administration tasks, including backups, database integrity checks, or database statistics updates, at specified intervals.  
+  This topic describes how to create a single or multiserver maintenance plan using the Maintenance Plan Wizard in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. The Maintenance Plan Wizard creates a maintenance plan that [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent can run on a regular basis. This allows you to perform various database administration tasks, including backups, database integrity checks, or database statistics updates, at specified intervals.  
     
  
 ##  <a name="Restrictions"></a> Limitations and Restrictions  
   
--   To create a multiserver maintenance plan, you must configure a a multiserver environment with one master server, and one or more target servers. You must create and maintain multiserver maintenance plans on the master server. You can view plans on target servers.   
+-   To create a multiserver maintenance plan, you must configure a multiserver environment with one master server, and one or more target servers. You must create and maintain the multiserver maintenance plans on the master server. You can view plans on target servers.   
 
 -   Members of the **db_ssisadmin** and **dc_admin** roles may be able to elevate their privileges to **sysadmin**. This elevation of privilege can occur because these roles can modify [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages; these packages can be executed by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] using the **sysadmin** security context of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. 
 
 To guard against this elevation of privilege when running maintenance plans, data collection sets, and other [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages, configure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent jobs that run packages to use a proxy account with limited privileges or only add **sysadmin** members to the **db_ssisadmin** and **dc_admin** roles.  
 
-##  <a name="Prerequisite"></a> Prerequisite 
+##  <a name="Prerequisite"></a> Prerequisites 
 You must enable [Agent XPs Server Configuration Option](../../database-engine/configure-windows/agent-xps-server-configuration-option.md).
   
   
@@ -104,7 +104,8 @@ You must enable [Agent XPs Server Configuration Option](../../database-engine/co
   
                 -   If you select **Daily**, in the **Recurs every** box, enter how often the job schedule repeats in days.  
   
-                -   If you select **Weekly**, in the **Recurs every** box, enter how often the job schedule repeats in weeks. Select the day or days of the week on which the job schedule is run.  
+                -   If you select **Weekly**, in the **Recurs every** box, enter how often the job schedule repeats in weeks. Select the 
+                days of the week on which the job schedule is run.  
   
                 -   If you select **Monthly**, select either **Day** or **The**.  
   
@@ -197,7 +198,7 @@ Generate a maintenance plan that runs this task against all [!INCLUDE[msCoName](
      The database is condensed to contiguous pages but the pages are not deallocated, and the database files do not shrink. Use this option if you expect the database to expand again, and you do not want to reallocate space. With this option, the database files do not shrink as much as possible. This uses the NOTRUNCATE option.  
   
      **Return freed space to operating system**  
-     The database is condensed to contiguous pages and the pages are released back to the operating system for use by other programs. This database files shrink as much as possible. This uses the TRUNCATEONLY option. This is the default option.  
+     The database is condensed to contiguous pages and the pages are released back to the operating system for use by other programs. This uses the TRUNCATEONLY option. This is the default option.  
   
 ## Define the Index Tasks  
   
@@ -256,7 +257,7 @@ Generate a maintenance plan that runs this task against all [!INCLUDE[msCoName](
     > **NOTE:** Online index operations are not available in every edition of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. For more information, see [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
      **MAXDOP** check box  
-     Overrides the max degree of parallelism configuration option of sp_configure for DBCC CHECKDB. For more information, see For more information, see [DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)  
+     Overrides the max degree of parallelism configuration option of sp_configure for DBCC CHECKDB. For more information, see [DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)  
   
 #### Define the Update Statistics Task  
   
@@ -356,7 +357,7 @@ Generate a maintenance plan that runs this task against all [!INCLUDE[msCoName](
      **Create a sub-directory for each database** check box  
      Create a sub-directory under the specified disk directory that contains the database backup for each database being backed up as part of the maintenance plan.  
   
-    > **IMPORTANT!!** The sub-directory will inherit permissions from the parent directory. Restrict permissions to avoid unauthorized access.  
+    > **IMPORTANT!** The sub-directory will inherit permissions from the parent directory. Restrict permissions to avoid unauthorized access.  
   
      **Folder** box  
      Specify the folder to contain the automatically created database files. This option is disabled if you selected URL as the backup destination.  
@@ -364,7 +365,7 @@ Generate a maintenance plan that runs this task against all [!INCLUDE[msCoName](
      **SQL Credential**  
      Select a SQL Credential used to authenticate to Windows Azure Storage. If you do not have an existing SQL Credential you can use, click the **Create** button to create a new SQL Credential.  
   
-    > **IMPORTANT!!** The dialog that opens when you click **Create** requires a management certificate or the publishing profile for the subscription. If you do not have access to the management certificate or publishing profile, you can create a SQL Credential by specifying the storage account name and access key information using Transact-SQL or SQL Server Management Studio. See the sample code in the [Create a Credential](../../relational-databases/backup-restore/sql-server-backup-to-url.md#credential) topic to create a credential using Transact-SQL. Alternatively, using SQL Server Management Studio, from the database engine instance, right click **Security**, select **New**, and select **Credential**. Specify the storage account name for **Identity** and the access key in the **Password** field.  
+    > **IMPORTANT!** The dialog that opens when you click **Create** requires a management certificate or the publishing profile for the subscription. If you do not have access to the management certificate or publishing profile, you can create a SQL Credential by specifying the storage account name and access key information using Transact-SQL or SQL Server Management Studio. See the sample code in the [Create a Credential](../../relational-databases/backup-restore/sql-server-backup-to-url.md#credential) topic to create a credential using Transact-SQL. Alternatively, using SQL Server Management Studio, from the database engine instance, right-click **Security**, select **New**, and select **Credential**. Specify the storage account name for **Identity** and the access key in the **Password** field.  
   
      **Azure storage container**  
      Specify the name of the Windows Azure storage container  

@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_exec_sessions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/31/2017"
+ms.date: "08/21/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -25,7 +25,7 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # sys.dm_exec_sessions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Returns one row per authenticated session on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. sys.dm_exec_sessions is a server-scope view that shows information about all active user connections and internal tasks. This information includes client version, client program name, client login time, login user, current session setting, and more. Use sys.dm_exec_sessions to first view the current system load and to identify a session of interest, and then learn more information about that session by using other dynamic management views or dynamic management functions.  
   
@@ -41,7 +41,7 @@ manager: "jhubbard"
 |program_name|**nvarchar(128)**|Name of client program that initiated the session. The value is NULL for internal sessions. Is nullable.|  
 |host_process_id|**int**|Process ID of the client program that initiated the session. The value is NULL for internal sessions. Is nullable.|  
 |client_version|**int**|TDS protocol version of the interface that is used by the client to connect to the server. The value is NULL for internal sessions. Is nullable.|  
-|client_interface_name|**nvarchar(32)**|Protocol name that is used by the client to connect to the server. The value is NULL for internal sessions. Is nullable.|  
+|client_interface_name|**nvarchar(32)**|Name of library/driver being used by the client to communicate with the server. The value is NULL for internal sessions. Is nullable.|  
 |security_id|**varbinary(85)**|Microsoft Windows security ID associated with the login. Is not nullable.|  
 |login_name|**nvarchar(128)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login name under which the session is currently executing. For the original login name that created the session, see original_login_name. Can be a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authenticated login name or a Windows authenticated domain user name. Is not nullable.|  
 |nt_domain|**nvarchar(128)**|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Windows domain for the client if the session is using Windows Authentication or a trusted connection. This value is NULL for internal sessions and non-domain users. Is nullable.|  

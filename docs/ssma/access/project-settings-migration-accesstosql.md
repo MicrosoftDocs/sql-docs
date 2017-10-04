@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "Project Settings dialog box, Migration"
 ms.assetid: 4caebc9c-8680-4b99-a8fa-89c43161c95d
 caps.latest.revision: 14
-author: "sabotta"
-ms.author: "carlasab"
-manager: "lonnyb"
+author: "Shamikg"
+ms.author: "Shamikg"
+manager: "jhubbard"
 ---
 # Project Settings (Migration) (AccessToSQL)
 The Migration project settings let you configure how data is migrated to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure.  

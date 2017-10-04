@@ -106,7 +106,7 @@ INSERT
  Is an optional keyword that can be used between `INSERT` and the target table.  
   
  *search_condition_with_match*   
- `MATCH` clause can be used in a subquery while inserting into a node or edge table. For `MATCH` statement syntax, see [GRAPH MATCH (Transact-SQL)](../../t-sql/statements/match-sql-graph.md)
+ `MATCH` clause can be used in a subquery while inserting into a node or edge table. For `MATCH` statement syntax, see [GRAPH MATCH (Transact-SQL)](../../t-sql/queries/match-sql-graph.md)
 
  *graph_search_pattern*   
  Search pattern provided to `MATCH` clause as part of the graph predicate.
@@ -122,7 +122,7 @@ While inserting into an edge table, users must provide values for `$from_id` and
 
 BULK insert for node table is remains same as that of a relational table.
 
-Before bulk inserting into an edge table, the node tables must be imported. Values for `$from_id` and `$to_id` can then be extracted and inserted edges. 
+Before bulk inserting into an edge table, the node tables must be imported. Values for `$from_id` and `$to_id` can then be extracted from the `$node_id` column of the node table and inserted as edges. 
 
   
 ### Permissions  

@@ -33,8 +33,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 NCHAR ( integer_expression )  
 ```  
   
@@ -49,7 +47,7 @@ NCHAR ( integer_expression )
   
  **nvarchar(2)** when the default database collation supports supplementary characters.  
   
- If the parameter *integer_expression* lies in the range 0 - 0xFFFF, only one character is returned. For higher values, NCHAR returns the corresponding surrogate pair. Do not construct a surrogate pair by using `NCHAR(<High surrogate>) + NCHAR(<Low Surrogate>)`. Instead, use a database collation that supports supplementary characters and then specify the Unicode codepoint for the surrogate pair. The following example demonstrates both the old style method of constructing a surrogate pair and the preferred method of specifying the Unicode codepoint.  
+ If the parameter *integer_expression* lies in the range 0 - 0xFFFF, only one character is returned. For higher values, NCHAR returns the corresponding surrogate pair. Do not construct a surrogate pair by using `NCHAR(<High surrogate>) + NCHAR(\<Low Surrogate>)`. Instead, use a database collation that supports supplementary characters and then specify the Unicode codepoint for the surrogate pair. The following example demonstrates both the old style method of constructing a surrogate pair and the preferred method of specifying the Unicode codepoint.  
   
 ```  
 CREATE DATABASE test COLLATE Finnish_Swedish_100_CS_AS_SC;  

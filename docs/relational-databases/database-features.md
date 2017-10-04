@@ -1,7 +1,7 @@
 ---
-title: "Database Features | Microsoft Docs"
+title: "Microsoft SQL relational databases - guidance | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/02/2017"
+ms.date: "07/26/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -15,10 +15,10 @@ author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
 ---
-# Database Features  
+# Guidance for using Microsoft SQL relational databases
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]  
 
-  This section contains the features and tasks associated with databases, database objects, data types, and the mechanisms used to work with or manage data. This information is common to most versions of the [!INCLUDE[ssdenoversion_md](../includes/ssdenoversion_md.md)]. Individual topics may indicate that some features are limited to some platforms. For information on a specific platform, see the following links: 
+  This section contains the features and tasks associated with Microsoft SQL relational databases, database objects, data types, and the mechanisms used to work with or manage data. This information is common to most versions of the [!INCLUDE[ssdenoversion_md](../includes/ssdenoversion_md.md)]. Individual topics may indicate that some features are limited to some platforms. For information on a specific platform, see the following links: 
   
 - [On-premises SQL Server](../database-engine/sql-server-database-engine-backward-compatibility.md) and [SQL Server Configuration](../database-engine/configure-windows/sql-server-database-engine.md)  
 - [SQL Server on Linux Documentation](../linux/sql-server-linux-overview.md)  

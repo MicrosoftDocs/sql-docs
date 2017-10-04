@@ -1,7 +1,7 @@
 ---
 title: "Deterministic and Nondeterministic Functions | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/28/2016"
+ms.date: "08/26/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -84,15 +84,15 @@ manager: "jhubbard"
 |CURRENT_TIMESTAMP|RAND|  
 |DENSE_RANK|RANK|  
 |FIRST_VALUE|ROW_NUMBER|   
-||TEXTPTR|  
+|FORMAT|TEXTPTR|  
   
 ## Calling Extended Stored Procedures from Functions  
- Functions that call extended stored procedures are nondeterministic, because the extended stored procedures can cause side effects on the database. Side effects are changes to a global state of the database, such as an update to a table, or to an external resource, such as a file or the network; for example, modifying a file or sending an e-mail message. You should not rely on returning a consistent result set when executing an extended stored procedure from a user-defined function. User-defined functions that create side effects on the database are not recommended.  
+ Functions that call extended stored procedures are nondeterministic, because the extended stored procedures can cause side effects on the database. Side effects are changes to a global state of the database, such as an update to a table, or to an external resource, such as a file or the network; for example, modifying a file or sending an e-mail message. Do not rely on returning a consistent result set when executing an extended stored procedure from a user-defined function. User-defined functions that create side effects on the database are not recommended.  
   
- When called from inside a function, the extended stored procedure cannot return result sets to the client. Any Open Data Services API that returns result sets to the client will have a return code of FAIL.  
+ When called from inside a function, the extended stored procedure cannot return result sets to the client. Any Open Data Services API that returns result sets to the client, has a return code of FAIL.  
   
  The extended stored procedure can connect back to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. However, the procedure cannot join the same transaction as the original function that invoked the extended stored procedure.  
   
- Similar to invocations from a batch or stored procedure, the extended stored procedure is executed in the context of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows security account under which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is running. The owner of the extended stored procedure should consider this when granting permissions to other users to execute the procedure.  
+ Similar to invocations from a batch or stored procedure, the extended stored procedure is executed in the context of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows security account under which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is running. The owner of the extended stored procedure should consider the permissions of this security context, when granting permissions to other users to execute the procedure.  
   
   

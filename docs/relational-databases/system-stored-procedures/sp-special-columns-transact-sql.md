@@ -27,16 +27,11 @@ manager: "jhubbard"
 
   Returns the optimal set of columns that uniquely identify a row in the table. Also returns columns automatically updated when any value in the row is updated by a transaction.  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
-  
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
 ```  
-  
 sp_special_columns [ @table_name = ] 'table_name'     
      [ , [ @table_owner = ] 'table_owner' ]   
      [ , [ @qualifier = ] 'qualifier' ]   
@@ -96,7 +91,7 @@ sp_special_columns [ @table_name = ] 'table_name'
 ## Examples  
  The following example returns information about the column that uniquely identifies rows in the `HumanResources.Department` table.  
   
-```  
+```tsql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_special_columns @table_name = 'Department'   

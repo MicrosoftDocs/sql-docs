@@ -26,7 +26,7 @@ manager: "jhubbard"
 
   Returns one net change row for each source row changed within the specified Log Sequence Numbers (LSN) range.  
   
- **Wait, what is an LSN?** Every record in the [SQL Server transaction log](https://msdn.microsoft.com/en-us/library/ms190925.aspx) is uniquely identified by a log sequence number (LSN). LSNs are ordered such that if LSN2 is greater than LSN1, the change described by the log record referred to by LSN2 occurred **after** the change described by the log record LSN.  
+ **Wait, what is an LSN?** Every record in the [SQL Server transaction log](../logs/the-transaction-log-sql-server.md) is uniquely identified by a log sequence number (LSN). LSNs are ordered such that if LSN2 is greater than LSN1, the change described by the log record referred to by LSN2 occurred **after** the change described by the log record LSN.  
   
  The LSN of a log record where a significant event occurred can be useful for constructing correct restore sequences. Because LSNs are ordered, you can compare them for equality and inequality (that is, \<, >, =, \<=, >=). Such comparisons are useful when constructing restore sequences.  
   

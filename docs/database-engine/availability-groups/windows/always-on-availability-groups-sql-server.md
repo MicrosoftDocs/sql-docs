@@ -83,28 +83,28 @@ manager: "jhubbard"
     -   PowerShell cmdlets. For more information, see [Overview of PowerShell Cmdlets for Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md).  
   
 ##  <a name="TermsAndDefinitions"></a> Terms and Definitions  
- availability group  
+ **availability group**  
  A container for a set of databases, *availability databases*, that fail over together.  
   
- availability database  
+ **availability database**  
  A database that belongs to an availability group. For each availability database, the availability group maintains a single read-write copy (the *primary database*) and one to eight read-only copies (*secondary databases*).  
   
- primary database  
+ **primary database**  
  The read-write copy of an availability database.  
   
- secondary database  
+ **secondary database**  
  A read-only copy of an availability database.  
   
- availability replica  
+ **availability replica**  
  An instantiation of an availability group that is hosted by a specific instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] and maintains a local copy of each availability database that belongs to the availability group. Two types of availability replicas exist: a single *primary replica* and one to eight *secondary replicas*.  
   
- primary replica  
+ **primary replica**  
  The availability replica that makes the primary databases available for read-write connections from clients and, also, sends transaction log records for each primary database to every secondary replica.  
   
- secondary replica  
+ **secondary replica**  
  An availability replica that maintains a secondary copy of each availability database, and serves as a potential failover targets for the availability group. Optionally, a secondary replica can support read-only access to secondary databases can support creating backups on secondary databases.  
   
- availability group listener  
+ **availability group listener**  
  A server name to which clients can connect in order to access a database in a primary or secondary replica of an Always On availability group. Availability group listeners direct incoming connections to the primary replica or to a read-only secondary replica.  
   
 > [!NOTE]  
@@ -119,7 +119,7 @@ manager: "jhubbard"
   
 -   [Contained databases](../../../relational-databases/databases/contained-databases.md)  
   
--   [Database encryption](../../../relational-databases/security/encryption/transparent-data-encryption-tde.md)  
+-   [Database encryption](../../../relational-databases/security/encryption/transparent-data-encryption.md)  
   
 -   [Database snapshots](../../../database-engine/availability-groups/windows/database-snapshots-with-always-on-availability-groups-sql-server.md)  
   

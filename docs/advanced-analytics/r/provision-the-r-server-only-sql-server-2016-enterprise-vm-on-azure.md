@@ -1,7 +1,7 @@
 ---
 title: "Provision the R Server Only SQL Server 2016 Enterprise VM on Azure | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/28/2017"
+ms.date: "06/05/2017"
 ms.prod: "r-server"
 ms.reviewer: ""
 ms.suite: ""
@@ -39,7 +39,7 @@ If you are new to using Azure VMs, we recommend that you see these articles for 
     - Other possible strings for the **Filter** control are *data science* and *machine learning*
     - Use the % wildcard in search to find VM names that contain a target string, such as *R* or *Julia*.
 
-2. To get R Server for Windows, select **R Server Only SQL Server 2017 Enterprise**.
+2. To get R Server for Windows, select **R Server Only SQL Server 2016 Enterprise**.
   
     [R Server](https://msdn.microsoft.com/microsoft-r/rserver-whats-new) is licensed as a SQL Server Enterprise Edition feature, but version 9.1. is installed as a standalone server and serviced under the Modern Lifecycle support policy.
 
@@ -81,7 +81,7 @@ This VM image was recently updated to include JupyterHub, open source software t
 
 Images are provided for Ubuntu, Centos, and Centos CSP.
 
-### R Server Only SQL Server 2017 Enterprise
+### R Server Only SQL Server 2016 Enterprise
 
 This virtual machine includes a standalone installer for [R Server 9.1.](https://msdn.microsoft.com/microsoft-r/rserver-whats-new) that supports the new Modern Software Lifecycle licensing model.
 
@@ -92,14 +92,12 @@ This virtual machine includes a standalone installer for [R Server 9.1.](https:/
 
 ## SQL Server Images
 
-To use SQL Server R Services, you must install one of the SQL Server Enterprise or Developer edition virtual machines, and add the machine learning service, as described here: [Installing SQL Server R Services on an Azure Virtual Machine](../../advanced-analytics/r-services/installing-sql-server-r-services-on-an-azure-virtual-machine.md).
+To use R Services (In-Database) or Machine Learning Services, you must install one of the SQL Server Enterprise or Developer edition virtual machines, and add the machine learning service, as described here: [Installing SQL Server R Services on an Azure Virtual Machine](../../advanced-analytics/r-services/installing-sql-server-r-services-on-an-azure-virtual-machine.md).
 
 > [!NOTE]
 > Currently, machine learning services are not supported on the Linux virtual machines for SQL Server 2017, or in Azure SQL Database. You must use either SQL Server 2016 SP1 or SQL Server 2017 for Windows.
 
 The Data Science Virtual Machine also includes SQL Server 2016 with the R services feature already enabled.
-
-The SQL Server 2017 Enterprise Edition image will be available after public release. However, you can use the SQl Server 2016 image, and upgrade your instance of R as described here: [Upgrade an Instance using SqlBindR](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
 
 
 ## Other VMs
@@ -116,6 +114,16 @@ The deep learning toolkit also provides a set of sample deep learning solutions 
 
 ## Frequently Asked Questions
 
+### Can I install a virtual machine with SQL Server 2017?
+
+Images are available that contain SQL Server 2017 CTP 2.0 for Linux environments, but these environments currently do not support Machine Learning Services. 
+
+A Windows-based virtual machine for SQL Server 2017 Enterprise Edition that includes Machine Learning Services will be available after public release. 
+
+As an alternative, you can use the SQL Server 2016 image, and upgrade your instance of R as described here: [Upgrade an Instance using SqlBindR](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md). 
+
+Or, create a virtual machine and download the CTP 2.0 preview of [SQL Server 2017](https://www.microsoft.com/sql-server/sql-server-2017).
+
 ### How do I access data in an Azure storage account?
 
 When you need to use data from your Azure storage account, there are several options for accessing or moving the data:
@@ -126,7 +134,7 @@ When you need to use data from your Azure storage account, there are several opt
 
 ### How do I use data from Azure Data Lake Storage (ADLS)?
 
-You can read data from ADLS storage using ScaleR, if you reference the storage account the same way that you would an HDFS file system, by using webHDFS.  For more information, see this [setup guide](http://go.microsoft.com/fwlink/?LinkId=723452).
+You can read data from ADLS storage using RevoScaleR, if you reference the storage account the same way that you would an HDFS file system, by using webHDFS.  For more information, see this article: [Using R to perform FileSystem Operations on Azure Data Lake Store](https://blogs.msdn.microsoft.com/microsoftrservertigerteam/2017/03/14/using-r-to-perform-filesystem-operations-on-azure-data-lake-store/).
 
 ## See Also
 

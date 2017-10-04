@@ -11,12 +11,12 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: d587cedd-6402-4d5c-9526-7cd25627a037
 caps.latest.revision: 4
-author: "sabotta"
-ms.author: "carlasab"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # catalog.add_execution_worker (SSISDB Database)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
 
 Adds a [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Scale Out Worker to an instance of execution in Scale Out.
 
@@ -60,5 +60,5 @@ The worker agent id of a Scale Out Worker. The *workeragent_id* is **uniqueIdent
 - The execution is not in Scale Out.
 
 ## See Also
-[Execute packages in Scale Out](~/integration-services/packages/run-integration-services-ssis-packages.md).
+[Execute packages in Scale Out](~/integration-services/scale-out/run-packages-in-integration-services-ssis-scale-out.md).
 

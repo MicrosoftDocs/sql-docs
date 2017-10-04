@@ -1,7 +1,7 @@
 ---
 title: "value() Method (xml Data Type) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/17/2017"
+ms.date: "07/26/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -26,10 +26,6 @@ manager: "jhubbard"
   Performs an XQuery against the XML and returns a value of SQL type. This method returns a scalar value.  
   
  You typically use this method to extract a value from an XML instance stored in an **xml** type column, parameter, or variable. In this way, you can specify SELECT queries that combine or compare XML data with data in non-XML columns.  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
   
 ## Syntax  
   

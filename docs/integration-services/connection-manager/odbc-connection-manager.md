@@ -9,6 +9,8 @@ ms.technology:
   - "integration-services"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
+f1_keywords: 
+  - "sql13.dts.designer.odbcconnection.f1"
 helpviewer_keywords: 
   - "connections [Integration Services], ODBC"
   - "ODBC connection manager"
@@ -44,6 +46,23 @@ manager: "jhubbard"
   
  For information about configuring a connection manager programmatically, see <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> and [Adding Connections Programmatically](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md).  
   
+## ODBC Connection Manager UI Reference
+  Use the **Configure ODBC Connection Manager** dialog box to add a connection to an ODBC data source.  
+  
+ To learn more about the ODBC connection manager, see [ODBC Connection Manager](../../integration-services/connection-manager/odbc-connection-manager.md).  
+  
+### Options  
+ **Data connections**  
+ Select an existing ODBC connection manager from the list.  
+  
+ **Data connection properties**  
+ View properties and values for the selected ODBC connection manager.  
+  
+ **New**  
+ Create an ODBC connection manager by using the **Connection Manager** dialog box. This dialog box also lets you create a new ODBC data source if it is required.  
+  
+ **Delete**  
+ Select a connection, and then delete it by using the **Delete** button.  
 ## See Also  
  [Integration Services &#40;SSIS&#41; Connections](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
   

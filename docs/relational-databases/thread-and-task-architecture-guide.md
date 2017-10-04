@@ -46,7 +46,6 @@ These systems may see a small increase in performance if the lightweight pooling
 
 We do not recommend that you use fiber mode scheduling for routine operation. This is because it can decrease performance by inhibiting the regular benefits of context switching, and because some components of SQL Server cannot function correctly in fiber mode. For more information, see lightweight pooling.
 
-
 ## Thread and Fiber Execution
 
 Microsoft Windows uses a numeric priority system that ranges from 1 through 31 to schedule threads for execution. Zero is reserved for operating system use. When several threads are waiting to execute, Windows dispatches the thread with the highest priority.
@@ -88,15 +87,14 @@ Do not rely on autogrow to increase the size of the transaction log file. Increa
 
 The performance of index operations such as creating or rebuilding indexes can be improved on computers that have many CPUs by temporarily setting the recovery model of the database to either the bulk-logged or simple recovery model. These index operations can generate significant log activity and log contention can affect the best degree of parallelism (DOP) choice made by SQL Server.
 
-In addition, consider adjusting the max degree of parallelism (MAXDOP) setting for these operations. The following guidelines are based on internal tests and are general recommendations. You should try several different MAXDOP settings to determine the optimal setting for your environment.
+In addition, consider adjusting the **max degree of parallelism (MAXDOP)** server configuration option for these operations. The following guidelines are based on internal tests and are general recommendations. You should try several different MAXDOP settings to determine the optimal setting for your environment.
 
 * For the full recovery model, limit the value of the max degree of parallelism option to eight or less.   
 * For the bulk-logged model or the simple recovery model, setting the value of the max degree of parallelism option to a value higher than eight should be considered.   
 * For servers that have NUMA configured, the maximum degree of parallelism should not exceed the number of CPUs that are assigned to each NUMA node. This is because the query is more likely to use local memory from 1 NUMA node, which can improve memory access time.  
-* For servers that have hyper-threading enabled and were manufactured in 2009 or earlier, the MAXDOP value should not exceed the number of physical processors.  
+* For servers that have hyper-threading enabled and were manufactured in 2009 or earlier (before hyper-threading feature was improved), the MAXDOP value should not exceed the number of physical processors, rather than logical processors.
 
-
-For more information about the max degree of parallelism option, see [Set the Max Degree of Parallelism Option](../relational-databases/policy-based-management/set-the-max-degree-of-parallelism-option-for-optimal-performance.md).
+For more information about the max degree of parallelism option, see [Configure the max degree of parallelism Server Configuration Option](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
 
 ### Setting the Maximum Number of Worker Threads
 

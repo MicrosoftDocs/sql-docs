@@ -1,7 +1,7 @@
 ---
 title: "Tutorial: Format Text (Report Builder) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/15/2016"
+ms.date: "05/30/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -17,7 +17,9 @@ author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "erikre"
 ---
+
 # Tutorial: Format Text (Report Builder)
+
 In this tutorial, you practice formatting text in various ways in a [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] paginated report. You can experiment with different formats. 
 
 After you set up the blank report with the data source and dataset, you can pick the formats you want to explore. The following illustration shows a report similar to the one you will create.  
@@ -58,7 +60,7 @@ For information about requirements, see [Prerequisites for Tutorials &#40;Report
 4.  Verify that the connection type is Microsoft SQL Server, and then in the **Connection string** box type: `Data Source = <servername>`  
   
     > [!NOTE]  
-    > The expression `<servername>`, for example Report001, specifies a computer on which an instance of the SQL Server Database Engine is installed. This tutorial does not need specific data; it just needs a connection to a [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] database. If you already have a data source connection listed under **Data Source Connections**, you can select it and go to the next procedure, "To create a dataset." For more information, see [Alternative Ways to Get a Data Connection &#40;Report Builder&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
+    > The expression `<servername>`, for example Report001, specifies a computer on which an instance of the SQL Server Database Engine is installed. This tutorial does not need specific data; it just needs a connection to a SQL Server database. If you already have a data source connection listed under **Data Source Connections**, you can select it and go to the next procedure, "To create a dataset." For more information, see [Alternative Ways to Get a Data Connection &#40;Report Builder&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -353,13 +355,13 @@ The report is saved to the report server. The name of report server that you are
 3.  In **Name**, replace the default name with a name of your choosing. 
   
 4.  Click **Save**.  
-  
-## Next Steps  
-There are many ways to format text in Report Builder. [Tutorial: Creating a Free Form Report &#40;Report Builder&#41;](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md) contains more examples.  
-  
-## See Also  
--   [Report Builder Tutorials ](../reporting-services/report-builder-tutorials.md) 
--   [Formatting Report Items &#40;Report Builder and SSRS&#41;](../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  
--   [Report Builder in SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
-  
 
+## Next Steps
+
+There are many ways to format text in Report Builder. [Tutorial: Creating a Free Form Report](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md) contains more examples.  
+
+[Report Builder Tutorials ](../reporting-services/report-builder-tutorials.md) 
+[Formatting Report Items](../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  
+[Report Builder in SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
+
+More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)

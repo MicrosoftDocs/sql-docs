@@ -2,7 +2,7 @@
 title: "external scripts enabled Server Configuration Option | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "03/15/2017"
+ms.date: "08/03/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -24,16 +24,16 @@ manager: "jhubbard"
 # external scripts enabled Server Configuration Option
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Use the **external scripts enabled** option to enable the execution of scripts with certain remote language extensions. This property will be OFF by default. Setup can optionally set this property to true if **Advanced Analytics Services** is installed.  
+  Use the **external scripts enabled** option to enable the execution of scripts with certain remote language extensions. This property is OFF by default. When **Advanced Analytics Services** is installed, setup can optionally set this property to true.  
   
 
  You must enable the external script enabled option before you can execute an external script using the **sp_execute_external_script** procedure. Use **sp_execute_external_script** to execute scripts written in a supported language such as R. In [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] is comprised of a server component installed with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], and a set of workstation tools and connectivity libraries that connect the data scientist to the high-performance environment of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  Install the **Advanced Analytics Extensions** feature during [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup to enable the execution of R scripts. For more information, see [Installing Previous Versions of SQL Server R Services](http://msdn.microsoft.com/library/48380645-9e72-4744-bebb-1c1fd8a18c43).  
   
- Execute the following script to enable external scripts.  
+ To enable external scripts, execute the following script:  
   
 ```  
 sp_configure 'external scripts enabled', 1;  
-RECONFIGURE;  
+RECONFIGURE WITH OVERRIDE;  
 ```  
   
  You must restart [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to make this change effective.  

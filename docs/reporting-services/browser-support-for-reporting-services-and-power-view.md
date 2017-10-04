@@ -2,7 +2,7 @@
 title: "Browser Support for Reporting Services and Power View | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "05/10/2017"
+ms.date: "07/02/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -28,14 +28,14 @@ manager: "erikre"
 ---
 # Browser Support for Reporting Services and Power View
 
-[!INCLUDE[ssrs-appliesto-sql2016-preview](../includes/ssrs-appliesto-sql2016-preview.md)]
+[!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
-Learn about what browser versions are supported for managing and viewing [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], the ReportViewer Controls and Power View.
+Learn about what browser versions are supported for managing and viewing SQL Server Reporting Services, the ReportViewer Controls and Power View.
 
 > [!NOTE]
 > Reporting Services integration with SharePoint is no longer available after SQL Server 2016.
 
-##  Browser requirements for the web portal
+## Browser requirements for the web portal
 
 The following is the current list of browsers supported for the web portal.
 
@@ -65,7 +65,7 @@ The following is the current list of browsers supported for the web portal.
 
  **(+)** Latest publicly released version
 
-##  Browser requirements for the ReportViewer web control (2015)
+## Browser requirements for the ReportViewer web control (2015)
 
  The following is the current list of browsers supported with the ReportViewer web control (2015). The report viewer supports viewing reports from [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] web portal and SharePoint libraries.  
 

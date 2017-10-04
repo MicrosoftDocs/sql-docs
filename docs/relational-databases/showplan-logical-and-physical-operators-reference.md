@@ -1,7 +1,7 @@
 ---
 title: "Showplan Logical and Physical Operators Reference | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "05/31/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -179,6 +179,7 @@ manager: "jhubbard"
   
 |Graphical Execution Plan Icon|Showplan Operator|Description|  
 |-----------------------------------|-----------------------|-----------------|  
+|![Adaptive Join operator icon](../relational-databases/media/AdaptiveJoin.gif "Adaptive Join operator icon")|**Adaptive Join**|The **Adaptive Join** operator enables the choice of a hash join or nested loop join method to be deferred until the after the first input has been scanned. | 
 |None|**Aggregate**|The **Aggregate** operator calculates an expression containing MIN, MAX, SUM, COUNT or AVG. The **Aggregate** operator can be a logical operator or a physical operator.|  
 |![Arithmetic expression operator icon](../relational-databases/media/arithmetic-expression-32x-2.gif "Arithmetic expression operator icon")|**Arithmetic Expression**|The **Arithmetic Expression** operator computes a new value from existing values in a row. **Arithmetic Expression** is not used in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].|  
 |![Assert operator icon](../relational-databases/media/assert-32x.gif "Assert operator icon")|**Assert**|The **Assert** operator verifies a condition. For example, it validates referential integrity or ensures that a scalar subquery returns one row. For each input row, the **Assert** operator evaluates the expression in the **Argument** column of the execution plan. If this expression evaluates to NULL, the row is passed through the **Assert** operator and the query execution continues. If this expression evaluates to a nonnull value, the appropriate error will be raised. The **Assert** operator is a physical operator.|  

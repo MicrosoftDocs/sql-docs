@@ -1,7 +1,7 @@
 ---
 title: "APPLOCK_MODE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "07/24/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -28,32 +28,31 @@ manager: "jhubbard"
 # APPLOCK_MODE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Returns the lock mode held by the lock owner on a particular application resource. APPLOCK_MODE is an application lock function, and it operates on the current database. The scope of application locks is the database.  
+Returns the lock mode held by the lock owner on a particular application resource. APPLOCK_MODE is an application lock function, and it operates on the current database. The scope of application locks is the database.
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## Syntax  
   
-```  
-  
+```sql
 APPLOCK_MODE( 'database_principal' , 'resource_name' , 'lock_owner' )  
 ```  
   
 ## Arguments  
- '*database_principal*'  
- Is the user, role, or application role that can be granted permissions to objects in the database. The caller of the function must be a member of *database_principal*, dbo, or the db_owner fixed database role in order to call the function successfully.  
+'*database_principal*'  
+Is the user, role, or application role that can be granted permissions to objects in the database. The caller of the function must be a member of *database_principal*, dbo, or the db_owner fixed database role in order to call the function successfully.
   
- '*resource_name*'  
- Is a lock resource name specified by the client application. The application must ensure that the resource name is unique. The specified name is hashed internally into a value that can be stored in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lock manager. *resource_name*is **nvarchar(255)** with no default. *resource_name* is binary compared, and is case-sensitive regardless of the collation settings of the current database.  
+'*resource_name*'  
+Is a lock resource name specified by the client application. The application must ensure that the resource name is unique. The specified name is hashed internally into a value that can be stored in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lock manager. *resource_name*is **nvarchar(255)** with no default. *resource_name* is binary compared, and is case-sensitive regardless of the collation settings of the current database.
   
- '*lock_owner*'  
- Is the owner of the lock, which is the *lock_owner* value when the lock was requested. *lock_owner* is **nvarchar(32)**, and the value can be either **Transaction** (the default) or **Session**.  
+'*lock_owner*'  
+Is the owner of the lock, which is the *lock_owner* value when the lock was requested. *lock_owner* is **nvarchar(32)**, and the value can be either **Transaction** (the default) or **Session**.
   
-## Return Types  
- **nvarchar(32)**  
+## Return types
+**nvarchar(32)**
   
-## Return Value  
- Returns the lock mode held by the lock owner on a particular application resource. Lock mode can be any one of these values:  
+## Return value
+Returns the lock mode held by the lock owner on a particular application resource. Lock mode can be any one of these values:
   
 ||||  
 |-|-|-|  
@@ -61,21 +60,21 @@ APPLOCK_MODE( 'database_principal' , 'resource_name' , 'lock_owner' )
 |**IntentShared**|**IntentExclusive**|**\*UpdateIntentExclusive**|  
 |**Shared**|**Exclusive**||  
   
- *This lock mode is a combination of other lock modes and cannot be explicitly acquired by using sp_getapplock.  
+*This lock mode is a combination of other lock modes and cannot be explicitly acquired by using sp_getapplock.
   
-## Function Properties  
- **Nondeterministic**  
+## Function properties
+**Nondeterministic**
   
- **Nonindexable**  
+**Nonindexable**
   
- **Nonparallelizable**  
+**Nonparallelizable**
   
 ## Examples  
- Two users (User A and User B) with separate sessions run the following sequence of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements.  
+Two users (User A and User B) with separate sessions run the following sequence of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements.
   
- User A runs:  
+User A runs:
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 BEGIN TRAN;  
@@ -89,9 +88,9 @@ SELECT APPLOCK_MODE('public', 'Form1', 'Transaction');
 GO  
 ```  
   
- User B then runs:  
+User B then runs:
   
-```  
+```sql
 Use AdventureWorks2012;  
 GO  
 BEGIN TRAN;  
@@ -106,31 +105,31 @@ SELECT APPLOCK_TEST('public', 'Form1', 'Exclusive', 'Transaction');
 GO  
 ```  
   
- User A then runs:  
+User A then runs:
   
-```  
+```sql
 EXEC sp_releaseapplock @Resource='Form1', @DbPrincipal='public';  
 GO  
 ```  
   
- User B then runs:  
+User B then runs:
   
-```  
+```sql
 SELECT APPLOCK_TEST('public', 'Form1', 'Exclusive', 'Transaction');  
 --Result set: '1' (The lock is grantable.)  
 GO  
 ```  
   
- User A and User B then run:  
+User A and User B then run:
   
-```  
+```sql
 COMMIT TRAN;  
 GO  
 ```  
   
-## See Also  
- [APPLOCK_TEST &#40;Transact-SQL&#41;](../../t-sql/functions/applock-test-transact-sql.md)   
- [sp_getapplock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-getapplock-transact-sql.md)   
- [sp_releaseapplock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-releaseapplock-transact-sql.md)  
+## See also
+[APPLOCK_TEST &#40;Transact-SQL&#41;](../../t-sql/functions/applock-test-transact-sql.md)  
+[sp_getapplock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-getapplock-transact-sql.md)  
+[sp_releaseapplock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-releaseapplock-transact-sql.md)
   
   

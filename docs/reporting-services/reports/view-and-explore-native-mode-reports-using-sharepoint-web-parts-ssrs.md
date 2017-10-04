@@ -1,7 +1,7 @@
 ---
 title: "View and Explore Native Mode Reports Using SharePoint Web Parts (SSRS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "05/30/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -16,10 +16,11 @@ author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
 ---
+
 # View and Explore Native Mode Reports Using SharePoint Web Parts (SSRS)
-    
+
 > [!IMPORTANT]  
->  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no longer supports using native mode (RSWebParts.cab) web parts to access report server content on a SharePoint site from a native mode report server. Use a [Report Viewer Web Part on a SharePoint Site](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md) instead.  
+>  SQL Server Reporting Services no longer supports using native mode (RSWebParts.cab) web parts to access report server content on a SharePoint site from a native mode report server. Use a [Report Viewer Web Part on a SharePoint Site](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md) instead.  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] provides several Web Parts that work with specific versions of a report server and in particular deployment modes.  
   
@@ -77,7 +78,7 @@ manager: "erikre"
   
 #### Install Web Parts Using PowerShell  
   
-1.  Copy the **RSWebParts.cab** to a folder on the SharePoint server. You can copy it to any folder on the SharePoint server, and then delete it later after you install the Web Parts. By default [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installs the RSWebParts.cab file into the following folder:  
+1.  Copy the **RSWebParts.cab** to a folder on the SharePoint server. You can copy it to any folder on the SharePoint server, and then delete it later after you install the Web Parts. By default SQL Server 2014 Reporting Services and earlier installs the RSWebParts.cab file into the following folder:  
   
     ```  
     C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Reporting Services\SharePoint  
@@ -166,10 +167,5 @@ manager: "erikre"
     2.  Click **Show report in**.  
   
     3.  Click **Report Viewer**.  
-  
-## See Also  
- [Report Manager  &#40;SSRS Native Mode&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
- [Reporting Services Report Server &#40;SharePoint Mode&#41;](../../reporting-services/report-server-sharepoint/reporting-services-report-server-sharepoint-mode.md)   
- [Reporting Services Report Server &#40;Native Mode&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)  
-  
-  
+
+More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)

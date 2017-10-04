@@ -82,7 +82,7 @@ manager: "erikre"
   
 -   **spPowerPivot.msi** is 64-bit only, in accordance with the requirements of SharePoint products and technologies.  
   
--   A [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)] server in [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] mode. Excel Services will use the SQL Server Analysis Services instance as a [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] server. Analysis Services can run on the local or a remote computer.  
+-   A server in [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] mode. Excel Services will use the SQL Server Analysis Services instance as a [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] server. Analysis Services can run on the local or a remote computer.  
   
 -   **Permissions:** To install [!INCLUDE[ssGeminiShort2017](../../../includes/ssgeminishort2017-md.md)], the current user is required to be an administrator on the computer and a SharePoint Farm Administrators group.  
   

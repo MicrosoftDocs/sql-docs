@@ -1,7 +1,7 @@
 ---
 title: "SET LOCK_TIMEOUT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "09/11/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -39,8 +39,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 SET LOCK_TIMEOUT timeout_period  
 ```  
   
@@ -64,10 +62,10 @@ SET LOCK_TIMEOUT timeout_period
   
 ## Examples  
   
-### A: Set the lock timeout to 1800 seconds  
+### A: Set the lock timeout to 1800 milliseconds  
  The following example sets the lock time-out period to `1800` milliseconds.  
   
-```  
+```sql  
 SET LOCK_TIMEOUT 1800;  
 GO  
 ```  
@@ -77,13 +75,13 @@ GO
 ### B. Set the lock timeout to wait forever for a lock to be released.  
  The following example sets the lock timeout to wait forever and never expire. This is the default behavior that is already set at the beginning of each connection.  
   
-```  
+```sql  
 SET LOCK_TIMEOUT -1;  
 ```  
   
  The following example sets the lock time-out period to `1800` milliseconds. In this release, [!INCLUDE[ssDW](../../includes/ssdw-md.md)] will parse the statement successfully, but will ignore the value 1800 and continue to use the default behavior.  
   
-```  
+```sql  
 SET LOCK_TIMEOUT 1800;  
 ```  
   

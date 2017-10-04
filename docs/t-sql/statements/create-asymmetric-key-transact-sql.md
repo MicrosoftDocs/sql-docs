@@ -1,7 +1,7 @@
 ---
 title: "CREATE ASYMMETRIC KEY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/30/2017"
+ms.date: "08/07/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -89,7 +89,7 @@ CREATE ASYMMETRIC KEY Asym_Key_Name
  ASSEMBLY *Assembly_Name*  
  Specifies the name of an assembly from which to load the public key.  
   
- ENCRYPTION BY *<key_name_in_provider>*  
+ENCRYPTION BY *\<key_name_in_provider>*
  Specifies how the key is encrypted. Can be a certificate, password, or asymmetric key.  
   
  KEY_NAME ='*key_name_in_provider*'  

@@ -31,11 +31,11 @@ This article walks you through:
 ## Before we start  
 To follow along, you need these products:  
   
-* To create data sources and KPIs, and publish datasets and mobile reports, you need access to a [!INCLUDE[ssRSCurrent_md](../../includes/ssrscurrent-md.md)] [report server in native mode](https://msdn.microsoft.com/library/ms143711.aspx).  
-* To [create shared datasets](#shared-dataset), you need to [install Report Builder](https://msdn.microsoft.com/library/ff519551.aspx).  
+* To create data sources and KPIs, and publish datasets and mobile reports, you need access to a [!INCLUDE[ssRSCurrent_md](../install-windows/install-reporting-services-native-mode-report-server.md).  
+* To [create shared datasets](../install-windows/install-report-builder.md).  
 * To create mobile reports, [install SQL Server Mobile Report Publisher](http://go.microsoft.com/fwlink/?LinkId=717766).  
 * [AdventureWorks sample databases and scripts](http://msftdbprodsamples.codeplex.com/).  
-*  OR: World Wide Importers sample database, available from the [Microsoft SQL Server Samples](https://msdn.microsoft.com/library/mt748083.aspx) page.
+*  OR: World Wide Importers sample database, available from the [Microsoft SQL Server Samples](../../sample/microsoft-sql-server-samples.md) page.
 * To view the result: 
   *   [Sign up for the Power BI service](http://go.microsoft.com/fwlink/?LinkID=513879) and
   *  [Download the Power BI mobile app](https://powerbi.microsoft.com/en-us/documentation/powerbi-power-bi-apps-for-mobile-devices/) to your mobile device: iOS, Android phone, or Windows 10 device.  
@@ -43,7 +43,7 @@ To follow along, you need these products:
   
 ## Create a shared data source  
   
-You can create a shared data source for your mobile reports from any of the data sources Reporting Services supports. See the [list of supported data sources](https://msdn.microsoft.com/library/ms159219.aspx).  
+You can create a shared data source for your mobile reports from any of the data sources Reporting Services supports. See the [list of supported data sources](../report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
 1. From your [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] web portal, click **New** > **Data Source**.  
   
@@ -60,11 +60,11 @@ You can create a shared data source for your mobile reports from any of the data
   
    ![PBI_SSMRP_PortlDataSource](../../reporting-services/mobile-reports/media/pbi-ssmrp-portldatasource.png)  
   
-Read more about [shared data sources in Reporting Services](https://msdn.microsoft.com/library/ms155845.aspx).  
+Read more about [shared data sources in Reporting Services](../report-data/create-modify-and-delete-shared-data-sources-ssrs.md).  
    
 ## <a name="shared-dataset">Create a shared dataset</a>  
   
-Use an existing [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] client tool, such as Report Designer in [!INCLUDE[ssBIDevStudioFull_md](../../includes/ssbidevstudiofull-md.md)], to create the shared dataset.  This walkthrough uses [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]. [Install Report Builder](https://msdn.microsoft.com/library/ff519551.aspx), or launch it from your web portal. You'll create three datasets, one each for: the KPI value, the KPI trend, and one with more fields for the Reporting Services mobile report.   
+Use an existing [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] client tool, such as Report Designer in [!INCLUDE[ssBIDevStudioFull_md](../../includes/ssbidevstudiofull-md.md)], to create the shared dataset.  This walkthrough uses [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]. [Install Report Builder](https://msdn.microsoft.com/library/ff519551.aspx), or launch it from your web portal. You'll create three datasets, one each for: the KPI value, the KPI trend, and one with more fields for the Reporting Services mobile report.     
   
 1. From your [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] web portal, click **New** > **Paginated Report** to start [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)].  
   

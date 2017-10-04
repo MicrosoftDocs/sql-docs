@@ -36,7 +36,7 @@ manager: "jhubbard"
 -   If you have even number of spindles, unlike in SQL Server 2014, the checkpoint files will be distributed uniformly across all spindles.  
   
 ## Encryption  
- In [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], the storage for memory-optimized tables will be encrypted as part of enabling TDE on the database. For more information, see [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption-tde.md).  
+ In [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], the storage for memory-optimized tables will be encrypted as part of enabling TDE on the database. For more information, see [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).  
   
 ## See Also  
  [Creating and Managing Storage for Memory-Optimized Objects](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  

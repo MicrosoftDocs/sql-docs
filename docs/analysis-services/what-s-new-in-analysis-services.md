@@ -17,7 +17,7 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # What&#39;s New in Analysis Services
-[!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)] includes many new enhancements providing improved performance, easier solution authoring, automated database management,   enhanced relationships with bi-directional cross filtering, parallel partition processing, and much more. At the heart of most enhancements for this release is the new 1200 compatibility level for tabular model databases.     
+SQL Server 2016 Analysis Services includes many new enhancements providing improved performance, easier solution authoring, automated database management, enhanced relationships with bi-directional cross filtering, parallel partition processing, and much more. At the heart of most enhancements for this release is the new 1200 compatibility level for tabular model databases.     
 
 ## Azure Analysis Services
 Announced at the 2016 SQL PASS Conference, Analysis Services is now available in the cloud as an Azure service. **Azure Analysis Services** supports tabular models at the 1200 and higher compatibility levels. DirectQuery, partitions, row-level security, bi-directional relationships, and translations are all supported. To learn more and give it a try for free, see [Azure Analysis Services](http://azure.microsoft.com/services/analysis-services/). 
@@ -37,12 +37,12 @@ In particular, SQL Server 2016 SP1 Analysis Services features improvements in th
 Performance and scalability testing showed significant gains in query throughput when running SQL Server 2016 SP1 Analysis Services on large multi-node enterprise servers.
 
 
-## What's new in [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)]
+## What's new in SQL Server 2016 Analysis Services
 
 While most enhancements in this release are specific to tabular models, a number of enhancements have been made to multidimensional models; for example, distinct count ROLAP optimization for data sources like DB2 and Oracle, drill-through multi-selection support with Excel 2016, and Excel query optimizations.    
 
 #### Get the latest tools
-In addition to installing a [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)] instance, in order to take full advantage of all the enhancements in this release, be sure to install the latest versions of SSDT and SSMS.    
+In order to take full advantage of all the enhancements in this release, be sure to install the latest versions of SSDT and SSMS.    
 - [Download SQL Server Data Tools (SSDT)](http://msdn.microsoft.com/library/mt204009.aspx)    
 - [Download SQL Server Management Studio (SSMS)](http://msdn.microsoft.com/library/mt238290.aspx)   
 
@@ -157,7 +157,8 @@ You can now save incomplete DAX measures directly in a tabular 1200 model projec
     
  Existing applications are unaffected by the new assemblies. However, should you choose to rebuild applications using the new AMO assembly for any reason, be sure to add a reference to Microsoft.AnalysisServices.Core.    
     
- Similarly, PowerShell scripts that load and call into AMO must now load Microsoft.AnalysisServices.Core.dll. Be sure to update any scripts prior to pointing them to [!INCLUDE[ssASCurrent_md](../includes/ssascurrent-md.md)].    
+ Similarly, PowerShell scripts that load and call into AMO must now load Microsoft.AnalysisServices.Core.dll. Be sure to update any scripts.  
+
 ### JSON editor for BIM files
 Code View in Visual Studio 2015 now renders the BIM file in JSON format for tabular 1200 models. The version of Visual Studio determines whether the BIM file is rendered in JSON via the built-in JSON Editor, or as simple text.
 

@@ -77,7 +77,7 @@ manager: "erikre"
   
 -   **spPowerPivot16.msi** is 64-bit only, in accordance with the requirements of SharePoint products and technologies.  
   
--   An [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)] server in [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] mode. Office Online Server will use the SQL Server Analysis Services instance as a [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] server. Analysis Services can run on the local SharePoint server or a remote computer. It cannot be installed on the Office Online Server.  
+-   A server in [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] mode. Office Online Server will use the SQL Server Analysis Services instance as a [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] server. Analysis Services can run on the local SharePoint server or a remote computer. It cannot be installed on the Office Online Server.  
   
 -   **Permissions:** To install [!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)], the current user is required to be an administrator on the computer and in the SharePoint Farm Administrators group.  
   
@@ -149,9 +149,7 @@ Msiexec /i spPowerPivot16.msi AGREETOLICENSE="yes" ADDLOCAL=” SQL_OLAPDM,SQL_A
  Three of the files copied to the hard drive by spPowerPivot16.msi are SharePoint solution files. The scope of one solution file is the Web application level while the scope of the other files is the farm level. The files are the following:  
   
 -   `PowerPivot16FarmSolution.wsp`  
-  
--   `PowerPivot16Farm14Solution.wsp`  
-  
+
 -   `PowerPivot16WebApplicationSolution.wsp`  
   
  The solution files are copied to the following folder:  

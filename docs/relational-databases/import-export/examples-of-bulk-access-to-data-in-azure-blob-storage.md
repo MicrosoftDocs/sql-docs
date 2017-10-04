@@ -91,7 +91,7 @@ SELECT * FROM OPENROWSET(
    SINGLE_CLOB) AS DataFile;
 ```   
 
-Using `BULKINSERT`, do not use the container name in the file description: 
+Using `BULK INSERT`, do not use the container name in the file description: 
 
 ```tsql
 BULK INSERT Colors2

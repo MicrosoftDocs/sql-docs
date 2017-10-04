@@ -80,7 +80,7 @@ manager: "jhubbard"
   
 -   If there is a parallel scan, this DMV reports counters for each of the parallel threads working on the scan.
  
- Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, the legacy query execution statistics profiling infrastructure exists side-by-side with a lightweight query execution statistics profiling infrastructure. The new query execution statistics profiling infrastructure dramatically reduces performance overhead of collecting per-operator query execution statistics, such as actual number of rows. This feature can be enabled either using global startup [trace flag 7412](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), or is automatically turned on when query_thread_profile extended event is used.
+ Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, the standard query execution statistics profiling infrastructure exists side-by-side with a lightweight query execution statistics profiling infrastructure. The new query execution statistics profiling infrastructure dramatically reduces performance overhead of collecting per-operator query execution statistics, such as actual number of rows. This feature can be enabled either using global startup [trace flag 7412](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), or is automatically turned on when query_thread_profile extended event is used.
 
 >[!NOTE]
 > CPU and elapsed times are not supported under the lightweight query execution statistics profiling infrastructure to reduce performance impact.

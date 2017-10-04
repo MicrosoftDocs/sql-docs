@@ -1,7 +1,7 @@
 ---
 title: "INTO Clause (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/02/2017"
+ms.date: "05/23/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -232,8 +232,8 @@ ALTER DATABASE [AdventureWorksDW2016] ADD FILEGROUP FG2;
 ALTER DATABASE [AdventureWorksDW2016]
 ADD FILE
 (
-NAME=‘FG2_Data’,
-FILENAME = ‘/var/opt/mssql/data/AdventureWorksDW2016_Data1.mdf’
+NAME='FG2_Data',
+FILENAME = '/var/opt/mssql/data/AdventureWorksDW2016_Data1.mdf'
 )
 TO FILEGROUP FG2;
 GO

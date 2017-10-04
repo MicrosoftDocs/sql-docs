@@ -179,7 +179,7 @@ manager: "jhubbard"
   
 5.  Calculate the index row size:  
   
-     ***Leaf_Row_Size***  = ***Fixed_Leaf_Size*** + ***Variable_Leaf_Size*** + ***Leaf_Null_Bitmap*** + 1 (for row header overhead of an index row) + 6 (for the child page ID pointer)  
+     ***Leaf_Row_Size***  = ***Fixed_Leaf_Size*** + ***Variable_Leaf_Size*** + ***Leaf_Null_Bitmap*** + 1 (for row header overhead of an index row)  
   
 6.  Calculate the number of index rows per page (8096 free bytes per page):  
   

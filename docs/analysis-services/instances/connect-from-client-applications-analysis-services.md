@@ -11,6 +11,10 @@ ms.technology:
   - "analysis-services/data-mining"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
+f1_keywords: 
+  - "sql13.swb.connection.login.analysisserver.f1"
+  - "sql13.swb.connecttoas.connectionproperties.f1"
+  - "sql13.swb.connecttoas.login.f1"
 ms.assetid: b1e0f1d4-0b87-4ad3-8172-f746fe2f16a2
 caps.latest.revision: 9
 author: "Minewiskan"

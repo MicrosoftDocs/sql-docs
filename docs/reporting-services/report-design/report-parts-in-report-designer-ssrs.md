@@ -1,7 +1,7 @@
 ---
 title: "Report Parts in Report Designer (SSRS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: "05/30/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -18,7 +18,9 @@ author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "erikre"
 ---
+
 # Report Parts in Report Designer (SSRS)
+
   In Report Designer, after you create tables, charts, and other paginated report items in a project, you can publish them as *report parts* to a report server or SharePoint site integrated with a report server so that you and others can reuse them in other reports.  
   
  In general, report parts function the same way in Report Designer and in Report Builder. To read about basic functionality, see [Report Parts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
@@ -73,7 +75,7 @@ manager: "erikre"
   
 2.  Deploy the report.  
   
- When you deploy the report, the report part is published to a SharePoint site or report server, and others can reuse it. To publish a report part, you must have a connection to and sufficient permissions on a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] report server when you deploy the report.  
+ When you deploy the report, the report part is published to a SharePoint site or report server, and others can reuse it. To publish a report part, you must have a connection to and sufficient permissions on a report server when you deploy the report.  
   
   
 ##  <a name="SearchReuseComponents"></a> Reusing Report Parts  
@@ -87,9 +89,9 @@ manager: "erikre"
  You can modify and then republish the report part to the site or server. Report Builder report authors who have added that report part to a report are informed of the change the next time they open that report. They can choose to accept your changes or not.  
   
  You can also choose to publish as new a report that you have already published. In the Publish Report Parts dialog box, click the Publish as a new report part. This new report part has a new unique ID and no relationship to the old report part.  
-  
-  
-## See Also  
- [Managing Report Parts](../../reporting-services/report-design/managing-report-parts.md)  
-  
-  
+
+## Next steps
+
+[Managing Report Parts](../../reporting-services/report-design/managing-report-parts.md)  
+
+More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)

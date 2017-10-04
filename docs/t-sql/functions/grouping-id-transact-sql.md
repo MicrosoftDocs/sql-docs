@@ -38,17 +38,17 @@ GROUPING_ID ( <column_expression>[ ,...n ] )
 ```  
   
 ## Arguments  
- <column_expression>  
+ \<column_expression>  
  Is a *column_expression* in a [GROUP BY](../../t-sql/queries/select-group-by-transact-sql.md) clause.  
   
 ## Return Type  
  **int**  
   
 ## Remarks  
- The GROUPING_ID <column_expression> must exactly match the expression in the GROUP BY list. For example, if you are grouping by DATEPART (yyyy, \<*column name*>), use GROUPING_ID (DATEPART (yyyy, \<*column name*>)); or if you are grouping by \<*column name*>, use GROUPING_ID (\<*column name*>).  
+ The GROUPING_ID \<column_expression> must exactly match the expression in the GROUP BY list. For example, if you are grouping by DATEPART (yyyy, \<*column name*>), use GROUPING_ID (DATEPART (yyyy, \<*column name*>)); or if you are grouping by \<*column name*>, use GROUPING_ID (\<*column name*>).  
   
 ## Comparing GROUPING_ID () to GROUPING ()  
- GROUPING_ID (<column_expression> [ **,**...*n* ]) inputs the equivalent of the GROUPING (<column_expression>) return for each column in its column list in each output row as a string of ones and zeros. GROUPING_ID interprets that string as a base-2 number and returns the equivalent integer. For example consider the following statement: `SELECT a, b, c, SUM(d),``GROUPING_ID(a,b,c)``FROM T GROUP BY <group by list>`. The following table shows the GROUPING_ID () input and output values.  
+ GROUPING_ID (\<column_expression> [ **,**...*n* ]) inputs the equivalent of the GROUPING (\<column_expression>) return for each column in its column list in each output row as a string of ones and zeros. GROUPING_ID interprets that string as a base-2 number and returns the equivalent integer. For example consider the following statement: `SELECT a, b, c, SUM(d),``GROUPING_ID(a,b,c)``FROM T GROUP BY <group by list>`. The following table shows the GROUPING_ID () input and output values.  
   
 |Columns aggregated|GROUPING_ID (a, b, c) input = GROUPING(a) + GROUPING(b) + GROUPING(c)|GROUPING_ID () output|  
 |------------------------|---------------------------------------------------------------------------------------|------------------------------|  
@@ -64,7 +64,7 @@ GROUPING_ID ( <column_expression>[ ,...n ] )
  Each GROUPING_ID argument must be an element of the GROUP BY list. GROUPING_ID () returns an **integer** bitmap whose lowest N bits may be lit. A lit **bit** indicates the corresponding argument is not a grouping column for the given output row. The lowest-order **bit** corresponds to argument N, and the N-1<sup>th</sup> lowest-order **bit** corresponds to argument 1.  
   
 ## GROUPING_ID () Equivalents  
- For a single grouping query, GROUPING (<column_expression>) is equivalent to GROUPING_ID (<column_expression>), and both return 0.  
+ For a single grouping query, GROUPING (\<column_expression>) is equivalent to GROUPING_ID (\<column_expression>), and both return 0.  
   
  For example, the following statements are equivalent:  
   

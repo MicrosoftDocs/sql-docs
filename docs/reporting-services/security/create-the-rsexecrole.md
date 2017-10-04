@@ -1,7 +1,7 @@
 ---
 title: "Create the RSExecRole | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "05/30/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -18,7 +18,9 @@ author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
 ---
+
 # Create the RSExecRole
+
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] uses a predefined database role called **RSExecRole** to grant report server permissions to the report server database. The **RSExecRole** role is created automatically with the report server database. As a rule, you should never modify it or assign other users to the role. However, when you move a report server database to a new or different [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)], must re-create the role in the Master and MSDB system databases.  
   
  Using the following instructions, you will perform the following steps:  
@@ -185,11 +187,11 @@ manager: "erikre"
 30. Repeat for the sysjobs table. RSExecRole must be granted Select permissions for both tables.  
   
 ## Move the Report Server Database  
- After you create the roles, you can move the report server database to new SQL Server instance. For more information, see [Moving the Report Server Databases to Another Computer &#40;SSRS Native Mode&#41;](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md).  
+ After you create the roles, you can move the report server database to new SQL Server instance. For more information, see [Moving the Report Server Databases to Another Computer](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md).  
   
- If you are upgrading the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], you can upgrade it before or after moving the database.  
+ If you are upgrading the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to SQL Server 2016, you can upgrade it before or after moving the database.  
   
- The report server database will be upgraded to the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] automatically when the report server connects to it. There are no specific steps required for upgrading the database.  
+ The report server database will be upgraded automatically when the report server connects to it. There are no specific steps required for upgrading the database.  
   
 ## Restore Encryption Keys and Verify Your Work  
  If you have attached the report server databases, you should now be able to complete the following steps to verify your work.  
@@ -225,11 +227,12 @@ manager: "erikre"
 14. Click **Report Manager URL**.  
   
 15. Click the link to open Report Manager. You should see the report server items from the report server database.  
-  
-## See Also  
- [Moving the Report Server Databases to Another Computer &#40;SSRS Native Mode&#41;](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md)   
- [Reporting Services Configuration Manager &#40;Native Mode&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
- [Create a Native Mode Report Server Database  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
- [Back Up and Restore Reporting Services Encryption Keys](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
-  
-  
+
+## Next steps
+
+[Moving the Report Server Databases to Another Computer &#40;SSRS Native Mode&#41;](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md)   
+[Reporting Services Configuration Manager &#40;Native Mode&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
+[Create a Native Mode Report Server Database  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
+[Back Up and Restore Reporting Services Encryption Keys](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
+
+More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)

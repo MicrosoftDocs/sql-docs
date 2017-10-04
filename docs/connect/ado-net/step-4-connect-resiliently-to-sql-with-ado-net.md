@@ -1,7 +1,7 @@
 ---
 title: "Step 4: Connect resiliently to SQL with ADO.NET | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/30/2017"
+ms.date: "08/08/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -18,10 +18,8 @@ ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Step 4: Connect resiliently to SQL with ADO.NET
-[!INCLUDE[Driver_ADODotNet_Download](../../includes/driver_adodotnet_download.md)]
 
-
-- Previous article:&nbsp;&nbsp;&nbsp;[Step 3: Proof of concept connecting to SQL using ADO.NET](../../connect/ado-net/step-3-proof-of-concept-connecting-to-sql-using-ado-net.md)  
+- Previous article:&nbsp;&nbsp;&nbsp;[Step 3: Proof of concept connecting to SQL using ADO.NET](step-3-proof-of-concept-connecting-to-sql-using-ado-net.md)  
 
   
 This topic provides a C# code sample that demonstrates custom retry logic. The retry logic provides reliability. The retry logic is designed to gracefully process temporary errors or *transient faults* which tend to go away if the program waits several seconds and retries.  
@@ -38,7 +36,7 @@ The ADO.NET classes for connecting to your local Microsoft SQL Server can also c
   
 Your program must distinguish between transient errors versus persistent errors. Transient faults are error conditions that may clear up within a short period of time, such as transient network problems.  An example of a persistent error would be, if your program has a misspelling of the target database name - in this case, the "No such database found" error would persist, and has no chance of clearing up within a short period of time.  
   
-The list of error numbers that are categorized as transient faults is available at at [Error messages for SQL Database client applications](http://azure.microsoft.com/documentation/articles/sql-database-develop-error-messages/)  
+The list of error numbers that are categorized as transient faults is available at at [Error messages for SQL Database client applications](http://docs.microsoft.com/azure/sql-database/sql-database-develop-error-messages/)  
   
 ## Step 2: Create and Run sample application  
   
@@ -317,4 +315,3 @@ To prove the code handles persistent errors correctly, rerun the preceding test 
 ## Next Steps  
   
 To explore other best practicies and design guidelines, visit [Connecting to SQL Database: Links, Best Practices and Design Guidelines](http://azure.microsoft.com/documentation/articles/sql-database-connect-central-recommendations/)  
-

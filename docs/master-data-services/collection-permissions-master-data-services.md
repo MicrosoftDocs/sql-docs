@@ -14,9 +14,9 @@ helpviewer_keywords:
   - "permissions [Master Data Services], collections"
 ms.assetid: 703e1bf5-4b4b-4830-8a5b-f979b09f677d
 caps.latest.revision: 6
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
+author: "smartysanthosh"
+ms.author: "nagavo"
+manager: "craigg"
 ---
 # Collection Permissions (Master Data Services)
   Collection permissions apply to all collections for an entity. You cannot give permission to a specific collection; permissions apply to all collections.  

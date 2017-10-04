@@ -1,7 +1,7 @@
 ---
 title: "Calculated Columns (SSAS Tabular) | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/10/2017"
+ms.date: "05/22/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -17,7 +17,7 @@ author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
 ---
-# SSAS Calculated Columns
+# Calculated Columns
   Calculated columns, in tabular models, enable you to add new data to your model. Instead of pasting or importing values into the column, you create a DAX formula that defines the column’s row level values. The calculated column can then be used in a report, PivotTable, or PivotChart as would any other column.  
   
 > [!NOTE]  

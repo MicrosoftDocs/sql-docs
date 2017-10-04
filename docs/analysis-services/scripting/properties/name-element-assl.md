@@ -67,7 +67,7 @@ manager: "erikre"
   
      However, if you set the **Name** property directly, the same validation checks are not performed, possibly resulting in XML validation errors. Whether an error actually occurs depends on which control character appears in the name.  
   
-     Although control characters should never be used in an object name, Analysis Services does not expressly prevent them. Previous releases of Analysis Services sometimes accepted control characters in an object name. For this reason, [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)] will ignore control characters in an object name to avoid breaking older solutions.  
+     Although control characters should never be used in an object name, Analysis Services does not expressly prevent them. Previous releases of Analysis Services sometimes accepted control characters in an object name. For this reason, SQL Server 2016 Analysis Services and later will ignore control characters in an object name to avoid breaking older solutions.  
   
 -   The following reserved values cannot be used:  
   

@@ -21,10 +21,18 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # Install Reporting Services SharePoint Mode
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in SharePoint, enables report creation and viewing in document libraries, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] subscription delivery of reports through email,  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], data alerting, and report management features, all in a deployment of based of [!INCLUDE[msCoName](../../includes/msconame-md.md)] SharePoint. For more information regarding features in SharePoint mode, see the section “Feature Support and Behavior Differences by Server Mode” in [Reporting Services Report Server](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)  
-  
- There are two core [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] components to install for [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in SharePoint mode:  
-  
+
+[!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../../includes/ssrs-appliesto-not-pbirs.md)]
+
+[!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
+
+SQL Server Reporting Services in SharePoint, enables report creation and viewing in document libraries, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] subscription delivery of reports through email,  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], data alerting, and report management features, all in a deployment of based of [!INCLUDE[msCoName](../../includes/msconame-md.md)] SharePoint. For more information regarding features in SharePoint mode, see the section “Feature Support and Behavior Differences by Server Mode” in [Reporting Services Report Server](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md).
+
+> [!NOTE]
+> Reporting Services integration with SharePoint is no longer available after SQL Server 2016.
+
+There are two core [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] components to install for [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in SharePoint mode:  
+
 |Installation|Description|  
 |------------------|-----------------|  
 |**Report Sever:** The [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server installed in SharePoint Mode|The report server handles the data and report processing and rendering as well subscription and Data Alert processing. The SharePoint mode report server is designed and installed as a SharePoint Shared Service.<br /><br /> **How:** Use the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation media to install the report server.|  
@@ -48,9 +56,10 @@ manager: "erikre"
  [Provision Subscriptions and Alerts for SSRS Service Applications](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)  
   
  [Claims to Windows Token Service &#40;c2WTS&#41; and Reporting Services](../../reporting-services/install-windows/claims-to-windows-token-service-c2wts-and-reporting-services.md)  
-  
-## See Also  
+
+## Next steps
+
  [Data Alerts Architecture and Workflow](../../reporting-services/reporting-services-data-alerts.md#AlertingWF)   
  [Data Alert Manager for Alerting Administrators](../../reporting-services/data-alert-manager-for-alerting-administrators.md)  
-  
-  
+
+More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)

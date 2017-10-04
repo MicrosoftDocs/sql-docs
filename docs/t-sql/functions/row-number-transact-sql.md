@@ -1,7 +1,7 @@
 ---
 title: "ROW_NUMBER (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/31/2017"
+ms.date: "09/11/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -185,7 +185,7 @@ WHERE RowNumber BETWEEN 50 AND 60;
 ```  
 USE AdventureWorks2012;  
 GO  
-SELECT FirstName, LastName, TerritoryName, ROUND(SalesYTD,2,1),  
+SELECT FirstName, LastName, TerritoryName, ROUND(SalesYTD,2,1) AS SalesYTD,  
 ROW_NUMBER() OVER(PARTITION BY TerritoryName ORDER BY SalesYTD DESC) 
   AS Row  
 FROM Sales.vSalesPerson  

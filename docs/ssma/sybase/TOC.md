@@ -1,3 +1,4 @@
+# [Installing SSMA  for Sybase (SybaseToSQL)](installing-ssma-for-sybase-sybasetosql.md)
 # [Getting Started with SSMA for Sybase (SybaseToSQL)](getting-started-with-ssma-for-sybase-sybasetosql.md)
 # [Getting Started with SSMA for Sybase Console (SybaseToSQL)](getting-started-with-ssma-for-sybase-console-sybasetosql.md)
 # [Legal Notice (SSMA for Sybase)](legal-notice-ssma-for-sybase.md)
@@ -35,7 +36,6 @@
 # [Setting Project Options (SybaseToSQL)](setting-project-options-sybasetosql.md)
 # [Connect to Azure SQL DB  (SybaseToSQL)](connect-to-azure-sql-db-sybasetosql.md)
 # [Data Migration Settings (SybaseToSQL)](data-migration-settings-sybasetosql.md)
-# [Installing SSMA  for Sybase (SybaseToSQL)](installing-ssma-for-sybase-sybasetosql.md)
 # [Finishing Test Case Preparation (SybaseToSQL)](finishing-test-case-preparation-sybasetosql.md)
 # [Selecting and Configuring Objects to Test (SybaseToSQL)](selecting-and-configuring-objects-to-test-sybasetosql.md)
 # [Troubleshooting (SybaseToSQL)](troubleshooting-sybasetosql.md)

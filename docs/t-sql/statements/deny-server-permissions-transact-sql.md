@@ -1,7 +1,7 @@
 ---
 title: "DENY Server Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/10/2016"
+ms.date: "06/09/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -32,7 +32,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
-  
 DENY permission [ ,...n ]   
     TO <grantee_principal> [ ,...n ]  
     [ CASCADE ]  
@@ -60,10 +59,10 @@ DENY permission [ ,...n ]
  CASCADE  
  Indicates that the permission being denied is also denied to other principals to which it has been granted by this principal.  
   
- TO <server_principal>  
+ TO \<server_principal>  
  Specifies the principal to which the permission is denied.  
   
- AS <grantor_principal>  
+ AS \<grantor_principal>  
  Specifies the principal from which the principal executing this query derives its right to deny the permission.  
   
  *SQL_Server_login*  

@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Parallel Data Warehouse Connection Type (SSRS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/17/2017"
+ms.date: "05/30/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -16,10 +16,12 @@ author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
 ---
+
 # SQL Server Parallel Data Warehouse Connection Type (SSRS)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] is a scalable data warehouse appliance that delivers performance and scalability through massively parallel processing. [!INCLUDE[ssDW](../../includes/ssdw-md.md)] uses [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] databases for distributed processing and data storage.  
+
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] is a scalable data warehouse appliance that delivers performance and scalability through massively parallel processing. [!INCLUDE[ssDW](../../includes/ssdw-md.md)] uses SQL Server databases for distributed processing and data storage.  
   
- The appliance partitions large database tables across multiple physical nodes, with each node running its own instance of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. When a report connects to [!INCLUDE[ssDW](../../includes/ssdw-md.md)] to retrieve report data, it connects to the control node, which manages query processing, in the [!INCLUDE[ssDW](../../includes/ssdw-md.md)] appliance. After the connection is made, there are no differences between working with an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that is and is not within a [!INCLUDE[ssDW](../../includes/ssdw-md.md)] environment.  
+ The appliance partitions large database tables across multiple physical nodes, with each node running its own instance of SQL Server. When a report connects to [!INCLUDE[ssDW](../../includes/ssdw-md.md)] to retrieve report data, it connects to the control node, which manages query processing, in the [!INCLUDE[ssDW](../../includes/ssdw-md.md)] appliance. After the connection is made, there are no differences between working with an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that is and is not within a [!INCLUDE[ssDW](../../includes/ssdw-md.md)] environment.  
   
  To include data from [!INCLUDE[ssDW](../../includes/ssdw-md.md)] in your report, you must have a dataset that is based on a report data source of type [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Parallel Data Warehouse. This built-in data source type is based on the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Parallel Data Warehouse data extension. Use this data source type to connect to and retrieve data from [!INCLUDE[ssDW](../../includes/ssdw-md.md)].  
   
@@ -71,7 +73,7 @@ HOST=<IP address>; database= CustomerSales; port=<port>
   
 -   [Text](#QueryText)  
   
- You use [!INCLUDE[DWsql](../../includes/dwsql-md.md)] with [!INCLUDE[ssDW](../../includes/ssdw-md.md)] and [!INCLUDE[tsql](../../includes/tsql-md.md)] with [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. The two dialects of the SQL language are very similar. Queries written for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data source connection type can typically be used for the [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] data source connection type.  
+ You use [!INCLUDE[DWsql](../../includes/dwsql-md.md)] with [!INCLUDE[ssDW](../../includes/ssdw-md.md)] and [!INCLUDE[tsql](../../includes/tsql-md.md)] with SQL Server. The two dialects of the SQL language are very similar. Queries written for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data source connection type can typically be used for the [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] data source connection type.  
   
  A query that retrieves report data from a large database, including a data warehouse such as [!INCLUDE[ssDW](../../includes/ssdw-md.md)], might generate a result set that has a very large number of rows unless you aggregate and summarize data to reduce the number of rows that the query returns. You can write queries that include aggregates and grouping by using either the graphical or text-based query designer.  
   
@@ -153,11 +155,11 @@ WHERE EmployeeID = (@EmpID)
   
  [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) in the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] documentation in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
  Provides in-depth information about platform and version support for each data extension.  
-  
-  
-## See Also  
- [Report Parameters &#40;Report Builder and Report Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
- [Filter, Group, and Sort Data &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Expressions &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
-  
-  
+
+## Next steps
+
+[Report Parameters](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
+[Filter, Group, and Sort Data](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+[Expressions](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
+
+More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)

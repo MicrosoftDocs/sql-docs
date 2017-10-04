@@ -25,8 +25,8 @@ manager: "jhubbard"
 For details about developing applications that use Always Encrypted protected databases, and which client drivers and which driver versions support Always Encrypted, see:
 
 - [Using Always Encrypted with the .NET Framework Data Provider for SQL Server](../../../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md)
-- [Using Always Encrypted with the JDBC Driver](https://msdn.microsoft.com/library/mt591987.aspx)
-- [Using Always Encrypted with the Windows ODBC Driver](https://msdn.microsoft.com/library/mt637351.aspx)
+- [Using Always Encrypted with the JDBC Driver](../../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md)
+- [Using Always Encrypted with the Windows ODBC Driver](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)
 
 
 

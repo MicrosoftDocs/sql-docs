@@ -82,7 +82,7 @@ Architects design integrated workflows that span all aspects of the machine lear
 
 Because [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] is deeply integrated with other Microsoft tools such as the business intelligence and data warehouse stack, enterprise cloud and mobility tools, and Hadoop, it provides an array of benefits to the data engineer or system architect who wants to promote advanced analytics.
 
-+ Familiar development tools for developng R and Python solutions. You can call any Python or R script by using system stored procedures, to populate datasets, generate graphics, or get predictions. No more designing parallel workflows in data science and ETL tools. Support for Azure Data Factory and Azure SQL Database makes it easier to transform and manage data, and use cloud data sources in machine learning workflows.
++ Familiar development tools for developing R and Python solutions. You can call any Python or R script by using system stored procedures, to populate datasets, generate graphics, or get predictions. No more designing parallel workflows in data science and ETL tools. Support for Azure Data Factory and Azure SQL Database makes it easier to transform and manage data, and use cloud data sources in machine learning workflows.
 
 + Scheduling and management using operationalization features in Microsoft R Server.
 

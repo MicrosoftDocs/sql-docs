@@ -36,7 +36,7 @@ manager: "erikre"
   
  SQL Server Management Studio (SSMS) is the primary administration tool for all SQL Server features, including Analysis Services. SSMS is a free web download updated monthly. 
   
-**[Download SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx)** 
+**[Download SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)** 
   
  SSMS includes extended events (xEvents), providing a lightweight alternative to SQL Server Profiler traces used for monitoring activity and diagnosing problems on SQL Server 2016 and Azure Analysis Services servers. See [Monitor Analysis Services with SQL Server Extended Events](../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md) to learn more.  
   
@@ -44,7 +44,7 @@ manager: "erikre"
  Although it's officially deprecated in favor of xEvents, SQL Server Profiler provides a familiar approach for monitoring connections, MDX query execution, and other server operations. SQL Server Profiler is installed by default. You can find it with SQL Server applications on Apps in Windows.  
   
 ### PowerShell  
- You can use PowerShell commands to perform many administrative tasks. See [PowerShell scripting in Analysis Services](../analysis-services/instances/powershell-scripting-in-analysis-services.md) for more information.  
+ You can use PowerShell commands to perform many administrative tasks. See [PowerShell reference](../analysis-services/powershell/analysis-services-powershell-reference.md) for more information.  
   
 ### Community and Third-party tools  
  Check the [Analysis Services codeplex page](http://sqlsrvanalysissrvcs.codeplex.com/) for community code samples. [Forums](http://social.msdn.microsoft.com/Forums/sqlserver/home?forum=sqlanalysisservices) can be helpful when seeking recommendations for third-party tools that support Analysis Services.  

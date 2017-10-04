@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "attributes [Master Data Services], leaf member attribute permissions"
 ms.assetid: bde16e8c-bcd4-4041-8130-55c5450e5f72
 caps.latest.revision: 9
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
+author: "smartysanthosh"
+ms.author: "nagavo"
+manager: "craigg"
 ---
 # Leaf Permissions (Master Data Services)
   Leaf permissions apply to the attribute values for all leaf members of an entity.  

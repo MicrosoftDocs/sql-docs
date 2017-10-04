@@ -11,6 +11,7 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "sql13.dts.designer.multicasttrans.f1"
+  - "sql13.dts.designer.multicasttransformation.f1"
 helpviewer_keywords: 
   - "multiple outputs"
   - "Multicast transformation"
@@ -34,12 +35,20 @@ manager: "jhubbard"
 ## Configuration of the Multicast Transformation  
  You can set properties through [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer or programmatically.  
   
- For information about the properties that you can set in the **Multicast Transformation Editor** dialog box, see [Multicast Transformation Editor](../../../integration-services/data-flow/transformations/multicast-transformation-editor.md).  
-  
  For information about the properties that you can set programmatically, see [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796).  
   
 ## Related Tasks  
  For information about how to set properties of this component, see [Set the Properties of a Data Flow Component](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
+  
+## Multicast Transformation Editor
+  Use the **Multicast Transformation Editor** dialog box to view and set the properties for each transformation output.  
+  
+### Options  
+ **Outputs**  
+ Select an output on the left to view its properties in the table on the right.  
+  
+ **Properties**  
+ All output properties listed are read-only except **Name** and **Description**.  
   
 ## See Also  
  [Data Flow](../../../integration-services/data-flow/data-flow.md)   

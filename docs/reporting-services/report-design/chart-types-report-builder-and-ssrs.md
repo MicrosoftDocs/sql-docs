@@ -1,7 +1,7 @@
 ---
 title: "Chart Types (Report Builder and SSRS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/03/2017"
+ms.date: "05/30/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -18,8 +18,10 @@ author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "erikre"
 ---
+
 # Chart Types (Report Builder and SSRS)
-  It is important to choose an appropriate chart type for the type of data that you are presenting. This will determine how well the data can be interpreted when put in chart form. For example, if your dataset contains a lot of data points relative to the size of the chart, it may be better presented using an area, line, or scatter chart. For discussion on how to prepare your data depending on the chart type selected, see [Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md).  
+
+It is important to choose an appropriate chart type for the type of data that you are presenting. This will determine how well the data can be interpreted when put in chart form. For example, if your dataset contains a lot of data points relative to the size of the chart, it may be better presented using an area, line, or scatter chart. For discussion on how to prepare your data depending on the chart type selected, see [Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -29,7 +31,7 @@ manager: "erikre"
   
  You can change the chart type after you have created it. For more information, see [Change a Chart Type &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/change-a-chart-type-report-builder-and-ssrs.md).  
   
- Examples of many of these types of charts are available as sample reports. For more information about downloading sample reports, see [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][Report Builder and Report Designer sample reports](http://go.microsoft.com/fwlink/?LinkId=198283).  
+ Examples of many of these types of charts are available as sample reports. For more information about downloading sample reports, see [Report Builder and Report Designer sample reports](http://go.microsoft.com/fwlink/?LinkId=198283).  
   
 |Chart type|Display ratio data|Display stock data|Display linear data|Display multi-value data|  
 |----------------|------------------------|------------------------|-------------------------|-------------------------------|  
@@ -45,10 +47,11 @@ manager: "erikre"
 |[Shape Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/shape-charts-report-builder-and-ssrs.md)|![Available](../../reporting-services/report-data/media/greencheck.gif "Available")||||  
 |[Sparklines](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)|![Available](../../reporting-services/report-data/media/greencheck.gif "Available")|![Available](../../reporting-services/report-data/media/greencheck.gif "Available")|![Available](../../reporting-services/report-data/media/greencheck.gif "Available")|![Available](../../reporting-services/report-data/media/greencheck.gif "Available")|  
 |[Stock Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/stock-charts-report-builder-and-ssrs.md)||![Available](../../reporting-services/report-data/media/greencheck.gif "Available")||![Available](../../reporting-services/report-data/media/greencheck.gif "Available")|  
-  
-## See Also  
- [Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [Empty and Null Data Points in Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
- [Add a Chart to a Report &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/add-a-chart-to-a-report-report-builder-and-ssrs.md)  
-  
-  
+
+## Next steps
+
+[Charts](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+[Empty and Null Data Points in Charts](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
+[Add a Chart to a Report](../../reporting-services/report-design/add-a-chart-to-a-report-report-builder-and-ssrs.md)  
+
+More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)

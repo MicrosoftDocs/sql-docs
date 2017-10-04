@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "OnInit method"
 ms.assetid: 26fd74dc-d02f-40f7-aeb3-50ce05e9e6b9
 caps.latest.revision: 36
-author: "sabotta"
-ms.author: "carlasab"
+author: "guyinacube"
+ms.author: "asaxton"
 manager: "erikre"
 ---
 # Initializing Custom Assembly Objects

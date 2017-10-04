@@ -1,7 +1,7 @@
 ---
 title: "CREATE EXTERNAL RESOURCE POOL (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/21/2016"
+ms.date: "08/10/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -62,12 +62,12 @@ CREATE EXTERNAL RESOURCE POOL pool_name
  MAX_CPU_PERCENT =*value*  
  Specifies the maximum average CPU bandwidth that all requests in the external resource pool will receive when there is CPU contention. *value* is an integer with a default setting of 100. The allowed range for *value* is from 1 through 100.  
   
- AFFINITY {CPU = AUTO | ( <CPU_range_spec> ) | NUMANODE = (<NUMA_node_range_spec>)}  
+ AFFINITY {CPU = AUTO | ( \<CPU_range_spec> ) | NUMANODE = (\<NUMA_node_range_spec>)} 
  Attach the external resource pool to specific CPUs. The default value is AUTO.  
   
- AFFINITY CPU = **(** <CPU_range_spec> **)** maps the external resource pool to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CPUs identified by the given CPU_IDs.  
+ AFFINITY CPU = **(** \<CPU_range_spec> **)** maps the external resource pool to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CPUs identified by the given CPU_IDs. 
   
- When you use AFFINITY NUMANODE = **(** <NUMA_node_range_spec> **)**, the external resource pool is affinitized to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] physical CPUs that correspond to the given NUMA node or range of nodes.  
+ When you use AFFINITY NUMANODE = **(** \<NUMA_node_range_spec> **)**, the external resource pool is affinitized to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] physical CPUs that correspond to the given NUMA node or range of nodes. 
   
  MAX_MEMORY_PERCENT =*value*  
  Specifies the total server memory that can be used by requests in this external resource pool. *value* is an integer with a default setting of 100. The allowed range for *value* is from 1 through 100.  
@@ -113,3 +113,4 @@ GO
  [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-governor-transact-sql.md)  
   
   
+

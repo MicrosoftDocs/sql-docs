@@ -1,7 +1,7 @@
----
+﻿---
 title: "OVER Clause (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/06/2016"
+ms.date: "08/11/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -124,9 +124,7 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
  Specifies that the values in the specified column should be sorted in ascending or descending order. ASC is the default sort order. Null values are treated as the lowest possible values.  
   
  ROWS | RANGE  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
   
  Further limits the rows within the partition by specifying start and end points within the partition. This is done by specifying a range of rows with respect to the current row either by logical association or physical association. Physical association is achieved by using the ROWS clause.  
   
@@ -136,9 +134,7 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
 >  ROWS or RANGE requires that the ORDER BY clause be specified. If ORDER BY contains multiple order expressions, CURRENT ROW FOR RANGE considers all columns in the ORDER BY list when determining the current row.  
   
  UNBOUNDED PRECEDING  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Specifies that the window starts at the first row of the partition. UNBOUNDED PRECEDING can only be specified as window starting point.  
   
@@ -146,23 +142,17 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
  Specified with \<unsigned value specification>to indicate the number of rows or values to precede the current row. This specification is not allowed for RANGE.  
   
  CURRENT ROW  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
   
  Specifies that the window starts or ends at the current row when used with ROWS or the current value when used with RANGE. CURRENT ROW can be specified as both a starting and ending point.  
   
  BETWEEN \<window frame bound > AND \<window frame bound >  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
   
  Used with either ROWS or RANGE to specify the lower (starting) and upper (ending) boundary points of the window. \<window frame bound> defines the boundary starting point and \<window frame bound> defines the boundary end point. The upper bound cannot be smaller than the lower bound.  
   
  UNBOUNDED FOLLOWING  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
   
  Specifies that the window ends at the last row of the partition. UNBOUNDED FOLLOWING can only be specified as a window end point. For example RANGE BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING defines a window that starts with the current row and ends with the last row of the partition.  
   
@@ -170,9 +160,7 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
  Specified with \<unsigned value specification> to indicate the number of rows or values to follow the current row. When \<unsigned value specification> FOLLOWING is specified as the window starting point, the ending point must be \<unsigned value specification>FOLLOWING. For example, ROWS BETWEEN 2 FOLLOWING AND 10 FOLLOWING defines a window that starts with the second row that follows the current row and ends with the tenth row that follows the current row. This specification is not allowed for RANGE.  
   
  unsigned integer literal  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Is a positive integer literal (including 0) that specifies the number of rows or values to precede or follow the current row or value. This specification is valid only for ROWS.  
   
@@ -200,7 +188,7 @@ If ROWS/RANGE is specified and \<window frame preceding> is used for \<window fr
 ### A. Using the OVER clause with the ROW_NUMBER function  
  The following example shows using the OVER clause with ROW_NUMBER function to display a row number for each row within a partition. The ORDER BY clause specified in the OVER clause orders the rows in each partition by the column `SalesYTD`. The ORDER BY clause in the SELECT statement determines the order in which the entire query result set is returned.  
   
-```  
+```t-sql  
 USE AdventureWorks2012;  
 GO  
 SELECT ROW_NUMBER() OVER(PARTITION BY PostalCode ORDER BY SalesYTD DESC) AS "Row Number",   
@@ -218,42 +206,29 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Row Number      LastName                SalesYTD              PostalCode`  
-  
- `--------------- ----------------------- --------------------- ----------`  
-  
- `1               Mitchell                4251368.5497          98027`  
-  
- `2               Blythe                  3763178.1787          98027`  
-  
- `3               Carson                  3189418.3662          98027`  
-  
- `4               Reiter                  2315185.611           98027`  
-  
- `5               Vargas                  1453719.4653          98027`  
-  
- `6               Ansman-Wolfe            1352577.1325          98027`  
-  
- `1               Pak                     4116871.2277          98055`  
-  
- `2               Varkey Chudukatil       3121616.3202          98055`  
-  
- `3               Saraiva                 2604540.7172          98055`  
-  
- `4               Ito                     2458535.6169          98055`  
-  
- `5               Valdez                  1827066.7118          98055`  
-  
- `6               Mensa-Annan             1576562.1966          98055`  
-  
- `7               Campbell                1573012.9383          98055`  
-  
- `8               Tsoflias                1421810.9242          98055`  
+ ```
+ Row Number      LastName                SalesYTD              PostalCode 
+ --------------- ----------------------- --------------------- ---------- 
+ 1               Mitchell                4251368.5497          98027 
+ 2               Blythe                  3763178.1787          98027 
+ 3               Carson                  3189418.3662          98027 
+ 4               Reiter                  2315185.611           98027 
+ 5               Vargas                  1453719.4653          98027  
+ 6               Ansman-Wolfe            1352577.1325          98027  
+ 1               Pak                     4116871.2277          98055  
+ 2               Varkey Chudukatil       3121616.3202          98055  
+ 3               Saraiva                 2604540.7172          98055  
+ 4               Ito                     2458535.6169          98055  
+ 5               Valdez                  1827066.7118          98055  
+ 6               Mensa-Annan             1576562.1966          98055  
+ 7               Campbell                1573012.9383          98055  
+ 8               Tsoflias                1421810.9242          98055
+ ```  
   
 ### B. Using the OVER clause with aggregate functions  
  The following example uses the `OVER` clause with aggregate functions over all rows returned by the query. In this example, using the `OVER` clause is more efficient than using subqueries to derive the aggregate values.  
   
-```  
+```t-sql  
 USE AdventureWorks2012;  
 GO  
 SELECT SalesOrderID, ProductID, OrderQty  
@@ -296,7 +271,7 @@ SalesOrderID ProductID   OrderQty Total       Avg         Count       Min    Max
   
  The following example shows using the `OVER` clause with an aggregate function in a calculated value.  
   
-```  
+```t-sql  
 USE AdventureWorks2012;  
 GO  
 SELECT SalesOrderID, ProductID, OrderQty  
@@ -340,7 +315,7 @@ SalesOrderID ProductID   OrderQty Total       Percent by ProductID
 ### C. Producing a moving average and cumulative total  
  The following example uses the AVG and SUM functions with the OVER clause to provide a moving average and cumulative total of yearly sales for each territory in the `Sales.SalesPerson` table. The data is partitioned by `TerritoryID` and logically ordered by `SalesYTD`. This means that the AVG function is computed for each territory based on the sales year. Notice that for `TerritoryID` 1, there are two rows for sales year 2005 representing the two sales people with sales that year. The average sales for these two rows is computed and then the third row representing sales for the year 2006 is included in the computation.  
   
-```  
+```t-sql  
 USE AdventureWorks2012;  
 GO  
 SELECT BusinessEntityID, TerritoryID   
@@ -379,7 +354,7 @@ BusinessEntityID TerritoryID SalesYear   SalesYTD             MovingAvg         
   
  In this example, the OVER clause does not include PARTITION BY. This means that the function will be applied to all rows returned by the query. The ORDER BY clause specified in the OVER clause determines the logical order to which the AVG function is applied. The query returns a moving average of sales by year for all sales territories specified in the WHERE clause. The ORDER BY clause specified in the SELECT statement determines the order in which the rows of the query are displayed.  
   
-```  
+```t-sql  
 SELECT BusinessEntityID, TerritoryID   
    ,DATEPART(yy,ModifiedDate) AS SalesYear  
    ,CONVERT(varchar(20),SalesYTD,1) AS  SalesYTD  
@@ -412,13 +387,11 @@ BusinessEntityID TerritoryID SalesYear   SalesYTD             MovingAvg         
   
 ### D. Specifying the ROWS clause  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  The following example uses the ROWS clause to define a window over which the rows are computed as the current row and the *N* number of rows that follow (1 row in this example).  
   
-```  
+```t-sql  
 SELECT BusinessEntityID, TerritoryID   
     ,CONVERT(varchar(20),SalesYTD,1) AS  SalesYTD  
     ,DATEPART(yy,ModifiedDate) AS SalesYear  
@@ -448,7 +421,7 @@ BusinessEntityID TerritoryID SalesYTD             SalesYear   CumulativeTotal
   
  In the following example, the ROWS clause is specified with UNBOUNDED PRECEDING. The result is that the window starts at the first row of the partition.  
   
-```  
+```t-sql  
 SELECT BusinessEntityID, TerritoryID   
     ,CONVERT(varchar(20),SalesYTD,1) AS  SalesYTD  
     ,DATEPART(yy,ModifiedDate) AS SalesYear  
@@ -482,7 +455,7 @@ BusinessEntityID TerritoryID SalesYTD             SalesYear   CumulativeTotal
 ### E. Using the OVER clause with the ROW_NUMBER function  
  The following example returns the ROW_NUMBER for sales representatives based on their assigned sales quota.  
   
-```  
+```t-sql  
 -- Uses AdventureWorks  
   
 SELECT ROW_NUMBER() OVER(ORDER BY SUM(SalesAmountQuota) DESC) AS RowNumber,  
@@ -497,22 +470,19 @@ GROUP BY LastName, FirstName;
   
  Here is a partial result set.  
   
- `RowNumber  FirstName  LastName            SalesQuota`  
-  
- `---------  ---------  ------------------  -------------`  
-  
- `1          Jillian    Carson              12,198,000.00`  
-  
- `2          Linda      Mitchell            11,786,000.00`  
-  
- `3          Michael    Blythe              11,162,000.00`  
-  
- `4          Jae        Pak                 10,514,000.00`  
-  
+ ```
+ RowNumber  FirstName  LastName            SalesQuota  
+ ---------  ---------  ------------------  -------------  
+ 1          Jillian    Carson              12,198,000.00  
+ 2          Linda      Mitchell            11,786,000.00  
+ 3          Michael    Blythe              11,162,000.00  
+ 4          Jae        Pak                 10,514,000.00  
+ ```
+ 
 ### F. Using the OVER clause with aggregate functions  
  The following examples show using the OVER clause with aggregate functions. In this example, using the OVER clause is more efficient than using subqueries.  
   
-```  
+```t-sql  
 -- Uses AdventureWorks  
   
 SELECT SalesOrderNumber AS OrderNumber, ProductKey,   
@@ -530,27 +500,21 @@ ORDER BY SalesOrderNumber,ProductKey;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `OrderNumber  Product  Qty  Total  Avg  Count  Min  Max`  
-  
- `-----------  -------  ---  -----  ---  -----  ---  ---`  
-  
- `SO43659      218      6    16     3    5      1    6`  
-  
- `SO43659      220      4    16     3    5      1    6`  
-  
- `SO43659      223      2    16     3    5      1    6`  
-  
- `SO43659      229      3    16     3    5      1    6`  
-  
- `SO43659      235      1    16     3    5      1    6`  
-  
- `SO43664      229      1     2     1    2      1    1`  
-  
- `SO43664      235      1     2     1    2      1    1`  
-  
+ ```
+ OrderNumber  Product  Qty  Total  Avg  Count  Min  Max  
+ -----------  -------  ---  -----  ---  -----  ---  ---  
+ SO43659      218      6    16     3    5      1    6  
+ SO43659      220      4    16     3    5      1    6  
+ SO43659      223      2    16     3    5      1    6  
+ SO43659      229      3    16     3    5      1    6  
+ SO43659      235      1    16     3    5      1    6  
+ SO43664      229      1     2     1    2      1    1  
+ SO43664      235      1     2     1    2      1    1  
+ ```
+ 
  The following example shows using the OVER clause with an aggregate function in a calculated value. Notice that the aggregates are calculated by `SalesOrderNumber` and the percentage of the total sales order is calculated for each line of each `SalesOrderNumber`.  
   
-```  
+```t-sql  
 -- Uses AdventureWorks  
   
 SELECT SalesOrderNumber AS OrderNumber, ProductKey AS Product,   
@@ -567,18 +531,15 @@ ORDER BY SalesOrderNumber,ProductKey;
   
  The first start of this result set is:  
   
- `OrderNumber  Product  Qty  Total  PctByProduct`  
-  
- `-----------  -------  ---  -----  ------------`  
-  
- `SO43659      218      6    16     37.50`  
-  
- `SO43659      220      4    16     25.00`  
-  
- `SO43659      223      2    16     12.50`  
-  
- `SO43659      229      2    16     18.75`  
-  
+ ```
+ OrderNumber  Product  Qty  Total  PctByProduct  
+ -----------  -------  ---  -----  ------------  
+ SO43659      218      6    16     37.50  
+ SO43659      220      4    16     25.00  
+ SO43659      223      2    16     12.50  
+ SO43659      229      2    16     18.75  
+ ```
+ 
 ## See Also  
  [Aggregate Functions &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)   
  [Analytic Functions &#40;Transact-SQL&#41;](../../t-sql/functions/analytic-functions-transact-sql.md)   

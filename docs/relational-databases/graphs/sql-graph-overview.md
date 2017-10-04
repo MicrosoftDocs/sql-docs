@@ -1,7 +1,7 @@
 ---
 title: "SQL Graph overview | Microsoft Docs"
 ms.custom: 
-ms.date: "04/19/2017"
+ms.date: "07/18/2017"
 ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
@@ -18,8 +18,8 @@ author: "shkale-msft"
 ms.author: "shkale"
 manager: "jhubbard"
 ---
-# Graph processing with SQL Server 2017  
-[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]   
+# Graph processing with SQL Server and Azure SQL Database
+[!INCLUDE[tsql-appliesto-ssvnxt-asdb-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-asdb-xxxx-xxx.md)]   
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offers graph database capabilities to model many-to-many relationships. The graph relationships are integrated into [!INCLUDE[tsql-md](../../includes/tsql-md.md)] and receive the benefits of using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as the foundational database management system.
 
@@ -39,14 +39,14 @@ There is nothing a graph database can achieve, which cannot be achieved using a 
 -	You need to analyze interconnected data and relationships.
 
 ## Graph features introduced in [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] 
-We are starting to add graph extension to SQL Server, to make storing and querying graph data easier. Following features are introduced in the first release. 
+We are starting to add graph extensions to SQL Server, to make storing and querying graph data easier. Following features are introduced in the first release. 
 
 
 ### Create graph objects
 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] extensions will allow users to create node or edge tables. Both nodes and edges can have properties associated to them. Since, nodes and edges are stored as tables, all the operations that are supported on relational tables are supported on node or edge table. Here is an example:  
 
 ```   
-CREATE TABLE Person (ID INTEGER PRIMARY KEY, name VARCHAR(100)) AS NODE;
+CREATE TABLE Person (ID INTEGER PRIMARY KEY, Name VARCHAR(100), Age INT) AS NODE;
 CREATE TABLE friends (StartDate date) AS EDGE;
 ```   
 
@@ -64,7 +64,7 @@ WHERE MATCH(Person1-(Friends)->Person2)
 AND Person1.Name = 'John';
 ```   
  
-### Fully integrated in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]   
+### Fully integrated in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Engine 
 Graph extensions are fully integrated in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] engine. We use the same storage engine, metadata, query processor, etc. to store and query graph data. This enables users to query across their graph and relational data in a single query. Users can also benefit from combining graph capabilities with other [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] technologies like columnstore, HA, R services, etc. SQL graph database also supports all the security and compliance features available with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
  
 ### Tooling and ecosystem  

@@ -17,6 +17,9 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Understanding Tabular Object Model at Levels 1050 through 1103
+
+[!INCLUDE[ssas-appliesto-sqlas-all](../../../includes/ssas-appliesto-sqlas-all.md)]
+
   A tabular model is a logical representation of tables, relationships, hierarchies, perspectives, measures, and Key Performance. This section introduces the internal implementation using AMO. See [Developing with Analysis Management Objects &#40;AMO&#41;](../../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md) if you haven't used AMO before.  
   
  The approach here is top-down, all relevant objects in the tabular model are logically mapped to AMO objects, and the required interaction or workflow explained. A source code sample to create a tabular model using AMO, AMO to Tabular sample is available from Codeplex. An important note about the code in the sample: it is provided only to support to the logical concepts explained here and should not be used in a production environment. The sample is provided without support or warranty.  

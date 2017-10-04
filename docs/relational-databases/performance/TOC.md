@@ -1,10 +1,15 @@
+
 # [Performance Center for SQL Server Database Engine and Azure SQL Database](performance-center-for-sql-server-database-engine-and-azure-sql-database.md)  
-## [Configuring Storage Spaces with a NVDIMM-N write-back cache](configuring-storage-spaces-with-a-nvdimm-n-write-back-cache.md)  
-#[Monitor Resource Usage (System Monitor)](../performance-monitor/monitor-resource-usage-system-monitor.md) 
+# [Configuring Storage Spaces with a NVDIMM-N write-back cache](configuring-storage-spaces-with-a-nvdimm-n-write-back-cache.md)  
+
+# [Adaptive Query Processing](adaptive-query-processing.md)
+# [Automatic Tuning](../automatic-tuning/automatic-tuning.md)
+# [Cardinality Estimation](cardinality-estimation-sql-server.md)  
+
 # [Monitor and Tune for Performance](monitor-and-tune-for-performance.md)  
 ## [Monitor SQL Server Components](monitor-sql-server-components.md)  
 ## [Performance Monitoring and Tuning Tools](performance-monitoring-and-tuning-tools.md)  
-## [Cardinality Estimation](cardinality-estimation-sql-server.md)  
+
 ## [Establish a Performance Baseline](establish-a-performance-baseline.md)  
 ## [Isolate Performance Problems](isolate-performance-problems.md)  
 ## [Identify Bottlenecks](identify-bottlenecks.md)  
@@ -27,7 +32,8 @@
 ## [Best Practice with the Query Store](best-practice-with-the-query-store.md)  
 ## [Query Store Usage Scenarios](query-store-usage-scenarios.md)  
 ## [How Query Store Collects Data](how-query-store-collects-data.md)  
-#[Automatic Tuning](../automatic-tuning/automatic-tuning.md) 
+
+
 # [Database Tuning Advisor](database-engine-tuning-advisor.md)  
 ## [Start and Use the Database Engine Tuning Advisor](start-and-use-the-database-engine-tuning-advisor.md)  
 ## [Reduce the Production Server Tuning Load](reduce-the-production-server-tuning-load.md)  
@@ -36,6 +42,7 @@
 ## [Columnstore index recommendations in Database Engine Tuning Advisor (DTA)](columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md)  
 ## [Tuning Database Using Workload from Query Store](tuning-database-using-workload-from-query-store.md)  
 ## [Performance Improvements using Database Engine Tuning Advisor (DTA) recommendations](performance-improvements-using-dta-recommendations.md)  
+
 # [Plan Guides](plan-guides.md)  
 ## [Create a New Plan Guide](create-a-new-plan-guide.md)  
 ## [Create a Plan Guide for Parameterized Queries](create-a-plan-guide-for-parameterized-queries.md)  
@@ -47,3 +54,5 @@
 ## [Validate Plan Guides After Upgrade](validate-plan-guides-after-upgrade.md)  
 ## [Delete a Plan Guide](delete-a-plan-guide.md)  
 ## [Enable or Disable a Plan Guide](enable-or-disable-a-plan-guide.md)  
+
+#[Monitor Resource Usage (System Monitor)](../performance-monitor/monitor-resource-usage-system-monitor.md) 

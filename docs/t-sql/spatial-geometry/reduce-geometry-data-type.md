@@ -1,7 +1,7 @@
 ---
 title: "Reduce (geometry Data Type) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/10/2016"
+ms.date: "08/03/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -25,11 +25,7 @@ manager: "jhubbard"
 # Reduce (geometry Data Type)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Returns an approximation of the given **geometry** instance produced by running an extension of the Douglas-Peucker algorithm on the instance with the given tolerance.  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
+Returns an approximation of the given **geometry** instance produced by running an extension of the Douglas-Peucker algorithm on the instance with the given tolerance.
   
 ## Syntax  
   
@@ -117,3 +113,4 @@ SELECT @g.ToString() AS Original, @h.ToString() AS Reduced;
  [Extended Static Geometry Methods](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)  
   
   
+

@@ -1,0 +1,6 @@
+### YamlMime:XRefMap
+references:
+- uid: System.Reflection.Assembly.Load*
+  name: Load
+  fullName: Assembly.Load
+  href: https://msdn.microsoft.com/library/system.reflection.assembly.load

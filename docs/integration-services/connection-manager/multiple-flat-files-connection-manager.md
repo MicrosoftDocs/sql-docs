@@ -9,6 +9,11 @@ ms.technology:
   - "integration-services"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
+f1_keywords: 
+  - "sql13.dts.designer.multifile.advanced.f1"
+  - "sql13.dts.designer.multifile.columns.f1"
+  - "sql13.dts.designer.multifile.general.f1"
+  - "sql13.dts.designer.multifile.preview.f1"
 helpviewer_keywords: 
   - "Multiple Flat Files connection manager"
   - "connections [Integration Services], flat files"
@@ -58,17 +63,215 @@ manager: "jhubbard"
 ## Configuration of the Multiple Flat Files Connection Manager  
  You can set properties through [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer or programmatically.  
   
- For more information about the properties that you can set in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click one of the following topics:  
-  
--   [Multiple Flat Files Connection Manager Editor &#40;General Page&#41;](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-general-page.md)  
-  
--   [Multiple Flat Files Connection Manager Editor &#40;Columns Page&#41;](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-columns-page.md)  
-  
--   [Multiple Flat Files Connection Manager Editor &#40;Advanced Page&#41;](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-advanced-page.md)  
-  
--   [Multiple Flat Files Connection Manager Editor &#40;Preview Page&#41;](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-preview-page.md)  
-  
  For information about configuring a connection manager programmatically, see <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> and [Adding Connections Programmatically](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md).  
+  
+## Multiple Flat Files Connection Manager Editor (General Page)
+  Use the **General** page of the **Multiple Flat Files Connection Manager Editor** dialog box to select a group of files that have the same data format, and to specify their data format. A multiple flat files connection enables a package to connect to a group of text files that have the same format.  
+  
+ To learn more about the Multiple Flat Files connection manager, see [Multiple Flat Files Connection Manager](../../integration-services/connection-manager/multiple-flat-files-connection-manager.md).  
+  
+### Options  
+ **Connection manager name**  
+ Provide a unique name for the Multiple Flat Files connection in the workflow. The name provided will be displayed within [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer.  
+  
+ **Description**  
+ Describe the connection. As a best practice, describe the connection in terms of its purpose, to make packages self-documenting and easier to maintain.  
+  
+ **File names**  
+ Type the path and file names to use in the Multiple Flat Files connection. You can specify multiple files by using wildcard characters, as in the example "C:\\*.txt", or by using the vertical pipe character (|) to separate multiple file names. All files must have the same data format.  
+  
+ **Browse**  
+ Browse the file names to use in the Multiple Flat Files connection. You can select multiple files. All files must have the same data format.  
+  
+ **Locale**  
+ Specify the location to provide information for ordering and for date and time conversion.  
+  
+ **Unicode**  
+ Indicate whether to use Unicode. Using Unicode precludes specifying a code page.  
+  
+ **Code page**  
+ Specify the code page for non-Unicode text.  
+  
+ **Format**  
+ Indicate whether to use delimited, fixed width, or ragged right formatting. All files must have the same data format.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|Delimited|Columns are separated by delimiters, specified on the **Columns** page.|  
+|Fixed width|Columns have a fixed width, specified by dragging marker lines on the **Columns** page.|  
+|Ragged right|Ragged right files are files in which every column has a fixed width, except for the last column, which is delimited by the row delimiter, specified on the **Columns** page.|  
+  
+ **Text qualifier**  
+ Specify the text qualifier to use. For example, you can specify to enclose text with quotation marks.  
+  
+ **Header row delimiter**  
+ Select from the list of delimiters for header rows, or enter the delimiter text.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**{CR}{LF}**|The header row is delimited by a carriage return-line feed combination.|  
+|**{CR}**|The header row is delimited by a carriage return.|  
+|**{LF}**|The header row is delimited by a line feed.|  
+|**Semicolon {;}**|The header row is delimited by a semicolon.|  
+|**Colon {:}**|The header row is delimited by a colon.|  
+|**Comma {,}**|The header row is delimited by a comma.|  
+|**Tab {t}**|The header row is delimited by a tab.|  
+|**Vertical bar {&#124;}**|The header row is delimited by a vertical bar.|  
+  
+ **Header rows to skip**  
+ Specify the number of header rows to skip, if any.  
+  
+ **Column names in the first data row**  
+ Indicate whether to expect or provide column names in the first data row.  
+  
+## Multiple Flat Files Connection Manager Editor (Columns Page)
+  Use the **Columns** node of the **Multiple Flat Files Connection Manager Editor** dialog box to specify the row and column information, and to preview the first selected file.  
+  
+ To learn more about the Multiple Flat Files connection manager, see [Multiple Flat Files Connection Manager](../../integration-services/connection-manager/multiple-flat-files-connection-manager.md).  
+  
+### Static Options  
+ **Connection manager name**  
+ Provide a unique name for the Multiple Flat Files connection in the workflow. The name provided will be displayed within [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer.  
+  
+ **Description**  
+ Describe the connection. As a best practice, describe the connection in terms of its purpose, to make packages self-documenting and easier to maintain.  
+  
+### Flat File Format Dynamic Options  
+  
+#### Format = Delimited  
+ **Row delimiter**  
+ Select from the list of available row delimiters, or enter the delimiter text.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**{CR}{LF}**|Rows are delimited by a carriage return-line feed combination.|  
+|**{CR}**|Rows are delimited by a carriage return.|  
+|**{LF}**|Rows are delimited by a line feed.|  
+|**Semicolon {;}**|Rows are delimited by a semicolon.|  
+|**Colon {:}**|Rows are delimited by a colon.|  
+|**Comma {,}**|Rows are delimited by a comma.|  
+|**Tab {t}**|Rows are delimited by a tab.|  
+|**Vertical bar {&#124;}**|Rows are delimited by a vertical bar.|  
+  
+ **Column delimiter**  
+ Select from the list of available column delimiters, or enter the delimiter text.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**{CR}{LF}**|Columns are delimited by a carriage return-line feed combination.|  
+|**{CR}**|Columns are delimited by a carriage return.|  
+|**{LF}**|Columns are delimited by a line feed.|  
+|**Semicolon {;}**|Columns are delimited by a semicolon.|  
+|**Colon {:}**|Columns are delimited by a colon.|  
+|**Comma {,}**|Columns are delimited by a comma.|  
+|**Tab {t}**|Columns are delimited by a tab.|  
+|**Vertical bar {&#124;}**|Columns are delimited by a vertical bar.|  
+  
+ **Reset Columns**  
+ Remove all but the original columns by clicking **Reset Columns**.  
+  
+#### Format = Fixed Width  
+ **Font**  
+ Select the font in which to display the preview data.  
+  
+ **Source data columns**  
+ Adjust the width of the row by sliding the vertical row marker, and adjust the width of the columns by clicking the ruler at the top of the preview window  
+  
+ **Row width**  
+ Specify the length of the row before adding delimiters for individual columns. Or, drag the vertical line in the preview window to mark the end of the row. The row width value is automatically updated.  
+  
+ **Reset Columns**  
+ Remove all but the original columns by clicking **Reset Columns**.  
+  
+#### Format = Ragged Right  
+  
+> [!NOTE]  
+>  Ragged right files are those in which every column has a fixed width, except for the last column. It is delimited by the row delimiter.  
+  
+ **Font**  
+ Select the font in which to display the preview data.  
+  
+ **Source data columns**  
+ Adjust the width of the row by sliding the vertical row marker, and adjust the width of the columns by clicking the ruler at the top of the preview window  
+  
+ **Row delimiter**  
+ Select from the list of available row delimiters, or enter the delimiter text.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**{CR}{LF}**|Rows are delimited by a carriage return-line feed combination.|  
+|**{CR}**|Rows are delimited by a carriage return.|  
+|**{LF}**|Rows are delimited by a line feed.|  
+|**Semicolon {;}**|Rows are delimited by a semicolon.|  
+|**Colon {:}**|Rows are delimited by a colon.|  
+|**Comma {,}**|Rows are delimited by a comma.|  
+|**Tab {t}**|Rows are delimited by a tab.|  
+|**Vertical bar {&#124;}**|Rows are delimited by a vertical bar.|  
+  
+ **Reset Columns**  
+ Remove all but the original columns by clicking **Reset Columns**.  
+  
+## Multiple Flat Files Connection Manager Editor (Advanced Page)
+  Use the **Advanced** page of the **Multiple Flat Files Connection ManagerEditor** dialog box to set properties such as data type and delimiters of each column in the text files to which the flat file connection manager connects.  
+  
+ By default, the length of string columns is 50 characters. You can evaluate sample data and automatically resize the length of these columns to prevent truncation of data or excess column width. You can also update other metadata to enable compatibility with destination columns. For example, you might change the data type of a column that contains only integer data to a numeric data type, such as DT_I2.  
+  
+ To learn more about the Multiple Flat Files connection manager, see [Multiple Flat Files Connection Manager](../../integration-services/connection-manager/multiple-flat-files-connection-manager.md).  
+  
+### Options  
+ **Connection manager name**  
+ Provide a unique name for the Multiple Flat Files connection manager in the workflow. The name provided will be displayed within the **Connection Managers** area of [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer.  
+  
+ **Description**  
+ Describe the connection manager. As a best practice, describe the connection manager in terms of its purpose, to make packages self-documenting and easier to maintain.  
+  
+ **Configure the properties of each column**  
+ Select a column in the left pane to view its properties in the right pane. See the following table for a description of data type properties. Some of the properties listed are configurable only for some flat file formats.  
+  
+|Property|Description|  
+|--------------|-----------------|  
+|**ColumnType**|Denotes whether the column is delimited, fixed width, or ragged right. This property is read-only. Ragged right files are files in which every column has a fixed width, except for the last column, which is terminated by the row delimiter.|  
+|**OutputColumnWidth**|Specify a value to be stored as a count of bytes; for Unicode files, this will display as a count of characters. In the Data Flow task, this value is used to set the output column width for the Flat File source.<br /><br /> Note: In the object model, the name of this property is MaximumWidth.|  
+|**DataType**|Select from the list of available data types. For more information, see [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).|  
+|**TextQualified**|Indicate whether text data is qualified using a text qualifier character:<br /><br /> **True**: Text data in the flat file is qualified.<br /><br /> **False**: Text data in the flat file is not qualified.|  
+|**Name**|Provide a column name. The default is a numbered list of columns; however, you can choose any unique, descriptive name.|  
+|**DataScale**|Specify the scale of numeric data. Scale refers to the number of decimal places. For more information, see [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).|  
+|**ColumnDelimiter**|Select from the list of available column delimiters. Choose delimiters that are not likely to occur in the text. This value is ignored for fixed-width columns.<br /><br /> **{CR}{LF}** – columns are delimited by a carriage return-line feed combination<br /><br /> **{CR}** – columns are delimited by a carriage return<br /><br /> **{LF}** – columns are delimited by a line feed<br /><br /> **Semicolon {;}** – columns are delimited by a semicolon<br /><br /> **Colon {:}** – columns are delimited by a colon<br /><br /> **Comma {,}** – columns are delimited by a comma<br /><br /> **Tab {t}** – columns are delimited by a tab<br /><br /> **Vertical bar {&#124;}** – columns are delimited by a vertical bar|  
+|**DataPrecision**|Specify the precision of numeric data. Precision refers to the number of digits. For more information, see [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).|  
+|**InputColumnWidth**|Specify a value to be stored as a count of bytes; for Unicode files, this will display as a count of characters. This value is ignored for delimited columns.<br /><br /> **Note** In the object model, the name of this property is ColumnWidth.|  
+  
+ **New**  
+ Add a new column by clicking **New**. By default, the **New** button adds a new column at the end of the list. The button also has the following options, available in the dropdown list.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**Add Column**|Add a new column at the end of the list.|  
+|**Insert Before**|Insert a new column before the selected column.|  
+|**Insert After**|Insert a new column after the selected column.|  
+  
+ **Delete**  
+ Select a column, and then remove it by clicking **Delete**.  
+  
+ **Suggest Types**  
+ Use the **Suggest Column Types** dialog box to evaluate sample data in the first selected file and to obtain suggestions for the data type and length of each column. For more information, see [Suggest Column Types Dialog Box UI Reference](../../integration-services/connection-manager/suggest-column-types-dialog-box-ui-reference.md).  
+  
+## Multiple Flat Files Connection Manager Editor (Preview Page)
+  Use the **Preview** page of the **Multiple Flat Files ConnectionManager Editor** dialog box to view the contents of the first selected source file divided into columns as you have defined them.  
+  
+ To learn more about the Multiple Flat Files connection manager, see [Multiple Flat Files Connection Manager](../../integration-services/connection-manager/multiple-flat-files-connection-manager.md).  
+  
+### Options  
+ **Connection manager name**  
+ Provide a unique name for the Multiple Flat Files connection in the workflow. The name provided will be displayed within the **Connection Managers** area of [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer.  
+  
+ **Description**  
+ Describe the connection. As a best practice, describe the connection in terms of its purpose, to make packages self-documenting and easier to maintain.  
+  
+ **Data rows to skip**  
+ Specify how many rows to skip at the beginning of the flat file.  
+  
+ **Preview rows**  
+ View sample data in the first selected flat file, divided into columns and rows by using the options selected.  
   
 ## See Also  
  [Flat File Source](../../integration-services/data-flow/flat-file-source.md)   

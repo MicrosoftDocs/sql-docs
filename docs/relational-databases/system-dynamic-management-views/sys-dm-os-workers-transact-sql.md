@@ -47,8 +47,8 @@ manager: "jhubbard"
 |pending_io_count|**int**|Number of physical I/Os that are performed by this worker.|  
 |pending_io_byte_count|**bigint**|Total number of bytes for all pending physical I/Os for this worker.|  
 |pending_io_byte_average|**int**|Average number of bytes for physical I/Os for this worker.|  
-|wait_started_ms_ticks|**int**|Point in time, in [ms_ticks](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md), when this worker entered the SUSPENDED state. Subtracting this value from ms_ticks in [sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md) returns the number of milliseconds that the worker has been waiting.|  
-|wait_resumed_ms_ticks|**int**|Point in time, in [ms_ticks](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md), when this worker entered the RUNNABLE state. Subtracting this value from ms_ticks in [sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md) returns the number of milliseconds that the worker has been in the runnable queue.|  
+|wait_started_ms_ticks|**bigint**|Point in time, in [ms_ticks](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md), when this worker entered the SUSPENDED state. Subtracting this value from ms_ticks in [sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md) returns the number of milliseconds that the worker has been waiting.|  
+|wait_resumed_ms_ticks|**bigint**|Point in time, in [ms_ticks](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md), when this worker entered the RUNNABLE state. Subtracting this value from ms_ticks in [sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md) returns the number of milliseconds that the worker has been in the runnable queue.|  
 |task_bound_ms_ticks|**bigint**|Point in time, in [ms_ticks](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md), when a task is bound to this worker.|  
 |worker_created_ms_ticks|**bigint**|Point in time, in [ms_ticks](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md), when a worker is created.|  
 |exception_num|**int**|Error number of the last exception that this worker encountered.|  
@@ -85,7 +85,7 @@ On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium Tiers, requires the 
 ## Examples  
  You can use the following query to find out how long a worker has been running in a SUSPENDED or RUNNABLE state.  
   
-```  
+```tsql
 SELECT   
     t1.session_id,  
     CONVERT(varchar(10), t1.status) AS status,  
@@ -111,37 +111,25 @@ SELECT
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
- `session_id status     command         worker_state w_suspended w_runnable`  
-  
- `---------- ---------- --------------- ------------ ----------- --------------------`  
-  
- `4          background LAZY WRITER     SUSPENDED    688         688`  
-  
- `6          background LOCK MONITOR    SUSPENDED    4657        4657`  
-  
- `19         background BRKR TASK       SUSPENDED    603820344   603820344`  
-  
- `14         background BRKR EVENT HNDL SUSPENDED    63583641    63583641`  
-  
- `51         running    SELECT          RUNNING      0           0`  
-  
- `2          background RESOURCE MONITO RUNNING      0           603825954`  
-  
- `3          background LAZY WRITER     SUSPENDED    422         422`  
-  
- `7          background SIGNAL HANDLER  SUSPENDED    603820485   603820485`  
-  
- `13         background TASK MANAGER    SUSPENDED    603824704   603824704`  
-  
- `18         background BRKR TASK       SUSPENDED    603820407   603820407`  
-  
- `9          background TRACE QUEUE TAS SUSPENDED    454         454`  
-  
- `52         suspended  SELECT          SUSPENDED    35094       35094`  
-  
- `1          background RESOURCE MONITO RUNNING      0           603825954`  
-  
+
+```
+ session_id status     command         worker_state w_suspended w_runnable  
+ ---------- ---------- --------------- ------------ ----------- --------------------  
+ 4          background LAZY WRITER     SUSPENDED    688         688  
+ 6          background LOCK MONITOR    SUSPENDED    4657        4657
+ 19         background BRKR TASK       SUSPENDED    603820344   603820344  
+ 14         background BRKR EVENT HNDL SUSPENDED    63583641    63583641  
+ 51         running    SELECT          RUNNING      0           0  
+ 2          background RESOURCE MONITO RUNNING      0           603825954  
+ 3          background LAZY WRITER     SUSPENDED    422         422  
+ 7          background SIGNAL HANDLER  SUSPENDED    603820485   603820485  
+ 13         background TASK MANAGER    SUSPENDED    603824704   603824704  
+ 18         background BRKR TASK       SUSPENDED    603820407   603820407  
+ 9          background TRACE QUEUE TAS SUSPENDED    454         454  
+ 52         suspended  SELECT          SUSPENDED    35094       35094  
+ 1          background RESOURCE MONITO RUNNING      0           603825954  
+```
+
  In the output, when `w_runnable` and `w_suspended` are equal, this represents the time that the worker is in the SUSPENDED state. Otherwise, `w_runnable` represents the time that is spent by the worker in the RUNNABLE state. In the output, session `52` is `SUSPENDED` for `35,094` milliseconds.  
   
 ## See Also  

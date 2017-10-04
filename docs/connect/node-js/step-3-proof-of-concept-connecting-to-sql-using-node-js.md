@@ -1,7 +1,7 @@
 ---
 title: "Step 3: Proof of concept connecting to SQL using Node.js | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/30/2017"
+ms.date: "08/08/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -16,7 +16,8 @@ ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Step 3: Proof of concept connecting to SQL using Node.js
-[!INCLUDE[Driver_NodeJS_Download](../../includes/driver_nodejs_download.md)]
+
+![Download-DownArrow-Circled](../../ssdt/media/download.png)[To download Node.js SQL driver](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
 This example should be considered a proof of concept only.  The sample code is simplified for clarity, and does not necessarily represent best practices recommended by Microsoft. Other examples which use the same crucial functions are available on Github:
 
@@ -94,7 +95,7 @@ All SQL statements are executed using the **new Request()** function. If the sta
   
 ## Step 3: Insert a row  
   
-In this example you will see how to execute an [INSERT](https://msdn.microsoft.com/library/ms174335.aspx) statement safely, pass parameters which protect your application from [SQL injection](https://technet.microsoft.com/library/ms161953(v=sql.105).aspx) vulnerability, and retrieve the auto-generated [Primary Key](https://msdn.microsoft.com/library/ms179610.aspx) value.    
+In this example you will see how to execute an [INSERT](../../t-sql/statements/insert-transact-sql.md) statement safely, pass parameters which protect your application from [SQL injection](../../relational-databases/tables/primary-and-foreign-key-constraints.md) value.    
   
   
 ```javascript  
@@ -137,4 +138,3 @@ In this example you will see how to execute an [INSERT](https://msdn.microsoft.c
         connection.execSql(request);  
     }  
 ```  
-  

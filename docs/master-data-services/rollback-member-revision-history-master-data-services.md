@@ -11,9 +11,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: d39d3474-20e7-429f-9c8d-fcc4eb0854fc
 caps.latest.revision: 5
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
+author: "smartysanthosh"
+ms.author: "nagavo"
+manager: "craigg"
 ---
 # Rollback Member Revision History (Master Data Services)
   A member revision history is recorded each time a member is changed. You can rollback a member revision history to a previous version.  

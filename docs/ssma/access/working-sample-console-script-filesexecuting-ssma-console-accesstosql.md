@@ -14,9 +14,9 @@ applies_to:
   - "SQL Server"
 ms.assetid: ad75b648-d119-4119-98f0-d18f058be68d
 caps.latest.revision: 10
-author: "sabotta"
-ms.author: "carlasab"
-manager: "lonnyb"
+author: "Shamikg"
+ms.author: "Shamikg"
+manager: "jhubbard"
 ---
 # Working with the Sample Console Script FilesExecuting the SSMA Console (AccessToSQL)
 A few sample files have been provided along with the product for the user reference and usage. This section describes the way to easily customize these scripts to fit the end user needs.  

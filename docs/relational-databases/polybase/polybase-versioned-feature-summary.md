@@ -1,7 +1,7 @@
 ---
 title: "PolyBase Versioned Feature Summary | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/13/2016"
+ms.date: "08/29/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -18,62 +18,40 @@ manager: "jhubbard"
 # PolyBase Versioned Feature Summary
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
-  Summary of PolyBase features available for  SQL Server products and services.  
+Summary of PolyBase features available for SQL Server products and services.  
   
 ## Feature Summary for Product Releases  
  This table summarizes key features for PolyBase and the products in which they are available.  
   
-### [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
- These features apply to [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] running on-premises or in an Azure virtual machine.  PolyBase is not available in SQL Server 2014 and earlier versions.  
-  
-|||  
-|-|-|  
-|**Feature**|**Availability**|  
-|Query Hadoop data with [!INCLUDE[tsql](../../includes/tsql-md.md)]|yes|  
-|Query Azure blob storage with [!INCLUDE[tsql](../../includes/tsql-md.md)]|yes|  
-|Import data from Hadoop|yes|  
-|Import data from Azure blob storage|yes| 
-|Import data from Azure Data Lake Store|no|   
-|Export data to Hadoop|yes|  
-|Export data to Azure blob storage|yes|  
-|Export data from Azure Data Lake Store|no|
-|Run PolyBase queries from Microsoft's BI tools|yes|  
-|Push down query computations to Hadoop|yes|  
-  
-### [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]  
- These features apply to [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  
-  
-|||  
-|-|-|  
-|**Feature**|**Availability**|  
-|Query Hadoop data with [!INCLUDE[tsql](../../includes/tsql-md.md)]|no|  
-|Query Azure blob storage with [!INCLUDE[tsql](../../includes/tsql-md.md)]|yes|  
-|Import data from Hadoop|no|  
-|Import data from Azure blob storage|yes|
-|Import data from Azure Data Lake Store|yes|     
-|Export data to Hadoop|no|  
-|Export data to Azure blob storage|yes|  
-|Export data to Azure Data Lake Store|yes|
-|Run PolyBase queries from Microsoft's BI tools|yes|  
-|Push down query computations to Hadoop|no|  
-  
-### [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- These features apply to [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
-  
-|||  
-|-|-|  
-|**Feature**|**Availability**|  
-|Query Hadoop data with [!INCLUDE[tsql](../../includes/tsql-md.md)]|yes|  
-|Query Azure blob storage with [!INCLUDE[tsql](../../includes/tsql-md.md)]|yes|  
-|Import data from Hadoop|yes|  
-|Import data from Azure blob storage|yes|  
-|Import data from Azure Data Lake Store|no|   
-|Export data to Hadoop|yes|  
-|Export data to Azure blob storage|yes|  
-|Export data to Azure Data Lake Store|no|
-|Run PolyBase queries from Microsoft's BI tools|yes|  
-|Push down query computations to Hadoop|yes|  
-  
+||||||
+|-|-|-|-|-|   
+|**Feature**|**SQL Server 2016**|**Azure SQL Database**|**Azure SQL Data Warehouse**|**Parallel Data Warehouse**| 
+|Query Hadoop data with [!INCLUDE[tsql](../../includes/tsql-md.md)]|yes|no|no|yes|
+|Import data from Hadoop|yes|no|no|yes|
+|Export data to Hadoop  |yes|no|no| yes|
+|Query, Import from, Export to HDInsights |no|no|no|no
+|Push down query computations to Hadoop|yes|no|no|yes|  
+|Import data from Azure blob storage|yes|no|yes|yes| 
+|Export data to Azure blob storage|yes|no|yes|yes|  
+|Import data from Azure Data Lake Store|no|no|yes|no|    
+|Export data from Azure Data Lake Store|no|no|yes|no|
+|Run PolyBase queries from Microsoft's BI tools|yes|no|yes|yes|   
+
+
+## Pushdown computation supported T-SQL operators
+In SQL Server and APS, not all T-SQL operators can be pushdown to the hadoop cluster. The table below lists the all supported and a subset of the unsupported operators. 
+
+||||
+|-|-|-| 
+|**Operator type**|**Pushable to Hadoop**|**Pushable to Blob Storage**|
+|Column Projections|yes|no|
+|Predicates|yes|no|
+|Aggregates|partial|no|
+|Joins between External Tables|no|no|
+|Joins between External Tables and Local tables|no|no|
+|Sorts|no|no|
+
+Partial aggregation means that a final aggregation must occur once the data reaches SQL Server, but a portion of the aggregation occurs in Hadoop. This is a common method computing aggregations in Massively Parallel Processing systems.  
 ## See Also  
  [PolyBase Guide](../../relational-databases/polybase/polybase-guide.md)  
   

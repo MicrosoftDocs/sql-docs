@@ -1,7 +1,7 @@
 ---
 title: "Moving the Report Server Databases to Another Computer (SSRS Native Mode) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "05/30/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -16,7 +16,9 @@ author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
 ---
+
 # Moving the Report Server Databases to Another Computer (SSRS Native Mode)
+
   You can move the report server databases that are used in an installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] to an instance that is on a different computer. Both the reportserver and reportservertempdb databases must be moved or copied together. A [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installation requires both databases; the reportservertempdb database must be related by name to the primary reportserver database you are moving.  
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native mode.  
@@ -37,7 +39,7 @@ manager: "erikre"
 >  The steps provided in this topic are recommended when relocating the report server database is the only change you are making to the existing installation. Migrating an entire [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installation (that is, moving the database and changing the identity of the Report Server Windows service that uses the database) requires connection reconfiguration and an encryption key reset.  
   
 ## Detaching and Attaching the Report Server Databases  
- If you can take the report server offline, you can detach the databases to move them to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance you want to use. This approach preserves permissions in the databases. If you are using a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] database, you must move it to another [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instance. After you move the databases, you must reconfigure the report server connection to the report server database. If you are running a scale-out deployment, you must reconfigure the report server database connection for each report server in the deployment.  
+ If you can take the report server offline, you can detach the databases to move them to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance you want to use. This approach preserves permissions in the databases. If you are using a SQL Server database, you must move it to another SQL Server instance. After you move the databases, you must reconfigure the report server connection to the report server database. If you are running a scale-out deployment, you must reconfigure the report server database connection for each report server in the deployment.  
   
  Use the following steps to move the databases:  
   
@@ -214,15 +216,16 @@ GO
   
 > [!NOTE]  
 >  A [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installation requires that the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] instance include the **RSExecRole** role. Role creation, login registration, and role assignments occur when you set the report server database connection through the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool. If you use alternate approaches (specifically, if you use the rsconfig.exe command prompt utility) to configure the connection, the report server will not be in a working state. You might have to write WMI code to make the report server available. For more information, see [Access the Reporting Services WMI Provider](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md).  
-  
-## See Also  
- [Create the RSExecRole](../../reporting-services/security/create-the-rsexecrole.md)   
- [Start and Stop the Report Server Service](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)   
- [Configure a Report Server Database Connection  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
- [Configure the Unattended Execution Account &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
- [Reporting Services Configuration Manager &#40;Native Mode&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
- [rsconfig Utility &#40;SSRS&#41;](../../reporting-services/tools/rsconfig-utility-ssrs.md)   
- [Configure and Manage Encryption Keys &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
- [Report Server Database &#40;SSRS Native Mode&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)  
-  
-  
+
+## Next steps
+
+[Create the RSExecRole](../../reporting-services/security/create-the-rsexecrole.md)   
+[Start and Stop the Report Server Service](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)   
+[Configure a Report Server Database Connection](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+[Configure the Unattended Execution Account](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
+[Reporting Services Configuration Manager](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
+[rsconfig Utility](../../reporting-services/tools/rsconfig-utility-ssrs.md)   
+[Configure and Manage Encryption Keys](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
+[Report Server Database](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)  
+
+More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)

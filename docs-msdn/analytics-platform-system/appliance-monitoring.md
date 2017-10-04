@@ -49,7 +49,7 @@ SQL Server PDW has extensive integration with Systems Center Operations Manager.
 -   [Monitor the Appliance by Using System Center Operations Manager &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  
   
 Custom Solutions  
-For situations when System Center is not available with your data center monitoring tools, you can monitor the appliance by using a third-party monitoring solution. Most monitoring solutions support Transact\-SQL integration, so the system administrator can implement direct Transact\-SQL queries against your PDW appliance.  
+For situations when System Center is not available with your data center monitoring tools, you can monitor the appliance by using a third-party monitoring solution. Installation of external software agents is currently not supported in PDW, but most monitoring solutions support Transact\-SQL integration, so the system administrator can implement direct Transact\-SQL queries against your PDW appliance.  
   
 If your monitoring solution does not support direct Transact\-SQL queries, or you do not have a monitoring tool, then you can use scripts to perform monitoring tasks, such as sending email when an alert occurs.  The TechNet wiki contains a scripted monitoring solution example.  
   

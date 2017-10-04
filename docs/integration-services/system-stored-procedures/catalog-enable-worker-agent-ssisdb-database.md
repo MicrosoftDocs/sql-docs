@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: c6e5266b-c32d-49ff-aa69-f09664009fb4
 caps.latest.revision: 3
-author: "sabotta"
-ms.author: "carlasab"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # catalog.enable_worker_agent (SSISDB Database)

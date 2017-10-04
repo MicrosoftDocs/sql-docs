@@ -16,7 +16,7 @@ ms.assetid: 06873768-3778-4ed8-a1db-61758726bda0
 caps.latest.revision: 14
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ---
 # Include Null Values in JSON - INCLUDE_NULL_VALUES Option
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ manager: "jhubbard"
   
  **Query**  
   
-```tsql  
+```sql  
 SELECT name, surname  
 FROM emp  
 FOR JSON AUTO, INCLUDE_NULL_VALUES    
@@ -53,7 +53,10 @@ FOR JSON AUTO, INCLUDE_NULL_VALUES
 	"surname": "Doe"
 }] 
 ```  
-  
+
+## Learn more about the built-in JSON support in SQL Server  
+For lots of specific solutions, use cases, and recommendations, see the [blog posts about the built-in JSON support](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) in SQL Server and in Azure SQL Database by Microsoft Program Manager Jovan Popovic.  
+
 ## See Also  
  [FOR Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-for-clause-transact-sql.md)  
   

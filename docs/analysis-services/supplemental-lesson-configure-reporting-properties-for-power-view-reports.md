@@ -18,6 +18,8 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Supplemental Lesson - Configure Reporting Properties for Power View Reports
+[!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
+
 In this supplemental lesson, you will set reporting properties for the AW Internet Sales project. Reporting properties make it easier for end-users to select and display model data in Power View. You will also set properties to hide certain columns and tables, and create new data for use in charts.   
   
 Estimated time to complete this lesson: **30 minutes**  

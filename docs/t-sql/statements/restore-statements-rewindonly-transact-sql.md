@@ -1,7 +1,7 @@
 ---
 title: "RESTORE REWINDONLY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/06/2017"
+ms.date: "08/10/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -54,7 +54,7 @@ FROM <backup_device> [ ,...n ]
 ```  
   
 ## Arguments  
- **<backup_device> ::=**  
+ **\<backup_device> ::=** 
   
  Specifies the logical or physical backup devices to use for the restore operation.  
   
@@ -103,3 +103,4 @@ FROM <backup_device> [ ,...n ]
  [Backup History and Header Information &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)  
   
   
+

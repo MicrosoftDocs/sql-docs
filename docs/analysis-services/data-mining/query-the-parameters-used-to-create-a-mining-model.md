@@ -21,7 +21,7 @@ manager: "jhubbard"
 # Query the Parameters Used to Create a Mining Model
   The composition of a mining model is affected not only by the training cases, but by the parameters that were set when the model was created. Therefore, you might find it useful to retrieve the parameter settings of an existing model to better understand the behavior of the model. Retrieving parameters is also useful when documenting a particular version of that model.  
   
- To find the parameters that were used when the model was created, you create a query against one of the mining model schema rowsets. In [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)], these schema rowsets are exposed as a set of system views that you can query easily by using Transact-SQL syntax. This procedure describes how to create a query that returns the parameters that were used to create the specified mining model.  
+ To find the parameters that were used when the model was created, you create a query against one of the mining model schema rowsets. These schema rowsets are exposed as a set of system views that you can query easily by using Transact-SQL syntax. This procedure describes how to create a query that returns the parameters that were used to create the specified mining model.  
   
 ### To open a Query window for a schema rowset query  
   

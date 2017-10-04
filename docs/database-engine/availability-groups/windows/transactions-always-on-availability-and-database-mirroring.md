@@ -1,7 +1,7 @@
 ---
-title: "Transactions - Always On Availability Groups and Database Mirroring | Microsoft Docs"
+title: "Transactions - Always On availability groups and database mirroring | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/29/2016"
+ms.date: "07/06/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -21,41 +21,25 @@ author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---
-# Transactions - Always On availability groups and Database Mirroring
+# Transactions - availability groups and database mirroring
 [!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
 
 This topic describes cross-database and distributed transactions support for Always On availability groups and database mirroring.  
 
 ## Support for distributed transactions
 
-SQL Server 2017 supports distributed transactions for databases in availability groups. This support includes cross-database transactions, for example, databases on the same instance of SQL Server. Distributed transactions are not supported for databases configured for database mirroring.
+SQL Server 2017 supports distributed transactions for databases in availability groups. This support includes databases on the same instance of SQL Server or databases on different instances of SQL Server. Distributed transactions are not supported for databases configured for database mirroring.
 
-### Handling unresolved transaction
+>[!NOTE]
+>[!INCLUDE[SQL Server 2016]](../../../includes/sssql15-md.md)]SQL Server 2016 included limited support for distributed transactions in for databases in an availability group. Distributed transactions using databases in an availability group were supported as long as no other databases in the transaction were in the same instance of SQL Server. For more information, see [SQL Server 2016 DTC Support In Availability Groups](http://blogs.technet.microsoft.com/dataplatform/2016/01/25/sql-server-2016-dtc-support-in-availability-gr)
 
-Distributed transaction coordinator (DTC) distributed transactions follow a 2-phase commit protocol (2PC). 
-
-- **Prepare phase**
-   
-   When DTC receives a commit request, it sends a prepare command to all the resource managers involved in the transaction. Each resource manager then ensures that the transaction is durable (e.g. hardening log to disk). As each resource manager completes the prepare phase, it returns success or failure to the transaction manager.
-
-- **Commit phase**
-   
-   If DTC receives successful prepares from all the resource managers, it sends commit commands to all resource managers. The resource managers can then complete the commit. If all resource managers report a successful commit, then DTC sends a success notification to the application. If any resource manager reported a failure to prepare, DTC sends a rollback command to each resource manager and indicates the failure of the commit to the application.
+To configure an availability group for distributed transactions, see [Configure Availability Group for Distributed Transactions](configure-availability-group-for-distributed-transactions.md).
 
 See more information at:
 
 - [DTC Administration Guide](http://msdn.microsoft.com/library/ms681291.aspx)
 - [DTC Developers Guide](http://msdn.microsoft.com/library/ms679938.aspx)
 - [DTC Programmers Reference](http://msdn.microsoft.com/library/ms686108.aspx)
-
-SQL Server uses a resource manager identifier to uniquely identify the database as resource manager in conjunction with DTC. SQL Server will not be able to resolve the outcome of the transactions that are in prepared state while actions that result in change of resource manager identifier occur. The actions include:
-- Adding new database to the availability group
-- Removing a database from the availability group
-- Updating the dtc_support option for the availability group
-
-During these actions, SQL Server enlists first with DTC with the old resource manager identifier. The identifier is changed following the action and SQL Server will try to determine the transaction outcome using the new resource manager identifier. This will fail as the new identifier is not recognized by the DTC. As of SQL Server 2017 CTP2.0, SQL Server will presume transactions in 'prepared' state are aborted in this case.
-An option to let users choose the outcome of the transactions in this corner case is being worked on and will be available in the upcoming preview release.
-
 
 ## SQL Server 2016 and before: Support for cross-database transactions within the same SQL Server instance  
 
@@ -69,7 +53,6 @@ Distributed transactions are supported with availability groups. This applies to
 Microsoft Distributed Transaction Coordinator (MSDTC or DTC) is a Windows service that provides transaction infrastructure for distributed systems. MSDTC permits client applications to include multiple data sources in one transaction which then is committed across all servers included in the transaction. For example, you can use MSDTC to coordinate transactions that span multiple databases on different servers.
 
 SQL Server 2016 introduces the capability to use distributed transactions where one or more of the databases in the transaction are in an availability group. Prior to SQL Server 2016 distributed transactions were not supported for databases in availability groups. SQL Server 2016 can register a resource manager per database. This new capability is why distributed transactions can include databases in availability groups.
-
   
  The following requirements must be met:  
   
@@ -78,7 +61,6 @@ SQL Server 2016 introduces the capability to use distributed transactions where 
 -   Availability groups must be created with the **CREATE AVAILABILITY GROUP** command and the **WITH DTC_SUPPORT = PER_DB** clause. You cannot currently alter an existing availability group.  
 
 - All instances of SQL Server  that will participate in the availability group must be SQL Server 2016 or later.
-  
  
  ## Non-support for distributed transactions
  Specific cases where distributed transactions are not supported include:
@@ -90,9 +72,6 @@ SQL Server 2016 introduces the capability to use distributed transactions where 
  - Where the availability group was not created with enable distributed transaction.
  
  - Database mirroring.
- 
- ## Recommendation
- In production environments you should cluster the DTC service. If you do not cluster the DTC service, SQL Server will use the local DTC service. With the local DTC service, the overall availability of the solution is reduced. When DTC is clustered, in-process transactions can be recovered if the cluster node fails.
  
  > [!IMPORTANT]
  > Determine the appropriate default outcome of transactions that DTC is unable to resolve for your environment.  For information on how to configure the default outcome see [in-doubt xact resolution Server Configuration Option](../../../database-engine/configure-windows/in-doubt-xact-resolution-server-configuration-option.md).

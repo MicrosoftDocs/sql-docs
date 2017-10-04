@@ -1,7 +1,7 @@
 ---
 title: "BufferWithCurves (geography Data Type) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "08/11/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -58,7 +58,7 @@ manager: "jhubbard"
 |distance Value|Type Dimensions|Spatial Type Returned|  
 |--------------------|---------------------|---------------------------|  
 |distance < 0|Zero or One|Empty **GeometryCollection** instance|  
-|distance < 0|Two or More|A **CurvePolygon** or **GeometryCollection** instance with a negative buffer.<br /><br /> Note: A negative buffer may create an empty **GeometryCollection**|  
+|distance \< 0|Two or More|A **CurvePolygon** or **GeometryCollection** instance with a negative buffer.<br /><br /> Note: A negative buffer may create an empty **GeometryCollection**|
 |distance = 0|All dimensions|Copy of the invoking **geography** instance|  
 |distance > 0|All dimensions|**CurvePolygon** or **GeometryCollection** instance|  
   

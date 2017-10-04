@@ -11,6 +11,7 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "sql13.dts.designer.mergetrans.f1"
+  - "sql13.dts.designer.mergetransformation.f1"
 helpviewer_keywords: 
   - "merging datasets [Integration Services]"
   - "merging data [Integration Services]"
@@ -54,8 +55,6 @@ manager: "jhubbard"
 ## Configuration of the Merge Transformation  
  You can set properties through the [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer or programmatically.  
   
- For more information about the properties that you can set in the **Merge Transformation Editor** dialog box, see [Merge Transformation Editor](../../../integration-services/data-flow/transformations/merge-transformation-editor.md).  
-  
  For more information about the properties that you can programmatically, click one of the following topics:  
   
 -   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -68,6 +67,22 @@ manager: "jhubbard"
 -   [Set the Properties of a Data Flow Component](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
 -   [Sort Data for the Merge and Merge Join Transformations](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
+  
+## Merge Transformation Editor
+  Use the **Merge Transformation Editor** to specify columns from two sorted sets of data to be merged.  
+  
+> [!IMPORTANT]  
+>  The Merge Transformation requires sorted data for its inputs. For more information about this important requirement, see [Sort Data for the Merge and Merge Join Transformations](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).  
+  
+### Options  
+ **Output Column Name**  
+ Specify the name of the output column.  
+  
+ **Merge Input 1**  
+ Select the column to merge as Merge Input 1.  
+  
+ **Merge Input 2**  
+ Select the column to merge as Merge Input 2.  
   
 ## See Also  
  [Merge Join Transformation](../../../integration-services/data-flow/transformations/merge-join-transformation.md)   

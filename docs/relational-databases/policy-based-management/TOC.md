@@ -1,4 +1,6 @@
 # [Administer Servers by Using Policy-Based Management](administer-servers-by-using-policy-based-management.md)  
+
+# Policy Based Management
 ## [Policy-Based Management Storage](policy-based-management-storage.md)  
 ## [Configure the General Properties of Policy-Based Management](configure-the-general-properties-of-policy-based-management.md)  
 ## [Configure Alerts to Notify Policy Administrators of Policy Failures](configure-alerts-to-notify-policy-administrators-of-policy-failures.md)  
@@ -71,6 +73,8 @@
 ### [Select Source Dialog Box](select-source-dialog-box.md)  
 ### [Export As Policy Dialog Box](export-as-policy-dialog-box.md)  
 ### [Import Policies Dialog Box](import-policies-dialog-box.md)  
+
+
 # [Tutorial: Administering Servers by Using Policy-Based Management](tutorial-administering-servers-by-using-policy-based-management.md)  
 ## [Lesson 1: Create and Apply an Off By Default Policy](lesson-1-create-and-apply-an-off-by-default-policy.md)  
 ### [Lesson 1-1 - Create the Off By Default Policy](lesson-1-1-create-the-off-by-default-policy.md)  

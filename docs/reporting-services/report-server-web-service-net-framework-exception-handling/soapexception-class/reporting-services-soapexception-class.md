@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "SoapException class"
 ms.assetid: 2cec49ee-20b1-40eb-a75b-0908d9c05b34
 caps.latest.revision: 33
-author: "sabotta"
-ms.author: "carlasab"
+author: "guyinacube"
+ms.author: "asaxton"
 manager: "erikre"
 ---
 # Reporting Services SoapException Class

@@ -1,7 +1,7 @@
 ---
 title: "Relationships object (TMSL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/07/2017"
+ms.date: "05/30/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -17,6 +17,9 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Relationships object (TMSL)
+
+[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
+
   Defines a relationship between a source and target table, with the ability to specify cardinality, and the direction of query and security filters.  
   
 ## Object definition  

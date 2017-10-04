@@ -1,6 +1,4 @@
 ---
-# required metadata
-
 title: Configure log shipping for SQL Server on Linux | Microsoft Docs
 description: This tutorial shows a basic example of how to replicate a SQL Server instance on Linux to a secondary instance using log shipping.
 author: meet-bhagdev 
@@ -11,22 +9,10 @@ ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 
-
-# optional metadata
-
-# keywords: ""
-# ROBOTS: ""
-# audience: ""
-# ms.devlang: ""
-# ms.reviewer: ""
-# ms.suite: ""
-# ms.tgt_pltfrm: ""
-# ms.custom: ""
-
 ---
-
-
 # Get started with Log Shipping on Linux
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 SQL Server Log shipping is a HA configuration where a database from a primary server is replicated onto one or more secondary servers. In a nutshell, a backup of the source database is restored onto the secondary server. Then the primary server creates transaction log backups periodically, and the secondary servers restore them, updating the secondary copy of the database. 
 
@@ -190,8 +176,8 @@ As described in the picture above, a log shipping session involves the following
 - Run this script from your secondary server
 
     ```tsql
-    RESTORE DATABASE SampleDB2 WITH NORECOVERY
-    FROM DISK = '/var/opt/mssql/tlogs/SampleDB.bak' ;
+    RESTORE DATABASE SampleDB FROM DISK = '/var/opt/mssql/tlogs/SampleDB.bak'
+    WITH NORECOVERY;
     ```
     
     ```tsql
@@ -315,6 +301,7 @@ As described in the picture above, a log shipping session involves the following
     GO  
     EXEC dbo.sp_start_job N'LSRestore_SampleDB' ;  
     GO  
+    RESTORE DATABASE SampleDB WITH RECOVERY;
     ```
 
 

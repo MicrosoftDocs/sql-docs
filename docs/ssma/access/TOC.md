@@ -1,3 +1,4 @@
+# [Installing SQL Server Migration Assistant](installing-sql-server-migration-assistant-for-access-accesstosql.md)
 # [Getting Started with SSMA for Access Console ](getting-started-with-ssma-for-access-console-accesstosql.md)
 # [What's New in SSMA for Access](what-s-new-in-ssma-for-access-accesstosql.md)
 # [Preparing Access Databases for Migration ](preparing-access-databases-for-migration-accesstosql.md)
@@ -13,7 +14,6 @@
 # [Adding and Removing Database Files](adding-and-removing-access-database-files-accesstosql.md)
 # [Project Settings (GUI)](project-settings-gui-accesstosql.md)
 # [Converting Access Database Objects](converting-access-database-objects-accesstosql.md)
-# [Installing SQL Server Migration Assistant](installing-sql-server-migration-assistant-for-access-accesstosql.md)
 # [Legal Notice](legal-notice-ssma-for-access.md)
 # [Connect to SQL Server ](connect-to-sql-server-accesstosql.md)
 # [Global Settings](global-settings-output-window-accesstosql.md)

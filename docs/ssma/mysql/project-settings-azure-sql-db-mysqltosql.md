@@ -14,9 +14,9 @@ applies_to:
   - "SQL Server"
 ms.assetid: 8c06420a-533b-4de0-948d-a0c6b368c544
 caps.latest.revision: 10
-author: "sabotta"
-ms.author: "carlasab"
-manager: "lonnyb"
+author: "Shamikg"
+ms.author: "Shamikg"
+manager: "jhubbard"
 ---
 # Project Settings (Azure SQL DB) (MySQLToSQL)
 The SQL Azure project settings let you configure the SQL Azure database suffix to be added in the connection dialog and also allow implementing heartbeat mechanism in SQL Azure connection.  

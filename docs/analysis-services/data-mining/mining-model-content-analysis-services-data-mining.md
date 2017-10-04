@@ -71,7 +71,7 @@ manager: "jhubbard"
  The following table lists the different types of nodes that are output in data mining models. Because each algorithm processes information differently, each model generates only a few specific kinds of nodes. If you change the algorithm, the type of nodes may change. Also, if you reprocess the model, the content of each node may change.  
   
 > [!NOTE]  
->  If you use a different data mining service than the ones provided in [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)], or if you create your own plug-in algorithms, additional custom node types may be available.  
+>  If you use a different data mining service, or if you create your own plug-in algorithms, additional custom node types may be available.  
   
 |NODE_TYPE ID|Node Label|Node Contents|  
 |-------------------|----------------|-------------------|  

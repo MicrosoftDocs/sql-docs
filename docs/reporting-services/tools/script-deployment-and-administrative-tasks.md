@@ -1,7 +1,7 @@
 ---
 title: "Script Deployment and Administrative Tasks | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "05/30/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -28,7 +28,9 @@ author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
 ---
+
 # Script Deployment and Administrative Tasks
+
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] supports the use of scripts to automate routine installation, deployment, and administrative tasks. Deploying a report server is a multi-step process. You must use several tools and processes to configure a deployment; there is no single program or approach that can be used to automate all the tasks.  
   
  Not every step should be automated. In some cases, performing a step manually or through a graphical tool is the simplest and most effective approach. For example, if you want to deploy a large number of reports and models, it is better to copy the report server databases rather than write code that recreates report server environment.  
@@ -68,7 +70,7 @@ manager: "erikre"
   
 -   The report server script host tool (rs.exe) can run custom [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] code that you might write to re-create or move existing content from one report server to another. With this approach, you write script in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], save it as an .rss file, and use rs.exe to run the script on the target report server. The script you write can call the SOAP interface to the Report Server Web service. Deployment scripts are written using this approach because it allows you to re-create a report server folder namespace and content, and re-create role-based security.  
   
--   The [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] release introduced PowerShell cmdlets for SharePoint integrated mode. You can use PowerShell to configure and administer the SharePoint integration.  For more information, see [PowerShell cmdlets for Reporting Services SharePoint Mode](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md).  
+-   The SQL Server 2012 release introduced PowerShell cmdlets for SharePoint integrated mode. You can use PowerShell to configure and administer the SharePoint integration.  For more information, see [PowerShell cmdlets for Reporting Services SharePoint Mode](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md).  
   
 ## Use Scripts to Migrate Report Server Content and Folders  
  You can write scripts that duplicate a report server environment on another report server instance. Deployment scripts are generally written in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] and then processed using the report server script host utility.  
@@ -117,17 +119,18 @@ Public Sub Main()
             Console.Write(e.Message)  
         End Try  
 End Sub  
-```  
-  
-## See Also  
- [GenerateDatabaseCreationScript Method &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-generatedatabasecreationscript.md)   
- [GenerateDatabaseRightsScript Method &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-generatedatabaserightsscript.md)   
- [GenerateDatabaseUpgradeScript Method &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-generatedatabaseupgradescript.md)   
- [Install SQL Server 2016 from the Command Prompt](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
- [Install Reporting Services Native Mode Report Server](~/reporting-services/install-windows/install-reporting-services-native-mode-report-server.md)   
- [Reporting Services Report Server &#40;Native Mode&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
- [Report Server Command Prompt Utilities &#40;SSRS&#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)   
- [Browser Support for Reporting Services and Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)   
- [Reporting Services Tools](../../reporting-services/tools/reporting-services-tools.md)  
-  
-  
+```
+
+## Next steps
+
+[GenerateDatabaseCreationScript Method &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-generatedatabasecreationscript.md)   
+[GenerateDatabaseRightsScript Method &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-generatedatabaserightsscript.md)   
+[GenerateDatabaseUpgradeScript Method &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-generatedatabaseupgradescript.md)   
+[Install SQL Server 2016 from the Command Prompt](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
+[Install Reporting Services Native Mode Report Server](~/reporting-services/install-windows/install-reporting-services-native-mode-report-server.md)   
+[Reporting Services Report Server &#40;Native Mode&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
+[Report Server Command Prompt Utilities &#40;SSRS&#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)   
+[Browser Support for Reporting Services and Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)   
+[Reporting Services Tools](../../reporting-services/tools/reporting-services-tools.md)  
+
+More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)

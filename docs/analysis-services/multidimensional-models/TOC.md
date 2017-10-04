@@ -194,3 +194,6 @@
 
 # [Assemblies Management](multidimensional-model-assemblies-management.md)  
 
+# Reference
+## [Data Access with MDX](mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md)  
+<!-- ## [MDX](../../mdx/multidimensional-expressions-mdx-reference.md) -->

@@ -90,7 +90,7 @@ manager: "jhubbard"
   
  StateProbability = (NodePriorProbability)* (StateSupport + 1) / (NodeSupport + TotalStates)  
   
- Moreover, in [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)], the Decision Trees algorithm provides an additional adjustment that helps the algorithm compensate for the presence of filters on the model, which may result in many states to be excluded during training.  
+The Decision Trees algorithm provides an additional adjustment that helps the algorithm compensate for the presence of filters on the model, which may result in many states to be excluded during training.  
   
  In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], if a state is present during training but just happens to have zero support in a certain node, the standard adjustment is made. However, if a state is never encountered during training, the algorithm sets the probability to exactly zero. This adjustment applies not only to the **Missing** state, but also to other states that exist in the training data but have zero support as result of model filtering.  
   

@@ -1,5 +1,7 @@
 # [Overview](xquery-language-reference-sql-server.md)  
+# [New and recently updated articles](new-updated-xquery.md)
 # [Modules and Prologs - XQuery Prolog](modules-and-prologs-xquery-prolog.md)  
+
 # [XQuery Basics](xquery-basics.md)  
 ## [Type System - Sequence Type Matching](type-system-sequence-type-matching.md)  
 ## [Sequence and QNames (XQuery)](sequence-and-qnames-xquery.md)  
@@ -10,6 +12,7 @@
 ## [Error Handling (XQuery)](error-handling-xquery.md)  
 ## [Comments in XQuery](comments-in-xquery.md)  
 ## [XQuery and Static Typing](xquery-and-static-typing.md)  
+
 # [XQuery Expressions](xquery-expressions.md)  
 ## [Path Expressions - Specifying Axis](path-expressions-specifying-axis.md)  
 ## [Path Expressions - Specifying Node Test](path-expressions-specifying-node-test.md)  
@@ -28,8 +31,10 @@
 ## [Quantified Expressions (XQuery)](quantified-expressions-xquery.md)  
 ## [SequenceType Expressions (XQuery)](sequencetype-expressions-xquery.md)  
 ## [Validate Expressions (XQuery)](validate-expressions-xquery.md)  
+
 # [Modules and Prologs (XQuery)](modules-and-prologs-xquery.md)  
 # [Type Casting Rules in XQuery](type-casting-rules-in-xquery.md)  
+
 # [XQuery Functions against the xml Data Type](xquery-functions-against-the-xml-data-type.md)  
 ## [Functions Related to QNames - expanded-QName](functions-related-to-qnames-expanded-qname.md)  
 ## [Functions Related to QNames - local-name-from-QName](functions-related-to-qnames-local-name-from-qname.md)  
@@ -65,7 +70,9 @@
 ## [Functions on Boolean Values - not Function](functions-on-boolean-values-not-function.md)  
 ## [Data Accessor Functions](data-accessor-functions.md)  
 ## [Constructor Functions (XQuery)](constructor-functions-xquery.md)  
+
 # [XQuery Operators Against the xml Data Type](xquery-operators-against-the-xml-data-type.md)  
+
 # [Additional Sample XQueries Against the xml Data Type](additional-sample-xqueries-against-the-xml-data-type.md)  
 ## [General XQuery Use Cases](general-xquery-use-cases.md)  
 ## [XQueries Involving Hierarchy](xqueries-involving-hierarchy.md)  

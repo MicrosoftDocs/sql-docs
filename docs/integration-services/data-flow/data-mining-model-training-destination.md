@@ -11,6 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "sql13.dts.designer.dataminingmodeltrainingdest.f1"
+  - "sql13.dts.designer.dmmtrainingtransformation.connection.f1"
+  - "sql13.dts.designer.dmmtrainingtransformation.columns.f1"
 helpviewer_keywords: 
   - "destinations [Integration Services], Data Mining Model Training"
   - "Data Mining Model Training destination"
@@ -37,12 +39,6 @@ manager: "jhubbard"
   
  You can set properties through [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer or programmatically.  
   
- For more information about the properties that you can set in the **Data Mining Model Training Editor** dialog box, click one of the following topics:  
-  
--   [Data Mining Model Training Editor &#40;Connection Tab&#41;](../../integration-services/data-flow/data-mining-model-training-editor-connection-tab.md)  
-  
--   [Data Mining Model Training Editor &#40;Columns Tab&#41;](../../integration-services/data-flow/data-mining-model-training-editor-columns-tab.md)  
-  
  The **Advanced Editor** dialog box reflects the properties that can be set programmatically. For more information about the properties that you can set in the **Advanced Editor** dialog box or programmatically, click one of the following topics:  
   
 -   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -51,4 +47,38 @@ manager: "jhubbard"
   
  For more information about how to set properties, see [Set the Properties of a Data Flow Component](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
+## Data Mining Model Training Editor (Connection Tab)
+  Use the **Connection** page of the **Data Mining Model Training Editor** dialog box to select a mining model to train.  
+  
+### Options  
+ **Connection manager**  
+ Select from the list of existing [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] connections, or create a new [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] connection by using the **New** button described as follows.  
+  
+ **New**  
+ Create a new connection by using the **Add Analysis Services Connection Manager** dialog box.  
+  
+ **Mining structure**  
+ Select from the list of available mining structures, or create a new structure by clicking **New**.  
+  
+ **New**  
+ Create a new mining structure and mining model by using the **Data Mining Wizard**.  
+  
+ **Mining models**  
+ View the list of mining models associated with the selected mining structure.  
+  
+## Data Mining Model Training Editor (Columns Tab)
+  Use the **Columns** page of the **Data Mining Model Training Editor** dialog box to map input columns to columns in the mining structure.  
+  
+## Options  
+ **Available Input Columns**  
+ View the list of available input columns. Drag input columns to map them to mining structure columns.  
+  
+ **Mining Structure Columns**  
+ View the list of mining structure columns. Drag mining structure columns to map them to available input columns.  
+  
+ **Input Column**  
+ View input columns selected from the table above. To change or remove a mapping selection, use the list of **Available Input Columns**.  
+  
+ **Mining Structure Columns**  
+ View each available destination column, whether mapped or not.  
   

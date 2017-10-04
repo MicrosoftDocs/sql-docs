@@ -19,6 +19,9 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # CSDLBI Attributes for Report Design
+
+[!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
+
   This section describes the attributes in the extensions to CSDL for tabular modeling that affect [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] query design.  
   
 ## Model Attributes  

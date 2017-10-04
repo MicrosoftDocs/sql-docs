@@ -1,7 +1,7 @@
 ---
 title: "Download SQL Server Data Tools (SSDT) | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/28/2017"
+ms.date: "10/04/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -40,8 +40,8 @@ SSDT for Visual Studio 2015, and SSDT for Visual Studio 2017 both use DacFx 17.3
 ## SSDT for Visual Studio 2017
 **Version Information**  
   
-The release number: 15.3.0 preview???  
-The build number for this release: ???14.0.16121.0
+The release number: 15.3.0 preview  
+The build number for this release: 14.0.16121.0
 
 For a complete list of changes, see the [changelog](changelog-for-sql-server-data-tools-ssdt.md).
 
@@ -50,6 +50,7 @@ SSDT for Visual Studio 2017 has the same system requirements as installing VS, s
 ### Available Languages - SSDT for VS 2017
   
  This preview release of SSDT is currently available in English only.
+
 
 
 

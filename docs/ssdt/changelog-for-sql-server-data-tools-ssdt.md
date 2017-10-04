@@ -1,7 +1,7 @@
 ---
 title: "Changelog for SQL Server Data Tools (SSDT) | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/28/2017"
+ms.date: "10/04/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -19,13 +19,6 @@ manager: "craigg"
 This change log is for [SQL Server Data Tools (SSDT)](download-sql-server-data-tools-ssdt.md).  
   
 For detailed posts about what's new and changed, see [the SSDT Team blog](https://blogs.msdn.microsoft.com/ssdt/)
-
-## SSDT for Visual Studio 2017 (15.3.??? preview)
-Build number: ???
-  
-### What's New?
-???
-
 
 ## SSDT 17.3 for Visual Studio 2015
 Build number: NEEDED
@@ -48,6 +41,14 @@ Build number: NEEDED
 **Analysis Services (AS)**
 
 - Models of 1400 compatibility level in Direct Query mode that have perspectives will fail on querying or discovering metadata.
+
+**Reporting Services (RS)**
+
+- New Report Project format does not retain source control binding, and raises an error similar to the following:
+
+   *The project file C:\path is not bound to source control, but the solution contains source control binding information in it.*
+ 
+   To work around this issue, click **Use solution binding**  the solution is opened.
 
 ### Bug Fixes
 

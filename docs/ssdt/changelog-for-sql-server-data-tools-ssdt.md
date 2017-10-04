@@ -48,7 +48,7 @@ Build number: NEEDED
 
    *The project file C:\path is not bound to source control, but the solution contains source control binding information in it.*
  
-   To work around this issue, click **Use solution binding**  the solution is opened.
+   To work around this issue, click **Use solution binding**  every time the solution is opened.
 
 ### Bug Fixes
 

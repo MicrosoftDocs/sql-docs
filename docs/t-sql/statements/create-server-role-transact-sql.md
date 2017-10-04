@@ -39,8 +39,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for SQL Server and Parallel Data Warehouse  
-  
 CREATE SERVER ROLE role_name [ AUTHORIZATION server_principal ]  
 ```  
   

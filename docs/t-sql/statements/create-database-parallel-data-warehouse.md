@@ -25,8 +25,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for Parallel Data Warehouse  
-  
 CREATE DATABASE database_name   
 WITH (   
     [ AUTOGROW = ON | OFF , ]   

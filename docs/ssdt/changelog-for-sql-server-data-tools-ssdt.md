@@ -34,17 +34,17 @@ Build number: NEEDED
 
 **Reporting Services (RS)**
 
-- Projects will now prompt on open to upgraded format to support using MSBuild to build and deploy.
+- Projects now prompt on open to upgraded format to support using MSBuild to build and deploy.
 
 ### Known Issues
 
 **Analysis Services (AS)**
 
-- Models of 1400 compatibility level in Direct Query mode that have perspectives will fail on querying or discovering metadata.
+- Models of 1400 compatibility level in Direct Query mode that have perspectives fail on querying or discovering metadata.
 
 **Reporting Services (RS)**
 
-- New Report Project format does not retain source control binding, and raises an error similar to the following:
+- New Report Project format does not retain source control binding, and raises an error similar to the  message:
 
    *The project file C:\path is not bound to source control, but the solution contains source control binding information in it.*
  
@@ -59,18 +59,18 @@ Build number: NEEDED
    - Fixed an issue that prevented editing permissions for File sources.
    - Fixed an issue Can't change the source for File sources.
    - Fixed an issue Wrong UI displayed for File sources.
-- Fixed an issue that caused the "JoinOnDate" property to be removed when a "Join on Date" relationship was made inactive .
+- Fixed an issue that caused the "JoinOnDate" property to be removed when a "Join on Date" relationship was made inactive.
 - New Query option in Query Builder now allows creating a new blank query.
 - Fixed an issue that caused edits to an existing data source query to not update the model definition of the table in 1400-compat level.
 - Fixed issues with custom context expressions that may have caused exceptions.
-- When importing new table with duplicate name in 1400 tabular models, user will now be notified that there was a name conflict and the name adjusted to be unique.
+- When importing new table with duplicate name in 1400 tabular models, user is now be notified that there was a name conflict and the name adjusted to be unique.
 - Current User impersonation mode has been removed from models in Import mode, as it is not a supported scenario.
 - PowerQuery integration now supports Options for Additional Data Sources (OData.Feed, Odbc.DataSource, Access.Database, SapBusinessWarehouse.Cubes).
 - PowerQuery Options strings for Data Sources will now correctly show localized text based on client locale.
 - Diagram view now shows newly created columns from M Query Editor in 1400-compat level models.
 - Power Query Editor now gives the option to not import data.
 - Fixed an issue with installing a data cartridge used to import tables from Oracle in multi-dimensional models in VS2017.
-- Fixed an issue that may have led to a crash when mouse cursor leaving the tabular formula bar in rare cases .
+- Fixed an issue that may have led to a crash when mouse cursor leaving the tabular formula bar in rare cases.
 - Fixed an issue in Edit Table Properties dialog where changing the table name incorrectly changed source table name causing an unexpected error.
 - Fixed a crash that could occur in VS2017 when trying to invoke Test Cube Security in the Roles designer Cell Data tab designer in multi-dimensional projects.
 - SSDT: Properties are uneditable for tabular data sources.
@@ -87,7 +87,7 @@ Build number: NEEDED
    - Object reference not set exception that may occur trying to get updated credentials on structured data source
    - Opening partition manager with M-expression was very slow
    - Selecting Properties on table in PQ editor didn’t show the properties
-- Improved robustness in Power Query UI integration to catch top level exceptions and show in Output window
+- Improved robustness in Power Query UI integration to catch top-level exceptions and show in Output window
 - Fixed an issue with ChangeSource on structure datasource not persisting changes when context expression
 - Fixed an issue where M expression errors may cause failures to update the model without error message shown
 - Fixed an issue closing SSDT with error "The build must be stopped before the solution can be closed"
@@ -130,7 +130,7 @@ Build number: 14.0.61707.300
 
 
 **AS projects:**
-- Object Level Security can now be configured in the *Roles* dialog for advanced security in 1400 compatability level tabular models.
+- Object Level Security can now be configured in the *Roles* dialog for advanced security in 1400 compatibility level tabular models.
 - New AAD role member selection for users without email addresses in AS Azure models in SSDT AS projects for VS2017.
 - New AS Azure "Always Prompt" project property in SSDT AS tabular projects to customize behavior of ADAL credential caching.
 
@@ -207,8 +207,8 @@ Build number: 14.0.61704.140
 ### What's New?
 **Database projects:**
 - Amending a clustered index on a view will no longer block deployment
-- Schema comparison strings relating to column encryption will use the proper name rather than the instance name.   
-- Added a new command line option to SqlPackage: ModelFilePath.  This provides an option for advanced users to specify an external model.xml file for import, publishing and scripting operations   
+- Schema comparison strings relating to column encryption uses the proper name rather than the instance name.   
+- Added a new command line option to SqlPackage: ModelFilePath.  This provides an option for advanced users to specify an external model.xml file for import, publishing, and scripting operations   
 - The DacFx API was extended to support  Azure AD Universal Authentication and Multi-factor authentication (MFA)
 
 **IS projects:**
@@ -221,9 +221,9 @@ Build number: 14.0.61704.140
     - DirectQuery is available for SQL Oracle, And Teradata if user has installed 3rd Party drivers
     - Add columns by example in PowerQuery
     - Data access options in 1400 models (model-level properties used by M engine)
-        - Enable fast combine (default is false - when set to true, the mashup engine will ignore data source privacy levels when combining data)
-        - Enable Legacy Redirects (default is false – when set to true, the mashup engine will follow HTTP redirects that are potentially insecure.  For example, a redirect from an HTTPS to an HTTP URI)  
-        - Return Error Values as Null (default is false – when set to true, cell level errors will be returned as null. When false, an exception will be raised is a cell contains an error)  
+        - Enable fast combine (default is false - when set to true, the mashup engine ignores data source privacy levels when combining data)
+        - Enable Legacy Redirects (default is false – when set to true, the mashup engine follows HTTP redirects that are potentially insecure.  For example, a redirect from an HTTPS to an HTTP URI)  
+        - Return Error Values as Null (default is false – when set to true, cell level errors are returned as null. When false, an exception is raised is a cell contains an error)  
     - Additional data sources (file data sources) using PowerQuery
         - Excel 
 		- Text/CSV 
@@ -248,7 +248,7 @@ Build number: 14.0.61704.140
 - Tabular: A variety of enhancements and performance fixes for DAX parsing and the formula bar.
 - Tabular: Tabular Model Explorer will no longer be visible if no SSAS Tabular projects are open.
 - Multi-dimensional: Fixed an issue where the processing dialog was unusable on High-DPI machines.
-- Tabular: Fixed an issue where SSDT faults when opening any BI project when SSMS is already open.[Connect Item](http://connect.microsoft.com/SQLServer/feedback/details/3100900/ssdt-faults-when-opening-any-bi-project-when-ssms-is-already-open)
+- Tabular: Fixed an issue where SSDT faults when opening any BI project when SSMS is already open. [Connect Item](http://connect.microsoft.com/SQLServer/feedback/details/3100900/ssdt-faults-when-opening-any-bi-project-when-ssms-is-already-open)
 - Tabular: Fixed an issue where hierarchies were not being properly saved to the bim file in an 1103 model.[Connect Item](http://connect.microsoft.com/SQLServer/feedback/details/3105222/vs-2015-ssdt)
 - Tabular: Fixed an issue where Integrated Workspace mode was allowed on 32-bit machines even though it is not supported.
 - Tabular: Fixed an issue where clicking on anything while in semi-select mode (typing a DAX expression but clicking a measure, for example) could cause crashes.

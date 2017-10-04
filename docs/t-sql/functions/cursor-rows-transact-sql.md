@@ -72,19 +72,21 @@ GO
   
 Here are the result sets.
   
-`-----------`
-  
- `0`  
-  
-`LastName`
-  
-`---------------`
-  
-`Sanchez`
-  
-`-----------`
-  
- `-1`  
+```
+-----------
+0  
+```
+
+```
+LastName
+---------------
+Sanchez
+```
+
+```
+-----------
+-1
+```  
   
 ## See also
 [Cursor Functions &#40;Transact-SQL&#41;](../../t-sql/functions/cursor-functions-transact-sql.md)  

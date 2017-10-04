@@ -49,13 +49,12 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
-  
 ALTER DATABASE SCOPED CONFIGURATION  
 {        
      {  [ FOR SECONDARY] SET <set_options>  }    
 }  
 | CLEAR PROCEDURE_CACHE  
-| SET IDENTITY_CACHE = { ON | OFF }
+| SET < set_options >
 [;]    
   
 < set_options > ::=    
@@ -63,9 +62,9 @@ ALTER DATABASE SCOPED CONFIGURATION
     MAXDOP = { <value> | PRIMARY}    
     | LEGACY_CARDINALITY_ESTIMATION = { ON | OFF | PRIMARY}    
     | PARAMETER_SNIFFING = { ON | OFF | PRIMARY}    
-    | QUERY_OPTIMIZER_HOTFIXES = { ON | OFF | PRIMARY}    
+    | QUERY_OPTIMIZER_HOTFIXES = { ON | OFF | PRIMARY}
+    | IDENTITY_CACHE = { ON | OFF }
 }  
-  
 ```  
   
 ## Arguments  
@@ -128,21 +127,21 @@ This value is only valid on secondaries while the database in on the primary, an
   
 CLEAR PROCEDURE_CACHE  
 
-Clears the procedure cache for the database. This can be executed both on the primary and the secondaries.  
+Clears the procedure (plan) cache for the database. This can be executed both on the primary and the secondaries.  
 
-IDENTITY_CACHE = { **ON** | OFF }  
+IDENTITY_CACHE **=** { **ON** | OFF }  
 
-**Applies to**: SQL Server 2017 and Azure SQL Database (feature is in public preview) 
+**Applies to**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] and [!INCLUDE[ssSDS](../../includes/sssds-md.md)] (feature is in public preview) 
 
-Enables or disables identity cache at the database level. The default is **ON**. Identity caching is used to improve INSERT performance on tables with Identity columns. To avoid gaps in the values of the Identity column in cases where the server restarts unexpectedly or fails over to a secondary server, disable the IDENTITY_CACHE option. This option is similar to the existing SQL Server Trace Flag 272, except that it can be set at the database level rather than only at the server level.   
+Enables or disables identity cache at the database level. The default is **ON**. Identity caching is used to improve INSERT performance on tables with identity columns. To avoid gaps in the values of an identity column in cases where the server restarts unexpectedly or fails over to a secondary server, disable the IDENTITY_CACHE option. This option is similar to the existing [Trace Flag 272](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), except that it can be set at the database level rather than only at the server level.   
 
 > [!NOTE] 
-> This option can only be set for the PRIMARY. For more information, see [Identity columns](create-table-transact-sql-identity-property.md).  
+> This option can only be set for the PRIMARY. For more information, see [identity columns](create-table-transact-sql-identity-property.md).  
 >
 
 ##  <a name="Permissions"></a> Permissions  
  Requires ALTER ANY DATABASE SCOPE CONFIGURATION   
-on the database. This permission can be granted by a user with CONTROL permission on a database  
+on the database. This permission can be granted by a user with CONTROL permission on a database.  
   
 ## General Remarks  
  While you can configure secondary databases to have different scoped configuration settings from their primary,  all secondary databases will use the same configuration. Different settings cannot be configured for individual secondaries.  

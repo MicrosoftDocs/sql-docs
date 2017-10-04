@@ -22,6 +22,7 @@ To get started, install SQL Server on Linux using one of the following quick sta
 - [Install on SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
 - [Install on Ubuntu](quickstart-install-connect-ubuntu.md)
 - [Run on Docker](quickstart-install-connect-docker.md)
+- [Provision a SQL VM in Azure](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
 
 > [!NOTE]
 > Docker itself runs on multiple platforms, which means that you can run the Docker image on Linux, Mac, and Windows.

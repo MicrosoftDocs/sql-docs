@@ -11,6 +11,7 @@
 ## [Install & Connect - SUSE](quickstart-install-connect-suse.md)
 ## [Install & Connect - Ubuntu](quickstart-install-connect-ubuntu.md)
 ## [Run & Connect - Docker](quickstart-install-connect-docker.md)
+## [Provision a SQL VM in Azure](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
 
 # Tutorials
 ## [1_Migrate from Windows](sql-server-linux-migrate-restore-database.md)
@@ -31,7 +32,6 @@
 ### [Install SQL Server Full-Text Search](sql-server-linux-setup-full-text-search.md)
 ### [Install SQL Server Integration Services](sql-server-linux-setup-ssis.md)
 ### [Register GA repository](sql-server-linux-change-repo.md)
-### [Provision a SQL VM in Azure](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine)
 
 ## Configure
 ### [Configure with mssql-conf](sql-server-linux-configure-mssql-conf.md)

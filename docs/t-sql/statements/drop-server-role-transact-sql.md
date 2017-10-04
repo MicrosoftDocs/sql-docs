@@ -35,8 +35,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for SQL Server and Parallel Data Warehouse  
-  
 DROP SERVER ROLE role_name  
 ```  
   

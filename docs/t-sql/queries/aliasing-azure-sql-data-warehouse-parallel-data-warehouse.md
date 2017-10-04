@@ -25,8 +25,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
 object_source [ AS ] alias  
 ```  
   

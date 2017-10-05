@@ -1,14 +1,12 @@
 ---
-title: "Guidelines for Online Index Operations | Microsoft Docs"
+title: Guidelines for Online Index Operations | Microsoft Docs
 ms.custom: ""
-ms.date: "07/10/2017"
-ms.prod: "sql-server-2016"
+ms.date: 07/10/2017
+ms.prod: sql-non-specified
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
+ms.technology: dbe-indexes
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: article
 helpviewer_keywords: 
   - "clustered indexes, online operations"
   - "online index operations"
@@ -18,11 +16,12 @@ helpviewer_keywords:
   - "transaction logs [SQL Server], indexes"
 ms.assetid: d82942e0-4a86-4b34-a65f-9f143ebe85ce
 caps.latest.revision: 64
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.product_service: sql-server-2016, sql-database
-ms.component: dbe-indexes
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.suite: SQL
+ms.prod_service: database engine, sql database, sql data warehouse
+ms.component: indexes
 ---
 # Guidelines for Online Index Operations
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

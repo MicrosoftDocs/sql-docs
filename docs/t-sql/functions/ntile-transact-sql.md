@@ -98,7 +98,8 @@ David          Campbell              3         1,573,012.94   98055
 Garrett        Vargas                4         1,453,719.47   98027  
 Lynn           Tsoflias              4         1,421,810.92   98055  
 Pamela         Ansman-Wolfe          4         1,352,577.13   98027  
- (14 row(s) affected)  
+
+(14 row(s) affected)  
 ```  
   
 ### B. Dividing the result set by using PARTITION BY  

@@ -152,15 +152,15 @@ GO
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
 
-{!!! Mispalced text? !!!}
- `plan_handle                                         text`  
+{!!! Misplaced text? !!!}
+```
+plan_handle                                         text  
+--------------------------------------------------  -----------------------------  
+0x060006001ECA270EC0215D05000000000000000000000000  SELECT * FROM Person.Address;  
   
- `--------------------------------------------------  -----------------------------`  
-  
- `0x060006001ECA270EC0215D05000000000000000000000000  SELECT * FROM Person.Address;`  
-  
- `(1 row(s) affected)`  
-{end misplaed text ask}
+ (1 row(s) affected)```
+ 
+{end misplaced text ask}
   
 ```sql  
 -- Remove the specific plan from the cache.  

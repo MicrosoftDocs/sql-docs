@@ -25,7 +25,7 @@ The preview version of SSDT for Visual Studio 2017 (15.3.0 preview) is now avail
 
 | SSDT for Visual Studio 2017 (preview) | SSDT for Visual Studio 2015 | 
 |:--|:--|
-|[![download](../ssdt/media/download.png) Download SSDT for Visual Studio 2017 (15.3.0 preview) ](https://go.microsoft.com/fwlink/?linkid=853836) | [![download](../ssdt/media/download.png) Download SSDT for Visual Studio 2015 (17.3)](https://go.microsoft.com/fwlink/?linkid=852922)|
+|[![download](../ssdt/media/download.png) Download SSDT for Visual Studio 2017 (15.3.0 preview) ](https://go.microsoft.com/fwlink/?linkid=853836) | [![download](../ssdt/media/download.png) Download SSDT for Visual Studio 2015 (17.3)](https://go.microsoft.com/fwlink/?linkid=858660)|
 |||
 
 > [!IMPORTANT]

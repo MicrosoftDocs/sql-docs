@@ -98,17 +98,15 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Color`  
-  
- `--------------- --------------------- ---------------------`  
-  
- `Black           27404.84              5214.9616`  
-  
- `Silver          26462.84              14665.6792`  
-  
- `White           19.00                 6.7926`  
-  
- `(3 row(s) affected)`  
+ ```
+Color
+--------------- --------------------- ---------------------
+Black           27404.84              5214.9616
+Silver          26462.84              14665.6792
+White           19.00                 6.7926
+
+(3 row(s) affected)
+ ```  
   
 ### B. Using the OVER clause  
  The following example uses the SUM function with the OVER clause to provide a cumulative total of yearly sales for each territory in the `Sales.SalesPerson` table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database. The data is partitioned by `TerritoryID` and logically ordered by `SalesYTD`. This means that the SUM function is computed for each territory based on the sales year. Notice that for `TerritoryID` 1, there are two rows for sales year 2005 representing the two sales people with sales that year. The cumulative sales for these two rows is computed and then the third row representing sales for the year 2006 is included in the computation.  
@@ -201,17 +199,14 @@ ORDER BY ProductKey;
   
  Here is a partial result set.  
   
- `ProductKey  TotalPerProduct`  
-  
- `----------  ---------------`  
-  
- `214         31421.0200`  
-  
- `217         31176.0900`  
-  
- `222         29986.4300`  
-  
- `225          7956.1500`  
+ ```
+ProductKey  TotalPerProduct
+----------  ---------------
+214         31421.0200
+217         31176.0900
+222         29986.4300
+225          7956.1500
+ ```
   
 ### D. Calculating group totals with more than one column  
  The following example calculates the sum of the `ListPrice` and `StandardCost` for each color listed in the `Product` table.  
@@ -228,19 +223,15 @@ ORDER BY Color;
   
  The first part of the result set is shown below:  
   
- `Color       TotalList      TotalCost`  
-  
- `----------  -------------  --------------`  
-  
- `Black       101295.7191    57490.5378`  
-  
- `Blue         24082.9484    14772.0524`  
-  
- `Grey           125.0000       51.5625`  
-  
- `Multi          880.7468      526.4095`  
-  
- `NA            3162.3564     1360.6185`  
+ ```
+Color       TotalList      TotalCost
+----------  -------------  --------------
+Black       101295.7191    57490.5378
+Blue         24082.9484    14772.0524
+Grey           125.0000       51.5625
+Multi          880.7468      526.4095
+NA            3162.3564     1360.6185
+ ```  
   
 ## See Also  
  [Aggregate Functions &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)   

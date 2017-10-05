@@ -71,11 +71,12 @@ GO
   
  Here is the result set for a user that is a member of the sysadmin fixed server role.  
   
- `------------------------------`  
+ ```
+------------------------------  
+dbo  
   
- `dbo`  
-  
- `(1 row(s) affected)`  
+(1 row(s) affected)
+```  
   
 ### C. Using USER_NAME in the WHERE clause  
  The following example finds the row in `sysusers` in which the name is equal to the result of applying the system function `USER_NAME` to user identification number `1`.  
@@ -87,13 +88,13 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `name`  
+ ```
+name  
+------------------------------  
+dbo  
   
- `------------------------------`  
-  
- `dbo`  
-  
- `(1 row(s) affected)`  
+(1 row(s) affected)
+```  
   
 ### D. Calling USER_NAME during impersonation with EXECUTE AS  
  The following example shows how `USER_NAME` behaves during impersonation.  
@@ -113,11 +114,11 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `DBO`  
-  
- `Zelig`  
-  
- `DBO`  
+ ```
+DBO  
+Zelig  
+DBO
+```  
   
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   

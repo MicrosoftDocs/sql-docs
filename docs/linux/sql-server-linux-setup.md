@@ -25,7 +25,7 @@ SQL Server 2017 is supported on the following Linux platforms:
 
 | Platform | Supported version(s) | Get
 |-----|-----|-----
-| **Red Hat Enterprise Linux** | 7.3 | [Get RHEL 7.3](http://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
+| **Red Hat Enterprise Linux** | 7.3 or 7.4 | [Get RHEL 7.4](http://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
 | **SUSE Linux Enterprise Server** | v12 SP2 | [Get SLES v12 SP2](https://www.suse.com/products/server)
 | **Ubuntu** | 16.04 | [Get Ubuntu 16.04](http://www.ubuntu.com/download/server)
 | **Docker Engine** | 1.8+ | [Get Docker](http://www.docker.com/products/overview)

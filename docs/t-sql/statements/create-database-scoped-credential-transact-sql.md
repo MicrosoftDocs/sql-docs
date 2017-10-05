@@ -97,7 +97,7 @@ GO
 ```  
 
 ### B. Creating a database scoped credential for a shared access signature.   
-The following example creates a database scoped credential that can be used to create an [external data source](../../t-sql/statements/create-external-data-source-transact-sql.md), which can do bulk operations, such as [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) and [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md).   
+The following example creates a database scoped credential that can be used to create an [external data source](../../t-sql/statements/create-external-data-source-transact-sql.md), which can do bulk operations, such as [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) and [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md). Shared Acess Signatures cannot be used with PolyBase in SQL Server, APS or SQL DW.
 ```tsql
 CREATE DATABASE SCOPED CREDENTIAL MyCredentials  
 WITH IDENTITY = 'SHARED ACCESS SIGNATURE',

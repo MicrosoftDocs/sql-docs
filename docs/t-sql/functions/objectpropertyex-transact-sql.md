@@ -202,7 +202,7 @@ GO
  The result set shows that the base type of the underlying object, the `Employee` table, is a user table.  
   
  ```
-Base Type`  
+Base Type 
 --------  
 U
 ```  

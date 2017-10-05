@@ -27,8 +27,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 -- Drop an external data source  
 DROP EXTERNAL DATA SOURCE external_data_source_name  
 [;]  

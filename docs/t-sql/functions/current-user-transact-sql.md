@@ -98,13 +98,13 @@ GO
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`order_id    cust_id     order_date           order_amt    order_person`
+```
+order_id    cust_id     order_date           order_amt    order_person
+----------- ----------- -------------------- ------------ ------------
+1000        5105        2005-04-03 23:34:00  577.95       Wanida
   
-`----------- ----------- -------------------- ------------ ------------`
-  
-`1000        5105        2005-04-03 23:34:00  577.95       Wanida`
-  
-`(1 row(s) affected)`
+(1 row(s) affected)
+```
   
 ### C. Using CURRENT_USER from an impersonated context  
 In the following example, user `Wanida` executes the following [!INCLUDE[tsql](../../includes/tsql-md.md)] code.
@@ -124,11 +124,11 @@ GO
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`Wanida`
-  
-`Arnalfo`
-  
-`Wanida`
+```
+Wanida
+Arnalfo
+Wanida
+```
   
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   

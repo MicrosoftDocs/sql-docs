@@ -43,9 +43,6 @@ SQL Server 2017 has the following system requirements for Linux:
 | **Processor cores** | 2 cores |
 | **Processor type** | x64-compatible only |
 
-> [!NOTE]
-> SQL Server Engine has been tested up to 1 TB of memory at this time.
-
 If you use **Network File System (NFS)** remote shares in production, note the following support requirements:
 
 - Use NFS version **4.2 or higher**. Older versions of NFS do not support required features, such as fallocate and sparse file creation, common to modern file systems.
@@ -60,6 +57,7 @@ You can install SQL Server on Linux from the command-line. For instructions, see
 - [Install on SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
 - [Install on Ubuntu](quickstart-install-connect-ubuntu.md)
 - [Run on Docker](quickstart-install-connect-docker.md)
+- [Provision a SQL VM in Azure](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
 
 ## <a id="upgrade"></a> Update SQL Server
 

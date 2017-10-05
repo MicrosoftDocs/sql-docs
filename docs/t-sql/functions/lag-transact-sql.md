@@ -157,7 +157,7 @@ ORDER BY CalendarYear, CalendarQuarter;
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
  ```
-Year Quarter  SalesQuota  PrevQuota  Diff`  
+Year Quarter  SalesQuota  PrevQuota  Diff  
 ---- -------  ----------  ---------  -------------  
 2001 3        28000.0000      0.0000   28000.0000  
 2001 4         7000.0000  28000.0000  -21000.0000  

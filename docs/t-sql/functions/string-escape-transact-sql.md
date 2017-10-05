@@ -77,11 +77,11 @@ SELECT STRING_ESCAPE('\   /
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `escapedText`  
-  
- `-------------------------------------------------------------`  
-  
- `\\\t\/\n\\\\\t\"\t`  
+ ```
+escapedText  
+-------------------------------------------------------------  
+\\\t\/\n\\\\\t\"\t
+```  
   
 ### B. Format JSON object  
  The following query creates JSON text from number and string variables, and escapes any special JSON character in variables.  

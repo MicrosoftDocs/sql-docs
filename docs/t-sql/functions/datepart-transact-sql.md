@@ -200,9 +200,10 @@ SELECT TOP(1) DATEPART (day,'12/20/1974') FROM dbo.DimCustomer;
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`--------`
-  
- `20`  
+```
+--------
+20
+```  
   
 The following example returns the year part of the date `12/20/1974`.
   
@@ -214,9 +215,10 @@ SELECT TOP(1) DATEPART (year,'12/20/1974') FROM dbo.DimCustomer;
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`--------`
-  
- `1974`  
+```
+--------
+1974
+```  
   
 ## See also
 [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)

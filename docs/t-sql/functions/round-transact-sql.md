@@ -112,17 +112,17 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `----------`  
-  
- `123.4500`  
-  
- `(1 row(s) affected)`  
-  
- `--------`  
-  
- `100.00`  
-  
- `(1 row(s) affected)`  
+ ```
+----------
+123.4500
+
+(1 row(s) affected)
+
+--------
+100.00
+
+(1 row(s) affected)
+```
   
 ### C. Using ROUND to truncate  
  The following example uses two `SELECT` statements to demonstrate the difference between rounding and truncation. The first statement rounds the result. The second statement truncates the result.  
@@ -158,10 +158,11 @@ SELECT ROUND(123.994999, 3), ROUND(123.995444, 3);
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
- `--------  ---------`  
-  
- `123.995000    123.995444`  
+
+ ```
+--------  ---------
+123.995000    123.995444
+```
   
 ### E. Using ROUND and rounding approximations  
  The following example shows rounding and approximations.  
@@ -171,10 +172,11 @@ SELECT ROUND(123.4545, 2), ROUND(123.45, -2);
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
- `--------  ----------`  
-  
- `123.45    100.00`  
+
+ ```
+--------  ----------
+123.45    100.00
+```
   
 ## See Also  
  [CEILING &#40;Transact-SQL&#41;](../../t-sql/functions/ceiling-transact-sql.md)   

@@ -2,7 +2,7 @@
 title: "What&#39;s new in Machine Learning Services | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "09/29/2017"
+ms.date: "10/05/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -31,6 +31,16 @@ Catch the latest announcement here! [Python in SQL Server 2017: enhanced in-data
 
 Microsoft Machine Learning Server in SQL Server now provides comprehensive support for building and deploying machine learning solutions in either R or Python. Here are the highlights of this release:
 
+> [!IMPORTANT]
+> 
+> Machine learning services, including use of R or Python, are currently not supported when running SQL Server on Linux, or in Azure SQL database. Look for changes in a later release.
+> 
+> Native scoring using the PREDICT function is currently supported in the Linux edition.
+
+### What's new in Cumulative Update 1 for SQL Server 2017
+
+You can now upgrade your Python and R components to Machine Learning Server 9.2.1. This release features many enhancements to **revoscalepy** and **RevoScaleR**, including performance improvements.
+ 
 ### In-database Python integration
 
 You can run Python in stored procedures, or execute Python remotely using the SQL Server computer as the compute context. This integration opens up new avenues for the vast community of Python developers and data scientists to use the power of SQL Server. 

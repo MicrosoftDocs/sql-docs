@@ -201,11 +201,11 @@ GO
   
  The result set shows that the base type of the underlying object, the `Employee` table, is a user table.  
   
- `Base Type`  
-  
- `--------`  
-  
- `U`  
+ ```
+Base Type`  
+--------  
+U
+```  
   
 ### B. Returning a property value  
  The following example returns the number of UPDATE triggers on the specified table.  

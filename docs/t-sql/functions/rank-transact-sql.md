@@ -145,37 +145,24 @@ GROUP BY LastName, SalesTerritoryRegion;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `LastName          TotalSales     SalesTerritoryGroup  RankResult`  
-  
- `----------------  -------------  -------------------  --------`  
-  
- `Tsoflias          1687000.0000   Australia            1`  
-  
- `Saraiva           7098000.0000   Canada               1`  
-  
- `Vargas            4365000.0000   Canada               2`  
-  
- `Carson            12198000.0000  Central              1`  
-  
- `Varkey Chudukatil 5557000.0000   France               1`  
-  
- `Valdez            2287000.0000   Germany              1`  
-  
- `Blythe            11162000.0000  Northeast            1`  
-  
- `Campbell          4025000.0000   Northwest            1`  
-  
- `Ansman-Wolfe      3551000.0000   Northwest            2`  
-  
- `Mensa-Annan       2753000.0000   Northwest            3`  
-  
- `Reiter            8541000.0000   Southeast            1`  
-  
- `Mitchell          11786000.0000  Southwest            1`  
-  
- `Ito               7804000.0000   Southwest            2`  
-  
- `Pak               10514000.0000  United Kingdom       1`  
+```
+LastName          TotalSales     SalesTerritoryGroup  RankResult
+----------------  -------------  -------------------  --------
+Tsoflias          1687000.0000   Australia            1
+Saraiva           7098000.0000   Canada               1
+Vargas            4365000.0000   Canada               2
+Carson            12198000.0000  Central              1
+Varkey Chudukatil 5557000.0000   France               1
+Valdez            2287000.0000   Germany              1
+Blythe            11162000.0000  Northeast            1
+Campbell          4025000.0000   Northwest            1
+Ansman-Wolfe      3551000.0000   Northwest            2
+Mensa-Annan       2753000.0000   Northwest            3
+Reiter            8541000.0000   Southeast            1
+Mitchell          11786000.0000  Southwest            1
+Ito               7804000.0000   Southwest            2
+Pak               10514000.0000  United Kingdom       1
+```  
   
 ## See Also  
  [DENSE_RANK &#40;Transact-SQL&#41;](../../t-sql/functions/dense-rank-transact-sql.md)   

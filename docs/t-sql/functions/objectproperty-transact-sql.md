@@ -207,9 +207,10 @@ GO
   
  The result set shows that `ufnGetProductDealerPrice` is not a deterministic function.  
   
- `-----`  
-  
- `0`  
+ ```
+-----  
+0
+```  
   
 ### C. Finding the objects that belong to a specific schema  
  The following example uses the `SchemaId` property to return all the objects that belong to the schema `Production`.  

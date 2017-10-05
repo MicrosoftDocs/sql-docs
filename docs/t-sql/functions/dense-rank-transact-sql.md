@@ -181,40 +181,24 @@ GROUP BY LastName,SalesTerritoryGroup;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `LastName          TotalSales     SalesTerritoryGroup  RankResult`  
-  
- `----------------  -------------  -------------------  --------`  
-  
- `Pak               10514000.0000  Europe               1`  
-  
- `Varkey Chudukatil  5557000.0000  Europe               2`  
-  
- `Valdez             2287000.0000  Europe               3`  
-  
- `Carson            12198000.0000  North America        1`  
-  
- `Mitchell          11786000.0000  North America        2`  
-  
- `Blythe            11162000.0000  North America        3`  
-  
- `Reiter             8541000.0000  North America        4`  
-  
- `Ito                7804000.0000  North America        5`  
-  
- `Saraiva            7098000.0000  North America        6`  
-  
- `Vargas             4365000.0000  North America        7`  
-  
- `Campbell           4025000.0000  North America        8`  
-  
- `Ansman-Wolfe       3551000.0000  North America        9`  
-  
- `Mensa-Annan        2753000.0000  North America        10`  
-  
- `Tsoflias           1687000.0000  Pacific              1`  
-  
-
-
+```
+ LastName          TotalSales     SalesTerritoryGroup  RankResult  
+----------------  -------------  -------------------  --------  
+Pak               10514000.0000  Europe               1  
+Varkey Chudukatil  5557000.0000  Europe               2  
+Valdez             2287000.0000  Europe               3  
+Carson            12198000.0000  North America        1  
+Mitchell          11786000.0000  North America        2  
+Blythe            11162000.0000  North America        3  
+Reiter             8541000.0000  North America        4  
+Ito                7804000.0000  North America        5  
+Saraiva            7098000.0000  North America        6  
+Vargas             4365000.0000  North America        7  
+Campbell           4025000.0000  North America        8  
+Ansman-Wolfe       3551000.0000  North America        9  
+Mensa-Annan        2753000.0000  North America        10  
+Tsoflias           1687000.0000  Pacific              1 
+```  
 
 ## See Also  
  [RANK &#40;Transact-SQL&#41;](../../t-sql/functions/rank-transact-sql.md)   

@@ -110,8 +110,10 @@ Use @@SPID to display the session ID value for the current session.
   
  If the rollback of the session ID or UOW has finished when the KILL *session ID*|*UOW* WITH STATUSONLY statement is executed, or if no session ID or UOW is being rolled back, KILL *session ID*|*UOW* WITH STATUSONLY returns the following error:  
   
- `"Msg 6120, Level 16, State 1, Line 1"`  
- `"Status report cannot be obtained. Rollback operation for Process ID <session ID> is not in progress."`  
+ ```
+"Msg 6120, Level 16, State 1, Line 1"  
+"Status report cannot be obtained. Rollback operation for Process ID <session ID> is not in progress."
+```  
   
  The same status report can be obtained by repeating the same KILL *session ID*|*UOW* statement without using the WITH STATUSONLY option; however, we do not recommend doing this. Repeating a KILL *session ID* statement might terminate a new process if the rollback had finished and the session ID was reassigned to a new task before the new KILL statement is run. Specifying WITH STATUSONLY prevents this from happening.  
   

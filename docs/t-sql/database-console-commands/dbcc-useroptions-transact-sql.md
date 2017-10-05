@@ -49,23 +49,23 @@ DBCC USEROPTIONS returns a column for the name of the SET option and a column fo
 
 ```sql
 
-| `Set Option                   Value`  
- `---------------------------- ---------------------------`  
- `textsize                     64512`  
- `language                     us_english`  
- `dateformat                   mdy`  
- `datefirst                    7`  
- `lock_timeout                 -1`  
- `quoted_identifier            SET`  
- `arithabort                   SET`  
- `ansi_null_dflt_on            SET`  
- `ansi_warnings                SET`  
- `ansi_padding                 SET`  
- `ansi_nulls                   SET`  
- `concat_null_yields_null      SET`  
- `isolation level              read committed`  
- `(13 row(s) affected)`  
- `DBCC execution completed. If DBCC printed error messages, contact your system administrator.`
+Set Option                   Value`  
+---------------------------- ---------------------------`  
+textsize                     64512 
+language                     us_english 
+dateformat                   mdy  
+datefirst                    7 
+lock_timeout                 -1 
+quoted_identifier            SET 
+arithabort                   SET 
+ansi_null_dflt_on            SET 
+ansi_warnings                SET 
+ansi_padding                 SET 
+ansi_nulls                   SET 
+concat_null_yields_null      SET 
+isolation level              read committed  
+(13 row(s) affected) 
+DBCC execution completed. If DBCC printed error messages, contact your system administrator.
  ```  
   
 ## Remarks  

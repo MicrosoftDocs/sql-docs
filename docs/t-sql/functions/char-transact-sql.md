@@ -112,15 +112,16 @@ FROM Person.Person p JOIN Person.EmailAddress pe
 ON p.BusinessEntityID = pe.BusinessEntityID  
 AND p.BusinessEntityID = 1;  
 GO  
-```sql
+```
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`Ken Sanchez`
+```
+Ken Sanchez
+ken0@adventure-works.com
   
-`ken0@adventure-works.com`
-  
-`(1 row(s) affected)`
+(1 row(s) affected)
+```
   
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   

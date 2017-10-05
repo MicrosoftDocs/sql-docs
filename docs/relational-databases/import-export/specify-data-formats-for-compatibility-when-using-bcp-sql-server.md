@@ -56,7 +56,7 @@ manager: "jhubbard"
   
  The command specifies neither a format file nor a data type, causing **bcp** to prompt for data-format information. At the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows command prompt, enter:  
   
-```  
+```cmd
 bcp AdventureWorks.HumanResources.myTeam out myTeam.txt -T  
 ```  
   

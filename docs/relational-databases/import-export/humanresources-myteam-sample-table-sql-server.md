@@ -38,7 +38,7 @@ manager: "jhubbard"
   
 -   Use the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statements:  
   
-    ```  
+    ```sql
     --Create HumanResources.MyTeam:   
     USE AdventureWorks;  
     GO  
@@ -55,7 +55,7 @@ manager: "jhubbard"
   
 -   Execute following `INSERT` statements to populate the table with two rows:  
   
-    ```  
+    ```sql
     USE AdventureWorks;  
     GO  
     INSERT INTO HumanResources.myTeam(EmployeeID,Name,Title,Background)  

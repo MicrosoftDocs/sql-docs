@@ -1,7 +1,7 @@
 ---
 title: "Introducing revoscalepy | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/20/2017"
+ms.date: "10/0520/2017"
 ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
@@ -26,16 +26,17 @@ It is based on the **RevoScaleR** package for R, which was provided in Microsoft
 
 MicrosoftML packages are also provided for both R and Python. For more information, see [Using MicrosoftML in SQL Server](../using-the-microsoftml-package.md)
 
-> [!WARNING]
-> 
-> Python support is a new feature in SQL Server 2017 and is currently supported for preview purposes only.
-
 ## Versions and supported platforms
 
 The **revoscalepy** module is available only when you install one of the following Microsoft products:
 
-+ Machine Learning Services, in SQL Server 2017 CTP 2.0 or later
-+ Microsoft Machine Learning Server 9.1.0. Requires installation using setup for SQL Server 2017 CTP 2.0 or later
++ Machine Learning Services, in SQL Server 2017
++ Microsoft Machine Learning Server 9.2.0 or later
+
+To get the latest version of revoscalepy, install Cumulative Update 1 for SQL Server 2017. It includes many improvements in Python, including:
+
++ A new Python function, `rx_create_col_info`, that gets schema information from a SQL Server data source, like [rxCreateColInfo](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxcreatecolinfo) for 
++ Enhancements to [rx_exec](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-exec) to support parallel scenarios using the `RxLocalParallel` compute context. 
 
 ## Supported functions and data types
 

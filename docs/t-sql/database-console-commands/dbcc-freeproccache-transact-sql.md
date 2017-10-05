@@ -158,7 +158,8 @@ plan_handle                                         text
 --------------------------------------------------  -----------------------------  
 0x060006001ECA270EC0215D05000000000000000000000000  SELECT * FROM Person.Address;  
   
- (1 row(s) affected)```
+ (1 row(s) affected)
+ ```
  
 {end misplaced text ask}
   

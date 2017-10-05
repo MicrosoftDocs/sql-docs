@@ -122,17 +122,8 @@ To change from the GDR repository to the CU repository use the following steps:
    | RHEL | GDR | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017-gdr.repo` |
    | SLES | CU  | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017.repo` |
    | SLES | GDR | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017-gdr.repo` |
-   | Ubuntu | CU | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"` |
-   | Ubuntu | GDR | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017-gdr.list)"` |
-
-1. Update your system.
-
-   | Platform | Update command |
-   |-----|-----|
-   | RHEL | `sudo yum update` |
-   | SLES | `sudo zypper --gpg-auto-import-keys refresh` |
-   | Ubuntu | `sudo apt-get update` |
-
+   | Ubuntu | CU | `sudo curl https://packages.microsoft.com/keys/microsoft.asc \| sudo apt-key add - && sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)" \| sudo apt-get update` |
+   | Ubuntu | GDR | `sudo curl https://packages.microsoft.com/keys/microsoft.asc \| sudo apt-key add - && sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017-gdr.list)" \| sudo apt-get update` |
 
 1. [Install](#platforms) or [update](#upgrade) SQL Server from the new repository.
 

@@ -46,7 +46,6 @@ To configure SQL Server on RHEL, run the following commands in a terminal to ins
 1. Run the following commands to install SQL Server:
 
    ```bash
-   sudo yum update
    sudo yum install -y mssql-server
    ```
 
@@ -89,14 +88,12 @@ To create a database, you need to connect with a tool that can run Transact-SQL 
 1. If you had a previous version of **mssql-tools** installed, remove any older unixODBC packages.
 
    ```bash
-   sudo yum update
    sudo yum remove unixODBC-utf16 unixODBC-utf16-devel
    ```
 
 1. Run the following commands to install **mssql-tools** with the unixODBC developer package.
 
    ```bash
-   sudo yum update
    sudo yum install -y mssql-tools unixODBC-devel
    ```
 

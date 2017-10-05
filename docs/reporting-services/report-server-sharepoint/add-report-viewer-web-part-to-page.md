@@ -1,6 +1,6 @@
 ---
-title: "Add Report Viewer web part to a SharePoint page | Microsoft Docs"
-ms.custom: "Add the Report Viewer web part to a page within your SharePoint site."
+title: "Add SQL Server Reporting Services Report Viewer web part to a SharePoint page | Microsoft Docs"
+ms.custom: "Display a report, from SQL Server Reporting Services or Power BI Report Server, by adding a Report Viewer web part to a SharePoint page."
 ms.date: "09/26/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
@@ -15,7 +15,7 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 
-# Add Report Viewer web part to a SharePoint page
+# Add SQL Server Reporting Services Report Viewer web part to a SharePoint page
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 

@@ -1,7 +1,7 @@
 ---
 title: "Set processing options (Reporting Services in SharePoint integrated mode)| Microsoft Docs"
 ms.custom: ""
-ms.date: "09/29/2017"
+ms.date: "10/05/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -87,12 +87,12 @@ manager: "erikre"
   
 ## Set database timeout
   
-1.  Use Windows PowerShell to set the database timeout of a SharePoint report server. For more information, see the “Get and set Properties of the Reporting Service Application Database” section of [PowerShell cmdlets for Reporting Services SharePoint Mode](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md).  
+*  Use Windows PowerShell to set the database timeout of a SharePoint report server. For more information, see the “Get and set Properties of the Reporting Service Application Database” section of [PowerShell cmdlets for Reporting Services SharePoint Mode](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md).  
   
-## See also
+## Next steps
 
  [Set Report Processing Properties](../../reporting-services/report-server/set-report-processing-properties.md)   
- [Caching Reports &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md)   
- [Setting Time-out Values for Report and Shared Dataset Processing &#40;SSRS&#41;](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)  
+ [Caching Reports](../../reporting-services/report-server/caching-reports-ssrs.md)   
+ [Setting Time-out Values for Report and Shared Dataset Processing](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)  
 
 More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)

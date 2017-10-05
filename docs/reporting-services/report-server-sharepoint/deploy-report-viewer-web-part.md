@@ -1,7 +1,7 @@
 ---
-title: "Deploy the Report Viewer web part on a SharePoint site | Microsoft Docs"
+title: "Deploy the SQL Server Reporting Services Report Viewer web part on a SharePoint site | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/26/2017"
+ms.date: "10/05/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -15,7 +15,7 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 
-# Deploy the Report Viewer web part on a SharePoint site
+# Deploy the SQL Server Reporting Services Report Viewer web part on a SharePoint site
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 

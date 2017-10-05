@@ -1,7 +1,7 @@
 ---
 title: "Manage a Reporting Services SharePoint Service Application | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/25/2017"
+ms.date: "10/05/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -129,7 +129,7 @@ manager: "erikre"
 
  You can use any Windows user account. For best results, choose an account that has read permissions and network logon permissions to support connections to other computers. It must have read permissions on any external image or data file that you want to use in a report. Do not specify a local account unless all report data sources and external images are stored on the report server computer. Use the account only for unattended report processing.  
 
- ![PowerShell related content](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell related content")  
+ ### PowerShell command
 
  The following is an example PowerShell command to return the list of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service applications with the UEAccount property:  
 

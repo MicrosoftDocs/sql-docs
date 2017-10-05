@@ -1,7 +1,7 @@
 ---
-title: "Connect Filter or Documents web part | Microsoft Docs"
+title: "Connect Filter or Documents web part with a Reporting Services Report Viewer web part | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/25/2017"
+ms.date: "10/05/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -14,7 +14,7 @@ author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
 ---
-# Connect Filter or Documents web part
+# Connect Filter or Documents web part with a Reporting Services Report Viewer web part
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 

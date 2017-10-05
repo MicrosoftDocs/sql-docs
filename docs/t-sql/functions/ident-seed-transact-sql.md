@@ -77,23 +77,17 @@ GO
   
  Here is a partial result set.  
   
- `TABLE_SCHEMA       TABLE_NAME                   IDENT_SEED`  
-  
- `------------       ---------------------------  -----------`  
-  
- `Person             Address                                1`  
-  
- `Production         ProductReview                          1`  
-  
- `Production         TransactionHistory                100000`  
-  
- `Person             AddressType                            1`  
-  
- `Production         ProductSubcategory                     1`  
-  
- `Person             vAdditionalContactInfo                 1`  
-  
- `dbo                AWBuildVersion                         1`  
+ ```
+ TABLE_SCHEMA       TABLE_NAME                   IDENT_SEED  
+------------       ---------------------------  -----------  
+Person             Address                                1  
+Production         ProductReview                          1  
+Production         TransactionHistory                100000  
+Person             AddressType                            1  
+Production         ProductSubcategory                     1  
+Person             vAdditionalContactInfo                 1  
+dbo                AWBuildVersion                         1
+```  
   
 ## See Also  
  [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   

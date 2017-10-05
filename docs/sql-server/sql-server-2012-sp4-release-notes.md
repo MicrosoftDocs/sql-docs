@@ -22,7 +22,7 @@ This topic summarizes the improvements included with SQL Server 2012 SP4. The to
 ##Download pages
 The following items link to the primary download packages for SQL Server 2012 SP3. Download pages have system requirements and basic installation instructions.
 - [SQL Server 2012 SP4 Patch installation](https://go.microsoft.com/fwlink/?linkid=846829)
-- [SQL Server 2012 SP4 Express](ttps://go.microsoft.com/fwlink/?linkid=846905)
+- [SQL Server 2012 SP4 Express](https://go.microsoft.com/fwlink/?linkid=846905)
 - [Microsoft SQL Server 2012 SP4 Feature Pack](https://go.microsoft.com/fwlink/?linkid=846907)
 
 ## 	SP4 performance and scale improvements
@@ -51,3 +51,5 @@ The following items link to the primary download packages for SQL Server 2012 SP
 ## See Also
 - [Install SQL Server 2012 Servicing Updates](https://msdn.microsoft.com/library/hh479746(v=sql.110).aspx)
 - [How to identify your SQL Server version and edition](https://support.microsoft.com/en-us/help/321185)
+
+[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

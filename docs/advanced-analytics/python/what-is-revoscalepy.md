@@ -1,7 +1,7 @@
 ---
 title: "Introducing revoscalepy | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/0520/2017"
+ms.date: "10/05/2017"
 ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""

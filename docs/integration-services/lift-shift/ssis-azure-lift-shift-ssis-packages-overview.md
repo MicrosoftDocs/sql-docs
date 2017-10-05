@@ -40,12 +40,12 @@ When you provision the SSIS IR, you can scale up and scale out by specifying val
 
 You only have to provision the SSIS IR one time. After that, you can use familiar tools such as SQL Server Data Tools (SSDT) and SQL Server Management Studio (SSMS) to deploy, configure, run, monitor, schedule, and manage packages.
 
-Data Factory also supports other types of Integration Runtimes. To learn more about the SSIS IR and the other types of Integration Runtimes, see [Integration runtime in Azure Data Factory](/azure/data-factory/concepts-integration-runtime).
+Data Factory also supports other types of Integration Runtimes. To learn more about the SSIS IR and the other types of Integration Runtimes, see [Integration runtime in Azure Data Factory](https://docs.microsoft.com/en-us/azure/data-factory/concepts-integration-runtime).
 
 ## Prerequisites
 The capabilities described in this topic require SQL Server Data Tools (SSDT) version 17.2 or later, but do not require SQL Server 2017 or SQL Server 2016. When you deploy packages to Azure, the Package Deployment Wizard always upgrades the packages to the latest package format.
 
-For more info about prerequisites in Azure, see [Lift and shift SQL Server Integration Services (SSIS) packages to Azure](/azure/data-factory/quickstart-lift-shift-ssis-packages-powershell).
+For more info about prerequisites in Azure, see [Lift and shift SQL Server Integration Services (SSIS) packages to Azure](https://docs.microsoft.com/en-us/azure/data-factory/quickstart-lift-shift-ssis-packages-powershell).
 
 ## SSIS features on Azure
 
@@ -62,7 +62,7 @@ For info about how to connect to on-premises data sources from the cloud with Wi
 ## Common tasks
 
 ### Provision
-Before you can deploy and run SSIS packages in Azure, you have to provision the SSISDB Catalog database and the Azure SSIS Integration Runtime. Follow the provisioning steps in this article: [Lift and shift SQL Server Integration Services (SSIS) packages to Azure](/azure/data-factory/quickstart-lift-shift-ssis-packages-powershell).
+Before you can deploy and run SSIS packages in Azure, you have to provision the SSISDB Catalog database and the Azure SSIS Integration Runtime. Follow the provisioning steps in this article: [Lift and shift SQL Server Integration Services (SSIS) packages to Azure](https://docs.microsoft.com/en-us/azure/data-factory/quickstart-lift-shift-ssis-packages-powershell).
 
 ### Deploy and run packages
 To deploy projects and run packages on SQL Database, you can use one of several familiar tools and scripting options:
@@ -86,5 +86,5 @@ For more info, see [Schedule SSIS package execution on Azure](ssis-azure-schedul
 
 ## Next steps
 To get started with SSIS workloads on Azure, see the following articles:
--   [Lift and shift SQL Server Integration Services (SSIS) packages to Azure](/azure/data-factory/quickstart-lift-shift-ssis-packages-powershell)
+-   [Lift and shift SQL Server Integration Services (SSIS) packages to Azure](https://docs.microsoft.com/en-us/azure/data-factory/quickstart-lift-shift-ssis-packages-powershell)
 -   [Deploy, run, and monitor an SSIS package on Azure](ssis-azure-deploy-run-monitor-tutorial.md)

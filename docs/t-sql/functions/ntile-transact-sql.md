@@ -98,7 +98,8 @@ David          Campbell              3         1,573,012.94   98055
 Garrett        Vargas                4         1,453,719.47   98027  
 Lynn           Tsoflias              4         1,421,810.92   98055  
 Pamela         Ansman-Wolfe          4         1,352,577.13   98027  
- (14 row(s) affected)  
+
+(14 row(s) affected)  
 ```  
   
 ### B. Dividing the result set by using PARTITION BY  
@@ -167,43 +168,26 @@ ORDER BY Quartile, e.LastName;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `LastName          Quartile SalesYTD`  
-  
- `----------------- -------- ------------`  
-  
- `Blythe            1        4,716,000.00`  
-  
- `Carson            1        4,350,000.00`  
-  
- `Mitchell          1        4,682,000.00`  
-  
- `Pak               1        5,142,000.00`  
-  
- `Varkey Chudukatil 1        2,940,000.00`  
-  
- `Ito               2        2,644,000.00`  
-  
- `Reiter            2        2,768,000.00`  
-  
- `Saraiva           2        2,293,000.00`  
-  
- `Vargas            2        1,617,000.00`  
-  
- `Ansman-Wolfe      3        1,183,000.00`  
-  
- `Campbell          3        1,438,000.00`  
-  
- `Mensa-Annan       3        1,481,000.00`  
-  
- `Valdez            3        1,294,000.00`  
-  
- `Abbas             4          172,000.00`  
-  
- `Albert            4          651,000.00`  
-  
- `Jiang             4          544,000.00`  
-  
- `Tsoflias          4          867,000.00`  
+ ```
+LastName          Quartile SalesYTD  
+----------------- -------- ------------`  
+Blythe            1        4,716,000.00  
+Carson            1        4,350,000.00  
+Mitchell          1        4,682,000.00  
+Pak               1        5,142,000.00  
+Varkey Chudukatil 1        2,940,000.00  
+Ito               2        2,644,000.00  
+Saraiva           2        2,293,000.00  
+Vargas            2        1,617,000.00  
+Ansman-Wolfe      3        1,183,000.00  
+Campbell          3        1,438,000.00  
+Mensa-Annan       3        1,481,000.00  
+Valdez            3        1,294,000.00  
+Abbas             4          172,000.00  
+Albert            4          651,000.00  
+Jiang             4          544,000.00  
+Tsoflias          4          867,000.00
+```  
   
 ### D. Dividing the result set by using PARTITION BY  
  The following example adds the PARTITION BY argument to the code in example A. The rows are first partitioned by `SalesTerritoryCountry` and then divided into two groups within each `SalesTerritoryCountry`. Notice that the ORDER BY in the OVER clause orders the NTILE and the ORDER BY of the SELECT statement orders the result set.  
@@ -226,43 +210,27 @@ ORDER BY st.SalesTerritoryCountry, Quartile;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `LastName          Quartile SalesYTD       SalesTerritoryCountry`  
-  
- `----------------- -------- -------------- ------------------`  
-  
- `Tsoflias          1         867,000.00     Australia`  
-  
- `Saraiva           1        2,293,000.00    Canada`  
-  
- `Varkey Chudukatil 1        2,940,000.00    France`  
-  
- `Valdez            1        1,294,000.00    Germany`  
-  
- `Alberts           1          651,000.00    NA`  
-  
- `Jiang             1          544,000.00    NA`  
-  
- `Pak               1        5,142,000.00    United Kingdom`  
-  
- `Mensa-Annan       1        1,481,000.00    United States`  
-  
- `Campbell          1        1,438,000.00    United States`  
-  
- `Reiter            1        2,768,000.00    United States`  
-  
- `Blythe            1        4,716,000.00    United States`  
-  
- `Carson            1        4,350,000.00     United States`  
-  
- `Mitchell          1        4,682,000.00     United States`  
-  
- `Vargas            2        1,617,000.00     Canada`  
-  
- `Abbas             2          172,000.00     NA`  
-  
- `Ito               2        2,644,000.00     United States`  
-  
- `Ansman-Wolfe      2        1,183,000.00     United States`  
+ ```
+LastName          Quartile SalesYTD       SalesTerritoryCountry  
+----------------- -------- -------------- ------------------  
+Tsoflias          1         867,000.00     Australia  
+Saraiva           1        2,293,000.00    Canada  
+Varkey Chudukatil 1        2,940,000.00    France  
+Valdez            1        1,294,000.00    Germany  
+Alberts           1          651,000.00    NA  
+Jiang             1          544,000.00    NA  
+Pak               1        5,142,000.00    United Kingdom  
+Mensa-Annan       1        1,481,000.00    United States  
+Campbell          1        1,438,000.00    United States  
+Reiter            1        2,768,000.00    United States  
+Blythe            1        4,716,000.00    United States  
+Carson            1        4,350,000.00     United States  
+Mitchell          1        4,682,000.00     United States  
+Vargas            2        1,617,000.00     Canada  
+Abbas             2          172,000.00     NA  
+Ito               2        2,644,000.00     United States  
+Ansman-Wolfe      2        1,183,000.00     United States
+```  
   
 ## See Also  
  [RANK &#40;Transact-SQL&#41;](../../t-sql/functions/rank-transact-sql.md)   

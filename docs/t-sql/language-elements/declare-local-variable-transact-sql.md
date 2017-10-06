@@ -211,17 +211,15 @@ WHERE LastName LIKE @find;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `LastName            FirstName               Phone`  
+ ```
+LastName            FirstName               Phone
+------------------- ----------------------- -------------------------
+Manchepalli         Ajay                    1 (11) 500 555-0174
+Manek               Parul                   1 (11) 500 555-0146
+Manzanares          Tomas                   1 (11) 500 555-0178
   
- `------------------- ----------------------- -------------------------`  
-  
- `Manchepalli         Ajay                    1 (11) 500 555-0174`  
-  
- `Manek               Parul                   1 (11) 500 555-0146`  
-  
- `Manzanares          Tomas                   1 (11) 500 555-0178`  
-  
- `(3 row(s) affected)`  
+(3 row(s) affected)
+```  
   
 ### B. Using DECLARE with two variables  
  The following example retrieves the names of [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] sales representatives who are located in the North American sales territory and have at least $2,000,000 in sales for the year.  

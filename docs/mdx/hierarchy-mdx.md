@@ -45,7 +45,7 @@ Level_Expression.Hierarchy
  A valid Multidimensional Expressions (MDX) expression that returns a level.  
   
 ### Examples  
- The following example returns the name of the Calendar hierarchy in the Data dimension in the AdventureWorks cube.  
+ The following example returns the name of the Calendar hierarchy in the Date dimension in the AdventureWorks cube.  
   
  `WITH`  
   

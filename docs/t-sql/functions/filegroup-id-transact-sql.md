@@ -61,13 +61,13 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Filegroup ID`  
-  
- `------------`  
-  
- `1`  
-  
- `(1 row(s) affected)`  
+```
+Filegroup ID  
+------------  
+1  
+
+(1 row(s) affected)
+ ```  
   
 ## See Also  
  [FILEGROUP_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/filegroup-name-transact-sql.md)   

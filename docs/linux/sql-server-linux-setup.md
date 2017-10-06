@@ -25,7 +25,7 @@ SQL Server 2017 is supported on the following Linux platforms:
 
 | Platform | Supported version(s) | Get
 |-----|-----|-----
-| **Red Hat Enterprise Linux** | 7.3 | [Get RHEL 7.3](http://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
+| **Red Hat Enterprise Linux** | 7.3 or 7.4 | [Get RHEL 7.4](http://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
 | **SUSE Linux Enterprise Server** | v12 SP2 | [Get SLES v12 SP2](https://www.suse.com/products/server)
 | **Ubuntu** | 16.04 | [Get Ubuntu 16.04](http://www.ubuntu.com/download/server)
 | **Docker Engine** | 1.8+ | [Get Docker](http://www.docker.com/products/overview)
@@ -57,6 +57,7 @@ You can install SQL Server on Linux from the command-line. For instructions, see
 - [Install on SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
 - [Install on Ubuntu](quickstart-install-connect-ubuntu.md)
 - [Run on Docker](quickstart-install-connect-docker.md)
+- [Provision a SQL VM in Azure](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
 
 ## <a id="upgrade"></a> Update SQL Server
 
@@ -113,6 +114,12 @@ To change from the GDR repository to the CU repository use the following steps:
    | SLES | `sudo zypper removerepo 'packages-microsoft-com-mssql-server'` |
    | Ubuntu | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server xenial main'` |
 
+1. For **Ubuntu only**, import the public repository GPG keys.
+
+   ```bash
+   sudo curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+   ```
+
 1. Configure the new repository.
 
    | Platform | Repository | Command |
@@ -121,17 +128,8 @@ To change from the GDR repository to the CU repository use the following steps:
    | RHEL | GDR | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017-gdr.repo` |
    | SLES | CU  | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017.repo` |
    | SLES | GDR | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017-gdr.repo` |
-   | Ubuntu | CU | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"` |
-   | Ubuntu | GDR | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017-gdr.list)"` |
-
-1. Update your system.
-
-   | Platform | Update command |
-   |-----|-----|
-   | RHEL | `sudo yum update` |
-   | SLES | `sudo zypper --gpg-auto-import-keys refresh` |
-   | Ubuntu | `sudo apt-get update` |
-
+   | Ubuntu | CU | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)" && sudo apt-get update` |
+   | Ubuntu | GDR | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017-gdr.list)" && sudo apt-get update` |
 
 1. [Install](#platforms) or [update](#upgrade) SQL Server from the new repository.
 

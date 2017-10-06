@@ -89,9 +89,10 @@ SELECT SQRT(1.00), SQRT(10.00);
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `----------  ------------`  
-  
- `1.00        3.16`  
+ ```
+----------  ------------  
+1.00        3.16
+```  
   
 ## See Also  
  [Mathematical Functions &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  

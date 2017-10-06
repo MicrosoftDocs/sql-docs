@@ -30,7 +30,6 @@ Install SQL Server Full-Text Search for your platform:
 Use the following commands to install the **mssql-server-fts** on Red Hat Enterprise Linux. 
 
 ```bash
-sudo yum update
 sudo yum install -y mssql-server-fts
 ```
 

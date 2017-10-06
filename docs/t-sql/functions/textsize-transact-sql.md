@@ -55,17 +55,14 @@ SELECT @@TEXTSIZE AS 'Text Size'
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Text Size`  
-  
- `-----------`  
-  
- `4096`  
-  
- `Text Size`  
-  
- `-----------`  
-  
- `2048`  
+ ```
+Text Size
+-----------
+4096
+Text Size
+-----------
+2048
+ ```  
   
 ## See Also  
  [Configuration Functions &#40;Transact-SQL&#41;](../../t-sql/functions/configuration-functions-transact-sql.md)   

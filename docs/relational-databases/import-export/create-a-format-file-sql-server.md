@@ -133,7 +133,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
  For more information about how to use Unicode character data, see [Use Unicode Character Format to Import or Export Data &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md).  
   
 #### F. Using a format file with the code page option  
- If you create a format file using the bcp command (i.e. using “`bcp forma`t …” ) information about the collation/code page will be written in the format file.   
+If you create a format file using the bcp command (that is, by using `bcp format`), information about the collation/code page will be written in the format file.   
 The following example format file for a table with 5 columns includes the collation.  
   
 ```  

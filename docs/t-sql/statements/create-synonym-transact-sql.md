@@ -130,21 +130,17 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `-----------------------`  
-  
- `ProductID   Name`  
-  
- `----------- --------------------------`  
-  
- `1           Adjustable Race`  
-  
- `2           Bearing Ball`  
-  
- `3           BB Ball Bearing`  
-  
- `4           Headset Ball Bearings`  
-  
- `(4 row(s) affected)`  
+ ```
+ ----------------------- 
+ ProductID   Name 
+ ----------- -------------------------- 
+ 1           Adjustable Race 
+ 2           Bearing Ball 
+ 3           BB Ball Bearing 
+ 4           Headset Ball Bearings 
+
+ (4 row(s) affected)
+``` 
   
 ### B. Creating a synonym to remote object  
  In the following example, the base object, `Contact`, resides on a remote server named `Server_Remote`.  

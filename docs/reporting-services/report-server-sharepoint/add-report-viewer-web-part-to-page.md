@@ -1,7 +1,7 @@
 ---
-title: "Add Report Viewer web part to a SharePoint page | Microsoft Docs"
-ms.custom: "Add the Report Viewer web part to a page within your SharePoint site."
-ms.date: "09/15/2017"
+title: "Add SQL Server Reporting Services Report Viewer web part to a SharePoint page | Microsoft Docs"
+ms.custom: "Display a report, from SQL Server Reporting Services or Power BI Report Server, by adding a Report Viewer web part to a SharePoint page."
+ms.date: "09/26/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -15,7 +15,7 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 
-# Add Report Viewer web part to a SharePoint page
+# Add SQL Server Reporting Services Report Viewer web part to a SharePoint page
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
@@ -29,6 +29,8 @@ Display a report, from SQL Server Reporting Services or Power BI Report Server, 
 
 * The Report Viewer web part must be deployed to your SharePoint farm. For information on how to deploy the Report Viewer web part solution project, see [Deploy the Report Viewer web part on a SharePoint site](deploy-report-viewer-web-part.md).
 
+* To add a web part to a web page, you must have the Add and Customize Pages permission at the site level. If you are using default security settings, this permission is granted to members of the **Owners** group who have the Full Control level of permission.
+
 ## Add web part
 
 1. In your SharePoint site, select the **gear** icon in the upper left and select **Add a page**.
@@ -37,13 +39,13 @@ Display a report, from SQL Server Reporting Services or Power BI Report Server, 
 
 2. Give your page a name and select **Create**.
 
-3. Within the page designer, select the **Insert** tab in the ribbon. Then select **Web part** within the **Parts** section.
+3. Within the page designer, select the **Insert** tab in the ribbon. Then select **web part** within the **Parts** section.
 
     ![Insert a web part from the office ribbon.](media/sharepoint-insert-web-part.png)
 
 4. Under **Categories**, select **SQL Server Reporting Services (Native mode). Under **Parts**, select **Report Viewer**. Then select **Add**.
 
-    ![Add Report Viewer Web Part.](media/sharepoint-report-viewer-web-part.png)
+    ![Add Report Viewer web part.](media/sharepoint-report-viewer-web-part.png)
 
     This may initially appear with an error. The error is because the default report server URL is set to *http://localhost* and may not be available at that location.
 
@@ -51,7 +53,7 @@ Display a report, from SQL Server Reporting Services or Power BI Report Server, 
 
 To configure the web part to point to your specific report, do the following.
 
-1. When editing the SharePoint page, select the down arrow in the upper right of the web part and select **Edit Web part**.
+1. When editing the SharePoint page, select the down arrow in the upper right of the web part and select **Edit web part**.
 
     ![Edit web page from web part drop down.](media/sharepoint-edit-web-part.png)
 
@@ -72,6 +74,5 @@ To configure the web part to point to your specific report, do the following.
 * The Report Viewer web part cannot be used on modern pages within SharePoint.
 * Power BI reports can't be used with the Report Viewer web part.
 * If you don't see the Report Viewer web part, to add to your page, make sure you have [deployed the Report Viewer web part](deploy-report-viewer-web-part.md).
-* The link at the top of the web part produces an error and does not navigate you anywhere.
 
 More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)

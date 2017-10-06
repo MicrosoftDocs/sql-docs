@@ -23,15 +23,18 @@ Before we get started, you need to make sure your certificates follow these requ
 - The current system time must be after the Valid from property of the certificate and before the Valid to property of the certificate.
 - The certificate must be meant for server authentication. This requires the Enhanced Key Usage property of the certificate to specify Server Authentication (1.3.6.1.5.5.7.3.1).
 - The certificate must be created by using the KeySpec option of AT_KEYEXCHANGE. Usually, the certificate's key usage property (KEY_USAGE) will also include key encipherment (CERT_KEY_ENCIPHERMENT_KEY_USAGE).
-- The Subject property of the certificate must indicate that the common name (CN) is the same as the host name or fully qualified domain name (FQDN) of the server computer. 
+- The Subject property of the certificate must indicate that the common name (CN) is the same as the host name or fully qualified domain name (FQDN) of the server computer. Note: Wild Card Certificates are supported. 
 
 ## Overview
 TLS is used to encrypt connections from a client application to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. When configured correctly, TLS provides both privacy and data integrity for communications between the client and the server.  TLS connections can either be client intiated or server initited. 
 
 
-## Client Side Encryption 
+## Client Initiated Encryption 
 - **Generate certificate** (/CN should match your SQL Server host fully-qualified domain name)
-        
+
+> [!NOTE]
+> For this example we use a Self-Signed Certificate, this should not be used for production scenarios. You should use CA certificates. 
+
         openssl req -x509 -nodes -newkey rsa:2048 -subj '/CN=mssql.contoso.com' -keyout mssql.key -out mssql.pem -days 365 
         sudo chown mssql:mssql mssql.pem mssql.key 
         sudo chmod 600 mssql.pem mssql.key   
@@ -78,7 +81,7 @@ TLS is used to encrypt connections from a client application to [!INCLUDE[ssNoVe
     
             "encrypt=true; trustServerCertificate=false;" 
 
-## Server Side Encryption 
+## Server Initiated Encryption 
 
 - **Generate certificate** (/CN should match your SQL Server host fully-qualified domain name)
         

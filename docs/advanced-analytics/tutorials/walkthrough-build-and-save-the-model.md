@@ -226,9 +226,9 @@ In the next and final lesson, you learn how to perform scoring against the saved
 
 ## Next lesson
 
-[Deploy the R model and use in SQL](/walkthrough-deploy-and-use-the-model.md)
+[Deploy the R model and use in SQL](walkthrough-deploy-and-use-the-model.md)
 
 ## Previous lesson
 
-[Create data features using R and SQL](/walkthrough-create-data-features.md)
+[Create data features using R and SQL](walkthrough-create-data-features.md)
 

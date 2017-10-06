@@ -83,38 +83,32 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Object Name`  
-  
- `------------------------------`  
-  
- `Person`  
-  
- `(1 row(s) affected)`  
-  
- `Schema Name`  
-  
- `------------------------------`  
-  
- `(null)`  
-  
- `(1 row(s) affected)`  
-  
- `Database Name`  
-  
- `------------------------------`  
-  
- `AdventureWorks2012`  
-  
- `(1 row(s) affected)`  
-  
- `Server Name`  
-  
- `------------------------------`  
-  
- `(null)`  
-  
- `(1 row(s) affected)`  
-  
+```
+Object Name
+------------------------------
+Person
+
+(1 row(s) affected)
+
+Schema Name
+------------------------------
+(null)
+
+(1 row(s) affected)
+
+Database Name
+------------------------------
+AdventureWorks2012
+
+(1 row(s) affected)
+
+Server Name
+------------------------------
+(null)
+
+(1 row(s) affected)
+ ```
+ 
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  The following example uses `PARSENAME` to return information about the `Person` table in the `AdventureWorks2012` database.  
   
@@ -129,38 +123,31 @@ GO
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
- `Object Name`  
-  
- `------------------------------`  
-  
- `DimCustomer`  
-  
- `(1 row(s) affected)`  
-  
- `Schema Name`  
-  
- `------------------------------`  
-  
- `dbo`  
-  
- `(1 row(s) affected)`  
-  
- `Database Name`  
-  
- `------------------------------`  
-  
- `AdventureWorksPDW2012`  
-  
- `(1 row(s) affected)`  
-  
- `Server Name`  
-  
- `------------------------------`  
-  
- `(null)`  
-  
- `(1 row(s) affected)`  
+```
+Object Name
+------------------------------
+DimCustomer
+
+(1 row(s) affected)
+
+Schema Name
+------------------------------
+dbo
+
+(1 row(s) affected)
+
+Database Name
+------------------------------
+AdventureWorksPDW2012
+
+(1 row(s) affected)
+
+Server Name
+------------------------------
+(null)
+
+(1 row(s) affected)
+```
   
 ## See Also  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   

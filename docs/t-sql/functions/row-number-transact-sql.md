@@ -265,7 +265,7 @@ GROUP BY LastName, FirstName, SalesTerritoryKey;
   
  Here is a partial result set.  
  
- ```  
+```  
  
 RowNumber  LastName            Territory  SalesQuota  
 ---------  ------------------  ---------  -------------  

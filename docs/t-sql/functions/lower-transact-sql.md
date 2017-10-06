@@ -61,15 +61,14 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Lower                    Upper                    LowerUpper`  
+ ```
+Lower                    Upper                    LowerUpper  
+---------------------    ---------------------    --------------------  
+minipump                 MINIPUMP                 minipump 
+taillights - battery     TAILLIGHTS - BATTERY     taillights - battery  
   
- `---------------------    ---------------------    --------------------`  
-  
- `minipump                 MINIPUMP                 minipump`  
-  
- `taillights - battery     TAILLIGHTS - BATTERY     taillights - battery`  
-  
- `(2 row(s) affected)`  
+(2 row(s) affected)
+```  
   
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  The following example uses the `LOWER` function, the `UPPER` function, and nests the `UPPER` function inside the `LOWER` function in selecting product names that have prices between $11 and $20.  
@@ -87,13 +86,12 @@ WHERE ListPrice between 11.00 and 20.00;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Lower                 Upper                  LowerUpper`  
-  
- `--------------------  ---------------------  --------------------`  
-  
- `minipump              MINIPUMP               minipump`  
-  
- `taillights – battery  TAILLIGHTS – BATTERY   taillights - battery`  
+ ```
+Lower                 Upper                  LowerUpper  
+--------------------  ---------------------  --------------------  
+minipump              MINIPUMP               minipump  
+taillights – battery  TAILLIGHTS – BATTERY   taillights - battery
+```  
   
 ## See Also  
  [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   

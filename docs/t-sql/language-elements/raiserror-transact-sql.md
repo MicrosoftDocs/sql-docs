@@ -138,8 +138,10 @@ RAISERROR (15600,-1,-1, 'mysp_CreateCustomer');
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Msg 15600, Level 15, State 1, Line 1`   
- `An invalid parameter or option was specified for procedure 'mysp_CreateCustomer'.`  
+ ```
+ Msg 15600, Level 15, State 1, Line 1   
+ An invalid parameter or option was specified for procedure 'mysp_CreateCustomer'.
+ ```  
   
  *state*  
  Is an integer from 0 through 255. Negative values default to 1. Values larger than 255 should not be used. 

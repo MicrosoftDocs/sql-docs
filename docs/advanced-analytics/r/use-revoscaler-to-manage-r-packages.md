@@ -53,19 +53,15 @@ The following package management functions are provided in RevoScaleR, for insta
 
 + [rxSqlLibPaths](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqllibpaths): Get the search path for the library trees for packages while executing inside the SQL Server.
 
-These packages are also included by default in SQL Server 2017. You can add the packages to an instance of SQL Server 2016 if you upgrade the instance to use at least Microsoft R 9.0.1. For more information, see [Using SqlBindR.exe to upgrade R](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
-
-For information about these functions, see the RevoScaleR function reference pages: (https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)
+These packages are included by default in SQL Server 2017. For information about these functions, see the RevoScaleR function reference pages: (https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)
 
 > [!NOTE]
-> 
-> R functions for package management are available beginning with Microsoft R Server 9.0.1. If you cannot find the functions in RevoScaleR, you probably need to upgrade to the latest version.
-
+> R functions for package management are available beginning with Microsoft R Server 9.0.1. If you cannot find the functions in RevoScaleR, you probably need to upgrade to the latest version. 
 ## Examples
 
 This section contains examples of how to use the package management functions with a SQL Server instance or database. 
 
-+ The package installation functions check for dependencies and ensures that any related packages can be installed to SQL Server, just like R package installation in the local compute context.
++ The package installation functions check for dependencies and ensure that any related packages can be installed to SQL Server, just like R package installation in the local compute context.
 
 + The function that _uninstalls_ packages also computes dependencies and ensures that packages that are no longer used by other packages on SQL Server are removed, to free up resources.
 
@@ -77,9 +73,9 @@ This section contains examples of how to use the package management functions wi
 
 **From R code**
 
-If you have permission to install packages, run one of the package management functions from your R client and specify the compute context where packages are to be added or removed.  The compute context can be your local computer or a database on the SQL Server instance. Your credentials determine whether the operation can be completed on the server. 
+If you have permission to install packages, run one of the package management functions from your R client and specify the compute context where packages are to be added or removed.  The compute context can be your local computer or a database on the SQL Server instance. Your credentials determine whether the operation can be completed on the server.
 
-**From T-SQL**
+**From Transact-SQL**
 
 To run package management functions from a stored procedure, wrap them in a call to `sp_execute_external_script`.
 
@@ -119,7 +115,7 @@ Run this command from an R console to get the build number and version numbers f
 
 ### Install a package on SQL Server
 
-This example installs the **ggplot2** package and its dependencies into the compute context, *sqlServer*.
+This example installs the **forecast** package and its dependencies into the compute context, *sqlServer*.
 
   ```R
   pkgs <- c("ggplot2")
@@ -137,7 +133,7 @@ This example removes the **ggplot2** package and its dependencies from the compu
 
 ### Synchronize packages between database and file system
 
-The following example checks the database **TestDB** and ensure that all packages are installed in the file system. If some packages are missing, they are installed in the file system.
+The following example checks the database **TestDB**, and determines whether all packages are installed in the file system. If some packages are missing, they are installed in the file system.
 
 ```R
 # Instantiate the compute context
@@ -161,4 +157,21 @@ EXEC sp_execute_external_script
     myPackages <- rxInstalledPackages();
     OutputDataSet <- as.data.frame(myPackages);
     '
+```
+
+The `rxSqlLibPaths` function can be used to determine the active library used by SQL Server Machine Learning Services. This script can return only the library path for the current server. 
+
+```SQL
+declare @instance_name nvarchar(100) = @@SERVERNAME, @database_name nvarchar(128) = db_name();
+exec sp_execute_external_script 
+  @language = N'R',
+  @script = N'
+    connStr <- paste("Driver=SQL Server;Server=", instance_name, ";Database=", database_name, ";Trusted_Connection=true;", sep="");
+    .libPaths(rxSqlLibPaths(connStr));
+    print(.libPaths());
+  ', 
+  @input_data_1 = N'', 
+  @params = N'@instance_name nvarchar(100), @database_name nvarchar(128)',
+  @instance_name = @instance_name, 
+  @database_name = @database_name;
 ```

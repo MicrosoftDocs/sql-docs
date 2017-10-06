@@ -53,7 +53,7 @@ In **SQL Server 2016**, an administrator must install R packages in the R librar
 
 + If you are using SQL Server 2016 R Services, you should continue to install R packages used by the instance using R tools> Be sure to use the R library associated with the instance.
 
-The following sections provide more detail about how package management is performed using these to options.
+The following sections provide more detail about how package management is performed using these two options.
 
 ## R package management using T-SQL
 
@@ -182,7 +182,7 @@ The CTP 2.0 release of SQL Server 2017 (and the April 2017 release of Microsoft 
 Package synchronization means that the database engine tracks the packages that are used by a specific owner and group, and can write those packages to the file system if needed. You can use package synchronization in these scenarios:
 
 + You want to move R packages between instances of SQL Server.
-+ You need to re-install packages for a specific user or group after a database is restored.
++ You need to reinstall packages for a specific user or group after a database is restored.
 
 For more information about how to enable and use this feature, see [R package synchronization for SQL Server](package-install-uninstall-and-sync.md).
 
@@ -192,7 +192,7 @@ The traditional method of managing R packages on an instance is to install and l
 
 + This option might be the only option if you are using an early release of SQL Server 2016.  
 + This option might also be convenient if you are the only user of R packages and have administrative access to the server.
-+ To make managing R package versions easier, you can use [miniCRAN](create-a-local-package-repository-using-minicran.md) to create a local rpository and share that among instances.
++ To make managing R package versions easier, you can use [miniCRAN](create-a-local-package-repository-using-minicran.md) to create a local repository and share that among instances.
 
 For details, see these articles:
 

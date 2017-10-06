@@ -1,7 +1,7 @@
 ---
 title: "How to enable or disable R package management for SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/21/2016"
+ms.date: "10/05/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -58,7 +58,7 @@ The default location for this utility is `<SQLInstancePath>\R_SERVICES\library\R
 
     -   If you do not specify a user, the current security context is used.
 
-    This command creates some database artifacts, including database roles (**rpkgs-users**, **rpkgs-private**, and **rpkgs-shared**) that are used for controlling user permissions.
+    This command creates some database artifacts, including the following database roles that are used for controlling user permissions: `rpkgs-users`, `rpkgs-private`, and `rpkgs-shared`.
 
 3.  To verify that the new roles have been successfully created, in SQL Server Management Studio, click the database, expand **Security**, and expand **Database Roles**.
 

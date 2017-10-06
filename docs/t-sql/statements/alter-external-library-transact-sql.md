@@ -72,7 +72,8 @@ Optionally, an OS platform for the file can be specified. Only one file artifact
 
 Specifies the name of the external data source that contains the location of the library file. This location should reference an Azure blob storage path. To create an external data source, use [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](create-external-data-source-transact-sql.md).
 
-> [!IMPORTANT] You cannot use blobs as a data source in the SQL Server 2017 release.
+> [!IMPORTANT] 
+> Currently, blobs are not supported as a data source in the SQL Server 2017 release.
 
 **library_bits**
 

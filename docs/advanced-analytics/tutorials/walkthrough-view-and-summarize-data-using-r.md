@@ -239,8 +239,8 @@ print(paste("It takes CPU Time=", round(used.time[1]+used.time[2],2)," seconds,
 
 ## Next lesson
 
-[Create graphs and plots using R](/walkthrough-create-graphs-and-plots-using-r.md)
+[Create graphs and plots using R](walkthrough-create-graphs-and-plots-using-r.md)
 
 ## Previous lesson
 
-[Explore the data using SQL](/walkthrough-view-and-explore-the-data.md)
+[Explore the data using SQL](walkthrough-view-and-explore-the-data.md)

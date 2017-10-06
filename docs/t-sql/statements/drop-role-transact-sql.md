@@ -73,7 +73,7 @@ DROP ROLE role_name
  To remove a server role, use [DROP SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-role-transact-sql.md).  
   
 ## Permissions  
- Requires **ALTER ANY ROLE** permission on the database, or **CONTOL** permission on the role, or membership in the **db_securityadmin**.  
+ Requires **ALTER ANY ROLE** permission on the database, or **CONTROL** permission on the role, or membership in the **db_securityadmin**.  
   
 ## Examples  
  The following example drops the database role `purchasing` from the `AdventureWorks2012` database.  

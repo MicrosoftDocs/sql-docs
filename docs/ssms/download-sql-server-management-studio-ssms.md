@@ -1,7 +1,7 @@
 ---
 title: "Download SQL Server Management Studio (SSMS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/03/2017"
+ms.date: "10/06/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -138,7 +138,8 @@ The following are issues and limitations with this 17.3 release:
 - The following SSMS functionality is not supported for Azure AD auth using UA with MFA:
    - Database Engine Tuning Advisor is not supported for Azure AD auth; there is a known issue where the error message presented to the user is a bit cryptic "Could not load file or assembly 'Microsoft.IdentityModel.Clients.ActiveDirectory,…" instead of the expected "Database Engine Tuning Advisor does not support Microsoft Azure SQL Database. (DTAClient)".
 - Trying to analyze a query in DTA results in an error: "Object must implement IConvertible. (mscorlib)".
-
+- *Regressed Queries* is missing from the Query Store list of reports in Object Explorer.
+   - Workaround: Right-click the **Query Store** node and select **View Regressed Queries**.
 
 **Integration Services (IS)**
 

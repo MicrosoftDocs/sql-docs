@@ -49,7 +49,7 @@ CREATE SYNONYM [ schema_name_1. ] synonym_name FOR <object>
 ```  
   
 ```  
--- Windows Azure SQL Database Syntax  
+-- Azure SQL Database Syntax  
   
 CREATE SYNONYM [ schema_name_1. ] synonym_name FOR < object >  
   

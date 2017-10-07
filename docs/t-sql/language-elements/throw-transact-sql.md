@@ -152,7 +152,7 @@ THROW 51000, 'The record does not exist.', 1;
  ```
  Msg 51000, Level 16, State 1, Line 1  
   
- `The record does not exist.
+ The record does not exist.
  ```  
   
 ## See Also  

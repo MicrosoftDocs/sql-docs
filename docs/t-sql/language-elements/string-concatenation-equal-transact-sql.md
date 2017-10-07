@@ -98,20 +98,20 @@ GO
  ------- 
  8000 
   
- (1 row(s) affected)` 
+ (1 row(s) affected) 
   
     
  Y       
  ------- 
  12000 
   
- (1 row(s) affected)` 
+ (1 row(s) affected) 
 
  Y       
  ------- 
  8000 
   
- (1 row(s) affected)` 
+ (1 row(s) affected) 
   
  Y       
  ------- 

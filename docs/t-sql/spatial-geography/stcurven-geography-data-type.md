@@ -63,8 +63,9 @@ manager: "jhubbard"
  The following example returns the second curve in a **CircularString** instance:  
   
 ```
- DECLARE @g geography = 'CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653)';`  
- SELECT @g.STCurveN(2).ToString();`  
+ DECLARE @g geography = 'CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653)';  
+ SELECT @g.STCurveN(2).ToString();
+ ```  
   
  The example returns.  
   
@@ -74,8 +75,9 @@ manager: "jhubbard"
  The following example returns the second curve in a **CompoundCurve** instance:  
   
 ```
- DECLARE @g geography = 'COMPOUNDCURVE(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))';`  
- SELECT @g.STCurveN(2).ToString();`  
+ DECLARE @g geography = 'COMPOUNDCURVE(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))';  
+ SELECT @g.STCurveN(2).ToString();
+ ```  
   
  The example returns.  
   
@@ -85,8 +87,9 @@ manager: "jhubbard"
  The following example uses a **CompoundCurve** instance that combines three separate **CircularString** instances into the same curve sequence as the previous example:  
   
 ```
- DECLARE @g geography = 'COMPOUNDCURVE (CIRCULARSTRING (-122.358 47.653, -122.348 47.649, -122.348 47.658), CIRCULARSTRING(-122.348 47.658, -122.358 47.658, -122.358 47.653))';`  
- SELECT @g.STCurveN(2).ToString();`  
+ DECLARE @g geography = 'COMPOUNDCURVE (CIRCULARSTRING (-122.358 47.653, -122.348 47.649, -122.348 47.658), CIRCULARSTRING(-122.348 47.658, -122.358 47.658, -122.358 47.653))';  
+ SELECT @g.STCurveN(2).ToString();
+ ```  
   
  The example returns.  
   
@@ -103,9 +106,9 @@ manager: "jhubbard"
  SET @n = 2;  
  SET @g = geography::Parse('LINESTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653)');  
  IF @n >= 1 AND @n <= @g.STNumCurves()  
-  BEGIN  
+ BEGIN  
  SELECT @g.STCurveN(@n).ToString();  
-  END
+ END
   ```  
   
 ## See Also  

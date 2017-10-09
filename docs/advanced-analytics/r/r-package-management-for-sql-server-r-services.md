@@ -1,7 +1,7 @@
 ---
 title: "R package management for SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/29/2017"
+ms.date: "10/09/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -121,7 +121,7 @@ The library name is for managing the package or collection of packages in SQL Se
 
 To use this statement, the package management feature must have been enabled on the instance. For more information, see [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql).
 
-[!NOTE]
+> [!NOTE]
 > Currently you can use this statement to create only Windows-based libraries for R. Support is planned in future for Python packages, and for packages that execute on other platforms, such as Linux.
 
 After the external library has been uploaded to the server, you must install it to the R package library associated with the instance. There are several ways to do this:

@@ -111,9 +111,11 @@ SELECT LOG(10);
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `----------------`  
+ ```
+ ----------------`  
   
- `2.30`  
+ 2.30
+ ```  
   
 ### D. Calculating the logarithm of the exponent of a number  
  The following example calculates the `LOG` for the exponent of a number.  

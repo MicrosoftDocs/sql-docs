@@ -66,21 +66,26 @@ For a complete list of changes, see the [changelog](changelog-for-sql-server-dat
 ### Available Languages - SSDT for VS 2015
   
  This release of SSDT can be installed in the following languages:  
-[Chinese (People's Republic of China)]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x804) | 
-[Chinese (Taiwan)]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x404) | 
-[English (United States)]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x409) | 
-[French]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x40c)  
-[German]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x407) | 
-[Italian]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x410) | 
-[Japanese]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x411) | 
-[Korean]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x412) | 
-[Portuguese (Brazil)]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x416) | 
-[Russian]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x419) | 
-[Spanish]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x40a)  
+[Chinese (People's Republic of China)]( https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x804) | 
+[Chinese (Taiwan)]( https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x404) | 
+[English (United States)]( https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x409) | 
+[French]( https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x40c)  
+[German]( https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x407) | 
+[Italian]( https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x410) | 
+[Japanese]( https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x411) | 
+[Korean]( https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x412) | 
+[Portuguese (Brazil)]( https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x416) | 
+[Russian]( https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x419) | 
+[Spanish]( https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x40a)  
 
 ### ISO Images - SSDT for VS 2015
 
 An ISO image of SSDT can be used as an alternative way to install SSDT or to set up an Administrative Installation point. The ISO is a self-contained file that contains all of the components needed by SSDT and it can be downloaded using a restartable download manager, useful for situations with limited or less reliable network bandwidth. Once downloaded, the ISO can be mounted as a drive or burned to a DVD.
+
+> [!IMPORTANT]
+> The following ISO links install SSDT for VS 2015 17.2.
+>
+> ISO links for 17.3 will be available soon.
 
 [Chinese (People's Republic of China)]( https://go.microsoft.com/fwlink/?linkid=852942&clcid=0x804) |
 [Chinese (Taiwan)]( https://go.microsoft.com/fwlink/?linkid=852942&clcid=0x404) |

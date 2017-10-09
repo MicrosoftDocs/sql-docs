@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Management Studio - Changelog (SSMS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/06/2017"
+ms.date: "10/09/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -21,7 +21,7 @@ This article provides details about updates, improvements, and bug fixes for the
 
 
 ## [SSMS 17.3](download-sql-server-management-studio-ssms.md)
-Generally available | Build number: 
+Generally available | Build number: 14.0.17199.0
 
 ### Enhancements
 

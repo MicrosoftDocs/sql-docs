@@ -37,7 +37,7 @@ For any operation, you have to specify an Azure Data Lake connection manager.
 Here are the properties specific to each operation:
 
 ### CopyToADLS
-- **LocalDirectory:** Specifies the source directory which contains files to upload.
+- **LocalDirectory:** Specifies the local source directory which contains files to upload.
 - **FileNamePattern:** Specifies a file name filter for source files. Only files whose name matches the specified pattern are uploaded. Wildcards `*` and `?` are supported.
 - **SearchRecursively:** Specifies whether to search recursively within the source directory for files to upload.
 - **AzureDataLakeDirectory:** Specifies the ADLS destination directory to upload files to.

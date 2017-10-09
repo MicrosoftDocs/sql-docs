@@ -79,13 +79,13 @@ SELECT @altstartdate - 1.5 AS 'Subtract Date';
   
  Here is the result set:  
   
- `Subtract Date`  
-  
- `-----------------------`  
-  
- `1900-01-08 15:00:00.000`  
-  
- `(1 row(s) affected)`  
+ ```
+ Subtract Date  
+ -----------------------  
+ 1900-01-08 15:00:00.000  
+
+ (1 row(s) affected)
+ ```  
   
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   

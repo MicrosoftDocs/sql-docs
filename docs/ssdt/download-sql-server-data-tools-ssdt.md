@@ -57,8 +57,9 @@ SSDT for Visual Studio 2017 has the same system requirements as installing VS, s
 ## SSDT for Visual Studio 2015
 **Version Information**  
   
-The release number: 17.3  
-The build number for this release: 
+The release number: 17.3
+
+The build number for this release: 14.0.61709.290
   
 For a complete list of changes, see the [changelog](changelog-for-sql-server-data-tools-ssdt.md).
 

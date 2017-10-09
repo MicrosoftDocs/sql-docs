@@ -21,7 +21,7 @@ This change log is for [SQL Server Data Tools (SSDT)](download-sql-server-data-t
 For detailed posts about what's new and changed, see [the SSDT Team blog](https://blogs.msdn.microsoft.com/ssdt/)
 
 ## SSDT 17.3 for Visual Studio 2015
-Build number: 
+Build number: 14.0.61709.290
 
 ### What's New?
 

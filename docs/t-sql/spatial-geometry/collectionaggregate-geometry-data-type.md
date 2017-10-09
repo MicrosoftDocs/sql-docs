@@ -52,27 +52,19 @@ CollectionAggregate ( geometry_operand )
 ## Examples  
  The following example returns a `GeometryCollection` instance that contains a `CurvePolygon` and a `Polygon`.  
   
- `-- Setup table variable for CollectionAggregate example`  
-  
- `DECLARE @Geom TABLE`  
-  
- `(`  
-  
- `shape geometry,`  
-  
- `shapeType nvarchar(50)`  
-  
- `)`  
-  
- `INSERT INTO @Geom(shape,shapeType) VALUES('CURVEPOLYGON(CIRCULARSTRING(2 3, 4 1, 6 3, 4 5, 2 3))', 'Circle'),`  
-  
- `('POLYGON((1 1, 4 1, 4 5, 1 5, 1 1))', 'Rectangle');`  
-  
- `-- Perform CollectionAggregate on @Geom.shape column`  
-  
- `SELECT geometry::CollectionAggregate(shape).ToString()`  
-  
- `FROM @Geom;`  
+ ```
+ -- Setup table variable for CollectionAggregate example  
+ DECLARE @Geom TABLE  
+ (  
+ shape geometry,  
+ shapeType nvarchar(50)  
+ )  
+ INSERT INTO @Geom(shape,shapeType) VALUES('CURVEPOLYGON(CIRCULARSTRING(2 3, 4 1, 6 3, 4 5, 2 3))', 'Circle'),  
+ ('POLYGON((1 1, 4 1, 4 5, 1 5, 1 1))', 'Rectangle');  
+ -- Perform CollectionAggregate on @Geom.shape column  
+ SELECT geometry::CollectionAggregate(shape).ToString()  
+ FROM @Geom;
+ ```  
   
 ## See Also  
  [Extended Static Geometry Methods](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)  

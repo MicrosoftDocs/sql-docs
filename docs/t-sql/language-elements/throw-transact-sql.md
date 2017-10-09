@@ -77,9 +77,11 @@ THROW 51000, 'The record does not exist.', 1;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Msg 51000, Level 16, State 1, Line 1`  
+ ```
+ Msg 51000, Level 16, State 1, Line 1  
   
- `The record does not exist.`  
+ The record does not exist.
+ ```  
   
 ### B. Using THROW to raise an exception again  
  The following example shows how use the `THROW` statement to raise the last thrown exception again.  
@@ -105,13 +107,12 @@ END CATCH;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `PRINT 'In catch block.';`  
-  
- `Msg 2627, Level 14, State 1, Line 1`  
-  
- `Violation of PRIMARY KEY constraint 'PK__TestReth__3214EC272E3BD7D3'. Cannot insert duplicate key in object 'dbo.TestRethrow'.`  
-  
- `The statement has been terminated.`  
+ ```
+ PRINT 'In catch block.';  
+ Msg 2627, Level 14, State 1, Line 1  
+ Violation of PRIMARY KEY constraint 'PK__TestReth__3214EC272E3BD7D3'. Cannot insert duplicate key in object 'dbo.TestRethrow'.  
+ The statement has been terminated.
+ ```  
   
 ### C. Using FORMATMESSAGE with THROW  
  The following example shows how to use the `FORMATMESSAGE` function with `THROW` to throw a customized error message. The example first creates a user-defined error message by using `sp_addmessage`. Because the THROW statement does not allow for substitution parameters in the *message* parameter in the way that RAISERROR does, the FORMATMESSAGE function is used to pass the three parameter values expected by error message 60000.  
@@ -132,9 +133,10 @@ THROW 60000, @msg, 1;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Msg 60000, Level 16, State 1, Line 2`  
-  
- `This is a test message with one numeric parameter (500), one string parameter (First string), and another string parameter (second string).`  
+ ```
+ Msg 60000, Level 16, State 1, Line 2  
+ This is a test message with one numeric parameter (500), one string parameter (First string), and another string parameter (second string).
+ ```  
   
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
@@ -147,9 +149,11 @@ THROW 51000, 'The record does not exist.', 1;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Msg 51000, Level 16, State 1, Line 1`  
+ ```
+ Msg 51000, Level 16, State 1, Line 1  
   
- `The record does not exist.`  
+ The record does not exist.
+ ```  
   
 ## See Also  
  [FORMATMESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/formatmessage-transact-sql.md)   

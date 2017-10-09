@@ -62,20 +62,20 @@ SELECT @g.STSymDifference(@h).ToString();
 ### B. Computing the symmetric difference between a CurvePolygon and a Polygon instance  
  The following example returns a `GeometryCollection` that represents the symmetric difference between a `CurvePolygon` and a `Polygon`.  
   
- `DECLARE @g geometry = 'CURVEPOLYGON (CIRCULARSTRING (0 -4, 4 0, 0 4, -4 0, 0 -4))';`  
-  
- `DECLARE @h geometry = 'POLYGON ((1 -1, 5 -1, 5 3, 1 3, 1 -1))';`  
-  
- `SELECT @h.STSymDifference(@g).ToString();`  
+```
+ DECLARE @g geometry = 'CURVEPOLYGON (CIRCULARSTRING (0 -4, 4 0, 0 4, -4 0, 0 -4))';  
+ DECLARE @h geometry = 'POLYGON ((1 -1, 5 -1, 5 3, 1 3, 1 -1))';  
+ SELECT @h.STSymDifference(@g).ToString();
+ ```  
   
 ## C. Using STSymDifference() on CurvePolygon instance with an inscribed Polygon instance  
  The following example returns a `CurvePolygon` instance with an interior `Polygon` ring that represents the symmetric difference between the two instances compared.  
   
- `DECLARE @g geometry = 'CURVEPOLYGON (CIRCULARSTRING (0 -4, 4 0, 0 4, -4 0, 0 -4))';`  
-  
- `DECLARE @h geometry = 'POLYGON ((1 -1, 2 -1, 2 1, 1 1, 1 -1))';`  
-  
- `SELECT @h.STSymDifference(@g).ToString();`  
+```
+ DECLARE @g geometry = 'CURVEPOLYGON (CIRCULARSTRING (0 -4, 4 0, 0 4, -4 0, 0 -4))';  
+ DECLARE @h geometry = 'POLYGON ((1 -1, 2 -1, 2 1, 1 1, 1 -1))';  
+ SELECT @h.STSymDifference(@g).ToString();
+ ```  
   
 ## See Also  
  [OGC Methods on Geometry Instances](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  

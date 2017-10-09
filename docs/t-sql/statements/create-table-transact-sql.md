@@ -1038,21 +1038,17 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `(1 row(s) affected)`  
-  
- `Test1Col`  
-  
- `-----------`  
-  
- `1`  
-  
- `(1 row(s) affected)`  
-  
- `Test2Col`  
-  
- `-----------`  
-  
- `2`  
+ ```
+ (1 row(s) affected) 
+ Test1Col 
+ ----------- 
+ 1 
+
+ (1 row(s) affected) 
+ Test2Col 
+ ----------- 
+ 2 
+ ```
   
  When you create local or global temporary tables, the CREATE TABLE syntax supports constraint definitions except for FOREIGN KEY constraints. If a FOREIGN KEY constraint is specified in a temporary table, the statement returns a warning message that states the constraint was skipped. The table is still created without the FOREIGN KEY constraints. Temporary tables cannot be referenced in FOREIGN KEY constraints.  
   

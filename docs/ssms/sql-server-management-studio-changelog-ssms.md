@@ -21,7 +21,7 @@ This article provides details about updates, improvements, and bug fixes for the
 
 
 ## [SSMS 17.3](download-sql-server-management-studio-ssms.md)
-Generally available | Build number: 
+Generally available | Build number: 14.0.17199.0
 
 ### Enhancements
 

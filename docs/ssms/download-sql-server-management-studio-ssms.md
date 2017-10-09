@@ -56,7 +56,8 @@ If a computer contains side by side installations of SSMS, verify you start the 
 **Version Information**
 
 The release number: 17.3
-The build number for this release: NEEDED
+
+The build number for this release: 14.0.17199.0
 
 ## New in this Release
 

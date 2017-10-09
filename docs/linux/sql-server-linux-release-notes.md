@@ -92,6 +92,7 @@ The following features and services are not available on Linux at this time. The
 | **Security** | Extensible Key Management |
 | &nbsp; | AD Authentication for Linked Servers | 
 | &nbsp; | AD Authentication for Availibility Groups (AGs) | 
+| &nbsp; | 3rd party AD tools (Centrify, Vintela, Powerbroker) | 
 | **Services** | SQL Server Browser |
 | &nbsp; | SQL Server R services |
 | &nbsp; | StreamInsight |

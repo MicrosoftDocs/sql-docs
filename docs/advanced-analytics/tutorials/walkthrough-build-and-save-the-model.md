@@ -140,6 +140,7 @@ In this section, you'll experiment with both techniques.
     ```R
     library('ROCR');
     pred <- prediction(scoredOutput$Score, scoredOutput$tipped);
+    ```
 
 3. Generate a local plot, based on the values stored in the output variable `pred`.
 

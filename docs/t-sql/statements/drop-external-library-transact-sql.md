@@ -26,6 +26,7 @@ manager: "jhubbard"
 Deletes an existing package library.
 
 ## Syntax  
+
 ```
 DROP EXTERNAL LIBRARY library_name  
 [ AUTHORIZATION owner_name ];  
@@ -55,17 +56,17 @@ Unlike other `DROP` statements in SQL Server, this statement supports specifying
 
 ## Examples
 
-Add ggplot2 to a database:
+Add a custom R package, named `customPackage`, to a database:
 
 ```sql
-CREATE EXTERNAL LIBRARY ggplot2 
-FROM 'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\ggplot2.zip';
+CREATE EXTERNAL LIBRARY customPackage 
+FROM 'C:\Users\Username\CustomPackages\customPackage.zip';
 ```
 
-Delete the ggplot2 library.
+Delete the `customPackage` library.
 
 ```sql
-DROP EXTERNAL LIBRARY ggplot2 <user_name>;
+DROP EXTERNAL LIBRARY customPackage <user_name>;
 ```
 
 ## See also  

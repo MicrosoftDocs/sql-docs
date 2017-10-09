@@ -240,7 +240,7 @@ SET @indid = (SELECT index_id
               FROM sys.indexes    
               WHERE object_id = OBJECT_ID('Production.Product')    
                     AND name = 'AK_Product_Name');    
-DBCC CHECKTABLE ('Production.Product',indid);    
+DBCC CHECKTABLE ('Production.Product',@indid);    
 ```    
     
 ## See Also    

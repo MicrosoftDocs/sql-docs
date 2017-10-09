@@ -72,7 +72,7 @@ To use these reports:
 > [!IMPORTANT]
 > On some computers, such as those with display devices with high DPI or greater than 1080p resolution, or in some remote desktop sessions, these reports cannot be used. There is a bug in the report viewer control in SSMS that crashes the report.
 
-## Report List
+## Report list
 
 The product samples repository in GitHub currently includes the following reports:
 
@@ -108,9 +108,8 @@ The product samples repository in GitHub currently includes the following report
 
   Use this report to view consumption of CPU, memory, and I/O resources by external script execution. You can also view the memory setting of external resource pools.
 
-## See Also
+## See also
 
 [Monitoring R Services](../../advanced-analytics/r-services/monitoring-r-services.md)
 
 [Extended events for R Services](../../advanced-analytics/r-services/extended-events-for-sql-server-r-services.md)
-

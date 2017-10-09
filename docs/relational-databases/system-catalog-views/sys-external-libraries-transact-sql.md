@@ -1,7 +1,7 @@
 ---
 title: "sys.external_libraries (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/17/2017"
+ms.date: "10/05/2017"
 ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
@@ -38,11 +38,11 @@ The catalog view sys.external_libraries lists a row for each external library th
 |name |sysname |Name of the external library. Is unique within the database per owner.|
 |principal_id |int |ID of the principal that owns this external library. |
 |language | sysname | Name of the language or runtime that supports the external library. Valid values are 'R'. Additional runtimes might be added in future.|
-|scope |int |TBD |  
-|scope_desc |varchar(7) |TBD |
+|scope |int |0 for public scope; 1 for private scope |  
+|scope_desc |varchar(7) |Indicates whether the package is public or private|
 
 
 ## See also  
 [sys.external_library_files](sys-external-library-files-transact-sql.md)  
-[CREATE EXTERNAL LIBRARY](../../t-sql/statements/create-external-library-transact-sql.md)
+[CREATE EXTERNAL LIBRARY](../../t-sql/statements/create-external-library-transact-sql.md)  
 [Package management for SQL Server R Services](../../advanced-analytics/r/installing-and-managing-r-packages.md)  

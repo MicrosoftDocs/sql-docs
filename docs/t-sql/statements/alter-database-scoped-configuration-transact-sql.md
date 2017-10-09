@@ -283,7 +283,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE=OFF ;
 * [Optimizing Your Query Plans with the SQL Server 2014 Cardinality Estimator](https://msdn.microsoft.com/library/dn673537.aspx)
 
 ### PARAMETER_SNIFFING Resources    
-* [Parameter Sniffing](../../relational-databases/query-processing-architecture-guide.md#ForcedParam)
+* [Parameter Sniffing](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing)
 * ["I smell a parameter!"](https://blogs.msdn.microsoft.com/queryoptteam/2006/03/31/i-smell-a-parameter/)
 
 ### QUERY_OPTIMIZER_HOTFIXES Resources    

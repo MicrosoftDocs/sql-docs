@@ -1,5 +1,5 @@
 ---
-title: "Create a Local Package Repository Using miniCRAN | Microsoft Docs"
+title: "Create a local package repository using miniCRAN | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/29/2017"
 ms.prod: "sql-server-2016"
@@ -15,7 +15,7 @@ author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
 ---
-# Create a local package repository Using miniCRAN
+# Create a local package repository using miniCRAN
 
 There are two ways that you can prepare R packages for installation onto a server without internet access.
 
@@ -129,13 +129,13 @@ The following procedure describes how to install the packages using R tools.
 
 2.  Open an R command prompt using the R tool associated with the instance.
 
-    -   For SQL Server 2017, the default folder is `C:/Program Files/Microsoft SQL Server/MSSQL14.MSSQLSERVER/R_SERVICES/library`.
+    - For SQL Server 2017, the default folder is `C:/Program Files/Microsoft SQL Server/MSSQL14.MSSQLSERVER/R_SERVICES/library`.
 
-    -   For SQL Server 2016, the default folder is `C:/Program Files/Microsoft SQL Server/MSSQL13.MSSQLSERVER/R_SERVICES/library`.
+    - For SQL Server 2016, the default folder is `C:/Program Files/Microsoft SQL Server/MSSQL13.MSSQLSERVER/R_SERVICES/library`.
 
-    -   For a named instance, the default path would be something like: `<instance_path>.RTEST/R_SERVICES/library`.
+    - For a named instance, the default path would be something like: `<instance_path>.RTEST/R_SERVICES/library`.
 
--   If you have installed SQL Server to a different drive, or made any other changes in the installation path, be sure to make those changes as well.
+    -  If you have installed SQL Server to a different drive, or made any other changes in the installation path, be sure to make those changes as well.
 
 3.  Get the path for the instance library (in case you're in a user directory), and add it to the list of library paths.
 
@@ -172,10 +172,9 @@ The following procedure describes how to install the packages using R tools.
     installed.packages()
     ```
 
-[!NOTE] 
-> In SQL Server 2017, additional database roles and T-SQL statements are provided to help server administrators manage permissions over packages. The database administrator can own the task of installing packages, using either R or T-SQL, if so desired. 
->  
-> However, the DBA can also use roles to give users the ability to install their own packages. For more information, see [R package management for SQL Server](r-package-management-for-sql-server-r-services.md).
+> [!NOTE] 
+> 
+> In SQL Server 2017, additional database roles and T-SQL statements are provided to help server administrators manage permissions over packages. The database administrator can own the task of installing packages, using either R or T-SQL, if so desired. However, the DBA can also use roles to give users the ability to install their own packages. For more information, see [R package management for SQL Server](r-package-management-for-sql-server-r-services.md).
 > 
 > In SQL Server 2016, a server administrator must install packages from the miniCRAN repository into the default library used by the instance. To do this, use the R tools as described in the [preceding section](#bkmk_Rtools).
 
@@ -191,4 +190,7 @@ After downloading the packages, you install the R packages from the zipped file 
 
 3.  Install the packages into the SQL Server instance library.
 
--   You can use R to install for the instance as a whole. Or, use the SQL Server CREATE EXTERNAL LIBRARY statement to install the package into a database and share the package with users. See [Install additional R packages in SQL Server](install-additional-r-packages-on-sql-server.md)
+> [!NOTE]
+> When you use R tools to install packages, they are installed for the instance as a whole. 
+> 
+> If you want to install the package into a database and share the package with users using database roles, you must upload the library using the CREATE EXTERNAL LIBRARY statement. See [Install additional R packages in SQL Server](install-additional-r-packages-on-sql-server.md)

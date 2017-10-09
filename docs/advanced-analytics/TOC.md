@@ -110,15 +110,15 @@
 
 ### [Determine which packages are installed on SQL Server](r/determine-which-packages-are-installed-on-sql-server.md)
 
-### [How to use RevoScaleR functions to find or install R packages on SQL Server](r/use-revoscaler-to-manage-r-packages.md)
+### [Use RevoScaleR functions to find or install R packages on SQL Server](r/use-revoscaler-to-manage-r-packages.md)
 
-### [R package synchronization for SQL Server](r/package-install-uninstall-and-sync.md)
+### [Synchronize R packages installed on SQL Server](r/package-install-uninstall-and-sync.md)
 
 ### [R packages installed with SQL Server](r/installing-and-managing-r-packages.md)
 
-### [Create a local package repository using miniCRAN](r/create-a-local-package-repository-using-minicran.md)
+### [Use miniCRAN to create a local package repository](r/create-a-local-package-repository-using-minicran.md)
 
-### [Avoiding errors with user package libraries for R](r/packages-installed-in-user-libraries.md)
+### [Avoid errors with user package libraries for R](r/packages-installed-in-user-libraries.md)
 
 
 ## Data exploration and modeling

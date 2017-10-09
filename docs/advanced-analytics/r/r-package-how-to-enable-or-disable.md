@@ -1,5 +1,5 @@
 ---
-title: "How to enable or disable R package management for SQL Server | Microsoft Docs"
+title: "Enable or disable R package management for SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/05/2017"
 ms.prod: "sql-server-2016"
@@ -15,7 +15,7 @@ author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
 ---
-# How to enable or disable R package management for SQL Server
+# Enable or disable R package management for SQL Server
 
 This article describes the process of enabling or disabling the new package management feature in SQL Server 2017. This feature allows the database administrator to control package installation on the instance. The feature relies on new database roles to grant users the ability to install the R packages they need, or share packages with other users.
 
@@ -34,35 +34,35 @@ To [disable](#bkmk_disable) the package management feature, reverse the process 
 
 2.  Disable package management on the SQL Server instance (once per instance)
 
-## <a name="bkmk_enable"></a> To enable package management
+## <a name="bkmk_enable"></a> Enable package management
 
 To enable or disable package management requires the command-line utility **RegisterRExt.exe**, which is included with the **RevoScaleR** package.
 
-The default location for this utility is `<SQLInstancePath>\R_SERVICES\library\RevoScaleR\rxLibs\x64\RegisterRExe.exe`.
+1. Open an elevated command prompt and navigate to the folder containing the utility, RegisterRExt.exe. The default location is `<SQLInstancePath>\R_SERVICES\library\RevoScaleR\rxLibs\x64\RegisterRExe.exe`.
 
-1.  Open an elevated command prompt and use the following command:
+2. Run the following command, providing appropiate arguments for your environment:
 
--   `RegisterRExt.exe /installpkgmgmt [/instance:name] [/user:username] [/password:*|password]`
-
-    -   If you do not specify an instance, the default instance is used.
-
-    -   If you do not specify a user, the current security context is used.
+    `RegisterRExt.exe /installpkgmgmt [/instance:name] [/user:username] [/password:*|password]`
 
     This command creates instance-level objects on the SQL Server computer that are required for package management. It also restarts the Launchpad for the instance.
 
+    If you do not specify an instance, the default instance is used.
+
+    If you do not specify a user, the current security context is used.
+
 2.  To add package management at the database level, run the following command from an elevated command prompt:
 
--   `RegisterRExt.exe /installpkgmgmt /database:databasename [/instance:name] [/user:username] [/password:*|password]`
-
-    -   Repeat the command for each database where packages must be installed.
-
-    -   If you do not specify a user, the current security context is used.
-
+    `RegisterRExt.exe /installpkgmgmt /database:databasename [/instance:name] [/user:username] [/password:*|password]`
+   
     This command creates some database artifacts, including the following database roles that are used for controlling user permissions: `rpkgs-users`, `rpkgs-private`, and `rpkgs-shared`.
 
-3.  To verify that the new roles have been successfully created, in SQL Server Management Studio, click the database, expand **Security**, and expand **Database Roles**.
+    If you do not specify a user, the current security context is used.
 
--   You can also run a query on sys.database_principals such as the following:
+3. Repeat the command for each database where packages must be installed.
+
+4.  To verify that the new roles have been successfully created, in SQL Server Management Studio, click the database, expand **Security**, and expand **Database Roles**.
+
+    You can also run a query on sys.database_principals such as the following:
 
     ```SQL
     SELECT pr.principal_id, pr.name, pr.type_desc,   
@@ -79,7 +79,7 @@ The default location for this utility is `<SQLInstancePath>\R_SERVICES\library\R
 
 4.  After the feature has been enabled, any user with the appropriate permissions can use the [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) statement in T-SQL to add packages. For an example of how this works, see [Install additional packages on SQL Server](install-additional-r-packages-on-sql-server.md).
 
-## <a name="bkmk_disable"></a> To disable package management
+## <a name="bkmk_disable"></a> Disable package management
 
 1.  From an elevated command prompt, run the following command to disable package management at the database level:
 
@@ -93,3 +93,6 @@ The default location for this utility is `<SQLInstancePath>\R_SERVICES\library\R
 
     This command removes the package management feature from the instance.
 
+## See also
+
+[R package management for SQL Server](r-package-management-for-sql-server-r-services.md)

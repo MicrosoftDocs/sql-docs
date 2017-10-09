@@ -33,15 +33,15 @@ This article describes how to install new R packages to an instance of SQL Serve
 
     Be sure to check for package dependencies and get any related packages that might be needed during installation. To prepare a collection of packages and their dependencies, we recommend the [miniCRAN package](#bkmk_packageDependencies).
 
-3.  Package installation methods differ depending on whether the server has internet access, and on your version of SQL Server. The recommended methods are as follows:
+3.  Package installation methods differ depending on whether the server has internet access, and on your version of SQL Server. The recommended processes are as follows:
 
-    **SQL Server 2016**
+    **Package installation for SQL Server 2016**
     
     1. The data scientist provides the packages required for a project or team. Use [miniCRAN](create-a-local-package-repository-using-minicran.md) to prepare collections of packages with their dependencies.
 
     2. The database administrator installs the packages to the instance library using R tools.
 
-    **SQL Server 2017**
+    **Package installation for SQL Server 2017**
 
     1. The database administrator enables package management on the instance and adds users to new package management roles.
 
@@ -55,9 +55,17 @@ This article describes how to install new R packages to an instance of SQL Serve
 
 ## Install new packages
 
-This section provide detailed procedures for the following key package installation scenarios:
+This section provide detailed procedures for the following key package installation scenarios. The best method for you to use depends on these factores:
+
+- The version of SQL Server you are using
+
+- Whether you are the sole owner of the instance, or are trying to mamaneg packages for multiple people using database roles.
+
+- Whether you are installing one packages, or multiple packages with dependencies
 
 **Use SQL Server package management**
+
+If your instance supports package management features, you can use either T-SQL or conventional R tools.
 
 -  Upload an R package to a SQL Server where package management and role-based package access is enabled. A user then installs the package using T-SQL.
 
@@ -72,6 +80,8 @@ This section provide detailed procedures for the following key package installat
     [Install multiple packages from a miniCRAN repository](#bkmk_minicran)
 
 **Use conventional R rools**
+
+If you are using an earlier version of SQL Server R services, follow these instructions to install packages using conventional R tools. Optionally, use miniCRAN to prepare a collection of packages for installation.
 
 -  Install an R package into the default instance library using R tools. Requires administrative access.
 
@@ -132,24 +142,24 @@ This section provide detailed procedures for the following key package installat
 
 If you have already enabled package management on the instance, you can install new R packages from a remote R client, using RevoScaleR functions for package management.
 
-Before you do so, ensure that these conditions are met:
+1. Before you start, ensure that these conditions are met:
 
-+ The R client has the latest version of RevoScale. Pre-release versions did not include some package management functions.
-+ Package management has been enabled on the instance and on the database.
-+ You have permission to one of the database management roles.
+    + The R client has the latest version of RevoScale. Pre-release versions did not include some package management functions.
+    + Package management has been enabled on the instance and on the database.
+    + You have permission to one of the database management roles.
 
-1. List the packages you want to install in a string variable.
+2. List the packages you want to install in a string variable.
 
     ```R
     packageList <- c("e1071")
 
-2. Define a connection string to the instance and database where package management is enabled, and use the connection string to create a SQL Server compute context.
+3. Define a connection string to the instance and database where package management is enabled, and use the connection string to create a SQL Server compute context.
 
     ```R
     sqlcc <- RxInSqlServer(connectionString = myConnString, shareDir = sqlShareDir, wait = sqlWait, consoleOutput = sqlConsoleOutput)
     ```
 
-3. Call `rxInstallPackages` and pass the compute context and the string variable containing the package names.
+4. Call `rxInstallPackages` and pass the compute context and the string variable containing the package names.
 
     ```R
     rxInstallPackages(pkgs = packageList, verbose = TRUE, computeContext = sqlcc)
@@ -169,7 +179,7 @@ You can use R tools to install new packages on both SQL Server 2016 and SQL Serv
 
 2.  Navigate to the folder on the server where the R libraries for the instance are installed.
 
-    [!IMPORTANT] 
+    > [!IMPORTANT] 
     > Be sure to install packages to the default library that is associated with the current instance. Never install packages to a user directory. For instructions on how to locate the default library, see [R packages installed with SQL Server](installing-and-managing-r-packages.md).
 
     For each instance where you run a package, install a separate copy of the package. Packages cannot be shared across instances.

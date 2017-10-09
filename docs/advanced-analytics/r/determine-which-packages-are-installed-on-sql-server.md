@@ -1,7 +1,7 @@
 ---
 title: "Determine which R packages are installed on SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/31/2016"
+ms.date: "10/09/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

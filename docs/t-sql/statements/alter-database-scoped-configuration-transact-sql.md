@@ -264,7 +264,7 @@ ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE ;
 
 ### G. Set IDENTITY_CACHE
 
-**Applies to**: SQL Server 2017 and Azure SQL Database (feature is in public preview) 
+**Applies to**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] and [!INCLUDE[ssSDS](../../includes/sssds-md.md)] (feature is in public preview) 
 
 This example disables the identity cache.
 

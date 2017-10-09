@@ -61,7 +61,7 @@ manager: "jhubbard"
   
 -   Foreach Azure Blob enumerator to enumerate blobs in a blob container in Azure Storage.  
 
--   Foreach ADLS File enumerator to enumerate files in an ADLS directory.
+-   Foreach ADLS File enumerator to enumerate files in a directory in Azure Data Lake Store.
   
  The following diagram shows a Foreach Loop container that has a File System task. The Foreach loop uses the Foreach File enumerator, and the File System task is configured to copy a file. If the folder that the enumerator specifies contains four files, the loop repeats four times and copies four files.  
   
@@ -91,7 +91,7 @@ manager: "jhubbard"
 |Foreach SMO|Specify the connection to a database and the SMO objects to enumerate.|  
 |Foreach HDFS File Enumerator|Specify a folder and the files to enumerate, the format of the file name of the retrieved files, and whether to traverse subfolders.|  
 |Foreach Azure Blob|Specify the Azure blob container that containers blobs to be enumerated.|  
-|Foreach ADLS File|Specify the ADLS directory that contains files to be enumerated, along with some filters.|
+|Foreach ADLS File|Specify the Azure Data Lake Store directory that contains the files to be enumerated.|
 
 ## Add enumeration to a control flow with a Foreach Loop container
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] includes the Foreach Loop container, a control flow element that makes it simple to include a looping construct that enumerates files and objects in the control flow of a package. For more information, see [Foreach Loop Container](../../integration-services/control-flow/foreach-loop-container.md).  
@@ -208,7 +208,7 @@ Use the **General** page of the **Foreach Loop Editor** dialog box to name and d
 |**Foreach SMO Enumerator**|Enumerate a SMO object. Selecting this value displays the dynamic options in the section, **Foreach SMO Enumerator**.|  
 |**Foreach HDFS File Enumerator**|Enumerate HDFS files in the specified HDFS location. Selecting this value displays the dynamic options in the section, **Foreach HDFS File Enumerator**.|  
 |**Foreach Azure Blob Enumerator**|Enumerate blob files in the specified blob location. Selecting this value displays the dynamic options in the section, **Foreach Azure Blob Enumerator**.|  
-|**Foreach ADLS File Enumerator**|Enumerate files on ADLS with filters. Selecting this value displays the dynamic options in the section, **Foreach ADLS File Enumerator**.|
+|**Foreach ADLS File Enumerator**|Enumerate files in the specified Data Lake Store directory. Selecting this value displays the dynamic options in the section, **Foreach ADLS File Enumerator**.|
   
  **Expressions**  
  Click or expand **Expressions** to view the list of existing property expressions. Click the ellipsis button **(…)** to add a property expression for an enumerator property, or edit and evaluate an existing property expression.  
@@ -449,7 +449,7 @@ Use the **General** page of the **Foreach Loop Editor** dialog box to name and d
  On the **Variable Mappings** page of the editor, select or create a variable to store the name of the enumerated HDFS file.  
   
 ####  <a name="ForeachAzureBlob"></a> Enumerator = Foreach Azure Blob Enumerator  
- The  **Azure Blob Enumerator** enables an SSIS package to enumerate blob files in the specified blob location. The name of enumerated blob file can be stored in a variable and used in tasks inside the Foreach Loop Container.  
+ The  **Azure Blob Enumerator** enables an SSIS package to enumerate blob files in the specified blob location. You can store the name of the enumerated blob file in a variable and use it in tasks inside the Foreach Loop Container.  
   
  The **Azure Blob Enumerator** is a component of the SQL Server Integration Services (SSIS) Feature Pack for Azure for [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Download the Feature Pack [here](http://go.microsoft.com/fwlink/?LinkID=626967).  
   
@@ -471,16 +471,16 @@ Use the **General** page of the **Foreach Loop Editor** dialog box to name and d
  Specify a time range filter. Files modified after **TimeRangeFrom** and before **TimeRangeTo** will be enumerated. 
 
 ####  <a name="ForeachAdlsFile"></a> Enumerator = Foreach ADLS File Enumerator 
-The **ADLS File Enumerator** enables an SSIS package to enumerate files on ADLS with filters. The slash (`/`)-prefixed full path of enumerated files can be stored in a variable and used in tasks inside the Foreach Loop Container.
+The **ADLS File Enumerator** enables an SSIS package to enumerate files in Azure Data Lake Store. You can store the full path of the enumerated file (prefixed with a slash - `/`) in a variable and use the file path in tasks inside the Foreach Loop Container.
   
 **AzureDataLakeConnection**  
 Specifies an Azure Data Lake connection manager, or creates a new one that refers to an ADLS account.   
   
 **AzureDataLakeDirectory**  
-Specifies the ADLS directory to search.
+Specifies the ADLS directory that contains the files to be enumerated.
   
 **FileNamePattern**  
-Specifies a file name filter. Only files whose name matches the specified pattern will be enumerated. Wildcards `*` and `?` are supported. 
+Specifies a file name filter. Only files whose names match the specified pattern are enumerated. The wildcards `*` and `?` are supported. 
   
 **SearchRecursively**  
 Specifies whether to search recursively within the specified directory.  

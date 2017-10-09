@@ -2,7 +2,7 @@
 title: Active Directory Authentication with SQL Server on Linux | Microsoft Docs
 description: This tutorial provides the configuration steps for AAD authentication for SQL Server on Linux.
 author: meet-bhagdev
-ms.date: 09/25/2017
+ms.date: 10/09/2017
 ms.author: meetb 
 manager: jhubbard
 ms.topic: article
@@ -44,7 +44,9 @@ Before you configure AD Authentication, you need to:
   * [Ubuntu](quickstart-install-connect-ubuntu.md)
 
 > [!IMPORTANT]
-> At this time, the only authentication method supported for database mirroring endpoint is CERTIFICATE. WINDOWS authentication method will be enabled in a future release.
+> Limitations:
+> - At this time, the only authentication method supported for database mirroring endpoint is CERTIFICATE. WINDOWS authentication method will be enabled in a future release.
+> - 3rd party AD tools like Centrify, Powerbroker and Vintela are not supported 
 
 ## Join [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] host to AD domain
 

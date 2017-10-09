@@ -92,19 +92,13 @@ The product samples repository in GitHub currently includes the following report
  
 + **R Services - Execution Statistics**
 
-  Use this report to view execution statistics for machine learning jobs. For example, you can get the total number of R scripts that were executed, the number of parallel executions, and the most frequently used RevoScaleR functions. 
+  Use this report to view execution statistics for machine learning jobs. For example, you can get the total number of R scripts that were executed, the number of parallel executions, and the most frequently used RevoScaleR functions. Click **View SQL Script** to get the complete T-SQL code behind this report.
 
   Currently the report monitors only statistics for RevoScaleR package functions.
 
-  [!TIP]
-  > Click **View SQL Script** to get the complete T-SQL code behind this report.
-
 + **R Services - Extended Events**
 
-  Use this report to view a list of the extended events that are available for monitoring tasks related to external script runtimes.
-
-  [!TIP]
-  > Click **View SQL Script** to get the complete T-SQL code behind this report.
+  Use this report to view a list of the extended events that are available for monitoring tasks related to external script runtimes. Click **View SQL Script** to get the complete T-SQL code behind this report.
 
 + **R Services - Packages**
 

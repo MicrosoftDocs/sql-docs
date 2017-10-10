@@ -25,13 +25,11 @@ SQL Server 2017 CU 1 enables high availability for an availability group with ex
 
 ![Availability group with configuration only replica][1]
 
-In the availability group diagram, a primary replica pushes configuration data to both the secondary replica and the configuration only replica. The secondary replica also receives user data. The configuration only replica does not receive user data. The secondary replica is in synchronous availability mode. 
-
-The configuration only replica does not contain the databases in the availability group - only metadata about the availability group. 
+In the availability group diagram, a primary replica pushes configuration data to both the secondary replica and the configuration only replica. The secondary replica also receives user data. The configuration only replica does not receive user data. The secondary replica is in synchronous availability mode. The configuration only replica does not contain the databases in the availability group - only metadata about the availability group. Configuration data on the configuration only replica is committed synchronously.
 
 ## Example
 
-Configuration only replica availability mode is `CONFIGURATION_ONLY`. A configuration only replica is defined when the availability group is created. The following T-SQL example creates an availability group with two synchronous replicas and a configuration only replica.
+A configuration only replica is defined when the availability group is created. A configuration only replica has availability mode `CONFIGURATION_ONLY`. The following T-SQL example creates an availability group with two synchronous replicas and a configuration only replica.
 
 ```sql
 CREATE AVAILABILITY GROUP [ag1] 
@@ -55,7 +53,7 @@ CREATE AVAILABILITY GROUP [ag1] 
     ) 
 ```
 
-In the preceding example, node three is configuration only replica. There are no additional options available for the configuration only replica. 
+In the preceding example, `node1` is the primary replica, `node2` is a secondary replica, and `node3` is a configuration only replica. There are no additional options available for the configuration only replica. 
 
 ## Compare replica architecture availability behavior
 
@@ -101,29 +99,21 @@ An availability group with three synchronous replicas can provide read scale-out
 
 ## Requirements
 
-Any edition of SQL Server can host a configuration only replica, including SQL Server Express. 
-
-The availability group needs at least one secondary replica - in addition to the primary replica.
-
-Configuration only replicas do not count towards the maximum number of replicas per instance of SQL Server. SQL Server standard edition allows up to three replicas, SQL Server Enterprise Edition allows up to 9.
+* Any edition of SQL Server can host a configuration only replica, including SQL Server Express. 
+* The availability group needs at least one secondary replica - in addition to the primary replica.
+* Configuration only replicas do not count towards the maximum number of replicas per instance of SQL Server. SQL Server standard edition allows up to three replicas, SQL Server Enterprise Edition allows up to 9.
 
 ## Limits
 
-No more than one configuration only replica per availability group. 
-
-A configuration only replica cannot be a primary replica.
-
-You cannot modify the availability mode of a configuration only replica. To change from a configuration only replica to a synchronous or asynchronous secondary replica, remove the configuration only replica, and add a secondary replica with the required availability mode. 
-
-There is no user data. A configuration only replica is synchronous with the availability group metadata.
-
-An availability group with one primary replica and one configuration only replica, but no secondary replica is not valid. 
-
-You cannot create an availability group on an instance of SQL Server Express edition. 
-
-##  <a name="RelatedContent"></a> Related Content  
-  
+* No more than one configuration only replica per availability group. 
+* A configuration only replica cannot be a primary replica.
+* You cannot modify the availability mode of a configuration only replica. To change from a configuration only replica to a synchronous or asynchronous secondary replica, remove the configuration only replica, and add a secondary replica with the required availability mode. 
+* There is no user data. A configuration only replica is synchronous with the availability group metadata.
+* An availability group with one primary replica and one configuration only replica, but no secondary replica is not valid. 
+* You cannot create an availability group on an instance of SQL Server Express edition. 
+ 
 ## See Also  
-  
+
+[Availability groups on Linux](../../../linux/sql-server-linux-availability-group-overview.md)
   
 [1]:./media/availability-group-configuration-only-replica/configuration-only-example.png

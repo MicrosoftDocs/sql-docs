@@ -89,7 +89,7 @@ FROM OPENJSON(@json)
 |key|value|type|  
 |---------|-----------|----------|  
 |StringValue|John|1|  
-|IntValue|Doe|2|  
+|IntValue|45|2|  
 |TrueValue|true|3|  
 |FalseValue|false|3|  
 |NullValue|NULL|0|  

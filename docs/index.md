@@ -38,24 +38,46 @@ ms.technology:
                                                 <div style="height:100px; border-bottom-color: #dbdbdb; border-bottom-width: 1px; border-bottom-style: solid; position: relative;">
                                                    <h3 style="bottom: 20px; color: rgb(110, 110, 110); font-family: segoe-ui_light,Segoe UI Light,Segoe WP,Helvetica Neue,Helvetica,sans-serif; font-size: 2rem; vertical-align: bottom; position: absolute;">SQL Server</h3>
                                                 </div>
-                                                <h4 class="likeAnH3" style="margin: 1rem 0px;">Products</h4>
+                                                <h4 class="likeAnH3" style="margin: 1rem 0px;">SQL Server</h4>
                                                 <ul>
                                                     <li><a href="/sql/sql-server/sql-server-technical-documentation">SQL Server (2016, 2017)</a></li>
                                                     <li><a href="https://msdn.microsoft.com/en-us/library/hh278311(v=sql.10).aspx">SQL Server 2014</a></li>
                                                     <li><a href="https://msdn.microsoft.com/en-us/library/dn197878(v=sql.10).aspx">SQL Server 2012</a></li>
                                                     <li><a href="/sql/linux/sql-server-linux-overview">SQL Server on Linux</a></li>
                                                 </ul>
-                                                <h4 class="likeAnH3" style="margin: 1rem 0px;">Technologies</h4>
+                                                <h4 class="likeAnH3" style="margin: 1rem 0px;">Database</h4>
                                                 <ul>
-                                                    <li><a href="/sql/analysis-services">Analysis Services</a></li>
+                                                    <li><a href="/sql/database-engine">Database Engine</a></li>
+                                                </ul>
+                                                <h4 class="likeAnH3" style="margin: 1rem 0px;">Data Management</h4>
+                                                <ul>
                                                     <li><a href="/sql/data-quality-services">Data Quality Services</a></li>
                                                     <li><a href="/sql/database-engine">Database Engine</a></li>
                                                     <li><a href="/sql/integration-services>Integration Services</a></li>
-                                                    <li><a href="/sql/advanced-analytics">Machine Learning Services</a></li>
                                                     <li><a href="/sql/master-data-services">Master Data Services</a></li>
-                                                    <li><a href="/sql/reporting-services">Reporting Services</a></li>
                                                 </ul>
-                                            </div>
+                                                <h4 class="likeAnH3" style="margin: 1rem 0px;">Machine learning</h4>
+                                                <ul>
+                                                    <li><a href="https://docs.microsoft.com/sql/advanced-analytics/r/r-services">SQL Server Machine Learning Services</a></li>
+                                                    <li><a href="https://docs.microsoft.com/sql/advanced-analytics/r/r-server-standalone">Machine Learning Server (Standalone)</a></li>
+                                                </ul>
+                                                <h4 class="likeAnH3" style="margin: 1rem 0px;">Analysis Services</h4>
+                                                <ul>
+                                                    <li><a href="/sql/analysis-services/analysis-services">SQL Server Analysis Services (2016, 2017)</a></li>
+                                                    <li><a href="https://msdn.microsoft.com/en-us/library/bb522607(v=sql.120).aspx">SQL Server 2014 Analysis Services</a></li>
+                                                    <li><a href="https://msdn.microsoft.com/en-us/library/bb522607(v=sql.110).aspx">SQL Server 2012 Analysis Services</a></li>
+                                                </ul>
+                                                <h4 class="likeAnH3" style="margin: 1rem 0px;">Reporting Services</h4>
+                                                <ul>
+                                                    <li><a href="/sql/reporting-services/create-deploy-and-manage-mobile-and-paginated-reports">SQL Server Reporting Services (2016, 2017)</a></li>
+                                                    <li><a href="https://msdn.microsoft.com/en-us/library/ms159106(v=sql.120).aspx">SQL Server 2014 Reporting Services</a></li>
+                                                    <li><a href="https://msdn.microsoft.com/en-us/library/ms159106(v=sql.110).aspx">SQL Server 2012 Reporting Services</a></li>
+                                                </ul>
+
+												
+												
+
+												</div>
                                         </div>
                                     </div>
                                 </div>

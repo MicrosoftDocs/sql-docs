@@ -1,7 +1,7 @@
 ---
 title: "What's new in SQL Server 2017 | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/02/2017"
+ms.date: "10/10/2017"
 ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
@@ -89,9 +89,10 @@ SQL Server Analysis Services 2017 introduces many enhancements for tabular model
 For more information, see [What's new in SQL Server Analysis Services 2017](~/analysis-services/what-s-new-in-sql-server-analysis-services-2017.md).
 
 ## SQL Server 2017 Reporting Services (SSRS)
-As of CTP 2.1, SSRS is no longer available to install through SQL Server setup. Go to the Microsoft Download Center to [download the Microsoft SQL Server 2017 Reporting Services Release Candidate](https://www.microsoft.com/download/details.aspx?id=55252). 
-- Comments are now available for reports, to add perspective and collaborate with others. You can also include attachments with comments. (CTP 2.1)
+SQL Server Reporting Services is no longer available to install through SQL Server setup. Go to the Microsoft Download Center to [download Microsoft SQL Server 2017 Reporting Services](https://www.microsoft.com/download/details.aspx?id=55252). 
+- Comments are now available for reports, to add perspective and collaborate with others. You can also include attachments with comments.
 - In the latest releases of Report Builder and SQL Server Data Tools, you can create native DAX queries against supported SQL Server Analysis Services tabular data models by dragging and dropping desired fields in the query designers. See the [Reporting Services blog](https://blogs.msdn.microsoft.com/sqlrsteamblog/2017/03/09/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools/).
+- To enable development of modern applications and customization, SSRS now supports a fully OpenAPI compliant RESTful API. The full API specification and documentation can now be found on [swaggerhub](https://app.swaggerhub.com/apis/microsoft-rs/SSRS/2.0).
 
 For more information, see [What's new in SQL Server Reporting Services (SSRS)](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md).
 

@@ -223,7 +223,7 @@ If you use **Network File System (NFS)** remote shares in production, note the f
   - Hadoop and HDFS support
   - Microsoft Connector for SAP BW
 
-For a list of built-in SSIS components that are not currently supported, or that are supported with limitations, see [Extract, transform, and load data on Linux with SSIS](sql-server-linux-migrate-ssis.md#components).
+For a list of built-in SSIS components that are not currently supported, or that are supported with limitations, see [Limitations and known issues for SSIS on Linux](sql-server-linux-ssis-known-issues.md#components).
 
 For more info about SSIS on Linux, see the following articles:
 -   [Blog post announcing SSIS support for Linux](https://blogs.msdn.microsoft.com/ssis/2017/05/17/ssis-helsinki-is-available-in-sql-server-vnext-ctp2-1/).

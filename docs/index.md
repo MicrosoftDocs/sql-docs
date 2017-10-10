@@ -45,6 +45,12 @@ ms.technology:
                                                     <li><a href="https://msdn.microsoft.com/en-us/library/dn197878(v=sql.10).aspx">SQL Server 2012</a></li>
                                                     <li><a href="/sql/linux/sql-server-linux-overview">SQL Server on Linux</a></li>
                                                 </ul>
+                                                <h4 class="likeAnH3" style="margin: 1rem 0px;">Analysis Services</h4>
+                                                <ul>
+                                                    <li><a href="/sql/analysis-services/analysis-services">SQL Server Analysis Services (2016, 2017)</a></li>
+                                                    <li><a href="https://msdn.microsoft.com/en-us/library/bb522607(v=sql.120).aspx">SQL Server 2014 Analysis Services</a></li>
+                                                    <li><a href="https://msdn.microsoft.com/en-us/library/bb522607(v=sql.110).aspx">SQL Server 2012 Analysis Services</a></li>
+                                                </ul>
                                                 <h4 class="likeAnH3" style="margin: 1rem 0px;">Database</h4>
                                                 <ul>
                                                     <li><a href="/sql/database-engine">Database Engine</a></li>
@@ -52,7 +58,6 @@ ms.technology:
                                                 <h4 class="likeAnH3" style="margin: 1rem 0px;">Data Management</h4>
                                                 <ul>
                                                     <li><a href="/sql/data-quality-services">Data Quality Services</a></li>
-                                                    <li><a href="/sql/database-engine">Database Engine</a></li>
                                                     <li><a href="/sql/integration-services">Integration Services</a></li>
                                                     <li><a href="/sql/master-data-services">Master Data Services</a></li>
                                                 </ul>
@@ -60,12 +65,6 @@ ms.technology:
                                                 <ul>
                                                     <li><a href="https://docs.microsoft.com/sql/advanced-analytics/r/r-services">SQL Server Machine Learning Services</a></li>
                                                     <li><a href="https://docs.microsoft.com/sql/advanced-analytics/r/r-server-standalone">Machine Learning Server (Standalone)</a></li>
-                                                </ul>
-                                                <h4 class="likeAnH3" style="margin: 1rem 0px;">Analysis Services</h4>
-                                                <ul>
-                                                    <li><a href="/sql/analysis-services/analysis-services">SQL Server Analysis Services (2016, 2017)</a></li>
-                                                    <li><a href="https://msdn.microsoft.com/en-us/library/bb522607(v=sql.120).aspx">SQL Server 2014 Analysis Services</a></li>
-                                                    <li><a href="https://msdn.microsoft.com/en-us/library/bb522607(v=sql.110).aspx">SQL Server 2012 Analysis Services</a></li>
                                                 </ul>
                                                 <h4 class="likeAnH3" style="margin: 1rem 0px;">Reporting Services</h4>
                                                 <ul>

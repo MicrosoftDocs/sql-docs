@@ -29,7 +29,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # Statistics
-  The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Query Optimizer uses statistics to create query plans that improve query performance. For most queries, the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Query Optimizer already generates the necessary statistics for a high quality query plan; in some cases, you need to create additional statistics or modify the query design for best results. This topic discusses statistics concepts and provides guidelines for using query optimization statistics effectively.  
+  The Query Optimizer uses statistics to create query plans that improve query performance. For most queries, the Query Optimizer already generates the necessary statistics for a high quality query plan; in some cases, you need to create additional statistics or modify the query design for best results. This topic discusses statistics concepts and provides guidelines for using query optimization statistics effectively.  
   
 ##  <a name="DefinitionQOStatistics"></a> Components and Concepts  
 ### Statistics  

@@ -53,7 +53,7 @@ ms.technology:
                                                 <ul>
                                                     <li><a href="/sql/data-quality-services">Data Quality Services</a></li>
                                                     <li><a href="/sql/database-engine">Database Engine</a></li>
-                                                    <li><a href="/sql/integration-services>Integration Services</a></li>
+                                                    <li><a href="/sql/integration-services">Integration Services</a></li>
                                                     <li><a href="/sql/master-data-services">Master Data Services</a></li>
                                                 </ul>
                                                 <h4 class="likeAnH3" style="margin: 1rem 0px;">Machine learning</h4>
@@ -73,11 +73,7 @@ ms.technology:
                                                     <li><a href="https://msdn.microsoft.com/en-us/library/ms159106(v=sql.120).aspx">SQL Server 2014 Reporting Services</a></li>
                                                     <li><a href="https://msdn.microsoft.com/en-us/library/ms159106(v=sql.110).aspx">SQL Server 2012 Reporting Services</a></li>
                                                 </ul>
-
-												
-												
-
-												</div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

@@ -24,7 +24,7 @@ A SQL Server Always On availability group on a Windows Server Failover Cluster (
 SQL Server 2017 CU 1 enables high availability for an availability group with external or none cluster types for two synchronous replicas plus a *configuration only* replica. In a configuration only replica, the instance of SQL Server maintains configuration information about the availability group in the master database. The configuration only replica does not contain the databases in the availability group. The following diagram shows an availability group with a configuration only replica:
 
 <!-- Add Diagram -->
-
+![Availability group with configuration only replica][1]
 
 ## Capabilities 
 Any edition of SQL Server can host a configuration only replica, including SQL Server Express. You can not create an availability group on an instance of SQL Server Express edition. 
@@ -117,3 +117,4 @@ An availability group with two synchronous replicas and a configuration only rep
 ## See Also  
   
   
+[1]:./media/availability-group-configuration-only-replica/configuration-only-example.png

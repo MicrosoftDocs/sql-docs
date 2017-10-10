@@ -44,7 +44,6 @@ This is the General Availablity (GA) release of SQL Server 2017. The SQL Server 
 
 > [!NOTE]
 > You need at least 3.25GB of memory to run SQL Server on Linux.
-> SQL Server Engine has been tested up to 1.5 TB of memory at this time.
 
 ### Package details
 

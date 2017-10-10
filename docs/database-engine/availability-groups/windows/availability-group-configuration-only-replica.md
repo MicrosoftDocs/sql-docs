@@ -86,7 +86,7 @@ An availability group with two synchronous replicas provides read scale-out and 
 <sup>*</sup> Default
 
 >[!NOTE]
->The preceding scenario is the behavior in availability groups today, when they are not on a WSFC. 
+>The preceding scenario is the behavior prior to SQL Server 2017 CU 1. 
 
 ### Three synchronous replicas
 

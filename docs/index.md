@@ -211,6 +211,10 @@ ms.technology:
                                                     <li><a href="https://docs.microsoft.com/powershell/sql-server/overview?view=sqlserver-ps">PowerShell</a></li>
                                                     <li><a href="/sql/xquery/xquery-language-reference-sql-server">XQuery</a></li>
                                                 </ul>
+                                                <h4 class="likeAnH3" style="margin: 1rem 0px;">Sample databases</h4>
+                                                <ul>
+                                                    <li><a href="https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0">Wide World Importers</a></li>
+                                                </ul>
                                             </div>
                                         </div>
                                     </div>

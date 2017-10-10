@@ -32,6 +32,7 @@ The **Operation** property specifies the file system operation to perform. Selec
 - **CopyToADLS:** Upload files to ADLS.
 - **CopyFromADLS:** Download files from ADLS.
 
+## Configure the properties for the operation
 For any operation, you have to specify an Azure Data Lake connection manager.
 
 Here are the properties specific to each operation:

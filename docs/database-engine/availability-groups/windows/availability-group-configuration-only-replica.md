@@ -11,7 +11,6 @@ ms.technology:
   - "dbe-high-availability"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-helpviewer_keywords: ""
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"

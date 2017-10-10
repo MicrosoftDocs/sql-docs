@@ -99,6 +99,7 @@ An availability group with three synchronous replicas can provide read scale-out
 
 ## Requirements
 
+* All replicas in an availability group with a configuration only replica must be SQL Server 2017 CU 1 or later.
 * Any edition of SQL Server can host a configuration only replica, including SQL Server Express. 
 * The availability group needs at least one secondary replica - in addition to the primary replica.
 * Configuration only replicas do not count towards the maximum number of replicas per instance of SQL Server. SQL Server standard edition allows up to three replicas, SQL Server Enterprise Edition allows up to 9.
@@ -108,7 +109,7 @@ An availability group with three synchronous replicas can provide read scale-out
 * No more than one configuration only replica per availability group. 
 * A configuration only replica cannot be a primary replica.
 * You cannot modify the availability mode of a configuration only replica. To change from a configuration only replica to a synchronous or asynchronous secondary replica, remove the configuration only replica, and add a secondary replica with the required availability mode. 
-* There is no user data. A configuration only replica is synchronous with the availability group metadata.
+* A configuration only replica is synchronous with the availability group metadata. There is no user data. 
 * An availability group with one primary replica and one configuration only replica, but no secondary replica is not valid. 
 * You cannot create an availability group on an instance of SQL Server Express edition. 
  

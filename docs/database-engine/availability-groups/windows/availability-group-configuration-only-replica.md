@@ -79,7 +79,7 @@ In the preceding example, node three contains a configuration only replica. Ther
 
 ## Compare replica architectures
 
-### Avalability group with two synchronous replicas and a configuration only replica
+### Two synchronous replicas and a configuration only replica
 
 An availability group with two synchronous replicas and a configuration only replica provides data protection and may also provide high availability. The value assigned to `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` determines how these features are enabled. The following table describes the behavior. 
 
@@ -90,8 +90,28 @@ An availability group with two synchronous replicas and a configuration only rep
 |Secondary replica outage | Primary is R/W, running exposed to data loss (if primary fails and cannot be recovered). No automatic failover if primary fails as well. | Primary is not available for user transactions. No replica to fail over if primary fails as well. 
 |Configuration only replica outage | Primary is R/W. No automatic failover if primary fails as well. | Primary is R/W. No automatic failover if primary fails as well. 
 |Synchronous secondary + configuration only replica outage| Primary is not available for user transactions. No automatic failover. | Primary is not available for user transactions. No replica to failover to is primary fails as well. 
-
 <sup>*</sup> Default
+
+### Two synchronous replicas
+| |Read scale-out |Data protection
+|:---|---|---
+|`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>*</sup>|1
+|Primary outage | Manual failover. Might have data loss. New primary is R/W| Automatic failover. New primary is not available for user transactions until former primary recovers and joins availability group as secondary
+|One secondary replica outage  |Primary is R/W, running exposed to data loss |Primary is not available for user transactions until secondary recovers.
+<sup>*</sup> Default
+
+>[!NOTE]
+>The preceding scenario is the behavior in availability gorups today, when they are not on a WSFC. 
+
+### Three synchronous replicas
+| |Read scale-out|High availability & </br> data protection | Data protection
+|:---|---|---|---
+|:---|---|---
+|`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 |1<sup>*</sup>|2
+|Primary outage | Manual failover. Might have data loss. New primary is R/W |Automatic failover. New primary is R/W |Automatically failover. New primary is not available for user transactions until former primary recovers and joins availability group as secondary. 
+|One secondary replica outage  | Primary is R/W. No automatic failover if primary fails. |Primary is R/W. No automatic failover if primary fails as well. | Primary is not available for user transactions. 
+<sup>*</sup> Default value set by pacemaker
+
 ##  <a name="RelatedContent"></a> Related Content  
   
 ## See Also  

@@ -58,11 +58,13 @@ CREATE AVAILABILITY GROUP [ag1] 
 
 In the preceding example, node three is configuration only replica. There are no additional options available for the configuration only replica. 
 
-## Compare replica architectures
+## Compare replica architecture availability behavior
+
+SQL Server 2017 introduces the `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` cluster resource setting. This setting guarantees that each transaction is written to a minimum number of secondary replica logs before committing the transaction on the primary replica. When you use an external cluster manager, this setting affects both high availability and data protection. The default value for the setting depends on the architecture at the time the cluster resource is created.
 
 ### Two synchronous replicas and a configuration only replica
 
-An availability group with two synchronous replicas and a configuration only replica provides data protection and may also provide high availability. The value assigned to `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` determines how these features are enabled. The following table describes the behavior. 
+An availability group with two (or more) synchronous replicas and a configuration only replica provides data protection and may also provide high availability. The default value for `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` is 0. The following table describes availability behavior. 
 
 | |High availability & </br> data protection | Data protection
 |:---|---|---
@@ -74,6 +76,9 @@ An availability group with two synchronous replicas and a configuration only rep
 <sup>*</sup> Default
 
 ### Two synchronous replicas
+
+An availability group with two synchronous replicas provides read scale-out and data protection. The default value for `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` is 0. The following table describes availability behavior. 
+
 | |Read scale-out |Data protection
 |:---|---|---
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>*</sup>|1
@@ -82,9 +87,12 @@ An availability group with two synchronous replicas and a configuration only rep
 <sup>*</sup> Default
 
 >[!NOTE]
->The preceding scenario is the behavior in availability gorups today, when they are not on a WSFC. 
+>The preceding scenario is the behavior in availability groups today, when they are not on a WSFC. 
 
 ### Three synchronous replicas
+
+An availability group with three synchronous replicas can provide read scale-out, high availability, and data protection. The default value for `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` is 1. The following table describes availability behavior. 
+
 | |Read scale-out|High availability & </br> data protection | Data protection
 |:---|---|---|---
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 |1<sup>*</sup>|2
@@ -92,13 +100,13 @@ An availability group with two synchronous replicas and a configuration only rep
 |One secondary replica outage  | Primary is R/W. No automatic failover if primary fails. |Primary is R/W. No automatic failover if primary fails as well. | Primary is not available for user transactions. 
 <sup>*</sup> Default value set by pacemaker
 
-
 ## Requirements
 
-Any edition of SQL Server can host a configuration only replica, including SQL Server Express. You can not create an availability group on an instance of SQL Server Express edition. 
+Any edition of SQL Server can host a configuration only replica, including SQL Server Express. 
+
+The availability group needs at least one secondary replica - in addition to the primary replica.
 
 Configuration only replicas do not count towards the maximum number of replicas per instance of SQL Server. SQL Server standard edition allows up to 3 replicas, SQL Server Enterprise Edition allows up to 9.
-
 
 ## Limits
 
@@ -110,7 +118,9 @@ You can not modify the availability mode of a configuration only replica. To cha
 
 There is no user data. A configuration only replica is synchronous with the availability group metadata.
 
+An availability group with one primary replica and one configuration only replica, but no secondary replica is not valid. 
 
+You can not create an availability group on an instance of SQL Server Express edition. 
 
 ##  <a name="RelatedContent"></a> Related Content  
   

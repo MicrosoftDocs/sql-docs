@@ -26,32 +26,13 @@ SQL Server 2017 CU 1 enables high availability for an availability group with ex
 <!-- Add Diagram -->
 ![Availability group with configuration only replica][1]
 
-## Capabilities 
-Any edition of SQL Server can host a configuration only replica, including SQL Server Express. You can not create an availability group on an instance of SQL Server Express edition. 
-
-A configuration only replica joins an availability group as secondary replica. 
+In the availability group diagram, a primary replica pushes configuration data to both the secondary replica and the configuration only replica. The secondary replica also recieves user data. The configuration only replica does not receive user data. The secondary replica is in synchronous availability mode. 
 
 The configuration only replica does not contain the databases in the availability group - only metadata about the availability group. 
 
-Configuration only replica has availability mode `CONFIGURATION_ONLY`. 
-
-Configuration only replicas do not count towards the maximum number of replicas per instance of SQL Server. SQL Server standard edition allows up to 3 replicas, SQL Server Enterprise Edition allows up to 9.
-
-
-## Limits
-
-No more than one configuration only replica per availability group. 
-
-A configuration only replica can not be a primary replica.
-
-You can not modify the availability mode of a configuration only replica. To change from a configuration only replica to a synchronous or asynchronous secondary replica, remove the configuration only replica, and add a secondary replica with the required availability mode. 
-
-There is no user data. A configuration only replica is synchronous with the availability group metadata.
-
-
 ## Example
 
-The following T-SQL example creates an availability group with two synchronous replicas and a configuration only replica. 
+Configuration only replica availability mode is `CONFIGURATION_ONLY`. This is defined when the availability group is created. The following T-SQL example creates an availability group with two synchronous replicas and a configuration only replica.
 
 ```sql
 CREATE AVAILABILITY GROUP [ag1] 
@@ -75,7 +56,7 @@ CREATE AVAILABILITY GROUP [ag1] 
     ) 
 ```
 
-In the preceding example, node three contains a configuration only replica. There are no additional options available for the configuration only replica. 
+In the preceding example, node three is configuration only replica. There are no additional options available for the configuration only replica. 
 
 ## Compare replica architectures
 
@@ -110,6 +91,26 @@ An availability group with two synchronous replicas and a configuration only rep
 |Primary outage | Manual failover. Might have data loss. New primary is R/W. |Automatic failover. New primary is R/W. |Automatically failover. New primary is not available for user transactions until former primary recovers and joins availability group as secondary. 
 |One secondary replica outage  | Primary is R/W. No automatic failover if primary fails. |Primary is R/W. No automatic failover if primary fails as well. | Primary is not available for user transactions. 
 <sup>*</sup> Default value set by pacemaker
+
+
+## Requirements
+
+Any edition of SQL Server can host a configuration only replica, including SQL Server Express. You can not create an availability group on an instance of SQL Server Express edition. 
+
+Configuration only replicas do not count towards the maximum number of replicas per instance of SQL Server. SQL Server standard edition allows up to 3 replicas, SQL Server Enterprise Edition allows up to 9.
+
+
+## Limits
+
+No more than one configuration only replica per availability group. 
+
+A configuration only replica can not be a primary replica.
+
+You can not modify the availability mode of a configuration only replica. To change from a configuration only replica to a synchronous or asynchronous secondary replica, remove the configuration only replica, and add a secondary replica with the required availability mode. 
+
+There is no user data. A configuration only replica is synchronous with the availability group metadata.
+
+
 
 ##  <a name="RelatedContent"></a> Related Content  
   

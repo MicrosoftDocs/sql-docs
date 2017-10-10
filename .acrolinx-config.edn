@@ -1,2 +1,31 @@
 {:allowed-branchname-matches ["master" "release-.*" "sandbox-.*"]
- :allowed-filename-matches ["docs" "docs-msdn"]}
+ :allowed-filename-matches ["docs" "docs-msdn"]
+
+ :template-header
+   "
+## Acrolinx Scorecards
+
+**Notice:** This repo is running on a test instance of Acrolinx, please see instructions below. 
+ 
+ Click the scorecard links for each article to review the Acrolinx feedback on grammar, spelling, punctuation, writing style, and terminology:
+
+| Article | Score | Issues | Scorecard |
+| ------- | ----- | ------ | --------- |
+"
+
+   ;; do not remove the spaces at the end of lines! That is markdown for
+   ;; linebreak
+   :template-change
+   "| **${github/filename}** | ${acrolinx/qualityscore} | ${acrolinx/flags/issues} | [link](${acrolinx/scorecard}) |
+"
+
+ :template-footer
+"
+**More info about Acrolinx**
+
+- When you click a report link, use your corpnet credentials to access the reports. Acrolinx now uses MSFT corpnet authentication.
+
+- [Report false positives or issues](https://aka.ms/acrolinxbug)
+
+"}
+

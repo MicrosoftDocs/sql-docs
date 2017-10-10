@@ -106,7 +106,6 @@ An availability group with two synchronous replicas and a configuration only rep
 ### Three synchronous replicas
 | |Read scale-out|High availability & </br> data protection | Data protection
 |:---|---|---|---
-|:---|---|---
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 |1<sup>*</sup>|2
 |Primary outage | Manual failover. Might have data loss. New primary is R/W |Automatic failover. New primary is R/W |Automatically failover. New primary is not available for user transactions until former primary recovers and joins availability group as secondary. 
 |One secondary replica outage  | Primary is R/W. No automatic failover if primary fails. |Primary is R/W. No automatic failover if primary fails as well. | Primary is not available for user transactions. 

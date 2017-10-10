@@ -5,7 +5,7 @@
    "
 ## Acrolinx Scorecards
 
-**Notice:** This repo is running on a test instance of Acrolinx, please see instructions below. 
+**Notice:** This repo is running on a test instance of Acrolinx. Help test by clicking the Acrolinx test results, even if you already made fixes in VSCode. 
  
  Click the scorecard links for each article to review the Acrolinx feedback on grammar, spelling, punctuation, writing style, and terminology:
 
@@ -21,11 +21,11 @@
 
  :template-footer
 "
-**More info about Acrolinx**
+**Notes**
 
-- When you click a report link, use your corpnet credentials to access the reports. Acrolinx now uses MSFT corpnet authentication.
-
-- [Report false positives or issues](https://aka.ms/acrolinxbug)
+- When you click an Acrolinx report link, Acrolinx uses your Microsoft corpnet credentials to access the reports. There is no sign in screen if you are already on corpnet.
+ 
+- Please [report any issues](https://aka.ms/acrolinxbug) using a bug, and @ mention tysonn in the discussion. 
 
 "}
 

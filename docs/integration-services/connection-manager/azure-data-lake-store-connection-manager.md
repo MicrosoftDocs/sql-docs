@@ -55,7 +55,8 @@ The Azure Data Lake Store connection manager is a component of the [SQL Server I
         4. To test the connection, select **Test Connection**.  
   
 6.  Select **OK** to close the **Azure Data Lake Store Connection Manager Editor** dialog box.  
-  
+
+## View the properties of the connection manager
 You can see the properties of the connection manager you created in the **Properties** window.  
   
   

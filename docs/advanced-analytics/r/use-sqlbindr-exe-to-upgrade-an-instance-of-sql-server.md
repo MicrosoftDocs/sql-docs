@@ -209,7 +209,7 @@ The tool returns the following error messages:
 
 For more information, see the release notes for Microsoft R Server:
 
-+ [Known issues in machine Learning Server](https://docs.microsoft.com/machine-learning-server/resources-known-issues)
++ [Known issues in Machine Learning Server](https://docs.microsoft.com/machine-learning-server/resources-known-issues)
 
 + [Feature announcements from previous release of R Server](https://docs.microsoft.com/r-server/whats-new-in-r-server)
 

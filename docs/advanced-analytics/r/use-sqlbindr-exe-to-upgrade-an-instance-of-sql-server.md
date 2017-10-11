@@ -56,7 +56,7 @@ Refer to the following table for a list of supported upgrades and requirements.
 | SQL Server 2016| Machine Learning Server 9.2.1| Requires at least Service Pack 1 plus CU3. R Services must be installed and enabled.|
 | SQL Server 2017| Machine Learning Server 9.2.1| Machine Learning Services (In-Database) must be installed and enabled. |
 
-## Upgrade an instance
+## Bind or upgrade an instance
 
 Microsoft Machine Learning Server for Windows includes a tool that you can use to upgrade the machine learning languages and tools associated with an instance of SQL Server. There are two versions of the tool: a wizard, and a command-line utility.
 
@@ -121,7 +121,7 @@ If you decide that you no longer want to upgrade the machine learning components
     You can unbind the instance and revert to the original libraries installed by SQL Server, by using either of these two methods:
 
     + [Use the setup wizard](#bkmk_wizunbind) for Machine Learning Server, and deselect all features on the instance
-    + [Use the SqlBindR utility](bkmk_cmdunbind) with the `/unbind` argument, followed by the instance name.
+    + [Use the SqlBindR utility](#bkmk_cmdunbind) with the `/unbind` argument, followed by the instance name.
 
     When the unbinding process is complete, future machine learning upgrades based on Machine Learning Server will no longer be applied to the instance.
 

@@ -18,8 +18,8 @@ ms.technology:
                 <a data-default="true" href="#main"></a>
                 <ul id="main">
                     <li>
-                        <a href="#databases">Databases</a>
-                        <ul id="databases" class="cardsW">
+                        <a href="#products">Products</a>
+                        <ul id="products" class="cardsW">
                             <li class="fullSpan">
                                 <div class="container intro" style="color: #535353; font-family: segoe-ui_light,Segoe UI Light,Segoe WP,Helvetica Neue,Helvetica,sans-serif;">
                                     <p>Manage relational data with SQL databases in your datacenter or on Azure</p>
@@ -38,7 +38,6 @@ ms.technology:
                                                 <div style="height:100px; border-bottom-color: #dbdbdb; border-bottom-width: 1px; border-bottom-style: solid; position: relative;">
                                                    <h3 style="bottom: 20px; color: rgb(110, 110, 110); font-family: segoe-ui_light,Segoe UI Light,Segoe WP,Helvetica Neue,Helvetica,sans-serif; font-size: 2rem; vertical-align: bottom; position: absolute;">SQL Server</h3>
                                                 </div>
-                                                <h4 class="likeAnH3" style="margin: 1rem 0px;">SQL Server</h4>
                                                 <ul>
                                                     <li><a href="/sql/sql-server/sql-server-technical-documentation">SQL Server (2016, 2017)</a></li>
                                                     <li><a href="https://msdn.microsoft.com/en-us/library/hh278311(v=sql.10).aspx">SQL Server 2014</a></li>
@@ -73,22 +72,9 @@ ms.technology:
                                                     <li><a href="https://msdn.microsoft.com/en-us/library/ms159106(v=sql.110).aspx">SQL Server 2012 Reporting Services</a></li>
                                                 </ul>
                                             </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="cardSize">
-                                    <div class="cardPadding">
-                                        <div class="card">
-                                            <div class="cardImageOuter">
-                                                <div class="cardImage bgdAccent1">
-                                                    <img src="/media/hubs/sql/sql-database-service.svg" alt="" />
-                                                </div>
-                                            </div>
                                             <div class="cardText">
                                                 <div style="height:100px; border-bottom-color: #dbdbdb; border-bottom-width: 1px; border-bottom-style: solid; position: relative;">
-                                                   <h3 style="bottom: 20px; color: rgb(110, 110, 110); font-family: segoe-ui_light,Segoe UI Light,Segoe WP,Helvetica Neue,Helvetica,sans-serif; font-size: 2rem; vertical-align: bottom; position: absolute;">Database as a Service</h3>
+                                                   <h3 style="bottom: 20px; color: rgb(110, 110, 110); font-family: segoe-ui_light,Segoe UI Light,Segoe WP,Helvetica Neue,Helvetica,sans-serif; font-size: 2rem; vertical-align: bottom; position: absolute;">SQL on Azure</h3>
                                                 </div>
                                                 <h4 class="likeAnH3" style="margin: 1rem 0px;">Microsoft SQL</h4>
                                                 <ul>

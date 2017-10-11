@@ -36,8 +36,9 @@ ms.technology:
                                             </div>
                                             <div class="cardText">
                                                 <div style="height:100px; border-bottom-color: #dbdbdb; border-bottom-width: 1px; border-bottom-style: solid; position: relative;">
-                                                   <h3 style="bottom: 20px; color: rgb(110, 110, 110); font-family: segoe-ui_light,Segoe UI Light,Segoe WP,Helvetica Neue,Helvetica,sans-serif; font-size: 2rem; vertical-align: bottom; position: absolute;">SQL Server</h3>
+                                                   <h3 style="bottom: 20px; color: rgb(110, 110, 110); font-family: segoe-ui_light,Segoe UI Light,Segoe WP,Helvetica Neue,Helvetica,sans-serif; font-size: 2rem; vertical-align: bottom; position: absolute;">SQL Products</h3>
                                                 </div>
+                                                <h4 class="likeAnH3" style="margin: 1rem 0px;">SQL Server</h4>
                                                 <ul>
                                                     <li><a href="/sql/sql-server/sql-server-technical-documentation">SQL Server (2016, 2017)</a></li>
                                                     <li><a href="https://msdn.microsoft.com/en-us/library/hh278311(v=sql.10).aspx">SQL Server 2014</a></li>
@@ -106,7 +107,47 @@ ms.technology:
                                             </div>
                                             <div class="cardText">
                                                 <div style="height:100px; border-bottom-color: #dbdbdb; border-bottom-width: 1px; border-bottom-style: solid; position: relative;">
-                                                   <h3 style="bottom: 20px; color: rgb(110, 110, 110); font-family: segoe-ui_light,Segoe UI Light,Segoe WP,Helvetica Neue,Helvetica,sans-serif; font-size: 2rem; vertical-align: bottom; position: absolute;">Develop</h3>
+                                                   <h3 style="bottom: 20px; color: rgb(110, 110, 110); font-family: segoe-ui_light,Segoe UI Light,Segoe WP,Helvetica Neue,Helvetica,sans-serif; font-size: 2rem; vertical-align: bottom; position: absolute;">Tools</h3>
+                                                </div>
+                                                <h4 class="likeAnH3" style="margin: 1rem 0px;">Design</h4>
+                                                <ul>
+                                                    <li><a href="/sql/connect/sql-connection-libraries">Connect with client applications</a></li>
+                                                    <li><a href="/sql/relational-databases/database-features">Relational database concepts</a></li>
+                                                </ul>
+                                                <h4 class="likeAnH3" style="margin: 1rem 0px;">Tools</h4>
+                                                <ul>
+                                                    <li><a href="/sql/ssms/download-sql-server-management-studio-ssms">SQL Server Management Studio (SSMS)</a></li>
+                                                    <li><a href="/sql/ssdt/download-sql-server-data-tools-ssdt">SQL Server Data Tools (SSDT)</a></li>
+                                                    <li><a href="/sql/tools/overview-sql-tools">See all SQL tools</a></li>
+                                                </ul>
+                                                <h4 class="likeAnH3" style="margin: 1rem 0px;">Reference</h4>
+                                                <ul>
+                                                    <li><a href="/sql/t-sql/language-reference">T-SQL</a></li>
+                                                    <li><a href="/sql/relational-databases/system-dynamic-management-views/system-dynamic-management-views">DMVs</a></li>
+                                                    <li><a href="https://docs.microsoft.com/powershell/sql-server/overview?view=sqlserver-ps">PowerShell</a></li>
+                                                    <li><a href="/sql/xquery/xquery-language-reference-sql-server">XQuery</a></li>
+                                                </ul>
+                                                <h4 class="likeAnH3" style="margin: 1rem 0px;">Sample databases</h4>
+                                                <ul>
+                                                    <li><a href="https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0">Wide World Importers</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage bgdAccent1">
+                                                    <img src="/media/hubs/sql/sql-database-develop.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <div style="height:100px; border-bottom-color: #dbdbdb; border-bottom-width: 1px; border-bottom-style: solid; position: relative;">
+                                                   <h3 style="bottom: 20px; color: rgb(110, 110, 110); font-family: segoe-ui_light,Segoe UI Light,Segoe WP,Helvetica Neue,Helvetica,sans-serif; font-size: 2rem; vertical-align: bottom; position: absolute;">Features</h3>
                                                 </div>
                                                 <h4 class="likeAnH3" style="margin: 1rem 0px;">Design</h4>
                                                 <ul>

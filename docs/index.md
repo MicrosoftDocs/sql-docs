@@ -36,7 +36,7 @@ ms.technology:
                                             </div>
                                             <div class="cardText">
                                                 <div style="height:100px; border-bottom-color: #dbdbdb; border-bottom-width: 1px; border-bottom-style: solid; position: relative;">
-                                                   <h3 style="bottom: 20px; color: rgb(110, 110, 110); font-family: segoe-ui_light,Segoe UI Light,Segoe WP,Helvetica Neue,Helvetica,sans-serif; font-size: 2rem; vertical-align: bottom; position: absolute;">SQL Products</h3>
+                                                   <h3 style="bottom: 20px; color: rgb(110, 110, 110); font-family: segoe-ui_light,Segoe UI Light,Segoe WP,Helvetica Neue,Helvetica,sans-serif; font-size: 2rem; vertical-align: bottom; position: absolute;">Databases</h3>
                                                 </div>
                                                 <h4 class="likeAnH3" style="margin: 1rem 0px;">SQL Server</h4>
                                                 <ul>
@@ -107,7 +107,7 @@ ms.technology:
                                             </div>
                                             <div class="cardText">
                                                 <div style="height:100px; border-bottom-color: #dbdbdb; border-bottom-width: 1px; border-bottom-style: solid; position: relative;">
-                                                   <h3 style="bottom: 20px; color: rgb(110, 110, 110); font-family: segoe-ui_light,Segoe UI Light,Segoe WP,Helvetica Neue,Helvetica,sans-serif; font-size: 2rem; vertical-align: bottom; position: absolute;">Tools</h3>
+                                                   <h3 style="bottom: 20px; color: rgb(110, 110, 110); font-family: segoe-ui_light,Segoe UI Light,Segoe WP,Helvetica Neue,Helvetica,sans-serif; font-size: 2rem; vertical-align: bottom; position: absolute;">Develop</h3>
                                                 </div>
                                                 <h4 class="likeAnH3" style="margin: 1rem 0px;">Design</h4>
                                                 <ul>
@@ -147,29 +147,34 @@ ms.technology:
                                             </div>
                                             <div class="cardText">
                                                 <div style="height:100px; border-bottom-color: #dbdbdb; border-bottom-width: 1px; border-bottom-style: solid; position: relative;">
-                                                   <h3 style="bottom: 20px; color: rgb(110, 110, 110); font-family: segoe-ui_light,Segoe UI Light,Segoe WP,Helvetica Neue,Helvetica,sans-serif; font-size: 2rem; vertical-align: bottom; position: absolute;">Features</h3>
+                                                   <h3 style="bottom: 20px; color: rgb(110, 110, 110); font-family: segoe-ui_light,Segoe UI Light,Segoe WP,Helvetica Neue,Helvetica,sans-serif; font-size: 2rem; vertical-align: bottom; position: absolute;">Data Analytics</h3>
                                                 </div>
-                                                <h4 class="likeAnH3" style="margin: 1rem 0px;">Design</h4>
+                                                <h4 class="likeAnH3" style="margin: 1rem 0px;">Analytics on Azure</h4>
                                                 <ul>
-                                                    <li><a href="/sql/connect/sql-connection-libraries">Connect with client applications</a></li>
-                                                    <li><a href="/sql/relational-databases/database-features">Relational database concepts</a></li>
+                                                    <li><a href="https://docs.microsoft.com/azure/machine-learning/">Azure Machine Learning</a></li>
+                                                    <li><a href="/azure/analysis-services/">Azure Analysis Services</a></li>
+                                                    <li><a href="/azure/stream-analytics/">Azure Stream Analytics</a></li>
+                                                    <li><a href="/azure/data-lake-analytics/">Azure Data Lake Analytics</a></li>
+                                                    <li><a href="https://azuremarketplace.microsoft.com/en-us/marketplace/apps/microsoft-ads.standard-data-science-vm">Data Science Virtual Machine</a></li>
                                                 </ul>
-                                                <h4 class="likeAnH3" style="margin: 1rem 0px;">Tools</h4>
+                                                <h4 class="likeAnH3" style="margin: 1rem 0px;">Machine learning</h4>
                                                 <ul>
-                                                    <li><a href="/sql/ssms/download-sql-server-management-studio-ssms">SQL Server Management Studio (SSMS)</a></li>
-                                                    <li><a href="/sql/ssdt/download-sql-server-data-tools-ssdt">SQL Server Data Tools (SSDT)</a></li>
-                                                    <li><a href="/sql/tools/overview-sql-tools">See all SQL tools</a></li>
+                                                    <li><a href="https://docs.microsoft.com/sql/advanced-analytics/r/r-services">SQL Server Machine Learning Services</a></li>
+                                                    <li><a href="https://docs.microsoft.com/sql/advanced-analytics/r/r-server-standalone">Machine Learning Server (Standalone)</a></li>
                                                 </ul>
-                                                <h4 class="likeAnH3" style="margin: 1rem 0px;">Reference</h4>
+                                                <h4 class="likeAnH3" style="margin: 1rem 0px;">Reporting Services</h4>
                                                 <ul>
-                                                    <li><a href="/sql/t-sql/language-reference">T-SQL</a></li>
-                                                    <li><a href="/sql/relational-databases/system-dynamic-management-views/system-dynamic-management-views">DMVs</a></li>
-                                                    <li><a href="https://docs.microsoft.com/powershell/sql-server/overview?view=sqlserver-ps">PowerShell</a></li>
-                                                    <li><a href="/sql/xquery/xquery-language-reference-sql-server">XQuery</a></li>
+                                                    <li><a href="/sql/reporting-services/create-deploy-and-manage-mobile-and-paginated-reports">SQL Server Reporting Services (2016, 2017)</a></li>
+                                                    <li><a href="https://msdn.microsoft.com/en-us/library/ms159106(v=sql.120).aspx">SQL Server 2014 Reporting Services</a></li>
+                                                    <li><a href="https://msdn.microsoft.com/en-us/library/ms159106(v=sql.110).aspx">SQL Server 2012 Reporting Services</a></li>
                                                 </ul>
-                                                <h4 class="likeAnH3" style="margin: 1rem 0px;">Sample databases</h4>
+                                                <h4 class="likeAnH3" style="margin: 1rem 0px;">Power BI</h4>
                                                 <ul>
-                                                    <li><a href="https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0">Wide World Importers</a></li>
+                                                    <li><a href="https://powerbi.microsoft.com/en-us/documentation/powerbi-service-get-started/">Power BI Service</a></li>
+                                                    <li><a href="https://powerbi.microsoft.com/en-us/documentation/powerbi-desktop-get-the-desktop/">Power BI Desktop</a></li>
+                                                    <li><a href="https://powerbi.microsoft.com/en-us/documentation/powerbi-power-bi-apps-for-mobile-devices/">Power BI Mobile Apps</a></li>
+                                                    <li><a href="https://powerbi.microsoft.com/en-us/documentation/powerbi-developer-overview-of-power-bi-rest-api/">Power BI Developer</a></li>
+                                                    <li><a href="https://powerbi.microsoft.com/en-us/documentation/reportserver-get-started/">Power BI Report Server</a></li>
                                                 </ul>
                                             </div>
                                         </div>

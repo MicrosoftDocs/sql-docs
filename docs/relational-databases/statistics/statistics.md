@@ -96,19 +96,19 @@ ORDER BY s.name;
   
  If per partition statistics are not supported the option is ignored and a warning is generated. Incremental stats are not supported for following statistics types:  
   
--   Statistics created with indexes that are not partition-aligned with the base table.  
+* Statistics created with indexes that are not partition-aligned with the base table.  
   
--   Statistics created on Always On readable secondary databases.  
+* Statistics created on Always On readable secondary databases.  
   
--   Statistics created on read-only databases.  
+* Statistics created on read-only databases.  
   
--   Statistics created on filtered indexes.  
+* Statistics created on filtered indexes.  
   
--   Statistics created on views.  
+* Statistics created on views.  
   
--   Statistics created on internal tables.  
+* Statistics created on internal tables.  
   
--   Statistics created with spatial indexes or XML indexes.  
+* Statistics created with spatial indexes or XML indexes.  
   
 **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
   
@@ -125,13 +125,13 @@ ORDER BY s.name;
   
  Consider creating statistics with the CREATE STATISTICS statement when any of the following applies:  
   
--   The [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor suggests creating statistics.  
+  * The [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor suggests creating statistics.  
   
--   The query predicate contains multiple correlated columns that are not already in the same index.  
+  * The query predicate contains multiple correlated columns that are not already in the same index.  
   
--   The query selects from a subset of data.  
+  * The query selects from a subset of data.  
   
--   The query has missing statistics.  
+  * The query has missing statistics.  
   
 ### Query Predicate contains multiple correlated columns  
  When a query predicate contains multiple columns that have cross-column relationships and dependencies, statistics on the multiple columns might improve the query plan. Statistics on multiple columns contain cross-column correlation statistics, called *densities*, that are not available in single-column statistics. Densities can improve cardinality estimates when query results depend on data relationships among multiple columns.  

@@ -71,8 +71,8 @@ sp_execute_external_script
 ```  
   
 ## Arguments  
-@language = N'*language*'  
-Indicates the script language. *language* is **sysname**.  
+ @language = N'*language*'  
+ Indicates the script language. *language* is **sysname**.  
 
  Valid values are `Python` or `R`. 
   

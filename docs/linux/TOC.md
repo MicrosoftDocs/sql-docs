@@ -71,6 +71,7 @@
 #### [SUSE Linux Enterprise Server]()
 ##### [Configure (HA add-on)](sql-server-linux-shared-disk-cluster-sles-configure.md)
 ### [Availability Groups](sql-server-linux-availability-group-overview.md)
+#### [Configuration only replica](sql-server-linux-availability-group-configuration-only-replica.md)
 #### [Create for high availability](sql-server-linux-availability-group-ha.md)
 ##### [Configure AG](sql-server-linux-availability-group-configure-ha.md)
 ##### [Configure on RHEL](sql-server-linux-availability-group-cluster-rhel.md)

@@ -119,4 +119,4 @@ An availability group with three synchronous replicas can provide read scale-out
 
 [Availability groups on Linux](../../../linux/sql-server-linux-availability-group-overview.md)
   
-[1]:./media/availability-group-configuration-only-replica/configuration-only-example.png
+[1]:./media/sql-server-linux-availability-group-configuration-only-replica/configuration-only-example.png

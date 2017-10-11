@@ -22,7 +22,7 @@ manager: "jhubbard"
 This article explains the process of _binding_, which you can use to upgrade the machine learning components used in SQL Server. The process of binding locks the server into an update cadence based on releases of Machine Learning Server rather than SQL Server.
 
 > [!IMPORTANT]
-> You do not need to use this upgrade process if you want to get upgrades as a part of SQL Server updates. Whenever you install a new service pack or service release, machine learning components are always automatically upgraded to the latest version. Only use this proess if you want to upgrade components at a faster pace than is affored by SQL Server service releases.
+> You do not need to use this upgrade process if you want to get upgrades as a part of SQL Server updates. Whenever you install a new service pack or service release, machine learning components are always automatically upgraded to the latest version. Use this process if you want to upgrade components at a faster pace than is afforded by SQL Server service releases.
 
 If at any time you want to stop upgrading on the Machine Learning Server schedule, you must _unbind_ the instance as described in [this section](#bkmk_Unbind), and uninstall Machine Learning Server.
 
@@ -32,7 +32,7 @@ If at any time you want to stop upgrading on the Machine Learning Server schedul
 
 The process of upgrading the machine learning components is referred to as **binding**, because it changes the support model for SQL Server machine learning components to use the new Modern Software Lifecycle Policy. 
 
-In general, switching to the new licensing model ensures that your data scientists will always be using the latest version of R or Python. For more information about the terms of the Modern Lifecycle Policy, see [Support Timeline for Microsoft R Server](https://msdn.microsoft.com/microsoft-r/rserver-servicing-support).
+In general, switching to the new licensing model ensures that your data scientists can always use the latest version of R or Python. For more information about the terms of the Modern Lifecycle Policy, see [Support Timeline for Microsoft R Server](https://msdn.microsoft.com/microsoft-r/rserver-servicing-support).
 
 > [!NOTE]
 > The upgrade does not change the support model for the SQL Server database and doesn't change the version of SQL Server.
@@ -40,14 +40,14 @@ In general, switching to the new licensing model ensures that your data scientis
 When you bind an instance, several things happen, which can include an upgrade to the machine learning components:
 
 + The support model is changed. Rather than rely on SQL Server service releases, support is based on the new Modern Lifecycle Policy.
-+ The machine learning components associated with the instance will be automatically upgraded with each release, in lock-step with the version that is current under the new Modern Lifecycle Policy. 
++ The machine learning components associated with the instance are automatically upgraded with each release, in lock-step with the version that is current under the new Modern Lifecycle Policy. 
 + New R or Python packages might be added. For example, previous updates from Microsoft R Server added new R packages, such as [MicrosoftML](../using-the-microsoftml-package.md), [olapR](../r/how-to-create-mdx-queries-using-olapr.md), and [sqlrutils](../r/how-to-create-a-stored-procedure-using-sqlrutils.md).
 + The instance can no longer be manually updated, except to add new packages.
 + You gain the option to add pretrained models provided by Microsoft.
 
 ## <a name="bkmk_prereqs"></a>Prerequisites
 
-Begin by identifying instances that are candidates for an upgrade. If you run the installer and select the binding option, it will return a list of instances that are compatible with the upgrade. 
+Begin by identifying instances that are candidates for an upgrade. If you run the installer and select the binding option, it returns a list of instances that are compatible with the upgrade. 
 
 Refer to the following table for a list of supported upgrades and requirements.
 
@@ -74,17 +74,17 @@ Before you can run either the wizard or the command-line tool, you must download
 
 2. On the page, **Configure the installation**, confirm the components to upgrade, and review the list of compatible instances. If no instances are displayed, check the [prerequisites](#bkmk_prereqs).
 
-    To upgrade an instance, select the checkbox next to the instance name. If you do not select an instance, a separate installation of Machine Learning Server will be created, and the SQL Server libraries are unchanged.
+    To upgrade an instance, select the checkbox next to the instance name. If you do not select an instance, a separate installation of Machine Learning Server is created, and the SQL Server libraries are unchanged.
 
     ![Microsoft Machine Learning Server setup wizard](media/configure-the-installation.PNG)
 
-3. On the **License agreement** page, select the **I accept these terms** checkbox to accept the licensing terms for Machine Learning Server. 
+3. On the **License agreement** page, select **I accept these terms** to accept the licensing terms for Machine Learning Server. 
 
 4. On successive pages, provide consent to additional licensing conditions for any open source components you selected, such as Microsoft R Open or the Python Anaconda distribution.
 
 5. On the **Almost there** page, make a note of the installation folder. The default folder is `~\Program Files\Microsoft\ML Server`. 
 
-    If you want to change the installation folder, click **Advanced** to return to the first page of the wizard. However, you will need to repeat some selections. 
+    If you want to change the installation folder, click **Advanced** to return to the first page of the wizard. However, you must repeat all previous selections. 
 
 6. If you are installing the components offline, you might be prompted for the location of required machine learning components, such as Microsoft R Open, Python Server, and Python Open.
     
@@ -92,7 +92,7 @@ During installation, any R or Python libraries used by SQL Server are replaced a
 
 ### <a name="bkmk_BindCmd"></a>Upgrade using the command line
 
-If you do not want to use the wizard, you can install Machine Learning Server, and then run the SqlBindR.exe tool from the command line to ugrade the instance.
+If you do not want to use the wizard, you can install Machine Learning Server, and then run the SqlBindR.exe tool from the command line to upgrade the instance.
 
 > [!TIP]
 > 
@@ -133,7 +133,7 @@ If you decide that you no longer want to upgrade the machine learning components
 
 1. Locate the installer for Machine Learning Server. If you have removed the installer, you might need to download it again, or copy it from another computer.
 2. Be sure to run the installer on the computer that has the instance you want to unbind.
-2. The installer will identify local instances that are candidates for unbinding.
+2. The installer identifies local instances that are candidates for unbinding.
 3. Deselect the check box next to the instance that you want to revert to the original configuration.
 4. Accept the licensing agreement. You must indicate your acceptance of licensing terms even when installing.
 5. Click **Finish**. The process takes a while.
@@ -156,13 +156,13 @@ This section lists known issues specific to use of the SqlBindR.exe utility, or 
 
 In the upgrade utility that was included with Microsoft R Server 9.0.1, the utility did not restore the original packages or R components completely, requiring that the user run repair on the instance, apply all service releases, and then restart the instance.
 
-However, the latest version of the upgrade utility automatically restores the original R features. Therefore, you should not need to reinstall the R components or re-patch the server. However, you will still need to install any R packages that might have been added after the initial installation.
+However, the latest version of the upgrade utility automatically restores the original R features. Therefore, you should not need to reinstall the R components or re-patch the server. However, you must install any R packages that might have been added after the initial installation.
 
 If you have used the package management roles to install and share package, this task is much easier: you can use R commands to synchronize installed packages to the file system using records in the database, and vice versa. For more information, see [R package management for SQL Server](r-package-management-for-sql-server-r-services.md).
 
-### Cannot perform upgrade from 9.0.1
+### Problems with multiple upgrades from SQL Server
 
-If you have previously upgraded an instance of SQL Server 2016 R Services to 9.0.1, when you run the new installer for Microsoft R Server 9.1.0, it will display a list of all valid instances, and then by default select previously bound instances. If you continue, the previously bound instances are unbound. As a result, the earlier 9.0.1 installation is removed, including any related packages, but the new version of Microsoft R Server (9.1.0) is not installed.
+If you have previously upgraded an instance of SQL Server 2016 R Services to 9.0.1, when you run the new installer for Microsoft R Server 9.1.0, it displays a list of all valid instances, and then by default selects previously bound instances. If you continue, the previously bound instances are unbound. As a result, the earlier 9.0.1 installation is removed, including any related packages, but the new version of Microsoft R Server (9.1.0) is not installed.
 
 As a workaround, you can modify the existing R Server installation as follows:
 1. In Control Panel, open **Add or Remove Programs**.
@@ -175,7 +175,7 @@ Sometimes the binding and unbinding operations fail to clean up temporary folder
 If you find folders with a name like this, you can remove it after installation is complete: `R_SERVICES_<guid>`
 
 > [!NOTE]
-> Be sure to wait until installation is complete. It can take a long time to remove R libraries associated with one version and then add the new R libraries. When the operation completes, temporary folders will be removed.
+> Be sure to wait until installation is complete. It can take a long time to remove R libraries associated with one version and then add the new R libraries. When the operation completes, temporary folders are removed.
 
 ## sqlbindr.exe command syntax
 

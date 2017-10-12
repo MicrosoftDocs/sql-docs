@@ -16,6 +16,9 @@ ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
 
 This topic describes what's new for SQL Server 2017 running on Linux.
 
+> [!NOTE]
+> In addition to the changes below, cumulative updates are released at regular intervals after the GA release. These cumulative updates provide many improvements and fixes. For information about the latest CU release, see [http://aka.ms/sql2017cu](http://aka.ms/sql2017cu).
+
 ## GA
 
 The General Availaiblity (GA) release contains the following improvements and fixes:

@@ -36,7 +36,7 @@ All of the examples below require a database scoped credential referencing a sha
  
 Create a database scoped credential using the `IDENTITY` which must be `SHARED ACCESS SIGNATURE`. Use the secret from your Azure portal. For example:  
 
-```tsql
+```sql
 CREATE DATABASE SCOPED CREDENTIAL UploadInvoices  
 WITH IDENTITY = 'SHARED ACCESS SIGNATURE',
 SECRET = 'QLYMgmSXMklt%2FI1U6DcVrQixnlU5Sgbtk1qDRakUBGs%3D';
@@ -45,7 +45,7 @@ SECRET = 'QLYMgmSXMklt%2FI1U6DcVrQixnlU5Sgbtk1qDRakUBGs%3D';
 
 ## Accessing data in a CSV file referencing an Azure blob storage location   
 The following example uses an external data source pointing to an Azure storage account, named `newinvoices`.   
-```tsql
+```sql
 CREATE EXTERNAL DATA SOURCE MyAzureInvoices
     WITH  (
         TYPE = BLOB_STORAGE,
@@ -55,7 +55,7 @@ CREATE EXTERNAL DATA SOURCE MyAzureInvoices
 ```   
 
 Then the `OPENROWSET` statement adds the container name (`week3`) to the file description. The file is named `inv-2017-01-19.csv`.
-```tsql     
+```sql     
 SELECT * FROM OPENROWSET(
    BULK  'week3/inv-2017-01-19.csv',
    DATA_SOURCE = 'MyAzureInvoices',
@@ -64,7 +64,7 @@ SELECT * FROM OPENROWSET(
 
 Using `BULK INSERT`, use the container and file description:
 
-```tsql
+```sql
 BULK INSERT Colors2
 FROM 'week3/inv-2017-01-19.csv'
 WITH (DATA_SOURCE = 'MyAzureInvoices',
@@ -74,7 +74,7 @@ WITH (DATA_SOURCE = 'MyAzureInvoices',
 ## Accessing data in a CSV file referencing a container in an Azure blob storage location   
 
 The following example uses an external data source pointing to a container (named `week3`) in an Azure storage account.   
-```tsql
+```sql
 CREATE EXTERNAL DATA SOURCE MyAzureInvoicesContainer
     WITH  (
         TYPE = BLOB_STORAGE,
@@ -84,7 +84,7 @@ CREATE EXTERNAL DATA SOURCE MyAzureInvoicesContainer
 ```  
   
 Then the `OPENROWSET` statement does not include the container name in the file description:
-```tsql
+```sql
 SELECT * FROM OPENROWSET(
    BULK  'inv-2017-01-19.csv',
    DATA_SOURCE = 'MyAzureInvoicesContainer',
@@ -93,7 +93,7 @@ SELECT * FROM OPENROWSET(
 
 Using `BULK INSERT`, do not use the container name in the file description: 
 
-```tsql
+```sql
 BULK INSERT Colors2
 FROM 'inv-2017-01-19.csv'
 WITH (DATA_SOURCE = 'MyAzureInvoicesContainer',

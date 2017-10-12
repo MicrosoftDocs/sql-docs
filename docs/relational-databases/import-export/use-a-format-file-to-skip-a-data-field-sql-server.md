@@ -34,7 +34,7 @@ The examples of modified format files in this topic are based on the table and d
 ### Sample Table<a name="sample_table"></a>
 The script below creates a test database and a table named `myTestSkipField`.  Execute the following Transact-SQL in Microsoft SQL Server Management Studio (SSMS):
  
-```tsql
+```sql
 CREATE DATABASE TestDatabase;
 GO
 
@@ -178,7 +178,7 @@ bcp TestDatabase.dbo.myTestSkipField IN D:\BCP\myTestSkipField.bcp -f D:\BCP\myT
 
 ### Using [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) and [Non-XML Format File](../../relational-databases/import-export/non-xml-format-files-sql-server.md)<a name="bulk_nonxml"></a>
 Execute the following Transact-SQL in Microsoft SQL Server Management Studio (SSMS):
-```tsql
+```sql
 USE TestDatabase;  
 GO
 
@@ -194,7 +194,7 @@ SELECT * FROM TestDatabase.dbo.myTestSkipField;
 
 ### Using [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) and [XML Format File](../../relational-databases/import-export/xml-format-files-sql-server.md)<a name="bulk_xml"></a>
 Execute the following Transact-SQL in Microsoft SQL Server Management Studio (SSMS):
-```tsql
+```sql
 USE TestDatabase;  
 GO
 
@@ -210,7 +210,7 @@ SELECT * FROM TestDatabase.dbo.myTestSkipField;
 
 ### Using [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) and [Non-XML Format File](../../relational-databases/import-export/non-xml-format-files-sql-server.md)<a name="openrowset_nonxml"></a>	
 Execute the following Transact-SQL in Microsoft SQL Server Management Studio (SSMS):
-```tsql
+```sql
 USE TestDatabase;
 GO
 
@@ -229,7 +229,7 @@ SELECT * FROM TestDatabase.dbo.myTestSkipField;
 
 ### Using [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) and [XML Format File](../../relational-databases/import-export/xml-format-files-sql-server.md)<a name="openrowset_xml"></a>
 Execute the following Transact-SQL in Microsoft SQL Server Management Studio (SSMS):
-```tsql
+```sql
 USE TestDatabase;  
 GO
 

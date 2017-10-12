@@ -74,7 +74,7 @@ ALTER AVAILABILITY GROUP group_name
   <server_instance> WITH  
     (  
        ENDPOINT_URL = 'TCP://system-address:port',  
-       AVAILABILITY_MODE = { SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT },  
+       AVAILABILITY_MODE = { SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT | CONFIGURATION_ONLY },  
        FAILOVER_MODE = { AUTOMATIC | MANUAL }   
        [ , <add_replica_option> [ ,...n ] ]  
     )   
@@ -96,7 +96,7 @@ ALTER AVAILABILITY GROUP group_name
   <server_instance> WITH  
     (    
        ENDPOINT_URL = 'TCP://system-address:port'   
-     | AVAILABILITY_MODE = { SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT | CONFIGURATION_ONLY }   
+     | AVAILABILITY_MODE = { SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT }   
      | FAILOVER_MODE = { AUTOMATIC | MANUAL }   
      | SEEDING_MODE = { AUTOMATIC | MANUAL }   
      | BACKUP_PRIORITY = n  
@@ -287,7 +287,14 @@ ALTER AVAILABILITY GROUP group_name
  Specifies that the primary replica commits transactions without waiting for this secondary replica to harden the log (synchronous-commit availability mode). You can specify ASYNCHRONOUS_COMMIT for up to five availability replicas, including the primary replica.  
 
  CONFIGURATION_ONLY
- Specifies that the primary replica synchronously commit availability group configuration metadata to the master database on this replica. The replica will not contain user data. For more information, see [Configuration only replica](../../linux/sql-server-linux-availability-group-configuration-only-replica.md).
+ Specifies that the primary replica synchronously commit availability group configuration metadata to the master database on this replica. The replica will not contain user data. This option:
+
+- Can be hosted on any edition of SQL Server, including Express Edition.
+- Requires the data mirroring endpoint of the CONFIGURATION_ONLY replica to be type `WITNESS`.
+- Can not be altered.
+- Is not valid when `CLUSTER_TYPE = WSFC`. 
+
+   For more information, see [Configuration only replica](../../linux/sql-server-linux-availability-group-ha.md).
     
  AVAILABILITY_MODE is required in the ADD REPLICA ON clause and optional in the MODIFY REPLICA ON clause. For more information, see [Availability Modes &#40;Always On Availability Groups&#41;](../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md).  
   

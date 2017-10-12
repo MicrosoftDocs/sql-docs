@@ -56,7 +56,7 @@ manager: "jhubbard"
   
      For more information, see [Synchronous-Commit Availability Mode](#SyncCommitAvMode), later in this topic.  
 
--   *Configuration only mode* applies to availability groups that are not on a Windows Server Failover Cluster. A replica in configuration only mode does not contain user data. In configuration only mode, the replica master database stores availability group configuration metadata. For more information see [Availability group with configuration only replica](../../../linux/sql-server-linux-availability-group-configuration-only-replica.md).
+-   *Configuration only mode* applies to availability groups that are not on a Windows Server Failover Cluster. A replica in configuration only mode does not contain user data. In configuration only mode, the replica master database stores availability group configuration metadata. For more information see [Availability group with configuration only replica](../../../linux/sql-server-linux-availability-group-ha.md).
   
  The following illustration shows an availability group with five availability replicas. The primary replica and one secondary replica are configured for synchronous-commit mode with automatic failover. Another secondary replica is configured for synchronous-commit mode with only planned manual failover, and two secondary replicas are configured for asynchronous-commit mode, which supports only forced manual failover (typically called *forced failover*).  
   

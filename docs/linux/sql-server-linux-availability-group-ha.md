@@ -53,7 +53,7 @@ The following sections explain the default behavior for the cluster resource.
 
 <a name = "configOnly"></a>
 
-### Two synchronous replicas and a configuration only replica
+## Two synchronous replicas and a configuration only replica
 
 An availability group with two (or more) synchronous replicas and a configuration only replica provides data protection and may also provide high availability. The default value for `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` is 0. The following table describes availability behavior. 
 
@@ -110,7 +110,7 @@ An availability group with two synchronous replicas provides read scale-out and 
 * The availability group needs at least one secondary replica - in addition to the primary replica.
 * Configuration only replicas do not count towards the maximum number of replicas per instance of SQL Server. SQL Server standard edition allows up to three replicas, SQL Server Enterprise Edition allows up to 9.
 
-## Limits
+## Considerations
 
 * No more than one configuration only replica per availability group. 
 * A configuration only replica cannot be a primary replica.

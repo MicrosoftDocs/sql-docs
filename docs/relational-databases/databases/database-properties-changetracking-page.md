@@ -31,7 +31,7 @@ manager: "jhubbard"
  You can also configure change tracking by using [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md).  
   
  **Retention Period**  
- Specifies the minimum period for keeping change track information in the database. Data is removed only if the **Auto Clean-Up**value is **True**.  
+ Specifies the minimum period for keeping change track information in the database. Data is removed only if the **Auto Clean-Up** value is **True**.  
   
  The default value is 2.  
   

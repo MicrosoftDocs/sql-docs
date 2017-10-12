@@ -27,7 +27,7 @@ manager: "jhubbard"
 -   **Row delimiter**. Each row of data in the output ends with a carriage return-line feed combination.
 -   **Column delimiter**. Columns of data within each row are separated with a comma.
 
- ![Configure flat file page of the Import and Export Wizard](../../integration-services/import-export-data/media/flat-file.png "Configure flat file page of the Import and Export Wizard")  
+ ![Configure flat file page of the Import and Export Wizard](../../integration-services/import-export-data/media/flat-file.png)
   
 ## Pick a source table
  **Source table or view**  

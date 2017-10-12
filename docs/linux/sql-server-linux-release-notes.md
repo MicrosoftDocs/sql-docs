@@ -18,6 +18,7 @@ The following table lists the release history for SQL Server 2017.
 
 | Release | Version | Release date |
 |-----|-----|-----|
+| [CU1](#CU1) | ##.#.####.### | 10-2017 |
 | [GA](#GA) | 14.0.1000.169 | 10-2017 |
 | [RC2](#RC2) | 14.0.900.75 | 8-2017 |
 | [RC1](#RC1) | 14.0.800.90 | 7-2017 |
@@ -28,6 +29,24 @@ The following table lists the release history for SQL Server 2017.
 | CTP 1.2 | 14.0.200.24 | 1-2017 |
 | CTP 1.1 | 14.0.100.187 | 12-2016 |
 | CTP 1.0 | 14.0.1.246 | 11-2016 |
+
+## <A id="CU1"></a> Cumulative Update 1 (October 2017)
+
+This is the Cumulative Update 1 (CU1) release of SQL Server 2017. The SQL Server engine version for this release is ##.#.####.###. For information about the fixes and improvements in this release, see [https://support.microsoft.com/help/4013105/cumulative-update-5-for-sql-server-2016](https://support.microsoft.com/help/4013105/cumulative-update-5-for-sql-server-2016).
+
+### Package details
+
+Package details and download locations for the RPM and Debian packages are listed in the following table. Note that you do not need to download these packages directly if you use the steps in the following installation guides:
+
+- [Install SQL Server package](sql-server-linux-setup.md)
+- [Install Full-text Search package](sql-server-linux-setup-full-text-search.md)
+- [Install SQL Server Agent package](sql-server-linux-setup-sql-agent.md)
+
+| Package | Package version | Downloads |
+|-----|-----|-----|
+| Red Hat RPM package | ##.#.####.###-# | [Engine RPM package](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-##.#.####.###-#.x86_64.rpm)</br>[High Availability RPM package](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-##.#.####.###-#.x86_64.rpm)</br>[Full-text Search RPM package](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-##.#.####.###-#.x86_64.rpm)</br>[SQL Server Agent RPM package](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-agent-##.#.####.###-#.x86_64.rpm)</br>[SSIS package](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
+| SLES RPM package | ##.#.####.###-# | [mssql-server Engine RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-##.#.####.###-#.x86_64.rpm)</br>[High Availability RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-##.#.####.###-#.x86_64.rpm)</br>[Full-text Search RPM package](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-##.#.####.###-#.x86_64.rpm)</br>[SQL Server Agent RPM package](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-agent-##.#.####.###-#.x86_64.rpm) | 
+| Ubuntu 16.04 Debian package | ##.#.####.###-# | [Engine Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_##.#.####.###-#_amd64.deb)</br>[High Availability Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_##.#.####.###-#_amd64.deb)</br>[Full-text Search Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_##.#.####.###-#_amd64.deb)</br>[SQL Server Agent Debian package](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-agent/mssql-server-agent_##.#.####.###-#_amd64.deb)<br/>[SSIS pacakge](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
 ## <a id="GA"></a> GA (October 2017)
 

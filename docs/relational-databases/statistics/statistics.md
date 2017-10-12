@@ -1,7 +1,7 @@
 ---
 title: "Statistics | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/08/2016"
+ms.date: "10/11/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -63,21 +63,21 @@ ORDER BY s.name;
   
 * Up to [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses a threshold based on the percent of rows changed. This is regardless of the number of rows in the table. The threshold is:
     * If the table cardinality was 500 or less at the time statistics were evaluated, update for every 500 modifications.
-    * If the table cardinality was above 500 at the time statistics were evaluated, update for every 500 + 20% of modifications.
+    * If the table cardinality was above 500 at the time statistics were evaluated, update for every 500 + 20 percent of modifications.
 
 * Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and under the compatibility level 130, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses a decreasing, dynamic statistics update threshold that adjusts according to the number of rows in the table. This is calculated as the square root of 1,000 multiplied by the current table cardinality. With this change, statistics on large tables will be updated more often. However, if a database has a compatibility level below 130, then the [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] threshold applies.  
   
- The Query Optimizer checks for out-of-date statistics before compiling a query and before executing a cached query plan. Before compiling a query, the Query Optimizer uses the columns, tables, and indexed views in the query predicate to determine which statistics might be out-of-date. Before executing a cached query plan, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] verifies that the query plan references up-to-date statistics.  
+The Query Optimizer checks for out-of-date statistics before compiling a query and before executing a cached query plan. Before compiling a query, the Query Optimizer uses the columns, tables, and indexed views in the query predicate to determine which statistics might be out-of-date. Before executing a cached query plan, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] verifies that the query plan references up-to-date statistics.  
   
- The AUTO_UPDATE_STATISTICS option applies to statistics objects created for indexes, single-columns in query predicates, and statistics created with the [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) statement. This option also applies to filtered statistics.  
+The AUTO_UPDATE_STATISTICS option applies to statistics objects created for indexes, single-columns in query predicates, and statistics created with the [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) statement. This option also applies to filtered statistics.  
  
- For more information about controlling AUTO_UPDATE_STATISTICS, see [Controlling Autostat (AUTO_UPDATE_STATISTICS) behavior in SQL Server](http://support.microsoft.com/help/2754171)
+For more information about controlling AUTO_UPDATE_STATISTICS, see [Controlling Autostat (AUTO_UPDATE_STATISTICS) behavior in SQL Server](http://support.microsoft.com/help/2754171).
   
 #### AUTO_UPDATE_STATISTICS_ASYNC  
  The asynchronous statistics update option, AUTO_UPDATE_STATISTICS_ASYNC, determines whether the Query Optimizer uses synchronous or asynchronous statistics updates. By default, the asynchronous statistics update option is off, and the Query Optimizer updates statistics synchronously. The AUTO_UPDATE_STATISTICS_ASYNC option applies to statistics objects created for indexes, single columns in query predicates, and statistics created with the [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) statement.  
  
  > [!NOTE]
- > To set this option in [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)], in the *Options* page of the *Database Properties* window, both *Auto Update Statistics* and *Auto Update Statistics Asynchronously* options need to be set to **True**.
+ > To set the asynchronous statistics update option in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], in the *Options* page of the *Database Properties* window, both *Auto Update Statistics* and *Auto Update Statistics Asynchronously* options need to be set to **True**.
   
  Statistics updates can be either synchronous (the default) or asynchronous. With synchronous statistics updates, queries always compile and execute with up-to-date statistics; When statistics are out-of-date, the Query Optimizer waits for updated statistics before compiling and executing the query. With asynchronous statistics updates, queries compile with existing statistics even if the existing statistics are out-of-date; The Query Optimizer could choose a suboptimal query plan if statistics are out-of-date when the query compiles. Queries that compile after the asynchronous updates have completed will benefit from using the updated statistics.  
   
@@ -96,19 +96,19 @@ ORDER BY s.name;
   
  If per partition statistics are not supported the option is ignored and a warning is generated. Incremental stats are not supported for following statistics types:  
   
--   Statistics created with indexes that are not partition-aligned with the base table.  
+* Statistics created with indexes that are not partition-aligned with the base table.  
   
--   Statistics created on Always On readable secondary databases.  
+* Statistics created on Always On readable secondary databases.  
   
--   Statistics created on read-only databases.  
+* Statistics created on read-only databases.  
   
--   Statistics created on filtered indexes.  
+* Statistics created on filtered indexes.  
   
--   Statistics created on views.  
+* Statistics created on views.  
   
--   Statistics created on internal tables.  
+* Statistics created on internal tables.  
   
--   Statistics created with spatial indexes or XML indexes.  
+* Statistics created with spatial indexes or XML indexes.  
   
 **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
   
@@ -119,19 +119,19 @@ ORDER BY s.name;
   
 2.  The Query Optimizer creates statistics for single columns in query predicates when AUTO_CREATE_STATISTICS is on.  
   
- For most queries, these two methods for creating statistics ensure a high-quality query plan; in a few cases, you can improve query plans by creating additional statistics with the [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) statement. These additional statistics can capture statistical correlations that the Query Optimizer does not account for when it creates statistics for indexes or single columns. Your application might have additional statistical correlations in the table data that, if calculated into a statistics object, could enable the Query Optimizer to improve query plans. For example, filtered statistics on a subset of data rows or multicolumn statistics on query predicate columns might improve the query plan.  
+For most queries, these two methods for creating statistics ensure a high-quality query plan; in a few cases, you can improve query plans by creating additional statistics with the [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) statement. These additional statistics can capture statistical correlations that the Query Optimizer does not account for when it creates statistics for indexes or single columns. Your application might have additional statistical correlations in the table data that, if calculated into a statistics object, could enable the Query Optimizer to improve query plans. For example, filtered statistics on a subset of data rows or multicolumn statistics on query predicate columns might improve the query plan.  
   
- When creating statistics with the CREATE STATISTICS statement, we recommend keeping the AUTO_CREATE_STATISTICS option on so that the Query Optimizer continues to routinely create single-column statistics for query predicate columns. For more information about query predicates, see [Search Condition &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md).  
+When creating statistics with the CREATE STATISTICS statement, we recommend keeping the AUTO_CREATE_STATISTICS option on so that the Query Optimizer continues to routinely create single-column statistics for query predicate columns. For more information about query predicates, see [Search Condition &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md).  
   
- Consider creating statistics with the CREATE STATISTICS statement when any of the following applies:  
-  
--   The [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor suggests creating statistics.  
-  
--   The query predicate contains multiple correlated columns that are not already in the same index.  
-  
--   The query selects from a subset of data.  
-  
--   The query has missing statistics.  
+Consider creating statistics with the CREATE STATISTICS statement when any of the following applies:  
+
+* The [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor suggests creating statistics.  
+
+* The query predicate contains multiple correlated columns that are not already in the same index.  
+
+* The query selects from a subset of data.  
+
+* The query has missing statistics.  
   
 ### Query Predicate contains multiple correlated columns  
  When a query predicate contains multiple columns that have cross-column relationships and dependencies, statistics on the multiple columns might improve the query plan. Statistics on multiple columns contain cross-column correlation statistics, called *densities*, that are not available in single-column statistics. Densities can improve cardinality estimates when query results depend on data relationships among multiple columns.  
@@ -154,7 +154,7 @@ CREATE STATISTICS LastFirst ON Person.Person (LastName, MiddleName, FirstName);
 GO  
 ```  
   
- In this example, the statistics object `LastFirst` has densities for the following column prefixes: (`LastName`), (`LastName, MiddleName`), and (`LastName, MiddleName, FirstName`). The density is not available for (`LastName, FirstName`). If the query uses `LastName` and `FirstName` without using `MiddleName`, the density is not available for cardinality estimates.  
+ In this example, the statistics object `LastFirst` has densities for the following column prefixes: `(LastName)`, `(LastName, MiddleName)`, and `(LastName, MiddleName, FirstName)`. The density is not available for `(LastName, FirstName)`. If the query uses `LastName` and `FirstName` without using `MiddleName`, the density is not available for cardinality estimates.  
   
 ### Query Selects from a subset of data  
  When the Query Optimizer creates statistics for single columns and indexes, it creates the statistics for the values in all rows. When queries select from a subset of rows, and that subset of rows has a unique data distribution, filtered statistics can improve query plans. You can create filtered statistics by using the CREATE STATISTICS statement with the WHERE clause to define the filter predicate expression.  
@@ -188,11 +188,11 @@ GO
   
 * Verify that AUTO_CREATE_STATISTICS and AUTO_UPDATE_STATISTICS are on.  
   
-* Verify that the database is not read-only. If the database is read-only, the query optimizer cannot save statistics.  
+* Verify that the database is not read-only. If the database is read-only, a new statistics object cannot be saved.  
   
 * Create the missing statistics by using the CREATE STATISTICS statement.  
   
- When statistics on a read-only database or read-only snapshot are missing or stale, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] creates and maintains temporary statistics in **tempdb**. When the [!INCLUDE[ssDE](../../includes/ssde-md.md)] creates temporary statistics, the statistics name is appended with the suffix _readonly_database_statistic to differentiate the temporary statistics from the permanent statistics. The suffix _readonly_database_statistic is reserved for statistics generated by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Scripts for the temporary statistics can be created and reproduced on a read-write database. When scripted, [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] changes the suffix of the statistics name from _readonly_database_statistic to _readonly_database_statistic_scripted.  
+ When statistics on a read-only database or read-only snapshot are missing or stale, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] creates and maintains temporary statistics in **tempdb**. When the [!INCLUDE[ssDE](../../includes/ssde-md.md)] creates temporary statistics, the statistics name is appended with the suffix *_readonly_database_statistic* to differentiate the temporary statistics from the permanent statistics. The suffix *_readonly_database_statistic* is reserved for statistics generated by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Scripts for the temporary statistics can be created and reproduced on a read-write database. When scripted, [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] changes the suffix of the statistics name from *_readonly_database_statistic* to *_readonly_database_statistic_scripted*.  
   
  Only [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can create and update temporary statistics. However, you can delete temporary statistics and monitor statistics properties using the same tools that you use for permanent statistics:  
   
@@ -210,7 +210,7 @@ GO
   
  When updating statistics with UPDATE STATISTICS or sp_updatestats, we recommend keeping AUTO_UPDATE_STATISTICS set to ON so that the Query Optimizer continues to routinely update statistics. For more information about how to update statistics on a column, an index, a table, or an indexed view, see [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md). For information about how to update statistics for all user-defined and internal tables in the database, see the stored procedure [sp_updatestats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md).  
   
- To determine when statistics were last updated, use the [STATS_DATE](../../t-sql/functions/stats-date-transact-sql.md) function.  
+ To determine when statistics were last updated, use the [sys.dm_db_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md) or [STATS_DATE](../../t-sql/functions/stats-date-transact-sql.md) functions.  
   
  Consider updating statistics for the following conditions:  
   
@@ -231,34 +231,37 @@ GO
 ### After maintenance operations  
  Consider updating statistics after performing maintenance procedures that change the distribution of data, such as truncating a table or performing a bulk insert of a large percentage of the rows. This can avoid future delays in query processing while queries wait for automatic statistics updates.  
   
- Operations such as rebuilding, defragmenting, or reorganizing an index do not change the distribution of data. Therefore, you do not need to update statistics after performing ALTER INDEX REBUILD, DBCC REINDEX, DBCC INDEXDEFRAG, or ALTER INDEX REORGANIZE operations. The Query Optimizer updates statistics when you rebuild an index on a table or view with ALTER INDEX REBUILD or DBCC DBREINDEX, however; this statistics update is a byproduct of re-creating the index. The Query Optimizer does not update statistics after DBCC INDEXDEFRAG or ALTER INDEX REORGANIZE operations.  
+ Operations such as rebuilding, defragmenting, or reorganizing an index do not change the distribution of data. Therefore, you do not need to update statistics after performing ALTER INDEX REBUILD, DBCC REINDEX, DBCC INDEXDEFRAG, or ALTER INDEX REORGANIZE operations. The Query Optimizer updates statistics when you rebuild an index on a table or view with ALTER INDEX REBUILD or DBCC DBREINDEX, however this statistics update is a byproduct of re-creating the index. The Query Optimizer does not update statistics after DBCC INDEXDEFRAG or ALTER INDEX REORGANIZE operations. 
+ 
+> [!TIP]
+> Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4, use the PERSIST_SAMPLE_PERCENT option of [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md) or [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md), to set and retain a specific sampling percentage for subsequent statistic updates that do not explicitly specify a sampling percentage.
   
 ##  <a name="DesignStatistics"></a> Queries that use statistics effectively  
  Certain query implementations, such as local variables and complex expressions in the query predicate, can lead to suboptimal query plans. Following query design guidelines for using statistics effectively can help to avoid this. For more information about query predicates, see [Search Condition &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md).  
   
- You can improve query plans by applying query design guidelines that use statistics effectively to improve *cardinality estimates* for expressions, variables, and functions used in query predicates. When the Query Optimizer does not know the value of an expression, variable, or function, it does not know which value to lookup in the histogram and therefore cannot retrieve the best cardinality estimate from the histogram. Instead, the Query Optimizer bases the cardinality estimate on the average number of rows per distinct value for all of the sampled rows in the histogram. This leads to suboptimal cardinality estimates and can hurt query performance.  
+ You can improve query plans by applying query design guidelines that use statistics effectively to improve *cardinality estimates* for expressions, variables, and functions used in query predicates. When the Query Optimizer does not know the value of an expression, variable, or function, it does not know which value to lookup in the histogram and therefore cannot retrieve the best cardinality estimate from the histogram. Instead, the Query Optimizer bases the cardinality estimate on the average number of rows per distinct value for all of the sampled rows in the histogram. This leads to suboptimal cardinality estimates and can hurt query performance. For more information about histograms, see [sys.dm_db_stats_histogram](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md).
   
  The following guidelines describe how to write queries to improve query plans by improving cardinality estimates.  
   
 ### Improving cardinality estimates for expressions  
- To improve cardinality estimates for expressions, follow these guidelines:  
+To improve cardinality estimates for expressions, follow these guidelines:  
   
--   Whenever possible, simplify expressions with constants in them. The Query Optimizer does not evaluate all functions and expressions containing constants prior to determining cardinality estimates. For example, simplify the expression ABS(`-100) to 100`.  
+* Whenever possible, simplify expressions with constants in them. The Query Optimizer does not evaluate all functions and expressions containing constants prior to determining cardinality estimates. For example, simplify the expression `ABS(-100)` to `100`.  
   
--   If the expression uses multiple variables, consider creating a computed column for the expression and then create statistics or an index on the computed column. For example, the query predicate `WHERE PRICE + Tax > 100` might have a better cardinality estimate if you create a computed column for the expression `Price + Tax`.  
+* If the expression uses multiple variables, consider creating a computed column for the expression and then create statistics or an index on the computed column. For example, the query predicate `WHERE PRICE + Tax > 100` might have a better cardinality estimate if you create a computed column for the expression `Price + Tax`.  
   
 ### Improving cardinality estimates for variables and functions  
- To improve the cardinality estimates for variables and functions, follow these guidelines:  
+To improve the cardinality estimates for variables and functions, follow these guidelines:  
   
--   If the query predicate uses a local variable, consider rewriting the query to use a parameter instead of a local variable. The value of a local variable is not known when the Query Optimizer creates the query execution plan. When a query uses a parameter, the Query Optimizer uses the cardinality estimate for the first actual parameter value that is passed to the stored procedure.  
+* If the query predicate uses a local variable, consider rewriting the query to use a parameter instead of a local variable. The value of a local variable is not known when the Query Optimizer creates the query execution plan. When a query uses a parameter, the Query Optimizer uses the cardinality estimate for the first actual parameter value that is passed to the stored procedure.  
   
--   Consider using a standard table or temporary table to hold the results of multi-statement table-valued functions. The Query Optimizer does not create statistics for multi-statement table-valued functions. With this approach the Query Optimizer can create statistics on the table columns and use them to create a better query plan.  
+* Consider using a standard table or temporary table to hold the results of multi-statement table-valued functions (mstvf). The Query Optimizer does not create statistics for multi-statement table-valued functions. With this approach the Query Optimizer can create statistics on the table columns and use them to create a better query plan.  
   
--   Consider using a standard table or temporary table as a replacement for table variables. The Query Optimizer does not create statistics for table variables. With this approach the Query Optimizer can create statistics on the table columns and use them to create a better query plan. There are tradeoffs in determining whether to use a temporary table or a table variable; Table variables used in stored procedures cause fewer recompilations of the stored procedure than temporary tables. Depending on the application, using a temporary table instead of a table variable might not improve performance.  
+* Consider using a standard table or temporary table as a replacement for table variables. The Query Optimizer does not create statistics for table variables. With this approach the Query Optimizer can create statistics on the table columns and use them to create a better query plan. There are tradeoffs in determining whether to use a temporary table or a table variable; Table variables used in stored procedures cause fewer recompilations of the stored procedure than temporary tables. Depending on the application, using a temporary table instead of a table variable might not improve performance.  
   
--   If a stored procedure contains a query that uses a passed-in parameter, avoid changing the parameter value within the stored procedure before using it in the query. The cardinality estimates for the query are based on the passed-in parameter value and not the updated value. To avoid changing the parameter value, you can rewrite the query to use two stored procedures.  
+* If a stored procedure contains a query that uses a passed-in parameter, avoid changing the parameter value within the stored procedure before using it in the query. The cardinality estimates for the query are based on the passed-in parameter value and not the updated value. To avoid changing the parameter value, you can rewrite the query to use two stored procedures.  
   
-     For example, the following stored procedure `Sales.GetRecentSales` changes the value of the parameter `@date` when `@date is NULL`.  
+     For example, the following stored procedure `Sales.GetRecentSales` changes the value of the parameter `@date` when `@date` is NULL.  
   
     ```tsql  
     USE AdventureWorks2012;  
@@ -268,7 +271,7 @@ GO
     GO  
     CREATE PROCEDURE Sales.GetRecentSales (@date datetime)  
     AS BEGIN  
-        IF @date is NULL  
+        IF @date IS NULL  
             SET @date = DATEADD(MONTH, -3, (SELECT MAX(ORDERDATE) FROM Sales.SalesOrderHeader))  
         SELECT * FROM Sales.SalesOrderHeader h, Sales.SalesOrderDetail d  
         WHERE h.SalesOrderID = d.SalesOrderID  

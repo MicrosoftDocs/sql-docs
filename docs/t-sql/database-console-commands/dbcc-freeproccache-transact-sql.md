@@ -1,7 +1,7 @@
 ---
 title: "DBCC FREEPROCCACHE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/16/2017"
+ms.date: "10/13/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -111,7 +111,6 @@ When the WITH NO_INFOMSGS clause is not specified, DBCC FREEPROCCACHE returns:
   
 ## Permissions  
 Applies to: SQL Server, Parallel Data Warehouse 
-
 - Requires ALTER SERVER STATE permission on the server.  
 
 Applies to: Azure SQL Data Warehouse
@@ -130,6 +129,9 @@ DBCC FREEPROCCAHCE is not supported in an EXPLAIN statement.
   
 ## Metadata for [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 A new row is added to the sys.pdw_exec_requests system view when DBCC FREEPROCCACHE is run.
+
+> [!NOTE]
+> Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], the `ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE` to clear the procedure (plan) cache for the database in scope.
   
 ## Examples: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
@@ -211,6 +213,7 @@ GRANT ALTER SERVER STATE TO David;
   
 ## See Also  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
-[Resource Governor](../../relational-databases/resource-governor/resource-governor.md)
+[Resource Governor](../../relational-databases/resource-governor/resource-governor.md)  
+[ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)
   
   

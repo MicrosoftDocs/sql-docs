@@ -1,7 +1,7 @@
 ---
 title: "PDOStatement::bindParam | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "10/13/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -43,6 +43,8 @@ TRUE on success, otherwise FALSE.
   
 ## Remarks  
 When binding null data to server columns of type varbinary, binary, or varbinary(max) you should specify binary encoding (PDO::SQLSRV_ENCODING_BINARY) using the $*driver_options*. See [Constants](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md) for more information about encoding constants.  
+  
+It is recommended to use strings as inputs when binding values to a decimal or numeric column to ensure precision and accuracy. See [!INCLUDE[decimals as parameters](https://github.com/Microsoft/msphpsql/wiki/Features#decimalParams)] for details. 
   
 Support for PDO was added in version 2.0 of the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   

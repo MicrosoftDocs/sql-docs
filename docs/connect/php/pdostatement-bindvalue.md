@@ -1,7 +1,7 @@
 ---
 title: "PDOStatement::bindValue | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "10/13/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -38,6 +38,9 @@ $*data_type*: The optional (integer) data type represented by a PDO::PARAM_* con
 TRUE on success, otherwise FALSE.  
   
 ## Remarks  
+  
+It is recommended to use strings as inputs when binding values to a decimal or numeric column to ensure precision and accuracy. See [!INCLUDE[decimals as parameters](https://github.com/Microsoft/msphpsql/wiki/Features#decimalParams)] for details. 
+
 Support for PDO was added in version 2.0 of the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
 ## Example  

@@ -29,13 +29,9 @@ The WSFC synchronizes configuration metadata for failover arbitration between th
 
 For example, an availability group on a Linux cluster has `CLUSTER_TYPE = EXTERNAL`. There is no WSFC to arbitrate failover. In this case the configuration metadata is managed and maintained by the SQL Server instances. Because there is no witness server in this cluster, a third SQL Server instance is required to store configuration state metadata. This provides high availability, and allows the Pacemaker cluster to arbitrate failover of the availability group resources. Therefore three synchronous replicas - one primary, and two secondary - are required for high availability prior to SQL Server 2017 CU 1.
 
-SQL Server 2017 CU 1 enables high availability for an availability group with `CLUSTER_TYPE = EXTERNAL` for two synchronous replicas plus a configuration only replica. The configuration only replica can be hosted on any version of SQL Server 2017 CU1 or later - including SQL Server Express edition. The configuration only replica maintains configuration information about the availability group in the master database. The configuration only replica does not contain the user databases in the availability group. The following diagram shows an availability group with a configuration only replica:
-
-![Configuration only replica][4]
+SQL Server 2017 CU 1 enables high availability for an availability group with `CLUSTER_TYPE = EXTERNAL` for two synchronous replicas plus a configuration only replica. The configuration only replica can be hosted on any version of SQL Server 2017 CU1 or later - including SQL Server Express edition. The configuration only replica maintains configuration information about the availability group in the master database. The configuration only replica does not contain the user databases in the availability group. 
 
 Choose an availability group design to meet specific business requirements for high availability, data protection, and read scale-out.
-
-In the availability group diagram, a primary replica pushes configuration data to both the secondary replica and the configuration only replica. The secondary replica also receives user data. The configuration only replica does not receive user data. The secondary replica is in synchronous availability mode. The configuration only replica does not contain the databases in the availability group - only metadata about the availability group. Configuration data on the configuration only replica is committed synchronously.
 
 The following configurations describe the availability group design patterns and the capabilities of each pattern. These design patterns apply to availability groups with `CLUSTER_TYPE = EXTERNAL` for high availability solutions. 
 
@@ -62,6 +58,8 @@ An availability group with two (or more) synchronous replicas and a configuratio
 1. Is synchronous replication of user data to the secondary replica. It also includes availability group configuration metadata.
 2. Is synchronous configuration of availability group metadata. It does not include user data.
 
+In the availability group diagram, a primary replica pushes configuration data to both the secondary replica and the configuration only replica. The secondary replica also receives user data. The configuration only replica does not receive user data. The secondary replica is in synchronous availability mode. The configuration only replica does not contain the databases in the availability group - only metadata about the availability group. Configuration data on the configuration only replica is committed synchronously.
+
 >[!NOTE]
 >An availabilility group with configuration only replica is new for SQL Server 2017 CU1. All instances of SQL Server in the availability group must be SQL Server 2017 CU1 or later. 
 
@@ -84,7 +82,7 @@ This configuration consists of three synchronous replicas. By default, it provid
 
 ![Three replicas][3]
 
-An availability group with three synchronous replicas can provide read scale-out, high availability, and data protection. The default value for `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` is 1. The following table describes availability behavior. 
+An availability group with three synchronous replicas can provide read scale-out, high availability, and data protection. The following table describes availability behavior. 
 
 | |Read scale-out|High availability & </br> data protection | Data protection
 |:---|---|---|---
@@ -101,7 +99,7 @@ This configuration enables data protection. Like the other availability group co
 
 ![Two synchronous replicas][1]
 
-An availability group with two synchronous replicas provides read scale-out and data protection. The default value for `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` is 0. The following table describes availability behavior. 
+An availability group with two synchronous replicas provides read scale-out and data protection. The following table describes availability behavior. 
 
 | |Read scale-out |Data protection
 |:---|---|---

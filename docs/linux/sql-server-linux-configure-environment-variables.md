@@ -28,7 +28,7 @@ You can use several different environment variables to configure SQL Server 2017
 |-----|-----|
 | **ACCEPT_EULA** | Accept the SQL Server license agreement when set to any value (for example, 'Y'). |
 | **MSSQL_SA_PASSWORD** | Configure the SA user password. |
-| **MSSQL_PID** | Set the SQL Server edition or product key. Possible values include: Evaluation, Developer, Express, Web, Standard, Enterprise, or a product key in the form of #####-#####-#####-#####-#####, where '#' is a number or a letter. |
+| **MSSQL_PID** | Set the SQL Server edition or product key. Possible values include: </br></br>**Evaluation**</br>**Developer**</br>**Express**</br>**Web**</br>**Standard**</br>**Enterprise**</br>**A product key**</br></br>If specifying a product key, it must be in the form of #####-#####-#####-#####-#####, where '#' is a number or a letter.|
 | **MSSQL_LCID** | Sets the language ID to use for SQL Server. For example 1036 is French. |
 | **MSSQL_COLLATION** | Sets the default collation for SQL Server. This overrides the default mapping of language id (LCID) to collation. |
 | **MSSQL_MEMORY_LIMIT_MB** | Sets the maximum amount of memory (in MB) that SQL Server can use. By default it is 80% of the total physical memory. |
@@ -73,6 +73,9 @@ If you are running Docker on Windows, use the following syntax with double quote
 ```bash
 docker run -e ACCEPT_EULA=Y -e MSSQL_PID="Developer" -e MSSQL_SA_PASSWORD="<YourStrong!Passw0rd>" -e MSSQL_TCP_PORT=1234 -p 1234:1234 -d microsoft/mssql-server-linux:2017-latest
 ```
+
+> [!NOTE]
+> The process for running production editions in containers is slightly different. For more information, see [Run production container images](sql-server-linux-configure-docker.md#production).
 
 ## Next steps
 

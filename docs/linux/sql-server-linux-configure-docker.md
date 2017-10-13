@@ -41,7 +41,15 @@ The quick start tutorial in the previous section runs the free Developer edition
 - Review the requirements and run procedures in the [quick start tutorial](quickstart-install-connect-docker.md). But there are two differences. You must pull the Docker Store image **store/microsoft/mssql-server-linux:2017-latest**. And you must specify your production edition with the **MSSQL_PID** environment variable. The following example shows how to run the latest SQL Server 2017 container image for the Enterprise Edition:
 
    ```bash
-   docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' -e 'MSSQL_PID=Enterprise' -p 1433:1433 --name sqlent -d store/microsoft/mssql-server-linux:2017-latest
+   docker run --name sqlenterprise \
+      -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' -e 'MSSQL_PID=Enterprise' \
+      -p 1433:1433 -d store/microsoft/mssql-server-linux:2017-latest
+   ```
+
+   ```PowerShell
+   docker run --name sqlenterprise `
+      -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong!Passw0rd>" -e "MSSQL_PID=Enterprise" `
+      -p 1433:1433 -d store/microsoft/mssql-server-linux:2017-latest
    ```
 
    > [!IMPORTANT]

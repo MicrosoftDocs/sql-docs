@@ -61,7 +61,7 @@ This tutorial demonstrates how to move and restore a SQL Server backup file into
     ```PowerShell
     docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
        --name "sql1" -p 1401:1433 `
-       -v sql1data:/var/opt/mssql \
+       -v sql1data:/var/opt/mssql `
        -d microsoft/mssql-server-linux:2017-latest
     ```
 

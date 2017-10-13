@@ -62,6 +62,9 @@ An availability group with two (or more) synchronous replicas and a configuratio
 1. Is synchronous replication of user data to the secondary replica. It also includes availability group configuration metadata.
 2. Is synchronous configuration of availability group metadata. It does not include user data.
 
+>[!NOTE]
+>An availabilility group with configuration only replica is new for SQL Server 2017 CU1. All instances of SQL Server in the availability group must be SQL Server 2017 CU1 or later. 
+
 The default value for `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` is 0. The following table describes availability behavior. 
 
 | |High availability & </br> data protection | Data protection

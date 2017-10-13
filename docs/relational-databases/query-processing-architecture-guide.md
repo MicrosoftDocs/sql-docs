@@ -1,7 +1,7 @@
 ---
 title: "Query Processing Architecture Guide | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/03/2017"
+ms.date: "10/13/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -384,6 +384,7 @@ SELECT *
 FROM AdventureWorks2014.Production.Product 
 WHERE ProductSubcategoryID = 1;
 ```
+
 ```tsql
 SELECT * 
 FROM AdventureWorks2014.Production.Product 
@@ -1036,5 +1037,6 @@ GO
 ##  <a name="Additional_Reading"></a> Additional Reading  
  [Showplan Logical and Physical Operators Reference](../relational-databases/showplan-logical-and-physical-operators-reference.md)  
  [Extended Events](../relational-databases/extended-events/extended-events.md)  
- [Best Practice with the Query Store](../relational-databases/performance/best-practice-with-the-query-store.md)  
- [Cardinality Estimation](../relational-databases/performance/cardinality-estimation-sql-server.md)  
+ [Best Practice with the Query Store](../relational-databases/performance/best-practice-with-the-query-store.md)  
+ [Cardinality Estimation](../relational-databases/performance/cardinality-estimation-sql-server.md)  
+ [Adaptive query processing](../relational-databases/performance/adaptive-query-processing.md)

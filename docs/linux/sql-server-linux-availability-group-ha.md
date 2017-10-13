@@ -31,6 +31,14 @@ For example, an availability group on a Linux cluster has `CLUSTER_TYPE = EXTERN
 
 SQL Server 2017 CU 1 enables high availability for an availability group with `CLUSTER_TYPE = EXTERNAL` for two synchronous replicas plus a configuration only replica. The configuration only replica can be hosted on any version of SQL Server 2017 CU1 or later - including SQL Server Express edition. The configuration only replica maintains configuration information about the availability group in the master database. The configuration only replica does not contain the user databases in the availability group. 
 
+## How the configuration affects default resource settings
+
+SQL Server 2017 introduces the `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` cluster resource setting. This setting guarantees the specified number of secondary replicas write the transaction data to log before the primary replica commits each transaction. When you use an external cluster manager, this setting affects both high availability and data protection. The default value for the setting depends on the architecture at the time the cluster resource is created. When you install the SQL Server resource agent - `mssql-server-ha` - and create a cluster resource for the availability group, the cluster manager detects the availability group configuration and sets `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` accordingly. 
+
+If supported by the configuration, the resource agent parameter `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` is set to the value that provides high availability and data protection. For more information, see [Understand SQL Server resource agent for pacemaker](#pacemakerNotify).
+
+The following sections explain the default behavior for the cluster resource. 
+
 Choose an availability group design to meet specific business requirements for high availability, data protection, and read scale-out.
 
 The following configurations describe the availability group design patterns and the capabilities of each pattern. These design patterns apply to availability groups with `CLUSTER_TYPE = EXTERNAL` for high availability solutions. 
@@ -39,13 +47,42 @@ The following configurations describe the availability group design patterns and
 - **Two synchronous replicas**
 - **Two synchronous replicas and a configuration only replica**
 
-## How the configuration affects default resource settings
+<a name="threeSynch"></a>
 
-SQL Server 2017 introduces the `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` cluster resource setting. This setting guarantees the specified number of secondary replicas write the transaction data to log before the primary replica commits each transaction. When you use an external cluster manager, this setting affects both high availability and data protection. The default value for the setting depends on the architecture at the time the cluster resource is created. When you install the SQL Server resource agent - `mssql-server-ha` - and create a cluster resource for the availability group, the cluster manager detects the availability group configuration and sets `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` accordingly. 
+## Three synchronous replicas
 
-If supported by the configuration, the resource agent parameter `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` is set to the value that provides high availability and data protection. For more information, see [Understand SQL Server resource agent for pacemaker](#pacemakerNotify).
+This configuration consists of three synchronous replicas. By default, it provides high availability and data protection. It can also provide read scale-out.
 
-The following sections explain the default behavior for the cluster resource. 
+![Three replicas][3]
+
+An availability group with three synchronous replicas can provide read scale-out, high availability, and data protection. The following table describes availability behavior. 
+
+| |Read scale-out|High availability & </br> data protection | Data protection
+|:---|---|---|---
+|`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 |1<sup>*</sup>|2
+|Primary outage | Manual failover. Might have data loss. New primary is R/W. |Automatic failover. New primary is R/W. |Automatic failover. New primary is not available for user transactions until former primary recovers and joins availability group as secondary. 
+|One secondary replica outage  | Primary is R/W. No automatic failover if primary fails. |Primary is R/W. No automatic failover if primary fails as well. | Primary is not available for user transactions. 
+<sup>*</sup> Default
+
+<a name="twoSynch"></a>
+
+## Two synchronous replicas
+
+This configuration enables data protection. Like the other availability group configurations, it can enable read scale-out. The two synchronous replicas configuration does not provide automatic high availability. 
+
+![Two synchronous replicas][1]
+
+An availability group with two synchronous replicas provides read scale-out and data protection. The following table describes availability behavior. 
+
+| |Read scale-out |Data protection
+|:---|---|---
+|`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>*</sup>|1
+|Primary outage | Manual failover. Might have data loss. New primary is R/W.| Automatic failover. New primary is not available for user transactions until former primary recovers and joins availability group as secondary.
+|One secondary replica outage  |Primary is R/W, running exposed to data loss. |Primary is not available for user transactions until secondary recovers.
+<sup>*</sup> Default
+
+>[!NOTE]
+>The preceding scenario is the behavior prior to SQL Server 2017 CU 1. 
 
 <a name = "configOnly"></a>
 
@@ -74,42 +111,8 @@ The default value for `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` is 0. The fo
 |Synchronous secondary + configuration only replica outage| Primary is not available for user transactions. No automatic failover. | Primary is not available for user transactions. No replica to failover to if primary fails as well. 
 <sup>*</sup> Default
 
-<a name="threeSynch"></a>
-
-## Three synchronous replicas
-
-This configuration consists of three synchronous replicas. By default, it provides high availability and data protection. It can also provide read scale-out.
-
-![Three replicas][3]
-
-An availability group with three synchronous replicas can provide read scale-out, high availability, and data protection. The following table describes availability behavior. 
-
-| |Read scale-out|High availability & </br> data protection | Data protection
-|:---|---|---|---
-|`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 |1<sup>*</sup>|2
-|Primary outage | Manual failover. Might have data loss. New primary is R/W. |Automatic failover. New primary is R/W. |Automatic failover. New primary is not available for user transactions until former primary recovers and joins availability group as secondary. 
-|One secondary replica outage  | Primary is R/W. No automatic failover if primary fails. |Primary is R/W. No automatic failover if primary fails as well. | Primary is not available for user transactions. 
-<sup>*</sup> Default value set by pacemaker
-
-<a name="twoSynch"></a>
-
-## Two synchronous replicas
-
-This configuration enables data protection. Like the other availability group configurations, it can enable read scale-out. The two synchronous replicas configuration does not provide automatic high availability. 
-
-![Two synchronous replicas][1]
-
-An availability group with two synchronous replicas provides read scale-out and data protection. The following table describes availability behavior. 
-
-| |Read scale-out |Data protection
-|:---|---|---
-|`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>*</sup>|1
-|Primary outage | Manual failover. Might have data loss. New primary is R/W.| Automatic failover. New primary is not available for user transactions until former primary recovers and joins availability group as secondary.
-|One secondary replica outage  |Primary is R/W, running exposed to data loss. |Primary is not available for user transactions until secondary recovers.
-<sup>*</sup> Default
-
 >[!NOTE]
->The preceding scenario is the behavior prior to SQL Server 2017 CU 1. 
+>The instance of SQL Server that hosts the configuration only replica can also host other databases. It can also participate as a configuration only database for more than one availability group. 
 
 ## Requirements
 

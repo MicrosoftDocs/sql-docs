@@ -55,7 +55,14 @@ The following sections explain the default behavior for the cluster resource.
 
 ## Two synchronous replicas and a configuration only replica
 
-An availability group with two (or more) synchronous replicas and a configuration only replica provides data protection and may also provide high availability. The default value for `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` is 0. The following table describes availability behavior. 
+An availability group with two (or more) synchronous replicas and a configuration only replica provides data protection and may also provide high availability. The following diagram represents this architecture:
+
+![Configuration only availability group][2]
+
+1. Is synchronous replication of user data to the secondary replica. It also includes availability group configuration metadata.
+2. Is synchronous configuration of availability group metadata. It does not include user data.
+
+The default value for `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` is 0. The following table describes availability behavior. 
 
 | |High availability & </br> data protection | Data protection
 |:---|---|---
@@ -163,5 +170,6 @@ sudo pcs resource update <**ag1**> required_synchronized_secondaries_to_commit=
 
 <!--Image references-->
 [1]: ./media/sql-server-linux-availability-group-ha/1-read-scale-out.png
+[2]: ./media/sql-server-linux-availability-group-ha/2-configuration-only.png
 [3]: ./media/sql-server-linux-availability-group-ha/3-three-replica.png
 [4]: ./media/sql-server-linux-availability-group-ha/configuration-only-example.png

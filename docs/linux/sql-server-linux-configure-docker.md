@@ -38,7 +38,7 @@ The quick start tutorial in the previous section runs the free Developer edition
 
 - Next, obtain the free Developer version on Docker Store. Go to [https://store.docker.com/images/mssql-server-linux](https://store.docker.com/images/mssql-server-linux), click **Proceed to Checkout**, and follow the instructions. This Developer container image is used to run the production editions as well.
 
-- Review the requirements and run procedures in the [quick start tutorial](quickstart-install-connect-docker.md). But there are two differences. You must pull the image **store/microsoft/mssql-server-linux:2017-latest** from Docker Store. And you must specify your production edition with the **MSSQL_PID** environment variable. The following example shows how to run the latest SQL Server 2017 container image for the Enterprise Edition:
+- Review the requirements and run procedures in the [quick start tutorial](quickstart-install-connect-docker.md). But there are two differences. You must pull the image **store/microsoft/mssql-server-linux:\<tag-name\>** from Docker Store. And you must specify your production edition with the **MSSQL_PID** environment variable. The following example shows how to run the latest SQL Server 2017 container image for the Enterprise Edition:
 
    ```bash
    docker run --name sqlenterprise \

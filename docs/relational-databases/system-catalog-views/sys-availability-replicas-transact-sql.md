@@ -1,7 +1,7 @@
 ---
 title: "sys.availability_replicas (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/13/2016"
+ms.date: "10/16/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""

@@ -2,9 +2,21 @@
 # [Download and Install Carbon](download.md)
 # [FAQ](faq.md)
 # [Overview](overview.md)
-# Quickstarts
-## [Connect & query SQL Server](get-started-sql-server.md)
+# Quickstarts (flat)
+## [Connect & query SQL Server (Windows)](get-started-sql-server.md)
+## [Connect & query SQL Server (macOS)](get-started-sql-server-mac.md)
+## [Connect & query SQL Server (Linux)](get-started-sql-linux.md)
 ## [Connect & query SQL Database](get-started-sql-database.md)
+## [Connect & query SQL Data Warehouse](get-started-sql-dw.md)
+# Quickstarts (expandos)
+## Windows
+### [Connect & query SQL Server](get-started-sql-server.md)
+### [Connect & query SQL Database](get-started-sql-database.md)
+### [Connect & query SQL Data Warehouse](get-started-sql-dw.md)
+## Linux
+### [Connect & query SQL Server (Linux)](get-started-sql-linux.md)
+## macOS
+### [Connect & query SQL Server (macOS)](get-started-sql-server-mac.md)
 # Tutorials
 ## [Query Editor](tutorial-modern-code-flow-sql-server.md) 
 ## [Monitor](tutorial-monitoring-sql-server.md)

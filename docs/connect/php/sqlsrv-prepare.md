@@ -77,7 +77,7 @@ A statement resource. If the statement resource cannot be created, **false** is 
 ## Remarks  
 When you prepare a statement that uses variables as parameters, the variables are bound to the statement. That means that if you update the values of the variables, the next time you execute the statement it will run with updated parameter values.  
   
-It is recommended to use strings as inputs when binding values to a decimal or numeric column to ensure precision and accuracy. See [!INCLUDE[decimals as parameters](https://github.com/Microsoft/msphpsql/wiki/Features#decimalParams)] for details. 
+It is recommended to use strings as inputs when binding values to a decimal or numeric column to ensure precision and accuracy. See [decimals as parameters](https://github.com/Microsoft/msphpsql/wiki/Features#decimalParams) for details. 
   
 The combination of **sqlsrv_prepare** and **sqlsrv_execute** separates statement preparation and statement execution in to two function calls and can be used to execute parameterized queries. This function is ideal to execute a statement multiple times with different parameter values for each execution.  
   

@@ -74,7 +74,7 @@ A statement resource. If the statement cannot be created and/or executed, **fals
 ## Remarks  
 The **sqlsrv_query** function is well-suited for one-time queries and should be the default choice to execute queries unless special circumstances apply. This function provides a streamlined method to execute a query with a minimum amount of code. The **sqlsrv_query** function does both statement preparation and statement execution, and can be used to execute parameterized queries.  
   
-It is recommended to use strings as inputs when binding values to a decimal or numeric column to ensure precision and accuracy. See [!INCLUDE[decimals as parameters](https://github.com/Microsoft/msphpsql/wiki/Features#decimalParams)] for details. 
+It is recommended to use strings as inputs when binding values to a decimal or numeric column to ensure precision and accuracy. See [decimals as parameters](https://github.com/Microsoft/msphpsql/wiki/Features#decimalParams) for details. 
   
 For more information, see [How to: Retrieve Output Parameters Using the SQLSRV Driver](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md).  
   

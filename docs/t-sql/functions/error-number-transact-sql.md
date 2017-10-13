@@ -93,21 +93,7 @@ GO
   
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### C. Using ERROR_NUMBER in a CATCH block  
- The following code example shows a `SELECT` statement that generates a divide-by-zero error. The number of the error is returned.  
-  
-```  
-BEGIN TRY  
-    -- Generate a divide-by-zero error.  
-    SELECT 1/0;  
-END TRY  
-BEGIN CATCH  
-    SELECT ERROR_NUMBER() AS ErrorNumber;  
-END CATCH;  
-GO  
-```  
-  
-### D. Using ERROR_NUMBER in a CATCH block with other error-handling tools  
+### C. Using ERROR_NUMBER in a CATCH block with other error-handling tools  
  The following code example shows a `SELECT` statement that generates a divide-by-zero error. Along with the error number, information that relates to the error is returned.  
   
 ```  

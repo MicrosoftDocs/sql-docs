@@ -136,7 +136,7 @@ A new row is added to the sys.pdw_exec_requests system view when DBCC FREEPROCCA
 ## Examples: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 ### A. Clearing a query plan from the plan cache  
-The following example clears a query plan from the plan cache by specifying the query plan handle. To ensure the example query is in the plan cache, the query is first executed. The `sys.dm`_`exec`\_`cached_plans` and `sys.dm`\_`exec`\_`sql`\_`text` dynamic management views are queried to return the plan handle for the query. 
+The following example clears a query plan from the plan cache by specifying the query plan handle. To ensure the example query is in the plan cache, the query is first executed. The `sys.dm_exec_cached_plans` and `sys.dm_exec_sql_text` dynamic management views are queried to return the plan handle for the query. 
 
 The plan handle value from the result set is then inserted into the `DBCC FREEPROCACHE` statement to remove only that plan from the plan cache.
   

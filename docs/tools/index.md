@@ -4,11 +4,13 @@ layout: LandingPage
 
 #SQL Tools and Utilities
 
-Carbon is a lightweight, open source, multi-OS and multi-database tool, designed from the ground-up for DBAs and developers. Carbon simplifies configuration, management, monitoring, and troubleshooting of databases. 
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]  
 
-With the ability to run on the platform of your choice (Linux, macOS, or Windows), Carbon enables a modern database DevOps experience, for the databases you work with, wherever they're running; Linux, Windows, Azure, containers, VMs, AWS, Google cloud, etc. 
-+ 
-Carbon brings your databases into the devops lifecycle/pipeline.
+This article provides a list of available tools for working with SQL Server, Azure SQL Database, SQL Data Warehouse, and SQL Server-based applications. 
+
+If you want to jump right in and start creating tables, running queries, basically design and manage your database, then [**SQL Server Management Studio (SSMS)**](../ssms/download-sql-server-management-studio-ssms.md) is most likely your go-to tool. SSMS is free, and runs on Windows.
+
+If you're running Linux or macOS, try [Visual Studio Code](https://code.visualstudio.com/) with the [**mssql for Visual Studio Code**](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql) extension. These tools are for developing Microsoft SQL Server, Azure SQL Database and SQL Data Warehouse with a rich set of functionalities, and are also free. See [Use Visual Studio Code to create and run Transact-SQL scripts for SQL Server](../linux/sql-server-linux-develop-use-vscode.md).
 
 <table style="width:100%">
   <tr>

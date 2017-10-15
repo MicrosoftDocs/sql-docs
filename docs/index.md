@@ -62,12 +62,7 @@ ms.technology:
                                                     <li><a href="/azure/cosmos-db/">Cosmos DB</a></li>
                                                 </ul>
                                             </div>
-                                            <div class="cardText">
-                                                <div style="height:100px; border-bottom-color: #dbdbdb; border-bottom-width: 1px; border-bottom-style: solid; position: relative;">
-                                                   <h3 style="bottom: 20px; color: rgb(110, 110, 110); font-family: segoe-ui_light,Segoe UI Light,Segoe WP,Helvetica Neue,Helvetica,sans-serif; font-size: 2rem; vertical-align: bottom; position: absolute;">SQL on Azure</h3>
-                                                </div>
-                                             </div>
-                                        </div>
+                                         </div>
                                     </div>
                                 </div>
                             </li>
@@ -104,10 +99,10 @@ ms.technology:
                                                 </ul>
                                                 <h4 class="likeAnH3" style="margin: 1rem 0px;">Samples on GitHub</h4>
                                                 <ul>
-                                                    <li><a href="https://github.com/Microsoft/sql-server-samples/tree/master/samples">Code samples</a></li>                                                     
+                                                    <li><a href="https://github.com/Microsoft/sql-server-samples/tree/master/samples">Code samples</a></li>                                                  
 													<li><a href="https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0">Wide World Importers</a></li>
                                                     <li><a href="https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works">AdventureWorks</a></li>
-													</ul>
+												</ul>
                                             </div>
                                         </div>
                                     </div>
@@ -133,31 +128,24 @@ ms.technology:
                                                     <li><a href="https://msdn.microsoft.com/en-us/library/bb522607(v=sql.120).aspx">SQL Server 2014 Analysis Services</a></li>
                                                     <li><a href="https://msdn.microsoft.com/en-us/library/bb522607(v=sql.110).aspx">SQL Server 2012 Analysis Services</a></li>
                                                 </ul>
-                                                <h4 class="likeAnH3" style="margin: 1rem 0px;">Machine learning</h4>
-                                                <ul>
-                                                    <li><a href="https://docs.microsoft.com/azure/machine-learning/">Azure Machine Learning</a></li> 
-                                                    <li><a href="https://docs.microsoft.com/sql/advanced-analytics/r/r-services">SQL Server Machine Learning Services</a></li>
-                                                    <li><a href="https://docs.microsoft.com/sql/advanced-analytics/r/r-server-standalone">Machine Learning Server (Standalone)</a></li>
-                                                </ul>
-                                                <h4 class="likeAnH3" style="margin: 1rem 0px;">Reporting Services</h4>
-                                                <ul>
-                                                    <li><a href="/sql/reporting-services/create-deploy-and-manage-mobile-and-paginated-reports">SQL Server Reporting Services (2016, 2017)</a></li>
-                                                    <li><a href="https://msdn.microsoft.com/en-us/library/ms159106(v=sql.120).aspx">SQL Server 2014 Reporting Services</a></li>
-                                                    <li><a href="https://msdn.microsoft.com/en-us/library/ms159106(v=sql.110).aspx">SQL Server 2012 Reporting Services</a></li>
-                                                </ul>
                                                 <h4 class="likeAnH3" style="margin: 1rem 0px;">More analytics on Azure</h4>
                                                 <ul>
                                                     <li><a href="/azure/stream-analytics/">Azure Stream Analytics</a></li>
                                                     <li><a href="/azure/data-lake-analytics/">Azure Data Lake Analytics</a></li>
                                                     <li><a href="https://azuremarketplace.microsoft.com/en-us/marketplace/apps/microsoft-ads.standard-data-science-vm">Data Science Virtual Machine</a></li>
                                                 </ul>
-                                                <h4 class="likeAnH3" style="margin: 1rem 0px;">Power BI</h4>
+                                                <h4 class="likeAnH3" style="margin: 1rem 0px;">Machine learning</h4>
                                                 <ul>
+                                                    <li><a href="https://docs.microsoft.com/azure/machine-learning/">Azure Machine Learning</a></li> 
+                                                    <li><a href="https://docs.microsoft.com/sql/advanced-analytics/r/r-services">SQL Server Machine Learning Services</a></li>
+                                                    <li><a href="https://docs.microsoft.com/sql/advanced-analytics/r/r-server-standalone">Machine Learning Server (Standalone)</a></li>
+                                                </ul>
+                                                <h4 class="likeAnH3" style="margin: 1rem 0px;">Reporting</h4>
+                                                <ul>
+                                                    <li><a href="/sql/reporting-services/create-deploy-and-manage-mobile-and-paginated-reports">SQL Server Reporting Services (2016, 2017)</a></li>
+                                                    <li><a href="https://msdn.microsoft.com/en-us/library/ms159106(v=sql.120).aspx">SQL Server 2014 Reporting Services</a></li>
+                                                    <li><a href="https://msdn.microsoft.com/en-us/library/ms159106(v=sql.110).aspx">SQL Server 2012 Reporting Services</a></li>
                                                     <li><a href="https://powerbi.microsoft.com/en-us/documentation/powerbi-service-get-started/">Power BI Service</a></li>
-                                                    <li><a href="https://powerbi.microsoft.com/en-us/documentation/powerbi-desktop-get-the-desktop/">Power BI Desktop</a></li>
-                                                    <li><a href="https://powerbi.microsoft.com/en-us/documentation/powerbi-power-bi-apps-for-mobile-devices/">Power BI Mobile Apps</a></li>
-                                                    <li><a href="https://powerbi.microsoft.com/en-us/documentation/powerbi-developer-overview-of-power-bi-rest-api/">Power BI Developer</a></li>
-                                                    <li><a href="https://powerbi.microsoft.com/en-us/documentation/reportserver-get-started/">Power BI Report Server</a></li>
                                                 </ul>
                                             </div>
                                         </div>

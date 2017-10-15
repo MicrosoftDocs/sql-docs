@@ -22,7 +22,7 @@ ms.technology:
                         <ul id="products" class="cardsW">
                             <li class="fullSpan">
                                 <div class="container intro" style="color: #535353; font-family: segoe-ui_light,Segoe UI Light,Segoe WP,Helvetica Neue,Helvetica,sans-serif;">
-                                    <p>Manage relational data with SQL databases in your datacenter or on Azure. Use machine learning and analytics to gain insights. </p>
+                                    <p>Manage relational data with SQL databases in your datacenter or on Azure. Use machine learning and analytics to gain insights on SQL data. </p>
                                 </div>
                             </li>
                             <li>
@@ -43,7 +43,7 @@ ms.technology:
                                                     <li><a href="/sql/sql-server/sql-server-technical-documentation">SQL Server (2016, 2017)</a></li>
                                                     <li><a href="https://msdn.microsoft.com/en-us/library/hh278311(v=sql.10).aspx">SQL Server 2014</a></li>
                                                     <li><a href="https://msdn.microsoft.com/en-us/library/dn197878(v=sql.10).aspx">SQL Server 2012</a></li>
-													<li><a href="/azure/sql-database/sql-database-design-first-database">Azure SQL Database</a></li>
+                                                    <li><a href="/azure/sql-database/sql-database-design-first-database">Azure SQL Database</a></li>
                                                     <li><a href="/azure/sql-data-warehouse/sql-data-warehouse-get-started-tutorial">Azure SQL Data Warehouse</a></li>
                                                 </ul>
                                                 <h4 class="likeAnH3" style="margin: 1rem 0px;">Run on Windows or Linux</h4>
@@ -52,7 +52,7 @@ ms.technology:
                                                     <li><a href="/azure/virtual-machines/linux/">Linux virtual machines</a></li>
                                                     <li><a href="/azure/virtual-machines/windows/">Windows virtual machines</a></li>
                                                 </ul>
-												<h4 class="likeAnH3" style="margin: 1rem 0px;">Open source SQL</h4>
+                                                <h4 class="likeAnH3" style="margin: 1rem 0px;">Open source SQL</h4>
                                                 <ul>
                                                     <li><a href="/azure/postgresql/">Azure Database for PostgreSQL</a></li>
                                                     <li><a href="/azure/mysql/">Azure Database for MySQL</a></li>
@@ -99,10 +99,10 @@ ms.technology:
                                                 </ul>
                                                 <h4 class="likeAnH3" style="margin: 1rem 0px;">Samples on GitHub</h4>
                                                 <ul>
-                                                    <li><a href="https://github.com/Microsoft/sql-server-samples/tree/master/samples">Code samples</a></li>                                                  
-													<li><a href="https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0">Wide World Importers</a></li>
+                                                    <li><a href="https://github.com/Microsoft/sql-server-samples/tree/master/samples">Code samples</a></li>
+                                                    <li><a href="https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0">Wide World Importers</a></li>
                                                     <li><a href="https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works">AdventureWorks</a></li>
-												</ul>
+                                                </ul>
                                             </div>
                                         </div>
                                     </div>

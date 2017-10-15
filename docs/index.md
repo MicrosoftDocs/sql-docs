@@ -121,15 +121,12 @@ ms.technology:
                                                 <div style="height:100px; border-bottom-color: #dbdbdb; border-bottom-width: 1px; border-bottom-style: solid; position: relative;">
                                                    <h3 style="bottom: 20px; color: rgb(110, 110, 110); font-family: segoe-ui_light,Segoe UI Light,Segoe WP,Helvetica Neue,Helvetica,sans-serif; font-size: 2rem; vertical-align: bottom; position: absolute;">Data Analytics</h3>
                                                 </div>
-                                                <h4 class="likeAnH3" style="margin: 1rem 0px;">Analysis Services</h4>
+                                                <h4 class="likeAnH3" style="margin: 1rem 0px;">Analysis</h4>
                                                 <ul>
                                                     <li><a href="/azure/analysis-services/">Azure Analysis Services</a></li> 
                                                     <li><a href="/sql/analysis-services/analysis-services">SQL Server Analysis Services (2016, 2017)</a></li>
                                                     <li><a href="https://msdn.microsoft.com/en-us/library/bb522607(v=sql.120).aspx">SQL Server 2014 Analysis Services</a></li>
                                                     <li><a href="https://msdn.microsoft.com/en-us/library/bb522607(v=sql.110).aspx">SQL Server 2012 Analysis Services</a></li>
-                                                </ul>
-                                                <h4 class="likeAnH3" style="margin: 1rem 0px;">More analytics on Azure</h4>
-                                                <ul>
                                                     <li><a href="/azure/stream-analytics/">Azure Stream Analytics</a></li>
                                                     <li><a href="/azure/data-lake-analytics/">Azure Data Lake Analytics</a></li>
                                                     <li><a href="https://azuremarketplace.microsoft.com/en-us/marketplace/apps/microsoft-ads.standard-data-science-vm">Data Science Virtual Machine</a></li>

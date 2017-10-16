@@ -34,7 +34,7 @@ The process of building a machine learning solution is a complex one that can in
 + obtaining and cleaning data
 + exploring the data and building features useful for modeling
 + training and tuning the model
-+ deployment to production 
++ deployment to production
 
 **The focus of this walkthrough is on building and deploying a solution using SQL Server.**
 
@@ -62,11 +62,19 @@ All tasks can be done using [!INCLUDE[tsql](../../includes/tsql-md.md)] stored p
 
     Build and save the machine learning model, using Python in stored procedures.
   
+    This walkthrough demonstrates how to perform a binary classification task; you could also use the data to build models for regression or multiclass classification.
+
+  
 -  [Step 6: Operationalize the Python model](sqldev-py6-operationalize-the-model.md)
 
     After the model has been saved to the database, call the model for prediction using [!INCLUDE[tsql](../../includes/tsql-md.md)].
 
 ## Requirements
+
+### Prerequisites
+
++ Install an instance of SQL Server 2017 with Machine Learning Services and Python enabled. For more information, see [Set up SQL Server Machine Learning Services with Python](../python/setup-python-machine-learning-services.md).
++ The login that you use for this walkthrough must have permissions to create databases and other objects, to upload data, select data, and run stored procedures.
 
 ### Experience level
 
@@ -76,12 +84,7 @@ An experienced SQL programmer should be able to complete this walkthrough by usi
 
 Python: Basic knowledge is useful but not required. All Python code is provided.
 
-Some knowledge of Powershell is helpful.
-
-### Prerequisites
-
-+ Install an instance of SQL Server 2017 with Machine Learning Services and Python enabled. For more information, see [Set up SQL Server Machine Learning Services with Python](../python/setup-python-machine-learning-services.md).
-+ The login that you use for this walkthrough must have permissions to create databases and other objects, to upload data, select data, and run stored procedures.
+Some knowledge of PowerShell is helpful.
 
 ### Tools
 

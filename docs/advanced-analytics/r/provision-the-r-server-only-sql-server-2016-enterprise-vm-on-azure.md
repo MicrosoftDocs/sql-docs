@@ -33,7 +33,7 @@ If you are new to using Azure VMs, we recommend that you see these articles for 
 
 ## Find a machine learning image
 
-1. From the Azure Portal (portal.azure.com), click **Virtual Machines**, or click **New**.
+1. From the Azure portal (portal.azure.com), click **Virtual Machines**, or click **New**.
 
 2. Locate the search box at the top of the page, which you can use to filter resources by name. 
 
@@ -54,13 +54,13 @@ If you are new to using Azure VMs, we recommend that you see these articles for 
     > This fall, look for the release of a new virtual machine that includes SQL Server 2017 and the 9.2.1 release of Machine Learning Server.
     > Until then, you can update the version of SQL Server installed on this virtual machine by using the SQL Server Installation Center and choosing the Upgrade option. For more information, see [Upgrade SQL Server by using the installation wizard](https://docs.microsoft.com/sql/database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup).
 
-5. After the virtual machine has been created and is running, click the **Connect** button to open a connection and log into the new machine.
+5. After the virtual machine has been created and is running, click the **Connect** button to open a connection and log in to the new machine.
 
 5. After you connect, you can install additional R package, or  your preferred development tool.
 
 ### Install additional R tools
 
-By default, Microsoft R Server includes all the R tools installed with a base installation of R, including RTerm and RGui. A shortcut to RGui has been added to the desktop, if you want to get started using R right away.
+By default, Microsoft R Server includes all the R tools installed with a base installation of R, including RTerm and RGui. A shortcut to RGui has also been added to the desktop.
 
 However, you might wish to install additional R tools, such as RStudio, R Tools for Visual Studio (RTVS), or Microsoft R Client. See the following links for download locations and instructions:
 
@@ -79,28 +79,28 @@ Additional configuration is required to use web service deployment, remote execu
 
 ## Other virtual machines
 
-The following images are available from the Azure Marketplace and include fully configured machine learning tools,but do not necessarily include SQL Server.
+The following images are available from the Azure Marketplace and include fully configured machine learning tools, but do not necessarily include SQL Server.
 
 ### Data Science Virtual Machine
 
 This image is preconfigured with Microsoft R Server, as well as Python (Anaconda distribution), a Jupyter notebook server, Visual Studio Community Edition, Power BI Desktop, the Azure SDK, and SQL Server Express edition.
 
-The Windows version runs on Windows Server 2012, and contains many special tools for modeling and analytics, including CNTK and mxnet, popular R packages such as xgboost.
+The Windows version runs on Windows Server 2012, and contains many special tools for modeling and analytics, including [CNTK](https://www.microsoft.com/cognitive-toolkit/), [mxNet](https://mxnet.incubator.apache.org/), and popular R packages such as **xgboost**.
 
 Linux editions are provided for Ubuntu, Centos, and Centos CSP, and contain many popular tools for data science and development activities.
 
-For more information, see [Introduction to Azure Data Science Virtual Machine for Limux and Windows](https://docs.microsoft.com/azure/machine-learning/data-science-virtual-machine/provision-vm).
+For more information, see [Introduction to Azure Data Science Virtual Machine for Linux and Windows](https://docs.microsoft.com/azure/machine-learning/data-science-virtual-machine/provision-vm).
 
 This image was recently updated to include: 
 
 + Support for Julia, the scalable, powerful data science language of the future 
-+ JupyterHub, which is a useful option if you want to run a training class and want all students to share the same server, but use separate notebooks and directories.
++ JupyterHub, which is a useful option when you want to run a training class and want all students to share the same server, but use separate notebooks and directories.
 
 For more information about supported tools and machine learning frameworks, see [Get to know your Data Science Virtual Machine](https://docs.microsoft.com/azure/machine-learning/data-science-virtual-machine/dsvm-tools-overview)
 
 ### R Server virtual machines
 
-In addition to the **R Server Only SQL Server 2016 Enterprise** imageg, you can get standalone virtual machines that contain R Server. Images are available for Linux CentOS version 7.2, Linux RedHat version 7.2, and Ubuntu version 16.04.
+In addition to the **R Server Only SQL Server 2016 Enterprise** image, you can get standalone virtual machines that contain R Server. Images are available for Linux CentOS version 7.2, Linux RedHat version 7.2, and Ubuntu version 16.04.
 
 For more information, see [Machine Learning Server in the Cloud](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-in-the-cloud)
 
@@ -112,7 +112,7 @@ For more information, see [Machine Learning Server in the Cloud](https://docs.mi
 There are two options for using SQL Server machine learning in Azure:
 
 + Get one of the virtual machine images that includes SQL Server R Services preinstalled.
-+ Create an Azure virtual amachine and install SQL Server Enterprise or Developer edition using your own license key. 
++ Create an Azure virtual machine and install SQL Server Enterprise or Developer edition using your own license key. 
   
     Then, run setup again to add and enable the machine learning service, as described here: [Installing SQL Server R Services on an Azure virtual machine](../r/installing-sql-server-r-services-on-an-azure-virtual-machine.md).
 + Create an Azure SQL Database using a service tier that can support machine learning, and use the new R Services feature currently in preview. For more information, see [Azure SQL DB](../r/using-r-in-azure-sql-database.md).

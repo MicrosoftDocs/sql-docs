@@ -88,27 +88,6 @@ FROM dbo.test;
 --Returns: 1998-09-20 07:45:50.7134500 -05:00  
 ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- The following example uses `SWITCHOFFSET` to display a different time zone offset than the value stored in the database.  
-  
-```  
-CREATE TABLE dbo.test   
-    (  
-    ColDatetimeoffset datetimeoffset  
-    );  
-GO  
-INSERT INTO dbo.test   
-VALUES ('1998-09-20 7:45:50.71345 -5:00');  
-GO  
-SELECT SWITCHOFFSET (ColDatetimeoffset, '-08:00')   
-FROM dbo.test;  
-GO  
---Returns: 1998-09-20 04:45:50.7134500 -08:00  
-SELECT ColDatetimeoffset  
-FROM dbo.test;  
---Returns: 1998-09-20 07:45:50.7134500 -05:00  
-```  
-  
 ## See Also  
  [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
  [AT TIME ZONE &#40;Transact-SQL&#41;](../../t-sql/queries/at-time-zone-transact-sql.md)  

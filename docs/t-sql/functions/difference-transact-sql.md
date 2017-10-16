@@ -75,32 +75,6 @@ B432  G650  0
 (1 row(s) affected)  
 ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- In the first part of the following example, the `SOUNDEX` values of two very similar strings are compared. For a Latin1_General collation `DIFFERENCE` returns a value of `4`. In the second part of the following example, the `SOUNDEX` values for two very different strings are compared, and for a Latin1_General collation `DIFFERENCE` returns a value of `0`.  
-  
-```  
--- Returns a DIFFERENCE value of 4, the least possible difference.  
-SELECT SOUNDEX('Green'), SOUNDEX('Greene'), DIFFERENCE('Green','Greene');  
-GO  
--- Returns a DIFFERENCE value of 0, the highest possible difference.  
-SELECT SOUNDEX('Blotchet-Halls'), SOUNDEX('Greene'), DIFFERENCE('Blotchet-Halls', 'Greene');  
-GO  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
-```  
------ ----- -----------   
-G650  G650  4             
-  
-(1 row(s) affected)  
-  
------ ----- -----------   
-B432  G650  0             
-  
-(1 row(s) affected)  
-```  
-  
 ## See Also  
  [SOUNDEX &#40;Transact-SQL&#41;](../../t-sql/functions/soundex-transact-sql.md)   
  [String Functions &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  

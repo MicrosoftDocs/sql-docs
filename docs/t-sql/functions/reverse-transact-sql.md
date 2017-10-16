@@ -98,22 +98,6 @@ SELECT name, REVERSE(name) FROM sys.databases;
 GO  
 ```  
   
- The following example reverses the characters in a variable.  
-  
-```  
-DECLARE @myvar varchar(10);  
-SET @myvar = 'sdrawkcaB';  
-SELECT REVERSE(@myvar) AS Reversed ;  
-GO  
-```  
-  
- The following example makes an implicit conversion from an **int** data type into **varchar** data type and then reverses the result.  
-  
-```  
-SELECT REVERSE(1234) AS Reversed ;  
-GO  
-```  
-  
 ## See Also  
  [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
  [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   

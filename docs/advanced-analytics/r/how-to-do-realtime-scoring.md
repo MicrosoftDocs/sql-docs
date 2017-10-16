@@ -1,7 +1,7 @@
 ---
 title: "How to perform realtime scoring or native scoring in SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/20/2017"
+ms.date: "10/16/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -15,7 +15,7 @@ manager: "jhubbard"
 ---
 # How to perform realtime scoring or native scoring in SQL Server
 
-This topic provides instructions and sample code for how to execute the realtime scoring and native scoring features in SQL Server 2016 and SQL Server 2017. The goal of both realtime scoring and native scoring is to improve the performance of scoring operations in small batches.
+This topic provides instructions and sample code for how to execute the realtime scoring and native scoring features in SQL Server 2017 and SQL Server 2016. The goal of both realtime scoring and native scoring is to improve the performance of scoring operations in small batches.
 
 Both realtime scoring and native scoring are designed to let you use a machine learning model without having to install R. All you need to do is obtain a pretrained model in a compatible format, and save it in a SQL Server database.
 
@@ -153,7 +153,7 @@ The following simple PREDICT statement gets a classification from the decision t
 DECLARE @model varbinary(max) = (
   SELECT native_model_object
   FROM ml_models
-  WHERE model_name = 'iris.dtree.model'
+  WHERE model_name = 'iris.dtree'
   AND model_version = 'v1');
 SELECT d.*, p.*
   FROM PREDICT(MODEL = @model, DATA = dbo.iris_rx_data as d)
@@ -203,7 +203,6 @@ You must enable this feature for each database that you want to use for scoring.
 > 
 > In SQL Server 2017, additional security measures are in place to prevent problems with CLR integration. These measures impose additional restrictions on the use of this stored procedure as well.
 
-
 ### Step 2. Prepare and save the model
 
 The binary format required by sp\_rxPredict is the same as that for PREDICT.
@@ -216,7 +215,7 @@ model <- rxSerializeModel(model.name, realtimeScoringOnly = TRUE)
 
 ### Step 3. Call sp_rxPredict
 
-You call sp_rxPredict as you would any other stored procedure. In the current release, the stored procedure takes only two parameters: _@model_ for the model in binary format, and _@inputData_ for the data to use in scoring, defined as a valid SQL query.
+You call sp\_rxPredict as you would any other stored procedure. In the current release, the stored procedure takes only two parameters: _@model_ for the model in binary format, and _@inputData_ for the data to use in scoring, defined as a valid SQL query.
 
 Because the binary format is the same that is used by the PREDICT function, you can use the models and data table from the preceding example.
 
@@ -232,7 +231,7 @@ EXEC sp_rxPredict
 
 > [!NOTE]
 > 
-> The call to `sp_rxPredict` fails if the input data for scoring does not include columns that match the requirements of the model. Currently, only the following .NET data types are supported: double, float, short, ushort, long, ulong and string.
+> The call to sp\_rxPredict fails if the input data for scoring does not include columns that match the requirements of the model. Currently, only the following .NET data types are supported: double, float, short, ushort, long, ulong and string.
 > 
 > Therefore, you might need to filter out unsupported types in your input data before using it for realtime scoring.
 > 
@@ -242,6 +241,12 @@ EXEC sp_rxPredict
 
 To disable realtime scoring functionality, open an elevated command prompt, and run the following command: `RegisterRExt.exe /uninstallrts /database:<database_name> [/instance:name]`
 
-### Realtime scoring in Microsoft R Server
+### Realtime scoring in Microsoft R Server or Machine Learning Server
 
-For information regarding realtime scoring in a distributed environment based on Microsoft R Server, please refer to the [publishService](https://msdn.microsoft.com/microsoft-r/mrsdeploy/packagehelp/publishservice) function available in the [mrsDeploy package](https://msdn.microsoft.com/microsoft-r/mrsdeploy/mrsdeploy), which supports publishing models for realtime scoring as a new a web service running on R Server.
+Machine Learning Server supports distributed realtime scoring from models published as a web service. For more information, see these articles:
+
++ [What are web services in Machine Learning Server?](https://docs.microsoft.com/machine-learning-server/operationalize/concept-what-are-web-services)
++ [What is operationalization?](https://docs.microsoft.com/machine-learning-server/operationalize/concept-operationalize-deploy-consume)
++ [Deploy a Python model as a web service with azureml-model-management-sdk](https://docs.microsoft.com/machine-learning-server/operationalize/python/quickstart-deploy-python-web-service)
++ [Publish an R code block or a realtime model as a new web service](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/publishservice) function
++ [mrsdeploy package for R](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/mrsdeploy-package)

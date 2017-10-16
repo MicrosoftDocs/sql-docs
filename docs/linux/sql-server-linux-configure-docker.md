@@ -36,27 +36,37 @@ The quick start tutorial in the previous section runs the free Developer edition
 
 - Production SQL Server container images must be pulled from [Docker Store](https://store.docker.com). If you don't already have one, create an account on Docker Store.
 
-- Next, obtain the free Developer version on Docker Store. Go to [https://store.docker.com/images/mssql-server-linux](https://store.docker.com/images/mssql-server-linux), click **Proceed to Checkout**, and follow the instructions. This Developer container image is used to run the production editions as well.
+- The Developer container image on Docker Store can be configured to run the production editions as well. Use the following steps to run production editions:
 
-- Review the requirements and run procedures in the [quick start tutorial](quickstart-install-connect-docker.md). But there are two differences. You must pull the image **store/microsoft/mssql-server-linux:\<tag-name\>** from Docker Store. And you must specify your production edition with the **MSSQL_PID** environment variable. The following example shows how to run the latest SQL Server 2017 container image for the Enterprise Edition:
+   1. First, log in to your docker id from the command line.
 
-   ```bash
-   docker run --name sqlenterprise \
-      -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' -e 'MSSQL_PID=Enterprise' \
-      -p 1433:1433 -d store/microsoft/mssql-server-linux:2017-latest
-   ```
+      ```bash
+      docker login
+      ```
 
-   ```PowerShell
-   docker run --name sqlenterprise `
-      -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong!Passw0rd>" -e "MSSQL_PID=Enterprise" `
-      -p 1433:1433 -d store/microsoft/mssql-server-linux:2017-latest
-   ```
+   1. Next, you need to obtain the free Developer container image on Docker Store. Go to [https://store.docker.com/images/mssql-server-linux](https://store.docker.com/images/mssql-server-linux), click **Proceed to Checkout**, and follow the instructions.
 
-   > [!IMPORTANT]
-   > By passing the value **Y** to the environment variable **ACCEPT_EULA**, you are expressing that you have a valid and existing license for the edition and version of SQL Server that you intend to use. You also agree that your use of SQL Server software running in a Docker container image will be governed by the terms of my SQL Server license.
+   1. Review the requirements and run procedures in the [quick start tutorial](quickstart-install-connect-docker.md). But there are two differences. You must pull the image **store/microsoft/mssql-server-linux:\<tag-name\>** from Docker Store. And you must specify your production edition with the **MSSQL_PID** environment variable. The following example shows how to run the latest SQL Server 2017 container image for the Enterprise Edition:
 
-   > [!NOTE]
-   > For a full list of possible values for **MSSQL_PID**, see [Configure SQL Server settings with environment variables on Linux](sql-server-linux-configure-environment-variables.md).
+      ```bash
+      docker run --name sqlenterprise \
+         -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' \
+         -e 'MSSQL_PID=Enterprise' -p 1433:1433 \
+         -d store/microsoft/mssql-server-linux:2017-latest
+      ```
+
+      ```PowerShell
+      docker run --name sqlenterprise `
+         -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong!Passw0rd>" `
+         -e "MSSQL_PID=Enterprise" -p 1433:1433 `
+         -d "store/microsoft/mssql-server-linux:2017-latest"
+      ```
+
+      > [!IMPORTANT]
+      > By passing the value **Y** to the environment variable **ACCEPT_EULA** and an edition value to **MSSQL_PID**, you are expressing that you have a valid and existing license for the edition and version of SQL Server that you intend to use. You also agree that your use of SQL Server software running in a Docker container image will be governed by the terms of your SQL Server license.
+
+      > [!NOTE]
+      > For a full list of possible values for **MSSQL_PID**, see [Configure SQL Server settings with environment variables on Linux](sql-server-linux-configure-environment-variables.md).
 
 ## Connect and query
 

@@ -1,7 +1,7 @@
 ---
-title: "Data Types Supported (SSAS Tabular) | Microsoft Docs"
+title: "Data types supported in tabular models | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: "10/16/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -17,19 +17,12 @@ author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
 ---
-# Data Types Supported (SSAS Tabular)
+# Data types supported in tabular models
   This article describes the data types that can be used in tabular models, and discusses the implicit conversion of data types when data is calculated or used in a Data Analysis Expressions (DAX) formula.  
+
   
- This article contains the following sections:  
-  
--   [Data Types Used in Tabular Models](#bkmk_data_types)  
-  
--   [Implicit and Explicit Data Type Conversion in DAX Formulas](#bkmk_implicit)  
-  
--   [Handling of Blanks, Empty Strings, and Zero Values](#bkmk_hand_blanks)  
-  
-##  <a name="bkmk_data_types"></a> Data Types Used in Tabular Models  
- The following data types are supported. When you import data or use a value in a formula, even if the original data source contains a different data type, the data is converted to one of the following data types. Values that result from formulas also use these data types.  
+##  <a name="bkmk_data_types"></a> Data types used in tabular models  
+When you import data or use a value in a formula, even if the original data source contains a different data type, the data is converted to one of the following data types. Values that result from formulas also use these data types.  
   
  In general, these data types are implemented to enable accurate calculations in calculated columns, and for consistency the same restrictions apply to the rest of the data in models.  
   
@@ -65,10 +58,10 @@ manager: "erikre"
 > [!NOTE]  
 >  You cannot import from a **varchar(max)** column that contains a string length of more than 131,072 characters.  
   
-### Table Data Type  
+### Table data type  
  In addition, DAX uses a *table* data type. This data type is used by DAX in many functions, such as aggregations and time intelligence calculations. Some functions require a reference to a table; other functions return a table that can then be used as input to other functions. In some functions that require a table as input, you can specify an expression that evaluates to a table; for some functions, a reference to a base table is required. For information about the requirements of specific functions, see [DAX Function Reference](http://msdn.microsoft.com/en-us/4dbb28a1-dd1a-4fca-bcd5-e90f74864a7b).  
   
-##  <a name="bkmk_implicit"></a> Implicit and Explicit Data Type Conversion in DAX Formulas
+##  <a name="bkmk_implicit"></a> Implicit and explicit data type conversion in DAX Formulas
   
  Each DAX function has specific requirements as to the types of data that are used as inputs and outputs. For example, some functions require integers for some arguments and dates for others; other functions require text or tables.  
   
@@ -84,7 +77,7 @@ manager: "erikre"
   
  The following table summarizes the implicit data type conversions that are performed in formulas. In general, semantic model designer behaves like Microsoft Excel, and performs implicit conversions whenever possible when required by the specified operation.  
   
-### Table of Implicit Data Conversions  
+### Table of implicit data conversions  
  The type of conversion that is performed is determined by the operator, which casts the values it requires before performing the requested operation. These tables list the operators, and indicate the conversion that is performed on each data type in the column when it is paired with the data type in the intersecting row.  
   
 > [!NOTE]  
@@ -142,10 +135,10 @@ manager: "erikre"
   
  For example, if an integer is combined with a currency value in a division operation, both values are converted to real numbers, and the result is also a real number.  
   
-#### Comparison Operators  
+#### Comparison operators  
 Only a limited set of mixed data-type combinations for comparison operations is supported. To learn more, see [DAX Operator Reference](https://msdn.microsoft.com/library/ee634237.aspx).  
   
-## <a name="bkmk_hand_blanks"></a> Handling of Blanks, Empty Strings, and Zero Values  
+## <a name="bkmk_hand_blanks"></a> Handling of blanks, empty strings, and zero values  
  The following table summarizes the differences between DAX and in Microsoft Excel, in the way that blanks are handled.  
   
 ||||  
@@ -165,9 +158,4 @@ Only a limited set of mixed data-type combinations for comparison operations is 
 |BLANK AND BLANK|BLANK|Error|  
   
  For details on how a particular function or operator handles blanks, see the individual topics for each DAX function, in the section, [DAX Function Reference](http://msdn.microsoft.com/en-us/4dbb28a1-dd1a-4fca-bcd5-e90f74864a7b).  
-  
-## See Also  
- [Data Sources &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/data-sources-ssas-tabular.md)   
- [Import Data &#40;SSAS Tabular&#41;](http://msdn.microsoft.com/library/6617b2a2-9f69-433e-89e0-4c5dc92982cf)  
-  
   

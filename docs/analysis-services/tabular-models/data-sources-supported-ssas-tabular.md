@@ -1,7 +1,7 @@
 ---
-title: "Data Sources Supported (SSAS Tabular) | Microsoft Docs"
+title: "Data sources supported in tabular models | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/25/2017"
+ms.date: "10/16/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -17,10 +17,10 @@ author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
 ---
-# Data Sources Supported (SSAS Tabular)
+# Data sources supported in tabular models
   This topic describes the types of data sources that can be used with tabular models.  
   
-##  <a name="bkmk_supported_ds"></a> Supported data sources for in-memory models  
+##  <a name="bkmk_supported_ds"></a> Supported data sources for in-memory tabular models  
  You can import data from the data sources in the following table. When you install [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], setup does not install the providers that are listed for each data source. Some providers might already be installed with other applications on your computer; in other cases you will need to download and install the provider.  
   
 |||||  
@@ -64,9 +64,3 @@ Importing multiple tables, and then deleting the ones you don't need, can also s
 Columns that contain similar data in different data sources are the basis of creating relationships within the model designer. When using heterogeneous data sources, choose tables that have columns that can be mapped to tables in other data sources that contain identical or similar data.  
   
 OLE DB providers can sometimes offer faster performance for large scale data. When choosing between different providers for the same data source, you should try the OLE DB provider first.  
-  
-## See Also  
- [Data Sources &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/data-sources-ssas-tabular.md)   
- [Import Data &#40;SSAS Tabular&#41;](http://msdn.microsoft.com/library/6617b2a2-9f69-433e-89e0-4c5dc92982cf)  
-  
-  

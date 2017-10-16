@@ -116,24 +116,6 @@ The RADIANS of the angle is: 3.44022
 (1 row(s) affected)  
 ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### C. Using RADIANS to show 0.0  
- The following example returns a result of `0.0` because the numeric expression to convert to radians is too small for the `RADIANS` function.  
-  
-```  
-SELECT RADIANS(1e-307)  
-GO  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
-```  
--------------------   
-0.0                        
-(1 row(s) affected)  
-```  
-  
 ## See Also  
  [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
  [decimal and numeric &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)   

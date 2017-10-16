@@ -212,15 +212,15 @@ GO
 0
 ```  
   
-### C. Finding the objects that belong to a specific schema  
- The following example uses the `SchemaId` property to return all the objects that belong to the schema `Production`.  
+### C: Finding the tables that belong to a specific schema  
+ The following example returns all the tables in the dbo schema.  
   
 ```  
-USE AdventureWorks2012;  
-GO  
+-- Uses AdventureWorks  
+  
 SELECT name, object_id, type_desc  
 FROM sys.objects   
-WHERE OBJECTPROPERTY(object_id, N'SchemaId') = SCHEMA_ID(N'Production')  
+WHERE OBJECTPROPERTY(object_id, N'SchemaId') = SCHEMA_ID(N'dbo')  
 ORDER BY type_desc, name;  
 GO  
 ```  
@@ -237,19 +237,6 @@ IF OBJECTPROPERTY (OBJECT_ID(N'dbo.DimReseller'),'ISTABLE') = 1
    SELECT 'DimReseller is a table.'  
 ELSE   
    SELECT 'DimReseller is not a table.';  
-GO  
-```  
-  
-### E: Finding the tables that belong to a specific schema  
- The following example returns all the tables in the dbo schema.  
-  
-```  
--- Uses AdventureWorks  
-  
-SELECT name, object_id, type_desc  
-FROM sys.objects   
-WHERE OBJECTPROPERTY(object_id, N'SchemaId') = SCHEMA_ID(N'dbo')  
-ORDER BY type_desc, name;  
 GO  
 ```  
   

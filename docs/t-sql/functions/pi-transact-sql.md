@@ -56,23 +56,6 @@ GO
 (1 row(s) affected)  
 ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- The following example returns the value of `PI`.  
-  
-```  
-SELECT PI();  
-GO  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
-```  
-------------------------  
-3.14159265358979  
-  
-(1 row(s) affected)  
-```  
-  
 ## See Also  
  [Mathematical Functions &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
   

@@ -1,7 +1,7 @@
 ---
 title: "Import from a Relational Data Source (SSAS Tabular) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/22/2017"
+ms.date: "10/16/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -18,8 +18,8 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Import Data - Relational Data Source
-  You can import data from a variety of relational databases by using the Table Import Wizard. The wizard is available in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], on the **Model** menu. To connect to a data source, you must have the appropriate provider installed on your computer. For more information about supported data sources and providers, see [Data Sources Supported &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md).  
-  
+  For tabular models at the 1200 and lower compatiblity levels, you can import data from a variety of relational databases by using the Table Import Wizard. The wizard is available in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], on the **Model** menu. To connect to a data source, you must have the appropriate provider installed on your computer. For more information about supported data sources and providers, see [Data Sources Supported &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md). 
+ 
  The Table Import Wizard supports importing data from the following data sources:  
   
  **Relational Databases**  

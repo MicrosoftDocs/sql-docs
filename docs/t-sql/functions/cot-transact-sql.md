@@ -61,24 +61,6 @@ The COT of the angle is: -0.040312
 (1 row(s) affected)  
 ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-The following example returns the COT for the specific angle.
-  
-```sql
-DECLARE @angle float;  
-SET @angle = 124.1332;  
-SELECT 'The COT of the angle is: ' + CONVERT(varchar,COT(@angle));  
-GO  
-```  
-  
-[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
-  
-```sql
-The COT of the angle is: -0.040312                
-  
-(1 row(s) affected)  
-```  
-  
 ## See also
 [Mathematical Functions &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)
   

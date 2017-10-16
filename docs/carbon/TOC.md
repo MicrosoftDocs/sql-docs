@@ -20,6 +20,11 @@
 # Tutorials
 ## [Query Editor](tutorial-modern-code-flow-sql-server.md) 
 ## [Monitor](tutorial-monitoring-sql-server.md)
+### [Query Performance Insight](tutorial-qds-sql-server.md)
+### [Table Space Insight](tutorial-table-space-sql-server.md)
+### [Missing Index Insight](tutorial-missing-index-sql-server.md) 
+### [Backup Health Insight](tutorial-backup-health-sql-server.md)
+### [Database Size Insight](tutorial-db-size-sql-server.md)
 ## [Backup and restore](tutorial-backup-restore-sql-server.md)
 # Samples
 ## [Snippet samples]()

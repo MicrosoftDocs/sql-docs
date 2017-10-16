@@ -24,11 +24,11 @@ Both realtime scoring and native scoring are designed to let you use a machine l
 The following options are supported for fast batch prediction:
 
 + **Native scoring**: T-SQL PREDICT function in SQL Server 2017
-+ **Realtime scoring**: Using the sp_rxPredict stored procedure in either  SQL Server 2016 or SQL Server 2017.
++ **Realtime scoring**: Using the sp\_rxPredict stored procedure in either  SQL Server 2016 or SQL Server 2017.
 
 > [!NOTE]
 > Use of the PREDICT function is recommended in SQL Server 2017.
-> To use sp_rxPredict requires that you enable SQLCLR integration. Consider the security implications before you enable this option.
+> To use sp\_rxPredict requires that you enable SQLCLR integration. Consider the security implications before you enable this option.
 
 The overall process of preparing the model and then generating scores is very similar:
 
@@ -43,7 +43,7 @@ The overall process of preparing the model and then generating scores is very si
 
 + If using sp\_rxPredict, some additional steps are required. See [Enable realtime scoring](#bkmk_enableRtScoring).
 
-+ At the time of this writing, only RevoScaleR and MicrosoftML can create compatible models. Additional model types might become available in future. For the list of currently supported algorithms, see [Realtime scoring](../real-time-scoring.md).
++ At this time, only RevoScaleR and MicrosoftML can create compatible models. Additional model types might become available in future. For the list of currently supported algorithms, see [Realtime scoring](../real-time-scoring.md).
 
 ### Serialization and storage
 
@@ -74,7 +74,7 @@ From R code, there are two ways to save the model to a table:
 
 ## Native scoring with PREDICT
 
-In this example, you'll create a model and then call the realtime prediction function from T-SQL.
+In this example, you create a model and then call the realtime prediction function from T-SQL.
 
 ### Step 1. Prepare and save the model
 
@@ -175,7 +175,7 @@ This section describes the steps required to set up **realtime** prediction, and
 You must enable this feature for each database that you want to use for scoring. The server administrator should run the command-line utility, RegisterRExt.exe, which is included with the RevoScaleR package.
 
 > [!NOTE]
-> In order for realtime scoring to work, SQL CLR functionality needs to be enabled in the instance and the database needs to be marked trustworthy. When you run the script, these actions are performed for you. However, you should consider the additional security implications of doing this.
+> In order for realtime scoring to work, SQL CLR functionality needs to be enabled in the instance and the database needs to be marked trustworthy. When you run the script, these actions are performed for you. However, you should consider the additional security implications.
 
 1. Open an elevated command prompt, and navigate to the folder where RegisterRExt.exe is located. The following path can be used in a default installation:
     
@@ -205,9 +205,7 @@ You must enable this feature for each database that you want to use for scoring.
 
 ### Step 2. Prepare and save the model
 
-The binary format required by sp\_rxPredict is the same as that for PREDICT.
-
-Therefore, in your R code, include a call to [rxSerializeModel](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxserializemodel), and be sure to specify _realtimeScoringOnly_ = TRUE, as in this example:
+The binary format required by sp\_rxPredict is the same as that for PREDICT. Therefore, in your R code, include a call to [rxSerializeModel](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxserializemodel), and be sure to specify _realtimeScoringOnly_ = TRUE, as in this example:
 
 ```R
 model <- rxSerializeModel(model.name, realtimeScoringOnly = TRUE)
@@ -237,16 +235,16 @@ EXEC sp_rxPredict
 > 
 > For information about corresponding SQL types, see [SQL-CLR Type Mapping](https://msdn.microsoft.com/library/bb386947.aspx) or [Mapping CLR Parameter Data](https://docs.microsoft.com/sql/relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data).
 
-### Disable realtime scoring
+## Disable realtime scoring
 
 To disable realtime scoring functionality, open an elevated command prompt, and run the following command: `RegisterRExt.exe /uninstallrts /database:<database_name> [/instance:name]`
 
-### Realtime scoring in Microsoft R Server or Machine Learning Server
+## Realtime scoring in Microsoft R Server or Machine Learning Server
 
 Machine Learning Server supports distributed realtime scoring from models published as a web service. For more information, see these articles:
 
 + [What are web services in Machine Learning Server?](https://docs.microsoft.com/machine-learning-server/operationalize/concept-what-are-web-services)
 + [What is operationalization?](https://docs.microsoft.com/machine-learning-server/operationalize/concept-operationalize-deploy-consume)
 + [Deploy a Python model as a web service with azureml-model-management-sdk](https://docs.microsoft.com/machine-learning-server/operationalize/python/quickstart-deploy-python-web-service)
-+ [Publish an R code block or a realtime model as a new web service](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/publishservice) function
++ [Publish an R code block or a realtime model as a new web service](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/publishservice)
 + [mrsdeploy package for R](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/mrsdeploy-package)

@@ -6,7 +6,7 @@ layout: LandingPage
 
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]  
 
-This article provides a list of available tools for working with SQL Server, Azure SQL Database, SQL Data Warehouse, and SQL Server-based applications. 
+This article provides a list of available tools for working with SQL Server, Azure SQL Database, SQL Data Warehouse, and SQL Server-based applications. For a detailed comparison, and guidance about which tools to use, see WHAT SQL TOOL DO I NEED?
 
 If you want to jump right in and start creating tables, running queries, basically design and manage your database, then [**SQL Server Management Studio (SSMS)**](../ssms/download-sql-server-management-studio-ssms.md) is most likely your go-to tool. SSMS is free, and runs on Windows.
 
@@ -20,10 +20,10 @@ If you're running Linux or macOS, try [Visual Studio Code](https://code.visualst
     <th>SSDT</th>
   </tr>
   <tr>
-    <td><img src="media/landing-page/carbon.png" alt="" /></td>
-    <td><img src="media/landing-page/vscode.png" alt="" /></td>
-    <td><img src="media/landing-page/ssms.png" alt="" /></td>
-    <td><img src="media/landing-page/ssdt.png" alt="" /></td>
+    <td>[<img src="media/landing-page/carbon.png" alt="" />](../carbon/download.md)</td>
+    <td>[<img src="media/landing-page/vscode.png" alt="" />](https://code.visualstudio.com)</td>
+    <td>[<img src="media/landing-page/ssms.png" alt="" />](../ssms/download-sql-server-management-studio-ssms.md)</td>
+    <td>[<img src="media/landing-page/ssdt.png" alt="" />](../ssdt/download-sql-server-data-tools-ssdt.md)</td>
   </tr>
   <tr>
     <td>Carbon is a free lightweight modern database development and management tool that you can use on Windows, Linux, and macOS with SQL Server running anywhere, Azure SQL Database and Azure SQL Data Warehouse. </td>
@@ -36,7 +36,7 @@ If you're running Linux or macOS, try [Visual Studio Code](https://code.visualst
 
 
 
-## Additional SQL Tools and Command Prompt utilities
+## SQL Tools and Command Prompt utilities
 
 | Tool | Description |
 |:--|:--|

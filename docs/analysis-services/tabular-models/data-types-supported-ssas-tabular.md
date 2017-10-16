@@ -34,14 +34,14 @@ When you import data or use a value in a formula, even if the original data sour
 |Whole Number|A 64 bit (eight-bytes) integer value*<br /><br /> Note:<br />         DAX formulas do not support data types that are too small to hold the minimum value listed in the description.|Numbers that have no decimal places. Integers can be positive or negative numbers, but must be whole numbers between -9,223,372,036,854,775,808 (-2^63) and 9,223,372,036,854,775,807 (2^63-1).|  
 |Decimal Number|A 64 bit (eight-bytes) real number*<br /><br /> Note:<br />         DAX formulas do not support data types that are too small to hold the minimum value listed in the description.|Real numbers are numbers that can have decimal places. Real numbers cover a wide range of values:<br /><br /> Negative values from -1.79E +308 through -2.23E -308<br /><br /> Zero<br /><br /> Positive values from 2.23E -308 through 1.79E + 308<br /><br /> However, the number of significant digits is limited to 17 decimal digits.|  
 |Boolean|Boolean|Either a True or False value.|  
-|Text|String|A Unicode character data string. Can be strings, numbers or dates represented in a text format.|  
+|Text|String|A Unicode character data string. Can be strings, numbers, or dates represented in a text format.|  
 |Date|Date/time|Dates and times in an accepted date-time representation.<br /><br /> Valid dates are all dates after March 1, 1900.|  
 |Currency|Currency|Currency data type allows values between -922,337,203,685,477.5808 to 922,337,203,685,477.5807 with four decimal digits of fixed precision.|  
 |N/A|Blank|A blank is a data type in DAX that represents and replaces SQL nulls. You can create a blank by using the BLANK function, and test for blanks by using the logical function, ISBLANK.|  
   
- \* If you attempt to import data that has very large numeric values, import might fail with the following error:  
+ \* If you attempt to import data that has large numeric values, import might fail with the following error:  
   
- In-memory database error: The '\<column name>' column of the '\<table name>' table contains a value, '1.7976931348623157e+308', which is not supported. The operation has been cancelled.  
+ In-memory database error: The '\<column name>' column of the '\<table name>' table contains a value, '1.7976931348623157e+308', which is not supported. The operation has been canceled.  
   
  This error occurs because the model designer uses that value to represent nulls. The values in the following list are synonyms to the previous mentioned null value:  
   
@@ -53,7 +53,7 @@ When you import data or use a value in a formula, even if the original data sour
 |1.7976931348623158e+308|  
 |2.2250738585072014e-308|  
   
- You should remove the value from your data and try importing again.  
+ Remove the value from your data and try importing again.  
   
 > [!NOTE]  
 >  You cannot import from a **varchar(max)** column that contains a string length of more than 131,072 characters.  
@@ -65,15 +65,15 @@ When you import data or use a value in a formula, even if the original data sour
   
  Each DAX function has specific requirements as to the types of data that are used as inputs and outputs. For example, some functions require integers for some arguments and dates for others; other functions require text or tables.  
   
- If the data in the column that you specify as an argument is incompatible with the data type required by the function, DAX in many cases will return an error. However, wherever possible DAX will attempt to implicitly convert the data to the required data type. For example:  
+ If the data in the column that you specify as an argument is incompatible with the data type required by the function, DAX in many cases returns an error. However, wherever possible DAX attempts to implicitly convert the data to the required data type. For example:  
   
--   You can type a number, for example “123”, as a string. DAX will parse the string and attempt to specify it as a number data type.  
+-   You can type a number, for example “123”, as a string. DAX parses the string and attempt to specify it as a number data type.  
   
 -   You can add TRUE + 1 and get the result 2, because TRUE is implicitly converted to the number 1 and the operation 1+1 is performed.  
   
 -   If you add values in two columns, and one value happens to be represented as text ("12") and the other as a number (12), DAX implicitly converts the string to a number and then does the addition for a numeric result. The following expression returns 44: = "22" + 22  
   
--   If you attempt to concatenate two numbers, the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] add-in will present them as strings and then concatenate. The following expression returns "1234": = 12 & 34  
+-   If you attempt to concatenate two numbers, they are presented as strings and then concatenated. The following expression returns "1234": = 12 & 34  
   
  The following table summarizes the implicit data type conversions that are performed in formulas. In general, semantic model designer behaves like Microsoft Excel, and performs implicit conversions whenever possible when required by the specified operation.  
   
@@ -81,7 +81,7 @@ When you import data or use a value in a formula, even if the original data sour
  The type of conversion that is performed is determined by the operator, which casts the values it requires before performing the requested operation. These tables list the operators, and indicate the conversion that is performed on each data type in the column when it is paired with the data type in the intersecting row.  
   
 > [!NOTE]  
->  Text data types are not included in these tables. When a number is represented as in a text format, in some cases, the model designer will attempt to determine the number type and represent it as a number.  
+>  Text data types are not included in these tables. When a number is represented as in a text format, in some cases, the model designer attempts to determine the number type and represent it as a number.  
   
 #### Addition (+)  
   
@@ -96,7 +96,7 @@ When you import data or use a value in a formula, even if the original data sour
  For example, if a real number is used in an addition operation in combination with currency data, both values are converted to REAL, and the result is returned as REAL.  
   
 #### Subtraction (-)  
- In the following table the row header is the minuend (left side) and the column header is the subtrahend (right side).  
+ In the following table, the row header is the minuend (left side) and the column header is the subtrahend (right side):  
   
 ||||||  
 |-|-|-|-|-|  
@@ -139,7 +139,7 @@ When you import data or use a value in a formula, even if the original data sour
 Only a limited set of mixed data-type combinations for comparison operations is supported. To learn more, see [DAX Operator Reference](https://msdn.microsoft.com/library/ee634237.aspx).  
   
 ## <a name="bkmk_hand_blanks"></a> Handling of blanks, empty strings, and zero values  
- The following table summarizes the differences between DAX and in Microsoft Excel, in the way that blanks are handled.  
+ The following table summarizes the differences between DAX and in Microsoft Excel, in the way that blanks are handled:  
   
 ||||  
 |-|-|-|  

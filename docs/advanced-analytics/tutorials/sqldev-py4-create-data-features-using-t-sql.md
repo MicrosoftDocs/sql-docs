@@ -1,7 +1,7 @@
 ---
 title: "Step 4: Create Data Features using T-SQL  | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/25/2017"
+ms.date: "10/13/2017"
 ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""

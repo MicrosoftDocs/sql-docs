@@ -1,7 +1,7 @@
 ---
-title: "Step 1: Download the Sample Data| Microsoft Docs"
+title: "Step 1: Download the sample data | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/25/2017"
+ms.date: "10/13/2017"
 ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
@@ -20,44 +20,53 @@ author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
 ---
-# Step 1: Download the Sample Data
+# Step 1: Download the sample data
 
-In this step, you'll download the sample dataset and the scripts. Both the data and the script files are shared on Github, but the PowerShell script will download the data and script files to a local directory of your choosing.
+This article is part of a tutorial, [In-database Python analytics for SQL developers](sqldev-in-database-python-for-sql-developers.md). 
 
-## Download the Data and Scripts
+Both the data and the scripts for this tutorial are shared on Github. In this step, you use a PowerShell script to download the data and script files to a local directory of your choosing.
+
+## Run the script
 
 1. Open a Windows PowerShell command console.
 
     Use the option, **Run as Administrator**, if administrative privileges are needed to create the destination directory or to write files to the specified destination.
 
-2. Run the following PowerShell commands, changing the value of the parameter *DestDir* to any local directory.  The default we've used here is **TempPythonSQL**.
+2. Run the following PowerShell commands, changing the value of the parameter *DestDir* to any local directory.  The default we've used here is `C:\temp\pysql`.
 
-    ```
+    ```ps
     $source = 'https://raw.githubusercontent.com/Azure/Azure-MachineLearning-DataScience/master/Misc/PythonSQL/Download_Scripts_SQL_Walkthrough.ps1'
     $ps1_dest = "$pwd\Download_Scripts_SQL_Walkthrough.ps1"
     $wc = New-Object System.Net.WebClient
     $wc.DownloadFile($source, $ps1_dest)
-    .\Download_Scripts_SQL_Walkthrough.ps1 –DestDir 'C:\tempPythonSQL'
+    .\Download_Scripts_SQL_Walkthrough.ps1 –DestDir 'C:\temp\pysql'
     ```
     
     If the folder you specify in *DestDir* does not exist, it will be created by the PowerShell script.
     
-    If you get an error, you can temporarily set the policy for execution of PowerShell scripts to **unrestricted** only for this walkthrough, by using the **Bypass** argument and scoping the changes to the current session. Running this command does not result in a configuration change.
+    If you get an error, temporarily set the policy for execution of PowerShell scripts to **unrestricted** for this walkthrough, by using the **Bypass** argument and scoping the changes to the current session. Running this command does not result in a configuration change.
     
-    `Set\-ExecutionPolicy Bypass \-Scope Process`
-
-3. Depending on your Internet connection, the download might take a while. When all files have been downloaded, the PowerShell script opens to the folder specified by  *DestDir*. In the PowerShell command prompt, run the following command and review the files that have been downloaded.
-
+    ```ps
+    Set-ExecutionPolicy Bypass -Scope Process
     ```
+
+3. Depending on your internet connection, the download might take a while. 
+
+## View the results
+
+When all files have been downloaded, the PowerShell script opens to the folder specified by  *DestDir*. 
+
++ In the PowerShell command prompt, run the following command, to list the files that were downloaded.
+
+    ```ps
     ls
     ```
-**Results:**
 
 ![list of files downloaded by PowerShell script](media/sqldev-python-filelist.png "list of files downloaded by PowerShell script")
 
-## Next Step
+## Next step
 
-[Step 2: Import Data to SQL Server using PowerShell](sqldev-py2-import-data-to-sql-server-using-powershell.md)
+[Step 2: Import data to SQL Server using PowerShell](sqldev-py2-import-data-to-sql-server-using-powershell.md)
 
 ## Previous Step
 

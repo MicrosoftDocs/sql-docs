@@ -1,7 +1,7 @@
 ---
 title: "Step 5: Train and Save a Model using T-SQL | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/26/2017"
+ms.date: "10/13/2017"
 ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""

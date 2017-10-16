@@ -6,139 +6,38 @@ layout: LandingPage
 
 Carbon is a lightweight, open source, multi-OS and multi-database tool, designed from the ground-up for DBAs and developers. Carbon simplifies configuration, management, monitoring, and troubleshooting of databases. 
 
-With the ability to run on the platform of your choice (Linux, macOS, or Windows), Carbon enables a modern database DevOps experience, for the databases you work with, wherever they're running; Linux, Windows, Azure, containers, VMs, AWS, Google cloud, etc. 
-+ 
+With the ability to run on the platform of your choice (Linux, macOS, or Windows), Carbon enables a modern database management experience, for the databases you work with, wherever they're running; Linux, Windows, Azure, containers, VMs, AWS, Google cloud, etc. 
+
 Carbon brings your databases into the devops lifecycle/pipeline.
+
+***[Download & Install Carbon](download.md)***
 
 <table style="width:100%">
   <tr>
-    <th>Firstname</th>
-    <th>Lastname</th> 
-    <th>Age</th>
+    <th>Feature</th>
+    <th>Description</th> 
   </tr>
   <tr>
-    <td><img src="media/landing-page/carbon.png" alt="" /></td>
-    <td><img src="media/landing-page/carbon.png" alt="" /></td>
-    <td><img src="media/landing-page/carbon.png" alt="" /></td>
+    <td>**Best in class Query Editor**</td>
+    <td>Carbon offers a modern, keyboard-focused T-SQL code experience and makes your everyday tasks easier with built-in features, such as multiple tab windows, a rich T-SQL editor, IntelliSense, keyword completion, code snippets & code navigation, and source control integration (Git and TFS). You can execute ad-hoc SQL queries, view & save results as text, JSON or Excel, edit data, organize your favorite database connections, and browse database objects in a familiar object browsing experience. </td>
   </tr>
   <tr>
-    <td>Eve</td>
-    <td>Jackson</td> 
-    <td>94</td>
+    <td>**Customizable Dashboards/Insightful Monitoring**</td>
+    <td>Create rich customizable dashboards to monitor and quickly troubleshoot performance bottlenecks in your SQL databases on-premises, in Azure or any cloud.</td> 
+  </tr>
+  <tr>
+    <td>**Smart SQL Snippets**</td>
+    <td>Easily generate and execute CREATE and INSERT scripts for your SQL database objects to create copies of your database for development or testing purposes. Boost your productivity with smart T-SQL code snippets and rich graphical experiences to create new databases and database objects (such as tables, views, stored procedures, users, logins, roles, etc.) or to update existing database objects.</td> 
+  </tr>
+  <tr>
+    <td>**Integrated Terminal**</td>
+    <td>Use your favorite command line tools (e.g. Bash, PowerShell, sqlcmd, bcp and ssh) in the Integrated Terminal window right within the Carbon user interface.</td> 
   </tr>
 </table> 
 
 
-<ul class="panelContent cardsFTitle">
-    <li>
-        <a href="download.md?toc=/sql/carbon/toc.json">
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="media/landing-page/carbon.png" alt="" />
-                        </div>                        
-                    </div>
-                    <div class="cardText">
-                        <h3>Download & Install Carbon</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </a>
-    </li>
-    <li>
-        <a href="overview.md?toc=/sql/carbon/toc.json">
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="media/landing-page/sql-linux-landing-2.png" alt="" />
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3>Manage: SSMS, PowerShell, mssql-conf</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </a>
-    </li>
-    <li>
-        <a href="sql-server-linux-develop-overview.md?toc=/sql/linux/toc.json">
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="media/landing-page/sql-linux-landing-3.png" alt="" />
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3>Develop: Connectivity libraries, Visual Studio tools, tutorials</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </a>
-    </li>
-    <li>
-        <a href="https://msdn.microsoft.com/library/mt238290.aspx">
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="media/landing-page/sql-linux-landing-4.png" alt="" />
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3>Download SSMS: Run on Windows to access, manage, and develop SQL Server on Linux</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </a>
-    </li>
-    <li>
-        <a href="https://msdn.microsoft.com/library/mt204009.aspx">
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="media/landing-page/sql-linux-landing-3.png" alt="" />
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3>Download SSDT: Development tools for building SQL Server relational databases and SQL Azure databases</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </a>
-    </li>
-    <li>
-        <a href="https://aka.ms/mssql-marketplace">
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <img src="media/landing-page/sql-linux-landing-6.png" alt="" />
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <h3>Install Visual Studio Code with the vscode-mssql extension: SQL Server support in VS Code</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </a>
-    </li>
-</ul>
+## 
+
 
 <!--
 <div class="downloadHolder">

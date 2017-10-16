@@ -26,7 +26,7 @@ This article is part of a tutorial, [In-database Python analytics for SQL develo
 
 In this step, you run one of the downloaded scripts, to create the database objects required for the walkthrough. The script also creates several stored procedures, and uploads the sample data to a table in the database you specified.
 
-## Create SQL objects and data
+## Create database objects and load data
 
 Among the downloaded files you should see a PowerShell script, `RunSQL_SQL_Walkthrough.ps1`. The purpose of this script is to prepare the environment for the walkthrough.
 
@@ -54,7 +54,7 @@ If you run into problems, you can use the script as a reference to perform the s
     - The path and file name of the sample data file that you just downloaded. For example, `C:\temp\pysql\nyctaxi1pct.csv`
 
 	> [!NOTE]
-	> To load the data successfully, the library xmlrw.dll must be in the same folder as bcp.exe. 
+	> To load the data successfully, the library xmlrw.dll must be in the same folder as bcp.exe.
 
 3. The script also modifies the [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts that you downloaded earlier, and replaces placeholders with the database name and user name that you provide.
   
@@ -63,7 +63,7 @@ If you run into problems, you can use the script as a reference to perform the s
     ![browse tables in SSMS](media/sqldev-python-browsetables1.png "view tables in SSMS")
 
     > [!NOTE]
-    > If the database objects already existed, they cannot be created again. 
+    > If the database objects already existed, they cannot be created again.
     > 
     > If an existing table of the same name and schema is found, the data will be appended, not overwritten. Therefore, be sure to drop or truncate existing tables before running the script.
 

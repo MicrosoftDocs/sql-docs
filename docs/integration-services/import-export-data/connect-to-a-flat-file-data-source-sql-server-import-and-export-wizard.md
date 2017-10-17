@@ -193,7 +193,7 @@ The **Advanced** page shows detailed info about each column in the data source, 
 
 ![Flat file, delimited, Advanced page](../../integration-services/import-export-data/media/flat-file-delimited-advanced-page.jpg)
 
-In the screen shot, note that the **id** column, which contains numbers, initially has a data type of string.
+In the screen shot, notice that the **id** column, which contains numbers, initially has a data type of string.
 
 ### Options to specify (**Advanced** page)
 
@@ -202,10 +202,10 @@ In the screen shot, note that the **id** column, which contains numbers, initial
   
 |Property|Description|  
 |--------------|-----------------|  
-|**Name**|Provide a descriptive column name. If you do not enter a name, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] automatically creates a name in the format Column 0, Column 1 and so forth.|
+|**Name**|Provide a descriptive column name. If you do not enter a name, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] automatically creates a name in the format Column 0, Column 1, and so forth.|
 |**ColumnDelimiter**|Select from the list of available column delimiters. Choose delimiters that are not likely to occur in the text. This value is ignored for fixed-width columns.<br /><br /> **{CR}{LF}**. Columns are delimited by a carriage return-line feed combination.<br /><br /> **{CR}**. Columns are delimited by a carriage return.<br /><br /> **{LF}**. Columns are delimited by a line feed.<br /><br /> **Semicolon {;}**. Columns are delimited by a semicolon.<br /><br /> **Colon {:}**. Columns are delimited by a colon.<br /><br /> **Comma {,}**. Columns are delimited by a comma.<br /><br /> **Tab {t}**. Columns are delimited by a tab.<br /><br /> **Vertical bar {&#124;}**. Columns are delimited by a vertical bar.|
 |**ColumnType**|Denotes whether the column is delimited, fixed width, or ragged right. This property is read-only. Ragged right files are files in which every column has a fixed width, except for the last column. It is delimited by the row delimiter.|  
-|**InputColumnWidth**|Specify a value to be stored as a count of bytes; for Unicode files, this will display as a count of characters. This value is ignored for delimited columns.<br /><br /> **Note** In the object model, the name of this property is ColumnWidth.|
+|**InputColumnWidth**|Specify a value to be stored as a count of bytes; for Unicode files, this value is a count of characters. This value is ignored for delimited columns.<br /><br /> **Note** In the object model, the name of this property is ColumnWidth.|
 |**DataPrecision**|Specify the precision of numeric data. Precision refers to the number of digits.|
 |**DataScale**|Specify the scale of numeric data. Scale refers to the number of decimal places.|
 |**DataType**|Select from the list of available data types.<br/>For more information, see [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).|
@@ -229,7 +229,7 @@ In the screen shot, note that the **id** column, which contains numbers, initial
  
 Click **Suggest types** to display the **Suggest Column Types** dialog box. 
 
-![Flat file connection suggest](../../integration-services/import-export-data/media/flat-file-connection-suggest.png)
+![Flat file connection suggest types dialog box](../../integration-services/import-export-data/media/flat-file-connection-suggest.png)
 
 After you choose options in the **Suggest Column Types** dialog box and click **OK**, the wizard may change the data types of some of the columns.
 
@@ -293,7 +293,7 @@ For a flat file destination, there's only a single page of options, as shown in 
  Specify the text qualifier, if any, used by the file. For example, you can specify that text fields are enclosed in quotation marks. (This property only applies to Delimited files.) 
   
 > [!NOTE] 
-> After you select a text qualifier, you can't re-select the **None** option. Type **None** to de-select the text qualifier.  
+> After you select a text qualifier, you can't reselect the **None** option. Type **None** to de-select the text qualifier.  
 
 ## See also
 [Choose a Data Source](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  

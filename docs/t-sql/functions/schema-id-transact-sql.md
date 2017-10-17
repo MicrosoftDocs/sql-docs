@@ -59,27 +59,9 @@ SCHEMA_ID ( [ schema_name ] )
   
 ```  
 SELECT SCHEMA_ID();  
-GO  
 ```  
   
 ### B. Returning the schema ID of a named schema  
-  
-```  
-USE AdventureWorks2012;  
-GO  
-SELECT SCHEMA_ID('HumanResources');  
-GO   
-```  
-  
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### C. Returning the default schema ID of a caller  
-  
-```  
-SELECT SCHEMA_ID();  
-```  
-  
-### D. Returning the schema ID of a named schema  
   
 ```  
 SELECT SCHEMA_ID('dbo');  

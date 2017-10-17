@@ -117,20 +117,6 @@ SELECT LOG(10);
  2.30
  ```  
   
-### D. Calculating the logarithm of the exponent of a number  
- The following example calculates the `LOG` for the exponent of a number.  
-  
-```  
-SELECT LOG(EXP (10));  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
- ```
----------  
-10.00
-```  
-  
 ## See Also  
  [Mathematical Functions &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)   
  [EXP &#40;Transact-SQL&#41;](../../t-sql/functions/exp-transact-sql.md)   

@@ -65,19 +65,6 @@ manager: "jhubbard"
   
 -   For user configurable SQL Trace event classes (UserConfigurable:1 through UserConfigurable:9), Extended Events uses a single event to replace these. The event is named user_event. This event is raised by using sp_trace_generateevent, which is the same stored procedure that is used by SQL Trace. The user_event event is returned regardless of which event ID is passed to the stored procedure. However, an event_id field is returned as part of the event data. This enables you to build a predicate that is based on the event ID. For example, if you use UserConfigurable:0 (event ID = 82) in the code, you can add the user_event event to the session, and specify a predicate of 'event_id = 82'. Therefore, you do not have to change the code because the sp_trace_generateevent stored procedure generates the Extended Events user_event event, and the equivalent SQL Trace event class.  
   
--   If all columns return NULL except for the Event Class column, this indicates that the event class was not migrated from SQL Trace.  
-  
--   If only the value in the Extended Events action column is NULL, this indicates that either of the following conditions is true:  
-  
-    -   The SQL Trace column maps to one of the data fields that is associated with the Extended Events event.  
-  
-        > [!NOTE]  
-        >  Each Extended Events event has a default set of data fields that are automatically included in the result set.  
-  
-    -   The action column does not have a meaningful Extended Events equivalent. An example of this is the EventClass column in SQL Trace. This column is not needed in Extended Events because the event name serves the same purpose.  
-  
--   For user configurable SQL Trace event classes (UserConfigurable:1 through UserConfigurable:9), Extended Events uses a single event to replace these. The event is named user_event. This event is raised by using sp_trace_generateevent, which is the same stored procedure that is used by SQL Trace. The user_event event is returned regardless of which event ID is passed to the stored procedure. However, an event_id field is returned as part of the event data. This enables you to build a predicate that is based on the event ID. For example, if you use UserConfigurable:0 (event ID = 82) in the code, you can add the user_event event to the session, and specify a predicate of 'event_id = 82'. Therefore, you do not have to change the code because the sp_trace_generateevent stored procedure generates the Extended Events user_event event, and the equivalent SQL Trace event class.  
-  
 ## See Also  
  [sp_trace_generateevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)  
   

@@ -67,30 +67,6 @@ DROP EXTERNAL TABLE ProductVendor1;
 DROP EXTERNAL TABLE EasternDivision.dbo.SalesPerson;  
 ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### D. Using basic syntax  
-  
-```  
-DROP EXTERNAL TABLE SalesPerson;  
-DROP EXTERNAL TABLE dbo.SalesPerson;  
-DROP EXTERNAL TABLE EasternDivision.dbo.SalesPerson;  
-```  
-  
-### E. Dropping an external table from the current database  
- The following example removes the `ProductVendor1` table, its data, indexes, and any dependent views from the current database.  
-  
-```  
-DROP EXTERNAL TABLE ProductVendor1;  
-```  
-  
-### F. Dropping a table from another database  
- The following example drops the `SalesPerson` table in the `EasternDivision` database.  
-  
-```  
-DROP EXTERNAL TABLE EasternDivision.dbo.SalesPerson;  
-```  
-  
 ## See Also  
  [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)  
   

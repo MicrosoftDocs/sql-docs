@@ -68,6 +68,20 @@ To clear and remove the credentials that you provided as described in this artic
     ```sql
     catalog.set_execution_credential @user='', @domain='', @password=''
     ```
+## Connect to file shares
+You can use Windows authentication to connect to file shares in the same virtual network as the Azure SSIS Integration Runtime both on premises and on Azure virtual machines.
+
+To connect to a file share on an Azure virtual machine, do the following things:
+
+1.  With SQL Server Management Studio (SSMS) or another tool, connect to the SQL Database that hosts the SSIS Catalog database (SSISDB).
+
+2.  With SSISDB as the current database, open a query window.
+
+3.  Run the following stored procedure:
+
+    ```sql
+    catalog.set_execution_credential @domain = N'.', @user = N'username of local account on Azure virtual machine', @password = N'password'
+    ```
 
 ## Next steps
 - Deploy a package. For more info, see [Deploy an SSIS project with SQL Server Management Studio (SSMS)](../ssis-quickstart-deploy-ssms.md).

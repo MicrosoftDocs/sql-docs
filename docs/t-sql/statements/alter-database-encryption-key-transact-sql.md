@@ -87,17 +87,6 @@ ALTER DATABASE ENCRYPTION KEY
  The following example alters the database encryption key to use the `AES_256` algorithm.  
   
 ```  
-USE AdventureWorks2012;  
-GO  
-ALTER DATABASE ENCRYPTION KEY  
-REGENERATE WITH ALGORITHM = AES_256;  
-GO  
-```  
-  
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- The following example alters the database encryption key to use the `AES_256` algorithm.  
-  
-```  
 -- Uses AdventureWorks  
   
 ALTER DATABASE ENCRYPTION KEY  

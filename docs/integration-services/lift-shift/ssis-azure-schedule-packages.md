@@ -41,7 +41,7 @@ To schedule a package with SQL Server Agent on premises, create a job with a job
     EXEC @return_value = [YourLinkedServer].[SSISDB].[catalog].[create_execution] 
 	@folder_name=N'folderName', @project_name=N'projectName', 
 	@package_name=N'packageName', @use32bitruntime=0, 
-    @runincluster=1, @useanyworker=1, @execution_id=@exe_id OUTPUT 
+    @runinscaleout=1, @useanyworker=1, @execution_id=@exe_id OUTPUT 
  
     EXEC [YourLinkedServer].[SSISDB].[catalog].[start_execution] @execution_id=@exe_id
 
@@ -85,7 +85,7 @@ EXEC jobs.sp_add_jobstep @job_name='ExecutePackageJob', 
 		EXEC [SSISDB].[catalog].[create_execution]
             @folder_name=N''folderName'', @project_name=N''projectName'',
             @package_name=N''packageName'', @use32bitruntime=0,
-            @runincluster=1, @useanyworker=1, 
+            @runinscaleout=1, @useanyworker=1, 
 			@execution_id=@exe_id OUTPUT		 
 		EXEC [SSISDB].[catalog].[start_execution] @exe_id, @retry_count=0', 
 	@credential_name='YourDBScopedCredentials', 
@@ -97,6 +97,9 @@ EXEC jobs.sp_update_job @job_name='ExecutePackageJob', @enabled=1, 
 ```
 
 ## <a name="sproc"></a> Schedule a package with the Azure Data Factory SQL Server Stored Procedure activity
+
+> [!IMPORTANT]
+> Use the JSON scripts in the following example with the Azure Data Factory version 1 Stored Procedure Activity.
 
 To schedule a package with the Azure Data Factory SQL Server Stored Procedure activity, do the following things:
 1.  Create a Data Factory.
@@ -116,7 +119,7 @@ The linked service lets Data Factory connect to SSISDB.
 		"description": "",
 		"type": "AzureSqlDatabase",
 		"typeProperties": {
-			"connectionString": "Data Source = tcp: YourSQLDBServer.database.windows.net, 1433; Initial Catalog = SSISDB; User ID = YourUsername; Password = YourPassword; Integrated Security = False; Encrypt = True; Connect Timeout = 30 "
+			"connectionString": "Data Source = tcp: YourSQLDBServer.database.windows.net, 1433; Initial Catalog = SSISDB; User ID = YourUsername; Password = YourPassword; Integrated Security = False; Encrypt = True; Connect Timeout = 30"
 		}
 	}
 }
@@ -172,16 +175,23 @@ The pipeline uses the SQL Server Stored Procedure activity to run the SSIS packa
 }
 ```
 
-You don't have to create a new stored procedure to encapsulate the Transact-SQL commands required to create and start SSIS package execution. You can provide the script as the value of the `stmt` parameter in the preceding JSON sample. Here is a sample script:
+You don't have to create a new stored procedure to encapsulate the Transact-SQL commands required to create and start SSIS package execution. You can provide the entire script as the value of the `stmt` parameter in the preceding JSON sample. Here is a sample script:
 
 ```sql
 -- T-SQL script to create and start SSIS package execution using SSISDB catalog stored procedures
 DECLARE @return_value INT,@exe_id BIGINT,@err_msg NVARCHAR(150)
 
-EXEC @return_value=[SSISDB].[catalog].[create_execution] @folder_name=N'folderName', @project_name=N'projectName', @package_name=N'packageName', @use32bitruntime=0, @runincluster=1,@useanyworker=1, @execution_id=@exe_id OUTPUT
-                                                         
+-- Create the exectuion
+EXEC @return_value=[SSISDB].[catalog].[create_execution] @folder_name=N'folderName', @project_name=N'projectName', @package_name=N'packageName', @use32bitruntime=0, @runinscaleout=1,@useanyworker=1, @execution_id=@exe_id OUTPUT
+
+-- To synchronize SSIS package execution, set the SYNCHRONIZED execution parameter
+EXEC [SSISDB].[catalog].[set_execution_parameter_value] @exe_id, @object_type=50, @parameter_name=N'SYNCHRONIZED', @parameter_value=1
+
+-- Start the execution                                                         
 EXEC [SSISDB].[catalog].[start_execution] @execution_id=@exe_id,@retry_count=0
--- To synchronize SSIS package execution, poll package execution status
+                                          
+-- Raise an error for unsuccessful package execution
+-- Execution status values include the following:
 -- created (1)
 -- running (2)
 -- canceled (3)
@@ -191,20 +201,11 @@ EXEC [SSISDB].[catalog].[start_execution] @execution_id=@exe_id,@retry_count=0
 -- succeeded (7)
 -- stopping (8)
 -- completed (9) 
-                                          
-WHILE(SELECT [status]
-      FROM [SSISDB].[catalog].[executions]
-      WHERE execution_id=@exe_id) NOT IN(3,4,6,7,9)
-BEGIN
-    WAITFOR DELAY '00:00:01';
-END
-
--- Raise an error for unsuccessful package execution
 IF(SELECT [status]
    FROM [SSISDB].[catalog].[executions]
    WHERE execution_id=@exe_id)<>7
 BEGIN
-    SET @err_msg=N'Your package execution did not succeed for execution ID: '+CAST(@exe_id AS NVARCHAR(20))
+    SET @err_msg=N'Your package execution did not succeed for execution ID: ' + CAST(@exe_id AS NVARCHAR(20))
     RAISERROR(@err_msg,15,1)
 END
 GO

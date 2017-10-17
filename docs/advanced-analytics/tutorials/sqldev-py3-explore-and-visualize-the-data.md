@@ -24,20 +24,20 @@ manager: "jhubbard"
 
 This article is part of a tutorial, [In-database Python analytics for SQL developers](sqldev-in-database-python-for-sql-developers.md). 
 
-In this step, you'll explore the sample data and generate some plots. Later, you'll learn how to serialize graphics objects in Python, and then deserialize those object and make plots.
+In this step, you explore the sample data and generate some plots. Later, you learn how to serialize graphics objects in Python, and then deserialize those objects and make plots.
 
 ## Review the data
 
 First, take a minute to browse the data schema, as we've made some changes to make it easier to use the NYC Taxi data
 
 + The original dataset used separate files for the taxi identifiers and trip records. We've joined the two original datasets on the columns _medallion_, _hack_license_, and _pickup_datetime_.  
-+ The original datset spanned many files and was quite large. We've downsampled to get just 1% of the original number of records. The current data table has 1,703,957 rows and 23 columns.
++ The original dataset spanned many files and was quite large. We've downsampled to get just 1% of the original number of records. The current data table has 1,703,957 rows and 23 columns.
 
 **Taxi identifiers**
 
-The _medallion_ column represents the taxi’s unique id number.
+The _medallion_ column represents the taxi’s unique ID number.
 
-The _hack_license_ column contains the taxi driver's license number (anonymized) .
+The _hack_license_ column contains the taxi driver's license number (anonymized).
 
 **Trip and fare records**
 
@@ -69,11 +69,11 @@ The values used for the label columns are all based on the `tip_amount` column, 
 
 Developing a data science solution usually includes intensive data exploration and data visualization. Because visualization is such a powerful tool for understanding the distribution of the data and outliers, Python provides many packages for visualizing data. The **matplotlib** module is one of the more popular libraries for visualization, and includes many functions for creating histograms, scatter plots, box plots, and other data exploration graphs.
 
-In this section, you'll learn how to work with plots using stored procedures. You'll store the `plot` Python object as a **varbinary** data type, and save the plots generated on the server.
+In this section, you learn how to work with plots using stored procedures. Rather than open the image on the server, you store the Python object  `plot` as **varbinary** data, and then write that to a file that can be shared or viewed elsewhere.
 
 ### Create a plot as varbinary data
 
-The **revoscalepy** module included with SQL Server 2017 Machine Learning Services contains libraries analogous to the R libraries in the RevoScaleR package.  This example uses the Python equivalent of `rxHistogram` to plot a histogram based on data from a [!INCLUDE[tsql](../../includes/tsql-md.md)] query. 
+The **revoscalepy** module included with SQL Server 2017 Machine Learning Services supports features similar to those in the **RevoScaleR** package for R.  This example uses the Python equivalent of `rxHistogram` to plot a histogram based on data from a [!INCLUDE[tsql](../../includes/tsql-md.md)] query. 
 
 The stored procedure returns a serialized Python `figure` object as a stream of **varbinary** data. You cannot view the binary data directly, but you can use Python code on the client to deserialize and view the figures, and then save the image file on a client computer.
 
@@ -81,7 +81,7 @@ The stored procedure returns a serialized Python `figure` object as a stream of 
 
     - The variable `@query` defines the query text `SELECT tipped FROM nyctaxi_sample`, which is passed to the Python code block as the argument to the script input variable, `@input_data_1`.
     - The Python script is fairly simple: **matplotlib** `figure` objects are used to make the histogram and scatter plot, and these objects are then serialized using the `pickle` library.
-    - The Python graphics object is serialized to an Python **pandas** DataFrame for output.
+    - The Python graphics object is serialized to a **pandas** DataFrame for output.
   
     ```SQL
 	CREATE PROCEDURE [dbo].[SerializePlots]
@@ -136,7 +136,7 @@ The stored procedure returns a serialized Python `figure` object as a stream of 
 	GO
     ```
 
-2. Now run the stored proceudre with no arguments to generate a plot from the data hard-coded as the input query.
+2. Now run the stored procedure with no arguments to generate a plot from the data hard-coded as the input query.
 
     ```
     EXEC [dbo].[SerializePlots]
@@ -189,7 +189,7 @@ The stored procedure returns a serialized Python `figure` object as a stream of 
     print("The plots are saved in directory: ",os.getcwd())
     ```
 
-5.  If the connection is successful, you will see a message like the following:
+5.  If the connection is successful, you should see a message like the following:
   
 	*The plots are saved in directory: xxxx*
   

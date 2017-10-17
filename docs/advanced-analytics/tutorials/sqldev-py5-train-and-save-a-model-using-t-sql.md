@@ -31,7 +31,7 @@ You load the modules and call the necessary functions to create and train the mo
 > [!IMPORTANT]
 > There have been several changes in the **revoscalepy** package, which required small changes in the code for this tutorial. See the [changelist](sqldev-py6-operationalize-the-model.md/#changes) at the end of this tutorial. 
 > 
-> If you installed Python Services using a prerelease version of SLq Server 2017, ew recommend that you upgrade to the latest version. 
+> If you installed Python Services using a prerelease version of SLq Server 2017, we recommend that you upgrade to the latest version. 
 
 ## Split the sample data into training and testing sets
 
@@ -72,7 +72,7 @@ To make it easier to retrain the model on new data, you wrap the call to sp_exec
 
 ### TrainTipPredictionModelSciKitPy
 
-1.  In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], open a new **Query** window and run the following statement to create the stored procedure _TrainTipPredictionModelSciKitPy_.  Note that the stored procedure contains a definition of the input data, so you don't need to provide an input query.
+1.  In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], open a new **Query** window and run the following statement to create the stored procedure _TrainTipPredictionModelSciKitPy_.  The stored procedure contains a definition of the input data, so you don't need to provide an input query.
 
     ```SQL
     DROP PROCEDURE IF EXISTS TrainTipPredictionModelSciKitPy;
@@ -133,7 +133,7 @@ To make it easier to retrain the model on new data, you wrap the call to sp_exec
 
 This stored procedure uses the new **revoscalepy** package, which is a new package for Python. It contains objects, transformation, and algorithms similar to those provided for the R language's **RevoScaleR** package. 
 
-By uing **revoscalepy**, you can create remote compute contexts, move data between compute contexts, transform data, and train predictive models using popular algorithms such as logistic and linear regression, decision trees, and more. For more information, see [what is revoscalepy?](../python/what-is-revoscalepy.md)
+By using **revoscalepy**, you can create remote compute contexts, move data between compute contexts, transform data, and train predictive models using popular algorithms such as logistic and linear regression, decision trees, and more. For more information, see [what is revoscalepy?](../python/what-is-revoscalepy.md)
 
 1. In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], open a new **Query** window and run the following statement to create the stored procedure _TrainTipPredictionModelRxPy_.  Because the stored procedure already includes a definition of the input data, you don't need to provide an input query.
 
@@ -174,7 +174,7 @@ By uing **revoscalepy**, you can create remote compute contexts, move data betwe
 
     - The SELECT query applies the custom scalar function _fnCalculateDistance_ to calculate the direct distance between the pick-up and drop-off locations. The results of the query are stored in the default Python input variable, `InputDataset`.
     - The binary variable _tipped_ is used as the *label* or outcome column, and the model is fit using these feature columns:  _passenger_count_, _trip_distance_, _trip_time_in_secs_, and _direct_distance_.
-    - The trained model is serialized and stored in the Python variable `logitObj`. By adding the T-SQL keyword OUTPUT, you can add the variable as an output of the stored procedure. In the next step, that variable is ued to insert the binary code of the model into a database table _nyc_taxi_models_. This mechanism makes it easy to store and re-use models.
+    - The trained model is serialized and stored in the Python variable `logitObj`. By adding the T-SQL keyword OUTPUT, you can add the variable as an output of the stored procedure. In the next step, that variable is used to insert the binary code of the model into a database table _nyc_taxi_models_. This mechanism makes it easy to store and re-use models.
 
 2. Run the stored procedure as follows to insert the trained **revoscalepy** model into the table _nyc\_taxi\_models.
 

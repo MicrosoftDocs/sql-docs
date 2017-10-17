@@ -48,7 +48,7 @@ If you run into problems, you can use the script as a reference to perform the s
 
 2. The script prompts for the following information:
 
-    - The name or address of a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instance where Machine Learning Services with Python has been installed
+    - The name or address of a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instance where Machine Learning Services with Python has been installed.
     - The user name and password for an account on the instance. The account you use must have the ability to create databases, create tables and stored procedures, and bulk load data to tables. 
     - If you do not provide the user name and password, your Windows identity is used to sign in to SQL Server, and you are promoted to enter a password.
     - The path and file name of the sample data file that you just downloaded. For example, `C:\temp\pysql\nyctaxi1pct.csv`

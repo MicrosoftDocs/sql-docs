@@ -24,7 +24,7 @@ manager: "jhubbard"
 
 This article is part of a tutorial, [In-database Python analytics for SQL developers](sqldev-in-database-python-for-sql-developers.md). 
 
-In this step, you'll learn to *operationalize* the models that you trained and saved in the previous step.
+In this step, you learn to *operationalize* the models that you trained and saved in the previous step.
 
 In this scenario, operationalization means deploying the model to production for scoring. The integration with SQL Server makes this fairly easy, because you can embed Python code in a stored procedure. To get predictions from the model based on new inputs, just call the stored procedure from an application and pass the new data.
 
@@ -49,14 +49,13 @@ The first two stored procedures illustrate the basic syntax for wrapping a Pytho
 - The name of the exact model to use is provided as input parameter to the stored procedure. The stored procedure loads the serialized  model from the database table `nyc_taxi_models`.table, using the SELECT statement in the stored procedure.
 - The serialized model is stored in the Python variable `mod` for further processing using Python.
 - The new cases that need to be scored are obtained from the [!INCLUDE[tsql](../../includes/tsql-md.md)] query specified in `@input_data_1`. As the query data is read, the rows are saved in the default data frame, `InputDataSet`.
-- Both stored procedure use functions from `sklearn` to calculate an accuracy metric, AUC (area under curve). Accuracy metrics such as AUC can only be generated if you also provide the target label (i.e. the tipped column). Predictions do not need the target label (variable `y`), but the accuracy metric calculation does.
+- Both stored procedure use functions from `sklearn` to calculate an accuracy metric, AUC (area under curve). Accuracy metrics such as AUC can only be generated if you also provide the target label (the _tipped_ column). Predictions do not need the target label (variable `y`), but the accuracy metric calculation does.
 
-    Therefore, if you don't have target labels for the data to be scored, you can modify the stored procedure to remove the AUC calculations, and simply return the tip probabilities from the features (variable `X` in the stored procedure).
-
+    Therefore, if you don't have target labels for the data to be scored, you can modify the stored procedure to remove the AUC calculations, and return only the tip probabilities from the features (variable `X` in the stored procedure).
 
 ### PredictTipSciKitPy
 
-The stored procedure should have already been created for you. If you can't find it, run the following T-SQL statments to create the stored procedures.
+The stored procedure should have already been created for you. If you can't find it, run the following T-SQL statements to create the stored procedures.
 
 This stored procedure requires a model based on the scikit-learn package, because it uses functions specific to that package:
 
@@ -347,11 +346,11 @@ v*trip_time_in_secs*
     EXEC [dbo].[PredictTipSingleModeSciKitPy] 'linear_model', 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
     ```
 
-The output from both procedures is a probability of a tip being paid for the taxi trip with the above parameters or features.
+The output from both procedures is a probability of a tip being paid for the taxi trip with the specified parameters or features.
 
 ### Changes
 
-This section lists changes to the code used in this tutorial that reflect changes in the revoscalepy API. 
+This section lists changes to the code used in this tutorial. These changes were made to reflect the latest **revoscalepy** version. For API help, see [Python function library reference](https://docs.microsoft.com/machine-learning-server/python-reference/introducing-python-package-reference).
 
 | Change details | Notes|
 | ----|----|
@@ -360,7 +359,7 @@ This section lists changes to the code used in this tutorial that reflect change
 | function `rx_logit_ex` changed to `rx_logit`| RTM and pre-release versions require `rx_logit_ex`|
 | ` probList.append(probArray._results["tipped_Pred"])` changed to `prob_list = prob_array["tipped_Pred"].values`| updates to API|
 
-If you installed Python Services using a prerelease version of SQL Server 2017, we recommend that you upgrade. You can also upgrade just the Python and R components by using the latest release of Machine Learning Server. For more inforamation, see [Using binding to upgrade an instance of SQL Server](../r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
+If you installed Python Services using a prerelease version of SQL Server 2017, we recommend that you upgrade. You can also upgrade just the Python and R components by using the latest release of Machine Learning Server. For more information, see [Using binding to upgrade an instance of SQL Server](../r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
 
 ## Conclusions
 

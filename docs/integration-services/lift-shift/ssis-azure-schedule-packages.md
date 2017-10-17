@@ -102,9 +102,13 @@ EXEC jobs.sp_update_job @job_name='ExecutePackageJob', @enabled=1, 
 > Use the JSON scripts in the following example with the Azure Data Factory version 1 Stored Procedure Activity.
 
 To schedule a package with the Azure Data Factory SQL Server Stored Procedure activity, do the following things:
+
 1.  Create a Data Factory.
+
 2.  Created a linked service for the SQL Database that hosts SSISDB.
+
 3.  Create an output dataset that drives the scheduling.
+
 4.  Create a Data Factory pipeline that uses the SQL Server Stored Procedure activity to run the SSIS package.
 
 This section provides an overview of these steps. A complete Data Factory tutorial is beyond the scope of this article. For more info, see [SQL Server Stored Procedure Activity](https://docs.microsoft.com/en-us/azure/data-factory/data-factory-stored-proc-activity).

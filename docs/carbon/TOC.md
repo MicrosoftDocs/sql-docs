@@ -3,13 +3,13 @@
 # [FAQ](faq.md)
 # [Overview](overview.md)
 # Quickstarts
-## Carbon running on Windows
+## Run Carbon on Windows
 ### [Connect & query SQL Server](get-started-sql-server.md)
 ### [Connect & query SQL Database](get-started-sql-database.md)
 ### [Connect & query SQL Data Warehouse](get-started-sql-dw.md)
-## Carbon running on Linux
-### [Connect & query SQL Server (Linux)](get-started-sql-linux.md)
-## Carbon running on macOS
+## Run Carbon on Linux
+### [Connect & query SQL Server (Linux)](get-started-sql-server-linux.md)
+## Run Carbon on macOS
 ### [Connect & query SQL Server (macOS)](get-started-sql-server-mac.md)
 # Tutorials
 ## [Query Editor](tutorial-modern-code-flow-sql-server.md) 
@@ -23,10 +23,10 @@
 # Samples
 ## [Snippet samples]()
 # Concepts
-## [Dashboards and Insights]()
+## [Dashboards and Insights](dashboards.md)
 ## [Server groups](server-groups.md)
-## [BCDR]()
 ## [Integrated terminal](integrated-terminal.md)
+## [BCDR]()
 # How-to guides
 ## SQL Editor
 ## Server Groups

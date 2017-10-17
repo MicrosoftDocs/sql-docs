@@ -58,18 +58,6 @@ The DATALENGTH of NULL is NULL.
 The following example finds the length of the `Name` column in the `Product` table.
   
 ```sql
-USE AdventureWorks2012;  
-GO  
-SELECT length = DATALENGTH(Name), Name  
-FROM Production.Product  
-ORDER BY Name;  
-GO  
-```  
-  
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-The following example finds the length of the `Name` column in the `Product` table.
-  
-```sql
 -- Uses AdventureWorks  
   
 SELECT length = DATALENGTH(EnglishProductName), EnglishProductName  

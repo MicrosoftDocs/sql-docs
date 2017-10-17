@@ -70,23 +70,6 @@ Result
 (1 row(s) affected)  
 ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-The following example demonstrates the **DATEFROMPARTS** function.
-  
-```sql
-SELECT DATEFROMPARTS ( 2010, 12, 31 ) AS Result;  
-```  
-  
-[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
-  
-```sql
-Result  
-----------------------------------  
-2010-12-31  
-  
-(1 row(s) affected)  
-```  
-  
 ## See also
 [date &#40;Transact-SQL&#41;](../../t-sql/data-types/date-transact-sql.md)
   

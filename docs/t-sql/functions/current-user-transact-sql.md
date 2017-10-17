@@ -130,15 +130,6 @@ Arnalfo
 Wanida
 ```
   
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### D: Using CURRENT_USER to return the current user name  
-The following example returns the name of the current user.
-  
-```sql
-SELECT CURRENT_USER;  
-```  
-  
 ## See also
 [USER_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/user-name-transact-sql.md)  
 [SYSTEM_USER &#40;Transact-SQL&#41;](../../t-sql/functions/system-user-transact-sql.md)  

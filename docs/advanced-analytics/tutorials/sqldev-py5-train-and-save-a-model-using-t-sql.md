@@ -29,7 +29,7 @@ In this step, you learn how to train a machine learning model using the Python p
 You load the modules and call the necessary functions to create and train the model using a SQL Server stored procedure. The model requires the data features you engineered in earlier lessons. Finally, you save the trained model to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table.
 
 > [!IMPORTANT]
-> There have been several changes in the **revoscalepy** package, which required small changes in the code for this tutorial. See the [changelist](sqldev-py6-operationalize-the-model.md/#changes) at the end of this tutorial. 
+> There have been several changes in the **revoscalepy** package, which required small changes in the code for this tutorial. See the [changelist](sqldev-py6-operationalize-the-model.md#changes) at the end of this tutorial. 
 > 
 > If you installed Python Services using a prerelease version of SLq Server 2017, we recommend that you upgrade to the latest version. 
 

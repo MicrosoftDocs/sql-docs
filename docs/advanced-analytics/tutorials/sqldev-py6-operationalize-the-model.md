@@ -348,7 +348,7 @@ v*trip_time_in_secs*
 
 The output from both procedures is a probability of a tip being paid for the taxi trip with the specified parameters or features.
 
-### Changes
+### <a name="changes"></a> Changes
 
 This section lists changes to the code used in this tutorial. These changes were made to reflect the latest **revoscalepy** version. For API help, see [Python function library reference](https://docs.microsoft.com/machine-learning-server/python-reference/introducing-python-package-reference).
 

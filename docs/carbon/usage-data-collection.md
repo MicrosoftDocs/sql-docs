@@ -1,6 +1,6 @@
 ---
-title: Enable or disable usage data collection for Carbon) | Microsoft Docs
-description: This article explains how usage data is collected and sent to Microsoft.
+title: Enable or disable usage data collection, and crash reporting for Carbon | Microsoft Docs
+description: This article explains how to control if usage and crash reporting data is collected and sent to Microsoft.
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -10,7 +10,7 @@ ms.workload: data-tools
 ms.prod: NEEDED
 ms.custom: mvc
 ms.topic: article
-ms.date: 10/11/2017
+ms.date: 10/16/2017
 ---
 # Enable or disable usage data collection for Carbon
 
@@ -23,10 +23,24 @@ Carbon collects usage data and sends it to Microsoft to help improve our product
 
 If you don’t wish to send usage data to Microsoft, you can set the `telemetry.enableTelemetry` setting to `false`.
 
-From **File** > **Preferences** > **Settings**, add the following option to disable telemetry reporting, this will silence all telemetry events from the VS Code shell.
+From **File** > **Preferences** > **Settings**, add the following option to disable telemetry reporting, this will silence all telemetry events from Carbon.
 
 ```json
     "telemetry.enableTelemetry": false
 ```
 
 **Important Notice**: This option requires a restart of Carbon to take effect. 
+
+## How to disable crash reporting
+
+From **File** > **Preferences** > **Settings**, add the following option to disable crash reporting:
+
+```json
+    "telemetry.enableCrashReporter": false
+```
+
+**Important Notice**: This option requires a restart of Carbon to take effect.
+
+## Additional Resources
+- [Download & Install Carbon](download.md)
+- [Carbon Documentation](index.md)

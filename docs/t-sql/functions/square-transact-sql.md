@@ -33,8 +33,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 SQUARE ( float_expression )  
 ```  
   
@@ -83,13 +81,12 @@ FROM Containers;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Name           VolSquared`  
-  
- `-------------  ----------`  
-  
- `Cylinder       15680.05`  
-  
- `Cube             575.04`  
+ ```
+Name           VolSquared
+-------------  ----------
+Cylinder       15680.05
+Cube             575.04
+```  
   
 ## See Also  
  [Mathematical Functions &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  

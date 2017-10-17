@@ -32,7 +32,7 @@ The SharedUpdate lock prohibits Exclusive and ExclusiveUpdate lock modes and all
   
 **Resource Classes**  
   
-Locks are held on the following classes of objects: DATABASE, SCHEMA, OBJECT (a table, view, or procedure), APPLICATION (used internally), EXTERNALDATASOURCE, EXTERNALFILEFORMAT AND SCHEMARESOLUTION (a database level lock taken while creating, altering, or dropping schema objects or database users). These object classes can appear in the object_type column of [sys.dm_pdw_waits](/sql-docs/docs/relational-databases/system-dynamic-management-views/sys-dm-pdw-waits-transact-sql).  
+Locks are held on the following classes of objects: DATABASE, SCHEMA, OBJECT (a table, view, or procedure), APPLICATION (used internally), EXTERNALDATASOURCE, EXTERNALFILEFORMAT AND SCHEMARESOLUTION (a database level lock taken while creating, altering, or dropping schema objects or database users). These object classes can appear in the object_type column of [sys.dm_pdw_waits](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-pdw-waits-transact-sql).  
   
 ## <a name="Remarks"></a>General Remarks  
 Locks can be applied to databases, tables, or views.  
@@ -42,7 +42,7 @@ SQL Server PDW does not implement any configurable isolation levels. It supports
 SQL Server PDW relies on the underlying SQL Server engine to implement locking and concurrency control. If operations lead to an underlying SQL Server deadlock within the same node, SQL Server PDW leverages the SQL Server deadlock detection capability and terminates one of the blocking statements.  
   
 > [!NOTE]  
-> SQL Server does not allow statements that are waiting for locks to be blocked by newer lock requests. SQL Server PDW has not fully implemented this process. In SQL Server PDW, continuous requests for new shared locks can sometimes block a previous (but waiting) request for an exclusive lock. For example, an **UPDATE** statement (requiring an exclusive lock) can be blocked by shared locks that are granted for series of **SELECT** statements. To resolve a blocked process (identified by reviewing the [sys.dm_pdw_waits](/sql-docs/docs/relational-databases/system-dynamic-management-views/sys-dm-pdw-waits-transact-sql) DVM), stop submitting new requests until the exclusive lock has been satisfied.  
+> SQL Server does not allow statements that are waiting for locks to be blocked by newer lock requests. SQL Server PDW has not fully implemented this process. In SQL Server PDW, continuous requests for new shared locks can sometimes block a previous (but waiting) request for an exclusive lock. For example, an **UPDATE** statement (requiring an exclusive lock) can be blocked by shared locks that are granted for series of **SELECT** statements. To resolve a blocked process (identified by reviewing the [sys.dm_pdw_waits](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-pdw-waits-transact-sql) DVM), stop submitting new requests until the exclusive lock has been satisfied.  
   
 ## Lock Definition Table  
 SQL Server supports the following types of locks. Not all lock types are available on the control node, but could occur on the compute nodes.  
@@ -93,5 +93,5 @@ SQL Server supports the following types of locks. Not all lock types are availab
 <!-- MISSING LINKS 
 [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
 -->
-[sys.dm_pdw_waits](/sql-docs/docs/relational-databases/system-dynamic-management-views/sys-dm-pdw-waits-transact-sql)  
+[sys.dm_pdw_waits](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-pdw-waits-transact-sql)  
   

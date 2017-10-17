@@ -21,7 +21,7 @@ manager: "jhubbard"
 
 ODBC is the primary native data access API for applications written in C and C++ for SQL Server. There is an ODBC driver for most data sources. Other languages that can use ODBC include COBOL, Perl, PHP, and Python. ODBC is widely used in data integration scenarios.
 
-The ODBC driver comes with tools such as [**sqlcmd**](/sql-docs/docs/tools/sqlcmd-utility) and [**bcp**](/sql-docs/docs/tools/bcp-utility). The **sqlcmd** utility lets you run Transact-SQL statements, system procedures, and SQL scripts. The **bcp** utility bulk copies data between an instance of Microsoft SQL Server and a data file in a format you choose. You can use **bcp** to import many new rows into SQL Server tables or to export data out of tables into data files.  
+The ODBC driver comes with tools such as [**sqlcmd**](../../tools/sqlcmd-utility.md) and [**bcp**](../../tools/bcp-utility.md). The **sqlcmd** utility lets you run Transact-SQL statements, system procedures, and SQL scripts. The **bcp** utility bulk copies data between an instance of Microsoft SQL Server and a data file in a format you choose. You can use **bcp** to import many new rows into SQL Server tables or to export data out of tables into data files.  
 
 ## Code example in C++
 

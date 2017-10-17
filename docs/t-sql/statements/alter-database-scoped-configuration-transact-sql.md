@@ -49,13 +49,12 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
-  
 ALTER DATABASE SCOPED CONFIGURATION  
 {        
      {  [ FOR SECONDARY] SET <set_options>  }    
 }  
 | CLEAR PROCEDURE_CACHE  
-| SET IDENTITY_CACHE = { ON | OFF }
+| SET < set_options >
 [;]    
   
 < set_options > ::=    
@@ -63,9 +62,9 @@ ALTER DATABASE SCOPED CONFIGURATION
     MAXDOP = { <value> | PRIMARY}    
     | LEGACY_CARDINALITY_ESTIMATION = { ON | OFF | PRIMARY}    
     | PARAMETER_SNIFFING = { ON | OFF | PRIMARY}    
-    | QUERY_OPTIMIZER_HOTFIXES = { ON | OFF | PRIMARY}    
+    | QUERY_OPTIMIZER_HOTFIXES = { ON | OFF | PRIMARY}
+    | IDENTITY_CACHE = { ON | OFF }
 }  
-  
 ```  
   
 ## Arguments  
@@ -116,7 +115,7 @@ This value is only valid on secondaries while the database in on the primary, an
   
 QUERY_OPTIMIZER_HOTFIXES **=** { ON | **OFF** | PRIMARY }  
 
-Enables or disables query optimization hotfixes regardless of the compatibility level of the database. The default is **OFF**. This is equivalent to enabling [Trace Flag 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).   
+Enables or disables query optimization hotfixes regardless of the compatibility level of the database. The default is **OFF**, which disables query optimization hotfixes that were released after the highest available compatibility level was introduced for a specific version (post-RTM). Setting this to **ON** is equivalent to enabling [Trace Flag 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).   
 
 > [!TIP] 
 > To accomplish this at the query level, add the **QUERYTRACEON** [query hint](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). 
@@ -128,21 +127,20 @@ This value is only valid on secondaries while the database in on the primary, an
   
 CLEAR PROCEDURE_CACHE  
 
-Clears the procedure cache for the database. This can be executed both on the primary and the secondaries.  
+Clears the procedure (plan) cache for the database. This can be executed both on the primary and the secondaries.  
 
-IDENTITY_CACHE = { **ON** | OFF }  
+IDENTITY_CACHE **=** { **ON** | OFF }  
 
-**Applies to**: SQL Server 2017 and Azure SQL Database (feature is in public preview) 
+**Applies to**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] and [!INCLUDE[ssSDS](../../includes/sssds-md.md)] (feature is in public preview) 
 
-Enables or disables identity cache at the database level. The default is **ON**. Identity caching is used to improve INSERT performance on tables with Identity columns. To avoid gaps in the values of the Identity column in cases where the server restarts unexpectedly or fails over to a secondary server, disable the IDENTITY_CACHE option. This option is similar to the existing SQL Server Trace Flag 272, except that it can be set at the database level rather than only at the server level.   
+Enables or disables identity cache at the database level. The default is **ON**. Identity caching is used to improve INSERT performance on tables with identity columns. To avoid gaps in the values of an identity column in cases where the server restarts unexpectedly or fails over to a secondary server, disable the IDENTITY_CACHE option. This option is similar to the existing [Trace Flag 272](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), except that it can be set at the database level rather than only at the server level.   
 
 > [!NOTE] 
-> This option can only be set for the PRIMARY. For more information, see [Identity columns](create-table-transact-sql-identity-property.md).  
->
+> This option can only be set for the PRIMARY. For more information, see [identity columns](create-table-transact-sql-identity-property.md).  
 
 ##  <a name="Permissions"></a> Permissions  
  Requires ALTER ANY DATABASE SCOPE CONFIGURATION   
-on the database. This permission can be granted by a user with CONTROL permission on a database  
+on the database. This permission can be granted by a user with CONTROL permission on a database.  
   
 ## General Remarks  
  While you can configure secondary databases to have different scoped configuration settings from their primary,  all secondary databases will use the same configuration. Different settings cannot be configured for individual secondaries.  
@@ -154,7 +152,7 @@ on the database. This permission can be granted by a user with CONTROL permissio
  The ALTER_DATABASE_SCOPED_CONFIGURATION event is added as a DDL event that can be used to fire a DDL trigger. This is a child of the ALTER_DATABASE_EVENTS trigger group.  
   
 ## Limitations and Restrictions  
- **MAXDOP**  
+**MAXDOP**  
   
  The granular settings can override the global ones and that resource governor can cap all other MAXDOP settings.  The logic for MAXDOP setting is the following:  
   
@@ -168,15 +166,15 @@ on the database. This permission can be granted by a user with CONTROL permissio
   
 -   The sp_configure setting is overridden by the resource governor setting.  
   
- **QUERY_OPTIMIZER_HOTFIXES**  
+**QUERY_OPTIMIZER_HOTFIXES**  
   
  When QUERYTRACEON hint is used to enable the legacy query optimizer or query optimizer hotfixes, it would be an OR condition between the query hint and the database scoped configuration setting, meaning if either is enabled, the options will apply.  
   
- **GeoDR**  
+**GeoDR**  
   
  Readable secondary databases,  e.g. Always On Availability Groups and GeoReplication, use the secondary value by checking the state of the database. Even though we don’t recompile on failover and technically the new primary has queries that are using the secondary settings, the idea is that the setting between primary and secondary will only vary when the workload is different and therefore the cached queries are using the optimal settings, whereas new queries will pick the new settings which are appropriate for them.  
   
- **DacFx**  
+**DacFx**  
   
  Since ALTER DATABASE SCOPED CONFIGURATION is a new feature in Azure SQL Database and SQL Server 2016 that affects the database schema, exports of the schema (with or without data)  will not be able to be imported into an older version of SQL Server e.g. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] or [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)]. For example, an export to a [DACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_3) or a [BACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_4) from an [!INCLUDE[ssSDS](../../includes/sssds-md.md)] or [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] database that used this new feature would not be able to be imported into a down-level server.  
   
@@ -243,7 +241,7 @@ This example sets PARAMETER_SNIFFING for secondary database as it is on primary 
 in a geo-replication scenario.  
   
 ```tsql  
-ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING =PRIMARY ;  
+ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING=PRIMARY ;  
 ```  
   
 ### E. Set QUERY_OPTIMIZER_HOTFIXES  
@@ -265,7 +263,7 @@ ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE ;
 
 ### G. Set IDENTITY_CACHE
 
-**Applies to**: SQL Server 2017 and Azure SQL Database (feature is in public preview) 
+**Applies to**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] and [!INCLUDE[ssSDS](../../includes/sssds-md.md)] (feature is in public preview) 
 
 This example disables the identity cache.
 
@@ -276,24 +274,26 @@ ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE=OFF ;
 ## Additional Resources
 
 ### MAXDOP Resources 
+* [Degree of Parallelism](../../relational-databases/query-processing-architecture-guide.md#DOP)
 * [Recommendations and guidelines for the "max degree of parallelism" configuration option in SQL Server ](https://support.microsoft.com/en-us/kb/2806535) 
 
 ### LEGACY_CARDINALITY_ESTIMATION Resources    
-* [Cardinality Estimation (SQL Server)](/sql-docs/docs/relational-databases/performance/cardinality-estimation-sql-server)
+* [Cardinality Estimation (SQL Server)](../../relational-databases/performance/cardinality-estimation-sql-server.md)
 * [Optimizing Your Query Plans with the SQL Server 2014 Cardinality Estimator](https://msdn.microsoft.com/library/dn673537.aspx)
 
 ### PARAMETER_SNIFFING Resources    
+* [Parameter Sniffing](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing)
 * ["I smell a parameter!"](https://blogs.msdn.microsoft.com/queryoptteam/2006/03/31/i-smell-a-parameter/)
 
 ### QUERY_OPTIMIZER_HOTFIXES Resources    
+* [Trace Flags &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
 * [SQL Server query optimizer hotfix trace flag 4199 servicing model](https://support.microsoft.com/en-us/kb/974006)
 
 ## More information  
  [sys.database_scoped_configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)   
  [sys.configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)   
  [Databases and Files Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
- [Server Configuration Options &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
- [Trace Flags &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)   
+ [Server Configuration Options &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md) 
  [sys.configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)  
   
   

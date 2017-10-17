@@ -26,9 +26,9 @@ manager: "erikre"
 ## Get tools and designers  
  SQL Server Setup no longer installs the model designers or management tools used for solution design or server administration. In this release, tools have a separate installation, which you can get from the following links:  
   
--   [Download SQL Server Management Studio (SSMS)](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms)  
+-   [Download SQL Server Management Studio (SSMS)](../../../ssms/download-sql-server-management-studio-ssms.md)  
   
--   [Download SQL Server Data Tools (SSDT)](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt)  
+-   [Download SQL Server Data Tools (SSDT)](../../../ssdt/download-sql-server-data-tools-ssdt.md)  
   
  You'll need both SSMS and SSDT to work with Analysis Services instances and data. Tools can be installed anywhere, but be sure to configure ports on the server before attempting a connection. See [Configure the Windows Firewall to Allow Analysis Services Access](../../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md) for details.  
   

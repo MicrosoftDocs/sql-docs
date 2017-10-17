@@ -38,12 +38,12 @@ Use Microsoft's SQL data platform to create data-centric solutions across mobile
 * [SQLXML 4.0](../relational-databases/sqlxml/sqlxml-4-0-programming-concepts.md): Use SQLXML 4.0 to export relational data to XML.
 
 ## Data collection, processing, and visualization
-* [Analysis Services](/sql-docs/docs/analysis-services/analysis-services-developer-documentation)
-* [Integration Services](/sql-docs/docs/integration-services/integration-services-developer-documentation)  
-* [Master Data Services](/sql-docs/docs/master-data-services/develop/master-data-services-developer-documentation)
-* [Replication Services](/sql-docs/docs/relational-databases/replication/concepts/replication-developer-documentation)
-* [Reporting Services](/sql-docs/docs/reporting-services/reporting-services-developer-documentation)
-* [Service Broker](/sql-docs/docs/database-engine/configure-windows/sql-server-service-broker)
+* [Analysis Services](../analysis-services/analysis-services-developer-documentation.md)
+* [Integration Services](../integration-services/integration-services-developer-documentation.md)  
+* [Master Data Services](../master-data-services/develop/master-data-services-developer-documentation.md)
+* [Replication Services](../relational-databases/replication/concepts/replication-developer-documentation.md)
+* [Reporting Services](../reporting-services/reporting-services-developer-documentation.md)
+* [Service Broker](../database-engine/configure-windows/sql-server-service-broker.md)
 
 
  

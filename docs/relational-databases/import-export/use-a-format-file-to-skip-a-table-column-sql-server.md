@@ -24,7 +24,7 @@ manager: "jhubbard"
 ## Sample Table and Data File  
  The following examples require a table named `myTestSkipCol` in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] sample database under the **dbo** schema. Create this table as follows:  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 CREATE TABLE myTestSkipCol   
@@ -42,7 +42,6 @@ GO
 1,DataForColumn3  
 1,DataForColumn3  
 1,DataForColumn3  
-  
 ```  
   
  To bulk import data from `myTestSkipCol2.dat` into the `myTestSkipCol` table, the format file must map the first data field to `Col1`, the second field to `Col3`, skipping `Col2`.  
@@ -53,7 +52,7 @@ GO
 ### Creating a Default Non-XML Format File  
  This topic uses the default non-XML format file that was created for the `myTestSkipCol` sample table by using the following **bcp** command:  
   
-```  
+```cmd
 bcp AdventureWorks2012..myTestSkipCol format nul -f myTestSkipCol_Default.fmt -c -T  
 ```  
   
@@ -103,7 +102,7 @@ bcp AdventureWorks2012..myTestSkipCol format nul -f myTestSkipCol_Default.fmt -c
 #### Using BULK INSERT  
  This example works by using either of the modified non-XML format files created in "Methods for Modifying a Non-XML Format File," earlier in this topic. In this example, the modified format file is named `C:\myTestSkipCol2.fmt`. To use `BULK INSERT` to bulk import the `myTestSkipCol2.dat` data file, in the [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Query Editor, execute the following code:  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 BULK INSERT myTestSkipCol   
@@ -124,13 +123,13 @@ GO
 ### Creating a Default XML Format File  
  The examples of modified format files are based on the `myTestSkipCol` sample table and data file that are created in "Sample Table and Data File," earlier in this topic. The following **bcp** command creates a default XML format file for the `myTestSkipCol` table:  
   
-```  
+```cmd
 bcp AdventureWorks2012..myTestSkipCol format nul -f myTestSkipCol_Default.xml -c -x -T  
 ```  
   
  The resulting default non-XML format file describes a one-to-one correspondence between data-file fields and table columns, as follows:  
   
-```  
+```xml
 \<?xml version="1.0"?>  
 \<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
  <RECORD>  
@@ -152,7 +151,7 @@ bcp AdventureWorks2012..myTestSkipCol format nul -f myTestSkipCol_Default.xml -c
 ### Examples  
  The examples in this section use the `myTestSkipCol` sample table and the `myTestSkipCol2.dat` sample data file that are created in "Sample Table and Data File," earlier in this topic. To import the data from `myTestSkipCol2.dat` into the `myTestSkipCol` table, the examples use the following modified XML format file, `myTestSkipCol2-x.xml`. This is based on the format file that is created in "Creating a Default XML Format File," earlier in this topic.  
   
-```  
+```xml
 \<?xml version="1.0"?>  
 \<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
  <RECORD>  
@@ -171,7 +170,7 @@ bcp AdventureWorks2012..myTestSkipCol format nul -f myTestSkipCol_Default.xml -c
   
  In the [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Query Editor, execute the following code:  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 INSERT INTO myTestSkipCol  
@@ -188,7 +187,7 @@ GO
   
  In the [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Query Editor, execute the following code:  
   
-```tsql  
+```sql  
 CREATE VIEW v_myTestSkipCol AS  
     SELECT Col1,Col3  
     FROM myTestSkipCol;  

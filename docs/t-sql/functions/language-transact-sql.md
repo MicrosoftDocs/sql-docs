@@ -59,21 +59,6 @@ Language Name
 us_english                      
 ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- The following example returns the language for the current session.  
-  
-```  
-SELECT @@LANGUAGE AS 'Language Name';  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
-```  
-Language Name                   
-------------------------------  
-us_english                      
-```  
-  
 ## See Also  
  [Configuration Functions &#40;Transact-SQL&#41;](../../t-sql/functions/configuration-functions-transact-sql.md)   
  [SET LANGUAGE &#40;Transact-SQL&#41;](../../t-sql/statements/set-language-transact-sql.md)   

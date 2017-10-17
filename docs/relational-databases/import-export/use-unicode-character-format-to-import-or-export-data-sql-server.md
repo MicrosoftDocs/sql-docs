@@ -92,7 +92,7 @@ The examples in this topic are based on the table, and format file defined below
 
 ### **Sample Table**<a name="sample_table"></a>
 The script below creates a test database, a table named `myWidechar` and populates the table with some initial values.  Execute the following Transact-SQL in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
-```tsql
+```sql
 CREATE DATABASE TestDatabase;
 GO
 
@@ -181,7 +181,7 @@ bcp TestDatabase.dbo.myWidechar OUT D:\BCP\myWidechar.bcp -T -w
   
 ### **Using BULK INSERT and Unicode Character Format without a Format File**<a name="bulk_widechar"></a>
 **DATAFILETYPE** argument.  Execute the following Transact-SQL in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
-```tsql
+```sql
 TRUNCATE TABLE TestDatabase.dbo.myWidechar; -- for testing
 BULK INSERT TestDatabase.dbo.myWidechar
 	FROM 'D:\BCP\myWidechar.bcp'
@@ -195,7 +195,7 @@ SELECT * FROM TestDatabase.dbo.myWidechar;
   
 ### **Using BULK INSERT and Unicode Character Format with a Non-XML Format File**<a name="bulk_widechar_fmt"></a>
 **FORMATFILE** argument.  Execute the following Transact-SQL in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
-```tsql
+```sql
 TRUNCATE TABLE TestDatabase.dbo.myWidechar; -- for testing
 BULK INSERT TestDatabase.dbo.myWidechar
    FROM 'D:\BCP\myWidechar.bcp'
@@ -209,7 +209,7 @@ SELECT * FROM TestDatabase.dbo.myWidechar;
   
 ### **Using OPENROWSET and Unicode Character Format with a Non-XML Format File**<a name="openrowset_widechar_fmt"></a>
 **FORMATFILE** argument.  Execute the following Transact-SQL in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
-```tsql
+```sql
 TRUNCATE TABLE TestDatabase.dbo.myWidechar;  -- for testing
 INSERT INTO TestDatabase.dbo.myWidechar
 	SELECT *

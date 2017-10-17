@@ -22,7 +22,7 @@ manager: "jhubbard"
   Execute a user defined function using Transact-SQL.
   
 
-> **Note:** Visit  [user defined function](/sql-docs/docs/relational-databases/user-defined-functions/user-defined-functions) and [Create Function (Transact SQL](/sql-docs/docs/t-sql/statements/create-function-transact-sql) for more information about user defined functions. 
+> **Note:** Visit  [user defined function](user-defined-functions.md) and [Create Function (Transact SQL](../../t-sql/statements/create-function-transact-sql.md) for more information about user defined functions. 
   
  
 ##  <a name="BeforeYouBegin"></a> Before you begin  
@@ -32,7 +32,7 @@ manager: "jhubbard"
   
 ###  <a name="Security"></a> Security  
   
- Permissions are not required to run the [EXECUTE](/sql-docs/docs/t-sql/language-elements/execute-transact-sql) statement. However, permissions **are required** on the securables referenced within the EXECUTE string. For example, if the string contains an [INSERT](/sql-docs/docs/t-sql/statements/insert-transact-sql) statement, the caller of the EXECUTE statement must have INSERT permission on the target table. Permissions are checked at the time EXECUTE statement is encountered, even if the EXECUTE statement is included within a module. For more information, see [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)  
+ Permissions are not required to run the [EXECUTE](../../t-sql/language-elements/execute-transact-sql.md) statement. However, permissions **are required** on the securables referenced within the EXECUTE string. For example, if the string contains an [INSERT](../../t-sql/statements/insert-transact-sql.md) statement, the caller of the EXECUTE statement must have INSERT permission on the target table. Permissions are checked at the time EXECUTE statement is encountered, even if the EXECUTE statement is included within a module. For more information, see [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   

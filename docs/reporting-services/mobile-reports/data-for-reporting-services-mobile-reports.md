@@ -23,7 +23,7 @@ You can import data from two types of sources:
   
 * **Local Excel files**: Select an Excel document and pick which worksheet(s) to import. After import, the data is stored within the mobile report definition. To refresh the data from the original Excel file, use the **Refresh Data** command in the upper-right corner on the [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] **Data** tab. Read more about [preparing Excel data for SSRS mobile reports](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md).  
   
-* **[!INCLUDE[PRODUCT_NAME](/sql-docs/docs/reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs).   
+* **[!INCLUDE[PRODUCT_NAME](../../includes/server-product-name.md)] shared datasets**: Browse the list of published datasets on the server and select the ones to add to the mobile report. Mobile reports based on server data always stay connected to the original server datasets and reflect the latest state of the data on the server. See a [list of supported data sources](https://msdn.microsoft.com/library/ms159219.aspx).   
   
   Read more about [getting data from shared datasets in Mobile Report Publisher](../../reporting-services/mobile-reports/get-data-from-shared-datasets-in-reporting-services-mobile-reports.md).  
   

@@ -36,8 +36,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 DROP DATABASE ENCRYPTION KEY  
 ```  
   

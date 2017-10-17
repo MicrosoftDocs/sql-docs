@@ -33,8 +33,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 SIN ( float_expression )  
 ```  
   
@@ -73,9 +71,10 @@ SELECT SIN(45.175643);
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `---------`  
-  
- `0.929607`  
+ ```
+---------  
+0.929607
+```  
   
 ## See Also  
  [Mathematical Functions &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  

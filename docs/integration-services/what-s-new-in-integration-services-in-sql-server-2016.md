@@ -2,7 +2,7 @@
 title: "What&#39;s New in Integration Services in SQL Server 2016 | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "03/16/2017"
+ms.date: "09/28/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -22,9 +22,19 @@ manager: "jhubbard"
 # What&#39;s New in Integration Services in SQL Server 2016
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
- This topic describes the features that have been added or updated in SQL Server 2016 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
-  
-## Improvements grouped by category  
+This topic describes the features that have been added or updated in SQL Server 2016 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. It also includes features added or updated in the [Azure Feature Pack for Integration Services &#40;SSIS&#41;](../integration-services/azure-feature-pack-for-integration-services-ssis.md) during the SQL Server 2016 time frame.  
+
+## New for SSIS in Azure Data Factory
+
+With the public preview of Azure Data Factory version 2 in September 2017, you can now do the following things:
+-   Deploy packages to the SSIS Catalog database (SSISDB) on Azure SQL Database.
+-   Run packages deployed to Azure on the Azure-SSIS Integration Runtime, a component of Azure Data Factory version 2.
+
+For more info, see [Lift and shift SQL Server Integration Services workloads to the cloud](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md).
+
+These new capabilities require SQL Server Data Tools (SSDT) version 17.2 or later, but do not require SQL Server 2017 or SQL Server 2016. When you deploy packages to Azure, the Package Deployment Wizard always upgrades the packages to the latest package format.
+
+## 2016 improvements by category  
   
 -   **Manageability**  
   
@@ -148,7 +158,7 @@ manager: "jhubbard"
  For more info, see [SSIS Catalog &#40;SSISDB&#41;](../integration-services/service/ssis-catalog.md). 
 
 ####  <a name="AlwaysOn"></a> Support for Always On in the SSIS Catalog  
- The Always On Availability Groups feature is a high-availability and disaster-recovery solution that provides an enterprise-level alternative to database mirroring. An availability group supports a failover environment for a discrete set of user databases known as availability databases that fail over together. For more information, see [Always On Availability Groups](/sql-docs/docs/database-engine/availability-groups/windows/always-on-availability-groups-sql-server).  
+ The Always On Availability Groups feature is a high-availability and disaster-recovery solution that provides an enterprise-level alternative to database mirroring. An availability group supports a failover environment for a discrete set of user databases known as availability databases that fail over together. For more information, see [Always On Availability Groups](../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md).  
   
  In SQL Server 2016, SSIS introduces new capabilities that let you easily deploy to a centralized SSIS Catalog (i.e. SSISDB user database). In order to provide high availability for the SSISDB database and its contents - projects, packages, execution logs, and so on - you can add the SSISDB database to an Always On Availability Group, just like any other user database. When a failover occurs, one of the secondary nodes automatically becomes the new primary node.  
   
@@ -307,7 +317,7 @@ The latest version of the Azure Feature Pack includes the Azure SQL DW Upload ta
 ### Better design experience
 
 ####  <a name="OneDesigner"></a> Multi-targeting and multi-version support in SSIS Designer  
- You can now use SSIS Designer in SQL Server Data Tools (SSDT) for Visual Studio 2015 to create, maintain, and run packages that target SQL Server 2016, SQL Server 2014, or SQL Server 2012. To get SSDT, see [Download Latest SQL Server Data Tools](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt). 
+ You can now use SSIS Designer in SQL Server Data Tools (SSDT) for Visual Studio 2015 to create, maintain, and run packages that target SQL Server 2016, SQL Server 2014, or SQL Server 2012. To get SSDT, see [Download Latest SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md). 
 
  In Solution Explorer, right-click on an Integration Services project and select **Properties** to open the property pages for the project. On the **General** tab of **Configuration Properties**, select the **TargetServerVersion** property,  and then choose SQL Server 2016, SQL Server 2014, or SQL Server 2012.  
    

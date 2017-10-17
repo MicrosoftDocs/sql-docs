@@ -37,8 +37,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 UPPER ( character_expression )  
 ```  
   
@@ -74,15 +72,13 @@ ORDER BY LastName;
   
  Here is a partial result set.  
   
- `Name`  
-  
- `------------------------------`  
-  
- `ABBAS, Syed`  
-  
- `ABERCROMBIE, Kim`  
-  
- `ABOLROUS, Hazem`  
+ ```
+Name
+------------------------------
+ABBAS, Syed
+ABERCROMBIE, Kim
+ABOLROUS, Hazem
+ ```  
   
 ## See Also  
  [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   

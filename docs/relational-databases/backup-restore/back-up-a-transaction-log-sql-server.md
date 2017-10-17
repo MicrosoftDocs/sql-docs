@@ -25,11 +25,11 @@ manager: "jhubbard"
    
 ##  <a name="Restrictions"></a> Limitations and restrictions  
   
--   The BACKUP statement is not allowed in an explicit or [implicit](/sql-docs/docs/t-sql/statements/set-implicit-transactions-transact-sql) transaction.  An explicit transaction is one in which you explicitly define both the start and end of the transaction.
+-   The BACKUP statement is not allowed in an explicit or [implicit](../../t-sql/statements/set-implicit-transactions-transact-sql.md) transaction.  An explicit transaction is one in which you explicitly define both the start and end of the transaction.
   
 ##  <a name="Recommendations"></a> Recommendations  
   
--   If a database uses either the full or bulk-logged [recovery model](/sql-docs/docs/relational-databases/backup-restore/recovery-models-sql-server), you must back up the transaction log regularly enough to protect your data, and to prevent the [transaction log from filling](/sql-docs/docs/relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002). This truncates the log and supports restoring the database to a specific point in time. 
+-   If a database uses either the full or bulk-logged [recovery model](recovery-models-sql-server.md), you must back up the transaction log regularly enough to protect your data, and to prevent the [transaction log from filling](../logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md). This truncates the log and supports restoring the database to a specific point in time. 
   
 -   By default, every successful backup operation adds an entry in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log and in the system event log. If you back up the log frequently, these success messages accumulate quickly, resulting in huge error logs, making finding other messages difficult. In such cases you can suppress these log entries by using trace flag 3226, if none of your scripts depend on those entries. For more information, see [Trace Flags &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).  
   
@@ -39,7 +39,7 @@ manager: "jhubbard"
 
 The BACKUP DATABASE and BACKUP LOG permissions needed are granted by default to members of the **sysadmin** fixed server role, and the **db_owner** and **db_backupoperator** fixed database roles.  
   
- Ownership and permission problems on the backup device's physical file can interfere with a backup operation. [!INCLUDE[ssNoVersion](/sql-docs/docs/relational-databases/backup-restore/backup-devices-sql-server) when you try to backup or restore. So again, check permissions before you begin!
+ Ownership and permission problems on the backup device's physical file can interfere with a backup operation. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] must be able to read and write to the device; the account under which the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service runs must have write permissions. However, [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md), which adds an entry for a backup device in the system tables, does not check file access permissions. Permissions problems on the backup device's physical file may not become obvious to you until you attemt to access the [physical resource](https://msdn.microsoft.com/library/ms179313.aspx) when you try to backup or restore. So again, check permissions before you begin!
   
   
 ## Back up using SSMS  

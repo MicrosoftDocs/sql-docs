@@ -27,7 +27,7 @@ Options and recommendations for loading data into a columnstore index by using t
 ## What is bulk loading?
 *Bulk loading* refers to the way large numbers of rows are added to a data store. It is the most performant way to move data into a columnstore index because it operates on batches of rows. Bulk loading fills rowgroups to maximum capacity and compresses them directly into the columnstore. Only rows at the end of a load that don't meet the minimum of 102,400 rows per rowgroup go to the deltastore.  
 s
-To perform a bulk load, you can use [bcp Utility](/sql-docs/docs/tools/bcp-utility), [Integration Services](/sql-docs/docs/integration-services/sql-server-integration-services), or select rows from a staging table.
+To perform a bulk load, you can use [bcp Utility](../../tools/bcp-utility.md), [Integration Services](../../integration-services/sql-server-integration-services.md), or select rows from a staging table.
 
 ![Loading into a clustered columnstore index](../../relational-databases/indexes/media/sql-server-pdw-columnstore-loadprocess.gif "Loading into a clustered columnstore index")  
   
@@ -99,7 +99,7 @@ INSERT INTO <columnstore index>  WITH (TABLOCK)  SELECT <list of columns> FROM <
   
 ## What is trickle insert?
 
-*Trickle insert* refers to the way individual rows move into the columnstore index. Trickle inserts use the [INSERT INTO](/sql-docs/docs/t-sql/statements/insert-transact-sql) statement. With trickle insert, all of the rows go to the deltastore. This is useful for small numbers of rows, but not practical for large loads.
+*Trickle insert* refers to the way individual rows move into the columnstore index. Trickle inserts use the [INSERT INTO](../../t-sql/statements/insert-transact-sql.md) statement. With trickle insert, all of the rows go to the deltastore. This is useful for small numbers of rows, but not practical for large loads.
   
 ```  
 INSERT INTO <table-name> VALUES (<set of values>)  

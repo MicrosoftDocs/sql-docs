@@ -51,13 +51,12 @@ manager: "jhubbard"
 ## Examples  
  The following example returns a `LineString` instance that is a polygonal approximation of a `CircularString` instance:  
   
- `DECLARE @g1 geography = 'CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653)';`  
-  
- `DECLARE @g2 geography;`  
-  
- `SET @g2 = @g1.STCurveToLine();`  
-  
- `SELECT @g1.STNumPoints() AS G1, @g2.STNumPoints() AS G2;`  
+```
+ DECLARE @g1 geography = 'CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653)';  
+ DECLARE @g2 geography;  
+ SET @g2 = @g1.STCurveToLine();  
+ SELECT @g1.STNumPoints() AS G1, @g2.STNumPoints() AS G2;
+ ```  
   
 ## See Also  
  [STLength &#40;geography Data Type&#41;](../../t-sql/spatial-geography/stlength-geography-data-type.md)   

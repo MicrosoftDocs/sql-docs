@@ -101,7 +101,7 @@ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], based on their sto
   
 |||  
 |-|-|  
-|[cursor](../../t-sql/data-types/cursor-transact-sql.md)|[timestamp](../../t-sql/data-types/rowversion-transact-sql.md)|  
+|[cursor](../../t-sql/data-types/cursor-transact-sql.md)|[rowversion](../../t-sql/data-types/rowversion-transact-sql.md)|  
 |[hierarchyid](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)|[uniqueidentifier](../../t-sql/data-types/uniqueidentifier-transact-sql.md)|  
 |[sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md)|[xml](../../t-sql/xml/xml-transact-sql.md)|  
 |[Spatial Geometry Types](../../t-sql/spatial-geometry/spatial-types-geometry-transact-sql.md) |[Spatial Geography Types](../../t-sql/spatial-geography/spatial-types-geography.md)|  

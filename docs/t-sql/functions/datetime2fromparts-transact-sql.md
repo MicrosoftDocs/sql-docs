@@ -32,8 +32,6 @@ Returns a **datetime2** value for the specified date and time and with the speci
 ## Syntax  
   
 ```sql
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 DATETIME2FROMPARTS ( year, month, day, hour, minute, seconds, fractions, precision )  
 ```  
   
@@ -98,56 +96,6 @@ The following example demonstrates the use of the *fractions* and *precision* pa
 2.  When *fractions* has a value of 50 and *precision* has a value of 2, then the value of *fractions* represents 50/100 of a second.  
   
 3.  When *fractions* has a value of 500 and *precision* has a value of 3, then the value of *fractions* represents 500/1000 of a second.  
-  
-```sql
-SELECT DATETIME2FROMPARTS ( 2011, 8, 15, 14, 23, 44, 5, 1 );  
-SELECT DATETIME2FROMPARTS ( 2011, 8, 15, 14, 23, 44, 50, 2 );  
-SELECT DATETIME2FROMPARTS ( 2011, 8, 15, 14, 23, 44, 500, 3 );  
-GO  
-```  
-  
-[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
-  
-```sql
-----------------------  
-2011-08-15 14:23:44.5  
-  
-(1 row(s) affected)  
-  
-----------------------  
-2011-08-15 14:23:44.50  
-  
-(1 row(s) affected)  
-  
-----------------------  
-2011-08-15 14:23:44.500  
-  
-(1 row(s) affected)  
-```  
-  
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### C. Simple example without fractions of a second  
-  
-```sql
-SELECT DATETIME2FROMPARTS ( 2010, 12, 31, 23, 59, 59, 0, 0 ) AS Result;  
-```  
-  
-[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
-  
-```sql
-Result  
----------------------------  
-2010-12-31 23:59:59.0000000  
-  
-(1 row(s) affected)  
-```  
-  
-### D. Example with fractions of a second  
-The following example demonstrates the use of the *fractions* and *precision* parameters:
-1.  When *fractions* has a value of 5 and *precision* has a value of 1, then the value of *fractions* represents 5/10 of a second.  
-1.   When *fractions* has a value of 50 and *precision* has a value of 2, then the value of *fractions* represents 50/100 of a second.  
-1.   When *fractions* has a value of 500 and *precision* has a value of 3, then the value of *fractions* represents 500/1000 of a second.  
   
 ```sql
 SELECT DATETIME2FROMPARTS ( 2011, 8, 15, 14, 23, 44, 5, 1 );  

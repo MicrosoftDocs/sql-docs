@@ -36,8 +36,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 ISNULL ( check_expression , replacement_value )  
 ```  
   
@@ -72,11 +70,12 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `--------------------------`  
+ ```
+ -------------------------- 
+59.79  
   
- `59.79`  
-  
- `(1 row(s) affected)`  
+ (1 row(s) affected)
+ ```  
   
 ### B. Using ISNULL  
  The following example selects the description, discount percentage, minimum quantity, and maximum quantity for all special offers in `AdventureWorks2012`. If the maximum quantity for a particular special offer is NULL, the `MaxQty` shown in the result set is `0.00`.  

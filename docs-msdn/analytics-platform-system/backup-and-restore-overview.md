@@ -19,7 +19,7 @@ Describes how data backup and restore works for SQL Server Parallel Data Warehou
 ## <a name="BackupRestoreBasics"></a>Backup and restore basics  
 A PDW *database backup* is a copy of an appliance database, stored in a format so that it can be used to restore the original database to an appliance.  
   
-A PDW database backup is created with the [BACKUP DATABASE](/sql-docs/docs/t-sql/statements/backup-database-parallel-data-warehouse) t-sql statement and formatted for use with the [RESTORE DATABASE](/sql-docs/docs/t-sql/statements/restore-database-parallel-data-warehouse) statement; it is unusable for any other purpose. The backup can only be restored to an appliance with the same number or a greater number of Compute nodes.  
+A PDW database backup is created with the [BACKUP DATABASE](https://docs.microsoft.com/sql/t-sql/statements/backup-database-parallel-data-warehouse) t-sql statement and formatted for use with the [RESTORE DATABASE](https://docs.microsoft.com/sql/t-sql/statements/restore-database-parallel-data-warehouse) statement; it is unusable for any other purpose. The backup can only be restored to an appliance with the same number or a greater number of Compute nodes.  
   
 <!-- MISSING LINKS
 
@@ -97,7 +97,7 @@ When restoring data, the appliance detects the number of Compute nodes on the so
   
 1.  The database backup to be restored is available on a Windows file share on a non-appliance backup server. For best performance, this server is usually connected to the appliance InfiniBand network.  
   
-2.  User submits a [RESTORE DATABASE](/sql-docs/docs/t-sql/statements/restore-database-parallel-data-warehouse) tsql statement to the Control node.  
+2.  User submits a [RESTORE DATABASE](https://docs.microsoft.com/sql/t-sql/statements/restore-database-parallel-data-warehouse) tsql statement to the Control node.  
   
     -   The restore is either a full restore or a header restore. The full restore restores a full backup and then optionally restores a differential backup.  
   
@@ -119,15 +119,15 @@ Restoring a backup to an appliance with a larger number of Compute nodes grows t
   
 For example, when restoring a 60 GB database from a 2-node appliance (30 GB per node) to a 6-node appliance, SQL Server PDW creates a 180 GB database (6 nodes with 30 GB per node) on the 6-node appliance. SQL Server PDW initially restores the database to 2 nodes to match the source configuration, and then redistributes the data to all 6 nodes.  
   
-After the redistribution each Compute node will contain less actual data and more free space than each Compute node on the smaller source appliance. Use the additional space to add more data to the database. If the restored database size is larger than you need, you can use [ALTER DATABASE](/sql-docs/docs/t-sql/statements/alter-database-parallel-data-warehouse) to shrink the database file sizes.  
+After the redistribution each Compute node will contain less actual data and more free space than each Compute node on the smaller source appliance. Use the additional space to add more data to the database. If the restored database size is larger than you need, you can use [ALTER DATABASE](https://docs.microsoft.com/sql/t-sql/statements/alter-database-parallel-data-warehouse) to shrink the database file sizes.  
   
 ## Related Tasks  
   
 |Backup and Restore Task|Description|  
 |---------------------------|---------------|  
 |Prepare a server as a backup server.|[Acquire and configure a backup server ](acquire-and-configure-backup-server.md)|  
-|Backup a database.|[BACKUP DATABASE](/sql-docs/docs/t-sql/statements/backup-database-parallel-data-warehouse)|  
-|Restore a database.|[RESTORE DATABASE](/sql-docs/docs/t-sql/statements/restore-database-parallel-data-warehouse)|  
+|Backup a database.|[BACKUP DATABASE](https://docs.microsoft.com/sql/t-sql/statements/backup-database-parallel-data-warehouse)|  
+|Restore a database.|[RESTORE DATABASE](https://docs.microsoft.com/sql/t-sql/statements/restore-database-parallel-data-warehouse)|  
  
 
   

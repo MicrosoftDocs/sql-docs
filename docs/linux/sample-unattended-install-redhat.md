@@ -4,7 +4,7 @@ description: SQL Server Script Sample - Unattended Install on Red Hat Enterprise
 author: edmacauley
 ms.author: edmacauley
 manager: jhubbard
-ms.date: 07/17/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -13,7 +13,7 @@ ms.technology: database-engine
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-This sample Bash script installs SQL Server 2017 RC2  on Red Hat Enterprise Linux (RHEL) without interactive input. It provides examples of installing the database engine, the SQL Server command-line tools, SQL Server Agent, and performs post-install steps. You can optionally install full-text search and create an administrative user.
+This sample Bash script installs SQL Server 2017  on Red Hat Enterprise Linux (RHEL) without interactive input. It provides examples of installing the database engine, the SQL Server command-line tools, SQL Server Agent, and performs post-install steps. You can optionally install full-text search and create an administrative user.
 
 > [!TIP]
 > If you do not need an unattended installation script, the fastest way to install SQL Server is to follow the [quick start tutorial for Red Hat](quickstart-install-connect-red-hat.md). For other setup information, see [Installation guidance for SQL Server on Linux](sql-server-linux-setup.md).
@@ -58,11 +58,8 @@ then
 fi
 
 echo Adding Microsoft repositories...
-sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server.repo
+sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo
 sudo curl -o /etc/yum.repos.d/msprod.repo https://packages.microsoft.com/config/rhel/7/prod.repo
-
-echo Running yum update -y...
-sudo yum update -y
 
 echo Installing SQL Server...
 sudo yum install -y mssql-server

@@ -343,8 +343,8 @@ Numerous enhancements support the features described in the other sections of th
 - [ALTER TABLE &#40;Transact-SQL&#41;](../t-sql/statements/alter-table-transact-sql.md) now allows many alter column actions to be performed while the table remains available.
 - The full-text index DMV [sys.dm_fts_index_keywords_position_by_document &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-position-by-document-transact-sql.md) returns the location of keywords in documents. This DMV has also been added in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] SP2 and [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] SP1.
 - A new query hint **NO_PERFORMANCE_SPOOL** can prevent a spool operator from being added to query plans. This can improve performance when many concurrent queries are running with spool operations. For more information, see [Query Hints &#40;Transact-SQL&#41;](../t-sql/queries/hints-transact-sql-query.md).
-- The [FORMATMESSAGE &#40;Transact-SQL&#41;](../t-sql/functions/formatmessage-transact-sql.md) statement is enhances to accept a msg_string argument.-
- The maximum index key size for NONCLUSTERED indexes has been increased to 1700 bytes.
+- The [FORMATMESSAGE &#40;Transact-SQL&#41;](../t-sql/functions/formatmessage-transact-sql.md) statement is enhances to accept a msg_string argument.
+- The maximum index key size for NONCLUSTERED indexes has been increased to 1700 bytes.
 - New DROP IF syntax is added for drop statements related to AGGREGATE, ASSEMBLY, COLUMN, CONSTRAINT, DATABASE, DEFAULT, FUNCTION, INDEX, PROCEDURE, ROLE, RULE, SCHEMA, SECURITY POLICY, SEQUENCE, SYNONYM, TABLE, TRIGGER, TYPE, USER, and VIEW. See individual syntax topics for syntax.
 - A MAXDOP option has been added to [DBCC CHECKTABLE &#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-checktable-transact-sql.md), [DBCC CHECKDB &#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md), and [DBCC CHECKFILEGROUP &#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-checkfilegroup-transact-sql.md) to specify the degree of parallelism.
 - SESSION_CONTEXT can now be set. Includes the [SESSION_CONTEXT &#40;Transact-SQL&#41;](../t-sql/functions/session-context-transact-sql.md) function, [CURRENT_TRANSACTION_ID &#40;Transact-SQL&#41;](../t-sql/functions/current-transaction-id-transact-sql.md) function, and the [sp_set_session_context &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md) procedure.
@@ -433,7 +433,7 @@ Direct seeding allows a secondary replica to be automatically seeded over the ne
 ###  <a name="Tools"></a> Tools Enhancements
 
 ####  <a name="SSMS"></a> Management Studio
-Download the latest [SQL Server Management Studio (SSMS)](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms)
+Download the latest [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
 
 - [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] supports the Active Directory Authentication Library (ADAL) which is under development for connecting to Microsoft Azure. This replaces the certificate-based authentication used in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)][!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].
 - [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] installation requires installing .NET 4.6 as a pre-requisite. .NET 4.6 will be automatically installed by setup when [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] is installed.

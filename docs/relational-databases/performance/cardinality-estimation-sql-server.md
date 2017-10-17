@@ -53,9 +53,9 @@ SELECT d.name, d.compatibility_level
 go  
 ```  
   
- For a SQL Server database set at compatibility level 120, activation of the [trace flag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481 forces the system to use the CE version 70.  
+ For a SQL Server database set at compatibility level 120 or above, activation of the [trace flag 9481](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) forces the system to use the CE version 70.  
   
- **Legacy CE:** For a SQL Server database set at compatibility level 130, the CE version 70 can be can be activated by using the at the database level by using the [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
+ **Legacy CE:** For a SQL Server database set at compatibility level 120 and above, the CE version 70 can be can be activated by using the at the database level by using the [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
   
 ```tsql  
 ALTER DATABASE
@@ -68,7 +68,7 @@ SELECT name, value
     WHERE name = 'LEGACY_CARDINALITY_ESTIMATION';  
 ```  
  
- Or starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, the [Query Hint](../../t-sql/queries/hints-transact-sql-query.md) `FORCE_LEGACY_CARDINALITY_ESTIMATION`.
+ Or starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, the [Query Hint](../../t-sql/queries/hints-transact-sql-query.md) `USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION')`.
  
  ```tsql  
 SELECT CustomerId, OrderAddedDate  
@@ -77,7 +77,7 @@ SELECT CustomerId, OrderAddedDate
     OPTION (USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION'));  
 ```
  
- **Query store:**Starting with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 the query store is a handy tool for examining the performance of your queries.  In [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] (SSMS.exe), in the **Object Explorer** under your database node, a **Query Store** node is displayed  when the query store is ON.  
+ **Query store:** Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], the query store is a handy tool for examining the performance of your queries. In [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)], in the **Object Explorer** under your database node, a **Query Store** node is displayed when the query store is enabled.  
   
 ```tsql  
 ALTER DATABASE <yourDatabase>  
@@ -97,9 +97,9 @@ ALTER DATABASE <yourDatabase>
 ```  
   
  > [!TIP] 
- > We recommend that each month you install the latest release of [(SSMS.exe)](http://msdn.microsoft.com/library/mt238290.aspx).  
+ > We recommend that you install the latest release of [Management Studio](http://msdn.microsoft.com/library/mt238290.aspx) and update it often.  
   
- Another option for tracking the cardinality estimation process is to use the extended event named **query_optimizer_estimate_cardinality**.  The following T-SQL code sample runs on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. It writes a .xel file to C:\Temp\ (although you can change the path). When you open the .xel file in SSMS, its detailed information is displayed in a user friendly manner.  
+ Another option for tracking the cardinality estimation process is to use the extended event named **query_optimizer_estimate_cardinality**. The following T-SQL code sample runs on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. It writes a .xel file to C:\Temp\ (although you can change the path). When you open the .xel file in [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)], its detailed information is displayed in a user friendly manner.  
   
 ```tsql  
 DROP EVENT SESSION Test_the_CE_qoec_1 ON SERVER;  
@@ -128,7 +128,7 @@ ALTER EVENT SESSION Test_the_CE_qoec_1
 go  
 ```  
   
- For information about extended events as tailored for Azure SQL Database, see [Extended events in SQL Database](http://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/).  
+ For information about extended events as tailored for [!INCLUDE[ssSDS](../../includes/sssds-md.md)], see [Extended events in SQL Database](http://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/).  
   
   
 ## Steps to assess the CE version  

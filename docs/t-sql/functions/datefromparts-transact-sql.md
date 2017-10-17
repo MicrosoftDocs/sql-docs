@@ -32,8 +32,6 @@ Returns a **date** value for the specified year, month, and day.
 ## Syntax  
   
 ```sql
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 DATEFROMPARTS ( year, month, day )  
 ```  
   
@@ -56,23 +54,6 @@ Integer expression specifying a day.
 This function is capable of being remoted to [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] servers and above. It will not be remoted to servers with a version below [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].
   
 ## Examples  
-The following example demonstrates the **DATEFROMPARTS** function.
-  
-```sql
-SELECT DATEFROMPARTS ( 2010, 12, 31 ) AS Result;  
-```  
-  
-[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
-  
-```sql
-Result  
-----------------------------------  
-2010-12-31  
-  
-(1 row(s) affected)  
-```  
-  
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 The following example demonstrates the **DATEFROMPARTS** function.
   
 ```sql

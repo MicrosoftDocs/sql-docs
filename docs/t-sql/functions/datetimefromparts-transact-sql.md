@@ -32,8 +32,6 @@ Returns a **datetime** value for the specified date and time.
 ## Syntax  
   
 ```sql
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 DATETIMEFROMPARTS ( year, month, day, hour, minute, seconds, milliseconds )  
 ```  
   
@@ -68,22 +66,6 @@ Integer expression specifying milliseconds.
 This function is capable of being remoted to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] servers and above. It will not be remoted to servers that have a version below [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
   
 ## Examples  
-  
-```sql
-SELECT DATETIMEFROMPARTS ( 2010, 12, 31, 23, 59, 59, 0 ) AS Result;  
-```  
-  
-[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
-  
-```sql
-Result  
----------------------------  
-2010-12-31 23:59:59.000  
-  
-(1 row(s) affected)  
-```  
-  
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ```sql
 SELECT DATETIMEFROMPARTS ( 2010, 12, 31, 23, 59, 59, 0 ) AS Result;  

@@ -64,11 +64,11 @@ manager: "erikre"
 3.  Click to grab the edge of the column and move it left or right to adjust the column width.  
   
 ## See Also  
- [Tablix Data Region (Report Builder and SSRS)](/sql-docs/docs/reporting-services/report-design/tablix-data-region-report-builder-and-ssrs)   
- [Tablix Data Region Cells, Rows, and Columns (Report Builder) and SSRS](/sql-docs/docs/reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs)   
+ [Tablix Data Region (Report Builder and SSRS)](tablix-data-region-report-builder-and-ssrs.md)   
+ [Tablix Data Region Cells, Rows, and Columns (Report Builder) and SSRS](tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)   
  [Tables (Report Builder and SSRS)](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
- [Matrices (Report Builder and SSRS)](/sql-docs/docs/reporting-services/report-design/create-a-matrix-report-builder-and-ssrs)   
- [Lists (Report Builder and SSRS)](/sql-docs/docs/reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs)   
+ [Matrices (Report Builder and SSRS)](create-a-matrix-report-builder-and-ssrs.md)   
+ [Lists (Report Builder and SSRS)](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
  [Tables, Matrices, and Lists (Report Builder and SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

@@ -34,8 +34,6 @@ Returns the angle, in radians, between the positive x-axis and the ray from the 
 ## Syntax  
   
 ```sql
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 ATN2 ( float_expression , float_expression )  
 ```  
   
@@ -47,24 +45,6 @@ Is an [expression](../../t-sql/language-elements/expressions-transact-sql.md) of
 **float**
   
 ## Examples  
-The following example calculates the `ATN2` for the specified `x` and `y` components.
-  
-```sql
-DECLARE @x float = 35.175643, @y float = 129.44;  
-SELECT 'The ATN2 of the angle is: ' + CONVERT(varchar,ATN2(@x,@y ));  
-GO  
-```  
-  
-[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
-  
-```sql
-The ATN2 of the angle is: 0.265345                         
-(1 row(s) affected)  
-```  
-  
-## Examples:
- [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 
-
 The following example calculates the `ATN2` for the specified `x` and `y` components.
   
 ```sql

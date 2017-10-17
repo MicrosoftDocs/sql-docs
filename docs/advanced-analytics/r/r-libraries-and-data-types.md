@@ -74,7 +74,7 @@ The following table shows the changes in data types and values when data from [!
 
 ## Data types not supported by R
 
-Of the categories of data types supported by the [SQL Server type system](/sql-docs/docs/t-sql/data-types/data-types-transact-sql), the following types are likely to pose problems when passed to R code:
+Of the categories of data types supported by the [SQL Server type system](../../t-sql/data-types/data-types-transact-sql.md), the following types are likely to pose problems when passed to R code:
 
 + Data types listed in the **Other** section of the SQL type system topic: **cursor**, **timestamp**, **hierarchyid**, **uniqueidentifier**, **sql_variant**, **xml**, **table**
 + All spatial types
@@ -105,7 +105,7 @@ In general, whenever you have any doubt about how a particular data type or data
 
 When retrieving data from a database for use in R code, you should always eliminate columns that cannot be used in R, as well as columns that are not useful for analysis, such as GUIDS (uniqueidentifier), timestamps and other columns used for auditing, or lineage informatioh created by ETL processes. 
 
-Note that inclusion of unnecessary columns can greatly reduce the performance of R code, especially if high cardinality columns are used as factors. Therefore, we recommend that you use SQL Server system stored procedures and information views to get the data types for a given table in advance, and eliminate or convert incompatible columns. For more information, see [Information Schema Views in Transact-SQL](/sql-docs/docs/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql)
+Note that inclusion of unnecessary columns can greatly reduce the performance of R code, especially if high cardinality columns are used as factors. Therefore, we recommend that you use SQL Server system stored procedures and information views to get the data types for a given table in advance, and eliminate or convert incompatible columns. For more information, see [Information Schema Views in Transact-SQL](../../relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)
 
 If a particular [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data type is not supported by R, but you need to use the columns of data in the R script, we recommend that you use the [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md) functions to ensure that the data type conversions are performed as intended before using the data in your R script.  
 

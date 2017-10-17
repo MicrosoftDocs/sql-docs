@@ -1,7 +1,7 @@
 ---
 title: "What's new in SQL Server 2017 | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/14/2017"
+ms.date: "10/10/2017"
 ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
@@ -16,11 +16,9 @@ ms.author: "craigg"
 manager: "jhubbard"
 ---
 # What's new in SQL Server 2017
+SQL Server 2017 represents a major step towards making SQL Server a platform that gives you choices of development languages, data types, on-premises or cloud, and operating systems by bringing the power of SQL Server to Linux, Linux-based Docker containers, and Windows. This topic summarizes what is new for specific feature areas and includes links to additional details.
 
-SQL Server 2017 represents a major step towards making SQL Server a platform that gives you choices of development languages, data types, on-premises or cloud, and operating systems by bringing the power of SQL Server to Linux, Linux-based Docker containers, and Windows. This topic summarizes what is new for specific feature areas in the most recent SQL Server 2017 Release Candidate (RC2, August 2017) and Community Technical Preview (CTP) releases.
-
-[![Download from Evaluation Center](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) **Try it out:** [Download the latest SQL Server 2017 Release: RC2, August 2017](http://go.microsoft.com/fwlink/?LinkID=829477).
-This release contains bug fixes and performance improvements.
+[![Download from Evaluation Center](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) **Try it out:** [Download SQL Server 2017 Release - October 2017:](http://go.microsoft.com/fwlink/?LinkID=829477).
 
 >**Run SQL Server on Linux!** For more information, see [SQL Server on Linux Documentation](https://docs.microsoft.com/sql/linux/).
 
@@ -91,9 +89,10 @@ SQL Server Analysis Services 2017 introduces many enhancements for tabular model
 For more information, see [What's new in SQL Server Analysis Services 2017](~/analysis-services/what-s-new-in-sql-server-analysis-services-2017.md).
 
 ## SQL Server 2017 Reporting Services (SSRS)
-As of CTP 2.1, SSRS is no longer available to install through SQL Server setup. Go to the Microsoft Download Center to [download the Microsoft SQL Server 2017 Reporting Services Release Candidate](https://www.microsoft.com/download/details.aspx?id=55252). 
-- Comments are now available for reports, to add perspective and collaborate with others. You can also include attachments with comments. (CTP 2.1)
+SQL Server Reporting Services is no longer available to install through SQL Server setup. Go to the Microsoft Download Center to [download Microsoft SQL Server 2017 Reporting Services](https://www.microsoft.com/download/details.aspx?id=55252). 
+- Comments are now available for reports, to add perspective and collaborate with others. You can also include attachments with comments.
 - In the latest releases of Report Builder and SQL Server Data Tools, you can create native DAX queries against supported SQL Server Analysis Services tabular data models by dragging and dropping desired fields in the query designers. See the [Reporting Services blog](https://blogs.msdn.microsoft.com/sqlrsteamblog/2017/03/09/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools/).
+- To enable development of modern applications and customization, SSRS now supports a fully OpenAPI compliant RESTful API. The full API specification and documentation can now be found on [swaggerhub](https://app.swaggerhub.com/apis/microsoft-rs/SSRS/2.0).
 
 For more information, see [What's new in SQL Server Reporting Services (SSRS)](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md).
 
@@ -107,7 +106,7 @@ SQL Server developers now have access to the extensive Python ML and AI librarie
 - **microsoftml** - This state-of-the-art package of machine learning algorithms and transforms with Python bindings includes deep neural networks, fast decision trees and decision forests, and optimized algorithms for linear and logistic regressions. You also get pre-trained models based on ResNet models that you can use for image extraction or sentiment analysis.
 - **Python operationalization with T-SQL** - Deploy Python code easily by using the stored procedure `sp_execute_external_script`. Get great performance by streaming data from SQL to Python processes and using MPI ring parallelization.
 - **Python in SQL Server compute contexts** - Data scientists and developers can execute Python code remotely from their development environments to explore data and develop models without moving data around.
-- **Native scoring** -  The PREDICT function in Transact-SQL can be used to perform scoring in any instance of SQL Server 2017, even if R isn't installed. All that's required is that you train the model using one of the supported RevoScaleR and revoscalepy algorithms and save the model in a new, comact binary format.
+- **Native scoring** -  The PREDICT function in Transact-SQL can be used to perform scoring in any instance of SQL Server 2017, even if R isn't installed. All that's required is that you train the model using one of the supported RevoScaleR and revoscalepy algorithms and save the model in a new, compact binary format.
 - **Package management** - T-SQL now supports the CREATE EXTERNAL LIBRARY statement, to give DBAs greater management over R packages. Use roles to control prviate or shared package access, store R packages in the database and share them among users.
 - **Performance improvements** - The stored procedure `sp_execute_external_script` has been optimized to support batch mode execution for columnstore data.
 

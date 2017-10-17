@@ -62,13 +62,12 @@ manager: "jhubbard"
 7.  Copy and paste the following example into the query window and click **Execute**.  
   
     ```  
-    -- Creates a backup of the "AdventureWorks2012" master key.  
-    -- Because this master key is not encrypted by the service master key, a password must be specified when it is opened.  
-    USE AdventureWorks2012;  
-    GO  
-    BACKUP SERVICE MASTER KEY TO FILE = 'c:\temp_backups\keys\service_master_ key'   
-        ENCRYPTION BY PASSWORD = '3dH85Hhk003GHk2597gheij4';  
-    GO  
+    -- Creates a backup of the service master key.
+    USE master;
+    GO
+    BACKUP SERVICE MASTER KEY TO FILE = 'c:\temp_backups\keys\service_master_ key'
+        ENCRYPTION BY PASSWORD = '3dH85Hhk003GHk2597gheij4';
+    GO
     ```  
   
     > [!NOTE]  

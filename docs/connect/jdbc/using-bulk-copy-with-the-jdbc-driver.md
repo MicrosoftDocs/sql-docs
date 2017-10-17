@@ -852,7 +852,7 @@ public class Program
  The following application demonstrates how to load data using the SQLServerBulkCopy class. In this example, a CSV file is used to copy data exported from the Production.Product table in the SQL Server AdventureWorks database to a similar table in the database.  
   
 > [!IMPORTANT]  
->  This sample will not run unless you have created the work tables as described in [Table setup](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms) to get it.  
+>  This sample will not run unless you have created the work tables as described in [Table setup](../../ssms/download-sql-server-management-studio-ssms.md) to get it.  
   
 1.  Open **SQL Server Management Studio** and connect to the SQL Server with the AdventureWorks database.  
   

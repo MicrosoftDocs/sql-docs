@@ -35,7 +35,7 @@ manager: "jhubbard"
 > [!IMPORTANT]  
 >  **This applies only to [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]V11.**  
 >   
->  For [!INCLUDE[ssSDSfull](/sql-docs/docs/relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database) (on master) for the operation ALTER DATABASE.   
+>  For [!INCLUDE[ssSDSfull](../system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md) (on master) for the operation ALTER DATABASE.   
   
  Returns the assignment status of a Service Level Objective (SLO) in a SQL Database.  
   
@@ -66,4 +66,4 @@ INNER JOIN sys.databases AS database_name  ON database_slo.database_id = databas
   
 ## See Also  
  [Managing Premium Databases](http://go.microsoft.com/fwlink/?LinkID=311927)  
-[sys.dm_operation_status (Azure SQL Database)](/sql-docs/docs/relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database) 
+[sys.dm_operation_status (Azure SQL Database)](../system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md) 

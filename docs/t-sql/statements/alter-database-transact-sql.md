@@ -246,7 +246,7 @@ GO
 ```  
   
 ## See Also  
-- [ALTER DATABASE &#40;Azure SQL Database&#41;](/sql-docs/docs/t-sql/statements/alter-database-azure-sql-database)  
+- [ALTER DATABASE &#40;Azure SQL Database&#41;](alter-database-azure-sql-database.md)  
 - [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
 - [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md)   
 - [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md)   

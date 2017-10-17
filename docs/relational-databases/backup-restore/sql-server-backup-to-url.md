@@ -267,7 +267,7 @@ The Restore Database task includes **URL** as a device to restore from.  The fol
 -   [Restoring to a point-in-time using STOPAT](#PITR)  
   
 > [!NOTE]  
->  For a tutorial on using SQL Server 2016 with the Microsoft Azure Blob storage service, see [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases](/sql-docs/docs/relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016)  
+>  For a tutorial on using SQL Server 2016 with the Microsoft Azure Blob storage service, see [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
   
 ###  <a name="SAS"></a> Create a Shared Access Signature  
  The following example creates Shared Access Signatures that can be used to create a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Credential on a newly created container. The script  creates a Shared Access Signature that is associated with a Stored Access Policy. For more information, see [Shared Access Signatures, Part 1: Understanding the SAS Model](http://azure.microsoft.com/en-us/documentation/articles/storage-dotnet-shared-access-signature-part-1/). The example requires Microsoft Azure Powershell. For information about installing and using Azure Powershell, see [How to install and configure Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/).  
@@ -406,6 +406,6 @@ Write-Host $tSql
 ## See Also  
  [SQL Server Backup to URL Best Practices and Troubleshooting](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)   
  [Back Up and Restore of System Databases &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)   
- [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases](/sql-docs/docs/relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016)  
+ [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
   
   

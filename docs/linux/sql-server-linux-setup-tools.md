@@ -4,7 +4,7 @@ description: This topic describes how to install the SQL Server Tools on Linux.
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 07/17/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -54,14 +54,12 @@ Use the following steps to install the **mssql-tools** on Red Hat Enterprise Lin
 1. If you had a previous version of **mssql-tools** installed, remove any older unixODBC packages.
 
    ```bash
-   sudo yum update
    sudo yum remove unixODBC-utf16 unixODBC-utf16-devel
    ```
 
 1. Run the following commands to install **mssql-tools** with the unixODBC developer package.
 
    ```bash
-   sudo yum update
    sudo yum install mssql-tools unixODBC-devel
    ```
 

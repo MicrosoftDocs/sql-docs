@@ -36,8 +36,6 @@ Returns the number of bytes used to represent any expression.
 ## Syntax  
   
 ```sql
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 DATALENGTH ( expression )   
 ```  
   
@@ -57,18 +55,6 @@ The DATALENGTH of NULL is NULL.
 >  Compatibility levels can affect return values. For more information about compatibility levels, see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
 ## Examples  
-The following example finds the length of the `Name` column in the `Product` table.
-  
-```sql
-USE AdventureWorks2012;  
-GO  
-SELECT length = DATALENGTH(Name), Name  
-FROM Production.Product  
-ORDER BY Name;  
-GO  
-```  
-  
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 The following example finds the length of the `Name` column in the `Product` table.
   
 ```sql

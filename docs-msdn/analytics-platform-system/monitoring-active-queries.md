@@ -30,7 +30,7 @@ Both the Admin Console and the SQL Server PDW system views can be used to monito
     To see more detailed information for a particular query, click the query ID. You will see information including the full query and the query plan, with status information for each step in the query execution. If any errors were returned, you can also see detailed information on the errors. <!-- MISSING LINKS See [Understanding Query Plans &#40;SQL Server PDW&#41;](../sqlpdw/understanding-query-plans-sql-server-pdw.md) for information on how to interpret the query plan information available in the Admin Console.  -->
   
 ### To monitor active queries by using the system views  
-The primary system view used to monitor queries is [sys.dm_pdw_exec_requests](/sql-docs/docs/relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql). Use this system view to find the `request_id` for an active or recent query, based on the query text.  
+The primary system view used to monitor queries is [sys.dm_pdw_exec_requests](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql). Use this system view to find the `request_id` for an active or recent query, based on the query text.  
   
 For example, the following query finds the `request_id` and the current `status` for any query that selects all columns from the `memberAddresses` table.  
   
@@ -41,7 +41,7 @@ WHERE command
 LIKE ‘%SELECT * FROM db1..memberAddresses%’;  
 ```  
   
-After the `request_id` has been identified for a query, use the other information in the `dm_pdw_exec_requests` table to find out about the processing of the query, or use [sys.dm_pdw_request_steps](/sql-docs/docs/relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql) to view the status of the individual query steps for the query execution.  
+After the `request_id` has been identified for a query, use the other information in the `dm_pdw_exec_requests` table to find out about the processing of the query, or use [sys.dm_pdw_request_steps](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql) to view the status of the individual query steps for the query execution.  
   
 <!-- MISSING LINKS 
 ## See Also  

@@ -135,7 +135,7 @@ A connection manager can be created at the package level or at the project level
   
  At run time, the correct version is used, and it does not matter that you specified the 32-bit version of the provider at design time. The 64-bit version of the provider can be run even if the package is run in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
- Both versions of the provider have the same ID. To specify whether the [!INCLUDE[ssISnoversion](/sql-docs/docs/integration-services/integration-services-ssis-development-and-management-tools).  
+  Both versions of the provider have the same ID. To specify whether the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] runtime uses an available 64-bit version of the provider, you set the Run64BitRuntime property of the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project. If the Run64BitRuntime property is set to **true**, the runtime finds and uses the 64-bit provider; if Run64BitRuntime is **false**, the runtime finds and uses the 32-bit provider. For more information about properties you can set on [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] projects, see [Integration Services &(SSIS) and Studio Environments](https://msdn.microsoft.com/library/ms140028.aspx).   
 
 ## Add a connection manager
 ###  <a name="wizard"></a> Add a connection manager when you create a package  

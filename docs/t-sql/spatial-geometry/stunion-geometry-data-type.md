@@ -62,11 +62,11 @@ SELECT @g.STUnion(@h).ToString();
 ### B. Computing the union of a Polygon instance with a CurvePolygon instance  
  The following example returns a `GeometryCollection` instance that contains a circular arc segment.  
   
- `DECLARE @g geometry = 'CURVEPOLYGON(CIRCULARSTRING(0 -4, 4 0, 0 4, -4 0, 0 -4))';`  
-  
- `DECLARE @h geometry = 'POLYGON((5 -1, 5 -3, 7 -3, 7 -1, 5 -1))';`  
-  
- `SELECT @g.STUnion(@h).ToString();`  
+```
+ DECLARE @g geometry = 'CURVEPOLYGON(CIRCULARSTRING(0 -4, 4 0, 0 4, -4 0, 0 -4))';  
+ DECLARE @h geometry = 'POLYGON((5 -1, 5 -3, 7 -3, 7 -1, 5 -1))';  
+ SELECT @g.STUnion(@h).ToString();
+ ```  
   
  `STUnion()` returns a result that contains a circular arc segment because the instance that invoked `STUnion()` contains a circular arc segment.  
   

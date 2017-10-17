@@ -38,7 +38,7 @@ You *cannot:*
   
 |Task|Description|  
 |--------|---------------|  
-|Create a full backup of master.|Example:<br /><br />`BACKUP DATABASE master TO backup_directory;`<br /><br />For more information, see [BACKUP DATABASE](/sql-docs/docs/t-sql/statements/backup-database-parallel-data-warehouse).|  
+|Create a full backup of master.|Example:<br /><br />`BACKUP DATABASE master TO backup_directory;`<br /><br />For more information, see [BACKUP DATABASE](https://docs.microsoft.com/sql/t-sql/statements/backup-database-parallel-data-warehouse).|  
 |Restore the master database|To restore the master database, use the [Restore the Master Database](restore-the-master-database.md) page in the Configuration Manager tool.|  
 |View database catalog information.|`SELECT * FROM master.sys.databases;`|  
 |View system-wide login and permission information.|`SELECT * FROM master.sys.server_permissions;`<br /><br />`SELECT * FROM master.sys.server_principals;`<br /><br />`SELECT * FROM master.sys.sql_logins;`|  

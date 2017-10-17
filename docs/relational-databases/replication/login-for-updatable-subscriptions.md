@@ -48,7 +48,7 @@ manager: "jhubbard"
  This option requires a linked server or remote server that you have already defined. For more information, see [Linked Servers &#40;Database Engine&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md) and [Remote Servers](../../database-engine/configure-windows/remote-servers.md). Ensure that the login used for the linked server or remote server has a strong password and has only the permissions described in this topic.  
   
 ## See also  
- [Create an Updatable Subscription to a Transactional Publication](/sql-docs/docs/relational-databases/replication/publish/create-an-updatable-subscription-to-a-transactional-publication)   
+ [Create an Updatable Subscription to a Transactional Publication](publish/create-an-updatable-subscription-to-a-transactional-publication.md)   
  [View and Modify Replication Security Settings](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
  [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
  [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)  

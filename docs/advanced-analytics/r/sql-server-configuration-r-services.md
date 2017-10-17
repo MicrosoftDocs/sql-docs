@@ -90,7 +90,7 @@ For more information, see the following documents:
 
 + [Enable compression on a table or index](../../relational-databases/data-compression/enable-compression-on-a-table-or-index.md)
 
-+ [Columnstore indexes guide](/sql-docs/docs/relational-databases/indexes/columnstore-indexes-overview)
++ [Columnstore indexes guide](../../relational-databases/indexes/columnstore-indexes-overview.md)
 
 ### Memory-optimized tables
 

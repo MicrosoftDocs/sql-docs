@@ -134,7 +134,7 @@ The following table defines the rules for loading literal values into a column o
 |Decimal literal|123344.34455|  
   
 ### float and real Data Types  
-The following table defines rules for loading literal values into a column of type **float** or **real**. Data conversion rules are the same as for SQL Server. For more information, see [Data Type Conversion (Database Engine)](/sql-docs/docs/t-sql/data-types/data-type-conversion-database-engine) on MSDN.  
+The following table defines rules for loading literal values into a column of type **float** or **real**. Data conversion rules are the same as for SQL Server. For more information, see [Data Type Conversion (Database Engine)](https://docs.microsoft.com/sql/t-sql/data-types/data-type-conversion-database-engine) on MSDN.  
   
 |Input Data Type|Input Data Examples|  
 |-------------------|-----------------------|  

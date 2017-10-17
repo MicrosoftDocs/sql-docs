@@ -66,14 +66,18 @@ The **Uid** (user id) and **Pwd** (password) to connect.
 ### Connection string format
 Here's the format of a typical connection string. 
 
+    ```
     Driver={PostgreSQL ODBC Driver(UNICODE)};Server=<server>;Port=<port>;Database=<database>;UID=<user id>;PWD=<password>
+    ```
 
 ### Enter the connection string
 Enter the connection string in the **ConnectionString** field, or enter the DSN name in the **Dsn** field, on the **Choose a Data Source** or **Choose a Destination** page. After you enter the connection string, the wizard parses the string and displays the individual properties and their values in the list.
 
 The following example uses this connection string.
 
+    ```
     Driver={PostgreSQL ODBC Driver(UNICODE)};Server=127.0.0.1;Port=5432;Database=postgres;UID=postgres;PWD=********
+    ```
 
 Here's the screen that you see after entering the connection string.
 

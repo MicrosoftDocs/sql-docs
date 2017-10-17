@@ -37,8 +37,6 @@ Returns the database identification (ID) number.
 ## Syntax  
   
 ```sql
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 DB_ID ( [ 'database_name' ] )   
 ```  
   

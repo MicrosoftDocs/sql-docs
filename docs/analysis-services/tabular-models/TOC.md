@@ -20,6 +20,7 @@
 ### [Data Sources Supported](data-sources-supported-ssas-tabular.md)  
 ### [Data Types Supported](data-types-supported-ssas-tabular.md)  
 ### [Impersonation](impersonation-ssas-tabular.md)  
+### [Import data by using a native query](ssas-import-query.md)
 ### [Import Data - Relational Data Source](ssas-import-data-relational-data-source.md)  
 ### [Import Data - Multidimensional Data Source](ssas-import-data-multidimensional-data-source.md)  
 ### [Import Data - Data Feed](ssas-import-data-data-feed.md)  

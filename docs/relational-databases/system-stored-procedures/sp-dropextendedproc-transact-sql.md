@@ -1,7 +1,7 @@
 ---
 title: "sp_dropextendedproc (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "10/04/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -30,16 +30,12 @@ manager: "jhubbard"
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [CLR Integration](../../relational-databases/clr-integration/common-language-runtime-integration-overview.md) instead.  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
 ```  
-  
 sp_dropextendedproc [ @functname = ] 'procedure'   
 ```  
   
@@ -56,7 +52,7 @@ sp_dropextendedproc [ @functname = ] 'procedure'
 ## Remarks  
  Executing **sp_dropextendedproc** drops the user-defined extended stored procedure name from the [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) catalog view and removes the entry from the [sys.extended_procedures](../../relational-databases/system-catalog-views/sys-extended-procedures-transact-sql.md) catalog view. This stored procedure can be run only in the **master** database.  
   
- In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]**sp_dropextendedproc** does not drop system extended stored procedures. Instead, the system administrator should deny EXECUTE permission on the extended stored procedure to the **public** role.  
+**sp_dropextendedproc** does not drop system extended stored procedures. Instead, the system administrator should deny EXECUTE permission on the extended stored procedure to the **public** role.  
   
  **sp_dropextendedproc** cannot be executed inside a transaction.  
   

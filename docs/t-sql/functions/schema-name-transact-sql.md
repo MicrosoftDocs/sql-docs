@@ -33,8 +33,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 SCHEMA_NAME ( [ schema_id ] )  
 ```  
   
@@ -58,27 +56,9 @@ SCHEMA_NAME ( [ schema_id ] )
   
 ```  
 SELECT SCHEMA_NAME();  
-GO  
 ```  
   
 ### B. Returning the name of a schema by using an ID  
-  
-```  
-USE AdventureWorks2012;  
-GO  
-SELECT SCHEMA_NAME(5);  
-GO  
-```  
-  
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### C. Returning the name of the default schema of the caller  
-  
-```  
-SELECT SCHEMA_NAME();  
-```  
-  
-### D. Returning the name of a schema by using an ID  
   
 ```  
 SELECT SCHEMA_NAME(1);  

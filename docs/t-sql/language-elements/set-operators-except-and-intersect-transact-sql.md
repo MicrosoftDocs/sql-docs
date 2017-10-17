@@ -47,8 +47,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 { <query_specification> | ( <query_expression> ) }   
 { EXCEPT | INTERSECT }  
 { <query_specification> | ( <query_expression> ) }  

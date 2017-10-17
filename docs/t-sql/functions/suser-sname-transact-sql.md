@@ -40,8 +40,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 SUSER_SNAME ( [ server_user_sid ] )   
 ```  
   
@@ -120,11 +118,11 @@ GO
   
  Here is the result.  
   
- `sa`  
-  
- `WanidaBenShoof`  
-  
- `sa`  
+ ```
+sa  
+WanidaBenShoof  
+sa
+```  
   
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   

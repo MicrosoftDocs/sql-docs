@@ -1,7 +1,7 @@
 ---
 title: "Step 4: Create Data Features using T-SQL  | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/13/2017"
+ms.date: "10/17/2017"
 ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
@@ -23,6 +23,8 @@ manager: "jhubbard"
 # Step 4: Create Data Features using T-SQL
 
 After data exploration, you have collected some insights from the data, and are ready to move on to *feature engineering*. This process of creating features from the raw data can be a critical step in advanced analytics modeling.
+
+This article is part of a tutorial, [In-database Python analytics for SQL developers](sqldev-in-database-python-for-sql-developers.md). 
 
 In this step, you'll learn how to create features from raw data by using a [!INCLUDE[tsql](../../includes/tsql-md.md)] function. You'll then call that function from a stored procedure to create a table that contains the feature values.
 
@@ -113,15 +115,12 @@ To add the computed value to a table that can be used for training the model, yo
 
 In the next step, you'll learn how to use these data features to create and train a machine learning model using Python.
 
-## Next Step
+## Next step
 
-[Step 5: Train and Save a Model using T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
+[Step 5: Train and save a Python model using T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
-## Previous Step
+## Previous step
 
-[Step 3: Explore and Visualize the Data](sqldev-py3-explore-and-visualize-the-data.md)
+[Step 3: Explore and visualize the data](sqldev-py3-explore-and-visualize-the-data.md)
 
-## See Also
-
-[Machine Learning Services with Python](../python/sql-server-python-services.md)
 

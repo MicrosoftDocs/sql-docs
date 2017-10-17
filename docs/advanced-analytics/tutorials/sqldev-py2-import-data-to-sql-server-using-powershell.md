@@ -1,7 +1,7 @@
 ---
 title: "Step 2: Import data to SQL Server using PowerShell | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/13/2017"
+ms.date: "10/17/2017"
 ms.prod: "sql-server-vnext-ctp2"
 ms.reviewer: ""
 ms.suite: ""

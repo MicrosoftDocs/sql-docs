@@ -1,7 +1,7 @@
 ---
 title: "Step 1: Download the sample data | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/13/2017"
+ms.date: "10/17/2017"
 ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""

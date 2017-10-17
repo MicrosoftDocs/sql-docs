@@ -1,7 +1,7 @@
 ---
 title: "Step 3: Explore and visualize the data | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/13/2017"
+ms.date: "10/17/2017"
 ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""

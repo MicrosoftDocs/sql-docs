@@ -30,7 +30,7 @@ This release provides a standalone web installer for SQL Server Database, Analys
 
 ### Installer
 
-- Allow user to set nickname when installing the new SSDT for VS2017 instance.
+- Allow user to set nickname when installing a new SSDT for VS2017 instance.
 - Hide feature selection checkboxes of installer if no VS instance is selected.
 - Refine some messages of installer based on customer feedback.
 - Fix an issue that installer doesn’t support upgrade.

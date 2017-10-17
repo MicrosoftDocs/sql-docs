@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_exec_input_buffer (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/17/2016"
+ms.date: "10/13/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -32,12 +32,12 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
-sys.dm_exec_input_buffer(session_id , request_id)
+sys.dm_exec_input_buffer ( session_id , request_id )
 ```  
   
 ## Arguments  
 *session_id*  
- Is the session id executing the batch to be looked up. *session_id* is **smallint**. *session_id* can be obtained from the following dynamic management objects:  
+Is the session id executing the batch to be looked up. *session_id* is **smallint**. *session_id* can be obtained from the following dynamic management objects:  
   
 -   [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
   
@@ -45,8 +45,8 @@ sys.dm_exec_input_buffer(session_id , request_id)
   
 -   [sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md)   
   
- *request_id*  
- The request_id from [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md). *request_id* is **int**.  
+*request_id*  
+The request_id from [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md). *request_id* is **int**.  
   
 ## Table Returned  
   
@@ -69,18 +69,20 @@ sys.dm_exec_input_buffer(session_id , request_id)
 ### A. Simple example  
  The following example demonstrates passing a session id (SPID) and a request id to the function.  
   
-```  
-SELECT * FROM sys.dm_exec_input_buffer(52, 0);   
+```tsql  
+SELECT * FROM sys.dm_exec_input_buffer (52, 0);
+GO
 ```  
   
 ### B. Using cross apply to additional information  
  The following example lists the input buffer for sessions with session id greater than 50.  
   
-```  
+```tsql  
 SELECT es.session_id, ib.event_info   
 FROM sys.dm_exec_sessions AS es  
 CROSS APPLY sys.dm_exec_input_buffer(es.session_id, NULL) AS ib  
-WHERE es.session_id > 50;  
+WHERE es.session_id > 50;
+GO
 ```  
   
 ## See Also  

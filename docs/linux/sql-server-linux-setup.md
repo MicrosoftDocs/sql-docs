@@ -91,7 +91,7 @@ To rollback or downgrade SQL Server to a previous release, use the following ste
 > [!IMPORTANT]
 > Downgrade is only supported between RTM, RC2, and RC1 at this time.
 
-## <a id="repositories"></a> Change source repositories
+## <a id="repositories"></a> Configure source repositories
 
 When you install or upgrade SQL Server, you get the latest version of SQL Server from your configured Microsoft repository. It is important to note that there are two main types of repositories for each distribution:
 
@@ -104,9 +104,9 @@ Each CU and GDR release contains the full SQL Server package and all previous up
 > [!NOTE]
 > Updating from a CU release to a GDR release is not supported.
 
-To change from the GDR repository to the CU repository use the following steps:
+To configure the CU or GDR repositories, use the following steps:
 
-1. Remove the previously configured preview repository.
+1. If necessary, remove the previously configured repository.
 
    | Platform | Repository removal command |
    |-----|-----|

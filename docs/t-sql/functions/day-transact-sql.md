@@ -67,24 +67,6 @@ The following statement returns `1900, 1, 1`. The argument for *date* is the num
 SELECT YEAR(0), MONTH(0), DAY(0);  
 ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-The following example returns `30`. This is the number of the day.
-  
-```sql
--- Uses AdventureWorks  
-  
-SELECT TOP 1 DAY('2010-07-30T01:01:01.1234')   
-FROM dbo.DimCustomer;  
-```  
-  
-The following example returns `1900, 1, 1`. The argument for *date* is the number `0`. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interprets `0` as January 1, 1900.
-  
-```sql
--- Uses AdventureWorks  
-  
-SELECT TOP 1 YEAR(0), MONTH(0), DAY(0) FROM dbo.DimCustomer;  
-```  
-  
 ## See also
 [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)
   

@@ -2,20 +2,14 @@
 # [Download and Install Carbon](download.md)
 # [FAQ](faq.md)
 # [Overview](overview.md)
-# Quickstarts (flat)
-## [Connect & query SQL Server (Windows)](get-started-sql-server.md)
-## [Connect & query SQL Server (macOS)](get-started-sql-server-mac.md)
-## [Connect & query SQL Server (Linux)](get-started-sql-linux.md)
-## [Connect & query SQL Database](get-started-sql-database.md)
-## [Connect & query SQL Data Warehouse](get-started-sql-dw.md)
-# Quickstarts (expandos)
-## Windows
+# Quickstarts
+## Carbon running on Windows
 ### [Connect & query SQL Server](get-started-sql-server.md)
 ### [Connect & query SQL Database](get-started-sql-database.md)
 ### [Connect & query SQL Data Warehouse](get-started-sql-dw.md)
-## Linux
+## Carbon running on Linux
 ### [Connect & query SQL Server (Linux)](get-started-sql-linux.md)
-## macOS
+## Carbon running on macOS
 ### [Connect & query SQL Server (macOS)](get-started-sql-server-mac.md)
 # Tutorials
 ## [Query Editor](tutorial-modern-code-flow-sql-server.md) 
@@ -30,12 +24,14 @@
 ## [Snippet samples]()
 # Concepts
 ## [Dashboards and Insights]()
+## [Server groups](server-groups.md)
 ## [BCDR]()
-## [Integrated Console]()
+## [Integrated terminal](integrated-terminal.md)
 # How-to guides
 ## SQL Editor
 ## Server Groups
-## Integrated console
+## [Integrated PowerShell terminal](integrated-terminal.md#powershell)
+## [Integrated BASH terminal](integrated-terminal.md#bash)
 ## Smart Snippets
 ## Tasks
 # Reference

@@ -202,6 +202,6 @@ In this tutorial, you learned how to:
 > * Do something else
 > * Finish something 
 
-Next, learn how to use X, try this tutorial: 
+Next, learn how to use the SQL editor, try this tutorial: 
 > [!div class="nextstepaction"]
-> [What article is next in sequence](template-tutorial.md)
+> [T-SQL code flow with Carbon](tutorial-modern-code-flow-sql-server.md)

@@ -36,11 +36,6 @@ ms.technology:
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
-                                            <div class="cardImageOuter">
-                                                <div class="cardImage bgdAccent1">
-                                                    <img src="/media/hubs/sql/sql-database-sql-server.svg" alt="" />
-                                                </div>
-                                            </div>
                                             <div class="cardText">
                                                 <div style="height:100px; border-bottom-color: #dbdbdb; border-bottom-width: 1px; border-bottom-style: solid; position: relative;">
                                                    <h3 style="bottom: 20px; color: rgb(110, 110, 110); font-family: segoe-ui_light,Segoe UI Light,Segoe WP,Helvetica Neue,Helvetica,sans-serif; font-size: 2rem; vertical-align: bottom; position: absolute;">Databases</h3>
@@ -79,11 +74,6 @@ ms.technology:
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
-                                            <div class="cardImageOuter">
-                                                <div class="cardImage bgdAccent1">
-                                                    <img src="/media/hubs/sql/sql-database-develop.svg" alt="" />
-                                                </div>
-                                            </div>
                                             <div class="cardText">
                                                 <div style="height:100px; border-bottom-color: #dbdbdb; border-bottom-width: 1px; border-bottom-style: solid; position: relative;">
                                                    <h3 style="bottom: 20px; color: rgb(110, 110, 110); font-family: segoe-ui_light,Segoe UI Light,Segoe WP,Helvetica Neue,Helvetica,sans-serif; font-size: 2rem; vertical-align: bottom; position: absolute;">Develop</h3>
@@ -123,11 +113,6 @@ ms.technology:
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
-                                            <div class="cardImageOuter">
-                                                <div class="cardImage bgdAccent1">
-                                                    <img src="/media/hubs/sql/sql-analytics-sql-server.svg" alt="" />
-                                                </div>
-                                            </div>
                                             <div class="cardText">
                                                 <div style="height:100px; border-bottom-color: #dbdbdb; border-bottom-width: 1px; border-bottom-style: solid; position: relative;">
                                                    <h3 style="bottom: 20px; color: rgb(110, 110, 110); font-family: segoe-ui_light,Segoe UI Light,Segoe WP,Helvetica Neue,Helvetica,sans-serif; font-size: 2rem; vertical-align: bottom; position: absolute;">Data Analytics</h3>

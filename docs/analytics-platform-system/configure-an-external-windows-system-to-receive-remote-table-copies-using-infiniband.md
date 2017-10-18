@@ -8,7 +8,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f866890b-cad5-49ac-bbeb-848bfb26c2d5
 caps.latest.revision: 11
-author: BarbKess
+
 ---
 # Configure an External Windows System To Receive Remote Table Copies Using InfiniBand
 Describes how to purchase and configure a non-appliance Windows system connected using the InfiniBand network for use with the remote table copy feature in SQL Server PDW. The Windows system will host the SQL Server database that receives the remote table copy from a SQL Server PDW database. It is purchased separately from the appliance and connected to the appliance InfiniBand network.  

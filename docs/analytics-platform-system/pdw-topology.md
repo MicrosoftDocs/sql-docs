@@ -8,7 +8,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9bf6fb50-eba0-418c-b6b5-787b8e263cac
 caps.latest.revision: 3
-author: BarbKess
+
 ---
 # PDW Topology
 Displays name and network information about the SQL Server PDW components. Use the **Appliance Topology Network Configuration** page to change the network IP Addresses.  

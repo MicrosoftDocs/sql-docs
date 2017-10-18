@@ -8,7 +8,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8e2b9abe-963d-479b-a4a7-1739fcb3e249
 caps.latest.revision: 27
-author: BarbKess
+
 ---
 # Appliance Network Configuration
 The SQL Server PDW appliance is built and configured with a fix set of IP addresses throughout all servers and applicable devices from the IHV’s factory floor. Upon delivery of the appliance, the external (Ethernet) IP addressed must be reconfigured to match the specific customer’s data center requirements.  

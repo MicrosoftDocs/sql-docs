@@ -8,7 +8,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 191f292d-16bc-4166-b855-158854ad062d
 caps.latest.revision: 28
-author: BarbKess
+
 ---
 # PDW Firewall Configuration
 The **Firewall** page of the SQL Server PDW Configuration Manager enables you to enable or disable firewall rules that allow or prevent access to specific ports on the Analytics Platform System appliance.  

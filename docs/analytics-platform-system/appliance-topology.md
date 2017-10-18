@@ -8,7 +8,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: cd92c07e-4cee-4657-b23a-ed80bee07089
 caps.latest.revision: 4
-author: BarbKess
+
 ---
 # Appliance Topology
 Displays summary information on the entire Analytics Platform System.  

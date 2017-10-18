@@ -2,14 +2,14 @@
 title: "dwloader Command-Line Loader for Parallel Data Warehouse"
 description: "**dwloader** is a Parallel Data Warehouse (PDW) command-line tool that loads table rows in bulk into an existing table."
 
-author: "barbkess" 
-ms.author: "barbkess"
+ 
+
 ms.date: "11/04/2016"
 ms.topic: "article"
 
 ms.assetid: f79b8354-fca5-41f7-81da-031fc2570a7c
 caps.latest.revision: 90
-author: BarbKess
+
 ---
 # dwloader Command-Line Loader
 **dwloader** is a Parallel Data Warehouse (PDW) command-line tool that loads table rows in bulk into an existing table. When loading rows, you can add all rows to the end of the table (*append mode* or *fastappend mode*), append new rows and update existing rows (*upsert mode*), or delete all existing rows before loading and then insert all rows into an empty table (*reload mode*).  
@@ -519,7 +519,7 @@ Loaded data might require more or less space on the appliance than in the source
 Although **dwloader** is a transaction process and will roll back gracefully on failure, it cannot be rolled back once the bulk load has been completed successfully. To cancel an active **dwloader** process, type CTRL+C.  
   
 ## Limitations and Restrictions  
-The total size of all loads occurring concurrently must be smaller than LOG_SIZE for the database, and we recommend the total size of all concurrent loads is less than 50% of the LOG_SIZE. To achieve this size limitation, you can split large loads  into multiple batches. For more information on LOG_SIZE, see [CREATE DATABASE](./t-sql/statements/create-database-parallel-data-warehouse.md)  
+The total size of all loads occurring concurrently must be smaller than LOG_SIZE for the database, and we recommend the total size of all concurrent loads is less than 50% of the LOG_SIZE. To achieve this size limitation, you can split large loads  into multiple batches. For more information on LOG_SIZE, see [CREATE DATABASE](../t-sql/statements/create-database-parallel-data-warehouse.md)  
   
 When loading multiple files with one load command, all rejected rows are written to the same reject file. The reject file does not show which input file contains each rejected row.  
   

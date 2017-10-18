@@ -8,7 +8,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2258f8e3-e7a1-4455-8a5e-10d4d15775d6
 caps.latest.revision: 45
-author: BarbKess
+
 ---
 # Power the APS Appliance On or Off
 This topic describes how to power on or power off your Analytics Platform Systemappliance that is running Parallel Data Warehouse, and optionally running an HDInsight region. Use this topic when a Analytics Platform System appliance is moved, or to power on an appliance after a catastrophic power failure.  

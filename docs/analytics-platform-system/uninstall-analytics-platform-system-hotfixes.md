@@ -8,7 +8,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c9ab596d-3f5a-48e2-bce7-c9be99b8c23b
 caps.latest.revision: 21
-author: BarbKess
+
 ---
 # Uninstall Analytics Platform System Hotfixes
 The following steps describe how to uninstall a previously installed Analytics Platform System hotfix.  

@@ -8,7 +8,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e6223cba-2dec-4b8a-bc10-e2ef6a821fe0
 caps.latest.revision: 9
-author: BarbKess
+
 ---
 # Error Messages
 SQL Server PDW error messages report errors and problems encountered by the SQL Server PDW components and can also include SQL Server errors surfaced through SQL Server PDW. These error messages use a consistent syntax for presenting information. Understanding this syntax will allow you to identify and correct problems on SQL Server PDW.  

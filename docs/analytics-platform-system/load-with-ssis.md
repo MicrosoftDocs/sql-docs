@@ -3,8 +3,8 @@ title: "Load Data With Integration Services"
 description: "Provides reference and deployment information for loading data into SQL Server Parallel Data Warehouse by using SQL Server Integration Services (SSIS) packages."
 
 
-author: "barbkess" 
-ms.author: "barbkess"
+ 
+
 ms.date: "10/20/2016"
 ms.topic: "article"
 

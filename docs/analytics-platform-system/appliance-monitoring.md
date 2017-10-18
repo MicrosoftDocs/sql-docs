@@ -8,7 +8,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 253864fb-9178-41d2-a0ae-5dd9fd0a4fda
 caps.latest.revision: 25
-author: BarbKess
+
 ---
 # Appliance Monitoring
 This Appliance Monitoring Guide describes the tools and tasks for monitoring the SQL Server PDW appliance.  

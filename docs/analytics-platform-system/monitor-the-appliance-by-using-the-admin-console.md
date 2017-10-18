@@ -8,7 +8,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 294ba6ac-b1ff-46ea-ba32-d8b32cb4cdc2
 caps.latest.revision: 26
-author: BarbKess
+
 ---
 # Monitor the Appliance by Using the Admin Console
 The Admin Console is a SQL Server PDW web application that surfaces the appliance state, health, and performance information. Users connect to the Admin Console through Internet Explorer.  

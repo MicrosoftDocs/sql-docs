@@ -2,14 +2,14 @@
 title: "Backup Server Capacity Planning Worksheet (SQL Server PDW)"
 description: "This capacity planning worksheet helps you to determine the requirements for a backup server for performing SQL Server PDW database backup and restore operations."
 
-author: "barbkess" 
-ms.author: "barbkess"
+ 
+
 ms.date: "01/05/2017"
 ms.topic: "article"
 
 ms.assetid: 36294bf6-6dde-481f-a190-d4382b04c030
 caps.latest.revision: 6
-author: BarbKess
+
 ---
 # Backup server capacity planning worksheet
 This capacity planning worksheet helps you to determine the requirements for a backup server for performing SQL Server PDW database backup and restore operations. Use this to create your plan for purchasing new or provisioning existing backup servers.  

@@ -3,8 +3,8 @@
 title: "Data type conversion rules for dwloader"
 description: "This topic describes the input data formats and implicit data type conversions that dwloader Command-Line Loader supports when it loads data into PDW."
 
-author: "barbkess" 
-ms.author: "barbkess"
+ 
+
 ms.date: "10/20/2016"
 ms.topic: "article"
 
@@ -134,7 +134,7 @@ The following table defines the rules for loading literal values into a column o
 |Decimal literal|123344.34455|  
   
 ### float and real Data Types  
-The following table defines rules for loading literal values into a column of type **float** or **real**. Data conversion rules are the same as for SQL Server. For more information, see [Data Type Conversion (Database Engine)](./t-sql/data-types/data-type-conversion-database-engine.md) on MSDN.  
+The following table defines rules for loading literal values into a column of type **float** or **real**. Data conversion rules are the same as for SQL Server. For more information, see [Data Type Conversion (Database Engine)](../t-sql/data-types/data-type-conversion-database-engine.md) on MSDN.  
   
 |Input Data Type|Input Data Examples|  
 |-------------------|-----------------------|  

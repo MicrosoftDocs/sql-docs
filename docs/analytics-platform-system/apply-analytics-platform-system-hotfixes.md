@@ -8,7 +8,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: fca5eec9-86b8-4d20-b498-1678c367b5c8
 caps.latest.revision: 25
-author: BarbKess
+
 ---
 # Apply Analytics Platform System Hotfixes
 This topic discusses how to apply hotfixes to the Analytics Platform System software.  

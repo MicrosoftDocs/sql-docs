@@ -8,7 +8,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 92b0ffb2-0dcb-413f-bc0e-85e9e3e50f92
 caps.latest.revision: 5
-author: BarbKess
+
 ---
 # Reserved Database Names
 A reserved database name is a name that cannot be assigned to a user database in SQL Server PDW.  

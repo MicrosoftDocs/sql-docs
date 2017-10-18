@@ -8,7 +8,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 40a994f0-7eff-4db9-9572-401d6e1187a0
 caps.latest.revision: 18
-author: BarbKess
+
 ---
 # Send Telemetry Feedback to Microsoft
 Analytics Platform System has an optional telemetry feature that sends Admin Console data to Microsoft. We encourage you to enable this to help us improve the product.  

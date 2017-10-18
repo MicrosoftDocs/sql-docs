@@ -8,7 +8,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 496b4214-5891-404c-8237-c2a1e09db6d5
 caps.latest.revision: 11
-author: BarbKess
+
 ---
 # Configure SQL Server PDW for Remote Table Copies
 Describes how to configure SQL Server PDW to use the remote table copy feature to copy tables to SMP SQL Server databases on non-appliance servers.  

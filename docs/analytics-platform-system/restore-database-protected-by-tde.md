@@ -3,8 +3,8 @@
 title: "Restore a Database Protected by TDE in Parallel Data Warehouse"
 description: "Use the following steps to restore a database that is encrypted by using transparent data encryption."
 
-author: "barbkess" 
-ms.author: "barbkess"
+ 
+
 ms.date: "10/20/2016"
 ms.topic: "article"
 
@@ -55,10 +55,10 @@ RESTORE DATABASE AdventureWorksPDW2012
 ```  
   
 ## See Also  
-[BACKUP DATABASE](./t-sql/statements/backup-database-parallel-data-warehouse.md)  
-[CREATE MASTER KEY](./t-sql/statements/create-master-key-transact-sql.md) 
-[sp_pdw_add_network_credentials](./relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md)  
-[sp_pdw_database_encryption](./relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md)  
-[CREATE CERTIFICATE](./t-sql/statements/create-certificate-transact-sql.md)  
-[RESTORE DATABASE](./t-sql/statements/restore-database-parallel-data-warehouse.md)
+[BACKUP DATABASE](../t-sql/statements/backup-database-parallel-data-warehouse.md)  
+[CREATE MASTER KEY](../t-sql/statements/create-master-key-transact-sql.md) 
+[sp_pdw_add_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md)  
+[sp_pdw_database_encryption](../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md)  
+[CREATE CERTIFICATE](../t-sql/statements/create-certificate-transact-sql.md)  
+[RESTORE DATABASE](../t-sql/statements/restore-database-parallel-data-warehouse.md)
   

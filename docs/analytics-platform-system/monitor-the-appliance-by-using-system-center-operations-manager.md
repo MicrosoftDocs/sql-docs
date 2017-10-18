@@ -8,7 +8,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: de6cbf6e-f2e9-4877-94df-9c13b1182d56
 caps.latest.revision: 14
-author: BarbKess
+
 ---
 # Monitor the Appliance by Using System Center Operations Manager
 This describes how to use System Center Operations Manager to monitor SQL Server PDW and HDInsight.  

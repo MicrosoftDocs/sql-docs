@@ -8,7 +8,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f4f612b9-f320-4391-952b-d3696cfbe2e2
 caps.latest.revision: 17
-author: BarbKess
+
 ---
 # Hardware Installation
 This topic describes how to move, unpack, and install the hardware for your SQL Server PDW appliance. This topic is informational only and is intended to help you understand the process. Your appliance should be unpacked, installed, and verified before it is turned over to you. Customer participation is required for items such as data center access, electrical power, and Ethernet connections.  

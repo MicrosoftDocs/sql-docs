@@ -8,7 +8,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 6f14ac21-a086-4c05-861f-0a12bf278259
 caps.latest.revision: 43
-author: BarbKess
+
 ---
 # Configure PolyBase Connectivity to External Data
 Explains how to configure PolyBase in SQL Server PDW to connect to external Hadoop or Microsoft Azure storage blob data sources. Use PolyBase to run queries that integrate data from multiple sources, including Hadoop, Azure blob storage, and SQL Server PDW.  
@@ -19,7 +19,7 @@ Explains how to configure PolyBase in SQL Server PDW to connect to external Hado
   
     ![hadoop connectivity setting](./media/configure-polybase-connectivity-to-external-data/APS_PDW_sp_configure.png "APS_PDW_sp_configure")  
   
-2.  Decide which Hadoop connectivity setting you need and whether you need to change the current setting. This option applies to the entire SQL Server PDW region. For a full list of the configuration settings and versions, see [sp_configure](./relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
+2.  Decide which Hadoop connectivity setting you need and whether you need to change the current setting. This option applies to the entire SQL Server PDW region. For a full list of the configuration settings and versions, see [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
   
 3.  To change the 'hadoop connectivity' setting, run sp_configure with RECONFIGURE. Here are some examples.  
   

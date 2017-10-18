@@ -3,8 +3,8 @@
 title: "Parallel Data Warehouse overview"
 description: "This topic explains the appliance software and the non-appliance software components of Analytics Platform System."
 
-author: "barbkess" 
-ms.author: "barbkess"
+ 
+
 ms.date: "01/05/2017"
 ms.topic: "article"
 

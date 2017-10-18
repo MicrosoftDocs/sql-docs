@@ -3,8 +3,8 @@
 title: "Analytics Platform System high availability"
 description: "Describes how Analytics Platform System (APS) is architected for high availability."
 
-author: "barbkess" 
-ms.author: "barbkess"
+ 
+
 ms.date: "10/20/2016"
 ms.topic: "article"
 

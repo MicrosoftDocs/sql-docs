@@ -8,7 +8,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 69063b1a-a8f3-453a-83ab-afbe7eb4f463
 caps.latest.revision: 11
-author: BarbKess
+
 ---
 # Workload Management
 SQL Server PDW’s workload management capabilities allow users and administrators to assign requests to pre-set configurations of memory, and concurrency. Use workload management to improve performance of your workload, either consistent or mixed, by allowing requests to have the appropriate resources without starving any requests forever.  
@@ -136,17 +136,17 @@ The resource classes govern memory and concurrency allocations.  They do not gov
 ## <a name="Metadata"></a>Metadata  
 DMVs that contain information about resource classes and resource class members.  
   
--   [sys.server_role_members](./relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)  
+-   [sys.server_role_members](../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)  
   
--   [sys.server_principals](./relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)  
+-   [sys.server_principals](../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)  
   
 DMVs that contain information about the state of requests and the resources they require:  
   
--   [sys.dm_pdw_lock_waits](./relational-databases/system-dynamic-management-views/sys-dm-pdw-lock-waits-transact-sql.md)  
+-   [sys.dm_pdw_lock_waits](../relational-databases/system-dynamic-management-views/sys-dm-pdw-lock-waits-transact-sql.md)  
   
--   [sys.dm_pdw_resource_waits](./relational-databases/system-dynamic-management-views/sys-dm-pdw-resource-waits-transact-sql.md)  
+-   [sys.dm_pdw_resource_waits](../relational-databases/system-dynamic-management-views/sys-dm-pdw-resource-waits-transact-sql.md)  
   
-Related system views exposed from the SQL Server DMVs on the Compute nodes. See [SQL Server Dynamic Management Views](./relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) for links to these DMVs on MSDN.  
+Related system views exposed from the SQL Server DMVs on the Compute nodes. See [SQL Server Dynamic Management Views](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) for links to these DMVs on MSDN.  
   
 -   sys.dm_pdw_nodes_resource_governor_resource_pools  
   

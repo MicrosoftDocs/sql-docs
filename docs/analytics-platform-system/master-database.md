@@ -8,7 +8,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c71617c0-6689-4f52-81c6-58f4cf7c7377
 caps.latest.revision: 8
-author: BarbKess
+
 ---
 # master Database
 The SQL Server PDW master database stores appliance-level login information and the database catalog. It is a SQL Server master database that resides on the Control node. As such, it provides similar functionality to SQL Server PDW as master provides to SQL Server.  
@@ -38,7 +38,7 @@ You *cannot:*
   
 |Task|Description|  
 |--------|---------------|  
-|Create a full backup of master.|Example:<br /><br />`BACKUP DATABASE master TO backup_directory;`<br /><br />For more information, see [BACKUP DATABASE](./t-sql/statements/backup-database-parallel-data-warehouse.md).|  
+|Create a full backup of master.|Example:<br /><br />`BACKUP DATABASE master TO backup_directory;`<br /><br />For more information, see [BACKUP DATABASE](../t-sql/statements/backup-database-parallel-data-warehouse.md).|  
 |Restore the master database|To restore the master database, use the [Restore the Master Database](restore-the-master-database.md) page in the Configuration Manager tool.|  
 |View database catalog information.|`SELECT * FROM master.sys.databases;`|  
 |View system-wide login and permission information.|`SELECT * FROM master.sys.server_permissions;`<br /><br />`SELECT * FROM master.sys.server_principals;`<br /><br />`SELECT * FROM master.sys.sql_logins;`|  

@@ -8,7 +8,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 516d05a9-b791-4ad3-b8cf-ba34a854e309
 caps.latest.revision: 25
-author: BarbKess
+
 ---
 # Appliance Management Tasks
 This guide describes how to perform appliance administration tasks for SQL Server PDW.  

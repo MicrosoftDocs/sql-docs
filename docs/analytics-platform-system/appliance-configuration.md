@@ -8,7 +8,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 064e7485-7026-4acf-8084-f5d30757d177
 caps.latest.revision: 43
-author: BarbKess
+
 ---
 # Appliance Configuration
 Provides checklists for the tasks required to configure Analytics Platform System for your own environment. These configuration tasks are necessary before you can use the appliance.  

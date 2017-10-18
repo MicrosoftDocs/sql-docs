@@ -8,7 +8,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 97a9c715-2763-417d-b45c-bb0180759e47
 caps.latest.revision: 20
-author: BarbKess
+
 ---
 # Set Admin Password for Logging on to AD Nodes in Directory Services Restore Mode (DSRM)
 Directory Services Restore Mode (DSRM) is a boot mode for repairing or recovering Active Directory Domain Services (AD DS). It is used to log on to the appliance AD nodes after AD DS has failed or when AD DS needs to be restored. The password for DSRM was initialized during the appliance setup at the hardware vendor site and should be changed by the appliance administrator. Analytics Platform System has two AD DS (domain controllers); ***appliance_domain*-AD01** and ***appliance_domain*-AD02**. For each appliance AD node, change the DSRM password using the following steps.  

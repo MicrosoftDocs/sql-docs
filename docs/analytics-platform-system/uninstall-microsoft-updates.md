@@ -8,7 +8,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: df61570a-210d-4154-822f-98acd721f075
 caps.latest.revision: 19
-author: BarbKess
+
 ---
 # Uninstall Microsoft Updates
 This topic describes how to uninstall a previously installed Microsoft update on the Analytics Platform System appliance.  

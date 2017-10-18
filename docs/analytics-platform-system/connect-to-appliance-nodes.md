@@ -8,7 +8,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f975aa91-c816-4b29-89bf-923ab5b4abb4
 caps.latest.revision: 19
-author: BarbKess
+
 ---
 # Connect to Appliance Nodes
 This topic explains the various ways to connect to each node in the Analytics Platform System appliance.  

@@ -8,7 +8,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7748d3da-0b7c-4ec6-9c22-4897758ba573
 caps.latest.revision: 17
-author: BarbKess
+
 ---
 # PDW and Appliance Fabric Physical Components
 Names and descriptions for the PDW and appliance fabric physical components. The PDW Region contains all of these components.  

@@ -8,7 +8,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5840033d-2dc6-4576-8a5f-067e2a58b170
 caps.latest.revision: 22
-author: BarbKess
+
 ---
 # tempdb Database
 **tempdb** is a SQL Server PDW system database that stores local temporary tables for user databases. Temporary tables are often used to improve query performance. For example, you can use a temporary table to modularize a script, and reuse computed data.  
@@ -80,7 +80,7 @@ Any user can create temporary objects in tempdb. Users can only access their own
   
 |Tasks|Description|  
 |---------|---------------|  
-|Create a table in **tempdb**.|You can create a user temporary table with the CREATE TABLE and CREATE TABLE AS SELECT statements. For more information, see [CREATE TABLE](./t-sql/statements/create-table-azure-sql-data-warehouse.md) and [CREATE TABLE AS SELECT](./t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md).|  
+|Create a table in **tempdb**.|You can create a user temporary table with the CREATE TABLE and CREATE TABLE AS SELECT statements. For more information, see [CREATE TABLE](../t-sql/statements/create-table-azure-sql-data-warehouse.md) and [CREATE TABLE AS SELECT](../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md).|  
 |View a list of existing tables in **tempdb**.|`SELECT * FROM tempdb.sys.tables;`|  
 |View a list of existing columns in **tempdb**.|`SELECT * FROM tempdb.sys.columns;`|  
 |View a list of existing objects in **tempdb**.|`SELECT * FROM tempdb.sys.objects;`|  

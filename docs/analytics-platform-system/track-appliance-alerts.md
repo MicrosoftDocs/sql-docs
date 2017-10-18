@@ -8,7 +8,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 631345d9-4967-461a-8922-e5f8fd33f48f
 caps.latest.revision: 14
-author: BarbKess
+
 ---
 # Track Appliance Alerts
 This topic explains how to use the Admin Console and system views to track alerts in a SQL Server PDW appliance.  
@@ -16,7 +16,7 @@ This topic explains how to use the Admin Console and system views to track alert
 ## To Track Appliance Alerts  
 SQL Server PDW creates alerts for hardware and software issues that need attention. Each alert contains a title and a description of the issue.  
   
-SQL Server PDW logs alerts in the [sys.dm_pdw_component_health_alerts](./relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-alerts-transact-sql.md) DMV. The system retains a limit of 10,000 alerts and deletes the oldest alert first when the limit is exceeded.  
+SQL Server PDW logs alerts in the [sys.dm_pdw_component_health_alerts](../relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-alerts-transact-sql.md) DMV. The system retains a limit of 10,000 alerts and deletes the oldest alert first when the limit is exceeded.  
   
 ### View Alerts by Using the Admin Console  
 There is an **Alerts** tab for the PDW region, the HDI region, and for the fabric region of the appliance. After failover occurs, the failover event is included in the number of alerts on the page. There is a page for the PDW region, the HDI region, and for the fabric region of the appliance. Each Health page has a tab. To learn more about an alert, click the **Health** page, the **Alerts** tab, and then click an alert.  
@@ -32,7 +32,7 @@ On the **Alerts** page:
 -   To view details about the node that raised the alert, click on the node name.  
   
 ### View Alerts by Using the System Views  
-To view alerts by using system views, query [sys.dm_pdw_component_health_active_alerts](./relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-active-alerts-transact-sql.md). This DMV shows alerts that have not been corrected. For help with triaging alerts and errors, use the [sys.dm_pdw_errors](./relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md) DMV.  
+To view alerts by using system views, query [sys.dm_pdw_component_health_active_alerts](../relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-active-alerts-transact-sql.md). This DMV shows alerts that have not been corrected. For help with triaging alerts and errors, use the [sys.dm_pdw_errors](../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md) DMV.  
   
 The following example is a common query for viewing the current alerts.  
   

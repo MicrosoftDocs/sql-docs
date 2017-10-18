@@ -8,7 +8,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 10934f62-4acf-4ca5-b550-f426ba81fe11
 caps.latest.revision: 23
-author: BarbKess
+
 ---
 # Appliance Installation and Configuration Overview
 Walks SQL Server PDW appliance administrators through the initial steps to set up and get started using your new SQL Server PDW appliance.  
@@ -73,4 +73,4 @@ After you have completed all of the preceding steps, your appliance is ready for
 |Monitor queries and appliance users|Use the Admin Console and other resources to monitor the queries and appliance users. See [Monitor the Appliance by Using the Admin Console &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md)<!-- MISSING LINKS and [User Sessions &#40;SQL Server PDW&#41;](../sqlpdw/user-sessions-sql-server-pdw.md)-->.|  
 |Load data to SQL Server PDW|Load data to your appliance. <!-- MISSING LINKS See [Load &#40;SQL Server PDW&#41;](../sqlpdw/load-sql-server-pdw.md).-->|  
 |Create a disaster recovery plan|Plan how you will protect your data from hardware failures or data overwrites. Create a plan using regular backups and restore plans in case of data corruption or loss. <!-- MISSING LINKS See [Create a Disaster Recovery Plan &#40;SQL Server PDW&#41;](../sqlpdw/create-a-disaster-recovery-plan-sql-server-pdw.md).-->|  
-|Monitor the appliance|Monitor the appliance state, health, and performance by using system views, logs, and the Admin Console. Correct or report any problems. See [Monitor Appliance Health State &#40;Analytics Platform System&#41;](./relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-status-transact-sql.md).|  
+|Monitor the appliance|Monitor the appliance state, health, and performance by using system views, logs, and the Admin Console. Correct or report any problems. See [Monitor Appliance Health State &#40;Analytics Platform System&#41;](../relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-status-transact-sql.md).|  

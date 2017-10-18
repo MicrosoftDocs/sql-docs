@@ -2,8 +2,8 @@
 title: "PDW Certificate Provisioning (Analytics Platform System)"
 description: "The PDW Certificate Provisioning page of the Analytics Platform System Configuration Manager imports or removes the certificate used by PDW."
 
-author: "barbkess" 
-ms.author: "barbkess"
+ 
+
 ms.date: "01/05/2017"
 ms.topic: "article"
 

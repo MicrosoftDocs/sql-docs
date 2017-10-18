@@ -8,7 +8,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2bce301a-704c-4236-a0a1-851bd17e2b6c
 caps.latest.revision: 11
-author: BarbKess
+
 ---
 # Information to Obtain from Your IHV
 When your independent hardware vendor (IHV) delivers your new SQL Server PDW appliance to you, they will also deliver information on the appliance hardware and the configuration they have performed on your appliance. You will need this information to administer your appliance.  

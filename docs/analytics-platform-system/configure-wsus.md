@@ -3,8 +3,8 @@
 title: "Configure Windows Server Update Services (WSUS) "
 description: "Configure Windows Server Update Services (WSUS) for Analytics Platform System (APS) and SQL Server Parallel Data Warehouse (PDW)."
 
-author: "barbkess" 
-ms.author: "barbkess"
+ 
+
 ms.date: "01/05/2017"
 ms.topic: "article"
 

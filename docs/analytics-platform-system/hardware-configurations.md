@@ -3,8 +3,8 @@
 title: "Hardware Configurations (Analytics Platform System)"
 description: "The Analytics Platform System (APS) hardware is architected with scalable units so that you buy the right amount of processing and storage according to your business requirements."
 
-author: "barbkess" 
-ms.author: "barbkess"
+ 
+
 ms.date: "01/05/2017"
 ms.topic: "article"
 

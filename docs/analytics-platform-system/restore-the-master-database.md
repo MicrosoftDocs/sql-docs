@@ -8,7 +8,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7870021a-0d89-422e-b8ea-1cc95b45c139
 caps.latest.revision: 11
-author: BarbKess
+
 ---
 # Restore the Master Database
 The **Restore Master** page of the SQL Server PDW Configuration Manager enables you to restore the master database from a backup.  

@@ -8,7 +8,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b914ba9a-e4ec-4750-934a-c447fc8909e3
 caps.latest.revision: 22
-author: BarbKess
+
 ---
 # Launch the Configuration Manager
 This topic provides instructions for launching the **Configuration Manager** for the Analytics Platform System appliance.  

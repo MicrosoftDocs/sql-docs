@@ -8,7 +8,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 062c0e3d-f7d0-44f1-aeab-a9bd17dc6fdd
 caps.latest.revision: 7
-author: BarbKess
+
 ---
 # Determine Polling Frequency
 This topic explains how to determine the polling frequency for SQL Server PDW appliance alerts.  

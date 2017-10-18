@@ -8,7 +8,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1e001117-a1b6-4357-bf25-e85aba3f1cf0
 caps.latest.revision: 21
-author: BarbKess
+
 ---
 # Determine Which Cluster Node Failed
 This topic describes how to determine the name of the SQL Server PDW node that failed after a cluster failover has occurred and a cluster failover alert has been raised. As part of troubleshooting a cluster failover, you must determine the name of the node that failed before contacting Microsoft to help resolve the problem.  
@@ -25,7 +25,7 @@ After a cluster failover, when SQL Server PDW reports on node status, the passiv
 1.  Open the Admin Console. For more information about the Admin Console, see [Monitor the Appliance by Using the Admin Console &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md). After failover occurs, the failover event is included in the number of alerts on the **HEALTH** page. There is an **HEALTH** page for the PDW region, the HDI region, and for the fabric region of the appliance. Each Health page has an **ALERTS** tab. To learn more about an alert, click the Health page, the Alerts tab, and then click an alert.  
   
 ## <a name="SystemView"></a>System View Solution  
-The following SQL statement shows how to use the [sys.dm_pdw_component_health_active_alerts](./relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-active-alerts-transact-sql.md) system view to find the name of the server that failed.  
+The following SQL statement shows how to use the [sys.dm_pdw_component_health_active_alerts](../relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-active-alerts-transact-sql.md) system view to find the name of the server that failed.  
   
 ```  
 SELECT  

@@ -3,8 +3,8 @@
 title: "Loading Server Capacity Planning Worksheet (SQL Server PDW)"
 description: "This capacity planning worksheet helps you to determine the requirements for a loading server for loading data into SQL Server PDW."
 
-author: "barbkess" 
-ms.author: "barbkess"
+ 
+
 ms.date: "01/05/2017"
 ms.topic: "article"
 

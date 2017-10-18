@@ -8,7 +8,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 91132e3c-3137-4670-adaa-8a7b234fb8d2
 caps.latest.revision: 12
-author: BarbKess
+
 ---
 # Monitor Appliance Health State
 This topic explains how to monitor the state of a SQL Server PDW appliance by using the Admin Console, or by directly querying the SQL Server PDW Dynamic Management Views.  
@@ -28,7 +28,7 @@ To retrieve component status by using the Admin Console:
     ![PDW Admin Console State](./media/monitor-appliance-health-state/SQL_Server_PDW_AdminConsol_State.png "SQL_Server_PDW_AdminConsol_State")  
   
 ### Monitor Component Status By Using System Views  
-To retrieve component status by using system views, use [sys.dm_pdw_component_health_status](./relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-status-transact-sql.md). For example, the following query retrieves the status for all components.  
+To retrieve component status by using system views, use [sys.dm_pdw_component_health_status](../relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-status-transact-sql.md). For example, the following query retrieves the status for all components.  
   
 ```  
 SELECT   

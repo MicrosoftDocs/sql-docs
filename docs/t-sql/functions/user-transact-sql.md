@@ -144,27 +144,6 @@ Mario
 DBO
 ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### D. Using USER to return the database user name  
- The following example declares a variable as `char`, assigns the current value of USER to it, and then prints the variable with a text description.  
-  
-```  
-DECLARE @usr char(30)  
-SET @usr = user  
-SELECT 'The current user''s database username is: '+ @usr  
-GO  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
- ```
------------------------------------------------------------------------  
-The current user's database username is: dbo  
-  
-(1 row(s) affected)
-```  
-  
 ## See Also  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   

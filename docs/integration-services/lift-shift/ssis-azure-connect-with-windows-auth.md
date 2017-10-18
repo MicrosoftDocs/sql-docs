@@ -15,17 +15,34 @@ This article describes how to configure the SSIS Catalog on Azure SQL Database t
 The domain credentials that you provide when you follow the steps in this article apply to all package executions on the SQL Database instance until you change or remove the credentials.
 
 ## Prerequisite
-Before you set up domain credentials for Windows Authentication, check whether a non-domain-joined computer can connect to your on-premises data sources in `runas` mode. For example, to check whether you can connect to an on-premises SQL Server, do the following things:
+Before you set up domain credentials for Windows Authentication, check whether a non-domain-joined computer can connect to your on-premises data sources in `runas` mode.
 
-1.  To run this test, fFind a non-domain-joined computer.
+### Connecting to SQL Server
+To check whether you can connect to an on-premises SQL Server, do the following things:
+
+1.  To run this test, find a non-domain-joined computer.
 
 2.  On the non-domain-joined computer, run the following command to start SQL Server Management Studio (SSMS) with the domain credentials that you want to use:
 
-   ```cmd
-   runas.exe /netonly /user:<domain>\<username> SSMS.exe
-   ```
+    ```cmd
+    runas.exe /netonly /user:<domain>\<username> SSMS.exe
+    ```
 
 3.  From SSMS, check whether you can connect to the on-premises SQL Server that you want to use.
+
+### Connecting to a file share
+To check whether you can connect to an on-premises file share, do the following things:
+
+1.  To run this test, find a non-domain-joined computer.
+
+2.  On the non-domain-joined computer, run the following command. This command opens a command prommpt with the domain credentials that you want to use, and then tests connectivity to the file share by getting a directory listing.
+
+    ```cmd
+    runas.exe /netonly /user:<domain>\<username> cmd.exe
+    dir \\fileshare
+    ```
+
+3.  Check whether the directory listing is returned for the on-premises file share that you want to use.
 
 ## Provide domain credentials
 To provide domain credentials that let packages use Windows Authentication to connect to on-premises data sources, do the following things:

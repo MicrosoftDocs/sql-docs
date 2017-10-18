@@ -29,7 +29,7 @@ manager: "jhubbard"
  This topic identifies the determinism of built-in system functions and the effect on the deterministic property of user-defined functions when it contains a call to extended stored procedures.  
   
 ## Built-in Function Determinism  
- You cannot influence the determinism of any built-in function. Each built-in function is deterministic or nondeterministic based on how the function is implemented by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For example, specifying an ORDER BY clause in a query does not change the determinism of a function that used in that query.  
+ You cannot influence the determinism of any built-in function. Each built-in function is deterministic or nondeterministic based on how the function is implemented by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For example, specifying an ORDER BY clause in a query does not change the determinism of a function that is used in that query.  
   
  All of the string built-in functions are deterministic. For a list of these functions, see [String Functions &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md).  
   

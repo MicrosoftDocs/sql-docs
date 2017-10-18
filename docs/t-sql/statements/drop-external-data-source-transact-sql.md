@@ -60,14 +60,6 @@ SELECT * FROM sys.external_data_sources;
 DROP EXTERNAL DATA SOURCE mydatasource;  
 ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### B. Using basic syntax  
-  
-```  
-DROP EXTERNAL DATA SOURCE mydatasource;  
-```  
-  
 ## See Also  
  [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)  
   

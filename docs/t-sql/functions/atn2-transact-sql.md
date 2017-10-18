@@ -60,24 +60,6 @@ The ATN2 of the angle is: 0.265345
 (1 row(s) affected)  
 ```  
   
-## Examples:
- [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 
-
-The following example calculates the `ATN2` for the specified `x` and `y` components.
-  
-```sql
-DECLARE @x float = 35.175643, @y float = 129.44;  
-SELECT 'The ATN2 of the angle is: ' + CONVERT(varchar,ATN2(@x,@y ));  
-GO  
-```  
-  
-[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
-  
-```sql
-The ATN2 of the angle is: 0.265345                         
-(1 row(s) affected)  
-```  
-  
 ## See also
 [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [float and real &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md)  

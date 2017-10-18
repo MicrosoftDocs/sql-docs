@@ -664,18 +664,7 @@ WHERE ManagerID = 5;
   
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### N. Using a simple FROM clause  
- The following example retrieves the `SalesTerritoryID` and `SalesTerritoryRegion` columns from the `DimSalesTerritory` table.  
-  
-```tsql
--- Uses AdventureWorks  
-  
-SELECT SalesTerritoryKey, SalesTerritoryRegion  
-FROM DimSalesTerritory  
-ORDER BY SalesTerritoryKey;  
-```  
-  
-### O. Using the INNER JOIN syntax  
+### N. Using the INNER JOIN syntax  
  The following example returns the `SalesOrderNumber`, `ProductKey`, and `EnglishProductName` columns from the `FactInternetSales` and `DimProduct` tables where the join key, `ProductKey`, matches in both tables. The `SalesOrderNumber` and `EnglishProductName` columns each exist in one of the tables only, so it is not necessary to specify the table alias with these columns, as is shown; these aliases are included for readability. The word **AS** before an alias name is not required but is recommended for readability and to conform to the ANSI standard.  
   
 ```tsql
@@ -711,7 +700,7 @@ WHERE fis.SalesOrderNumber > 'SO50000'
 ORDER BY fis.SalesOrderNumber;  
 ```  
   
-### P. Using the LEFT OUTER JOIN and RIGHT OUTER JOIN syntax  
+### O. Using the LEFT OUTER JOIN and RIGHT OUTER JOIN syntax  
  The following example joins the `FactInternetSales` and `DimProduct` tables on the `ProductKey` columns. The left outer join syntax preserves the unmatched rows from the left (`FactInternetSales`) table. Since the `FactInternetSales` table does not contain any `ProductKey` values that do not match the `DimProduct` table, this query returns the same rows as the first inner join example above.  
   
 ```tsql
@@ -760,7 +749,7 @@ RIGHT OUTER JOIN DimSalesTerritory AS dst
 ORDER BY fis.SalesOrderNumber;  
 ```  
   
-### Q. Using the FULL OUTER JOIN syntax  
+### P. Using the FULL OUTER JOIN syntax  
  The following example demonstrates a full outer join, which returns all rows from both joined tables but returns NULL for values that do not match from the other table.  
   
 ```tsql
@@ -785,7 +774,7 @@ FULL JOIN FactInternetSales AS fis
 ORDER BY fis.SalesOrderNumber;  
 ```  
   
-### R. Using the CROSS JOIN syntax  
+### Q. Using the CROSS JOIN syntax  
  The following example returns the cross-product of the `FactInternetSales` and `DimSalesTerritory` tables. A list of all possible combinations of `SalesOrderNumber` and  `SalesTerritoryKey` are returned. Notice the absence of the `ON` clause in the cross join query.  
   
 ```tsql
@@ -797,7 +786,7 @@ CROSS JOIN FactInternetSales AS fis
 ORDER BY fis.SalesOrderNumber;  
 ```  
   
-### S. Using a derived table  
+### R. Using a derived table  
  The following example uses a derived table (a `SELECT` statement after the `FROM` clause) to return the `CustomerKey` and `LastName` columns of all customers in the `DimCustomer` table with `BirthDate` values later than January 1, 1970 and the last name ‘Smith’.  
   
 ```tsql
@@ -811,7 +800,7 @@ WHERE LastName = 'Smith'
 ORDER BY LastName;  
 ```  
   
-### T. REDUCE join hint example  
+### S. REDUCE join hint example  
  The following example uses the `REDUCE` join hint to alter the processing of the derived table within the query. When using the `REDUCE` join hint in this query, the `fis.ProductKey` is projected, replicated and made distinct, and then joined to `DimProduct` during the shuffle of `DimProduct` on `ProductKey`. The resulting derived table is distributed on `fis.ProductKey`.  
   
 ```tsql
@@ -827,7 +816,7 @@ FROM
 ORDER BY SalesOrderNumber;  
 ```  
   
-### U. REPLICATE join hint example  
+### T. REPLICATE join hint example  
  This next example shows the same query as the previous example, except that a `REPLICATE` join hint is used instead of the `REDUCE` join hint. Use of the `REPLICATE` hint causes the values in the `ProductKey` (joining) column from the `FactInternetSales` table to be replicated to all nodes. The `DimProduct` table is joined to the replicated version of those values.  
   
 ```tsql
@@ -843,7 +832,7 @@ FROM
 ORDER BY SalesOrderNumber;  
 ```  
   
-### V. Using the REDISTRIBUTE hint to guarantee a Shuffle move for a distribution incompatible join  
+### U. Using the REDISTRIBUTE hint to guarantee a Shuffle move for a distribution incompatible join  
  The following query uses the REDISTRIBUTE query hint on a distribution incompatible join. This guarantees the query optimizer will use a Shuffle move in the query plan. This also guarantees the query plan will not use a Broadcast move which moves a distributed table to a replicated table.  
   
  In the following example, the REDISTRIBUTE hint forces a Shuffle move on the FactInternetSales table because ProductKey is the distribution column for DimProduct, and is not the distribution column for FactInternetSales.  

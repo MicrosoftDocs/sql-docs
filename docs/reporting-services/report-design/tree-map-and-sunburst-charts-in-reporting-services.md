@@ -1,5 +1,5 @@
 ---
-title: "Treemap and sunburst charts in Reporting Services | Microsoft Docs"
+title: "Treemap and sunburst charts in SQL Server Reporting Services | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
 ms.date: "08/31/2015"
@@ -19,7 +19,7 @@ manager: "erikre"
 # Treemap and sunburst charts in Reporting Services
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
-The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] treemap and sunburst visualizations are great for visually representing hierarchical data. This article is an overview of how to add a treemap or sunburst chart to a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report. The article also includes an AdventureWorks sample query to help you get started.  
+The SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] treemap and sunburst visualizations are great for visually representing hierarchical data. This article is an overview of how to add a treemap or sunburst chart to a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report. The article also includes an AdventureWorks sample query to help you get started.  
   
 ##  <a name="bkmk_treemap_chart"></a> Treemap chart  
 
@@ -42,11 +42,11 @@ For example,  in the following image of the sample treemap, the Southwest territ
   
 3.  Add the following fields from the sample data:  
   
-    1. **Values**: LineTotal
-    2. **Category Groups** (in the following order):
+    * **Values**: LineTotal
+    * **Category Groups** (in the following order):
         1. CategoryName
         2. SubcategoryName
-    3. **Series Groups**: TerritoryName  
+    * **Series Groups**: TerritoryName  
 
     ![ssrs_treemap_example_properties](../../reporting-services/report-design/media/ssrs-treemap-example-properties.png "ssrs_treemap_example_properties")
   
@@ -66,7 +66,7 @@ For example,  in the following image of the sample treemap, the Southwest territ
   
 6.  Change the default chart title to **Categorized Sales by Territory**.  
   
-7.  The number of label values that are displayed are affected by the size of the font, the size of the overall chart area, and the size of specific rectangles. To see more labels, change the **Label Font** property of **LineTotal** from the default to **8pt**.  
+7.  The number of label values that are displayed are affected by the size of the font, the size of the overall chart area, and the size of specific rectangles. To see more labels, change the **Label Font** property of **LineTotal** to **10pt** from the default of **8pt**.  
   
   
 ##  <a name="bkmk_sunburst_chart"></a> Sunburst chart  
@@ -87,12 +87,12 @@ In a sunburst chart, the hierarchy is represented by a series of  circles. The h
   
 3.  Add the following fields from the sample data:  
 
-    1. **Values**: LineTotal
-    2. **Category Groups** (in the following order):
+    * **Values**: LineTotal
+    * **Category Groups** (in the following order):
         1. CategoryName
         2. SubcategoryName
         3. SalesReasonName
-    3. **Series Groups**: TerritoryName  
+    * **Series Groups**: TerritoryName  
 
     ![ssrs_treemap_example_properties](../../reporting-services/report-design/media/ssrs-treemap-example-properties.png "ssrs_treemap_example_properties")
   
@@ -100,7 +100,7 @@ In a sunburst chart, the hierarchy is represented by a series of  circles. The h
   
 5.  Change the default chart title to **Categorized Sales by Territory, with sales reason**.  
   
-6. To add the values of the category groups to the sunburst as labels, set the label properties **Visible=true** and **UseValueAsLabel=false**.<br /><br /> The label values that are displayed are affected by the size of the font, the size of the overall chart area, and the size of specific rectangles.  To see more labels, change the **Label Font** property of **LineTotal** from the default to **8pt**.
+6. To add the values of the category groups to the sunburst as labels, set the label properties **Visible=true** and **UseValueAsLabel=false**.<br /><br /> The label values that are displayed are affected by the size of the font, the size of the overall chart area, and the size of specific rectangles.  To see more labels, change the **Label Font** property of **LineTotal** to **10pt** from the default of **8pt**.
 
     ![ssrs_sunburst_linetotalproperties](../../reporting-services/report-design/media/ssrs-sunburst-linetotalproperties.png "ssrs_sunburst_linetotalproperties")
   
@@ -114,11 +114,10 @@ In a sunburst chart, the hierarchy is represented by a series of  circles. The h
   
  The query returns AdventureWorks sales order detail data with sales territory, product category,  product subcategory, and sales reason data.  
   
-1.  **Get the Data**.  
+1.  **Get the data**.  
   
-     The query in this section is based on the AdventureWorks database, which is available for download from [AdventureWorks 2014 full database backup](https://msftdbprodsamples.codeplex.com/releases/view/125550).  
+     The query in this section is based on the AdventureWorks database, which is available for download from GitHub: [AdventureWorks 2016 full database backup](https://github.com/Microsoft/sql-server-samples/releases).  
   
-     For more information about how to install the database, see [How to install AdventureWorks 2014 sample databases](https://msftdbprodsamples.codeplex.com/releases/view/125550).  
   
 2.  **Create a data source**.  
   
@@ -131,7 +130,7 @@ In a sunburst chart, the hierarchy is represented by a series of  circles. The h
     4.  Enter the connection string to your server and database. For example:  
   
         ```  
-        Data Source=[server name];Initial Catalog=AdventureWorks2014  
+        Data Source=[server name];Initial Catalog=AdventureWorks2016  
         ```  
   
     5.  To verify the connection, select the **Test Connection** button, and then select **OK**.  
@@ -181,6 +180,6 @@ In a sunburst chart, the hierarchy is represented by a series of  circles. The h
 * [Show ToolTips on a series &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md)
 * [Tutorial: Treemaps in Power BI](https://support.powerbi.com/knowledgebase/articles/556200-tutorial-treemaps-in-power-bi)
 * [Treemap: Microsoft Research Data Visualization Apps for Office](http://research.microsoft.com/en-us/projects/msrdatavis/treemap.aspx)  
-<br><br>  
+<br>  
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
 

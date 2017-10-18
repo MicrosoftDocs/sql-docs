@@ -15,7 +15,7 @@ This article describes how to configure the SSIS Catalog on Azure SQL Database t
 The domain credentials that you provide when you follow the steps in this article apply to all package executions on the SQL Database instance until you change or remove the credentials.
 
 ## Prerequisite
-Before you set up domain credentials for Windows Authentication, check whether a non-domain-joined computer can connect to your on-premises data sources in `runas` mode.
+Before you set up domain credentials for Windows Authentication, check whether a non-domain-joined computer can connect to your on-premises data source in `runas` mode.
 
 ### Connecting to SQL Server
 To check whether you can connect to an on-premises SQL Server, do the following things:
@@ -85,6 +85,7 @@ To clear and remove the credentials that you provided as described in this artic
     ```sql
     catalog.set_execution_credential @user='', @domain='', @password=''
     ```
+
 ## Connect to file shares
 You can use Windows authentication to connect to file shares in the same virtual network as the Azure SSIS Integration Runtime both on premises and on Azure virtual machines.
 

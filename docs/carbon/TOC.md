@@ -21,22 +21,16 @@
 ### [Database Size Insight](tutorial-db-size-sql-server.md)
 ## [Backup and restore](tutorial-backup-restore-sql-server.md)
 # Samples
-## [Snippet samples]()
-# Concepts
-## [Dashboards and Insights](dashboards.md)
-## [Server groups](server-groups.md)
-## [Integrated terminal](integrated-terminal.md)
-## [BCDR]()
+## Snippet samples
 # How-to guides
 ## SQL Editor
-## Server Groups
-## [Integrated PowerShell terminal](integrated-terminal.md#powershell)
-## [Integrated BASH terminal](integrated-terminal.md#bash)
+## [Dashboards and Insights](dashboards.md)
+## [Server groups](server-groups.md)
+## [Integrated terminal (PowerShell, Bash)](integrated-terminal.md)
 ## Smart Snippets
 ## Tasks
 # Reference
 ## [Settings](settings.md)
-## [Commands](commands.md)
 ## [Keyboard shortcuts](key-bindings.md)
 # Resources
 ## [Carbon GitHub repo](https://www.github.com/Microsoft/Carbon)

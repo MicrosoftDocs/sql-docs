@@ -23,7 +23,7 @@
 # Samples
 ## Snippet samples
 # How-to guides
-## SQL Editor
+## [Create and run queries](code-editor.md)
 ## [Dashboards and Insights](dashboards.md)
 ## [Server groups](server-groups.md)
 ## [Integrated terminal (PowerShell, Bash)](integrated-terminal.md)

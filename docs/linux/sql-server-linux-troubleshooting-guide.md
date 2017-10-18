@@ -115,6 +115,29 @@ For SQL dumps
    ```bash
    sudo ls /var/opt/mssql/log | grep .mdmp 
    ```
+   
+## Start SQL Server in Minimal Configuration or in Single User Mode
+
+### Start SQL Server in Minimal Configuration Mode
+This is useful if the setting of a configuration value (for example, over-committing memory) has prevented the server from starting.
+  
+   ```bash
+   sudo -u mssql /opt/mssql/bin/sqlservr -f
+   ```
+
+### Start SQL Server in Single User Mode
+Under certain circumstances, you may have to start an instance of SQL Server in single-user mode by using the startup option -m. For example, you may want to change server configuration options or recover a damaged master database or other system database. For example, you may want to change server configuration options or recover a damaged master database or other system database   
+
+Start SQL Server in Single User Mode
+   ```bash
+   sudo -u mssql /opt/mssql/bin/sqlservr -m
+   ```
+
+Start SQL Server in Single User Mode with SQLCMD
+   ```bash
+   sudo -u mssql /opt/mssql/bin/sqlservr -m SQLCMD
+   ```
+
 
 ## Common issues
 

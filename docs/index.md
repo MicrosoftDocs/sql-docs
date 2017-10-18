@@ -17,21 +17,14 @@ ms.technology:
             <li>
                 <a data-default="true" href="#main"></a>
                 <ul id="main">
-
-
-
                     <li>
                         <a href="#databases">Databases</a>
-                        <ul id="databases" class="cardsW">
-						
-						
+                        <ul id="databases" class="cardsW">						
                             <li class="fullSpan">
                                 <div class="container intro" style="color: #535353; font-family: segoe-ui_light,Segoe UI Light,Segoe WP,Helvetica Neue,Helvetica,sans-serif;">
-                                    <p>Manage relational data with SQL databases in your datacenter or on Azure. Use machine learning and analytics to gain insights on SQL data. </p>
+                                    <p>Manage relational data with SQL databases in your datacenter or on Azure. Use machine learning and analytics to gain insights on SQL data.</p>
                                 </div>
-                            </li>
-							
-							
+                            </li>							
                              <li>
                                 <div class="cardSize">
                                     <div class="cardPadding">
@@ -68,8 +61,6 @@ ms.technology:
                                     </div>
                                 </div>
                             </li>
-
-
                             <li>
                                 <div class="cardSize">
                                     <div class="cardPadding">
@@ -107,8 +98,6 @@ ms.technology:
                                     </div>
                                 </div>
                             </li>
-
-
                             <li>
                                 <div class="cardSize">
                                     <div class="cardPadding">
@@ -144,13 +133,9 @@ ms.technology:
                                         </div>
                                     </div>
                                 </div>
-                            </li>
-							
-							
+                            </li>							
                         </ul>
-                    </li>
-					
-					
+                    </li>					
                 </ul>
             </li>
         </ul>

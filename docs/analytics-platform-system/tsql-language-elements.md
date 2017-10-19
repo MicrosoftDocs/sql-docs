@@ -8,8 +8,6 @@ ms.technology: "mpp-data-warehouse"
 description: Transact-SQL (T-SQL) language elements for Analytic Platform System (APS) SQL Server Parallel Data Warehouse (PDW).
 services: sql-data-warehouse
 documentationcenter: NA
-author: barbkess
- jhubbard
 editor: ''
 
 ms.assetid: ea0b9a3e-e489-458e-addc-cc153e5cc158

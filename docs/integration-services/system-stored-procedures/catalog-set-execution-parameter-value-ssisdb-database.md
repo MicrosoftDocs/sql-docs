@@ -24,7 +24,7 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```tsql  
+```sql  
 set_execution_parameter_value [ @execution_id = execution_id  
     , [ @object_type = ] object_type  
     , [ @parameter_name = ] parameter_name  

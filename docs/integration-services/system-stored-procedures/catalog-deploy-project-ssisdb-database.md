@@ -22,7 +22,7 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```tsql  
+```sql  
 deploy_project [ @folder_name = ] folder_name   
       , [ @project_name = ] project_name   
       , [ @project_stream = ] projectstream   

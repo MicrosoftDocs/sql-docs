@@ -24,7 +24,7 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```tsql  
+```sql  
 create_execution [ @folder_name = folder_name  
      , [ @project_name = ] project_name  
      , [ @package_name = ] package_name  

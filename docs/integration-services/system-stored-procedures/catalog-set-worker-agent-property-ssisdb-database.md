@@ -22,7 +22,7 @@ Sets the property of a [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.
 
 ## Syntax
 
-```tsql
+```sql
 set_worker_agent_property [ @WorkerAgentId = ] WorkerAgentId, [ @PropertyName = ] PropertyName, [ @PropertyValue = ] PropertyValue 
 ```
 

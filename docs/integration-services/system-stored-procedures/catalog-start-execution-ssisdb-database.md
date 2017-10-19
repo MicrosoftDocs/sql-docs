@@ -22,7 +22,7 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```tsql  
+```sql  
 start_execution [ @execution_id = ] execution_id [, [@retry_count = ] retry_count]  
 ```  
   

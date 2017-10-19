@@ -22,7 +22,7 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```tsql  
+```sql  
 restore_project [ @folder_name = ] folder_name  
     , [ @project_name = ] project _name  
     , [ @object_version_lsn = ] object_version_lsn  

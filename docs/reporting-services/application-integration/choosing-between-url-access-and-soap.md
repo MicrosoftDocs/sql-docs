@@ -16,7 +16,7 @@ manager: "erikre"
 ---
 # Choosing between URL access and SOAP in Reporting Services
 
-[!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-2017](../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../../includes/ssrs-appliesto-not-pbirs.md)]
+[!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-2017](../../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../../includes/ssrs-appliesto-not-pbirs.md)]
 
 Integrating [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] into custom applications can be challenging. The challenge, however, is not the complexity of the programming model or APIs, but the many possible ways to integrate it. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] was designed from the ground up as a developer platform, and as such, it is built with programming flexibility in mind. With flexibility comes the need to make important decisions about integrating [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report navigation and management functionality into your existing business applications.
 

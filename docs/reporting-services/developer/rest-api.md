@@ -16,6 +16,8 @@ manager: "erikre"
 ---
 # Develop with the REST APIs for Reporting Services
 
+[!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2017-and-later](../../includes/ssrs-appliesto-2017-and-later.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../../includes/ssrs-appliesto-not-pbirs.md)]
+
 Microsoft SQL Server 2017 Reporting Services support Representational State Transfer (REST) APIs. The REST APIs are service endpoints that support a set of HTTP operations (methods), which provide create, retrieve, update, or delete access for resources within a report server.
 
 The REST API provides programmatic access to the objects in a SQL Server 2017 Reporting Services report server catalog. Examples of objects are folders, reports, KPIs, data sources, datasets, refresh plans, subscriptions, and more. Using the REST API, you can, for example, navigate the folder hierarchy, discover the contents of a folder, or download a report definition. You can also create, update, and delete objects. Examples of working with objects are upload a report, execute a refresh plan, delete a folder, and so on.
@@ -60,3 +62,5 @@ A tool for testing HTTP request/response messages is [Fiddler](http://www.teleri
 Review the available APIs over on [SwaggerHub](https://app.swaggerhub.com/api/microsoft-rs/SSRS/2.0).
 
 Samples are available on [GitHub](https://github.com/Microsoft/Reporting-Services). The sample includes an HTML5 app built on TypeScript, React, and webpack along with a PowerShell example.
+
+More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)

@@ -1,7 +1,7 @@
 ---
 title: "Changelog for SQL Server Data Tools (SSDT) | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/20/2017"
+ms.date: "10/19/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""

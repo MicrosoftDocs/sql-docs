@@ -23,9 +23,8 @@ manager: "jhubbard"
 ## Syntax  
   
 ```sql  
-set_customized_logging_level_description [ @level_name = ] level_name  
+catalog.set_customized_logging_level_description [ @level_name = ] level_name  
     , [ @level_description = ] level_description  
-  
 ```  
   
 ## Arguments  

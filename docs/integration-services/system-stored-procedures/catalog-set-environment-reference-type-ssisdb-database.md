@@ -23,7 +23,7 @@ manager: "jhubbard"
 ## Syntax  
   
 ```sql  
-set_environment_reference_location [ @reference_id = reference_id  
+catalog.set_environment_reference_location [ @reference_id = reference_id  
     , [ @reference_type = ] reference_type  
  [  , [ @environment_folder_name = ] environment_folder_name ]  
 ```  

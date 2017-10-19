@@ -22,7 +22,7 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```tsql  
+```sql  
 clear_object_parameter [ @folder_name = ] folder_name   
     , [ @project_name = ] project_name   
     , [ @object_type = ] object_type   

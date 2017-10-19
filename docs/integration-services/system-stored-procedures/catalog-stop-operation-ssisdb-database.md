@@ -22,7 +22,7 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```tsql  
+```sql  
 stop_operation [ @operation_id = ] operation_id  
 ```  
   

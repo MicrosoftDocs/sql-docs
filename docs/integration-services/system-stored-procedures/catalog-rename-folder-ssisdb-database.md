@@ -22,7 +22,7 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```tsql  
+```sql  
 rename_folder [ @old_name = ] old_name , [ @new_name = ] new_name  
 ```  
   

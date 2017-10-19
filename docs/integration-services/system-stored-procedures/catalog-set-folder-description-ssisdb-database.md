@@ -22,7 +22,7 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```tsql  
+```sql  
 set_folder_description [ @folder_name = ] folder_name  
     , [ @folder_description = ] folder_description  
 ```  

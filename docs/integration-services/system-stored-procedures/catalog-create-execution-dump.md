@@ -22,7 +22,7 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```tsql  
+```sql  
 create_execution_dump [ @execution_id = ] execution_id  
   
 ```  

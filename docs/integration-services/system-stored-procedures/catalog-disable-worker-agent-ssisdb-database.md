@@ -23,11 +23,11 @@ Disable a Scale Out Worker for Scale Out Master working with this [!INCLUDE[ssIS
 ## Syntax
 
 ```sql
-disable_worker_agent [@WorkerAgentId = ] WorkerAgentId
+disable_worker_agent [@WorkerAgentId =] WorkerAgentId
 ```
 ## Arguments
-[ @WorkerAgentId = ] *WorkerAgentId*
-The worker agent id of Scale Out Worker. The *WorkerAgentId* is **uniqueidentifier**.
+[@WorkerAgentId =] *WorkerAgentId*
+The worker agent ID of Scale Out Worker. The *WorkerAgentId* is **uniqueidentifier**.
 
 ## Example
 This example disables the Scale Out Worker on MachineA.
@@ -56,4 +56,4 @@ GO
 -   Membership to the **sysadmin** server role 
 
 ## Errors and Warnings
-The stored procedure returns an error if the worker agent ID is not valid.
+If the worker agent ID is not valid, the stored procedure returns an error.

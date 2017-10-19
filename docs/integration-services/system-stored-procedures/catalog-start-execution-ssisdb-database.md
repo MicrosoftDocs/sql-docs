@@ -23,18 +23,18 @@ manager: "jhubbard"
 ## Syntax  
   
 ```sql  
-start_execution [ @execution_id = ] execution_id [, [@retry_count = ] retry_count]  
+start_execution [@execution_id =] execution_id [, [@retry_count =] retry_count]  
 ```  
   
 ## Arguments  
- [ @execution_id = ] *execution_id*  
+ [@execution_id =] *execution_id*  
  The unique identifier for the instance of execution. The *execution_id* is **bigint**.
  
- [ @retry_count = ] *retry_count*  
- The retry count if the execution fails. It takes effect only if the execution is in Scale Out. This parameter is optional. It is set to 0, if not specified. The *retry_count* is **int**.
+ [@retry_count =] *retry_count*  
+ The retry count if the execution fails. It takes effect only if the execution is in Scale Out. This parameter is optional. If not specified, its value is set to 0. The *retry_count* is **int**.
   
 ## Remarks  
- An execution is used to specify the parameter values that will be used by a package during a single instance of package execution. After an instance of execution has been created, before it has been started, the corresponding project might be redeployed. In this case, the instance of execution will reference a project that is outdated. This will cause the stored procedure to fail.  
+ An execution is used to specify the parameter values that is used by a package during a single instance of package execution. After an instance of execution has been created, before it has been started, the corresponding project might be redeployed. In this case, the instance of execution references a project that is outdated. This invalid reference causes the stored procedure to fail.  
   
 > [!NOTE]  
 >  Executions can only be started once. To start an instance of execution, it must be in the created state (a value of `1` in the **status** column of the [catalog.operations](../../integration-services/system-views/catalog-operations-ssisdb-database.md) view).  

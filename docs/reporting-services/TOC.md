@@ -71,6 +71,7 @@
 
 
 # Developer
+## [REST API](developer/rest-api.md)
 ## [Application integration](../reporting-services/application-integration/integrating-reporting-services-into-applications.md)
 ## [Report server web service](../reporting-services/report-server-web-service/report-server-web-service.md)
 ## [Extensions](../reporting-services/extensions/reporting-services-extension-library.md)

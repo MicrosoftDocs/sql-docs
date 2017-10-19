@@ -23,7 +23,7 @@ This article describes the major features and services available for SQL Server 
 - [Provision a SQL VM in Azure](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
 
 > [!NOTE]
-> In addition to these capabilities in this article, cumulative updates are released at regular intervals after the GA release. These cumulative updates provide many improvements and fixes. For information about the latest CU release, see [http://aka.ms/sql2017cu](http://aka.ms/sql2017cu). For package downloads, see the [Release notes](sql-server-linux-release-notes.md).
+> In addition to these capabilities in this article, cumulative updates are released at regular intervals after the GA release. These cumulative updates provide many improvements and fixes. For information about the latest CU release, see [http://aka.ms/sql2017cu](http://aka.ms/sql2017cu). For package downloads and known issues, see the [Release notes](sql-server-linux-release-notes.md).
 
 ## SQL Server Database Engine
 
@@ -38,10 +38,10 @@ This article describes the major features and services available for SQL Server 
 
 ## SQL Server Agent
 
-- [SQL Server Agent](sql-server-linux-setup-sql-agent.md) support:
+- Enabled [SQL Server Agent](sql-server-linux-setup-sql-agent.md) support for the following tasks:
   - [Transact-SQL jobs](sql-server-linux-run-sql-server-agent-job.md)
   - [DB mail](sql-server-linux-db-mail-sql-agent.md)
-  - [Log shipping](sql-server-linux-use-log-shipping.md).
+  - [Log shipping](sql-server-linux-use-log-shipping.md)
 
 ## SQL Server Integration Services (SSIS)
 
@@ -57,7 +57,9 @@ This article describes the major features and services available for SQL Server 
 
 ## Next steps
 
-For other information regarding SQL Server on Linux, see the [overview](sql-server-linux-overview.md) and the [Release notes](sql-server-linux-release-notes.md).
+For other information regarding SQL Server on Linux, see the [overview](sql-server-linux-overview.md). 
+
+For package downloads and a list of unsupported features and known issues, see the [Release notes](sql-server-linux-release-notes.md).
 
 To see other improvements introduced in SQL Server 2017, see [What's New in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md).
 

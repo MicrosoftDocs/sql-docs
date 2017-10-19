@@ -2,7 +2,7 @@
 title: "Known issues in Machine Learning Services | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "09/19/2017"
+ms.date: "10/18/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -161,6 +161,19 @@ data <- RxSqlServerData(sqlQuery = "SELECT CRSDepTimeStr, ArrDelay  FROM Airline
 As a workaround, you can rewrite the SQL query to use CAST or CONVERT and present the data to R by using the correct data type. In general, performance is better when you work with data by using SQL rather than by changing data in the R code.
 
 **Applies to:** SQL Server 2016 R Services
+
+### Limits on size of serialized models
+
+When you save a model to a SQL Server table, you must serialize the model and save it in a binary format. Theoretically the maximum size of a model that can be stored with this method is 2 GB, which is the maximum size of varbinary columns in SQL Server.
+
+If you need to use larger models, the following workarounds are available:
+
++ Use the [memCompress](https://www.rdocumentation.org/packages/base/versions/3.4.1/topics/memCompress) function in base R to reduce the size of the model before passing it to SQL Server. This option is best when the model is close to the 2 GB limit.
++ For larger models, rather than using a varbinary column to store the models, you can use the [FileTable](..\relational-databases\blob\filetables-sql-server.md) feature provided in SQL Server.
+
+    To use FileTables, you must add a firewall exception, because data stored in FileTables is managed by the Filestream filesystem driver in SQL Server, and default firewall rules block network file access. For more information, see [Enable Prerequisites for FileTable](../relational-databases/blob/enable-the-prerequisites-for-filetable.md). 
+
+    After you have enabled FileTable, to write the model, you get a path from SQL using the FileTable API, and then write the model to that location from your R code. When you need to read the model, you get the path from SQL and then call the model using the path from your R script. For more information, see [Access FileTables wth File Input-Output APIs](../relational-databases/blob/access-filetables-with-file-input-output-apis.md).
 
 ### Avoid clearing workspaces when you execute R code in a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] compute context
 

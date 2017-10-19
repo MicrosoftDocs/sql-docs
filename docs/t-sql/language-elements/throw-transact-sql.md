@@ -138,23 +138,6 @@ THROW 60000, @msg, 1;
  This is a test message with one numeric parameter (500), one string parameter (First string), and another string parameter (second string).
  ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### D. Using THROW to raise an exception  
- The following example shows how to use the `THROW` statement to raise an exception.  
-  
-```tsql  
-THROW 51000, 'The record does not exist.', 1;  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
- ```
- Msg 51000, Level 16, State 1, Line 1  
-  
- The record does not exist.
- ```  
-  
 ## See Also  
  [FORMATMESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/formatmessage-transact-sql.md)   
  [Database Engine Error Severities](../../relational-databases/errors-events/database-engine-error-severities.md)   

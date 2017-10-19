@@ -50,7 +50,7 @@ manager: "craigg"
   
  To enable Stretch Database on the server manually, run **sp_configure** and turn on the **remote data archive** option. The following example enables the **remote data archive** option by setting its value to 1.  
   
-```  
+```sql
 EXEC sp_configure 'remote data archive' , '1';  
 GO
 

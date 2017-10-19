@@ -49,7 +49,7 @@ This article describes the major features and services available for SQL Server 
 
 ## Other improvements
 
-- Command line configuration tool, [mssql-conf](sql-server-linux-configure-mssql-conf.md).
+- Command-line configuration tool, [mssql-conf](sql-server-linux-configure-mssql-conf.md).
 - Unattended installation support with [environment variables](sql-server-linux-configure-environment-variables.md).
 - Cross-platform [Visual Studio Code mssql-server extension](sql-server-linux-develop-use-vscode.md).
 - Cross-platform script generator, [mssql-scripter](https://github.com/Microsoft/sql-xplat-cli/blob/dev/doc/usage_guide.md).

@@ -22,7 +22,7 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```tsql  
+```sql  
 move_environment [ @source_folder = ] source_folder  
     , [ @environment_name = ] environment_name  
     , [ @destination_folder = ] destination_folder  

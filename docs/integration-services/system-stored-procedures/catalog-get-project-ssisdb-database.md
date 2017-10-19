@@ -22,7 +22,7 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```tsql  
+```sql  
 get_project [ @folder_name = ] folder_name , [ @project_name = ] project_name   
 ```  
   

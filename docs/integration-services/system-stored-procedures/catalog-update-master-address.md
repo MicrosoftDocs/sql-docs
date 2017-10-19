@@ -21,7 +21,7 @@ Update the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Scale O
 
 ## Syntax
 
-```tsql
+```sql
 update_master_address [@MasterAddress = ] masterAddress
 ```
 

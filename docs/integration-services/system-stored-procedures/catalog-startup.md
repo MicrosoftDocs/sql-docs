@@ -27,7 +27,7 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```tsql  
+```sql  
 Catalog.startup  
 ```  
   

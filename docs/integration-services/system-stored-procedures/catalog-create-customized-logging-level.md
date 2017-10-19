@@ -22,7 +22,7 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```tsql  
+```sql  
 create_customized_logging_level [ @level_name = ] level_name  
     , [ @level_description = ] level_description  
     , [ @profile_value = ] profile_value  

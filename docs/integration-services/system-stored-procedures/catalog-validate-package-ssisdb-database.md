@@ -52,7 +52,7 @@ catalog.validate_package [ @folder_name = ] folder_name
  Indicates if the 32-bit runtime should be used to run the package on a 64-bit operating system. Use the value of `1` to execute the package with the 32-bit runtime when running on a 64-bit operating system. Use the value of `0` to execute the package with the 64-bit runtime when running on a 64-bit operating system. This parameter is optional. The *use32bitruntime* is **bit**.  
   
  [ @environment_scope = ] *environment_scope*  
- Indicates the environment references that are considered by the validation. When the value is `A`, all environment references associated with the project are included in the validation. When the value is `S`, only a single environment reference is included. When the value is `D`, no environment references are included and each parameter must have a literal default value in order to pass validation. This parameter is optional, the character `D` will be used by default. The *environment_scope* is **Char(1)**.  
+ Indicates the environment references that are considered by the validation. When the value is `A`, all environment references associated with the project are included in the validation. When the value is `S`, only a single environment reference is included. When the value is `D`, no environment references are included and each parameter must have a literal default value in order to pass validation. This parameter is optiona. The character `D` is used by default. The *environment_scope* is **Char(1)**.  
   
  [ @reference_id = ] *reference_id*  
  The unique ID of the environment reference. This parameter is required only when a single environment reference is included in the validation, when *environment_scope* is `S`. The *reference_id* is **bigint**.  
@@ -90,6 +90,6 @@ catalog.validate_package [ @folder_name = ] folder_name
 -   Variables are referenced in the package parameters, but no referenced environments have been included in the validation  
   
 ## Remarks  
- Validation helps identify issues that will prevent the package from running successfully. Use the [catalog.validations](../../integration-services/system-views/catalog-validations-ssisdb-database.md) or [catalog.operations](../../integration-services/system-views/catalog-operations-ssisdb-database.md) views to monitor for validation status.  
+ Validation helps identify issues that may prevent the package from running successfully. Use the [catalog.validations](../../integration-services/system-views/catalog-validations-ssisdb-database.md) or [catalog.operations](../../integration-services/system-views/catalog-operations-ssisdb-database.md) views to monitor for validation status.  
   
   

@@ -38,6 +38,8 @@ Carbon is supported on the following platforms:
 | Mac | macOS Sierra (10.12), macOS High Sierra (10.13) |
 | Linux | Ubuntu 16.04 LTS, Red Hat Enterprise Linux 7.3 (RHEL)|
 
+??NEED TO FINALIZE THE ABOVE LIST- I grabbed this info from the mail thread about supported OS's
+
 Other Potential Platforms
 - Windows 8.1 (64-bit)
 - Windows 8 (64-bit)

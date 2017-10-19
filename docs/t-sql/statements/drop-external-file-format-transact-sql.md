@@ -60,14 +60,6 @@ SELECT * FROM sys.external_file_formats;
 DROP EXTERNAL FILE FORMAT myfileformat;  
 ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### B. Using basic syntax  
-  
-```  
-DROP EXTERNAL FILE FORMAT myfileformat;  
-```  
-  
 ## See Also  
  [CREATE EXTERNAL FILE FORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md)  
   

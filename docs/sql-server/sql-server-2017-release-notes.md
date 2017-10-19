@@ -1,7 +1,7 @@
 ---
 title: "SQL Server 2017 Release Notes | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/02/2017"
+ms.date: "10/19/2017"
 ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
@@ -19,6 +19,7 @@ manager: "jhubbard"
 This topic describes limitations and issues with SQL Server 2017. For related information, see:
 - [What's New in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)
 - [SQL Server on Linux release notes](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-release-notes)
+- For information about the latest cumulative update (CU) release, see [http://aka.ms/sql2017cu](http://aka.ms/sql2017cu)
 
 **Try SQL Server!**
 - [![Download from Evaluation Center](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [Download SQL Server 2017](http://go.microsoft.com/fwlink/?LinkID=829477)

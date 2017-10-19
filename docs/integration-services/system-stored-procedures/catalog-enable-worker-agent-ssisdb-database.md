@@ -23,7 +23,7 @@ Enable a Scale Out Worker for Scale Out Master working with this [!INCLUDE[ssISn
 ## Syntax
 
 ```sql
-enable_worker_agent [@WorkerAgentId =] WorkerAgentId
+catalog.enable_worker_agent [@WorkerAgentId =] WorkerAgentId
 ```
 ## Arguments
 [@WorkerAgentId =] *WorkerAgentId*
@@ -31,6 +31,7 @@ The worker agent ID of Scale Out Worker. The *WorkerAgentId* is **uniqueidentifi
 
 ## Example
 This example enables the Scale Out Worker on MachineA.
+
 ```sql
 SELECT WorkerAgentId, MachineName FROM [catalog].[worker_agents]
 GO

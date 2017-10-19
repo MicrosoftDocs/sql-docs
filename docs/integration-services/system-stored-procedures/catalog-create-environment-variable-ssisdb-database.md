@@ -23,7 +23,7 @@ manager: "jhubbard"
 ## Syntax  
   
 ```sql  
-create_environment_variable [@folder_name =] folder_name  
+catalog.create_environment_variable [@folder_name =] folder_name  
     , [@environment_name =] environment_name  
     , [@variable_name =] variable_name  
     , [@data_type =] data_type  

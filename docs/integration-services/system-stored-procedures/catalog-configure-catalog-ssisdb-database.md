@@ -22,9 +22,8 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```  
-  
-configure_catalog [ @property_name = ] property_name , [ @property_value = ] property_value  
+```sql
+catalog.configure_catalog [ @property_name = ] property_name , [ @property_value = ] property_value  
 ```  
   
 ## Arguments  

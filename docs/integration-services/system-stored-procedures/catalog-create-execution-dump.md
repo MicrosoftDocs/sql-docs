@@ -23,7 +23,7 @@ manager: "jhubbard"
 ## Syntax  
   
 ```sql  
-create_execution_dump [ @execution_id = ] execution_id  
+catalog.create_execution_dump [ @execution_id = ] execution_id  
   
 ```  
   
@@ -34,10 +34,8 @@ create_execution_dump [ @execution_id = ] execution_id
 ## Example  
  In the following example, the running package with an execution ID of 88 is prompted to create a dump file.  
   
-```  
-  
+```sql
 EXEC create_execution_dump @execution_id = 88  
-  
 ```  
   
 ## Return Codes  

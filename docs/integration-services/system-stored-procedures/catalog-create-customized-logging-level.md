@@ -23,12 +23,11 @@ manager: "jhubbard"
 ## Syntax  
   
 ```sql  
-create_customized_logging_level [ @level_name = ] level_name  
+catalog.create_customized_logging_level [ @level_name = ] level_name  
     , [ @level_description = ] level_description  
     , [ @profile_value = ] profile_value  
     , [ @event_value = ] event_value  
-    , [ @level_id = ] level_id OUT  
-  
+    , [ @level_id = ] level_id OUT   
 ```  
   
 ## Arguments  

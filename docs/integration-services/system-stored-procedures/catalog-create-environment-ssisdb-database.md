@@ -23,7 +23,7 @@ manager: "jhubbard"
 ## Syntax  
   
 ```sql  
-create_environment [@folder_name =] folder_name  
+catalog.create_environment [@folder_name =] folder_name  
      , [@environment_name =] environment_name  
   [  , [@environment_description =] environment_description ]  
 ```  

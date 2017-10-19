@@ -26,26 +26,26 @@ The REST API provides programmatic access to the objects in a SQL Server 2017 Re
 
 A REST API request/response pair can be separated into five components:
 
-1. The **request URI**, which consists of: `{URI-scheme} :// {URI-host} / {resource-path} ? {query-string}`. Although the request URI is included in the request message header, we call it out separately here because most languages or frameworks require you to pass it separately from the request message.
+* The **request URI**, which consists of: `{URI-scheme} :// {URI-host} / {resource-path} ? {query-string}`. Although the request URI is included in the request message header, we call it out separately here because most languages or frameworks require you to pass it separately from the request message.
 
     * URI scheme: Indicates the protocol used to transmit the request. For example, `http` or `https`.
     * URI host: Specifies the domain name or IP address of the server where the REST service endpoint is hosted, such as `myserver.contoso.com`.
     * Resource path: Specifies the resource or resource collection, which may include multiple segments used by the service in determining the selection of those resources. For example: `CatalogItems(01234567-89ab-cdef-0123-456789abcdef)/Properties` can be used to get the specified properties for the CatalogItem.
     * Query string (optional): Provides additional simple parameters, such as the API version or resource selection criteria.
 
-2. HTTP request message header fields:
+* HTTP request message header fields:
 
     * A required [HTTP method](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html) (also known as an operation or verb), which tells the service what type of operation you are requesting. Reporting Services REST APIs support DELETE, GET, HEAD, PUT, POST, and PATCH methods.
     * Optional additional header fields, as required by the specified URI and HTTP method.
 
-3. Optional HTTP **request message body** fields, to support the URI and HTTP operation. For example, POST operations contain MIME-encoded objects that are passed as complex parameters. For POST or PUT operations, the MIME-encoding type for the body should be specified in the `Content-type` request header as well. Some services require you to use a specific MIME type, such as `application/json`.
+* Optional HTTP **request message body** fields, to support the URI and HTTP operation. For example, POST operations contain MIME-encoded objects that are passed as complex parameters. For POST or PUT operations, the MIME-encoding type for the body should be specified in the `Content-type` request header as well. Some services require you to use a specific MIME type, such as `application/json`.
 
-4. HTTP **response message header** fields:
+* HTTP **response message header** fields:
 
     * An [HTTP status code](http://www.w3.org/Protocols/HTTP/HTRESP.html), ranging from 2xx success codes to 4xx or 5xx error codes. Alternatively, a service-defined status code may be returned, as indicated in the API documentation.
     * Optional additional header fields, as required to support the request's response, such as a `Content-type` response header.
 
-5. Optional HTTP **response message body** fields:
+* Optional HTTP **response message body** fields:
 
     * MIME-encoded response objects are returned in the HTTP response body, such as a response from a GET method that is returning data. Typically, these objects are returned in a structured format such as JSON or XML, as indicated by the `Content-type` response header.
 

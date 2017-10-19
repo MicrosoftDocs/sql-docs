@@ -36,9 +36,10 @@ manager: "jhubbard"
 |3|+ (Positive), - (Negative), + (Add), (+ Concatenate), - (Subtract), & (Bitwise AND), ^ (Bitwise Exclusive OR), &#124; (Bitwise OR)|  
 |4|=, >, \<, >=, <=, <>, !=, !>, !< (Comparison operators)|  
 |5|NOT|  
-|6|AND|  
-|7|ALL, ANY, BETWEEN, IN, LIKE, OR, SOME|  
-|8|= (Assignment)|  
+|6|ALL, ANY, BETWEEN, IN, LIKE, SOME|  
+|7|AND|
+|8|OR|
+|9|= (Assignment)|  
   
  When two operators in an expression have the same operator precedence level, they are evaluated left to right based on their position in the expression. For example, in the expression that is used in the following `SET` statement, the subtraction operator is evaluated before the addition operator.  
   

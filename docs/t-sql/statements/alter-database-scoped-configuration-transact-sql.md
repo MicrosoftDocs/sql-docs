@@ -115,7 +115,7 @@ This value is only valid on secondaries while the database in on the primary, an
   
 QUERY_OPTIMIZER_HOTFIXES **=** { ON | **OFF** | PRIMARY }  
 
-Enables or disables query optimization hotfixes regardless of the compatibility level of the database. The default is **OFF**. This is equivalent to enabling [Trace Flag 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).   
+Enables or disables query optimization hotfixes regardless of the compatibility level of the database. The default is **OFF**, which disables query optimization hotfixes that were released after the highest available compatibility level was introduced for a specific version (post-RTM). Setting this to **ON** is equivalent to enabling [Trace Flag 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).   
 
 > [!TIP] 
 > To accomplish this at the query level, add the **QUERYTRACEON** [query hint](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). 
@@ -137,7 +137,6 @@ Enables or disables identity cache at the database level. The default is **ON**.
 
 > [!NOTE] 
 > This option can only be set for the PRIMARY. For more information, see [identity columns](create-table-transact-sql-identity-property.md).  
->
 
 ##  <a name="Permissions"></a> Permissions  
  Requires ALTER ANY DATABASE SCOPE CONFIGURATION   
@@ -153,7 +152,7 @@ on the database. This permission can be granted by a user with CONTROL permissio
  The ALTER_DATABASE_SCOPED_CONFIGURATION event is added as a DDL event that can be used to fire a DDL trigger. This is a child of the ALTER_DATABASE_EVENTS trigger group.  
   
 ## Limitations and Restrictions  
- **MAXDOP**  
+**MAXDOP**  
   
  The granular settings can override the global ones and that resource governor can cap all other MAXDOP settings.  The logic for MAXDOP setting is the following:  
   
@@ -167,15 +166,15 @@ on the database. This permission can be granted by a user with CONTROL permissio
   
 -   The sp_configure setting is overridden by the resource governor setting.  
   
- **QUERY_OPTIMIZER_HOTFIXES**  
+**QUERY_OPTIMIZER_HOTFIXES**  
   
  When QUERYTRACEON hint is used to enable the legacy query optimizer or query optimizer hotfixes, it would be an OR condition between the query hint and the database scoped configuration setting, meaning if either is enabled, the options will apply.  
   
- **GeoDR**  
+**GeoDR**  
   
  Readable secondary databases,  e.g. Always On Availability Groups and GeoReplication, use the secondary value by checking the state of the database. Even though we don’t recompile on failover and technically the new primary has queries that are using the secondary settings, the idea is that the setting between primary and secondary will only vary when the workload is different and therefore the cached queries are using the optimal settings, whereas new queries will pick the new settings which are appropriate for them.  
   
- **DacFx**  
+**DacFx**  
   
  Since ALTER DATABASE SCOPED CONFIGURATION is a new feature in Azure SQL Database and SQL Server 2016 that affects the database schema, exports of the schema (with or without data)  will not be able to be imported into an older version of SQL Server e.g. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] or [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)]. For example, an export to a [DACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_3) or a [BACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_4) from an [!INCLUDE[ssSDS](../../includes/sssds-md.md)] or [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] database that used this new feature would not be able to be imported into a down-level server.  
   
@@ -242,7 +241,7 @@ This example sets PARAMETER_SNIFFING for secondary database as it is on primary 
 in a geo-replication scenario.  
   
 ```tsql  
-ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING =PRIMARY ;  
+ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING=PRIMARY ;  
 ```  
   
 ### E. Set QUERY_OPTIMIZER_HOTFIXES  

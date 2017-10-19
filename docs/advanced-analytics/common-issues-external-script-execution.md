@@ -2,7 +2,7 @@
 title: "Common issues with external script execution in SQL Server| Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "08/20/2017"
+ms.date: "10/11/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -86,7 +86,7 @@ As a workaround, you can enable the 8dot3 notation on the volume where SQL Serve
 > [!NOTE] 
 > This restriction has been removed in later releases. If you experience this issue, install one of the following:
 > * SQL Server 2016 SP1 and CU1: [Cumulative Update 1 for SQL Server](https://support.microsoft.com/help/3208177/cumulative-update-1-for-sql-server-2016-sp1).
-> * SQL Server 2016 RTM, Service Pack 3, and this [hotfix](https://support.microsoft.com/help/3210110/on-demand-hotfix-update-package-for-sql-server-2016-cu3), which is available on demand.
+> * SQL Server 2016 RTM, Cumulative Update 3, and this [hotfix](https://support.microsoft.com/help/3210110/on-demand-hotfix-update-package-for-sql-server-2016-cu3), which is available on demand.
 
 #### The user group for Launchpad cannot log on locally
 
@@ -96,7 +96,7 @@ However, in organizations where more restrictive security policies are enforced,
 
 To correct the problem, ensure that the group **SQLRUserGroup** has the system right **Allow log on locally**.
 
-For more information, see [Configure Windows Service Accounts and Permissions](https://msdn.microsoft.com/library/ms143504.aspx#Windows).
+For more information, see [Configure Windows service accounts and permissions](https://msdn.microsoft.com/library/ms143504.aspx#Windows).
 
 #### Improper setup leading to mismatched DLLs
 
@@ -104,19 +104,19 @@ If you install the database engine with other features, patch the server, and th
 
 To avoid this problem, be sure to install any new features at the same patch level as the server instance.
 
-**The wrong way to upgrade**:
+**The wrong way to upgrade:**
 
 1. Install SQL Server 2016 without R Services.
 2. Upgrade SQL Server 2016 Cumulative Update 2.
 3. Install R Services (In-Database) by using the RTM media.
 
-**The correct way to upgrade**:
+**The correct way to upgrade:**
 
 1. Install SQL Server 2016 without R Services.
 2. Upgrade SQL Server 2016 to the desired patch level. For example, install Service Pack 1 and then Cumulative Update 2.
 3. To add the feature at the correct patch level, run SP1 and CU2 setup again, and then choose R Services (In-Database). 
 
-#### Check to see whether a user has rights to run external scripts
+#### Check whether a user has rights to run external scripts
 
 Even if Launchpad is configured correctly, it returns an error if the user does not have permission to run R or Python scripts.
 
@@ -125,8 +125,10 @@ If you installed SQL Server as a database administrator or you are a database ow
 To correct the problem, in SQL Server Management Studio, a security administrator can modify the SQL login or Windows user account by running the following script:
 
 ```SQL
-GRANT EXECUTE ANY EXTERNAL SCRIPT
+GRANT EXECUTE ANY EXTERNAL SCRIPT TO <username>
 ```
+
+For more information, see [GRANT (Transact-SQL](../t-sql/statements/grant-transact-sql.md).
 
 ### Common Launchpad errors
 
@@ -207,17 +209,17 @@ To resolve the issue, ensure that the group has *Allow Log on Locally* permissio
 
 ## R script issues
 
-This section contains some common issues that are specific to R script execution and R script errors. The list is not comprehensive, because there are many R packages, and errors might differ between versions of the same R package. We recommend that you post R script errors on the [Microsoft R Server forum](https://social.msdn.microsoft.com/Forums/home?forum=MicrosoftR), which supports all related products: R Services (In-Database), Machine Learning Services with Python, Microsoft R Client, and Microsoft R Server.
+This section contains some common issues that are specific to R script execution and R script errors. The list is not comprehensive, because there are many R packages, and errors might differ between versions of the same R package. We recommend that you post R script errors on the [Microsoft R Server forum](https://social.msdn.microsoft.com/Forums/home?category=MicrosoftR), which supports the machine learning components used in R Services (In-Database), Machine Learning Services with Python, Microsoft R Client, and Microsoft R Server.
 
 ### Multiple R instances on the same computer
 
-It is easy to install multiple distributions of R on the same computer, or to install multiple copies of the same R package in different versions. For example, if you install both Machine Learning Server (Standalone) and Machine Learning Services (In-Database), the installers create separate versions of the R libraries. 
+It can be easy to find yourself with multiple distributions of R on the same computer, as well as multiple copies of the same R package in different versions. For example, if you install both Machine Learning Server (Standalone) and Machine Learning Services (In-Database), the installers create separate versions of the R libraries. 
 
-The duplication can become confusing when you try to run a script from a command line and you're not sure which libraries you are using. It can also be confusing if you install a package to the wrong library and cannot find the package when you try to run it from SQL Server.
+Such duplication becomes a problem when you try to run a script from a command line and you're not sure which libraries you are using. Or, you might install a package to the wrong library and then later wonder why you cannot find the package from SQL Server.
 
 + Avoid direct use of the R libraries and tools that are installed for the use of the SQL Server instance, except in limited cases such as troubleshooting or installation of new packages. 
-+ If you need to use an R command-line tool, you can install [Microsoft R Client](https://docs.microsoft.com/r-server/r-client/what-is-microsoft-r-client).
-+ SQL Server provides in-database management of R packages. This is the easiest way to create R package libraries that can be shared among users. For more information, see  [Installing and Managing R Packages](r/installing-and-managing-r-packages.md).
++ If you need to use an R command-line tool, you can install [Microsoft R Client](https://docs.microsoft.com/r-server/r-client/what-is-microsoft-r-client). 
++ SQL Server provides in-database management of R packages. This is the easiest way to create R package libraries that can be shared among users. For more information, see  [R package management for SQL Server](r/r-package-management-for-sql-server-r-services.md).
 
 ### Avoid clearing the workspace while you're running R in a SQL compute context
 
@@ -320,9 +322,9 @@ To resolve the issue, you must reinstall the package to the SQL Server instance 
 
 ## Next steps
 
-[Machine Learning troubleshooting and known issues](machine-learning-troubleshooting-faq.md)
+[Machine Learning Services troubleshooting and known issues](machine-learning-troubleshooting-faq.md)
 
-[Data collection for troubleshooting Machine Learning](data-collection-ml-troubleshooting-process.md)
+[Data collection for troubleshooting machine learning](data-collection-ml-troubleshooting-process.md)
 
 [Upgrade and installation FAQ](r/upgrade-and-installation-faq-sql-server-r-services.md)
 

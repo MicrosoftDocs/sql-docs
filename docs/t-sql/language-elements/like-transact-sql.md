@@ -349,18 +349,6 @@ WHERE phone LIKE '6_2%'
 ORDER by LastName;   
 ```  
   
-### H. Using the [ ] wildcard characters  
- The following example finds `DimEmployee` rows with the first name of `Rob` or `Bob`.  
-  
-```tsql  
--- Uses AdventureWorks  
-  
-SELECT FirstName, LastName, Phone  
-FROM DimEmployee  
-WHERE FirstName LIKE '[RB]ob'  
-ORDER by LastName;  
-```  
-  
 ## See Also  
  [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Built-in Functions &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   

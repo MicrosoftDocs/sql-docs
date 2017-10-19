@@ -98,7 +98,7 @@ The following features and services are not available on Linux at this time. The
 | &nbsp; | Polybase |
 | &nbsp; | Distributed query with 3rd-party connections |
 | &nbsp; | System extended stored procedures (XP_CMDSHELL, etc.) |
-| &nbsp; | Filetable |
+| &nbsp; | Filetable, FILESTREAM |
 | &nbsp; | CLR assemblies with the EXTERNAL_ACCESS or UNSAFE permission set |
 | &nbsp; | Buffer Pool Extension |
 | **SQL Server Agent** |  Subsystems: CmdExec, PowerShell, Queue Reader, SSIS, SSAS, SSRS |

@@ -136,7 +136,7 @@ To learn more about backup recovery for SQL Database, see [Recover an Azure SQL 
 
 To ensure quick key recovery and access your data outside of Azure, we recommend the following:
 - Create your encryption key locally on a local HSM device. (Make sure this is an asymmetric, RSA 2048 key so it is storable in Azure Key Vault.)
-- Import the encryption key file (.pfx, .byok, or .backup) to Azure Key Vault. 
+- Import the encryption key file (.pfx, .byok, or .backup) to Azure Key Vault. Consider using a key vault with [soft-delete](https://docs.microsoft.com/azure/key-vault/key-vault-ovw-soft-delete) enabled, for recovery protection from accidental key deletion.
 - Before using the key in Azure Key Vault for the first time, take an Azure Key Vault key backup. Learn more about the [Backup-AzureKeyVaultKey](https://msdn.microsoft.com/library/mt126292.aspx) command.
 - Whenever any changes are made to the key (for example, add ACLs, add tags, add key attributes), be sure to take another Azure Key Vault key backup.
 - During a key rollover, **keep previous versions of the key** in the key vault so older database backups can be restored. 

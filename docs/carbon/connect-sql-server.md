@@ -41,7 +41,7 @@ Before starting this quickstart, you must have access to a running SQL Server in
 
    **Server Group:** \<Default\>
 
-   ![New Connection Screen](media/quickstart-sql-server/new-connection-screen.png)
+   ![New Connection Screen](media/get-started-sql-server/new-connection-screen.png)
 
 
 ## Connecting Windows Authentication
@@ -55,7 +55,7 @@ To connect using SQL Login, enter the server administrator's user name and passw
 ## Connection properties
 
 
-   ![New Connection Screen](media/connect-sql-server/connection.png)
+   ![New Connection Screen](media/get-started-sql-server/connection.png)
 
 
 

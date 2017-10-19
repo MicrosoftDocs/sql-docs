@@ -17,28 +17,26 @@ ms.date: 10/01/2017
 This topic shows how to get started using Carbon with SQL Server databases, and this Quickstart should take about five minutes.
 
 ## Prerequisites
-To install Carbon with Windows, follow [these directions](download-carbon.md).
+To install Carbon with Windows, follow [these directions](download.md).
 
 Before starting this quickstart, you must have access to a running SQL Server instance. If you don't have it, [download SQL Server 2017 Developer Edition](https://go.microsoft.com/fwlink/?linkid=853016).
 
 ## Connect to a server
-1. Click the **New Connection** icon on the top left.
+1. When first loading Carbon, a connection page should be displayed. If not, click the **New Connection** icon on the top left.
    
-   ![New Connection Icon](media/quickstart-sql-server/new-connection-icon.png)
+   ![New Connection Icon](media/get-started-sql-server/new-connection-icon.png)
 
 2. For this tutorial, fill the fields as follows:
-
-   **Connection Type:** Microsoft SQL Server
  
    **Server Name:** localhost
 
-   **Authentication Type:** Windows Authentication <How do we address this??>
+   **Authentication Type:** Windows Authentication
 
    **Database Name:** (leave it blank)
 
    **Server Group:** \<Default\>
 
-   ![New Connection Screen](media/quickstart-sql-server/new-connection-screen.png)
+   ![New Connection Screen](media/get-started-sql-server/new-connection-screen.png)
 
 ## Create a tutorial database
 1. Right click on your server, **localhost**, in the object explorer and select **New Query.**
@@ -59,18 +57,17 @@ Before starting this quickstart, you must have access to a running SQL Server in
    ALTER DATABASE [TutorialDB] SET QUERY_STORE=ON
    GO
    ```
-3. Add section to change database context
 
 ## Create a table
-1. Copy the snippet below and paste in the query window. Click **Run** to execute the query.
+1. Copy the snippet below and paste in the query window.
    ```sql
    -- Create a new table called 'Customers' in schema 'dbo'
    -- Drop the table if it already exists
-   IF OBJECT_ID('TutorialDB.dbo.Customers', 'U') IS NOT NULL
-   DROP TABLE TutorialDB.dbo.Customers
+   IF OBJECT_ID('dbo.Customers', 'U') IS NOT NULL
+   DROP TABLE dbo.Customers
    GO
    -- Create the table in the specified schema
-   CREATE TABLE TutorialDB.dbo.Customers
+   CREATE TABLE dbo.Customers
    (
       CustomersId        INT    NOT NULL   PRIMARY KEY, -- primary key column
       Name      [NVARCHAR](50)  NOT NULL,
@@ -80,11 +77,15 @@ Before starting this quickstart, you must have access to a running SQL Server in
    GO
    ```
 
+2. Change the context to **TutorialDB.** Click **Run** to execute the query.
+
+   ![Change context](media/get-started-sql-server/change-context.png)
+
 ## Insert rows
 1. Copy the snippet below to insert four rows and and paste in the query window. Click **Run** to execute the query.
    ```sql
    -- Insert rows into table 'Customers'
-   INSERT INTO TutorialDB.dbo.Customers
+   INSERT INTO dbo.Customers
       ([CustomersId],[Name],[Location],[Email])
    VALUES
       ( 1, N'Jared', N'Australia', N''),
@@ -97,38 +98,20 @@ Before starting this quickstart, you must have access to a running SQL Server in
 ## View the result
 1. Copy the snippet below to view all the rows and paste in the query window. Click **Run** to execute the query.
    ```sql
-   -- Insert rows into table 'Customers'
-   SELECT * FROM TutorialDB.dbo.Customers;
+   -- Select rows from table 'Customers'
+   SELECT * FROM dbo.Customers;
    ```
-
-   ![Select results](media/quickstart-sql-server/select-results.png)
-
-## Create table with many rows
-1. Copy the snippet below to create a table with many rows. Click **Run** to execute the query.
-   ```sql
-   USE TutorialDB; 
-   WITH a AS (SELECT * FROM (VALUES(1),(2),(3),(4),(5),(6),(7),(8),(9),(10)) AS a(a))
-   SELECT TOP(1000)
-   ROW_NUMBER() OVER (ORDER BY a.a) AS OrderItemId 
-   ,a.a + b.a + c.a + d.a + e.a + f.a + g.a + h.a AS OrderId 
-   ,a.a * 10 AS Price 
-   ,CONCAT(a.a, N' ', b.a, N' ', c.a, N' ', d.a, N' ', e.a, N' ', f.a, N' ', g.a, N' ', h.a) AS ProductName 
-   INTO Table_with_5M_rows 
-   FROM a, a AS b, a AS c, a AS d, a AS e, a AS f, a AS g, a AS h;
-   GO
-   ```
+   ![Select results](media/get-started-sql-server/select-results.png)
 
 ## Save result as Excel
 1. Right click on the results table and save as a **Excel** file. 
 
-   ![Save as Excel](media/quickstart-sql-server/save-as-json.png)
+   ![Save as Excel](media/get-started-sql-server/save-as-excel.png)
 
 2. Save as **Results.xls**.
 
 ## View chart
-View Table size.
-
-View built-in widgets through the dashboard.
+View an existing, built-in widget through the dashboard.
 
 ## Next steps
 > [!div class="nextstepaction"]

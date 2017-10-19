@@ -21,13 +21,7 @@ manager: "erikre"
   This topic provides tabular model authors an understanding of how logon credentials are used by Analysis Services when connecting to a datasource to import and process (refresh) data.  
 
 ##  <a name="bkmk_conf_imp_info"></a> Configuring impersonation  
- Where, and in what context a model exists determines how impersonation information is configured. 
-
- For tabular 1200 models, in SSDT, credentials are specified on the **Impersonation Information** page in the Table Import Wizard or by editing an existing datasource connection on the **Existing Connections** dialog.  
-
- For tabular 1400 models, in SSDT, credentials are specified when connecting to the datasource by using Get Data or by editing an existing datasource connection in Tabular Model Explorer.  
-
-For deployed tabular models on-premises, you can use SSMS to edit the connection string property. For tabular models in Azure Analysis Services, you can use SSMS or the **View as: Script** mode in the browser-based designer to edit the Model.bim file in JSON.
+ Where, and in what context a model exists determines how impersonation information is configured. When creating a new model project, impersonation is configured in SQL Server Data Tools (SSDT) when you connect to a data source to import data. Once a model is deployed, impersonation can be configured in model database connection string property by using SQL Server Management Studio (SSMS). For tabular models in Azure Analysis Services, you can use SSMS or the **View as: Script** mode in the browser-based designer to edit the Model.bim file in JSON.
   
 ##  <a name="bkmk_how_imper"></a> How impersonation is used  
  *Impersonation* is the ability of a server application, such as Analysis Services, to assume the identity of a client application. Analysis Services runs using a service account, however, when the server establishes a connection to a datasource, it uses impersonation so that access checks for data import and processing can be performed.  

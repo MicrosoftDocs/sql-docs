@@ -24,7 +24,7 @@ This quickstart uses as its starting point the resources created in one of these
 - [Create DB - CLI](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-get-started-cli.md)
 - [Create DB - PowerShell](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-get-started-powershell.md)
 
-Before you start, make sure you have installed the newest version of [Carbon](https://go.microsoft.com/fwlink/?linkid=853016) and loaded the [mssql extension](https://aka.ms/mssql-marketplace). For installation guidance for the mssql extension, see [Install Carbon](download-carbon.md).
+Before you start, make sure you have installed the newest version of [Carbon](https://go.microsoft.com/fwlink/?linkid=853016) and loaded the [mssql extension](https://aka.ms/mssql-marketplace). For installation guidance for the mssql extension, see [Install Carbon](download.md).
 
 ## Configure Carbon 
 
@@ -94,7 +94,7 @@ Use Carbon to establish a connection to your Azure SQL Database server.
 4. Verify your connection in the status bar.
 
 ## Create a tutorial database
-1. Right click on your server, **localhost**, in the object explorer and select **New Query.**
+1. Right click on your server in the object explorer and select **New Query.**
 
 2. Copy the snippet below and paste in the query window. Click **Run** to execute the query.
 
@@ -114,15 +114,15 @@ Use Carbon to establish a connection to your Azure SQL Database server.
    ```
 
 ## Create a table
-1. Copy the snippet below and paste in the query window. Click **Run** to execute the query.
+1. Copy the snippet below and paste in the query window.
    ```sql
    -- Create a new table called 'Customers' in schema 'dbo'
    -- Drop the table if it already exists
-   IF OBJECT_ID('TutorialDB.dbo.Customers', 'U') IS NOT NULL
-   DROP TABLE TutorialDB.dbo.Customers
+   IF OBJECT_ID('dbo.Customers', 'U') IS NOT NULL
+   DROP TABLE dbo.Customers
    GO
    -- Create the table in the specified schema
-   CREATE TABLE TutorialDB.dbo.Customers
+   CREATE TABLE dbo.Customers
    (
       CustomersId        INT    NOT NULL   PRIMARY KEY, -- primary key column
       Name      [NVARCHAR](50)  NOT NULL,
@@ -132,11 +132,15 @@ Use Carbon to establish a connection to your Azure SQL Database server.
    GO
    ```
 
+2. Change the context to **TutorialDB.** Click **Run** to execute the query.
+
+   ![Change context](media/get-started-sql-database/change-context.png)
+
 ## Insert rows
 1. Copy the snippet below to insert four rows and and paste in the query window. Click **Run** to execute the query.
    ```sql
    -- Insert rows into table 'Customers'
-   INSERT INTO TutorialDB.dbo.Customers
+   INSERT INTO dbo.Customers
       ([CustomersId],[Name],[Location],[Email])
    VALUES
       ( 1, N'Jared', N'Australia', N''),
@@ -150,7 +154,7 @@ Use Carbon to establish a connection to your Azure SQL Database server.
 1. Copy the snippet below to view all the rows and paste in the query window. Click **Run** to execute the query.
    ```sql
    -- Select rows from table 'Customers'
-   SELECT * FROM TutorialDB.dbo.Customers;
+   SELECT * FROM dbo.Customers;
    ```
    ![Select results](media/get-started-sql-database/select-results.png)
 

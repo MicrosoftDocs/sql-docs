@@ -20,7 +20,7 @@ This quickstart demonstrates how to use Carbon to connect to Azure SQL Data Ware
 To use this tutorial, you need:
 
 * An existing SQL data warehouse. To create one, see [Create a SQL Data Warehouse](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/sql-data-warehouse-get-started-provision).
-* Carbon installed. [Install Carbon](https://go.microsoft.com/fwlink/?linkid=853016) for free if you don't already have it. For installation guidance for the mssql extension, see [Carbon download instruction](download-carbon.md).
+* Carbon installed. [Install Carbon](https://go.microsoft.com/fwlink/?linkid=853016) for free if you don't already have it. For installation guidance for the mssql extension, see [Carbon download instruction](download.md).
 * The fully qualified SQL server name. To find this, see [Connect to SQL Data Warehouse](https://docs.microsoft com/en-us/azure/sql-data-warehouse/sql-data-warehouse-connect-overview).
 
 ## Configure Carbon 
@@ -57,7 +57,7 @@ Get the connection information needed to connect to the Azure SQL Data Warehouse
 
 4. On the **Overview** page for your database, review the fully qualified server name as shown in the following image. You can hover over the server name to bring up the **Click to copy** option.
 
-   ![connection information](./media/get-started-sql-database-dw/server-name.png) 
+   ![connection information](./media/get-started-sql-dw/server-name.png) 
 
 5. If you have forgotten the login information for your Azure SQL Data Warehouse server, navigate to the SQL Data Warehouse server page to view the server admin name and, if necessary, reset the password. 
 
@@ -71,7 +71,7 @@ Use Carbon to establish a connection to your Azure SQL Data Warehouse server.
 
 1. In Carbon, click the **New Connection** icon on the top left.
    
-   ![New Connection Icon](media/get-started-sql-database-dw/new-connection-icon.png)
+   ![New Connection Icon](media/get-started-sql-dw/new-connection-icon.png)
 
 2. Follow the prompts to specify the connection properties for the new connection profile. After specifying each value, press **ENTER** to continue. 
 
@@ -87,12 +87,14 @@ Use Carbon to establish a connection to your Azure SQL Data Warehouse server.
 
 3. If you are successfully connected, ignore this step. If you see the following screen, you will need to register your IP address. You can do this through Carbon by clicking add an account, logging in with your Azure credentials, and then adding your IP.
 
-   ![Firewall image](media/get-started-sql-database-dw/setup-firewall-ip.png)   
+   ![Firewall image](media/get-started-sql-dw/setup-firewall-ip.png)   
 
 4. Verify your connection in the status bar.
 
 ## Create a tutorial database
-1. Right click on your server, **localhost**, in the object explorer and select **New Query.**
+1. Right click on your server, in the object explorer and select **New Query.**
+
+   ![NewQuery](media/get-started-sql-dw/new-query.png)
 
 2. Copy the snippet below and paste in the query window. Click **Run** to execute the query.
 
@@ -112,15 +114,15 @@ Use Carbon to establish a connection to your Azure SQL Data Warehouse server.
    ```
 
 ## Create a table
-1. Copy the snippet below and paste in the query window. Click **Run** to execute the query.
+1. Copy the snippet below and paste in the query window.
    ```sql
    -- Create a new table called 'Customers' in schema 'dbo'
    -- Drop the table if it already exists
-   IF OBJECT_ID('TutorialDB.dbo.Customers', 'U') IS NOT NULL
-   DROP TABLE TutorialDB.dbo.Customers
+   IF OBJECT_ID('dbo.Customers', 'U') IS NOT NULL
+   DROP TABLE dbo.Customers
    GO
    -- Create the table in the specified schema
-   CREATE TABLE TutorialDB.dbo.Customers
+   CREATE TABLE dbo.Customers
    (
       CustomersId        INT    NOT NULL   PRIMARY KEY, -- primary key column
       Name      [NVARCHAR](50)  NOT NULL,
@@ -130,11 +132,15 @@ Use Carbon to establish a connection to your Azure SQL Data Warehouse server.
    GO
    ```
 
+2. Change the context to **TutorialDB.** Click **Run** to execute the query.
+
+   ![Change context](media/get-started-sql-dw/change-context.png)
+
 ## Insert rows
 1. Copy the snippet below to insert four rows and and paste in the query window. Click **Run** to execute the query.
    ```sql
    -- Insert rows into table 'Customers'
-   INSERT INTO TutorialDB.dbo.Customers
+   INSERT INTO dbo.Customers
       ([CustomersId],[Name],[Location],[Email])
    VALUES
       ( 1, N'Jared', N'Australia', N''),
@@ -148,14 +154,14 @@ Use Carbon to establish a connection to your Azure SQL Data Warehouse server.
 1. Copy the snippet below to view all the rows and paste in the query window. Click **Run** to execute the query.
    ```sql
    -- Select rows from table 'Customers'
-   SELECT * FROM TutorialDB.dbo.Customers;
+   SELECT * FROM dbo.Customers;
    ```
-   ![Select results](media/get-started-sql-database-dw/select-results.png)
+   ![Select results](media/get-started-sql-dw/select-results.png)
 
 ## Save result as Excel
 1. Right click on the results table and save as a **Excel** file. 
 
-   ![Save as Excel](media/get-started-sql-database-dw/save-as-excel.png)
+   ![Save as Excel](media/get-started-sql-dw/save-as-excel.png)
 
 2. Save as **Results.xls**.
 

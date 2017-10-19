@@ -17,7 +17,7 @@ ms.date: 10/01/2017
 This topic shows how to get started using Carbon with SQL Server databases, and this Quickstart should take about five minutes.
 
 ## Prerequisites
-To install Carbon with Mac, follow [these directions](download-carbon.md).
+To install Carbon with Mac, follow [these directions](download.md).
 
 Before starting this quickstart, you must have access to a running SQL Server instance. If you don't have it, [download SQL Server 2017 Developer Edition](https://go.microsoft.com/fwlink/?linkid=853016).
 
@@ -59,15 +59,15 @@ Before starting this quickstart, you must have access to a running SQL Server in
    ```
 
 ## Create a table
-1. Copy the snippet below and paste in the query window. Click **Run** to execute the query.
+1. Copy the snippet below and paste in the query window.
    ```sql
    -- Create a new table called 'Customers' in schema 'dbo'
    -- Drop the table if it already exists
-   IF OBJECT_ID('TutorialDB.dbo.Customers', 'U') IS NOT NULL
-   DROP TABLE TutorialDB.dbo.Customers
+   IF OBJECT_ID('dbo.Customers', 'U') IS NOT NULL
+   DROP TABLE dbo.Customers
    GO
    -- Create the table in the specified schema
-   CREATE TABLE TutorialDB.dbo.Customers
+   CREATE TABLE dbo.Customers
    (
       CustomersId        INT    NOT NULL   PRIMARY KEY, -- primary key column
       Name      [NVARCHAR](50)  NOT NULL,
@@ -77,11 +77,15 @@ Before starting this quickstart, you must have access to a running SQL Server in
    GO
    ```
 
+2. Change the context to **TutorialDB.** Click **Run** to execute the query.
+
+   ![Change context](media/get-started-sql-server-mac/change-context.png)
+
 ## Insert rows
 1. Copy the snippet below to insert four rows and and paste in the query window. Click **Run** to execute the query.
    ```sql
    -- Insert rows into table 'Customers'
-   INSERT INTO TutorialDB.dbo.Customers
+   INSERT INTO dbo.Customers
       ([CustomersId],[Name],[Location],[Email])
    VALUES
       ( 1, N'Jared', N'Australia', N''),
@@ -95,7 +99,7 @@ Before starting this quickstart, you must have access to a running SQL Server in
 1. Copy the snippet below to view all the rows and paste in the query window. Click **Run** to execute the query.
    ```sql
    -- Select rows from table 'Customers'
-   SELECT * FROM TutorialDB.dbo.Customers;
+   SELECT * FROM dbo.Customers;
    ```
    ![Select results](media/get-started-sql-server/select-results.png)
 

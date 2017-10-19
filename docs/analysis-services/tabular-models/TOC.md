@@ -21,7 +21,6 @@
 ### [Data types supported](data-types-supported-ssas-tabular.md)  
 ### [Impersonation](impersonation-ssas-tabular.md)  
 ### [Import data by using a native query](ssas-import-query.md)
-### [Edit an existing datasource connection](edit-an-existing-data-source-connection-ssas-tabular.md)  
 ## [DirectQuery Mode](directquery-mode-ssas-tabular.md)  
 ### [Enable DirectQuery mode in SSDT](enable-directquery-mode-in-ssdt.md)  
 ### [Enable DirectQuery mode in SSMS](enable-directquery-mode-in-ssms.md)  

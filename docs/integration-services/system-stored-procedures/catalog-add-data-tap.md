@@ -22,7 +22,7 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```tsql  
+```sql  
 add_data_tap [ @execution_id = ] execution_id  
 [ @task_package_path = ] task_package_path  
 [ @dataflow_path_id_string = ] dataflow_path_id_string  

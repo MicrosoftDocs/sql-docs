@@ -88,7 +88,7 @@ manager: "jhubbard"
 ## Example  
  The following example calls the cleanup_server_execution_keys stored procedure.  
   
-```tsql  
+```sql  
 USE [SSISDB]  
 GO  
   

@@ -79,7 +79,7 @@ cleanup_server_log
 ## Example  
  The following example calls the cleanup_server_log stored procedure.  
   
-```tsql  
+```sql  
 USE [SSISDB]  
 GO  
   

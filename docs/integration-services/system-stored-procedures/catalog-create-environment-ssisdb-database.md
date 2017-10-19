@@ -22,20 +22,20 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```tsql  
-create_environment [ @folder_name = ] folder_name  
-     , [ @environment_name = ] environment_name  
-  [  , [ @environment_description = ] environment_description ]  
+```sql  
+create_environment [@folder_name =] folder_name  
+     , [@environment_name =] environment_name  
+  [  , [@environment_description =] environment_description ]  
 ```  
   
 ## Arguments  
- [ @folder_name = ] *folder_name*  
- The name of the folder that will contain the environment. The *folder_name* is **nvarchar(128)**.  
+ [@folder_name =] *folder_name*  
+ The name of the folder to contain the environment. The *folder_name* is **nvarchar(128)**.  
   
- [ @environment_name = ] *environment_name*  
+ [@environment_name =] *environment_name*  
  The name of the environment. The *environment_name* is **nvarchar(128)**.  
   
- [ @environment_description= ] *environment_description*  
+ [@environment_description=] *environment_description*  
  An optional description of the environment. The *environment_description* is **nvarchar(1024)**.  
   
 ## Return Code Value  

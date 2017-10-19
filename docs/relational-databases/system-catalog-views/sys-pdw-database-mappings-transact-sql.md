@@ -1,7 +1,7 @@
 ---
 title: "sys.pdw_database_mappings (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/09/2017"
+ms.date: "10/17/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -27,7 +27,7 @@ manager: "jhubbard"
 |physical_name|**nvarchar(36)**|The physical name for the database on the Compute nodes.<br /><br /> **physical_name** and **database_id** form the key for this view.||  
 |database_id|**int**|The object ID for the database. See [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).<br /><br /> **physical_name** and **database_id** form the key for this view.||  
   
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  The following example joins sys.pdw_database_mappings to other system tables to show how databases are mapped.  
   
 ```  

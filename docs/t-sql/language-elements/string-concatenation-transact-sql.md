@@ -152,18 +152,7 @@ GO
  ```  
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### E. Using string concatenation  
- The following example creates a single column under the column heading `Name` from multiple-character columns, with the last name of the contact followed by a comma, a single space, and then the first name of the contact. The result set is in ascending, alphabetical order by the last name, and then by the first name.  
-  
-```  
--- Uses AdventureWorks  
-  
-SELECT (LastName + ', ' + FirstName) AS Name  
-FROM DimEmployee  
-ORDER BY LastName ASC, FirstName ASC;  
-```  
-  
-### F. Using multiple string concatenation  
+### E. Using multiple string concatenation  
  The following example concatenates multiple strings to form one long string to display the last name and the first initial of the vice presidents within a sample database. A comma is added after the last name and a period after the first initial.  
   
 ```  

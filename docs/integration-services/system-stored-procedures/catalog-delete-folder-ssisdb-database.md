@@ -22,7 +22,7 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```tsql  
+```sql  
 delete_folder [ @folder_name = ] folder_name  
 ```  
   

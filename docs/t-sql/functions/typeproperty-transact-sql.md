@@ -77,15 +77,6 @@ FROM sys.types;
 SELECT TYPEPROPERTY( 'tinyint', 'PRECISION');  
 ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### C: Returning the precision of the tinyint data type  
- The following example returns the precision or number of digits for the `tinyint` data type.  
-  
-```  
-SELECT TYPEPROPERTY( 'tinyint', 'PRECISION');  
-```  
-  
 ## See Also  
  [TYPE_ID &#40;Transact-SQL&#41;](../../t-sql/functions/type-id-transact-sql.md)   
  [TYPE_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/type-name-transact-sql.md)   

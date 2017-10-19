@@ -137,7 +137,15 @@ Start SQL Server in Single User Mode with SQLCMD
    ```bash
    sudo -u mssql /opt/mssql/bin/sqlservr -m SQLCMD
    ```
+  
+> [!WARNING]  
+>  Start SQL Server on Linux with the "mssql" user to prevent future startup issues. Example "sudo -u mssql /opt/mssql/bin/sqlservr [STARTUP OPTIONS]" 
 
+If you have accidentally started SQL Server with another user, you will need to change ownership of SQL Server database files back to the 'mssql' user prior to starting SQL Server with systemd. For example, to change ownership of all database files under /var/opt/mssql to the 'mssql' user, run the following command
+
+   ```bash
+   chown -R mssql:mssql /var/opt/mssql/
+   ```
 
 ## Common issues
 

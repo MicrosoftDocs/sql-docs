@@ -85,16 +85,6 @@ GO
 GO  
 ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-```  
--- Set date format to month/day/year.  
-SET DATEFORMAT mdy;  
-DECLARE @datevar datetime2 = '12/31/2012 09:01:01.1234567';  
-SELECT @datevar;  
-  
-```  
-  
 ## See Also  
  [SET Statements &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)  
   

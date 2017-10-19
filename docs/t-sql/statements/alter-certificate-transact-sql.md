@@ -137,17 +137,6 @@ ALTER CERTIFICATE Shipping15
 GO  
 ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### E. Importing a private key for a certificate that is already present in the database  
-  
-```  
-ALTER CERTIFICATE Shipping13   
-    WITH PRIVATE KEY (FILE = '\\ServerA7\importedkeys\Shipping13',  
-    DECRYPTION BY PASSWORD = 'GDFLKl8^^GGG4000%');  
-GO  
-```  
-  
 ## See Also  
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   
  [DROP CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-certificate-transact-sql.md)   

@@ -667,7 +667,7 @@ convert-sql-statement
   
 -   `write-summary-report-to` specifies the path where the report will be generated. If only the folder path is mentioned, then file by name **ConvertSQLReport.XML** is created. (optional attribute)  
   
-    Report creation has 2 further sub-categories, viz..,:  
+    Report creation has 2 further sub-categories, viz.:  
   
     -   report-errors (="true/false", with default as "false" (optional attributes)).  
   

@@ -1,10 +1,12 @@
 ---
 
-title: "Product Documentation (Analytics Platform System)"
+title: "Product Documentation (Analytics Platform System)"
+author: "barbkess" 
+ms.author: "barbkess"
+manager: "jhubbard"	  
+ms.prod: "analytics-platform-system" 
+ms.technology: "mpp-data-warehouse"
 description: "Microsoft Analytics Platform System (APS), a data platform designed for data warehousing and Big Data analytics, offers deep data integration, high-speed query processing, highly scalable storage, and simple maintenance for your end-to-end business intelligence solutions."
-
- 
-
 ms.date: "10/20/2016"
 ms.topic: "article"
 

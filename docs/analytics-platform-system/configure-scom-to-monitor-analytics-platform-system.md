@@ -1,5 +1,10 @@
 ---
-title: "Configure SCOM to Monitor Analytics Platform System (Analytics Platform System)"
+title: "Configure SCOM to Monitor Analytics Platform System (Analytics Platform System)"
+author: "barbkess" 
+ms.author: "barbkess"
+manager: "jhubbard"	  
+ms.prod: "analytics-platform-system" 
+ms.technology: "mpp-data-warehouse"
 ms.custom: na
 ms.date: 01/05/2017
 ms.reviewer: na

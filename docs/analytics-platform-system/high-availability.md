@@ -1,10 +1,12 @@
 ---
 
-title: "Analytics Platform System high availability"
+title: "Analytics Platform System high availability"
+author: "barbkess" 
+ms.author: "barbkess"
+manager: "jhubbard"	  
+ms.prod: "analytics-platform-system" 
+ms.technology: "mpp-data-warehouse"
 description: "Describes how Analytics Platform System (APS) is architected for high availability."
-
- 
-
 ms.date: "10/20/2016"
 ms.topic: "article"
 

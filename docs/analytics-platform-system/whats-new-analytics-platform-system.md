@@ -1,6 +1,11 @@
 ---
 
-title: "What's new in Analytics Platform System – a scale-out data warehouse"
+title: "What's new in Analytics Platform System – a scale-out data warehouse"
+author: "barbkess" 
+ms.author: "barbkess"
+manager: "jhubbard"	  
+ms.prod: "analytics-platform-system" 
+ms.technology: "mpp-data-warehouse"
 description: "See what’s new in Microsoft® Analytics Platform System, a scale-out on-premises appliance that hosts MPP SQL Server Parallel Data Warehouse."
 
 author: "happynicolle" 

@@ -1,9 +1,11 @@
 ---
 title: "dwloader Command-Line Loader for Parallel Data Warehouse"
+author: "barbkess" 
+ms.author: "barbkess"
+manager: "jhubbard"	  
+ms.prod: "analytics-platform-system" 
+ms.technology: "mpp-data-warehouse"
 description: "**dwloader** is a Parallel Data Warehouse (PDW) command-line tool that loads table rows in bulk into an existing table."
-
- 
-
 ms.date: "11/04/2016"
 ms.topic: "article"
 

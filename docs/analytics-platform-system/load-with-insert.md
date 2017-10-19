@@ -1,10 +1,12 @@
 ---
 
 title: "Load data with INSERT"
+author: "barbkess" 
+ms.author: "barbkess"
+manager: "jhubbard"	  
+ms.prod: "analytics-platform-system" 
+ms.technology: "mpp-data-warehouse"
 description: "You can use the tsql INSERT statement to load data into a SQL Server Parallel Data Warehouse (PDW) distributed or replicated table."
-
- 
-
 ms.date: "10/20/2016"
 ms.topic: "article"
 

@@ -1,10 +1,12 @@
 ---
 
-title: "Configure Windows Server Update Services (WSUS) "
+title: "Configure Windows Server Update Services (WSUS) "
+author: "barbkess" 
+ms.author: "barbkess"
+manager: "jhubbard"	  
+ms.prod: "analytics-platform-system" 
+ms.technology: "mpp-data-warehouse"
 description: "Configure Windows Server Update Services (WSUS) for Analytics Platform System (APS) and SQL Server Parallel Data Warehouse (PDW)."
-
- 
-
 ms.date: "01/05/2017"
 ms.topic: "article"
 

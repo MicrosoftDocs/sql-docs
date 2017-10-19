@@ -1,5 +1,10 @@
 ---
-title: "Set Admin Password for Logging on to AD Nodes in Directory Services Restore Mode (DSRM) (Analytics Platform System)"
+title: "Set Admin Password for Logging on to AD Nodes in Directory Services Restore Mode (DSRM) (Analytics Platform System)"
+author: "barbkess" 
+ms.author: "barbkess"
+manager: "jhubbard"	  
+ms.prod: "analytics-platform-system" 
+ms.technology: "mpp-data-warehouse"
 ms.custom: na
 ms.date: 01/05/2017
 ms.reviewer: na

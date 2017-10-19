@@ -1,10 +1,12 @@
 ---
 
-title: "Acquire and Configure a Loading Server (SQL Server PDW)"
+title: "Acquire and Configure a Loading Server (SQL Server PDW)"
+author: "barbkess" 
+ms.author: "barbkess"
+manager: "jhubbard"	  
+ms.prod: "analytics-platform-system" 
+ms.technology: "mpp-data-warehouse"
 description: "Acquire and configure a loading server as a non-appliance Windows system for submitting data loads to SQL Server Parallel Data Warehouse."
-
- 
-
 ms.date: "10/20/2016"
 ms.topic: "article"
 ms.assetid: a434b174-a818-4f73-b218-264619bab664

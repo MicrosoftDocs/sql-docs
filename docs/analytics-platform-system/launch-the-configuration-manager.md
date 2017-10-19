@@ -1,5 +1,10 @@
 ---
-title: "Launch the Configuration Manager (Analytics Platform System)"
+title: "Launch the Configuration Manager (Analytics Platform System)"
+author: "barbkess" 
+ms.author: "barbkess"
+manager: "jhubbard"	  
+ms.prod: "analytics-platform-system" 
+ms.technology: "mpp-data-warehouse"
 ms.custom: na
 ms.date: 01/05/2017
 ms.reviewer: na

@@ -1,5 +1,10 @@
 ---
-title: "Configure an External Windows System To Receive Remote Table Copies Using InfiniBand (SQL Server PDW)"
+title: "Configure an External Windows System To Receive Remote Table Copies Using InfiniBand (SQL Server PDW)"
+author: "barbkess" 
+ms.author: "barbkess"
+manager: "jhubbard"	  
+ms.prod: "analytics-platform-system" 
+ms.technology: "mpp-data-warehouse"
 ms.custom: na
 ms.date: 01/13/2017
 ms.reviewer: na

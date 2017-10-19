@@ -1,9 +1,11 @@
 ---
 title: "Backup and restore"
+author: "barbkess" 
+ms.author: "barbkess"
+manager: "jhubbard"	  
+ms.prod: "analytics-platform-system" 
+ms.technology: "mpp-data-warehouse"
 description: "Describes how data backup and restore works for SQL Server Parallel Data Warehouse (PDW)."
-
- 
-
 ms.date: "10/20/2016"
 ms.topic: "article"
 
@@ -127,10 +129,7 @@ After the redistribution each Compute node will contain less actual data and mor
 |---------------------------|---------------|  
 |Prepare a server as a backup server.|[Acquire and configure a backup server ](acquire-and-configure-backup-server.md)|  
 |Backup a database.|[BACKUP DATABASE](../t-sql/statements/backup-database-parallel-data-warehouse.md)|  
-|Restore a database.|[RESTORE DATABASE](../t-sql/statements/restore-database-parallel-data-warehouse.md)|  
- 
-
-  
+|Restore a database.|[RESTORE DATABASE](../t-sql/statements/restore-database-parallel-data-warehouse.md)|    
 <!-- MISSING LINKS
 |Create a disaster recovery plan.|[Create a Disaster Recovery Plan](create-disaster-recovery-plan.md)|
 |Restore the master database.|To restore the master database, use the [Restore the master database](configuration-manager-restore-master-database.md) page in the Configuration Manager tool.| 

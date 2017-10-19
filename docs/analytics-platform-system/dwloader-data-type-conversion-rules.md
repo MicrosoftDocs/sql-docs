@@ -1,10 +1,12 @@
 ---
 
 title: "Data type conversion rules for dwloader"
+author: "barbkess" 
+ms.author: "barbkess"
+manager: "jhubbard"	  
+ms.prod: "analytics-platform-system" 
+ms.technology: "mpp-data-warehouse"
 description: "This topic describes the input data formats and implicit data type conversions that dwloader Command-Line Loader supports when it loads data into PDW."
-
- 
-
 ms.date: "10/20/2016"
 ms.topic: "article"
 

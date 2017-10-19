@@ -1,10 +1,15 @@
 ---
 title: T-SQL statements - Analytics Platform System SQL Server Parallel Data Warehouse | Microsoft Docs
+author: "barbkess" 
+ms.author: "barbkess"
+manager: "jhubbard"	  
+ms.prod: "analytics-platform-system" 
+ms.technology: "mpp-data-warehouse"
 description: Transact-SQL (T-SQL) statements for Analytic Platform System (APS) SQL Server Parallel Data Warehouse (PDW).
 services: sql-data-warehouse
 documentationcenter: NA
 author: barbkess
-manager: jhubbard
+ jhubbard
 editor: ''
 
 ms.assetid: 0abc5934-1e67-491a-b7d7-8b520d1ae98e

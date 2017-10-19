@@ -1,10 +1,12 @@
 ---
 
 title: "Transparent Data Encryption for Parallel Data Warehouse"
+author: "barbkess" 
+ms.author: "barbkess"
+manager: "jhubbard"	  
+ms.prod: "analytics-platform-system" 
+ms.technology: "mpp-data-warehouse"
 description: "Transparent data encryption (TDE) performs real-time I/O encryption and decryption of the data and transaction log files and the special PDW log files."
-
- 
-
 ms.date: "10/20/2016"
 ms.topic: "article"
 

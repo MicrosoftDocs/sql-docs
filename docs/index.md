@@ -17,27 +17,20 @@ ms.technology:
             <li>
                 <a data-default="true" href="#main"></a>
                 <ul id="main">
-
-
-
                     <li>
                         <a href="#databases">Databases</a>
                         <ul id="databases" class="cardsW">
-						
-						
                             <li class="fullSpan">
-                                <div class="container intro" style="color: #535353; font-family: segoe-ui_light,Segoe UI Light,Segoe WP,Helvetica Neue,Helvetica,sans-serif;">
+                                <div class="container intro">
                                     <p>Manage relational data with SQL databases in your datacenter or on Azure. Use machine learning and analytics to gain insights on SQL data. </p>
                                 </div>
                             </li>
-							
-							
                              <li>
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
                                             <div class="cardText">
-                                                <div style="height:100px; border-bottom-color: #dbdbdb; border-bottom-width: 1px; border-bottom-style: solid; position: relative;">
+                                                <div style="height:70px; border-bottom-color: #dbdbdb; border-bottom-width: 1px; border-bottom-style: solid; position: relative;">
                                                    <h3 style="bottom: 20px; color: rgb(110, 110, 110); font-family: segoe-ui_light,Segoe UI Light,Segoe WP,Helvetica Neue,Helvetica,sans-serif; font-size: 2rem; vertical-align: bottom; position: absolute;">Databases</h3>
                                                 </div>
                                                 <h4 class="likeAnH3" style="margin: 1rem 0px;">SQL </h4>
@@ -68,14 +61,12 @@ ms.technology:
                                     </div>
                                 </div>
                             </li>
-
-
                             <li>
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
                                             <div class="cardText">
-                                                <div style="height:100px; border-bottom-color: #dbdbdb; border-bottom-width: 1px; border-bottom-style: solid; position: relative;">
+                                                <div style="height:70px; border-bottom-color: #dbdbdb; border-bottom-width: 1px; border-bottom-style: solid; position: relative;">
                                                    <h3 style="bottom: 20px; color: rgb(110, 110, 110); font-family: segoe-ui_light,Segoe UI Light,Segoe WP,Helvetica Neue,Helvetica,sans-serif; font-size: 2rem; vertical-align: bottom; position: absolute;">Develop</h3>
                                                 </div>
                                                 <h4 class="likeAnH3" style="margin: 1rem 0px;">Design</h4>
@@ -107,14 +98,12 @@ ms.technology:
                                     </div>
                                 </div>
                             </li>
-
-
                             <li>
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
                                             <div class="cardText">
-                                                <div style="height:100px; border-bottom-color: #dbdbdb; border-bottom-width: 1px; border-bottom-style: solid; position: relative;">
+                                                <div style="height:70px; border-bottom-color: #dbdbdb; border-bottom-width: 1px; border-bottom-style: solid; position: relative;">
                                                    <h3 style="bottom: 20px; color: rgb(110, 110, 110); font-family: segoe-ui_light,Segoe UI Light,Segoe WP,Helvetica Neue,Helvetica,sans-serif; font-size: 2rem; vertical-align: bottom; position: absolute;">Data Analytics</h3>
                                                 </div>
                                                 <h4 class="likeAnH3" style="margin: 1rem 0px;">Analysis</h4>
@@ -145,12 +134,8 @@ ms.technology:
                                     </div>
                                 </div>
                             </li>
-							
-							
                         </ul>
                     </li>
-					
-					
                 </ul>
             </li>
         </ul>

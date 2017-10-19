@@ -53,7 +53,7 @@
 ## [Transparent Data Encryption](transparent-data-encryption.md)
 ## [Provision a certificate](provision-certificate.md)
 
-# [Appliance mangement tasks](appliance-management-tasks.md)
+# [Appliance management tasks](appliance-management-tasks.md)
 ## [Appliance installation and configuration overview](appliance-installation-and-configuration-overview.md)
 ### [Information to obtain from your IHV](information-to-obtain-from-your-ihv.md)
 ### [Hardware installation](hardware-installation.md)

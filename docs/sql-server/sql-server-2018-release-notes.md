@@ -26,22 +26,16 @@ This topic describes limitations and issues with SQL Server vNext on Windows and
 
 
 > - **Issue and customer impact:** ??
->
 > - **Workaround:** ???
->
 > - **Applies to:** Windows and Linx
-
+---
 > - **Issue and customer impact:** ??
->
 > - **Workaround:** ???
->
 > - **Applies to:** Windows and Linx
 
 ### Setup
 > - **Issue and customer impact:** ??
->
 > - **Workaround:** ???
->
 > - **Applies to:** Windows and Linx
 
 

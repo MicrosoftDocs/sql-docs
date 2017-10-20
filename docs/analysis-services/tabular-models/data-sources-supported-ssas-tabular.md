@@ -19,7 +19,7 @@ manager: "erikre"
 ---
 # Data sources supported in tabular models
 
-[!INCLUDE[ssas-appliesto-sqlas-all](../includes/ssas-appliesto-sqlas-all.md)]   
+[!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]   
 For Azure Analysis Services, see [Data sources supported in Azure Analysis Services](https://docs.microsoft.com/en-us/azure/analysis-services/analysis-services-datasource).
 
   This topic describes the types of data sources that can be used with tabular models.  

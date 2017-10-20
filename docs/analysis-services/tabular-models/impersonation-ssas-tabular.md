@@ -19,7 +19,7 @@ manager: "erikre"
 ---
 # Impersonation 
 
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../includes/ssas-appliesto-sqlas-all-aas.md)]
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
   This topic provides tabular model authors an understanding of how logon credentials are used by Analysis Services when connecting to a datasource to import and process (refresh) data.  
 

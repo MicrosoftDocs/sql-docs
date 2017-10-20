@@ -19,7 +19,7 @@ manager: "erikre"
 ---
 # Data types supported in tabular models
 
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../includes/ssas-appliesto-sqlas-all-aas.md)]
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
   This article describes the data types that can be used in tabular models, and discusses the implicit conversion of data types when data is calculated or used in a Data Analysis Expressions (DAX) formula.  
 

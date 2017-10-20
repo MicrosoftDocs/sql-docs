@@ -41,7 +41,7 @@ To view alerts by using system views, query [sys.dm_pdw_component_health_active_
   
 The following example is a common query for viewing the current alerts.  
   
-```  
+```sql  
 SELECT   
     aa.[pdw_node_id],  
     n.[name] AS [node_name],  

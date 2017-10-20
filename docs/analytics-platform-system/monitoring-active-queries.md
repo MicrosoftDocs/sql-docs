@@ -39,7 +39,7 @@ The primary system view used to monitor queries is [sys.dm_pdw_exec_requests](..
   
 For example, the following query finds the `request_id` and the current `status` for any query that selects all columns from the `memberAddresses` table.  
   
-```  
+```sql  
 SELECT request_id, command, status   
 FROM sys.dm_pdw_exec_requests   
 WHERE command   

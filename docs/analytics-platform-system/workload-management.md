@@ -49,7 +49,7 @@ To adjust resource utilization, change the resource class membership of the logi
   
 For example, to allocate a large amount of system resources to a request, add the login that is submitting the request to the **largerc** server role. The following ALTER SERVER ROLE statement adds the login Anna to the largerc server role.  
   
-```  
+```sql  
 ALTER SERVER ROLE largerc ADD MEMBER Anna;  
 ```  
   

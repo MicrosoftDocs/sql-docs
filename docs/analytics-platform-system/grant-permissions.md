@@ -21,7 +21,7 @@ This section describes how to grant permissions to database roles and users to q
   
 The statements used to grant permissions to query data depend on the scope of access desired. The following SQL statements create a login named KimAbercrombie that can access the appliance, create a database user named KimAbercrombie in the **AdventureWorksPDW2012** database, create a database role named PDWQueryData, adds the use KimAbercrombie to the PDWQueryData role, and then show options for granting query access, based on whether the access is granted at the object, or database level.  
   
-```  
+```sql  
 USE master;  
 GO  
   
@@ -62,7 +62,7 @@ This section describes how to grant permissions to logins to use the Admin Conso
   
 To use the Admin Console a login requires the server level **VIEW SERVER STATE** permission. The following SQL statement grants the **VIEW SERVER STATE** permission to the login `KimAbercrombie` so that Kim can use the Admin Console to monitor the SQL Server PDW appliance.  
   
-```  
+```sql  
 USE master;  
 GO  
 GRANT VIEW SERVER STATE TO KimAbercrombie;  
@@ -73,7 +73,7 @@ GO
   
 To grant a login the permission to kill sessions, grant the **ALTER ANY CONNECTION** permission as follows:  
   
-```  
+```sql  
 GRANT ALTER ANY CONNECTION TO KimAbercrombie;  
 ```  
   
@@ -82,7 +82,7 @@ This section describes how to grant permissions to database roles and database u
   
 The following script shows which permissions are required for each loading option. You can modify this to meet your specific needs.  
   
-```  
+```sql  
 -- Create server login for the examples that follow.  
 USE master;  
 CREATE LOGIN BI_ETLUser WITH PASSWORD = '******';  
@@ -132,7 +132,7 @@ This section describes how to grant permissions to a database user to manage a d
   
 In some situations, a company assigns a manager for a database. The manager controls the access that other logins have to the database, as well as the data and objects in the database. To manage all objects, roles, and users in a database grant the user the **CONTROL** permission on the database. The following statement grants the **CONTROL** permission on the **AdventureWorksPDW2012** database to the user `KimAbercrombie`.  
   
-```Transact-SQL  
+```sql
 USE AdventureWorksPDW2012;  
 GO  
 GRANT CONTROL ON DATABASE:: AdventureWorksPDW2012 TO KimAbercrombie;  
@@ -150,7 +150,7 @@ The following SQL statements create a Login named KimAbercrombie  that can creat
   
 The **ALTER ANY LOGIN** permission grants the ability to create new logins and drop exisiting. Once a login exists, the login can be managed by logins with the **ALTER ANY LOGIN** permission or the **ALTER** permission on that login. A login can change the password and default database for its own login.  
   
-```Transact-SQL  
+```sql 
 CREATE LOGIN KimAbercrombie   
 WITH PASSWORD = 'A2c3456$#' MUST_CHANGE,  
 CHECK_EXPIRATION = ON,  
@@ -163,7 +163,7 @@ GRANT ALTER ANY LOGIN TO KimAbercrombie;
 ### Grant Permissions to Manage Login Sessions  
 To have the ability to view all sessions on the server requires the **VIEW SERVER STATE** permission. The ability to terminate the sessions of other logins requires the **ALTER ANY CONNECTION** permission. The following example uses the `KimAbercrombie` login created earlier.  
   
-```  
+```sql  
 -- Grant permissions to view sessions and queries  
 GRANT VIEW SERVER STATE TO KimAbercrombie;  
   
@@ -174,7 +174,7 @@ GRANT ALTER ANY CONNECTION TO KimAbercrombie;
 ### Grant Permission to Manage Database Users  
 Creating and dropping database users requires the **ALTER ANY USER** permission. Managing existing users requires the **ALTER ANY USER** permission or the **ALTER** permission on that user. The following example uses the `KimAbercrombie` login created earlier.  
   
-```  
+```sql  
 -- Create a user  
 USE AdventureWorksPDW2012;  
 GO  
@@ -187,7 +187,7 @@ GRANT ALTER ANY USER TO KimAbercrombie;
 ### Grant Permisson to Manage Database Roles  
 Create and dropping user-defined database roles requires the **ALTER ANY ROLE** permission. The following example uses the `KimAbercrombie` login and use created earlier.  
   
-```  
+```sql  
 USE AdventureWorksPDW2012;  
 GO  
 -- Grant permissions to create and drop roles  
@@ -220,7 +220,7 @@ The SQL Server PDW appliance can be monitored by using either the Admin Console 
 ### <a name="PermsAdminConsole"></a>Grant Permission to Monitor the Appliance by Using System Views  
 The following SQL statements create a login named `monitor_login` and grants the **VIEW SERVER STATE** permission to the `monitor_login` login.  
   
-```  
+```sql  
 USE master;  
 GO  
 CREATE LOGIN monitor_login WITH PASSWORD='Password4321';  
@@ -231,7 +231,7 @@ GO
 ### Grant Permission to Monitor the Appliance by Using System Views and to Terminate Connections  
 The following SQL statements create a login named `monitor_and_terminate_login` and grants the **VIEW SERVER STATE** and **ALTER ANY CONNECTION** permissions to the `monitor_and_terminate_login` login.  
   
-```  
+```sql  
 USE master;  
 GO  
 CREATE LOGIN monitor_and_terminate_login WITH PASSWORD='Password1234';   

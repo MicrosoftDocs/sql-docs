@@ -22,7 +22,7 @@ For resource class descriptions, see [Workload Management](workload-management.m
   
 This query displays the membership list for each resource class. There are three resource classes, mediumrc, largerc, and xlargerc.  
   
-```  
+```sql  
 SELECT l.name AS [member], r.name AS [server role]  
 FROM sys.server_role_members AS rm  
 JOIN sys.server_principals AS l  
@@ -49,7 +49,7 @@ This query displays logins which are members of the resource class server role m
 > [!IMPORTANT]  
 > This query must be executed by a login having **CONTROL SERVER** permission. If executed by a login without **CONTROL SERVER** permission, this query only returns the role memberships for the current login.  
   
-```  
+```sql  
 SELECT l.name AS [member], r.name AS [server role]  
 FROM sys.server_role_members AS rm  
 JOIN sys.server_principals AS l  
@@ -77,7 +77,7 @@ There are two ways to run a request with either larger or smaller system resourc
   
 Suppose Ching is a member of the largerc server role. The following example shows how to add login Ching to the xlargerc server role.  
   
-```  
+```sql  
 ALTER SERVER ROLE xlargerc ADD MEMBER Ching;  
 ```  
   
@@ -85,7 +85,7 @@ Ching is now a member of the largerc and the xlargerc server roles. When Ching s
   
 The following example moves Ching back to the mediumrc server role.  To do this, she must be removed from xlargerc, and largerc server roles, and added to the mediumrc server role.  
   
-```  
+```sql  
 -- Move login Ching back to using medium system resources for requests.  
 ALTER SERVER ROLE xlargerc DROP MEMBER Ching;  
 ALTER SERVER ROLE largerc DROP MEMBER Ching;  
@@ -94,7 +94,7 @@ ALTER SERVER ROLE mediumrc ADD MEMBER Ching;
   
 Ching is now a member of the mediumrc server role.  The following example changes Ching to have the default system resources for her requests.  
   
-```  
+```sql  
 -- Move login Ching to use the default system resources for requests.  
 ALTER SERVER ROLE mediumrc DROP MEMBER Ching;  
 ```  
@@ -110,7 +110,7 @@ When a login is not a member of any resource class server role, requests submitt
   
 Suppose the login Matt is currently a member of all resource class server roles and wants to revert back to having his requests receive only the default resources.  The following example assigns the default resources to Matt’s requests by dropping his membership from all three resource class server roles.  
   
-```  
+```sql  
 --Give the requests submitted by Matt the default system resources   
 --by dropping Matt from all resource class server roles.  
 ALTER SERVER ROLE XLargeRC DROP MEMBER Matt;  
@@ -125,7 +125,7 @@ For more information, see [Workload Management](workload-management.md).
   
 A request could be waiting too long without getting executed. One of the ways to troubleshoot this is to look at the number of concurrency slots the request needs.  The following example shows the number of concurrency slots needed by each waiting request.  
   
-```  
+```sql  
 --Display the number of concurrency slots required   
 --for each request that is waiting to run.  
 SELECT request_id, concurrency_slots_used AS [Slots Needed], resource_class AS [Resource Class]  

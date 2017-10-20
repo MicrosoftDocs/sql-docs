@@ -155,7 +155,7 @@ The following walkthrough demonstrates a simple data load using Integration Serv
   
 In this example we will load into the `Orders` table, which has the following DDL. The `Orders` table is part of the `LoadExampleDB` database.  
   
-```  
+```sql  
 CREATE TABLE LoadExampleDB.dbo.Orders (  
    id INT,  
    city varchar(25),  

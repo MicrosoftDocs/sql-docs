@@ -21,9 +21,7 @@ SQL Server PDW error messages report errors and problems encountered by the SQL 
 ## <a name="Basics"></a>Error Message Basics  
 Error messages that are returned follow the same syntax.  
   
-```  
-Error_Indicator [SQL_State_Code] [Driver_Details] [QueryID] Message_String  
-```  
+`Error_Indicator [SQL_State_Code] [Driver_Details] [QueryID] Message_String`  
   
 These are the potential values for each field:  
   

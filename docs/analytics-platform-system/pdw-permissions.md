@@ -130,7 +130,7 @@ To research the permissions of a user check the following.
   
 -   Execute the following query to determine which logins are system administrators.  
   
-    ```  
+    ```sql  
     SELECT SPLogins.name, 'is a member of ', SPRoles.name   
     FROM sys.server_role_members AS SRM   
     JOIN sys.server_principals AS SPRoles   
@@ -141,7 +141,7 @@ To research the permissions of a user check the following.
   
 -   Execute the following query to determine which logins have been granted explicit permissions.  
   
-    ```  
+    ```sql  
     SELECT name, 'has the ', state_desc , permission_name, ' permission'  
     FROM sys.server_permissions AS SP  
     JOIN sys.server_principals AS SPRoles   
@@ -150,7 +150,7 @@ To research the permissions of a user check the following.
   
 -   Execute the following query in a user database to determine which database users are members of a database role.  
   
-    ```  
+    ```sql  
     SELECT DPUsers.name, 'is a member of ', DPRoles.name    
     FROM sys.database_role_members AS DRM  
     JOIN sys.database_principals AS DPRoles   
@@ -161,7 +161,7 @@ To research the permissions of a user check the following.
   
 -   Execute the following query in a user database to determine which database users and roles have been granted or denied specific permissions. You will have to query additional views such as sys.objects and sys.schemas to identify the items described with the major_id.  
   
-    ```  
+    ```sql  
     SELECT DPUsers.name, 'has the ', permission_name,   
     'permission on the item described as class = ', class, 'id = ', major_id  
     FROM sys.database_permissions AS DP  
@@ -220,7 +220,7 @@ Fixed server roles are created automatically by SQL Server. SQL Server PDW has a
 ### sysadmin Fixed Server Role  
 Members of the **sysadmin** fixed server role can perform any activity in the server. The **sa** login is the only member of the **sysadmin** fixed server role. Additional logins cannot be added to the **sysadmin** fixed server role. Granting the **CONTROL SERVER** permission approximates membership in the **sysadmin** fixed server role. The following example grants the **CONTROL SERVER** permission to a login named Fay.  
   
-```  
+```sql  
 USE master;  
 GO  
 GRANT CONTROL SERVER TO Fay;  

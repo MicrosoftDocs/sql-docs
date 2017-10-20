@@ -28,7 +28,7 @@ Explains how to configure PolyBase in SQL Server PDW to connect to external Hado
   
 3.  To change the 'hadoop connectivity' setting, run sp_configure with RECONFIGURE. Here are some examples.  
   
-    ```  
+    ```sql  
     --Enable connectivity to Hortonworks Data Platform for Windows Server (HDP), HDInsight on Analytics Platform System, or HDInsight’s Microsoft Azure blob storage  
     EXEC sp_configure 'hadoop connectivity', 4;   
     RECONFIGURE;  
@@ -64,7 +64,7 @@ Explains how to configure PolyBase in SQL Server PDW to connect to external Hado
   
     5.  Add the following property with name and value attributes to core-site.xml.  
   
-        ```  
+        ```xml  
         <property>  
           <name>fs.azure.account.key.<your storage account name>.blob.core.windows.net</name>  
           <value><your storage account access key></value>  
@@ -73,7 +73,7 @@ Explains how to configure PolyBase in SQL Server PDW to connect to external Hado
   
         This example uses the account name and access key shown previously.  
   
-        ```  
+        ```xml  
         <property>  
           <name>fs.azure.account.key.CustomerX.blob.core.windows.net</name>  
           <value>yyeTfCxxxxxxxxQ5WdnapXw77W+FwzHUhX/p/f26fIpnNFGtewzyRN90e1/qmTOl1xxxxxxxxa0goG71LsNcw==</value>  
@@ -95,7 +95,7 @@ Explains how to configure PolyBase in SQL Server PDW to connect to external Hado
   
     Default settings example:  
   
-    ```  
+    ```xml  
     <property>  
         <name>yarn.application.classpath</name>  
         <value>  

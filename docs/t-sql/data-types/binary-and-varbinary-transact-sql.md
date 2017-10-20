@@ -1,7 +1,7 @@
 ---
 title: "binary and varbinary (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/20/2017"
+ms.date: "8/16/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""

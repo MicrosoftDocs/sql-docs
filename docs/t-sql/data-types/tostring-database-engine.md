@@ -1,7 +1,7 @@
 ---
 title: "ToString (Database Engine) | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/20/2017"
+ms.date: "7/23/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""

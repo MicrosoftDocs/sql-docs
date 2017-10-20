@@ -28,9 +28,9 @@ If you don't have an Azure subscription, create a [free](https://azure.microsoft
 ## Prerequisites
 Follow [Get Started with Carbon](./get-started-sql-server.md)
 
-## Bring your own Insight query: View Top 5 slowest queries
+## Bring your own Insight query: View Top five slowest queries
 [step overview]
-In this tutorial, we will use Query Store feature ...[give a brief explaination and link to QDS]
+In this tutorial, we use Query Store feature ...[give a brief explanation and link to QDS]
 
 1. Enable Query Store on TutorialDB by executing following query.
 
@@ -64,20 +64,20 @@ In this tutorial, we will use Query Store feature ...[give a brief explaination 
     order by format(rs.last_execution_time,'yyyy-MM-dd hh:mm:ss')
     END
    ```
-3. Press ```F5``` to execute the query. After Carbon returns the query, click ```View as Chart``` button.
+3. To execute the query, press **F5**. After Carbon returns the query, click the **View as Chart* button.
 
    ![view as chart](./media/tutorial-sql-server/view-as-chart.png)
 
-4. Change the chart type to ```TimeSeries``` and select ```top``` for ```Legend Position```. It will render a line chart:
+4. Change the chart type to **TimeSeries** and select **top** for **Legend Position**. These settings render a line chart:
 
    ![query performance](./media/tutorial-sql-server/query-perf.png)
 
 5. Save the query in the editor to a *.sql file. For this tutorial, save the script as ```qds_insight.sql```.
 
-## Build a Insight widget on Dashboard
+## Build an Insight widget on Dashboard
 [overview step]
 
-1. Click ```Create Insight``` button on Chart Viewer. It will open a insight widget configuration like:
+1. Click ```Create Insight``` button on Chart Viewer. It opens an insight widget configuration like:
 
    ```json
     {

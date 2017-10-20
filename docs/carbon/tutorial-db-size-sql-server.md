@@ -28,9 +28,9 @@ If you don't have an Azure subscription, create a [free](https://azure.microsoft
 ## Prerequisites
 Follow [Get Started with Carbon](./get-started-sql-server.md)
 
-## Bring your own Insight query: View Top 5 slowest queries
+## Bring your own Insight query: View Top five slowest queries
 [step overview]
-In this tutorial, we will use Query Store feature ...[give a brief explaination and link to QDS]
+In this tutorial, we use Query Store feature ...[give a brief explanation and link to QDS]
 
 1. Enable Query Store on TutorialDB by executing following query.
 
@@ -68,16 +68,16 @@ In this tutorial, we will use Query Store feature ...[give a brief explaination 
 
    ![view as chart](./media/tutorial-sql-server/view-as-chart.png)
 
-4. Change the chart type to ```TimeSeries``` and select ```top``` for ```Legend Position```. It will render a line chart:
+4. Change the chart type to ```TimeSeries``` and select ```top``` for ```Legend Position```. These settings render a line chart:
 
    ![query performance](./media/tutorial-sql-server/query-perf.png)
 
 5. Save the query in the editor to a *.sql file. For this tutorial, save the script as ```qds_insight.sql```.
 
-## Build a Insight widget on Dashboard
+## Build an Insight widget on Dashboard
 [overview step]
 
-1. Click ```Create Insight``` button on Chart Viewer. It will open a insight widget configuration like:
+1. Click ```Create Insight``` button on Chart Viewer. It opens the insight widget configuration like:
 
    ```json
     {
@@ -114,7 +114,7 @@ In this tutorial, we will use Query Store feature ...[give a brief explaination 
 
    ![dashboard settings](./media/tutorial-sql-server/dashboard-settings.png)
 
-5. Paste the insight configuration json into ```dashboard.database.widgets{}```. Database dashboard will be:
+5. Paste the insight configuration json into ```dashboard.database.widgets{}```. Database dashboard should look like the following:
 
    > Repeat the same steps to add multiple insight widgets.
 

@@ -28,9 +28,9 @@ If you don't have an Azure subscription, create a [free](https://azure.microsoft
 ## Prerequisites
 Follow [Get Started with Carbon](./get-started-sql-server.md)
 
-## Bring your own Insight query: View Top 5 slowest queries
+## Bring your own Insight query: View Top five slowest queries
 [step overview]
-In this tutorial, we will use Query Store feature ...[give a brief explaination and link to QDS]
+In this tutorial, we use Query Store feature ...[give a brief explanation and link to QDS]
 
 1. Enable Query Store on TutorialDB by executing following query.
 
@@ -74,10 +74,10 @@ In this tutorial, we will use Query Store feature ...[give a brief explaination 
 
 5. Save the query in the editor to a *.sql file. For this tutorial, save the script as ```qds_insight.sql```.
 
-## Build a Insight widget on Dashboard
+## Build an Insight widget on Dashboard
 [overview step]
 
-1. Click ```Create Insight``` button on Chart Viewer. It will open a insight widget configuration like:
+1. Click ```Create Insight``` button on Chart Viewer. It opens an insight widget configuration like:
 
    ```json
     {

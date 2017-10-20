@@ -33,9 +33,9 @@ To install Carbon with Linux, follow [these directions](download.md#get-carbon-f
 
    **Authentication Type:** SQL Login
 
-   **User name:** User name used when you setup SQL Server
+   **User name:** User name for SQL Server
 
-   **Password:** Password used when you setup SQL Server
+   **Password:** Password for SQL Server
 
    **Database Name:** (leave it blank)
 
@@ -87,7 +87,7 @@ To install Carbon with Linux, follow [these directions](download.md#get-carbon-f
    ![Change context](media/get-started-sql-server-linux/change-context.png)
 
 ## Insert rows
-1. Copy the snippet below to insert four rows and and paste in the query window. Click **Run** to execute the query.
+1. Copy the snippet below to insert four rows and paste in the query window. Click **Run** to execute the query.
    ```sql
    -- Insert rows into table 'Customers'
    INSERT INTO dbo.Customers

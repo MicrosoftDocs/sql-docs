@@ -44,9 +44,9 @@ This topic shows how to get started using Carbon with SQL Server databases, and 
 
    **Authentication Type:** SQL Login
 
-   **User name:** User name used when you setup SQL Server
+   **User name:** User name for SQL Server
 
-   **Password:** Password used when you setup SQL Server
+   **Password:** Password for SQL Server
 
    **Database Name:** (leave it blank)
 
@@ -98,7 +98,7 @@ This topic shows how to get started using Carbon with SQL Server databases, and 
    ![Change context](media/get-started-sql-server-mac/change-context.png)
 
 ## Insert rows
-1. Copy the snippet below to insert four rows and and paste in the query window. Click **Run** to execute the query.
+1. Copy the snippet below to insert four rows and paste in the query window. Click **Run** to execute the query.
    ```sql
    -- Insert rows into table 'Customers'
    INSERT INTO dbo.Customers

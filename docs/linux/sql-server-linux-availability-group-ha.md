@@ -91,8 +91,8 @@ An availability group with two (or more) synchronous replicas and a configuratio
 
 ![Configuration only availability group][2]
 
-1. Is synchronous replication of user data to the secondary replica. It also includes availability group configuration metadata.
-2. Is synchronous configuration of availability group metadata. It does not include user data.
+1. Synchronous replication of user data to the secondary replica. It also includes availability group configuration metadata.
+2. Synchronous replication of availability group configuration metadata. It does not include user data.
 
 In the availability group diagram, a primary replica pushes configuration data to both the secondary replica and the configuration only replica. The secondary replica also receives user data. The configuration only replica does not receive user data. The secondary replica is in synchronous availability mode. The configuration only replica does not contain the databases in the availability group - only metadata about the availability group. Configuration data on the configuration only replica is committed synchronously.
 

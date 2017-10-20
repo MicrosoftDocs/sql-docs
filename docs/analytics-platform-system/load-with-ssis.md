@@ -41,7 +41,7 @@ In addition to the tasks described in this topic, you can use other features of 
   
 For complete documentation of Integration Services, see [SQL Server Integration Services](http://msdn.microsoft.com/library/ms141026(v=sql11).aspx).  
   
-## <a name="HowToDeployPackage"></a>Methods for running an Integration Services pPackage  
+## <a name="HowToDeployPackage"></a>Methods for running an Integration Services package  
 Use one of these methods to run an Integration Services package.  
   
 ### Run from SQL Server 2008 R2 Business Intelligence Development Studio (BIDS)  
@@ -247,8 +247,8 @@ Run the package on your computer Integration Services.
   
 ## See Also  
 [Create a script task that uses the SSIS PDW destination adapter](create-ssis-script-task-using-pdw-destination-adapter.md)  
-[SQL Server Integration Services](http://msdn.microsoft.com/library/ms141026(&#40;v=sql11&#40;.aspx)  
-[Designing and Implementing Packages (Integration Services)](http://msdn.microsoft.comlibrary/ms141091&#40;v=sql11&#40;.aspx)  
+[SQL Server Integration Services](http://msdn.microsoft.com/library/ms141026&#40;v=sql11&#40;.aspx)  
+[Designing and Implementing Packages (Integration Services)](http://msdn.microsoft.com/library/ms141091&#40;v=sql11&#40;.aspx)  
 [Tutorial: Creating a Basic Package Using a Wizard](http://technet.microsoft.com/library/ms365330&#40;v=sql11&#40;.aspx)  
 [Getting Started (Integration Services)](http://go.microsoft.com/fwlink/?LinkId=202412)  
 [Dynamic Package Generation Sample](http://go.microsoft.com/fwlink/?LinkId=202413)  

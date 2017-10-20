@@ -1,6 +1,6 @@
 ---
 
-title: "Acquire and Configure a Backup Server for Analytics Platform System and Parallel Data warehouse"
+title: "Acquire and Configure a Backup Server for APS PDW"
 author: "barbkess" 
 ms.author: "barbkess"
 manager: "jhubbard"	  

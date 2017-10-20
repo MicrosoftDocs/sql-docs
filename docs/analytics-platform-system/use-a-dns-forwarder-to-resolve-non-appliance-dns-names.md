@@ -1,5 +1,5 @@
 ---
-title: "Use a DNS Forwarder to Resolve Non-Appliance DNS Names (Analytics Platform System)"
+title: "Use a DNS Forwarder to Resolve Non-Appliance DNS Names (APS)"
 author: "barbkess" 
 ms.author: "barbkess"
 manager: "jhubbard"	  

@@ -1,5 +1,5 @@
 ---
-title: "Configure SCOM to Monitor Analytics Platform System (Analytics Platform System)"
+title: "Configure SCOM to Monitor Analytics Platform System"
 author: "barbkess" 
 ms.author: "barbkess"
 manager: "jhubbard"	  

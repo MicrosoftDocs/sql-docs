@@ -21,21 +21,21 @@ This topic describes the requirements and options for managing database permissi
 ## <a name="BackupRestoreBasics"></a>Database Engine Permission Basics  
 Database Engine permissions on SQL Server PDW are managed at the server level through logins, and at the database level through database users and user-defined database roles.  
   
-Logins  
+**Logins**  
 Logins are individual user accounts for logging on to the SQL Server PDW. SQL Server PDW supports logins using Windows Authentication and SQL Server authentication.  Windows Authentication logins can be Windows users or Windows groups from any domain that is trusted by SQL Server PDW. SQL Server Authentication logins are defined and authenticated by SQL Server PDW and must be created by specifying a password.  
   
 Members of the **sysadmin** fixed server role (such as the **sa** login) can connect to a database without having being mapped to a database user. They are mapped to the **dbo** user. The owner of the database is also mapped as the **dbo** user.  
   
-Server Roles  
+**Server Roles**  
 There are four special server roles with a set of preconfigured roles that provide convenient group of server-level permissions. The **sysadmin**, **MediumRC**, **LargeRC**, and **XLargeRCfixed** server roles are the only server roles currently implemented in SQL Server PDW. The **sa** login is the only member of the **sysadmin** fixed server role, and additional logins cannot be added to the **sysadmin** role. Logins can be granted the **CONTROL SERVER** permission, which is similar, though not identical, to the **sysadmin** fixed server role. Use [ALTER SERVER ROLE](../t-sql/statements/alter-server-role-transact-sql.md) to add members to the other server roles. SQL Server PDW does not support user-defined server roles.  
   
-Database Users  
+**Database Users**  
 Logins are granted access to a database by creating a database user in a database and mapping that database user to a login. Typically the database user name is the same as the login name, though it does not have to be the same. Each database user maps to a single login. A login can be mapped to only one user in a database, but can be mapped as a database user in several different databases.  
   
-Fixed Database Roles  
+**Fixed Database Roles**  
 Fixed database roles are a set of preconfigured roles that provide convenient group of database-level permissions. Database users and user-defined database roles can be added to the fixed database roles using the [sp_addrolemember](../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) procedure. For more information about fixed database roles, see [Fixed Database Roles](#fixed-database-roles).  
   
-User-defined Database Roles  
+**User-defined Database Roles**  
 Users with the **CREATE ROLE** permission can create new user-defined database roles to represent groups of users with common permissions. Typically permissions are granted or denied to the entire role, simplifying permissions management and monitoring.  
   
 Permissions are granted to security principals (logins, users, and roles) by using the **GRANT** statement. Permissions are explicitly denied by using the **DENY** command. A previously granted or denied permission is removed by using the **REVOKE** statement. Permissions are cumulative, with the user receiving all the permissions granted to the user, login, and any group memberships; however any permission denial overrides all grants. <!-- MISSING LINKS (For information, syntax, and available permissions with these commands, see [Permissions: GRANT, DENY, REVOKE &#40;SQL Server PDW&#41;](../sqlpdw/permissions-grant-deny-revoke-sql-server-pdw.md)).  -->  
@@ -141,7 +141,7 @@ To research the permissions of a user check the following.
   
 -   Execute the following query to determine which logins have been granted explicit permissions.  
   
--   ```  
+    ```  
     SELECT name, 'has the ', state_desc , permission_name, ' permission'  
     FROM sys.server_permissions AS SP  
     JOIN sys.server_principals AS SPRoles   

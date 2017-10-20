@@ -55,9 +55,6 @@ To connect using SQL Login, enter the server administrator's user name and passw
 ## Connection properties
 
 
-   ![New Connection Screen](media/get-started-sql-server/connection.png)
-
-
 
 
    The following table describes the Connection properties.

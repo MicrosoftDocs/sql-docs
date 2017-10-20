@@ -22,7 +22,7 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```tsql  
+```sql  
 delete_environment_reference [ @reference_id = ] reference_id  
 ```  
   

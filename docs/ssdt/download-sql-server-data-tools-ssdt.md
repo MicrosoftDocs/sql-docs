@@ -1,7 +1,7 @@
 ---
 title: "Download SQL Server Data Tools (SSDT) | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/10/2017"
+ms.date: "10/19/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -21,16 +21,17 @@ manager: "craigg"
 
 **[SQL Server Data Tools](https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx)** is a modern development tool that you can download for free to build SQL Server relational databases, Azure SQL databases, Integration Services packages, Analysis Services data models, and Reporting Services reports. With SSDT, you can design and deploy any SQL Server content type with the same ease as you would develop an application in Visual Studio. 
 
-The preview version of SSDT for Visual Studio 2017 (15.3.0 preview) is now available. This release introduces a standalone web installation experience for SQL Server Database, Analysis Services, Reporting Services, and Integration Services projects in Visual Studio 2017 15.3 or later.
+SSDT for Visual Studio 2017 (15.4.0 preview) is now available. This release introduces a standalone web installation experience for SQL Server Database, Analysis Services, Reporting Services, and Integration Services projects in Visual Studio 2017 15.4 or later.
 
 | SSDT for Visual Studio 2017 (preview) | SSDT for Visual Studio 2015 | 
 |:--|:--|
-|[![download](../ssdt/media/download.png) Download SSDT for Visual Studio 2017 (15.3.0 preview) ](https://go.microsoft.com/fwlink/?linkid=853836) | [![download](../ssdt/media/download.png) Download SSDT for Visual Studio 2015 (17.3)](https://go.microsoft.com/fwlink/?linkid=858660)|
+|[![download](../ssdt/media/download.png) Download SSDT for Visual Studio 2017 (15.4.0 preview) ](https://go.microsoft.com/fwlink/?LinkId=860015) | [![download](../ssdt/media/download.png) Download SSDT for Visual Studio 2015 (17.3)](https://go.microsoft.com/fwlink/?linkid=858660)|
 |||
 
 > [!IMPORTANT]
-> Before installing SSDT for Visual Studio 2017 (preview), close all VS instances, and uninstall SSAS and SSRS if they are already installed on VS 2017.
+> Before installing SSDT for Visual Studio 2017 (15.4.0 preview), close all VS instances, and uninstall SSAS and SSRS if they are already installed on VS 2017. 
 > 
+> SSDT for Visual Studio 2017 (15.3.0 preview) doesn't support upgrading so you must uninstall it before installing SSDT for Visual Studio 2017 (15.4.0 preview). 
 
 
 SSDT for Visual Studio 2015, and SSDT for Visual Studio 2017 both use DacFx 17.3: [Download Data-Tier Application Framework (DacFx) 17.3](https://www.microsoft.com/download/details.aspx?id=56048)
@@ -40,8 +41,8 @@ SSDT for Visual Studio 2015, and SSDT for Visual Studio 2017 both use DacFx 17.3
 ## SSDT for Visual Studio 2017
 **Version Information**  
   
-The release number: 15.3.0 preview  
-The build number for this release: 14.0.16121.0
+The release number: 15.4.0 preview  
+The build number for this release: 14.0.16134.0
 
 For a complete list of changes, see the [changelog](changelog-for-sql-server-data-tools-ssdt.md).
 

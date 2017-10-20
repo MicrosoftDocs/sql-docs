@@ -22,9 +22,8 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```tsql  
-remove_data_tap [ @data_tap_id = ] data_tap_id  
-  
+```sql  
+catalog.remove_data_tap [ @data_tap_id = ] data_tap_id  
 ```  
   
 ## Arguments  

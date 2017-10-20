@@ -2,7 +2,7 @@
 
 # Overview
 ## [What's New in SQL Server 2017](what-s-new-in-sql-server-2017.md)
-## [What's New in SQL Server Vnext](what-s-new-in-sql-server-2018.md)
+## [What's New in SQL Server vNext](what-s-new-in-sql-server-2018.md)
 ## [What's New in SQL Server 2016](what-s-new-in-sql-server-2016.md)
 ## [Editions and supported features of SQL Server 2016](editions-and-components-of-sql-server-2016.md)
 ## [Editions and supported features of SQL Server 2017](editions-and-components-of-sql-server-2017.md)
@@ -22,7 +22,7 @@
 
 ## [SQL Server Release Notes](sql-server-release-notes.md)
 ## [SQL Server 2017 Release Notes](sql-server-2017-release-notes.md)
-## [SQL Server Vnext Release Notes](sql-server-2018-release-notes.md)
+## [SQL Server vNext Release Notes](sql-server-2018-release-notes.md)
 ## [SQL Server 2016 Release Notes](sql-server-2016-release-notes.md)
 ## [SQL Server 2014 Release Notes](sql-server-2014-release-notes.md)
 ## [SQL Server 2012 SP4 Release Notes](sql-server-2012-sp4-release-notes.md)

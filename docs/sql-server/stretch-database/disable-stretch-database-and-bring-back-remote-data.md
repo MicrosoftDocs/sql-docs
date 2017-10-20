@@ -63,7 +63,7 @@ manager: "craigg"
 
     This command can't be canceled.  
   
-    ```tsql  
+    ```sql  
     USE <Stretch-enabled database name>;
     GO
     ALTER TABLE <Stretch-enabled table name>  
@@ -76,7 +76,7 @@ manager: "craigg"
   
 -   To disable Stretch for a table and abandon the remote data, run the following command.  
   
-    ```tsql  
+    ```sql  
     USE <Stretch-enabled database name>;
     GO
     ALTER TABLE <Stretch-enabled table name>  
@@ -102,7 +102,7 @@ manager: "craigg"
 ### Use Transact-SQL to disable Stretch Database for a database  
  Run the following command.  
   
-```tsql  
+```sql  
 ALTER DATABASE <Stretch-enabled database name>  
     SET REMOTE_DATA_ARCHIVE = OFF ;  
 GO 

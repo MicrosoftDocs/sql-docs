@@ -87,7 +87,7 @@ To install Carbon with Linux, follow [these directions](download.md#get-carbon-f
    ![Change context](media/get-started-sql-server-linux/change-context.png)
 
 ## Insert rows
-1. Copy the snippet below to insert four rows and paste in the query window. Click **Run** to execute the query.
+Copy the snippet below to insert four rows and paste in the query window. Click **Run** to execute the query.
    ```sql
    -- Insert rows into table 'Customers'
    INSERT INTO dbo.Customers
@@ -101,7 +101,7 @@ To install Carbon with Linux, follow [these directions](download.md#get-carbon-f
    ```
 
 ## View the result
-1. Copy the snippet below to view all the rows and paste in the query window. Click **Run** to execute the query.
+Copy the snippet below to view all the rows and paste in the query window. Click **Run** to execute the query.
    ```sql
    -- Select rows from table 'Customers'
    SELECT * FROM dbo.Customers;

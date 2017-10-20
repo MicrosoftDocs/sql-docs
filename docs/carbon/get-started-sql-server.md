@@ -82,7 +82,7 @@ To install Carbon with Windows, follow [these directions](download.md#get-carbon
    ![Change context](media/get-started-sql-server/change-context.png)
 
 ## Insert rows
-1. Copy the snippet below to insert four rows and paste in the query window. Click **Run** to execute the query.
+Copy the snippet below to insert four rows and paste in the query window. Click **Run** to execute the query.
    ```sql
    -- Insert rows into table 'Customers'
    INSERT INTO dbo.Customers
@@ -96,7 +96,7 @@ To install Carbon with Windows, follow [these directions](download.md#get-carbon
    ```
 
 ## View the result
-1. Copy the snippet below to view all the rows and paste in the query window. Click **Run** to execute the query.
+Copy the snippet below to view all the rows and paste in the query window. Click **Run** to execute the query.
    ```sql
    -- Select rows from table 'Customers'
    SELECT * FROM dbo.Customers;

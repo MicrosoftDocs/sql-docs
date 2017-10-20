@@ -98,7 +98,7 @@ This topic shows how to get started using Carbon with SQL Server databases, and 
    ![Change context](media/get-started-sql-server-mac/change-context.png)
 
 ## Insert rows
-1. Copy the snippet below to insert four rows and paste in the query window. Click **Run** to execute the query.
+Copy the snippet below to insert four rows and paste in the query window. Click **Run** to execute the query.
    ```sql
    -- Insert rows into table 'Customers'
    INSERT INTO dbo.Customers
@@ -112,7 +112,7 @@ This topic shows how to get started using Carbon with SQL Server databases, and 
    ```
 
 ## View the result
-1. Copy the snippet below to view all the rows and paste in the query window. Click **Run** to execute the query.
+Copy the snippet below to view all the rows and paste in the query window. Click **Run** to execute the query.
    ```sql
    -- Select rows from table 'Customers'
    SELECT * FROM dbo.Customers;

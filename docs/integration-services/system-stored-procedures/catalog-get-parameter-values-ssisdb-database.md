@@ -23,7 +23,7 @@ manager: "jhubbard"
 ## Syntax  
   
 ```sql  
-get_parameter_values [ @folder_name = ] folder_name  
+catalog.get_parameter_values [ @folder_name = ] folder_name  
      , [ @project_name = ] project_name  
      , [ @package_name = ] package_name  
   [  , [ @reference_id = ] reference_id  ]  

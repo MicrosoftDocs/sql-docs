@@ -22,11 +22,9 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```  
-  
-            cleanup_server_execution_keys [ @cleanup_flag = ] cleanup_flag ,  
+```sql
+catalog.cleanup_server_execution_keys [ @cleanup_flag = ] cleanup_flag ,  
 [ @delete_batch_size = ] delete_batch_size  
-  
 ```  
   
 ## Arguments  
@@ -101,7 +99,6 @@ EXEC@return_value = [internal].[cleanup_server_execution_keys]
 SELECT'Return Value' = @return_value  
   
 GO  
-  
 ```  
   
   

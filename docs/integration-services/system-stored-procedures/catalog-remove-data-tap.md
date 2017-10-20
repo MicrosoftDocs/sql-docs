@@ -23,8 +23,7 @@ manager: "jhubbard"
 ## Syntax  
   
 ```sql  
-remove_data_tap [ @data_tap_id = ] data_tap_id  
-  
+catalog.remove_data_tap [ @data_tap_id = ] data_tap_id  
 ```  
   
 ## Arguments  

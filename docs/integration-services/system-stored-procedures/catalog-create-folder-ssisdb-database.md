@@ -23,7 +23,7 @@ manager: "jhubbard"
 ## Syntax  
   
 ```sql  
-create_folder [@folder_name =] folder_name, [@folder_id =] folder_id OUTPUT  
+catalog.create_folder [@folder_name =] folder_name, [@folder_id =] folder_id OUTPUT  
 ```  
   
 ## Arguments  

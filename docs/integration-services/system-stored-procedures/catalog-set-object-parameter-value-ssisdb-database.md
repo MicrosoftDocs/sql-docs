@@ -23,7 +23,7 @@ manager: "jhubbard"
 ## Syntax  
   
 ```sql  
-set_object_parameter_value [@object_type =] object_type   
+catalog.set_object_parameter_value [@object_type =] object_type   
     , [@folder_name =] folder_name   
     , [@project_name =] project_name   
     , [@parameter_name =] parameter _name   

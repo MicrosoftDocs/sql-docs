@@ -23,11 +23,10 @@ manager: "jhubbard"
 ## Syntax  
   
 ```sql  
-set_execution_property_override_value [ @execution_id = execution_id  
+catalog.set_execution_property_override_value [ @execution_id = execution_id  
     , [ @property_path = ] property_path  
     , [ @property_value = ] property_value  
     , [ @sensitive = ] sensitive  
-  
 ```  
   
 ## Arguments  

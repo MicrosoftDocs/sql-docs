@@ -23,7 +23,7 @@ manager: "jhubbard"
 ## Syntax  
   
 ```sql  
-stop_operation [ @operation_id = ] operation_id  
+catalog.stop_operation [ @operation_id = ] operation_id  
 ```  
   
 ## Arguments  

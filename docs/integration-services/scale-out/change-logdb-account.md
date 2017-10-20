@@ -29,7 +29,7 @@ For instructions of joining a database role, see [Join a Role](../../relational-
 Call stored procedure [catalog].[update_logdb_info] with Sql Server name and connection string as parameters.
 
 #### Example
-```tsql
+```sql
 SET @serverName = CONVERT(sysname, SERVERPROPERTY('servername'))
 SET @connectionString = 'Data Source=' + @serverName + ';Initial Catalog=SSISDB;Integrated Security=SSPI;'
 EXEC [internal].[update_logdb_info] @serverName, @connectionString

@@ -245,19 +245,23 @@ Example of the replace virtual machine action.
   
 During upgrade, if a user DB is encrypted and the DMK password is not provided, the upgrade action will fail. During replace, if the correct password is not provided when a DMK exists, the operation will skip the DMK recovery step. All the other steps will be completed at the end of the replace VM action, however the action will report failure at the end to indicate that additional steps are required. In the setup logs (located in **\ProgramData\Microsoft\Microsoft SQL Server Parallel Data Warehouse\100\Logs\Setup\\<time-stamp>\Detail-Setup**), the following warning will be shown near the end.  
   
-*** WARNING \*\*\* DMK is detected in master database, but could not be recovered automatically! The DMK password was either not provided or is incorrect!  
+`*** WARNING \*\*\* DMK is detected in master database, but could not be recovered automatically! The DMK password was either not provided or is incorrect!  `
   
 Please execute manually these statements in PDW and restart appliance after that in order to recover DMK:  
   
-<pre>OPEN MASTER KEY DECRYPTION BY PASSWORD = '<DMK password>';  
-ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY;</pre>  
+```sql
+OPEN MASTER KEY DECRYPTION BY PASSWORD = '<DMK password>';  
+ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY;  
+```
   
 Use the steps in the **Restoring the master Database** paragraph to recover the database, and then restart the appliance.  
   
 If the DMK existed before but was not recovered after the action, the following error message will be raised when a database is queried.  
   
-<pre>Msg 110806;  
-A distributed query failed: Database '<db_name>' cannot be opened due to inaccessible files or insufficient memory or disk space. See the SQL Server errorlog for details.</pre>  
+```
+Msg 110806;  
+A distributed query failed: Database '<db_name>' cannot be opened due to inaccessible files or insufficient memory or disk space. See the SQL Server errorlog for details.
+```  
   
 ## Performance Impact  
 The performance impact of TDE varies with the type of data you have, how it is stored, and the type of workload activity on the SQL Server PDW. When protected by TDE, the I/O of reading and then decrypting data or the encrypting and then writing data is a CPU intensive activity and will have more impact when other CPU intensive activities are happening at the same time. Because TDE encrypts `tempdb`, TDE can affect the performance of databases that are not encrypted. To get an accurate idea of performance, you should test the entire system with your data and query activity.  

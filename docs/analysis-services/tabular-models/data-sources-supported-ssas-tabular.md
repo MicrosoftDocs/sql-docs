@@ -1,5 +1,5 @@
 ---
-title: "Data sources supported in tabular models | Microsoft Docs"
+title: "Data sources supported in SQL Server Analysis Services tabular models | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/16/2017"
 ms.prod: "sql-server-2016"
@@ -18,6 +18,10 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Data sources supported in tabular models
+
+[!INCLUDE[ssas-appliesto-sqlas-all](../includes/ssas-appliesto-sqlas-all.md)]   
+For Azure Analysis Services, see [Data sources supported in Azure Analysis Services](https://docs.microsoft.com/en-us/azure/analysis-services/analysis-services-datasource).
+
   This topic describes the types of data sources that can be used with tabular models.  
   
 ##  <a name="bkmk_supported_ds"></a> Supported data sources for in-memory tabular models  

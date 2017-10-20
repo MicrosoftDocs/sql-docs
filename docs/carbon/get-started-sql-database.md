@@ -29,7 +29,7 @@ Before you start, install Carbon by following [these directions](download.md).
 ## Configure Carbon 
 
 ### **Mac OS**
-For macOS, you need to install OpenSSL which is a prerequisite for DotNet Core that mssql extention uses. Open your terminal and enter the following commands to install **brew** and **OpenSSL**. 
+For macOS, you need to install OpenSSL which is a prerequisite for DotNet Core that mssql extension uses. Open your terminal and enter the following commands to install **brew** and **OpenSSL**. 
 
 ```bash
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -40,7 +40,7 @@ ln -s /usr/local/opt/openssl/lib/libcrypto.1.0.0.dylib /usr/local/lib/
 ln -s /usr/local/opt/openssl/lib/libssl.1.0.0.dylib /usr/local/lib/
 ```
 
-### **Linux (Ubuntu)**
+### **Linux**
 
 No special configuration needed.
 
@@ -56,7 +56,7 @@ Get the connection information needed to connect to the Azure SQL database. You 
 
 2. Select **SQL Databases** from the left-hand menu, and click your database on the **SQL databases** page. 
 
-3. On the **Overview** page for your database, review the fully qualified server name as shown in the following image. You can hover over the server name to bring up the **Click to copy** option.
+3. On the **Overview** page for your database, copy your server name.
 
    ![connection information](./media/get-started-sql-database/server-name.png) 
 
@@ -71,7 +71,7 @@ Use Carbon to establish a connection to your Azure SQL Database server.
 > Before continuing, make sure that you have your server, database, and login information ready. Once you begin entering the connection profile information, if you change your focus from Carbon, you have to restart creating the connection profile.
 >
 
-1. In Carbon, click the **New Connection** icon on the top left.
+1. When first loading Carbon, a connection page should be displayed. If not, click the **New Connection** icon on the top left.
    
    ![New Connection Icon](media/get-started-sql-database/new-connection-icon.png)
 
@@ -84,7 +84,7 @@ Use Carbon to establish a connection to your Azure SQL Database server.
    | **Password (SQL Login)** | The password for your server admin account | This is the password that you specified when you created the server. |
    | **Save Password?** | Yes or No | Select Yes if you do not want to enter the password each time. |
    | **Database name** | *leave blank* | The name of the database to which to connect. |
-   | **Server Group** | Select <Default> | A saved profile name speeds your connection on subsequent logins. |
+   | **Server Group** | Select \<Default\> | If you created a server group, you can set to a specific server group. |
 
    ![New Connection Icon](media/get-started-sql-database/new-connection-screen.png)  
 
@@ -92,7 +92,7 @@ Use Carbon to establish a connection to your Azure SQL Database server.
 
    ![Firewall image](media/get-started-sql-database/setup-firewall-ip.png)  
 
-4. Verify your connection in the status bar.
+4. You should see your connection in the object explorer.
 
 ## Create a tutorial database
 1. Right click on your server in the object explorer and select **New Query.**
@@ -100,8 +100,6 @@ Use Carbon to establish a connection to your Azure SQL Database server.
 2. Copy the snippet below and paste in the query window. Click **Run** to execute the query.
 
    ```sql
-   USE master
-   GO
    IF NOT EXISTS (
       SELECT name
       FROM sys.databases

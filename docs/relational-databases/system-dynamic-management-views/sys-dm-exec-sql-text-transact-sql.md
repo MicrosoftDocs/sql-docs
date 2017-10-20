@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_exec_sql_text (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/10/2016"
+ms.date: "10/20/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -33,7 +33,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
-  
 sys.dm_exec_sql_text(sql_handle | plan_handle)  
 ```  
   
@@ -72,15 +71,22 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
  Requires VIEW SERVER STATE permission on the server.  
   
 ## Remarks  
- For batches, the SQL handles are hash values based on the SQL text. For database objects such as stored procedures, triggers or functions, the SQL handles are derived from the database ID, object ID, and object number. *plan_handle* is a hash value derived from the compiled plan of the entire batch.  
+For ad hoc queries, the SQL handles are hash values based on the SQL text being submitted to the server, and can originate from any database. 
+
+For database objects such as stored procedures, triggers or functions, the SQL handles are derived from the database ID, object ID, and object number. 
+
+Plan handle is a hash value derived from the compiled plan of the entire batch. 
+
+> [!NOTE]
+> **dbid** cannot be determined from *sql_handle* for ad hoc queries. To determine **dbid** for ad hoc queries, use *plan_handle* instead.
   
 ## Examples 
 
 ### A. Conceptual Example
 The following is a basic example to illustrate passing a **sql_handle** either directly or with **CROSS APPLY**.
   1.  Create activity.  
-Execute the following T-SQL in a new query window in SQL Server Management Studio.   
-        ```tsql
+Execute the following T-SQL in a new query window in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].   
+      ```tsql
       -- Identify current spid (session_id)
       SELECT @@SPID;
       GO
@@ -88,8 +94,9 @@ Execute the following T-SQL in a new query window in SQL Server Management Studi
       -- Create activity
         WAITFOR DELAY '00:02:00';
       ```
+      
     2.  Using **CROSS APPLY**.  
-    The sql_handle from **sys.dm_exec_requests** will be passed to **sys.dm_exec_sql_text** using **CROSS APPLY**.  Open a new query window and pass the spid identified in step 1.  In this example the spid happens to be `59`.
+    The sql_handle from **sys.dm_exec_requests** will be passed to **sys.dm_exec_sql_text** using **CROSS APPLY**. Open a new query window and pass the spid identified in step 1. In this example the spid happens to be `59`.
 
         ```tsql
         SELECT t.*
@@ -99,7 +106,7 @@ Execute the following T-SQL in a new query window in SQL Server Management Studi
          ```      
  
     2.  Passing **sql_handle** directly.  
-Acquire the **sql_handle** from **sys.dm_exec_requests**. Then, pass the **sql_handle** directly to **sys.dm_exec_sql_text**.  Open a new query window and pass the spid identified in step 1 to **sys.dm_exec_requests**. In this example the spid happens to be `59`.  Then pass the returned **sql_handle** as an argument to **sys.dm_exec_sql_text**.
+Acquire the **sql_handle** from **sys.dm_exec_requests**. Then, pass the **sql_handle** directly to **sys.dm_exec_sql_text**. Open a new query window and pass the spid identified in step 1 to **sys.dm_exec_requests**. In this example the spid happens to be `59`. Then pass the returned **sql_handle** as an argument to **sys.dm_exec_sql_text**.
 
         ```tsql
         -- acquire sql_handle
@@ -113,7 +120,7 @@ Acquire the **sql_handle** from **sys.dm_exec_requests**. Then, pass the **sql_h
 ### B. Obtain information about the top five queries by average CPU time  
  The following example returns the text of the SQL statement and average CPU time for the top five queries.  
   
-```  
+```tsql  
 SELECT TOP 5 total_worker_time/execution_count AS [Avg CPU Time],  
     SUBSTRING(st.text, (qs.statement_start_offset/2)+1,   
         ((CASE qs.statement_end_offset  
@@ -128,7 +135,7 @@ ORDER BY total_worker_time/execution_count DESC;
 ### C. Provide batch-execution statistics  
  The following example returns the text of SQL queries that are being executed in batches and provides statistical information about them.  
   
-```  
+```tsql  
 SELECT s2.dbid,   
     s1.sql_handle,    
     (SELECT TOP 1 SUBSTRING(s2.text,statement_start_offset / 2+1 ,   

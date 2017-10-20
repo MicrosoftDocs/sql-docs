@@ -27,6 +27,8 @@
 ## [Dashboards and Insights](dashboards.md)
 ## [Server groups](server-groups.md)
 ## [Integrated terminal (PowerShell, Bash)](integrated-terminal.md)
+## Share settings
+## Configure source control
 ## Smart Snippets
 ## Tasks
 # Reference

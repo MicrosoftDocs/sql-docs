@@ -2,7 +2,7 @@
 title: "sp_execute_external_script (Transact-SQL) | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "08/18/2017"
+ms.date: "10/20/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -44,30 +44,6 @@ sp_execute_external_script
     [ , @parallel = 0 | 1 ]  
     [ , @params = N'@parameter_name data_type [ OUT | OUTPUT ] [ ,...n ]' ] 
     [ , @parameter1 = 'value1' [ OUT | OUTPUT ] [ ,...n ] ]
-    [ WITH <execute_option> ]  
-[;]  
-  
-<execute_option>::=  
-{  
-      { RESULT SETS UNDEFINED }   
-    | { RESULT SETS NONE }   
-    | { RESULT SETS ( <result_sets_definition> ) }  
-}  
-  
-<result_sets_definition> ::=   
-{  
-    (  
-         { column_name   
-           data_type   
-         [ COLLATE collation_name ]   
-         [ NULL | NOT NULL ] }  
-         [,...n ]  
-    )  
-    | AS OBJECT   
-        [ db_name . [ schema_name ] . | schema_name . ]   
-        {table_name | view_name | table_valued_function_name }  
-    | AS TYPE [ schema_name.]table_type_name  
-}  
 ```  
   
 ## Arguments  
@@ -106,7 +82,8 @@ sp_execute_external_script
   
  [ @parameter1 = '*value1*'  [ OUT | OUTPUT ] [ ,...n ] ]  
  A list of values for the input parameters used by the external script.  
-  
+
+
 ## Remarks  
  Use **sp_execute_external_script** to execute scripts written in a supported language such as R. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] is comprised of a server component installed with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and a set of workstation tools and connectivity libraries that connect the data scientist to the high-performance environment of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Install R Services (In-Database) during [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup to enable the execution of R scripts. For more information, see [Set up SQL Server R Services &#40;In-Database&#41;](../../advanced-analytics/r-services/set-up-sql-server-r-services-in-database.md).  
   
@@ -114,6 +91,7 @@ sp_execute_external_script
 
 Monitor script execution using [sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md) and [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md). 
 
+ By default, result sets returned by this stored procedure are output with unnamed columns. Column names used within a script are local to the scripting environment and are not reflected in the outputted result set. To name result set columns, use the `WITH RESULTS SET` clause of [`EXECUTE`](../../t-sql/language-elements/execute-transact-sql).
   
  In addition to returning a result set, you can return scalar values from R script to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] using OUTPUT parameters. The following example shows the use of OUTPUT parameter:  
   
@@ -168,17 +146,11 @@ SELECT tipped, passenger_count, trip_time_in_secs, trip_distance, d.direct_dista
   
 -   CLR user-defined types  
   
- `WITH RESULTS SETS`  clause is mandatory if you are returning a result set from R . The specified column data types need to match the types supported in R (**bit**, **int**, **float**, **datetime**, **varchar**)  
-  
  **datetime** values in the input are converted to NA on the R side for values that do not fit the permissible range of values in R. this is required because [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permits a larger range of values than is supported in the R language.  
   
  Float values (for example, +Inf, -Inf, NaN) are not supported in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] even though both languages use IEEE 754. Current behavior just sends the values to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] directly and as a result sqlclient in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] throws error. These values convert to **NULL**.  
   
- When using the `WITH RESULTS SET` clause, an error is raised in the following conditions:  
-  
--   The number of columns doesn’t match the number of columns in the R data frame.  
-  
--   Any [!INCLUDE[tsql](../../includes/tsql-md.md)] data type that cannot be mapped to an R data type is transfered as NULL. Any R result set that cannot be mapped to a [!INCLUDE[tsql](../../includes/tsql-md.md)] data type, transfers as NULL.  
+ Any R result set that cannot be mapped to a [!INCLUDE[tsql](../../includes/tsql-md.md)] data type, is output as NULL.  
   
 ## Permissions  
  Requires **EXECUTE ANY EXTERNAL SCRIPT** database permission.  

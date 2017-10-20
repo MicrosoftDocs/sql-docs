@@ -14,6 +14,7 @@ caps.latest.revision: 16
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # SQL Server Network Configuration
   This section contains the F1 Help topics for the **Server Network Configuration** dialog boxes in SQL Server Configuration Manager.  

@@ -18,6 +18,7 @@ caps.latest.revision: 14
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Name Element for Server (DTA)
   Contains the name of the server where the databases you want to tune reside.  

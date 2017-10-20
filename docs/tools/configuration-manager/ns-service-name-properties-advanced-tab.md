@@ -14,6 +14,7 @@ caps.latest.revision: 12
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # NS$&lt;service name&gt; Properties (Advanced Tab)
   [!INCLUDE[ssNS](../../includes/ssns-md.md)] is implemented as a service named in the format **NS$***<user_configured name>*. If custom properties are defined, they appear on this tab, with their values. This tab may have no properties listed.  

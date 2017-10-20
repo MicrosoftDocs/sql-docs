@@ -1,5 +1,5 @@
 ---
-title: Connect and query SQL Server using Carbon on Mac| Microsoft Docs
+title: Connect and query SQL Server using Carbon on macOS| Microsoft Docs
 description: Use Carbon on Mac to connect to a SQL Server and run a query
 author: yualan
 ms.author: alayu
@@ -13,30 +13,46 @@ ms.topic: quickstart
 ms.date: 10/01/2017
 ---
 
-# Connect and query SQL Server using Carbon on Mac
+# Connect and query SQL Server using Carbon on macOS
 This topic shows how to get started using Carbon with SQL Server databases, and this Quickstart should take about five minutes.
 
 ## Prerequisites
-To install Carbon with Mac, follow [these directions](download.md).
+- Before starting this quickstart, please download [Docker](https://docs.docker.com/docker-for-mac/install/#download-docker-for-mac).
 
-Before starting this quickstart, you must have access to a running SQL Server instance. If you don't have it, [download SQL Server 2017 Developer Edition](https://go.microsoft.com/fwlink/?linkid=853016).
+- You will need access to a running SQL Server instance. On macOS, we will install SQL Server on Docker. Please [follow these instructions to download SQL Server on Docker](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker). Follow the steps up to "Create and Query Data." Please remember your username and password.
+
+- To install Carbon with macOS, follow [these directions](download.md#get-carbon-for-macos).
 
 ## Connect to a server
-1. When first loading Carbon, a connection page should be displayed. If not, click the **New Connection** icon on the top left.
-   
-   ![New Connection Icon](media/get-started-sql-server/new-connection-icon.png)
+1. Load Carbon through Terminal.
+   ```bash
+   mac: PublicWeb$ carbon .
+   ```
 
-2. For this tutorial, fill the fields as follows:
+2. Run the following command on docker.
+   ```bash
+   docker run --name mssql -d -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=SqlDevOps2017" -e "MSSQL_PID=Developer" -p "1433:1433" microsoft/mssql-server-linux:latest
+   ```   
+
+3. When first loading Carbon, a connection page should be displayed. If not, click the **New Connection** icon on the top left.
+   
+   ![New Connection Icon](media/get-started-sql-server-mac/new-connection-icon.png)
+
+4. For this tutorial, fill the fields as follows:
  
    **Server Name:** localhost
 
-   **Authentication Type:** Windows Authentication
+   **Authentication Type:** SQL Login
+
+   **User name:** User name for SQL Server
+
+   **Password:** Password for SQL Server
 
    **Database Name:** (leave it blank)
 
    **Server Group:** \<Default\>
 
-   ![New Connection Screen](media/get-started-sql-server/new-connection-screen.png)
+   ![New Connection Screen](media/get-started-sql-server-mac/new-connection-screen.png)
 
 ## Create a tutorial database
 1. Right click on your server, **localhost**, in the object explorer and select **New Query.**
@@ -82,7 +98,7 @@ Before starting this quickstart, you must have access to a running SQL Server in
    ![Change context](media/get-started-sql-server-mac/change-context.png)
 
 ## Insert rows
-1. Copy the snippet below to insert four rows and and paste in the query window. Click **Run** to execute the query.
+Copy the snippet below to insert four rows and paste in the query window. Click **Run** to execute the query.
    ```sql
    -- Insert rows into table 'Customers'
    INSERT INTO dbo.Customers
@@ -96,17 +112,17 @@ Before starting this quickstart, you must have access to a running SQL Server in
    ```
 
 ## View the result
-1. Copy the snippet below to view all the rows and paste in the query window. Click **Run** to execute the query.
+Copy the snippet below to view all the rows and paste in the query window. Click **Run** to execute the query.
    ```sql
    -- Select rows from table 'Customers'
    SELECT * FROM dbo.Customers;
    ```
-   ![Select results](media/get-started-sql-server/select-results.png)
+   ![Select results](media/get-started-sql-server-mac/select-results.png)
 
 ## Save result as Excel
 1. Right click on the results table and save as a **Excel** file. 
 
-   ![Save as Excel](media/get-started-sql-server/save-as-excel.png)
+   ![Save as Excel](media/get-started-sql-server-mac/save-as-excel.png)
 
 2. Save as **Results.xls**.
 

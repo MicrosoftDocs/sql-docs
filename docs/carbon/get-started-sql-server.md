@@ -17,9 +17,9 @@ ms.date: 10/01/2017
 This topic shows how to get started using Carbon with SQL Server databases, and this Quickstart should take about five minutes.
 
 ## Prerequisites
-To install Carbon with Windows, follow [these directions](download.md).
+Before starting this quickstart, you must have access to a running SQL Server instance. If you don't have it, [download SQL Server 2017 Developer Edition for Windows](https://go.microsoft.com/fwlink/?linkid=853016).
 
-Before starting this quickstart, you must have access to a running SQL Server instance. If you don't have it, [download SQL Server 2017 Developer Edition](https://go.microsoft.com/fwlink/?linkid=853016).
+To install Carbon with Windows, follow [these directions](download.md#get-carbon-for-windows).
 
 ## Connect to a server
 1. When first loading Carbon, a connection page should be displayed. If not, click the **New Connection** icon on the top left.
@@ -82,7 +82,7 @@ Before starting this quickstart, you must have access to a running SQL Server in
    ![Change context](media/get-started-sql-server/change-context.png)
 
 ## Insert rows
-1. Copy the snippet below to insert four rows and and paste in the query window. Click **Run** to execute the query.
+Copy the snippet below to insert four rows and paste in the query window. Click **Run** to execute the query.
    ```sql
    -- Insert rows into table 'Customers'
    INSERT INTO dbo.Customers
@@ -96,7 +96,7 @@ Before starting this quickstart, you must have access to a running SQL Server in
    ```
 
 ## View the result
-1. Copy the snippet below to view all the rows and paste in the query window. Click **Run** to execute the query.
+Copy the snippet below to view all the rows and paste in the query window. Click **Run** to execute the query.
    ```sql
    -- Select rows from table 'Customers'
    SELECT * FROM dbo.Customers;

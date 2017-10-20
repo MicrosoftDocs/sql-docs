@@ -17,9 +17,10 @@ ms.date: 10/01/2017
 This topic shows how to get started using Carbon with SQL Server databases, and this Quickstart should take about five minutes.
 
 ## Prerequisites
-To install Carbon with Windows, follow [these directions](download.md).
+Before starting this quickstart, you must have access to a running SQL Server instance. If you don't have it, [download SQL Server 2017 Developer Edition on Linux](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-overview#install). 
+**Note:** You only need to follow the steps up to "Create and Query Data", and please make sure you remember your SQL Login and Password that you will have setup after following these tutorials.
 
-Before starting this quickstart, you must have access to a running SQL Server instance. If you don't have it, [download SQL Server 2017 Developer Edition](https://go.microsoft.com/fwlink/?linkid=853016).
+To install Carbon with Linux, follow [these directions](download.md#get-carbon-for-linux).
 
 ## Connect to a server
 1. When first loading Carbon, a connection page should be displayed. If not, click the **New Connection** icon on the top left.
@@ -30,7 +31,11 @@ Before starting this quickstart, you must have access to a running SQL Server in
  
    **Server Name:** localhost
 
-   **Authentication Type:** Windows Authentication
+   **Authentication Type:** SQL Login
+
+   **User name:** User name for SQL Server
+
+   **Password:** Password for SQL Server
 
    **Database Name:** (leave it blank)
 
@@ -82,7 +87,7 @@ Before starting this quickstart, you must have access to a running SQL Server in
    ![Change context](media/get-started-sql-server-linux/change-context.png)
 
 ## Insert rows
-1. Copy the snippet below to insert four rows and and paste in the query window. Click **Run** to execute the query.
+Copy the snippet below to insert four rows and paste in the query window. Click **Run** to execute the query.
    ```sql
    -- Insert rows into table 'Customers'
    INSERT INTO dbo.Customers
@@ -96,7 +101,7 @@ Before starting this quickstart, you must have access to a running SQL Server in
    ```
 
 ## View the result
-1. Copy the snippet below to view all the rows and paste in the query window. Click **Run** to execute the query.
+Copy the snippet below to view all the rows and paste in the query window. Click **Run** to execute the query.
    ```sql
    -- Select rows from table 'Customers'
    SELECT * FROM dbo.Customers;

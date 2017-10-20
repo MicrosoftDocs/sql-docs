@@ -27,7 +27,7 @@ Before starting this quickstart, you must have access to a running SQL Server in
 
 1. Click the **New Connection** icon on the top left.
    
-   ![New Connection Icon](media/quickstart-sql-server/new-connection-icon.png)
+   ![New Connection Icon](media/get-started-sql-server/new-connection-icon.png)
 
 2. For this tutorial, fill the fields as follows:
 
@@ -53,9 +53,6 @@ When connecting with **Windows Authentication**, the **User name**, and **Passwo
 To connect using SQL Login, enter the server administrator's user name and password.
 
 ## Connection properties
-
-
-   ![New Connection Screen](media/get-started-sql-server/connection.png)
 
 
 

@@ -78,6 +78,6 @@ In this tutorial, you learned how to:
 > * Finish something 
 
 Next, try this tutorial: 
-[Another Tutorial](doc-template-tutorial.md)
+[Another Tutorial](tutorial-monitoring-sql-server.md)
 > [!div class="nextstepaction"]
 > [What article is next in sequence](tutorial-monitoring-sql-server.md)

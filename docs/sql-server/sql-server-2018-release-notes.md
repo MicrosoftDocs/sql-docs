@@ -24,9 +24,26 @@ This topic describes limitations and issues with SQL Server vNext on Windows and
 ## SQL Server vNext Community Technology Preview (CTP 1.1 - December 2017)
 ### Database Engine
 
-- **Issue and customer impact:** ??
 
-- **Workaround:** ???
+> - **Issue and customer impact:** ??
+>
+> - **Workaround:** ???
+>
+> - **Applies to:** Windows and Linx
+
+> - **Issue and customer impact:** ??
+>
+> - **Workaround:** ???
+>
+> - **Applies to:** Windows and Linx
+
+### Setup
+> - **Issue and customer impact:** ??
+>
+> - **Workaround:** ???
+>
+> - **Applies to:** Windows and Linx
+
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 

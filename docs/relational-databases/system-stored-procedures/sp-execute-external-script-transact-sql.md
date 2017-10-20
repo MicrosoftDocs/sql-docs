@@ -2,7 +2,7 @@
 title: "sp_execute_external_script (Transact-SQL) | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "08/18/2017"
+ms.date: "10/20/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -44,31 +44,6 @@ sp_execute_external_script
     [ , @parallel = 0 | 1 ]  
     [ , @params = N'@parameter_name data_type [ OUT | OUTPUT ] [ ,...n ]' ] 
     [ , @parameter1 = 'value1' [ OUT | OUTPUT ] [ ,...n ] ]
-    [ WITH <execute_option> ]  
-[;]  
-  
-<execute_option>::=  
-{  
-      { RESULT SETS UNDEFINED }   
-    | { RESULT SETS NONE }   
-    | { RESULT SETS ( <result_sets_definition> ) }  
-}  
-  
-<result_sets_definition> ::=   
-{  
-    (  
-         { column_name   
-           data_type   
-         [ COLLATE collation_name ]   
-         [ NULL | NOT NULL ] }  
-         [,...n ]  
-    )  
-    | AS OBJECT   
-        [ db_name . [ schema_name ] . | schema_name . ]   
-        {table_name | view_name | table_valued_function_name }  
-    | AS TYPE [ schema_name.]table_type_name  
-    | AS FOR XML  
-}  
 ```  
   
 ## Arguments  
@@ -107,36 +82,8 @@ sp_execute_external_script
   
  [ @parameter1 = '*value1*'  [ OUT | OUTPUT ] [ ,...n ] ]  
  A list of values for the input parameters used by the external script.  
- 
- [ WITH \<execute_option> ]  
- Possible execute options. The RESULT SETS options cannot be specified when this procedure is executed using `INSERT…EXEC`.  
-  
-|Term|Definition|  
-|----------|----------------|  
-|RESULT SETS UNDEFINED|This option provides no guarantee of what results, if any, will be returned.  The script executes without error regardless of whether or not it returns results.<br /><br />No result set definition is provided. If results are output by the script, all columns will be returned as unnamed columns. This is true even if columns are assigned names within the script.<br /><br />RESULT SETS UNDEFINED is the default behavior if a result_sets_option is not provided.|  
-|RESULT SETS NONE|Guarantees that no results will be returned. If the script produces results, an error is returned.|  
-|RESULT SETS (*\<result_sets_definition>*)|Guarantees that results will be returned that are structured as specified by *\<result_sets_definition>*. For more information, see *\<result_sets_definition>* later in this topic.<br /><br />If the script does not return results or if they are incompatible with *\<result_sets_definition>*, an error is returned.|
-  
-\<result_sets_definition>
- Describes the result set returned by this procedure. The clauses of the result_sets_definition have the following meaning  
-  
-|Term|Definition|  
-|----------|----------------|  
-|{<br /><br /> column_name<br /><br /> data_type<br /><br /> [ COLLATE collation_name]<br /><br /> [NULL &#124; NOT NULL]<br /><br /> }|See the table below.|  
-|db_name|The name of the database containing the table, view or table valued function.|  
-|schema_name|The name of the schema owning the table, view or table valued function.|  
-|table_name &#124; view_name &#124; table_valued_function_name|Specifies that the columns returned will be those specified in the table, view or table valued function named. Table variables and synonyms are not supported in the `AS OBJECT` syntax.|  
-|AS TYPE [schema_name.]table_type_name|Specifies that the columns returned will be those specified in the table type.|  
-|AS FOR XML|Causes results to be formatted as though they were produced by a `SELECT … FOR XML …` statement. To use this option, the results produced by the script must consist of a single, ntext-compatible column.|  
-  
-|Term|Definition|  
-|----------|----------------|  
-|column_name|The names of each column. If the number of columns differs from the result set, an error occurs.|  
-|data_type|The data types of each column. If the data types differ, an implicit conversion to the defined data type is performed. If the conversion fails, an error is returned.|  
-|COLLATE collation_name|The collation of each column.|  
-|NULL &#124; NOT NULL|The nullability of each column. If the defined nullability is NOT NULL and the data returned contains NULLs an error occurs. If not specified, the default value conforms to the setting of the ANSI_NULL_DFLT_ON and ANSI_NULL_DFLT_OFF options.|  
 
-  
+
 ## Remarks  
  Use **sp_execute_external_script** to execute scripts written in a supported language such as R. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] is comprised of a server component installed with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and a set of workstation tools and connectivity libraries that connect the data scientist to the high-performance environment of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Install R Services (In-Database) during [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup to enable the execution of R scripts. For more information, see [Set up SQL Server R Services &#40;In-Database&#41;](../../advanced-analytics/r-services/set-up-sql-server-r-services-in-database.md).  
   
@@ -144,6 +91,7 @@ sp_execute_external_script
 
 Monitor script execution using [sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md) and [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md). 
 
+ By default, result sets returned by this stored procedure are output with unnamed columns. Column names used within a script are local to the scripting environment and are not reflected in the outputted result set. To name result set columns, use the `WITH RESULTS SET` clause of [`EXECUTE`](../../t-sql/language-elements/execute-transact-sql).
   
  In addition to returning a result set, you can return scalar values from R script to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] using OUTPUT parameters. The following example shows the use of OUTPUT parameter:  
   

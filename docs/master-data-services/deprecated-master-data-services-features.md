@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: d8506bda-66dd-45a4-bfc9-3a10fa665acc
 caps.latest.revision: 18
-author: "sabotta"
-ms.author: "carlasab"
+author: "smartysanthosh"
+ms.author: "nagavo"
 manager: "erikre"
 ---
 # Deprecated Master Data Services Features

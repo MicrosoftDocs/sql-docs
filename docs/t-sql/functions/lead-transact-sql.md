@@ -33,8 +33,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 LEAD ( scalar_expression [ ,offset ] , [ default ] )   
     OVER ( [ partition_by_clause ] order_by_clause )  
 ```  
@@ -156,21 +154,16 @@ ORDER BY CalendarYear, CalendarQuarter;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Year Quarter  SalesQuota  NextQuota  Diff`  
-  
- `---- -------  ----------  ---------  -------------`  
-  
- `2001 3        28000.0000   7000.0000   21000.0000`  
-  
- `2001 4         7000.0000  91000.0000  -84000.0000`  
-  
- `2001 1        91000.0000 140000.0000  -49000.0000`  
-  
- `2002 2       140000.0000   7000.0000    7000.0000`  
-  
- `2002 3         7000.0000 154000.0000   84000.0000`  
-  
- `2002 4       154000.0000      0.0000  154000.0000`  
+ ```
+Year Quarter  SalesQuota  NextQuota  Diff  
+---- -------  ----------  ---------  -------------  
+2001 3        28000.0000   7000.0000   21000.0000 
+2001 4         7000.0000  91000.0000  -84000.0000  
+2001 1        91000.0000 140000.0000  -49000.0000  
+2002 2       140000.0000   7000.0000    7000.0000  
+2002 3         7000.0000 154000.0000   84000.0000  
+2002 4       154000.0000      0.0000  154000.0000
+```  
   
 ## See Also  
  [LAG &#40;Transact-SQL&#41;](../../t-sql/functions/lag-transact-sql.md)  

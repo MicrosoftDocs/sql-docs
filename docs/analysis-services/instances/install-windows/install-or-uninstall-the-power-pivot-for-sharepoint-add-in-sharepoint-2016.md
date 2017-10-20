@@ -149,9 +149,7 @@ Msiexec /i spPowerPivot16.msi AGREETOLICENSE="yes" ADDLOCAL=” SQL_OLAPDM,SQL_A
  Three of the files copied to the hard drive by spPowerPivot16.msi are SharePoint solution files. The scope of one solution file is the Web application level while the scope of the other files is the farm level. The files are the following:  
   
 -   `PowerPivot16FarmSolution.wsp`  
-  
--   `PowerPivot16Farm14Solution.wsp`  
-  
+
 -   `PowerPivot16WebApplicationSolution.wsp`  
   
  The solution files are copied to the following folder:  

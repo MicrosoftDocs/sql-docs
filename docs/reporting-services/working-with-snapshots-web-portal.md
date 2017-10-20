@@ -1,7 +1,7 @@
 ---
 title: "Working with snapshots (web portal) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/25/2017"
+ms.date: "07/02/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -15,9 +15,10 @@ author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
 ---
+
 # Working with snapshots (web portal)
 
-[!INCLUDE[ssrs-appliesto-sql2016-preview](../includes/ssrs-appliesto-sql2016-preview.md)]
+[!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
 You can control if snapshots are created for a report by selecting the **ellipsis (…)** of a report, selecting **Manage** and selecting **Caching** or **History Snapshots**.  
   

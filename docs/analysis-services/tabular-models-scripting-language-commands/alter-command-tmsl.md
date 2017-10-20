@@ -24,7 +24,7 @@ manager: "erikre"
   
  Use **Alter** command for targeted updates, like setting a property on a table without having to specify all of the columns as well. This command is similar to **CreateOrReplace**, but without the requirement of having to provide a full object definition.  
   
- For objects having read-write properties, if you specify one read-write property, you will need to specify all of them, using new or existing values. You can use AMO PowerShell to get a property list. See [PowerShell scripting in Analysis Services](../../analysis-services/instances/powershell-scripting-in-analysis-services.md).  
+ For objects having read-write properties, if you specify one read-write property, you will need to specify all of them, using new or existing values. You can use AMO PowerShell to get a property list. 
   
 ## Request  
  **Alter** does not have any attributes. Inputs include the object to be altered, followed by the modified object definition.  
@@ -159,9 +159,7 @@ manager: "erikre"
  You cannot generate a ready-made script  for this command from SSMS. Instead, you can start with an example or write your own.  
   
  The [\[MS-SSAS-T\]: QL Server Analysis Services Tabular (SQL Server Technical Protocol)](http://go.microsoft.com/fwlink/p/?LinkId=784855) document includes section 3.1.5.2.2 that describes the structure of JSON tabular metadata commands and objects. Currently, that document covers commands and capabilities not yet implemented in TMSL script. Refer to the topic ([Tabular Model Scripting Language &#40;TMSL&#41; Reference](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)) for clarification on what is supported.  
-  
- For instructions on how to leverage TMSL script in practical solutions, see [Script Administrative Tasks in Analysis Services](../../analysis-services/instances/script-administrative-tasks-in-analysis-services.md).  
-  
+
 ## See Also  
  [Tabular Model Scripting Language &#40;TMSL&#41; Reference](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)  
   

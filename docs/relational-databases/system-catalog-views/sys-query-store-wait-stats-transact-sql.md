@@ -27,7 +27,7 @@ ms.author: "AndrejsAnt"
 manager: "jhubbard"
 ---
 # sys.query_store_wait_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ssvnxt-asdb-xxxx-xxx.md](../../includes/tsql-appliesto-ssvnxt-asdb-xxxx-xxx.md)]
 
   Contains  information about the wait information for the query.  
   

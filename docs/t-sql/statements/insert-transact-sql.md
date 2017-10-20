@@ -1,7 +1,7 @@
 ---
 title: "INSERT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/17/2017"
+ms.date: "08/10/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -196,7 +196,7 @@ INSERT INTO [ database_name . [ schema_name ] . | schema_name . ] table_name
 OUTPUT Clause  
  Returns inserted rows as part of the insert operation. The results can be returned to the processing application or inserted into a table or table variable for further processing.  
   
- The [OUTPUT clause](../../t-sql/queries/output-clause-transact-sql.md) is not supported in DML statements that reference local partitioned views, distributed partitioned views, or remote tables, or INSERT statements that contain an *execute_statement*. The OUTPUT INTO clause is not supported in INSERT statements that contain a <dml_table_source> clause.  
+ The [OUTPUT clause](../../t-sql/queries/output-clause-transact-sql.md) is not supported in DML statements that reference local partitioned views, distributed partitioned views, or remote tables, or INSERT statements that contain an *execute_statement*. The OUTPUT INTO clause is not supported in INSERT statements that contain a \<dml_table_source> clause. 
   
  VALUES  
  Introduces the list or lists of data values to be inserted. There must be one data value for each column in *column_list*, if specified, or in the table. The value list must be enclosed in parentheses.  
@@ -230,7 +230,7 @@ OUTPUT Clause
  You cannot specify a table-valued parameter as the target of an INSERT EXEC statement; however, it can be specified as a source in the INSERT EXEC string or stored-procedure. For more information, see [Use Table-Valued Parameters &#40;Database Engine&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md).  
   
  \<dml_table_source>  
- Specifies that the rows inserted into the target table are those returned by the OUTPUT clause of an INSERT, UPDATE, DELETE, or MERGE statement, optionally filtered by a WHERE clause. If <dml_table_source> is specified, the target of the outer INSERT statement must meet the following restrictions:  
+ Specifies that the rows inserted into the target table are those returned by the OUTPUT clause of an INSERT, UPDATE, DELETE, or MERGE statement, optionally filtered by a WHERE clause. If \<dml_table_source> is specified, the target of the outer INSERT statement must meet the following restrictions: 
   
 -   It must be a base table, not a view.  
   
@@ -245,7 +245,7 @@ OUTPUT Clause
  The compatibility level of the database must be set to 100 or higher. For more information, see [OUTPUT Clause &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md).  
   
  \<select_list>  
- Is a comma-separated list specifying which columns returned by the OUTPUT clause to insert. The columns in <select_list> must be compatible with the columns into which values are being inserted. <select_list> cannot reference aggregate functions or TEXTPTR.  
+ Is a comma-separated list specifying which columns returned by the OUTPUT clause to insert. The columns in \<select_list> must be compatible with the columns into which values are being inserted. \<select_list> cannot reference aggregate functions or TEXTPTR. 
   
 > [!NOTE]  
 >  Any variables listed in the SELECT list refer to their original values, regardless of any changes made to them in \<dml_statement_with_output_clause>.  
@@ -254,7 +254,7 @@ OUTPUT Clause
  Is a valid INSERT, UPDATE, DELETE, or MERGE statement that returns affected rows in an OUTPUT clause. The statement cannot contain a WITH clause, and cannot target remote tables or partitioned views. If UPDATE or DELETE is specified, it cannot be a cursor-based UPDATE or DELETE. Source rows cannot be referenced as nested DML statements.  
   
  WHERE \<search_condition>  
- Is any WHERE clause containing a valid <search_condition> that filters the rows returned by <dml_statement_with_output_clause>. For more information, see [Search Condition &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md). When used in this context, <search_condition> cannot contain subqueries, scalar user-defined functions that perform data access, aggregate functions, TEXTPTR, or full-text search predicates.  
+ Is any WHERE clause containing a valid \<search_condition> that filters the rows returned by \<dml_statement_with_output_clause>. For more information, see [Search Condition &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md). When used in this context, \<search_condition> cannot contain subqueries, scalar user-defined functions that perform data access, aggregate functions, TEXTPTR, or full-text search predicates. 
   
  DEFAULT VALUES  
  **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -1020,5 +1020,6 @@ OPTION ( LABEL = 'Add French Prospects', HASH JOIN);
  [Use the inserted and deleted Tables](../../relational-databases/triggers/use-the-inserted-and-deleted-tables.md)  
   
   
+
 
 

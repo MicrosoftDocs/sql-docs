@@ -11,9 +11,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 56bc41ea-de28-4184-aa7e-99111ae55af5
 caps.latest.revision: 10
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
+author: "smartysanthosh"
+ms.author: "nagavo"
+manager: "craigg"
 ---
 # Security (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], use security to ensure that users have access to the specific master data necessary to do their jobs, and to prevent them from accessing data that should not be available to them.  

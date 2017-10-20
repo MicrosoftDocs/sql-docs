@@ -1,7 +1,7 @@
 ---
 title: "CASE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/20/2016"
+ms.date: "06/28/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -124,7 +124,7 @@ SELECT 1
 )   
 SELECT   
    CASE   
-      WHEN MIN(value) \<= 0 THEN 0   
+      WHEN MIN(value) <= 0 THEN 0   
       WHEN MAX(1/value) >= 100 THEN 1   
    END   
 FROM Data ;  

@@ -1,7 +1,7 @@
 ---
 title: "ALTER AUTHORIZATION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/12/2017"
+ms.date: "08/07/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -118,7 +118,7 @@ ALTER AUTHORIZATION ON
 ```    
     
 ## Arguments    
- <class_type>    
+\<class_type>
  Is the securable class of the entity for which the owner is being changed. OBJECT is the default.    
     
 |||    

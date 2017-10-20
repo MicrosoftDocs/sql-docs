@@ -1,5 +1,8 @@
-# [Results +](../../relational-databases/native-client-ole-db-how-to/results/execute-a-user-defined-function-and-process-return-code-ole-db.md)
+# [OLE DB How-to Topics](ole-db-how-to-topics.md)
+
+# [Results +](../../relational-databases/native-client-ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)
 # [Filestream +](../../relational-databases/native-client-ole-db-how-to/filestream/filestream-and-ole-db.md)
+
 # [Bulk Copy Data Using IRowsetFastLoad (OLE DB)](bulk-copy-data-using-irowsetfastload-ole-db.md)
 # [Change a SQL Server Authentication User Password (OLE DB)](change-a-sql-server-authentication-user-password-ole-db.md)
 # [Display Column and Catalog Metadata for Sparse Columns (OLE DB)](display-column-and-catalog-metadata-for-sparse-columns-ole-db.md)
@@ -8,7 +11,6 @@
 # [Fetch Columns Using IRow::GetColumns (or IRow::Open) and ISequentialStream](fetch-columns-using-irow-getcolumns-or-irow-open-and-isequentialstream.md)
 # [Integrated Kerberos Authentication (OLE DB)](integrated-kerberos-authentication-ole-db.md)
 # [Obtain a FAST_FORWARD Cursor](obtain-a-fast-forward-cursor.md)
-# [OLE DB How-to Topics](ole-db-how-to-topics.md)
 # [Retrieve Rows Using Bookmarks (OLE DB)](retrieve-rows-using-bookmarks-ole-db.md)
 # [Send BLOB Data to SQL SERVER Using IROWSETFASTLOAD and ISEQUENTIALSTREAM (OLE DB)](send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md)
 # [Set Large Data (OLE DB)](set-large-data-ole-db.md)

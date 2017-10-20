@@ -1,7 +1,7 @@
 ---
 title: "Link to Programming Samples | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "07/11/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -19,8 +19,8 @@ author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
 ---
-# Link to Programming Samples
-  The following table lists the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) programming samples that are available in the [!INCLUDE[ssSampPathEng](../../includes/sssamppatheng-md.md)]Programmability\SMO directory. These samples are available in both [!INCLUDE[csprcs](../../includes/csprcs-md.md)] and [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET.  
+# Available Programming Samples
+  The following table lists the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) programming samples available in the [!INCLUDE[ssSampPathEng](../../includes/sssamppatheng-md.md)]Programmability\SMO directory. These samples are available in both [!INCLUDE[csprcs](../../includes/csprcs-md.md)] and [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET.  
   
  For more information about how to install samples, see [AdventureWorks for SQL Server 2012](http://msftdbprodsamples.codeplex.com/releases/view/55330).  
   

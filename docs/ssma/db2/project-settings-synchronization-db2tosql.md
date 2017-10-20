@@ -14,9 +14,9 @@ applies_to:
   - "SQL Server"
 ms.assetid: a5629a72-8c17-46a4-bb4d-19d51a0b98a2
 caps.latest.revision: 4
-author: "sabotta"
-ms.author: "carlasab"
-manager: "lonnyb"
+author: "Shamikg"
+ms.author: "Shamikg"
+manager: "jhubbard"
 ---
 # Project Settings(Synchronization) (DB2ToSQL)
 The Synchronization page of the **Project Settings** dialog box contains settings that customize how SSMA loads and refreshes database objects, such as tables and stored procedures, into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  

@@ -1,7 +1,7 @@
 ---
 title: "Deprecated features in SQL Server Reporting Services in SQL Server 2016 | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/16/2017"
+ms.date: "07/02/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -21,26 +21,34 @@ author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
 ---
-# Deprecated features in SQL Server Reporting Services (SSRS)
-  This topic describes the deprecated [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] features. The features are still available in the release in which they are deprecated; however the features are scheduled to be removed in a future release of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Don't use deprecated features in new applications.  
-  
-## Features Not Supported in the Next Version of SQL Server Reporting Services  
- The following [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] features won't be supported in the next version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Don't use these features in new development work, and modify applications that currently use these features as soon as possible.  
-  
+
+# Deprecated features in SQL Server Reporting Services in SQL Server 2016
+
+[!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
+
+[!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]
+
+This topic describes the deprecated SQL Server Reporting Services features. The features are still available in the release in which they are deprecated; however the features are scheduled to be removed in a future release of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Don't use deprecated features in new applications.
+
+## Features Not Supported in the Next Version of SQL Server Reporting Services
+
+The following SQL Server Reporting Services features won't be supported in the next version of SQL Server. Don't use these features in new development work, and modify applications that currently use these features as soon as possible.
+
 |Category|Deprecated feature|
 |--------------|------------------------| 
 |Report Server|HTML4.0 renderer. Use the HTML5 renderer.|
-  
-## Features Not Supported in Previous Versions of SQL Server Reporting Services  
-  
--   [SQL Server 2014 Reporting Services Deprecated Features](https://msdn.microsoft.com/library/ms143509\(v=sql.120\).aspx)  
-  
--   [SQL Server 2012 Reporting Services Deprecated Features](https://msdn.microsoft.com/library/ms143509\(v=sql.110\).aspx)  
-  
-## See Also  
- [What's New in Reporting Services &#40;SSRS&#41;](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md) 
+
+## Features Not Supported in Previous Versions of SQL Server Reporting Services
+
+- [SQL Server 2014 Reporting Services Deprecated Features](https://msdn.microsoft.com/library/ms143509\(v=sql.120\).aspx)
+
+- [SQL Server 2012 Reporting Services Deprecated Features](https://msdn.microsoft.com/library/ms143509\(v=sql.110\).aspx)
+
+## Next steps
+
+ [What's New in Reporting Services](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md) 
  [Backward Compatibility | Reporting Services](../reporting-services/reporting-services-backward-compatibility.md)   
  [Behavior Changes to SQL Server Reporting Services in SQL Server 2016](../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)  
  [Discontinued Functionality to SQL Server Reporting Services in SQL Server 2016](../reporting-services/discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md) 
-  
-  
+
+More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)

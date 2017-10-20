@@ -29,9 +29,9 @@ You will learn how to create a remote compute context, move data between local a
 > 
 > This tutorial works specifically with SQL Server data on Windows, and uses in-database compute contexts. If you want to use R in other contexts, such as Teradata, Linux, or Hadoop, see these Microsoft R Server tutorials: 
 > + [Use R Server with sparklyr](https://msdn.microsoft.com/microsoft-r/microsoft-r-get-started-spark-interop)
-> + [Explore R and ScaleR in 25 functions](https://msdn.microsoft.com/microsoft-r/microsoft-r-getting-started-tutorial)
+> + [Explore R and ScaleR in 25 functions](https://msdn.microsoft.com/microsoft-r/microsoft-r-tutorial-r2revoscaler)
 > + [Get Started with ScaleR on Hadoop MapReduce](https://msdn.microsoft.com/microsoft-r/scaler-hadoop-getting-started)
-> [RevoScaleR Teradata Getting Started Guide](https://msdn.microsoft.com/microsoft-r/scaler-teradata-getting-started)
+> + [RevoScaleR Teradata Getting Started Guide](https://msdn.microsoft.com/microsoft-r/scaler-teradata-getting-started)
 
 ## Overview
 

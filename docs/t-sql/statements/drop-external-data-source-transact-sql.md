@@ -27,8 +27,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 -- Drop an external data source  
 DROP EXTERNAL DATA SOURCE external_data_source_name  
 [;]  
@@ -57,14 +55,6 @@ SELECT * FROM sys.external_data_sources;
 ## Examples  
   
 ### A. Using basic syntax  
-  
-```  
-DROP EXTERNAL DATA SOURCE mydatasource;  
-```  
-  
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### B. Using basic syntax  
   
 ```  
 DROP EXTERNAL DATA SOURCE mydatasource;  

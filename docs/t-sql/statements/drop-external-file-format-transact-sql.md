@@ -27,8 +27,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 -- Drop an external file format  
 DROP EXTERNAL FILE FORMAT external_file_format_name  
 [;]  
@@ -57,14 +55,6 @@ SELECT * FROM sys.external_file_formats;
 ## Examples  
   
 ### A. Using basic syntax  
-  
-```  
-DROP EXTERNAL FILE FORMAT myfileformat;  
-```  
-  
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### B. Using basic syntax  
   
 ```  
 DROP EXTERNAL FILE FORMAT myfileformat;  

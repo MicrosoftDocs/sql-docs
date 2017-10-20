@@ -1,7 +1,7 @@
 ---
 title: "Query Processing Architecture Guide | Microsoft Docs"
 ms.custom: ""
-ms.date: "5/03/2017"
+ms.date: "10/13/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -21,13 +21,13 @@ manager: "jhubbard"
 # Query Processing Architecture Guide
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
-The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] processes queries on a variety of data storage architectures such as local tables, partitioned tables, and tables distributed across multiple servers. The following topics cover how [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] processes queries and optimizes query reuse through execution plan caching.
+The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] processes queries on various data storage architectures such as local tables, partitioned tables, and tables distributed across multiple servers. The following topics cover how [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] processes queries and optimizes query reuse through execution plan caching.
 
 ## SQL Statement Processing
 
 Processing a single SQL statement is the most basic way that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] executes SQL statements. The steps used to process a single `SELECT` statement that references only local base tables (no views or remote tables) illustrates the basic process.
 
-#### Optimizing SELECT Statements
+#### Optimizing SELECT statements
 
 A `SELECT` statement is non-procedural; it does not state the exact steps that the database server should use to retrieve the requested data. This means that the database server must analyze the statement to determine the most efficient way to extract the requested data. This is referred to as optimizing the `SELECT` statement. The component that does this is called the Query Optimizer. The input to the Query Optimizer consists of the query, the database schema (table and index definitions), and the database statistics. The output of the Query Optimizer is a query execution plan, sometimes referred to as a query plan or just a plan. The contents of a query plan are described in more detail later in this topic.
 
@@ -59,7 +59,7 @@ The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Query Optimizer is a 
 
 The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Query Optimizer does not choose only the execution plan with the lowest resource cost; it chooses the plan that returns results to the user with a reasonable cost in resources and that returns the results the fastest. For example, processing a query in parallel typically uses more resources than processing it serially, but completes the query faster. The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Query Optimizer will use a parallel execution plan to return results if the load on the server will not be adversely affected.
 
-The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Query Optimizer relies on distribution statistics when it estimates the resource costs of different methods for extracting information from a table or index. Distribution statistics are kept for columns and indexes. They indicate the selectivity of the values in a particular index or column. For example, in a table representing cars, many cars have the same manufacturer, but each car has a unique vehicle identification number (VIN). An index on the VIN is more selective than an index on the manufacturer. If the index statistics are not current, the Query Optimizer may not make the best choice for the current state of the table. For more information about keeping index statistics current, see Using Statistics to Improve Query Performance. 
+The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Query Optimizer relies on distribution statistics when it estimates the resource costs of different methods for extracting information from a table or index. Distribution statistics are kept for columns and indexes. They indicate the selectivity of the values in a particular index or column. For example, in a table representing cars, many cars have the same manufacturer, but each car has a unique vehicle identification number (VIN). An index on the VIN is more selective than an index on the manufacturer. If the index statistics are not current, the Query Optimizer may not make the best choice for the current state of the table. For more information about keeping index statistics current, see [Statistics](../relational-databases/statistics/statistics.md). 
 
 The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Query Optimizer is important because it enables the database server to adjust dynamically to changing conditions in the database without requiring input from a programmer or database administrator. This enables programmers to focus on describing the final result of the query. They can trust that the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Query Optimizer will build an efficient execution plan for the state of the database every time the statement is run.
 
@@ -384,6 +384,7 @@ SELECT *
 FROM AdventureWorks2014.Production.Product 
 WHERE ProductSubcategoryID = 1;
 ```
+
 ```tsql
 SELECT * 
 FROM AdventureWorks2014.Production.Product 
@@ -468,7 +469,7 @@ WHERE ProductSubcategoryID = 4;
 When processing complex SQL statements, the relational engine may have difficulty determining which expressions can be parameterized. To increase the ability of the relational engine to match complex SQL statements to existing, unused execution plans, explicitly specify the parameters using either sp_executesql or parameter markers. 
 
 > [!NOTE]
-> When the +, -, *, /, or % arithmetic operators are used to perform implicit or explicit conversion of int, smallint, tinyint, or bigint constant values to the float, real, decimal or numeric data types, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] applies specific rules to calculate the type and precision of the expression results. However, these rules differ, depending on whether the query is parameterized or not. Therefore, similar expressions in queries can, in some cases, produce differing results.
+> When the +, -, \*, /, or % arithmetic operators are used to perform implicit or explicit conversion of int, smallint, tinyint, or bigint constant values to the float, real, decimal or numeric data types, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] applies specific rules to calculate the type and precision of the expression results. However, these rules differ, depending on whether the query is parameterized or not. Therefore, similar expressions in queries can, in some cases, produce differing results.
 
 Under the default behavior of simple parameterization, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] parameterizes a relatively small class of queries. However, you can specify that all queries in a database be parameterized, subject to certain limitations, by setting the `PARAMETERIZATION` option of the `ALTER DATABASE` command to `FORCED`. Doing so may improve the performance of databases that experience high volumes of concurrent queries by reducing the frequency of query compilations.
 
@@ -503,7 +504,7 @@ Additionally, the following query clauses are not parameterized. Note that in th
 * The style argument of a `CONVERT` clause.
 * Integer constants inside an `IDENTITY` clause.
 * Constants specified by using ODBC extension syntax.
-* Constant-foldable expressions that are arguments of the +, -, *, /, and % operators. When considering eligibility for forced parameterization, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] considers an expression to be constant-foldable when either of the following conditions is true:  
+* Constant-foldable expressions that are arguments of the +, -, \*, /, and % operators. When considering eligibility for forced parameterization, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] considers an expression to be constant-foldable when either of the following conditions is true:  
   * No columns, variables, or subqueries appear in the expression.  
   * The expression contains a `CASE` clause.  
 * Arguments to query hint clauses. These include the `number_of_rows` argument of the `FAST` query hint, the `number_of_processors` argument of the `MAXDOP` query hint, and the number argument of the `MAXRECURSION` query hint.
@@ -511,7 +512,7 @@ Additionally, the following query clauses are not parameterized. Note that in th
 Parameterization occurs at the level of individual Transact-SQL statements. In other words, individual statements in a batch are parameterized. After compiling, a parameterized query is executed in the context of the batch in which it was originally submitted. If an execution plan for a query is cached, you can determine whether the query was parameterized by referencing the sql column of the sys.syscacheobjects dynamic management view. If a query is parameterized, the names and data types of parameters come before the text of the submitted batch in this column, such as (@1 tinyint).
 
 > [!NOTE]
-> Parameter names are arbitrary. Users or applications should not rely on a particular naming order. Also, the following can change between versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and service pack upgrades: Parameter names, the choice of literals that are parameterized, and the spacing in the parameterized text.
+> Parameter names are arbitrary. Users or applications should not rely on a particular naming order. Also, the following can change between versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and Service Pack upgrades: Parameter names, the choice of literals that are parameterized, and the spacing in the parameterized text.
 
 #### Data Types of Parameters
 
@@ -538,7 +539,7 @@ Consider the following when you set the `PARAMETERIZATION` option to FORCED:
 You can override the behavior of forced parameterization by specifying that simple parameterization be attempted on a single query, and any others that are syntactically equivalent but differ only in their parameter values. Conversely, you can specify that forced parameterization be attempted on only a set of syntactically equivalent queries, even if forced parameterization is disabled in the database. [Plan guides](../relational-databases/performance/plan-guides.md) are used for this purpose.
 
 > [!NOTE]
-> When the `PARAMETERIZATION` option is set to `FORCED`, the reporting of error messages may differ from that of simple parameterization: multiple error messages may be reported in cases where fewer message would be reported under simple parameterization, and the line numbers in which errors occur may be reported incorrectly.
+> When the `PARAMETERIZATION` option is set to `FORCED`, the reporting of error messages may differ from when the `PARAMETERIZATION` option is set to `SIMPLE`: multiple error messages may be reported under forced parameterization, where fewer messages would be reported under simple parameterization, and the line numbers in which errors occur may be reported incorrectly.
 
 ### Preparing SQL Statements
 
@@ -614,7 +615,7 @@ The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Query Optimizer does 
   Only computers that have more than one CPU can use parallel queries. 
 
 2. Whether sufficient worker threads are available.  
-  Each query or index operation requires a certain number of worker threads to execute. Executing a parallel plan requires more worker threads than a serial plan , and the number of required worker threads increases with the degree of parallelism. When the worker thread requirement of the parallel plan for a specific degree of parallelism cannot be satisfied, the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] decreases the degree of parallelism automatically or completely abandons the parallel plan in the specified workload context. It then executes the serial plan (one worker thread). 
+  Each query or index operation requires a certain number of worker threads to execute. Executing a parallel plan requires more worker threads than a serial plan, and the number of required worker threads increases with the degree of parallelism. When the worker thread requirement of the parallel plan for a specific degree of parallelism cannot be satisfied, the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] decreases the degree of parallelism automatically or completely abandons the parallel plan in the specified workload context. It then executes the serial plan (one worker thread). 
 
 3. The type of query or index operation executed.  
   Index operations that create or rebuild an index, or drop a clustered index and queries that use CPU cycles heavily are the best candidates for a parallel plan. For example, joins of large tables, large aggregations, and sorting of large result sets are good candidates. Simple queries, frequently found in transaction processing applications, find the additional coordination required to execute a query in parallel outweigh the potential performance boost. To distinguish between queries that benefit from parallelism and those that do not benefit, The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] compares the estimated cost of executing the query or index operation with the [cost threshold for parallelism](../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md) value. Although not recommended, users can change the default value of 5 using [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md). 
@@ -639,9 +640,9 @@ Static and keyset-driven cursors can be populated by parallel execution plans. H
 
 You can use the [max degree of parallelism](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) (MAXDOP) server configuration option ([ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) on [!INCLUDE[ssSDS_md](../includes/sssds-md.md)] ) to limit the number of processors to use in parallel plan execution. The max degree of parallelism option can be overridden for individual query and index operation statements by specifying the MAXDOP query hint or MAXDOP index option. MAXDOP provides more control over individual queries and index operations. For example, you can use the MAXDOP option to control, by increasing or reducing, the number of processors dedicated to an online index operation. In this way, you can balance the resources used by an index operation with those of the concurrent users. 
 
-Setting the max degree of parallelism option to 0 (default) enables [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to use all available processors up to to a maximum of 64 processors in a parallel plan execution. Although [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sets a runtime target of 64 logical processors when MAXDOP option is set to 0, a different value can be manually set if needed. Setting MAXDOP to 0 for queries and indexes allows [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to use all available processors up to a maximum of 64 processors for the given queries or indexes in a parallel plan execution. MAXDOP is not an enforced value for all parallel queries, but rather a tentative target for all queries eligible for parallelism. This means that if not enough worker threads are available at runtime, a query may execute with a lower degree of parallelism than the MAXDOP server configuration option.
+Setting the max degree of parallelism option to 0 (default) enables [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to use all available processors up to a maximum of 64 processors in a parallel plan execution. Although [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sets a runtime target of 64 logical processors when MAXDOP option is set to 0, a different value can be manually set if needed. Setting MAXDOP to 0 for queries and indexes allows [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to use all available processors up to a maximum of 64 processors for the given queries or indexes in a parallel plan execution. MAXDOP is not an enforced value for all parallel queries, but rather a tentative target for all queries eligible for parallelism. This means that if not enough worker threads are available at runtime, a query may execute with a lower degree of parallelism than the MAXDOP server configuration option.
 
-Refer to this [Microsoft Support Article](https://support.microsoft.com/en-us/help/2806535/recommendations-and-guidelines-for-the-max-degree-of-parallelism-configuration-option-in-sql-server) for best practices on configuring MAXDOP.
+Refer to this [Microsoft Support Article](http://support.microsoft.com/help/2806535/recommendations-and-guidelines-for-the-max-degree-of-parallelism-configuration-option-in-sql-server) for best practices on configuring MAXDOP.
 
 ### Parallel Query Example
 
@@ -665,7 +666,7 @@ WHERE o_orderdate >= '2000/04/01'
    ORDER BY o_orderpriority
 ```
 
-Assume the following indexes are defined on the lineitem and orders tables:
+Assume the following indexes are defined on the `lineitem` and `orders` tables:
 
 ```tsql
 CREATE INDEX l_order_dates_idx 
@@ -752,7 +753,7 @@ The main phases of a parallel index operation include the following:
 
 Individual `CREATE TABLE` or `ALTER TABLE` statements can have multiple constraints that require that an index be created. These multiple index creation operations are performed in series, although each individual index creation operation may be a parallel operation on a computer that has multiple CPUs.
 
-## Distributted Query Architecture
+## Distributed Query Architecture
 
 Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supports two methods for referencing heterogeneous OLE DB data sources in Transact-SQL statements:
 
@@ -817,7 +818,7 @@ CREATE PARTITION FUNCTION myRangePF1 (int) AS RANGE LEFT FOR VALUES (3, 7, 10);
 
 To solve the query, the query processor performs a first-level seek operation to find every partition that contains rows that meet the condition `T.a < 10`. This identifies the partitions to be accessed. Within each partition identified, the processor then performs a second-level seek into the clustered index on column b to find the rows that meet the condition `T.b = 2` and `T.a < 10`. 
 
-The following illustration is a logical representation of the skip scan operation. It shows table T with data in columns a and b. The partitions are numbered 1 through 4 with the partition boundaries shown by dashed vertical lines. A first-level seek operation to the partitions (not shown in the illustration) has determined that partitions 1, 2, and 3 meet the seek condition implied by the partitioning defined for the table and the predicate on column a. That is, `T.a < 10`. The path traversed by the second-level seek portion of the skip scan operation is illustrated by the curved line. Essentially, the skip scan operation seeks into each of these partitions for rows that meet the condition `b = 2`. The total cost of the skip scan operation is the same as that of three separate index seeks.   
+The following illustration is a logical representation of the skip scan operation. It shows table `T` with data in columns `a` and `b`. The partitions are numbered 1 through 4 with the partition boundaries shown by dashed vertical lines. A first-level seek operation to the partitions (not shown in the illustration) has determined that partitions 1, 2, and 3 meet the seek condition implied by the partitioning defined for the table and the predicate on column `a`. That is, `T.a < 10`. The path traversed by the second-level seek portion of the skip scan operation is illustrated by the curved line. Essentially, the skip scan operation seeks into each of these partitions for rows that meet the condition `b = 2`. The total cost of the skip scan operation is the same as that of three separate index seeks.   
 
 ![skip_scan](../relational-databases/media/skip-scan.gif)
 
@@ -1036,4 +1037,6 @@ GO
 ##  <a name="Additional_Reading"></a> Additional Reading  
  [Showplan Logical and Physical Operators Reference](../relational-databases/showplan-logical-and-physical-operators-reference.md)  
  [Extended Events](../relational-databases/extended-events/extended-events.md)  
- [Best Practice with the Query Store](../relational-databases/performance/best-practice-with-the-query-store.md)
+ [Best Practice with the Query Store](../relational-databases/performance/best-practice-with-the-query-store.md)  
+ [Cardinality Estimation](../relational-databases/performance/cardinality-estimation-sql-server.md)  
+ [Adaptive query processing](../relational-databases/performance/adaptive-query-processing.md)

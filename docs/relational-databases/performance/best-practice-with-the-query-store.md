@@ -138,7 +138,7 @@ Navigate to the Query Store sub-folder under the database node in Object Explore
 |Overall Resource Consumption|Analyze the total resource consumption for the database for any of the execution metrics.<br />Use this view to identify resource patterns (daily vs. nightly workloads) and optimize overall consumption for your database.|  
 |Top Resource Consuming Queries|Choose an execution metric of interest and identify queries that had the most extreme values for a provided time interval. <br />Use this view to focus your attention on the most relevant queries which have the biggest impact to database resource consumption.|  
 |Queries With Forced Plans|Lists previously forced plans using Query Store. <br />Use this view to quickly access all currently forced plans.|  
-|Queries With High Variation|Analyze queries with high execution variation as it relates to any of the available dimensions, such as Duration, CPU time, IO, and Memory usage in the desired time interval.<br />Use this view to identify queries with widely variant performance that can be impacting user experience accross your applications.|  
+|Queries With High Variation|Analyze queries with high execution variation as it relates to any of the available dimensions, such as Duration, CPU time, IO, and Memory usage in the desired time interval.<br />Use this view to identify queries with widely variant performance that can be impacting user experience across your applications.|  
 |Tracked Queries|Track the execution of the most important queries in real-time. Typically, you use this view when you have queries with forced plans and you want to make sure that query performance is stable.|
   
 > [!TIP]  
@@ -314,7 +314,15 @@ WHERE is_forced_plan = 1;
  Execution plans reference objects using three-part names `database.schema.object`.   
 
 If you rename a database, plan forcing will fail which will cause recompilation in all subsequent query executions.  
+
+##  <a name="Recovery"></a> Use traceflags on mission critical servers to improve recovery from disaster
+ 
+  The global traceflags 7745 and 7752 can be used to improve performance of Query Store during High Availability and Disaster Recovery scenarios. For more information, refer to [Trace Flags](../..//t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
   
+  Traceflag 7745 will prevent the default behavior where Query Store writes data to disk before SQL Server can be shutdown.
+  
+  Traceflag 7752 enables asynchronous load of Query Store, and also allows SQL Server to run queries before Query Store has been fully loaded. Default Query Store behavior prevents queries from running before the Query Store has been recovered.
+
 ## See Also  
  [Query Store Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
  [Query Store Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   

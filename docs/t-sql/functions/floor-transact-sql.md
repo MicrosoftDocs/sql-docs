@@ -34,8 +34,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 FLOOR ( numeric_expression )  
 ```  
   
@@ -69,9 +67,11 @@ SELECT FLOOR(123.45), FLOOR(-123.45), FLOOR($123.45);
   
  The result is the integer part of the calculated value in the same data type as *numeric_expression*.  
   
- `-----   ---------    -----------`  
+ ```
+ -----   ---------    -----------  
   
- `123     -124         123`  
+ 123     -124         123
+ ```  
   
 ## See Also  
  [Mathematical Functions &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  

@@ -18,7 +18,7 @@ manager: "jhubbard"
 # Configure Advanced Options for SQL Server Managed Backup to Microsoft Azure
   The following tutorial describes how to set advanced options for [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. These procedures are only necessary if you require the features they offer. Otherwise, you can enable [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] and depend on the default behavior.  
   
- In each scenario, the backup is specified using the `database_name` parameter. When `database_name` is NUL or *, then the changes affect the default settings at an Instance level. Instance level settings also affect new databases created after the change.  
+ In each scenario, the backup is specified using the `database_name` parameter. When `database_name` is NULL or *, then the changes affect the default settings at an Instance level. Instance level settings also affect new databases created after the change.  
   
  Once you have specified these settings, you can then enable managed backup for the database or instance using the system stored procedure [managed_backup.sp_backup_config_basic (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md). For more information, see [Enable SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md).  
   
@@ -86,7 +86,7 @@ manager: "jhubbard"
   
 3.  **Determine the day of the week for weekly backups:** If the backup is weekly, choose a day of the week for the full backup.  
   
-4.  **Determine the start time for the bakup:** Using 24-hour notation, choose a time for the backup to start.  
+4.  **Determine the start time for the backup:** Using 24-hour notation, choose a time for the backup to start.  
   
 5.  **Determine the length of time to allow for the backup:** This specifies the amount of time that a backup has to complete.  
   

@@ -1,5 +1,5 @@
-# [About OLE DB Properties](about-ole-db-properties.md)
 # [Creating a SQL Server Native Client OLE DB Provider Application](creating-a-sql-server-native-client-ole-db-provider-application.md)
+# [About OLE DB Properties](about-ole-db-properties.md)
 # [Establishing a Connection to a Data Source](establishing-a-connection-to-a-data-source.md)
 # [Executing a Command](executing-a-command.md)
 # [Processing Results](processing-results.md)

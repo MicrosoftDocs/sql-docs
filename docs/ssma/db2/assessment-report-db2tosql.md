@@ -14,9 +14,9 @@ applies_to:
   - "SQL Server"
 ms.assetid: 9e13eba0-e3cf-4205-974f-c00f982061de
 caps.latest.revision: 4
-author: "sabotta"
-ms.author: "carlasab"
-manager: "lonnyb"
+author: "Shamikg"
+ms.author: "Shamikg"
+manager: "jhubbard"
 ---
 # Assessment Report (DB2ToSQL)
 The Assessment Report window shows the results of the conversion of database objects to [!INCLUDE[tsql](../../includes/tsql_md.md)] syntax, and can also help you estimate the complexity and cost of your migration projects.  

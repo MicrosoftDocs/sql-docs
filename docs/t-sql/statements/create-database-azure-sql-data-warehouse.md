@@ -4,9 +4,9 @@ ms.custom:
   - "MSDN content"
   - "MSDN - SQL DB"
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: 
 ms.reviewer: ""
-ms.service: "sql-database"
+ms.service: "sql-warehouse"
 ms.suite: ""
 ms.technology: 
   - "database-engine"
@@ -28,8 +28,6 @@ Creates a new database.
 ## Syntax  
   
 ```  
--- Syntax for Azure SQL Data Warehouse  
-  
 CREATE DATABASE database_name [ COLLATE collation_name ]  
 (  
     [ MAXSIZE = { 250 | 500 | 750 | 1024 | 5120 | 10240 | 20480 | 30720 | 40960 | 51200 | 61440 | 71680 | 81920 | 92160 | 102400 | 153600 | 204800 | 245760 } GB ,]  

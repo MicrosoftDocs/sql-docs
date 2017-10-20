@@ -1,7 +1,7 @@
 ---
 title: "DBCC CHECKCATALOG (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/09/2016"
+ms.date: "07/16/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -56,7 +56,7 @@ DBCC CHECKCATALOG
  Suppresses all informational messages.  
   
 ## Remarks  
- After the DBCC CATALOG command finishes, a message is written to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log. If the DBCC command successfully executes, the message indicates a successful completion and the amount of time that the command ran. If the DBCC command stops before completing the check because of an error, the message indicates the command was terminated, a state value, and the amount of time the command ran. The following table lists and describes the state values that can be included in the message.  
+After the DBCC CATALOG command finishes, a message is written to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log. If the DBCC command successfully executes, the message indicates a successful completion and the amount of time that the command ran. If the DBCC command stops before completing the check because of an error, the message indicates the command was terminated, a state value, and the amount of time the command ran. The following table lists and describes the state values that can be included in the message.
   
 |State|Description|  
 |-----------|-----------------|  
@@ -67,9 +67,8 @@ DBCC CHECKCATALOG
 |4|An assert or access violation was detected.|  
 |5|An unknown error occurred that terminated the DBCC command.|  
   
- DBCC CHECKCATALOG performs various consistency checks between system metadata tables. DBCC CHECKCATALOG uses an internal database snapshot to provide the transactional consistency that it needs to perform these checks. For more information, see [View the Size of the Sparse File of a Database Snapshot &#40;Transact-SQL&#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md) and the "DBCC Internal Database Snapshot Usage" section in [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md).  
-  
- If a snapshot cannot be created DBCC CHECKCATALOG acquires an exclusive database lock to obtain the required consistency. If any inconsistencies are detected, they cannot be repaired and the database must be restored from a backup.  
+DBCC CHECKCATALOG performs various consistency checks between system metadata tables. DBCC CHECKCATALOG uses an internal database snapshot to provide the transactional consistency that it needs to perform these checks. For more information, see [View the Size of the Sparse File of a Database Snapshot &#40;Transact-SQL&#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md) and the "DBCC Internal Database Snapshot Usage" section in [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md).
+If a snapshot cannot be created DBCC CHECKCATALOG acquires an exclusive database lock to obtain the required consistency. If any inconsistencies are detected, they cannot be repaired and the database must be restored from a backup.
   
 > [!NOTE]  
 >  Running DBCC CHECKCATALOG against **tempdb** does not perform any checks. This is because, for performance reasons, database snapshots are not available on **tempdb**. This means that the required transactional consistency cannot be obtained. Recycle the server to resolve any **tempdb** metadata issues.  
@@ -77,18 +76,18 @@ DBCC CHECKCATALOG
 > [!NOTE]  
 >  DBCC CHECKCATALOG does not check FILESTREAM data. FILESTREAM stores binary large objects (BLOBS) on the file system.  
   
- DBCC CHECKCATALOG is also run as part of [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md).  
+DBCC CHECKCATALOG is also run as part of [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md).
   
 ## Result Sets  
- If no database is specified, DBCC CHECKCATALOG returns:  
+If no database is specified, DBCC CHECKCATALOG returns:
   
-```  
+```sql
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
- If [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] is specified as the database name, DBCC CHECKCATALOG returns:  
+If [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] is specified as the database name, DBCC CHECKCATALOG returns:
   
-```  
+```sql
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
@@ -96,9 +95,9 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
  Requires membership in the **sysadmin** fixed server role, or the **db_owner** fixed database role.  
   
 ## Examples  
- The following example checks the catalog integrity in both the current database and in the `AdventureWorks` database.  
+The following example checks the catalog integrity in both the current database and in the `AdventureWorks` database.
   
-```tsql  
+```sql
 -- Check the current database.  
 DBCC CHECKCATALOG;  
 GO  
@@ -108,7 +107,6 @@ GO
 ```  
   
 ## See Also  
- [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)   
- [System Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
-  
+[DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
+[System Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)
   

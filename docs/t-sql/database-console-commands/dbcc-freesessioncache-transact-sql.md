@@ -1,7 +1,7 @@
 ---
 title: "DBCC FREESESSIONCACHE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "07/16/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -30,14 +30,12 @@ manager: "jhubbard"
 # DBCC FREESESSIONCACHE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Flushes the distributed query connection cache used by distributed queries against an instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+Flushes the distributed query connection cache used by distributed queries against an instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## Syntax  
-  
-```  
-  
+```sql
 DBCC FREESESSIONCACHE [ WITH NO_INFOMSGS ]  
 ```  
   
@@ -49,9 +47,9 @@ DBCC FREESESSIONCACHE [ WITH NO_INFOMSGS ]
  Requires membership in the **sysadmin** fixed server role.  
   
 ## Examples  
- The following example flushes the distributed query cache.  
+The following example flushes the distributed query cache.
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 DBCC FREESESSIONCACHE WITH NO_INFOMSGS;  
@@ -59,6 +57,6 @@ GO
 ```  
   
 ## See Also  
- [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
+[DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)
   
   

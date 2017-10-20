@@ -1,7 +1,7 @@
 ---
 title: "Create DML Triggers | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "09/01/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -68,7 +68,7 @@ manager: "jhubbard"
   
 7.  In the **Query Editor**, replace the comment `-- Insert statements for trigger here` with the following statement:  
   
-    ```tsql  
+    ```sql  
     IF @@ROWCOUNT = 1  
     BEGIN  
        UPDATE Purchasing.PurchaseOrderHeader  
@@ -106,7 +106,7 @@ manager: "jhubbard"
   
 3.  Copy and paste the following example into the query window and click **Execute**. This example creates the same stored DML trigger as above.  
   
-    ```  
+    ```sql  
     -- Trigger valid for multirow and single row inserts  
     -- and optimal for single row inserts.  
     USE AdventureWorks2012;  
@@ -135,6 +135,5 @@ manager: "jhubbard"
     END;  
     ```  
   
-##  <a name="PowerShellProcedure"></a> [Before You Begin](#Top)  
-  
+ 
   

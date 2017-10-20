@@ -11,6 +11,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "sql13.dts.designer.dataminingquerytask.f1"
+  - "sql13.dts.designer.dmquerytask.miningmodel.f1"
+  - "sql13.dts.designer.dmquerytask.query.f1"
+  - "sql13.dts.designer.dmquerytask.output.f1"
 helpviewer_keywords: 
   - "prediction queries [Integration Services]"
   - "Data Mining Query task [Integration Services]"
@@ -47,14 +50,6 @@ manager: "jhubbard"
   
  You can set properties through [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer or programmatically.  
   
- For more information about the properties that you can set in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click one of the following topics:  
-  
--   [Data Mining Query Task Editor &#40;Mining Model Tab&#41;](../../integration-services/control-flow/data-mining-query-task-editor-mining-model-tab.md)  
-  
--   [Data Mining Query Task Editor &#40;Query Tab&#41;](../../integration-services/control-flow/data-mining-query-task-editor-query-tab.md)  
-  
--   [Data Mining Query Task Editor &#40;Output Tab&#41;](../../integration-services/control-flow/data-mining-query-task-editor-output-tab.md)  
-  
 > [!NOTE]  
 >  The Data Mining Query Editor has no Expressions page. Instead, use the **Properties** window to access the tools for creating and managing property expressions for properties of the Data Mining Query task.  
   
@@ -67,4 +62,119 @@ manager: "jhubbard"
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.DMQueryTask.DMQueryTask>  
   
+## Data Mining Query Task Editor (Mining Model Tab)
+  Use the **Mining Model** tab of the **Data Mining Query Task** dialog box to specify the mining structure and mining model to use.  
+  
+ To learn about implementing data mining in packages, see [Data Mining Query Task](../../integration-services/control-flow/data-mining-query-task.md) and [Data Mining Solutions](../../analysis-services/data-mining/data-mining-solutions.md).  
+  
+### General Options  
+ **Name**  
+ Provide a unique name for the Data Mining Query task. This name is used as the label in the task icon.  
+  
+> [!NOTE]  
+>  Task names must be unique within a package.  
+  
+ **Description**  
+ Type a description of the Data Mining Query task.  
+  
+### Mining Model Tab Options  
+ **Connection**  
+ Select an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] connection manager in the list or click **New** to create a new connection manager.  
+  
+ **Related Topics:**  [Analysis Services Connection Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md)  
+  
+ **New**  
+ Create a new [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] connection manager.  
+  
+ **Related Topics:** [Add Analysis Services Connection Manager Dialog Box UI Reference](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
+  
+ **Mining structure**  
+ Select a mining structure in the list.  
+  
+ **Mining models**  
+ Select a mining model built on the selected mining structure.  
+
+## Data Mining Query Task Editor (Query Tab)
+  Use the **Query** tab of the **Data Mining Query Task** dialog box to create prediction queries based on a mining model. In this dialog box you can also bind parameters and result sets to variables.  
+  
+ To learn about implementing data mining in packages, see [Data Mining Query Task](../../integration-services/control-flow/data-mining-query-task.md) and [Data Mining Solutions](../../analysis-services/data-mining/data-mining-solutions.md).  
+  
+### General Options  
+ **Name**  
+ Provide a unique name for the Data Mining Query task. This name is used as the label in the task icon.  
+  
+> [!NOTE]  
+>  Task names must be unique within a package.  
+  
+ **Description**  
+ Type a description of the Data Mining Query task.  
+  
+### Build Query Tab Options  
+ **Data mining query**  
+ Type a data mining query.  
+  
+ **Related Topics:**  [Data Mining Extensions &#40;DMX&#41; Reference](../../dmx/data-mining-extensions-dmx-reference.md)  
+  
+ **Build New Query**  
+ Create the data mining query using a graphical tool.  
+  
+ **Related Topics:** [Data Mining Query](../../integration-services/control-flow/data-mining-query.md)  
+  
+### Parameter Mapping Tab Options  
+ **Parameter Name**  
+ Optionally, update the parameter name. Map the parameter to a variable by selecting a variable in the **Variable Name** list.  
+  
+ **Variable Name**  
+ Select a variable in the list to map it to the parameter.  
+  
+ **Add**  
+ Add to a parameter to the list.  
+  
+ **Remove**  
+ Select a parameter, and then click **Remove**.  
+  
+### Result Set Tab Options  
+ **Result Name**  
+ Optionally, update the result set name. Map the result to a variable by selecting a variable in the **Variable Name** list.  
+  
+ After you have added a result by clicking **Add**, provide a unique name for the result.  
+  
+ **Variable Name**  
+ Select a variable in the list to map it to the result set.  
+  
+ **Result Type**  
+ Indicate whether to return a single row or a full result set.  
+  
+ **Add**  
+ Add a result set to the list.  
+  
+ **Remove**  
+ Select a result, and then click **Remove**.  
+## Data Mining Query Task Editor (Output Tab)
+  Use the **Output** tab of the **Data Mining Query Task Editor** dialog box to specify the destination of the prediction query.  
+  
+ To learn about implementing data mining in packages, see [Data Mining Query Task](../../integration-services/control-flow/data-mining-query-task.md) and [Data Mining Solutions](../../analysis-services/data-mining/data-mining-solutions.md).  
+  
+### General Options  
+ **Name**  
+ Provide a unique name for the Data Mining Query task. This name is used as the label in the task icon.  
+  
+> [!NOTE]  
+>  Task names must be unique within a package.  
+  
+ **Description**  
+ Type a description of the Data Mining Query task.  
+  
+### Output Tab Options  
+ **Connection**  
+ Select a connection manager in the list or click **New** to create a new connection manager.  
+  
+ **New**  
+ Create a new connection manager. Only the ADO.NET and OLE DB connection manager types can be used.  
+  
+ **Output table**  
+ Specify the table to which the prediction query writes its results.  
+  
+ **Drop and re-create the output table**  
+ Indicate whether the prediction query should overwrite content in the destination table by dropping and then re-creating the table.  
   

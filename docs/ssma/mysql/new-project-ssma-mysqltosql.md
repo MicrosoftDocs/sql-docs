@@ -14,9 +14,9 @@ applies_to:
   - "SQL Server"
 ms.assetid: 7a3846ee-b221-47a5-ac8c-d08a962931af
 caps.latest.revision: 10
-author: "sabotta"
-ms.author: "carlasab"
-manager: "lonnyb"
+author: "Shamikg"
+ms.author: "Shamikg"
+manager: "jhubbard"
 ---
 # New Project (SSMA) (MySQLToSQL)
 Use the **New Project** dialog box to create a new SSMA project. To access the **New Project** dialog box, on the **File** menu, click **New Project**.  

@@ -53,7 +53,7 @@ In both cases, the Lookup transformation will utilize the OLE DB connection mana
   
     2.  Select **Use results of an SQL query**, and then type or copy the following SQL statement:  
   
-        ```  
+        ```sql
         select * from (select * from [dbo].[DimCurrency]) as refTable  
         where [refTable].[CurrencyAlternateKey] = 'ARS'  
         OR  

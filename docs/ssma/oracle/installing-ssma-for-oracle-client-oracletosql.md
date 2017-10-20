@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "Licensing SSMA"
 ms.assetid: d5d4903d-e296-4bbf-8780-63674c4d62d5
 caps.latest.revision: 19
-author: "sabotta"
-ms.author: "carlasab"
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "v-thobro"
 ---
 # Installing SSMA for Oracle Client (OracleToSQL)

@@ -2,7 +2,7 @@
 title: "CREATE USER (Transact-SQL) | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "06/15/2017"
+ms.date: "07/28/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -172,11 +172,15 @@ CREATE USER user_name
  '*Azure_Active_Directory_principal*'  
  **Applies to**: [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)], [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)].  
   
- Specifies the Azure Active Directory principal for which the database user is being created. The *Azure_Active_Directory_principal* can be an Azure Active Directory user, or an Azure Active Directory group. (Azure Active Directory users cannot have Windows Authentication logins in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]; only database users.) The connection string must specify the contained database as the initial catalog. When creating a user from an Azure Active Directory principal, use one of the following formats.  
-  
+ Specifies the Azure Active Directory principal for which the database user is being created. The *Azure_Active_Directory_principal* can be an Azure Active Directory user, or an Azure Active Directory group. (Azure Active Directory users cannot have Windows Authentication logins in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]; only database users.) The connection string must specify the contained database as the initial catalog. 
+
+ For users, you use the full alias of their domain principal.   
+ 
 -   `CREATE USER [bob@contoso.com] FROM EXTERNAL PROVIDER;`  
   
--   `CREATE USER [alice@fabrikam.onmicrosoft.com] FROM EXTERNAL PROVIDER;`  
+-   `CREATE USER [alice@fabrikam.onmicrosoft.com] FROM EXTERNAL PROVIDER;`
+
+ For security groups, you use the *Display Name* of the security group. For the *Nurses* security group, you would use:  
   
 -   `CREATE USER [Nurses] FROM EXTERNAL PROVIDER;`  
   

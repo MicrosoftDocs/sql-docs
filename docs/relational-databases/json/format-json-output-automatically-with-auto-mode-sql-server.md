@@ -2,7 +2,7 @@
 title: "Format JSON Output Automatically with AUTO Mode (SQL Server) | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "06/02/2016"
+ms.date: "07/17/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -16,27 +16,29 @@ ms.assetid: 178a2a4e-e0f6-49b9-9895-396956d3c7d9
 caps.latest.revision: 17
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ---
 # Format JSON Output Automatically with AUTO Mode (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 To format the output of the **FOR JSON** clause automatically based on the structure of the **SELECT** statement, specify the **AUTO** option.  
   
-With the **AUTO** option, the format of the JSON output is automatically determined based on the order of columns in the SELECT list and their source tables. You can't change this format.
+When you specify the **AUTO** option, the format of the JSON output is automatically determined based on the order of columns in the SELECT list and their source tables. You can't change this format.
  
- The alternative is to use the **PATH** option to maintain control over the output.
- -   For more info about the **PATH** option, see [Format Nested JSON Output with PATH Mode](../../relational-databases/json/format-nested-json-output-with-path-mode-sql-server.md).
- -   For an overview of both options, see [Format Query Results as JSON with FOR JSON](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md).
+The alternative is to use the **PATH** option to maintain control over the output.
+-   For more info about the **PATH** option, see [Format Nested JSON Output with PATH Mode](../../relational-databases/json/format-nested-json-output-with-path-mode-sql-server.md).
+-   For an overview of both options, see [Format Query Results as JSON with FOR JSON](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md).
+
+A query that uses the **FOR JSON AUTO** option must have a **FROM** clause.  
   
- A query that uses the **FOR JSON AUTO** option must have a **FROM** clause.  
+Here are some examples of the **FOR JSON** clause with the **AUTO** option.  
   
- Here are some examples of the **FOR JSON** clause with the **AUTO** option.  
+## Examples
+
+### Example 1
+ **Query**  
   
-## Examples  
- **Query 1**  
-  
-The results of the FOR JSON AUTO clause are similar to the results of FOR JSON PATH when only one table is used in the query. In this case, FOR JSON AUTO doesn't create nested objects. The only difference is that FOR JSON AUTO outputs dot-separated aliases (for example, `Info.MiddleName` in the following example) as keys with dots, not as nested objects.  
+When a query references only one table, the results of the FOR JSON AUTO clause are similar to the results of FOR JSON PATH . In this case, FOR JSON AUTO doesn't create nested objects. The only difference is that FOR JSON AUTO outputs dot-separated aliases (for example, `Info.MiddleName` in the following example) as keys with dots, not as nested objects.  
   
 ```sql  
 SELECT TOP 5   
@@ -48,7 +50,7 @@ SELECT TOP 5
    FOR JSON AUTO  
 ```  
   
- **Result 1**  
+ **Result**  
   
 ```json  
 [{
@@ -77,10 +79,12 @@ SELECT TOP 5
 	"Info.MiddleName": "A"
 }]
 ```  
+
+### Example 2
+
+**Query**  
   
- **Query 2**  
-  
- When you join tables, columns in the first table are generated as properties of the root object. Columns in the second table are generated as properties of a nested object. The table name or alias of the second table (for example, `D` in the following example) is used as the name of the nested array.  
+When you join tables, columns in the first table are generated as properties of the root object. Columns in the second table are generated as properties of a nested object. The table name or alias of the second table (for example, `D` in the following example) is used as the name of the nested array.  
   
 ```sql  
 SELECT TOP 2 SalesOrderNumber,  
@@ -93,7 +97,7 @@ FROM Sales.SalesOrderHeader H
 FOR JSON AUTO   
 ```  
   
- **Result 2**  
+**Result**  
   
 ```json  
 [{
@@ -113,9 +117,11 @@ FOR JSON AUTO
 	}]
 }]
 ```  
+
+### Example 3
  
- **Query 3**  
- Instead of using FOR JSON AUTO, you can nest a FOR JSON PATH subquery in the SELECT statement, as shown in the following example. This example outputs the same result as the preceding example.  
+**Query**  
+Instead of using FOR JSON AUTO, you can nest a FOR JSON PATH subquery in the SELECT statement, as shown in the following example. This example outputs the same result as the preceding example.  
   
 ```sql  
 SELECT TOP 2  
@@ -129,7 +135,7 @@ FROM Sales.SalesOrderHeader AS H
 FOR JSON PATH  
 ```  
   
- **Result 3**  
+**Result**  
   
 ```json  
 [{

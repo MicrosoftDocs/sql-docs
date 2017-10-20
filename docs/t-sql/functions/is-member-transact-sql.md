@@ -1,7 +1,7 @@
 ---
 title: "IS_MEMBER (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/05/2015"
+ms.date: "07/29/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -47,9 +47,7 @@ IS_MEMBER ( { 'group' | 'role' } )
   
 ## Arguments  
  **'** *group* **'**  
- ||  
-|-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  Is the name of the Windows group that is being checked; must be in the format *Domain*\\*Group*. *group* is **sysname**.  
   

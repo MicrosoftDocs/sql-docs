@@ -1,7 +1,7 @@
 ---
 title: "GRANT Server Principal Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/10/2016"
+ms.date: "08/10/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -63,7 +63,7 @@ GRANT permission [ ,...n ] }
  SERVER ROLE **::** *server_role*  
  Specifies the user-defined server role on which the permission is being granted. The scope qualifier (**::**) is required.  
   
- TO <server_principal>  
+ TO \<server_principal> 
  Specifies the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login or server role to which the permission is being granted.  
   
  *SQL_Server_login*  
@@ -146,3 +146,4 @@ GO
  [Security Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)  
   
   
+

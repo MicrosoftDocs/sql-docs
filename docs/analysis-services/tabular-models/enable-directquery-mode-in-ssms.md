@@ -2,7 +2,7 @@
 title: "Enable DirectQuery mode in SSMS | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
+ms.date: "07/06/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -17,6 +17,9 @@ ms.author: "owend"
 manager: "erikre"
 ---
 # Enable DirectQuery mode in SSMS
+
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
   You can  change the data access properties of a tabular model that has already been deployed, enabling DirectQuery mode, where queries execute against a backend relational data source rather than cached data residing in-memory.  
   
  In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], steps for DirectQuery configuration differ based on the model's compatibility level. Below you'll find steps that work for all compatibility levels.  
@@ -123,7 +126,7 @@ manager: "erikre"
   
 3.  In the trace, you should see evidence of query execution on the relational database.  
   
-## See Also  
+## See also  
  [Compatibility Level for Tabular models in Analysis Services](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)   
  [Data Sources Supported &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)   
  [Extended Events](../../relational-databases/extended-events/extended-events.md)   

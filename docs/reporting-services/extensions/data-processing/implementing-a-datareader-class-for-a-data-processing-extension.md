@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "read-only data"
 ms.assetid: 23e286e7-6074-4fbe-be29-203420d6c3d0
 caps.latest.revision: 35
-author: "sabotta"
-ms.author: "carlasab"
+author: "guyinacube"
+ms.author: "asaxton"
 manager: "erikre"
 ---
 # Implementing a DataReader Class for a Data Processing Extension

@@ -1,6 +1,3 @@
-# Subcategories of Articles
-## [Data flow types](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-destination-component.md)
-
 # [Developing a Custom Data Flow Component](developing-a-custom-data-flow-component.md)
 # [Creating a Custom Data Flow Component](creating-a-custom-data-flow-component.md)
 # [Design-time Methods of a Data Flow Component](design-time-methods-of-a-data-flow-component.md)
@@ -14,3 +11,6 @@
 # [Using Error Outputs in a Data Flow Component](using-error-outputs-in-a-data-flow-component.md)
 # [Developing a User Interface for a Data Flow Component](developing-a-user-interface-for-a-data-flow-component.md)
 # [Upgrading the Version of a Data Flow Component](upgrading-the-version-of-a-data-flow-component.md)
+
+# Subcategories of Articles
+## [Data flow types](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-destination-component.md)

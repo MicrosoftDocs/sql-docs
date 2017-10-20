@@ -35,7 +35,7 @@ manager: "jhubbard"
   
 -   Minimum hard disk space: 2GB  
   
--   TCP/IP connectivity must be enabled. (See [Enable or Disable a Server Network Protocol](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md).)  
+-   TCP/IP must be enabled for Polybase to function correctly. TCP/IP is enabled by default on all editions of SQL Server except for the Developer and Express SQL Server editions. For Polybase to function correctly on the Developer and Express editions you must enable TCP/IP connectivity (See [Enable or Disable a Server Network Protocol](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md).)
   
  **Notes**  
   
@@ -60,7 +60,7 @@ Once you have installed PolyBase as either stand alone or in a scaleout group, y
   
 4.  On the Server Configuration Page, configure the **SQL Server PolyBase Engine Service** and SQL Server PolyBase Data Movement Service to run under the same account.  
   
-    > **IMPORTANT!!** In a PolyBase scale-out group, PolyBase engine and PolyBase data movement service on all nodes must run under the same domain account.  
+    > **IMPORTANT!** In a PolyBase scale-out group, PolyBase engine and PolyBase data movement service on all nodes must run under the same domain account.  
     > See Scaling out PolyBase.  
   
 5.  On the **PolyBase Configuration Page**, select one of the two options. See [PolyBase scale-out groups](../../relational-databases/polybase/polybase-scale-out-groups.md) for more information.  

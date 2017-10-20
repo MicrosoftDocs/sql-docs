@@ -35,8 +35,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 USE { database_name }   
 [;]  
 ```  
@@ -61,13 +59,6 @@ USE { database_name }
 ```  
 USE AdventureWorks2012;  
 GO  
-```  
-  
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- The following example changes the database context to the `AccountingDB` database.  
-  
-```  
-USE AccountingDB;  
 ```  
   
 ## See Also  

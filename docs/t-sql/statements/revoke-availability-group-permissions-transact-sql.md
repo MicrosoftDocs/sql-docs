@@ -1,7 +1,7 @@
 ---
 title: "REVOKE Availability Group Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/10/2016"
+ms.date: "08/10/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -53,7 +53,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
  ON AVAILABILITY GROUP **::***availability_group_name*  
  Specifies the availability group on which the permission is being revoked. The scope qualifier (**::**) is required.  
   
- { FROM | TO } <server_principal>  
+ { FROM | TO } \<server_principal> 
  Specifies the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login to which the permission is being revoked.  
   
  *SQL_Server_login*  
@@ -145,3 +145,4 @@ GO
  [Principals &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
   
   
+

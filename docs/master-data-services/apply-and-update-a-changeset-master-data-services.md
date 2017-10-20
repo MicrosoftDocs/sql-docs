@@ -12,9 +12,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 3a6a3cf2-1e77-43d3-a64a-855ae51258e7
 caps.latest.revision: 10
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
+author: "smartysanthosh"
+ms.author: "nagavo"
+manager: "craigg"
 ---
 # Apply and Update a Changeset (Master Data Services)
   A changeset is a collection of the pending changes on the master data. You can apply the changeset locally to view, add, update and delete the pending changes in the changeset.  

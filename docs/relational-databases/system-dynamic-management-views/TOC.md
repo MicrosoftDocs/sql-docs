@@ -152,13 +152,6 @@
 ## [sys.dm_io_virtual_file_stats](sys-dm-io-virtual-file-stats-transact-sql.md)  
 ## [sys.dm_io_cluster_valid_path_names](sys-dm-io-cluster-valid-path-names-transact-sql.md)
 
-# [Linux Process](linux-process-dynamic-management-views-transact-sql.md)  
-## [sys.dm_linux_proc_all_stat](sys-dm-linux-proc-all-stat-transact-sql.md)  
-## [sys.dm_linux_proc_cpuinfo](sys-dm-linux-proc-cpuinfo-transact-sql.md)  
-## [sys.dm_linux_proc_meminfo](sys-dm-linux-proc-meminfo-transact-sql.md)  
-## [sys.dm_linux_proc_sql_maps](sys-dm-linux-proc-sql-maps-transact-sql.md)  
-## [sys.dm_linux_proc_sql_threads](sys-dm-linux-proc-sql-threads-transact-sql.md)
-
 # [Memory-Optimized Table](memory-optimized-table-dynamic-management-views-transact-sql.md)  
 ## [sys.dm_db_xtp_checkpoint_stats](sys-dm-db-xtp-checkpoint-stats-transact-sql.md)  
 ## [sys.dm_db_xtp_checkpoint_files](sys-dm-db-xtp-checkpoint-files-transact-sql.md)  

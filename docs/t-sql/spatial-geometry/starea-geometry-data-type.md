@@ -23,7 +23,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # STArea (geometry Data Type)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   Returns the total surface area of a **geometry** instance.  
   
@@ -56,11 +56,11 @@ SELECT @g.STArea();
 ### B. Computing the area of a CurvePolygon instance  
  The following example computes the area of a `CurvePolygon` instance.  
   
- `DECLARE @g geometry;`  
-  
- `SET @g = geometry::Parse('CURVEPOLYGON(CIRCULARSTRING(0 2, 2 0, 4 2, 4 2, 0 2))');`  
-  
- `SELECT @g.STArea() AS Area;`  
+```
+ DECLARE @g geometry;  
+ SET @g = geometry::Parse('CURVEPOLYGON(CIRCULARSTRING(0 2, 2 0, 4 2, 4 2, 0 2))');  
+ SELECT @g.STArea() AS Area;
+ ```  
   
 ## See Also  
  [OGC Methods on Geometry Instances](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  

@@ -35,8 +35,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 expression + expression  
 ```  
   
@@ -98,11 +96,11 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `------------------------------------------------`  
-  
- `The order is due on 04/23/2007`  
-  
- `(1 row(s) affected)`  
+ ```
+ ------------------------------------------------  
+ The order is due on 04/23/2007  
+ (1 row(s) affected)
+ ```  
   
 ### C. Using multiple string concatenation  
  The following example concatenates multiple strings to form one long string to display the last name and the first initial of the vice presidents at [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)]. A comma is added after the last name and a period after the first initial.  
@@ -121,17 +119,15 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Name               Title`  
-  
- `-------------      ---------------`  
-  
- `Duffy, T.          Vice President of Engineering`  
-  
- `Hamilton, J.       Vice President of Production`  
-  
- `Welcker, B.        Vice President of Sales`  
-  
- `(3 row(s) affected)`  
+ ```
+ Name               Title  
+ -------------      ---------------`  
+ Duffy, T.          Vice President of Engineering  
+ Hamilton, J.       Vice President of Production  
+ Welcker, B.        Vice President of Sales  
+
+ (3 row(s) affected)
+ ```  
  
 ### D. Using large strings in concatenation
 The following example concatenates multiple strings to form one long string and then tries to compute the length of the final string. The final length of resultset is 16000, because expression evaluation starts from left that is, @x + @z + @y => (@x + @z) + @y. In this case the result of (@x + @z) is truncated at 8000 bytes and then @y is added to the resultset, which makes the final string length 16000. Since @y is a large value type string, truncation does not occur.
@@ -147,27 +143,16 @@ GO
 ```
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `y      `  
+ ```
+ y        
+ -------  
+ 16000  
   
- `-------`  
-  
- `16000`  
-  
-  `(1 row(s) affected)`  
+ (1 row(s) affected)
+ ```  
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### E. Using string concatenation  
- The following example creates a single column under the column heading `Name` from multiple-character columns, with the last name of the contact followed by a comma, a single space, and then the first name of the contact. The result set is in ascending, alphabetical order by the last name, and then by the first name.  
-  
-```  
--- Uses AdventureWorks  
-  
-SELECT (LastName + ', ' + FirstName) AS Name  
-FROM DimEmployee  
-ORDER BY LastName ASC, FirstName ASC;  
-```  
-  
-### F. Using multiple string concatenation  
+### E. Using multiple string concatenation  
  The following example concatenates multiple strings to form one long string to display the last name and the first initial of the vice presidents within a sample database. A comma is added after the last name and a period after the first initial.  
   
 ```  

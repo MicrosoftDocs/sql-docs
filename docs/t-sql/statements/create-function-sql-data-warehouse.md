@@ -1,7 +1,7 @@
 ---
 title: "CREATE FUNCTION (SQL Data Warehouse) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "08/10/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -37,8 +37,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
 --Transact-SQL Scalar Function Syntax  
 CREATE FUNCTION [ schema_name. ] function_name   
 ( [ { @parameter_name [ AS ] parameter_data_type   
@@ -102,7 +100,7 @@ RETURNS return_data_type
  *scalar_expression*  
  Specifies the scalar value that the scalar function returns.  
   
- **<function_option>::=**  
+ **\<function_option>::=** 
   
  Specifies that the function will have one or more of the following options.  
   
@@ -195,4 +193,5 @@ SELECT dbo.ConvertInput(15) AS 'ConvertedValue';
  [DROP FUNCTION (SQL Server PDW)](http://msdn.microsoft.com/en-us/1792a90d-0d06-4852-9dec-6de1b9cd229e)  
   
   
+
 

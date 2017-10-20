@@ -27,8 +27,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 DROP EXTERNAL TABLE [ database_name . [schema_name ] . | schema_name . ] table_name   
 [;]  
 ```  
@@ -63,30 +61,6 @@ DROP EXTERNAL TABLE ProductVendor1;
 ```  
   
 ### C. Dropping a table from another database  
- The following example drops the `SalesPerson` table in the `EasternDivision` database.  
-  
-```  
-DROP EXTERNAL TABLE EasternDivision.dbo.SalesPerson;  
-```  
-  
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### D. Using basic syntax  
-  
-```  
-DROP EXTERNAL TABLE SalesPerson;  
-DROP EXTERNAL TABLE dbo.SalesPerson;  
-DROP EXTERNAL TABLE EasternDivision.dbo.SalesPerson;  
-```  
-  
-### E. Dropping an external table from the current database  
- The following example removes the `ProductVendor1` table, its data, indexes, and any dependent views from the current database.  
-  
-```  
-DROP EXTERNAL TABLE ProductVendor1;  
-```  
-  
-### F. Dropping a table from another database  
  The following example drops the `SalesPerson` table in the `EasternDivision` database.  
   
 ```  

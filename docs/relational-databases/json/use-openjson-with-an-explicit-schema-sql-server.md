@@ -16,7 +16,7 @@ ms.assetid: 9c1c3bfb-e1ad-4659-b94f-722b0848d5a2
 caps.latest.revision: 13
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ---
 # Use OPENJSON with an Explicit Schema (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

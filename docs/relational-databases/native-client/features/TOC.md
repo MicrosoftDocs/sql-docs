@@ -1,3 +1,5 @@
+# [SQL Server Native Client Features](sql-server-native-client-features.md)
+
 # [Accessing Diagnostic Information in the Extended Events Log](accessing-diagnostic-information-in-the-extended-events-log.md)
 # [Changing Passwords Programmatically](changing-passwords-programmatically.md)
 # [Date and Time Improvements](date-and-time-improvements.md)
@@ -9,7 +11,6 @@
 # [Performing Bulk Copy Operations](performing-bulk-copy-operations.md)
 # [Service Principal Name (SPN) Support in Client Connections](service-principal-name-spn-support-in-client-connections.md)
 # [Sparse Columns Support in SQL Server Native Client](sparse-columns-support-in-sql-server-native-client.md)
-# [SQL Server Native Client Features](sql-server-native-client-features.md)
 # [SQL Server Native Client Support for High Availability, Disaster Recovery](sql-server-native-client-support-for-high-availability-disaster-recovery.md)
 # [SQL Server Native Client Support for LocalDB](sql-server-native-client-support-for-localdb.md)
 # [Table-Valued Parameters (SQL Server Native Client)](table-valued-parameters-sql-server-native-client.md)

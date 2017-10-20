@@ -12,9 +12,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 010318a0-6807-47c3-8ecc-bb7cb60513f0
 caps.latest.revision: 7
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
+author: "MightyPen"
+ms.author: "genemi"
+manager: "craigg"
 ---
 # Altering Natively Compiled T-SQL Modules
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

@@ -43,8 +43,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 SET DATEFORMAT { format | @format_var }   
 ```  
   
@@ -85,16 +83,6 @@ GO
 -- Result: Msg 241: Conversion failed when converting date and/or time -- from character string.  
   
 GO  
-```  
-  
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-```  
--- Set date format to month/day/year.  
-SET DATEFORMAT mdy;  
-DECLARE @datevar datetime2 = '12/31/2012 09:01:01.1234567';  
-SELECT @datevar;  
-  
 ```  
   
 ## See Also  

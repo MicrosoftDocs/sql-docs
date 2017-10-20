@@ -1,7 +1,7 @@
 ---
 title: "ALTER DATABASE Database Mirroring (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "08/17/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -29,7 +29,7 @@ manager: "jhubbard"
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] instead.  
   
- Controls database mirroring for a database. Values specified with the database mirroring options apply to both copies of the database and to the database mirroring session as a whole. Only one <database_mirroring_option> is permitted per ALTER DATABASE statement.  
+ Controls database mirroring for a database. Values specified with the database mirroring options apply to both copies of the database and to the database mirroring session as a whole. Only one \<database_mirroring_option> is permitted per ALTER DATABASE statement.  
   
 > [!NOTE]  
 >  We recommend that you configure database mirroring during off-peak hours because configuration can affect performance.  
@@ -72,7 +72,7 @@ SET { <partner_option> | <witness_option> }
  *database_name*  
  Is the name of the database to be modified.  
   
- PARTNER <partner_option>  
+ PARTNER \<partner_option>  
  Controls the database properties that define the failover partners of a database mirroring session and their behavior. Some SET PARTNER options can be set on either partner; others are restricted to the principal server or to the mirror server. For more information, see the individual PARTNER options that follow. A SET PARTNER clause affects both copies of the database, regardless of the partner on which it is specified.  
   
  To execute a SET PARTNER statement, the STATE of the endpoints of both partners must be set to STARTED. Note, also, that the ROLE of the database mirroring endpoint of each partner server instance must be set to either PARTNER or ALL. For information about how to specify an endpoint, see [Create a Database Mirroring Endpoint for Windows Authentication &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md). To learn the role and state of the database mirroring endpoint of a server instance, on that instance, use the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement:  
@@ -81,10 +81,10 @@ SET { <partner_option> | <witness_option> }
 SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints  
 ```  
   
- **<partner_option> ::=**  
+ **\<partner_option> ::=**  
   
 > [!NOTE]  
->  Only one <partner_option> is permitted per SET PARTNER clause.  
+>  Only one \<partner_option> is permitted per SET PARTNER clause.  
   
  **'** *partner_server* **'**  
  Specifies the server network address of an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to act as a failover partner in a new database mirroring session. Each session requires two partners: one starts as the principal server, and the other starts as the mirror server. We recommend that these partners reside on different computers.  
@@ -171,7 +171,7 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
   
  For more information, see [Possible Failures During Database Mirroring](../../database-engine/database-mirroring/possible-failures-during-database-mirroring.md).  
   
- WITNESS <witness_option>  
+ WITNESS \<witness_option>  
  Controls the database properties that define a database mirroring witness. A SET WITNESS clause affects both copies of the database, but you can specify SET WITNESS only on the principal server. If a witness is set for a session, quorum is required to serve the database, regardless of the SAFETY setting; for more information, see [Quorum: How a Witness Affects Database Availability &#40;Database Mirroring&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
  We recommend that the witness and failover partners reside on separate computers. For information about the witness, see [Database Mirroring Witness](../../database-engine/database-mirroring/database-mirroring-witness.md).  
@@ -187,10 +187,10 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
 > [!NOTE]  
 >  Database properties cannot be set on the witness.  
   
- **<witness_option> ::=**  
+ **\<witness_option> ::=**  
   
 > [!NOTE]  
->  Only one <witness_option> is permitted per SET WITNESS clause.  
+>  Only one \<witness_option> is permitted per SET WITNESS clause.  
   
  **'** *witness_server* **'**  
  Specifies an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to act as the witness server for a database mirroring session. You can specify SET WITNESS statements only on the principal server.  

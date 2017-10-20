@@ -1,7 +1,7 @@
 ---
 title: "Step 2: Create a SQL database for pyodbc Python development | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "08/08/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -16,6 +16,5 @@ ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Step 2: Create a SQL database for pyodbc Python development
-[!INCLUDE[Driver_Python_Download](../../../includes/driver_python_download.md)]
 
 [!INCLUDE[CreateDatabase](../../../includes/createdatabase.md)]

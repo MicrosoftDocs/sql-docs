@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_db_log_space_usage (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/28/2016"
+ms.date: "06/29/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -36,7 +36,7 @@ manager: "jhubbard"
 |total_log_size_in_bytes |**bigint** |The size of the log  |
 |used_log_space_in_bytes |**bigint** |The occupied size of the log  |     
 |used_log_space_in_percent |**real** |The occupied size of the log as a percent of the total log size |
-|log_space_in_bytes_since_last_backup |**bigint** |The amount of space used since the last log backup |
+|log_space_in_bytes_since_last_backup |**bigint** |The amount of space used since the last log backup <br />**Applies to:** [!INCLUDE[sssql14-md](../../includes/sssql14-md.md)] through [!INCLUDE[sscurrent-md](../../includes/sscurrent-md.md)],  [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|
     
   
 ## Permissions  
@@ -46,14 +46,14 @@ manager: "jhubbard"
   
 ## Examples  
   
-### A. Determing the Amount of Free Log Space in tempdb   
+### A. Determine the Amount of Free Log Space in tempdb   
 The following query returns the total free log space in megabytes (MB) available in tempdb.
 
 ```tsql
 USE tempdb;  
 GO  
 
-SELECT (total_log_size_in_bytes - used_log_space_in_bytes*1.0/1024/1024) AS [free log space in MB]  
+SELECT (total_log_size_in_bytes - used_log_space_in_bytes)*1.0/1024/1024 AS [free log space in MB]  
 FROM sys.dm_db_log_space_usage;  
 ```
   
@@ -63,8 +63,7 @@ FROM sys.dm_db_log_space_usage;
  [sys.dm_db_file_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md)    
  [sys.dm_db_task_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-task-space-usage-transact-sql.md)   
  [sys.dm_db_session_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md)  
-  
-  
+[sys.dm_db_log_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md) 
 
 
 

@@ -1,3 +1,5 @@
+# [Using Updategrams to Modify Data in SQLXML 4.0](using-updategrams-to-modify-data-in-sqlxml-4-0.md)
+
 # [Deleting Data Using XML Updategrams (SQLXML 4.0)](deleting-data-using-xml-updategrams-sqlxml-4-0.md)
 # [Executing an Updategram by Using ADO (SQLXML 4.0)](executing-an-updategram-by-using-ado-sqlxml-4-0.md)
 # [Executing an Updategram by Using OLE DB (SQLXML 4.0)](executing-an-updategram-by-using-ole-db-sqlxml-4-0.md)
@@ -10,4 +12,3 @@
 # [Specifying an Annotated Mapping Schema in an Updategram (SQLXML 4.0)](specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)
 # [Updating Data Using XML Updategrams (SQLXML 4.0)](updating-data-using-xml-updategrams-sqlxml-4-0.md)
 # [Using an Updategram in a Sample ASP Application (SQLXML 4.0)](using-an-updategram-in-a-sample-asp-application-sqlxml-4-0.md)
-# [Using Updategrams to Modify Data in SQLXML 4.0](using-updategrams-to-modify-data-in-sqlxml-4-0.md)

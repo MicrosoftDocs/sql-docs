@@ -4,9 +4,9 @@ ms.custom:
   - "MSDN content"
   - "MSDN - SQL DB"
 ms.date: "03/03/2017"
-ms.prod: "sql-non-specified"
+ms.prod: 
 ms.reviewer: ""
-ms.service: "sql-database"
+ms.service: "sql-warehouse"
 ms.suite: ""
 ms.technology: 
   - "database-engine"
@@ -30,8 +30,6 @@ Modifies the name, maximum size, or service objective for a database.
 ## Syntax  
   
 ```  
--- Syntax for Azure SQL Data Warehouse  
-  
 ALTER DATABASE database_name  
 
   MODIFY NAME = new_database_name  

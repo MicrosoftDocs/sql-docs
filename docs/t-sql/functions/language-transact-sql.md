@@ -1,7 +1,7 @@
 ---
 title: "@@LANGUAGE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/13/2017"
+ms.date: "09/18/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -25,7 +25,7 @@ author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
 ---
-# @@LANGUAGE (Transact-SQL)
+# &#x40;&#x40;LANGUAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Returns the name of the language currently being used.  
@@ -35,8 +35,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 @@LANGUAGE  
 ```  
   
@@ -47,21 +45,6 @@ manager: "jhubbard"
  To view information about language settings, including valid official language names, run **sp_helplanguage** without a parameter specified.  
   
 ## Examples  
- The following example returns the language for the current session.  
-  
-```  
-SELECT @@LANGUAGE AS 'Language Name';  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
-```  
-Language Name                   
-------------------------------  
-us_english                      
-```  
-  
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  The following example returns the language for the current session.  
   
 ```  

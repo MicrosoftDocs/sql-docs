@@ -34,8 +34,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 TYPEPROPERTY (type , property)  
 ```  
   
@@ -73,15 +71,6 @@ FROM sys.types;
 ```  
   
 ### B. Returning the precision of the tinyint data type  
- The following example returns the precision or number of digits for the `tinyint` data type.  
-  
-```  
-SELECT TYPEPROPERTY( 'tinyint', 'PRECISION');  
-```  
-  
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### C: Returning the precision of the tinyint data type  
  The following example returns the precision or number of digits for the `tinyint` data type.  
   
 ```  

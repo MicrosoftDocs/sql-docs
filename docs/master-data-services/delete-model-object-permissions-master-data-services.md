@@ -15,9 +15,9 @@ helpviewer_keywords:
   - "models [Master Data Services], deleting object permissions"
 ms.assetid: 859c5952-f600-4940-8064-1afd13f7f6dc
 caps.latest.revision: 7
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
+author: "smartysanthosh"
+ms.author: "nagavo"
+manager: "craigg"
 ---
 # Delete Model Object Permissions (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], delete model object permissions to remove any assignments that have been made.  

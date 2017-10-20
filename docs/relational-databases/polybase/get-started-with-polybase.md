@@ -2,7 +2,7 @@
 title: "Get started with PolyBase | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "5/30/2017"
+ms.date: "08/15/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -19,7 +19,6 @@ helpviewer_keywords:
   - "Azure blob storage export"
   - "Hadoop import, PolyBase getting started"
   - "Hadoop export, Polybase getting started"
-ms.assetid: c71ddc50-b4c7-416c-9789-264671bd9ecb
 caps.latest.revision: 78
 author: "barbkess"
 ms.author: "barbkess"
@@ -47,10 +46,11 @@ manager: "jhubbard"
   
 -   Oracle Java SE RunTime Environment (JRE) version 7.51 or higher (64-bit). (Either [JRE](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) or [Server JRE](http://www.oracle.com/technetwork/java/javase/downloads/server-jre8-downloads-2133154.html) will work). Go to [Java SE downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html). The installer will fail if JRE is not present.   
   
--   Minimum memory: 4GB  
+-   Minimum memory: 4 GB  
   
--   Minimum hard disk space: 2GB    
--   TCP/IP connectivity must be enabled. (See [Enable or Disable a Server Network Protocol](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md).)  
+-   Minimum hard disk space: 2 GB    
+
+-   TCP/IP connectivity must be enabled. (See [Enable or Disable a Server Network Protocol](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md).) SQL Server Developer and Express editions have TCP/IP disabled by default. PolyBase can be installed but will not fully start until TCP/IP is enabled. You must manually enable TCP/IP to have PolyBase functionality. 
   
  
  An external data source, one of the following:  
@@ -83,10 +83,13 @@ SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;
   
 -   Cloudera CDH 4.3 on Linux  
   
--   Cloudera CDH 5.1 – 5.5, 5.9 - 5.11 on Linux  
+-   Cloudera CDH 5.1 – 5.5, 5.9 - 5.12 on Linux  
   
 -   Azure Blob Storage  
-  
+ 
+Hadoop follows the "Major.Minor.Version" pattern for its new releases. All versions within a supported Major and Minor release are supported.
+ 
+
 >  [!NOTE]
 > Azure Data Lake Store connectivity is only supported in Azure SQL Data Warehouse.
   
@@ -234,10 +237,15 @@ CREATE EXTERNAL DATA SOURCE AzureStorage with (
 --3:  Create an external file format.  
 -- FORMAT TYPE: Type of format in Hadoop (DELIMITEDTEXT,  RCFILE, ORC, PARQUET).  
   
-CREATE EXTERNAL FILE FORMAT TextFileFormat WITH (  
-        FORMAT_TYPE = DELIMITEDTEXT,   
-        FORMAT_OPTIONS (FIELD_TERMINATOR ='|',   
-                USE_TYPE_DEFAULT = TRUE)  
+CREATE EXTERNAL FILE FORMAT TextFileFormat
+WITH (  
+       FORMAT_TYPE = DELIMITEDTEXT,   
+       FORMAT_OPTIONS (
+         FIELD_TERMINATOR ='|',   
+         USE_TYPE_DEFAULT = TRUE
+       )
+);
+         
   
 --4: Create an external table.  
 -- The external table points to data stored in Azure storage.  
@@ -348,7 +356,7 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
  After upgrading from SQL Server 2016 RC1 to RC2 or RC3, queries may fail. For details and a remedy, see [SQL Server 2016 Release Notes](../../sql-server/sql-server-2016-release-notes.md) and search for "PolyBase."  
   
 ## Next steps  
- To understand the scale-out feature, see [PolyBase scale-out groups](../../relational-databases/polybase/polybase-scale-out-groups.md).  To monitor PolyBase, see [PolyBase troubleshooting](../../relational-databases/polybase/polybase-troubleshooting.md). To trouble shoot PolyBase perfomance, see [PolyBase troubleshooting with dynamic management views](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80).  
+ To understand the scale-out feature, see [PolyBase scale-out groups](../../relational-databases/polybase/polybase-scale-out-groups.md).  To monitor PolyBase, see [PolyBase troubleshooting](../../relational-databases/polybase/polybase-troubleshooting.md). To troubleshoot PolyBase performance, see [PolyBase troubleshooting with dynamic management views](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80).  
   
 ## See Also  
  [PolyBase Guide](../../relational-databases/polybase/polybase-guide.md)   

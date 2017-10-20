@@ -14,9 +14,9 @@ helpviewer_keywords:
   - "permissions [Master Data Services], assigning model object permissions"
 ms.assetid: 4b80148d-2318-415c-9479-28c240e48bcd
 caps.latest.revision: 7
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
+author: "smartysanthosh"
+ms.author: "nagavo"
+manager: "craigg"
 ---
 # Assign Model Object Permissions (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], assign permissions to model objects when you need to give a user or group access to data in the **Explorer** functional area of [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], or when you need to make a user or group an administrator.  

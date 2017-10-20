@@ -1,3 +1,3 @@
 --- 
-redirect_url: /sql/integration-services/install-windows/upgrade-integration-services 
+redirect_url: /sql/integration-services/install-windows/install-integration-services 
 --- 

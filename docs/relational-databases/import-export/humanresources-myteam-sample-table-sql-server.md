@@ -34,11 +34,11 @@ manager: "jhubbard"
 |**Title**|**nvarchar(50)**|Nullable|Title the employee performs on my team.|  
 |**Background**|**nvarchar(50)**|Not null|Date and time the row was last updated. (Default)|  
   
- **To create HumanResources.myTeam**  
+**To create HumanResources.myTeam**  
   
 -   Use the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statements:  
   
-    ```  
+    ```sql
     --Create HumanResources.MyTeam:   
     USE AdventureWorks;  
     GO  
@@ -51,11 +51,11 @@ manager: "jhubbard"
     GO  
     ```  
   
- **To populate HumanResources.myTeam**  
+**To populate HumanResources.myTeam**  
   
 -   Execute following `INSERT` statements to populate the table with two rows:  
   
-    ```  
+    ```sql
     USE AdventureWorks;  
     GO  
     INSERT INTO HumanResources.myTeam(EmployeeID,Name,Title,Background)  

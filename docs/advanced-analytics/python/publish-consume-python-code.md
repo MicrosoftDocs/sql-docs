@@ -1,7 +1,7 @@
 ---
 title: "Publish and Consume Python Code| Microsoft Docs"
 ms.custom: ""
-ms.date: "04/14/2017"
+ms.date: "09/29/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -16,16 +16,17 @@ manager: "jhubbard"
 
 # Publish and consume Python web services
 
-**Applies to: SQL Server 2017 CTP 2.0 (Public Preview)**
+You can deploy a working Python solution to a web service by using the operationalization feature in Microsoft Machine Learning Server. This topic describes the steps to successfully publish and then run your solution.
 
-You can deploy a working Python solution to a web service by using the operationalization feature in Microsoft Machine Learning Server.
-
-This topic describes the steps to follow, to successfully publish and then run your solution.
+> [!IMPORTANT]
+>
+> This sample was developed for the version of Python that is included with Machine Learning Server (Standalone), and uses features in Machine Learning Server version 9.1.0.
+ > 
+ > To see a similar example that leverages features in the latest release of Microsoft Machine Learning Server, version 9.2.0, see this article on the Machine Learning Server site: [Deploy and manage web services in Python](https://docs.microsoft.com/machine-learning-server/operationalize/python/how-to-deploy-manage-web-services).
 
 The target audience for this article is data scientists who want to learn how to publish Python code or models as web services hosted in Microsoft Machine Learning Server. The article also explains how applications can consume the the code or models. This article assumes that you are proficient in Python.
 
-> [!IMPORTANT]
-> Python web services are available only with Python-enabled installs of SQL Server 2017 CTP 2.0 (Public Preview). Availability of this feature will be expanded in future releases.
+**Applies to: Machine Learning Server (Standalone) in SQL Server 2017**
 
 ## Overview of workflow
 

@@ -23,7 +23,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ---
 # STBuffer (geography Data Type)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   Returns a geography object that represents the union of all points whose distance from a **geography** instance is less than or equal to a specified value.  
   

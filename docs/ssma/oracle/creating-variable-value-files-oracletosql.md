@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "Variable Value File, Variable Value File Validation"
 ms.assetid: f583d81a-8e34-41b1-8100-ee3a6a82213b
 caps.latest.revision: 26
-author: "sabotta"
-ms.author: "carlasab"
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "v-thobro"
 ---
 # Creating Variable Value Files (OracleToSQL)

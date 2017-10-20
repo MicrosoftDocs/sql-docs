@@ -1,7 +1,7 @@
 ---
 title: "Install Reporting and Internet Information Services Side-by-Side | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/30/2017"
+ms.date: "07/02/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -20,9 +20,11 @@ manager: "erikre"
 
 # Install Reporting and Internet Information Services Side-by-Side
 
-[!INCLUDE[ssrs-appliesto-sql2016-preview](../../includes/ssrs-appliesto-sql2016-preview.md)]
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
-  You can install and run SQL Server Reporting Services (SSRS) and Internet Information Services (IIS) on the same computer. The version of IIS that you are using determines the interoperability issues you must address.  
+[!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
+
+You can install and run SQL Server Reporting Services (SSRS) and Internet Information Services (IIS) on the same computer. The version of IIS that you are using determines the interoperability issues you must address.  
   
 |IIS version|Issues|Description|  
 |-----------------|------------|-----------------|  

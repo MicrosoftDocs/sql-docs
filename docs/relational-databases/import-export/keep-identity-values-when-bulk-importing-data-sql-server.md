@@ -47,7 +47,7 @@ The examples in this topic are based on the table, data file, and format file de
 
 ### **Sample Table**<a name="sample_table"></a>
 The script below creates a test database and a table named `myIdentity`.  Execute the following Transact-SQL in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
-```tsql
+```sql
 CREATE DATABASE TestDatabase;
 GO
 
@@ -171,7 +171,7 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myIdentity;"
   
 ### **Using [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) and Keeping Identity Values without a Format File**<a name="bulk_identity"></a>
 **KEEPIDENTITY** argument.  Execute the following Transact-SQL in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
-```tsql
+```sql
 USE TestDatabase;
 GO
 
@@ -190,7 +190,7 @@ SELECT * FROM TestDatabase.dbo.myIdentity;
   
 ### **Using [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) and Keeping Identity Values with a [Non-XML Format File](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="bulk_identity_fmt"></a>
 **KEEPIDENTITY** and the **FORMATFILE** argument.  Execute the following Transact-SQL in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
-```tsql
+```sql
 USE TestDatabase;
 GO
 
@@ -208,7 +208,7 @@ SELECT * FROM TestDatabase.dbo.myIdentity;
   
 ### **Using [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) and Generated Identity Values without a Format File**<a name="bulk_default"></a>
 Using defaults.  Execute the following Transact-SQL in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
-```tsql
+```sql
 USE TestDatabase;
 GO
 
@@ -226,7 +226,7 @@ SELECT * FROM TestDatabase.dbo.myIdentity;
   
 ### **Using [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) and Generated Identity Values with a [Non-XML Format File](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="bulk_default_fmt"></a>
 Using defaults and **FORMATFILE** argument.  Execute the following Transact-SQL in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
-```tsql
+```sql
 USE TestDatabase;
 GO
 
@@ -243,7 +243,7 @@ SELECT * FROM TestDatabase.dbo.myIdentity;
   
 ### **Using [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) and Keeping Identity Values with a [Non-XML Format File](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="openrowset_identity_fmt"></a>
 **KEEPIDENTITY** table hint and **FORMATFILE** argument.  Execute the following Transact-SQL in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
-```tsql
+```sql
 USE TestDatabase;
 GO
 
@@ -263,7 +263,7 @@ SELECT * FROM TestDatabase.dbo.myIdentity;
  
 ### **Using [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) and Generated Identity Values with a [Non-XML Format File](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="openrowset_default_fmt"></a>
 Using defaults and **FORMATFILE** argument.  Execute the following Transact-SQL in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
-```tsql
+```sql
 USE TestDatabase;
 GO
 

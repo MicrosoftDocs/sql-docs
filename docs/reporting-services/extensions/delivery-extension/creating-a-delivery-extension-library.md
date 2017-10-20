@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "assigning namespaces to extensions"
 ms.assetid: 63b32f93-4bab-4b07-bd72-39a47aca1cda
 caps.latest.revision: 36
-author: "sabotta"
-ms.author: "carlasab"
+author: "guyinacube"
+ms.author: "asaxton"
 manager: "erikre"
 ---
 # Creating a Delivery Extension Library

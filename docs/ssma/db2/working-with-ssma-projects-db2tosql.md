@@ -14,9 +14,9 @@ applies_to:
   - "SQL Server"
 ms.assetid: 07abef8a-28e8-4a66-927c-c9a5b8c938ef
 caps.latest.revision: 7
-author: "sabotta"
-ms.author: "carlasab"
-manager: "lonnyb"
+author: "Shamikg"
+ms.author: "Shamikg"
+manager: "jhubbard"
 ---
 # Working with SSMA Projects (DB2ToSQL)
 To migrate DB2 databases to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], you first create an SSMA project. The project is a file that contains the following information:  

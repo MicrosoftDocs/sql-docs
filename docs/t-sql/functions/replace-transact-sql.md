@@ -1,7 +1,7 @@
 ---
 title: "REPLACE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/15/2017"
+ms.date: "08/23/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -36,8 +36,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 REPLACE ( string_expression , string_pattern , string_replacement )  
 ```  
   
@@ -56,7 +54,7 @@ REPLACE ( string_expression , string_pattern , string_replacement )
   
  Returns NULL if any one of the arguments is NULL.  
   
- If *string_expression* is not of type **varchar(max)** or **nvarchar(max),REPLACE** truncates the return value at 8,000 bytes. To return values greater than 8,000 bytes, *string_expression* must be explicitly cast to a large-value data type.  
+ If *string_expression* is not of type **varchar(max)** or **nvarchar(max), REPLACE** truncates the return value at 8,000 bytes. To return values greater than 8,000 bytes, *string_expression* must be explicitly cast to a large-value data type.  
   
 ## Remarks  
  REPLACE performs comparisons based on the collation of the input. To perform a comparison in a specified collation, you can use [COLLATE](~/t-sql/statements/collations.md) to apply an explicit collation to the input.  
@@ -66,7 +64,7 @@ REPLACE ( string_expression , string_pattern , string_replacement )
 ## Examples  
  The following example replaces the string `cde` in `abcdefghi` with `xxx`.  
   
-```  
+```sql  
 SELECT REPLACE('abcdefghicde','cde','xxx');  
 GO  
 ```  
@@ -81,7 +79,7 @@ abxxxfghixxx
   
  The following example uses the `COLLATE` function.  
   
-```  
+```sql  
 SELECT REPLACE('This is a Test'  COLLATE Latin1_General_BIN,  
 'Test', 'desk' );  
 GO  
@@ -94,24 +92,9 @@ GO
 This is a desk  
 (1 row(s) affected)  
 ```  
-  
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- The following example replaces the string `cde` in `abcdefghi` with `xxx`.  
-  
-```  
-SELECT REPLACE('abcdefghicde','cde','xxx');  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
- `--------------------------`  
-  
- `abxxxfghixxx`  
+
   
 ## See Also  
  [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [String Functions &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
   
-  
-
-

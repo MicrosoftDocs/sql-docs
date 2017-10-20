@@ -11,6 +11,7 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "sql13.dts.designer.sorttrans.f1"
+  - "sql13.dts.designer.sorttransformation.f1"
 helpviewer_keywords: 
   - "Sort transformation"
   - "descending sorts"
@@ -41,8 +42,6 @@ manager: "jhubbard"
 ## Configuration of the Sort Transformation  
  You can set properties through the [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer or programmatically.  
   
- For information about the properties that you can set in the **Sort Transformation Editor** dialog box, see [Sort Transformation Editor](../../../integration-services/data-flow/transformations/sort-transformation-editor.md).  
-  
  The **Advanced Editor** dialog box reflects the properties that can be set programmatically. For more information about the properties that you can set in the **Advanced Editor** dialog box or programmatically, click one of the following topics:  
   
 -   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -54,6 +53,37 @@ manager: "jhubbard"
   
 ## Related Content  
  Sample, [SortDeDuplicateDelimitedString Custom SSIS Component](http://go.microsoft.com/fwlink/?LinkId=220821), on codeplex.com.  
+  
+## Sort Transformation Editor
+  Use the **Sort Transformation Editor** dialog box to select the columns to sort, set the sort order, and specify whether duplicates are removed.  
+  
+### Options  
+ **Available Input Columns**  
+ Using the check boxes, specify the columns to sort.  
+  
+ **Name**  
+ View the name of each available input column.  
+  
+ **Passthrough**  
+ Indicate whether to include the column in the sorted output.  
+  
+ **Input Column**  
+ Select from the list of available input columns for each row. Your selections are reflected in the check box selections in the **Available Input Columns** table.  
+  
+ **Output Alias**  
+ Type an alias for each output column. The default is the name of the input column; however, you can choose any unique, descriptive name.  
+  
+ **Sort Type**  
+ Indicate whether to sort in ascending or descending order.  
+  
+ **Sort Order**  
+ Indicate the order in which to sort columns. This must be set manually for each column.  
+  
+ **Comparison Flags**  
+ For information about the string comparison options, see [Comparing String Data](../../../integration-services/data-flow/comparing-string-data.md).  
+  
+ **Remove rows with duplicate sort values**  
+ Indicate whether the transformation copies duplicate rows to the transformation output, or creates a single entry for all duplicates, based on the specified string comparison options.  
   
 ## See Also  
  [Data Flow](../../../integration-services/data-flow/data-flow.md)   

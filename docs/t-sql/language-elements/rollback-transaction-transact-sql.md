@@ -1,7 +1,7 @@
 ---
 title: "ROLLBACK TRANSACTION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/10/2016"
+ms.date: "09/12/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -40,7 +40,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
-  
 ROLLBACK { TRAN | TRANSACTION }   
      [ transaction_name | @tran_name_variable  
      | savepoint_name | @savepoint_variable ]   
@@ -49,7 +48,7 @@ ROLLBACK { TRAN | TRANSACTION }
   
 ## Arguments  
  *transaction_name*  
- Is the name assigned to the transaction on BEGIN TRANSACTION. *transaction_name* must conform to the rules for identifiers, but only the first 32 characters of the transaction name are used. When nesting transactions, *transaction_name* must be the name from the outermost BEGIN TRANSACTION statement. *transaction_name* is always case sensitive, even when the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is not case sensitive.  
+ Is the name assigned to the transaction on BEGIN TRANSACTION. *transaction_name* must conform to the rules for identifiers, but only the first 32 characters of the transaction name are used. When nesting transactions, *transaction_name* must be the name from the outermost BEGIN TRANSACTION statement. *transaction_name* is always case-sensitive, even when the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is not case-sensitive.  
   
  **@** *tran_name_variable*  
  Is the name of a user-defined variable containing a valid transaction name. The variable must be declared with a **char**, **varchar**, **nchar**, or **nvarchar** data type.  
@@ -68,7 +67,7 @@ ROLLBACK { TRAN | TRANSACTION }
   
  ROLLBACK TRANSACTION cannot reference a *savepoint_name* in distributed transactions started either explicitly with BEGIN DISTRIBUTED TRANSACTION or escalated from a local transaction.  
   
- A transaction cannot be rolled back after a COMMIT TRANSACTION statement is executed, except when the COMMIT TRANSACTION is associated with a nested transaction that is contained within the transaction being rolled back. In this instance, the nested transaction will also be rolled back, even if you have issued a COMMIT TRANSACTION for it.  
+ A transaction cannot be rolled back after a COMMIT TRANSACTION statement is executed, except when the COMMIT TRANSACTION is associated with a nested transaction that is contained within the transaction being rolled back. In this instance, the nested transaction will is rolled back, even if you have issued a COMMIT TRANSACTION for it.  
   
  Within a transaction, duplicate savepoint names are allowed, but a ROLLBACK TRANSACTION using the duplicate savepoint name rolls back only to the most recent SAVE TRANSACTION using that savepoint name.  
   
@@ -83,11 +82,11 @@ ROLLBACK { TRAN | TRANSACTION }
   
 -   The statements in the batch after the statement that fired the trigger are not executed.  
   
- @@TRANCOUNT is incremented by one when entering a trigger, even when in autocommit mode. (The system treats a trigger as an implied nested transaction.)  
+@@TRANCOUNT is incremented by one when entering a trigger, even when in autocommit mode. (The system treats a trigger as an implied nested transaction.)  
   
- ROLLBACK TRANSACTION statements in stored procedures do not affect subsequent statements in the batch that called the procedure; subsequent statements in the batch are executed. ROLLBACK TRANSACTION statements in triggers terminate the batch containing the statement that fired the trigger; subsequent statements in the batch are not executed.  
+ROLLBACK TRANSACTION statements in stored procedures do not affect subsequent statements in the batch that called the procedure; subsequent statements in the batch are executed. ROLLBACK TRANSACTION statements in triggers terminate the batch containing the statement that fired the trigger; subsequent statements in the batch are not executed.  
   
- The effect of a ROLLBACK on cursors is defined by these three rules:  
+The effect of a ROLLBACK on cursors is defined by these three rules:  
   
 1.  With CURSOR_CLOSE_ON_COMMIT set ON, ROLLBACK closes, but does not deallocate all open cursors.  
   
@@ -102,21 +101,15 @@ ROLLBACK { TRAN | TRANSACTION }
  Requires membership in the **public** role.  
   
 ## Examples  
- The following example shows the effect of rolling back a named transaction.  
+ The following example shows the effect of rolling back a named transaction. After creating a table, the following statements start a named transaction, insert two rows, and then roll back the transaction named in the variable @TransactionName. Another statement outside of the named transaction inserts two rows. The query returns the results of the previous statements.   
   
-```  
+```sql    
 USE tempdb;  
 GO  
-CREATE TABLE ValueTable ([value] int;)  
+CREATE TABLE ValueTable ([value] int);  
 GO  
   
 DECLARE @TransactionName varchar(20) = 'Transaction1';  
-  
---The following statements start a named transaction,  
---insert two rows, and then roll back  
---the transaction named in the variable @TransactionName.  
---Another statement outside of the named transaction inserts two rows.  
---The query returns the results of the previous statements.  
   
 BEGIN TRAN @TransactionName  
        INSERT INTO ValueTable VALUES(1), (2);  
@@ -127,13 +120,15 @@ INSERT INTO ValueTable VALUES(3),(4);
 SELECT [value] FROM ValueTable;  
   
 DROP TABLE ValueTable;  
-  
---Results  
---value  
--------------  
---3  
---4  
 ```  
+[!INCLUDE[ssresult-md](../../includes/ssresult-md.md)]  
+```  
+value  
+-----   
+3    
+4  
+```  
+  
   
 ## See Also  
  [BEGIN DISTRIBUTED TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-distributed-transaction-transact-sql.md)   

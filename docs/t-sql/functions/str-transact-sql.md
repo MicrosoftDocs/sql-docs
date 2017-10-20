@@ -35,8 +35,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 STR ( float_expression [ , length [ , decimal ] ] )  
 ```  
   
@@ -96,55 +94,6 @@ GO
   
 ```  
 SELECT STR (FLOOR (123.45), 8, 3;)  
-GO  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
-```  
---------  
- 123.000  
-  
-(1 row(s) affected)  
-```  
-  
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- The following example converts an expression that is made up of five digits and a decimal point to a six-position character string. The fractional part of the number is rounded to one decimal place.  
-  
-```  
-SELECT STR(123.45, 6, 1);  
-GO  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
-```  
-------  
- 123.5  
-  
-(1 row(s) affected)  
-```  
-  
- When the expression exceeds the specified length, the string returns `**` for the specified length.  
-  
-```  
-SELECT STR(123.45, 2, 2);  
-GO  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
-```  
---  
-**  
-  
-(1 row(s) affected)  
-```  
-  
- Even when numeric data is nested within `STR`, the result is character data with the specified format.  
-  
-```  
-SELECT STR (FLOOR (123.45), 8, 3);  
 GO  
 ```  
   

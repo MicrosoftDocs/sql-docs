@@ -65,7 +65,7 @@ After doing some lightweight transformations on the data using the XDF file, you
 
 > [!NOTE]
 > 
-> Did you notice that you did not need to call any other functions to load the data into the XDF file, and could call rxGetVarInfo on the data immediately? That's because XDF is the default interim storage method for RevoScaleR. For more information about XDF files, see the [ScaleR Getting Started Guide](https://msdn.microsoft.com/microsoft-r/scaler-user-guide-data-transform#using-the-data-step-to-create-an-xdf-file-from-a-data-frame)
+> Did you notice that you did not need to call any other functions to load the data into the XDF file, and could call rxGetVarInfo on the data immediately? That's because XDF is the default interim storage method for RevoScaleR. For more information about XDF files, see [Create an XDF](https://msdn.microsoft.com/microsoft-r/scaler-data-xdf).
   
 4. Now, you'll put this data into a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table, storing _DayOfWeek_ as an integer with values from 1 to 7.
   

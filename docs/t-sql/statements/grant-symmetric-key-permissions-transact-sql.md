@@ -1,7 +1,7 @@
 ---
 title: "GRANT Symmetric Key Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/10/2016"
+ms.date: "08/10/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -64,7 +64,7 @@ GRANT permission [ ,...n ]
  WITH GRANT OPTION  
  Indicates that the principal will also be given the ability to grant the specified permission to other principals.  
   
- AS <database_principal>  
+ AS \<database_principal> 
  Specifies a principal from which the principal executing this query derives its right to grant the permission.  
   
  *Database_user*  
@@ -143,3 +143,4 @@ GO
  [Encryption Hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   
+

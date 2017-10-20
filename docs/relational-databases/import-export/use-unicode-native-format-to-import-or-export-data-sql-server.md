@@ -51,7 +51,7 @@ The examples in this topic are based on the table, and format file defined below
 
 ### **Sample Table**<a name="sample_table"></a>
 The script below creates a test database, a table named `myWidenative` and populates the table with some initial values.  Execute the following Transact-SQL in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
-```tsql
+```sql
 CREATE DATABASE TestDatabase;
 GO
 
@@ -129,7 +129,7 @@ REM Review results is SSMS
 
 ### **Using BULK INSERT and Unicode Native Format without a Format File**<a name="bulk_widenative"></a>
 **DATAFILETYPE** argument.  Execute the following Transact-SQL in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
-```tsql
+```sql
 TRUNCATE TABLE TestDatabase.dbo.myWidenative; -- for testing
 BULK INSERT TestDatabase.dbo.myWidenative
 	FROM 'D:\BCP\myWidenative.bcp'
@@ -143,7 +143,7 @@ SELECT * FROM TestDatabase.dbo.myWidenative;
 
 ### **Using BULK INSERT and Unicode Native Format with a Non-XML Format File**<a name="bulk_widenative_fmt"></a>
 **FORMATFILE** argument.  Execute the following Transact-SQL in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
-```tsql
+```sql
 TRUNCATE TABLE TestDatabase.dbo.myWidenative; -- for testing
 BULK INSERT TestDatabase.dbo.myWidenative
    FROM 'D:\BCP\myWidenative.bcp'
@@ -157,7 +157,7 @@ SELECT * FROM TestDatabase.dbo.myWidenative;
 
 ### **Using OPENROWSET and Unicode Native Format with a Non-XML Format File**<a name="openrowset_widenative_fmt"></a>
 **FORMATFILE** argument.  Execute the following Transact-SQL in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
-```tsql
+```sql
 TRUNCATE TABLE TestDatabase.dbo.myWidenative;  -- for testing
 INSERT INTO TestDatabase.dbo.myWidenative
 	SELECT *

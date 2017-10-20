@@ -15,9 +15,9 @@ helpviewer_keywords:
   - "creating text attributes [Master Data Services]"
 ms.assetid: cd8b57de-364d-42a3-9273-c1c6b992bb40
 caps.latest.revision: 8
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
+author: "smartysanthosh"
+ms.author: "nagavo"
+manager: "craigg"
 ---
 # Create a Text Attribute (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], create a text attribute when you want users to enter a text string as an attribute value.  

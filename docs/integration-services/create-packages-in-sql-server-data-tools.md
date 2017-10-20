@@ -46,7 +46,7 @@ manager: "jhubbard"
  For a video that demonstrates how to create a basic package using the default package template, see [Creating a Basic Package (SQL Server Video)](http://go.microsoft.com/fwlink/?LinkId=131023).  
 
 ## Get SQL Server Data Tools
-To install SQL Server Data Tools (SSDT), see [Download SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx).
+To install SQL Server Data Tools (SSDT), see [Download SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md).
 
 ## Create a package in SQL Server Data Tools using the Package Template  
   

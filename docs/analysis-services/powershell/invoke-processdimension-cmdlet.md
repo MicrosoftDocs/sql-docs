@@ -20,6 +20,9 @@ manager: "erikre"
 [!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
 
   Process a dimension using a specific processing type variable.  
+
+>[!NOTE] 
+>This article may contain outdated information and examples. Use the Get-Help cmdlet for the latest.
   
 ## Syntax  
  `Invoke-ProcessDimension [-Name] <System.String> [-Database] <System.String> [-ProcessType] <Microsoft.AnalysisServices.ProcessType> [<CommonParameters>]`  
@@ -99,8 +102,5 @@ manager: "erikre"
 > [!NOTE]  
 >  Sometimes a dimension that processed successfully appears as ‘unprocessed’ when you list the dimensions folder in the PowerShell window. To verify whether a dimension was actually processed, check the dimension properties in SQL Server Management Studio.  
   
-## See Also  
- [PowerShell scripting in Analysis Services](../../analysis-services/instances/powershell-scripting-in-analysis-services.md)   
- [Manage Tabular Models Using PowerShell](http://go.microsoft.com/fwlink/?linkID=227685)  
   
   

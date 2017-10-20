@@ -35,8 +35,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 [ NOT ] boolean_expression  
 ```  
   
@@ -75,21 +73,16 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `ProductID   Name                     Color         StandardCost`  
-  
- `---------   -------------------      ------      ------------`  
-  
- `984         Mountain-500 Silver, 40  Silver        308.2179`  
-  
- `985         Mountain-500 Silver, 42  Silver        308.2179`  
-  
- `986         Mountain-500 Silver, 44  Silver        308.2179`  
-  
- `987         Mountain-500 Silver, 48  Silver        308.2179`  
-  
- `988         Mountain-500 Silver, 52  Silver        308.2179`  
-  
- `(6 row(s) affected)`  
+ ```
+ ProductID   Name                     Color         StandardCost
+ ---------   -------------------      ------      ------------
+ 984         Mountain-500 Silver, 40  Silver        308.2179
+ 985         Mountain-500 Silver, 42  Silver        308.2179
+ 986         Mountain-500 Silver, 44  Silver        308.2179
+ 987         Mountain-500 Silver, 48  Silver        308.2179
+ 988         Mountain-500 Silver, 52  Silver        308.2179
+ (6 row(s) affected)
+ ```  
   
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  The following example restricts results to `SalesOrderNumber` to values starting with `SO6` and `ProductKeys` greater than or equal to 400.  

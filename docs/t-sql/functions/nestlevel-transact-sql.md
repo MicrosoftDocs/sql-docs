@@ -1,7 +1,7 @@
 ---
 title: "@@NESTLEVEL (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "09/17/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -24,7 +24,7 @@ author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
 ---
-# @@NESTLEVEL (Transact-SQL)
+# &#x40;&#x40;NESTLEVEL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Returns the nesting level of the current stored procedure execution (initially 0) on the local server.  
@@ -34,7 +34,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
-  
 @@NESTLEVEL  
 ```  
   
@@ -73,17 +72,15 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Outer Level`  
+ ```
+Outer Level  
+-----------  
+1  
   
- `-----------`  
-  
- `1`  
-  
- `Inner Level`  
-  
- `-----------`  
-  
- `2`  
+Inner Level  
+-----------  
+2
+```  
   
 ### B. Calling @@NESTLEVEL  
  The following example shows the difference in values returned by `SELECT`, `EXEC`, and `sp`_`executesql` when each of them calls `@@NESTLEVEL`.  
@@ -100,29 +97,25 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Current Nest Level`  
+ ```
+Current Nest Level  
+------------------  
+1  
   
- `------------------`  
+(1 row(s) affected)  
   
- `1`  
+OneGreater  
+-----------  
+2  
   
- `(1 row(s) affected)`  
+(1 row(s) affected)  
   
- `OneGreater`  
+TwoGreater  
+-----------  
+3  
   
- `-----------`  
-  
- `2`  
-  
- `(1 row(s) affected)`  
-  
- `TwoGreater`  
-  
- `-----------`  
-  
- `3`  
-  
- `(1 row(s) affected)`  
+(1 row(s) affected)
+```  
   
 ## See Also  
  [Configuration Functions &#40;Transact-SQL&#41;](../../t-sql/functions/configuration-functions-transact-sql.md)   

@@ -12,8 +12,8 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 3236cce0-cfd9-43f8-8be3-e8c8dff8f162
 caps.latest.revision: 18
-author: "sabotta"
-ms.author: "carlasab"
+author: "smartysanthosh"
+ms.author: "nagavo"
 manager: "erikre"
 ---
 # Discontinued Master Data Services Features

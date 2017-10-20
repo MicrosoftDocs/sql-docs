@@ -146,7 +146,7 @@ sudo apt-get install unixodbc-dev
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew tap microsoft/mssql-release https://github.com/Microsoft/homebrew-mssql-release
 brew update
-brew install msodbcsql mssql-tools
+brew install --no-sandbox msodbcsql mssql-tools
 ```
 
 ## Microsoft ODBC Driver 13 for SQL Server

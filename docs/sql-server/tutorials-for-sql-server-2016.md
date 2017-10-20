@@ -1,7 +1,7 @@
 ---
 title: "Tutorials for SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/24/2017"
+ms.date: "06/21/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -13,7 +13,7 @@ ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
 caps.latest.revision: 40
 author: "BYHAM"
 ms.author: "rickbyh"
-manager: "erikre"
+manager: "craigg"
 ---
 # Tutorials for SQL Server
 [!INCLUDE[feedback_stackoverflow_msdn_connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
@@ -35,7 +35,7 @@ manager: "erikre"
 |[Integration Services Tutorials](../integration-services/integration-services-tutorials.md)|Learn how to create and deploy [!INCLUDE[ssIS](../includes/ssis-md.md)] packages.|  
 |[Replication Tutorials](../relational-databases/replication/replication-tutorials.md)|Learn how to set up and run replication topologies using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].|  
 |[Reporting Services Tutorials &#40;SSRS&#41;](../reporting-services/reporting-services-tutorials-ssrs.md)|Learn how to create basic reports and subscriptions.|  
-|[SQL Server R Services Tutorials](../advanced-analytics/r-services/sql-server-r-services-tutorials.md)|Learn how to work with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] data using the R language, and run R scripts from [!INCLUDE[tsql](../includes/tsql-md.md)].|  
+|[SQL Server R Services Tutorials](../advanced-analytics/tutorials/machine-learning-services-tutorials.md)|Learn how to work with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] data using the R language, and run R scripts from [!INCLUDE[tsql](../includes/tsql-md.md)].|  
   
  ## Previously published tutorials:  
   
@@ -45,3 +45,4 @@ manager: "erikre"
   
  - [Tutorials for SQL Server 2008 R2](http://msdn.microsoft.com/library/ms167593.aspx)   
 
+[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

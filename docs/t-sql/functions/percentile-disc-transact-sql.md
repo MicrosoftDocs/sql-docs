@@ -33,8 +33,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 PERCENTILE_DISC ( numeric_literal ) WITHIN GROUP ( ORDER BY order_by_expression [ ASC | DESC ] )  
     OVER ( [ <partition_by_clause> ] )  
 ```  
@@ -46,7 +44,7 @@ PERCENTILE_DISC ( numeric_literal ) WITHIN GROUP ( ORDER BY order_by_expression 
  WITHIN GROUP **(** ORDER BY *order_by_expression* [ **ASC** | DESC ]**)**  
  Specifies a list of values to sort and compute the percentile over. Only one *order_by_expression* is allowed. The default sort order is ascending. The list of values can be of any of the data types that are valid for the sort operation.  
   
- OVER **(** <partition_by_clause> **)**  
+ OVER **(** \<partition_by_clause> **)**  
  Divides the result set produced by the FROM clause into partitions to which the percentile function is applied. For more information, see [OVER Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md). The \<ORDER BY clause> and \<rows or range clause>cannot be specified in a PERCENTILE_DISC function.  
   
 ## Return Types  
@@ -83,17 +81,14 @@ WHERE dh.EndDate IS NULL;
   
  Here is a partial result set.  
   
- `DepartmentName        MedianCont    MedianDisc`  
-  
- `--------------------   ----------   ----------`  
-  
- `Document Control       16.8269      16.8269`  
-  
- `Engineering            34.375       32.6923`  
-  
- `Executive              54.32695     48.5577`  
-  
- `Human Resources        17.427850    16.5865`  
+ ```
+DepartmentName        MedianCont    MedianDisc
+--------------------   ----------   ----------
+Document Control       16.8269      16.8269
+Engineering            34.375       32.6923
+Executive              54.32695     48.5577
+Human Resources        17.427850    16.5865
+```
   
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
@@ -114,17 +109,14 @@ FROM dbo.DimEmployee;
   
  Here is a partial result set.  
   
- `DepartmentName        MedianCont    MedianDisc`  
-  
- `--------------------   ----------   ----------`  
-  
- `Document Control       16.826900    16.8269`  
-  
- `Engineering            34.375000    32.6923`  
-  
- `Human Resources        17.427850    16.5865`  
-  
- `Shipping and Receiving  9.250000     9.0000`  
+ ```
+DepartmentName        MedianCont    MedianDisc  
+--------------------   ----------   ----------  
+Document Control       16.826900    16.8269  
+Engineering            34.375000    32.6923  
+Human Resources        17.427850    16.5865  
+Shipping and Receiving  9.250000     9.0000
+```  
   
 ## See Also  
  [PERCENTILE_CONT &#40;Transact-SQL&#41;](../../t-sql/functions/percentile-cont-transact-sql.md)  

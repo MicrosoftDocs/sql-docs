@@ -20,6 +20,9 @@ manager: "erikre"
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
   Process a partition using a specific processing type variable.  
+
+>[!NOTE] 
+>This article may contain outdated information and examples. Use the Get-Help cmdlet for the latest.
   
 ## Syntax  
  `Invoke-ProcessPartition [-Name] <System.String> [-Database] <System.String> [-ProcessType] <Microsoft.AnalysisServices.ProcessType> [-CubeName] <System.String> [-MeasureGroupName] <System.String> [<CommonParameters>]`  
@@ -118,8 +121,5 @@ manager: "erikre"
   
  This command processes the partition Total_Orders_2003 in the Sales Orders measure group of the AWTEST database.  
   
-## See Also  
- [PowerShell scripting in Analysis Services](../../analysis-services/instances/powershell-scripting-in-analysis-services.md)   
- [Manage Tabular Models Using PowerShell](http://go.microsoft.com/fwlink/?linkID=227685)  
   
   

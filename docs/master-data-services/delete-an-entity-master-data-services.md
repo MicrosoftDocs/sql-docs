@@ -15,9 +15,9 @@ helpviewer_keywords:
   - "deleting entities [Master Data Services]"
 ms.assetid: 71fffb03-38fd-46f0-9e10-6ec75da19ab2
 caps.latest.revision: 6
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
+author: "smartysanthosh"
+ms.author: "nagavo"
+manager: "craigg"
 ---
 # Delete an Entity (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], delete an entity to delete all members and attributes for the entity.  

@@ -1,7 +1,7 @@
 ---
 title: "Create and Test a Classifier User-Defined Function | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/16/2017"
+ms.date: "07/11/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -38,21 +38,21 @@ manager: "jhubbard"
   
  The classifier function extends the login time. An overly complex function can cause logins to time out or slow down fast connections.  
   
-### To create the classifier user-defined function  
+## To create the classifier user-defined function  
   
 1.  Create and configure the new resource pools and workload groups. Assign each workload group to the appropriate resource pool.  
   
     ```  
     --- Create a resource pool for production processing  
     --- and set limits.  
-    USE master  
+    USE master;  
     GO  
     CREATE RESOURCE POOL pProductionProcessing  
     WITH  
     (  
          MAX_CPU_PERCENT = 100,  
          MIN_CPU_PERCENT = 50  
-    )  
+    );  
     GO  
     --- Create a workload group for production processing  
     --- and configure the relative importance.  
@@ -60,7 +60,7 @@ manager: "jhubbard"
     WITH  
     (  
          IMPORTANCE = MEDIUM  
-    )  
+    );  
     --- Assign the workload group to the production processing  
     --- resource pool.  
     USING pProductionProcessing  
@@ -73,7 +73,7 @@ manager: "jhubbard"
     (  
          MAX_CPU_PERCENT = 50,  
          MIN_CPU_PERCENT = 0  
-    )  
+    );  
     GO  
     --- Create a workload group for off-hours processing  
     --- and configure the relative importance.  
@@ -84,32 +84,32 @@ manager: "jhubbard"
     )  
     --- Assign the workload group to the off-hours processing  
     --- resource pool.  
-    USING pOffHoursProcessing  
+    USING pOffHoursProcessing;  
     GO  
     ```  
   
 2.  Update the in-memory configuration.  
   
     ```  
-    ALTER RESOURCE GOVERNOR RECONFIGURE  
+    ALTER RESOURCE GOVERNOR RECONFIGURE;  
     GO  
     ```  
   
 3.  Create a table and define the start and end times for the production processing time range.  
   
     ```  
-    USE master  
+    USE master;  
     GO  
     CREATE TABLE tblClassificationTimeTable  
     (  
          strGroupName     sysname          not null,  
          tStartTime       time              not null,  
          tEndTime         time              not null  
-    )  
+    );  
     GO  
     --- Add time values that the classifier will use to  
     --- determine the workload group for a session.  
-    INSERT into tblClassificationTimeTable VALUES('gProductionProcessing', '6:35 AM', '6:15 PM')  
+    INSERT into tblClassificationTimeTable VALUES('gProductionProcessing', '6:35 AM', '6:15 PM');  
     go  
     ```  
   
@@ -124,11 +124,14 @@ manager: "jhubbard"
     WITH SCHEMABINDING  
     AS  
     BEGIN  
+    /* We recommend running the classifier function code under 
+    snapshot isolation level OR using NOLOCK hint to avoid blocking on 
+    lookup table. In this example, we are using NOLOCK hint. */
          DECLARE @strGroup sysname  
          DECLARE @loginTime time  
          SET @loginTime = CONVERT(time,GETDATE())  
          SELECT TOP 1 @strGroup = strGroupName  
-              FROM dbo.tblClassificationTimeTable  
+              FROM dbo.tblClassificationTimeTable WITH(NOLOCK)
               WHERE tStartTime <= @loginTime and tEndTime >= @loginTime  
          IF(@strGroup is not null)  
          BEGIN  
@@ -137,26 +140,26 @@ manager: "jhubbard"
     --- Use the default workload group if there is no match  
     --- on the lookup.  
          RETURN N'gOffHoursProcessing'  
-    END  
+    END;  
     GO  
     ```  
   
 5.  Register the classifier function and update the in-memory configuration.  
   
     ```  
-    ALTER RESOURCE GOVERNOR with (CLASSIFIER_FUNCTION = dbo.fnTimeClassifier)  
-    ALTER RESOURCE GOVERNOR RECONFIGURE  
+    ALTER RESOURCE GOVERNOR with (CLASSIFIER_FUNCTION = dbo.fnTimeClassifier);  
+    ALTER RESOURCE GOVERNOR RECONFIGURE;  
     GO  
     ```  
   
-### To verify the resource pools, workload groups, and the classifier user-defined function  
+## To verify the resource pools, workload groups, and the classifier user-defined function  
   
 1.  Obtain the resource pool and workload group configuration by using the following query.  
   
     ```  
-    USE master  
-    SELECT * FROM sys.resource_governor_resource_pools  
-    SELECT * FROM sys.resource_governor_workload_groups  
+    USE master;  
+    SELECT * FROM sys.resource_governor_resource_pools;  
+    SELECT * FROM sys.resource_governor_workload_groups;  
     GO  
     ```  
   
@@ -164,45 +167,46 @@ manager: "jhubbard"
   
     ```  
     --- Get the classifier function Id and state (enabled).  
-    SELECT * FROM sys.resource_governor_configuration  
+    SELECT * FROM sys.resource_governor_configuration;  
     GO  
     --- Get the classifer function name and the name of the schema  
     --- that it is bound to.  
     SELECT   
           object_schema_name(classifier_function_id) AS [schema_name],  
           object_name(classifier_function_id) AS [function_name]  
-    FROM sys.dm_resource_governor_configuration  
-  
+    FROM sys.dm_resource_governor_configuration;  
     ```  
   
 3.  Obtain the current runtime data for the resource pools and workload groups by using the following query.  
   
     ```  
-    SELECT * FROM sys.dm_resource_governor_resource_pools  
-    SELECT * FROM sys.dm_resource_governor_workload_groups  
+    SELECT * FROM sys.dm_resource_governor_resource_pools;  
+    SELECT * FROM sys.dm_resource_governor_workload_groups;  
     GO  
     ```  
   
 4.  Find out what sessions are in each group by using the following query.  
   
     ```  
-    SELECT s.group_id, CAST(g.name as nvarchar(20)), s.session_id, s.login_time, CAST(s.host_name as nvarchar(20)), CAST(s.program_name AS nvarchar(20))  
-              FROM sys.dm_exec_sessions s  
-         INNER JOIN sys.dm_resource_governor_workload_groups g  
-              ON g.group_id = s.group_id  
-    ORDER BY g.name  
+    SELECT s.group_id, CAST(g.name as nvarchar(20)), s.session_id, s.login_time, 
+        CAST(s.host_name as nvarchar(20)), CAST(s.program_name AS nvarchar(20))  
+    FROM sys.dm_exec_sessions AS s  
+    INNER JOIN sys.dm_resource_governor_workload_groups AS g  
+        ON g.group_id = s.group_id  
+    ORDER BY g.name;  
     GO  
     ```  
   
 5.  Find out which requests are in each group by using the following query.  
   
     ```  
-    SELECT r.group_id, g.name, r.status, r.session_id, r.request_id, r.start_time, r.command, r.sql_handle, t.text   
-               FROM sys.dm_exec_requests r  
-         INNER JOIN sys.dm_resource_governor_workload_groups g  
-                ON g.group_id = r.group_id  
-         CROSS APPLY sys.dm_exec_sql_text(r.sql_handle) AS t  
-    ORDER BY g.name  
+    SELECT r.group_id, g.name, r.status, r.session_id, r.request_id, 
+        r.start_time, r.command, r.sql_handle, t.text   
+    FROM sys.dm_exec_requests AS r  
+    INNER JOIN sys.dm_resource_governor_workload_groups AS g  
+        ON g.group_id = r.group_id  
+    CROSS APPLY sys.dm_exec_sql_text(r.sql_handle) AS t  
+    ORDER BY g.name;  
     GO  
     ```  
   
@@ -210,24 +214,25 @@ manager: "jhubbard"
   
     ```  
     SELECT s.group_id, g.name, s.session_id, s.login_time, s.host_name, s.program_name   
-               FROM sys.dm_exec_sessions s  
-         INNER JOIN sys.dm_resource_governor_workload_groups g  
-               ON g.group_id = s.group_id  
-                     AND 'preconnect' = s.status  
-    ORDER BY g.name  
+    FROM sys.dm_exec_sessions AS s  
+    INNER JOIN sys.dm_resource_governor_workload_groups AS g  
+        ON g.group_id = s.group_id  
+           AND 'preconnect' = s.status  
+    ORDER BY g.name;  
     GO  
   
-    SELECT r.group_id, g.name, r.status, r.session_id, r.request_id, r.start_time, r.command, r.sql_handle, t.text   
-               FROM sys.dm_exec_requests r  
-         INNER JOIN sys.dm_resource_governor_workload_groups g  
-               ON g.group_id = r.group_id  
-                     AND 'preconnect' = r.status  
-         CROSS APPLY sys.dm_exec_sql_text(r.sql_handle) AS t  
-    ORDER BY g.name  
+    SELECT r.group_id, g.name, r.status, r.session_id, r.request_id, r.start_time, 
+        r.command, r.sql_handle, t.text   
+    FROM sys.dm_exec_requests AS r  
+    INNER JOIN sys.dm_resource_governor_workload_groups AS g  
+        ON g.group_id = r.group_id  
+           AND 'preconnect' = r.status  
+     CROSS APPLY sys.dm_exec_sql_text(r.sql_handle) AS t  
+    ORDER BY g.name;  
     GO  
     ```  
   
-### Best practices for using Lookup Tables in a classifier function  
+## Best practices for using Lookup Tables in a classifier function  
   
 1.  Do not use a lookup table unless it is absolutely necessary. If you need to use a lookup table, it can be hard coded into the function itself; however, this needs to be balanced with the complexity and dynamic changes of the classifier function.  
   
@@ -253,7 +258,7 @@ manager: "jhubbard"
   
     4.  No triggers on the table.  
   
-    5.  If you are updating the table contents, make sure to use a snapshot isolation level transaction to prevent Writer blocking Readers. Note that using the `NOLOCK` hint should also mitigate this.  
+    5.  If you are updating the table contents, make sure to use a snapshot isolation level transaction in the classifier function to prevent Writer blocking Readers. Note that using the `NOLOCK` hint should also mitigate this.  
   
     6.  If possible, disable the classifier function when changing the table contents.  
   

@@ -37,8 +37,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 ERROR_STATE ( )  
 ```  
   
@@ -101,21 +99,7 @@ GO
   
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### C. Using ERROR_STATE in a CATCH block  
- The following example shows a `SELECT` statement that generates a divide-by-zero error. The state of the error is returned.  
-  
-```  
-BEGIN TRY  
-    -- Generate a divide by zero error  
-    SELECT 1/0;  
-END TRY  
-BEGIN CATCH  
-    SELECT ERROR_STATE() AS ErrorState;  
-END CATCH;  
-GO  
-```  
-  
-### D. Using ERROR_STATE in a CATCH block with other error-handling tools  
+### C. Using ERROR_STATE in a CATCH block with other error-handling tools  
  The following example shows a `SELECT` statement that generates a divide-by-zero error. Along with the error state, information that relates to the error is returned.  
   
 ```  

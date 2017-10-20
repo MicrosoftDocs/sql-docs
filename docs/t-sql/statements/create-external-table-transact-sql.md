@@ -1,7 +1,7 @@
 ---
 title: "CREATE EXTERNAL TABLE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/5/2017"
+ms.date: "08/10/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -131,7 +131,7 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
  *database_name* . [ schema_name ] . | schema_name. ] *table_name*  
  The one to three-part name of the table to create. For an external table, only the table metadata is stored in SQL along with basic statistics about the file and or folder referenced in Hadoop or Azure blob storage. No actual data is moved or stored in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- <column_definition> [ ,...*n* ]  
+ \<column_definition> [ ,...*n* ] 
  CREATE EXTERNAL TABLE allows one or more column definitions. Both CREATE EXTERNAL TABLE and CREATE TABLE use the same syntax for defining a column. An exception to this, you cannot use the DEFAULT CONSTRAINT on external tables. For the full details about column definitions and their data types, see [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) and [CREATE TABLE on Azure SQL Database](http://msdn.microsoft.com/library/d53c529a-1d5f-417f-9a77-64ccc6eddca1).  
   
  The column definitions, including the data types and number of columns must match the data in the external files. If there is a mismatch, the file rows will be rejected when querying the actual data.  
@@ -255,9 +255,11 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
 -   **CONTROL DATABASE**
   
  Note, the login that creates the external data source must have permission to read and write to the external data source, located in Hadoop or Azure blob storage.  
-  
+
+
  > [!IMPORTANT]  
- >  The ALTER ANY EXTERNAL DATA SOURCE  permission grants any principal the ability to create and modify any external data source object, and therefore, it also grants the ability to access all database scoped credentials on the database. This permission must be considered as highly privileged, and therefore must be granted only to trusted principals in the system.
+
+>  The ALTER ANY EXTERNAL DATA SOURCE  permission grants any principal the ability to create and modify any external data source object, and therefore, it also grants the ability to access all database scoped credentials on the database. This permission must be considered as highly privileged, and therefore must be granted only to trusted principals in the system.
 
 ## Error Handling  
  While executing the CREATE EXTERNAL TABLE statement, PolyBase attempts to connect to the external data source. If the attempt to connect fails, the statement will fail and the external table will not be created. It can take a minute or more for the command to fail since PolyBase retries the connection before eventually failing the query.  
@@ -295,7 +297,13 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
  Query limitations:  
   
  PolyBase can consume a maximum of 33k files per folder when running 32 concurrent PolyBase queries. This maximum number includes both files and subfolders in each HDFS folder. If the degree of concurrency is less than 32, a user can run PolyBase queries against folders in HDFS which contain more than 33k files. We recommend that you keep external file paths short and use no more than 30k files per HDFS folder. When too many files are referenced, a Java Virtual Machine (JVM) out-of-memory exception might occur.  
-  
+
+Table width limitations:
+PolyBase in SQL Server 2016 has a row width limit of 32KB based on the maximum size of a single valid row by table definition. If the sum of the column schema is greater than 32KB, PolyBase will not be able to query the data. 
+
+In SQL Data Warehouse, this limitation has been raised to 1MB.
+
+
 ## Locking  
  Shared lock on the SCHEMARESOLUTION object.  
   
@@ -644,5 +652,6 @@ FROM ClickStream
  [CREATE TABLE AS SELECT &#40;Azure SQL Data Warehouse&#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)  
   
   
+
 
 

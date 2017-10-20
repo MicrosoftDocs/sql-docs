@@ -1,7 +1,7 @@
 ---
 title: "STIntersection (geometry Data Type) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "08/03/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -25,11 +25,7 @@ manager: "jhubbard"
 # STIntersection (geometry Data Type)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Returns an object that represents the points where a **geometry** instance intersects another **geometry** instance.  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
+Returns an object that represents the points where a **geometry** instance intersects another **geometry** instance.
   
 ## Syntax  
   
@@ -66,13 +62,14 @@ SELECT @g.STIntersection(@h).ToString();
 ### B. Using STIntersection() with CurvePolygon instance  
  The following example returns an instance that contains a circular arc segment.  
   
- `DECLARE @g geometry = 'CURVEPOLYGON (CIRCULARSTRING (0 -4, 4 0, 0 4, -4 0, 0 -4))';`  
-  
- `DECLARE @h geometry = 'POLYGON ((1 -1, 5 -1, 5 3, 1 3, 1 -1))';`  
-  
- `SELECT @h.STIntersection(@g).ToString();`  
+```
+ DECLARE @g geometry = 'CURVEPOLYGON (CIRCULARSTRING (0 -4, 4 0, 0 4, -4 0, 0 -4))';  
+ DECLARE @h geometry = 'POLYGON ((1 -1, 5 -1, 5 3, 1 3, 1 -1))';  
+ SELECT @h.STIntersection(@g).ToString();
+ ```  
   
 ## See Also  
  [OGC Methods on Geometry Instances](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   
+

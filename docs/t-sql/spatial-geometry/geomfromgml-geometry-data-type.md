@@ -1,7 +1,7 @@
 ---
 title: "GeomFromGml (geometry Data Type) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "08/03/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -25,15 +25,11 @@ manager: "jhubbard"
 # GeomFromGml (geometry Data Type)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Construct a **geometry** instance given a representation in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] subset of the Geography Markup Language (GML).  
+Construct a **geometry** instance given a representation in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] subset of the Geography Markup Language (GML).
   
- For more information on the Geography Markup Language, see the following Open Geospatial Consortium Specifications:  
+For more information on the Geography Markup Language, see the following Open Geospatial Consortium Specifications:
   
- [OGC Specifications, Geography Markup Language](http://go.microsoft.com/fwlink/?LinkId=93629)  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
+[OGC Specifications, Geography Markup Language](http://go.microsoft.com/fwlink/?LinkId=93629)
   
 ## Syntax  
   
@@ -72,3 +68,4 @@ SELECT @g.ToString();
  [Extended Static Geometry Methods](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)  
   
   
+

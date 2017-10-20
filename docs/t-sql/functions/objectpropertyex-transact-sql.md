@@ -36,8 +36,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 OBJECTPROPERTYEX ( id , property )  
 ```  
   
@@ -203,11 +201,11 @@ GO
   
  The result set shows that the base type of the underlying object, the `Employee` table, is a user table.  
   
- `Base Type`  
-  
- `--------`  
-  
- `U`  
+ ```
+Base Type 
+--------  
+U
+```  
   
 ### B. Returning a property value  
  The following example returns the number of UPDATE triggers on the specified table.  

@@ -1,7 +1,7 @@
 ﻿---
 title: "Quick Start 1: In-Memory OLTP Technologies for Faster Transact-SQL Performance | Microsoft Docs"
 ms.custom: ""
-ms.date: 06/12/2017"
+ms.date: 09/05/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -130,7 +130,7 @@ A [Memory-optimized tables](../../relational-databases/in-memory-oltp/memory-opt
   
 #### Natively compiled modules  
   
-The T-SQL keyword NATIVE_COMPILATION, on the CREATE PROCEDURE statement, is how a native proc is created. The T-SQL statements are compiled to machine code on first use of the native proc each time the database is cycled online. The T-SQL instructions no longer endure slow interpretation of every instruction.  
+The T-SQL keyword NATIVE_COMPILATION, on the CREATE PROCEDURE statement, is how a natively compiled stored procedure is created. The T-SQL statements are compiled to machine code on first use of the native proc each time the database is cycled online. The T-SQL instructions no longer endure slow interpretation of every instruction.  
   
 - We have seen native compilation result in durations that are 1/100th of the interpreted duration.  
   
@@ -212,14 +212,12 @@ On Microsoft SQL Server, before you can create a memory-optimized table you must
 On Azure SQL Database, you need not and cannot create such a FILEGROUP.  
 
 The following sample T-SQL script enables a database for In-Memory OLTP and configures all recommended settings. It works with both SQL Server and Azure SQL Database: [enable-in-memory-oltp.sql](https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/in-memory/t-sql-scripts/enable-in-memory-oltp.sql).
-  
+
+Note that not all SQL Server features are supported for databases with a MEMORY_OPTIMIZED_DATA filegroup. For details on limitations see: [Unsupported SQL Server Features for In-Memory OLTP](unsupported-sql-server-features-for-in-memory-oltp.md)
   
 <a name="create-a-memory-optimized-table-26y"></a>  
   
 ## 4. Create a memory-optimized table  
-  
-  
-  
   
 The crucial Transact-SQL keyword is the keyword MEMORY_OPTIMIZED.  
   
@@ -296,6 +294,7 @@ The crucial keyword is NATIVE_COMPILATION.
   
 The keyword SCHEMABINDING means the tables referenced in the native proc cannot be dropped unless the native proc is dropped first. For details see [Creating Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/creating-natively-compiled-stored-procedures.md).  
   
+Note that you do not need to create a natively compiled stored procedure to access a memory-optimized table. You can also reference memory-optimized tables from traditional stored procedures and ad hoc batches.
   
 <a name="execute-the-native-proc-31e"></a>  
   

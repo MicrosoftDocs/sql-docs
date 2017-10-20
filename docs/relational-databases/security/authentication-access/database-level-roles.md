@@ -2,7 +2,7 @@
 title: "Database-Level Roles | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "05/24/2017"
+ms.date: "06/29/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""

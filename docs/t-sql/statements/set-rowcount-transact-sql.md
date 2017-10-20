@@ -41,8 +41,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 SET ROWCOUNT { number | @number_var }   
 ```  
   
@@ -80,13 +78,13 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Count`  
-  
- `-----------`  
-  
- `537`  
-  
- `(1 row(s) affected)`  
+ ```
+ Count 
+ ----------- 
+ 537 
+ 
+ (1 row(s) affected)
+ ```  
   
  Now, set `ROWCOUNT` to `4` and return all rows to demonstrate that only 4 rows are returned.  
   
@@ -96,9 +94,9 @@ SELECT *
 FROM Production.ProductInventory  
 WHERE Quantity < 300;  
 GO  
-```  
   
- `(4 row(s) affected)`  
+(4 row(s) affected)
+```  
   
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  SET ROWCOUNT stops processing after the specified number of rows. In the following example, note that more than 20 rows meet the criteria of `AccountType = 'Assets'`. However, after applying SET ROWCOUNT, you can see that not all rows were returned.  

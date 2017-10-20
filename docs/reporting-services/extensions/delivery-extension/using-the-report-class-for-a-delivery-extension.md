@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "Report class"
 ms.assetid: 1145ac63-eafd-452a-82af-16f85b1676dd
 caps.latest.revision: 34
-author: "sabotta"
-ms.author: "carlasab"
+author: "guyinacube"
+ms.author: "asaxton"
 manager: "erikre"
 ---
 # Using the Report Class for a Delivery Extension

@@ -77,7 +77,7 @@ If you are new to OLAP or to MDX queries, see these Wikipedia articles:
 ### Samples
 
 If you want to learn more about cubes, you can create the cube that is used in these examples by following the Analysis Services tutorial up to Lesson 4:
-[Creating an OLAP Cube](https://msdn.microsoft.com/library/ms170208.aspx)
+[Creating an OLAP Cube](../../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)
 
 You can also download an existing cube as a backup, and restore it to an instance of Analysis Services. For example, you can download a fully processed cube for [Adventure Works Multidimensional Model SQL 2014](http://msftdbprodsamples.codeplex.com/downloads/get/882334), in zipped format, and restore it to your SSAS instance. For more information, see [Backup and Restore](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md), or [Restore-ASDatabase Cmdlet](../../analysis-services/powershell/restore-asdatabase-cmdlet.md).
 

@@ -14,9 +14,9 @@ applies_to:
   - "SQL Server"
 ms.assetid: 48ca32fc-1830-4d1f-add7-480ba5ad02e8
 caps.latest.revision: 6
-author: "sabotta"
-ms.author: "carlasab"
-manager: "lonnyb"
+author: "Shamikg"
+ms.author: "Shamikg"
+manager: "jhubbard"
 ---
 # Getting Started with SSMA for DB2 (DB2ToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) for DB2 lets you quickly convert DB2 database schemas to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] schemas, upload the resulting schemas into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] and migrate data from DB2 to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  

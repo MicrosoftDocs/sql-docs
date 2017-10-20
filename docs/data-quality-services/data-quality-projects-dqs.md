@@ -54,7 +54,7 @@ manager: "jhubbard"
 |Task Description|Topic|  
 |----------------------|-----------|  
 |Describes how to create a data quality project.|[Create a Data Quality Project](../data-quality-services/create-a-data-quality-project.md)|  
-|Describes how to open, unlock, rename, and delete a data quality project.|[Open, Unlock, Rename, and Delete a Data Quality Project](https://msdn.microsoft.com/library/hh510417.aspx)|  
+|Describes how to open, unlock, rename, and delete a data quality project.|[Open, Unlock, Rename, and Delete a Data Quality Project](open-unlock-rename-and-delete-a-data-quality-project.md)|  
 |Describes how to open an Integration Services project in [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)].|[Open Integration Services Projects in Data Quality Client](../data-quality-services/open-integration-services-projects-in-data-quality-client.md)|  
   
 ## See Also  

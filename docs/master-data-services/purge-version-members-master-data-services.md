@@ -12,9 +12,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: adecce2d-46bb-49ff-8be9-0b31b8dd3cb6
 caps.latest.revision: 7
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
+author: "smartysanthosh"
+ms.author: "nagavo"
+manager: "craigg"
 ---
 # Purge Version Members (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], deleting a member only deactivates, or soft-deletes, it. The  data still resides in the database. This topic describes how to purge (permanently delete) all soft-deleted members in a model version.  

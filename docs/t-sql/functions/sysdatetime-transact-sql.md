@@ -48,8 +48,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 SYSDATETIME ( )  
 ```  
   
@@ -129,9 +127,10 @@ SELECT SYSDATETIME();
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `--------------------------`  
-  
- `7/20/2013 2:49:59 PM`  
+ ```
+--------------------------  
+7/20/2013 2:49:59 PM
+```  
   
 ## See Also  
  [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   

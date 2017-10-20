@@ -2,7 +2,7 @@
 title: "Web portal (SSRS Native Mode) | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "05/15/2017"
+ms.date: "07/02/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -18,7 +18,7 @@ manager: "erikre"
 ---
 # Web portal (SSRS Native Mode)
 
-[!INCLUDE[ssrs-appliesto-sql2016-preview](../includes/ssrs-appliesto-sql2016-preview.md)]
+[!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
 The Reporting Services web portal is a web-based experience which allows you to view reports, mobile reports, KPIs, and navigate through the elements that are in your report server instance. You can also use the web portal to administer a single report server instance.
 

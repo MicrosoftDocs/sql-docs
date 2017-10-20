@@ -37,7 +37,7 @@ The new, scalable packages and R functions included with [!INCLUDE[rsql_productn
 
 ## What's Different about RevoScaleR?
 
-The **RevoScaleR** package contains implementations of some of the most popular R functions, which have been redesigned to provide parallelism and scale. For more information, see [Distributed Computing using RevoScaleR](https://msdn.microsoft.com/microsoft-r/scaler-distributed-computing)...
+The **RevoScaleR** package contains implementations of some of the most popular R functions, which have been redesigned to provide parallelism and scale. For more information, see [Distributed Computing using RevoScaleR](https://msdn.microsoft.com/microsoft-r/scaler-distributed-computing).
 
 The RevoScaleR package also provides support for changing *execution context*. What this means is that, for an entire solution or for just one function, you can indicate that computations should be performed using the resources of the computer that hosts the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance, rather than your local workstation. There are multiple advantages to doing this: you avoid unnecessary data movement, and you can leverage greater computation resources on the server computer.
 
@@ -61,7 +61,7 @@ In addition to the proprietary R libraries included with Microsoft Machine Learn
   
      The **RevoPemaR** package lets you develop your own parallel external memory algorithms in R.  
   
-     For more information about these packages and how to use them, see Get started with ScaleR and data analysis](https://msdn.microsoft.com/microsoft-r/scaler-getting-started).  
+     For more information about these packages and how to use them, see [What is RevoScaleR](https://msdn.microsoft.com/microsoft-r/scaler-user-guide-introduction) and [Get started with RevoPemaR](https://msdn.microsoft.com/microsoft-r/pemar-getting-started). 
 
 + **MicrosoftML** contains a collection of highly optimized machine learning algorithms and data transformations from the Microsoft Data Science team. Many of the algorithms are also used in Azure Machine Learning. For more information, see [Using the MicrosoftML Package](../../advanced-analytics/using-the-microsoftml-package.md).
 

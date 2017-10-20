@@ -1,7 +1,7 @@
 ---
 title: "STUFF (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/13/2017"
+ms.date: "09/07/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -38,8 +38,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 STUFF ( character_expression , start , length , replaceWith_expression )  
 ```  
   
@@ -54,37 +52,20 @@ STUFF ( character_expression , start , length , replaceWith_expression )
  Is an integer that specifies the number of characters to delete. If *length* is longer than the first *character_expression*, deletion occurs up to the last character in the last *character_expression*. *length* can be of type **bigint**.  
   
  *replaceWith_expression*  
- Is an [expression](../../t-sql/language-elements/expressions-transact-sql.md) of character data. *character_expression* can be a constant, variable, or column of either character or binary data. This expression will replace *length* characters of *character_expression* beginning at *start*.  
+ Is an [expression](../../t-sql/language-elements/expressions-transact-sql.md) of character data. *character_expression* can be a constant, variable, or column of either character or binary data. This expression replaces *length* characters of *character_expression* beginning at *start*. Providing `NULL` as the *replaceWith_expression*, removes characters without inserting anything.   
   
 ## Return Types  
  Returns character data if *character_expression* is one of the supported character data types. Returns binary data if *character_expression* is one of the supported binary data types.  
   
 ## Remarks  
  If the start position or the length is negative, or if the starting position is larger than length of the first string, a null string is returned. If the start position is 0, a null value is returned. If the length to delete is longer than the first string, it is deleted to the first character in the first string.  
-  
- An error is raised if the resulting value is larger than the maximum supported by the return type.  
+
+An error is raised if the resulting value is larger than the maximum supported by the return type.  
   
 ## Supplementary Characters (Surrogate Pairs)  
- When using SC collations, both *character_expression* and *replaceWith_expression* can include surrogate pairs. The length parameter will count each surrogate in *character_expression* as a single character.  
+ When using SC collations, both *character_expression* and *replaceWith_expression* can include surrogate pairs. The length parameter counts each surrogate in *character_expression* as a single character.  
   
 ## Examples  
- The following example returns a character string created by deleting three characters from the first string, `abcdef`, starting at position `2`, at `b`, and inserting the second string at the deletion point.  
-  
-```  
-SELECT STUFF('abcdef', 2, 3, 'ijklmn');  
-GO  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
-```  
----------   
-aijklmnef   
-  
-(1 row(s) affected)  
-```  
-  
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  The following example returns a character string created by deleting three characters from the first string, `abcdef`, starting at position `2`, at `b`, and inserting the second string at the deletion point.  
   
 ```  
@@ -104,6 +85,3 @@ aijklmnef
 ## See Also  
  [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [String Functions &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
-  
-  
-

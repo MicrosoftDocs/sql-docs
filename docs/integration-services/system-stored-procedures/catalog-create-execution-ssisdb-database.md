@@ -24,40 +24,40 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```tsql  
-create_execution [ @folder_name = folder_name  
-     , [ @project_name = ] project_name  
-     , [ @package_name = ] package_name  
-  [  , [ @reference_id = ] reference_id ]  
-  [  , [ @use32bitruntime = ] use32bitruntime ] 
-  [  , [ @runincluster = ] runincluster ]
-  [  , [ @useanyworker = ] useanyworker ] 
-     , [ @execution_id = ] execution_id OUTPUT  
+```sql  
+create_execution [@folder_name = folder_name  
+     , [@project_name =] project_name  
+     , [@package_name =] package_name  
+  [  , [@reference_id =] reference_id ]  
+  [  , [@use32bitruntime =] use32bitruntime ] 
+  [  , [@runinscaleout =] runinscaleout ]
+  [  , [@useanyworker =] useanyworker ] 
+     , [@execution_id =] execution_id OUTPUT  
 ```  
   
 ## Arguments  
- [ @folder_name = ] *folder_name*  
+ [@folder_name =] *folder_name*  
  The name of the folder that contains the package that is to be executed. The *folder_name* is **nvarchar(128)**.  
   
- [ @project_name = ] *project_name*  
+ [@project_name =] *project_name*  
  The name of the project that contains the package that is to be executed. The *project_name* is **nvarchar(128)**.  
   
- [ @package_name = ] *package_name*  
+ [@package_name =] *package_name*  
  The name of the package that is to be executed. The *package_name* is **nvarchar(260)**.  
   
- [ @reference_id = ] *reference_id*  
+ [@reference_id =] *reference_id*  
  A unique identifier for an environment reference. This parameter is optional. The *reference_id* is **bigint**.  
   
- [ @use32bitruntime = ] *use32bitruntime*  
+ [@use32bitruntime =] *use32bitruntime*  
  Indicates if the 32-bit runtime should be used to run the package on a 64-bit operating system. Use the value of 1 to execute the package with the 32-bit runtime when running on a 64-bit operating system. Use the value of 0 to execute the package with the 64-bit runtime when running on a 64-bit operating system. This parameter is optional. The *Use32bitruntime* is **bit**.  
  
- [ @runincluster = ] *runincluster*  
- Indicate whether the execution is in Scale Out. Use the value of 1 to execute the package in Scale Out. Use the value of 0 to execute the package without Scale Out. This parameter is optional. It is set to 0, if not specified. The *runincluster* is **bit**. 
+ [@runinscaleout =] *runinscaleout*  
+ Indicate whether the execution is in Scale Out. Use the value of 1 to execute the package in Scale Out. Use the value of 0 to execute the package without Scale Out. This parameter is optional. If not specified, its value is set to DEFAULT_EXECUTION_MODE in [SSISDB].[catalog].[catalog_properties]. The *runinscaleout* is **bit**. 
  
- [ @useanyworker = ] *useanyworker*  
-  Indicate whether any Scale Out Worker is allowed to do the execution. Use the value of 1 to execute the package with any Scale Out Worker. Use the value of 0 to indicate that not all Scale Out Workers are allowed to execute the package. This parameter is optional. It is set to 1, if not specified. The *useanyworker* is **bit**. 
+ [@useanyworker =] *useanyworker*  
+  Indicate whether any Scale Out Worker is allowed to do the execution. Use the value of 1 to execute the package with any Scale Out Worker. Use the value of 0 to indicate that not all Scale Out Workers are allowed to execute the package. This parameter is optional. If not specified, its value is set to 1. The *useanyworker* is **bit**. 
   
- [ @execution_id = ] *execution_id*  
+ [@execution_id =] *execution_id*  
  Returns the unique identifier for an instance of execution. The *execution_id* is **bigint**.  
 
   
@@ -101,7 +101,7 @@ GO
   
 -   Membership to the **sysadmin** server role  
 
- If @runincluster is 1, the stored procedure requires one of the following permissions:
+ If @runinscaleout is 1, the stored procedure requires one of the following permissions:
  
 -   Membership to the **ssis_admin** database role
 

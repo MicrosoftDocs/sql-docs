@@ -1,23 +1,24 @@
 ---
-title: "Perform Index Operations Online | Microsoft Docs"
+title: Perform Index Operations Online | Microsoft Docs
 ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
+ms.date: 02/17/2017
+ms.prod: sql-non-specified
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
+ms.technology: dbe-indexes
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: article
 helpviewer_keywords: 
   - "index online operations [SQL Server]"
   - "online index operations"
   - "ONLINE option"
 ms.assetid: 1e43537c-bf67-4db3-9908-3cb45c6fdaa1
 caps.latest.revision: 32
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.suite: SQL
+ms.prod_service: database engine, sql database, sql data warehouse
+ms.component: indexes
 ---
 # Perform Index Operations Online
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

@@ -55,10 +55,10 @@ RESTORE DATABASE AdventureWorksPDW2012
 ```  
   
 ## See Also  
-[BACKUP DATABASE](https://msdn.microsoft.com/library/mt631607.aspx)  
-[CREATE MASTER KEY](https://msdn.microsoft.com/library/ms174382.aspx) 
-[sp_pdw_add_network_credentials](https://msdn.microsoft.com/library/mt204011.aspx)  
-[sp_pdw_database_encryption](https://msdn.microsoft.com/library/mt219360.aspx)  
-[CREATE CERTIFICATE](https://msdn.microsoft.com/library/ms187798.aspx)  
-[RESTORE DATABASE](https://msdn.microsoft.com/library/mt631612.aspx)
+[BACKUP DATABASE](https://docs.microsoft.com/sql/t-sql/statements/backup-database-parallel-data-warehouse)  
+[CREATE MASTER KEY](https://docs.microsoft.com/sql/t-sql/statements/create-master-key-transact-sql) 
+[sp_pdw_add_network_credentials](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse)  
+[sp_pdw_database_encryption](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse)  
+[CREATE CERTIFICATE](https://docs.microsoft.com/sql/t-sql/statements/create-certificate-transact-sql)  
+[RESTORE DATABASE](https://docs.microsoft.com/sql/t-sql/statements/restore-database-parallel-data-warehouse)
   

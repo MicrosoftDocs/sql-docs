@@ -1,5 +1,5 @@
-# [Data Source Information Properties](data-source-information-properties.md)
 # [Data Source Objects (OLE DB)](data-source-objects-ole-db.md)
+# [Data Source Information Properties](data-source-information-properties.md)
 # [Data Source Properties (OLE DB)](data-source-properties-ole-db.md)
 # [Initialization and Authorization Properties](initialization-and-authorization-properties.md)
 # [Persisted Data Source Objects](persisted-data-source-objects.md)

@@ -8,6 +8,8 @@ ms.technology:
   - "integration-services"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
+f1_keywords: 
+  - "sql13.dts.designer.excelconnection.f1"
 helpviewer_keywords: 
   - "files [Integration Services], connections"
   - "connections [Integration Services], Excel"
@@ -49,6 +51,43 @@ manager: "jhubbard"
  For information about configuring a connection manager programmatically, see <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> and [Adding Connections Programmatically](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md).  
   
  For information about looping through a group of Excel files, see [Loop through Excel Files and Tables by Using a Foreach Loop Container](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md).  
+  
+## Excel Connection Manager Editor
+  Use the **Excel Connection Manager Editor** dialog box to add a connection to an existing or a new [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] workbook file.  
+  
+ To learn more about the Excel connection manager, see [Excel Connection Manager](../../integration-services/connection-manager/excel-connection-manager.md).  
+  
+### Options  
+ **Excel file path**  
+ Type the path and file name of an existing or a new Excel workbook file (.xls).  
+  
+> [!NOTE]  
+>  You cannot connect to a password-protected Excel file.  
+  
+> [!WARNING]  
+>  The **Excel Destination Editor** automatically creates the Excel file when you select an **Excel Connection** that points to a new or non-existent file and then click **New** for **Name of the Excel Sheet**.  
+  
+ **Browse**  
+ Use the **Open** dialog box to navigate to the folder in which the excel file exists or where you want to create the new file.  
+  
+ **Excel version**  
+ Specify the version of Microsoft Excel that was used to create the file.  
+  
+ **First row has column names**  
+ Specify whether the first row of data in the selected worksheet contains column names. The default value of this option is **True**.  
+  
+## Connectivity components for Microsoft Excel and Access files
+  
+You may have to download the connectivity components for Microsoft Office files if they're not already installed. Download the latest version of the connectivity components for both Excel and Access files here:
+[Microsoft Access Database Engine 2016 Redistributable](https://www.microsoft.com/download/details.aspx?id=54920).
+  
+The latest version of the components can open files created by earlier versions of Excel.
+
+If the computer has a 32-bit version of Office, then you have to install the 32-bit version of the components, and you also have to ensure that you run the package in 32-bit mode.
+
+If you have an Office 365 subscription, make sure that you download the Access Database Engine 2016 Redistributable and not the Microsoft Access 2016 Runtime. When you run the installer, you may see an error message that you can't install the download side-by-side with Office click-to-run components. To bypass this error message, run the installation in quiet mode by opening a Command Prompt window and running the .EXE file that you downloaded with the `/quiet` switch. For example:
+
+`C:\Users\<user name>\Downloads\AccessDatabaseEngine.exe /quiet`
   
 ## Related Tasks  
   

@@ -33,7 +33,9 @@ The Linux and macOS drivers are available only for the 64-bit versions of the fo
 - Debian Linux 8
 - RedHat Enterprise Linux 6
 - RedHat Enterprise Linux 7
+- SuSE Linux Enterprise Server 11
 - SuSE Linux Enterprise Server 12
+- Ubuntu Linux 14.04
 - Ubuntu Linux 15.10
 - Ubuntu Linux 16.04
 - Ubuntu Linux 16.10
@@ -74,4 +76,3 @@ The installation packages for the [!INCLUDE[msCoName](../../../includes/msconame
 [Known Issues in this Version of the Driver](../../../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md)  
 
 [Release Notes](../../../connect/odbc/linux-mac/release-notes.md)  
-

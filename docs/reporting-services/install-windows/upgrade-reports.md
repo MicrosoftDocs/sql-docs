@@ -40,7 +40,7 @@ manager: "erikre"
   
  After a report is upgraded locally or on the report server, you might notice additional errors, warnings, and messages. This is the result of changes to the internal report object model and processing components, which cause messages to appear when underlying problems in the report are detected. For more information, see [Reporting Services Backward Compatibility][](../../reporting-services/reporting-services-backward-compatibility.md "Backward Compatibility | Reporting Services").  
   
- For more information about new features for [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)], see [What's New in Reporting Services](https://msdn.microsoft.com/library/ms170438.aspx).  
+ For more information about new features for [!INCLUDE[ssRSCurrent](../what-s-new-in-sql-server-reporting-services-ssrs.md).  
 
 ##  <a name="bkmk_versionsupported"></a> Versions Supported by Upgrade  
  Reports that were created in any previous version of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] can be upgraded. This includes the following versions:  

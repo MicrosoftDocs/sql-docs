@@ -34,7 +34,7 @@ manager: "jhubbard"
  To discover what is preventing log truncation in a given case, use the **log_reuse_wait** and **log_reuse_wait_desc** columns of the **sys.database** catalog view. For more information, see [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md). For descriptions of factors that can delay log truncation, see [The Transaction Log &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
   
 > **IMPORTANT!!**  
->  If the database was in recovery when the 9002 error occurred, after resolving the problem, recover the database by using [ALTER DATABASE *database_name* SET ONLINE.](https://msdn.microsoft.com/library/bb522682.aspx)  
+>  If the database was in recovery when the 9002 error occurred, after resolving the problem, recover the database by using [ALTER DATABASE *database_name* SET ONLINE.](../../t-sql/statements/alter-database-transact-sql-set-options.md)  
   
  Alternatives for responding to a full transaction log include:  
   
@@ -98,14 +98,14 @@ manager: "jhubbard"
 ## Complete or kill a long-running transaction
 ### Discovering long-running transactions
 A very long-running transaction can cause the transaction log to fill. To look for long-running transactions, use one of the following:
- - **[sys.dm_tran_database_transactions](https://msdn.microsoft.com/library/ms186957.aspx).**
-This dynamic management view returns information about transactions at the database level. For a long-running transaction, columns of particular interest include the time of the first log record [(database_transaction_begin_time)](https://msdn.microsoft.com/library/ms186957.aspx), the current state of the transaction [(database_transaction_state)](https://msdn.microsoft.com/library/ms186957.aspx), and the [log sequence number (LSN)](https://msdn.microsoft.com/library/ms191459.aspx) of the begin record in the transaction log [(database_transaction_begin_lsn)](https://msdn.microsoft.com/library/ms186957.aspx).
+ - **[sys.dm_tran_database_transactions](../system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md).**
+This dynamic management view returns information about transactions at the database level. For a long-running transaction, columns of particular interest include the time of the first log record [(database_transaction_begin_time)](../system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md), the current state of the transaction [(database_transaction_state)](../system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md), and the [log sequence number (LSN)](../backup-restore/recover-to-a-log-sequence-number-sql-server.md) of the begin record in the transaction log [(database_transaction_begin_lsn)](../system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md).
 
- - **[DBCC OPENTRAN](https://msdn.microsoft.com/library/ms182792.aspx).**
+ - **[DBCC OPENTRAN](../../t-sql/database-console-commands/dbcc-opentran-transact-sql.md).**
 This statement lets you identify the user ID of the owner of the transaction, so you can potentially track down the source of the transaction for a more orderly termination (committing it rather than rolling it back).
 
 ### Kill a transaction
-Sometimes you just have to end the process; you may have to use the [KILL](https://msdn.microsoft.com/library/ms173730.aspx) statement. Please use this statement very carefully,  especially when critical processes are running that you don't want to kill. For more information, see [KILL (Transact-SQL)](https://msdn.microsoft.com/library/ms173730.aspx)
+Sometimes you just have to end the process; you may have to use the [KILL](../../t-sql/language-elements/kill-transact-sql.md) statement. Please use this statement very carefully,  especially when critical processes are running that you don't want to kill. For more information, see [KILL (Transact-SQL)](../../t-sql/language-elements/kill-transact-sql.md)
 
 ## See also  
 [KB support article - A transaction log grows unexpectedly or becomes full in SQL Server](https://support.microsoft.com/en-us/kb/317375)

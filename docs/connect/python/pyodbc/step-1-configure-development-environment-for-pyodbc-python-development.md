@@ -1,7 +1,7 @@
 ---
 title: "Step 1: Configure pyodbc Python development environment | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "08/08/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -16,8 +16,9 @@ ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Step 1: Configure development environment for pyodbc Python development
-  ## Windows  
-  Connect to SQL Database by using Python - pyodbc on Windows
+
+## Windows  
+Connect to SQL Database by using Python - pyodbc on Windows:
   
 1. **Download Python installer**  
   If your machine does not have Python please install it. Go the [Python download page](https://www.python.org/downloads/windows/) and download the appropriate installer. For example if you are on a 64 bit machine, download the Python 2.7 or 3.5 (x64) installer.  
@@ -28,9 +29,7 @@ b. Select your language, and agree to the terms.
 c. Follow the instructions on the screen and Python should be installed on your computer. 
 d. You can verify that is Python is installed by going to C:\Python27 or C:\Python35 and run python -v or py -v(for 3.x) 
       
-3. **Install the Microsoft ODBC Driver 11, 13**  
-a. For [v11](https://www.microsoft.com/en-us/download/details.aspx?id=36434) 
-b. For [v13](https://www.microsoft.com/en-us/download/details.aspx?id=50420)
+3. [**Install the Microsoft ODBC Driver**](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
   
 4. **Open cmd.exe as an administrator**     
 
@@ -42,7 +41,7 @@ b. For [v13](https://www.microsoft.com/en-us/download/details.aspx?id=50420)
 
   
 ## Linux 
-Connect to SQL Database by using Python - pyodbc on Ubuntu and RedHat 
+Connect to SQL Database by using Python - pyodbc on Ubuntu and RedHat:
   
 1. **Open terminal**  
 
@@ -64,6 +63,4 @@ Connect to SQL Database by using Python - pyodbc on Ubuntu and RedHat
 3.  **Install pyodbc**  
 ```  
 > sudo -H pip install pyodbc
-```  
-
-  
+```

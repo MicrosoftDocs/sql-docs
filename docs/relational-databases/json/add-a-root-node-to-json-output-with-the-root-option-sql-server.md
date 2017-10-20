@@ -16,7 +16,7 @@ ms.assetid: b9afa74a-f59f-483e-a178-42be2e9882c9
 caps.latest.revision: 16
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
 ---
 # Add a Root Node to JSON Output with the ROOT Option (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

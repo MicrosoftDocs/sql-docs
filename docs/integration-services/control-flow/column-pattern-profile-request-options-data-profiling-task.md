@@ -30,7 +30,7 @@ manager: "jhubbard"
   
 -   **Delimiters** By default, the list of delimiters contains the following characters: space, horizontal tab (\t), new line (\n), and carriage return (\r). You can specify additional delimiters, but you cannot remove the default delimiters.  
   
--   **Symbols** By default, the list of **Symbols** contains the following characters: `,.;:-"'`~=&/@!?()<>[]{}|#*^%`. For example, if the symbols are "`()-`", the value "(425) 123-4567" is tokenized as ["(", "425", ")", "123", "-", "4567", ")"].  
+-   **Symbols** By default, the list of **Symbols** contains the following characters: `,.;:-"'~=&/@!?()<>[]{}|#*^%` as well as the tick mark. For example, if the symbols are "`()-`", the value "(425) 123-4567" is tokenized as ["(", "425", ")", "123", "-", "4567", ")"].  
   
  A character cannot be both a delimiter and a symbol.  
   
@@ -126,7 +126,7 @@ manager: "jhubbard"
  For more information, see "Understanding the Use of Delimiters and Symbols" earlier in this topic.  
   
  **Symbols**  
- List the symbols that should be retained as part of patterns. Examples might include "/" for dates, ":" for times, and "@" for e-mail addresses. By default, the list of **Symbols** contains the following characters: `,.;:-"'`~=&/@!?()<>[]{}|#*^%`.  
+ List the symbols that should be retained as part of patterns. Examples might include "/" for dates, ":" for times, and "@" for e-mail addresses. By default, the list of **Symbols** contains the following characters: `,.;:-"'~=&/@!?()<>[]{}|#*^%`.  
   
  For more information, see "Understanding the Use of Delimiters and Symbols" earlier in this topic.  
   

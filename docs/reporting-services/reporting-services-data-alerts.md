@@ -1,7 +1,7 @@
 ---
 title: "Reporting Services Data Alerts | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/10/2017"
+ms.date: "07/02/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -18,18 +18,21 @@ manager: "erikre"
 ---
 # Reporting Services Data Alerts
 
-[!INCLUDE[ssrs-appliesto-sql2016-xpreview](../includes/ssrs-appliesto-sql2016-xpreview.md)][!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
+[!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] data alerts are a data driven alerting solution that helps you be informed about report data that is interesting or important to you, and at a relevant time. By using data alerts you no longer have to seek out information, it comes to you.  
-  
- Data alert messages are sent by email. Depending on the importance of the information, you can choose to send messages more or less frequently and only when results change. You can specify multiple email recipients and this way keep others informed to enhance efficiency and collaboration.  
+[!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]
+
+SQL Server Reporting Services data alerts are a data driven alerting solution that helps you be informed about report data that is interesting or important to you, and at a relevant time. By using data alerts you no longer have to seek out information, it comes to you.
+
+Data alert messages are sent by email. Depending on the importance of the information, you can choose to send messages more or less frequently and only when results change. You can specify multiple email recipients and this way keep others informed to enhance efficiency and collaboration.
 
 > [!NOTE]
 > Reporting Services integration with SharePoint is no longer available after SQL Server 2016.
-  
-##  <a name="AlertingWF"></a> Data Alerts Architecture and Workflow  
- The following summarizes the key areas of [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] data alerts:  
-  
+
+##  <a name="AlertingWF"></a> Data Alerts Architecture and Workflow
+
+The following summarizes the key areas of [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] data alerts:
+
 -   **Define and save data alert definitions**—you run a report, create rules that identify interesting data values, define a recurrence pattern for sending the data alert message, and specify the recipients of the alert message.  
   
 -   **Run data alert definitions**—Alerting service processes alert definitions at a scheduled time, retrieves report data, creates data alert instances based on rules in the alert definition.  

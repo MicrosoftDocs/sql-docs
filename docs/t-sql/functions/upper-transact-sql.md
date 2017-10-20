@@ -37,8 +37,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 UPPER ( character_expression )  
 ```  
   
@@ -52,16 +50,6 @@ UPPER ( character_expression )
  **varchar** or **nvarchar**  
   
 ## Examples  
- The following example uses the `UPPER` and `RTRIM` functions to return the last name of people in the `Person` table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database so that it is uppercase, trimmed, and concatenated with the first name.  
-  
-```  
-SELECT UPPER(RTRIM(LastName)) + ', ' + FirstName AS Name  
-FROM Person.Person  
-ORDER BY LastName;  
-GO  
-```  
-  
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  The following example uses the `UPPER` and `RTRIM` functions to return the last name of people in the `dbo.DimEmployee` table so that it is in uppercase, trimmed, and concatenated with the first name.  
   
 ```  
@@ -74,15 +62,13 @@ ORDER BY LastName;
   
  Here is a partial result set.  
   
- `Name`  
-  
- `------------------------------`  
-  
- `ABBAS, Syed`  
-  
- `ABERCROMBIE, Kim`  
-  
- `ABOLROUS, Hazem`  
+ ```
+Name
+------------------------------
+ABBAS, Syed
+ABERCROMBIE, Kim
+ABOLROUS, Hazem
+ ```  
   
 ## See Also  
  [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   

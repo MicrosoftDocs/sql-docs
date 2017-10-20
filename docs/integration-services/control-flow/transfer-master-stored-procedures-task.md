@@ -11,6 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 f1_keywords: 
   - "sql13.dts.designer.transfermasterspstask.f1"
+  - "sql13.dts.designer.transferstoredprocedurestask.general.f1"
+  - "sql13.dts.designer.transferstoredprocedurestask.storedprocedures.f1"
 helpviewer_keywords: 
   - "Transfer Master Stored Procedures task [Integration Services]"
 ms.assetid: 81702560-48a3-46d1-a469-e41304c7af8e
@@ -60,11 +62,7 @@ manager: "jhubbard"
 ## Configuration of the Transfer Master Stored Procedures Task  
  You can set properties through [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer or programmatically.  
   
- For information about the properties that you can set in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click one of the following topics:  
-  
--   [Transfer Master Stored Procedures Task Editor &#40;General Page&#41;](../../integration-services/control-flow/transfer-master-stored-procedures-task-editor-general-page.md)  
-  
--   [Transfer Master Stored Procedures Task Editor &#40;Stored Procedures Page&#41;](../../integration-services/control-flow/transfer-master-stored-procedures-task-editor-stored-procedures-page.md)  
+ For information about the properties that you can set in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click the following topic:  
   
 -   [Expressions Page](../../integration-services/expressions/expressions-page.md)  
   
@@ -78,6 +76,57 @@ manager: "jhubbard"
  For more information about how to set these properties in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click the following topic:  
   
 -   [Set the Properties of a Task or Container](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+  
+## Transfer Master Stored Procedures Task Editor (General Page)
+  Use the **General** page of the **Transfer Master Stored Procedures Task Editor** dialog box to name and describe the Transfer Master Stored Procedures task.  
+  
+> [!NOTE]  
+>  This task transfers only user-defined stored procedures owned by **dbo** from a **master** database on the source server to a **master** database on the destination server. Users must be granted the CREATE PROCEDURE permission in the **master** database on the destination server or be members of the **sysadmin** fixed server role on the destination server to create stored procedures there.  
+  
+### Options  
+ **Name**  
+ Type a unique name for the Transfer Master Stored Procedures task. This name is used as the label in the task icon.  
+  
+> [!NOTE]  
+>  Task names must be unique within a package.  
+  
+ **Description**  
+ Type a description of the Transfer Master Stored Procedures task.  
+  
+## Transfer Master Stored Procedures Task Editor (Stored Procedures Page)
+  Use the **Stored Procedures** page of the **Transfer Master Stored Procedures Task Editor** dialog box to specify properties for copying one or more user-defined stored procedures from the **master** database in one instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance to a **master** database in another instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  
+> [!NOTE]  
+>  This task transfers only user-defined stored procedures owned by **dbo** from a **master** database on the source server to a **master** database on the destination server. Users must be granted the CREATE PROCEDURE permission in the **master** database on the destination server or be members of the **sysadmin** fixed server role on the destination server to create stored procedures there.  
+  
+### Options  
+ **SourceConnection**  
+ Select a SMO connection manager in the list, or click **\<New connection...>** to create a new connection to the source server.  
+  
+ **DestinationConnection**  
+ Select a SMO connection manager in the list, or click **\<New connection...>** to create a new connection to the destination server.  
+  
+ **IfObjectExists**  
+ Select how the task should handle user-defined stored procedures of the same name that already exist in the **master** database on the destination server.  
+  
+ This property has the options listed in the following table:  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**FailTask**|Task fails if stored procedures of the same name already exist in the **master** database on the destination server.|  
+|**Overwrite**|Task overwrites stored procedures of the same name in the **master** database on the destination server.|  
+|**Skip**|Task skips stored procedures of the same name that exist in the **master** database on the destination server.|  
+  
+ **TransferAllStoredProcedures**  
+ Select whether all user-defined stored procedures in the **master** database on the source server should be copied to the destination server.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**True**|Copy all user-defined stored procedures in the **master** database.|  
+|**False**|Copy only the specified stored procedures.|  
+  
+ **StoredProceduresList**  
+ Select which user-defined stored procedures in the **master** database on the source server should be copied to the destination **master** database. This option is only available when **TransferAllStoredProcedures** is set to **False**.  
   
 ## See Also  
  [Transfer SQL Server Objects Task](../../integration-services/control-flow/transfer-sql-server-objects-task.md)   

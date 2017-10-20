@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "SOAP [Reporting Services], Windows applications"
 ms.assetid: e4804792-20cd-4df2-9257-fb958ff447b4
 caps.latest.revision: 35
-author: "sabotta"
-ms.author: "carlasab"
+author: "guyinacube"
+ms.author: "asaxton"
 manager: "erikre"
 ---
 # Integrating Reporting Services Using SOAP - Windows Application

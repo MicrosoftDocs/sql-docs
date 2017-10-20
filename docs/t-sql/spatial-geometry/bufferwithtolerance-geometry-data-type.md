@@ -1,7 +1,7 @@
 ---
 title: "BufferWithTolerance (geometry Data Type) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "08/03/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -25,11 +25,7 @@ manager: "jhubbard"
 # BufferWithTolerance (geometry Data Type)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Returns a geometric object that represents the union of all point values whose distance from a **geometry** instance is less than or equal to a specified value, allowing for a specified tolerance.  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
+Returns a geometric object that represents the union of all point values whose distance from a **geometry** instance is less than or equal to a specified value, allowing for a specified tolerance.
   
 ## Syntax  
   
@@ -98,3 +94,4 @@ SELECT @g.BufferWithTolerance(1, .5, 0).ToString();
  [Extended Methods on Geometry Instances](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
   
   
+

@@ -11,9 +11,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 75250b32-3384-43c2-9b5c-1607cc3aa7b3
 caps.latest.revision: 10
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
+author: "smartysanthosh"
+ms.author: "nagavo"
+manager: "craigg"
 ---
 # Change the Entity Transaction Log Type (Master Data Services)
   You can change the transaction log type of an entity, to attribute, member, or none.  

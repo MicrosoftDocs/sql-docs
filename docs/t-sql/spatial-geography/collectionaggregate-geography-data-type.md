@@ -1,7 +1,7 @@
 ---
 title: "CollectionAggregate (geography Data Type) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "07/30/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -22,11 +22,7 @@ manager: "jhubbard"
 # CollectionAggregate (geography Data Type)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Creates a **GeometryCollection** instance from a set of **geography** objects.  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [current version](http://msdn.microsoft.com/library/bb500435.aspx)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
+Creates a **GeometryCollection** instance from a set of **geography** objects.
   
 ## Syntax  
   
@@ -56,15 +52,13 @@ ConvexHullAggregate ( geography_operand )
 ## Examples  
  The following example returns a `GeometryCollection` instance that contains a set of **geography** objects.  
   
- `USE AdventureWorks2012`  
-  
- `GO`  
-  
- `SELECT geography::CollectionAggregate(SpatialLocation).ToString() AS SpatialLocation`  
-  
- `FROM Person.Address`  
-  
- `WHERE City LIKE ('Bothell')`  
+ ```
+ USE AdventureWorks2012  
+ GO  
+ SELECT geography::CollectionAggregate(SpatialLocation).ToString() AS SpatialLocation  
+ FROM Person.Address  
+ WHERE City LIKE ('Bothell')
+ ```  
   
 ## See Also  
  [Extended Static Geography Methods](../../t-sql/spatial-geography/extended-static-geography-methods.md)  

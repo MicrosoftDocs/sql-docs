@@ -19,7 +19,7 @@ manager: "erikre"
 ---
 # Integrating Reporting Services Using ReportViewer Controls - Get Started
 
-Learn how developers can embed paginated reports in ASP.Net web sites, and Windows forms apps, through the Reporting Services 2016 ReportViewer Control. You can add the control to a new project, or update an existing project.
+Learn how developers can embed paginated reports in ASP.NET web sites, and Windows Forms apps, through the Reporting Services 2016 ReportViewer Control. You can add the control to a new project, or update an existing project.
 
 ## Adding the ReportViewer control to a new web project
 
@@ -30,7 +30,7 @@ Learn how developers can embed paginated reports in ASP.Net web sites, and Windo
 2. Install the ReportViewer 2016 control nuget package via the **Nuget package manager console**.
 
     ```
-    Install-Package Microsoft.ReportingServices.ReportViewerControl.WebForms -Pre
+    Install-Package Microsoft.ReportingServices.ReportViewerControl.WebForms
     ```
 3. Add a new .aspx page to the project and register the ReportViewer control assembly for use within the page.
 
@@ -136,7 +136,7 @@ To make use of the ReportViewer 2016 control in an existing project, add the con
 <!DOCTYPE html>
 ```
 
-## Adding the ReportViewer control to a new Windows forms project
+## Adding the ReportViewer control to a new Windows Forms project
 
 1. Create a new **Windows Forms Application** or open an existing project.
 
@@ -145,7 +145,7 @@ To make use of the ReportViewer 2016 control in an existing project, add the con
 2. Install the ReportViewer 2016 control nuget package via the **Nuget package manager console**.
 
     ```
-    Install-Package Microsoft.ReportingServices.ReportViewerControl.WinForms -Pre
+    Install-Package Microsoft.ReportingServices.ReportViewerControl.WinForms
     ```
 3. Add a new control from code or [add the control to the toolbox](##adding-control-to-visual-studio-toolbar).
 

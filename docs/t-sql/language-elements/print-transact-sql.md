@@ -37,8 +37,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-
 PRINT msg_str | @local_variable | string_expr  
 ```  
   
@@ -107,26 +105,6 @@ IF DB_ID() = 1
     PRINT N'The current database is master.';  
 ELSE  
     PRINT N'The current database is not master.';  
-GO  
-```  
-  
-### D. Building and displaying a string  
- The following example converts the results of the `GETDATE` function to a `nvarchar` data type and concatenates it with literal text to be returned by `PRINT`.  
-  
-```  
--- Build the message text by concatenating  
--- strings and expressions.  
-PRINT N'This message was printed on '  
-    + RTRIM(CAST(GETDATE() AS nvarchar(30)))  
-    + N'.';  
-GO  
--- This example shows building the message text  
--- in a variable and then passing it to PRINT.  
-DECLARE @PrintMessage nvarchar(50);  
-SET @PrintMessage = N'This message was printed on '  
-    + RTRIM(CAST(GETDATE() AS nvarchar(30)))  
-    + N'.';  
-PRINT @PrintMessage;  
 GO  
 ```  
   

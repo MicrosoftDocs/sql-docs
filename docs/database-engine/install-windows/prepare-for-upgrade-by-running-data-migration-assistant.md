@@ -17,9 +17,9 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # Prepare for upgrade by running Data Migration Assistant
-  Prepare to upgrade your OLTP databases and to adopt new features in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] by downloading and running Microsoft Data Migration Assistant.  
+  Prepare to upgrade your OLTP databases and to adopt new features in [!INCLUDE[ssnover](../../includes/ssnoversion-md.md)] by downloading and running Microsoft Data Migration Assistant.  
   
 ## Download and install Data Migration Assistant  
- Download and install Data Migration Assistant from [here](http://go.microsoft.com/fwlink/?LinkID=613421). This tool is not included on the [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] installation media.  
+ Download and install Data Migration Assistant from [here](http://go.microsoft.com/fwlink/?LinkID=613421). This tool is not included on the [!INCLUDE[ssnover](../../includes/ssnoversion-md.md)] installation media.  
 
   

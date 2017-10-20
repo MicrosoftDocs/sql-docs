@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "Nofication class"
 ms.assetid: 549c40c4-d33d-46c2-9d6a-7bbb671ac67a
 caps.latest.revision: 33
-author: "sabotta"
-ms.author: "carlasab"
+author: "guyinacube"
+ms.author: "asaxton"
 manager: "erikre"
 ---
 # Using a Notification Class for a Delivery Extension

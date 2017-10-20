@@ -62,7 +62,7 @@ This tutorial does not provide lessons or information about managing a deployed 
 ## Prerequisites  
 In order to complete this tutorial, you'll need the following prerequisites:  
   
--   The latest version of [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. [Get the latest version](https://msdn.microsoft.com/library/mt204009.aspx).
+-   The latest version of [!INCLUDE[ssBIDevStudioFull](../ssdt/download-sql-server-data-tools-ssdt.md).
 
 -   The latest version of SQL Server Management Studio. [Get the latest version](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms). 
   

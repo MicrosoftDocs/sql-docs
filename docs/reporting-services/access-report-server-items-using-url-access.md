@@ -20,16 +20,15 @@ ms.author: "asaxton"
 manager: "erikre"
 ---
 # Access Report Server Items Using URL Access
-  This topic describes how to access catalog items of different types in a report server data base or in a SharePoint site using*rs:Command*=*Value*. It is not necessary to actually add this parameter string. If you omit it, the report server evaluates the item type and selects the appropriate parameter value automatically. However, using the *rs:Command*=*Value* string in the URL improves the performance of the report server.  
+  This topic describes how to access catalog items of different types in a report server data base or in a SharePoint site using *rs:Command*=*Value*. It is not necessary to actually add this parameter string. If you omit it, the report server evaluates the item type and selects the appropriate parameter value automatically. However, using the *rs:Command*=*Value* string in the URL improves the performance of the report server.  
   
  Note the `_vti_bin` proxy syntax in the examples below. For more information about using the proxy syntax, see [URL Access Parameter Reference](../reporting-services/url-access-parameter-reference.md).  
   
 ## Access a Report  
  To view a report in the browser, use the *rs:Command*=*Render* parameter. For example:  
   
- **Native** `http://myrshost/reportserver?/Sales/YearlySalesByCategory&rs:Command=Render`  
-  
- **SharePoint** `http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales/YearlySalesByCategory&rs:Command=Render`  
+ - **Native** `http://myrshost/reportserver?/Sales/YearlySalesByCategory&rs:Command=Render`  
+ - **SharePoint** `http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales/YearlySalesByCategory&rs:Command=Render`  
   
 > [!TIP]  
 >  It is important the URL include the `_vti_bin` proxy syntax to route the request through SharePoint and the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] HTTP proxy. The proxy adds some context to the HTTP request, context that is required to ensure proper execution of the report for SharePoint mode report servers.  
@@ -75,6 +74,4 @@ manager: "erikre"
   
 ## See Also  
  [URL Access &#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)   
- [URL Access Parameter Reference](../reporting-services/url-access-parameter-reference.md)  
-  
-  
+ [URL Access Parameter Reference](../reporting-services/url-access-parameter-reference.md) 

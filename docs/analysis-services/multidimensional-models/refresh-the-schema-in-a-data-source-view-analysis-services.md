@@ -44,7 +44,7 @@ manager: "erikre"
  Refresh never adds new tables to a DSV. If you want to add a new table, you must add it manually. For more information, see [Adding or Removing Tables or Views in a Data Source View &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md).  
   
 ##  <a name="bkmk_DSVrefresh"></a> Refresh a DSV in SQL Server Data Tools  
- To refresh a DSV, double-click the DSV from Solution Explorer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], and then click the Refresh Data Source View button or choose **Refresh** from the Data Source View menu.  
+ To refresh a DSV, double-click the DSV from Solution Explorer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  This launches the DSV designer.  Then click the Refresh Data Source View button in the designer or choose **Refresh** from the Data Source View menu.  
   
  During refresh, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] queries all underlying relational data sources to determine whether there have been changes in tables/views which are included in the DSV. If connections can be established to all underlying data sources and there have been any changes, you will see them in the **Refresh Data Source View** dialog box.  
   

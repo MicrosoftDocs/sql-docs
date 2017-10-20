@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "rendering extensions [Reporting Services], about extensions"
 ms.assetid: 909356a0-4709-43e5-b597-33bd9bb22882
 caps.latest.revision: 41
-author: "sabotta"
-ms.author: "carlasab"
+author: "guyinacube"
+ms.author: "asaxton"
 manager: "erikre"
 ---
 # Rendering Extensions Overview

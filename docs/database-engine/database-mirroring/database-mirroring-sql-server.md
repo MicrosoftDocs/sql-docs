@@ -82,9 +82,6 @@ manager: "jhubbard"
  mirror server  
  In a database mirroring configuration, the server instance on which the mirror database resides.  
   
- mirror server  
- In a database mirroring configuration, the server instance on which the mirror database resides.  
-  
  principal database  
  In database mirroring, a read-write database whose transaction log records are applied to a read-only copy of the database (a mirror database).  
   

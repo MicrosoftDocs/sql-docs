@@ -24,7 +24,7 @@ This quickstart uses as its starting point the resources created in one of these
 - [Create DB - CLI](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-get-started-cli.md)
 - [Create DB - PowerShell](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-get-started-powershell.md)
 
-Before you start, make sure you have installed the newest version of [Carbon](https://go.microsoft.com/fwlink/?linkid=853016) and loaded the [mssql extension](https://aka.ms/mssql-marketplace). For installation guidance for the mssql extension, see [Install Carbon](download.md).
+Before you start, install Carbon by following [these directions](download.md).
 
 ## Configure Carbon 
 
@@ -79,13 +79,14 @@ Use Carbon to establish a connection to your Azure SQL Database server.
 
    | Setting       | Suggested value | Description |
    | ------------ | ------------------ | ------------------------------------------------- | 
-   | **Server name** | The fully qualified server name | The name should be something like this: **mynewserver20170313.database.windows.net**. |
    | **Authentication** | SQL Login| SQL Authentication is the only authentication type that we have configured in this tutorial. |
    | **User name** | The server admin account | This is the account that you specified when you created the server. |
    | **Password (SQL Login)** | The password for your server admin account | This is the password that you specified when you created the server. |
    | **Save Password?** | Yes or No | Select Yes if you do not want to enter the password each time. |
    | **Database name** | *leave blank* | The name of the database to which to connect. |
-   | **Server Group** | Select <Default> | A saved profile name speeds your connection on subsequent logins. |  
+   | **Server Group** | Select <Default> | A saved profile name speeds your connection on subsequent logins. |
+
+   ![New Connection Icon](media/get-started-sql-database/new-connection-screen.png)  
 
 3. If you are successfully connected, ignore this step. If you see the following screen, you will need to register your IP address. You can do this through Carbon by clicking add an account, logging in with your Azure credentials, and then adding your IP.
 

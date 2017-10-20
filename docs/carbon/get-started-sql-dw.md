@@ -20,7 +20,7 @@ This quickstart demonstrates how to use Carbon to connect to Azure SQL Data Ware
 To use this tutorial, you need:
 
 * An existing SQL data warehouse. To create one, see [Create a SQL Data Warehouse](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/sql-data-warehouse-get-started-provision).
-* Carbon installed. [Install Carbon](https://go.microsoft.com/fwlink/?linkid=853016) for free if you don't already have it. For installation guidance for the mssql extension, see [Carbon download instruction](download.md).
+* Install Carbon by following [these directions](download.md).
 * The fully qualified SQL server name. To find this, see [Connect to SQL Data Warehouse](https://docs.microsoft com/en-us/azure/sql-data-warehouse/sql-data-warehouse-connect-overview).
 
 ## Configure Carbon 
@@ -77,13 +77,15 @@ Use Carbon to establish a connection to your Azure SQL Data Warehouse server.
 
    | Setting       | Suggested value | Description |
    | ------------ | ------------------ | ------------------------------------------------- | 
-   | **Server name** | The fully qualified server name | The name should be something like this: **mynewserver20170313.database.windows.net**. |
+   | **Server name** | The fully qualified server name | The name should be something like this: **sqldwsample.database.windows.net** |
    | **Authentication** | SQL Login| SQL Authentication is the only authentication type that we have configured in this tutorial. |
    | **User name** | The server admin account | This is the account that you specified when you created the server. |
    | **Password (SQL Login)** | The password for your server admin account | This is the password that you specified when you created the server. |
    | **Save Password?** | Yes or No | Select Yes if you do not want to enter the password each time. |
    | **Database name** | *leave blank* | The name of the database to which to connect. |
    | **Server Group** | Select <Default> | A saved profile name speeds your connection on subsequent logins. | 
+
+   ![New Connection Icon](media/get-started-sql-dw/new-connection-screen.png) 
 
 3. If you are successfully connected, ignore this step. If you see the following screen, you will need to register your IP address. You can do this through Carbon by clicking add an account, logging in with your Azure credentials, and then adding your IP.
 

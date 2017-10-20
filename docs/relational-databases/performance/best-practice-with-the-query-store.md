@@ -70,7 +70,7 @@ SET QUERY_STORE (MAX_STORAGE_SIZE_MB = 1024);
  **Statistics Collection Interval:** Defines level of granularity for the collected runtime statistic (the default is 1 hour). Consider using lower value if you require finer granularity or less time to detect and mitigate issues but keep in mind that it will directly affect the size of Query Store data. Use SSMS or Transact-SQL to set different value for Statistics Collection Interval:  
   
 ```tsql  
-ALTER DATABASE [QueryStoreDB] SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 30);  
+ALTER DATABASE [QueryStoreDB] SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 60);  
 ```  
   
  **Stale Query Threshold (Days):** Time-based cleanup policy that controls the retention period of persisted runtime statistics and inactive queries.  
@@ -80,7 +80,7 @@ By default, Query Store is configured to keep the data for 30 days which may be 
   
 ```tsql  
 ALTER DATABASE [QueryStoreDB]   
-SET QUERY_STORE (CLEANUP_POLICY = (STALE_QUERY_THRESHOLD_DAYS = 14));  
+SET QUERY_STORE (CLEANUP_POLICY = (STALE_QUERY_THRESHOLD_DAYS = 90));  
 ```  
   
  **Size Based Cleanup Mode:** Specifies whether automatic data cleanup will take place when Query Store data size approaches the limit.  

@@ -23,10 +23,9 @@ manager: "jhubbard"
 ## Syntax  
   
 ```sql  
-set_customized_logging_level_value [ @level_name = ] level_name  
+catalog.set_customized_logging_level_value [ @level_name = ] level_name  
     , [ @property_name = ] property_name  
     , [ @property_value = ] property_value  
-  
 ```  
   
 ## Arguments  

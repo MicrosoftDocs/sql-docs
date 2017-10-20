@@ -138,7 +138,7 @@ You get the **WorkerAgentId** value from the *[catalog].[worker_agents]* databas
 
 #### Example
 This example enables the Scale Out Worker on computerA.
-```tsql
+```sql
 SELECT WorkerAgentId, MachineName FROM [catalog].[worker_agents]
 GO
 -- Result: --

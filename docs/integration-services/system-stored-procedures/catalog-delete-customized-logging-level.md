@@ -22,7 +22,7 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```tsql  
+```sql  
 delete_customized_logging_level [ @level_name = ] level_name  
   
 ```  

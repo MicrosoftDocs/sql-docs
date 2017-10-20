@@ -27,8 +27,8 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```tsql  
-Catalog.startup  
+```sql  
+catalog.startup  
 ```  
   
 ## Return Code Value  

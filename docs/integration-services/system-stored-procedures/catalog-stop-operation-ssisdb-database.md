@@ -22,8 +22,8 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```tsql  
-stop_operation [ @operation_id = ] operation_id  
+```sql  
+catalog.stop_operation [ @operation_id = ] operation_id  
 ```  
   
 ## Arguments  

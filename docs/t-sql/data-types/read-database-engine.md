@@ -1,7 +1,7 @@
 ---
 title: "Read (Database Engine) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/23/2017"
+ms.date: "10/20/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -21,6 +21,7 @@ caps.latest.revision: 13
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Read (Database Engine)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

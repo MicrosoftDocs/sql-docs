@@ -58,7 +58,6 @@ FILE_NAME ( file_id )
  The following example returns the file names for `file_ID 1` and `file_ID` in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
   
 ```tsql  
-  
 SELECT FILE_NAME(1) AS 'File Name 1', FILE_NAME(2) AS 'File Name 2';  
 GO  
 ```  

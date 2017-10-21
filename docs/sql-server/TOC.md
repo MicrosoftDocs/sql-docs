@@ -54,5 +54,4 @@
 ### [MSDN Forums](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)
 ### [Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback)
 ### [Reddit](https://www.reddit.com/r/SQLServer)
-
-# [Local content with Help Viewer](sql-server-help-installation.md)
+## [Local content with Help Viewer](sql-server-help-installation.md)

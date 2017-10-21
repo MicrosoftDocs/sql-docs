@@ -19,7 +19,6 @@
 
 # Release Notes
 
-## [SQL Server Release Notes](sql-server-release-notes.md)
 ## [SQL Server 2017 Release Notes](sql-server-2017-release-notes.md)
 ## [SQL Server 2016 Release Notes](sql-server-2016-release-notes.md)
 ## [SQL Server 2014 Release Notes](sql-server-2014-release-notes.md)
@@ -42,4 +41,16 @@
 # [Data Migration Assistant](../dma/dma-overview.md)
 # [Stretch Database](../sql-server/stretch-database/stretch-database.md)
 # [Tutorials for SQL Server](tutorials-for-sql-server-2016.md)
+
+# Resources
+## Blogs
+### [SQL Server](https://blogs.technet.microsoft.com/dataplatforminsider/)
+
+## Feedback and help
+### [DBA Stack Exchange](https://dba.stackexchange.com/questions/tagged/sql-server)
+### [Stack Overflow](http://stackoverflow.com/questions/tagged/sql-server)
+### [MSDN Forums](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)
+### [Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback)
+### [Reddit](https://www.reddit.com/r/SQLServer)
+
 # [Local content with Help Viewer](sql-server-help-installation.md)

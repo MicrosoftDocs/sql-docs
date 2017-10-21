@@ -1,5 +1,5 @@
 ---
-title: "Configure an External SMP SQL Server to Receive Remote Table Copies (SQL Server PDW)"
+title: "Configure External SMP SQL Server to Receive Remote Table Copies (PDW)"
 author: "barbkess" 
 ms.author: "barbkess"
 manager: "jhubbard"	  

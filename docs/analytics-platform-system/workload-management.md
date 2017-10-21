@@ -49,7 +49,7 @@ To adjust resource utilization, change the resource class membership of the logi
   
 For example, to allocate a large amount of system resources to a request, add the login that is submitting the request to the **largerc** server role. The following ALTER SERVER ROLE statement adds the login Anna to the largerc server role.  
   
-```  
+```sql  
 ALTER SERVER ROLE largerc ADD MEMBER Anna;  
 ```  
   
@@ -176,7 +176,7 @@ Related system views exposed from the SQL Server DMVs on the Compute nodes. See 
 -   sys.dm_pdw_nodes_exec_cached_plans  
   
 ## <a name="RelatedTasks"></a>Related Tasks  
-[Workload Mangement Tasks](workload-management-tasks.md)  
+[Workload Management Tasks](workload-management-tasks.md)  
   
 <!-- MISSING LINKS
 See the Workload Management section of [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md) for the following tasks:  

@@ -1,6 +1,6 @@
 ---
 
-title: "Acquire and Configure a Backup Server for Analytics Platform System and Parallel Data warehouse"
+title: "Acquire and Configure a Backup Server for APS PDW"
 author: "barbkess" 
 ms.author: "barbkess"
 manager: "jhubbard"	  
@@ -90,7 +90,7 @@ PDW will access the backup server through a UNC file share. To set up the file s
   
     For example:  
   
-    ```  
+    ```sql  
     EXEC sp_pdw_add_network_credentials '10.192.147.63', 'seattle\david', '********';  
     ```  
   
@@ -110,7 +110,7 @@ To backup data, use a query client to connect to SQL Server PDW and then submit 
   
 For example:  
   
-```  
+```sql  
 BACKUP DATABASE Invoices TO DISK = '\\10.172.14.255\backups\yearly\Invoices2013Full';  
   
 RESTORE DATABASE Invoices2013Full  

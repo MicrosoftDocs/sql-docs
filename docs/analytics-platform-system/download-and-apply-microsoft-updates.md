@@ -90,7 +90,7 @@ Before performing these steps, you need to:
   
 #### Verify that the updates are in WSUS  
   
-1.  Verify the file status of all updates. Each file needs to have a green arrow icon to the left of the title. This indicates the file is ready for installation.  
+-  Verify the file status of all updates. Each file needs to have a green arrow icon to the left of the title. This indicates the file is ready for installation.  
   
     ![File status is successful](./media/download-and-apply-microsoft-updates/SQL_Server_PDW_WSUS_File_Status.png "SQL_Server_PDW_WSUS_File_Status")  
   
@@ -98,7 +98,7 @@ Before performing these steps, you need to:
   
 #### To verify that all updates are downloaded  
   
-1.  Check the **Download Status** of updates in the WSUS console as shown in the following screenshot. Check that **Updates needing files** is 0 to confirm that all updates are downloaded. If this number is more than zero, you may need to go back and approve additional updates.  
+-  Check the **Download Status** of updates in the WSUS console as shown in the following screenshot. Check that **Updates needing files** is 0 to confirm that all updates are downloaded. If this number is more than zero, you may need to go back and approve additional updates.  
   
     ![Verify that all updates are downloaded.](./media/download-and-apply-microsoft-updates/SQL_Server_PDS_WSUS_VerifyDownloadUpdateJPG.png "SQL_Server_PDS_WSUS_VerifyDownloadUpdateJPG")  
   

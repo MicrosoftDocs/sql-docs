@@ -1,6 +1,6 @@
 ---
 
-title: "Backup and loading hardware overview for Analytics Platform System (APS) and SQL Server Parallel Data Warehouse (PDW)"
+title: "Backup and loading hardware overview for APS PDW"
 author: "barbkess" 
 ms.author: "barbkess"
 manager: "jhubbard"	  

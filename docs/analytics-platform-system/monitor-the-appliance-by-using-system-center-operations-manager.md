@@ -1,5 +1,5 @@
 ---
-title: "Monitor the Appliance by Using System Center Operations Manager (Analytics Platform System)"
+title: "Monitor Appliance with System Center Operations Manager (APS)"
 author: "barbkess" 
 ms.author: "barbkess"
 manager: "jhubbard"	  

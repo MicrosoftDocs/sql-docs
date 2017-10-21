@@ -1,5 +1,5 @@
 ---
-title: T-SQL system views - Analytics Platform System SQL Server Parallel Data Warehouse | Microsoft Docs
+title: T-SQL system views - Analytics Platform System Parallel Data Warehouse | Microsoft Docs
 author: "barbkess" 
 ms.author: "barbkess"
 manager: "jhubbard"	  
@@ -10,7 +10,6 @@ documentationcenter: NA
 editor: ''
 
 ms.assetid: 21ec594b-d270-4202-a8cd-bb150e5ae12c
-ms.service: sql-data-warehouse
 ms.devlang: NA
 ms.topic: article
 ms.tgt_pltfrm: NA

@@ -1,5 +1,5 @@
 ---
-title: T-SQL language elements - Analytics Platform System SQL Server Parallel Data Warehouse | Microsoft Docs
+title: T-SQL language elements - Analytics Platform System Parallel Data Warehouse | Microsoft Docs
 author: "barbkess" 
 ms.author: "barbkess"
 manager: "jhubbard"	  
@@ -11,7 +11,6 @@ documentationcenter: NA
 editor: ''
 
 ms.assetid: ea0b9a3e-e489-458e-addc-cc153e5cc158
-ms.service: sql-data-warehouse
 ms.devlang: NA
 ms.topic: article
 ms.tgt_pltfrm: NA

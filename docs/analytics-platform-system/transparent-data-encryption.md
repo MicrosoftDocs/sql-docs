@@ -57,7 +57,7 @@ The following example illustrates encrypting the `AdventureWorksPDW2012` databas
   
 **First: Enable TDE on the SQL Server PDW.** This is only necessary once.  
   
-```  
+```sql  
 USE master;  
 GO  
   
@@ -76,7 +76,7 @@ EXEC sp_pdw_add_network_credentials 'SECURE_SERVER', '<domain>\<Windows_user>', 
   
 **Second: Create and backup a certificate in the master database.** This is only required once. You can have a separate certificate for each database (recommended), or you can protect multiple databases with one certificate.  
   
-```  
+```sql  
 -- Create certificate in master  
 CREATE CERTIFICATE MyServerCert WITH SUBJECT = 'My DEK Certificate';  
 GO  
@@ -94,7 +94,7 @@ GO
   
 **Last: Create the DEK and use ALTER DATABASE to encrypt a user database.** This is repeated for each database that is protected by TDE.  
   
-```  
+```sql  
 USE AdventureWorksPDW2012;  
 GO  
   
@@ -174,7 +174,7 @@ The master database is not protected by TDE. Though the master database does not
 ### Transparent Data Encryption and Transaction Logs  
 Enabling a database to use TDE has the effect of zeroing out the remaining part of the virtual transaction log to force the next virtual transaction log. This guarantees that no clear text is left in the transaction logs after the database is set for encryption. You can find the status of the log file encryption on each PDW node by viewing the `encryption_state` column in the `sys.dm_pdw_nodes_database_encryption_keys` view, as in this example:  
   
-```  
+```sql  
 WITH dek_encryption_state AS   
 (  
     SELECT ISNULL(db_map.database_id, dek.database_id) AS database_id, encryption_state  
@@ -219,13 +219,13 @@ The master database can be restored using **DWConfig**, as part of the disaster 
   
     1.  Open the DMK:  
   
-        ```  
+        ```sql  
         OPEN MASTER KEY DECRYPTION BY PASSWORD = '<password>';  
         ```  
   
     2.  Add the encryption by SMK:  
   
-        ```  
+        ```sql  
         ALTER MASTER KEY   
             ADD ENCRYPTION BY SERVICE MASTER KEY;  
         ```  
@@ -237,31 +237,31 @@ If a DMK exists on the appliance on which Upgrade or Replace VM was performed, D
   
 Example of the upgrade action. Replace `**********` with your DMK password.  
   
-```  
-setup.exe /Action=ProvisionUpgrade … DMKPassword='**********'  
-```  
+`setup.exe /Action=ProvisionUpgrade … DMKPassword='**********'  `  
   
 Example of the replace virtual machine action.  
   
-```  
-setup.exe /Action=ReplaceVM … DMKPassword='**********'  
-```  
+`setup.exe /Action=ReplaceVM … DMKPassword='**********'  `  
   
 During upgrade, if a user DB is encrypted and the DMK password is not provided, the upgrade action will fail. During replace, if the correct password is not provided when a DMK exists, the operation will skip the DMK recovery step. All the other steps will be completed at the end of the replace VM action, however the action will report failure at the end to indicate that additional steps are required. In the setup logs (located in **\ProgramData\Microsoft\Microsoft SQL Server Parallel Data Warehouse\100\Logs\Setup\\<time-stamp>\Detail-Setup**), the following warning will be shown near the end.  
   
-*** WARNING \*\*\* DMK is detected in master database, but could not be recovered automatically! The DMK password was either not provided or is incorrect!  
+`*** WARNING \*\*\* DMK is detected in master database, but could not be recovered automatically! The DMK password was either not provided or is incorrect!  `
   
 Please execute manually these statements in PDW and restart appliance after that in order to recover DMK:  
   
-<pre>OPEN MASTER KEY DECRYPTION BY PASSWORD = '<DMK password>';  
-ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY;</pre>  
+```sql
+OPEN MASTER KEY DECRYPTION BY PASSWORD = '<DMK password>';  
+ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY;  
+```
   
 Use the steps in the **Restoring the master Database** paragraph to recover the database, and then restart the appliance.  
   
 If the DMK existed before but was not recovered after the action, the following error message will be raised when a database is queried.  
   
-<pre>Msg 110806;  
-A distributed query failed: Database '<db_name>' cannot be opened due to inaccessible files or insufficient memory or disk space. See the SQL Server errorlog for details.</pre>  
+```
+Msg 110806;  
+A distributed query failed: Database '<db_name>' cannot be opened due to inaccessible files or insufficient memory or disk space. See the SQL Server errorlog for details.
+```  
   
 ## Performance Impact  
 The performance impact of TDE varies with the type of data you have, how it is stored, and the type of workload activity on the SQL Server PDW. When protected by TDE, the I/O of reading and then decrypting data or the encrypting and then writing data is a CPU intensive activity and will have more impact when other CPU intensive activities are happening at the same time. Because TDE encrypts `tempdb`, TDE can affect the performance of databases that are not encrypted. To get an accurate idea of performance, you should test the entire system with your data and query activity.  

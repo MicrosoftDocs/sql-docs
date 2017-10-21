@@ -32,7 +32,7 @@ If the free space within a volume drops under 10%, SQL Server PDW generates a **
   
 To retrieve volume usage, see the following example.  
   
-```  
+```sql  
 SELECT   
     space.[pdw_node_id] ,  
     space.[node_name] ,  
@@ -69,7 +69,7 @@ ORDER BY space.[pdw_node_id], MAX(space.[volume_name]);
   
 To retrieve the space used by databases across the appliance nodes, see the following example.  
   
-```  
+```sql  
 SELECT   
     [pdw_node_id],   
     [db_name],   

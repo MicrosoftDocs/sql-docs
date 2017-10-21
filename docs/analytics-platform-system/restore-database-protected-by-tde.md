@@ -21,14 +21,14 @@ The [Using Transparent Data Encryption](transparent-data-encryption.md#using-tde
   
 The first step is to create a backup of the source database.  
   
-```  
+```sql  
 BACKUP DATABASE AdventureWorksPDW2012   
 TO DISK = '\\SECURE_SERVER\Backups\AdventureWorksPDW2012';  
 ```  
   
 Prepare the new SQL Server PDW for TDE by creating a master key, enabling encryption, and creating a network credential.  
   
-```  
+```sql  
 USE master;  
 GO  
   
@@ -45,7 +45,7 @@ EXEC sp_pdw_add_network_credentials 'SECURE_SERVER', '<domain>\<Windows_user>', 
   
 The last two steps recreate the certificate by using the backups from the original SQL Server PDW. Use the password that you used when you created the backup of the certificate.  
   
-```  
+```sql  
 -- Create certificate in master  
 CREATE CERTIFICATE MyServerCert  
     FROM FILE = '\\SECURE_SERVER\cert\MyServerCert.cer'   

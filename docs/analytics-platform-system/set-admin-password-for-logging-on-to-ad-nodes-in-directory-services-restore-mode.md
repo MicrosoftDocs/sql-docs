@@ -1,5 +1,5 @@
 ---
-title: "Set Admin Password for Logging on to AD Nodes in Directory Services Restore Mode (DSRM) (Analytics Platform System)"
+title: "Set AD Nodes Admin Logon Password in Directory Services Restore Mode (APS)"
 author: "barbkess" 
 ms.author: "barbkess"
 manager: "jhubbard"	  

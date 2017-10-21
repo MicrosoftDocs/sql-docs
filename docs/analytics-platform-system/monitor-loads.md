@@ -60,13 +60,13 @@ To monitor active and recent loads by using SQL Server PDW views, follow the ste
   
     For example, the following command returns the command text and current status, plus the `request_id`.  
   
-    ```  
+    ```sql  
     SELECT request_id, status, command FROM sys.dm_pdw_exec_requests;  
     ```  
   
 2.  Use the `request_id` to retrieve additional information for the load by using the [sys.pdw_loader_run_stages](../relational-databases/system-catalog-views/sys-pdw-loader-run-stages-transact-sql.md) , and [sys.pdw_loader_backup_run_details](../relational-databases/system-catalog-views/sys-pdw-loader-backup-run-details-transact-sql.md) views. For example, the following query returns the `run_id` and information on the start, end, and duration times of the load, plus any errors, and information on the number of rows processed:  
   
-    ```  
+    ```sql  
     SELECT lbr.run_id,   
     er.submit_time, er.end_time, er.total_elapsed_time, er.error_id, lbr.rows_processed, lbr.rows_rejected, lbr.rows_inserted   
     FROM sys.dm_pdw_exec_requests er   

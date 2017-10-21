@@ -32,7 +32,7 @@ After a cluster failover, when SQL Server PDW reports on node status, the passiv
 ## <a name="SystemView"></a>System View Solution  
 The following SQL statement shows how to use the [sys.dm_pdw_component_health_active_alerts](../relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-active-alerts-transact-sql.md) system view to find the name of the server that failed.  
   
-```  
+```sql  
 SELECT  
 SUBSTRING( component_instance_id, 2, charindex(' ', component_instance_id, 1)-2) AS failed_node_name,  
 create_time AS failover_time  

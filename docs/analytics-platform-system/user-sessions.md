@@ -59,14 +59,14 @@ Use [sys.dm_pdw_exec_sessions](../relational-databases/system-dynamic-management
   
 This example returns the session_id, login_name, and status for all sessions with a status of ‘Active’ or ‘Idle’.  
   
-```  
+```sql  
 SELECT session_id, login_name, status FROM sys.dm_pdw_exec_sessions WHERE status='Active' OR status='Idle';  
 ```  
   
 ### To View Active and Recent Queries for a Session by Using System Views  
 To see the active and recently completed queries associated with a session, you use the [sys.dm_pdw_exec_sessions](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md) and [sys.dm_pdw_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md) views. This query returns a list of all active or idle sessions, plus any active or recent queries associated with each session ID.  
   
-```  
+```sql  
 SELECT es.session_id, es.login_name, es.status AS sessionStatus,   
 er.request_id, er.status AS requestStatus, er.command   
 FROM sys.dm_pdw_exec_sessions es   
@@ -81,13 +81,13 @@ Use the [KILL](../t-sql/language-elements/kill-transact-sql.md) command to end a
   
 In this example, select the login_name, session_id, and status values to find a session based on the login name.  
   
-```  
+```sql  
 SELECT session_id, login_name, status FROM sys.dm_pdw_exec_sessions;  
 ```  
   
 Sessions with an ‘Active’ or ‘Idle’ status can be ended by using the KILL command.  
   
-```  
+```sql  
 KILL 'SID137';  
 ```  
   

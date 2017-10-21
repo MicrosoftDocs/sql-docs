@@ -122,7 +122,7 @@ EXEC sp_who;
 GO  
 ```  
   
- The result set that is returned by `sp`_`who` indicates that the SPID is `54`. You can use the SPID with the `sys.dm`\_`exec`\_`requests` dynamic management view to retrieve the plan handle by using the following query:  
+ The result set that is returned by `sp_who` indicates that the SPID is `54`. You can use the SPID with the `sys.dm_exec_requests` dynamic management view to retrieve the plan handle by using the following query:  
   
 ```  
 USE master;  
@@ -144,7 +144,7 @@ GO
 ```  
   
 ### B. Retrieving every query plan from the plan cache  
- To retrieve a snapshot of all query plans residing in the plan cache, retrieve the plan handles of all query plans in the cache by querying the `sys.dm`_`exec`\_`cached`\_`plans` dynamic management view. The plan handles are stored in the `plan`\_`handle` column of `sys.dm`\_`exec`\_`cached`\_`plans`. Then use the CROSS APPLY operator to pass the plan handles to `sys.dm`\_`exec`\_`text`\_`query`\_`plan` as follows. The Showplan output for each plan currently in the plan cache is in the `query`\_`plan` column of the table that is returned.  
+ To retrieve a snapshot of all query plans residing in the plan cache, retrieve the plan handles of all query plans in the cache by querying the `sys.dm_exec_cached_plans` dynamic management view. The plan handles are stored in the `plan_handle` column of `sys.dm_exec_cached_plans`. Then use the CROSS APPLY operator to pass the plan handles to `sys.dm_exec_text_query_plan` as follows. The Showplan output for each plan currently in the plan cache is in the `query_plan` column of the table that is returned.  
   
 ```  
 USE master;  
@@ -157,7 +157,7 @@ GO
 ```  
   
 ### C. Retrieving every query plan for which the server has gathered query statistics from the plan cache  
- To retrieve a snapshot of all query plans for which the server has gathered statistics that currently reside in the plan cache, retrieve the plan handles of these plans in the cache by querying the `sys.dm`_`exec`\_`query`\_`stats` dynamic management view. The plan handles are stored in the `plan`\_`handle` column of `sys.dm`\_`exec`\_`query`\_`stats`. Then use the CROSS APPLY operator to pass the plan handles to `sys.dm`\_`exec`\_`text`\_`query`\_`plan` as follows. The Showplan output for each plan is in the `query_plan` column of the table that is returned.  
+ To retrieve a snapshot of all query plans for which the server has gathered statistics that currently reside in the plan cache, retrieve the plan handles of these plans in the cache by querying the `sys.dm_exec_query_stats` dynamic management view. The plan handles are stored in the `plan_handle` column of `sys.dm_exec_query_stats`. Then use the CROSS APPLY operator to pass the plan handles to `sys.dm_exec_text_query_plan` as follows. The Showplan output for each plan is in the `query_plan` column of the table that is returned.  
   
 ```  
 USE master;  

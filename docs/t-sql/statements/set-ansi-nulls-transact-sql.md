@@ -90,7 +90,7 @@ SELECT @ANSI_NULLS AS ANSI_NULLS;
  Requires membership in the public role.  
   
 ## Examples  
- The following example uses the Equals (`=`) and Not Equal To (`<>`) comparison operators to make comparisons with `NULL` and nonnull values in a table. The example also shows that `IS NULL` is not affected by the `SET ANSI`_`NULLS` setting.  
+ The following example uses the Equals (`=`) and Not Equal To (`<>`) comparison operators to make comparisons with `NULL` and nonnull values in a table. The example also shows that `IS NULL` is not affected by the `SET ANSI_NULLS` setting.  
   
 ```  
 -- Create table t1 and insert values.  

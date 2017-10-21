@@ -76,7 +76,7 @@ INDEXPROPERTY ( object_ID , index_or_statistics_name , property )
  A user can only view the metadata of securables that the user owns or on which the user has been granted permission. This means that metadata-emitting, built-in functions such as INDEXPROPERTY may return NULL if the user does not have any permission on the object. For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## Examples  
- The following example returns the values for the **IsClustered**, **IndexDepth**, and **IndexFillFactor** properties for the `PK`_`Employee`\_`BusinessEntityID` index of the `Employee` table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
+ The following example returns the values for the **IsClustered**, **IndexDepth**, and **IndexFillFactor** properties for the `PK_Employee_BusinessEntityID` index of the `Employee` table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
   
 ```  
 SELECT   

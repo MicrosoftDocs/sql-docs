@@ -440,7 +440,7 @@ GO
   
 ```  
   
- Or, you can use the `OBJECT`_`DEFINITION` function as shown in the following example.  
+ Or, you can use the `OBJECT_DEFINITION` function as shown in the following example.  
   
 ```  
 USE <database_name>;  
@@ -658,7 +658,7 @@ GO
  [TOP](#_TOP)  
   
 ###  <a name="_FAQ22"></a> How do I find the columns that depend on a specified CLR user-defined type or alias type?  
- Before you run the following query, replace `<database_name>` with a valid name and `<schema_name.data`_`type`\_`name>` with a valid, schema-qualified CLR user-defined type, or schema-qualified alias type name. The following query requires membership in the **db_owner** role or permissions to see all dependent column and computed column metadata in the database.  
+ Before you run the following query, replace `<database_name>` with a valid name and `<schema_name.data_type_name>` with a valid, schema-qualified CLR user-defined type, or schema-qualified alias type name. The following query requires membership in the **db_owner** role or permissions to see all dependent column and computed column metadata in the database.  
   
 ```  
 USE <database_name>;  
@@ -713,7 +713,7 @@ WHERE referenced_major_id = TYPE_ID('<schema_name.data_type_name>')
  [TOP](#_TOP)  
   
 ###  <a name="_FAQ24"></a> How do I find the parameters that depend on a specified CLR user-defined type or alias type?  
- Before you run the following query, replace `<database_name>` with a valid name and `<schema`_`name.data_type`\_`name>` with a valid, schema-qualified CLR user-defined type, alias type name. The following query requires membership in the **db_owner** role or permissions to see all dependent column and computed column metadata in the database.  
+ Before you run the following query, replace `<database_name>` with a valid name and `<schema_name.data_type_name>` with a valid, schema-qualified CLR user-defined type, alias type name. The following query requires membership in the **db_owner** role or permissions to see all dependent column and computed column metadata in the database.  
   
 ```  
 USE <database_name>;  
@@ -755,7 +755,7 @@ GO
  [TOP](#_TOP)  
   
 ###  <a name="_FAQ25"></a> How do I find the CHECK constraints that depend on a specified CLR user-defined type?  
- Before you run the following query, replace `<database_name>` with a valid name and `<schema`_`name.data_type_name>` with a valid, schema-qualified CLR user-defined type name.  
+ Before you run the following query, replace `<database_name>` with a valid name and `<schema_name.data_type_name>` with a valid, schema-qualified CLR user-defined type name.  
   
 ```  
 USE <database_name>;  
@@ -974,7 +974,7 @@ GO
   
 ```  
   
- Or, you can use the `OBJECT`_`DEFINITION` function as shown in the following example.  
+ Or, you can use the `OBJECT_DEFINITION` function as shown in the following example.  
   
 ```  
 USE <database_name>;  

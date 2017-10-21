@@ -32,7 +32,7 @@ manager: "jhubbard"
 # _ (Wildcard - Match One Character) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Use the underscore character `_` to match any single character in a string comparison operation that involves pattern matching, such as `LIKE` and `PATINDEX`.  
+  Use the underscore character _ to match any single character in a string comparison operation that involves pattern matching, such as `LIKE` and `PATINDEX`.  
   
 ## Examples  
 
@@ -56,7 +56,7 @@ You may have additional databases that meet this criteria.
 You can use multiple underscores to represent multiple characters. Changing the `LIKE` criteria to include two underscores `'m__%` includes the master database in the result.
 
 ### B: More complex example
- The following example uses the `_` operator to find all the people in the `Person` table, who have a three-letter first name that ends in `an`.  
+ The following example uses the _ operator to find all the people in the `Person` table, who have a three-letter first name that ends in `an`.  
   
 ```tsql  
 -- Uses AdventureWorks  

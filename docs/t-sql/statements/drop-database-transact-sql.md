@@ -142,7 +142,7 @@ DROP DATABASE Sales, NewSales;
   
 **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- The following example removes a database snapshot, named `sales`_`snapshot0600`, without affecting the source database.  
+ The following example removes a database snapshot, named `sales_snapshot0600`, without affecting the source database.  
   
 ```  
 DROP DATABASE sales_snapshot0600;  

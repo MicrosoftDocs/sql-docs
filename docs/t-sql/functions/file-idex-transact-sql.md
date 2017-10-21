@@ -77,7 +77,7 @@ File ID
 ```  
   
 ### B. Retrieving the file id when the file name is not known  
- The following example returns the file ID of the `AdventureWorks` log file by selecting the logical file name from the `sys.database`_`files` catalog view where the file type is equal to `1` (log).  
+ The following example returns the file ID of the `AdventureWorks` log file by selecting the logical file name from the `sys.database_files` catalog view where the file type is equal to `1` (log).  
   
 ```tsql  
 USE AdventureWorks2012;  
@@ -96,7 +96,7 @@ File ID
 ```  
   
 ### C. Retrieving the file id of a full-text catalog file  
- The following example returns the file ID of a full-text file by selecting the logical file name from the `sys.database`_`files` catalog view where the file type is equal to `4` (full-text). This example will return NULL if a full-text catalog does not exist.  
+ The following example returns the file ID of a full-text file by selecting the logical file name from the `sys.database_files` catalog view where the file type is equal to `4` (full-text). This example will return NULL if a full-text catalog does not exist.  
   
 ```tsql  
 SELECT FILE_IDEX((SELECT name FROM sys.master_files WHERE type = 4))  

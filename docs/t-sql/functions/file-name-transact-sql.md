@@ -55,7 +55,7 @@ FILE_NAME ( file_id )
  *file_ID* corresponds to the file_id column in the sys.master_files or sys.database_files catalog views.  
   
 ## Examples  
- The following example returns the file names for `file`_`ID 1` and `file`\_`ID` in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
+ The following example returns the file names for `file_ID 1` and `file_ID` in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
   
 ```tsql  
   

@@ -1,7 +1,7 @@
 ---
 title: "ToString (Database Engine) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/23/2017"
+ms.date: "7/23/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -21,6 +21,7 @@ caps.latest.revision: 23
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # ToString (Database Engine)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

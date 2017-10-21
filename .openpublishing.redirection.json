@@ -1566,6 +1566,51 @@
             "redirect_document_id": false
         },
         {
+            "source_path": "docs/analysis-services/tabular-models/data-sources-ssas-tabular.md",
+            "redirect_url": "/sql/analysis-services/analysis-services",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/analysis-services/tabular-models/edit-an-existing-data-source-connection-ssas-tabular.md",
+            "redirect_url": "/sql/analysis-services/analysis-services",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/analysis-services/tabular-models/manually-process-data-ssas-tabular.md",
+            "redirect_url": "/sql/analysis-services/analysis-services",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/analysis-services/tabular-models/process-data-ssas-tabular.md",
+            "redirect_url": "/sql/analysis-services/analysis-services",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/analysis-services/tabular-models/ssas-import-data-copy-and-paste-data.md",
+            "redirect_url": "/sql/analysis-services/analysis-services",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/analysis-services/tabular-models/ssas-import-data-text-file.md",
+            "redirect_url": "/sql/analysis-services/analysis-services",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/analysis-services/tabular-models/ssas-import-data-data-feed.md",
+            "redirect_url": "/sql/analysis-services/analysis-services",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/analysis-services/tabular-models/ssas-import-data-multidimensional-data-source.md",
+            "redirect_url": "/sql/analysis-services/analysis-services",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/analysis-services/tabular-models/ssas-import-data-relational-data-source.md",
+            "redirect_url": "/sql/analysis-services/analysis-services",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "docs/reporting-services/report-server/configure-kerberos-to-use-power-bi-reports.md",
             "redirect_url": "https://powerbi.microsoft.com/documentation/reportserver-configure-kerberos-powerbi-reports/",
             "redirect_document_id": false

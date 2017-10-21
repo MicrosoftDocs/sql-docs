@@ -32,7 +32,7 @@ For other system requirements, see [System requirements for SQL Server on Linux]
 To configure SQL Server on RHEL, run the following commands in a terminal to install the **mssql-server** package:
 
 > [!IMPORTANT]
-> If you have previously installed a CTP or RC release of SQL Server 2017, you must first remove the old repository before registering one of the GA repositories. For more information, see [Change repositories from the preview repository to the GA repository](sql-server-linux-change-repo.md)
+> If you have previously installed a CTP or RC release of SQL Server 2017, you must first remove the old repository before registering one of the GA repositories. For more information, see [Change repositories from the preview repository to the GA repository](sql-server-linux-change-repo.md).
 
 1. Download the Microsoft SQL Server Red Hat repository configuration file:
 

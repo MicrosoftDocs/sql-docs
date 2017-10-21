@@ -173,7 +173,7 @@ You cannot use cursors or triggers on a table with a clustered columnstore index
 ## Examples  
   
 ### A. Using simple cursor and syntax  
- The result set generated at the opening of this cursor includes all rows and all columns in the table. This cursor can be updated, and all updates and deletes are represented in fetches made against this cursor. `FETCH``NEXT` is the only fetch available because the `SCROLL` option has not been specified.  
+ The result set generated at the opening of this cursor includes all rows and all columns in the table. This cursor can be updated, and all updates and deletes are represented in fetches made against this cursor. `FETCH NEXT` is the only fetch available because the `SCROLL` option has not been specified.  
   
 ```  
 DECLARE vend_cursor CURSOR  

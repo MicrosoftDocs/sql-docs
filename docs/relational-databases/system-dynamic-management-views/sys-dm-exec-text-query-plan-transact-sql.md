@@ -35,16 +35,13 @@ manager: "jhubbard"
   
 -   Individual statements within the batch can be specified.  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
 ```  
-  
 sys.dm_exec_text_query_plan   
 (   
     plan_handle   
@@ -54,32 +51,32 @@ sys.dm_exec_text_query_plan
 ```  
   
 ## Arguments  
- *plan_handle*  
- Uniquely identifies a query plan for a batch that is cached or is currently executing. *plan_handle* is **varbinary(64)**.  
+*plan_handle*  
+Uniquely identifies a query plan for a batch that is cached or is currently executing. *plan_handle* is **varbinary(64)**.  
   
- The plan handle can be obtained from the following dynamic management objects:  
+The plan handle can be obtained from the following dynamic management objects:  
   
- [sys.dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
+-  [sys.dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
   
- [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
+-  [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
   
- [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
+-  [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
   
- *statement_start_offset* | 0 | DEFAULT  
- Indicates, in bytes, the starting position of the query that the row describes within the text of its batch or persisted object. *statement_start_offset* is **int**. A value of 0 indicates the beginning of the batch. The default value is 0.  
+*statement_start_offset* | 0 | DEFAULT  
+Indicates, in bytes, the starting position of the query that the row describes within the text of its batch or persisted object. *statement_start_offset* is **int**. A value of 0 indicates the beginning of the batch. The default value is 0.  
   
- The statement start offset can be obtained from the following dynamic management objects:  
+The statement start offset can be obtained from the following dynamic management objects:  
   
- [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
+-  [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
   
- [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
+-  [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
   
- *statement_end_offset* | -1 | DEFAULT  
- Indicates, in bytes, the ending position of the query that the row describes within the text of its batch or persisted object.  
+*statement_end_offset* | -1 | DEFAULT  
+Indicates, in bytes, the ending position of the query that the row describes within the text of its batch or persisted object.  
   
- *statement_start_offset* is **int**.  
+*statement_start_offset* is **int**.  
   
- A value of -1 indicates the end of the batch. The default value is -1.  
+A value of -1 indicates the end of the batch. The default value is -1.  
   
 ## Table Returned  
   
@@ -111,20 +108,20 @@ sys.dm_exec_text_query_plan
  If a [!INCLUDE[tsql](../../includes/tsql-md.md)] query or batch runs a long time on a particular connection to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], retrieve the execution plan for that query or batch to discover what is causing the delay. The following example shows how to retrieve the Showplan for a slow-running query or batch.  
   
 > [!NOTE]  
->  To run this example, replace the values for *session_id* and *plan_handle* with values specific to your server.  
+> To run this example, replace the values for *session_id* and *plan_handle* with values specific to your server.  
   
  First, retrieve the server process ID (SPID) for the process that is executing the query or batch by using the `sp_who` stored procedure:  
   
-```  
+```tsql  
 USE master;  
 GO  
 EXEC sp_who;  
 GO  
 ```  
   
- The result set that is returned by `sp`_`who` indicates that the SPID is `54`. You can use the SPID with the `sys.dm`\_`exec`\_`requests` dynamic management view to retrieve the plan handle by using the following query:  
+ The result set that is returned by `sp_who` indicates that the SPID is `54`. You can use the SPID with the `sys.dm_exec_requests` dynamic management view to retrieve the plan handle by using the following query:  
   
-```  
+```tsql  
 USE master;  
 GO  
 SELECT * FROM sys.dm_exec_requests  
@@ -134,51 +131,47 @@ GO
   
  The table that is returned by **sys.dm_exec_requests** indicates that the plan handle for the slow-running query or batch is `0x06000100A27E7C1FA821B10600`. The following example returns the query plan for the specified plan handle and uses the default values 0 and -1 to return all statements in the query or batch.  
   
-```  
+```tsql  
 USE master;  
 GO  
 SELECT query_plan   
 FROM sys.dm_exec_text_query_plan (0x06000100A27E7C1FA821B10600,0,-1);  
 GO  
-  
 ```  
   
 ### B. Retrieving every query plan from the plan cache  
- To retrieve a snapshot of all query plans residing in the plan cache, retrieve the plan handles of all query plans in the cache by querying the `sys.dm`_`exec`\_`cached`\_`plans` dynamic management view. The plan handles are stored in the `plan`\_`handle` column of `sys.dm`\_`exec`\_`cached`\_`plans`. Then use the CROSS APPLY operator to pass the plan handles to `sys.dm`\_`exec`\_`text`\_`query`\_`plan` as follows. The Showplan output for each plan currently in the plan cache is in the `query`\_`plan` column of the table that is returned.  
+ To retrieve a snapshot of all query plans residing in the plan cache, retrieve the plan handles of all query plans in the cache by querying the `sys.dm_exec_cached_plans` dynamic management view. The plan handles are stored in the `plan_handle` column of `sys.dm_exec_cached_plans`. Then use the CROSS APPLY operator to pass the plan handles to `sys.dm_exec_text_query_plan` as follows. The Showplan output for each plan currently in the plan cache is in the `query_plan` column of the table that is returned.  
   
-```  
+```tsql  
 USE master;  
 GO  
 SELECT *   
 FROM sys.dm_exec_cached_plans AS cp   
 CROSS APPLY sys.dm_exec_text_query_plan(cp.plan_handle, DEFAULT, DEFAULT);  
 GO  
-  
 ```  
   
 ### C. Retrieving every query plan for which the server has gathered query statistics from the plan cache  
- To retrieve a snapshot of all query plans for which the server has gathered statistics that currently reside in the plan cache, retrieve the plan handles of these plans in the cache by querying the `sys.dm`_`exec`\_`query`\_`stats` dynamic management view. The plan handles are stored in the `plan`\_`handle` column of `sys.dm`\_`exec`\_`query`\_`stats`. Then use the CROSS APPLY operator to pass the plan handles to `sys.dm`\_`exec`\_`text`\_`query`\_`plan` as follows. The Showplan output for each plan is in the `query_plan` column of the table that is returned.  
+ To retrieve a snapshot of all query plans for which the server has gathered statistics that currently reside in the plan cache, retrieve the plan handles of these plans in the cache by querying the `sys.dm_exec_query_stats` dynamic management view. The plan handles are stored in the `plan_handle` column of `sys.dm_exec_query_stats`. Then use the CROSS APPLY operator to pass the plan handles to `sys.dm_exec_text_query_plan` as follows. The Showplan output for each plan is in the `query_plan` column of the table that is returned.  
   
-```  
+```tsql  
 USE master;  
 GO  
 SELECT * FROM sys.dm_exec_query_stats AS qs   
 CROSS APPLY sys.dm_exec_text_query_plan(qs.plan_handle, qs.statement_start_offset, qs.statement_end_offset);  
 GO  
-  
 ```  
   
 ### D. Retrieving information about the top five queries by average CPU time  
  The following example returns the query plans and average CPU time for the top five queries. The **sys.dm_exec_text_query_plan** function specifies the default values 0 and -1 to return all statements in the batch in the query plan.  
   
-```  
+```tsql  
 SELECT TOP 5 total_worker_time/execution_count AS [Avg CPU Time],  
 Plan_handle, query_plan   
 FROM sys.dm_exec_query_stats AS qs  
 CROSS APPLY sys.dm_exec_text_query_plan(qs.plan_handle, 0, -1)  
 ORDER BY total_worker_time/execution_count DESC;  
 GO  
-  
 ```  
   
 ## See Also  

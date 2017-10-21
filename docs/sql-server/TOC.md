@@ -19,15 +19,15 @@
 
 # Release Notes
 
-## [SQL Server 2017 Release Notes](sql-server-2017-release-notes.md)
-## [SQL Server 2016 Release Notes](sql-server-2016-release-notes.md)
-## [SQL Server 2014 Release Notes](sql-server-2014-release-notes.md)
-## [SQL Server 2012 SP4 Release Notes](sql-server-2012-sp4-release-notes.md)
-## [SQL Server 2012 SP3 Release Notes](sql-server-2012-sp3-release-notes.md)
-## [SQL Server 2012 SP2 Release Notes](sql-server-2012-sp2-release-notes.md)
-## [SQL Server 2012 SP1 Release Notes](sql-server-2012-sp1-release-notes.md)
-## [SQL Server 2012 Release Notes](sql-server-2012-release-notes.md)
-## [SQL Server 2008 R2 SP2 Release Notes](sql-server-2008-r2-sp2-release-notes.md)
+## [SQL Server 2017 Notes](sql-server-2017-release-notes.md)
+## [SQL Server 2016 Notes](sql-server-2016-release-notes.md)
+## [SQL Server 2014 Notes](sql-server-2014-release-notes.md)
+## [SQL Server 2012 SP4 Notes](sql-server-2012-sp4-release-notes.md)
+## [SQL Server 2012 SP3 Notes](sql-server-2012-sp3-release-notes.md)
+## [SQL Server 2012 SP2 Notes](sql-server-2012-sp2-release-notes.md)
+## [SQL Server 2012 SP1 Notes](sql-server-2012-sp1-release-notes.md)
+## [SQL Server 2012 Notes](sql-server-2012-release-notes.md)
+## [SQL Server 2008 R2 SP2 Notes](sql-server-2008-r2-sp2-release-notes.md)
 
 # [Analysis Services](../analysis-services/analysis-services.md)
 # [Database Engine](../database-engine/sql-server-database-engine-overview.md)
@@ -45,6 +45,8 @@
 # Resources
 ## Blogs
 ### [SQL Server](https://blogs.technet.microsoft.com/dataplatforminsider/)
+### [SQL Server Database Engine](https://blogs.msdn.microsoft.com/sqlserverstorageengine/)
+### [SQL Server Security](https://blogs.msdn.microsoft.com/sqlsecurity/)
 
 ## Feedback and help
 ### [DBA Stack Exchange](https://dba.stackexchange.com/questions/tagged/sql-server)

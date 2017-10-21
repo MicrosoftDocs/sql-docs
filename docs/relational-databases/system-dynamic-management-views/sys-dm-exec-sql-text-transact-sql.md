@@ -37,8 +37,8 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
 ```  
   
 ## Arguments  
- *sql_handle*  
- Is the SQL handle of the batch to be looked up. *sql_handle* is **varbinary(64)**. *sql_handle* can be obtained from the following dynamic management objects:  
+*sql_handle*  
+Is the SQL handle of the batch to be looked up. *sql_handle* is **varbinary(64)**. *sql_handle* can be obtained from the following dynamic management objects:  
   
 -   [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
   
@@ -52,8 +52,8 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
   
 -   [sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md)  
   
- *plan_handle*  
- Uniquely identifies a query plan for a batch that is cached or is currently executing. *plan_handle* is **varbinary(64)**. *plan_handle* can be obtained from the following dynamic management objects:  
+*plan_handle*  
+Uniquely identifies a query plan for a batch that is cached or is currently executing. *plan_handle* is **varbinary(64)**. *plan_handle* can be obtained from the following dynamic management objects:  
   
 -   [sys.dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
   

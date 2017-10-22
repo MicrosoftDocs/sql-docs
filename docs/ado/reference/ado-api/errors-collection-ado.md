@@ -21,6 +21,7 @@ caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Errors Collection (ADO)
 Contains all the [Error](../../../ado/reference/ado-api/error-object.md) objects created in response to a single provider-related failure.  

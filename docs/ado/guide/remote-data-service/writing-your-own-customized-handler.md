@@ -17,6 +17,7 @@ caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Writing Your Own Customized Handler
 You may want to write your own handler if you are an IIS server administrator who wants the default RDS support, but more control over user requests and access rights.  

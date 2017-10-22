@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Stat Method
 Retrieves information about a [Stream](../../../ado/reference/ado-api/stream-object-ado.md) object.  

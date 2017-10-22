@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # ConnectionTimeout Property (ADO)
 Indicates how long to wait while establishing a connection before terminating the attempt and generating an error.  

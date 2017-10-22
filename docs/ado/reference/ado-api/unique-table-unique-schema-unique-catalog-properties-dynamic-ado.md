@@ -19,6 +19,7 @@ caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Unique Table, Unique Schema, Unique Catalog Properties-Dynamic (ADO)
 Enables you to closely control modifications to a particular base table in a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) that was formed by a JOIN operation on multiple base tables.  

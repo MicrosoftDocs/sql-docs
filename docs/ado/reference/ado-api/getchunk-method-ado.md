@@ -20,6 +20,7 @@ caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # GetChunk Method (ADO)
 Returns all, or a portion, of the contents of a large text or binary data [Field](../../../ado/reference/ado-api/field-object.md) object.  

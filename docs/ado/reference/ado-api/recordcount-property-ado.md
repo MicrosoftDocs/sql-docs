@@ -21,6 +21,7 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # RecordCount Property (ADO)
 Indicates the number of records in a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object.  

@@ -19,6 +19,7 @@ caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # RDS Code Examples in Visual C++
 Use the following code examples to learn how to use RDS properties when writing in Microsoft Visual C++.  

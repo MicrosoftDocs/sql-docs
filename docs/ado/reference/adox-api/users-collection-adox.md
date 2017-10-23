@@ -21,6 +21,7 @@ caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Users Collection (ADOX)
 Contains all stored [User](../../../ado/reference/adox-api/user-object-adox.md) objects of a [catalog](../../../ado/reference/adox-api/catalog-object-adox.md) or [group](../../../ado/reference/adox-api/group-object-adox.md).  

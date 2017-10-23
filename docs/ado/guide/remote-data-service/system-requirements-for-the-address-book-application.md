@@ -17,6 +17,7 @@ caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # System Requirements for the Address Book Application
 To set up the Address Book sample application, you need to meet the following software and database requirements:  

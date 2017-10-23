@@ -44,10 +44,8 @@ TRUE on success, otherwise FALSE.
 ## Remarks  
 When binding null data to server columns of type varbinary, binary, or varbinary(max) you should specify binary encoding (PDO::SQLSRV_ENCODING_BINARY) using the $*driver_options*. See [Constants](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md) for more information about encoding constants.  
   
-It is recommended to use strings as inputs when binding values to a decimal or numeric column to ensure precision and accuracy. See [decimals as parameters](https://github.com/Microsoft/msphpsql/wiki/Features#decimalParams) for details. 
-  
 Support for PDO was added in version 2.0 of the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
-  
+
 ## Example  
 This code sample shows that after $contact is bound to the parameter, changing the value does change the value passed in the query.  
   
@@ -105,7 +103,7 @@ This code sample shows how to use an input/output parameter.
 <?php  
    $database = "AdventureWorks";  
    $server = "(local)";  
-   $dbh = new PDO( "sqlsrv:server=$server ; Database = $database", "", "");  
+   $dbh = new PDO("sqlsrv:server=$server ; Database = $database", "", "");  
   
    $dbh->query("IF OBJECT_ID('dbo.sp_ReverseString', 'P') IS NOT NULL DROP PROCEDURE dbo.sp_ReverseString");  
    $dbh->query("CREATE PROCEDURE dbo.sp_ReverseString @String as VARCHAR(2048) OUTPUT as SELECT @String = REVERSE(@String)");  
@@ -116,7 +114,28 @@ This code sample shows how to use an input/output parameter.
    print $string;   // Expect 987654321  
 ?>  
 ```  
+
+> [!NOTE]  
+>  It is recommended to use strings as inputs when binding values to a decimal or numeric column to ensure precision and accuracy as PHP has limited precision for [floating point numbers](http://php.net/manual/en/language.types.float.php).
+
+## Example  
+This code sample shows how to bind a decimal value as an input parameter.  
+
+```
+<?php  
+$database = "Test";  
+$server = "(local)";  
+$conn = new PDO("sqlsrv:server=$server ; Database = $database", "", "");  
   
+$input = 9223372036854.80000;
+$stmt = $conn->prepare("INSERT INTO TestTable (col) VALUES (?)");
+// by default it is PDO::PARAM_STR, rounding of a large input value may
+// occur if PDO::PARAM_INT is specified
+$stmt->bindParam(1, $input);
+$stmt->execute();
+```
+
+
 ## See Also  
 [PDOStatement Class](../../connect/php/pdostatement-class.md)  
 [PDO](http://go.microsoft.com/fwlink/?LinkID=187441)  

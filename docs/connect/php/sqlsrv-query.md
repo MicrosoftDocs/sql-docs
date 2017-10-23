@@ -31,7 +31,7 @@ Prepares and executes a statement.
   
 ```  
   
-sqlsrv_query( resource $conn, string $tsql [, array $params [, array $options]])  
+sqlsrv_query(resource $conn, string $tsql [, array $params [, array $options]])  
 ```  
   
 #### Parameters  
@@ -74,8 +74,6 @@ A statement resource. If the statement cannot be created and/or executed, **fals
 ## Remarks  
 The **sqlsrv_query** function is well-suited for one-time queries and should be the default choice to execute queries unless special circumstances apply. This function provides a streamlined method to execute a query with a minimum amount of code. The **sqlsrv_query** function does both statement preparation and statement execution, and can be used to execute parameterized queries.  
   
-It is recommended to use strings as inputs when binding values to a decimal or numeric column to ensure precision and accuracy. See [decimals as parameters](https://github.com/Microsoft/msphpsql/wiki/Features#decimalParams) for details. 
-  
 For more information, see [How to: Retrieve Output Parameters Using the SQLSRV Driver](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md).  
   
 ## Example  
@@ -89,12 +87,11 @@ In the following example, a single row is inserted into the *Sales.SalesOrderDet
 /* Connect to the local server using Windows Authentication and  
 specify the AdventureWorks database as the database in use. */  
 $serverName = "(local)";  
-$connectionInfo = array( "Database"=>"AdventureWorks");  
-$conn = sqlsrv_connect( $serverName, $connectionInfo);  
-if( $conn === false )  
-{  
-     echo "Could not connect.\n";  
-     die( print_r( sqlsrv_errors(), true));  
+$connectionInfo = array("Database"=>"AdventureWorks");  
+$conn = sqlsrv_connect($serverName, $connectionInfo);  
+if ($conn === false) {  
+    echo "Could not connect.\n";  
+    die(print_r(sqlsrv_errors(), true));  
 }  
   
 /* Set up the parameterized query. */  
@@ -112,20 +109,17 @@ $tsql = "INSERT INTO Sales.SalesOrderDetail
 $params = array(75123, 5, 741, 1, 818.70, 0.00);  
   
 /* Prepare and execute the query. */  
-$stmt = sqlsrv_query( $conn, $tsql, $params);  
-if( $stmt )  
-{  
-     echo "Row successfully inserted.\n";  
-}  
-else  
-{  
-     echo "Row insertion failed.\n";  
-     die( print_r( sqlsrv_errors(), true));  
+$stmt = sqlsrv_query($conn, $tsql, $params);  
+if ($stmt) {  
+    echo "Row successfully inserted.\n";  
+} else {  
+    echo "Row insertion failed.\n";  
+    die(print_r(sqlsrv_errors(), true));  
 }  
   
 /* Free statement and connection resources. */  
-sqlsrv_free_stmt( $stmt);  
-sqlsrv_close( $conn);  
+sqlsrv_free_stmt($stmt);  
+sqlsrv_close($conn);  
 ?>  
 ```  
   
@@ -138,37 +132,61 @@ The example below updates a field in the *Sales.SalesOrderDetail* table of the A
 specify the AdventureWorks database as the database in use. */  
 $serverName = "(local)";  
 $connectionInfo = array("Database"=>"AdventureWorks");  
-$conn = sqlsrv_connect( $serverName, $connectionInfo);  
-if( $conn === false )  
-{  
-     echo "Could not connect.\n";  
-     die( print_r( sqlsrv_errors(), true));  
+$conn = sqlsrv_connect($serverName, $connectionInfo);  
+if ($conn === false) {  
+    echo "Could not connect.\n";  
+    die(print_r(sqlsrv_errors(), true));  
 }  
   
 /* Set up the parameterized query. */  
 $tsql = "UPDATE Sales.SalesOrderDetail   
-         SET OrderQty = ( ?)   
-         WHERE SalesOrderDetailID = ( ?)";  
+         SET OrderQty = (?)   
+         WHERE SalesOrderDetailID = (?)";  
   
 /* Assign literal parameter values. */  
-$params = array( 5, 10);  
+$params = array(5, 10);  
   
 /* Execute the query. */  
-if( sqlsrv_query( $conn, $tsql, $params))  
-{  
-      echo "Statement executed.\n";  
-}   
-else  
-{  
-      echo "Error in statement execution.\n";  
-      die( print_r( sqlsrv_errors(), true));  
+if (sqlsrv_query($conn, $tsql, $params)) {  
+    echo "Statement executed.\n";  
+} else {  
+    echo "Error in statement execution.\n";  
+    die(print_r(sqlsrv_errors(), true));  
 }  
   
 /* Free connection resources. */  
-sqlsrv_close( $conn);  
+sqlsrv_close($conn);  
 ?>  
 ```  
   
+> [!NOTE]
+>  It is recommended to use strings as inputs when binding values to a decimal or numeric column to ensure precision and accuracy as PHP has limited precision for [floating point numbers](http://php.net/manual/en/language.types.float.php).
+
+## Example  
+This code sample shows how to bind a decimal value as an input parameter.  
+
+```
+<?php
+$serverName = "(local)";
+$connectionInfo = array("Database"=>"YourTestDB");  
+$conn = sqlsrv_connect($serverName, $connectionInfo);  
+if ($conn === false) {  
+     echo "Could not connect.\n";  
+     die(print_r(sqlsrv_errors(), true));  
+}  
+
+/* Assume TestTable exists with a decimal field */
+$input = "9223372036854.80000";
+$params = array($input);
+$stmt = sqlsrv_query($conn, "INSERT INTO TestTable (col) VALUES (?)", $params);
+
+sqlsrv_free_stmt($stmt);  
+sqlsrv_close($conn);  
+
+?>
+```
+
+
 ## See Also  
 [SQLSRV Driver API Reference](../../connect/php/sqlsrv-driver-api-reference.md)  
 [How to: Perform Parameterized Queries](../../connect/php/how-to-perform-parameterized-queries.md)  

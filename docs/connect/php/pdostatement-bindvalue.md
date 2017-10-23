@@ -24,7 +24,7 @@ Binds a value to a named or question mark placeholder in the SQL statement.
   
 ```  
   
-bool PDOStatement::bindValue( $parameter, $value [,$data_type] );  
+bool PDOStatement::bindValue($parameter, $value[, $data_type]);  
 ```  
   
 #### Parameters  
@@ -39,8 +39,6 @@ TRUE on success, otherwise FALSE.
   
 ## Remarks  
   
-It is recommended to use strings as inputs when binding values to a decimal or numeric column to ensure precision and accuracy. See [decimals as parameters](https://github.com/Microsoft/msphpsql/wiki/Features#decimalParams) for details. 
-
 Support for PDO was added in version 2.0 of the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
 ## Example  
@@ -58,7 +56,7 @@ $stmt->bindValue(1, $contact);
 $contact = "Owner";  
 $stmt->execute();  
   
-while ( $row = $stmt->fetch( PDO::FETCH_ASSOC ) ){  
+while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {  
    print "$row[Name]\n\n";  
 }  
   
@@ -69,11 +67,31 @@ $stmt->bindValue(':contact', $contact);
 $contact = "Owner";  
 $stmt->execute();  
   
-while ( $row = $stmt->fetch( PDO::FETCH_ASSOC ) ){  
+while ($row = $stmt->fetch(PDO::FETCH_ASSOC)){  
    print "$row[Name]\n\n";  
 }  
 ?>  
-```  
+```
+
+> [!NOTE]
+>  It is recommended to use strings as inputs when binding values to a decimal or numeric column to ensure precision and accuracy as PHP has limited precision for [floating point numbers](http://php.net/manual/en/language.types.float.php).
+
+## Example  
+This code sample shows how to bind a decimal value as an input parameter.  
+
+```
+<?php  
+$database = "Test";  
+$server = "(local)";  
+$conn = new PDO( "sqlsrv:server=$server ; Database = $database", "", "");  
+  
+$input = 9223372036854.80000;
+$stmt = $conn->prepare("INSERT INTO TestTable (col) VALUES (?)");
+// by default it is PDO::PARAM_STR, rounding of a large input value may
+// occur if PDO::PARAM_INT is specified
+$stmt->bindValue(1, $input);    
+$stmt->execute();
+```
   
 ## See Also  
 [PDOStatement Class](../../connect/php/pdostatement-class.md)  

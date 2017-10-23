@@ -29,6 +29,7 @@ caps.latest.revision: 49
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "On Demand"
 ---
 # Attributes and Attribute Hierarchies
   Dimensions are collections of attributes, which are bound to one or more columns in a table or view in the data source view.  

@@ -14,6 +14,7 @@ caps.latest.revision: 20
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Performance tuning for R in SQL Server
 

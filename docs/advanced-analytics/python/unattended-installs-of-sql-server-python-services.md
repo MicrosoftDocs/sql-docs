@@ -14,6 +14,7 @@ caps.latest.revision: 1
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Unattended installation of Python Machine Learning Services (In-Database)
 

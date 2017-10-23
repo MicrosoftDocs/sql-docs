@@ -19,6 +19,7 @@ caps.latest.revision: 21
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # DISCOVER_COMMAND_OBJECTS Rowset
   Provides resource usage and activity information about the objects in use by the referenced command.  

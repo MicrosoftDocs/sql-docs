@@ -24,6 +24,7 @@ caps.latest.revision: 11
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # AggregationInstances Element (ASSL)
   Contains the collection of aggregation instances that are defined in a [Partition](../../../analysis-services/scripting/objects/partition-element-assl.md) element.  

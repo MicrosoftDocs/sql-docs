@@ -15,6 +15,7 @@ caps.latest.revision: 1
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Install pretrained machine learning models on SQL Server
 

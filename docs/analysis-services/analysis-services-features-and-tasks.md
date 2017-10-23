@@ -15,6 +15,7 @@ caps.latest.revision: 13
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Analysis Services Features and Tasks
   Analysis Services foundational documentation is organized by model type and server mode so that you can focus on just the tools, tasks, and features that are available in the mode you installed. Server administration tasks that span multiple modes can be found in Instance Management.  

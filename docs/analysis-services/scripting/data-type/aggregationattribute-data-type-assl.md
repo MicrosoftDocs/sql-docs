@@ -26,6 +26,7 @@ caps.latest.revision: 42
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # AggregationAttribute Data Type (ASSL)
   Defines a primitive data type that represents the association between an [Aggregation](../../../analysis-services/scripting/objects/aggregation-element-assl.md) element and an attribute.  

@@ -22,6 +22,7 @@ caps.latest.revision: 37
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # MDSCHEMA_SETS Rowset
   Describes any sets that are currently defined in a database, including session-scoped sets.  

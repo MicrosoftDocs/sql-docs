@@ -16,6 +16,7 @@ caps.latest.revision: 9
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Schedule Data Refresh and Data Sources - No Windows Authentication
   This topic describes a workflow of [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint schedule data fresh that can use data sources that do **NOT** support Windows Authentication. For example Oracle or IDM DB2 data sources. The illustrations and steps in this topic reference Oracle data sources but the same workflow applies to other data sources.  

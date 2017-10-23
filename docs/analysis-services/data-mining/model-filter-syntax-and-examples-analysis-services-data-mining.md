@@ -20,6 +20,7 @@ caps.latest.revision: 18
 author: "Minewiskan"
 ms.author: "owend"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Model Filter Syntax and Examples (Analysis Services - Data Mining)
   This section provides detailed information about the syntax for model filters, together with sample expressions.  

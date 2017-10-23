@@ -22,6 +22,7 @@ caps.latest.revision: 18
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Currency Conversions (Analysis Services)
   [!INCLUDE[applies](../includes/applies-md.md)] Multidimensional only  

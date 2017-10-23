@@ -16,6 +16,7 @@ caps.latest.revision: 7
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Delete a Power Pivot Data Feed Library
   You must be the site owner to delete a data feed library. If the library contains items, they will be deleted along with the library.  

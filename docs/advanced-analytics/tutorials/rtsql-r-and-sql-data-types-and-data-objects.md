@@ -17,6 +17,7 @@ caps.latest.revision: 8
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # R and SQL data types and data objects (R in SQL quickstart)
 

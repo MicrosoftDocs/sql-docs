@@ -16,6 +16,7 @@ caps.latest.revision: 17
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Data science scenarios and solution templates
 

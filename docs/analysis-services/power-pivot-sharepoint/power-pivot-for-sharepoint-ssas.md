@@ -16,6 +16,7 @@ caps.latest.revision: 32
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "On Demand"
 ---
 # Power Pivot for SharePoint (SSAS)
   An [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] server in [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] mode provides server hosting of [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data in a SharePoint farm. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data is an analytical data model that you build using one of the following:  

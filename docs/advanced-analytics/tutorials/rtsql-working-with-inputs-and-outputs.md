@@ -17,6 +17,7 @@ caps.latest.revision: 7
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Working with inputs and outputs (R in SQL quickstart)
 

@@ -26,6 +26,7 @@ caps.latest.revision: 44
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Accounts Element (ASSL)
   Contains the collection of account types that are defined in a [Database](../../../analysis-services/scripting/objects/database-element-assl.md) element.  

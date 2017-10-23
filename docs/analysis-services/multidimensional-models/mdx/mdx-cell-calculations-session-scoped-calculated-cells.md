@@ -18,6 +18,7 @@ caps.latest.revision: 14
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # MDX Cell Calculations - Session-Scoped Calculated Cells
     

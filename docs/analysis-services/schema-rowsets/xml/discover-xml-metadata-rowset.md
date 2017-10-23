@@ -22,6 +22,7 @@ caps.latest.revision: 40
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # DISCOVER_XML_METADATA Rowset
   Returns an XML document describing a requested object. The rowset that is returned always consists of one row and one column.  

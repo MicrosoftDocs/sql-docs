@@ -26,6 +26,7 @@ caps.latest.revision: 38
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Annotations Element (ASSL)
   Contains the collection of [Annotation](../../../analysis-services/scripting/objects/annotation-element-assl.md) elements associated with the parent element.  

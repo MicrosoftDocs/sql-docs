@@ -17,6 +17,7 @@ caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Running the Address Book SQL Script
 > [!IMPORTANT]

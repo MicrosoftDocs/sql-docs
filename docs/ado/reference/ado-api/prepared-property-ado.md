@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Prepared Property (ADO)
 Indicates whether to save a compiled version of a [Command](../../../ado/reference/ado-api/command-object-ado.md) before execution.  

@@ -28,6 +28,7 @@ caps.latest.revision: 12
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Analysis Services Scripting Language XML Data Type Hierarchy (ASSL)
   The following table displays the inheritance hierarchy of data types in Analysis Services Scripting Language (ASSL).  

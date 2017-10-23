@@ -21,6 +21,7 @@ caps.latest.revision: 24
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # THROW (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all_md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -136,23 +137,6 @@ THROW 60000, @msg, 1;
  ```
  Msg 60000, Level 16, State 1, Line 2  
  This is a test message with one numeric parameter (500), one string parameter (First string), and another string parameter (second string).
- ```  
-  
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### D. Using THROW to raise an exception  
- The following example shows how to use the `THROW` statement to raise an exception.  
-  
-```tsql  
-THROW 51000, 'The record does not exist.', 1;  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
- ```
- Msg 51000, Level 16, State 1, Line 1  
-  
- The record does not exist.
  ```  
   
 ## See Also  

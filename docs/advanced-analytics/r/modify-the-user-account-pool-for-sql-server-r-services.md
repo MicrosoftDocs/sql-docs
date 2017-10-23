@@ -15,6 +15,7 @@ caps.latest.revision: 19
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Modify the User Account Pool for SQL Server R Services
   As part of the installation process for [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)], a new Windows *user account pool* is created to support execution of tasks by the [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] service. The purpose of these worker accounts is to isolate concurrent execution of R scripts by different SQL users. 

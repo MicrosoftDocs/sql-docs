@@ -18,6 +18,7 @@ caps.latest.revision: 26
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # SystemGetAccuracyResults (Analysis Services - Data Mining)
   Returns cross-validation accuracy metrics for a mining structure and all related models, excluding clustering models.  

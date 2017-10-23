@@ -14,6 +14,7 @@ caps.latest.revision: 4
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Install Microsoft R Server from the Command Line
     

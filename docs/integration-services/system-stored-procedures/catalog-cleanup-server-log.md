@@ -22,10 +22,8 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```  
-  
-cleanup_server_log  
-  
+```sql
+catalog.cleanup_server_log  
 ```  
   
 ## Arguments  
@@ -79,15 +77,14 @@ cleanup_server_log
 ## Example  
  The following example calls the cleanup_server_log stored procedure.  
   
-```tsql  
+```sql  
 USE [SSISDB]  
 GO  
   
 DECLARE@return_value int  
 EXEC@return_value = [internal].[cleanup_server_log]  
 SELECT'Return Value' = @return_value  
-GO  
-  
+GO   
 ```  
   
   

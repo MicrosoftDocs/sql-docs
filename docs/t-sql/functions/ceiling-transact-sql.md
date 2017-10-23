@@ -23,6 +23,7 @@ caps.latest.revision: 34
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # CEILING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -60,21 +61,6 @@ GO
   
 (1 row(s) affected)  
 ```  
-  
-[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-
-The following example shows use of positive numeric, negative, and zero values with the CEILING function.
-  
-```sql
-SELECT CEILING(123.45), CEILING(-123.45), CEILING(0.0);  
-```  
-  
-[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
-  
-```
-------- --------- --------
-124.00  -123.00   0.00
-```
   
 ## See also
 [System Functions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)

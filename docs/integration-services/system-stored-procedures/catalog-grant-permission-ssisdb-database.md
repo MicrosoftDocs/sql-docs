@@ -25,9 +25,8 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```  
-  
-grant_permission [ @object_type = ] object_type  
+```sql
+catalog.grant_permission [ @object_type = ] object_type  
     , [ @object_id = ] object_id  
     , [ @principal_id = ] principal_id  
     , [ @permission_type = ] permission_type  

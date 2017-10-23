@@ -26,6 +26,7 @@ caps.latest.revision: 35
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Kpis Element (ASSL)
   Contains the collection of key performance indicators ([Kpi](../../../analysis-services/scripting/objects/kpi-element-assl.md) elements) associated with the parent element.  

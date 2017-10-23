@@ -22,6 +22,7 @@ caps.latest.revision: 52
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "On Demand"
 ---
 # Key Concepts in MDX (Analysis Services)
   Before you can use Multidimensional Expressions (MDX) to query multidimensional data or create MDX expressions within a cube, it helps to understand multidimensional concepts and terms.  

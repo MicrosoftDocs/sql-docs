@@ -16,6 +16,7 @@ caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Table Object Properties, Methods, and Events
 ## Properties/Collections  

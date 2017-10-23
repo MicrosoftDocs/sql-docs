@@ -14,6 +14,7 @@ caps.latest.revision: 19
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # SQL Server Properties (Advanced Tab)
   The following properties appear on the **Advanced** tab by default. If custom properties are defined, they also appear on this tab, with their values.  

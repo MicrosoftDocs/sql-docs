@@ -20,6 +20,7 @@ caps.latest.revision: 27
 author: "Minewiskan"
 ms.author: "owend"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Add a Nested Table to a Mining Structure
   Use Data Mining Designer to add a nested table to a mining structure after it has been created by the Data Mining Wizard.  

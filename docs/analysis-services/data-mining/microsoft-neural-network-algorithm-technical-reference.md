@@ -33,6 +33,7 @@ caps.latest.revision: 26
 author: "Minewiskan"
 ms.author: "owend"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Microsoft Neural Network Algorithm Technical Reference
   The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network uses a *Multilayer Perceptron* network, also called a *Back-Propagated Delta Rule network*, composed of up to three layers of neurons, or *perceptrons*. These layers are an input layer, an optional hidden layer, and an output layer.  

@@ -24,6 +24,7 @@ caps.latest.revision: 40
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # USE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -59,13 +60,6 @@ USE { database_name }
 ```  
 USE AdventureWorks2012;  
 GO  
-```  
-  
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- The following example changes the database context to the `AccountingDB` database.  
-  
-```  
-USE AccountingDB;  
 ```  
   
 ## See Also  

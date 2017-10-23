@@ -14,6 +14,7 @@ caps.latest.revision: 7
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Configuration and Management
 

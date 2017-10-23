@@ -22,6 +22,7 @@ caps.latest.revision: 36
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # DMSCHEMA_MINING_STRUCTURES Rowset
   Enumerates information about the mining structures in the current catalog.  

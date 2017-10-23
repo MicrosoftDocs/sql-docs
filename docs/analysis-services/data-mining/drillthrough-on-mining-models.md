@@ -15,6 +15,7 @@ caps.latest.revision: 8
 author: "Minewiskan"
 ms.author: "owend"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Drillthrough on Mining Models
   *Drillthrough* means the ability to query either a mining model or a mining structure and get detailed data that is not exposed in the model.  

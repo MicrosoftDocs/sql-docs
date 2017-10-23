@@ -14,6 +14,7 @@ caps.latest.revision: 7
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # The data connection user could not be delegated
   For Excel workbooks that contain [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data, Excel Services returns this error if it cannot connect to a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] server instance in SharePoint.  

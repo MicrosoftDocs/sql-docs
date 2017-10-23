@@ -16,6 +16,7 @@ caps.latest.revision: 15
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Configuring DataFactory for Safe or Unrestricted Modes
 > [!IMPORTANT]

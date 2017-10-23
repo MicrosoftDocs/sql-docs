@@ -26,6 +26,7 @@ caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # MiningModelPermissions Element (ASSL)
   Contains the collection of permissions for a [MiningModel](../../../analysis-services/scripting/objects/miningmodel-element-assl.md) element.  

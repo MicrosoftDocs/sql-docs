@@ -14,6 +14,7 @@ caps.latest.revision: 2
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Avoiding errors on R packages installed in user libraries
 

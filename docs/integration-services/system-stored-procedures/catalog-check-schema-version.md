@@ -26,8 +26,8 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```vb  
-Check_schema_version [@use32bitruntime = ] use32bitruntime  
+```sql  
+catalog.check_schema_version [@use32bitruntime = ] use32bitruntime  
 ```  
   
 ## Arguments  

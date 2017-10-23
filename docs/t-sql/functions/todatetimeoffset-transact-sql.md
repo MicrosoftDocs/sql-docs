@@ -27,6 +27,7 @@ caps.latest.revision: 37
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # TODATETIMEOFFSET (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -80,37 +81,6 @@ SELECT TODATETIMEOFFSET (@todaysDate, -120);
 ```  
   
 ### C. Adding a 13-hour time zone offset  
- The following example adds a 13-hour time zone offset to a date and time.  
-  
-```  
-DECLARE @dateTime datetimeoffset(7)= '2007-08-28 18:00:30';  
-SELECT TODATETIMEOFFSET (@dateTime, '+13:00');  
--- RETURNS 2007-08-28 18:00:30.0000000 +13:00  
-```  
-  
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### D. Changing the time zone offset of the current date and time  
- The following example changes the zone offset of the current date and time to time zone `-07:00`.  
-  
-```  
-DECLARE @todaysDateTime datetime2;  
-SET @todaysDateTime = GETDATE();  
-SELECT TODATETIMEOFFSET (@todaysDateTime, '-07:00');  
--- RETURNS 2007-08-30 15:51:34.7030000 -07:00  
-```  
-  
-### E. Changing the time zone offset in minutes  
- The following example changes the current time zone to `-120` minutes.  
-  
-```  
-DECLARE @todaysDate datetime2;  
-SET @todaysDate = GETDATE();  
-SELECT TODATETIMEOFFSET (@todaysDate, -120);  
--- RETURNS 2007-08-30 15:52:37.8770000 -02:00  
-```  
-  
-### F. Adding a 13-hour time zone offset  
  The following example adds a 13-hour time zone offset to a date and time.  
   
 ```  

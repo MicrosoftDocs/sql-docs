@@ -19,6 +19,7 @@ caps.latest.revision: 15
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # In-database R analytics for SQL developers (tutorial)
 

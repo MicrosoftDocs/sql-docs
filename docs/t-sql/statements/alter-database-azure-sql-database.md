@@ -1,4 +1,4 @@
-﻿---
+---
 title: "ALTER DATABASE (Azure SQL Database) | Microsoft Docs"
 ms.custom: 
   - "MSDN content"
@@ -17,6 +17,7 @@ caps.latest.revision: 37
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # ALTER DATABASE (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]

@@ -19,6 +19,7 @@ caps.latest.revision: 9
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Server Objects (Analysis Services - Multidimensional Data)
     

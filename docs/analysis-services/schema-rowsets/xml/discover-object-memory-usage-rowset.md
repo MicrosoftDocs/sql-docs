@@ -19,6 +19,7 @@ caps.latest.revision: 13
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # DISCOVER_OBJECT_MEMORY_USAGE Rowset
   Provides information about memory resources used by objects.  

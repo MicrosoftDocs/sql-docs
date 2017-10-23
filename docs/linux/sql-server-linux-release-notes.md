@@ -49,7 +49,7 @@ This is the Cumulative Update 1 (CU1) release of SQL Server 2017. The SQL Server
 
 ### Package details
 
-Package details and download locations for the RPM and Debian packages are listed in the following table. These are mainly used for manual or offline installations. You do not need to download these packages directly if you use the steps in the following installation guides:
+Package details and download locations for the RPM and Debian packages are listed in the following table. These are mainly used for manual or offline installations. For connected scnearios, use the appropriate [update command](sql-server-linux-setup.md#upgrade) for your platform or use one of the following installation guides for new installs:
 
 - [Install SQL Server package](sql-server-linux-setup.md)
 - [Install Full-text Search package](sql-server-linux-setup-full-text-search.md)

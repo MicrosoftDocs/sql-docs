@@ -20,6 +20,7 @@ caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # GetString Method (ADO)
 Returns the [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) as a string.  

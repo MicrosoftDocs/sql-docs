@@ -40,7 +40,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
-  
 FILE_NAME ( file_id )   
 ```  
   
@@ -77,5 +76,4 @@ AdventureWorks2012_Data   AdventureWorks2012_Log
  [Metadata Functions &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
  [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
-  
   

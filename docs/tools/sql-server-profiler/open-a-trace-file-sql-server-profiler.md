@@ -16,6 +16,7 @@ caps.latest.revision: 24
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Open a Trace File (SQL Server Profiler)
   This topic describes how to open a trace file by using [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  

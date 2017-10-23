@@ -19,6 +19,7 @@ caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Axis Object (ADO MD)
 Represents a positional or filter axis of a cellset, containing selected members of one or more dimensions.  

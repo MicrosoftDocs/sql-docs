@@ -22,10 +22,8 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```  
-  
-cleanup_server_log  
-  
+```sql
+catalog.cleanup_server_log  
 ```  
   
 ## Arguments  
@@ -86,8 +84,7 @@ GO
 DECLARE@return_value int  
 EXEC@return_value = [internal].[cleanup_server_log]  
 SELECT'Return Value' = @return_value  
-GO  
-  
+GO   
 ```  
   
   

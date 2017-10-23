@@ -14,6 +14,7 @@ caps.latest.revision: 0
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
+ms.workload: "On Demand"
 ---
 # Tools and utilities for Azure SQL Database, SQL Server, and SQL Data Warehouse
 

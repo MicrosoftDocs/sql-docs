@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # PropertyAttributesEnum
 Specifies the attributes of a [Property](../../../ado/reference/ado-api/property-object-ado.md) object.  

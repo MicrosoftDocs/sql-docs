@@ -21,6 +21,7 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Caption Property (ADO MD)
 Indicates the text caption to use when displaying a [Level](../../../ado/reference/ado-md-api/level-object-ado-md.md) or [Member](../../../ado/reference/ado-md-api/member-object-ado-md.md) object.  

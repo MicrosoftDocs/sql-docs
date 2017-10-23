@@ -19,6 +19,7 @@ caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # DefinedSize Property
 Indicates the data capacity of a [Field](../../../ado/reference/ado-api/field-object.md) object.  

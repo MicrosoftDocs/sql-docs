@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # RecordOpenOptionsEnum
 Specifies options for opening a [Record](../../../ado/reference/ado-api/record-object-ado.md). These values may be combined by using OR.  

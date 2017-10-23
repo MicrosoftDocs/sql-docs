@@ -4,7 +4,7 @@ description: This topic contains the release notes and supported features for SQ
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 10/23/2017
+ms.date: 10/24/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -45,7 +45,7 @@ The following table lists the release history for SQL Server 2017.
 
 ## <A id="CU1"></a> Cumulative Update 1 (October 2017)
 
-This is the Cumulative Update 1 (CU1) release of SQL Server 2017. The SQL Server engine version for this release is 14.0.3006.16. For information about the fixes and improvements in this release, see [https://support.microsoft.com/help/4013105/cumulative-update-5-for-sql-server-2016](https://support.microsoft.com/help/4013105/cumulative-update-5-for-sql-server-2016).
+This is the Cumulative Update 1 (CU1) release of SQL Server 2017. The SQL Server engine version for this release is 14.0.3006.16. For information about the fixes and improvements in this release, see [https://support.microsoft.com/en-us/help/4038634](https://support.microsoft.com/en-us/help/4038634).
 
 ### Package details
 

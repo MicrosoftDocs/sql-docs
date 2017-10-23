@@ -182,7 +182,7 @@ ms.workload: "On Demand"
 ## Examples  
   
 ### A. Using WHERE with LIKE and ESCAPE syntax  
- The following example searches for the rows in which the `LargePhotoFileName` column has the characters `green_`, and uses the `ESCAPE` option because `_` is a wildcard character. Without specifying the `ESCAPE` option, the query would search for any description values that contain the word `green` followed by any single character other than the `_` character.  
+ The following example searches for the rows in which the `LargePhotoFileName` column has the characters `green_`, and uses the `ESCAPE` option because _ is a wildcard character. Without specifying the `ESCAPE` option, the query would search for any description values that contain the word `green` followed by any single character other than the _ character.  
   
 ```  
 USE AdventureWorks2012 ;  

@@ -773,7 +773,7 @@ GO
 ```  
   
 ### D. Creating a CLR function  
- The example creates CLR function `len`_`s`. Before the function is created, the assembly `SurrogateStringFunction.dll` is registered in the local database.  
+ The example creates CLR function `len_s`. Before the function is created, the assembly `SurrogateStringFunction.dll` is registered in the local database.  
   
 **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   

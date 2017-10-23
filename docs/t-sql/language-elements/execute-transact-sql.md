@@ -522,7 +522,7 @@ GO
 ```  
   
 ### H. Using EXECUTE WITH RECOMPILE  
- The following example executes the `Proc`_`Test`\_`Defaults` stored procedure and forces a new query plan to be compiled, used, and discarded after the module is executed.  
+ The following example executes the `Proc_Test_Defaults` stored procedure and forces a new query plan to be compiled, used, and discarded after the module is executed.  
   
 ```  
 EXECUTE dbo.Proc_Test_Defaults @p2 = 'A' WITH RECOMPILE;  

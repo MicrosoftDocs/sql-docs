@@ -80,7 +80,7 @@ GO
 ```  
   
 ### C. Returning the SET options with which the plan was compiled  
- The following example returns the SET options with which the plan was compiled. The `sql`_`handle` for the plan is also returned. The PIVOT operator is used to output the `set`\_`options` and `sql`\_`handle` attributes as columns rather than as rows. For more information about the value returned in `set`\_`options`, see [sys.dm_exec_plan_attributes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md).  
+ The following example returns the SET options with which the plan was compiled. The `sql_handle` for the plan is also returned. The PIVOT operator is used to output the `set_options` and `sql_handle` attributes as columns rather than as rows. For more information about the value returned in `set_options`, see [sys.dm_exec_plan_attributes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md).  
   
 ```  
 SELECT plan_handle, pvt.set_options, pvt.sql_handle  

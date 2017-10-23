@@ -84,7 +84,7 @@ Inner Level
 ```  
   
 ### B. Calling @@NESTLEVEL  
- The following example shows the difference in values returned by `SELECT`, `EXEC`, and `sp`_`executesql` when each of them calls `@@NESTLEVEL`.  
+ The following example shows the difference in values returned by `SELECT`, `EXEC`, and `sp_executesql` when each of them calls `@@NESTLEVEL`.  
   
 ```  
 CREATE PROC usp_NestLevelValues AS  

@@ -81,7 +81,7 @@ GO
 ```  
   
 ### B. Displaying statistical information for a named database and file  
- The following example displays statistical information for the log file in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] sample database. The system function `DB`_`ID` is used to specify the *database_id* parameter.  
+ The following example displays statistical information for the log file in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] sample database. The system function `DB_ID` is used to specify the *database_id* parameter.  
   
 ```tsql  
 SELECT *  

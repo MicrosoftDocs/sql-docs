@@ -29,7 +29,6 @@ caps.latest.revision: 35
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # FILE_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +40,6 @@ ms.workload: "Inactive"
 ## Syntax  
   
 ```  
-  
 FILE_NAME ( file_id )   
 ```  
   
@@ -56,10 +54,9 @@ FILE_NAME ( file_id )
  *file_ID* corresponds to the file_id column in the sys.master_files or sys.database_files catalog views.  
   
 ## Examples  
- The following example returns the file names for `file`_`ID 1` and `file`\_`ID` in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
+ The following example returns the file names for `file_ID 1` and `file_ID` in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
   
 ```tsql  
-  
 SELECT FILE_NAME(1) AS 'File Name 1', FILE_NAME(2) AS 'File Name 2';  
 GO  
 ```  
@@ -79,5 +76,4 @@ AdventureWorks2012_Data   AdventureWorks2012_Log
  [Metadata Functions &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
  [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
-  
   

@@ -73,7 +73,7 @@ GO
 ```  
   
 ### C. Using DB_ID to specify the value of a system function parameter  
-The following example uses `DB`_`ID` to return the database ID of the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database in the system function `sys.dm_db`\_`index`\_`operational`\_`stats`. The function takes a database ID as the first parameter.
+The following example uses `DB_ID` to return the database ID of the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database in the system function `sys.dm_db_index_operational_stats`. The function takes a database ID as the first parameter.
   
 ```sql
 DECLARE @db_id int;  

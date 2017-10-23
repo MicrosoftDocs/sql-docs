@@ -105,7 +105,7 @@ GO
     >  The closed state matters only at return time. For example, it is valid to close a cursor part of the way through the procedure, to open it again later in the procedure, and return that cursor's result set to the calling batch, procedure, or trigger.  
   
 ### Examples of Cursor Output Parameters  
- In the following example, a procedure is created that specified an output parameter, `@currency`_`cursor` using the **cursor** data type. The procedure is then called in a batch.  
+ In the following example, a procedure is created that specified an output parameter, `@currency_cursor` using the **cursor** data type. The procedure is then called in a batch.  
   
  First, create the procedure that declares and then opens a cursor on the Currency table.  
   

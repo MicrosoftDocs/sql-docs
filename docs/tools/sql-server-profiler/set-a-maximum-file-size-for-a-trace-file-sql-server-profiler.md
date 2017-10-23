@@ -17,6 +17,7 @@ caps.latest.revision: 24
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Set a Maximum File Size for a Trace File (SQL Server Profiler)
   Use the following procedure to set the maximum file size for a trace file.  

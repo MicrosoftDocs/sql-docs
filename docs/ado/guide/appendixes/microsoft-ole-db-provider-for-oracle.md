@@ -18,6 +18,7 @@ caps.latest.revision: 16
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Microsoft OLE DB Provider for Oracle Overview
 > [!IMPORTANT]

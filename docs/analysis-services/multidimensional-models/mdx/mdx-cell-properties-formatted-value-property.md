@@ -16,6 +16,7 @@ caps.latest.revision: 13
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # MDX Cell Properties - FORMATTED_VALUE Property
   The FORMATTED_VALUE property is built on the interactions of the VALUE, FORMAT_STRING and LANGUAGE properties of the cell. This topic explains how these properties interact to build the FORMATTED_VALUE property.  

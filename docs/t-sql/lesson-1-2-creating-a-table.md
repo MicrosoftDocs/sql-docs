@@ -16,6 +16,7 @@ caps.latest.revision: 17
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # Lesson 1-2 - Creating a Table
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]

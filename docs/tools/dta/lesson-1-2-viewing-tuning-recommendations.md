@@ -18,6 +18,7 @@ caps.latest.revision: 25
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Lesson 1-2 - Viewing Tuning Recommendations
 This task uses the tuning session that you created in [Tuning a Workload](../../tools/dta/lesson-1-1-tuning-a-workload.md). After you have tuned the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database by using the MyScript.sql [!INCLUDE[tsql](../../includes/tsql-md.md)] script, [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor displays its results on the **Recommendations** tab. The following task introduces the **Recommendations** tab of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor graphical user interface (GUI) and guides you to explore the information it provides about the tuning session results.  

@@ -22,6 +22,7 @@ caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Actions (Analysis Services - Multidimensional Data)
   Actions can be of different types and they have to be created accordingly. Actions can be:  

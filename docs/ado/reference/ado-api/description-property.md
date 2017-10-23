@@ -21,6 +21,7 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Description Property
 Describes an [Error](../../../ado/reference/ado-api/error-object.md) object.  

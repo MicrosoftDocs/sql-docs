@@ -18,6 +18,7 @@ caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # AddNew Method Example (VB)
 This example uses the [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) method to create a new record with the specified name.  

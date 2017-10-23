@@ -24,6 +24,7 @@ caps.latest.revision: 16
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # ProactiveCachingTablesBinding Data Type (ASSL)
   Defines a derived data type that represents information to the [ProactiveCaching](../../../analysis-services/scripting/objects/proactivecaching-element-assl.md) element about data source changes in specified tables and views that require rebuilding the cache.  

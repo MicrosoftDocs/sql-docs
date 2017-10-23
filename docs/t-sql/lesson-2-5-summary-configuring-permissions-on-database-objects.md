@@ -18,6 +18,7 @@ caps.latest.revision: 13
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Lesson 2-5 - Summary - Configuring Permissions on Database Objects
 Logins give users permissions to connect to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Users are logins that can access a specific database. Use the GRANT statement to give users permission to read and to access and change the data.  

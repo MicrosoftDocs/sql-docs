@@ -27,6 +27,7 @@ caps.latest.revision: 27
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "On Demand"
 ---
 # Requirements and Considerations for Analysis Services Deployment
   The performance and availability of a solution depends on many factors, including the capabilities of the underlying hardware, the topology of your server deployment, the characteristics of your solution (for example, having partitions distributed across multiple servers or using ROLAP storage that requires direct access to the relational engine), service level agreements, and the complexity of your data model.  

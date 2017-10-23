@@ -16,6 +16,7 @@ caps.latest.revision: 20
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "On Demand"
 ---
 # Lesson 5-4 - Defining Dimension Granularity within a Measure Group
 Users will want to dimension fact data at different granularity or specificity for different purposes. For example, sales data for reseller or internet sales may be recorded for each day, whereas sales quota information may only exist at the month or quarter level. In these scenarios, users will want a time dimension with a different grain or level of detail for each of these different fact tables. While you could define a new database dimension as a time dimension with this different grain, there is an easier way with [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  

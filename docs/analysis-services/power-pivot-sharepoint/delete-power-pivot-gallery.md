@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Delete Power Pivot Gallery
   Deleting a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Gallery also deletes all of its items, including the data refresh history for [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbooks that are configured for scheduled data refresh.  

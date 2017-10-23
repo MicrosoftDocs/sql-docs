@@ -15,6 +15,7 @@ caps.latest.revision: 14
 author: "Minewiskan"
 ms.author: "owend"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Prediction Queries (Data Mining)
   The goal of a typical data mining project is to use the mining model to make predictions. For example, you might want to predict the amount of expected downtime for a certain cluster of servers, or generate a score that indicates whether segments of customers are likely to respond to an advertising campaign. To do all these things, you would create a prediction query.  

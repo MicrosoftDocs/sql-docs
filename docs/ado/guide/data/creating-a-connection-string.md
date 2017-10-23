@@ -17,6 +17,7 @@ caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Creating a Connection String
 A connection string consists of a list of argument/value pairs (that is, parameters), separated by semi-colons. For example:  

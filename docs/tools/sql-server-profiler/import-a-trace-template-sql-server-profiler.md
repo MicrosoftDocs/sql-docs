@@ -18,6 +18,7 @@ caps.latest.revision: 24
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Import a Trace Template (SQL Server Profiler)
   This topic describes how to import a trace template file (.tdf) by using [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  

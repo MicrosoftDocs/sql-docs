@@ -15,6 +15,7 @@ caps.latest.revision: 6
 author: "Minewiskan"
 ms.author: "owend"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # View or Change Modeling Flags (Data Mining)
   Modeling flags are properties that you set on a mining structure column or mining model columns to control how the algorithm processes the data during analysis.  

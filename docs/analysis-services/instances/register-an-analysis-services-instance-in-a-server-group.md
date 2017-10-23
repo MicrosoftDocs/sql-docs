@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Register an Analysis Services Instance in a Server Group
   If you have a large number of Analysis Services server instances, you can create server groups in Management Studio to make server administration easier. The purpose of a server group is to provide proximity among a group of related servers within the administrative workspace. For example, suppose you are tasked with managing ten separate instances of Analysis Services. Grouping them by server mode, up-time criteria, or by department or region would allow you to view and connect to instances that share the same characteristics more easily. You can also add descriptive information that helps you remember how the server is used.  

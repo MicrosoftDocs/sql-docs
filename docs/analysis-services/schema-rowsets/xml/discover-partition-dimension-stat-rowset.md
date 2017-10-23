@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # DISCOVER_PARTITION_DIMENSION_STAT Rowset
   Returns statistics on the dimension that is associated with a partition  

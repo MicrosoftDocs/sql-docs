@@ -29,6 +29,7 @@ caps.latest.revision: 32
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Analysis Services Scripting Language (ASSL for XMLA)
   Applications communicate with [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] using XML commands and object descriptions. Analysis Services Scripting Language (ASSL) represents the object definition language portion of this XML dialect.  

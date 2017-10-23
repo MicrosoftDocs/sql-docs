@@ -26,6 +26,7 @@ caps.latest.revision: 39
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # TabularBinding Data Type (ASSL)
   Defines an abstract derived data type that represents a binding to a tabular item such as a table or a cube dimension.  

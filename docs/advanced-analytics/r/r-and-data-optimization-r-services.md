@@ -14,6 +14,7 @@ caps.latest.revision: 13
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Performance for R Services - data optimization
 

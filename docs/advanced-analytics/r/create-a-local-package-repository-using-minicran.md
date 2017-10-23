@@ -14,6 +14,7 @@ caps.latest.revision: 4
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Create a local package repository using miniCRAN
 

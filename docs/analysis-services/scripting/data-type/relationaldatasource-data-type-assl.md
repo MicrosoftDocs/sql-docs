@@ -26,6 +26,7 @@ caps.latest.revision: 35
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # RelationalDataSource Data Type (ASSL)
   Defines a derived data type that represents a [DataSource](../../../analysis-services/scripting/objects/datasource-element-assl.md) element based on a relational data source.  

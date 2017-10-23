@@ -18,6 +18,7 @@ caps.latest.revision: 11
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # TestServer Element (DTA)
   Specifies the test server to use when tuning a production server.  

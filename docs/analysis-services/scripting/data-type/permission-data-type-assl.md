@@ -26,6 +26,7 @@ caps.latest.revision: 43
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Permission Data Type (ASSL)
   Defines an abstract primitive data type that represents information about an individual permission.  

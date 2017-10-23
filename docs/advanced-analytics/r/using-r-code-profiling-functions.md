@@ -14,6 +14,7 @@ caps.latest.revision: 6
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Using R Code Profiling Functions
 In addition to using SQL Server resources and tools to monitor R script execution, you can use performance tools provided by other R packages to get more information about internal function calls. This topic provides a list of some basic resources to get you started. For expert guidance, we recommend the chapter on [Performance](http://adv-r.had.co.nz/Performance.html) in the book ""Advanced R"", by Hadley Wickham.

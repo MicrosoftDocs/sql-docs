@@ -20,6 +20,7 @@ caps.latest.revision: 29
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Attribute Properties - Bind an Attribute to a Name Column
   This procedure describes how to bind an attribute to a name column manually by using the **Attributes** pane in the Dimension Designer and by using the **Object Binding** dialog box.  

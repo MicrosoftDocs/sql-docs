@@ -26,6 +26,7 @@ caps.latest.revision: 46
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "On Demand"
 ---
 # Multidimensional Model Data Access (Analysis Services - Multidimensional Data)
   Use the information in this topic to learn how to access [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] multidimensional data using programmatic methods, script, or client applications that include built-in support for connecting to an [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] server on your network.  

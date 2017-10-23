@@ -19,6 +19,7 @@ caps.latest.revision: 29
 author: "Minewiskan"
 ms.author: "owend"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Edit the Data Source View used for a Mining Structure
   You can open a data source view from within Data Mining Designer so that you can modify it.  

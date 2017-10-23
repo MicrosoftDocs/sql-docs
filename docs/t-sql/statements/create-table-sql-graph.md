@@ -35,6 +35,7 @@ caps.latest.revision: 1
 author: "shkale-msft"
 ms.author: "shkale"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 
 # CREATE TABLE (SQL Graph)

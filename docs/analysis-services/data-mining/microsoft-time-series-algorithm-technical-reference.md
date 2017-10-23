@@ -32,6 +32,7 @@ caps.latest.revision: 37
 author: "Minewiskan"
 ms.author: "owend"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Microsoft Time Series Algorithm Technical Reference
   The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series algorithm includes two separate algorithms for analyzing time series:  

@@ -20,6 +20,7 @@ caps.latest.revision: 17
 author: "Minewiskan"
 ms.author: "owend"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Create a Cross-Validation Report
   This topic walks you through creation of a cross-validation report using the Accuracy Chart tab in Data Mining Designer. For general information about what a cross-validation report looks like, and the statistical measures it includes, see [Cross-Validation &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md).  

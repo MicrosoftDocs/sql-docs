@@ -15,6 +15,7 @@ caps.latest.revision: 17
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Active"
 ---
 # Analysis Services Tutorials (SSAS)
 This section contains tutorials for SQL Server Analysis Services.  

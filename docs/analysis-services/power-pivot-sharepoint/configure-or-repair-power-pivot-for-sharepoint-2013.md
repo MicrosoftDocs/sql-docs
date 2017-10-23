@@ -16,6 +16,7 @@ caps.latest.revision: 15
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Configure or Repair Power Pivot for SharePoint 2013
   To configure or repair an installation of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2013, use the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint Configuration tool. The configuration tool starts by scanning the system and returns a list of actions needed to complete or repair an installation. The [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] setup wizard installs the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Configuration Tool for SharePoint 2010 as well as a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Configuration Tool for SharePoint 2013. This topic describes the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Configuration Tool for SharePoint 2013. For more information on SharePoint 2010, see [Configure or Repair Power Pivot for SharePoint 2010 (Power Pivot Configuration Tool)](http://msdn.microsoft.com/en-us/d61f49c5-efaa-4455-98f2-8c293fa50046).  

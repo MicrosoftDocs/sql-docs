@@ -14,6 +14,7 @@ caps.latest.revision: 13
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Deploy Power Pivot Solutions to SharePoint
   Use the following instructions to manually deploy two solution packages that add [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] features to a SharePoint Server 2010 environment. Deploying the solutions is a required step for configuring [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint on a SharePoint 2010 server. To view the complete list of required steps, see [Power Pivot Server Administration and Configuration in Central Administration](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md).  

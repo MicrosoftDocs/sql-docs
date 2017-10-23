@@ -22,6 +22,7 @@ caps.latest.revision: 33
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # DMSCHEMA_MINING_SERVICE_PARAMETERS Rowset
   Describes the parameters for the algorithms on the server.  

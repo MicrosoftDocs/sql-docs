@@ -16,6 +16,7 @@ caps.latest.revision: 10
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Active"
 ---
 # Configure and View SharePoint and Diagnostic Logging
   [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] server operations, events, and messages are recorded in SharePoint log files. Use the information in this topic to configure logging levels and view log file information. You can control which [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] server events are logged to the file. You can also control the severity of messages that are logged. For more information, see [Configure Usage Data Collection for &#40;Power Pivot for SharePoint](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  

@@ -15,6 +15,7 @@ caps.latest.revision: 9
 author: "Minewiskan"
 ms.author: "owend"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Cross-Validation Formulas
   When you generate a cross-validation report, it contains accuracy measures for each model, depending on the type of mining model (that is, the algorithm that was used to create the model), the data type of the predictable attribute, and the predictable attribute value, if any.  

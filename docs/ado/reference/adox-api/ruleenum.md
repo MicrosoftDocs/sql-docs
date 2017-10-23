@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # RuleEnum
 Specifies the rule to follow when a [Key](../../../ado/reference/adox-api/key-object-adox.md) is deleted.  

@@ -19,6 +19,7 @@ caps.latest.revision: 10
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Extending OLAP through personalizations
   Analysis Services provides many intrinsic functions for use with the Multidimensional Expressions (MDX) and Data Mining Extensions (DMX) languages. These functions are designed to accomplish everything from standard statistical calculations to traversing members in a hierarchy. However, as with any other complex and robust product, there is always the need to extend the functionality of such a product further.  

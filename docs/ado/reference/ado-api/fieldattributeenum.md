@@ -19,6 +19,7 @@ caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # FieldAttributeEnum
 Specifies one or more attributes of a [Field](../../../ado/reference/ado-api/field-object.md) object.  

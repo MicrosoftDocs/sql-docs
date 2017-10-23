@@ -22,6 +22,7 @@ caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # MDSCHEMA_HIERARCHIES Rowset
   Describes each hierarchy within a particular dimension.  

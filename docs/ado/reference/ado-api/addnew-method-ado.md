@@ -20,6 +20,7 @@ caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # AddNew Method (ADO)
 Creates a new record for an updatable [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object.  

@@ -16,6 +16,7 @@ caps.latest.revision: 24
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Open a Trace Table (SQL Server Profiler)
   This topic describes how to open an existing trace table by using [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  

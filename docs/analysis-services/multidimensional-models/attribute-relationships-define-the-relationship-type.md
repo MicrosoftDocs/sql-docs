@@ -22,6 +22,7 @@ caps.latest.revision: 43
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Attribute Relationships - Define the Relationship Type
   You define the relationship type of an attribute relationship by using the **Attribute Relationships** tab in Dimension Designer, which can be accessed from [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  

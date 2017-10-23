@@ -20,6 +20,7 @@ caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Value Property (ADO)
 Indicates the value assigned to a [Field](../../../ado/reference/ado-api/field-object.md), [Parameter](../../../ado/reference/ado-api/parameter-object.md), or [Property](../../../ado/reference/ado-api/property-object-ado.md) object.  

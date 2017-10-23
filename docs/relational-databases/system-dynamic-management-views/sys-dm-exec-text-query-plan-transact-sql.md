@@ -97,7 +97,7 @@ A value of -1 indicates the end of the batch. The default value is -1.
   
 -   If a [!INCLUDE[tsql](../../includes/tsql-md.md)] batch or stored procedure contains a call to a user-defined function or a call to dynamic SQL, for example using EXEC (*string*), the compiled XML Showplan for the user-defined function is not included in the table returned by **sys.dm_exec_text_query_plan** for the batch or stored procedure. Instead, you must make a separate call to **sys.dm_exec_text_query_plan** for the *plan_handle* that corresponds to the user-defined function.  
   
-When an ad hoc query uses [simple](../../relational-databases/query-processing-architecture-guide.md#SimpleParam) or [forced parameterization](../../relational-databases/query-processing-architecture-guide.md#ForcedParam), the **query_plan** column will contain only the statement text and not the actual query plan. To return the query plan, call **sys.dm_exec_text_query_plan** for the plan handle of the prepared parameterized query. You can determine whether the query was parameterized by referencing the **sql** column of the [sys.syscacheobjects](../../relational-databases/system-compatibility-views/sys-syscacheobjects-transact-sql.md) view or the text column of the [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md) dynamic management view.  
+When an ad hoc query uses [simple](../../relational-databases/query-processing-architecture-guide.md#SimpleParam) or [forced parameterization](../../relational-databases/query-processing-architecture-guide.md#ForcedParam), the **query_plan** column will contain only the statement text and not the actual query plan. To return the query plan, call **sys.dm_exec_text_query_plan** for the plan handle of the prepared parameterized query. You can determine whether the query was parameterized by referencing the **sql** column of the [sys.syscacheobjects](../../relational-databases/system-compatibility-views/sys-syscacheobjects-transact-sql.md) view or the text column of the [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md) dynamic management view.  
   
 ## Permissions  
  To execute **sys.dm_exec_text_query_plan**, a user must be a member of the **sysadmin** fixed server role or have the VIEW SERVER STATE permission on the server.  
@@ -140,7 +140,7 @@ GO
 ```  
   
 ### B. Retrieving every query plan from the plan cache  
- To retrieve a snapshot of all query plans residing in the plan cache, retrieve the plan handles of all query plans in the cache by querying the `sys.dm_exec_cached_plans` dynamic management view. The plan handles are stored in the `plan_handle` column of `sys.dm_exec_cached_plans`. Then use the CROSS APPLY operator to pass the plan handles to `sys.dm_exec_text_query_plan` as follows. The Showplan output for each plan currently in the plan cache is in the `query_plan` column of the table that is returned.  
+ To retrieve a snapshot of all query plans residing in the plan cache, retrieve the plan handles of all query plans in the cache by querying the `sys.dm_exec_cached_plans` dynamic management view. The plan handles are stored in the `plan_handle` column of `sys.dm_exec_cached_plans`. Then use the CROSS APPLY operator to pass the plan handles to `sys.dm_exec_text_query_plan` as follows. The Showplan output for each plan currently in the plan cache is in the `query_plan` column of the table that is returned.  
   
 ```tsql  
 USE master;  
@@ -176,5 +176,3 @@ GO
   
 ## See Also  
  [sys.dm_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)  
-  
-  

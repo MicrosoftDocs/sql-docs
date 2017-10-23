@@ -26,6 +26,7 @@ caps.latest.revision: 41
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # DSVTableBinding Data Type (ASSL)
   Defines a derived data type that represents the binding between a table and a [DataSourceView](../../../analysis-services/scripting/objects/datasourceview-element-assl.md) element.  

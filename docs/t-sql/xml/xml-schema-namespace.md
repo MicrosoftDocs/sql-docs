@@ -25,6 +25,7 @@ caps.latest.revision: 18
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # xml_schema_namespace
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -18,6 +18,7 @@ caps.latest.revision: 12
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Database Element for Workload (DTA)
   Specifies the database where the workload trace table is located.  

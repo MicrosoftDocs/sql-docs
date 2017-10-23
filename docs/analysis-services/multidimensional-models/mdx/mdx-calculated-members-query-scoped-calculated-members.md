@@ -19,6 +19,7 @@ caps.latest.revision: 29
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "On Demand"
 ---
 # MDX Calculated Members - Query-Scoped Calculated Members
   If a calculated member is only required for a single Multidimensional Expressions (MDX) query, you can define that calculated member by using the WITH keyword. A calculated member that is created by using the WITH keyword no longer exists after the query has finished running.  

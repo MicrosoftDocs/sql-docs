@@ -91,7 +91,7 @@ sp_execute_external_script
 
 Monitor script execution using [sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md) and [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md). 
 
- By default, result sets returned by this stored procedure are output with unnamed columns. Column names used within a script are local to the scripting environment and are not reflected in the outputted result set. To name result set columns, use the `WITH RESULTS SET` clause of [`EXECUTE`](../../t-sql/language-elements/execute-transact-sql).
+ By default, result sets returned by this stored procedure are output with unnamed columns. Column names used within a script are local to the scripting environment and are not reflected in the outputted result set. To name result set columns, use the `WITH RESULTS SET` clause of [`EXECUTE`](../../t-sql/language-elements/execute-transact-sql.md).
   
  In addition to returning a result set, you can return scalar values from R script to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] using OUTPUT parameters. The following example shows the use of OUTPUT parameter:  
   

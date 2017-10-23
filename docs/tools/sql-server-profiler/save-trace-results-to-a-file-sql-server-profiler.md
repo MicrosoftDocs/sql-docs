@@ -17,6 +17,7 @@ caps.latest.revision: 23
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Save Trace Results to a File (SQL Server Profiler)
   This topic describes how to save trace results to a file by using [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  

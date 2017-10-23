@@ -18,6 +18,7 @@ caps.latest.revision: 13
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "On Demand"
 ---
 # Create a Cube Using the Cube Wizard
   You can create a new cube by using the Cube Wizard in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  

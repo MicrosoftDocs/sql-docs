@@ -18,6 +18,7 @@ caps.latest.revision: 12
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # DROP INDEX (Selective XML Indexes)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

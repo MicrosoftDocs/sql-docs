@@ -16,6 +16,7 @@ caps.latest.revision: 9
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Partitions in Multidimensional Models
   In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], a *partition* provides the physical storage of fact data loaded into a measure group. A single partition is created for each measure group automatically, but it is common to create additional partitions that further segment the data, resulting in more efficient processing and faster query performance.  

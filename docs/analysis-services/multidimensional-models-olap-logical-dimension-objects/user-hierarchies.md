@@ -32,6 +32,7 @@ caps.latest.revision: 40
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # User Hierarchies
   User-defined hierarchies are user-defined hierarchies of attributes that are used in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] to organize the members of a dimension into hierarchical structures and provide navigation paths in a cube. For example, the following table defines a dimension table for a time dimension. The dimension table supports three attributes, named Year, Quarter, and Month.  

@@ -26,6 +26,7 @@ caps.latest.revision: 36
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Roles Element (ASSL)
   Contains the collection of [Role](../../../analysis-services/scripting/objects/role-element-assl.md) elements defined under the parent element.  

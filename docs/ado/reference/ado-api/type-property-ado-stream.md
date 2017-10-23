@@ -21,6 +21,7 @@ caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Type Property (ADO Stream)
 Indicates the type of data contained in the [Stream](../../../ado/reference/ado-api/stream-object-ado.md) (binary or text).  

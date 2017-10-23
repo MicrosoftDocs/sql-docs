@@ -17,6 +17,7 @@ caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # ADO Objects and Interfaces
 The relationships between these objects are represented in the [ADO Object Model](../../../ado/reference/ado-api/ado-object-model.md).  

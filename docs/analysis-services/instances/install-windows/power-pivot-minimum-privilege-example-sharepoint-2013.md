@@ -14,6 +14,7 @@ caps.latest.revision: 12
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Power Pivot Minimum-Privilege Example - SharePoint 2013
   This topic describes an example [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2013 configuration with minimum privileges. The configuration utilizes a different account for each of the three components and each account has the minimum level of privileges.  

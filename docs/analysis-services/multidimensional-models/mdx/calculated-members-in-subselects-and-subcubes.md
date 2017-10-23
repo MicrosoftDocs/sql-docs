@@ -17,6 +17,7 @@ caps.latest.revision: 9
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Calculated Members in Subselects and Subcubes
   A calculated member is a dimension member whose value is calculated from an expression at run time, and can be used in subselects and subcubes to more precisely define the cubespace of a query.  

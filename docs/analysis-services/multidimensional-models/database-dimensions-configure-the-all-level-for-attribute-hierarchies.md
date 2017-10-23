@@ -25,6 +25,7 @@ caps.latest.revision: 33
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Database Dimensions - Configure the (All) Level for Attribute Hierarchies
   In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], the (All) level is an optional, system-generated level. It contains only one member whose value is the aggregation of the values of all members in the immediately subordinate level. This member is called the All member. It is a system-generated member that is not contained in the dimension table. Because the member in the (All) level is at the top of the hierarchy, the member's value is the consolidated aggregation of the values of all members in the hierarchy. The All member often serves as the default member of a hierarchy.  

@@ -16,6 +16,7 @@ caps.latest.revision: 10
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Create a Stored Procedure Using sqlrutils
 

@@ -14,6 +14,7 @@ caps.latest.revision: 9
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Setup or Configure R Tools
   Microsoft R Server provides all the base R libraries, the a set of ScaleR packages, and standard R tools that you need to develop and test R code. However, if you want to use a dedicated R development environment, there are several available, including many free tools.  

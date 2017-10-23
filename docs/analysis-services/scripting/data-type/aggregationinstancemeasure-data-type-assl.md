@@ -24,6 +24,7 @@ caps.latest.revision: 11
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # AggregationInstanceMeasure Data Type (ASSL)
   Defines a primitive data type that represents information about a measure used by an aggregation instance.  

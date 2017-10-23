@@ -12,6 +12,7 @@ ms.topic: "article"
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Getting started with machine learning in SQL Server
 

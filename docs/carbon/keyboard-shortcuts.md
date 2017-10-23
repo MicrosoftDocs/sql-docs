@@ -17,6 +17,8 @@ ms.date: 10/08/2017
 Carbon provides access to most tasks directly from the keyboard. Carbon provides all the [key bindings available in Visual Studio Code](https://code.visualstudio.com/docs/getstarted/keybindings), plus the following Carbon specific commands:
 
 
+- 
+
 ## Keyboard shortcuts editor 
 
 Open this editor: **File** > **Preferences** > **Keyboard Shortcuts**. (**Code** > **Preferences** > **Keyboard Shortcuts** on Mac)

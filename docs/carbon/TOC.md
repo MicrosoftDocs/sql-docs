@@ -23,17 +23,15 @@
 # Samples
 ## Snippet samples
 # How-to guides
-## [Create and run queries](code-editor.md)
-## [Dashboards and Insights](dashboards.md)
-## [Server groups](server-groups.md)
+## [Code snippets](code-snippets.md)
+## [Insight widgets & Dashboards)](dashboards.md)
 ## [Integrated terminal (PowerShell, Bash)](integrated-terminal.md)
-## Share settings
-## Configure source control
-## Smart Snippets
-## Tasks
+## [Keyboard shortcuts](keyboard-shortcuts.md)
+## [Server groups](server-groups.md)
+## [Source control](source-control.md)
+## [Workspace & user settings](settings.md)
+## [Windows authentication (Kerberos)](enable-kerberos.md)
 # Reference
-## [Settings](settings.md)
-## [Keyboard shortcuts](key-bindings.md)
 # Resources
 ## [Carbon GitHub repo](https://www.github.com/Microsoft/Carbon)
 # [Usage Data Collection](usage-data-collection.md)

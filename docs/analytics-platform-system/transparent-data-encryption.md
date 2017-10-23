@@ -258,7 +258,7 @@ Use the steps in the **Restoring the master Database** paragraph to recover the 
   
 If the DMK existed before but was not recovered after the action, the following error message will be raised when a database is queried.  
   
-```
+```sql
 Msg 110806;  
 A distributed query failed: Database '<db_name>' cannot be opened due to inaccessible files or insufficient memory or disk space. See the SQL Server errorlog for details.
 ```  

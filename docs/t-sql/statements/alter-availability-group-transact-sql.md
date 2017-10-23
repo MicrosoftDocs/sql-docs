@@ -36,7 +36,7 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```  
+```SQL  
   
 ALTER AVAILABILITY GROUP group_name   
   {  
@@ -603,7 +603,7 @@ ALTER AVAILABILITY GROUP group_name
 ###  <a name="Join_Secondary_Replica"></a> A. Joining a secondary replica to an availability group  
  The following example joins a secondary replica to which you are connected to the `AccountsAG` availability group.  
   
-```  
+```SQL  
 ALTER AVAILABILITY GROUP AccountsAG JOIN;  
 GO  
 ```  
@@ -611,7 +611,7 @@ GO
 ###  <a name="Force_Failover"></a> B. Forcing failover of an availability group  
  The following example forces the `AccountsAG` availability group to fail over to the secondary replica to which you are connected.  
   
-```  
+```SQL
 ALTER AVAILABILITY GROUP AccountsAG FORCE_FAILOVER_ALLOW_DATA_LOSS;  
 GO  
 ```  

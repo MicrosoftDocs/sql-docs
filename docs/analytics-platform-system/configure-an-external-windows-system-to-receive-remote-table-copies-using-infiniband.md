@@ -1,5 +1,5 @@
 ---
-title: "Configure External Windows System to Receive Remote Table Copies InfiniBand (PDW)"
+title: "Configure external Windows system to get remote table copies InfiniBand-PDW"
 author: "barbkess" 
 ms.author: "barbkess"
 manager: "jhubbard"	  

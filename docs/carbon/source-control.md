@@ -22,7 +22,6 @@ Carbon provides the same integrated source control as VS Code and includes [Git]
 
 VS Code has support for handling multiple Source Control providers simultaneously. For example, you can open multiple Git repositories alongside your TFS local workspace and seamlessly work across your projects. The **SOURCE CONTROL PROVIDERS** list of the **Source Control** view (`kb(workbench.view.scm)`) shows the detected providers and repositories and you can scope the display of your changes by selecting a specific provider.
 
-![source control providers](images/versioncontrol/scm.png)
 
 If you would like to install an additional SCM provider, the **Install Additional SCM Providers...** command in the **Source Control** view **More** (...) dropdown will show a list of available SCM provider extensions.
 
@@ -52,11 +51,11 @@ You can also find indicators of the **status of your repository** in the bottom 
 
 There is a **Synchronize Changes** action in the Status Bar, next to the branch indicator, when the current checked out branch has an upstream branch configured. **Synchronize Changes** will pull remote changes down to your local repository and then push local commits to the upstream branch.
 
-![git status bar sync](images/versioncontrol/git-status-bar-sync.png)
+![git status bar sync](media/source-control/git-overview.png)
 
 If there is no upstream branch configured and the Git repository has remotes set up, the **Publish** action is enabled. This will let you publish the current branch to a remote.
 
-![git status bar publish](images/versioncontrol/git-status-bar-publish.png)
+![git status bar publish](media/source-control/git-overview.png)
 
 ## Commit
 
@@ -78,7 +77,7 @@ You can create and checkout branches directly within VS code through the **Git: 
 
 If you run **Git: Checkout to...**, you will see a dropdown containing all of the branches or tags in the current repository.
 
-![Git checkout](images/versioncontrol/gitbranches.png)
+![Git checkout](media/source-control/git-overview.png)
 
 The **Git: Create Branch...** command lets you quickly create a new branch.  Just provide the name of your new branch and VS Code will create the branch and switch to it.
 
@@ -96,11 +95,11 @@ If you open a folder that is a Git repository and begin making changes, VS Code 
 * A green bar indicates new added lines
 * A blue bar indicates modified lines
 
-![Gutter indicators](images/editingevolved/gutter.png)
+![Gutter indicators](media/source-control/git-overview.png)
 
 ## Merge Conflicts
 
-![Git merge](images/versioncontrol/merge-conflict.png)
+![Git merge](media/source-control/git-overview.png)
 
 Merge conflicts are recognized by VS Code. Differences are highlighted and there are inline actions to accept either or both changes. Once the conflicts are resolved, stage the conflicting file so you can commit those changes.
 
@@ -108,7 +107,7 @@ Merge conflicts are recognized by VS Code. Differences are highlighted and there
 
 Our Git tooling supports viewing of diffs within VS Code.
 
-![A File Diff in VS Code](images/versioncontrol/diff.png)
+![A File Diff in VS Code](media/source-control/git-overview.png)
 
 >**Tip:** You can diff any two files by first right clicking on a file in the Explorer or **OPEN EDITORS** list and selecting **Select for Compare** and then right-click on the second file to compare with and select **Compare with 'file_name_you_chose'**.   Alternatively from the keyboard hit `kb(workbench.action.showCommands)` and select **File: Compare Active File With...** and you will be presented with a list of recent files.
 
@@ -116,7 +115,7 @@ Our Git tooling supports viewing of diffs within VS Code.
 
 There is a review pane in the Diff editor which presents changes in a unified patch format. You can navigate between changes with **Go to Next Difference** (`kb(editor.action.diffReview.next)`) and **Go to Previous Difference** (`kb(editor.action.diffReview.prev)`). Lines can be navigated with arrow keys and pressing `kbstyle(Enter)` will jump back in the Diff editor and the selected line.
 
-![diff-review-pane](images/versioncontrol/diff-review-pane.png)
+![diff-review-pane](media/source-control/git-overview.png)
 
 **Note:** This experience is especially helpful for screen reader users.
 
@@ -130,7 +129,7 @@ To open the Git output window, run **View** > **Output** and select **Git** from
 
 If your workspace isn't under Git source control, you can easily create a Git repository with the **Initialize Git Repository** command.  When VS Code doesn't detect an existing Git repository, you will see a **This workspace isn't yet under git source control.** message in the Git View and the **Initialize Git Repository** command will be available.
 
-![Git initialize repository](images/versioncontrol/git-initialize.png)
+![Git initialize repository](media/source-control/git-overview.png)
 
 Running **Initialize Git Repository** will create the necessary Git repository metadata files and show your workspace files as unstaged changes.
 
@@ -149,7 +148,7 @@ Here are the steps to do so:
 
 Now you can run `git config --global -e` and use VS Code as editor for configuring Git.
 
-![git config in VS Code](images/versioncontrol/gitconfig.png)
+![git config in VS Code](media/source-control/git-overview.png)
 
 Add the following to your Git configurations to use VS Code as the diff tool:
 
@@ -171,7 +170,7 @@ To summarize, here are some examples of where you can use VS Code as the editor:
 
 ## Next Steps
 
-* [Intro Video - Git Version Control](/docs/introvideos/versioncontrol.md) - An introductory video providing an overview of VS Code Git support.
+* [Intro Video - Git Version Control](https://code.visualstudio.com/docs/introvideos/versioncontrol) - An introductory video providing an overview of VS Code Git support.
 * [Basic Editing](/docs/editor/codebasics.md) - Learn about the powerful VS Code editor.
 * [Code Navigation](/docs/editor/editingevolved.md) - Move quickly through your source code.
 * [Debugging](/docs/editor/debugging.md) - This is where VS Code really shines

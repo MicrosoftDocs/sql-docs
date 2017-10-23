@@ -28,7 +28,7 @@
 ## [Integrated terminal (PowerShell, Bash)](integrated-terminal.md)
 ## [Keyboard shortcuts](keyboard-shortcuts.md)
 ## [Server groups](server-groups.md)
-## [Source control](configure-source-control.md)
+## [Source control](source-control.md)
 ## [Workspace & user settings](settings.md)
 ## [Windows authentication (Kerberos)](enable-kerberos.md)
 # Reference

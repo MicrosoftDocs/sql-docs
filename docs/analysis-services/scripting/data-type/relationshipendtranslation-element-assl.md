@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # RelationshipEndTranslation Element (ASSL)
   Defines a primitive data type that represents a localized translation for a [RelationshipEnd](../../../analysis-services/scripting/data-type/relationshipend-data-type-assl.md) element.  

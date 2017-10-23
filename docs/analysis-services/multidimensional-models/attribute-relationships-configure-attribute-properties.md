@@ -22,6 +22,7 @@ caps.latest.revision: 17
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Attribute Relationships - Configure Attribute Properties
   The following table lists and describes the properties of an attribute relationship.  

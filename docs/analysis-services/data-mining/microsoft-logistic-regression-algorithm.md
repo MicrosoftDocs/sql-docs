@@ -20,6 +20,7 @@ caps.latest.revision: 22
 author: "Minewiskan"
 ms.author: "owend"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Microsoft Logistic Regression Algorithm
   Logistic regression is a well-known statistical technique that is used for modeling binary outcomes.  

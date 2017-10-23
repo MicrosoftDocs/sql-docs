@@ -23,6 +23,7 @@ caps.latest.revision: 51
 author: "Minewiskan"
 ms.author: "owend"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Data Mining Query Tools
   All data mining queries use the Data Mining Extensions (DMX) language. DMX can be used to create models for all kinds of machine learning tasks, including classification, risk analysis, generation of recommendations, and linear regression. You can also write DMX queries to get information about the patterns and statistics that were generated when you processed the model.  

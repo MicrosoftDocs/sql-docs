@@ -21,6 +21,7 @@ caps.latest.revision: 42
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Defining a Data Source View (Analysis Services)
   A data source view contains the logical model of the schema used by [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] multidimensional database objects—namely cubes, dimensions, and mining structures. A data source view is the metadata definition, stored in an XML format, of these schema elements used by the Unified Dimensional Model (UDM) and by the mining structures. A data source view:  

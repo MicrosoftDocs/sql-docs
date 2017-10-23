@@ -14,6 +14,7 @@ caps.latest.revision: 12
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Install or Uninstall the Power Pivot for SharePoint Add-in (SharePoint 2016)
   [!INCLUDE[ssGeminiShort2017](../../../includes/ssgeminishort2017-md.md)] is a collection of application server components and back-end services that provide [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] data access in a [!INCLUDE[SPS2016](../../../includes/sps2016-md.md)] farm. The [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint add-in (**spPowerpivot16.msi**) is an installer package used to install the application server components.  

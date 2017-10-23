@@ -23,6 +23,7 @@ caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Change Properties in a Data Source View (Analysis Services)
   After defining a data source view using the Data Source View Wizard and adding tables, views, named calculations, and named queries to the data source view, you may want to change properties related to:  

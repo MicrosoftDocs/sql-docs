@@ -28,6 +28,7 @@ caps.latest.revision: 46
 author: "Minewiskan"
 ms.author: "owend"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Microsoft Neural Network Algorithm
   The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network algorithm is an implementation of the popular and adaptable neural network architecture for machine learning.  The algorithm works by testing each possible state of the input attribute against each possible state of the predictable attribute, and calculating probabilities for each combination based on the training data. You can use these probabilities for both classification or regression tasks, to predict an outcome  based on some input attributes. A neural network can also be used for association analysis.  

@@ -20,6 +20,7 @@ caps.latest.revision: 43
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Logical Architecture Overview (Analysis Services - Multidimensional Data)
   Analysis Services operates in a server deployment mode that determines the memory architecture and runtime environment used by different types of Analysis Services models. Server mode is determined during installation. **Multidimensional and Data Mining mode** supports traditional OLAP and data mining. **Tabular mode** supports tabular models. **SharePoint integrated mode** refers to an instance of Analysis Services that was installed as [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint, used for loading and querying Excel or [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] data models inside a workbook.  

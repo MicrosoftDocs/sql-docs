@@ -26,6 +26,7 @@ caps.latest.revision: 37
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Files Element (ASSL)
   Contains the collection of [File](../../../analysis-services/scripting/objects/file-element-assl.md) elements that make up a [ClrAssembly](../../../analysis-services/scripting/data-type/clrassembly-data-type-assl.md) element.  

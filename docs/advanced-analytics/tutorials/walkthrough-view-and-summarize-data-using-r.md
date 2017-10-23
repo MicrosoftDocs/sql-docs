@@ -19,6 +19,7 @@ caps.latest.revision: 22
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # View and summarize data using R
 

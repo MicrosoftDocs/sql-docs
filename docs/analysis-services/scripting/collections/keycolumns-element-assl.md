@@ -26,6 +26,7 @@ caps.latest.revision: 32
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # KeyColumns Element (ASSL)
   Contains the collection of [KeyColumn](../../../analysis-services/scripting/objects/keycolumn-element-assl.md) element definitions for a parent object.  

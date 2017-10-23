@@ -20,6 +20,7 @@ caps.latest.revision: 36
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Create Analysis Services Scripts in Management Studio
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] includes script generation features, templates, and editors that you can use to script Analysis Services objects and tasks.  

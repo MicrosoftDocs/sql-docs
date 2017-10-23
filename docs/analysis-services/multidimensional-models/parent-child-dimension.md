@@ -26,6 +26,7 @@ caps.latest.revision: 42
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "On Demand"
 ---
 # Parent-Child Dimension
   A parent-child hierarchy is a hierarchy in a standard dimension that contains a parent attribute. A parent attribute describes a *self-referencing relationship*, or *self-join*, within a dimension main table. Parent-child hierarchies are constructed from a single parent attribute. Only one level is assigned to a parent-child hierarchy, because the levels present in the hierarchy are drawn from the parent-child relationships between members associated with the parent attribute. The position of a member in a parent-child hierarchy is determined by the **KeyColumns** and **RootMemberIf** properties of the parent attribute, whereas the position of a member in a level is determined by the **OrderBy** property of the parent attribute. For more information about attribute properties, see [Attributes and Attribute Hierarchies](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md).  

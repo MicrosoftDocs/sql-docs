@@ -1,5 +1,5 @@
 ---
-title: Tutorial article for Carbon | Microsoft Docs
+title: Backup and restore using Carbon | Microsoft Docs
 description: This sample describes the article in 115 to 145 characters. Validate using Gauntlet toolbar check icon. Use SEO kind of action verbs here.
 services: sql-database
 author: erickang
@@ -14,7 +14,7 @@ ms.topic: article
 ms.date: 10/01/2017
 ---
 
-# Backup and Restore with Carbon
+# Backup and Restore using Carbon
 the page overview paragraph goes here.
 
 In this tutorial, you use the Carbon to learn how to:
@@ -38,11 +38,11 @@ Follow [Get Started with Carbon](./get-started-sql-server.md)
    ![Tasks widget](./media/tutorial-sql-server/tasks.png)
 
 3. Click ```Backup``` and backup TutorialDB.
+   ![backup dialog](./media/tutorial-sql-server/backup-dialog.png)
 
 ## View the backup status and build a bakcup script
-[step overview]
 
-1. Open ```Task History``` viewlet by clicking ```Task History``` icon on the Action bar.
+1. Open ```Task History``` viewlet by clicking ```Task History``` icon on the Action bar or press 'CTRL+T'.
 
    ![Task history](./media/tutorial-sql-server/task-history.png)
 
@@ -57,7 +57,9 @@ Follow [Get Started with Carbon](./get-started-sql-server.md)
 
 1. Open Dashboard and click ```Restore``` Task.
 
-2. Select ```Backup file``` for ```Restore from``` option. Select the latest backup file for TutorialDB using ```Select a file``` dialog to set ```Backup file path``` option.
+2. Select ```Backup file``` for ```Restore from``` option. 
+
+3. Select the latest backup file for TutorialDB using ```Select a file``` dialog to set ```Backup file path``` option.
 
 3. Type in ```TutorialDB_Restored``` for ```Target database``` option under Destination section to restore the backup file by creating a new database.
 
@@ -72,10 +74,9 @@ Follow [Get Started with Carbon](./get-started-sql-server.md)
 ## Next Steps
 In this tutorial, you learned how to:
 > [!div class="checklist"]
-> * Create something
-> * Do something
-> * Do something else
-> * Finish something 
+> * Backup a database using Backup dialog.
+> * View the backup task status and script out the backup script.
+> * Restore a database using Restore dialog.
 
 Next, try this tutorial: 
 [Another Tutorial](tutorial-monitoring-sql-server.md)

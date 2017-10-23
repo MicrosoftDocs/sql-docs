@@ -14,11 +14,11 @@
 # Tutorials
 ## [Query Editor](tutorial-modern-code-flow-sql-server.md) 
 ## [Monitor](tutorial-monitoring-sql-server.md)
-### [Query Performance Insight](tutorial-qds-sql-server.md)
-### [Table Space Insight](tutorial-table-space-sql-server.md)
-### [Missing Index Insight](tutorial-missing-index-sql-server.md) 
-### [Backup Health Insight](tutorial-backup-health-sql-server.md)
-### [Database Size Insight](tutorial-db-size-sql-server.md)
+### [1. Database Insight - Monitoring Query Performance](tutorial-qds-sql-server.md)
+### [2. Database Insight - Table Space Usage](tutorial-table-space-sql-server.md)
+### [3. Server Insight - Backup Status](tutorial-backup-status-sql-server.md)
+### [4. Server Insight - Database Size](tutorial-db-size-sql-server.md)
+### [5. Build Custom Insight - Missing Index and Memory Usage](tutorial-build-custom-insight-sql-server.md) 
 ## [Backup and restore](tutorial-backup-restore-sql-server.md)
 # Samples
 ## Snippet samples

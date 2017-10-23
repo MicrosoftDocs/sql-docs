@@ -1,5 +1,5 @@
 ---
-title: Tutorial article for Carbon | Microsoft Docs
+title: Enable Query Performance Insight Dashboard | Microsoft Docs
 description: This sample describes the article in 115 to 145 characters. Validate using Gauntlet toolbar check icon. Use SEO kind of action verbs here.
 services: sql-database
 author: erickang
@@ -14,165 +14,104 @@ ms.topic: article
 ms.date: 10/01/2017
 ---
 
-# Monitor database with Carbon
-Follow [Get Started with Carbon](./get-started-sql-server.md)
+# Monitor Query Performance with Carbon
+In this tutorial, we will walk-through how to enable an insight widget on Dashboard to get an at-a-glance view about the top five slowest queries using Query Data Store. We will futher examine how to view the details of the slow queries and query plans using Carbon's features. After following through this tutorial, you will learn learn how to:
 
-In this tutorial, you use the Carbon to learn how to:
 > [!div class="checklist"]
-> * Bring your own monitoring query as an insight
-> * Visualize insight query result into a chart
-> * Pin the chart to a SQL Server and database dashboard
+> * Enable Query Data Store on TutorialDB
+> * Quickly turn on an insight widget using a built-in insight widget sample.
+> * View the details of the top five slowest query.
+> * Open the query script in editor.
+> * View query plans.
 
-If you don't have an Azure subscription, create a [free](https://azure.microsoft.com/free/) account before you begin.
 
 ## Prerequisites
-Follow [Get Started with Carbon](./get-started-sql-server.md)
+* Follow [Get Started with Carbon](./get-started-sql-server.md) to a SQL Server 2017 instance and TutorialDB database.
 
-## Bring your own Insight query: View Top five slowest queries
-[step overview]
-In this tutorial, we use Query Store feature ...[give a brief explanation and link to QDS]
-
-1. Enable Query Store on TutorialDB by executing following query.
+* Enable Query Data Store by executing following T-SQL statement on TutorialDB:
 
    ```sql
-    ALTER DATABASE TutorialDB SET QUERY_STORE=ON
+    ALTER DATABASE TutorialDB SET QUERY_STORE = ON
    ```
-2. Open a new query editor from TutorialDB and copy & paste following script.
 
-   ```sql
-    WITH SlowestQry AS( 
-        SELECT TOP 5  
-            p.query_id, 
-            MAX(rs.max_duration ) max_duration 
-        FROM sys.query_store_plan AS p    
-        JOIN sys.query_store_runtime_stats AS rs    
-            ON p.plan_id = rs.plan_id   
-        WHERE rs.last_execution_time > DATEADD(week, -1, GETUTCDATE())   
-        GROUP BY p.query_id 
-        ORDER BY MAX(rs.max_duration ) DESC) 
-    SELECT  
-        p.query_id,  -- legend 
-        format(rs.last_execution_time,'yyyy-MM-dd hh:mm:ss') as [last_execution_time],   -- x axis 
-        rs.max_duration,  -- y axis
-        p.plan_id 
-    FROM sys.query_store_plan AS p    
-        JOIN sys.query_store_runtime_stats AS rs    
-            ON p.plan_id = rs.plan_id   
-        JOIN SlowestQry tq 
-            ON tq.query_id = p.query_id 
-    WHERE rs.last_execution_time > DATEADD(week, -1, GETUTCDATE())   
-    order by format(rs.last_execution_time,'yyyy-MM-dd hh:mm:ss')
-    END
-   ```
-3. Press ```F5``` to execute the query. After Carbon returns the query, click ```View as Chart``` button.
+## Turn on a management insight on Carbon's database Manage dashboard
+Carbon has a built-in sample widget to monitor the top five slowest query using query performance information. The performance information is collected by Query Data Store. With a few simple steps, you can easily visualize and use the information to improve your database and application.
 
-   ![view as chart](./media/tutorial-sql-server/view-as-chart.png)
+1. Open User Settings by pressing 'F1' to open Command Palette, type in 'settings' in the command search input box and select 'Preferences: Open User Settings' command.
 
-4. Change the chart type to ```TimeSeries``` and select ```top``` for ```Legend Position```. It renders a line chart:
+   ![Open user settings command](./media/tutorial-sql-server/open-user-settings.png)
 
-   ![query performance](./media/tutorial-sql-server/query-perf.png)
+2. Type 'dashboard' in Settings Search input box to search "dashboard.database.widgets" in Settings.
 
-5. Save the query in the editor to a *.sql file. For this tutorial, save the script as ```qds_insight.sql```.
+   ![Search settings](./media/tutorial-sql-server/search-settings.png)
 
-## Build an Insight widget on Dashboard
-[overview step]
+3. Click 'Copy to Settings' to copy "dashboard.database.widgets" settings to customize.
 
-1. Click ```Create Insight``` button on Chart Viewer. It opens an insight widget configuration like:
+4. Using Carbon's insight settings IntelliSense, configure 'name' for the widget title, 'gridItemConfig' for the widget size, and 'widget' by selecting 'query-data-store-database-insight' from the drop down list as shown in the screenshot below:
 
-   ```json
-    {
-        "name": "My-Widget",
-        "gridItemConfig": {
-            "sizex": 2,
-            "sizey": 1
-        },
-        "widget": {
-            "insights-widget": {
-                "type": {
-                    "timeSeries": {
-                        "dataDirection": "horizontal",
-                        "dataType": "point",
-                        "legendPosition": "top",
-                        "labelFirstColumn": false,
-                        "columnsAsLabels": false
-                    }
-                },
-                "queryFile": "/Users/myusername/Projects/database_project/qds_insight.sql"
-            }
-        }
-    }
-   ```
-2. Copy the insight configuration json data. 
+   ![Insight qds settings](./media/tutorial-sql-server/insight-qds-settings.png)
 
-3. Press ```F1``` and type ```settings``` in the Command Palette to open either User Settings or Workspace Settings. For this tutorial, select ```Preferences: Open User Settings``` for this tutorial. For more information about the usage of Workspace settings, see [Tips for workspace mode in Carbon]()
+5. Press 'CTRL + s' to save the user's settings file.
 
-   ![settings](./media/tutorial-sql-server/settings.png)
+6. Open Database dashboard by navigate to 'TutorialDB' in Servers viewlet, and click 'Manage' in the context menu.
 
-4. Type ```dashboard``` in ```Search Settings```. Click ```Edit``` on ```dashboard.database.widgets```. 
+   ![Open dashboard](./media/tutorial-sql-server/insight-open-dashboard.png)
 
-   > To configure an insight widget for SQL Server, click ```Edit``` for ```dashboard.server.widgets```
+7. View 'Top five slowest query insight graph' as shown in the screen shot below: 
 
-   ![dashboard settings](./media/tutorial-sql-server/dashboard-settings.png)
+   ![QDS widget](./media/tutorial-sql-server/insight-qds-result.png)
 
-5. Paste the insight configuration json into ```dashboard.database.widgets{}```. Database dashboard is:
 
-   > Repeat the same steps to add multiple insight widgets.
+## View insight details dialog for know more about the insight
 
-   ```json
-    "dashboard.database.widgets": [
-        {
-            "name": "My-Widget",
-            "gridItemConfig": {
-                "sizex": 2,
-                "sizey": 1
-            },
-            "widget": {
-                "insights-widget": {
-                    "type": {
-                        "timeSeries": {
-                            "dataDirection": "horizontal",
-                            "dataType": "point",
-                            "legendPosition": "top",
-                            "labelFirstColumn": false,
-                            "columnsAsLabels": false
-                        }
-                    },
-                    "queryFile": "/Users/myusername/Projects/database_project/qds_insight.sql"
-                }
-            }
-        },
-        {
-            "name": "Tasks",
-            "gridItemConfig": {
-                "sizex": 2,
-                "sizey": 1
-            },
-            "widget": {
-                "tasks-widget": {}
-            }
-        },
-        {
-            "gridItemConfig": {
-                "sizex": 2,
-                "sizey": 2
-            },
-            "widget": {
-                "explorer-widget": {}
-            }
-        }
-    ]
-   ```
-6. Save the User Settings file and Open Dashboard from TutorialDB.
+1. Click 'Show Insight' context menu. It will open Inishgts detail dialog as shown in the screenshot:
 
-   ![qds insight](./media/tutorial-sql-server/insight-widget.png) 
+   ![Insight detail dialog](./media/tutorial-sql-server/insight-details-dialog.png)
+
+2. Click any item in 'Chart Data' list to show more detail of each item in the list.
+
+3. Select 'query_sql_txt' field in 'Query Data' panel and click 'Copy Selection'.
+
+## View the query plan using Explain
+
+1. Open a new editor by pressing 'CTRL + N'.
+
+2. Paste the query sql text by pressing 'CTRL + V' in the editor.
+
+3. Click 'Explain' button.
+
+   ![Insight QDS Explain](./media/tutorial-sql-server/insight-qds-explain.png)
+
+4. View the showplan.
+
+   ![showplan](./media/tutorial-sql-server/showplan.png)
+
+## View the query plan in Query Data Store
+
+1. Open the insight detail dialog again.
+
+2. Select and copy 'query_plan'
+
+   ![Inishgt QDS plan](./media/tutorial-sql-server/insight-qds-plan.png)
+
+3. Press 'CTRL+N' to open a new editor.
+
+4. Paste the copied plan data to the editor.
+
+5. Press 'CTL + S' to save the file and change the file extension to *.showplan
+
+6. The query plan opens in Carbon's query plan viewer.
+
+   >> TBD - screenshot after fixing bug in Carbon.
 
 ## Next Steps
 In this tutorial, you learned how to:
 > [!div class="checklist"]
-> * Create something
-> * Do something
-> * Do something else
-> * Finish something 
+> * Enable Query Data Store on TutorialDB
+> * Quickly turn on an insight widget using a built-in insight widget sample.
+> * View the details of the top five slowest query.
+> * Open the query script in editor.
+> * View query plans.
 
 Next, learn how to use X, try this tutorial: 
 > [!div class="nextstepaction"]

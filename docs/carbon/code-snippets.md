@@ -23,14 +23,14 @@ The snippet syntax follows the [TextMate snippet syntax](https://manual.macromat
 ![ajax snippet](media/code-snippets/ajax-snippet.gif)
 
 ## Add Snippets from the Marketplace
+CARBON??
+Many [extensions](/docs/editor/extension-gallery.md) on the VS Code [Marketplace](https://marketplace.visualstudio.com/vscode) include snippets.  If you find one you want to use, install it and restart VS Code and the new snippet is available (see [here](/docs/editor/extension-gallery.md#browse-and-install-extensions) for more instructions on installing an extension).
 
-Many [extensions](/docs/editor/extension-gallery.md) on the VS Code [Marketplace](https://marketplace.visualstudio.com/vscode) include snippets.  If you find one you want to use, install it and restart VS Code and the new snippet will be available (see [here](/docs/editor/extension-gallery.md#browse-and-install-extensions) for more instructions on installing an extension).
-
-Below are some popular extensions which include snippets in their language support:
+The following popular extensions include snippets in their language support:
 
 <div class="marketplace-extensions-snippets"></div>
 
-> Tip: The extensions shown above are dynamically queried. Click on an extension tile above to read the description and reviews to decide which extension is best for you. See more in the [Marketplace](https://marketplace.visualstudio.com/vscode).
+> Tip: The preceding extensions are dynamically queried. Click on an extension tile above to read the description and reviews to decide which extension is best for you. See more in the [Marketplace](https://marketplace.visualstudio.com/vscode).
 
 ## Creating your Own Snippets
 
@@ -74,11 +74,11 @@ With tabstops, you can make the editor cursor move inside a snippet. Use `$1`, `
 
 ### Placeholders
 
-Placeholders are tabstops with values, like `${1:foo}`. The placeholder text will be inserted and selected such that it can be easily changed. Placeholders can be nested, like `${1:another ${2:placeholder}}`.
+Placeholders are tabstops with values, like `${1:foo}`. The placeholder text is inserted such that it can be easily changed. Placeholders can be nested, like `${1:another ${2:placeholder}}`.
 
 ### Choice
 
-Placeholders can have choices as values. The syntax is a comma separated enumeration of values, enclosed with the pipe-character, for example `${1|one,two,three|}`. When the snippet is inserted and the placeholder selected, choices will prompt the user to pick one of the values.
+Placeholders can have choices as values. The syntax is a comma-separated enumeration of values, enclosed with the pipe-character, for example `${1|one,two,three|}`. When the snippet is inserted and the placeholder selected, choices prompt the user to pick one of the values.
 
 ### Variables
 
@@ -89,8 +89,8 @@ The following variables can be used:
 * `TM_SELECTED_TEXT` The currently selected text or the empty string
 * `TM_CURRENT_LINE` The contents of the current line
 * `TM_CURRENT_WORD` The contents of the word under cursor or the empty string
-* `TM_LINE_INDEX` The zero-index based line number
-* `TM_LINE_NUMBER` The one-index based line number
+* `TM_LINE_INDEX` The zero-index-based line number
+* `TM_LINE_NUMBER` The one-index-based line number
 * `TM_FILENAME` The filename of the current document
 * `TM_FILENAME_BASE` The filename of the current document without its extensions
 * `TM_DIRECTORY` The directory of the current document
@@ -122,7 +122,7 @@ ${TM_FILENAME/(.*)\..+$/$1/}
 
 ### Grammar
 
-Below is the EBNF ([extended Backus-Naur form](https://en.wikipedia.org/wiki/Extended_Backus-Naur_form)) for snippets. With `\` (backslash), you can escape `$`, `}` and `\`. Within choice elements, the backslash also escapes comma and pipe characters.
+Below is the EBNF ([extended Backus-Naur form](https://en.wikipedia.org/wiki/Extended_Backus-Naur_form)) for snippets. With `\` (backslash), you can escape `$`, ༖༗, and `\`. Within choice elements, the backslash also escapes comma and pipe characters.
 
 ```
 any         ::= tabstop | placeholder | choice | variable | text
@@ -146,7 +146,7 @@ text        ::= .*
 
 ## Using TextMate snippets
 
-You can also use existing TextMate snippets (.tmSnippets) with VS Code. See the [Using TextMate Snippets](/docs/extensions/themes-snippets-colorizers.md#using-textmate-snippets) topic in our Extension Authoring section to learn more.
+You can also use existing TextMate snippets (.tmSnippets) with VS Code. See the [Using TextMate Snippets](/docs/extensions/themes-snippets-colorizers.md#using-textmate-snippets) article in our Extension Authoring section to learn more.
 
 ## Assign keybindings to snippets
 
@@ -163,14 +163,14 @@ We already know that snippets can be inserted via IntelliSense, the 'Insert Snip
 }
 ```
 
-It will invoke the 'Insert Snippet'-action but instead of letting you select a snippet it will run on the provided snippet. Also, instead of `snippet` you can have `langId` and `name` arguments to reference an existing snippet: `{ "langId": "csharp", "name": "myFavSnippet" }`
+It invokes the 'Insert Snippet'-action but instead of letting you select a snippet it runs on the provided snippet. Also, instead of `snippet` you can have `langId` and `name` arguments to reference an existing snippet: `{ "langId": "csharp", "name": "myFavSnippet" }`
 
 
 ## Next Steps
 
-* [Command Line](/docs/editor/command-line.md) - VS Code has a rich command line interface to open or diff files and install extensions.
+* [Command Line](/docs/editor/command-line.md) - VS Code has a rich command-line interface to open or diff files and install extensions.
 * [Extending Visual Studio Code](/docs/extensions/overview.md) - Learn about other ways to extend VS Code.
-* [Themes, Snippets, and Colorizers](/docs/extensions/themes-snippets-colorizers.md) - You can package themes, snippets and language colorizers for use in VS Code.
+* [Themes, Snippets, and Colorizers](/docs/extensions/themes-snippets-colorizers.md) - You can package themes, snippets, and language colorizers for use in VS Code.
 
 ## Common Questions
 

@@ -114,12 +114,13 @@ The following steps describe how to manually fail over without data loss:
 
    The secondary replica is synchronized when `synchronization_state_desc` is `SYNCHRONIZED`.
 
-1. Update `required_synchronized_secondaries_to_commit`to 1.
+1. Update `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`to 1.
 
-   The following script sets  `required_synchronized_secondaries_to_commit` to 1 on an availability group named `<**ag1**>`. Before you run replace `<**ag1**>` with the name of your availability group.
+   The following script sets  `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` to 1 on an availability group named `ag1`. Before you run replace `ag1` with the name of your availability group.
 
-   ```bash
-   sudo pcs resource update <**ag1**> required_synchronized_secondaries_to_commit=1
+   ```SQL
+   ALTER AVAILABILITY GROUP [ag1] 
+        SET REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT = 1;
    ```
 
    This setting ensures that every active transaction is committed to the primary replica and at least one synchronous secondary. 
@@ -127,7 +128,8 @@ The following steps describe how to manually fail over without data loss:
 1. Demote the primary replica to secondary replica. After the primary replica is demoted, it is read-only. Run this command on the SQL instance hosting the primary replica to update the role to SECONDARY:
 
    ```SQL
-   ALTER AVAILABILITY GROUP [ag1] SET (ROLE = SECONDARY); 
+   ALTER AVAILABILITY GROUP [ag1] 
+        SET (ROLE = SECONDARY); 
    ```
 
 1. Promote the target secondary replica to primary. 

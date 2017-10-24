@@ -17,7 +17,9 @@ ms.author: "genemi"
 manager: "jhubbard"
 ---
 # Known Issues in this Version of the Driver
+
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
+
 This topic contains a list of known issues with the Microsoft ODBC Driver 13 for SQL Server on Linux and macOS.
 
 Additional issues will be posted on the [Microsoft ODBC driver team blog](http://blogs.msdn.com/b/sqlnativeclient/).  

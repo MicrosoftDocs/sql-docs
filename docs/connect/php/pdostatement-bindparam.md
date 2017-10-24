@@ -126,12 +126,13 @@ This code sample shows how to bind a decimal value as an input parameter.
 $database = "Test";  
 $server = "(local)";  
 $conn = new PDO("sqlsrv:server=$server ; Database = $database", "", "");  
-  
+
+// Assume TestTable exists with a decimal field 
 $input = 9223372036854.80000;
-$stmt = $conn->prepare("INSERT INTO TestTable (col) VALUES (?)");
+$stmt = $conn->prepare("INSERT INTO TestTable (DecimalCol) VALUES (?)");
 // by default it is PDO::PARAM_STR, rounding of a large input value may
 // occur if PDO::PARAM_INT is specified
-$stmt->bindParam(1, $input);
+$stmt->bindParam(1, $input, PDO::PARAM_STR);
 $stmt->execute();
 ```
 

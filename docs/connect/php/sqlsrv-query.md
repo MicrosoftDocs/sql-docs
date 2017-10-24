@@ -175,10 +175,10 @@ if ($conn === false) {
      die(print_r(sqlsrv_errors(), true));  
 }  
 
-/* Assume TestTable exists with a decimal field */
+// Assume TestTable exists with a decimal field 
 $input = "9223372036854.80000";
 $params = array($input);
-$stmt = sqlsrv_query($conn, "INSERT INTO TestTable (col) VALUES (?)", $params);
+$stmt = sqlsrv_query($conn, "INSERT INTO TestTable (DecimalCol) VALUES (?)", $params);
 
 sqlsrv_free_stmt($stmt);  
 sqlsrv_close($conn);  

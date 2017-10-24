@@ -30,6 +30,7 @@ caps.latest.revision: 155
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # sqlcmd Utility
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-_md](../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]

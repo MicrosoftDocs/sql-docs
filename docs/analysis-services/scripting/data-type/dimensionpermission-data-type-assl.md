@@ -24,6 +24,7 @@ caps.latest.revision: 17
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # DimensionPermission Data Type (ASSL)
   Defines a derived data type that represents the permissions assigned to a database dimension.  

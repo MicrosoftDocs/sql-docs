@@ -18,6 +18,7 @@ caps.latest.revision: 13
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Name Element for Index (DTA)
   Specifies a name for an index in the user-specified configuration.  

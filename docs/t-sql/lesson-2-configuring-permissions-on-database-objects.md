@@ -18,6 +18,7 @@ caps.latest.revision: 12
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Lesson 2: Configuring Permissions on Database Objects
 Granting a user access to a database involves three steps. First, you create a login. The login lets the user connect to the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]. Then you configure the login as a user in the specified database. And finally, you grant that user permission to database objects. This lesson shows you these three steps, and shows you how to create a view and a stored procedure as the object.  

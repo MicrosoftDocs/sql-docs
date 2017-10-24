@@ -22,6 +22,7 @@ caps.latest.revision: 22
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Accessing Query Context in Stored Procedures
   The execution context of a stored procedure is available within the code of the stored procedure as the **Context** object of the ADOMD.NET server object model. This is a read-only context and cannot be modified by the stored procedure. The following properties are available on this object.  

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "ORDER BY Clause (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/11/2017"
@@ -42,6 +42,7 @@ caps.latest.revision: 68
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # SELECT - ORDER BY Clause (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]

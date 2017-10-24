@@ -14,6 +14,7 @@ caps.latest.revision: 21
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Install Distributed Replay
   You can install Distributed Replay in one of three ways:  

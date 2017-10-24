@@ -16,6 +16,7 @@ caps.latest.revision: 19
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Configuration Setting Reference (Power Pivot for SharePoint)
   This topic provides reference documentation for configuration settings used by [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] service applications in a SharePoint farm. If you are using PowerShell script to configure a server, or if you want to look up information for a specific setting, the information in this topic provides detailed descriptions.  

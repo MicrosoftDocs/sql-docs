@@ -27,6 +27,7 @@ caps.latest.revision: 46
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "On Demand"
 ---
 # Dimension Relationships
   Dimension usage defines the relationships between a cube dimension and the measure groups in a cube. A cube dimension is an instance of a database dimension that is used in a specific cube. A cube can, and frequently does, have cube dimensions that are not directly related to a measure group, but which might be indirectly related to the measure group through another dimension or measure group. When you add a database dimension or measure group to a cube, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tries to determine dimension usage by examining relationships between the dimension tables and fact tables in the cube's data source view, and by examining the relationships between attributes in dimensions. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] automatically sets the dimension usage settings for the relationships that it can detect.  

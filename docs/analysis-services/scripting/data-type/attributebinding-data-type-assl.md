@@ -26,6 +26,7 @@ caps.latest.revision: 44
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # AttributeBinding Data Type (ASSL)
   Defines a derived data type that represents a binding for an [Attribute](../../../analysis-services/scripting/objects/attribute-element-assl.md) element.  

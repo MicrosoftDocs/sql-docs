@@ -18,6 +18,7 @@ caps.latest.revision: 18
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Create SQL Server Data Objects using RxSqlServerData
 

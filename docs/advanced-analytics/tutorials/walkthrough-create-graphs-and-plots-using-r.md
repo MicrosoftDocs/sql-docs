@@ -19,6 +19,7 @@ caps.latest.revision: 16
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Create graphs and plots using SQL and R (walkthrough)
 

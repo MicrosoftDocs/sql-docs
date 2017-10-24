@@ -25,6 +25,7 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Sort Property
 Indicates one or more field names on which the [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) is sorted, and whether each field is sorted in ascending or descending order.  

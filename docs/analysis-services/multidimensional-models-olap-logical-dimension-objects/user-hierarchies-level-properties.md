@@ -20,6 +20,7 @@ caps.latest.revision: 13
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # User Hierarchies - Level Properties
   The following table lists and describes the properties of a level in a user-defined hierarchy.  

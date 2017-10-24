@@ -18,6 +18,7 @@ caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Intervening Shape COMPUTE Clauses
 It is valid to embed one or more COMPUTE clauses between the parent and child in a parameterized shape command, as in the following example:  

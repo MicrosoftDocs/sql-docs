@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # DISCOVER_PERFORMANCE_COUNTERS Rowset
   Returns the value of one or more performance counters. It does not support counters that return information about usage over time (such as disk reads per second and percentage of CPU usage).  

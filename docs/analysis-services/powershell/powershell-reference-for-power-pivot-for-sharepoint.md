@@ -15,6 +15,7 @@ caps.latest.revision: 11
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # PowerShell Reference for Power Pivot for SharePoint
 

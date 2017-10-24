@@ -16,6 +16,7 @@ caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Step 4: Server Returns the Recordset (RDS Tutorial)
 > [!IMPORTANT]

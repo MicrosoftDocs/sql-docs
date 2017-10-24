@@ -16,6 +16,7 @@ caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # ADO Event Instantiation: VBScript
 Microsoft Visual Basic Scripting Edition does not support ADO events.

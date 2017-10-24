@@ -26,6 +26,7 @@ caps.latest.revision: 38
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # CubeBinding Data Type (out-of-line) (ASSL)
   Defines a primitive data type that represents the relationship between a [Cube](../../../analysis-services/scripting/objects/cube-element-assl.md) element and a [DataSource](../../../analysis-services/scripting/objects/datasource-element-assl.md) element.  

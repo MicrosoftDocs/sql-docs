@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Lesson 2: Import data to SQL Server using PowerShell
 

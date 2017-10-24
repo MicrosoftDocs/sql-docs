@@ -17,6 +17,7 @@ caps.latest.revision: 7
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # DISCOVER_TRACE_EVENT_CATEGORIES Rowset
   Shows the list of event categories that are supported by the trace provider.  

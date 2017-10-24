@@ -20,6 +20,7 @@ caps.latest.revision: 26
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # XML Input File Reference (Database Engine Tuning Advisor)
   [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor can use an XML input file to tune a database. This XML file designates which databases, tables, workload files or tables, and tuning options to use for the tuning session. You can also use this file to specify a user-specified configuration to perform "what-if" analysis.  

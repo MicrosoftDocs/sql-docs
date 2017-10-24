@@ -18,6 +18,7 @@ caps.latest.revision: 13
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Recommendation Element (DTA)
   Contains information about the hypothetical indexes that are part of a user-specified configuration.  

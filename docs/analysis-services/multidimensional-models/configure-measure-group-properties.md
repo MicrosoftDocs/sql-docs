@@ -18,6 +18,7 @@ caps.latest.revision: 17
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Configure Measure Group Properties
   Measures groups have properties that enable you to define how measure groups function.  

@@ -47,6 +47,7 @@ caps.latest.revision: 50
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Configure Measure Properties
   Measures have properties that enable you to define how the measures function and to control how the measures appear to users.  

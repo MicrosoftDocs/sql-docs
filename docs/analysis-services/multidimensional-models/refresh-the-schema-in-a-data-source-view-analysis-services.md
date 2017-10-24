@@ -20,6 +20,7 @@ caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "On Demand"
 ---
 # Refresh the Schema in a Data Source View (Analysis Services)
   After defining a data source view (DSV) in an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] project or database, the schema in an underlying data source may change. These changes are not automatically detected or updated in a development project. Moreover, if you deployed the project to a server, you will now encounter processing errors if Analysis Services can no longer connect to the external data source.  

@@ -21,6 +21,7 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # SQLState Property
 Indicates the SQL state for a given [Error](../../../ado/reference/ado-api/error-object.md) object.  

@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # put_OLEDBCommand Method
 This method performs no operation and always returns S_OK.  

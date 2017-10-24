@@ -22,6 +22,7 @@ caps.latest.revision: 46
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Delete a Data Source in Solution Explorer (SSAS Multidimensional)
   You can delete a data source object to permanently remove it from an Analysis Services multidimensional model project.  

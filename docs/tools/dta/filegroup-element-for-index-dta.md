@@ -18,6 +18,7 @@ caps.latest.revision: 12
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Filegroup Element for Index (DTA)
   Specifies the filegroup on which the index is to be created for a user-specified configuration.  

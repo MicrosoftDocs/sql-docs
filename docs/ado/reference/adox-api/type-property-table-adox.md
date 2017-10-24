@@ -21,6 +21,7 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Type Property (Table) (ADOX)
 Indicates the type of a table.  

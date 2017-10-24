@@ -16,6 +16,7 @@ caps.latest.revision: 17
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Lesson 7-1 - Defining and Browsing KPIs
 To define key performance indicators (KPIs), you first define a KPI name and the measure group to which the KPI is associated. A KPI can be associated with all measure groups or with a single measure group. You then define the following elements of the KPI:  

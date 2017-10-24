@@ -18,6 +18,7 @@ caps.latest.revision: 12
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Database Element for Configuration (DTA)
   Specifies the database against which you want the Database Engine Tuning Advisor to evaluate the hypothetical configuration (specified by the **Configuration** element).  

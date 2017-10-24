@@ -14,6 +14,7 @@ caps.latest.revision: 10
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # SQL Server Properties (FILESTREAM Tab)
   Use this page to enable FILESTREAM for this installation of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  

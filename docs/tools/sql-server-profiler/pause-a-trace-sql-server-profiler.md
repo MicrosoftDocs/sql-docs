@@ -19,6 +19,7 @@ caps.latest.revision: 24
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Pause a Trace (SQL Server Profiler)
   Pausing a trace prevents further event data from being captured until the trace is restarted.  

@@ -14,6 +14,7 @@ caps.latest.revision: 20
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Upgrade Workbooks and Scheduled Data Refresh (SharePoint 2013)
   This topic explains the user experience of workbooks created in previous [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] environments and how to upgrade [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] workbooks so that you can take advantage of new features introduced in this release. To learn more about new features, see [What’s New in Power Pivot](http://go.microsoft.com/fwlink/?LinkID=203917).  

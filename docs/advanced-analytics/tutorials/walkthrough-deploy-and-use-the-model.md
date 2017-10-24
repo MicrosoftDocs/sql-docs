@@ -18,6 +18,7 @@ caps.latest.revision: 18
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Deploy the R model and use it in SQL
 

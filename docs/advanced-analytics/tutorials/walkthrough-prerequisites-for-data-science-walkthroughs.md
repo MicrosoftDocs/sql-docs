@@ -19,6 +19,7 @@ caps.latest.revision: 13
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Prerequisites for the data science walkthrough for SQL Server and R
 

@@ -19,6 +19,7 @@ caps.latest.revision: 32
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Supported MDX (MDX)
   The following statements and functions are supported within Multidimensional Expressions (MDX) Script:  

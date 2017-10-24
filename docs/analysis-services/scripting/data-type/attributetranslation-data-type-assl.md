@@ -26,6 +26,7 @@ caps.latest.revision: 41
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # AttributeTranslation Data Type (ASSL)
   Defines a derived data type that represents a translation associated with an [Attribute](../../../analysis-services/scripting/objects/attribute-element-assl.md) element  

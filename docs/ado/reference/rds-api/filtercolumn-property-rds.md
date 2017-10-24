@@ -17,6 +17,7 @@ caps.latest.revision: 17
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # FilterColumn Property (RDS)
 Indicates the column on which to evaluate the filter criteria.  

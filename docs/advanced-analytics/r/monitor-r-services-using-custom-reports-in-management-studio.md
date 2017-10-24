@@ -14,6 +14,7 @@ caps.latest.revision: 13
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Monitor Machine Learning Services using custom reports in Management Studio
 

@@ -20,6 +20,7 @@ caps.latest.revision: 18
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # XQuery Expressions
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]

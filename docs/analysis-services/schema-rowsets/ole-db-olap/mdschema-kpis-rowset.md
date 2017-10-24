@@ -22,6 +22,7 @@ caps.latest.revision: 36
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # MDSCHEMA_KPIS Rowset
   Describes the key performance indicators (KPIs) within a database.  

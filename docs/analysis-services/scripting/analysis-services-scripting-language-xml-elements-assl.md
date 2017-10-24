@@ -22,6 +22,7 @@ caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Analysis Services Scripting Language XML Elements (ASSL)
   Although the Analysis Services Scripting Language (ASSL) schema contains only XML elements, from a developer's point of view, these elements correspond to the following concepts:  

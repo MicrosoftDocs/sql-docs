@@ -17,6 +17,7 @@ caps.latest.revision: 3
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # How to Create MDX Queries using olapR
 ## How to build an MDX query from R

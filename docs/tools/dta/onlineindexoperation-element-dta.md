@@ -18,6 +18,7 @@ caps.latest.revision: 13
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # OnlineIndexOperation Element (DTA)
   Specifies whether the indexes, indexed views, or partitions that Database Engine Tuning Advisor recommends can be created online.  

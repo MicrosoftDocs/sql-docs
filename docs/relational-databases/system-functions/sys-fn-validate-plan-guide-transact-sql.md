@@ -37,7 +37,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
-  
 sys.fn_validate_plan_guide ( plan_guide_id )  
 ```  
   
@@ -64,7 +63,7 @@ sys.fn_validate_plan_guide ( plan_guide_id )
 ### A. Validating all plan guides in a database  
  The following example checks the validity of all plan guides in the current database. If an empty result set is returned, all plan guides are valid.  
   
-```  
+```tsql  
 USE AdventureWorks2012;  
 GO  
 SELECT plan_guide_id, msgnum, severity, state, message  
@@ -74,9 +73,9 @@ GO
 ```  
   
 ### B. Testing plan guide validation before implementing a change to the database  
- The following example uses an explicit transaction to drop an index. The `sys.fn`_`validate`\_`plan`\_`guide` function is executed to determine whether this action will invalidate any plan guides in the database. Based on the results of the function, the `DROP INDEX` statement is either committed or the transaction is rolled back, and the index is not dropped.  
+ The following example uses an explicit transaction to drop an index. The `sys.fn_validate_plan_guide` function is executed to determine whether this action will invalidate any plan guides in the database. Based on the results of the function, the `DROP INDEX` statement is either committed or the transaction is rolled back, and the index is not dropped.  
   
-```  
+```tsql  
 USE AdventureWorks2012;  
 GO  
 BEGIN TRANSACTION;  

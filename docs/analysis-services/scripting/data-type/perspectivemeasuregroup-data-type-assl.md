@@ -26,6 +26,7 @@ caps.latest.revision: 35
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # PerspectiveMeasureGroup Data Type (ASSL)
   Defines a primitive data type that represents information about a measure group in a [Perspective](../../../analysis-services/scripting/objects/perspective-element-assl.md) element.  

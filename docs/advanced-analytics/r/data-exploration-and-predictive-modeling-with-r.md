@@ -15,6 +15,7 @@ caps.latest.revision: 20
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Data Exploration and Predictive Modeling with R
 

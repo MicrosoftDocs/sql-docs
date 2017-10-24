@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # MarshalOptions Property (ADO)
 Indicates which records of the [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) are to be marshaled back to the server.  

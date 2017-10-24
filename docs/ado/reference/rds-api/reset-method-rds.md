@@ -17,6 +17,7 @@ caps.latest.revision: 16
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Reset Method (RDS)
 Executes the sort or filter on a client-side **Recordset** based on the specified sort and filter properties.  

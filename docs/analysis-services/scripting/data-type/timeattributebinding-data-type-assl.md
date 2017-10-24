@@ -26,6 +26,7 @@ caps.latest.revision: 38
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # TimeAttributeBinding Data Type (ASSL)
   Defines a derived data type that represents a "placeholder" binding for generated data items, such as the key columns of an attribute, in a server time dimension.  

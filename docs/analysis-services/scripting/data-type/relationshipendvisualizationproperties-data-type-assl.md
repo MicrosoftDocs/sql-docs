@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # RelationshipEndVisualizationProperties Data Type (ASSL)
   Defines a primitive data type that represents a relationship end in a relationship.  

@@ -17,6 +17,7 @@ caps.latest.revision: 16
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Query Method (RDS)
 Uses a valid SQL query string to return a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  

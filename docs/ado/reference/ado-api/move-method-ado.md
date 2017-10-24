@@ -20,6 +20,7 @@ caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Move Method (ADO)
 Moves the position of the current record in a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object.  

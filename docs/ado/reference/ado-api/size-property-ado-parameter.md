@@ -19,6 +19,7 @@ caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Size Property (ADO Parameter)
 Indicates the maximum size, in bytes or characters, of a [Parameter](../../../ado/reference/ado-api/parameter-object.md) object.  

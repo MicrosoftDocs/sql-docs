@@ -14,6 +14,7 @@ caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # ADO Extensions for Data Definition Language and Security (ADOX)
 This section contains the following topics.  

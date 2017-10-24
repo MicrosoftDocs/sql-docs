@@ -26,6 +26,7 @@ caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # DimensionPermissions Element (ASSL)
   Contains the collection of permissions applicable to a [Dimension](../../../analysis-services/scripting/objects/dimension-element-assl.md) element or a [CubePermission](../../../analysis-services/scripting/objects/cubepermission-element-assl.md) element.  

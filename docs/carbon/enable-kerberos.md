@@ -1,6 +1,6 @@
 ---
-title: Connect Carbon to your SQL Server using Windows authentication - Kerberos Microsoft Docs
-description: Learn how to enable Kerberos to connect to 
+title: Use Active Directory Authentication - Kerberos 
+description: Learn how to enable Kerberos to use Active Directory Authentication for SQL Workbench
 services: sql-database
 author: stevestein
 ms.author: sstein

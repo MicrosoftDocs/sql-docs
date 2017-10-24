@@ -1,7 +1,7 @@
 ---
 title: "sqlsrv_query | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/13/2017"
+ms.date: "10/24/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -159,8 +159,7 @@ sqlsrv_close($conn);
 ?>  
 ```  
   
-> [!NOTE]
->  It is recommended to use strings as inputs when binding values to a decimal or numeric column to ensure precision and accuracy as PHP has limited precision for [floating point numbers](http://php.net/manual/en/language.types.float.php).
+[!NOTE] It is recommended to use strings as inputs when binding values to a [decimal or numeric column](https://docs.microsoft.com/en-us/sql/t-sql/data-types/decimal-and-numeric-transact-sql) to ensure precision and accuracy as PHP has limited precision for [floating point numbers](http://php.net/manual/en/language.types.float.php).
 
 ## Example  
 This code sample shows how to bind a decimal value as an input parameter.  

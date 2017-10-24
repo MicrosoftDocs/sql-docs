@@ -1,7 +1,7 @@
 ---
 title: "PDOStatement::bindValue | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/13/2017"
+ms.date: "10/24/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -48,7 +48,7 @@ This example shows that after the value of $contact is bound, changing the value
 <?php  
 $database = "AdventureWorks";  
 $server = "(local)";  
-$conn = new PDO( "sqlsrv:server=$server ; Database = $database", "", "");  
+$conn = new PDO("sqlsrv:server=$server ; Database = $database", "", "");  
   
 $contact = "Sales Agent";  
 $stmt = $conn->prepare("select * from Person.ContactType where name = ?");  
@@ -67,14 +67,13 @@ $stmt->bindValue(':contact', $contact);
 $contact = "Owner";  
 $stmt->execute();  
   
-while ($row = $stmt->fetch(PDO::FETCH_ASSOC)){  
+while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {  
    print "$row[Name]\n\n";  
 }  
 ?>  
 ```
 
-> [!NOTE]
->  It is recommended to use strings as inputs when binding values to a decimal or numeric column to ensure precision and accuracy as PHP has limited precision for [floating point numbers](http://php.net/manual/en/language.types.float.php).
+[!NOTE] It is recommended to use strings as inputs when binding values to a [decimal or numeric column](https://docs.microsoft.com/en-us/sql/t-sql/data-types/decimal-and-numeric-transact-sql) to ensure precision and accuracy as PHP has limited precision for [floating point numbers](http://php.net/manual/en/language.types.float.php).
 
 ## Example  
 This code sample shows how to bind a decimal value as an input parameter.  
@@ -83,7 +82,7 @@ This code sample shows how to bind a decimal value as an input parameter.
 <?php  
 $database = "Test";  
 $server = "(local)";  
-$conn = new PDO( "sqlsrv:server=$server ; Database = $database", "", "");  
+$conn = new PDO("sqlsrv:server=$server ; Database = $database", "", "");  
   
 $input = 9223372036854.80000;
 $stmt = $conn->prepare("INSERT INTO TestTable (col) VALUES (?)");

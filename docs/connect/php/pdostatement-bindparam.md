@@ -1,7 +1,7 @@
 ---
 title: "PDOStatement::bindParam | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/13/2017"
+ms.date: "10/24/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -24,7 +24,7 @@ Binds a parameter to a named or question mark placeholder in the SQL statement.
   
 ```  
   
-bool PDOStatement::bindParam( $parameter, &$variable [,$data_type[, $length[, $driver_options]]] );  
+bool PDOStatement::bindParam($parameter, &$variable [,$data_type[, $length[, $driver_options]]]);  
 ```  
   
 #### Parameters  
@@ -53,7 +53,7 @@ This code sample shows that after $contact is bound to the parameter, changing t
 <?php  
 $database = "AdventureWorks";  
 $server = "(local)";  
-$conn = new PDO( "sqlsrv:server=$server ; Database = $database", "", "");  
+$conn = new PDO("sqlsrv:server=$server ; Database = $database", "", "");  
   
 $contact = "Sales Agent";  
 $stmt = $conn->prepare("select * from Person.ContactType where name = ?");  
@@ -61,7 +61,7 @@ $stmt->bindParam(1, $contact);
 $contact = "Owner";  
 $stmt->execute();  
   
-while ( $row = $stmt->fetch( PDO::FETCH_ASSOC ) ){  
+while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {  
    print "$row[Name]\n\n";  
 }  
   
@@ -72,7 +72,7 @@ $stmt->bindParam(':contact', $contact);
 $contact = "Owner";  
 $stmt->execute();  
   
-while ( $row = $stmt->fetch( PDO::FETCH_ASSOC ) ){  
+while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {  
    print "$row[Name]\n\n";  
 }  
 ?>  
@@ -85,12 +85,12 @@ This code sample shows how to access an output parameter.
 <?php  
 $database = "Test";  
 $server = "(local)";  
-$conn = new PDO( "sqlsrv:server=$server ; Database = $database", "", "");  
+$conn = new PDO("sqlsrv:server=$server ; Database = $database", "", "");  
   
 $input1 = 'bb';  
   
-$stmt = $conn->prepare("select ? = count(* ) from Sys.tables");  
-$stmt->bindParam( 1, $input1, PDO::PARAM_STR, 10 );  
+$stmt = $conn->prepare("select ? = count(*) from Sys.tables");  
+$stmt->bindParam(1, $input1, PDO::PARAM_STR, 10);  
 $stmt->execute();  
 echo $input1;  
 ?>  
@@ -115,8 +115,7 @@ This code sample shows how to use an input/output parameter.
 ?>  
 ```  
 
-> [!NOTE]  
->  It is recommended to use strings as inputs when binding values to a decimal or numeric column to ensure precision and accuracy as PHP has limited precision for [floating point numbers](http://php.net/manual/en/language.types.float.php).
+[!NOTE] It is recommended to use strings as inputs when binding values to a [decimal or numeric column](https://docs.microsoft.com/en-us/sql/t-sql/data-types/decimal-and-numeric-transact-sql) to ensure precision and accuracy as PHP has limited precision for [floating point numbers](http://php.net/manual/en/language.types.float.php).
 
 ## Example  
 This code sample shows how to bind a decimal value as an input parameter.  

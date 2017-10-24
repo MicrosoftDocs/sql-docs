@@ -18,6 +18,7 @@ caps.latest.revision: 16
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Work with Analysis Services Projects and Databases in Production
   After you have developed and deployed your [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database from your [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] project to an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance, you must decide how you wish to make changes to objects in the deployed database. Certain changes, such changes related to security roles, partitioning, and storage settings, can be made using either [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Other changes can only be made using [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], either in project mode or in online mode (such as adding attributes or user-defined hierarchies).  

@@ -22,6 +22,7 @@ caps.latest.revision: 30
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # DISCOVER_INSTANCES Rowset
   Describes the instances on the server.  

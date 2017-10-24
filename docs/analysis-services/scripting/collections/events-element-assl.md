@@ -26,6 +26,7 @@ caps.latest.revision: 35
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Events Element (ASSL)
   Defines the collection of [Event](../../../analysis-services/scripting/objects/event-element-assl.md) elements to be captured by a [Trace](../../../analysis-services/scripting/objects/trace-element-assl.md).  

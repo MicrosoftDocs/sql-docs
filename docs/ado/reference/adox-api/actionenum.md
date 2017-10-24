@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # ActionEnum
 Specifies the type of action to be performed when [SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md) is called.  

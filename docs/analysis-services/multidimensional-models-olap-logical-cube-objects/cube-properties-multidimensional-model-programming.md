@@ -38,6 +38,7 @@ caps.latest.revision: 40
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Cube Properties - Multidimensional Model Programming
   Cubes have a number of properties that you can set to affect cube-wide behavior. These properties are summarized in the following table.  

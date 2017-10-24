@@ -19,6 +19,7 @@ caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Columns and Tables Append Methods, Name Property Example (VB)
 The following code demonstrates how to create a new table.  

@@ -22,6 +22,7 @@ caps.latest.revision: 29
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # MDSCHEMA_FUNCTIONS Rowset
   Describes the functions available to client applications connected to the database.  

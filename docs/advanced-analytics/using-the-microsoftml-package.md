@@ -16,6 +16,7 @@ caps.latest.revision: 132
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Using the MicrosoftML package with SQL Server
 

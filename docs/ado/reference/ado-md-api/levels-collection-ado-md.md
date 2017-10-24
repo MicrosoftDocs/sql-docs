@@ -20,6 +20,7 @@ caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Levels Collection (ADO MD)
 Contains the [Level](../../../ado/reference/ado-md-api/level-object-ado-md.md) objects that make up a hierarchy.  

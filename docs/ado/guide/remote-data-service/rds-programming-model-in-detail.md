@@ -16,6 +16,7 @@ caps.latest.revision: 15
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # RDS Programming Model in Detail
 The following are key elements of the RDS programming model:  

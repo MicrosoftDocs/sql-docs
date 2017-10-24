@@ -26,6 +26,7 @@ caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Measures Element (ASSL)
   Contains the collection of [Measure](../../../analysis-services/scripting/objects/measure-element-assl.md) elements associated with the parent element.  

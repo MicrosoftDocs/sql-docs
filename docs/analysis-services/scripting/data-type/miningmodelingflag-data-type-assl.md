@@ -26,6 +26,7 @@ caps.latest.revision: 37
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # MiningModelingFlag Data Type (ASSL)
   Defines a primitive data type that represents the available modeling flags for a [ModelingFlag](../../../analysis-services/scripting/objects/modelingflag-element-assl.md) element.  

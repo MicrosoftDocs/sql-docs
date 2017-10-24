@@ -14,6 +14,7 @@ caps.latest.revision: 22
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # SQL Server Services
   This section contains F1 Help topics for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Services dialog boxes in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager.  

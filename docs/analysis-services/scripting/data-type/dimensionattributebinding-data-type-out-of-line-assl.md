@@ -24,6 +24,7 @@ caps.latest.revision: 9
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # DimensionAttributeBinding Data Type (out-of-line) (ASSL)
   Defines a derived data type that represents an out-of-line binding for an attribute in a dimension.  

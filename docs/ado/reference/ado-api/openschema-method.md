@@ -20,6 +20,7 @@ caps.latest.revision: 21
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # OpenSchema Method
 Obtains database schema information from the provider.  

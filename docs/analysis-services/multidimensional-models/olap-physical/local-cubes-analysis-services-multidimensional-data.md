@@ -19,6 +19,7 @@ caps.latest.revision: 13
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Local Cubes (Analysis Services - Multidimensional Data)
   To create, update or delete local cubes, you must write and execute either an ASSL script or an AMO program.  

@@ -17,6 +17,7 @@ caps.latest.revision: 49
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Active"
 ---
 # Comparing tabular and multidimensional solutions
   SQL Server Analysis Services provides several approaches for creating a business intelligence semantic model: Tabular, Multidimensional, and Power Pivot for SharePoint.

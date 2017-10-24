@@ -14,6 +14,7 @@ caps.latest.revision: 11
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Client Protocols (SQL Server Configuration Manager)
   To configure the order that protocols are used by the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] clients on this computer, right-click **ClientProtocols** in the console pane, and then click **Properties**, or right-click the a protocol in the details pane, and then click **Order**.  

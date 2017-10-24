@@ -19,6 +19,7 @@ caps.latest.revision: 14
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # DISCOVER_LOCKS Rowset
   Provides information about the current standing locks on the server.  

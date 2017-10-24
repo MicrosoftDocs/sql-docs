@@ -26,6 +26,7 @@ caps.latest.revision: 41
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # DimensionBinding Data Type (ASSL)
   Defines a derived data type that represents the binding between a data source and a [Dimension](../../../analysis-services/scripting/objects/dimension-element-assl.md) element.  

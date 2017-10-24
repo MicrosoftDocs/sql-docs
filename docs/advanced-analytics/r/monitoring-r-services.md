@@ -14,6 +14,7 @@ caps.latest.revision: 13
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Monitoring R Services
   This section provides information about these common monitoring tasks when using [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]:  

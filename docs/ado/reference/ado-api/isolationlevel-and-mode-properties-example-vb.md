@@ -19,6 +19,7 @@ caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # IsolationLevel and Mode Properties Example (VB)
 This example uses the [Mode](../../../ado/reference/ado-api/mode-property-ado.md) property to open an exclusive connection, and the [IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md) property to open a transaction that is conducted in isolation of other transactions.  

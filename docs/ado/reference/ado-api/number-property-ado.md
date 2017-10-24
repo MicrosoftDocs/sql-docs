@@ -21,6 +21,7 @@ caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Number Property (ADO)
 Indicates the number that uniquely identifies an [Error](../../../ado/reference/ado-api/error-object.md) object.  

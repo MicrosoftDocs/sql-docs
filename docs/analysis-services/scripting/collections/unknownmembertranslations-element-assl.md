@@ -26,6 +26,7 @@ caps.latest.revision: 31
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # UnknownMemberTranslations Element (ASSL)
   Contains the collection of translations for the caption of the [UnknownMember](../../../analysis-services/scripting/properties/unknownmember-element-assl.md) element of a dimension.  

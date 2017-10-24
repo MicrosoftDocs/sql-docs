@@ -16,6 +16,7 @@ caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # ADO Event Instantiation: Visual C++
 This is a schematic description of how to instantiate ADO events in Microsoft® Visual C++®. See [ADO Events Model Example (VC++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md) for a complete description.  

@@ -18,6 +18,7 @@ caps.latest.revision: 15
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # DTAInput Element (DTA)
   Contains the definition of XML input for Database Engine Tuning Advisor.  

@@ -26,6 +26,7 @@ caps.latest.revision: 35
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # AggregationStorage Element (ASSL)
   Identifies the storage method for aggregations.  

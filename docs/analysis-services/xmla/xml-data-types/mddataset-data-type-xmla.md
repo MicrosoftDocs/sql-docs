@@ -28,6 +28,7 @@ caps.latest.revision: 27
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # MDDataSet Data Type (XMLA)
   Defines a derived data type that represents multidimensional data returned by the [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) method.  

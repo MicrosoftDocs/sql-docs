@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # BaseProperty Element (CSDLBI)
   The BaseProperty element is a complex type that serves as the base for other elements.  

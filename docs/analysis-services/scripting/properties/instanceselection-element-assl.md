@@ -24,6 +24,7 @@ caps.latest.revision: 14
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # InstanceSelection Element (ASSL)
   Provides a hint to client applications to suggest how a list of items should be displayed, based on the expected number of items in the list.  

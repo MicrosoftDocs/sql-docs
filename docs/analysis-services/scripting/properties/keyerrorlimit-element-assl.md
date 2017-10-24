@@ -26,6 +26,7 @@ caps.latest.revision: 32
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # KeyErrorLimit Element (ASSL)
   Contains the number of acceptable errors during processing.  

@@ -16,6 +16,7 @@ caps.latest.revision: 16
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Data types supported in tabular models
 

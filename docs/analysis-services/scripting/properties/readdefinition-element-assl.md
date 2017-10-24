@@ -26,6 +26,7 @@ caps.latest.revision: 37
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # ReadDefinition Element (ASSL)
   Determines whether members can read the definition of the database or the definition of objects in the database.  

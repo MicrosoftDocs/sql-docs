@@ -24,6 +24,7 @@ caps.latest.revision: 10
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # GranularityAttributeID Element (ASSL)
   Contains the identifier (ID) of the attribute associated with the parent [MeasureGroupAttributeBinding](../../../analysis-services/scripting/data-type/measuregroupattributebinding-data-type-out-of-line-assl.md) data type.  

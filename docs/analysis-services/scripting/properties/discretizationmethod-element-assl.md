@@ -26,6 +26,7 @@ caps.latest.revision: 31
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # DiscretizationMethod Element (ASSL)
   Defines the method to be used for discretization.  

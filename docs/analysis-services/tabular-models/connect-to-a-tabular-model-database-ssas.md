@@ -16,6 +16,7 @@ caps.latest.revision: 19
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "On Demand"
 ---
 # Connect to a Tabular Model Database (SSAS)
   After you build a tabular model and deploy it to an Analysis Services tabular mode server, you need to set permissions that make it available to client applications. This topic explains how to permissions and how to connect to a database from client applications.  

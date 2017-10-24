@@ -28,6 +28,7 @@ caps.latest.revision: 17
 author: "jeannt"
 ms.author: "jeannt"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Source Element (XMLA)
   Represents a source partition to be merged during a [MergePartitions](../../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md) command.  

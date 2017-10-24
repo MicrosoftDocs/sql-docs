@@ -24,6 +24,7 @@ caps.latest.revision: 14
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # DataSourcePermission Element (ASSL)
   Defines the default permissions in a [DataSource](../../../analysis-services/scripting/data-type/datasource-data-type-assl.md) data type for a specific [Role](../../../analysis-services/scripting/objects/role-element-assl.md) element.  

@@ -26,6 +26,7 @@ caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # MdxScript Element (ASSL)
   Contains information about a Multidimensional Expressions (MDX) script that is associated with a [Cube](../../../analysis-services/scripting/objects/cube-element-assl.md) element.  

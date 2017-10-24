@@ -26,6 +26,7 @@ caps.latest.revision: 32
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # IsKey Element (ASSL)
   Indicates whether the column provides the key for the case in a [MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md) element.  

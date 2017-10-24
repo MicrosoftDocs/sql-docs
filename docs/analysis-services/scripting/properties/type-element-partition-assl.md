@@ -26,6 +26,7 @@ caps.latest.revision: 31
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Type Element (Partition) (ASSL)
   Contains the type of the [Partition](../../../analysis-services/scripting/objects/partition-element-assl.md) element.  

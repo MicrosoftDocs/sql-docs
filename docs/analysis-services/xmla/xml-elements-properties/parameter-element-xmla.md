@@ -28,6 +28,7 @@ caps.latest.revision: 11
 author: "jeannt"
 ms.author: "jeannt"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Parameter Element (XMLA)
   Contains the name and value of a parameter used by the [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) method.  

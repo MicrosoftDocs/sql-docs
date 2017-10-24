@@ -24,6 +24,7 @@ caps.latest.revision: 12
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # ReadSourceData Element (ASSL)
   Determines how unique names are generated for hierarchies that are contained within the [CubePermission](../../../analysis-services/scripting/objects/cubepermission-element-assl.md).  

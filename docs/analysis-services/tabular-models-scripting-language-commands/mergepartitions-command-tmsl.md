@@ -15,6 +15,7 @@ caps.latest.revision: 8
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # MergePartitions command (TMSL)
 

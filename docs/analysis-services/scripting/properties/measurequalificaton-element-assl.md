@@ -24,6 +24,7 @@ caps.latest.revision: 12
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # MeasureQualificaton Element (ASSL)
   Determines whether a prefix is applied to measures in the [MeasureGroup](../../../analysis-services/scripting/objects/measuregroup-element-assl.md).  

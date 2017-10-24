@@ -28,6 +28,7 @@ caps.latest.revision: 11
 author: "jeannt"
 ms.author: "jeannt"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Cube Element (OlapInfo) (XMLA)
   Contains information about a cube for the parent [CubeInfo](../../../analysis-services/xmla/xml-elements-properties/cubeinfo-element-xmla.md) element.  

@@ -26,6 +26,7 @@ caps.latest.revision: 36
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # DbSchemaName Element (ASSL)
   Contains the name of the schema used by the parent element in the table identified by the [DbTableName](../../../analysis-services/scripting/properties/dbtablename-element-assl.md) element.  

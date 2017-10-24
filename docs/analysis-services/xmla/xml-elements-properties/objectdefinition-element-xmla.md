@@ -28,6 +28,7 @@ caps.latest.revision: 13
 author: "jeannt"
 ms.author: "jeannt"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # ObjectDefinition Element (XMLA)
   Contains one or more Analysis Services Scripting Language (ASSL) elements, used to create or alter objects on an instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  

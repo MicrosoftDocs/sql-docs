@@ -17,6 +17,7 @@ caps.latest.revision: 17
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # EntityContainer Element (CSDLBI)
   The EntityContainer element is a complex type, based on the CSDL type, EntityContainer, that defines a collection of entities within a single data model. In a business intelligence application, the data model represented by an EntityContainer might contain multiple tables with column linked by relationships, as well as calculations, measures, and KPIs. It is conceptually similar to a database or data source.  

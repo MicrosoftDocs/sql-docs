@@ -20,6 +20,7 @@ caps.latest.revision: 20
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Errors and Warnings Event Category
   The Errors and Warnings event category has the event classes described in the following table.  

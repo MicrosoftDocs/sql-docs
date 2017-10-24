@@ -26,6 +26,7 @@ caps.latest.revision: 38
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Algorithm Element (ASSL)
   Defines the algorithm used by a [MiningModel](../../../analysis-services/scripting/objects/miningmodel-element-assl.md) element.  

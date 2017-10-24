@@ -26,6 +26,7 @@ caps.latest.revision: 35
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Text Element (ASSL)
   Contains the text of a [Command](../../../analysis-services/scripting/objects/command-element-assl.md) element.  

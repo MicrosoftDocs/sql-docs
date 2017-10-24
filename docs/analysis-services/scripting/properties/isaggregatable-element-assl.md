@@ -26,6 +26,7 @@ caps.latest.revision: 32
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # IsAggregatable Element (ASSL)
   Specifies whether the values of the [DimensionAttribute](../../../analysis-services/scripting/data-type/dimensionattribute-data-type-assl.md) element can be aggregated.  

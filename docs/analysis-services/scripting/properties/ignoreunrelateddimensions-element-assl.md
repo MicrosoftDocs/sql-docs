@@ -26,6 +26,7 @@ caps.latest.revision: 33
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # IgnoreUnrelatedDimensions Element (ASSL)
   Determines whether unrelated dimensions are forced to their top level when members of dimensions that are unrelated to the measure group are included in a query.  

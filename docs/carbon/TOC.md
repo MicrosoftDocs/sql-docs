@@ -7,10 +7,10 @@
 ### [Connect & query SQL Server](get-started-sql-server.md)
 ### [Connect & query SQL Database](get-started-sql-database.md)
 ### [Connect & query SQL Data Warehouse](get-started-sql-dw.md)
-## Run Carbon on Linux
-### [Connect & query SQL Server (Linux)](get-started-sql-server-linux.md)
 ## Run Carbon on macOS
 ### [Connect & query SQL Server (macOS)](get-started-sql-server-mac.md)
+## Run Carbon on Linux
+### [Connect & query SQL Server (Linux)](get-started-sql-server-linux.md)
 # Tutorials
 ## [Query Editor](tutorial-modern-code-flow-sql-server.md) 
 ## [Monitor](tutorial-monitoring-sql-server.md)

@@ -16,6 +16,7 @@ caps.latest.revision: 24
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "On Demand"
 ---
 # Lesson 2-4 - Reviewing Cube and Dimension Properties
 After you have defined a cube, you can review the results by using Cube Designer. In the following task, you review the structure of the cube in the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial project.  

@@ -15,6 +15,7 @@ caps.latest.revision: 36
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # What's new in Machine Learning Services in SQL Server
 

@@ -16,6 +16,7 @@ caps.latest.revision: 16
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Active"
 ---
 # Install Sample Data and Projects 
 Use the instructions and links provided in this topic to install all of the data and project files used in the Analysis Services Tutorials.  

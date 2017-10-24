@@ -21,6 +21,7 @@ caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # RecordType Property (ADO)
 Indicates the type of [Record](../../../ado/reference/ado-api/record-object-ado.md) object.  

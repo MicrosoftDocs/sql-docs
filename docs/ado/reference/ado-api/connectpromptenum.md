@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # ConnectPromptEnum
 Specifies whether a dialog box should be displayed to prompt for missing parameters when opening a connection to a data source.  

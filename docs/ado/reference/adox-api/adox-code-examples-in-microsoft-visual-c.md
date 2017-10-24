@@ -18,6 +18,7 @@ caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # ADOX Code Examples in Microsoft Visual C++
 These topics provide sample code to help you understand how to use ADOX. All code examples are written using Microsoft Visual C++.  

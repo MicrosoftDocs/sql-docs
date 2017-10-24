@@ -26,6 +26,7 @@ caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # MeasureGroupHierarchy Data Type (ASSL)
   Defines a primitive data type that represents information about a hierarchy in a measure group.  

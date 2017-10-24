@@ -16,6 +16,7 @@ caps.latest.revision: 9
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # RevoScaleR functions for working with SQL Server data
 

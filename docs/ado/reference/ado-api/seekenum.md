@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # SeekEnum
 Specifies the type of [Seek](../../../ado/reference/ado-api/seek-method.md) to execute.  

@@ -20,6 +20,7 @@ caps.latest.revision: 38
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "On Demand"
 ---
 # MDX Query - EXISTING Keyword
   Forces a specified set to be evaluated within the current context.  

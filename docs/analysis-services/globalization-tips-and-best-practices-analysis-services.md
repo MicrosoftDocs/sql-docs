@@ -20,6 +20,7 @@ caps.latest.revision: 33
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Globalization Tips and Best Practices (Analysis Services)
   [!INCLUDE[applies](../includes/applies-md.md)] Multidimensional only  

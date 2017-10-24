@@ -26,6 +26,7 @@ caps.latest.revision: 21
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Analysis Services Scripting Language XML Data Types (ASSL)
   This reference section contains syntax and usage information for each element that acts as a type in the Analysis Services Scripting Language (ASSL) schema.  

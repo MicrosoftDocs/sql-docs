@@ -26,6 +26,7 @@ caps.latest.revision: 28
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # ReportParameters Element (ASSL)
   Contains the collection of [ReportParameter](../../../analysis-services/scripting/objects/reportparameter-element-assl.md) elements for a [ReportAction](../../../analysis-services/scripting/data-type/reportaction-data-type-assl.md) element.  

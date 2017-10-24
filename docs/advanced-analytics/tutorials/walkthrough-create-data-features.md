@@ -18,6 +18,7 @@ caps.latest.revision: 21
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Create data features using R and SQL (walkthrough)
 

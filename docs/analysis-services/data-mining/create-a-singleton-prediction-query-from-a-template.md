@@ -17,6 +17,7 @@ caps.latest.revision: 12
 author: "Minewiskan"
 ms.author: "owend"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Create a Singleton Prediction Query from a Template
   A singleton query is useful when you have a model that you want to use for prediction, but don’t want to map it to an external input data set or make bulk predictions. With a singleton query, you can provide a value or values to the model and instantly see the predicted value.  

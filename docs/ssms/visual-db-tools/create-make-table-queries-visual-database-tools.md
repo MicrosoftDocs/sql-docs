@@ -38,7 +38,7 @@ When you create a Make Table query, you specify:
   
 -   Group By options, if you want to copy only summary information.  
   
-For example, the following query creates a new table called `uk`_`customers` and copies information from the `customers` table to it:  
+For example, the following query creates a new table called `uk_customers` and copies information from the `customers` table to it:  
   
 ```  
 SELECT *   

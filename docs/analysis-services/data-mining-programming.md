@@ -20,6 +20,7 @@ caps.latest.revision: 20
 author: "jeannt"
 ms.author: "jeannt"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Data Mining Programming
   If you find that the built-in tools and viewers in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] do not meet your requirements, you can extend the power of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] by coding your own extensions. In this approach, you have two options:  

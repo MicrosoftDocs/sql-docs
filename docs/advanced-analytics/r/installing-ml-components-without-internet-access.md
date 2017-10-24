@@ -14,6 +14,7 @@ caps.latest.revision: 30
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Installing machine learning components without internet access
 

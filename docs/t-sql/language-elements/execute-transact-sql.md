@@ -34,6 +34,7 @@ caps.latest.revision: 104
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # EXECUTE-Transact-SQL
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -521,7 +522,7 @@ GO
 ```  
   
 ### H. Using EXECUTE WITH RECOMPILE  
- The following example executes the `Proc`_`Test`\_`Defaults` stored procedure and forces a new query plan to be compiled, used, and discarded after the module is executed.  
+ The following example executes the `Proc_Test_Defaults` stored procedure and forces a new query plan to be compiled, used, and discarded after the module is executed.  
   
 ```  
 EXECUTE dbo.Proc_Test_Defaults @p2 = 'A' WITH RECOMPILE;  

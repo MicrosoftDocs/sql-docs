@@ -15,6 +15,7 @@ caps.latest.revision: 59
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Upgrade and installation FAQ (SQL Server R Services)
 

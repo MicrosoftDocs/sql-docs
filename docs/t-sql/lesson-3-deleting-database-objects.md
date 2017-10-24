@@ -18,6 +18,7 @@ caps.latest.revision: 12
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Lesson 3: Deleting Database Objects
 This short lesson removes the objects that you created in Lesson 1 and Lesson 2, and then drops the database.  

@@ -22,6 +22,7 @@ caps.latest.revision: 29
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Establishing Cube Context in a Query (MDX)
   Every MDX query runs within a specified cube context. This context defines the members that are evaluated by the expressions within the query.  

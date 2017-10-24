@@ -17,6 +17,7 @@ caps.latest.revision: 7
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # DISCOVER_MEMORYUSAGE Rowset
   Returns the DISCOVER_MEMORYUSAGE statistics for various objects allocated by the server.  

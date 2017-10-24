@@ -36,6 +36,7 @@ caps.latest.revision: 99
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # DROP INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -273,7 +274,7 @@ When a clustered index is dropped OFFLINE, only the upper levels of clustered in
 ## Examples  
   
 ### A. Dropping an index  
- The following example deletes the index `IX_ProductVendor`_`VendorID` on the `ProductVendor` table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
+ The following example deletes the index `IX_ProductVendor_VendorID` on the `ProductVendor` table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
   
 ```  
 DROP INDEX IX_ProductVendor_BusinessEntityID   

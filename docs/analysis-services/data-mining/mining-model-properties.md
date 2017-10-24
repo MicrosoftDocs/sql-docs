@@ -21,6 +21,7 @@ caps.latest.revision: 32
 author: "Minewiskan"
 ms.author: "owend"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Mining Model Properties
   Mining models have the following kinds of properties:  

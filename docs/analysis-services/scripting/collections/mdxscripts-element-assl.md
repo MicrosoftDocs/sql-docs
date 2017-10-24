@@ -26,6 +26,7 @@ caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # MdxScripts Element (ASSL)
   Contains the collection of [MdxScript](../../../analysis-services/scripting/objects/mdxscript-element-assl.md) elements associated with a [Cube](../../../analysis-services/scripting/objects/cube-element-assl.md) element.  

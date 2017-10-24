@@ -22,6 +22,7 @@ caps.latest.revision: 32
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # MDSCHEMA_CUBES Rowset
   Describes the structure of cubes within a database.  

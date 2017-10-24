@@ -16,6 +16,7 @@ caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Error Object Properties, Methods, and Events
 ## Properties  

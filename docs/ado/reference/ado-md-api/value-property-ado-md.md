@@ -20,6 +20,7 @@ caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Value Property (ADO MD)
 Indicates the value of the current [cell](../../../ado/reference/ado-md-api/cell-object-ado-md.md).  

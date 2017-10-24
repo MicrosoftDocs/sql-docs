@@ -16,6 +16,7 @@ caps.latest.revision: 18
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Compatibility Level of a Multidimensional Database (Analysis Services)
   In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], the database compatibility level property determines the functional level of a database. Compatibility levels are unique to each model type. For example, a compatibility level of **1100** has a different meaning depending on whether the database is multidimensional or tabular.  

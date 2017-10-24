@@ -20,6 +20,7 @@ caps.latest.revision: 47
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Active"
 ---
 # Configure the Windows Firewall to Allow Analysis Services Access
   An essential first step in making [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] or [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] available on the network is to determine whether you need to unblock ports in a firewall. Most installations will require that you create at least one in-bound firewall rule that allows connections to [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  

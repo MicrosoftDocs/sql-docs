@@ -19,6 +19,7 @@ caps.latest.revision: 19
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Transform Data Using R
 

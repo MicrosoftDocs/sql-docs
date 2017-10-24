@@ -20,6 +20,7 @@ caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Clear Method (ADO)
 Removes all the [Error](../../../ado/reference/ado-api/error-object.md) objects from the [Errors](../../../ado/reference/ado-api/errors-collection-ado.md) collection.  

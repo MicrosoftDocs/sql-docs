@@ -25,6 +25,7 @@ caps.latest.revision: 35
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "On Demand"
 ---
 # Authorizing access to objects and operations (Analysis Services)
   Non-administrative user access to cubes, dimensions, and mining models within an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database is granted through membership in one or more database roles. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] administrators create these database roles, granting Read or Read/Write permissions on [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objects, and then assigning [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows users and groups to each role.  

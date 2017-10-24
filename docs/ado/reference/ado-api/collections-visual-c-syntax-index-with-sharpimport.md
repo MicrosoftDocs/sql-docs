@@ -22,6 +22,7 @@ caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Collections (Visual C++ Syntax Index with #import)
 It is useful to know that collections inherit certain common methods and properties.  

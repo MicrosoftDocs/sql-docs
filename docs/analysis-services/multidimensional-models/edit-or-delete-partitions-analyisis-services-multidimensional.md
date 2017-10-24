@@ -19,6 +19,7 @@ caps.latest.revision: 30
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Edit or Delete Partitions (Analyisis Services - Multidimensional)
   Cube partitions are modified using the **Partitions** tab in Cube Designer in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. The **Partitions** tab lists the partitions for all of the measure groups in a cube. It also lists the writeback partitions that have writeback enabled.  

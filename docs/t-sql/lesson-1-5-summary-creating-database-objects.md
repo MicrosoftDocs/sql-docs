@@ -18,6 +18,7 @@ caps.latest.revision: 12
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Lesson 1-5 - Summary - Creating Database Objects
 In this tutorial you have created a database, created a table in the database, inserted data into the table, changed the data, and then read the data from the table. The syntax for the statements that were used is only the basic syntax and many syntax options were not covered in this tutorial. To learn more about these statements, read the complete syntax for the statements in SQL Server Books Online, and review the many examples that are provided in those topics.  

@@ -26,6 +26,7 @@ caps.latest.revision: 37
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # PartitionBinding Data Type (ASSL)
   Defines a derived data type that represents a binding to a [Partition](../../../analysis-services/scripting/objects/partition-element-assl.md) element.  

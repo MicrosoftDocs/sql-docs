@@ -45,6 +45,7 @@ caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Name Property (ADOX)
 Indicates the name of the object.  

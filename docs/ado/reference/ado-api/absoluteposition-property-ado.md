@@ -19,6 +19,7 @@ caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # AbsolutePosition Property (ADO)
 Indicates the ordinal position of a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object's current record.  

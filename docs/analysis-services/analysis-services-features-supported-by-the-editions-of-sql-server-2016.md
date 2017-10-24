@@ -16,6 +16,7 @@ caps.latest.revision: 4
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "On Demand"
 ---
 # Analysis Services Features Supported by the Editions of SQL Server 2016
 [!INCLUDE[ssas-appliesto-sql2016-later](../includes/ssas-appliesto-sql2016-later.md)]

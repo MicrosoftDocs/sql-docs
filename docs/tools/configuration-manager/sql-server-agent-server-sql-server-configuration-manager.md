@@ -14,6 +14,7 @@ caps.latest.revision: 13
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # SQL Server Agent &lt;server&gt; (SQL Server Configuration Manager)
   This is the service that supports [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. To view the properties of the service, right-click the service in the details pane, and then click **Properties**.  

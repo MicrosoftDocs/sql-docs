@@ -16,6 +16,7 @@ caps.latest.revision: 18
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "On Demand"
 ---
 # Lesson 2-1 - Defining a Dimension
 In the following task, you will use the Dimension Wizard to build a Date dimension.  

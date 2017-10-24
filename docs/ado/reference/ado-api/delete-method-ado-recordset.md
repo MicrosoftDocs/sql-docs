@@ -20,6 +20,7 @@ caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Delete Method (ADO Recordset)
 Deletes the current record or a group of records.  

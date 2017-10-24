@@ -24,6 +24,7 @@ caps.latest.revision: 16
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # ProactiveCachingBinding Data Type (ASSL)
   Defines an abstract derived data type that represents information to the [ProactiveCaching](../../../analysis-services/scripting/objects/proactivecaching-element-assl.md) element about data source changes that require rebuilding the cache, or about the status of the rebuilding process.  

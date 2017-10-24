@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Controlling Transactions (ADO)
 ADO supports transaction processing within a connection with the help of the **BeginTrans**, **CommitTrans**, and **RollbackTrans** methods on a **Connection** object. The general idea of implementing transaction processing in ADO is illustrated in the following simple code snippet.  

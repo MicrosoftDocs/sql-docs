@@ -21,6 +21,7 @@ caps.latest.revision: 40
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "On Demand"
 ---
 # Synchronize Analysis Services Databases
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] includes a database synchronization feature that makes two [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] databases equivalent by copying the data and metadata a database on a source server to a database on a destination server. Use the Synchronize Database feature to accomplish any of the following tasks:  

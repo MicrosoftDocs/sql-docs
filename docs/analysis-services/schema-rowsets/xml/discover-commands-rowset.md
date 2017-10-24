@@ -19,6 +19,7 @@ caps.latest.revision: 14
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # DISCOVER_COMMANDS Rowset
   Provides resource usage and activity information about the currently executing or last executed commands in the opened connections on the server.  

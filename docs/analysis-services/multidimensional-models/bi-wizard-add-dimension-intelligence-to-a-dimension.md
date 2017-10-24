@@ -21,6 +21,7 @@ caps.latest.revision: 32
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # BI Wizard - Add Dimension Intelligence to a Dimension
   Add the dimension intelligence enhancement to a cube or a dimension to specify a standard business type for a dimension. This enhancement also specifies the corresponding types for dimension attributes. Client applications can use these type specifications when analyzing data.  

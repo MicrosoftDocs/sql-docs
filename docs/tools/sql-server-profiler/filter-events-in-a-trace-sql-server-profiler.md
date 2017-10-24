@@ -18,6 +18,7 @@ caps.latest.revision: 26
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Filter Events in a Trace (SQL Server Profiler)
   Filters limit the events collected in a trace. If a filter is not set, all events of the selected event classes are returned in the trace output. It is not mandatory to set a filter for a trace. However, a filter minimizes the overhead that is incurred during tracing.  

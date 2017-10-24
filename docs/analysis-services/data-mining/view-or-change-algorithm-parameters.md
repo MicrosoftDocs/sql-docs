@@ -18,6 +18,7 @@ caps.latest.revision: 15
 author: "Minewiskan"
 ms.author: "owend"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # View or Change Algorithm Parameters
   You can change the parameters provided with the algorithms that you use to build data mining models to customize the results of the model.  

@@ -19,6 +19,7 @@ caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Attribute Properties - Define a New Attribute Automatically
   You can create a new attribute in a dimension by using drag-and-drop editing in the Dimension Designer.  

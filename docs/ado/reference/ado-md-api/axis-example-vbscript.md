@@ -18,6 +18,7 @@ caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Axis Example (VBScript)
 This Active Server Page displays OLAP data from an MDX Query string and writes the resulting cellset to an HTML table structure.  

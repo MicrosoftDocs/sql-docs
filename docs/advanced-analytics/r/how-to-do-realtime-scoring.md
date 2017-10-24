@@ -12,6 +12,7 @@ ms.topic: "article"
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # How to perform realtime scoring or native scoring in SQL Server
 

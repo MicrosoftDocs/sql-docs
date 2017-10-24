@@ -22,6 +22,7 @@ caps.latest.revision: 12
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # DISCOVER_KEYWORDS Rowset (OLE DB for OLAP)
   Enumerates a list of words reserved by the provider.  

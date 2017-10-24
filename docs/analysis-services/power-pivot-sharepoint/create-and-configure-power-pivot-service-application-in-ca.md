@@ -16,6 +16,7 @@ caps.latest.revision: 19
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Create and Configure Power Pivot Service Application in CA
   A [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] service application is a shared service instance of the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] System Service. Each service application has its own application identity, configuration settings, properties, and internal data storage.  

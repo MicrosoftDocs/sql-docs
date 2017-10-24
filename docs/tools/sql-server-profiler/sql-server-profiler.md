@@ -29,6 +29,7 @@ caps.latest.revision: 46
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # SQL Server Profiler
   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] is an interface to create and manage traces and analyze and replay trace results. Events are saved in a trace file that can later be analyzed or used to replay a specific series of steps when trying to diagnose a problem.  

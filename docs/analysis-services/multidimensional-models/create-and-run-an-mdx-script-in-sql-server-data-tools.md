@@ -20,6 +20,7 @@ caps.latest.revision: 31
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Create and Run an MDX Script in SQL Server Data Tools
   To create and run an MDX Script in  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], you need to be in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] with a cube already created and ready for editing.  

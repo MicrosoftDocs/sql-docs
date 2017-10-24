@@ -24,6 +24,7 @@ caps.latest.revision: 15
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # QueryNotifications Element (ASSL)
   Contains the collection of [QueryNotification](../../../analysis-services/scripting/objects/querynotification-element-assl.md) elements that provide information to the [ProactiveCaching](../../../analysis-services/scripting/objects/proactivecaching-element-assl.md) element about queries to execute to determine whether a data source has been modified.  

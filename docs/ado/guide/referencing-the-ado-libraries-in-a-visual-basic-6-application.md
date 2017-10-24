@@ -19,6 +19,7 @@ caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Referencing the ADO Libraries In a Visual Basic 6 Application
 To import the ADO libraries into a Microsoft Visual Basic 6 application, you must set a reference in the Visual Basic project.  

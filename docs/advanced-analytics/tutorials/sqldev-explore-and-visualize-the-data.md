@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Lesson 3: Explore and visualize the data
 

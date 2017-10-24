@@ -26,6 +26,7 @@ caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # PerspectiveAttribute Data Type (ASSL)
   Defines a primitive data type that represents information about an attribute in a [PerspectiveDimension](../../../analysis-services/scripting/data-type/perspectivedimension-data-type-assl.md) element.  

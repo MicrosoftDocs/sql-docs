@@ -22,6 +22,7 @@ caps.latest.revision: 31
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # DBSCHEMA_CATALOGS Rowset
   Identifies the physical attributes associated with catalogs accessible from the database management system (DBMS).  

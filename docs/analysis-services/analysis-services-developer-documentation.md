@@ -18,6 +18,7 @@ caps.latest.revision: 22
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Analysis Services Developer Documentation
 In Analysis Services, almost every object and workload is programmable, and often there is more than one approach to choose from.  Options include writing managed code, script, or using open standards like XMLA and MSOLAP if your solution requirements preclude using the .NET framework.

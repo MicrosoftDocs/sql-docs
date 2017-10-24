@@ -22,6 +22,7 @@ caps.latest.revision: 31
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # OLE DB for OLAP Schema Rowsets
   The [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA) provider supports the following OLE DB for OLAP schema rowsets.  

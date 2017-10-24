@@ -18,6 +18,7 @@ caps.latest.revision: 18
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Index Element (DTA)
   Contains information about an index that you want to create or drop for a user-specified configuration.  

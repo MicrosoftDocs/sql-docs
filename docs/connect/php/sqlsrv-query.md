@@ -39,7 +39,7 @@ sqlsrv_query(resource $conn, string $tsql [, array $params [, array $options]])
   
 *$tsql*: The Transact-SQL expression that corresponds to the prepared statement.  
   
-*$params* [OPTIONAL]: An **array** of values that correspond to parameters in a parameterized query. Each element of the array can be one of the followings:
+*$params* [OPTIONAL]: An **array** of values that correspond to parameters in a parameterized query. Each element of the array can be one of the following:
   
 -   A literal value.  
   

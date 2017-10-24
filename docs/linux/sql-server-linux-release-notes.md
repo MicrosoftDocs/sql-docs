@@ -49,7 +49,7 @@ This is the Cumulative Update 1 (CU1) release of SQL Server 2017. The SQL Server
 
 ### Package details
 
-To upgrade or install this cumulative update, follow the guidance in the following installation guides:
+To install or upgrade to this cumulative update, see the following installation guides:
 
 - [Install SQL Server package](sql-server-linux-setup.md)
 - [Install Full-text Search package](sql-server-linux-setup-full-text-search.md)

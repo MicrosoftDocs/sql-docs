@@ -23,6 +23,7 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # WillMove and MoveComplete Events (ADO)
 The **WillMove** event is called before a pending operation changes the current position in the [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). The **MoveComplete** event is called after the current position in the **Recordset** changes.  

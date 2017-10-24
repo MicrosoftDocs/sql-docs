@@ -19,6 +19,7 @@ caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # CommandTypeEnum
 Specifies how a command argument should be interpreted.  

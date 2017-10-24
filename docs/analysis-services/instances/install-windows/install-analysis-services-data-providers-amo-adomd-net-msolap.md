@@ -15,6 +15,7 @@ caps.latest.revision: 12
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "On Demand"
 ---
 # Install Analysis Services data providers (AMO, ADOMD.NET, MSOLAP)
   [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] is a version update of the Analysis Services data providers, consisting of ADOMD.Net, AMO, and MSOLAP.  

@@ -17,6 +17,7 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Accessing Rows in a Hierarchical Recordset (Example)
 The following example shows the steps necessary to access rows in a hierarchical [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md):

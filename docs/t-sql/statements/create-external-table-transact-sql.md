@@ -24,6 +24,7 @@ caps.latest.revision: 30
 author: "barbkess"
 ms.author: "barbkess"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # CREATE EXTERNAL TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]

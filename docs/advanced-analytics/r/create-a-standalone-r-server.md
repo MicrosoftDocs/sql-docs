@@ -14,6 +14,7 @@ caps.latest.revision: 35
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Create a Standalone R Server
 

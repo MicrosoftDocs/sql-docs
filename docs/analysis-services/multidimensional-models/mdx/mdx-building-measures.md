@@ -16,6 +16,7 @@ caps.latest.revision: 6
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # MDX Building Measures
   In Multidimensional Expressions (MDX), a measure is a named DAX expression that is resolved by calculating the expression to return a value in a Tabular Model. This innocuous definition covers an incredible amount of ground. The ability to construct and use measures in an MDX query provides a great deal of manipulation capability for tabular data.  

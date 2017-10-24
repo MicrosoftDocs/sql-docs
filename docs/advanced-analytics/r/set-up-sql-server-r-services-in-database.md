@@ -16,6 +16,7 @@ caps.latest.revision: 36
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # Set up SQL Server Machine Learning Services (In-Database)
 

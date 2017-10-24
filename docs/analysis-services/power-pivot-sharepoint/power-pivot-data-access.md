@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Power Pivot Data Access
   This topic describes the ways in which data is retrieved from a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbook that is published to a SharePoint library.  

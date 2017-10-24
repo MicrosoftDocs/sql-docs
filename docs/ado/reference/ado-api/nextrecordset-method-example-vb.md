@@ -18,6 +18,7 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # NextRecordset Method Example (VB)
 This example uses the [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md) method to view the data in a recordset that uses a compound command statement made up of three separate **SELECT** statements.  

@@ -15,6 +15,7 @@ caps.latest.revision: 20
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Active"
 ---
 # Install SQL Server Analysis Services
   SQL Server Analysis Services is an analytical database server that hosts Tabular models, multidimensional cubes, and data mining models that you can access from reports, spreadsheets, and dashboards.  

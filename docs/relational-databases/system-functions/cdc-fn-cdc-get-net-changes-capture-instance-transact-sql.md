@@ -90,7 +90,7 @@ cdc.fn_cdc_get_net_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
  If the specified LSN range does not fall within the change tracking timeline for the capture instance, the function returns error 208 (Invalid object name).  
   
 ## Examples  
- The following example uses the function `cdc.fn`_`cdc`\_`get`\_`net`\_`changes`\_`HR`\_`Department` to report the net changes made to the source table `HumanResources.Department` during a specific time interval.  
+ The following example uses the function `cdc.fn_cdc_get_net_changes_HR_Department` to report the net changes made to the source table `HumanResources.Department` during a specific time interval.  
   
  First, the `GETDATE` function is used to mark the beginning of the time interval. After several DML statements are applied to the source table, the `GETDATE` function is called again to identify the end of the time interval. The function [sys.fn_cdc_map_time_to_lsn](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md) is then used to map the time interval to a change data capture query range bounded by LSN values. Finally, the function `cdc.fn_cdc_get_net_changes_HR_Department` is queried to obtain the net changes to the source table for the time interval. Notice that the row that is inserted and then deleted does not appear in the result set returned by the function. This is because a row that is first added and then deleted within a query window produces no net change on the source table for the interval. Before you run this example, you must first run example B in [sys.sp_cdc_enable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md).  
   

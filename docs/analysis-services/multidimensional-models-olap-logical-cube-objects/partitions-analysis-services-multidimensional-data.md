@@ -30,6 +30,7 @@ caps.latest.revision: 43
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "On Demand"
 ---
 # Partitions (Analysis Services - Multidimensional Data)
   A partition is a container for a portion of the measure group data. Partitions are not seen from MDX queries; all queries reflect the whole content of the measure group, regardless of how many partitions are defined for the measure group. The data content of a partition is defined by the query bindings of the partition, and by the slicing expression.  

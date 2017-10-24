@@ -23,6 +23,7 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # UniqueName Property (ADO MD)
 Indicates an unambiguous name for the current object.  

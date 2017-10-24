@@ -21,6 +21,7 @@ caps.latest.revision: 25
 author: "Minewiskan"
 ms.author: "owend"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Logical Architecture (Analysis Services - Data Mining)
   Data mining is a process that involves the interaction of multiple components.  

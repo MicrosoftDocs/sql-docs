@@ -14,6 +14,7 @@ caps.latest.revision: 19
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # How To: Create a Resource Pool for R
   This topic describes how you can create a resource pool specifically for managing R workloads in [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]. It assumes that you have already installed R Services (In-Database) and want to reconfigure the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instance to support more fine-grained management of the resources used by R.  

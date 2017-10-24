@@ -17,6 +17,7 @@ caps.latest.revision: 15
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Predict and plot from model (R in SQL quickstart)
 

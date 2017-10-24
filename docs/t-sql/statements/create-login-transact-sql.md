@@ -30,6 +30,7 @@ caps.latest.revision: 101
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # CREATE LOGIN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -312,7 +313,7 @@ CREATE LOGIN Mary7 WITH PASSWORD = 'A2c3456$#' ;
 ```  
   
 ### H. Using Options  
- The following example creates the login `Mary8` with password some of the optional arguments.  
+ The following example creates the login `Mary8` with password and some of the optional arguments.  
   
 ```  
 CREATE LOGIN Mary8 WITH PASSWORD = 'A2c3456$#' MUST_CHANGE,  

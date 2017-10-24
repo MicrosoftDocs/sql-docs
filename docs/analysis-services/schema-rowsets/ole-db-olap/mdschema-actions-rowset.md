@@ -22,6 +22,7 @@ caps.latest.revision: 33
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # MDSCHEMA_ACTIONS Rowset
   Describes the actions that may be available to the client application.  

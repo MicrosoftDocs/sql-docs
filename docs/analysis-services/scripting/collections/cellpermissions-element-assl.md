@@ -26,6 +26,7 @@ caps.latest.revision: 37
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # CellPermissions Element (ASSL)
   Contains the collection of permissions for cells in the associated [Cube](../../../analysis-services/scripting/objects/cube-element-assl.md) element.  

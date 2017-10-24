@@ -19,6 +19,7 @@ caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Tools and Approaches for Processing (Analysis Services)
   Processing is an operation in which Analysis Services queries a relational data source and populates Analysis Services objects using that data.  

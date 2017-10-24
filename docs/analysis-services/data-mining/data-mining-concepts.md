@@ -29,6 +29,7 @@ caps.latest.revision: 48
 author: "Minewiskan"
 ms.author: "owend"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Data Mining Concepts
   Data mining is the process of discovering actionable information from large sets of data. Data mining uses mathematical analysis to derive patterns and trends that exist in data. Typically, these patterns cannot be discovered by traditional data exploration because the relationships are too complex or because there is too much data.  

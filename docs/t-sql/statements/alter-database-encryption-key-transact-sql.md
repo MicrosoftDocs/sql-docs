@@ -24,6 +24,7 @@ caps.latest.revision: 28
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # ALTER DATABASE ENCRYPTION KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -84,17 +85,6 @@ ALTER DATABASE ENCRYPTION KEY
  Requires CONTROL permission on the database and VIEW DEFINITION permission on the certificate or asymmetric key that is used to encrypt the database encryption key.  
   
 ## Examples  
- The following example alters the database encryption key to use the `AES_256` algorithm.  
-  
-```  
-USE AdventureWorks2012;  
-GO  
-ALTER DATABASE ENCRYPTION KEY  
-REGENERATE WITH ALGORITHM = AES_256;  
-GO  
-```  
-  
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  The following example alters the database encryption key to use the `AES_256` algorithm.  
   
 ```  

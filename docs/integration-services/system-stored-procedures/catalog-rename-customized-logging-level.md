@@ -22,10 +22,9 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```tsql  
-rename_customized_logging_level [ @old_name = ] old_name  
+```sql  
+catalog.rename_customized_logging_level [ @old_name = ] old_name  
     , [ @new_name = ] new_name  
-  
 ```  
   
 ## Arguments  

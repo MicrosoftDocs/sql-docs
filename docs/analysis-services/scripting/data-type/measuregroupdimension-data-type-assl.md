@@ -26,6 +26,7 @@ caps.latest.revision: 35
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # MeasureGroupDimension Data Type (ASSL)
   Defines an abstract primitive data type that represents the relationship between a dimension and a measure group.  

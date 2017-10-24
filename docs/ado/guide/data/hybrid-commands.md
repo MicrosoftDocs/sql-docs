@@ -18,6 +18,7 @@ caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Hybrid Commands
 Hybrid commands are partially parameterized commands. For example:  

@@ -26,6 +26,7 @@ caps.latest.revision: 41
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # EventColumn Data Type (ASSL)
   Defines a primitive data type that represents a column of information to be captured for an [Event](../../../analysis-services/scripting/objects/event-element-assl.md) element as part of a [Trace](../../../analysis-services/scripting/objects/trace-element-assl.md) element.  

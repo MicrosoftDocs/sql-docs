@@ -20,6 +20,7 @@ caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # AbsolutePage, PageCount, and PageSize Properties Example (VC++)
 This example uses the [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md), [PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md), and [PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md) properties to display names and hire dates from the ***Employee*** table, five records at a time.  

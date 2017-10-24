@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # MDX Query and Slicer Axes - Using Axes in a Simple Example
   The simple example presented in this topic illustrates the basics of specifying and using query and slicer axes.  

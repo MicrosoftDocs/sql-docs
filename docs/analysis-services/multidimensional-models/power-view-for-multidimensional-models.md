@@ -16,6 +16,7 @@ caps.latest.revision: 7
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Power View for Multidimensional Models
   Microsoft SQL Server 2016 Analysis Services multidimensional models support ad-hoc data analysis, exploration, and visualization by using Microsoft Power View.  

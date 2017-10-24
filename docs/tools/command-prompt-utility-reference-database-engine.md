@@ -20,6 +20,7 @@ caps.latest.revision: 90
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
+ms.workload: "On Demand"
 ---
 # SQL Command Prompt Utilities (Database Engine)
   Command prompt utilities enable you to script [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] operations. The following table contains a list of command prompt utilities that ship with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  

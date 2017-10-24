@@ -22,7 +22,7 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```tsql  
+```sql  
 delete_environment [ @folder_name = ] folder_name , [ @environment_name = ] environment_name  
 ```  
   

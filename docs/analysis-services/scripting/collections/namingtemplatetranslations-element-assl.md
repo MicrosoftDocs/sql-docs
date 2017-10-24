@@ -26,6 +26,7 @@ caps.latest.revision: 35
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # NamingTemplateTranslations Element (ASSL)
   Provides a collection of localized translations for the [NamingTemplate](../../../analysis-services/scripting/properties/namingtemplate-element-assl.md) element of the parent, [DimensionAttribute](../../../analysis-services/scripting/data-type/dimensionattribute-data-type-assl.md).  

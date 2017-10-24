@@ -17,6 +17,7 @@ caps.latest.revision: 17
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Synchronize21 Method (RDS)
 Synchronize the given recordset with the database specified by the connection string for use with ADO 2.1.  

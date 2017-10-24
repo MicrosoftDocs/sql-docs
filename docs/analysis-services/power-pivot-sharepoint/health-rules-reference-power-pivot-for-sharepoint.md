@@ -16,6 +16,7 @@ caps.latest.revision: 19
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Health Rules Reference (Power Pivot for SharePoint)
   This reference topic describes the SharePoint health rules that are added by a [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] for SharePoint installation. These rules are used to report problems with server health, availability, or configuration of a [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] service application or its associated [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance.  

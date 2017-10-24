@@ -14,6 +14,7 @@ caps.latest.revision: 19
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Replay Trace Data
   You can start a distributed replay with the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay feature after you have prepared the input trace data. For more information, see [Prepare the Input Trace Data](../../tools/distributed-replay/prepare-the-input-trace-data.md).  

@@ -22,8 +22,8 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```tsql  
-move_environment [ @source_folder = ] source_folder  
+```sql  
+catalog.move_environment [ @source_folder = ] source_folder  
     , [ @environment_name = ] environment_name  
     , [ @destination_folder = ] destination_folder  
 ```  

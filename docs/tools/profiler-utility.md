@@ -20,6 +20,7 @@ caps.latest.revision: 42
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Profiler Utility
   The **profiler** utility launches the [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] tool. The optional arguments listed later in this topic allow you to control how the application starts.  

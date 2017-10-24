@@ -23,6 +23,7 @@ caps.latest.revision: 43
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # TYPEPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -71,15 +72,6 @@ FROM sys.types;
 ```  
   
 ### B. Returning the precision of the tinyint data type  
- The following example returns the precision or number of digits for the `tinyint` data type.  
-  
-```  
-SELECT TYPEPROPERTY( 'tinyint', 'PRECISION');  
-```  
-  
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### C: Returning the precision of the tinyint data type  
  The following example returns the precision or number of digits for the `tinyint` data type.  
   
 ```  

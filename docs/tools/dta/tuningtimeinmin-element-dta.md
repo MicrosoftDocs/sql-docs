@@ -18,6 +18,7 @@ caps.latest.revision: 13
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # TuningTimeInMin Element (DTA)
   Specifies the maximum length of a tuning session in minutes.  

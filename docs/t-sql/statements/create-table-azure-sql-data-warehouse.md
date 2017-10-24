@@ -17,6 +17,7 @@ caps.latest.revision: 59
 author: "barbkess"
 ms.author: "barbkess"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # CREATE TABLE (Azure SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]

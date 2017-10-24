@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # PageCount Property (ADO)
 Indicates how many pages of data the [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object contains.  

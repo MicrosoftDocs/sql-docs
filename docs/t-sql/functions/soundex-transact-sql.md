@@ -25,6 +25,7 @@ caps.latest.revision: 29
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # SOUNDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -65,57 +66,6 @@ SOUNDEX ( character_expression )
 -   Indexes (including indexed views) that contain a persisted computed column defined with SOUNDEX cannot be queried until the index is rebuilt by running the statement `ALTER INDEX ALL ON <object> REBUILD`.  
   
 ## Examples  
- The following example shows the SOUNDEX function and the related DIFFERENCE function. In the first example, the standard `SOUNDEX` values are returned for all consonants. Returning the `SOUNDEX` for `Smith` and `Smythe` returns the same SOUNDEX result because all vowels, the letter `y`, doubled letters, and the letter `h`, are not included.  
-  
-```  
--- Using SOUNDEX  
-SELECT SOUNDEX ('Smith'), SOUNDEX ('Smythe');  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)] Valid for a Latin1_General collation.  
-  
-```  
-  
------ -----   
-S530  S530    
-  
-(1 row(s) affected)  
-```  
-  
- The `DIFFERENCE` function compares the difference of the `SOUNDEX` pattern results. The following example shows two strings that differ only in vowels. The difference returned is `4`, the lowest possible difference.  
-  
-```  
--- Using DIFFERENCE  
-SELECT DIFFERENCE('Smithers', 'Smythers');  
-GO  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)] Valid for a Latin1_General collation.  
-  
-```  
------------   
-4             
-  
-(1 row(s) affected)  
-```  
-  
- In the following example, the strings differ in consonants; therefore, the difference returned is `2`, the greater difference.  
-  
-```  
-SELECT DIFFERENCE('Anothers', 'Brothers');  
-GO  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)] Valid for a Latin1_General collation.  
-  
-```  
------------   
-2             
-  
-(1 row(s) affected)  
-```  
-  
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  The following example shows the SOUNDEX function and the related DIFFERENCE function. In the first example, the standard `SOUNDEX` values are returned for all consonants. Returning the `SOUNDEX` for `Smith` and `Smythe` returns the same SOUNDEX result because all vowels, the letter `y`, doubled letters, and the letter `h`, are not included.  
   
 ```  

@@ -17,6 +17,7 @@ caps.latest.revision: 34
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # SQL Server Profiler Templates and Permissions
   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] shows how [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] resolves queries internally. This allows administrators to see exactly what [!INCLUDE[tsql](../../includes/tsql-md.md)] statements or Multi-Dimensional Expressions are submitted to the server and how the server accesses the database or cube to return result sets.  

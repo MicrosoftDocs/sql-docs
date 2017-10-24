@@ -19,6 +19,7 @@ caps.latest.revision: 32
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # SQL Server Machine Learning tutorials
 

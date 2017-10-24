@@ -26,6 +26,7 @@ caps.latest.revision: 33
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # StopTime Element (ASSL)
   Specifies the date and time at which a [Trace](../../../analysis-services/scripting/objects/trace-element-assl.md) element should stop.  

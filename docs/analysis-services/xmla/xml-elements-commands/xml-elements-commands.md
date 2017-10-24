@@ -21,6 +21,7 @@ caps.latest.revision: 14
 author: "jeannt"
 ms.author: "jeannt"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # XML Elements - Commands
   This reference section contains XML for Analysis (XMLA) elements that can be used within the **Command** element during an **Execute** method call.  

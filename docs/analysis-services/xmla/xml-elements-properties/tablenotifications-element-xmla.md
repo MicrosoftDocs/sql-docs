@@ -28,6 +28,7 @@ caps.latest.revision: 11
 author: "jeannt"
 ms.author: "jeannt"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # TableNotifications Element (XMLA)
   Contains a collection of [TableNotification](../../../analysis-services/xmla/xml-elements-properties/tablenotification-element-xmla.md) elements used by the [NotifyTableChange](../../../analysis-services/xmla/xml-elements-commands/notifytablechange-element-xmla.md) command.  

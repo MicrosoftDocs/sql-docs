@@ -17,6 +17,7 @@ caps.latest.revision: 12
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Level Element (CSDLBI)
   The Level element is a complex type that defines a single level in a hierarchy  

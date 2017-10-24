@@ -26,6 +26,7 @@ caps.latest.revision: 32
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # ModelingFlag Element (ASSL)
   Contains a modeling flag for a column in a mining structure or a mining model.  

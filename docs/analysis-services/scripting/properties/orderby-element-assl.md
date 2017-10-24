@@ -26,6 +26,7 @@ caps.latest.revision: 31
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # OrderBy Element (ASSL)
   Describes how to order the members contained in the attribute.  

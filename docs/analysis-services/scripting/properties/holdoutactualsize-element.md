@@ -22,6 +22,7 @@ caps.latest.revision: 18
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # HoldoutActualSize Element
   Indicates the actual size, after processing, of the holdout partition that contains the test set of a [MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md) element. The remaining cases in the data set are used for training. This property is read-only.  

@@ -26,6 +26,7 @@ caps.latest.revision: 40
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Partition Element (ASSL)
   Defines a partition of a [MeasureGroup](../../../analysis-services/scripting/objects/measuregroup-element-assl.md) element or a partition binding in an out-of-line [MeasureGroupBinding](../../../analysis-services/scripting/data-type/measuregroupbinding-data-type-out-of-line-assl.md) element.  

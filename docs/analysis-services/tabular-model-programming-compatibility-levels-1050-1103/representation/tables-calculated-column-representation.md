@@ -17,6 +17,7 @@ caps.latest.revision: 10
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Tables - Calculated Column Representation
   A calculated column is DAX expression that creates a new column in a table and the obtained values are stored in the table. The calculated column expression is evaluated every time the table is processed.  

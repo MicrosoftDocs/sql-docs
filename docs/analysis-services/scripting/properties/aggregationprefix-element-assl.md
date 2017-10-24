@@ -26,6 +26,7 @@ caps.latest.revision: 36
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # AggregationPrefix Element (ASSL)
   Defines the common prefix to be used for aggregation names throughout the associated parent element.  

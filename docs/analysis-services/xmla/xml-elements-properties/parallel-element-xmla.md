@@ -27,6 +27,7 @@ caps.latest.revision: 13
 author: "jeannt"
 ms.author: "jeannt"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Parallel Element (XMLA)
   Specifies how many processing jobs can run in parallel using the parent [Batch](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md) command.  

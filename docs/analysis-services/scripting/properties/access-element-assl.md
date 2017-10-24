@@ -26,6 +26,7 @@ caps.latest.revision: 39
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Access Element (ASSL)
   Indicates the level of access given to a [CellPermission](../../../analysis-services/scripting/objects/cellpermission-element-assl.md) element.  

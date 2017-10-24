@@ -26,6 +26,7 @@ caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Trend Element (ASSL)
   Contains a Multidimensional Expressions (MDX) expression that returns a trend indicator for a [Kpi](../../../analysis-services/scripting/objects/kpi-element-assl.md) element.  

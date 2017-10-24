@@ -26,6 +26,7 @@ caps.latest.revision: 32
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # ColumnID Element (ColumnBinding) (ASSL)
   Contains the identifier (ID) of the column within the table to which the data item is bound.  

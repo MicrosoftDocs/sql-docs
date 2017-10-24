@@ -28,6 +28,7 @@ caps.latest.revision: 13
 author: "jeannt"
 ms.author: "jeannt"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Cell Element (MDDataSet) (XMLA)
   Contains information about a single cell contained by a parent [CellData](../../../analysis-services/xmla/xml-elements-properties/celldata-element-xmla.md) element.  

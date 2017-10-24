@@ -28,6 +28,7 @@ caps.latest.revision: 11
 author: "jeannt"
 ms.author: "jeannt"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Parameters Element (XMLA)
   Contains a collection of [Parameter](../../../analysis-services/xmla/xml-elements-properties/parameter-element-xmla.md) elements used by the [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) method.  

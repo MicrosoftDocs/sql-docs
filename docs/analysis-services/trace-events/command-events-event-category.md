@@ -18,6 +18,7 @@ caps.latest.revision: 25
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Command Events Event Category
   The Command Events event category has the event classes described in the following table.  

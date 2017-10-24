@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Delete a Column (SSAS Tabular)
   This topic describes how to delete a column from a tabular model table.  

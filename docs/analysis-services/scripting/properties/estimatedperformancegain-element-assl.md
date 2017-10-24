@@ -26,6 +26,7 @@ caps.latest.revision: 33
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # EstimatedPerformanceGain Element (ASSL)
   Contains the read-only percentage of estimated performance gain for the partition.  

@@ -28,6 +28,7 @@ caps.latest.revision: 12
 author: "jeannt"
 ms.author: "jeannt"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # DeleteWithDescendants Element (XMLA)
   Indicates whether the descendants of attribute members are also deleted by the parent [Drop](../../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md) command.  

@@ -26,6 +26,7 @@ caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Slice Element (ASSL)
   Contains a Multidimensional Expressions (MDX) expression defining the slice contained in a partition.  

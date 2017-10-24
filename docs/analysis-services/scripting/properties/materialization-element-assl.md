@@ -24,6 +24,7 @@ caps.latest.revision: 12
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Materialization Element (ASSL)
   Indicates the type of relationship between the measure group and the reference dimension.  

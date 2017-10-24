@@ -26,6 +26,7 @@ caps.latest.revision: 32
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # IntermediateGranularityAttributeID Element (ASSL)
   Contains the identifier (ID) of the granularity attribute in the intermediate cube dimension that is used to relate a reference dimension to an intermediate dimension.  

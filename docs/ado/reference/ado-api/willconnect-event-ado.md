@@ -20,6 +20,7 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # WillConnect Event (ADO)
 The **WillConnect** event is called before a connection starts.  

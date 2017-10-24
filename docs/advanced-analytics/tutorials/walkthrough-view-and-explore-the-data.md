@@ -18,6 +18,7 @@ caps.latest.revision: 33
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # View and explore the data using SQL (walkthrough)
 

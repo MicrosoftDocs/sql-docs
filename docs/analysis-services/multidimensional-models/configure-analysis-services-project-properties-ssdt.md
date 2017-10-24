@@ -20,6 +20,7 @@ caps.latest.revision: 24
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "On Demand"
 ---
 # Configure Analysis Services Project Properties (SSDT)
   In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] project is defined with certain default properties that affect building and deploying the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] project.  

@@ -19,6 +19,7 @@ caps.latest.revision: 16
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # DISCOVER_CONNECTIONS Rowset
   Provides resource usage and activity information about the currently opened connections on the server.  

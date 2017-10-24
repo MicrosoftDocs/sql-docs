@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # DISCOVER_MEMORYGRANT Rowset
   Returns a list of internal memory quota grants that are taken by jobs that are currently running on the server. To find out whether a job is running on the server, use `Select * from $System.Discover_Jobs`.  

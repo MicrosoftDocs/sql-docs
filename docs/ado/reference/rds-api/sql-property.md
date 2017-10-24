@@ -17,6 +17,7 @@ caps.latest.revision: 16
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # SQL Property
 Indicates the query string used to retrieve the [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  

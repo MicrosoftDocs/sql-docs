@@ -25,6 +25,7 @@ caps.latest.revision: 39
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # SCHEMA_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -59,27 +60,9 @@ SCHEMA_ID ( [ schema_name ] )
   
 ```  
 SELECT SCHEMA_ID();  
-GO  
 ```  
   
 ### B. Returning the schema ID of a named schema  
-  
-```  
-USE AdventureWorks2012;  
-GO  
-SELECT SCHEMA_ID('HumanResources');  
-GO   
-```  
-  
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### C. Returning the default schema ID of a caller  
-  
-```  
-SELECT SCHEMA_ID();  
-```  
-  
-### D. Returning the schema ID of a named schema  
   
 ```  
 SELECT SCHEMA_ID('dbo');  

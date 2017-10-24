@@ -21,6 +21,7 @@ caps.latest.revision: 22
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # CONCAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all_md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -101,23 +102,6 @@ NameLastname
 (1 row(s) affected)  
 ```  
   
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### C. Using CONCAT  
-  
-```sql
-SELECT CONCAT ( 'Happy ', 'Birthday ', 11, '/', '25' ) AS Result;  
-```  
-  
-[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
-  
-```sql
-Result  
--------------------------  
-Happy Birthday 11/25  
-  
-(1 row(s) affected)  
-```  
 ## See also
 [String Functions (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)  
 [CONCAT_WS (Transact-SQL)](../../t-sql/functions/concat-ws-transact-sql.md)   

@@ -16,6 +16,7 @@ caps.latest.revision: 15
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Upgrade machine learning components in a SQL Server instance
 

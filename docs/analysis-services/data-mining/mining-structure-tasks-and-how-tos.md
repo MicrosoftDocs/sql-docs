@@ -17,6 +17,7 @@ caps.latest.revision: 28
 author: "Minewiskan"
 ms.author: "owend"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Mining Structure Tasks and How-tos
   The **Mining Structure** tab of Data Mining Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] contains tools that you can use to create, edit, and process a mining structure.  

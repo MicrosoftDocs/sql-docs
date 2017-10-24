@@ -16,6 +16,7 @@ caps.latest.revision: 12
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Lesson 9: Defining Perspectives and Translations
 In this lesson, you learn to define perspectives and translations. You can define perspectives to reduce the apparent complexity of a cube, and define translations that let users view the cube metadata in the language of their choice.  

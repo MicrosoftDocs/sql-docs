@@ -17,6 +17,7 @@ author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
 robots: noindex,nofollow
+ms.workload: "Inactive"
 ---
 # Rename columns
 This lesson is being removed. 

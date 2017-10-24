@@ -19,6 +19,7 @@ caps.latest.revision: 10
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Lesson 4: Create data features using T-SQL
 

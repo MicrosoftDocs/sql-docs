@@ -14,6 +14,7 @@ caps.latest.revision: 10
 author: "barbkess"
 ms.author: "barbkess"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # ALTER DATABASE (Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]

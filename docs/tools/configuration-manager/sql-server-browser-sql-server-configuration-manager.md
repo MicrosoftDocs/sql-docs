@@ -14,6 +14,7 @@ caps.latest.revision: 15
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # SQL Server Browser (SQL Server Configuration Manager)
   This is the service that supports [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser. To view the properties of the service, right-click the service in the details pane, and then click **Properties**.  

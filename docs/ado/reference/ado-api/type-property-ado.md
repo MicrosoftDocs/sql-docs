@@ -20,6 +20,7 @@ caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Type Property (ADO)
 Indicates the operational type or data type of a [Parameter](../../../ado/reference/ado-api/parameter-object.md), [Field](../../../ado/reference/ado-api/field-object.md), or [Property](../../../ado/reference/ado-api/property-object-ado.md) object.  

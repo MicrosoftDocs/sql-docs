@@ -18,6 +18,7 @@ caps.latest.revision: 26
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Lesson 3: Using the dta Command Prompt Utility
 The **dta** command-prompt utility offers functionality in addition to that provided by the Database Engine Tuning Advisor.  

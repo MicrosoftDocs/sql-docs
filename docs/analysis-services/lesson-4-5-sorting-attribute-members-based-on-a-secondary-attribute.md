@@ -16,6 +16,7 @@ caps.latest.revision: 18
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "On Demand"
 ---
 # Lesson 4-5 - Sorting Attribute Members Based on a Secondary Attribute
 In Lesson 3, you learned how to sort attribute members based on either their name or key value. You also learned how to use a composite member key to affect attribute members and sort order. For more information, see [Modifying the Date Dimension](../analysis-services/lesson-3-4-modifying-the-date-dimension.md). However, if neither the name nor the key of the attribute provide the sort order that you want, you can use a secondary attribute to achieve the desired sort order. By defining a relationship between the attributes, you can use the second attribute to sort the members of the first attribute.  

@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # DISCOVER_PARTITION_STAT Rowset
   Returns statistics on aggregations in a particular partition.  

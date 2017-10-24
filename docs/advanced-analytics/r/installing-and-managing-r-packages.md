@@ -16,6 +16,7 @@ caps.latest.revision: 1
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # R packages installed with SQL Server
 

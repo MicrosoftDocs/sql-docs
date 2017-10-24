@@ -23,6 +23,7 @@ caps.latest.revision: 39
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Grant permissions on a dimension (Analysis Services)
   Dimension security is used to set permissions on a dimension object, not its data. Typically, allowing or denying access to processing operations is the main objective when setting permissions on a dimension.  

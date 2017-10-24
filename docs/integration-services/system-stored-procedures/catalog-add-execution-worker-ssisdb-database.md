@@ -22,8 +22,8 @@ Adds a [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Scale Out W
 
 ## Syntax
 
-```tsql
-add_execution_worker [@execution_id = ] execution_id, [@workeragent_id = ] workeragent_id
+```sql
+catalog.add_execution_worker [@execution_id = ] execution_id, [@workeragent_id = ] workeragent_id
 ```
 
 ## Arguments

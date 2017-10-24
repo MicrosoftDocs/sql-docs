@@ -22,6 +22,7 @@ caps.latest.revision: 30
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # MDSCHEMA_INPUT_DATASOURCES Rowset
   Describes the data sources defined within the database.  

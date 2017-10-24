@@ -24,6 +24,7 @@ caps.latest.revision: 27
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # CREATE TABLE (Transact-SQL) IDENTITY (Property)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md.md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]

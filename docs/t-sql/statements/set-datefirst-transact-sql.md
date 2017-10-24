@@ -28,6 +28,7 @@ caps.latest.revision: 31
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # SET DATEFIRST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -97,14 +98,6 @@ SET DATEFIRST 3;
 SELECT CAST('1999-1-1' AS datetime2) AS SelectDate  
     ,DATEPART(dw, '1999-1-1') AS DayOfWeek;  
 GO  
-```  
-  
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-```  
--- SET DATEFIRST to U.S. English default value of 7.  
-SET DATEFIRST 7;  
-  
 ```  
   
 ## See Also  

@@ -11,13 +11,11 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
 caps.latest.revision: 40
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "craigg"
+author: "craigg-msft"
+ms.author: "craigg"
+manager: "jhubbard"
 ---
 # Tutorials for SQL Server
-[!INCLUDE[feedback_stackoverflow_msdn_connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
-
 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] provides tutorials to help you learn new technologies and features. Tutorials for earlier versions can usually be used with more recent versions. When tutorials address a newer feature, they will indicate the minimum version to complete the tutorial.  
      
 -   If a tutorial uses one of the [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] databases, you should download and use the most recent version from CodePlex. For more information, see [AdventureWorks Databases and Scripts for SQL Server 2016 CTP3](https://www.microsoft.com/download/details.aspx?id=49502).    

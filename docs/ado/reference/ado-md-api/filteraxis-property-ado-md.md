@@ -20,6 +20,7 @@ caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # FilterAxis Property (ADO MD)
 Indicates filter information about the current [cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md).  

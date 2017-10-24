@@ -34,6 +34,7 @@ caps.latest.revision: 62
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # CREATE DATABASE (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -62,8 +63,6 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
             | 'PRS1' | 'PRS2' | 'PRS4' | 'PRS6' 
             | { ELASTIC_POOL(name = <elastic_pool_name>) } }  ) 
 }  
-
-[ AS COPY OF [source_server_name.]source_database_name ]
 
  [;]  
   

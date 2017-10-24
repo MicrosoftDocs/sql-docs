@@ -26,6 +26,7 @@ caps.latest.revision: 33
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # MeasureGroups Element (ASSL)
   Contains the collection of [MeasureGroup](../../../analysis-services/scripting/objects/measuregroup-element-assl.md) elements associated with the parent element.  

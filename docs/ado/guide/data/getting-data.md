@@ -16,6 +16,7 @@ caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Getting Data
 [ADO Fundamentals](../../../ado/guide/data/ado-fundamentals.md), and the [HelloData](../../../ado/guide/data/hellodata-a-simple-ado-application.md) example in particular, introduced the four primary operations involved in creating an ADO application: getting data, examining data, editing data, and updating data. This section discusses getting data in more detail.  

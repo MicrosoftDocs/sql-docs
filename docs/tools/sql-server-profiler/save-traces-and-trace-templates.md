@@ -23,6 +23,7 @@ caps.latest.revision: 26
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Save Traces and Trace Templates
   It is important to distinguish saving trace files from saving trace templates. Saving a trace file involves saving the captured event data to a specified place. Saving a trace template involves saving the definition of the trace, such as specified data columns, event classes, or filters.  

@@ -22,8 +22,8 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```tsql  
-set_environment_property [ @folder_name = ] folder_name  
+```sql  
+catalog.set_environment_property [ @folder_name = ] folder_name  
     , [ @environment_name = ] environment_name  
     , [ @property_name = ] property_name  
     , [ @property_value = ] property_value  

@@ -19,6 +19,7 @@ caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # User Object (ADOX)
 Represents a user account that has access permissions within a secured database.  

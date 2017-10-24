@@ -17,6 +17,7 @@ caps.latest.revision: 11
 author: "Minewiskan"
 ms.author: "owend"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Create a Data Mining Query by Using XMLA
   You can create a variety of queries against data mining objects by using AMO, DMX, or XML/A.  

@@ -19,6 +19,7 @@ caps.latest.revision: 1
 author: "shkale-msft"
 ms.author: "shkale"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 
 # SELECT (Transact-SQL)

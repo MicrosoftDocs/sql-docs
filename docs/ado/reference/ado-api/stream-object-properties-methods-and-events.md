@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Stream Object Properties, Methods, and Events
 ## Properties  

@@ -14,6 +14,7 @@ caps.latest.revision: 12
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Install Distributed Replay - Overview
   Use the following topics to install the Distributed Replay feature.  

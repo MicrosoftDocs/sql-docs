@@ -26,6 +26,7 @@ caps.latest.revision: 45
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # CubeAttribute Data Type (ASSL)
   Defines a primitive data type that represents an attribute associated with a [Cube](../../../analysis-services/scripting/objects/cube-element-assl.md) element.  

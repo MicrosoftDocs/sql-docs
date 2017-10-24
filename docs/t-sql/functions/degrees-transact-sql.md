@@ -22,6 +22,7 @@ caps.latest.revision: 36
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # DEGREES (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -44,23 +45,6 @@ DEGREES ( numeric_expression )
  Returns the same type as *numeric_expression*.  
   
 ## Examples  
- The following example returns the number of degrees in an angle of PI/2 radians.  
-  
-```  
-SELECT 'The number of degrees in PI/2 radians is: ' +   
-CONVERT(varchar, DEGREES((PI()/2)));  
-GO  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
-```  
-The number of degrees in PI/2 radians is 90         
-  
-(1 row(s) affected)  
-```  
-  
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  The following example returns the number of degrees in an angle of PI/2 radians.  
   
 ```  

@@ -19,6 +19,7 @@ caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # DefaultDatabase Property
 Indicates the default database for a [Connection](../../../ado/reference/ado-api/connection-object-ado.md) object.  

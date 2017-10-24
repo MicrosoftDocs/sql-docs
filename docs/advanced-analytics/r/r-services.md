@@ -15,6 +15,7 @@ caps.latest.revision: 23
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Microsoft Machine Learning Services
 

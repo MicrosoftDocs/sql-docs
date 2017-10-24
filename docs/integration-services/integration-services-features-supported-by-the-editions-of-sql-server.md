@@ -64,8 +64,8 @@ The SQL Server Evaluation edition is available for a 180-day trial period.
   
 |Feature|Enterprise|Standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|High-performance Oracle destination by Attunity|Yes|||||  
-|High-performance Teradata Destination by Attunity|Yes|||||  
+|High-performance Oracle source and destination by Attunity|Yes|||||  
+|High-performance Teradata source and destination by Attunity|Yes|||||  
 |SAP BW source and destination|Yes|||||  
 |Data mining model training destination|Yes|||||  
 |Dimension processing destination|Yes|||||  
@@ -75,7 +75,6 @@ The SQL Server Evaluation edition is available for a 180-day trial period.
   
 |Feature|Enterprise|Standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|Persistent (high-performance) lookups|Yes|||||  
 |Change Data Capture components by Attunity <sup>1</sup>|Yes|||||  
 |Data mining query transformation|Yes|||||  
 |Fuzzy grouping and fuzzy lookup transformations|Yes|||||  

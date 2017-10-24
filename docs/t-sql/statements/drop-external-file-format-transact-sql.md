@@ -16,6 +16,7 @@ caps.latest.revision: 12
 author: "barbkess"
 ms.author: "barbkess"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # DROP EXTERNAL FILE FORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -55,14 +56,6 @@ SELECT * FROM sys.external_file_formats;
 ## Examples  
   
 ### A. Using basic syntax  
-  
-```  
-DROP EXTERNAL FILE FORMAT myfileformat;  
-```  
-  
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### B. Using basic syntax  
   
 ```  
 DROP EXTERNAL FILE FORMAT myfileformat;  

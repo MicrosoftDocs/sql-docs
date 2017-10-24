@@ -25,6 +25,7 @@ caps.latest.revision: 31
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # DATALENGTH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -55,18 +56,6 @@ The DATALENGTH of NULL is NULL.
 >  Compatibility levels can affect return values. For more information about compatibility levels, see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
 ## Examples  
-The following example finds the length of the `Name` column in the `Product` table.
-  
-```sql
-USE AdventureWorks2012;  
-GO  
-SELECT length = DATALENGTH(Name), Name  
-FROM Production.Product  
-ORDER BY Name;  
-GO  
-```  
-  
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 The following example finds the length of the `Name` column in the `Product` table.
   
 ```sql

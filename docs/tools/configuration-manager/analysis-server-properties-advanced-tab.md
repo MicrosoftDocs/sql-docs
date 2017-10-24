@@ -14,6 +14,7 @@ caps.latest.revision: 16
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Analysis Server Properties (Advanced Tab)
   This service is the Microsoft [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. If custom properties are defined, they appear on this tab, with their values.  

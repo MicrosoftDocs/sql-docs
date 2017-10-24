@@ -15,6 +15,7 @@ caps.latest.revision: 19
 author: "Minewiskan"
 ms.author: "owend"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Data Mining Services and Data Sources
   Data mining requires a connection to an instance of SQL Server Analysis Services. Data from a cube is not required for data mining and the use of relational sources is recommended; however, data mining uses components provided by the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] engine.  

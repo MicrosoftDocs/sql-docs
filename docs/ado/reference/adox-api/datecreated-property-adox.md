@@ -21,6 +21,7 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # DateCreated Property (ADOX)
 Indicates the date the object was created.  

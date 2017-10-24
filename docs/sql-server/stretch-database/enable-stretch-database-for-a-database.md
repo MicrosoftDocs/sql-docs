@@ -50,7 +50,7 @@ manager: "craigg"
   
  To enable Stretch Database on the server manually, run **sp_configure** and turn on the **remote data archive** option. The following example enables the **remote data archive** option by setting its value to 1.  
   
-```  
+```sql
 EXEC sp_configure 'remote data archive' , '1';  
 GO
 
@@ -78,7 +78,7 @@ GO
   
 3.  To configure a SQL Server database for Stretch Database, the database has to have a database master key. The database master key secures the credentials that Stretch Database uses to connect to the remote database. Here's an example that creates a new database master key.  
   
-    ```tsql  
+    ```sql  
     USE <database>; 
     GO  
   
@@ -97,7 +97,7 @@ GO
         
         Here's an example that creates a new credential.
   
-        ```tsql  
+        ```sql  
         CREATE DATABASE SCOPED CREDENTIAL <db_scoped_credential_name>  
             WITH IDENTITY = '<identity>' , SECRET = '<secret>' ;
         GO   
@@ -121,7 +121,7 @@ GO
   
     2.  Provide an existing administrator credential with the CREDENTIAL argument, or specify FEDERATED_SERVICE_ACCOUNT = ON. The following example provides an existing credential.  
   
-    ```tsql  
+    ```sql  
     ALTER DATABASE <database name>  
         SET REMOTE_DATA_ARCHIVE = ON  
             (  

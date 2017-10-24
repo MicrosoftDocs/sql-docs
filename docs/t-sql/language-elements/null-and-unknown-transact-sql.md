@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: "barbkess"
 ms.author: "barbkess"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # NULL and UNKNOWN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]

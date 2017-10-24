@@ -22,6 +22,7 @@ caps.latest.revision: 32
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # DISCOVER_PROPERTIES Rowset
   Returns a list of information and values about the standard and provider-specific properties that are supported by the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA) provider for the specified data source. Unsupported properties are not listed in the returned result set.  

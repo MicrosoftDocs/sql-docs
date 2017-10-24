@@ -26,6 +26,7 @@ caps.latest.revision: 28
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # AMO Other Classes and Methods
   This section contains common classes that are not specific to OLAP or data mining, and that are helpful when administering or managing objects in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. These classes cover features such as stored procedures, tracing, exceptions, and backup and restore.  

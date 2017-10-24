@@ -21,6 +21,7 @@ caps.latest.revision: 23
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # AMO Security Classes
   This topic contains the following sections:  

@@ -22,6 +22,7 @@ caps.latest.revision: 25
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # BI Wizard - Custom Member Formulas for Attributes in a Dimension
   Add a custom member formula enhancement to a cube or dimension to replace the default aggregation that is associated with a dimension member with the results of a Multidimensional Expressions (MDX) expression. (This enhancement sets the **CustomRollupColumn** property on a specified attribute in a dimension.)  

@@ -16,6 +16,7 @@ caps.latest.revision: 14
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Lesson 10: Defining Administrative Roles
 In this lesson, you learn to define security roles for administrative tasks.  

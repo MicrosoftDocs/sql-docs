@@ -26,6 +26,7 @@ caps.latest.revision: 28
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # REVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -70,7 +71,7 @@ GO
 EXECUTE dbo.usp_myproc;   
 ```  
   
- The `REVERT` statement that is defined inside `usp`_`myproc` switches the execution context set inside the module, but does not affect the execution context set outside the module. That is, the execution context for the session remains set to `login1`.  
+ The `REVERT` statement that is defined inside `usp_myproc` switches the execution context set inside the module, but does not affect the execution context set outside the module. That is, the execution context for the session remains set to `login1`.  
   
  When specified as a standalone statement, REVERT applies to EXECUTE AS statements defined within a batch or session. REVERT has no effect if the corresponding EXECUTE AS statement contains the WITH NO REVERT clause. In this case, the execution context remains in effect until the session is dropped.  
   

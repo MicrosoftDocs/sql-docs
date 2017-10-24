@@ -22,6 +22,7 @@ caps.latest.revision: 28
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # MDSCHEMA_MEASUREGROUPS Rowset
   Describes the measure groups within a database.  

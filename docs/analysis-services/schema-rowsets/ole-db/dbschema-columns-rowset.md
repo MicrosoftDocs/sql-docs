@@ -22,6 +22,7 @@ caps.latest.revision: 40
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # DBSCHEMA_COLUMNS Rowset
   Provides column information for all columns meeting the provided restriction criteria.  

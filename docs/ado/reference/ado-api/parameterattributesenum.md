@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # ParameterAttributesEnum
 Specifies the attributes of a [Parameter](../../../ado/reference/ado-api/parameter-object.md) object.  

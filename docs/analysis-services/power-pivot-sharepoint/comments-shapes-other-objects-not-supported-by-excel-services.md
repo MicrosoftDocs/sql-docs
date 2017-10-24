@@ -14,6 +14,7 @@ caps.latest.revision: 6
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Comments, Shapes, other objects not supported by Excel Services
   This error occurs when you add Slicers to a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbook from a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Field List.  

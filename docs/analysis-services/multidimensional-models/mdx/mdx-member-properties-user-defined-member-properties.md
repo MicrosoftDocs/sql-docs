@@ -18,6 +18,7 @@ caps.latest.revision: 33
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # MDX Member Properties - User-Defined Member Properties
   User-defined member properties can be added to a specific named level in a dimension as attribute relationships. User-defined member properties cannot be added to the **(All)** level of a hierarchy, or to the hierarchy itself.  

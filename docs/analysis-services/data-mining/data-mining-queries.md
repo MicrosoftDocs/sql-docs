@@ -21,6 +21,7 @@ caps.latest.revision: 44
 author: "Minewiskan"
 ms.author: "owend"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Data Mining Queries
   Data mining queries are useful for many purposes. You can:  

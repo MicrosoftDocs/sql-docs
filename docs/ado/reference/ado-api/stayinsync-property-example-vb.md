@@ -18,6 +18,7 @@ caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # StayInSync Property Example (VB)
 This example demonstrates how the [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) property facilitates accessing rows in a hierarchical [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  

@@ -21,6 +21,7 @@ caps.latest.revision: 30
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # MDX Data Manipulation - Retrieve Source Data Using DRILLTHROUGH
   Multidimensional Expressions (MDX) uses the [DRILLTHROUGH](../../../mdx/mdx-data-manipulation-drillthrough.md)statement to retrieve a rowset from the source data for a cube cell.  

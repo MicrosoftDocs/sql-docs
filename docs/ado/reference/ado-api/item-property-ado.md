@@ -49,6 +49,7 @@ caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Item Property (ADO)
 Indicates a specific member of a collection, by name or ordinal number.  

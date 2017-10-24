@@ -16,6 +16,7 @@ caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # ADO Event Instantiation: JScript
 Microsoft® JScript® does not support ADO events.

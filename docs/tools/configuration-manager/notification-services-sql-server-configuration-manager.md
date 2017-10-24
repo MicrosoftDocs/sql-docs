@@ -14,6 +14,7 @@ caps.latest.revision: 11
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Notification Services (SQL Server Configuration Manager)
   This is the service that supports [!INCLUDE[ssNS](../../includes/ssns-md.md)]. To view the properties of the service, right-click the service in the details pane, and then click **Properties**.  

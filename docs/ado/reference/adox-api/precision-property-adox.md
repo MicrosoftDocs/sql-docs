@@ -23,6 +23,7 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Precision Property (ADOX)
 Indicates the maximum precision of data values in the [Column](../../../ado/reference/adox-api/column-object-adox.md).  

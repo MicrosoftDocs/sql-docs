@@ -21,6 +21,7 @@ caps.latest.revision: 27
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # View Attributes in Dimension Designer
   This procedure describes how to change the way that attributes are displayed in the Dimension Designer.  

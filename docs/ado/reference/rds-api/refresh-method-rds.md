@@ -21,6 +21,7 @@ caps.latest.revision: 17
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Refresh Method (RDS)
 Requeries the data source specified in the [Connect](../../../ado/reference/rds-api/connect-property-rds.md) property and updates the query results.  

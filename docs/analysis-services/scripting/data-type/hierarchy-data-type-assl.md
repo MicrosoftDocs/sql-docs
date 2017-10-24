@@ -24,6 +24,7 @@ caps.latest.revision: 17
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Hierarchy Data Type (ASSL)
   Defines a primitive data type that represents a hierarchy in a dimension.  

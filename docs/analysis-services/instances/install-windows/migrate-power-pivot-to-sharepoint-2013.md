@@ -14,6 +14,7 @@ caps.latest.revision: 18
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Migrate Power Pivot to SharePoint 2013
   

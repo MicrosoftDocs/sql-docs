@@ -20,6 +20,7 @@ caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # CancelBatch Method (ADO)
 Cancels a pending batch update.  

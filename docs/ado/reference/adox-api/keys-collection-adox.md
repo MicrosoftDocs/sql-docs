@@ -20,6 +20,7 @@ caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Keys Collection (ADOX)
 Contains all [Key](../../../ado/reference/adox-api/key-object-adox.md) objects of a [table](../../../ado/reference/adox-api/table-object-adox.md).  

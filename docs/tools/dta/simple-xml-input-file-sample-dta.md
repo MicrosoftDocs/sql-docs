@@ -18,6 +18,7 @@ caps.latest.revision: 22
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Simple XML Input File Sample (DTA)
   Copy and paste this sample of a simple XML input file to use for tuning workloads into your favorite XML editor or text editor. Then replace the values specified for the **Server**, **Database**, **Schema**, **Table**, **Workload**, and **TuningOptions** elements with those for your specific tuning session. For more information about the attributes and child elements that you can use with these elements, see the [XML Input File Reference &#40;Database Engine Tuning Advisor&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md). The following sample uses only a subset of available attribute and child element options.  

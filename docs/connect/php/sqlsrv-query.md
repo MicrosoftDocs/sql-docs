@@ -39,7 +39,7 @@ sqlsrv_query(resource $conn, string $tsql [, array $params [, array $options]])
   
 *$tsql*: The Transact-SQL expression that corresponds to the prepared statement.  
   
-*$params* [OPTIONAL]: An **array** of values that correspond to parameters in a parameterized query. Each element of the array can be one of the following:  
+*$params* [OPTIONAL]: An **array** of values that correspond to parameters in a parameterized query. Each element of the array can be one of the followings:
   
 -   A literal value.  
   
@@ -51,7 +51,7 @@ sqlsrv_query(resource $conn, string $tsql [, array $params [, array $options]])
     array($value [, $direction [, $phpType [, $sqlType]]])  
     ```  
   
-    The description for each element of the array is in the table below:  
+    The description for each element of the array is in the following table:  
   
     |Element|Description|  
     |-----------|---------------|  
@@ -64,7 +64,7 @@ sqlsrv_query(resource $conn, string $tsql [, array $params [, array $options]])
   
 |Key|Supported Values|Description|  
 |-------|--------------------|---------------|  
-|QueryTimeout|A positive integer value.|Sets the query timeout in seconds. By default, the driver will wait indefinitely for results.|  
+|QueryTimeout|A positive integer value.|Sets the query timeout in seconds. By default, the driver waits indefinitely for results.|  
 |SendStreamParamsAtExec|**true** or **false**<br /><br />The default value is **true**.|Configures the driver to send all stream data at execution (**true**), or to send stream data in chunks (**false**). By default, the value is set to **true**. For more information, see [sqlsrv_send_stream_data](../../connect/php/sqlsrv-send-stream-data.md).|  
 |Scrollable|SQLSRV_CURSOR_FORWARD<br /><br />SQLSRV_CURSOR_STATIC<br /><br />SQLSRV_CURSOR_DYNAMIC<br /><br />SQLSRV_CURSOR_KEYSET<br /><br />SQLSRV_CURSOR_CLIENT_BUFFERED|For more information about these values, see [Specifying a Cursor Type and Selecting Rows](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md).|  
   
@@ -124,7 +124,7 @@ sqlsrv_close($conn);
 ```  
   
 ## Example  
-The example below updates a field in the *Sales.SalesOrderDetail* table of the AdventureWorks database. The example assumes that SQL Server and the [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) database are installed on the local computer. All output is written to the console when the example is run from the command line.  
+The following example updates a field in the *Sales.SalesOrderDetail* table of the AdventureWorks database. The example assumes that SQL Server and the [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) database are installed on the local computer. All output is written to the console when the example is run from the command line.  
   
 ```  
 <?php  

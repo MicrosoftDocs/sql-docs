@@ -39,7 +39,7 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
   
 *$tsql*: The Transact-SQL expression that corresponds to the created statement.  
   
-*$params* [OPTIONAL]: An **array** of values that correspond to parameters in a parameterized query. Each element of the array can be one of the following:  
+*$params* [OPTIONAL]: An **array** of values that correspond to parameters in a parameterized query. Each element of the array can be one of the followings:  
   
 -   A literal value.  
   
@@ -52,7 +52,7 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
     ```  
   
     > [!NOTE]  
-    > Variables passed as query parameters should be passed by reference instead of by value. For example, pass `&$myVariable` instead of `$myVariable`. A PHP warning will be raised when a query with by-value parameters is executed.  
+    > Variables passed as query parameters should be passed by reference instead of by value. For example, pass `&$myVariable` instead of `$myVariable`. A PHP warning is raised when a query with by-value parameters is executed.  
   
     The following table describes these array elements:  
   
@@ -63,11 +63,11 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
     |*$phpType*[OPTIONAL]|A **SQLSRV_PHPTYPE_\*** constant that specifies PHP data type of the returned value.|  
     |*$sqlType*[OPTIONAL]|A **SQLSRV_SQLTYPE_\*** constant that specifies the SQL Server data type of the input value.|  
   
-*$options* [OPTIONAL]: An associative array that sets query properties. The table below lists the supported keys and corresponding values:  
+*$options* [OPTIONAL]: An associative array that sets query properties. The following table lists the supported keys and corresponding values:  
   
 |Key|Supported values|Description|  
 |-------|--------------------|---------------|  
-|QueryTimeout|A positive integer value.|Sets the query timeout in seconds. By default, the driver will wait indefinitely for results.|  
+|QueryTimeout|A positive integer value.|Sets the query timeout in seconds. By default, the driver waits indefinitely for results.|  
 |SendStreamParamsAtExec|**true** or **false**<br /><br />The default value is **true**.|Configures the driver to send all stream data at execution (**true**), or to send stream data in chunks (**false**). By default, the value is set to **true**. For more information, see [sqlsrv_send_stream_data](../../connect/php/sqlsrv-send-stream-data.md).|  
 |Scrollable|SQLSRV_CURSOR_FORWARD<br /><br />SQLSRV_CURSOR_STATIC<br /><br />SQLSRV_CURSOR_DYNAMIC<br /><br />SQLSRV_CURSOR_KEYSET<br /><br />SQLSRV_CURSOR_CLIENT_BUFFERED|For more information about these values, see [Specifying a Cursor Type and Selecting Rows](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md).|  
   

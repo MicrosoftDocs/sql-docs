@@ -24,11 +24,11 @@ Binds a parameter to a named or question mark placeholder in the SQL statement.
   
 ```  
   
-bool PDOStatement::bindParam($parameter, &$variable [,$data_type[, $length[, $driver_options]]]);  
+bool PDOStatement::bindParam($parameter, &$variable[, $data_type[, $length[, $driver_options]]]);  
 ```  
   
 #### Parameters  
-$*parameter*: A (mixed) parameter identifier. For a statement using named placeholders, a parameter name (:name). For a prepared statement using the question mark syntax, this will be the 1-based index of the parameter.  
+$*parameter*: A (mixed) parameter identifier. For a statement using named placeholders, use a parameter name (:name). For a prepared statement using the question mark syntax, it is the 1-based index of the parameter.  
   
 &$*variable*: The (mixed) name of the PHP variable to bind to the SQL statement parameter.  
   
@@ -42,7 +42,7 @@ $*driver_options*: The optional (mixed) driver-specific options. For example, yo
 TRUE on success, otherwise FALSE.  
   
 ## Remarks  
-When binding null data to server columns of type varbinary, binary, or varbinary(max) you should specify binary encoding (PDO::SQLSRV_ENCODING_BINARY) using the $*driver_options*. See [Constants](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md) for more information about encoding constants.  
+When binding null data to server columns of type varbinary, binary, or varbinary(max) you should specify binary encoding (PDO::SQLSRV_ENCODING_BINARY) using the $*driver_options*. For more information about encoding constants, see [Constants](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).  
   
 Support for PDO was added in version 2.0 of the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
 

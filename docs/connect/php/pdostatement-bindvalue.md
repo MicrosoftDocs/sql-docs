@@ -28,7 +28,7 @@ bool PDOStatement::bindValue($parameter, $value[, $data_type]);
 ```  
   
 #### Parameters  
-$*parameter*: A (mixed) parameter identifier. For a statement using named placeholders, a parameter name (:name). For a prepared statement using the question mark syntax, this will be the 1-based index of the parameter.  
+$*parameter*: A (mixed) parameter identifier. For a statement using named placeholders, use a parameter name (:name). For a prepared statement using the question mark syntax, it is the 1-based index of the parameter.
   
 $*value*: The (mixed) value to bind to the parameter.  
   

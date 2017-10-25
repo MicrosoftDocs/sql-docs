@@ -107,11 +107,13 @@ Removing the package does not delete the generated database files. If you want t
 sudo rm -rf /var/opt/mssql/
 ```
 
-## <a id="repositories"></a> Source repositories
+## <a id="repositories"></a> Configure source repositories
 
-When you install or upgrade SQL Server, you get the latest version of SQL Server from your configured Microsoft repository. It is important to note that there are two main types of repositories for each distribution:
+When you install or upgrade SQL Server, you get the latest version of SQL Server from your configured Microsoft repository.
 
 ### Repository options
+
+There are two main types of repositories for each distribution:
 
 - **Cumulative Updates (CU)**: The Cumulative Update (CU) repository contains packages for the base SQL Server release and any bug fixes or improvements since that release. Cumulative updates are specific to a release version, such as SQL Server 2017. They are released on a regular cadence.
 
@@ -119,7 +121,7 @@ When you install or upgrade SQL Server, you get the latest version of SQL Server
 
 Each CU and GDR release contains the full SQL Server package and all previous updates for that repository. Updating from a GDR release to a CU release is supported by changing your configured repository for SQL Server. You can also [downgrade](#rollback) to any release within your major version (ex: 2017). Updating from a CU release to a GDR release is not supported.
 
-### Configure the source repository
+### Change the source repository
 
 To configure the CU or GDR repositories, use the following steps:
 
@@ -151,10 +153,10 @@ To configure the CU or GDR repositories, use the following steps:
    | Ubuntu | CU | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)" && sudo apt-get update` |
    | Ubuntu | GDR | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017-gdr.list)" && sudo apt-get update` |
 
-1. [Install](#platforms) or [update](#upgrade) SQL Server from the new repository.
+1. [Install](#platforms) or [update](#upgrade) SQL Server and any related packages from the new repository.
 
    > [!IMPORTANT]
-   > At this point, if you choose to perform a full installation using the [quickstart tutorials](#platforms), remember that you have just configured the target repository. Do not repeat that step in the tutorials. This is especially true if you configure the GDR repository, because the quickstart tutorials use the CU repository.
+   > At this point, if you choose to use one of the installation tutorials, such as the [quickstart tutorials](#platforms), remember that you have just configured the target repository. Do not repeat that step in the tutorials. This is especially true if you configure the GDR repository, because the quickstart tutorials use the CU repository.
 
 ## <a id="unattended"></a> Unattended install
 

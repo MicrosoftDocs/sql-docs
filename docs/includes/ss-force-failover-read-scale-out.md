@@ -9,7 +9,7 @@ Each availability group has only one primary replica. The primary replica allows
 Use this method when the primary replica is not available and can not be recovered. You can find more information about forced failover with data loss at [Perform a Forced Manual Failover](../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md).
 
 To force fail over with data loss, connect to the SQL instance hosting the target secondary replica and run:
-```Transact-SQL
+```SQL
 ALTER AVAILABILITY GROUP [ag1] FORCE_FAILOVER_ALLOW_DATA_LOSS;
 ```
 
@@ -21,14 +21,13 @@ The following steps describe how to manually fail over without data loss:
 
 1. Make the target secondary replica synchronous commit.
 
-   ```Transact-SQL
+   ```SQL
    ALTER AVAILABILITY GROUP [ag1] MODIFY REPLICA ON N'**<node2>*' WITH (AVAILABILITY_MODE = SYNCHRONOUS_COMMIT);
    ```
-1. Update `required_synchronized_secondaries_to_commit`to 1.
 
-   This setting ensures that every active transaction is committed to the primary replica and at least one synchronous secondary. The availability group is ready to fail over when the synchronization_state_desc is SYNCHRONIZED and the sequence_number is the same for both primary and target secondary replica. Run this query to check:
+1. Run the following query to identify that active transactions are committed to the primary replica and at least one synchronous secondary replica. 
 
-   ```Transact-SQL
+   ```SQL
    SELECT ag.name, 
       drs.database_id, 
       drs.group_id, 
@@ -39,16 +38,30 @@ The following steps describe how to manually fail over without data loss:
    WHERE drs.group_id = ag.group_id; 
    ```
 
+   The secondary replica is synchronized when `synchronization_state_desc` is `SYNCHRONIZED`.
+
+1. Update `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`to 1.
+
+   The following script sets  `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` to 1 on an availability group named `ag1`. Before you run replace `ag1` with the name of your availability group.
+
+   ```SQL
+   ALTER AVAILABILITY GROUP [ag1] 
+        SET REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT = 1;
+   ```
+
+   This setting ensures that every active transaction is committed to the primary replica and at least one synchronous secondary. 
+
 1. Demote the primary replica to secondary replica. After the primary replica is demoted, it is read-only. Run this command on the SQL instance hosting the primary replica to update the role to SECONDARY:
 
-   ```Transact-SQL
-   ALTER AVAILABILITY GROUP [ag1] SET (ROLE = SECONDARY); 
+   ```SQL
+   ALTER AVAILABILITY GROUP [ag1] 
+        SET (ROLE = SECONDARY); 
    ```
 
 1. Promote the target secondary replica to primary. 
 
-   ```Transact-SQL
-   ALTER AVAILABILITY GROUP distributedag FORCE_FAILOVER_ALLOW_DATA_LOSS; 
+   ```SQL
+   ALTER AVAILABILITY GROUP ag1 FORCE_FAILOVER_ALLOW_DATA_LOSS; 
    ```  
 
    > [!NOTE] 

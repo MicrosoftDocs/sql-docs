@@ -4,7 +4,7 @@ description: This topic contains the release notes and supported features for SQ
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 10/24/2017
+ms.date: 10/25/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -79,6 +79,7 @@ Package details and download locations for the RPM and Debian packages are liste
 - [Install SQL Server package](sql-server-linux-setup.md)
 - [Install Full-text Search package](sql-server-linux-setup-full-text-search.md)
 - [Install SQL Server Agent package](sql-server-linux-setup-sql-agent.md)
+- [Install SQL Server Integration Services](sql-server-linux-setup-ssis.md)
 
 | Package | Package version | Downloads |
 |-----|-----|-----|
@@ -88,7 +89,7 @@ Package details and download locations for the RPM and Debian packages are liste
 
 ### <a name="Unsupported"></a> Unsupported features and services
 
-The following features and services are not available on Linux at this time. The support of these features will be increasingly enabled during the monthly updates cadence of the preview program.
+The following features and services are not available on Linux at this time. The support of these features will be increasingly enabled over time.
 
 | Area | Unsupported feature or service |
 |-----|-----|

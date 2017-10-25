@@ -26,6 +26,7 @@ caps.latest.revision: 38
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # AttributeHierarchyEnabled Element (ASSL)
   Determines whether an attribute hierarchy is enabled for the attribute.  

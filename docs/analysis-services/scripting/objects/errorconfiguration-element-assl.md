@@ -26,6 +26,7 @@ caps.latest.revision: 35
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # ErrorConfiguration Element (ASSL)
   Specifies settings for handling errors that can occur when the parent element is processed.  

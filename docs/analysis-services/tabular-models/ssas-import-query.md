@@ -13,6 +13,7 @@ ms.assetid:
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Import data by using a native query
 

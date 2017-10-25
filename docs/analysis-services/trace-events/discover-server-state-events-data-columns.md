@@ -16,6 +16,7 @@ caps.latest.revision: 32
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Discover Server State Events Data Columns
   The Discover Server State event category has the following event classes:  

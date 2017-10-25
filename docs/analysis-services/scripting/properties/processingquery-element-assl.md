@@ -24,6 +24,7 @@ caps.latest.revision: 12
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # ProcessingQuery Element (ASSL)
   Contains the parameterized text of the query to execute for notification of incremental processing status.  

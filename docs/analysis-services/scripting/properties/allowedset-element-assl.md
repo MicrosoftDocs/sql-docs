@@ -26,6 +26,7 @@ caps.latest.revision: 36
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # AllowedSet Element (ASSL)
   Contains a set expression that defines the set of allowed permissions for a [Role](../../../analysis-services/scripting/objects/role-element-assl.md) element on an attribute.  

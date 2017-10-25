@@ -24,6 +24,7 @@ caps.latest.revision: 13
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # MdxMissingMemberMode Element (ASSL)
   Determines how missing members are handled for Multidimensional Expressions (MDX) statements.  

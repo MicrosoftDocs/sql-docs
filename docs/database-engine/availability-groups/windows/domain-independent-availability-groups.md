@@ -16,6 +16,7 @@ caps.latest.revision:
 author: "allanhirt"
 ms.author: "mikeray"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 
 # Domain Independent Availability Groups

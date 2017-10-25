@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: "jeannt"
 ms.author: "jeannt"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Role Element  (XMLA)
   Identifies one end of a one-to-many relationship to be used by the parent [RelationshipEnd](../../../analysis-services/scripting/data-type/relationshipend-data-type-assl.md).  

@@ -15,6 +15,7 @@ caps.latest.revision: 4
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Handling errors in the TOM API (Analysis Services AMO-TOM)
 

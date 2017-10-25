@@ -26,6 +26,7 @@ caps.latest.revision: 37
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # CalculationType Element (ASSL)
   Describes the type of calculation defined in the associated [CalculationProperty](../../../analysis-services/scripting/objects/calculationproperty-element-assl.md) element.  

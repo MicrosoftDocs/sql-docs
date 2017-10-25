@@ -17,6 +17,7 @@ caps.latest.revision: 17
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "On Demand"
 ---
 # Tools and applications used in Analysis Services
   Find the tools and applications you'll need for building Analysis Services models and managing deployed databases.  

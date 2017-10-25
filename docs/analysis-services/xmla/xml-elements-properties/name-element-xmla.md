@@ -28,6 +28,7 @@ caps.latest.revision: 12
 author: "jeannt"
 ms.author: "jeannt"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Name Element (XMLA)
   Contains the name of an attribute member for the parent [Attribute](../../../analysis-services/xmla/xml-elements-properties/attribute-element-xmla.md) or [Translation](../../../analysis-services/xmla/xml-elements-properties/translation-element-xmla.md) element.  

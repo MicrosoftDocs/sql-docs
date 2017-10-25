@@ -19,6 +19,7 @@ caps.latest.revision: 27
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Availability Group - Add Database to Group Wizard
   Use the Add Database to Availability Group Wizard to help you add one or more databases to an existing Always On availability group.  

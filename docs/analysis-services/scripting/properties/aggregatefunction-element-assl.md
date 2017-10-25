@@ -26,6 +26,7 @@ caps.latest.revision: 33
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # AggregateFunction Element (ASSL)
   Defines the type of aggregate function used by a [Measure](../../../analysis-services/scripting/objects/measure-element-assl.md) element.  

@@ -26,6 +26,7 @@ caps.latest.revision: 37
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # ConnectionStringSecurity Element (ASSL)
   Specifies whether the user's password is stripped from the data source connection string for security purposes.  

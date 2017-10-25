@@ -17,6 +17,7 @@ caps.latest.revision: 8
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Tables - Key Performance Indicator Representation
   A KPI is used to gauge performance of a value, defined by a Base measure, against a Target value  

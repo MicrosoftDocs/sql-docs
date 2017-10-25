@@ -18,6 +18,7 @@ caps.latest.revision: 20
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Session Events Event Category
   The Session Events event category has the event classes described in the following table.  

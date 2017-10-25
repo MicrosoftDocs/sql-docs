@@ -28,6 +28,7 @@ caps.latest.revision: 11
 author: "jeannt"
 ms.author: "jeannt"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # HierarchyInfo Element (XMLA)
   Represents a single hierarchy contained by a parent [AxisInfo](../../../analysis-services/xmla/xml-elements-properties/axisinfo-element-xmla.md) element.  

@@ -17,6 +17,7 @@ caps.latest.revision: 21
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # CSDL Annotations for Business Intelligence (CSDLBI)
 

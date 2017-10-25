@@ -15,6 +15,7 @@ caps.latest.revision: 10
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "On Demand"
 ---
 # Create a Calculated Table (SSAS Tabular)
   A *calculated table* is a computed object, based on either a DAX query or expression, derived from all or part of other tables in the same model.  

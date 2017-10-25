@@ -26,6 +26,7 @@ caps.latest.revision: 33
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # InvalidXmlCharacters Element (ASSL)
   Specifies the handling method for XML characters in the source data that are not valid.  

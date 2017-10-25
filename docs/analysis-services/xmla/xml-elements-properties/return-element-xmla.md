@@ -28,6 +28,7 @@ caps.latest.revision: 14
 author: "jeannt"
 ms.author: "jeannt"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # return Element (XMLA)
   Contains information returned by a [DiscoverResponse](../../../analysis-services/xmla/xml-elements-objects-discoverresponse.md) element in response to a [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) method call or an [ExecuteResponse](../../../analysis-services/xmla/xml-elements-objects-executeresponse.md) element in response to an [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) method call.  

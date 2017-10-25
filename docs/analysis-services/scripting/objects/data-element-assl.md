@@ -26,6 +26,7 @@ caps.latest.revision: 37
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Data Element (ASSL)
   Contains (in the collection of child [Block Element &#40;ASSL&#41;](../../../analysis-services/scripting/objects/block-element-assl.md) elements) the binary contents of a [ClrAssemblyFile](../../../analysis-services/scripting/data-type/clrassemblyfile-data-type-assl.md) element.  

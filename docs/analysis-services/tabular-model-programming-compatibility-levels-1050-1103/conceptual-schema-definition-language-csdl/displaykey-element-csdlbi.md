@@ -17,6 +17,7 @@ caps.latest.revision: 12
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # DisplayKey Element (CSDLBI)
   The DisplayKey element contains a list of the following elements that together constitute a strong identifier. The DisplayKey is found only as a child of the EntityType element. It can reference either columns or role ends.  

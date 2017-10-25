@@ -26,6 +26,7 @@ caps.latest.revision: 35
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Latency Element (ASSL)
   Defines the "grace period" between the earliest notification and the moment when the multidimensional OLAP (MOLAP) images are destroyed.  

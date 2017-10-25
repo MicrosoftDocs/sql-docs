@@ -28,6 +28,7 @@ caps.latest.revision: 30
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Rowset Data Type (XMLA)
   Defines a derived data type that represents a [root](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md) element that returns tabular data from a [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) or [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) method call.  

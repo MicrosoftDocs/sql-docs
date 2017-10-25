@@ -18,6 +18,7 @@ caps.latest.revision: 21
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Notification Events Event Category
   The Notification Events event category has the event classes described in the following table.  

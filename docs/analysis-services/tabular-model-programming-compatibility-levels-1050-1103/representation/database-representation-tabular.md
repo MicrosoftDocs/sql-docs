@@ -17,6 +17,7 @@ caps.latest.revision: 12
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Database Representation(Tabular)
   In Tabular mode, the database is the container for all objects in the tabular model.  

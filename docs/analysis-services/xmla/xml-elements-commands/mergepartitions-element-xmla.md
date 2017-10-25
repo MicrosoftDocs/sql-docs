@@ -28,6 +28,7 @@ caps.latest.revision: 12
 author: "jeannt"
 ms.author: "jeannt"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # MergePartitions Element (XMLA)
   Merges the data of one or more source partitions into a target partition, and then deletes the source partitions.  

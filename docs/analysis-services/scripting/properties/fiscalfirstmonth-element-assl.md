@@ -26,6 +26,7 @@ caps.latest.revision: 28
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # FiscalFirstMonth Element (ASSL)
   Defines the first month of the fiscal period for a [TimeBinding](../../../analysis-services/scripting/data-type/timebinding-data-type-assl.md) element.  

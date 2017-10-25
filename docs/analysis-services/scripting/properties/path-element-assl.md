@@ -26,6 +26,7 @@ caps.latest.revision: 33
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Path Element (ASSL)
   Contains the path, as provided by an instance of [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], of a report used by the [ReportAction](../../../analysis-services/scripting/data-type/reportaction-data-type-assl.md) element.  

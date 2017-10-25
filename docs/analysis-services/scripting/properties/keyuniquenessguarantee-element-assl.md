@@ -26,6 +26,7 @@ caps.latest.revision: 32
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # KeyUniquenessGuarantee Element (ASSL)
   Indicates whether the relationship between the attribute key and its name, and the relationship to related attributes, is guaranteed to be valid.  

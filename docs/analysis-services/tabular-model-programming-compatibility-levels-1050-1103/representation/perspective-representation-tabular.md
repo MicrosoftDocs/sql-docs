@@ -17,6 +17,7 @@ caps.latest.revision: 8
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Perspective Representation (Tabular)
   A perspective is a mechanism to simplify or focus the model into a smaller portion of it for the client application.  

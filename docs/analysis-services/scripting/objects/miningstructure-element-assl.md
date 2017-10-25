@@ -26,6 +26,7 @@ caps.latest.revision: 48
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # MiningStructure Element (ASSL)
   Defines the structure for a set of mining models.  

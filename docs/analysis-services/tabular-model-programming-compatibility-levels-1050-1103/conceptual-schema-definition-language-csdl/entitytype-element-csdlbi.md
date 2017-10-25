@@ -17,6 +17,7 @@ caps.latest.revision: 16
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # EntityType Element (CSDLBI)
   The **EntityType** element is a complex type that represents the structure of a high-level entity, such as a customer or order, in a data model. The **bi:EntityType** element extends the definition of [EntityType](http://msdn.microsoft.com/library/bb399206.aspx) used in the [Entity Data Framework](http://msdn.microsoft.com/library/bb399567.aspx).  

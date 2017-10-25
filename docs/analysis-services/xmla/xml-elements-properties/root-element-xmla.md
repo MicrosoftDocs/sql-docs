@@ -28,6 +28,7 @@ caps.latest.revision: 15
 author: "jeannt"
 ms.author: "jeannt"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # root Element (XMLA)
   Contains a result returned by the [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) method or an XML for Analysis (XMLA) command executed using the [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) method.  

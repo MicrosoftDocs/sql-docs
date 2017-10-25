@@ -18,6 +18,7 @@ caps.latest.revision: 17
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Deploy From SQL Server Data Tools
   Use the tasks in this topic to deploy a tabular model solution by using the Deploy command in SSDT.  

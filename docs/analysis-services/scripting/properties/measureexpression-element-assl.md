@@ -26,6 +26,7 @@ caps.latest.revision: 32
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # MeasureExpression Element (ASSL)
   Contains the Multidimensional Expressions (MDX) expression that defines how the values of parent measure are obtained.  

@@ -26,6 +26,7 @@ caps.latest.revision: 35
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # PermissionSet Element (ASSL)
   Identifies the permission set associated with a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework assembly.  

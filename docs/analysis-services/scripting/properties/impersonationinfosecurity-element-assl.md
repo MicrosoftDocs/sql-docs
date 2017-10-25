@@ -24,6 +24,7 @@ caps.latest.revision: 13
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # ImpersonationInfoSecurity Element (ASSL)
   Contains a read-only value that indicates if any changes were made to the security credentials that are supplied in the [ImpersonationInfo](../../../analysis-services/scripting/data-type/impersonationinfo-data-type-assl.md) data type.  

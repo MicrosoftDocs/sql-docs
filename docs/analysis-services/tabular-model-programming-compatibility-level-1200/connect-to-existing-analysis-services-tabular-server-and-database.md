@@ -15,6 +15,7 @@ caps.latest.revision: 12
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Connect to existing Analysis Services Tabular server and database
 

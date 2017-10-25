@@ -28,6 +28,7 @@ caps.latest.revision: 11
 author: "jeannt"
 ms.author: "jeannt"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Restrictions Element (XMLA)
   Contains restriction columns and data used by the [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) method.  

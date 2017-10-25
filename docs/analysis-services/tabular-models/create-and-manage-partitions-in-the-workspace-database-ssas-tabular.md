@@ -18,6 +18,7 @@ caps.latest.revision: 15
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Create and Manage Partitions in the Workspace Database (SSAS Tabular)
   Partitions divide a table into logical parts. Each partition can then be processed (Refreshed) independently or in parallel with other partitions. Partitions can improve scalability and manageability of large databases. By default, each table has one partition that includes all columns. Tasks in this topic describe how to create and manage partitions in the model workspace database by using the **Partition Manager** dialog box in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]  

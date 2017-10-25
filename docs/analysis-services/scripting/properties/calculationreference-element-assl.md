@@ -26,6 +26,7 @@ caps.latest.revision: 37
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # CalculationReference Element (ASSL)
   Contains the name of the named set or calculated cell referenced by the [CalculationProperty](../../../analysis-services/scripting/objects/calculationproperty-element-assl.md).  

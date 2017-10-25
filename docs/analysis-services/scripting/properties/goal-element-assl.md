@@ -26,6 +26,7 @@ caps.latest.revision: 32
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Goal Element (ASSL)
   Identifies the desired goal in a [Kpi](../../../analysis-services/scripting/objects/kpi-element-assl.md) element.  

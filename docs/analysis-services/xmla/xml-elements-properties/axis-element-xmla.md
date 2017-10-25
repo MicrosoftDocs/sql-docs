@@ -27,6 +27,7 @@ caps.latest.revision: 11
 author: "jeannt"
 ms.author: "jeannt"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Axis Element (XMLA)
   Contains a set of tuples used to represent a single axis in a multidimensional dataset contained by an [Axes](../../../analysis-services/xmla/xml-elements-properties/axes-element-xmla.md) element that uses the [MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md) data type, returned by the [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) method.  

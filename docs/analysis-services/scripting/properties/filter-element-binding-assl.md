@@ -26,6 +26,7 @@ caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Filter Element (Binding) (ASSL)
   Contains a Multidimensional Expressions (MDX) expression that filters the contents of the parent element.  

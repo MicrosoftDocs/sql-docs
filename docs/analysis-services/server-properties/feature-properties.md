@@ -23,6 +23,7 @@ caps.latest.revision: 21
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Feature Properties
   Feature properties pertain to product features, most of them advanced, including properties that control links between server instances.  

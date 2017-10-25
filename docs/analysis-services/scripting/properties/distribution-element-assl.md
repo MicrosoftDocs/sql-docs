@@ -26,6 +26,7 @@ caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Distribution Element (ASSL)
   Contains a provider-specific value that describes how scalar values are distributed within a column of a [MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md) element.  

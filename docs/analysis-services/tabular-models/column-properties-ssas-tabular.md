@@ -18,6 +18,7 @@ caps.latest.revision: 14
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "On Demand"
 ---
 # Column Properties (SSAS Tabular)
   This topic describes tabular model column properties.  

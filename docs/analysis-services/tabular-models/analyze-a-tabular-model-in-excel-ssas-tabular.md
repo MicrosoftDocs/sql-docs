@@ -18,6 +18,7 @@ caps.latest.revision: 13
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Analyze a Tabular Model in Excel (SSAS Tabular)
   The Analyze in Excel feature in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] opens Microsoft Excel, creates a data source connection to the model workspace database, and adds a PivotTable to the worksheet. Model objects (tables, columns, measures, hierarchies, and KPIs) are included as fields in the PivotTable field list.  

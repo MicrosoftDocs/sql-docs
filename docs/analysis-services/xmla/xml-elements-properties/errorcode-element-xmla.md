@@ -28,6 +28,7 @@ caps.latest.revision: 11
 author: "jeannt"
 ms.author: "jeannt"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # ErrorCode Element (XMLA)
   Contains the numeric return code of the parent [Error](../../../analysis-services/xmla/xml-elements-properties/error-element-xmla.md) element.  

@@ -28,6 +28,7 @@ caps.latest.revision: 15
 author: "jeannt"
 ms.author: "jeannt"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Type Element (XMLA)
   Determines the type of processing to be performed by the [Process](../../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md) element.  

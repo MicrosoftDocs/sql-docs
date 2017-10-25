@@ -17,6 +17,7 @@ caps.latest.revision: 7
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # PropertyRef Element (CSDLBI)
   The PropertyRef element is a simple type that provides a reference to a column that supplies a value required by another property.  

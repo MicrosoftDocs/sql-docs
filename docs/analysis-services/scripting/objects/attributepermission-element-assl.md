@@ -26,6 +26,7 @@ caps.latest.revision: 36
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # AttributePermission Element (ASSL)
   Defines the permissions that members of a [Role](../../../analysis-services/scripting/objects/role-element-assl.md) element have on the attributes of an individual dimension in a [Cube](../../../analysis-services/scripting/objects/cube-element-assl.md) element.  

@@ -26,6 +26,7 @@ caps.latest.revision: 33
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # ProcessingMode Element (ASSL)
   Indicates whether the instance should index and aggregate during or after processing.  

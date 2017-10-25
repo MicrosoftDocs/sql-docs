@@ -11,8 +11,8 @@ ms.assetid: 1eb6afc9-76ed-45a2-a188-374a4fc23224
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "On Demand"
 ---
-
 # What's new in SQL Server 2017 Analysis Services
 [!INCLUDE[ssas-appliesto-sql2017](../includes/ssas-appliesto-sql2017.md)]
 

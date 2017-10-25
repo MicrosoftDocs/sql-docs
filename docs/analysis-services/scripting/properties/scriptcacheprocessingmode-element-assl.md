@@ -26,6 +26,7 @@ caps.latest.revision: 33
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # ScriptCacheProcessingMode Element (ASSL)
   Indicates whether the server should build the script cache during processing or after processing.  

@@ -26,6 +26,7 @@ caps.latest.revision: 38
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Type Element (ClrAssemblyFile) (ASSL)
   Specifies the file type of one of the files that belong to a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework assembly.  

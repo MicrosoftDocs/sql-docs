@@ -26,6 +26,7 @@ caps.latest.revision: 32
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Source Element (Measure) (ASSL)
   Contains the details of the source containing the value of the [Measure](../../../analysis-services/scripting/objects/measure-element-assl.md) element.  

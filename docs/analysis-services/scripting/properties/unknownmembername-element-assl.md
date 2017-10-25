@@ -26,6 +26,7 @@ caps.latest.revision: 35
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # UnknownMemberName Element (ASSL)
   Contains the caption, in the default language of the dimension, for the unknown member of the dimension.  

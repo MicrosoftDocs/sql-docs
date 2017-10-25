@@ -28,6 +28,7 @@ caps.latest.revision: 12
 author: "jeannt"
 ms.author: "jeannt"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # PartitionID Element (XMLA)
   Identifies a partition within a parent element that contains an object reference.  

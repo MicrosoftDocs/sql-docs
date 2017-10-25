@@ -26,6 +26,7 @@ caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # RelationshipType Element (ASSL)
   Indicates whether member relationships for an [AttributeRelationship](../../../analysis-services/scripting/objects/attributerelationship-element-assl.md) can be changed.  

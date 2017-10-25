@@ -16,6 +16,7 @@ caps.latest.revision:
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Object-level security
 

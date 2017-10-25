@@ -26,6 +26,7 @@ caps.latest.revision: 33
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # MembersWithData Element (ASSL)
   Determines whether to display data members for non-leaf members in the parent attribute.  

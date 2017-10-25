@@ -26,6 +26,7 @@ caps.latest.revision: 35
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # DependsOnDimensionID Element (ASSL)
   Contains the identifier (ID) of another dimension on which the parent dimension depends.  

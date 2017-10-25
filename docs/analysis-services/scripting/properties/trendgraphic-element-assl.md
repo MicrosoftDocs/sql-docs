@@ -26,6 +26,7 @@ caps.latest.revision: 35
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # TrendGraphic Element (ASSL)
   Contains the recommended graphical representation of the trend of the [Kpi](../../../analysis-services/scripting/objects/kpi-element-assl.md) element.  

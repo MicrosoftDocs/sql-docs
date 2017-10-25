@@ -28,6 +28,7 @@ caps.latest.revision: 12
 author: "jeannt"
 ms.author: "jeannt"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # RequestType Element (XMLA)
   Determines the type of metadata returned by the [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) method.  

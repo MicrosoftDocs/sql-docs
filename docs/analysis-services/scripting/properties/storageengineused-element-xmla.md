@@ -22,6 +22,7 @@ caps.latest.revision: 9
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # StorageEngineUsed Element (XMLA)
   Contains a read-only value that describes the current database type.  

@@ -26,6 +26,7 @@ caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # UnaryOperatorColumn Element (ASSL)
   Defines the details of a column providing a unary operator.  

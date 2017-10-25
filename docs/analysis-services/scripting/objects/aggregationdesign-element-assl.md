@@ -26,6 +26,7 @@ caps.latest.revision: 37
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # AggregationDesign Element (ASSL)
   Defines a set of aggregation definitions that can be shared across multiple partitions in a database.  

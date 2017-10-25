@@ -28,6 +28,7 @@ caps.latest.revision: 11
 author: "jeannt"
 ms.author: "jeannt"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Members Element (XMLA)
   Contains a collection of [Member](../../../analysis-services/xmla/xml-elements-properties/member-element-xmla.md) elements contained by the parent [CrossProduct](../../../analysis-services/xmla/xml-elements-properties/crossproduct-element-xmla.md) element.  

@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # MemberRef Element (CSDLBI)
   The MemberRef element identifies the name of a property that is the target of a reference.  

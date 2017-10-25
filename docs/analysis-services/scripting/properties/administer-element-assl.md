@@ -26,6 +26,7 @@ caps.latest.revision: 36
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Administer Element (ASSL)
   Indicates whether the associated permission includes the right to administer a [Database](../../../analysis-services/scripting/objects/database-element-assl.md) element.  

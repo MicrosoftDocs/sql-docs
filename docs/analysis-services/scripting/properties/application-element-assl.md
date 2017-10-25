@@ -26,6 +26,7 @@ caps.latest.revision: 38
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Application Element (ASSL)
   Identifies the application associated with an [Action](../../../analysis-services/scripting/objects/action-element-assl.md) element.  

@@ -28,6 +28,7 @@ caps.latest.revision: 12
 author: "jeannt"
 ms.author: "jeannt"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Dimension Element (XMLA)
   Identifies the cube dimension represented by the parent [Object](../../../analysis-services/xmla/xml-elements-properties/object-element-dimension-xmla.md) element.  

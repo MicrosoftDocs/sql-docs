@@ -28,6 +28,7 @@ caps.latest.revision: 12
 author: "jeannt"
 ms.author: "jeannt"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # CancelAssociated Element (XMLA)
   Indicates whether the parent [Cancel](../../../analysis-services/xmla/xml-elements-commands/cancel-element-xmla.md) element should cancel all associated commands.  

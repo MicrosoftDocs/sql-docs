@@ -28,6 +28,7 @@ caps.latest.revision: 13
 author: "jeannt"
 ms.author: "jeannt"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # DatabaseID Element (XMLA)
   Identifies a database within a parent element that contains an object reference.  

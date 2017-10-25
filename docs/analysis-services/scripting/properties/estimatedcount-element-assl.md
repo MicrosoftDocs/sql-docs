@@ -26,6 +26,7 @@ caps.latest.revision: 32
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # EstimatedCount Element (ASSL)
   Contains the estimated number of members for an attribute, as defined by the user.  

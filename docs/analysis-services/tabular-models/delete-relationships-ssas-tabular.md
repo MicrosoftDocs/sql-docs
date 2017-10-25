@@ -15,6 +15,7 @@ caps.latest.revision: 13
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Delete Relationships (SSAS Tabular)
   You can delete existing relationships by using the model designer in Diagram View or by using the Manage Relationships dialog box. For information about how relationships are used in tabular models, see [Relationships &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/relationships-ssas-tabular.md).  

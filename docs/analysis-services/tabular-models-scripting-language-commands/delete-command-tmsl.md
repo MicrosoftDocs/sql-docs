@@ -15,6 +15,7 @@ caps.latest.revision: 9
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Delete command (TMSL)
 

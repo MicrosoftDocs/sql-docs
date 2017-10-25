@@ -26,6 +26,7 @@ caps.latest.revision: 33
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Language Element (ASSL)
   Contains the language identifier of the parent element.  

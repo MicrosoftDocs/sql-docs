@@ -26,6 +26,7 @@ caps.latest.revision: 36
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # NullKeyConvertedToUnknown Element (ASSL)
   Specifies the action to be taken when a null conversion error is encountered.  

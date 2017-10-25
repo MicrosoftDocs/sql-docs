@@ -26,6 +26,7 @@ caps.latest.revision: 36
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # AttributeHierarchyOrdered Element (ASSL)
   Determines whether the associated attribute hierarchy is ordered.  

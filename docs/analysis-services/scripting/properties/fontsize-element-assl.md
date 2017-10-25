@@ -26,6 +26,7 @@ caps.latest.revision: 37
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # FontSize Element (ASSL)
   Describes font-related display characteristics of the [CalculationProperty](../../../analysis-services/scripting/objects/calculationproperty-element-assl.md) or [Measure](../../../analysis-services/scripting/objects/measure-element-assl.md) parent element.  

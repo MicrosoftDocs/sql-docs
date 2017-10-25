@@ -26,6 +26,7 @@ caps.latest.revision: 35
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # SolveOrder Element (ASSL)
   Indicates the solve order in which the [CalculationProperty](../../../analysis-services/scripting/objects/calculationproperty-element-assl.md) element is applied to a calculated member or calculated cell definition.  

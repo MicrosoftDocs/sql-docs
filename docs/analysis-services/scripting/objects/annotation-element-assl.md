@@ -26,6 +26,7 @@ caps.latest.revision: 43
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Annotation Element (ASSL)
   Contains elements that are used to extend the Analysis Services Scripting Language (ASSL) schema.  

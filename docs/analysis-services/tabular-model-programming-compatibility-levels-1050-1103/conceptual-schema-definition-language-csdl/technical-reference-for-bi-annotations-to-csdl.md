@@ -17,6 +17,7 @@ caps.latest.revision: 16
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Technical Reference for BI Annotations to CSDL
   This section lists the elements, attribute, and properties in CSDL that are used to represent [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] tabular models. Some elements are new; others have been annotated or extended to support business intelligence modeling.  

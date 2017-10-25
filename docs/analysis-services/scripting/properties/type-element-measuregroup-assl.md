@@ -26,6 +26,7 @@ caps.latest.revision: 35
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Type Element (MeasureGroup) (ASSL)
   Specifies the type of the [MeasureGroup](../../../analysis-services/scripting/objects/measuregroup-element-assl.md).  

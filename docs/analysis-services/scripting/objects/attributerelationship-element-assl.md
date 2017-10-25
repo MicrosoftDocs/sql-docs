@@ -26,6 +26,7 @@ caps.latest.revision: 33
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # AttributeRelationship Element (ASSL)
   Provides details about the relationship between two attributes.  

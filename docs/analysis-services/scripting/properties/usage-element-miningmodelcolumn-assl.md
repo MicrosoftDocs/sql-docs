@@ -26,6 +26,7 @@ caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Usage Element (MiningModelColumn) (ASSL)
   Describes how the associated column in the parent [MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md) is used.  

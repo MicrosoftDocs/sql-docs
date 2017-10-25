@@ -26,6 +26,7 @@ caps.latest.revision: 28
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # FirstDayOfWeek Element (ASSL)
   Defines the first day of the week for a [TimeBinding](../../../analysis-services/scripting/data-type/timebinding-data-type-assl.md) element.  

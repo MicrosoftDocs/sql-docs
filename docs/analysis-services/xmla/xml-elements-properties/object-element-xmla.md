@@ -28,6 +28,7 @@ caps.latest.revision: 16
 author: "jeannt"
 ms.author: "jeannt"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Object Element (XMLA)
   Contains an object reference used by the parent element.  

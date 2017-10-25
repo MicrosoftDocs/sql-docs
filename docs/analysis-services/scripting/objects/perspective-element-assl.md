@@ -26,6 +26,7 @@ caps.latest.revision: 35
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Perspective Element (ASSL)
   Defines details for a perspective of a [Cube](../../../analysis-services/scripting/objects/cube-element-assl.md) element.  

@@ -14,6 +14,7 @@ caps.latest.revision: 16
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Accessing Diagnostic Information in the Extended Events Log
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

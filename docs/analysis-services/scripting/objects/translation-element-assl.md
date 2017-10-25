@@ -26,6 +26,7 @@ caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Translation Element (ASSL)
   Provides a localized translation for the parent of the [Translations](../../../analysis-services/scripting/collections/translations-element-assl.md) collection.  

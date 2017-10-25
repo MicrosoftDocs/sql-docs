@@ -15,6 +15,7 @@ caps.latest.revision: 15
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "On Demand"
 ---
 # Introduction to the Tabular Object Model (TOM) in Analysis Services AMO
 

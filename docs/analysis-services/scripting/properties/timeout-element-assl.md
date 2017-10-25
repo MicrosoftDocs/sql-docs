@@ -26,6 +26,7 @@ caps.latest.revision: 35
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Timeout Element (ASSL)
   Specifies the time, in seconds, after which an attempt to retrieve data reports a timeout.  

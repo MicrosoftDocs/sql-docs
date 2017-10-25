@@ -14,6 +14,7 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Step 3: Proof of concept connecting to SQL using ADO.NET
 

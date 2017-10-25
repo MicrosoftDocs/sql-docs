@@ -4,7 +4,7 @@ description: Install, update, and uninstall SQL Server on Linux. This topic cove
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 10/02/2017
+ms.date: 10/24/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -36,7 +36,7 @@ SQL Server 2017 has the following system requirements for Linux:
 
 |||
 |-----|-----|
-| **Memory** | 3.25 GB |
+| **Memory** | 2 GB (4 GB or more recommended) |
 | **File System** | **XFS** or **EXT4** (other file systems, such as **BTRFS**, are unsupported) |
 | **Disk space** | 6 GB |
 | **Processor speed** | 2 GHz |
@@ -99,12 +99,12 @@ When you install or upgrade SQL Server, you get the latest version of SQL Server
 
 - **GDR**: The GDR repository contains packages for the base SQL Server release and only critical fixes and security updates since that release. These updates are also added to the next CU release.
 
-Each CU and GDR release contains the full SQL Server package and all previous updates for that repository. Updating from a GDR release to a CU release is supported by changing your configured repository for SQL Server. You can also [downgrade](#rollback) to any release within your major version (ex: 2017).
-
-> [!NOTE]
-> Updating from a CU release to a GDR release is not supported.
+Each CU and GDR release contains the full SQL Server package and all previous updates for that repository. Updating from a GDR release to a CU release is supported by changing your configured repository for SQL Server. You can also [downgrade](#rollback) to any release within your major version (ex: 2017). Updating from a CU release to a GDR release is not supported.
 
 To configure the CU or GDR repositories, use the following steps:
+
+> [!NOTE]
+> The [quick start tutorials](#platforms) configure the CU repository. If you follow those tutorials, you do not need to do the steps below to continue using the CU repository. These steps are only necessary for changing your configured repository.
 
 1. If necessary, remove the previously configured repository.
 

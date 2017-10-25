@@ -19,6 +19,7 @@ caps.latest.revision: 13
 author: "jeannt"
 ms.author: "jeannt"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # ReadWriteMode Element
   The **ReadWriteMode** database property specifies whether the database is in **ReadWrite** mode or in **ReadOnly** mode. These are the only two possible values of the property.  

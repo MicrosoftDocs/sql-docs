@@ -26,6 +26,7 @@ caps.latest.revision: 33
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # OptimizedState Element (ASSL)
   Determines the level of optimization that is applied to the hierarchy.  

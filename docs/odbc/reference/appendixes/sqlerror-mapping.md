@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # SQLError Mapping
 When an application calls **SQLError** through an ODBC 3*.x* driver, the call to  

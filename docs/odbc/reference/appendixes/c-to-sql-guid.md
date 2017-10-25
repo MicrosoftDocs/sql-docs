@@ -18,6 +18,7 @@ caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # C to SQL: GUID
 The identifier for the GUID ODBC C data type is:  

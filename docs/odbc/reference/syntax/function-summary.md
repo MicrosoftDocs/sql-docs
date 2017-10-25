@@ -17,6 +17,7 @@ caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Function Summary
 The following sections summarize the functions used by ODBC-enabled applications and related software.  

@@ -19,6 +19,7 @@ caps.latest.revision: 34
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Map Query Parameters to Variables in a Data Flow Component
   When you configure the OLE DB source to use parameterized queries, you can map the parameters to variables.  

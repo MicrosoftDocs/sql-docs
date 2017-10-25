@@ -21,6 +21,7 @@ caps.latest.revision: 41
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Estimate the Interruption of Service During Role Switching (Database Mirroring)
   During a role switch, the amount of time that database mirroring will be out of service depends on the type of role switching and the cause of the role switch.  

@@ -17,6 +17,7 @@ caps.latest.revision: 25
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # View the State of a Mirrored Database (SQL Server Management Studio)
   During a database mirroring session, you can view the status on the **Mirroring** page of the **Database Properties** dialog box.  

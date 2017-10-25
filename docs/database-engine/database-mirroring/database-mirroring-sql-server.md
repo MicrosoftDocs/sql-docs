@@ -27,6 +27,7 @@ caps.latest.revision: 125
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # Database Mirroring (SQL Server)
     

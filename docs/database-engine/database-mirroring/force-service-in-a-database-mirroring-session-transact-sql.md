@@ -17,6 +17,7 @@ caps.latest.revision: 40
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Force Service in a Database Mirroring Session (Transact-SQL)
   In high-performance mode and high-safety mode without automatic failover, if the principal server fails while the mirror server is available, the database owner can make the database available by forcing service to fail over (with possible data loss) to the mirror database. This option is available only under all the following conditions:  

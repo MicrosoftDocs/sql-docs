@@ -1,4 +1,4 @@
-Each availability group has only one primary replica. The primary replica allows reads and writes. To change which replica is the primary, you can fail over. In an availability group for high availability, the cluster manager automates in the failover process. In a read scale-out availability group, the failover process is manual. There are two ways to fail over the primary replica in a read scale availability group.
+Each availability group has only one primary replica. The primary replica allows reads and writes. To change which replica is the primary, you can fail over. In an availability group for high availability, the cluster manager automates the failover process. In a read scale-out availability group, the failover process is manual. There are two ways to fail over the primary replica in a read scale availability group.
 
 - Forced manual fail over with data loss
 

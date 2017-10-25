@@ -14,6 +14,7 @@ caps.latest.revision: 5
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Change Data Capture Designer for Oracle by Attunity How to Guide
   This section describes how to carry out tasks in the Change Data Capture Designer for Oracle by Attunity.  

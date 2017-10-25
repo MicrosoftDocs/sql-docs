@@ -16,6 +16,7 @@ caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Review and Generate Supplemental Logging Scripts
   Use the **Scripts** tab to run or re-run a script on the Oracle source database that sets up supplemental logging.  

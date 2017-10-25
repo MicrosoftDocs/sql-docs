@@ -14,6 +14,7 @@ caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Change Data Capture Service for Oracle by Attunity How to Guide
   This section describes how to carry out tasks in the CDC Service Configuration Console.  

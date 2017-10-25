@@ -14,6 +14,7 @@ caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # How to Edit the CDC Instance Properties
   This procedure describes how to use the CDC Designer Console to edit the configuration properties for a CDC instance.  

@@ -18,6 +18,7 @@ caps.latest.revision: 34
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # TRIM (SSIS Expression)
   Returns a character expression after removing leading and trailing spaces.  

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Setting the Connection Properties | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/11/2017"
@@ -14,6 +14,7 @@ caps.latest.revision: 154
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # Setting the Connection Properties
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

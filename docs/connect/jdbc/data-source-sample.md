@@ -14,6 +14,7 @@ caps.latest.revision: 25
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Data Source Sample
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

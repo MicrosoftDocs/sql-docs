@@ -17,6 +17,7 @@ caps.latest.revision: 10
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Tables - Calculated Measure Representation
   A calculated measure is a named DAX expression evaluated every time it is used.  

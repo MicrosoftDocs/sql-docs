@@ -26,6 +26,7 @@ caps.latest.revision: 35
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # DataSize Element (ASSL)
   Contains the size in bytes of a [DataItem](../../../analysis-services/scripting/data-type/dataitem-data-type-assl.md) element.  

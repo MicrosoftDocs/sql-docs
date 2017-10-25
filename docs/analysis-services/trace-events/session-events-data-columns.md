@@ -16,6 +16,7 @@ caps.latest.revision: 21
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Session Events Data Columns
   The Session Events event category has the following event class:  

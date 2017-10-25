@@ -14,6 +14,7 @@ caps.latest.revision: 42
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # SQLSRV Driver API Reference
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

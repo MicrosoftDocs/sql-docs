@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # AllowedRowsExpression Element (ASSL)
   Contains a Data Analysis expression (DAX), of Boolean type, which defines the contents of the parent element.  

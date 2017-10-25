@@ -16,6 +16,7 @@ caps.latest.revision: 29
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Discover Events Data Columns
   The Discover Events category has the following event classes:  

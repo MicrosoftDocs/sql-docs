@@ -12,6 +12,7 @@ ms.topic: "article"
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Programming Guidelines
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]

@@ -26,6 +26,7 @@ caps.latest.revision: 29
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # EndOfData Element (ASSL)
   Indicates the end of data received from a [PushedDataSource](../../../analysis-services/scripting/data-type/pusheddatasource-data-type-assl.md) element.  

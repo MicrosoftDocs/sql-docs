@@ -17,6 +17,7 @@ caps.latest.revision: 64
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "On Demand"
 ---
 # DirectQuery Mode
 

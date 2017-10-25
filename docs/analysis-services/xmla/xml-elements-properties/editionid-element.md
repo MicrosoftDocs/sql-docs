@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: "jeannt"
 ms.author: "jeannt"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # EditionId Element
   Contains the numeric edition identifier code of the parent [Server Element (ASSL)](../../../analysis-services/scripting/objects/server-element-assl.md) element.  

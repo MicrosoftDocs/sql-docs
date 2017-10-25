@@ -15,6 +15,7 @@ caps.latest.revision: 5
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Create and deploy an empty database (Analysis Services AMO-TOM)
 

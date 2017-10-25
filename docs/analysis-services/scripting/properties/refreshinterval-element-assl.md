@@ -26,6 +26,7 @@ caps.latest.revision: 37
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # RefreshInterval Element (ASSL)
   Specifies the interval at which the bound data associated with the parent element is refreshed.  

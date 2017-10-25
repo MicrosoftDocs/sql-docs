@@ -18,6 +18,7 @@ caps.latest.revision: 27
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # + (Add) (SSIS)
   Adds two numeric expressions.  

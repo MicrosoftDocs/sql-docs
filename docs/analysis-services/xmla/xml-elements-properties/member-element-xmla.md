@@ -28,6 +28,7 @@ caps.latest.revision: 11
 author: "jeannt"
 ms.author: "jeannt"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Member Element (XMLA)
   Represents a single member in a parent [Members](../../../analysis-services/xmla/xml-elements-properties/members-element-xmla.md) or [Tuple](../../../analysis-services/xmla/xml-elements-properties/tuple-element-xmla.md) element.  

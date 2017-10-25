@@ -25,6 +25,7 @@ caps.latest.revision: 36
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # NullProcessing Element (ASSL)
   Defines how null values are processed.  

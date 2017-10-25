@@ -26,6 +26,7 @@ caps.latest.revision: 39
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # CustomRollupColumn Element (ASSL)
   Defines the details of the column that provide a custom rollup formula.  

@@ -26,6 +26,7 @@ caps.latest.revision: 39
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # CustomRollupPropertiesColumn Element (ASSL)
   Defines the details of a column that provide the properties of a custom rollup formula.  

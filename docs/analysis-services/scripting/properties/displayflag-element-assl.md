@@ -26,6 +26,7 @@ caps.latest.revision: 33
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # DisplayFlag Element (ASSL)
   Contains a read-only hint that indicates whether user interface components should display the associated [ServerProperty](../../../analysis-services/scripting/objects/serverproperty-element-assl.md) element.  

@@ -26,6 +26,7 @@ caps.latest.revision: 32
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # MemberNamesUnique Element (ASSL)
   Determines whether member names under the parent element must be unique.  

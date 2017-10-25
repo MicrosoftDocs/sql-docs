@@ -26,6 +26,7 @@ caps.latest.revision: 16
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # FoldingParameters Element (ASSL)
   Specifies the parameters used by the [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] server when it performs cross-validation of mining models.  

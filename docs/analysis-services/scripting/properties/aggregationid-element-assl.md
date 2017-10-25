@@ -24,6 +24,7 @@ caps.latest.revision: 12
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # AggregationID Element (ASSL)
   Identifies the aggregation definition from the [AggregationDesign](../../../analysis-services/scripting/objects/aggregationdesign-element-assl.md) element used to create the aggregation instance.  

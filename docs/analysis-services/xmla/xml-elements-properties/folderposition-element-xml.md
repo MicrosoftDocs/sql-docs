@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: "jeannt"
 ms.author: "jeannt"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # FolderPosition Element (XML)
   Contains information about the position of the element in a collection of elements.  

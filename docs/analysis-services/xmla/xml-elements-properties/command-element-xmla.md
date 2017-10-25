@@ -29,6 +29,7 @@ caps.latest.revision: 31
 author: "jeannt"
 ms.author: "jeannt"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Command Element (XMLA)
   Contains the command to be executed by the [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) method.  

@@ -26,6 +26,7 @@ caps.latest.revision: 33
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Visibility Element (ASSL)
   Defines the visibility of an [Annotation](../../../analysis-services/scripting/objects/annotation-element-assl.md) element.  

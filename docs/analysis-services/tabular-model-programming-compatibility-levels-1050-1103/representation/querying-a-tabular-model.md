@@ -17,6 +17,7 @@ caps.latest.revision: 7
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Querying a Tabular Model
   As a developer querying a tabular model means to retrieve data from the tabular database; to accomplish this goal you have two options: use table queries in DAX, or use MDX and retrieve the data as it were coming from a cube. However, depending on the underlying mode of your tabular model you might be restricted to use only DAX table queries; DirectQuery mode requires the usage of DAX table queries.  

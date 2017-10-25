@@ -24,6 +24,7 @@ caps.latest.revision: 10
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # PartitionID Element (ASSL)
   Associates a [Partition](../../../analysis-services/scripting/objects/partition-element-assl.md) element with a parent element, binding, or out-of-line binding.  

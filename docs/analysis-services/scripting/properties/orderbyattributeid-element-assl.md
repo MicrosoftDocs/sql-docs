@@ -26,6 +26,7 @@ caps.latest.revision: 33
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # OrderByAttributeID Element (ASSL)
   Identifies another attribute by which to order the members of the [Dimension](../../../analysis-services/scripting/data-type/dimensionattribute-data-type-assl.md) attribute.  

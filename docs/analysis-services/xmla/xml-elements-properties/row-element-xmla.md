@@ -28,6 +28,7 @@ caps.latest.revision: 13
 author: "jeannt"
 ms.author: "jeannt"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # row Element (XMLA)
   Contains a single row of data for a [root](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md) element that contains tabular data returned by a [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) or [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) method call.  

@@ -28,6 +28,7 @@ caps.latest.revision: 15
 author: "jeannt"
 ms.author: "jeannt"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Attributes Element (XMLA)
   Contains a collection of [Attribute](../../../analysis-services/xmla/xml-elements-properties/attribute-element-xmla.md) elements used by the parent [Insert](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md) or [Update](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md) command, or by the parent [Where](../../../analysis-services/xmla/xml-elements-properties/where-element-xmla.md) element.  

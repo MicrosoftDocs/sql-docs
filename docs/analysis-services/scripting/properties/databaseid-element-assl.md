@@ -24,6 +24,7 @@ caps.latest.revision: 9
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # DatabaseID Element (ASSL)
   Identifies the [Database](../../../analysis-services/scripting/objects/database-element-assl.md) element associated with an out-of-line [Binding](../../../analysis-services/scripting/data-type/binding-data-type-assl.md) element.  

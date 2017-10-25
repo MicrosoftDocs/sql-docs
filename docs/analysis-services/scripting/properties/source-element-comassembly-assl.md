@@ -26,6 +26,7 @@ caps.latest.revision: 38
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Source Element (ComAssembly) (ASSL)
   Contains the file name or programmatic identifier (ProgID) for a Component Object Model (COM) component.  

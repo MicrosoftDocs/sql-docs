@@ -26,6 +26,7 @@ caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # ConnectionString Element (ASSL)
   Contains the encrypted connection string for a [DataSource](../../../analysis-services/scripting/objects/datasource-element-assl.md) element.  

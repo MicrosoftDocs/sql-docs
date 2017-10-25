@@ -26,6 +26,7 @@ caps.latest.revision: 32
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Filter Element (Trace) (ASSL)
   Contains an XML document fragment that describes the [Trace](../../../analysis-services/scripting/objects/trace-element-assl.md) filter.  

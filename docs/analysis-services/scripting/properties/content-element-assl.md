@@ -26,6 +26,7 @@ caps.latest.revision: 43
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Content Element (ASSL)
   Describes the content of the column in the [MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md) element.  

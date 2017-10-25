@@ -16,6 +16,7 @@ caps.latest.revision: 33
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Queries Events Data Columns
   The Queries Events event category has the following event classes:  

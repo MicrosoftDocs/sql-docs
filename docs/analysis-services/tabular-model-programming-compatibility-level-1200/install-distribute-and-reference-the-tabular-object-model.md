@@ -15,6 +15,7 @@ caps.latest.revision: 22
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Install, distribute, and reference the Tabular Object Model
 

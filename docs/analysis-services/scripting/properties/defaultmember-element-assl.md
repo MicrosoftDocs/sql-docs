@@ -26,6 +26,7 @@ caps.latest.revision: 38
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # DefaultMember Element (ASSL)
   Contains a Multidimensional Expressions (MDX) expression that identifies the default member of the parent element.  

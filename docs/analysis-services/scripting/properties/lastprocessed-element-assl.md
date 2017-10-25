@@ -26,6 +26,7 @@ caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # LastProcessed Element (ASSL)
   Contains the read-only timestamp that indicates when the database that contains the parent element was last processed.  

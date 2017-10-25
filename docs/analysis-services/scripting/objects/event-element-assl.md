@@ -26,6 +26,7 @@ caps.latest.revision: 37
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Event Element (ASSL)
   Defines an **Event** to be captured as part of a [Trace](../../../analysis-services/scripting/objects/trace-element-assl.md) element.  

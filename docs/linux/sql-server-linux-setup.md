@@ -51,7 +51,7 @@ If you use **Network File System (NFS)** remote shares in production, note the f
 
 ## <a id="platforms"></a> Install SQL Server
 
-You can install SQL Server on Linux from the command-line. For instructions, see one of the following quick start tutorials:
+You can install SQL Server on Linux from the command line. For instructions, see one of the following quick start tutorials:
 
 - [Install on Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
 - [Install on SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
@@ -111,7 +111,7 @@ sudo rm -rf /var/opt/mssql/
 
 When you install or upgrade SQL Server, you get the latest version of SQL Server from your configured Microsoft repository. It is important to note that there are two main types of repositories for each distribution:
 
-### Source repository options
+### Repository options
 
 - **Cumulative Updates (CU)**: The Cumulative Update (CU) repository contains packages for the base SQL Server release and any bug fixes or improvements since that release. Cumulative updates are specific to a release version, such as SQL Server 2017. They are released on a regular cadence.
 

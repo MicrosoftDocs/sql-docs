@@ -49,7 +49,7 @@ This is the Cumulative Update 1 (CU1) release of SQL Server 2017. The SQL Server
 
 ### Installation
 
-If you have configured the Cumulative Update repository, then you will get the latest cumulative update of SQL Server packages when you perform new installations. The Cumulative Update respository is the default for all package installation articles for SQL Server on Linux. For more information about repository configuration, see [Source repositories](sql-server-linux-setup.md#respositories).
+If you have configured the Cumulative Update repository, then you will get the latest cumulative update of SQL Server packages when you perform new installations. The Cumulative Update repository is the default for all package installation articles for SQL Server on Linux. For more information about repository configuration, see [Source repositories](sql-server-linux-setup.md#repositories).
 
 If you are updating existing SQL Server packages, run the appropriate update command for each package to get the latest cumulative update. For specific update instructions for each package, see the following installation guides:
 

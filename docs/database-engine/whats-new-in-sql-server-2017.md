@@ -1,7 +1,7 @@
 ---
 title: "What's new in Database Engine - SQL Server 2017 | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/11/2017"
+ms.date: "10/24/2017"
 ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
@@ -11,7 +11,7 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 42f45b23-6509-45e8-8ee7-76a78f99a920
 caps.latest.revision: 15
-author: "BYHAM"
+author: "srutzky"
 ms.author: "rickbyh"
 manager: "jhubbard"
 ---

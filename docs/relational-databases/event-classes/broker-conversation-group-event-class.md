@@ -16,6 +16,7 @@ caps.latest.revision: 24
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Broker:Conversation Group Event Class
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generates a **Broker:Conversation Group** event when Service Broker creates a new conversation group or drops an existing conversation group.  

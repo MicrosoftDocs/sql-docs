@@ -27,6 +27,7 @@ caps.latest.revision: 12
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Accessing User-Defined Types - Updating UDT Columns with DataAdapters
   User-defined types (UDTs) are supported by using a **System.Data.DataSet** and a **System.Data.SqlClient.SqlDataAdapter** to retrieve and modify data.  

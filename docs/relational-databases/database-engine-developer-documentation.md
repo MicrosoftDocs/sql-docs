@@ -17,6 +17,7 @@ caps.latest.revision: 17
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Database Engine Developer Documentation
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] provides a rich set of tools for developing, administering, and controlling database applications.  

@@ -18,6 +18,7 @@ caps.latest.revision: 17
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # CLR Event Category
   The **CLR** event category includes event classes that are produced by the execution of [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] common language runtime (CLR) objects inside [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

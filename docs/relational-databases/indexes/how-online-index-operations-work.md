@@ -23,6 +23,7 @@ manager: jhubbard
 ms.suite: SQL
 ms.prod_service: database engine, sql database, sql data warehouse
 ms.component: indexes
+ms.workload: "Inactive"
 ---
 # How Online Index Operations Work
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

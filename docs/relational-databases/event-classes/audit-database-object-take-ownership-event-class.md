@@ -16,6 +16,7 @@ caps.latest.revision: 22
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Audit Database Object Take Ownership Event Class
   The **Audit Database Object Take Ownership** event class occurs when a change of owner for objects within database scope occurs.  

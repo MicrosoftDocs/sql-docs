@@ -16,6 +16,7 @@ caps.latest.revision: 32
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Data File Auto Shrink Event Class
   The **Data File Auto Shrink** event class indicates that the data file has been shrunk. This event is not triggered if the data file shrinks because of an explicit ALTER DATABASE statement. Include the **Data File Auto Shrink** event class in traces that monitor the data file size changes.  

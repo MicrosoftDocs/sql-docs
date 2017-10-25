@@ -16,6 +16,7 @@ caps.latest.revision: 26
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Broker:Forwarded Message Sent Event Class
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generates a Broker:Forwarded Message Sent event when Service Broker forwards a message.  

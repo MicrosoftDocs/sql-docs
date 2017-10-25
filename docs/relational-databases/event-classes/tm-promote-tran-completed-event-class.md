@@ -16,6 +16,7 @@ caps.latest.revision: 25
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # TM: Promote Tran Completed Event Class
   The TM: Promote Tran Completed event class indicates that a PROMOTE TRANSACTION request has completed. The request is sent from the client through the transaction management interface.  

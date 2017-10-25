@@ -18,6 +18,7 @@ caps.latest.revision: 25
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Create, Alter, and Drop FileTables
   Describes how to create a new FileTable, or alter or drop an existing FileTable.  

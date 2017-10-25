@@ -16,6 +16,7 @@ caps.latest.revision: 39
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Hash Warning Event Class
   The Hash Warning event class can be used to monitor when a hash recursion or cessation of hashing (hash bailout) has occurred during a hashing operation.  

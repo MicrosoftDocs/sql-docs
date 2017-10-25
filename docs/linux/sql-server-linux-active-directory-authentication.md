@@ -139,6 +139,8 @@ Use the following steps to join a [!INCLUDE[ssNoVersion](../includes/ssnoversion
    >
    > If you receive an error, "Insufficient permissions to join the domain," then you will need to check with a domain administrator that you have sufficient permissions to join Linux machines to your domain.
 
+test 
+
 1. Verify that you can now gather information about a user from the domain, and that you can acquire a Kerberos ticket as that user.
 
   > [!NOTE]
@@ -149,7 +151,7 @@ Use the following steps to join a [!INCLUDE[ssNoVersion](../includes/ssnoversion
   > For configuring NSS to work with SSSD, see: https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system-level_authentication_guide/configuring_services#Configuration_Options-NSS_Configuration_Options
 
 
-   We will use **id**, **[kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html)** and **[klist](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/klist.html)** commands for this.
+    We will use **id**, **[kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html)** and **[klist](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/klist.html)** commands for this.
 
    ```bash
    id user@contoso.com

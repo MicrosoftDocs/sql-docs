@@ -47,7 +47,10 @@ manager: "jhubbard"
 -   **Follow Up:**  [After Manually Failing Over an Availability Group](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
-  
+
+>[!IMPORTANT]
+>There are specific procedures to failover a read scale-out availability group with no cluster manager. When an availability group has CLUSTER_TYPE = NONE, follow the procedures under [Fail over primary replica on read scale-out availability group](#ReadScaleOutOnly).
+
 ###  <a name="Restrictions"></a> Limitations and Restrictions  
   
 -   A failover command returns as soon as the target secondary replica has accepted the command. However, database recovery occurs asynchronously after the availability group has finished failing over.  
@@ -122,7 +125,11 @@ manager: "jhubbard"
 -   [SQL Server PowerShell Provider](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
 -   [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)  
-  
+
+## <a name = "ReadScaleOutOnly"><a/>Fail over primary replica on read scale-out availability group
+
+[!INCLUDE[Force Failover](../../../includes/ss-force-failover-read-scale-out.md)]
+
 ##  <a name="FollowUp"></a> Follow Up: After Manually Failing Over an Availability Group  
  If you failed over outside of the [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)] of the availability group, adjust the quorum votes of the WSFC nodes to reflect your new availability group configuration. For more information, see [Windows Server Failover Clustering &#40;WSFC&#41; with SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md).  
   

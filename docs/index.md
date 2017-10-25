@@ -120,12 +120,12 @@ ms.technology:
                                                 <h4 class="likeAnH3" style="margin: 1rem 0px;">Analysis</h4>
                                                 <ul>
                                                     <li><a href="/sql/analysis-services/analysis-services">SQL Server Analysis Services (2016, 2017)</a></li>
-                                                    <li><a href="https://msdn.microsoft.com/en-us/library/bb522607(v=sql.120).aspx">SQL Server 2014 Analysis Services</a></li>
-                                                    <li><a href="https://msdn.microsoft.com/en-us/library/bb522607(v=sql.110).aspx">SQL Server 2012 Analysis Services</a></li>
+                                                    <li><a href="https://msdn.microsoft.com/library/bb522607(v=sql.120).aspx">SQL Server 2014 Analysis Services</a></li>
+                                                    <li><a href="https://msdn.microsoft.com/library/bb522607(v=sql.110).aspx">SQL Server 2012 Analysis Services</a></li>
                                                     <li><a href="/azure/analysis-services/">Azure Analysis Services</a></li> 
                                                     <li><a href="/azure/stream-analytics/">Azure Stream Analytics</a></li>
                                                     <li><a href="/azure/data-lake-analytics/">Azure Data Lake Analytics</a></li>
-                                                    <li><a href="https://azuremarketplace.microsoft.com/en-us/marketplace/apps/microsoft-ads.standard-data-science-vm">Data Science Virtual Machine</a></li>
+                                                    <li><a href="https://azuremarketplace.microsoft.com/marketplace/apps/microsoft-ads.standard-data-science-vm">Data Science Virtual Machine</a></li>
                                                 </ul>
                                                 <h4 class="likeAnH3" style="margin: 1rem 0px;">Machine learning</h4>
                                                 <ul>
@@ -136,9 +136,9 @@ ms.technology:
                                                 <h4 class="likeAnH3" style="margin: 1rem 0px;">Reporting</h4>
                                                 <ul>
                                                     <li><a href="/sql/reporting-services/create-deploy-and-manage-mobile-and-paginated-reports">SQL Server Reporting Services (2016, 2017)</a></li>
-                                                    <li><a href="https://msdn.microsoft.com/en-us/library/ms159106(v=sql.120).aspx">SQL Server 2014 Reporting Services</a></li>
-                                                    <li><a href="https://msdn.microsoft.com/en-us/library/ms159106(v=sql.110).aspx">SQL Server 2012 Reporting Services</a></li>
-                                                    <li><a href="https://powerbi.microsoft.com/en-us/documentation/powerbi-service-get-started/">Power BI Service</a></li>
+                                                    <li><a href="https://msdn.microsoft.com/library/ms159106(v=sql.120).aspx">SQL Server 2014 Reporting Services</a></li>
+                                                    <li><a href="https://msdn.microsoft.com/library/ms159106(v=sql.110).aspx">SQL Server 2012 Reporting Services</a></li>
+                                                    <li><a href="https://powerbi.microsoft.com/documentation/powerbi-service-get-started/">Power BI Service</a></li>
                                                 </ul>
                                             </div>
                                         </div>

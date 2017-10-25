@@ -91,9 +91,27 @@ To rollback or downgrade SQL Server to a previous release, use the following ste
 > [!IMPORTANT]
 > Downgrade is only supported between RTM, RC2, and RC1 at this time.
 
-## <a id="repositories"></a> Configure source repositories
+## <a id="uninstall"></a> Uninstall SQL Server
+
+To remove the **mssql-server** package on Linux, use one of the following commands based on your platform:
+
+| Platform | Package removal command(s) |
+|-----|-----|
+| RHEL | `sudo yum remove mssql-server` |
+| SLES | `sudo zypper remove mssql-server` |
+| Ubuntu | `sudo apt-get remove mssql-server` |
+
+Removing the package does not delete the generated database files. If you want to delete the database files, use the following command:
+
+```bash
+sudo rm -rf /var/opt/mssql/
+```
+
+## <a id="repositories"></a> Source repositories
 
 When you install or upgrade SQL Server, you get the latest version of SQL Server from your configured Microsoft repository. It is important to note that there are two main types of repositories for each distribution:
+
+### Source repository options
 
 - **Cumulative Updates (CU)**: The Cumulative Update (CU) repository contains packages for the base SQL Server release and any bug fixes or improvements since that release. Cumulative updates are specific to a release version, such as SQL Server 2017. They are released on a regular cadence.
 
@@ -101,10 +119,12 @@ When you install or upgrade SQL Server, you get the latest version of SQL Server
 
 Each CU and GDR release contains the full SQL Server package and all previous updates for that repository. Updating from a GDR release to a CU release is supported by changing your configured repository for SQL Server. You can also [downgrade](#rollback) to any release within your major version (ex: 2017). Updating from a CU release to a GDR release is not supported.
 
+### Configure the source repository
+
 To configure the CU or GDR repositories, use the following steps:
 
 > [!NOTE]
-> The [quick start tutorials](#platforms) configure the CU repository. If you follow those tutorials, you do not need to do the steps below to continue using the CU repository. These steps are only necessary for changing your configured repository.
+> The [quick start tutorials](#platforms) configure the CU repository. If you follow those tutorials, you do not need to use the steps below to continue using the CU repository. These steps are only necessary for changing your configured repository.
 
 1. If necessary, remove the previously configured repository.
 
@@ -135,22 +155,6 @@ To configure the CU or GDR repositories, use the following steps:
 
    > [!IMPORTANT]
    > At this point, if you choose to perform a full installation using the [quickstart tutorials](#platforms), remember that you have just configured the target repository. Do not repeat that step in the tutorials. This is especially true if you configure the GDR repository, because the quickstart tutorials use the CU repository.
-
-## <a id="uninstall"></a> Uninstall SQL Server
-
-To remove the **mssql-server** package on Linux, use one of the following commands based on your platform:
-
-| Platform | Package removal command(s) |
-|-----|-----|
-| RHEL | `sudo yum remove mssql-server` |
-| SLES | `sudo zypper remove mssql-server` |
-| Ubuntu | `sudo apt-get remove mssql-server` |
-
-Removing the package does not delete the generated database files. If you want to delete the database files, use the following command:
-
-```bash
-sudo rm -rf /var/opt/mssql/
-```
 
 ## <a id="unattended"></a> Unattended install
 

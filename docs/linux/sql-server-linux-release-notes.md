@@ -47,14 +47,18 @@ The following table lists the release history for SQL Server 2017.
 
 This is the Cumulative Update 1 (CU1) release of SQL Server 2017. The SQL Server engine version for this release is 14.0.3006.16. For information about the fixes and improvements in this release, see [https://support.microsoft.com/help/4038634](https://support.microsoft.com/help/4038634).
 
-### Package details
+### Installation
 
-To install or upgrade to this cumulative update, see the following installation guides:
+If you have configured the Cumulative Update repository, then you will get the latest cumulative update of SQL Server packages when you perform new installations. The Cumulative Update respository is the default for all package installation articles for SQL Server on Linux. For more information about repository configuration, see [Source repositories](sql-server-linux-setup.md#respositories).
 
-- [Install SQL Server package](sql-server-linux-setup.md)
+If you are updating existing SQL Server packages, run the appropriate update command for each package to get the latest cumulative update. For specific update instructions for each package, see the following installation guides:
+
+- [Install SQL Server package](sql-server-linux-setup.md#upgrade)
 - [Install Full-text Search package](sql-server-linux-setup-full-text-search.md)
 - [Install SQL Server Agent package](sql-server-linux-setup-sql-agent.md)
 - [Install SQL Server Integration Services](sql-server-linux-setup-ssis.md)
+
+### Package details
 
 For manual or offline package installations, you can download the RPM and Debian packages with the information in the following table:
 

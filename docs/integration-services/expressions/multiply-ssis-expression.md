@@ -17,6 +17,7 @@ caps.latest.revision: 29
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # * (Multiply) (SSIS Expression)
   Multiplies two numeric expressions.  

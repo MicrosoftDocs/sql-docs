@@ -24,6 +24,7 @@ caps.latest.revision: 20
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Map TCP IP Ports to NUMA Nodes (SQL Server)
   This topic describes how to map TCP/IP ports to non-uniform memory access (NUMA) nodes by using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager. On startup, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] writes the node information to the error log.  

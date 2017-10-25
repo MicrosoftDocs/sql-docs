@@ -19,6 +19,7 @@ caps.latest.revision: 33
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # SQL Server Database Engine Backward Compatibility
   Topics in the backward compatibility section describe changes in behavior between versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  

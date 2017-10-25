@@ -17,6 +17,7 @@ caps.latest.revision:
 author: "allanhirt"
 ms.author: "mikeray"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 
 # Add Enhanced Database Failover to an Availability Group (SQL Server)

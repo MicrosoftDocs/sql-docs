@@ -21,6 +21,7 @@ caps.latest.revision: 36
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Multiple Files Connection Manager
   A Multiple Files connection manager enables a package to reference existing files and folders, or to create files and folders at run time.  

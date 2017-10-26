@@ -26,6 +26,7 @@ caps.latest.revision: 39
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Set a Session Language
   The session language can be used to set how the following elements are displayed on the server, based on language and cultural preference:  

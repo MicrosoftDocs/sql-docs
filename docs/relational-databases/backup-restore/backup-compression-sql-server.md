@@ -21,6 +21,7 @@ caps.latest.revision: 51
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Backup Compression (SQL Server)
   This topic describes the compression of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backups, including restrictions, performance trade-off of compressing backups, the configuration of backup compression, and the compression ratio.  Backup compression is supported on [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] editions: Enterprise, Standard, and Developer.  Every edition of [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later can restore a compressed backup. 

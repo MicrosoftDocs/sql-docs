@@ -18,6 +18,7 @@ caps.latest.revision: 12
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Progress Report Event Category
   The **Progress Report** event category contains the **Progress Report: Online Index Operation** event class.  

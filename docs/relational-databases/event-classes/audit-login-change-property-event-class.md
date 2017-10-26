@@ -16,6 +16,7 @@ caps.latest.revision: 31
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Audit Login Change Property Event Class
   The **Audit Login Change Property** event class occurs when you use the **sp_defaultdb** stored procedure, the **sp_defaultlanguage** stored procedure, or the ALTER LOGIN statement to modify a property of a login.  

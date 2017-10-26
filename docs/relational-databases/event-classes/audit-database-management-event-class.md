@@ -16,6 +16,7 @@ caps.latest.revision: 19
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Audit Database Management Event Class
   The **Audit Database Management** event class occurs when a database is created, altered, or dropped.  

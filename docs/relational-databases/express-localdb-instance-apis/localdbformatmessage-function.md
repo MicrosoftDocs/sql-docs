@@ -19,6 +19,7 @@ caps.latest.revision: 14
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # LocalDBFormatMessage Function
   Returns the localized textual description for the specified SQL Server Express LocalDB error.  

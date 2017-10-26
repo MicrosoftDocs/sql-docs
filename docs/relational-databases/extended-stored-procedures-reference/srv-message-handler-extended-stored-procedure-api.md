@@ -23,6 +23,7 @@ caps.latest.revision: 31
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # srv_message_handler (Extended Stored Procedure API)
     

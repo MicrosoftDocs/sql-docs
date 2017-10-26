@@ -1,5 +1,6 @@
 ---
-title: "System Databases (SQL Server PDW)"
+title: "System Databases (SQL Server PDW)"
+
 author: "barbkess" 
 ms.author: "barbkess"
 manager: "jhubbard"	  
@@ -14,6 +15,7 @@ ms.topic: article
 ms.assetid: f03e26be-1b16-4526-b4b8-1f17b91d3635
 caps.latest.revision: 9
 
+ms.workload: "On Demand"
 ---
 # System Databases
 System databases are databases that SQL Server PDW uses to manage users, databases, and temporary data. SQL Server PDW includes the following system databases: master, and tempdb.  

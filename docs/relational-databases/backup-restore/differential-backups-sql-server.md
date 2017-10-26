@@ -17,6 +17,7 @@ caps.latest.revision: 60
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Differential Backups (SQL Server)
   This backup and restore topic is relevant for all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases.  

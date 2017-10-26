@@ -14,41 +14,31 @@ ms.date: 10/24/2017
 ---
 # Manage servers and databases with Insight widgets in Carbon
 
-Carbon's support for creating Insight widgets takes the SQL queries you use to monitor servers & databases, and easily visualize the results with charts and graphs on a customizable monitoring dashboard. 
+Insight widgets take the SQL queries you use to monitor servers & databases, and turns them into insightful visualizations. 
 
-- **Manage with insights**: view at-a-glance insights of your servers and databases, drill into more details then launch a management action. 
-- **Build insights tailored to your own needs**: share with community or leverage community efforts via insight widget extensions.
-- **Build insight widget using your most familiar language**: T-SQL or pgSQL
+Insights are customizable charts and graphs that you add to server and database monitoring dashboards. View at-a-glance insights of your servers and databases, then drill into more details, and launch management actions that you define. 
 
-You can build your own server and database manage dashboards like the following example:
+You can build even better server and database management dashboards than the following example:
 
 ![database dashboard](media/insight-widgets/database-dashboard.png)
 
 
-Insight widgets in Carbon utilize many open source projects. 
-
-**Visualization**
-
-Chart.js through an Angular.JS module is the underlying open source project that powers up Carbon's insight visualizations. Hence, Carbon shares similar concepts and configuration experience with Chart.js. Take a look at the [Chart.JS sample page](http://www.chartjs.org/samples/latest/).
-
-**Configuration**
-
-For configuration, Carbon tries to avoid introducing yet another language or heavy UI.  It tries to stick to SQL as much as possible with a minimal JSON configuration. SQL is the language Carbon users are familiar with and there are countless number of sources of useful SQL queries that can be turned into Insight widgets.
-
 ## SQL Queries
 
-Insight widgets require a minimum of one or two SQL queries:
+Carbon tries to avoid introducing yet another language or heavy UI.  It tries to stick to SQL as much as possible with a minimal JSON configuration. SQL is the language Carbon users are familiar with and there are countless number of sources of useful SQL queries that can be turned into Insight widgets.
+
+Insight widgets are composed of one or two SQL queries:
 * *Insight widget query* is mandatory, and is the query that returns the data that appears in the widget.
-* *Insight details query* is only required if you are creating an Insight details flyout.
+* *Insight details query* is only required if you are creating an Insight Details flyout.
 
-Insight widget query defines the dataset to render a count, chart, or graph. Insight details query is used to list relevant insight detail information in a tabular format in the Insight Details flyout dialog. 
+Insight widget query defines a dataset that renders a count, chart, or graph. Insight details query is used to list relevant insight detail information in a tabular format in the Insight Details flyout. 
 
-Carbon executes insight widget query and maps the query result set to a chart's dataset then renders it. When user opens up an insight detail flyout, Carbon executes the insight details query and prints out the result in a grid view within the dialog.
+Carbon executes insight widget query and maps the query result set to a chart's dataset then renders it. When users open up an insight detail flyout, Carbon executes the insight details query and prints out the result in a grid view within the dialog.
 
-The basic idea is to write a SQL query in a way to be used as a dataset of a count, chart, and graph widget. 
+The basic idea is to write a SQL query in a way so it can be used as a dataset of a count, chart, and graph widget. 
 
 ## Mapping between a query result and dataset of chart / graph / count.
-Caron interprets the query's result set in two ways, vertical and horizontal. Let's call it as 'dataDirection'.
+Caron interprets the query's result set in two ways, vertical and horizontal. Let's call this 'dataDirection'.
 For example, in horizontal dataDirection, each row defines a dataset and column defines the legend or label. In the sample's database state query, it uses horizontal dataDirection.
 
 |ONLINE|RECOVERY_PENDING|
@@ -88,7 +78,7 @@ In this case, LegendColumn values are mapped to Chart's legend, and for each row
 
 Line and Scatter plot charts requires numeric value for the xAxisValueColumn. TimeSeries chart requires datetime value for the xAxisValueColumn. yAxisValueColumn should be numeric in all cases.
 
-For instance, QDS: Top five slowest query TimeSeries chart is based on the following result:
+For instance, QDS: Top five slowest queries TimeSeries chart is based on the following result:
 
 |query_id|last_execution_time|max_duration|
 |:---|:---|:---|
@@ -165,3 +155,12 @@ T-SQL query and its result set itself determines the insight widget behavior. Wr
 ## Next steps
 - [Download and Install Carbon](download.md)
 - [Connect to SQL Server](get-started-sql-server.md)
+
+
+
+## ARCHIVE??
+
+*Insight widgets in Carbon utilize many open source projects.*
+
+**Visualization**:
+Chart.js through an Angular.JS module is the underlying open source project that powers up Carbon's insight visualizations. Hence, Carbon shares similar concepts and configuration experience with Chart.js. Take a look at the [Chart.JS sample page](http://www.chartjs.org/samples/latest/).

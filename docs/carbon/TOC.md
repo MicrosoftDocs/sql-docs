@@ -20,14 +20,14 @@
 ### [4. Server Insight - Database Size](tutorial-db-size-sql-server.md)
 ### [5. Build Custom Insight - Missing Index and Memory Usage](tutorial-build-custom-insight-sql-server.md) 
 ## [Backup and restore](tutorial-backup-restore-sql-server.md)
-# Samples
-## Snippet samples
+# Concepts
+## [Management dashboards](insight-widgets.md)
+## [Server groups](server-groups.md)
 # How-to guides
 ## [Code snippets](code-snippets.md)
-## [Insight widgets & Dashboards)](dashboards.md)
+## [Insight widgets](insight-widgets-create.md)
 ## [Integrated terminal (PowerShell, Bash)](integrated-terminal.md)
 ## [Keyboard shortcuts](keyboard-shortcuts.md)
-## [Server groups](server-groups.md)
 ## [Source control](source-control.md)
 ## [Workspace & user settings](settings.md)
 ## [Windows authentication (Kerberos)](enable-kerberos.md)

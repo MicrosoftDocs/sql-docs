@@ -20,4 +20,6 @@ In this quick start tutorial, you will install SQL Server 2017 on Red Hat Enterp
 ## Digital Ocean
 ## Google Cloud Platform
 ## Heroku
+## IBM
 ## Rackspace
+## VMWare

@@ -141,7 +141,7 @@ If you want to verify what repository is configured, use the following platform-
 |-----|-----|
 | RHEL | 1. View the files in the **/etc/yum.repos.d** directory: `sudo ls /etc/yum.repos.d`<br/>2. Look for a file that configures the SQL Server directory, such as **mssql-server.repo**.<br/>3. Print out the contents of the file: `sudo cat /etc/yum.repos.d/mssql-server.repo`<br/>4. The **name** property is the configured repository.|
 | SLES | 1. Run the following command: `sudo zypper info mssql-server`<br/>2. The **Repository** property is the configured repository. |
-| Ubuntu | 1. Run the following command: `sudo cat /etc/apt/sources.list | grep mssql-server`<br/>2. Examine the package URL for mssql-server. |
+| Ubuntu | 1. Run the following command: `sudo cat /etc/apt/sources.list`<br/>2. Examine the package URL for mssql-server. |
 
 The end of the repository URL confirms the repository type:
 

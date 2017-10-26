@@ -21,6 +21,7 @@ caps.latest.revision: 37
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Retrieving Metadata - Working with Schema Rowsets
   When you need more metadata than is available in the ADOMD.NET object model, ADOMD.NET provides the capability to retrieve the full range of XML for Analysis (XMLA), OLE DB, OLE DB for OLAP, and OLE DB for Data Mining schema rowsets:  

@@ -16,6 +16,7 @@ caps.latest.revision: 24
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Errors and Warnings Events Data Columns
   The Security Audit event category has the following event class:  

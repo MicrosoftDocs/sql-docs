@@ -14,6 +14,7 @@ caps.latest.revision: 6
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # File Load and Save Event Category
   The File Load and Save event category has the event classes described in the following table.  

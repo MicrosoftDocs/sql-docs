@@ -27,6 +27,7 @@ caps.latest.revision: 50
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # DROP ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -73,7 +74,7 @@ DROP ROLE role_name
  To remove a server role, use [DROP SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-role-transact-sql.md).  
   
 ## Permissions  
- Requires **ALTER ANY ROLE** permission on the database, or **CONTOL** permission on the role, or membership in the **db_securityadmin**.  
+ Requires **ALTER ANY ROLE** permission on the database, or **CONTROL** permission on the role, or membership in the **db_securityadmin**.  
   
 ## Examples  
  The following example drops the database role `purchasing` from the `AdventureWorks2012` database.  

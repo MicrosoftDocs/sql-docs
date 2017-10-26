@@ -15,6 +15,7 @@ caps.latest.revision: 25
 author: "Minewiskan"
 ms.author: "owend"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Data Mining Projects
   A data mining project is part of an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] solution. During the design process, the objects that you create in this project are available for testing and querying as part of a workspace database. When you want users to be able to query or browse the objects in the project, you must deploy the project to an instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] running in multidimensional mode.  

@@ -17,6 +17,7 @@ caps.latest.revision: 67
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Database Properties (Options Page)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -99,10 +100,10 @@ manager: "jhubbard"
  Specify the query optimizer cardinality estimation model for secondaries, if any, independent of the compatibility level of the database. This is equivalent to [Trace Flag 9481](https://support.microsoft.com/en-us/kb/2801413).  
   
  **Max DOP**  
- Specify the default [MAXDOP](https://msdn.microsoft.com/en-us/library/ms189094.aspx) setting for the primary that should be used for statements.  
+ Specify the default [MAXDOP](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) setting for the primary that should be used for statements.  
   
  **Max DOP for Secondary**  
- Specify the default [MAXDOP](https://msdn.microsoft.com/en-us/library/ms189094.aspx) setting for secondaries, if any, that should be used for statements.  
+ Specify the default [MAXDOP](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) setting for secondaries, if any, that should be used for statements.  
   
  **Parameter Sniffing**  
  Enables or disables parameter sniffing on the primary. This is equivalent to [Trace Flag 4136](https://support.microsoft.com/en-us/kb/980653).  

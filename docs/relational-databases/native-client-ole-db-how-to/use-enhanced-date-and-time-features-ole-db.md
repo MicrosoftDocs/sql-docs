@@ -14,6 +14,7 @@ caps.latest.revision: 9
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Use Enhanced Date and Time Features (OLE DB)
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]

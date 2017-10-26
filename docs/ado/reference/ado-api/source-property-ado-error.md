@@ -21,6 +21,7 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Source Property (ADO Error)
 Indicates the name of the object or application that originally generated an error.  

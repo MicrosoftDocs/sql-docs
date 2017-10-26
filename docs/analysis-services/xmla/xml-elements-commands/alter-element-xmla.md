@@ -28,6 +28,7 @@ caps.latest.revision: 15
 author: "jeannt"
 ms.author: "jeannt"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Alter Element (XMLA)
   Contains Analysis Services Scripting Language (ASSL) elements used by the [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) method to alter objects on an instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  

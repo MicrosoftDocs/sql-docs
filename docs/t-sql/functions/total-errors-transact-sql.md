@@ -1,7 +1,7 @@
 ---
 title: "@@TOTAL_ERRORS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "09/18/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -27,8 +27,9 @@ caps.latest.revision: 18
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
-# @@TOTAL_ERRORS (Transact-SQL)
+# &#x40;&#x40;TOTAL_ERRORS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Returns the number of disk write errors encountered by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] since [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] last started.  
@@ -38,7 +39,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
-  
 @@TOTAL_ERRORS  
 ```  
   

@@ -14,6 +14,7 @@ caps.latest.revision: 5
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Lock Events Data Columns
   The Lock event category has the following event class:  

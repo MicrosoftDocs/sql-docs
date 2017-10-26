@@ -17,6 +17,7 @@ caps.latest.revision: 33
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Uses of ODBC Table-Valued Parameters
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]

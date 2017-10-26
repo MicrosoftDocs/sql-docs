@@ -25,6 +25,7 @@ caps.latest.revision: 42
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # TYPE_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,8 +37,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 TYPE_NAME ( type_id )   
 ```  
   
@@ -75,27 +74,20 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `obj_name        col_name                  type_name`  
-  
- `--------------- ------------------------ --------------`  
-  
- `Vendor          AccountNumber            AccountNumber`  
-  
- `Vendor          ActiveFlag               Flag`  
-  
- `Vendor          BusinessEntityID         int`  
-  
- `Vendor          CreditRating             tinyint`  
-  
- `Vendor          ModifiedDate             datetime`  
-  
- `Vendor          Name                     Name`  
-  
- `Vendor          PreferredVendorStatus    Flag`  
-  
- `Vendor          PurchasingWebServiceURL  nvarchar`  
-  
- `(8 row(s) affected)`  
+ ```
+obj_name        col_name                  type_name
+--------------- ------------------------ --------------
+Vendor          AccountNumber            AccountNumber
+Vendor          ActiveFlag               Flag
+Vendor          BusinessEntityID         int
+Vendor          CreditRating             tinyint
+Vendor          ModifiedDate             datetime
+Vendor          Name                     Name
+Vendor          PreferredVendorStatus    Flag
+Vendor          PurchasingWebServiceURL  nvarchar
+
+(8 row(s) affected)
+```  
   
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  The following example returns the `TYPE ID` for the data type with id `1`.  

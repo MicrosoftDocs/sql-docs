@@ -19,6 +19,7 @@ caps.latest.revision: 17
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Saving a Package Programmatically
   After building a new package programmatically, or modifying an existing one, you usually want to save your changes.  

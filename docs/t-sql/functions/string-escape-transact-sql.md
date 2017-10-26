@@ -21,6 +21,7 @@ caps.latest.revision: 11
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # STRING_ESCAPE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -77,11 +78,11 @@ SELECT STRING_ESCAPE('\   /
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `escapedText`  
-  
- `-------------------------------------------------------------`  
-  
- `\\\t\/\n\\\\\t\"\t`  
+ ```
+escapedText  
+-------------------------------------------------------------  
+\\\t\/\n\\\\\t\"\t
+```  
   
 ### B. Format JSON object  
  The following query creates JSON text from number and string variables, and escapes any special JSON character in variables.  

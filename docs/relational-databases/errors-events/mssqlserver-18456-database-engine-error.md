@@ -16,6 +16,7 @@ caps.latest.revision: 15
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # MSSQLSERVER_18456
   

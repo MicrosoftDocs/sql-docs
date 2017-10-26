@@ -17,6 +17,7 @@ caps.latest.revision: 21
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Add a Collection Item to a Collection Set (Transact-SQL)
   You can add a collection item to an existing collection set using the stored procedures that are provided with the data collector.  

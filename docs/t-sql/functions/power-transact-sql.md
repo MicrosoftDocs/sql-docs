@@ -21,6 +21,7 @@ caps.latest.revision: 41
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # POWER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -32,8 +33,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 POWER ( float_expression , y )  
 ```  
   
@@ -145,9 +144,10 @@ SELECT POWER(2.0, 3);
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `------------`  
-  
- `8.0`  
+ ```
+------------ 
+8.0
+```  
   
 ## See Also  
  [decimal and numeric &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)   

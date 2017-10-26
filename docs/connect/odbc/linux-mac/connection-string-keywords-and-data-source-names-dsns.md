@@ -18,6 +18,7 @@ caps.latest.revision: 41
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Connection String Keywords and Data Source Names (DSNs)
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]

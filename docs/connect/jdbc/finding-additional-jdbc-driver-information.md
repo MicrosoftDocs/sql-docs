@@ -14,6 +14,7 @@ caps.latest.revision: 48
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Finding Additional JDBC Driver Information
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

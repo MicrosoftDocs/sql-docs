@@ -17,6 +17,7 @@ caps.latest.revision: 14
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # DISCOVER_STORAGE_TABLE_COLUMNS Rowset
   Provides information at the column level about storage tables used by an Analysis Services database running in SharePoint or Tabular mode.  

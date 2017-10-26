@@ -17,6 +17,7 @@ caps.latest.revision: 15
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # FetchOptions Property (RDS)
 Indicates the type of asynchronous fetching.  

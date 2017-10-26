@@ -16,6 +16,7 @@ caps.latest.revision: 19
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Properties Reference (Replication)
   This section of the documentation provides information on the following replication wizards and dialog boxes:  

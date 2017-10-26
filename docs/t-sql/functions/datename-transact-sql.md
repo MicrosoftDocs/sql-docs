@@ -28,6 +28,7 @@ caps.latest.revision: 59
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # DATENAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -41,8 +42,6 @@ For an overview of all [!INCLUDE[tsql](../../includes/tsql-md.md)] date and time
 ## Syntax  
   
 ```sql
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 DATENAME ( datepart , date )  
 ```  
   

@@ -26,6 +26,7 @@ caps.latest.revision: 32
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # PerspectiveKpi Data Type (ASSL)
   Defines a primitive data type that represents information about a key performance indicator (KPI) in a [Perspective](../../../analysis-services/scripting/objects/perspective-element-assl.md) element.  

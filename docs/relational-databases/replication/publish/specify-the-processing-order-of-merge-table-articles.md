@@ -19,6 +19,7 @@ caps.latest.revision: 33
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Specify the Processing Order of Merge Table Articles
   Merge replication enables you to specify the order in which articles are processed by the Merge Agent during the synchronization process. You can assign an order to each article programmatically when creating an article using replication stored procedures. Articles are processed in order from lowest to highest value. If two articles have the same value, they are processed concurrently. For more information, see [Specify the Processing Order of Merge Articles](../../../relational-databases/replication/merge/specify-the-processing-order-of-merge-articles.md).  

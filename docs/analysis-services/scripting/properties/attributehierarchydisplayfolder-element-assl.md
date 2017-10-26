@@ -26,6 +26,7 @@ caps.latest.revision: 36
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # AttributeHierarchyDisplayFolder Element (ASSL)
   Identifies the folder in which to display the associated attribute hierarchy.  

@@ -45,6 +45,9 @@
         - name: ADO RDS API (Deprecated)
           href: /sql/ado/reference/rds-api/
           homepage: /sql/ado/reference/rds-api/rds-api-reference
+    - name: Analytics Platform System
+      href: /sql/analytics-platform-system/
+      homepage: /sql/analytics-platform-system/index
     - name: Connect your client to SQL
       href: /sql/connect/
       homepage: /sql/connect/sql-server-drivers
@@ -348,6 +351,9 @@
         - name: Performance
           href: /sql/integration-services/performance/
           homepage: /sql/integration-services/performance/monitor-running-packages-and-other-operations
+        - name: Scale out
+          href: /sql/integration-services/scale-out/
+          homepage: /sql/integration-services/scale-out/integration-services-ssis-scale-out
         - name: Security
           href: /sql/integration-services/security/
           homepage: /sql/integration-services/security/security-overview-integration-services
@@ -567,7 +573,7 @@
         homepage: /sql/relational-databases/graphs/sql-graph-overview
       - name: Import and export
         href: /sql/relational-databases/import-export/
-        homepage: /sql/relational-databases/import-export/bulk-import-and-export-of-data-sql-server
+        homepage: /sql/relational-databases/import-export/overview-import-export
       - name: In-memory OLTP
         href: /sql/relational-databases/in-memory-oltp/
         homepage: /sql/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization

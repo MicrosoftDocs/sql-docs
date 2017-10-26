@@ -26,6 +26,7 @@ caps.latest.revision: 33
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # SourceAttributeID Element (ASSL)
   Contains the identifier (ID) of the source attribute on which the [Level](../../../analysis-services/scripting/objects/level-element-assl.md) element is based.  

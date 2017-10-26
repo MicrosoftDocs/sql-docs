@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Quick Start 1: In-Memory OLTP Technologies for Faster Transact-SQL Performance | Microsoft Docs"
 ms.custom: ""
 ms.date: 09/05/2017"
@@ -14,6 +14,7 @@ caps.latest.revision: 31
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Survey of Initial Areas in In-Memory OLTP
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]

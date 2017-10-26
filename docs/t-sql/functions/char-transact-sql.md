@@ -30,6 +30,7 @@ caps.latest.revision: 39
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # CHAR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -112,15 +113,16 @@ FROM Person.Person p JOIN Person.EmailAddress pe
 ON p.BusinessEntityID = pe.BusinessEntityID  
 AND p.BusinessEntityID = 1;  
 GO  
-```sql
+```
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`Ken Sanchez`
+```
+Ken Sanchez
+ken0@adventure-works.com
   
-`ken0@adventure-works.com`
-  
-`(1 row(s) affected)`
+(1 row(s) affected)
+```
   
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   

@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # BookmarkEnum
 Specifies a bookmark indicating where the operation should begin.  

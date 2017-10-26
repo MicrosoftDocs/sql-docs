@@ -18,6 +18,7 @@ caps.latest.revision: 13
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Analyze Data in Local Compute Context (Data Science Deep Dive)
 

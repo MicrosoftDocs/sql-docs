@@ -31,7 +31,7 @@ Returns the edition (service tier), service objective (pricing tier) and elastic
   
  For information on pricing , see [SQL Database options and performance: SQL Database Pricing](https://azure.microsoft.com/en-us/pricing/details/sql-database/) and [SQL Data Warehouse Pricing](https://azure.microsoft.com/pricing/details/sql-data-warehouse/).  
   
- To change the service settings, see [ALTER DATABASE (Azure SQL Database)](https://msdn.microsoft.com/library/mt574871.aspx) and [ALTER DATABASE (Azure SQL Data Warehouse)](https://msdn.microsoft.com/library/mt204042.aspx).  
+ To change the service settings, see [ALTER DATABASE (Azure SQL Database)](../../t-sql/statements/alter-database-azure-sql-database.md) and [ALTER DATABASE (Azure SQL Data Warehouse)](../../t-sql/statements/alter-database-azure-sql-data-warehouse.md).  
   
  The sys.database_service_objectives view contains the following columns.  
   

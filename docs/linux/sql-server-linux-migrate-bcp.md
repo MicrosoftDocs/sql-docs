@@ -4,7 +4,7 @@ description:
 author: sanagama 
 ms.author: sanagama 
 manager: jhubbard
-ms.date: 03/17/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -14,7 +14,7 @@ ms.assetid: 7b93d0d7-7946-4b78-b33a-57d6307cdfa9
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-This topic shows how to use the [bcp](https://msdn.microsoft.com/en-us/library/ms162802.aspx) command line utility to bulk copy data between an instance of SQL Server 2017 RC2 on Linux and a data file in a user-specified format.
+This topic shows how to use the [bcp](../tools/bcp-utility.md) command line utility to bulk copy data between an instance of SQL Server 2017 on Linux and a data file in a user-specified format.
 
 You can use `bcp` to import large numbers of rows into SQL Server tables or to export data from SQL Server tables into data files. Except when used with the queryout option, `bcp` requires no knowledge of Transact-SQL. The `bcp` command line utility works with Microsoft SQL Server running on-premises or in the cloud, on Linux, Windows or Docker and Azure SQL Database and Azure SQL Data Warehouse.
 
@@ -130,7 +130,7 @@ This should display the following in your terminal window:
 ```
 
 ## See also
-- [bcp utility](https://msdn.microsoft.com/en-us/library/ms162802.aspx)
-- [Data Formats for Compatibility when Using bcp](https://msdn.microsoft.com/en-us/library/ms190759.aspx)
-- [Import Bulk Data by Using BULK INSERT](https://msdn.microsoft.com/en-us/library/ms175915.aspx)
-- [BULK INSERT (Transact-SQL)](https://msdn.microsoft.com/en-us/library/ms188365.aspx)
+- [bcp utility](../tools/bcp-utility.md)
+- [Data Formats for Compatibility when Using bcp](../relational-databases/import-export/specify-data-formats-for-compatibility-when-using-bcp-sql-server.md)
+- [Import Bulk Data by Using BULK INSERT](../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)
+- [BULK INSERT (Transact-SQL)](../t-sql/statements/bulk-insert-transact-sql.md)

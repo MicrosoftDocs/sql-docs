@@ -26,6 +26,7 @@ caps.latest.revision: 44
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # YEAR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -39,8 +40,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 YEAR ( date )  
 ```  
   
@@ -57,10 +56,10 @@ YEAR ( date )
  If *date* only contains a time part, the return value is 1900, the base year.  
   
 ## Examples  
- The following statement returns `2007`. This is the number of the year.  
+ The following statement returns `2010`. This is the number of the year.  
   
 ```  
-SELECT YEAR('2007-04-30T01:01:01.1234567-07:00');  
+SELECT YEAR('2010-04-30T01:01:01.1234567-07:00');  
 ```  
   
  The following statement returns `1900, 1, 1`. The argument for *date* is the number `0`. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interprets `0` as January 1, 1900.  
@@ -70,12 +69,6 @@ SELECT YEAR(0), MONTH(0), DAY(0);
 ```  
   
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- The following statement returns `2010`. This is the number of the year.  
-  
-```  
-SELECT YEAR('2010-07-20T01:01:01.1234');  
-```  
-  
  The following statement returns `1900, 1, 1`. The argument for *date* is the number `0`. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interprets `0` as January 1, 1900.  
   
 ```  

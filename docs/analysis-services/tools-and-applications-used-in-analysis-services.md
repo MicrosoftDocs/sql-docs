@@ -17,6 +17,7 @@ caps.latest.revision: 17
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "On Demand"
 ---
 # Tools and applications used in Analysis Services
   Find the tools and applications you'll need for building Analysis Services models and managing deployed databases.  
@@ -36,7 +37,7 @@ manager: "erikre"
   
  SQL Server Management Studio (SSMS) is the primary administration tool for all SQL Server features, including Analysis Services. SSMS is a free web download updated monthly. 
   
-**[Download SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx)** 
+**[Download SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)** 
   
  SSMS includes extended events (xEvents), providing a lightweight alternative to SQL Server Profiler traces used for monitoring activity and diagnosing problems on SQL Server 2016 and Azure Analysis Services servers. See [Monitor Analysis Services with SQL Server Extended Events](../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md) to learn more.  
   

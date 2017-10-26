@@ -24,7 +24,7 @@ manager: "jhubbard"
 ---
 # Install SQL Server
 
- > For content related to previous versions of SQL Server, see [Install SQL Server 2014](https://msdn.microsoft.com/en-US/library/bb500395(SQL.120).aspx).
+ > For content related to previous versions of SQL Server, see [Install SQL Server 2014](https://msdn.microsoft.com/library/bb500395(SQL.120).aspx).
 
  Beginning with [!INCLUDE[sssql15](../../includes/sssql15-md.md)], [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] is only available as a 64-bit application. Here are important details about how to get SQL Server and how to install it.
 

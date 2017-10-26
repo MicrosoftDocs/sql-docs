@@ -20,6 +20,7 @@ caps.latest.revision: 27
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "On Demand"
 ---
 # Maximum capacity specifications (Analysis Services)
   The following tables specify the maximum sizes and numbers of various objects defined in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] components under different server deployment modes.  

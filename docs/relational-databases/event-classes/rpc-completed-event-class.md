@@ -16,6 +16,7 @@ caps.latest.revision: 34
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # RPC:Completed Event Class
   The RPC:Completed event class indicates that a remote procedure call has been completed.  

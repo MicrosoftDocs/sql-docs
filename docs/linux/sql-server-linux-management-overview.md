@@ -15,14 +15,14 @@ ms.custom: H1Hack27Feb2017
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-There are several ways to manage SQL Server 2017 RC2 on Linux. The following section provide a quick overview of different management tools and techniques with pointers to more resources.
+There are several ways to manage SQL Server 2017 on Linux. The following section provide a quick overview of different management tools and techniques with pointers to more resources.
 
 ## mssql-conf 
 The **mssql-conf** tool configures SQL Server on Linux. For more information, see [Configure SQL Server on Linux with mssql-conf](sql-server-linux-configure-mssql-conf.md).
 
 ## Transact-SQL
 
-Almost everything you can do in a client tool can also be accomplished with Transact-SQL statements. SQL Server provides [Dynamic Management Views (DMVs)](https://msdn.microsoft.com/library/ms188754.aspx) that query the status and configuration of SQL Server. There are also [Transact-SQL commands](https://msdn.microsoft.com/library/bb510741.aspx) for database management tasks. You can run these commands in any client tool that supports connecting to SQL Server and running Transact-SQL queries. Examples include [sqlcmd](sql-server-linux-setup-tools.md), [Visual Studio Code](sql-server-linux-develop-use-vscode.md), and [SQL Server Management Studio](sql-server-linux-manage-ssms.md).
+Almost everything you can do in a client tool can also be accomplished with Transact-SQL statements. SQL Server provides [Dynamic Management Views (DMVs)](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) that query the status and configuration of SQL Server. There are also [Transact-SQL commands](https://msdn.microsoft.com/library/bb510741.aspx) for database management tasks. You can run these commands in any client tool that supports connecting to SQL Server and running Transact-SQL queries. Examples include [sqlcmd](sql-server-linux-setup-tools.md), [Visual Studio Code](sql-server-linux-develop-use-vscode.md), and [SQL Server Management Studio](sql-server-linux-manage-ssms.md).
 
 ## SQL Server Management Studio on Windows
 

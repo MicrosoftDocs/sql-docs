@@ -20,6 +20,7 @@ caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # WriteText Method
 Writes a specified text string to a [Stream](../../../ado/reference/ado-api/stream-object-ado.md) object.  

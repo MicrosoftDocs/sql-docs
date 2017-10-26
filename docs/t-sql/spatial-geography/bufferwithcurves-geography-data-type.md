@@ -21,6 +21,7 @@ caps.latest.revision: 16
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # BufferWithCurves (geography Data Type)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -72,62 +73,68 @@ manager: "jhubbard"
 ### A. Calling BufferWithCurves() with a parameter value < 0 on one-dimensional geography instance  
  The following example returns an empty `GeometryCollection` instance:  
   
- `DECLARE @g geography= 'LINESTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653)';`  
-  
- `SELECT @g.BufferWithCurves(-1).ToString();`  
+ ```sql
+ DECLARE @g geography= 'LINESTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653)';  
+ SELECT @g.BufferWithCurves(-1).ToString();
+``` 
   
 ### B. Calling BufferWithCurves() with a parameter value < 0 on a two-dimensional geography instance  
  The following example returns a `CurvePolygon` instance with a negative buffer:  
   
- `DECLARE @g geography = 'CURVEPOLYGON(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))';`  
-  
- `SELECT @g.BufferWithCurves(-1).ToString()`  
+ ```sql
+ DECLARE @g geography = 'CURVEPOLYGON(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))';  
+ SELECT @g.BufferWithCurves(-1).ToString()
+ ```  
   
 ### C. Calling BufferWithCurves() with a parameter value < 0 that returns an empty GeometryCollection  
  The following example shows what occurs when the *distance* parameter equals -2:  
   
- `DECLARE @g geography = 'CURVEPOLYGON(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))';`  
-  
- `SELECT @g.BufferWithCurves(-2).ToString();`  
+ ```sql
+ DECLARE @g geography = 'CURVEPOLYGON(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))';  
+ SELECT @g.BufferWithCurves(-2).ToString();
+ ```  
   
  This **SELECT** statement returns `GEOMETRYCOLLECTION EMPTY`  
   
 ### D. Calling BufferWithCurves() with a parameter value = 0  
  The following example returns a copy of the calling **geography** instance:  
-  
- `DECLARE @g geography = 'LINESTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653)';`  
-  
- `SELECT @g.BufferWithCurves(0).ToString();`  
+
+ ```sql
+ DECLARE @g geography = 'LINESTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653)';  
+ SELECT @g.BufferWithCurves(0).ToString();
+ ```  
   
 ### E. Calling BufferWithCurves() with a non-zero parameter value that is extremely small  
  The following example also returns a copy of the calling **geography** instance:  
-  
- `DECLARE @g geography = 'LINESTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653)';`  
-  
- `DECLARE @distance float = 1e-20;`  
-  
- `SELECT @g.BufferWithCurves(@distance).ToString();`  
+
+ ```sql
+ DECLARE @g geography = 'LINESTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653)';  
+ DECLARE @distance float = 1e-20;  
+ SELECT @g.BufferWithCurves(@distance).ToString();
+ ```  
   
 ### F. Calling BufferWithCurves() with a parameter value > 0  
  The following example returns a `CurvePolygon` instance:  
-  
- `DECLARE @g geography= 'LINESTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653)';`  
-  
- `SELECT @g.BufferWithCurves(2).ToString();`  
-  
+
+ ```sql
+ DECLARE @g geography= 'LINESTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653)';  
+ SELECT @g.BufferWithCurves(2).ToString();
+ ```  
 ### G. Passing a valid string parameter  
  The following example returns the same `CurvePolygon` instance as mentioned earlier, but a string parameter is passed to the method:  
-  
- `DECLARE @g geography= 'LINESTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653)';`  
-  
- `SELECT @g.BufferWithCurves('2').ToString();`  
+
+ ```sql
+ DECLARE @g geography= 'LINESTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653)';  
+ SELECT @g.BufferWithCurves('2').ToString();
+```  
   
 ### H. Passing an invalid string parameter  
  The following example will throw an error:  
-  
- `DECLARE @g geography = 'LINESTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653)'`  
-  
- `SELECT @g.BufferWithCurves('a').ToString();`  
+
+ ```sql
+ DECLARE @g geography = 'LINESTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653)'  
+ SELECT @g.BufferWithCurves('a').ToString();
+ ```  
   
  Note that the previous two examples passed a string literal to the `BufferWithCurves()` method. The first example works because the string literal can be converted to a numeric value. However, the second example throws an `ArgumentException`.  
   

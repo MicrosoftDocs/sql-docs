@@ -23,6 +23,7 @@ caps.latest.revision: 45
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # IDENT_SEED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -77,23 +78,17 @@ GO
   
  Here is a partial result set.  
   
- `TABLE_SCHEMA       TABLE_NAME                   IDENT_SEED`  
-  
- `------------       ---------------------------  -----------`  
-  
- `Person             Address                                1`  
-  
- `Production         ProductReview                          1`  
-  
- `Production         TransactionHistory                100000`  
-  
- `Person             AddressType                            1`  
-  
- `Production         ProductSubcategory                     1`  
-  
- `Person             vAdditionalContactInfo                 1`  
-  
- `dbo                AWBuildVersion                         1`  
+ ```
+ TABLE_SCHEMA       TABLE_NAME                   IDENT_SEED  
+------------       ---------------------------  -----------  
+Person             Address                                1  
+Production         ProductReview                          1  
+Production         TransactionHistory                100000  
+Person             AddressType                            1  
+Production         ProductSubcategory                     1  
+Person             vAdditionalContactInfo                 1  
+dbo                AWBuildVersion                         1
+```  
   
 ## See Also  
  [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   

@@ -18,6 +18,7 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Indexes Append Method Example (VB)
 The following code demonstrates how to create a new index. The index is on two columns in the table.  

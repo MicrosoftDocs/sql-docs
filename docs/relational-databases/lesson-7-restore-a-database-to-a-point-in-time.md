@@ -17,6 +17,7 @@ caps.latest.revision: 13
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Lesson 7: Restore a database to a point in time
 In this lesson, you will restore the AdventureWorks2014 database to a point in time between two of the transaction log backups.  

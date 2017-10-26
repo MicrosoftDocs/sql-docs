@@ -1,6 +1,6 @@
 # [Data Migration Assistant overview](dma-overview.md)
 
-# [What's new in Data Migration Assistant v3.1](dma-whatsnewv31.md)
+# [What's new in Data Migration Assistant](dma-whatsnew.md)
 # [Assess your SQL Server migration](dma-assesssqlonprem.md)
 # [Consolidate assessment reports](dma-consolidatereports.md)
 # [Power BI reports for consolidated assessments](dma-powerbiassesreport.md)

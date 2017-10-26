@@ -17,6 +17,7 @@ caps.latest.revision: 9
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Relationship Representation (Tabular)
   A relationship is a connection between two tables of data. The relationship establishes how the data in the two tables should be correlated.  

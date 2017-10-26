@@ -1,7 +1,7 @@
 ---
 title: "ROW_NUMBER (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/31/2017"
+ms.date: "09/11/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -24,6 +24,7 @@ caps.latest.revision: 50
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # ROW_NUMBER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -72,7 +73,7 @@ ROW_NUMBER ( )
 
 The following query returns the four system tables in alphabetic order.
 
-```
+```t-sql
 SELECT 
   name, recovery_model_desc
 FROM sys.databases 
@@ -91,7 +92,7 @@ ORDER BY name ASC;
 
 To add a row number column in front of each row, add a column with the `ROW_NUMBER` function, in this case named `Row#`. You must move the `ORDER BY` clause up to the `OVER` clause.
 
-```
+```t-sql
 SELECT 
   ROW_NUMBER() OVER(ORDER BY name ASC) AS Row#,
   name, recovery_model_desc
@@ -110,7 +111,7 @@ WHERE database_id < 5;
 
 Adding a `PARTITION BY` clause on the `recovery_model_desc` column, will restart the numbering when the `recovery_model_desc` value changes. 
  
-```
+```t-sql
 SELECT 
   ROW_NUMBER() OVER(PARTITION BY recovery_model_desc ORDER BY name ASC) 
     AS Row#,
@@ -131,7 +132,7 @@ FROM sys.databases WHERE database_id < 5;
 ### B. Returning the row number for salespeople  
  The following example calculates a row number for the salespeople in [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] based on their year-to-date sales ranking.  
   
-```  
+```t-sql  
 USE AdventureWorks2012;   
 GO  
 SELECT ROW_NUMBER() OVER(ORDER BY SalesYTD DESC) AS Row,   
@@ -165,7 +166,7 @@ Row FirstName    LastName               SalesYTD
 ### C. Returning a subset of rows  
  The following example calculates row numbers for all rows in the `SalesOrderHeader` table in the order of the `OrderDate` and returns only rows `50` to `60` inclusive.  
   
-```  
+```t-sql  
 USE AdventureWorks2012;  
 GO  
 WITH OrderedOrders AS  
@@ -182,10 +183,10 @@ WHERE RowNumber BETWEEN 50 AND 60;
 ### D. Using ROW_NUMBER() with PARTITION  
  The following example uses the `PARTITION BY` argument to partition the query result set by the column `TerritoryName`. The `ORDER BY` clause specified in the `OVER` clause orders the rows in each partition by the column `SalesYTD`. The `ORDER BY` clause in the `SELECT` statement orders the entire query result set by `TerritoryName`.  
   
-```  
+```t-sql  
 USE AdventureWorks2012;  
 GO  
-SELECT FirstName, LastName, TerritoryName, ROUND(SalesYTD,2,1),  
+SELECT FirstName, LastName, TerritoryName, ROUND(SalesYTD,2,1) AS SalesYTD,  
 ROW_NUMBER() OVER(PARTITION BY TerritoryName ORDER BY SalesYTD DESC) 
   AS Row  
 FROM Sales.vSalesPerson  
@@ -220,7 +221,7 @@ Jae        Pak                  United Kingdom       4116871.22    1
 ### E. Returning the row number for salespeople  
  The following example returns the `ROW_NUMBER` for sales representatives based on their assigned sales quota.  
   
-```  
+```t-sql  
 -- Uses AdventureWorks  
   
 SELECT ROW_NUMBER() OVER(ORDER BY SUM(SalesAmountQuota) DESC) 
@@ -235,23 +236,21 @@ GROUP BY LastName, FirstName;
 ```  
   
  Here is a partial result set.  
-  
- `RowNumber  FirstName  LastName            SalesQuota`  
-  
- `---------  ---------  ------------------  -------------`  
-  
- `1          Jillian    Carson              12,198,000.00`  
-  
- `2          Linda      Mitchell            11,786,000.00`  
-  
- `3          Michael    Blythe              11,162,000.00`  
-  
- `4          Jae        Pak                 10,514,000.00`  
-  
+
+```  
+
+RowNumber  FirstName  LastName            SalesQuota  
+---------  ---------  ------------------  -------------  
+1          Jillian    Carson              12,198,000.00  
+2          Linda      Mitchell            11,786,000.00  
+3          Michael    Blythe              11,162,000.00  
+4          Jae        Pak                 10,514,000.00  
+```
+
 ### F. Using ROW_NUMBER() with PARTITION  
  The following example shows using the `ROW_NUMBER` function with the `PARTITION BY` argument. This causes the `ROW_NUMBER` function to number the rows in each partition.  
   
-```  
+```t-sql  
 -- Uses AdventureWorks  
   
 SELECT ROW_NUMBER() OVER(PARTITION BY SalesTerritoryKey 
@@ -266,24 +265,19 @@ GROUP BY LastName, FirstName, SalesTerritoryKey;
 ```  
   
  Here is a partial result set.  
-  
- `RowNumber  LastName            Territory  SalesQuota`  
-  
- `---------  ------------------  ---------  -------------`  
-  
- `1          Campbell            1           4,025,000.00`  
-  
- `2          Ansman-Wolfe        1           3,551,000.00`  
-  
- `3          Mensa-Annan         1           2,275,000.00`  
-  
- `1          Blythe              2          11,162,000.00`  
-  
- `1          Carson              3          12,198,000.00`  
-  
- `1          Mitchell            4          11,786,000.00`  
-  
- `2          Ito                 4           7,804,000.00`  
+ 
+```  
+ 
+RowNumber  LastName            Territory  SalesQuota  
+---------  ------------------  ---------  -------------  
+1          Campbell            1           4,025,000.00  
+2          Ansman-Wolfe        1           3,551,000.00  
+3          Mensa-Annan         1           2,275,000.00  
+1          Blythe              2          11,162,000.00  
+1          Carson              3          12,198,000.00  
+1          Mitchell            4          11,786,000.00  
+2          Ito                 4           7,804,000.00  
+```
   
 ## See Also  
  [RANK &#40;Transact-SQL&#41;](../../t-sql/functions/rank-transact-sql.md)   

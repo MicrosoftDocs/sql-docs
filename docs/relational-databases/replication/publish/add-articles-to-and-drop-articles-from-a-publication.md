@@ -20,6 +20,7 @@ caps.latest.revision: 35
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Add Articles to and Drop Articles from a Publication
   Initially add articles to a publication when you create it in the New Publication Wizard. For more information about using this wizard, see [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md).  

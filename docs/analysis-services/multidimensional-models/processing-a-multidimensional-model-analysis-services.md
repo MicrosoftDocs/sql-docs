@@ -27,6 +27,7 @@ caps.latest.revision: 52
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Processing a multidimensional model (Analysis Services)
   Processing is the step, or series of steps, in which Analysis Services loads data from a relational data source into a multidimensional model. For objects that use MOLAP storage, data is saved on disk in the database file folder. For ROLAP storage, processing occurs on demand, in response to an MDX query on an object. For objects that use ROLAP storage, processing refers to updating the cache before returning query results.  

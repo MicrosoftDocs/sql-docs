@@ -24,6 +24,7 @@ caps.latest.revision: 12
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # HierarchyUniqueNameStyle Element (ASSL)
   Determines how unique names are generated for hierarchies that are contained within the [CubeDimension](../../../analysis-services/scripting/data-type/cubedimension-data-type-assl.md).  

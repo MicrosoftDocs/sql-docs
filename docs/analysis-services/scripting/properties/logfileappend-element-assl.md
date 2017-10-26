@@ -26,6 +26,7 @@ caps.latest.revision: 32
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # LogFileAppend Element (ASSL)
   Determines whether the [Trace](../../../analysis-services/scripting/objects/trace-element-assl.md) element appends its logging output to the existing log file, or overwrites it.  

@@ -1,7 +1,7 @@
 ---
 title: "Introducing revoscalepy | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/20/2017"
+ms.date: "10/05/2017"
 ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
@@ -26,16 +26,17 @@ It is based on the **RevoScaleR** package for R, which was provided in Microsoft
 
 MicrosoftML packages are also provided for both R and Python. For more information, see [Using MicrosoftML in SQL Server](../using-the-microsoftml-package.md)
 
-> [!WARNING]
-> 
-> Python support is a new feature in SQL Server 2017 and is currently supported for preview purposes only.
-
 ## Versions and supported platforms
 
 The **revoscalepy** module is available only when you install one of the following Microsoft products:
 
-+ Machine Learning Services, in SQL Server 2017 CTP 2.0 or later
-+ Microsoft Machine Learning Server 9.1.0. Requires installation using setup for SQL Server 2017 CTP 2.0 or later
++ Machine Learning Services, in SQL Server 2017
++ Microsoft Machine Learning Server 9.2.0 or later
+
+To get the latest version of revoscalepy, install Cumulative Update 1 for SQL Server 2017. It includes many improvements in Python, including:
+
++ A new Python function, `rx_create_col_info`, that gets schema information from a SQL Server data source, like [rxCreateColInfo](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxcreatecolinfo) for 
++ Enhancements to [rx_exec](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-exec) to support parallel scenarios using the `RxLocalParallel` compute context. 
 
 ## Supported functions and data types
 
@@ -118,7 +119,7 @@ You can run code that includes **revoscalepy** functions either locally or in a 
 
 When running locally, you typically run a Python script from the command line, or from a Python development environment, and specify a SQL Server compute context using one of the **revoscalepy** functions. You can use the remote compute context for the entire code, or for individual functions. For example, you might want to offload model training to the server to use the latest data and avoid data movement.
 
-If you want to put a complete Python script inside the stored procedure, [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql), we recommend that you rewrite the code as a single function that has clearly defined inputs and outputs. Inputs and outputs must be **pandas** data frames. When this is done, you can call the stored procedure from any client that supports T-SQL, easily pass SQL queries as inputs, and save the results to SQL tables. For an example, see [In-Database Python Analytics for L Developers](../tutorials/sqldev-in-database-python-for-sql-developers.md).
+If you want to put a complete Python script inside the stored procedure, [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql), we recommend that you rewrite the code as a single function that has clearly defined inputs and outputs. Inputs and outputs must be **pandas** data frames. When this is done, you can call the stored procedure from any client that supports T-SQL, easily pass SQL queries as inputs, and save the results to SQL tables. For an example, see [In-Database Python Analytics for SQL Developers](../tutorials/sqldev-in-database-python-for-sql-developers.md).
 
 ### Using remote compute contexts
 

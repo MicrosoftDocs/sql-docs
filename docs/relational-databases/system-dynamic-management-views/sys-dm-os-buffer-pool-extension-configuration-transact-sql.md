@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_os_buffer_pool_extension_configuration (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "09/08/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -33,7 +33,7 @@ manager: "jhubbard"
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|path|**nvarchar**(256)|Path and file name of the buffer pool extension cache. Is not nullable.|  
+|path|**nvarchar**(256)|Path and file name of the buffer pool extension cache. Nullable.|  
 |file_id|**int**|ID of the buffer pool extension file. Is not nullable.|  
 |state|**int**|The state of the buffer pool extension feature. Is not nullable.<br /><br /> 0 - Buffer pool extension disabled<br /><br /> 1 - Buffer pool extension disabling<br /><br /> 2 - Reserved for the future use<br /><br /> 3 - Buffer pool extension enabling<br /><br /> 4 - Reserved for the future use<br /><br /> 5 - Buffer pool extension enabled|  
 |state_description|**nvarchar**(60)|Describes the state of the buffer pool extension feature. Is nullable.<br /><br /> 0 = BUFFER POOL EXTENSION DISABLED<br /><br /> 1 = BUFFER POOL EXTENSION ENABLED|  
@@ -47,21 +47,19 @@ manager: "jhubbard"
 ### A. Returning configuration buffer pool extension information  
  The following example returns all columns from the sys.dm_os_buffer_pool_extension_configruation DMV.  
   
-```  
+```sql  
 SELECT path, file_id, state, state_description, current_size_in_kb  
 FROM sys.dm_os_buffer_pool_extension_configuration;  
-  
 ```  
   
 ### B. Returning the number of cached pages in the buffer pool extension file  
  The following example returns the number of cached pages in each buffer pool extension file.  
   
-```  
+```sql  
 SELECT COUNT(*) AS cached_pages_count  
 FROM sys.dm_os_buffer_descriptors  
 WHERE is_in_bpool_extension <> 0  
 ;  
-  
 ```  
   
 ## See Also  

@@ -14,6 +14,7 @@ caps.latest.revision: 13
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # SQL Server configuration for use with R
 
@@ -90,7 +91,7 @@ For more information, see the following documents:
 
 + [Enable compression on a table or index](../../relational-databases/data-compression/enable-compression-on-a-table-or-index.md)
 
-+ [Columnstore indexes guide](https://msdn.microsoft.com/library/gg492088.aspx)
++ [Columnstore indexes guide](../../relational-databases/indexes/columnstore-indexes-overview.md)
 
 ### Memory-optimized tables
 

@@ -21,6 +21,7 @@ caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Groups Collection (ADOX)
 Contains all stored [Group](../../../ado/reference/adox-api/group-object-adox.md) objects of a catalog or user.  

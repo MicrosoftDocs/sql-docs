@@ -28,6 +28,7 @@ caps.latest.revision: 17
 author: "jeannt"
 ms.author: "jeannt"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Attribute Element (XMLA)
   Defines or filters a member in an attribute on which a parent [Insert](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md), [Update](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md), or [Drop](../../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md) command performs.  

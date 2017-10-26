@@ -18,6 +18,7 @@ caps.latest.revision: 23
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Progress Reports Event Category
   The Progress Reports event category has the event classes described in the following table.  

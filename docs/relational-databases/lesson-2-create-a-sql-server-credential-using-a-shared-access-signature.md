@@ -17,6 +17,7 @@ caps.latest.revision: 17
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Lesson 2: Create a SQL Server credential using a shared access signature
 In this lesson, you will create a credential to store the security information that will be used by SQL Server to write to and read from the Azure container that you created in [Lesson 1: Create a stored access policy and a shared access signature  on an Azure container](../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md).  
@@ -40,7 +41,7 @@ To create a SQL Server credential, follow these steps:
     ```Transact-SQL  
   
     USE master  
-    CREATE CREDENTIAL 'https://<mystorageaccountname>.blob.core.windows.net/<mystorageaccountcontainername>' – this name must match the container path, start with https and must not contain a forward slash.  
+    CREATE CREDENTIAL [https://<mystorageaccountname>.blob.core.windows.net/<mystorageaccountcontainername>] – this name must match the container path, start with https and must not contain a forward slash.  
        WITH IDENTITY='SHARED ACCESS SIGNATURE' -- this is a mandatory string and do not change it.   
        , SECRET = 'sharedaccesssignature' –- this is the shared access signature key that you obtained in Lesson 1.   
     GO  

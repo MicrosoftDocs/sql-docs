@@ -1,7 +1,7 @@
 ---
 title: "@@IDLE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "09/18/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -25,8 +25,9 @@ caps.latest.revision: 32
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
-# @@IDLE (Transact-SQL)
+# &#x40;&#x40;IDLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Returns the time that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has been idle since it was last started. The result is in CPU time increments, or "ticks," and is cumulative for all CPUs, so it may exceed the actual elapsed time. Multiply by @@TIMETICKS to convert to microseconds.  
@@ -39,7 +40,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
-  
 @@IDLE  
 ```  
   

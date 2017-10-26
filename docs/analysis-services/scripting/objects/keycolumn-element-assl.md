@@ -26,6 +26,7 @@ caps.latest.revision: 39
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # KeyColumn Element (ASSL)
   Contains the definition of a column that is, or is part of, the key for an attribute.  

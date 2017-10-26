@@ -21,6 +21,7 @@ caps.latest.revision: 30
 author: "jeannt"
 ms.author: "jeannt"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Data Mining Programming - OLE DB
   The data mining features in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] comply with the [!INCLUDE[msCoName](../includes/msconame-md.md)] OLE DB for Data Mining 1.0 specification released in June 2000.  

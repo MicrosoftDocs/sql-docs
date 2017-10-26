@@ -1,7 +1,7 @@
 ---
 title: "Compatibility level for tabular models in Analysis Services | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/07/2017"
+ms.date: "10/16/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -18,6 +18,7 @@ caps.latest.revision: 27
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "On Demand"
 ---
 # Compatibility level for Analysis Services tabular models
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -41,7 +42,7 @@ Major features in the 1400 compatibility level include:
 |||  
 |-|-|- 
 |**Compatibility level**|**Server version**| 
-|1400|Azure Analysis Services (Preview), SQL Server 2017 |  
+|1400|Azure Analysis Services, SQL Server 2017 |  
 |1200|Azure Analysis Services, SQL Server 2017, SQL Server 2016| 
 |1103|SQL Server 2017*, SQL Server 2016, SQL Server 2014, SQL Server 2012 SP1|  
 |1100|SQL Server 2017*, SQL Server 2016, SQL Server 2014, SQL Server 2012 SP1, SQL Server 2012| 

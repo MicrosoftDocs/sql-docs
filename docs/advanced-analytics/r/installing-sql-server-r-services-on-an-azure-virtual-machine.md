@@ -14,6 +14,7 @@ caps.latest.revision: 11
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Installing SQL Server R Services on an Azure Virtual Machine
  

@@ -16,6 +16,7 @@ caps.latest.revision: 32
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Server Properties - Database Settings Page
   Use this page to view or modify your database settings.  

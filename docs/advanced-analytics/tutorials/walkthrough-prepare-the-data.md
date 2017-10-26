@@ -18,6 +18,7 @@ caps.latest.revision: 30
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Prepare the data using PowerShell (walkthrough)
 

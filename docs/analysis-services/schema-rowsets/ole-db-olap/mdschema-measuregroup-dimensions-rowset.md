@@ -22,6 +22,7 @@ caps.latest.revision: 14
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # MDSCHEMA_MEASUREGROUP_DIMENSIONS Rowset
   Enumerates the dimensions of measure groups.  

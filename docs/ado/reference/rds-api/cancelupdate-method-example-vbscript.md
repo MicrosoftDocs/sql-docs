@@ -18,6 +18,7 @@ caps.latest.revision: 15
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # CancelUpdate Method Example (VBScript)
 > [!IMPORTANT]

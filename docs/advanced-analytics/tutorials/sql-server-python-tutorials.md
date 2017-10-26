@@ -2,7 +2,7 @@
 title: "SQL Server Python tutorials | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "08/29/2017"
+ms.date: "09/19/2017"
 ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
@@ -41,10 +41,6 @@ For information about requirements and setup, see [Prerequisites](#bkmk_Prerequi
 
    You'll create a model using **rxLinMod**, from the new **revoscalepy** library. You'll launch the code from a remote Python terminal but the modeling will take place in the SQL Server compute context.
 
-+ [Build a predictive model with Python (GitHub)](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/machine-learning-services/python/getting-started/rental-prediction)
-
-  Create a machine learning model to predict demand for a ski rental business, and operationalize that model for day-to-day demand prediction using stored procedures. All code and data is provided.
-
 + [In-Database Python analytics for SQL developers](sqldev-in-database-python-for-sql-developers.md)
 
   NEW! Build a complete Python solution using T-SQL stored procedures. All Python code is included.
@@ -61,7 +57,10 @@ These samples and demos provided by the SQL Server development team highlight wa
 
   Learn how a ski rental business might use machine learning to predict future rentals, which helps the business plan and staff to meet future demand.
 
-+ [NEW! Perform customer clustering using Python and SQL Server](https://microsoft.github.io/sql-ml-tutorials/python/customerclustering/)
+  > [!TIP]
+  > Now includes native scoring from Python models!
+
++ [Perform customer clustering using Python and SQL Server](https://microsoft.github.io/sql-ml-tutorials/python/customerclustering/)
 
     Learn how to use the Kmeans algorithm to perform unsupervised clustering of customers.
 
@@ -77,13 +76,13 @@ To use these tutorials, you must have installed SQL Server 2017 Machine Learning
 
 After running SQL Server setup, don't forget these important steps:
 
-+ Enable the external script execution feature by running `sp_configure 'external scripts enabled', 1`
-+ Restart the server
-+ Ensure that the service that calls the external runtime has necessary permissions
-+ Ensure that your SQL login or Windows user account has necessary permissions to connect to the server, to read data, and to create any database objects required by the sample
++ Enable the external script execution feature by running `sp_configure 'external scripts enabled', 1`.
++ Restart the server.
++ Ensure that the service that calls the external runtime has necessary permissions.
++ Ensure that your SQL login or Windows user account has necessary permissions to connect to the server, to read data, and to create any database objects required by the sample.
 
 If you run into trouble, see this article for some common issues: [Troubleshooting Machine Learning Services](../machine-learning-troubleshooting-faq.md)
 
-## See Also
+## See also
 
 [R tutorials for SQL Server](sql-server-r-tutorials.md)

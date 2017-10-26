@@ -1,7 +1,7 @@
 ---
 title: "@@CURSOR_ROWS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/24/2017"
+ms.date: "08/18/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -24,8 +24,9 @@ caps.latest.revision: 36
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
-# @@CURSOR_ROWS (Transact-SQL)
+# &#x40;&#x40;CURSOR_ROWS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Returns the number of qualifying rows currently in the last cursor opened on the connection. To improve performance, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can populate large keyset and static cursors asynchronously. @@CURSOR_ROWS can be called to determine that the number of the rows that qualify for a cursor are retrieved at the time @@CURSOR_ROWS is called.
@@ -34,7 +35,7 @@ Returns the number of qualifying rows currently in the last cursor opened on the
   
 ## Syntax  
   
-```sql
+```
 @@CURSOR_ROWS  
 ```  
   
@@ -72,19 +73,21 @@ GO
   
 Here are the result sets.
   
-`-----------`
-  
- `0`  
-  
-`LastName`
-  
-`---------------`
-  
-`Sanchez`
-  
-`-----------`
-  
- `-1`  
+```
+-----------
+0  
+```
+
+```
+LastName
+---------------
+Sanchez
+```
+
+```
+-----------
+-1
+```  
   
 ## See also
 [Cursor Functions &#40;Transact-SQL&#41;](../../t-sql/functions/cursor-functions-transact-sql.md)  

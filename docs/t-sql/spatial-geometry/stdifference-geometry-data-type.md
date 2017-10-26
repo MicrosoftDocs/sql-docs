@@ -21,6 +21,7 @@ caps.latest.revision: 31
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # STDifference (geometry Data Type)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -62,13 +63,12 @@ SELECT @g.STDifference(@h).ToString();
 ### B. Invoking STDifference() on a CurvePolygon instance  
  The following example uses STDifference() on a CurvePolygon instance.  
   
- `DECLARE @g geometry = 'CURVEPOLYGON (CIRCULARSTRING (0 -4, 4 0, 0 4, -4 0, 0 -4))';`  
-  
- `DECLARE @h geometry = 'POLYGON ((1 -1, 5 -1, 5 3, 1 3, 1 -1))';`  
-  
- `-- Note the different results returned by the two SELECT statements`  
-  
- `SELECT @h.STDifference(@g).ToString(), @g.STDifference(@h).ToString();`  
+```
+ DECLARE @g geometry = 'CURVEPOLYGON (CIRCULARSTRING (0 -4, 4 0, 0 4, -4 0, 0 -4))';  
+ DECLARE @h geometry = 'POLYGON ((1 -1, 5 -1, 5 3, 1 3, 1 -1))';  
+ -- Note the different results returned by the two SELECT statements  
+ SELECT @h.STDifference(@g).ToString(), @g.STDifference(@h).ToString();
+ ```  
   
 ## See Also  
  [OGC Methods on Geometry Instances](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  

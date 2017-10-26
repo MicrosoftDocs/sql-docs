@@ -19,6 +19,7 @@ caps.latest.revision: 30
 author: "Minewiskan"
 ms.author: "owend"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Processing Requirements and Considerations (Data Mining)
   This topic describes some technical considerations to keep in mind when processing data mining objects. For a general explanation of what processing is, and how it applies to data mining, see [Processing Data Mining Objects](../../analysis-services/data-mining/processing-data-mining-objects.md).  

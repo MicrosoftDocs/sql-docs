@@ -21,6 +21,7 @@ caps.latest.revision: 29
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "On Demand"
 ---
 # MDX Calculated Members - Building Calculated Members
   In Multidimensional Expressions (MDX), a calculated member is a member that is resolved by calculating an MDX expression to return a value. This innocuous definition covers an incredible amount of ground. The ability to construct and use calculated members in an MDX query provides a great deal of manipulation capability for multidimensional data.  

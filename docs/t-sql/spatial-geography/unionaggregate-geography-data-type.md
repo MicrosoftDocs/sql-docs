@@ -21,6 +21,7 @@ caps.latest.revision: 13
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # UnionAggregate (geography Data Type)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -52,19 +53,15 @@ UnionAggregate ( geography_operand )
 ## Examples  
  The following example performs a `UnionAggregate` on a set of **geography** location points within a city.  
   
- `USE AdventureWorks2012`  
-  
- `GO`  
-  
- `SELECT City,`  
-  
- `geography::UnionAggregate(SpatialLocation) AS SpatialLocation`  
-  
- `FROM Person.Address`  
-  
- `WHERE PostalCode LIKE('981%')`  
-  
- `GROUP BY City;`  
+ ```
+ USE AdventureWorks2012  
+ GO  
+ SELECT City,  
+ geography::UnionAggregate(SpatialLocation) AS SpatialLocation  
+ FROM Person.Address  
+ WHERE PostalCode LIKE('981%')  
+ GROUP BY City;
+ ```  
   
 ## See Also  
  [Extended Static Geography Methods](../../t-sql/spatial-geography/extended-static-geography-methods.md)  

@@ -16,6 +16,7 @@ caps.latest.revision: 13
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Database Properties (ChangeTracking Page)
   Use this page to view or modify change tracking settings for the selected database. For more information about the options available on this page, see [Enable and Disable Change Tracking &#40;SQL Server&#41;](../../relational-databases/track-changes/enable-and-disable-change-tracking-sql-server.md).  
@@ -31,7 +32,7 @@ manager: "jhubbard"
  You can also configure change tracking by using [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md).  
   
  **Retention Period**  
- Specifies the minimum period for keeping change track information in the database. Data is removed only if the **Auto Clean-Up**value is **True**.  
+ Specifies the minimum period for keeping change track information in the database. Data is removed only if the **Auto Clean-Up** value is **True**.  
   
  The default value is 2.  
   

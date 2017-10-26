@@ -19,6 +19,7 @@ caps.latest.revision: 30
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Model Properties (SSAS Tabular)
   This topic describes tabular model properties. Each tabular model project has model properties that affect how the model you are authoring in SQL Server Development Tools is built, how it is backed up, and how the workspace database is stored. Model properties described here do not apply to models that have already been deployed.  

@@ -17,6 +17,7 @@ caps.latest.revision: 11
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Tables - Hierarchy Representation
   In tabular models a hierarchy is navigation path from one attribute to another based on values selected by the user.  

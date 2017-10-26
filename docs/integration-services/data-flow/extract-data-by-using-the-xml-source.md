@@ -18,6 +18,7 @@ caps.latest.revision: 21
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Extract Data by Using the XML Source
   To add and configure an XML source, the package must already include at least one Data Flow task.  

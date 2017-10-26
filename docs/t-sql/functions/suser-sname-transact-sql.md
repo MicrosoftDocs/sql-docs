@@ -29,6 +29,7 @@ caps.latest.revision: 24
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # SUSER_SNAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,8 +41,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 SUSER_SNAME ( [ server_user_sid ] )   
 ```  
   
@@ -120,11 +119,11 @@ GO
   
  Here is the result.  
   
- `sa`  
-  
- `WanidaBenShoof`  
-  
- `sa`  
+ ```
+sa  
+WanidaBenShoof  
+sa
+```  
   
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   

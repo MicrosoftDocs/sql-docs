@@ -28,6 +28,7 @@ caps.latest.revision: 11
 author: "jeannt"
 ms.author: "jeannt"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Queries Element (XMLA)
   Contains a collection of [Query](../../../analysis-services/xmla/xml-elements-properties/query-element-xmla.md) elements used by the [DesignAggregations](../../../analysis-services/xmla/xml-elements-commands/designaggregations-element-xmla.md) command during usage-based optimization.  

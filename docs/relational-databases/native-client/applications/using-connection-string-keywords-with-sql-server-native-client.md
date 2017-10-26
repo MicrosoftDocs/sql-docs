@@ -21,6 +21,7 @@ caps.latest.revision: 81
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # Using Connection String Keywords with SQL Server Native Client
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]

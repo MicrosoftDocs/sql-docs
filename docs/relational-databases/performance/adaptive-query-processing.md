@@ -2,7 +2,7 @@
 title: "Adaptive query processing in Microsoft SQL databases | Microsoft Docs | Microsoft Docs"
 description: "Adaptive query processing features to improve query performance in SQL Server (2017 and later), and Azure SQL Database."
 ms.custom: 
-ms.date: "08/02/2017"
+ms.date: "10/13/2017"
 ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
@@ -14,6 +14,7 @@ ms.assetid:
 author: "joesackmsft"
 ms.author: "josack;monicar"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 
 # Adaptive query processing in SQL databases
@@ -219,8 +220,9 @@ Plans using interleaved execution can be forced. The plan is the version that ha
 
 ## See Also
 
-[Performance Center for SQL Server Database Engine and Azure SQL Database](https://docs.microsoft.com/en-us/sql/relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database)   
+[Performance Center for SQL Server Database Engine and Azure SQL Database](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)
+
+[Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md)
 
 [Demonstrating Adaptive Query Processing](https://github.com/joesackmsft/Conferences/blob/master/Data_AMP_Detroit_2017/Demos/AQP_Demo_ReadMe.md)      
-
 

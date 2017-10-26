@@ -37,6 +37,7 @@ caps.latest.revision: 30
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Deploy a SQL Server Database to a Microsoft Azure Virtual Machine
   Use the **Deploy a Database to a Windows Azure VM** wizard to deploy a database from an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in a Windows Azure Virtual Machine (VM). The wizard uses a full database backup operation, so it always copies the complete database schema and the data from a SQL Server user database. The wizard also does all of the Azure VM configuration for you, so no pre-configuration of the VM is required.  
@@ -177,7 +178,7 @@ This deployment feature is for use only with an Azure Storage Account created th
   
             -   CleanupDisabled = False /> \<!-- Wizard will not delete intermediate files and Windows Azure objects (VM, CS, SA). -->  
   
-        -   <PublishProfile \<!-- The last used publish profile information. -->  
+        -   \<PublishProfile \<!-- The last used publish profile information. -->  
   
             -   Certificate="12A34B567890123ABCD4EF567A8" \<!-- The certificate for use in the wizard. -->  
   

@@ -14,6 +14,7 @@ caps.latest.revision: 16
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # The CDC Designer Console Introduction
   The section describes the installation procedures for the Change Data Capture Designer for Oracle by Attunity.  

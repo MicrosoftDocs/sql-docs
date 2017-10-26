@@ -3,7 +3,7 @@ title: "Automatic seeding for secondary replicas (SQL Server) | Microsoft Docs"
 description: "Use automatic seeding to initialize secondary replicas."
 services: data-lake-analytics
 ms.custom: ""
-ms.date: "08/17/2017"
+ms.date: "09/25/2017"
 ms.prod: 
  - "sql-server-2016"
  - "sql-server-2017"
@@ -17,7 +17,7 @@ helpviewer_keywords:
 - "Automatic seeding [SQL Server], secondary replica"
 ms.assetid: 
 caps.latest.revision: 
-author: "MikeRayMSFT"
+author: "allanhirt"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---
@@ -268,11 +268,9 @@ The following table lists extended events related to automatic seeding.
 
 [ALTER AVAILABILITY GROUP (Transact-SQL)](/sql/t-sql/statements/alter-availability-group-transact-sql)
 
-[CREATE AVAILABILITY GROUP (Transact-SQL)](https://msdn.microsoft.com/library/ff878399.aspx)
+[CREATE AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/create-availability-group-transact-sql.md)
 
 [Always On Availability Groups Troubleshooting and Monitoring Guide](http://technet.microsoft.com/library/dn135328.aspx)
-
-> [Allan Hirt](http://mvp.microsoft.com/en-us/PublicProfile/4025254?fullName=Allan%20Hirt), Microsoft Most Valued Professional, contributed to this article.
 
 <!--Image references-->
 [1]: ./media/auto-seed-new-availability-group.png

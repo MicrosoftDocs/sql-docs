@@ -27,6 +27,7 @@ caps.latest.revision: 26
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # SWITCHOFFSET (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,8 +41,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 SWITCHOFFSET ( DATETIMEOFFSET, time_zone )   
 ```  
   
@@ -70,27 +69,6 @@ WHERE c1 > @dt OPTION (RECOMPILE);
 ```  
   
 ## Examples  
- The following example uses `SWITCHOFFSET` to display a different time zone offset than the value stored in the database.  
-  
-```  
-CREATE TABLE dbo.test   
-    (  
-    ColDatetimeoffset datetimeoffset  
-    );  
-GO  
-INSERT INTO dbo.test   
-VALUES ('1998-09-20 7:45:50.71345 -5:00');  
-GO  
-SELECT SWITCHOFFSET (ColDatetimeoffset, '-08:00')   
-FROM dbo.test;  
-GO  
---Returns: 1998-09-20 04:45:50.7134500 -08:00  
-SELECT ColDatetimeoffset  
-FROM dbo.test;  
---Returns: 1998-09-20 07:45:50.7134500 -05:00  
-```  
-  
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  The following example uses `SWITCHOFFSET` to display a different time zone offset than the value stored in the database.  
   
 ```  

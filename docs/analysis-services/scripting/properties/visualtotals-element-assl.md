@@ -26,6 +26,7 @@ caps.latest.revision: 35
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # VisualTotals Element (ASSL)
   Contains a Multidimensional Expressions (MDX) expression that determines whether visual totals are displayed for members of this attribute.  

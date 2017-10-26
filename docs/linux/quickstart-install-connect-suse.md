@@ -4,7 +4,7 @@ description:  This quick start tutorial shows how to install SQL Server 2017 on 
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 09/07/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -14,16 +14,19 @@ ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-In this quick start tutorial, you first install SQL Server 2017 RC2 on SUSE Linux Enterprise Server (SLES) v12 SP2. Then connect with **sqlcmd** to create your first database and run queries.
+In this quick start tutorial, you first install SQL Server 2017 on SUSE Linux Enterprise Server (SLES) v12 SP2. Then connect with **sqlcmd** to create your first database and run queries.
 
 > [!TIP]
 > This tutorial requires user input and an internet connection. If you are interested in the [unattended](sql-server-linux-setup.md#unattended) or [offline](sql-server-linux-setup.md#offline) installation procedures, see [Installation guidance for SQL Server on Linux](sql-server-linux-setup.md).
 
 ## Prerequisites
 
-You must have a SLES v12 SP2 machine with **at least 3.25 GB** of memory. The file system must be **XFS** or **EXT4**. Other file systems, such as **BTRFS**, are unsupported.
+You must have a SLES v12 SP2 machine with **at least 2 GB** of memory. The file system must be **XFS** or **EXT4**. Other file systems, such as **BTRFS**, are unsupported.
 
 To install SUSE Linux Enterprise Server on your own machine, go to [https://www.suse.com/products/server](https://www.suse.com/products/server). You can also create SLES virtual machines in Azure. See [Create and Manage Linux VMs with the Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm), and use `--image SLES` in the call to `az vm create`.
+
+> [!NOTE]
+> At this time, the [Windows Subsystem for Linux](https://msdn.microsoft.com/commandline/wsl/about) for Windows 10 is not supported as an installation target.
 
 For other system requirements, see [System requirements for SQL Server on Linux](sql-server-linux-setup.md#system).
 
@@ -31,12 +34,18 @@ For other system requirements, see [System requirements for SQL Server on Linux]
 
 To configure SQL Server on SLES, run the following commands in a terminal to install the **mssql-server** package:
 
+> [!IMPORTANT]
+> If you have previously installed a CTP or RC release of SQL Server 2017, you must first remove the old repository before registering one of the GA repositories. For more information, see [Change repositories from the preview repository to the GA repository](sql-server-linux-change-repo.md).
+
 1. Download the Microsoft SQL Server SLES repository configuration file:
 
    ```bash
-   sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server.repo
+   sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017.repo
    sudo zypper --gpg-auto-import-keys refresh
    ```
+
+   > [!NOTE]
+   > This is the Cumulative Update (CU) repository. For more information about your repository options and their differences, see [Change source repositories](sql-server-linux-setup.md#repositories).
 
 1. Run the following commands to install SQL Server:
 
@@ -51,14 +60,10 @@ To configure SQL Server on SLES, run the following commands in a terminal to ins
    ```
 
    > [!TIP]
-   > Make sure to specify a strong password for the SA account (Minimum length 8 characters, including uppercase and lowercase letters, base 10 digits and/or non-alphanumeric symbols).
+   > If you are trying SQL Server 2017 in this tutorial, the following editions are freely licensed: Evaluation, Developer, and Express.
 
-   > [!TIP]
-   > When installing RC2, no purchased licenses are required to try any of the editions. Because it is a release candidate, the following message appears regardless of the edition you select:
-   >
-   > `This is an evaluation version.  There are [175] days left in the evaluation period.`
-   >
-   > This message does not reflect the edition you selected. It relates to the preview period for RC2.
+   > [!NOTE]
+   > Make sure to specify a strong password for the SA account (Minimum length 8 characters, including uppercase and lowercase letters, base 10 digits and/or non-alphanumeric symbols).
 
 1. Once the configuration is done, verify that the service is running:
 
@@ -66,7 +71,11 @@ To configure SQL Server on SLES, run the following commands in a terminal to ins
    systemctl status mssql-server
    ```
 
-1. If you plan to connect remotely, you might also need to open the SQL Server TCP port (default 1433) on your firewall.
+1. If you plan to connect remotely, you might also need to open the SQL Server TCP port (default 1433) on your firewall. If you are using the SuSE firewall, you need to edit the **/etc/sysconfig/SuSEfirewall2** configuration file. Modify the **FW_SERVICES_EXT_TCP** entry to include the SQL Server port number.
+
+   ```
+   FW_SERVICES_EXT_TCP="1433"
+   ```
 
 At this point, SQL Server is running on your SLES machine and is ready to use!
 

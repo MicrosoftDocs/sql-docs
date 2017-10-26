@@ -18,6 +18,7 @@ caps.latest.revision: 24
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Lesson 1-2 - Setting Tool Options and Layout
 You can set options that configure what the Database Engine Tuning Advisor graphical user interface (GUI) displays on startup, the font it uses, and other tool functionality to best support how you use it. The practices on this page familiarize you with the options you can set, and how to set them.  

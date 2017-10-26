@@ -21,6 +21,7 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Status Property (ADO Field)
 Indicates the status of a [Field](../../../ado/reference/ado-api/field-object.md) object.  

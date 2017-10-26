@@ -16,6 +16,7 @@ caps.latest.revision: 38
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # TCP/IP Properties (Protocols Tab)
   Use the **TCP/IP Properties** dialog box to configure the options for the TCP/IP protocol. Click **TCP/IP** in the left pane, to show individual IP address configurations in the details pane.  
@@ -37,6 +38,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Choosing a Network Protocol](https://msdn.microsoft.com/library/ms187892(v=sql.130).aspx)   
- [Creating a Valid Connection String Using TCP IP](https://msdn.microsoft.com/library/ms191260.aspx)  
+ [Creating a Valid Connection String Using TCP IP](creating-a-valid-connection-string-using-tcp-ip.md)  
   
   

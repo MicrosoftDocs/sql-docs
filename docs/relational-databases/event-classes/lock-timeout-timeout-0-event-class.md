@@ -16,6 +16,7 @@ caps.latest.revision: 38
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Lock:Timeout (timeout &gt; 0) Event Class
   The **Lock:Timeout (timeout > 0)** event class indicates that a request for a lock on a resource, such as a page, has timed out because another transaction is holding a blocking lock on the required resource. This event class behaves the same as the **Lock:Timeout** event class, except it does not include any events where the timeout value is 0.  

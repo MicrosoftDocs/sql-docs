@@ -23,6 +23,7 @@ caps.latest.revision: 34
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Collation Functions - TERTIARY_WEIGHTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -34,8 +35,6 @@ Returns a binary string of weights for each character in a non-Unicode string ex
 ## Syntax  
   
 ```sql
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 TERTIARY_WEIGHTS( non_Unicode_character_string_expression )  
 ```  
   

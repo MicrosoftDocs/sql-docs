@@ -14,6 +14,7 @@ caps.latest.revision: 6
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Lock Events Category
   The Locks Events event category has the event classes described in the following table.  

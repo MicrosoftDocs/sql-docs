@@ -1,7 +1,7 @@
 ---
-title: "Assess your SQL Server migration (Data Migration Assistant) | Microsoft Docs"
+title: "Performing a SQL Server migration assessment (Data Migration Assistant) | Microsoft Docs"
 ms.custom: 
-ms.date: "09/01/2017"
+ms.date: "10/04/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -17,12 +17,13 @@ caps.latest.revision: ""
 author: "HJToland3"
 ms.author: "jtoland"
 manager: "craigg"
+ms.workload: "Inactive"
 ---
 
-# Assess your SQL Server migration
-The following step-by-step instructions will help you to perform your first assessment for migrating to either on-premises SQL Server or SQL Server running on Azure VM, or to Azure SQL Server database, by using Data Migration Assistant.
+# Performing a SQL Server migration assessment
+The following step-by-step instructions help you to perform your first assessment for migrating to either on-premises SQL Server or SQL Server running on Azure VM, or to Azure SQL Server database, by using Data Migration Assistant.
 
-# Create new assessment
+## Create new assessment
 
 1.  Click on the New (+) icon, and then select “Assessment” project
     type.
@@ -30,16 +31,16 @@ The following step-by-step instructions will help you to perform your first asse
 2.  Set the source and target server type.
 
     If you are upgrading your on-premises SQL Server to a modern
-on-premises SQL Server or to SQL Server hosted on Azure VM, set the
-source and target server type to **SQL Server**. If you are migrating
-to Azure SQL Database, instead set the target server type to **Azure
-SQL Database**.
+    on-premises SQL Server or to SQL Server hosted on Azure VM, set the
+    source and target server type to **SQL Server**. If you are migrating
+    to Azure SQL Database, instead set the target server type to **Azure
+    SQL Database**.
 
-1.  Click **Create**.
+3.  Click **Create**.
 
     ![Create new assessment](../dma/media/NewAssessment.png)
 
-## Choose assessment options
+### Choose assessment options
 
 1.  Select the target SQL Server version that you plan to migrate to,
     and run an assessment.
@@ -55,7 +56,7 @@ SQL Database**.
        ![Select an assessment report type](../dma/media/AssessmentTypes.png)
 
 3.  When you are assessing your source SQL Server migrating to Azure SQL
-    Database(s), you can choose one or both from the following
+    Database, you can choose one or both of the following
     assessment report types:
 
     -   Check database compatibility
@@ -64,7 +65,7 @@ SQL Database**.
 
        ![Select assessment report type](../dma/media/AssessmentTypes_Azure.png)
 
-## Add databases to assess
+### Add databases to assess
 
 1.  Click on **Add Sources** to open the connection fly-out.
 
@@ -79,13 +80,13 @@ SQL Database**.
     > clicking **Remove Sources**. You can also add databases from multiple
     > SQL Server instances by using the **Add Sources** button.
 
-1.  Click **Next** to start the assessment.
+4.  Click **Next** to start the assessment.
 
     ![Add sources and start assessment](../dma/media/SelectDatabase.png)
 
-## View results
+### View results
 
-The duration of the assessment depends on the number of databases added and the schema size of each database. Results will be displayed per database as soon as they are available.
+The duration of the assessment depends on the number of databases added and the schema size of each database. Results are displayed per database as soon as they are available.
 
 1.  Select the database that has completed assessment, and then switch
     between **Compatibility issues** and **Feature recommendations**
@@ -95,11 +96,11 @@ The duration of the assessment depends on the number of databases added and the 
     supported by the target SQL Server version selected on the "Options"
     screen.
 
-Compatibility issues can be reviewed by analyzing the impacted object and its details for every issue identified under “Breaking changes”, “Behavior changes” and “Deprecated features”.
+Compatibility issues can be reviewed by analyzing the impacted object and its details for every issue identified under “Breaking changes”, “Behavior changes” and “Deprecated features.”
 
 ![View assessment results](../dma/media/ReviewResults.png)
 
-Similarly, you can review feature recommendation across **Performance**, **Storage** and **Security** areas.
+Similarly, you can review feature recommendation across **Performance**, **Storage**, and **Security** areas.
 
 Feature recommendations cover a variety of features such as In-Memory OLTP and Columnstore, Stretch Database, Always Encrypted (AE), Dynamic Data Masking (DDM), and Transparent Data Encryption (TDE).
 
@@ -115,7 +116,7 @@ For Azure SQL Database, the assessments provide migration blocking issues and fe
 
   ![View compatibility issues](../dma/media/CompatibilityIssues.png)
 
-## Export results
+### Export results
 
 After all databases finish assessment, click **Export report** to export the results to either a JSON or a CSV file for analyzing the data at your own convenience.
 

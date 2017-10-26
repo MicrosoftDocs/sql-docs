@@ -1,14 +1,13 @@
 ---
-title: "How Online Index Operations Work | Microsoft Docs"
+title: How Online Index Operations Work | Microsoft Docs
 ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
+ms.date: 02/17/2017
+ms.prod: sql-non-specified
 ms.reviewer: ""
 ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
+ms.technology: dbe-indexes
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: article
 helpviewer_keywords: 
   - "online index operations"
   - "source indexes [SQL Server]"
@@ -18,11 +17,13 @@ helpviewer_keywords:
   - "index temporary mappings [SQL Server]"
 ms.assetid: eef0c9d1-790d-46e4-a758-d0bf6742e6ae
 caps.latest.revision: 28
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-ms.product_service: sql-server-2016, sql-database
-ms.component: dbe-indexes
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.suite: SQL
+ms.prod_service: database engine, sql database, sql data warehouse
+ms.component: indexes
+ms.workload: "Inactive"
 ---
 # How Online Index Operations Work
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

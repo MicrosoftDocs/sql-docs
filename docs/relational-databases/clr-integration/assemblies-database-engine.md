@@ -18,6 +18,7 @@ caps.latest.revision: 28
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Assemblies (Database Engine)
   The topics in this section provide information to help you understand, design, and implement assemblies.  

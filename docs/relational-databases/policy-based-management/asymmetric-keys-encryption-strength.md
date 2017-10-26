@@ -16,6 +16,7 @@ caps.latest.revision: 9
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Asymmetric Keys Encryption Strength
   This rule checks whether asymmetric keys were created by using 1024-bit or stronger encryption.  

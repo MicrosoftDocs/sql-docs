@@ -36,7 +36,7 @@ manager: "jhubbard"
 |end_time|**datetime**|Time at which this step completed execution, was cancelled, or failed.|Smaller or equal to current time and larger or equal to start_time. Set to NULL for steps currently in execution or queued.|  
 |total_elapsed_time|**int**|Total amount of time the query step has been running, in milliseconds.|Between 0 and the difference between end_time and start_time. 0 for queued steps.<br /><br /> If total_elapsed_time exceeds the maximum value for an integer, total_elapsed_time will continue to be the maximum value. This condition will generate the warning “The maximum value has been exceeded.”<br /><br /> The maximum value in milliseconds is equivalent to 24.8 days.|  
 |row_count|**bigint**|Total number of rows changed or returned by this request.|0 for steps that did not change or return data. Otherwise, number of rows affected.|  
-|command|**nvarchar(4000)**|Holds the full text of the command of this step.|Any valid request string for a step. Truncated if longer than 4000 characters.|  
+|command|**nvarchar(4000)**|Holds the full text of the command of this step.|Any valid request string for a step. NULL when the operation is of the type MetaDataCreateOperation. Truncated if longer than 4000 characters.|  
   
  For information about the maximum rows retained by this view, see the Maximum System View Values section in the "Minimum and Maximum Values" in the [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
   

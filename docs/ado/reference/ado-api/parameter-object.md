@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Parameter Object
 Represents a parameter or argument associated with a [Command](../../../ado/reference/ado-api/command-object-ado.md) object based on a parameterized query or stored procedure.  

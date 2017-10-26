@@ -16,6 +16,7 @@ caps.latest.revision: 34
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Service Accounts (Configure Database Mirroring Security Wizard)
   When using Windows Authentication, if the server instances use different accounts, specify the service accounts for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. These service accounts must all be domain accounts (in the same or trusted domains).  

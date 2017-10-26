@@ -24,40 +24,40 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```tsql  
-create_execution [ @folder_name = folder_name  
-     , [ @project_name = ] project_name  
-     , [ @package_name = ] package_name  
-  [  , [ @reference_id = ] reference_id ]  
-  [  , [ @use32bitruntime = ] use32bitruntime ] 
-  [  , [ @runinscaleout = ] runinscaleout ]
-  [  , [ @useanyworker = ] useanyworker ] 
-     , [ @execution_id = ] execution_id OUTPUT  
+```sql  
+catalog.create_execution [@folder_name = folder_name  
+     , [@project_name =] project_name  
+     , [@package_name =] package_name  
+  [  , [@reference_id =] reference_id ]  
+  [  , [@use32bitruntime =] use32bitruntime ] 
+  [  , [@runinscaleout =] runinscaleout ]
+  [  , [@useanyworker =] useanyworker ] 
+     , [@execution_id =] execution_id OUTPUT  
 ```  
   
 ## Arguments  
- [ @folder_name = ] *folder_name*  
+ [@folder_name =] *folder_name*  
  The name of the folder that contains the package that is to be executed. The *folder_name* is **nvarchar(128)**.  
   
- [ @project_name = ] *project_name*  
+ [@project_name =] *project_name*  
  The name of the project that contains the package that is to be executed. The *project_name* is **nvarchar(128)**.  
   
- [ @package_name = ] *package_name*  
+ [@package_name =] *package_name*  
  The name of the package that is to be executed. The *package_name* is **nvarchar(260)**.  
   
- [ @reference_id = ] *reference_id*  
+ [@reference_id =] *reference_id*  
  A unique identifier for an environment reference. This parameter is optional. The *reference_id* is **bigint**.  
   
- [ @use32bitruntime = ] *use32bitruntime*  
+ [@use32bitruntime =] *use32bitruntime*  
  Indicates if the 32-bit runtime should be used to run the package on a 64-bit operating system. Use the value of 1 to execute the package with the 32-bit runtime when running on a 64-bit operating system. Use the value of 0 to execute the package with the 64-bit runtime when running on a 64-bit operating system. This parameter is optional. The *Use32bitruntime* is **bit**.  
  
- [ @runinscaleout = ] *runinscaleout*  
- Indicate whether the execution is in Scale Out. Use the value of 1 to execute the package in Scale Out. Use the value of 0 to execute the package without Scale Out. This parameter is optional. It is set to DEFAULT_EXECUTION_MODE in [SSISDB].[catalog].[catalog_properties], if not specified. The *runinscaleout* is **bit**. 
+ [@runinscaleout =] *runinscaleout*  
+ Indicate whether the execution is in Scale Out. Use the value of 1 to execute the package in Scale Out. Use the value of 0 to execute the package without Scale Out. This parameter is optional. If not specified, its value is set to DEFAULT_EXECUTION_MODE in [SSISDB].[catalog].[catalog_properties]. The *runinscaleout* is **bit**. 
  
- [ @useanyworker = ] *useanyworker*  
-  Indicate whether any Scale Out Worker is allowed to do the execution. Use the value of 1 to execute the package with any Scale Out Worker. Use the value of 0 to indicate that not all Scale Out Workers are allowed to execute the package. This parameter is optional. It is set to 1, if not specified. The *useanyworker* is **bit**. 
+ [@useanyworker =] *useanyworker*  
+  Indicate whether any Scale Out Worker is allowed to do the execution. Use the value of 1 to execute the package with any Scale Out Worker. Use the value of 0 to indicate that not all Scale Out Workers are allowed to execute the package. This parameter is optional. If not specified, its value is set to 1. The *useanyworker* is **bit**. 
   
- [ @execution_id = ] *execution_id*  
+ [@execution_id =] *execution_id*  
  Returns the unique identifier for an instance of execution. The *execution_id* is **bigint**.  
 
   
@@ -71,7 +71,7 @@ create_execution [ @folder_name = folder_name
 ## Example  
  The following example calls catalog.create_execution to create an instance of execution for the Child1.dtsx package, which is not in Scale Out. Integration Services Project1 contains the package. The example calls catalog.set_execution_parameter_value to set values for the Parameter1, Parameter2, and LOGGING_LEVEL parameters. The example calls catalog.start_execution to start an instance of execution.  
   
-```  
+```sql  
 Declare @execution_id bigint  
 EXEC [SSISDB].[catalog].[create_execution] @package_name=N'Child1.dtsx', @execution_id=@execution_id OUTPUT, @folder_name=N'TestDeply4', @project_name=N'Integration Services Project1', @use32bitruntime=False, @reference_id=Null  
 Select @execution_id  
@@ -83,7 +83,6 @@ DECLARE @var2 smallint = 1
 EXEC [SSISDB].[catalog].[set_execution_parameter_value] @execution_id, @object_type=50, @parameter_name=N'LOGGING_LEVEL', @parameter_value=@var2  
 EXEC [SSISDB].[catalog].[start_execution] @execution_id  
 GO  
-  
 ```  
   
 ## Return Code Value  

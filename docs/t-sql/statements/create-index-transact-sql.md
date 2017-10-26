@@ -57,6 +57,7 @@ caps.latest.revision: 223
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # CREATE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -1037,19 +1038,6 @@ CREATE INDEX IX_ProductVendor_VendorID
 ```  
 CREATE CLUSTERED INDEX IX_ProductVendor_VendorID   
     ON Purchasing..ProductVendor (VendorID);   
-```  
-  
-### P. Add a column to an index  
- The following example creates index IX_FF with two columns from the dbo.FactFinance table.  The next statement demonstrates rebuilding that index with the same name and one more column.  
-  
-```  
-CREATE INDEX IX_FF ON dbo.FactFinance (  
-    FinanceKey ASC, DateKey ASC );  
-  
---Rebuild and add the OrganizationKey  
-CREATE INDEX IX_FF ON dbo.FactFinance (  
-    FinanceKey, DateKey, OrganizationKey DESC)  
-WITH ( DROP_EXISTING = ON );  
 ```  
   
 ## See Also  

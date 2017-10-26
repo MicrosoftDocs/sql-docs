@@ -26,6 +26,7 @@ caps.latest.revision: 26
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # SESSION_USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -37,8 +38,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 SESSION_USER  
 ```  
   
@@ -64,11 +63,12 @@ GO
   
  This is the result set when the session user is `Surya`:  
   
- `--------------------------------------------------------------`  
-  
- `This session's current user is: Surya`  
-  
- `(1 row(s) affected)`  
+ ```
+--------------------------------------------------------------
+This session's current user is: Surya
+
+(1 row(s) affected)
+```  
   
 ### B. Using SESSION_USER with DEFAULT constraints  
  The following example creates a table that uses `SESSION_USER` as a `DEFAULT` constraint for the name of the person who records receipt of a shipment.  
@@ -123,21 +123,17 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Order #   Customer #  When Delivered       Received By`  
-  
- `--------  ----------  -------------------  -----------`  
-  
- `5000      7510        2005-03-16 12:02:14  Wanida`  
-  
- `5001      7231        2005-03-16 12:02:14  Wanida`  
-  
- `5002      7028        2005-03-16 12:02:14  Sylvester`  
-  
- `5003      7392        2005-03-16 12:02:14  Alejandro`  
-  
- `5004      7452        2005-03-16 12:02:14  Alejandro`  
-  
- `(5 row(s) affected)`  
+ ```
+Order #   Customer #  When Delivered       Received By
+--------  ----------  -------------------  -----------
+5000      7510        2005-03-16 12:02:14  Wanida
+5001      7231        2005-03-16 12:02:14  Wanida
+5002      7028        2005-03-16 12:02:14  Sylvester
+5003      7392        2005-03-16 12:02:14  Alejandro
+5004      7452        2005-03-16 12:02:14  Alejandro
+
+(5 row(s) affected)
+```  
   
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   

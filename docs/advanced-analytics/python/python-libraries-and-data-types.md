@@ -12,6 +12,7 @@ ms.topic: "article"
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Python Libraries and Data Types
 

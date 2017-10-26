@@ -7,6 +7,8 @@
 ## [Architecture and overview](architecture-overview-machine-learning.md)
 ## [Differences in machine learning features between editions of SQL Server](r/differences-in-r-features-between-editions-of-sql-server.md)
 
+## [Using R in Azure SQL Databases](r/using-r-in-azure-sql-database.md)
+
 # [Machine Learning Services - R](r/sql-server-r-services.md)
 
 ## [Getting Started](r/getting-started-with-sql-server-r-services.md)
@@ -102,15 +104,24 @@
 
 # [How To](r/sql-server-machine-learning-tasks.md)
 
-## [R package management](r/r-package-management-for-sql-server-r-services.md)
+## [R package management for SQL Server](r/r-package-management-for-sql-server-r-services.md)
+
+### [Install new R packages on SQL Server](r/install-additional-r-packages-on-sql-server.md)
 
 ### [Enable R package management for a SQL Server instance](r/r-package-how-to-enable-or-disable.md)
-### [Where to get R packages](r/installing-and-managing-r-packages.md)
-### [Install additional machine learning packages on SQL Server](r/install-additional-r-packages-on-sql-server.md)
-### [Create a local package repository using miniCRAN](r/create-a-local-package-repository-using-minicran.md)
+
 ### [Determine which packages are installed on SQL Server](r/determine-which-packages-are-installed-on-sql-server.md)
-### [User package libraries](r/packages-installed-in-user-libraries.md)
-### [Synchronize R packages used by SQL Server](r/package-install-uninstall-and-sync.md)
+
+### [Use RevoScaleR functions to find or install R packages on SQL Server](r/use-revoscaler-to-manage-r-packages.md)
+
+### [Synchronize R packages installed on SQL Server](r/package-install-uninstall-and-sync.md)
+
+### [R packages installed with SQL Server](r/installing-and-managing-r-packages.md)
+
+### [Use miniCRAN to create a local package repository](r/create-a-local-package-repository-using-minicran.md)
+
+### [Avoid errors with user package libraries for R](r/packages-installed-in-user-libraries.md)
+
 
 ## Data exploration and modeling
 

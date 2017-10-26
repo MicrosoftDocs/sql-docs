@@ -19,6 +19,7 @@ caps.latest.revision: 38
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Creating Extended Stored Procedures
     

@@ -1,7 +1,7 @@
 ---
 title: "Download SQL Server Data Tools (SSDT) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/23/2017"
+ms.date: "10/19/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -21,27 +21,28 @@ manager: "craigg"
 
 **[SQL Server Data Tools](https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx)** is a modern development tool that you can download for free to build SQL Server relational databases, Azure SQL databases, Integration Services packages, Analysis Services data models, and Reporting Services reports. With SSDT, you can design and deploy any SQL Server content type with the same ease as you would develop an application in Visual Studio. 
 
-The preview version of SSDT for Visual Studio 2017 (15.3.0 preview) is now available. This release introduces a standalone web installation experience for SQL Server Database, Analysis Services, Reporting Services, and Integration Services projects in Visual Studio 2017 15.3 or later.
+SSDT for Visual Studio 2017 (15.4.0 preview) is now available. This release introduces a standalone web installation experience for SQL Server Database, Analysis Services, Reporting Services, and Integration Services projects in Visual Studio 2017 15.4 or later.
 
 | SSDT for Visual Studio 2017 (preview) | SSDT for Visual Studio 2015 | 
 |:--|:--|
-|[![download](../ssdt/media/download.png) Download SSDT for Visual Studio 2017 (15.3.0 preview) ](https://go.microsoft.com/fwlink/?linkid=853836) | [![download](../ssdt/media/download.png) Download SSDT for Visual Studio 2015 (17.2)](https://go.microsoft.com/fwlink/?linkid=852922)|
+|[![download](../ssdt/media/download.png) Download SSDT for Visual Studio 2017 (15.4.0 preview) ](https://go.microsoft.com/fwlink/?LinkId=860015) | [![download](../ssdt/media/download.png) Download SSDT for Visual Studio 2015 (17.3)](https://go.microsoft.com/fwlink/?linkid=858660)|
 |||
 
 > [!IMPORTANT]
-> Before installing SSDT for Visual Studio 2017 (preview), close all VS instances, and uninstall SSAS and SSRS if they are already installed on VS 2017.
+> Before installing SSDT for Visual Studio 2017 (15.4.0 preview), close all VS instances, and uninstall SSAS and SSRS if they are already installed on VS 2017. 
 > 
+> SSDT for Visual Studio 2017 (15.3.0 preview) doesn't support upgrading so you must uninstall it before installing SSDT for Visual Studio 2017 (15.4.0 preview). 
 
 
-SSDT for Visual Studio 2015, and SSDT for Visual Studio 2017 both use DacFx 17.2: [Download Data-Tier Application Framework (DacFx) 17.2](https://www.microsoft.com/download/details.aspx?id=55713)
+SSDT for Visual Studio 2015, and SSDT for Visual Studio 2017 both use DacFx 17.3: [Download Data-Tier Application Framework (DacFx) 17.3](https://www.microsoft.com/download/details.aspx?id=56048)
 
 
 
 ## SSDT for Visual Studio 2017
 **Version Information**  
   
-The release number: 15.3.0 preview  
-The build number for this release: 14.0.16121.0
+The release number: 15.4.0 preview  
+The build number for this release: 14.0.16134.0
 
 For a complete list of changes, see the [changelog](changelog-for-sql-server-data-tools-ssdt.md).
 
@@ -53,44 +54,47 @@ SSDT for Visual Studio 2017 has the same system requirements as installing VS, s
 
 
 
+
 ## SSDT for Visual Studio 2015
 **Version Information**  
   
-The release number: 17.2  
-The build number for this release: 14.0.61707.300
+The release number: 17.3
+
+The build number for this release: 14.0.61709.290
   
 For a complete list of changes, see the [changelog](changelog-for-sql-server-data-tools-ssdt.md).
 
 ### Available Languages - SSDT for VS 2015
   
- This release of SSDT can be installed in the following languages:  
-[Chinese (People's Republic of China)]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x804) | 
-[Chinese (Taiwan)]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x404) | 
-[English (United States)]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x409) | 
-[French]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x40c)  
-[German]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x407) | 
-[Italian]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x410) | 
-[Japanese]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x411) | 
-[Korean]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x412) | 
-[Portuguese (Brazil)]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x416) | 
-[Russian]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x419) | 
-[Spanish]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x40a)  
+This release of SSDT can be installed in the following languages:  
+
+[Chinese (People's Republic of China)]( https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x804) | 
+[Chinese (Taiwan)]( https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x404) | 
+[English (United States)]( https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x409) | 
+[French]( https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x40c)  
+[German]( https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x407) | 
+[Italian]( https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x410) | 
+[Japanese]( https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x411) | 
+[Korean]( https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x412) | 
+[Portuguese (Brazil)]( https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x416) | 
+[Russian]( https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x419) | 
+[Spanish]( https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x40a)  
 
 ### ISO Images - SSDT for VS 2015
 
 An ISO image of SSDT can be used as an alternative way to install SSDT or to set up an Administrative Installation point. The ISO is a self-contained file that contains all of the components needed by SSDT and it can be downloaded using a restartable download manager, useful for situations with limited or less reliable network bandwidth. Once downloaded, the ISO can be mounted as a drive or burned to a DVD.
 
-[Chinese (People's Republic of China)]( https://go.microsoft.com/fwlink/?linkid=852942&clcid=0x804) |
-[Chinese (Taiwan)]( https://go.microsoft.com/fwlink/?linkid=852942&clcid=0x404) |
-[English (United States)]( https://go.microsoft.com/fwlink/?linkid=852942&clcid=0x409) |
-[French]( https://go.microsoft.com/fwlink/?linkid=852942&clcid=0x40c)  
-[German]( https://go.microsoft.com/fwlink/?linkid=852942&clcid=0x407) |
-[Italian]( https://go.microsoft.com/fwlink/?linkid=852942&clcid=0x410) |
-[Japanese]( https://go.microsoft.com/fwlink/?linkid=852942&clcid=0x411) |
-[Korean]( https://go.microsoft.com/fwlink/?linkid=852942&clcid=0x412) |
-[Portuguese (Brazil)]( https://go.microsoft.com/fwlink/?linkid=852942&clcid=0x416) |
-[Russian]( https://go.microsoft.com/fwlink/?linkid=852942&clcid=0x419) |
-[Spanish]( https://go.microsoft.com/fwlink/?linkid=852942&clcid=0x40a)
+[Chinese (People's Republic of China)]( https://go.microsoft.com/fwlink/?linkid=858663&clcid=0x804) |
+[Chinese (Taiwan)]( https://go.microsoft.com/fwlink/?linkid=858663&clcid=0x404) |
+[English (United States)]( https://go.microsoft.com/fwlink/?linkid=858663&clcid=0x409) |
+[French]( https://go.microsoft.com/fwlink/?linkid=858663&clcid=0x40c)  
+[German]( https://go.microsoft.com/fwlink/?linkid=858663&clcid=0x407) |
+[Italian]( https://go.microsoft.com/fwlink/?linkid=858663&clcid=0x410) |
+[Japanese]( https://go.microsoft.com/fwlink/?linkid=858663&clcid=0x411) |
+[Korean]( https://go.microsoft.com/fwlink/?linkid=858663&clcid=0x412) |
+[Portuguese (Brazil)]( https://go.microsoft.com/fwlink/?linkid=858663&clcid=0x416) |
+[Russian]( https://go.microsoft.com/fwlink/?linkid=858663&clcid=0x419) |
+[Spanish]( https://go.microsoft.com/fwlink/?linkid=858663&clcid=0x40a)
 
 
 ## Download Visual Studio
@@ -117,11 +121,11 @@ After installing SSDT, work through these tutorials to learn how to create datab
   
 -   [Project-Oriented Offline Database Development](https://msdn.microsoft.com/library/hh272702(v=vs.103).aspx)  
   
--   [SSIS Tutorial: Create a Simple ETL Package](https://msdn.microsoft.com/library/ms169917.aspx)  
+-   [SSIS Tutorial: Create a Simple ETL Package](../integration-services/ssis-how-to-create-an-etl-package.md)  
   
--   [Analysis Services tutorials](https://msdn.microsoft.com/library/hh231701.aspx)  
+-   [Analysis Services tutorials](../analysis-services/analysis-services-tutorials-ssas.md)  
   
--   [Create a Basic Table Report (SSRS Tutorial)](https://msdn.microsoft.com/library/ms167305.aspx)  
+-   [Create a Basic Table Report (SSRS Tutorial)](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)  
   
 
 

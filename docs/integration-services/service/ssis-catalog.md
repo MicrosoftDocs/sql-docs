@@ -557,7 +557,7 @@ To run the **SSIS Server Maintenance Job**, SSIS creates the SQL Server login **
      ![Review the results in the SSISDB Upgrade Wizard](../../integration-services/service/media/ssisdb-upgrade-wizard-3.png "Review the results in the SSISDB Upgrade Wizard")  
 
 ## Always On for SSIS Catalog (SSISDB)
-  The Always On Availability Groups feature is a high-availability and disaster-recovery solution that provides an enterprise-level alternative to database mirroring. An availability group supports a failover environment for a discrete set of user databases, known as availability databases, that fail over together. For more information,  see [Always On Availability Groups](https://msdn.microsoft.com/library/hh510230.aspx).  
+  The Always On Availability Groups feature is a high-availability and disaster-recovery solution that provides an enterprise-level alternative to database mirroring. An availability group supports a failover environment for a discrete set of user databases, known as availability databases, that fail over together. For more information,  see [Always On Availability Groups](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md).  
   
  In order to provide the high-availability for the SSIS catalog (SSISDB) and its contents (projects, packages, execution logs, etc.), you can add the SSISDB database (just the same as any other user database) to an Always On Availability Group. When a failover occurs, one of the secondary nodes automatically becomes the new primary node.  
  
@@ -579,7 +579,7 @@ To run the **SSIS Server Maintenance Job**, SSIS creates the SQL Server login **
   
 2.  Install SQL Server 2016 with Integration Services (SSIS) feature on each node of the cluster.  
   
-3.  Enable Always On Availability Groups for each SQL Server instance. See [Enable Always On Availability Groups](https://msdn.microsoft.com/library/ff878259.aspx) for details.  
+3.  Enable Always On Availability Groups for each SQL Server instance. See [Enable Always On Availability Groups](../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md) for details.  
   
 ###  <a name="Firsttime"></a> Configure SSIS support for Always On  
   
@@ -601,12 +601,12 @@ To run the **SSIS Server Maintenance Job**, SSIS creates the SQL Server login **
   
 3.  Click **Enable CLR Integration**. The catalog uses CLR stored procedures.  
   
-4.  Click **Enable automatic execution of Integration Services stored procedure at SQL Server startup** to enable the [catalog.startup](https://msdn.microsoft.com/library/hh230984.aspx) stored procedure to run each time the SSIS server instance is restarted. The stored procedure performs maintenance of the state of operations for the SSISDB catalog. It fixes the status of any packages there were running if and when the SSIS server instance goes down.  
+4.  Click **Enable automatic execution of Integration Services stored procedure at SQL Server startup** to enable the [catalog.startup](../system-stored-procedures/catalog-startup.md) stored procedure to run each time the SSIS server instance is restarted. The stored procedure performs maintenance of the state of operations for the SSISDB catalog. It fixes the status of any packages there were running if and when the SSIS server instance goes down.  
   
-5.  Enter a **password**, and then click **Ok**. The password protects the database master key that is used for encrypting the catalog data. Save the password in a secure location. It is recommended that you also back up the database master key. For more information, see [Back Up a Database Master Key](https://msdn.microsoft.com/library/aa337546.aspx).  
+5.  Enter a **password**, and then click **Ok**. The password protects the database master key that is used for encrypting the catalog data. Save the password in a secure location. It is recommended that you also back up the database master key. For more information, see [Back Up a Database Master Key](../../relational-databases/security/encryption/back-up-a-database-master-key.md).  
   
 ####  <a name="Step2"></a> Step 2: Add SSISDB to an Always On Availability Group  
- Adding the SSISDB database to an Always On Availability Group is almost same as adding any other user database into an availability group. See [Use the Availability Group Wizard](https://msdn.microsoft.com/library/hh403415.aspx).  
+ Adding the SSISDB database to an Always On Availability Group is almost same as adding any other user database into an availability group. See [Use the Availability Group Wizard](../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md).  
   
  You need to provide the password that you specified while creating the SSIS Catalog in the **Select Databases** page of the **New Availability Group** wizard.  
   

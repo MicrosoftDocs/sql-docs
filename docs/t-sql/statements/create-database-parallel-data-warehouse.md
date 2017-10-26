@@ -14,6 +14,7 @@ caps.latest.revision: 13
 author: "barbkess"
 ms.author: "barbkess"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # CREATE DATABASE (Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -25,8 +26,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for Parallel Data Warehouse  
-  
 CREATE DATABASE database_name   
 WITH (   
     [ AUTOGROW = ON | OFF , ]   

@@ -15,6 +15,7 @@ caps.latest.revision: 10
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Understanding Tabular Object Model at Levels 1050 through 1103
 

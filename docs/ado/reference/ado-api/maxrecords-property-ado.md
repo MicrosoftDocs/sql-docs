@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # MaxRecords Property (ADO)
 Indicates the maximum number of records to return to a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) from a query.  

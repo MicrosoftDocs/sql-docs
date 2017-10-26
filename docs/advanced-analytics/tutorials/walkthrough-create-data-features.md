@@ -18,6 +18,7 @@ caps.latest.revision: 21
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Create data features using R and SQL (walkthrough)
 
@@ -240,9 +241,9 @@ Your times might vary significantly, depending on your network speed, and your h
 
 ## Next lesson
 
-[Build an R model and save to SQL](/walkthrough-build-and-save-the-model.md)
+[Build an R model and save to SQL](walkthrough-build-and-save-the-model.md)
 
 ## Previous lesson
 
-[View and summarize data using R](/walkthrough-view-and-summarize-data-using-r.md)
+[View and summarize data using R](walkthrough-view-and-summarize-data-using-r.md)
 

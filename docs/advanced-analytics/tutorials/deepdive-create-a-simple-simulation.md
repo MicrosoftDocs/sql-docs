@@ -18,6 +18,7 @@ caps.latest.revision: 16
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Create a Simple Simulation
 

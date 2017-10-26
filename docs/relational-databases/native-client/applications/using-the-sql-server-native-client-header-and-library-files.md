@@ -26,6 +26,7 @@ caps.latest.revision: 63
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Using the SQL Server Native Client Header and Library Files
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]

@@ -23,6 +23,7 @@ caps.latest.revision: 37
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # CURSOR_STATUS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -110,23 +111,19 @@ DROP TABLE #TMP
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`After declare`
+```
+After declare
+---------------
+-1  
   
-`---------------`
+After Open
+----------
+1  
   
- `-1`  
-  
-`After Open`
-  
-`----------`
-  
- `1`  
-  
-`After Close`
-  
-`-----------`
-  
- `-1`  
+After Close
+-----------
+-1
+```  
   
 ## See also
 [Cursor Functions &#40;Transact-SQL&#41;](../../t-sql/functions/cursor-functions-transact-sql.md)  

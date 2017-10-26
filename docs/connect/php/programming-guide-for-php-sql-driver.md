@@ -14,6 +14,7 @@ caps.latest.revision: 26
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Programming Guide for PHP SQL Driver
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

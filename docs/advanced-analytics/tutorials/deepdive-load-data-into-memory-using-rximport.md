@@ -18,6 +18,7 @@ caps.latest.revision: 14
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Load Data into Memory using rxImport
 

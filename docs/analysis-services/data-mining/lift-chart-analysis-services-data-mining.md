@@ -22,6 +22,7 @@ caps.latest.revision: 55
 author: "Minewiskan"
 ms.author: "owend"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Lift Chart (Analysis Services - Data Mining)
   A *lift chart* graphically represents the improvement that a mining model provides when compared against a random guess, and measures the change in terms of a *lift* score. By comparing the lift scores for different models, you can determine which model is best. You can also determine the point at which the model’s predictions become less useful. For example, by reviewing the lift chart, you might realize that a promotional campaign is likely to be effective against only 30% of your customers, and use that figure to limit the scope of the campaign.  

@@ -23,6 +23,7 @@ caps.latest.revision: 46
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # REVERSE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -34,8 +35,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 REVERSE ( string_expression )  
 ```  
   
@@ -65,19 +64,16 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `FirstName      Reverse`  
-  
- `-------------- --------------`  
-  
- `Ken            neK`  
-  
- `Rob            boR`  
-  
- `Roberto        otreboR`  
-  
- `Terri          irreT`  
-  
- `(4 row(s) affected)`  
+ ```
+FirstName      Reverse
+-------------- --------------
+Ken            neK
+Rob            boR
+Roberto        otreboR
+Terri          irreT
+
+(4 row(s) affected)
+```  
   
  The following example reverses the characters in a variable.  
   
@@ -100,22 +96,6 @@ GO
   
 ```  
 SELECT name, REVERSE(name) FROM sys.databases;  
-GO  
-```  
-  
- The following example reverses the characters in a variable.  
-  
-```  
-DECLARE @myvar varchar(10);  
-SET @myvar = 'sdrawkcaB';  
-SELECT REVERSE(@myvar) AS Reversed ;  
-GO  
-```  
-  
- The following example makes an implicit conversion from an **int** data type into **varchar** data type and then reverses the result.  
-  
-```  
-SELECT REVERSE(1234) AS Reversed ;  
 GO  
 ```  
   

@@ -25,6 +25,7 @@ caps.latest.revision: 42
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # ISNULL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,8 +37,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 ISNULL ( check_expression , replacement_value )  
 ```  
   
@@ -72,11 +71,12 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `--------------------------`  
+ ```
+ -------------------------- 
+59.79  
   
- `59.79`  
-  
- `(1 row(s) affected)`  
+ (1 row(s) affected)
+ ```  
   
 ### B. Using ISNULL  
  The following example selects the description, discount percentage, minimum quantity, and maximum quantity for all special offers in `AdventureWorks2012`. If the maximum quantity for a particular special offer is NULL, the `MaxQty` shown in the result set is `0.00`.  

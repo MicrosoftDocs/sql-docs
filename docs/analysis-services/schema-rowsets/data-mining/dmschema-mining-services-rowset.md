@@ -22,6 +22,7 @@ caps.latest.revision: 35
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # DMSCHEMA_MINING_SERVICES Rowset
   Provides a description of each data mining algorithm that the provider supports.  

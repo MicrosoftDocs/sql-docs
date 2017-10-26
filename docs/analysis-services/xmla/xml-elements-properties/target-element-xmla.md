@@ -28,6 +28,7 @@ caps.latest.revision: 14
 author: "jeannt"
 ms.author: "jeannt"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Target Element (XMLA)
   Represents the target partition to be merged during a [MergePartitions](../../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md) command.  

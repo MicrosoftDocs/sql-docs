@@ -21,6 +21,7 @@ caps.latest.revision: 19
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Collections (ASSL)
   This reference section contains syntax and usage information for each element that acts as a collection in the Analysis Services Scripting Language (ASSL) schema.  

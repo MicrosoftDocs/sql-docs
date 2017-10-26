@@ -17,6 +17,7 @@ caps.latest.revision: 20
 author: "Minewiskan"
 ms.author: "owend"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Create a Lift Chart, Profit Chart, or Classification Matrix
   You can create an accuracy chart for an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data mining model in five basic steps:  

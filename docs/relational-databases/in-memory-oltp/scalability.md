@@ -14,6 +14,7 @@ caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Scalability
   SQL Server 2016 contains scalability enhancements to the on-disk storage for memory-optimized tables.  

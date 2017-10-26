@@ -17,6 +17,7 @@ caps.latest.revision: 34
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Database Mirroring - Allow Network Access - Windows Authentication
   Using Windows Authentication for connecting the database mirroring endpoints of two instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requires manual configuration of login accounts under the following conditions:  

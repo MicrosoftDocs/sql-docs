@@ -1,7 +1,7 @@
 ---
 title: "sp_filestream_force_garbage_collection (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "07/22/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -24,21 +24,19 @@ ms.author: "jhubbard"
 manager: "jhubbard"
 ---
 # Filestream and FileTable - sp_filestream_force_garbage_collection
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Forces the FILESTREAM garbage collector to run, deleting any unneeded FILESTREAM files.  
   
  A FILESTREAM container cannot be removed until all the deleted files within it have been cleaned up by the garbage collector. The FILESTREAM garbage collector runs automatically. However, if you need to remove a container before the garbage collector has run, you can use sp_filestream_force_garbage_collection to run the garbage collector manually.  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
 ## Syntax  
   
 ```  
-  
-sp_filestream_force_garbage_collection [ @dbname = ]  'database_name'  , @filename = 'logical_file_name' ]  
+sp_filestream_force_garbage_collection  
+    [ @dbname = ]  'database_name',  
+    [ @filename = ] 'logical_file_name' ]  
 ```  
   
 ## Arguments  
@@ -49,7 +47,7 @@ sp_filestream_force_garbage_collection [ @dbname = ]  'database_name'  , @filena
 >  *dbname* is **sysname**. If not specified, current database is assumed.  
   
  **@filename** = *logical_file_name*  
- Specifies the logical name of the FILESTREAM container to run the garbage collector on. **@filename** is optional. If no logical filename is specified, the garbage collector will clean all FILESTREAM containers in the specified database.  
+ Specifies the logical name of the FILESTREAM container to run the garbage collector on. **@filename** is optional. If no logical filename is specified, the garbage collector cleans all FILESTREAM containers in the specified database.  
   
 ## Return Code Values  
   
@@ -65,8 +63,8 @@ sp_filestream_force_garbage_collection [ @dbname = ]  'database_name'  , @filena
 |-----------|-----------------|  
 |*file_name*|Indicates the FILESTREAM container name|  
 |*num_collected_items*|Indicates the number of FILESTREAM items (files/directories) that have been garbage collected (deleted) in this container.|  
-|*num_marked_for_collection_items*|Indicates the number of FILESTREAM items (files/directories) that have been marked for garbage collection in this container. These items have not beeeen deleted yet, but may be eligible for deletion the following garbage collection phase.|  
-|*num_unprocessed_items*|Indicates the number of eligible FILESTREAM items (files or directories) that were not processed for garbage collection in this FILESTREAM container. Items may be unprocessed for various reasons, including the following:<br /><br /> Files that need to be pinned down because Log backup or CheckPoint has not been taken.<br /><br /> Files in the FULL or BULK_LOGGED recovery model.<br /><br /> There is a long-running active transaction.<br /><br /> The replication log reader job has not run.See the white paper [FILESTREAM Storage in SQL Server 2008](http://go.microsoft.com/fwlink/?LinkId=209156) for more information.|  
+|*num_marked_for_collection_items*|Indicates the number of FILESTREAM items (files/directories) that have been marked for garbage collection in this container. These items have not been deleted yet, but may be eligible for deletion following the garbage collection phase.|  
+|*num_unprocessed_items*|Indicates the number of eligible FILESTREAM items (files or directories) that were not processed for garbage collection in this FILESTREAM container. Items may be unprocessed for various reasons, including the following:<br /><br /> Files that need to be pinned down because Log backup or CheckPoint has not been taken.<br /><br /> Files in the FULL or BULK_LOGGED recovery model.<br /><br /> There is a long-running active transaction.<br /><br /> The replication log reader job has not run. See the white paper [FILESTREAM Storage in SQL Server 2008](http://go.microsoft.com/fwlink/?LinkId=209156) for more information.|  
 |*last_collected_xact_seqno*|Returns the last corresponding log sequence number (LSN) up to which the files have been garbage collected for the specified FILESTREAM container.|  
   
 ## Remarks  
@@ -75,8 +73,13 @@ sp_filestream_force_garbage_collection [ @dbname = ]  'database_name'  , @filena
 > [!NOTE]  
 >  It is recommended that this operation be run only when necessary and outside usual operation hours.  
   
- Multiple invocations of this stored procedure can be run simultaneously only on separate containers or separate databases.  
-  
+Multiple invocations of this stored procedure can be run simultaneously only on separate containers or separate databases.  
+
+Due to 2-phase operations, the stored procedure should be run twice to actually delete underlying Filestream files.  
+
+Garbage Collection (GC) relies on log truncation. Therefore, if files were deleted recently on a database using Full Recovery model, they are GC-ed only after a log backup of those transaction log portions is taken and the log portion is marked inactive. On a database using Simple recovery model, a log truncation occurs after a `CHECKPOINT` has been issued against the database.  
+
+
 ## Permissions  
  Requires membership in the db_owner database role.  
   
@@ -85,7 +88,7 @@ sp_filestream_force_garbage_collection [ @dbname = ]  'database_name'  , @filena
   
 ### A. Specifying no container  
   
-```  
+```sql  
 USE FSDB;  
 GO  
 EXEC sp_filestream_force_garbage_collection @dbname = N'FSDB';  
@@ -93,10 +96,11 @@ EXEC sp_filestream_force_garbage_collection @dbname = N'FSDB';
   
 ### B. Specifying a container  
   
-```  
+```sql  
 USE FSDB;  
 GO  
-EXEC sp_filestream_force_garbage_collection @dbname = N'FSDB' @filename = N'FSContainer';  
+EXEC sp_filestream_force_garbage_collection @dbname = N'FSDB',
+    @filename = N'FSContainer';  
 ```  
   
 ## See Also  

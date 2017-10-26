@@ -1,7 +1,7 @@
 ---
 title: "CAST and CONVERT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/07/2017"
+ms.date: "09/08/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -38,11 +38,24 @@ caps.latest.revision: 136
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # CAST and CONVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Converts an expression of one data type to another.
+Converts an expression of one data type to another.  
+For example, the following examples change the input datatype, into two other datatypes, with different levels of precision.
+```sql  
+SELECT 9.5 AS Original, CAST(9.5 AS int) AS int, 
+    CAST(9.5 AS decimal(6,4)) AS decimal;
+SELECT 9.5 AS Original, CONVERT(int, 9.5) AS int, 
+    CONVERT(decimal(6,4), 9.5) AS decimal;
+```  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+|Original	|int	|decimal |  
+|----|----|----|  
+|9.5 |9 |9.5000 |  
+
 > [!TIP]
 > Many [examples](#BKMK_examples) are at the bottom of this topic.  
   
@@ -69,17 +82,13 @@ Is the target data type. This includes **xml**, **bigint**, and **sql_variant**.
 Is an optional integer that specifies the length of the target data type. The default value is 30.
   
 *style*  
-Is an integer expression that specifies how the CONVERT function is to translate *expression*. If style is NULL, NULL is returned. The range is determined by *data_type*. For more information, see the Remarks section.
+Is an integer expression that specifies how the CONVERT function is to translate *expression*. If style is NULL, NULL is returned. The range is determined by *data_type*. 
   
 ## Return types
 Returns *expression* translated to *data_type*.
 
-[Jump to the 15 examples at the end of this topic](#BKMK_examples)
-  
-## Remarks  
-  
 ## Date and Time Styles  
-When *expression* is a date or time data type,  *style* can be one of the values shown in the following table. Other values are processed as 0. . Beginning with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], the only styles that are supported when converting from date and time types to **datetimeoffset** are 0 or 1. All other conversion styles return error 9809.
+When *expression* is a date or time data type,  *style* can be one of the values shown in the following table. Other values are processed as 0. Beginning with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], the only styles that are supported when converting from date and time types to **datetimeoffset** are 0 or 1. All other conversion styles return error 9809.
   
 >  [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports the date format in Arabic style by using the Kuwaiti algorithm.
@@ -377,54 +386,44 @@ Computed
 ```  
   
 ### C. Using CAST to concatenate  
-The following example concatenates noncharacter, nonbinary expressions by using `CAST`.
+The following example concatenates noncharacter expressions by using CAST. Uses AdventureWorksDW.
   
 ```sql
-USE AdventureWorks2012;  
-GO  
 SELECT 'The list price is ' + CAST(ListPrice AS varchar(12)) AS ListPrice  
-FROM Production.Product  
+FROM dbo.DimProduct  
 WHERE ListPrice BETWEEN 350.00 AND 400.00;  
-GO  
 ```  
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
 ```  
 ListPrice
-------------------
+------------------------
 The list price is 357.06
 The list price is 364.09
 The list price is 364.09
 The list price is 364.09
-The list price is 364.09
-(5 row(s) affected)  
-```
+The list price is 364.09  
+```  
   
 ### D. Using CAST to produce more readable text  
-The following example uses `CAST` in the select list to convert the `Name` column to a `char(10)` column.
+The following example uses CAST in the SELECT list to convert the `Name` column to a **char(10)** column. Uses AdventureWorksDW.
   
 ```sql
-USE AdventureWorks2012;  
-GO  
-SELECT DISTINCT CAST(p.Name AS char(10)) AS Name, s.UnitPrice  
-FROM Sales.SalesOrderDetail AS s   
-JOIN Production.Product AS p   
-    ON s.ProductID = p.ProductID  
-WHERE Name LIKE 'Long-Sleeve Logo Jersey, M';  
-GO  
+SELECT DISTINCT CAST(EnglishProductName AS char(10)) AS Name, ListPrice  
+FROM dbo.DimProduct  
+WHERE EnglishProductName LIKE 'Long-Sleeve Logo Jersey, M';  
 ```  
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
 ```  
-Name       UnitPrice
----------- -----------
-Long-Sleev 31.2437
-Long-Sleev 32.4935
-Long-Sleev 49.99
-(3 row(s) affected)  
-```
+Name        UnitPrice
+----------  ---------
+Long-Sleev  31.2437
+Long-Sleev  32.4935
+Long-Sleev  49.99  
+```  
   
 ### E. Using CAST with the LIKE clause  
 The following example converts the `money` column `SalesYTD` to an `int` and then to a `char(20)` column so that it can be used with the `LIKE` clause.
@@ -659,47 +658,7 @@ ProductKey  UnitPrice  UnitPriceDiscountPct  DiscountPrice
 216         18.5043    0.05                  1  
 ```  
   
-### L. Using CAST to concatenate  
-The following example concatenates noncharacter expressions by using CAST. Uses AdventureWorksDW.
-  
-```sql
-SELECT 'The list price is ' + CAST(ListPrice AS varchar(12)) AS ListPrice  
-FROM dbo.DimProduct  
-WHERE ListPrice BETWEEN 350.00 AND 400.00;  
-```  
-  
-[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
-  
-```  
-ListPrice
-------------------------
-The list price is 357.06
-The list price is 364.09
-The list price is 364.09
-The list price is 364.09
-The list price is 364.09  
-```  
-  
-### M. Using CAST to produce more readable text  
-The following example uses CAST in the SELECT list to convert the `Name` column to a **char(10)** column. Uses AdventureWorksDW.
-  
-```sql
-SELECT DISTINCT CAST(EnglishProductName AS char(10)) AS Name, ListPrice  
-FROM dbo.DimProduct  
-WHERE EnglishProductName LIKE 'Long-Sleeve Logo Jersey, M';  
-```  
-  
-[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
-  
-```  
-Name        UnitPrice
-----------  ---------
-Long-Sleev  31.2437
-Long-Sleev  32.4935
-Long-Sleev  49.99  
-```  
-  
-### N. Using CAST with the LIKE clause  
+### L. Using CAST with the LIKE clause  
 The following example converts the **money** column `ListPrice` to an **int** type and then to a **char(20)** type so that it can be used with the LIKE clause. Uses AdventureWorksDW.
   
 ```sql
@@ -708,7 +667,7 @@ FROM dbo.DimProduct
 WHERE CAST(CAST(ListPrice AS int) AS char(20)) LIKE '2%';  
 ```  
   
-### O. Using CAST and CONVERT with datetime data  
+### M. Using CAST and CONVERT with datetime data  
 The following example displays the current date and time, uses CAST to change the current date and time to a character data type, and then uses CONVERT display the date and time in the ISO 8601 format. Uses AdventureWorksDW.
   
 ```sql

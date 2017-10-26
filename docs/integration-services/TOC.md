@@ -6,6 +6,28 @@
 ## [New and recently updated articles](new-updated-integration-services.md)
 ## [Integration Services Features Supported by the Editions of SQL Server](integration-services-features-supported-by-the-editions-of-sql-server.md)
 ## [Integration Services Backward Compatibility](integration-services-backward-compatibility.md)
+
+# Quickstarts
+## Deploy
+### [Deploy with SSMS](./ssis-quickstart-deploy-ssms.md)
+### [Deploy with Transact-SQL (SSMS)](./ssis-quickstart-deploy-tsql-ssms.md)
+### [Deploy with Transact-SQL (VS Code)](ssis-quickstart-deploy-tsql-vscode.md)
+### [Deploy from the command prompt](./ssis-quickstart-deploy-cmdline.md)
+### [Deploy with PowerShell](ssis-quickstart-deploy-powershell.md)
+### [Deploy with C#](./ssis-quickstart-deploy-dotnet.md) 
+## Run
+### [Run with SSMS](./ssis-quickstart-run-ssms.md)
+### [Run with Transact-SQL (SSMS)](./ssis-quickstart-run-tsql-ssms.md)
+### [Run with Transact-SQL (VS Code)](ssis-quickstart-run-tsql-vscode.md)
+### [Run from the command prompt](./ssis-quickstart-run-cmdline.md)
+### [Run with PowerShell](ssis-quickstart-run-powershell.md)
+### [Run with C#](./ssis-quickstart-run-dotnet.md) 
+
+# [Lift and shift SSIS packages to Azure](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)
+## [Tutorial - Deploy, run, and monitor a package on Azure](lift-shift/ssis-azure-deploy-run-monitor-tutorial.md)
+## [Connect to the SSIS Catalog on Azure](lift-shift/ssis-azure-connect-to-catalog-database.md)
+## [Schedule package execution on Azure](lift-shift/ssis-azure-schedule-packages.md)
+## [Connect to data sources with Windows Authentication](lift-shift/ssis-azure-connect-with-windows-auth.md)
 # [Install or upgrade](../integration-services/install-windows/install-integration-services.md)
 
 # [Development and management Tools](integration-services-ssis-development-and-management-tools.md)

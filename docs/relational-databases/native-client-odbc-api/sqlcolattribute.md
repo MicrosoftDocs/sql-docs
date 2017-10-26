@@ -17,6 +17,7 @@ caps.latest.revision: 52
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # SQLColAttribute
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]

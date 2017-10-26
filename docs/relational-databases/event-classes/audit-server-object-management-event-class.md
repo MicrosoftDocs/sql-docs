@@ -16,6 +16,7 @@ caps.latest.revision: 20
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Audit Server Object Management Event Class
   The **Audit Server Object Management** event class occurs in the case of CREATE, ALTER, or DROP for server objects.  

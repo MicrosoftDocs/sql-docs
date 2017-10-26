@@ -22,6 +22,7 @@ caps.latest.revision: 32
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
+ms.workload: "Active"
 ---
 # OPENJSON (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -61,7 +62,7 @@ By default, the **OPENJSON** table-valued function returns three columns, which 
   
 ![Syntax for WITH clause in OPENJSON TVF](../../relational-databases/json/media/openjson-shema-syntax.png "OPENJSON WITH syntax")
 
-*with_clause* contains a list of columns with their types for **OPENJSON** to return. By default, **OPENJSON** matches keys in *jsonExpression* with the column names in *with_clause*. If a column name does not match a key name, you can provide an optional *column_path*, which is a [JSON Path Expression](../../relational-databases/json/json-path-expressions-sql-server.md) that references a key within the *jsonExpression*. 
+*with_clause* contains a list of columns with their types for **OPENJSON** to return. By default, **OPENJSON** matches keys in *jsonExpression* with the column names in *with_clause* (in this case, matches keys implies that it is case sensitive). If a column name does not match a key name, you can provide an optional *column_path*, which is a [JSON Path Expression](../../relational-databases/json/json-path-expressions-sql-server.md) that references a key within the *jsonExpression*. 
 
 ## Arguments  
 ### *jsonExpression*  
@@ -89,7 +90,7 @@ FROM OPENJSON(@json)
 |key|value|type|  
 |---------|-----------|----------|  
 |StringValue|John|1|  
-|IntValue|Doe|2|  
+|IntValue|45|2|  
 |TrueValue|true|3|  
 |FalseValue|false|3|  
 |NullValue|NULL|0|  

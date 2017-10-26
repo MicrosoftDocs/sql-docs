@@ -15,6 +15,7 @@ caps.latest.revision: 2
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # List existing databases on a Tabular server (Analysis Services AMO-TOM)
 

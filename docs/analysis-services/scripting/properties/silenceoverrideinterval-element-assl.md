@@ -26,6 +26,7 @@ caps.latest.revision: 32
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # SilenceOverrideInterval Element (ASSL)
   Defines the amount of time that must elapse after receiving initial notification before multidimensional OLAP (MOLAP) imaging begins unconditionally.  

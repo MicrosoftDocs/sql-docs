@@ -15,6 +15,7 @@ caps.latest.revision: 11
 author: "barbkess"
 ms.author: "barbkess"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # DBCC SHRINKLOG (Azure SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -26,8 +27,6 @@ Reduces the size of the transaction log *across the appliance* for the current [
 ## Syntax  
   
 ```sql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
 DBCC SHRINKLOG   
     [ ( SIZE = { target_size [ MB | GB | TB ]  } | DEFAULT ) ]   
     [ WITH NO_INFOMSGS ]   

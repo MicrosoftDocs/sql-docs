@@ -31,7 +31,7 @@ SQL Server Data Tools (SSDT) turns Visual Studio into a powerful development and
 
 ## Upgrade SQL Server Data Tools to SSDT 17.0 RC release
 
-SQL Server 2017 RC2 on Linux is supported by SSDT version 17.0 RC or later.
+SQL Server 2017 on Linux is supported by SSDT version 17.0 RC or later.
 
 * [Download and Install SSDT 17.0 RC2](https://go.microsoft.com/fwlink/?linkid=837939).
 

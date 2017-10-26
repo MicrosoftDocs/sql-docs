@@ -19,6 +19,7 @@ caps.latest.revision: 29
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # MDX Named Sets - Creating Session-Scoped Named Sets
   To create a named set that is available throughout a Multidimensional Expressions (MDX) session, you use the [CREATE SET](../../../mdx/mdx-data-definition-create-set.md) statement. A named set that is created by using the CREATE SET statement will not be removed until after the MDX session closes.  

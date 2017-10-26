@@ -59,19 +59,19 @@ If your data source is Excel, see [Provide a source query for Excel](#excelQueri
 There are three types of Excel objects that you can query.
 -   **Worksheet.** To query a worksheet, append the $ character to the end of the sheet name and add delimiters around the string - for example, **[Sheet1$]**.
 
-    ```
+    ```sql
     SELECT * FROM [Sheet1$]
     ```
 
 -   **Named range.** To query a named range, simply use the range name - for example, **MyDataRange**.
     
-    ```
+    ```sql
     SELECT * FROM MyDataRange
     ```
 
 -   **Unnamed range.** To specify a range of cells that you haven't named, append the $ character to the end of the sheet name, add the range specification, and add delimiters around the string - for example, **[Sheet1$A1:B4]**.
 
-    ```
+    ```sql
     SELECT * FROM [Sheet1$A1:B4]
     ```
 

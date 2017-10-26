@@ -22,9 +22,8 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```  
-  
-configure_catalog [ @property_name = ] property_name , [ @property_value = ] property_value  
+```sql
+catalog.configure_catalog [ @property_name = ] property_name , [ @property_value = ] property_value  
 ```  
   
 ## Arguments  
@@ -45,7 +44,7 @@ configure_catalog [ @property_name = ] property_name , [ @property_value = ] pro
   
  This stored procedure can be performed only when there are no active executions, such as pending, queued, running, and paused executions.  
   
- While the catalog is being configured, all other catalog stored procedures fail with the error message “Server is currently being configured”.  
+ While the catalog is being configured, all other catalog stored procedures fail with the error message "Server is currently being configured."
   
  When the catalog is configured, an entry is written to the operation log.  
   

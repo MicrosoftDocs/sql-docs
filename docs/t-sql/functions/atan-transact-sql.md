@@ -23,6 +23,7 @@ caps.latest.revision: 25
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # ATAN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -34,8 +35,6 @@ Returns the angle in radians whose tangent is a specified **float** expression. 
 ## Syntax  
   
 ```sql
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 ATAN ( float_expression )  
 ```  
   
@@ -101,11 +100,11 @@ SELECT ATAN(45.87) AS atanCalc1,
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`atanCalc1  atanCalc2  atanCalc3  atanCalc4  atanCalc5`
-  
-`---------  ---------  ---------  ---------  ---------`
-  
-`1.55       -1.57       0.00       0.15       1.57`
+```
+atanCalc1  atanCalc2  atanCalc3  atanCalc4  atanCalc5
+---------  ---------  ---------  ---------  ---------
+1.55       -1.57       0.00       0.15       1.57
+```
   
 ## See also
 [CEILING &#40;Transact-SQL&#41;](../../t-sql/functions/ceiling-transact-sql.md)  

@@ -14,6 +14,7 @@ caps.latest.revision: 35
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # SQL Server Native Client Support for High Availability, Disaster Recovery
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]

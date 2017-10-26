@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # View the Cube Schema
   The **Data Source View** pane of the **Cube Structure** tab in **Cube Designer** displays the cube schema. The schema is the set of tables from which the measures and dimensions for a cube are derived. Every cube schema consists of one or more fact tables and one or more dimension tables on which the measures and dimensions in the cube are based.  

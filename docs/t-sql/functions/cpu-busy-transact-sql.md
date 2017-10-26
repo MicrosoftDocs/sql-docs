@@ -1,7 +1,7 @@
 ---
 title: "@@CPU_BUSY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/24/2017"
+ms.date: "09/18/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -27,8 +27,9 @@ caps.latest.revision: 36
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
-# @@CPU_BUSY (Transact-SQL)
+# &#x40;&#x40;CPU_BUSY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
 Returns the time that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has spent working since it was last started. Result is in CPU time increments, or "ticks," and is cumulative for all CPUs, so it may exceed the actual elapsed time. Multiply by @@TIMETICKS to convert to microseconds.
@@ -40,7 +41,7 @@ Returns the time that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 
   
 ## Syntax  
   
-```sql
+```
 @@CPU_BUSY  
 ```  
   
@@ -60,11 +61,11 @@ SELECT @@CPU_BUSY * CAST(@@TIMETICKS AS float) AS 'CPU microseconds',
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`CPU microseconds As of`
-  
-`---------------- -----------------------`
-  
-`18406250         2006-12-05 17:00:50.600`
+```
+CPU microseconds As of
+---------------- -----------------------
+18406250         2006-12-05 17:00:50.600
+```
   
 ## See also
 [sys.dm_os_sys_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)  

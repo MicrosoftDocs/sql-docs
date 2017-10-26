@@ -26,6 +26,7 @@ caps.latest.revision: 36
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # LTRIM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -59,8 +60,10 @@ SELECT LTRIM('     Five spaces are at the beginning of this string.') FROM sys.d
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `---------------------------------------------------------------`  
-  `Five spaces are at the beginning of this string.`  
+ ```
+ ---------------------------------------------------------------  
+  Five spaces are at the beginning of this string.
+  ```  
 
 ### B: Example using a variable   
   

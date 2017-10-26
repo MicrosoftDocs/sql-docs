@@ -22,6 +22,7 @@ caps.latest.revision: 21
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # COS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -33,8 +34,6 @@ Is a mathematical function that returns the trigonometric cosine of the specifie
 ## Syntax  
   
 ```sql
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 COS ( float_expression )  
 ```  
   
@@ -76,11 +75,11 @@ SELECT COS(14.76) AS cosCalc1, COS(-0.1472738) AS cosCalc2;
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`cosCalc1  cosCalc2`
-  
-`--------  --------`
-  
-`-0.58     0.99`
+```
+cosCalc1  cosCalc2
+--------  --------
+-0.58     0.99
+```
   
 ## See also
 [Mathematical Functions &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)

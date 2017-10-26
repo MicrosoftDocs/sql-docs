@@ -26,6 +26,7 @@ caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # TargetType Element (ASSL)
   Identifies the item type of the item identified in the [Target](../../../analysis-services/scripting/properties/target-element-assl.md) element.  

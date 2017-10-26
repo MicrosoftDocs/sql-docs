@@ -20,6 +20,7 @@ caps.latest.revision: 15
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # String Concatenation - equal (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -93,39 +94,32 @@ GO
 ```
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Y      `  
+ ```
+ Y       
+ ------- 
+ 8000 
   
- `-------`  
-  
- `8000`  
-  
-  `(1 row(s) affected)` 
+ (1 row(s) affected) 
   
     
-  `Y      `  
+ Y       
+ ------- 
+ 12000 
   
- `-------`  
-  
- `12000`  
-  
-  `(1 row(s) affected)` 
+ (1 row(s) affected) 
 
-`Y      `  
+ Y       
+ ------- 
+ 8000 
   
- `-------`  
+ (1 row(s) affected) 
   
- `8000`  
+ Y       
+ ------- 
+ 8000 
   
-  `(1 row(s) affected)` 
-  
-    
-  `Y      `  
-  
- `-------`  
-  
- `8000`  
-  
-  `(1 row(s) affected)`   
+ (1 row(s) affected)
+  ```   
    
 ## See Also  
  [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   

@@ -2,7 +2,7 @@
 title: "What&#39;s New in SSMA for Access(AccessToSQL) | Microsoft Docs"
 ms.prod: "sql-non-specified"
 ms.custom: ""
-ms.date: "08/17/2017"
+ms.date: "09/22/2017"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,6 +20,18 @@ manager: "craigg"
 ---
 # What&#39;s New in SSMA for Access (AccessToSQL)
 This topic lists SSMA for Access changes in each release.  
+
+## SSMA v7.6
+The v7.6 release of SSMA for Access has been enhanced with targeted fixes that improve quality and conversion metrics and with support for SQL Server 2017 (public preview). Support for SQL Server 2017 on Windows and Linux is in public preview and should not be used for production migrations.
+
+> [!IMPORTANT]
+> With SSMA v7.4 and later versions, .Net 4.5.2 is an installation pre-requisite, and the 32-bit version of the tool has been discontinued.
+
+## SSMA v7.5
+The v7.5 release of SSMA for Access has been enhanced with several improvements to ensure greater accessibility for people with disabilities.
+
+> [!IMPORTANT]
+> .Net 4.5.2 is a pre-requisite for installing SSMA v7.5. In addition, beginning with v7.4, the 32-bit version of SSMA is being discontinued.
 
 ## SSMA v7.4
 The v7.4 release of SSMA for Access contains the following changes:

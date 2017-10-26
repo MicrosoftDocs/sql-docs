@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # ADCPROP_UPDATERESYNC_ENUM
 Specifies whether the [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) method is followed by an implicit [Resync](../../../ado/reference/ado-api/resync-method.md) method operation and if so, the scope of that operation.  

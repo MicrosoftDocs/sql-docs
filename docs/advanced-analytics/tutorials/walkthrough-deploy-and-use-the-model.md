@@ -18,6 +18,7 @@ caps.latest.revision: 18
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Deploy the R model and use it in SQL
 
@@ -207,7 +208,7 @@ We also recommend that you check out some of these additional samples and resour
 
 + [Data science scenarios and solution templates](data-science-scenarios-and-solution-templates.md)
 
-+ [In-database advanced analytics](/sqldev-in-database-r-for-sql-developers.md)
++ [In-database advanced analytics](sqldev-in-database-r-for-sql-developers.md)
 
 + [Microsoft R - Diving into Data Analysis](https://msdn.microsoft.com/microsoft-r/data-analysis-in-microsoft-r)
 
@@ -215,7 +216,7 @@ We also recommend that you check out some of these additional samples and resour
 
 ## Previous lesson
 
-[Build an R model and save it in SQL Server](/walkthrough-build-and-save-the-model.md)
+[Build an R model and save it in SQL Server](walkthrough-build-and-save-the-model.md)
 
 ## Next steps
 

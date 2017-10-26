@@ -19,6 +19,7 @@ caps.latest.revision: 18
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Create and Run R Scripts
 

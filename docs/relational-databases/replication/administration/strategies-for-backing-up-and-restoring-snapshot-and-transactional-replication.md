@@ -24,6 +24,7 @@ caps.latest.revision: 59
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Strategies for Backing Up and Restoring Snapshot and Transactional Replication
   When you design a backup and restore strategy for snapshot and transactional replication, there are three areas to consider:  

@@ -19,6 +19,7 @@ caps.latest.revision: 14
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # ISSAsynchStatus::Abort (OLE DB)
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]

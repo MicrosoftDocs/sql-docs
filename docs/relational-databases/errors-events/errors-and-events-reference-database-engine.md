@@ -18,6 +18,7 @@ caps.latest.revision: 15
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Errors and Events Reference (Database Engine)
   This section contains selected [!INCLUDE[ssDE](../../includes/ssde-md.md)] error messages that need further explanation.  

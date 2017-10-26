@@ -45,7 +45,7 @@
 # [Extended events](../relational-databases/extended-events/extended-events.md)
 # [Graphs](../relational-databases/graphs/sql-graph-overview.md)
 # [Hierarchical Data](hierarchical-data-sql-server.md)  
-# [Import and export](../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)
+# [Import and export](../relational-databases/import-export/overview-import-export.md)
 # [In-memory OLTP](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)
 # [Indexes](../relational-databases/indexes/indexes.md)
 # [JSON](../relational-databases/json/json-data-sql-server.md)

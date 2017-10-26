@@ -1,6 +1,11 @@
 {
     "redirections": [
         {
+            "source_path": "docs/linux/sql-server-linux-azure-virtual-machine.md",
+            "redirect_url": "/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "docs/linux/sql-server-linux-export-import-with-sqlpackage.md",
             "redirect_url": "/sql/linux/sql-server-linux-migrate-ssms",
             "redirect_document_id": false
@@ -1561,6 +1566,51 @@
             "redirect_document_id": false
         },
         {
+            "source_path": "docs/analysis-services/tabular-models/data-sources-ssas-tabular.md",
+            "redirect_url": "/sql/analysis-services/analysis-services",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/analysis-services/tabular-models/edit-an-existing-data-source-connection-ssas-tabular.md",
+            "redirect_url": "/sql/analysis-services/analysis-services",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/analysis-services/tabular-models/manually-process-data-ssas-tabular.md",
+            "redirect_url": "/sql/analysis-services/analysis-services",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/analysis-services/tabular-models/process-data-ssas-tabular.md",
+            "redirect_url": "/sql/analysis-services/analysis-services",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/analysis-services/tabular-models/ssas-import-data-copy-and-paste-data.md",
+            "redirect_url": "/sql/analysis-services/analysis-services",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/analysis-services/tabular-models/ssas-import-data-text-file.md",
+            "redirect_url": "/sql/analysis-services/analysis-services",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/analysis-services/tabular-models/ssas-import-data-data-feed.md",
+            "redirect_url": "/sql/analysis-services/analysis-services",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/analysis-services/tabular-models/ssas-import-data-multidimensional-data-source.md",
+            "redirect_url": "/sql/analysis-services/analysis-services",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/analysis-services/tabular-models/ssas-import-data-relational-data-source.md",
+            "redirect_url": "/sql/analysis-services/analysis-services",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "docs/reporting-services/report-server/configure-kerberos-to-use-power-bi-reports.md",
             "redirect_url": "https://powerbi.microsoft.com/documentation/reportserver-configure-kerberos-powerbi-reports/",
             "redirect_document_id": false
@@ -1911,12 +1961,12 @@
             "redirect_document_id":false
         },
         {
-            "source_path": "docs/sql/relational-databases/security/encryption/transparent-data-encryption-with-azure-sql-database.md",
+            "source_path": "docs/relational-databases/security/encryption/transparent-data-encryption-with-azure-sql-database.md",
             "redirect_url": "/sql/relational-databases/security/encryption/transparent-data-encryption-azure-sql",
             "redirect_document_id": false
         },
         {
-            "source_path": "docs/sql/relational-databases/security/encryption/transparent-data-encryption-tde.md",
+            "source_path": "docs/relational-databases/security/encryption/transparent-data-encryption-tde.md",
             "redirect_url": "/sql/relational-databases/security/encryption/transparent-data-encryption",
             "redirect_document_id": false
         },
@@ -3024,13 +3074,36 @@
             "source_path": "docs/release-notes/index.md", 
             "redirect_url": "/sql/sql-server/index", 
             "redirect_document_id": false  
-          },
-          {
+        },
+        {
             "source_path": "docs/sql-server/sql-server-release-notes.md", 
             "redirect_url": "/sql/sql-server/sql-server-2017-release-notes", 
             "redirect_document_id": false  
-          }
-          
-          
+        },
+        {
+            "source_path": "docs/dma/dma-whatsnewv31.md",
+            "redirect_url": "/sql/dma/dma-whatsnew",
+            "redirect_document_id": false  
+        },
+        {
+            "source_path": "docs/database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md",
+            "redirect_url": "/sql/database-engine/install-windows/install-sql-server-from-the-command-prompt",
+            "redirect_document_id": false  
+        },
+        {
+            "source_path": "docs/database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md",
+            "redirect_url": "/sql/database-engine/install-windows/install-sql-server-using-a-configuration-file",
+            "redirect_document_id": false  
+        },
+        {
+            "source_path": "docs/database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md",
+            "redirect_url": "/sql/database-engine/install-windows/add-features-to-an-instance-of-sql-server-setup",
+            "redirect_document_id": false  
+        },
+        {
+            "source_path": "docs/reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md",
+            "redirect_url": "/sql/reporting-services/report-server-sharepoint/report-viewer-web-part-sharepoint-site",
+            "redirect_document_id": false
+        }
     ]
 }

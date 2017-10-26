@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Multiplicity Element (ASSL)
   Indicates whether the attributes in the RelationshipEnd are at the “one” side or the “many” side of a relationship.  

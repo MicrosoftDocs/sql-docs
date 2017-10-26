@@ -47,7 +47,8 @@ ms.technology:
                                                     <li><a href="https://msdn.microsoft.com/library/dn197878(v=sql.10).aspx">SQL Server 2012</a></li>
                                                     <li><a href="/azure/sql-database/sql-database-design-first-database">Azure SQL Database</a></li>
                                                     <li><a href="/azure/sql-data-warehouse/sql-data-warehouse-get-started-tutorial">Azure SQL Data Warehouse</a></li>
-                                                </ul>
+                                                    <li><a href="/sql/analytics-platform-system/index">Analytics Platform System - Parallel Data Warehouse</a></li>
+													</ul>
                                                 <h4 class="likeAnH3" style="margin: 1rem 0px;">Run on Windows or Linux</h4>
                                                 <ul>
                                                     <li><a href="/sql/linux/sql-server-linux-overview">SQL Server on Linux</a></li>

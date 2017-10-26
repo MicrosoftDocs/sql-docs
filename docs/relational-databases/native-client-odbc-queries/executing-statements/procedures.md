@@ -20,6 +20,7 @@ caps.latest.revision: 30
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Procedures
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]

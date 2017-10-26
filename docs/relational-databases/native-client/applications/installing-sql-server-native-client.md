@@ -23,6 +23,7 @@ helpviewer_keywords:
 ms.assetid: c6abeab2-0052-49c9-be79-cfbc50bff5c1
 caps.latest.revision: 44
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # Installing SQL Server Native Client
 

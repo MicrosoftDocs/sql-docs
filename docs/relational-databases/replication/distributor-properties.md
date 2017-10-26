@@ -14,6 +14,7 @@ caps.latest.revision: 20
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Distributor Properties
   This section provides information on properties for the Distributor and the distribution database:  

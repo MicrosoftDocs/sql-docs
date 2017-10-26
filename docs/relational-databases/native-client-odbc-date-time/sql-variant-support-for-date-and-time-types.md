@@ -16,6 +16,7 @@ caps.latest.revision: 19
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # sql_variant Support for Date and Time Types
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]

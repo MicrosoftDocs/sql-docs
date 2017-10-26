@@ -16,6 +16,7 @@ caps.latest.revision: 21
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Publication Properties, Filter Rows
   The **Filter Rows** page of the **Publication Properties** dialog allows you to add, edit, or delete:  

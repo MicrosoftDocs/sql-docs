@@ -21,6 +21,7 @@ caps.latest.revision: 30
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Commands Generating Multiple-Rowset Results
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]

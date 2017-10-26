@@ -16,6 +16,7 @@ caps.latest.revision: 26
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # View Policies Dialog Box
   Use this dialog box to view the policies that are effective for this target. This dialog box shows relevant policies, their policy categories, and information about the policies.  

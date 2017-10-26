@@ -16,6 +16,7 @@ caps.latest.revision: 11
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Detect Failed Input and Output Requests
   This rule checks the system event log for EventId 50. This error is caused by a failed I/O request.  

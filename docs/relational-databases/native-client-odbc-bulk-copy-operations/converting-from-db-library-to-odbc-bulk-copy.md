@@ -20,6 +20,7 @@ caps.latest.revision: 30
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Converting from DB-Library to ODBC Bulk Copy
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]

@@ -16,6 +16,7 @@ caps.latest.revision: 3
 author: "dagiro"
 ms.author: "v-dagir"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # SQL Server, LogPool FreePool Object
 The **SQLServer:LogPool FreePool** performance object provides counters for statistics for the free pool inside the Log Pool.

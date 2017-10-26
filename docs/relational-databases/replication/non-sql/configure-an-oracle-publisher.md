@@ -16,6 +16,7 @@ caps.latest.revision: 60
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Configure an Oracle Publisher
   Publications from Oracle Publishers are created in the same way typical snapshot and transactional publications are created, but prior to creating a publication from an Oracle Publisher, you must complete the following steps (steps one, three, and four are described in detail in this topic.):  

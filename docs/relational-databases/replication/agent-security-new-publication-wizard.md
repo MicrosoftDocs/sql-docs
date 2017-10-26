@@ -16,6 +16,7 @@ caps.latest.revision: 23
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Agent Security (New Publication Wizard)
   The **Agent Security** page allows you to specify the accounts under which the following agents run and make connections to the computers in a replication topology:  

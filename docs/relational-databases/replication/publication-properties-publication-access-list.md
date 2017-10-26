@@ -16,6 +16,7 @@ caps.latest.revision: 20
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Publication Properties, Publication Access List
   The **Publication Access List** page of the **Publication Properties** dialog box allows you to add and remove logins, accounts, and groups from the publication access list (PAL). The PAL is the primary mechanism for securing the Publisher. When you create a publication, replication creates a PAL for the publication. The PAL, which functions similarly to a [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows access control list, contains a list of logins, accounts, and groups that are granted access to the publication.  

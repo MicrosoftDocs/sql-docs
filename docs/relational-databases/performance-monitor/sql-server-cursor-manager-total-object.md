@@ -17,6 +17,7 @@ caps.latest.revision: 14
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # SQL Server, Cursor Manager Total Object
   The **SQLServer:Cursor Manager Total** object provides counters to monitor cursors.  

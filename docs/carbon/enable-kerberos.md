@@ -18,9 +18,9 @@ Carbon supports connecting to SQL Server using Kerberos.
 
 In order to use Integrated Authentication (aka Windows Authentication) on macOS or Linux you will need to setup a **Kerberos ticket** linking your current user to a Windows domain account. A summary of key steps are included below.
 
-# Pre-requsite: get the Kerberos Domain Controller (KDC) config
+# Pre-requsite: get the Kerberos Key Distribution Center
 
-Find Kerberos KDC (Key Distribution Center) configuration value. Run the following on a Windows PC that is joined to your Active Directory Domain, 
+Find the Kerberos KDC (Key Distribution Center) configuration value. Run the following on a Windows PC that is joined to your Active Directory Domain, 
 
 Start `cmd.exe` and run `nltest`.
 
@@ -55,10 +55,9 @@ sudo zypper install realmd krb5-client
 
 
 
-
 ## Step 2: Configuring KDC in krb5.conf
 
-Action: Edit the `/etc/krb5.conf` in an editor of your choice. Configure the following keys
+Edit the `/etc/krb5.conf` in an editor of your choice. Configure the following keys
 
 ```bash
 sudo vi /etc/krb5.conf
@@ -79,14 +78,13 @@ Note Domain must be in ALL CAPS
 
 ## Step 3: Testing the Ticket Granting Ticket retrieval
 
-Action:
-* Use the command `kinit username@DOMAIN.COMPANY.COM` to get a TGT from KDC. You will be prompted for your domain password.
+Get a Ticket Granting Ticket (TGT) from KDC.
 
 ```bash
 kinit username@DOMAIN.COMPANY.COM
 ```
 
-* Use `klist` to see the available tickets. If the kinit was successful, you should see a ticket. 
+View the availalbe tickets using kinit. If the kinit was successful, you should see a ticket. 
 
 ```bash
 klist

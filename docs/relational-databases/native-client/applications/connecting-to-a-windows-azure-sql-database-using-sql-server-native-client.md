@@ -4,7 +4,7 @@ ms.custom:
   - "MSDN content"
   - "MSDN - SQL DB"
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: 
 ms.reviewer: ""
 ms.service: "sql-database"
 ms.suite: ""
@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Connecting to a Windows Azure SQL Database Using SQL Server Native Client
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]

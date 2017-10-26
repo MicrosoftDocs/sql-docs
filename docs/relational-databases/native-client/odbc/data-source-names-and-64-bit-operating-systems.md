@@ -14,6 +14,7 @@ caps.latest.revision: 7
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Data Source Names and 64-Bit Operating Systems
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]

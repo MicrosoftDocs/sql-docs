@@ -1,7 +1,7 @@
 ---
 title: "DBCC PDW_SHOWSPACEUSED (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "7/17/2017"
+ms.date: "07/17/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.service: "sql-data-warehouse"
@@ -17,6 +17,7 @@ caps.latest.revision: 10
 author: "barbkess"
 ms.author: "barbkess"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # DBCC PDW_SHOWSPACEUSED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -28,8 +29,6 @@ Displays the number of rows, disk space reserved, and disk space used for a spec
 ## Syntax  
   
 ```sql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
 -- Show the space used for all user tables and system tables in the current database  
 DBCC PDW_SHOWSPACEUSED  
 [;]  

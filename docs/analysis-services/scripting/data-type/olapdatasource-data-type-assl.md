@@ -26,6 +26,7 @@ caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # OlapDataSource Data Type (ASSL)
   Defines a derived data type that represents a multidimensional [DataSource](../../../analysis-services/scripting/objects/datasource-element-assl.md) element.  

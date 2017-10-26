@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "system-specific properties [Reporting Services]"
 ms.assetid: cd874117-00e5-4ae6-8629-eb9ba9f40478
 caps.latest.revision: 55
-author: "sabotta"
+author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
 ---

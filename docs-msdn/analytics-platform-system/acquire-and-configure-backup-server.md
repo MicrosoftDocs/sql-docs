@@ -94,9 +94,9 @@ PDW will access the backup server through a UNC file share. To set up the file s
   
     For more information, see these stored procedures:  
   
-    -   [sp_pdw_add_network_credentials](https://msdn.microsoft.com/library/mt204011.aspx)  
+    -   [sp_pdw_add_network_credentials](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse)  
   
-    -   [sp_pdw_remove_network_credentials](https://msdn.microsoft.com/library/mt204038.aspx)  
+    -   [sp_pdw_remove_network_credentials](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse)  
   
 ## <a name="Step5"></a>Step 5: Start backing up your data  
 You are now ready to start backing up data to your backup server.  
@@ -117,9 +117,9 @@ FROM DISK = '\\10.172.14.255\backups\yearly\Invoices2013Full'
   
 For more information, see: 
   
--   [BACKUP DATABASE](https://msdn.microsoft.com/library/mt631607.aspx)   
+-   [BACKUP DATABASE](https://docs.microsoft.com/sql/t-sql/statements/backup-database-parallel-data-warehouse)   
   
--   [RESTORE DATABASE](https://msdn.microsoft.com/library/mt631612.aspx)  
+-   [RESTORE DATABASE](https://docs.microsoft.com/sql/t-sql/statements/restore-database-parallel-data-warehouse)  
   
 ## <a name="Security"></a>Security notices  
 The backup server is not joined to the private domain for the appliance. It is in your own network, and there is no trust relationship between your own domain and private appliance domain.  
@@ -133,11 +133,11 @@ Network access to the backup directory is based on standard Windows file sharing
 > [!IMPORTANT]  
 > To reduce security risks with your data, we advise that you designate one Windows account solely for the purpose of performing backup and restore operations. Allow this account to have permissions to the backup location and nowhere else.  
   
-To store the user name and password in PDW, use the [sp_pdw_add_network_credentials](https://msdn.microsoft.com/library/mt204011.aspx) stored procedure. PDW uses Windows Credential Manager to store and encrypt user names and passwords on the Control node and Compute nodes. The credentials are not backed up with the BACKUP DATABASE command.  
+To store the user name and password in PDW, use the [sp_pdw_add_network_credentials](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse) stored procedure. PDW uses Windows Credential Manager to store and encrypt user names and passwords on the Control node and Compute nodes. The credentials are not backed up with the BACKUP DATABASE command.  
   
-To remove network credentials from PDW, use the [sp_pdw_remove_network_credentials](https://msdn.microsoft.com/library/mt204038.aspx) stored procedure.  
+To remove network credentials from PDW, use the [sp_pdw_remove_network_credentials](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse) stored procedure.  
   
-To list all of the network credentials stored in SQL Server PDW, use the [sys.dm_pdw_network_credentials](https://msdn.microsoft.com/library/mt203915.aspx) dynamic management view.  
+To list all of the network credentials stored in SQL Server PDW, use the [sys.dm_pdw_network_credentials](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-pdw-network-credentials-transact-sql) dynamic management view.  
   
 ### Secure communications  
   

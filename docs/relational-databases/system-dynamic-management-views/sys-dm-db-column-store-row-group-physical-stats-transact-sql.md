@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_db_column_store_row_group_physical_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "5/04/2017"
+ms.date: "05/04/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -19,7 +19,6 @@ dev_langs:
 helpviewer_keywords: 
   - "dm_db_column_store_row_group_physical_stats"
   - "sys.dm_db_column_store_row_group_physical_stats dynamic management view"
-ms.assetid: f4c81104-7fe4-408f-9779-8808172dfdd2
 caps.latest.revision: 15
 author: "barbkess"
 ms.author: "barbkess"

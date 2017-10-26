@@ -24,6 +24,7 @@ caps.latest.revision: 14
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # TableNotifications Element (ASSL)
   Contains the collection of [TableNotification](../../../analysis-services/scripting/objects/tablenotification-element-assl.md) elements that provide information for the [ProactiveCaching](../../../analysis-services/scripting/objects/proactivecaching-element-assl.md) element about tables or views in a data source that have been modified.  

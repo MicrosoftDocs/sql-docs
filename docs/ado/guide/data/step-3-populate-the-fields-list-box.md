@@ -14,6 +14,7 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Step 3: Populate the Fields List Box
 To populate the Fields list box, insert the following code into the Click event handler of `lstMain`:  

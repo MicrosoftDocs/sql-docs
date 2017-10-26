@@ -26,6 +26,7 @@ caps.latest.revision: 39
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Aggregation Element (ASSL)
   Defines a single aggregation for a [Partition](../../../analysis-services/scripting/objects/partition-element-assl.md) element.  

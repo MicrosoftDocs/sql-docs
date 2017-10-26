@@ -19,6 +19,7 @@ caps.latest.revision: 19
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # Invoke-Sqlcmd cmdlet
   **Invoke-Sqlcmd** is a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] cmdlet that runs scripts that CONTAIN statements from the languages ([!INCLUDE[tsql](../includes/tsql-md.md)] and XQuery) and commands supported by the **sqlcmd** utility.  
@@ -123,7 +124,7 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
 |Maximum length of character output.|-w|-MaxCharLength|  
 |Maximum length of binary output.|-w|-MaxBinaryLength|  
 |Connect using SSL encryption.|No parameter|-EncryptConnection|  
-|Display errors|No parameter|-OutputSqlErrors|  
+|Display errors|No parameter|-OutputSqlErrors: requires a boolean parameter $true or $false|  
 |Output messages to stderr.|-r|No parameter|  
 |Use client's regional settings|-R|No parameter|  
 |Run the specified query and remain running.|-q|No parameter|  

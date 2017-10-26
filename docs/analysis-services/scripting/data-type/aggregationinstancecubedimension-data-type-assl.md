@@ -24,6 +24,7 @@ caps.latest.revision: 13
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # AggregationInstanceCubeDimension Data Type (ASSL)
   Defines a primitive data type that represents information about a cube dimension used by an aggregation instance.  

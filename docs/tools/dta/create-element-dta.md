@@ -18,6 +18,7 @@ caps.latest.revision: 12
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Create Element (DTA)
   Contains information about the indexes, statistics, or heap structures in a user-specified configuration.  

@@ -48,6 +48,6 @@ MasterHeartbeatIntervalInMs|The interval for the Scale Out Master heartbeat, in 
 SqlConnectionTimeoutInSecs|The SQL connection timeout in seconds when connecting to SSISDB.|15        
 
 ## View Scale Out Master service log
-The Scale Out Master service log file is located in the \<driver\>:\Users\\*[account]*\AppData\Local\SSIS\Cluster\Master folder path. 
+The Scale Out Master service log file is located in the \<driver\>:\Users\\*[account]*\AppData\Local\SSIS\ScaleOut\Master folder path. 
 
-The *[account]* folder refers to the account running Scale Out Master service. By default, this account is SSISScaleOutMaster140.
+The *[account]* refers to the account running Scale Out Master service. By default, this account is SSISScaleOutMaster140.

@@ -38,6 +38,7 @@ caps.latest.revision: 84
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Manage Metadata When Making a Database Available on Another Server
   This topic is relevant in the following situations:  

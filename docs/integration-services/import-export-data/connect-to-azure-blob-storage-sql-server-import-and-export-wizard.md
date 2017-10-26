@@ -23,8 +23,6 @@ This topic shows you how to connect to an **Azure Blob Storage** data source fro
 > - To download the Feature Pack, see [Microsoft SQL Server 2016 Integration Services Feature Pack for Azure](https://www.microsoft.com/download/details.aspx?id=49492).
 >
 > - For more info, see [Azure Feature Pack for Integration Services &#40;SSIS&#41;](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).
->
-> To ensure that the Blob Source and Blob Destination can connect to both general-purpose storage accounts and to blob storage accounts, make sure you download the latest version of the Azure Feature Pack. For more info about these two types of storage accounts, see [Introduction to Microsoft Azure Storage](https://azure.microsoft.com/en-us/documentation/articles/storage-introduction/#general-purpose-storage-accounts).
 
 The following screen shot shows the options to configure for a connection to Azure Blob Storage.
 

@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: d587cedd-6402-4d5c-9526-7cd25627a037
 caps.latest.revision: 4
-author: "sabotta"
-ms.author: "carlasab"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # catalog.add_execution_worker (SSISDB Database)
@@ -22,8 +22,8 @@ Adds a [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Scale Out W
 
 ## Syntax
 
-```tsql
-add_execution_worker [@execution_id = ] execution_id, [@workeragent_id = ] workeragent_id
+```sql
+catalog.add_execution_worker [@execution_id = ] execution_id, [@workeragent_id = ] workeragent_id
 ```
 
 ## Arguments

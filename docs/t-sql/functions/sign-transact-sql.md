@@ -27,6 +27,7 @@ caps.latest.revision: 33
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # SIGN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -38,8 +39,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 SIGN ( numeric_expression )  
 ```  
   
@@ -105,9 +104,10 @@ SELECT SIGN(-125), SIGN(0), SIGN(564);
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `-----  -----  -----`  
-  
- `-1     0      1`  
+ ```
+-----  -----  -----  
+-1     0      1
+```  
   
 ## See Also  
  [Mathematical Functions &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  

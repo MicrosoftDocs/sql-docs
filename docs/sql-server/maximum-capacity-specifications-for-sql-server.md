@@ -65,7 +65,7 @@ manager: "jhubbard"
 |Columns per nonwide table||1,024||  
 |Columns per wide table||30,000||  
 |Columns per SELECT statement||4,096||  
-|Columns per INSERT statement||4096||  
+|Columns per INSERT statement||4,096||  
 |Connections per client||Maximum value of configured connections||  
 |Database size||524,272 terabytes||  
 |Databases per instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]||32,767||  
@@ -117,7 +117,7 @@ manager: "jhubbard"
 |Log files per database||1|  
 |Volumes per computer||3|  
   
- *The maximum number of managed instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supported by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Utility may vary based on the hardware configuration of the server. For getting started information, see [SQL Server Utility Features and Tasks](https://msdn.microsoft.com/library/ee210548.aspx). [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Utility control point is not available in every edition of [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2016](https://msdn.microsoft.com/library/cc645993.aspx).  
+ *The maximum number of managed instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supported by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Utility may vary based on the hardware configuration of the server. For getting started information, see [SQL Server Utility Features and Tasks](https://msdn.microsoft.com/library/ee210548.aspx). [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Utility control point is not available in every edition of [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2016](https://msdn.microsoft.com/library/cc645993.aspx).    
   
 ##  <a name="DAC"></a> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data-tier Application Objects  
  Maximum sizes and numbers of various objects that were tested in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] data-tier applications (DAC).  

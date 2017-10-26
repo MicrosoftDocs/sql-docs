@@ -26,6 +26,7 @@ caps.latest.revision: 40
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # StorageMode Element (ASSL)
   Determines the storage mode for the parent element.  

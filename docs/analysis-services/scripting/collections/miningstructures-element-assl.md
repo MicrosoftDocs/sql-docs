@@ -26,6 +26,7 @@ caps.latest.revision: 33
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # MiningStructures Element (ASSL)
   Contains the collection of [MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md) elements in a [Database](../../../analysis-services/scripting/objects/database-element-assl.md) element.  

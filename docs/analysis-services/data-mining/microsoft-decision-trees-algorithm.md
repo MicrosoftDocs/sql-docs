@@ -26,6 +26,7 @@ caps.latest.revision: 72
 author: "Minewiskan"
 ms.author: "owend"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Microsoft Decision Trees Algorithm
   The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees algorithm is a classification and regression algorithm for use in predictive modeling of both discrete and continuous attributes.  

@@ -31,7 +31,7 @@ manager: "erikre"
   
 -   The query runs as the result of a shared dataset reference in a report that is delivered via e-mail, where a large number of people are likely to click the link in a short span of time.  
   
--   The following list provides examples of when not to cache a shared dataset:  
+ The following list provides examples of when not to cache a shared dataset:  
   
 -   The query results must always include the most recent data.  
   

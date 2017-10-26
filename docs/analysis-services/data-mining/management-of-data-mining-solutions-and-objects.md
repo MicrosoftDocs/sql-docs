@@ -18,6 +18,7 @@ caps.latest.revision: 26
 author: "Minewiskan"
 ms.author: "owend"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Management of Data Mining Solutions and Objects
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] provides client tools that you can use to manage existing mining structures and mining models. This section describes the management operations that you can perform using each environment.  

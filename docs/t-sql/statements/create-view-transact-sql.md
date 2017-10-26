@@ -1,7 +1,7 @@
 ---
 title: "CREATE VIEW (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/11/2017"
+ms.date: "08/10/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -40,6 +40,7 @@ caps.latest.revision: 85
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # CREATE VIEW (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -128,7 +129,7 @@ OR ALTER
   
 -   A reference to a temporary table or a table variable.  
   
- Because *select_statement* uses the SELECT statement, it is valid to use <join_hint> and <table_hint> hints as specified in the FROM clause. For more information, see [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md) and [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md).  
+ Because *select_statement* uses the SELECT statement, it is valid to use \<join_hint> and \<table_hint> hints as specified in the FROM clause. For more information, see [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md) and [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md). 
   
  Functions and multiple SELECT statements separated by UNION or UNION ALL can be used in *select_statement*.  
   
@@ -502,3 +503,4 @@ ON (fis.SalesTerritoryKey=dst.SalesTerritoryKey);
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   
+

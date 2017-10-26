@@ -1,7 +1,7 @@
 ---
 title: "Deploy the R model and use it in SQL (walkthrough) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/14/2017"
+ms.date: "07/26/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -18,6 +18,7 @@ caps.latest.revision: 18
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Deploy the R model and use it in SQL
 
@@ -27,7 +28,7 @@ This sample demonstrates the two most common ways to use a model in scoring:
 
 - **Batch scoring mode** is used when you need to create multiple predictions very fast, by passing a SQL query or table as input. A table of results is returned, which you might insert directly into a table or write to a file.
 
-- **Individual scoring mode** is used when you need to create predictions one at a time, or "on the fly". You pass a set of individual values to the stored procedure. The values correspond to features in the model, which th e model uses to create a prediction, or generate another result such as a probability value. You can then return that value to the application, or user.
+- **Individual scoring mode** is used when you need to create predictions one at a time. You pass a set of individual values to the stored procedure. The values correspond to features in the model, which the model uses to create a prediction, or generate another result such as a probability value. You can then return that value to the application, or user.
 
 ## Batch scoring
 
@@ -169,7 +170,7 @@ The stored procedure *PredictTipSingleMode* demonstrates this approach. It takes
     END
     ```
 
-2. In SQL Server Management Studio, you can use the [!INCLUDE[tsql](../../includes/tsql-md.md)] **EXEC** procedure (or **EXECUTE**) to call the stored procedure, and pass it the required inputs. For example, try running this statement in Management Studido:
+2. In SQL Server Management Studio, you can use the [!INCLUDE[tsql](../../includes/tsql-md.md)] **EXEC** procedure (or **EXECUTE**) to call the stored procedure, and pass it the required inputs. For example, try running this statement in Management Studio:
 
     ```SQL
     EXEC [dbo].[PredictTipSingleMode] 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
@@ -192,7 +193,8 @@ The stored procedure *PredictTipSingleMode* demonstrates this approach. It takes
     sqlQuery (conn, q2);
     ```
 
-    For more information about **RODBC**, see [http://www.inside-r.org/packages/cran/RODBC/docs/sqlQuery](http://www.inside-r.org/packages/cran/RODBC/docs/sqlQuery).
+    >[!TIP]
+    > R Tools for Visual Studio (RTVS) provides great integration with both SQL Server and R. See this article for more examples of using RODBC with a SQL Server connection: [Working with SQL Server and R](https://docs.microsoft.com/en-us/visualstudio/rtvs/sql-server)
 
 ## Summary
 
@@ -200,13 +202,13 @@ Now that you have learned how to work with [!INCLUDE[ssNoVersion](../../includes
 
 - A regression model that predicts the tip amount
 
-- A multiclass classification model that predicts whether the tip will be big, medium, or small
+- A multiclass classification model that predicts whether the tip is big, medium, or small
 
 We also recommend that you check out some of these additional samples and resources:
 
 + [Data science scenarios and solution templates](data-science-scenarios-and-solution-templates.md)
 
-+ [In-database advanced analytics](/sqldev-in-database-r-for-sql-developers.md)
++ [In-database advanced analytics](sqldev-in-database-r-for-sql-developers.md)
 
 + [Microsoft R - Diving into Data Analysis](https://msdn.microsoft.com/microsoft-r/data-analysis-in-microsoft-r)
 
@@ -214,10 +216,10 @@ We also recommend that you check out some of these additional samples and resour
 
 ## Previous lesson
 
-[Build an R model and save it in SQL Server](/walkthrough-build-and-save-the-model.md)
+[Build an R model and save it in SQL Server](walkthrough-build-and-save-the-model.md)
 
 ## Next steps
 
-[SQL Server R Services Tutorials](sql-server-r-tutorials.md)
+[SQL Server R tutorials](sql-server-r-tutorials.md)
 
 [How to create a stored procedure using sqlrutils](../r/how-to-create-a-stored-procedure-using-sqlrutils.md)

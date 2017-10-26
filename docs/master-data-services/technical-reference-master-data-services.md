@@ -11,9 +11,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 54865b00-563a-4932-ad4d-cbfd36b1e6c5
 caps.latest.revision: 12
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
+author: "smartysanthosh"
+ms.author: "nagavo"
+manager: "craigg"
 ---
 # Technical Reference (Master Data Services)
   Find technical reference information on [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] components.  

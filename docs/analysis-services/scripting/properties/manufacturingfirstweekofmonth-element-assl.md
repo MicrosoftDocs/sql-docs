@@ -26,6 +26,7 @@ caps.latest.revision: 26
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # ManufacturingFirstWeekOfMonth Element (ASSL)
   Defines the first week of the manufacturing month for a [TimeBinding](../../../analysis-services/scripting/data-type/timebinding-data-type-assl.md) element.  

@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "permissions [Reporting Services], extensions"
 ms.assetid: 58cbdfeb-1105-4a7d-a3b8-b897ff95f367
 caps.latest.revision: 30
-author: "sabotta"
-ms.author: "carlasab"
+author: "guyinacube"
+ms.author: "asaxton"
 manager: "erikre"
 ---
 # Security Considerations for Extensions

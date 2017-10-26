@@ -14,6 +14,7 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Guidelines for Interval and Numeric Data Types
 The following sections address interval and numeric data types.  

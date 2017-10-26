@@ -16,6 +16,7 @@ caps.latest.revision: 11
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Move a FILESTREAM-Enabled Database
   This topic shows how to move a FILESTREAM-enabled database.  

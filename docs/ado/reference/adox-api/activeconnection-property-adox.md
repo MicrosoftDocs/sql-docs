@@ -25,6 +25,7 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # ActiveConnection Property (ADOX)
 Indicates the ADO [Connection](../../../ado/reference/ado-api/connection-object-ado.md) object to which the [Catalog](../../../ado/reference/adox-api/catalog-object-adox.md) belongs.  

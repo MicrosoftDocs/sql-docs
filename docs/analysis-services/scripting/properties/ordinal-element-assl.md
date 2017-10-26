@@ -26,6 +26,7 @@ caps.latest.revision: 31
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Ordinal Element (ASSL)
   Indicates the ordinal number to bind to in collections such as keys and translations.  

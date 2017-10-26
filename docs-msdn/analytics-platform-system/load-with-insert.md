@@ -16,7 +16,7 @@ author: BarbKess
 
 # Load data with INSERT
 
-You can use the tsql INSERT statement to load data into a SQL Server Parallel Data Warehouse (PDW) distributed or replicated table. For more information about INSERT, see [INSERT](https://msdn.microsoft.com/library/ms174335.aspx). For replicated tables and all non-distribution columns in a distributed table, PDW uses SQL Server to implicitly convert the data values specified in the statement to the data type of the destination column. For more information about SQL Server data conversion rules, see [Data type conversion for SQL](http://msdn.microsoft.com/library/ms191530&#40;v=sql11&#40;.aspx). However, for distribution columns, PDW supports only a subset of implicit conversions that SQL Server supports. Therefore, when you use the INSERT statement to load data into a distribution column, the source data must be specified in one of the formats defined in the following tables.  
+You can use the tsql INSERT statement to load data into a SQL Server Parallel Data Warehouse (PDW) distributed or replicated table. For more information about INSERT, see [INSERT](https://docs.microsoft.com/sql/t-sql/statements/insert-transact-sql). For replicated tables and all non-distribution columns in a distributed table, PDW uses SQL Server to implicitly convert the data values specified in the statement to the data type of the destination column. For more information about SQL Server data conversion rules, see [Data type conversion for SQL](http://msdn.microsoft.com/library/ms191530&#40;v=sql11&#40;.aspx). However, for distribution columns, PDW supports only a subset of implicit conversions that SQL Server supports. Therefore, when you use the INSERT statement to load data into a distribution column, the source data must be specified in one of the formats defined in the following tables.  
   
   
 ## <a name="InsertingLiteralsBinary"></a>Insert literals into binary types  
@@ -156,7 +156,7 @@ The following table defines the accepted formats and rules for inserting literal
 ## See Also  
  
 [Distributed data](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-distributed-data/)  
-[INSERT](https://msdn.microsoft.com/library/ms174335.aspx)  
+[INSERT](https://docs.microsoft.com/sql/t-sql/statements/insert-transact-sql)  
   
 <!-- MISSING LINKS
 [Grant permissions to load data](grant-permissions-to-load-data.md)  

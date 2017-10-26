@@ -28,6 +28,7 @@ caps.latest.revision: 13
 author: "jeannt"
 ms.author: "jeannt"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Value Element (Parameter) (XMLA)
   Contains the value of a parameter represented by the [Parameter](../../../analysis-services/xmla/xml-elements-properties/parameter-element-xmla.md) element.  

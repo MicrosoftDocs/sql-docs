@@ -26,6 +26,7 @@ caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # EstimatedSize Element (ASSL)
   Contains the read-only estimated size, in bytes, of the parent element.  

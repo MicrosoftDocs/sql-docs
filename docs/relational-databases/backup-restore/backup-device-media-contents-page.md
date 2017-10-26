@@ -16,6 +16,7 @@ caps.latest.revision: 38
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Backup Device (Media Contents Page)
   Use the **Backup Device** dialog box to view the backup information. This information describes the device, the media, the media set, and the backup set or sets.  

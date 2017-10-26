@@ -24,6 +24,7 @@ caps.latest.revision: 12
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # DataSourcePermissions Element (ASSL)
   Contains the collection of [DataSourcePermission](../../../analysis-services/scripting/objects/datasourcepermission-element-assl.md) elements associated with a [DataSource](../../../analysis-services/scripting/data-type/datasource-data-type-assl.md) data type.  

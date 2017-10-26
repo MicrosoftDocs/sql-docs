@@ -1,7 +1,7 @@
 ---
 title: "FOR Clause (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "08/09/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -25,6 +25,7 @@ caps.latest.revision: 54
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # SELECT - FOR Clause (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -89,7 +90,7 @@ JSON
  Specifies that updates be allowed while viewing the data in a DB-Library browse mode cursor. A table can be browsed in an application if the table includes a **timestamp** column, the table has a unique index, and the FOR BROWSE option is at the end of the SELECT statements sent to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
->  You cannot use the <lock_hint> HOLDLOCK in a SELECT statement that includes the FOR BROWSE option.  
+>  You cannot use the \<lock_hint> HOLDLOCK in a SELECT statement that includes the FOR BROWSE option.
   
  FOR BROWSE cannot appear in SELECT statements that are joined by the UNION operator.  
   

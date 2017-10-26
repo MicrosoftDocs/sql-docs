@@ -17,6 +17,7 @@ caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Updating Data
 Update behavior and functionality is largely dependent upon update mode (lock type), cursor type, and cursor location.  

@@ -16,6 +16,7 @@ caps.latest.revision: 32
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Metadata - Parameter and Rowset
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]

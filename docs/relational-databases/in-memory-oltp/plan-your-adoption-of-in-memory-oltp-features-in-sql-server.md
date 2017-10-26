@@ -14,6 +14,7 @@ caps.latest.revision: 4
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Plan your adoption of In-Memory OLTP Features in SQL Server
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -93,7 +94,7 @@ One way to convert your disk-based table to a memory-optimized table is to code 
 The Memory Optimization Advisor tool can generate a script to help implement the conversion of a disk-based table to a memory-optimized table. The tool is installed as part of SQL Server Data Tools (SSDT).
 
 - [Memory Optimization Advisor](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md)
-- [Download SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx)
+- [Download SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md)
 
 
 #### .dacpac file

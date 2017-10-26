@@ -23,6 +23,7 @@ caps.latest.revision: 40
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Estimate the Size of a Nonclustered Index
   Follow these steps to estimate the amount of space that is required to store a nonclustered index:  
@@ -179,7 +180,7 @@ manager: "jhubbard"
   
 5.  Calculate the index row size:  
   
-     ***Leaf_Row_Size***  = ***Fixed_Leaf_Size*** + ***Variable_Leaf_Size*** + ***Leaf_Null_Bitmap*** + 1 (for row header overhead of an index row) + 6 (for the child page ID pointer)  
+     ***Leaf_Row_Size***  = ***Fixed_Leaf_Size*** + ***Variable_Leaf_Size*** + ***Leaf_Null_Bitmap*** + 1 (for row header overhead of an index row)  
   
 6.  Calculate the number of index rows per page (8096 free bytes per page):  
   

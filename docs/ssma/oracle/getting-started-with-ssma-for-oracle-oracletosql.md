@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "SSMA for Oracle, Toolbars"
 ms.assetid: df79664c-972e-4bef-865a-ce609789fee7
 caps.latest.revision: 9
-author: "sabotta"
-ms.author: "carlasab"
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "v-thobro"
 ---
 # Getting Started with SSMA for Oracle (OracleToSQL)

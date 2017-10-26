@@ -26,6 +26,7 @@ caps.latest.revision: 36
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # AttributeHierarchyVisible Element (ASSL)
   Determines whether the attribute hierarchy is visible to client applications.  

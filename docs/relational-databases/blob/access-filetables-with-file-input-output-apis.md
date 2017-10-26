@@ -16,6 +16,7 @@ caps.latest.revision: 16
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Access FileTables with File Input-Output APIs
   Describes how file system I/O works on a FileTable.  

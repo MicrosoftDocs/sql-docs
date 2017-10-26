@@ -22,8 +22,8 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```tsql  
-rename_folder [ @old_name = ] old_name , [ @new_name = ] new_name  
+```sql  
+catalog.rename_folder [ @old_name = ] old_name , [ @new_name = ] new_name  
 ```  
   
 ## Arguments  

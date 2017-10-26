@@ -26,6 +26,7 @@ caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # RefreshPolicy Element (ASSL)
   Determines how often the dynamic part of the dimension or measure group (as specified by the [Persistence](../../../analysis-services/scripting/properties/persistence-element-assl.md) element) is checked for changes.  

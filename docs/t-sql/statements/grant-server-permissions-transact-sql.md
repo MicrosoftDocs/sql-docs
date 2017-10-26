@@ -1,7 +1,7 @@
 ---
 title: "GRANT Server Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/10/2016"
+ms.date: "08/10/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -21,6 +21,7 @@ caps.latest.revision: 36
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # GRANT Server Permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,10 +57,10 @@ GRANT permission [ ,...n ]
  *permission*  
  Specifies a permission that can be granted on a server. For a list of the permissions, see the Remarks section later in this topic.  
   
- TO <grantee_principal>  
+ TO \<grantee_principal> 
  Specifies the principal to which the permission is being granted.  
   
- AS <grantor_principal>  
+ AS \<grantor_principal> 
  Specifies the principal from which the principal executing this query derives its right to grant the permission.  
   
  WITH GRANT OPTION  
@@ -187,3 +188,4 @@ GO
  [HAS_PERMS_BY_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/has-perms-by-name-transact-sql.md)  
   
   
+

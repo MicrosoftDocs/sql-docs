@@ -21,6 +21,7 @@ caps.latest.revision: 21
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Properties (ASSL)
   This reference section contains syntax and usage information for each element that acts as an object property in the Analysis Services Scripting Language (ASSL) schema.  

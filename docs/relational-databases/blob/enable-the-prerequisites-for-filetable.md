@@ -16,6 +16,7 @@ caps.latest.revision: 25
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Enable the Prerequisites for FileTable
   Describes how to enable the prerequisites for creating and using FileTables.  

@@ -26,6 +26,7 @@ caps.latest.revision: 35
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # DataSourceViewID Element (ASSL)
   Identifies the [DataSourceView](../../../analysis-services/scripting/objects/datasourceview-element-assl.md) element associated with the [Binding](../../../analysis-services/scripting/data-type/binding-data-type-assl.md) parent element.  

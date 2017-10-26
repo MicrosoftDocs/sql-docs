@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 8da14323-9dd6-4019-bf79-3e8b972a9bc0
 caps.latest.revision: 6
-author: "sabotta"
-ms.author: "carlasab"
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "v-thobro"
 ---
 # Viewing Test Case Reports (OracleToSQL)

@@ -26,6 +26,7 @@ caps.latest.revision: 33
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # CurrentTimeMember Element (ASSL)
   Defines the current member of a time dimension associated with a [Kpi](../../../analysis-services/scripting/objects/kpi-element-assl.md) element.  

@@ -16,7 +16,8 @@ ms.assetid: 06873768-3778-4ed8-a1db-61758726bda0
 caps.latest.revision: 14
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Include Null Values in JSON - INCLUDE_NULL_VALUES Option
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

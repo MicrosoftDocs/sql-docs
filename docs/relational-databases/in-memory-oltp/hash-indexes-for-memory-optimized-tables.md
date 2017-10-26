@@ -6,7 +6,7 @@ ms.custom:
 ms.date: "06/12/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
-ms.service: "sql-database"
+ms.service:
 ms.suite: ""
 ms.technology: 
   - "database-engine-imoltp"
@@ -17,6 +17,7 @@ caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Hash Indexes for Memory-Optimized Tables
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]

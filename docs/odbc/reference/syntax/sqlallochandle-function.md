@@ -23,6 +23,7 @@ caps.latest.revision: 43
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # SQLAllocHandle Function
 **Conformance**  

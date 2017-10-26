@@ -26,6 +26,7 @@ caps.latest.revision: 39
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # AccountType Element (ASSL)
   Contains the name of an account type defined in a [Database](../../../analysis-services/scripting/objects/database-element-assl.md) element.  

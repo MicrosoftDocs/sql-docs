@@ -23,6 +23,7 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # IndexNulls Property (ADOX)
 Indicates whether records that have null values in their index fields have index entries.  

@@ -14,6 +14,7 @@ caps.latest.revision: 14
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Database Engine Tutorials
 This section contains tutorials for [!INCLUDE[ssDECurrent](../includes/ssdecurrent-md.md)].  
@@ -45,7 +46,7 @@ This tutorial teaches how to create policies that enforce site administration st
 [Tutorial: SQL Server Backup and Restore to Windows Azure Blob Storage Service](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
 This tutorial illustrates how to do a SQL Server backup and restore to the Windows Azure Blob Storage Service.  
   
-[Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases ](https://msdn.microsoft.com/library/dn466438.aspx)  
+[Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases ](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
 This tutorial helps you understand how to store SQL Server data files in the Windows Azure Blob storage service directly.  
   
 ## See Also  

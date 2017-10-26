@@ -14,6 +14,7 @@ caps.latest.revision: 6
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # LOCALDB_ERROR_TOO_MANY_SHARED_INSTANCES
     

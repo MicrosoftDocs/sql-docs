@@ -26,6 +26,7 @@ caps.latest.revision: 38
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # StandardAction Data Type (ASSL)
   Defines a derived data type that represents any [Action](../../../analysis-services/scripting/objects/action-element-assl.md) element other than a [DrillThroughAction](../../../analysis-services/scripting/data-type/drillthroughaction-data-type-assl.md) element or a [ReportAction](../../../analysis-services/scripting/data-type/reportaction-data-type-assl.md) element.  

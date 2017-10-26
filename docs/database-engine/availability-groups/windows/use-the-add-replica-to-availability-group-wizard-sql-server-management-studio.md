@@ -19,6 +19,7 @@ caps.latest.revision: 24
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Use the Add Replica to Availability Group Wizard (SQL Server Management Studio)
   Use the **Add Replica to Availability Group Wizard** to help you a add new secondary replica to an existing Always On availability group.  

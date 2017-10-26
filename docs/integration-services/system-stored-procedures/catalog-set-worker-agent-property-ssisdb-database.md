@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: ddd2a534-6925-4d66-90e7-541c14f41de7
 caps.latest.revision: 2
-author: "sabotta"
-ms.author: "carlasab"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
 ---
 # catalog.set_worker_agent_property (SSISDB Database)
@@ -22,22 +22,22 @@ Sets the property of a [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.
 
 ## Syntax
 
-```tsql
-set_worker_agent_property [ @WorkerAgentId = ] WorkerAgentId, [ @PropertyName = ] PropertyName, [ @PropertyValue = ] PropertyValue 
+```sql
+catalog.set_worker_agent_property [@WorkerAgentId =] WorkerAgentId, [@PropertyName =] PropertyName, [@PropertyValue =] PropertyValue 
 ```
 
 ## Arguments
-[ @WorkerAgentId = ] *WorkerAgentId*  
-The worker agent id of Scale Out Worker. The *WorkerAgentId* is **uniqueidentifier**.
+[@WorkerAgentId =] *WorkerAgentId*  
+The worker agent ID of Scale Out Worker. The *WorkerAgentId* is **uniqueidentifier**.
 
-[ @PropertyName = ] *PropertyName*  
+[@PropertyName =] *PropertyName*  
 The name of the property. The *PropertyName* is **nvarchar(256)**.
 
-[ @PropertyValue = ] *PropertyValue*  
-The value of the propery. The *PropertyValue* is **nvarchar(max)**.
+[@PropertyValue =] *PropertyValue*  
+The value of the property. The *PropertyValue* is **nvarchar(max)**.
 
 ## Remarks
-The valid propery names are **DisplayName**, **Description**, **Tags**.
+The valid property names are **DisplayName**, **Description**, **Tags**.
 
 ## Return Code Value  
  0 (success)  
@@ -52,13 +52,13 @@ The valid propery names are **DisplayName**, **Description**, **Tags**.
   
 -   Membership to the **sysadmin** server role
 
-## Erros and Warnings
+## Errors and Warnings
   The following list describes some conditions that may raise an error or warning:  
   
 -   The user does not have the appropriate permissions 
 
--   The worker agent id is not valid.
+-   The worker agent ID is not valid.
 
 -   The property name is not valid.
 
--   The property value is not vilid.  
+-   The property value is not valid.  

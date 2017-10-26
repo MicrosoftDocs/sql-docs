@@ -1,7 +1,7 @@
 ---
 title: "MSSQLSERVER_5515 | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-06-02"
+ms.date: "06/02/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -17,6 +17,7 @@ author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
 robots: noindex,nofollow
+ms.workload: "Inactive"
 ---
 # MSSQLSERVER_5515
   

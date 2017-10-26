@@ -18,6 +18,7 @@ caps.latest.revision: 16
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Workload Element (DTA)
   Specifies the workload to be used for a tuning session.  

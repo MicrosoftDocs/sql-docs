@@ -16,6 +16,7 @@ caps.latest.revision: 23
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Progress Report: Online Index Operation Event Class
   The Progress Report: Online Index Operation event class indicates the progress of an online index build operation while the build process is running.  

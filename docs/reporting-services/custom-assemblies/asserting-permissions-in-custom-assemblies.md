@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "security configuration files [Reporting Services]"
 ms.assetid: 3afb9631-f15e-405e-990b-ee102828f298
 caps.latest.revision: 34
-author: "sabotta"
-ms.author: "carlasab"
+author: "guyinacube"
+ms.author: "asaxton"
 manager: "erikre"
 ---
 # Asserting Permissions in Custom Assemblies

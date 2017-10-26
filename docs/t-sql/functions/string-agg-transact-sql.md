@@ -19,6 +19,7 @@ caps.latest.revision: 13
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # STRING_AGG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssvNxt-asdb-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-asdb-xxxx-xxx.md)]
@@ -30,7 +31,7 @@ Concatenates the values of string expressions and places separator values betwee
 ## Syntax  
   
 ```  
-STRING_AGG ( expression, separator [ <order_clause> ] )
+STRING_AGG ( expression, separator ) [ <order_clause> ]
 
 <order_clause> ::=   
     WITHIN GROUP ( ORDER BY <order_by_expression_list> [ ASC | DESC ] )   

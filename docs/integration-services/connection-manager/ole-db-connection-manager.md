@@ -9,6 +9,8 @@ ms.technology:
   - "integration-services"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
+f1_keywords: 
+  - "sql13.dts.designer.oledbconnection.f1"
 helpviewer_keywords: 
   - "OLE DB connection manager"
   - "data sources [Integration Services], connections"
@@ -19,6 +21,7 @@ caps.latest.revision: 59
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # OLE DB Connection Manager
   An OLE DB connection manager enables a package to connect to a data source by using an OLE DB provider. For example, an OLE DB connection manager that connects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can use the [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].    
@@ -59,6 +62,29 @@ manager: "jhubbard"
     
 -   Technical article, [Connection Strings for OLE DB Providers](http://go.microsoft.com/fwlink/?LinkId=220744), on carlprothman.net.    
     
+## Configure OLE DB Connection Manager
+  Use the **Configure OLE DB Connection Manager** dialog box to add a connection to a data source, which can be either a new connection or a copy of an existing connection.  
+  
+> [!NOTE]  
+>  If the data source is [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007, the data source requires a different connection manager than earlier versions of Excel. For more information, see [Connect to an Excel Workbook](../../integration-services/connection-manager/connect-to-an-excel-workbook.md).  
+>   
+>  If the data source is [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access 2007, the data source requires a different OLE DB provider than earlier versions of Access. For more information, see [Connect to an Access Database](../../integration-services/connection-manager/connect-to-an-access-database.md).  
+  
+ To learn more about the OLE DB connection manager, see [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
+  
+### Options  
+ **Data connections**  
+ Select an existing OLE DB data connection from the list.  
+  
+ **Data connection properties**  
+ View properties and values for the selected OLE DB data connection.  
+  
+ **New**  
+ Create an OLE DB data connection by using the **Connection Manager** dialog box.  
+  
+ **Delete**  
+ Select a data connection, and then delete it by using the **Delete** button.  
+  
 ## See Also    
  [OLE DB Source](../../integration-services/data-flow/ole-db-source.md)     
  [OLE DB Destination](../../integration-services/data-flow/ole-db-destination.md)     

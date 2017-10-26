@@ -24,8 +24,8 @@ Transact-SQL (T-SQL) system views for Analytic Platform System (APS) SQL Server 
 * [sys.pdw_database_mappings](http://msdn.microsoft.com/library/mt203891.aspx)
 * [sys.pdw_distributions](http://msdn.microsoft.com/library/mt203892.aspx)
 * [sys.pdw_index_mappings](http://msdn.microsoft.com/library/mt203912.aspx)
-* [sys.pdw_loader_backup_run_details](https://msdn.microsoft.com/library/mt203877.aspx)
-* [sys.pdw_loader_backup_runs](https://msdn.microsoft.com/library/mt203884.aspx)
+* [sys.pdw_loader_backup_run_details](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-pdw-loader-backup-run-details-transact-sql)
+* [sys.pdw_loader_backup_runs](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-pdw-loader-backup-runs-transact-sql)
 * [sys.pdw_nodes_column_store_dictionaries](http://msdn.microsoft.com/library/mt203902.aspx)
 * [sys.pdw_nodes_column_store_row_groups](http://msdn.microsoft.com/library/mt203880.aspx)
 * [sys.pdw_nodes_column_store_segments](http://msdn.microsoft.com/library/mt203916.aspx)
@@ -39,13 +39,13 @@ Transact-SQL (T-SQL) system views for Analytic Platform System (APS) SQL Server 
 
 ## Parallel Data Warehouse dynamic management views (DMVs)
 * [sys.dm_pdw_dms_cores](http://msdn.microsoft.com/library/mt203911.aspx)
-* [sys.dm_pdw_dms_external_work](https://msdn.microsoft.com/library/mt204024.aspx)
+* [sys.dm_pdw_dms_external_work](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-pdw-dms-external-work-transact-sql)
 * [sys.dm_pdw_dms_workers](http://msdn.microsoft.com/library/mt203878.aspx)
 * [sys.dm_pdw_errors](http://msdn.microsoft.com/library/mt203904.aspx)
 * [sys.dm_pdw_exec_connections](http://msdn.microsoft.com/library/mt203882.aspx)
 * [sys.dm_pdw_exec_requests](http://msdn.microsoft.com/library/mt203887.aspx)
 * [sys.dm_pdw_exec_sessions](http://msdn.microsoft.com/library/mt203883.aspx)
-* [sys.dm_pdw_hadoop_operations](https://msdn.microsoft.com/library/mt204032.aspx)
+* [sys.dm_pdw_hadoop_operations](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-pdw-hadoop-operations-transact-sql)
 * [sys.dm_pdw_lock_waits](http://msdn.microsoft.com/library/mt203901.aspx)
 * [sys.dm_pdw_nodes](http://msdn.microsoft.com/library/mt203907.aspx)
 * [sys.dm_pdw_nodes_database_encryption_keys](http://msdn.microsoft.com/library/mt203922.aspx)
@@ -60,9 +60,9 @@ Transact-SQL (T-SQL) system views for Analytic Platform System (APS) SQL Server 
 ## SQL Server DMVs applicable to Parallel Data Warehouse
 The following DMVs are applicable to Parallel Data Warehouse, but must be executed by connecting to the **master** database.
 
-* [sys.database_service_objectives](https://msdn.microsoft.com/library/mt712619.aspx)
-* [sys.dm_operation_status](https://msdn.microsoft.com/library/dn270022.aspx)
-* [sys.fn_helpcollations()](https://msdn.microsoft.com/library/ms187963.aspx)
+* [sys.database_service_objectives](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-database-service-objectives-azure-sql-database)
+* [sys.dm_operation_status](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database)
+* [sys.fn_helpcollations()](https://docs.microsoft.com/sql/relational-databases/system-functions/sys-fn-helpcollations-transact-sql)
 
 ## SQL Server catalog views
 * [sys.all_columns](http://msdn.microsoft.com/library/ms177522.aspx)
@@ -77,9 +77,9 @@ The following DMVs are applicable to Parallel Data Warehouse, but must be execut
 * [sys.check_constraints](http://msdn.microsoft.com/library/ms187388.aspx)
 * [sys.columns](http://msdn.microsoft.com/library/ms176106.aspx)
 * [sys.computed_columns](http://msdn.microsoft.com/library/ms188744.aspx)
-* [sys.credentials](https://msdn.microsoft.com/library/ms189745.aspx)
+* [sys.credentials](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-credentials-transact-sql)
 * [sys.data_spaces](http://msdn.microsoft.com/library/ms190289.aspx)
-* [sys.database_credentials](https://msdn.microsoft.com/library/mt270282.aspx)
+* [sys.database_credentials](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-database-credentials-transact-sql)
 * [sys.database_files](http://msdn.microsoft.com/library/ms174397.aspx)
 * [sys.database_permissions](http://msdn.microsoft.com/library/ms188367.aspx)
 * [sys.database_principals](http://msdn.microsoft.com/library/ms187328.aspx)
@@ -111,21 +111,21 @@ The following DMVs are applicable to Parallel Data Warehouse, but must be execut
 * [sys.sql_modules](http://msdn.microsoft.com/library/ms175081.aspx)
 * [sys.stats](http://msdn.microsoft.com/library/ms177623.aspx)
 * [sys.stats_columns](http://msdn.microsoft.com/library/ms187340.aspx)
-* [sys.symmetric_keys](https://msdn.microsoft.com/library/ms189446.aspx)
-* [sys.synonyms](https://msdn.microsoft.com/library/ms189458.aspx)
-* [sys.syscharsets](https://msdn.microsoft.com/library/ms190300.aspx)
-* [sys.syscolumns](https://msdn.microsoft.com/library/ms186816.aspx)
-* [sys.sysdatabases](https://msdn.microsoft.com/library/ms179900.aspx)
-* [sys.syslanguages](https://msdn.microsoft.com/library/ms190303.aspx)
-* [sys.sysobjects](https://msdn.microsoft.com/library/ms177596.aspx)
-* [sys.sysreferences](https://msdn.microsoft.com/library/ms186900.aspx)
+* [sys.symmetric_keys](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql)
+* [sys.synonyms](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-synonyms-transact-sql)
+* [sys.syscharsets](https://docs.microsoft.com/sql/relational-databases/system-compatibility-views/sys-syscharsets-transact-sql)
+* [sys.syscolumns](https://docs.microsoft.com/sql/relational-databases/system-compatibility-views/sys-syscolumns-transact-sql)
+* [sys.sysdatabases](https://docs.microsoft.com/sql/relational-databases/system-compatibility-views/sys-sysdatabases-transact-sql)
+* [sys.syslanguages](https://docs.microsoft.com/sql/relational-databases/system-compatibility-views/sys-syslanguages-transact-sql)
+* [sys.sysobjects](https://docs.microsoft.com/sql/relational-databases/system-compatibility-views/sys-sysobjects-transact-sql)
+* [sys.sysreferences](https://docs.microsoft.com/sql/relational-databases/system-compatibility-views/sys-sysreferences-transact-sql)
 * [sys.system_columns](http://msdn.microsoft.com/library/ms178596.aspx)
 * [sys.system_objects](http://msdn.microsoft.com/library/ms173551.aspx)
-* [sys.system_parameters](https://msdn.microsoft.com/library/ms174367.aspx)
+* [sys.system_parameters](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-system-parameters-transact-sql)
 * [sys.system_sql_modules](http://msdn.microsoft.com/library/ms188034.aspx)
 * [sys.system_views](http://msdn.microsoft.com/library/ms187764.aspx)
-* [sys.systypes](https://msdn.microsoft.com/library/ms175109.aspx)
-* [sys.sysusers](https://msdn.microsoft.com/library/ms179871.aspx)
+* [sys.systypes](https://docs.microsoft.com/sql/relational-databases/system-compatibility-views/sys-systypes-transact-sql)
+* [sys.sysusers](https://docs.microsoft.com/sql/relational-databases/system-compatibility-views/sys-sysusers-transact-sql)
 * [sys.tables](http://msdn.microsoft.com/library/ms187406.aspx)
 * [sys.types](http://msdn.microsoft.com/library/ms188021.aspx)
 * [sys.views](http://msdn.microsoft.com/library/ms190334.aspx)
@@ -157,7 +157,7 @@ Each of these DMV's has a specific column called pdw_node_id. This is the the id
 | sys.dm_pdw_nodes_exec_query_resource_semaphores |[sys.dm_exec_query_resource_semaphores](http://msdn.microsoft.com/library/ms366321.aspx) |
 | sys.dm_pdw_nodes_exec_query_stats |[sys.dm_exec_query_stats](http://msdn.microsoft.com/library/ms189741.aspx) |
 | sys.dm_pdw_nodes_exec_requests |[sys.dm_exec_requests](http://msdn.microsoft.com/library/ms177648.aspx) |
-| sys.dm_pdw_nodes_exec_sessions |[sys.dm_exec_sessions](https://msdn.microsoft.com/en-us/library/ms176013.aspx) |
+| sys.dm_pdw_nodes_exec_sessions |[sys.dm_exec_sessions](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql) |
 | sys.dm_pdw_nodes_io_pending_io_requests |[sys.dm_io_pending_io_requests](http://msdn.microsoft.com/library/ms188762.aspx) |
 | sys.dm_pdw_nodes_os_buffer_descriptors |[sys.dm_os_buffer_descriptors](http://msdn.microsoft.com/library/ms173442.aspx) |
 | sys.dm_pdw_nodes_os_child_instances |[sys.dm_os_child_instances](http://msdn.microsoft.com/library/ms165698.aspx) |
@@ -174,7 +174,7 @@ Each of these DMV's has a specific column called pdw_node_id. This is the the id
 | sys.dm_pdw_nodes_os_memory_clerks |[sys.dm_os_memory_clerks](http://msdn.microsoft.com/library/ms175019.aspx) |
 | sys.dm_pdw_nodes_os_memory_node_access_stats |Transact-SQL Documentation is not available. |
 | sys.dm_pdw_nodes_os_memory_nodes |[sys.dm_os_memory_nodes](http://msdn.microsoft.com/library/bb510622.aspx) |
-| sys.dm_pdw_nodes_os_memory_objects |[sys.dm_os_memory_objects](https://msdn.microsoft.com/library/ms179875.aspx) |
+| sys.dm_pdw_nodes_os_memory_objects |[sys.dm_os_memory_objects](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql) |
 | sys.dm_pdw_nodes_os_memory_pools |[sys.dm_os_memory_pools](http://msdn.microsoft.com/library/ms175022.aspx) |
 | sys.dm_pdw_nodes_os_nodes |[sys.dm_os_nodes](http://msdn.microsoft.com/library/bb510628.aspx) |
 | sys.dm_pdw_nodes_os_performance_counters |[sys.dm_os_performance_counters](http://msdn.microsoft.com/library/ms187743.aspx) |
@@ -185,18 +185,18 @@ Each of these DMV's has a specific column called pdw_node_id. This is the the id
 | sys.dm_pdw_nodes_os_sys_memory |[sys.dm_os_memory_nodes](http://msdn.microsoft.com/library/bb510622.aspx) |
 | sys.dm_pdw_nodes_os_tasks |[sys.dm_os_tasks](http://msdn.microsoft.com/library/ms174963.aspx) |
 | sys.dm_pdw_nodes_os_threads |[sys.dm_os_threads](http://msdn.microsoft.com/library/ms187818.aspx) |
-| sys.dm_pdw_nodes_os_virtual_address_dump |[sys.dm_os_virtual_address_dump](https://msdn.microsoft.com/library/ms186294.aspx) |
-| sys.dm_pdw_nodes_os_wait_stats |[sys.dm_os_wait_stats](https://msdn.microsoft.com/library/ms179984.aspx) |
-| sys.dm_pdw_nodes_os_waiting_tasks |[sys.dm_os_waiting_tasks](https://msdn.microsoft.com/library/ms188743.aspx) |
-| sys.dm_pdw_nodes_os_workers |[sys.dm_os_workers](https://msdn.microsoft.com/library/ms178626.aspx) |
+| sys.dm_pdw_nodes_os_virtual_address_dump |[sys.dm_os_virtual_address_dump](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-os-virtual-address-dump-transact-sql) |
+| sys.dm_pdw_nodes_os_wait_stats |[sys.dm_os_wait_stats](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql) |
+| sys.dm_pdw_nodes_os_waiting_tasks |[sys.dm_os_waiting_tasks](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-os-waiting-tasks-transact-sql) |
+| sys.dm_pdw_nodes_os_workers |[sys.dm_os_workers](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql) |
 | sys.dm_pdw_nodes_resource_governor_resource_pools |[sys.dm_resource_governor_resource_pools](http://msdn.microsoft.com/library/bb934023.aspx) |
 | sys.dm_pdw_nodes_resource_governor_workload_groups |[sys.dm_resource_governor_workload_groups](http://msdn.microsoft.com/library/bb934197.aspx) |
 | sys.dm_pdw_nodes_tran_active_snapshot_database_transactions |[sys.dm_tran_active_snapshot_database_transactions](http://msdn.microsoft.com/library/ms180023.aspx) |
 | sys.dm_pdw_nodes_tran_active_transactions |[sys.dm_tran_active_transactions](http://msdn.microsoft.com/library/ms174302.aspx) |
-| sys.dm_pdw_nodes_tran_commit_table |[sys.dm_tran_commit_table](https://msdn.microsoft.com/library/cc645959.aspx) |
+| sys.dm_pdw_nodes_tran_commit_table |[sys.dm_tran_commit_table](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/change-tracking-sys-dm-tran-commit-table) |
 | sys.dm_pdw_nodes_tran_current_snapshot |[sys.dm_tran_current_snapshot](http://msdn.microsoft.com/library/ms184390.aspx) |
-| sys.dm_pdw_nodes_tran_current_transaction |[sys.dm_tran_current_transaction](https://msdn.microsoft.com/library/ms186327.aspx) |
-| sys.dm_pdw_nodes_tran_database_transactions |[sys.dm_tran_database_transactions](https://msdn.microsoft.com/library/ms186957.aspx) |
+| sys.dm_pdw_nodes_tran_current_transaction |[sys.dm_tran_current_transaction](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-tran-current-transaction-transact-sql) |
+| sys.dm_pdw_nodes_tran_database_transactions |[sys.dm_tran_database_transactions](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql) |
 | sys.dm_pdw_nodes_tran_locks |[sys.dm_tran_locks](http://msdn.microsoft.com/library/ms190345.aspx) |
 | sys.dm_pdw_nodes_tran_session_transactions |[sys.dm_tran_session_transactions](http://msdn.microsoft.com/library/ms188739.aspx) |
 | sys.dm_pdw_nodes_tran_top_version_generators |[sys.dm_tran_top_version_generators](http://msdn.microsoft.com/library/ms188778.aspx) |
@@ -204,24 +204,24 @@ Each of these DMV's has a specific column called pdw_node_id. This is the the id
 ## SQL Server 2016 PolyBase DMVs available in Parallel Data Warehouse
 * [sys.dm_exec_compute_node_errors](http://msdn.microsoft.com/library/mt146380.aspx)
 * [sys.dm_exec_compute_node_status](http://msdn.microsoft.com/library/mt146382.aspx)
-* [sys.dm_exec_compute_nodes](https://msdn.microsoft.com/library/mt130700.aspx)
-* [sys.dm_exec_distributed_request_steps](https://msdn.microsoft.com/library/mt130701.aspx)
+* [sys.dm_exec_compute_nodes](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql)
+* [sys.dm_exec_distributed_request_steps](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql)
 * [sys.dm_exec_distributed_requests](http://msdn.microsoft.com/library/mt146385.aspx)
 * [sys.dm_exec_distributed_sql_requests](http://msdn.microsoft.com/library/mt146390.aspx)
-* [sys.dm_exec_dms_services](https://msdn.microsoft.com/library/mt146374.aspx)
-* [sys.dm_exec_dms_workers](https://msdn.microsoft.com/library/mt146392.aspx)
-* [sys.dm_exec_external_operations](https://msdn.microsoft.com/library/mt146391.aspx)
-* [sys.dm_exec_external_work](https://msdn.microsoft.com/library/mt146375.aspx)
+* [sys.dm_exec_dms_services](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-dms-services-transact-sql)
+* [sys.dm_exec_dms_workers](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql)
+* [sys.dm_exec_external_operations](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-external-operations-transact-sql)
+* [sys.dm_exec_external_work](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-external-work-transact-sql)
 
 ## SQL Server INFORMATION_SCHEMA views
 * [CHECK_CONSTRAINTS](http://msdn.microsoft.com/library/ms189772.aspx)
 * [COLUMNS](http://msdn.microsoft.com/library/ms188348.aspx)
 * [PARAMETERS](http://msdn.microsoft.com/library/ms173796.aspx)
-* [ROUTINES](https://msdn.microsoft.com/library/ms188757.aspx)
-* [SCHEMATA](https://msdn.microsoft.com/library/ms182642.aspx)
+* [ROUTINES](https://docs.microsoft.com/sql/relational-databases/system-information-schema-views/routines-transact-sql)
+* [SCHEMATA](https://docs.microsoft.com/sql/relational-databases/system-information-schema-views/schemata-transact-sql)
 * [TABLES](http://msdn.microsoft.com/library/ms186224.aspx)
-* [VIEW_COLUMN_USAGE](https://msdn.microsoft.com/library/ms190492.aspx)
-* [VIEW_TABLE_USAGE](https://msdn.microsoft.com/library/ms173869.aspx)
+* [VIEW_COLUMN_USAGE](https://docs.microsoft.com/sql/relational-databases/system-information-schema-views/view-column-usage-transact-sql)
+* [VIEW_TABLE_USAGE](https://docs.microsoft.com/sql/relational-databases/system-information-schema-views/view-table-usage-transact-sql)
 * [VIEWS](http://msdn.microsoft.com/library/ms181381.aspx)
 
 ## Next steps

@@ -21,6 +21,7 @@ caps.latest.revision: 29
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Schema Rowsets - Distributed Query Support
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]

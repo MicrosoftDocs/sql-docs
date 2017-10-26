@@ -1,7 +1,7 @@
 ---
 title: "HAVING (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/03/2017"
+ms.date: "08/09/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -24,6 +24,7 @@ caps.latest.revision: 27
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # SELECT - HAVING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -35,13 +36,11 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 [ HAVING <search condition> ]  
 ```  
   
 ## Arguments  
- <search_condition>  
+\<search_condition>
  Specifies the search condition for the group or the aggregate to meet.  
   
  The **text**, **image**, and **ntext** data types cannot be used in a HAVING clause.  

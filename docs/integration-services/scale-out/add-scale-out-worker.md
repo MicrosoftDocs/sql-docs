@@ -1,5 +1,5 @@
 ---
-title: "Add a SQL Server Integration Services (SSIS) Scale Out Worker with SQL Server Integration Services (SSIS) Scale Out Manager | Microsoft Docs"
+title: "Add an SSIS Scale Out Worker with Scale Out Manager | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/18/2017"
 ms.prod: "sql-server-2017"

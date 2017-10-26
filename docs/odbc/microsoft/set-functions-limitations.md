@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Set Functions Limitations
 The set functions (AVG, MAX, MIN, and SUM) do not support the DISTINCT keyword.

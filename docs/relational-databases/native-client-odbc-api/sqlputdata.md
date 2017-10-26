@@ -17,6 +17,7 @@ caps.latest.revision: 49
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # SQLPutData
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]

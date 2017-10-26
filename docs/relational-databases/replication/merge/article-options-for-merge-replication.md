@@ -17,6 +17,7 @@ caps.latest.revision: 37
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Article Options for Merge Replication
   There are many options for merge table articles that enable you to customize replication behavior to the needs of your applications. By using merge replication, you can do the following:  

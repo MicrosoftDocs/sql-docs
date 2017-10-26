@@ -17,6 +17,7 @@ caps.latest.revision: 28
 author: "Minewiskan"
 ms.author: "owend"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Change the Properties of a Mining Structure
   There are two kinds of properties on a mining structure, both of which can be modified:  

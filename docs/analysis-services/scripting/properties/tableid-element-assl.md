@@ -26,6 +26,7 @@ caps.latest.revision: 36
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # TableID Element (ASSL)
   Contains the identifier (ID) of the table (from the [DataSourceView](../../../analysis-services/scripting/objects/datasourceview-element-assl.md) element) associated with the parent element.  

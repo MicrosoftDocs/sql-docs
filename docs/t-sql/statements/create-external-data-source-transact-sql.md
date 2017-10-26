@@ -1,7 +1,7 @@
 ---
 title: "CREATE EXTERNAL DATA SOURCE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/05/2017"
+ms.date: "09/06/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -23,6 +23,7 @@ caps.latest.revision: 58
 author: "barbkess"
 ms.author: "barbkess"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -93,7 +94,7 @@ CREATE EXTERNAL DATA SOURCE data_source_name
 [;]
   
 -- Elastic Database query only: a shard map manager as data source   
--- (only on Azure SQL Database v12 or later)  
+-- (only on Azure SQL Database)  
 CREATE EXTERNAL DATA SOURCE data_source_name  
     WITH (   
         TYPE = SHARD_MAP_MANAGER,  
@@ -105,7 +106,7 @@ CREATE EXTERNAL DATA SOURCE data_source_name
 [;]  
   
 -- Elastic Database query only: a remote database on Azure SQL Database as data source   
--- (only on Azure SQL Database v12 or later)  
+-- (only on Azure SQL Database)  
 CREATE EXTERNAL DATA SOURCE data_source_name  
     WITH (   
         TYPE = RDBMS,  
@@ -116,7 +117,7 @@ CREATE EXTERNAL DATA SOURCE data_source_name
 [;]  
 
 -- Bulk operations only: Azure Storage Blob as data source   
--- (on SQL Server 2017 and Azure SQL Database).
+-- (on SQL Server 2017 or later, and Azure SQL Database).
 CREATE EXTERNAL DATA SOURCE data_source_name  
     WITH (   
         TYPE = BLOB_STORAGE,  
@@ -129,9 +130,9 @@ CREATE EXTERNAL DATA SOURCE data_source_name
  *data_source_name*   Specifies the user-defined name for the data source. The name must be unique within the database in SQL Server, Azure SQL Database, and Azure SQL Data Warehouse. The name must be unique within the server in Parallel Data Warehouse.
   
  TYPE = [ HADOOP | SHARD_MAP_MANAGER | RDBMS | BLOB_STORAGE]  
- Specifies the data source type. Use HADOOP when the external data source is Hadoop or Azure Storage blob for Hadoop. Use SHARD_MAP_MANAGER when creating an external data source for Elastic Database query for sharding on Azure SQL Database. Use RDBMS with external data sources for cross-database queries with Elastic Database query on Azure SQL Database.  Use BLOB_STORAGE when performing bulk operations using [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) or [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) with [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 or later.
+ Specifies the data source type. Use HADOOP when the external data source is Hadoop or Azure Storage blob for Hadoop. Use SHARD_MAP_MANAGER when creating an external data source for Elastic Database query for sharding on Azure SQL Database. Use RDBMS with external data sources for cross-database queries with Elastic Database query on Azure SQL Database.  Use BLOB_STORAGE when performing bulk operations using [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) or [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) with [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].
   
-LOCATION = <location_path>  
+LOCATION = \<location_path> 
 **HADOOP**    
 For HADOOP, specifies the Uniform Resource Indicator (URI) for a Hadoop cluster.  
 `LOCATION = 'hdfs:\/\/*NameNode\_URI*\[:*port*\]'`  
@@ -412,31 +413,7 @@ WITH (
 
 ## Examples: Azure SQL Data Warehouse
 
-### G. Create external data source to reference Azure blob storage
-To create an external data source to reference your Azure blob storage container, specify the Azure blob storage URI and a database scoped credential that contains your Azure storage account key.
-
-In this example, the external data source is an Azure blob storage container called dailylogs under Azure storage account named myaccount. The Azure storage external data source is for data transfer only and does not support predicate pushdown.
-
-This example shows how to create the database scoped credential for authentication to Azure storage. Specify the Azure storage account key in the database credential secret. Specify any string in database scoped credential identity, it is not used for authentication to Azure storage. Then, the credential is used in the statement that creates an external data source.
-
-```tsql
--- Create a database master key if one does not already exist. This key is used to encrypt the credential secret in next step.
-CREATE MASTER KEY;
-
--- Create a database scoped credential with Azure storage account key as the secret.
-CREATE DATABASE SCOPED CREDENTIAL AzureStorageCredential 
-WITH IDENTITY = 'myaccount', 
-SECRET = '<azure_storage_account_key>';
-
--- Create an external data source with CREDENTIAL option.
-CREATE EXTERNAL DATA SOURCE MyAzureStorage 
-WITH (
-    TYPE = HADOOP, 
-    LOCATION = 'wasbs://dailylogs@myaccount.blob.core.windows.net/',
-    CREDENTIAL = AzureStorageCredential
-);
-```
-### H. Create external data source to reference Azure Data Lake Store
+### G. Create external data source to reference Azure Data Lake Store
 Azure Data lake Store connectivity is based on your ADLS URI and your Azure Acitve directory Application's service principle. Documentation for creating this application can be found at[Data lake store authentication using Active Directory](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-authenticate-using-active-directory).
 
 ```tsql
@@ -459,18 +436,7 @@ WITH (TYPE = HADOOP,
 
 ## Examples: Parallel Data Warehouse
 
-### I. Create external data source to reference Hadoop
-To create an external data source to reference your Hortonworks or Cloudera Hadoop cluster, specify the machine name or IP address of the Hadoop Namenode and port.
-
-```tsql
-CREATE EXTERNAL DATA SOURCE MyHadoopCluster
-WITH (
-    TYPE = HADOOP,
-    LOCATION = 'hdfs://10.10.10.10:8050'
-);
-```
-
-### J. Create external data source to reference Hadoop with pushdown enabled
+### H. Create external data source to reference Hadoop with pushdown enabled
 Specify the JOB_TRACKER_LOCATION option to enable push-down computation to Hadoop for PolyBase queries. Once enabled, PolyBase uses a cost-based decision to determine whether the query computation should be pushed to Hadoop or all the data should be moved to process the query in SQL Server. 
 
 ```tsql
@@ -482,7 +448,7 @@ WITH (
 );
 ```
 
-### K. Create external data source to reference Azure blob storage
+### I. Create external data source to reference Azure blob storage
 To create an external data source to reference your Azure blob storage container, specify the Azure blob storage URI as the external data source LOCATION. Add your Azure storage account key to PDW core-site.xml file for authentication.
 
 In this example, the external data source is an Azure blob storage container called dailylogs under Azure storage account named myaccount. The Azure storage external data source is for data transfer only and does not support predicate pushdown.
@@ -495,8 +461,8 @@ CREATE EXTERNAL DATA SOURCE MyAzureStorage WITH (
 ```
 
 ## Examples: Bulk Operations   
-### L. Create an external data source for bulk operations retrieving data from Azure Blob storage.   
-**Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
+### J. Create an external data source for bulk operations retrieving data from Azure Blob storage.   
+**Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].   
 Use the following data source for bulk operations using [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) or [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md). The credential used, must be created using `SHARED ACCESS SIGNATURE` as the identity. For more information on shared access signatures, see [Using Shared Access Signatures (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1).   
 ```tsql
 CREATE EXTERNAL DATA SOURCE MyAzureInvoices
@@ -517,3 +483,4 @@ To see this example in use, see [BULK INSERT](../../t-sql/statements/bulk-insert
 [sys.external_data_sources (Transact-SQL)](../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md)  
   
   
+

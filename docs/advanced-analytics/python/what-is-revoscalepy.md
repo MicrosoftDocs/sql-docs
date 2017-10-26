@@ -1,7 +1,7 @@
 ---
 title: "Introducing revoscalepy | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/19/2017"
+ms.date: "10/05/2017"
 ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
@@ -19,23 +19,24 @@ manager: "jhubbard"
 
 It is based on the **RevoScaleR** package for R, which was provided in Microsoft R Server and SQL Server R Services, and aims to provide the same functionality:
 
-+ Supports multiple compute contexts, remote or local
++ Supports multiple compute contexts, both remote and local
 + Provides functions equivalent to those in RevoScaleR for data transformation and visualization
 + Provides Python versions of RevoScaleR machine learning algorithms for distributed or parallel processing
 + Improved performance, including use of the Intel math libraries
 
-MicrosoftML packages are also proided for both R and Python. For more information, see [Using MicrosoftML in SQL Server](../using-the-microsoftml-package.md)
-
-> [!WARNING]
-> 
-> Python support is a new feature in SQL Server 2017 and is currently supported for preview purposes only.
+MicrosoftML packages are also provided for both R and Python. For more information, see [Using MicrosoftML in SQL Server](../using-the-microsoftml-package.md)
 
 ## Versions and supported platforms
 
 The **revoscalepy** module is available only when you install one of the following Microsoft products:
 
-+ Machine Learning Services, in SQL Server 2017 CTP 2.0 or later
-+ Microsoft Machine Learning Server 9.1.0. Requires installation using setup for SQL Server 2017 CTP 2.0 or later
++ Machine Learning Services, in SQL Server 2017
++ Microsoft Machine Learning Server 9.2.0 or later
+
+To get the latest version of revoscalepy, install Cumulative Update 1 for SQL Server 2017. It includes many improvements in Python, including:
+
++ A new Python function, `rx_create_col_info`, that gets schema information from a SQL Server data source, like [rxCreateColInfo](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxcreatecolinfo) for 
++ Enhancements to [rx_exec](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-exec) to support parallel scenarios using the `RxLocalParallel` compute context. 
 
 ## Supported functions and data types
 
@@ -62,7 +63,7 @@ You create the data source object by using functions listed in the following tab
 
 + Use [RxSqlServerData](https://docs.microsoft.com/r-server/python-reference/revoscalepy/rxsqlserverdata) to define a data source from a query or table
 + Use [RxInSqlServer](https://docs.microsoft.com/r-server/python-reference/revoscalepy/rxinsqlserver) to create a SQL Server compute context
-+ Use [RxOdbcData](https://docs.microsoft.com/r-server/python-reference/revoscalepy/rxodbbcdata) to create a data source from an ODBC connection
++ Use [RxOdbcData](https://docs.microsoft.com/r-server/python-reference/revoscalepy/rxodbcdata) to create a data source from an ODBC connection
 
 **revoscalepy** also supports the [XDF data source](https://docs.microsoft.com/r-server/python-reference/revoscalepy/rxxdfdata), used for moving data between memory and other data sources.
 
@@ -93,7 +94,7 @@ New machine learning algorithms are also provided by the Python version of [Micr
 |`rx_fast_trees` | Create a boosted tree model |
 |`rx_logistic_regression` | Create a logistic regression model|
 |`rx_neural_network` | Create a customizable neural network model |
-|`rx_oneclass_svm` | Creates a SVM model for imabalnced datsets, for use in anomaly detection|
+|`rx_oneclass_svm` | Creates a SVM model on an imbalanced dataset, for use in anomaly detection|
 
 > [!TIP]
 > Many of these algorithms are already provided as modules in Azure Machine Learning.

@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "Sybase Console,Troubleshooting"
 ms.assetid: 8684ed23-c36b-46f6-9687-30ad7f47f876
 caps.latest.revision: 3
-author: "sabotta"
-ms.author: "carlasab"
-manager: "lonnyb"
+author: "Shamikg"
+ms.author: "Shamikg"
+manager: "jhubbard"
 ---
 # Troubleshooting (SybaseToSQL)
 It is not uncommon to run into migration issues midway executing the console scripts or commands.  

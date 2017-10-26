@@ -17,6 +17,7 @@ caps.latest.revision: 7
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Relationships Element (ASSL)
   Contains the collection of relationships for the associated dimension.  

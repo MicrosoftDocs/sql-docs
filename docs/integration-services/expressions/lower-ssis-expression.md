@@ -19,6 +19,7 @@ caps.latest.revision: 33
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # LOWER (SSIS Expression)
   Returns a character expression after converting uppercase characters to lowercase characters.  

@@ -16,6 +16,7 @@ caps.latest.revision: 13
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Use Data Feeds (Power Pivot for SharePoint)
   Data feeds are one or more data streams that are generated from an online data source and streamed to a destination document or application. If you are using [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel, data feeds can help you get existing corporate or business data from arbitrary data sources into the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] window in your Excel 2010 workbook. After you import a data feed to a workbook, you can reference it later in any data refresh operations that you schedule on a SharePoint server.  

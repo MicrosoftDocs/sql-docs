@@ -28,6 +28,7 @@ caps.latest.revision: 48
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # SET QUOTED_IDENTIFIER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -175,23 +176,17 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `ID          String`  
-  
- `----------- ------------------------------`  
-  
- `1           'Text in single quotes'`  
-  
- `2           'Text in single quotes'`  
-  
- `3           Text with 2 '' single quotes`  
-  
- `4           "Text in double quotes"`  
-  
- `5           "Text in double quotes"`  
-  
- `6           Text with 2 "" double quotes`  
-  
- `7           Text with a single ' quote`  
+ ```
+ ID          String 
+ ----------- ------------------------------ 
+ 1           'Text in single quotes' 
+ 2           'Text in single quotes' 
+ 3           Text with 2 '' single quotes 
+ 4           "Text in double quotes" 
+ 5           "Text in double quotes" 
+ 6           Text with 2 "" double quotes 
+ 7           Text with a single ' quote
+ ```  
   
 ## See Also  
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   

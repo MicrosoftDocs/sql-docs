@@ -1,7 +1,7 @@
 ---
 title: "GRANT-DENY-REVOKE Perms-Azure SQL Data and Parallel Data Warehouses | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "08/10/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -16,6 +16,7 @@ caps.latest.revision: 9
 author: "barbkess"
 ms.author: "barbkess"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Permissions: GRANT, DENY, REVOKE (Azure SQL Data Warehouse, Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -77,10 +78,10 @@ REVOKE
  \<permission>[ **,**...*n* ]  
  One or more permissions to grant, deny, or revoke.  
   
- ON [ <class_type> :: ] *securable*  
+ ON [ \<class_type> :: ] *securable* 
  The **ON** clause describes the securable parameter on which to grant, deny, or revoke permissions.  
   
- <class_type>  
+ \<class_type> 
  The class type of the securable. This can be **LOGIN**, **DATABASE**, **OBJECT**, **SCHEMA**, **ROLE**, or **USER**. Permissions can also be granted to the **SERVER***class_type*, but **SERVER** is not specified for those permissions. **DATABASE** is not specified when the permission includes the word **DATABASE** (for example **ALTER ANY DATABASE**). When no *class_type* is specified and the permission type is not restricted to the server or database class, the class is assumed to be **OBJECT**.  
   
  *securable*  
@@ -319,3 +320,4 @@ GRANT UPDATE ON dbo.StatusTable TO [Ted];
 ```  
   
   
+

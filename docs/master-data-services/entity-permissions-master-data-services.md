@@ -14,9 +14,9 @@ helpviewer_keywords:
   - "permissions [Master Data Services], entities"
 ms.assetid: 22785062-4faf-46ee-bffa-01cbd6d5a5b3
 caps.latest.revision: 6
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
+author: "smartysanthosh"
+ms.author: "nagavo"
+manager: "craigg"
 ---
 # Entity Permissions (Master Data Services)
   Entity permissions apply to:  

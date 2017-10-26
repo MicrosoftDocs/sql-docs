@@ -1,6 +1,4 @@
 ---
-# required metadata
-
 title: Configure Ubuntu Cluster for SQL Server Availability Group | Microsoft Docs
 description: 
 author: MikeRayMSFT 
@@ -11,21 +9,10 @@ ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
-
-
-# optional metadata
-# keywords: ""
-# ROBOTS: ""
-# audience: ""
-# ms.devlang: ""
-# ms.reviewer: ""
-# ms.suite: ""
-# ms.tgt_pltfrm: ""
-# ms.custom: ""
-
 ---
-
 # Configure Ubuntu Cluster and Availability Group Resource
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 This document explains how to create a three-node cluster on Ubuntu and add a previously created availability group as a resource in the cluster. 
 For high availability, an availability group on Linux requires three nodes - see [High availability and data protection for availability group configurations](sql-server-linux-availability-group-ha.md).

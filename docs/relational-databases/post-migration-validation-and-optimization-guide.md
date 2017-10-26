@@ -17,6 +17,7 @@ caps.latest.revision: 3
 author: "pelopes"
 ms.author: "harinid"
 manager: ""
+ms.workload: "Inactive"
 ---
 # Post-migration Validation and Optimization Guide
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

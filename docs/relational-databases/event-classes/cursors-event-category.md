@@ -18,6 +18,7 @@ caps.latest.revision: 23
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Cursors Event Category
   The **Cursors** event category contains event classes that are used to monitor the behavior of cursors.  

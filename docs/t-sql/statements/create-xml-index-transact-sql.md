@@ -1,7 +1,7 @@
 ---
 title: "CREATE XML INDEX (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/15/2017"
+ms.date: "08/10/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -31,6 +31,7 @@ caps.latest.revision: 38
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # CREATE XML INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -133,7 +134,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  *table_name*  
  Is the name of the table to be indexed.  
   
- **<xml_index_option> ::=**  
+ **\<xml_index_option> ::=** 
   
  Specifies the options to use when you create the index.  
   
@@ -298,3 +299,4 @@ GO
  [XML Indexes &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md)  
   
   
+

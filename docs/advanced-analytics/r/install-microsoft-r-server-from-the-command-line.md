@@ -14,6 +14,7 @@ caps.latest.revision: 4
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Install Microsoft R Server from the Command Line
     
@@ -77,7 +78,7 @@ By default, all setup logs and summaries for SQL Server and related features are
 
 A separate subfolder is created  for each feature installed.
 
-To set up another instance of Microsoft R Server with the same parameters, you can re-use the configuration file that is created during installation. For more information, see [Install SQL Server Using a Configuration File](https://msdn.microsoft.com/library/dd239405.aspx)
+To set up another instance of Microsoft R Server with the same parameters, you can re-use the configuration file that is created during installation. For more information, see [Install SQL Server Using a Configuration File](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md)
 
 
 ## Customize Your R Environment

@@ -20,6 +20,7 @@ caps.latest.revision: 25
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # MDX Data Manipulation - Manipulating Data
   Multidimensional Expressions (MDX) can be used to manipulate the data in a variety of ways. The following topics cover some of the more advanced concepts of data manipulation in the MDX language  

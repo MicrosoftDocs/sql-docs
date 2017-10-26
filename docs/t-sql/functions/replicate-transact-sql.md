@@ -23,6 +23,7 @@ caps.latest.revision: 42
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # REPLICATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -34,8 +35,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 REPLICATE ( string_expression ,integer_expression )   
 ```  
   
@@ -133,21 +132,16 @@ ORDER BY Name;
   
  Here are the first rows in the result set.  
   
- `Name                     ItemCode       FullItemCode`  
-  
- `------------------------ -------------- ---------------`  
-  
- `Adjustable Race          AR-5381        0000AR-5381`  
-  
- `All-Purpose Bike Stand   ST-1401        0000ST-1401`  
-  
- `AWC Logo Cap             CA-1098        0000CA-1098`  
-  
- `AWC Logo Cap             CA-1098        0000CA-1098`  
-  
- `AWC Logo Cap             CA-1098        0000CA-1098`  
-  
- `BB Ball Bearing          BE-2349        0000BE-2349`  
+ ```
+Name                     ItemCode       FullItemCode
+------------------------ -------------- ---------------
+Adjustable Race          AR-5381        0000AR-5381
+All-Purpose Bike Stand   ST-1401        0000ST-1401
+AWC Logo Cap             CA-1098        0000CA-1098
+AWC Logo Cap             CA-1098        0000CA-1098
+AWC Logo Cap             CA-1098        0000CA-1098
+BB Ball Bearing          BE-2349        0000BE-2349
+ ```  
   
 ## See Also  
  [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   

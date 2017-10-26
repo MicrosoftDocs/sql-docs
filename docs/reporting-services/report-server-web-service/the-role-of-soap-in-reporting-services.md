@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "XML Web service [Reporting Services], SOAP"
 ms.assetid: f229c3ef-f2ca-448f-98f1-b8df350b9992
 caps.latest.revision: 34
-author: "sabotta"
+author: "guyinacube"
 author: "guyinacube"
 ms.author: "asaxton"
 ---

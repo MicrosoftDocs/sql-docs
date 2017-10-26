@@ -13,7 +13,8 @@ ms.assetid: d9c5adb1-3209-4186-bc10-8e41a26f5e57
 caps.latest.revision: 3
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Optimize JSON processing with in-memory OLTP
 [!INCLUDE[tsql-appliesto-ssvNxt-asdb-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-asdb-xxxx-xxx.md)]

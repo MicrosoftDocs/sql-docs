@@ -17,6 +17,7 @@ caps.latest.revision: 30
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Database Properties (General Page)
   Use this page to view or modify properties for the selected database.  

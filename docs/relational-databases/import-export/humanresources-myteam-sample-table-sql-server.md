@@ -18,6 +18,7 @@ caps.latest.revision: 35
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # HumanResources.myTeam Sample Table (SQL Server)
   Many of the code examples in [Importing and Exporting Bulk Data](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md) require a special-purpose test table named **myTeam**. Before you can run the examples, you must create the **myTeam** table in the **HumanResources** schema of the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.  
@@ -34,11 +35,11 @@ manager: "jhubbard"
 |**Title**|**nvarchar(50)**|Nullable|Title the employee performs on my team.|  
 |**Background**|**nvarchar(50)**|Not null|Date and time the row was last updated. (Default)|  
   
- **To create HumanResources.myTeam**  
+**To create HumanResources.myTeam**  
   
 -   Use the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statements:  
   
-    ```  
+    ```sql
     --Create HumanResources.MyTeam:   
     USE AdventureWorks;  
     GO  
@@ -51,11 +52,11 @@ manager: "jhubbard"
     GO  
     ```  
   
- **To populate HumanResources.myTeam**  
+**To populate HumanResources.myTeam**  
   
 -   Execute following `INSERT` statements to populate the table with two rows:  
   
-    ```  
+    ```sql
     USE AdventureWorks;  
     GO  
     INSERT INTO HumanResources.myTeam(EmployeeID,Name,Title,Background)  

@@ -17,6 +17,7 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Referencing the ADO Libraries
 The latest version of ADO is packaged as *msado15.dll*. The latest versions of ADO MD and ADOX are packaged as *msadom.dll* and *msadox.dll*, respectively. These libraries are installed by default in *$installDir*, where *$installDir* stands for the path of the directory in which the ADO library has been installed on your computer. To use the ADO libraries in your application, you must reference them explicitly in the application project.  

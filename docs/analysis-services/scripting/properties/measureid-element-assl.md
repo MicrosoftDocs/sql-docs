@@ -26,6 +26,7 @@ caps.latest.revision: 32
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # MeasureID Element (ASSL)
   Associates a [Measure](../../../analysis-services/scripting/objects/measure-element-assl.md) element with the parent element.  

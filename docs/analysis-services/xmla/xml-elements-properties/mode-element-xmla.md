@@ -28,6 +28,7 @@ caps.latest.revision: 13
 author: "jeannt"
 ms.author: "jeannt"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Mode Element (XMLA)
   Identifies the mode to be used by the parent [Lock](../../../analysis-services/xmla/xml-elements-commands/lock-element-xmla.md) element when creating a lock on a specified object.  

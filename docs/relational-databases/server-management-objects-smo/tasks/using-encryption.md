@@ -1,7 +1,7 @@
 ---
 title: "Using Encryption | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/02/2016"
+ms.date: "08/06/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -38,28 +38,7 @@ manager: "jhubbard"
  In SMO, certificates are represented by the <xref:Microsoft.SqlServer.Management.Smo.Certificate> object. The <xref:Microsoft.SqlServer.Management.Smo.Certificate> object has properties that specify the public key, the name of the subject, period of validity, and information about the issuer. Permission to access the certificate is controlled by using the **Grant**, **Revoke** and **Deny** methods.  
   
 ## Example  
- For the following code example, you will have to select the programming environment, programming template and the programming language to create your application. For more information, see [Create a Visual Basic SMO Project in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-basic-smo-project-in-visual-studio-net.md) and [Create a Visual C&#35; SMO Project in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
-  
-## Adding a Certificate in Visual Basic  
- The code example creates a simple certificate with an encryption password. Unlike other objects, the <xref:Microsoft.SqlServer.Management.Smo.Certificate.Create%2A> method has several overloads. The overload used in the example creates a new certificate with an encryption password.  
-  
-```VBNET
-'Connect to the local, default instance of SQL Server.
-Dim srv As Server
-srv = New Server
-'Reference the AdventureWorks2012 database.
-Dim db As Database
-db = srv.Databases("AdventureWorks2012")
-'Define a Certificate object variable by supplying the parent database and name in the constructor.
-Dim c As Certificate
-c = New Certificate(db, "Test_Certificate")
-'Set the start date, expiry date, and description.
-c.StartDate = DateValue("January 01, 2007")
-c.Subject = "This is a test certificate."
-c.ExpirationDate = DateValue("January 01, 2008")
-'Create the certificate on the instance of SQL Server by supplying the certificate password argument.
-c.Create("pGFD4bb925DGvbd2439587y")
-```
+ For the following code examples, you will have to select the programming environment, programming template and the programming language to create your application. For more information, see [Create a Visual C&#35; SMO Project in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## Adding a Certificate in Visual C#  
  The code example creates a simple certificate with an encryption password. Unlike other objects, the <xref:Microsoft.SqlServer.Management.Smo.Certificate.Create%2A> method has several overloads. The overload used in the example creates a new certificate with an encryption password.  

@@ -18,6 +18,7 @@ caps.latest.revision: 18
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # SystemGetClusterAccuracyResults (Analysis Services - Data Mining)
   Returns cross-validation accuracy metrics for a mining structure and related clustering models.  

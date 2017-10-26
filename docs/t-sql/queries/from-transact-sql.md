@@ -2,7 +2,7 @@
 title: "FROM (Transact-SQL) | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "06/28/2017"
+ms.date: "08/09/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -38,6 +38,7 @@ caps.latest.revision: 97
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # FROM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -159,7 +160,7 @@ FROM { <table_source> [ ,...n ] }
  Specifies a table, view, table variable, or derived table source, with or without an alias, to use in the [!INCLUDE[tsql](../../includes/tsql-md.md)] statement. Up to 256 table sources can be used in a statement, although the limit varies depending on available memory and the complexity of other expressions in the query. Individual queries may not support up to 256 table sources.  
   
 > [!NOTE]  
->  Query performance may suffer with lots of tables referenced in a query. Compilation and optimization time is also affected by additional factors. These include the presence of indexes and indexed views on each <table_source> and the size of the <select_list> in the SELECT statement.  
+>  Query performance may suffer with lots of tables referenced in a query. Compilation and optimization time is also affected by additional factors. These include the presence of indexes and indexed views on each \<table_source> and the size of the \<select_list> in the SELECT statement.  
   
  The order of table sources after the FROM keyword does not affect the result set that is returned. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] returns errors when duplicate names appear in the FROM clause.  
   
@@ -200,7 +201,7 @@ FROM { <table_source> [ ,...n ] }
  *user_defined_function*  
  Specifies a table-valued function.  
   
- OPENXML <openxml_clause>  
+ OPENXML \<openxml_clause>  
 
 **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
 
@@ -215,7 +216,7 @@ FROM { <table_source> [ ,...n ] }
  *column_alias*  
  Is an optional alias to replace a column name in the result set of the derived table. Include one column alias for each column in the select list, and enclose the complete list of column aliases in parentheses.  
   
- *table_or_view_name* FOR SYSTEM_TIME <system_time>  
+ *table_or_view_name* FOR SYSTEM_TIME \<system_time>  
 
 **Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
 
@@ -246,7 +247,7 @@ FROM { <table_source> [ ,...n ] }
  *repeat_seed*  
  Is a constant integer expression used by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to generate a random number. *repeat_seed* is **bigint**. If *repeat_seed* is not specified, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assigns a value at random. For a specific *repeat_seed* value, the sampling result is always the same if no changes have been applied to the table. The *repeat_seed* expression must evaluate to an integer greater than zero.  
   
- <joined_table>  
+ \<joined_table>  
  Is a result set that is the product of two or more tables. For multiple joins, use parentheses to change the natural order of the joins.  
   
 \<join_type>  
@@ -316,7 +317,7 @@ ON (p.ProductID = v.ProductID);
  *right_table_source*  
  Is a table source as defined in the previous argument. For more information, see the Remarks section.  
   
- *table_source* PIVOT <pivot_clause>  
+ *table_source* PIVOT \<pivot_clause>  
  Specifies that the *table_source* is pivoted based on the *pivot_column*. *table_source* is a table or table expression. The output is a table that contains all columns of the *table_source* except the *pivot_column* and *value_column*. The columns of the *table_source*, except the *pivot_column* and *value_column*, are called the grouping columns of the pivot operator. For more information about PIVOT and UNPIVOT, see [Using PIVOT and UNPIVOT](../../t-sql/queries/from-using-pivot-and-unpivot.md).  
   
  PIVOT performs a grouping operation on the input table with regard to the grouping columns and returns one row for each group. Additionally, the output contains one column for each value specified in the *column_list* that appears in the *pivot_column* of the *input_table*.  
@@ -344,7 +345,7 @@ ON (p.ProductID = v.ProductID);
  *table_alias*  
  Is the alias name of the output table. *pivot_table_alias* must be specified.  
   
- UNPIVOT < unpivot_clause >  
+ UNPIVOT \< unpivot_clause >  
  Specifies that the input table is narrowed from multiple columns in *column_list* into a single column called *pivot_column*. For more information about PIVOT and UNPIVOT, see [Using PIVOT and UNPIVOT](../../t-sql/queries/from-using-pivot-and-unpivot.md).  
   
  AS OF \<date_time>  
@@ -352,7 +353,7 @@ ON (p.ProductID = v.ProductID);
 **Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
 
   
- Returns a table with single record for each row containing the values that were actual (current) at the specified point in time in the past. Internally, a union is performed between the temporal table and its history table and the results are filtered to return the values in the row that was valid at the point in time specified by the *<date_time>* parameter. The value for a row is deemed valid if the *system_start_time_column_name* value is less than or equal to the *<date_time>* parameter value and the *system_end_time_column_name* value is greater than the *<date_time>* parameter value.   
+ Returns a table with single record for each row containing the values that were actual (current) at the specified point in time in the past. Internally, a union is performed between the temporal table and its history table and the results are filtered to return the values in the row that was valid at the point in time specified by the *\<date_time>* parameter. The value for a row is deemed valid if the *system_start_time_column_name* value is less than or equal to the *\<date_time>* parameter value and the *system_end_time_column_name* value is greater than the *\<date_time>* parameter value.   
   
  FROM \<start_date_time> TO \<end_date_time>
 
@@ -664,18 +665,7 @@ WHERE ManagerID = 5;
   
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### N. Using a simple FROM clause  
- The following example retrieves the `SalesTerritoryID` and `SalesTerritoryRegion` columns from the `DimSalesTerritory` table.  
-  
-```tsql
--- Uses AdventureWorks  
-  
-SELECT SalesTerritoryKey, SalesTerritoryRegion  
-FROM DimSalesTerritory  
-ORDER BY SalesTerritoryKey;  
-```  
-  
-### O. Using the INNER JOIN syntax  
+### N. Using the INNER JOIN syntax  
  The following example returns the `SalesOrderNumber`, `ProductKey`, and `EnglishProductName` columns from the `FactInternetSales` and `DimProduct` tables where the join key, `ProductKey`, matches in both tables. The `SalesOrderNumber` and `EnglishProductName` columns each exist in one of the tables only, so it is not necessary to specify the table alias with these columns, as is shown; these aliases are included for readability. The word **AS** before an alias name is not required but is recommended for readability and to conform to the ANSI standard.  
   
 ```tsql
@@ -711,7 +701,7 @@ WHERE fis.SalesOrderNumber > 'SO50000'
 ORDER BY fis.SalesOrderNumber;  
 ```  
   
-### P. Using the LEFT OUTER JOIN and RIGHT OUTER JOIN syntax  
+### O. Using the LEFT OUTER JOIN and RIGHT OUTER JOIN syntax  
  The following example joins the `FactInternetSales` and `DimProduct` tables on the `ProductKey` columns. The left outer join syntax preserves the unmatched rows from the left (`FactInternetSales`) table. Since the `FactInternetSales` table does not contain any `ProductKey` values that do not match the `DimProduct` table, this query returns the same rows as the first inner join example above.  
   
 ```tsql
@@ -760,7 +750,7 @@ RIGHT OUTER JOIN DimSalesTerritory AS dst
 ORDER BY fis.SalesOrderNumber;  
 ```  
   
-### Q. Using the FULL OUTER JOIN syntax  
+### P. Using the FULL OUTER JOIN syntax  
  The following example demonstrates a full outer join, which returns all rows from both joined tables but returns NULL for values that do not match from the other table.  
   
 ```tsql
@@ -785,7 +775,7 @@ FULL JOIN FactInternetSales AS fis
 ORDER BY fis.SalesOrderNumber;  
 ```  
   
-### R. Using the CROSS JOIN syntax  
+### Q. Using the CROSS JOIN syntax  
  The following example returns the cross-product of the `FactInternetSales` and `DimSalesTerritory` tables. A list of all possible combinations of `SalesOrderNumber` and  `SalesTerritoryKey` are returned. Notice the absence of the `ON` clause in the cross join query.  
   
 ```tsql
@@ -797,7 +787,7 @@ CROSS JOIN FactInternetSales AS fis
 ORDER BY fis.SalesOrderNumber;  
 ```  
   
-### S. Using a derived table  
+### R. Using a derived table  
  The following example uses a derived table (a `SELECT` statement after the `FROM` clause) to return the `CustomerKey` and `LastName` columns of all customers in the `DimCustomer` table with `BirthDate` values later than January 1, 1970 and the last name ‘Smith’.  
   
 ```tsql
@@ -811,7 +801,7 @@ WHERE LastName = 'Smith'
 ORDER BY LastName;  
 ```  
   
-### T. REDUCE join hint example  
+### S. REDUCE join hint example  
  The following example uses the `REDUCE` join hint to alter the processing of the derived table within the query. When using the `REDUCE` join hint in this query, the `fis.ProductKey` is projected, replicated and made distinct, and then joined to `DimProduct` during the shuffle of `DimProduct` on `ProductKey`. The resulting derived table is distributed on `fis.ProductKey`.  
   
 ```tsql
@@ -827,7 +817,7 @@ FROM
 ORDER BY SalesOrderNumber;  
 ```  
   
-### U. REPLICATE join hint example  
+### T. REPLICATE join hint example  
  This next example shows the same query as the previous example, except that a `REPLICATE` join hint is used instead of the `REDUCE` join hint. Use of the `REPLICATE` hint causes the values in the `ProductKey` (joining) column from the `FactInternetSales` table to be replicated to all nodes. The `DimProduct` table is joined to the replicated version of those values.  
   
 ```tsql
@@ -843,7 +833,7 @@ FROM
 ORDER BY SalesOrderNumber;  
 ```  
   
-### V. Using the REDISTRIBUTE hint to guarantee a Shuffle move for a distribution incompatible join  
+### U. Using the REDISTRIBUTE hint to guarantee a Shuffle move for a distribution incompatible join  
  The following query uses the REDISTRIBUTE query hint on a distribution incompatible join. This guarantees the query optimizer will use a Shuffle move in the query plan. This also guarantees the query plan will not use a Broadcast move which moves a distributed table to a replicated table.  
   
  In the following example, the REDISTRIBUTE hint forces a Shuffle move on the FactInternetSales table because ProductKey is the distribution column for DimProduct, and is not the distribution column for FactInternetSales.  

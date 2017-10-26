@@ -1,7 +1,7 @@
 ---
 title: "CREATE EXTERNAL FILE FORMAT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/28/2016"
+ms.date: "08/29/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -23,6 +23,7 @@ caps.latest.revision: 25
 author: "barbkess"
 ms.author: "barbkess"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # CREATE EXTERNAL FILE FORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -245,13 +246,14 @@ PolyBase only uses the custom date format for importing the data. It does not us
   
  DATA_COMPRESSION = *data_compression_method*  
  Specifies the data compression method for the external data. When DATA_COMPRESSION is not specified, the default is uncompressed data.  
-  
+ In order to work properly, Gzip compressed files must have the ".gz" file extension.
+ 
  The DELIMITEDTEXT format type supports these compression methods:  
   
 -   DATA COMPRESSION = 'org.apache.hadoop.io.compress.DefaultCodec'  
   
 -   DATA COMPRESSION = 'org.apache.hadoop.io.compress.GzipCodec'  
-  
+
  The RCFILE format type supports this compression method:  
   
 -   DATA COMPRESSION = 'org.apache.hadoop.io.compress.DefaultCodec'  

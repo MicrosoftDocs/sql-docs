@@ -34,6 +34,7 @@ caps.latest.revision: 50
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # LIKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -347,18 +348,6 @@ SELECT FirstName, LastName, Phone
 FROM DimEmployee  
 WHERE phone LIKE '6_2%'  
 ORDER by LastName;   
-```  
-  
-### H. Using the [ ] wildcard characters  
- The following example finds `DimEmployee` rows with the first name of `Rob` or `Bob`.  
-  
-```tsql  
--- Uses AdventureWorks  
-  
-SELECT FirstName, LastName, Phone  
-FROM DimEmployee  
-WHERE FirstName LIKE '[RB]ob'  
-ORDER by LastName;  
 ```  
   
 ## See Also  

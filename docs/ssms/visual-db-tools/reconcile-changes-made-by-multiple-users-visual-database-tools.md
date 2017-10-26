@@ -29,7 +29,7 @@ This dialog box also displays a list of database objects that will be affected a
   
 -   Choose **Yes** to save your table and update the database with all the changes in the list.  
   
-    This action could affect tables that share the same database objects. For example, suppose you edit the `au`_`id` column in the `titleauthors` table while another user is working on the `authors` table which is related to the `titleauthors` table by the `au`\_`id` column. Saving your table will affect the other user's table. Similarly, suppose that another user defined a check constraint for the `qty` column in the `sales` table. If you delete the `qty` column and save the `sales` table, the other user's check constraint will be affected.  
+    This action could affect tables that share the same database objects. For example, suppose you edit the `au_id` column in the `titleauthors` table while another user is working on the `authors` table which is related to the `titleauthors` table by the `au_id` column. Saving your table will affect the other user's table. Similarly, suppose that another user defined a check constraint for the `qty` column in the `sales` table. If you delete the `qty` column and save the `sales` table, the other user's check constraint will be affected.  
   
 -   Choose **No** to cancel the save action.  
   

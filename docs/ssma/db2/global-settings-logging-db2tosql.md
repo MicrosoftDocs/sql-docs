@@ -14,9 +14,9 @@ applies_to:
   - "SQL Server"
 ms.assetid: d314a2ca-ea2e-46e0-ae5e-8774841da91b
 caps.latest.revision: 4
-author: "sabotta"
-ms.author: "carlasab"
-manager: "lonnyb"
+author: "Shamikg"
+ms.author: "Shamikg"
+manager: "jhubbard"
 ---
 # Global Settings (Logging) (DB2ToSQL)
 Use the **Global Settings** dialog box to specify the logging settings for SSMA. Typically, you would change these settings only when working with product support.  

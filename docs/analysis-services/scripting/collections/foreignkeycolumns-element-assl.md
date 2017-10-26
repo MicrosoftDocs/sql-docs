@@ -26,6 +26,7 @@ caps.latest.revision: 30
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # ForeignKeyColumns Element (ASSL)
   Contains the collection of columns that identify the join to the parent table for a relational data source.  

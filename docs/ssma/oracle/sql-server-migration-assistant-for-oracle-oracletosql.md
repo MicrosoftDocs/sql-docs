@@ -2,7 +2,7 @@
 title: "SQL Server Migration Assistant for Oracle (OracleToSQL) | Microsoft Docs"
 ms.prod: "sql-non-specified"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "08/09/2017"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,12 +11,12 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 84abdd92-682c-404b-879d-7879bdf5b468
 caps.latest.revision: 10
-author: "sabotta"
-ms.author: "carlasab"
-manager: "v-thobro"
+author: "Shamikg"
+ms.author: "Shamikg"
+manager: "murato"
 ---
 # SQL Server Migration Assistant for Oracle (OracleToSQL)
-[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) for Oracle is a tool for migrating Oracle databases to [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005, [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008, [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012, [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014. SSMA for Oracle converts Oracle database objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database objects, creates those objects in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], and then migrates data from Oracle to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) for Oracle is a tool for migrating Oracle databases to [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005, [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008, [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012, [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014, [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016, [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2017 on Windows and Linux (Preview), and Azure SQL DB. SSMA for Oracle converts Oracle database objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database objects, creates those objects in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], and then migrates data from Oracle to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
   
 This documentation introduces you to SSMA for Oracle and provides step-by-step instructions for migrating Oracle databases to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. The following table shows topics to help you learn more:  
   

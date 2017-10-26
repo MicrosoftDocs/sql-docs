@@ -20,6 +20,7 @@ caps.latest.revision: 38
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Specify Data Formats for Compatibility when Using bcp (SQL Server)
   This topic describes the data-format attributes, field-specific prompts, and storing field-by-field data in a non-xml format file of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**bcp** command. Understanding these can be helpful when you bulk export [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data for bulk import into another program, such as another database program. The default data formats (native, character, or Unicode) in the source table might be incompatible with the data layout expected by the other program If an incompatibility exists, when you export the data, you must describe the data layout.  
@@ -56,7 +57,7 @@ manager: "jhubbard"
   
  The command specifies neither a format file nor a data type, causing **bcp** to prompt for data-format information. At the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows command prompt, enter:  
   
-```  
+```cmd
 bcp AdventureWorks.HumanResources.myTeam out myTeam.txt -T  
 ```  
   

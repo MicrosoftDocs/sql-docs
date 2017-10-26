@@ -28,6 +28,7 @@ caps.latest.revision: 13
 author: "jeannt"
 ms.author: "jeannt"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # ConnectionString Element (XMLA)
   Contains a connection string used by the parent [Location](../../../analysis-services/xmla/xml-elements-properties/location-element-xmla.md) or [Source](../../../analysis-services/xmla/xml-elements-properties/source-element-xmla.md) element.  

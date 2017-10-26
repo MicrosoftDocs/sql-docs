@@ -1,3 +1,3 @@
 ---
-redirect_url: /sql/connect/odbc/windows/asynchronous-execution-notification-method-sample
+redirect_url: /sql/connect/odbc/windows/microsoft-odbc-driver-for-sql-server-on-windows
 ---

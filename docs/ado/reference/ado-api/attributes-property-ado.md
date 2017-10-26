@@ -21,6 +21,7 @@ caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Attributes Property (ADO)
 Indicates one or more characteristics of an object.  

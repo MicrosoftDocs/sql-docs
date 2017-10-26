@@ -1,7 +1,7 @@
 ---
 title: "DROP EXTERNAL LIBRARY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/18/2017"
+ms.date: "08/17/2017"
 ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
@@ -26,6 +26,7 @@ manager: "jhubbard"
 Deletes an existing package library.
 
 ## Syntax  
+
 ```
 DROP EXTERNAL LIBRARY library_name  
 [ AUTHORIZATION owner_name ];  
@@ -55,22 +56,22 @@ Unlike other `DROP` statements in SQL Server, this statement supports specifying
 
 ## Examples
 
-Add ggplot2 to a database:
+Add a custom R package, named `customPackage`, to a database:
 
 ```sql
-CREATE EXTERNAL LIBRARY ggplot2 
-FROM 'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\ggplot2.zip';
+CREATE EXTERNAL LIBRARY customPackage 
+FROM 'C:\Users\Username\CustomPackages\customPackage.zip';
 ```
 
-Delete the ggplot2 library.
+Delete the `customPackage` library.
 
 ```sql
-DROP EXTERNAL LIBRARY ggplot2 <user_name>;
+DROP EXTERNAL LIBRARY customPackage <user_name>;
 ```
 
 ## See also  
-[CREATE EXTERNAL DATA SOURCE (Transact-SQL)](create-external-data-source-transact-sql.md)  
-[ALTER EXTERNAL DATA SOURCE (Transact-SQL)](alter-external-data-source-transact-sql.md)  
+[CREATE EXTERNAL LIBRARY (Transact-SQL)](create-external-library-transact-sql.md)  
+[ALTER EXTERNAL LIBRARY (Transact-SQL)](alter-external-library-transact-sql.md)  
 [sys.external_library_files](../../relational-databases/system-catalog-views/sys-external-library-files-transact-sql.md)  
 [sys.external_libraries](../../relational-databases/system-catalog-views/sys-external-libraries-transact-sql.md)  
 

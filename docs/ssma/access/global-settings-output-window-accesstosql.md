@@ -14,9 +14,9 @@ applies_to:
   - "SQL Server"
 ms.assetid: ca64f234-38f2-4607-a9d6-d4906e48e336
 caps.latest.revision: 3
-author: "sabotta"
-ms.author: "carlasab"
-manager: "lonnyb"
+author: "Shamikg"
+ms.author: "Shamikg"
+manager: "jhubbard"
 ---
 # Global Settings (Output Window) (AccessToSQL)
 Use the **Global Settings** dialog box to specify settings for SSMA.  

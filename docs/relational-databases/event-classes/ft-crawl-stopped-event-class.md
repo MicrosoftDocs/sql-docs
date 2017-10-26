@@ -16,6 +16,7 @@ caps.latest.revision: 29
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # FT:Crawl Stopped Event Class
   The **:Crawl Stopped** event class indicates that a full-text crawl (population) has stopped. The stop can be due to a successfully completed crawl or a fatal error.  

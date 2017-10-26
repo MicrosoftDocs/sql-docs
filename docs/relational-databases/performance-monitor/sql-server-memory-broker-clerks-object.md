@@ -16,6 +16,7 @@ caps.latest.revision: 4
 author: "dagiro"
 ms.author: "v-dagir"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # SQL Server, Memory Broker Clerks Object
 The **SQLServer:Memory Broker Clerks** performance object provides counters for statistics related to memory broker clerks.

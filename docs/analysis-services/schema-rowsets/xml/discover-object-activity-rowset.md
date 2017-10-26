@@ -19,6 +19,7 @@ caps.latest.revision: 14
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # DISCOVER_OBJECT_ACTIVITY Rowset
   Provides resource usage per object since the start of the service.  

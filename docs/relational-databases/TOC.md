@@ -1,12 +1,5 @@
-# [Database Features](database-features.md)
+# [Overview](database-features.md)
 # [New and recently updated articles](new-updated-relational-databases.md)
-
-# Overview
-## [Database Engine Cross-Instance Features](database-engine-cross-instance-features.md)
-## [Technical Reference](technical-reference-database-engine.md)  
-## [Feature Reference](feature-reference-database-engine.md)
-
-# [Recently Updated Articles about Relational Databases](relational-databases-new-updated-sql-docs-pr.md)
 
 # [SQL Server Guides](sql-server-guides.md)
 ## Always On Availability Groups Troubleshooting and Monitoring Guide
@@ -52,7 +45,7 @@
 # [Extended events](../relational-databases/extended-events/extended-events.md)
 # [Graphs](../relational-databases/graphs/sql-graph-overview.md)
 # [Hierarchical Data](hierarchical-data-sql-server.md)  
-# [Import and export](../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)
+# [Import and export](../relational-databases/import-export/overview-import-export.md)
 # [In-memory OLTP](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)
 # [Indexes](../relational-databases/indexes/indexes.md)
 # [JSON](../relational-databases/json/json-data-sql-server.md)

@@ -15,9 +15,9 @@ helpviewer_keywords:
   - "creating subscription views [Master Data Services]"
 ms.assetid: a5e28961-af16-414a-9845-d2e06aac5214
 caps.latest.revision: 10
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
+author: "smartysanthosh"
+ms.author: "nagavo"
+manager: "craigg"
 ---
 # Create a Subscription View to Export Data (Master Data Services)
   Create a subscription view to export Master Data Services data to subscribing systems. You're creating a view of your data in the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database.  

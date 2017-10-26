@@ -17,6 +17,7 @@ caps.latest.revision: 38
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Use a Format File to Skip a Data Field (SQL Server)
 A data file can contain more fields than the number of columns in the table. This topic describes modifying both non-XML and XML format files to accommodate a data file with more fields by mapping the table columns to the corresponding data fields and ignoring the extra fields.  Please review [Create a Format File (SQL Server)](../../relational-databases/import-export/create-a-format-file-sql-server.md) for additional information.
@@ -34,7 +35,7 @@ The examples of modified format files in this topic are based on the table and d
 ### Sample Table<a name="sample_table"></a>
 The script below creates a test database and a table named `myTestSkipField`.  Execute the following Transact-SQL in Microsoft SQL Server Management Studio (SSMS):
  
-```tsql
+```sql
 CREATE DATABASE TestDatabase;
 GO
 
@@ -178,7 +179,7 @@ bcp TestDatabase.dbo.myTestSkipField IN D:\BCP\myTestSkipField.bcp -f D:\BCP\myT
 
 ### Using [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) and [Non-XML Format File](../../relational-databases/import-export/non-xml-format-files-sql-server.md)<a name="bulk_nonxml"></a>
 Execute the following Transact-SQL in Microsoft SQL Server Management Studio (SSMS):
-```tsql
+```sql
 USE TestDatabase;  
 GO
 
@@ -194,7 +195,7 @@ SELECT * FROM TestDatabase.dbo.myTestSkipField;
 
 ### Using [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) and [XML Format File](../../relational-databases/import-export/xml-format-files-sql-server.md)<a name="bulk_xml"></a>
 Execute the following Transact-SQL in Microsoft SQL Server Management Studio (SSMS):
-```tsql
+```sql
 USE TestDatabase;  
 GO
 
@@ -210,7 +211,7 @@ SELECT * FROM TestDatabase.dbo.myTestSkipField;
 
 ### Using [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) and [Non-XML Format File](../../relational-databases/import-export/non-xml-format-files-sql-server.md)<a name="openrowset_nonxml"></a>	
 Execute the following Transact-SQL in Microsoft SQL Server Management Studio (SSMS):
-```tsql
+```sql
 USE TestDatabase;
 GO
 
@@ -229,7 +230,7 @@ SELECT * FROM TestDatabase.dbo.myTestSkipField;
 
 ### Using [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) and [XML Format File](../../relational-databases/import-export/xml-format-files-sql-server.md)<a name="openrowset_xml"></a>
 Execute the following Transact-SQL in Microsoft SQL Server Management Studio (SSMS):
-```tsql
+```sql
 USE TestDatabase;  
 GO
 

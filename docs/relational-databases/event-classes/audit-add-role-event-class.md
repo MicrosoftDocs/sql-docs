@@ -16,6 +16,7 @@ caps.latest.revision: 30
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Audit Add Role Event Class
   The **Audit Add Role** event class occurs when a database role is added to or removed from a database. This event class is used by the **sp_addrole** and **sp_droprole** stored procedures.  

@@ -18,6 +18,7 @@ caps.latest.revision: 41
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Format Files for Importing or Exporting Data (SQL Server)
   When you bulk import data into a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table or bulk export data from a table, you can use a *format file* to store all the format information that is required to bulk export or bulk import data. This includes format information for each field in a data file relative to that table.  
@@ -40,7 +41,7 @@ manager: "jhubbard"
 ### A. Using a non-XML format file  
  The following non-XML format file uses the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native data format for the `HumanResources.myTeam` table. This format file was created by using the following `bcp` command.  
   
-```  
+```cmd 
 bcp AdventureWorks.HumanResources.myTeam format nul -f myTeam.Fmt -n -T   
 The contents of this format file are as follows: 9.0  
 4  
@@ -56,13 +57,13 @@ The contents of this format file are as follows: 9.0
 ### B. Using an XML format file  
  The following XML format file uses the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native data format for the `HumanResources.myTeam` table. This format file was created by using the following `bcp` command.  
   
-```  
+```cmd
 bcp AdventureWorks.HumanResources.myTeam format nul -f myTeam.Xml -x -n -T   
 ```  
   
  The format file contains:  
   
-```  
+```xml
  <?xml version="1.0"?>  
 <BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
  <RECORD>  

@@ -28,6 +28,7 @@ caps.latest.revision: 10
 author: "jeannt"
 ms.author: "jeannt"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Source Element (Error) (XMLA)
   Contains the name of the component that generated the parent [Error](../../../analysis-services/xmla/xml-elements-properties/error-element-xmla.md) element.  

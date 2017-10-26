@@ -1,6 +1,6 @@
 ---
 title: "DBCC CHECKTABLE (Transact-SQL) | Microsoft Docs"
-ms.date: "7/16/2017"
+ms.date: "07/16/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -29,6 +29,7 @@ caps.latest.revision: 89
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # DBCC CHECKTABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -240,7 +241,7 @@ SET @indid = (SELECT index_id
               FROM sys.indexes    
               WHERE object_id = OBJECT_ID('Production.Product')    
                     AND name = 'AK_Product_Name');    
-DBCC CHECKTABLE ('Production.Product',indid);    
+DBCC CHECKTABLE ('Production.Product',@indid);    
 ```    
     
 ## See Also    

@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # SQL Statements Entered by the User
 Applications that perform ad hoc analysis also commonly allow the user to enter SQL statements directly. For example:  

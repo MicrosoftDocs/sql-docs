@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: "jeannt"
 ms.author: "jeannt"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # ProductLabel Element
   Determines the product level.  

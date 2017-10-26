@@ -18,6 +18,7 @@ caps.latest.revision: 15
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Banner Element (ssbdiagnose)
   Identifies which utility generated the **ssbdiagnose** output XML file.  

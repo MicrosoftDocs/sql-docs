@@ -45,6 +45,9 @@ Specify the data source by selecting a data provider that can connect to the sou
 
 -   **64-bit and 32-bit providers.** If you're running the 64-bit wizard, you won't see data sources for which only a 32-bit provider is installed, and vice versa.
 
+> [!NOTE]
+> To use the 64-bit version of the SQL Server Import and Export Wizard, you have to install SQL Server. SQL Server Data Tools (SSDT) and SQL Server Management Studio (SSMS) are 32-bit applications and only install 32-bit files, including the 32-bit version of the wizard.
+
 ## After you choose a data source
 After you choose a data source, the rest of the **Choose a Data Source** page has a variable number of options which depend on the data provider that you choose.
 

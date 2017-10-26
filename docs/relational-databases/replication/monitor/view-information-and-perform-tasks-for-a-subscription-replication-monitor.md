@@ -18,6 +18,7 @@ caps.latest.revision: 34
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # View Information and Perform Tasks for a Subscription (Replication Monitor)
   Replication Monitor provides the following tabs that include information about subscriptions:  

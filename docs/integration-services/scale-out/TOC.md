@@ -4,6 +4,7 @@
 # [Walkthrough: Set up Integration Services Scale Out](walkthrough-set-up-integration-services-scale-out.md)
 # [Scale Out Master](integration-services-ssis-scale-out-master.md)
 # [Scale Out Worker](integration-services-ssis-scale-out-worker.md)
+# [Scale Out Manager](integration-services-ssis-scale-out-manager.md)
 # [Run packages in Scale Out](run-packages-in-integration-services-ssis-scale-out.md)
 # [Change the account for Scale Out logging](change-logdb-account.md)
 # [Deal with certificates in Scale Out](deal-with-certificates-in-ssis-scale-out.md)

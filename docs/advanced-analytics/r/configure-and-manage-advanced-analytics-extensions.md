@@ -15,6 +15,7 @@ caps.latest.revision: 21
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Advanced Configuration Options for Machine Learning Services
 

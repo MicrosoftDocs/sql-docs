@@ -36,30 +36,30 @@ You may want to change your Scale Out Master certificate due to certificate expi
 
 #### 1. Create a SSL certificate.
 Create and install a SSL certificate on Master node with the following command:
-```
+```dos
 MakeCert.exe -n CN={master endpoint host} SSISScaleOutMaster.cer -r -ss Root -sr LocalMachine
 ```
 Example:
-```
+```dos
 MakeCert.exe -n CN=MasterMachine SSISScaleOutMaster.cer -r -ss Root -sr LocalMachine
 ```
 
 #### 2. Bind the certificate to Master port
 Check the original binding with the command:
-```
+```dos
 netsh http show sslcert ipport=0.0.0.0:{Master port}
 ```
 Example:
-```
+```dos
 netsh http show sslcert ipport=0.0.0.0:8391
 ```
 Delete the original binding and set up the new binding with the following commands:
-```
+```dos
 netsh http delete sslcert ipport=0.0.0.0:{Master port}
 netsh http add sslcert ipport=0.0.0.0:{Master port} certhash={SSL Certificate Thumbprint} certstorename=Root appid={original appid}
 ```
 Example:
-```
+```dos
 netsh http delete sslcert ipport=0.0.0.0:8391
 netsh http add sslcert ipport=0.0.0.0:8391 certhash=01d207b300ca662f479beb884efe6ce328f77d53 certstorename=Root appid={a1f96506-93e0-4c91-9171-05a2f6739e13}
 ```
@@ -89,23 +89,23 @@ In cases you want to change Scale Out Worker certificate, follow the steps below
 
 #### 1. Create a certificate
 Create and install a certificate with the following command:
-```
+```dos
 MakeCert.exe -n CN={worker machine name};CN={worker machine ip} SSISScaleOutWorker.cer -r -ss My -sr LocalMachine
 ```
 Example:
-```
+```dos
 MakeCert.exe -n CN=WorkerMachine;CN=10.0.2.8 SSISScaleOutWorker.cer -r -ss My -sr LocalMachine
 ```
 #### 2. Install the client certificate to the Root Store of local machine on Worker Node
 
 #### 3. Give service access to the certificate
 Delete the old certificate and give Scale Out Worker service access to the new certificate with command:
-```
+```dos
 certmgr.exe /del /c /s /r localmachine My /n {CN of the old certificate}
 winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s {CN of the new certificate} -a {the account running Scale Out Worker service}
 ```
 Example:
-```
+```dos
 certmgr.exe /del /c /s /r localmachine My /n WorkerMachine
 winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s WorkerMachine -a SSISScaleOutWorker140
 ```

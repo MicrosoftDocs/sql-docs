@@ -22,6 +22,7 @@ caps.latest.revision: 31
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # MDSCHEMA_PROPERTIES Rowset
   Describes the properties of members within a database.  

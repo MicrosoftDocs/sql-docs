@@ -16,6 +16,7 @@ caps.latest.revision: 32
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # CursorPrepare Event Class
   The **CursorPrepare** event class describes cursor prepare events that occur in application programming interface (API) cursors. Cursor prepare events occur when the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] compiles a SELECT statement associated with a cursor into an execution plan but does not create the cursor.  

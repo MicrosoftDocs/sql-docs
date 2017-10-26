@@ -26,6 +26,7 @@ caps.latest.revision: 44
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # CubeHierarchy Data Type (ASSL)
   Defines a primitive data type that represents information about a [Hierarchy](../../../analysis-services/scripting/objects/hierarchy-element-assl.md) element in a [Cube](../../../analysis-services/scripting/objects/cube-element-assl.md) element.  

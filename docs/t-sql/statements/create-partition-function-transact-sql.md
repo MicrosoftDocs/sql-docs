@@ -1,7 +1,7 @@
 ---
 title: "CREATE PARTITION FUNCTION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/10/2017"
+ms.date: "08/10/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -31,6 +31,7 @@ caps.latest.revision: 57
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # CREATE PARTITION FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -113,7 +114,7 @@ AS RANGE RIGHT FOR VALUES (1, 100, 1000);
   
 |Partition|1|2|3|4|  
 |---------------|-------|-------|-------|-------|  
-|**Values**|**col1** < `1`|**col1** >= `1` AND **col1** < `100`|**col1** >= `100` AND **col1** < `1000`|**col1** >= `1000`|  
+|**Values**|**col1** \< `1`|**col1** >= `1` AND **col1** \< `100`|**col1** >= `100` AND **col1** \< `1000`|**col1** >= `1000`| 
   
 ### C. Creating a RANGE RIGHT partition function on a datetime column  
  The following partition function partitions a table or index into 12 partitions, one for each month of a year's worth of values in a **datetime** column.  
@@ -129,7 +130,7 @@ AS RANGE RIGHT FOR VALUES ('20030201', '20030301', '20030401',
   
 |Partition|1|2|...|11|12|  
 |---------------|-------|-------|---------|--------|--------|  
-|**Values**|**datecol** < `February 1, 2003`|**datecol** >= `February 1, 2003` AND **datecol** < `March 1, 2003`||**datecol** >= `November 1, 2003` AND **col1** < `December 1, 2003`|**datecol** >= `December 1, 2003`|  
+|**Values**|**datecol** \< `February 1, 2003`|**datecol** >= `February 1, 2003` AND **datecol** \< `March 1, 2003`||**datecol** >= `November 1, 2003` AND **col1** \< `December 1, 2003`|**datecol** >= `December 1, 2003`| 
   
 ### D. Creating a partition function on a char column  
  The following partition function partitions a table or index into four partitions.  
@@ -143,7 +144,7 @@ AS RANGE RIGHT FOR VALUES ('EX', 'RXE', 'XR');
   
 |Partition|1|2|3|4|  
 |---------------|-------|-------|-------|-------|  
-|**Values**|**col1** < `EX`...|**col1** >= `EX` AND **col1** < `RXE`...|**col1** >= `RXE` AND **col1** < `XR`...|**col1** >= `XR`|  
+|**Values**|**col1** \< `EX`...|**col1** >= `EX` AND **col1** \< `RXE`...|**col1** >= `RXE` AND **col1** \< `XR`...|**col1** >= `XR`| 
   
 ### E. Creating 15,000 partitions  
  The following partition function partitions a table or index into 15,000 partitions.  
@@ -202,3 +203,4 @@ GO
  [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)  
   
   
+

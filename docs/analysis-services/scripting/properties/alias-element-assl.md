@@ -26,6 +26,7 @@ caps.latest.revision: 37
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Alias Element (ASSL)
   Defines an alias for an [Account](../../../analysis-services/scripting/objects/account-element-assl.md) element.  

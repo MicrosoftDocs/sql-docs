@@ -12,9 +12,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: d323bbac-c8d4-4d2f-a7d2-a597e8b53e2d
 caps.latest.revision: 10
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
+author: "smartysanthosh"
+ms.author: "nagavo"
+manager: "craigg"
 ---
 # Commit or Submit a Changeset (Master Data Services)
   A changeset is a collection of the pending changes on the master data. If entity changes don’t require administrator approval, you can commit the changeset. If the entity changes require administrator approval, you can submit the changeset for approval.  

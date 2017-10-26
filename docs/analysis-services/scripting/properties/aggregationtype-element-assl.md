@@ -24,6 +24,7 @@ caps.latest.revision: 13
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # AggregationType Element (ASSL)
   Defines the type of aggregation stored by the [Partition](../../../analysis-services/scripting/objects/partition-element-assl.md) element.  

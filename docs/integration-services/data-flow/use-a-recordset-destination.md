@@ -107,7 +107,7 @@ ms.workload: "On Demand"
   
     3.  For **SQL command text**, enter the following query:  
   
-        ```  
+        ```sql 
         SELECT     Person.Contact.EmailAddress, Person.Contact.FirstName, CONVERT(float, Sales.SalesPerson.Bonus) AS Bonus  
         FROM         Sales.SalesPerson INNER JOIN  
                               Person.Contact ON Sales.SalesPerson.SalesPersonID = Person.Contact.ContactID  

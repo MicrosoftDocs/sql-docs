@@ -155,7 +155,7 @@ else
   
 6.  Create and configure a destination component that expects the **AddressID** and **City** columns, such as a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] destination, or the sample destination component demonstrated in [Creating a Destination with the Script Component](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md). Then connect the output of the transformation to the destination component. You can create a destination table by running the following [!INCLUDE[tsql](../../includes/tsql-md.md)] command in the **AdventureWorks** database:  
   
-    ```  
+    ```sql
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,  
         [City] [nvarchar](30) NOT NULL)  
     ```  
@@ -209,7 +209,7 @@ public class ScriptMain:
   
 7.  Create and configure two destination components that expect the **AddressID** and **City** columns, such as a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] destination, a Flat File destination, or the sample destination component demonstrated in [Creating a Destination with the Script Component](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md). Then connect each of the outputs of the transformation to one of the destination components. You can create destination tables by running a [!INCLUDE[tsql](../../includes/tsql-md.md)] command similar to the following (with unique table names) in the **AdventureWorks** database:  
   
-    ```  
+    ```sql
     CREATE TABLE [Person].[Address2](  
         [AddressID] [int] NOT NULL,  
         [City] [nvarchar](30) NOT NULL  

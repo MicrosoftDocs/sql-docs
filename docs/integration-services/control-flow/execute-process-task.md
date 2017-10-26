@@ -61,7 +61,7 @@ ms.workload: "On Demand"
   
 -   If you use Microsoft Visual Basic to write the application, set the **My.Application.CommandLineArgs** property. The following example sets the **My.Application.CommandLineArgs** property is to retrieve two arguments:  
   
-    ```  
+    ```vb  
     Dim variable1 As String = My.Application.CommandLineArgs.Item(0)  
     Dim variable2 As String = My.Application.CommandLineArgs.Item(1)   
     ```  

@@ -31,7 +31,7 @@ ms.workload: "Inactive"
   
  When using the Oracle CDC Designer console, changes are automatically detected. When updating the Oracle CDC configuration directly using SQL, the following procedure should be called for the Oracle CDC Service to notice the configuration change:  
   
-```  
+```sql
 DECLARE @dbname nvarchar(128) = 'HRcdc'  
 EXECUTE [MSXDBCDC].[dbo].[xdbcdc_update_config_version] @dbname  
 GO  
@@ -60,7 +60,7 @@ GO
   
  The log mining password is stored encrypted by means of an asymmetric key with the fixed name `xdbcdc_asym_key` that is automatically created with the following command:  
   
-```  
+```sql
 USE [<cdc-database-name>]  
 CREATE ASYMMETRIC KEY xdbcdc_asym_key  
     WITH ALGORITHM = RSA_1024  

@@ -23,7 +23,15 @@ You can build awesome server and database management dashboards that are even be
 ![database dashboard](media/insight-widgets/database-dashboard.png)
 
 
-## SQL Queries
+To jump in and start creating different types of Insight widgets, check out the following tutorials:
+
+- [**Build a custom Insight widget**](tutorial-build-custom-insight-sql-server.md)
+- [**Monitor query performance**](tutorial-monitoring-sql-server.md)
+- [**Monitor space used by all database tables**](tutorial-table-space-sql-server.md)
+- [**Monitor status of backups**](tutorial-backup-status-sql-server.md)
+
+
+## SQL Queries 
 
 Carbon tries to avoid introducing yet another language or heavy UI so it tries to use SQL as much as possible with minimal JSON configuration. Configuring Insight widgets with SQL leverages the countless number of existing sources of useful SQL queries that can be turned into Insight widgets.
 
@@ -43,6 +51,7 @@ T-SQL query and its result set itself determines the insight widget behavior. Wr
 
 
 
-## Next steps
+## Additional resources
+- [Query Editor](tutorial-modern-code-flow-sql-server.md)
 - [Create some Insight widgets](tutorial-monitoring-sql-server.md)
 

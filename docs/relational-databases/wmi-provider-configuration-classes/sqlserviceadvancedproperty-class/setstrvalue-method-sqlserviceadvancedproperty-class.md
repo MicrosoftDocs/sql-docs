@@ -21,6 +21,7 @@ caps.latest.revision: 35
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # SetStrValue Method (SqlServiceAdvancedProperty Class)
   Sets the string value of a property.  

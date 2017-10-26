@@ -20,6 +20,7 @@ caps.latest.revision: 45
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Deploying a Data Processing Extension to a Report Server
   Report servers use data processing extensions for retrieving and processing data in rendered reports. You should deploy your data processing extension assembly to a report server as a private assembly. You also need to make an entry in the report server configuration file, RSReportServer.config.  

@@ -14,6 +14,7 @@ caps.latest.revision: 57
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "erikre"
+ms.workload: "Active"
 ---
 # Lesson 1: Creating a Report Server Project (Reporting Services)
 

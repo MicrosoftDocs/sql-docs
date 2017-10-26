@@ -21,6 +21,7 @@ caps.latest.revision: 40
 author: "spelluru"
 ms.author: "spelluru"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # sysssislog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

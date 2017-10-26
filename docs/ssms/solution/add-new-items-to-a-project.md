@@ -17,6 +17,7 @@ caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Add New Items to a Project
 Add new items to a project to extend application functionality. A new item can be a query or a connection. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] has two project types: [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Script Project, and Analysis Services Script Project. The project type determines the items that you can add to the project. For example, you can add a [!INCLUDE[tsql](../../includes/tsql_md.md)] query (a file with a .sql extension) to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Script project, but you cannot add it to an Analysis Services Script Project.  

@@ -17,6 +17,7 @@ caps.latest.revision: 3
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Project Settings (Synchronization) (SybaseToSQL)
 The Synchronization page of the **Project Settings** dialog box contains settings that customize how SSMA loads database objects, such as tables and stored procedures, into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure.  

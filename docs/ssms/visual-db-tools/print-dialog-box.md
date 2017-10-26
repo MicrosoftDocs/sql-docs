@@ -16,6 +16,7 @@ caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Print Dialog Box
 You can specify how you want to print a document by selecting options in the **Print** dialog box.  

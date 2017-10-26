@@ -14,6 +14,7 @@ caps.latest.revision: 31
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
+ms.workload: "Active"
 ---
 # Changelog for SQL Server Data Tools (SSDT)
 This change log is for [SQL Server Data Tools (SSDT)](download-sql-server-data-tools-ssdt.md).  

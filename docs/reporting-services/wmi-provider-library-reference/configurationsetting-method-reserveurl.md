@@ -17,6 +17,7 @@ caps.latest.revision: 14
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # ConfigurationSetting Method - ReserveURL
   Adds a URL reservation for a given application.  

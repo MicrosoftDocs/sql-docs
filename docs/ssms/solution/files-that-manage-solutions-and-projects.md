@@ -22,6 +22,7 @@ caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Files That Manage Solutions and Projects
  This topic describes the file types that are specific to [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]. By default, all solutions and their projects are created in \My Documents\SQL Server Management Studio Projects.  

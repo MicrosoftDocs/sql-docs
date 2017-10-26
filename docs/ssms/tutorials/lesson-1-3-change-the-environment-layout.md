@@ -16,6 +16,7 @@ caps.latest.revision: 29
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Lesson 1-3 - Change the Environment Layout
 The components of [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] compete for screen space. To make more room, you can close, hide, or move [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] components. The practices on this page move the components to different locations.  

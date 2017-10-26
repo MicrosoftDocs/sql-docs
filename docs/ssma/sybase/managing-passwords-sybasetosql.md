@@ -21,6 +21,7 @@ caps.latest.revision: 12
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Managing Passwords (SybaseToSQL)
 This section is about securing database passwords and the procedure to import or export them across servers:  

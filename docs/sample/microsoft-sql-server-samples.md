@@ -14,6 +14,7 @@ author: "BarbKess"
 ms.author: "barbkess"
 manager: "jhubbard"
 robots: noindex,nofollow
+ms.workload: "On Demand"
 ---
 # Microsoft SQL Server Samples
 This gallery contains sample databases and other samples for Microsoft SQL products including SQL Server and Azure SQL Database.   

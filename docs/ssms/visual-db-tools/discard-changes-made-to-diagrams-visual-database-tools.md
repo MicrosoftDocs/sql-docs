@@ -18,6 +18,7 @@ caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Discard Changes Made to Diagrams (Visual Database Tools)
 You can discard changes in your database diagram that you do not want to save in the database.  

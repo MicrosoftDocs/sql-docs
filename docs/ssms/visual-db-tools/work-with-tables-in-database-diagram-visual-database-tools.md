@@ -19,6 +19,7 @@ caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Work with Tables in Database Diagram (Visual Database Tools)
 You can modify and create database tables in either Table Designer or Database Diagram Designer.  

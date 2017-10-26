@@ -17,6 +17,7 @@ caps.latest.revision: 12
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # ConfigurationSetting Method - ListIPAddresses
   Lists the IP addresses for the report server computer.  

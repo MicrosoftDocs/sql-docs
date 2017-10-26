@@ -19,6 +19,7 @@ caps.latest.revision: 9
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # ODBC Source
   The ODBC source extracts data from ODBC-supported database by using a database table, a view, or an SQL statement.  

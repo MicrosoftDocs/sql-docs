@@ -19,6 +19,7 @@ caps.latest.revision: 31
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Fail Over to a Log Shipping Secondary (SQL Server)
   Failing over to a log shipping secondary is useful if the primary server instance fails or requires maintenance.  

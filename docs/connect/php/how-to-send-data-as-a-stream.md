@@ -17,6 +17,7 @@ caps.latest.revision: 30
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # How to: Send Data as a Stream
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

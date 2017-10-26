@@ -14,6 +14,7 @@ caps.latest.revision: 10
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Create New InfoObject
   Use the **Create New InfoObject** dialog box to create a new InfoObject in the SAP Netweaver BW system.  

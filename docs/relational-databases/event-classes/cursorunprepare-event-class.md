@@ -16,6 +16,7 @@ caps.latest.revision: 35
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # CursorUnprepare Event Class
   The **CursorUnprepare** event class provides information about cursor unprepare events that occur in application programming interface (API) cursors. Cursor unprepare events occur when the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] discards an execution plan.  

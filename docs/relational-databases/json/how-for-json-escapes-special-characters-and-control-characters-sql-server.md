@@ -17,6 +17,7 @@ caps.latest.revision: 16
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
+ms.workload: "On Demand"
 ---
 # How FOR JSON escapes special characters and control characters (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

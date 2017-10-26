@@ -14,6 +14,7 @@ caps.latest.revision: 16
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # ODBC Service Provider Interface (SPI) Reference
 Traditionally, ODBC defined an application programming interface (API). The functions in the API can be called by applications and they should be implemented inside both the Driver Manager and the driver.  

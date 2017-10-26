@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Choosing an SQL Grammar
 The first decision to make when constructing SQL statements is which grammar to use. In addition to the grammars available from the various standards bodies, such as Open Group, ANSI, and ISO, virtually every DBMS vendor defines its own grammar, each of which varies slightly from the standard.  

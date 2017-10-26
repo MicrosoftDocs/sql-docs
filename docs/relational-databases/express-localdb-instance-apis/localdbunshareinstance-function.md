@@ -19,6 +19,7 @@ caps.latest.revision: 9
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # LocalDBUnshareInstance Function
   Stops the sharing of the specified SQL Server Express LocalDB instance.  

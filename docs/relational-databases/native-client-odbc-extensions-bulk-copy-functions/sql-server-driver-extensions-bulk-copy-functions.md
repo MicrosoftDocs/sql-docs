@@ -19,6 +19,7 @@ caps.latest.revision: 41
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # SQL Server Driver Extensions - Bulk Copy Functions
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]

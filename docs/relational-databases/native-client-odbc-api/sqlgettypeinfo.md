@@ -17,6 +17,7 @@ caps.latest.revision: 47
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # SQLGetTypeInfo
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]

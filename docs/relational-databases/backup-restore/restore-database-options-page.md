@@ -16,6 +16,7 @@ caps.latest.revision: 68
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Restore Database (Options Page)
   Use the **Options** page of the **Restore Database** dialog box to modify the behavior and outcome of the restore operation.  

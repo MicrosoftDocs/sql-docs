@@ -16,6 +16,7 @@ caps.latest.revision: 33
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Broker:Conversation Event Class
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generates a **Broker:Conversation** event to report the progress of a Service Broker conversation.  

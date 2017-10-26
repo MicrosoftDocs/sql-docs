@@ -14,6 +14,7 @@ caps.latest.revision: 10
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # LOCALDB_ERROR_CANNOT_ACCESS_INSTANCE_FOLDER
     

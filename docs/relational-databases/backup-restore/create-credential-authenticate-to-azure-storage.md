@@ -16,6 +16,7 @@ caps.latest.revision: 7
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Create Credential - Authenticate to Azure Storage
   Use the **Backup to URL – Create Credential** dialog box to create a new SQL Credential.  

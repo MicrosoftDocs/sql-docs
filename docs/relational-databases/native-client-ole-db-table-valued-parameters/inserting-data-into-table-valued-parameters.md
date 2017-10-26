@@ -16,6 +16,7 @@ caps.latest.revision: 31
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Inserting Data into Table-Valued Parameters
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]

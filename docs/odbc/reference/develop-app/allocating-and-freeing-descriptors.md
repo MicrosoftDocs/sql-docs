@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Allocating and Freeing Descriptors
 Descriptors are either implicitly or explicitly allocated, as described in the following sections.  

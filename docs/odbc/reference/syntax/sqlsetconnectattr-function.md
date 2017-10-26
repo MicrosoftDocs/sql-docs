@@ -23,6 +23,7 @@ caps.latest.revision: 83
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # SQLSetConnectAttr Function
 **Conformance**  

@@ -16,6 +16,7 @@ caps.latest.revision: 29
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Missing Column Statistics Event Class
   The Missing Column Statistics event class indicates that column statistics that could have been useful for the optimizer are not available.  

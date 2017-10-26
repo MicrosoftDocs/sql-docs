@@ -16,6 +16,7 @@ caps.latest.revision: 27
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # ErrorLog Event Class
   The ErrorLog event class indicates that messages have been logged in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log.  

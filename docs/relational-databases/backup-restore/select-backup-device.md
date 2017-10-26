@@ -16,6 +16,7 @@ caps.latest.revision: 27
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Select Backup Device
   Use the **Select Backup Device** dialog box to select a logical backup device for the restore operation.  

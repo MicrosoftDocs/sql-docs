@@ -16,6 +16,7 @@ caps.latest.revision: 31
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Audit DBCC Event Class
   The **Audit DBCC** event class occurs whenever a DBCC command is issued.  

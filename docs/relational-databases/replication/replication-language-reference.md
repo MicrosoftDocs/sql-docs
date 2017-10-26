@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: "MikeRayMSFT"
 ms.author: "mblythe"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Replication Language Reference
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

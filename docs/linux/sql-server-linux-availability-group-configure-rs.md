@@ -80,3 +80,5 @@ There are two ways to connect to the read-only secondary replicas. Applications 
 
 [Learn more about availability groups](..\database-engine\availability-groups\windows\overview-of-always-on-availability-groups-sql-server.md)
 
+[Perform a Forced Manual Failover](../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md).
+

@@ -6,9 +6,10 @@ Each availability group has only one primary replica. The primary replica allows
 
 ### Forced fail over with data loss
 
-Use this method when the primary replica is not available and can not be recovered. You can find more information about forced failover with data loss at [Perform a Forced Manual Failover](../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md).
+Use this method when the primary replica is not available and can not be recovered. 
 
 To force fail over with data loss, connect to the SQL instance hosting the target secondary replica and run:
+
 ```SQL
 ALTER AVAILABILITY GROUP [ag1] FORCE_FAILOVER_ALLOW_DATA_LOSS;
 ```
@@ -22,7 +23,9 @@ The following steps describe how to manually fail over without data loss:
 1. Make the target secondary replica synchronous commit.
 
    ```SQL
-   ALTER AVAILABILITY GROUP [ag1] MODIFY REPLICA ON N'**<node2>*' WITH (AVAILABILITY_MODE = SYNCHRONOUS_COMMIT);
+   ALTER AVAILABILITY GROUP [ag1] 
+        MODIFY REPLICA ON N'**<node2>*' 
+        WITH (AVAILABILITY_MODE = SYNCHRONOUS_COMMIT);
    ```
 
 1. Run the following query to identify that active transactions are committed to the primary replica and at least one synchronous secondary replica. 

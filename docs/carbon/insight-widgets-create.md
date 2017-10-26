@@ -26,13 +26,13 @@ ms.date: 10/24/2017
 
 > Disclaimer: All sample configurations and SQL scripts used in this sample extension and this wiki page are for demonstration purposes only. Many SQL scripts in this sample refer to user blogs and user forums e.g. Stack Exchange. They are strictly for personal use and are included as a demonstration of how to build an insight extension using your own queries. All SQL scripts and configurations will not be published as a part of Carbon unless the original author contributes to or agrees to do so. All SQL scripts and configurations in this sample extension are subject to removal or replacement without any prior notice. All sample insight widgets are for test use only.
 
-#### Step 1. Install the latest preview build
+### Step 1. Install Carbon
 
-Get the latest Carbon preview build from the [release page](https://github.com/Microsoft/carbon/releases). And install Carbon by following the [installation guide](Getting-Started).
+Download and install Carbon by following the [installation guide](download.md).
 
 #### Step 2. Download the Sample Insight Widget Extension
 
-Download the [Sample Insight Widget Extension](./media/sample_insight_widget_extension.zip)
+Download the Sample Insight Widget Extension
 
 Unzip the file.
 
@@ -111,7 +111,7 @@ Open server and database dashboard to view insights for the workspace.
 
 ### sample settings.json file
 
-Download [Sample settings.json](./media/sample_carbon_settings.json) file. 
+Download Sample settings.json file. 
 
 Copy the file to ```.vscode/settings.json``` file in any folder. 
 
@@ -135,11 +135,7 @@ This section walks through how to create a simple insight widget, insight detail
 ### Create a sample server insight widget
 
 
-#### Step 1. Install the latest preview build
-
-Get the latest Carbon preview build from the [release page](https://github.com/Microsoft/carbon/releases). And install Carbon by following the [installation guide](Getting-Started).
-
-#### Step 2. Preparation for your first Insight widget extension
+## Preparation for your first Insight widget extension
 
 Open a Terminal or PowerShell windows and run following commands to create a project folder ```carbon_insight``` and necessary files in the folder.
 

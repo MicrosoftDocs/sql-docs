@@ -41,7 +41,7 @@ Insight widgets require a minimum of one or two SQL queries:
 * *Insight widget query* is mandatory, and is the query that returns the data that appears in the widget.
 * *Insight details query* is only required if you are creating an Insight details flyout.
 
-Insight widget query defines the dataset to render a count, chart, or graph. Insight details query is used to list relevant insight detail information in a tabular format in the Insight Details flyout dialog. See [samples](How-to-configure-insight-widget) for examples of insight widgets and insight details flyout.
+Insight widget query defines the dataset to render a count, chart, or graph. Insight details query is used to list relevant insight detail information in a tabular format in the Insight Details flyout dialog. 
 
 Carbon executes insight widget query and maps the query result set to a chart's dataset then renders it. When user opens up an insight detail flyout, Carbon executes the insight details query and prints out the result in a grid view within the dialog.
 
@@ -55,7 +55,7 @@ For example, in horizontal dataDirection, each row defines a dataset and column 
 |:---|:---|
 |10|2|
 
-Count, Pie, Doughnut, Bar, HorizontalBar can render this result set by mapping the column names as each legend in chart and each row as the dataset value. A dataset with horizontal dataDirection can have multiple rows. Then each row is interpreted as different data series. In [sample extension](How-to-configure-insight-widget), space usage by table sample is an example of horizontal dataDirection with multiple data series in a dataset. In that case, a Carbon uses the first column for grouping.
+Count, Pie, Doughnut, Bar, HorizontalBar can render this result set by mapping the column names as each legend in chart and each row as the dataset value. A dataset with horizontal dataDirection can have multiple rows. Then each row is interpreted as different data series. In sample extension, space usage by table sample is an example of horizontal dataDirection with multiple data series in a dataset. In that case, a Carbon uses the first column for grouping.
 
 |TableName|TotalSpace|UsedSpace|DataSpace|
 |:---|:---|:---|:--|

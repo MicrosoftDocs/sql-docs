@@ -16,7 +16,7 @@ ms.date: 10/24/2017
 
 This article provides the steps to quickly view, edit, and create keyboard shortcuts in Carbon.
 
-Carbon inherits its key binding functionality from Visual Studio Code so for more detailed information, see [Key Bindings for Visual Studio Code](https://code.visualstudio.com/docs/getstarted/keybindings). Some features may not be available (for example, Keymap extensions are not supported in the Carbon preview).
+Because Carbon inherits its key binding functionality from Visual Studio Code, detailed information about advanced customizations, using different keyboard layouts, etc., is in the [Key Bindings for Visual Studio Code](https://code.visualstudio.com/docs/getstarted/keybindings) article. Note that some keybinding features may not be available (for example, Keymap extensions are not supported in the Carbon preview).
 
 
 ## Open the Keyboard Shortcuts editor
@@ -35,7 +35,7 @@ In addition to displaying current keybindings, the **Keyboard Shortcuts** editor
 To change the keybinding for an existing keyboard shortcut:
 
 1. [Open the **Keyboard Shortcuts** editor](#open-the-keyboard-shortcuts-editor.md).
-2. Locate the keyboard shortcut you want to change by using the search box or scrolling through the list.
+1. Locate the keyboard shortcut you want to change by using the search box or scrolling through the list.
    > [!TIP]
    > Search by key, by command, by source, etc. to return all relevant keyboard shortcuts.
 
@@ -47,11 +47,12 @@ To change the keybinding for an existing keyboard shortcut:
 
    ![save keyboard shortcut](media/keyboard-shortcuts/save-keybinding.png)
 
-## Create new keyboard shortcut
+## Create new keyboard shortcuts
 
+To create new keyboard shortcuts:
 
 1. [Open the **Keyboard Shortcuts** editor](#open-the-keyboard-shortcuts-editor.md).
-2. Right-click a command that doesn't have any keybinding and select **Add Keybinding**.
+1. Right-click a command that doesn't have any keybinding and select **Add Keybinding**.
 
    ![create keyboard shortcut](media/keyboard-shortcuts/add-keybinding.png)
 

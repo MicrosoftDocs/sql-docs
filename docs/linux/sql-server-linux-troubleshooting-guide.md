@@ -115,6 +115,37 @@ For SQL dumps
    ```bash
    sudo ls /var/opt/mssql/log | grep .mdmp 
    ```
+   
+## Start SQL Server in Minimal Configuration or in Single User Mode
+
+### Start SQL Server in Minimal Configuration Mode
+This is useful if the setting of a configuration value (for example, over-committing memory) has prevented the server from starting.
+  
+   ```bash
+   sudo -u mssql /opt/mssql/bin/sqlservr -f
+   ```
+
+### Start SQL Server in Single User Mode
+Under certain circumstances, you may have to start an instance of SQL Server in single-user mode by using the startup option -m. For example, you may want to change server configuration options or recover a damaged master database or other system database. For example, you may want to change server configuration options or recover a damaged master database or other system database   
+
+Start SQL Server in Single User Mode
+   ```bash
+   sudo -u mssql /opt/mssql/bin/sqlservr -m
+   ```
+
+Start SQL Server in Single User Mode with SQLCMD
+   ```bash
+   sudo -u mssql /opt/mssql/bin/sqlservr -m SQLCMD
+   ```
+  
+> [!WARNING]  
+>  Start SQL Server on Linux with the "mssql" user to prevent future startup issues. Example "sudo -u mssql /opt/mssql/bin/sqlservr [STARTUP OPTIONS]" 
+
+If you have accidentally started SQL Server with another user, you will need to change ownership of SQL Server database files back to the 'mssql' user prior to starting SQL Server with systemd. For example, to change ownership of all database files under /var/opt/mssql to the 'mssql' user, run the following command
+
+   ```bash
+   chown -R mssql:mssql /var/opt/mssql/
+   ```
 
 ## Common issues
 

@@ -16,6 +16,7 @@ caps.latest.revision: 16
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Managing text and image Columns - Use Data-at-Execution Parameters
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]

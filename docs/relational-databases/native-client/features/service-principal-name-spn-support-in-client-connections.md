@@ -19,6 +19,7 @@ caps.latest.revision: 31
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Service Principal Name (SPN) Support in Client Connections
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]

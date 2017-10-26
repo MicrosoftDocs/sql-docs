@@ -19,6 +19,7 @@ caps.latest.revision: 29
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Working with Policy-Based Management Facets
   A Policy-Based Management facet is a set of logical properties that are related to an area of management interest. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] includes several predefined facets. For example, the Surface Area Configuration facet defines, as properties, the features that are off by default.  

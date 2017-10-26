@@ -14,6 +14,7 @@ caps.latest.revision: 7
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Get Mutual Kerberos Authentication
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]

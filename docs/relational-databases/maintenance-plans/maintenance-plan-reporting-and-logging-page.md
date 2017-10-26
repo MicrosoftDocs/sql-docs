@@ -16,6 +16,7 @@ caps.latest.revision: 22
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Maintenance Plan (Reporting and Logging Page)
   Use the **Reporting and Logging** dialog box to configure the reports and logs that are generated when maintenance plans are executed.  

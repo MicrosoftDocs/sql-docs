@@ -16,6 +16,7 @@ caps.latest.revision: 28
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Publication Information, All Subscriptions (Merge Publication)
   The **All Subscriptions** tab displays information on all subscriptions to the selected merge publication.  

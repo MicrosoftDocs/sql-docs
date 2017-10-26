@@ -45,20 +45,19 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
   
 ## Arguments  
  [ **@msgnum****=** ] *msg_id*  
- Is the ID of the message. *msg_id* is **int** with a default of NULL. *msg_id* for user-defined error messages can be an integer between 50,001 and 2,147,483,647. The combination of *msg_id* and *language* must be unique; an error is returned if the ID already exists for the specified language.  
+ Is the ID of the message. *msg_id* is **int** with a default of NULL. *msg_id* for user-defined error messages can be an integer between 50,001 and 2,147,483,647. The combination of *msg_id* and *language* must be unique; an error is returned if the ID already exists for the specified language. This parameter will be used to populate master.sys.messages.message_id.
   
  [ **@severity =** ]*severity*  
- Is the severity level of the error. *severity* is **smallint** with a default of NULL. Valid levels are from 1 through 25. For more information about severities, see [Database Engine Error Severities](../../relational-databases/errors-events/database-engine-error-severities.md).  
+ Is the severity level of the error. *severity* is **smallint** with a default of NULL. Valid levels are from 1 through 25. For more information about severities, see [Database Engine Error Severities](../../relational-databases/errors-events/database-engine-error-severities.md). This parameter will be used to populate master.sys.messages.severity.
   
  [ **@msgtext =** ] **'***msg***'**  
- Is the text of the error message. *msg* is **nvarchar(255)** with a default of NULL.  
+ Is the text of the error message. *msg* is **nvarchar(255)** with a default of NULL. This parameter will be used to populate master.sys.messages.[text]. 
   
  [ **@lang =** ] **'***language***'**  
- Is the language for this message. *language* is **sysname** with a default of NULL. Because multiple languages can be installed on the same server, *language* specifies the language in which each message is written. When *language* is omitted, the language is the default language for the session.  
+ Is the language for this message. *language* is **sysname** with a default of NULL. Because multiple languages can be installed on the same server, *language* specifies the language in which each message is written. When *language* is omitted, the language is the default language for the session. This parameter will be used to populate master.sys.messages.language_id by joining with sys.syslanguages on the [name] column and retrieving the lcid, which is placed in master.sys.messages.language_id.
   
  [ **@with_log =** ] { **'**TRUE**'** | **'FALSE'** }  
- Is whether the message is to be written to the Windows application log when it occurs. **@with_log** is **varchar(5)** with a default of FALSE. If TRUE, the error is always written to the Windows application log. If FALSE, the error is not always written to the Windows application log but can be written, depending on how the error was raised. Only members of the **sysadmin** server role can use this option.  
-  
+ Is whether the message is to be written to the Windows application log when it occurs. **@with_log** is **varchar(5)** with a default of FALSE. If TRUE, the error is always written to the Windows application log. If FALSE, the error is not always written to the Windows application log but can be written, depending on how the error was raised. Only members of the **sysadmin** server role can use this option. This parameter is used to set master.sys.message.is_event_logged with a 1 for True and a 0 for False.   
 > [!NOTE]  
 >  If a message is written to the Windows application log, it is also written to the [!INCLUDE[ssDE](../../includes/ssde-md.md)] error log file.  
   

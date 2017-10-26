@@ -36,7 +36,7 @@ If the business requirement is to conserve resources for mission-critical worklo
 >[!IMPORTANT]
 >This is not a high-availability setup. There is no infrastructure to monitor and coordinate failure detection and automatic failover. Without a cluster, SQL Server cannot provide the low recovery time objective (RTO) that an automated HA solution provides. For users who need HA capabilities, use a cluster manager (WSFC on Windows or Pacemaker on Linux). 
 >
->The read-scale availability group can provide disaster recovery capability. When the read-only replicas are in synchronous-commit mode they provide a zero recovery point objective (RPO).
+>The read-scale availability group can provide disaster recovery capability. When the read-only replicas are in synchronous-commit mode they provide a zero recovery point objective (RPO). To failover a read-scale availability group, see [Fail over primary replica on read-scale  availability group](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md#ReadScaleOutOnly)
 
 ## Use distributed availability groups for geographic read-scale
 

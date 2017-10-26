@@ -1,5 +1,5 @@
 ---
-title: Configure read scale-out availability group for SQL Server on Linux | Microsoft Docs
+title: Configure read-scale availability group for SQL Server on Linux | Microsoft Docs
 description: 
 author: MikeRayMSFT 
 ms.author: mikeray 
@@ -10,13 +10,13 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 
 ---
-# Configure read scale-out availability group for SQL Server on Linux
+# Configure read-scale availability group for SQL Server on Linux
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-You can configure a read scale-out availability group for SQL Server on Linux. There are two architectures for availability groups. A *high availability* architecture uses a cluster manager to provide improved business continuity. This architecture can also include read scale-out replicas. To create the high availability architecture, see [Configure Always On availability group for SQL Server on Linux](sql-server-linux-availability-group-configure-ha.md).
+You can configure a read-scale availability group for SQL Server on Linux. There are two architectures for availability groups. A *high availability* architecture uses a cluster manager to provide improved business continuity. This architecture can also include read-scale replicas. To create the high availability architecture, see [Configure Always On availability group for SQL Server on Linux](sql-server-linux-availability-group-configure-ha.md).
 
-This document explains how to create a *read scale-out* availability group without a cluster manager. This architecture only provides read scale-out only. It does not provide high availability.
+This document explains how to create a *read-scale* availability group without a cluster manager. This architecture only provides read-scale only. It does not provide high availability.
 
 [!INCLUDE [Create prerequisites](../includes/ss-linux-cluster-availability-group-create-prereq.md)]
 
@@ -70,7 +70,7 @@ There are two ways to connect to the read-only secondary replicas. Applications 
 
 [read-only routing](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md#ConnectToSecondary)
 
-## Fail over primary replica on read scale-out availability group
+## Fail over primary replica on read-scale availability group
 
 [!INCLUDE[Force Failover](../includes/ss-force-failover-read-scale-out.md)]
 

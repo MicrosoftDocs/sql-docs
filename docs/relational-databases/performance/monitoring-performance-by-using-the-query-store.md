@@ -34,7 +34,7 @@ manager: "jhubbard"
 1.  In Object Explorer, right-click a database, and then click **Properties**.  
   
     > [!NOTE]  
-    >  Requires at least [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] version of [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
+    >  Requires at least version 16 of [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
 2.  In the **Database Properties** dialog box, select the **Query Store** page.  
   

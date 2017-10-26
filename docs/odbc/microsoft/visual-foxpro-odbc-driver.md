@@ -19,6 +19,7 @@ caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Visual FoxPro ODBC Driver
 Microsoft Visual FoxPro is a powerful object-oriented environment for database construction and application development. The Microsoft Visual FoxPro ODBC Driver enables applications to open, query, and update data in Visual FoxPro and earlier versions of FoxPro through the Open Database Connectivity (ODBC) interface.  

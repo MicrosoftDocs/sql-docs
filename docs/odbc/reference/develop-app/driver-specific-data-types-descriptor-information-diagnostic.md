@@ -18,6 +18,7 @@ caps.latest.revision: 19
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Driver-Specific Data Types, Descriptor Types, Information Types, Diagnostic Types, and Attributes
 Drivers can allocate driver-specific values for the following:  

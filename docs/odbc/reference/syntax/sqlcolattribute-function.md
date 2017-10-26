@@ -23,6 +23,7 @@ caps.latest.revision: 42
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # SQLColAttribute Function
 **Conformance**  

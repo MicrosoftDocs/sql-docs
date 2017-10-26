@@ -19,6 +19,18 @@ In this quick start tutorial, you will install SQL Server 2017 on Red Hat Enterp
 ## Amazon Web Services
 ## Digital Ocean
 ## Google Cloud Platform
+1.	Create a Linux VM from the Gallery 
+    a.	Ubuntu 16.04, RHEL 7.3+, SLES v12 SP2
+    b.	Size at least 3.75 GB (n1-standard-1)
+2.	Connect to the new VM with ssh
+3.	Follow the quick start for your Linux distro 
+a.	Red Hat
+b.	SUSE
+c.	Ubuntu
+4.	Configure for remote connections 
+a.	Go to the Firewall Rules page
+b.	Add a rule to allow traffic on the port on which SQL Server listens (default of 1433) (tcp:1433)
+
 ## Heroku
 ## IBM
 ## Rackspace

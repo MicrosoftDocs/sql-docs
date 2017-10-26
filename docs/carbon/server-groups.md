@@ -29,9 +29,15 @@ Server groups enable ...
 
 
 
-## Create and delete server groups
+## Create server groups
 
-## Move SQL Servers in and out of server groups
+
+
+
+## Move SQL Servers into and out of server groups
+
+
+
 
 
 

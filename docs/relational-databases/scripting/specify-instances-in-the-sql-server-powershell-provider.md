@@ -14,6 +14,7 @@ caps.latest.revision: 9
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Specify Instances in the SQL Server PowerShell Provider
   The paths specified for the SQL Server PowerShell provider must identify the instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] and the computer it is running on. The syntax for specifying the computer and the instance must comply with both the rules for SQL Server identifiers and Windows PowerShell paths.  

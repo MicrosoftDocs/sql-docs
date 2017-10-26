@@ -26,6 +26,7 @@ caps.latest.revision: 58
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # SQL Server Configuration Manager
 

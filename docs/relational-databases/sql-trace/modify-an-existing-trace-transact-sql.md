@@ -17,6 +17,7 @@ caps.latest.revision: 18
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Modify an Existing Trace (Transact-SQL)
   This topic describes how to use stored procedures to modify an existing trace.  

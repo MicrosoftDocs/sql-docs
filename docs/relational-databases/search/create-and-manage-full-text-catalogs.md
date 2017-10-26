@@ -17,6 +17,7 @@ caps.latest.revision: 21
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Create and Manage Full-Text Catalogs
 A full-text catalog is a logical container for a group of full-text indexes. You have to create a full-text catalog before you can create a full-text index.

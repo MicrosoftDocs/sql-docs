@@ -20,6 +20,7 @@ caps.latest.revision: 29
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Executing Templates That Contain SQL Queries (SQLXMLOLEDB Provider)
   This example illustrates the use of the SQLXMLOLEDB Provider-specific property ClientSideXML. In this client-side ADO sample application, an XML template that consists of an SQL query is executed on the server.  

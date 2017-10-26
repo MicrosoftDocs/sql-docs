@@ -18,6 +18,7 @@ caps.latest.revision: 26
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # Delete a Stored Procedure
     

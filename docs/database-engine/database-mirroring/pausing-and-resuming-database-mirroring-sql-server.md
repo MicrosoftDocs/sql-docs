@@ -20,6 +20,7 @@ caps.latest.revision: 32
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Pausing and Resuming Database Mirroring (SQL Server)
   The database owner can pause and later resume a database mirroring session at any time. Pausing preserves the session state while suspending mirroring. During bottlenecks, pausing might be useful to improve performance on the principal server.  

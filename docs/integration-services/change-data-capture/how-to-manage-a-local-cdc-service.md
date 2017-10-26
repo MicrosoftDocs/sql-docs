@@ -14,6 +14,7 @@ caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # How to Manage a Local CDC Service
   This procedure describes how to use the CDC Service Configuration Console to manage specific CDC services.  

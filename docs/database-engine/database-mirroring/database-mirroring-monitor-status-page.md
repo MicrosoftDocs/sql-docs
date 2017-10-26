@@ -16,6 +16,7 @@ caps.latest.revision: 36
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Database Mirroring Monitor (Status Page)
   This read-only page displays the most recent mirroring status for the principal and mirror server instances of the database currently selected in the navigation tree. If information about an instance is currently unavailable, some of the cells in the **Status** grid corresponding to that instance are grayed out and display **Unknown**.  

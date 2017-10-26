@@ -14,6 +14,7 @@ caps.latest.revision: 12
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Backing Up and Restoring DQS Databases
   This topic describes how to back up and restore the DQS databases.  

@@ -19,6 +19,7 @@ caps.latest.revision: 30
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Use the Always On availability group dashboard (SQL Server Management Studio)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

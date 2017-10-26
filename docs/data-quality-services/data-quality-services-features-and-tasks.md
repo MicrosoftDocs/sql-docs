@@ -14,6 +14,7 @@ caps.latest.revision: 5
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Data Quality Services Features and Tasks
   Find information that anyone—data steward, Data Quality Services administrator, or SQL Server administrator—requires to prepare and execute a data quality project.  

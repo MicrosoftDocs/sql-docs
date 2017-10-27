@@ -19,15 +19,15 @@ manager: "jhubbard"
 ms.workload: "Active"
 ---
 # SQL Server 2016 Release Notes
-  This topic describes limitations and issues with [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] .    
+  This topic describes limitations and issues with SQL Server 2016 releases.    
     
  **Try it out:**    
    
-[![Download from Evaluation Center](../analysis-services/media/download.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)  Download SQL Server 2016  from the **[Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**    
+[![Download from Evaluation Center](../includes/media/download2.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)  Download SQL Server 2016  from the **[Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**    
     
-[![Azure Virtual Machine small](../analysis-services/media/azure-virtual-machine-small.png)](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/) Have an Azure account?  Then go **[Here](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/)** to spin up a Virtual Machine with SQL Server 2016 SP1 already installed.
+[![Azure Virtual Machine small](../includes/media/azure-vm.png)](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/) Have an Azure account?  Then go **[Here](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/)** to spin up a Virtual Machine with SQL Server 2016 SP1 already installed.
     
-[![Download SSMS](../ssms/download-sql-server-management-studio-ssms.md) **SSMS:** To get the latest version of SQL Server Management Studio, see **[Download SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)**.   
+[![Download SSMS](../includes/media/download2.png) **SSMS:** To get the latest version of SQL Server Management Studio, see **[Download SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)**.   
     
  For information on what's new, see [What's New in SQL Server 2016](http://msdn.microsoft.com/library/8223c19b-4b0d-4b1d-a042-9a726c18e708).
     
@@ -47,11 +47,8 @@ ms.workload: "Active"
     
 ##  <a name="bkmk_2016_ga"></a> SQL Server 2016 Release - General Availability (GA)
 -   [Database Engine (GA)](#bkmk_ga_instalpatch) 
-
 -   [Stretch Database (GA)](#bkmk_ga_stretch)
-
 -   [Query Store (GA)](#bkmk_ga_query_store)
-
 -   [Product Documentation (GA)](#bkmk_ga_docs)
  
 ### ![repl_icon_warn](../database-engine/availability-groups/windows/media/repl-icon-warn.gif) <a name="bkmk_ga_instalpatch"></a> Install Patch Requirement (GA) 
@@ -140,51 +137,12 @@ In SQL Server Management Studio and Visual Studio, the Help Viewer application m
 ```    
      Cache LastRefreshed="12/31/2017 00:00:00"    
 ``` 
-![horizontal_bar](../sql-server/media/horizontal-bar.png "horizontal_bar")  
-##  <a name="bkmk_2016_rc3"></a> SQL Server 2016 Release Candidate 3 (RC3)    
--   [Product Documentation (RC2)](#bkmk_rc3_docs)    
--   [PolyBase (RC3)](#bkmk_rc3_polybase) 
 
-    
-###  <a name="bkmk_rc3_docs"></a> Product Documentation (RC3)    
- **Issue and customer impact:** A downloadable version of the SQL Server 2016 documentation is not yet available. When you use Help Library Manager to attempt to **Install content from online**, you will see the SQL Server 2012 and SQL Sever 2014 documentation but there are no options for SQL Server 2016 documentation.    
-    
- **Workaround:** Use one of the following:    
-    
- ![Manage Help Settings for SQL Server](../sql-server/media/docs-sql2016-managehelpsettings.png "Manage Help Settings for SQL Server")    
-    
--   Use the option **Choose online or local help** and configure help for "I want to use online help".    
-    
--   Use the option **Install content from online** and download the SQL Server 2014 Content.    
-    
- **F1 Help:** By design when you press F1 in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], the online version of the F1 Help topic is displayed in the browser. This occurs even when you have installed local Help.    
-     
-**Updating content:**    
-In SQL Server Management Studio and Visual Studio, the Help Viewer application may freeze (hang) during the process of adding the documentation. To resolve this issue, do the following. For more information about this issue, see [Visual Studio Help Viewer freezes](https://msdn.microsoft.com/library/mt654096.aspx).    
-    
-* Open the %LOCALAPPDATA%\Microsoft\HelpViewer2.2\HlpViewer_SSMS16_en-US.settings | HlpViewer_VisualStudio14_en-US.settings file in Notepad and change the date in the following code to some date in the future.    
-    
-     
-```    
-     Cache LastRefreshed="12/31/2017 00:00:00"    
-```    
-    
-###  <a name="bkmk_rc3_polybase"></a> PolyBase (RC3)        
- PolyBase queries may fail after upgrade from RC1 or previous releases.    
-    
- **Issue and customer impact**: After upgrading from SQL Server 2016 RC1 or previous release, PolyBase queries, import and export may fail with the following error: “Internal Query Processor Error: The query processor encountered an unexpected error during the processing of a remote query phase.”    
-    
- **Workaround**    
-    
--   Uninstall PolyBase. In the **Control Panel**, click **Uninstall a program**, click **Microsoft SQL Server 2016**, click **Remove**. In the Remove SQL Server 2016 wizard select the instance with the failed PolyBase installation and click **Next**. On Features, click **PolyBase Query Service for External Data**. It is not necessary to remove other features that were successfully installed. Complete the steps of Remove SQL Server 2016.    
-    
--   Re-install PolyBase. Run setup, and add PolyBase feature on the same SQL Server instance.    
-    
- **Applies To**: SQL Server 2016 RC3 when upgrading from RC1 or previous releases.    
- 
 ## Additional Information
-- [Installtion for SQL Server 2016](../database-engine/install-windows/installation-for-sql-server-2016.md)
-    
- ![MS_Logo_X-Small](../sql-server/media/ms-logo-x-small.png "MS_Logo_X-Small")    
-    
-  
++ [Installtion for SQL Server 2016](../database-engine/install-windows/installation-for-sql-server-2016.md)
++ [SQL Server Update Center - links and information for all supported versions](https://msdn.microsoft.com/library/ff803383.aspx)
+
+
+[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]    
+
+![MS_Logo_X-Small](../sql-server/media/ms-logo-x-small.png "MS_Logo_X-Small")    

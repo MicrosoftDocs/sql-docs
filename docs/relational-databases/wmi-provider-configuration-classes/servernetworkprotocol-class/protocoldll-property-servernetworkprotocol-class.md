@@ -21,6 +21,7 @@ caps.latest.revision: 31
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # ProtocolDLL Property (ServerNetworkProtocol Class)
   Gets the name of the .dll file that is required by a server network protocol.  

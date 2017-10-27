@@ -17,10 +17,9 @@ You can now move your SQL Server Integration Services (SSIS) packages and worklo
 
 ## Benefits
 Moving your on-premises SSIS workloads to Azure has the following potential benefits:
--   **Reduce operational costs** by reducing on-premises infrastructure.
--   **Increase high availability** with multiple nodes per cluster, as well as the high availability features of Azure and of Azure SQL Database.
+-   **Reduce operational costs** and reduce the burden of managing infrastructure that you have when you run SSIS on-premises or on Azure virtual machines.
+-   **Increase high availability** with the ability to specify multiple nodes per cluster, as well as the high availability features of Azure and of Azure SQL Database.
 -   **Increase scalability** with the ability to specify multiple cores per node (scale up) and multiple nodes per cluster (scale out).
--   **Avoid the limitations** of running SSIS on Azure virtual machines.
 
 ## Architecture overview
 The following table highlights the differences between SSIS on premises and SSIS on Azure. The most significant difference is the separation of storage from compute.

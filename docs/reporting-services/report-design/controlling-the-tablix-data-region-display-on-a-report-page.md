@@ -15,6 +15,7 @@ caps.latest.revision: 8
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "erikre"
+ms.workload: "Active"
 ---
 # Controlling the Tablix Data Region Display on a Report Page
 Read about properties you can set in a [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] paginated report for a table, matrix, or list data region, to change how it appears when you view the report.  

@@ -16,6 +16,7 @@ caps.latest.revision: 10
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Columns without a Name
   Any column without a name will be inlined. For example, computed columns or nested scalar queries that do not specify column alias will generate columns without any name. If the column is of **xml** type, the content of that data type instance is inserted. Otherwise, the column content is inserted as a text node.  

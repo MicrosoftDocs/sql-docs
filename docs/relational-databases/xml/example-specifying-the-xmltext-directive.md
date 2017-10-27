@@ -16,6 +16,7 @@ caps.latest.revision: 10
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Example: Specifying the XMLTEXT Directive
   This example illustrates how data in the overflow column is addressed by using the **XMLTEXT** directive in a `SELECT` statement using EXPLICIT mode.  

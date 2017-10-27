@@ -17,6 +17,7 @@ caps.latest.revision: 12
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Example: Specifying the ELEMENT Directive and Entity Encoding
   This example illustrates the difference between the **ELEMENT** and **XML** directives. The **ELEMENT** directive entitizes the data, but the **XML** directive does not. The \<Summary> element is assigned XML, `<Summary>This is summary description</Summary>`, in the query.  

@@ -21,6 +21,7 @@ caps.latest.revision: 34
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # ServiceName Property (SqlServiceAdvancedProperty Class)
   Gets the name of the managed service that is associated with the advanced property.  

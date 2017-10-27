@@ -21,6 +21,7 @@ caps.latest.revision: 25
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # sp_addmessage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -83,7 +84,7 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
  Because of language syntax differences, the parameter numbers in the localized message may not occur in the same sequence as in the original message.  
   
 ## Permissions  
- Requires membership in the **sysadmin** or **serveradmin** fixed server roles.  
+Requires membership in the **sysadmin** or **serveradmin** fixed server roles.  
   
 ## Examples  
   

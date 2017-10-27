@@ -22,6 +22,7 @@ caps.latest.revision: 49
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # sp_addumpdevice (Transact-SQL)
   Adds a backup device to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

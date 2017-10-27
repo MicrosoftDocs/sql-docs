@@ -13,7 +13,7 @@ ms.assetid: 12f2bde5-e100-41fa-b474-2d2332fc7650
 caps.latest.revision: 15
 author: "stevestein"
 ms.author: "sstein"
-manager: "cguyer"
+manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # Configure Always Encrypted using PowerShell

@@ -13,7 +13,7 @@ ms.assetid: 856e8061-c604-4ce4-b89f-a11876dd6c88
 caps.latest.revision: 26
 author: "stevestein"
 ms.author: "sstein"
-manager: "cguyer"
+manager: "jhubbard"
 ms.workload: "On Demand"
 ---
 # Create and Store Column Master Keys (Always Encrypted)

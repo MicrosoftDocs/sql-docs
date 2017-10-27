@@ -13,7 +13,7 @@ ms.assetid: 07a305b1-4110-42f0-b7aa-28a4e32e912a
 caps.latest.revision: 32
 author: "stevestein"
 ms.author: "sstein"
-manager: "cguyer"
+manager: "jhubbard"
 ms.workload: "On Demand"
 ---
 # Overview of Key Management for Always Encrypted

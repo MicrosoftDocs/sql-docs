@@ -17,6 +17,7 @@ caps.latest.revision: 12
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # ConfigurationSetting Method - ListSSLCertificates
   Returns a list of certificates on the report server computer.  

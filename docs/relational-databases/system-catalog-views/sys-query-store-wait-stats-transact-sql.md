@@ -25,6 +25,7 @@ caps.latest.revision: 18
 author: "AndrejsAnt"
 ms.author: "AndrejsAnt"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # sys.query_store_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssvnxt-asdb-xxxx-xxx.md](../../includes/tsql-appliesto-ssvnxt-asdb-xxxx-xxx.md)]

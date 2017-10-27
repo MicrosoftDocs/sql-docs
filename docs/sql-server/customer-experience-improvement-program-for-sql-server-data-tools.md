@@ -14,6 +14,7 @@ caps.latest.revision: 11
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Customer Experience Improvement Program for SQL Server Data Tools
   Learn how the Customer Experience Improvement Program (CEIP) helps Microsoft identify ways to make our software better.  You can configure tools to opt in or out at any time.  

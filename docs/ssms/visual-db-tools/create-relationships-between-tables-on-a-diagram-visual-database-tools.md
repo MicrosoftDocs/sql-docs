@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Create Relationships Between Tables on a Diagram (Visual Database Tools)
 You can create relationships between columns in different tables in the Diagram Designer by dragging columns between tables.  

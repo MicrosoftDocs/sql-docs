@@ -14,6 +14,7 @@ caps.latest.revision: 11
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Work With SQL Server PowerShell Paths
   After you have navigated to a node in a [!INCLUDE[ssDE](../../includes/ssde-md.md)] provider path, you can perform work or retrieve information by using the methods and properties from the [!INCLUDE[ssDE](../../includes/ssde-md.md)] management object associated with the node.  

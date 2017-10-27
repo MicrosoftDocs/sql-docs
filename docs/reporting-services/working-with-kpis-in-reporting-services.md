@@ -13,6 +13,7 @@ caps.latest.revision: 13
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "On Demand"
 ---
 
 # Working with KPIs in Reporting Services

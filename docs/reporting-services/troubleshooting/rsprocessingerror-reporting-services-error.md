@@ -17,6 +17,7 @@ caps.latest.revision: 29
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # rsProcessingError - Reporting Services Error
     

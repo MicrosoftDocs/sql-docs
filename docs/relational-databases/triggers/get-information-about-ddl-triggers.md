@@ -18,6 +18,7 @@ caps.latest.revision: 31
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Get Information About DDL Triggers
   The catalog views listed in this section can be used to get information about DDL Triggers.  

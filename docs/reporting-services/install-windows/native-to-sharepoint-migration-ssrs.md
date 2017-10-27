@@ -15,6 +15,7 @@ caps.latest.revision: 8
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Native to SharePoint Migration (SSRS)
 

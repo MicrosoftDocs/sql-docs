@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Build Database Projects by Using SQL Server Management Studio
 A database script project is an organized set of scripts, connection information, and templates that are all associated with a database or one part of a database. [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] provides the [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] for administering and designing [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] databases within the context of a script project. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] includes designers, editors, guides and wizards to assist users in developing, deploying and maintaining databases.  

@@ -14,6 +14,7 @@ caps.latest.revision: 4
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # What&#39;s New in SQL Server Installation
 

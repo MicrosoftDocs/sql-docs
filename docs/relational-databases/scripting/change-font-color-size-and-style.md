@@ -21,6 +21,7 @@ caps.latest.revision: 23
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Change Font Color, Size, and Style
   You can customize the way the text appears in the Editor as well as other places in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  

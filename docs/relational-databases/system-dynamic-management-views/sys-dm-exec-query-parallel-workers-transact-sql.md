@@ -23,6 +23,7 @@ caps.latest.revision: 1
 author: "pelopes"
 ms.author: "pelopes"
 manager: "ajayj"
+ms.workload: "Inactive"
 ---
 # sys.dm_exec_query_parallel_workers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]

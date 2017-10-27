@@ -22,6 +22,7 @@ caps.latest.revision: 42
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Subscription and Delivery Methods
   You can use these methods to create and manage subscriptions and delivery of catalog items.  

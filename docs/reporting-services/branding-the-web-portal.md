@@ -14,6 +14,7 @@ caps.latest.revision: 8
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "On Demand"
 ---
 
 # Branding the web portal

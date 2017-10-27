@@ -66,7 +66,7 @@ manager: "jhubbard"
   
 3.  Select a destination database, and open a new query window. In the query window, execute the following script to create the destination table:  
   
-    ```  
+    ```sql
     create table RowDelimitedData  
     (  
     FirstName varchar(32),  
@@ -220,7 +220,7 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
   
 3.  Select a destination database, and open a new query window. In the query window, execute the following script to create the destination tables:  
   
-    ```  
+    ```sql
     CREATE TABLE [dbo].[Parents]([ParentID] [int] NOT NULL,  
     [ParentRecord] [varchar](32) NOT NULL,  
      CONSTRAINT [PK_Parents] PRIMARY KEY CLUSTERED   

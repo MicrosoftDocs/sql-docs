@@ -59,7 +59,7 @@ ms.workload: "On Demand"
   
      For example, an UPDATE statement for a Customer table might have the following syntax:  
   
-    ```  
+    ```sql
     update CDCSample.Customer  
     set TerritoryID  = ?,  
         CustomerType  = ?,  
@@ -91,7 +91,7 @@ ms.workload: "On Demand"
   
      For example, a DELETE statement for a Customer table might have the following syntax:  
   
-    ```  
+    ```sql
     delete from Customer where CustomerID = ?  
   
     ```  

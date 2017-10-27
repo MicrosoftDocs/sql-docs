@@ -14,6 +14,7 @@ caps.latest.revision: 25
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # CompoundCurve
   A **CompoundCurve** is a collection of zero or more continuous **CircularString** or **LineString** instances of either geometry or geography types.  

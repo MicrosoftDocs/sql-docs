@@ -20,6 +20,7 @@ caps.latest.revision: 56
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 
 # Deprecated features in SQL Server Reporting Services in SQL Server 2016

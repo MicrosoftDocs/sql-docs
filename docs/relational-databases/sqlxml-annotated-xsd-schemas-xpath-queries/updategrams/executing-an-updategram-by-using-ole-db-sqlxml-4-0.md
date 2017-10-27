@@ -19,6 +19,7 @@ caps.latest.revision: 24
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Executing an Updategram by Using OLE DB (SQLXML 4.0)
   This topic provides a working sample of usingOLE DB to execute an updategram.  

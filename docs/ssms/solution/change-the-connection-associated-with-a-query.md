@@ -19,6 +19,7 @@ caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Change the Connection Associated with a Query
 A query can be executed against several different servers or databases by changing the connection used by the query.  

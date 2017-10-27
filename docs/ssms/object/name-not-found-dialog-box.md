@@ -18,6 +18,7 @@ caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Name Not Found Dialog Box
 One or more object names in the dialog box could not be found. Select an option to continue.  

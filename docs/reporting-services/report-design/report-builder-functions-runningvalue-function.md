@@ -15,6 +15,7 @@ caps.latest.revision: 8
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "erikre"
+ms.workload: "On Demand"
 ---
 # Report Builder Functions - RunningValue Function
   Returns a running aggregate of all non-null numeric values specified by the expression, evaluated for the given scope.  

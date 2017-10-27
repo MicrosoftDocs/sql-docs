@@ -21,6 +21,7 @@ caps.latest.revision: 6
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Generating Reports (SybaseToSQL)
 The reports of certain activities performed using commands are generated in SSMA Console at object tree level.  

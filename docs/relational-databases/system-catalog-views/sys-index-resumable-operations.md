@@ -26,6 +26,7 @@ author: "CarlRabeler"
 ms.author: "carlrab"
 manager: "jhubbard"
 
+ms.workload: "Inactive"
 ---
 # index_resumable_operations (Transact-SQL)
 

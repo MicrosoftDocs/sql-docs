@@ -13,7 +13,7 @@ ms.assetid: 5117b4fd-c8d3-48d5-87c9-756800769f31
 caps.latest.revision: 19
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # Rotate Always Encrypted Keys using PowerShell

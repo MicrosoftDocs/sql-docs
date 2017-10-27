@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "server securables [SQL Server]"
 ms.assetid: bfa748f0-70b0-453c-870a-04b7b205b9ff
 caps.latest.revision: 41
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "On Demand"
 ---
 # Securables

@@ -14,9 +14,9 @@ helpviewer_keywords:
   - "Always Encrypted, bulk import"
 ms.assetid: b2ca08ed-a927-40fb-9059-09496752595e
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # Migrate Sensitive Data Protected by Always Encrypted

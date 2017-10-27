@@ -13,9 +13,9 @@ helpviewer_keywords:
   - "keys [SQL Server], database encryption"
 ms.assetid: 15c0a5e8-9177-484c-ae75-8c552dc0dac0
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "On Demand"
 ---
 # SQL Server and Database Encryption Keys (Database Engine)

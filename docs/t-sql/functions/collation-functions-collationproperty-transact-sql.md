@@ -1,7 +1,7 @@
 ---
 title: "COLLATIONPROPERTY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/24/2017"
+ms.date: "10/24/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""

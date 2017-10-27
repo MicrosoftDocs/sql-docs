@@ -18,6 +18,7 @@ caps.latest.revision: 25
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Subscription Properties - Subscriber
   The **Subscription Properties** dialog box at the Subscriber allows you to view and set properties for pull subscriptions.  

@@ -27,6 +27,7 @@ caps.latest.revision: 31
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Active"
 ---   
 
 # Create a Database User

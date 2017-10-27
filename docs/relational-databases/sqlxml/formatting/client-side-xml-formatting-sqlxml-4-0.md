@@ -19,6 +19,7 @@ caps.latest.revision: 34
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Client-side XML Formatting (SQLXML 4.0)
   This topic provides information about client-side XML formatting. Client-side formatting refers to the formatting of XML on the middle tier.  

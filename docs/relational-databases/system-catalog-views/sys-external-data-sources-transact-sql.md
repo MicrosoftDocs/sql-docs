@@ -16,6 +16,7 @@ caps.latest.revision: 7
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # sys.external_data_sources (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]

@@ -24,6 +24,7 @@ caps.latest.revision: 89
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Configure and Manage Word Breakers and Stemmers for Search
 

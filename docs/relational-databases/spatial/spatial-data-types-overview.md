@@ -19,6 +19,7 @@ caps.latest.revision: 51
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Spatial Data Types Overview
 

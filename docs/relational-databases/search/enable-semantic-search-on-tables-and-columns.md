@@ -16,6 +16,7 @@ caps.latest.revision: 22
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Enable Semantic Search on Tables and Columns
   Describes how to enable or disable statistical semantic indexing on selected columns that contain documents or text.  

@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: "barbkess"
 ms.author: "barbkess"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # sys.dm_pdw_exec_requests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]

@@ -26,6 +26,7 @@ caps.latest.revision: 52
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # Server-Level Roles
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]

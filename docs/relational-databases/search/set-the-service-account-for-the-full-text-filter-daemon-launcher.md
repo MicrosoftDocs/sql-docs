@@ -17,6 +17,7 @@ caps.latest.revision: 50
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Set the Service Account for the Full-text Filter Daemon Launcher
  This topic describes how to set or change the service account for the SQL Full-text Filter Daemon Launcher service (MSSQLFDLauncher) by using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager. The default service account used by SQL Server setup is `NT Service\MSSQLFDLauncher`.

@@ -19,6 +19,7 @@ caps.latest.revision: 19
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---  
 
 # Write SQL Server Audit Events to the Security Log  

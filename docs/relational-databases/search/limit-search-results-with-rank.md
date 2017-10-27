@@ -22,6 +22,7 @@ caps.latest.revision: 20
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Limit Search Results with RANK
   The [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) and [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) functions return a column named RANK that contains ordinal values from 0 through 1000 (rank values). These values are used to rank the rows returned according to how well they match the selection criteria. The rank values indicate only a relative order of relevance of the rows in the result set, with a lower value indicating lower relevance. The actual values are unimportant and typically differ each time the query is run.  

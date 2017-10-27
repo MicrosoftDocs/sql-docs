@@ -24,6 +24,7 @@ caps.latest.revision: 45
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Subscription Expiration and Deactivation
   Subscriptions can be deactivated or can expire if they are not synchronized within a specified *retention period*. The action that occurs depends on the type of replication and the retention period that is exceeded.  

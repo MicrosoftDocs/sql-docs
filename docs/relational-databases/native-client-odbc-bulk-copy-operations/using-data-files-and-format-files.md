@@ -21,6 +21,7 @@ caps.latest.revision: 30
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Using Data Files and Format Files
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]

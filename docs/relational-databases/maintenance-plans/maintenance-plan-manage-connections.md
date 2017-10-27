@@ -16,6 +16,7 @@ caps.latest.revision: 14
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Maintenance Plan (Manage Connections)
   Use the **Manage Connections** dialog box to specify the properties of connections used by maintenance plans. When you create a maintenance plan, a local connection to the server where you created the plan is created. Use this connection to create tasks that perform work on this local connection. When needed, use the **Manage Connections** dialog box to add them. When additional connections are configured they appear in the connections box for each task.  

@@ -25,6 +25,7 @@ caps.latest.revision: 38
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Recover to a Log Sequence Number (SQL Server)
   This topic is relevant only for databases that are using the full or bulk-logged recovery models.  

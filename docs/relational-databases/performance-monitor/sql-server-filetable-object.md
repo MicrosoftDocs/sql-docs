@@ -16,6 +16,7 @@ caps.latest.revision: 3
 author: "dagiro"
 ms.author: "v-dagir"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # SQL Server, FileTable Object
 The **SQLServer:FileTable** performance object provides counters for statistics associated with FileTable and non-transacted access.

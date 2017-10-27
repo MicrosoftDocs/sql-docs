@@ -23,6 +23,7 @@ caps.latest.revision: 34
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Handling Errors and Messages
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]

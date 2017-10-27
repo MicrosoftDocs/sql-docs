@@ -17,6 +17,7 @@ caps.latest.revision: 15
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # SQL Server, Cursor Manager by Type Object
   The **SQLServer:Cursor Manager by Type** object provides counters to monitor cursors, grouped by type.  

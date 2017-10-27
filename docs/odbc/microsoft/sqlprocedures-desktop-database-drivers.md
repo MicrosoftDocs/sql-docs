@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # SQLProcedures (Desktop Database Drivers)
 **SQLProcedures** will only return rows for those procedures that have at least one argument. Procedures that have no arguments are treated as views.  

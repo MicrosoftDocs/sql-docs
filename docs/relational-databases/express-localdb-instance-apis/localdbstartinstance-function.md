@@ -19,6 +19,7 @@ caps.latest.revision: 17
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # LocalDBStartInstance Function
   Starts the specified SQL Server Express LocalDB instance.  

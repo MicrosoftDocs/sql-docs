@@ -18,6 +18,7 @@ caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # SQL to C: Timestamp
 The identifier for the timestamp ODBC SQL data type is:  

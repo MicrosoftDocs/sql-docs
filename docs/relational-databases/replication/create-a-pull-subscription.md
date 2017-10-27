@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Create a Pull Subscription | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
@@ -20,6 +20,7 @@ caps.latest.revision: 46
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Create a Pull Subscription
   This topic describes how create a pull subscription in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or Replication Management Objects (RMO).  

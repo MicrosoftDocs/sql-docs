@@ -18,6 +18,7 @@ caps.latest.revision: 37
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # View Information and Perform Tasks for a Publisher (Replication Monitor)
   Replication Monitor provides the following tabs that display information about the selected Publisher:  

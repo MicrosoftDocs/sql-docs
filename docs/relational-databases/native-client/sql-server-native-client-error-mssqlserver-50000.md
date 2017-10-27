@@ -16,6 +16,7 @@ caps.latest.revision: 16
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # SQL Server Native Client Error MSSQLSERVER_50000
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]

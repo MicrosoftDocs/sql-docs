@@ -70,7 +70,7 @@ ms.workload: "Inactive"
   
     -   If you are programming in C#, enter the following lines of code:  
   
-        ```  
+        ```csharp 
         int dataReady;  
         System.DateTime extractStartTime;  
         System.DateTime extractEndTime;  
@@ -96,7 +96,7 @@ ms.workload: "Inactive"
   
     -   If you are programming in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], enter the following lines of code:  
   
-        ```  
+        ```vb  
         Dim dataReady As Integer  
         Dim extractStartTime As Date  
         Dim extractEndTime As Date  
@@ -144,7 +144,7 @@ ms.workload: "Inactive"
   
     4.  For **SQLStatement**, enter the following SQL statement:  
   
-        ```  
+        ```sql
         declare @ExtractStartTime datetime,  
         @ExtractEndTime datetime,   
         @DataReady int  

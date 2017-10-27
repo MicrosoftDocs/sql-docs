@@ -29,6 +29,7 @@ caps.latest.revision: 64
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # Use the Copy Database Wizard
 The Copy Database Wizard moves or copies databases and certain server objects easily from one instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  to another instance, with no server downtime. By using this wizard, you can do the following: 

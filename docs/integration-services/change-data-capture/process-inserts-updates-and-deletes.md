@@ -32,7 +32,7 @@ ms.workload: "Inactive"
   
  Matching an ordinal value to its corresponding operation is not as easy as using a mnemonic of the operation. For example, 'D' can easily represent a delete operation and 'I' represent an insert operation. The example query that was created in the topic, [Creating the Function to Retrieve the Change Data](../../integration-services/change-data-capture/create-the-function-to-retrieve-the-change-data.md), makes this conversion from an ordinal value to a friendly string value that is returned in a new column. The following segment of code shows this conversion:  
   
-```  
+```sql
 select   
     ...  
     case __$operation  

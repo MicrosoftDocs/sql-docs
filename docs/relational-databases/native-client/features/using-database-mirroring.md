@@ -22,6 +22,7 @@ caps.latest.revision: 55
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Using Database Mirroring
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]

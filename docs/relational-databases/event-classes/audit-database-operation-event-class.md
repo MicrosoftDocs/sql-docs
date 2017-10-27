@@ -16,6 +16,7 @@ caps.latest.revision: 20
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Audit Database Operation Event Class
   The **Audit Database Operation** event class occurs when operations in a database, such as checkpoint or subscribe query notification, occur.  

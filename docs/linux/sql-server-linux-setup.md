@@ -91,6 +91,18 @@ To rollback or downgrade SQL Server to a previous release, use the following ste
 > [!IMPORTANT]
 > Downgrade is only supported between RTM, RC2, and RC1 at this time.
 
+## <a id="versioncheck"></a> Check installed SQL Server version
+
+To verify your current version and edition of SQL Server on Linux, use the following procedure:
+
+1. If not already installed, install the [SQL Server command-line tools](sql-server-linux-setup-tools.md).
+
+1. Use **sqlcmd** to run a Transact-SQL command that displays your SQL Server version and edition.
+
+   ```bash
+   sqlcmd -S localhost -U SA -Q 'select @@VERSION'
+   ```
+
 ## <a id="uninstall"></a> Uninstall SQL Server
 
 To remove the **mssql-server** package on Linux, use one of the following commands based on your platform:
@@ -121,6 +133,22 @@ There are two main types of repositories for each distribution:
 
 Each CU and GDR release contains the full SQL Server package and all previous updates for that repository. Updating from a GDR release to a CU release is supported by changing your configured repository for SQL Server. You can also [downgrade](#rollback) to any release within your major version (ex: 2017). Updating from a CU release to a GDR release is not supported.
 
+### Check your configured repository
+
+If you want to verify what repository is configured, use the following platform-dependent techniques.
+
+| Platform | Procedure |
+|-----|-----|
+| RHEL | 1. View the files in the **/etc/yum.repos.d** directory: `sudo ls /etc/yum.repos.d`<br/>2. Look for a file that configures the SQL Server directory, such as **mssql-server.repo**.<br/>3. Print out the contents of the file: `sudo cat /etc/yum.repos.d/mssql-server.repo`<br/>4. The **name** property is the configured repository.|
+| SLES | 1. Run the following command: `sudo zypper info mssql-server`<br/>2. The **Repository** property is the configured repository. |
+| Ubuntu | 1. Run the following command: `sudo cat /etc/apt/sources.list`<br/>2. Examine the package URL for mssql-server. |
+
+The end of the repository URL confirms the repository type:
+
+- **mssql-server**: preview repository.
+- **mssql-server-2017**: CU repository.
+- **mssql-server-2017-gdr**: GDR repository.
+
 ### Change the source repository
 
 To configure the CU or GDR repositories, use the following steps:
@@ -130,11 +158,15 @@ To configure the CU or GDR repositories, use the following steps:
 
 1. If necessary, remove the previously configured repository.
 
-   | Platform | Repository removal command |
-   |-----|-----|
-   | RHEL | `sudo rm -rf /etc/yum.repos.d/mssql-server.repo` |
-   | SLES | `sudo zypper removerepo 'packages-microsoft-com-mssql-server'` |
-   | Ubuntu | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server xenial main'` |
+   | Platform | Repository | Repository removal command |
+   |---|---|---|
+   | RHEL | **All** | `sudo rm -rf /etc/yum.repos.d/mssql-server.repo` |
+   | SLES | **CTP** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server'` |
+   | | **CU** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-2017'` |
+   | | **GDR** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-2017-gdr'`|
+   | Ubuntu | **CTP** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server xenial main'` 
+   | | **CU** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017 xenial main'` | 
+   | | **GDR** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017-gdr xenial main'` |
 
 1. For **Ubuntu only**, import the public repository GPG keys.
 

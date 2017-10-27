@@ -26,9 +26,9 @@ helpviewer_keywords:
   - "NORECOMPUTE clause"
 ms.assetid: b23e2f6b-076c-4e6d-9281-764bdb616ad2
 caps.latest.revision: 105
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "On Demand"
 ---
 # CREATE STATISTICS (Transact-SQL)

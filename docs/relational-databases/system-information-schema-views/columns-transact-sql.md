@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "INFORMATION_SCHEMA.COLUMNS view"
 ms.assetid: bbf7ac4a-7444-4351-a590-a9f71e0bc495
 caps.latest.revision: 48
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "On Demand"
 ---
 # COLUMNS (Transact-SQL)

@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "FIPS_FLAGGER option"
 ms.assetid: e82f6bee-6cf6-4061-be22-9ad2e8e9d3d6
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # SET FIPS_FLAGGER (Transact-SQL)

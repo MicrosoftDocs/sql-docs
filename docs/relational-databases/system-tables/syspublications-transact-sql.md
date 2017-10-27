@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "syspublications system table"
 ms.assetid: a86eb4f5-1f7b-493e-af55-3d15cf878228
 caps.latest.revision: 40
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # syspublications (Transact-SQL)

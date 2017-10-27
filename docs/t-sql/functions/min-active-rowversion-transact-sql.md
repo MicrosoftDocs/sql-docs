@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "MIN_ACTIVE_ROWVERSION function [Transact-SQL]"
 ms.assetid: 87c89547-8ea1-4820-b75e-36be683e4e10
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # MIN_ACTIVE_ROWVERSION (Transact-SQL)

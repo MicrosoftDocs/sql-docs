@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "catalog views [SQL Server], files"
 ms.assetid: 60a05111-c542-45b5-a0cb-433ddcf6286a
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # Databases and Files Catalog Views (Transact-SQL)

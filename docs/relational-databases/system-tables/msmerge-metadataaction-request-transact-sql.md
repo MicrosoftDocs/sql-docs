@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "MSmerge_metadataaction_request system table"
 ms.assetid: cd31a114-900a-4218-ab58-d959e547c647
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # MSmerge_metadataaction_request (Transact-SQL)

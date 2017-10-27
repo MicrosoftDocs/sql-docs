@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "OBJECT_SCHEMA_NAME function"
 ms.assetid: 5ba90bb9-d045-4164-963e-e9e96c0b1e8b
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "On Demand"
 ---
 # OBJECT_SCHEMA_NAME (Transact-SQL)

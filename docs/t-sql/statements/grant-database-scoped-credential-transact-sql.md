@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "GRANT statement, database scoped credentials"
 ms.assetid: 501f2c8a-6aeb-41af-bf0b-974d17af33c0
 caps.latest.revision: 3
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # GRANT Database Scoped Credential Permissions (Transact-SQL)

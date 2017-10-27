@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "counting rows"
 ms.assetid: 97a47998-81d9-4331-a244-9eb8b6fe4a56
 caps.latest.revision: 40
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Active"
 ---
 # &#x40;&#x40;ROWCOUNT (Transact-SQL)

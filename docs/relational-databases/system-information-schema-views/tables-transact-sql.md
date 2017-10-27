@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "INFORMATION_SCHEMA.TABLES view"
 ms.assetid: 723a9e63-8f6e-4d6e-b570-468cfaf03201
 caps.latest.revision: 39
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "On Demand"
 ---
 # TABLES (Transact-SQL)

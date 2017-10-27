@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "tangent"
 ms.assetid: f679fa6a-5739-484b-9450-fb3400d4f30c
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # TAN (Transact-SQL)

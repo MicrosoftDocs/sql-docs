@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "EOMONTH function"
 ms.assetid: 1d060d8e-3297-4244-afef-57df2f8f92e2
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Active"
 ---
 # EOMONTH (Transact-SQL)

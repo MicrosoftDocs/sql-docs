@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "INFORMATION_SCHEMA.VIEWS view"
 ms.assetid: 6119bc94-0b22-45d4-a34b-967afd810a9d
 caps.latest.revision: 39
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # VIEWS (Transact-SQL)

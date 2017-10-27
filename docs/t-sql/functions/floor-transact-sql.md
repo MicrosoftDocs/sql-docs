@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "FLOOR function [Transact-SQL]"
 ms.assetid: 4f26c784-9240-491f-b854-754be3fccae4
 caps.latest.revision: 30
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Active"
 ---
 # FLOOR (Transact-SQL)

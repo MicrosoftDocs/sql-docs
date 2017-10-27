@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "partition schemes [SQL Server], removing"
 ms.assetid: 6efbc87c-1c92-4e43-96a7-e0f30f1db185
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # DROP PARTITION SCHEME (Transact-SQL)

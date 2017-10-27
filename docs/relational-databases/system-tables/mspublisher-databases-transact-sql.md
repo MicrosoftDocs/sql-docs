@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "MSpublisher_databases system table"
 ms.assetid: 59b0166e-a64c-46b8-befc-c222fa1ccce2
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # MSpublisher_databases (Transact-SQL)

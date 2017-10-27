@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "SET ANSI_DEFAULTS statement"
 ms.assetid: bd721d97-6e23-488b-8c8c-c0453d5b3b86
 caps.latest.revision: 30
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "On Demand"
 ---
 # SET ANSI_DEFAULTS (Transact-SQL)

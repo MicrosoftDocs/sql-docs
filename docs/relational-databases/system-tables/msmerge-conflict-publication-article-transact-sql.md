@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "MSmerge_conflict_publication_article system table"
 ms.assetid: dc4490b4-02d8-4dfc-98f5-0cf8de8e11be
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # MSmerge_conflict_&lt;publication&gt;_&lt;article&gt; (Transact-SQL)

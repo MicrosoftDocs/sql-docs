@@ -26,9 +26,9 @@ helpviewer_keywords:
   - "database removal [SQL Server], DROP DATABASE statement"
 ms.assetid: 477396a9-92dc-43c9-9b97-42c8728ede8e
 caps.latest.revision: 83
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Active"
 ---
 # DROP DATABASE (Transact-SQL)

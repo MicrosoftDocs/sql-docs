@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "MSrepl_errors system table"
 ms.assetid: c6e023c1-2c32-4269-8d76-e442ea309e4b
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # MSrepl_errors (Transact-SQL)

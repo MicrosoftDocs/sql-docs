@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Managing Backups (SybaseToSQL)
 Sybase Backup Management lets you backup and restore table data before or after running a test. You can also manage the backup content with Manage Backup Contents dialog.  

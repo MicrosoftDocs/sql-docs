@@ -21,6 +21,7 @@ caps.latest.revision: 27
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # XML Editor (SQL Server Management Studio)
   Provides a set of visual tools for working with XML Schemas, ADO.NET datasets, and XML documents. The XML Designer supports the XML Schema Definition (XSD) language defined by the World Wide Web Consortium (WC3). The designer does not support DTDs (document type definitions) or other XML schema languages, such as XDR (XML-Data Reduced).  

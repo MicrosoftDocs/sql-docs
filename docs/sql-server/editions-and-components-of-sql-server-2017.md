@@ -39,6 +39,7 @@ caps.latest.revision: 121
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # Editions and supported features of SQL Server 2017
 

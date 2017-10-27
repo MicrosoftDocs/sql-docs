@@ -21,6 +21,7 @@ caps.latest.revision: 21
 author: "spelluru"
 ms.author: "spelluru"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Integration Services Tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

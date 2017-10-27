@@ -19,6 +19,7 @@ caps.latest.revision: 28
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Executing SQL Queries (SQLXMLOLEDB Provider)
   This example illustrates the use of the following SQLXMLOLEDB Provider-specific properties:  

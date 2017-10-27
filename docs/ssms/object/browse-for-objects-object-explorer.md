@@ -17,6 +17,7 @@ caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Browse for Objects (Object Explorer)
 Displays a list of objects of the selected type. Select one of more of the objects from this list by selecting the corresponding check box. The **Browse for Objects** box only displays items appropriate for the action, and only displays items that you have permission to view.  

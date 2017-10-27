@@ -16,6 +16,7 @@ caps.latest.revision: 15
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Technical Reference (Replication)
   This section contains links to technical reference documentation for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] replication.  

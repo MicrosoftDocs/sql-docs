@@ -16,6 +16,7 @@ caps.latest.revision: 19
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "v-thobro"
+ms.workload: "On Demand"
 ---
 # Installing SSMA for Oracle Client (OracleToSQL)
 The SSMA client consists of the program files that perform the following tasks:  

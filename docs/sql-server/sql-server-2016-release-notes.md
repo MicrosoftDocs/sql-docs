@@ -16,6 +16,7 @@ caps.latest.revision: 276
 author: "craigg-msft"
 ms.author: "craigg"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # SQL Server 2016 Release Notes
   This topic describes limitations and issues with [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] .    

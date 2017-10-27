@@ -15,6 +15,7 @@ author: "BarbKess"
 ms.author: "barbkess"
 manager: "jhubbard"
 robots: noindex,nofollow
+ms.workload: "On Demand"
 ---
 # Wide World Importers Overview
 This is an overview of the fictitious company Wide World Importers and the workflows that are addressed in the WideWorldImporters sample databases for SQL Server and Azure SQL Database.  

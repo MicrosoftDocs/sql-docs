@@ -17,6 +17,7 @@ caps.latest.revision: 23
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # rsInternalError - Reporting Services Error
     

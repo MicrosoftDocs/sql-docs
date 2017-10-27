@@ -16,6 +16,7 @@ caps.latest.revision: 113
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
+ms.workload: "Active"
 ---
 # Download SQL Server Data Tools (SSDT)
 

@@ -19,6 +19,7 @@ caps.latest.revision: 9
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Appendix - 1 (SybaseToSQL)
 Quick view of the SSMA Console command line options:  

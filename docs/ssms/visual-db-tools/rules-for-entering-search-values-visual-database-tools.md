@@ -24,6 +24,7 @@ caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Rules for Entering Search Values (Visual Database Tools)
 This topic discusses the conventions you must use when entering the following types of literal values for a search condition:  

@@ -22,6 +22,7 @@ caps.latest.revision: 17
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # ConfigurationSetting Property - UnattendedExecutionAccount
   Returns the user account that the report server impersonates when running reports unattended. Read-only.  

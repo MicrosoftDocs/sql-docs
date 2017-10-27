@@ -77,7 +77,7 @@
 ##### [Configure on SUSE](sql-server-linux-availability-group-cluster-sles.md)
 ##### [Configure on Ubuntu](sql-server-linux-availability-group-cluster-ubuntu.md)
 ##### [Operate](sql-server-linux-availability-group-failover-ha.md)
-#### [Create for read scale-out only]()
+#### [Create for read-scale only]()
 ##### [Configure AG](sql-server-linux-availability-group-configure-rs.md)
 
 ## [Security](sql-server-linux-security-overview.md)

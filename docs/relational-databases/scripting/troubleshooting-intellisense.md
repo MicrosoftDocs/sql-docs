@@ -19,6 +19,7 @@ caps.latest.revision: 41
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Troubleshooting IntelliSense
   There are certain cases when the IntelliSense options might not work as you expect.  

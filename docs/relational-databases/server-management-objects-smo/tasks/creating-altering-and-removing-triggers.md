@@ -16,6 +16,7 @@ caps.latest.revision: 48
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Creating, Altering, and Removing Triggers
   In SMO, triggers are represented by using the <xref:Microsoft.SqlServer.Management.Smo.Trigger> object. The [!INCLUDE[tsql](../../../includes/tsql-md.md)] code that runs when the trigger that is fired is set by the <xref:Microsoft.SqlServer.Management.Smo.Trigger.TextBody%2A> property of the Trigger object. The type of trigger is set by using other properties of the <xref:Microsoft.SqlServer.Management.Smo.Trigger> object, such as the <xref:Microsoft.SqlServer.Management.Smo.Trigger.Update%2A> property. This is a Boolean property that specifies whether the trigger is fired by an **UPDATE** of records on the parent table.  

@@ -28,7 +28,7 @@ helpviewer_keywords:
   - "server-level collations [SQL Server]"
 ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 caps.latest.revision: 46
-author: "srutzky"
+author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
 ---

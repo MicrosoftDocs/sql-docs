@@ -44,23 +44,6 @@ manager: "jhubbard"
   
 3.  Save the file as **myScript.sql** in the C drive.  
   
-## Run the script file  
-  
-1.  Open a command prompt window.  
-  
-2.  In the Command Prompt window, type: **sqlcmd -S myServer\instanceName -i C:\myScript.sql**  
-  
-3.  Press ENTER.  
-  
- A list of [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] employee names and addresses is written to the command prompt window.  
-
-## Save the output to a text file
-  
-1.  Open a command prompt window.  
-  
-2.  In the Command Prompt window, type: **sqlcmd -S myServer\instanceName -i C:\myScript.sql -o C:\EmpAdds.txt**  
-  
-3.  Press ENTER.  
   
  No output is returned in the Command Prompt window. Instead, the output is sent to the EmpAdds.txt file. You can verify this output by opening the EmpAdds.txt file.  
   

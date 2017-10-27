@@ -19,6 +19,7 @@ caps.latest.revision: 17
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Tutorial: Administering Servers by Using Policy-Based Management
 Welcome to the Administering Servers by Using Policy-Based Management Policies tutorial. This tutorial is intended for users who are familiar with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] but new to the Policy-Based Management.  

@@ -18,6 +18,7 @@ caps.latest.revision: 14
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Lesson 3: Synchronizing the Subscription to the Merge Publication
 In this lesson, you will start the Merge Agent to initialize the subscription using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. You also use this procedure to synchronize with the Publisher. This lesson requires that you have completed the previous lesson, [Lesson 2: Creating a Subscription to the Merge Publication](../../relational-databases/replication/lesson-2-creating-a-subscription-to-the-merge-publication.md).  

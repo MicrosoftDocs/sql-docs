@@ -24,6 +24,7 @@ caps.latest.revision: 50
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Filter Published Data
   Filtering table articles enables you to create partitions of data to be published. By filtering published data, you can:  

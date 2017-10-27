@@ -19,6 +19,7 @@ caps.latest.revision: 39
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # Rebuild System Databases
   System databases must be rebuilt to fix corruption problems in the [master](../../relational-databases/databases/master-database.md), [model](../../relational-databases/databases/model-database.md), [msdb](../../relational-databases/databases/msdb-database.md), or [resource](../../relational-databases/databases/resource-database.md) system databases or to modify the default server-level collation. This topic provides step-by-step instructions to rebuild system databases in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  

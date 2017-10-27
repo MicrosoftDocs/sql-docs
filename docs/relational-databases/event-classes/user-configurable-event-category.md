@@ -18,6 +18,7 @@ caps.latest.revision: 16
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # User-Configurable Event Category
   The **User-Configurable** event category contains the **User-Configurable** event classes.  

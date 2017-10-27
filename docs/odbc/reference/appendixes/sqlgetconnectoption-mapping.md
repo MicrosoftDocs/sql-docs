@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # SQLGetConnectOption Mapping
 When an application calls **SQLGetConnectOption** through an ODBC 3*.x* driver, the call to  

@@ -16,6 +16,7 @@ caps.latest.revision: 24
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Database Object (Extended Properties Page)
   Extended properties allow you to add custom properties to database objects. Use this page to view or modify extended properties for the selected object. The **Extended Properties** page is the same for all types of database objects.  

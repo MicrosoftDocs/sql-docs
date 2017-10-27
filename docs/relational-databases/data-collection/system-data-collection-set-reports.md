@@ -24,6 +24,7 @@ caps.latest.revision: 24
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # System Data Collection Set Reports
   The data collector provides an historical report for each of the System Data collection sets. Each of the following reports uses data that is stored in the management data warehouse:  

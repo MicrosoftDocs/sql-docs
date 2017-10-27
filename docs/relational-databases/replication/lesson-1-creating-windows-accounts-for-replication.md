@@ -19,6 +19,7 @@ caps.latest.revision: 17
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Lesson 1: Creating Windows Accounts for Replication
 In this lesson, you will create Windows accounts to run replication agents. You will create a separate Windows account on the local server for the following agents:  

@@ -17,6 +17,7 @@ author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
 robots: noindex,nofollow
+ms.workload: "Inactive"
 ---
 # MSSQLSERVER_5515
   

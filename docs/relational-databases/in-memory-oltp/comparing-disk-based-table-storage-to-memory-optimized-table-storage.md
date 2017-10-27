@@ -14,6 +14,7 @@ caps.latest.revision: 5
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Comparing Disk-Based Table Storage to Memory-Optimized Table Storage
   

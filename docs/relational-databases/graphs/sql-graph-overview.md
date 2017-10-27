@@ -17,6 +17,7 @@ caps.latest.revision: 1
 author: "shkale-msft"
 ms.author: "shkale"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # Graph processing with SQL Server and Azure SQL Database
 [!INCLUDE[tsql-appliesto-ssvnxt-asdb-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-asdb-xxxx-xxx.md)]   

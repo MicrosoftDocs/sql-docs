@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # CREATE INDEX for Paradox
 The syntax of the CREATE INDEX statement for the ODBC Paradox driver is:  

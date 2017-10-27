@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Keep the Affinity Mask Default Value
   This rule checks whether the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setting for the affinity mask is set to 0, which is the default value. The affinity mask option dynamically controls CPU affinity.  

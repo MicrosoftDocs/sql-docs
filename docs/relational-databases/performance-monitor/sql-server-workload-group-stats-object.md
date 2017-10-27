@@ -18,6 +18,7 @@ caps.latest.revision: 14
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # SQL Server, Workload Group Stats Object
   The SQLServer:Workload Group Stats object contains performance counters that report information about Resource Governor workload group statistics.  

@@ -16,6 +16,7 @@ caps.latest.revision: 7
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # MSSQLSERVER_17084
   

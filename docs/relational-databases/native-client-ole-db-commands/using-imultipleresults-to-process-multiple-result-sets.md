@@ -19,6 +19,7 @@ caps.latest.revision: 40
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Using IMultipleResults to Process Multiple Result Sets
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]

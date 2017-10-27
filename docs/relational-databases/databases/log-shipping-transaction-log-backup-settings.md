@@ -16,6 +16,7 @@ caps.latest.revision: 27
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Log Shipping Transaction Log Backup Settings
   Use this dialog box to configure and modify the transaction log backup settings for a log shipping configuration.  

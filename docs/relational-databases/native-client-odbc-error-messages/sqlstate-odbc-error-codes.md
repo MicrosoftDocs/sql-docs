@@ -20,6 +20,7 @@ caps.latest.revision: 33
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # SQLSTATE (ODBC Error Codes)
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]

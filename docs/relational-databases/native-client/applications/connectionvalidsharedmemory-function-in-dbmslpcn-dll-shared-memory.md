@@ -14,6 +14,7 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # ConnectionValidSharedMemory function in dbmslpcn.dll Shared Memory
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]

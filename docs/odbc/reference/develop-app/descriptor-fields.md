@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Descriptor Fields
 Descriptors contain *header* and *record* fields that completely describe columns or parameters.  

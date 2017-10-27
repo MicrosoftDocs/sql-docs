@@ -16,6 +16,7 @@ caps.latest.revision: 13
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Administrative Password
   If, on the **Distributors** page of this wizard, you selected a remote Distributor for this Publisher, you must enter a password for the connection replication makes between the Publisher and the Distributor using the **distributor_admin** login. The password must match the password specified on the **Distributor Password** page of the Configure Distribution Wizard or the **Publishers** page of the **Distributor Properties** dialog box.  

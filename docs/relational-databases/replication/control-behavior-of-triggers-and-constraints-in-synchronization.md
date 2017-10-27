@@ -24,6 +24,7 @@ caps.latest.revision: 36
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Control Behavior of Triggers and Constraints in Synchronization
   During synchronization, replication agents execute [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md), [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md), and [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md) statements on replicated tables, which can cause data manipulation language (DML) triggers on these tables to be executed. There are cases when you may need to prevent these triggers from firing or constraints from being enforced during synchronization. This behavior depends on how the trigger or constraint is created.  

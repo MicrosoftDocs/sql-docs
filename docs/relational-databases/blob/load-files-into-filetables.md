@@ -18,6 +18,7 @@ caps.latest.revision: 23
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Load Files into FileTables
   Describes how to load or migrate files into FileTables.  

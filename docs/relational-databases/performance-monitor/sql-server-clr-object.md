@@ -17,6 +17,7 @@ caps.latest.revision: 12
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # SQL Server, CLR Object
   The **SQLServer:CLR** object provides counters to monitor common language runtime (CLR) execution in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

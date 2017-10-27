@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Elements Used in SQL Statements
 The following elements are used in the SQL statements listed previously.  

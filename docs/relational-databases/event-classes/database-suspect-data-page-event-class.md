@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Database Suspect Data Page Event Class
   The **Database Suspect Data Page** event class indicates when a page is added to the [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) table in [msdb](../../relational-databases/databases/msdb-database.md). Include this event class in traces that are monitoring the occurrence of suspect pages.  

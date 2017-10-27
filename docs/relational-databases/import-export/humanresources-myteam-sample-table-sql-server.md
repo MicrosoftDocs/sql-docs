@@ -18,6 +18,7 @@ caps.latest.revision: 35
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # HumanResources.myTeam Sample Table (SQL Server)
   Many of the code examples in [Importing and Exporting Bulk Data](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md) require a special-purpose test table named **myTeam**. Before you can run the examples, you must create the **myTeam** table in the **HumanResources** schema of the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.  

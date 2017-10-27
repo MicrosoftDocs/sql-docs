@@ -90,7 +90,7 @@ ms.workload: "Inactive"
   
     4.  For **SQLStatement**, enter the following SQL statement:  
   
-        ```  
+        ```sql
         SELECT DATEADD(dd,0, DATEDIFF(dd,0,GETDATE()-1)) AS ExtractStartTime,  
           DATEADD(dd,0, DATEDIFF(dd,0,GETDATE())) AS ExtractEndTime  
   

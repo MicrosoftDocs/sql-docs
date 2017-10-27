@@ -17,6 +17,7 @@ caps.latest.revision: 54
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # SQLBrowseConnect
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]

@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "sp_helpmergearticlecolumn"
 ms.assetid: 651c017b-9e9a-48f2-a0bd-6fc896eab334
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # sp_helpmergearticlecolumn (Transact-SQL)

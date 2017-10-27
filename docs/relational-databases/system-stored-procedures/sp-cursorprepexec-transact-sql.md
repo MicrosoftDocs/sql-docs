@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "sp_cursorprepexec"
 ms.assetid: 8094fa90-35b5-4cf4-8012-0570cb2ba1e6
 caps.latest.revision: 9
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # sp_cursorprepexec (Transact-SQL)

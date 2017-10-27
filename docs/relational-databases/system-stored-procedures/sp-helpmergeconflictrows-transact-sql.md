@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "sp_helpmergeconflictrows"
 ms.assetid: 131395a5-cb18-4795-a7ae-fa09d8ff347f
 caps.latest.revision: 21
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # sp_helpmergeconflictrows (Transact-SQL)

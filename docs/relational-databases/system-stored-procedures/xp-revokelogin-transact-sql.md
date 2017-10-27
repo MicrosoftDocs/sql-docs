@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "xp_revokelogin"
 ms.assetid: b3fa7678-dba4-4537-be94-5ae63ca11f81
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # xp_revokelogin (Transact-SQL)

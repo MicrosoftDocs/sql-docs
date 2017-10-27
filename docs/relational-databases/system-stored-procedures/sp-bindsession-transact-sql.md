@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "sp_bindsession"
 ms.assetid: 1436fe21-ad00-4a98-aca1-1451a5e571d2
 caps.latest.revision: 38
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # sp_bindsession (Transact-SQL)

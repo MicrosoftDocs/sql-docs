@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "sp_bindrule"
 ms.assetid: 2606073e-c52f-498d-a923-5026b9d97e67
 caps.latest.revision: 43
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # sp_bindrule (Transact-SQL)

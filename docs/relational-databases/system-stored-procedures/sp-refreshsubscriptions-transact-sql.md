@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "sp_refreshsubscriptions"
 ms.assetid: 6cb9b1ce-1ce7-43ab-9451-201f79ed1ffa
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # sp_refreshsubscriptions (Transact-SQL)

@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "sp_mergecleanupmetadata"
 ms.assetid: 892f8628-4cbe-4cc3-b959-ed45ffc24064
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # sp_mergecleanupmetadata (Transact-SQL)

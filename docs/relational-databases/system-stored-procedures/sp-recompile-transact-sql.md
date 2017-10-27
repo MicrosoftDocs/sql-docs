@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "sp_recompile"
 ms.assetid: 6192ca87-febd-4075-8199-14b4fa609b8c
 caps.latest.revision: 36
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "On Demand"
 ---
 # sp_recompile (Transact-SQL)

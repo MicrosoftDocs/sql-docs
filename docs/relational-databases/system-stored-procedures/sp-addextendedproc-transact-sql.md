@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "sp_addextendedproc"
 ms.assetid: c0d4b47b-a855-451e-90e5-5fb2d836ebfa
 caps.latest.revision: 33
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # sp_addextendedproc (Transact-SQL)

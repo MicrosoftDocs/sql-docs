@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "sp_articlecolumn"
 ms.assetid: 8abaa8c1-d99e-4788-970f-c4752246c577
 caps.latest.revision: 28
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # sp_articlecolumn (Transact-SQL)

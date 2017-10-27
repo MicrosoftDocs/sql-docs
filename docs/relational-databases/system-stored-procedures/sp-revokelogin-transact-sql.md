@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "sp_revokelogin"
 ms.assetid: cb1ab102-1ae0-4811-9144-9a8121ef2d7e
 caps.latest.revision: 28
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # sp_revokelogin (Transact-SQL)

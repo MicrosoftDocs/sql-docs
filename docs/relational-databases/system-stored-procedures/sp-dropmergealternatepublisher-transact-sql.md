@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "sp_dropmergealternatepublisher"
 ms.assetid: a7dee4e2-2a60-41da-9d1d-6f991d7e2c5e
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # sp_dropmergealternatepublisher (Transact-SQL)

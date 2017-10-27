@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "sp_helpsubscriberinfo"
 ms.assetid: fbabe1ec-57cf-425c-bae7-af7f5d3198fd
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # sp_helpsubscriberinfo (Transact-SQL)

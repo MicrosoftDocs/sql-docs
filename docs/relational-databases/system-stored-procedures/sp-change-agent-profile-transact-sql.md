@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "sp_change_agent_profile"
 ms.assetid: e73acf8d-0be8-4197-ba11-fe798d0e2820
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # sp_change_agent_profile (Transact-SQL)

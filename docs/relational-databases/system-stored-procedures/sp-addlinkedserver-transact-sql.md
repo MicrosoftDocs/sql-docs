@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "sp_addlinkedserver"
 ms.assetid: fed3adb0-4c15-4a1a-8acd-1b184aff558f
 caps.latest.revision: 70
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Active"
 ---
 # sp_addlinkedserver (Transact-SQL)

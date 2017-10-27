@@ -17,6 +17,7 @@ caps.latest.revision: 21
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "craigg"
+ms.workload: "Inactive"
 ---
 # What&#39;s New in SSMA for SAP ASE (SybaseToSQL)
 This topic lists SSMA for SAP ASE (formerly SSMA for Sybase) changes in each release. 

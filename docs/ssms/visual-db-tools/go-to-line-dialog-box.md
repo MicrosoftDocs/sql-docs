@@ -16,6 +16,7 @@ caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Go To Line Dialog Box
 To move to a location in the code editor window, type a line number, and then click **OK**.  

@@ -20,6 +20,7 @@ caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Add an Existing Project to a Solution
 You can add one or more projects to an existing solution. A project can be associated with more than one solution.  

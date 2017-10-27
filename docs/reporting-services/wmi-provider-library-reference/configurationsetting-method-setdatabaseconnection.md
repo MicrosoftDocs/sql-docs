@@ -22,6 +22,7 @@ caps.latest.revision: 19
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # ConfigurationSetting Method - SetDatabaseConnection
   Sets the report server database connection to a particular report server database.  

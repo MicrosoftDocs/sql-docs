@@ -22,6 +22,7 @@ caps.latest.revision: 106
 author: "craigg-msft"
 ms.author: "craigg"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # SQL Server Technical Documentation
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

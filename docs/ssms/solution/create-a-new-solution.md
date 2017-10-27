@@ -16,6 +16,7 @@ caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Create a New Solution
 When you create a project, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] creates a solution to contain it. You can only open one solution at a time. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] does not allow you to create folders within projects. To organize your work, create multiple projects.  

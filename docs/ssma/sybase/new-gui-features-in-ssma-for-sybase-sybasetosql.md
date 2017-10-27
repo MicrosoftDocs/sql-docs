@@ -17,6 +17,7 @@ caps.latest.revision: 4
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # New GUI Features in SSMA For Sybase (SybaseToSQL)
 This chapter describes new features of SSMA User Interface.  

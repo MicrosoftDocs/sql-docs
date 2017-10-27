@@ -15,6 +15,7 @@ author: "BarbKess"
 ms.author: "barbkess"
 manager: "jhubbard"
 robots: noindex,nofollow
+ms.workload: "Inactive"
 ---
 # WideWorldImporters data generation
 The released versions of the WideWorldImporters and WideWorldImportersDW databases contains data starting January 1st 2013, up to the day these databases were generated.

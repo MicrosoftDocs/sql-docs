@@ -19,6 +19,7 @@ caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Delete Queries (Visual Database Tools)
 You can delete a query, removing it from the project and permanently deleting it from the file system. Queries deleted using the following procedure are not sent to the Recycle Bin and cannot be recovered.  

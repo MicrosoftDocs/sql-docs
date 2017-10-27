@@ -20,6 +20,7 @@ caps.latest.revision: 23
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "On Demand"
 ---
 
 # Technical Reference (SSRS)

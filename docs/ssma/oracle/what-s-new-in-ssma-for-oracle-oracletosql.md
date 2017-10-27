@@ -14,6 +14,7 @@ caps.latest.revision: 24
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "craigg"
+ms.workload: "Inactive"
 ---
 # What&#39;s New in SSMA for Oracle (OracleToSQL)
 This topic lists SSMA for Oracle changes in each release.  

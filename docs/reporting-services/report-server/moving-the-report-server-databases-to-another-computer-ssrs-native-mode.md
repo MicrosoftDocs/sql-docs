@@ -15,6 +15,7 @@ caps.latest.revision: 10
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "On Demand"
 ---
 
 # Moving the Report Server Databases to Another Computer (SSRS Native Mode)

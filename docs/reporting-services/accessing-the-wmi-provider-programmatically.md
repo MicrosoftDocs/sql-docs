@@ -17,6 +17,7 @@ caps.latest.revision: 7
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Accessing the WMI Provider Programmatically
 

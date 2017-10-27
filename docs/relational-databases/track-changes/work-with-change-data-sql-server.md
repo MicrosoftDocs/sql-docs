@@ -19,6 +19,7 @@ caps.latest.revision: 19
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Work with Change Data (SQL Server)
   Change data is made available to change data capture consumers through table-valued functions (TVFs). All queries of these functions require two parameters to define the range of Log Sequence Numbers (LSNs) that are eligible for consideration when developing the returned result set. Both the upper and lower LSN values that bound the interval are considered to be included within the interval.  

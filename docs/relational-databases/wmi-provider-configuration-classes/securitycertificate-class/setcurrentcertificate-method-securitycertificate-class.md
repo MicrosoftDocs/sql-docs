@@ -21,6 +21,7 @@ caps.latest.revision: 33
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # SetCurrentCertificate Method (SecurityCertificate Class)
   Sets the current security certificate.  

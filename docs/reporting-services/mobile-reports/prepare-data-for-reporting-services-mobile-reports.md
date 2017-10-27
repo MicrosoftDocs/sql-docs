@@ -15,6 +15,7 @@ caps.latest.revision: 15
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Prepare data for Reporting Services mobile reports
   

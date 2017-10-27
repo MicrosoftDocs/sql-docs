@@ -21,6 +21,7 @@ caps.latest.revision: 34
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Description Property (SqlService Class)
   Gets a description of the referenced service.  

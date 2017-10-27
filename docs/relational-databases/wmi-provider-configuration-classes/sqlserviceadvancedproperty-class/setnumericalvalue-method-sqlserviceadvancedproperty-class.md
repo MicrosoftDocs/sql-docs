@@ -21,6 +21,7 @@ caps.latest.revision: 15
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # SetNumericalValue Method (SqlServiceAdvancedProperty Class)
   Sets the numeric value of a property.  

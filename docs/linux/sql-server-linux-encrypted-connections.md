@@ -11,6 +11,7 @@ ms.technology: database-engine
 ms.assetid: 
 helpviewer_keywords: 
   - "Linux, encrypted connections"
+ms.workload: "Inactive"
 ---
 # Encrypting Connections to SQL Server on Linux
 

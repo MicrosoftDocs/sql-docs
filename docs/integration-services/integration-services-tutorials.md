@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Integration Services Tutorials
 This section contains tutorials [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  

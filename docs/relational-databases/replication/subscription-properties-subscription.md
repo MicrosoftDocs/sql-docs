@@ -14,6 +14,7 @@ caps.latest.revision: 19
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Subscription Properties - &lt;Subscription&gt;
   This section provides information on the **Subscription Properties** dialog box:  

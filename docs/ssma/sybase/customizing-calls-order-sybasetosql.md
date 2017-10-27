@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Customizing Calls Order (SybaseToSQL)
 At this step you select the order in which the objects to test will be invoked.  

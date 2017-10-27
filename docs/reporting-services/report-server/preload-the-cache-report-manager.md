@@ -18,6 +18,7 @@ caps.latest.revision: 35
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Preload the Cache (Report Manager)
   You can preload the cache for a shared dataset by creating a cache refresh plan for the shared dataset.  

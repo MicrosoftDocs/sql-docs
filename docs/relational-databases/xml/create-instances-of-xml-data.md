@@ -23,6 +23,7 @@ caps.latest.revision: 40
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Create Instances of XML Data
   This topic describes how to generate XML instances.  

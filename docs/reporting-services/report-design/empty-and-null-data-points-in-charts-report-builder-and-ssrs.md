@@ -15,6 +15,7 @@ caps.latest.revision: 10
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "erikre"
+ms.workload: "On Demand"
 ---
 
 # Empty and Null Data Points in Charts (Report Builder and SSRS)

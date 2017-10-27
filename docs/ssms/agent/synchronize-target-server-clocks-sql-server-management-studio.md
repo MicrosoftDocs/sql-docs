@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Synchronize Target Server Clocks (SQL Server Management Studio)
 This topic describes how to synchronize target server clocks in [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] with the master server clock by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] or [!INCLUDE[tsql](../../includes/tsql_md.md)]. Synchronizing these system clocks supports your job schedules.  

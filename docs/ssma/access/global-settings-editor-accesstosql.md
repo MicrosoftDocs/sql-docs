@@ -17,6 +17,7 @@ caps.latest.revision: 3
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Global Settings (Editor) (AccessToSQL)
 Use the Editor page of the **Global Settings** dialog box to specify settings for code editor windows.  

@@ -21,6 +21,7 @@ caps.latest.revision: 30
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # SetStringValue Method (ServerNetworkProtocolProperty Class)
   Sets the string value of the referenced property.  

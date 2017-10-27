@@ -17,6 +17,7 @@ caps.latest.revision: 8
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "craigg"
+ms.workload: "Inactive"
 ---
 # What&#39;s New in SSMA for DB2 (DB2ToSQL)
 This topic lists SSMA for DB2 changes in each release.  

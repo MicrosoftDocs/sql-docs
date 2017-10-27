@@ -19,6 +19,7 @@ caps.latest.revision: 41
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # ReportingServicesService Configuration File
  ||  

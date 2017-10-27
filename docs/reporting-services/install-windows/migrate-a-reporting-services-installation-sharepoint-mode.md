@@ -15,6 +15,7 @@ caps.latest.revision: 23
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 
 # Migrate a Reporting Services Installation (SharePoint Mode)

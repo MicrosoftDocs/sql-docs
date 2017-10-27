@@ -30,6 +30,7 @@ caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # Object Explorer
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] provides features for managing objects in instances of the [!INCLUDE[ssDE](../../includes/ssde_md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion_md.md)], and [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion_md.md)].  

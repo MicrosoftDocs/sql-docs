@@ -18,6 +18,7 @@ caps.latest.revision: 13
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Enter Data Source Credentials Dialog Box (Report Builder)
   Use the **Enter Data Source Credentials** dialog box to provide your credentials so that you can retrieve data from the data source.  

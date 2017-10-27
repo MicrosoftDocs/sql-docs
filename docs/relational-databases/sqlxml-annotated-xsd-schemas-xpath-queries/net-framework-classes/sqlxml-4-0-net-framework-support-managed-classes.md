@@ -26,6 +26,7 @@ caps.latest.revision: 25
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # SQLXML 4.0 .NET Framework Support - Managed Classes
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0 supports features that allow you to write applications to access XML data from an instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], bring the data into the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework environment, process the data, and send the updates back to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. 

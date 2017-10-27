@@ -84,7 +84,7 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
  Because of language syntax differences, the parameter numbers in the localized message may not occur in the same sequence as in the original message.  
   
 ## Permissions  
- Requires membership in the **sysadmin** and **serveradmin** fixed server roles.  
+Requires membership in the **sysadmin** or **serveradmin** fixed server roles.  
   
 ## Examples  
   

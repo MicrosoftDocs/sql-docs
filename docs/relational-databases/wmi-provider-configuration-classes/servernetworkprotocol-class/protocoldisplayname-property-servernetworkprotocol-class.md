@@ -21,6 +21,7 @@ caps.latest.revision: 30
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # ProtocolDisplayName Property (ServerNetworkProtocol Class)
   Gets the display name of the server network protocol.  

@@ -20,6 +20,7 @@ caps.latest.revision: 21
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # SQLXML Managed Classes - SqlXmlParameter Object
   The SqlXmlParameter object supports these properties:  

@@ -45,7 +45,7 @@ manager: "jhubbard"
   
 2.  Create a destination table by running the following Transact-SQL command in the **AdventureWorks** database:  
   
-    ```  
+    ```sql
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,  
         [City] [nvarchar](30) NOT NULL)  
     ```  

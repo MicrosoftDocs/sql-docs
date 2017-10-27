@@ -21,6 +21,7 @@ caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Count Rows in a Table (Visual Database Tools)
 You can count rows in a table to determine:  

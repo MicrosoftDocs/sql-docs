@@ -21,6 +21,7 @@ caps.latest.revision: 21
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # OLE Automation Result Sets
   If an OLE Automation property or method returns data in an array with one or two dimensions, the array is returned to the client as a result set:  

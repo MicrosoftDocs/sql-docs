@@ -17,6 +17,7 @@ caps.latest.revision: 49
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # HTML Device Information Settings
 The following table lists the device information settings for rendering in HTML format.  

@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Options (SQL Server Object Explorer - Scripting Page)
 Use this page to set scripting options that apply to the following commands on object context menus in **Object Explorer**:  

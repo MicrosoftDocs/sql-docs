@@ -22,6 +22,7 @@ caps.latest.revision: 29
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Executing Templates That Contain XPath Queries (SQLXMLOLEDB Provider)
   This example shows how to use the following SQLXMLOLEDB Provider-specific properties:  

@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Create an Analysis Services Job Step
 This topic describes how to create and define [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent job steps in [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] that execute [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Analysis Services commands and queries by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)], [!INCLUDE[tsql](../../includes/tsql_md.md)] or SQL Server Management Objects.  

@@ -13,9 +13,9 @@ helpviewer_keywords:
   - "41307 (Database Engine error)"
 ms.assetid: 56f56410-b07d-4379-b01c-702c95761070
 caps.latest.revision: 9
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # MSSQLSERVER_41307

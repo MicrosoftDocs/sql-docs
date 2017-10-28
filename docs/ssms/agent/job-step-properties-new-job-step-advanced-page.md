@@ -16,6 +16,7 @@ caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Job Step Properties - New Job Step (Advanced Page)
 Use this page to view and change the properties of a [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent job step.  

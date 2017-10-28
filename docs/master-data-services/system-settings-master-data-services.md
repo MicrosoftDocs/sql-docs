@@ -1,4 +1,4 @@
-﻿---
+---
 title: "System Settings (Master Data Services) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -17,6 +17,7 @@ caps.latest.revision: 17
 author: "smartysanthosh"
 ms.author: "nagavo"
 manager: "craigg"
+ms.workload: "Inactive"
 ---
 # System Settings (Master Data Services)
   For all web applications and web services associated with a [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database, you can configure system settings.  

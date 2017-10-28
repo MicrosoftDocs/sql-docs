@@ -14,6 +14,7 @@ caps.latest.revision: 9
 author: "smartysanthosh"
 ms.author: "nagavo"
 manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Subscription View Formats (Master Data Services)
   Based on the entity or derived hierarchy you select, the following formats are available for your subscription view.  

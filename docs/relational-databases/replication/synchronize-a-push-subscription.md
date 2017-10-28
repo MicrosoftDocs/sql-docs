@@ -18,6 +18,7 @@ caps.latest.revision: 43
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Synchronize a Push Subscription
   This topic describes how to synchronize a push subscription in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [replication agents](../../relational-databases/replication/agents/replication-agents-overview.md), or Replication Management Objects (RMO).  

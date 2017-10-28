@@ -14,6 +14,7 @@ caps.latest.revision: 11
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Run Windows PowerShell from SQL Server Management Studio
   You can start Windows PowerShell sessions from **Object Explorer** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] launches Windows PowerShell, loads the **sqlps** module, and sets the path context to the associated node in the **Object Explorer** tree.  

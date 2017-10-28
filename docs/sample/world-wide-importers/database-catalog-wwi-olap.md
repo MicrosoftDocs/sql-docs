@@ -15,6 +15,7 @@ author: "BarbKess"
 ms.author: "barbkess"
 manager: "jhubbard"
 robots: noindex,nofollow
+ms.workload: "On Demand"
 ---
 # Database catalog
 The WideWorldImporters database contains all the transaction information and daily data for sales and purchases, as well as sensor data for vehicles and cold rooms.

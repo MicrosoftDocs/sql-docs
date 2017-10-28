@@ -17,6 +17,7 @@ caps.latest.revision: 9
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Secure Development (Replication)
   This section provides information to help you plan for a more secure replication topology.  

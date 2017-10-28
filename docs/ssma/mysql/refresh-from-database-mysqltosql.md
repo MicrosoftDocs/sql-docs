@@ -17,6 +17,7 @@ caps.latest.revision: 4
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Refresh from database (MySQLToSQL)
 The **Refresh from Database** dialog box lets you select which objects to refresh from the MySQL database. Rows in the dialog box are color coded based on the state of the metadata:  

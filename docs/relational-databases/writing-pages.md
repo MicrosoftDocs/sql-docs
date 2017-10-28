@@ -16,6 +16,7 @@ caps.latest.revision: 2
 author: "pmasl"
 ms.author: "pelopes"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Writing Pages
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]

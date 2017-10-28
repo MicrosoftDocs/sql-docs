@@ -1,8 +1,10 @@
 ---
 title: "Perform a Planned Manual Failover of an Availability Group (SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
+ms.date: "10/25/2017"
+ms.prod: 
+ - "sql-server-2016"
+ - "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -48,7 +50,10 @@ ms.workload: "On Demand"
 -   **Follow Up:**  [After Manually Failing Over an Availability Group](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
-  
+
+>[!IMPORTANT]
+>There are specific procedures to failover a read-scale availability group with no cluster manager. When an availability group has CLUSTER_TYPE = NONE, follow the procedures under [Fail over primary replica on read-scale availability group](#ReadScaleOutOnly).
+
 ###  <a name="Restrictions"></a> Limitations and Restrictions  
   
 -   A failover command returns as soon as the target secondary replica has accepted the command. However, database recovery occurs asynchronously after the availability group has finished failing over.  
@@ -123,10 +128,16 @@ ms.workload: "On Demand"
 -   [SQL Server PowerShell Provider](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
 -   [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)  
-  
+
 ##  <a name="FollowUp"></a> Follow Up: After Manually Failing Over an Availability Group  
  If you failed over outside of the [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)] of the availability group, adjust the quorum votes of the WSFC nodes to reflect your new availability group configuration. For more information, see [Windows Server Failover Clustering &#40;WSFC&#41; with SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md).  
   
+<a name = "ReadScaleOutOnly"><a/>
+
+##Fail over primary replica on read-scale  availability group
+
+[!INCLUDE[Force Failover](../../../includes/ss-force-failover-read-scale-out.md)]
+
 ## See Also  
  [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Failover and Failover Modes &#40;Always On Availability Groups&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)   

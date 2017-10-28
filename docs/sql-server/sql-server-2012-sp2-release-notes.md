@@ -13,6 +13,7 @@ caps.latest.revision: 6
 author: "craigg-msft"
 ms.author: "craigg"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # SQL Server 2012 SP2 Release Notes
 These Release Notes describe issues you need to know before you install or troubleshoot SQL Server 2012 Service Pack 2. Release Notes are available online only, not on the installation media. They are updated periodically as issues are discovered. See [bugs that are fixed in SQL Server 2012 Service Pack 2](http://support.microsoft.com/KB/2958429) for more information.  

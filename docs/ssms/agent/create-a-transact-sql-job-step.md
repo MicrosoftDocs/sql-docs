@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Create a Transact-SQL Job Step
 This topic describes how to create a [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent job step that executes [!INCLUDE[tsql](../../includes/tsql_md.md)] scripts in [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)], [!INCLUDE[tsql](../../includes/tsql_md.md)], or SQL Server Management Objects.  

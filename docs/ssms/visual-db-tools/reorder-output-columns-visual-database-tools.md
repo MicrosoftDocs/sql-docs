@@ -17,6 +17,7 @@ caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Reorder Output Columns (Visual Database Tools)
 The order in which you add data columns to a Select query determines the order in which they appear in the results. The first column you add to the query appears leftmost in the results, the second column next, and so on.  

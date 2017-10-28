@@ -20,6 +20,7 @@ caps.latest.revision: 84
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # High Availability Solutions (SQL Server)
   This topic introduces several [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] high-availability solutions that improve the availability of servers or databases. A high-availability solution masks the effects of a hardware or software failure and maintains the availability of applications so that the perceived downtime for users is minimized.    

@@ -13,6 +13,7 @@ ms.topic: "get-started-article"
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "On Demand"
 ---
 
 # Reporting Services report server

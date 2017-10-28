@@ -17,6 +17,7 @@ caps.latest.revision: 15
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 
 # My Settings for Power BI Integration (web portal)

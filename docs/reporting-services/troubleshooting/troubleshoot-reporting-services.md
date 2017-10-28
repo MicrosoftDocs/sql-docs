@@ -15,6 +15,7 @@ caps.latest.revision: 14
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Troubleshoot Reporting Services
   The topics in this section help identify and troubleshoot issues with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  

@@ -21,6 +21,7 @@ caps.latest.revision: 37
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # sp_add_log_file_recover_suspect_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

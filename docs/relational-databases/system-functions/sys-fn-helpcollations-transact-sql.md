@@ -23,6 +23,7 @@ caps.latest.revision: 38
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # sys.fn_helpcollations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

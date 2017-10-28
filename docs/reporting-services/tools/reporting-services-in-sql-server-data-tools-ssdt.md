@@ -17,6 +17,7 @@ caps.latest.revision: 76
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "erikre"
+ms.workload: "Active"
 ---
 
 # Reporting Services in SQL Server Data Tools (SSDT)

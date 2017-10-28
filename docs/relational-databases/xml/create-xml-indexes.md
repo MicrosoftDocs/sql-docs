@@ -17,6 +17,7 @@ caps.latest.revision: 19
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Create XML Indexes
   This topic describes how to create primary and secondary XML indexes.  

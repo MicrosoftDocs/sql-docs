@@ -16,6 +16,7 @@ caps.latest.revision: 40
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Creating and Updating Statistics
   In SMO, statistical information about processing queries in the database can be collected by using the <xref:Microsoft.SqlServer.Management.Smo.Statistic> object.  

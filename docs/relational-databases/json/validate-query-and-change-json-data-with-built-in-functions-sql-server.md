@@ -114,7 +114,7 @@ In this sample JSON text, data members "a" and "c" are string values, while data
 |**$.c**|hi|NULL or error|  
   
 ## Test JSON_VALUE and JSON_QUERY with the AdventureWorks sample database  
-Test the built-in functions described in this topic by running the following examples with the AdventureWorks sample database, which contains JSON data. To get the AdventureWorks sample database, [click here](http://www.microsoft.com/en-us/download/details.aspx?id=49502).  
+Test the built-in functions described in this topic by running the following examples with the AdventureWorks sample database. For info about where to get AdventureWorks, and about how to add JSON data for testing by running a script, see [Test drive built-in JSON support](json-data-sql-server.md#test-drive-built-in-json-support).
   
 In the following examples, the `Info` column in the `SalesOrder_json` table contains JSON text.  
   

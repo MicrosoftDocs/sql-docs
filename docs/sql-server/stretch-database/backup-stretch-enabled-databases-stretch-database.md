@@ -18,6 +18,7 @@ caps.latest.revision: 41
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Backup Stretch-enabled databases (Stretch Database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

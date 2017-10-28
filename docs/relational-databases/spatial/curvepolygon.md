@@ -14,6 +14,7 @@ caps.latest.revision: 18
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # CurvePolygon
   A **CurvePolygon** is a topologically closed surface defined by an exterior bounding ring and zero or more interior rings  

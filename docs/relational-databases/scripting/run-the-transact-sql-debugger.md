@@ -26,6 +26,7 @@ caps.latest.revision: 8
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Run the Transact-SQL Debugger
   You can start the [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger after you open a [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor window. Then, you can run your [!INCLUDE[tsql](../../includes/tsql-md.md)] code in debug mode until you stop the debugger. You can set options to customize how the debugger runs.  

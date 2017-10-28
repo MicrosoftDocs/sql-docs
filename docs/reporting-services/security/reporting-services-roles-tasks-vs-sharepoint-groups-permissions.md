@@ -23,6 +23,7 @@ caps.latest.revision: 19
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Reporting Services Roles-Tasks vs. SharePoint Groups-Permissions
   This topic compares role and task based authorization features in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] native mode to the security features in SharePoint products. This topic compares terminology and characteristics of roles, tasks, SharePoint groups, permission levels, and permissions.  

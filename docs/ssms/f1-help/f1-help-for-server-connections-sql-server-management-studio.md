@@ -20,6 +20,7 @@ caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # F1 Help for Server Connections (SQL Server Management Studio)
 This section contains the F1 Help for the **Connect to Server** dialog box pages in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].  

@@ -12,6 +12,7 @@ ms.topic: "get-started-article"
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "Active"
 ---
 
 # What's new in SQL Server Reporting Services (SSRS)

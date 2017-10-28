@@ -26,6 +26,7 @@ caps.latest.revision: 49
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # sys.database_mirroring_endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

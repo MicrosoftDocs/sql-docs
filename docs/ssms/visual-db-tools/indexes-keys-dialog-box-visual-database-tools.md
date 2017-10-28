@@ -17,6 +17,7 @@ caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Indexes - Keys Dialog Box (Visual Database Tools)
 Use this dialog box to create or modify indexes, primary keys, and unique keys. To access this dialog box, open the table definition for the table with the index or key, right-click the table definition grid, and then click **Indexes/Keys**.  

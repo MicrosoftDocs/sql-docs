@@ -23,6 +23,7 @@ caps.latest.revision: 60
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # sys.partitions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-_md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]

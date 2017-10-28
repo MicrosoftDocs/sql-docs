@@ -23,6 +23,7 @@ caps.latest.revision: 45
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Validate Replicated Data
   Transactional and merge replication allow you to validate that data at the Subscriber matches data at the Publisher. Validation can be performed for specific subscriptions or for all subscriptions to a publication. Specify one of the following validation types and the Distribution Agent or Merge Agent will validate data the next time it runs:  

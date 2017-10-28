@@ -21,6 +21,7 @@ caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Replace Template Parameters
 Templates contain parameters that can be replaced by implementation-specific values each time the template is used. After opening a template in a code editor, you can replace the parameters with values relevant to your implementation.  

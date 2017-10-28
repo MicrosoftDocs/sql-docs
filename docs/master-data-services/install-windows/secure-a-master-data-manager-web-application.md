@@ -14,6 +14,7 @@ caps.latest.revision: 9
 author: "smartysanthosh"
 ms.author: "nagavo"
 manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Secure a Master Data Manager Web Application
   You can secure the [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] web application with HTTPS.  

@@ -15,6 +15,7 @@ caps.latest.revision: 8
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Add or Delete a Group in a Chart (Report Builder and SSRS)
 In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] paginated reports, click in the chart data region to display the **Chart Data** pane. Create groups by dragging dataset fields to the **Category Groups** and **Series Groups** areas. To add nested groups, add multiple fields to the area.  

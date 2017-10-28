@@ -16,6 +16,7 @@ caps.latest.revision: 32
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Implement DDL Triggers
   This topic provides information to help you create DDL triggers, modify DDL triggers, and disable or drop DDL triggers.  

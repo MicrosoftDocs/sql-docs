@@ -8,6 +8,7 @@ ms.date: 09/14/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
+ms.workload: "Inactive"
 ---
 
 # Performance best practices and configuration guidelines for SQL Server 2017 on Linux

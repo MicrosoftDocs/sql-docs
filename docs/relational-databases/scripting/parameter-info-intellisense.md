@@ -19,6 +19,7 @@ caps.latest.revision: 33
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Parameter Info (IntelliSense)
   The [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense **Parameter Info** option opens a parameters list that provides information about the number, names, and types of the parameters that are required by a function or stored procedure. The parameter in bold indicates the next parameter that is required as you type a function or stored procedure.  

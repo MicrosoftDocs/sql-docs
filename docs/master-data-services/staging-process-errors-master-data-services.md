@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: "smartysanthosh"
 ms.author: "nagavo"
 manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Staging Process Errors (Master Data Services)
   When the staging process is complete, all processed records in the staging tables have a value in the ErrorCode column. These values are listed in the following table.  

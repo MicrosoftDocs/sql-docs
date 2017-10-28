@@ -22,6 +22,7 @@ caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Manage Events
 You can forward to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] all event messages that meet or exceed a specific error severity level. This is called *event forwarding*. The forwarding server is a dedicated server that can also be a master server. You can use event forwarding to centralize alert management for a group of servers, thereby reducing the workload on heavily used servers.  

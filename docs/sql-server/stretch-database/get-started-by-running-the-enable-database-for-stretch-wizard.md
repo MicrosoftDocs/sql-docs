@@ -28,6 +28,7 @@ caps.latest.revision: 39
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Get started by running the Enable Database for Stretch Wizard
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

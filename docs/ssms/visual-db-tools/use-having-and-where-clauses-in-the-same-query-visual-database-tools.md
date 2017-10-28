@@ -24,6 +24,7 @@ caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # Use HAVING and WHERE Clauses in the Same Query (Visual Database Tools)
 In some instances, you might want to exclude individual rows from groups (using a WHERE clause) before applying a condition to groups as a whole (using a HAVING clause).  

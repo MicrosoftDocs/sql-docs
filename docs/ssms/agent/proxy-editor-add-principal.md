@@ -16,6 +16,7 @@ caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Proxy Editor - Add Principal
 Use this page to grant server principals access to a [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent proxy account.  

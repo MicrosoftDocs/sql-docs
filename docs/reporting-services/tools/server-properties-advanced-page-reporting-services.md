@@ -17,6 +17,7 @@ caps.latest.revision: 18
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "On Demand"
 ---
 
 # Server Properties (Advanced Page) - Reporting Services

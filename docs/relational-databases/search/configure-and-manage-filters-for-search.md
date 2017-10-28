@@ -17,6 +17,7 @@ caps.latest.revision: 68
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Configure and Manage Filters for Search
   Indexing documents in an **varbinary**, **varbinary(max)**, **image**, or **xml** data type column requires extra processing. This processing must be performed by a filter. The filter extracts the textual information from the document (removing the formatting). The filter then sends the text to the word-breaker component for the language associated with the table column.  

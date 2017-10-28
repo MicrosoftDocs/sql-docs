@@ -21,6 +21,7 @@ caps.latest.revision: 32
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # ProtocolName Property (SqlServerAlias Class)
   Gets the name of the protocol used by the server connection alias.  

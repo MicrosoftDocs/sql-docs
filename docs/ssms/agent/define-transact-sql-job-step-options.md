@@ -18,6 +18,7 @@ caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Define Transact-SQL Job Step Options
 This topic describes how to define options for [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent [!INCLUDE[tsql](../../includes/tsql_md.md)] job steps in [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] or SQL Server Management Objects.  

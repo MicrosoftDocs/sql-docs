@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Check Constraint Expression Dialog Box (Visual Database Tools)
 When you attach a check constraint to a table or column, you must include an SQL expression. Type the check constraint expression in the box provided.  

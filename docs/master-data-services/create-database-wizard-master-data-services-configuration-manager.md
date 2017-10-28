@@ -16,6 +16,7 @@ caps.latest.revision: 10
 author: "smartysanthosh"
 ms.author: "nagavo"
 manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Create Database Wizard (Master Data Services Configuration Manager)
   Use the **Create Database** wizard to create a [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database.  

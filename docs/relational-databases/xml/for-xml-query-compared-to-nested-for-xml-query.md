@@ -17,6 +17,7 @@ caps.latest.revision: 11
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # FOR XML Query Compared to Nested FOR XML Query
   This topic compares a single-level FOR XML query to a nested FOR XML query. One of the benefits of using nested FOR XML queries is that you can specify a combination of attribute-centric and element-centric XML for query results. The example demonstrates this.  

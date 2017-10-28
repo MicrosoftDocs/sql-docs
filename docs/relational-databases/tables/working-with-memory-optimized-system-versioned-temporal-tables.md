@@ -15,6 +15,7 @@ caps.latest.revision: 12
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Working with Memory-Optimized System-Versioned Temporal Tables
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

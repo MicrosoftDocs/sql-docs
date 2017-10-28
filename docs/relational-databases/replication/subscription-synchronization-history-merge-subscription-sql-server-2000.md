@@ -16,6 +16,7 @@ caps.latest.revision: 19
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Subscription, Synchronization History (Merge Subscription, SQL Server 2000)
   The **Synchronization History** tab displays detailed information on the Merge Agent, including status, history, informational messages, and any error messages.  

@@ -22,6 +22,7 @@ caps.latest.revision: 31
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Securing SQL Server
   Securing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can be viewed as a series of steps, involving four areas: the platform, authentication, objects (including data), and applications that access the system. The following topics will guide you through creating and implementing an effective security plan.  

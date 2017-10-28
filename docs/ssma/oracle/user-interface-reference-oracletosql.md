@@ -14,6 +14,7 @@ caps.latest.revision: 10
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "v-thobro"
+ms.workload: "Inactive"
 ---
 # User Interface Reference (OracleToSQL)
 This section includes Help topics for [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) for Oracle.  

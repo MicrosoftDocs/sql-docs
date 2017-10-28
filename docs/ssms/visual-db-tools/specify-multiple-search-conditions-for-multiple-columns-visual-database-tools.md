@@ -20,6 +20,7 @@ caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Specify Multiple Search Conditions for Multiple Columns (Visual Database Tools)
 You can expand or narrow the scope of your query by including several data columns as part of your search condition. For example, you might want to:  

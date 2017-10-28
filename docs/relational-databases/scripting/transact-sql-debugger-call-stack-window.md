@@ -18,6 +18,7 @@ caps.latest.revision: 12
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Transact-SQL Debugger - Call Stack Window
   The **Call Stack** window displays the modules on the call stack, and the data types and values of any parameters that are passed to the modules. [!INCLUDE[tsql](../../includes/tsql-md.md)] modules include stored procedures, functions, and triggers. To display the call stack, you must be in debug mode.  

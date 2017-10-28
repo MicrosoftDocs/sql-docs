@@ -14,6 +14,7 @@ caps.latest.revision: 41
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # sqlcmd - Start the Utility
   The [sqlcmd Utility](../../tools/sqlcmd-utility.md) lets you enter [!INCLUDE[tsql](../../includes/tsql-md.md)] statements, system procedures, and script files at the command prompt, in Query Editor in SQLCMD mode, in a Windows script file or in an operating system (Cmd.exe) job step of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job.

@@ -19,6 +19,7 @@ caps.latest.revision: 7
 author: "smartysanthosh"
 ms.author: "nagavo"
 manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Add Attributes to a Change Tracking Group (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], add attributes to a change tracking group when you want to track changes to the attribute's values.  

@@ -17,6 +17,7 @@ caps.latest.revision: 18
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Event Notifications
   Event notifications send information about events to a [!INCLUDE[ssSB](../../includes/sssb-md.md)] service. Event notifications execute in response to a variety of [!INCLUDE[tsql](../../includes/tsql-md.md)] data definition language (DDL) statements and SQL Trace events by sending information about these events to a [!INCLUDE[ssSB](../../includes/sssb-md.md)] service.  

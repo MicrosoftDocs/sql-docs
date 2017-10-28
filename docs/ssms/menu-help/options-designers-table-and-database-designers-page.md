@@ -16,6 +16,7 @@ caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Options (Designers - Table and Database Designers Page)
 Use this page to determine the default behavior of the designer. To access the settings, on the **Tools** menu, click **Options**, expand the **Designers** folder, and click **Table Designer**.  

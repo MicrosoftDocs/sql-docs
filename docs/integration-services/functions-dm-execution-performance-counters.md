@@ -14,6 +14,7 @@ caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Functions - dm_execution_performance_counters
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]

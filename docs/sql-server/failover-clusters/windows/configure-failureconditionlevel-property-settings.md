@@ -14,6 +14,7 @@ caps.latest.revision: 29
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Configure FailureConditionLevel Property Settings
   Use the FailureConditionLevel property to set the conditions for the Always On Failover Cluster Instance (FCI) to fail over or restart. Changes to this property are applied immediately without requiring a restart of the Windows Server Failover Cluster (WSFC) service or the FCI resource.  

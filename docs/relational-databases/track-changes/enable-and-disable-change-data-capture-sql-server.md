@@ -19,6 +19,7 @@ caps.latest.revision: 13
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # Enable and Disable Change Data Capture (SQL Server)
   This topic describes how to enable and disable change data capture for a database and a table.  

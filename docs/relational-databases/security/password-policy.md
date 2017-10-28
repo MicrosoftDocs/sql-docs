@@ -37,6 +37,7 @@ caps.latest.revision: 41
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Password Policy
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can use Windows password policy mechanisms. The password policy applies to a login that uses [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentication, and to a contained database user with password.  

@@ -21,6 +21,7 @@ caps.latest.revision: 61
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # SQL Server PowerShell Provider
   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider for Windows PowerShell exposes the hierarchy of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objects in paths similar to file system paths. You can use the paths to locate an object, and then use methods from the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Object (SMO) models to perform actions on the objects.  

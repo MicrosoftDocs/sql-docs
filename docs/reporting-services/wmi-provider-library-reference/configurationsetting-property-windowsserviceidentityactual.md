@@ -22,6 +22,7 @@ caps.latest.revision: 16
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # ConfigurationSetting Property - WindowsServiceIdentityActual
   The identity that the Report Server Windows service is running under. Read-only.  

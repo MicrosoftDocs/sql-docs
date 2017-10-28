@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: "smartysanthosh"
 ms.author: "nagavo"
 manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Master Data Services Database
   The database contains all of the information for the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] system. It is central to a [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] deployment. The [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database:  

@@ -18,6 +18,7 @@ caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Choose Name Dialog Box (Visual Database Tools)
 This dialog box appears when you choose **Save \<TableName**> , **Save <DiagramName>**, or **Save <ViewName>** from the **File** menu.  

@@ -20,6 +20,7 @@ caps.latest.revision: 22
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Lesson 2-2 - Populating a Hierarchical Table Using Hierarchical Methods
 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] has 8 employees working in the Marketing department. The employee hierarchy looks like this:  

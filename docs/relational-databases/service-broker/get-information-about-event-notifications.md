@@ -18,6 +18,7 @@ caps.latest.revision: 22
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Get Information About Event Notifications
   The following catalog views are available to query metadata about event notifications.  

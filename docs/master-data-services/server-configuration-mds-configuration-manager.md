@@ -17,6 +17,7 @@ caps.latest.revision: 11
 author: "smartysanthosh"
 ms.author: "nagavo"
 manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Server Configuration (MDS Configuration Manager)
   Use the **Server Configuration** page to view configuration information for the local server computer.  

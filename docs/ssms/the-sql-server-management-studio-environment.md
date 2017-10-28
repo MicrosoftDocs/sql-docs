@@ -16,6 +16,7 @@ caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # The SQL Server Management Studio Environment
 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] provides a rich environment for managing and developing queries in [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)].  

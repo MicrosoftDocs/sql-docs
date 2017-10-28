@@ -18,6 +18,7 @@ caps.latest.revision: 21
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # About Change Data Capture (SQL Server)
   Change data capture records insert, update, and delete activity that is applied to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table. This makes the details of the changes available in an easily consumed relational format. Column information and the metadata that is required to apply the changes to a target environment is captured for the modified rows and stored in change tables that mirror the column structure of the tracked source tables. Table-valued functions are provided to allow systematic access to the change data by consumers.  

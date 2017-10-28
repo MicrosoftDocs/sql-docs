@@ -17,6 +17,7 @@ caps.latest.revision: 9
 author: "smartysanthosh"
 ms.author: "nagavo"
 manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Model Object Permissions (Master Data Services)
   Model object permissions are mandatory. They determine the attributes a user can access in the **Explorer** functional area of the UI.  

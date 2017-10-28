@@ -20,6 +20,7 @@ caps.latest.revision: 35
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Clustered Property (SqlService Class)
   Gets the Boolean property value that specifies whether the service is part of a clustered instance.  

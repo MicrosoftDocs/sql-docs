@@ -16,6 +16,7 @@ caps.latest.revision: 12
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "Active"
 ---
 # Integrating Reporting Services Using ReportViewer Controls - Get Started
 

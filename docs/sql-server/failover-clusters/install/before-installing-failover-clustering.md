@@ -18,6 +18,7 @@ caps.latest.revision: 141
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Before Installing Failover Clustering
   Before you install a SQL Server failover cluster, you must select the hardware and the operating system on which SQL Server will run. You must also configure Windows Server Failover Clustering (WSFC), and review network, security, and considerations for other software that will run on your failover cluster.  

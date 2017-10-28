@@ -25,6 +25,7 @@ caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Monitor and Respond to Events
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent can monitor and automatically respond to *events*, such as messages from [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], specific performance conditions, and Windows Management Instrumentation (WMI) events.  

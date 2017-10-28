@@ -21,6 +21,7 @@ caps.latest.revision: 29
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # PropertyNumValue Property (SqlServiceAdvancedProperty Class)
   Gets the numeric value of the advanced property.  

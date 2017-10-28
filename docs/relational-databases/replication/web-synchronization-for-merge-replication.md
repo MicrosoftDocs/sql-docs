@@ -21,6 +21,7 @@ caps.latest.revision: 45
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Web Synchronization for Merge Replication
   Web synchronization for merge replication lets you replicate data by using the HTTPS protocol, and is useful for the following scenarios:  

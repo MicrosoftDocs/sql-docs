@@ -9,6 +9,7 @@ ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
+ms.workload: "Active"
 ---
 # Release notes for SQL Server 2017 on Linux
 

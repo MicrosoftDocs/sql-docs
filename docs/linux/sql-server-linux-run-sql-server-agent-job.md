@@ -9,6 +9,7 @@ ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 1d93d95e-9c89-4274-9b3f-fa2608ec2792
+ms.workload: "Inactive"
 ---
 # Create and run SQL Server Agent jobs on Linux
 

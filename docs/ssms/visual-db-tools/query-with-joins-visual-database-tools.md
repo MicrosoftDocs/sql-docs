@@ -22,6 +22,7 @@ caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Query with Joins (Visual Database Tools)
 A query result can include data from multiple tables or table-valued objects. To combine data from multiple table-valued objects, you use the JOIN operation from SQL.  

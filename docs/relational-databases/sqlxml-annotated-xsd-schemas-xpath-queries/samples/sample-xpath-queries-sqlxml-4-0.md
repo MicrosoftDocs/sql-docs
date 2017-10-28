@@ -20,6 +20,7 @@ caps.latest.revision: 24
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Sample XPath Queries (SQLXML 4.0)
   This section provides examples of XPath queries for SQLXML 4.0. For illustration purposes, these example XPath queries are specified in a template executed using ADO. Therefore, you must use a mapping schema file, SampleSchema1.xml, which is also provided in this section. Save this file in the directory where your templates are stored.  

@@ -19,6 +19,7 @@ caps.latest.revision: 31
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # Create a New Registered Server (SQL Server Management Studio)
   This topic describes how to save the connection information for servers that you access frequently, by registering the server in the Registered Servers component of [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. A server can be registered before connecting, or when connecting from Object Explorer. There is a special menu option to register the server instances on the local computer.  

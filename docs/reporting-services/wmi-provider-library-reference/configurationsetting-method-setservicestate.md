@@ -22,6 +22,7 @@ caps.latest.revision: 20
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # ConfigurationSetting Method - SetServiceState
   Turns the Report Server Windows and Web services on and off.  

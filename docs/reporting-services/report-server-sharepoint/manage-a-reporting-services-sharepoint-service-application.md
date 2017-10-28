@@ -13,6 +13,7 @@ ms.topic: "article"
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Manage a Reporting Services SharePoint service application
 

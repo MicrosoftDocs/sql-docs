@@ -13,6 +13,7 @@ ms.topic: "article"
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "On Demand"
 ---
 # Install the first Report Server in SharePoint mode
 

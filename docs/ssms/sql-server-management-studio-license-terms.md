@@ -14,6 +14,7 @@ caps.latest.revision: 9
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # SQL Server Management Studio - License Terms
 ### Available Languages:  

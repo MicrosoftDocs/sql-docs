@@ -15,6 +15,7 @@ author: "BarbKess"
 ms.author: "barbkess"
 manager: "jhubbard"
 robots: noindex,nofollow
+ms.workload: "On Demand"
 ---
 # WideWorldImportersDW Installation and configuration
 Installation and configuration instructions for the WideWorldImportersDW database.

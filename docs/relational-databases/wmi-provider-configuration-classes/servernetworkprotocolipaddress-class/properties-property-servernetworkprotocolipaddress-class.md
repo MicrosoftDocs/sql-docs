@@ -21,6 +21,7 @@ caps.latest.revision: 30
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Properties Property (ServerNetworkProtocolIPAddress Class)
   Gets the properties associated with an IP address.  

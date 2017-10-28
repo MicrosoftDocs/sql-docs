@@ -23,6 +23,7 @@ caps.latest.revision:
 author: "tmullaney"
 ms.author: "thmullan;rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # sys.sp_add_trusted_assembly (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]

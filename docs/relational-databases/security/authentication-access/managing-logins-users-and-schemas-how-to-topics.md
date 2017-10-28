@@ -16,6 +16,7 @@ caps.latest.revision: 18
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Managing Logins, Users, and Schemas How-to Topics
   This page provides links to topics that show you how to manage [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] logins, database users, and database schemas, as well as how to join a role and grant permissions to a principal.  

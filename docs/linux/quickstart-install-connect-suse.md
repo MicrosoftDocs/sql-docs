@@ -9,6 +9,7 @@ ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
+ms.workload: "On Demand"
 ---
 # Install SQL Server and create a database on SUSE Linux Enterprise Server
 

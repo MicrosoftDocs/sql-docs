@@ -18,6 +18,7 @@ caps.latest.revision: 10
 author: "smartysanthosh"
 ms.author: "nagavo"
 manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Create a Subscription View to Export Data (Master Data Services)
   Create a subscription view to export Master Data Services data to subscribing systems. You're creating a view of your data in the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database.  

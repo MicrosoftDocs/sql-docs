@@ -22,6 +22,7 @@ caps.latest.revision: 34
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Generate an Inline XSD Schema
   In a FOR XML clause, you can request that your query return an inline schema together with the query results. If you want an XDR schema, you use the XMLDATA keyword in the FOR XML clause. If you want an XSD schema, you use the XMLSCHEMA keyword.  

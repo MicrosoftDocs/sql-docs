@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: "smartysanthosh"
 ms.author: "nagavo"
 manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Unlock a Version (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], unlock a version of a model to enable changes to the model's members and their attributes.  

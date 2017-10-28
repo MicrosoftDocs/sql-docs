@@ -8,6 +8,7 @@ ms.technology:
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Deploy an SSIS project from SSMS with Transact-SQL
 

@@ -8,6 +8,7 @@ ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
+ms.workload: "Inactive"
 ---
 # Change repositories from the preview repository to the GA repository
 

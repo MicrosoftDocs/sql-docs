@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: "smartysanthosh"
 ms.author: "nagavo"
 manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Delete a Subscription View (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], delete a subscription view when it is no longer needed. Deleting a subscription view in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] removes the view from the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database. You can also edit a subscription view.  

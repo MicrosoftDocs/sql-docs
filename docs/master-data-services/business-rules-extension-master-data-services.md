@@ -15,6 +15,7 @@ caps.latest.revision: 16
 author: "smartysanthosh"
 ms.author: "nagavo"
 manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Business Rules Extension (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], you can apply user-defined SQL scripts as an extension of  pre-defined conditions and actions.  

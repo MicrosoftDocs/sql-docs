@@ -15,6 +15,7 @@ caps.latest.revision: 6
 author: "smartysanthosh"
 ms.author: "nagavo"
 manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Create an Index (Master Data Services)
   Create a custom index on a list of attributes that you query frequently, to improve query performance.  

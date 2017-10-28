@@ -27,6 +27,7 @@ caps.latest.revision: 81
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Coding and Debugging the Script Task
   After configuring the Script task in the **Script Task Editor**, you write your custom code in the Script task development environment.  

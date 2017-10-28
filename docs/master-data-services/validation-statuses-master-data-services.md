@@ -14,6 +14,7 @@ caps.latest.revision: 7
 author: "smartysanthosh"
 ms.author: "nagavo"
 manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Validation Statuses (Master Data Services)
   In the **Version Management** functional area, on the **Validate Version** page, the following statuses are possible.  

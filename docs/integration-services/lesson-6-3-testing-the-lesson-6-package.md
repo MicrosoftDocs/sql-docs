@@ -16,6 +16,7 @@ caps.latest.revision: 4
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Lesson 6-3 - Testing the Lesson 6 Package
 At run time, your package will obtain the value for the Directory property from the VarFolderName parameter.  

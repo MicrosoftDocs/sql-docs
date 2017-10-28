@@ -15,6 +15,7 @@ caps.latest.revision: 7
 author: "smartysanthosh"
 ms.author: "nagavo"
 manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Member Revision History (Master Data Services)
   A member revision history is recorded each time a member is changed, if the entity transaction log type is member.  

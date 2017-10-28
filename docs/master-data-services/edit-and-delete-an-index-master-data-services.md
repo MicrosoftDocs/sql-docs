@@ -15,6 +15,7 @@ caps.latest.revision: 5
 author: "smartysanthosh"
 ms.author: "nagavo"
 manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Edit and Delete an Index (Master Data Services)
   You can edit and delete an index that you’ve created on attributes.  

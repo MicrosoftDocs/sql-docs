@@ -28,6 +28,7 @@ caps.latest.revision: 13
 author: "jeannt"
 ms.author: "jeannt"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # EndSession Element (XMLA)
   Uses the SOAP header in a SOAP request message to end an existing session on an instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  

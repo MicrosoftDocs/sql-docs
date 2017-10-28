@@ -1,4 +1,4 @@
-﻿---
+---
 title: "OUTPUT Clause (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2017"
@@ -34,6 +34,7 @@ caps.latest.revision: 94
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # OUTPUT Clause (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -94,7 +95,7 @@ manager: "jhubbard"
   
 -   Have CHECK constraints or enabled rules.  
   
- *column_list*  
+*column_list*  
  Is an optional list of column names on the target table of the INTO clause. It is analogous to the column list allowed in the [INSERT](../../t-sql/statements/insert-transact-sql.md) statement.  
   
  *scalar_expression*  

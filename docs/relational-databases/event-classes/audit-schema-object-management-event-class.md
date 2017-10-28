@@ -16,6 +16,7 @@ caps.latest.revision: 20
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Audit Schema Object Management Event Class
   The **Audit Schema Object Management** event class occurs when server objects are created, altered, or dropped.  

@@ -24,6 +24,7 @@ caps.latest.revision: 12
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # DataSourceImpersonationInfo Element (ASSL)
   Contains the information used to determine impersonation behavior when connecting to the data source for a [Database](../../../analysis-services/scripting/objects/database-element-assl.md) element.  

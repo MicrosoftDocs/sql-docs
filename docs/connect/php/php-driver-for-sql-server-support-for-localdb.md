@@ -15,6 +15,7 @@ caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # PHP Driver for SQL Server Support for LocalDB
 

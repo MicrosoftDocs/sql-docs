@@ -15,6 +15,7 @@ caps.latest.revision: 8
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Set Synchronization Scope (Report Builder and SSRS)
   In a [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] paginated report, indicators convey data values by synchronizing across the range of indicator values within a specified scope.   

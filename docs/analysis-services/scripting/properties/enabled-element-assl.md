@@ -26,6 +26,7 @@ caps.latest.revision: 27
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Enabled Element (ASSL)
   Indicates whether the parent element is enabled.  

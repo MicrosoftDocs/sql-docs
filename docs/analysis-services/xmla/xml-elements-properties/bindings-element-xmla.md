@@ -28,6 +28,7 @@ caps.latest.revision: 11
 author: "jeannt"
 ms.author: "jeannt"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Bindings Element (XMLA)
   Contains a collection of [Binding](../../../analysis-services/xmla/xml-elements-properties/binding-element-xmla.md) elements for the parent [Batch](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md) or [Process](../../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md) element.  

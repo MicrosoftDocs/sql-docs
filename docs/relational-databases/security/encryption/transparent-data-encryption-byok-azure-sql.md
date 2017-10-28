@@ -11,7 +11,7 @@ ms.assetid: ""
 ms.service: "sql-database"
 ms.custom: 
   - "security"
-ms.workload: ""
+ms.workload: "Inactive"
 ms.tgt_pltfrm: ""
 ms.devlang: "na"
 ms.topic: "article"

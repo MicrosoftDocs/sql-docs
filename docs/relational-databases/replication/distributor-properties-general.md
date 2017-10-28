@@ -18,6 +18,7 @@ caps.latest.revision: 22
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Distributor Properties, General
   The **General** page of the **Distributor Properties** dialog box allows you to add and delete distribution databases and set distribution database properties.  

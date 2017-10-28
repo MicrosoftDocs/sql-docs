@@ -26,6 +26,7 @@ caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # QueryDefinition Element (ASSL)
   Contains an opaque expression for a query associated with a [DataSource](../../../analysis-services/scripting/objects/datasource-element-assl.md) element in a [QueryBinding](../../../analysis-services/scripting/data-type/querybinding-data-type-assl.md) element.  

@@ -12,6 +12,7 @@ ms.topic: "article"
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Architecture overview for Machine Learning Services with Python
 

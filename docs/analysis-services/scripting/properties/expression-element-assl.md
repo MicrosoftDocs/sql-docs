@@ -26,6 +26,7 @@ caps.latest.revision: 36
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Expression Element (ASSL)
   Contains a Multidimensional Expressions (MDX) expression that defines the contents of the parent element.  

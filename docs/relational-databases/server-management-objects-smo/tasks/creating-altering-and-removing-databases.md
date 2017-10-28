@@ -19,6 +19,7 @@ caps.latest.revision: 41
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Creating, Altering, and Removing Databases
   In SMO, a database is represented by the <xref:Microsoft.SqlServer.Management.Smo.Database> object.  

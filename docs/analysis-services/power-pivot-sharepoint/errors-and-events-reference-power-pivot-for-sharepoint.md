@@ -14,6 +14,7 @@ caps.latest.revision: 8
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Errors and Events Reference (Power Pivot for SharePoint)
   This section provides information about errors and events for [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint. Errors in this section are identified by the error message text that appears in a log or error window.  

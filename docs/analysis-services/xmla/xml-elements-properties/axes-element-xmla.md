@@ -29,6 +29,7 @@ caps.latest.revision: 21
 author: "jeannt"
 ms.author: "jeannt"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Axes Element (XMLA)
   Contains a collection of [Axis](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md) elements representing axis data contained by a [root](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md) element that uses the [MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md) data type.  

@@ -19,6 +19,7 @@ caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Group Object (ADOX)
 Represents a group account that has access permissions within a secured database.  

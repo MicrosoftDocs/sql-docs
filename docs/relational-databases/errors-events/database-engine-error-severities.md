@@ -20,6 +20,7 @@ caps.latest.revision: 21
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Database Engine Error Severities
   When an error is raised by the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], the severity of the error indicates the type of problem encountered by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

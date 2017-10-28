@@ -28,6 +28,7 @@ caps.latest.revision: 16
 author: "jeannt"
 ms.author: "jeannt"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # ParentObject Element (XMLA)
   Contains the identifier of the parent object under which to create the objects defined by the parent [Create](../../../analysis-services/xmla/xml-elements-commands/create-element-xmla.md) element.  

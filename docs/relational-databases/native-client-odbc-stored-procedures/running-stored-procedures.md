@@ -19,6 +19,7 @@ caps.latest.revision: 36
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Running Stored Procedures
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]

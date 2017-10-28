@@ -23,6 +23,7 @@ caps.latest.revision: 9
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # sys.dm_os_host_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-sslinux-xxxx-xxxx-xxx](../../includes/tsql-appliesto-sslinux-xxxx-xxxx-xxx.md)]

@@ -14,6 +14,7 @@ caps.latest.revision: 18
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Publisher Properties
   This section contains information on Publisher properties available at the Distributor and the Publisher:  

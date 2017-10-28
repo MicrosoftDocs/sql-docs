@@ -26,6 +26,7 @@ caps.latest.revision: 38
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # DataSourceViewBinding Data Type (ASSL)
   Defines a derived data type that represents a binding between a data source view and the parent element.  

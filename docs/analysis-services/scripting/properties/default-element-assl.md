@@ -26,6 +26,7 @@ caps.latest.revision: 35
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Default Element (ASSL)
   Determines whether the [DrillThroughAction](../../../analysis-services/scripting/data-type/drillthroughaction-data-type-assl.md) is the default drillthrough action.  

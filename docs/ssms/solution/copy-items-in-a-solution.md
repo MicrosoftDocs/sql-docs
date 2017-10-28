@@ -18,6 +18,7 @@ caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Copy Items in a Solution
 You can copy items using Solution Explorer or Windows Explorer.  

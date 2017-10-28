@@ -18,6 +18,7 @@ caps.latest.revision: 41
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "On Demand"
 ---
 # MDX Member Properties - Intrinsic Member Properties
   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] exposes intrinsic properties on dimension members that you can include in a query to return additional data or metadata for use in a custom application, or to assist in model investigation or construction. If you are using the SQL Server client tools, you can view intrinsic properties in SQL Server Management Studio (SSMS).  

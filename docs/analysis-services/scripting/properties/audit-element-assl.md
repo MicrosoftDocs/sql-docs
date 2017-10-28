@@ -26,6 +26,7 @@ caps.latest.revision: 39
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Audit Element (ASSL)
   Specifies that a [Trace](../../../analysis-services/scripting/objects/trace-element-assl.md) element cannot drop any events, even if this results in degraded performance on the server.  

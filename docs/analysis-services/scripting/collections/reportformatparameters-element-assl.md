@@ -26,6 +26,7 @@ caps.latest.revision: 30
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # ReportFormatParameters Element (ASSL)
   Contains the collection of [ReportFormatParameter](../../../analysis-services/scripting/objects/reportformatparameter-element-asl.md) elements for a [ReportAction](../../../analysis-services/scripting/data-type/reportaction-data-type-assl.md) element.  

@@ -15,6 +15,7 @@ caps.latest.revision: 34
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Getting Started with SQL Server Machine Learning
 

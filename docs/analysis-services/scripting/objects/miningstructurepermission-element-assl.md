@@ -26,6 +26,7 @@ caps.latest.revision: 43
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # MiningStructurePermission Element (ASSL)
   Defines the permissions that members of a [Role](../../../analysis-services/scripting/objects/role-element-assl.md) element have on an individual [MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md) element.  

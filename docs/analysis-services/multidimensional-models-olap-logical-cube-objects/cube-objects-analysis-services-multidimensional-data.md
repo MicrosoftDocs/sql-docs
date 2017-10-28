@@ -19,6 +19,7 @@ caps.latest.revision: 12
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Cube Objects (Analysis Services - Multidimensional Data)
     

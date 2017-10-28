@@ -21,6 +21,7 @@ caps.latest.revision: 60
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Active"
 ---
 # What is Analysis Services?
   Analysis Services is an analytical data engine used in decision support and business analytics, providing the analytical data for business reports and client applications such as Power BI, Excel, Reporting Services reports, and other data visualization tools.  

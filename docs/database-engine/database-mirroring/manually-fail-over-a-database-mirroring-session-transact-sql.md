@@ -18,6 +18,7 @@ caps.latest.revision: 32
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Manually Fail Over a Database Mirroring Session (Transact-SQL)
   When the mirrored database is synchronized (that is, when the database is in the SYNCHRONIZED state), the database owner can initiate manual failover to the mirror server. Manual failover can be initiated only from the principal server.  

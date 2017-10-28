@@ -23,6 +23,7 @@ caps.latest.revision: 40
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Tasks and Permissions
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], *tasks* are actions that a user or administrator can perform. Tasks are predefined. You cannot create custom tasks or modify the ones provided either programmatically or through a tool. There are twenty-five tasks in all. These tasks comprise the entire set of operations that are available in role-based security. Some examples of tasks include "View reports," "Manage reports," and "Manage report server properties."  

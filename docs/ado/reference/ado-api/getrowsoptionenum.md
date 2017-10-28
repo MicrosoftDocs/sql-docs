@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # GetRowsOptionEnum
 Specifies how many records to retrieve from a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  

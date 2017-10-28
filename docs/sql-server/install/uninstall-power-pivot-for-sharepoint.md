@@ -15,6 +15,7 @@ caps.latest.revision: 27
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Uninstall Power Pivot for SharePoint
   Uninstalling a [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] installation is a multi-step operation that includes preparing for uninstall, removing features and solutions from the farm, and removing program files and registry settings.  

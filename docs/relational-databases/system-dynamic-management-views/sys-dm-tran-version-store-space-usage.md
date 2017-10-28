@@ -23,6 +23,7 @@ caps.latest.revision: 10
 author: "savjani"
 ms.author: "pariks"
 manager: "ajayj"
+ms.workload: "Inactive"
 ---
 # sys.dm_tran_version_store_space_usage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]

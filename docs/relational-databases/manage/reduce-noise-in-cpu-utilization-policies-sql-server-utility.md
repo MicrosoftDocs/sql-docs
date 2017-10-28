@@ -16,6 +16,7 @@ caps.latest.revision: 7
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Reduce Noise in CPU Utilization Policies (SQL Server Utility)
   Use the following strategies to reduce reporting noise and unwanted violations in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility resource utilization policies.  

@@ -21,6 +21,7 @@ caps.latest.revision: 45
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # sp_dropextendedproperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -123,7 +124,7 @@ GO
 ```  
   
 ### B. Dropping an extended property on a database  
- The following example removes the property named `MS`_`Description` from the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample database. Because the property is on the database itself, no object types and names are specified.  
+ The following example removes the property named `MS_Description` from the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample database. Because the property is on the database itself, no object types and names are specified.  
   
 ```  
 USE AdventureWorks2012;  

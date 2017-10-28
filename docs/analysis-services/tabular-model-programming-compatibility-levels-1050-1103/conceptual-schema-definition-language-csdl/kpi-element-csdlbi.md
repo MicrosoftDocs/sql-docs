@@ -17,6 +17,7 @@ caps.latest.revision: 13
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # KPI Element (CSDLBI)
   The Kpi element defines a calculation that can be used as a Key Performance Indicator (KPI). In a business intelligence data model, KPIs are based on measures, and as such the definition of the KPI contains all the metadata associated with measures, as well as information needed for presentation of the KPI values, including a default graphic.  

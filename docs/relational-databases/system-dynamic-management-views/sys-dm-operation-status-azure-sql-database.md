@@ -27,6 +27,7 @@ caps.latest.revision: 17
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # sys.dm_operation_status (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx_md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]

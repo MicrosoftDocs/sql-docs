@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Configure HTTP Access to Analysis Services on IIS 8.0 | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
@@ -16,6 +16,7 @@ caps.latest.revision: 27
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "On Demand"
 ---
 # Configure HTTP Access to Analysis Services on IIS 8.0
   This article explains how to set up an HTTP endpoint for accessing an Analysis Services instance. You can enable HTTP access by configuring MSMDPUMP.dll, an ISAPI extension that runs in Internet Information Services (IIS) and pumps data to and from client applications and an Analysis Services server. This approach provides an alternative means for connecting to Analysis Services when your BI solution calls for the following capabilities:  

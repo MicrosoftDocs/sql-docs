@@ -17,6 +17,7 @@ caps.latest.revision: 15
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # ExecuteOptions Property (RDS)
 Indicates whether asynchronous execution is enabled.  

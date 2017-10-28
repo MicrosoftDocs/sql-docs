@@ -150,7 +150,7 @@ manager: "jhubbard"
   
  The following SQL statement shows the default CREATE TABLE statement that the Package Configuration Wizard provides.  
   
-```  
+```sql
 CREATE TABLE [dbo].[SSIS Configurations]  
 (  
 ConfigurationFilter NVARCHAR(255) NOT NULL,  

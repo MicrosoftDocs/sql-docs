@@ -28,6 +28,7 @@ caps.latest.revision: 21
 author: "Minewiskan"
 ms.author: "owend"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Microsoft Clustering Algorithm Technical Reference
   This section explains the implementation of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering algorithm, including the parameters that you can use to control the behavior of clustering models. It also provides guidance about how to improve performance when you create and process clustering models.  

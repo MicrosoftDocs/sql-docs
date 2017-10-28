@@ -16,6 +16,7 @@ caps.latest.revision: 33
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # OLEDB Errors Event Class
   The OLEDB Errors event class occurs in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] when a call to an OLE DB provider returns an error. Include this event class in traces to view a failed HRESULT from an OLE DB provider.  

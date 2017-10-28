@@ -16,6 +16,7 @@ caps.latest.revision: 27
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Monitor and Enforce Best Practices by Using Policy-Based Management
   Policy-Based Management allows you to monitor best practices for the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides a set of policy files you can import as best practice policies, and then evaluate the policies against a target set that includes instances, instance objects, databases, or database objects. Evaluate policies manually, set policies to evaluate a target set according to a schedule, or set policies to evaluate a target set according to an event. For more information about Policy-Based Management, see [Administer Servers by Using Policy-Based Management](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md).  

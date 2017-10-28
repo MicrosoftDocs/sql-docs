@@ -21,6 +21,7 @@ caps.latest.revision: 30
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # SetDisable Method (ServerNetworkProtocol Class)
   Disables the server network protocol.  

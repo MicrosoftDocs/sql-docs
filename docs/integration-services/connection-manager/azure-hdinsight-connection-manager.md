@@ -17,6 +17,7 @@ caps.latest.revision: 4
 author: "Lingxi-Li"
 ms.author: "lingxl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Azure HDInsight Connection Manager
 The **Azure HDInsight Connection Manager** enables an SSIS package to connect to an Azure HDInsight cluster.

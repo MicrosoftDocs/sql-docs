@@ -26,6 +26,7 @@ caps.latest.revision: 37
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # CalculationProperties Element (ASSL)
   Contains the collection of [CalculationProperty](../../../analysis-services/scripting/objects/calculationproperty-element-assl.md) elements associated with an [MdxScript](../../../analysis-services/scripting/objects/mdxscript-element-assl.md) element.  

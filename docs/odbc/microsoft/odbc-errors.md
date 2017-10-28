@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # ODBC Errors
 When an error occurs, the Microsoft ODBC Desktop Database Drivers return the native error number, the SQLSTATE (an ODBC error code), and an error message.  

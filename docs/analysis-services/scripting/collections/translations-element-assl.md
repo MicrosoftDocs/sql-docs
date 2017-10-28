@@ -26,6 +26,7 @@ caps.latest.revision: 39
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Translations Element (ASSL)
   Contains the collection of [Translation](../../../analysis-services/scripting/objects/translation-element-assl.md) elements associated with the parent element.  

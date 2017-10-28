@@ -18,6 +18,7 @@ caps.latest.revision: 19
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # View Registered Servers in SQL Server Management Studio
   This topic describes how to view registered servers in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  

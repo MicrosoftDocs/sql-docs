@@ -16,6 +16,7 @@ caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Progress Reports Data Columns
   The Progress Reports event category has the following event classes:  

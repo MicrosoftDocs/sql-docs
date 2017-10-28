@@ -26,6 +26,7 @@ caps.latest.revision: 35
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Aggregations Element (ASSL)
   Contains the collection of aggregations defined for an [AggregationDesign](../../../analysis-services/scripting/objects/aggregationdesign-element-assl.md) element.  

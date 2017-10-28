@@ -16,6 +16,7 @@ caps.latest.revision: 7
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # FileTable Schema
   Describes the pre-defined and fixed schema of a FileTable.  

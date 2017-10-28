@@ -17,6 +17,7 @@ caps.latest.revision: 39
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
+ms.workload: "On Demand"
 ---
 # Stretch Database
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

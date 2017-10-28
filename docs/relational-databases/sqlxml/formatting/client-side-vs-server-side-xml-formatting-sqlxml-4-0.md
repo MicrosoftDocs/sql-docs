@@ -22,6 +22,7 @@ caps.latest.revision: 31
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Client-side vs. Server-side XML Formatting (SQLXML 4.0)
   This topic describes the general differences between client-side and server-side XML formatting in SQLXML.  

@@ -26,6 +26,7 @@ caps.latest.revision: 36
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Process Element (ASSL)
   Determines whether a user can process the owner of the parent element.  

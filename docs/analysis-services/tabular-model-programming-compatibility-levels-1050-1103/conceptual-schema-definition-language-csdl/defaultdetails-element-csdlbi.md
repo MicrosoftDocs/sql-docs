@@ -17,6 +17,7 @@ caps.latest.revision: 13
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # DefaultDetails Element (CSDLBI)
   The DefaultDetails element represents a list of property references that together define the “default field set” of columns in the table. Each property can only refer to a measure or a column.  

@@ -22,6 +22,7 @@ caps.latest.revision: 35
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # XML Data Types (XMLA)
   In addition to the standard primitive and derived types defined by the XML 1.0 recommendation, the XML for Analysis (XMLA) 1.1 specification defines additional data types to support the representation of multidimensional and tabular data.  

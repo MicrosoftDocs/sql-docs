@@ -16,6 +16,7 @@ caps.latest.revision: 13
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # IBCPSession2::BCPSetBulkMode
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]

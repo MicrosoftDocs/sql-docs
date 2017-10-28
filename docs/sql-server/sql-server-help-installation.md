@@ -17,6 +17,7 @@ caps.latest.revision: 8
 author: "craigg-msft"
 ms.author: "craigg"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Help Viewer and Offline Content for SQL Server
   

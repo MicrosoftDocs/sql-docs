@@ -18,6 +18,7 @@ caps.latest.revision: 31
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Creating a SQL Server Native Client OLE DB Provider Application
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]

@@ -26,6 +26,7 @@ caps.latest.revision: 36
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # CubePermissions Element (ASSL)
   Contains the collection of permissions applicable to a [Cube](../../../analysis-services/scripting/objects/cube-element-assl.md) element.  

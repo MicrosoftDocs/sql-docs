@@ -14,6 +14,7 @@ caps.latest.revision: 20
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Database Engine Events and Errors
   This topic provides information about errors and events for the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  

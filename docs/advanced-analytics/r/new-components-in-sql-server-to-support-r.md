@@ -14,6 +14,7 @@ caps.latest.revision: 9
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Components in SQL Server to support R
 

@@ -28,6 +28,7 @@ caps.latest.revision: 15
 author: "jeannt"
 ms.author: "jeannt"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # SPID Element (XMLA)
   Identifies an active server process identifier (SPID) on which to execute the parent [Cancel](../../../analysis-services/xmla/xml-elements-commands/cancel-element-xmla.md) element.  

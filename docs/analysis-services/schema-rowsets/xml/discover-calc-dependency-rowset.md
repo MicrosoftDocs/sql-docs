@@ -19,6 +19,7 @@ caps.latest.revision: 22
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # DISCOVER_CALC_DEPENDENCY Rowset
   Reports on the dependencies between calculations and on the objects referenced in those calculations. You can use this information in a client application to report on problems with complex formulas, or to warn when related objects are deleted or modified. You can also use the rowset to extract the DAX expressions used in measures or calculated columns.  

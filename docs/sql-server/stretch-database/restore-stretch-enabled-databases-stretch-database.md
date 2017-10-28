@@ -14,6 +14,7 @@ caps.latest.revision: 15
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Restore Stretch-enabled databases (Stretch Database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +68,7 @@ To restore a deleted Azure database to the point when it was deletedby using the
   
     -   Specify whether to make a copy of the remote data and connect to the copy (recommended).  
   
-    ```tsql  
+    ```sql  
     USE <Stretch-enabled database name>;
     GO
     EXEC sp_rda_reauthorize_db

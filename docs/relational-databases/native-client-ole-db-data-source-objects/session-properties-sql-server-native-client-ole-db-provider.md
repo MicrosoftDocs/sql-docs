@@ -17,6 +17,7 @@ caps.latest.revision: 31
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Session Properties - SQL Server Native Client OLE DB provider
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]

@@ -20,6 +20,7 @@ caps.latest.revision: 31
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Creating a Valid Connection String Using TCP IP
   To create a valid connection string using TCP/IP, you must:  

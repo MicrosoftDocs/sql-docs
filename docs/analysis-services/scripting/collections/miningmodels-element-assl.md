@@ -26,6 +26,7 @@ caps.latest.revision: 32
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # MiningModels Element (ASSL)
   Contains the collection of [MiningModel](../../../analysis-services/scripting/objects/miningmodel-element-assl.md) elements associated with a [MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md).  

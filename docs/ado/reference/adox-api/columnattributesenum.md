@@ -19,6 +19,7 @@ caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # ColumnAttributesEnum
 Specifies characteristics of a [Column](../../../ado/reference/adox-api/column-object-adox.md).  

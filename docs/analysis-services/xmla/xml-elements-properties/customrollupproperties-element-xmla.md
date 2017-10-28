@@ -28,6 +28,7 @@ caps.latest.revision: 12
 author: "jeannt"
 ms.author: "jeannt"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # CustomRollupProperties Element (XMLA)
   Contains the custom rollup properties for an attribute member represented by the parent [Attribute](../../../analysis-services/xmla/xml-elements-properties/attribute-element-xmla.md) element.  

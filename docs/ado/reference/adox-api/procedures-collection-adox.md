@@ -20,6 +20,7 @@ caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Procedures Collection (ADOX)
 Contains all [Procedure](../../../ado/reference/adox-api/procedure-object-adox.md) objects of a catalog.  

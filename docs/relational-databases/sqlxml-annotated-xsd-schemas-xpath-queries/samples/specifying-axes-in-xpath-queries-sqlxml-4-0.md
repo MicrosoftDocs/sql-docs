@@ -22,6 +22,7 @@ caps.latest.revision: 25
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Specifying Axes in XPath Queries (SQLXML 4.0)
   The following examples show how axes are specified in XPath queries.  

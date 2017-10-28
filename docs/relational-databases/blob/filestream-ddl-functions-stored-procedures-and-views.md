@@ -14,6 +14,7 @@ caps.latest.revision: 7
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # FILESTREAM DDL, Functions, Stored Procedures, and Views
   Lists the Transact-SQL statements and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database objects that support FILESTREAM.  

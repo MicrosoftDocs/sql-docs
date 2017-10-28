@@ -12,6 +12,7 @@ ms.topic: "article"
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # How To Create a Resource Pool for Python
 

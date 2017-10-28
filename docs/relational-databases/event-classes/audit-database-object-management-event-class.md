@@ -16,6 +16,7 @@ caps.latest.revision: 21
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Audit Database Object Management Event Class
   The **Audit Database Object Management** event class occurs when a CREATE, ALTER, or DROP statement is executed on database objects, such as schemas.  

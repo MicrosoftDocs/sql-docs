@@ -22,24 +22,21 @@ caps.latest.revision: 106
 author: "craigg-msft"
 ms.author: "craigg"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # SQL Server Technical Documentation
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
- > For content related to previous versions of SQL Server, see [Installation for SQL Server 2014](https://msdn.microsoft.com/en-US/library/bb500469(SQL.120).aspx).
-
 Documentation to help you install, configure, and use SQL Server. The content includes end-to-end examples, code samples, and videos. For SQL Server language topics, see [Language Reference](../t-sql/language-reference.md).
 
-**SQL Server 2017**
 
-- [SQL Server 2017 Release Notes](../sql-server/sql-server-2017-release-notes.md)
-- [What's New in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)
 
-**SQL Server 2016**
-
-- [SQL Server 2016 Release Notes](../sql-server/sql-server-2016-release-notes.md)
-- [What's New in SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)
-    
+|What's new  | Release notes  |
+|---------|---------|
+|[What's New in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)     | [SQL Server 2017 Release Notes](../sql-server/sql-server-2017-release-notes.md)        |
+|[What's New in SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)     | [SQL Server 2016 Release Notes](../sql-server/sql-server-2016-release-notes.md)        |
+|[What's New in SQL Server 2014](https://msdn.microsoft.com/en-us/library/bb500435(v=sql.120).aspx)     |         |
+   
 **Try SQL Server!**    
 - [![Download from Evaluation Center](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [Download SQL Server 2017](http://go.microsoft.com/fwlink/?LinkID=829477)
 - [![Download from Evaluation Center](../includes/media/download2.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) [Download SQL Server 2016](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) 

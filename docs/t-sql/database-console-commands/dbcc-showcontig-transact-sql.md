@@ -28,6 +28,7 @@ caps.latest.revision: 78
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # DBCC SHOWCONTIG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -198,7 +199,7 @@ GO
 ```  
   
 ### B. Using OBJECT_ID to obtain the table ID and sys.indexes to obtain the index ID  
-The following example uses `OBJECT`_`ID` and the `sys.indexes` catalog view to obtain the table ID and index ID for the `AK_Product_Name` index of the `Production.Product` table in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.
+The following example uses `OBJECT_ID` and the `sys.indexes` catalog view to obtain the table ID and index ID for the `AK_Product_Name` index of the `Production.Product` table in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.
   
 ```sql  
 USE AdventureWorks2012;  

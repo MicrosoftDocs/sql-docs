@@ -17,6 +17,7 @@ caps.latest.revision: 12
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "erikre"
+ms.workload: "On Demand"
 ---
 
 # Report Parts in Report Designer (SSRS)

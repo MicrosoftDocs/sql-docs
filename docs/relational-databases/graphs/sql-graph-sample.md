@@ -17,6 +17,7 @@ caps.latest.revision: 1
 author: "shkale-msft"
 ms.author: "shkale"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Create a graph database and run some pattern matching queries using T-SQL
 [!INCLUDE[tsql-appliesto-ssvnxt-asdb-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-asdb-xxxx-xxx.md)]   

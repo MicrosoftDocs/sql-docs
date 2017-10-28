@@ -16,6 +16,7 @@ caps.latest.revision: 9
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Input and Output Error During Hard Page Fault
   This rule checks the system event log for EventId 51. This error is caused by an error during a hard page fault.  

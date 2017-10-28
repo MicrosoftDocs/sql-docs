@@ -16,6 +16,7 @@ caps.latest.revision: 23
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Broker:Corrupted Message Event Class
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] creates a **Broker:Corrupted Message** event when Service Broker receives a corrupted message.  

@@ -16,6 +16,7 @@ caps.latest.revision: 23
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Execute a User-Defined Function and Process Return Code (OLE DB)
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]

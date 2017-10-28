@@ -15,6 +15,7 @@ caps.latest.revision: 16
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # R Libraries and R Data Types
 

@@ -30,6 +30,7 @@ caps.latest.revision: 60
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # WITH common_table_expression (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -594,48 +595,7 @@ Lvl  N
   
 ## Examples: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### L. Creating a simple common table expression  
- The following example shows the total number of sales orders per year for each sales representative at [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)].  
-  
-```  
--- Uses AdventureWorks  
-  
--- Define the CTE expression name and column list.  
-WITH Sales_CTE (SalesPersonID, SalesOrderID, SalesYear)  
-AS  
--- Define the CTE query.  
-(  
-    SELECT SalesPersonID, SalesOrderID, YEAR(OrderDate) AS SalesYear  
-    FROM Sales.SalesOrderHeader  
-    WHERE SalesPersonID IS NOT NULL  
-)  
--- Define the outer query referencing the CTE name.  
-SELECT SalesPersonID, COUNT(SalesOrderID) AS TotalSales, SalesYear  
-FROM Sales_CTE  
-GROUP BY SalesYear, SalesPersonID  
-ORDER BY SalesPersonID, SalesYear;  
-GO  
-  
-```  
-  
-### M. Using a common table expression to limit counts and report averages  
- The following example shows the average number of sales orders for all years for the sales representatives.  
-  
-```  
-WITH Sales_CTE (SalesPersonID, NumberOfOrders)  
-AS  
-(  
-    SELECT SalesPersonID, COUNT(*)  
-    FROM Sales.SalesOrderHeader  
-    WHERE SalesPersonID IS NOT NULL  
-    GROUP BY SalesPersonID  
-)  
-SELECT AVG(NumberOfOrders) AS "Average Sales Per Person"  
-FROM Sales_CTE;  
-GO  
-```  
-  
-### N. Using a common table expression within a CTAS statement  
+### L. Using a common table expression within a CTAS statement  
  The following example creates a new table containing the total number of sales orders per year for each sales representative at [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)].  
   
 ```  
@@ -664,7 +624,7 @@ AS
 GO  
 ```  
   
-### O. Using a common table expression within a CETAS statement  
+### M. Using a common table expression within a CETAS statement  
  The following example creates a new external table containing the total number of sales orders per year for each sales representative at [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)].  
   
 ```  
@@ -694,7 +654,7 @@ AS
 GO  
 ```  
   
-### P. Using multiple comma separated CTEs in a statement  
+### N. Using multiple comma separated CTEs in a statement  
  The following example demonstrates including two CTEs in a single statement. The CTEs cannot be nested (no recursion).  
   
 ```  

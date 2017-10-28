@@ -19,6 +19,7 @@ caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Driver Manager&#39;s Role in the Connection Process
 Remember that applications do not call driver functions directly. Instead, they call Driver Manager functions with the same name and the Driver Manager calls the driver functions. Usually, this happens almost immediately. For example, the application calls **SQLExecute** in the Driver Manager and after a few error checks, the Driver Manager calls **SQLExecute** in the driver.  

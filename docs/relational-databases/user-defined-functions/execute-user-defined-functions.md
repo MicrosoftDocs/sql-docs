@@ -17,6 +17,7 @@ caps.latest.revision: 35
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Execute User-defined Functions
   Execute a user defined function using Transact-SQL.

@@ -22,6 +22,7 @@ caps.latest.revision: 32
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Processing Results (ODBC)
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]

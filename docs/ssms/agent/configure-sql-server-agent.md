@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Configure SQL Server Agent
 This topic describes how to specify some configuration options for [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent during installation of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. The full set of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent configuration options is only available within [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Management Objects (SMO), or the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent stored procedures.  

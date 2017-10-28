@@ -16,6 +16,7 @@ caps.latest.revision: 21
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Audit Database Principal Impersonation Event Class
   The **Audit Database Principal Impersonation** event class occurs when an impersonation occurs within the database scope, such as EXECUTE AS \<*user*> or SETUSER.  

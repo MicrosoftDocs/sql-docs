@@ -33,6 +33,7 @@ caps.latest.revision: 76
 author: "barbkess"
 ms.author: "barbkess"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 
 # CREATE COLUMNSTORE INDEX (Transact-SQL)

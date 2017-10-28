@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # DISCOVER_TRACE_DEFINITION_PROVIDERINFO Rowset
   Returns basic information about the trace provider, such as its name and description.  

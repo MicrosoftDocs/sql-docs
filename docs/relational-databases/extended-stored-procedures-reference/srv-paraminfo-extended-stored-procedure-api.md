@@ -23,6 +23,7 @@ caps.latest.revision: 31
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # srv_paraminfo (Extended Stored Procedure API)
     

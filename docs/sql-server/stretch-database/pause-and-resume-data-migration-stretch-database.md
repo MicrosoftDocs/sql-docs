@@ -19,6 +19,7 @@ caps.latest.revision: 23
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Pause and resume data migration (Stretch Database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +39,7 @@ manager: "craigg"
 ### Use Transact-SQL to pause data migration  
  Run the following command.  
   
-```tsql  
+```sql  
 USE <Stretch-enabled database name>;
 GO
 ALTER TABLE <Stretch-enabled table name>  
@@ -57,7 +58,7 @@ GO
 ### Use Transact-SQL to resume data migration  
  Run the following command.  
   
-```tsql  
+```sql  
 USE <Stretch-enabled database name>;
 GO
 ALTER TABLE <Stretch-enabled table name>   

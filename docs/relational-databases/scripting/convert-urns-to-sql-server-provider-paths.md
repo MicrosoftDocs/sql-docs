@@ -14,6 +14,7 @@ caps.latest.revision: 8
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Convert URNs to SQL Server Provider Paths
   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Object model (SMO) builds Uniform Resource Names (URN) for its objects. Each URN uniquely identifies a SMO object, and can be converted to a SQL Server PowerShell provider path by using the **Convert-UrnToPath** cmdlet.  

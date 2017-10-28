@@ -20,6 +20,7 @@ caps.latest.revision: 13
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Hierarchies Collection (ADO MD)
 Contains the set of [Hierarchy](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md) objects from a dimension.  

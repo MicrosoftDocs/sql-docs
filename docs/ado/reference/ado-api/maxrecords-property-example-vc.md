@@ -18,6 +18,7 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # MaxRecords Property Example (VC++)
 This example uses the [MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md) property to open a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) containing the 10 most expensive titles in the ***Titles*** table.  

@@ -24,6 +24,7 @@ caps.latest.revision: 13
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # DataAggregation Element (ASSL)
   Determines whether the instance can aggregate persisted data or cached data for the [MeasureGroup](../../../analysis-services/scripting/objects/measuregroup-element-assl.md).  

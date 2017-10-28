@@ -15,6 +15,7 @@ caps.latest.revision: 8
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Modifying Data in a System-Versioned Temporal Table
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

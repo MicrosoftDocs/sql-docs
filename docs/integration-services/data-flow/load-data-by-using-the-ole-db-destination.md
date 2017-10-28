@@ -18,6 +18,7 @@ caps.latest.revision: 28
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Load Data by Using the OLE DB Destination
   To add and configure an OLE DB destination, the package must already include at least one Data Flow task and a source.  

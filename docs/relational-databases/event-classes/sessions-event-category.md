@@ -18,6 +18,7 @@ caps.latest.revision: 24
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Sessions Event Category
   The **Sessions** event category contains the **ExistingConnection** event class.  

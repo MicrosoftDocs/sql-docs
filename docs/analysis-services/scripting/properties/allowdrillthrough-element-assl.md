@@ -26,6 +26,7 @@ caps.latest.revision: 51
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # AllowDrillThrough Element (ASSL)
   Determines whether drillthrough is permitted on the parent element.  

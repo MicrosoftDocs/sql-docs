@@ -16,6 +16,7 @@ caps.latest.revision: 28
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Lesson 1-1 - Create the Off By Default Policy
 This task creates a condition named Mail Off that is based on the Surface Area Configuration facet. Then, it creates a policy named Off By Default.  

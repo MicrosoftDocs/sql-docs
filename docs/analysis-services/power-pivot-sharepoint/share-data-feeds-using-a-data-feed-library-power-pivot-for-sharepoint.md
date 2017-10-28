@@ -18,6 +18,7 @@ caps.latest.revision: 26
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Share Data Feeds Using a Data Feed Library (Power Pivot for SharePoint)
   A data feed is an XML data stream that is generated from a service or application that exposes data in the Atom wire format. Increasingly, it is used to transport data between applications and to client-side viewers. In a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint deployment, data feeds are used to populate a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data source with data from an Atom-aware application or service.  

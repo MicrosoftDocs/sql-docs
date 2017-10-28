@@ -22,6 +22,7 @@ caps.latest.revision: 16
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # sys.database_service_objectives (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx_md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]

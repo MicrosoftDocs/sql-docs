@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: "jeannt"
 ms.author: "jeannt"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # ServerMode Element
   The **ServerMode** server element specifies the mode the server is operating in.  

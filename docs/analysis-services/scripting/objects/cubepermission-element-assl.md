@@ -26,6 +26,7 @@ caps.latest.revision: 36
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # CubePermission Element (ASSL)
   Defines the permissions of the members of a particular [Role](../../../analysis-services/scripting/objects/role-element-assl.md) element in a specific [Cube](../../../analysis-services/scripting/objects/cube-element-assl.md) element.  

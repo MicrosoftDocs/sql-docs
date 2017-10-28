@@ -16,6 +16,7 @@ caps.latest.revision: 11
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "On Demand"
 ---
 # Add Columns to a Table (SSAS Tabular)
   This topic describes how to add columns to an existing table.  

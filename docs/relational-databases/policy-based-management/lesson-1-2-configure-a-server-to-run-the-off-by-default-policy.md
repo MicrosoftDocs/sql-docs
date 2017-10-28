@@ -16,6 +16,7 @@ caps.latest.revision: 23
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Lesson 1-2 - Configure a Server to Run the Off By Default Policy
 Now you have a policy named Off By Default. In this task, you will check to see whether your server complies with the requirements of this policy.  

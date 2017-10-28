@@ -23,6 +23,7 @@ caps.latest.revision: 23
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # sys.sp_cdc_change_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -107,7 +108,7 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
 ## Examples  
   
 ### A. Changing a capture job  
- The following example updates the `@job`_`type`, `@maxscans`, and `@maxtrans` parameters of a capture job in the `AdventureWorks2012` database. The other valid parameters for a capture job, `@continuous` and `@pollinginterval`, are omitted; their values are not modified.  
+ The following example updates the `@job_type`, `@maxscans`, and `@maxtrans` parameters of a capture job in the `AdventureWorks2012` database. The other valid parameters for a capture job, `@continuous` and `@pollinginterval`, are omitted; their values are not modified.  
   
 ```  
 USE AdventureWorks2012;  

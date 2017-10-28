@@ -19,6 +19,7 @@ caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Key Object (ADOX)
 Represents a primary, foreign, or unique key field from a database table.  

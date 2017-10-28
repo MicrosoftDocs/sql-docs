@@ -26,6 +26,7 @@ caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # LogFileName Element (ASSL)
   Contains the file name of the log file for the [Trace](../../../analysis-services/scripting/objects/trace-element-assl.md) element.  

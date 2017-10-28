@@ -26,6 +26,7 @@ caps.latest.revision: 39
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # CaptionColumn Element (ASSL)
   Defines the column that provides the caption for the attribute.  

@@ -19,6 +19,7 @@ caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # ADO Code Examples VBScript
 Use the following code examples to learn about how to use the ADO methods when writing in Microsoft® Visual Basic® Scripting Edition (VBScript).  

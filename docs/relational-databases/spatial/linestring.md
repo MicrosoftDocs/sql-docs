@@ -17,6 +17,7 @@ caps.latest.revision: 24
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # LineString
   A **LineString** is a one-dimensional object representing a sequence of points and the line segments connecting them.  

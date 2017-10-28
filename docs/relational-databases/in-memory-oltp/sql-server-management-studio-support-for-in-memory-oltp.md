@@ -14,6 +14,7 @@ caps.latest.revision: 31
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # SQL Server Management Studio Support for In-Memory OLTP
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] is an integrated environment for managing your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] infrastructure. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] provides tools to configure, monitor, and administer instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [SQL Server Management Studio](http://msdn.microsoft.com/library/66a6b7b1-de6a-4161-82bd-98ded486947b)  

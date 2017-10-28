@@ -16,6 +16,7 @@ caps.latest.revision: 38
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Run Replication Maintenance Jobs (SQL Server Management Studio)
   Replication uses the following maintenance jobs:  

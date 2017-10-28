@@ -27,6 +27,7 @@ caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Properties Window F1 Help (Management Studio)
 Use the **Properties** window to view properties of selected elements. You can also use the **Properties** window to view file, project, and solution properties. The **Properties** window is available by clicking **Properties Window** on the **View** menu.  

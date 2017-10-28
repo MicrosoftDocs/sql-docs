@@ -13,6 +13,7 @@ caps.latest.revision: 27
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Support Policies for SQL Server Native Client
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]

@@ -18,6 +18,7 @@ caps.latest.revision: 16
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Audit Database Mirroring Login Event Class
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] creates an **Audit Database Mirroring Login** event to report audit messages related to database mirroring transport security.  

@@ -24,6 +24,7 @@ caps.latest.revision: 55
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "craigg"
+ms.workload: "On Demand"
 ---
 # Security Center for SQL Server Database Engine and Azure SQL Database
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]

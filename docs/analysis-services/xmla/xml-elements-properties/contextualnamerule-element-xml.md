@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: "jeannt"
 ms.author: "jeannt"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # ContextualNameRule Element (XML)
   Provides a hint on the best way to construct a composite name for the attribute.  

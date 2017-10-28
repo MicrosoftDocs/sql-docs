@@ -28,6 +28,7 @@ caps.latest.revision: 11
 author: "jeannt"
 ms.author: "jeannt"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # MoveWithDescendants Element (XMLA)
   Indicates whether the descendants of attribute members are also updated by the parent [Update](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md) command.  

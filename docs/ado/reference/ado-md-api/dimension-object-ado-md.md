@@ -19,6 +19,7 @@ caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Dimension Object (ADO MD)
 Represents one of the dimensions of a multidimensional cube, containing one or more hierarchies of members.  

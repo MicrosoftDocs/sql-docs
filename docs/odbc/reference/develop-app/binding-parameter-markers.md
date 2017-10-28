@@ -17,6 +17,7 @@ caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Binding Parameter Markers
 The application binds parameters by calling **SQLBindParameter**. **SQLBindParameter** binds one parameter at a time. With it, the application specifies the following:  

@@ -15,6 +15,7 @@ caps.latest.revision: 6
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Add a data source to Tabular model (Analysis Services AMO-TOM)
 

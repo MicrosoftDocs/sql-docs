@@ -17,6 +17,7 @@ caps.latest.revision: 19
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # MultiLineString
   A **MultiLineString** is a collection of zero or more **geometry** or **geographyLineString** instances.  

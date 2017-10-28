@@ -26,6 +26,7 @@ caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # HideMemberIf Element (ASSL)
   Indicates whether and when a member in a level should be hidden from client applications.  

@@ -23,6 +23,7 @@ caps.latest.revision: 51
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Metadata Visibility Configuration
   The visibility of metadata is limited to securables that a user either owns or on which the user has been granted some permission. For example, the following query returns a row if the user has been granted a permission such as SELECT or INSERT on the table `myTable`.  

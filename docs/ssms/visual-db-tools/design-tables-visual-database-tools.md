@@ -21,6 +21,7 @@ caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Create and update database tables
 

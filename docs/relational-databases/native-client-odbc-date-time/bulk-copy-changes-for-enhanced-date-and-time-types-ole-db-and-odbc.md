@@ -16,6 +16,7 @@ caps.latest.revision: 27
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Bulk Copy Changes for Enhanced Date and Time Types (OLE DB and ODBC)
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]

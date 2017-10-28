@@ -23,6 +23,7 @@ caps.latest.revision: 28
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # SQLPutData Function
 **Conformance**  

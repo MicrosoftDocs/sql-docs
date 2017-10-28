@@ -19,6 +19,7 @@ caps.latest.revision: 31
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "erikre"
+ms.workload: "On Demand"
 ---
 
 # Tutorial: Create a Quick Chart Report Offline (Report Builder)

@@ -17,6 +17,7 @@ caps.latest.revision: 11
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Migrate Sensitive Data Protected by Always Encrypted
  To load encrypted data without performing metadata checks on the server during bulk copy operations, create the user with the **ALLOW_ENCRYPTED_VALUE_MODIFICATIONS** option. This option is intended to be used by legacy tools from versions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] older than [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] (such as bcp.exe) or by using third-party Extract-Transform-Load (ETL) work flows that cannot use Always Encrypted. This allows a user to securely move encrypted data from one set of tables, containing encrypted columns, to another set of tables with encrypted columns (in the same or a different database).  

@@ -14,6 +14,7 @@ caps.latest.revision: 7
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Trusted location does not allow external data connections
   For Excel workbooks that contain [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data, Excel Services returns this error if it cannot connect to embedded data sources.  

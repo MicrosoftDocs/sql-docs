@@ -16,6 +16,7 @@ caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Target Servers (Target Server Status Tab)
 Use this page to view the status of the target servers for this master server.  

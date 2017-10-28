@@ -16,6 +16,7 @@ caps.latest.revision: 15
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Use Power Pivot Gallery
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Gallery is a special SharePoint document library that provides rich preview and document management for published Excel workbooks and Reporting Services reports that contain [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data.  

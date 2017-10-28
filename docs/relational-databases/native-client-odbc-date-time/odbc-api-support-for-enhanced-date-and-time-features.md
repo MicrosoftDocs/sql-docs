@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # ODBC API Support for Enhanced Date and Time Features
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]

@@ -17,6 +17,7 @@ caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Create Table Aliases (Visual Database Tools)
 Aliases can make it easier to work with table names. Using aliases is helpful when:  
@@ -27,7 +28,7 @@ Aliases can make it easier to work with table names. Using aliases is helpful wh
   
 -   You are working with multiple instances of the same table (such as in a self-join) and need a way to refer to one instance or the other.  
   
-For example, you can create an alias `"e"` for a table name `employee`_`information`, and then refer to the table as `"e"` throughout the rest of the query.  
+For example, you can create an alias `"e"` for a table name `employee_information`, and then refer to the table as `"e"` throughout the rest of the query.  
   
 ### To create an alias for a table or table-valued object  
   

@@ -23,6 +23,7 @@ caps.latest.revision: 38
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # ConfigurationSetting Property - InstallationID
   This property returns a unique identifier for a specific report server instance.  

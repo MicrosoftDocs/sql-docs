@@ -1,7 +1,7 @@
 ---
 title: "Data types (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/13/2017"
+ms.date: "9/13/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -19,6 +19,7 @@ caps.latest.revision: 45
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 
 # Data types (Transact-SQL)

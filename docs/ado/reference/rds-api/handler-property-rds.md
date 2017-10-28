@@ -17,6 +17,7 @@ caps.latest.revision: 16
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Handler Property (RDS)
 Indicates the name of a server-side customization program (handler) that extends the functionality of the [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md), and any parameters used by the *handler*.  

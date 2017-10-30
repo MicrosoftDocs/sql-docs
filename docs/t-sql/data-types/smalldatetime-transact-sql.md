@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "data types [SQL Server], date and time"
 ms.assetid: 68b74610-d54c-4c8e-b4b2-7e3747546ee0
 caps.latest.revision: 50
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Active"
 ---
 # smalldatetime (Transact-SQL)

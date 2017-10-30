@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "sp_adjustpublisheridentityrange"
 ms.assetid: 64f111fd-fb7d-4459-93f7-65f0f8dd7efe
 caps.latest.revision: 28
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # sp_adjustpublisheridentityrange (Transact-SQL)

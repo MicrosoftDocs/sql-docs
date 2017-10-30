@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "REVOKE statement, symmetric keys"
 ms.assetid: 091da030-a768-4aa3-9509-cc23bd719cea
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # REVOKE Symmetric Key Permissions (Transact-SQL)

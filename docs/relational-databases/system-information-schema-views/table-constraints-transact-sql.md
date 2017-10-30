@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "TABLE_CONSTRAINTS view"
 ms.assetid: 687f3284-2849-4853-8a5c-fc936deceae0
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "On Demand"
 ---
 # TABLE_CONSTRAINTS (Transact-SQL)

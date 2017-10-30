@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "sp_helpdatatypemap"
 ms.assetid: 800c9c65-723e-4961-a63d-327987f129f0
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # sp_helpdatatypemap (Transact-SQL)

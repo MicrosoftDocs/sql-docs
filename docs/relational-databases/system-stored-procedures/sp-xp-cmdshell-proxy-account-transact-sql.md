@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "xp_cmdshell"
 ms.assetid: f807c373-7fbc-4108-a2bd-73b48a236003
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "On Demand"
 ---
 # sp_xp_cmdshell_proxy_account (Transact-SQL)

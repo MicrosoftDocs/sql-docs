@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "sys.computed_columns catalog view"
 ms.assetid: c962c619-e18f-4315-9251-8d9862462299
 caps.latest.revision: 48
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # sys.computed_columns (Transact-SQL)

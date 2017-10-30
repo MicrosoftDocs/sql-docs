@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "cdc.lsn_time_mapping"
 ms.assetid: 1cb7aedc-48a4-486e-9b91-d30c4bd4084e
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # cdc.lsn_time_mapping (Transact-SQL)

@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sys.change_tracking_tables"
 ms.assetid: 97ec69b6-0d49-4d98-82f0-d3e77ba1ad2b
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # Change Tracking Catalog Views - sys.change_tracking_tables

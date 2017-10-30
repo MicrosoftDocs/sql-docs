@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "sp_expired_subscription_cleanup"
 ms.assetid: 6abc29fe-d77a-4673-9d99-ae31c688012c
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # sp_expired_subscription_cleanup (Transact-SQL)

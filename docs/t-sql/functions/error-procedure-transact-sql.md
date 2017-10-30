@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "errors [SQL Server], trigger where occurred"
 ms.assetid: b81edbf0-856a-498f-ba87-48ff1426d980
 caps.latest.revision: 44
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "On Demand"
 ---
 # ERROR_PROCEDURE (Transact-SQL)

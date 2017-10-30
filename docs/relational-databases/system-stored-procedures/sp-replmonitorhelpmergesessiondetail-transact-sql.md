@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "sp_replmonitorhelpmergesessiondetail"
 ms.assetid: 805c92fc-3169-410c-984d-f37e063b791d
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # sp_replmonitorhelpmergesessiondetail (Transact-SQL)

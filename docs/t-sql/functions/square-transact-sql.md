@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "square values"
 ms.assetid: 007b6b12-da86-4229-8f5c-fdd4fa839f5f
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "On Demand"
 ---
 # SQUARE (Transact-SQL)

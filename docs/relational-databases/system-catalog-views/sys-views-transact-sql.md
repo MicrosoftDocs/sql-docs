@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "sys.views catalog view"
 ms.assetid: f8a8ea39-5a09-4662-801e-b43519467def
 caps.latest.revision: 28
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # sys.views (Transact-SQL)

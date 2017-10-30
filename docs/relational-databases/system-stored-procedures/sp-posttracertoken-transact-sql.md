@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "sp_posttracertoken"
 ms.assetid: 24da5cd2-1c45-475e-93db-5bdf660f1c2c
 caps.latest.revision: 28
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # sp_posttracertoken (Transact-SQL)

@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "SCHEMATA view"
 ms.assetid: 69617642-0f54-4b25-b62f-5f39c8909601
 caps.latest.revision: 41
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # SCHEMATA (Transact-SQL)

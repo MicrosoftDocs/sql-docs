@@ -31,9 +31,9 @@ helpviewer_keywords:
   - "time [SQL Server], system"
 ms.assetid: c724d9cc-7b1f-4c71-bdf5-08bc52b33afc
 caps.latest.revision: 48
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Active"
 ---
 # CURRENT_TIMESTAMP (Transact-SQL)

@@ -13,9 +13,9 @@ helpviewer_keywords:
   - "7910 (Database Engine error)"
 ms.assetid: 017a0113-2b17-40b3-a419-30bbc43d46b8
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # MSSQLSERVER_7910

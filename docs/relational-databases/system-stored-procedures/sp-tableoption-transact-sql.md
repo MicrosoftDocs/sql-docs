@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "sp_tableoption"
 ms.assetid: 0a57462c-1057-4c7d-bce3-852cc898341d
 caps.latest.revision: 60
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # sp_tableoption (Transact-SQL)

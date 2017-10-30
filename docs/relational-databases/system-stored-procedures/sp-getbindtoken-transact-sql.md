@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "sp_getbindtoken"
 ms.assetid: 5db87d77-85fa-45a3-a23a-3ea500f9a5ac
 caps.latest.revision: 47
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # sp_getbindtoken (Transact-SQL)

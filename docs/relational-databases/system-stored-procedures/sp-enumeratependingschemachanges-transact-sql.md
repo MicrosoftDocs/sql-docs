@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "sp_enumeratependingschemachanges"
 ms.assetid: df169b21-d10a-41df-b3a1-654cfb58bc21
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # sp_enumeratependingschemachanges (Transact-SQL)

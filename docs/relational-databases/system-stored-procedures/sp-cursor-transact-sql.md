@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "sp_cursor"
 ms.assetid: 41ade0ca-5f11-469d-bd4d-c8302ccd93b3
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # sp_cursor (Transact-SQL)

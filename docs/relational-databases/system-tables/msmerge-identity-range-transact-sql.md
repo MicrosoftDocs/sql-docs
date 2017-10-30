@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "MSmerge_identity_range system table"
 ms.assetid: 493a2028-88a0-4e83-ad89-ae5661d9f477
 caps.latest.revision: 21
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # MSmerge_identity_range (Transact-SQL)

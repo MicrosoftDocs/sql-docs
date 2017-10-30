@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "MSlogreader_agents system table"
 ms.assetid: 8baa3c5a-cb40-42d0-b966-00e6d55368e8
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # MSlogreader_agents (Transact-SQL)

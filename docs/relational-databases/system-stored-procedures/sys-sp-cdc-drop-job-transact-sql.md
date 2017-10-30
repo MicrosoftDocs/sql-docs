@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "sp_cdc_drop_job"
 ms.assetid: e8265846-8051-4848-b28e-fac27c10bdeb
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # sys.sp_cdc_drop_job (Transact-SQL)

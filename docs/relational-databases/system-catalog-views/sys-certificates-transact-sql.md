@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "sys.certificates catalog view"
 ms.assetid: e5046102-a65c-401e-b80d-05636884dec9
 caps.latest.revision: 39
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "On Demand"
 ---
 # sys.certificates (Transact-SQL)

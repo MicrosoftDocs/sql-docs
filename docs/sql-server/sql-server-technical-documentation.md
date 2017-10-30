@@ -64,11 +64,10 @@ SQL Server is a central part of the Microsoft data platform. SQL Server is an in
 
 ## Earlier SQL Server versions
 - [SQL Server Update Center - links and information for all supported versions](https://msdn.microsoft.com/library/ff803383.aspx)
-- [Books Online for SQL Server 2014](https://msdn.microsoft.com/library/ms130214(v=sql.120).aspx)
-- [Install SQL Server 2014 Express and other older SQL Server versions](http://www.hanselman.com/blog/DownloadSQLServerExpress.aspx). (**Thank you to [Scott Hanselman](http://www.hanselman.com/) for collecting all of the installer package links in one place!**)  
-- [SQL Server 2012 technical documentation](https://technet.microsoft.com/library/bb418433(v=sql.10).aspx)  
-- [SQL Server 2008 R2 Product Documentation](https://msdn.microsoft.com/library/hh278298(v=sql.10).aspx)  
-- [SQL Server 2008 technical documentation](https://msdn.microsoft.com/library/hh994727(v=sql.10).aspx) 
+- [SQL Server 2014 documentation](https://msdn.microsoft.com/library/ms130214(v=sql.120).aspx)
+- [SQL Server 2012 documentation](https://technet.microsoft.com/library/bb418433(v=sql.10).aspx)  
+- [SQL Server 2008 R2 documentation](https://msdn.microsoft.com/library/hh278298(v=sql.10).aspx)  
+- [SQL Server 2008 documentation](https://msdn.microsoft.com/library/hh994727(v=sql.10).aspx) 
 - [SQL Server 2005 archived documentation](https://msdn.microsoft.com/library/hh278313(v=sql.10).aspx)    
 
 ## Samples  

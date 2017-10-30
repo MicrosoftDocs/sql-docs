@@ -19,6 +19,7 @@ caps.latest.revision: 130
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # Start the SQL Server Import and Export Wizard
 

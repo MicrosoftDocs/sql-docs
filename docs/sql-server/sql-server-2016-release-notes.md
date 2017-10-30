@@ -23,9 +23,9 @@ ms.workload: "Active"
     
  **Try it out:**    
    
-[![Download from Evaluation Center](../includes/media/download2.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)  Download SQL Server 2016  from the **[Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**    
+[![Download from Evaluation Center](../includes/media/download2.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)  Download SQL Server 2016  from the **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**    
     
-[![Azure Virtual Machine small](../includes/media/azure-vm.png)](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/) Have an Azure account?  Then go **[Here](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/)** to spin up a Virtual Machine with SQL Server 2016 SP1 already installed.
+[![Azure Virtual Machine small](../includes/media/azure-vm.png)](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/) Have an Azure account?  Then go **[Here](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/)** to spin up a Virtual Machine with SQL Server 2016 SP1 already installed.
     
 [![Download SSMS](../includes/media/download2.png)**SSMS:** To get the latest version of SQL Server Management Studio, see **[Download SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)**.   
     
@@ -40,8 +40,8 @@ ms.workload: "Active"
 ## <a name="bkmk_2016sp1"></a>SQL Server 2016 Service Pack 1 (SP1) available
 ![info_tip](../sql-server/media/info-tip.png) SQL Server 2016 SP1 upgrades all editions and service levels of SQL Server 2016 to SQL Server 2016 SP1. In addition to the fixes that are listed in this article, SQL Server 2016 SP1 includes hotfixes that were included in SQL Server 2016 Cumulative Update 1 (CU1) to SQL Server 2016 CU3.
     
-- [SQL Server 2016 SP1 download page](https://www.microsoft.com/en-us/download/details.aspx?id=54276)
-- [SQL Server 2016 Service Pack 1 release information](https://support.microsoft.com/en-us/kb/3182545) Lists the individual bug #s and issues that were fixed or changed in SP1.
+- [SQL Server 2016 SP1 download page](https://www.microsoft.com/download/details.aspx?id=54276)
+- [SQL Server 2016 Service Pack 1 release information](https://support.microsoft.com/kb/3182545) Lists the individual bug #s and issues that were fixed or changed in SP1.
  - ![info_tip](../sql-server/media/info-tip.png) See the [SQL Server Update Center](https://msdn.microsoft.com/library/ff803383.aspx) for links and information for all supported versions, including service packs of [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 
     
     
@@ -52,7 +52,7 @@ ms.workload: "Active"
 -   [Product Documentation (GA)](#bkmk_ga_docs)
  
 ### ![repl_icon_warn](../database-engine/availability-groups/windows/media/repl-icon-warn.gif) <a name="bkmk_ga_instalpatch"></a> Install Patch Requirement (GA) 
-**Issue and customer impact:** Microsoft has identified a problem that affects the Microsoft VC++ 2013 Runtime binaries that are installed as a prerequisite by SQL Server 2016. An update is available to fix this problem. If this update to the VC runtime binaries is not installed, SQL Server 2016 may experience stability issues in certain scenarios. Before you in stall SQL Server 2016, check to see if the computer needs the patch described in [KB 3164398](http://support.microsoft.com/kb/3164398). The patch is also included in [Cumulative Update Package 1 (CU1) for SQL Server 2016 RTM](https://www.microsoft.com/en-us/download/details.aspx?id=53338). 
+**Issue and customer impact:** Microsoft has identified a problem that affects the Microsoft VC++ 2013 Runtime binaries that are installed as a prerequisite by SQL Server 2016. An update is available to fix this problem. If this update to the VC runtime binaries is not installed, SQL Server 2016 may experience stability issues in certain scenarios. Before you in stall SQL Server 2016, check to see if the computer needs the patch described in [KB 3164398](http://support.microsoft.com/kb/3164398). The patch is also included in [Cumulative Update Package 1 (CU1) for SQL Server 2016 RTM](https://www.microsoft.com/download/details.aspx?id=53338). 
 
 **Resolution:** Use one of the following solutions:
 

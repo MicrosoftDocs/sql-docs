@@ -18,12 +18,12 @@ ms.workload: "Active"
 # SQL Server 2017 Release Notes
 This article describes limitations and issues with SQL Server 2017. For related information, see:
 - [What's New in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)
-- [SQL Server on Linux release notes](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-release-notes)
+- [SQL Server on Linux release notes](https://docs.microsoft.com/sql/linux/sql-server-linux-release-notes)
 - [SQL Server 2017 Cumulative updates](http://aka.ms/sql2017cu) for information about the latest cumulative update (CU) release
 
 **Try SQL Server!**
 - [![Download from Evaluation Center](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [Download SQL Server 2017](http://go.microsoft.com/fwlink/?LinkID=829477)
-- [![Create Virtual Machine](../includes/media/azure-vm.png)](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [Spin up a Virtual Machine with SQL Server 2017](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
+- [![Create Virtual Machine](../includes/media/azure-vm.png)](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [Spin up a Virtual Machine with SQL Server 2017](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
 
 ## SQL Server 2017 - general availability release (October 2017)
 ### Database Engine
@@ -62,7 +62,7 @@ On the user permissions page, when granting permission to the root level in the 
 
 ![horizontal_bar](../sql-server/media/horizontal-bar.png)
 ## SQL Server 2017 Release Candidate (RC2 - August 2017)
-There are no release notes for SQL Server on Windows related to this release. See [SQL Server on Linux Release notes](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-release-notes).
+There are no release notes for SQL Server on Windows related to this release. See [SQL Server on Linux Release notes](https://docs.microsoft.com/sql/linux/sql-server-linux-release-notes).
 
 
 ![horizontal_bar](../sql-server/media/horizontal-bar.png)

@@ -33,14 +33,14 @@ SQL Server is a central part of the Microsoft data platform. SQL Server is an in
 |---------|---------|
 |[What's New in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)     | [SQL Server 2017 Release Notes](../sql-server/sql-server-2017-release-notes.md)        |
 |[What's New in SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)     | [SQL Server 2016 Release Notes](../sql-server/sql-server-2016-release-notes.md)        |
-|[What's New in SQL Server 2014](https://msdn.microsoft.com/en-us/library/bb500435(v=sql.120).aspx)     | [SQL Server 2014 Release Notes](../sql-server/sql-server-2014-release-notes.md)        |
+|[What's New in SQL Server 2014](https://msdn.microsoft.com/library/bb500435(v=sql.120).aspx)     | [SQL Server 2014 Release Notes](../sql-server/sql-server-2014-release-notes.md)        |
    
 **Try SQL Server!**
 
 |||
 |-|-|
-|[![Download from Evaluation Center](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [Download SQL Server 2017](http://go.microsoft.com/fwlink/?LinkID=829477) | [![Download from Evaluation Center](../includes/media/download2.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) [Download SQL Server 2016](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) |
-|[![Create Virtual Machine](../includes/media/azure-vm.png)](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [Get a Virtual Machine with SQL Server](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) | [![Download from Evaluation Center](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) [Download SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) |
+|[![Download from Evaluation Center](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [Download SQL Server 2017](http://go.microsoft.com/fwlink/?LinkID=829477) | [![Download from Evaluation Center](../includes/media/download2.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) [Download SQL Server 2016](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) |
+|[![Create Virtual Machine](../includes/media/azure-vm.png)](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [Get a Virtual Machine with SQL Server](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) | [![Download from Evaluation Center](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) [Download SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) |
 | [![Download from Evaluation Center](../includes/media/download2.png)](../ssdt/download-sql-server-data-tools-ssdt.md) [Download SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md) | |
 
     
@@ -59,8 +59,8 @@ SQL Server is a central part of the Microsoft data platform. SQL Server is an in
 
 ## Migrate and move data
 - [Import and Export Data with the SQL Server Import and Export Wizard](../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)
-- [Microsoft Data Migration Assistant](https://www.microsoft.com/en-us/download/details.aspx?id=53595)
-- [Migrate your SQL Server database to Azure SQL Database](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-migrate-your-sql-server-database)
+- [Microsoft Data Migration Assistant](https://www.microsoft.com/download/details.aspx?id=53595)
+- [Migrate your SQL Server database to Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-migrate-your-sql-server-database)
 
 ## Earlier SQL Server versions
 - [SQL Server Update Center - links and information for all supported versions](https://msdn.microsoft.com/library/ff803383.aspx)
@@ -72,7 +72,7 @@ SQL Server is a central part of the Microsoft data platform. SQL Server is an in
 
 ## Samples  
 - [Wide World Importers sample database](https://msdn.microsoft.com/library/mt734199(v=sql.1).aspx)  
-- [AdventureWorks sample databases and scripts for SQL Server 2016](https://www.microsoft.com/en-us/download/details.aspx?id=49502) 
+- [AdventureWorks sample databases and scripts for SQL Server 2016](https://www.microsoft.com/download/details.aspx?id=49502) 
 - [SQL Server samples on GitHub](https://github.com/Microsoft/sql-server-samples) 
    
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

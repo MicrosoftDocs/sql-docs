@@ -19,6 +19,7 @@ caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Visual Basic for Applications functions
 The following Visual Basic for Applications functions can be used in data shaping CALC expressions:  

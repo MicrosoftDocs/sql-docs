@@ -14,6 +14,7 @@ caps.latest.revision: 7
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Flat File Custom Properties
   **Source Custom Properties**  

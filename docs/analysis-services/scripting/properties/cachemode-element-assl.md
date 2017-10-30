@@ -24,6 +24,7 @@ caps.latest.revision: 13
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # CacheMode Element (ASSL)
   Determines the caching mechanism used for training data retrieved while processing a mining structure.  

@@ -14,6 +14,7 @@ caps.latest.revision: 12
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Specify Paths and Optimization Hints for Selective XML Indexes
   This topic describes how to specify node paths to index and optimization hints for indexing when you create or alter selective XML indexes.  

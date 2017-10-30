@@ -23,9 +23,10 @@ helpviewer_keywords:
   - "SESSION_USER function"
 ms.assetid: 3dbe8532-31b6-4862-8b2a-e58b00b964de
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "On Demand"
 ---
 # SESSION_USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]

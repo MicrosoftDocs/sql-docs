@@ -26,6 +26,7 @@ caps.latest.revision: 37
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # AttributeHierarchyOptimizedState Element (ASSL)
   Determines the level of optimization applied to the attribute hierarchy.  

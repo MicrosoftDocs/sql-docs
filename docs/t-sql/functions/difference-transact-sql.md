@@ -20,9 +20,10 @@ helpviewer_keywords:
   - "SOUNDEX values"
 ms.assetid: c58ca25d-d6ea-48fa-93bb-c9374b0b2a2b
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Active"
 ---
 # DIFFERENCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]

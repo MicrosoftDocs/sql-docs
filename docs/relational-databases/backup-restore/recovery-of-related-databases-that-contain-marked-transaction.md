@@ -26,6 +26,7 @@ caps.latest.revision: 37
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Recovery of Related  Databases That Contain Marked Transaction
   This topic is relevant only for databases that contain marked transactions and that use the full or bulk-logged recovery models.  

@@ -23,6 +23,7 @@ caps.latest.revision: 29
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # SQLEndTran Function
 **Conformance**  

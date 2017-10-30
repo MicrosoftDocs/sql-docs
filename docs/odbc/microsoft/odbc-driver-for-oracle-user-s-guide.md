@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # ODBC Driver for Oracle User&#39;s Guide
 > [!IMPORTANT]  

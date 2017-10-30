@@ -14,6 +14,7 @@ caps.latest.revision: 18
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # catalog.create_execution (SSISDB Database)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -25,7 +26,7 @@ manager: "jhubbard"
 ## Syntax  
   
 ```sql  
-create_execution [@folder_name = folder_name  
+catalog.create_execution [@folder_name = folder_name  
      , [@project_name =] project_name  
      , [@package_name =] package_name  
   [  , [@reference_id =] reference_id ]  
@@ -71,7 +72,7 @@ create_execution [@folder_name = folder_name
 ## Example  
  The following example calls catalog.create_execution to create an instance of execution for the Child1.dtsx package, which is not in Scale Out. Integration Services Project1 contains the package. The example calls catalog.set_execution_parameter_value to set values for the Parameter1, Parameter2, and LOGGING_LEVEL parameters. The example calls catalog.start_execution to start an instance of execution.  
   
-```  
+```sql  
 Declare @execution_id bigint  
 EXEC [SSISDB].[catalog].[create_execution] @package_name=N'Child1.dtsx', @execution_id=@execution_id OUTPUT, @folder_name=N'TestDeply4', @project_name=N'Integration Services Project1', @use32bitruntime=False, @reference_id=Null  
 Select @execution_id  
@@ -83,7 +84,6 @@ DECLARE @var2 smallint = 1
 EXEC [SSISDB].[catalog].[set_execution_parameter_value] @execution_id, @object_type=50, @parameter_name=N'LOGGING_LEVEL', @parameter_value=@var2  
 EXEC [SSISDB].[catalog].[start_execution] @execution_id  
 GO  
-  
 ```  
   
 ## Return Code Value  

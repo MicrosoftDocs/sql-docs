@@ -16,6 +16,7 @@ caps.latest.revision: 29
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Configure Topology (Peer-to-Peer Replication)
   Use the **Configure topology** page to perform common configuration tasks, such as adding new nodes, deleting nodes, and adding new connections between existing nodes. The node you selected on the **Publication** page of this wizard is displayed on the design surface. To specify configuration options, right-click a node, a connection, or the design surface.  

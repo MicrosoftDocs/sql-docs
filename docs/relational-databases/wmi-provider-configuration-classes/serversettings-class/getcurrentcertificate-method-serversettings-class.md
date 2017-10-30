@@ -21,6 +21,7 @@ caps.latest.revision: 14
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # GetCurrentCertificate Method (ServerSettings Class)
   Gets the current security certificate.  

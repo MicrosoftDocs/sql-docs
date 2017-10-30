@@ -17,6 +17,7 @@ caps.latest.revision: 17
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Best Practices for Replication Administration
   After you have configured replication, it is important to understand how to administer a replication topology. This topic provides basic best practice guidance in a number of areas with links to more information for each area. In addition to following the best practice guidance presented in this topic, consider reading through the frequently asked questions topic to acquaint yourself with common questions and issues: [Frequently Asked Questions for Replication Administrators](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md).  

@@ -26,6 +26,7 @@ caps.latest.revision: 38
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # AllowBrowsing Element (ASSL)
   Defines whether the members of a [Role](../../../analysis-services/scripting/objects/role-element-assl.md) element have browse permission on a [MiningModel](../../../analysis-services/scripting/objects/miningmodel-element-assl.md) element.  

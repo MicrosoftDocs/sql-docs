@@ -25,9 +25,10 @@ helpviewer_keywords:
   - "options [SQL Server], date"
 ms.assetid: 6b0d0e52-8ac1-4f88-b091-f98d6fb8574a
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Active"
 ---
 # SET DATEFIRST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]

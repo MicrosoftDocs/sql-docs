@@ -13,9 +13,10 @@ helpviewer_keywords:
   - "33128 (Database Engine error)"
 ms.assetid: 12c1096f-d120-439b-85f3-f794859503c9
 caps.latest.revision: 8
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Inactive"
 ---
 # MSSQLSERVER_33128
   

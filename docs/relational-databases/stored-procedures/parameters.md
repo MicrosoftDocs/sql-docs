@@ -17,6 +17,7 @@ caps.latest.revision: 2
 author: "pmasl"
 ms.author: "pelopes"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Parameters
 Parameters are used to exchange data between stored procedures and functions and the application or tool that called the stored procedure or function: 

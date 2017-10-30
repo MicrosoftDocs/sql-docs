@@ -20,6 +20,7 @@ caps.latest.revision: 27
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Attribute Properties - Bind an Attribute to a Key Column
   This procedure describes how to change the setting for the **Name** property of an attribute in a dimension.  

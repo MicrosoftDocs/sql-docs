@@ -26,6 +26,7 @@ caps.latest.revision: 33
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # AttributeRelationships Element (ASSL)
   Contains the collection of [AttributeRelationship](../../../analysis-services/scripting/objects/attributerelationship-element-assl.md) elements for the attribute.  

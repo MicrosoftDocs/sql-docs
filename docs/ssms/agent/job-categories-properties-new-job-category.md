@@ -16,6 +16,7 @@ caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Job Categories Properties - New Job Category
 Lists the jobs in one job category or all job categories, and enables you to add a new job category.  

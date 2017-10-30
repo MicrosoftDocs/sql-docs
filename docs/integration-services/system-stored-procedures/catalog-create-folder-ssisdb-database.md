@@ -14,6 +14,7 @@ caps.latest.revision: 12
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # catalog.create_folder (SSISDB Database)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -23,7 +24,7 @@ manager: "jhubbard"
 ## Syntax  
   
 ```sql  
-create_folder [@folder_name =] folder_name, [@folder_id =] folder_id OUTPUT  
+catalog.create_folder [@folder_name =] folder_name, [@folder_id =] folder_id OUTPUT  
 ```  
   
 ## Arguments  

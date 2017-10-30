@@ -28,6 +28,7 @@ caps.latest.revision: 13
 author: "jeannt"
 ms.author: "jeannt"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Sources Element (XMLA)
   Contains a collection of [Source](../../../analysis-services/xmla/xml-elements-properties/source-element-xmla.md) elements for the parent [MergePartitions](../../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md) element.  

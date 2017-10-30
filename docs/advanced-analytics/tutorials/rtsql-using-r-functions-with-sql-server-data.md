@@ -17,6 +17,7 @@ caps.latest.revision: 8
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Using R functions with SQL Server data (R in SQL quickstart)
 

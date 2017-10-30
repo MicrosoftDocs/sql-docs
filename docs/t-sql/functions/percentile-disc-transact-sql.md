@@ -19,9 +19,10 @@ helpviewer_keywords:
   - "analytic functions,PERCENTILE_DISC"
 ms.assetid: b545413d-c4f7-4c8e-8617-607599a26680
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Active"
 ---
 # PERCENTILE_DISC (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all_md](../../includes/tsql-appliesto-ss2012-all-md.md)]

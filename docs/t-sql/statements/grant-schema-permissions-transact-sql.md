@@ -18,9 +18,10 @@ helpviewer_keywords:
   - "granting permissions [SQL Server], schemas"
 ms.assetid: b2aa1fc8-e7af-45d2-9f80-737543c8aa95
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Active"
 ---
 # GRANT Schema Permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

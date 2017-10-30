@@ -26,9 +26,10 @@ helpviewer_keywords:
   - "rules [SQL Server], collations"
 ms.assetid: 58c4e64b-5634-4c29-aa22-33193282dd27
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "On Demand"
 ---
 # Collation Precedence (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]

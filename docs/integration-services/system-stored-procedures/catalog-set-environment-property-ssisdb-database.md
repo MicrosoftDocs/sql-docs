@@ -14,6 +14,7 @@ caps.latest.revision: 15
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # catalog.set_environment_property (SSISDB Database)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -23,7 +24,7 @@ manager: "jhubbard"
 ## Syntax  
   
 ```sql  
-set_environment_property [ @folder_name = ] folder_name  
+catalog.set_environment_property [ @folder_name = ] folder_name  
     , [ @environment_name = ] environment_name  
     , [ @property_name = ] property_name  
     , [ @property_value = ] property_value  

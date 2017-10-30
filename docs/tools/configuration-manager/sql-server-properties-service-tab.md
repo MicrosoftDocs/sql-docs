@@ -14,6 +14,7 @@ caps.latest.revision: 22
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # SQL Server Properties (Service Tab)
   Use the **Service**tab on the **MSSQLSERVER Properties** dialog box to view or specify the following options.  

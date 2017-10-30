@@ -17,6 +17,7 @@ caps.latest.revision: 7
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # DISCOVER_LOCATIONS Rowset
   Returns information about the contents of a backup file. You must have permission to access the backup file location.  

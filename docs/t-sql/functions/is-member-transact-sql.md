@@ -27,9 +27,10 @@ helpviewer_keywords:
   - "members [SQL Server], verifying"
 ms.assetid: 77cb68a0-19b7-4fe1-ab17-e5587699631b
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "On Demand"
 ---
 # IS_MEMBER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]

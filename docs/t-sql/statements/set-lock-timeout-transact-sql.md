@@ -25,9 +25,10 @@ helpviewer_keywords:
   - "wait time for lock releases [SQL Server]"
 ms.assetid: dd0c389e-956d-435e-bf71-e16624a0a215
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "On Demand"
 ---
 # SET LOCK_TIMEOUT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]

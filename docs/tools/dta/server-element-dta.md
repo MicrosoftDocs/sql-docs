@@ -18,6 +18,7 @@ caps.latest.revision: 16
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Server Element (DTA)
   Contains the identifying information for the server on which the databases reside that you want to tune.  

@@ -23,6 +23,7 @@ caps.latest.revision: 22
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # SQLGetEnvAttr Function
 **Conformance**  

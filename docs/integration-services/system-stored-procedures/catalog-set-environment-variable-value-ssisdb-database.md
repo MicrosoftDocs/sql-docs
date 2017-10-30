@@ -14,6 +14,7 @@ caps.latest.revision: 12
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # catalog.set_environment_variable_value (SSISDB Database)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -23,7 +24,7 @@ manager: "jhubbard"
 ## Syntax  
   
 ```sql  
-set_environment_variable_value [ @folder_name = ] folder_name  
+catalog.set_environment_variable_value [ @folder_name = ] folder_name  
     , [ @environment_name = ] environment_name  
     , [ @variable_name = ] variable _name  
     , [ @value = ] value  

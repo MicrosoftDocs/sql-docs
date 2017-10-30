@@ -19,6 +19,7 @@ caps.latest.revision: 23
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Applying an XSL Transformation (SQLXML Managed Classes)
   In this example, an SQL query is executed against the AdventureWorks database. The XSL transformation is applied to the query result to generate a two-column table of the employees' first and last names.  

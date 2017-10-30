@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Error Messages (Visual FoxPro ODBC Driver)
 When an error occurs, the Visual FoxPro driver returns the following information:  

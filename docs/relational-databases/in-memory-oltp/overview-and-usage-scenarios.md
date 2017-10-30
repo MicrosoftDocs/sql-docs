@@ -14,6 +14,7 @@ caps.latest.revision: 5
 author: "jodebrui"
 ms.author: "jodebrui"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Overview and Usage Scenarios
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]

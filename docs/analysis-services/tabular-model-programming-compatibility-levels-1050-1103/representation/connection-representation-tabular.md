@@ -17,6 +17,7 @@ caps.latest.revision: 9
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Connection Representation (Tabular)
   The connection object defines the source of the data that populates the tabular model.  

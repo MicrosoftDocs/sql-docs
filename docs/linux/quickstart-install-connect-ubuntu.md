@@ -9,6 +9,7 @@ ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
+ms.workload: "Active"
 ---
 # Install SQL Server and create a database on Ubuntu
 
@@ -21,9 +22,12 @@ In this quick start tutorial, you first install SQL Server 2017 on Ubuntu 16.04.
 
 ## Prerequisites
 
-You must have a Ubuntu machine with **at least 3.25 GB** of memory.
+You must have a Ubuntu 16.04 machine with **at least 2 GB** of memory.
 
 To install Ubuntu on your own machine, go to [http://www.ubuntu.com/download/server](http://www.ubuntu.com/download/server). You can also create Ubuntu virtual machines in Azure. See [Create and Manage Linux VMs with the Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm).
+
+> [!NOTE]
+> At this time, the [Windows Subsystem for Linux](https://msdn.microsoft.com/commandline/wsl/about) for Windows 10 is not supported as an installation target.
 
 For other system requirements, see [System requirements for SQL Server on Linux](sql-server-linux-setup.md#system).
 
@@ -32,7 +36,7 @@ For other system requirements, see [System requirements for SQL Server on Linux]
 To configure SQL Server on Ubuntu, run the following commands in a terminal to install the **mssql-server** package.
 
 > [!IMPORTANT]
-> If you have previously installed a CTP or RC release of SQL Server 2017, you must first remove the old repository before registering one of the GA repositories. For more information, see [Change repositories from the preview repository to the GA repository](sql-server-linux-change-repo.md)
+> If you have previously installed a CTP or RC release of SQL Server 2017, you must first remove the old repository before registering one of the GA repositories. For more information, see [Change repositories from the preview repository to the GA repository](sql-server-linux-change-repo.md).
 
 1. Import the public repository GPG keys:
 

@@ -14,6 +14,7 @@ caps.latest.revision: 19
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # catalog.deploy_project (SSISDB Database)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -23,7 +24,7 @@ manager: "jhubbard"
 ## Syntax  
   
 ```sql  
-deploy_project [@folder_name =] folder_name   
+catalog.deploy_project [@folder_name =] folder_name   
       , [@project_name =] project_name   
       , [@project_stream =] projectstream   
     [ , [@operation_id ] = operation_id OUTPUT ]   

@@ -21,6 +21,7 @@ caps.latest.revision: 36
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Batches of Statements
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]

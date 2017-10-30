@@ -14,6 +14,7 @@ caps.latest.revision: 5
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # catalog.cleanup_server_log
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -22,10 +23,8 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```  
-  
-cleanup_server_log  
-  
+```sql
+catalog.cleanup_server_log  
 ```  
   
 ## Arguments  
@@ -86,8 +85,7 @@ GO
 DECLARE@return_value int  
 EXEC@return_value = [internal].[cleanup_server_log]  
 SELECT'Return Value' = @return_value  
-GO  
-  
+GO   
 ```  
   
   

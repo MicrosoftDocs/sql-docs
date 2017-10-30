@@ -21,6 +21,7 @@ caps.latest.revision: 33
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # PropertyValueType Property (SqlServiceAdvancedProperty Class)
   Gets the data type of a property.  

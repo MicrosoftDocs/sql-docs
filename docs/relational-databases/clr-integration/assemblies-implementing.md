@@ -16,6 +16,7 @@ caps.latest.revision: 33
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Assemblies - Implementing
   This topic provides information about the following areas to help you implement and work with assemblies in the database:  

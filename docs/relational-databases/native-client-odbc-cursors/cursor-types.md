@@ -19,6 +19,7 @@ caps.latest.revision: 28
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Cursor Types
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]

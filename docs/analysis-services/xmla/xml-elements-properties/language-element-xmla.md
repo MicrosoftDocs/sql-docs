@@ -28,6 +28,7 @@ caps.latest.revision: 11
 author: "jeannt"
 ms.author: "jeannt"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Language Element (XMLA)
   Contains the locale identifier (LCID) for the parent [Translation](../../../analysis-services/xmla/xml-elements-properties/translation-element-xmla.md) element.  

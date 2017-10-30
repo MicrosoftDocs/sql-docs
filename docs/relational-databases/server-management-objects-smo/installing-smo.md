@@ -19,6 +19,7 @@ author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
 
+ms.workload: "On Demand"
 ---
 
 #Installing SMO

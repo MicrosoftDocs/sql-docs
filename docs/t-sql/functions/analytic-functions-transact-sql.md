@@ -13,9 +13,10 @@ dev_langs:
   - "TSQL"
 ms.assetid: 60fbff84-673b-48ea-9254-6ecdad20e7fe
 caps.latest.revision: 5
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Active"
 ---
 # Analytic Functions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all_md](../../includes/tsql-appliesto-ss2012-all-md.md)]

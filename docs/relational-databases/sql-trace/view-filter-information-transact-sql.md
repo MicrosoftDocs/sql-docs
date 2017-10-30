@@ -20,6 +20,7 @@ caps.latest.revision: 20
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # View Filter Information (Transact-SQL)
   This topic describes how to use built-in functions to view trace filter information.  

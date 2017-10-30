@@ -14,6 +14,7 @@ caps.latest.revision: 7
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # catalog.set_customized_logging_level_description
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -23,9 +24,8 @@ manager: "jhubbard"
 ## Syntax  
   
 ```sql  
-set_customized_logging_level_description [ @level_name = ] level_name  
+catalog.set_customized_logging_level_description [ @level_name = ] level_name  
     , [ @level_description = ] level_description  
-  
 ```  
   
 ## Arguments  

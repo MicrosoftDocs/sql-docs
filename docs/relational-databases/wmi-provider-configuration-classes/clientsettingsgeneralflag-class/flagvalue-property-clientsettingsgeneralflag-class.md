@@ -21,6 +21,7 @@ caps.latest.revision: 14
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # FlagValue Property (ClientSettingsGeneralFlag Class)
   Gets the value of the flag.  

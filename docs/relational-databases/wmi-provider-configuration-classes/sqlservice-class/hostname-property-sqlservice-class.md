@@ -21,6 +21,7 @@ caps.latest.revision: 34
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # HostName Property (SqlService Class)
   Gets the host name of the service.  

@@ -26,6 +26,7 @@ caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Members Element (ASSL)
   Contains the collection of [Member](../../../analysis-services/scripting/objects/member-element-assl.md) elements of the parent element.  

@@ -14,6 +14,7 @@ caps.latest.revision: 5
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # catalog.cleanup_server_execution_keys
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -22,11 +23,9 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```  
-  
-            cleanup_server_execution_keys [ @cleanup_flag = ] cleanup_flag ,  
+```sql
+catalog.cleanup_server_execution_keys [ @cleanup_flag = ] cleanup_flag ,  
 [ @delete_batch_size = ] delete_batch_size  
-  
 ```  
   
 ## Arguments  
@@ -101,7 +100,6 @@ EXEC@return_value = [internal].[cleanup_server_execution_keys]
 SELECT'Return Value' = @return_value  
   
 GO  
-  
 ```  
   
   

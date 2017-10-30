@@ -1,7 +1,7 @@
 ---
 title: "time (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/07/2017"
+ms.date: "6/7/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -22,9 +22,10 @@ helpviewer_keywords:
   - "time data type [SQL Server]"
 ms.assetid: 30a6c681-8190-48e4-94d0-78182290a402
 caps.latest.revision: 45
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Active"
 ---
 # time (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]

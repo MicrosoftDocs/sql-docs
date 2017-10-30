@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Save As
 Used to save an instance of the current item at a specified location in a specified file format. Click **Save** *<file>* **As** on the **File** menu (where *<file>* is the name of the current item), or press ALT+F, A in the Code Editor.  

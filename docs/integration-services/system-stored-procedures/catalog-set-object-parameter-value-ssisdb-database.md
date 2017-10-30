@@ -14,6 +14,7 @@ caps.latest.revision: 17
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # catalog.set_object_parameter_value (SSISDB Database)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -23,7 +24,7 @@ manager: "jhubbard"
 ## Syntax  
   
 ```sql  
-set_object_parameter_value [@object_type =] object_type   
+catalog.set_object_parameter_value [@object_type =] object_type   
     , [@folder_name =] folder_name   
     , [@project_name =] project_name   
     , [@parameter_name =] parameter _name   

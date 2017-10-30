@@ -20,6 +20,7 @@ caps.latest.revision: 36
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Performing Transactions - Distributed Transactions
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]

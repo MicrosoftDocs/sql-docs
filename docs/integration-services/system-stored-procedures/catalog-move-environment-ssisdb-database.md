@@ -14,6 +14,7 @@ caps.latest.revision: 14
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # catalog.move_environment (SSISDB Database)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -23,7 +24,7 @@ manager: "jhubbard"
 ## Syntax  
   
 ```sql  
-move_environment [ @source_folder = ] source_folder  
+catalog.move_environment [ @source_folder = ] source_folder  
     , [ @environment_name = ] environment_name  
     , [ @destination_folder = ] destination_folder  
 ```  

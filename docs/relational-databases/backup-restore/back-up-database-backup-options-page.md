@@ -17,6 +17,7 @@ caps.latest.revision: 62
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Back Up Database (Backup Options Page)
   Use the  **Backup Options** page of the **Back Up Database** dialog box to view or modify database backup options.  

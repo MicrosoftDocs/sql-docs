@@ -14,6 +14,7 @@ caps.latest.revision: 5
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # catalog.check_schema_version
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -26,8 +27,8 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```vb  
-Check_schema_version [@use32bitruntime = ] use32bitruntime  
+```sql  
+catalog.check_schema_version [@use32bitruntime = ] use32bitruntime  
 ```  
   
 ## Arguments  

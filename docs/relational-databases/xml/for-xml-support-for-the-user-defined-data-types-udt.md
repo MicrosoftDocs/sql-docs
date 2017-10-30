@@ -17,6 +17,7 @@ caps.latest.revision: 23
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # FOR XML Support for the User-Defined Data Types (UDT)
   FOR XML does not support common language runtime (CLR) user-defined data types (UDTs).  

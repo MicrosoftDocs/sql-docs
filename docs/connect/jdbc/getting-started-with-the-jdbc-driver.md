@@ -14,6 +14,7 @@ caps.latest.revision: 3
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Getting Started with the JDBC Driver
 ## Getting Started  

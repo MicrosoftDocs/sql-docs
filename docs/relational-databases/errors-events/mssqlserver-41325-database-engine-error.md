@@ -13,9 +13,10 @@ helpviewer_keywords:
   - "41325 (Database Engine error)"
 ms.assetid: 97c6a8bb-139a-44f3-9ed5-f46d047e8ed3
 caps.latest.revision: 7
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Inactive"
 ---
 # MSSQLSERVER_41325
   

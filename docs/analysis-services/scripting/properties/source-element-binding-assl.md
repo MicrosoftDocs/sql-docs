@@ -26,6 +26,7 @@ caps.latest.revision: 39
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Source Element (Binding) (ASSL)
   Identifies the source of data to which the parent element is bound.  

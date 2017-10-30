@@ -16,6 +16,7 @@ caps.latest.revision: 6
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Add a Custom Report to Management Studio
 This topic describes how to create a simple [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion_md.md)] report that is saved as an .rdl file, and then add that rdl file to [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] as a custom report. [!INCLUDE[ssRS](../../includes/ssrs_md.md)] can create a wide variety of sophisticated reports. To create a report by using this topic, you must have [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] installed on the computer. You do not have to install [!INCLUDE[ssRS](../../includes/ssrs_md.md)] on [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] to run a custom report using [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)].  

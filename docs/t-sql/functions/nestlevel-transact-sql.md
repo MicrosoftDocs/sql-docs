@@ -20,9 +20,10 @@ helpviewer_keywords:
   - "stored procedure nesting levels [SQL Server]"
 ms.assetid: 8c0b2134-8616-44f6-addc-6583c432fb62
 caps.latest.revision: 40
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Inactive"
 ---
 # &#x40;&#x40;NESTLEVEL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -83,7 +84,7 @@ Inner Level
 ```  
   
 ### B. Calling @@NESTLEVEL  
- The following example shows the difference in values returned by `SELECT`, `EXEC`, and `sp`_`executesql` when each of them calls `@@NESTLEVEL`.  
+ The following example shows the difference in values returned by `SELECT`, `EXEC`, and `sp_executesql` when each of them calls `@@NESTLEVEL`.  
   
 ```  
 CREATE PROC usp_NestLevelValues AS  

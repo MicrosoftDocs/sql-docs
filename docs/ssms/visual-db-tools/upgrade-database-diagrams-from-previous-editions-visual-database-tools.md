@@ -22,6 +22,7 @@ caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Upgrade Database Diagrams from Previous Editions (Visual Database Tools)
 Database diagrams created on previous editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] databases are upgraded automatically when database diagramming is set up on [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)]. For more steps for setting up diagramming see [Set Up Database Diagram Designer (Visual Database Tools)](../../ssms/visual-db-tools/set-up-database-diagram-designer-visual-database-tools.md).  

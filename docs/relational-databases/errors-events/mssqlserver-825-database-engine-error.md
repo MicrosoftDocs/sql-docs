@@ -13,9 +13,10 @@ helpviewer_keywords:
   - "825 (Database Engine error)"
 ms.assetid: f69f8214-5af1-4769-878b-117ad6eaff52
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Inactive"
 ---
 # MSSQLSERVER_825
   

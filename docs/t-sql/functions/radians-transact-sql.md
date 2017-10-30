@@ -18,9 +18,10 @@ helpviewer_keywords:
   - "RADIANS function"
 ms.assetid: e9f69951-ecda-45d9-8909-dcb716b1b1c0
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Inactive"
 ---
 # RADIANS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]

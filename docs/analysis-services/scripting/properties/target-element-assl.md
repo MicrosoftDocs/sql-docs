@@ -26,6 +26,7 @@ caps.latest.revision: 33
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Target Element (ASSL)
   Identifies the target of the [Action](../../../analysis-services/scripting/objects/action-element-assl.md) element.  

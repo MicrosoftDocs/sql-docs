@@ -20,6 +20,7 @@ caps.latest.revision: 40
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Setting Large Data
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]

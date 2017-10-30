@@ -25,6 +25,7 @@ caps.latest.revision: 37
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # WHERE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,78 +50,6 @@ manager: "jhubbard"
 ### A. Finding a row by using a simple equality  
   
 ```  
-USE AdventureWorks2012  
-GO  
-SELECT ProductID, Name  
-FROM Production.Product  
-WHERE Name = 'Blade' ;  
-GO  
-```  
-  
-### B. Finding rows that contain a value as a part of a string  
-  
-```  
-SELECT ProductID, Name, Color  
-FROM Production.Product  
-WHERE Name LIKE ('%Frame%');  
-GO  
-```  
-  
-### C. Finding rows by using a comparison operator  
-  
-```  
-SELECT ProductID, Name  
-FROM Production.Product  
-WHERE ProductID <= 12 ;  
-GO  
-```  
-  
-### D. Finding rows that meet any of three conditions  
-  
-```  
-SELECT ProductID, Name  
-FROM Production.Product  
-WHERE ProductID = 2  
-OR ProductID = 4   
-OR Name = 'Spokes' ;  
-GO  
-```  
-  
-### E. Finding rows that must meet several conditions  
-  
-```  
-SELECT ProductID, Name, Color  
-FROM Production.Product  
-WHERE Name LIKE ('%Frame%')  
-AND Name LIKE ('HL%')  
-AND Color = 'Red' ;  
-GO  
-```  
-  
-### F. Finding rows that are in a list of values  
-  
-```  
-SELECT ProductID, Name, Color  
-FROM Production.Product  
-WHERE Name IN ('Blade', 'Crown Race', 'Spokes');  
-GO  
-```  
-  
-### G. Finding rows that have a value between two values  
-  
-```  
-SELECT ProductID, Name, Color  
-FROM Production.Product  
-WHERE ProductID BETWEEN 725 AND 734;  
-GO  
-```  
-  
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- The following examples show how to use some common search conditions in the `WHERE` clause.  
-  
-### H. Finding a row by using a simple equality  
-  
-```  
 -- Uses AdventureWorks  
   
 SELECT EmployeeKey, LastName  
@@ -128,7 +57,7 @@ FROM DimEmployee
 WHERE LastName = 'Smith' ;  
 ```  
   
-### I. Finding rows that contain a value as part of a string  
+### B. Finding rows that contain a value as part of a string  
   
 ```  
 -- Uses AdventureWorks  
@@ -138,7 +67,7 @@ FROM DimEmployee
 WHERE LastName LIKE ('%Smi%');  
 ```  
   
-### J. Finding rows by using a comparison operator  
+### C. Finding rows by using a comparison operator  
   
 ```  
 -- Uses AdventureWorks  
@@ -148,7 +77,7 @@ FROM DimEmployee
 WHERE EmployeeKey  <= 500;  
 ```  
   
-### K. Finding rows that meet any of three conditions  
+### D. Finding rows that meet any of three conditions  
   
 ```  
 -- Uses AdventureWorks  
@@ -158,7 +87,7 @@ FROM DimEmployee
 WHERE EmployeeKey = 1 OR EmployeeKey = 8 OR EmployeeKey = 12;  
 ```  
   
-### L. Finding rows that must meet several conditions  
+### E. Finding rows that must meet several conditions  
   
 ```  
 -- Uses AdventureWorks  
@@ -168,7 +97,7 @@ FROM DimEmployee
 WHERE EmployeeKey <= 500 AND LastName LIKE '%Smi%' AND FirstName LIKE '%A%';  
 ```  
   
-### M. Finding rows that are in a list of values  
+### F. Finding rows that are in a list of values  
   
 ```  
 -- Uses AdventureWorks  
@@ -178,7 +107,7 @@ FROM DimEmployee
 WHERE LastName IN ('Smith', 'Godfrey', 'Johnson');  
 ```  
   
-### N. Finding rows that have a value between two values  
+### G. Finding rows that have a value between two values  
   
 ```  
 -- Uses AdventureWorks  

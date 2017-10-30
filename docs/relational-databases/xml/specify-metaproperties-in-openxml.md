@@ -20,6 +20,7 @@ caps.latest.revision: 23
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Specify Metaproperties in OPENXML
   Metaproperty attributes in an XML document are attributes that describe the properties of an XML item, such as element, attribute, or any other DOM node. These attributes do not physically exist in the XML document text. However, OPENXML provides these metaproperties for all the XML items. These metaproperties allow you to extract information, such as local positioning and namespace information, of XML nodes. This information provides you with more details than are apparent in the textual representation.  

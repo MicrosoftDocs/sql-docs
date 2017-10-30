@@ -26,6 +26,7 @@ caps.latest.revision: 37
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # LastSchemaUpdate Element (ASSL)
   Contains the read-only metadata update timestamp of the parent element.  

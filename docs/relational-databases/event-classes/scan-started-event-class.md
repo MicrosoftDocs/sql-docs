@@ -16,6 +16,7 @@ caps.latest.revision: 30
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Scan:Started Event Class
   The Scan:Started event class occurs when a table or index scan is started.  

@@ -16,6 +16,7 @@ caps.latest.revision: 10
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # SAP BW Destination Editor (Error Output Page)
   Use the **Error Output** page of the **SAP BW Destination Editor** to specify error handling options.  

@@ -20,9 +20,10 @@ helpviewer_keywords:
   - "tangent"
 ms.assetid: 6d3dd28e-4fa6-40ba-94cf-b33c0ff614ec
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Inactive"
 ---
 # ATAN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]

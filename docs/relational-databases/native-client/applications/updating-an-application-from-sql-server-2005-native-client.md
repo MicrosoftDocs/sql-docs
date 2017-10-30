@@ -16,6 +16,7 @@ caps.latest.revision: 42
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Updating an Application from SQL Server 2005 Native Client
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]

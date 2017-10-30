@@ -26,6 +26,7 @@ caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # DeniedSet Element (ASSL)
   Contains a set expression that defines the list of permissions that are denied on the associated attribute.  

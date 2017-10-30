@@ -14,6 +14,7 @@ caps.latest.revision: 13
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Configure E-mail for a Reporting Services Service Application
 

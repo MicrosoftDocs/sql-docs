@@ -23,9 +23,10 @@ helpviewer_keywords:
   - "dateparts [SQL Server], year"
 ms.assetid: 74aa7ccc-8575-4018-80cf-14aeca379687
 caps.latest.revision: 44
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Active"
 ---
 # YEAR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]

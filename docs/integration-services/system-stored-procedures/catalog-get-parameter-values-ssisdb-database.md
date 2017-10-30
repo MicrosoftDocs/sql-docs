@@ -14,6 +14,7 @@ caps.latest.revision: 13
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # catalog.get_parameter_values (SSISDB Database)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -23,7 +24,7 @@ manager: "jhubbard"
 ## Syntax  
   
 ```sql  
-get_parameter_values [ @folder_name = ] folder_name  
+catalog.get_parameter_values [ @folder_name = ] folder_name  
      , [ @project_name = ] project_name  
      , [ @package_name = ] package_name  
   [  , [ @reference_id = ] reference_id  ]  

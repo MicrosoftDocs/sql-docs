@@ -23,9 +23,10 @@ helpviewer_keywords:
   - "checking valid numeric type"
 ms.assetid: 7aa816de-529a-4f6c-a99f-4d5a9ef599eb
 caps.latest.revision: 44
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Active"
 ---
 # ISNUMERIC (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]

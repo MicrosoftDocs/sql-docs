@@ -26,6 +26,7 @@ caps.latest.revision: 33
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # EstimatedRows Element (ASSL)
   Contains the estimated number of rows represented by the parent element.  

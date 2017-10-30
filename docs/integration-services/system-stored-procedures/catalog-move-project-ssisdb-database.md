@@ -14,6 +14,7 @@ caps.latest.revision: 15
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # catalog.move_project - SSISDB Database
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -23,7 +24,7 @@ manager: "jhubbard"
 ## Syntax  
   
 ```sql  
-move_project [ @source_folder = ] source_folder  
+catalog.move_project [ @source_folder = ] source_folder  
     , [ @project_name = ] project_name  
     , [ @destination_folder = ] destination_folder  
 ```  

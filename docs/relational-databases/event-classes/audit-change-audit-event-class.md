@@ -16,6 +16,7 @@ caps.latest.revision: 30
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Audit Change Audit Event Class
   The **Audit Change Audit** event class occurs whenever an audit trace modification is made.  

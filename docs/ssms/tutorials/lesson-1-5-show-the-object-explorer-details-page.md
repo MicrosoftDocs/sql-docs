@@ -16,6 +16,7 @@ caps.latest.revision: 36
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Lesson 1-5 - Show the Object Explorer Details Page
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] can show a report for each object selected in Object Explorer. This report, called the Object Explorer Details page, is created by [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], and opens in the document window.  

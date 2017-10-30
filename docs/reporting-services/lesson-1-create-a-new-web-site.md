@@ -16,6 +16,7 @@ caps.latest.revision: 12
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Lesson 1: Create a New Web Site
 In this lesson you’ll learn how to create a new website project using the ASP.NET website template for Visual C#.  

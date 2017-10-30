@@ -17,6 +17,7 @@ caps.latest.revision: 7
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Maintenance Plan (Servers)
   Use the **Servers** dialog box to select the servers where you want to run the maintenance plan.  

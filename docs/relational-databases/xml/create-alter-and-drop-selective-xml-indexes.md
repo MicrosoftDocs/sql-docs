@@ -14,6 +14,7 @@ caps.latest.revision: 8
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Create, Alter, and Drop Selective XML Indexes
   Describes how to create a new selective XML index, or alter or drop an existing selective XML index.  

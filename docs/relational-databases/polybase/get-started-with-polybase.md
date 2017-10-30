@@ -23,6 +23,7 @@ caps.latest.revision: 78
 author: "barbkess"
 ms.author: "barbkess"
 manager: "jhubbard" 
+ms.workload: "On Demand"
 ---
 # Get started with PolyBase
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

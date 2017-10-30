@@ -16,6 +16,7 @@ caps.latest.revision: 18
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Find Key Phrases in Documents with Semantic Search
   Describes how to find the key phrases in documents or text columns that are configured for statistical semantic indexing.  

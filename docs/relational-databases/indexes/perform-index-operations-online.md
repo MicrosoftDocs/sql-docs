@@ -19,6 +19,7 @@ manager: jhubbard
 ms.suite: SQL
 ms.prod_service: database engine, sql database, sql data warehouse
 ms.component: indexes
+ms.workload: "On Demand"
 ---
 # Perform Index Operations Online
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

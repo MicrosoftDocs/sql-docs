@@ -18,6 +18,7 @@ caps.latest.revision: 20
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Assemblies - Getting Information
   The following catalog views and functions can be queried for metadata about assemblies.  

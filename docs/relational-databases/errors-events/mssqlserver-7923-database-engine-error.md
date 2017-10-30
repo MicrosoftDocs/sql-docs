@@ -13,9 +13,10 @@ helpviewer_keywords:
   - "7923 (Database Engine error)"
 ms.assetid: b09a95e2-0ffe-4847-aa77-51e6639259f6
 caps.latest.revision: 12
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Inactive"
 ---
 # MSSQLSERVER_7923
   

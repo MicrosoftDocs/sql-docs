@@ -15,6 +15,7 @@ caps.latest.revision: 53
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Known issues in Machine Learning Services
 

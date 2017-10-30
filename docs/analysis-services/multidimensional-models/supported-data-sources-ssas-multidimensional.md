@@ -22,6 +22,7 @@ caps.latest.revision: 69
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "On Demand"
 ---
 # Supported Data Sources (SSAS - Multidimensional)
   This topic describes the types of data sources that you can use in a multidimensional model.  

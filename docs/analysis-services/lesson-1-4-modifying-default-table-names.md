@@ -16,6 +16,7 @@ caps.latest.revision: 21
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "On Demand"
 ---
 # Lesson 1-4 - Modifying Default Table Names
 You can change the value of the **FriendlyName** property for objects in the data source view to make them easier to notice and use.  

@@ -24,6 +24,7 @@ caps.latest.revision: 95
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # sys.dm_db_index_physical_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -165,7 +166,7 @@ GO
 ```  
   
 ### Best Practice  
- Always make sure that a valid ID is returned when you use DB_ID or OBJECT_ID. For example, when you use OBJECT_ID, specify a three-part name such as `OBJECT`_`ID(N'AdventureWorks2012.Person.Address')`, or test the value returned by the functions before you use them in the sys.dm_db_index_physical_stats function. Examples A and B that follow demonstrate a safe way to specify database and object IDs.  
+ Always make sure that a valid ID is returned when you use DB_ID or OBJECT_ID. For example, when you use OBJECT_ID, specify a three-part name such as `OBJECT_ID(N'AdventureWorks2012.Person.Address')`, or test the value returned by the functions before you use them in the sys.dm_db_index_physical_stats function. Examples A and B that follow demonstrate a safe way to specify database and object IDs.  
   
 ## Detecting Fragmentation  
  Fragmentation occurs through the process of data modifications (INSERT, UPDATE, and DELETE statements) that are made against the table and, therefore, to the indexes defined on the table. Because these modifications are not ordinarily distributed equally among the rows of the table and indexes, the fullness of each page can vary over time. For queries that scan part or all of the indexes of a table, this kind of fragmentation can cause additional page reads. This hinders parallel scanning of data.  

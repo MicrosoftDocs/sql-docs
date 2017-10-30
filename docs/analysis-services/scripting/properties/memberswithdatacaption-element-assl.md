@@ -26,6 +26,7 @@ caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # MembersWithDataCaption Element (ASSL)
   Provides a template string that is used to create captions for system-generated data members.  

@@ -16,6 +16,7 @@ caps.latest.revision: 18
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Client Protocols Properties (Order Tab)
   Use the **Order**page on the **Client Protocols Properties** dialog box to view and enable the client protocols.  

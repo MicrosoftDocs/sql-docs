@@ -14,6 +14,7 @@ caps.latest.revision: 14
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # catalog.restore_project (SSISDB Database)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -23,7 +24,7 @@ manager: "jhubbard"
 ## Syntax  
   
 ```sql  
-restore_project [ @folder_name = ] folder_name  
+catalog.restore_project [ @folder_name = ] folder_name  
     , [ @project_name = ] project _name  
     , [ @object_version_lsn = ] object_version_lsn  
   

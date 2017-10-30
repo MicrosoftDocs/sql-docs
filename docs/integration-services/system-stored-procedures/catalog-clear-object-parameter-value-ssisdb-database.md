@@ -14,6 +14,7 @@ caps.latest.revision: 19
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # catalog.clear_object_parameter_value (SSISDB Database)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -23,7 +24,7 @@ manager: "jhubbard"
 ## Syntax  
   
 ```sql  
-clear_object_parameter [ @folder_name = ] folder_name   
+catalog.clear_object_parameter [ @folder_name = ] folder_name   
     , [ @project_name = ] project_name   
     , [ @object_type = ] object_type   
     , [ @object_name = ] object_name   

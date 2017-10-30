@@ -16,6 +16,7 @@ caps.latest.revision: 20
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "On Demand"
 ---
 # Tabular Model Scripting Language (TMSL) Reference
 

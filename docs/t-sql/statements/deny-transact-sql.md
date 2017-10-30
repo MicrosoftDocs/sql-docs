@@ -27,9 +27,10 @@ helpviewer_keywords:
   - "denying permissions [SQL Server]"
 ms.assetid: c32d1e01-9ee9-4665-a516-fcfece58078e
 caps.latest.revision: 48
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "On Demand"
 ---
 # DENY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]

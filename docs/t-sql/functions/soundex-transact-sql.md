@@ -22,9 +22,10 @@ helpviewer_keywords:
   - "SOUNDEX values"
 ms.assetid: 8f1ed34e-8467-4512-a211-e0f43dee6584
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Active"
 ---
 # SOUNDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]

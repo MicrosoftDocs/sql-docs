@@ -26,9 +26,10 @@ helpviewer_keywords:
   - "database removal [SQL Server], DROP DATABASE statement"
 ms.assetid: 477396a9-92dc-43c9-9b97-42c8728ede8e
 caps.latest.revision: 83
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Active"
 ---
 # DROP DATABASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw_md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -142,7 +143,7 @@ DROP DATABASE Sales, NewSales;
   
 **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- The following example removes a database snapshot, named `sales`_`snapshot0600`, without affecting the source database.  
+ The following example removes a database snapshot, named `sales_snapshot0600`, without affecting the source database.  
   
 ```  
 DROP DATABASE sales_snapshot0600;  

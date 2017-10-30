@@ -23,9 +23,10 @@ helpviewer_keywords:
   - "lowercase characters"
 ms.assetid: 5ced55f7-ac89-4cf2-9465-f63f4dc480db
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Active"
 ---
 # UPPER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]

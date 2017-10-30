@@ -19,9 +19,10 @@ helpviewer_keywords:
   - "number of degrees"
 ms.assetid: 5208de3c-90a3-4f59-a7e3-10b01bf285bb
 caps.latest.revision: 36
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Inactive"
 ---
 # DEGREES (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]

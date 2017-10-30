@@ -14,6 +14,7 @@ caps.latest.revision: 12
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 
 # Add an Additional Report Server to a Farm (SSRS Scale-out)

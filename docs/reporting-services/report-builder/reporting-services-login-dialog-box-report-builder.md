@@ -17,6 +17,7 @@ caps.latest.revision: 11
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Reporting Services Login Dialog Box (Report Builder)
   Use the **Reporting Services Login** dialog box to provide credentials to publish reports to the report server. For help with these credentials, contact your report server administrator.  

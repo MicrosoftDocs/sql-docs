@@ -14,6 +14,7 @@ caps.latest.revision: 6
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Query Processing Events Data Columns
   The Query Processing Events event category has the following event classes:  

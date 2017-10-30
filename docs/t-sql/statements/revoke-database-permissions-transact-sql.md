@@ -17,9 +17,10 @@ helpviewer_keywords:
   - "REVOKE statement, databases"
 ms.assetid: 442acfc6-af97-40a3-b546-91cd485ee2be
 caps.latest.revision: 42
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Inactive"
 ---
 # REVOKE Database Permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]

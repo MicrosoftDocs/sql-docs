@@ -23,6 +23,7 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # ConnectComplete and Disconnect Events (ADO)
 The **ConnectComplete** event is called after a connection starts. The **Disconnect** event is called after a connection ends.  

@@ -16,20 +16,39 @@ ms.assetid:
 
 In this quick start tutorial, you will install SQL Server 2017 on Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES), or Ubuntu in the cloud of your choice. Go to [Provision a Linux SQL Server virtual machine in the Azure portal](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json) to run SQL Server on Linux in Azure.
 
+    > [!NOTE]
+    > If you choose to run a paid edition of SQL Server then you need to bring your own license (BYOL)
+
 ## Amazon Web Services
+1.	Create a Linux image with at least 3.75 GB of memory from the marketplace 
+    * [RHEL 7.3+](https://aws.amazon.com/marketplace/pp/B00KWBZVK6)
+    * [SLES v12 SP2] (https://aws.amazon.com/marketplace/pp/B00PMM99PI)
+    * [Ubuntu 16.04](https://aws.amazon.com/marketplace/pp/B01JBL2M0O)
+1.	Connect to the new VM with ssh
+1.	Follow the quick start for your Linux distro 
+    * [RHEL](quickstart-install-connect-rhel.md)
+    * [SLES](quickstart-install-connect-suse.md)
+    * [Ubuntu](quickstart-install-connect-ubuntu.md)
+1.	Configure for remote connections 
+    * Go to the [Firewall Rules](https://console.cloud.google.com/networking/firewalls)
+    * Add a rule to allow traffic on the port on which SQL Server listens (default tcp:1433)
+    
 ## Digital Ocean
 ## Google Cloud Platform
-1.	Create a Linux VM from the Gallery 
-    a.	Ubuntu 16.04, RHEL 7.3+, SLES v12 SP2
-    b.	Size at least 3.75 GB (n1-standard-1)
-2.	Connect to the new VM with ssh
-3.	Follow the quick start for your Linux distro 
-a.	Red Hat
-b.	SUSE
-c.	Ubuntu
-4.	Configure for remote connections 
-a.	Go to the Firewall Rules page
-b.	Add a rule to allow traffic on the port on which SQL Server listens (default of 1433) (tcp:1433)
+1.	Create a Linux image with at least 3.75 GB of memory from the Cloud Launcher 
+    * [RHEL 7.3+](https://console.cloud.google.com/launcher/details/rhel-cloud/rhel-7)
+    * SLES v12 SP2
+    * [Ubuntu 16.04](https://console.cloud.google.com/launcher/details/ubuntu-os-cloud/ubuntu-xenial)
+1.	Connect to the new VM with ssh
+1.	Follow the quick start for your Linux distro 
+    * [RHEL](quickstart-install-connect-rhel.md)
+    * [SLES](quickstart-install-connect-suse.md)
+    * [Ubuntu](quickstart-install-connect-ubuntu.md)
+1.	Configure for remote connections 
+    * Open the [Amazon EC2 console]( https://console.aws.amazon.com/ec2/)
+    * In the navigation pane, choose **Security Groups**. 
+    * Choose **Inbound, Edit, Add Rule**
+    * Add a rule to allow traffic on the port on which SQL Server listens (default TCP port 1433)
 
 ## Heroku
 ## IBM

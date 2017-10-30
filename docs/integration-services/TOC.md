@@ -172,14 +172,14 @@
 
 # Resources
 
-## Blog
+## Follow the blog
 - [Official SSIS blog](https://blogs.msdn.microsoft.com/ssis/)
 
-## Help
-- [MSDN forum for SSIS - ask questions](https://social.msdn.microsoft.com/Forums/en-us/home?forum=sqlintegrationservices)
-- [Stack Overflow (tag *ssis*) - ask questions](http://stackoverflow.com/questions/tagged/ssis)
+## Get help
+- [SSIS forum on MSDN](https://social.msdn.microsoft.com/Forums/en-us/home?forum=sqlintegrationservices)
+- [Stack Overflow (tag *ssis*)](http://stackoverflow.com/questions/tagged/ssis)
 
-## Feedback
+## Give feedback
 - [Microsoft Connect - report bugs and request features](https://connect.microsoft.com/SQLServer/Feedback)
 
-## [Local content with Help Viewer](sql-server-help-installation.md)
+## [Get the docs on your PC](sql-server-help-installation.md)

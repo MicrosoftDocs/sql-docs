@@ -178,4 +178,4 @@
 ### [Stack Overflow (tagged SSIS)](http://stackoverflow.com/questions/tagged/ssis)  
 ## Give feedback
 ### [Microsoft Connect - report bugs and request features](https://connect.microsoft.com/SQLServer/Feedback)  
-## [Get the docs on your PC](sql-server-help-installation.md)
+## [Get the docs on your PC](../sql-server/sql-server-help-installation.md)

@@ -1,7 +1,7 @@
 ---
 title: "SQL Server 2017 Release Notes | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/20/2017"
+ms.date: "10/30/2017"
 ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
@@ -16,7 +16,7 @@ manager: "jhubbard"
 ms.workload: "Active"
 ---
 # SQL Server 2017 Release Notes
-This topic describes limitations and issues with SQL Server 2017. For related information, see:
+This article describes limitations and issues with SQL Server 2017. For related information, see:
 - [What's New in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)
 - [SQL Server on Linux release notes](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-release-notes)
 - [SQL Server 2017 Cumulative updates](http://aka.ms/sql2017cu) for information about the latest cumulative update (CU) release
@@ -30,10 +30,10 @@ This topic describes limitations and issues with SQL Server 2017. For related in
 
 - **Issue and customer impact:** After upgrade, the existing FILESTREAM network share may be no longer available.
 
-- **Workaround:** First, reboot the computer and check if the FILESTREAM network share is available. If the share is still not available, do the following:
+- **Workaround:** First, reboot the computer and check if the FILESTREAM network share is available. If the share is still not available, complete the following steps:
 
-    1. In SQL Server Configuration Manager, right click the SQL Server instance, and click **Properties**. 
-    2. In the **FILESTREAM** tab clear **Enable FILESTREAM for file I/O streaming access** , then click **Apply**.
+    1. In SQL Server Configuration Manager, right-click the SQL Server instance, and click **Properties**. 
+    2. In the **FILESTREAM** tab clear **Enable FILESTREAM for file I/O streaming access**, then click **Apply**.
     3. Check **Enable FILESTREAM for file I/O streaming access** again with the original share name and click **Apply**.
 
 ### Master Data Services (MDS)
@@ -108,7 +108,7 @@ There are no SQL Server on Windows release notes for this release. See [SQL Serv
 
 ### TSqlLanguageService.msi (CTP 2.1)
 
-- **Issue and customer impact:** After installing on a computer that has a 2016 version of *TSqlLanguageService.msi* installed (either through SQL Setup or as a standalone redistributable) the v13.* (SQL 2016) versions of *Microsoft.SqlServer.Management.SqlParser.dll* and *Microsoft.SqlServer.Management.SystemMetadataProvider.dll* are removed. Any applications that have a dependency on the 2016 versions of those assemblies will then cease to function, giving an error similar to: *error : Could not load file or assembly 'Microsoft.SqlServer.Management.SqlParser, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' or one of its dependencies. The system cannot find the file specified.*
+- **Issue and customer impact:** After installing on a computer that has a 2016 version of *TSqlLanguageService.msi* installed (either through SQL Setup or as a standalone redistributable) the v13.* (SQL 2016) versions of *Microsoft.SqlServer.Management.SqlParser.dll* and *Microsoft.SqlServer.Management.SystemMetadataProvider.dll* are removed. Any applications that has a dependency on the 2016 versions of those assemblies will stop working and generate an error similar to: *error : Could not load file or assembly 'Microsoft.SqlServer.Management.SqlParser, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' or one of its dependencies. The system cannot find the file specified.*
 
    In addition, attempts to reinstall a 2016 version of TSqlLanguageService.msi fail with the message: *Installation of Microsoft SQL Server 2016 T-SQL Language Service failed because a higher version already exists on the machine*.
 
@@ -128,7 +128,7 @@ There are no SQL Server on Windows release notes for this release. See [SQL Serv
 
 ### Always On availability groups
 
-- **Issue and customer impact:** A SQL Server instance hosting an availability group secondary replica crashes if the SQL Server major version is lower than the instance that hosts the primary replica. Affects upgrades from all supported versions of SQL Server that host availability groups to SQL Server [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] CTP 2.0. This happens under the following steps. 
+- **Issue and customer impact:** A SQL Server instance hosting an availability group secondary replica crashes if the SQL Server major version is lower than the instance that hosts the primary replica. Affects upgrades from all supported versions of SQL Server that host availability groups to SQL Server [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] CTP 2.0. The issue occurs under the following conditions. 
 
 > 1. User upgrades SQL Server instance hosting secondary replica in accordance with [best practices](../database-engine/availability-groups/windows/upgrading-always-on-availability-group-replica-instances.md).
 > 2. After upgrade, a failover occurs and a newly upgraded secondary becomes primary before completing upgrade for all secondary replicas in the availability group. The old primary is now a secondary, which is lower version than primary.

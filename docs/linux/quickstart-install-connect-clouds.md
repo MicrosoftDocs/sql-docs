@@ -20,9 +20,9 @@ In this quick start tutorial, you will install SQL Server 2017 on Red Hat Enterp
     > If you choose to run a paid edition of SQL Server then you need to bring your own license (BYOL)
 
 ## Amazon Web Services
-1.	Create a Linux image with at least 3.75 GB of memory from the marketplace 
+1.	Create a Linux image with at least 3.25 GB of memory from the marketplace 
     * [RHEL 7.3+](https://aws.amazon.com/marketplace/pp/B00KWBZVK6)
-    * [SLES v12 SP2] (https://aws.amazon.com/marketplace/pp/B00PMM99PI)
+    * [SLES v12 SP2](https://aws.amazon.com/marketplace/pp/B00PMM99PI)
     * [Ubuntu 16.04](https://aws.amazon.com/marketplace/pp/B01JBL2M0O)
 1.	Connect to the new VM with ssh
 1.	Follow the quick start for your Linux distro 
@@ -34,10 +34,11 @@ In this quick start tutorial, you will install SQL Server 2017 on Red Hat Enterp
     * Add a rule to allow traffic on the port on which SQL Server listens (default tcp:1433)
     
 ## Digital Ocean
+
 ## Google Cloud Platform
-1.	Create a Linux image with at least 3.75 GB of memory from the Cloud Launcher 
+1.	Create a Linux image with at least 3.25 GB of memory from the Cloud Launcher 
     * [RHEL 7.3+](https://console.cloud.google.com/launcher/details/rhel-cloud/rhel-7)
-    * SLES v12 SP2
+    * [SLES v12 SP2](https://console.cloud.google.com/launcher/details/suse-cloud/sles-12)
     * [Ubuntu 16.04](https://console.cloud.google.com/launcher/details/ubuntu-os-cloud/ubuntu-xenial)
 1.	Connect to the new VM with ssh
 1.	Follow the quick start for your Linux distro 

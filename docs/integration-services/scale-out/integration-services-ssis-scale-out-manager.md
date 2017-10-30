@@ -13,6 +13,7 @@ caps.latest.revision: 1
 author: "haoqian"
 ms.author: "haoqian"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Integration Services Scale Out Manager
 

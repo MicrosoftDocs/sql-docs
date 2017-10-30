@@ -8,6 +8,7 @@ ms.technology:
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Lift and shift SQL Server Integration Services workloads to the cloud
 You can now move your SQL Server Integration Services (SSIS) packages and workloads to the Azure cloud.

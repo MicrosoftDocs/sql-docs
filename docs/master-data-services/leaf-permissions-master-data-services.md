@@ -20,6 +20,7 @@ caps.latest.revision: 9
 author: "smartysanthosh"
 ms.author: "nagavo"
 manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Leaf Permissions (Master Data Services)
   Leaf permissions apply to the attribute values for all leaf members of an entity.  

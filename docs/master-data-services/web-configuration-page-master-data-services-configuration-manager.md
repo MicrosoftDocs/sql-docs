@@ -16,6 +16,7 @@ caps.latest.revision: 10
 author: "smartysanthosh"
 ms.author: "nagavo"
 manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Web Configuration Page (Master Data Services Configuration Manager)
   Use the **Web Configuration** page to configure a website and web application. You can also enable Data Quality Services.  

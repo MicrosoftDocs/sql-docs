@@ -9,6 +9,7 @@ ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: d30090fb-889f-466e-b793-5f284fccc4e6
+ms.workload: "On Demand"
 ---
 # Backup and restore SQL Server databases on Linux
 

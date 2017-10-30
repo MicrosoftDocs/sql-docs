@@ -42,7 +42,7 @@ ms.workload: "Active"
     
 - [SQL Server 2016 SP1 download page](https://www.microsoft.com/en-us/download/details.aspx?id=54276)
 - [SQL Server 2016 Service Pack 1 release information](https://support.microsoft.com/en-us/kb/3182545) Lists the individual bug #s and issues that were fixed or changed in SP1.
- - ![info_tip](../sql-server/media/info-tip.png) See the [SQL Server Update Center](https://msdn.microsoft.com/library/ff803383.aspx) for links and information for all supported versions, inlcuding service packs of [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 
+ - ![info_tip](../sql-server/media/info-tip.png) See the [SQL Server Update Center](https://msdn.microsoft.com/library/ff803383.aspx) for links and information for all supported versions, including service packs of [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 
     
     
 ##  <a name="bkmk_2016_ga"></a> SQL Server 2016 Release - General Availability (GA)
@@ -56,7 +56,7 @@ ms.workload: "Active"
 
 **Resolution:** Use one of the following solutions:
 
-- Install [KB 3138367 - Update for Visual C++ 2013 and Visual C++ Redistributable Package](http://support.microsoft.com/kb/3138367). This is the preferred resolution. You can install this before or after you install SQL Server 2016. 
+- Install [KB 3138367 - Update for Visual C++ 2013 and Visual C++ Redistributable Package](http://support.microsoft.com/kb/3138367). The KB is the preferred resolution. You can install this before or after you install SQL Server 2016. 
 
     If SQL Server 2016 is already installed, do the following steps in order:
 
@@ -96,7 +96,7 @@ ms.workload: "Active"
 #### Problem with automatic data cleanup on editions other than Enterprise and Developer
 
  **Issue and customer impact:** Automatic data cleanup fails on editions other than Enterprise and Developer. 
-Consequently, space used by the Query Store will grow over time until configured limit is reached, if data is not purged manually. If not mitigated, this issue will also fill up disk space allocated for the error logs, as every attempt to execute cleanup produces a dump file. Cleanup activation period depends on the workload frequency, but it is no longer than 15 min.
+Consequently, if data is not purged manually,  space used by the Query Store will grow over time until configured limit is reached. If not mitigated, this issue will also fill up disk space allocated for the error logs, as every attempt to execute cleanup produces a dump file. Cleanup activation period depends on the workload frequency, but it is no longer than 15 min.
 
  **Workaround:** If you plan to use Query Store on editions other than Enterprise and Developer, you need to explicitly turn off cleanup policies. It can be done either from SQL Server Management Studio (Database Properties page) or via Transact-SQL script:
 
@@ -126,10 +126,10 @@ Also, execute the following Query Store stored procedures periodically to clean 
     
 -   Use the option **Install content from online** and download the SQL Server 2014 Content.    
     
- **F1 Help:** By design when you press F1 in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], the online version of the F1 Help article is displayed in the browser. The issues is browser based help even when you have configured and installed local Help. 
+ **F1 Help:** By design when you press F1 in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], the online version of the F1 Help article is displayed in the browser. The issues is browser-based help even when you have configured and installed local Help. 
      
 **Updating content:**    
-In SQL Server Management Studio and Visual Studio, the Help Viewer application may freeze (hang) during the process of adding the documentation. To resolve this issue, do the following. For more information about this issue, see [Visual Studio Help Viewer freezes](https://msdn.microsoft.com/library/mt654096.aspx).    
+In SQL Server Management Studio and Visual Studio, the Help Viewer application may freeze (hang) during the process of adding the documentation. To resolve this issue, complete the following steps. For more information about this issue, see [Visual Studio Help Viewer freezes](https://msdn.microsoft.com/library/mt654096.aspx).    
     
 * Open the %LOCALAPPDATA%\Microsoft\HelpViewer2.2\HlpViewer_SSMS16_en-US.settings | HlpViewer_VisualStudio14_en-US.settings file in Notepad and change the date in the following code to some date in the future.    
     

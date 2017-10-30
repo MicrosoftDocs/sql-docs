@@ -47,11 +47,14 @@ On the user permissions page, when granting permission to the root level in the 
   - Run the script described in this MDS team blog [error applying permission on entity level](http://sqlblog.com/blogs/mds_team/archive/2017/09/05/sql-server-2016-sp1-cu4-regression-error-while-applying-permission-on-entity-level-quick-workaround.aspx)
 
 ### Analysis Services
-- **Issue and customer impact:** For tabular models at the 1400 compatibility level, when using Get Data, data connectors for some data sources such as  Amazon Redshift, IBM Netezza, and Impala, are not yet available.
+- **Issue and customer impact:** Data connectors for the following sources are not yet avaialble for tabular models at the 1400 compatibility level.
+  - Amazon Redshift
+  - IBM Netezza
+  - Impala
 - **Workaround:** None.   
 
 - **Issue and customer impact:** Direct Query models at the 1400 compatibility level with perspectives can fail on querying or discovering metadata.
-- **Workaround:** Remove perspectives and re-deploy.
+- **Workaround:** Remove perspectives and redeploy.
 
 ### Tools
 - **Issue and customer impact:** Running *DReplay* fails with the following message: "Error DReplay Unexpected error occurred!".
@@ -59,17 +62,17 @@ On the user permissions page, when granting permission to the root level in the 
 
 ![horizontal_bar](../sql-server/media/horizontal-bar.png)
 ## SQL Server 2017 Release Candidate (RC2 - August 2017)
-There are no SQL Server on Windows release notes for this release. See [SQL Server on Linux Release notes](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-release-notes).
+There are no release notes for SQL Server on Windows related to this release. See [SQL Server on Linux Release notes](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-release-notes).
 
 
 ![horizontal_bar](../sql-server/media/horizontal-bar.png)
 ## SQL Server 2017 Release Candidate (RC1 - July 2017)
 ### SQL Server Integration Services (SSIS) (RC1 - July 2017)
 - **Issue and customer impact:** The parameter *runincluster* of the stored procedure **[catalog].[create_execution]** is renamed to *runinscaleout* for consistency and readability.
-- **Workaround:** If you have existing scripts to run packages in Scale Out, you have to change the parameter name from *runincluster* to *runinscaleout* to make the scripts work in RC1.
+- **Work around:** If you have existing scripts to run packages in Scale Out, you have to change the parameter name from *runincluster* to *runinscaleout* to make the scripts work in RC1.
 
 - **Issue and customer impact:** SQL Server Management Studio (SSMS) 17.1 and earlier versions can't trigger package execution in Scale Out in RC1. The error message is: "*@runincluster* is not a parameter for procedure **create_execution**." This issue is fixed in the next release of SSMS, version 17.2. Versions 17.2 and later of SSMS support the new parameter name and package execution in Scale Out. 
-- **Workaround:** Until SSMS version 17.2 is available:
+- **Work around:** Until SSMS version 17.2 is available:
   1. Use your existing version of SSMS to generate the package execution script.
   2. Change the name of the *runincluster* parameter to *runinscaleout* in the script.
   3. Run the script.
@@ -82,8 +85,8 @@ There are no SQL Server on Windows release notes for this release. See [SQL Serv
 
 ### SQL Server Reporting Services (CTP 2.1)
 
-- **Issue and customer impact:** If you have both SQL Server Reporting Services and Power BI Report Server on the same machine and uninstall one of them, you will not be able to connect to the remaining report server with Report Server Configuration Manager.
-- **Workaround** To work around this issue, you must perform the following operations after uninstalling one of the servers.
+- **Issue and customer impact:** If you have both SQL Server Reporting Services and Power BI Report Server on the same machine and uninstall one of them, you cannot connect to the remaining report server with Report Server Configuration Manager.
+- **Work around** To work around this issue, you must perform the following operations after uninstalling one of the servers.
 
     1. Launch a command prompt in Administrator mode.
     2. Go to the directory where the remaining report server is installed.
@@ -108,7 +111,7 @@ There are no SQL Server on Windows release notes for this release. See [SQL Serv
 
 ### TSqlLanguageService.msi (CTP 2.1)
 
-- **Issue and customer impact:** After installing on a computer that has a 2016 version of *TSqlLanguageService.msi* installed (either through SQL Setup or as a standalone redistributable) the v13.* (SQL 2016) versions of *Microsoft.SqlServer.Management.SqlParser.dll* and *Microsoft.SqlServer.Management.SystemMetadataProvider.dll* are removed. Any applications that has a dependency on the 2016 versions of those assemblies will stop working and generate an error similar to: *error : Could not load file or assembly 'Microsoft.SqlServer.Management.SqlParser, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' or one of its dependencies. The system cannot find the file specified.*
+- **Issue and customer impact:** After installing on a computer that has a 2016 version of *TSqlLanguageService.msi* installed (either through SQL Setup or as a standalone redistributable) the v13.* (SQL 2016) versions of *Microsoft.SqlServer.Management.SqlParser.dll* and *Microsoft.SqlServer.Management.SystemMetadataProvider.dll* are removed. Any application that has a dependency on the 2016 versions of those assemblies stops working and generate an error similar to: *error : Could not load file or assembly 'Microsoft.SqlServer.Management.SqlParser, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' or one of its dependencies. The system cannot find the file specified.*
 
    In addition, attempts to reinstall a 2016 version of TSqlLanguageService.msi fail with the message: *Installation of Microsoft SQL Server 2016 T-SQL Language Service failed because a higher version already exists on the machine*.
 

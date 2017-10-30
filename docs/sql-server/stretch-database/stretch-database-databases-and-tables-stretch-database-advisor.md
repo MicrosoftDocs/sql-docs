@@ -28,7 +28,7 @@ ms.workload: "Inactive"
   To identify databases and tables that are candidates for Stretch Database, along with potential blocking issues, download and run Microsoft Data Migration Assistant.
   
 ## Get Data Migration Assistant
- Download and install Data Migration Assistant from [here](https://www.microsoft.com/download/details.aspx?id=53595). This tool is not included on the [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] installation media.  
+ Download and install Data Migration Assistant from [here](https://www.microsoft.com/download/details.aspx?id=53595). This tool is not included on the SQL Server installation media.  
   
 ## Run Data Migration Assistant  
   

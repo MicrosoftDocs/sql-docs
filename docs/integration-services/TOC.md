@@ -173,7 +173,7 @@
 # Resources
 
 ## Blog
-- [SSIS Official Blog](https://blogs.msdn.microsoft.com/ssis/)
+- [Official SSIS blog](https://blogs.msdn.microsoft.com/ssis/)
 
 ## Help
 - [MSDN forum for SSIS - ask questions](https://social.msdn.microsoft.com/Forums/en-us/home?forum=sqlintegrationservices)

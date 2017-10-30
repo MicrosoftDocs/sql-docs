@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "MSpeer_topologyrequest"
 ms.assetid: c644814b-4e40-44d7-b6b4-5954b0d4db7c
 caps.latest.revision: 9
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # MSpeer_topologyrequest (Transact-SQL)

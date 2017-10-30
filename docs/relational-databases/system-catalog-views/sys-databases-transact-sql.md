@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "sys.databases catalog view"
 ms.assetid: 46c288c1-3410-4d68-a027-3bbf33239289
 caps.latest.revision: 152
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Active"
 ---
 # sys.databases (Transact-SQL)

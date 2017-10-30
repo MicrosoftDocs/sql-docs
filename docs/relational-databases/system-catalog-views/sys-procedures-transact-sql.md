@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "sys.procedures catalog view"
 ms.assetid: d17af274-b2dd-464e-9523-ee1f43e1455b
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # sys.procedures (Transact-SQL)

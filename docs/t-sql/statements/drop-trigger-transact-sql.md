@@ -26,9 +26,9 @@ helpviewer_keywords:
   - "DML triggers, removing"
 ms.assetid: 092d0d71-9f1e-4e38-a1c4-2487adfa5b4e
 caps.latest.revision: 53
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "On Demand"
 ---
 # DROP TRIGGER (Transact-SQL)

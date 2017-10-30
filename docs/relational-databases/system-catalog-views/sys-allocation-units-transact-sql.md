@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "sys.allocation_units catalog view"
 ms.assetid: ec9de780-68fd-4551-b70b-2d3ab3709b3e
 caps.latest.revision: 44
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "On Demand"
 ---
 # sys.allocation_units (Transact-SQL)

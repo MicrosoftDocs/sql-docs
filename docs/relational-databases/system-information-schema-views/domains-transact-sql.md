@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "INFORMATION_SCHEMA.DOMAINS view"
 ms.assetid: f0b734d5-816f-4b10-a60c-615931b515c2
 caps.latest.revision: 44
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # DOMAINS (Transact-SQL)

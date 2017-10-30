@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "sp_scriptpublicationcustomprocs"
 ms.assetid: b06102d5-4284-4834-b126-bc0baea49be5
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # sp_scriptpublicationcustomprocs (Transact-SQL)

@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "MSpub_identity_range system table"
 ms.assetid: 68746eef-32e1-42bc-aff0-9798cd0e88b8
 caps.latest.revision: 24
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # MSpub_identity_range (Transact-SQL)

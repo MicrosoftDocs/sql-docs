@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "sys.filegroups catalog view"
 ms.assetid: 9e851f72-1f8e-4515-a25d-152ebc12ed56
 caps.latest.revision: 54
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # sys.filegroups (Transact-SQL)

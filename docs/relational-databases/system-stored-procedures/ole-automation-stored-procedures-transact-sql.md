@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "OLE Automation [SQL Server], stored procedures"
 ms.assetid: ff16a833-01fe-4877-8aa6-55b72603ec2e
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "On Demand"
 ---
 # OLE Automation Stored Procedures (Transact-SQL)

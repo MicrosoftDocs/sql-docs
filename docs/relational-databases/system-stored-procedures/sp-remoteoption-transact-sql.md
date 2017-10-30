@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "sp_remoteoption"
 ms.assetid: c9a7309b-eab7-4192-a414-e282581af4e5
 caps.latest.revision: 21
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # sp_remoteoption (Transact-SQL)

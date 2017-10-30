@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "REFERENTIAL_CONSTRAINTS view"
 ms.assetid: 5d358f18-0a85-4b55-af4b-98d5f4cd1020
 caps.latest.revision: 40
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # REFERENTIAL_CONSTRAINTS (Transact-SQL)

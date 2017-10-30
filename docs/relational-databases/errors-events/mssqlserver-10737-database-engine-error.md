@@ -13,9 +13,9 @@ helpviewer_keywords:
   - "10737 (Database Engine error)"
 ms.assetid: 208af6ed-b271-4ab8-803e-7666025385c8
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # MSSQLSERVER_10737

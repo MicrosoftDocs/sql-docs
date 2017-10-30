@@ -15,9 +15,9 @@ helpviewer_keywords:
   - "17194 (Database Engine error)"
 ms.assetid: 0d03eb20-28a7-4ceb-8903-7f9420a620f7
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # MSSQLSERVER_17194

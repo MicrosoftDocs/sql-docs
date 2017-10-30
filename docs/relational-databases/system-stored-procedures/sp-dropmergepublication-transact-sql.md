@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "sp_dropmergepublication"
 ms.assetid: 9e1cb96e-5889-4f97-88cd-f60cf313ce68
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # sp_dropmergepublication (Transact-SQL)

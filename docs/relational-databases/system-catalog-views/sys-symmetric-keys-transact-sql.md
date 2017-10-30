@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "sys.symmetric_keys catalog view"
 ms.assetid: d410eae1-3a52-45de-b9a1-52d2bd93a8eb
 caps.latest.revision: 41
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # sys.symmetric_keys (Transact-SQL)

@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "sys.database_principals catalog view"
 ms.assetid: 8cb239e9-eb8c-4109-9cec-0d35de95fa0e
 caps.latest.revision: 46
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "On Demand"
 ---
 # sys.database_principals (Transact-SQL)

@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "sp_helpsrvrolemember"
 ms.assetid: d0714913-8d6b-4de3-b042-3ae9934f839d
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # sp_helpsrvrolemember (Transact-SQL)

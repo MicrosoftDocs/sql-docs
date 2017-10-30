@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "SET DEADLOCK_PRIORITY statement"
 ms.assetid: 810a3a8e-3da3-4bf9-bb15-7b069685a1b6
 caps.latest.revision: 35
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "On Demand"
 ---
 # SET DEADLOCK_PRIORITY (Transact-SQL)

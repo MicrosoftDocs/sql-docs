@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "MSmerge_history system table"
 ms.assetid: 936195ad-ca07-41a8-a1a0-6699b6e63403
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # MSmerge_history (Transact-SQL)

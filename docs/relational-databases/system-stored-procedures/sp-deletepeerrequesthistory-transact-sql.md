@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "sp_deletepeerrequesthistory"
 ms.assetid: 63a4ec6e-ce79-4bf1-9d37-5ac88f8d6beb
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # sp_deletepeerrequesthistory (Transact-SQL)

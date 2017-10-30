@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "TRIGGER_NESTLEVEL function"
 ms.assetid: 6a33e74a-0cf9-4ae1-a1e4-4a137a3ea39d
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "On Demand"
 ---
 # TRIGGER_NESTLEVEL (Transact-SQL)

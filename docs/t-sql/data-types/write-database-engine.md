@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "Write [Database Engine]"
 ms.assetid: 7c554334-d2d9-4eae-a4ae-097aa4020e1a
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # Write (Database Engine)

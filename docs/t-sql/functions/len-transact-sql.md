@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "number of characters"
 ms.assetid: fa20fee4-884d-4301-891a-c03e901345ae
 caps.latest.revision: 47
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Active"
 ---
 # LEN (Transact-SQL)

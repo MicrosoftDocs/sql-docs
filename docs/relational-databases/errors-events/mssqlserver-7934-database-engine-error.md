@@ -13,9 +13,9 @@ helpviewer_keywords:
   - "7934 (Database Engine error)"
 ms.assetid: f656bf46-e5be-4c7b-9ea4-0f2eee7441fe
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # MSSQLSERVER_7934

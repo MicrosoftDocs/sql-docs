@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "COOKIE clause"
 ms.assetid: 4688b17a-dfd1-4f03-8db4-273a401f879f
 caps.latest.revision: 28
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "On Demand"
 ---
 # REVERT (Transact-SQL)

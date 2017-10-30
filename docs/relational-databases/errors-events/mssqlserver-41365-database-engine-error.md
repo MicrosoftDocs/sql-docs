@@ -13,9 +13,9 @@ helpviewer_keywords:
   - "41365 (Database Engine error)"
 ms.assetid: 4fc7ec15-b722-4e3d-b7f9-3d39d171e96e
 caps.latest.revision: 7
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # MSSQLSERVER_41365

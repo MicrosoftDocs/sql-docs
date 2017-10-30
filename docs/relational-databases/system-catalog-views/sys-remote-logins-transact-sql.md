@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "sys.remote_logins catalog view"
 ms.assetid: 38477e91-d084-4df7-b1de-b930c5580189
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # sys.remote_logins (Transact-SQL)

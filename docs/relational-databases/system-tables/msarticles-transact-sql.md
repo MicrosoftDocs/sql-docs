@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "MSarticles system table"
 ms.assetid: 1acd79a5-b3e2-4161-9592-7acc2a41ba38
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # MSarticles (Transact-SQL)

@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "sys.stats_columns catalog view"
 ms.assetid: 93414d07-97e9-4501-8577-f35b8d68fbe9
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # sys.stats_columns (Transact-SQL)

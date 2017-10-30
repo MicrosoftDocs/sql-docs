@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "DECRYPTBYKEYAUTOCERT function"
 ms.assetid: 6b45fa2e-ffaa-46f7-86ff-5624596eda4a
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # DECRYPTBYKEYAUTOCERT (Transact-SQL)

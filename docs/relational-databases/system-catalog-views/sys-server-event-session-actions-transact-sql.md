@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "xe"
 ms.assetid: 1d8c604e-4361-4846-8661-14cfd1c44f63
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # sys.server_event_session_actions (Transact-SQL)

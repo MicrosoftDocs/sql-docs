@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "sys.default_constraints catalog view"
 ms.assetid: 096e3659-edeb-4440-a016-f847acd6166b
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # sys.default_constraints (Transact-SQL)

@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "sys.column_encryption_keys catalog view"
 ms.assetid: 43980dd8-b9b1-4869-a304-2c183ae8977d
 caps.latest.revision: 9
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # sys.column_encryption_keys  (Transact-SQL)

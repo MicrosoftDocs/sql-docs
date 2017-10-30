@@ -14,9 +14,9 @@ helpviewer_keywords:
   - "user [SQL Server], about contained database users"
 ms.assetid: e57519bb-e7f4-459b-ba2f-fd42865ca91d
 caps.latest.revision: 33
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "On Demand"
 ---
 # Contained Database Users - Making Your Database Portable

@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "sys.crypt_properties catalog view"
 ms.assetid: d5684f5a-30b1-418e-ae4d-ab040db9257e
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # sys.crypt_properties (Transact-SQL)

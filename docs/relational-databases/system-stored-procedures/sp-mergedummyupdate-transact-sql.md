@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "sp_mergedummyupdate"
 ms.assetid: b834f7f6-9588-4d59-a3e2-83d8e8e722e1
 caps.latest.revision: 24
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # sp_mergedummyupdate (Transact-SQL)

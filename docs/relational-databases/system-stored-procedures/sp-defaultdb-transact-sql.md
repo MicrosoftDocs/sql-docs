@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "sp_defaultdb"
 ms.assetid: 663b859f-c6da-4942-95a6-60b93d05654e
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # sp_defaultdb (Transact-SQL)

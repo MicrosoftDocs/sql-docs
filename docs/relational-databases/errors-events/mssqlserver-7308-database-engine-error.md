@@ -14,9 +14,9 @@ helpviewer_keywords:
   - "single-threaded apartment mode"
 ms.assetid: cca9eab9-afb9-463d-abfd-0802257e2c99
 caps.latest.revision: 7
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # MSSQLSERVER_7308

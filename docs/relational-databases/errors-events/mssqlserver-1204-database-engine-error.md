@@ -13,9 +13,9 @@ helpviewer_keywords:
   - "1204 (Database Engine error)"
 ms.assetid: de6ece78-79de-484d-9224-ca0f7645815f
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # MSSQLSERVER_1204

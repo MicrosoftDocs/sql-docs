@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "time [SQL Server], system"
 ms.assetid: f14fc2cd-9ea8-4daf-88f4-418cf523ab55
 caps.latest.revision: 39
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "On Demand"
 ---
 # SYSUTCDATETIME (Transact-SQL)

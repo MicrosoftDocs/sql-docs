@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "sys.all_columns catalog view"
 ms.assetid: 40e04fe9-0b64-4799-84c0-57f128b2bdc2
 caps.latest.revision: 48
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "On Demand"
 ---
 # sys.all_columns (Transact-SQL)

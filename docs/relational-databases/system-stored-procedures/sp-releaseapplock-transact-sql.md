@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "sp_releaseapplock"
 ms.assetid: 51b03c2f-0d54-40f5-9172-e747942d4a46
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # sp_releaseapplock (Transact-SQL)

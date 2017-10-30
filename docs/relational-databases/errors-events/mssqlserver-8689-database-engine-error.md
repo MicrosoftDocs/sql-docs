@@ -13,9 +13,9 @@ helpviewer_keywords:
   - "8689 (Database Engine error)"
 ms.assetid: 99467a32-6576-4272-a076-b16c06933f2a
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # MSSQLSERVER_8689

@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "sp_changesubstatus"
 ms.assetid: 9370e47a-d128-4f15-9224-1c3642770c39
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # sp_changesubstatus (Transact-SQL)

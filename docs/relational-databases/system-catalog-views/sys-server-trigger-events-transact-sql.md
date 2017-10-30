@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "sys.server_trigger_events catalog view"
 ms.assetid: be7d8a59-3c00-4f1b-b4b0-3dcd5572e002
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # sys.server_trigger_events (Transact-SQL)

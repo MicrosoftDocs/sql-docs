@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "audits [SQL Server], creating"
 ms.assetid: 1c321680-562e-41f1-8eb1-e7fa5ae45cc5
 caps.latest.revision: 44
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "On Demand"
 ---
 # CREATE SERVER AUDIT (Transact-SQL)

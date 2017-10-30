@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "GRANT statement, objects"
 ms.assetid: c001c2e7-d092-43d4-8fa6-693b3ec4c3ea
 caps.latest.revision: 40
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Active"
 ---
 # GRANT Object Permissions (Transact-SQL)

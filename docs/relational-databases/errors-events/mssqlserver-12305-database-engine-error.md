@@ -13,9 +13,9 @@ helpviewer_keywords:
   - "12305 (Database Engine error)"
 ms.assetid: 5a65a9fb-6db1-40dd-b410-3199bb410261
 caps.latest.revision: 4
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # MSSQLSERVER_12305

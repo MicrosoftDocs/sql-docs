@@ -13,9 +13,9 @@ helpviewer_keywords:
   - "7911 (Database Engine error)"
 ms.assetid: dd8390f3-0f77-4fb2-ba94-631a56e42bc6
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 robots: noindex,nofollow
 ms.workload: "Inactive"
 ---

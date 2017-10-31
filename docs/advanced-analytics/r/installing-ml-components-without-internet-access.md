@@ -1,8 +1,10 @@
 ---
 title: "Installing machine learning components without internet access | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/0522/2017"
-ms.prod: "sql-server-2016"
+ms.date: "10/31/2017"
+ms.prod: 
+  - "sql-server-2016"
+  - "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,18 +15,16 @@ ms.assetid: 0a90c438-d78b-47be-ac05-479de64378b2
 caps.latest.revision: 30
 author: "jeannt"
 ms.author: "jeannt"
-manager: "jhubbard"
+manager: "cgronlund"
 ms.workload: "On Demand"
 ---
 # Installing machine learning components without internet access
 
-Because the R and Python components provided with SQL Server 2016 and SQL Server 2017 are open source, Microsoft does not install R or Python components by default.
-
-Instead, we provide the related installers and bundled packages as a convenience on the Microsoft Download Center and other trusted sites. You must consent to the appropriate license, and then SQL Server setup installs R or Python components for you.
+Because the R and Python components provided with SQL Server 2016 and SQL Server 2017 are open source, Microsoft does not install R or Python components by default. Instead, we provide the related installers and bundled packages as a convenience on the Microsoft Download Center and other trusted sites. You must consent to the appropriate license, and then SQL Server setup installs R or Python components for you.
 
 This topic provides the download locations for the installers and an overview of the offline setup process.
 
-## Installation process
+## Overview of the offline installation process
 
 Typically, setup of the machine components used in SQL Server 2016 and SQL Server 2017 requires an internet connection. When SQL Server setup runs, if you have selected any of the machine learning options, setup checks for the Python or R installers, as well as any other required components.
 
@@ -42,12 +42,21 @@ Typically, setup of the machine components used in SQL Server 2016 and SQL Serve
 
 ### Step 1. Obtain additional installers
 
-For **R** in SQL Server 2016 and SQL Server 2017, you'll need to get two different installers. The SQL Server setup wizard ensures that they are installed in the correct order.
+**For R**
+
+The R language is supported in both SQL Server 2016 and SQL Server 2017. Two different installers are required, for open source and propretary components. The SQL Server setup wizard ensures that they are installed in the correct order.
 
 + Installers with **SRO** in the name provide the open source components.
 + Installers with **SRS** in the name contain components provided by Microsoft, including those for database integration.
 
-For **Python** in SQL Server 2017, download the single CAB file, and any prerequisites.
+**For Python**
+
+The Python language is supported only in SQL Server 2017. Again there are two separate installers that you must download.
+
++ Installers with **SPO** in the name are for Microsoft Python Open, and provide the open source components.
++ Installers with **SPS** in the name are for Microsoft Python Server, and contain components provided by Microsoft, including those for database integration.
+
+**How to download**
 
 1. Download the installers from the [Microsoft Download Center sites](#installerlocs) onto a computer with internet access, and save the installer rather than running it.
 2. Copy the installer (CAB) files to the computer where you intend to install machine learning components.
@@ -113,7 +122,7 @@ Microsoft R Server      |[SRS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink
 Microsoft Python Open     |[SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502) |
 Microsoft Python Server    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851508) |
 **SQL Server 2017 CU1** |
-Microsoft R Open     |use prervious|
+Microsoft R Open     |use previous|
 Microsoft R Server      |[SRS_9.2.0.100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851501)|
 Microsoft Python Open     |use previous |
 Microsoft Python Server    |[SPS_9.2.0.100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851500) |
@@ -183,7 +192,6 @@ Component  |Version
 [Microsoft Visual C++ 2013 Redistributable](https://go.microsoft.com/fwlink/?linkid=799853)     | 12.0.30501.0
 [Microsoft Visual C++ 2015 Redistributable](https://go.microsoft.com/fwlink/?linkid=828641)     | 14.0.23026.0
 
-
 ## <a name="modslocales"></a>Installing for different language locales
 
 If you download the .CAB files as part of SQL Server setup on a computer with internet access, the setup wizard detects the local language and automatically changes the language of the installer.
@@ -198,7 +206,7 @@ However, depending on your version of SQL Server, you might need to take additio
 
     > [!IMPORTANT]
     > This issue applies only to early versions and was fixed in later releases.
-    > Only use this workaround if the installer returns a message that it cannot install the correct language.
+    > **Only use this workaround if the installer returns a message that it cannot install the correct language.**
 
 + **For SQL Server 2017**
 
@@ -214,14 +222,15 @@ Slipstream setup refers to the ability to apply a patch or update to a failed in
 
 + If you are *adding* these components to an *existing* installation, use the updated version of the SQL Server installer, and the corresponding updated version of the additional components. When you specify that the R feature is to be installed, the installer looks for the matching version of the installers for the machine learning components.
 
-## Command-line arguments for setup
+## Command-line arguments for specifying component locations
 
-When performing an unattended setup, you must provide the following command-line arguments. However, you do not need to set any additional flags to install additional required components; prerequisites such as .NET core are installed silently by default.
+When performing an offline setup from the command line, you must provide the following command-line arguments to specify the location of components that you downloaded in advance. However, you do not need to set any additional flags to install additional required components; prerequisites such as .NET core are installed silently by default.
 
 **Location of installers**
 
 - `/UPDATESOURCE` to specify the location of the local file containing the SQL Server update installer
 - `/MRCACHEDIRECTORY` to specify the folder containing the R component CAB files
+- `/MPYCACHEDIRECTORY` to specify the folder containing the Python component CAB files
 
 **R components in SQL Server 2016**
 
@@ -238,7 +247,7 @@ When performing an unattended setup, you must provide the following command-line
 
 - `/ADVANCEDANALYTICS` to get engine support for external scripts
 - `/SQL_INST_MPY` to use Python
-- `/IACCEPTPYTHONLICENSETERMS="True"` to accept the separate R licensing agreement
+- `/IACCEPTPYTHONLICENSETERMS="True"` to accept the separate Python licensing agreement
 
 
 > [!NOTE]

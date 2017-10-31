@@ -1,5 +1,5 @@
 ---
-title: "What&#39;s New in SSMA for SAP ASE (SybaseToSQL) | Microsoft Docs"
+title: "What's New in SSMA for SAP ASE (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/30/2017"
 ms.prod: "sql-non-specified"

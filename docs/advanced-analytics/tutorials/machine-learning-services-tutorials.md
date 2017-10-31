@@ -2,8 +2,10 @@
 title: "SQL Server Machine Learning Tutorials | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "08/29/2017"
-ms.prod: "sql-server-2016"
+ms.date: "10/31/2017"
+ms.prod: 
+  - "sql-server-2016"
+  - "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,7 +25,7 @@ ms.workload: "On Demand"
 ---
 # SQL Server Machine Learning tutorials
 
-This article provides a comprehensive list of the tutorials, demos, and sample applications that use machine learning features in SQL Server 2016 or SQL Server 2017. Start here to learn how to run R or Python from T-SQL, use remote and local compute contexts, and optimize your R and Python code for a SQL production environment.
+This article provides a comprehensive list of the tutorials, demos, and sample applications that use machine learning features in SQL Server 2016 or SQL Server 2017. Start here to learn how to run R or Python from T-SQL, how to use remote and local compute contexts, and how to optimize your R and Python code for a SQL production environment.
 
 ## Start here
 
@@ -88,11 +90,11 @@ For more information, see [Machine Learning Templates with SQL Server 2016 R Ser
 
     Want to know the real story behind R Services? Read this article from the development and PM team that explains the origin and goals of SQL Server R Services.
 
-+ [Tutorials and sample data for Microsoft R](https://docs.microsoft.com/r-server/r/tutorial-introduction)
++ [Tutorials and sample data for Microsoft R](https://docs.microsoft.com/machine-learning-server/r/tutorial-introduction)
 
     Learn about Microsoft R, and what the RevoScaleR package offers in this collection of quick tutorials. Learn how to write R code once and deploy anywhere, using RevoScaleR data sources and remote compute contexts.
 
-+ [Get started with MicrosoftML](https://docs.microsoft.com/r-server/r/concept-what-is-the-microsoftml-package)
++ [Get started with MicrosoftML](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-the-microsoftml-package)
 
   Learn how to use the new algorithms in the MicrosoftML package for advanced modeling and scalable data transformations, optimized for multiple compute contexts.
 
@@ -100,8 +102,8 @@ For more information, see [Machine Learning Templates with SQL Server 2016 R Ser
 
 To run these tutorials, you must download and install the SQL Server machine learning components, as described here:
 
-+ [Set up SQL Server R Services](../r/set-up-sql-server-r-services-in-database.md)
-+ [Set up SQL Server Python Services](../python/setup-python-machine-learning-services.md)
++ [Set up SQL Server 2017 Machine Learning Services or SQL Server 2016 R Services](../r/set-up-sql-server-r-services-in-database.md)
++ [Set up SQL Server 2017 Python Services](../python/setup-python-machine-learning-services.md)
 
 With SQL Server 2017, you can install either R or Python, or both. Otherwise the overall setup process, architecture, and requirements are the same.
 

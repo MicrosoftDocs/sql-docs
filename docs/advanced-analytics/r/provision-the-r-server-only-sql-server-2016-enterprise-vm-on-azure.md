@@ -95,7 +95,7 @@ For more information, see [Upgrade SQL Server by using the installation wizard](
 
 When new upgrades are published for RevoScaleR, MicrosoftML, or revoscalepy, you can upgrade the machine learning components used by SQL Server, by using a process known as _binding_. This does not change your SQL Server version, but it does change the support policy for the instance.
 
-For more information, see [Use SqlBindR to upgrade machine learning components on SQL Server](../setup/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
+For more information, see [Use SqlBindR to upgrade machine learning components on SQL Server](../r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
 
 ### How do I access data in an Azure storage account?
 

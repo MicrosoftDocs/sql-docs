@@ -111,7 +111,7 @@ After running SQL Server setup, don't forget these important steps:
 
 1. Enable the external script execution feature by running `sp_configure 'external scripts enabled', 1`. Follow the instructions to reconfigure and restart SQL Server.
 2. Ensure that the Launchpad service is running, and that the worker accounts it uses can connect to the SQL Server instance.
-3. Review the permissions associated with the SQL logins and Windows user accounts that will be running R or Python scripts. All need permission to run R or Python scripts, and to connect to the instance. Depending on the sample, they might also need permissions to read and write data, and to create database objects.
+3. Review the permissions associated with the SQL logins or Windows user accounts that should be able to run R or Python scripts. All logins or accounts must have permission to run R or Python scripts, and must be able to connect to the instance. Depending on the tutorial, the account or login might also need permissions to write data, create database objects, or do a bulk import of data.
 
 For details, see this article for some common setup and configuration issues: [Troubleshooting Machine Learning Services](../machine-learning-troubleshooting-faq.md)
 

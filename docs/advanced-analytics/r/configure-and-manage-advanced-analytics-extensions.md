@@ -32,7 +32,7 @@ External script processes in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-m
 + Reduces privileges of the external script runtime processes on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computer
 + Provides isolation between sessions of an external runtime such as R or Python.
 
-As part of setup, a new Windows *user account pool* is created that contains the local user accounts required for running external runtime processes, such as R or Python. You can modify the number of users if needed to support machine learning tasks. 
+As part of setup, a new Windows *user account pool* is created that contains the local user accounts required for running external runtime processes, such as R or Python. You can modify the number of users as needed to support machine learning tasks. 
 
 Additionally, your database administrator must give this group permission to connect to any instance where machine learning has been enabled. For more information, see [Modify the user account pool for SQL Server Machine Learning Services](../../advanced-analytics/r/modify-the-user-account-pool-for-sql-server-r-services.md).
 
@@ -48,9 +48,9 @@ For more information about how to make changes to the user account pool, see [Mo
 
 ##  <a name="bkmk_ManagingMemory"></a> Manage memory used by external script processes
 
-By default, the external script runtimes for machine learning are limited to no more than 20% of total machine memory. Generally, this amount will be inadequate for serious machine learning tasks such as training a model or predicting on many rows of data. 
+By default, the external script runtimes for machine learning are limited to no more than 20% of total machine memory. It depends on your system, but in general, you might find this limit inadequate for serious machine learning tasks such as training a model or predicting on many rows of data. 
 
-To support machine learning, an administrator can increase this limit. When you do so, you might need to reduce the amount of memory reserved for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or for other services. You should also coonsider using Resource Governor to define an external resource pool or pools, so that you can allocate specific resource pools to R or Python jobs. 
+To support machine learning, an administrator can increase this limit. When you do so, you might need to reduce the amount of memory reserved for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or for other services. You should also consider using Resource Governor to define an external resource pool or pools, so that you can allocate specific resource pools to R or Python jobs.
 
 For more information, see [Resource governance for machine learning](../../advanced-analytics/r/resource-governance-for-r-services.md).
 
@@ -74,7 +74,7 @@ For more information about permissions required to run SQL Server services, see 
 
 In early versions of SQL Server 2016 R Services, you could change some properties of the service by editing the [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] configuration file. 
 
-This file is no longer used for changing configuration. We recommend that you use SQL Server Configuration Manager to effect changes to service configuration, such as the service account and number of users.
+However, this file is no longer used for changing configurations. We recommend that you use SQL Server Configuration Manager to effect changes to service configuration, such as the service account and number of users.
 
 **To modify Launchpad configuration**
 

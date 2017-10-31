@@ -82,7 +82,7 @@ These procedures are used to configure the sample. They are used to apply enterp
 |Configuration_ConfigureForEnterpriseEdition|Applies partitioning, columnstore indexing and in-memory.|
 |Configuration_EnableInMemory|Replaces the integration staging tables with SCHEMA_ONLY memory-optimized tables to improve ETL performance.|
 |Configuration_ApplyPolybase|Configures an external data source, file format, and table.|
-|Configuration_PopulateLargeSaleTable|Applied enterprise edition changes, then populates a larger amount of data for the 2012 calendar year as additional history.|
+|Configuration_PopulateLargeSaleTable|Applies enterprise edition changes, then populates a larger amount of data for the 2012 calendar year as additional history.|
 |Configuration_ReseedETL|Removes existing data and restarts the ETL seeds. This allows for repopulating the OLAP database to match updated rows in the OLTP database.|
 
 ### Integration Schema
@@ -99,4 +99,4 @@ Procedures to configure the sequences in the database.
 |Procedure|Purpose|
 |-----------------------------|---------------------|
 |ReseedAllSequences|Calls the procedure `ReseedSequenceBeyondTableValue` for all sequences.|
-|ReseedSequenceBeyondTableValue|Used to reposition the next sequence value beyond the value in any table that uses the same sequence. (Like a `DBCC CHECKIDENT` for identity columns equivalent for sequences but across potentially multiple tables).|
+|ReseedSequenceBeyondTableValue|Used to reposition the next sequence value beyond the value in any table that uses the same sequence. (Like a `DBCC CHECKIDENT` for identity columns equivalent for sequences but across potentially multiple tables.)|

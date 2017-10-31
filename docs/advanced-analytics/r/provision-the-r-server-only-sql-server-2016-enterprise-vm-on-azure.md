@@ -73,7 +73,7 @@ For announcements about new data science virtual machines, watch these blog site
 
 In addition to creating a virtual machine using an image that already includes SQL Server machine learning, you can install SQL Server on an existing virtual machine and enable the machine learning features. We recommend Enterprise or Developer edition, to avoid resource constraints. Installation also requires that you use your own license key.
 
-When you run setup, be sure to select the machine learnign feature and at least one language (R or Python). Some additional steps are required to enable machine learning services to communicate with SQL Server, and to enable networking on the virtual machine.
+When you run setup, be sure to select the machine learning feature and at least one language (R or Python). Some additional steps are required to enable machine learning services to communicate with SQL Server, and to enable networking on the virtual machine.
 
 For more information, see [Installing SQL Server R Services on an Azure virtual machine](../r/installing-sql-server-r-services-on-an-azure-virtual-machine.md).
 
@@ -85,7 +85,7 @@ R Services in-database is available as a preview feature only, and has some limi
 
 ### Can I upgrade the SQL Server version on a virtual machine?
 
-Although the SQL Server 2016 images support R, if you want to use Python, you can upgrade to SQL Server 2017, which will also upgrade other machine learning components.
+Although the SQL Server 2016 images support R, if you want to use Python, you can upgrade to SQL Server 2017, which also upgrades other machine learning components.
 
 To update the version of SQL Server that is installed, open the SQL Server Installation Center on the virtual machine, and select the **Upgrade** option. Depending on which virtual machine you created, a license might be required.
 
@@ -103,11 +103,11 @@ When you need to use data from your Azure storage account, there are several opt
 
 + Copy the data from your storage account to the local file system using a utility, such as [AzCopy](https://azure.microsoft.com/documentation/articles/storage-use-azcopy/#copy-files-in-azure-file-storage-with-azcopy-preview-version-only). 
 
-+ Add the files to a file share on your storage account and then mount the file share as a network drive on your VM.  For more information, see [Mounting Azure files](https://azure.microsoft.com/documentation/articles/storage-dotnet-how-to-use-files/). 
++ Add the files to a file share on your storage account and then mount the file share as a network drive on your VM. For more information, see [Mounting Azure files](https://azure.microsoft.com/documentation/articles/storage-dotnet-how-to-use-files/). 
 
 ### How do I use data from Azure Data Lake Storage (ADLS)?
 
-You can read data from ADLS storage using RevoScaleR, if you reference the storage account the same way that you would an HDFS file system, by using webHDFS.  For more information, see this article: [Using R to perform FileSystem Operations on Azure Data Lake Store](https://blogs.msdn.microsoft.com/microsoftrservertigerteam/2017/03/14/using-r-to-perform-filesystem-operations-on-azure-data-lake-store/).
+You can read data from ADLS storage using RevoScaleR, by using webHDFS to reference the storage account the same way that you would an HDFS file system. For more information, see this article: [Using R to perform FileSystem Operations on Azure Data Lake Store](https://blogs.msdn.microsoft.com/microsoftrservertigerteam/2017/03/14/using-r-to-perform-filesystem-operations-on-azure-data-lake-store/).
 
 ### I can't find the RRE virtual machine
 
@@ -119,7 +119,7 @@ For more information, see [Machine Learning Server in the Cloud](https://docs.mi
 
 ### Configuring Machine Learning Server or R Server to support web services
 
-If you use one of the virtual machines that includes Machine Learning Server, additional configuration might be required to use web service deployment, remote execution, or to use the virtual machine as a deployment server in your organization.
+If you use a virtual machine that includes Machine Learning Server, additional configuration might be required to use web service deployment, remote execution, or to use the virtual machine as a deployment server in your organization.
 
 For instructions, see [Configuring Machine Learning Server to operationalize analytics](https://docs.microsoft.com/machine-learning-server/operationalize/configure-machine-learning-server-one-box).
 
@@ -144,4 +144,4 @@ Currently, the following virtual machines are available for machine learning wit
 | **Other**| *** |
 | Machine Learning Server Only SQL Server 2017 Enterprise|Similar to the SQL Server 2016 Enterprise image, but contains the standalone version of Machine Learning Server and has the core ScaleR and Operationalization functionality optimized for Windows environments.|
 | Machine Learning Server for Windows|Contains the standalone version of Machine Learning Server, with operationalization features optimized for Windows environments.|
-|Data Science Virtual Machine |Linux editions include R Server. Linux virtual machines that includes SQL Server 2017 cannot run R or Python code in SQL Server. However, you can perform scoring on a trained model using the T-SQL PREDICT function. For more information, see [Native scoring in SQl Server](../sql-native-scoring.md).|
+|Data Science Virtual Machine |Linux editions include R Server. Linux virtual machines that include SQL Server 2017 cannot run R or Python code in SQL Server. However, you can perform scoring on a trained model using the T-SQL PREDICT function. For more information, see [Native scoring in SQl Server](../sql-native-scoring.md).|

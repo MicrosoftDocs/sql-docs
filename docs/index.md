@@ -30,7 +30,7 @@ ms.technology:
                                     <div class="cardPadding">
                                         <div class="card">
                                             <div class="cardText">
-                                                <h3>Databases</h3>
+                                                <h3 class="bgdAccent1" style="padding:20px;">Databases</h3>
                                                 <h4>SQL</h4>
                                                 <ul class="noBullet">
                                                     <li><a class="barLink" href="/sql/sql-server/sql-server-technical-documentation">SQL Server (2016, 2017)</a></li>
@@ -65,7 +65,7 @@ ms.technology:
                                     <div class="cardPadding">
                                         <div class="card">
                                             <div class="cardText">
-                                                <h3>Develop</h3>
+                                                <h3 class="bgdAccent1" style="padding:20px;">Develop</h3>
                                                 <h4>Design</h4>
                                                 <ul class="noBullet">
                                                     <li><a class="barLink" href="/sql/connect/sql-connection-libraries">Connect with client applications</a></li>
@@ -100,7 +100,7 @@ ms.technology:
                                     <div class="cardPadding">
                                         <div class="card">
                                             <div class="cardText">
-                                                <h3>Data Analytics</h3>
+                                                <h3 class="bgdAccent1" style="padding:20px;">Data Analytics</h3>
                                                 <h4>Analysis</h4>
                                                 <ul class="noBullet">
                                                     <li><a class="barLink" href="/sql/analysis-services/analysis-services">SQL Server Analysis Services (2016, 2017)</a></li>

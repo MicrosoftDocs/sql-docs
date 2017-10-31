@@ -1,7 +1,7 @@
 ---
 title: "Tutorials for SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/21/2017"
+ms.date: "10/31/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -17,6 +17,7 @@ manager: "jhubbard"
 ms.workload: "Active"
 ---
 # Tutorials for SQL Server
+
 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] provides tutorials to help you learn new technologies and features. Tutorials for earlier versions can usually be used with more recent versions. When tutorials address a newer feature, they will indicate the minimum version to complete the tutorial.  
      
 -   If a tutorial uses one of the [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] databases, you should download and use the most recent version from CodePlex. For more information, see [AdventureWorks Databases and Scripts for SQL Server 2016 CTP3](https://www.microsoft.com/download/details.aspx?id=49502).    
@@ -34,7 +35,7 @@ ms.workload: "Active"
 |[Integration Services Tutorials](../integration-services/integration-services-tutorials.md)|Learn how to create and deploy [!INCLUDE[ssIS](../includes/ssis-md.md)] packages.|  
 |[Replication Tutorials](../relational-databases/replication/replication-tutorials.md)|Learn how to set up and run replication topologies using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].|  
 |[Reporting Services Tutorials &#40;SSRS&#41;](../reporting-services/reporting-services-tutorials-ssrs.md)|Learn how to create basic reports and subscriptions.|  
-|[SQL Server R Services Tutorials](../advanced-analytics/tutorials/machine-learning-services-tutorials.md)|Learn how to work with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] data using the R language, and run R scripts from [!INCLUDE[tsql](../includes/tsql-md.md)].|  
+|[SQL Server Machine Learning Tutorials](../advanced-analytics/tutorials/machine-learning-services-tutorials.md)|Learn how to work with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] data using R or Python. Run R or Python scripts from [!INCLUDE[tsql](../includes/tsql-md.md)].|  
   
  ## Previously published tutorials:  
   

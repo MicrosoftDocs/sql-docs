@@ -14,6 +14,7 @@ caps.latest.revision: 6
 author: "smartysanthosh"
 ms.author: "nagavo"
 manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Upgrade Database Wizard (Master Data Services Configuration Manager)
   Use the **Upgrade Database Wizard** to upgrade a [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database.  

@@ -15,6 +15,7 @@ caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Altering Natively Compiled T-SQL Modules
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

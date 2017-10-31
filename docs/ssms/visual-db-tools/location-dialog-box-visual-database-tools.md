@@ -16,6 +16,7 @@ caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Location Dialog Box (Visual Database Tools)
 Use this dialog box to locate and select the folder containing the files of interest. This dialog box returns the path of the selected folder to the calling dialog box. You can access this dialog box in the following way:  

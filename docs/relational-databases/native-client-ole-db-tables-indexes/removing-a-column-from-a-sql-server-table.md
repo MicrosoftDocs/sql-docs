@@ -19,6 +19,7 @@ caps.latest.revision: 33
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Removing a Column from a SQL Server Table
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]

@@ -16,6 +16,7 @@ caps.latest.revision: 31
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Unprepare SQL Event Class
   The Unprepare SQL event class indicates that the SqlClient, ODBC, OLE DB, or DB-Library has unprepared (deleted) a prepared [!INCLUDE[tsql](../../includes/tsql-md.md)] statement or statements.  

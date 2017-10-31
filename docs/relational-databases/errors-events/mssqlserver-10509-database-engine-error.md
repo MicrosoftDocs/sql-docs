@@ -13,9 +13,10 @@ helpviewer_keywords:
   - "10509 (Database Engine error)"
 ms.assetid: e9dd5357-ee3d-420a-9a89-d12ab5404e73
 caps.latest.revision: 9
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Inactive"
 ---
 # MSSQLSERVER_10509
   

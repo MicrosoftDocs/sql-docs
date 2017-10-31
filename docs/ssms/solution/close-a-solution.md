@@ -17,6 +17,7 @@ caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Close a Solution
 You can close a solution and remove it from Solution Explorer. Closing a solution makes it unavailable for use by Solution Explorer.  

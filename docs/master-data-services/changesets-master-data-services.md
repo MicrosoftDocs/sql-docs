@@ -15,6 +15,7 @@ caps.latest.revision: 13
 author: "smartysanthosh"
 ms.author: "nagavo"
 manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Changesets (Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] now supports the ability to save any pending changes to an entity as changesets. There are two usage scenarios for this feature.  

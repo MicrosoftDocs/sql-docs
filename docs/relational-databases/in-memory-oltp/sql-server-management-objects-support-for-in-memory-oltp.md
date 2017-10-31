@@ -15,6 +15,7 @@ caps.latest.revision: 28
 author: "JennieHubbard"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # SQL Server Management Objects Support for In-Memory OLTP
 

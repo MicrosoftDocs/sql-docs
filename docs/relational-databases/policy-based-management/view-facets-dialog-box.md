@@ -16,6 +16,7 @@ caps.latest.revision: 15
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # View Facets Dialog Box
   Use this dialog box to view the properties of a Policy-Based Management facet. The properties of a facet are defined when a facet is created and cannot be changed by using this dialog box.  

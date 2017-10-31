@@ -14,6 +14,7 @@ caps.latest.revision: 15
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "On Demand"
 ---
 
 # Install or Uninstall the Reporting Services Add-in for SharePoint

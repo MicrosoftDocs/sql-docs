@@ -17,6 +17,7 @@ caps.latest.revision: 16
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Restore Database (Files Page)
   Use the **Files** page of the **Restore Database** dialog box to manage the specific files you have chosen to restore within the database.  

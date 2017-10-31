@@ -18,6 +18,7 @@ caps.latest.revision: 40
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Transfer Snapshots Through FTP
   By default, snapshots are stored in folders defined as Universal Naming Convention (UNC) shares. Replication also allows you to specify a File Transfer Protocol (FTP) share instead of a UNC share. To use FTP, you must configure an FTP server and then configure a publication and one or more subscriptions to use FTP. For information about how to configure an FTP server, see the Internet Information Services (IIS) documentation. If you specify FTP information for a publication, subscriptions to that publication use FTP by default. FTP is only used with Web synchronization when the computer that is running IIS is separated from the Distributor by a firewall. In this case, FTP can be used to transfer the snapshot from the Distributor and the computer that is running IIS. (The snapshot is always transferred to the Subscriber by using HTTPS.)  

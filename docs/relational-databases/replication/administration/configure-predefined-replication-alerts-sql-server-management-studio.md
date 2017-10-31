@@ -17,6 +17,7 @@ caps.latest.revision: 24
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Configure Predefined Replication Alerts (SQL Server Management Studio)
   Replication offers the following predefined alerts, which can be configured to respond to replication events:  

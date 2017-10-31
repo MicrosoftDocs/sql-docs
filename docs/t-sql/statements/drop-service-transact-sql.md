@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "removing services"
 ms.assetid: 2351bba7-0f2a-4cda-b3b2-6a88b8747c53
 caps.latest.revision: 36
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # DROP SERVICE (Transact-SQL)

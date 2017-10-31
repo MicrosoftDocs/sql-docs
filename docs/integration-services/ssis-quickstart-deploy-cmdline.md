@@ -8,6 +8,7 @@ ms.technology:
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Deploy an SSIS project from the command prompt with ISDeploymentWizard.exe
 This quick start tutorial demonstrates how to deploy an SSIS project from the command prompt by running the Integration Services Deployment Wizard, `ISDeploymentWizard.exe`.

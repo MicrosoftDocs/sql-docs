@@ -18,6 +18,7 @@ caps.latest.revision: 14
 author: "smartysanthosh"
 ms.author: "nagavo"
 manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Create and Publish a Business Rule (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], create a business rule to ensure the accuracy of your master data. After you create a rule, you must publish it before you can apply it to data.  

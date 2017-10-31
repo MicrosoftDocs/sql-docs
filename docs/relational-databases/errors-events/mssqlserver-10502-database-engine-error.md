@@ -13,9 +13,10 @@ helpviewer_keywords:
   - "10502 (Database Engine error)"
 ms.assetid: 26d9b64d-4299-4b55-92d0-0a32a3688c0a
 caps.latest.revision: 9
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Inactive"
 ---
 # MSSQLSERVER_10502
   

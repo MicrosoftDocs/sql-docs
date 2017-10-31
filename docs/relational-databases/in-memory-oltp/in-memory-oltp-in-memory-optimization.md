@@ -18,6 +18,7 @@ caps.latest.revision: 106
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # In-Memory OLTP (In-Memory Optimization)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

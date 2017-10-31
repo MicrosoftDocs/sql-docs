@@ -18,9 +18,10 @@ helpviewer_keywords:
   - "sp_help_spatial_geometry_index_xml procedure"
 ms.assetid: 9668ae6d-9ed5-418e-bb9a-9e7b66f7dd16
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Inactive"
 ---
 # sp_help_spatial_geometry_index_xml (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

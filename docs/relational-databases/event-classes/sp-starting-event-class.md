@@ -16,6 +16,7 @@ caps.latest.revision: 33
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # SP:Starting Event Class
   The SP:Starting event class indicates that a stored procedure is beginning execution.  

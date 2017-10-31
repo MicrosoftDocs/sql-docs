@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "default schema IDs"
 ms.assetid: c8e34df5-3eea-459f-ae40-050909ce9fda
 caps.latest.revision: 39
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "On Demand"
 ---
 # SCHEMA_ID (Transact-SQL)

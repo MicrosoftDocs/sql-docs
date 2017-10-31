@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # Configure a User to Create and Manage SQL Server Agent Jobs
 This topic describes how to configure a user to create or execute [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent jobs.  

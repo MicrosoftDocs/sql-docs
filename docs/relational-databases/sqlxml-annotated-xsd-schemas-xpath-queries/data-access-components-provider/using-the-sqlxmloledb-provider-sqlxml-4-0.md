@@ -18,6 +18,7 @@ caps.latest.revision: 26
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Using the SQLXMLOLEDB Provider (SQLXML 4.0)
   The topics in this section provide ADO sample applications that illustrate the use of SQLXMLOLEDB Provider-specific properties.  

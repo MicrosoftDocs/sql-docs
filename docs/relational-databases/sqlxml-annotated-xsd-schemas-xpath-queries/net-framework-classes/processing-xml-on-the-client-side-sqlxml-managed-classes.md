@@ -20,6 +20,7 @@ caps.latest.revision: 21
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Processing XML on the Client Side (SQLXML Managed Classes)
   This example illustrates the use of the ClientSideXml property. The application executes a stored procedure on the server. The result of the stored procedure (a two-column rowset) is processed on the client side to produce an XML document.  

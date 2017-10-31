@@ -23,9 +23,10 @@ helpviewer_keywords:
   - "catalog views [SQL Server], about catalog views"
 ms.assetid: 13bccc2f-ed3c-4b58-abd0-ca8bf34a66b8
 caps.latest.revision: 45
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "On Demand"
 ---
 # System Catalog Views (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]

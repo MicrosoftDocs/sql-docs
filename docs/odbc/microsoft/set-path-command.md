@@ -16,6 +16,7 @@ caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # SET PATH Command
 Specifies a path for file searches. For driver-specific information, see the Remarks.  

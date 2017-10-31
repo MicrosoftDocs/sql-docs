@@ -16,6 +16,7 @@ caps.latest.revision: 113
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # Download SQL Server PowerShell Module
 As part of the 17.0 release of SQL Server Management Studio, the SQL Server PowerShell module now ships via the PowerShell Gallery.  The module is no longer included in the SSMS install package. To use PowerShell with SSMS 17.0 and newer, the SQL Server Module must be installed on the machine as an additional step.

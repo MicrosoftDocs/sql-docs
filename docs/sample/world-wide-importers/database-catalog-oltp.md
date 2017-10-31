@@ -15,6 +15,7 @@ author: "BarbKess"
 ms.author: "barbkess"
 manager: "jhubbard"
 robots: noindex,nofollow
+ms.workload: "On Demand"
 ---
 # WideWorldImportersDW database catalog
 Explanations for the schemas, tables, and stored procedures in the WideWorldImportersDW database. 

@@ -24,9 +24,10 @@ helpviewer_keywords:
   - "sys.column_encryption_key_values catalog view"
 ms.assetid: 440875ab-b0e9-4966-8c16-01503558fedd
 caps.latest.revision: 12
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Inactive"
 ---
 # sys.column_encryption_key_values (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

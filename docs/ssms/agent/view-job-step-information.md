@@ -19,6 +19,7 @@ caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # View Job Step Information
 This topic describes how to view job step details in the Job Step Properties dialog. It also includes information about viewing job step output.  

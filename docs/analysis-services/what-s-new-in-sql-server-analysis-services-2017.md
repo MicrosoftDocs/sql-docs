@@ -1,6 +1,6 @@
 ---
 title: "What's new in SQL Server 2017 Analysis Services | Microsoft Docs"
-ms.date: "10/03/2017"
+ms.date: "10/27/2017"
 ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
@@ -41,9 +41,9 @@ To upgrade an existing tabular model in SSDT, in Solution Explorer, right-click 
 It's important to keep in mind, once you upgrade an existing model to 1400, you can't downgrade. Be sure to keep a backup of your 1200 model database.
 
 ## Modern Get Data experience
-When it comes to ingesting data from data sources into your tabular models, SQL Server Data Tools (SSDT) introduces the modern **Get Data** experience for models at the 1400 compatibility level. This new feature is based on similar functionality in Power BI Desktop and Microsoft Excel 2016. The modern Get Data experience provides immense data transformation and data mashup capabilities by using the Get Data query builder and M expressions.
+When it comes to importing data from data sources into your tabular models, SQL Server Data Tools (SSDT) introduces the modern **Get Data** experience for models at the 1400 compatibility level. This new feature is based on similar functionality in Power BI Desktop and Microsoft Excel 2016. The modern Get Data experience provides immense data transformation and data mashup capabilities by using the Get Data query builder and M expressions.
 
-The modern Get Data experience provided support for a wide range of additional data source. Future updates will support additional data sources.
+The modern Get Data experience provides support for a wide range of data sources. Going forward, updates will include support for even more.
 
 ![AS_Get_Data_in_SSDT](../analysis-services/media/as-get-data-in-ssdt.png)
 

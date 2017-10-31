@@ -24,6 +24,7 @@ caps.latest.revision: 31
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Creating User-Defined Types - Requirements
   You must make several important design decisions when creating a user-defined type (UDT) to be installed in [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For most UDTs, creating the UDT as a structure is recommended, although creating it as a class is also an option. The UDT definition must conform to the specifications for creating UDTs in order for it to be registered with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

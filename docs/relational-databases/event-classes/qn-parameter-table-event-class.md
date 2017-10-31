@@ -16,6 +16,7 @@ caps.latest.revision: 21
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # QN:Parameter Table Event Class
   The QN:Parameter table event reports information about the operations required to create, keep reference counts for, and drop the internal tables that store parameter information. This event also reports the internal activity to reset the usage count for a parameter table.  

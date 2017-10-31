@@ -27,9 +27,9 @@ helpviewer_keywords:
   - "estimated execution information [SQL Server]"
 ms.assetid: 2c4f3fc8-ff2c-4790-8b74-e7e8ef58f9a6
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "On Demand"
 ---
 # SET SHOWPLAN_TEXT (Transact-SQL)

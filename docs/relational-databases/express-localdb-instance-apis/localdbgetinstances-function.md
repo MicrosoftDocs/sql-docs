@@ -19,6 +19,7 @@ caps.latest.revision: 13
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # LocalDBGetInstances Function
   Returns all SQL Server Express LocalDB instances with the given version.  

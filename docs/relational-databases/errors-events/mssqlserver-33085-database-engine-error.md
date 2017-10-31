@@ -13,9 +13,10 @@ helpviewer_keywords:
   - "33085 (Database Engine error)"
 ms.assetid: c27b8d1d-668a-4ba8-8b61-25a5ebbc5485
 caps.latest.revision: 9
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Inactive"
 ---
 # MSSQLSERVER_33085
   

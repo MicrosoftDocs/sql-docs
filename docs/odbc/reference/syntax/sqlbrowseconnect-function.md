@@ -23,6 +23,7 @@ caps.latest.revision: 36
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # SQLBrowseConnect Function
 **Conformance**  

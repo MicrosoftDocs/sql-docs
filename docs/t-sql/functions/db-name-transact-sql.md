@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "DB_NAME function"
 ms.assetid: e21fb33a-a3ea-49b0-bb6b-8f789a675a0e
 caps.latest.revision: 37
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Active"
 ---
 # DB_NAME (Transact-SQL)

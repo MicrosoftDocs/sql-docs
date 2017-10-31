@@ -18,6 +18,7 @@ caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # View Join Properties (Visual Database Tools)
 You can see a collection of properties for a view in the Properties window.  

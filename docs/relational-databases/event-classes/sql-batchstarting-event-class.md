@@ -16,6 +16,7 @@ caps.latest.revision: 32
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # SQL:BatchStarting Event Class
   The SQL:BatchStarting event class indicates that a [!INCLUDE[tsql](../../includes/tsql-md.md)] batch is starting.  

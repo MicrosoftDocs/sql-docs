@@ -14,6 +14,7 @@ caps.latest.revision: 17
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Improve the Performance of Full-Text Queries
   The following is a list of recommendations that will help to improve the performance of full-text queries.  

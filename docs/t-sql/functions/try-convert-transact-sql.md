@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "TRY_CONVERT function"
 ms.assetid: 3e6e7825-6482-4cb2-a8c2-9abc99e265a6
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Active"
 ---
 # TRY_CONVERT (Transact-SQL)

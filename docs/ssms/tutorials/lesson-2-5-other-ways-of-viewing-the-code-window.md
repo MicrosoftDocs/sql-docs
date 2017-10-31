@@ -16,6 +16,7 @@ caps.latest.revision: 26
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Lesson 2-5 - Other Ways of Viewing the Code Window
 The Code Window can be configured to display multiple code windows in several ways.  

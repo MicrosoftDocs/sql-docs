@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Turn on Reporting Services events for the SharePoint trace log (ULS) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/30/2017"
@@ -15,6 +15,7 @@ caps.latest.revision: 19
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 
 # Turn on Reporting Services events for the SharePoint trace log (ULS)

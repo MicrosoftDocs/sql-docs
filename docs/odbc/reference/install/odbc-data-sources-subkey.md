@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # ODBC Data Sources Subkey
 The values under the ODBC Data Sources subkey list the data sources. The format of these values is as shown in the following table.  

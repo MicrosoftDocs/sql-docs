@@ -20,6 +20,7 @@ caps.latest.revision: 33
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # AdvancedProperties Property (SqlService Class)
   Gets an array of object references that contain the advanced properties for the **SqlService** object.  

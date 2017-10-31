@@ -13,9 +13,10 @@ helpviewer_keywords:
   - "10771 (Database Engine error)"
 ms.assetid: e8136193-2d0f-4e5b-b893-c14f5658be68
 caps.latest.revision: 6
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Inactive"
 ---
 # MSSQLSERVER_10771
   

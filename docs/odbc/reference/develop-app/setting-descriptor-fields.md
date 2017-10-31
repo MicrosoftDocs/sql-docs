@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Setting Descriptor Fields
 To modify the fields of a descriptor, an application can call **SQLSetDescField**. Some fields are read-only and cannot be set. (See the [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md) function description.)  

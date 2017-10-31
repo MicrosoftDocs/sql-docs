@@ -16,6 +16,7 @@ caps.latest.revision: 34
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Deny Permissions on an XML Schema Collection
   Permission can be denied to either create a new XML schema collection or use an existing one.  

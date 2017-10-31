@@ -16,6 +16,7 @@ caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Configure SQL Server Agent Error Logs (General Page)
 Use this screen to view and update settings for [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent error logging.  

@@ -14,6 +14,7 @@ caps.latest.revision: 4
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "v-thobro"
+ms.workload: "Inactive"
 ---
 # New GUI features in SSMA for Oracle (OracleToSQL)
 This chapter describes new features of SSMA User Interface.  

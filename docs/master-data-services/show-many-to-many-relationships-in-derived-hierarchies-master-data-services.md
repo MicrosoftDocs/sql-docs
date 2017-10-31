@@ -15,6 +15,7 @@ caps.latest.revision: 13
 author: "smartysanthosh"
 ms.author: "nagavo"
 manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Show Many-to-Many Relationships in Derived Hierarchies (Master Data Services)
   Derived Hierarchies (DH) display one-to-many relationships, and can now also show many-to-many relationships.  

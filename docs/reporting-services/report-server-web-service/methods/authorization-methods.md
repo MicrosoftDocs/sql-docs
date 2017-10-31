@@ -23,6 +23,7 @@ caps.latest.revision: 42
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Authorization Methods
   You can use these methods to manage tasks, roles, and policies on the report server.  

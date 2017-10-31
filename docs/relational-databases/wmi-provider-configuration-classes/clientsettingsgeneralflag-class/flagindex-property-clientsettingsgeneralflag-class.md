@@ -21,6 +21,7 @@ caps.latest.revision: 15
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # FlagIndex Property (ClientSettingsGeneralFlag Class)
   Gets the index value of the flag.  

@@ -17,6 +17,7 @@ caps.latest.revision: 50
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Use a Format File to Skip a Table Column (SQL Server)
   This topic describes format files. You can use a format file to skip importing a table column when the field does not exist in the data file. A data file can contain fewer fields than the number of columns in the table only if the skipped columns are nullable and/or have default value.  

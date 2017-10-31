@@ -18,6 +18,7 @@ caps.latest.revision: 29
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Allocate Handles and Connect to SQL Server (ODBC)
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]

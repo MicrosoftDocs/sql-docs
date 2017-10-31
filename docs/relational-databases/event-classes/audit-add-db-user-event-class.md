@@ -16,6 +16,7 @@ caps.latest.revision: 31
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Audit Add DB User Event Class
   The **Audit Add DB User** event class occurs whenever a login is added or removed as a database user to a database. This event class is used for the **sp_grantdbaccess**, **sp_revokedbaccess**, **sp_adduser**, and **sp_dropuser** stored procedures.  

@@ -16,6 +16,7 @@ caps.latest.revision: 11
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Publication (Peer-to-Peer Replication)
   The **Publication** page displays transactional publications that are enabled for peer-to-peer replication. Publications are enabled on the **Subscription Options** page of the **Publication Properties** dialog box.  

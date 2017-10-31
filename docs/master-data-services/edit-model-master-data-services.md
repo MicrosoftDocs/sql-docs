@@ -17,6 +17,7 @@ caps.latest.revision: 9
 author: "smartysanthosh"
 ms.author: "nagavo"
 manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Edit Model (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], you can change the name and description of a model and indicate how many days you want to retain transaction logs.  

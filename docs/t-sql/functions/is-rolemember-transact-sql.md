@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "members [SQL Server], verifying"
 ms.assetid: 73efa688-ae91-4014-98bc-1cabe47321f7
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "On Demand"
 ---
 # IS_ROLEMEMBER (Transact-SQL)

@@ -16,6 +16,7 @@ caps.latest.revision: 30
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Lesson 1-8 - Restore the Default SQL Server Management Studio Configuration
 Users new to [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] might have inadvertently closed or hidden windows and might have trouble restoring [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] to the original layout. The following steps restore [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] to the default environment layout.  

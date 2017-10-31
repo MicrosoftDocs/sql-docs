@@ -25,6 +25,7 @@ caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # SQL Editor (Visual Database Tools)
 Use the SQL Editor to edit existing stored procedures, functions, triggers, and SQL scripts. This window opens when you open any of those objects. If you want to create a new SQL statement to run against your data source, use the [SQL Pane](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md) of Query Designer.  

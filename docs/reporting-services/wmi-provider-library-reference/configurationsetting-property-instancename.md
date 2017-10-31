@@ -22,6 +22,7 @@ caps.latest.revision: 34
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # ConfigurationSetting Property - InstanceName
   Specifies the name of a report server instance on a specific computer. Read-only.  

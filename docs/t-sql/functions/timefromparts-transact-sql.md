@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "TIMEFROMPARTS function"
 ms.assetid: 786c65a1-2b3f-4e4b-82b6-4940d62f3801
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "On Demand"
 ---
 # TIMEFROMPARTS (Transact-SQL)

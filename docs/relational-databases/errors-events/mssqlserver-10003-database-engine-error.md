@@ -13,9 +13,10 @@ helpviewer_keywords:
   - "10003 (Database Engine error)"
 ms.assetid: 9e2cb199-f077-4d88-8117-1b7550afc696
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Inactive"
 ---
 # MSSQLSERVER_10003
   

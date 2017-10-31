@@ -21,6 +21,7 @@ caps.latest.revision: 30
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # ProtocolName Property (ServerNetworkProtocolIPAddress Class)
   Gets the name of the server network protocol that references the IP address.  

@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Columns with a Name
   The following are the specific conditions in which rowset columns with a name are mapped, case-sensitive, to the resulting XML:  

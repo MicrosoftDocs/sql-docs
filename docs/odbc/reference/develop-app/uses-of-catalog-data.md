@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Uses of Catalog Data
 Applications use catalog data in a variety of ways. Here are some common uses:  

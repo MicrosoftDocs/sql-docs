@@ -23,6 +23,7 @@ caps.latest.revision: 23
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # SQLPrepare Function
 **Conformance**  

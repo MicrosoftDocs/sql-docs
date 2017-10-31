@@ -17,6 +17,7 @@ caps.latest.revision: 21
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Running Stored Procedures - Process Return Codes and Output Parameters
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]

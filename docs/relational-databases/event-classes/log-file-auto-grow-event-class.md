@@ -16,6 +16,7 @@ caps.latest.revision: 31
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Log File Auto Grow Event Class
   The **Log File Auto Grow** event class indicates that the log file grew automatically. This event is not triggered if the log file is grown explicitly through ALTER DATABASE.  

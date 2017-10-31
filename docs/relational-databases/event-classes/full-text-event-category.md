@@ -18,6 +18,7 @@ caps.latest.revision: 27
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Full Text Event Category
   The **Full Text** event category contains general full-text events.  

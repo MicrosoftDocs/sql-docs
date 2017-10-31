@@ -16,6 +16,7 @@ caps.latest.revision: 28
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Lesson 1-6 - Select the Keyboard Shortcut Scheme
 Instead of the standard [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] keyboard scheme, you can configure [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to use a keyboard scheme compatible with [!INCLUDE[vs_dev10_long](../../includes/vs-dev10-long-md.md)].  

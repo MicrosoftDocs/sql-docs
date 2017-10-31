@@ -21,6 +21,7 @@ caps.latest.revision: 32
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # IssuedBy Property (SecurityCertificate Class)
   Gets the object that issued the security certificate.  

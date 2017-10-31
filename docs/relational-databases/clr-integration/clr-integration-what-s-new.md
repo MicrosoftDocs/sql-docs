@@ -13,6 +13,7 @@ caps.latest.revision: 7
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # CLR Integration - What&#39;s New
   The following are new features in CLR integration in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]:  

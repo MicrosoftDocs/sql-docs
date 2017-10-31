@@ -14,6 +14,7 @@ caps.latest.revision: 16
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "On Demand"
 ---
 
 # Troubleshoot a Reporting Services installation

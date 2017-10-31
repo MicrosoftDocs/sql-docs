@@ -13,9 +13,9 @@ dev_langs:
   - "TSQL"
 ms.assetid: 4147c593-96ba-402f-8bff-a7a32536b304
 caps.latest.revision: 6
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Active"
 ---
 # Conversion Functions (Transact-SQL)

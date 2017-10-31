@@ -21,6 +21,7 @@ caps.latest.revision: 33
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Set Thresholds and Warnings in Replication Monitor
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Replication Monitor displays status information for publications and subscriptions. By default, Replication Monitor displays warnings only for uninitialized subscriptions, but you can enable warnings for other conditions. It is recommended that you enable warnings for your topology, so that you are informed about status and performance in a timely manner.  

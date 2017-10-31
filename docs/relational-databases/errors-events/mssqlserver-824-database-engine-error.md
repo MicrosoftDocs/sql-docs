@@ -13,9 +13,10 @@ helpviewer_keywords:
   - "824 (Database Engine error)"
 ms.assetid: 2aa22246-2712-4fdb-9744-36e7e6f3175e
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Inactive"
 ---
 # MSSQLSERVER_824
   

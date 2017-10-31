@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "SET PARSEONLY statement"
 ms.assetid: 514ab042-c53e-4d96-be71-fb08fcc6ef3c
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # SET PARSEONLY (Transact-SQL)

@@ -14,6 +14,7 @@ caps.latest.revision: 10
 author: "smartysanthosh"
 ms.author: "nagavo"
 manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Import Statuses (Master Data Services)
   In the **Integration Management** functional area, on the **Staging Batches** page, the following statuses are possible.  

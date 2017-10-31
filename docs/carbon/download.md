@@ -1,27 +1,22 @@
 ---
-title: Download and install Carbon | Microsoft Docs
-description: 'Download and Install Carbon for Linux, macOS, or Windows'
+title: Download and install [!INCLUDE[name-sos](../includes/name-sos.md)] | Microsoft Docs
+description: 'Download and Install [!INCLUDE[name-sos](../includes/name-sos.md)] for Linux, macOS, or Windows'
 keywords: Carbon, install Carbon, download Carbon
-services: 
-documentationcenter: ''
-author: stevestein
+ms.custom: "tools|sos"
+ms.date: "10/31/2017"
+ms.prod: "sql-non-specified"
+ms.reviewer: "alayu; erickang; sanagama; sstein"
+ms.suite: "sql"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+author: "stevestein"
+ms.author: "sstein"
 manager: craigg
-editor: 
-
-ms.assetid: 
-ms.service:
-ms.custom: 
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.prod: NEEDED
-ms.workload: data-management
-ms.date: 10/19/2017
-ms.author: sstein
+ms.workload: "Inactive"
 ---
-# Download and install Carbon
+# Download and install [!INCLUDE[name-sos](../includes/name-sos.md)]
 
-Carbon is a free lightweight modern database development and management tool that runs on Windows, macOS, and Linux. Use Carbon to manage SQL Server running anywhere, Azure SQL Database, and Azure SQL Data Warehouse.   
+[!INCLUDE[name-sos-short](../includes/name-sos-short.md)] is a free lightweight modern database development and management tool that runs on Windows, macOS, and Linux. Use Carbon to manage SQL Server running anywhere, Azure SQL Database, and Azure SQL Data Warehouse.   
 
 > [!NOTE]
 > This preview version of Carbon installs by copying a zip (tar) file to your local computer, extracting (expanding) the file, and running the executable.

@@ -25,7 +25,7 @@ ms.workload: "Active"
 - Check out the new [Wide World Importers](https://msdn.microsoft.com/library/mt734199(SQL.1).aspx) sample available on the [sql-server-samples](https://github.com/Microsoft/sql-server-samples) GitHub repository. 
 
  
-## Current Tutorials  
+## Current tutorials  
   
 |Technology|Description|  
 |--------------|---------------|  
@@ -37,7 +37,7 @@ ms.workload: "Active"
 |[Reporting Services Tutorials &#40;SSRS&#41;](../reporting-services/reporting-services-tutorials-ssrs.md)|Learn how to create basic reports and subscriptions.|  
 |[SQL Server Machine Learning Tutorials](../advanced-analytics/tutorials/machine-learning-services-tutorials.md)|Learn how to work with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] data using R or Python. Run R or Python scripts from [!INCLUDE[tsql](../includes/tsql-md.md)].|  
   
- ## Previously published tutorials:  
+ ## Previously published tutorials 
   
  - [Tutorials for SQL Server 2014](https://msdn.microsoft.com/library/hh231699(v=sql.120).aspx)  
   

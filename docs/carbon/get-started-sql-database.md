@@ -21,32 +21,10 @@ This quickstart demonstrates how to use Carbon to connect to an Azure SQL databa
 This quickstart uses as its starting point the resources created in one of these quick starts:
 
 - [Create DB - Portal](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-get-started-portal)
-- [Create DB - CLI](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-get-started-cli.md)
-- [Create DB - PowerShell](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-get-started-powershell.md)
+- [Create DB - CLI](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-get-started-cli)
+- [Create DB - PowerShell](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-get-started-powershell)
 
 Before you start, install Carbon by following [these directions](download.md).
-
-## Configure Carbon 
-
-### **Mac OS**
-For macOS, you need to install OpenSSL which is a prerequisite for DotNet Core that mssql extension uses. Open your terminal and enter the following commands to install **brew** and **OpenSSL**. 
-
-```bash
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-brew update
-brew install openssl
-mkdir -p /usr/local/lib
-ln -s /usr/local/opt/openssl/lib/libcrypto.1.0.0.dylib /usr/local/lib/
-ln -s /usr/local/opt/openssl/lib/libssl.1.0.0.dylib /usr/local/lib/
-```
-
-### **Linux**
-
-No special configuration needed.
-
-### **Windows**
-
-No special configuration needed.
 
 ## SQL server connection information
 

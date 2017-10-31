@@ -23,28 +23,6 @@ To use this tutorial, you need:
 * Install Carbon by following [these directions](download.md).
 * The fully qualified SQL server name. To find this, see [Connect to SQL Data Warehouse](https://docs.microsoft com/en-us/azure/sql-data-warehouse/sql-data-warehouse-connect-overview).
 
-## Configure Carbon 
-
-### **Mac OS**
-For macOS, you need to install OpenSSL which is a prerequisite for DotNet Core that mssql extension uses. Open your terminal and enter the following commands to install **brew** and **OpenSSL**. 
-
-```bash
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-brew update
-brew install openssl
-mkdir -p /usr/local/lib
-ln -s /usr/local/opt/openssl/lib/libcrypto.1.0.0.dylib /usr/local/lib/
-ln -s /usr/local/opt/openssl/lib/libssl.1.0.0.dylib /usr/local/lib/
-```
-
-### **Linux**
-
-No special configuration needed.
-
-### **Windows**
-
-No special configuration needed.
-
 ## SQL server connection information
 
 Get the connection information needed to connect to the Azure SQL Data Warehouse. You will need the fully qualified server name, database name, and login information in the next procedures.

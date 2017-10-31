@@ -97,7 +97,7 @@ For more info about the error described in this section and about the permission
   
 2.  Convert the project to the project deployment model by running the **Integration Services Project Conversion Wizard** . For more information, see the instructions below: [To convert a project to the project deployment model](#convert)  
   
-    -   If you created the project in [!INCLUDE[ssISversion12](../../includes/ssisversion12-md.md)], by default the project uses the project deployment model.  
+    -   If you created the project in [!INCLUDE[ssISversion12](../../includes/ssisversion12-md.md)] or later, by default the project uses the project deployment model.  
   
     -   If you created the project in an earlier release of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], after you open the project file in [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], convert the project to the project deployment model.  
   

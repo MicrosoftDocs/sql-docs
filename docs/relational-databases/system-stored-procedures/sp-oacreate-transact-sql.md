@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "sp_OACreate"
 ms.assetid: eb84c0f1-26dd-48f9-9368-13ee4a30a27c
 caps.latest.revision: 32
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "On Demand"
 ---
 # sp_OACreate (Transact-SQL)

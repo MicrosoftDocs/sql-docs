@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "database usernames [SQL Server]"
 ms.assetid: ab32d644-4228-449a-9ef0-5a975c305775
 caps.latest.revision: 37
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "On Demand"
 ---
 # USER_NAME (Transact-SQL)

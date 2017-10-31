@@ -13,9 +13,9 @@ helpviewer_keywords:
   - "5229 (Database Engine error)"
 ms.assetid: 0d9e50da-4f42-4b3a-bc84-daf05cf0e0e5
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # MSSQLSERVER_5229

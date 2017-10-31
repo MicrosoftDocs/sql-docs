@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "MSpublicationthresholds system table"
 ms.assetid: 9da3879f-b1f4-4ab4-abd4-a9a8ac395eba
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # MSpublicationthresholds (Transact-SQL)

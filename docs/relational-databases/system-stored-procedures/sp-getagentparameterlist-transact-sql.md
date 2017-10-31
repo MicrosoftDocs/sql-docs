@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "sp_getagentparameterlist"
 ms.assetid: 50d3d3c1-b9a1-417c-bad4-674089c9c60d
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # sp_getagentparameterlist (Transact-SQL)

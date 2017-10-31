@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sequential row numbers [SQL Server]"
 ms.assetid: 82fa9016-77db-4b42-b4c8-df6095b81906
 caps.latest.revision: 50
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Active"
 ---
 # ROW_NUMBER (Transact-SQL)

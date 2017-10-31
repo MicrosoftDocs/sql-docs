@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "sys.database_files catalog view"
 ms.assetid: 0f5b0aac-c17d-4e99-b8f7-d04efc9edf44
 caps.latest.revision: 61
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "On Demand"
 ---
 # sys.database_files (Transact-SQL)

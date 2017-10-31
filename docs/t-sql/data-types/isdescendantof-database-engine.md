@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "IsDescendantOf [Database Engine]"
 ms.assetid: edc80444-b697-410f-9419-0f63c9b5618d
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "On Demand"
 ---
 # IsDescendantOf (Database Engine)

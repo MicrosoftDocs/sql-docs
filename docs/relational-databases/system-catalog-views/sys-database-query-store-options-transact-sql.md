@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sys.database_query_store_options catalog view"
 ms.assetid: 16b47d55-8019-41ff-ad34-1e0112178067
 caps.latest.revision: 24
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # sys.database_query_store_options (Transact-SQL)

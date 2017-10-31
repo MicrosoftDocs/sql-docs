@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "sp_article_validation"
 ms.assetid: 44e7abcd-778c-4728-a03e-7e7e78d3ce22
 caps.latest.revision: 30
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # sp_article_validation (Transact-SQL)

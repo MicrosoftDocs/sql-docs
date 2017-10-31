@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "sp_helpfilegroup"
 ms.assetid: 619716b5-95dc-4538-82ae-4b90b9da8ebc
 caps.latest.revision: 35
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # sp_helpfilegroup (Transact-SQL)

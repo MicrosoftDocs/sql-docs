@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "stored procedures [SQL Server replication]"
 ms.assetid: 10996a2a-3be4-4f66-9fc4-815d43fc6e52
 caps.latest.revision: 42
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "On Demand"
 ---
 # Replication Stored Procedures (Transact-SQL)

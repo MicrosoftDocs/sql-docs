@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "XML schemas [SQL Server], catalog views"
 ms.assetid: e92304ae-f920-4b28-8f63-6324973ba359
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # XML Schemas (XML Type System) Catalog Views (Transact-SQL)

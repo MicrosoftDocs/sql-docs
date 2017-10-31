@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "sys.cryptographic_providers catalog view"
 ms.assetid: 9da0da95-792e-48b4-9f60-47f0729c279c
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # sys.cryptographic_providers (Transact-SQL)

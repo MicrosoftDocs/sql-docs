@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "sp_adddynamicsnapshot_job"
 ms.assetid: ef50ccf6-e360-4e4b-91b9-6706b8fabefa
 caps.latest.revision: 32
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # sp_adddynamicsnapshot_job (Transact-SQL)

@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "sp_getmergedeletetype"
 ms.assetid: 64450e4d-844d-4176-874e-f3845536f7d2
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # sp_getmergedeletetype (Transact-SQL)

@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "MSmerge_errorlineage system table"
 ms.assetid: 3bcbd328-c958-4cd4-a573-3c35539fa919
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # MSmerge_errorlineage (Transact-SQL)

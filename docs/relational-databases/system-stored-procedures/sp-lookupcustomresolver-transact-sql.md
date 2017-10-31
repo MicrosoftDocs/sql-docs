@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "sp_lookupcustomresolver"
 ms.assetid: 356a7b8a-ae53-4fb5-86ee-fcfddbf23ddd
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # sp_lookupcustomresolver (Transact-SQL)

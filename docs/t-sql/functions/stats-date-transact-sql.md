@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "last time statistics updated"
 ms.assetid: f9ec3101-1e41-489d-b519-496a0d6089fb
 caps.latest.revision: 43
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "On Demand"
 ---
 # STATS_DATE (Transact-SQL)

@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "LOG function"
 ms.assetid: f7c39511-cd84-4362-93ba-0d93655217ee
 caps.latest.revision: 42
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "On Demand"
 ---
 # LOG (Transact-SQL)

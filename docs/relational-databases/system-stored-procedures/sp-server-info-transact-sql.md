@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "sp_server_info"
 ms.assetid: 2dc2c262-3cfa-4a84-8127-3632ba583543
 caps.latest.revision: 39
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # sp_server_info (Transact-SQL)

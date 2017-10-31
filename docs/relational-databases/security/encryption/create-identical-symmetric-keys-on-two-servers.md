@@ -13,9 +13,9 @@ helpviewer_keywords:
   - "symmetric keys [SQL Server], creating"
 ms.assetid: a13d0b21-a43b-43c0-9c22-7ba8f3d15e80
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # Create Identical Symmetric Keys on Two Servers

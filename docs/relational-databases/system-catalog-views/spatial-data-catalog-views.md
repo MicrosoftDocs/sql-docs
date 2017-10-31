@@ -13,9 +13,9 @@ dev_langs:
   - "TSQL"
 ms.assetid: c40bc75a-73f3-4d3f-82e1-4c023dfe958f
 caps.latest.revision: 5
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # Spatial Data Catalog Views

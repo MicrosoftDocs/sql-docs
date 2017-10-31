@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "sp_cdc_scan"
 ms.assetid: 46e4294c-97b8-47d6-9ed9-b436a9929353
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # sys.sp_cdc_scan (Transact-SQL)

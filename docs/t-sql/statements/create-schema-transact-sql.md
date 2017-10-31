@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "CREATE SCHEMA statement"
 ms.assetid: df74fc36-20da-4efa-b412-c4e191786695
 caps.latest.revision: 60
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Active"
 ---
 # CREATE SCHEMA (Transact-SQL)

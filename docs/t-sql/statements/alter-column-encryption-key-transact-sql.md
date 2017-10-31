@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "ALTER COLUMN ENCRYPTION KEY statement"
 ms.assetid: c79a220d-e178-4091-a330-c924cc0f0ae0
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # ALTER COLUMN ENCRYPTION KEY (Transact-SQL)

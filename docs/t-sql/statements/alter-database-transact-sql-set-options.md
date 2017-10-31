@@ -28,9 +28,9 @@ helpviewer_keywords:
   - "SQL plan regression correction"
 ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 caps.latest.revision: 159
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Active"
 ---
 # ALTER DATABASE SET Options (Transact-SQL) 

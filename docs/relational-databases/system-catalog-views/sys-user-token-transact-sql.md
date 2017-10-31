@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "user_token catalog view"
 ms.assetid: be018103-5e57-43a4-9160-9bf420892aa7
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # sys.user_token (Transact-SQL)

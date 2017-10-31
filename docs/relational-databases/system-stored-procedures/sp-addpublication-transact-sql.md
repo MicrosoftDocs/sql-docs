@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "sp_addpublication"
 ms.assetid: c7167ed1-2b7e-4824-b82b-65f4667c4407
 caps.latest.revision: 69
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # sp_addpublication (Transact-SQL)

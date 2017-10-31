@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "numeric data type, about numeric data type"
 ms.assetid: 9d862a90-e6b7-4692-8605-92358dccccdf
 caps.latest.revision: 40
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Active"
 ---
 # decimal and numeric (Transact-SQL)

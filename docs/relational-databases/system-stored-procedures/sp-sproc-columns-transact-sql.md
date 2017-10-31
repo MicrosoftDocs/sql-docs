@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "sp_sproc_columns"
 ms.assetid: 62c18c21-35c5-4772-be0d-ffdcc19c97ab
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # sp_sproc_columns (Transact-SQL)

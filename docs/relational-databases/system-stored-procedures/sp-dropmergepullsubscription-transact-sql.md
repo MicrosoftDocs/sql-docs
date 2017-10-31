@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "sp_dropmergepullsubscription"
 ms.assetid: 9301dd80-72f7-4adb-9b13-87e7f9114248
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # sp_dropmergepullsubscription (Transact-SQL)

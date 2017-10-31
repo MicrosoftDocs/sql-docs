@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "system views [SQL Server], information schema"
 ms.assetid: 7e9f1dfe-27e9-40e7-8fc7-bfc5cae6be10
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Active"
 ---
 # System Information Schema Views (Transact-SQL)

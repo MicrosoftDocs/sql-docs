@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "MSmerge_current_partition_mappings system table"
 ms.assetid: a3088840-5a30-40f5-8e8a-aa03afc4905f
 caps.latest.revision: 21
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # MSmerge_current_partition_mappings

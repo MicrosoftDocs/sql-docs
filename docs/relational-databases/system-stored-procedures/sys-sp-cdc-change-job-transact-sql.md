@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "sp_cdc_change_job"
 ms.assetid: ea918888-0fc5-4cc1-b301-26b2a9fbb20d
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # sys.sp_cdc_change_job (Transact-SQL)

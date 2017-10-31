@@ -13,9 +13,9 @@ helpviewer_keywords:
   - "2534 (Database Engine error)"
 ms.assetid: 121cf99d-0722-494c-be24-3369c1a0badc
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # MSSQLSERVER_2534

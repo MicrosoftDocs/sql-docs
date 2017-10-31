@@ -27,9 +27,9 @@ helpviewer_keywords:
   - "CREATE ROLE statement"
 ms.assetid: b0cd54ad-e81d-4d71-acec-8a6d7261ca08
 caps.latest.revision: 54
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "On Demand"
 ---
 # CREATE ROLE (Transact-SQL)

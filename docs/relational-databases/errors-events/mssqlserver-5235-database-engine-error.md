@@ -13,9 +13,9 @@ helpviewer_keywords:
   - "5235 (Database Engine error)"
 ms.assetid: 1aa7e6a5-7ccb-43c8-a1fd-d50e92e0a798
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # MSSQLSERVER_5235

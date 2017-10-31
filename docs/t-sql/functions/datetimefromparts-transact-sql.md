@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "DATETIMEFROMPARTS function"
 ms.assetid: 6008148b-bf75-4c98-9392-68a89fa0711c
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "On Demand"
 ---
 # DATETIMEFROMPARTS (Transact-SQL)

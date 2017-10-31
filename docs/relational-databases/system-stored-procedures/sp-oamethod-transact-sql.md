@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "sp_OAMethod"
 ms.assetid: 1dfaebe2-c7cf-4041-a586-5d04faf2e25e
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "On Demand"
 ---
 # sp_OAMethod (Transact-SQL)

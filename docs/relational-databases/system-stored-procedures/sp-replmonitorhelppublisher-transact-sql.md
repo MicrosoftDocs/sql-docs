@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "sp_replmonitorhelppublisher"
 ms.assetid: 171501fe-4b74-4647-96c3-7691c777e01b
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # sp_replmonitorhelppublisher (Transact-SQL)

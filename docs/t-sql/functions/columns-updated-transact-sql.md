@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "updated columns"
 ms.assetid: 765fde44-1f95-4015-80a4-45388f18a42c
 caps.latest.revision: 53
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Active"
 ---
 # COLUMNS_UPDATED (Transact-SQL)

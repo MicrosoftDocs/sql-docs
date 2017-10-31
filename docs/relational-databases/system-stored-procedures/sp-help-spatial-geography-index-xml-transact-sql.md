@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "sp_help_spatial_geography_index_xml procedure"
 ms.assetid: 821d4127-3ce5-4474-8561-043404a20d81
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # sp_help_spatial_geography_index_xml (Transact-SQL)

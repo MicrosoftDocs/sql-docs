@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "sp_unregister_custom_scripting"
 ms.assetid: b6e9e0d2-9144-434d-88af-4874f2582399
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # sp_unregister_custom_scripting (Transact-SQL)

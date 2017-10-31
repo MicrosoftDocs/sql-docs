@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "MStracer_history system table"
 ms.assetid: 97237a0c-d574-4b17-8a94-1a8730b31d98
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # MStracer_history (Transact-SQL)

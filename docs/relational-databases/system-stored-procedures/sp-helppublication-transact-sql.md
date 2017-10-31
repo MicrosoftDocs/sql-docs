@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "sp_helppublication"
 ms.assetid: e801c3f0-dcbd-4b4a-b254-949a05f63518
 caps.latest.revision: 49
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # sp_helppublication (Transact-SQL)

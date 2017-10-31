@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "sys.database_scoped_credentials catalog view"
 ms.assetid: 68e8aa6b-bcdc-42aa-93d8-d498f724c188
 caps.latest.revision: 2
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # sys.database_scoped_credentials (Transact-SQL)

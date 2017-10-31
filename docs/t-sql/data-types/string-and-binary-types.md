@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "LOB data [SQL Server]"
 ms.assetid: fe8ee5b6-7392-4aae-a551-973bae02de8d
 caps.latest.revision: 3
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "On Demand"
 ---
 # String and Binary Types

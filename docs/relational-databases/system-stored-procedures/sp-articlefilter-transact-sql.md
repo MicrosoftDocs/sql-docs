@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "sp_articlefilter"
 ms.assetid: 4c3fee32-a43f-4757-a029-30aef4696afb
 caps.latest.revision: 33
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # sp_articlefilter (Transact-SQL)

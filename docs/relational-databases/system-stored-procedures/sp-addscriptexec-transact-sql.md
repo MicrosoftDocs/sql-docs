@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "sp_addscriptexec"
 ms.assetid: 1627db41-6a80-45b6-b0b9-c0b7f9a1c886
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # sp_addscriptexec (Transact-SQL)

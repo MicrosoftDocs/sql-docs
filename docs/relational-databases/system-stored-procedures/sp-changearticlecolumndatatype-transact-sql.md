@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "sp_changearticlecolumndatatype"
 ms.assetid: 0db80e08-fb77-4d0c-aa41-455b13ffa9b4
 caps.latest.revision: 30
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # sp_changearticlecolumndatatype (Transact-SQL)

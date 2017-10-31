@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "KEY_COLUMN_USAGE view"
 ms.assetid: ec1e18c2-63a1-4d2b-ba9a-c13857403782
 caps.latest.revision: 32
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # KEY_COLUMN_USAGE (Transact-SQL)

@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "sp_helpxactsetjob"
 ms.assetid: 242cea3e-e6ac-4f84-a072-b003b920eb33
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # sp_helpxactsetjob (Transact-SQL)

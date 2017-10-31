@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "sp_table_privileges"
 ms.assetid: 0512e688-4fc0-4557-8dc8-016672c1e3fe
 caps.latest.revision: 36
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "On Demand"
 ---
 # sp_table_privileges (Transact-SQL)

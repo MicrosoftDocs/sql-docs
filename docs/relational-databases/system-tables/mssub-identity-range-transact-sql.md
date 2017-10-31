@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "MSsub_identity_range system table"
 ms.assetid: 26e20d28-14ed-44fc-af3b-4de386de4bb8
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # MSsub_identity_range (Transact-SQL)

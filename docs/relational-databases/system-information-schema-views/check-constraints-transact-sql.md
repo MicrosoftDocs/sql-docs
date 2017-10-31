@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "INFORMATION_SCHEMA.CHECK_CONSTRAINTS view"
 ms.assetid: e9577fd2-c349-4dff-874c-9e57d2e5a3ec
 caps.latest.revision: 42
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # CHECK_CONSTRAINTS (Transact-SQL)

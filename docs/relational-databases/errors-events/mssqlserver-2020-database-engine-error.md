@@ -13,9 +13,9 @@ helpviewer_keywords:
   - "2020 (Database Engine error)"
 ms.assetid: 4a8bf90f-a083-4c53-84f0-d23c711c8081
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # MSSQLSERVER_2020

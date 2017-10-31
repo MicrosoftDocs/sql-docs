@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "MScached_peer_lsns system table"
 ms.assetid: f8b6089a-0230-45f9-8c34-9fe0d2a3a74e
 caps.latest.revision: 24
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # MScached_peer_lsns (Transact-SQL)

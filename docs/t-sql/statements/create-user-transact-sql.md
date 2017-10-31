@@ -30,9 +30,9 @@ helpviewer_keywords:
   - "users [SQL Server]"
 ms.assetid: 01de7476-4b25-4d58-85b7-1118fe64aa80
 caps.latest.revision: 111
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Active"
 ---
 # CREATE USER (Transact-SQL)

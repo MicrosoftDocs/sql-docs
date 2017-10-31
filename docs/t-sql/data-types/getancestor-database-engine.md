@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "GetAncestor [Database Engine]"
 ms.assetid: b96a986f-d5e4-4034-8013-de7974594ee9
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "On Demand"
 ---
 # GetAncestor (Database Engine)

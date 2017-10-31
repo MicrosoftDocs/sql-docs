@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "security [SQL Server], stored procedures"
 ms.assetid: 62b72907-7e95-4c97-9891-0c45d5b678ce
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # Security Stored Procedures (Transact-SQL)

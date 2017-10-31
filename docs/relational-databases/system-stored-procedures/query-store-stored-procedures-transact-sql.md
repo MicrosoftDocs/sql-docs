@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "query store [SQL Server], stored procedures"
 ms.assetid: 9bddbb74-e67a-43e3-b89e-896c498e53cb
 caps.latest.revision: 6
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # Query Store Stored Procedures (Transact-SQL)

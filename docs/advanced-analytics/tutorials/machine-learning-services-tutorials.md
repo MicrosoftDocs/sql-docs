@@ -23,7 +23,7 @@ ms.author: "jeannt"
 manager: "jhubbard"
 ms.workload: "On Demand"
 ---
-# SQL Server Machine Learning tutorials
+# SQL Server machine learning tutorials
 
 This article provides a comprehensive list of the tutorials, demos, and sample applications that use machine learning features in SQL Server 2016 or SQL Server 2017. Start here to learn how to run R or Python from T-SQL, how to use remote and local compute contexts, and how to optimize your R and Python code for a SQL production environment.
 
@@ -43,7 +43,7 @@ For more information about requirements and how to get set up, see [Prerequisite
 
 + [Solutions](#bkmk_solutions) 
 
-    Templates from the Microsoft Data Science team are customizable, to get you started fast with machine learning. Each solution is tailored to a specific task or industry problem; moreover, most solutions are designed to run either in SQL Server or in a cloud environment such as Azure Machine Learning. Other solution can run on Microsoft R Server or HDI Spark clusters.
+    Templates from the Microsoft Data Science team are customizable, to get you started fast with machine learning. Each solution is tailored to a specific task or industry problem; moreover, most solutions are designed to run either in SQL Server or in a cloud environment such as Azure Machine Learning. Other solutions can run on Linux or in Spark or Hadoop clusters, by using Microsoft R Server or Machine Learning Server.
 
 ### <a name ="bkmk_samples"></a>SQL Server product samples
 
@@ -63,13 +63,13 @@ These samples and demos provided by the SQL Server and R Server development team
 
 + [Build a predictive model using R and SQL Server](https://microsoft.github.io/sql-ml-tutorials/R/rentalprediction)
 
-  Learn how a ski rental business might use machine learning to predict future rentals, which helps the business plan and staff to meet future demand. This example uses the Microsoft R algorithms to build a logistic regression and decision trees model. 
+  Learn how a ski rental business might use machine learning to predict future rentals, which helps the business plan and staff to meet future demand. This example uses the Microsoft algorithms to build logistic regression and decision trees models. 
   
   Applies to: SQL Server 2016 or SQL Server 2017
 
 + [Build a predictive model using Python and SQL Server](https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/)
 
-   Build the ski rental analysis application using Python, to help plan for future demand. This example uses the new Python library, **revoscalepy**, to create a linear regression model. 
+   Build the ski rental analysis application using Python, to help plan for future demand. This example uses the new Python library, **revoscalepy**, to create a linear regression model.
    
    Applies to: SQL Server 2017
 
@@ -111,7 +111,7 @@ After running SQL Server setup, don't forget these important steps:
 
 1. Enable the external script execution feature by running `sp_configure 'external scripts enabled', 1`. Follow the instructions to reconfigure and restart SQL Server.
 2. Ensure that the Launchpad service is running, and that the worker accounts it uses can connect to the SQL Server instance.
-3. Review the permissions associated with the SQL logins or Windows user accounts that should be able to run R or Python scripts. All logins or accounts must have permission to run R or Python scripts, and must be able to connect to the instance. Depending on the tutorial, the account or login might also need permissions to write data, create database objects, or do a bulk import of data.
+3. Review the permissions associated with the users who must run R or Python scripts. Regardless of whether you use SQL logins or Windows user accounts, the user must have permission to run R or Python scripts, and must be able to connect to the instance. Depending on the tutorial, the user might also require permission to write data, create database objects, or do a bulk import of data.
 
 For details, see this article for some common setup and configuration issues: [Troubleshooting Machine Learning Services](../machine-learning-troubleshooting-faq.md)
 

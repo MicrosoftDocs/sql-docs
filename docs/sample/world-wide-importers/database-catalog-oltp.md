@@ -1,5 +1,5 @@
 ---
-title: "Database catalog | Microsoft Docs"
+title: "WideWorldImporters database catalog | Microsoft Docs"
 ms.prod: "sql-non-specified"
 ms.technology:
   - "samples"
@@ -17,7 +17,7 @@ manager: "jhubbard"
 robots: noindex,nofollow
 ms.workload: "On Demand"
 ---
-# Database catalog
+# WideWorldImporters database catalog
 The WideWorldImporters database contains all the transaction information and daily data for sales and purchases, as well as sensor data for vehicles and cold rooms.
 
 ## Schemas

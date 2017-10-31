@@ -112,7 +112,7 @@ For Azure SQL Database, the assessments provide migration blocking issues and fe
 
   ![View information for SQL Server feature parity](../dma/media/SQLFeatureParity.png)
 
-- The **Compatibility issues** category provides partially or unsupported features that are the compatibility issues that block migrating on-premises SQL Server database(s) to Azure SQL Database(s. It then provides recommendations to help you address those issues.
+- The **Compatibility issues** category provides partially or unsupported features that are the compatibility issues that block migrating on-premises SQL Server database(s) to Azure SQL Database(s). It then provides recommendations to help you address those issues.
 
   ![View compatibility issues](../dma/media/CompatibilityIssues.png)
 

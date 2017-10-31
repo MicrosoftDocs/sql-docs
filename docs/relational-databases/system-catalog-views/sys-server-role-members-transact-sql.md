@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "sys.server_role_members catalog view"
 ms.assetid: efa20414-2c6b-45a2-a7a9-60110a24da18
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "On Demand"
 ---
 # sys.server_role_members (Transact-SQL)

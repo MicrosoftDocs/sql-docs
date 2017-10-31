@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "schemas [SQL Server], names"
 ms.assetid: 20071b77-2b6e-4ce7-a8e3-fa71480baf73
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "On Demand"
 ---
 # SCHEMA_NAME (Transact-SQL)

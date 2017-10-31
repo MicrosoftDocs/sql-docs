@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "CATCH block"
 ms.assetid: f32877a6-5f17-418c-a32c-5a1a344b3c45
 caps.latest.revision: 53
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Active"
 ---
 # ERROR_MESSAGE (Transact-SQL)

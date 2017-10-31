@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "CERTENCODED"
 ms.assetid: 677a0719-7b9a-4f0b-bc61-41634563f924
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # CERTENCODED (Transact-SQL)

@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "sys.events catalog view"
 ms.assetid: f245a97a-80fc-43fb-a6e4-139420c9a47a
 caps.latest.revision: 38
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # sys.events (Transact-SQL)

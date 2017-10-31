@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "sysarticlecolumns system table"
 ms.assetid: 55918592-e05d-43b6-843b-7e4d82fa6275
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # sysarticlecolumns (Transact-SQL)

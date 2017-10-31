@@ -13,9 +13,9 @@ helpviewer_keywords:
   - "8966 (Database Engine error)"
 ms.assetid: 6b1150fd-9dfd-4df9-8f08-8eca237667db
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # MSSQLSERVER_8966

@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "cdc.captured_columns"
 ms.assetid: 7bb4d408-d764-4ef6-802c-f271c8d39c2a
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # cdc.captured_columns (Transact-SQL)

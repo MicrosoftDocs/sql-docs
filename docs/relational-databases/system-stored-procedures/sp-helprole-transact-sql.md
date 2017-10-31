@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "sp_helprole"
 ms.assetid: b023103f-ccf3-44e2-b418-4be9bdd49f4a
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # sp_helprole (Transact-SQL)

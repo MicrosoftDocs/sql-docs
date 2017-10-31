@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "sys.column_xml_schema_collection_usages catalog view"
 ms.assetid: 4fd1ec7f-b9dc-4ddb-ab3a-0d59ab05ad20
 caps.latest.revision: 12
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # sys.column_xml_schema_collection_usages (Transact-SQL)

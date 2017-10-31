@@ -13,9 +13,9 @@ helpviewer_keywords:
   - "50000 [SQL Server Native Client setup error]"
 ms.assetid: 5426d87a-d5d9-4984-b211-b07d69e834a2
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # SQL Server Native Client Error MSSQLSERVER_50000

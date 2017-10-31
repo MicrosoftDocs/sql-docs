@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "sp_changedistpublisher"
 ms.assetid: 7ef5c89d-faaa-4f8e-aef7-00649ebc8bc9
 caps.latest.revision: 36
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # sp_changedistpublisher (Transact-SQL)

@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "IHcolumns system table"
 ms.assetid: 5bb027e5-5279-487b-9c33-5f402987253c
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # IHcolumns (Transact-SQL)

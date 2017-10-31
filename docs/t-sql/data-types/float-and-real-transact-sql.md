@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "real data type"
 ms.assetid: 08ea66b7-624e-4d8b-86bc-750ff76cdfc5
 caps.latest.revision: 40
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Active"
 ---
 # float and real (Transact-SQL)

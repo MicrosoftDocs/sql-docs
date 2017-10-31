@@ -1,8 +1,10 @@
 ---
 title: "Use the Always On availability group dashboard (SQL Server Management Studio) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
+ms.date: "10/30/2017"
+ms.prod: 
+ - "sql-server-2016"
+ - "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,7 +20,7 @@ ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
 caps.latest.revision: 30
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "jhubbard"
+manager: "craigg"
 ms.workload: "On Demand"
 ---
 # Use the Always On availability group dashboard (SQL Server Management Studio)
@@ -117,7 +119,10 @@ ms.workload: "On Demand"
  Name and state of the cluster where the instance of the connected server and the availability group is a member node.  
   
 ##  <a name="AvReplicaDetails"></a> Availability Replica Details  
- The **Availability replica** pane displays the following columns:  
+
+When connected to the primary replica, **Availability replica details** shows information from all replicas in the availability group. When connected to a secondary replica, the display only shows information from the connected replica.  
+
+The **Availability replica** pane displays the following columns:  
   
  **Name**  
  The name of the server instance that hosts the availability replica. This column is shown by default.  

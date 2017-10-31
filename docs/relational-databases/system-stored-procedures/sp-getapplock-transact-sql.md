@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "sp_getapplock"
 ms.assetid: e1e85908-9f31-47cf-8af6-88c77e6f24c9
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "On Demand"
 ---
 # sp_getapplock (Transact-SQL)

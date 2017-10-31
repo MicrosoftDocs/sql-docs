@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "sp_helpdynamicsnapshot_job"
 ms.assetid: d6dfdf26-f874-495f-a8a6-8780699646d7
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # sp_helpdynamicsnapshot_job (Transact-SQL)

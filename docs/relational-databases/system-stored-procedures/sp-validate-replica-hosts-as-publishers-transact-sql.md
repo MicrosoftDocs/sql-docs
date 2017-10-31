@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "sp_validate_replica_hosts_as_publishers"
 ms.assetid: 45001fc9-2dbd-463c-af1d-aa8982d8c813
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # sp_validate_replica_hosts_as_publishers (Transact-SQL)

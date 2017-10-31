@@ -13,9 +13,9 @@ helpviewer_keywords:
   - "2540 (Database Engine error)"
 ms.assetid: eb5ee2be-acbb-4fb7-9b45-dc6200bde06e
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # MSSQLSERVER_2540

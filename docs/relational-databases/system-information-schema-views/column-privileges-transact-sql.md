@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "INFORMATION_SCHEMA.COLUMN_PRIVILEGES view"
 ms.assetid: 8ae29a85-2b77-48db-a2b9-a1720287b271
 caps.latest.revision: 32
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # COLUMN_PRIVILEGES (Transact-SQL)

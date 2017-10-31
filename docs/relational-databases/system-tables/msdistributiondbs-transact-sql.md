@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "MSdistributiondbs system table"
 ms.assetid: d7ffa9df-bf1d-41b8-837e-b762c17c2764
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # MSdistributiondbs (Transact-SQL)

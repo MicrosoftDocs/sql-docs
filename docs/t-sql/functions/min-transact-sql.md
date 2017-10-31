@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "values [SQL Server], minimum"
 ms.assetid: 56cf6ec5-34f5-47e3-a402-7129039d4429
 caps.latest.revision: 49
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "On Demand"
 ---
 # MIN (Transact-SQL)

@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "sys.xml_schema_attributes catalog view"
 ms.assetid: dd0c98aa-5e72-4df6-96d9-482786c8dbb1
 caps.latest.revision: 37
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # sys.xml_schema_attributes (Transact-SQL)

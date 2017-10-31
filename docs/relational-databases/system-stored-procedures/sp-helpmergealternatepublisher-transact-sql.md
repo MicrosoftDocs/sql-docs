@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "sp_helpmergealternatepublisher"
 ms.assetid: a96e365f-5967-4580-9d79-5bacf2d12211
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # sp_helpmergealternatepublisher (Transact-SQL)

@@ -111,7 +111,7 @@ You can read data from ADLS storage using RevoScaleR, by using webHDFS to refere
 
 ### I can't find the RRE virtual machine
 
-The **RRE for Windows Virtual Machine** that was previously available in the Azure Marketplace has been replaced by the **Machine Learning Server for Windows** image.
+The "RRE for Windows Virtual Machine" that was previously available in the Azure Marketplace has been replaced by the "Machine Learning Server for Windows" image.
 
 Machine Learning Server images are also available for Linux CentOS version 7.2, Linux RedHat version 7.2, and Ubuntu version 16.04.
 

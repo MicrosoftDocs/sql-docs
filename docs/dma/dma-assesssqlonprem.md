@@ -96,7 +96,7 @@ The duration of the assessment depends on the number of databases added and the 
     supported by the target SQL Server version selected on the "Options"
     screen.
 
-Compatibility issues can be reviewed by analyzing the impacted object and its details for every issue identified under “Breaking changes”, “Behavior changes” and “Deprecated features.”
+Compatibility issues can be reviewed by analyzing the impacted object and its details for every issue identified under “Breaking changes”, “Behavior changes”, and “Deprecated features.”
 
 ![View assessment results](../dma/media/ReviewResults.png)
 

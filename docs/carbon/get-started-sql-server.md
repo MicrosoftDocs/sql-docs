@@ -1,5 +1,5 @@
 ---
-title: Connect and query SQL Server using Carbon on Windows| Microsoft Docs
+title: Connect and query SQL Server using Carbon | Microsoft Docs
 description: Use Carbon to connect to a SQL Server and run a query
 author: yualan
 ms.author: alayu
@@ -13,24 +13,48 @@ ms.topic: quickstart
 ms.date: 10/01/2017
 ---
 
-# Connect and query SQL Server using Carbon on Windows
+# Connect and query SQL Server using Carbon
 This topic shows how to get started using Carbon with SQL Server databases, and this Quickstart should take about five minutes.
 
 ## Prerequisites
-Before starting this quickstart, you must have access to a running SQL Server instance. If you don't have it, [download SQL Server 2017 Developer Edition for Windows](https://go.microsoft.com/fwlink/?linkid=853016).
+
+### Windows
+Before starting this quickstart, you must have access to a running SQL Server instance. If you don't have it, [download SQL Server 2017 Developer Edition for Windows](https://www.microsoft.com/en-us/sql-server/sql-server-downloads). **Please remember your username and password.**
 
 To install Carbon with Windows, follow [these directions](download.md#get-carbon-for-windows).
 
+### macOS
+- Before starting this quickstart, please download [Docker](https://docs.docker.com/docker-for-mac/install/#download-docker-for-mac).
+
+- You will need access to a running SQL Server instance. On macOS, we will install SQL Server on Docker. Please [follow these instructions to download SQL Server on Docker](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker). Follow the steps up to "Create and Query Data." Please remember your username and password.
+
+- To install Carbon with macOS, follow [these directions](download.md#get-carbon-for-macos).
+
+### Linux
+Before starting this quickstart, you must have access to a running SQL Server instance. If you don't have it, [download SQL Server 2017 Developer Edition on Linux](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-overview#install). 
+**Note:** You only need to follow the steps up to "Create and Query Data", and please make sure you remember your SQL Login and Password that you will have setup after following these tutorials.
+
+To install Carbon with Linux, follow [these directions](download.md#get-carbon-for-linux).
+
 ## Connect to a server
-1. When first loading Carbon, a connection page should be displayed. If not, click the **New Connection** icon on the top left.
+1. If you do not have a SQL Server instance to connect to, run the following command on docker (requirement for macOS prerequisite).
+   ```bash
+   docker run --name mssql-tutorial -d -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=SqlDevOps2017" -e "MSSQL_PID=Developer" -p "1433:1433" microsoft/mssql-server-linux:latest
+   ```
+   
+2. When first loading Carbon, a connection page should be displayed. If not, click the **New Connection** icon on the top left.
    
    ![New Connection Icon](media/get-started-sql-server/new-connection-icon.png)
 
-2. For this tutorial, fill the fields as follows:
+3. Windows Authentication is fully supported. For this tutorial, we will use SQL Login authentication type. Please fill the fields as follows:
  
    **Server Name:** localhost
 
-   **Authentication Type:** Windows Authentication
+   **Authentication Type:** SQL Login
+
+   **User name:** User name for SQL Server
+
+   **Password:** Password for SQL Server
 
    **Database Name:** (leave it blank)
 
@@ -118,7 +142,7 @@ View an existing, built-in widget through the dashboard.
 > [Apply modern code flow using Carbon](tutorial-modern-code-flow-sql-server.md)
 
 > [!div class="nextstepaction"]
-> [Monitor your SQL Server databases using Carbon](tutorial-monitoring-sql-server.md)
+> [Monitor your SQL Server databases using Carbon](tutorial-qds-sql-server.md)
 
 > [!div class="nextstepaction"]
 > [Backup and restore your SQL Server databases using Carbon](tutorial-backup-restore-sql-server.md)

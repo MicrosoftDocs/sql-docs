@@ -90,7 +90,7 @@ To perform an unattended installation, use the command-line options for SQL Serv
      + Machine Learning Services (In-Database)
      + Python
   
-    These selections represent the minimum configuration required to use Python with SQL Server.
+    These selections represent the minimum configuration required to use Python with [!INCLUDE[ssnoversion](../../includes/ssnoversion.md)].
     
     ![Ready to install Python](media/ready-to-install-python.png "Required components for Python install")
 

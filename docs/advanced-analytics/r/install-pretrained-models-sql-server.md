@@ -1,8 +1,6 @@
 ---
 title: "Install pretrained machine learning models on SQL Server | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "10/18/2017"
+ms.date: "10/31/2017"
 ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
@@ -14,14 +12,14 @@ ms.assetid: 21456462-e58a-44c3-9d3a-68b4263575d7
 caps.latest.revision: 1
 author: "jeannt"
 ms.author: "jeannt"
-manager: "jhubbard"
+manager: "cgronlund"
 ms.workload: "Inactive"
 ---
 # Install pretrained machine learning models on SQL Server
 
 This article describes how to add pretrained models to an instance of SQL Server that already has R Services or Machine Learning Services installed.
 
-Pretrained models are provided as an option when you install Microsoft R Server or Machine Learning Server using the standalone installer. You can use this installer to get just the pretrained models, or you can use it to upgrade the machine learning components in an instance of SQL Server 2016 or SQl Server 2017.
+The option to install pretrained models is available when you use the separate Windows installer for Microsoft R Server or Machine Learning Server. You can use this installer to get just the pretrained models, or you can use it to upgrade the machine learning components in an instance of SQL Server 2016 or SQL Server 2017.
 
 After you have downloaded the pretrained models by running the installer, there are some additional steps to configure the models for use with SQL Server. This article describes the process.
 
@@ -33,9 +31,9 @@ For more information, see these articles:
 
 ## Benefits of using pretrained models
 
-These pre-trained models were created to help customers who need to perform tasks such as sentiment analysis or image featurization, but do not have the resources to obtain the large datasets or train a complex model. Using pre-trained models lets you get started on text and image processing most efficiently.
+These pre-trained models were created to help customers who need to perform tasks such as sentiment analysis or image featurization, but who do not have the resources to obtain the large datasets or train a complex model. Using pre-trained models lets you get started on text and image processing efficiently.
 
-Currently the models that are available are deep neural network (DNN) models for sentiment analysis and image classification. All pretrained models were trained by using Microsoft's [Computation Network Toolkit](https://cntk.ai/Features/Index.html), or **CNTK**. 
+Currently the models that are available are deep neural network (DNN) models for sentiment analysis and image classification. All pretrained models were trained by using Microsoft's [Computation Network Toolkit](https://cntk.ai/Features/Index.html), or **CNTK**.
 
 The configuration of each network was based on the following reference implementations:
 
@@ -142,7 +140,6 @@ The image must be resized to meet the requirements of the trained model: here th
 
 > [!NOTE]
 > It is not possible to read or modify the pretrained models, because they are compressed using a native format, to improve performance.
-
 
 ### Text analysis example
 

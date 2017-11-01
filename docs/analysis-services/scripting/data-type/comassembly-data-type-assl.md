@@ -25,7 +25,7 @@ ms.assetid: 23c0f4b3-b6ac-4ec8-9254-74d2f84f5244
 caps.latest.revision: 48
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # ComAssembly Data Type (ASSL)

@@ -25,7 +25,7 @@ ms.assetid: 14aed554-d2e2-49e5-9c72-26660759bce2
 caps.latest.revision: 22
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Programming AMO Complementary Classes and Methods

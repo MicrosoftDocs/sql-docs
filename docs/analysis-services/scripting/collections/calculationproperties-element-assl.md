@@ -25,7 +25,7 @@ ms.assetid: dccfe036-0b1b-4877-8bdd-4b128ccb55c9
 caps.latest.revision: 37
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # CalculationProperties Element (ASSL)

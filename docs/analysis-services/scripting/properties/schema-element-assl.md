@@ -25,7 +25,7 @@ ms.assetid: 4b6375fb-7ad8-4d5f-88b1-abd3da2654db
 caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Schema Element (ASSL)

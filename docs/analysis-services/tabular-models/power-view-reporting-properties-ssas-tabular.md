@@ -15,7 +15,7 @@ ms.assetid: 51205c2d-b6ce-4b92-afd2-58e399a81691
 caps.latest.revision: 24
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Power View - Reporting Properties (SSAS Tabular)

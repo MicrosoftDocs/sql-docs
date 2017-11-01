@@ -15,7 +15,7 @@ ms.assetid: b9a21b23-3a06-4ef8-bc06-9c79cdc54870
 caps.latest.revision: 19
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Import from Analysis Services (SSAS Tabular)

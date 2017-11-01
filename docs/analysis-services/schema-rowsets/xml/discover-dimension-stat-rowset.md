@@ -16,7 +16,7 @@ ms.assetid: 639f8cd7-3b43-40d5-8b84-552daf60d484
 caps.latest.revision: 7
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # DISCOVER_DIMENSION_STAT Rowset

@@ -25,7 +25,7 @@ ms.assetid: f4dac8a6-7ad6-4edb-8e5b-744bb94ee34c
 caps.latest.revision: 38
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # MeasureBinding Data Type (ASSL)

@@ -25,7 +25,7 @@ ms.assetid: 25bf0e93-d5c5-41df-b310-a253a4ace80e
 caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # QueryDefinition Element (ASSL)

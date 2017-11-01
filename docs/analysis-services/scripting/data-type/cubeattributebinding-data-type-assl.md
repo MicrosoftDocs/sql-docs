@@ -25,7 +25,7 @@ ms.assetid: 04e3d619-1de8-4fc8-a089-9a44ac0f930c
 caps.latest.revision: 41
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # CubeAttributeBinding Data Type (ASSL)

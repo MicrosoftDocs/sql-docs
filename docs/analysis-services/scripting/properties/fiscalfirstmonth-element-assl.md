@@ -25,7 +25,7 @@ ms.assetid: 30766baa-ebec-4425-93de-7defe4d6e571
 caps.latest.revision: 28
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # FiscalFirstMonth Element (ASSL)

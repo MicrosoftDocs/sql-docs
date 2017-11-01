@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "SessionID element"
 ms.assetid: 18220e00-76cf-48f6-9465-200465a0c553
 caps.latest.revision: 11
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # SessionID Element (XMLA)

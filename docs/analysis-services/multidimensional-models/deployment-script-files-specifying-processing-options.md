@@ -19,7 +19,7 @@ ms.assetid: e9e50817-908e-4210-bc3d-8e2957568241
 caps.latest.revision: 32
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Deployment Script Files - Specifying Processing Options

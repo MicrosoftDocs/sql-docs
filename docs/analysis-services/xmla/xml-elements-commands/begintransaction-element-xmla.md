@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "BeginTransaction command"
 ms.assetid: fca122fc-b57c-4ba6-849b-ca8c93cf64e9
 caps.latest.revision: 14
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # BeginTransaction Element (XMLA)

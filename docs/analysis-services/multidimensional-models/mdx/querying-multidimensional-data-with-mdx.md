@@ -18,7 +18,7 @@ ms.assetid: e0a5dd60-35a3-4a4f-b36f-52ecea814886
 caps.latest.revision: 17
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Querying Multidimensional Data with MDX

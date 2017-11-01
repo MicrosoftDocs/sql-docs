@@ -22,7 +22,7 @@ ms.assetid: 6be84916-fd05-4efc-ab98-6adbbad80154
 caps.latest.revision: 35
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Calculations

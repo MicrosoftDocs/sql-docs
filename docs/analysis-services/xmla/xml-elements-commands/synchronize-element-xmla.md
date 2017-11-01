@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "Synchronize command"
 ms.assetid: 9401323c-feff-409a-a9da-94aee47e0563
 caps.latest.revision: 15
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Synchronize Element (XMLA)

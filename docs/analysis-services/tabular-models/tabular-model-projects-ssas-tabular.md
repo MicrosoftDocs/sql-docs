@@ -15,7 +15,7 @@ ms.assetid: 15358811-22a6-43b1-b1a7-9c974e8367b9
 caps.latest.revision: 10
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Tabular Model Projects (SSAS Tabular)

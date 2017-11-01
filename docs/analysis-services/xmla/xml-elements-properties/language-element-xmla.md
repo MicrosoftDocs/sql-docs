@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "Language element"
 ms.assetid: cd998202-e43f-4c6c-8727-a15a76a520ea
 caps.latest.revision: 11
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Language Element (XMLA)

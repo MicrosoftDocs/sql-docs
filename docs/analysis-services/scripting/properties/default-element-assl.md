@@ -25,7 +25,7 @@ ms.assetid: 02c1844c-51fb-44fe-aafb-001e53ad293c
 caps.latest.revision: 35
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Default Element (ASSL)

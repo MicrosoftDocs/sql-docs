@@ -24,7 +24,7 @@ ms.assetid: 73aee2da-da30-44f1-829c-0a4c078a7768
 caps.latest.revision: 43
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Key Performance Indicators (KPIs) in Multidimensional Models

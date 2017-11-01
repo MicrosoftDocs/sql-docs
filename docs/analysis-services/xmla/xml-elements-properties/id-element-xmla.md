@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "ID element"
 ms.assetid: f7d67599-6a70-4455-bfdb-1d127e5eff4e
 caps.latest.revision: 12
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # ID Element (XMLA)

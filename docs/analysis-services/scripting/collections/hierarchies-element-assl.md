@@ -25,7 +25,7 @@ ms.assetid: dc844eea-869c-4217-b9be-e543a76f5e92
 caps.latest.revision: 36
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Hierarchies Element (ASSL)

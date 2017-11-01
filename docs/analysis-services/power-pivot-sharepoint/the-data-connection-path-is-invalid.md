@@ -13,7 +13,7 @@ ms.assetid: bd22e41a-0931-4d32-888a-633a3046fc5e
 caps.latest.revision: 7
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # The data connection path is invalid

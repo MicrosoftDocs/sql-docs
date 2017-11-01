@@ -13,7 +13,7 @@ ms.assetid: 18a48995-639f-4782-8b17-6caa5769bb5f
 caps.latest.revision: 9
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Configure Power Pivot and Deploy Solutions (SharePoint 2016)

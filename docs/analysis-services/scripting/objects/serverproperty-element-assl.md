@@ -25,7 +25,7 @@ ms.assetid: f152a1b5-0972-40d8-907f-f131c2a108bb
 caps.latest.revision: 36
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # ServerProperty Element (ASSL)

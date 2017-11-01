@@ -1065,7 +1065,7 @@ Azure SQL Database supports global temporary tables that are also stored in temp
 Global temporary tables for Azure SQL DB follow the same syntax and semantics that SQL Server uses for temporary tables.  Similarly, global temporary stored procedures are also scoped to the database level in Azure SQL DB. Local temporary tables (initiated with # table name) are also supported for Azure SQL Database and follow the same syntax and semantics that SQL Server uses.  See the above section on [Temporary Tables](#temporary-tables).  
 
 > [!IMPORTANT]
-> This feature is in public preview and is available for Azure SQL Database.
+> This feature is available for Azure SQL Database.
 >
 
 ### Troubleshooting global temporary tables for Azure SQL DB 

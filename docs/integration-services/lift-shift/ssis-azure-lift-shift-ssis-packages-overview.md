@@ -67,7 +67,7 @@ You have to use the **project deployment model**, not the package deployment mod
 
 You continue to **design and build packages** on-premises in SSDT, or in Visual Studio with SSDT installed.
 
-For info about how to connect to on-premises data sources from the cloud with Windows authentication, see [Connect to on-premises data sources with Windows Authentication](ssis-azure-connect-with-windows-auth.md).
+For info about how to connect to **on-premises data sources** from the cloud with Windows authentication, see [Connect to on-premises data sources with Windows Authentication](ssis-azure-connect-with-windows-auth.md).
 
 ## Common tasks
 

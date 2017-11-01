@@ -2,8 +2,8 @@
 title: "Upgrade and installation FAQ for SQL Server Machine Learning | Microsoft Docs"
 ms.date: "10/31/2017"
 ms.prod: 
- - "sql-server-2016"
- - "sql-server-2017"
+  - "sql-server-2016"
+  - "sql-server-2017"
  ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -74,7 +74,7 @@ To use machine learning with R or Python, some additional configuration is requi
 
 Review all options in the list of post-installation instructions to see which additional steps might be required in your environment.
 
-+ [Set up SQL Server machine learning in database](set-up-sql-server-r-services-in-database.md/bkmk_enableFeature) 
++ [Set up SQL Server machine learning in database](set-up-sql-server-r-services-in-database/#bkmk_enableFeature.md) 
 
 ## Upgrades or uninstallation
 
@@ -84,8 +84,8 @@ This section contains detailed instructions for specific upgrade scenarios.
 
 You can upgrade your version of SQL Server by re-running the setup wizard.
 
-+ [Upgrade SQL Server](..\..\database-engine\install-windows\upgrade-sql-server.md)
-+ [Upgrade SQL Server Using the Installation Wizard](..\..\database-engine\install-windows\upgrade-sql-server-using-the-installation-wizard-setup.md)
++ [Upgrade SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)
++ [Upgrade SQL Server Using the Installation Wizard](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)
 
 You can upgrade just the machine learning components by using a process called binding: 
 + [Use SqlBindR to upgrade machine learning components](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)

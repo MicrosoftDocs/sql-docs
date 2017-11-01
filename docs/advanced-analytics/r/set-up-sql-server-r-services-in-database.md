@@ -42,7 +42,7 @@ This topic describes how to install and configure the following machine learning
 This article describes the process of setup that uses the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup wizard. For command-line installation, or to download installers to use in offline servers, see these articles:
 
 + [Install R for SQL Server from the command line](unattended-installs-of-sql-server-r-services.md)
-+ [Install Python for SQL Server from the command line](unattended-installs-of-sql-server-python-services.md)
++ [Install Python for SQL Server from the command line](../python/unattended-installs-of-sql-server-python-services.md)
 + [Install a standalone machine learning server from the command line](install-microsoft-r-server-from-the-command-line.md)
 + [Install machine learning components on a server with no internet aces](installing-ml-components-without-internet-access.md)
 
@@ -60,7 +60,7 @@ This article describes the process of setup that uses the [!INCLUDE[ssNoVersion]
 
     + To use Python requires SQL Server 2017 or later.
 
-+ If you used any earlier versions of the Revolution Analytics development environment or the RevoScaleR packages, or if you installed any pre-release versions of SQL Server 2016, you must uninstall them. Side-by-side installation is not supported. For help removing previous versions, see [Upgrade and Installation FAQ for SQL Server R Services](../setup/upgrade-and-installation-faq-sql-server-r-services.md).
++ If you used any earlier versions of the Revolution Analytics development environment or the RevoScaleR packages, or if you installed any pre-release versions of SQL Server 2016, you must uninstall them. Side-by-side installation is not supported. For help removing previous versions, see [Upgrade and Installation FAQ for SQL Server Machine Learning Services](../r/upgrade-and-installation-faq-sql-server-r-services.md).
 
 + Currently, you cannot install the machine learning features on a failover cluster. The reason is that the security mechanism that's used for isolating external script processes is not compatible with a Windows Server failover cluster environment. As a workaround, you can do either of the following:
     * Use replication to copy necessary tables to a SQL Server instance with machine learning enabled.
@@ -248,7 +248,7 @@ Common scenarios that require additional changes include:
 > [!NOTE]
 > Not all the listed changes might be required. However, we recommend that you review all items to see whether they are applicable to your scenario.
 
-Additional troubleshoting advce can be found here: [Upgrade and installation FAQ](../setup/upgrade-and-installation-faq-sql-server-r-services.md)
+Additional troubleshoting advce can be found here: [Upgrade and installation FAQ](../r/upgrade-and-installation-faq-sql-server-r-services.md)
 
 ### <a name="bkmk_configureAccounts"></a>Enable implied authentication for the Launchpad account group
 

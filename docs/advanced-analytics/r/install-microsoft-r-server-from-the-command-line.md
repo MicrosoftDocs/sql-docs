@@ -35,7 +35,7 @@ You should know how to perform a command-line installation of SQL Server and be 
 
 For more information, see [Install SQL Server from the command prompt](..\..\database-engine\install-windows\install-sql-server-from-the-command-prompt.md).
 
-If you install Machine Learning Server or Microsoft R Server (Standalone) on a computer that has no Internet access, you must download the required R (or Python) components in advance, and copy them to a local folder. For download locations, see [Installing machine learning components without internet access](../setup/installing-ml-components-without-internet-access.md).
+If you install Machine Learning Server or Microsoft R Server (Standalone) on a computer that has no Internet access, you must download the required R (or Python) components in advance, and copy them to a local folder. For download locations, see [Installing machine learning components without internet access](installing-ml-components-without-internet-access.md).
 
 
 ## <a name="bkmk_mls2017"></a> Install Microsoft Machine Learning Server (Standalone)
@@ -83,7 +83,7 @@ Setup.exe /q /ACTION=Install /FEATURES=SQL_SHARED_MR /IACCEPTROPENLICENSETERMS /
 
 ## Post-installation tasks
 
-To set up another instance of Microsoft R Server with the same parameters, you can re-use the configuration file that is created during installation. For more information, see [Install SQL Server Using a Configuration File](..\..\database-engine\install-windows\install-sql-server-using-a-configuration-file.md).
+To set up another instance of Microsoft R Server with the same parameters, you can re-use the configuration file that is created during installation. For more information, see [Install SQL Server Using a configuration File](..\..\database-engine\install-windows\install-sql-server-using-a-configuration-file.md).
 
 ### Review installed components
 

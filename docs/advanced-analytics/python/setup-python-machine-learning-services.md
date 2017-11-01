@@ -80,7 +80,7 @@ To perform an unattended installation, use the command-line options for SQL Serv
      ![Agreement to Python license](media/ml-svcs-license-python.png "License agreement for Python")
   
     > [!NOTE]
-    >  If the computer you are using does not have internet access, you can pause setup at this point to download the installers separately. For more information, see [Installing components without internet access](../setup/installing-ml-components-without-internet-access.md).
+    >  If the computer you are using does not have internet access, you can pause setup at this point to download the installers separately. For more information, see [Installing components without internet access](../r/installing-ml-components-without-internet-access.md).
   
      Select **Accept**, wait until the **Next** button becomes active, and then select **Next**.
   

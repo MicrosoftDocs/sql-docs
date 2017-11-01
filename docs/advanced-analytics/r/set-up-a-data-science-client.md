@@ -84,7 +84,7 @@ This example uses Visual Studio 2017 Community Edition, with the data science wo
 
 1. From the **File** menu, select **New** and then select **Project**.
 
-2. The lefthand pane contains a list of preinstalled templates. Click **R**, and select **R Project**. In the **Name** box, type `dbtest` and click **OK**.
+2. The -hand pane contains a list of preinstalled templates. Click **R**, and select **R Project**. In the **Name** box, type `dbtest` and click **OK**.
 
 3. Visual Studio creates a new project folder and a default script file, `Script.R`. 
 

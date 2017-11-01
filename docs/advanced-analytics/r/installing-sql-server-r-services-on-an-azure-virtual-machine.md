@@ -30,7 +30,7 @@ If you deploy an Azure virtual machine that includes [!INCLUDE[ssCurrent](../../
 
 ## Create a new SQL Server 2017 virtual machine
 
-To use R or Python in SQL Server 2017, be sure to get a Windows-based virtual machine. SQL Server 2017 on Linux supports fast [native scoring](../sql-native-scoring.md) using the T-SQL PREDICT funciton, but other machine learning features are not available yet in this edition.
+To use R or Python in SQL Server 2017, be sure to get a Windows-based virtual machine. SQL Server 2017 on Linux supports fast [native scoring](../sql-native-scoring.md) using the T-SQL PREDICT function, but other machine learning features are not available yet in this edition.
 
 For a list of SQL Server VM offerings, see this article: [Overview of SQL Server on Azure Virtual Machines (Windows)](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview).
 
@@ -52,7 +52,7 @@ For a list of SQL Server VM offerings, see this article: [Overview of SQL Server
     WITH RESULT SETS (([Sequence] int NOT NULL));
     ```
 
-6. If you will be connecting to the instance from a remote data science client, complete [additional steps](#additional-steps) as necessary.
+6. If you plan to connect to the instance from a remote data science client, complete [additional steps](#additional-steps) as necessary.
 
 ### Disable machine learning features on a SQL Server VM
 

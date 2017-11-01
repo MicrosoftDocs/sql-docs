@@ -44,7 +44,7 @@ Typically, setup of the machine components used in SQL Server 2016 and SQL Serve
 
 **For R**
 
-The R language is supported in both SQL Server 2016 and SQL Server 2017. Two different installers are required, for open source and propretary components. The SQL Server setup wizard ensures that they are installed in the correct order.
+The R language is supported in both SQL Server 2016 and SQL Server 2017. Two different installers are required, for open source and proprietary components. The SQL Server setup wizard ensures that they are installed in the correct order.
 
 + Installers with **SRO** in the name provide the open source components.
 + Installers with **SRS** in the name contain components provided by Microsoft, including those for database integration.

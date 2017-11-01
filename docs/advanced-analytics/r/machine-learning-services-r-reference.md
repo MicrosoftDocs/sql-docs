@@ -26,7 +26,7 @@ This article provides links to the reference documentation for machine learning 
 For the most part, SQL Server consumes the same R and Python libraries that are provided in Microsoft R Server and Microsoft Machine Learning Server. 
 
 > [!NOTE]
-> Documentation for all APIs is derived from source code and has not been edited. If you see errors, please add a comment in the API rference documentation. 
+> Documentation for all APIs is derived from source code and has not been edited. If you see errors, please add a comment in the API reference documentation. 
 
 ## R
 

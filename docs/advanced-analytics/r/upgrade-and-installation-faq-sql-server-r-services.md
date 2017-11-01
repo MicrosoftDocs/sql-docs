@@ -72,7 +72,7 @@ To use machine learning with R or Python, some additional configuration is requi
 
 Review all options in the list of post-installation instructions to see which additional steps might be required in your environment.
 
-+ [Set up SQL Server machine learning in database](set-up-sql-server-r-services-in-database.md/bkmk_enableFeature) 
++ [Set up SQL Server machine learning in database](set-up-sql-server-r-services-in-database.md) 
 
 ## Upgrades or uninstallation
 

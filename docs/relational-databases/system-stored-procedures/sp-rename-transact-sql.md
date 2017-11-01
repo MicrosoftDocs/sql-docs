@@ -21,9 +21,10 @@ helpviewer_keywords:
   - "renaming tables"
 ms.assetid: bc3548f0-143f-404e-a2e9-0a15960fc8ed
 caps.latest.revision: 54
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Active"
 ---
 # sp_rename (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

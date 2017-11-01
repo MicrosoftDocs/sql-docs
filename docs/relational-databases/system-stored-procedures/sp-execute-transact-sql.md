@@ -18,9 +18,10 @@ helpviewer_keywords:
   - "sp_execute"
 ms.assetid: 2009acd3-0d92-435a-a8fb-057e50dc7146
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "On Demand"
 ---
 # sp_execute (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]

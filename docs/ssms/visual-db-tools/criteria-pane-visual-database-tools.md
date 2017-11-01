@@ -22,6 +22,7 @@ caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Criteria Pane (Visual Database Tools)
 The Criteria pane allows you to specify query options — such as which data columns to display, how to order the results, and what rows to select — by entering your choices into a spreadsheet-like grid. In the Criteria pane you can specify the following:  

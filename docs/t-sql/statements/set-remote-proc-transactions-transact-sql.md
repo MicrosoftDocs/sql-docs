@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "active transactions"
 ms.assetid: 4d284ae9-3f5f-465a-b0dd-1328a4832a03
 caps.latest.revision: 37
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # SET REMOTE_PROC_TRANSACTIONS (Transact-SQL)

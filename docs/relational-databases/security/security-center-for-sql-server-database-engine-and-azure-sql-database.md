@@ -21,9 +21,10 @@ helpviewer_keywords:
   - "databases [SQL Server], security"
 ms.assetid: dfb39d16-722a-4734-94bb-98e61e014ee7
 caps.latest.revision: 55
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "edmacauley"
+ms.author: "edmaca"
 manager: "craigg"
+ms.workload: "On Demand"
 ---
 # Security Center for SQL Server Database Engine and Azure SQL Database
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]

@@ -15,6 +15,7 @@ caps.latest.revision: 5
 author: "smartysanthosh"
 ms.author: "nagavo"
 manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Automatically Generate Code Attribute Values (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], automatically generate values for an entity’s Code attribute when you want an integer to be automatically assigned to the Code value each time a new member is created.  

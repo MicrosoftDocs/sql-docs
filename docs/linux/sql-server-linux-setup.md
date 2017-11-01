@@ -4,11 +4,12 @@ description: Install, update, and uninstall SQL Server on Linux. This topic cove
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 10/24/2017
+ms.date: 10/26/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
+ms.workload: "Active"
 ---
 # Installation guidance for SQL Server on Linux
 
@@ -36,7 +37,7 @@ SQL Server 2017 has the following system requirements for Linux:
 
 |||
 |-----|-----|
-| **Memory** | 2 GB (4 GB or more recommended) |
+| **Memory** | 3.25 GB |
 | **File System** | **XFS** or **EXT4** (other file systems, such as **BTRFS**, are unsupported) |
 | **Disk space** | 6 GB |
 | **Processor speed** | 2 GHz |
@@ -87,9 +88,6 @@ To rollback or downgrade SQL Server to a previous release, use the following ste
 
 > [!NOTE]
 > It is only supported to downgrade to a release within the same major version, such as SQL Server 2017.
-
-> [!IMPORTANT]
-> Downgrade is only supported between RTM, RC2, and RC1 at this time.
 
 ## <a id="versioncheck"></a> Check installed SQL Server version
 

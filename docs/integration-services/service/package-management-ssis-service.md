@@ -31,6 +31,7 @@ caps.latest.revision: 59
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Package Management (SSIS Service)
   Package management includes monitoring, managing, importing and exporting packages.  

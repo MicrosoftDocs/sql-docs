@@ -17,6 +17,7 @@ caps.latest.revision: 7
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Executing the SSMA Console (DB2ToSQL)
 Microsoft provides you with a robust set of script file commands to execute and control SSMA activities. The ensuing sections detail the same. The console application uses certain standard script file commands as enumerated in this section.  

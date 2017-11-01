@@ -20,9 +20,10 @@ helpviewer_keywords:
   - "sys.foreign_keys catalog view"
 ms.assetid: e960df1a-13fc-43ee-ba91-34c1b719ac2c
 caps.latest.revision: 37
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "On Demand"
 ---
 # sys.foreign_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]

@@ -23,6 +23,7 @@ caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Template Explorer
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] provides a variety of templates. Templates are boilerplate files containing SQL scripts that help you create objects in a database. The first time the template explorer is opened, a copy of the templates are placed in the user’s folder in C:\Users, under AppData\Roaming\Microsoft\SQL Server Management Studio\130\Templates.  

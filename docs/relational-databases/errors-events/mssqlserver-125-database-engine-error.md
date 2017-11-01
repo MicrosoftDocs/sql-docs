@@ -15,9 +15,9 @@ helpviewer_keywords:
   - "125 (Database Engine error)"
 ms.assetid: 0f58338d-2ea0-48b8-8a20-c438b0940433
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # MSSQLSERVER_125

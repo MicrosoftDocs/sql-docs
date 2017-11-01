@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "permissions [SQL Server], endpoints"
 ms.assetid: 3ac40457-7529-4eda-95a4-5247345cc8cf
 caps.latest.revision: 28
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # DENY Endpoint Permissions (Transact-SQL)

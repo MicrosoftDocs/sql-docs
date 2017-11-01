@@ -28,9 +28,9 @@ helpviewer_keywords:
   - "Always Encrypted, create column master key"
 ms.assetid: f8926b95-e146-4e3f-b56b-add0c0d0a30e
 caps.latest.revision: 32
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # CREATE COLUMN MASTER KEY (Transact-SQL)

@@ -18,6 +18,7 @@ caps.latest.revision: 84
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Configure and Manage Thesaurus Files for Full-Text Search
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Full-Text Search queries can search for synonyms of user-specified terms through the use of a Full-Text Search *thesaurus*. Each thesaurus defines a set of synonyms for a specific language. By developing a thesaurus tailored to your full-text data, you can effectively broaden the scope of full-text queries on that data.

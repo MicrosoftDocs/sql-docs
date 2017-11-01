@@ -20,6 +20,7 @@ caps.latest.revision: 106
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Upgrade Full-Text Search
   Upgrading full-text search to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] is done during setup and when database files and full-text catalogs from the earlier version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] are attached, restored, or copied using the Copy Database Wizard.  

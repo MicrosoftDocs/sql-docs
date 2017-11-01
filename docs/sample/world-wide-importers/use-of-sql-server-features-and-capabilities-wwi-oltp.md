@@ -15,6 +15,7 @@ author: "BarbKess"
 ms.author: "barbkess"
 manager: "jhubbard"
 robots: noindex,nofollow
+ms.workload: "Inactive"
 ---
 # Use of SQL Server features and capabilities
 WideWorldImporters use of SQL Server features and capabilities in the OLTP database.

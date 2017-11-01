@@ -18,6 +18,7 @@ caps.latest.revision: 29
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Introduction to Using XPath Queries (SQLXML 4.0)
   An XML Path Language (XPath) query can be specified as part of a URL or within a template. The mapping schema determines the structure of this resulting fragment, and the values are retrieved from the database. This process is conceptually similar to creating views using the CREATE VIEW statement and writing SQL queries against them.  

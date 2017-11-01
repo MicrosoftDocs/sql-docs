@@ -27,6 +27,7 @@ caps.latest.revision: 24
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Use the Full-Text Indexing Wizard
   The Full-Text Indexing Wizard in SSMS walks you through a series of steps designed to help you create a full-text index.  

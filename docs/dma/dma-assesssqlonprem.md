@@ -96,7 +96,7 @@ The duration of the assessment depends on the number of databases added and the 
     supported by the target SQL Server version selected on the "Options"
     screen.
 
-Compatibility issues can be reviewed by analyzing the impacted object and its details for every issue identified under “Breaking changes”, “Behavior changes” and “Deprecated features.”
+Compatibility issues can be reviewed by analyzing the impacted object and its details for every issue identified under “Breaking changes”, “Behavior changes”, and “Deprecated features.”
 
 ![View assessment results](../dma/media/ReviewResults.png)
 
@@ -112,7 +112,7 @@ For Azure SQL Database, the assessments provide migration blocking issues and fe
 
   ![View information for SQL Server feature parity](../dma/media/SQLFeatureParity.png)
 
-- The **Compatibility issues** category provides partially or unsupported features that are the compatibility issues that block migrating on-premises SQL Server database(s) to Azure SQL Database(s. It then provides recommendations to help you address those issues.
+- The **Compatibility issues** category provides partially or unsupported features that are the compatibility issues that block migrating on-premises SQL Server database(s) to Azure SQL Database(s). It then provides recommendations to help you address those issues.
 
   ![View compatibility issues](../dma/media/CompatibilityIssues.png)
 

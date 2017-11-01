@@ -25,6 +25,7 @@ caps.latest.revision: 24
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Navigate Code and Text
   You can move through text by using:  

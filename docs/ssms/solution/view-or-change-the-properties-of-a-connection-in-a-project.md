@@ -20,6 +20,7 @@ caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # View or Change the Properties of a Connection in a Project
 The properties of a connection saved in a project can be viewed and some can be modified.  

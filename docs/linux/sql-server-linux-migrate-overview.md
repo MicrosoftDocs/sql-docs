@@ -10,6 +10,7 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 1619489d-377a-4f32-8930-d4f536539689
 ms.custom: H1Hack27Feb2017
+ms.workload: "Inactive"
 ---
 # Migrate databases and structured data to SQL Server on Linux 
 

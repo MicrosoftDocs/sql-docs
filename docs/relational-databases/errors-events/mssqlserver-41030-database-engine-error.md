@@ -13,9 +13,9 @@ helpviewer_keywords:
   - "41030 (Database Engine error)"
 ms.assetid: c85341ae-0fbf-42ae-9275-4cfe678238f0
 caps.latest.revision: 6
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # MSSQLSERVER_41030

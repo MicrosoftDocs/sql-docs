@@ -16,6 +16,7 @@ caps.latest.revision: 17
 author: "craigg-msft"
 ms.author: "craigg"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # SQL Server 2008 R2 SP2 Release Notes
 This Release Notes document describes known issues that you should read about before you install or troubleshoot Microsoft SQL Server 2008 R2 Service Pack 2. This Release Notes document applies to all editions of SQL Server 2008 R2 SP2 and is available online only. It is updated periodically.  

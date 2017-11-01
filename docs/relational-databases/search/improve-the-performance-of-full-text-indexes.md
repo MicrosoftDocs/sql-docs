@@ -21,6 +21,7 @@ caps.latest.revision: 68
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Improve the Performance of Full-Text Indexes
 This topic describes some of the common causes of poor performance for full-text indexes and queries. It also provides a few suggestions to mitigate these issues and improve performance.

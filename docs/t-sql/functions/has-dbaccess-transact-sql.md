@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "status information [SQL Server], user access"
 ms.assetid: 99b43a72-0722-4a7b-a493-bdee1c74c7b9
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # HAS_DBACCESS (Transact-SQL)

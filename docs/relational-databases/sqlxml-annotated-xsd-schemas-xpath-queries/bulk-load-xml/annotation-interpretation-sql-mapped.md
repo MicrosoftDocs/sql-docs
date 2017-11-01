@@ -21,6 +21,7 @@ caps.latest.revision: 22
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Annotation Interpretation - sql:mapped
   XML Bulk Load processes the **sql:mapped** annotation in the XSD schema as expected—that is, if the mapping schema specifies **sql:mapped="false"** for any element or attribute, XML Bulk Load does not attempt to store the associated data in the corresponding column.  

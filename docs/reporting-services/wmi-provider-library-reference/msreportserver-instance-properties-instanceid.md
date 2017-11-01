@@ -22,6 +22,7 @@ caps.latest.revision: 15
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # MSReportServer_Instance Properties - InstanceID
   This object supports the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] infrastructure and is not intended to be used directly from your code.  

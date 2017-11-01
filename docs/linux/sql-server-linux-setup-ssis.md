@@ -9,6 +9,7 @@ ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
+ms.workload: "On Demand"
 ---
 # Install SQL Server Integration Services (SSIS) on Linux
 

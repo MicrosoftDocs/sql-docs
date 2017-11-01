@@ -18,6 +18,7 @@ caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Reconcile Changes Made by Multiple Users (Visual Database Tools)
 In a multiuser environment, changes can be made on the same object by multiple users at once. This can happen when you're working on the structure of the object in the Table or Database Diagram designers or it can happen to values in the results returned in the Query and View designer's Results pane. This can cause conflicts that you'll want to resolve.  

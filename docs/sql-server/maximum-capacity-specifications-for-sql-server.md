@@ -24,6 +24,7 @@ caps.latest.revision: 88
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # Maximum Capacity Specifications for SQL Server
 

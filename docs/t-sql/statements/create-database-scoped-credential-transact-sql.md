@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "credentials [SQL Server], DATABASE SCOPED CREDENTIAL statement"
 ms.assetid: fe830577-11ca-44e5-953b-2d589d54d045
 caps.latest.revision: 21
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "On Demand"
 ---
 # CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)

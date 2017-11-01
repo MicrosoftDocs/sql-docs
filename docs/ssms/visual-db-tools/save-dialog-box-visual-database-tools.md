@@ -17,6 +17,7 @@ caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Save Dialog Box (Visual Database Tools)
 Appears when you save your work in Table Designer and that work affects other tables. This dialog box lets you confirm the tables that will be saved.  

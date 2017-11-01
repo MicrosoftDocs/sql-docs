@@ -28,9 +28,9 @@ helpviewer_keywords:
   - "cryptography [SQL Server], certificates"
 ms.assetid: 509b9462-819b-4c45-baae-3d2d90d14a1c
 caps.latest.revision: 40
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "On Demand"
 ---
 # BACKUP CERTIFICATE (Transact-SQL)

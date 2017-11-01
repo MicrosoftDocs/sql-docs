@@ -17,6 +17,7 @@ caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Modify Queries (Visual Database Tools)
 Open a query to modify it in Query and View Designer.  

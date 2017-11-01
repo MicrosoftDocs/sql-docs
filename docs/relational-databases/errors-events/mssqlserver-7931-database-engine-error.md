@@ -13,9 +13,9 @@ helpviewer_keywords:
   - "7931 (Database Engine error)"
 ms.assetid: 18e7a3dc-7d8a-41b9-8724-d2a8587b6903
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # MSSQLSERVER_7931

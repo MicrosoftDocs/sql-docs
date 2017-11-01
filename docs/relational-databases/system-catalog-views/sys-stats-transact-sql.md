@@ -20,9 +20,10 @@ helpviewer_keywords:
   - "sys.stats catalog view"
 ms.assetid: 42605c80-126f-460a-befb-a0b7482fae6a
 caps.latest.revision: 41
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "On Demand"
 ---
 # sys.stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]

@@ -18,9 +18,10 @@ helpviewer_keywords:
   - "sp_requestpeertopologyinfo"
 ms.assetid: 15cd28bd-5a72-41fb-ae1b-726baaa6fad5
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Inactive"
 ---
 # sp_requestpeertopologyinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

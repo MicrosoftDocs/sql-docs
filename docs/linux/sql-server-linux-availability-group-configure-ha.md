@@ -9,14 +9,15 @@ ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 
+ms.workload: "On Demand"
 ---
 # Configure Always On availability group for SQL Server on Linux
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-This article describes how to create a SQL Server Always on availability group for high availability on Linux. There are two configuration types for availability groups. A *high availability* configuration uses a cluster manager to provide business continuity. This configuration can also include read scale-out replicas. This document explains how to create the availability group high availability configuration.
+This article describes how to create a SQL Server Always on availability group for high availability on Linux. There are two configuration types for availability groups. A *high availability* configuration uses a cluster manager to provide business continuity. This configuration can also include read-scale replicas. This document explains how to create the availability group high availability configuration.
 
-You can also create a *read scale-out* availability group without a cluster manager. This configuration only provides read-only replicas for performance scale-out. It does not provide high availability. To create a read scale-out availability group, see [Configure read scale-out availability group for SQL Server on Linux](sql-server-linux-availability-group-configure-rs.md).
+You can also create a *read-scale* availability group without a cluster manager. This configuration only provides read-only replicas for performance scale-out. It does not provide high availability. To create a read-scale availability group, see [Configure read-scale availability group for SQL Server on Linux](sql-server-linux-availability-group-configure-rs.md).
 
 Configurations that guarantee high availability and data protection require either two or three synchronous commit replicas. With three synchronous replicas the availability group can automatically recovery even if one server is not available. For more information, see [High availability and data protection for availability group configurations](sql-server-linux-availability-group-ha.md). 
 
@@ -192,9 +193,9 @@ ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 [!INCLUDE [Create Post](../includes/ss-linux-cluster-availability-group-create-post.md)]
 
 >[!IMPORTANT]
->After you create the availability group, you must configure integration with a cluster technology like Pacemaker for high availability. For a read scale-out configuration using availability groups, starting with [!INCLUDE [SQL Server version](..\includes\sssqlv14-md.md)], setting up a cluster is not required.
+>After you create the availability group, you must configure integration with a cluster technology like Pacemaker for high availability. For a read-scale configuration using availability groups, starting with [!INCLUDE [SQL Server version](..\includes\sssqlv14-md.md)], setting up a cluster is not required.
 
-If you followed the steps in this document, you have an availability group that is not yet clustered. The next step is to add the cluster. This configuration is valid for read scale-out/load balancing scenarios, it is not complete for high availability. For high availability, you need to add the availability group as a cluster resource. See [Next steps](#next-steps) for instructions. 
+If you followed the steps in this document, you have an availability group that is not yet clustered. The next step is to add the cluster. This configuration is valid for read-scale/load balancing scenarios, it is not complete for high availability. For high availability, you need to add the availability group as a cluster resource. See [Next steps](#next-steps) for instructions. 
 
 ## Notes
 

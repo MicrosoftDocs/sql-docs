@@ -13,9 +13,9 @@ helpviewer_keywords:
   - "10537 (Database Engine error)"
 ms.assetid: 728469a4-6523-4a37-925f-a950d75420fa
 caps.latest.revision: 9
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # MSSQLSERVER_10537

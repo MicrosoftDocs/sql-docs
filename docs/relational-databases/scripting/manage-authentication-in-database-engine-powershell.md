@@ -14,6 +14,7 @@ caps.latest.revision: 9
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Manage Authentication in Database Engine PowerShell
   By default, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell components use Windows Authentication when connecting to an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)]. You can use SQL Server Authentication by either defining a PowerShell virtual drive, or by specifying the **–Username** and **–Password** parameters for **Invoke-Sqlcmd**.  

@@ -26,9 +26,10 @@ helpviewer_keywords:
   - "Password Expired dialog box"
 ms.assetid: ff7a6a48-3d38-4209-aa0f-7d6c0a8c64ef
 caps.latest.revision: 45
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Active"
 ---
 # Choose an Authentication Mode
   During setup, you must select an authentication mode for the [!INCLUDE[ssDE](../../includes/ssde-md.md)]. There are two possible modes: Windows Authentication mode and mixed mode. Windows Authentication mode enables Windows Authentication and disables [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication. Mixed mode enables both Windows Authentication and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication. Windows Authentication is always available and cannot be disabled.  

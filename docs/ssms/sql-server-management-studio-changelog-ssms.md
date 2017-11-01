@@ -14,6 +14,7 @@ caps.latest.revision: 72
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
+ms.workload: "Active"
 ---
 # SQL Server Management Studio - Changelog (SSMS)
 

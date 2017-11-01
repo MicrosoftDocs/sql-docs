@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "idle time [SQL Server]"
 ms.assetid: 8f49c62a-8da5-4afd-a5eb-4df8ef8be755
 caps.latest.revision: 32
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # &#x40;&#x40;IDLE (Transact-SQL)

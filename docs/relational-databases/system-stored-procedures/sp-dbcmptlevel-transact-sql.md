@@ -18,9 +18,10 @@ helpviewer_keywords:
   - "sp_dbcmptlevel"
 ms.assetid: 508c686d-2bd4-41ba-8602-48ebca266659
 caps.latest.revision: 110
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Inactive"
 ---
 # sp_dbcmptlevel (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

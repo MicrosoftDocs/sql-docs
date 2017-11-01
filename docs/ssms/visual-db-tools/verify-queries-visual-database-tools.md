@@ -20,6 +20,7 @@ caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Verify Queries (Visual Database Tools)
 To avoid problems, you can check the query you have built to ensure its syntax is correct. This option is especially useful when you enter statements in the [SQL pane](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md).  

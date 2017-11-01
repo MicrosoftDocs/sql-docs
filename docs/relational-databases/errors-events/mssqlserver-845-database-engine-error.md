@@ -13,9 +13,9 @@ helpviewer_keywords:
   - "845 (Database Engine error)"
 ms.assetid: 8fff6ad4-234c-44be-b123-e25d5e1cd63e
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # MSSQLSERVER_845

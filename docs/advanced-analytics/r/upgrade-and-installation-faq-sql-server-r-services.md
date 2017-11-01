@@ -1,7 +1,7 @@
 ---
 title: "Upgrade and installation FAQ for SQL Server Machine Learning | Microsoft Docs"
 ms.date: "10/31/2017"
-ms.prod: 
+ms.prod:
   - "sql-server-2016"
   - "sql-server-2017"
  ms.reviewer: ""
@@ -19,10 +19,10 @@ ms.workload: "On Demand"
 ---
 # Upgrade and installation FAQ for SQL Server Machine Learning
 
-This topic provides answers to some common questions about installation of machine learning features in SQL Server. It also covers common questions about upgrades. 
+This topic provides answers to some common questions about installation of machine learning features in SQL Server. It also covers common questions about upgrades.
 
-+ Some problems occur only with upgrades from pre-release versions. Therefore, we recommend that you identify your version and edition first before reading these notes. 
-+ Also, upgrade to the most current release or service release as soon as possible, to resolve any issues that were fixed in recent releases.
++ Some problems occur only with upgrades from pre-release versions. Therefore, we recommend that you identify your version and edition first before reading these notes.
++ Upgrade to the most current release or service release as soon as possible, to resolve any issues that were fixed in recent releases.
 
 **Applies to:** SQL Server 2016 R Services, SQL Server 2017 Machine Learning Services (In-Database)
 
@@ -74,7 +74,7 @@ To use machine learning with R or Python, some additional configuration is requi
 
 Review all options in the list of post-installation instructions to see which additional steps might be required in your environment.
 
-+ [Set up SQL Server machine learning in database](set-up-sql-server-r-services-in-database/#bkmk_enableFeature.md) 
++ [Set up SQL Server machine learning in database](set-up-sql-server-r-services-in-database.md/bkmk_enableFeature) 
 
 ## Upgrades or uninstallation
 

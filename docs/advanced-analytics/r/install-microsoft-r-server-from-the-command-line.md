@@ -33,7 +33,7 @@ For a **quiet** installation, provide the same arguments and add the **/q** swit
 
 You should know how to perform a command-line installation of SQL Server and be familiar with its scripting arguments.
 
-For more information, see [Install SQL Server from the command prompt](..\..\database-engine\install-windows\install-sql-server-from-the-command-prompt.md).
+For more information, see [Install SQL Server from the command prompt](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).
 
 If you install Machine Learning Server or Microsoft R Server (Standalone) on a computer that has no Internet access, you must download the required R (or Python) components in advance, and copy them to a local folder. For download locations, see [Installing machine learning components without internet access](installing-ml-components-without-internet-access.md).
 
@@ -83,7 +83,7 @@ Setup.exe /q /ACTION=Install /FEATURES=SQL_SHARED_MR /IACCEPTROPENLICENSETERMS /
 
 ## Post-installation tasks
 
-To set up another instance of Microsoft R Server with the same parameters, you can re-use the configuration file that is created during installation. For more information, see [Install SQL Server Using a configuration File](..\..\database-engine\install-windows\install-sql-server-using-a-configuration-file.md).
+To set up another instance of Microsoft R Server with the same parameters, you can re-use the configuration file that is created during installation. For more information, see [Install SQL Server using a configuration file](../../database-engine/install-windows/install-sql-server-using-a-configuration-file.md).
 
 ### Review installed components
 

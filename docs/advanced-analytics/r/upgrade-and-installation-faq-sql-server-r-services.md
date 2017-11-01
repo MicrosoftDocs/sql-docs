@@ -26,7 +26,7 @@ This topic provides answers to some common questions about installation of machi
 
 ## Performing setup for the first time
 
-Follow the procedures for setting up [!INCLUDEssCurrent] and the R components, as described here: 
+Follow the procedures for setting up [!INCLUDE[sscurrent_md](../../includes/sscurrent_md.md)] and the R components, as described here: 
 
 + [Set up SQL Server R Services or Machine Learning Services In-Database](../r/set-up-sql-server-r-services-in-database.md)
 + [Set up SQL Server 2017 with Python](../python/setup-python-machine-learning-services.md)

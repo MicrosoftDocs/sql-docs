@@ -4,7 +4,7 @@ description: Install, update, and uninstall SQL Server on Linux. This topic cove
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 10/24/2017
+ms.date: 10/26/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
@@ -88,9 +88,6 @@ To rollback or downgrade SQL Server to a previous release, use the following ste
 
 > [!NOTE]
 > It is only supported to downgrade to a release within the same major version, such as SQL Server 2017.
-
-> [!IMPORTANT]
-> Downgrade is only supported between RTM, RC2, and RC1 at this time.
 
 ## <a id="versioncheck"></a> Check installed SQL Server version
 

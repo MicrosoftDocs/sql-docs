@@ -21,7 +21,7 @@ In SQL Server 2016, Microsoft R Server (Standalone) helped bring the popular ope
 
 In SQL Server 2017, the name was changed to Machine Learning Server (standalone) to reflect the addition of support for the Python language. Both versions are available for free to users of Enterprise Edition or Software Assurance.
 
-This article provides a high-level overview of how you can use Machine Learning Server (or R Server), and how to get started with installation and samples. 
+This article provides a high-level overview of how you can use Machine Learning Server (or R Server), and how to get started with installation and samples.
 
 ## Why use a standalone server for machine learning
 
@@ -39,7 +39,7 @@ The operationalization features of Machine Learning Server support deploying and
 
 + Install R Server using the separate Windows installer.
 
-    This installer create a brand new instance of Microsoft R Server that uses the Microsoft Modern Software Lifecycle support policy. You can also install R Server for Linux, Cloudera, Teradata, and Hadoop.
+    This installer creates a brand new instance of Microsoft R Server that uses the Microsoft Modern Software Lifecycle support policy. You can also install R Server for Linux, Cloudera, Teradata, and Hadoop.
     
     For more information, see [Install R Server 9.1 for Windows](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows).
 
@@ -69,7 +69,7 @@ To get started, see these guides:
 
 + [Solution templates](https://docs.microsoft.com/machine-learning-server/r/sample-solutions)
 
-    Theses samples represent indistry-specific solutions that demonstrate applied machine learning. Current samples cover scenarios in retail, finance, health care, and marketing.
+    Theses samples are solutions that demonstrate how to apply machine learning in specific industries. Current scenarios are in retail, finance, health care, and marketing.
 
 + [Explore R and ScaleR in 25 Functions](https://docs.microsoft.com/machine-learning-server/r/tutorial-r-to-revoscaler): Explore this collection of distributable analytical functions that provide high performance and scaling to R solutions. Includes parallelizable versions of many of the most popular R modeling packages, such as k-means clustering, decision trees, and decision forests, and tools for data manipulation.
 

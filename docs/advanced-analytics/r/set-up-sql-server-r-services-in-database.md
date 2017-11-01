@@ -137,13 +137,13 @@ This article describes the process of setup that uses the [!INCLUDE[ssNoVersion]
 
     We recommend that you **do not** install the Standalone and In-Database features on the same computer, and never install them at the same time. You would ordinarily install Machine Learning Server (Standalone) to create an environment that a data scientist or developer uses to connect to SQL Server when deploying solutions. Therefore, there is no need to install both on the same computer.
 
-4.  License agreements for machnie learning: Depending on which languages you're installing, you must accept the license agreements for R or Python, or both.
+4.  License agreements for machine learning: Depending on which languages you're installing, you must accept the license agreements for R or Python, or both.
 
     + License terms for R: This license agreement covers Microsoft R Open, which includes a distribution of the open source R base packages and tools, together with enhanced R packages and connectivity providers from the Microsoft development team.
   
     + License terms for Python. The Python open source licensing agreement also covers Anaconda and related tools, plus some new Python libraries from the Microsoft development team.
 
-    Click **Accept** to indicate your agreement. There is a brief pause whie the components are prepared, then the **Next** button becomes available.
+    Click **Accept** to indicate your agreement. There is a brief pause while the components are prepared, then the **Next** button becomes available.
 
     If the computer that you're using does not have internet access, you can pause setup at this point to download the installers separately, as described here: [Install machine learning components without internet access](installing-ml-components-without-internet-access.md).
 
@@ -219,14 +219,14 @@ This section describes how to reconfigure the instance for machine learning. Con
     GO
     ```
 
-    The script can take a little while to run, the first time the external scrpt runtime is loaded. The results should be something like this:
+    The script can take a little while to run, the first time the external script runtime is loaded. The results should be something like this:
 
     | hello |
     |----|
     | 1|
 
 
-8. If you get any errors, proceed to the section describing other, optional changes that you might need to make after installation is complete, or see the troublehooting guide:
+8. If you get any errors, proceed to the section describing other, optional changes that you might need to make after installation is complete, or see the troubleshooting guide:
 
     + [Optional post-installation steps: Configure service and permissions](#bkmk_FollowUp) 
     + [Troubleshooting machine learning in SQL Server](upgrade-and-installation-faq-sql-server-r-services.md)
@@ -248,7 +248,7 @@ Common scenarios that require additional changes include:
 > [!NOTE]
 > Not all the listed changes might be required. However, we recommend that you review all items to see whether they are applicable to your scenario.
 
-Additional troubleshoting advce can be found here: [Upgrade and installation FAQ](../r/upgrade-and-installation-faq-sql-server-r-services.md)
+Additional troubleshooting tips can be found here: [Upgrade and installation FAQ](../r/upgrade-and-installation-faq-sql-server-r-services.md)
 
 ### <a name="bkmk_configureAccounts"></a>Enable implied authentication for the Launchpad account group
 

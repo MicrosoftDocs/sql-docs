@@ -27,7 +27,7 @@ This article describes how to use SQL Server command-line arguments to install t
 
 An **unattended** installation requires that you specify the location of the setup utility, and use arguments to indicate which features to install.
 
-For a **quiet** installation, provide the same arguments and add the **/q** switch. No prompts will be provided and no interaction is required. However, setup fails if any required arguments are omitted.
+For a **quiet** installation, provide the same arguments and add the **/q** switch. No prompts are provided and no interaction is required. However, setup fails if any required arguments are omitted.
 
 ## Prerequisites
 
@@ -60,7 +60,7 @@ Setup.exe /q /ACTION=Install /FEATURES=SQL_SHARED_MR, SQL_INST_MPY  /IACCEPTPYTH
 ```
 
 + To view progress and prompts, remove the _/q_ argument.
-+ If you use the argument **FEATURES = SQL_SHARED_MR**, only the Machine Learning Server components are installed, with neither R nor Python. This instllation includes all prerequisites, which are installed silently by default. However, we recommend that you add at least one language when installing for the first time.
++ If you use the argument **FEATURES = SQL_SHARED_MR**, only the Machine Learning Server components are installed, with neither R nor Python. This installation includes all prerequisites, which are installed silently by default. However, we recommend that you add at least one language when installing for the first time.
 + Add **SQL_INST_MR** to install support for R.
 + Add **SQL_INST_MPY** to install support for Python.
 + **IACCEPTROPENLICENSETERMS** indicates you have accepted the license terms for using the open source R components.
@@ -102,7 +102,7 @@ After installation, you can install additional R or Python packages. The process
 
 In SQl Server 2017, you can install and manage R packages by using T-SQL. For more information, see [Installing and managing R packages](../r/install-additional-r-packages-on-sql-server.md).
 
-For Python, and in SQL Server 2016, an administrator must install any additional libraries that will be required.
+For Python, and in SQL Server 2016, an administrator must install any additional libraries that might be required.
 
 > [!IMPORTANT]
 > If you intend to run your R code on SQL Server, make sure that you install the same packages on the computer you'll use for developing the solution, and the SQL Server instance where you'll execute or deploy the solution.
@@ -114,6 +114,6 @@ If you do not intend to use SQL Server, you can install Microsoft R Server or Ma
 + [Install Machine Learning Server for Windows](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install)
 + [Install R Server 9.0.1 for Windows](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows) 
 
-The separate windows installer for Machine Learning Server can also be used to upgrade the machine learaning components associated with the instance.  For more information, see these links:
+The separate windows installer for Machine Learning Server can also be used to upgrade the machine learning components associated with the instance.  For more information, see these links:
 
 + [Use SqlBindR to upgrade R](../r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)

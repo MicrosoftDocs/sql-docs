@@ -52,15 +52,15 @@ Depending on the build of SQL Server that you are installing, some of the follow
 
 - New installation of any pre-release version of [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] is no longer supported. If you are using a pre-release version, upgrade as soon as possible.
 
-- Disable virus scanning before beginning setup. After setup is completed, we recommend suspending virus scanning on the folders used by SQL Server. Preferably, suspend scanning on the entire SQL Server tree.
+- Disable virus scanning before beginning setup. After setup is completed, we recommend suspending virus scanning on the folders used by [!INCLUDE[ssnoversion](../includes/ssnoversion.md)]. Preferably, suspend scanning on the entire [!INCLUDE[ssnoversion](../includes/ssnoversion.md)] tree.
 
 ### Licensing agreements for unattended installs
 
-If you use the command line to upgrade an instance of SQL Server, make sure that the command line includes both the SQL Srevr licensing agreement parameter, and the new license agreement parameters for R and Python.
+If you use the command line to upgrade an instance of SQL Server, make sure that the command line includes both the [!INCLUDE[ssnoversion](../includes/ssnoversion.md)] licensing agreement parameter, and the new license agreement parameters for R and Python.
 
 ### Offline installation of machine learning components for a localized version of SQL Server
 
-When you install SQL Server machine learning components on a computer that does not have internet access, you must take some additional steps:
+When you install [!INCLUDE[ssnoversion](../includes/ssnoversion.md)] machine learning components on a computer that does not have internet access, you must take some additional steps:
 
 + Download the R or Python component installers to a local folder before you run SQL Server setup.
 + In some cases, you might need to edit the installer file to ensure that the correct language is installed.

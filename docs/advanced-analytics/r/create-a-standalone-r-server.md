@@ -71,7 +71,7 @@ For more information about automated or off-line installation, see [Install Micr
 
 ##  <a name="bkmk_installRServer"></a> Install Microsoft R Server (Standalone)
 
-This feature requires an Enterprise license or eqivalent for **SQL Server 2016**.
+This feature requires an Enterprise license or equivalent for **SQL Server 2016**.
 
 If you have installed any previous version of the Revolution Analytics tools or packages, you must uninstall them first. See [Upgrading from an older version of Microsoft R Server](#bkmk_Uninstall).
 
@@ -120,7 +120,7 @@ This section provides additional information related to setup.
 
 ### Default installation folders
 
-When you install R Server or Machine Learning Server using SQL Server setup, the R libraries are installed in a folder associated with the SQL Server version that you used for setup. In this folder you will also find sample data, documentation for the R base packages, and documentation of the R tools and runtime.
+When you install R Server or Machine Learning Server using SQL Server setup, the R libraries are installed in a folder associated with the SQL Server version that you used for setup. In this folder, you will also find sample data, documentation for the R base packages, and documentation of the R tools and runtime.
 
 However, if you install using the separate Windows installer, or if you upgrade using the separate Windows installer, the R libraries are installed in a different folder.
 
@@ -161,7 +161,7 @@ If you have an earlier version of Microsoft R Server and need to ensure compatib
 
 In the RTM version of SQL Server 2016, there was a known issue when adding Microsoft R Server to an instance on Windows Server Core edition. This has been fixed.
 
-If you encounter this issue, you can applied the fix described in [KB3164398](https://support.microsoft.com/kb/3164398) to add the R feature to the existing instance on Windows Server Core.   For more information, see [Can't install Microsoft R Server Standalone on a Windows Server Core operating system](https://support.microsoft.com/kb/3168691).
+If you encounter this issue, you can apply the fix described in [KB3164398](https://support.microsoft.com/kb/3164398) to add the R feature to the existing instance on Windows Server Core.   For more information, see [Can't install Microsoft R Server Standalone on a Windows Server Core operating system](https://support.microsoft.com/kb/3168691).
 
 ###  <a name="bkmk_Uninstall"></a> Upgrading from an older version of Microsoft R Server
 

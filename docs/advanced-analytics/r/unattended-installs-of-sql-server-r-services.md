@@ -40,7 +40,7 @@ By unattended installation, we mean that you do not use the interactive features
 
 + To complete setup without having to respond to prompts, make sure that you have identified all required arguments, including those for licensing, and for any other features that you might want to install.
 
-+ The **Mixed** security mode that supports SQL logins was required in early releases. It is no longer reuqired, but you might consider enabling Mixed Mode authentication to support solution development by data scientists who use a SQL login.
++ The **Mixed** security mode that supports SQL logins was required in early releases. Although it is no longer required, you might consider enabling Mixed Mode authentication to support solution development by data scientists who use a SQL login.
 
 > [!IMPORTANT]
 > 
@@ -48,7 +48,7 @@ By unattended installation, we mean that you do not use the interactive features
 
 ## <a name="bkmk_NewInstall"></a>  Command-line installation for SQL Server 2017
 
-The following examples shows the **minimum** required features.
+The following examples include the **minimum** required features.
 
 > [!IMPORTANT]
 > Be sure to run all commands from an elevated command prompt.

@@ -13,7 +13,7 @@ ms.topic: article
 ms.tgt_pltfrm: NA
 ms.workload: sql-server
 ms.custom: partners
-ms.date: 17/09/2017    
+ms.date: 11/02/2017    
 ms.author: mikeray
 
 ---
@@ -28,13 +28,15 @@ To monitor your SQL Server services, choose from a wide variety of industry-lead
 | Partner | Description | Links |
 | --- | --- | --- | --- |
 |![idera][1] |**IDERA**<br>SQL Diagnostic Manager is a powerful performance monitoring and diagnostics solution that proactively alerts administrators to health, performance and availability problems within SQL Server environments all from a central console.<br><br>[System requirements][idera_requirements]|<!--[Marketplace][idera_marketplace]<br>-->[Website][idera_website]<br>[Twitter][idera_twitter]<br>[Video][idera_youtube] | |
+|![sentryone][2] |**SentryOne**<br>SentryOne solutions empower Microsoft data professionals to achieve breakthrough performance across physical, virtual, and cloud environments. With SentryOne, data professionals can consolidate their tool sets, reduce infrastructure costs, and increase database speed and efficiency for peak performance across their Microsoft data platform environments, regardless of size or complexity.|<!--[Marketplace][idera_marketplace]<br>-->[Website][sentryone_website]<br>[datasheet][sentryone_datasheet]<br>[Twitter][sentryone_twitter]<br>[LinkedIn][sentryone_linkedin] | |
+
 
 ## Next steps
 To learn more about some of our other partners, see [High availability, and disaster recovery partners][hadr_partners], [management partners][management_partners], and [development partners][dev_partners].
 
 <!--Image references-->
 [1]: ./media/partner-hadr-sql-server/idera_logo.png
-
+[2]:  ./media/partner-hadr-sql-server/sentryone.png
 
 <!--Article links-->
 [hadr_partners]: ./partner-hadr-sql-server.md
@@ -44,10 +46,12 @@ To learn more about some of our other partners, see [High availability, and disa
 <!--Website links -->
 
 [idera_website]:https://www.idera.com/productssolutions/sqlserver/sqldiagnosticmanager
+[sentryone_website]:www.sentryone.com 
 
 <!--Get Started Links-->
 
 <!--Datasheet Links-->
+[sentryone_datasheet]:https://www.sentryone.com/platform 
 
 <!--Marketplace Links -->
 <!----Not available[idera_marketplace]:https://azure.microsoft.com/en-us/marketplace/-->
@@ -60,6 +64,10 @@ To learn more about some of our other partners, see [High availability, and disa
 
 <!--Twitter links-->
 [idera_twitter]:https://twitter.com/Idera_Software
+[sentryone_twitter]:https://twitter.com/sentryone 
 
 <!--Supported Systems-->
 [idera_requirements]:https://www.idera.com/productssolutions/sqlserver/sqldiagnosticmanager/systemrequirements
+
+<!--LinkedIn-->
+[sentryone_linkedin]:https://www.linkedin.com/company/sentryone 

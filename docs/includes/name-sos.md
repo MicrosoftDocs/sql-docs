@@ -1,1 +1,1 @@
-<Token>**Microsoft SQL Operations Studio**</Token>
+<Token>Microsoft SQL Operations Studio</Token>

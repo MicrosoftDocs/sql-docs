@@ -1,35 +1,39 @@
 ---
-title: Tutorial article for Carbon | Microsoft Docs
-description: This sample describes the article in 115 to 145 characters. Validate using Gauntlet toolbar check icon. Use SEO kind of action verbs here.
-services: sql-database
-author: erickang
-ms.author: erickang
+title: Run SQL queries using Microsoft SQL Operations Studio | Microsoft Docs
+description: This tutorial...
+keywords: 
+ms.custom: "tools|sos"
+ms.date: "11/01/2017"
+ms.prod: "sql-non-specified"
+ms.reviewer: "alayu; erickang; sanagama; sstein"
+ms.suite: "sql"
+ms.tgt_pltfrm: ""
+ms.topic: "tutorial"
+author: "erickangMSFT"
+ms.author: "erickang"
 manager: craigg
-ms.reviewer: achatter, alayu, erickang, sanagama, sstein
-ms.service: data-tools
-ms.workload: data-tools
-ms.prod: NEEDED
-ms.custom: mvc, tutorial
-ms.topic: article
-ms.date: 10/01/2017
+ms.workload: "Inactive"
 ---
 
-# Modernize T-SQL code flow with Carbon
-Connect to a SQL Server instance and database, write T-SQL scripts, execute the scripts and view results are core tasks of developers and operators. In this tutorial, we will walkthrough the key functionalities of Carbon that can help develop and manage SQL Server and database easier and faster using T-SQL scripts in Carbon.
+# Create and run queries using [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
-In this tutorial, you use the Carbon to learn to:
+Creating and running queries, stored procedures, scripts, etc. are the core tasks of database professionals. This tutorial walks through the key features in [!INCLUDE[name-sos](../includes/name-sos-short.md)] that simplify using T-SQL.
+
+In this tutorial, you learn how to use [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] to:
 > [!div class="checklist"]
-> * Quick search schema objects
+> * Search database objects
 > * Edit table data 
-> * Writing T-SQL script using snippets
-> * Learn about database object details using Peek Definition and Go to Definition
+> * Use snippets to quickly write T-SQL
+> * View database object details using *Peek Definition* and *Go to Definition*
 
 
 ## Prerequisites
-Follow [Get Started with Carbon](./get-started-sql-server.md)
+
+To complete this tutorial, [install [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md).
+
 
 ## Quickly find a table and edit data
-Carbon provides a quick database schema object search functionality using 'Explorer widget' in a dashboard and quickly launch a task based on an object type such as 'Edit data' for a table.
+[!INCLUDE[name-sos-short](../includes/name-sos-short.md)] provides a quick database schema object search functionality using 'Explorer widget' in a dashboard and quickly launch a task based on an object type such as 'Edit data' for a table.
 
 1. Open Servers viewlet with ```CTRL+G``` and expand ```Databases``` folder. Select ```TutorialDB```. 
 
@@ -49,11 +53,11 @@ Carbon provides a quick database schema object search functionality using 'Explo
 
    ![edit data](./media/tutorial-sql-server/edit-data.png)
 
-## Use T-SQL snippet and IntelliSense to create a procedure
+## Use T-SQL snippet and IntelliSense to create a stored procedure
 
 1. Press 'CTRL + N' to open a new editor.
 
-2. Type ```sql``` in the editor, then select ```sqlCreateStoredProcedure```. Press ```Tab```. Carbon creates a new stored procedure snippet.
+2. Type ```sql``` in the editor, then select ```sqlCreateStoredProcedure```. Press ```Tab```. [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] creates a new stored procedure snippet.
 
    ![snippet-list](./media/tutorial-sql-server/snippet-list.png)
 
@@ -185,7 +189,7 @@ In this step, we will walkthrough how Save as JSON can make a developing and tes
    EXECUTE dbo.getCustomer @ID = 5
    ```
 
-7. Press ```F5``` and execute the script. It will insert a new Customer and return the new Customer's information in json format. Click the result.
+7. Press ```F5``` and execute the script. It inserts a new Customer and returns the new Customer's information in json format. Click the result.
 
    ![test result](./media/tutorial-sql-server/test-result.png)
 

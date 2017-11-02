@@ -1,7 +1,7 @@
 ---
-title: Download and install [!INCLUDE[name-sos](../includes/name-sos.md)] | Microsoft Docs
-description: 'Download and Install [!INCLUDE[name-sos](../includes/name-sos.md)] for Linux, macOS, or Windows'
-keywords: Carbon, install Carbon, download Carbon
+title: Download and install Microsoft SQL Operations Studio | Microsoft Docs
+description: 'Download and Install Microsoft SQL Operations Studio for Windows, macOS, or Linux'
+keywords: Microsoft SQL Operations Studio, install Microsoft SQL Operations Studio, download Microsoft SQL Operations Studio
 ms.custom: "tools|sos"
 ms.date: "10/31/2017"
 ms.prod: "sql-non-specified"
@@ -14,16 +14,16 @@ ms.author: "sstein"
 manager: craigg
 ms.workload: "Inactive"
 ---
-# Download and install [!INCLUDE[name-sos](../includes/name-sos.md)]
+# Download and install Microsoft SQL Operations Studio
 
-[!INCLUDE[name-sos-short](../includes/name-sos-short.md)] is a free lightweight modern database development and management tool that runs on Windows, macOS, and Linux. Use Carbon to manage SQL Server running anywhere, Azure SQL Database, and Azure SQL Data Warehouse.   
+[!INCLUDE[name-sos-short](../includes/name-sos-short.md)] is a free, lightweight, modern database development and management tool that runs on Windows, macOS, and Linux. Use [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] to manage SQL Server running anywhere, Azure SQL Database, and Azure SQL Data Warehouse.   
 
 > [!NOTE]
-> This preview version of Carbon installs by copying a zip (tar) file to your local computer, extracting (expanding) the file, and running the executable.
+> This preview version of [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] installs by copying a zip (tar) file to your local computer, extracting (expanding) the file, and running the executable.
 
 ## Supported Operating Systems
 
-Carbon runs on Linux, Mac, and Windows.
+Carbon runs on Windows, macOS, and Linux.
 
 Carbon is supported on the following platforms:
 
@@ -52,8 +52,14 @@ Other Potential Platforms
 ## Get Carbon for Windows
 
 1. Download [Carbon for Windows](https://github.com/Microsoft/carbon/releases/download/v0.20.0/2017-Sep-27-carbon-windows.zip) to your local computer.
-2. Browse to the downloaded file and extract it.
-3. Run *\Carbon\Carbon-windows\Carbon.exe* [VERIFY PATH]
+
+   > [!IMPORTANT]
+   > Executable files may be blocked by Windows when zip files are downloaded from an external source and extracted. Follow the steps below to unblock the .zip file before extracting.
+
+1. Right-click the **.zip** file, and select **Properties**.
+1. On the **General** tab, select **Unblock**, and click **Apply**.
+1. Browse to the downloaded file and extract it.
+2. Run *\Carbon\Carbon-windows\Carbon.exe* [VERIFY PATH]
 
 
 ## Get Carbon for macOS
@@ -86,7 +92,7 @@ carbon .
 
 ## Uninstall Carbon
 
-To uninstall any flavor of the Carbon preview, delete the files.
+To uninstall the [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] preview, delete the files.
 
 ## Next Steps
 

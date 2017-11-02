@@ -3,22 +3,17 @@
 # [FAQ](faq.md)
 # [Overview](overview.md)
 # Quickstarts
-## Run Carbon on Windows
 ### [Connect & query SQL Server](get-started-sql-server.md)
 ### [Connect & query SQL Database](get-started-sql-database.md)
 ### [Connect & query SQL Data Warehouse](get-started-sql-dw.md)
-## Run Carbon on macOS
-### [Connect & query SQL Server (macOS)](get-started-sql-server-mac.md)
-## Run Carbon on Linux
-### [Connect & query SQL Server (Linux)](get-started-sql-server-linux.md)
 # Tutorials
 ## [Query Editor](tutorial-modern-code-flow-sql-server.md) 
 ## [Monitor](tutorial-monitoring-sql-server.md)
-### [1. Database Insight - Monitoring Query Performance](tutorial-qds-sql-server.md)
-### [2. Database Insight - Table Space Usage](tutorial-table-space-sql-server.md)
-### [3. Server Insight - Backup Status](tutorial-backup-status-sql-server.md)
-### [4. Server Insight - Database Size](tutorial-db-size-sql-server.md)
-### [5. Build Custom Insight - Missing Index and Memory Usage](tutorial-build-custom-insight-sql-server.md) 
+### [Database Insight - Monitoring Query Performance](tutorial-qds-sql-server.md)
+### [Database Insight - Table Space Usage](tutorial-table-space-sql-server.md)
+### [Server Insight - Backup Status](tutorial-backup-status-sql-server.md)
+### [Server Insight - Database Size](tutorial-db-size-sql-server.md)
+### [Custom Insight - Missing Index and Memory Usage](tutorial-build-custom-insight-sql-server.md) 
 ## [Backup and restore](tutorial-backup-restore-sql-server.md)
 # How-to guides
 ## [Management dashboards & Insight widgets](insight-widgets.md)

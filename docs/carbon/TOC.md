@@ -3,9 +3,9 @@
 # [FAQ](faq.md)
 # [Overview](overview.md)
 # Quickstarts
-### [Connect & query SQL Server](get-started-sql-server.md)
-### [Connect & query SQL Database](get-started-sql-database.md)
-### [Connect & query SQL Data Warehouse](get-started-sql-dw.md)
+## [Connect & query SQL Server](get-started-sql-server.md)
+## [Connect & query SQL Database](get-started-sql-database.md)
+## [Connect & query SQL Data Warehouse](get-started-sql-dw.md)
 # Tutorials
 ## [Query Editor](tutorial-modern-code-flow-sql-server.md) 
 ## [Monitor](tutorial-monitoring-sql-server.md)

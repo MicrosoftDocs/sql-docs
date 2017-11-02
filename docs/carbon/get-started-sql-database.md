@@ -57,11 +57,11 @@ Use [!INCLUDE[name-sos](../includes/name-sos-short.md)] to establish a connectio
 2. This article uses *SQL Login*, but *Windows Authentication* is also supported. Fill in the fields as follows:
 
    | Setting | Suggested value | 
-   | :--- | :--- |
+   | :--- |: --- |
    | **Authentication** | SQL Login | 
    | **User name** | The server admin account | 
    | **Password (SQL Login)** | The password for your Azure SQL server | 
-   | **Save Password?** | Yes or No - Select Yes if you do not want to enter the password each time. |
+   | **Save Password?** | Yes or No - If you don't want to enter the password each time, select Yes. |
    | **Database name** | *leave blank* | 
    | **Server Group** | Select \<Default\> | 
 
@@ -89,10 +89,10 @@ Use [!INCLUDE[name-sos](../includes/name-sos-short.md)] to establish a connectio
    ALTER DATABASE [TutorialDB] SET QUERY_STORE=ON
    GO
    ```
-1. To execute the query click **Run**.
+1. To execute the query, click **Run**.
 
 ## Create a table
-1. Copy the snippet below and paste in the query window.
+1. Paste the following snippet into the query window.
    ```sql
    -- Create a new table called 'Customers' in schema 'dbo'
    -- Drop the table if it already exists
@@ -115,7 +115,7 @@ Use [!INCLUDE[name-sos](../includes/name-sos-short.md)] to establish a connectio
    ![Change context](media/get-started-sql-database/change-context.png)
 
 ## Insert rows
-Copy the snippet below to insert four rows and paste in the query window. Click **Run** to execute the query.
+1. Paste the following snippet into the query window. 
    ```sql
    -- Insert rows into table 'Customers'
    INSERT INTO dbo.Customers
@@ -127,17 +127,20 @@ Copy the snippet below to insert four rows and paste in the query window. Click 
       ( 4, N'Jake', N'United States', N'jake@vsdata.io')   
    GO   
    ```
+1. To execute the query, click **Run**.
 
 ## View the result
-Copy the snippet below to view all the rows and paste in the query window. Click **Run** to execute the query.
+1. Paste the following snippet into the query window.
    ```sql
    -- Select rows from table 'Customers'
    SELECT * FROM dbo.Customers;
    ```
+1. To execute the query, click **Run**.
+
    ![Select results](media/get-started-sql-database/select-results.png)
 
 ## Save result as Excel
-1. Right click on the results table and save as a **Excel** file. 
+1. Right click on the results table and save as an Excel** file. 
 
    ![Save as Excel](media/get-started-sql-database/save-as-excel.png)
 
@@ -148,12 +151,12 @@ View an existing, built-in widget through the dashboard.
 
 ## Clean up resources
 > [!TIP]
-> Other Quickstarts in this collection build upon this quick start. If you plan to continue on to work with subsequent quickstarts, **do not clean up the resources created in this quickstart**. If you do not plan to continue, use the following steps to delete resources created by this quickstart in the Azure portal.
+> Other articles in this collection build upon this quickstart. If you plan to continue on to work with subsequent quickstarts, **do not clean up the resources created in this quickstart**. If you do not plan to continue, use the following steps to delete resources created by this quickstart in the Azure portal.
 Clean up the resources you created in the quickstart either by deleting the ...
 
 To delete the entire resource group including the newly created server:
-1.	Locate your resource group in the Azure portal. From the left-hand menu in the Azure portal, click **Resource groups** and then click the name of your resource group, such as our example **myresourcegroup**.
-2.	On your resource group page, click **Delete**. Then type the name of your resource group, such as our example **myresourcegroup**, in the text box to confirm deletion, and then click **Delete**.
+1.	Locate your resource group in the Azure portal. From the left-hand menu in the Azure portal, click **Resource groups** and then click the name of your resource group, for example: **myresourcegroup**.
+2.	On your resource group page, click **Delete**. Then type the name of your resource group, for example: **myresourcegroup**, in the text box to confirm deletion, and then click **Delete**.
 
 Or instead, to delete the newly created server:
 1.	Locate your server in the Azure portal, if you do not have it open. From the left-hand menu in Azure portal, click **All resources**, and then search for the server you created.

@@ -1,8 +1,10 @@
 ---
 title: "Upgrade machine learning components in a SQL Server instance | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/11/2017"
-ms.prod: "sql-server-2016"
+ms.date: "10/31/2017"
+ms.prod: 
+ - "sql-server-2016"
+ - "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,15 +17,15 @@ ms.assetid: 4da80998-f929-4fad-a86f-87d09c1a79ef
 caps.latest.revision: 15
 author: "jeannt"
 ms.author: "jeannt"
-manager: "jhubbard"
+manager: "cgronlund"
 ms.workload: "On Demand"
 ---
 # Upgrade machine learning components in a SQL Server instance
 
-This article explains the process of _binding_, which you can use to upgrade the machine learning components used in SQL Server. The process of binding locks the server into an update cadence based on releases of Machine Learning Server rather than SQL Server.
+This article explains the process of _binding_, which you can use to upgrade the machine learning components used in SQL Server. The process of binding locks the server into an update cadence based on releases of Machine Learning Server, rather than using the SQL Server release and update schedule.
 
 > [!IMPORTANT]
-> You do not need to use this upgrade process if you want to get upgrades as a part of SQL Server updates. Whenever you install a new service pack or service release, machine learning components are always automatically upgraded to the latest version. Use this process if you want to upgrade components at a faster pace than is afforded by SQL Server service releases.
+> You do not need to use this upgrade process if you want to get upgrades as a part of SQL Server updates. Whenever you install a new service pack or service release, machine learning components are always automatically upgraded to the latest version. Only use the _binding_ process if you want to upgrade components at a faster pace than is afforded by SQL Server service releases.
 
 If at any time you want to stop upgrading on the Machine Learning Server schedule, you must _unbind_ the instance as described in [this section](#bkmk_Unbind), and uninstall Machine Learning Server.
 
@@ -33,22 +35,22 @@ If at any time you want to stop upgrading on the Machine Learning Server schedul
 
 The process of upgrading the machine learning components is referred to as **binding**, because it changes the support model for SQL Server machine learning components to use the new Modern Software Lifecycle Policy. 
 
-In general, switching to the new licensing model ensures that your data scientists can always use the latest version of R or Python. For more information about the terms of the Modern Lifecycle Policy, see [Support Timeline for Microsoft R Server](https://msdn.microsoft.com/microsoft-r/rserver-servicing-support).
+In general, switching to the new licensing model ensures that your data scientists can always use the latest version of R or Python. For more information about the terms of the Modern Lifecycle Policy, see [Support Timeline for Microsoft R Server](https://docs.microsoft.com/machine-learning-server/resources-servicing-support).
 
 > [!NOTE]
 > The upgrade does not change the support model for the SQL Server database and doesn't change the version of SQL Server.
 
-When you bind an instance, several things happen, which can include an upgrade to the machine learning components:
+When you bind an instance, several things happen:
 
 + The support model is changed. Rather than rely on SQL Server service releases, support is based on the new Modern Lifecycle Policy.
 + The machine learning components associated with the instance are automatically upgraded with each release, in lock-step with the version that is current under the new Modern Lifecycle Policy. 
-+ New R or Python packages might be added. For example, previous updates from Microsoft R Server added new R packages, such as [MicrosoftML](../using-the-microsoftml-package.md), [olapR](../r/how-to-create-mdx-queries-using-olapr.md), and [sqlrutils](../r/how-to-create-a-stored-procedure-using-sqlrutils.md).
++ New R or Python packages might be added. For example, previous updates based on Microsoft R Server 9.1 added new R packages, such as [MicrosoftML](../using-the-microsoftml-package.md), [olapR](../r/how-to-create-mdx-queries-using-olapr.md), and [sqlrutils](../r/how-to-create-a-stored-procedure-using-sqlrutils.md).
 + The instance can no longer be manually updated, except to add new packages.
-+ You gain the option to add pretrained models provided by Microsoft.
++ You get the option to install pretrained models provided by Microsoft.
 
 ## <a name="bkmk_prereqs"></a>Prerequisites
 
-Begin by identifying instances that are candidates for an upgrade. If you run the installer and select the binding option, it returns a list of instances that are compatible with the upgrade. 
+Begin by identifying instances that are candidates for an upgrade. If you run the installer and select the binding option, it returns a list of instances that are compatible with the upgrade.
 
 Refer to the following table for a list of supported upgrades and requirements.
 
@@ -59,7 +61,7 @@ Refer to the following table for a list of supported upgrades and requirements.
 
 ## Bind or upgrade an instance
 
-Microsoft Machine Learning Server for Windows includes a tool that you can use to upgrade the machine learning languages and tools associated with an instance of SQL Server. There are two versions of the tool: a wizard, and a command-line utility.
+Machine Learning Server for Windows includes a tool that you can use to upgrade the machine learning languages and tools associated with an instance of SQL Server. There are two versions of the tool: a wizard, and a command-line utility.
 
 Before you can run either the wizard or the command-line tool, you must download the latest version of the standalone installer for machine learning components.
 
@@ -83,13 +85,13 @@ Before you can run either the wizard or the command-line tool, you must download
 
 4. On successive pages, provide consent to additional licensing conditions for any open source components you selected, such as Microsoft R Open or the Python Anaconda distribution.
 
-5. On the **Almost there** page, make a note of the installation folder. The default folder is `~\Program Files\Microsoft\ML Server`. 
+5. On the **Almost there** page, make a note of the installation folder. The default folder is `~\Program Files\Microsoft\ML Server`.
 
-    If you want to change the installation folder, click **Advanced** to return to the first page of the wizard. However, you must repeat all previous selections. 
+    If you want to change the installation folder, click **Advanced** to return to the first page of the wizard. However, you must repeat all previous selections.
 
 6. If you are installing the components offline, you might be prompted for the location of required machine learning components, such as Microsoft R Open, Python Server, and Python Open.
-    
-During installation, any R or Python libraries used by SQL Server are replaced and Launchpad is updated to use the newer components. That is, if the instance previously used libraries in the default R_SERVICES folder, after upgrade these libraries are removed and the properties for the Launchpad service are changed, to use the libraries in the location you specified.
+
+During the installation process, any R or Python libraries used by SQL Server are replaced and Launchpad is updated to use the newer components. As a result, if the instance previously used libraries in the default R_SERVICES folder, after upgrade these libraries are removed and the properties for the Launchpad service are changed, to use the libraries in the new location.
 
 ### <a name="bkmk_BindCmd"></a>Upgrade using the command line
 

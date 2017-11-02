@@ -1,6 +1,6 @@
 ---
 title: "Lift and shift SQL Server Integration Services workloads to the cloud | Microsoft Docs"
-ms.date: "10/09/2017"
+ms.date: "10/31/2017"
 ms.topic: "article"
 ms.prod: "sql-server-2017"
 ms.technology: 
@@ -46,21 +46,28 @@ You only have to provision the SSIS IR one time. After that, you can use familia
 Data Factory also supports other types of Integration Runtimes. To learn more about the SSIS IR and the other types of Integration Runtimes, see [Integration runtime in Azure Data Factory](https://docs.microsoft.com/en-us/azure/data-factory/concepts-integration-runtime).
 
 ## Prerequisites
-The capabilities described in this topic require SQL Server Data Tools (SSDT) version 17.2 or later, but do not require SQL Server 2017 or SQL Server 2016. When you deploy packages to Azure, the Package Deployment Wizard always upgrades the packages to the latest package format.
+The capabilities described in this topic do not require SQL Server 2017 or SQL Server 2016.
+
+These capabilities require the following versions of SQL Server Data Tools (SSDT):
+-   For Visual Studio 2017, version 15.3 (preview) or later.
+-   For Visual Studio 2015,  version 17.2 or later.
+
+> [!NOTE]
+> When you deploy packages to Azure, the Package Deployment Wizard always upgrades the packages to the latest package format.
 
 For more info about prerequisites in Azure, see [Lift and shift SQL Server Integration Services (SSIS) packages to Azure](https://docs.microsoft.com/en-us/azure/data-factory/tutorial-deploy-ssis-packages-azure).
 
 ## SSIS features on Azure
 
-When you provision an instance of SQL Database to host SSISDB, the Azure Feature Pack for SSIS and the Access Redistributable are installed. These components provide connectivity to Excel and Access files and to various Azure data sources. You can't install third-party components for SSIS at this time.
+When you provision an instance of SQL Database to host SSISDB, the Azure Feature Pack for SSIS and the Access Redistributable are also installed. These components provide connectivity to **Excel and Access** files and to various **Azure** data sources, in addition to the data sources supported by the built-in components. You can't install **third-party components** for SSIS (including third-party components from Microsoft, such as the Attunity and SAP BI components) at this time.
 
-The name of the SQL Database that hosts SSISDB becomes the first part of the four-part name to use when you deploy and manage packages from SSDT and SSMS - `<sql_database_name>.database.windows.net`.
+The **name of the SQL Database** that hosts SSISDB becomes the first part of the four-part name to use when you deploy and manage packages from SSDT and SSMS - `<sql_database_name>.database.windows.net`.
 
-You have to use the project deployment model, not the package deployment model, for projects you deploy to SSISDB on Azure SQL Database.
+You have to use the **project deployment model**, not the package deployment model, for projects you deploy to SSISDB on Azure SQL Database.
 
-You continue to design and build packages on-premises in SSDT, or in Visual Studio with SSDT installed.
+You continue to **design and build packages** on-premises in SSDT, or in Visual Studio with SSDT installed.
 
-For info about how to connect to on-premises data sources from the cloud with Windows authentication, see [Connect to on-premises data sources with Windows Authentication](ssis-azure-connect-with-windows-auth.md).
+For info about how to connect to **on-premises data sources** from the cloud with Windows authentication, see [Connect to on-premises data sources with Windows Authentication](ssis-azure-connect-with-windows-auth.md).
 
 ## Common tasks
 

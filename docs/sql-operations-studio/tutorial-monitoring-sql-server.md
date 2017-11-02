@@ -1,17 +1,19 @@
 ---
 title: Tutorial article for Carbon | Microsoft Docs
 description: This sample describes the article in 115 to 145 characters. Validate using Gauntlet toolbar check icon. Use SEO kind of action verbs here.
-services: sql-database
-author: erickang
-ms.author: erickang
+keywords: 
+keywords: 
+ms.custom: "tools|sos"
+ms.date: "11/01/2017"
+ms.prod: "sql-non-specified"
+ms.reviewer: "alayu; erickang; sanagama; sstein"
+ms.suite: "sql"
+ms.tgt_pltfrm: ""
+ms.topic: "tutorial"
+author: "erickangMSFT"
+ms.author: "erickang"
 manager: craigg
-ms.reviewer: achatter, alayu, erickang, sanagama, sstein
-ms.service: data-tools
-ms.workload: data-tools
-ms.prod: NEEDED
-ms.custom: mvc, tutorial
-ms.topic: article
-ms.date: 10/01/2017
+ms.workload: "Inactive"
 ---
 
 # Monitor database with Carbon

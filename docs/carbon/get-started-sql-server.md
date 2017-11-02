@@ -1,71 +1,80 @@
 ---
-title: Connect and query SQL Server using Carbon | Microsoft Docs
-description: Use Carbon to connect to a SQL Server and run a query
-author: yualan
-ms.author: alayu
+title: Connect and query SQL Server using SQL Operations Studio | Microsoft Docs
+description: Use SQL Operations Studio to connect to SQL Server and run a query
+keywords:
+ms.custom: "tools|sos"
+ms.date: "11/01/2017"
+ms.prod: "sql-non-specified"
+ms.reviewer: "alayu; erickang; sanagama; sstein"
+ms.suite: "sql"
+ms.tgt_pltfrm: ""
+ms.topic: "quickstart"
+author: "yualan"
+ms.author: "alayu"
 manager: craigg
-ms.reviewer: achatter, alayu, erickang, sanagama, sstein
-ms.service: data-tools
-ms.workload: data-tools
-ms.prod: NEEDED
-ms.custom: mvc
-ms.topic: quickstart
-ms.date: 10/01/2017
+ms.workload: "Inactive"
 ---
 
-# Connect and query SQL Server using Carbon
-This topic shows how to get started using Carbon with SQL Server databases, and this Quickstart should take about five minutes.
+# Connect and query SQL Server using [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+This article shows how to get started using [!INCLUDE[name-sos](../includes/name-sos-short.md)] with SQL Server databases.  This quickstart should take about five minutes.
 
 ## Prerequisites
 
-### Windows
-Before starting this quickstart, you must have access to a running SQL Server instance. If you don't have it, [download SQL Server 2017 Developer Edition for Windows](https://www.microsoft.com/en-us/sql-server/sql-server-downloads). **Please remember your username and password.**
+To complete this quickstart, you need [!INCLUDE[name-sos](../includes/name-sos-short.md)], and access to a SQL Server.
 
-To install Carbon with Windows, follow [these directions](download.md#get-carbon-for-windows).
+- [Install [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md).
+
+If you don't have access to a SQL Server, select your platform from the following links:
+- [Windows - Download SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
+- [macOS - Download SQL Server 2017 on Docker](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker)
+- [Linux - Download SQL Server 2017 Developer Edition](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-overview#install)
+
+
+### Windows
+Before starting this quickstart, you must have access to a running SQL Server instance. If you don't have it, [download SQL Server 2017 Developer Edition for Windows](https://www.microsoft.com/en-us/sql-server/sql-server-downloads). **Remember your username and password.**
+
+To install [!INCLUDE[name-sos](../includes/name-sos-short.md)] on Windows, follow [these directions](download.md#get-carbon-for-windows).
 
 ### macOS
-- Before starting this quickstart, please download [Docker](https://docs.docker.com/docker-for-mac/install/#download-docker-for-mac).
+- Before starting this quickstart, download [Docker](https://docs.docker.com/docker-for-mac/install/#download-docker-for-mac).
 
-- You will need access to a running SQL Server instance. On macOS, we will install SQL Server on Docker. Please [follow these instructions to download SQL Server on Docker](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker). Follow the steps up to "Create and Query Data." Please remember your username and password.
+- You need access to a running SQL Server instance. On macOS, we install SQL Server on Docker. Follow [these instructions to download SQL Server on Docker](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker). Follow the steps up to "Create and Query Data." Please remember your username and password.
 
-- To install Carbon with macOS, follow [these directions](download.md#get-carbon-for-macos).
+- To install [!INCLUDE[name-sos](../includes/name-sos-short.md)] on macOS, follow [these directions](download.md#get-carbon-for-macos).
 
 ### Linux
 Before starting this quickstart, you must have access to a running SQL Server instance. If you don't have it, [download SQL Server 2017 Developer Edition on Linux](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-overview#install). 
-**Note:** You only need to follow the steps up to "Create and Query Data", and please make sure you remember your SQL Login and Password that you will have setup after following these tutorials.
+**Note:** You only need to follow the steps up to "Create and Query Data", make sure you remember your SQL Login and Password.
 
-To install Carbon with Linux, follow [these directions](download.md#get-carbon-for-linux).
+To install [!INCLUDE[name-sos](../includes/name-sos-short.md)] on Linux, follow [these directions](download.md#get-carbon-for-linux).
 
 ## Connect to a server
-1. If you do not have a SQL Server instance to connect to, run the following command on docker (requirement for macOS prerequisite).
-   ```bash
-   docker run --name mssql-tutorial -d -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=SqlDevOps2017" -e "MSSQL_PID=Developer" -p "1433:1433" microsoft/mssql-server-linux:latest
-   ```
+
    
-2. When first loading Carbon, a connection page should be displayed. If not, click the **New Connection** icon on the top left.
+1. Start **[!INCLUDE[name-sos](../includes/name-sos-short.md)]**.
+1. The first time you run [!INCLUDE[name-sos](../includes/name-sos-short.md)] the **Connection** page should open. If the **Connection** page doesn't open, click the **New Connection** icon in the **SERVERS** page:
    
    ![New Connection Icon](media/get-started-sql-server/new-connection-icon.png)
 
-3. Windows Authentication is fully supported. For this tutorial, we will use SQL Login authentication type. Please fill the fields as follows:
+1. This article uses *SQL Login*, but *Windows Authentication* is supported. Fill in the fields as follows:
  
-   **Server Name:** localhost
-
-   **Authentication Type:** SQL Login
-
-   **User name:** User name for SQL Server
-
-   **Password:** Password for SQL Server
-
-   **Database Name:** (leave it blank)
-
-   **Server Group:** \<Default\>
+    - **Server Name:** localhost
+    - **Authentication Type:** SQL Login  
+    - **User name:** User name for the SQL Server  
+    - **Password:** Password for the SQL Server  
+    - **Database Name:** leave this field blank 
+    - **Server Group:** \<Default\>  
 
    ![New Connection Screen](media/get-started-sql-server/new-connection-screen.png)
 
-## Create a tutorial database
-1. Right click on your server, **localhost**, in the object explorer and select **New Query.**
 
-2. Copy the snippet below and paste in the query window. Click **Run** to execute the query.
+
+## Create a database
+
+The following steps create a database named **TutorialDB**:
+
+1. Right click on your server, **localhost**, and select **New Query.**
+1. Paste the following snippet into the query window: 
 
    ```sql
    USE master
@@ -81,9 +90,18 @@ To install Carbon with Linux, follow [these directions](download.md#get-carbon-f
    ALTER DATABASE [TutorialDB] SET QUERY_STORE=ON
    GO
    ```
+1. Select **Run** to execute the query.
+
+After the query completes, the new **TutorialDB** appears in the list of databases. If you don't see it, right-click the **Databases** node and select **Refresh**.
+
 
 ## Create a table
-1. Copy the snippet below and paste in the query window.
+
+1. Change the database context to **TutorialDB**:
+
+   ![Change context](media/get-started-sql-server/change-context.png)
+
+1. Paste the following snippet into the query window:
    ```sql
    -- Create a new table called 'Customers' in schema 'dbo'
    -- Drop the table if it already exists
@@ -100,13 +118,13 @@ To install Carbon with Linux, follow [these directions](download.md#get-carbon-f
    );
    GO
    ```
+1. If you added the snippet to the existing query window, select the text you want to execute, and click **Run**.
 
-2. Change the context to **TutorialDB.** Click **Run** to execute the query.
-
-   ![Change context](media/get-started-sql-server/change-context.png)
+After the query completes, the new **Customers** table appears in the list of tables. You might need to right-click the **TutorialDB > Tables** node and select **Refresh**.
 
 ## Insert rows
-Copy the snippet below to insert four rows and paste in the query window. Click **Run** to execute the query.
+
+1. Paste the following snippet into the query window:
    ```sql
    -- Insert rows into table 'Customers'
    INSERT INTO dbo.Customers
@@ -118,17 +136,21 @@ Copy the snippet below to insert four rows and paste in the query window. Click 
       ( 4, N'Jake', N'United States', N'jake@vsdata.io')   
    GO   
    ```
+1. To execute the query, click **Run**.
 
-## View the result
-Copy the snippet below to view all the rows and paste in the query window. Click **Run** to execute the query.
+
+## View the data returned by a query
+1. Paste the following snippet into the query window:
    ```sql
    -- Select rows from table 'Customers'
    SELECT * FROM dbo.Customers;
    ```
+1. To execute the query, click **Run**.
+
    ![Select results](media/get-started-sql-server/select-results.png)
 
-## Save result as Excel
-1. Right click on the results table and save as a **Excel** file. 
+## Save result to an Excel spreadsheet
+1. Right click on the results table and save as an Excel** file. 
 
    ![Save as Excel](media/get-started-sql-server/save-as-excel.png)
 
@@ -139,10 +161,6 @@ View an existing, built-in widget through the dashboard.
 
 ## Next steps
 > [!div class="nextstepaction"]
-> [Apply modern code flow using Carbon](tutorial-modern-code-flow-sql-server.md)
+> [Apply modern code flow using [!INCLUDE[name-sos](../includes/name-sos-short.md)]](tutorial-modern-code-flow-sql-server.md)
 
-> [!div class="nextstepaction"]
-> [Monitor your SQL Server databases using Carbon](tutorial-qds-sql-server.md)
 
-> [!div class="nextstepaction"]
-> [Backup and restore your SQL Server databases using Carbon](tutorial-backup-restore-sql-server.md)

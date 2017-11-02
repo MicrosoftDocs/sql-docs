@@ -1,34 +1,29 @@
 ---
-title: Download and install Carbon | Microsoft Docs
-description: 'Download and Install Carbon for Linux, macOS, or Windows'
-keywords: Carbon, install Carbon, download Carbon
-services: 
-documentationcenter: ''
-author: stevestein
+title: Download and install Microsoft SQL Operations Studio | Microsoft Docs
+description: 'Download and Install Microsoft SQL Operations Studio for Windows, macOS, or Linux'
+keywords: Microsoft SQL Operations Studio, install Microsoft SQL Operations Studio, download Microsoft SQL Operations Studio
+ms.custom: "tools|sos"
+ms.date: "10/31/2017"
+ms.prod: "sql-non-specified"
+ms.reviewer: "alayu; erickang; sanagama; sstein"
+ms.suite: "sql"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+author: "stevestein"
+ms.author: "sstein"
 manager: craigg
-editor: 
-
-ms.assetid: 
-ms.service:
-ms.custom: 
-ms.devlang: na
-ms.topic: article
-ms.tgt_pltfrm: na
-ms.prod: NEEDED
-ms.workload: data-management
-ms.date: 10/19/2017
-ms.author: sstein
+ms.workload: "Inactive"
 ---
-# Download and install Carbon
+# Download and install Microsoft SQL Operations Studio
 
-[Carbon](index.md) is a lightweight, open source, multi-OS and multi-database tool, designed from the ground-up for DBAs and developers. Carbon simplifies configuration, management, monitoring, and troubleshooting of databases. 
+[!INCLUDE[name-sos-short](../includes/name-sos-short.md)] is a free, lightweight, modern database development and management tool that runs on Windows, macOS, and Linux. Use [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] to manage SQL Server running anywhere, Azure SQL Database, and Azure SQL Data Warehouse.   
 
 > [!NOTE]
-> This preview version of Carbon installs by copying a zip (tar) file to your local computer, extracting (expanding) the file, and running the executable.
+> This preview version of [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] installs by copying a zip (tar) file to your local computer, extracting (expanding) the file, and running the executable.
 
 ## Supported Operating Systems
 
-Carbon runs on Linux, Mac, and Windows.
+Carbon runs on Windows, macOS, and Linux.
 
 Carbon is supported on the following platforms:
 
@@ -38,7 +33,7 @@ Carbon is supported on the following platforms:
 | Mac | macOS Sierra (10.12), macOS High Sierra (10.13) |
 | Linux | Ubuntu 16.04 LTS, Red Hat Enterprise Linux 7.3 (RHEL)|
 
-??NEED TO FINALIZE THE ABOVE LIST- I grabbed this info from the mail thread about supported OS's
+??NEED TO FINALIZE THE ABOVE LIST- I grabbed this info from the mail thread about supported OSs
 
 Other Potential Platforms
 - Windows 8.1 (64-bit)
@@ -57,26 +52,14 @@ Other Potential Platforms
 ## Get Carbon for Windows
 
 1. Download [Carbon for Windows](https://github.com/Microsoft/carbon/releases/download/v0.20.0/2017-Sep-27-carbon-windows.zip) to your local computer.
-2. Browse to the downloaded file and extract it.
-3. Run *\Carbon\Carbon-windows\Carbon.exe* [VERIFY PATH]
 
+   > [!IMPORTANT]
+   > Executable files may be blocked by Windows when zip files are downloaded from an external source and extracted. Follow the steps below to unblock the .zip file before extracting.
 
-## Get Carbon for Linux
-
-### Red Hat Enterprise
-
-- yum install: `$ sudo yum install -y mssql-Carbon`
-- Offline installation: `$ sudo yum localinstall mssql-server_versionnumber.x86_64.rpm`
-
-### SUSE
-
-- zypper install: `$ sudo zypper install mssql-Carbon`
-- Offline installation: `$ sudo zypper install mssql-server_versionnumber.x86_64.rpm`
-
-### Ubuntu
-
-- apt-get install: `$ sudo apt-get update sudo apt-get install -y mssql-server`
-- Offline installation: `$ sudo dpkg -i mssql-server_versionnumber_amd64.deb`
+1. Right-click the **.zip** file, and select **Properties**.
+1. On the **General** tab, select **Unblock**, and click **Apply**.
+1. Browse to the downloaded file and extract it.
+2. Run *\Carbon\Carbon-windows\Carbon.exe* [VERIFY PATH]
 
 
 ## Get Carbon for macOS
@@ -92,9 +75,24 @@ Other Potential Platforms
       ```carbon .```
 
 
-## Uninstalling Carbon
+## Get Carbon for Linux
 
-To uninstall any flavor of the Carbon preview, just delete the files.
+1. Open a new Terminal window.
+2. Type the following commands to extract the file and launch Carbon:
+
+```bash
+cd ~
+cp ~/Downloads/pgi3-carbon-linux-x64.tar.gz ~
+tar -xvf ~/pgi3-carbon-linux-x64.tar.gz
+echo 'export PATH="$PATH:~/carbon-linux-x64"' >> ~/.bashrc
+source .bashrc
+carbon .
+```
+
+
+## Uninstall Carbon
+
+To uninstall the [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] preview, delete the files.
 
 ## Next Steps
 

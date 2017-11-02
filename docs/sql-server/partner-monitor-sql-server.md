@@ -47,7 +47,7 @@ To learn more about some of our other partners, see [High availability, and disa
 <!--Website links -->
 
 [idera_website]:https://www.idera.com/productssolutions/sqlserver/sqldiagnosticmanager
-[sentryone_website]:www.sentryone.com 
+[sentryone_website]:http://www.sentryone.com 
 [quest_website]:https://www.quest.com/products/spotlight-on-sql-server-enterprise
 <!--Get Started Links-->
 

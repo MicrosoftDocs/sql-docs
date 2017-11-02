@@ -20,7 +20,7 @@ This article shows how to get started using [!INCLUDE[name-sos](../includes/name
 
 ## Prerequisites
 
-To complete this quickstart, you need !INCLUDE[name-sos](../includes/name-sos-short.md), and access to a SQL Server where you have *CREATE DATABASE* permissions.
+To complete this quickstart, you need [!INCLUDE[name-sos](../includes/name-sos-short.md)], and access to a SQL Server where you have *CREATE DATABASE* permissions.
 
 - [Install [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md).
 
@@ -51,12 +51,12 @@ To install [!INCLUDE[name-sos](../includes/name-sos-short.md)] on Linux, follow 
 ## Connect to a server
 
    
-1. Start **SQL Operations Studio**.
-1. The first time you run SQL Operations Studio the **Connection** page should open. If the **Connection** page doesn't open, click the **New Connection** icon in the **SERVERS** page:
+1. Start **[!INCLUDE[name-sos](../includes/name-sos-short.md)]**.
+1. The first time you run [!INCLUDE[name-sos](../includes/name-sos-short.md)] the **Connection** page should open. If the **Connection** page doesn't open, click the **New Connection** icon in the **SERVERS** page:
    
    ![New Connection Icon](media/get-started-sql-server/new-connection-icon.png)
 
-1. This tutorial uses *SQL Login*, but *Windows Authentication* is supported. Fill the fields as follows:
+1. This article uses *SQL Login*, but *Windows Authentication* is supported. Fill in the fields as follows:
  
     - **Server Name:** localhost
     - **Authentication Type:** SQL Login  

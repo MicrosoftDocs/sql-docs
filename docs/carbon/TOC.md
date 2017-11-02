@@ -1,5 +1,5 @@
-# [Carbon Documentation](index.md)
-# [Download and Install Carbon](download.md)
+# [SQL Operations Studio Documentation](index.md)
+# [Download and Install SQL Operations Studio](download.md)
 # [FAQ](faq.md)
 # [Overview](overview.md)
 # Quickstarts
@@ -26,5 +26,5 @@
 ## [Windows authentication (Kerberos)](enable-kerberos.md)
 # Reference
 # Resources
-## [Carbon GitHub repo](https://www.github.com/Microsoft/Carbon)
+## [SQL Operations Studio GitHub repo](https://www.github.com/Microsoft/Carbon)
 # [Usage Data Collection](usage-data-collection.md)

@@ -1,34 +1,39 @@
 ---
-title: Connect and query an Azure SQL database using Carbon | Microsoft Docs
-description: Use Carbon to connect to a SQL database and run a query
-author: yualan
-ms.author: alayu
+title: Connect and query an Azure SQL database using SQL Operations Studio | Microsoft Docs
+description: Use SQL Operations Studio to connect to a SQL database and run a query
+keywords:
+ms.custom: "tools|sos"
+ms.date: "11/01/2017"
+ms.prod: "sql-non-specified"
+ms.reviewer: "alayu; erickang; sanagama; sstein"
+ms.suite: "sql"
+ms.tgt_pltfrm: ""
+ms.topic: "quickstart"
+author: "yualan"
+ms.author: "alayu"
 manager: craigg
-ms.reviewer: achatter, alayu, erickang, sanagama, sstein
-ms.service: data-tools
-ms.workload: data-tools
-ms.prod: NEEDED
-ms.custom: mvc
-ms.topic: quickstart
-ms.date: 10/01/2017
+ms.workload: "Inactive"
 ---
-# Azure SQL Database: Use Carbon to connect and query data
+# Azure SQL Database: Use [!INCLUDE[name-sos](../includes/name-sos-short.md)] to connect and query data
 
-This quickstart demonstrates how to use Carbon to connect to an Azure SQL database, and then use Transact-SQL statements to create, insert, and select data in the database.
+This quickstart demonstrates how to use [!INCLUDE[name-sos](../includes/name-sos-short.md)] to connect to an Azure SQL database, and then use Transact-SQL (T-SQL)statements to create, insert, and select data.
 
 ## Prerequisites
 
-This quickstart uses as its starting point the resources created in one of these quick starts:
+To complete this quickstart, you need !INCLUDE[name-sos](../includes/name-sos-short.md), and an Azure SQL server where you have *CREATE DATABASE* permissions.
 
-- [Create DB - Portal](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-get-started-portal)
-- [Create DB - CLI](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-get-started-cli)
-- [Create DB - PowerShell](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-get-started-powershell)
+- [Install [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md).
 
-Before you start, install Carbon by following [these directions](download.md).
+If you don't already have an Azure SQL server, complete any one of the following Azure SQL Database quickstarts:
 
-## SQL server connection information
+- [Create DB - Portal](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal)
+- [Create DB - CLI](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-cli)
+- [Create DB - PowerShell](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-powershell)
 
-Get the connection information needed to connect to the Azure SQL database. You will need the fully qualified server name, database name, and login information in the next procedures.
+
+## Get your Azure SQL server connection string
+
+Get the connection information needed to connect to the Azure SQL database. You need the fully qualified server name, database name, and login information in the next procedures.
 
 1. Log in to the [Azure portal](https://portal.azure.com/).
 
@@ -43,39 +48,34 @@ Get the connection information needed to connect to the Azure SQL database. You 
 
 ## Connect to your database
 
-Use Carbon to establish a connection to your Azure SQL Database server.
+Use [!INCLUDE[name-sos](../includes/name-sos-short.md)] to establish a connection to your Azure SQL Database server.
 
-> [!IMPORTANT]
-> Before continuing, make sure that you have your server, database, and login information ready. Once you begin entering the connection profile information, if you change your focus from Carbon, you have to restart creating the connection profile.
->
-
-1. When first loading Carbon, a connection page should be displayed. If not, click the **New Connection** icon on the top left.
+1. The first time you run [!INCLUDE[name-sos](../includes/name-sos-short.md)] the **Connection** page should open. If the **Connection** page doesn't open, click the **New Connection** icon in the **SERVERS** page:
    
    ![New Connection Icon](media/get-started-sql-database/new-connection-icon.png)
 
-2. Follow the prompts to specify the connection properties for the new connection profile. After specifying each value, press **ENTER** to continue. 
+2. This article uses *SQL Login*, but *Windows Authentication* is also supported. Fill in the fields as follows:
 
-   | Setting       | Suggested value | Description |
-   | ------------ | ------------------ | ------------------------------------------------- | 
-   | **Authentication** | SQL Login| SQL Authentication is the only authentication type that we have configured in this tutorial. |
-   | **User name** | The server admin account | This is the account that you specified when you created the server. |
-   | **Password (SQL Login)** | The password for your server admin account | This is the password that you specified when you created the server. |
-   | **Save Password?** | Yes or No | Select Yes if you do not want to enter the password each time. |
-   | **Database name** | *leave blank* | The name of the database to which to connect. |
-   | **Server Group** | Select \<Default\> | If you created a server group, you can set to a specific server group. |
+   | Setting | Suggested value | 
+   | :--- | :--- |
+   | **Authentication** | SQL Login | 
+   | **User name** | The server admin account | 
+   | **Password (SQL Login)** | The password for your Azure SQL server | 
+   | **Save Password?** | Yes or No - Select Yes if you do not want to enter the password each time. |
+   | **Database name** | *leave blank* | 
+   | **Server Group** | Select \<Default\> | 
 
    ![New Connection Icon](media/get-started-sql-database/new-connection-screen.png)  
 
-3. If you are successfully connected, ignore this step. If you see the following screen, you will need to register your IP address. You can do this through Carbon by clicking add an account, logging in with your Azure credentials, and then adding your IP.
+3. If you are successfully connected, skip ahead to the next section. If you see the *Create firewall rule* screen, you need to register your IP address. Add an account, and click **OK**.
 
    ![Firewall image](media/get-started-sql-database/setup-firewall-ip.png)  
 
-4. You should see your connection in the object explorer.
 
 ## Create a tutorial database
-1. Right click on your server in the object explorer and select **New Query.**
+1. Right click on your Azure SQL server in the SERVERS screen and select **New Query.**
 
-2. Copy the snippet below and paste in the query window. Click **Run** to execute the query.
+1. Paste the following snippet into the query window.
 
    ```sql
    IF NOT EXISTS (
@@ -89,6 +89,7 @@ Use Carbon to establish a connection to your Azure SQL Database server.
    ALTER DATABASE [TutorialDB] SET QUERY_STORE=ON
    GO
    ```
+1. To execute the query click **Run**.
 
 ## Create a table
 1. Copy the snippet below and paste in the query window.
@@ -161,10 +162,4 @@ Or instead, to delete the newly created server:
 
 ## Next steps
 > [!div class="nextstepaction"]
-> [Apply modern code flow using Carbon](tutorial-modern-code-flow-sql-server.md)
-
-> [!div class="nextstepaction"]
-> [Monitor your SQL Server databases using Carbon](tutorial-monitoring-sql-server.md)
-
-> [!div class="nextstepaction"]
-> [Backup and restore your SQL Server databases using Carbon](tutorial-backup-restore-sql-server.md)
+> [Apply modern code flow using [!INCLUDE[name-sos](../includes/name-sos-short.md)]](tutorial-modern-code-flow-sql-server.md)

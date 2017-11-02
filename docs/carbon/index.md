@@ -2,15 +2,15 @@
 layout: LandingPage
 ---
 
-#Carbon Documentation
+# Microsoft SQL Operations Studio
 
-Carbon is a lightweight, open source, multi-OS and multi-database tool, designed from the ground-up for DBAs and developers. Carbon simplifies configuration, management, monitoring, and troubleshooting of databases. 
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] is a lightweight, open source, multi-OS and multi-database tool, designed from the ground-up for DBAs and developers. [!INCLUDE[name-sos](../includes/name-sos-short.md)] simplifies configuration, management, monitoring, and troubleshooting of databases. 
 
-With the ability to run on the platform of your choice (Linux, macOS, or Windows), Carbon enables a modern database management experience, for the databases you work with, wherever they're running; Linux, Windows, Azure, containers, VMs, AWS, Google cloud, etc. 
+With the ability to run on the platform of your choice (Linux, macOS, or Windows), [!INCLUDE[name-sos](../includes/name-sos-short.md)] enables a modern database management experience, for the databases you work with, wherever they're running; Linux, Windows, Azure, containers, VMs, AWS, Google cloud, etc. 
 
-Carbon brings your databases into the devops lifecycle/pipeline.
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] brings your databases into the devops lifecycle/pipeline.
 
-***[Download & Install Carbon](download.md)***
+***[Download & Install [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)***
 
 <table style="width:100%">
   <tr>
@@ -19,7 +19,7 @@ Carbon brings your databases into the devops lifecycle/pipeline.
   </tr>
   <tr>
     <td>**Best in class Query Editor**</td>
-    <td>Carbon offers a modern, keyboard-focused T-SQL code experience and makes your everyday tasks easier with built-in features, such as multiple tab windows, a rich T-SQL editor, IntelliSense, keyword completion, code snippets & code navigation, and source control integration (Git and TFS). You can execute ad-hoc SQL queries, view & save results as text, JSON or Excel, edit data, organize your favorite database connections, and browse database objects in a familiar object browsing experience. </td>
+    <td>[!INCLUDE[name-sos](../includes/name-sos-short.md)] offers a modern, keyboard-focused T-SQL code experience and makes your everyday tasks easier with built-in features, such as multiple tab windows, a rich T-SQL editor, IntelliSense, keyword completion, code snippets & code navigation, and source control integration (Git and TFS). You can execute ad hoc SQL queries, view & save results as text, JSON or Excel, edit data, organize your favorite database connections, and browse database objects in a familiar object browsing experience. </td>
   </tr>
   <tr>
     <td>**Customizable Dashboards/Insightful Monitoring**</td>
@@ -31,21 +31,8 @@ Carbon brings your databases into the devops lifecycle/pipeline.
   </tr>
   <tr>
     <td>**Integrated Terminal**</td>
-    <td>Use your favorite command line tools (e.g. Bash, PowerShell, sqlcmd, bcp and ssh) in the Integrated Terminal window right within the Carbon user interface.</td> 
+    <td>Use your favorite command-line tools (for example, Bash, PowerShell, sqlcmd, bcp, and ssh) in the Integrated Terminal window right within the [!INCLUDE[name-sos](../includes/name-sos-short.md)] user interface.</td> 
   </tr>
 </table> 
 
 
-## 
-
-
-<!--
-<div class="downloadHolder">
-    <a href="https://www.microsoft.com/sql-server/sql-server-on-linux">
-        <div class="img"></div>
-        <div class="text">
-            Download the documentation
-        </div>
-    </a>
-</div>
--->

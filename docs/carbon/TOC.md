@@ -1,5 +1,5 @@
-# [SQL Operations Studio Documentation](index.md)
-# [Download and Install SQL Operations Studio](download.md)
+# [Microsoft SQL Operations Studio](index.md)
+# [Install SQL Operations Studio](download.md)
 # [FAQ](faq.md)
 # [Overview](overview.md)
 # Quickstarts

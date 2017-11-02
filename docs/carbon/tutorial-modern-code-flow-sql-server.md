@@ -1,6 +1,6 @@
 ---
-title: Run SQL queries using Microsoft SQL Operations Studio | Microsoft Docs
-description: This tutorial...
+title: Working with T-SQL using Microsoft SQL Operations Studio | Microsoft Docs
+description: This tutorial walks through the key features in SQL Operations Studio that simplify using T-SQL.
 keywords: 
 ms.custom: "tools|sos"
 ms.date: "11/01/2017"
@@ -15,7 +15,7 @@ manager: craigg
 ms.workload: "Inactive"
 ---
 
-# Create and run queries using [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# Working with T-SQL using [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 Creating and running queries, stored procedures, scripts, etc. are the core tasks of database professionals. This tutorial walks through the key features in [!INCLUDE[name-sos](../includes/name-sos-short.md)] that simplify using T-SQL.
 
@@ -29,51 +29,61 @@ In this tutorial, you learn how to use [!INCLUDE[name-sos-short](../includes/nam
 
 ## Prerequisites
 
-To complete this tutorial, [install [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md).
+This tutorial requires the *TutorialDB* database. To create the *TutorialDB* database, complete one of the following quickstarts:
+
+- [Connect and query SQL Server using [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](get-started-sql-server.md)
+- [Connect and query Azure SQL Database using [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](get-started-sql-database.md)
+- [Connect and query SQL Data Warehouse using [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](get-started-sql-dw.md)
 
 
-## Quickly find a table and edit data
-[!INCLUDE[name-sos-short](../includes/name-sos-short.md)] provides a quick database schema object search functionality using 'Explorer widget' in a dashboard and quickly launch a task based on an object type such as 'Edit data' for a table.
 
-1. Open Servers viewlet with ```CTRL+G``` and expand ```Databases``` folder. Select ```TutorialDB```. 
+## Quickly locate a database object and perform a common task
 
-2. Open TutorialDB Dashboard using ```Manage``` context menu with right-mouse-click.
+[!INCLUDE[name-sos-short](../includes/name-sos-short.md)] provides a search widget to quickly find database objects. The results list provides a context menu for common tasks relevant to the selected object, such as *Edit Data* for a table.
 
-   ![manage context menu](./media/tutorial-sql-server/insight-open-dashboard.png)
+1. Open the SERVERS sidebar (**CTRL+G**), expand **Databases**, and select **TutorialDB**. 
 
-3. Type ```Customer``` in Search widget as shown below.
+1. Open the *TutorialDB Dashboard* by selecting **Manage** from the context menu.
 
-4. Select ```dbo.Customer``` table from Search widget on the dashboard and run ```Edit data``` context menu with right-mouse-click.
+   ![context menu - Manage](./media/tutorial-sql-server/insight-open-dashboard.png)
+
+1. Locate the *Customers* table by typing *cus* in the search widget.
+1. Right-click **dbo.Customers** and select **Edit data**.
 
    ![quick search widget](./media/tutorial-sql-server/quick-search-widget.png)
 
-5. Select ```Email``` column in the first row and type in ```jared@vsdata.io```.
-
-6. Click Refresh. The result is shown in the screenshot below.
+1. Edit the **Email** column in the first row, type *jared@vsdata.io*, and click outside the cell to save the change.
 
    ![edit data](./media/tutorial-sql-server/edit-data.png)
 
-## Use T-SQL snippet and IntelliSense to create a stored procedure
+## Use T-SQL snippets and IntelliSense to create a stored procedure
 
-1. Press 'CTRL + N' to open a new editor.
+### Use snippets in [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]
 
-2. Type ```sql``` in the editor, then select ```sqlCreateStoredProcedure```. Press ```Tab```. [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] creates a new stored procedure snippet.
+1. Open a new query editor by pressing **CTRL + N**.
+
+2. Type **sql** in the editor, arrow down to **sqlCreateStoredProcedure**, and press the *Tab* key to load the new stored procedure snippet.
 
    ![snippet-list](./media/tutorial-sql-server/snippet-list.png)
 
-3. Type ```GetCustomer```. All ```StoredProcedureName``` entries will change to the specified name. 
+3. Type *getCustomer* and all *StoredProcedureName* entries will change to *getCustomer*. 
+
    ![snippet](./media/tutorial-sql-server/snippet.png)
 
-4. Press ```Tab``` and then type ```dbo``` for ```SchemaName``` entry.
+4. Press *Tab* and then type *dbo* to replace the *SchemaName* entries.
 
-5. Type in the following parameter definition.
+5. Replace  ```@param1...``` with:
 
    ```sql
-   CREATE PROCEDURE dbo.GetCustomer
        @ID int
    ```
 
-6. Using T-SQL Intellisense, type in the following SELECT statement in the body of procedure. Tip: Type in ```SELECT FROM dbo.Customers c``` first and type the rest as IntelliSense guides you. 
+### Use IntelliSense in [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]
+??THIS DOES NOT WORK AND NEEDS HELP!!??
+1. Type in the following SELECT statement in the body of procedure. 
+
+> [!TIP]
+> Type *SELECT FROM dbo.Customers c*, and complete the rest as IntelliSense guides you.
 
    ```sql
     SELECT  c.CustomersID, 
@@ -87,31 +97,33 @@ To complete this tutorial, [install [!INCLUDE[name-sos](../includes/name-sos-sho
 
    ![snippet-scripting](./media/tutorial-sql-server/snippet-scripting.png)
 
-7. Press ```F5``` and execute the statement.
+7. Delete the example arguments in the EXECUTE statement. The final statement should be: ```EXECUTE dbo.getCustomer 1```.
+
+
+1. To create the stored procedure and give it a test run, press **F5**.
 
 ## Use Peek Definition and Go to Definition 
 
-1. Press 'CTRL + N' to open a new editor. 
+1. Open a new editor by pressing **CTRL + N**. 
 
-2. Type and select ```sqlCreateStoredProcedure``` from the snippet suggestion list. Type in ```SetCustomer``` for ```StoredProcedureName``` and ```dbo``` for ```SchemaName```.
-3. Specify following parameter:
+2. Type and select **sqlCreateStoredProcedure** from the snippet suggestion list. Type in **setCustomer** for **StoredProcedureName** and **dbo** for **SchemaName**
+3. Replace the @param lines with the following parameter definition:
 
    ```sql
-   CREATE PROCEDURE dbo.SetCustomer
        @json_val nvarchar(max)
    ```
 
-4. In the body of procedure, type in following:
+4. Replace the body of the stored procedure with the following:
    ```sql
    -- body of the stored procedure
    INSERT INTO dbo.Customers
    ```
 
-5. Right-mouse-click on ```dbo.Customers``` and run ```Peek Definition```
+5. Right-click **dbo.Customers** and select **Peek Definition**.
 
    ![peek definition](./media/tutorial-sql-server/peek-definition.png)
 
-6. By referencing the table defintion in the peek definition, complete the following insert statement.
+6. By referencing the table defintion in the peek definition, complete the following insert statement.??WHAT EXACTLY AM I DOING HERE - JUST LOOKING OR DOES THIS HELP ME CREATE THE STATEMENT??
 
    ```sql
    INSERT INTO dbo.Customers (CustomersID, Name, Location, Email)
@@ -125,18 +137,18 @@ To complete this tutorial, [install [!INCLUDE[name-sos](../includes/name-sos-sho
 7. The final statement should be:
 
    ```sql
-   -- Create a new stored procedure called 'SetCustomer' in schema 'dbo'
+   -- Create a new stored procedure called 'setCustomer' in schema 'dbo'
    -- Drop the stored procedure if it already exists
    IF EXISTS (
    SELECT *
        FROM INFORMATION_SCHEMA.ROUTINES
        WHERE SPECIFIC_SCHEMA = N'dbo'
-       AND SPECIFIC_NAME = N'SetCustomer'
+       AND SPECIFIC_NAME = N'setCustomer'
    )
-   DROP PROCEDURE dbo.SetCustomer
+   DROP PROCEDURE dbo.setCustomer
    GO
    -- Create the stored procedure in the specified schema
-   CREATE PROCEDURE dbo.SetCustomer
+   CREATE PROCEDURE dbo.setCustomer
        @json_val nvarchar(max) 
    AS
        -- body of the stored procedure
@@ -151,25 +163,23 @@ To complete this tutorial, [install [!INCLUDE[name-sos](../includes/name-sos-sho
    GO
    ```
 
-8. Press ```F5``` and execute the script.
+8. Press **F5** and execute the script.
 
-## Save as Json
+## Save query results as JSON
 
-In this step, we will walkthrough how Save as JSON can make a developing and testing application login in stored procedures and using JSON as a data format in applications.
+In this step, we walkthrough how the **Save as JSON** option makes developing and testing application login in stored procedures and using JSON as a data format in applications.
 
-1. First, run ```SELECT TOP 1000 Rows``` from dbo.Customers table.
+1. **SELECT TOP 1000 Rows** from the *dbo.Customers* table.
 
-2. Select and highlight the first row in the result view.
+2. Select the first row in the results view and click **Save as JSON**.  1. Click **Save**, and it opens the highlighted row in JSON format.
 
-3. Click ```Save as Json```. It opens the highlighted row in json format.
+   ![save as JSON](./media/tutorial-sql-server/save-as-json.png)
 
-   ![save as json](./media/tutorial-sql-server/save-as-json.png)
+4. Select the JSON data and copy it.
 
-4. Select the json data and copy with ```CTRL+C```.
+5. Open a new query for *TutorialDB* and paste the JSON data into the new query editor. 
 
-5. Open a new query for TutorialDB and paste the json data into the new query editor. 
-
-6. Complete the following test script using the json data as a template in the previous step. Modify the values for ```CustomerID```, ```Name```, ```Location``` and ```Email```.
+6. Complete the following test script using the json data as a template in the previous step. Modify the values for *CustomerID*, *Name*, *Location*, and *Email*.
 
    ```sql
    -- example to execute the stored procedure we just created
@@ -189,7 +199,7 @@ In this step, we will walkthrough how Save as JSON can make a developing and tes
    EXECUTE dbo.getCustomer @ID = 5
    ```
 
-7. Press ```F5``` and execute the script. It inserts a new Customer and returns the new Customer's information in json format. Click the result.
+7. Execute the script by pressing *F5**. The script inserts a new customer and returns the new customer's information in JSON format. Click the result to open a formatted view.
 
    ![test result](./media/tutorial-sql-server/test-result.png)
 

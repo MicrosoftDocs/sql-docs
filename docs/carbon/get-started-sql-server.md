@@ -20,14 +20,14 @@ This article shows how to get started using [!INCLUDE[name-sos](../includes/name
 
 ## Prerequisites
 
-To complete this quickstart, you need [!INCLUDE[name-sos](../includes/name-sos-short.md)], and access to a SQL Server where you have *CREATE DATABASE* permissions.
+To complete this quickstart, you need [!INCLUDE[name-sos](../includes/name-sos-short.md)], and access to a SQL Server.
 
 - [Install [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md).
 
-If you don't have access to a SQL Server, the following links get you setup for free:
-- [Download SQL Server 2017 Developer Edition for Windows](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
-- [Download SQL Server 2017 on Docker](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker)
-- [Download SQL Server 2017 Developer Edition on Linux](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-overview#install)
+If you don't have access to a SQL Server, select your platform from the following links:
+- [Windows - Download SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
+- [macOS - Download SQL Server 2017 on Docker](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker)
+- [Linux - Download SQL Server 2017 Developer Edition](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-overview#install)
 
 
 ### Windows
@@ -124,7 +124,7 @@ After the query completes, the new **Customers** table appears in the list of ta
 
 ## Insert rows
 
-1. Paste the following snippet into the query window: 
+1. Paste the following snippet into the query window:
    ```sql
    -- Insert rows into table 'Customers'
    INSERT INTO dbo.Customers

@@ -20,11 +20,11 @@ This quickstart demonstrates how to use [!INCLUDE[name-sos](../includes/name-sos
 
 ## Prerequisites
 
-To complete this quickstart, you need !INCLUDE[name-sos](../includes/name-sos-short.md), and an Azure SQL server where you have *CREATE DATABASE* permissions.
+To complete this quickstart, you need [!INCLUDE[name-sos](../includes/name-sos-short.md)], and an Azure SQL server where you have *CREATE DATABASE* permissions.
 
 - [Install [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md).
 
-If you don't already have an Azure SQL server, complete any one of the following Azure SQL Database quickstarts:
+If you don't already have an Azure SQL server, complete one of the following Azure SQL Database quickstarts:
 
 - [Create DB - Portal](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal)
 - [Create DB - CLI](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-cli)

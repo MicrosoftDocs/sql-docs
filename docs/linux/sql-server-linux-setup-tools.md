@@ -9,7 +9,7 @@ ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
-ms.workload: "Inactive"
+ms.workload: "Active"
 ---
 # Install sqlcmd and bcp the SQL Server command-line tools on Linux
 

@@ -1,81 +1,83 @@
 ---
-title: Carbon User and Workspace Settings | Microsoft Docs
-description: How to modify Carbon User and Workspace Settings.
-services: sql-database
-author: yualan
-ms.author: alayu
+title: SQL Operations Studio User and Workspace Settings | Microsoft Docs
+description: How to modify SQL Operations Studio User and Workspace Settings.
+keywords: 
+ms.custom: "tools|sos"
+ms.date: "11/01/2017"
+ms.prod: "sql-non-specified"
+ms.reviewer: "alayu; erickang; sanagama; sstein"
+ms.suite: "sql"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+author: "yualan"
+ms.author: "alayu"
 manager: craigg
-ms.reviewer: achatter, alayu, erickang, sanagama, sstein
-ms.service: data-tools
-ms.workload: data-tools
-ms.prod: NEEDED
-ms.topic: article
-ms.date: 10/05/2017
+ms.workload: "Inactive"
 ---
 # User and Workspace Settings
 
-It is easy to configure Carbon to your liking through settings. Nearly every part of Carbon's editor, user interface, and functional behavior has options you can modify.
+It is easy to configure [!INCLUDE[name-sos](../includes/name-sos-short.md)] to your liking through settings. Nearly every part of [!INCLUDE[name-sos](../includes/name-sos-short.md)]'s editor, user interface, and functional behavior has options you can modify.
 
-Carbon provides two different scopes for settings:
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] provides two different scopes for settings:
 
-* **User** These settings apply globally to any instance of Carbon you open
-* **Workspace** These settings are stored inside your workspace in a `.carbon` folder and only apply when the workspace is opened. Settings defined on this scope override the user scope.
+* **User** These settings apply globally to any instance of [!INCLUDE[name-sos](../includes/name-sos-short.md)] you open
+* **Workspace** These settings are stored inside your workspace in a `.[!INCLUDE[name-sos](../includes/name-sos-short.md)]` folder and only apply when the workspace is opened. Settings defined on this scope override the user scope.
 
 ## Creating User and Workspace Settings
 
-The menu command **File** > **Preferences** > **Settings** (**Code** > **Preferences** > **Settings** on Mac) provides entry to configure user and workspace settings. You are provided with a list of Default Settings. Copy any setting that you want to change to the appropriate `settings.json` file. The tabs on the right let you switch quickly between the user and workspace settings files.
+The menu command **File** > **Preferences** > **Settings** (**Code** > **Preferences** > **Settings** on Mac) provides the entry point to configure user and workspace settings. You are provided with a list of Default Settings. Copy any setting that you want to change to the appropriate `settings.json` file. The tabs on the right let you switch quickly between the user and workspace settings files.
 
 You can also open the user and workspace settings from the **Command Palette** (**Ctrl+Shift+P**) with **Preferences: Open User Settings** and **Preferences: Open Workspace Settings** or use the keyboard shortcut (**Ctrl+,**).
 
-In the example below, we disabled line numbers in the editor and configured line wrapping to wrap automatically based on the size of the editor.
+The following example disables line numbers in the editor and configures lines of text to wrap automatically based on the size of the editor.
 
 ![Example Settings](media/settings/sample-settings.png)
 
-Changes to settings are reloaded by Carbon after the modified `settings.json` file is saved.
+Changes to settings are reloaded by [!INCLUDE[name-sos](../includes/name-sos-short.md)] after the modified `settings.json` file is saved.
 
->**Note:** Workspace settings are useful for sharing project specific settings across a team.
+>**Note:** Workspace settings are useful for sharing project-specific settings across a team.
 
 ## Settings File Locations
 
 Depending on your platform, the user settings file is located here:
+??VERIFY THESE PLACEHOLDERS??
+* **Windows** `%APPDATA%\sqlopsstudio\User\settings.json`
+* **Mac** `$HOME/Library/Application Support/sqlopsstudio/User/settings.json`
+* **Linux** `$HOME/.config/sqlopsstudio/User/settings.json`
 
-* **Windows** `%APPDATA%\Carbon\User\settings.json`
-* **Mac** `$HOME/Library/Application Support/Carbon/User/settings.json`
-* **Linux** `$HOME/.config/Carbon/User/settings.json`
-
-The workspace setting file is located under the `.carbon` folder in your project.
+The workspace setting file is located under the `.[!INCLUDE[name-sos](../includes/name-sos-short.md)]` folder in your project.
 
 ## Default Settings
 
-When you open settings, we show **Default Settings** to search and discover settings you are looking for. When you search using the big Search bar, it will not only show and highlight the settings matching your criteria, but also filter out those which are not matching. This makes finding settings quick and easy. There are actions available inside **Default Settings** and `settings.json` editors which will help you quickly copy or update a setting.
+When you open settings, **Default Settings** appear so you can search and discover the settings you are looking for. When you search using the Search bar, it not only shows and highlights the settings matching your criteria, but also filters out settings that are not matching. This makes finding settings quick and easy. There are actions available inside **Default Settings** and *settings.json* editors that help you quickly copy or update a setting.
 
 <p>
   <img alt="settings groups" src="https://az754404.vo.msecnd.net/public/default-settings.gif" />
 </p>
 
-**Note**: Carbon extensions can also add their own custom settings and they will be visible in the **Default Settings** list at runtime.
+
 
 ### Settings groups
 
-Default settings are represented in groups so that you can navigate them easily. It has **Most Commonly Used** group on the top to see the most common customizations done by Carbon users.
+Default settings are represented in groups so that you can navigate them easily. It has **Most Commonly Used** group on the top to see the most common customizations done by [!INCLUDE[name-sos](../includes/name-sos-short.md)] users.
 
 ![Settings Groups](media/settings/settings-groups.png)
 
-Here is the [copy of default settings](#default-settings) that comes with Carbon.
+Here is the [copy of default settings](#default-settings) that comes with [!INCLUDE[name-sos](../includes/name-sos-short.md)].
 
 ## Language specific editor settings
 
-To customize your editor by language, run the global command **Preferences: Configure language specific settings...** (command id: `workbench.action.configureLanguageBasedSettings`) from the **Command Palette** (`kb(workbench.action.showCommands)`) which opens the language picker. Selecting the language you want, opens the Settings editor with the language entry where you can add applicable settings.
+To customize your editor by language, run the global command **Preferences: Configure language-specific settings...** (command id: `workbench.action.configureLanguageBasedSettings`) from the **Command Palette** (`kb(workbench.action.showCommands)`) which opens the language picker. Selecting the language you want, opens the Settings editor with the language entry where you can add applicable settings.
 
-![Configure language specific settings command](media/settings/pref-config-lang-settings.png)
+![Configure language-specific settings command](media/settings/pref-config-lang-settings.png)
 
-![Select language drop down](media/settings/lang-selection.png)
+![Select language](media/settings/lang-selection.png)
 
 ![Add language specific setting](media/settings/lang-based-settings.png)
 
-If you have a file open and you want to customize the editor for this file type, click on the Language Mode in the Status Bar to the bottom-right of the Carbon window. This opens the Language Mode picker with an option **Configure 'language_name' language based settings...**. Selecting this opens the Settings editor with the language entry where you can add applicable settings.
+If you have a file open and you want to customize the editor for this file type, click on the Language Mode in the Status Bar to the bottom-right of the [!INCLUDE[name-sos](../includes/name-sos-short.md)] window. This opens the Language Mode picker with an option **Configure 'language_name' language-based settings...**. Selecting this opens the Settings editor with the language entry where you can add applicable settings.
 
-You can also configure language based settings by directly opening `settings.json`. You can scope them to the workspace by placing them in the Workspace settings just like other settings. If you have settings defined for a language in both user and workspace scopes, then they are merged by giving precedence to the ones defined in the workspace.
+You can also configure language-based settings by directly opening `settings.json`. You can scope them to the workspace by placing them in the Workspace settings just like other settings. If you have settings defined for a language in both user and workspace scopes, then they are merged by giving precedence to the ones defined in the workspace.
 
 The following examples customize editor settings for language modes `typescript` and `markdown`.
 
@@ -94,11 +96,11 @@ The following examples customize editor settings for language modes `typescript`
 }
 ```
 
-You can use IntelliSense in Settings editor to help you find allowed language based settings. All editor settings and some non-editor settings are supported.
+You can use IntelliSense in Settings editor to help you find allowed language-based settings. All editor settings and some non-editor settings are supported.
 
 ## Settings and security
 
-In settings, we allow you to specify some of the executables that Carbon will run to do its work. For example, you can choose which shell the Integrated Terminal should use. For enhanced security, such settings can only be defined in user settings and not at workspace scope.
+In settings, you're allowed to specify some of the executables that [!INCLUDE[name-sos](../includes/name-sos-short.md)] runs to do its work. For example, you can choose which shell the Integrated Terminal should use. For enhanced security, such settings can only be defined in user settings and not at the workspace scope.
 
 Here is the list of settings we don't support at the workspace scope:
 
@@ -113,11 +115,11 @@ Here is the list of settings we don't support at the workspace scope:
 - `terminal.external.osxExec`
 - `terminal.external.linuxExec`
 
-The first time you open a workspace which defines any of these settings, Carbon will warn you and subsequently always ignore the values after that.
+The first time you open a workspace which defines any of these settings, [!INCLUDE[name-sos](../includes/name-sos-short.md)] will warn you and subsequently always ignore the values after that.
 
 ### <a id="default-settings"></a>Copy of Default Settings
 
-Below are the default settings and their values.
+The following are the default settings and their values:
 
 ```json
 {
@@ -495,7 +497,7 @@ Below are the default settings and their values.
   // ${folderPath}: e.g. /Users/Development/myFolder
   // ${rootName}: e.g. myFolder1, myFolder2, myFolder3
   // ${rootPath}: e.g. /Users/Development/myWorkspace
-  // ${appName}: e.g. Carbon
+  // ${appName}: e.g. [!INCLUDE[name-sos](../includes/name-sos-short.md)]
   // ${dirty}: a dirty indicator if the active editor is dirty
   // ${separator}: a conditional separator (" - ") that only shows when surrounded by variables with values
   "window.title": "${dirty}${activeEditorShort}${separator}${rootName}${separator}${appName}",
@@ -710,7 +712,7 @@ Below are the default settings and their values.
   // Enable/disable autoclosing of HTML tags.
   "html.autoClosingTags": true,
 
-  // Traces the communication between Carbon and the HTML language server.
+  // Traces the communication between [!INCLUDE[name-sos](../includes/name-sos-short.md)] and the HTML language server.
   "html.trace.server": "off",
 
 // JSON
@@ -721,7 +723,7 @@ Below are the default settings and their values.
   // Enable/disable default JSON formatter (requires restart)
   "json.format.enable": true,
 
-  // Traces the communication between Carbon and the JSON language server.
+  // Traces the communication between [!INCLUDE[name-sos](../includes/name-sos-short.md)] and the JSON language server.
   "json.trace.server": "off",
 
 // Markdown
@@ -978,7 +980,7 @@ Below are the default settings and their values.
   // Selectors should not contain IDs because these rules are too tightly coupled with the HTML.
   "css.lint.idSelector": "ignore",
 
-  // Traces the communication between Carbon and the CSS language server.
+  // Traces the communication between [!INCLUDE[name-sos](../includes/name-sos-short.md)] and the CSS language server.
   "css.trace.server": "off",
 
 // LESS
@@ -1231,13 +1233,13 @@ Below are the default settings and their values.
     "workbench.action.togglePanel"
   ],
 
-  // Object with environment variables that will be added to the Carbon process to be used by the terminal on OS X
+  // Object with environment variables that will be added to the [!INCLUDE[name-sos](../includes/name-sos-short.md)] process to be used by the terminal on OS X
   "terminal.integrated.env.osx": {},
 
-  // Object with environment variables that will be added to the Carbon process to be used by the terminal on Linux
+  // Object with environment variables that will be added to the [!INCLUDE[name-sos](../includes/name-sos-short.md)] process to be used by the terminal on Linux
   "terminal.integrated.env.linux": {},
 
-  // Object with environment variables that will be added to the Carbon process to be used by the terminal on Windows
+  // Object with environment variables that will be added to the [!INCLUDE[name-sos](../includes/name-sos-short.md)] process to be used by the terminal on Windows
   "terminal.integrated.env.windows": {},
 
 // Problems Panel
@@ -1404,4 +1406,4 @@ Below are the default settings and their values.
 ## Next steps
 The basics of settings have been covered in this document, read on to find out more about:
 
-* [Windows Authentication (Kerberos)](/carbon/enable-kerberos.md) - Connect to SQL Server using Kerberos.
+* [Windows Authentication (Kerberos)](enable-kerberos.md) - Connect to SQL Server using Kerberos.

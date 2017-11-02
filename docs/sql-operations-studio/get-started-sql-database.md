@@ -56,14 +56,15 @@ Use [!INCLUDE[name-sos](../includes/name-sos-short.md)] to establish a connectio
 
 2. This article uses *SQL Login*, but *Windows Authentication* is also supported. Fill in the fields as follows:
 
-   | Setting | Suggested value | 
-   | :--- |: --- |
-   | **Authentication** | SQL Login | 
-   | **User name** | The server admin account | 
-   | **Password (SQL Login)** | The password for your Azure SQL server | 
-   | **Save Password?** | Yes or No - If you don't want to enter the password each time, select Yes. |
-   | **Database name** | *leave blank* | 
-   | **Server Group** | Select \<Default\> | 
+   | Setting       | Suggested value | Description |
+   | ------------ | ------------------ | ------------------------------------------------- | 
+   | **Server name** | The fully qualified server name | The name should be something like this: **servername.database.windows.net** |
+   | **Authentication** | SQL Login| SQL Authentication is used in this tutorial. |
+   | **User name** | The server admin account | This is the account that you specified when you created the server. |
+   | **Password (SQL Login)** | The password for your server admin account | This is the password that you specified when you created the server. |
+   | **Save Password?** | Yes or No | Select Yes if you do not want to enter the password each time. |
+   | **Database name** | *leave blank* | The name of the database you want to connect to. |
+   | **Server Group** | Select <Default> | If you created a server group, you can set to a specific server group. | 
 
    ![New Connection Icon](media/get-started-sql-database/new-connection-screen.png)  
 
@@ -150,18 +151,9 @@ Use [!INCLUDE[name-sos](../includes/name-sos-short.md)] to establish a connectio
 View an existing, built-in widget through the dashboard.
 
 ## Clean up resources
-> [!TIP]
-> Other articles in this collection build upon this quickstart. If you plan to continue on to work with subsequent quickstarts, **do not clean up the resources created in this quickstart**. If you do not plan to continue, use the following steps to delete resources created by this quickstart in the Azure portal.
-Clean up the resources you created in the quickstart either by deleting the ...
 
-To delete the entire resource group including the newly created server:
-1.	Locate your resource group in the Azure portal. From the left-hand menu in the Azure portal, click **Resource groups** and then click the name of your resource group, for example: **myresourcegroup**.
-2.	On your resource group page, click **Delete**. Then type the name of your resource group, for example: **myresourcegroup**, in the text box to confirm deletion, and then click **Delete**.
-
-Or instead, to delete the newly created server:
-1.	Locate your server in the Azure portal, if you do not have it open. From the left-hand menu in Azure portal, click **All resources**, and then search for the server you created.
-2.	On the **Overview** page, click the **Delete** button on the top pane.
-3.	Confirm the server name you want to delete.
+Other articles in this collection build upon this quickstart. If you plan to continue on to work with subsequent quickstarts, do not clean up the resources created in this quickstart. If you do not plan to continue, use the following steps to delete resources created by this quickstart in the Azure portal.
+Clean up resources by deleting the resource groups you no longer need. For details, see [Clean up resources](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-get-started-portal#clean-up-resources).
 
 ## Next steps
 > [!div class="nextstepaction"]

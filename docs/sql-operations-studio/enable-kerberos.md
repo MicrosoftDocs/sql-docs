@@ -1,26 +1,28 @@
 ---
 title: Use Active Directory Authentication - Kerberos 
 description: Learn how to enable Kerberos to use Active Directory Authentication for SQL Workbench
-services: sql-database
-author: stevestein
-ms.author: sstein
+keywords: 
+ms.custom: "tools|sos"
+ms.date: "11/01/2017"
+ms.prod: "sql-non-specified"
+ms.reviewer: "alayu; erickang; sanagama; sstein"
+ms.suite: "sql"
+ms.tgt_pltfrm: ""
+ms.topic: "overview, quickstart, tutorial, or article"
+author: "meet-bhagdev"
+ms.author: "meetb"
 manager: craigg
-ms.reviewer: achatter, alayu, erickang, sanagama, sstein, meetb
-ms.service: data-tools
-ms.workload: data-tools
-ms.prod: NEEDED
-ms.topic: article
-ms.date: 10/08/2017
+ms.workload: "Inactive"
 ---
-# Connect Carbon to your SQL Server using Windows authentication - Kerberos 
+# Connect [!INCLUDE[name-sos](../includes/name-sos-short.md)] to your SQL Server using Windows authentication - Kerberos 
 
-Carbon supports connecting to SQL Server using Kerberos.
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] supports connecting to SQL Server using Kerberos.
 
-In order to use Integrated Authentication (aka Windows Authentication) on macOS or Linux you will need to setup a **Kerberos ticket** linking your current user to a Windows domain account. 
+In order to use Integrated Authentication (aka Windows Authentication) on macOS or Linux you need to set up a **Kerberos ticket** linking your current user to a Windows domain account. 
 
 # Step1: Get the Kerberos Key Distribution Center
 
-Find the Kerberos KDC (Key Distribution Center) configuration value. Run the following on a Windows PC that is joined to your Active Directory Domain, 
+Find the Kerberos KDC (Key Distribution Center) configuration value. Run the following command on a Windows computer that is joined to your Active Directory Domain: 
 
 Start `cmd.exe` and run `nltest`.
 
@@ -33,7 +35,7 @@ Address: \\2111:4444:2111:33:1111:ecff:ffff:3333
 ...
 The command completed successfully
 ```
-Copy the DC name which is the required KDC configuration value, in this case dc-33.domain.company.com
+Copy the DC name that is the required KDC configuration value, in this case dc-33.domain.company.com
 
 # Step 2: Install the required packages
 
@@ -84,7 +86,7 @@ Get a Ticket Granting Ticket (TGT) from KDC.
 kinit username@DOMAIN.COMPANY.COM
 ```
 
-View the availalbe tickets using kinit. If the kinit was successful, you should see a ticket. 
+View the available tickets using kinit. If the kinit was successful, you should see a ticket. 
 
 ```bash
 klist
@@ -92,7 +94,7 @@ klist
 krbtgt/DOMAIN.COMPANY.COM@ DOMAIN.COMPANY.COM.
 ```
 
-## Step 5: Connect using Carbon
+## Step 5: Connect using [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 * Create a new connection profile
 
@@ -104,4 +106,4 @@ If all goes well and the steps above worked, you should be able to connect succe
 
 
 ## Next steps
-For information about Carbon, see [Carbon Overview](overview.md)
+For information about [!INCLUDE[name-sos](../includes/name-sos-short.md)], see [[!INCLUDE[name-sos](../includes/name-sos-short.md)] Overview](overview.md)

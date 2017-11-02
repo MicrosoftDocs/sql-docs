@@ -1,18 +1,20 @@
 ---
-title: Code snippets in Carbon | Microsoft Docs
-description: Learn how to add code snippets to Carbon, for your own use or to share.
-services: sql-database
-author: yualan
-ms.author: alayu
+title: Code snippets in SQL Operations Studio | Microsoft Docs
+description: Learn how to add code snippets to SQL Operations Studio, for your own use or to share.
+keywords: 
+ms.custom: "tools|sos"
+ms.date: "11/01/2017"
+ms.prod: "sql-non-specified"
+ms.reviewer: "alayu; erickang; sanagama; sstein"
+ms.suite: "sql"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+author: "stevestein"
+ms.author: "sstein"
 manager: craigg
-ms.reviewer: achatter, alayu, erickang, sanagama, sstein
-ms.service: data-tools
-ms.workload: data-tools
-ms.prod: NEEDED
-ms.topic: article
-ms.date: 10/08/2017
+ms.workload: "Inactive"
 ---
-# Create code snippets to easily reuse in Carbon
+# Create code snippets to easily reuse in [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 Code snippets are templates that make it easier to enter repeating code patterns, such as loops or conditional-statements.
 
@@ -28,7 +30,7 @@ You can define your own snippets for specific languages.  To open up a snippet f
 
 Snippets are defined in a JSON format and stored in a per user `(languageId).json` file. For example, Markdown snippets go in a `markdown.json` file.
 
-The example below is a `For Loop` snippet for `JavaScript`.
+The following example is a `For Loop` snippet for `JavaScript`.
 
 ```json
     "For Loop": {
@@ -43,12 +45,12 @@ The example below is a `For Loop` snippet for `JavaScript`.
     },
 ```
 
-In the example above:
+In the previous example:
 
-* `For Loop` is the snippet name
+* `For Loop` is the snippet name.
 * `prefix` defines how this snippet is selected from IntelliSense and tab completion. In this case `for`.
 * `body` is the content and either a single string or an array of strings of which each element will be inserted as separate line.
-* `description` is the description used in the IntelliSense drop down
+* `description` is the description used in the IntelliSense drop down.
 
 The example above has three placeholders, `${1:index}`, `${2:array}`, and `${3:element}`. You can quickly traverse them in the order of their number. The string after the number and colon is filled in as default.
 
@@ -60,7 +62,7 @@ The `body` of a snippet can use special constructs to control cursors and the te
 
 ### Tabstops
 
-With tabstops, you can make the editor cursor move inside a snippet. Use `$1`, `$2` to specify cursor locations. The number is the order in which tabstops will be visited, whereas `$0` denotes the final cursor position. Multiple tabstops are linked and updated in sync.
+With tabstops, you can make the editor cursor move inside a snippet. Use `$1`, `$2` to specify cursor locations. The number is the order in which tabstops are visited, whereas `$0` denotes the final cursor position. Multiple tabstops are linked and updated in sync.
 
 ### Placeholders
 
@@ -136,11 +138,11 @@ text        ::= .*
 
 ## Using TextMate snippets
 
-You can also use existing TextMate snippets (.tmSnippets) with Carbon. See the [Using TextMate Snippets](/docs/extensions/themes-snippets-colorizers.md#using-textmate-snippets) article in our Extension Authoring section to learn more.
+You can also use existing TextMate snippets (.tmSnippets) with [!INCLUDE[name-sos](../includes/name-sos-short.md)]. See the [Using TextMate Snippets](/docs/extensions/themes-snippets-colorizers.md#using-textmate-snippets) article in our Extension Authoring section to learn more.
 
 ## Assign keybindings to snippets
 
-We already know that snippets can be inserted via IntelliSense, the 'Insert Snippet'-action, or via tab-completion. That's not all. You can create custom keybindings to insert specific snippets. Open `keybindings.json`, which defines all your keybindings, and something add this:
+You already know that snippets can be inserted via IntelliSense, the 'Insert Snippet'-action, or via tab-completion. That's not all. You can create custom keybindings to insert specific snippets. Open `keybindings.json`, which defines all your keybindings, and something add this:
 
 ```json
 {
@@ -463,4 +465,4 @@ Now that you know how to create your own snippets, try out some of these other s
 
 The basics of creating code snippets have been covered in this document, read on to find out more about:
 
-* [Dashboards and Insight Widgets](/carbon/dashboards.md) - Customize your dashboard with insight widgets.
+* [Dashboards and Insight Widgets](dashboards.md) - Customize your dashboard with insight widgets.

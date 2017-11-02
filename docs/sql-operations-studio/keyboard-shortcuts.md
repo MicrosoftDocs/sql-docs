@@ -1,29 +1,30 @@
 ---
-title: Create and customize keyboard shortcuts in Carbon | Microsoft Docs
-description: Learn how to create and customize keyboard shortcuts in Carbon.
-services: sql-database
-author: stevestein
-ms.author: sstein
+title: Create and customize keyboard shortcuts in SQL Operations Studio | Microsoft Docs
+description: Learn how to create and customize keyboard shortcuts in SQL Operations Studio.
+ms.custom: "tools|sos"
+ms.date: "10/31/2017"
+ms.prod: "sql-non-specified"
+ms.reviewer: "alayu; erickang; sanagama; sstein"
+ms.suite: "sql"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+author: "stevestein"
+ms.author: "sstein"
 manager: craigg
-ms.reviewer: achatter, alayu, erickang, sanagama, sstein
-ms.service: data-tools
-ms.workload: data-tools
-ms.prod: NEEDED
-ms.topic: article
-ms.date: 10/24/2017
+ms.workload: "Inactive"
 ---
-# Keyboard shortcuts in Carbon
+# Keyboard shortcuts in [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
-This article provides the steps to quickly view, edit, and create keyboard shortcuts in Carbon.
+This article provides the steps to quickly view, edit, and create keyboard shortcuts in [!INCLUDE[name-sos](../includes/name-sos-short.md)].
 
-Because Carbon inherits its key binding functionality from Visual Studio Code, detailed information about advanced customizations, using different keyboard layouts, etc., is in the [Key Bindings for Visual Studio Code](https://code.visualstudio.com/docs/getstarted/keybindings) article. Note that some keybinding features may not be available (for example, Keymap extensions are not supported in the Carbon preview).
+Because [!INCLUDE[name-sos](../includes/name-sos-short.md)] inherits its key binding functionality from Visual Studio Code, detailed information about advanced customizations, using different keyboard layouts, etc., is in the [Key Bindings for Visual Studio Code](https://code.visualstudio.com/docs/getstarted/keybindings) article. Some keybinding features may not be available (for example, Keymap extensions are not supported in the [!INCLUDE[name-sos](../includes/name-sos-short.md)] preview).
 
 
 ## Open the Keyboard Shortcuts editor
 
 To view all currently defined keyboard shortcuts:
 
-Open the **Keyboard Shortcuts** editor from the **File** menu: **File** > **Preferences** > **Keyboard Shortcuts** (**??Carbon** > **Preferences** > **Keyboard Shortcuts** on Mac). ??LINUX
+Open the **Keyboard Shortcuts** editor from the **File** menu: **File** > **Preferences** > **Keyboard Shortcuts** (**[!INCLUDE[name-sos](../includes/name-sos-short.md)]** > **Preferences** > **Keyboard Shortcuts** on Mac).
 
 In addition to displaying current keybindings, the **Keyboard Shortcuts** editor lists the available commands that do not have keyboard shortcuts defined. The **Keyboard Shortcuts** editor enables you to easily change, remove, reset, and define new keybindings.  
 
@@ -62,4 +63,4 @@ To create new keyboard shortcuts:
 
 
 ## Additional Resources
-For information about Carbon, see [Carbon Overview](overview.md)
+For information about [!INCLUDE[name-sos](../includes/name-sos-short.md)], see [[!INCLUDE[name-sos](../includes/name-sos-short.md)] Overview](overview.md)

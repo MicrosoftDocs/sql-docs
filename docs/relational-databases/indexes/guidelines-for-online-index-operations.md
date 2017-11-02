@@ -97,7 +97,7 @@ When you perform resumable online index rebuild the following guidelines apply:
 - Recovering from index rebuild failures (such as database failovers or running out of disk space).
 - When an index operation is paused, both the original index and the the newly created one require disk space and need to be updated during DML operations.
 
-- Enables truncation of truncation logs during an index rebuild operation (this operation cannot be performed for a regular online index operation).
+- Enables truncation of transaction logs during an index rebuild operation (this operation cannot be performed for a regular online index operation).
 - SORT_IN_TEMPDB=ON option is not supported
 
 > [!IMPORTANT]

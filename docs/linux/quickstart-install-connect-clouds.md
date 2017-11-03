@@ -1,8 +1,8 @@
 ---
 title: Get started with SQL Server 2017 in the Cloud | Microsoft Docs
 description: This quick start tutorial shows how to run the SQL Server 2017 on Linux in the cloud of your choice.
-author: anshrest
-ms.author: anshrest
+author: annashres
+ms.author: annashres
 manager: jhubbard
 ms.date: 10/25/2017
 ms.topic: article
@@ -26,7 +26,7 @@ In this quick start tutorial, you will install SQL Server 2017 on Red Hat Enterp
     * [Ubuntu 16.04](https://aws.amazon.com/marketplace/pp/B01JBL2M0O)
 1.	Connect to the AMI with ssh
 1.	Follow the quick start for the Linux distrbution you chose: 
-    * [RHEL](quickstart-install-connect-rhel.md)
+    * [RHEL](quickstart-install-connect-red-hat.md)
     * [SLES](quickstart-install-connect-suse.md)
     * [Ubuntu](quickstart-install-connect-ubuntu.md)
 1.	Configure for remote connections: 
@@ -52,7 +52,7 @@ In this quick start tutorial, you will install SQL Server 2017 on Red Hat Enterp
     * [Ubuntu 16.04](https://console.cloud.google.com/launcher/details/ubuntu-os-cloud/ubuntu-xenial)
 1.	Connect to the image with ssh
 1.	Follow the quick start for the Linux distrbution you chose: 
-    * [RHEL](quickstart-install-connect-rhel.md)
+    * [RHEL](quickstart-install-connect-red-hat.md)
     * [SLES](quickstart-install-connect-suse.md)
     * [Ubuntu](quickstart-install-connect-ubuntu.md)
 1.	Configure for remote connections: 

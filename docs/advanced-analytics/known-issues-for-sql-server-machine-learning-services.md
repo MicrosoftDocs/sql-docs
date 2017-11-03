@@ -198,6 +198,16 @@ You cannot use in an R script the following types of query results:
   
      If you need to use masked data in an R script, a possible workaround is to make a copy of the data in a temporary table and use that data instead.
 
+### Use of strings as factors can lead to performance degradation
+
+Using string type variables as factors can greatly increase the amount of memory used for R operations. This is a known issue with R in general, and there are many articles on the subject. For example, see [Factors are not first-class citizens in R, by John Mount, in R-bloggers)](https://www.r-bloggers.com/factors-are-not-first-class-citizens-in-r/) or [stringsAsFactors: An unauthorized biography, by Roger Peng](https://simplystatistics.org/2015/07/24/stringsasfactors-an-unauthorized-biography/). 
+
+Although the issue is not specific to SQL Server, it can greatly affect performance of R code run in SQl Server. Strings are typically stored as varchar or nvarchar, and if a column of string data has many unique values, the process of internally converting these to integers and back to strings by R can even lead to memory allocation errors.
+
+If you do not absolutely require a string data type for other operations, mapping the string values to a numeric (integer) data type as part of data preparation would be beneficial from a performance and scale perspective.
+
+For a discussion of this issue, and other tips, see [Performance for R Services - data optimization](r/r-and-data-optimization-r-services.md).
+
 ### Arguments *varsToKeep* and *varsToDrop* are not supported for SQL Server data sources
 
 When you use the rxDataStep function to write results to a table, using the *varsToKeep* and *varsToDrop* is a handy way of specifying the columns to include or exclude as part of the operation. However, these arguments are not supported for SQL Server data sources.

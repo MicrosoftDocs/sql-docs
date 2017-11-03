@@ -31,7 +31,7 @@ Character data types that are either fixed-length, **nchar**, or variable-length
 Fixed-length Unicode string data. *n* defines the string length and must be a value from 1 through 4,000. The storage size is two times *n* bytes. When the collation code page uses double-byte characters, the storage size is still *n* bytes. Depending on the string, the storage size of *n* bytes can be less than the value specified for *n*. The ISO synonyms for **nchar** are **national char** and **national character**..
   
 **nvarchar** [ ( n | **max** ) ]  
-Variable-length Unicode string data. *n* defines the string length and can be a value from 1 through 4,000. **max** indicates that the maximum storage size is 2^31-1 bytes (2 GB). The storage size, in bytes, is two times the actual length of data entered + 2 bytes. The ISO synonyms for **nvarchar** are **national char varying** and **national character varying**.
+Variable-length Unicode string data. *n* defines the string length and can be a value from 1 through 4,000. **max** indicates that the maximum storage size is 2^31-1 characters (2 GB). The storage size, in bytes, is two times the actual length of data entered + 2 bytes. The ISO synonyms for **nvarchar** are **national char varying** and **national character varying**.
   
 ## Remarks  
 When *n* is not specified in a data definition or variable declaration statement, the default length is 1. When *n* is not specified with the CAST function, the default length is 30.

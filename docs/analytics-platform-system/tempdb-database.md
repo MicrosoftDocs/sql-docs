@@ -13,8 +13,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5840033d-2dc6-4576-8a5f-067e2a58b170
 caps.latest.revision: 22
-
-ms.workload: "On Demand"
+ms.workload: "not set"
 ---
 # tempdb Database
 **tempdb** is a SQL Server PDW system database that stores local temporary tables for user databases. Temporary tables are often used to improve query performance. For example, you can use a temporary table to modularize a script, and reuse computed data.  

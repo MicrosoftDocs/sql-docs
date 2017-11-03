@@ -3,7 +3,7 @@ title: Download and install Microsoft SQL Operations Studio | Microsoft Docs
 description: 'Download and Install Microsoft SQL Operations Studio for Windows, macOS, or Linux'
 keywords: Microsoft SQL Operations Studio, install Microsoft SQL Operations Studio, download Microsoft SQL Operations Studio
 ms.custom: "tools|sos"
-ms.date: "10/31/2017"
+ms.date: "11/01/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: "alayu; erickang; sanagama; sstein"
 ms.suite: "sql"
@@ -23,9 +23,9 @@ ms.workload: "Inactive"
 
 ## Supported Operating Systems
 
-Carbon runs on Windows, macOS, and Linux.
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] runs on Windows, macOS, and Linux.
 
-Carbon is supported on the following platforms:
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] is supported on the following platforms:
 
 | Platform | Supported versions |
 |:---|:---|
@@ -49,53 +49,54 @@ Other Potential Platforms
 
 
 
-## Get Carbon for Windows
+## Get [!INCLUDE[name-sos](../includes/name-sos-short.md)] for Windows
 
-1. Download [Carbon for Windows](https://github.com/Microsoft/carbon/releases/download/v0.20.0/2017-Sep-27-carbon-windows.zip) to your local computer.
+1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] for Windows](NEED WIN LINK) to your local computer.
 
    > [!IMPORTANT]
-   > Executable files may be blocked by Windows when zip files are downloaded from an external source and extracted. Follow the steps below to unblock the .zip file before extracting.
+   > Executable files may be blocked by Windows when zip files are downloaded from an external source and extracted. The following steps unblock the .zip file before extracting. 
 
 1. Right-click the **.zip** file, and select **Properties**.
 1. On the **General** tab, select **Unblock**, and click **Apply**.
 1. Browse to the downloaded file and extract it.
-2. Run *\Carbon\Carbon-windows\Carbon.exe* [VERIFY PATH]
+2. Run *\sqlops-windows\sqlops.exe*
 
+If [!INCLUDE[name-sos](../includes/name-sos-short.md)] is blocked when you run it, click **More info** > **Run Anyway**.
 
-## Get Carbon for macOS
+## Get [!INCLUDE[name-sos](../includes/name-sos-short.md)] for macOS
 
-1. Download [Carbon for macOS](https://github.com/Microsoft/carbon/releases/download/v0.20.0/2017-Sep-27-carbon-macos.zip) to your local computer.
+1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] for macOS](NEED MAC LINK) to your local computer.
 2. To expand the contents of the zip, double-click it.
-3. Drag *Carbon.app* to the *Applications* folder, making it available in the *Launchpad*.
+3. Drag *sqlops.app* to the *Applications* folder, making it available in the *Launchpad*.
 
-### Start Carbon from the terminal:
-1. Add Carbon to the PATH by running the command:  
-      ```ln -s /user/local/bin/carbon /Applications/carbon.app/Contents/Resources/app/bin/carbon```
-1. Start Carbon by running the following command:  
-      ```carbon .```
+### Start [!INCLUDE[name-sos](../includes/name-sos-short.md)] from the terminal:
+1. Add [!INCLUDE[name-sos](../includes/name-sos-short.md)] to the PATH by running the command:  
+      ```ln -s /user/local/bin/sqlops/Applications/sqlops.app/Contents/Resources/app/bin/sqlops```
+1. Start [!INCLUDE[name-sos](../includes/name-sos-short.md)] by running the following command:  
+      ```sqlops```
 
 
-## Get Carbon for Linux
+## Get [!INCLUDE[name-sos](../includes/name-sos-short.md)] for Linux
 
 1. Open a new Terminal window.
-2. Type the following commands to extract the file and launch Carbon:
+2. Type the following commands to extract the file and launch [!INCLUDE[name-sos](../includes/name-sos-short.md)]:
 
 ```bash
 cd ~
-cp ~/Downloads/pgi3-carbon-linux-x64.tar.gz ~
-tar -xvf ~/pgi3-carbon-linux-x64.tar.gz
-echo 'export PATH="$PATH:~/carbon-linux-x64"' >> ~/.bashrc
+cp ~/Downloads/pgi3-sqlops-linux-x64.tar.gz ~
+tar -xvf ~/pgi3-sqlops-linux-x64.tar.gz
+echo 'export PATH="$PATH:~/sqlops-linux-x64"' >> ~/.bashrc
 source .bashrc
-carbon .
+sqlops .
 ```
 
 
-## Uninstall Carbon
+## Uninstall [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 To uninstall the [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] preview, delete the files.
 
 ## Next Steps
 
 See the following articles to get started:
-- [Explore Carbon](tutorial-modern-code-flow-sql-server.md)
+- [Explore [!INCLUDE[name-sos](../includes/name-sos-short.md)]](tutorial-modern-code-flow-sql-server.md)
 - [Connect & Query SQL Server](get-started-sql-server.md)

@@ -1,8 +1,6 @@
 ---
 title: "Known issues in Machine Learning Services | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "10/18/2017"
+ms.date: "11/03/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -114,18 +112,16 @@ If you cannot upgrade, you can use a SQL login to run remote R jobs that might r
 
 **Applies to:** SQL Server 2016 R Services Express Edition
 
-### Performance limits when R libraries are called from other R tools
+### Performance limits when libraries used by SQL Server are called from other tools
 
-It is possible to call the R tools and libraries that are installed for SQL Server from an external R application such as RGui. This call might be handy when you install new packages, or when you run ad hoc tests on very short code samples.
+It is possible to call the machine learning libraries that are installed for SQL Server from an external application, such as RGui. Doing so might be the most convenient way to accomplish certain tasks, such as installing new packages, or running ad hoc tests on very short code samples. However, outside of SQL Server, performance might be limited. 
 
-However, be aware that outside of SQL Server, performance might be limited. For example, even if you have purchased the Enterprise Edition of SQL Server, R runs in single-threaded mode when you run your R code by using external tools. Performance should be better if you run your R code by initiating a SQL Server connection and using [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md), which calls the R libraries for you.
+For example, even if you are using the Enterprise Edition of SQL Server, R runs in single-threaded mode when you run your R code by using external tools. To get the benefits of performance in SQL Server, initiate a SQL Server connection and use [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) to call the external script runtime.
 
-* Avoid calling the R libraries that are used by SQL Server from external R tools.
-* If you need to run extensive R code on the SQL Server computer without using SQL Server, install a separate instance of R, such as Microsoft R Client, and then ensure that your R development tools point to the new library.
++ In general, avoid calling the machine learning libraries that are used by SQL Server from external tools.
++ If you need to debug R or Python code, it is typically easier to do so outside of SQL Server. To get the same libraries that are in SQL Server, you can install Microsoft R Client or [Machine Learning Server](r/create-a-standalone-r-server.md).
 
-For more information, see [Create a Standalone R Server](r/create-a-standalone-r-server.md).
-
-### The R script is throttled due to resource governance default values
+### External script execution is throttled due to resource governance default values
 
 In Enterprise Edition, you can use resource pools to manage external script processes. In some early release builds, the maximum memory that could be allocated to the R processes was 20 percent. Therefore, if the server had 32 GB of RAM, the R executables (RTerm.exe and BxlServer.exe) could use a maximum of 6.4 GB in a single request.
 
@@ -133,11 +129,11 @@ If you encounter resource limitations, check the current default. If 20 percent 
 
 **Applies to:** SQL Server 2016 R Services, Enterprise Edition
 
-## R code execution and package or function issues
+## R issues
 
 This section contains known issues that are specific to running R on SQL Server, as well as some issues that are related to the R libraries and tools published by Microsoft, including RevoScaleR.
 
-For additional known issues that might affect R solutions, go to the [Microsoft R Server site](https://msdn.microsoft.com/microsoft-r/rserver-known-issues).
+For additional known issues that might affect R solutions, go to the [Microsoft R Server site](https://docs.microsoft.com/machine-learning-server/resources-known-issues).
 
 ### Limitations on processor affinity for R jobs
 
@@ -169,12 +165,15 @@ When you save a model to a SQL Server table, you must serialize the model and sa
 
 If you need to use larger models, the following workarounds are available:
 
-+ Use the [memCompress](https://www.rdocumentation.org/packages/base/versions/3.4.1/topics/memCompress) function in base R to reduce the size of the model before passing it to SQL Server. This option is best when the model is close to the 2 GB limit.
-+ For larger models, rather than using a varbinary column to store the models, you can use the [FileTable](..\relational-databases\blob\filetables-sql-server.md) feature provided in SQL Server.
++ Take steps to reduce the size of your model. Some open source R packages include a great deal of information in the model object, and much of this information can be removed for deployment. 
++ Use feature selection to remove unnecessary columns.
++ If you are using an open source algorithm, consider a similar implementation using the corresponding algorithn in MicrosoftML or RevoScaleR. These packages have been optimized for deployment scenarios.
++ After the model has been rationalized and the size reduced using the preceding steps, see if the [memCompress](https://www.rdocumentation.org/packages/base/versions/3.4.1/topics/memCompress) function in base R can be used to reduce the size of the model before passing it to SQL Server. This option is best when the model is close to the 2 GB limit.
++ For larger models, you can use the SQL Server [FileTable](..\relational-databases\blob\filetables-sql-server.md) feature to store the models, rather than using a varbinary column.
 
     To use FileTables, you must add a firewall exception, because data stored in FileTables is managed by the Filestream filesystem driver in SQL Server, and default firewall rules block network file access. For more information, see [Enable Prerequisites for FileTable](../relational-databases/blob/enable-the-prerequisites-for-filetable.md). 
 
-    After you have enabled FileTable, to write the model, you get a path from SQL using the FileTable API, and then write the model to that location from your R code. When you need to read the model, you get the path from SQL and then call the model using the path from your R script. For more information, see [Access FileTables wth File Input-Output APIs](../relational-databases/blob/access-filetables-with-file-input-output-apis.md).
+    After you have enabled FileTable, to write the model, you get a path from SQL using the FileTable API, and then write the model to that location from your code. When you need to read the model, you get the path from SQL and then call the model using the path from your script. For more information, see [Access FileTables wth File Input-Output APIs](../relational-databases/blob/access-filetables-with-file-input-output-apis.md).
 
 ### Avoid clearing workspaces when you execute R code in a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] compute context
 
@@ -242,20 +241,20 @@ If you encounter this problem, you can work around the issue by embedding the de
 For example:
 
 ```r
-f <- function(x) { 2*x * 3 }  
-g <- function(y) {   
-              a <- 10 * y  
-               f(a)  
+f <- function(x) { 2*x * 3 }
+g <- function(y) {
+              a <- 10 * y
+               f(a)
 }
 ```
 
 To avoid the error, rewrite the definition as follows:
 
 ```r
-g <- function(y){  
-              f <- function(x) { 2*x +3}  
-              a <- 10 * y  
-              f(a)  
+g <- function(y){
+              f <- function(x) { 2*x +3}
+              a <- 10 * y
+              f(a)
 }
 ```
 
@@ -295,6 +294,46 @@ The `rxDTree` function does not currently support in-formula transformations. In
 
 Ordered factors are treated the same as factors in all RevoScaleR analysis functions except `rxDTree`.
 
+## Python code execution or Python package issues
+
+This section contains known issues that are specific to running Python on SQL Server, as well as issues that are related to the Python packages published by Microsoft, including [revoscalepy](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package) and [microsoftml](https://docs.microsoft.com/r-server/python-reference/microsoftml/microsoftml-package).
+
+### Call to pretrained model fails if path to model is too long
+
+If you install the pretrained models in a default installation, depending on your machine name and instance name, the resulting complete path to the trained model file might be too long for Python to read. This limitation will be fixed in an upcing service release.
+
+There are several potential workarounds: 
+
++ When you install the pretrained models, choose a custom location.
++ If possible, install the SQL Server instance under a custom installation path, such as C:\SQL\MSSQL14.MSSQLSERVER.
++ Use the Windows utility [Fsutil](https://technet.microsoft.com/library/cc788097(v=ws.11).aspx) to create a hardlink that maps the model file to a shorter path. 
+
+### Failure to initialize a varbinary variable causes an error in BxlServer
+
+If you run Python code in SQL Server that generates an output variable of type varbinary(max), varchar(max) or similar types, the variable must be initialized as part of your script. If the variable is not initialized, the data exchange component, BxlServer, raises an error and stop working.
+
+This limitation will be fixed in an upcoming service release. As a workaround, make sure that the variable is initialized within the Python script. Any valid value can be used, as in the following examples:
+
+```sql
+declare @b varbinary(max);
+exec sp_execute_external_script
+  @language = N'Python'
+  , @script = N'b = 0x0'
+  , @params = N'@b varbinary(max) OUTPUT'
+  , @b = @b OUTPUT;
+go
+```
+
+```sql
+declare @b varchar(30);
+exec sp_execute_external_script
+  @language = N'Python'
+  , @script = N' b = ""  '
+  , @params = N'@b varchar(30) OUTPUT'
+  , @b = @b OUTPUT;
+go
+```
+
 ## Revolution R Enterprise and Microsoft R Open
 
 This section lists issues specific to R connectivity, development, and performance tools that are provided by Revolution Analytics. These tools were provided in earlier pre-release versions of [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].
@@ -316,10 +355,6 @@ For compatibility with [!INCLUDE[rsql_productname](../includes/rsql-productname-
 ### Compatibility issues with SQLite ODBC driver and RevoScaleR
 
 Revision 0.92 of the SQLite ODBC driver is incompatible with RevoScaleR. Revisions 0.88-0.91 and 0.93 and later are known to be compatible.
-
-## Python code execution or Python package issues
-
-This section contains known issues that are specific to running Python on SQL Server, as well as issues that are related to the Python packages published by Microsoft, including [revoscalepy](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package) and [microsoftml](https://docs.microsoft.com/r-server/python-reference/microsoftml/microsoftml-package).
 
 
 ## See also

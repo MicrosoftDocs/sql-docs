@@ -41,7 +41,7 @@ When you provision the SSIS IR, you can scale up and scale out by specifying val
 You only have to provision the SSIS IR one time. After that, you can use familiar tools such as SQL Server Data Tools (SSDT) and SQL Server Management Studio (SSMS) to deploy, configure, run, monitor, schedule, and manage packages.
 
 > [!NOTE]
-> During this public preview, the Azure SSIS Integration Runtime is only available in the East US and North Europe regions.
+> During this public preview, the Azure SSIS Integration Runtime is not yet available in all regions. For info about the supported regions, see [Products available by region - Microsoft Azure](https://azure.microsoft.com/en-us/regions/services/).
 
 Data Factory also supports other types of Integration Runtimes. To learn more about the SSIS IR and the other types of Integration Runtimes, see [Integration runtime in Azure Data Factory](https://docs.microsoft.com/en-us/azure/data-factory/concepts-integration-runtime).
 

@@ -16,7 +16,7 @@ ms.workload: "Inactive"
 ---
 
 # Monitor Query Performance with [!INCLUDE[name-sos](../includes/name-sos-short.md)]
-In this tutorial, you walk through how to enable an insight widget on Dashboard to get an at-a-glance view about the top five slowest queries using Query Data Store. You also learn how to view the details of the slow queries and query plans using [!INCLUDE[name-sos](../includes/name-sos-short.md)]'s features. After following through this tutorial, you will learn how to:
+In this tutorial, you walk through the process of adding one of [!INCLUDE[name-sos](../includes/name-sos-short.md)]'s built-in insight widgets to the *database dashboard*.  to quickly view a database's five slowest queries using Query Store. You also learn how to view the details of the slow queries and query plans using [!INCLUDE[name-sos](../includes/name-sos-short.md)]'s features. After following through this tutorial, you will learn how to:
 
 > [!div class="checklist"]
 > * Enable Query Data Store on TutorialDB

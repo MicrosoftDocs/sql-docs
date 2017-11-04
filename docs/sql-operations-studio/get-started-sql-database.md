@@ -92,6 +92,12 @@ Use [!INCLUDE[name-sos](../includes/name-sos-short.md)] to establish a connectio
    ```
 1. To execute the query, click **Run**.
 
+## Change database context for a query
+
+Change the context to **TutorialDB**:
+
+   ![Change context](media/get-started-sql-database/change-context.png)
+
 ## Create a table
 1. Paste the following snippet into the query window.
    ```sql
@@ -103,7 +109,7 @@ Use [!INCLUDE[name-sos](../includes/name-sos-short.md)] to establish a connectio
    -- Create the table in the specified schema
    CREATE TABLE dbo.Customers
    (
-      CustomersId        INT    NOT NULL   PRIMARY KEY, -- primary key column
+      CustomerId        INT    NOT NULL   PRIMARY KEY, -- primary key column
       Name      [NVARCHAR](50)  NOT NULL,
       Location  [NVARCHAR](50)  NOT NULL,
       Email     [NVARCHAR](50)  NOT NULL
@@ -111,23 +117,22 @@ Use [!INCLUDE[name-sos](../includes/name-sos-short.md)] to establish a connectio
    GO
    ```
 
-2. Change the context to **TutorialDB.** Click **Run** to execute the query.
-
-   ![Change context](media/get-started-sql-database/change-context.png)
 
 ## Insert rows
-1. Paste the following snippet into the query window. 
+
+1. Paste the following snippet into the query window:
    ```sql
    -- Insert rows into table 'Customers'
    INSERT INTO dbo.Customers
-      ([CustomersId],[Name],[Location],[Email])
+      ([CustomerId],[Name],[Location],[Email])
    VALUES
-      ( 1, N'Jared', N'Australia', N''),
-      ( 2, N'Nikita', N'India', N'nikita@vsdata.io'),
-      ( 3, N'Tom', N'Germany', N'tom@vsdata.io'),
-      ( 4, N'Jake', N'United States', N'jake@vsdata.io')   
-   GO   
+      ( 1, N'Orlando', N'Australia', N''),
+      ( 2, N'Keith', N'India', N'keith0@adventure-works.com'),
+      ( 3, N'Donna', N'Germany', N'donna0@adventure-works.com'),
+      ( 4, N'Janet', N'United States', N'janet1@adventure-works.com')
+   GO
    ```
+
 1. To execute the query, click **Run**.
 
 ## View the result

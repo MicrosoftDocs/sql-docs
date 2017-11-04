@@ -61,7 +61,7 @@ For more information about deep learning networks and their implementation using
 
     + To upgrade the R or Python components at the same time, select the language (R, or Python, or both) that you want to update, and select the pretrained models option. Select one or more instances to apply these changes to.
 
-    + If you have previously installed Machine Learning Server and updated R or Python components using the binding option, leave all previous selections **as is**, and select the pretrained models options. Do not deselect any previously selected options, or they will be removed.
+    + If you have previously installed Machine Learning Server and updated R or Python components using the binding option, leave all previous selections **as is**, and select the pretrained models options. Do not deselect any previously selected options; if you do so, the installer removes the components.
 
 3. When installation is complete, open a Windows command prompt **as administrator**, and navigate to the setup bootstrap folder for SQL Server, which also contains the Microsoft R installer. In a default instance of SQL Server 2017, the folder would be:
     

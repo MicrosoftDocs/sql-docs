@@ -19,7 +19,7 @@ ms.workload: "On Demand"
 
 This article describes known problems or limitations with machine learning components that are provided as an option in SQL Server 2016 and SQL Server 2017.
 
-The information here applies to all of the following, unless specifically indicated:
+The information here applies to all of the following, unless otherwise indicated:
 
 * SQL Server 2016
 
@@ -167,13 +167,13 @@ If you need to use larger models, the following workarounds are available:
 
 + Take steps to reduce the size of your model. Some open source R packages include a great deal of information in the model object, and much of this information can be removed for deployment. 
 + Use feature selection to remove unnecessary columns.
-+ If you are using an open source algorithm, consider a similar implementation using the corresponding algorithn in MicrosoftML or RevoScaleR. These packages have been optimized for deployment scenarios.
++ If you are using an open source algorithm, consider a similar implementation using the corresponding algorithm in MicrosoftML or RevoScaleR. These packages have been optimized for deployment scenarios.
 + After the model has been rationalized and the size reduced using the preceding steps, see if the [memCompress](https://www.rdocumentation.org/packages/base/versions/3.4.1/topics/memCompress) function in base R can be used to reduce the size of the model before passing it to SQL Server. This option is best when the model is close to the 2 GB limit.
 + For larger models, you can use the SQL Server [FileTable](..\relational-databases\blob\filetables-sql-server.md) feature to store the models, rather than using a varbinary column.
 
     To use FileTables, you must add a firewall exception, because data stored in FileTables is managed by the Filestream filesystem driver in SQL Server, and default firewall rules block network file access. For more information, see [Enable Prerequisites for FileTable](../relational-databases/blob/enable-the-prerequisites-for-filetable.md). 
 
-    After you have enabled FileTable, to write the model, you get a path from SQL using the FileTable API, and then write the model to that location from your code. When you need to read the model, you get the path from SQL and then call the model using the path from your script. For more information, see [Access FileTables wth File Input-Output APIs](../relational-databases/blob/access-filetables-with-file-input-output-apis.md).
+    After you have enabled FileTable, to write the model, you get a path from SQL using the FileTable API, and then write the model to that location from your code. When you need to read the model, you get the path from SQL and then call the model using the path from your script. For more information, see [Access FileTables with File Input-Output APIs](../relational-databases/blob/access-filetables-with-file-input-output-apis.md).
 
 ### Avoid clearing workspaces when you execute R code in a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] compute context
 
@@ -230,7 +230,7 @@ This limitation applies to data passed between SQL Server and Python as well. Mu
 
 When a binary data type (the R **raw** data type) is returned from R, the value must be sent in the output data frame.
 
-With data types other than **raw**, you can return parameter values along with the results of the stored procedure simply by adding the OUTPUT keyword. For more information, see [Return data by using OUTPUT parameters](https://technet.microsoft.com/library/ms187004.aspx).
+With data types other than **raw**, you can return parameter values along with the results of the stored procedure by adding the OUTPUT keyword. For more information, see [Parameters](https://docs.microsoft.com/sql/relational-databases/stored-procedures/parameters).
 
 If you want to use multiple output sets that include values of type **raw**, one possible workaround is to do multiple calls of the stored procedure, or to send the result sets back to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] by using ODBC.
 
@@ -310,7 +310,7 @@ This section contains known issues that are specific to running Python on SQL Se
 
 ### Call to pretrained model fails if path to model is too long
 
-If you install the pretrained models in a default installation, depending on your machine name and instance name, the resulting complete path to the trained model file might be too long for Python to read. This limitation will be fixed in an upcing service release.
+If you install the pretrained models in a default installation, depending on your machine name and instance name, the resulting complete path to the trained model file might be too long for Python to read. This limitation will be fixed in an upcoming service release.
 
 There are several potential workarounds: 
 
@@ -320,7 +320,7 @@ There are several potential workarounds:
 
 ### Failure to initialize a varbinary variable causes an error in BxlServer
 
-If you run Python code in SQL Server that generates an output variable of type varbinary(max), varchar(max) or similar types, the variable must be initialized as part of your script. If the variable is not initialized, the data exchange component, BxlServer, raises an error and stop working.
+If you run Python code in SQL Server using `sp_execute_external_script`, and the code has output variables of type varbinary(max), varchar(max) or similar types, the variable must be initialized or set as part of your script. Otherwise, the data exchange component, BxlServer, raises an error and stops working.
 
 This limitation will be fixed in an upcoming service release. As a workaround, make sure that the variable is initialized within the Python script. Any valid value can be used, as in the following examples:
 

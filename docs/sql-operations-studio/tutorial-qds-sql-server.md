@@ -15,19 +15,19 @@ manager: craigg
 ms.workload: "Inactive"
 ---
 
-# Monitor Query Performance with Carbon
-In this tutorial, we will walk-through how to enable an insight widget on Dashboard to get an at-a-glance view about the top five slowest queries using Query Data Store. We will futher examine how to view the details of the slow queries and query plans using Carbon's features. After following through this tutorial, you will learn learn how to:
+# Monitor Query Performance with [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+In this tutorial, you walk through how to enable an insight widget on Dashboard to get an at-a-glance view about the top five slowest queries using Query Data Store. You also learn how to view the details of the slow queries and query plans using [!INCLUDE[name-sos](../includes/name-sos-short.md)]'s features. After following through this tutorial, you will learn how to:
 
 > [!div class="checklist"]
 > * Enable Query Data Store on TutorialDB
 > * Quickly turn on an insight widget using a built-in insight widget sample.
-> * View the details of the top five slowest query.
+> * View the details of the top five slowest queries.
 > * Open the query script in editor.
 > * View query plans.
 
 
 ## Prerequisites
-* Follow [Get Started with Carbon](./get-started-sql-server.md) to a SQL Server 2017 instance and TutorialDB database.
+* Follow [Get Started with [!INCLUDE[name-sos](../includes/name-sos-short.md)]](./get-started-sql-server.md) to a SQL Server 2017 instance and TutorialDB database.
 
 * Enable Query Data Store by executing following T-SQL statement on TutorialDB:
 
@@ -35,8 +35,8 @@ In this tutorial, we will walk-through how to enable an insight widget on Dashbo
     ALTER DATABASE TutorialDB SET QUERY_STORE = ON
    ```
 
-## Turn on a management insight on Carbon's database Manage dashboard
-Carbon has a built-in sample widget to monitor the top five slowest query using query performance information. The performance information is collected by Query Data Store. With a few simple steps, you can easily visualize and use the information to improve your database and application.
+## Turn on a management insight on [!INCLUDE[name-sos](../includes/name-sos-short.md)]'s database Manage dashboard
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] has a built-in sample widget to monitor the top five slowest query using query performance information. The performance information is collected by Query Data Store. With a few simple steps, you can easily visualize and use the information to improve your database and application.
 
 1. Open User Settings by pressing 'F1' to open Command Palette, type in 'settings' in the command search input box and select 'Preferences: Open User Settings' command.
 
@@ -48,7 +48,7 @@ Carbon has a built-in sample widget to monitor the top five slowest query using 
 
 3. Click 'Copy to Settings' to copy "dashboard.database.widgets" settings to customize.
 
-4. Using Carbon's insight settings IntelliSense, configure 'name' for the widget title, 'gridItemConfig' for the widget size, and 'widget' by selecting 'query-data-store-database-insight' from the drop down list as shown in the screenshot below:
+4. Using [!INCLUDE[name-sos](../includes/name-sos-short.md)]'s insight settings IntelliSense, configure 'name' for the widget title, 'gridItemConfig' for the widget size, and 'widget' by selecting 'query-data-store-database-insight' from the drop-down list as shown in the screenshot below:
 
    ![Insight qds settings](./media/tutorial-sql-server/insight-qds-settings.png)
 
@@ -65,7 +65,7 @@ Carbon has a built-in sample widget to monitor the top five slowest query using 
 
 ## View insight details dialog for know more about the insight
 
-1. Click 'Show Insight' context menu. It will open Inishgts detail dialog as shown in the screenshot:
+1. Click 'Show Insight' context menu. It opens Insights detail dialog as shown in the screenshot:
 
    ![Insight detail dialog](./media/tutorial-sql-server/insight-details-dialog.png)
 
@@ -93,7 +93,7 @@ Carbon has a built-in sample widget to monitor the top five slowest query using 
 
 2. Select and copy 'query_plan'
 
-   ![Inishgt QDS plan](./media/tutorial-sql-server/insight-qds-plan.png)
+   ![Insights QDS plan](./media/tutorial-sql-server/insight-qds-plan.png)
 
 3. Press 'CTRL+N' to open a new editor.
 
@@ -101,16 +101,16 @@ Carbon has a built-in sample widget to monitor the top five slowest query using 
 
 5. Press 'CTL + S' to save the file and change the file extension to *.showplan
 
-6. The query plan opens in Carbon's query plan viewer.
+6. The query plan opens in [!INCLUDE[name-sos](../includes/name-sos-short.md)]'s query plan viewer.
 
-   >> TBD - screenshot after fixing bug in Carbon.
+   >> TBD - screenshot
 
 ## Next Steps
 In this tutorial, you learned how to:
 > [!div class="checklist"]
 > * Enable Query Data Store on TutorialDB
 > * Quickly turn on an insight widget using a built-in insight widget sample.
-> * View the details of the top five slowest query.
+> * View the details of the top five slowest queries.
 > * Open the query script in editor.
 > * View query plans.
 

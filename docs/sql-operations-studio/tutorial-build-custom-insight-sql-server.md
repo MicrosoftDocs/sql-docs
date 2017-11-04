@@ -1,5 +1,5 @@
 ---
-title: Build a customer insight widget in Carbon | Microsoft Docs
+title: Build a customer insight widget in SQL Operations Studio | Microsoft Docs
 description: This sample describes the article in 115 to 145 characters. Validate using Gauntlet toolbar check icon. Use SEO kind of action verbs here.
 keywords: 
 ms.custom: "tools|sos"
@@ -16,9 +16,9 @@ ms.workload: "Inactive"
 ---
 
 # Build a custom insight widget
-In the previous tutorial, we learned how to quickly enable insight widgets on dashboard using built-in samples. In this tutorial we will walkthrough how to bring your own insight queries and build a custom insight widget. With a few simple steps, you will learn how to:
+In the previous tutorial, you learned how to quickly enable insight widgets on dashboard using built-in samples. In this tutorial, you walk through how to bring your own insight queries and build a custom insight widget. With a few simple steps, you learn how to:
 > [!div class="checklist"]
-> * Run your own query and view in a chart view.
+> * Run your own query and view it in a chart view.
 > * Build a custom insight widget from the chart view. 
 > * Pin the chart to a SQL Server and database dashboard
 
@@ -26,7 +26,7 @@ In the previous tutorial, we learned how to quickly enable insight widgets on da
 Follow [Get Started with Carbon](./get-started-sql-server.md)
 
 ## Run your own query and view the result in a chart view
-In this step, we will run a query to identify a missing primary key and missing index in a table.
+In this step, run a query to identify a missing primary key and missing index in a table.
 
 1. Press 'CTRL + N' to open a new editor. Connect to 'TutorialDB'.
 
@@ -175,7 +175,7 @@ In this step, we will run a query to identify a missing primary key and missing 
 
    ![qds insight](./media/tutorial-sql-server/insight-missingpk-dashboard.png) 
 
-## Add Inishgt Details
+## Add Insight Details
 
 1. Press 'CTRL + N' to open a new editor.
 
@@ -271,7 +271,7 @@ In this step, we will run a query to identify a missing primary key and missing 
     },   
    ```
 
-5. Close dashboard and re-open.
+5. Close dashboard and reopen.
 
 6. Click 'Show detail' to open the insight detail dialog.
 

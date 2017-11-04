@@ -49,9 +49,9 @@ Other Potential Platforms
 
 
 
-## Get [!INCLUDE[name-sos](../includes/name-sos-short.md)] for Windows
+## Get SQL Operations Studio for Windows
 
-1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] for Windows](NEED WIN LINK) to your local computer.
+1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] for Windows](https://github.com/Microsoft/carbon/releases/download/v0.23.3/2017-Nov-03-sqlops-windows.zip) to your local computer.
 
    > [!IMPORTANT]
    > Executable files may be blocked by Windows when zip files are downloaded from an external source and extracted. The following steps unblock the .zip file before extracting. 
@@ -63,9 +63,9 @@ Other Potential Platforms
 
 If [!INCLUDE[name-sos](../includes/name-sos-short.md)] is blocked when you run it, click **More info** > **Run Anyway**.
 
-## Get [!INCLUDE[name-sos](../includes/name-sos-short.md)] for macOS
+## Get SQL Operations Studio for macOS
 
-1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] for macOS](NEED MAC LINK) to your local computer.
+1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] for macOS](https://github.com/Microsoft/carbon/releases/download/v0.23.3/2017-Nov-03-sqlops-macos-2.zip) to your local computer.
 2. To expand the contents of the zip, double-click it.
 3. Drag *sqlops.app* to the *Applications* folder, making it available in the *Launchpad*.
 
@@ -76,7 +76,7 @@ If [!INCLUDE[name-sos](../includes/name-sos-short.md)] is blocked when you run i
       ```sqlops```
 
 
-## Get [!INCLUDE[name-sos](../includes/name-sos-short.md)] for Linux
+## Get SQL Operations Studio for Linux
 
 1. Open a new Terminal window.
 2. Type the following commands to extract the file and launch [!INCLUDE[name-sos](../includes/name-sos-short.md)]:
@@ -91,7 +91,7 @@ sqlops .
 ```
 
 
-## Uninstall [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+## Uninstall SQL Operations Studio
 
 To uninstall the [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] preview, delete the files.
 

@@ -24,29 +24,11 @@ To complete this quickstart, you need [!INCLUDE[name-sos](../includes/name-sos-s
 
 - [Install [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md).
 
-If you don't have access to a SQL Server, select your platform from the following links:
+If you don't have access to a SQL Server, select your platform from the following links (make sure you remember your SQL Login and Password!):
 - [Windows - Download SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
 - [macOS - Download SQL Server 2017 on Docker](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker)
-- [Linux - Download SQL Server 2017 Developer Edition](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-overview#install)
+- [Linux - Download SQL Server 2017 Developer Edition](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-overview#install) - You only need to follow the steps up to *Create and Query Data*.
 
-
-### Windows
-Before starting this quickstart, you must have access to a running SQL Server instance. If you don't have it, [download SQL Server 2017 Developer Edition for Windows](https://www.microsoft.com/en-us/sql-server/sql-server-downloads). **Remember your username and password.**
-
-To install [!INCLUDE[name-sos](../includes/name-sos-short.md)] on Windows, follow [these directions](download.md#get-carbon-for-windows).
-
-### macOS
-- Before starting this quickstart, download [Docker](https://docs.docker.com/docker-for-mac/install/#download-docker-for-mac).
-
-- You need access to a running SQL Server instance. On macOS, we install SQL Server on Docker. Follow [these instructions to download SQL Server on Docker](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker). Follow the steps up to "Create and Query Data." Please remember your username and password.
-
-- To install [!INCLUDE[name-sos](../includes/name-sos-short.md)] on macOS, follow [these directions](download.md#get-carbon-for-macos).
-
-### Linux
-Before starting this quickstart, you must have access to a running SQL Server instance. If you don't have it, [download SQL Server 2017 Developer Edition on Linux](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-overview#install). 
-**Note:** You only need to follow the steps up to "Create and Query Data", make sure you remember your SQL Login and Password.
-
-To install [!INCLUDE[name-sos](../includes/name-sos-short.md)] on Linux, follow [these directions](download.md#get-carbon-for-linux).
 
 ## Connect to a server
 

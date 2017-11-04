@@ -1,8 +1,8 @@
 ---
-title: "Security Overview (SQL Server R Services) | Microsoft Docs"
+title: "Security overview for Python in SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/10/2017"
-ms.prod: "sql-server-2016"
+ms.date: "11/03/2017"
+ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,18 +13,18 @@ ms.assetid: 8fc84754-7fbf-4c1b-9150-7d88680b3e68
 caps.latest.revision: 9
 author: "jeannt"
 ms.author: "jeannt"
-manager: "jhubbard"
+manager: "cgronlund"
 ms.workload: "Inactive"
 ---
-# Security Overview
+# Security overview for Python in SQL Server
 
 This topic describes the security architecture that is used to connect the [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] database engine and Python components. Examples of the security process are provided for two common scenarios: running Python in SQL Server using a stored procedure, and running Python with the SQL Server as the remote compute context.
 
 ## Security Overview
 
-A [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] login or Windows user account is required to run Python script in SQL Server. The login or user account identifies the *security principal*, who must have permission to access the database where data is retrieved from. Depending on whether the Python script creates new objects or writes new data, the user might need permissions to create tables, write data, or create custom functions or stored procedures.
+A [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] login or Windows user account is required to run Python script in SQL Server. These *security principals* are managed at the instance and database level, and identify users who have permission to connect to the database, read and write data, or create database objects such as tables or stored procedures. Additionally, users who run Python script must have permission to execute external script at the database level.
 
-Therefore, it is a strict requirement that each person who runs Python code in [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] must be mapped to a login or account in the database. This restriction applies regardless of whether the script is sent from a remote data science client or started using a T-SQL stored procedure.
+Even users who are using Python in an external tool must be mapped to a login or account in the database if the user needs to run Python code in-database, or access database objects and data. The same permissions are required whether the Python script is sent from a remote data science client or started using a T-SQL stored procedure.
 
 For example, assume that you created a Python script that runs on your laptop, and you want to run that code on [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]. You must ensure that the following conditions are met:
 
@@ -61,7 +61,7 @@ For more information about [!INCLUDE[rsql_launchpad_md](../../includes/rsql-laun
 > [!NOTE]
 > For Launchpad to manage the worker accounts and execute Python jobs, the group that contains the worker accounts, *SQLRUserGroup*, must have "Allow Log on locally" permissions; otherwise the Python run-time might not be started. By default, this right is given to all new local users, but in some organizations stricter group policies might be enforced, which prevent the worker accounts from connecting to SQL Server to Python jobs.
 
-## Security of Worker Accounts
+## Security of worker accounts
 
 The mapping of an external Windows user or valid SQL login to a worker account is valid only for the lifetime of the SQL stored procedure that executes the Python script.
 
@@ -69,10 +69,10 @@ Parallel queries from the same login are mapped to the same user worker account.
 
 The directories used for the processes are managed by the [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)], and directories are access-restricted. For Python, PythonLauncher performs this task. Each individual worker account is restricted to its own folder, and cannot access files in folders above its own level. However, the worker account can read, write, or delete children under the session working folder that was created.
 
-For more information about how to change the number of worker accounts, account names, or account passwords, see [Modify the User Account Pool for SQL Server R Services](../../advanced-analytics/r/modify-the-user-account-pool-for-sql-server-r-services.md).
+For more information about how to change the number of worker accounts, account names, or account passwords, see [Modify the user account pool for SQL Server machine learning](../../advanced-analytics/r/modify-the-user-account-pool-for-sql-server-r-services.md).
 
 
-## Security Isolation for Multiple External Scripts
+## Security isolation for multiple external scripts
 
 The isolation mechanism is based on on physical user accounts. As satellite processes are started for a specific language runtime, each satellite task uses the worker account specified by the [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)]. If a task requires multiple satellites, for example, in the case of parallel queries, a single worker account is used for all related tasks.
 

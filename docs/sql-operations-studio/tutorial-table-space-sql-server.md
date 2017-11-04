@@ -1,21 +1,22 @@
 ---
 title: Enable Table Space Usage Insight Dashboard | Microsoft Docs
 description: This sample describes the article in 115 to 145 characters. Validate using Gauntlet toolbar check icon. Use SEO kind of action verbs here.
-services: sql-database
-author: erickang
-ms.author: erickang
+keywords: 
+ms.custom: "tools|sos"
+ms.date: "11/01/2017"
+ms.prod: "sql-non-specified"
+ms.reviewer: "alayu; erickang; sanagama; sstein"
+ms.suite: "sql"
+ms.tgt_pltfrm: ""
+ms.topic: "tutorial"
+author: "erickangMSFT"
+ms.author: "erickang"
 manager: craigg
-ms.reviewer: achatter, alayu, erickang, sanagama, sstein
-ms.service: data-tools
-ms.workload: data-tools
-ms.prod: NEEDED
-ms.custom: mvc, tutorial
-ms.topic: article
-ms.date: 10/01/2017
+ms.workload: "Inactive"
 ---
 
-# Monitor Table Space Usage with Carbon
-In this tutorial, we will walk-through how to enable an insight widget on Dashboard to get an at-a-glance view about the space usage for all tables in a database. After following through this tutorial, you will learn learn how to:
+# Monitor Table Space Usage with [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+In this tutorial, we will walk through how to enable an insight widget on Dashboard to get an at-a-glance view about the space usage for all tables in a database. After following through this tutorial, you will learn how to:
 
 > [!div class="checklist"]
 > * Quickly turn on an insight widget using a built-in insight widget sample.
@@ -23,10 +24,10 @@ In this tutorial, we will walk-through how to enable an insight widget on Dashbo
 > * Filter data and view label detail on an insight chart
 
 ## Prerequisites
-* Follow [Get Started with Carbon](./get-started-sql-server.md) to a SQL Server 2017 instance and TutorialDB database.
+* Follow [Get Started with [!INCLUDE[name-sos](../includes/name-sos-short.md)]](./get-started-sql-server.md) to a SQL Server 2017 instance and TutorialDB database.
 
-## Turn on a management insight on Carbon's database Manage dashboard
-Carbon has a built-in sample widget to monitor the space used by tables in a database.
+## Turn on a management insight on [!INCLUDE[name-sos](../includes/name-sos-short.md)]'s database Manage dashboard
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] has a built-in sample widget to monitor the space used by tables in a database.
 
 1. Open User Settings by pressing 'F1' to open Command Palette, type in 'settings' in the command search input box and select 'Preferences: Open User Settings' command.
 
@@ -38,7 +39,7 @@ Carbon has a built-in sample widget to monitor the space used by tables in a dat
 
 3. Click 'Copy to Settings' to copy "dashboard.database.widgets" settings to customize.
 
-4. Using Carbon's insight settings IntelliSense, configure 'name' for the widget title, 'gridItemConfig' for the widget size, and 'widget' by selecting 'table-space-database-insight' from the drop down list as shown in the screenshot below:
+4. Using [!INCLUDE[name-sos](../includes/name-sos-short.md)]'s insight settings IntelliSense, configure 'name' for the widget title, 'gridItemConfig' for the widget size, and 'widget' by selecting 'table-space-database-insight' from the drop-down list as shown in the screenshot below:
 
    ![Insight settings](./media/tutorial-sql-server/insight-table-space.png)
 
@@ -53,13 +54,13 @@ Carbon has a built-in sample widget to monitor the space used by tables in a dat
    ![Widget](./media/tutorial-sql-server/insight-table-space-result.png)
 
 
-## Working with Inishgt chart
+## Working with insight chart
 
-Carbon's insight chart provides filtering and mouse-hover detail view functionality. To try out follow the steps below:
+[!INCLUDE[name-sos](../includes/name-sos-short.md)]'s insight chart provides filtering and mouse-hover detail view functionality. To try out follow the steps below:
 
-1. Click and toggle 'row_count' legend on the chart. Carbon shows and hides data seriese as user toggle on or off a legend.
+1. Click and toggle 'row_count' legend on the chart. [!INCLUDE[name-sos](../includes/name-sos-short.md)] shows and hides data series as user toggle on or off a legend.
     
-2. Hover the mouse pointer over a chart. Carbon shows more information about the data series label and its value as shown on the screenshot.
+2. Hover the mouse pointer over a chart. [!INCLUDE[name-sos](../includes/name-sos-short.md)] shows more information about the data series label and its value as shown on the screenshot.
 
    ![chart toggle and legend](./media/tutorial-sql-server/insight-table-space-toggle.png)
 

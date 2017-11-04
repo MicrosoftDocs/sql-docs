@@ -14,19 +14,19 @@ If you're running Linux or macOS, try [Visual Studio Code](https://code.visualst
 
 <table style="width:100%">
   <tr>
-    <th>Carbon</th>
+    <th>[!INCLUDE[name-sos](../includes/name-sos-short.md)]</th>
     <th>VS Code</th> 
     <th>SSMS</th>
     <th>SSDT</th>
   </tr>
   <tr>
-    <td>[<img src="media/landing-page/carbon.png" alt="" />](../carbon/download.md)</td>
+    <td>[<img src="media/landing-page/carbon.png" alt="" />](../sql-operations-studio/download.md)</td>
     <td>[<img src="media/landing-page/vscode.png" alt="" />](https://code.visualstudio.com)</td>
     <td>[<img src="media/landing-page/ssms.png" alt="" />](../ssms/download-sql-server-management-studio-ssms.md)</td>
     <td>[<img src="media/landing-page/ssdt.png" alt="" />](../ssdt/download-sql-server-data-tools-ssdt.md)</td>
   </tr>
   <tr>
-    <td>Carbon is a free lightweight modern database development and management tool that you can use on Windows, Linux, and macOS with SQL Server running anywhere, Azure SQL Database and Azure SQL Data Warehouse. </td>
+    <td>[!INCLUDE[name-sos](../includes/name-sos-short.md)] is a free lightweight modern database development and management tool that you can use on Windows, macOS, and Linux with SQL Server running anywhere, Azure SQL Database and Azure SQL Data Warehouse.</td>
     <td>Visual Studio Code works on Linux, macOS, and Windows. After installing Visual Studio Code, install the [mssql extension](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql) for developing Microsoft SQL Server, Azure SQL Database and SQL Data Warehouse.</td> 
     <td>Use SQL Server Management Studio (SSMS) to query, design, and manage your SQL Server, Azure SQL Database, and Azure SQL Data Warehouse.</td>
     <td>Turn Visual Studio into a powerful development environment for SQL Server, Azure SQL Database, and Azure SQL Data Warehouse.</td>

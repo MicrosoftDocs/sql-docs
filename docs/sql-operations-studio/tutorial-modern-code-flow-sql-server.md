@@ -3,7 +3,7 @@ title: Working with T-SQL using Microsoft SQL Operations Studio | Microsoft Docs
 description: This tutorial walks through the key features in SQL Operations Studio that simplify using T-SQL.
 keywords: 
 ms.custom: "tools|sos"
-ms.date: "11/01/2017"
+ms.date: "11/02/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: "alayu; erickang; sanagama; sstein"
 ms.suite: "sql"
@@ -45,16 +45,16 @@ This tutorial requires the *TutorialDB* database. To create the *TutorialDB* dat
 
 1. Open the *TutorialDB Dashboard* by selecting **Manage** from the context menu.
 
-   ![context menu - Manage](./media/tutorial-sql-server/insight-open-dashboard.png)
+   ![context menu - Manage](./media/tutorial-sql-editor/insight-open-dashboard.png)
 
 1. Locate the *Customers* table by typing *cus* in the search widget.
 1. Right-click **dbo.Customers** and select **Edit data**.
 
-   ![quick search widget](./media/tutorial-sql-server/quick-search-widget.png)
+   ![quick search widget](./media/tutorial-sql-editor/quick-search-widget.png)
 
 1. Edit the **Email** column in the first row, type *jared@vsdata.io*, and click outside the cell to save the change.
 
-   ![edit data](./media/tutorial-sql-server/edit-data.png)
+   ![edit data](./media/tutorial-sql-editor/edit-data.png)
 
 ## Use T-SQL snippets and IntelliSense to create a stored procedure
 
@@ -64,11 +64,11 @@ This tutorial requires the *TutorialDB* database. To create the *TutorialDB* dat
 
 2. Type **sql** in the editor, arrow down to **sqlCreateStoredProcedure**, and press the *Tab* key to load the new stored procedure snippet.
 
-   ![snippet-list](./media/tutorial-sql-server/snippet-list.png)
+   ![snippet-list](./media/tutorial-sql-editor/snippet-list.png)
 
 3. Type *getCustomer* and all *StoredProcedureName* entries will change to *getCustomer*. 
 
-   ![snippet](./media/tutorial-sql-server/snippet.png)
+   ![snippet](./media/tutorial-sql-editor/snippet.png)
 
 4. Press *Tab* and then type *dbo* to replace the *SchemaName* entries.
 
@@ -95,7 +95,7 @@ This tutorial requires the *TutorialDB* database. To create the *TutorialDB* dat
     FOR JSON PATH
    ```
 
-   ![snippet-scripting](./media/tutorial-sql-server/snippet-scripting.png)
+   ![snippet-scripting](./media/tutorial-sql-editor/snippet-scripting.png)
 
 7. Delete the example arguments in the EXECUTE statement. The final statement should be: ```EXECUTE dbo.getCustomer 1```.
 
@@ -121,7 +121,7 @@ This tutorial requires the *TutorialDB* database. To create the *TutorialDB* dat
 
 5. Right-click **dbo.Customers** and select **Peek Definition**.
 
-   ![peek definition](./media/tutorial-sql-server/peek-definition.png)
+   ![peek definition](./media/tutorial-sql-editor/peek-definition.png)
 
 6. By referencing the table defintion in the peek definition, complete the following insert statement.??WHAT EXACTLY AM I DOING HERE - JUST LOOKING OR DOES THIS HELP ME CREATE THE STATEMENT??
 
@@ -173,7 +173,7 @@ In this step, we walkthrough how the **Save as JSON** option makes developing an
 
 2. Select the first row in the results view and click **Save as JSON**.  1. Click **Save**, and it opens the highlighted row in JSON format.
 
-   ![save as JSON](./media/tutorial-sql-server/save-as-json.png)
+   ![save as JSON](./media/tutorial-sql-editor/save-as-json.png)
 
 4. Select the JSON data and copy it.
 
@@ -201,7 +201,7 @@ In this step, we walkthrough how the **Save as JSON** option makes developing an
 
 7. Execute the script by pressing *F5**. The script inserts a new customer and returns the new customer's information in JSON format. Click the result to open a formatted view.
 
-   ![test result](./media/tutorial-sql-server/test-result.png)
+   ![test result](./media/tutorial-sql-editor/test-result.png)
 
 ## Next Steps
 In this tutorial, you learned how to:

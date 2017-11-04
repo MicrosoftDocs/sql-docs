@@ -1,32 +1,33 @@
 ---
 title: Enable Database Size Insight Dashboard | Microsoft Docs
 description: This sample describes the article in 115 to 145 characters. Validate using Gauntlet toolbar check icon. Use SEO kind of action verbs here.
-services: sql-database
-author: erickang
-ms.author: erickang
+keywords: 
+ms.custom: "tools|sos"
+ms.date: "11/01/2017"
+ms.prod: "sql-non-specified"
+ms.reviewer: "alayu; erickang; sanagama; sstein"
+ms.suite: "sql"
+ms.tgt_pltfrm: ""
+ms.topic: "tutorial"
+author: "erickangMSFT"
+ms.author: "erickang"
 manager: craigg
-ms.reviewer: achatter, alayu, erickang, sanagama, sstein
-ms.service: data-tools
-ms.workload: data-tools
-ms.prod: NEEDED
-ms.custom: mvc, tutorial
-ms.topic: article
-ms.date: 10/01/2017
+ms.workload: "Inactive"
 ---
 
-# Monitor Backup Status with Carbon
-In this tutorial, we will walk-through how to enable an insight widget on Dashboard to get an at-a-glance view about the size of all databases in a SQL Server instance. After following through this tutorial, you will learn learn how to:
+# Monitor Backup Status with [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+In this tutorial, we walk through how to enable an insight widget on Dashboard to get an at-a-glance view about the size of all databases in a SQL Server instance. After following through this tutorial, you will learn how to:
 
 > [!div class="checklist"]
 > * Quickly turn on an insight widget using a built-in insight widget sample.
 > * View the size of all databases.
-> * View, modify and run the insight query.
+> * View, modify, and run the insight query.
 
 ## Prerequisites
-* Follow [Get Started with Carbon](./get-started-sql-server.md) to a SQL Server 2017 instance and TutorialDB database.
+* Follow [Get Started with [!INCLUDE[name-sos](../includes/name-sos-short.md)]](./get-started-sql-server.md) to a SQL Server 2017 instance and TutorialDB database.
 
-## Turn on a management insight on Carbon's database Manage dashboard
-Carbon has a built-in sample widget to monitor the size of all databases in a SQL Server instance. With a few simple steps, you can easily visualize the business critical information in a chart.
+## Turn on a management insight on [!INCLUDE[name-sos](../includes/name-sos-short.md)]'s database Manage dashboard
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] has a built-in sample widget to monitor the size of all databases in a SQL Server instance. With a few simple steps, you can easily visualize the business critical information in a chart.
 
 1. Open User Settings by pressing 'F1' to open Command Palette, type in 'settings' in the command search input box and select 'Preferences: Open User Settings' command.
 
@@ -38,7 +39,7 @@ Carbon has a built-in sample widget to monitor the size of all databases in a SQ
 
 3. Click 'Copy to Settings' to copy "dashboard.database.widgets" settings to customize.
 
-4. Using Carbon's insight settings IntelliSense, configure 'name' for the widget title, 'gridItemConfig' for the size and 'widget' by selecting 'all-database-size-server-insight' from the drop down list as shown in the screenshot below:
+4. Using [!INCLUDE[name-sos](../includes/name-sos-short.md)]'s insight settings IntelliSense, configure 'name' for the widget title, 'gridItemConfig' for the size and 'widget' by selecting 'all-database-size-server-insight' from the drop-down list as shown in the screenshot below:
 
    ![Insight settings](./media/tutorial-sql-server/insight-dbsize-settings.png)
 
@@ -54,9 +55,9 @@ Carbon has a built-in sample widget to monitor the size of all databases in a SQ
    ![QDS widget](./media/tutorial-sql-server/insight-dbsize-result.png)
 
 
-## View, modify and run the insight query
+## View, modify, and run the insight query
 
-1. Click 'Run query' context menu. It will open an editor with the insight query and execute the query.
+1. Click 'Run query' context menu. It opens an editor with the insight query and execute the query.
 
    ![Insight detail dialog](./media/tutorial-sql-server/insight-run-query.png)
 
@@ -67,7 +68,7 @@ In this tutorial, you learned how to:
 > [!div class="checklist"]
 > * Quickly turn on an insight widget using a built-in insight widget sample.
 > * View the size of all databases.
-> * View, modify and run the insight query.
+> * View, modify, and run the insight query.
 
 Next, learn how to use X, try this tutorial: 
 > [!div class="nextstepaction"]

@@ -1,5 +1,5 @@
 ---
-title: Monitor database performance using SQL Operations Studio | Microsoft Docs
+title: Create a custom Insight widget for a SQL Operations Studio dashboard | Microsoft Docs
 description: Create a database insight widget to monitor query performance using SQL Operations Studio
 keywords: 
 keywords: 
@@ -16,7 +16,7 @@ manager: craigg
 ms.workload: "Inactive"
 ---
 
-# Monitor database performance using [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# Create a custom Insight widget for a [!INCLUDE[name-sos](../includes/name-sos-short.md)] dashboard
 
 In this tutorial you learn how to locate the five slowest queries, into a database insight widget and add it to the database management dashboard. 
 

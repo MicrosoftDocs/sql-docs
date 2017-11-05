@@ -1,5 +1,5 @@
 ---
-title: Add Insight widgets to the database management dashboard | Microsoft Docs
+title: Add available Insight widgets to the database management dashboard | Microsoft Docs
 description: Monitor a database by adding a pre-built query performance widget to the database management dashboard.
 keywords: 
 ms.custom: "tools|sos"

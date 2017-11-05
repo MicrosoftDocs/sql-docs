@@ -3,7 +3,7 @@ title: Backup and restore a database using SQL Operations Studio | Microsoft Doc
 description: Learn how to backup and restore a database using SQL Operations Studio
 keywords: 
 ms.custom: "tools|sos"
-ms.date: "11/02/2017"
+ms.date: "11/03/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: "alayu; erickang; sanagama; sstein"
 ms.suite: "sql"
@@ -19,9 +19,11 @@ ms.workload: "Inactive"
 
 In this tutorial, you learn how to use [!INCLUDE[name-sos](../includes/name-sos-short.md)] to:
 > [!div class="checklist"]
-> * Backup a database using Backup dialog.
-> * View the backup task status and script out the backup script.
-> * Restore a database using Restore dialog.
+> * Backup a database 
+> * View the backup status
+> * Generate the script used to perform the backup
+> * Restore a database
+> * View the status of the restore task
 
 ## Prerequisites
 This tutorial requires the *TutorialDB* database. To create the *TutorialDB* database, complete one of the following quickstarts:
@@ -33,7 +35,7 @@ This tutorial requires the *TutorialDB* database. To create the *TutorialDB* dat
 ## Backup a database
 [step overview]
 
-1. Open the database dashboard (open the **SERVERS** sidebar (**CTRL+G**), expand **Databases**, right-click **TutorialDB**, and select **Manage**). 
+1. Open the TutorialDB database dashboard (open the **SERVERS** sidebar (**CTRL+G**), expand **Databases**, right-click **TutorialDB**, and select **Manage**). 
 
 2. Open the **Backup database** dialog (click **Backup** on the **Tasks** widget).
 
@@ -78,9 +80,9 @@ After clicking **Backup**, the **Backup database** dialog disappears and the bac
 ## Next Steps
 In this tutorial, you learned how to:
 > [!div class="checklist"]
-> * Backup a database
-> * View the status of the backup task
-> * View the backup script
+> * Backup a database 
+> * View the backup status
+> * Generate the script used to perform the backup
 > * Restore a database
 > * View the status of the restore task
 

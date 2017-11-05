@@ -69,7 +69,7 @@ Use [!INCLUDE[name-sos](../includes/name-sos-short.md)] to establish a connectio
 
 4. You should see your connection in the object explorer.
 
-## Create a tutorial database
+## Create the tutorial database
 1. Right click on your server, in the object explorer and select **New Query.**
 
    ![NewQuery](media/get-started-sql-dw/new-query.png)
@@ -92,9 +92,12 @@ Use [!INCLUDE[name-sos](../includes/name-sos-short.md)] to establish a connectio
 
 ## Create a table
 
-1. Change the context to **TutorialDB**: 
+The query editor is still connected to the *master* database, but we want to create a table in the *TutorialDB* database. 
 
-   ![Change connection context](media/get-started-sql-dw/change-context.png)
+1. Change the connection context to **TutorialDB**:
+
+   ![Change context](media/get-started-sql-database/change-context.png)
+
 
 1. Paste the following snippet into the query window:
 

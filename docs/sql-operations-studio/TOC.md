@@ -1,19 +1,18 @@
 # [Microsoft SQL Operations Studio](index.md)
 # [Install SQL Operations Studio](download.md)
-# [FAQ](faq.md)
 # [Overview](overview.md)
 # Quickstarts
-## [Connect & query SQL Server](get-started-sql-server.md)
-## [Connect & query SQL Database](get-started-sql-database.md)
-## [Connect & query SQL Data Warehouse](get-started-sql-dw.md)
+## [Connect & query - SQL Server](get-started-sql-server.md)
+## [Connect & query - SQL Database](get-started-sql-database.md)
+## [Connect & query - SQL Data Warehouse](get-started-sql-dw.md)
 # Tutorials
-## [Query Editor](tutorial-modern-code-flow-sql-server.md) 
+## [SQL queries and scripts](tutorial-modern-code-flow-sql-server.md) 
 ## [Monitor](tutorial-monitoring-sql-server.md)
-### [Database Insight - Monitoring Query Performance](tutorial-qds-sql-server.md)
-### [Database Insight - Table Space Usage](tutorial-table-space-sql-server.md)
-### [Server Insight - Backup Status](tutorial-backup-status-sql-server.md)
-### [Server Insight - Database Size](tutorial-db-size-sql-server.md)
-### [Custom Insight - Missing Index and Memory Usage](tutorial-build-custom-insight-sql-server.md) 
+## [Database Insight - Monitoring Query Performance](tutorial-qds-sql-server.md)
+## [Database Insight - Table Space Usage](tutorial-table-space-sql-server.md)
+## [Server Insight - Backup Status](tutorial-backup-status-sql-server.md)
+## [Server Insight - Database Size](tutorial-db-size-sql-server.md)
+## [Custom Insight - Missing Index and Memory Usage](tutorial-build-custom-insight-sql-server.md) 
 ## [Backup and restore](tutorial-backup-restore-sql-server.md)
 # How-to guides
 ## [Management dashboards & Insight widgets](insight-widgets.md)
@@ -26,5 +25,6 @@
 ## [Windows authentication (Kerberos)](enable-kerberos.md)
 # Reference
 # Resources
-## [SQL Operations Studio GitHub repo](https://www.github.com/Microsoft/Carbon)
+## [SQL Operations Studio GitHub repo](https://www.github.com/Microsoft/SqlOpsStudio)
+# [SQL Operations Studio FAQ](faq.md)
 # [Usage Data Collection](usage-data-collection.md)

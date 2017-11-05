@@ -3,7 +3,7 @@ title: Connect and query SQL Server using SQL Operations Studio | Microsoft Docs
 description: Use SQL Operations Studio to connect to SQL Server and run a query
 keywords:
 ms.custom: "tools|sos"
-ms.date: "11/01/2017"
+ms.date: "11/03/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: "alayu; erickang; sanagama; sstein"
 ms.suite: "sql"
@@ -30,11 +30,11 @@ If you don't have access to a SQL Server, select your platform from the followin
 - [Linux - Download SQL Server 2017 Developer Edition](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-overview#install) - You only need to follow the steps up to *Create and Query Data*.
 
 
-## Connect to a server
+## Connect to a SQL Server
 
    
 1. Start **[!INCLUDE[name-sos](../includes/name-sos-short.md)]**.
-1. The first time you run [!INCLUDE[name-sos](../includes/name-sos-short.md)] the **Connection** page should open. If the **Connection** page doesn't open, click the **New Connection** icon in the **SERVERS** page:
+1. The first time you run *[!INCLUDE[name-sos](../includes/name-sos-short.md)]* the **Connection** dialog opens. If the **Connection** dialog doesn't open, click the **New Connection** icon in the **SERVERS** page:
    
    ![New Connection Icon](media/get-started-sql-server/new-connection-icon.png)
 
@@ -79,9 +79,13 @@ After the query completes, the new **TutorialDB** appears in the list of databas
 
 ## Create a table
 
-1. Change the database context to **TutorialDB**:
+The query editor is still connected to the *master* database, but we want to create a table in the *TutorialDB* database. 
 
-   ![Change context](media/get-started-sql-server/change-context.png)
+1. Change the connection context to **TutorialDB**:
+
+   ![Change context](media/get-started-sql-database/change-context.png)
+
+
 
 1. Paste the following snippet into the query window:
 

@@ -16,7 +16,7 @@ ms.workload: "Inactive"
 ---
 # Azure SQL Database: Use [!INCLUDE[name-sos](../includes/name-sos-short.md)] to connect and query data
 
-This quickstart demonstrates how to use [!INCLUDE[name-sos](../includes/name-sos-short.md)] to connect to an Azure SQL database, and then use Transact-SQL (T-SQL)statements to create, insert, and select data.
+This quickstart demonstrates how to use *[!INCLUDE[name-sos](../includes/name-sos-short.md)]* to connect to an Azure SQL database, and then use Transact-SQL (T-SQL)statements to create, insert, and select data.
 
 ## Prerequisites
 
@@ -31,9 +31,9 @@ If you don't already have an Azure SQL server, complete one of the following Azu
 - [Create DB - PowerShell](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-powershell)
 
 
-## Get your Azure SQL server connection string
+## Get your Azure SQL server's fully qualified server name
 
-Get the connection information needed to connect to the Azure SQL database. You need the fully qualified server name, database name, and login information in the next procedures.
+To connect to your server from [!INCLUDE[name-sos](../includes/name-sos-short.md)], you need the fully qualified server name, and login information.
 
 1. Log in to the [Azure portal](https://portal.azure.com/).
 
@@ -44,9 +44,7 @@ Get the connection information needed to connect to the Azure SQL database. You 
    ![connection information](./media/get-started-sql-database/server-name.png) 
 
 
-4. If you have forgotten the login information for your Azure SQL Database server, navigate to the SQL Database server page to view the server admin name and, if necessary, reset the password. 
-
-## Connect to your database
+## Connect to your Azure SQL Database server
 
 Use [!INCLUDE[name-sos](../includes/name-sos-short.md)] to establish a connection to your Azure SQL Database server.
 
@@ -73,8 +71,11 @@ Use [!INCLUDE[name-sos](../includes/name-sos-short.md)] to establish a connectio
    ![Firewall image](media/get-started-sql-database/setup-firewall-ip.png)  
 
 
-## Create a tutorial database
-1. Right click on your Azure SQL server in the SERVERS screen and select **New Query.**
+## Create the tutorial database
+
+The *TutorialDB* database is used in several [!INCLUDE[name-sos](../includes/name-sos-short.md)] tutorials.
+
+1. Right click on your Azure SQL server in the SERVERS sidebar and select **New Query.**
 
 1. Paste the following snippet into the query window.
 
@@ -90,15 +91,20 @@ Use [!INCLUDE[name-sos](../includes/name-sos-short.md)] to establish a connectio
    ALTER DATABASE [TutorialDB] SET QUERY_STORE=ON
    GO
    ```
+
 1. To execute the query, click **Run**.
 
-## Change database context for a query
 
-Change the context to **TutorialDB**:
+## Create a table
+
+The query editor is still connected to the *master* database, but we want to create a table in the *TutorialDB* database. 
+
+1. Change the connection context to **TutorialDB**:
 
    ![Change context](media/get-started-sql-database/change-context.png)
 
-## Create a table
+
+
 1. Paste the following snippet into the query window.
 
    ```sql

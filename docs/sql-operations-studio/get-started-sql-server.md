@@ -84,6 +84,7 @@ After the query completes, the new **TutorialDB** appears in the list of databas
    ![Change context](media/get-started-sql-server/change-context.png)
 
 1. Paste the following snippet into the query window:
+
    ```sql
    -- Create a new table called 'Customers' in schema 'dbo'
    -- Drop the table if it already exists
@@ -100,7 +101,6 @@ After the query completes, the new **TutorialDB** appears in the list of databas
    );
    GO
    ```
-1. If you added the snippet to the existing query window, select the text you want to execute, and click **Run**.
 
 After the query completes, the new **Customers** table appears in the list of tables. You might need to right-click the **TutorialDB > Tables** node and select **Refresh**.
 

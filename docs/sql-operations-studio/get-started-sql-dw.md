@@ -91,7 +91,13 @@ Use [!INCLUDE[name-sos](../includes/name-sos-short.md)] to establish a connectio
 1. To execute the query, click **Run**.
 
 ## Create a table
+
+1. Change the context to **TutorialDB**: 
+
+   ![Change connection context](media/get-started-sql-dw/change-context.png)
+
 1. Paste the following snippet into the query window:
+
    ```sql
    -- Create a new table called 'Customers' in schema 'dbo'
    -- Drop the table if it already exists
@@ -108,10 +114,6 @@ Use [!INCLUDE[name-sos](../includes/name-sos-short.md)] to establish a connectio
    );
    GO
    ```
-1. To execute the query, click **Run**.
-1. Change the context to **TutorialDB**. 
-
-   ![Change context](media/get-started-sql-dw/change-context.png)
 
 1. To execute the query, click **Run**.
 

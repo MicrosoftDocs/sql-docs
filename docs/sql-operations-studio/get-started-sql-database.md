@@ -138,10 +138,12 @@ Change the context to **TutorialDB**:
 
 ## View the result
 1. Paste the following snippet into the query window.
+
    ```sql
    -- Select rows from table 'Customers'
    SELECT * FROM dbo.Customers;
    ```
+
 1. To execute the query, click **Run**.
 
    ![Select results](media/get-started-sql-database/select-results.png)

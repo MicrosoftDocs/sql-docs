@@ -100,6 +100,7 @@ Change the context to **TutorialDB**:
 
 ## Create a table
 1. Paste the following snippet into the query window.
+
    ```sql
    -- Create a new table called 'Customers' in schema 'dbo'
    -- Drop the table if it already exists
@@ -116,7 +117,7 @@ Change the context to **TutorialDB**:
    );
    GO
    ```
-
+1. To execute the query, click **Run**.
 
 ## Insert rows
 

@@ -111,7 +111,7 @@ Details of stock items, their holdings and transactions.
 |Table|Description|
 |-----------------------------|---------------------|
 |StockItems|Main entity table for stock items|
-|StockItemHoldings|Non-temporal columns for stock items. These arefrequently updated columns.|
+|StockItemHoldings|Non-temporal columns for stock items. These are frequently updated columns.|
 |StockGroups|Groups for categorizing stock items (e.g., novelties, toys, edible novelties, etc.)|
 |StockItemStockGroups|Which stock items are in which stock groups (many to many)|
 |Colors|Stock items can (optionally) have colors|

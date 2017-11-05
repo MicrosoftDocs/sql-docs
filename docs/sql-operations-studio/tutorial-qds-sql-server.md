@@ -1,6 +1,6 @@
 ---
-title: Enable Query Performance Insight Dashboard | Microsoft Docs
-description: This sample describes the article in 115 to 145 characters. Validate using Gauntlet toolbar check icon. Use SEO kind of action verbs here.
+title: Add Insight widgets to the database management dashboard | Microsoft Docs
+description: Monitor a database by adding a pre-built query performance widget to the database management dashboard.
 keywords: 
 ms.custom: "tools|sos"
 ms.date: "11/01/2017"
@@ -16,7 +16,7 @@ ms.workload: "Inactive"
 ---
 
 # Monitor Query Performance with [!INCLUDE[name-sos](../includes/name-sos-short.md)]
-In this tutorial, you walk through the process of adding one of [!INCLUDE[name-sos](../includes/name-sos-short.md)]'s built-in insight widgets to the *database dashboard*.  to quickly view a database's five slowest queries using Query Store. You also learn how to view the details of the slow queries and query plans using [!INCLUDE[name-sos](../includes/name-sos-short.md)]'s features. After following through this tutorial, you will learn how to:
+In this tutorial, you walk through the process of adding one of [!INCLUDE[name-sos](../includes/name-sos-short.md)]'s built-in insight widgets to the *database dashboard*.  to quickly view a database's five slowest queries using [Query Store](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md). You also learn how to view the details of the slow queries and query plans using [!INCLUDE[name-sos](../includes/name-sos-short.md)]'s features. After following through this tutorial, you will learn how to:
 
 > [!div class="checklist"]
 > * Enable Query Data Store on TutorialDB
@@ -29,16 +29,21 @@ In this tutorial, you walk through the process of adding one of [!INCLUDE[name-s
 ## Prerequisites
 * Follow [Get Started with [!INCLUDE[name-sos](../includes/name-sos-short.md)]](./get-started-sql-server.md) to a SQL Server 2017 instance and TutorialDB database.
 
-* Enable Query Data Store by executing following T-SQL statement on TutorialDB:
+
+
+## Turn on Query Store for the TutorialDB database
+
+Enable Query Data Store by executing following T-SQL statement on TutorialDB:
 
    ```sql
     ALTER DATABASE TutorialDB SET QUERY_STORE = ON
    ```
 
-## Turn on a management insight on [!INCLUDE[name-sos](../includes/name-sos-short.md)]'s database Manage dashboard
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] has a built-in sample widget to monitor the top five slowest query using query performance information. The performance information is collected by Query Data Store. With a few simple steps, you can easily visualize and use the information to improve your database and application.
+## Add a pre-built management insight to [!INCLUDE[name-sos](../includes/name-sos-short.md)]'s database dashboard
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] has a built-in sample widget to monitor the top five slowest query using query performance information collected by Query Data Store. With a few simple steps, you can easily visualize and use the information to improve your database and application.
 
-1. Open User Settings by pressing 'F1' to open Command Palette, type in 'settings' in the command search input box and select 'Preferences: Open User Settings' command.
+1. Open *User Settings* by pressing **Ctrl+Shift+P** to open the *Command Palette*.
+2. Type *settings* in the command search input box and select 'Preferences: Open User Settings' command.
 
    ![Open user settings command](./media/tutorial-sql-server/open-user-settings.png)
 

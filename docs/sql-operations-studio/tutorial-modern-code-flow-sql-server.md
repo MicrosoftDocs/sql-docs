@@ -86,12 +86,12 @@ This tutorial requires the *TutorialDB* database. To create the *TutorialDB* dat
 > Type *SELECT FROM dbo.Customers c*, and complete the rest as IntelliSense guides you.
 
    ```sql
-    SELECT  c.CustomersID, 
+    SELECT  c.CustomerID, 
             c.Name, 
             c.Location, 
             c.Email
     FROM dbo.Customers c
-    WHERE c.CustomersID = @ID
+    WHERE c.CustomerID = @ID
     FOR JSON PATH
    ```
 
@@ -126,10 +126,10 @@ This tutorial requires the *TutorialDB* database. To create the *TutorialDB* dat
 6. By referencing the table defintion in the peek definition, complete the following insert statement.??WHAT EXACTLY AM I DOING HERE - JUST LOOKING OR DOES THIS HELP ME CREATE THE STATEMENT??
 
    ```sql
-   INSERT INTO dbo.Customers (CustomersID, Name, Location, Email)
-       SELECT CustomersID, Name, Location, Email
+   INSERT INTO dbo.Customers (CustomerID, Name, Location, Email)
+       SELECT CustomerID, Name, Location, Email
        FROM OPENJSON (@json_val)
-       WITH(   CustomersID int, 
+       WITH(   CustomerID int, 
                Name nvarchar(50), 
                Location nvarchar(50), 
                Email nvarchar(50)
@@ -152,10 +152,10 @@ This tutorial requires the *TutorialDB* database. To create the *TutorialDB* dat
        @json_val nvarchar(max) 
    AS
        -- body of the stored procedure
-       INSERT INTO dbo.Customers (CustomersID, Name, Location, Email)
-       SELECT CustomersID, Name, Location, Email
+       INSERT INTO dbo.Customers (CustomerID, Name, Location, Email)
+       SELECT CustomerID, Name, Location, Email
        FROM OPENJSON (@json_val)
-       WITH(   CustomersID int, 
+       WITH(   CustomerID int, 
                Name nvarchar(50), 
                Location nvarchar(50), 
                Email nvarchar(50)
@@ -186,10 +186,10 @@ In this step, we walkthrough how the **Save as JSON** option makes developing an
    declare @json nvarchar(max) =
    N'[
        {
-           "CustomersID": 5,
-           "Name": "New User",
-           "Location": "US",
-           "Email": "newuser@vsdata.io"
+           "CustomerID": 5,
+           "Name": "Lucy",
+           "Location": "Canada",
+           "Email": "lucy0@adventure-works.com"
        }
    ]'
 

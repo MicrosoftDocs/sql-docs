@@ -28,7 +28,7 @@ Machine learning projects can be complex, because they require the skills and co
 Machine learning is a complex process that touches all aspects of data in the enterprise, and many machine learning projects end up taking longer and being more complex than anticipated. Here are some of the ways that machine learning requires the support of data professionals in the enterprise:
 
 + Machine learning begins with identification of goals and business rules.
-+ Machine learning professionals must be congnizant of policies for storing, extracting, and auditing data.
++ Machine learning professionals must be aware of policies for storing, extracting, and auditing data.
 + Collection of potentially applicable data is next.  Data sources must be identified, and the appropriate data extracted from sensors and business applications. 
 + The quality of machine learning efforts is highly dependent on not just the type of data that is available, but the very processes used for extracting, processing, and storing data. 
 + No machine learning project would be complete without a strategy for reporting and analysis, and possibly customer engagement and feedback.
@@ -44,7 +44,7 @@ SQL Server helps bridge many of the gaps between enterprise data professionals a
 
 Data scientists use a variety of tools for data analysis and machine learning, ranging from Excel or free open-source platforms, to expensive statistical suites that require deep technical knowledge. However, using R or Python with SQL Server provides some unique benefits in comparison to these traditional tools:
 
-+ You can develop and test a solution by using the development environment of your choice, then deploy your R or Python code tas part of T-SQL code.
++ You can develop and test a solution by using the development environment of your choice, then deploy your R or Python code as part of T-SQL code.
 + Move complex computations off the data scientist's laptop and onto the server, avoiding data movement to comply with enterprise security policies.
 + Performance and scale are improved through special R packages and APIs. You are no longer restricted by the single-threaded, memory-bound architecture of R, and can work with large datasets and multi-threaded, multi-core, multi-process computations.
 + Code portability: Solutions can run in SQL Server, or in Hadoop or Linux, using [Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server). Code once, deploy anywhere.
@@ -56,7 +56,7 @@ Database developers are tasked with integrating multiple technologies and bringi
 Integration with SQL Server provides many benefits to data developers:
 
 + The data scientist can work in RStudio, while the data developer deploys the solution using SQL Server Management Studio. No more recoding of R or Python solutions.
-+ Optimize your solutions by using the best of T-SQL, R, and Python. Complex operations on large datasets can be run far more efficiently using SQL Server than in R. Leverage the knowledge of your databae professionals to improve the performance of machine learning solutions, by using in-memory columnstoreindexes, fast aggregates in T-SQL, and SQL set-based operations. 
++ Optimize your solutions by using the best of T-SQL, R, and Python. Complex operations on large datasets can be run far more efficiently using SQL Server than in R. Leverage the knowledge of your database professionals to improve the performance of machine learning solutions, by using in-memory columnstore indexes, and aggregations using SQL set-based operations. 
 + Effortlessly automate tasks that must run repeatedly on large amounts of data, such as generating prediction scores on production data. 
 + Access parameterized R or Python script from any application that uses [!INCLUDE[tsql](../../includes/tsql-md.md)]. Just call a stored procedure to train a model, generate a plot, or output predictions.
 + APIs can stream large datasets and benefit from multi-threaded, multi-core, multi-process in-database computations.

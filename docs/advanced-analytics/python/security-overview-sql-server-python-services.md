@@ -47,7 +47,7 @@ Therefore, all Python scripts that are initiated from a remote client must speci
 
 When a Python script is executed in the context of the [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] computer, the [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] service gets an available worker account (a local user account) from a pool of worker accounts established for external processes, and uses that worker account to perform the related tasks.
 
-For example, assume you launch a Python script under your Windows domain credentials. SQL Server will get your credentials and map it to an available Launchpad worker account, such as *SQLRUser01*.
+For example, assume you launch a Python script under your Windows domain credentials. SQL Server gets your credentials and maps the task to an available Launchpad worker account, such as *SQLRUser01*.
 
 > [!NOTE]
 > The name of the group of worker accounts is the same regardless of whether you are using R or Python. However, a separate group is created for each instance where you enable any external language.
@@ -74,7 +74,7 @@ For more information about how to change the number of worker accounts, account 
 
 ## Security isolation for multiple external scripts
 
-The isolation mechanism is based on on physical user accounts. As satellite processes are started for a specific language runtime, each satellite task uses the worker account specified by the [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)]. If a task requires multiple satellites, for example, in the case of parallel queries, a single worker account is used for all related tasks.
+The isolation mechanism is based on physical user accounts. As satellite processes are started for a specific language runtime, each satellite task uses the worker account specified by the [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)]. If a task requires multiple satellites, for example, in the case of parallel queries, a single worker account is used for all related tasks.
 
 No worker account can see or manipulate files used by other worker accounts.
 

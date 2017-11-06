@@ -28,17 +28,17 @@ Catch the latest announcement here! [Python in SQL Server 2017: enhanced in-data
 
 ## What's new in SQL Server 2017
 
-Microsoft Machine Learning Server in SQL Server provides comprehensive support for building and deploying machine learning solutions in either R or Python. Here are the highlights of this release:
+Machine Learning Server in SQL Server provides comprehensive support for building and deploying machine learning solutions in either R or Python. Here are the highlights of this release:
 
 ### What's new in Cumulative Update 1 for SQL Server 2017
 
-You can now upgrade your Python and R components to Machine Learning Server 9.2.1. This release features many enhancements to **revoscalepy** and **RevoScaleR**, including performance improvements.
+You can now upgrade your Python and R components to Machine Learning Server 9.2.1.24. This release features many enhancements to **revoscalepy** and **RevoScaleR**, including performance improvements.
 
 ### In-database Python integration
 
-You can run Python in stored procedures, or execute Python remotely using the SQL Server computer as the compute context. This integration opens up new avenues for the vast community of Python developers and data scientists to use the power of SQL Server. 
+You can run Python in stored procedures, or execute Python remotely using the SQL Server computer as the compute context. This integration opens up new avenues for the vast community of Python developers and data scientists to use the power of SQL Server.
 
-SQL Server developers gain access to the extensive Python libraries from the open source ecosystem, including popular frameworks such as scikit-learn, Tensorflow, Caffe, and Theano/Keras. And be sure to explore innovations from Microsoft such as **revoscalepy** and **microsoftml**!
+SQL Server developers gain access to the extensive Python libraries from the open source ecosystem, including popular frameworks such as scikit-learn, TensorFlow, Caffe, and Theano/Keras. And be sure to explore innovations from Microsoft such as **revoscalepy** and **microsoftml**!
 
 Running Python in-database isn't just about machine learning, by the way. There are a myriad of other potential applications for integrating Python with SQL, and using the power of each language to deliver more intelligent, powerful solutions.
 
@@ -54,7 +54,7 @@ Running Python in-database isn't just about machine learning, by the way. There 
 
 + Python support in Microsoft Machine Learning Server (Standalone)
 
-    SQL Server 2017 includes the option to install a standalone version of the Microsoft Machine Learning Server. By using Machine Learning Server, you can distribute and scale R or Python code without using SQL Server.
+    [!INCLUDE[sscurrent-md](../includes/sscurrent-md.md)] includes the option to install a standalone version of the Microsoft Machine Learning Server. By using Machine Learning Server, you can distribute and scale R or Python code without using SQL Server.
 
 ### Linux support
 
@@ -78,7 +78,7 @@ This release contains multiple options and features to help you deploy and distr
 
 + **mrsdeploy** for Python
 
-    The **mrsdeploy** package for Microsoft R Server and Machine Learaning Server supports deployment of Python models and scripts as web services. For an example of how it works, see [Publish and consume Python code](python/publish-consume-python-code.md).
+    The **mrsdeploy** package for [!INCLUDE[rsql-platform-md](../includes/rsql-platformnew-md.md)] and [!INCLUDE[rsql-platformnew-md](../includes/rsql-platformnew-md.md)] supports deployment of Python models and scripts as web services. For an example of how it works, see [Publish and consume Python code](python/publish-consume-python-code.md).
 
 + Performance
 
@@ -88,11 +88,11 @@ This release contains multiple options and features to help you deploy and distr
 
 Realtime scoring relies on native C++ libraries to read a model stored in an optimized binary format, and then generate predictions without having to call the R runtime. This makes scoring operations much faster.
 
-Additionally, this release of SQL Server 2017 includes a native T-SQL function for fast scoring that can be run on any edition of SQL Server, even on Linux. The function requires no installation of R or extra configuration. This means you can train a model elsewhere, save it in SQL Server, and then perform scoring without ever calling R. This feature is referred to as _native scoring_.
+Additionally, this release of [!INCLUDE[sscurrent-md](../includes/sscurrent-md.md)] includes a native T-SQL function for fast scoring that can be run on any edition of SQL Server, even on Linux. The function requires no installation of R or extra configuration. This means you can train a model elsewhere, save it in SQL Server, and then perform scoring without ever calling R. This feature is referred to as _native scoring_.
 
-  - Native scoring is available only in SQL Server 2017. It uses a T-SQL function that can run in any edition of SQL Server, including Linux.
- - Realtime scoring is supported in SQL Server 2017, and in Microsoft Machine Learning Server. You can run a  stored procedure or perform realtime scoring from R code.
- - Realtime scoring is also available for SQL Server 2016, if the instance is upgraded to the latest release of Microsoft R Server.
+  - Native scoring is available only in [!INCLUDE[sscurrent-md](../includes/sscurrent-md.md)]. It uses a T-SQL function that can run in any edition of SQL Server, including Linux.
+ - Realtime scoring is supported in [!INCLUDE[sscurrent-md](../includes/sscurrent-md.md)], and in Microsoft Machine Learning Server. You can run a  stored procedure or perform realtime scoring from R code.
+ - Realtime scoring is also available for SQL Server 2016, if the instance is upgraded to the latest release of [!INCLUDE[rsql-platform-md](../includes/rsql-platform-md.md)].
 
 For more information, see these articles:
 

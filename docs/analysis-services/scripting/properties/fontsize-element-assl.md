@@ -25,7 +25,7 @@ ms.assetid: 49f66a73-946a-4fbd-9749-a3ca1b717ff3
 caps.latest.revision: 37
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # FontSize Element (ASSL)

@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "XMLA, properties"
 ms.assetid: 5745f7b4-6b96-44d5-b77c-f2831a898e5e
 caps.latest.revision: 27
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # PropertyList Element - Supported XMLA Properties

@@ -25,7 +25,7 @@ ms.assetid: e06efbda-64fd-4dca-a2b5-c8ffbf21512c
 caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # DimensionPermission Element (ASSL)

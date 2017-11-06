@@ -20,7 +20,7 @@ ms.assetid: a593c74d-8c5e-485e-bd92-08f9d22451d4
 caps.latest.revision: 36
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # MDX Cell Properties - Using Cell Properties

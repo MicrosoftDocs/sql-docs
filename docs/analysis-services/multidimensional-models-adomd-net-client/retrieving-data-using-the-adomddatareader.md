@@ -20,7 +20,7 @@ ms.assetid: 8ed7ea26-b5f8-4852-80fc-75dd62df5b3a
 caps.latest.revision: 37
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Retrieving Data Using the AdomdDataReader

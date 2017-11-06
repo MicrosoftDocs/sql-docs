@@ -25,7 +25,7 @@ ms.assetid: 4bd2f7e7-ff0d-404e-96fb-7e2c4eeb91e9
 caps.latest.revision: 39
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # MiningModelPermission Element (ASSL)

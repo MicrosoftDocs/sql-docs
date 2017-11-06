@@ -21,7 +21,7 @@ ms.assetid: 3e2b50e2-3855-4091-8b02-4968e8e57d4c
 caps.latest.revision: 32
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # DISCOVER_PROPERTIES Rowset

@@ -25,7 +25,7 @@ ms.assetid: 149e753f-6218-4805-9223-7155b6827e64
 caps.latest.revision: 41
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # DSVTableBinding Data Type (ASSL)

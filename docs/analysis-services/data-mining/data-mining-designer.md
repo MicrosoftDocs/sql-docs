@@ -20,7 +20,7 @@ ms.assetid: 2540db5b-2bf3-4b6c-87c8-79c48d71acce
 caps.latest.revision: 35
 author: "Minewiskan"
 ms.author: "owend"
-manager: "jhubbard"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Data Mining Designer

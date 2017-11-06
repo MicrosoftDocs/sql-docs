@@ -23,7 +23,7 @@ ms.assetid: 754a037c-f20b-4717-a6e8-12f495e8e3b4
 caps.latest.revision: 12
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # MeasureQualificaton Element (ASSL)

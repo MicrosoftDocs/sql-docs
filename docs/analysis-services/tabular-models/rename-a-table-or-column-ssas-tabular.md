@@ -17,7 +17,7 @@ ms.assetid: 88061a39-c5aa-403d-a52b-7fdb365fc235
 caps.latest.revision: 11
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Rename a Table or Column (SSAS Tabular)

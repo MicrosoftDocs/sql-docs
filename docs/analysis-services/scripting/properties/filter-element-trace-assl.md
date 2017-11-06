@@ -25,7 +25,7 @@ ms.assetid: 411a598e-3bb1-487b-9f37-cce4b57a67b4
 caps.latest.revision: 32
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Filter Element (Trace) (ASSL)

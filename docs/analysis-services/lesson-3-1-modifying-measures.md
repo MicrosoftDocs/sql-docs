@@ -15,7 +15,7 @@ ms.assetid: 7bd48810-15ce-45ff-862b-372d08606995
 caps.latest.revision: 14
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Lesson 3-1 - Modifying Measures

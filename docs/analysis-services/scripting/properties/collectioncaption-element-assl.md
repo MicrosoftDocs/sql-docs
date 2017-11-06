@@ -16,7 +16,7 @@ ms.assetid: 33929373-11df-4f89-8d2e-d63923c44f53
 caps.latest.revision: 6
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # CollectionCaption Element (ASSL)

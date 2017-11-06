@@ -25,7 +25,7 @@ ms.assetid: 59372ebf-af52-4d60-bf9b-bb1644ae9865
 caps.latest.revision: 33
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Visibility Element (ASSL)

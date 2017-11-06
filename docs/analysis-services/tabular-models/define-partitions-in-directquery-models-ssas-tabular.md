@@ -14,7 +14,7 @@ ms.assetid: 5f179ba9-6efb-46ae-90e5-945bbfddb719
 caps.latest.revision: 15
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Define partitions in DirectQuery models

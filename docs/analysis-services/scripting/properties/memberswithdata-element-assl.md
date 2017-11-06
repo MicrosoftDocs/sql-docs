@@ -25,7 +25,7 @@ ms.assetid: 845087a2-b12d-4344-a8be-85ca61155296
 caps.latest.revision: 33
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # MembersWithData Element (ASSL)

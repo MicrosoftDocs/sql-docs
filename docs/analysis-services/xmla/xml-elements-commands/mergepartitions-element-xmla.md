@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "MergePartitions command"
 ms.assetid: cf538189-0629-49b3-8e01-32afba7b020d
 caps.latest.revision: 12
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # MergePartitions Element (XMLA)

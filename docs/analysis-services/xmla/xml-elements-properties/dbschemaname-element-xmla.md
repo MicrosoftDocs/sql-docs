@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "DbSchemaName element"
 ms.assetid: 40ca10c9-7597-48fe-a9d9-ee2c7b84d4d1
 caps.latest.revision: 12
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # DbSchemaName Element (XMLA)

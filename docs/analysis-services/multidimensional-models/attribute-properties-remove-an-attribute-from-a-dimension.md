@@ -19,7 +19,7 @@ ms.assetid: b41387c1-6c7d-42dc-bc14-d40586acb769
 caps.latest.revision: 27
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Attribute Properties - Remove an Attribute from a Dimension

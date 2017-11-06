@@ -19,7 +19,7 @@ ms.assetid: ce9aca4d-b7ad-451e-bb7f-20c2b0c03f29
 caps.latest.revision: 11
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Developing with Analysis Services Scripting Language (ASSL)

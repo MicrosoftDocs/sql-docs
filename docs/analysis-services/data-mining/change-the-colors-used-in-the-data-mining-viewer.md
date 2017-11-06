@@ -16,7 +16,7 @@ ms.assetid: 9de2fc2a-fca5-456b-b2bd-13586e7951e6
 caps.latest.revision: 12
 author: "Minewiskan"
 ms.author: "owend"
-manager: "jhubbard"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Change the Colors Used in the Data Mining Viewer

@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "LNum element"
 ms.assetid: 7b9cc143-0c5e-4a8c-a288-8921bfcfd103
 caps.latest.revision: 13
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # LNum Element (XMLA)

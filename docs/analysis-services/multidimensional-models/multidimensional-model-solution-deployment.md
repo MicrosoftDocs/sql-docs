@@ -19,7 +19,7 @@ ms.assetid: 7259c201-ff54-43e8-bda5-a6d51474e0e6
 caps.latest.revision: 39
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Multidimensional Model Solution Deployment

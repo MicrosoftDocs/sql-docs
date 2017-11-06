@@ -25,7 +25,7 @@ ms.assetid: 26488119-6490-426d-a4e4-274b5bdffbc2
 caps.latest.revision: 39
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Audit Element (ASSL)

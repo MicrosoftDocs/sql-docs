@@ -25,7 +25,7 @@ ms.assetid: a5d59efd-5d67-485b-a360-67d54a1fe394
 caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # MembersWithDataCaption Element (ASSL)

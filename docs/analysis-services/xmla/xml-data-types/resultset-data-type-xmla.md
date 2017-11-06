@@ -27,7 +27,7 @@ ms.assetid: 45e7d7d6-1f89-4dc8-b39d-9270ea2db541
 caps.latest.revision: 30
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Resultset Data Type (XMLA)

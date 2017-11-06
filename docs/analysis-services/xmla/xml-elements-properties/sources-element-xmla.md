@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "Sources element"
 ms.assetid: fefe8f01-4c62-4b70-9bf6-f11d2f01623a
 caps.latest.revision: 13
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Sources Element (XMLA)

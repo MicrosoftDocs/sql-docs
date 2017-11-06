@@ -25,7 +25,7 @@ ms.assetid: 160fdcb2-ac9f-4c5a-a0eb-a5f7669166b9
 caps.latest.revision: 37
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # ImpersonationMode Element (ASSL)

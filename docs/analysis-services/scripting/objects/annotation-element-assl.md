@@ -25,7 +25,7 @@ ms.assetid: 7d75291a-47b4-498a-8ba4-3d093b8513b2
 caps.latest.revision: 43
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Annotation Element (ASSL)

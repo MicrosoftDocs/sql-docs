@@ -25,7 +25,7 @@ ms.assetid: 40020840-1bb7-478f-9017-1a30342ac4c6
 caps.latest.revision: 40
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Partition Element (ASSL)

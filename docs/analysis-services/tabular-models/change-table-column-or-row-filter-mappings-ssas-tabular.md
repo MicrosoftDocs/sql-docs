@@ -15,7 +15,7 @@ ms.assetid: 2124c526-5772-4f84-a019-9dd3e906e8dd
 caps.latest.revision: 10
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Change table, column, or row filter mappings (SSAS Tabular)

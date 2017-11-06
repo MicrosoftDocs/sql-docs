@@ -25,7 +25,7 @@ ms.assetid: a1309b90-8ad8-431b-a918-67f0cdd4fd20
 caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Distribution Element (ASSL)

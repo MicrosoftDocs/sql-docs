@@ -25,7 +25,7 @@ ms.assetid: 1f250129-13b2-41b9-b083-b5aacddf0060
 caps.latest.revision: 37
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # ReadDefinition Element (ASSL)

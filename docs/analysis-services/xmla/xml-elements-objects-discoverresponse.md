@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "DiscoverResponse element"
 ms.assetid: 20e10a82-dbd1-4ead-b92d-f84b4b2f10c6
 caps.latest.revision: 13
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # XML Elements - Objects - DiscoverResponse

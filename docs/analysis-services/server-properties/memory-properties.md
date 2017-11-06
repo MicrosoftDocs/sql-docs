@@ -26,7 +26,7 @@ ms.assetid: 085f5195-7b2c-411a-9813-0ff5c6066d13
 caps.latest.revision: 26
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Memory Properties

@@ -14,7 +14,7 @@ ms.assetid: d40e3f05-54e8-4c4b-807a-0b06f446079b
 caps.latest.revision: 13
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Delete Relationships (SSAS Tabular)

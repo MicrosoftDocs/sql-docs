@@ -25,7 +25,7 @@ ms.assetid: 52924cd6-6176-47c8-ab17-4ee0e0ce42b1
 caps.latest.revision: 36
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Administer Element (ASSL)

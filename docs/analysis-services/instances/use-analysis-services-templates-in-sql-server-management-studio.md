@@ -15,7 +15,7 @@ ms.assetid: 54ad1954-22e2-4628-b334-8fad8e9433b8
 caps.latest.revision: 12
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Use Analysis Services Templates in SQL Server Management Studio

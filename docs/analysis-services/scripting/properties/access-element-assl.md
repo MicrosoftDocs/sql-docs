@@ -25,7 +25,7 @@ ms.assetid: 6ad99010-fac5-48e9-a099-ecbca380e127
 caps.latest.revision: 39
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Access Element (ASSL)

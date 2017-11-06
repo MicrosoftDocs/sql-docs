@@ -22,7 +22,7 @@ ms.assetid: 618b6c3a-e20d-47a9-b2c6-6d848dfba05a
 caps.latest.revision: 38
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Analysis Services backward compatibility (SQL Server 2016)

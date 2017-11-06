@@ -16,7 +16,7 @@ ms.assetid: 190bfa92-2445-404d-86df-7cc94d283add
 caps.latest.revision: 10
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Tables - Calculated Column Representation

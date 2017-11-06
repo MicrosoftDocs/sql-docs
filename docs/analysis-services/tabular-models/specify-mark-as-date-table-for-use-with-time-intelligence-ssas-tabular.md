@@ -15,7 +15,7 @@ ms.assetid: 30841d1f-0c3b-4575-8f4a-27a1492e248c
 caps.latest.revision: 5
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Specify Mark as Date Table for use with time-intelligence

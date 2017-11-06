@@ -17,7 +17,7 @@ ms.assetid: ac1a6a79-bda3-4122-a717-8b1e2f77da02
 caps.latest.revision: 25
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Import from Power Pivot (SSAS Tabular)

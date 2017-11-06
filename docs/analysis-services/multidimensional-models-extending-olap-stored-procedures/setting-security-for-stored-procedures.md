@@ -19,7 +19,7 @@ ms.assetid: 6364b125-7d72-4312-9677-56c62e22461e
 caps.latest.revision: 25
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Setting Security for Stored Procedures

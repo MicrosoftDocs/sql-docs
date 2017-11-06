@@ -20,7 +20,7 @@ ms.assetid: 251c369d-6b02-4687-964e-39bf55c9b009
 caps.latest.revision: 20
 author: "Minewiskan"
 ms.author: "owend"
-manager: "jhubbard"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Microsoft Sequence Clustering Algorithm Technical Reference

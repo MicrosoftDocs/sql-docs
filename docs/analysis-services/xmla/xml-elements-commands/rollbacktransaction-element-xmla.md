@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "RollbackTransaction command"
 ms.assetid: 40e7dc00-656f-412f-97f0-d05bf7caa196
 caps.latest.revision: 13
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # RollbackTransaction Element (XMLA)

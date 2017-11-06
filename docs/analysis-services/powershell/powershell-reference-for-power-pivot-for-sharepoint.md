@@ -14,7 +14,7 @@ ms.assetid: c01735a8-f919-48ad-8d74-35d75a18f821
 caps.latest.revision: 11
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # PowerShell Reference for Power Pivot for SharePoint

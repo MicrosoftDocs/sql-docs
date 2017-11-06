@@ -25,7 +25,7 @@ ms.assetid: c22060a9-99ca-4b81-9df3-89b020b4d1d4
 caps.latest.revision: 35
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # SilenceInterval Element (ASSL)

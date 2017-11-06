@@ -15,7 +15,7 @@ ms.assetid: 92eb21a8-5fc4-4999-ad37-1332ce26431d
 caps.latest.revision: 28
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Lesson 10: Create Partitions

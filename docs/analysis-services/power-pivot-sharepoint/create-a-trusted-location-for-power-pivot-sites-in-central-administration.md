@@ -15,7 +15,7 @@ ms.assetid: a666f365-cd93-43a3-9d3d-e429dfc19b66
 caps.latest.revision: 8
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Create a trusted location for Power Pivot sites in Central Administration

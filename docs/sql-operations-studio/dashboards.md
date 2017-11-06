@@ -1,18 +1,20 @@
 ---
-title: Quickly Access insights and common tasks in Carbon | Microsoft Docs
-description: Learn about displaying insightful widgets in Carbon.
-services: sql-database
-author: yualan
-ms.author: alayu
+title: Quickly Access insights and common tasks in SQL Operations Studio | Microsoft Docs
+description: Learn about displaying insightful widgets in SQL Operations Studio.
+keywords: 
+ms.custom: "tools|sos"
+ms.date: "10/31/2017"
+ms.prod: "sql-non-specified"
+ms.reviewer: "alayu; erickang; sstein"
+ms.suite: "sql"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+author: "yualan"
+ms.author: "alayu"
 manager: craigg
-ms.reviewer: achatter, alayu, erickang, sanagama, sstein
-ms.service: data-tools
-ms.workload: data-tools
-ms.prod: NEEDED
-ms.topic: article
-ms.date: 10/16/2017
+ms.workload: "Inactive"
 ---
-# Dashboards in Carbon
+# Dashboards in [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 To view a dashboard, right-click a server, or database and select **Manage**.
 
@@ -97,17 +99,17 @@ Sample Insight Details flyout configuration
 ## Insight Actions
 With an insight widget and insight details, you can easily come up an action plan to mitigate an issue or manage. For example, you will think of executing DBCC CHECKDB, read error logs or Restore the database when a database is in a recovery pending. Or it can be any of actions that you wish to perform.
 
-Using Carbon's Insight Actions configuration, you can map a built-in actions like restore, or bring your own action defined with a sql script.
+Using [!INCLUDE[name-sos](../includes/name-sos-short.md)]'s Insight Actions configuration, you can map a built-in actions like restore, or bring your own action defined with a sql script.
 
 > Configuration of custom actions using sql script is under development and it is not available in the private preview build yet.
 
 ## Sample Insight Action definition
 
-```"actions"{}``` defines an insight action. Action can be defined over a specific scope such as ```"server"```, ```"database"``` and so on and Carbon passes the current connection context information to the action. 
+```"actions"{}``` defines an insight action. Action can be defined over a specific scope such as ```"server"```, ```"database"``` and so on and [!INCLUDE[name-sos](../includes/name-sos-short.md)] passes the current connection context information to the action. 
 
 For example, when restore action is launched for WideWorldImporters database, ```"database": "${Database}"``` definition indicates to pass ```Database``` column value in your query result to the restore action. Then restore action starts for the database. ```"types"``` is a json array and multiple actions can be listed in the array. It basically becomes a context menu on Insight Details dialog that user can click and perform the action. 
 
-> Carbon preview 0.17.1 has enabled "backup", "restore", "new-query" and "new-database" as action types.
+> [!INCLUDE[name-sos](../includes/name-sos-short.md)] preview 0.17.1 has enabled "backup", "restore", "new-query" and "new-database" as action types.
 
 ```json
 "details": {
@@ -125,4 +127,4 @@ For example, when restore action is launched for WideWorldImporters database, ``
 ## Next steps
 The basics of dashboards and insight widgets have been covered in this document, read on to find out more about:
 
-* [Integrated Terminal](/carbon/integrated-terminal.md) - Use the integrated terminal in Carbon
+* [Integrated Terminal](integrated-terminal.md) - Use the integrated terminal in [!INCLUDE[name-sos](../includes/name-sos-short.md)]

@@ -1,20 +1,22 @@
 ---
-title: Integrated terminal in Carbon | Microsoft Docs
-description: Learn about the Integrated terminal in Carbon.
-services: sql-database
-author: yualan
-ms.author: alayu
+title: Integrated terminal in SQL Operations Studio | Microsoft Docs
+description: Learn about the Integrated terminal in SQL Operations Studio.
+keywords:
+ms.custom: "tools|sos"
+ms.date: "10/31/2017"
+ms.prod: "sql-non-specified"
+ms.reviewer: "alayu; erickang; sstein"
+ms.suite: "sql"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+author: "yualan"
+ms.author: "alayu"
 manager: craigg
-ms.reviewer: achatter, alayu, erickang, sanagama, sstein
-ms.service: data-tools
-ms.workload: data-tools
-ms.prod: NEEDED
-ms.topic: article
-ms.date: 10/16/2017
+ms.workload: "Inactive"
 ---
 # Integrated Terminal
 
-In Carbon, you can open an integrated terminal, initially starting at the root of your workspace. This can be very convenient as you don't have to switch windows or alter the state of an existing terminal to perform a quick command line task.
+In [!INCLUDE[name-sos](../includes/name-sos-short.md)], you can open an integrated terminal, initially starting at the root of your workspace. This can be convenient as you don't have to switch windows or alter the state of an existing terminal to perform a quick command-line task.
 
 To open the terminal:
 
@@ -24,7 +26,7 @@ To open the terminal:
 
 ![Terminal](media/integrated-terminal/terminal-screen.png)
 
-> **Note:** You can still open an external shell with the Explorer **Open in Command Prompt** command (**Open in Terminal** on Mac or Linux) if you prefer to work outside Carbon.
+> **Note:** You can still open an external shell with the Explorer **Open in Command Prompt** command (**Open in Terminal** on Mac or Linux) if you prefer to work outside [!INCLUDE[name-sos](../includes/name-sos-short.md)].
 
 ## Managing Multiple Terminals
 
@@ -57,7 +59,7 @@ Correctly configuring your shell on Windows is a matter of locating the right ex
 
 >**Note:** To be used as an integrated terminal, the shell executable must be a console application so that `stdin/stdout/stderr`  can be redirected.
 
->**Tip:** The integrated terminal shell is running with the permissions of Carbon. If you need to run a shell command with elevated (administrator) or different permissions, you can use platform utilities such as `runas.exe` within a terminal.
+>**Tip:** The integrated terminal shell is running with the permissions of [!INCLUDE[name-sos](../includes/name-sos-short.md)]. If you need to run a shell command with elevated (administrator) or different permissions, you can use platform utilities such as `runas.exe` within a terminal.
 
 ### Shell arguments
 
@@ -109,7 +111,7 @@ They are:
 
 ### Run Selected Text
 
-To use the `runSelectedText` command, select text in an editor and run the command **Terminal: Run Selected Text in Active Terminal** via the **Command Palette** (**Ctrl+Shift+P**). The terminal will attempt to run the selected text:
+To use the `runSelectedText` command, select text in an editor and run the command **Terminal: Run Selected Text in Active Terminal** via the **Command Palette** (**Ctrl+Shift+P**). The terminal attempts to run the selected text:
 
 ![Run selected text](media/integrated-terminal/terminal_run_selected.png)
 
@@ -125,9 +127,9 @@ The keybindings for copy and paste follow platform standards:
 
 ### Find
 
-The Integrated Terminal has basic find functionality which can be triggered with **Ctrl+F**.
+The Integrated Terminal has basic find functionality that can be triggered with **Ctrl+F**.
 
-If you want **Ctrl+F** to go to the shell instead of launching the Find widget on Linux and Windows, you will need to remove the keybinding like so:
+If you want **Ctrl+F** to go to the shell instead of launching the Find widget on Linux and Windows, you need to remove the keybinding like so:
 
 ```js
 { "key": "ctrl+f", "command": "-workbench.action.terminal.focusFindWidget",
@@ -136,14 +138,9 @@ If you want **Ctrl+F** to go to the shell instead of launching the Find widget o
 
 ### Rename terminal sessions
 
-Integrated Terminal sessions can now be renamed using the **Terminal: Rename** (`workbench.action.terminal.rename`) command. The new name will be displayed in the terminal selection drop-down.
+Integrated Terminal sessions can now be renamed using the **Terminal: Rename** (`workbench.action.terminal.rename`) command. The new name is displayed in the terminal selection drop-down.
 
 ### Forcing key bindings to pass through the terminal
 
-While focus is in the integrated terminal, many key bindings will not work as the keystrokes are passed to and consumed by the terminal itself. The `terminal.integrated.commandsToSkipShell` setting can be used to get around this. It contains an array of command names whose key bindings will skip processing by the shell and instead be processed by the Carbon key binding system. By default this includes all terminal key bindings in addition to a select few commonly used key bindings.
+While focus is in the integrated terminal, many key bindings won't work because the keystrokes are passed to and consumed by the terminal itself. The `terminal.integrated.commandsToSkipShell` setting can be used to get around this. It contains an array of command names whose key bindings skip processing by the shell and instead be processed by the [!INCLUDE[name-sos](../includes/name-sos-short.md)] key binding system. By default this includes all terminal key bindings in addition to a select few commonly used key bindings.
 
-## Next Steps
-
-The basics of the terminal have been covered in this document, read on to find out more about:
-
-* [Keyboard shortcuts](/carbon/keyboard-shortcuts.md) - Keyboard shortcuts let you customize your common keyboard actions.

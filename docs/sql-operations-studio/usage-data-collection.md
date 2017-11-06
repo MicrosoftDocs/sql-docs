@@ -1,46 +1,45 @@
 ---
-title: Enable or disable usage data collection, and crash reporting for Carbon | Microsoft Docs
+title: Enable or disable usage data collection, and crash reporting for SQL Operations Studio | Microsoft Docs
 description: This article explains how to control if usage and crash reporting data is collected and sent to Microsoft.
-author: stevestein
-ms.author: sstein
+ms.custom: "tools|sos"
+ms.date: "11/03/2017"
+ms.prod: "sql-non-specified"
+ms.reviewer: "alayu; erickang; sstein"
+ms.suite: "sql"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+author: "stevestein"
+ms.author: "sstein"
 manager: craigg
-ms.reviewer: achatter, alayu, erickang, sanagama, sstein
-ms.service: data-tools
-ms.workload: data-tools
-ms.prod: NEEDED
-ms.custom: mvc
-ms.topic: article
-ms.date: 10/16/2017
+ms.workload: "Inactive"
 ---
-# Enable or disable usage data collection for Carbon
+# Enable or disable usage data collection for [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
-
-ADD NOTE THAT THIS IS NOT EDITABLE FOR PREVIEW??
+**??IS THIS EDITABLE FOR PREVIEW??**
 
 ## How to disable telemetry reporting
 
-Carbon collects usage data and sends it to Microsoft to help improve our products and services.  Read our [privacy statement](https://go.microsoft.com/fwlink/?LinkID=528096&clcid=0x409) to learn more.
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] collects usage data and sends it to Microsoft to help improve our products and services. To learn more, read the [privacy statement](https://go.microsoft.com/fwlink/?LinkID=528096&clcid=0x409).
 
-If you don’t wish to send usage data to Microsoft, you can set the `telemetry.enableTelemetry` setting to `false`.
+If you don’t wish to send usage data to Microsoft, you can set the *telemetry.enableTelemetry* setting to *false*.
 
-From **File** > **Preferences** > **Settings**, add the following option to disable telemetry reporting, this will silence all telemetry events from Carbon.
+To silence all telemetry events from [!INCLUDE[name-sos](../includes/name-sos-short.md)], from **File** > **Preferences** > **Settings**, add the following option:
 
 ```json
     "telemetry.enableTelemetry": false
 ```
 
-**Important Notice**: This option requires a restart of Carbon to take effect. 
+**Important Notice**: This option requires a restart of [!INCLUDE[name-sos](../includes/name-sos-short.md)] to take effect. 
 
 ## How to disable crash reporting
 
-From **File** > **Preferences** > **Settings**, add the following option to disable crash reporting:
+To disable crash reporting, from **File** > **Preferences** > **Settings**, add the following option:
 
 ```json
     "telemetry.enableCrashReporter": false
 ```
 
-**Important Notice**: This option requires a restart of Carbon to take effect.
+**Important Notice**: This option requires a restart of [!INCLUDE[name-sos](../includes/name-sos-short.md)] to take effect.
 
 ## Additional Resources
-- [Download & Install Carbon](download.md)
-- [Carbon Documentation](index.md)
+- [Workspace and User settings](settings.md)

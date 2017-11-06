@@ -4,7 +4,7 @@ description: Learn how to create and customize keyboard shortcuts in SQL Operati
 ms.custom: "tools|sos"
 ms.date: "10/31/2017"
 ms.prod: "sql-non-specified"
-ms.reviewer: "alayu; erickang; sanagama; sstein"
+ms.reviewer: "alayu; erickang; sstein"
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -13,11 +13,11 @@ ms.author: "sstein"
 manager: craigg
 ms.workload: "Inactive"
 ---
-# Keyboard shortcuts in [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# Keyboard shortcuts in [!INCLUDE[name-sos](../includes/name-sos.md)]
 
 This article provides the steps to quickly view, edit, and create keyboard shortcuts in [!INCLUDE[name-sos](../includes/name-sos-short.md)].
 
-Because [!INCLUDE[name-sos](../includes/name-sos-short.md)] inherits its key binding functionality from Visual Studio Code, detailed information about advanced customizations, using different keyboard layouts, etc., is in the [Key Bindings for Visual Studio Code](https://code.visualstudio.com/docs/getstarted/keybindings) article. Some keybinding features may not be available (for example, Keymap extensions are not supported in the [!INCLUDE[name-sos](../includes/name-sos-short.md)] preview).
+Because [!INCLUDE[name-sos](../includes/name-sos-short.md)] inherits its key binding functionality from Visual Studio Code, detailed information about advanced customizations, using different keyboard layouts, etc., is in the [Key Bindings for Visual Studio Code](https://code.visualstudio.com/docs/getstarted/keybindings) article. Some keybinding features may not be available (for example, Keymap extensions are not supported in [!INCLUDE[name-sos](../includes/name-sos-short.md)]).
 
 
 ## Open the Keyboard Shortcuts editor
@@ -58,7 +58,6 @@ To create new keyboard shortcuts:
    ![create keyboard shortcut](media/keyboard-shortcuts/add-keybinding.png)
 
 1. Press the desired combination of keys, then press **Enter** to save it.
-
 
 
 

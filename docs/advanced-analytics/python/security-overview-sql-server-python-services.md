@@ -20,7 +20,7 @@ ms.workload: "Inactive"
 
 This topic describes the security architecture that is used to connect the [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] database engine and Python components. Examples of the security process are provided for two common scenarios: running Python in SQL Server using a stored procedure, and running Python with the SQL Server as the remote compute context.
 
-## Security Overview
+## Security overview
 
 A [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] login or Windows user account is required to run Python script in SQL Server. These *security principals* are managed at the instance and database level, and identify users who have permission to connect to the database, read and write data, or create database objects such as tables or stored procedures. Additionally, users who run Python script must have permission to execute external script at the database level.
 
@@ -42,8 +42,7 @@ Whenever a Python script is launched from [!INCLUDE[ssNoVersion_md](../../includ
 
 Therefore, all Python scripts that are initiated from a remote client must specify the login or user information as part of the connection string.
 
-
-## Interaction of [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Security and LaunchPad Security
+## Interaction of [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] security and Launchpad security
 
 When a Python script is executed in the context of the [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] computer, the [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] service gets an available worker account (a local user account) from a pool of worker accounts established for external processes, and uses that worker account to perform the related tasks.
 
@@ -56,10 +55,15 @@ After mapping to a worker account, [!INCLUDE[rsql_launchpad_md](../../includes/r
 
 When all [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] operations are completed, the user worker account is marked as free and returned to the pool.
 
-For more information about [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)], see [New Components in SQL Server to Support Python Integration](../../advanced-analytics/python/new-components-in-sql-server-to-support-python-integration.md).
+For more information about [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)], see [Components in SQL Server to support Python integration](../../advanced-analytics/python/new-components-in-sql-server-to-support-python-integration.md).
 
-> [!NOTE]
-> For Launchpad to manage the worker accounts and execute Python jobs, the group that contains the worker accounts, *SQLRUserGroup*, must have "Allow Log on locally" permissions; otherwise the Python run-time might not be started. By default, this right is given to all new local users, but in some organizations stricter group policies might be enforced, which prevent the worker accounts from connecting to SQL Server to Python jobs.
+### Implied authentication
+
+**Implied authentication** is the term used for the process under which SQL Server gets the user credentials and then executes all external script tasks on behalf of the users, assuming the user has the correct permissions in the database. Implied authentication is particularly important if the Python script needs to make an ODBC call outside the SQL Server database. For example, the code might retrieve a shorter list of factors from a spreadsheet or other source.
+
+For such loopback calls to succeed, the group that contains the worker accounts, SQLRUserGroup, must have "Allow Log on locally" permissions. By default, this right is given to all new local users, but in some organizations stricter group policies might be enforced.
+
+![Implied authentication for R](media/implied-auth-python2.png)
 
 ## Security of worker accounts
 
@@ -82,4 +86,4 @@ If you are an administrator on the computer, you can view the directories create
 
 ## See Also
 
-[Architecture Overview](../../advanced-analytics/python/architecture-overview-sql-server-python.md)
+[Architecture overview](../../advanced-analytics/python/architecture-overview-sql-server-python.md)

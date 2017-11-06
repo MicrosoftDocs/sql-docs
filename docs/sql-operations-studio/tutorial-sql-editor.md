@@ -52,7 +52,7 @@ This tutorial requires the *TutorialDB* database. To create the *TutorialDB* dat
 
    ![quick search widget](./media/tutorial-sql-editor/quick-search-widget.png)
 
-1. Edit the **Email** column in the first row, type *jared@vsdata.io*, and click outside the cell to save the change.
+1. Edit the **Email** column in the first row, type *orlando0@adventure-works.com*, and click outside the cell to save the change.
 
    ![edit data](./media/tutorial-sql-editor/edit-data.png)
 

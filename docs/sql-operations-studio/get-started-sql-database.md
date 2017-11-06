@@ -171,4 +171,4 @@ Clean up resources by deleting the resource groups you no longer need. For detai
 
 ## Next steps
 > [!div class="nextstepaction"]
-> [Apply modern code flow using [!INCLUDE[name-sos](../includes/name-sos-short.md)]](tutorial-modern-code-flow-sql-server.md)
+> [Apply modern code flow using [!INCLUDE[name-sos](../includes/name-sos-short.md)]](tutorial-sql-editor.md.md)

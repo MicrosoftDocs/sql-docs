@@ -54,6 +54,6 @@ T-SQL query and its result set itself determines the insight widget behavior. Wr
 
 
 ## Additional resources
-- [Query Editor](tutorial-modern-code-flow-sql-server.md)
+- [Query Editor](tutorial-sql-editor.md.md)
 - [Create some Insight widgets](tutorial-monitoring-sql-server.md)
 

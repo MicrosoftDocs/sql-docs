@@ -28,7 +28,7 @@ ms.assetid: b028720d-3785-4381-9572-157d13ec4291
 caps.latest.revision: 40
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Grant custom access to dimension data (Analysis Services)

@@ -13,7 +13,7 @@ ms.assetid: 81a522bd-440d-406c-a524-3af44a3af101
 caps.latest.revision: 6
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Query Processing Events Data Columns

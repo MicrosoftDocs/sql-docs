@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "Caption element"
 ms.assetid: 3d10ee68-98ab-4da0-a409-800dea2f1c32
 caps.latest.revision: 15
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Caption Element (XMLA)

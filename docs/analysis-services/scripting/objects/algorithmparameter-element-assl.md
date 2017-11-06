@@ -25,7 +25,7 @@ ms.assetid: 73211495-065c-43c6-a486-be6044617263
 caps.latest.revision: 35
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # AlgorithmParameter Element (ASSL)

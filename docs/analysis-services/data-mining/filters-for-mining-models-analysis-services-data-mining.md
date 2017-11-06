@@ -20,7 +20,7 @@ ms.assetid: 0f29c19c-4be3-4bc7-ab60-f4130a10d59c
 caps.latest.revision: 27
 author: "Minewiskan"
 ms.author: "owend"
-manager: "jhubbard"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Filters for Mining Models (Analysis Services - Data Mining)

@@ -19,7 +19,7 @@ ms.assetid: cf7fd5a7-b189-47c3-8e5c-3195897c7eab
 caps.latest.revision: 20
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Errors and Warnings Event Category

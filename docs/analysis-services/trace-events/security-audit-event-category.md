@@ -17,7 +17,7 @@ ms.assetid: 9686a495-68d7-4137-8e30-2655aa519f6c
 caps.latest.revision: 25
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Security Audit Event Category

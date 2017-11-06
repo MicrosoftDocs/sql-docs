@@ -25,7 +25,7 @@ ms.assetid: 0c59a550-dc95-4d50-948a-bb99348bdd86
 caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # MdxScript Element (ASSL)

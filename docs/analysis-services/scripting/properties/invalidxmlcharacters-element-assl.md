@@ -25,7 +25,7 @@ ms.assetid: 92b1210c-1075-4f2f-a2c4-dfdc6d7e5c05
 caps.latest.revision: 33
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # InvalidXmlCharacters Element (ASSL)

@@ -25,7 +25,7 @@ ms.assetid: d9d39859-5f33-48bc-a402-0071755918de
 caps.latest.revision: 39
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # CubeDimensionPermission Data Type (ASSL)

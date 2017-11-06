@@ -25,7 +25,7 @@ ms.assetid: c4f4fbad-9d70-4de2-8cf7-caee80a4a1e4
 caps.latest.revision: 37
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # ColumnID Element (EventColumn) (ASSL)

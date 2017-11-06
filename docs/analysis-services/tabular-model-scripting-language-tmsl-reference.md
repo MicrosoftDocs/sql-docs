@@ -15,7 +15,7 @@ ms.assetid: c700d7f8-7e01-4052-a9ad-8200dd4009f2
 caps.latest.revision: 20
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Tabular Model Scripting Language (TMSL) Reference

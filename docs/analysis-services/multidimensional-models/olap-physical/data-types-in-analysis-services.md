@@ -16,7 +16,7 @@ ms.assetid: 910be4f4-3010-41cd-9fdc-f0a79a0ce823
 caps.latest.revision: 9
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Data Types in Analysis Services

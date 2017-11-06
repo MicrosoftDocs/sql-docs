@@ -21,7 +21,7 @@ ms.assetid: 255e01ba-53a9-478d-9b86-45faba76710e
 caps.latest.revision: 31
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # DBSCHEMA_PROVIDER_TYPES Rowset

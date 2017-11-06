@@ -20,7 +20,7 @@ ms.assetid: a37f7a46-7451-4582-ba19-2595196d97bc
 caps.latest.revision: 41
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Create a Dimension by Generating a Non-Time Table in the Data Source

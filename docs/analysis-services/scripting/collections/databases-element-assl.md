@@ -25,7 +25,7 @@ ms.assetid: 2806a074-d47e-4434-9599-04888783770f
 caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Databases Element (ASSL)

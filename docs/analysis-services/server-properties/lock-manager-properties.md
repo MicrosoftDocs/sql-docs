@@ -18,7 +18,7 @@ ms.assetid: 15fe9ead-825b-4ac3-9191-7a07caa2861b
 caps.latest.revision: 16
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Lock Manager Properties

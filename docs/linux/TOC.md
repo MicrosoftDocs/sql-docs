@@ -12,6 +12,7 @@
 ## [Install & Connect - Ubuntu](quickstart-install-connect-ubuntu.md)
 ## [Run & Connect - Docker](quickstart-install-connect-docker.md)
 ## [Provision a SQL VM in Azure](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
+## [Run & Connect - Cloud](quickstart-install-connect-clouds.md)
 
 # Tutorials
 ## [1_Migrate from Windows](sql-server-linux-migrate-restore-database.md)

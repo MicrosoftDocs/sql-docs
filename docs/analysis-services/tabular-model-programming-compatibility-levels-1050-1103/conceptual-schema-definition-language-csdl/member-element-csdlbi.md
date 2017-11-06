@@ -16,7 +16,7 @@ ms.assetid: 1ba225f5-3867-4aae-a519-e3c277688d1e
 caps.latest.revision: 6
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Member Element (CSDLBI)

@@ -16,7 +16,7 @@ ms.assetid: 93e5ac4d-d7e8-490e-b775-28263a48cfcc
 caps.latest.revision: 8
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # AssociationSet Element (CSDLBI)

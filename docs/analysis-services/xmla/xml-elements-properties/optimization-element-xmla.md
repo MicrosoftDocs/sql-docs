@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "Optimization element"
 ms.assetid: fb9ff737-59e2-4d8b-9f0e-af392eb25d08
 caps.latest.revision: 11
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Optimization Element (XMLA)

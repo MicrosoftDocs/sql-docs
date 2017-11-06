@@ -25,7 +25,7 @@ ms.assetid: de887998-dc4b-44dc-8fec-08d67b92f96d
 caps.latest.revision: 35
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Events Element (ASSL)

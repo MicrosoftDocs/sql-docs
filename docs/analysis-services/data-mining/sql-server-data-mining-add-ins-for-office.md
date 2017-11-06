@@ -14,7 +14,7 @@ ms.assetid: c9021a19-2c19-4f0a-a293-5f7e0ac2524c
 caps.latest.revision: 11
 author: "Minewiskan"
 ms.author: "owend"
-manager: "jhubbard"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # SQL Server Data Mining Add-Ins for Office

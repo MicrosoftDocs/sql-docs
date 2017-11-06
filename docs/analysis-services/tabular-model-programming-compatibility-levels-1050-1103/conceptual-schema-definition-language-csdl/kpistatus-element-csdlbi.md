@@ -16,7 +16,7 @@ ms.assetid: 6fee5b82-caa8-46a1-ad68-bbce3e11e01e
 caps.latest.revision: 13
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # KpiStatus Element (CSDLBI)

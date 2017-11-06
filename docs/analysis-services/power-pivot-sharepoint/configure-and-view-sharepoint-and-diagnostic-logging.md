@@ -15,7 +15,7 @@ ms.assetid: 85f62d29-cdc6-45b3-be1f-ff1182939858
 caps.latest.revision: 10
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Active"
 ---
 # Configure and View SharePoint and Diagnostic Logging

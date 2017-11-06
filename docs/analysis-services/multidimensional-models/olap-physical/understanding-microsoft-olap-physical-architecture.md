@@ -18,7 +18,7 @@ ms.assetid: 7109fad3-65d3-4971-87db-31194bc85e05
 caps.latest.revision: 11
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Understanding Microsoft OLAP Physical Architecture

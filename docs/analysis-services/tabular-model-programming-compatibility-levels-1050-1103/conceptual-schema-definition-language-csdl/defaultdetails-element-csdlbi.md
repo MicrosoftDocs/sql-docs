@@ -16,7 +16,7 @@ ms.assetid: 05a08baa-23cc-4011-9c2e-f60a20bb87da
 caps.latest.revision: 13
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # DefaultDetails Element (CSDLBI)

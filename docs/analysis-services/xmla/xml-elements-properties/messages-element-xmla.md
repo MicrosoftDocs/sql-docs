@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "Messages element"
 ms.assetid: 719d15ff-f18b-4c56-80ba-a9114c0b7d8a
 caps.latest.revision: 11
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Messages Element (XMLA)

@@ -26,7 +26,7 @@ ms.assetid: c21b3459-9bef-45a2-aba5-c992eba5b66e
 caps.latest.revision: 26
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Calculations in Multidimensional Models

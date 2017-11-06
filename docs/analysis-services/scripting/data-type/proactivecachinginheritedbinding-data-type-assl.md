@@ -23,7 +23,7 @@ ms.assetid: 913fa19f-1ecb-4fca-897e-12f0fb02cf8b
 caps.latest.revision: 16
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # ProactiveCachingInheritedBinding Data Type (ASSL)

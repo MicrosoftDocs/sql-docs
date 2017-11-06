@@ -23,7 +23,7 @@ ms.assetid: f76d869b-fc1d-4807-9f28-da09c7be382d
 caps.latest.revision: 32
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Database Objects (Analysis Services - Multidimensional Data)

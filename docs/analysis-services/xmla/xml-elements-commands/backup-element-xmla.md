@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "Backup command"
 ms.assetid: 5bcbc14c-9db9-45b2-99de-f3a265bcb0c4
 caps.latest.revision: 19
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Backup Element (XMLA)

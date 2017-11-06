@@ -26,9 +26,9 @@ helpviewer_keywords:
   - "OlapInfo element"
 ms.assetid: 8828fdd7-c0f7-48ce-a0d0-ab4bc1a995cf
 caps.latest.revision: 27
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # OlapInfo Element (XMLA)

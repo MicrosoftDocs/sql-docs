@@ -25,7 +25,7 @@ ms.assetid: 0634c105-91cc-4882-87be-97ca29a251a6
 caps.latest.revision: 37
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # LastSchemaUpdate Element (ASSL)

@@ -18,7 +18,7 @@ ms.assetid: c745ade0-738e-4a98-a3f0-3eabfd3eeba2
 caps.latest.revision: 31
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # MDX Query and Slicer Axes - Specify the Contents of a Query Axis

@@ -1,6 +1,5 @@
-# [Microsoft SQL Operations Studio](index.md)
+# [Microsoft SQL Operations Studio](overview.md)
 # [Install SQL Operations Studio](download.md)
-# [Overview](overview.md)
 # Quickstarts
 ## [Connect & query - SQL Server](get-started-sql-server.md)
 ## [Connect & query - SQL Database](get-started-sql-database.md)
@@ -26,5 +25,5 @@
 # Reference
 # Resources
 ## [SQL Operations Studio GitHub repo](https://www.github.com/Microsoft/SqlOpsStudio)
-# [SQL Operations Studio FAQ](faq.md)
+# [FAQ](faq.md)
 # [Usage Data Collection](usage-data-collection.md)

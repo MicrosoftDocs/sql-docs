@@ -132,7 +132,7 @@ Clears the procedure (plan) cache for the database. This can be executed both on
 
 IDENTITY_CACHE **=** { **ON** | OFF }  
 
-**Applies to**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] and [!INCLUDE[ssSDS](../../includes/sssds-md.md)] (feature is in public preview) 
+**Applies to**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] and [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
 
 Enables or disables identity cache at the database level. The default is **ON**. Identity caching is used to improve INSERT performance on tables with identity columns. To avoid gaps in the values of an identity column in cases where the server restarts unexpectedly or fails over to a secondary server, disable the IDENTITY_CACHE option. This option is similar to the existing [Trace Flag 272](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), except that it can be set at the database level rather than only at the server level.   
 

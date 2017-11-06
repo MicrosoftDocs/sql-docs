@@ -60,7 +60,10 @@ To be declared with the default DURABILITY = SCHEMA_AND_DATA, the memory-optimiz
         WITH (  
             MEMORY_OPTIMIZED = ON,  
             DURABILITY = SCHEMA_AND_DATA);  
-  
+> [!NOTE]  
+>  [!INCLUDE[ssSQL15](../../includes/sssql14-md.md)] and [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] have a limit of 8 indexes per memory-optimized table or table type. 
+>  Starting [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] and in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] there is no longer a specific limit on number of indexes in memory-optimized tables and table types.
+
   
   
 ### A.1 Code sample for syntax  

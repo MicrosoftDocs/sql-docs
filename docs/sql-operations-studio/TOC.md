@@ -1,11 +1,11 @@
-# [Microsoft SQL Operations Studio](overview.md)
+# [SQL Operations Studio](overview.md)
 # [Install SQL Operations Studio](download.md)
 # Quickstarts
 ## [Connect & query - SQL Server](get-started-sql-server.md)
 ## [Connect & query - SQL Database](get-started-sql-database.md)
 ## [Connect & query - SQL Data Warehouse](get-started-sql-dw.md)
 # Tutorials
-## [SQL queries and scripts](tutorial-modern-code-flow-sql-server.md) 
+## [T-SQL Editor](tutorial-modern-code-flow-sql-server.md) 
 ## [Monitor](tutorial-monitoring-sql-server.md)
 ## [Database Insight - Monitoring Query Performance](tutorial-qds-sql-server.md)
 ## [Database Insight - Table Space Usage](tutorial-table-space-sql-server.md)

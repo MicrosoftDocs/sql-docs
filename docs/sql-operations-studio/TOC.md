@@ -5,7 +5,7 @@
 ## [Connect & query - SQL Database](get-started-sql-database.md)
 ## [Connect & query - SQL Data Warehouse](get-started-sql-dw.md)
 # Tutorials
-## [T-SQL Editor](tutorial-modern-code-flow-sql-server.md) 
+## [T-SQL Editor](tutorial-sql-editor.md) 
 ## [Monitor](tutorial-monitoring-sql-server.md)
 ## [Database Insight - Monitoring Query Performance](tutorial-qds-sql-server.md)
 ## [Database Insight - Table Space Usage](tutorial-table-space-sql-server.md)

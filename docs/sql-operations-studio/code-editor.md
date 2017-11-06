@@ -204,4 +204,4 @@ In this tutorial, you learned how to:
 
 Next, learn how to use the SQL editor, try this tutorial: 
 > [!div class="nextstepaction"]
-> [T-SQL code flow with Carbon](tutorial-modern-code-flow-sql-server.md)
+> [T-SQL code flow with Carbon](tutorial-sql-editor.md)

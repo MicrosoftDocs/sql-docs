@@ -150,6 +150,6 @@ View an existing, built-in widget through the dashboard.
 
 ## Next steps
 > [!div class="nextstepaction"]
-> [Apply modern code flow using [!INCLUDE[name-sos](../includes/name-sos-short.md)]](tutorial-sql-editor.md.md)
+> [Apply modern code flow using [!INCLUDE[name-sos](../includes/name-sos-short.md)]](tutorial-sql-editor.md)
 
 

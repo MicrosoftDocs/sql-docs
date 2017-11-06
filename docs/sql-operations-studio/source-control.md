@@ -21,7 +21,7 @@ ms.workload: "Inactive"
 
 ## Git support in [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] ships with a Git source control manager (SCM) that leverages your computers Git installation, so you need to [install Git (version 2.0.0 or later)](https://git-scm.com/download) before these features are available. 
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] ships with a Git source control manager (SCM), but you still need to [install Git (version 2.0.0 or later)](https://git-scm.com/download) before these features are available. 
 
 >**Note:** The [!INCLUDE[name-sos](../includes/name-sos-short.md)] documentation assumes you are already familiar with Git. If you are new to Git, the [git-scm](https://git-scm.com/documentation) website is a good place to start with a popular online [book](https://git-scm.com/book), Getting Started [videos](https://git-scm.com/video/what-is-git), and [cheat sheets](https://services.github.com/on-demand/downloads/github-git-cheat-sheet.pdf). 
 

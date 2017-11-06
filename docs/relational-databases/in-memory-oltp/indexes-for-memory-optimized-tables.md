@@ -3,7 +3,7 @@ title: "Indexes for Memory-Optimized Tables | Microsoft Docs"
 ms.custom: 
   - "MSDN content"
   - "MSDN - SQL DB"
-ms.date: "06/12/2017"
+ms.date: "11/6/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.service:
@@ -38,7 +38,7 @@ This article describes the types of indexes that are available for a memory-opti
   
 ## A. Syntax for memory-optimized indexes  
   
-Each CREATE TABLE statement for a memory-optimized table must include between 1 and 8 clauses to declare indexes. The index must be one of the following:  
+Each CREATE TABLE statement for a memory-optimized table must include and index, either explicitly through an INDEX or implicitly through a PRIMAY KEY or UNIQUE constraint. The index must be one of the following:  
   
 - Hash index.  
 - Nonclustered index (meaning the default internal structure of a B-tree).  

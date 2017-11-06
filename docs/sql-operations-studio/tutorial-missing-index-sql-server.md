@@ -177,4 +177,4 @@ In this tutorial, you learned how to:
 
 Next, learn how to use X, try this tutorial: 
 > [!div class="nextstepaction"]
-> [What article is next in sequence](tutorial-monitoring-sql-server.md)
+> [What article is next in sequence](tutorial-build-custom-insight-sql-server.md)

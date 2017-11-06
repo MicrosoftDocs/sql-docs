@@ -33,7 +33,7 @@ Easily look up existing databases stored on the server, including tables.
 Easily look up the backup status for existing databases.
 
 ## Configuring Insight Widgets
-It is highly recommended that you follow the tutorial for setting up your dashboard, which can be found [here](tutorial-monitoring-sql-server.md).
+It is highly recommended that you follow the tutorial for setting up your dashboard, which can be found [here](tutorial-build-custom-insight-sql-server.md).
 
 In addition, make sure to check out the [How-To on configuring insight widgets]().
 

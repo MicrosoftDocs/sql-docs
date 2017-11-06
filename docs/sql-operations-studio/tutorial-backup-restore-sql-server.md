@@ -87,6 +87,6 @@ In this tutorial, you learned how to:
 > * View the status of the restore task
 
 Next, try this tutorial: 
-[Another Tutorial](tutorial-monitoring-sql-server.md)
+[Another Tutorial](tutorial-build-custom-insight-sql-server.md)
 > [!div class="nextstepaction"]
-> [What article is next in sequence](tutorial-monitoring-sql-server.md)
+> [What article is next in sequence](tutorial-build-custom-insight-sql-server.md)

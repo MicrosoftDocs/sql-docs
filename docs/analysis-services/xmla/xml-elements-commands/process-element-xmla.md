@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "Process command"
 ms.assetid: 886fd480-c0e6-4c9b-b65e-da47f874d938
 caps.latest.revision: 14
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Process Element (XMLA)

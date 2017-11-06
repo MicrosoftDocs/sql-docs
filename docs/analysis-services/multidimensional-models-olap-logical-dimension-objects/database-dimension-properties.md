@@ -20,7 +20,7 @@ ms.assetid: 075548ef-08a3-413c-8ee0-4a074c276fcc
 caps.latest.revision: 36
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Database Dimension Properties

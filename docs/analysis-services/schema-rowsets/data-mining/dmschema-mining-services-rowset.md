@@ -21,7 +21,7 @@ ms.assetid: 4a672f2f-d637-4def-a572-c18556f83d34
 caps.latest.revision: 35
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # DMSCHEMA_MINING_SERVICES Rowset

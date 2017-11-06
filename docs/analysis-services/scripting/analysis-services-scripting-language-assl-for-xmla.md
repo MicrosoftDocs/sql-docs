@@ -28,7 +28,7 @@ ms.assetid: ca0e852e-9002-4224-a0f0-bd96f2fc5c65
 caps.latest.revision: 32
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Analysis Services Scripting Language (ASSL for XMLA)

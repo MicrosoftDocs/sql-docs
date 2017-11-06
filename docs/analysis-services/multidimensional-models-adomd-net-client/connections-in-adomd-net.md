@@ -21,7 +21,7 @@ ms.assetid: 7b9610f5-6641-42cc-af4e-bd35771913d1
 caps.latest.revision: 40
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Connections in ADOMD.NET

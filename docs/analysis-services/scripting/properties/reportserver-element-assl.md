@@ -25,7 +25,7 @@ ms.assetid: 677437aa-9d15-4dcc-a9bc-34f851d9640d
 caps.latest.revision: 36
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # ReportServer Element (ASSL)

@@ -25,7 +25,7 @@ ms.assetid: 3d4cd169-2903-4266-8541-540ece424b7b
 caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Filter Element (Binding) (ASSL)

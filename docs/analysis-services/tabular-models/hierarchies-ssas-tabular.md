@@ -15,7 +15,7 @@ ms.assetid: e3e50e89-f85d-485b-a271-1e0550520212
 caps.latest.revision: 13
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Hierarchies

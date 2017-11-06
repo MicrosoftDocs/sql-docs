@@ -16,7 +16,7 @@ ms.assetid: 2fbdf621-a94d-4a55-a088-3d56d65016ac
 caps.latest.revision: 28
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # CSDLBI Concepts

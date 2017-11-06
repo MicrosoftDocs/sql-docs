@@ -13,7 +13,7 @@ ms.assetid: 34dd07b8-d59d-49ce-bad0-74f40e4db0b8
 caps.latest.revision: 12
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Install or Uninstall the Power Pivot for SharePoint Add-in (SharePoint 2016)

@@ -21,7 +21,7 @@ ms.assetid: ab77eca1-bd48-4fef-b27f-ff5b648e0501
 caps.latest.revision: 55
 author: "Minewiskan"
 ms.author: "owend"
-manager: "jhubbard"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Lift Chart (Analysis Services - Data Mining)

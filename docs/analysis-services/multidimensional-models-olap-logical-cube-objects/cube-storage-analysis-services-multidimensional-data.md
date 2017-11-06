@@ -23,7 +23,7 @@ ms.assetid: 1b1ad360-9a9b-4996-bee9-84238a2bb4ac
 caps.latest.revision: 41
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Cube Storage (Analysis Services - Multidimensional Data)

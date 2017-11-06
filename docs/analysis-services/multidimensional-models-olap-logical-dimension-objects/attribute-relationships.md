@@ -30,7 +30,7 @@ ms.assetid: 2491422a-4cf5-4b23-b6ab-289222b22ce8
 caps.latest.revision: 45
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Attribute Relationships

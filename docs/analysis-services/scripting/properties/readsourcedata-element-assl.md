@@ -23,7 +23,7 @@ ms.assetid: 7da4665a-fba3-4aae-8dee-678dc14d3b05
 caps.latest.revision: 12
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # ReadSourceData Element (ASSL)

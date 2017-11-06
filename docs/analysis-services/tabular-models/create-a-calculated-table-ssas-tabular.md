@@ -14,7 +14,7 @@ ms.assetid: 3d7ff98a-82a9-4333-a7d3-7a95a6f2caf7
 caps.latest.revision: 10
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Create a Calculated Table (SSAS Tabular)

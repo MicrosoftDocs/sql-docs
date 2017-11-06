@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "NotifyTableChange command"
 ms.assetid: b76898eb-20d3-48c8-9eb8-1fd5df638bcc
 caps.latest.revision: 13
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # NotifyTableChange Element (XMLA)

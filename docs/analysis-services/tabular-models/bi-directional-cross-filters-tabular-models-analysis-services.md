@@ -15,7 +15,7 @@ ms.assetid: 5e810707-f58d-4581-8f99-7371fa75b6ac
 caps.latest.revision: 14
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Bi-directional cross filters - tabular models - Analysis Services

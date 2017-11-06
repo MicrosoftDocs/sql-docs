@@ -25,7 +25,7 @@ ms.assetid: 2d801066-6cca-4a99-bbd8-56a38d762108
 caps.latest.revision: 41
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Cube Element (ASSL)

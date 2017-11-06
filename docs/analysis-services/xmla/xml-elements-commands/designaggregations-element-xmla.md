@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "DesignAggregations command"
 ms.assetid: 4c419dbc-7405-40aa-8ddd-6b46685a297d
 caps.latest.revision: 13
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # DesignAggregations Element (XMLA)

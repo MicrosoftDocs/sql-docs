@@ -19,7 +19,7 @@ ms.assetid: 20cbf433-70d1-4b61-a462-41a8435b27b4
 caps.latest.revision: 41
 author: "Minewiskan"
 ms.author: "owend"
-manager: "jhubbard"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Mining Structure Columns

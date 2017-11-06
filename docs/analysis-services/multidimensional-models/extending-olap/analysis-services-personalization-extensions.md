@@ -18,7 +18,7 @@ ms.assetid: 0f144059-24e0-40c0-bde4-d48c75e46598
 caps.latest.revision: 22
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Analysis Services Personalization Extensions

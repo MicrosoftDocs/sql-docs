@@ -14,9 +14,9 @@ applies_to:
   - "SQL Server 2016 Preview"
 ms.assetid: f2d1cc7f-8ab5-4b73-a128-ce58d9bb7f96
 caps.latest.revision: 5
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # EditionId Element

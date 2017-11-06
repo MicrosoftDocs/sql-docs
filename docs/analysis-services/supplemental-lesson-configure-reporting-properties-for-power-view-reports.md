@@ -15,7 +15,7 @@ ms.assetid: 0ffc5f44-17d3-42d4-bc2c-baf3b4485e2d
 caps.latest.revision: 16
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Supplemental Lesson - Configure Reporting Properties for Power View Reports

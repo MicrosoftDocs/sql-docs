@@ -25,7 +25,7 @@ ms.assetid: d068f92e-4213-471c-a3a4-aec5af4b8ebf
 caps.latest.revision: 33
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # ForceRebuildInterval Element (ASSL)

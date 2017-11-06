@@ -17,7 +17,7 @@ ms.assetid: 84e6fe64-9b37-4e79-bedf-ae02e80bfce8
 caps.latest.revision: 41
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # MDX Member Properties - Intrinsic Member Properties

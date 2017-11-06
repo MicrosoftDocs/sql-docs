@@ -25,7 +25,7 @@ ms.assetid: dafe3df2-4795-48ea-bebe-33c1a3bf18b6
 caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Persistence Element (ASSL)

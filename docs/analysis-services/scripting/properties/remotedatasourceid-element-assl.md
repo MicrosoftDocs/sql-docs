@@ -25,7 +25,7 @@ ms.assetid: 2eaf0b9c-8c2d-4dc6-9bad-1db70a4b04b1
 caps.latest.revision: 36
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # RemoteDatasourceID Element (ASSL)

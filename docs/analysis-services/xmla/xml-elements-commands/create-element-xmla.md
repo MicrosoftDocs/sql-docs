@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "Create command (XMLA)"
 ms.assetid: a623d362-a1ac-40e4-8816-65fac89cb391
 caps.latest.revision: 18
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Create Element (XMLA)

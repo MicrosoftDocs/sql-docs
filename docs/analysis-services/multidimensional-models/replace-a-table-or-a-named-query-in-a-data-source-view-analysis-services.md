@@ -21,7 +21,7 @@ ms.assetid: 60c2a018-1299-4915-b60e-e73316524def
 caps.latest.revision: 33
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Replace a Table or a Named Query in a Data Source View (Analysis Services)

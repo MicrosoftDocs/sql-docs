@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "Cell element"
 ms.assetid: 88daba54-89e9-423f-8d12-8de80cf52d6b
 caps.latest.revision: 14
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Cell Element (XMLA)

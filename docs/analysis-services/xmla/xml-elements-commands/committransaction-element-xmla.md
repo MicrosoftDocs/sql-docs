@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "CommitTransaction command"
 ms.assetid: 1cd814dc-a0be-4305-b44d-faf15e843f7d
 caps.latest.revision: 14
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # CommitTransaction Element (XMLA)

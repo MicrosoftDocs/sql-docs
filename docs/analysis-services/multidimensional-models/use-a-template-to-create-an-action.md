@@ -15,7 +15,7 @@ ms.assetid: ad0917d6-349a-4923-97be-83c778424286
 caps.latest.revision: 6
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Use a Template to Create an Action

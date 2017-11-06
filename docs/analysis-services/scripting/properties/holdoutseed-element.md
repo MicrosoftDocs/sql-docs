@@ -21,7 +21,7 @@ ms.assetid: 6b608bb3-c075-4744-9722-f5fb9fa1cc7e
 caps.latest.revision: 23
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # HoldoutSeed Element

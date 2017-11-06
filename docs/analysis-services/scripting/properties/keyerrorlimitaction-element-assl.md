@@ -25,7 +25,7 @@ ms.assetid: a2a01aae-0571-499f-9025-b61c741f3ddb
 caps.latest.revision: 35
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # KeyErrorLimitAction Element (ASSL)

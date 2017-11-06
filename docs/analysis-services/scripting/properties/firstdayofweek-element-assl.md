@@ -25,7 +25,7 @@ ms.assetid: d3c92fa3-b293-43b5-806e-cd1c146a3a7c
 caps.latest.revision: 28
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # FirstDayOfWeek Element (ASSL)

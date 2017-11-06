@@ -25,7 +25,7 @@ ms.assetid: d7b87aea-3265-4f3c-a7ee-4f3e90f9a0b7
 caps.latest.revision: 33
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Type Element (PerspectiveCalculation) (ASSL)

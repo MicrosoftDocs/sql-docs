@@ -25,7 +25,7 @@ ms.assetid: a0b6490d-a793-41be-8c97-41b08e1580a1
 caps.latest.revision: 32
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # MeasureExpression Element (ASSL)

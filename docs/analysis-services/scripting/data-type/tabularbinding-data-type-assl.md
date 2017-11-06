@@ -25,7 +25,7 @@ ms.assetid: 24587e34-20be-4693-81d8-038a6fc4e8ee
 caps.latest.revision: 39
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # TabularBinding Data Type (ASSL)

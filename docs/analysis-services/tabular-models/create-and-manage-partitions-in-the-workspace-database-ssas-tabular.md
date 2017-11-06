@@ -17,7 +17,7 @@ ms.assetid: 0b3027d6-652b-4eb3-a197-58b25df65218
 caps.latest.revision: 15
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Create and Manage Partitions in the Workspace Database (SSAS Tabular)

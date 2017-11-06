@@ -21,7 +21,7 @@ ms.assetid: ad1c970e-c0cb-4687-9563-56ab62c2db5f
 caps.latest.revision: 30
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Programming AMO OLAP Basic Objects

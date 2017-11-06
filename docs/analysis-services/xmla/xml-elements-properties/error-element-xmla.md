@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "Error element"
 ms.assetid: add670cb-cab2-42be-91a3-d0c385f29d16
 caps.latest.revision: 13
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Error Element (XMLA)

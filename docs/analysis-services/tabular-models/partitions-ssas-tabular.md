@@ -15,7 +15,7 @@ ms.assetid: 708b9bdf-8c0b-4476-809a-8f616be23a58
 caps.latest.revision: 20
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Partitions

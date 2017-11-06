@@ -25,7 +25,7 @@ ms.assetid: de8bf815-43b4-4983-bdb9-b67e8563be0e
 caps.latest.revision: 36
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # MiningModelColumn Data Type (ASSL)

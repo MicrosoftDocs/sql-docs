@@ -25,7 +25,7 @@ ms.assetid: 064a8683-c44b-4261-be4d-32226d3d3119
 caps.latest.revision: 38
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # ReportFormatParameter Element - ASL

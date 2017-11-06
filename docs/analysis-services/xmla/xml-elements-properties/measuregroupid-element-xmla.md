@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "MeasureGroupID element"
 ms.assetid: ff55777e-54ea-42b9-a084-2e12e0a10988
 caps.latest.revision: 12
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # MeasureGroupID Element (XMLA)

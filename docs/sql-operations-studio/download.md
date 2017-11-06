@@ -93,10 +93,11 @@ sqlops .
 
 ## Uninstall SQL Operations Studio
 
-To uninstall the [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] preview, delete the files.
+To uninstall [!INCLUDE[name-sos-short](../includes/name-sos-short.md)], delete the files.
 
 ## Next Steps
 
-See the following articles to get started:
-- [Explore [!INCLUDE[name-sos](../includes/name-sos-short.md)]](tutorial-modern-code-flow-sql-server.md)
+See one of the following articles to get started:
 - [Connect & Query SQL Server](get-started-sql-server.md)
+- [Connect & Query Azure SQL Database](get-started-sql-database.md)
+- [Connect & Query Azure Data Warehouse](get-started-sql-dw.md)

@@ -1,46 +1,28 @@
 ---
-title: Server Groups in Carbon | Microsoft Docs
-description: Learn about Server Groups in Carbon.
-services: sql-database
-author: sanagama
-ms.author: sanagama
+title: Server Groups in SQL Operations Studio | Microsoft Docs
+description: Learn about Server Groups in SQL Operations Studio.
+keywords:
+ms.custom: "tools|sos"
+ms.date: "10/31/2017"
+ms.prod: "sql-non-specified"
+ms.reviewer: "alayu; erickang; sanagama; sstein"
+ms.suite: "sql"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+author: "stevestein"
+ms.author: "sstein"
 manager: craigg
-ms.reviewer: achatter, alayu, erickang, sanagama, sstein
-ms.service: data-tools
-ms.workload: data-tools
-ms.prod: NEEDED
-ms.topic: article
-ms.date: 10/16/2017
+ms.workload: "Inactive"
 ---
-# Server Groups in Carbon
-
-
-
-## What are server groups 
-
-Server groups are collections of servers that you can connect and run management tasks against. The collection is a logical group of servers that ...
-
-The primary benefit of server groups are ...
-
-Server groups provide ...
-
-Server groups enable ...
+# Server Groups in [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 
 
 
-## Create server groups
+## Sharing Server groups with other users
 
 
 
 
-## Move SQL Servers into and out of server groups
-
-
-
-
-
-
-## Next steps
-- [Download and Install Carbon](download.md)
-- [Connect to SQL Server](get-started-sql-server.md)
+## Additional resources
+- [Workspace and User settings](settings.md)

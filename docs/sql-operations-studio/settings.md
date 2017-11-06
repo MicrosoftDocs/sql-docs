@@ -5,7 +5,7 @@ keywords:
 ms.custom: "tools|sos"
 ms.date: "11/01/2017"
 ms.prod: "sql-non-specified"
-ms.reviewer: "alayu; erickang; sanagama; sstein"
+ms.reviewer: "alayu; erickang; sstein"
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -115,7 +115,7 @@ Here is the list of settings we don't support at the workspace scope:
 - `terminal.external.osxExec`
 - `terminal.external.linuxExec`
 
-The first time you open a workspace which defines any of these settings, [!INCLUDE[name-sos](../includes/name-sos-short.md)] will warn you and subsequently always ignore the values after that.
+The first time you open a workspace that defines any of these settings, [!INCLUDE[name-sos](../includes/name-sos-short.md)] warns you and subsequently always ignore the values after that.
 
 ### <a id="default-settings"></a>Copy of Default Settings
 
@@ -1401,9 +1401,3 @@ The following are the default settings and their values:
   "jake.autoDetect": "on"
 }
 ```
-
-
-## Next steps
-The basics of settings have been covered in this document, read on to find out more about:
-
-* [Windows Authentication (Kerberos)](enable-kerberos.md) - Connect to SQL Server using Kerberos.

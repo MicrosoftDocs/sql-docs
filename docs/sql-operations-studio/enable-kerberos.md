@@ -1,6 +1,6 @@
 ---
-title: Use Active Directory Authentication - Kerberos 
-description: Learn how to enable Kerberos to use Active Directory Authentication for SQL Workbench
+title: Use Active Directory Authentication (Kerberos) when connecting with SQL Operations Studio | Microsoft Docs
+description: Learn how to enable Kerberos to use Active Directory Authentication for SQL Operations Studio
 keywords: 
 ms.custom: "tools|sos"
 ms.date: "11/01/2017"
@@ -18,7 +18,7 @@ ms.workload: "Inactive"
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] supports connecting to SQL Server using Kerberos.
 
-In order to use Integrated Authentication (aka Windows Authentication) on macOS or Linux you need to set up a **Kerberos ticket** linking your current user to a Windows domain account. 
+In order to use Integrated Authentication (Windows Authentication) on macOS or Linux you need to set up a **Kerberos ticket** linking your current user to a Windows domain account. 
 
 # Step1: Get the Kerberos Key Distribution Center
 
@@ -100,7 +100,7 @@ krbtgt/DOMAIN.COMPANY.COM@ DOMAIN.COMPANY.COM.
 
 * Choose Integrated as the authentication type
 
-If all goes well and the steps above worked, you should be able to connect successfully!
+If all goes well and the preceding steps worked, you should be able to connect successfully!
 // Add screenshot
 
 

@@ -19,7 +19,7 @@ ms.workload: "Inactive"
 In the previous tutorial, you learned how to quickly enable insight widgets on dashboard using built-in samples. In this tutorial, you walk through how to bring your own insight queries and build a custom insight widget. With a few simple steps, you learn how to:
 > [!div class="checklist"]
 > * Run your own query and view it in a chart
-> * Build a custom insight widget from the char
+> * Build a custom insight widget from the chart
 > * Add the chart to a server or database dashboard
 
 ## Prerequisites
@@ -45,31 +45,28 @@ In this step, run a sql script to query the current active sessions.
    ```
 1. To execute the query, press **F5**.
 3. After SQL Operations Studio returns with the result view, click **View as Chart**, then click the **Chart Viewer** tab.
-
-   ![view as chart](./media/tutorial-sql-server/insight-activesession-result.png)
-
 4. Change **Chart Type** to **count**. These settings render a count chart:
 
-   ![chart](./media/tutorial-sql-server/insight-activesession-count.png)
+   ![chart](./media/tutorial-build-custom-insight-sql-server/insight-activesession-count.png)
 
 5. Save the query in the editor to a *.sql file. For this tutorial, save the script as *activeSession.sql*.
 
 ## Generate an insight widget setting
 
 1. To open the insight widget configuration, click **Create Insight** on *Chart Viewer*:
-   ![configuration](./media/tutorial-sql-server/insight-missingpk-config.png)
+   ![configuration](./media/tutorial-build-custom-insight-sql-server/insight-missingpk-config.png)
    
 2. Copy the insight configuration (the JSON data). 
 
 3. Press **Ctrl+Comma** and to open *User Settings*.
 
-   ![settings](./media/tutorial-sql-server/settings.png)
+   ![settings](./media/tutorial-build-custom-insight-sql-server/settings.png)
 
 4. Type *dashboard* in *Search Settings*.
 
 1. To configure an insight widget for SQL Server, click **Edit** for *dashboard.server.widgets*.
 
-   ![dashboard settings](./media/tutorial-sql-server/dashboard-settings.png)
+   ![dashboard settings](./media/tutorial-build-custom-insight-sql-server/dashboard-settings.png)
 
 5. Paste the insight configuration JSON into *dashboard.database.widgets{}*. Database dashboard settings looks like the following:
 
@@ -99,7 +96,7 @@ In this step, run a sql script to query the current active sessions.
    ```
 6. Save the *User Settings* file and Open the *TutorialDB* database dashboard.
 
-   ![activesession insight](./media/tutorial-sql-server/insight-activesession-dashboard.png) 
+   ![activesession insight](./media/tutorial-build-custom-insight-sql-server/insight-activesession-dashboard.png) 
 
 
 ## Next steps

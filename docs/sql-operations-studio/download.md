@@ -3,7 +3,7 @@ title: Download and install Microsoft SQL Operations Studio | Microsoft Docs
 description: 'Download and Install Microsoft SQL Operations Studio for Windows, macOS, or Linux'
 keywords: Microsoft SQL Operations Studio, install Microsoft SQL Operations Studio, download Microsoft SQL Operations Studio
 ms.custom: "tools|sos"
-ms.date: "11/01/2017"
+ms.date: "11/06/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: "alayu; erickang; sanagama; sstein"
 ms.suite: "sql"
@@ -23,35 +23,30 @@ ms.workload: "Inactive"
 
 ## Supported Operating Systems
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] runs on Windows, macOS, and Linux.
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] runs on Windows, macOS, and Linux, and is supported on the following platforms:
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] is supported on the following platforms:
+Windows 10 (64-bit)
+Windows 8.1 (64-bit)
+Windows 8 (64-bit)
+Windows 7 (SP1) (64-bit) - Requires [KB2533623](https://www.microsoft.com/en-us/download/details.aspx?id=26767)
 
-| Platform | Supported versions |
-|:---|:---|
-| Windows (64-bit only) | Windows 10 (recommended), Windows Server 2016, Windows Server 2012 R2 (64-bit) |
-| Mac | macOS Sierra (10.12), macOS High Sierra (10.13) |
-| Linux | Ubuntu 16.04 LTS, Red Hat Enterprise Linux 7.3 (RHEL)|
+Windows Server 2016
+Windows Server 2012 R2 (64-bit)
+Windows Server 2012 (64-bit)
+Windows Server 2008 R2 (64-bit)
 
-??NEED TO FINALIZE THE ABOVE LIST- I grabbed this info from the mail thread about supported OSs
+macOS 10.13 High Sierra
+macOS 10.12 Sierra
 
-Other Potential Platforms
-- Windows 8.1 (64-bit)
-- Windows 8 (64-bit)
-- Windows 7 (SP1) (64-bit)
-- Windows Server 2012 (64-bit)
-- Windows Server 2008 R2 (64-bit)
-- Ubuntu 17.04
-- Ubuntu 17.10
-- RHEL 7.2
-- SLES 12
-- CentOS, Debian, openSUSE
-
+Red Hat Enterprise Linux 7.4
+Red Hat Enterprise Linux 7.3
+SUSE Linux Enterprise Server v12 SP2
+Ubuntu 16.04
 
 
 ## Get SQL Operations Studio for Windows
 
-1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] for Windows](https://github.com/Microsoft/carbon/releases/download/v0.23.3/2017-Nov-03-sqlops-windows.zip) to your local computer.
+1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] for Windows](https://go.microsoft.com/fwlink/?linkid=XXXXX) to your local computer.
 
    > [!IMPORTANT]
    > Executable files may be blocked by Windows when zip files are downloaded from an external source and extracted. The following steps unblock the .zip file before extracting. 
@@ -65,7 +60,7 @@ If [!INCLUDE[name-sos](../includes/name-sos-short.md)] is blocked when you run i
 
 ## Get SQL Operations Studio for macOS
 
-1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] for macOS](https://github.com/Microsoft/carbon/releases/download/v0.23.3/2017-Nov-03-sqlops-macos-2.zip) to your local computer.
+1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] for macOS](https://go.microsoft.com/fwlink/?linkid=XXXXX) to your local computer.
 2. To expand the contents of the zip, double-click it.
 3. Drag *sqlops.app* to the *Applications* folder, making it available in the *Launchpad*.
 

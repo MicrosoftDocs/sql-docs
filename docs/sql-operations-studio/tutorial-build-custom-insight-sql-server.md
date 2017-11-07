@@ -23,7 +23,11 @@ In the previous tutorial, you learned how to quickly enable insight widgets on d
 > * Add the chart to a server or database dashboard
 
 ## Prerequisites
-Follow [Get Started with Carbon](./get-started-sql-server.md)
+This tutorial requires the *TutorialDB* database. To create the *TutorialDB* database, complete one of the following quickstarts:
+
+- [Connect and query SQL Server using [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](get-started-sql-server.md)
+- [Connect and query Azure SQL Database using [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](get-started-sql-database.md)
+- [Connect and query SQL Data Warehouse using [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](get-started-sql-dw.md)
 
 ## Run your own query and view the result in a chart view
 In this step, run a query to identify a missing primary key and missing index in a table.
@@ -96,7 +100,7 @@ In this step, run a query to identify a missing primary key and missing index in
     @TablesWithMissingPK AS [Tables with Missing Primary Keys]; 
    ```
 
-5. Press ```F5``` to execute the query. After Carbon returns the query, click ```View as Chart``` button.
+5. Press ```F5``` to execute the query. After [!INCLUDE[name-sos](../includes/name-sos-short.md)]  returns the query, click ```View as Chart``` button.
 
    ![view as chart](./media/tutorial-sql-server/insight-missingpk-result.png)
 

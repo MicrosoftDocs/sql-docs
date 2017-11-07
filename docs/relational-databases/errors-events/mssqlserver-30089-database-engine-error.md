@@ -13,9 +13,10 @@ helpviewer_keywords:
   - "9992 (Database Engine error)"
 ms.assetid: 188e5bde-6865-4740-a2b2-582be8f55c77
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Inactive"
 ---
 # MSSQLSERVER_30089
   

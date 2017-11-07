@@ -25,7 +25,8 @@ ms.assetid: 64e68ad5-439c-4c1d-9df4-ee90c56761b4
 caps.latest.revision: 31
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Ordinal Element (ASSL)
   Indicates the ordinal number to bind to in collections such as keys and translations.  

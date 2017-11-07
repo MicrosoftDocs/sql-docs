@@ -22,7 +22,7 @@ ms.assetid: a1c61496-36ee-4bce-98d9-d13440d349aa
 caps.latest.revision: 12
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Updating Cells (XMLA)

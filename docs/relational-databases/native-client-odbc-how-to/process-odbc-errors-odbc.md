@@ -16,6 +16,7 @@ caps.latest.revision: 19
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Process ODBC Errors (ODBC)
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]

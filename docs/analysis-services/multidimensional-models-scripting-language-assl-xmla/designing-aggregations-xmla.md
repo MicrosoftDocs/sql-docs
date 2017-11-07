@@ -24,7 +24,7 @@ ms.assetid: 4dd27afa-10c7-408d-bc24-ca74217ddbcb
 caps.latest.revision: 14
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Designing Aggregations (XMLA)

@@ -18,7 +18,7 @@ ms.assetid: 5cee362e-3f95-4467-bc6c-29b1518ecbf3
 caps.latest.revision: 12
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Cube Objects (Analysis Services - Multidimensional Data)

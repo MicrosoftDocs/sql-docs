@@ -17,6 +17,7 @@ caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Add Text Annotations to Diagrams (Visual Database Tools)
 To make notes or comments on a diagram you can add text annotations.  

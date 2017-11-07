@@ -25,7 +25,8 @@ ms.assetid: 14b365bc-924d-4791-ad4a-a38155fec42e
 caps.latest.revision: 35
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # StatusGraphic Element (ASSL)
   Contains the recommended graphical representation of the status of the [Kpi](../../../analysis-services/scripting/objects/kpi-element-assl.md) element.  

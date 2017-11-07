@@ -25,7 +25,8 @@ ms.assetid: c7911bcd-e601-4a96-a6d8-20b7c7375ff2
 caps.latest.revision: 37
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Event Element (ASSL)
   Defines an **Event** to be captured as part of a [Trace](../../../analysis-services/scripting/objects/trace-element-assl.md) element.  

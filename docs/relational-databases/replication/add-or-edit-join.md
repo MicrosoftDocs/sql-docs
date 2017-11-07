@@ -16,6 +16,7 @@ caps.latest.revision: 25
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Add or Edit Join
   The **Add Join** and **Edit Join** dialog boxes allow you to add and edit join filters for merge publications.  

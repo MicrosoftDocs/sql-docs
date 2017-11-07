@@ -13,6 +13,7 @@ ms.topic: "article"
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Report Viewer web part on a SharePoint site
 

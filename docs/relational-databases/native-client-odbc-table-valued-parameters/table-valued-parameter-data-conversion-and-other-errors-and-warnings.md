@@ -17,6 +17,7 @@ caps.latest.revision: 13
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Table-Valued Parameter Data Conversion and Other Errors and Warnings
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]

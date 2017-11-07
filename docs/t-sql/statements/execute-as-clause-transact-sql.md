@@ -26,9 +26,9 @@ helpviewer_keywords:
   - "functions [SQL Server], execution context"
 ms.assetid: bd517aa3-f06e-4356-87d8-70de5df4494a
 caps.latest.revision: 70
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Active"
 ---
 # EXECUTE AS Clause (Transact-SQL)

@@ -25,7 +25,8 @@ ms.assetid: f4edf532-7e40-4ee2-9b5e-48b3c3de7a74
 caps.latest.revision: 32
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # ColumnID Element (ColumnBinding) (ASSL)
   Contains the identifier (ID) of the column within the table to which the data item is bound.  

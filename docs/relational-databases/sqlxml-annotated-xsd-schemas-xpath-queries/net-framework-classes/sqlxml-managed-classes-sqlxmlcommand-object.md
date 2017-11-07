@@ -34,6 +34,7 @@ caps.latest.revision: 23
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # SQLXML Managed Classes - SqlXmlCommand Object
   This is the constructor for the SqlXmlCommand object:  

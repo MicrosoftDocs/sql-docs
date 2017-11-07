@@ -16,6 +16,7 @@ caps.latest.revision: 12
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Example: Retrieving Product Model Information as XML
   The following query returns product model information. `RAW` mode is specified in the `FOR XML` clause.  

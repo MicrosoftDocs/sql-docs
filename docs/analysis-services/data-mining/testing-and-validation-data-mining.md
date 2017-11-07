@@ -32,7 +32,7 @@ ms.assetid: 197144f5-21ed-4009-b448-fe412fb3916c
 caps.latest.revision: 61
 author: "Minewiskan"
 ms.author: "owend"
-manager: "jhubbard"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Testing and Validation (Data Mining)

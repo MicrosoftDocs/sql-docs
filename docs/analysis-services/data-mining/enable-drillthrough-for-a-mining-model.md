@@ -17,7 +17,7 @@ ms.assetid: 4fa44f60-ef9a-4b59-98c0-c0baf1195c8e
 caps.latest.revision: 28
 author: "Minewiskan"
 ms.author: "owend"
-manager: "jhubbard"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Enable Drillthrough for a Mining Model

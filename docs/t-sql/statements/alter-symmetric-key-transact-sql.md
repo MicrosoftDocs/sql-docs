@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "ALTER SYMMETRIC KEY statement"
 ms.assetid: d3c776a4-7d71-4e6f-84fc-1db47400c465
 caps.latest.revision: 44
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # ALTER SYMMETRIC KEY (Transact-SQL)

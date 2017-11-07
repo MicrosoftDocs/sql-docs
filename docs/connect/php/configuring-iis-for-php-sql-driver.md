@@ -16,6 +16,7 @@ caps.latest.revision: 15
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Configuring IIS for PHP SQL Driver
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

@@ -16,6 +16,7 @@ caps.latest.revision: 7
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Symmetric Keys on System Databases
   This rule checks for user-created symmetric keys in the master, msdb, model, and tempdb databases.  

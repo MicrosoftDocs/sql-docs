@@ -25,7 +25,8 @@ ms.assetid: 386b2ec6-3d83-42d2-b83a-83e375fbdcbd
 caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # PendingValue Element (ASSL)
   Contains the read-only pending value of the associated [ServerProperty](../../../analysis-services/scripting/objects/serverproperty-element-assl.md) element.  

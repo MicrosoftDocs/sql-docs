@@ -13,6 +13,7 @@ ms.topic: "article"
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "On Demand"
 ---
 # PowerShell cmdlets for Reporting Services SharePoint mode
 

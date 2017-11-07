@@ -19,9 +19,10 @@ helpviewer_keywords:
   - "INFORMATION_SCHEMA.ROUTINES view"
 ms.assetid: c75561b2-c9a1-48a1-9afa-a5896b6454cf
 caps.latest.revision: 50
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "On Demand"
 ---
 # ROUTINES (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]

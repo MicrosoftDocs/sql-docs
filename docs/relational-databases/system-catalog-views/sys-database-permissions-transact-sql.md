@@ -20,9 +20,10 @@ helpviewer_keywords:
   - "sys.database_permissions catalog view"
 ms.assetid: c1e261f8-6cb0-4759-b5f1-5ec233602655
 caps.latest.revision: 50
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "On Demand"
 ---
 # sys.database_permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]

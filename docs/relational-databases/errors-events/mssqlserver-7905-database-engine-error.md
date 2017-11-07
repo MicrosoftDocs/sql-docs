@@ -13,9 +13,10 @@ helpviewer_keywords:
   - "7905 (Database Engine error)"
 ms.assetid: cf19fbbb-7158-45f2-8778-8f3cad7f574a
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Inactive"
 ---
 # MSSQLSERVER_7905
   

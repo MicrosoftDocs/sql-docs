@@ -17,6 +17,7 @@ caps.latest.revision: 13
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Context Connections vs. Regular Connections
   If you are connecting to a remote server, always use regular connections rather than context connections. If you need to connect to the same server on which the stored procedure or function is running, use the context connection in most cases. This has benefits such as running in the same transaction space and not having to reauthenticate.  

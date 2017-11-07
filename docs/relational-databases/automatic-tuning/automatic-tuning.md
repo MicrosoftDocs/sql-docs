@@ -17,6 +17,7 @@ caps.latest.revision:
 author: "jovanpop-msft"
 ms.author: "jovanpop"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Automatic tuning
 [!INCLUDE[tsql-appliesto-ssvNxt-asdb-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-asdb-xxxx-xxx.md)]  

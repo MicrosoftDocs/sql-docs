@@ -25,7 +25,8 @@ ms.assetid: d0a80040-115f-4490-926f-4d64d8977e67
 caps.latest.revision: 38
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # AllowDuplicateNames Element (ASSL)
   Determines whether duplicate names are allowed in a [Hierarchy](../../../analysis-services/scripting/objects/hierarchy-element-assl.md) element.  

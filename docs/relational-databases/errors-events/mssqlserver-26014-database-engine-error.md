@@ -13,9 +13,10 @@ helpviewer_keywords:
   - "26014 (Database Engine error)"
 ms.assetid: e2b0dfc7-0681-4e5d-8875-1d5f63534086
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Inactive"
 ---
 # MSSQLSERVER_26014
   

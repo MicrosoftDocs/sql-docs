@@ -18,7 +18,7 @@ ms.assetid: f790df70-ff21-42ce-b38c-a360e8e01bcd
 caps.latest.revision: 29
 author: "Minewiskan"
 ms.author: "owend"
-manager: "jhubbard"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Edit the Data Source View used for a Mining Structure

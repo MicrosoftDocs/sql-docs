@@ -13,7 +13,7 @@ ms.assetid: 2896b74a-3911-4b3f-89ab-bb375bdb34d8
 caps.latest.revision: 15
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Invoke-ASCmd cmdlet

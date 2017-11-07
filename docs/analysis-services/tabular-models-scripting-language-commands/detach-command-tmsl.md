@@ -14,7 +14,8 @@ ms.assetid: 413b49cb-ea8f-415c-a059-ce692b7771a1
 caps.latest.revision: 8
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Detach command (TMSL)
 

@@ -25,7 +25,8 @@ ms.assetid: 5558961e-e3c6-4f4e-817d-5b12b0734c03
 caps.latest.revision: 35
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # UnknownMember Element (ASSL)
   Indicates whether the unknown member is visible.  

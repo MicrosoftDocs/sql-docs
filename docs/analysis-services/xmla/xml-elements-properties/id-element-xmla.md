@@ -25,9 +25,10 @@ helpviewer_keywords:
   - "ID element"
 ms.assetid: f7d67599-6a70-4455-bfdb-1d127e5eff4e
 caps.latest.revision: 12
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # ID Element (XMLA)
   Identifies a lock on which to execute the parent [Lock](../../../analysis-services/xmla/xml-elements-commands/lock-element-xmla.md) or [Unlock](../../../analysis-services/xmla/xml-elements-commands/unlock-element-xmla.md) element.  

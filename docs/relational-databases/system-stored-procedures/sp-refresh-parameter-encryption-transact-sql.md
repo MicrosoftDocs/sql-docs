@@ -19,9 +19,10 @@ helpviewer_keywords:
   - "Always Encrypted, sp_refresh_parameter_encryption"
 ms.assetid: 00b44baf-fcf0-4095-aabe-49fa87e77316
 caps.latest.revision: 3
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Inactive"
 ---
 # sp_refresh_parameter_encryption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

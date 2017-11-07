@@ -19,6 +19,7 @@ caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Text File Format (Text File Driver)
 The ODBC Text driver supports both delimited and fixed-width text files. A text file consists of an optional header line and zero or more text lines.  

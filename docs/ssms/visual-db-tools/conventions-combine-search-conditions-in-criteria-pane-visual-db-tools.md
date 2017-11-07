@@ -23,6 +23,7 @@ caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Conventions for Combining Search Conditions in the Criteria Pane (Visual Database Tools)
 You can create queries that include any number of search conditions, linked with any number of AND and OR operators. A query with a combination of AND and OR clauses can become complex, so it is helpful to understand how such a query is interpreted when you execute it, and how such a query is represented in the [Criteria Pane](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md) and [SQL Pane](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md).  

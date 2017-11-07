@@ -25,9 +25,10 @@ helpviewer_keywords:
   - "RequestType element"
 ms.assetid: 54270a57-e327-4233-b4b2-d85b44652ac5
 caps.latest.revision: 12
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # RequestType Element (XMLA)
   Determines the type of metadata returned by the [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) method.  

@@ -16,6 +16,7 @@ caps.latest.revision: 25
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Database Mirroring History
   Use this dialog box to view the history of mirroring status for a mirrored database on a specified server instance.  

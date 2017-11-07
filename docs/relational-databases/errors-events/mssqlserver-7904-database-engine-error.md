@@ -13,9 +13,10 @@ helpviewer_keywords:
   - "7904 (Database Engine error)"
 ms.assetid: d047920c-f864-4338-b15f-49820886fbc5
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Inactive"
 ---
 # MSSQLSERVER_7904
   

@@ -15,6 +15,7 @@ caps.latest.revision: 16
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "On Demand"
 ---
 # Choosing Microsoft Business Intelligence (BI) tools for analysis and reporting
 Choosing the right business intelligence tool can be overwhelming. Learn about the different Microsoft offerings and find the one that best fits your needs.

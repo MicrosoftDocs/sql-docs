@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "part of object names [SQL Server]"
 ms.assetid: abf34f99-9ee9-460b-85b2-930ca5c4b5ae
 caps.latest.revision: 38
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "On Demand"
 ---
 # PARSENAME (Transact-SQL)

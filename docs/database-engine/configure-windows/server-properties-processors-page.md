@@ -16,6 +16,7 @@ caps.latest.revision: 25
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Server Properties - Processors Page
   Use this page to view or modify your processor options. Processor affinity settings are only enabled when more than one processor is installed.  

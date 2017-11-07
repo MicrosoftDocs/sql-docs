@@ -17,6 +17,7 @@ caps.latest.revision: 15
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Additional Table-Valued Parameter Metadata
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]

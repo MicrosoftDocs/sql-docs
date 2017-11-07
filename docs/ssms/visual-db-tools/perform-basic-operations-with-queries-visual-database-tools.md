@@ -17,6 +17,7 @@ caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Perform Basic Operations with Queries (Visual Database Tools)
 The following fundamental operations apply to most or all queries.  

@@ -14,9 +14,10 @@ applies_to:
   - "SQL Server 2016 Preview"
 ms.assetid: eb567ef8-f412-4d34-837a-75e53b88b3ce
 caps.latest.revision: 6
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # ContextualNameRule Element (XML)
   Provides a hint on the best way to construct a composite name for the attribute.  

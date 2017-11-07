@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "deleting certificates"
 ms.assetid: 5704aa04-68a3-4b29-b62b-8868af487817
 caps.latest.revision: 37
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "On Demand"
 ---
 # DROP CERTIFICATE (Transact-SQL)

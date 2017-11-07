@@ -14,7 +14,7 @@ ms.assetid: a7aedabc-6af9-4698-a7a4-98f894001476
 caps.latest.revision: 12
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Install Analysis Services data providers (AMO, ADOMD.NET, MSOLAP)

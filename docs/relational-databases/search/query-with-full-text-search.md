@@ -21,6 +21,7 @@ caps.latest.revision: 80
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # Query with Full-Text Search
 

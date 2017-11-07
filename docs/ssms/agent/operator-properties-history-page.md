@@ -16,6 +16,7 @@ caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Operator Properties (History Page)
 Use this page to view the date, time, and type of the most recent notifications sent to the operator.  

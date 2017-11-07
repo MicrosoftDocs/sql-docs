@@ -25,7 +25,8 @@ ms.assetid: 2c9c66b2-a7ea-4874-a0ed-020ce3feab20
 caps.latest.revision: 37
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # ActionID Element (ASSL)
   Contains the name of an [Action](../../../analysis-services/scripting/objects/action-element-assl.md) element defined on a [Cube](../../../analysis-services/scripting/objects/cube-element-assl.md) element that is made available in a [Perspective](../../../analysis-services/scripting/objects/perspective-element-assl.md) element as a [PerspectiveAction](../../../analysis-services/scripting/data-type/perspectiveaction-data-type-assl.md) element.  

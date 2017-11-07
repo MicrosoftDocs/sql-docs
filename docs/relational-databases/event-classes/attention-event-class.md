@@ -16,6 +16,7 @@ caps.latest.revision: 28
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Attention Event Class
   The **Attention** event class indicates that an attention event, such as cancel, client-interrupt requests, or broken client connections, has occurred. Cancel operations can also be seen as part of implementing data access driver time-outs.  

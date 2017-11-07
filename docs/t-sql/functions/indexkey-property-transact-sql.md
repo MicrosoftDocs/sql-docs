@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "keys [SQL Server], index"
 ms.assetid: 87c0c385-6b2d-4716-ac8c-a3ce6e8d89e9
 caps.latest.revision: 32
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # INDEXKEY_PROPERTY (Transact-SQL)

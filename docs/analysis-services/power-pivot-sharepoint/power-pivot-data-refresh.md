@@ -19,7 +19,7 @@ ms.assetid: ac8358a3-ee71-44c7-8ee6-ac7afe3ebaa4
 caps.latest.revision: 24
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Power Pivot Data Refresh

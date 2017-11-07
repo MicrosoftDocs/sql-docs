@@ -17,6 +17,7 @@ caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Rename Queries (Visual Database Tools)
 You can rename any query that is not currently open for editing. The following procedure assumes that the query you want to rename is closed.  

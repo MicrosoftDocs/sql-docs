@@ -17,6 +17,7 @@ caps.latest.revision: 19
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Manage and Monitor Semantic Search
   Describes the process of semantic indexing and the tasks related to managing and monitoring the indexes.  

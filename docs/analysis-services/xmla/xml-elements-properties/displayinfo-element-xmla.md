@@ -25,9 +25,10 @@ helpviewer_keywords:
   - "DisplayInfo element"
 ms.assetid: 059ce038-38de-4c7d-a72f-4f919cfc7c4a
 caps.latest.revision: 13
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # DisplayInfo Element (XMLA)
   Contains display information for the parent [HierarchyInfo](../../../analysis-services/xmla/xml-elements-properties/hierarchyinfo-element-xmla.md) or [Member](../../../analysis-services/xmla/xml-elements-properties/member-element-xmla.md) element.  

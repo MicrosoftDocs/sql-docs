@@ -16,6 +16,7 @@ caps.latest.revision: 11
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Configuring the SQL Server ODBC Driver - Add a Data Source
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]

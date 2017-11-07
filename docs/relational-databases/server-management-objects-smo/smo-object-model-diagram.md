@@ -16,6 +16,7 @@ caps.latest.revision: 30
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # SMO Object Model Diagram
   This diagram shows the SMO object hierarchy and the relationships between the object types. The <xref:Microsoft.SqlServer.Management.Smo.Server> object is the top level object.  

@@ -19,7 +19,7 @@ ms.assetid: 00043ebd-7164-4ceb-b945-6e44378ea00a
 caps.latest.revision: 37
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Retrieving Metadata from an Analytical Data Source

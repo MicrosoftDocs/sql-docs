@@ -25,9 +25,10 @@ helpviewer_keywords:
   - "Unlock command"
 ms.assetid: 46425b33-baa2-41ad-803a-34d2fb4b2cab
 caps.latest.revision: 14
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Unlock Element (XMLA)
   Unlocks a specified lock on a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance.  

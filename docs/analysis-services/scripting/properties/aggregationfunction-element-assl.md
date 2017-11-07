@@ -25,7 +25,8 @@ ms.assetid: 40cfc7f9-1089-45f9-be90-a29770ed9682
 caps.latest.revision: 39
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # AggregationFunction Element (ASSL)
   Contains the aggregation function to use for the account type.  

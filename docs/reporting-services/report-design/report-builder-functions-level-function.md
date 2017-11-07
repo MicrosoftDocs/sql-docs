@@ -15,6 +15,7 @@ caps.latest.revision: 7
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Report Builder Functions - Level Function
   Returns the current level of depth in a recursive hierarchy.  

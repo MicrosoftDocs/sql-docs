@@ -24,6 +24,7 @@ caps.latest.revision: 65
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Search for Words Close to Another Word with NEAR
   You can use the *proximity term* **NEAR** in a [CONTAINS](../../t-sql/queries/contains-transact-sql.md) predicate or [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) function to search for words or phrases near one another. 

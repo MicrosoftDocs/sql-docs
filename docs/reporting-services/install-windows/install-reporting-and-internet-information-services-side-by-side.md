@@ -16,6 +16,7 @@ caps.latest.revision: 40
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "On Demand"
 ---
 
 # Install Reporting and Internet Information Services Side-by-Side

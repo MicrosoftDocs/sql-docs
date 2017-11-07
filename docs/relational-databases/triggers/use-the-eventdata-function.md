@@ -17,6 +17,7 @@ caps.latest.revision: 38
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Use the EVENTDATA Function
   Information about an event that fires a DDL trigger is captured by using the EVENTDATA function. This function returns an **xml** value. The XML schema includes information about the following:  

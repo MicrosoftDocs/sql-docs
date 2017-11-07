@@ -20,6 +20,7 @@ caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Specify Multiple Search Conditions for One Column (Visual Database Tools)
 In some instances, you might want to apply a number of search conditions to the same data column. For example, you might want to:  

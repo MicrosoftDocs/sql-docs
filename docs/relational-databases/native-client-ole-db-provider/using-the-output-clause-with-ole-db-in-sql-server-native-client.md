@@ -14,6 +14,7 @@ caps.latest.revision: 7
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Using the OUTPUT Clause with OLE DB in SQL Server Native Client
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]

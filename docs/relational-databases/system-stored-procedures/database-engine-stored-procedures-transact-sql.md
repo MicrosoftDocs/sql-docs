@@ -17,9 +17,10 @@ helpviewer_keywords:
   - "stored procedures [SQL Server], Database Engine"
 ms.assetid: 2ce018e9-1a3b-4530-a87d-842456a555ad
 caps.latest.revision: 42
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "On Demand"
 ---
 # Database Engine Stored Procedures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

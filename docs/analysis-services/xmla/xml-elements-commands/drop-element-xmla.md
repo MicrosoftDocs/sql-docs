@@ -25,9 +25,10 @@ helpviewer_keywords:
   - "Drop element"
 ms.assetid: a5d21db3-743a-4958-b16d-b6816a5ee787
 caps.latest.revision: 13
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Drop Element (XMLA)
   Deletes attribute members from a dimension.  

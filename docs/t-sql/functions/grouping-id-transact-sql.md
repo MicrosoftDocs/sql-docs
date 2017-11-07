@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "GROUPING_ID function"
 ms.assetid: c1050658-b19f-42ee-9a05-ecd6a73b896c
 caps.latest.revision: 36
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "On Demand"
 ---
 # GROUPING_ID (Transact-SQL)

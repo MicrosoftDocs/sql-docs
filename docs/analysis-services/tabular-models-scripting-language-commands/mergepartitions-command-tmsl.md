@@ -14,7 +14,8 @@ ms.assetid: dd568426-a415-41bf-b1e9-ea2261babf81
 caps.latest.revision: 8
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # MergePartitions command (TMSL)
 

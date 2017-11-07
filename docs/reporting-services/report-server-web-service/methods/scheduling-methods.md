@@ -22,6 +22,7 @@ caps.latest.revision: 35
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Scheduling Methods
   You can use these methods to create and manage shared schedules for report execution and delivery, and to cache refresh plans utilized by the report server.  

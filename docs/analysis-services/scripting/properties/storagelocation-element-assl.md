@@ -25,7 +25,8 @@ ms.assetid: ecf8852f-56a1-4fcf-b0d8-d7eebb75e4ed
 caps.latest.revision: 33
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # StorageLocation Element (ASSL)
   Contains the file system storage location for the contents of the parent element.  

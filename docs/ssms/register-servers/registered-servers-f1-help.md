@@ -18,6 +18,7 @@ caps.latest.revision: 23
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Registered Servers F1 Help
   This section contains the F1 Help for the Registered Servers component in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. It describes the various options.

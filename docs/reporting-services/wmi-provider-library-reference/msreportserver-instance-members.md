@@ -22,6 +22,7 @@ caps.latest.revision: 22
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # MSReportServer_Instance Members
   The MSReportServer_Instance class provides basic information required for a client to connect to an installed report server.  

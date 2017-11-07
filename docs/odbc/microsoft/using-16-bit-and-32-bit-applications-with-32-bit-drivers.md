@@ -19,6 +19,7 @@ caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Using 16-Bit and 32-Bit Applications with 32-Bit Drivers
 > [!IMPORTANT]  

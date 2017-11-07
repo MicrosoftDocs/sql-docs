@@ -21,7 +21,7 @@ ms.assetid: afad5c39-d4c3-4307-b3b9-a06617da0028
 caps.latest.revision: 13
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Managing Caches (XMLA)

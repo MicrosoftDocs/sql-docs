@@ -14,6 +14,7 @@ caps.latest.revision: 6
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # IDBProperties (OLE DB)
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]

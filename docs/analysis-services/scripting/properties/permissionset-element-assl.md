@@ -25,7 +25,8 @@ ms.assetid: da5a9175-48e4-4b5e-a780-3e0077939974
 caps.latest.revision: 35
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # PermissionSet Element (ASSL)
   Identifies the permission set associated with a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework assembly.  

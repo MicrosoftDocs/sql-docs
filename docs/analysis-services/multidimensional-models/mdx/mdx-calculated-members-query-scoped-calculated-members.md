@@ -18,7 +18,7 @@ ms.assetid: c4507149-e67b-4e5d-9192-cc911acd9adc
 caps.latest.revision: 29
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # MDX Calculated Members - Query-Scoped Calculated Members

@@ -16,6 +16,7 @@ caps.latest.revision: 18
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Add Business Logic to XML Data
   Your business logic can be added to XML data in several ways:  

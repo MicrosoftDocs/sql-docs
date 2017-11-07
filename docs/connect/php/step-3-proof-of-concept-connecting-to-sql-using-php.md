@@ -14,6 +14,7 @@ caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Step 3: Proof of concept connecting to SQL using PHP
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

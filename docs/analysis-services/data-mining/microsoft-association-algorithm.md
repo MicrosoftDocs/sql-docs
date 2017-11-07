@@ -34,7 +34,7 @@ ms.assetid: 8b6b8247-62f9-4f6f-b1af-d01dab290e4c
 caps.latest.revision: 55
 author: "Minewiskan"
 ms.author: "owend"
-manager: "jhubbard"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Microsoft Association Algorithm

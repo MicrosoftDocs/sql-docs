@@ -25,9 +25,10 @@ helpviewer_keywords:
   - "Materialize element"
 ms.assetid: cda19474-7170-4b0e-b0ea-297ce5128112
 caps.latest.revision: 11
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Materialize Element (XMLA)
   Specifies whether to materialize the aggregations designed by the [DesignAggregations](../../../analysis-services/xmla/xml-elements-commands/designaggregations-element-xmla.md) command.  

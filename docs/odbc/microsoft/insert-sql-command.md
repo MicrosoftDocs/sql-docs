@@ -16,6 +16,7 @@ caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # INSERT - SQL Command
 Appends a record to the end of a table that contains the specified field values.  

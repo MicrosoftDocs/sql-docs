@@ -19,9 +19,10 @@ helpviewer_keywords:
   - "sp_sequence_get_range"
 ms.assetid: 8ca6b0c6-8d9c-4eee-b02f-51ddffab4492
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Inactive"
 ---
 # sp_sequence_get_range (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-asdw-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-asdw-xxx-md.md)]

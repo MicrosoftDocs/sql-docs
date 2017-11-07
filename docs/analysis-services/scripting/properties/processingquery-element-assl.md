@@ -23,7 +23,8 @@ ms.assetid: d18e6f4b-c24c-4f73-8b85-4b6e8a82a695
 caps.latest.revision: 12
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # ProcessingQuery Element (ASSL)
   Contains the parameterized text of the query to execute for notification of incremental processing status.  

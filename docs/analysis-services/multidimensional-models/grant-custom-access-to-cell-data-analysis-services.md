@@ -24,7 +24,7 @@ ms.assetid: 3b13a4ae-f3df-4523-bd30-b3fdf71e95cf
 caps.latest.revision: 31
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Grant custom access to cell data (Analysis Services)

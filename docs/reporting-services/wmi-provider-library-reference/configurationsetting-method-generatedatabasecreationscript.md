@@ -22,6 +22,7 @@ caps.latest.revision: 25
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # ConfigurationSetting Method - GenerateDatabaseCreationScript
   Generates a SQL Script that can be used to create a report server database.  

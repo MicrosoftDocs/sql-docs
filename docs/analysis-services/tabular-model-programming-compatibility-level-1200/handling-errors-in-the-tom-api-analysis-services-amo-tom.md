@@ -14,7 +14,8 @@ ms.assetid: ec44daa0-a90e-42ad-b70d-6a7a7a4e4b7b
 caps.latest.revision: 4
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Handling errors in the TOM API (Analysis Services AMO-TOM)
 

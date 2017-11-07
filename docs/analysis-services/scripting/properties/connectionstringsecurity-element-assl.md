@@ -25,7 +25,8 @@ ms.assetid: f25c4448-bb0d-4945-bc84-9c015eefa0eb
 caps.latest.revision: 37
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # ConnectionStringSecurity Element (ASSL)
   Specifies whether the user's password is stripped from the data source connection string for security purposes.  

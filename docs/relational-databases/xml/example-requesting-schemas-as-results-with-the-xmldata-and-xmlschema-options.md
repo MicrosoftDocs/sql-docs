@@ -17,6 +17,7 @@ caps.latest.revision: 11
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Example: Requesting Schemas as Results with the XMLDATA and XMLSCHEMA Options
   The following query returns the XML-DATA schema that describes the document structure.  

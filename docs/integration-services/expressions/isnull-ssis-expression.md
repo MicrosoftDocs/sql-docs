@@ -17,6 +17,7 @@ caps.latest.revision: 28
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # ISNULL (SSIS Expression)
   Returns a Boolean result based on whether an expression is null.  

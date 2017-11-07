@@ -17,6 +17,7 @@ caps.latest.revision: 9
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Converting DB2 Schemas (DB2ToSQL)
 After you have connected to DB2, connected to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], and set project and data mapping options, you can convert DB2 database objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database objects.  

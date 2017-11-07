@@ -25,7 +25,8 @@ ms.assetid: c9af1b9a-506f-4cc1-acd7-e57698cb672c
 caps.latest.revision: 32
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # ModelingFlag Element (ASSL)
   Contains a modeling flag for a column in a mining structure or a mining model.  

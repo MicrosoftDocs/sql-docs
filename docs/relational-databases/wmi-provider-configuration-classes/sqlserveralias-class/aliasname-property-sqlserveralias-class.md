@@ -20,6 +20,7 @@ caps.latest.revision: 31
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # AliasName Property (SqlServerAlias Class)
   Gets the name of the server connection alias.  

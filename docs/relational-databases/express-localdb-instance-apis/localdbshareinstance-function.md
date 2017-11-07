@@ -19,6 +19,7 @@ caps.latest.revision: 9
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # LocalDBShareInstance Function
   Shares the specified SQL Server Express LocalDB instance with other users of the computer, using the specified shared name.  

@@ -25,7 +25,7 @@ ms.assetid: 91074677-c149-483b-a56d-0e35d959d9eb
 caps.latest.revision: 41
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # ClrAssemblyFile Data Type (ASSL)

@@ -21,6 +21,7 @@ caps.latest.revision: 33
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # SQL Server In-Process Specific Extensions to ADO.NET
   There are four main functional extensions to ADO.NET that are specifically for in-process use. The following topics will cover these extensions in detail.  

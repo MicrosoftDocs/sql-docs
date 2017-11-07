@@ -15,7 +15,8 @@ ms.assetid: b2693985-1bea-4861-a100-cea4761ba809
 caps.latest.revision: 26
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "On Demand"
 ---
 # DAX in Tabular Models (SSAS Tabular)
   Data Analysis Expressions (DAX) is a formula language used to create custom calculations in Analysis Services, Power BI Desktop, and Power Pivot in Excel. DAX formulas include functions, operators, and values to perform advanced calculations on data in tables and columns.  

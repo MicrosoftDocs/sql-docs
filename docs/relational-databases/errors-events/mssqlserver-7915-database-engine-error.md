@@ -13,9 +13,10 @@ helpviewer_keywords:
   - "7915 (Database Engine error)"
 ms.assetid: 63338587-7dd3-40e6-b70e-d8ae18fff47b
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Inactive"
 ---
 # MSSQLSERVER_7915
   

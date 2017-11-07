@@ -26,7 +26,7 @@ ms.assetid: 820d4b59-d428-4616-b792-c848e5da407e
 caps.latest.revision: 31
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Analysis Services Schema Rowsets

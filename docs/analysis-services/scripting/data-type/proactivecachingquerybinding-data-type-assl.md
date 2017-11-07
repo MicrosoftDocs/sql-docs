@@ -23,7 +23,7 @@ ms.assetid: c1b06e50-9e68-40db-bdab-fc2cb3a8ff64
 caps.latest.revision: 15
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # ProactiveCachingQueryBinding Data Type (ASSL)

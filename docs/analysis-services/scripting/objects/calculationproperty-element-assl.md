@@ -25,7 +25,8 @@ ms.assetid: 5f0b4cfc-7d25-4c01-a517-cc2e89859be3
 caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # CalculationProperty Element (ASSL)
   Contains a collection of user interface properties for a calculation used in an [MdxScript](../../../analysis-services/scripting/objects/mdxscript-element-assl.md) element.  

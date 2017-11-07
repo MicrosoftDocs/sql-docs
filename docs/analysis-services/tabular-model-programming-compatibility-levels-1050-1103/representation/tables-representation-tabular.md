@@ -16,7 +16,8 @@ ms.assetid: a636fc13-4054-4cea-bce1-192ec4796063
 caps.latest.revision: 10
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Tables Representation (Tabular)
   In tabular models, a table is the base representation of the data.  

@@ -21,6 +21,7 @@ caps.latest.revision: 34
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Debug a Business Logic Handler (Replication Programming)
   Use a business logic handler to invoke custom business logic when a merge subscription is synchronized. For more information, see [Execute Business Logic During Merge Synchronization](../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md).  

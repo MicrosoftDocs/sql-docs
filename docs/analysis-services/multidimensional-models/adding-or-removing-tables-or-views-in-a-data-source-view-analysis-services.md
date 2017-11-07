@@ -24,7 +24,7 @@ ms.assetid: 98307d04-6548-4d7d-9244-2371dd165249
 caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Adding or Removing Tables or Views in a Data Source View (Analysis Services)

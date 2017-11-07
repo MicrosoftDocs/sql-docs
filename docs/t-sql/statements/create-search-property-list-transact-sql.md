@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "CREATE SEARCH PROPERTY LIST statement"
 ms.assetid: 5440cbb8-3403-4d27-a2f9-8e1f5a1bc12b
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # CREATE SEARCH PROPERTY LIST (Transact-SQL)

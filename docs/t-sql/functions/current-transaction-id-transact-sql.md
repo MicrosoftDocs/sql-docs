@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "CURRENT_TRANSACTION_ID function"
 ms.assetid: 82cd9f92-d935-45a0-a433-620d6e15b467
 caps.latest.revision: 6
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # CURRENT_TRANSACTION_ID (Transact-SQL)

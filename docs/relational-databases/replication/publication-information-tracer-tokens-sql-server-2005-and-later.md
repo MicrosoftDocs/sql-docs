@@ -16,6 +16,7 @@ caps.latest.revision: 24
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Publication Information, Tracer Tokens (SQL Server 2005 and Later)
   The **Tracer Tokens** tab allows you to validate connections and to measure the latency of a system that uses transactional replication. A token (a small amount of data) is written to the transaction log of the publication database, marked as though it were a typical replicated transaction, and sent through the system, allowing a calculation of:  

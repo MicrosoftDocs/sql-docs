@@ -19,6 +19,7 @@ caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # C to SQL: Year-Month Intervals
 The identifiers for the year-month interval ODBC C data types are:  

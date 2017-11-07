@@ -15,7 +15,7 @@ ms.assetid: 065fdc60-1791-4e27-9ed5-51d751b3f8c4
 caps.latest.revision: 22
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Lesson 1-1 - Creating an Analysis Services Project

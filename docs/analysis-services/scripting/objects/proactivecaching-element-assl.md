@@ -25,7 +25,8 @@ ms.assetid: 85f9ed44-2ede-406f-b0ca-237ab2f49722
 caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # ProactiveCaching Element (ASSL)
   Defines proactive caching settings for the parent element.  

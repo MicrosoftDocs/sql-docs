@@ -20,6 +20,7 @@ caps.latest.revision: 31
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Batching Stored Procedure Calls
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]

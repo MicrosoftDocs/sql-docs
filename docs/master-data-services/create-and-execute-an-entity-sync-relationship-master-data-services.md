@@ -15,6 +15,7 @@ caps.latest.revision: 6
 author: "smartysanthosh"
 ms.author: "nagavo"
 manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Create and Execute an Entity Sync Relationship (Master Data Services)
   Entity sync is a one-way and repeatable synchronization between entity versions. It provides a way to share entity data between different models.  

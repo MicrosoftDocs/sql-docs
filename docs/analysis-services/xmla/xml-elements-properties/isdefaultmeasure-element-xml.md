@@ -14,9 +14,10 @@ applies_to:
   - "SQL Server 2016 Preview"
 ms.assetid: 523cf3d7-9df0-4f9d-8486-9109de8d3cca
 caps.latest.revision: 6
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # IsDefaultMeasure Element (XML)
   Indicates that it is possible to obtain the default measure for this entity by navigating this relationship to the other table and fetching the member that has the attribute, DefaultMeasure.  

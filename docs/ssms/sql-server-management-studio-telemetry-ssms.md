@@ -14,6 +14,7 @@ caps.latest.revision: 72
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Local Audit for SSMS Usage Feedback Collection
 

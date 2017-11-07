@@ -16,6 +16,7 @@ caps.latest.revision: 31
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Security Considerations for SQL Server Compact Replication
   Securing connectivity between an instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Database Engine and [!INCLUDE[ssEW](../../../includes/ssew-md.md)] involves properly configuring security for both Microsoft Internet Information Services (IIS) and [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  

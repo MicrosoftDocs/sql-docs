@@ -17,6 +17,7 @@ caps.latest.revision: 20
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Set a Trace Filter (Transact-SQL)
   This topic describes how to use stored procedures to create a filter that retrieves only the information you need on an event being traced.  

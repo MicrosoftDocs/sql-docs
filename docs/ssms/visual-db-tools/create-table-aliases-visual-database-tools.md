@@ -17,6 +17,7 @@ caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Create Table Aliases (Visual Database Tools)
 Aliases can make it easier to work with table names. Using aliases is helpful when:  

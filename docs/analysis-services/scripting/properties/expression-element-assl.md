@@ -25,7 +25,8 @@ ms.assetid: a9491b21-5279-4531-b6a5-9e8022060dd8
 caps.latest.revision: 36
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Expression Element (ASSL)
   Contains a Multidimensional Expressions (MDX) expression that defines the contents of the parent element.  

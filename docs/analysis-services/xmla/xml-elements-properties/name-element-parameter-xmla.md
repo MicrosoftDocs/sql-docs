@@ -25,9 +25,10 @@ helpviewer_keywords:
   - "Name element"
 ms.assetid: 180e3b4d-058e-4deb-843d-ec60949edab0
 caps.latest.revision: 11
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Name Element (Parameter) (XMLA)
   Contains the name of a parameter represented by the [Parameter](../../../analysis-services/xmla/xml-elements-properties/parameter-element-xmla.md) element.  

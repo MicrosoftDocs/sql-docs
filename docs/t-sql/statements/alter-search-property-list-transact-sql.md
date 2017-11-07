@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "ALTER SEARCH PROPERTY LIST statement"
 ms.assetid: 0436e4a8-ca26-4d23-93f1-e31e2a1c8bfb
 caps.latest.revision: 55
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # ALTER SEARCH PROPERTY LIST (Transact-SQL)

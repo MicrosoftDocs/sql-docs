@@ -25,7 +25,8 @@ ms.assetid: 8457aebc-8fdd-4683-8640-baaf9d89b2a2
 caps.latest.revision: 32
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # MeasureID Element (ASSL)
   Associates a [Measure](../../../analysis-services/scripting/objects/measure-element-assl.md) element with the parent element.  

@@ -13,9 +13,10 @@ helpviewer_keywords:
   - "18264 (Database Engine error)"
 ms.assetid: 3050fc56-2be5-43cf-916b-50a3ac5f89aa
 caps.latest.revision: 12
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Inactive"
 ---
 # MSSQLSERVER_18264
   

@@ -3,9 +3,9 @@ title: Monitor Query Performance with SQL Operations Studio  | Microsoft Docs
 description: Monitor a database by adding a pre-built query performance widget to the database dashboard that shows the five slowest queries.
 keywords: 
 ms.custom: "tools|sos"
-ms.date: "11/01/2017"
+ms.date: "11/06/2017"
 ms.prod: "sql-non-specified"
-ms.reviewer: "alayu; erickang; sanagama; sstein"
+ms.reviewer: "alayu; erickang; sstein"
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "tutorial"
@@ -121,7 +121,7 @@ To add an insight widget to your dashboard, edit the *dashboard.database.widgets
 
    >> TBD - screenshot
 
-## Next Steps
+## Next steps
 In this tutorial, you learned how to:
 > [!div class="checklist"]
 > * Enable Query Store on a database
@@ -129,6 +129,4 @@ In this tutorial, you learned how to:
 > * View details about the database's slowest queries
 > * View query execution plans for the slow queries
 
-Next, learn how to use X, try this tutorial: 
-> [!div class="nextstepaction"]
-> [What article is next in sequence](tutorial-monitoring-sql-server.md)
+To learn how to build a custom insight widget, see [Build a custom insight widget]](tutorial-build-custom-insight-sql-server.md).

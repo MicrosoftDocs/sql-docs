@@ -3,9 +3,9 @@ title: Tutorial article for Carbon | Microsoft Docs
 description: This sample describes the article in 115 to 145 characters. Validate using Gauntlet toolbar check icon. Use SEO kind of action verbs here.
 keywords: 
 ms.custom: "tools|sos"
-ms.date: "11/01/2017"
+ms.date: "11/06/2017"
 ms.prod: "sql-non-specified"
-ms.reviewer: "alayu; erickang; sanagama; sstein"
+ms.reviewer: "alayu; erickang; sstein"
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "tutorial"
@@ -20,11 +20,11 @@ Follow [Get Started with Carbon](./get-started-sql-server.md)
 
 In this tutorial, you use the Carbon to learn how to:
 > [!div class="checklist"]
-> * Bring your own monitoring query as an insight
-> * Visualize insight query result into a chart
-> * Pin the chart to a SQL Server and database dashboard
+> * Use your own monitoring query as an insight
+> * Visualize the query results as a chart
+> * Add the chart to a SQL Server and database dashboard
 
-If you don't have an Azure subscription, create a [free](https://azure.microsoft.com/free/) account before you begin.
+
 
 ## Prerequisites
 Follow [Get Started with Carbon](./get-started-sql-server.md)
@@ -167,14 +167,11 @@ In this tutorial, we use Query Store feature ...[give a brief explanation and li
 
    ![qds insight](./media/tutorial-sql-server/insight-widget.png) 
 
-## Next Steps
+## Next steps
 In this tutorial, you learned how to:
 > [!div class="checklist"]
-> * Create something
-> * Do something
-> * Do something else
-> * Finish something 
+> * Use your own monitoring query as an insight
+> * Visualize the query results as a chart
+> * Add the chart to a SQL Server and database dashboard
 
-Next, learn how to use X, try this tutorial: 
-> [!div class="nextstepaction"]
-> [What article is next in sequence](tutorial-monitoring-sql-server.md)
+To learn how to build a custom insight widget, see [Build a custom insight widget]](tutorial-build-custom-insight-sql-server.md).

@@ -3,7 +3,7 @@ title: Use Insight widgets to monitor servers and databases in SQL Operations St
 description: Learn about insight widgets in SQL Operations Studio.
 keywords: 
 ms.custom: "tools|sos"
-ms.date: "10/31/2017"
+ms.date: "11/06/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: "alayu; erickang; sstein"
 ms.suite: "sql"
@@ -28,9 +28,7 @@ You can build awesome server and database management dashboards that are even be
 To jump in and start creating different types of Insight widgets, check out the following tutorials:
 
 - [**Build a custom Insight widget**](tutorial-build-custom-insight-sql-server.md)
-- [**Monitor query performance**](tutorial-monitoring-sql-server.md)
-- [**Monitor space used by all database tables**](tutorial-table-space-sql-server.md)
-- [**Monitor status of backups**](tutorial-backup-status-sql-server.md)
+- [**Enable built-in widgets**](tutorial-qds-sql-server.md)
 
 
 ## SQL Queries 
@@ -55,5 +53,4 @@ T-SQL query and its result set itself determines the insight widget behavior. Wr
 
 ## Additional resources
 - [Query Editor](tutorial-sql-editor.md)
-- [Create some Insight widgets](tutorial-monitoring-sql-server.md)
 

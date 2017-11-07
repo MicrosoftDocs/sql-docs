@@ -3,9 +3,9 @@ title: Backup and restore a database using SQL Operations Studio | Microsoft Doc
 description: Learn how to backup and restore a database using SQL Operations Studio
 keywords: 
 ms.custom: "tools|sos"
-ms.date: "11/03/2017"
+ms.date: "11/06/2017"
 ms.prod: "sql-non-specified"
-ms.reviewer: "alayu; erickang; sanagama; sstein"
+ms.reviewer: "alayu; erickang; sstein"
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "tutorial"
@@ -77,7 +77,7 @@ After clicking **Backup**, the **Backup database** dialog disappears and the bac
 
    ![restore](./media/tutorial-backup-restore-sql-server/task-history-restore.png)
 
-## Next Steps
+
 In this tutorial, you learned how to:
 > [!div class="checklist"]
 > * Backup a database 
@@ -86,7 +86,3 @@ In this tutorial, you learned how to:
 > * Restore a database
 > * View the status of the restore task
 
-Next, try this tutorial: 
-[Another Tutorial](tutorial-monitoring-sql-server.md)
-> [!div class="nextstepaction"]
-> [What article is next in sequence](tutorial-monitoring-sql-server.md)

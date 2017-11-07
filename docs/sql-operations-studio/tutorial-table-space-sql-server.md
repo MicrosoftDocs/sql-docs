@@ -1,11 +1,11 @@
 ---
-title: Enable Table Space Usage Insight Dashboard | Microsoft Docs
-description: This sample describes the article in 115 to 145 characters. Validate using Gauntlet toolbar check icon. Use SEO kind of action verbs here.
+title: Enable the table space usage insight widget in SQL Operations Studio | Microsoft Docs
+description: This example shows how to enable the table space usage widget on the SQL Operations Studio database dashboard.
 keywords: 
 ms.custom: "tools|sos"
-ms.date: "11/01/2017"
+ms.date: "11/06/2017"
 ms.prod: "sql-non-specified"
-ms.reviewer: "alayu; erickang; sanagama; sstein"
+ms.reviewer: "alayu; erickang; sstein"
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "tutorial"
@@ -64,13 +64,12 @@ In this tutorial, we will walk through how to enable an insight widget on Dashbo
 
    ![chart toggle and legend](./media/tutorial-sql-server/insight-table-space-toggle.png)
 
-## Next Steps
+
+## Next steps
 In this tutorial, you learned how to:
 > [!div class="checklist"]
 > * Quickly turn on an insight widget using a built-in insight widget sample.
 > * View the details of table space usage.
 > * Filter data and view label detail on an insight chart
 
-Next, learn how to use X, try this tutorial: 
-> [!div class="nextstepaction"]
-> [What article is next in sequence](tutorial-monitoring-sql-server.md)
+To learn how to build a custom insight widget, see [Build a custom insight widget]](tutorial-build-custom-insight-sql-server.md).

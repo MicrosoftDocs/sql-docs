@@ -1,9 +1,9 @@
 ---
-title: Quickly Access insights and common tasks in SQL Operations Studio | Microsoft Docs
+title: Quickly access insights and common tasks in SQL Operations Studio | Microsoft Docs
 description: Learn about displaying insightful widgets in SQL Operations Studio.
 keywords: 
 ms.custom: "tools|sos"
-ms.date: "10/31/2017"
+ms.date: "11/06/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: "alayu; erickang; sstein"
 ms.suite: "sql"
@@ -33,7 +33,7 @@ Easily look up existing databases stored on the server, including tables.
 Easily look up the backup status for existing databases.
 
 ## Configuring Insight Widgets
-It is highly recommended that you follow the tutorial for setting up your dashboard, which can be found [here](tutorial-monitoring-sql-server.md).
+It is highly recommended that you follow the tutorial for setting up your dashboard, which can be found [here](tutorial-build-custom-insight-sql-server.md).
 
 In addition, make sure to check out the [How-To on configuring insight widgets]().
 
@@ -122,9 +122,3 @@ For example, when restore action is launched for WideWorldImporters database, ``
     }
 }
 ```
-
-
-## Next steps
-The basics of dashboards and insight widgets have been covered in this document, read on to find out more about:
-
-* [Integrated Terminal](integrated-terminal.md) - Use the integrated terminal in [!INCLUDE[name-sos](../includes/name-sos-short.md)]

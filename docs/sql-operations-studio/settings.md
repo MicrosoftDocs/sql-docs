@@ -20,8 +20,8 @@ It is easy to configure [!INCLUDE[name-sos](../includes/name-sos-short.md)] to y
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] provides two different scopes for settings:
 
-* **User** These settings apply globally to any instance of [!INCLUDE[name-sos](../includes/name-sos-short.md)] you open
-* **Workspace** These settings are stored inside your workspace in a `.[!INCLUDE[name-sos](../includes/name-sos-short.md)]` folder and only apply when the workspace is opened. Settings defined on this scope override the user scope.
+* **User** These settings apply globally to any instance of [!INCLUDE[name-sos](../includes/name-sos-short.md)] you open.
+* **Workspace** Workspace settings are settings specific to a folder on your computer, and are only available when the folder is open in the Explorer sidebar. Settings defined on this scope override the user scope.
 
 ## Creating User and Workspace Settings
 

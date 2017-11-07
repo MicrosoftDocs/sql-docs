@@ -5,7 +5,7 @@ keywords:
 ms.custom: "tools|sos"
 ms.date: "11/06/2017"
 ms.prod: "sql-non-specified"
-ms.reviewer: "alayu; erickang; sanagama; sstein"
+ms.reviewer: "alayu; erickang; sstein"
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "tutorial"
@@ -23,49 +23,55 @@ In the previous tutorial, you learned how to quickly enable insight widgets on d
 > * Add the chart to a server or database dashboard
 
 ## Prerequisites
-Follow [Get Started with Carbon](./get-started-sql-server.md)
+This tutorial requires the *TutorialDB* database. To create the *TutorialDB* database, complete one of the following quickstarts:
+
+- [Connect and query SQL Server using [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](get-started-sql-server.md)
+- [Connect and query Azure SQL Database using [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](get-started-sql-database.md)
+- [Connect and query SQL Data Warehouse using [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](get-started-sql-dw.md)
+
 
 ## Run your own query and view the result in a chart view
 In this step, run a sql script to query the current active sessions.
 
-1. Press 'CTRL + N' to open a new editor. Connect to 'TutorialDB'.
+1. To open a new editor, press **Ctrl+N** . 
+2. Change the connection context to **TutorialDB**.
 
-2. Copy and paste the following query into the new editor:
+2. Paste the following query into the query editor.
 
    ```sql
    SELECT count(session_id) as [Active Sessions]
    FROM sys.dm_exec_sessions
    WHERE status = 'running'
    ```
-
-3. Press ```F5``` to execute. After SQL Operations Studio returns with the result view, click ```View as Chart``` button.
+1. To execute the query, press **F5**.
+3. After SQL Operations Studio returns with the result view, click **View as Chart**, then click the **Chart Viewer** tab.
 
    ![view as chart](./media/tutorial-sql-server/insight-activesession-result.png)
 
-4. Change the chart type to ```Count```. These settings render a count chart:
+4. Change **Chart Type** to **count**. These settings render a count chart:
 
    ![chart](./media/tutorial-sql-server/insight-activesession-count.png)
 
-5. Save the query in the editor to a *.sql file. For this tutorial, save the script as ```activeSession.sql```.
+5. Save the query in the editor to a *.sql file. For this tutorial, save the script as *activeSession.sql*.
 
 ## Generate an insight widget setting
 
-1. Click **Create Insight** button on Chart Viewer. It opens the insight widget configuration:
+1. To open the insight widget configuration, click **Create Insight** on *Chart Viewer*:
    ![configuration](./media/tutorial-sql-server/insight-missingpk-config.png)
    
-2. Copy the insight configuration json data to a clipboard by pressing ```CTRL+C```. 
+2. Copy the insight configuration (the JSON data). 
 
-3. Press ```F1``` and type ```settings``` in the Command Palette to open either User Settings or Workspace Settings. For this tutorial, select ```Preferences: Open User Settings```. For more information about the usage of Workspace settings, see [Tips for workspace mode in SQL Operations Studio]()
+3. Press **Ctrl+Comma** and to open *User Settings*.
 
    ![settings](./media/tutorial-sql-server/settings.png)
 
-4. Type ```dashboard``` in ```Search Settings```. Click ```Edit``` on ```dashboard.database.widgets```. 
+4. Type *dashboard* in *Search Settings*.
 
-   > To configure an insight widget for SQL Server, click ```Edit``` for ```dashboard.server.widgets```
+1. To configure an insight widget for SQL Server, click **Edit** for *dashboard.server.widgets*.
 
    ![dashboard settings](./media/tutorial-sql-server/dashboard-settings.png)
 
-5. Paste the insight configuration json into ```dashboard.database.widgets{}```. Database dashboard settings looks like the following:
+5. Paste the insight configuration JSON into *dashboard.database.widgets{}*. Database dashboard settings looks like the following:
 
    ```json
     "dashboard.database.widgets": [
@@ -91,7 +97,7 @@ In this step, run a sql script to query the current active sessions.
             }
         }
    ```
-6. Save the User Settings file and Open Dashboard from TutorialDB.
+6. Save the *User Settings* file and Open the *TutorialDB* database dashboard.
 
    ![activesession insight](./media/tutorial-sql-server/insight-activesession-dashboard.png) 
 

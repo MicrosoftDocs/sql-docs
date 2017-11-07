@@ -110,6 +110,7 @@ This tutorial requires the *TutorialDB* database. To create the *TutorialDB* dat
 1. Open a new editor by pressing **CTRL + N**. 
 
 2. Type and select **sqlCreateStoredProcedure** from the snippet suggestion list. Type in **setCustomer** for **StoredProcedureName** and **dbo** for **SchemaName**
+
 3. Replace the @param lines with the following parameter definition:
 
    ```sql

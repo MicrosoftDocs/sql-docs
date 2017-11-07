@@ -56,7 +56,7 @@ This tutorial requires the *TutorialDB* database. To create the *TutorialDB* dat
 
    ![edit data](./media/tutorial-sql-editor/edit-data.png)
 
-## Use T-SQL snippets and IntelliSense to create a stored procedure
+## Use T-SQL snippets to create a stored procedure
 
 ### Use snippets in [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]
 
@@ -70,25 +70,47 @@ This tutorial requires the *TutorialDB* database. To create the *TutorialDB* dat
 
    ![snippet](./media/tutorial-sql-editor/snippet.png)
 
-4. Press *Tab* and then type *dbo* to replace the *SchemaName* entries.
+4. Replace the rest of the stored procedure with the T-SQL below
 
-5. Replace  ```@param1...``` with:
+	```sql
+    -- Create a new stored procedure called 'getCustomer' in schema 'dbo'
+    -- Drop the stored procedure if it already exists
+    IF EXISTS (
+    SELECT *
+    FROM INFORMATION_SCHEMA.ROUTINES
+    WHERE SPECIFIC_SCHEMA = N'dbo'
+    AND SPECIFIC_NAME = N'getCustomer'
+    )
+    DROP PROCEDURE dbo.getCustomer
+    GO
+    -- Create the stored procedure in the specified schema
+    CREATE PROCEDURE dbo.getCustomer
+    @ID int
+    -- add more stored procedure parameters here
+    AS
+    -- body of the stored procedure
+    SELECT  c.CustomerID, 
+    c.Name, 
+    c.Location, 
+    c.Email
+    FROM dbo.Customers c
+    WHERE c.CustomerID = @ID
+    FOR JSON PATH
 
-   ```sql
-       @ID int
-   ```
-
-   ![snippet-scripting](./media/tutorial-sql-editor/snippet-scripting.png)
-
-6. Delete the example arguments in the EXECUTE statement. The final statement should be: ```EXECUTE dbo.getCustomer 1```.
-
-7. To create the stored procedure and give it a test run, press **F5**.
+    GO
+    -- example to execute the stored procedure we just created
+    EXECUTE dbo.getCustomer 1
+    GO
+	```
+    
+5. To create the stored procedure and give it a test run, press **F5**.
 
 ## Use Peek Definition and Go to Definition 
 
 1. Open a new editor by pressing **CTRL + N**. 
 
 2. Type and select **sqlCreateStoredProcedure** from the snippet suggestion list. Type in **setCustomer** for **StoredProcedureName** and **dbo** for **SchemaName**
+
 3. Replace the @param lines with the following parameter definition:
 
    ```sql
@@ -105,7 +127,7 @@ This tutorial requires the *TutorialDB* database. To create the *TutorialDB* dat
 
    ![peek definition](./media/tutorial-sql-editor/peek-definition.png)
 
-6. By referencing the table defintion in the peek definition, complete the following insert statement.??WHAT EXACTLY AM I DOING HERE - JUST LOOKING OR DOES THIS HELP ME CREATE THE STATEMENT??
+6. Use the table defintion in the peek definition, complete the following insert statement
 
    ```sql
    INSERT INTO dbo.Customers (CustomerID, Name, Location, Email)

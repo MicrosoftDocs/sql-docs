@@ -127,7 +127,7 @@ AND    E.EmployeeID=1
 FOR XML PATH  
 ```  
   
- The column names are used as a path in constructing XML in the PATH mode. The column name that contains employee ID values, starts with '@'.Therefore, an attribute, **EmpID**, is added to the `row` element. All other columns include a slash mark ('/') in the column name that indicates hierarchy. The resulting XML will have the `EmpName` child under the `row` element, and the `EmpName` child will have `First`, `Middle` and `Last` element children.  
+ The column names are used as a path in constructing XML in the PATH mode. The column name that contains employee ID values, starts with '\@'.Therefore, an attribute, **EmpID**, is added to the `row` element. All other columns include a slash mark ('/') in the column name that indicates hierarchy. The resulting XML will have the `EmpName` child under the `row` element, and the `EmpName` child will have `First`, `Middle` and `Last` element children.  
   
 ```  
 <row EmpID="1">  

@@ -24,19 +24,9 @@ To complete this quickstart, you need [!INCLUDE[name-sos](../includes/name-sos-s
 - [Install [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md).
 
 If you don't already have a SQL data warehouse, see [Create a SQL Data Warehouse](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/sql-data-warehouse-get-started-provision).
-* The fully qualified SQL server name. To find this, see [Connect to SQL Data Warehouse](https://docs.microsoft com/en-us/azure/sql-data-warehouse/sql-data-warehouse-connect-overview).
 
-## Get your Azure SQL server's fully qualified server name
+Remember the server name, and login credentials!
 
-Get the connection information needed to connect to the Azure SQL Data Warehouse. You will need the fully qualified server name, and login information.
-
-1. Log in to the [Azure portal](https://portal.azure.com/).
-
-2. Browse to your **SQL data warehouses**, and select your data warehouse. 
-
-4. On the **Overview** page, copy your server name.
-
-   ![connection information](./media/get-started-sql-dw/server-name.png) 
 
 ## Connect to your data warehouse
 

@@ -24,24 +24,11 @@ To complete this quickstart, you need [!INCLUDE[name-sos](../includes/name-sos-s
 
 - [Install [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md).
 
-If you don't already have an Azure SQL server, complete one of the following Azure SQL Database quickstarts:
+If you don't already have an Azure SQL server, complete one of the following Azure SQL Database quickstarts (remember the server name, and login credentials!):
 
 - [Create DB - Portal](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal)
 - [Create DB - CLI](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-cli)
 - [Create DB - PowerShell](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-powershell)
-
-
-## Get your Azure SQL server's fully qualified server name
-
-To connect to your server from [!INCLUDE[name-sos](../includes/name-sos-short.md)], you need the fully qualified server name, and login information.
-
-1. Log in to the [Azure portal](https://portal.azure.com/).
-
-2. Select **SQL Databases** from the left-hand menu, and click your database on the **SQL databases** page. 
-
-3. On the **Overview** page for your database, copy your server name.
-
-   ![connection information](./media/get-started-sql-database/server-name.png) 
 
 
 ## Connect to your Azure SQL Database server

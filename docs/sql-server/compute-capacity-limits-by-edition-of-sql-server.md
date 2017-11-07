@@ -1,7 +1,7 @@
 ---
 title: "Compute Capacity Limits by Edition of SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/02/2016"
+ms.date: "11/06/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -67,7 +67,7 @@ Systems with more than one physical processor or systems with physical processor
   
 Each edition of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] has two compute capacity limits:  
   
-- A maximum number of sockets (Same as Physical processor or socket or Processor package).  
+- A maximum number of sockets (same as Physical processor or socket or Processor package).  
   
 - A maximum number of cores as reported by the operating system.  
   

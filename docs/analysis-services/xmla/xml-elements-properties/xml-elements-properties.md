@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "XMLA, properties"
 ms.assetid: 7aa5815f-d614-497b-a9eb-f6284772bda8
 caps.latest.revision: 13
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # XML Elements - Properties

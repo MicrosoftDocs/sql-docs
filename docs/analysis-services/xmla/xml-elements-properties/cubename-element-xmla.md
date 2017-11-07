@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "CubeName element"
 ms.assetid: c5c0546e-b9b2-4813-82a9-b028628b88dc
 caps.latest.revision: 12
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # CubeName Element (XMLA)

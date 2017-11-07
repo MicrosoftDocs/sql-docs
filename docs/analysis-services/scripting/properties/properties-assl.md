@@ -20,7 +20,7 @@ ms.assetid: 9a38cdc9-a210-421a-90e9-6391876765fa
 caps.latest.revision: 21
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Properties (ASSL)

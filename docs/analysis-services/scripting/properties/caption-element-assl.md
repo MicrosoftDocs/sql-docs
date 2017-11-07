@@ -25,7 +25,7 @@ ms.assetid: ed2be851-0ddc-4fa5-8aee-b2acb2e6d25e
 caps.latest.revision: 36
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Caption Element (ASSL)

@@ -25,7 +25,7 @@ ms.assetid: 277598b5-9939-4d7f-8c75-06470c3fabdd
 caps.latest.revision: 36
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Command Element (ASSL)

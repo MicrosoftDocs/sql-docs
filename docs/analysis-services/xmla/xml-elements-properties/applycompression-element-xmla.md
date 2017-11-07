@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "ApplyCompression element"
 ms.assetid: 93e222e5-9371-4fb5-aae0-f50b964cc264
 caps.latest.revision: 12
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # ApplyCompression Element (XMLA)

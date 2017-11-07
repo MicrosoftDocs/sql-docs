@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "CellOrdinal element"
 ms.assetid: 1808c498-e3b4-4e5c-9e22-7f8662d32874
 caps.latest.revision: 11
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # CellOrdinal Element (XMLA)

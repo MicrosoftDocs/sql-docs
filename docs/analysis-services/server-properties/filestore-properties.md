@@ -27,7 +27,7 @@ ms.assetid: 580cf0aa-7425-4d48-aa8d-128f5b488fcd
 caps.latest.revision: 19
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Filestore Properties

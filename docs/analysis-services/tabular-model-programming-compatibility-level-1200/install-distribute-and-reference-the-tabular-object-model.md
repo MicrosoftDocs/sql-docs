@@ -14,7 +14,7 @@ ms.assetid: e51769f7-aac7-4835-a5ae-91aac04aa476
 caps.latest.revision: 22
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Install, distribute, and reference the Tabular Object Model

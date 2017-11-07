@@ -25,7 +25,7 @@ ms.assetid: b319ee87-7c0a-41ec-a8af-cc7089aeb6ad
 caps.latest.revision: 36
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # PushedDataSource Data Type (ASSL)

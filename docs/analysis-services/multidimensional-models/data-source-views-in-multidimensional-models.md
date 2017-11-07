@@ -23,7 +23,7 @@ ms.assetid: 4c12376f-4fc2-492b-9a00-93eec34571ed
 caps.latest.revision: 36
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Data Source Views in Multidimensional Models

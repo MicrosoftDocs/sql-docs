@@ -22,7 +22,7 @@ ms.assetid: be5b2746-0336-4b12-827e-131462bdf605
 caps.latest.revision: 39
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Grant permissions on a dimension (Analysis Services)

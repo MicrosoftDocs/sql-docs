@@ -25,7 +25,7 @@ ms.assetid: 4be79dbb-304e-4a65-9198-89fad407f775
 caps.latest.revision: 35
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # DataSize Element (ASSL)

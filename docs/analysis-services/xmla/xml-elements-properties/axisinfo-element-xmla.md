@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "AxisInfo element"
 ms.assetid: 060741db-b2ec-4174-9277-58d996440a88
 caps.latest.revision: 12
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # AxisInfo Element (XMLA)

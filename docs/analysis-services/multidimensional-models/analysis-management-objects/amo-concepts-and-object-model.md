@@ -25,7 +25,7 @@ ms.assetid: 3b0cdf8e-46d5-4dfe-8b2c-233c27e1473e
 caps.latest.revision: 12
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # AMO Concepts and Object Model

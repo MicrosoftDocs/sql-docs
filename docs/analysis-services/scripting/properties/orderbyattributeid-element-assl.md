@@ -25,7 +25,7 @@ ms.assetid: 41d7b650-ac40-4f1a-850d-2f81a19b28cb
 caps.latest.revision: 33
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # OrderByAttributeID Element (ASSL)

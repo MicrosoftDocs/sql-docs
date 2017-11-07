@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "Alter command"
 ms.assetid: 84e58385-c9ba-48fa-a867-94d35b777a56
 caps.latest.revision: 15
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Alter Element (XMLA)

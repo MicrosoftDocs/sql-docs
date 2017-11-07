@@ -23,7 +23,7 @@ ms.assetid: d8f7a367-d7bf-4b40-acb4-19c8bc8c6c20
 caps.latest.revision: 12
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Write Element (ASSL)

@@ -16,7 +16,7 @@ ms.assetid: d033e74c-f8ec-46a3-8dc7-1c1eb8574c23
 caps.latest.revision: 37
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Database Dimensions - Browse Dimension Data in Dimension Designer

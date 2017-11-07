@@ -17,7 +17,7 @@ ms.assetid: 68bf7ba3-d0cb-437f-9a3e-9edc0999af19
 caps.latest.revision: 16
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Schema Generation Wizard (Analysis Services)

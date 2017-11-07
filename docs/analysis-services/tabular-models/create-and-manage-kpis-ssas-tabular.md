@@ -17,7 +17,7 @@ ms.assetid: c96026c2-4394-4c3c-986b-4c95a4421900
 caps.latest.revision: 15
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Create and Manage KPIs (SSAS Tabular)

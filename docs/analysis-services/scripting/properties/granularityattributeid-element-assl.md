@@ -23,7 +23,7 @@ ms.assetid: 90e6c939-71bd-462a-a377-4854cb9d5266
 caps.latest.revision: 10
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # GranularityAttributeID Element (ASSL)

@@ -17,7 +17,7 @@ ms.assetid: 4046c1a3-46c7-47db-b355-52e9c2f23671
 caps.latest.revision: 14
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Column Properties (SSAS Tabular)

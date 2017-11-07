@@ -25,7 +25,7 @@ ms.assetid: f2b914cb-c817-43ff-9cb4-ac8d326136b5
 caps.latest.revision: 37
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # ManyToManyMeasureGroupDimension Data Type (ASSL)

@@ -23,7 +23,7 @@ ms.assetid: b4e302d3-c93b-4383-aa4a-37d15c129830
 caps.latest.revision: 38
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Grant permissions on a data source object (Analysis Services)

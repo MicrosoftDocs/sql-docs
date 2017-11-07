@@ -26,7 +26,7 @@ ms.assetid: ab895282-098d-468e-9460-032598961f45
 caps.latest.revision: 32
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Handling Errors and Warnings (XMLA)

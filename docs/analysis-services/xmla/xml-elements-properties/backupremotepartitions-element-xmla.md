@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "BackupRemotePartitions element"
 ms.assetid: bd68bcf9-b324-4fa8-b6e5-1f5531f9992c
 caps.latest.revision: 12
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # BackupRemotePartitions Element (XMLA)

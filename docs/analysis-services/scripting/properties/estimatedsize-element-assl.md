@@ -25,7 +25,7 @@ ms.assetid: a9c63a22-d424-4f27-a186-5372f7b0224d
 caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # EstimatedSize Element (ASSL)

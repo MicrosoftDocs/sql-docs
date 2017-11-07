@@ -25,7 +25,7 @@ ms.assetid: cdce83ab-ac22-4f4a-b8f2-1739883be8dd
 caps.latest.revision: 30
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # ReportingFirstMonth Element (ASSL)

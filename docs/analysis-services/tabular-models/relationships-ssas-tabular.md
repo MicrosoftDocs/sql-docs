@@ -15,7 +15,7 @@ ms.assetid: 21e0144a-3cfd-4bc7-87ff-bb7d1800ed2f
 caps.latest.revision: 27
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Relationships (SSAS Tabular)

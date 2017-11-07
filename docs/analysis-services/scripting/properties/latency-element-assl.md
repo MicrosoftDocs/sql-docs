@@ -25,7 +25,7 @@ ms.assetid: 93940637-b83e-4773-b80d-3394ca3a1ce5
 caps.latest.revision: 35
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Latency Element (ASSL)

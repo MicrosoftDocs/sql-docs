@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "Attach command"
 ms.assetid: a315d1f1-e220-4296-97cb-6d35606b9640
 caps.latest.revision: 12
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Attach Element

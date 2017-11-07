@@ -25,7 +25,7 @@ ms.assetid: 8b3bbf89-8309-4d00-9aea-a5918f0c7027
 caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Trimming Element (ASSL)

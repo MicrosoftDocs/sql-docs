@@ -19,7 +19,7 @@ ms.assetid: 651ee9ac-04ef-4316-87c9-a3df5ac27d22
 caps.latest.revision: 38
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # MDX Query - EXISTING Keyword

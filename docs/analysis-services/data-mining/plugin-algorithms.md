@@ -18,7 +18,7 @@ ms.assetid: fe364ddc-576e-42fc-9ced-baa399992f92
 caps.latest.revision: 25
 author: "Minewiskan"
 ms.author: "owend"
-manager: "jhubbard"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Plugin Algorithms

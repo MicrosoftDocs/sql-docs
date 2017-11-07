@@ -15,7 +15,7 @@ ms.assetid: 4b49a078-6848-4286-bc71-cf4862d29064
 caps.latest.revision: 19
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Lesson 5-2 - Defining a Fact Relationship

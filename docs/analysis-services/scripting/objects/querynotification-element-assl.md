@@ -23,7 +23,7 @@ ms.assetid: 0ee06730-81ff-4913-96e6-f39b6f181650
 caps.latest.revision: 14
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # QueryNotification Element (ASSL)

@@ -26,9 +26,9 @@ helpviewer_keywords:
   - "CellData element"
 ms.assetid: 0ebfb5e1-a674-4b9b-bd8c-c529da105f61
 caps.latest.revision: 27
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # CellData Element (XMLA)

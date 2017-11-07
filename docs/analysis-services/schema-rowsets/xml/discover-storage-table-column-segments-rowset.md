@@ -16,7 +16,7 @@ ms.assetid: 3e514715-9fe6-4e6a-accb-4149ffd7e0bf
 caps.latest.revision: 15
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS Rowset

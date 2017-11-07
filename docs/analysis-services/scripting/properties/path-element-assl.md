@@ -25,7 +25,7 @@ ms.assetid: 0edc59ac-1671-4fe1-9b7c-6c1548df5c63
 caps.latest.revision: 33
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Path Element (ASSL)

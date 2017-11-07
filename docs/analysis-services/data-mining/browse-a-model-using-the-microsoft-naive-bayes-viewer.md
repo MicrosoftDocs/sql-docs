@@ -26,7 +26,7 @@ ms.assetid: 19743095-63c1-4486-8c1d-2efc143243be
 caps.latest.revision: 39
 author: "Minewiskan"
 ms.author: "owend"
-manager: "jhubbard"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Browse a Model Using the Microsoft Naive Bayes Viewer

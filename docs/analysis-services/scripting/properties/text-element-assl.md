@@ -25,7 +25,7 @@ ms.assetid: 0edece73-236f-4661-8102-3fcc29326bf4
 caps.latest.revision: 35
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Text Element (ASSL)

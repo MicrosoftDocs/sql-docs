@@ -17,7 +17,7 @@ ms.assetid: e40a5788-7ede-4b0f-93ab-46ca33d0cace
 caps.latest.revision: 16
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # User-Defined Hierarchies - Ragged Hierarchies

@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "Parameter element"
 ms.assetid: fe31ac3d-a3e8-4f60-a81a-c43271ddbed4
 caps.latest.revision: 11
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Parameter Element (XMLA)

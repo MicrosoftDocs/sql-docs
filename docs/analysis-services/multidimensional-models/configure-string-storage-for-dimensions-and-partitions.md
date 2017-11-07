@@ -15,7 +15,7 @@ ms.assetid: 987f6cfc-da82-4b2e-96ef-a8af88339e5f
 caps.latest.revision: 21
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Configure String Storage for Dimensions and Partitions

@@ -25,7 +25,7 @@ ms.assetid: 653a5c64-f1af-4796-bb7b-b44a40e52901
 caps.latest.revision: 35
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # ReportParameter Element - ASSL

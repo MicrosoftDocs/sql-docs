@@ -25,7 +25,7 @@ ms.assetid: 56f52462-a7fd-4b51-a7fb-4311134439e9
 caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Role Element (ASSL)

@@ -13,7 +13,7 @@ ms.assetid: d2006df1-d244-4786-b272-49d8996cc88c
 caps.latest.revision: 7
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # The data connection user could not be delegated

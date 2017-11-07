@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "Cell element"
 ms.assetid: c4ea08a4-f653-4ade-be07-b91eb5b1ef32
 caps.latest.revision: 13
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Cell Element (MDDataSet) (XMLA)

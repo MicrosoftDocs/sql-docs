@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "Value element"
 ms.assetid: f87ca7f8-d9fe-4730-a706-5d50fcfe21df
 caps.latest.revision: 14
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Value Element (XMLA)

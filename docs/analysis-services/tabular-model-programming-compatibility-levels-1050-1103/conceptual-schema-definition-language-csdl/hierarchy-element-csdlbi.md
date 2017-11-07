@@ -16,7 +16,7 @@ ms.assetid: 9debb638-1b28-401b-9499-8f63943863e9
 caps.latest.revision: 13
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Hierarchy Element (CSDLBI)

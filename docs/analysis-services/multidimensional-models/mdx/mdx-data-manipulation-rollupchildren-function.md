@@ -20,7 +20,7 @@ ms.assetid: 03c624d4-f277-451d-9995-623a07ea2f86
 caps.latest.revision: 27
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # MDX Data Manipulation - RollupChildren Function

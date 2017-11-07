@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "DataSource element"
 ms.assetid: adc0713a-3927-40f3-8b87-012130908f34
 caps.latest.revision: 12
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # DataSource Element (XMLA)

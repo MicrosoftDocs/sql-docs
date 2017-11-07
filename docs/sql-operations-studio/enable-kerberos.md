@@ -55,7 +55,7 @@ sudo yum install realmd krb5-workstation
 sudo zypper install realmd krb5-client
 ```
 
-## macOS
+### macOS
 - Kerberos should be installed on your macOS. If your macOS does not have Kerberos installed, you can get it from the [download page](http://web.mit.edu/macdev/KfM/Common/Documentation/download.html).
 
 
@@ -101,9 +101,8 @@ krbtgt/DOMAIN.COMPANY.COM@ DOMAIN.COMPANY.COM.
 
 * Create a new connection profile
 
-* Choose Integrated as the authentication type
+* Choose **Windows Authentication** as the authentication type
 
-If all goes well and the preceding steps worked, you should connect successfully!
-// Add screenshot
+* Complete the connection profile, click **Connect**
 
-
+After succssfully connecting, your server appears in the Servers sidebar.

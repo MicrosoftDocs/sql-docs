@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "LName element"
 ms.assetid: 2c8c2fa9-cb2d-44ea-b253-5e6ff61f1b66
 caps.latest.revision: 14
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # LName Element (XMLA)

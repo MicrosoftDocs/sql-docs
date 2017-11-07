@@ -15,7 +15,7 @@ ms.assetid: a0524602-5239-45a7-8c44-2477302a3637
 caps.latest.revision: 13
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # KPIs

@@ -27,7 +27,7 @@ ms.assetid: 1a7e0092-f9f0-4ae5-ba27-ad1d8ebe8cb9
 caps.latest.revision: 27
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # MDDataSet Data Type (XMLA)

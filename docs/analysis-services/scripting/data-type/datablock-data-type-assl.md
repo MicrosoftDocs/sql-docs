@@ -25,7 +25,7 @@ ms.assetid: 4192b388-613a-472b-881c-f9c02215aa81
 caps.latest.revision: 33
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # DataBlock Data Type (ASSL)

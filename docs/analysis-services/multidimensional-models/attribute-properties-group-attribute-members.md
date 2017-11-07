@@ -27,7 +27,7 @@ ms.assetid: 5cf2f407-accc-4baf-b54f-7703af338325
 caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Attribute Properties - Group Attribute Members

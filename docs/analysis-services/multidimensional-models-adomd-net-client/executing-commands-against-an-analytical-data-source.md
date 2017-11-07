@@ -20,7 +20,7 @@ ms.assetid: 1a958e5f-fc18-480b-9706-fc44e3b1d534
 caps.latest.revision: 37
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Executing Commands Against an Analytical Data Source

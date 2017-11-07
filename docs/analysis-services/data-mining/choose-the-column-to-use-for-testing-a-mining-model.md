@@ -18,7 +18,7 @@ ms.assetid: c6a8f23a-da21-4f31-9521-99460d624649
 caps.latest.revision: 35
 author: "Minewiskan"
 ms.author: "owend"
-manager: "jhubbard"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Choose the Column to Use for Testing a Mining Model

@@ -25,7 +25,7 @@ ms.assetid: 03b4cfcb-ce87-452f-9e25-8745c0423f56
 caps.latest.revision: 31
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Member Element (ASSL)

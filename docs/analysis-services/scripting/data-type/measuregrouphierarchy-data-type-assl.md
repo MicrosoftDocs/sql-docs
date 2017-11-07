@@ -25,7 +25,7 @@ ms.assetid: 63c2fd97-d7ad-4715-8c49-24d684bc92d7
 caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # MeasureGroupHierarchy Data Type (ASSL)

@@ -15,7 +15,7 @@ ms.assetid: 652faac0-1cfc-438b-8119-2f4b090a2381
 caps.latest.revision: 10
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Manage Roles by using SSMS (SSAS Tabular)

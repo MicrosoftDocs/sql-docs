@@ -22,7 +22,7 @@ ms.assetid: 07e8aa47-37d4-4bbc-8bff-49e422d12897
 caps.latest.revision: 13
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # User Defined Functions and Stored Procedures

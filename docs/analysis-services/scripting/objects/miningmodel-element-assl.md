@@ -25,7 +25,7 @@ ms.assetid: a61d935f-c8f6-457d-ad0c-44f58bb286f5
 caps.latest.revision: 38
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # MiningModel Element (ASSL)

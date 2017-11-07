@@ -25,7 +25,7 @@ ms.assetid: 7b996221-936e-4f36-a3a8-676eb9869c55
 caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # FormatString Element (ASSL)

@@ -19,7 +19,7 @@ ms.assetid: b25726bc-728b-4601-ad87-9015c39dc615
 caps.latest.revision: 28
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Define Semiadditive Behavior

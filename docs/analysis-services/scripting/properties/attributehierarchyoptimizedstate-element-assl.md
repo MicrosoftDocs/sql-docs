@@ -25,7 +25,7 @@ ms.assetid: d87148c8-2011-45ae-94c3-851f48babc5f
 caps.latest.revision: 37
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # AttributeHierarchyOptimizedState Element (ASSL)

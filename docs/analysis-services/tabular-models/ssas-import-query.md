@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Import data by using a native query

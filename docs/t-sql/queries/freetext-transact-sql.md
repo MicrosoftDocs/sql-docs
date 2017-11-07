@@ -70,7 +70,7 @@ FREETEXT ( { column_name | (column_list) | * }
   
  Use of WEIGHT, FORMSOF, wildcards, NEAR and other syntax is not allowed. *freetext_string* is wordbroken, stemmed, and passed through the thesaurus.  
   
- *freetext_string* is **nvarchar**. An implicit conversion occurs when another character data type is used as input. In the following example, the `@SearchWord` variable, which is defined as `varchar(30)`, causes an implicit conversion in the `FREETEXT` predicate.  
+ *freetext_string* is **nvarchar**. An implicit conversion occurs when another character data type is used as input. Large string data types nvarchar(max) and varchar(max) cannot be used. In the following example, the `@SearchWord` variable, which is defined as `varchar(30)`, causes an implicit conversion in the `FREETEXT` predicate.  
   
 ```  
   

@@ -15,7 +15,7 @@ ms.assetid: 3b57dd3f-7820-4ba8-b233-01dc68908273
 caps.latest.revision: 19
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Configuration Setting Reference (Power Pivot for SharePoint)

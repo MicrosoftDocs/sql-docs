@@ -15,7 +15,7 @@ ms.assetid: a040fa65-d5d6-4156-9f2c-307a4d18e1a6
 caps.latest.revision: 12
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Lesson 9: Defining Perspectives and Translations

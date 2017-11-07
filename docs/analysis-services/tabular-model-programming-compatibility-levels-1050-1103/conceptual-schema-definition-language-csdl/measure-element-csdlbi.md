@@ -16,7 +16,7 @@ ms.assetid: bfbc9274-053a-421a-bb81-2095bba710be
 caps.latest.revision: 12
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Measure Element (CSDLBI)

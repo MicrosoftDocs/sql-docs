@@ -13,7 +13,7 @@ ms.assetid: 73a13f05-3450-411f-95f9-4b6167cc7607
 caps.latest.revision: 27
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # CheckList: Use PowerShell to Verify Power Pivot for SharePoint

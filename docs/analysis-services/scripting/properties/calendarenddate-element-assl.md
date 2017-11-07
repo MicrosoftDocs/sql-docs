@@ -25,7 +25,7 @@ ms.assetid: abedd074-9a28-4169-85b5-49ea57f10fb6
 caps.latest.revision: 32
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # CalendarEndDate Element (ASSL)

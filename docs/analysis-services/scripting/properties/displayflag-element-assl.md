@@ -25,7 +25,7 @@ ms.assetid: a6750477-0763-46da-9add-1f4448146a6b
 caps.latest.revision: 33
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # DisplayFlag Element (ASSL)

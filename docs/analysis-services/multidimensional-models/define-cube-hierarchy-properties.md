@@ -18,7 +18,7 @@ ms.assetid: 819d0a4e-7815-4332-a605-b07ca2ade6ac
 caps.latest.revision: 18
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Define Cube Hierarchy Properties

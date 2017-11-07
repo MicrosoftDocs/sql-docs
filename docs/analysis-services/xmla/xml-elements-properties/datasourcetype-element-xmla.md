@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "DataSourceType element"
 ms.assetid: f5a348b1-911b-4139-832e-4bcb6d80a728
 caps.latest.revision: 13
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # DataSourceType Element (XMLA)

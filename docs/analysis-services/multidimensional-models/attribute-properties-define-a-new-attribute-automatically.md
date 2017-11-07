@@ -18,7 +18,7 @@ ms.assetid: 208a050a-5e2f-470c-b645-8d835e123db7
 caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Attribute Properties - Define a New Attribute Automatically

@@ -25,7 +25,7 @@ ms.assetid: cda26126-8af2-4519-8237-f4a57976a284
 caps.latest.revision: 35
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # DataSourceView Element (ASSL)

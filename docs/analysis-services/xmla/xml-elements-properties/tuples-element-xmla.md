@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "Tuples element"
 ms.assetid: 5494bbaa-c1aa-43fa-b3e0-83befb2bccdd
 caps.latest.revision: 11
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Tuples Element (XMLA)

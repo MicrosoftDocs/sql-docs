@@ -16,7 +16,7 @@ ms.assetid: 16d3347b-7e43-4a6b-9956-fdd6ede092e6
 caps.latest.revision: 10
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Table Properties (SSAS Tabular)

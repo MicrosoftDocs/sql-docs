@@ -19,7 +19,7 @@ ms.assetid: b8ef549c-5458-458a-bf1a-fd743a1417fd
 caps.latest.revision: 29
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Parent-Child Dimension Attributes - Unary Operators

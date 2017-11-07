@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "results element"
 ms.assetid: 3249a17a-7bfa-4753-b605-8f611ba7ae2b
 caps.latest.revision: 11
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # results Element (XMLA)

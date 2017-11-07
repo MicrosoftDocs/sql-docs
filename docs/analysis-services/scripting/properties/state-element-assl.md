@@ -25,7 +25,7 @@ ms.assetid: b6ee1144-89f7-4ced-bc87-c2e33ca25f73
 caps.latest.revision: 33
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # State Element (ASSL)

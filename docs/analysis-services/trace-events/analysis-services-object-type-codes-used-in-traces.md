@@ -13,7 +13,7 @@ ms.assetid: e4119db1-4a41-4335-9b33-f1ea95564300
 caps.latest.revision: 5
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Analysis Services object type codes used in traces

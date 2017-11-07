@@ -26,9 +26,9 @@ helpviewer_keywords:
   - "Properties element"
 ms.assetid: 0b5468e5-bf23-4d22-862f-72e27a9fff2f
 caps.latest.revision: 30
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Properties Element (XMLA)

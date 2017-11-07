@@ -15,7 +15,7 @@ ms.assetid: 35853451-6768-4a02-8b8f-81a8ae37a333
 caps.latest.revision: 21
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Session Events Data Columns

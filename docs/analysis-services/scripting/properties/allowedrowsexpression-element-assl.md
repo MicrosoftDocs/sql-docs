@@ -16,7 +16,7 @@ ms.assetid: ec24b11d-d11e-4369-a619-7e41a3c46159
 caps.latest.revision: 6
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # AllowedRowsExpression Element (ASSL)

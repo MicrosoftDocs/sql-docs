@@ -14,9 +14,9 @@ applies_to:
   - "SQL Server 2016 Preview"
 ms.assetid: 2b851ad5-cc46-4a2e-8873-d8556faca809
 caps.latest.revision: 6
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Role Element  (XMLA)

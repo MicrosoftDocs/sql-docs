@@ -14,7 +14,7 @@ ms.assetid: 0e9931ff-439e-4e1a-9ef2-5d3971187eb9
 caps.latest.revision: 19
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Creating Tabular Models

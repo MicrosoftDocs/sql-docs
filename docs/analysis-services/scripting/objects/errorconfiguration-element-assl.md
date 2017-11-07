@@ -25,7 +25,7 @@ ms.assetid: e8363ec2-fbbf-48f6-a55d-01793afa759c
 caps.latest.revision: 35
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # ErrorConfiguration Element (ASSL)

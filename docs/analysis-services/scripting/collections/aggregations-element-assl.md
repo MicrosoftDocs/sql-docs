@@ -25,7 +25,7 @@ ms.assetid: 79b7de7a-53b2-4202-bc0f-de1daaf1b179
 caps.latest.revision: 35
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Aggregations Element (ASSL)

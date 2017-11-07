@@ -19,7 +19,7 @@ ms.assetid: 2c922c35-fbcb-45b2-96b1-c7a846d8b419
 caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Explore Data in a Data Source View (Analysis Services)

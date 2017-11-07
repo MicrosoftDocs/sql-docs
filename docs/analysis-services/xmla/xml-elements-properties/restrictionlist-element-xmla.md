@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "RestrictionList element"
 ms.assetid: 2297c005-381e-49a4-a207-826f7f9ea93a
 caps.latest.revision: 11
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # RestrictionList Element (XMLA)

@@ -19,7 +19,7 @@ ms.assetid: 88045e05-ce47-4e28-999b-7f9c74af9faf
 caps.latest.revision: 33
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # XML for Analysis  (XMLA) Reference

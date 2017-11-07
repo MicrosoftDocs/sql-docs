@@ -29,7 +29,7 @@ ms.assetid: cd10ad00-468c-4d49-9f8d-873494d04b4f
 caps.latest.revision: 43
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Partitions (Analysis Services - Multidimensional Data)

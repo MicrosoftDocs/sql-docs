@@ -23,7 +23,7 @@ ms.assetid: 0dc5b64d-061d-409f-95c0-4c63f87f5ee4
 caps.latest.revision: 11
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # MaxActiveConnections Element (ASSL)

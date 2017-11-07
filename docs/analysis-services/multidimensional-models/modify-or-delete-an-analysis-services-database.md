@@ -22,7 +22,7 @@ ms.assetid: e48e3988-c091-4379-aabc-4da62f709a7e
 caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Modify or Delete an Analysis Services Database

@@ -25,7 +25,7 @@ ms.assetid: 898deefb-822d-458b-96d8-880da287b687
 caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # DeniedSet Element (ASSL)

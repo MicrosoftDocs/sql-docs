@@ -15,7 +15,7 @@ ms.assetid: 9ba8299e-b990-4f77-a3c0-eee64e1f4281
 caps.latest.revision: 7
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Power View for Multidimensional Models

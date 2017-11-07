@@ -22,7 +22,7 @@ ms.assetid: b57cc2fe-52dc-4fa9-8554-5a866e25c6d7
 caps.latest.revision: 11
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Monitor Analysis Services with SQL Server Extended Events

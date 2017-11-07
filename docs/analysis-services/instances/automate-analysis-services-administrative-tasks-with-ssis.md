@@ -18,7 +18,7 @@ ms.assetid: e960a9a2-80b4-45da-9369-bc560ecdccac
 caps.latest.revision: 29
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Automate Analysis Services Administrative Tasks with SSIS

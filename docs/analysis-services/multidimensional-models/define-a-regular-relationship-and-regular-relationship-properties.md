@@ -18,7 +18,7 @@ ms.assetid: 840280d8-20c3-46c0-99ea-62479469c36b
 caps.latest.revision: 9
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Define a Regular Relationship and Regular Relationship Properties

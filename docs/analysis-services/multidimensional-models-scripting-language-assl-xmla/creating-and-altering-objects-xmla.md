@@ -24,7 +24,7 @@ ms.assetid: a2080867-e130-440c-92eb-f768869f34a8
 caps.latest.revision: 17
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Creating and Altering Objects (XMLA)

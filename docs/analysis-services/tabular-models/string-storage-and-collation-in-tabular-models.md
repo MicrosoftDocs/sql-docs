@@ -15,7 +15,7 @@ ms.assetid: 8516f0ad-32ee-4688-a304-e705143642ca
 caps.latest.revision: 12
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # String Storage and Collation in Tabular Models

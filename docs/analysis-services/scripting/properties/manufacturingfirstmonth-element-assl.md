@@ -25,7 +25,7 @@ ms.assetid: 3b2fb440-662b-4d88-a133-1e098b9c8169
 caps.latest.revision: 28
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # ManufacturingFirstMonth Element (ASSL)

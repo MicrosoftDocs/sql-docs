@@ -15,7 +15,7 @@ ms.assetid: aec8aa98-b77d-4f8f-9684-2618b1d8e970
 caps.latest.revision: 5
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Calculation Context

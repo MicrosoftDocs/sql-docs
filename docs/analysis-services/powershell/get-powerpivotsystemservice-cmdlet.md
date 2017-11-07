@@ -13,7 +13,7 @@ ms.assetid: 33231250-3880-4d75-936b-d70662a01855
 caps.latest.revision: 9
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Get-PowerPivotSystemService cmdlet

@@ -25,7 +25,7 @@ ms.assetid: 80c7530d-ef73-44c3-88b5-c11c0f290946
 caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # LogFileName Element (ASSL)

@@ -25,7 +25,7 @@ ms.assetid: 55184c02-03e7-4d6c-b87a-d4d34bc11d0e
 caps.latest.revision: 36
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # DisplayFolder Element (ASSL)

@@ -21,7 +21,7 @@ ms.assetid: ddc7b13c-3135-4419-8166-eddd459167da
 caps.latest.revision: 31
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # DISCOVER_ENUMERATORS Rowset

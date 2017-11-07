@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "CrossProduct element"
 ms.assetid: a9a1584e-d2dd-45db-a918-d694c20d8189
 caps.latest.revision: 12
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # CrossProduct Element (XMLA)

@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "Keys element"
 ms.assetid: 67291791-0032-412a-9a4f-74f68533e83d
 caps.latest.revision: 12
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Keys Element (XMLA)

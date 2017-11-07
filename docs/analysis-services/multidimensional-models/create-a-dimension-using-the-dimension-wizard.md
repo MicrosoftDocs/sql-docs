@@ -17,7 +17,7 @@ ms.assetid: d84f66ae-7551-49bf-99d0-88368ca2dd0e
 caps.latest.revision: 17
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # Create a Dimension Using the Dimension Wizard

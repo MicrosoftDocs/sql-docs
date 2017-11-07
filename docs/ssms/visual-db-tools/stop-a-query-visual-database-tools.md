@@ -18,7 +18,6 @@ caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Stop a Query (Visual Database Tools)
 If you see that the query is taking too long or is not returning the results you expect, you can stop the query if it has not already finished.  

@@ -23,7 +23,6 @@ caps.latest.revision: 36
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # srv_getbindtoken (Extended Stored Procedure API)
     

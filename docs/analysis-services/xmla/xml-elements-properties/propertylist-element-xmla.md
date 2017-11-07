@@ -25,10 +25,9 @@ helpviewer_keywords:
   - "PropertyList element"
 ms.assetid: 58e63bd9-8aac-438d-adba-1868b4d123f5
 caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+author: "jeannt"
+ms.author: "jeannt"
+manager: "erikre"
 ---
 # PropertyList Element (XMLA)
   Contains a collection of XML for Analysis (XMLA) properties used by the [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) and [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) methods.  

@@ -13,7 +13,6 @@ caps.latest.revision: 1
 author: "haoqian"
 ms.author: "haoqian"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Walkthrough: Set up Integration Services Scale Out
 Set up [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] Scale Out by completing the following tasks. 

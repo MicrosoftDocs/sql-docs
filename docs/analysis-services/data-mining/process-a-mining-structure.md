@@ -16,7 +16,7 @@ ms.assetid: 4162f33e-c23f-4293-8905-271781e45fa4
 caps.latest.revision: 31
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # Process a Mining Structure

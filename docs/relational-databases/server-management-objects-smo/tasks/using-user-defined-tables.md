@@ -16,7 +16,6 @@ caps.latest.revision: 23
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Using User-Defined Tables
   User-defined tables represent tabular information. They are used as parameters when you pass tabular data into stored procedures or user-defined functions. User-defined tables cannot be used to represent columns in a database table.  

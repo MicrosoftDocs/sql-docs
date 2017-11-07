@@ -25,8 +25,7 @@ ms.assetid: efe6f717-8288-4ca2-85ed-9b63d27c02d8
 caps.latest.revision: 38
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # DataType Element (ASSL)
   Defines the data type of the associated element.  

@@ -19,7 +19,6 @@ caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Function Conformance
 The following table indicates the conformance level of each ODBC function, where this is well defined.  

@@ -20,10 +20,9 @@ helpviewer_keywords:
   - "sys.server_audit_specifications catalog view"
 ms.assetid: fa496c6c-2a54-4fda-a238-db490c6b3afd
 caps.latest.revision: 16
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # sys.server_audit_specifications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

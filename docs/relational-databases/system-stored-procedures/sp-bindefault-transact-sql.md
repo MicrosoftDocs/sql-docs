@@ -18,10 +18,9 @@ helpviewer_keywords:
   - "sp_bindefault"
 ms.assetid: 3da70c10-68d0-4c16-94a5-9e84c4a520f6
 caps.latest.revision: 42
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # sp_bindefault (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

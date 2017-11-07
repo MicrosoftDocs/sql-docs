@@ -13,7 +13,6 @@ caps.latest.revision: 43
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Active"
 ---
 # SQL Server Native Client
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]

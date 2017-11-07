@@ -17,7 +17,6 @@ caps.latest.revision: 4
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # New GUI Features in SSMA for Access to SQL
 This chapter describes new features of SSMA User Interface  

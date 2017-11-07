@@ -19,7 +19,6 @@ caps.latest.revision: 22
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
-ms.workload: "Inactive"
 ---
 # Custom Report Item Implementation Requirements
   This topic will discuss the prerequisites for developing and deploying custom report items.  

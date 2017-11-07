@@ -22,7 +22,6 @@ caps.latest.revision: 38
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Mirrored Backup Media Sets (SQL Server)
     

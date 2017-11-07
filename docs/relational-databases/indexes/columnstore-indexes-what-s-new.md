@@ -15,7 +15,6 @@ caps.latest.revision: 28
 author: "barbkess"
 ms.author: "barbkess"
 manager: "jhubbard"
-ms.workload: "On Demand"
 ---
 # Columnstore indexes - what&#39;s new
 [!INCLUDE[tsql-appliesto-ss2012-all_md](../../includes/tsql-appliesto-ss2012-all-md.md)]

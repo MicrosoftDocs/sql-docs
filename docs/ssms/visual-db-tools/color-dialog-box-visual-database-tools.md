@@ -16,7 +16,6 @@ caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Color Dialog Box (Visual Database Tools)
 The **Color Dialog Box** returns the RGB value of a color selected by the user. The user can select from a set of basic colors determined by the display driver or from a set of custom colors. Select from the Basic colors, or create custom colors. Define colors by clicking in the color matrix or by typing in the **Hue**, **Sat**, **Lum**, **Red**, **Green**, and **Blue** boxes.  

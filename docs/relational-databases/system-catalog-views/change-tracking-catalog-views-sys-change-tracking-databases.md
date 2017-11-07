@@ -21,10 +21,9 @@ helpviewer_keywords:
   - "change tracking [SQL Server], sys.change_tracking_databases"
 ms.assetid: bb233baa-2991-4904-a0eb-3772b81121a4
 caps.latest.revision: 17
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # Change Tracking Catalog Views - sys.change_tracking_databases
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

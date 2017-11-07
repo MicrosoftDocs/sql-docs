@@ -14,7 +14,6 @@ caps.latest.revision: 28
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 
 # Configure distributed availability group  

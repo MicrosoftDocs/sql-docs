@@ -21,7 +21,6 @@ caps.latest.revision: 35
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # SetStartMode Method (SqlService Class)
   Modifies the start mode of the service instance.  

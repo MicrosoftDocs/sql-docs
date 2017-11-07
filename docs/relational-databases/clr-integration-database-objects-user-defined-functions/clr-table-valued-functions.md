@@ -22,7 +22,6 @@ caps.latest.revision: 88
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "On Demand"
 ---
 # CLR Table-Valued Functions
   A table-valued function is a user-defined function that returns a table.  

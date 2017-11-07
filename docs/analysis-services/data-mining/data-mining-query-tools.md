@@ -22,7 +22,7 @@ ms.assetid: a8952427-fd8c-4300-8f62-25f57ac1be0c
 caps.latest.revision: 51
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # Data Mining Query Tools

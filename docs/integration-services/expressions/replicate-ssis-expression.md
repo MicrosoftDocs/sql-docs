@@ -16,7 +16,6 @@ caps.latest.revision: 34
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # REPLICATE (SSIS Expression)
   Returns a character expression that is replicated a number of times. The *times* argument must evaluate to an integer.  

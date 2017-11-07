@@ -16,7 +16,6 @@ caps.latest.revision: 7
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Device Driver Control Error
   This rule checks the system event log for EventId 11. This could be caused by a corrupt device driver, a hardware problem, faulty cabling, or connectivity issues.  

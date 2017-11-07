@@ -22,7 +22,6 @@ caps.latest.revision: 41
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "On Demand"
 ---
 # Calling a Stored Procedure
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]

@@ -23,7 +23,6 @@ caps.latest.revision: 5
 author: "pmasl"
 ms.author: "pelopes"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # sys.dm_exec_valid_use_hints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

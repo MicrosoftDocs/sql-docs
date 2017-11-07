@@ -15,8 +15,7 @@ ms.assetid: 662daf08-a514-44a7-8675-44644aa454a2
 caps.latest.revision: 24
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "On Demand"
+manager: "erikre"
 ---
 # Workspace Database (SSAS Tabular)
   The tabular model workspace database, used during model authoring, is created when you create a new tabular model project in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].

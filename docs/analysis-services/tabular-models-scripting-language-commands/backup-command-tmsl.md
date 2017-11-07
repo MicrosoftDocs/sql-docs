@@ -14,8 +14,7 @@ ms.assetid: fae1b267-0750-4dc5-9bf0-80ac4d8487a3
 caps.latest.revision: 9
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # Backup command (TMSL)
 

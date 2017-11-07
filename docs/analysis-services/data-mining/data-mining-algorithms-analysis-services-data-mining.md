@@ -25,7 +25,7 @@ ms.assetid: ed1fc83b-b98c-437e-bf53-4ff001b92d64
 caps.latest.revision: 74
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "jhubbard"
 ms.workload: "On Demand"
 ---
 # Data Mining Algorithms (Analysis Services - Data Mining)

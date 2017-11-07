@@ -15,7 +15,6 @@ caps.latest.revision: 12
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
-ms.workload: "Inactive"
 ---
 # Add Data from External Data Sources (SSRS)
   To retrieve data from an external data source, you use a data connection. Data connection information is usually provided by the owner of the external data source, who is responsible for granting permissions and specifying which types of credentials to use. Data connection information is saved as a report data source. The data source type specifies which data extension to use to retrieve the data.  

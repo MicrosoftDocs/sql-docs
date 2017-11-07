@@ -20,10 +20,9 @@ helpviewer_keywords:
   - "sysreplicationalerts system table"
 ms.assetid: 6ed15828-8cca-4cf0-b2ff-1ecd0d8db11a
 caps.latest.revision: 27
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # sysreplicationalerts (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

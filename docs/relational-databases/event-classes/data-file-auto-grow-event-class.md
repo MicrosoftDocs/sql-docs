@@ -16,7 +16,6 @@ caps.latest.revision: 29
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Data File Auto Grow Event Class
   The **Data File Auto Grow** event class indicates that the data file grew automatically. This event is not triggered if the data file is grown explicitly by using the ALTER DATABASE statement.  

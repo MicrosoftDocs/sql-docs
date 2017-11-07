@@ -19,7 +19,6 @@ caps.latest.revision: 5
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Initializing Test Cases (SybaseToSQL)
 At this step you specify the initial information for the new test case.  

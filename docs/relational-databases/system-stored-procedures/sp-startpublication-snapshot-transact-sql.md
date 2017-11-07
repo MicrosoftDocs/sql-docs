@@ -18,10 +18,9 @@ helpviewer_keywords:
   - "sp_startpublication_snapshot"
 ms.assetid: 2cf568ee-0679-4d19-a394-27210bff61e5
 caps.latest.revision: 13
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # sp_startpublication_snapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

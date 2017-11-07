@@ -16,7 +16,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # SET UNIQUE Command
 Specifies whether records with duplicate index key values are maintained in an index file.  

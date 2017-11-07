@@ -19,7 +19,6 @@ caps.latest.revision: 11
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "erikre"
-ms.workload: "On Demand"
 ---
 # Add, Change, or Delete Default Values for a Report Parameter
   After you create a report parameter, you can provide a list of default values. If all parameters have a valid default value, the report runs automatically when you first view or preview it.  

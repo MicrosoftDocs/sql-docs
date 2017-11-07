@@ -15,7 +15,6 @@ caps.latest.revision: 6
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
-ms.workload: "Inactive"
 ---
 # RSWindowsExtendedProtectionScenario Property
   Returns a string value that indicates the extended protection scenario the report server is configured to allow.  

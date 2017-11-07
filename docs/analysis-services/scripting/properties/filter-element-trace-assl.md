@@ -25,8 +25,7 @@ ms.assetid: 411a598e-3bb1-487b-9f37-cce4b57a67b4
 caps.latest.revision: 32
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # Filter Element (Trace) (ASSL)
   Contains an XML document fragment that describes the [Trace](../../../analysis-services/scripting/objects/trace-element-assl.md) filter.  

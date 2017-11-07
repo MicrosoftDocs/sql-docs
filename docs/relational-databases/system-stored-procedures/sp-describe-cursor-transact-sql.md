@@ -18,10 +18,9 @@ helpviewer_keywords:
   - "sp_describe_cursor"
 ms.assetid: 0c836c99-1147-441e-998c-f0a30cd05275
 caps.latest.revision: 22
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # sp_describe_cursor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

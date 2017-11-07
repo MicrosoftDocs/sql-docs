@@ -25,8 +25,7 @@ ms.assetid: dbe57903-75c0-4060-a2b3-eab241d7469f
 caps.latest.revision: 27
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # Enabled Element (ASSL)
   Indicates whether the parent element is enabled.  

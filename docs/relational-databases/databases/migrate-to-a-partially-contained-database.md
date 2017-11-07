@@ -16,7 +16,6 @@ caps.latest.revision: 17
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Migrate to a Partially Contained Database
   This topic discusses how to prepare to change to the partially contained database model and then provides the migration steps.  

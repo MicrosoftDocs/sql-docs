@@ -16,7 +16,6 @@ caps.latest.revision: 7
 author: "smartysanthosh"
 ms.author: "nagavo"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Change a Version Name (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], change the version name to customize it for your organization.  

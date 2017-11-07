@@ -21,10 +21,9 @@ helpviewer_keywords:
   - "sys.sequences catalog view"
 ms.assetid: 0e1b0e32-1cce-40f7-83c8-860ec660138a
 caps.latest.revision: 21
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # sys.sequences (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

@@ -17,7 +17,6 @@ caps.latest.revision: 24
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Data Type Support for OLE DB Date and Time Improvements
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]

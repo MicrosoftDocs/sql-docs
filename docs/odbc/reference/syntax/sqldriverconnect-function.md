@@ -23,7 +23,6 @@ caps.latest.revision: 50
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
-ms.workload: "On Demand"
 ---
 # SQLDriverConnect Function
 **Conformance**  

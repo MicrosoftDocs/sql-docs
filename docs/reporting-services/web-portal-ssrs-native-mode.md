@@ -15,7 +15,6 @@ caps.latest.revision: 15
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
-ms.workload: "Active"
 ---
 # Web portal (SSRS Native Mode)
 

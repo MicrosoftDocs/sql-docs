@@ -25,7 +25,7 @@ ms.assetid: b22f0d52-ed3a-4239-840e-0eaf172d7276
 caps.latest.revision: 40
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # ReportAction Data Type (ASSL)

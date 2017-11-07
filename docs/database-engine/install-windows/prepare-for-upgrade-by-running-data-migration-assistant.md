@@ -15,7 +15,6 @@ caps.latest.revision: 7
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
-ms.workload: "On Demand"
 ---
 # Prepare for upgrade by running Data Migration Assistant
   Prepare to upgrade your OLTP databases and to adopt new features in [!INCLUDE[ssnover](../../includes/ssnoversion-md.md)] by downloading and running Microsoft Data Migration Assistant.  

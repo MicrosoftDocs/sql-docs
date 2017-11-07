@@ -29,7 +29,6 @@ caps.latest.revision: 93
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "On Demand"
 ---
 # Backup Devices (SQL Server)
   During a backup operation on a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database, the backed up data (the *backup*) is written to a physical backup device. This physical backup device is initialized when the first backup in a media set is written to it. Backups on a set of one or more backup devices compose a single media set.  

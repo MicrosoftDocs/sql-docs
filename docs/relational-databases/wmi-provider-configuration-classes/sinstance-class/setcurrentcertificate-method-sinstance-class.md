@@ -21,7 +21,6 @@ caps.latest.revision: 14
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # SetCurrentCertificate Method (SInstance Class)
   Sets the current security certificate.  

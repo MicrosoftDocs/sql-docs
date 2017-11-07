@@ -19,7 +19,6 @@ caps.latest.revision: 37
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
-ms.workload: "On Demand"
 ---
 # Replication, change tracking, & change data capture - Always On availability groups
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

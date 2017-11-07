@@ -14,7 +14,6 @@ caps.latest.revision: 73
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
-ms.workload: "On Demand"
 ---
 # Overview of the PHP SQL Driver
 

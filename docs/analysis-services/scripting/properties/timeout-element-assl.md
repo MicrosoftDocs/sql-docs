@@ -25,8 +25,7 @@ ms.assetid: 7694872b-bd05-459f-b5dc-3cfbd92a9664
 caps.latest.revision: 35
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # Timeout Element (ASSL)
   Specifies the time, in seconds, after which an attempt to retrieve data reports a timeout.  

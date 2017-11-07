@@ -17,7 +17,6 @@ caps.latest.revision: 18
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # User Interface Reference (MySQLToSQL)
 This section includes Help topics for SQL Server Migration Assistant (SSMA) for MySQL.  

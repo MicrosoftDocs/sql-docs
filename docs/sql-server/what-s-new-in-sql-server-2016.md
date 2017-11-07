@@ -22,7 +22,6 @@ caps.latest.revision: 224
 author: "craigg-msft"
 ms.author: "craigg"
 manager: "jhubbard"
-ms.workload: "Active"
 ---
 # What's new in SQL Server 2016
  With SQL Server 2016, you can build intelligent, mission-critical applications using a scalable, hybrid database platform that has everything built in, from in-memory performance and advanced security to in-database analytics. The SQL Server 2016 release adds new security features, querying capabilities, Hadoop and cloud integration, R analytics and more, along with numerous improvements and enhancements. 

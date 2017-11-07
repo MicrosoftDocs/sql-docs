@@ -16,7 +16,6 @@ caps.latest.revision: 12
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Query Notifications Event Category
   The **Query Notifications** event category contains event classes that report information that developers and administrators can use to monitor and troubleshoot query notifications.  

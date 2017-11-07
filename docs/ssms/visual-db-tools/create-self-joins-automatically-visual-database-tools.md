@@ -18,7 +18,6 @@ caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Create Self-Joins Automatically (Visual Database Tools)
 If a table has a reflexive relationship in the database, you can join it to itself automatically.  

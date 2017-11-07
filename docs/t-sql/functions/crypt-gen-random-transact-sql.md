@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "CRYPT_GEN_RANDOM function"
 ms.assetid: b74bd9d4-758e-4b94-89a0-76dcda6d8c42
 caps.latest.revision: 11
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # CRYPT_GEN_RANDOM (Transact-SQL)

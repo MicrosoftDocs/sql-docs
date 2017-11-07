@@ -15,7 +15,7 @@ ms.assetid: c1f40fa4-de6d-41ee-8124-14b4d65988f5
 caps.latest.revision: 6
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # Add MSOLAP.5 as a Trusted Data Provider in Excel Services

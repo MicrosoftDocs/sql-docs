@@ -15,10 +15,9 @@ helpviewer_keywords:
   - "233 (Database Engine error)"
 ms.assetid: 201665dc-7ac8-4c19-90d3-33354c5caa72
 caps.latest.revision: 13
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # MSSQLSERVER_233
   

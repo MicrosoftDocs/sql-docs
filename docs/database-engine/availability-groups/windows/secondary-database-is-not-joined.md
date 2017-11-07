@@ -18,7 +18,6 @@ caps.latest.revision: 14
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Secondary database is not joined
     

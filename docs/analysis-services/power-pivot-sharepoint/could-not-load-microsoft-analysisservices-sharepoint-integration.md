@@ -14,7 +14,7 @@ ms.assetid: 6e350b67-5e18-4b90-8fb7-a0109cbb27b7
 caps.latest.revision: 7
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # Could not load Microsoft.AnalysisServices.SharePoint.Integration

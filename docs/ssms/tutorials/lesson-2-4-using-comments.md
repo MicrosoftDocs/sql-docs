@@ -16,7 +16,6 @@ caps.latest.revision: 28
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "On Demand"
 ---
 # Lesson 2-4 - Using Comments
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] allows you to easily comment out a portion of your script.  

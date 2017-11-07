@@ -25,7 +25,6 @@ caps.latest.revision: 41
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Data Type Mapping in Rowsets and Parameters
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]

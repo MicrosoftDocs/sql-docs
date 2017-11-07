@@ -21,7 +21,7 @@ ms.assetid: 87494741-4a2e-4fed-8061-418fd1e111c3
 caps.latest.revision: 53
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # Rename an Analysis Services Instance

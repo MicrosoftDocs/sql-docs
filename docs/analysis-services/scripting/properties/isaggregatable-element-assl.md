@@ -25,8 +25,7 @@ ms.assetid: ed7dbe89-259c-4c5c-9660-b965c3af1573
 caps.latest.revision: 32
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # IsAggregatable Element (ASSL)
   Specifies whether the values of the [DimensionAttribute](../../../analysis-services/scripting/data-type/dimensionattribute-data-type-assl.md) element can be aggregated.  

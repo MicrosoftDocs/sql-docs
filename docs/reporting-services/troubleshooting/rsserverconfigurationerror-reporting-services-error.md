@@ -17,7 +17,6 @@ caps.latest.revision: 12
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
-ms.workload: "On Demand"
 ---
 # rsServerConfigurationError - Reporting Services Error
     

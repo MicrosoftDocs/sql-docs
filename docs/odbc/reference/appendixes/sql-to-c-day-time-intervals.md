@@ -19,7 +19,6 @@ caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # SQL to C: Day-Time Intervals
 The identifiers for the day-time interval ODBC SQL data types are:  

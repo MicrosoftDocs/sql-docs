@@ -16,7 +16,6 @@ caps.latest.revision: 8
 author: "smartysanthosh"
 ms.author: "nagavo"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Master Data Services Developer Documentation
   Find information about how to write code to customize the way you and your users interact with [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]. Learn how to:  

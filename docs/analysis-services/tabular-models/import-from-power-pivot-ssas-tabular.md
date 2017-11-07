@@ -17,8 +17,7 @@ ms.assetid: ac1a6a79-bda3-4122-a717-8b1e2f77da02
 caps.latest.revision: 25
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # Import from Power Pivot (SSAS Tabular)
   This topic describes how to create a new tabular model project by importing the metadata and data from a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbook by using the Import from [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] project template in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  

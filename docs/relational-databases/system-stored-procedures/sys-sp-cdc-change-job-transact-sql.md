@@ -20,10 +20,9 @@ helpviewer_keywords:
   - "sp_cdc_change_job"
 ms.assetid: ea918888-0fc5-4cc1-b301-26b2a9fbb20d
 caps.latest.revision: 23
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # sys.sp_cdc_change_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

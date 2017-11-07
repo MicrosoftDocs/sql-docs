@@ -25,10 +25,9 @@ helpviewer_keywords:
   - "ExecuteResponse element"
 ms.assetid: 6edb1b82-da4c-4cd9-9385-bea04032f0eb
 caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+author: "jeannt"
+ms.author: "jeannt"
+manager: "erikre"
 ---
 # XML Elements - Objects - ExecuteResponse
   Contains the information returned by an instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in response to an [Execute](../../analysis-services/xmla/xml-elements-methods-execute.md) method call.  

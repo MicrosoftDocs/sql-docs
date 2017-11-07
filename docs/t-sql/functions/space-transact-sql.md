@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "SPACE function"
 ms.assetid: b4fac3b8-2d47-4c11-a6a6-009e5a538f40
 caps.latest.revision: 38
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "On Demand"
 ---
 # SPACE (Transact-SQL)

@@ -17,7 +17,6 @@ caps.latest.revision: 10
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Introduction to DiffGrams in SQLXML 4.0
   This topic provides a brief introduction to DiffGrams.  

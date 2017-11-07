@@ -17,7 +17,6 @@ caps.latest.revision: 16
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Sending Result Sets to the Server (Extended Stored Procedure API)
     

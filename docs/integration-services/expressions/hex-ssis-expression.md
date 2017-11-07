@@ -17,7 +17,6 @@ caps.latest.revision: 36
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # HEX (SSIS Expression)
   Returns a string representing the hexadecimal value of an integer.  

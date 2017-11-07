@@ -18,7 +18,7 @@ ms.assetid: b1f037d1-ce47-4e47-a1c2-5ec9e781cff6
 caps.latest.revision: 16
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # Database Dimensions - Create a Currency type Dimension

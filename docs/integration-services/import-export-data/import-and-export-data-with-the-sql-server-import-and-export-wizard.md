@@ -27,7 +27,6 @@ caps.latest.revision: 160
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
-ms.workload: "Active"
 ---
 # Import and Export Data with the SQL Server Import and Export Wizard
 

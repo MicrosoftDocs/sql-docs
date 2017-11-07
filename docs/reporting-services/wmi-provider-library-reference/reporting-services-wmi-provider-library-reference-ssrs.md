@@ -21,7 +21,6 @@ caps.latest.revision: 42
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
-ms.workload: "Inactive"
 ---
 # Reporting Services WMI Provider Library Reference (SSRS)
   The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Windows Management Instrumentation (WMI) provider supports WMI operations that enable you to write scripts and code to modify settings of the report server and Report Manager.  

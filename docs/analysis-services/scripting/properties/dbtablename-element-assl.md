@@ -25,8 +25,7 @@ ms.assetid: 842cae85-ab9c-4c75-ab44-51a4d9b1b943
 caps.latest.revision: 35
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # DbTableName Element (ASSL)
   Contains the name of the table to which the parent element is bound.  

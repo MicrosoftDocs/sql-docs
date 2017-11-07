@@ -14,7 +14,6 @@ caps.latest.revision: 2
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Asynchronous Execution
 ODBC supports asynchronous operations for both statement and connection operations. There are two ways to determine when an asynchronous operation is complete:  

@@ -16,7 +16,6 @@ caps.latest.revision: 25
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "On Demand"
 ---
 # Work with Directories and Paths in FileTables
   Describes the directory structure in which the files are stored in FileTables.  

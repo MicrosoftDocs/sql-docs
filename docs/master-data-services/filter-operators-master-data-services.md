@@ -14,7 +14,6 @@ caps.latest.revision: 11
 author: "smartysanthosh"
 ms.author: "nagavo"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Filter Operators (Master Data Services)
   When filtering a list of members, the following operators are available.  

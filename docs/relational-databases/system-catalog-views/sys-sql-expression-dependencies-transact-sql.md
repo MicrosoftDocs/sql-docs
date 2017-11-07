@@ -20,10 +20,9 @@ helpviewer_keywords:
   - "sys.sql_expression_dependencies catalog view"
 ms.assetid: 78a218e4-bf99-4a6a-acbf-ff82425a5946
 caps.latest.revision: 42
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "On Demand"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # sys.sql_expression_dependencies (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]

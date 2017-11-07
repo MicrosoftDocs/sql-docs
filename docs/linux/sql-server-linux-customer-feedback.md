@@ -8,7 +8,6 @@ ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
-ms.workload: "Inactive"
 ---
 # Customer Feedback for SQL Server on Linux
 

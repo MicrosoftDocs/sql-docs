@@ -15,7 +15,6 @@ caps.latest.revision: 21
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
-ms.workload: "On Demand"
 ---
 # Manage Subscription Owners and Run Subscription - PowerShell
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]

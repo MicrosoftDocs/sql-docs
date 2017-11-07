@@ -14,8 +14,7 @@ ms.assetid: 1357ae7e-30a4-481a-831c-7b046fe15aa4
 caps.latest.revision: 9
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # DataSources object (TMSL)
 

@@ -19,7 +19,7 @@ ms.assetid: c0b0abaa-5c9b-4182-9d5f-fc16cd941d54
 caps.latest.revision: 27
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # Attribute Properties - Bind an Attribute to a Key Column

@@ -16,7 +16,6 @@ caps.latest.revision: 22
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Server Properties - Misc Server Settings Page
   Use this page to view or modify your server settings.  

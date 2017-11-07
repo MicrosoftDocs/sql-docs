@@ -27,9 +27,9 @@ helpviewer_keywords:
   - "database mirroring [SQL Server], Transact-SQL"
 ms.assetid: 15f8affd-8f39-4021-b092-0379fc6983da
 caps.latest.revision: 282
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "Active"
 ---
 # ALTER DATABASE (Transact-SQL)

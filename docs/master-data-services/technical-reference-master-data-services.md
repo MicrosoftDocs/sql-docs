@@ -14,7 +14,6 @@ caps.latest.revision: 12
 author: "smartysanthosh"
 ms.author: "nagavo"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Technical Reference (Master Data Services)
   Find technical reference information on [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] components.  

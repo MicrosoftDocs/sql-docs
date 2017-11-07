@@ -21,7 +21,6 @@ caps.latest.revision: 33
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # FriendlyName Property (SecurityCertificate Class)
   Gets or sets an alternative friendly name for the security certificate.  

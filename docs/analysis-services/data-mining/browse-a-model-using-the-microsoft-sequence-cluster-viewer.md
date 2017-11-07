@@ -24,7 +24,7 @@ ms.assetid: 3ada00aa-da9e-488a-9f53-c3e188f81f84
 caps.latest.revision: 38
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # Browse a Model Using the Microsoft Sequence Cluster Viewer

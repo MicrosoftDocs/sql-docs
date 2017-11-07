@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "search property lists [SQL Server], permissions"
 ms.assetid: 96513cb4-a9c0-4834-97a4-ddc0777b8415
 caps.latest.revision: 10
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # DENY Search Property List Permissions (Transact-SQL)

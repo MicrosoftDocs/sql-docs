@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "bit data type"
 ms.assetid: 40adfd08-a31c-49cb-a172-386bcaa6edee
 caps.latest.revision: 33
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "Active"
 ---
 # bit (Transact-SQL)

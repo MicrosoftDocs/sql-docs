@@ -18,7 +18,6 @@ caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Stop a Job
 This topic describes how to stop a [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent job. A job is a specified series of actions that SQL Server Agent performs.  

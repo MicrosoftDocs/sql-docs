@@ -18,7 +18,6 @@ caps.latest.revision: 33
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
-ms.workload: "On Demand"
 ---
 # How to: Send and Retrieve UTF-8 Data Using Built-In UTF-8 Support
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

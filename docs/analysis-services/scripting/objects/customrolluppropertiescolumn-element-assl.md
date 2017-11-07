@@ -25,8 +25,7 @@ ms.assetid: 7f4a9825-c768-4523-acb3-511a5160fd44
 caps.latest.revision: 39
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # CustomRollupPropertiesColumn Element (ASSL)
   Defines the details of a column that provide the properties of a custom rollup formula.  

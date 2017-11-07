@@ -16,7 +16,6 @@ caps.latest.revision: 21
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Audit Server Principal Management Event Class
   The **Audit Server Principal Management** event class occurs when server principals are created, altered, or dropped.  

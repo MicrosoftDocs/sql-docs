@@ -20,7 +20,7 @@ ms.assetid: 26b5ad08-3799-4a5e-89f3-dca25e637d45
 caps.latest.revision: 29
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # MDX Member Properties

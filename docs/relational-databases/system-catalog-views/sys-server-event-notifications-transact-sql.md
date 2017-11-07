@@ -20,10 +20,9 @@ helpviewer_keywords:
   - "sys.server_event_notifications catalog view"
 ms.assetid: 1a83a044-3130-4551-95ca-162525846ff5
 caps.latest.revision: 36
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # sys.server_event_notifications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -32,7 +32,6 @@ caps.latest.revision: 8
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "erikre"
-ms.workload: "On Demand"
 ---
 # Formatting Axis Labels on a Chart (Report Builder and SSRS)
   Coordinate-based chart types (column, bar, area, point, line, and range) have two axes that are used to categorize and display data relationships. Different types of formatting will be applied to each axis.  

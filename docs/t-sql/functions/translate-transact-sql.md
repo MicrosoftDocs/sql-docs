@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "TRANSLATE function"
 ms.assetid: 0426fa90-ef6d-4d19-8207-02ee59f74aec
 caps.latest.revision: 5
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "On Demand"
 ---
 # TRANSLATE (Transact-SQL)

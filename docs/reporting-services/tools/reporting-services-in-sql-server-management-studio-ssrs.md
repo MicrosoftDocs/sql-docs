@@ -17,7 +17,6 @@ caps.latest.revision: 57
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
-ms.workload: "On Demand"
 ---
 # Reporting Services in SQL Server Management Studio (SSRS)
   Report server administrators can use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to:  

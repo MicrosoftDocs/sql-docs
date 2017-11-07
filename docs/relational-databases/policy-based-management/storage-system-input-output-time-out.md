@@ -16,7 +16,6 @@ caps.latest.revision: 10
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Storage System Input-Output Time-out
   This rule checks the system event log for EventId 9. This message indicates that an I/O time-out has occurred in the storage system.  

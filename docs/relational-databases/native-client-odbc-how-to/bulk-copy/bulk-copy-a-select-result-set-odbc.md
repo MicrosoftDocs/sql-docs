@@ -18,7 +18,6 @@ caps.latest.revision: 16
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Bulk Copy a SELECT Result Set (ODBC)
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]

@@ -17,7 +17,6 @@ caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Issues of Database Evolution (Visual Database Tools)
 If you change the structure of a deployed database, you must take special care that your alteration is compatible with the existing data and database structure. You might need to take special steps when you make the following modifications:  

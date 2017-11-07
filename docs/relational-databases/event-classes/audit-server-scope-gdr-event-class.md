@@ -16,7 +16,6 @@ caps.latest.revision: 36
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Audit Server Scope GDR Event Class
   The **Audit Server Scope GDR** event class occurs when a GRANT, REVOKE, or DENY is issued for permissions in the server scope, such as creating a login.  

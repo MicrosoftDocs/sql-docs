@@ -13,10 +13,9 @@ helpviewer_keywords:
   - "701 (Database Engine error)"
 ms.assetid: 3b975000-63a1-43c2-a40f-89d0a8a36bef
 caps.latest.revision: 18
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # MSSQLSERVER_701
   

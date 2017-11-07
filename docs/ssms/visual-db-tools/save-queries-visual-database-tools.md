@@ -17,7 +17,6 @@ caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Save Queries (Visual Database Tools)
 Save your query when you want to work with it later. Note that running your query does not save your changes.  

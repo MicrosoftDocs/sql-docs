@@ -16,7 +16,7 @@ ms.assetid: 3a974dd4-e1d6-45b2-b8c8-1a914bc13a02
 caps.latest.revision: 7
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # RelationshipEnd Data Type (ASSL)

@@ -18,10 +18,9 @@ helpviewer_keywords:
   - "sp_tables"
 ms.assetid: 787a2fa5-87a1-49bd-938b-6043c245f46b
 caps.latest.revision: 43
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "On Demand"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # sp_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]

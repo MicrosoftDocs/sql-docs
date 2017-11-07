@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "cryptography [SQL Server], asymmetric keys"
 ms.assetid: dd7d8cd5-536b-460c-ab5b-cb4752bbdfaa
 caps.latest.revision: 14
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # DENY Asymmetric Key Permissions (Transact-SQL)

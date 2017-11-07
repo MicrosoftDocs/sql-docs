@@ -16,7 +16,6 @@ caps.latest.revision: 27
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Server Properties - Connections Page
   Use this page to view or modify your connection options.  

@@ -17,7 +17,6 @@ caps.latest.revision: 33
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Execution Characteristics of Extended Stored Procedures
     

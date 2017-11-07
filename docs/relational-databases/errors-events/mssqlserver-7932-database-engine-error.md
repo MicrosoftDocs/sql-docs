@@ -13,10 +13,9 @@ helpviewer_keywords:
   - "7932 (Database Engine error)"
 ms.assetid: e2ad218a-3249-4f18-8b32-09f0030765a5
 caps.latest.revision: 15
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # MSSQLSERVER_7932
   

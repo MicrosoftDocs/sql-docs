@@ -16,7 +16,6 @@ caps.latest.revision: 31
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # CursorRecompile Event Class
   The **CursorRecompile** event class describes cursor recompile events that occur in application programming interface (API) cursors. Cursor recompile events occur when the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] recompiles a Transact-SQL cursor due to a schema change.  

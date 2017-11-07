@@ -22,7 +22,6 @@ caps.latest.revision: 56
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "On Demand"
 ---
 # Using Multiple Active Result Sets (MARS)
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]

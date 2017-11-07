@@ -20,7 +20,7 @@ ms.assetid: 83d9afda-7d34-42b5-8f28-20172a905f23
 caps.latest.revision: 27
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # The Basic MDX Script (MDX)

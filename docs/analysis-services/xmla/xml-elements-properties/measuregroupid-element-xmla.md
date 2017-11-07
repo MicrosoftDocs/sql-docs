@@ -25,10 +25,9 @@ helpviewer_keywords:
   - "MeasureGroupID element"
 ms.assetid: ff55777e-54ea-42b9-a084-2e12e0a10988
 caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+author: "jeannt"
+ms.author: "jeannt"
+manager: "erikre"
 ---
 # MeasureGroupID Element (XMLA)
   Identifies a measure group within a parent element that contains an object reference.  

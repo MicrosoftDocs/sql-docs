@@ -13,11 +13,10 @@ helpviewer_keywords:
   - "5515 (Database Engine error)"
 ms.assetid: ccd793bc-ba5d-4782-8d72-731fd01fc177
 caps.latest.revision: 14
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 robots: noindex,nofollow
-ms.workload: "Inactive"
 ---
 # MSSQLSERVER_5515
   

@@ -23,7 +23,6 @@ caps.latest.revision: 24
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Mapping XSD Data Types to XPath Data Types (SQLXML 4.0)
   When an XPath query is executed against an XSD schema and the XSD type is specified in the **xsd:type** attribute, XPath uses the data type specified when it processes the query.  

@@ -26,10 +26,9 @@ helpviewer_keywords:
   - "CellData element"
 ms.assetid: 0ebfb5e1-a674-4b9b-bd8c-c529da105f61
 caps.latest.revision: 27
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+author: "jeannt"
+ms.author: "jeannt"
+manager: "erikre"
 ---
 # CellData Element (XMLA)
   Contains a collection of Cell elements that represent the cell data contained by a [root](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md) element that uses the [MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md) data type.  

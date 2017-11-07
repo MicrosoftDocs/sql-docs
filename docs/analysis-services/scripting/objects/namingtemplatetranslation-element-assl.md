@@ -25,8 +25,7 @@ ms.assetid: 4a97a31d-23bc-4afd-a4dc-bc0ad7121f08
 caps.latest.revision: 29
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # NamingTemplateTranslation Element (ASSL)
   Provides a localized translation of the [NamingTemplate](../../../analysis-services/scripting/properties/namingtemplate-element-assl.md) element for a parent [DimensionAttribute](../../../analysis-services/scripting/data-type/dimensionattribute-data-type-assl.md) data type.  

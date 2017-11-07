@@ -13,10 +13,9 @@ helpviewer_keywords:
   - "2501 (Database Engine error)"
 ms.assetid: 895aafe3-a4e7-4ed8-acc5-93be76ef3664
 caps.latest.revision: 19
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # MSSQLSERVER_2501
   

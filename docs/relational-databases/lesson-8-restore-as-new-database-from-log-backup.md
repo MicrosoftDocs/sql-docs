@@ -17,7 +17,6 @@ caps.latest.revision: 12
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Lesson 8. Restore as new database from log backup
 In this lesson, you will restore the AdventureWorks2014 database as a new database from a file-snapshot transaction log backup.  

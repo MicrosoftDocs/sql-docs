@@ -13,9 +13,9 @@ dev_langs:
   - "TSQL"
 ms.assetid: c11686eb-80b9-444c-bf1b-36ebad653df1
 caps.latest.revision: 3
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "Active"
 ---
 # Numeric types

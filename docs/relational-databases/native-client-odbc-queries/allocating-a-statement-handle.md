@@ -24,7 +24,6 @@ caps.latest.revision: 30
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Allocating a Statement Handle
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]

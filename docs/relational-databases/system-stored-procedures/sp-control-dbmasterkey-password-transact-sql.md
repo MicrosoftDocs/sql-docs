@@ -18,10 +18,9 @@ helpviewer_keywords:
   - "sp_control_dbmasterkey_password"
 ms.assetid: 63979a87-42a2-446e-8e43-30481faaf3ca
 caps.latest.revision: 27
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # sp_control_dbmasterkey_password (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

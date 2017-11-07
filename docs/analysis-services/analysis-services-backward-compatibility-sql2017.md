@@ -19,7 +19,7 @@ helpviewer_keywords:
 ms.assetid: 
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # Analysis Services backward compatibility (SQL 2017)

@@ -18,10 +18,9 @@ helpviewer_keywords:
   - "sp_revokelogin"
 ms.assetid: cb1ab102-1ae0-4811-9144-9a8121ef2d7e
 caps.latest.revision: 28
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # sp_revokelogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

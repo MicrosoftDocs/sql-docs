@@ -16,7 +16,6 @@ caps.latest.revision: 23
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # TM: Begin Tran Completed Event Class
   The TM: Begin Tran Completed event class indicates that a BEGIN TRANSACTION request has been completed. The request was sent from the client through the transaction management interface.  

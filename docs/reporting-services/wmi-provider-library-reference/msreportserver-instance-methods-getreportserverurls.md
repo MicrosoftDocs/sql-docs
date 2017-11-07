@@ -17,7 +17,6 @@ caps.latest.revision: 12
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
-ms.workload: "Inactive"
 ---
 # MSReportServer_Instance Methods - GetReportServerUrls
   Returns a list of URLs users can use to access the report server and the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)].  

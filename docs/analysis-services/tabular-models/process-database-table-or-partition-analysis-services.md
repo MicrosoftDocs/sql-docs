@@ -17,8 +17,7 @@ ms.assetid: 307d69c3-cabb-4dfa-b90c-9852492c1213
 caps.latest.revision: 8
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "On Demand"
+manager: "erikre"
 ---
 # Process Database, Table, or Partition (Analysis Services)
   The tasks in this topic describe how to process a tabular model database, table, or partitions manually by using the **Process \<object>** dialog box in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  

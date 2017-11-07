@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "granting permissions [SQL Server], servers"
 ms.assetid: 7e880a5a-3bdc-491f-a167-7a9ed338be7f
 caps.latest.revision: 36
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "On Demand"
 ---
 # GRANT Server Permissions (Transact-SQL)

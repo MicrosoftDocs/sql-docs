@@ -25,7 +25,6 @@ caps.latest.revision: 40
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Working with Query Notifications
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]

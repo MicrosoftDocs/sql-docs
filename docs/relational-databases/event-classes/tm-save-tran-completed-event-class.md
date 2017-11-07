@@ -16,7 +16,6 @@ caps.latest.revision: 21
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # TM: Save Tran Completed Event Class
   The TM: Save Tran Completed event class indicates that a SAVE TRANSACTION request has completed. The request was sent from the client through the transaction management interface.  

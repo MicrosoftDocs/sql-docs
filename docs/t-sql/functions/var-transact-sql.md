@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "VAR function [Transact-SQL]"
 ms.assetid: 71dfc339-16c8-42f9-8555-ad45400f7f9b
 caps.latest.revision: 37
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "On Demand"
 ---
 # VAR (Transact-SQL)

@@ -18,7 +18,7 @@ ms.assetid: bb885447-868b-4686-853c-8241f63d4370
 caps.latest.revision: 21
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "On Demand"
 ---
 # Roles and Permissions (Analysis Services)

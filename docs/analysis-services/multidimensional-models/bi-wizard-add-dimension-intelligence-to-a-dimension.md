@@ -20,7 +20,7 @@ ms.assetid: b64fa386-eac2-4286-a320-0631a1887aac
 caps.latest.revision: 32
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # BI Wizard - Add Dimension Intelligence to a Dimension

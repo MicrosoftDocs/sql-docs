@@ -19,7 +19,6 @@ caps.latest.revision: 10
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
-ms.workload: "Inactive"
 ---
 # Manage a Reporting Services Native Mode Report Server
   This section contains procedures for configuring a native mode report server instance using the Reporting Services Configuration Manager.  

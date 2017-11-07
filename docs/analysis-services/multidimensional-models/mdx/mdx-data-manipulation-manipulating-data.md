@@ -19,7 +19,7 @@ ms.assetid: 4865192e-f46b-4ce5-b51c-9e08dbad5b85
 caps.latest.revision: 25
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # MDX Data Manipulation - Manipulating Data

@@ -16,7 +16,6 @@ caps.latest.revision: 34
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # SP:Completed Event Class
   The SP:Completed event class indicates that the stored procedure has completed executing.  

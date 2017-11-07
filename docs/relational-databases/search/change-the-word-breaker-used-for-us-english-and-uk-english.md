@@ -14,7 +14,6 @@ caps.latest.revision: 10
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Change the Word Breaker Used for US English and UK English
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] installs a new version (version 14.0.4999.1038) of the word breaker and stemmer for the English language, replacing the previous version of these components (version 12.0.6828.0). For information about the changed behavior of the new components, see [Behavior Changes to Full-Text Search](http://msdn.microsoft.com/library/573444e8-51bc-4f3d-9813-0037d2e13b8f). This topic describes how to switch from the new version of these components to the previous version, or to switch back from the previous version to the new version. For cluster installations, these changes should be made on all the primary and passive nodes.  

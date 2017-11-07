@@ -15,7 +15,6 @@ caps.latest.revision: 33
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
-ms.workload: "On Demand"
 ---
 # Reporting Services Data Alerts
 

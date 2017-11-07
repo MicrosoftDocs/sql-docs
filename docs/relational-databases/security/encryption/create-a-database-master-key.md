@@ -13,10 +13,9 @@ helpviewer_keywords:
   - "database master key [SQL Server], creating"
 ms.assetid: 8cb24263-e97d-4e4d-9429-6cf494a4d5eb
 caps.latest.revision: 16
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "On Demand"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # Create a Database Master Key
   This topic describes how to create a database master key in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] by using [!INCLUDE[tsql](../../../includes/tsql-md.md)].  

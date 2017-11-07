@@ -16,7 +16,6 @@ caps.latest.revision: 58
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
-ms.workload: "On Demand"
 ---
 # Establish Database Mirroring Session - Windows Authentication
     

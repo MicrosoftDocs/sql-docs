@@ -24,7 +24,6 @@ caps.latest.revision: 21
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "On Demand"
 ---
 # Manage the Editor and View Mode
   The Editor gives you a number of ways to control the view of your code.  

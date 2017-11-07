@@ -20,10 +20,9 @@ helpviewer_keywords:
   - "MSsubscriptions system table"
 ms.assetid: b7e8301d-d115-41f6-8d4f-e0d25f453b25
 caps.latest.revision: 18
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # MSsubscriptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

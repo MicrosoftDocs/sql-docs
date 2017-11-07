@@ -22,7 +22,6 @@ caps.latest.revision: 28
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # SQL Server Native Client ODBC Data Sources
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]

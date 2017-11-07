@@ -14,7 +14,6 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Using an SQL Statement to Modify Database Objects
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

@@ -17,7 +17,6 @@ caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Show Diagram Properties (Visual Database Tools)
 You can display properties for a database diagram in the Properties window.  

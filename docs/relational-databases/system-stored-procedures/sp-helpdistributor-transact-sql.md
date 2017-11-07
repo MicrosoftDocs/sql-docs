@@ -18,10 +18,9 @@ helpviewer_keywords:
   - "sp_helpdistributor"
 ms.assetid: 37b0983e-3b69-4f0f-977e-20efce0a0b97
 caps.latest.revision: 32
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # sp_helpdistributor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

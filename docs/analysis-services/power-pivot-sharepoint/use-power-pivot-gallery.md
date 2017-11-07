@@ -15,7 +15,7 @@ ms.assetid: c9ff92d1-787a-4f34-990f-6676b61875d7
 caps.latest.revision: 15
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # Use Power Pivot Gallery

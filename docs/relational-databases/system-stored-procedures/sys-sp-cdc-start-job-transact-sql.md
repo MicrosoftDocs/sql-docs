@@ -20,10 +20,9 @@ helpviewer_keywords:
   - "sp_cdc_start_job"
 ms.assetid: cf443a67-7705-4799-9f39-0e3a6a8a0708
 caps.latest.revision: 16
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # sys.sp_cdc_start_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

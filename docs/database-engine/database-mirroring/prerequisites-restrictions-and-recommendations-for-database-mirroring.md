@@ -22,7 +22,6 @@ caps.latest.revision: 55
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
-ms.workload: "On Demand"
 ---
 # Prerequisites, Restrictions, and Recommendations for Database Mirroring
     

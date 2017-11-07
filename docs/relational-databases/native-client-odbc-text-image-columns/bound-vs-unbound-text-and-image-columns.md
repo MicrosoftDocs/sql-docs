@@ -24,7 +24,6 @@ caps.latest.revision: 29
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Bound vs. Unbound Text and Image Columns
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]

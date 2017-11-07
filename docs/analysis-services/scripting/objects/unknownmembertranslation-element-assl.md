@@ -25,8 +25,7 @@ ms.assetid: a4b8cdac-b065-4a44-b251-c5ac1cfe5e6f
 caps.latest.revision: 35
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # UnknownMemberTranslation Element (ASSL)
   Contains a translation for the caption of the [UnknownMember](../../../analysis-services/scripting/properties/unknownmember-element-assl.md) element for a [Dimension](../../../analysis-services/scripting/objects/dimension-element-assl.md) element.  

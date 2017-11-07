@@ -19,10 +19,9 @@ helpviewer_keywords:
   - "INFORMATION_SCHEMA.VIEWS view"
 ms.assetid: 6119bc94-0b22-45d4-a34b-967afd810a9d
 caps.latest.revision: 39
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # VIEWS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]

@@ -18,7 +18,6 @@ caps.latest.revision: 26
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Manage Bookmarks
   While you are working in a code editor, the **Bookmarks** window allows you to create links to specific lines of code within your document. You can display this window from the **View** menu.  

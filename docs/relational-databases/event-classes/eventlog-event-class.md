@@ -16,7 +16,6 @@ caps.latest.revision: 27
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # EventLog Event Class
   The EventLogevent class indicates that events have been logged in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows event log.  

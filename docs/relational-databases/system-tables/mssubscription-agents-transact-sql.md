@@ -20,10 +20,9 @@ helpviewer_keywords:
   - "MSsubscription_agents system table"
 ms.assetid: 86ad5891-0bef-4963-9381-7d5b45245a0c
 caps.latest.revision: 25
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # MSsubscription_agents (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "DENY statement, schemas"
 ms.assetid: 300a67c4-d226-4653-9e9f-7ae4d53fcf33
 caps.latest.revision: 28
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # DENY Schema Permissions (Transact-SQL)

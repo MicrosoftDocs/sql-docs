@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "ALTER SERVER ROLE statement"
 ms.assetid: 7a4db7bb-c442-4e12-9a8a-114da5bc7710
 caps.latest.revision: 19
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "On Demand"
 ---
 # ALTER SERVER ROLE (Transact-SQL)

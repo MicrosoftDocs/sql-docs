@@ -14,7 +14,6 @@ caps.latest.revision: 34
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "On Demand"
 ---
 # Lesson 1-4 - Display the Query Window
 When you open multiple query windows, they are displayed as tabbed document windows.  

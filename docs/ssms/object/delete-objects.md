@@ -18,7 +18,6 @@ caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Delete Objects
 Use this dialog box to delete a database or database object.  

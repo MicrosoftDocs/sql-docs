@@ -20,7 +20,6 @@ caps.latest.revision: 25
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Errors and Events Reference (Replication)
   This section of the documentation contains cause and resolution information for a number of errors related to replication.  

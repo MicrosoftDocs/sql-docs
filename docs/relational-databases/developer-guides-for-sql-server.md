@@ -15,7 +15,6 @@ caps.latest.revision: 24
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # Developer Guides for SQL Server
   Integrate almost any SQL Server feature through custom code using the programming models and interfaces. Each feature area includes native and managed APIs used for data collection, data access, server administration, or data visualization.  

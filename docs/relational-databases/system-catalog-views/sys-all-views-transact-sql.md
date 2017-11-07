@@ -20,10 +20,9 @@ helpviewer_keywords:
   - "sys.all_views catalog view"
 ms.assetid: d8829213-fce2-41c6-9ab2-aaab5836c941
 caps.latest.revision: 29
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # sys.all_views (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]

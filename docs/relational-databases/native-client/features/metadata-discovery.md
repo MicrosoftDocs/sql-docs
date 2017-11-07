@@ -14,7 +14,6 @@ caps.latest.revision: 13
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Metadata Discovery
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]

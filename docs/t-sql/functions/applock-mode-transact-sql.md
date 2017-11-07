@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "APPLOCK_MODE function"
 ms.assetid: e43d4917-77f1-45cc-b231-68ba7fee3385
 caps.latest.revision: 32
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # APPLOCK_MODE (Transact-SQL)

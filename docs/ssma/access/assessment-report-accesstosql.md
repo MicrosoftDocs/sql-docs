@@ -20,7 +20,6 @@ caps.latest.revision: 14
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Assessment Report (AccessToSQL)
 The Assessment Report window shows the results of the conversion of database objects to [!INCLUDE[tsql](../../includes/tsql_md.md)] syntax, and can also help you estimate the complexity and cost of your migration projects.  

@@ -14,7 +14,6 @@ caps.latest.revision: 9
 author: "smartysanthosh"
 ms.author: "nagavo"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Custom Index (Master Data Services)
   Custom indexes create a non-clustered index on one attribute (single index) or on a list of attributes (composite index), in an entity. Generally indexes improve the performance of querying process. For more information about SQL Server indexes, see [Indexes](../relational-databases/indexes/indexes.md).  

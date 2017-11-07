@@ -23,7 +23,6 @@ caps.latest.revision: 48
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "On Demand"
 ---
 # Add Articles to and Drop Articles from Existing Publications
   After a publication is created, it is possible to add and drop articles. Articles can be added at any time, but the actions required for dropping articles depend on the type of replication and when the article is dropped.  

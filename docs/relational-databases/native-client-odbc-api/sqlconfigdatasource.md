@@ -17,7 +17,6 @@ caps.latest.revision: 32
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # SQLConfigDataSource
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]

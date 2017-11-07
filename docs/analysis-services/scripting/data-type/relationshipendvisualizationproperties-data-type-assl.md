@@ -16,7 +16,7 @@ ms.assetid: 11f9a10f-d36c-4faf-b595-3fe969d1935e
 caps.latest.revision: 6
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # RelationshipEndVisualizationProperties Data Type (ASSL)

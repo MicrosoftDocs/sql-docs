@@ -16,7 +16,6 @@ caps.latest.revision: 17
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "erikre"
-ms.workload: "Inactive"
 ---
 
 # Tutorial: Add a Sparkline to Your Report (Report Builder)

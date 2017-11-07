@@ -21,10 +21,9 @@ helpviewer_keywords:
   - "sys.columns catalog view"
 ms.assetid: 323ac9ea-fc52-4b8c-8a7e-e0e44f8ed86c
 caps.latest.revision: 57
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "On Demand"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # sys.columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]

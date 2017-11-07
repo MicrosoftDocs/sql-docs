@@ -25,7 +25,7 @@ ms.assetid: e8d19ec8-70d3-4947-904a-fb81fcac9afd
 caps.latest.revision: 32
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # PerspectiveKpi Data Type (ASSL)

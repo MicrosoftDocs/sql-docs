@@ -21,7 +21,7 @@ ms.assetid: 87e700de-32be-4bc8-b01d-ba4ee1ab48de
 caps.latest.revision: 32
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # Column Distributions (Data Mining)

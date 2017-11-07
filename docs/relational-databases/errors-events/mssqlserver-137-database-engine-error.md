@@ -13,10 +13,9 @@ helpviewer_keywords:
   - "137 (Database Engine error)"
 ms.assetid: 47fb4212-2165-4fec-bc41-6d548465d7be
 caps.latest.revision: 12
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # MSSQLSERVER_137
   

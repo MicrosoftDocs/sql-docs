@@ -18,10 +18,9 @@ helpviewer_keywords:
   - "sp_special_columns"
 ms.assetid: 0b0993f8-73e0-402b-8c6c-1b0963956f5d
 caps.latest.revision: 38
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # sp_special_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

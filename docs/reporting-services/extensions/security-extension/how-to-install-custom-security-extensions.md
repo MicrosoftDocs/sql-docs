@@ -15,7 +15,6 @@ caps.latest.revision: 3
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
-ms.workload: "Inactive"
 ---
 
 # How to install custom security extensions

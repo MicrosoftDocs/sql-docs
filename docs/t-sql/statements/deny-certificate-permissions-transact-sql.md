@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "denying permissions [SQL Server], certificates"
 ms.assetid: 5971ff9e-d6a4-414b-ae1f-819bc2e348f5
 caps.latest.revision: 22
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # DENY Certificate Permissions (Transact-SQL)

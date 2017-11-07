@@ -27,9 +27,9 @@ helpviewer_keywords:
   - "printing ASCII values"
 ms.assetid: 955afe94-539c-465d-af22-16ec45da432a
 caps.latest.revision: 39
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "Active"
 ---
 # CHAR (Transact-SQL)

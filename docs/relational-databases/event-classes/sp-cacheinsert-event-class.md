@@ -16,7 +16,6 @@ caps.latest.revision: 36
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # SP:CacheInsert Event Class
   The SP:CacheInsert event class indicates that the stored procedure has been inserted into the procedure cache.  

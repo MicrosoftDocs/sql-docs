@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "sine"
 ms.assetid: bc1781e9-185f-4981-929b-e77371be6b26
 caps.latest.revision: 21
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # SIN (Transact-SQL)

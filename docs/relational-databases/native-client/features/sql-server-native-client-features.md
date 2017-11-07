@@ -19,7 +19,6 @@ caps.latest.revision: 59
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "On Demand"
 ---
 # SQL Server Native Client Features
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]

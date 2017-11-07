@@ -19,7 +19,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # What the Driver Manager Does
 The following table summarizes how the ODBC 3*.x* Driver Manager maps calls to ODBC 2.*x* and ODBC 3*.x* drivers.  

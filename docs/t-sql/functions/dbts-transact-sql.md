@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "timestamp data type"
 ms.assetid: 91842ddd-91c0-4445-a03f-116f6bc991d0
 caps.latest.revision: 35
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "On Demand"
 ---
 # &#x40;&#x40;DBTS (Transact-SQL)

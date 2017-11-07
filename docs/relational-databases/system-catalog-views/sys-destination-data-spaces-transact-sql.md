@@ -20,10 +20,9 @@ helpviewer_keywords:
   - "sys.destination_data_spaces catalog view"
 ms.assetid: 92df932b-ad5c-43f8-81f4-b158823ab189
 caps.latest.revision: 20
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # sys.destination_data_spaces (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

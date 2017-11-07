@@ -14,7 +14,6 @@ caps.latest.revision: 6
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "erikre"
-ms.workload: "Inactive"
 ---
 # Add a custom map to a Reporting Services mobile report
 Custom maps require two files:  

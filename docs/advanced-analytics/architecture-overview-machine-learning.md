@@ -1,8 +1,8 @@
 ---
-title: "Architecture overview for SQL Server Machine Learning Services | Microsoft Docs"
+title: "Architecture and Overview | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/03/2017"
-ms.prod: "sql-server-2017"
+ms.date: "06/20/2017"
+ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,11 +11,11 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 author: "jeannt"
 ms.author: "jeannt"
-manager: "cgronlund"
+manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 
-# Architecture overview for SQL Server Machine Learning Services 
+# Architecture and Overview of Machine Learning Services
 
 This topic describes the goals of the extensibility framework that supports execution of Python and R script in SQL Server.
 
@@ -64,6 +64,7 @@ To meet these goals, the architecture of SQL Server 2016 R Services and SQL Serv
 
   Performance optimization relies on two equally powerful aspects of the platform: resource governance and parallel processing using SQL Server, and distributed computing provided by the algorithms in **RevoScaleR** and **revoscalepy**.
 
+
 ## Solution development and deployment
 
 In addition to these core goals for the extensibility platform, the machine learning services in SQL Server are designed to provide strong integration with the database engine and the BI stack, with these benefits:
@@ -86,7 +87,7 @@ Let's see how it works in practice.
 
 Not sure which machine learning solution meets your needs? In addition to embedded analytics in SQL Server 2016 and SQL Server 2017, Microsoft provides the following machine learning platforms and services:
 
-+ [Microsoft R Server and Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server)
++ [Microsoft R Server](https://msdn.microsoft.com/microsoft-r/rserver)
 
   A multi-platform environment for developing, distributing, and managing machine learning jobs
 + [Data Science Virtual Machine](https://docs.microsoft.com/azure/machine-learning/machine-learning-data-science-virtual-machine-overview)
@@ -94,7 +95,6 @@ Not sure which machine learning solution meets your needs? In addition to embedd
   All the tools you need for machine learning, preinstalled. Use Jupyter notebooks, Python, or R.
   
   Try the new [Windows 2016 preview edition](http://aka.ms/dsvm/win2016), which includes GPU versions of popular deep learning frameworks such as CNTK and mxNet, as well as support for Windows containers!
-
 + [Azure Cognitive Services](https://azure.microsoft.com/services/cognitive-services/)
 
   A variety of cloud services for adding AI and ML into your applications, including natural language indexing of video, facial recognition, emotion detection, text analytics, machine translation, and much, more
@@ -104,4 +104,4 @@ Not sure which machine learning solution meets your needs? In addition to embedd
 
 ## See Also
 
-[Compare Machine Learning Server and Microsoft R products](https://docs.microsoft.com/machine-learning-server/what-is-r-server-interoperability)
+[R Server Standalone](https://docs.microsoft.com/sql/advanced-analytics/r/r-server-standalone)

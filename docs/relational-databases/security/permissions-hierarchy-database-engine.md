@@ -20,10 +20,9 @@ helpviewer_keywords:
   - "security [SQL Server], granting access"
 ms.assetid: f6d20a55-ef03-4e14-85f9-009902889866
 caps.latest.revision: 37
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "On Demand"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # Permissions Hierarchy (Database Engine)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]

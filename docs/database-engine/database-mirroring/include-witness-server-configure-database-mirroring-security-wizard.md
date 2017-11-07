@@ -16,7 +16,6 @@ caps.latest.revision: 32
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Include Witness Server (Configure Database Mirroring Security Wizard)
   Use this page to specify whether you want to include a witness server in this security configuration for database mirroring.  

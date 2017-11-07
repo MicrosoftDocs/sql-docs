@@ -20,7 +20,6 @@ caps.latest.revision: 37
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Database Engine Extended Stored Procedure Programming
     

@@ -21,7 +21,6 @@ caps.latest.revision: 33
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # SetProtocolsOrder Method (ClientNetworkProtocol Class)
   Changes the order of the protocol list.  

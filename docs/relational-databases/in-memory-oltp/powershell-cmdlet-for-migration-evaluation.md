@@ -14,7 +14,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # PowerShell Cmdlet for Migration Evaluation
   The Save-SqlMigrationReport cmdlet is a tool that evaluates the migration fitness of multiple objects in a SQL Server database. Currently, it is limited to evaluating the migration fitness for In-Memory OLTP. The cmdlet can run in both an elevated Windows PowerShell environment and sqlps.  

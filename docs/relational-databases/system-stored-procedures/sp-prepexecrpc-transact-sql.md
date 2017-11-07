@@ -18,10 +18,9 @@ helpviewer_keywords:
   - "sp_prepexecrpc"
 ms.assetid: 35d686f2-ef31-4eaa-baa9-9cef5d6c87c2
 caps.latest.revision: 5
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # sp_prepexecrpc (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

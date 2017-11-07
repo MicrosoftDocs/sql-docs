@@ -20,7 +20,6 @@ caps.latest.revision: 6
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
-ms.workload: "On Demand"
 ---
 # View SQL Server Agent Error Log (SQL Server Management Studio)
 This topic describes how to view the  [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent error log in [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].  

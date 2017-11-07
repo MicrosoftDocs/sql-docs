@@ -23,7 +23,7 @@ ms.assetid: d40039e1-3ff6-4e20-8d8b-5baf501f726f
 caps.latest.revision: 11
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # Translation Data Type (ASSL)

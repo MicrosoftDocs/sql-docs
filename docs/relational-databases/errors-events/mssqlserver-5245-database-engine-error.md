@@ -13,10 +13,9 @@ helpviewer_keywords:
   - "5245 (Database Engine error)"
 ms.assetid: 6005c9ec-ccdd-4def-9eb4-37cdb599ddb3
 caps.latest.revision: 17
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # MSSQLSERVER_5245
   

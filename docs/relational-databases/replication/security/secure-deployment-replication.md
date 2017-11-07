@@ -17,7 +17,6 @@ caps.latest.revision: 13
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Secure Deployment (Replication)
   This section provides information to help you better secure replication.  

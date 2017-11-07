@@ -19,7 +19,6 @@ caps.latest.revision: 24
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Backup Timeline
   Use the **Backup Timeline** dialog box to locate and specify backups to restore a database to a point-in-time. The **Backup Timeline** dialog box is accessed by clicking **Timeline** on the **Restore Database (General Page)** pane. This dialog box allows you to view a timeline of the restore operations performed on the database.  

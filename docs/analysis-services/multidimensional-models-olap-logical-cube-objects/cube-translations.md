@@ -23,7 +23,7 @@ ms.assetid: 4e4fd6a4-d324-4508-b75a-2a57de9ab8ff
 caps.latest.revision: 41
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # Cube Translations

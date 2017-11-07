@@ -16,7 +16,6 @@ caps.latest.revision: 31
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Querying Extended Stored Procedures Installed in SQL Server
     

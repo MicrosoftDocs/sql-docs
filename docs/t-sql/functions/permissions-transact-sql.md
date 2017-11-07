@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "PERMISSIONS function"
 ms.assetid: 81625a56-b160-4424-91c5-1ce8b259a8e6
 caps.latest.revision: 20
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # PERMISSIONS (Transact-SQL)

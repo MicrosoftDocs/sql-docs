@@ -19,7 +19,6 @@ caps.latest.revision: 45
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # ODBC API Implementation Details
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]

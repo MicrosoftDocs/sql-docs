@@ -21,7 +21,6 @@ caps.latest.revision: 36
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # State Property (SqlService Class)
   Gets or sets the current state of the service.  

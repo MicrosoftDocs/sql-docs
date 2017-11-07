@@ -15,7 +15,7 @@ ms.assetid: d8d875bc-7823-46b7-a939-867cefd4de12
 caps.latest.revision: 9
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # Schedule Data Refresh and Data Sources - No Windows Authentication

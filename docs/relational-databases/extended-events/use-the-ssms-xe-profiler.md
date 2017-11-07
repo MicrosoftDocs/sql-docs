@@ -19,7 +19,6 @@ ms.assetid: 1e1fad43-d747-4775-ac0d-c50648e56d78
 author: "yualan"
 ms.author: "alayu"
 manager: "craigg"   
-ms.workload: "Inactive"
 ---
 # Use the SSMS XEvent Profiler
 The XEvent Profiler is a SQL Server Management Studio (SSMS) feature that displays a live viewer window of extended events. This overview describes the reasons for using this profiler, key features, and instructions to get started viewing extended events.

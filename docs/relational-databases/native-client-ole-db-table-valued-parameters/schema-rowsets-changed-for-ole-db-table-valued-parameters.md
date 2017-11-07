@@ -17,7 +17,6 @@ caps.latest.revision: 16
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Schema Rowsets Changed for OLE DB Table-Valued Parameters
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]

@@ -20,10 +20,9 @@ helpviewer_keywords:
   - "MSsync_states system table"
 ms.assetid: b25e17e1-7718-432e-a442-c4946741d474
 caps.latest.revision: 16
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # MSsync_states (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

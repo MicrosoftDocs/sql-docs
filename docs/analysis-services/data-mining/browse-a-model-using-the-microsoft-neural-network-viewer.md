@@ -21,7 +21,7 @@ ms.assetid: 2343d746-c4f4-499b-9d3c-17d63310a9a3
 caps.latest.revision: 43
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # Browse a Model Using the Microsoft Neural Network Viewer

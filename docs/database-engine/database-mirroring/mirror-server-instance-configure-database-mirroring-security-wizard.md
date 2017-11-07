@@ -16,7 +16,6 @@ caps.latest.revision: 42
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Mirror Server Instance (Configure Database Mirroring Security Wizard)
   Use this page to specify information about the server instance with the mirror database.  

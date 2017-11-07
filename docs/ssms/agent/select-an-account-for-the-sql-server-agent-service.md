@@ -25,7 +25,6 @@ caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
-ms.workload: "Active"
 ---
 # Select an Account for the SQL Server Agent Service
 The service startup account defines the [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows account in which [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent runs and its network permissions. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent runs as a specified user account. You select an account for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent service by using [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Configuration Manager, where you can choose from the following options:  

@@ -13,10 +13,9 @@ helpviewer_keywords:
   - "10794 (Database Engine error)"
 ms.assetid: 9a6864bc-d4ea-4582-a875-eed9424774b1
 caps.latest.revision: 9
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # MSSQLSERVER_10794
   

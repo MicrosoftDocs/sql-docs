@@ -18,7 +18,7 @@ ms.assetid: 78bc1e9a-1bc4-4a5a-ab0b-cf430c8fbfe1
 caps.latest.revision: 36
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "On Demand"
 ---
 # MDX Named Sets - Creating Query-Scoped Named Sets

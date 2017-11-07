@@ -18,7 +18,7 @@ ms.assetid: 1226c5a4-fd88-469c-81fe-3f664ab66e5e
 caps.latest.revision: 27
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # Technical Reference (SSAS)

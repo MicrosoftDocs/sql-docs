@@ -9,7 +9,6 @@ ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85 
-ms.workload: "Inactive"
 ---
 # Configure failover cluster instance - SQL Server on Linux (RHEL)
 

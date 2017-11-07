@@ -20,10 +20,9 @@ helpviewer_keywords:
   - "MSreplication_options system table"
 ms.assetid: 23cf10d7-8bc1-4368-b5eb-e5576421e776
 caps.latest.revision: 14
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # MSreplication_options (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

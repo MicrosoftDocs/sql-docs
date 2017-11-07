@@ -20,10 +20,9 @@ helpviewer_keywords:
   - "sys.server_triggers catalog view"
 ms.assetid: 25926ff4-9271-45bf-bc32-d5d3344bd47a
 caps.latest.revision: 15
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # sys.server_triggers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

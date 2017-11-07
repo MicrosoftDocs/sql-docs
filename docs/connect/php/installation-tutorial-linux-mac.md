@@ -8,7 +8,6 @@ ms.topic: "article"
 author: "ulvii"
 ms.author: "v-ulibra"
 manager: "Hadis Fard"
-ms.workload: "Inactive"
 ---
 # PHP Linux and Mac Drivers Installation Tutorial
 The following instructions assume a clean environment and show how to install PHP 7.x, Microsoft ODBC driver, Apache, and Microsoft PHP drivers on Ubuntu 15.10, 16.04, RedHat 7, Debian 8, and Mac OS X.

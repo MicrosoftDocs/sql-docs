@@ -13,7 +13,7 @@ ms.assetid: 2d0a9834-db91-403f-847c-79a8f49fc916
 caps.latest.revision: 7
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # Deploying SQL Server 2016 PowerPivot and Power View in SharePoint 2016

@@ -25,10 +25,9 @@ helpviewer_keywords:
   - "LNum element"
 ms.assetid: 7b9cc143-0c5e-4a8c-a288-8921bfcfd103
 caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+author: "jeannt"
+ms.author: "jeannt"
+manager: "erikre"
 ---
 # LNum Element (XMLA)
   Contains information about level ordinal positions for the parent [HierarchyInfo](../../../analysis-services/xmla/xml-elements-properties/hierarchyinfo-element-xmla.md) or [Member](../../../analysis-services/xmla/xml-elements-properties/member-element-xmla.md) element.  

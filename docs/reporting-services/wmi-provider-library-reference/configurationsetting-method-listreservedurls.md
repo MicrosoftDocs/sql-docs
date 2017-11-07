@@ -17,7 +17,6 @@ caps.latest.revision: 11
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
-ms.workload: "Inactive"
 ---
 # ConfigurationSetting Method - ListReservedURLs
   Lists URLs reserved for all applications on the report server.  

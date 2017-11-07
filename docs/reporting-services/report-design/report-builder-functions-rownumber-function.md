@@ -15,7 +15,6 @@ caps.latest.revision: 7
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "erikre"
-ms.workload: "On Demand"
 ---
 # Report Builder Functions - RowNumber Function
   Returns a running count of the number of rows for the specified scope.  

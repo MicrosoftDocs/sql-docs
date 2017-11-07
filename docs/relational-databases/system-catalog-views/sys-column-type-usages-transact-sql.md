@@ -20,10 +20,9 @@ helpviewer_keywords:
   - "sys.column_type_usages catalog view"
 ms.assetid: 1ead375e-f662-4837-903f-8947496c51e4
 caps.latest.revision: 22
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # sys.column_type_usages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -19,7 +19,7 @@ ms.assetid: d3c066bc-f812-4d53-9e96-9e306f2fc580
 caps.latest.revision: 27
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # AMO Classes - Introduction

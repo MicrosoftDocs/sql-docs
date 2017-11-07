@@ -20,7 +20,7 @@ ms.assetid: e4108825-b722-417c-9647-ab30ce35e549
 caps.latest.revision: 22
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # AMO Data Mining Classes

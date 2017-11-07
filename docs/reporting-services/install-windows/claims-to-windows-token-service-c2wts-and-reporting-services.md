@@ -12,7 +12,6 @@ ms.topic: "article"
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
-ms.workload: "On Demand"
 ---
 # Claims to Windows Token Service (C2WTS) and Reporting Services
 

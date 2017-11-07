@@ -21,10 +21,9 @@ helpviewer_keywords:
   - "sp_query_store_force_plan"
 ms.assetid: 0068f258-b998-4e4e-b47b-e375157c8213
 caps.latest.revision: 8
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # sp_query_store_force_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

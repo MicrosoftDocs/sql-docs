@@ -21,7 +21,6 @@ caps.latest.revision: 28
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # WMI Provider for Configuration Management Classes
   The Windows Management Instrumentation (WMI) provider for Configuration Management provides functionality for the following classes:  

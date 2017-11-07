@@ -15,7 +15,7 @@ ms.assetid: 849c6109-1453-4fe4-a892-c49a982cfadb
 caps.latest.revision: 24
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # Lesson 3-5 - Browsing the Deployed Cube

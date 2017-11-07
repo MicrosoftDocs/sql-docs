@@ -18,8 +18,7 @@ ms.assetid: b62ebf66-d090-4f74-8c83-11ed518b2018
 caps.latest.revision: 25
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # Discover Server State Event Category
   The Discover Server State event category has the event classes described in the following table.  

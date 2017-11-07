@@ -14,7 +14,6 @@ caps.latest.revision: 4
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Step 2: Create a SQL database for ADO.NET development
 

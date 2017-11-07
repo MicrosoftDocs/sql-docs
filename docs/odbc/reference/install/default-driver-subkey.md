@@ -19,7 +19,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Default Driver Subkey
 The Default subkey contains a single value that describes the driver used by the default data source. The format of this value is shown in the following table.  

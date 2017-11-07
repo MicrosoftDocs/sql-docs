@@ -19,7 +19,6 @@ caps.latest.revision: 33
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Command Syntax
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]

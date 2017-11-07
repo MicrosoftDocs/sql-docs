@@ -16,7 +16,6 @@ caps.latest.revision: 26
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Lesson 2-1 - Create the Finance Name Policy
 In this task, you will create a database named Finance, and then create a condition that requires all tables to start with the letters **fintbl**. Then, you will create a policy and policy category to enforce a naming standard for tables in the Finance database.  

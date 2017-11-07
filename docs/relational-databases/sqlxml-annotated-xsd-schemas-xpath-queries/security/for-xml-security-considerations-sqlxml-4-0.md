@@ -21,7 +21,6 @@ caps.latest.revision: 23
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # FOR XML Security Considerations (SQLXML 4.0)
   The FOR XML AUTO mode generates an XML hierarchy in which element names map to table names and attribute names map to column names. This exposes the database table and column information. You can hide the database information when you use AUTO mode (server-side formatting) by specifying table and column aliases in the query. These aliases are returned in the resulting XML document as element and attribute names.  

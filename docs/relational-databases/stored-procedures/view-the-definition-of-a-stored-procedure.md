@@ -19,7 +19,6 @@ caps.latest.revision: 29
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "Active"
 ---
 # View the Definition of a Stored Procedure
     

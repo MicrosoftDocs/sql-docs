@@ -15,7 +15,6 @@ caps.latest.revision: 7
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
-ms.workload: "Inactive"
 ---
 # ATOM Device Information Settings
   The device information settings for the Atom rendering extension support submittal of the name of an Atom feed and character encoding to use.  

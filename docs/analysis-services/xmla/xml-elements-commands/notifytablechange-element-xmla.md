@@ -25,10 +25,9 @@ helpviewer_keywords:
   - "NotifyTableChange command"
 ms.assetid: b76898eb-20d3-48c8-9eb8-1fd5df638bcc
 caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+author: "jeannt"
+ms.author: "jeannt"
+manager: "erikre"
 ---
 # NotifyTableChange Element (XMLA)
   Notifies an instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] that a change has occurred to tables in a specified data source.  

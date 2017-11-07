@@ -27,7 +27,7 @@ ms.assetid: 343dbab9-4c2c-49b9-8f35-efc65f2216f1
 caps.latest.revision: 32
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # Analysis Services Scripting Language XML Element Hierarchy (ASSL)

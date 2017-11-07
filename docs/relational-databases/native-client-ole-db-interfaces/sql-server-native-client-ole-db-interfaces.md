@@ -19,7 +19,6 @@ caps.latest.revision: 31
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # SQL Server Native Client (OLE DB) Interfaces
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]

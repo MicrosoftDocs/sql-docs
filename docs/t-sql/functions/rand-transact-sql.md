@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "random float value"
 ms.assetid: 363c84d6-b9fa-49ba-9a75-e44f27535ff6
 caps.latest.revision: 22
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "Active"
 ---
 # RAND (Transact-SQL)

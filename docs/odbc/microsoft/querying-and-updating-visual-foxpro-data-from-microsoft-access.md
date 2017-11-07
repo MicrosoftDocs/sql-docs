@@ -21,7 +21,6 @@ caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Querying and Updating Visual FoxPro Data from Microsoft Access
 You can query and update data stored in a Visual FoxPro database from a Microsoft Access database by using the Link Table option.  

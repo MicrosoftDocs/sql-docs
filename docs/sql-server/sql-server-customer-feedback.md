@@ -22,7 +22,6 @@ ms.assetid:
 # ms.tgt_pltfrm: ""
 # ms.custom: ""
 
-ms.workload: "Inactive"
 ---
 
 # Configure SQL Server to send feedback to Microsoft

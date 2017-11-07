@@ -17,7 +17,6 @@ caps.latest.revision: 36
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Divide (SSIS Expression)
   Divides the first numeric expression by the second one.  

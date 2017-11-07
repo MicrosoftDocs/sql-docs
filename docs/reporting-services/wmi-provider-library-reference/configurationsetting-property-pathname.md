@@ -22,7 +22,6 @@ caps.latest.revision: 34
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
-ms.workload: "Inactive"
 ---
 # ConfigurationSetting Property - PathName
   Specifies the installation path of a report server instance. Read-only.  

@@ -22,7 +22,6 @@ caps.latest.revision: 18
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
-ms.workload: "Inactive"
 ---
 # ConfigurationSetting Method - SetUnattendedExecutionAccount
   Specifies the account used to execute reports unattended.  

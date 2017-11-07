@@ -20,7 +20,6 @@ caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
-ms.workload: "On Demand"
 ---
 # Registry Entries for Data Sources
 > [!NOTE]  

@@ -19,7 +19,6 @@ caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Select Rows That Do Not Match a Value (Visual Database Tools)
 To find rows that do not match a value, use the NOT operator.  

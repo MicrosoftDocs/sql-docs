@@ -19,7 +19,6 @@ caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Run Jobs
 To manage [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent jobs, you can use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)], [!INCLUDE[tsql](../../includes/tsql_md.md)] stored procedures, or [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Management Objects.  

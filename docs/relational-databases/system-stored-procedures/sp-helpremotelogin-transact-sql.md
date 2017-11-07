@@ -18,10 +18,9 @@ helpviewer_keywords:
   - "sp_helpremotelogin"
 ms.assetid: 93f50869-2627-4642-899f-8f626f8833f4
 caps.latest.revision: 27
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # sp_helpremotelogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

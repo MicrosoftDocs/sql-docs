@@ -30,7 +30,6 @@ caps.latest.revision: 36
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "On Demand"
 ---
 # Examples: Using OPENXML
   The examples in this topic show how OPENXML is used to create a rowset view of an XML document. For information about the syntax of OPENXML, see [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md). The examples show all aspects of OPENXML, but do not specify metaproperties in OPENXML. For more information about how to specify metaproperties in OPENXML, see [Specify Metaproperties in OPENXML](../../relational-databases/xml/specify-metaproperties-in-openxml.md).  

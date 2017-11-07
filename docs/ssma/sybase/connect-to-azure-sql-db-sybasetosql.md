@@ -17,7 +17,6 @@ caps.latest.revision: 5
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Connect to Azure SQL DB  (SybaseToSQL)
 Use the Connect to Azure SQL DB dialog box to connect to the Azure SQL DB database that you want to migrate.  

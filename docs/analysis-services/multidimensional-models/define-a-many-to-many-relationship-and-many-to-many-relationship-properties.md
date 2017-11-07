@@ -17,7 +17,7 @@ ms.assetid: edb5f61a-a581-467a-a367-134b7f9b849f
 caps.latest.revision: 13
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "On Demand"
 ---
 # Define a Many-to-Many Relationship and Many-to-Many Relationship Properties

@@ -25,8 +25,7 @@ ms.assetid: 40020840-1bb7-478f-9017-1a30342ac4c6
 caps.latest.revision: 40
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # Partition Element (ASSL)
   Defines a partition of a [MeasureGroup](../../../analysis-services/scripting/objects/measuregroup-element-assl.md) element or a partition binding in an out-of-line [MeasureGroupBinding](../../../analysis-services/scripting/data-type/measuregroupbinding-data-type-out-of-line-assl.md) element.  

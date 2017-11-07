@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "names [SQL Server], columns"
 ms.assetid: 214144ab-f2bc-4052-83cf-caf0a85c4cc6
 caps.latest.revision: 28
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "On Demand"
 ---
 # COL_NAME (Transact-SQL)

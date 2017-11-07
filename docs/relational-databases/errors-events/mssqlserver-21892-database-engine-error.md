@@ -13,10 +13,9 @@ helpviewer_keywords:
   - "21892 (Database Engine error)"
 ms.assetid: 199818e8-28f4-440e-ad85-7bea88f51153
 caps.latest.revision: 6
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # MSSQLSERVER_21892
   

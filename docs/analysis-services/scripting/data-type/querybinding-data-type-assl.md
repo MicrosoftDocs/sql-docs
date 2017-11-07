@@ -25,7 +25,7 @@ ms.assetid: 7b58fc89-0060-4e56-ad99-6f74fe8cfc6d
 caps.latest.revision: 38
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # QueryBinding Data Type (ASSL)

@@ -13,7 +13,6 @@ ms.topic: "article"
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
-ms.workload: "Inactive"
 ---
 # Upload documents to a SharePoint library (Reporting Services in SharePoint mode)
 

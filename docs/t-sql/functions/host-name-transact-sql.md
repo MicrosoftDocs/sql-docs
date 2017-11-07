@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "workstation names [SQL Server]"
 ms.assetid: 4b8b0705-c083-4b07-b954-c83ee73b2ebb
 caps.latest.revision: 20
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "On Demand"
 ---
 # HOST_NAME (Transact-SQL)

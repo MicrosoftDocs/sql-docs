@@ -16,10 +16,9 @@ caps.latest.revision: 18
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "On Demand"
 ---
 # Create Client Applications for FILESTREAM Data
-  You can use Win32 APIs to read and write data to a FILESTREAM BLOB. The following steps are required:  
+  You can use Win32 to read and write data to a FILESTREAM BLOB. The following steps are required:  
   
 -   Read the FILESTREAM file path.  
   

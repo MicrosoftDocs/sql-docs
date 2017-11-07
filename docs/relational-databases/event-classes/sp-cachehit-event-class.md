@@ -16,7 +16,6 @@ caps.latest.revision: 41
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # SP:CacheHit Event Class
   The SP:CacheHit event class indicates that a stored procedure is in the plan cache.  

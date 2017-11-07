@@ -16,7 +16,6 @@ caps.latest.revision: 65
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Server Properties - Advanced Page
   Use this page to view or modify your advanced server settings.  

@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "varchar data type"
 ms.assetid: 282cd982-f4fb-4b22-b2df-9e8478f13f6a
 caps.latest.revision: 48
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "Active"
 ---
 # char and varchar (Transact-SQL)

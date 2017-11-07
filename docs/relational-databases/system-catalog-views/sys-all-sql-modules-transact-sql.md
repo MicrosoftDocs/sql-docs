@@ -20,10 +20,9 @@ helpviewer_keywords:
   - "sys.all_sql_modules catalog view"
 ms.assetid: 7477a3fe-afb3-44c8-bb2c-c6e1d9bdee6f
 caps.latest.revision: 26
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # sys.all_sql_modules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]

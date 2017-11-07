@@ -23,7 +23,7 @@ ms.assetid: 05e8de8d-452d-4128-98a6-4437df227fec
 caps.latest.revision: 13
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # DataSource Data Type (ASSL)

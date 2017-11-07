@@ -20,10 +20,9 @@ helpviewer_keywords:
   - "sys.databases catalog view"
 ms.assetid: 46c288c1-3410-4d68-a027-3bbf33239289
 caps.latest.revision: 152
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Active"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # sys.databases (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]

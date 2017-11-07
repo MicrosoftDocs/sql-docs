@@ -19,10 +19,9 @@ helpviewer_keywords:
   - "INFORMATION_SCHEMA.CHECK_CONSTRAINTS view"
 ms.assetid: e9577fd2-c349-4dff-874c-9e57d2e5a3ec
 caps.latest.revision: 42
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # CHECK_CONSTRAINTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]

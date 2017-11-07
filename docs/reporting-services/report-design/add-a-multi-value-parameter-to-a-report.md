@@ -15,7 +15,6 @@ caps.latest.revision: 7
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "erikre"
-ms.workload: "Inactive"
 ---
 # Add a multi-value parameter to a Report
   You can add a parameter to a report that allows the user to select more than one value for the parameter.  

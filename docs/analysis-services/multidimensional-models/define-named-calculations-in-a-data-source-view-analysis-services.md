@@ -19,7 +19,7 @@ ms.assetid: 729e7b12-6185-4b73-8bcb-cfe459b15355
 caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "On Demand"
 ---
 # Define Named Calculations in a Data Source View (Analysis Services)

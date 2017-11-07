@@ -15,7 +15,6 @@ caps.latest.revision: 10
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "erikre"
-ms.workload: "Inactive"
 ---
 # Collect Small Slices on a Pie Chart (Report Builder and SSRS)
 Pie charts with too many slices can look cluttered. Learn to collect many small slices in a pie chart into one single slice in [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] paginated reports.

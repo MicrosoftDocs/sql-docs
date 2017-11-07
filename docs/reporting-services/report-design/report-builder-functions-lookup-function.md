@@ -15,7 +15,6 @@ caps.latest.revision: 7
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "erikre"
-ms.workload: "Active"
 ---
 # Report Builder Functions - Lookup Function
   Returns the first matching value for the specified name from a dataset that contains name/value pairs.  

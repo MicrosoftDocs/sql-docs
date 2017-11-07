@@ -18,10 +18,9 @@ helpviewer_keywords:
   - "sp_helpmergearticle"
 ms.assetid: 0fb9986a-3c33-46ef-87bb-297396ea5a6a
 caps.latest.revision: 40
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # sp_helpmergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

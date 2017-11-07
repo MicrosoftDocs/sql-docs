@@ -26,7 +26,6 @@ caps.latest.revision: 28
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Creating Valid ID, IDREF, and IDREFS Type Attributes Using sql:prefix (SQLXML 4.0)
   An attribute can be specified to be an ID type attribute. Attributes specified as IDREF or IDREFS can then be used to refer to the ID type attributes, enabling links between documents.  

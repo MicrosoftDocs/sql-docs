@@ -14,7 +14,6 @@ caps.latest.revision: 23
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
-ms.workload: "On Demand"
 ---
 # Native Compilation of Tables and Stored Procedures
 

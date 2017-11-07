@@ -13,10 +13,9 @@ helpviewer_keywords:
   - "5243 (Database Engine error)"
 ms.assetid: e04a1934-e57d-420e-ac79-97071745824e
 caps.latest.revision: 13
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # MSSQLSERVER_5243
   

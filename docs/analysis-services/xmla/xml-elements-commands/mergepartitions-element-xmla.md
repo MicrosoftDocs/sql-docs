@@ -25,10 +25,9 @@ helpviewer_keywords:
   - "MergePartitions command"
 ms.assetid: cf538189-0629-49b3-8e01-32afba7b020d
 caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+author: "jeannt"
+ms.author: "jeannt"
+manager: "erikre"
 ---
 # MergePartitions Element (XMLA)
   Merges the data of one or more source partitions into a target partition, and then deletes the source partitions.  

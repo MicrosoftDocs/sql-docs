@@ -13,7 +13,6 @@ ms.topic: "article"
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
-ms.workload: "Inactive"
 ---
 # Local mode vs. connected mode reports in the Report Viewer
 

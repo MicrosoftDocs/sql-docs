@@ -20,10 +20,9 @@ helpviewer_keywords:
   - "sp_cdc_stop_job"
 ms.assetid: 421fc21c-c7a4-407c-8b31-359273b68c63
 caps.latest.revision: 18
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # sys.sp_cdc_stop_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

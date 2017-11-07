@@ -21,7 +21,7 @@ ms.assetid: a0fd94bb-359a-4df6-93a6-d60d50223944
 caps.latest.revision: 30
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # MDSCHEMA_DIMENSIONS Rowset

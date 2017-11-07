@@ -15,7 +15,6 @@ caps.latest.revision: 7
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "erikre"
-ms.workload: "On Demand"
 ---
 # Report Builder Functions - Last Function
   Returns the last value in the given scope of the specified expression.  

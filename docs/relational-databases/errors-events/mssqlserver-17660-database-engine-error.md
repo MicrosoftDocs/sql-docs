@@ -13,10 +13,9 @@ helpviewer_keywords:
   - "17660 (Database Engine error)"
 ms.assetid: da30e8a7-1c5a-4140-98ee-f84528ac3140
 caps.latest.revision: 14
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # MSSQLSERVER_17660
   

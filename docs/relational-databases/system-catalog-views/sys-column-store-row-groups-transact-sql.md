@@ -20,10 +20,9 @@ helpviewer_keywords:
   - "sys.column_store_row_groups catalog view"
 ms.assetid: 76e7fef2-d1a4-4272-a2bb-5f5dcd84aedc
 caps.latest.revision: 17
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # sys.column_store_row_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]

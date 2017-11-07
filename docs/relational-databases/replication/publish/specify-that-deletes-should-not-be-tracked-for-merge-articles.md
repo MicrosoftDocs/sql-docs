@@ -19,7 +19,6 @@ caps.latest.revision: 34
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Specify That Deletes Should Not Be Tracked For Merge Articles
     

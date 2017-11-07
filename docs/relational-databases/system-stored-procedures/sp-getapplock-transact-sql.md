@@ -19,10 +19,9 @@ helpviewer_keywords:
   - "sp_getapplock"
 ms.assetid: e1e85908-9f31-47cf-8af6-88c77e6f24c9
 caps.latest.revision: 34
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "On Demand"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # sp_getapplock (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

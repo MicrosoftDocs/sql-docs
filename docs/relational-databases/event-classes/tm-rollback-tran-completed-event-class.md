@@ -16,7 +16,6 @@ caps.latest.revision: 26
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # TM: Rollback Tran Completed Event Class
   The TM: Rollback Tran Completed event class indicates that a ROLLBACK TRANSACTION request completed. The request was sent from the client through the transaction management interface. The EventSubClass column indicates if a new transaction will be started after the current transaction is rolled back.  

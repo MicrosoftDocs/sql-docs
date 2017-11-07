@@ -17,7 +17,6 @@ caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Add Table Dialog Box (Query and View Designers) (Visual Database Tools)
 This dialog box lets you add tables, views, user-defined functions, or synonyms to a query or view.  

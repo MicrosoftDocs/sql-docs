@@ -17,7 +17,7 @@ ms.assetid: b64cc581-e784-42c4-bec8-932abd687423
 caps.latest.revision: 33
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # MDX Member Properties - User-Defined Member Properties

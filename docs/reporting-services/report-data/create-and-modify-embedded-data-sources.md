@@ -15,7 +15,6 @@ caps.latest.revision: 10
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
-ms.workload: "Inactive"
 ---
 # Create and Modify Embedded Data Sources
   An embedded data source is defined in a report definition and used only by that report.  

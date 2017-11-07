@@ -18,7 +18,7 @@ ms.assetid: 82347a16-4145-4655-8adf-2a300f1fdf99
 caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # Tools and Approaches for Processing (Analysis Services)

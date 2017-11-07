@@ -17,7 +17,6 @@ caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Save Change Script Dialog Box (Visual Database Tools)
 This dialog box shows the [!INCLUDE[tsql](../../includes/tsql_md.md)] script for the changes you have made since you last saved the table. It also allows you to save the script to a text file at a location you choose.  

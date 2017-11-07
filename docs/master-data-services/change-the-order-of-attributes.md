@@ -15,7 +15,6 @@ caps.latest.revision: 5
 author: "smartysanthosh"
 ms.author: "nagavo"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Change the Order of Attributes
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], you can change the order of attributes.  

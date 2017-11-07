@@ -17,7 +17,6 @@ caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # New Job Schedule - Job Schedule Properties
 Use this page to view and change the properties of the schedule.  

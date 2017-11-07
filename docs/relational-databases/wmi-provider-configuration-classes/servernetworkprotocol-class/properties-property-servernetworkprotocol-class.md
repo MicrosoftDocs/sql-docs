@@ -21,7 +21,6 @@ caps.latest.revision: 29
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Properties Property (ServerNetworkProtocol Class)
   Gets the properties associated with the server network protocol.  

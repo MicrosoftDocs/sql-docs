@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "Unicode [SQL Server], UNICODE function"
 ms.assetid: 5e3c40b2-8401-4741-9f2a-bae70eaa4da6
 caps.latest.revision: 35
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "Active"
 ---
 # UNICODE (Transact-SQL)

@@ -20,10 +20,9 @@ helpviewer_keywords:
   - "security [SQL Server], stored procedures"
 ms.assetid: 62b72907-7e95-4c97-9891-0c45d5b678ce
 caps.latest.revision: 22
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # Security Stored Procedures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

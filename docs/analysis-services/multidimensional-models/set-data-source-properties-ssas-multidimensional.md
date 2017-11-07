@@ -19,7 +19,7 @@ ms.assetid: bf8b600f-5b99-4f7d-908b-8a391721e9dd
 caps.latest.revision: 25
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # Set Data Source Properties (SSAS Multidimensional)

@@ -21,7 +21,6 @@ caps.latest.revision: 35
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Dependencies Property (SqlService Class)
   Gets a list of services that are dependent on the referenced service.  

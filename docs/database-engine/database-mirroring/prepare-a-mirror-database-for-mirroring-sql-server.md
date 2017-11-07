@@ -18,7 +18,6 @@ caps.latest.revision: 43
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
-ms.workload: "On Demand"
 ---
 # Prepare a Mirror Database for Mirroring (SQL Server)
   Before a database mirroring session can start, the database owner or system administrator must make sure that the mirror database has been created and is ready for mirroring. Creating a new mirror database minimally requires taking a full backup of the principal database and a subsequent log backup and restoring them both onto the mirror server instance, using WITH NORECOVERY.  

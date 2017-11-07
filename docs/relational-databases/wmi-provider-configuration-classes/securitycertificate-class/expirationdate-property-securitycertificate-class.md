@@ -21,7 +21,6 @@ caps.latest.revision: 33
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # ExpirationDate Property (SecurityCertificate Class)
   Gets the date when the security certificate ceases to be in effect.  

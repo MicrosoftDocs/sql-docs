@@ -23,8 +23,7 @@ ms.assetid: 908a2da9-274c-40d2-87dc-4641cb8d77e6
 caps.latest.revision: 14
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # InstanceSelection Element (ASSL)
   Provides a hint to client applications to suggest how a list of items should be displayed, based on the expected number of items in the list.  

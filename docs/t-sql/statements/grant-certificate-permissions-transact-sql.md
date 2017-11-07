@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "GRANT statement, certificates"
 ms.assetid: 77270245-a24b-4a20-b481-e6a5ea05b499
 caps.latest.revision: 15
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # GRANT Certificate Permissions (Transact-SQL)

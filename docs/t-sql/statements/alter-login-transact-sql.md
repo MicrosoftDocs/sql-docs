@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "modifying login accounts"
 ms.assetid: e247b84e-c99e-4af8-8b50-57586e1cb1c5
 caps.latest.revision: 68
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "Active"
 ---
 # ALTER LOGIN (Transact-SQL)

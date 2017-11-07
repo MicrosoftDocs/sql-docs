@@ -13,7 +13,7 @@ ms.assetid: 81ed0f44-8782-462d-af8f-0ba5b975df27
 caps.latest.revision: 7
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # Could not load file or assembly Microsoft-Data-Services

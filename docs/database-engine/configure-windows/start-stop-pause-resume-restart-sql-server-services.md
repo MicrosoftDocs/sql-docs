@@ -45,7 +45,6 @@ caps.latest.revision: 20
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "Active"
 ---
 # Start, Stop, Pause, Resume, Restart SQL Server Services
 

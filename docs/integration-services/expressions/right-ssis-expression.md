@@ -16,7 +16,6 @@ caps.latest.revision: 41
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # RIGHT (SSIS Expression)
   Returns the specified number of characters from the rightmost portion of the given character expression.  

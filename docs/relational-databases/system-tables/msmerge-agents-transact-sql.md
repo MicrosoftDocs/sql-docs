@@ -20,10 +20,9 @@ helpviewer_keywords:
   - "MSmerge_agents system table"
 ms.assetid: 639d2ebb-2c37-4fe0-b14b-1637bc5fc221
 caps.latest.revision: 28
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # MSmerge_agents (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

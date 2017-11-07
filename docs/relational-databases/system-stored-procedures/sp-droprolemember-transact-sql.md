@@ -18,10 +18,9 @@ helpviewer_keywords:
   - "sp_droprolemember"
 ms.assetid: c2f19ab1-e742-4d56-ba8e-8ffd40cf4925
 caps.latest.revision: 39
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "On Demand"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # sp_droprolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]

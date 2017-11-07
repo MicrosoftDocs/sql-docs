@@ -21,7 +21,7 @@ ms.assetid: 5253fa8c-b1ce-4504-aff6-a246b5e675c7
 caps.latest.revision: 29
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # MDSCHEMA_FUNCTIONS Rowset

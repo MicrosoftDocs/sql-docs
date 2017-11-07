@@ -16,7 +16,6 @@ caps.latest.revision: 7
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Detect SCSI Host Adapter Issues
   This rule checks the system event log for EventId 1066. This error is caused SCSI host adapter configuration issues or device malfunctioning.  

@@ -18,7 +18,6 @@ caps.latest.revision: 15
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Lesson 2: Creating a Subscription to the Merge Publication
 In this lesson, you will create the subscription using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. You will then set permissions on the subscription database and manually generate the filtered data snapshot for the new subscription. This lesson requires that you have completed the previous lesson, [Lesson 1: Publishing Data Using Merge Replication](../../relational-databases/replication/lesson-1-publishing-data-using-merge-replication.md).  

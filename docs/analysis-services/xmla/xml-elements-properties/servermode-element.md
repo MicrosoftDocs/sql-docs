@@ -14,10 +14,9 @@ applies_to:
   - "SQL Server 2016 Preview"
 ms.assetid: c2f8cb39-dad7-433b-b7b7-fb1625f76a84
 caps.latest.revision: 5
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+author: "jeannt"
+ms.author: "jeannt"
+manager: "erikre"
 ---
 # ServerMode Element
   The **ServerMode** server element specifies the mode the server is operating in.  

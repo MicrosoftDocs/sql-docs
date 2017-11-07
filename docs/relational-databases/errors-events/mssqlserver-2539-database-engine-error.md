@@ -13,10 +13,9 @@ helpviewer_keywords:
   - "2539 (Database Engine error)"
 ms.assetid: e638efcc-56f4-40f9-9740-17ef67b47d79
 caps.latest.revision: 16
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # MSSQLSERVER_2539
   

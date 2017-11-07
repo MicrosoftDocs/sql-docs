@@ -14,7 +14,6 @@ caps.latest.revision: 12
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Application-Level Partitioning
   This application processes orders. There is a lot of processing on recent orders. There is not a lot of processing on older orders. Recent orders are in a memory-optimized table. Older orders are in a disk-based table. All orders after the *hotDate* are in the memory-optimized table. All orders before the *hotDate* are in the disk-based table. Assume an extreme OLTP workload with a lot of concurrent transactions. This business rule (recent orders in a memory-optimized table) must be enforced even if several concurrent transactions are attempting to change the *hotDate*.  

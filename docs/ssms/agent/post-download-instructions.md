@@ -16,7 +16,6 @@ caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Post Download Instructions
 Use this page to specify download instructions for a target server.  

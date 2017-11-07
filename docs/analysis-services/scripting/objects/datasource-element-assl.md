@@ -25,8 +25,7 @@ ms.assetid: 113fba1c-2679-4d06-9339-90a4a76f9b31
 caps.latest.revision: 38
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # DataSource Element (ASSL)
   Defines a data source in a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] [Database](../../../analysis-services/scripting/objects/database-element-assl.md) element.  

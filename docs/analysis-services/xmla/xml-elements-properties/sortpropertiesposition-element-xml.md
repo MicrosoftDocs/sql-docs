@@ -14,10 +14,9 @@ applies_to:
   - "SQL Server 2016 Preview"
 ms.assetid: 68b040a7-ab16-46f5-8610-21db07df9181
 caps.latest.revision: 6
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+author: "jeannt"
+ms.author: "jeannt"
+manager: "erikre"
 ---
 # SortPropertiesPosition Element (XML)
   Contains information about the position of the element in a collection of elements.  

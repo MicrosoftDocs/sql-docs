@@ -25,10 +25,9 @@ helpviewer_keywords:
   - "system stored procedures [SQL Server]"
 ms.assetid: a5c4d5b8-5a24-4a2d-99b4-d003b546ee3a
 caps.latest.revision: 49
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "On Demand"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # System Stored Procedures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

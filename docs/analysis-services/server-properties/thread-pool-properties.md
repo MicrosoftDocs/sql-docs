@@ -20,8 +20,7 @@ ms.assetid: e2697bb6-6d3f-4621-b9fd-575ac39c2185
 caps.latest.revision: 30
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # Thread Pool Properties
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] uses multi-threading for many operations, improving overall server performance by running multiple jobs in parallel. To manage threads more efficiently, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] uses thread pools to preallocate threads and facilitate thread availability for the next job.  

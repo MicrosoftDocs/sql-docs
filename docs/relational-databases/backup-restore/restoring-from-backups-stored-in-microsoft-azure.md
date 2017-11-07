@@ -14,7 +14,6 @@ caps.latest.revision: 16
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "On Demand"
 ---
 # Restoring From Backups Stored in Microsoft Azure
   This topic outlines the considerations when restoring a database using a backup stored in the Windows Azure Blob storage service. This applies to backups created either by using SQL Server Backup to URL backup or by [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  

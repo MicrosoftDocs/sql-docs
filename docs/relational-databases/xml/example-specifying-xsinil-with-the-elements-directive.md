@@ -16,7 +16,6 @@ caps.latest.revision: 11
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Example: Specifying XSINIL with the ELEMENTS Directive
   The following query specifies the `ELEMENTS` directive to generate element-centric XML from the query result.  

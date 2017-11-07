@@ -14,7 +14,6 @@ caps.latest.revision: 17
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Service Principal Names (SPNs) in Client Connections (OLE DB)
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]

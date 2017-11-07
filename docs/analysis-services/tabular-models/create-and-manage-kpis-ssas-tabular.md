@@ -17,8 +17,7 @@ ms.assetid: c96026c2-4394-4c3c-986b-4c95a4421900
 caps.latest.revision: 15
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # Create and Manage KPIs (SSAS Tabular)
   This topic describes how to create, edit, or delete a KPI (Key Performance Indicator) in a tabular model. To create a KPI, you select a measure that evaluates to the KPI’s Base value. You then use the Key Performance Indicator dialog box to select a second measure or an absolute value that evaluates to a target value. You can then define status thresholds that measure the performance between the Base and Target measures.  

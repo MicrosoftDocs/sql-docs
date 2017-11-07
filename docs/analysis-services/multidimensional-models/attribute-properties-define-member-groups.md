@@ -19,7 +19,7 @@ ms.assetid: 006cc915-c499-4781-b9a7-01ad31bebf6a
 caps.latest.revision: 36
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # Attribute Properties - Define Member Groups

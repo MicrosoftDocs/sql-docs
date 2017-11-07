@@ -17,7 +17,6 @@ caps.latest.revision: 3
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "On Demand"
 ---
 # SQL Server Transaction Log Architecture and Management Guide
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]

@@ -23,7 +23,6 @@ caps.latest.revision: 30
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # srv_rpcowner (Extended Stored Procedure API)
     

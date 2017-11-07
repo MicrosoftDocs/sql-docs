@@ -13,10 +13,9 @@ helpviewer_keywords:
   - "5256 (Database Engine error)"
 ms.assetid: 6fe254b4-2926-446f-8b20-0f1d921a4615
 caps.latest.revision: 16
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # MSSQLSERVER_5256
   

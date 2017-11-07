@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "ALTER CREDENTIAL statement"
 ms.assetid: b08899a6-c09e-4af4-91aa-a978ada79264
 caps.latest.revision: 27
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # ALTER CREDENTIAL (Transact-SQL)

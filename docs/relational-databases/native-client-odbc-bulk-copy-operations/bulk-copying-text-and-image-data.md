@@ -19,7 +19,6 @@ caps.latest.revision: 28
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Bulk Copying Text and Image Data
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]

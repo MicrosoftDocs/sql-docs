@@ -19,7 +19,6 @@ caps.latest.revision: 17
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # ObjectType Trace Event Column
   The Object Type trace event column is used in a variety of trace events. This topic describes the possible values of this column and their associated definitions.  

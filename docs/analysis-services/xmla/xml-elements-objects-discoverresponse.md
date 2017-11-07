@@ -25,10 +25,9 @@ helpviewer_keywords:
   - "DiscoverResponse element"
 ms.assetid: 20e10a82-dbd1-4ead-b92d-f84b4b2f10c6
 caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+author: "jeannt"
+ms.author: "jeannt"
+manager: "erikre"
 ---
 # XML Elements - Objects - DiscoverResponse
   Contains the information returned by an instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in response to a [Discover](../../analysis-services/xmla/xml-elements-methods-discover.md) method call.  

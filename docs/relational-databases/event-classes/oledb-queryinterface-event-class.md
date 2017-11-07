@@ -16,7 +16,6 @@ caps.latest.revision: 34
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # OLEDB QueryInterface Event Class
   The **OLEDB QueryInterface** event class occurs when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] issues an OLE DB **QueryInterface** call for distributed queries and remote stored procedures. Include this event class in traces that are monitoring problems associated with distributed queries and remote stored procedures.  

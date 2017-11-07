@@ -18,10 +18,9 @@ helpviewer_keywords:
   - "sp_repldone"
 ms.assetid: 045d3cd1-712b-44b7-a56a-c9438d4077b9
 caps.latest.revision: 19
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "On Demand"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # sp_repldone (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

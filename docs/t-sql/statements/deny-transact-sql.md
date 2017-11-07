@@ -27,9 +27,9 @@ helpviewer_keywords:
   - "denying permissions [SQL Server]"
 ms.assetid: c32d1e01-9ee9-4665-a516-fcfece58078e
 caps.latest.revision: 48
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "On Demand"
 ---
 # DENY (Transact-SQL)

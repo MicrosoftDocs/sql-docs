@@ -16,7 +16,6 @@ caps.latest.revision: 13
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Plan Guide Unsuccessful Event Class
   The Plan Guide Unsuccessful event class indicates that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] could not produce an execution plan for a query or batch that contained a plan guide. Instead, the plan was compiled without using the plan guide. The event fires when the following conditions are true:  

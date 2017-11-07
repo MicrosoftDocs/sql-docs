@@ -25,8 +25,7 @@ ms.assetid: ad3319d5-c3f0-49e3-b9c0-2fb77945c512
 caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # Root Element (ASSL)
   Contains the data (rowset) for a data source.  

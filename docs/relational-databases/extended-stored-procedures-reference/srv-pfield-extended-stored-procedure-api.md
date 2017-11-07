@@ -23,7 +23,6 @@ caps.latest.revision: 32
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # srv_pfield (Extended Stored Procedure API)
     

@@ -15,10 +15,9 @@ helpviewer_keywords:
   - "10061 (Database Engine error)"
 ms.assetid: 729602f3-08df-474c-8740-8dea13c1eee3
 caps.latest.revision: 11
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # MSSQLSERVER_10061
   

@@ -17,7 +17,6 @@ caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Open a Template
 You can open a template from Template Explorer.  

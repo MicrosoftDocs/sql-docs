@@ -16,7 +16,6 @@ caps.latest.revision: 11
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Use Cursors (ODBC)
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]

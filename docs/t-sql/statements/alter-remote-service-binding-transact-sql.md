@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "modifying remote service bindings"
 ms.assetid: ee620b4a-9375-4eaa-a016-69916c9e1e68
 caps.latest.revision: 37
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # ALTER REMOTE SERVICE BINDING (Transact-SQL)

@@ -16,7 +16,6 @@ caps.latest.revision: 28
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
-ms.workload: "Inactive"
 ---
 # Configure the web portal
 

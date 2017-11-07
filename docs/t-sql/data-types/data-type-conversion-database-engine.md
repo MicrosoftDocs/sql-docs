@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "converting data types [SQL Server], about converting data types"
 ms.assetid: ffacf45e-a488-48d0-9bb0-dcc7fd365299
 caps.latest.revision: 37
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "Active"
 ---
 # Data type conversion (Database Engine)

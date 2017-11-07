@@ -16,7 +16,6 @@ caps.latest.revision: 9
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Set Cursor Options (ODBC)
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]

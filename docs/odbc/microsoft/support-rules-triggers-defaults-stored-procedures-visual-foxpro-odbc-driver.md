@@ -32,7 +32,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Support for Rules, Triggers, Default Values, and Stored Procedures (Visual FoxPro ODBC Driver)
 You cannot create Visual FoxPro rules, triggers, default values, or stored procedures using the Visual FoxPro ODBC Driver. However, your application might interact with existing rules, triggers, default values, or stored procedures as it inserts, updates, or deletes Visual FoxPro data stored in a database.  

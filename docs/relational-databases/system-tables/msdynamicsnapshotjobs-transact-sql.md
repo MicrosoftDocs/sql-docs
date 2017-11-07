@@ -20,10 +20,9 @@ helpviewer_keywords:
   - "MSdynamicsnapshotjobs system table"
 ms.assetid: 4f36a325-0e3c-46c4-aeeb-416346cce0bc
 caps.latest.revision: 26
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # MSdynamicsnapshotjobs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

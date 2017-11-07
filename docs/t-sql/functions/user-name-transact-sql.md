@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "database usernames [SQL Server]"
 ms.assetid: ab32d644-4228-449a-9ef0-5a975c305775
 caps.latest.revision: 37
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "On Demand"
 ---
 # USER_NAME (Transact-SQL)
@@ -44,13 +44,13 @@ USER_NAME ( [ id ] )
   
 ## Arguments  
  *id*  
- Is the identification number associated with a database user. *id* is **int**. The parentheses are required.  
+ Is the identification number associated with a database user. *id*is **int**. The parentheses are required.  
   
 ## Return Types  
  **nvarchar(256)**  
   
 ## Remarks  
- When *id* is omitted, the current user in the current context is assumed. If the parameter contains the word NULL will return NULL. When USER_NAME is called without specifying an *id* after an EXECUTE AS statement, USER_NAME returns the name of the impersonated user. If a Windows principal accesses the database by way of membership in a group, USER_NAME returns the name of the Windows principal instead of the group.  
+ When *id* is omitted, the current user in the current context is assumed. If the parameter contains the word NULL will return NULL.When USER_NAME is called without specifying an *id* after an EXECUTE AS statement, USER_NAME returns the name of the impersonated user. If a Windows principal accesses the database by way of membership in a group, USER_NAME returns the name of the Windows principal instead of the group.  
   
 ## Examples  
   

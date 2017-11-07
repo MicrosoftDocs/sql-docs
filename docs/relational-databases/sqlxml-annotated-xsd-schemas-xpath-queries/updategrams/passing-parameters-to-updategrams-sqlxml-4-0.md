@@ -20,7 +20,6 @@ caps.latest.revision: 30
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Passing Parameters to Updategrams (SQLXML 4.0)
   Updategrams are templates; therefore, you can pass them parameters. For more information about passing parameters to templates, see [Updategram Security Considerations &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md).  

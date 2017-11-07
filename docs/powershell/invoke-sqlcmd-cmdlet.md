@@ -19,7 +19,6 @@ caps.latest.revision: 19
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Active"
 ---
 # Invoke-Sqlcmd cmdlet
   **Invoke-Sqlcmd** is a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] cmdlet that runs scripts that CONTAIN statements from the languages ([!INCLUDE[tsql](../includes/tsql-md.md)] and XQuery) and commands supported by the **sqlcmd** utility.  

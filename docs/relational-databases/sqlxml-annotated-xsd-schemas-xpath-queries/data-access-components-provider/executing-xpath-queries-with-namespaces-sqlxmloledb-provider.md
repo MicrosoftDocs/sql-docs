@@ -21,7 +21,6 @@ caps.latest.revision: 29
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Executing XPath Queries with Namespaces (SQLXMLOLEDB Provider)
   XPath queries can include namespaces. If the schema elements are namespace qualified (that is, if they include a target namespace), XPath queries against the schema must specify this namespace.  

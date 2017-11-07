@@ -18,7 +18,6 @@ caps.latest.revision: 11
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Reinitialize Subscription(s) - All Subscriptions
   The **Reinitialize Subscription(s)** dialog box allows you to mark all subscriptions to a publication for reinitialization. Reinitialization involves applying a snapshot to each Subscriber; it is performed by the Distribution Agent for subscriptions to transactional publications and by the Merge Agent for subscriptions to merge publications.  

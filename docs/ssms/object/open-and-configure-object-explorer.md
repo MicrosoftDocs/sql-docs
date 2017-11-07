@@ -14,7 +14,6 @@ caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
-ms.workload: "On Demand"
 ---
 # Open and Configure Object Explorer
 Open Object Explorer by using the **View** menu in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]. Configure Obect Explorer options by using **Options** on the **Tools** menu.  

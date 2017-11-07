@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "SYMKEYPROPERTY"
 ms.assetid: 3d1f7075-3a3c-4660-8cd0-ed938b86fecd
 caps.latest.revision: 14
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # SYMKEYPROPERTY (Transact-SQL)

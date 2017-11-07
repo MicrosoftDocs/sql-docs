@@ -16,7 +16,6 @@ caps.latest.revision: 28
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Binding and Data Transfer of Table-Valued Parameters and Column Values
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]

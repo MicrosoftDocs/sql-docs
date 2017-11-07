@@ -20,7 +20,6 @@ caps.latest.revision: 13
 author: "barbkess"
 ms.author: "barbkess"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # sys.internal_partitions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

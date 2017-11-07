@@ -13,10 +13,9 @@ helpviewer_keywords:
   - "2592 (Database Engine error)"
 ms.assetid: 8406a3a4-e8f0-46f4-a262-084bc119600b
 caps.latest.revision: 16
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # MSSQLSERVER_2592
   

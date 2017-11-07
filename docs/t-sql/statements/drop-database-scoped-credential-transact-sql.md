@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "credential [SQL Server], DROP DATABASE SCOPED CREDENTIAL statement"
 ms.assetid: 319d59f4-fa82-47ca-869b-3a9cd52900b0
 caps.latest.revision: 11
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # DROP DATABASE SCOPED CREDENTIAL (Transact-SQL)

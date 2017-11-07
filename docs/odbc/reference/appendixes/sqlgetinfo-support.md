@@ -18,7 +18,6 @@ caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # SQLGetInfo Support
 When an ODBC 2.*x* application calls **SQLGetInfo** to an ODBC 3*.x* driver, the *InfoType* arguments in the following table must be supported.  

@@ -17,7 +17,6 @@ caps.latest.revision: 5
 author: "smartysanthosh"
 ms.author: "nagavo"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Navigational Access (Master Data Services)
   Navigational access applies to model object security, which is assigned on the **Models** tab.  

@@ -18,10 +18,9 @@ helpviewer_keywords:
   - "sp_autostats"
 ms.assetid: d1df8c15-ee73-49eb-9d13-6e98943c3e38
 caps.latest.revision: 38
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "On Demand"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # sp_autostats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

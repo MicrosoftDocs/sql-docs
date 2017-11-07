@@ -16,7 +16,6 @@ caps.latest.revision: 25
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "On Demand"
 ---
 # Lesson 1-9 - Summary - Basic Navigation
 The [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] design surface can be customized to your personal preference and work requirements.  

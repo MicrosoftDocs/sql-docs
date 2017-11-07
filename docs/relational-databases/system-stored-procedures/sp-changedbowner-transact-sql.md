@@ -18,10 +18,9 @@ helpviewer_keywords:
   - "sp_changedbowner"
 ms.assetid: 516ef311-e83b-45c9-b9cd-0e0641774c04
 caps.latest.revision: 35
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Active"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # sp_changedbowner (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -22,7 +22,7 @@ ms.assetid: 6d692856-4b01-4dca-a650-f97ac220c114
 caps.latest.revision: 38
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # Database Dimensions - Create a Date type Dimension

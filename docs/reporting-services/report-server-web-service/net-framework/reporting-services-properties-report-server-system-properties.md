@@ -20,7 +20,6 @@ caps.latest.revision: 55
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
-ms.workload: "Inactive"
 ---
 # Reporting Services Properties - Report Server System Properties
   The following system property names are reserved. You cannot create user-defined properties of the same name. You can read or modify many of these properties using the Web service methods.  

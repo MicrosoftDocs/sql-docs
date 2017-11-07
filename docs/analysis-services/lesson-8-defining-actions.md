@@ -15,7 +15,7 @@ ms.assetid: 15459396-83c9-48a0-b10a-99ae38768c79
 caps.latest.revision: 16
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # Lesson 8: Defining Actions

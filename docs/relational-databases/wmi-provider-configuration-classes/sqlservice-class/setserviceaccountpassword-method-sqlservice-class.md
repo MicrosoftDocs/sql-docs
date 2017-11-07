@@ -21,7 +21,6 @@ caps.latest.revision: 36
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # SetServiceAccountPassword Method (SqlService Class)
   Modifies the password for the account that the referenced service runs under.  

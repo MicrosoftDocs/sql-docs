@@ -15,7 +15,7 @@ ms.assetid: 55b0f0d0-1cdf-4876-9c3d-d0c848be3f5d
 caps.latest.revision: 23
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "On Demand"
 ---
 # Lesson 8: Create Perspectives

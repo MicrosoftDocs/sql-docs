@@ -19,7 +19,7 @@ ms.assetid: 9ab1506b-856e-4762-a663-5adf15ac71e3
 caps.latest.revision: 29
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # Delete a Mining Model from a Mining Structure

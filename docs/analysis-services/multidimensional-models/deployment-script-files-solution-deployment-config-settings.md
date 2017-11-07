@@ -21,7 +21,7 @@ ms.assetid: 953814a3-85ef-40cc-b46a-d532aa7a6569
 caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # Deployment Script Files - Solution Deployment Config Settings

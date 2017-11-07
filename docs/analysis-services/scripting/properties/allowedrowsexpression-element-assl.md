@@ -16,8 +16,7 @@ ms.assetid: ec24b11d-d11e-4369-a619-7e41a3c46159
 caps.latest.revision: 6
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # AllowedRowsExpression Element (ASSL)
   Contains a Data Analysis expression (DAX), of Boolean type, which defines the contents of the parent element.  

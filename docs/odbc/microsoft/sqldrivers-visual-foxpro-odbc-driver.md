@@ -16,7 +16,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # SQLDrivers (Visual FoxPro ODBC Driver)
 > [!NOTE]  

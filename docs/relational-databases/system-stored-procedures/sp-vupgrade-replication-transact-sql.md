@@ -18,10 +18,9 @@ helpviewer_keywords:
   - "sp_vupgrade_replication"
 ms.assetid: d2c0ed66-07d1-4adc-82e5-a654376879bc
 caps.latest.revision: 30
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # sp_vupgrade_replication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

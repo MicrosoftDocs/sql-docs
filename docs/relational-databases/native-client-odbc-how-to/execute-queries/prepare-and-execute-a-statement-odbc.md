@@ -17,7 +17,6 @@ caps.latest.revision: 21
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Prepare and Execute a Statement (ODBC)
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]

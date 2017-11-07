@@ -14,7 +14,6 @@ caps.latest.revision: 6
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
-ms.workload: "Inactive"
 ---
 
 # Working with subscriptions (web portal)

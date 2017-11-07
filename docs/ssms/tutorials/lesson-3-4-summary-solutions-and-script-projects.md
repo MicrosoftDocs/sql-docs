@@ -16,7 +16,6 @@ caps.latest.revision: 30
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Lesson 3-4 - Summary - Solutions and Script Projects
 By leveraging the extensive developer features of [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] offers the functionality that developers need for enterprise-level code management. You can create custom templates to support your repetitive tasks, save and manage complex script projects in a centralized and coordinated environment.  

@@ -18,10 +18,9 @@ helpviewer_keywords:
   - "sp_scriptpublicationcustomprocs"
 ms.assetid: b06102d5-4284-4834-b126-bc0baea49be5
 caps.latest.revision: 20
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # sp_scriptpublicationcustomprocs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -25,7 +25,7 @@ ms.assetid: 100a4209-2c22-4902-a8ca-f2bd99bf8fbb
 caps.latest.revision: 40
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # Actions Element (ASSL)

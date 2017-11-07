@@ -13,10 +13,9 @@ helpviewer_keywords:
   - "2536 (Database Engine error)"
 ms.assetid: 6307cce7-e5a4-4f7f-a105-977eefd7a1b6
 caps.latest.revision: 16
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # MSSQLSERVER_2536
   

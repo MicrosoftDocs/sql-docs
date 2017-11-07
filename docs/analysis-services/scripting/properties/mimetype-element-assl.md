@@ -23,8 +23,7 @@ ms.assetid: 710e2519-6892-4ce8-a10f-a4edf7077e18
 caps.latest.revision: 12
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # MimeType Element (ASSL)
   Contains the Multipurpose Internet Mail Extensions (MIME) type, if applicable, of the data represented by the [DataItem](../../../analysis-services/scripting/data-type/dataitem-data-type-assl.md) element.  

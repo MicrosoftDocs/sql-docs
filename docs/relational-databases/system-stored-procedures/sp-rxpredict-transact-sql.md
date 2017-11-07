@@ -19,7 +19,6 @@ helpviewer_keywords:
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 
 # sp_rxPredict  

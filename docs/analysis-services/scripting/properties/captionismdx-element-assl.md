@@ -25,8 +25,7 @@ ms.assetid: 7569a75e-b3e0-4332-97d3-585abc546ada
 caps.latest.revision: 36
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # CaptionIsMdx Element (ASSL)
   Defines whether the caption for the [Action](../../../analysis-services/scripting/objects/action-element-assl.md) element is a Multidimensional Expressions (MDX) expression.  

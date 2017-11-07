@@ -17,7 +17,6 @@ caps.latest.revision: 9
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
-ms.workload: "Inactive"
 ---
 # ConfigurationSetting Property - Version
   Returns the version of the report server in the format Major.Minor.Build.Revision. Read-only.  

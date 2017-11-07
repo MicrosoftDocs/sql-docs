@@ -17,7 +17,6 @@ caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Set the SQL Server Connection for the SQL Server Agent Service (SQL Server Management Studio)
 This topic describes how to set the connection between [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent and the [!INCLUDE[ssDE](../../includes/ssde_md.md)] in [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent service can connect to a local instance of SQL Server by using Windows Authentication.  

@@ -17,7 +17,6 @@ caps.latest.revision: 19
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # REVERSE (SSIS Expression)
   Returns a character expression in reverse order.  

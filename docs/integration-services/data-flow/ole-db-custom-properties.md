@@ -14,7 +14,6 @@ caps.latest.revision: 8
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # OLE DB Custom Properties
   **Source Custom Properties**  

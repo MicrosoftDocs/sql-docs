@@ -19,10 +19,9 @@ helpviewer_keywords:
   - "catalog views [SQL Server], frequently asked questions"
 ms.assetid: ca202580-c37e-4ccd-9275-77ce79481f64
 caps.latest.revision: 51
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "On Demand"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # Querying the SQL Server System Catalog FAQ
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

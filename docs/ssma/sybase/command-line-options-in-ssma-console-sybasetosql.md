@@ -19,7 +19,6 @@ caps.latest.revision: 11
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Command Line Options in SSMA Console (SybaseToSQL)
 Microsoft provides you with a robust set of command line options to execute and control SSMA activities. The ensuing sections detail the same.  

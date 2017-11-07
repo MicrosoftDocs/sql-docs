@@ -16,7 +16,6 @@ caps.latest.revision: 50
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "On Demand"
 ---
 # Lesson 1-2 - Connect with Registered Servers and Object Explorer
 This tutorial demonstrates the use of Registered Servers and Object Explorer.  

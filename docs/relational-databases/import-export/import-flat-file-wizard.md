@@ -14,7 +14,6 @@ f1_keywords:
 author: "yualan"
 ms.author: "alayu"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Import Flat File to SQL Wizard
 > For content related to the Import and Export Wizard, see [SQL Server Import and Export Wizard](https://docs.microsoft.com/en-us/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard).

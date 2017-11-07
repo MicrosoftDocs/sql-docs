@@ -15,7 +15,6 @@ caps.latest.revision: 11
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "erikre"
-ms.workload: "Inactive"
 ---
 
 # Displaying a Series with Multiple Data Ranges on a Chart

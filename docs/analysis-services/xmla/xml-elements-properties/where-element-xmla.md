@@ -25,10 +25,9 @@ helpviewer_keywords:
   - "Where element"
 ms.assetid: 81fb4190-3379-4ddf-8795-a0772f3b92bb
 caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+author: "jeannt"
+ms.author: "jeannt"
+manager: "erikre"
 ---
 # Where Element (XMLA)
   Defines a filter condition used by the parent [Drop](../../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md) or [Update](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md) command.  

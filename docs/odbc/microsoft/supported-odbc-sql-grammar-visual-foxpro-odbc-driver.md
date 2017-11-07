@@ -22,7 +22,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Supported ODBC SQL Grammar (Visual FoxPro ODBC Driver)
 The Microsoft Visual FoxPro ODBC Driver supports the following:  

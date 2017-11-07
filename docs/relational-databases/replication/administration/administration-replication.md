@@ -20,7 +20,6 @@ caps.latest.revision: 38
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Administration (Replication)
   This section contains information on administering replication topologies. We recommend that you read the best practices topic first, and then follow the links from that topic to more detailed information in this section and other sections.  

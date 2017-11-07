@@ -25,7 +25,7 @@ ms.assetid: da4e32a0-1416-4d32-8b7f-7d74be23c9d4
 caps.latest.revision: 35
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # Kpis Element (ASSL)

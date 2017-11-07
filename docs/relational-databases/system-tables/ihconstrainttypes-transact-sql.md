@@ -20,10 +20,9 @@ helpviewer_keywords:
   - "IHconstrainttypes system table"
 ms.assetid: 955d6fa9-0b31-4335-a3cd-e4c4d90ad308
 caps.latest.revision: 12
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # IHconstrainttypes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

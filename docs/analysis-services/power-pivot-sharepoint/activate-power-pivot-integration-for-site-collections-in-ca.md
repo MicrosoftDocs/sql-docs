@@ -15,7 +15,7 @@ ms.assetid: 62a27e53-446a-42d7-b5db-c009e02d4904
 caps.latest.revision: 8
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # Activate Power Pivot Integration for Site Collections in CA

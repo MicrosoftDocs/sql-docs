@@ -21,7 +21,6 @@ caps.latest.revision: 42
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Creating an ODBC Destination with the Script Component
   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], you typically save data to an ODBC destination by using an [!INCLUDE[vstecado](../../includes/vstecado-md.md)] destination and the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Data Provider for ODBC. However, you can also create an ad hoc ODBC destination for use in a single package. To create this ad hoc ODBC destination, you use the Script component as shown in the following example.  
@@ -46,7 +45,7 @@ ms.workload: "Inactive"
   
 2.  Create a destination table by running the following Transact-SQL command in the **AdventureWorks** database:  
   
-    ```sql
+    ```  
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,  
         [City] [nvarchar](30) NOT NULL)  
     ```  

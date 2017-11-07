@@ -16,7 +16,6 @@ caps.latest.revision: 41
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Witness Server Instance (Configure Database Mirroring Security Wizard)
   Use this page to specify information about the server instance that is to serve as the witness for the session.  

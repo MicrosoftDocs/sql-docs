@@ -20,10 +20,9 @@ helpviewer_keywords:
   - "MSmerge_dynamic_snapshots system table"
 ms.assetid: a5592b3c-731b-4fc9-ae4b-2602ed78248e
 caps.latest.revision: 28
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # MSmerge_dynamic_snapshots (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

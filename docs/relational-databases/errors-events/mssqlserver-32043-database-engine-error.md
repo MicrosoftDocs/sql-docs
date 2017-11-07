@@ -13,10 +13,9 @@ helpviewer_keywords:
   - "32043 (Database Engine error)"
 ms.assetid: a0c48ae3-4c8c-419c-afb5-579fcefac01d
 caps.latest.revision: 14
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # MSSQLSERVER_32043
   

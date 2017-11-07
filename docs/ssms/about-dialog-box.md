@@ -17,7 +17,6 @@ caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # About Dialog Box
 The **About** dialog box provides product information and allows you to access information about the machine the product is running on. For evaluation copies, the [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] entry lists the number of days remaining until the installation expires. This dialog box is available on the **Help** menu.  

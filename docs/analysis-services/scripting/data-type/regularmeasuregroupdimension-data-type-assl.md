@@ -25,7 +25,7 @@ ms.assetid: 5c4ce400-6d7c-40fc-9bcb-392718b77182
 caps.latest.revision: 40
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # RegularMeasureGroupDimension Data Type (ASSL)

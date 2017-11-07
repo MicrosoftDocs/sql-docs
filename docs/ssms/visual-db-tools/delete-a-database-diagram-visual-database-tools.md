@@ -19,7 +19,6 @@ caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Delete a Database Diagram (Visual Database Tools)
 When you no longer need a database diagram, you can delete it.  

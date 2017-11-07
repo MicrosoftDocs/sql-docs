@@ -23,7 +23,7 @@ ms.assetid: 03a8eb6b-159f-4a0a-afbe-06a2424b6090
 caps.latest.revision: 37
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # Client Architecture Requirements for Analysis Services Development

@@ -23,10 +23,9 @@ helpviewer_keywords:
   - "retrieving system table information"
 ms.assetid: 56b8ad51-930c-4e5c-8d99-8c939d5b70ac
 caps.latest.revision: 41
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "On Demand"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # System Tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

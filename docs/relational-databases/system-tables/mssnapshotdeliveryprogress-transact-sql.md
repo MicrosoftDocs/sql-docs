@@ -20,10 +20,9 @@ helpviewer_keywords:
   - "MSsnapshotdeliveryprogress system table"
 ms.assetid: 9164bfe2-6fc4-4b52-946a-09ea3cf67041
 caps.latest.revision: 30
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # MSsnapshotdeliveryprogress (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -16,7 +16,6 @@ caps.latest.revision: 24
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Lesson 2-2 - Subscribe to and Check the Finance Name Policy
 In this task, you will configure the Finance database to subscribe to the Finance policy category. Then, you will test the Finance Name policy.  

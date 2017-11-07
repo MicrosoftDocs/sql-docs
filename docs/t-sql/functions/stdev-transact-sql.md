@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "statistical standard deviation"
 ms.assetid: ff41b4fc-4f71-4f18-bf78-96614ea908cc
 caps.latest.revision: 40
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "Active"
 ---
 # STDEV (Transact-SQL)

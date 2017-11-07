@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "time [SQL Server], functions"
 ms.assetid: 83e378a2-6e89-4c80-bc4f-644958d9e0a9
 caps.latest.revision: 79
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "Active"
 ---
 # Date and Time Data Types and Functions (Transact-SQL)

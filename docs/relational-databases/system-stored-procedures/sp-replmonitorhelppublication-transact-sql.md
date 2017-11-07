@@ -18,10 +18,9 @@ helpviewer_keywords:
   - "sp_replmonitorhelppublication"
 ms.assetid: 7928c50c-617f-41c5-9e0f-4e42e8be55dc
 caps.latest.revision: 30
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # sp_replmonitorhelppublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -16,7 +16,6 @@ caps.latest.revision: 29
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Audit App Role Change Password Event Class
   The **Audit App Role Change Password** event class occurs whenever a password is changed for an application role.  

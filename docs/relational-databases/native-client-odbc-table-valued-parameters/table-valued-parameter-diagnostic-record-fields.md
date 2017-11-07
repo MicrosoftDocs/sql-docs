@@ -16,7 +16,6 @@ caps.latest.revision: 7
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Table-Valued Parameter Diagnostic Record Fields
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]

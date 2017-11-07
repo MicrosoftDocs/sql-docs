@@ -17,7 +17,6 @@ caps.latest.revision: 19
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "On Demand"
 ---
 # Create a Trace (Transact-SQL)
   This topic describes how to use stored procedures to create a trace.  

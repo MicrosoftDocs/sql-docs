@@ -37,7 +37,6 @@ caps.latest.revision: 75
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
-ms.workload: "On Demand"
 ---
 # Fuzzy Lookup Transformation
   The Fuzzy Lookup transformation performs data cleaning tasks such as standardizing data, correcting data, and providing missing values.  

@@ -17,7 +17,6 @@ caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Choose Target Table for Insert Values Dialog Box (Visual Database Tools)
 This dialog allows you to specify which table to update with an INSERT VALUES query. This dialog box appears if more than one table is displayed in the **Diagram** pane when you change a query's type to an INSERT VALUES query.  

@@ -18,7 +18,6 @@ caps.latest.revision: 37
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "On Demand"
 ---
 # When to Use SQL Server Native Client
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]

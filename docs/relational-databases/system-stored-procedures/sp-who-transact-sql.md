@@ -18,10 +18,9 @@ helpviewer_keywords:
   - "sp_who"
 ms.assetid: 132dfb08-fa79-422e-97d4-b2c4579c6ac5
 caps.latest.revision: 48
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Active"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # sp_who (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -25,7 +25,6 @@ caps.latest.revision: 45
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Using User-Defined Types
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]

@@ -13,7 +13,7 @@ ms.assetid: ade92e15-dfbf-496b-9378-a00bd83ba750
 caps.latest.revision: 6
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # Comments, Shapes, other objects not supported by Excel Services

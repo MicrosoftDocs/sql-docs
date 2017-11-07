@@ -25,7 +25,7 @@ ms.assetid: 8e527916-932e-48ec-9010-f22cd4b721e2
 caps.latest.revision: 21
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # Analysis Services Scripting Language XML Data Types (ASSL)

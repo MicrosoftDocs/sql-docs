@@ -16,7 +16,6 @@ caps.latest.revision: 22
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Audit Server Object Take Ownership Event Class
   The **Audit Server Object Take Ownership** event class occurs when the owner is changed for objects in server scope.  

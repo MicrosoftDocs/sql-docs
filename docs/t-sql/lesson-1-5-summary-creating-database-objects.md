@@ -15,9 +15,9 @@ helpviewer_keywords:
   - "creating database objects"
 ms.assetid: 5db8aebc-cc54-48d1-8cba-b2e2d21fa333
 caps.latest.revision: 12
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "On Demand"
 ---
 # Lesson 1-5 - Summary - Creating Database Objects

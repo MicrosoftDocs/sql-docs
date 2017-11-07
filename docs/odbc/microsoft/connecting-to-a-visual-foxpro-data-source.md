@@ -17,7 +17,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Connecting to a Visual FoxPro Data Source
 You can connect to a Visual FoxPro data source using your Microsoft Office application or using the SQL API.  

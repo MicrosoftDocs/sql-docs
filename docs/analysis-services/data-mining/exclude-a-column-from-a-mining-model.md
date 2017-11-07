@@ -18,7 +18,7 @@ ms.assetid: 404fe5fe-3ba2-4b9b-8780-0d02343d467f
 caps.latest.revision: 29
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # Exclude a Column from a Mining Model

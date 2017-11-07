@@ -20,7 +20,7 @@ ms.assetid: 363b662c-b839-4971-bbd7-1842f73ce141
 caps.latest.revision: 30
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # MDX Data Modification - Modifying Data

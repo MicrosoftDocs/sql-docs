@@ -17,7 +17,6 @@ caps.latest.revision: 5
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Configure Properties of a Data Collector
   This topic discusses how you can configure the properties of a data collector.  

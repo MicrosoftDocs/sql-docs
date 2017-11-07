@@ -15,7 +15,6 @@ caps.latest.revision: 10
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "erikre"
-ms.workload: "Inactive"
 ---
 
 # Linking Multiple Data Regions to the Same Dataset (Report Builder and SSRS)

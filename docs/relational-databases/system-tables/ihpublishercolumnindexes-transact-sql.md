@@ -20,10 +20,9 @@ helpviewer_keywords:
   - "IHpublishercolumnindexes system table"
 ms.assetid: 95b95a1d-b502-4838-825f-82a456487e25
 caps.latest.revision: 23
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # IHpublishercolumnindexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

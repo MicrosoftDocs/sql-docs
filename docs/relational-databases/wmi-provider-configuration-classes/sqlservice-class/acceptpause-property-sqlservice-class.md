@@ -20,7 +20,6 @@ caps.latest.revision: 34
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # AcceptPause Property (SqlService Class)
   Gets the Boolean property value that specifies whether the service can be paused.  

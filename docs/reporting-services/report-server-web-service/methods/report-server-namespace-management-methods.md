@@ -22,7 +22,6 @@ caps.latest.revision: 37
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
-ms.workload: "Inactive"
 ---
 # Report Server Namespace Management Methods
   The Report Server Management Web service contains methods that you can use to manage reports, folders, and resources in the report server database.  

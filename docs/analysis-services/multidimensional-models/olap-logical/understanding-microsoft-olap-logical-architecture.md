@@ -19,7 +19,7 @@ ms.assetid: 1b9cae0a-8990-4194-af5f-a1ea5f2aff06
 caps.latest.revision: 14
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # Understanding Microsoft OLAP Logical Architecture

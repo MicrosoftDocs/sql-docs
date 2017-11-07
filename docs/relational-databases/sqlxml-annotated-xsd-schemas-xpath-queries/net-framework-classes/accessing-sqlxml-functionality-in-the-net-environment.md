@@ -19,7 +19,6 @@ caps.latest.revision: 22
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Accessing SQLXML Functionality in the .NET Environment
   This example shows:  

@@ -15,7 +15,7 @@ ms.assetid: 0ec7feb3-a6b2-4be1-8036-c72b9fbc3562
 caps.latest.revision: 7
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # Test an Action

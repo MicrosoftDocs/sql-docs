@@ -16,10 +16,9 @@ helpviewer_keywords:
   - "ReadWriteMode command"
 ms.assetid: 379bcaca-bb7e-4934-a9e7-21f8ede2fdc7
 caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+author: "jeannt"
+ms.author: "jeannt"
+manager: "erikre"
 ---
 # ReadWriteMode Element
   The **ReadWriteMode** database property specifies whether the database is in **ReadWrite** mode or in **ReadOnly** mode. These are the only two possible values of the property.  

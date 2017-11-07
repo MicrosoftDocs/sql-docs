@@ -20,10 +20,9 @@ helpviewer_keywords:
   - "sys.foreign_key_columns catalog view"
 ms.assetid: 7247f065-5441-4bcf-9f25-c84a03290dc6
 caps.latest.revision: 22
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # sys.foreign_key_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]

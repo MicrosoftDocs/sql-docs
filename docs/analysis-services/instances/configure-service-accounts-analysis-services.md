@@ -20,7 +20,7 @@ ms.assetid: b481bd51-e077-42f6-8598-ce08c1a38716
 caps.latest.revision: 54
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "On Demand"
 ---
 # Configure Service Accounts (Analysis Services)

@@ -16,7 +16,6 @@ caps.latest.revision: 33
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Missing Join Predicate Event Class
   The Missing Join Predicate event class indicates that a query is being executed that has no join predicate. This could result in a long-running query. For more information on join predicates, see [Predicates &#40;Transact-SQL&#41;](~/t-sql/queries/predicates.md).  

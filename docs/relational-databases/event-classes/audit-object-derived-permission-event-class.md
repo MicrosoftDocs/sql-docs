@@ -16,7 +16,6 @@ caps.latest.revision: 35
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Audit Object Derived Permission Event Class
   The **Audit Object Derived Permission** event class records when a CREATE, ALTER, or DROP command is issued for a specified object. This event only occurs if the object does not have permissions or owners directly associated with it.  

@@ -14,7 +14,6 @@ caps.latest.revision: 12
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Active"
 ---
 # Import the SQLPS Module
   The recommended way to manage [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from PowerShell is to import the **sqlps** module into a Windows PowerShell environment. The module loads and registers the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] snap-ins and manageability assemblies.  Beginning in Windows PowerShell 3.0, modules are imported automatically when any cmdlet or function in the module is used in a command. This feature works on any module in a directory that this included in the value of the PSModulePath environment variable.  For additional information, see [Importing a PowerShell Module](https://msdn.microsoft.com/library/dd878284(v=vs.85).aspx)

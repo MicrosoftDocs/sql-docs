@@ -18,10 +18,9 @@ helpviewer_keywords:
   - "sp_replshowcmds"
 ms.assetid: 199f5a74-e08e-4d02-a33c-b8ab0db20f44
 caps.latest.revision: 17
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # sp_replshowcmds (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

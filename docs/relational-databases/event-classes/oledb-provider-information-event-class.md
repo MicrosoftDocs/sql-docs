@@ -16,7 +16,6 @@ caps.latest.revision: 22
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # OLEDB Provider Information Event Class
   The **OLEDB Provider Information** event class occurs when a distributed query is run and collects information corresponding to the provider connection.  

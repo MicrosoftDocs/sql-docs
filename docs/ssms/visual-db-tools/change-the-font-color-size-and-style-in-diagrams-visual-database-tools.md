@@ -18,7 +18,6 @@ caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Change the Font Color, Size, and Style in Diagrams (Visual Database Tools)
 You can customize the way text appears in database diagrams by changing the font color, size, and style. The changes are applied to new diagrams and to existing diagrams when they are modified.  

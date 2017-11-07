@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "data types [SQL Server], IDs"
 ms.assetid: 647d17ef-b878-4922-b446-56642322ebad
 caps.latest.revision: 42
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # TYPE_ID (Transact-SQL)

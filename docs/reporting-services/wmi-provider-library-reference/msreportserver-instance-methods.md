@@ -22,7 +22,6 @@ caps.latest.revision: 20
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
-ms.workload: "Inactive"
 ---
 # MSReportServer_Instance Methods
   The MSReportServer_Instance class provides basic information required for a client to connect to an installed report server.  

@@ -16,7 +16,6 @@ caps.latest.revision: 10
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Example: Specifying the ELEMENT Directive
   This retrieves employee information and generates element-centric XML as shown in the following:  

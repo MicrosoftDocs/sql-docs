@@ -18,10 +18,9 @@ helpviewer_keywords:
   - "sp_deletetracertokenhistory"
 ms.assetid: 9ae1be14-0d2f-40b1-9d6e-22d79726abf4
 caps.latest.revision: 26
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # sp_deletetracertokenhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

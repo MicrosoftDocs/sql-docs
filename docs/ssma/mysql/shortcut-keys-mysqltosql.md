@@ -17,7 +17,6 @@ caps.latest.revision: 3
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Shortcut Keys (MySQLToSQL)
 You can use keyboard shortcuts to navigate through SSMA application. For more information, see the following topics.  

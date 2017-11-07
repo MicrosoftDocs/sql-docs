@@ -16,7 +16,7 @@ ms.assetid: 085962c2-b50b-4a3b-8176-a0b920e2593a
 caps.latest.revision: 28
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # Mining Structure Tasks and How-tos

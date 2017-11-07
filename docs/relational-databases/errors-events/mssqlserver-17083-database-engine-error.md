@@ -13,10 +13,9 @@ helpviewer_keywords:
   - "17083 (Database Engine error)"
 ms.assetid: 6c83737d-0531-4fd9-88f6-2da5a150532d
 caps.latest.revision: 8
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # MSSQLSERVER_17083
   

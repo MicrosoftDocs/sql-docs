@@ -20,7 +20,6 @@ caps.latest.revision: 40
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Executing a Command
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]

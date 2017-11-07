@@ -19,7 +19,6 @@ caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Rename a Database Diagram (Visual Database Tools)
 You can rename a database diagram in Object Explorer. Requires ALTER permission on the database.  

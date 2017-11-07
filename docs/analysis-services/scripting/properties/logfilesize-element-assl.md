@@ -25,8 +25,7 @@ ms.assetid: d2135e68-57a9-4144-8403-9627041f2a58
 caps.latest.revision: 33
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # LogFileSize Element (ASSL)
   Specifies the maximum log file size, in megabytes.  

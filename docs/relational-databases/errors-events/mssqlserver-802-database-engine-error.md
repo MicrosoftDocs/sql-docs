@@ -13,10 +13,9 @@ helpviewer_keywords:
   - "802 (Database Engine error)"
 ms.assetid: 5892ed24-4dcb-4bf9-a8a4-a7ca898832d5
 caps.latest.revision: 20
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # MSSQLSERVER_802 - Database Engine error
   

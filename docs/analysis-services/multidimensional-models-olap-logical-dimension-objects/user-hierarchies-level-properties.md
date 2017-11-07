@@ -19,7 +19,7 @@ ms.assetid: dabb7335-887b-442a-b67c-4901ba1242b7
 caps.latest.revision: 13
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # User Hierarchies - Level Properties

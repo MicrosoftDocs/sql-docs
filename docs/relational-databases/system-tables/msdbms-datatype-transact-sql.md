@@ -20,10 +20,9 @@ helpviewer_keywords:
   - "MSdbms_datatype system table"
 ms.assetid: 606168cc-79a8-442f-ab43-936f8f884d72
 caps.latest.revision: 24
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # MSdbms_datatype (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

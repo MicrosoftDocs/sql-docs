@@ -16,7 +16,6 @@ caps.latest.revision: 34
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Backup Device (General Page)
   Use the **General** page to specify or view the general properties of a logical backup device.  

@@ -18,7 +18,6 @@ caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Delete a Solution
 Deleting a solution permanently erases files from physical storage as well as the file items in the solution.  

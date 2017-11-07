@@ -16,7 +16,6 @@ caps.latest.revision: 10
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Columns with a Name Specified as a Wildcard Character
   If the column name specified is a wildcard character (\*), the content of that column is inserted as if there is no column name specified. If this column is a non-**xml** type column, the column content is inserted as a text node, as shown in the following example:  

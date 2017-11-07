@@ -17,7 +17,6 @@ caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Options Dialog Boxes F1 Help
 This section contains the F1 Help for the dialog boxes available by clicking **Options** on the **Tools** menu in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].  

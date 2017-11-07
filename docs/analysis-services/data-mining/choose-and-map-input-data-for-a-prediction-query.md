@@ -17,7 +17,7 @@ ms.assetid: 00d330a0-879d-4da0-9f29-53c288116f4d
 caps.latest.revision: 16
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # Choose and Map Input Data for a Prediction Query

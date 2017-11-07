@@ -21,7 +21,6 @@ caps.latest.revision: 31
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # ProtocolDisplayName Property (ClientNetLibInfo Class)
   Gets or sets the name used to display the protocol.  

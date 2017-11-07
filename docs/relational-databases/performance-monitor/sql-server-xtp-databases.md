@@ -16,7 +16,6 @@ caps.latest.revision: 3
 author: "dagiro"
 ms.author: "v-dagir"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # SQL Server XTP Databases
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

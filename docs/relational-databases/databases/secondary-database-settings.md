@@ -16,7 +16,6 @@ caps.latest.revision: 32
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Secondary Database Settings
   Use this dialog box to configure and to modify the properties of a secondary database in the log shipping configuration.  

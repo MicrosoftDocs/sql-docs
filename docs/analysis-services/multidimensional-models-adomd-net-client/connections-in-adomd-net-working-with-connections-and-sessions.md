@@ -19,7 +19,7 @@ ms.assetid: 72b43c06-f3e4-42c3-a696-4a3419c3b884
 caps.latest.revision: 35
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # Connections in ADOMD.NET - Working with Connections and Sessions

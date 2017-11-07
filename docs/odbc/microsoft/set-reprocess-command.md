@@ -16,7 +16,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # SET REPROCESS Command
 Specifies how many times or for how long to lock a file or record after an unsuccessful locking attempt.  

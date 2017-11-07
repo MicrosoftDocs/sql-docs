@@ -18,7 +18,6 @@ caps.latest.revision: 65
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Active"
 ---
 # The Transaction Log (SQL Server)
   Every SQL Server database has a transaction log that records all transactions and the database modifications made by each transaction.

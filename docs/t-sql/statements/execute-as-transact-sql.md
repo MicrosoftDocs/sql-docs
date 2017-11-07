@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "switching execution context"
 ms.assetid: 613b8271-7f7d-4378-b7a2-5a7698551dbd
 caps.latest.revision: 39
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "Active"
 ---
 # EXECUTE AS (Transact-SQL)

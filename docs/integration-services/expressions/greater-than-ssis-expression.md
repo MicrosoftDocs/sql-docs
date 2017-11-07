@@ -17,7 +17,6 @@ caps.latest.revision: 47
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # &gt; (Greater Than) (SSIS Expression)
   Performs a comparison to determine if the first expression is greater than the second one. The expression evaluator automatically converts many data types before it performs the comparison.  

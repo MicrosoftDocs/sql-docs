@@ -18,7 +18,6 @@ caps.latest.revision: 33
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # || (Logical OR) (SSIS Expression)
   Performs a logical OR operation. The expression evaluates to TRUE if one or both conditions are TRUE.  

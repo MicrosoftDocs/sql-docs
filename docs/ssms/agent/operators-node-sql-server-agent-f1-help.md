@@ -14,7 +14,6 @@ caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Operators Node (SQL Server Agent F1 Help)
 This section contains the F1 Help for the **Operators** node of Object Explorer in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].  

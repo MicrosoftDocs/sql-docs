@@ -21,7 +21,6 @@ caps.latest.revision: 30
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Size Property (ClientNetLibInfo Class)
   Gets the size of the client network library in kilobytes.  

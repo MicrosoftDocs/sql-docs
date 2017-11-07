@@ -22,7 +22,7 @@ ms.assetid: c2c6a3da-555e-4362-a83f-88da28427520
 caps.latest.revision: 25
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # Attribute Properties - Configure Attribute Types

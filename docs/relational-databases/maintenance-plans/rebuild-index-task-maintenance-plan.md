@@ -19,7 +19,6 @@ caps.latest.revision: 42
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # Rebuild Index Task (Maintenance Plan)
   Use the **Rebuild Index Task** dialog to re-create the indexes on the tables in the database with a new fill factor. The fill factor determines the amount of empty space on each page in the index, to accommodate future expansion. As data is added to the table, the free space fills because the fill factor is not maintained. Reorganizing data and index pages can re-establish the free space.  

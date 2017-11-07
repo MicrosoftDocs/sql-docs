@@ -16,10 +16,9 @@ f1_keywords:
   - "sp_get_redirected_publisher"
 ms.assetid: d47a9ab5-f2cc-42a8-8be9-a33895ce44f0
 caps.latest.revision: 10
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # sp_get_redirected_publisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

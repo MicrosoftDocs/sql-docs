@@ -14,7 +14,6 @@ caps.latest.revision: 8
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
-ms.workload: "On Demand"
 ---
 # REPLACENULL (SSIS Expression)
   Returns the value of second expression parameter if the value of first expression parameter is NULL; otherwise, returns the value of first expression.  

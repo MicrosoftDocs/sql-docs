@@ -16,7 +16,6 @@ caps.latest.revision: 14
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # SQLExecute
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]

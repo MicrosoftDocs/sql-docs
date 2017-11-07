@@ -18,10 +18,9 @@ helpviewer_keywords:
   - "sp_revokedbaccess"
 ms.assetid: c997cfa1-539d-485c-a664-9c6f76bfe0c2
 caps.latest.revision: 34
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # sp_revokedbaccess (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

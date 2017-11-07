@@ -19,7 +19,6 @@ caps.latest.revision: 19
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
-ms.workload: "On Demand"
 ---
 # C Data Types
 ODBC C data types indicate the data type of C buffers used to store data in the application.  

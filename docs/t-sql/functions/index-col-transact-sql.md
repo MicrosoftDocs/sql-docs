@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "names [SQL Server], columns"
 ms.assetid: 4db1fb3b-e46f-43fb-b269-a5b6e8b39ed0
 caps.latest.revision: 33
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # INDEX_COL (Transact-SQL)

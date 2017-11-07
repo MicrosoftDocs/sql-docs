@@ -16,7 +16,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # SQLGetCursorName (Desktop Database Drivers)
 **SQLGetCursorName** is supported, but can only be used when the Cursor Library is used, because positioned operations are not supported in the driver.

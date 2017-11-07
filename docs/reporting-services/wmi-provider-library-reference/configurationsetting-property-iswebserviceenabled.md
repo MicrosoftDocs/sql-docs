@@ -22,7 +22,6 @@ caps.latest.revision: 18
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
-ms.workload: "Inactive"
 ---
 # ConfigurationSetting Property - IsWebServiceEnabled
   Indicates whether the Report Server Web service is enabled. Read-only.  

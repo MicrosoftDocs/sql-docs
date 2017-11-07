@@ -23,8 +23,7 @@ ms.assetid: 95e59c73-5ca4-478e-898d-50ffa4bbe794
 caps.latest.revision: 10
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # PartitionID Element (ASSL)
   Associates a [Partition](../../../analysis-services/scripting/objects/partition-element-assl.md) element with a parent element, binding, or out-of-line binding.  

@@ -19,7 +19,6 @@ caps.latest.revision: 22
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # CLR Integration Programming Model Restrictions
   When you are building a managed stored procedure or other managed database object, there are certain code checks performed by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that need to be considered. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] performs checks on the managed code assembly when it is first registered in the database, using the **CREATE ASSEMBLY** statement, and also at runtime. The managed code is also checked at runtime because in an assembly there may be code paths that may never actually be reached at runtime.  This provides flexibility for registering third party assemblies, especially, so that an assembly wouldn't be blocked where there is 'unsafe' code designed to run in a client environment but would never be executed in the hosted CLR. The requirements that the managed code must meet depend on whether the assembly is registered as **SAFE**, **EXTERNAL_ACCESS**, or **UNSAFE**, **SAFE** being the strictest, and are listed below.  

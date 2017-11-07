@@ -26,7 +26,6 @@ caps.latest.revision: 49
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "On Demand"
 ---
 # Estimate the Size of a Clustered Index
   You can use the following steps to estimate the amount of space that is required to store data in a clustered index:  

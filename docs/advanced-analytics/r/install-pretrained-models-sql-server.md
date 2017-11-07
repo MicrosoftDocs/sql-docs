@@ -1,6 +1,8 @@
 ---
 title: "Install pretrained machine learning models on SQL Server | Microsoft Docs"
-ms.date: "11/03/2017"
+ms.custom: 
+  - "SQL2016_New_Updated"
+ms.date: "10/18/2017"
 ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
@@ -12,26 +14,28 @@ ms.assetid: 21456462-e58a-44c3-9d3a-68b4263575d7
 caps.latest.revision: 1
 author: "jeannt"
 ms.author: "jeannt"
-manager: "cgronlund"
+manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # Install pretrained machine learning models on SQL Server
 
 This article describes how to add pretrained models to an instance of SQL Server that already has R Services or Machine Learning Services installed.
 
-The option to install pretrained models is available when you use the separate Windows installer for Microsoft R Server or Machine Learning Server. You can use this installer to get just the pretrained models, or you can use it to [upgrade the machine learning components](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md) in an instance of SQL Server 2016 or SQL Server 2017.
+Pretrained models are provided as an option when you install Microsoft R Server or Machine Learning Server using the standalone installer. You can use this installer to get just the pretrained models, or you can use it to upgrade the machine learning components in an instance of SQL Server 2016 or SQl Server 2017.
 
 After you have downloaded the pretrained models by running the installer, there are some additional steps to configure the models for use with SQL Server. This article describes the process.
 
-For an example of how to use the pretrained models with SQL Server data, see this blog by the SQL Server Machine Learning team: 
+For more information, see these articles:
 
-+ [Sentiment analysis with Python in SQL Server Machine Learning Services](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2017/11/01/sentiment-analysis-with-python-in-sql-server-machine-learning-services/)
++ [Pre-trained machine learning models for sentiment analysis and image detection](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models)
+
++ [Upgrade the R components in an instance of R Services](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
 
 ## Benefits of using pretrained models
 
-These pre-trained models were created to help customers who need to perform tasks such as sentiment analysis or image featurization, but who do not have the resources to obtain the large datasets or train a complex model. Using pre-trained models lets you get started on text and image processing efficiently.
+These pre-trained models were created to help customers who need to perform tasks such as sentiment analysis or image featurization, but do not have the resources to obtain the large datasets or train a complex model. Using pre-trained models lets you get started on text and image processing most efficiently.
 
-Currently the models that are available are deep neural network (DNN) models for sentiment analysis and image classification. All pretrained models were trained by using Microsoft's [Computation Network Toolkit](https://cntk.ai/Features/Index.html), or **CNTK**.
+Currently the models that are available are deep neural network (DNN) models for sentiment analysis and image classification. All pretrained models were trained by using Microsoft's [Computation Network Toolkit](https://cntk.ai/Features/Index.html), or **CNTK**. 
 
 The configuration of each network was based on the following reference implementations:
 
@@ -39,8 +43,6 @@ The configuration of each network was based on the following reference implement
 + ResNet-50
 + ResNet-101
 + AlexNet
-
-For more information about these models, see [Pre-trained machine learning models for sentiment analysis and image detection](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models)
 
 For more information about deep learning networks and their implementation using CNTK, see these articles:
 
@@ -61,7 +63,7 @@ For more information about deep learning networks and their implementation using
 
     + To upgrade the R or Python components at the same time, select the language (R, or Python, or both) that you want to update, and select the pretrained models option. Select one or more instances to apply these changes to.
 
-    + If you have previously installed Machine Learning Server and updated R or Python components using the binding option, leave all previous selections **as is**, and select the pretrained models options. Do not deselect any previously selected options; if you do so, the installer removes the components.
+    + If you have previously installed Machine Learning Server and updated R or Python components using the binding option, leave all previous selections **as is**, and select the pretrained models options. Do not deselect any previously selected options, or they will be removed.
 
 3. When installation is complete, open a Windows command prompt **as administrator**, and navigate to the setup bootstrap folder for SQL Server, which also contains the Microsoft R installer. In a default instance of SQL Server 2017, the folder would be:
     
@@ -109,11 +111,6 @@ For more information about deep learning networks and their implementation using
     - ResNet\_18\_Updated.model
     - ResNet\_50\_Updated.model
 
-
-> [!NOTE]
-> 
-> If the path to the model file is too long, you might get an error when calling the model file from Python code. This is due to a limitation in the current Python implementation. This issue will be fixed in an upcoming service release.
-
 ## Examples
 
 After you have installed the models, you can use the models by calling them from your code.
@@ -145,6 +142,7 @@ The image must be resized to meet the requirements of the trained model: here th
 
 > [!NOTE]
 > It is not possible to read or modify the pretrained models, because they are compressed using a native format, to improve performance.
+
 
 ### Text analysis example
 

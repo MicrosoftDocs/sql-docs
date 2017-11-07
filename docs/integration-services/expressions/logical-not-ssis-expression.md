@@ -17,7 +17,6 @@ caps.latest.revision: 35
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # ! (Logical Not) (SSIS Expression)
   Negates a Boolean operand.  

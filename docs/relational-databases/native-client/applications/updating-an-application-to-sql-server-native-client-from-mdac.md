@@ -20,7 +20,6 @@ caps.latest.revision: 81
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Updating an Application to SQL Server Native Client from MDAC
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]

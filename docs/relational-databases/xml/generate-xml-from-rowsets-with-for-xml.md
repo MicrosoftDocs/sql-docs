@@ -16,7 +16,6 @@ caps.latest.revision: 10
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Generate XML from Rowsets with FOR XML
   You can generate an **xml** data type instance from a rowset by using FOR XML with the new **TYPE** directive.  

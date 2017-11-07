@@ -17,7 +17,6 @@ caps.latest.revision: 26
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
-ms.workload: "Inactive"
 ---
 # rrRenderingError - Reporting Services Error
     

@@ -15,9 +15,9 @@ helpviewer_keywords:
   - "deleting database objects"
 ms.assetid: ecf26dd5-4535-4ed6-86fc-c73f9d9dedec
 caps.latest.revision: 12
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "On Demand"
 ---
 # Lesson 3: Deleting Database Objects

@@ -13,7 +13,7 @@ ms.assetid: 15c7b069-897d-4bc8-a808-59cbeeabe4d8
 caps.latest.revision: 9
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # Merge-Partition cmdlet

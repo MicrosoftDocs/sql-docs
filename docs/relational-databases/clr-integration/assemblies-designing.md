@@ -17,7 +17,6 @@ caps.latest.revision: 29
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Assemblies - Designing
   This topic describes the following factors you should consider when you design assemblies:  

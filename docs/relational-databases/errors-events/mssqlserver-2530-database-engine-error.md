@@ -11,10 +11,9 @@ ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 ms.assetid: 5d4be07a-38a5-4b25-819c-4dcb4636cc15
 caps.latest.revision: 11
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # MSSQLSERVER_2530
   

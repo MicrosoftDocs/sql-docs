@@ -16,7 +16,6 @@ caps.latest.revision: 46
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Secure the Snapshot Folder
   The snapshot folder is a directory that stores snapshot files; it is recommended that you dedicate the directory for snapshot storage. Grant the Snapshot Agent write permission to the folder, and ensure that read permission is granted only to the Windows account that the Merge Agent or Distribution agent uses when accessing the folder. The Windows account associated with the agent must be a domain account to access a snapshot folder that is located on a remote computer.  

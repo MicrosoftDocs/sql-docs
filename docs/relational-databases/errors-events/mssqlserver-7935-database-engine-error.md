@@ -13,10 +13,9 @@ helpviewer_keywords:
   - "7935 (Database Engine error)"
 ms.assetid: 45ab21a3-024a-4523-9bd9-1175d01f9c8a
 caps.latest.revision: 16
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # MSSQLSERVER_7935
   

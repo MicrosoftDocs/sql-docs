@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "Unicode [SQL Server], NCHAR function"
 ms.assetid: 68cefc68-7c4f-4326-80c1-300f90cf19db
 caps.latest.revision: 43
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "On Demand"
 ---
 # NCHAR (Transact-SQL)

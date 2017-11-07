@@ -22,7 +22,6 @@ caps.latest.revision: 19
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
-ms.workload: "Inactive"
 ---
 # ConfigurationSetting Method - SetDatabaseLogonTimeout
   Specifies the default timeout value for report server database connections.  

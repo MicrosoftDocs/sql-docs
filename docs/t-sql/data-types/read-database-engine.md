@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "Read [Database Engine]"
 ms.assetid: f2b8207c-b69f-4327-a874-100b3a1f27d8
 caps.latest.revision: 13
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # Read (Database Engine)

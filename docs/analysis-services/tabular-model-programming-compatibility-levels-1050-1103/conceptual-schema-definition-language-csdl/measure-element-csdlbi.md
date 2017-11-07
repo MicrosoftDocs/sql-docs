@@ -16,8 +16,7 @@ ms.assetid: bfbc9274-053a-421a-bb81-2095bba710be
 caps.latest.revision: 12
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # Measure Element (CSDLBI)
   The Measure element is a complex type based on the CSDL Property element. The CSDLBI annotations add attributes that support definition of complex formulas for use in business intelligence data models.  

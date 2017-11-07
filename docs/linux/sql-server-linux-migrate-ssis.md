@@ -9,7 +9,6 @@ ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
-ms.workload: "On Demand"
 ---
 # Extract, transform, and load data on Linux with SSIS
 

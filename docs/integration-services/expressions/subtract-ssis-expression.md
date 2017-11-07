@@ -17,7 +17,6 @@ caps.latest.revision: 32
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # - (Subtract) (SSIS Expression)
   Subtracts the second numeric expression from the first one.  

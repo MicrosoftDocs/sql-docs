@@ -25,7 +25,7 @@ ms.assetid: 8c9be991-0717-4fcf-97d9-13df0f27da05
 caps.latest.revision: 39
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # Assemblies Element (ASSL)

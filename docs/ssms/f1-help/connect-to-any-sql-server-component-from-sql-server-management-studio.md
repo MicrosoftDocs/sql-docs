@@ -19,7 +19,6 @@ caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Connect to Any SQL Server Component from SQL Server Management Studio
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] provides functionality for managing every component of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Use [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] to connect to:  

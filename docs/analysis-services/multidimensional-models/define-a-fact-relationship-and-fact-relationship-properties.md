@@ -17,7 +17,7 @@ ms.assetid: d8e41724-da77-4ac1-bc42-956b5d91ea5d
 caps.latest.revision: 10
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # Define a Fact Relationship and Fact Relationship Properties

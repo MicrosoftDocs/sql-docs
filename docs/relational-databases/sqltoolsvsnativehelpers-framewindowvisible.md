@@ -14,7 +14,6 @@ caps.latest.revision: 6
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # SqlToolsVSNativeHelpers - FrameWindowVisible
   Property that specifies whether a given window frame is visible. The helper method is used from managed code.  

@@ -18,7 +18,6 @@ caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Step 4b: Fetch the Row Count
 The next step is to fetch the row count, as shown in the following illustration.  

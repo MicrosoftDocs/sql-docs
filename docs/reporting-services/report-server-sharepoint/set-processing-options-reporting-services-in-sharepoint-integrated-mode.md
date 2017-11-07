@@ -13,7 +13,6 @@ ms.topic: "article"
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
-ms.workload: "Inactive"
 ---
 # Set processing options (Reporting Services in SharePoint integrated mode)
 

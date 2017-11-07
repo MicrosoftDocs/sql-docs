@@ -14,7 +14,6 @@ caps.latest.revision: 13
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Revert the Word Breakers Used by Search to the Previous Version
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] installs and enables a version of the word breakers and stemmers for all languages supported by Full-Text Search with the exception of Korean. This topic describes how to switch from this version of these components to the previous version, or to switch back from the previous version to the new version.  

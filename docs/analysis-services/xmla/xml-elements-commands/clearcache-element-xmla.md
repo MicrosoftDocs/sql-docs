@@ -25,10 +25,9 @@ helpviewer_keywords:
   - "ClearCache command"
 ms.assetid: e154b489-e443-469a-9490-43c62da62e11
 caps.latest.revision: 15
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+author: "jeannt"
+ms.author: "jeannt"
+manager: "erikre"
 ---
 # ClearCache Element (XMLA)
   Clears the memory cache for the specified object on a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance.  

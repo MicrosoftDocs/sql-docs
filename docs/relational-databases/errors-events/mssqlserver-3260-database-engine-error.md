@@ -13,10 +13,9 @@ helpviewer_keywords:
   - "3260 (Database Engine error)"
 ms.assetid: ed62f86d-90cb-4b04-8bc5-43e0b9ba6141
 caps.latest.revision: 19
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # MSSQLSERVER_3260
   

@@ -20,7 +20,6 @@ caps.latest.revision: 18
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Reference the Built-in XML Schema Collection (sys)
   Every database you create has a predefined **sys** XML schema collection in the **sys** relational schema. It reserves these predefined schemas, and they can be accessed from any other user-created XML schema collection. The prefixes used in these predefined schemas are meaningful in XQuery. Only **xml** is a reserved prefix.  

@@ -18,7 +18,6 @@ caps.latest.revision: 7
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Availability Group Properties: New Availability Group (Backup Preferences Page)
   Use this dialog box to view and change the backup preferences of the selected availability group.  

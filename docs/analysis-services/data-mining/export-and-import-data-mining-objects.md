@@ -21,7 +21,7 @@ ms.assetid: 10a83b13-2640-4ff5-80c8-a35e1d692908
 caps.latest.revision: 23
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # Export and Import Data Mining Objects

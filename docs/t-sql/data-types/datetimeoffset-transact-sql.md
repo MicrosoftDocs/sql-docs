@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "time zones [SQL Server]"
 ms.assetid: a0455b71-ca25-476e-a7a8-0770f1860bb7
 caps.latest.revision: 41
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "Active"
 ---
 # datetimeoffset (Transact-SQL)

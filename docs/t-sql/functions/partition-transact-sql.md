@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "partitions [SQL Server], numbers"
 ms.assetid: abc865d0-57a8-49da-8821-29457c808d2a
 caps.latest.revision: 39
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "On Demand"
 ---
 # $PARTITION (Transact-SQL)

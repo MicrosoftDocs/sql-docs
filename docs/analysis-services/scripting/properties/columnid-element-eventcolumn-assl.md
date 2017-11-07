@@ -25,8 +25,7 @@ ms.assetid: c4f4fbad-9d70-4de2-8cf7-caee80a4a1e4
 caps.latest.revision: 37
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # ColumnID Element (EventColumn) (ASSL)
   Contains the identifier (ID) of the column of information to be captured for an event as part of a [Trace](../../../analysis-services/scripting/objects/trace-element-assl.md) element.  

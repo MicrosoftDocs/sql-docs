@@ -16,7 +16,6 @@ caps.latest.revision: 12
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Configure Peer-to-Peer Topology Wizard
   This section provides information on all pages of the Configure Peer-to-Peer Topology Wizard:  

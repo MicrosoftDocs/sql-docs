@@ -17,7 +17,6 @@ caps.latest.revision: 8
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Local Audit for SQL Server Usage Feedback Collection
 ## Introduction

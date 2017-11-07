@@ -20,10 +20,9 @@ helpviewer_keywords:
   - "IHpublishertables system table"
 ms.assetid: 7d16ac39-633a-4fe2-8f22-1d9afc191ee9
 caps.latest.revision: 24
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # IHpublishertables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -17,7 +17,6 @@ caps.latest.revision: 24
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # SQLXML 4.0 Security Considerations
   This section provides information about security-related considerations for [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML.  

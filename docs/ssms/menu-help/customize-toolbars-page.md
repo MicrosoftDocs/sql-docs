@@ -17,7 +17,6 @@ caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Customize (Toolbars Page)
 The **Toolbars** tab enables you to create, rename, remove, and reset toolbars. You can access this tab by clicking **Customize** on the **Tools** menu and then clicking **Toolbars**.  

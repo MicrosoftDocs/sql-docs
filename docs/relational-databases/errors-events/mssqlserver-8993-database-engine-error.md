@@ -13,10 +13,9 @@ helpviewer_keywords:
   - "8993 (Database Engine error)"
 ms.assetid: 06aac110-a41c-4853-bc8e-a83e8535b8be
 caps.latest.revision: 18
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # MSSQLSERVER_8993
   

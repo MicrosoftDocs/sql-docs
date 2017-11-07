@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "servers [SQL Server], permissions"
 ms.assetid: 7b9a56b3-face-452e-a655-147dac306ba1
 caps.latest.revision: 34
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # REVOKE Server Permissions (Transact-SQL)

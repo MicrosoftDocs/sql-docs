@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "test"
 ms.assetid: b7dcacb0-af83-4807-9d1e-49148b56b59c
 caps.latest.revision: 43
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # FULLTEXTSERVICEPROPERTY (Transact-SQL)

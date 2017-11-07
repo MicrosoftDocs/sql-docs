@@ -21,7 +21,6 @@ caps.latest.revision: 14
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
-ms.workload: "On Demand"
 ---
 
 # Enable and Disable Client-Side Printing for Reporting Services

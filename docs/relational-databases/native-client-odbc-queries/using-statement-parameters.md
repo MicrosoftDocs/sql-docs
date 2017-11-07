@@ -22,7 +22,6 @@ caps.latest.revision: 33
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Using Statement Parameters
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]

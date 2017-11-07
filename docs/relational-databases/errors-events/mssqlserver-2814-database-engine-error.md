@@ -13,10 +13,9 @@ helpviewer_keywords:
   - "2814 (Database Engine error)"
 ms.assetid: 22800748-9be9-4511-9428-6b8b40e5bef9
 caps.latest.revision: 14
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # MSSQLSERVER_2814
   

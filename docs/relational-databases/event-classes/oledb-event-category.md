@@ -18,7 +18,6 @@ caps.latest.revision: 26
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # OLEDB Event Category
   The **OLEDB** event category contains general OLEDB events.  

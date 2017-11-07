@@ -16,7 +16,6 @@ caps.latest.revision: 7
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Sort Columns
   The **Sort Columns** dialog box lets you sort grids in Replication Monitor based on one or more columns. (You can also sort on a single column by clicking the column header in the Replication Monitor grid). For example, to sort subscriptions on the **All Subscriptions** tab based on status and then connection type, follow these steps:  

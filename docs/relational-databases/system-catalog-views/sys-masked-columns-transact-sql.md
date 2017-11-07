@@ -18,10 +18,9 @@ helpviewer_keywords:
   - "sys.masked_columns catalog view"
 ms.assetid: 671577e4-d757-4b8d-9aa9-0fc8d51ea9ca
 caps.latest.revision: 9
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # sys.masked_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

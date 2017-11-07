@@ -18,7 +18,7 @@ ms.assetid: abaf33aa-db55-43bf-8f30-15547559be1d
 caps.latest.revision: 39
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # Developing with ADOMD.NET

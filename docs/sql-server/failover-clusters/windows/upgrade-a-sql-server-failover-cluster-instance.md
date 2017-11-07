@@ -18,7 +18,6 @@ caps.latest.revision: 47
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
-ms.workload: "On Demand"
 ---
 # Upgrade a SQL Server Failover Cluster Instance
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supports upgrading a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster to a new version of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], to a new [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]service pack or cumulative update, or when installing to a new Windows service pack or cumulative update  separately on all failover cluster nodes with downtime limited to a single manual failover (or two manual failovers if failing back to the original primary).  

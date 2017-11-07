@@ -17,7 +17,6 @@ caps.latest.revision: 7
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Global Settings (Tester) (SybaseToSQL)
 Use the Tester page of the **Global Settings** dialog box to specify settings for SSMA Tester.  

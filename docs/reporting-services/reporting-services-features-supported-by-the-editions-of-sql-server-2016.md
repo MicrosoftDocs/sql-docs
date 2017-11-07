@@ -15,7 +15,6 @@ caps.latest.revision: 3
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
-ms.workload: "On Demand"
 ---
 
 # Reporting Services Features Supported by the Editions of SQL Server 2016

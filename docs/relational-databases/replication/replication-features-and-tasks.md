@@ -18,7 +18,6 @@ caps.latest.revision: 21
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "On Demand"
 ---
 # Replication Features and Tasks
   Find information that anyone—designer, developer, analyst, or administrator—requires to design and implement replication solutions.  

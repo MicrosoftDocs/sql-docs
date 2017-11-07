@@ -23,7 +23,6 @@ caps.latest.revision: 45
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Performing Asynchronous Operations
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]

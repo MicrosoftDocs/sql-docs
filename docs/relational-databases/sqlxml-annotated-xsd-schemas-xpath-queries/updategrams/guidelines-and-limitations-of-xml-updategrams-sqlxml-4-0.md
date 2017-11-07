@@ -16,7 +16,6 @@ caps.latest.revision: 31
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Guidelines and Limitations of XML Updategrams (SQLXML 4.0)
   Remember the following when using XML updategrams:  

@@ -18,10 +18,9 @@ helpviewer_keywords:
   - "sp_helptracertokenhistory"
 ms.assetid: 96910d1c-be76-43eb-9c93-4477e6761749
 caps.latest.revision: 26
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # sp_helptracertokenhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

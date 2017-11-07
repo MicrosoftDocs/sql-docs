@@ -15,7 +15,7 @@ ms.assetid: 5d98bab3-3577-4143-b737-5196444a36ac
 caps.latest.revision: 20
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "On Demand"
 ---
 # Lesson 2-5 - Deploying an Analysis Services Project

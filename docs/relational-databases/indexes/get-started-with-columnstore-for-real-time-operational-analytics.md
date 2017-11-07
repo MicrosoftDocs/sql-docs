@@ -15,7 +15,6 @@ caps.latest.revision: 40
 author: "barbkess"
 ms.author: "barbkess"
 manager: "jhubbard"
-ms.workload: "On Demand"
 ---
 # Get started with Columnstore for real time operational analytics
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

@@ -19,7 +19,6 @@ caps.latest.revision: 69
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
-ms.workload: "On Demand"
 ---
 # Troubleshoot Database Mirroring Configuration (SQL Server)
   This topic provides information to help you troubleshoot problems in setting up a database mirroring session.  

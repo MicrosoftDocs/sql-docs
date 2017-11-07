@@ -23,7 +23,7 @@ ms.assetid: 8a6b55fe-1f02-4519-bdc2-4553b576b2f3
 caps.latest.revision: 12
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # ImpersonationInfo Data Type (ASSL)

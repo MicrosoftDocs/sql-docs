@@ -16,7 +16,6 @@ caps.latest.revision: 35
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Lock:Deadlock Chain Event Class
   The Lock:Deadlock Chain event class is produced for each participant in a deadlock.  

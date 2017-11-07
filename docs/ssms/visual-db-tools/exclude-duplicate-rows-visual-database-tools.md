@@ -21,7 +21,6 @@ caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Exclude Duplicate Rows (Visual Database Tools)
 If you want to see only unique values in a result set, you can specify that you want to exclude duplicates from the result set.  

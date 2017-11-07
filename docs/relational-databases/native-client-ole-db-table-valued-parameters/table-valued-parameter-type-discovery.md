@@ -16,7 +16,6 @@ caps.latest.revision: 20
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Table-Valued Parameter Type Discovery
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]

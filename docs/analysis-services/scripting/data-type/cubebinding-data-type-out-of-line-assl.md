@@ -25,7 +25,7 @@ ms.assetid: 5e1ee8ef-855c-4f3d-ae21-a33360d00d66
 caps.latest.revision: 38
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # CubeBinding Data Type (out-of-line) (ASSL)

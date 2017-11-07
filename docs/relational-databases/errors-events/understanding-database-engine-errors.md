@@ -16,10 +16,9 @@ helpviewer_keywords:
   - "Database Engine [SQL Server], errors"
 ms.assetid: ddaca9d3-956f-46a5-8cd3-a7a15ec75878
 caps.latest.revision: 27
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # Understanding Database Engine Errors
   Errors raised by the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] have the attributes described in the following table.  

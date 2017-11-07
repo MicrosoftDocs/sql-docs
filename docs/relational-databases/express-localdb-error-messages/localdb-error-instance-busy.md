@@ -14,7 +14,6 @@ caps.latest.revision: 8
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # LOCALDB_ERROR_INSTANCE_BUSY
     

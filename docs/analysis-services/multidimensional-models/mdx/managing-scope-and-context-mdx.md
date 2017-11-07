@@ -22,7 +22,7 @@ ms.assetid: 631e7c20-8be9-4c35-8609-76516aef19d1
 caps.latest.revision: 32
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "On Demand"
 ---
 # Managing Scope and Context (MDX)

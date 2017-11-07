@@ -16,7 +16,6 @@ caps.latest.revision: 19
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Publication Properties  - &lt;Publication&gt;
   This section provides information on all pages of the **Publication Properties** dialog box:  

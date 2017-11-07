@@ -28,7 +28,7 @@ ms.assetid: b59f8197-c33d-4e65-9022-848ccba540f5
 caps.latest.revision: 12
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # Canceling Commands (XMLA)

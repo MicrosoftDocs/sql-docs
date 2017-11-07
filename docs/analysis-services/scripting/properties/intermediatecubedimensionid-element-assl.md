@@ -25,8 +25,7 @@ ms.assetid: 305c0a91-7bc2-4268-ba94-8f19d8c22ca3
 caps.latest.revision: 33
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # IntermediateCubeDimensionID Element (ASSL)
   Contains the identifier (ID) of the dimension that relates a reference dimension to a measure group.  

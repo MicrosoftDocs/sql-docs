@@ -13,7 +13,6 @@ caps.latest.revision: 0
 author: "craigg-msft"
 ms.author: "craigg"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # SQL Server 2012 SP4 release notes
 This topic summarizes the improvements included with SQL Server 2012 SP4. The topics also describes issues to review before you install or troubleshoot the installation of SP4. Release Notes are available online only, not on the installation media. This topic is updated periodically as issues are discovered. For a detailed list of fixes in SP4, see [SQL Server 2012 SP4 Release](https://go.microsoft.com/fwlink/?linkid=846937).  

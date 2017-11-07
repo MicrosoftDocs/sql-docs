@@ -14,7 +14,6 @@ caps.latest.revision: 16
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Sparse Columns Support (OLE DB)
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]

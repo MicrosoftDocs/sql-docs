@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "text size returned [SQL Server]"
 ms.assetid: 787154a6-39a6-4dd6-a6d0-67b4364f95d5
 caps.latest.revision: 38
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "On Demand"
 ---
 # SET TEXTSIZE (Transact-SQL)

@@ -16,7 +16,6 @@ caps.latest.revision: 33
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Audit Login GDR Event Class
   The **Audit Login GDR** event class occurs whenever a [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows login right is added or removed. This event class is for the **sp_grantlogin**, **sp_revokelogin**, and **sp_denylogin** stored procedures.  

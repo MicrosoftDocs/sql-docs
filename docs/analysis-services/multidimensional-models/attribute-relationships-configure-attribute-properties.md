@@ -21,7 +21,7 @@ ms.assetid: fce511af-66d7-42fc-bb3a-6c516f16b10e
 caps.latest.revision: 17
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # Attribute Relationships - Configure Attribute Properties

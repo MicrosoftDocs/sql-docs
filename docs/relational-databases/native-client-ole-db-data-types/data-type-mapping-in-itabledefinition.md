@@ -22,7 +22,6 @@ caps.latest.revision: 35
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Data Type Mapping in ITableDefinition
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]

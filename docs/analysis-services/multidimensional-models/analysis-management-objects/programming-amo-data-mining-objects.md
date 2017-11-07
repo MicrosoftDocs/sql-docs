@@ -21,7 +21,7 @@ ms.assetid: d27f58b9-91be-449c-8403-439aa6dd1ff9
 caps.latest.revision: 19
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # Programming AMO Data Mining Objects

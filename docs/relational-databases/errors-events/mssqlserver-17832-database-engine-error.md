@@ -16,10 +16,9 @@ helpviewer_keywords:
   - "login packet (bad)"
 ms.assetid: bd56ffe4-0855-4ada-8aca-251fbc6ff2ce
 caps.latest.revision: 16
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # MSSQLSERVER_17832
   

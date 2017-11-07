@@ -25,8 +25,7 @@ ms.assetid: 1455bb54-03f7-4f25-9d4d-ab75231dd958
 caps.latest.revision: 32
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # KeyErrorLogFile Element (ASSL)
   Contains the file name for logging processing errors.  

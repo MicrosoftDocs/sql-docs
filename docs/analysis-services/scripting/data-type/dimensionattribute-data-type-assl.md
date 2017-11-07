@@ -25,7 +25,7 @@ ms.assetid: 94349a87-b284-49d1-ac72-888f0375ceb8
 caps.latest.revision: 43
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # DimensionAttribute Data Type (ASSL)

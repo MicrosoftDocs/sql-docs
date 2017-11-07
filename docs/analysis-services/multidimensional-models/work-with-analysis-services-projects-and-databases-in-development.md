@@ -17,7 +17,7 @@ ms.assetid: 39cf9166-fa92-40fe-9962-210a52461257
 caps.latest.revision: 16
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # Work with Analysis Services Projects and Databases in Development

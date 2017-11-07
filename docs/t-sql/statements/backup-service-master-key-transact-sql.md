@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "service master key [SQL Server], exporting"
 ms.assetid: f8356683-6680-4f1c-9eaf-5c29a9a9020d
 caps.latest.revision: 29
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "On Demand"
 ---
 # BACKUP SERVICE MASTER KEY (Transact-SQL)

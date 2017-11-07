@@ -19,7 +19,6 @@ caps.latest.revision: 39
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "erikre"
-ms.workload: "Active"
 ---
 # Reporting Services Tutorials (SSRS)
 

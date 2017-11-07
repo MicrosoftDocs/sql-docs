@@ -14,7 +14,6 @@ caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # DataReader Destination Custom Properties
   The DataReader destination has both custom properties and the properties common to all data flow components.  

@@ -22,7 +22,6 @@ caps.latest.revision: 36
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
-ms.workload: "Inactive"
 ---
 # Rendering and Execution Methods
   You can use these methods to manage item execution and caching, and report rendering.  

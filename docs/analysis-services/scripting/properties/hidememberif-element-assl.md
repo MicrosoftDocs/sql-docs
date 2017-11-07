@@ -25,8 +25,7 @@ ms.assetid: ff0e6b19-6216-43ac-ba76-1628da8c333b
 caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # HideMemberIf Element (ASSL)
   Indicates whether and when a member in a level should be hidden from client applications.  

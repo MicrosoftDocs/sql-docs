@@ -22,7 +22,6 @@ caps.latest.revision: 59
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Active"
 ---
 # Troubleshoot a Full Transaction Log (SQL Server Error 9002)
   This topic discusses possible responses to a full transaction log and suggests how to avoid it in the future. 

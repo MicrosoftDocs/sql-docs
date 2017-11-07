@@ -25,8 +25,7 @@ ms.assetid: 435a857e-37a9-434e-9de1-354f1ff2993f
 caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # Usage Element (MiningModelColumn) (ASSL)
   Describes how the associated column in the parent [MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md) is used.  

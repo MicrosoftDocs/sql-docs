@@ -16,7 +16,6 @@ caps.latest.revision: 30
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # POWER (SSIS Expression)
   Returns the result of raising a numeric expression to a power. The power parameter must evaluate to an integer.  

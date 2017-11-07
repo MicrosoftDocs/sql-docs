@@ -23,7 +23,6 @@ caps.latest.revision: 13
 author: "jodebrui"
 ms.author: "jodebrui"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # sys.memory_optimized_tables_internal_attributes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

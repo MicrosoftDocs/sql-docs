@@ -25,10 +25,9 @@ helpviewer_keywords:
   - "Key element"
 ms.assetid: 09d3cd48-49f7-4b58-b8bb-ca75b81bb02f
 caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+author: "jeannt"
+ms.author: "jeannt"
+manager: "erikre"
 ---
 # Key Element (XMLA)
   Contains a member key value for an attribute member.  

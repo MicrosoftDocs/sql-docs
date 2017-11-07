@@ -18,10 +18,9 @@ helpviewer_keywords:
   - "sp_fkeys"
 ms.assetid: 18110444-d38d-4cff-90d2-d1fc6236668b
 caps.latest.revision: 32
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # sp_fkeys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]

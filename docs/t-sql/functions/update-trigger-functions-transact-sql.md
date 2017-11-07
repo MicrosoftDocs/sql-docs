@@ -26,9 +26,9 @@ helpviewer_keywords:
   - "checking column updates"
 ms.assetid: 8e3be25b-2e3b-4d1f-a610-dcbbd8d72084
 caps.latest.revision: 29
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "On Demand"
 ---
 # UPDATE - Trigger Functions (Transact-SQL)

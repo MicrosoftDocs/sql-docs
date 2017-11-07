@@ -14,7 +14,6 @@ caps.latest.revision: 3
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
-ms.workload: "On Demand"
 ---
 # Python SQL Driver - pymssql
 [!INCLUDE[Driver_Python_Download](../../../includes/driver_python_download.md)]

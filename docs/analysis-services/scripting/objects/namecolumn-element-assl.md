@@ -25,8 +25,7 @@ ms.assetid: 9ff79f2e-26d7-4ab9-a166-14c2c2d1fc07
 caps.latest.revision: 37
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # NameColumn Element (ASSL)
   Identifies the column that provides the name of the parent element.  

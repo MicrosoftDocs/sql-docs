@@ -25,8 +25,7 @@ ms.assetid: ce999716-9487-4348-bc42-270a2026a452
 caps.latest.revision: 35
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # Type Element (MiningStructureColumn) (ASSL)
   Contains the type of the [MiningStructureColumn](../../../analysis-services/scripting/data-type/miningstructurecolumn-data-type-assl.md) element.  

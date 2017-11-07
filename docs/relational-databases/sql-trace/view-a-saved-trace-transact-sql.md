@@ -18,7 +18,6 @@ caps.latest.revision: 22
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # View a Saved Trace (Transact-SQL)
   This topic describes how to use built-in functions to view a saved trace.  

@@ -20,10 +20,9 @@ helpviewer_keywords:
   - "sys.server_role_members catalog view"
 ms.assetid: efa20414-2c6b-45a2-a7a9-60110a24da18
 caps.latest.revision: 31
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "On Demand"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # sys.server_role_members (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]

@@ -16,7 +16,6 @@ caps.latest.revision: 41
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Using XML Schemas
   XML programming in SMO is limited to providing XML data types, XML namespaces, and simple indexing on XML data type columns.  

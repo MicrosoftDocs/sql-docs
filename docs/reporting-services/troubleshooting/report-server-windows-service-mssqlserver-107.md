@@ -17,7 +17,6 @@ caps.latest.revision: 20
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
-ms.workload: "On Demand"
 ---
 # Report Server Windows Service (MSSQLServer) 107
     

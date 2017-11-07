@@ -24,10 +24,9 @@ helpviewer_keywords:
   - "sys.database_firewall_rules"
 ms.assetid: 2e821593-3b9f-43d6-a99b-1ceffe177faf
 caps.latest.revision: 10
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # sys.database_firewall_rules (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]

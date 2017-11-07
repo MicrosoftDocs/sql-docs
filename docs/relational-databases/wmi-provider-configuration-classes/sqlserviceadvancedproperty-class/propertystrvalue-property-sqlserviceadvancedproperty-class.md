@@ -21,7 +21,6 @@ caps.latest.revision: 33
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # PropertyStrValue Property (SqlServiceAdvancedProperty Class)
   Gets the string value of the advanced property.  

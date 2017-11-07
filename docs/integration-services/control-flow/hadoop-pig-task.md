@@ -17,7 +17,6 @@ caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Hadoop Pig Task
   Use the Hadoop Pig Task to run Pig script on a Hadoop cluster.  

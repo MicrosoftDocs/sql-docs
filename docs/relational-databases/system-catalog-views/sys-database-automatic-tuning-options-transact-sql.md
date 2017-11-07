@@ -25,7 +25,6 @@ caps.latest.revision: 24
 author: "jovanpop-msft"
 ms.author: "jovanpop"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # sys.database\_automatic\_tuning_options (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssvNxt-asdb-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]

@@ -16,7 +16,6 @@ caps.latest.revision: 21
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Audit Server Principal Impersonation Event Class
   The **Audit Server Principal Impersonation** event class occurs when there is an impersonation within server scope, such as EXECUTE AS \<*login*>.  

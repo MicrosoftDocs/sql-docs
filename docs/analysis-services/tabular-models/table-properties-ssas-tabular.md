@@ -16,8 +16,7 @@ ms.assetid: 16d3347b-7e43-4a6b-9956-fdd6ede092e6
 caps.latest.revision: 10
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # Table Properties (SSAS Tabular)
   This topic describes tabular model table properties. The properties described here are different from those in the Edit Table Properties dialog box, which define which columns from the source are imported.  

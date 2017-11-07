@@ -25,8 +25,7 @@ ms.assetid: 2d71ba53-1684-4da0-8da4-fb75033c971b
 caps.latest.revision: 35
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # DataSourceID Element (ASSL)
   Identifies the [DataSource](../../../analysis-services/scripting/objects/datasource-element-assl.md) element associated with the parent element.  

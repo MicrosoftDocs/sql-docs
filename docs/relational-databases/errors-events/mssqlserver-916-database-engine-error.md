@@ -13,10 +13,9 @@ helpviewer_keywords:
   - "916 (Database Engine error)"
 ms.assetid: 73eb6581-99fe-49a5-9b42-e239d7ffe27f
 caps.latest.revision: 8
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # MSSQLSERVER_916
   

@@ -25,8 +25,7 @@ ms.assetid: d7487977-73c3-4244-ad5d-3c357b219db4
 caps.latest.revision: 33
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # EstimatedPerformanceGain Element (ASSL)
   Contains the read-only percentage of estimated performance gain for the partition.  

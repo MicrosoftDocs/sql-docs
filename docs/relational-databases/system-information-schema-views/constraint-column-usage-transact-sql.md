@@ -19,10 +19,9 @@ helpviewer_keywords:
   - "CONSTRAINT_COLUMN_USAGE view"
 ms.assetid: 0f3ae521-6b19-43ad-b2c4-3822adb19591
 caps.latest.revision: 40
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # CONSTRAINT_COLUMN_USAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

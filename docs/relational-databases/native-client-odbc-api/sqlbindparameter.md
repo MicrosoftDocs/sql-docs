@@ -17,7 +17,6 @@ caps.latest.revision: 46
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # SQLBindParameter
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]

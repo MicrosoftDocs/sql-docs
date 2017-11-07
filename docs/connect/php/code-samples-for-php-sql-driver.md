@@ -14,7 +14,6 @@ caps.latest.revision: 2
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
-ms.workload: "On Demand"
 ---
 # Code Samples for PHP SQL Driver
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

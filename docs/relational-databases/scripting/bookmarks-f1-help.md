@@ -18,7 +18,6 @@ caps.latest.revision: 14
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Bookmarks F1 Help
   This section contains the F1 Help for the **Bookmarks** pages in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  

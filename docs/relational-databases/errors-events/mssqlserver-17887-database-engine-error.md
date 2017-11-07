@@ -13,10 +13,9 @@ helpviewer_keywords:
   - "17887 (Database Engine error)"
 ms.assetid: ad0806e6-3296-4c32-b103-fccf0f8a8d3d
 caps.latest.revision: 17
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # MSSQLSERVER_17887
   

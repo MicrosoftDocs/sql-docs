@@ -23,7 +23,7 @@ ms.assetid: 46e7683f-03ce-4af2-bd99-a5203733d723
 caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # Partitions - Write-Enabled Partitions

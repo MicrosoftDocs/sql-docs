@@ -16,7 +16,6 @@ caps.latest.revision:
 author: "allanhirt"
 ms.author: "mikeray"
 manager: "jhubbard"
-ms.workload: "On Demand"
 ---
 # Distributed availability groups
 

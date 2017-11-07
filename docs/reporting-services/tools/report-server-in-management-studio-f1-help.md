@@ -17,7 +17,6 @@ caps.latest.revision: 41
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
-ms.workload: "Inactive"
 ---
 # Report Server in Management Studio F1 Help
   This section includes topics about the dialog boxes in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] that can be used to manage report servers.  

@@ -18,7 +18,6 @@ caps.latest.revision: 36
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Security Audit Event Category (SQL Server Profiler)
   The **Security Audit** event category contains security audit events.  

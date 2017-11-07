@@ -23,8 +23,7 @@ ms.assetid: ab58c817-eb2b-4974-8470-2946ca5affea
 caps.latest.revision: 12
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # AggregationInstanceSource Element (ASSL)
   Identifies the source of data for user-defined aggregation instances bound to a [Partition](../../../analysis-services/scripting/objects/partition-element-assl.md) element.  

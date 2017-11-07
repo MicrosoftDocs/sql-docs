@@ -15,7 +15,7 @@ ms.topic: "get-started-article"
 ms.assetid: 
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "On Demand"
 ---
 # Analysis Services samples

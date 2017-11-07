@@ -16,7 +16,6 @@ caps.latest.revision: 25
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "On Demand"
 ---
 # Lesson 2-2 - Adding Indentation
 Query Editor allows you to indent large sections of code with a single step, and you can change the amount of the indentation.  

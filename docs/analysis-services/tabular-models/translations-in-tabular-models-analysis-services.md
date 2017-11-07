@@ -14,8 +14,7 @@ ms.assetid: e67f88f5-9f0c-4f19-ab09-558c56ca9335
 caps.latest.revision: 13
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # Translations in Tabular models (Analysis Services)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] adds translation string support for Tabular models. A single object in the model can have multiple translations of a name or description, making it possible to support multi-language versions within the model definition.  

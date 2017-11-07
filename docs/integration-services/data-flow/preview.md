@@ -14,7 +14,6 @@ caps.latest.revision: 10
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Preview
   Use the **Preview** dialog box to preview the data that the SAP BW source will extract.  

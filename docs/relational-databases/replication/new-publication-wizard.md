@@ -44,7 +44,6 @@ caps.latest.revision: 18
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # New Publication Wizard
   This section provides information on the following pages of the New Publication Wizard:  

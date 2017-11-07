@@ -18,7 +18,6 @@ caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Add Tables to Queries (Visual Database Tools)
 When you create a query, you are retrieving data from a table or other objects structured like tables — views and certain user-defined functions. To work with any of these objects in your query, you add them to the **Diagram Pane**.  

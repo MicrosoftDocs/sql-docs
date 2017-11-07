@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "STR function"
 ms.assetid: de03531b-d9e7-4c3c-9604-14e582ac20c6
 caps.latest.revision: 39
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "Active"
 ---
 # STR (Transact-SQL)

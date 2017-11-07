@@ -16,7 +16,6 @@ caps.latest.revision: 14
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Availability Replica Properties (General Page)
   Use this dialog box to viewthe properties of an availability replica.  

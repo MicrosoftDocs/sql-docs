@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "execution processing time [SQL Server]"
 ms.assetid: eec2e1cd-a29d-4cf3-a271-be9d61506f15
 caps.latest.revision: 31
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "Active"
 ---
 # SET STATISTICS TIME (Transact-SQL)

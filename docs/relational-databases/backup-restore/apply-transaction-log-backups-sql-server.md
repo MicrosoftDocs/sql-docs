@@ -20,7 +20,6 @@ caps.latest.revision: 38
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "On Demand"
 ---
 # Apply Transaction Log Backups (SQL Server)
   The topic is relevant only for the full recovery model or bulk-logged recovery model.  

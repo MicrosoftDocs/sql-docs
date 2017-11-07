@@ -14,7 +14,6 @@ caps.latest.revision: 14
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Manage DQS Databases
   This section provides information about database management activities that can be performed on the DQS databases such as backup/restore or detach/attach.  

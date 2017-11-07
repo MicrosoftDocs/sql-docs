@@ -26,7 +26,7 @@ ms.assetid: de54c059-cb0f-4f66-bd70-8605af05ec4f
 caps.latest.revision: 46
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "On Demand"
 ---
 # Dimension Relationships

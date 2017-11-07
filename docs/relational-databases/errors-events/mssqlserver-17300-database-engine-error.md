@@ -13,10 +13,9 @@ helpviewer_keywords:
   - "17300 (Database Engine error)"
 ms.assetid: c1d6bfb6-28af-4df6-8087-25807602d282
 caps.latest.revision: 18
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # MSSQLSERVER_17300
   

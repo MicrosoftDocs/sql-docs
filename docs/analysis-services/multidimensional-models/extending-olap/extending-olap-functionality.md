@@ -16,7 +16,7 @@ ms.assetid: 49a17ff3-94e9-4969-84fc-37d49e63933b
 caps.latest.revision: 5
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # Extending OLAP functionality

@@ -13,10 +13,9 @@ helpviewer_keywords:
   - "7933 (Database Engine error)"
 ms.assetid: 722bd2c6-0fb9-4838-954a-439744c6ac4b
 caps.latest.revision: 16
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # MSSQLSERVER_7933
   

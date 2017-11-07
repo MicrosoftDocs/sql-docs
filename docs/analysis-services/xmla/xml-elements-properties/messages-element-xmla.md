@@ -25,10 +25,9 @@ helpviewer_keywords:
   - "Messages element"
 ms.assetid: 719d15ff-f18b-4c56-80ba-a9114c0b7d8a
 caps.latest.revision: 11
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+author: "jeannt"
+ms.author: "jeannt"
+manager: "erikre"
 ---
 # Messages Element (XMLA)
   Contains a collection of [Message](../../../analysis-services/xmla/xml-elements-properties/message-element-xmla.md) elements returned from an instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] by a [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) or [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) method call.  

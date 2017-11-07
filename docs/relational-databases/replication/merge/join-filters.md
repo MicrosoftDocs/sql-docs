@@ -19,7 +19,6 @@ caps.latest.revision: 38
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Join Filters
   A join filter allows a table to be filtered based on how a related table in the publication is filtered. Typically a parent table is filtered using a parameterized filter; then one or more join filters are defined in much the same way that you define a join between tables. The join filters extend the parameterized filter so that the data in the related tables is only replicated if it matches the join filter clause.  

@@ -15,7 +15,6 @@ caps.latest.revision: 6
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
-ms.workload: "Inactive"
 ---
 # Troubleshoot Publishing or Viewing a Report on a Native Mode Report Server
   

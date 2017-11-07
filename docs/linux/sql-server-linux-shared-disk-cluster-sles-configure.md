@@ -9,7 +9,6 @@ ms.topic: article
 ms.prod: sql-linux 
 ms.technology: database-engine
 ms.assetid: e5ad1bdd-c054-4999-a5aa-00e74770b481
-ms.workload: "Inactive"
 ---
 # Configure SLES shared disk cluster for SQL Server
 

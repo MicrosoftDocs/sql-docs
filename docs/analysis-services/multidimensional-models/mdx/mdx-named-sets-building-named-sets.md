@@ -22,7 +22,7 @@ ms.assetid: 213b0035-e96d-4ba0-83f2-ded206905603
 caps.latest.revision: 28
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # MDX Named Sets - Building Named Sets

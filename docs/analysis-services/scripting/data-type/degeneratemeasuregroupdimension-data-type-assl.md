@@ -25,7 +25,7 @@ ms.assetid: a64fe908-154d-4fea-b435-afb6ee37a6fa
 caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # DegenerateMeasureGroupDimension Data Type (ASSL)

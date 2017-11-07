@@ -16,7 +16,6 @@ caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # DROP TABLE Command
 Removes a table from the database specified with the data source and deletes it from disk.  

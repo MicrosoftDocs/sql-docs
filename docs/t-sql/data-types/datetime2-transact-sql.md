@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "datetime2 data type [SQL Server]"
 ms.assetid: 868017f3-214f-43ef-8536-cc1632a2288f
 caps.latest.revision: 58
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "Active"
 ---
 # datetime2 (Transact-SQL)

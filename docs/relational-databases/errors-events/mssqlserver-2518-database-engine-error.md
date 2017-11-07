@@ -13,10 +13,9 @@ helpviewer_keywords:
   - "2518 (Database Engine error)"
 ms.assetid: 54a13abc-4c33-43f0-b55d-e2e74a1381c8
 caps.latest.revision: 19
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # MSSQLSERVER_2518
   

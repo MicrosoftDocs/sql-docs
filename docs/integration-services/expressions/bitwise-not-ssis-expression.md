@@ -17,7 +17,6 @@ caps.latest.revision: 31
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # ~ (Bitwise Not) (SSIS Expression)
   Performs a bitwise negation of an integer. This operator can be applied to signed and unsigned integer data types.  

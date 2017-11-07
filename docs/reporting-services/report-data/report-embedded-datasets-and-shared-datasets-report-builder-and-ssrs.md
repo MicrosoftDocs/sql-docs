@@ -17,7 +17,6 @@ caps.latest.revision: 16
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
-ms.workload: "On Demand"
 ---
 # Report Embedded Datasets and Shared Datasets (Report Builder and SSRS)
   A dataset specifies the data that you want to use from a data connection. A dataset is based on a data connection that has been saved in the report as an embedded data source or a reference to a shared data source on a report server. The dataset includes a query that specifies a set of fields. As you drag these fields to the design surface, you create expressions that evaluate to the actual data when the report runs.  

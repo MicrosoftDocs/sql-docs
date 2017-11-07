@@ -13,7 +13,6 @@ caps.latest.revision: 1
 author: "haoqian"
 ms.author: "haoqian"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Change the account for Scale Out logging
 When executing packages in Scale Out, the event messages are logged into SSISDB with an auto-created user **##MS_SSISLogDBWorkerAgentLogin##**. 

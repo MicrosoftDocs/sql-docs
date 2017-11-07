@@ -16,7 +16,6 @@ caps.latest.revision: 28
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Audit Logout Event Class
   The **Audit Logout** event class indicates that a user has logged out of (logged off) [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Events in this class are fired by new connections or by connections that are reused from a connection pool.  

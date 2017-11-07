@@ -17,7 +17,6 @@ caps.latest.revision: 12
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Tools Reference (Replication)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides several tools for implementing, administering, and troubleshooting replication. These include [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], programming interfaces, and other [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows components.  

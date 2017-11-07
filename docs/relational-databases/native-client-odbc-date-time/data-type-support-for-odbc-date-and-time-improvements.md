@@ -17,7 +17,6 @@ caps.latest.revision: 28
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "On Demand"
 ---
 # Data Type Support for ODBC Date and Time Improvements
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]

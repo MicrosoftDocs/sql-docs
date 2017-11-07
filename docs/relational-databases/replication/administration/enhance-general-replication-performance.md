@@ -25,7 +25,6 @@ caps.latest.revision: 45
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Enhance General Replication Performance
   You can enhance the general performance for all types of replication in your application and on your network by using the guidelines described in this topic.  

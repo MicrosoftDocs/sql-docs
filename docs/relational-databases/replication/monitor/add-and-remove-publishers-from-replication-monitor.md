@@ -16,7 +16,6 @@ caps.latest.revision: 38
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Add and Remove Publishers from Replication Monitor
   The server from which you launch Replication Monitor is automatically added to the monitor if it is a Publisher. Additional Publishers can be added through the **Add Publisher** dialog box. After adding a Publisher, it is displayed in a group in the left pane of the monitor. The **My Publishers** group is included by default, but you can create new groups to manage one or more replication topologies. For information about starting Replication Monitor, see [Start the Replication Monitor](../../../relational-databases/replication/monitor/start-the-replication-monitor.md).  

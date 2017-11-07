@@ -25,8 +25,7 @@ ms.assetid: 02c1844c-51fb-44fe-aafb-001e53ad293c
 caps.latest.revision: 35
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # Default Element (ASSL)
   Determines whether the [DrillThroughAction](../../../analysis-services/scripting/data-type/drillthroughaction-data-type-assl.md) is the default drillthrough action.  

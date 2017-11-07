@@ -13,7 +13,7 @@ ms.assetid: aa65c992-eb41-4032-9e11-a9ba871b6a3c
 caps.latest.revision: 8
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # This workbook contains one or more queries that refresh external data

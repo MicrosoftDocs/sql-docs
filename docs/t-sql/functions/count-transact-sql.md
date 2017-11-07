@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "COUNT function [Transact-SQL]"
 ms.assetid: 28d39da6-bc2e-46c7-858c-b1721c938830
 caps.latest.revision: 45
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "Active"
 ---
 # COUNT (Transact-SQL)

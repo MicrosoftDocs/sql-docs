@@ -13,10 +13,9 @@ helpviewer_keywords:
   - "3271 (Database Engine error)"
 ms.assetid: 21b8de4b-6624-4163-9561-1a6cc8fe3d51
 caps.latest.revision: 19
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # MSSQLSERVER_3271
   

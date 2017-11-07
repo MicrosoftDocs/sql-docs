@@ -15,7 +15,7 @@ ms.assetid: a751856d-33bd-4788-9593-317b2826132d
 caps.latest.revision: 26
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # Data Mining Stored Procedures (Analysis Services - Data Mining)

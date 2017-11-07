@@ -25,7 +25,7 @@ ms.assetid: 1f08e2d8-b279-4181-9257-e56f9fcbd9bf
 caps.latest.revision: 38
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # DataSourceViewBinding Data Type (ASSL)

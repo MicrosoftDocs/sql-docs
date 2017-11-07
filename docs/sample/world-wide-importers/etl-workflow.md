@@ -15,7 +15,6 @@ author: "BarbKess"
 ms.author: "barbkess"
 manager: "jhubbard"
 robots: noindex,nofollow
-ms.workload: "Inactive"
 ---
 # WideWorldImportersDW ETL workflow
 The ETL package WWI_Integration is used to migrate data from the WideWorldImporters database to the WideWorldImportersDW database as the data changes. The package is run periodically (most commonly daily).

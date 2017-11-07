@@ -23,7 +23,6 @@ caps.latest.revision: 40
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "On Demand"
 ---
 # Estimate the Size of a Nonclustered Index
   Follow these steps to estimate the amount of space that is required to store a nonclustered index:  

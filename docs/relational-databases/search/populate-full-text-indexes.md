@@ -28,7 +28,6 @@ caps.latest.revision: 78
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "On Demand"
 ---
 # Populate Full-Text Indexes
   Creating and maintaining a full-text index involves populating the index by using a process called a *population* (also known as a *crawl*).  

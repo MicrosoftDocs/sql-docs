@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "dropping login accounts"
 ms.assetid: acb5c3dc-7aa2-49f6-9330-573227ba9b1a
 caps.latest.revision: 36
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "On Demand"
 ---
 # DROP LOGIN (Transact-SQL)

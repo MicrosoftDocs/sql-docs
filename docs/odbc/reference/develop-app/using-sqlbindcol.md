@@ -18,7 +18,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Using SQLBindCol
 The application binds columns by calling **SQLBindCol**. This function binds one column at a time. With it, the application specifies the following:  

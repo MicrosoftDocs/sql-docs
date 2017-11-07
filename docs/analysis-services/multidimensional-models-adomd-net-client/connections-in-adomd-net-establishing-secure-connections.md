@@ -19,7 +19,7 @@ ms.assetid: b084d447-1456-45a4-8e0e-746c07d7d6fd
 caps.latest.revision: 42
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # Connections in ADOMD.NET - Establishing Secure Connections

@@ -28,7 +28,6 @@ caps.latest.revision: 42
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "On Demand"
 ---
 # Replication Agents Overview
   Replication uses a number of standalone programs, called agents, to carry out the tasks associated with tracking changes and distributing data. By default, replication agents run as jobs scheduled under [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent, and [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent must be running for the jobs to run. Replication agents can also be run from the command line and by applications that use Replication Management Objects (RMO). Replication agents can be administered from [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Replication Monitor and [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  

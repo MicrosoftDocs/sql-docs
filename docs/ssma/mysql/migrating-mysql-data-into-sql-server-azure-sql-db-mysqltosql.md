@@ -20,7 +20,6 @@ caps.latest.revision: 24
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Migrating MySQL Data into SQL Server - Azure SQL DB (MySQLToSQL)
 After you have successfully synchronized the converted objects with [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure, you can migrate data from MySQL to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure.  

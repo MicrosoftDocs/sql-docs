@@ -23,7 +23,6 @@ caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # SQLRemoveDSNFromIni Function
 **Conformance**  

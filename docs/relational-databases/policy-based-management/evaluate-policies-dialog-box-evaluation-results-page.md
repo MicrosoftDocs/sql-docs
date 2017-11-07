@@ -16,7 +16,6 @@ caps.latest.revision: 16
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Evaluate Policies Dialog Box, Evaluation Results Page
   Use this dialog box to view policy evaluation results, and to apply Policy-Based Management policies to a set of targets that does not comply with the policies.  

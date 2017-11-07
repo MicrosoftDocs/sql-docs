@@ -16,7 +16,6 @@ caps.latest.revision: 26
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Conversions Performed from Server to Client
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]

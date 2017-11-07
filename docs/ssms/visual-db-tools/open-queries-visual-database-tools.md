@@ -17,7 +17,6 @@ caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Open Queries (Visual Database Tools)
 You can open an existing query in Query and View Designer by using the **Open** command.  

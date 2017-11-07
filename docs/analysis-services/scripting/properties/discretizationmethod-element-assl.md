@@ -25,8 +25,7 @@ ms.assetid: 4cfe015f-ad6c-47e1-8aff-c9c7677867b1
 caps.latest.revision: 31
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # DiscretizationMethod Element (ASSL)
   Defines the method to be used for discretization.  

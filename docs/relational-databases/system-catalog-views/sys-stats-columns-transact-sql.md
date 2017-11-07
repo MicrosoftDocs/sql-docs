@@ -20,10 +20,9 @@ helpviewer_keywords:
   - "sys.stats_columns catalog view"
 ms.assetid: 93414d07-97e9-4501-8577-f35b8d68fbe9
 caps.latest.revision: 23
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # sys.stats_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]

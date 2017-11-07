@@ -25,10 +25,9 @@ helpviewer_keywords:
   - "Tuple element"
 ms.assetid: d65aba10-55e1-49c1-81bc-0756c39c0da2
 caps.latest.revision: 11
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+author: "jeannt"
+ms.author: "jeannt"
+manager: "erikre"
 ---
 # Tuple Element (XMLA)
   Contains a collection of [Member](../../../analysis-services/xmla/xml-elements-properties/member-element-xmla.md) elements contained by the parent [Tuples](../../../analysis-services/xmla/xml-elements-properties/tuples-element-xmla.md) element.  

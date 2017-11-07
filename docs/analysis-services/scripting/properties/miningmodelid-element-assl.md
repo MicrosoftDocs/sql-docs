@@ -25,8 +25,7 @@ ms.assetid: fada8720-1590-44be-bafc-0ab3612b00e5
 caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # MiningModelID Element (ASSL)
   Associates a mining model with a data mining dimension.  

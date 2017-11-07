@@ -14,7 +14,6 @@ caps.latest.revision: 3
 ms.author: "v-chojas"
 manager: "jhubbard"
 author: "MightyPen"
-ms.workload: "On Demand"
 ---
 # Using Always Encrypted with the ODBC Driver 13.1 for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]

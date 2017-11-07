@@ -18,7 +18,6 @@ caps.latest.revision: 37
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Optimize Merge Replication Performance with Download-Only Articles
   Merge replication offers two different article types to address different application needs. Publications can contain one or more of each of these article types as appropriate for the application:  

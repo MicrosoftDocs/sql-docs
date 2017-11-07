@@ -15,7 +15,7 @@ ms.assetid: 7d3ffabd-78ae-4204-8323-29949d030c16
 caps.latest.revision: 17
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "On Demand"
 ---
 # Lesson 1: Defining a Data Source View within an Analysis Services Project

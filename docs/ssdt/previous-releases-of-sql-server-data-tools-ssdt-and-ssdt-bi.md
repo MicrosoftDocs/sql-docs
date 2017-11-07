@@ -14,7 +14,6 @@ caps.latest.revision: 23
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
-ms.workload: "Active"
 ---
 # Previous releases of SQL Server Data Tools (SSDT and SSDT-BI)
 

@@ -15,7 +15,7 @@ ms.assetid: 0d2eb34d-78c8-41ff-b92d-49b62c16b2ac
 caps.latest.revision: 33
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Active"
 ---
 # Lesson 1: Create a New Tabular Model Project

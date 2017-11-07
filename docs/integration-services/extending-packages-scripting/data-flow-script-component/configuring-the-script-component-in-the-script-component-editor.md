@@ -23,7 +23,6 @@ caps.latest.revision: 46
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Configuring the Script Component in the Script Component Editor
   Before you write custom code in the Script component, you must select the type of data flow component that you want to create—source, transformation, or destination—and then configure the component's metadata and properties in the **Script Transformation Editor**.  

@@ -16,7 +16,6 @@ caps.latest.revision: 30
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Create New Condition or Open Condition Dialog Box, General Page
   Use this dialog box to create or change a Policy-Based Management condition. A condition is a Boolean expression that specifies a set of allowed states of a Policy-Based Management managed target with regard to facets. The properties that can be selected in the **Expression/Field** box depend upon the facet that is used. For more information about how conditions relate to facets and policies, see [Administer Servers by Using Policy-Based Management](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md).  

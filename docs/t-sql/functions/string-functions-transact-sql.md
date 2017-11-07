@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "strings [SQL Server]"
 ms.assetid: 6940a83d-5374-4af3-bb27-5d89c8af83ac
 caps.latest.revision: 29
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "Active"
 ---
 # String Functions (Transact-SQL)

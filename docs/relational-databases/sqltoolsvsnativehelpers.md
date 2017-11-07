@@ -14,7 +14,6 @@ caps.latest.revision: 5
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # SqlToolsVSNativeHelpers
   Library that supports SQL Server functionality in Visual Studio.  

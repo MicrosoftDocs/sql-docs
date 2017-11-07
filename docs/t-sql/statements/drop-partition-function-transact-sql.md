@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "removing partition functions"
 ms.assetid: a4bb055a-a538-4db9-a6fb-550d1eabfa18
 caps.latest.revision: 31
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "On Demand"
 ---
 # DROP PARTITION FUNCTION (Transact-SQL)

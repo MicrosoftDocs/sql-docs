@@ -13,10 +13,9 @@ helpviewer_keywords:
   - "3456 (Database Engine error)"
 ms.assetid: d11b2b2c-3ae4-4023-b82f-05b561bfacce
 caps.latest.revision: 10
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # MSSQLSERVER_3456
   

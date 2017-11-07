@@ -16,7 +16,6 @@ caps.latest.revision: 14
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "On Demand"
 ---
 # Change Data Capture and Other SQL Server Features
   This topic describes how the following features interact with change data capture:  

@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "ENCRYPTBYCERT function"
 ms.assetid: ab66441f-e2d2-4e3a-bcae-bcc09e12f3c1
 caps.latest.revision: 25
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # ENCRYPTBYCERT (Transact-SQL)

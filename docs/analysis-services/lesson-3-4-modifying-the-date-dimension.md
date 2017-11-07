@@ -15,7 +15,7 @@ ms.assetid: 4689d780-4bf6-4cf8-8fde-eb3f15dd668a
 caps.latest.revision: 19
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "On Demand"
 ---
 # Lesson 3-4 - Modifying the Date Dimension

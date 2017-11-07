@@ -16,7 +16,6 @@ caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Job Properties - New Job (Targets Page)
 Use this page to manage the target servers for the job.  

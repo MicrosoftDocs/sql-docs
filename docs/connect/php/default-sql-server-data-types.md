@@ -17,7 +17,6 @@ caps.latest.revision: 20
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Default SQL Server Data Types
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

@@ -14,7 +14,6 @@ caps.latest.revision: 22
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
-ms.workload: "Active"
 ---
 # Microsoft PHP Driver for SQL Server
 

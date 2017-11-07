@@ -16,10 +16,9 @@ helpviewer_keywords:
   - "sp_replcounters"
 ms.assetid: fe585b1f-edda-421f-81d6-8a03a3a535d2
 caps.latest.revision: 24
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # sp_replcounters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

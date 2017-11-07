@@ -1,8 +1,8 @@
 ---
 title: "Components for Python integration with SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/03/2017"
-ms.prod: "sql-server-2017"
+ms.date: "08/20/2017"
+ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +11,7 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 author: "jeannt"
 ms.author: "jeannt"
-manager: "cgronlund"
+manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # Components in SQL Server to support Python integration
@@ -98,7 +98,7 @@ The SQL Satellite can be monitored by using windows extended events (xEvents). F
   + Write data to tables: for example, when saving results to a table
   + Create database objects: for example, if saving external script as part of a new stored procedure.
 
-  When [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] is used as the compute context for Python script executed from a remote client, and the Python executable must retrieve data from an external source, ODBC is used for writeback. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] maps the identity of the user issuing the remote command to the identity of the user on the current instance, and runs the ODBC command using that user's credentials. The connection string needed to perform this ODBC call is obtained from the client code.
+  When [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] is used as the compute context for Python script executed from a remote client, and the Python executable must retrieve data from an external source, ODBC is used for writeback. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] will map the identity of the user issuing the remote command to the identity of the user on the current instance, and run the ODBC command using that user's credentials. The connection string needed to perform this ODBC call is obtained from the client code.
 
 ## Interaction of components
 
@@ -110,7 +110,7 @@ When you run Python "inside" [!INCLUDE[ssNoVersion_md](../../includes/ssnoversio
 
 After the script has been embedded in the stored procedure, any application that can make a stored procedure call can initiate execution of the Python code.  Thereafter [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] manages code execution as summarized in the following diagram.
 
-![script-in-db-python](../../advanced-analytics/python/media/script-in-db-python2.png)
+![script-in-db-python](../../advanced-analytics/python/media/script-in-db-python.png)
 
 1. A request for the Python runtime is indicated by the parameter _@language='Python'_ passed to the stored procedure. SQL Server sends this request to the Launchpad service.
 2. The Launchpad service starts the appropriate launcher; in this case, PythonLauncher.
@@ -129,7 +129,7 @@ You can run Python scripts from a remote computer, such as a laptop, and have th
 
 The following diagram summarizes the overall workflow when scripts are sent from a remote computer.
 
-![remote-sqlcc-from-python](../../advanced-analytics/python/media/remote-sqlcc-from-python3.png)
+![remote-sqlcc-from-python](../../advanced-analytics/python/media/remote-sqlcc-from-python2.png)
 
 1. For functions that are supported in **revoscalepy**, the Python runtime calls a linking function, which in turn calls BxlServer.
 2. BxlServer is included with Machine Learning Services (In-Database) and runs in a separate process from the Python runtime.

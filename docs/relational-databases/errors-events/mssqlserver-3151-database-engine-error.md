@@ -13,10 +13,9 @@ helpviewer_keywords:
   - "3151 (Database Engine error)"
 ms.assetid: a8657a91-ec75-4649-a09a-21920e0030ff
 caps.latest.revision: 17
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # MSSQLSERVER_3151
   

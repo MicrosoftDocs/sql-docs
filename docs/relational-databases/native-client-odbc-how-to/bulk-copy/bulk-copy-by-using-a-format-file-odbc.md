@@ -17,7 +17,6 @@ caps.latest.revision: 10
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Bulk Copy by Using a Format File (ODBC)
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]

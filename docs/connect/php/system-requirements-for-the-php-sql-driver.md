@@ -16,7 +16,6 @@ caps.latest.revision: 93
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
-ms.workload: "Active"
 ---
 # System Requirements for the PHP SQL Driver
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

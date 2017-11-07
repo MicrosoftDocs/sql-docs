@@ -18,10 +18,9 @@ helpviewer_keywords:
   - "sp_addlinkedserver"
 ms.assetid: fed3adb0-4c15-4a1a-8acd-1b184aff558f
 caps.latest.revision: 70
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Active"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # sp_addlinkedserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

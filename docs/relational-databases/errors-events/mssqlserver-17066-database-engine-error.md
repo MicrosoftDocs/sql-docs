@@ -13,10 +13,9 @@ helpviewer_keywords:
   - "17066 (Database Engine error)"
 ms.assetid: 7d650bbf-c583-4af8-9e22-993ee2880d95
 caps.latest.revision: 16
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # MSSQLSERVER_17066
   

@@ -25,7 +25,6 @@ caps.latest.revision: 37
 author: "jovanpop-msft"
 ms.author: "jovanpop"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # sys.dm\_db\_tuning\_recommendations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssvNxt-asdb-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)] 

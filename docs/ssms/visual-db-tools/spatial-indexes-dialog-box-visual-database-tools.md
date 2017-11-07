@@ -16,7 +16,6 @@ caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Spatial Indexes Dialog Box (Visual Database Tools)
 Use the **Spatial Indexes** dialog box to create indexes for columns of the **geometry** or **geography** data type (*spatial columns*), which cannot be indexed using the **Index/Keys** dialog box. Each spatial column can have more than one spatial index, but they must be created one at a time.  

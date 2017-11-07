@@ -27,7 +27,7 @@ ms.assetid: e9b9ca57-a5cc-4fc0-87b5-305257038d56
 caps.latest.revision: 37
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # Deployment Script Files - Partition and Role Deployment Options

@@ -16,7 +16,6 @@ caps.latest.revision: 26
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "On Demand"
 ---
 # Distribution Database
   The distribution database stores metadata and history data for all types of replication, and transactions for transactional replication.  

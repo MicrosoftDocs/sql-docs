@@ -27,7 +27,7 @@ ms.assetid: 86d17547-a0b6-47ac-876c-d7a5b15ac327
 caps.latest.revision: 40
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "On Demand"
 ---
 # Partitions - Partition Storage Modes and Processing

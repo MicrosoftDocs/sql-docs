@@ -9,7 +9,6 @@ ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 77f16adc-e6cb-4a57-82f3-7b9780369868
-ms.workload: "On Demand"
 ---
 # Install SQL Server Agent on Linux
 

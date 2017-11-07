@@ -16,7 +16,6 @@ caps.latest.revision: 3
 author: "dagiro"
 ms.author: "v-dagir"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # SQL Server, Batch Resp Statistics Object
 The **SQLServer:Batch Resp Statistics** performance object provides counters to track SQL Server batch response times.

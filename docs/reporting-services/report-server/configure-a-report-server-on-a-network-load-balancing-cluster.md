@@ -17,7 +17,6 @@ caps.latest.revision: 10
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
-ms.workload: "On Demand"
 ---
 # Configure a Report Server on a Network Load Balancing Cluster
   If you are configuring a report server scale-out to run on a Network Load Balancing (NLB) cluster, you must do the following:  

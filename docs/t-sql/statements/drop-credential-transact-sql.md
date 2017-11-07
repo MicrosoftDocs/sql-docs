@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "dropping credentials"
 ms.assetid: df22c826-317d-45a6-b078-186acb65f71e
 caps.latest.revision: 31
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # DROP CREDENTIAL (Transact-SQL)

@@ -17,7 +17,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # CREATE INDEX Statement Limitations
 The CREATE INDEX statement is not supported for the Microsoft Excel or Text drivers.  

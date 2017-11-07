@@ -13,7 +13,6 @@ caps.latest.revision: 49
 author: "craigg-msft"
 ms.author: "craigg"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # SQL Server 2012 SP1 Release Notes
 This Release Notes document describes known issues that you should read about before you install or troubleshoot [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Service Pack 1. This Release Notes document is available online only, not on the installation media, and it is updated periodically.  

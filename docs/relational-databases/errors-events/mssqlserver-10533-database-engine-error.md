@@ -13,10 +13,9 @@ helpviewer_keywords:
   - "10533 (Database Engine error)"
 ms.assetid: cc2fbdab-7b90-415f-a1f9-066824344283
 caps.latest.revision: 10
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # MSSQLSERVER_10533
   

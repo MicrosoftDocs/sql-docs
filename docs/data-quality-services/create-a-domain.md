@@ -16,7 +16,6 @@ caps.latest.revision: 23
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Create a Domain
   This topic describes how to create a domain in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). The values in the domain are a semantic representation of the data in a field. For more information on domains, see [Managing a Domain](../data-quality-services/managing-a-domain.md).  

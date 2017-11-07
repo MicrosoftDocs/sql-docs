@@ -19,7 +19,6 @@ caps.latest.revision: 39
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # SMO Object Model Namespaces
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) has various namespaces. The different namespaces represent different areas of functionality within SMO.  

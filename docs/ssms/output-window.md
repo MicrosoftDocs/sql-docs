@@ -18,7 +18,6 @@ caps.latest.revision: 1
 author: "shueybubbles"
 ms.author: "davidshi"
 manager: "kenvh"
-ms.workload: "Inactive"
 ---
 # Output Window in SQL Server Management Studio
 The Output Window can be opened from the View menu or by using the key combination Ctrl+Alt+O. There are multiple channels of output available.

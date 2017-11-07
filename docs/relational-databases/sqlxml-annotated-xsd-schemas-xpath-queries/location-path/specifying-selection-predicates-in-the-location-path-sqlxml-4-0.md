@@ -21,7 +21,6 @@ caps.latest.revision: 28
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Specifying Selection Predicates in the Location Path (SQLXML 4.0)
   A predicate filters a node-set with respect to an axis (similar to a WHERE clause in a SELECT statement). The predicate is specified between brackets. For each node in the node-set to be filtered, the predicate expression is evaluated with that node as the context node, with the number of nodes in the node-set as context size. If the predicate expression evaluates to TRUE for that node, the node is included in the resulting node-set.  

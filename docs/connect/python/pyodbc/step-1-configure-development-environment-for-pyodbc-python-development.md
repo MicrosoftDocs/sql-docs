@@ -14,7 +14,6 @@ caps.latest.revision: 2
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
-ms.workload: "Active"
 ---
 # Step 1: Configure development environment for pyodbc Python development
 

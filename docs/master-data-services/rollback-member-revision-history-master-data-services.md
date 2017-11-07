@@ -14,7 +14,6 @@ caps.latest.revision: 5
 author: "smartysanthosh"
 ms.author: "nagavo"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Rollback Member Revision History (Master Data Services)
   A member revision history is recorded each time a member is changed. You can rollback a member revision history to a previous version.  

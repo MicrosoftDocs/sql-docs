@@ -30,9 +30,9 @@ helpviewer_keywords:
   - "time [SQL Server], system"
 ms.assetid: 8423c753-cebe-4edd-871d-0138e092199f
 caps.latest.revision: 43
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "Active"
 ---
 # SYSDATETIMEOFFSET (Transact-SQL)

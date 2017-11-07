@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "server properties [SQL Server]"
 ms.assetid: 11e166fa-3dd2-42d8-ac4b-04f18c612c4a
 caps.latest.revision: 128
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "Active"
 ---
 # SERVERPROPERTY (Transact-SQL)

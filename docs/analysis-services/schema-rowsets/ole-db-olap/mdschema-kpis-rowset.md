@@ -21,7 +21,7 @@ ms.assetid: 40fb5112-6a90-4455-82b3-8b6322490222
 caps.latest.revision: 36
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # MDSCHEMA_KPIS Rowset

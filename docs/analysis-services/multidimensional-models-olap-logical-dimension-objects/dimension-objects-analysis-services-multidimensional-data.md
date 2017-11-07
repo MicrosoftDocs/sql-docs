@@ -18,7 +18,7 @@ ms.assetid: 7f3d55c7-cccb-4ad0-b6cb-3a2c9992dd68
 caps.latest.revision: 14
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # Dimension Objects (Analysis Services - Multidimensional Data)

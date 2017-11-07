@@ -20,7 +20,7 @@ ms.assetid: e0f7acf3-4b07-41fc-a5fc-ac30b4a56c54
 caps.latest.revision: 33
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "On Demand"
 ---
 # Cubes in Multidimensional Models

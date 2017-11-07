@@ -21,7 +21,7 @@ ms.assetid: e0842e63-089d-468d-869f-634da343d9fb
 caps.latest.revision: 30
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # DISCOVER_INSTANCES Rowset

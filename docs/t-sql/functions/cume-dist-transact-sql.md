@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "analytic functions, CUME_DIST"
 ms.assetid: 491b07f3-9ffd-4cdd-93e5-5abb636fc5ef
 caps.latest.revision: 19
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "On Demand"
 ---
 # CUME_DIST (Transact-SQL)

@@ -20,10 +20,9 @@ helpviewer_keywords:
   - "sys.system_parameters catalog view"
 ms.assetid: 0d135c5f-68b5-4009-a0da-35e6abfee0ff
 caps.latest.revision: 35
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # sys.system_parameters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]

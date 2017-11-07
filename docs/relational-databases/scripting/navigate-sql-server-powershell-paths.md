@@ -14,7 +14,6 @@ caps.latest.revision: 8
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Navigate SQL Server PowerShell Paths
   The [!INCLUDE[ssDE](../../includes/ssde-md.md)] PowerShell provider exposes the set of objects in an instance of SQL Server in a structure similar to a file path. You can use Windows PowerShell cmdlets to navigate the provider path, and create custom drives to shorten the path you have to type.  

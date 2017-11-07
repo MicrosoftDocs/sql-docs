@@ -14,7 +14,6 @@ caps.latest.revision: 24
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "On Demand"
 ---
 # Lesson 3: Working with Templates, Solutions, and Script Projects
 Usse [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) to create custom templates, and create solutions and script projects.  

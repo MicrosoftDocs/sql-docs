@@ -17,7 +17,7 @@ ms.assetid: c42166ef-b75c-45f4-859c-09a3e9617664
 caps.latest.revision: 28
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "On Demand"
 ---
 # Use Aggregate Functions

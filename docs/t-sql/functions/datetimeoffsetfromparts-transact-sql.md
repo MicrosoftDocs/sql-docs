@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "DATETIMEOFFSETFROMPARTS function"
 ms.assetid: 463da1f4-b4b6-45a3-9a95-ea1f99575542
 caps.latest.revision: 19
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "On Demand"
 ---
 # DATETIMEOFFSETFROMPARTS (Transact-SQL)

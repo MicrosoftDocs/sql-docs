@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "database master key [SQL Server], creating"
 ms.assetid: 1710a305-1a4f-48ec-836c-11ffd0356d76
 caps.latest.revision: 50
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "On Demand"
 ---
 # CREATE MASTER KEY (Transact-SQL)

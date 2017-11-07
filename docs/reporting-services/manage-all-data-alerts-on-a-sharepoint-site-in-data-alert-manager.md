@@ -18,7 +18,6 @@ caps.latest.revision: 13
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
-ms.workload: "On Demand"
 ---
 # Manage All Data Alerts on a SharePoint Site in Data Alert Manager
 

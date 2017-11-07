@@ -16,7 +16,6 @@ caps.latest.revision: 35
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
-ms.workload: "Active"
 ---
 # Lesson 1: Create a Project and Basic Package with SSIS
 

@@ -18,7 +18,7 @@ ms.assetid: 211cfa04-7bd6-43fe-8bd5-bfbff78bdafb
 caps.latest.revision: 13
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # DISCOVER_OBJECT_MEMORY_USAGE Rowset

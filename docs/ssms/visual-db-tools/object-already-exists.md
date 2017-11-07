@@ -17,7 +17,6 @@ caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Object Already Exists
 The object you are trying to save has the same name as an object already in the database. Choose another name and proceed.  

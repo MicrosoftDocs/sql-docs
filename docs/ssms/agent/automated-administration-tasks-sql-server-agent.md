@@ -19,7 +19,6 @@ caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
-ms.workload: "On Demand"
 ---
 # Automated Administration Tasks (SQL Server Agent)
 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] allows you to automate administrative tasks. To automate administration, you define predictable administrative tasks and then specify the conditions under which each task occurs. Using automated administration to handle routine tasks and events frees your time to perform other administrative functions.  

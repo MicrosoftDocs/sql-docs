@@ -15,7 +15,6 @@ caps.latest.revision: 18
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # SQL Server Support for In-Memory OLTP
   This section discusses new and updated syntax and features supporting memory-optimized tables.  

@@ -25,8 +25,7 @@ ms.assetid: 1581e0df-ae8e-41ce-9c92-f0f7cac487f2
 caps.latest.revision: 36
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # AggregationPrefix Element (ASSL)
   Defines the common prefix to be used for aggregation names throughout the associated parent element.  

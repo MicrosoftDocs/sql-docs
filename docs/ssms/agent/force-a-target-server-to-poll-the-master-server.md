@@ -19,7 +19,6 @@ caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Force a Target Server to Poll the Master Server
 This topic describes how to force a target server to poll the master server. The target server must be a registered server on the master server.  

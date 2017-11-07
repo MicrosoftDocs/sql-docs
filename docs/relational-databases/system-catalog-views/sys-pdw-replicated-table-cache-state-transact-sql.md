@@ -14,7 +14,6 @@ dev_langs:
 author: "ronortloff"
 ms.author: "rortloff;barbkess"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # sys.pdw_replicated_table_cache_state (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]

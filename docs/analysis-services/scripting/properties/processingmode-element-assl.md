@@ -25,8 +25,7 @@ ms.assetid: dff6eeba-f09c-4d8c-ad81-caef76254af0
 caps.latest.revision: 33
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # ProcessingMode Element (ASSL)
   Indicates whether the instance should index and aggregate during or after processing.  

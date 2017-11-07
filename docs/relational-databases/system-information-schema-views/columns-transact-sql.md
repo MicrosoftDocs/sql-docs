@@ -19,10 +19,9 @@ helpviewer_keywords:
   - "INFORMATION_SCHEMA.COLUMNS view"
 ms.assetid: bbf7ac4a-7444-4351-a590-a9f71e0bc495
 caps.latest.revision: 48
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "On Demand"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # COLUMNS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]

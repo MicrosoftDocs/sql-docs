@@ -20,7 +20,6 @@ caps.latest.revision: 35
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Native Error Numbers
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]

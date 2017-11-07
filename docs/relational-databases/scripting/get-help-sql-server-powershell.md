@@ -18,7 +18,6 @@ caps.latest.revision: 18
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Get Help SQL Server PowerShell
   There are several sources of information about using the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider for Windows PowerShell and cmdlets. This includes the help that is available in the Windows PowerShell environment.  

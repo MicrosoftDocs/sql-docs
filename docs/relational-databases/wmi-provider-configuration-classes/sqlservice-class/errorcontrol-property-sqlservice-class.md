@@ -21,7 +21,6 @@ caps.latest.revision: 34
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # ErrorControl Property (SqlService Class)
   Gets or sets the severity of the error if the service fails to start during startup.  

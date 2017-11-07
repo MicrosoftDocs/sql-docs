@@ -16,7 +16,7 @@ ms.assetid: 29a00a41-5b0d-44b2-8a86-1b16fe507768
 caps.latest.revision: 18
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "On Demand"
 ---
 # Connection String Properties (Analysis Services)

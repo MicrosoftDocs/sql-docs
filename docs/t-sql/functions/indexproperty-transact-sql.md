@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "indexes [SQL Server], properties"
 ms.assetid: 998d5788-4871-44a8-8125-0d9390868b84
 caps.latest.revision: 56
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # INDEXPROPERTY (Transact-SQL)

@@ -26,7 +26,7 @@ ms.assetid: 63f5d9f5-c6b6-4ceb-94fe-7b6c396d10bb
 caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # Partitions - Remote Partitions

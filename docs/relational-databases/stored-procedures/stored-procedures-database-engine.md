@@ -17,7 +17,6 @@ caps.latest.revision: 35
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "On Demand"
 ---
 # Stored Procedures (Database Engine)
   A stored procedure in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is a group of one or more [!INCLUDE[tsql](../../includes/tsql-md.md)] statements or a reference to a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] common runtime language (CLR) method. Procedures resemble constructs in other programming languages because they can:  

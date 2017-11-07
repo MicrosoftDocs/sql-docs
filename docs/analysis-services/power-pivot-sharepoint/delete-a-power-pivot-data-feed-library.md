@@ -15,7 +15,7 @@ ms.assetid: 5dbfc67e-7260-445a-8210-a9d33827db7f
 caps.latest.revision: 7
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # Delete a Power Pivot Data Feed Library

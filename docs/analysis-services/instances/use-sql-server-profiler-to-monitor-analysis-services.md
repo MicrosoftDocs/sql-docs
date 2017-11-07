@@ -20,7 +20,7 @@ ms.assetid: 8b77dafc-4584-4e93-8ad7-299304391bfd
 caps.latest.revision: 35
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "On Demand"
 ---
 # Use SQL Server Profiler to Monitor Analysis Services

@@ -19,7 +19,6 @@ caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Jobs That Reference a Schedule
 This dialog allows you to view information about the jobs that reference a particular schedule.  

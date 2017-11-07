@@ -19,7 +19,6 @@ caps.latest.revision: 15
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
-ms.workload: "Inactive"
 ---
 # SharePoint Library Delivery in Reporting Services
   A report server that is configured for SharePoint integration includes a delivery extension that you can use to send a report to a SharePoint library.  

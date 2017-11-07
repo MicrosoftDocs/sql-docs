@@ -20,10 +20,9 @@ helpviewer_keywords:
   - "sys.schemas catalog view"
 ms.assetid: 29af5ce5-2af7-4103-8f08-3ec92603ba05
 caps.latest.revision: 35
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "On Demand"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # Schemas Catalog Views - sys.schemas
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]

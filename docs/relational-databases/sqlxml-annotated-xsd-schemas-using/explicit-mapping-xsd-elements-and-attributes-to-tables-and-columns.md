@@ -32,7 +32,6 @@ caps.latest.revision: 28
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Explicit Mapping XSD Elements and Attributes to Tables and Columns
   When using an XSD schema to provide an XML view of the relational database , the elements and attributes of the schema must be mapped to tables and columns of the database. The rows in the database table/view will map to elements in the XML document. The column values in the database map to attributes or elements.  

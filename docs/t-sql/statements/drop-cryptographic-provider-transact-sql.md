@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "DROP CRYPTOGRAPHIC PROVIDER statement"
 ms.assetid: 71c55c20-439e-4897-aef5-f20e556d668f
 caps.latest.revision: 12
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # DROP CRYPTOGRAPHIC PROVIDER (Transact-SQL)

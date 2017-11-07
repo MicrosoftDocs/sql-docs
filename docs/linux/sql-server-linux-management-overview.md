@@ -10,7 +10,6 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 6bd8eb0b-593d-467e-87ea-ab1c4dbcd1ea
 ms.custom: H1Hack27Feb2017
-ms.workload: "On Demand"
 ---
 # Choose the right tool to manage SQL Server on Linux
 

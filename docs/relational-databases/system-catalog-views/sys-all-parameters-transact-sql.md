@@ -20,10 +20,9 @@ helpviewer_keywords:
   - "sys.all_parameters catalog view"
 ms.assetid: eecbb68e-9b4c-4243-94e2-8096a9cc7892
 caps.latest.revision: 38
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # sys.all_parameters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]

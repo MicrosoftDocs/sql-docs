@@ -25,8 +25,7 @@ ms.assetid: cea9cd1b-30e6-48b1-afb9-c2c1243cead8
 caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # CubeID Element (ASSL)
   Identifies the [Cube](../../../analysis-services/scripting/objects/cube-element-assl.md) element associated with a [Binding](../../../analysis-services/scripting/data-type/binding-data-type-assl.md) element.  

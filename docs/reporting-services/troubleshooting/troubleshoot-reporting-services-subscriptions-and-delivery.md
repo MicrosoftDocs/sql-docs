@@ -15,7 +15,6 @@ caps.latest.revision: 16
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
-ms.workload: "Inactive"
 ---
 # Troubleshoot Reporting Services Subscriptions and Delivery
   

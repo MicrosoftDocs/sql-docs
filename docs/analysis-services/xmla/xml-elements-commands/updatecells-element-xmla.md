@@ -25,10 +25,9 @@ helpviewer_keywords:
   - "UpdateCells command"
 ms.assetid: 18336a35-8a46-4532-9ee7-71828b2982af
 caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+author: "jeannt"
+ms.author: "jeannt"
+manager: "erikre"
 ---
 # UpdateCells Element (XMLA)
   Updates cells in a write-enabled cube.  

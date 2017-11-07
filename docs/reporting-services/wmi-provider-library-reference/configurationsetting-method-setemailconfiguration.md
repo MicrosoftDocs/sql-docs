@@ -22,7 +22,6 @@ caps.latest.revision: 19
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
-ms.workload: "Inactive"
 ---
 # ConfigurationSetting Method - SetEmailConfiguration
   Configures the e-mail delivery extension used by the report server to send e-mail.  

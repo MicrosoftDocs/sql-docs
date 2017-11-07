@@ -16,8 +16,7 @@ ms.assetid: 45ad2965-05ec-4fb1-a164-d8060b562ea5
 caps.latest.revision: 64
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "On Demand"
+manager: "erikre"
 ---
 # DirectQuery Mode
 

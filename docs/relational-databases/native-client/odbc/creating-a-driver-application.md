@@ -27,7 +27,6 @@ caps.latest.revision: 42
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Creating a Driver Application
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]

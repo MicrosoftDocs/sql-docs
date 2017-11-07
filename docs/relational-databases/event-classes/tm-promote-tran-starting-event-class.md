@@ -16,7 +16,6 @@ caps.latest.revision: 24
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # TM: Promote Tran Starting Event Class
   The TM: Promote Tran Starting event class indicates that a PROMOTE TRANSACTION request is starting. The request is sent from the client through the transaction management interface.  

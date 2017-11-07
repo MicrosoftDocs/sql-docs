@@ -16,7 +16,6 @@ caps.latest.revision: 23
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Publication Information, Agents (Snapshot Publication)
   The **Agents** tab displays summary information on the Snapshot Agent for the selected publication.  

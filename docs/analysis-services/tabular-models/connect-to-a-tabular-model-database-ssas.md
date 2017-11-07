@@ -15,8 +15,7 @@ ms.assetid: 983d0c8a-77da-4c6e-8638-283bcb14f143
 caps.latest.revision: 19
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "On Demand"
+manager: "erikre"
 ---
 # Connect to a Tabular Model Database (SSAS)
   After you build a tabular model and deploy it to an Analysis Services tabular mode server, you need to set permissions that make it available to client applications. This topic explains how to permissions and how to connect to a database from client applications.  

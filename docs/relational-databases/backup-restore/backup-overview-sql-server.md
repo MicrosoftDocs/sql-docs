@@ -26,7 +26,6 @@ caps.latest.revision: 84
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "On Demand"
 ---
 # Backup Overview (SQL Server)
   This topic introduces the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backup component. Backing up your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database is essential for protecting your data. This discussion covers backup types, and backup restrictions. The topic also introduces [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backup devices and backup media.  

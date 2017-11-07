@@ -16,7 +16,6 @@ caps.latest.revision: 29
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Publication Information, All Subscriptions (Snapshot Publication)
   The **All Subscriptions** tab displays information on all subscriptions to the selected snapshot publication.  

@@ -18,10 +18,9 @@ helpviewer_keywords:
   - "sp_changemergepublication"
 ms.assetid: 81fe1994-7678-4852-980b-e02fedf1e796
 caps.latest.revision: 44
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # sp_changemergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

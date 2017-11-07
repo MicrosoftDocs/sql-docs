@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "credentials [SQL Server], ALTER DATABASE SCOPED CREDENTIAL statement"
 ms.assetid: 966b75b5-ca87-4203-8bf9-95c4e00cb0b5
 caps.latest.revision: 11
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # ALTER DATABASE SCOPED CREDENTIAL (Transact-SQL)

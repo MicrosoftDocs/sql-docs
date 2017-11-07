@@ -21,7 +21,6 @@ caps.latest.revision: 14
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Unique Particle Attribution Constraint
   In XSD, complex content models are constrained by the unique particle attribution (UPA) constraint rule. This rule requires that each element in an instance document correspond unambiguously to exactly one `<xsd:element>` or `<xsd:any>` particle in its parent's content model. Any schema that contains a type with a potentially ambiguous content model is rejected.  

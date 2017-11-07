@@ -16,10 +16,9 @@ helpviewer_keywords:
   - "catalog views [SQL Server], scalar types"
 ms.assetid: f7688ba3-aa6e-41b1-811e-f70212029f4f
 caps.latest.revision: 13
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # Scalar Types Catalog Views (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

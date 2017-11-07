@@ -18,7 +18,6 @@ caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # VARCHAR Column Size (ODBC Driver for Oracle)
 > [!IMPORTANT]  

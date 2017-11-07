@@ -17,7 +17,7 @@ ms.assetid: 0a6eda76-1c5e-487e-9c8b-1feb09f1a34c
 caps.latest.revision: 22
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # Analysis Services Developer Documentation

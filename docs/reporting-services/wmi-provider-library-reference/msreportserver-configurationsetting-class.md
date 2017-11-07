@@ -23,7 +23,6 @@ caps.latest.revision: 39
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
-ms.workload: "Inactive"
 ---
 # MSReportServer_ConfigurationSetting Class
   Represents the installation and runtime parameters of a report server instance. These parameters are stored in the configuration file for the report server.  

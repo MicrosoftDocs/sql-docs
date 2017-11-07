@@ -18,7 +18,6 @@ caps.latest.revision: 26
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Objects Event Category
   The **Objects** event category contains general objects events.  

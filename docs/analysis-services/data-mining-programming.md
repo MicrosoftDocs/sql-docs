@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "data mining [Analysis Services], developer's guide"
 ms.assetid: 9fd77b16-0b89-44ce-bcf1-7c04b62499da
 caps.latest.revision: 20
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
+author: "jeannt"
+ms.author: "jeannt"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # Data Mining Programming

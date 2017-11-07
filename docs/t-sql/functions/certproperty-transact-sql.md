@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "CERTPROPERTY function"
 ms.assetid: 966c09aa-bc4e-45b0-ba53-c8381871f638
 caps.latest.revision: 22
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # CERTPROPERTY (Transact-SQL)

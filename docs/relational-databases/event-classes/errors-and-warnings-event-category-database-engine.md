@@ -18,7 +18,6 @@ caps.latest.revision: 28
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Errors and Warnings Event Category (Database Engine)
   The **Errors and Warnings** event category contains general error and warning events.  

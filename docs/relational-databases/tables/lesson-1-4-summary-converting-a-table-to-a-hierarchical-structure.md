@@ -18,7 +18,6 @@ caps.latest.revision: 11
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Lesson 1-4 - Summary - Converting a Table to a Hierarchical Structure
 The **hierarchyid** data type can store a hierarchical relationship in a simple, compact format. Proper indexes can efficiently return data by the level of the hierarchy, by sub-trees of the hierarchy, or by traditional singleton lookups.  

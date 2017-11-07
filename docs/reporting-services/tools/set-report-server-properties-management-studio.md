@@ -17,7 +17,6 @@ caps.latest.revision: 10
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
-ms.workload: "Inactive"
 ---
 # Set Report Server Properties (Management Studio)
   You can set report server system properties in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] to enable features or set server defaults.  

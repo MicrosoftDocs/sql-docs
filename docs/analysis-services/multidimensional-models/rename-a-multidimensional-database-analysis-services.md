@@ -17,7 +17,7 @@ ms.assetid: 15fdaec7-f3e4-44d9-9b78-1a1d78c484e0
 caps.latest.revision: 20
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # Rename a Multidimensional Database (Analysis Services)

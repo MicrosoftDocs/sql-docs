@@ -28,9 +28,9 @@ helpviewer_keywords:
   - "database encryption key, create"
 ms.assetid: 2ee95a32-5140-41bd-9ab3-a947b9990688
 caps.latest.revision: 30
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "On Demand"
 ---
 # CREATE DATABASE ENCRYPTION KEY (Transact-SQL)
@@ -99,6 +99,20 @@ The following example creates a database encryption key by using the `AES_256` a
 ```  
 USE AdventureWorks2012;  
 GO  
+CREATE DATABASE ENCRYPTION KEY  
+WITH ALGORITHM = AES_256  
+ENCRYPTION BY SERVER CERTIFICATE MyServerCert;  
+GO  
+```  
+  
+## Examples: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+For additional examples using TDE, see [Transparent Data Encryption (SQL Server PDW)](http://msdn.microsoft.com/en-us/b82ad21d-09dd-43dd-8fab-bcf2c8c3ac6d).  
+  
+The following example creates a database encryption key by using the `AES_256` algorithm, and protects the private key with a certificate named `MyServerCert`.  
+  
+```  
+-- Uses AdventureWorks  
+  
 CREATE DATABASE ENCRYPTION KEY  
 WITH ALGORITHM = AES_256  
 ENCRYPTION BY SERVER CERTIFICATE MyServerCert;  

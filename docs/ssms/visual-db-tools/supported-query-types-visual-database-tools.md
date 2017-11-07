@@ -26,7 +26,6 @@ caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Supported Query Types (Visual Database Tools)
 You can create the following types of queries in the Diagram and Criteria panes (the graphical panes) of the [Query and View Designer](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md):  

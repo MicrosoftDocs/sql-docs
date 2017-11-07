@@ -18,10 +18,9 @@ helpviewer_keywords:
   - "sp_srvrolepermission"
 ms.assetid: 5709667f-e3e4-48a2-93ec-af5e22a2ac58
 caps.latest.revision: 32
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # sp_srvrolepermission (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

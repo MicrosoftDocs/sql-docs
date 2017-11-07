@@ -16,7 +16,6 @@ caps.latest.revision: 10
 author: "smartysanthosh"
 ms.author: "nagavo"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Connect to a Master Data Services Database Dialog Box
   Use the **Connect to a Master Data Services Database** dialog box to select a [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database.  

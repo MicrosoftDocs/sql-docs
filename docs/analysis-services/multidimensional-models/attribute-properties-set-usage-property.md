@@ -18,7 +18,7 @@ ms.assetid: 7b0ebc58-94b9-4523-8994-e7bc796b0bd8
 caps.latest.revision: 35
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # Attribute Properties - Set Usage Property

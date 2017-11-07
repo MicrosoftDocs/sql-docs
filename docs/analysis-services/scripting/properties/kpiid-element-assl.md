@@ -25,8 +25,7 @@ ms.assetid: a76395bc-bc84-40f8-9770-6275842f93b5
 caps.latest.revision: 33
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # KpiID Element (ASSL)
   Contains an identifier (ID) that associates a [Kpi](../../../analysis-services/scripting/objects/kpi-element-assl.md) element with a [Perspective](../../../analysis-services/scripting/objects/perspective-element-assl.md) element.  

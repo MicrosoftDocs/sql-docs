@@ -14,8 +14,7 @@ ms.assetid: ab5eb4b8-6254-442d-a42e-2372c346d260
 caps.latest.revision: 2
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # List existing databases on a Tabular server (Analysis Services AMO-TOM)
 

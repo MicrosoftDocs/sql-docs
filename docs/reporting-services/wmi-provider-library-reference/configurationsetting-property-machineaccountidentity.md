@@ -17,7 +17,6 @@ caps.latest.revision: 11
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
-ms.workload: "Inactive"
 ---
 # ConfigurationSetting Property - MachineAccountIdentity
   Gets the machine account identity of the computer that the report server is installed on.  

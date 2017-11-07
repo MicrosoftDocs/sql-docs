@@ -18,7 +18,6 @@ caps.latest.revision: 121
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
-ms.workload: "Inactive"
 ---
 
 # Breaking changes in SQL Server Reporting Services in SQL Server 2016

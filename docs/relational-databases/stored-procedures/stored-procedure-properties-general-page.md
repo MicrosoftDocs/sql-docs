@@ -17,7 +17,6 @@ caps.latest.revision: 13
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Stored Procedure Properties (General Page)
   Displays information about a stored procedure. All information is read-only.  

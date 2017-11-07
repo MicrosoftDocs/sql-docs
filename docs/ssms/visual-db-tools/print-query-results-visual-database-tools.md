@@ -19,7 +19,6 @@ caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Print Query Results (Visual Database Tools)
 To print the results of your query, you can copy the contents of the [Results pane](../../ssms/visual-db-tools/results-pane-visual-database-tools.md) to another Windows program, such as a word processing program, then format and print it there.  

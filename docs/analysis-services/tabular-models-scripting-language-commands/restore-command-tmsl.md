@@ -14,8 +14,7 @@ ms.assetid: 360a1567-67ae-459d-8865-9a2bef8d4186
 caps.latest.revision: 13
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # Restore command (TMSL)
 

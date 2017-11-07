@@ -24,7 +24,7 @@ ms.assetid: b064171e-b1b4-4f32-95e5-59e1b831c4c9
 caps.latest.revision: 35
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # Perspectives

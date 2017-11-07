@@ -25,10 +25,9 @@ helpviewer_keywords:
   - "Attribute element"
 ms.assetid: 0df9cf44-dc5f-4234-8a5a-daac8aabc0d6
 caps.latest.revision: 17
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+author: "jeannt"
+ms.author: "jeannt"
+manager: "erikre"
 ---
 # Attribute Element (XMLA)
   Defines or filters a member in an attribute on which a parent [Insert](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md), [Update](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md), or [Drop](../../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md) command performs.  

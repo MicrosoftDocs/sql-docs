@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "dateparts [SQL Server], year"
 ms.assetid: 74aa7ccc-8575-4018-80cf-14aeca379687
 caps.latest.revision: 44
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "Active"
 ---
 # YEAR (Transact-SQL)

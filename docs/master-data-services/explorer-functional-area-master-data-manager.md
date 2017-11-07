@@ -14,7 +14,6 @@ caps.latest.revision: 7
 author: "smartysanthosh"
 ms.author: "nagavo"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Explorer Functional Area (Master Data Manager)
   In the Explorer functional area, you can update data and work with hierarchies and collections.  

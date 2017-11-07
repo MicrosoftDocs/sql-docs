@@ -19,7 +19,6 @@ caps.latest.revision: 60
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
-ms.workload: "On Demand"
 ---
 # Specify a Server Network Address (Database Mirroring)
   Setting up a database mirroring session requires a server network address for each of the server instances. The server network address of a server instance must unambiguously identify the instance by providing a system address and the number of the port on which the instance is listening.  

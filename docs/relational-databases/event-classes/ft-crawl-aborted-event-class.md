@@ -16,7 +16,6 @@ caps.latest.revision: 28
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # FT:Crawl Aborted Event Class
   The **FT:Crawl Aborted** event class indicates that an exception has been encountered during a full-text crawl. The error usually causes the full-text crawl to stop. Check the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows event log or the crawl log for more detailed error information.  

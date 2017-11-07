@@ -21,7 +21,6 @@ caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Resize the Job History Log
 This topic describes how to set size limits for [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent job history logs by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].

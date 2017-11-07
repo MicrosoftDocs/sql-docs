@@ -18,7 +18,6 @@ caps.latest.revision: 13
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
-ms.workload: "Inactive"
 ---
 # Manage My Data Alerts in Data Alert Manager
 

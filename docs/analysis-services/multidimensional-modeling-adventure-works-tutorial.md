@@ -18,7 +18,7 @@ ms.assetid: db55e226-601a-4026-8651-573195555a59
 caps.latest.revision: 31
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Active"
 ---
 # Multidimensional Modeling (Adventure Works Tutorial)

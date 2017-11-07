@@ -63,7 +63,7 @@ COALESCE ( expression [ ,...n ] )
   
  This means that the input values (*expression1*, *expression2*, *expressionN*, etc.) are evaluated multiple times. Also, in compliance with the SQL standard, a value expression that contains a subquery is considered non-deterministic and the subquery is evaluated twice. In either case, different results can be returned between the first evaluation and subsequent evaluations.  
   
- For example, when the code `COALESCE((subquery), 1)` is executed, the subquery is evaluated twice. As a result, you can get different results depending on the isolation level of the query. For example, the code can return `NULL` under the `READ COMMITTED` isolation level in a multi-user environment. To ensure stable results are returned, use the `SNAPSHOT ISOLATION` isolation level, or replace `COALESCE` with the `ISNULL` function. Alternatively, you can rewrite the query to push the subquery into a subselect as shown in the following example:  
+ For example, when the code `COALESCE((subquery), 1)` is executed, the subquery is evaluated twice. As a result, you can get different results depending on the isolation level of the query. For example, the code can return `NULL` under the `READ COMMITTED` isolation level in a multi-user environment. To ensure stable results are returned, use the `SNAPSHOT ISOLATION` isolation level, or replace `COALESE` with the `ISNULL` function. Alternatively, you can rewrite the query to push the subquery into a subselect as shown in the following example:  
   
 ```sql  
 SELECT CASE WHEN x IS NOT NULL THEN x ELSE 1 END  

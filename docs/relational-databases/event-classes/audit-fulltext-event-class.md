@@ -14,7 +14,6 @@ caps.latest.revision: 9
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Audit Fulltext Event Class
   The **Audit Fulltext** event class occurs when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connects to and communicates with the full-text filter daemon process.  

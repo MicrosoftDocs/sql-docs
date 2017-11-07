@@ -19,7 +19,6 @@ caps.latest.revision: 38
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
-ms.workload: "On Demand"
 ---
 # Remove a SQL Server Failover Cluster Instance (Setup)
   Use this procedure to uninstall a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover clustered instance.  

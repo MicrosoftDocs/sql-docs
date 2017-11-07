@@ -25,8 +25,7 @@ ms.assetid: c91d3bd8-2ad7-416f-a860-2599e4a4dbee
 caps.latest.revision: 32
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # KeyErrorLimit Element (ASSL)
   Contains the number of acceptable errors during processing.  

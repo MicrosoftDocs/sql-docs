@@ -13,10 +13,9 @@ helpviewer_keywords:
   - "2511 (Database Engine error)"
 ms.assetid: 9a00c0ed-eb4b-4fae-8016-192396006c37
 caps.latest.revision: 12
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # MSSQLSERVER_2511
   

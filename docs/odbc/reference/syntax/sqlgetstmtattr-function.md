@@ -23,7 +23,6 @@ caps.latest.revision: 25
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # SQLGetStmtAttr Function
 **Conformance**  

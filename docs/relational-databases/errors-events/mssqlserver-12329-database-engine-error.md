@@ -13,10 +13,9 @@ helpviewer_keywords:
   - "12329 (Database Engine error)"
 ms.assetid: 43f90287-36d5-46c2-ac91-a37202dcf6d3
 caps.latest.revision: 4
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # MSSQLSERVER_12329
   

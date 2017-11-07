@@ -17,7 +17,6 @@ caps.latest.revision: ""
 author: "HJToland3"
 ms.author: "jtoland"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 
 

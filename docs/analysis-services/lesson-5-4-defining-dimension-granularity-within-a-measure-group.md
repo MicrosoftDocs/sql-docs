@@ -15,7 +15,7 @@ ms.assetid: 4f079485-9eb4-405c-9a20-81258298b810
 caps.latest.revision: 20
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "On Demand"
 ---
 # Lesson 5-4 - Defining Dimension Granularity within a Measure Group

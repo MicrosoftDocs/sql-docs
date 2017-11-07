@@ -14,7 +14,6 @@ caps.latest.revision: 4
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Temporal Table - sys.sp_cleanup_temporal_history
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]

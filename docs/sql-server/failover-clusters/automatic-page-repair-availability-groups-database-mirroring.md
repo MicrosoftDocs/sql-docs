@@ -19,7 +19,6 @@ caps.latest.revision: 31
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Automatic Page Repair (Availability Groups: Database Mirroring)
   Automatic page repair is supported by database mirroring and by [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]. After certain types of errors corrupt a page, making it unreadable, a database mirroring partner (principal or mirror) or an availability replica (primary or secondary) attempts to automatically recover the page. The partner/replica that cannot read the page requests a fresh copy of the page from its partner or from another replica. If this request succeeds, the unreadable page is replaced by the readable copy, and this usually resolves the error.  

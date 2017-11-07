@@ -21,10 +21,9 @@ helpviewer_keywords:
   - "computer names"
 ms.assetid: 160a6b29-5e80-44ab-80ec-77d4280f627c
 caps.latest.revision: 40
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "On Demand"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # sp_addserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

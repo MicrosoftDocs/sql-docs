@@ -25,8 +25,7 @@ ms.assetid: 7e2fa8b3-04a7-4748-bdc1-8a0ab2f984e1
 caps.latest.revision: 36
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # AttributeHierarchyOrdered Element (ASSL)
   Determines whether the associated attribute hierarchy is ordered.  

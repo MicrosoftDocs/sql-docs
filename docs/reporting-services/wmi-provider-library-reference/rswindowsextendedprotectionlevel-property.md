@@ -15,7 +15,6 @@ caps.latest.revision: 6
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
-ms.workload: "Inactive"
 ---
 # RSWindowsExtendedProtectionLevel Property
   Returns a string value that indicates the level of protection the report server is configured to support. This property is read-only.  

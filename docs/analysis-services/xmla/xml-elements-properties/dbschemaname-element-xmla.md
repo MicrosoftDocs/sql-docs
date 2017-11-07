@@ -25,10 +25,9 @@ helpviewer_keywords:
   - "DbSchemaName element"
 ms.assetid: 40ca10c9-7597-48fe-a9d9-ee2c7b84d4d1
 caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+author: "jeannt"
+ms.author: "jeannt"
+manager: "erikre"
 ---
 # DbSchemaName Element (XMLA)
   Contains the name of the schema used by the parent [TableNotification](../../../analysis-services/xmla/xml-elements-properties/tablenotification-element-xmla.md) element in the table identified by the [DbTableName](../../../analysis-services/xmla/xml-elements-properties/dbtablename-element-xmla.md) element.  

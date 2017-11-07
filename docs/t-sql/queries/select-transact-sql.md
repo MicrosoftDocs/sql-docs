@@ -1,7 +1,7 @@
 ---
 title: "SELECT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/24/2017"
+ms.date: "08/09/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -132,12 +132,7 @@ SELECT <select_criteria>
 9. DISTINCT  
 10. ORDER BY  
 11. TOP  
-
-> [!WARNING]
-> The preceding sequence is usually true. However, there are uncommon cases where the sequence may differ.
->
-> For example, suppose you have a clustered index on a view, and the view excludes some table rows, and the view's SELECT column list uses a CONVERT that changes a data type from *integer* to *varchar*. In this situation, the CONVERT may execute before the WHERE clause executes. Uncommon indeed. Often there is a way to modify your view to avoid the different sequence, if it matters in your case. 
-
+  
 ## Permissions  
  Selecting data requires **SELECT** permission on the table or view, which could be inherited from a higher scope such as **SELECT** permission on the schema or **CONTROL** permission on the table. Or requires membership in the **db_datareader** or **db_owner** fixed database roles, or the **sysadmin** fixed server role. Creating a new table using **SELECTINTO** also requires both the **CREATETABLE** permission, and the **ALTERSCHEMA** permission on the schema that owns the new table.  
   

@@ -21,7 +21,7 @@ ms.assetid: 451afa58-ce03-4ecc-8dd3-9e7e8559b5f1
 caps.latest.revision: 13
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # Locking and Unlocking Databases (XMLA)

@@ -16,7 +16,6 @@ caps.latest.revision: 13
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Facet Properties Dialog Box, Dependent Policies Page
   Use this dialog box to display a list of policies that currently reference this Policy-Based Management facet.  

@@ -19,7 +19,6 @@ caps.latest.revision: 20
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Value for Extended Property Dialog Box
   Use the **Value for** *\<property name>* dialog box to enter or view a value. This is a common dialog box that can be opened from several locations.  

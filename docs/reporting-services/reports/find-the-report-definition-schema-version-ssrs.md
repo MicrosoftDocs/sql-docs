@@ -19,7 +19,6 @@ caps.latest.revision: 15
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
-ms.workload: "On Demand"
 ---
 
 # Find the Report Definition Schema Version (SSRS)

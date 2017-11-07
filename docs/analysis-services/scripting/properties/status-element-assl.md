@@ -25,8 +25,7 @@ ms.assetid: 4938465e-7876-43e2-9d03-70dcc9b7b749
 caps.latest.revision: 35
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # Status Element (ASSL)
   Contains a Multidimensional Expressions (MDX) expression that returns a status indicator for a [Kpi](../../../analysis-services/scripting/objects/kpi-element-assl.md) element.  

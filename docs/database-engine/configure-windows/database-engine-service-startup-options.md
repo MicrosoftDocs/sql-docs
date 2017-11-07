@@ -22,15 +22,12 @@ caps.latest.revision: 80
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "On Demand"
 ---
 # Database Engine Service Startup Options
   Startup options designate certain file locations needed during startup, and specify some server wide conditions. Most users do not need to specify startup options unless you are troubleshooting the [!INCLUDE[ssDE](../../includes/ssde-md.md)] or you have an unusual problem and are directed to use a startup option by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Customer Support.  
   
 > [!WARNING]  
 >  Improper use of startup options can affect server performance and can prevent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from starting.  
->
->  Start SQL Server on Linux with the "mssql" user to prevent future startup issues. Example "sudo -u mssql /opt/mssql/bin/sqlservr [STARTUP OPTIONS]" 
   
 ## About Startup Options  
  When you install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Setup writes a set of default startup options in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows registry. You can use these startup options to specify an alternate master database file, master database log file, or error log file. If the [!INCLUDE[ssDE](../../includes/ssde-md.md)] cannot locate the necessary files, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will not start.  

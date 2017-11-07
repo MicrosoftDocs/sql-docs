@@ -25,7 +25,6 @@ caps.latest.revision: 30
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Using Annotated XSD Schemas in Queries (SQLXML 4.0)
   You can specify queries against an annotated schema to retrieve data from the database by specifying XPath queries in a template against the XSD schema.  

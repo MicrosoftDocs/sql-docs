@@ -13,10 +13,9 @@ helpviewer_keywords:
   - "41342 (Database Engine error)"
 ms.assetid: 28270d98-c543-4e7d-b40c-2200e38dce1c
 caps.latest.revision: 8
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # MSSQLSERVER_41342
   

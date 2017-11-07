@@ -18,7 +18,6 @@ caps.latest.revision: 17
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Broker Event Category
   The **Broker** event category contains general Service Broker events.  

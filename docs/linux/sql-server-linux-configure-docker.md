@@ -10,7 +10,6 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: H1Hack27Feb2017
-ms.workload: "On Demand"
 ---
 # Configure SQL Server 2017 container images on Docker
 

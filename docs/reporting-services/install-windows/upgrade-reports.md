@@ -24,7 +24,6 @@ caps.latest.revision: 70
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
-ms.workload: "On Demand"
 ---
 
 # Upgrade Reports

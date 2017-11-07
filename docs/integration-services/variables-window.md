@@ -19,7 +19,6 @@ caps.latest.revision: 53
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
-ms.workload: "On Demand"
 ---
 # Variables Window
   Use the **Variables** window to create and modify user-defined variables and view system variables.  

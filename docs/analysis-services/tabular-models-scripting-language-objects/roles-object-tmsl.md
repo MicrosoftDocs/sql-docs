@@ -14,8 +14,7 @@ ms.assetid: 1812f60b-bd5f-417c-96bc-3d834bdb4d3c
 caps.latest.revision: 6
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # Roles object (TMSL)
 

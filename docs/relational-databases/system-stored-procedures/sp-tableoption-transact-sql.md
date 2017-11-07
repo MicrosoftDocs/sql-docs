@@ -18,10 +18,9 @@ helpviewer_keywords:
   - "sp_tableoption"
 ms.assetid: 0a57462c-1057-4c7d-bce3-852cc898341d
 caps.latest.revision: 60
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # sp_tableoption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

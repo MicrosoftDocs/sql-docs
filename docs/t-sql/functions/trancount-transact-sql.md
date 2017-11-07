@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "active transactions"
 ms.assetid: b2638410-e410-4bd0-9b54-90096182b2b6
 caps.latest.revision: 40
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "Active"
 ---
 # &#x40;&#x40;TRANCOUNT (Transact-SQL)

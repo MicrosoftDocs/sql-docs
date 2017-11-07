@@ -20,10 +20,9 @@ helpviewer_keywords:
   - "MSrepl_originators system table"
 ms.assetid: a3ac20a6-73f6-4fdc-ad5f-5f72746c9871
 caps.latest.revision: 26
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # MSrepl_originators (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

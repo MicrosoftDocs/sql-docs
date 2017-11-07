@@ -27,9 +27,9 @@ helpviewer_keywords:
   - "dates [SQL Server], dateparts"
 ms.assetid: 15f1a5bc-4c0c-4c48-848d-8ec03473e6c1
 caps.latest.revision: 57
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "Active"
 ---
 # DATEPART (Transact-SQL)

@@ -26,7 +26,6 @@ caps.latest.revision: 26
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Excluding Schema Elements from the XML Document Using sql:mapped
   Every element and attribute in the XSD schema maps to a database table/view and column because of the default mapping. If you want to create an element in the XSD schema that does not map to any database table (view) or column and that does not appear in the XML, you can specify the **sql:mapped** annotation.  

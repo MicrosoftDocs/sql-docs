@@ -25,8 +25,7 @@ ms.assetid: 6c00dcc6-8d5b-4293-8b72-c7a22e298c8d
 caps.latest.revision: 38
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # ForeignKeyColumn Element (ASSL)
   Identifies the join to a parent table for a relational data source.  

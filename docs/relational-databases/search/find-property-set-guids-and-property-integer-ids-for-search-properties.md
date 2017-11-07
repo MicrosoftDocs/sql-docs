@@ -17,7 +17,6 @@ caps.latest.revision: 32
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Find Property Set GUIDs and Property Integer IDs for Search Properties
   This topic discusses how to obtain the values that are required before you can add a property to a search property list and make it searchable by full-text search. These values include the property set GUID and property integer identifier of a document property.  

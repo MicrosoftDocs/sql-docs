@@ -1,7 +1,9 @@
 ---
-title: "Machine Learning Services with Python | Microsoft Docs"
-ms.date: "11/03/2017"
-ms.prod: "sql-server-2017"
+title: "SQL Server R Services | Microsoft Docs"
+ms.custom: 
+  - "SQL2016_New_Updated"
+ms.date: "06/22/2017"
+ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -12,7 +14,7 @@ ms.assetid: ba1dea65-40ea-484a-b767-53680c954934
 caps.latest.revision: 38
 author: "jeannt"
 ms.author: "jeannt"
-manager: "cgronlund"
+manager: "jhubbard"
 ms.workload: "On Demand"
 ---
 # Machine Learning Services with Python
@@ -25,11 +27,11 @@ This release includes the Anaconda distribution of Python, as well as the new [r
 
 You can install everything you need to get started with Python through SQL Server 2017 setup:
 
-+ **Machine Learning Services (In-Database):** Install this feature, together with the SQL Server database engine, to enable secure execution of Python scripts on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computer.
++ **Machine Learning Services (In-Database):** Install this feature, together with the SQL Server database engine, to enable secure execution of R scripts on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computer.
   
      When you select this feature, extensions are installed in the database engine to support execution of Python scripts, and a new service is created, the [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)], to manage communications between the Python runtime and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.
 
-+ **Machine Learning Server (Standalone):** If you do not need SQL Server integration, install this feature to get Python and R support for distributed machine learning. You can also deploy your Python solution as a web service by using **mrsdeploy**.
++ **Machine Learning Server (Standalone):** If you do not need SQL Server integration, install this feature to get Python support in Microsoft R Server. This lets you operationalize Python solutions using **mrsdeploy**.
   
      Do not install this feature on the same computer that is running SQL Server Machine Learning Services.
 

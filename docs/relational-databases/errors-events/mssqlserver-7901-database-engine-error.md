@@ -13,10 +13,9 @@ helpviewer_keywords:
   - "7901 (Database Engine error)"
 ms.assetid: 2d0d19b9-947b-4474-9ff8-7e03019ab93d
 caps.latest.revision: 17
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # MSSQLSERVER_7901
   

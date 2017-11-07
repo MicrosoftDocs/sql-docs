@@ -15,7 +15,7 @@ ms.assetid: 1e2561d3-4890-4495-a9cd-84eb88508938
 caps.latest.revision: 23
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "On Demand"
 ---
 # Lesson 9: Create Hierarchies

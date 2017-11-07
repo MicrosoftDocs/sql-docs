@@ -13,7 +13,7 @@ ms.assetid: 0e36a632-0750-4247-92b6-1fe38c7a4ce2
 caps.latest.revision: 6
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # Deploy PowerPivot and Power View - Multi-Tier SharePoint 2016 Farm

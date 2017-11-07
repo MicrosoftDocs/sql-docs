@@ -18,10 +18,9 @@ helpviewer_keywords:
   - "sp_table_privileges_ex"
 ms.assetid: b58d4a07-5c40-4f17-b66e-6d6b17188dda
 caps.latest.revision: 33
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # sp_table_privileges_ex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

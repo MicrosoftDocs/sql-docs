@@ -20,7 +20,6 @@ caps.latest.revision: 38
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
-ms.workload: "Inactive"
 ---
 # Report Parameters Methods
   You can use these methods to set and retrieve parameters for reports.  

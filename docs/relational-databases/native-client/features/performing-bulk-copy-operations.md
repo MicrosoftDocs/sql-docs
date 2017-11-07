@@ -19,7 +19,6 @@ caps.latest.revision: 28
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Performing Bulk Copy Operations
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]

@@ -16,7 +16,6 @@ caps.latest.revision: 11
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Lesson 2: Create and Apply a Naming Standards Policy
 Some types of Policy-Based Management policies can create triggers to enforce future compliance with the policy. In this lesson, you create a policy that enforces a naming standard for tables. Then, you test the policy by trying to create a table that violates the policy.  

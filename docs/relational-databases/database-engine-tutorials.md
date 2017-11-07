@@ -14,7 +14,6 @@ caps.latest.revision: 14
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "On Demand"
 ---
 # Database Engine Tutorials
 This section contains tutorials for [!INCLUDE[ssDECurrent](../includes/ssdecurrent-md.md)].  

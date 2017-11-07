@@ -18,7 +18,7 @@ ms.assetid: c80ebe66-a8f8-4f24-9fe8-8288de9d13bc
 caps.latest.revision: 14
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # Create an Alias for a Model Column

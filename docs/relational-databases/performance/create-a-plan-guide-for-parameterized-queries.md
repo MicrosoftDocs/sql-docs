@@ -17,7 +17,6 @@ caps.latest.revision: 6
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Create a Plan Guide for Parameterized Queries
   A TEMPLATE plan guide matches stand-alone queries that parameterize to a specified form.  

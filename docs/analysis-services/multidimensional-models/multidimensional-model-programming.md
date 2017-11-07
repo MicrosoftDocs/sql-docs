@@ -16,7 +16,7 @@ ms.assetid: 871a6d98-85bf-4200-8343-137543029512
 caps.latest.revision: 7
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # Multidimensional Model Programming

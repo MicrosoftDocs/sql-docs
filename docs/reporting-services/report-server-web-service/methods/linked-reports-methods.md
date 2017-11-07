@@ -20,7 +20,6 @@ caps.latest.revision: 35
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
-ms.workload: "Inactive"
 ---
 # Linked Reports Methods
   You can use these methods to create and manage linked items.  

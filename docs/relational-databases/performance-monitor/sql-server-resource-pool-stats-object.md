@@ -17,7 +17,6 @@ caps.latest.revision: 14
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # SQL Server, Resource Pool Stats Object
   The SQLServer:Resource Pool Stats object contains performance counters that report information about Resource Governor resource pool statistics.  

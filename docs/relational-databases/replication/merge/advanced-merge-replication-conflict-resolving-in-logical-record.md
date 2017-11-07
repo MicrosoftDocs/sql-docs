@@ -17,7 +17,6 @@ caps.latest.revision: 32
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Advanced Merge Replication Conflict - Resolving in Logical Record
   This topic covers the various combinations of conflict detection and conflict resolution approaches possible when using logical records. A conflict in merge replication occurs when more than one node changes the same data, or merge replication encounters certain types of errors, such as a constraint violation, when replicating changes. For more information about conflict detection and resolution, see [Advanced Merge Replication Conflict Detection and Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  

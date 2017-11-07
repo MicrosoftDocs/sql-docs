@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "granting permissions [SQL Server], symmetric keys"
 ms.assetid: 5c61557f-67ae-4e55-b86d-713575b27cea
 caps.latest.revision: 28
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # GRANT Symmetric Key Permissions (Transact-SQL)

@@ -18,10 +18,9 @@ helpviewer_keywords:
   - "sp_pkeys"
 ms.assetid: e614c75d-847b-4726-8f6f-cd18de688eda
 caps.latest.revision: 27
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # sp_pkeys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]

@@ -18,7 +18,7 @@ ms.assetid: a175daa5-58ea-474c-a82f-9648c5155dc8
 caps.latest.revision: 16
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # Add Mining Models to a Structure (Analysis Services - Data Mining)

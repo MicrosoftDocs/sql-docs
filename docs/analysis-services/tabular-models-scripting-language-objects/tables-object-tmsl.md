@@ -14,8 +14,7 @@ ms.assetid: 98da08fc-8744-4d0f-bc62-e63f1e9e6b08
 caps.latest.revision: 7
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # Tables object (TMSL)
 

@@ -21,7 +21,6 @@ caps.latest.revision: 30
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # ProtocolName Property (ServerNetworkProtocolProperty Class)
   Gets the name of the protocol that owns the referenced property.  

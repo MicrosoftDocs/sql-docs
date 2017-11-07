@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "stored procedure nesting levels [SQL Server]"
 ms.assetid: 8c0b2134-8616-44f6-addc-6583c432fb62
 caps.latest.revision: 40
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # &#x40;&#x40;NESTLEVEL (Transact-SQL)

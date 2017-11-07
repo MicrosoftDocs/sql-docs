@@ -13,10 +13,9 @@ helpviewer_keywords:
   - "9532 (Database Engine error)"
 ms.assetid: ab95cce8-4f97-4aea-a746-a73eea7c9aab
 caps.latest.revision: 9
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # MSSQLSERVER_9532
   

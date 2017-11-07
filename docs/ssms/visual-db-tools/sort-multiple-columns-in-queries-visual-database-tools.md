@@ -16,7 +16,6 @@ caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Sort Multiple Columns in Queries (Visual Database Tools)
 You can specify the order in which you want to use the columns to sort the data by using the **Sort Order** column in the [Criteria pane](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md).  

@@ -16,9 +16,9 @@ helpviewer_keywords:
  - "data types [SQL Server], about data types"
 ms.assetid: a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4
 caps.latest.revision: 45
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "Active"
 ---
 

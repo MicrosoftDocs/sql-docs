@@ -16,7 +16,6 @@ caps.latest.revision: 29
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Broker:Remote Message Ack Event Class
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generates a **Broker:Remote Message Ack** event when [!INCLUDE[ssSB](../../includes/sssb-md.md)] sends or receives a message acknowledgement.  

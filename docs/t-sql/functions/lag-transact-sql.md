@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "analytic functions, LAG"
 ms.assetid: a9a90bdb-3f80-4c97-baca-b7407bcdc7f0
 caps.latest.revision: 23
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "Active"
 ---
 # LAG (Transact-SQL)

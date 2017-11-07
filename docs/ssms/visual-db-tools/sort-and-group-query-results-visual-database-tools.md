@@ -26,7 +26,6 @@ caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Sort and Group Query Results (Visual Database Tools)
 You can create a query result in which each result row corresponds to an entire group of rows from the original data.  

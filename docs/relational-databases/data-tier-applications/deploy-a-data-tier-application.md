@@ -26,7 +26,6 @@ caps.latest.revision: 33
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "On Demand"
 ---
 # Deploy a Data-tier Application
   Deploy a data-tier application (DAC) from a DAC package to an existing instance of the database engine or Azure SQL Database  using a wizard or a PowerShell script. 

@@ -16,7 +16,6 @@ caps.latest.revision: 18
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # New Subscription Wizard (UI Reference)
   This section provides information on the following pages of the New Subscription Wizard:  

@@ -18,7 +18,7 @@ ms.assetid: 69cc0b86-e8bc-4d6c-903e-85724f5c0396
 caps.latest.revision: 13
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # Mining Model Content for Logistic Regression Models

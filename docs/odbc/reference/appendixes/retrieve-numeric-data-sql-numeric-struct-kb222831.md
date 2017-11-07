@@ -11,7 +11,7 @@ ms.devlang: "C++"
 ms.topic: "article"
 ms.custom: ""
 ms.tgt_pltfrm: "NA"
-ms.workload: "Inactive"
+ms.workload: "NA"
 ms.date: "07/13/2017"
 ms.author: "genemi"
 ---

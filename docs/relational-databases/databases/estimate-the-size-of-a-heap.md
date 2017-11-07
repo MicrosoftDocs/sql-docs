@@ -20,7 +20,6 @@ caps.latest.revision: 28
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "On Demand"
 ---
 # Estimate the Size of a Heap
   You can use the following steps to estimate the amount of space that is required to store data in a heap:  

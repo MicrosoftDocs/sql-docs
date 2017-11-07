@@ -9,7 +9,6 @@ ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
-ms.workload: "Inactive"
 ---
 # Install SQL Server Full-Text Search on Linux
 

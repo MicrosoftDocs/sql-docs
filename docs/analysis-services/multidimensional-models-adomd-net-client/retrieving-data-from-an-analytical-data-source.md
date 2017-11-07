@@ -21,7 +21,7 @@ ms.assetid: 88358189-28aa-4bc7-8dda-5a92e3a012b8
 caps.latest.revision: 41
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # Retrieving Data from an Analytical Data Source

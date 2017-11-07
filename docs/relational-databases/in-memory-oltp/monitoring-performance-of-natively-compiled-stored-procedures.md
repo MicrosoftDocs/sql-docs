@@ -14,7 +14,6 @@ caps.latest.revision: 11
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Monitoring Performance of Natively Compiled Stored Procedures
   This topic discusses how you can monitor the performance of natively compiled stored procedures  

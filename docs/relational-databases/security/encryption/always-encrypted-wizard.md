@@ -18,10 +18,9 @@ helpviewer_keywords:
   - "Wizard, Always Encrypted"
 ms.assetid: 68daddc9-ce48-49aa-917f-6dec86ad5af5
 caps.latest.revision: 17
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "On Demand"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # Always Encrypted Wizard
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

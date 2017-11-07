@@ -17,8 +17,7 @@ ms.assetid: 9d42e4e4-26ed-4719-9c80-8cf9189451d1
 caps.latest.revision: 20
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # Session Events Event Category
   The Session Events event category has the event classes described in the following table.  

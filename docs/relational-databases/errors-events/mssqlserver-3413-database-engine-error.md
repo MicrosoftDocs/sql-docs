@@ -13,10 +13,9 @@ helpviewer_keywords:
   - "3413 (Database Engine error)"
 ms.assetid: 3fa07637-ba93-4633-aaf2-ade7d18bc487
 caps.latest.revision: 16
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # MSSQLSERVER_3413
   

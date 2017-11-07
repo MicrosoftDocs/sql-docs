@@ -25,10 +25,9 @@ helpviewer_keywords:
   - "Value element"
 ms.assetid: e590d189-91aa-40c7-8669-09c87812f4ce
 caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+author: "jeannt"
+ms.author: "jeannt"
+manager: "erikre"
 ---
 # Value Element (Parameter) (XMLA)
   Contains the value of a parameter represented by the [Parameter](../../../analysis-services/xmla/xml-elements-properties/parameter-element-xmla.md) element.  

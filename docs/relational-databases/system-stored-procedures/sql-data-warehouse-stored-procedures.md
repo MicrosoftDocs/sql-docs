@@ -16,7 +16,6 @@ caps.latest.revision: 4
 author: "barbkess"
 ms.author: "barbkess"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # SQL Data Warehouse Stored Procedures
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]

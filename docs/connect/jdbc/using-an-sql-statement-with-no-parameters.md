@@ -14,7 +14,6 @@ caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Using an SQL Statement with No Parameters
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

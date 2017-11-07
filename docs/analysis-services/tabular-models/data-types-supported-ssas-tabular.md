@@ -15,8 +15,7 @@ ms.assetid: 92993f7b-7243-4aec-906d-0b0379798242
 caps.latest.revision: 16
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # Data types supported in tabular models
 

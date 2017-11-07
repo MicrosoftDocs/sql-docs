@@ -14,10 +14,9 @@ applies_to:
   - "SQL Server 2016 Preview"
 ms.assetid: e29cd137-af82-4753-a681-0d3e705513f3
 caps.latest.revision: 6
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+author: "jeannt"
+ms.author: "jeannt"
+manager: "erikre"
 ---
 # IsDefaultImage Element (XML)
   Indicates that it is possible to obtain the default image for this entity by navigating this relationship to the other table and fetching the member that has the attribute, IsDefaultImage.  

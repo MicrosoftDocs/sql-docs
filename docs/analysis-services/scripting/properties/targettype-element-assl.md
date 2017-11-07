@@ -25,8 +25,7 @@ ms.assetid: 2c69ea6e-2af7-435b-9841-86117d5554a7
 caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # TargetType Element (ASSL)
   Identifies the item type of the item identified in the [Target](../../../analysis-services/scripting/properties/target-element-assl.md) element.  

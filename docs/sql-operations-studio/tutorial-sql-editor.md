@@ -97,10 +97,10 @@ This tutorial requires the *TutorialDB* database. To create the *TutorialDB* dat
     WHERE c.CustomerID = @ID
     FOR JSON PATH
 
-GO
--- example to execute the stored procedure we just created
-EXECUTE dbo.getCustomer 1
-GO
+    GO
+    -- example to execute the stored procedure we just created
+    EXECUTE dbo.getCustomer 1
+    GO
 	```
     
 5. To create the stored procedure and give it a test run, press **F5**.

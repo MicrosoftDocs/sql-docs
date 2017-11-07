@@ -55,6 +55,8 @@ sudo yum install realmd krb5-workstation
 sudo zypper install realmd krb5-client
 ```
 
+## macOS
+- Kerberos should be installed on your macOS. If your macOS does not have Kerberos installed, you can get it from the [download page](http://web.mit.edu/macdev/KfM/Common/Documentation/download.html).
 
 
 ## Step 3: Configuring KDC in krb5.conf

@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "Lock command"
 ms.assetid: a819e805-4793-43bb-8af3-16a19f8bdab3
 caps.latest.revision: 14
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Lock Element (XMLA)

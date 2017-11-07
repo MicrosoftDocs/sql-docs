@@ -15,7 +15,7 @@ ms.assetid:
 caps.latest.revision: 
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Object-level security

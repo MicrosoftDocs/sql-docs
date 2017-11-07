@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "errors [SQL Server], formats"
 ms.assetid: 83f18102-2035-4a87-acd0-8d96d03efad5
 caps.latest.revision: 39
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "On Demand"
 ---
 # FORMATMESSAGE (Transact-SQL)

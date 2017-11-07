@@ -25,7 +25,7 @@ ms.assetid: 9b6dbe19-543e-43e6-abe9-1e8b4dfaa275
 caps.latest.revision: 38
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Collation Element (ASSL)

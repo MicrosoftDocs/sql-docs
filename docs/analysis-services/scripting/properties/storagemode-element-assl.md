@@ -25,7 +25,7 @@ ms.assetid: 197e8153-1ab6-43ba-a7e9-ae9be19ac511
 caps.latest.revision: 40
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # StorageMode Element (ASSL)

@@ -288,7 +288,7 @@ The **language.lcid** setting changes the SQL Server locale to any supported lan
 
 The **memory.memorylimitmb** setting controls the amount physical memory (in MB) available to SQL Server. The default is 80% of the physical memory.
 
-1. Run the mssql-conf script as root with the **set** command for **memory.memorylimitmb**. The following example changes the memory available to SQL Server to 2 GB (3328 MB).
+1. Run the mssql-conf script as root with the **set** command for **memory.memorylimitmb**. The following example changes the memory available to SQL Server to 3.25 GB (3328 MB).
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set memory.memorylimitmb 3328

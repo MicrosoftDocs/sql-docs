@@ -1,7 +1,7 @@
 ---
 title: "What's new in Database Engine - SQL Server 2017 | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/11/2017"
+ms.date: "10/24/2017"
 ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
@@ -61,7 +61,7 @@ This topic describes improvements made to the [!INCLUDE[ssdenoversion-md](../inc
     - `CROSS APPLY` operator in natively compiled modules.   
 - New string functions [CONCAT_WS](../t-sql/functions/concat-ws-transact-sql.md), [TRANSLATE](../t-sql/functions/translate-transact-sql.md), and [TRIM](../t-sql/functions/trim-transact-sql.md) are added.   
 - The `WITHIN GROUP` clause is now supported for the [STRING_AGG](../t-sql/functions/string-agg-transact-sql.md) function.
-- Two new Japanese collation families (Japanese_Bushu_Kakusu_140 and Japanese_XJIS_140) were added, and the collation option Variation-selector-sensitive (_VSS) was added for use in Japanese collations. For more detail see [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)   
+- Two new Japanese collation families (Japanese_Bushu_Kakusu_140 and Japanese_XJIS_140) were added, and the collation option Variation-selector-sensitive (_VSS) was added for use in these new Japanese collations. Also, all of the new collations automatically support supplementary characters without needing to specify the _SC option. For more detail see [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)   
 - New bulk access options ([BULK INSERT](../t-sql/statements/bulk-insert-transact-sql.md) and [OPENROWSET(BULK...)](../t-sql/functions/openrowset-transact-sql.md)) enable access data directly from a file specified as CSV format, and from files stored in Azure Blob storage through the new `BLOB_STORAGE` option of [EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md).
 - Database **COMPATIBILITY_LEVEL** 140 has been added.   Customers running in this level will get the latest language features and query optimizer behaviors. This includes changes in each pre-release version Microsoft releases.
 - Improvements to the way incremental statistics update thresholds are computed (140 compatibility mode required).

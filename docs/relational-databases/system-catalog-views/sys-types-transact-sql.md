@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "table-valued parameters,sys.types"
 ms.assetid: a5dbc842-71a0-4f62-b5e0-f560a99b7f8c
 caps.latest.revision: 33
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "On Demand"
 ---
 # sys.types (Transact-SQL)

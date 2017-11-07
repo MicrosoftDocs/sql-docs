@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "sp_pkeys"
 ms.assetid: e614c75d-847b-4726-8f6f-cd18de688eda
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # sp_pkeys (Transact-SQL)

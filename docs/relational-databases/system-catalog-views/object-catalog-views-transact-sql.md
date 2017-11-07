@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "catalog views [SQL Server], objects"
 ms.assetid: e8670a6b-e15c-4126-8d2d-c9cfb968a12d
 caps.latest.revision: 35
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "On Demand"
 ---
 # Object Catalog Views (Transact-SQL)

@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "services [Service Broker], modifying"
 ms.assetid: 2b4608f7-bb2e-4246-aa29-b52c55995b3a
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # ALTER SERVICE (Transact-SQL)

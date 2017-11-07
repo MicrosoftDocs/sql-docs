@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "sp_helpsubscriptionerrors"
 ms.assetid: 01c8bc21-939e-490d-8cc8-219c068be31e
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # sp_helpsubscriptionerrors (Transact-SQL)

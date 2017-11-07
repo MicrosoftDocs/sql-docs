@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "service master key [SQL Server], modifying"
 ms.assetid: a1e9be0e-4115-47d8-9d3a-3316d876a35e
 caps.latest.revision: 41
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "On Demand"
 ---
 # ALTER SERVICE MASTER KEY (Transact-SQL)

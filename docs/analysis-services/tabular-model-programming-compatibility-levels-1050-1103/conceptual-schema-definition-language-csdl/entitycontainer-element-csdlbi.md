@@ -16,7 +16,7 @@ ms.assetid: e328558e-16b0-4d4a-a79a-fdd3c9493595
 caps.latest.revision: 17
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # EntityContainer Element (CSDLBI)

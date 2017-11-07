@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "xp_cmdshell"
 ms.assetid: 18935cf4-b320-4954-b6c1-e007fcefe358
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Active"
 ---
 # xp_cmdshell (Transact-SQL)

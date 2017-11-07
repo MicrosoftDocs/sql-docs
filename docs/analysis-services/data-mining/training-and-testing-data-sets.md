@@ -19,7 +19,7 @@ ms.assetid: 5798fa48-ef3c-4e97-a17c-38274970fccd
 caps.latest.revision: 27
 author: "Minewiskan"
 ms.author: "owend"
-manager: "jhubbard"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Training and Testing Data Sets

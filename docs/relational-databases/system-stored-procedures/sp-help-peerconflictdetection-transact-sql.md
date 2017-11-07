@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "sp_help_peerconflictdetection"
 ms.assetid: 59e04107-5eaa-44a1-beb6-ac4f2dbbcb28
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # sp_help_peerconflictdetection (Transact-SQL)

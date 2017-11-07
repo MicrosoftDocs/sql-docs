@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "sp_serveroption"
 ms.assetid: 47d04a2b-dbf0-4f15-bd9b-81a2efc48131
 caps.latest.revision: 40
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "On Demand"
 ---
 # sp_serveroption (Transact-SQL)

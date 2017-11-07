@@ -15,7 +15,7 @@ ms.assetid: aff96558-e5e5-4b95-8ddf-ee0709c842fb
 caps.latest.revision: 22
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Tabular Model Solution Deployment (SSAS Tabular)

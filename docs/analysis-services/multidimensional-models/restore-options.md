@@ -18,7 +18,7 @@ ms.assetid: 75c73802-f321-4671-afc7-54505d62c013
 caps.latest.revision: 23
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Restore Options

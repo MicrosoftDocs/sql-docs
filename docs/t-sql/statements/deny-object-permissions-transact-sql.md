@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "table permissions [SQL Server]"
 ms.assetid: 0b8d3ddc-38c0-4241-b7bb-ee654a5081aa
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "On Demand"
 ---
 # DENY Object Permissions (Transact-SQL)

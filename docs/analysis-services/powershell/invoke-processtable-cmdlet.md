@@ -13,7 +13,7 @@ ms.assetid: 865e6d06-b99a-41f3-9d6f-c3c97b529b23
 caps.latest.revision: 9
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Invoke-ProcessTable cmdlet

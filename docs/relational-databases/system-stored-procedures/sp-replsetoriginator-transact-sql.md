@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "sp_replsetoriginator"
 ms.assetid: 030e5226-0585-439f-b8cd-36f48367d86d
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # sp_replsetoriginator (Transact-SQL)

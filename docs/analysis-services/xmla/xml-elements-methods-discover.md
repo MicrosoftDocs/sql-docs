@@ -29,7 +29,7 @@ ms.assetid: 0eb52d88-c081-416e-a229-610e4373b0b3
 caps.latest.revision: 39
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # XML Elements - Methods - Discover

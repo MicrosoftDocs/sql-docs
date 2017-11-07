@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "Delete element"
 ms.assetid: 76201b18-11e9-4815-9287-27a068d8fbc5
 caps.latest.revision: 14
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Delete Element (XMLA)

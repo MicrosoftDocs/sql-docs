@@ -25,7 +25,7 @@ ms.assetid: 2761d26a-5fb0-452c-9a89-12f8dc658c33
 caps.latest.revision: 37
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # RefreshInterval Element (ASSL)

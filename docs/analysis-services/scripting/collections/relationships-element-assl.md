@@ -16,7 +16,7 @@ ms.assetid: e78882c9-b14e-4044-848e-ea7fddd3b75d
 caps.latest.revision: 7
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Relationships Element (ASSL)

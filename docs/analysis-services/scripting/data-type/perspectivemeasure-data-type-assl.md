@@ -25,7 +25,7 @@ ms.assetid: 8622ad67-3dcf-48e2-ad4a-c5f0a086eec3
 caps.latest.revision: 33
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # PerspectiveMeasure Data Type (ASSL)

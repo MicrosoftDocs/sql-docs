@@ -19,7 +19,7 @@ ms.assetid: ce90f684-bb8c-4eca-b9e6-000794dbee16
 caps.latest.revision: 23
 author: "Minewiskan"
 ms.author: "owend"
-manager: "jhubbard"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Properties for Mining Structure and Structure Columns

@@ -21,7 +21,7 @@ ms.assetid: 36e3ecfd-fcc3-415a-9c43-f59921d2468a
 caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # XML for Analysis Schema Rowsets

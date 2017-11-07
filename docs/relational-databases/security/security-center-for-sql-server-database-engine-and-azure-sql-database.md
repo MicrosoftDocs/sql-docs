@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "databases [SQL Server], security"
 ms.assetid: dfb39d16-722a-4734-94bb-98e61e014ee7
 caps.latest.revision: 55
-author: "BYHAM"
-ms.author: "rickbyh"
+author: "edmacauley"
+ms.author: "edmaca"
 manager: "craigg"
 ms.workload: "On Demand"
 ---

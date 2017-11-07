@@ -15,7 +15,7 @@ ms.assetid: 5fd3826b-8f75-48eb-910c-bf784163e53b
 caps.latest.revision: 8
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Register an Analysis Services Instance in a Server Group

@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "Translation element"
 ms.assetid: ce962d4b-dda9-4a16-a56c-ff7a5275c48a
 caps.latest.revision: 11
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Translation Element (XMLA)

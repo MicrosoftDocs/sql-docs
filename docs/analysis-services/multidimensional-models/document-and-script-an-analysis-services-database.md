@@ -22,7 +22,7 @@ ms.assetid: 125044e2-8d36-4733-8743-8bb68ff9aa4e
 caps.latest.revision: 35
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Document and Script an Analysis Services Database

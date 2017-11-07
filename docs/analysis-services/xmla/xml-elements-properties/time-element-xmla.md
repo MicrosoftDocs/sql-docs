@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "Time element"
 ms.assetid: b74ba333-19e5-407d-92ab-3c429d4b3f45
 caps.latest.revision: 11
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Time Element (XMLA)

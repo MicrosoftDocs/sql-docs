@@ -14,7 +14,7 @@ ms.assetid: 7588565f-ea34-4402-8be9-331188bdb8c2
 caps.latest.revision: 7
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Relationships object (TMSL)

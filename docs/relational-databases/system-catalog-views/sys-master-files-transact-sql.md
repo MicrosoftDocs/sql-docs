@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "sys.master_files catalog view"
 ms.assetid: 803b22f2-0016-436b-a561-ce6f023d6b6a
 caps.latest.revision: 56
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "On Demand"
 ---
 # sys.master_files (Transact-SQL)

@@ -98,7 +98,7 @@ ms.assetid: 06eb0d78-96c0-42ff-b759-f4c794597c8d
 caps.latest.revision: 18
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # OLAP Properties

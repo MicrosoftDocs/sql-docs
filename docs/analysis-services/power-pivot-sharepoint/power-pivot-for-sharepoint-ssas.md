@@ -15,7 +15,7 @@ ms.assetid: c4c393d3-4856-47ac-ab5f-15da2f240d1d
 caps.latest.revision: 32
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Power Pivot for SharePoint (SSAS)

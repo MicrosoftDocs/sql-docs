@@ -19,7 +19,7 @@ ms.assetid: f09ba8aa-950e-4c0d-961e-970de13200be
 caps.latest.revision: 31
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Define Named Queries in a Data Source View (Analysis Services)

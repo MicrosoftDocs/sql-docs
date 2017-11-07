@@ -15,7 +15,7 @@ ms.assetid: aa1db060-95dc-4198-8aeb-cffdda44b140
 caps.latest.revision: 12
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Log operations in Analysis Services

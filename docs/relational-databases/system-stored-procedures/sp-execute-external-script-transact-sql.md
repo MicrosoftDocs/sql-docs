@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "sp_execute_external_script"
 ms.assetid: de4e1fcd-0e1a-4af3-97ee-d1becc7f04df
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "On Demand"
 ---
 # sp_execute_external_script (Transact-SQL)

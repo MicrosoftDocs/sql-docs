@@ -169,3 +169,13 @@
 #### [Lesson 3-1 - Copying the Deployment Bundle](lesson-3-1-copying-the-deployment-bundle.md)
 #### [Lesson 3-2 - Running the Package Installation Wizard](lesson-3-2-running-the-package-installation-wizard.md)
 #### [Lesson 3-3 - Testing the Deployed Packages](lesson-3-3-testing-the-deployed-packages.md)
+
+# Resources
+## Follow the blog
+### [SSIS team blog](https://blogs.msdn.microsoft.com/ssis/)
+## Get help
+### [SSIS forum on MSDN](https://social.msdn.microsoft.com/Forums/en-us/home?forum=sqlintegrationservices)
+### [SSIS tag on Stack Overflow](http://stackoverflow.com/questions/tagged/ssis)  
+## Give feedback
+### [Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback)  
+## [Get the docs on your PC](../sql-server/sql-server-help-installation.md)

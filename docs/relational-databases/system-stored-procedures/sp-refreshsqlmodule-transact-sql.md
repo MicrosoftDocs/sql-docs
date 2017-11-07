@@ -26,9 +26,9 @@ helpviewer_keywords:
   - "user-defined functions [SQL Server], refreshing metadata"
 ms.assetid: f0022a05-50dd-4620-961d-361b1681d375
 caps.latest.revision: 21
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "On Demand"
 ---
 # sp_refreshsqlmodule (Transact-SQL)

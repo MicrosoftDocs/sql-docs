@@ -15,9 +15,9 @@ helpviewer_keywords:
   - "objects [SQL Server], hierarchy syntax"
 ms.assetid: 7ed8df86-9fd2-4e09-96bc-5381fec85f65
 caps.latest.revision: 28
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # Object Hierarchy Syntax (Transact-SQL)

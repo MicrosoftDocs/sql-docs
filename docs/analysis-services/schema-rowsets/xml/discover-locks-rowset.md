@@ -18,7 +18,7 @@ ms.assetid: dea48167-212c-40b7-a416-434042a1b697
 caps.latest.revision: 14
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # DISCOVER_LOCKS Rowset

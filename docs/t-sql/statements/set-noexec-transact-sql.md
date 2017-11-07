@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "NOEXEC option"
 ms.assetid: ba56fba1-af9b-4459-b6e4-5d7e71a7630b
 caps.latest.revision: 32
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "On Demand"
 ---
 # SET NOEXEC (Transact-SQL)

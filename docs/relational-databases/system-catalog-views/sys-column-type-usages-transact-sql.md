@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "sys.column_type_usages catalog view"
 ms.assetid: 1ead375e-f662-4837-903f-8947496c51e4
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # sys.column_type_usages (Transact-SQL)

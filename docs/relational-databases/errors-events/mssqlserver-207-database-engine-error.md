@@ -13,9 +13,9 @@ helpviewer_keywords:
   - "207 (Database Engine error)"
 ms.assetid: d1ab00c7-0331-437a-84fe-bae53b82feec
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # MSSQLSERVER_207

@@ -1,6 +1,6 @@
 ---
 title: "Maximum Capacity Specifications for SQL Server | Microsoft Docs"
-ms.date: "03/09/2017"
+ms.date: "11/6/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -75,12 +75,12 @@ ms.workload: "Active"
 |Files per database||32,767||  
 |File size (data)||16 terabytes||  
 |File size (log)||2 terabytes||  
-|Data files for memory-optimized data per database||4.096||  
+|Data files for memory-optimized data per database||4,096 in [!INCLUDE[ssSQL14](../includes/ssSQL14-md.md)]. Later versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] do not impose such a strict limit.||  
 |Delta file per data file for memory-optimized data||1||  
 |Foreign key table references per table||Outgoing = 253. Incoming = 10,000.|For restrictions, see [Create Foreign Key Relationships](../relational-databases/tables/create-foreign-key-relationships.md).|  
 |Identifier length (in characters)||128||  
 |Instances per computer||50 instances on a stand-alone server.<br /><br /> 25 instances on a failover cluster when using a shared cluster disk as the stored option for you cluster installation [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supports 50 instances on a failover cluster if you choose SMB file shares as the storage option for your cluster installation.||  
-|Indexes per memory-optimized table||8||  
+|Indexes per memory-optimized table||999 starting [!INCLUDE[ssSQL17](../includes/ssSQL17-md.md)] and in [!INCLUDE[ssSDSFull](../includes/ssSDSFull-md.md)]<br/>8 in [!INCLUDE[ssSQL14](../includes/ssSQL14-md.md)] and [!INCLUDE[ssSQL15](../includes/ssSQL15-md.md)]||  
 |Length of a string containing SQL statements (batch size)||65,536 * Network packet size|Network Packet Size is the size of the tabular data stream (TDS) packets used to communicate between applications and the relational [!INCLUDE[ssDE](../includes/ssde-md.md)]. The default packet size is 4 KB, and is controlled by the network packet size configuration option.|  
 |Locks per connection||Maximum locks per server||  
 |Locks per instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]||Limited only by memory|This value is for static lock allocation. Dynamic locks are limited only by memory.|  

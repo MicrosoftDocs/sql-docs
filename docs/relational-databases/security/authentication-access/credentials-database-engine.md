@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "credentials [SQL Server]"
 ms.assetid: c8df6022-e0b4-46b8-9670-3f86938d3177
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "On Demand"
 ---
 # Credentials (Database Engine)

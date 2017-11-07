@@ -15,7 +15,7 @@ ms.assetid: 7bebb174-148c-4cbb-a285-2f6d536a16d5
 caps.latest.revision: 16
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Lesson 5-3 - Defining a Many-to-Many Relationship

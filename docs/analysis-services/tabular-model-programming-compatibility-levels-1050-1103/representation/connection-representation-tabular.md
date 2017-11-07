@@ -16,7 +16,7 @@ ms.assetid: 4b410b16-d36e-4185-bb20-922e66e5e2b7
 caps.latest.revision: 9
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Connection Representation (Tabular)

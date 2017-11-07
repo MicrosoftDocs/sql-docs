@@ -16,7 +16,7 @@ ms.assetid: 1d53dda1-f2c8-4a9b-8ec7-78f43ca1d7db
 caps.latest.revision: 11
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Tables - Hierarchy Representation

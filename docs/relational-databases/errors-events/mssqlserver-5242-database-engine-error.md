@@ -13,9 +13,9 @@ helpviewer_keywords:
   - "5242 (Database Engine error)"
 ms.assetid: 712b1a10-2f87-41df-a111-1ed9f14102d4
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # MSSQLSERVER_5242

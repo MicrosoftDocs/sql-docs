@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "sp_helpmergepublication"
 ms.assetid: dfe1e1e1-9a65-406a-aced-6385a078e135
 caps.latest.revision: 55
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # sp_helpmergepublication (Transact-SQL)

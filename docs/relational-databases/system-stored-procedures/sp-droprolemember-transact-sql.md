@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "sp_droprolemember"
 ms.assetid: c2f19ab1-e742-4d56-ba8e-8ffd40cf4925
 caps.latest.revision: 39
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "On Demand"
 ---
 # sp_droprolemember (Transact-SQL)

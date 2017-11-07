@@ -19,7 +19,7 @@ ms.assetid: 6b1337c5-50a0-4fc2-b079-377dc241d2cc
 caps.latest.revision: 32
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Power Pivot Data Feeds

@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "COLUMN_DOMAIN_USAGE view"
 ms.assetid: deb20037-6a51-47ae-9f49-7601698fafaf
 caps.latest.revision: 37
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # COLUMN_DOMAIN_USAGE (Transact-SQL)

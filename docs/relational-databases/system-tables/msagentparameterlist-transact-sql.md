@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "Msagentparameterlist system table"
 ms.assetid: 4ea571a0-078d-4e13-95ee-f3d4bbd4dfb2
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # MSagentparameterlist (Transact-SQL)

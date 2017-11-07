@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "sp_changedbowner"
 ms.assetid: 516ef311-e83b-45c9-b9cd-0e0641774c04
 caps.latest.revision: 35
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Active"
 ---
 # sp_changedbowner (Transact-SQL)

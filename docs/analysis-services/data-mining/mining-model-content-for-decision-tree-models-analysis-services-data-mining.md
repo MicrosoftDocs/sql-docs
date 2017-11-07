@@ -18,7 +18,7 @@ ms.assetid: ac358399-10f8-4238-be32-a914a2e49048
 caps.latest.revision: 25
 author: "Minewiskan"
 ms.author: "owend"
-manager: "jhubbard"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Mining Model Content for Decision Tree Models (Analysis Services - Data Mining)

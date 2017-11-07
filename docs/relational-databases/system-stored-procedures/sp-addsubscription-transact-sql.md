@@ -15,9 +15,9 @@ helpviewer_keywords:
   - "sp_addsubscription"
 ms.assetid: 61ddf287-1fa0-4c1a-8657-ced50cebf0e0
 caps.latest.revision: 53
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "On Demand"
 ---
 # sp_addsubscription (Transact-SQL)

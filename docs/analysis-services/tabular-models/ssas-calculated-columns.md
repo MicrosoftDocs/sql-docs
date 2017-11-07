@@ -15,7 +15,7 @@ ms.assetid: e1011278-556d-4984-b01d-a37f8a33b304
 caps.latest.revision: 13
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Calculated Columns

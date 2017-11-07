@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "sp_deletetracertokenhistory"
 ms.assetid: 9ae1be14-0d2f-40b1-9d6e-22d79726abf4
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # sp_deletetracertokenhistory (Transact-SQL)

@@ -25,7 +25,7 @@ ms.assetid: ce999716-9487-4348-bc42-270a2026a452
 caps.latest.revision: 35
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Type Element (MiningStructureColumn) (ASSL)

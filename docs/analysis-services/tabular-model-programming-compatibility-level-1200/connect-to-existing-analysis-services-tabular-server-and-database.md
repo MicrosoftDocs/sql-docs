@@ -14,7 +14,7 @@ ms.assetid: 05be704e-4ee4-4101-b5ce-96fdda18c639
 caps.latest.revision: 12
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Connect to existing Analysis Services Tabular server and database

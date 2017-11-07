@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "CERTPRIVATEKEY"
 ms.assetid: 33e0f01e-39ac-46da-94ff-fe53b1116df4
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # CERTPRIVATEKEY (Transact-SQL)

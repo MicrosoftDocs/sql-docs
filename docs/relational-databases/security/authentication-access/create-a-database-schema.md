@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "schemas [SQL Server], creating"
 ms.assetid: ed2a5522-f4d2-4111-95a4-d3e1e5081739
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Active"
 ---
 # Create a Database Schema

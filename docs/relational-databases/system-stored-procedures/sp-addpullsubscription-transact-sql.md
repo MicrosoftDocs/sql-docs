@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "sp_addpullsubscription"
 ms.assetid: 0f4bbedc-0c1c-414a-b82a-6fd47f0a6a7f
 caps.latest.revision: 44
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # sp_addpullsubscription (Transact-SQL)

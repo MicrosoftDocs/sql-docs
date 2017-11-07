@@ -38,9 +38,9 @@ helpviewer_keywords:
   - "remote service bindings [Service Broker], creating"
 ms.assetid: 4165c404-4d50-4063-9a6e-6e267d309376
 caps.latest.revision: 46
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # CREATE REMOTE SERVICE BINDING (Transact-SQL)

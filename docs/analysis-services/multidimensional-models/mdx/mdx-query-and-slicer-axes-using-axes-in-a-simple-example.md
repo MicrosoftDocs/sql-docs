@@ -18,7 +18,7 @@ ms.assetid: 85bcb26f-5971-4153-b334-61f8d8b475b5
 caps.latest.revision: 11
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # MDX Query and Slicer Axes - Using Axes in a Simple Example

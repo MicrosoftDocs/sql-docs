@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "SynchronizeSecurity element"
 ms.assetid: d37dbb95-f4a4-44ac-8eb9-f661d5bb5018
 caps.latest.revision: 12
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # SynchronizeSecurity Element (XMLA)

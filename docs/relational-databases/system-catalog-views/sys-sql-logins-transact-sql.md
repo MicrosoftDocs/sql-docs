@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "sys.sql_logins catalog view"
 ms.assetid: 0d9c5b09-86fe-40ff-baab-00b7c051402f
 caps.latest.revision: 43
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "On Demand"
 ---
 # sys.sql_logins (Transact-SQL)

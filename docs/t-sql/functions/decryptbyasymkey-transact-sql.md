@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "decryption [SQL Server], asymmetric keys"
 ms.assetid: d9ebcd30-f01c-4cfe-b95e-ffe6ea13788b
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # DECRYPTBYASYMKEY (Transact-SQL)

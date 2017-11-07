@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "INFORMATION_SCHEMA.CONSTRAINT_TABLE_USAGE view"
 ms.assetid: 5770b696-6c04-4d5c-a8db-9eb92022fa42
 caps.latest.revision: 37
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # CONSTRAINT_TABLE_USAGE (Transact-SQL)

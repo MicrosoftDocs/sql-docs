@@ -18,7 +18,7 @@ ms.assetid: fcf72300-0674-4e73-a826-9b8eeffefbb5
 caps.latest.revision: 24
 author: "Minewiskan"
 ms.author: "owend"
-manager: "jhubbard"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Add a Mining Model to an Existing Mining Structure

@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "sp_statistics"
 ms.assetid: 0bb6495f-258a-47ec-9f74-fd16671d23b8
 caps.latest.revision: 32
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # sp_statistics (Transact-SQL)

@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "sp_dropsubscription"
 ms.assetid: 7551f345-5510-4684-ab53-f9057249d13a
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "On Demand"
 ---
 # sp_dropsubscription (Transact-SQL)

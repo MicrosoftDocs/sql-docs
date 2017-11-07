@@ -25,7 +25,7 @@ ms.assetid: 715c0be7-aa07-4dff-a909-9738224941ec
 caps.latest.revision: 35
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # SourceColumnID Element (ASSL)

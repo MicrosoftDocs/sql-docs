@@ -28,9 +28,9 @@ helpviewer_keywords:
   - "smallint data type"
 ms.assetid: 9bda5b0b-2380-4931-a1c8-f362fdefa99b
 caps.latest.revision: 28
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Active"
 ---
 # int, bigint, smallint, and tinyint (Transact-SQL)

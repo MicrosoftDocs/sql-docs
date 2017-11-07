@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "sp_changemergearticle"
 ms.assetid: 0dc3da5c-4af6-45be-b5f0-074da182def2
 caps.latest.revision: 74
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # sp_changemergearticle (Transact-SQL)

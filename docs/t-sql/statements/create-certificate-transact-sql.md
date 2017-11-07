@@ -27,9 +27,9 @@ helpviewer_keywords:
   - "CREATE CERTIFICATE statement"
 ms.assetid: a4274b2b-4cb0-446a-a956-1c8e6587515d
 caps.latest.revision: 74
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "On Demand"
 ---
 # CREATE CERTIFICATE (Transact-SQL)

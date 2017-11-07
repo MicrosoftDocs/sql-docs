@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "sp_dropapprole"
 ms.assetid: ea1aefe6-8f7d-46e9-a3cb-7b037b393e73
 caps.latest.revision: 28
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # sp_dropapprole (Transact-SQL)

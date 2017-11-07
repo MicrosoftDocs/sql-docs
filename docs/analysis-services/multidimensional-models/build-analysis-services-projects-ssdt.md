@@ -18,7 +18,7 @@ ms.assetid: caac03cb-b2b4-4652-8913-3dd39c4b0127
 caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Build Analysis Services Projects (SSDT)

@@ -13,9 +13,9 @@ helpviewer_keywords:
   - "14265 (Database Engine error)"
 ms.assetid: ab91b9c4-a967-414f-b5d7-7a2a9f73cdc4
 caps.latest.revision: 12
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # MSSQLSERVER_14265

@@ -15,9 +15,9 @@ helpviewer_keywords:
   - "inserting and updating data"
 ms.assetid: 514dc87a-b829-43b5-8fc8-1a400a260284
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Active"
 ---
 # Lesson 1-3 - Inserting and Updating Data in a Table

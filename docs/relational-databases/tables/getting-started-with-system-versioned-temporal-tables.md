@@ -9,7 +9,7 @@ ms.suite: ""
 ms.technology: 
   - "dbe-tables"
 ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+ms.topic: "article"
 ms.assetid: d431f216-82cf-4d97-825e-bb35d3d53a45
 caps.latest.revision: 12
 author: "CarlRabeler"

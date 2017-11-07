@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "sending messages"
 ms.assetid: b6e66aeb-1714-4c2b-b7c2-d386d77b0d46
 caps.latest.revision: 32
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # SEND (Transact-SQL)

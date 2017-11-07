@@ -14,7 +14,7 @@ ms.assetid: 7a12d148-eac9-4e6c-a222-1439e0817c64
 caps.latest.revision: 10
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Attach command (TMSL)

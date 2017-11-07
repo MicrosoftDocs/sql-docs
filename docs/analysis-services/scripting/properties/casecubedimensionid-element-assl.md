@@ -25,7 +25,7 @@ ms.assetid: 96720e13-7f9b-4768-ad4b-4def40758707
 caps.latest.revision: 37
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # CaseCubeDimensionID Element (ASSL)

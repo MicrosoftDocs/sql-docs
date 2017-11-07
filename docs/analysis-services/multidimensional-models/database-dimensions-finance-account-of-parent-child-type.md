@@ -20,7 +20,7 @@ ms.assetid: 2ba74e81-5b4b-407e-acdf-deb2f6accf0a
 caps.latest.revision: 15
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Database Dimensions - Finance Account of parent-child type

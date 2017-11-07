@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "sp_replqueuemonitor"
 ms.assetid: 6909a3f1-43a2-4df5-a6a5-9e6f347ac841
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # sp_replqueuemonitor (Transact-SQL)

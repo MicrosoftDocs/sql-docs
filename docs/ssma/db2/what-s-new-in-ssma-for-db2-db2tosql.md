@@ -1,5 +1,5 @@
 ---
-title: "What&#39;s New in SSMA  for DB2 (DB2ToSQL) | Microsoft Docs"
+title: "What's New in SSMA  for DB2 (DB2ToSQL) | Microsoft Docs"
 ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "09/30/2017"
@@ -19,7 +19,7 @@ ms.author: "Shamikg"
 manager: "craigg"
 ms.workload: "Inactive"
 ---
-# What&#39;s New in SSMA for DB2 (DB2ToSQL)
+# What's New in SSMA for DB2 (DB2ToSQL)
 This topic lists SSMA for DB2 changes in each release.  
 
 ## SSMA v7.6

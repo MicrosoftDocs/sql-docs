@@ -17,7 +17,7 @@ ms.assetid: 54ff584c-c6ce-4c31-9515-0a645719bd1a
 caps.latest.revision: 26
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # SystemGetAccuracyResults (Analysis Services - Data Mining)

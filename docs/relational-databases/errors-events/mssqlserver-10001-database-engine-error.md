@@ -13,9 +13,9 @@ helpviewer_keywords:
   - "10001 (Database Engine error)"
 ms.assetid: f8fd2d8d-a4af-4b6a-ba51-9123b7e4c9bf
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # MSSQLSERVER_10001

@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "sys.soap_endpoints catalog view"
 ms.assetid: f50dcbfc-02ed-4a19-9c07-c78a5a1b3224
 caps.latest.revision: 30
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # sys.soap_endpoints (Transact-SQL)

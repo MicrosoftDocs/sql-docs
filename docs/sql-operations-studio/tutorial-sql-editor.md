@@ -3,9 +3,9 @@ title: Working with T-SQL using Microsoft SQL Operations Studio | Microsoft Docs
 description: This tutorial walks through the key features in SQL Operations Studio that simplify using T-SQL.
 keywords: 
 ms.custom: "tools|sos"
-ms.date: "11/02/2017"
+ms.date: "11/06/2017"
 ms.prod: "sql-non-specified"
-ms.reviewer: "alayu; erickang; sanagama; sstein"
+ms.reviewer: "alayu; erickang; sstein"
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "tutorial"
@@ -203,7 +203,7 @@ In this step, we walkthrough how the **Save as JSON** option makes developing an
 
    ![test result](./media/tutorial-sql-editor/test-result.png)
 
-## Next Steps
+## Next steps
 In this tutorial, you learned how to:
 > [!div class="checklist"]
 > * Quick search schema objects
@@ -211,6 +211,5 @@ In this tutorial, you learned how to:
 > * Writing T-SQL script using snippets
 > * Learn about database object details using Peek Definition and Go to Definition
 
-Next, learn how to use X, try this tutorial: 
-> [!div class="nextstepaction"]
-> [What article is next in sequence](tutorial-build-custom-insight-sql-server.md)
+
+To learn how to build a custom insight widget, see [Build a custom insight widget]](tutorial-build-custom-insight-sql-server.md).

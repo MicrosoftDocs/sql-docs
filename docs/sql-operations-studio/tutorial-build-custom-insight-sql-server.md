@@ -1,9 +1,9 @@
 ---
 title: Build a customer insight widget in SQL Operations Studio | Microsoft Docs
-description: This sample describes the article in 115 to 145 characters. Validate using Gauntlet toolbar check icon. Use SEO kind of action verbs here.
+description: Learn how to build custom insight widgets and add them to database and server dashboards in SQL Operations Studio.
 keywords: 
 ms.custom: "tools|sos"
-ms.date: "11/01/2017"
+ms.date: "11/06/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: "alayu; erickang; sanagama; sstein"
 ms.suite: "sql"
@@ -18,9 +18,9 @@ ms.workload: "Inactive"
 # Build a custom insight widget
 In the previous tutorial, you learned how to quickly enable insight widgets on dashboard using built-in samples. In this tutorial, you walk through how to bring your own insight queries and build a custom insight widget. With a few simple steps, you learn how to:
 > [!div class="checklist"]
-> * Run your own query and view it in a chart view.
-> * Build a custom insight widget from the chart view. 
-> * Pin the chart to a SQL Server and database dashboard
+> * Run your own query and view it in a chart
+> * Build a custom insight widget from the char
+> * Add the chart to a server or database dashboard
 
 ## Prerequisites
 Follow [Get Started with Carbon](./get-started-sql-server.md)
@@ -277,14 +277,11 @@ In this step, run a query to identify a missing primary key and missing index in
 
    ![details](./media/tutorial-sql-server/insight-missingpk-dialog.png)
 
-## Next Steps
+## Next steps
 In this tutorial, you learned how to:
 > [!div class="checklist"]
-> * Create something
-> * Do something
-> * Do something else
-> * Finish something 
+> * Run your own query and view it in a chart
+> * Build a custom insight widget from the char
+> * Add the chart to a server or database dashboard
 
-Next, learn how to use X, try this tutorial: 
-> [!div class="nextstepaction"]
-> [What article is next in sequence](tutorial-build-custom-insight-sql-server.md)
+To learn how to backup and restore databases, see [Backup and Restore using SQL Operations Studio](tutorial-backup-restore-sql-server.md).

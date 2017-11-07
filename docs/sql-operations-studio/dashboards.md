@@ -1,9 +1,9 @@
 ---
-title: Quickly Access insights and common tasks in SQL Operations Studio | Microsoft Docs
+title: Quickly access insights and common tasks in SQL Operations Studio | Microsoft Docs
 description: Learn about displaying insightful widgets in SQL Operations Studio.
 keywords: 
 ms.custom: "tools|sos"
-ms.date: "10/31/2017"
+ms.date: "11/06/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: "alayu; erickang; sstein"
 ms.suite: "sql"
@@ -122,9 +122,3 @@ For example, when restore action is launched for WideWorldImporters database, ``
     }
 }
 ```
-
-
-## Next steps
-The basics of dashboards and insight widgets have been covered in this document, read on to find out more about:
-
-* [Integrated Terminal](integrated-terminal.md) - Use the integrated terminal in [!INCLUDE[name-sos](../includes/name-sos-short.md)]

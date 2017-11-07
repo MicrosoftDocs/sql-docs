@@ -3,7 +3,7 @@ title: Use Insight widgets to monitor servers and databases in SQL Operations St
 description: Learn about insight widgets in SQL Operations Studio.
 keywords: 
 ms.custom: "tools|sos"
-ms.date: "10/31/2017"
+ms.date: "11/06/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: "alayu; erickang; sstein"
 ms.suite: "sql"

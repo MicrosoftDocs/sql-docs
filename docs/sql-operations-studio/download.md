@@ -25,38 +25,35 @@ ms.workload: "Inactive"
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] runs on Windows, macOS, and Linux, and is supported on the following platforms:
 
-Windows 10 (64-bit)
-Windows 8.1 (64-bit)
-Windows 8 (64-bit)
-Windows 7 (SP1) (64-bit) - Requires [KB2533623](https://www.microsoft.com/en-us/download/details.aspx?id=26767)
+### Windows
+- Windows 10 (64-bit)
+- Windows 8.1 (64-bit)
+- Windows 8 (64-bit)
+- Windows 7 (SP1) (64-bit) - Requires [KB2533623](https://www.microsoft.com/en-us/download/details.aspx?id=26767)
+- Windows Server 2016
+- Windows Server 2012 R2 (64-bit)
+- Windows Server 2012 (64-bit)
+- Windows Server 2008 R2 (64-bit)
 
-Windows Server 2016
-Windows Server 2012 R2 (64-bit)
-Windows Server 2012 (64-bit)
-Windows Server 2008 R2 (64-bit)
+### macOS
+- macOS 10.13 High Sierra
+- macOS 10.12 Sierra
 
-macOS 10.13 High Sierra
-macOS 10.12 Sierra
-
-Red Hat Enterprise Linux 7.4
-Red Hat Enterprise Linux 7.3
-SUSE Linux Enterprise Server v12 SP2
-Ubuntu 16.04
+### Linux
+- Red Hat Enterprise Linux 7.4
+- Red Hat Enterprise Linux 7.3
+- SUSE Linux Enterprise Server v12 SP2
+- Ubuntu 16.04
 
 
 ## Get SQL Operations Studio for Windows
 
 1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] for Windows](https://go.microsoft.com/fwlink/?linkid=XXXXX) to your local computer.
-
-   > [!IMPORTANT]
-   > Executable files may be blocked by Windows when zip files are downloaded from an external source and extracted. The following steps unblock the .zip file before extracting. 
-
 1. Right-click the **.zip** file, and select **Properties**.
 1. On the **General** tab, select **Unblock**, and click **Apply**.
 1. Browse to the downloaded file and extract it.
-2. Run *\sqlops-windows\sqlops.exe*
+1. Run *\sqlops-windows\sqlops.exe*
 
-If [!INCLUDE[name-sos](../includes/name-sos-short.md)] is blocked when you run it, click **More info** > **Run Anyway**.
 
 ## Get SQL Operations Studio for macOS
 
@@ -76,14 +73,14 @@ If [!INCLUDE[name-sos](../includes/name-sos-short.md)] is blocked when you run i
 1. Open a new Terminal window.
 2. Type the following commands to extract the file and launch [!INCLUDE[name-sos](../includes/name-sos-short.md)]:
 
-```bash
-cd ~
-cp ~/Downloads/pgi3-sqlops-linux-x64.tar.gz ~
-tar -xvf ~/pgi3-sqlops-linux-x64.tar.gz
-echo 'export PATH="$PATH:~/sqlops-linux-x64"' >> ~/.bashrc
-source .bashrc
-sqlops .
-```
+   ```bash
+   cd ~
+   cp ~/Downloads/pgi3-sqlops-linux-x64.tar.gz ~
+   tar -xvf ~/pgi3-sqlops-linux-x64.tar.gz
+   echo 'export PATH="$PATH:~/sqlops-linux-x64"' >> ~/.bashrc
+   source .bashrc
+   sqlops .
+   ```
 
 
 ## Uninstall SQL Operations Studio

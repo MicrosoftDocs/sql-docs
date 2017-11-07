@@ -25,7 +25,7 @@ ms.assetid: d2135e68-57a9-4144-8403-9627041f2a58
 caps.latest.revision: 33
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # LogFileSize Element (ASSL)

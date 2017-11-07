@@ -18,7 +18,7 @@ ms.assetid: 3f879344-9f66-4178-851a-e8c5ccccf4cb
 caps.latest.revision: 30
 author: "Minewiskan"
 ms.author: "owend"
-manager: "jhubbard"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Add Columns to a Mining Structure

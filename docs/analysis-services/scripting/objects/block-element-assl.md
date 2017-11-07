@@ -25,7 +25,7 @@ ms.assetid: f45c32ae-e4e0-465a-9564-9ccfb10a858f
 caps.latest.revision: 37
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Block Element (ASSL)

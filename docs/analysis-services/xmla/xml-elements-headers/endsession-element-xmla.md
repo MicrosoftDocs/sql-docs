@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "EndSession element"
 ms.assetid: e64f1da4-5c83-40a2-b15e-837f5451bafa
 caps.latest.revision: 13
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # EndSession Element (XMLA)

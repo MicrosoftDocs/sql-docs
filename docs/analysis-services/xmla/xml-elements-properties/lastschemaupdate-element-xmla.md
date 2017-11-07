@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "LastSchemaUpdate element"
 ms.assetid: 2109955c-2817-413e-93aa-95d9910e8b24
 caps.latest.revision: 11
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # LastSchemaUpdate Element (XMLA)

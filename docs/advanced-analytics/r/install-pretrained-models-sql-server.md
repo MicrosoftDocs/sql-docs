@@ -1,6 +1,6 @@
 ---
 title: "Install pretrained machine learning models on SQL Server | Microsoft Docs"
-ms.date: "10/31/2017"
+ms.date: "11/03/2017"
 ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
@@ -19,15 +19,13 @@ ms.workload: "Inactive"
 
 This article describes how to add pretrained models to an instance of SQL Server that already has R Services or Machine Learning Services installed.
 
-The option to install pretrained models is available when you use the separate Windows installer for Microsoft R Server or Machine Learning Server. You can use this installer to get just the pretrained models, or you can use it to upgrade the machine learning components in an instance of SQL Server 2016 or SQL Server 2017.
+The option to install pretrained models is available when you use the separate Windows installer for Microsoft R Server or Machine Learning Server. You can use this installer to get just the pretrained models, or you can use it to [upgrade the machine learning components](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md) in an instance of SQL Server 2016 or SQL Server 2017.
 
 After you have downloaded the pretrained models by running the installer, there are some additional steps to configure the models for use with SQL Server. This article describes the process.
 
-For more information, see these articles:
+For an example of how to use the pretrained models with SQL Server data, see this blog by the SQL Server Machine Learning team: 
 
-+ [Pre-trained machine learning models for sentiment analysis and image detection](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models)
-
-+ [Upgrade the R components in an instance of R Services](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
++ [Sentiment analysis with Python in SQL Server Machine Learning Services](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2017/11/01/sentiment-analysis-with-python-in-sql-server-machine-learning-services/)
 
 ## Benefits of using pretrained models
 
@@ -41,6 +39,8 @@ The configuration of each network was based on the following reference implement
 + ResNet-50
 + ResNet-101
 + AlexNet
+
+For more information about these models, see [Pre-trained machine learning models for sentiment analysis and image detection](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models)
 
 For more information about deep learning networks and their implementation using CNTK, see these articles:
 
@@ -61,7 +61,7 @@ For more information about deep learning networks and their implementation using
 
     + To upgrade the R or Python components at the same time, select the language (R, or Python, or both) that you want to update, and select the pretrained models option. Select one or more instances to apply these changes to.
 
-    + If you have previously installed Machine Learning Server and updated R or Python components using the binding option, leave all previous selections **as is**, and select the pretrained models options. Do not deselect any previously selected options, or they will be removed.
+    + If you have previously installed Machine Learning Server and updated R or Python components using the binding option, leave all previous selections **as is**, and select the pretrained models options. Do not deselect any previously selected options; if you do so, the installer removes the components.
 
 3. When installation is complete, open a Windows command prompt **as administrator**, and navigate to the setup bootstrap folder for SQL Server, which also contains the Microsoft R installer. In a default instance of SQL Server 2017, the folder would be:
     
@@ -108,6 +108,11 @@ For more information about deep learning networks and their implementation using
     - ResNet\_101\_Updated.model
     - ResNet\_18\_Updated.model
     - ResNet\_50\_Updated.model
+
+
+> [!NOTE]
+> 
+> If the path to the model file is too long, you might get an error when calling the model file from Python code. This is due to a limitation in the current Python implementation. This issue will be fixed in an upcoming service release.
 
 ## Examples
 

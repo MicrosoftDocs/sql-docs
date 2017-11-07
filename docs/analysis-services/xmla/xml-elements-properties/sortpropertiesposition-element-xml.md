@@ -14,9 +14,9 @@ applies_to:
   - "SQL Server 2016 Preview"
 ms.assetid: 68b040a7-ab16-46f5-8610-21db07df9181
 caps.latest.revision: 6
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # SortPropertiesPosition Element (XML)

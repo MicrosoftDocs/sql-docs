@@ -16,7 +16,7 @@ ms.assetid: d0f63e52-7330-4b2c-a929-7a517acc6921
 caps.latest.revision: 6
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # BaseProperty Element (CSDLBI)

@@ -24,7 +24,7 @@ ms.assetid: 249971cc-4bcd-44f1-8241-bdacc04d3d38
 caps.latest.revision: 29
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Parent-Child Dimension Attributes

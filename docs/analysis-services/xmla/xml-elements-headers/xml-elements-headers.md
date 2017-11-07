@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "headers [XML for Analysis]"
 ms.assetid: 36407b5c-d98d-47e4-8d36-d8896e15a748
 caps.latest.revision: 14
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # XML Elements - Headers

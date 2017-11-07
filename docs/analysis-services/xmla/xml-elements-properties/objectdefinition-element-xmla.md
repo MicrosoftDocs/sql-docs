@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "ObjectDefinition element"
 ms.assetid: 1911868c-a018-4308-8cf9-972a57f610a1
 caps.latest.revision: 13
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # ObjectDefinition Element (XMLA)

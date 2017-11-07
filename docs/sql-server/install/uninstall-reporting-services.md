@@ -49,7 +49,7 @@ ms.workload: "On Demand"
   
 1.  In Windows Control Panel, click **Programs and Features**.  
   
-2.  In **Programs and Features** select **Microsoft SQL Server 2012**.  
+2.  In **Programs and Features** select **Microsoft SQL Server 2016**.  
   
 3.  In the uninstall wizard, select the instance that includes the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] instance feature **RS**.  
   

@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "ExecuteResponse element"
 ms.assetid: 6edb1b82-da4c-4cd9-9385-bea04032f0eb
 caps.latest.revision: 13
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # XML Elements - Objects - ExecuteResponse

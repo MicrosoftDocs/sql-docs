@@ -25,7 +25,7 @@ ms.assetid: fe715bab-050d-49e6-8ba6-801d0fa379a4
 caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Translation Element (ASSL)

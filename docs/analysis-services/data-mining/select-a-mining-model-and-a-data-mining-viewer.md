@@ -16,7 +16,7 @@ ms.assetid: 3e5fb89d-3ab8-4d2e-9926-feeb38c02d3f
 caps.latest.revision: 33
 author: "Minewiskan"
 ms.author: "owend"
-manager: "jhubbard"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Select a Mining Model and a Data Mining Viewer

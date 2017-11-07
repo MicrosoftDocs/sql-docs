@@ -21,7 +21,7 @@ ms.assetid: e375cc51-5f9d-4252-98a1-326ca0dbbf83
 caps.latest.revision: 19
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # HoldoutMaxPercent Element

@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "ClearCache command"
 ms.assetid: e154b489-e443-469a-9490-43c62da62e11
 caps.latest.revision: 15
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # ClearCache Element (XMLA)

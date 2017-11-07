@@ -18,7 +18,7 @@ ms.assetid: 20d1234b-a457-4a84-ae08-fe356870c466
 caps.latest.revision: 37
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Grant server admin rights to an  Analysis Services instance

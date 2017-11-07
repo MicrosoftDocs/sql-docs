@@ -25,7 +25,7 @@ ms.assetid: 5484e167-b891-431a-bbae-946ea6eb4a3c
 caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # LogFileRollover Element (ASSL)

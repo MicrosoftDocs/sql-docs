@@ -25,7 +25,7 @@ ms.assetid: 4aff2e03-6e1f-4f1a-b99d-d86bba25ab9b
 caps.latest.revision: 36
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # AllowedSet Element (ASSL)

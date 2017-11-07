@@ -21,7 +21,7 @@ ms.assetid: 58d94d10-e11e-4368-b3b8-dff23e1947cd
 caps.latest.revision: 21
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # HoldoutMaxCases Element

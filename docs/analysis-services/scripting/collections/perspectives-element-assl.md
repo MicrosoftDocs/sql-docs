@@ -25,7 +25,7 @@ ms.assetid: d071acc3-469b-44f3-b724-423a48da2d41
 caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Perspectives Element (ASSL)

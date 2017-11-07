@@ -25,7 +25,7 @@ ms.assetid: 4657f5dc-d88e-48d2-a448-08f79bc89546
 caps.latest.revision: 42
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Parent-Child Dimension

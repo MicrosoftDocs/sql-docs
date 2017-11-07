@@ -16,7 +16,7 @@ ms.assetid: 0ddb3b7a-7464-4d04-8659-11cb2e4cf3c3
 caps.latest.revision: 17
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Tools and applications used in Analysis Services

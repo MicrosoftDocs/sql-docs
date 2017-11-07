@@ -21,7 +21,7 @@ ms.assetid: 132ed779-3ec8-4734-9698-802116d1b017
 caps.latest.revision: 63
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Creating Multidimensional Models Using SQL Server Data Tools (SSDT)

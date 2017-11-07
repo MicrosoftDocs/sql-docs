@@ -25,7 +25,7 @@ ms.assetid: e52b1961-7e11-4029-8ab1-84d275845067
 caps.latest.revision: 37
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Data Element (ASSL)

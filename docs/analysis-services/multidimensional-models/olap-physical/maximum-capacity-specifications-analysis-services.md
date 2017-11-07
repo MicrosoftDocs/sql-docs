@@ -19,7 +19,7 @@ ms.assetid: 49fe1673-b908-4c7a-88ff-415efd294d27
 caps.latest.revision: 27
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Maximum capacity specifications (Analysis Services)

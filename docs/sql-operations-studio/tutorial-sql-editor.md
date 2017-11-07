@@ -78,29 +78,11 @@ This tutorial requires the *TutorialDB* database. To create the *TutorialDB* dat
        @ID int
    ```
 
-### Use IntelliSense in [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]
-??THIS DOES NOT WORK AND NEEDS HELP!!??
-1. Type in the following SELECT statement in the body of procedure. 
-
-> [!TIP]
-> Type *SELECT FROM dbo.Customers c*, and complete the rest as IntelliSense guides you.
-
-   ```sql
-    SELECT  c.CustomerID, 
-            c.Name, 
-            c.Location, 
-            c.Email
-    FROM dbo.Customers c
-    WHERE c.CustomerID = @ID
-    FOR JSON PATH
-   ```
-
    ![snippet-scripting](./media/tutorial-sql-editor/snippet-scripting.png)
 
-7. Delete the example arguments in the EXECUTE statement. The final statement should be: ```EXECUTE dbo.getCustomer 1```.
+6. Delete the example arguments in the EXECUTE statement. The final statement should be: ```EXECUTE dbo.getCustomer 1```.
 
-
-1. To create the stored procedure and give it a test run, press **F5**.
+7. To create the stored procedure and give it a test run, press **F5**.
 
 ## Use Peek Definition and Go to Definition 
 

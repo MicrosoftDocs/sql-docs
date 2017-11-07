@@ -15,7 +15,7 @@ ms.assetid: a6aa2c56-227c-43c5-a28e-c7104131ac5e
 caps.latest.revision: 7
 author: "guyinacube"
 ms.author: "asaxton"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Lesson 4: Define a Data Connection and Data Table for Child Report
@@ -57,7 +57,7 @@ After you design the parent report, you next step is to create a data connection
     SELECT PurchaseOrderID, PurchaseOrderDetailID, OrderQty, ProductID, ReceivedQty, RejectedQty, StockedQty FROM Purchasing.PurchaseOrderDetail  
     ```  
   
-    You can also create the query by selecting **Query Builder**, and then verify the query by selecting **Execute Query** button. If the query does not return the expected data, you might be using an earlier version of AdventureWorks. For more information about how to get the **AdventureWorks2014** sample database, see [Microsoft SQL Server Database Product Samples](http://msftdbprodsamples.codeplex.com/).  
+    You can also create the query by selecting **Query Builder**, and then verify the query by selecting **Execute Query** button. If the query does not return the expected data, you might be using an earlier version of AdventureWorks. For more information about how to get the **AdventureWorks2014** sample database, see [AdventureWorks sample databases](https://github.com/Microsoft/sql-server-samples/releases).  
   
 10. On the **Choose Methods to Generate** page, uncheck **Create methods to send updates directly to the database (GenerateDBDirectMethods)**, and then select **Finish**.  
   

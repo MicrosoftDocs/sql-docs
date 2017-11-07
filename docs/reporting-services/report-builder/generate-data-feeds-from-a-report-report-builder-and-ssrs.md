@@ -15,6 +15,7 @@ caps.latest.revision: 11
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 
 # Generate Data Feeds from a Report (Report Builder and SSRS)

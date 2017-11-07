@@ -16,6 +16,7 @@ caps.latest.revision: 21
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Enhanced Date and Time Type Behavior with Previous SQL Server Versions (ODBC)
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]

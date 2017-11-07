@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "CREATE EVENT SESSION statement"
 ms.assetid: 67683027-2b0f-47aa-b223-604731af8b4d
 caps.latest.revision: 65
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "On Demand"
 ---
 # CREATE EVENT SESSION (Transact-SQL)

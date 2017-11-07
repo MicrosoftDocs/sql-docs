@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Transaction Isolation
 *Transaction isolation* refers to the degree of interaction between multiple concurrent transactions. To see why this is important, you'll need to first look at the idea of serializability.  

@@ -16,6 +16,7 @@ caps.latest.revision: 69
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # Installing the Microsoft ODBC Driver for SQL Server on Linux and macOS
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]

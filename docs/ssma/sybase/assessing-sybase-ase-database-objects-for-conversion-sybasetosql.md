@@ -17,6 +17,7 @@ caps.latest.revision: 7
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Assessing Sybase ASE Database Objects for Conversion (SybaseToSQL)
 Before you load objects and migrate data to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure, you should determine how complex the migration will be and how much time the migration will take. SSMA can create an assessment report that shows the percentage of objects and procedures that will be successfully converted to [!INCLUDE[tsql](../../includes/tsql_md.md)]. SSMA also lets you view the specific issues that will cause conversion failures.  

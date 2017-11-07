@@ -20,6 +20,7 @@ caps.latest.revision: 30
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Enable Initialization with Backup for Transactional Publications
   To initialize a subscription to a transactional publication from a backup, enable the publication to allow initialization from a backup, and then specify backup information when creating the subscription:  

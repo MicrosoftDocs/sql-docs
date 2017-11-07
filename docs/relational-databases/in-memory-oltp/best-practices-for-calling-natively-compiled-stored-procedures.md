@@ -14,6 +14,7 @@ caps.latest.revision: 8
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Best Practices for Calling Natively Compiled Stored Procedures
   Natively compiled stored procedures are:  

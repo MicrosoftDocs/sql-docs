@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "INSERT statement [SQL Server], OPENQUERY function"
 ms.assetid: b805e976-f025-4be1-bcb0-3a57b0c57717
 caps.latest.revision: 42
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Active"
 ---
 # OPENQUERY (Transact-SQL)

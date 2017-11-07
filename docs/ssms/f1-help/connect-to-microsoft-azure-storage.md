@@ -17,6 +17,7 @@ caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Connect to Microsoft Azure Storage
 Use the **Windows Azure Storage Connection** dialog to specify a storage account and validate your connection to Windows Azure.  

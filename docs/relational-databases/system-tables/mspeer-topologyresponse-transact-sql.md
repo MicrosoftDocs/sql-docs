@@ -20,9 +20,10 @@ helpviewer_keywords:
   - "MSpeer_topologyresponse"
 ms.assetid: 1bc5c0c6-c432-405c-89fd-e953d173a247
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Inactive"
 ---
 # MSpeer_topologyresponse (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]

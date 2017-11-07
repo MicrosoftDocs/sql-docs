@@ -20,7 +20,7 @@ ms.assetid: a07b1665-7f72-4266-82a4-43a91ae2571d
 caps.latest.revision: 28
 author: "Minewiskan"
 ms.author: "owend"
-manager: "jhubbard"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Measures in the Cross-Validation Report

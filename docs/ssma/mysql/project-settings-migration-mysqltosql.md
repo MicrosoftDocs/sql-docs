@@ -17,6 +17,7 @@ caps.latest.revision: 14
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Project Settings (Migration) (MySQLToSQL)
 The Migration page of the **Project Settings** dialog box contains settings that customize how SSMA migrates data from MySQL to SQL Server.  

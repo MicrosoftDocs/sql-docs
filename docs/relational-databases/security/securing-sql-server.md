@@ -19,9 +19,10 @@ helpviewer_keywords:
   - "applications [SQL Server], security"
 ms.assetid: 4d93489e-e9bb-45b3-8354-21f58209965d
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "On Demand"
 ---
 # Securing SQL Server
   Securing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can be viewed as a series of steps, involving four areas: the platform, authentication, objects (including data), and applications that access the system. The following topics will guide you through creating and implementing an effective security plan.  

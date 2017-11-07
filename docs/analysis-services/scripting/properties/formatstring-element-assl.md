@@ -25,7 +25,8 @@ ms.assetid: 7b996221-936e-4f36-a3a8-676eb9869c55
 caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # FormatString Element (ASSL)
   Describes the display format for a [CalculationProperty](../../../analysis-services/scripting/objects/calculationproperty-element-assl.md) element or a [Measure](../../../analysis-services/scripting/objects/measure-element-assl.md) element.  

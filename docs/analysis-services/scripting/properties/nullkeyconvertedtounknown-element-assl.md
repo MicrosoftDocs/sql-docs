@@ -25,7 +25,8 @@ ms.assetid: 1a6cde33-01ba-4095-b464-16d1ad3c6905
 caps.latest.revision: 36
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # NullKeyConvertedToUnknown Element (ASSL)
   Specifies the action to be taken when a null conversion error is encountered.  

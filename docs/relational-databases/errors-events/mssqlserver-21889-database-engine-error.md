@@ -13,9 +13,10 @@ helpviewer_keywords:
   - "21889 (Database Engine error)"
 ms.assetid: ae199540-7986-4cc2-b782-cd22793236d3
 caps.latest.revision: 6
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Inactive"
 ---
 # MSSQLSERVER_21889
   

@@ -25,9 +25,10 @@ helpviewer_keywords:
   - "DeleteWithDescendants element"
 ms.assetid: adfc9437-aaa7-4364-bcdb-128fcc9a410d
 caps.latest.revision: 12
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # DeleteWithDescendants Element (XMLA)
   Indicates whether the descendants of attribute members are also deleted by the parent [Drop](../../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md) command.  

@@ -19,7 +19,7 @@ ms.assetid: 3ca0aa63-3eb5-4fe9-934f-8e96dee84eaa
 caps.latest.revision: 29
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Understanding Incremental Generation

@@ -60,7 +60,8 @@ ms.assetid: 9bc9abed-180a-4bd8-b2eb-89c62fa88110
 caps.latest.revision: 19
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Data Mining Properties
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supports the data mining server properties listed in the following tables. For more information about additional server properties and how to set them, see [Server Properties in Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  

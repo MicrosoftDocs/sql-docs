@@ -16,6 +16,7 @@ caps.latest.revision: 21
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Audit Database Object Access Event Class
   The **Audit Database Object Access** event class occurs when database objects, such as schemas, are accessed.  

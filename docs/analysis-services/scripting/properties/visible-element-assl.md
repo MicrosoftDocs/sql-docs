@@ -25,7 +25,8 @@ ms.assetid: 3e9baf1b-351f-4ebf-b57d-13d561f72d6f
 caps.latest.revision: 35
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Visible Element (ASSL)
   Determines the visibility of the parent element.  

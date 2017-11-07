@@ -23,6 +23,7 @@ caps.latest.revision: 25
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Working with the WMI Provider for Configuration Management
   Consider the following before programming with the WMI Provider for Computer Management:  

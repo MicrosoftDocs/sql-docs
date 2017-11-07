@@ -15,6 +15,7 @@ caps.latest.revision: 10
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Teradata Connection Type (SSRS)
   To include data from a Teradata relational database in your report, you must have a dataset that is based on a report data source of type Teradata. This built-in data source type is based on the .NET Managed Provider for Teradata data processing extension.  

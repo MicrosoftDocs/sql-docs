@@ -18,7 +18,7 @@ ms.assetid: 5bb44b41-635b-4398-8fe9-0bfbb142553e
 caps.latest.revision: 13
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Define a Referenced Relationship and Referenced Relationship Properties

@@ -20,9 +20,10 @@ helpviewer_keywords:
   - "sys.data_spaces catalog view"
 ms.assetid: f39d55fe-2c0f-472d-a77f-cebc6fea95b5
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Inactive"
 ---
 # sys.data_spaces (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]

@@ -21,6 +21,7 @@ caps.latest.revision: 38
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Nullability and Three-Value Logic Comparisons
   If you are familiar with the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data types, you will find similar semantics and precision in the **System.Data.SqlTypes** namespace in the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. There are some differences, however, and this topic covers the most important of these differences.  

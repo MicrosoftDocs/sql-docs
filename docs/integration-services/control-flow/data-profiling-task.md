@@ -20,6 +20,7 @@ caps.latest.revision: 32
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Data Profiling Task
   The Data Profiling task computes various profiles that help you become familiar with a data source and identify problems in the data that have to be fixed.  

@@ -1,7 +1,7 @@
 ---
 title: "HAS_DBACCESS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/06/2017"
+ms.date: "10/23/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -25,13 +25,13 @@ helpviewer_keywords:
   - "status information [SQL Server], user access"
 ms.assetid: 99b43a72-0722-4a7b-a493-bdee1c74c7b9
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # HAS_DBACCESS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw_md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
 
   Returns information about whether the user has access to the specified database.  
   

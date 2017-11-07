@@ -18,9 +18,10 @@ helpviewer_keywords:
   - "sp_MSchange_distribution_agent_properties"
 ms.assetid: 7dac5e68-bf84-433a-a531-66921f35126f
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Inactive"
 ---
 # sp_MSchange_distribution_agent_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

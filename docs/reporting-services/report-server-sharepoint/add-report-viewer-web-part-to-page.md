@@ -13,6 +13,7 @@ ms.topic: "article"
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 
 # Add SQL Server Reporting Services Report Viewer web part to a SharePoint page

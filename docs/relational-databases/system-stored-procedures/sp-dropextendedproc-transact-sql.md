@@ -18,9 +18,10 @@ helpviewer_keywords:
   - "sp_dropextendedproc"
 ms.assetid: dd93af2c-1b7d-4e39-af23-2d21d270a381
 caps.latest.revision: 36
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Inactive"
 ---
 # sp_dropextendedproc (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

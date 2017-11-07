@@ -16,6 +16,7 @@ caps.latest.revision: 9
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Lesson 9: Build and Run the Application
 After you create a data filter for the data table, your next step is to build and run the website application.  

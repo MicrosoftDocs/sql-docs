@@ -20,7 +20,7 @@ ms.assetid: 420ec40e-be2d-413a-b4b2-6d2b1756e270
 caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Retrieving Data Using the XmlReader

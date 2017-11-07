@@ -14,6 +14,7 @@ caps.latest.revision: 11
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Upgrade DQS Databases Schema After Installing SQL Server Update
   After you have installed a SQL Server update (patch, hotfix, or cumulative update) on a previously configured DQS instance, you might have to upgrade the DQS databases schema by running the DQSInstaller.exe file with the **upgrade** command line parameter. Otherwise, you might receive the following error while trying to connect to Data Quality Server using your Data Quality Client:  

@@ -13,9 +13,10 @@ helpviewer_keywords:
   - "2533 (Database Engine error)"
 ms.assetid: 0418352c-0ab2-4dc7-b8b9-5c3bad94560c
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Inactive"
 ---
 # MSSQLSERVER_2533
   

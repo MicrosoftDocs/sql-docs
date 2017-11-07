@@ -25,7 +25,8 @@ ms.assetid: a2fad411-73fd-42df-b4e1-df2cb8454182
 caps.latest.revision: 36
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Value Element (ASSL)
   Contains the value of the parent element.  

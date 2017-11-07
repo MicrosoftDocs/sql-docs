@@ -19,6 +19,7 @@ caps.latest.revision: 20
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # FileTables (SQL Server)
   The FileTable feature brings support for the Windows file namespace and compatibility with Windows applications to the file data stored in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. FileTable lets an application integrate its storage and data management components, and provides integrated [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services - including full-text search and semantic search - over unstructured data and metadata.  
@@ -56,9 +57,9 @@ manager: "jhubbard"
   
 -   Every row contains the following items. For more information about the schema of a FileTable, see [FileTable Schema](../../relational-databases/blob/filetable-schema.md).  
   
-    -   A**file_stream** column for stream data and a **stream_id** (GUID) identifier. (The **file_stream** column is NULL for a directory.)  
+    -   A **file_stream** column for stream data and a **stream_id** (GUID) identifier. (The **file_stream** column is NULL for a directory.)  
   
-    -   Both **path_locator** and **parent_path_locator** columns for representing and maintaining the file and directory hierarchy.  
+    -   Both **path_locator** and **parent_path_locator** columns for representing and maintaining the current item (file or directory) and directory hierarchy.  
   
     -   10 file attributes such as created date and modified date that are useful with file I/O APIs.  
   

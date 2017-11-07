@@ -13,9 +13,10 @@ helpviewer_keywords:
   - "3961 (Database Engine error)"
 ms.assetid: 3bbc6965-6445-400c-940a-2d85b037513f
 caps.latest.revision: 12
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Inactive"
 ---
 # MSSQLSERVER_3961
   

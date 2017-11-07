@@ -17,6 +17,7 @@ caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # View Project Properties
 You can view properties associated with your projects in the Properties window.  

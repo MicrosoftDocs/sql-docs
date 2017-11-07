@@ -23,6 +23,7 @@ caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Create Insert Values Queries (Visual Database Tools)
 You can create a new row in the current table using an Insert Values query. When you create an Insert Values query, you specify:  

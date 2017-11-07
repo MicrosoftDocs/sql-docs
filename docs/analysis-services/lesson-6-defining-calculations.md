@@ -15,7 +15,7 @@ ms.assetid: e0a1e354-e879-4eb8-bb2b-6c3809e32cb6
 caps.latest.revision: 19
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Lesson 6: Defining Calculations

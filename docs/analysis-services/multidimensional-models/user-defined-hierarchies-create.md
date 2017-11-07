@@ -17,7 +17,7 @@ ms.assetid: 16715b85-0630-4a8e-99b0-c0d213cade26
 caps.latest.revision: 22
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # User-Defined Hierarchies - Create

@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "denying permissions [SQL Server], assemblies"
 ms.assetid: be0896b3-f793-44c9-9390-1c6e58f33b2b
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # DENY Assembly Permissions (Transact-SQL)

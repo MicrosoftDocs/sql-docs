@@ -19,6 +19,7 @@ caps.latest.revision: 20
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Semantic Search (SQL Server)
 Statistical Semantic Search provides deep insight into unstructured documents stored in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases by extracting and indexing statistically relevant *key phrases*. Then it uses these key phrases to identify and index *documents that are similar or related*.  

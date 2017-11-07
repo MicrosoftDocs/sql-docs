@@ -24,9 +24,10 @@ helpviewer_keywords:
   - "Parallel element"
 ms.assetid: 04726d94-37ee-460b-9744-d62b45f536b9
 caps.latest.revision: 13
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Parallel Element (XMLA)
   Specifies how many processing jobs can run in parallel using the parent [Batch](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md) command.  

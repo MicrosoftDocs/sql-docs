@@ -16,6 +16,7 @@ caps.latest.revision: 21
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Audit Server Operation Event Class
   The **Audit Server Operation** event class occurs when Security Audit operations such as altering settings, resources, external access, or authorization are used.  

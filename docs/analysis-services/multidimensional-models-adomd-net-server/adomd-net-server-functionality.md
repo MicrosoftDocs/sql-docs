@@ -19,7 +19,7 @@ ms.assetid: b74c6957-3f64-4e09-aa09-d06ee93f82fa
 caps.latest.revision: 15
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # ADOMD.NET Server Functionality

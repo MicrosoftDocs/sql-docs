@@ -13,9 +13,10 @@ helpviewer_keywords:
   - "9004 (Database Engine error)"
 ms.assetid: b528bb49-340c-4a81-9c8d-cefce6562f16
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Inactive"
 ---
 # MSSQLSERVER_9004
   

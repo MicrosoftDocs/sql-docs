@@ -20,7 +20,7 @@ ms.assetid: b9fee2b9-05a5-4077-848d-d8457326dc27
 caps.latest.revision: 20
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Actions in Multidimensional Models

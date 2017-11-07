@@ -15,7 +15,8 @@ ms.assetid: 001bed84-f50f-4961-bc25-9906728d99ec
 caps.latest.revision: 19
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Create a New Tabular Model Project (Analysis Services)
   This topic describes how to create a new, blank tabular model project in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. After a new model project has been created, you can begin authoring your model project by importing data from data sources.  

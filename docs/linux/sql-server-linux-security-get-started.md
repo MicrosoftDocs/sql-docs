@@ -10,6 +10,7 @@ ms.prod: sql-linux
 ms.technology: database-engine  
 ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0  
 ms.custom: H1Hack27Feb2017
+ms.workload: "Inactive"
 ---
 # Walkthrough for the security features of SQL Server on Linux
 

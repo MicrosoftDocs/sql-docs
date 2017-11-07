@@ -22,6 +22,7 @@ caps.latest.revision: 63
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "On Demand"
 ---
 # Administer a Report Server Database (SSRS Native Mode)
   A [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] deployment uses two [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] relational databases for internal storage. By default, the databases are named ReportServer and ReportServerTempdb. ReportServerTempdb is created with the primary report server database and is used to store temporary data, session information, and cached reports.  

@@ -20,9 +20,10 @@ helpviewer_keywords:
   - "sysmergepartitioninfo system table"
 ms.assetid: 7429ad2c-dd33-4f7d-89cc-700e083af518
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Inactive"
 ---
 # sysmergepartitioninfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

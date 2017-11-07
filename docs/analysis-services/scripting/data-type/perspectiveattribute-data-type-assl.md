@@ -25,7 +25,7 @@ ms.assetid: bf4d45c1-e48d-4ada-bbab-49c3ac74948d
 caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # PerspectiveAttribute Data Type (ASSL)

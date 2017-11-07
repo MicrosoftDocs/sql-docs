@@ -25,9 +25,10 @@ helpviewer_keywords:
   - "Type element"
 ms.assetid: 5d898123-a635-402a-be86-8249d7304fa4
 caps.latest.revision: 15
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Type Element (XMLA)
   Determines the type of processing to be performed by the [Process](../../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md) element.  

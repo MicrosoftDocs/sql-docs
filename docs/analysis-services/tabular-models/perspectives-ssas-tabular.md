@@ -15,7 +15,8 @@ ms.assetid: 1f78c3a1-ce2c-4e7f-a277-71a657692bea
 caps.latest.revision: 12
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "On Demand"
 ---
 # Perspectives
   Perspectives, in tabular models, define viewable subsets of a model that provide focused, business-specific, or application-specific viewpoints of the model.  

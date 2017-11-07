@@ -21,6 +21,7 @@ caps.latest.revision: 44
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Security and Protection (Replication)
   Help protect the replication scenarios that you deploy in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] from malicious attacks and improve the security of your data.  

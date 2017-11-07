@@ -15,7 +15,8 @@ ms.assetid: 5974a3cc-caf8-4558-8836-6e3c24b1ee23
 caps.latest.revision: 11
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "On Demand"
 ---
 # Add Columns to a Table (SSAS Tabular)
   This topic describes how to add columns to an existing table.  

@@ -16,6 +16,7 @@ caps.latest.revision: 32
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Glossary of Terms for Oracle Publishing
   You should be familiar with the following Oracle terms when configuring and administering Oracle publishing. For a complete list of Oracle terms, see the Oracle online documentation.  

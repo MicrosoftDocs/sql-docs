@@ -18,6 +18,7 @@ caps.latest.revision: 32
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Removing Database Mirroring (SQL Server)
   The database owner can manually stop a database mirroring session at any time, at either partner.  

@@ -15,9 +15,9 @@ helpviewer_keywords:
   - "creating a login"
 ms.assetid: a2512310-bdb6-41dc-858a-e866b2b58afc
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "On Demand"
 ---
 # Lesson 2-1 - Creating a Login

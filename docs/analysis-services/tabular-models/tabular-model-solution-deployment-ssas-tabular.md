@@ -15,7 +15,8 @@ ms.assetid: aff96558-e5e5-4b95-8ddf-ee0709c842fb
 caps.latest.revision: 22
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "On Demand"
 ---
 # Tabular Model Solution Deployment (SSAS Tabular)
   After authoring a tabular model project, you must deploy it in order for users to browse the model by using a reporting client application. This topic describes the various properties and methods you can use when deploying tabular model solutions in your environment.  

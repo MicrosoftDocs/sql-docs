@@ -25,7 +25,8 @@ ms.assetid: a6b2ee50-1753-496c-af5c-206d63f2542b
 caps.latest.revision: 37
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # EventID Element (ASSL)
   Uniquely identifies an [Event](../../../analysis-services/scripting/objects/event-element-assl.md) element that is to be captured as part of a [Trace](../../../analysis-services/scripting/objects/trace-element-assl.md) element.  

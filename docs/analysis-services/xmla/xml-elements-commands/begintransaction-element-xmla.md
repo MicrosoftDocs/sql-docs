@@ -25,9 +25,10 @@ helpviewer_keywords:
   - "BeginTransaction command"
 ms.assetid: fca122fc-b57c-4ba6-849b-ca8c93cf64e9
 caps.latest.revision: 14
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # BeginTransaction Element (XMLA)
   Begins a transaction on the current session with an instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  

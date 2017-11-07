@@ -19,6 +19,7 @@ caps.latest.revision: 44
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "On Demand"
 ---
 
 # Upgrade a Report Server Database

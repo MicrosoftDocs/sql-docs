@@ -25,7 +25,8 @@ ms.assetid: e06efbda-64fd-4dca-a2b5-c8ffbf21512c
 caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # DimensionPermission Element (ASSL)
   Defines the permissions that belong to a particular [Role](../../../analysis-services/scripting/objects/role-element-assl.md) element for a specific database dimension or cube dimension.  

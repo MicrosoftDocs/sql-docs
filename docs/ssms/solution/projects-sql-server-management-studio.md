@@ -14,6 +14,7 @@ caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Projects (SQL Server Management Studio)
 A [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] project is a collection of logically related scripts and files that can be saved together for database administration and development.  

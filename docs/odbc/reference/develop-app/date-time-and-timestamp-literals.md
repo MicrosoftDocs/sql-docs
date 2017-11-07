@@ -16,6 +16,7 @@ caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Date, Time, and Timestamp Literals
 The escape sequence for date, time, and timestamp literals is  

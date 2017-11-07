@@ -16,6 +16,7 @@ caps.latest.revision: 27
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Guidelines and Limitations of SQLXML 4.0
   Remember the following when working with SQLXML 4.0:  

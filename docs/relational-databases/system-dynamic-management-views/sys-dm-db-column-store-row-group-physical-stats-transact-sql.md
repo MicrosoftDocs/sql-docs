@@ -23,6 +23,7 @@ caps.latest.revision: 15
 author: "barbkess"
 ms.author: "barbkess"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # sys.dm_db_column_store_row_group_physical_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

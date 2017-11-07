@@ -23,6 +23,7 @@ caps.latest.revision: 38
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # SSIS How to Create an ETL Package
 

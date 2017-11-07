@@ -17,7 +17,8 @@ ms.assetid: 23140c9f-3f5b-4755-920e-1246cbf0d1a3
 caps.latest.revision: 25
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Command Events Event Category
   The Command Events event category has the event classes described in the following table.  

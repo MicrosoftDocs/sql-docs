@@ -24,7 +24,7 @@ ms.assetid: 1e9f7969-0aa6-465a-b3ea-57b8d1c7a1fd
 caps.latest.revision: 31
 author: "Minewiskan"
 ms.author: "owend"
-manager: "jhubbard"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Microsoft Decision Trees Algorithm Technical Reference

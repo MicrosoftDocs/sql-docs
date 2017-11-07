@@ -16,6 +16,7 @@ caps.latest.revision: 13
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "Active"
 ---
 # Configure a URL  (SSRS Configuration Manager)
   Before you can use the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] or the Report Server Web service, you must configure at least one URL for each application. Configuring the URLs is mandatory if you installed [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in "files-only" mode (that is, by selecting the **Install but do not configure the server** option on the Report Server Installation Options page in the Installation Wizard). If you installed [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in the default configuration, URLs are already configured for each application.  

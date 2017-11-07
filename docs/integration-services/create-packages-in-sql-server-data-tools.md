@@ -19,6 +19,7 @@ caps.latest.revision: 51
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Create Packages in SQL Server Data Tools
   In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], you can create a new package by using one of the following methods:  

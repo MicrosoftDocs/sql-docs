@@ -22,6 +22,7 @@ caps.latest.revision: 53
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Soft-NUMA (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -23,7 +23,8 @@ ms.assetid: 95d07f1c-ef8d-4e38-9682-ebb7719dbe52
 caps.latest.revision: 14
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # ProcessingPriority Element (ASSL)
   Determines the processing priority of the parent object during background operations, for example lazy aggregation, indexing, or clustering.  

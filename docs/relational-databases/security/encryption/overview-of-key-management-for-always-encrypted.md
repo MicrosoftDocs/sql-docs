@@ -14,6 +14,7 @@ caps.latest.revision: 32
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Overview of Key Management for Always Encrypted
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

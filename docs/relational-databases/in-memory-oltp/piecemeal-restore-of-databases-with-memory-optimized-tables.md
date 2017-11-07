@@ -14,6 +14,7 @@ caps.latest.revision: 16
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Piecemeal Restore of Databases With Memory-Optimized Tables
   Piecemeal restore is supported on databases with memory-optimized tables except for one restriction described below. For more information about piecemeal backup and restore, see [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md) and [Piecemeal Restores &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md).  

@@ -26,7 +26,7 @@ ms.assetid: ef1387a5-5137-4ef4-b731-fec347e5f5ed
 caps.latest.revision: 27
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Requirements and Considerations for Analysis Services Deployment

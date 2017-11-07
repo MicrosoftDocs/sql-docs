@@ -25,9 +25,10 @@ helpviewer_keywords:
   - "Exception element"
 ms.assetid: 0be4cc2f-c03e-490a-a6f7-8b1ede5d09ba
 caps.latest.revision: 11
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Exception Element (XMLA)
   Indicates that an exception was returned from a [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) or [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) method call.  

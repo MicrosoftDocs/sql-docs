@@ -13,7 +13,8 @@ ms.assetid: 8051a7d8-d815-45e1-a764-a5992b07b4fd
 caps.latest.revision: 6
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # File Load and Save Event Category
   The File Load and Save event category has the event classes described in the following table.  

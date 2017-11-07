@@ -25,9 +25,10 @@ helpviewer_keywords:
   - "CubeID element"
 ms.assetid: 9dba605a-c45e-4730-827b-b7c55c8110da
 caps.latest.revision: 12
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # CubeID Element (XMLA)
   Identifies a cube within a parent element that contains an object reference.  

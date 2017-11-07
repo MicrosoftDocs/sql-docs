@@ -18,9 +18,10 @@ helpviewer_keywords:
   - "sp_addqueued_artinfo"
 ms.assetid: decdb6eb-3dcd-4053-a21d-fd367c3fbafb
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Inactive"
 ---
 # sp_addqueued_artinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

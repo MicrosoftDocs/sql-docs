@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "statistical information [SQL Server], profiles"
 ms.assetid: c635e262-35fa-421a-aa6f-a1c30f351647
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "On Demand"
 ---
 # SET STATISTICS PROFILE (Transact-SQL)

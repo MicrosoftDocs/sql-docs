@@ -13,9 +13,10 @@ helpviewer_keywords:
   - "12308 (Database Engine error)"
 ms.assetid: b8a8a2d7-eda5-409c-8cc3-7ba32f0d4fd7
 caps.latest.revision: 4
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Inactive"
 ---
 # MSSQLSERVER_12308
   

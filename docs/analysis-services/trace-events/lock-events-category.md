@@ -13,7 +13,8 @@ ms.assetid: 06427f8e-89bb-4710-a0c1-dc5e42b7e95e
 caps.latest.revision: 6
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Lock Events Category
   The Locks Events event category has the event classes described in the following table.  

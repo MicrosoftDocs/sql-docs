@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # SQLMoreResults (Desktop Database Drivers)
 This function always returns SQL_NO_DATA_FOUND.

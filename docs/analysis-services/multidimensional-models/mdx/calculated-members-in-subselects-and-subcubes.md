@@ -16,7 +16,7 @@ ms.assetid: 6e35e8f7-ae1c-4549-8432-accf036d2373
 caps.latest.revision: 9
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Calculated Members in Subselects and Subcubes

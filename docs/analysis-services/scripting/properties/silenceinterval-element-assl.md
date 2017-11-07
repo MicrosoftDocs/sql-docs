@@ -25,7 +25,8 @@ ms.assetid: c22060a9-99ca-4b81-9df3-89b020b4d1d4
 caps.latest.revision: 35
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # SilenceInterval Element (ASSL)
   Defines the minimum amount of time the instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] pauses before starting the multidimensional OLAP (MOLAP) imaging process.  

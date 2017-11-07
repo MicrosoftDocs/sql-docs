@@ -25,7 +25,8 @@ ms.assetid: 6e0cf107-dd02-4bbd-94f5-c26d96438d4b
 caps.latest.revision: 32
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # KeyUniquenessGuarantee Element (ASSL)
   Indicates whether the relationship between the attribute key and its name, and the relationship to related attributes, is guaranteed to be valid.  

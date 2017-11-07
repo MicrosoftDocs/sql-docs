@@ -18,6 +18,7 @@ caps.latest.revision: 26
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Maintenance Cleanup Task (Maintenance Plan)
   Use the **Maintenance Cleanup Task** to remove old files related to maintenance plans, including text reports created by maintenance plans and database backup files.  

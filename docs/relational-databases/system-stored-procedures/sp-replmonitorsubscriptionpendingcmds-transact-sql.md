@@ -18,9 +18,10 @@ helpviewer_keywords:
   - "sp_replmonitorsubscriptionpendingcmds"
 ms.assetid: df5b955a-feb0-4863-9b3b-7f71e9653b3d
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Inactive"
 ---
 # sp_replmonitorsubscriptionpendingcmds (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

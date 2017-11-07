@@ -22,7 +22,8 @@ ms.assetid: a34d046a-6562-4d98-b827-37cebc6d77b4
 caps.latest.revision: 21
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Feature Properties
   Feature properties pertain to product features, most of them advanced, including properties that control links between server instances.  

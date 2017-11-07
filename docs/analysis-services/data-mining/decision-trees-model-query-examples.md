@@ -18,7 +18,7 @@ ms.assetid: ceaf1370-9dd1-4d1a-a143-7f89a723ef80
 caps.latest.revision: 24
 author: "Minewiskan"
 ms.author: "owend"
-manager: "jhubbard"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Decision Trees Model Query Examples

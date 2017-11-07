@@ -25,7 +25,8 @@ ms.assetid: f793e93f-62de-4c3b-90b0-a46bd3cadae5
 caps.latest.revision: 28
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # FiscalFirstDayOfMonth Element (ASSL)
   Defines the first day of the fiscal month for a [TimeBinding](../../../analysis-services/scripting/data-type/timebinding-data-type-assl.md) element.  

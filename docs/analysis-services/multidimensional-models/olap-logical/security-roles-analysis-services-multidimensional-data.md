@@ -26,7 +26,7 @@ ms.assetid: 5b7e9cef-ff68-4d8e-99bc-e0094ced1baa
 caps.latest.revision: 35
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Security Roles  (Analysis Services - Multidimensional Data)

@@ -16,6 +16,7 @@ caps.latest.revision: 35
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # Enable the Lock Pages in Memory Option (Windows)
   This Windows policy determines which accounts can use a process to keep data in physical memory, preventing the system from paging the data to virtual memory on disk.  

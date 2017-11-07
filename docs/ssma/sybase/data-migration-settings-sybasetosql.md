@@ -17,6 +17,7 @@ caps.latest.revision: 3
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Data Migration Settings (SybaseToSQL)
   

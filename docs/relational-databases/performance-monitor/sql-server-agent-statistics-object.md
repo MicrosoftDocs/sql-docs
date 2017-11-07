@@ -17,6 +17,7 @@ caps.latest.revision: 17
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # SQL Server Agent, Statistics Object
   The SQL Server Agent **Statistics** performance object contains performance counters that report information about SQL Server Agent.  

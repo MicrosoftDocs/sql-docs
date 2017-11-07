@@ -15,7 +15,7 @@ ms.assetid: 24863a8a-9017-415a-a97b-fbac76ed0675
 caps.latest.revision: 25
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Lesson 13: Deploy

@@ -14,7 +14,7 @@ ms.assetid: e5e6686c-1360-480e-8c0d-8a56204fbed9
 caps.latest.revision: 14
 author: "Minewiskan"
 ms.author: "owend"
-manager: "jhubbard"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Prediction Queries (Data Mining)

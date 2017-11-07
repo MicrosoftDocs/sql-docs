@@ -14,6 +14,7 @@ caps.latest.revision: 9
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Create a tabbed mobile report by using drillthrough
 Learn how to create a [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] mobile report that looks and acts like a tabbed report by using drillthrough and parameters.

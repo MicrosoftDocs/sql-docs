@@ -22,6 +22,7 @@ caps.latest.revision: 22
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # ConfigurationSetting Method - GenerateDatabaseUpgradeScript
   Generates a script that can be used to upgrade the report server database to the [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] schema.  

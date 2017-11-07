@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "CREATE FULLTEXT INDEX statement"
 ms.assetid: 8b80390f-5f8b-4e66-9bcc-cabd653c19fd
 caps.latest.revision: 110
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "Active"
 ---
 # CREATE FULLTEXT INDEX (Transact-SQL)

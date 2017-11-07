@@ -23,7 +23,8 @@ ms.assetid: 639db733-a082-4f57-868d-a3bcd5e7a4f6
 caps.latest.revision: 12
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # LastUpdate Element (ASSL)
   Contains a read-only timestamp that indicates the last time that the associated [Database](../../../analysis-services/scripting/objects/database-element-assl.md) or any of the major objects that the database contains were altered.  

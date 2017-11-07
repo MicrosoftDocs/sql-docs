@@ -21,7 +21,8 @@ ms.assetid: 58d94d10-e11e-4368-b3b8-dff23e1947cd
 caps.latest.revision: 21
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # HoldoutMaxCases Element
   Specifies the maximum number of cases in the data source to be used for the holdout partition that contains the test set of a [MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md) element. The remaining cases in the data set are used for training. A value of 0 indicates that there is no limit to the number of cases that can be held out as the test set.  

@@ -18,6 +18,7 @@ caps.latest.revision: 14
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Azure Blob Upload Task
 The **Azure Blob Upload Task** enables an SSIS package to upload files to an Azure blob storage.

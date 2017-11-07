@@ -20,9 +20,10 @@ helpviewer_keywords:
   - "IHpublishercolumnconstraints system table"
 ms.assetid: d7a41da6-e067-430a-8da2-3f6745b8a4f3
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Inactive"
 ---
 # IHpublishercolumnconstraints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

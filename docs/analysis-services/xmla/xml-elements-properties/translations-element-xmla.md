@@ -25,9 +25,10 @@ helpviewer_keywords:
   - "Translations element"
 ms.assetid: 86fd2119-9bea-4306-829e-cc439da05566
 caps.latest.revision: 11
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Translations Element (XMLA)
   Contains a collection of [Translation](../../../analysis-services/xmla/xml-elements-properties/translation-element-xmla.md) elements used to identify the member keys of the attribute member represented by the parent [Attribute](../../../analysis-services/xmla/xml-elements-properties/attribute-element-xmla.md) element.  

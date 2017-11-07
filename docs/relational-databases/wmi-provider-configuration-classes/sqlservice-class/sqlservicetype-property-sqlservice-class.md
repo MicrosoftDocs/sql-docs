@@ -21,6 +21,7 @@ caps.latest.revision: 43
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # SqlServiceType Property (SqlService Class)
   Gets the type of the managed service.  

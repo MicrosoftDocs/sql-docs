@@ -19,6 +19,7 @@ caps.latest.revision: 15
 author: "smartysanthosh"
 ms.author: "nagavo"
 manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Notifications (Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] can be configured to send an email notification when business rule validation fails, the status of a model version changes, or the status of a changeset changes.  

@@ -25,7 +25,8 @@ ms.assetid: c96e37cf-b7ff-4296-a043-f9a5a5c444ce
 caps.latest.revision: 28
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Calculation Element (ASSL)
   Asssociates a calculation with a [Perspective](../../../analysis-services/scripting/objects/perspective-element-assl.md) element.  

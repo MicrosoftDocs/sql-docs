@@ -21,6 +21,7 @@ caps.latest.revision: 31
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # ServerNetworkProtocolIPAddress Class
   The [ServerNetworkProtocolIPAddress Class](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolipaddress-class/servernetworkprotocolipaddress-class.md) represents an IP address supported by the server network protocol.  

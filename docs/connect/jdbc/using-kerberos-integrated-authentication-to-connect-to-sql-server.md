@@ -14,6 +14,7 @@ caps.latest.revision: 30
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Using Kerberos Integrated Authentication to Connect to SQL Server
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

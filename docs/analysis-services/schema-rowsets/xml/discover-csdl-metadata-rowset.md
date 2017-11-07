@@ -16,7 +16,7 @@ ms.assetid: a2d3cffd-a2c4-411c-b244-9e41ebe30939
 caps.latest.revision: 22
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # DISCOVER_CSDL_METADATA Rowset

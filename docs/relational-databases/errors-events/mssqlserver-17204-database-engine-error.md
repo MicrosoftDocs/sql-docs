@@ -13,9 +13,10 @@ helpviewer_keywords:
   - "17204 (Database Engine error)"
 ms.assetid: 40db66f9-dd5e-478c-891e-a06d363a2552
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Inactive"
 ---
 # MSSQLSERVER_17204
   

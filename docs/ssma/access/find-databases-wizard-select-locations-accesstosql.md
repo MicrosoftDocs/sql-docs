@@ -19,6 +19,7 @@ caps.latest.revision: 13
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Find Databases Wizard (Select Locations) (AccessToSQL)
 On the Select Locations page of the Find Databases Wizard, you enter the search parameters for finding Access databases.  

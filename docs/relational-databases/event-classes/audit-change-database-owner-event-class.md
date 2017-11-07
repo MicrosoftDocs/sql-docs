@@ -16,6 +16,7 @@ caps.latest.revision: 30
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Audit Change Database Owner Event Class
   The **Audit Change Database Owner** event class occurs when you use the ALTER AUTHORIZATION statement to change the owner of a database, and the permissions required to do that are checked.  

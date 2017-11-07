@@ -19,6 +19,7 @@ caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Installing and Configuring the ODBC Software
 > [!NOTE]  

@@ -27,7 +27,8 @@ ms.assetid: 63818123-acbb-4220-9d60-1aa20a7326a1
 caps.latest.revision: 28
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # EmptyResult Data Type (XMLA)
   Defines a derived data type that represents a [root](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md) element that does not return data from a [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) or [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) method call.  

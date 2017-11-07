@@ -13,9 +13,10 @@ helpviewer_keywords:
   - "20572 (Database Engine error)"
 ms.assetid: 9d91d0fc-e8b1-4ba6-b97c-725864578a7b
 caps.latest.revision: 12
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Inactive"
 ---
 # MSSQLSERVER_20572
   

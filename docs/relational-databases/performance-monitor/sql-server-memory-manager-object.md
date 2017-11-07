@@ -17,6 +17,7 @@ caps.latest.revision: 29
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # SQL Server, Memory Manager Object
   The **Memory Manager** object in Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides counters to monitor overall server memory usage. Monitoring overall server memory usage to gauge user activity and resource usage can help you to identify performance bottlenecks. Monitoring the memory used by an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can help determine:  

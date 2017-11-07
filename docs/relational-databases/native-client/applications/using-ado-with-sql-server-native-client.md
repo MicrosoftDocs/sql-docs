@@ -19,6 +19,7 @@ caps.latest.revision: 22
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Using ADO with SQL Server Native Client
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]

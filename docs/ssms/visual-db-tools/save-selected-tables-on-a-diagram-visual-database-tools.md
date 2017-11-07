@@ -16,6 +16,7 @@ caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Save Selected Tables on a Diagram (Visual Database Tools)
 You can save a specific table or a set of tables if you do not want to save all the changes you made in a database diagram.  

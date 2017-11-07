@@ -25,9 +25,10 @@ helpviewer_keywords:
   - "TableNotifications element"
 ms.assetid: 650f307d-1f11-47ce-9d0e-19cf3b1835b7
 caps.latest.revision: 11
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # TableNotifications Element (XMLA)
   Contains a collection of [TableNotification](../../../analysis-services/xmla/xml-elements-properties/tablenotification-element-xmla.md) elements used by the [NotifyTableChange](../../../analysis-services/xmla/xml-elements-commands/notifytablechange-element-xmla.md) command.  

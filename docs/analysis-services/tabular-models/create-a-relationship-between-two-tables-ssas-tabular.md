@@ -17,7 +17,8 @@ ms.assetid: 052d77b7-7922-408a-a200-786016ee4d15
 caps.latest.revision: 16
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Create a Relationship Between Two Tables (SSAS Tabular)
   If the tables in your data source do not have existing relationships, or if you add new tables, you can use the tools in the model designer to create new relationships. For information about how relationships are used in tabular models, see [Relationships &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/relationships-ssas-tabular.md).  

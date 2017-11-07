@@ -1,4 +1,4 @@
-﻿---
+---
 title: "SQL Server Connector Maintenance &amp; Troubleshooting | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/05/2017"
@@ -13,9 +13,10 @@ helpviewer_keywords:
   - "SQL Server Connector, appendix"
 ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
 caps.latest.revision: 21
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Inactive"
 ---
 # SQL Server Connector Maintenance &amp; Troubleshooting
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

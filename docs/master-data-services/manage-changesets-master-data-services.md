@@ -15,6 +15,7 @@ caps.latest.revision: 11
 author: "smartysanthosh"
 ms.author: "nagavo"
 manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Manage Changesets (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] you can manage all changes by model and version.  

@@ -17,6 +17,7 @@ caps.latest.revision: 10
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Replication Agents
   Replication uses many stand-alone programs, which are named "agents," to perform the tasks associated with tracking changes and distributing data. This section of the documentation contains parameter references for the following replication agents.  

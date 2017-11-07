@@ -14,9 +14,10 @@ helpviewer_keywords:
   - "intellectual property"
 ms.assetid: 174a646a-d65c-4074-8249-d783e91be2dd
 caps.latest.revision: 3
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Inactive"
 ---
 # Protecting Your SQL Server Intellectual Property
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

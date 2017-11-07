@@ -17,6 +17,7 @@ caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Copy Queries (Visual Database Tools)
 You can copy the body of a query into a new query to use as a starting point.  

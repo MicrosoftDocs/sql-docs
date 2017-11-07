@@ -17,7 +17,7 @@ ms.assetid: 579ca818-f33d-4060-906d-c8bfee93bf99
 caps.latest.revision: 13
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Define Cube Attribute Properties

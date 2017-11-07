@@ -13,9 +13,10 @@ helpviewer_keywords:
   - "926 (Database Engine error)"
 ms.assetid: 57e01668-883b-4be4-84a8-a111caaf0486
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Inactive"
 ---
 # MSSQLSERVER_926
   

@@ -25,7 +25,8 @@ ms.assetid: 521e1286-097e-494f-b036-61047096e87e
 caps.latest.revision: 38
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Edition Element (ASSL)
   Contains the read-only edition of the instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] represented by the [Server](../../../analysis-services/scripting/objects/server-element-assl.md) element.  

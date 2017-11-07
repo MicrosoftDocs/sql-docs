@@ -19,9 +19,10 @@ helpviewer_keywords:
   - "dynamic SQL"
 ms.assetid: a8d68d72-0f4d-4ecb-ae86-1235b962f646
 caps.latest.revision: 64
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Active"
 ---
 # sp_executesql (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]

@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Options (SQL Server Object Explorer - Commands)
 When you right-click a table or view in Object Explorer, the following two options for displaying rows in the table are presented:  

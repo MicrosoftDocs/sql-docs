@@ -25,9 +25,10 @@ helpviewer_keywords:
   - "CommitTransaction command"
 ms.assetid: 1cd814dc-a0be-4305-b44d-faf15e843f7d
 caps.latest.revision: 14
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # CommitTransaction Element (XMLA)
   Commits a transaction on the current session with a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance.  

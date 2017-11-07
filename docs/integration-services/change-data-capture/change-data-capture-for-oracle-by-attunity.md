@@ -14,6 +14,7 @@ caps.latest.revision: 2
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Change Data Capture for Oracle by Attunity
 The Change Data Capture for Oracle by Attunity download includes the following 2 components.

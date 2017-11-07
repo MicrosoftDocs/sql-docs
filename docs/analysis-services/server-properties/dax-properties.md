@@ -13,7 +13,8 @@ ms.assetid: aa928dc5-d00d-4f8a-80b9-7e6973d2196c
 caps.latest.revision: 6
 author: "HeidiSteen"
 ms.author: "heidist"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # DAX Properties
    The DAX section of msmdsrv.ini contains settings used to control certain query behaviors in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], such as the upper limit on the number of rows returned in a DAX query result set. 

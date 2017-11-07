@@ -13,9 +13,10 @@ helpviewer_keywords:
   - "10787 (Database Engine error)"
 ms.assetid: fcc78e5f-e2cf-47df-8c3e-c169367f893b
 caps.latest.revision: 6
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Inactive"
 ---
 # MSSQLSERVER_10787
   

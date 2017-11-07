@@ -19,6 +19,7 @@ caps.latest.revision: 16
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # getObject Method (java.lang.String, java.util.Map)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

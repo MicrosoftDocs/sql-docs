@@ -20,9 +20,10 @@ helpviewer_keywords:
   - "sys.synonyms catalog view"
 ms.assetid: d6e88ca6-6e3d-4f56-bd3e-d85e26be5499
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Inactive"
 ---
 # sys.synonyms (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]

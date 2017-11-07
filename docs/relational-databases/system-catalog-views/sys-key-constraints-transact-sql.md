@@ -20,9 +20,10 @@ helpviewer_keywords:
   - "sys.key_constraints catalog view"
 ms.assetid: 0f782d2f-7126-46ab-85b7-bcba44862231
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Inactive"
 ---
 # sys.key_constraints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]

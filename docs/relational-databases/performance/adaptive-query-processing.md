@@ -14,6 +14,7 @@ ms.assetid:
 author: "joesackmsft"
 ms.author: "josack;monicar"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 
 # Adaptive query processing in SQL databases

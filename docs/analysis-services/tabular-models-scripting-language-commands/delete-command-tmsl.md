@@ -14,7 +14,8 @@ ms.assetid: 05d3fb14-ea03-4596-ac2e-9ae5bab27b4d
 caps.latest.revision: 9
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Delete command (TMSL)
 

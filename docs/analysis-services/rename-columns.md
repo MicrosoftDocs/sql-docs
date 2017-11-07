@@ -15,7 +15,7 @@ ms.assetid: 5fc8ba1a-2b30-4775-9b3b-c09dee711b3e
 caps.latest.revision: 22
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 robots: noindex,nofollow
 ms.workload: "Inactive"
 ---

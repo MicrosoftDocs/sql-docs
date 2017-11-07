@@ -15,7 +15,8 @@ ms.assetid: a59d3448-8619-4044-923b-8effba926dfa
 caps.latest.revision: 16
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Properties (SSAS Tabular)
   Tabular model projects in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] have various properties that define behaviors for the project, model, reporting, and deployment. Property settings are stored in XML format in the Model.bim file, however, all of the properties described in this section can be configured in the **Properties** windows in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  

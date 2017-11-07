@@ -15,7 +15,7 @@ ms.assetid: 26e01dc7-fa49-4b1f-99eb-7799d1b4dcd2
 caps.latest.revision: 9
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Partitions in Multidimensional Models

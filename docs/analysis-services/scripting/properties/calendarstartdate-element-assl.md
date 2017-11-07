@@ -25,7 +25,8 @@ ms.assetid: f6204107-9123-41f0-acbd-52134fe36e37
 caps.latest.revision: 32
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # CalendarStartDate Element (ASSL)
   Defines the start date of the calendar period for the [TimeBinding](../../../analysis-services/scripting/data-type/timebinding-data-type-assl.md) element.  

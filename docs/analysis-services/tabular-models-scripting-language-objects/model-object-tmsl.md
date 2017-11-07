@@ -14,7 +14,8 @@ ms.assetid: 9382d0d6-2d4b-49ad-a0eb-35970f0f3afb
 caps.latest.revision: 7
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Model object (TMSL)
 

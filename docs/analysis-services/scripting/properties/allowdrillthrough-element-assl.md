@@ -25,7 +25,8 @@ ms.assetid: 53c9e4a3-a376-447d-a13f-80d845cc9789
 caps.latest.revision: 51
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # AllowDrillThrough Element (ASSL)
   Determines whether drillthrough is permitted on the parent element.  

@@ -8,6 +8,7 @@ ms.technology:
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Connect to on-premises data sources with Windows Authentication
 This article describes how to configure the SSIS Catalog on Azure SQL Database to run packages that use Windows Authentication to connect to on-premises data sources.

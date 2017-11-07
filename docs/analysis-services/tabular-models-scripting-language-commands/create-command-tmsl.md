@@ -14,7 +14,8 @@ ms.assetid: e3024f89-ebfa-47e4-9893-708f379fd9b8
 caps.latest.revision: 11
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Create command (TMSL)
 

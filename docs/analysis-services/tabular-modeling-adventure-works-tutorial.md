@@ -20,7 +20,8 @@ ms.assetid: 140d0b43-9455-4907-9827-16564a904268
 caps.latest.revision: 40
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Active"
 ---
 # Tabular Modeling (Adventure Works Tutorial)
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]

@@ -18,6 +18,7 @@ caps.latest.revision: 28
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Create a Subscription for a Non-SQL Server Subscriber
   This topic describes how to create a subscription for a non-SQL Server Subscriber in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. Transactional and snapshot replication support publishing data to non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers. For information about supported Subscriber platforms, see [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md).  

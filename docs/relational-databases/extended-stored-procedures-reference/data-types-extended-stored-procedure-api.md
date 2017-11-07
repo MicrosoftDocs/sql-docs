@@ -17,6 +17,7 @@ caps.latest.revision: 29
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Data Types (Extended Stored Procedure API)
     

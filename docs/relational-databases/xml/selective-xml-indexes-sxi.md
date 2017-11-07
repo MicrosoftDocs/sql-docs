@@ -14,6 +14,7 @@ caps.latest.revision: 9
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Selective XML Indexes (SXI)
   Selective XML indexes are another type of XML index that is available to you in addition to ordinary XML indexes. The goals of the selective XML index feature are the following:  

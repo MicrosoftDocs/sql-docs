@@ -21,6 +21,7 @@ caps.latest.revision: 30
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # PropertyStrVal Property (ServerNetworkProtocolProperty Class)
   Gets the string value of the referenced property.  

@@ -15,6 +15,7 @@ caps.latest.revision: 16
 author: "smartysanthosh"
 ms.author: "nagavo"
 manager: "craigg"
+ms.workload: "On Demand"
 ---
 # Deploy a Model Deployment Package by Using MDSModelDeploy
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], use the MDSModelDeploy tool to deploy a package that contains either:  

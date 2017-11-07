@@ -23,7 +23,7 @@ ms.assetid: b321ad9e-f034-4a7b-b0b7-8ba5fb162e7e
 caps.latest.revision: 13
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # AggregationInstanceCubeDimension Data Type (ASSL)

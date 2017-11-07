@@ -25,7 +25,7 @@ ms.assetid: a61f58c5-62d6-44e8-a02f-db2b17d1f256
 caps.latest.revision: 37
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # InheritedBinding Data Type (ASSL)

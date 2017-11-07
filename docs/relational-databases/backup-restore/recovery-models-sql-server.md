@@ -32,6 +32,7 @@ caps.latest.revision: 70
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # Recovery Models (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backup and restore operations occur within the context of the recovery model of the database. Recovery models are designed to control transaction log maintenance. A *recovery model* is a database property that controls how transactions are logged, whether the transaction log requires (and allows) backing up, and what kinds of restore operations are available. Three recovery models exist: simple, full, and bulk-logged. Typically, a database uses the full recovery model or simple recovery model. A database can be switched to another recovery model at any time.  

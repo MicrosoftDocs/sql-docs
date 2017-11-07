@@ -14,6 +14,7 @@ caps.latest.revision: 6
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Manage Tab Completion (SQL Server PowerShell)
   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell snap-ins introduce three variables (**$SqlServerMaximumTabCompletion**, **$SqlServerMaximumChildItems**, and **$SqlServerIncludeSystemObjects**) to control Windows PowerShell tab completion. Tab completion reduces the amount of typing you must do by returning tables of items whose names start with the string you are typing.  

@@ -25,9 +25,10 @@ helpviewer_keywords:
   - "Original element"
 ms.assetid: c98a3700-ac19-4341-85d9-5afedf662601
 caps.latest.revision: 11
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Original Element (XMLA)
   Contains the original file system storage location used by a [Folder](../../../analysis-services/xmla/xml-elements-properties/folder-element-xmla.md) element.  

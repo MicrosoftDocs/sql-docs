@@ -22,6 +22,7 @@ caps.latest.revision: 21
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # ConfigurationSetting Method - InitializeReportServer
   Initializes the specified report service instance.  

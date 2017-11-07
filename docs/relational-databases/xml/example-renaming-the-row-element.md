@@ -16,6 +16,7 @@ caps.latest.revision: 9
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Example: Renaming the &lt;row&gt; Element
   For each row in the result set, the RAW mode generates an element `<row>`. You can optionally specify another name for this element by specifying an optional argument to the RAW mode, as shown in this query. The query returns a <`ProductModel`> element for each row in the rowset.  

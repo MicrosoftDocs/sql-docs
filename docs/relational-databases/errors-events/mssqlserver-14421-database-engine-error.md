@@ -13,9 +13,10 @@ helpviewer_keywords:
   - "14421 (Database Engine error)"
 ms.assetid: 03e76d4a-d463-4673-8843-08e4ecaefe27
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Inactive"
 ---
 # MSSQLSERVER_14421
   

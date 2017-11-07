@@ -17,7 +17,8 @@ ms.assetid: 67dde3fe-ba43-41f3-b56c-c656029ee93f
 caps.latest.revision: 17
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Deploy From SQL Server Data Tools
   Use the tasks in this topic to deploy a tabular model solution by using the Deploy command in SSDT.  

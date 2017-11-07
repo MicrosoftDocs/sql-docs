@@ -14,6 +14,7 @@ caps.latest.revision: 9
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Create New Policy or Open Policy Dialog Box, Description Page
   Use this dialog box to add a description and additional information to a Policy-Based Management policy.  

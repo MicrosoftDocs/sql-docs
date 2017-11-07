@@ -25,7 +25,8 @@ ms.assetid: ce613a21-6890-4796-aac5-b029eca46255
 caps.latest.revision: 30
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # FiscalYearName Element (ASSL)
   Defines the naming convention for the name of the fiscal year for a [TimeBinding](../../../analysis-services/scripting/data-type/timebinding-data-type-assl.md) element.  

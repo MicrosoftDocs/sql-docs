@@ -25,7 +25,8 @@ ms.assetid: 2c8c4107-c641-4724-bfa5-0c47e0ec8888
 caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Slice Element (ASSL)
   Contains a Multidimensional Expressions (MDX) expression defining the slice contained in a partition.  

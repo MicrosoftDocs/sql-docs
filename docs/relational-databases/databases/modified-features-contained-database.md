@@ -16,6 +16,7 @@ caps.latest.revision: 27
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Modified Features (Contained Database)
   The following features have been modified to be supported by a partially contained database. Features are usually modified so they do not cross the database boundary.  

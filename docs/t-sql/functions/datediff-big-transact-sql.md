@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "time [SQL Server], functions"
 ms.assetid: 19ac1693-3cfa-400d-bf83-20a9cb46599a
 caps.latest.revision: 7
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 ms.workload: "On Demand"
 ---
 # DATEDIFF_BIG (Transact-SQL)

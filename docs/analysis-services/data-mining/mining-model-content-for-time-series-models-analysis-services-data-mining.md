@@ -18,7 +18,7 @@ ms.assetid: bb225387-fbbf-4189-b172-9daa2495fa9c
 caps.latest.revision: 26
 author: "Minewiskan"
 ms.author: "owend"
-manager: "jhubbard"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Mining Model Content for Time Series Models (Analysis Services - Data Mining)

@@ -25,7 +25,8 @@ ms.assetid: 29818404-ad45-403f-8fd9-3e3246d301ad
 caps.latest.revision: 31
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # ReportingFirstWeekOfMonth Element (ASSL)
   Defines the first week of the reporting month for the [TimeBinding](../../../analysis-services/scripting/data-type/timebinding-data-type-assl.md) element.  

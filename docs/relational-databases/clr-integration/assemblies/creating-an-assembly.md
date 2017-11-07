@@ -21,6 +21,7 @@ caps.latest.revision: 27
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Creating an Assembly
   Managed database objects, such as stored procedures or triggers, are compiled and then deployed in units called an assembly. Managed DLL assemblies must be registered in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] before the functionality the assembly provides can be used. To register an assembly in a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database, use the CREATE ASSEMBLY statement. This topic discusses how to register an assembly in a database using the CREATE ASSEMBLY statement, and how to specify the security settings for the assembly.  

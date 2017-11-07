@@ -16,6 +16,7 @@ caps.latest.revision: 6
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Connect to Microsoft Azure Storage (Restore)
   The dialog box allows you to specify the connection to Windows Azure storage account information in order to retrieve the files storage in the Windows Azure storage account. After specifying the required information, click **Connect** to establish the connection to Windows Azure storage.  

@@ -25,7 +25,8 @@ ms.assetid: 1032558c-7546-4ca7-888d-8139df23cb62
 caps.latest.revision: 39
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Source Element (Binding) (ASSL)
   Identifies the source of data to which the parent element is bound.  

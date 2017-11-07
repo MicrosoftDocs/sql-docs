@@ -18,9 +18,10 @@ helpviewer_keywords:
   - "sp_updatestats"
 ms.assetid: 01184651-6e61-45d9-a502-366fecca0ee4
 caps.latest.revision: 45
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Active"
 ---
 # sp_updatestats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

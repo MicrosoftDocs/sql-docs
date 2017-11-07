@@ -18,6 +18,7 @@ caps.latest.revision: 15
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Data synchronization state of availability database is not healthy
     

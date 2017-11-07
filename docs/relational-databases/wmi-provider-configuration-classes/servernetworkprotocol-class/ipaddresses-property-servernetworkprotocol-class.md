@@ -21,6 +21,7 @@ caps.latest.revision: 31
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # IpAddresses Property (ServerNetworkProtocol Class)
   Gets the IP addresses associated with the server network protocol.  

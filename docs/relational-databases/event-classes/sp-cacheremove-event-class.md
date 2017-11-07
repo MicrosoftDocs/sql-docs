@@ -16,6 +16,7 @@ caps.latest.revision: 36
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # SP:CacheRemove Event Class
   The SP:CacheRemove event class indicates that the stored procedure has been removed from the plan cache.  

@@ -18,6 +18,7 @@ caps.latest.revision: 39
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Image Device Information Settings
   The following table lists the device information settings for rendering in IMAGE format.  

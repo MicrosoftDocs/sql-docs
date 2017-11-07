@@ -21,7 +21,7 @@ ms.assetid: c731c06a-7382-4e50-ba0e-d8cee3ab4f28
 caps.latest.revision: 14
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # MDSCHEMA_MEASUREGROUP_DIMENSIONS Rowset

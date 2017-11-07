@@ -16,9 +16,10 @@ helpviewer_keywords:
   - "database audit [SQL Server]"
 ms.assetid: 26ee85de-6e97-4318-b526-900924d96e62
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "On Demand"
 ---
 # Create a Server Audit and Database Audit Specification
   This topic describes how to create a server audit and database audit specification in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../includes/tsql-md.md)].  

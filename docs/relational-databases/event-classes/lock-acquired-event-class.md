@@ -16,6 +16,7 @@ caps.latest.revision: 37
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Lock:Acquired Event Class
   The Lock:Acquiredevent class indicates that acquisition of a lock on a resource, such as a data page, has been achieved.  

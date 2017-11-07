@@ -21,6 +21,7 @@ caps.latest.revision: 74
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # Uninstall an Existing Instance of SQL Server (Setup)
 

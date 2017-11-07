@@ -20,6 +20,7 @@ caps.latest.revision: 59
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Initialization and Authorization Properties
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]

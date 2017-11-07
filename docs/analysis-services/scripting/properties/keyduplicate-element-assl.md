@@ -25,7 +25,8 @@ ms.assetid: d7000b8b-e81f-4401-8738-00c2e0f73a59
 caps.latest.revision: 33
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # KeyDuplicate Element (ASSL)
   Determines how [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] handles a duplicate key error if it encounters one during processing.  

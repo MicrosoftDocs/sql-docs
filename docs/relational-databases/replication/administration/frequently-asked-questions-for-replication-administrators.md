@@ -17,7 +17,6 @@ caps.latest.revision: 59
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "On Demand"
 ---
 # Frequently Asked Questions for Replication Administrators
   The following questions and answers provide guidance on a variety of tasks faced by administrators of replicated databases.  

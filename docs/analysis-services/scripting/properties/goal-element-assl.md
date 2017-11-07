@@ -25,8 +25,7 @@ ms.assetid: 75fa5b57-418e-43ad-8704-764e4f0a40cf
 caps.latest.revision: 32
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # Goal Element (ASSL)
   Identifies the desired goal in a [Kpi](../../../analysis-services/scripting/objects/kpi-element-assl.md) element.  

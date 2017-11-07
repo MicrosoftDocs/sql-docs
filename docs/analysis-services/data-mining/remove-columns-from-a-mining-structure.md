@@ -19,7 +19,7 @@ ms.assetid: 41073ffe-9351-416b-9f0c-62634bc213f9
 caps.latest.revision: 27
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # Remove Columns from a Mining Structure

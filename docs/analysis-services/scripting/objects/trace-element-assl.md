@@ -25,8 +25,7 @@ ms.assetid: dda9136a-a9c1-44a1-b8d3-b0ec4dc65c87
 caps.latest.revision: 36
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # Trace Element (ASSL)
   Defines a trace that can be queried.  

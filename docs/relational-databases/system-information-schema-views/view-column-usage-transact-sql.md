@@ -19,10 +19,9 @@ helpviewer_keywords:
   - "VIEW_COLUMN_USAGE view"
 ms.assetid: fc0b3608-a7e8-4532-8215-32235d6670f1
 caps.latest.revision: 38
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # VIEW_COLUMN_USAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]

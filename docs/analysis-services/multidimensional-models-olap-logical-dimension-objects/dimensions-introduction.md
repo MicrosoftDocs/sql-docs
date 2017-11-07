@@ -22,7 +22,7 @@ ms.assetid: ab170fdd-4144-42db-9497-690b9189fc25
 caps.latest.revision: 41
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "On Demand"
 ---
 # Dimensions - Introduction

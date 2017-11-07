@@ -19,7 +19,6 @@ caps.latest.revision: 6
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Remove Tables from Queries (Visual Database Tools)
 You can remove a table — or any table-valued object — from the query.  

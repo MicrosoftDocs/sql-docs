@@ -19,7 +19,6 @@ caps.latest.revision: 62
 ms.author: "mikeray"
 manager: "jhubbard"
 robots: noindex,nofollow
-ms.workload: "On Demand"
 ---
 # Installation Wizard Help
 

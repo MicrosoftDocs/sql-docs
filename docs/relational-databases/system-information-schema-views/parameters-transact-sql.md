@@ -19,10 +19,9 @@ helpviewer_keywords:
   - "INFORMATION_SCHEMA.PARAMETERS view"
 ms.assetid: 06ded0ca-7d21-4400-864a-b801e855b257
 caps.latest.revision: 35
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # PARAMETERS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]

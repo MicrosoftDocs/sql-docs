@@ -23,10 +23,9 @@ helpviewer_keywords:
   - "table types [SQL Server]"
 ms.assetid: f8d6163a-2474-410c-a794-997639f31b3b
 caps.latest.revision: 62
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Active"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # sys.objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]

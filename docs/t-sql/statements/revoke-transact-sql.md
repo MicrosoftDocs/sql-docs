@@ -29,9 +29,9 @@ helpviewer_keywords:
   - "dropping permissions"
 ms.assetid: 9d31d3e7-0883-45cd-bf0e-f0361bbb0956
 caps.latest.revision: 41
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "On Demand"
 ---
 # REVOKE (Transact-SQL)

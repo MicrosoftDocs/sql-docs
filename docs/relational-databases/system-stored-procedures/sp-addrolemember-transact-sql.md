@@ -18,10 +18,9 @@ helpviewer_keywords:
   - "sp_addrolemember"
 ms.assetid: a583c087-bdb3-46d2-b9e5-3921b3e6d10b
 caps.latest.revision: 59
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Active"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # sp_addrolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]

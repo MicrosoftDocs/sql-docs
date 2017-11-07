@@ -16,7 +16,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # SET DELETED Command
 Specifies whether records marked for deletion are processed and whether they are available for use in other commands.  

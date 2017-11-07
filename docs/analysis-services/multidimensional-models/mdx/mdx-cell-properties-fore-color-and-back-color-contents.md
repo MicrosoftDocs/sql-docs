@@ -23,7 +23,7 @@ ms.assetid: ff8f40cb-2ac4-4fc2-9761-7f1b14c17c8c
 caps.latest.revision: 25
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # MDX Cell Properties - FORE_COLOR and BACK_COLOR Contents

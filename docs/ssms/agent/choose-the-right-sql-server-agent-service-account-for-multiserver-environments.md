@@ -17,7 +17,6 @@ caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Choose the Right SQL Server Agent Service Account for Multiserver Environments
 The Windows account you choose for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent service can affect the behavior of a multiserver environment, as follows:  

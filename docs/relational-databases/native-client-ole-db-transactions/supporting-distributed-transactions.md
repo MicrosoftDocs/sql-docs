@@ -22,7 +22,6 @@ caps.latest.revision: 28
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Supporting Distributed Transactions
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]

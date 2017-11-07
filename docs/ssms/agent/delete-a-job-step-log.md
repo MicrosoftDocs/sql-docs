@@ -19,7 +19,6 @@ caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Delete a Job Step Log
 This topic describes how to delete a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent job step log.  

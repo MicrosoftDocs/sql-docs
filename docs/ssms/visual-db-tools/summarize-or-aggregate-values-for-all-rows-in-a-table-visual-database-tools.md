@@ -17,7 +17,6 @@ caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Summarize or Aggregate Values for All Rows in a Table (Visual Database Tools)
 ## Aggregate function

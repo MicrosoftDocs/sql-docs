@@ -16,7 +16,6 @@ caps.latest.revision: 31
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # SQL:BatchCompleted Event Class
   The SQL:BatchCompleted event class indicates that the [!INCLUDE[tsql](../../includes/tsql-md.md)] batch has completed.  

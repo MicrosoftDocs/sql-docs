@@ -17,7 +17,6 @@ caps.latest.revision: 29
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # SQUARE (SSIS Expression)
   Returns the square of a numeric expression.  

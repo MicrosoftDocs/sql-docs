@@ -13,7 +13,6 @@ ms.topic: "article"
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
-ms.workload: "Inactive"
 ---
 # Activate the report server and Power View integration features in SharePoint
 

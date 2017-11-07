@@ -14,7 +14,6 @@ caps.latest.revision: 10
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "On Demand"
 ---
 # Run Windows PowerShell Steps in SQL Server Agent
   Use SQL Server Agent to run SQL Server PowerShell scripts at schedule times.  

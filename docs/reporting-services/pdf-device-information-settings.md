@@ -18,7 +18,6 @@ caps.latest.revision: 41
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
-ms.workload: "Inactive"
 ---
 # PDF Device Information Settings
   The following table lists the device information settings for rendering reports in PDF format.  

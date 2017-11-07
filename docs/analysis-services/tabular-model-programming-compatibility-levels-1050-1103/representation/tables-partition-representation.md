@@ -16,8 +16,7 @@ ms.assetid: b606cd63-755c-4ac0-b19b-95b5363afbdf
 caps.latest.revision: 8
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # Tables - Partition Representation
   For operational purposes, a table can be divided in different subsets of rows that when combined together form the table; each of those subsets is a partition of the table.  

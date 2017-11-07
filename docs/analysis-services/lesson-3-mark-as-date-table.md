@@ -15,7 +15,7 @@ ms.assetid: c32cc336-b7d8-4122-9d62-4936344d2315
 caps.latest.revision: 18
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "On Demand"
 ---
 # Lesson 3: Mark as Date Table

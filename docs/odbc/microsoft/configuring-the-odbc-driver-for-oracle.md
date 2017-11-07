@@ -17,7 +17,6 @@ caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
-ms.workload: "On Demand"
 ---
 # Configuring the ODBC Driver for Oracle
 > [!IMPORTANT]  

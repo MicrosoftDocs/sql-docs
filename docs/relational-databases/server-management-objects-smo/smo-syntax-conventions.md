@@ -19,7 +19,6 @@ caps.latest.revision: 30
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # SMO Syntax Conventions
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) typographical conventions are based on those used in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio .NET reference materials.  

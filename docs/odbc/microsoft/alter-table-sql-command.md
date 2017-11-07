@@ -16,7 +16,6 @@ caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # ALTER TABLE - SQL Command
 Programmatically modifies the structure of a table.  

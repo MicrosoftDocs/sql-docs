@@ -22,7 +22,6 @@ helpviewer_keywords:
 author: "josack"
 ms.author: "josack"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # sys.dm_exec_query_optimizer_memory_gateways (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

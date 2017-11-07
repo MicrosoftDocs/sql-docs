@@ -18,7 +18,6 @@ caps.latest.revision: 23
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Optimize Merge Replication Performance with Conditional Delete Tracking
     

@@ -14,7 +14,6 @@ caps.latest.revision: 18
 author: "smartysanthosh"
 ms.author: "nagavo"
 manager: "erikre"
-ms.workload: "Inactive"
 ---
 # Deprecated Master Data Services Features
   This topic describes the deprecated [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] features that are still available in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. These features are scheduled to be removed in a future release of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Deprecated features should not be used in new applications.  

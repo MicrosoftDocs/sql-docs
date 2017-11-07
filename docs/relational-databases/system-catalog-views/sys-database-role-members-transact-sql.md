@@ -20,10 +20,9 @@ helpviewer_keywords:
   - "sys.database_role_members catalog view"
 ms.assetid: ed1b019d-ca48-4db3-85df-cf6d2db591cf
 caps.latest.revision: 26
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "On Demand"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # sys.database_role_members (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]

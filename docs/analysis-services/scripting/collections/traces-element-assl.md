@@ -25,7 +25,7 @@ ms.assetid: 7ca2c7d1-fda3-4c76-9e32-fd9b5dda56e9
 caps.latest.revision: 33
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # Traces Element (ASSL)

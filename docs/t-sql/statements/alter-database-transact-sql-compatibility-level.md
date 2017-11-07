@@ -22,9 +22,9 @@ helpviewer_keywords:
   - "100 compatibility level"
 ms.assetid: ca5fd220-d5ea-4182-8950-55d4101a86f6
 caps.latest.revision: 89
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "Active"
 ---
 # ALTER DATABASE (Transact-SQL) Compatibility Level

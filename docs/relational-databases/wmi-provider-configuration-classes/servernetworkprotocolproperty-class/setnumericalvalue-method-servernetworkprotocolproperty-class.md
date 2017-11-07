@@ -21,7 +21,6 @@ caps.latest.revision: 31
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # SetNumericalValue Method (ServerNetworkProtocolProperty Class)
   Sets the numeric value of the referenced property.  

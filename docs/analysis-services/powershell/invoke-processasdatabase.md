@@ -13,7 +13,7 @@ ms.assetid: 66d5d154-88ce-4c2e-b1ef-e2d2f6fb1c44
 caps.latest.revision: 11
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # Invoke-ProcessASDatabase

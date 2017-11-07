@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "cryptography [SQL Server], certificates"
 ms.assetid: b4c6bced-4473-4bae-85b9-56deced495f9
 caps.latest.revision: 30
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # SIGNBYCERT (Transact-SQL)

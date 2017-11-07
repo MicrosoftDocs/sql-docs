@@ -23,7 +23,7 @@ ms.assetid: 3250970a-a67d-486c-b205-038f1bd1770f
 caps.latest.revision: 11
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # AggregationInstanceMeasure Data Type (ASSL)

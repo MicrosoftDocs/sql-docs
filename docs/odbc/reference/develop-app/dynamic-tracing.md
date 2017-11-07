@@ -17,7 +17,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Dynamic Tracing
 Tracing can be enabled or disabled at any point in an application run. This allows an application to trace any number of function calls.  

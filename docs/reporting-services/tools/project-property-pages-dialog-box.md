@@ -19,7 +19,6 @@ caps.latest.revision: 35
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
-ms.workload: "Inactive"
 ---
 
 # Project Property Pages Dialog Box

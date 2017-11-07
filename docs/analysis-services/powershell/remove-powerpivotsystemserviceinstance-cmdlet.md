@@ -13,7 +13,7 @@ ms.assetid: bc46094a-5584-47ba-8883-77dc79373a5d
 caps.latest.revision: 10
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # Remove-PowerPivotSystemServiceInstance cmdlet

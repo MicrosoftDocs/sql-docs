@@ -20,7 +20,6 @@ caps.latest.revision: 42
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
-ms.workload: "Active"
 ---
 # SQL Server 2016 Express LocalDB
 

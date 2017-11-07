@@ -25,10 +25,9 @@ helpviewer_keywords:
   - "Queries element"
 ms.assetid: e199412a-23f1-4d11-9e72-11f184ad9602
 caps.latest.revision: 11
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+author: "jeannt"
+ms.author: "jeannt"
+manager: "erikre"
 ---
 # Queries Element (XMLA)
   Contains a collection of [Query](../../../analysis-services/xmla/xml-elements-properties/query-element-xmla.md) elements used by the [DesignAggregations](../../../analysis-services/xmla/xml-elements-commands/designaggregations-element-xmla.md) command during usage-based optimization.  

@@ -17,7 +17,6 @@ caps.latest.revision: 17
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # GeometryCollection
   A **GeometryCollection** is a collection of zero or more **geometry** or **geography** instances. A **GeometryCollection** can be empty.  

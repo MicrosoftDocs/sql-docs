@@ -20,7 +20,6 @@ caps.latest.revision: 24
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Deleting Data Using XML Updategrams (SQLXML 4.0)
   An updategram indicates a delete operation when a record instance appears in the **\<before>** block with no corresponding records in the **\<after>** block. In this case, the updategram deletes the record in the **\<before>** block from the database.  

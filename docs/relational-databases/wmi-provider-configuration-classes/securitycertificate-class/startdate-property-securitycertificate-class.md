@@ -21,7 +21,6 @@ caps.latest.revision: 35
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # StartDate Property (SecurityCertificate Class)
   Gets the date when the security certificate starts being in effect.  

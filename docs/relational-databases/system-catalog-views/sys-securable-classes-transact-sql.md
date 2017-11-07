@@ -20,10 +20,9 @@ helpviewer_keywords:
   - "sys.securable_classes catalog view"
 ms.assetid: ae2bf589-17be-4cad-b5d5-05a34173b32d
 caps.latest.revision: 16
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # sys.securable_classes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]

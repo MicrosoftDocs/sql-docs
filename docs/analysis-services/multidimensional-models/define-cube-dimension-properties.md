@@ -18,7 +18,7 @@ ms.assetid: 9314e749-0918-4862-abaf-a21692188122
 caps.latest.revision: 17
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # Define Cube Dimension Properties

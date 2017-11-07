@@ -20,7 +20,6 @@ caps.latest.revision: 28
 author: "smartysanthosh"
 ms.author: "nagavo"
 manager: "craigg"
-ms.workload: "Active"
 ---
 # Master Data Services Overview (MDS)
   This topic describes the key data organization and management features of [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. 

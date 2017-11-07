@@ -18,7 +18,6 @@ caps.latest.revision: 12
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Lesson 3: Validating the Subscription and Measuring Latency
 In this lesson, you will use tracer tokens to verify that changes are being replicated to the Subscriber and to determine latency, the time it takes for a change made at the Publisher to appear to the Subscriber. This lesson requires that you have completed the previous lesson, [Lesson 2: Creating a Subscription to the Transactional Publication](../../relational-databases/replication/lesson-2-creating-a-subscription-to-the-transactional-publication.md).  

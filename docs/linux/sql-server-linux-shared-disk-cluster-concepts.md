@@ -9,7 +9,6 @@ ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 
-ms.workload: "Inactive"
 ---
 
 # Failover Cluster Instances - SQL Server on Linux

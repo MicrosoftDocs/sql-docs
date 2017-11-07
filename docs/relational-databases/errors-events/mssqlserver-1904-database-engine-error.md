@@ -13,10 +13,9 @@ helpviewer_keywords:
   - "1904 (Database Engine error)"
 ms.assetid: 2a35d57d-74e2-45a2-8f67-3f2e51d69712
 caps.latest.revision: 9
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # MSSQLSERVER_1904
   

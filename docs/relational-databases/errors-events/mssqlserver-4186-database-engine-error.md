@@ -13,10 +13,9 @@ helpviewer_keywords:
   - "4186 (Database Engine error)"
 ms.assetid: 1ae88554-f291-45bc-a186-6f41d9cd0fca
 caps.latest.revision: 14
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # MSSQLSERVER_4186
   

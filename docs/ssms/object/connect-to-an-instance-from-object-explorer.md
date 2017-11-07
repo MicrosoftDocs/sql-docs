@@ -14,7 +14,6 @@ caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Connect to a SQL Server or Azure SQL Database
 

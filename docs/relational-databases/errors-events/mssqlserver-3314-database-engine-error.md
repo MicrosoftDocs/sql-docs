@@ -13,10 +13,9 @@ helpviewer_keywords:
   - "3314 (Database Engine error)"
 ms.assetid: f3a5ca6a-b502-4cab-b3b1-4bc753763fa9
 caps.latest.revision: 25
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # MSSQLSERVER_3314
   

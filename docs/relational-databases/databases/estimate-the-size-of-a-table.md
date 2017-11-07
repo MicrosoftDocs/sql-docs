@@ -29,7 +29,6 @@ caps.latest.revision: 30
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "On Demand"
 ---
 # Estimate the Size of a Table
   You can use the following steps to estimate the amount of space required to store data in a table:  

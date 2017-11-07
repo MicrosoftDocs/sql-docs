@@ -19,7 +19,7 @@ ms.assetid: 03cf97a4-1a18-45f3-acb0-35123bd619be
 caps.latest.revision: 31
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # Create Named Sets

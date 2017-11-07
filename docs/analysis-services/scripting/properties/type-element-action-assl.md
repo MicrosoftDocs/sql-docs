@@ -25,8 +25,7 @@ ms.assetid: 534cdf99-1edf-4490-9eaa-61f189a19434
 caps.latest.revision: 35
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # Type Element (Action) (ASSL)
   Contains the type of the [Action](../../../analysis-services/scripting/objects/action-element-assl.md) element.  

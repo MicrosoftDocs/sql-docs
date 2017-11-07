@@ -22,7 +22,7 @@ ms.assetid: c42fbd58-244d-4e0a-b715-6f919cbc3ad9
 caps.latest.revision: 31
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # BI Wizard - Define the Ordering for a Dimension

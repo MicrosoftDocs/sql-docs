@@ -19,7 +19,6 @@ caps.latest.revision: 11
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # LocalDBStartTracing Function
   Enables tracing of API calls for all the SQL Server Express LocalDB instances owned by the current Windows user.  

@@ -15,7 +15,6 @@ caps.latest.revision: 7
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "erikre"
-ms.workload: "On Demand"
 ---
 # Report Builder Functions - Sum Function
   Returns the sum of all the non-null numeric values specified by the expression, evaluated in the given scope.  

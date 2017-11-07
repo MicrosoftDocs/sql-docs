@@ -16,7 +16,6 @@ author: "Lingxi-Li"
 ms.author: "lingxl"
 ms.reviewer: "douglasl"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Azure Data Lake Store File System Task
 

@@ -25,8 +25,7 @@ ms.assetid: 674fdb06-e33c-4f35-bd6a-d9bbb13ececa
 caps.latest.revision: 37
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # Alias Element (ASSL)
   Defines an alias for an [Account](../../../analysis-services/scripting/objects/account-element-assl.md) element.  

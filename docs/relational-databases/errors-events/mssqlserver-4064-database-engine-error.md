@@ -13,10 +13,9 @@ helpviewer_keywords:
   - "4064 (Database Engine error)"
 ms.assetid: 32112b90-0a2f-4834-a027-756811732be7
 caps.latest.revision: 19
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # MSSQLSERVER_4064
   

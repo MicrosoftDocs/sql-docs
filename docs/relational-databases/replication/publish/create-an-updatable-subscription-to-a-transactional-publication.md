@@ -17,7 +17,6 @@ caps.latest.revision: 51
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Create an Updatable Subscription to a Transactional Publication
 

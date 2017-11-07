@@ -23,7 +23,7 @@ ms.assetid: fc5a98bf-7c3c-4faf-b9f8-16eb073d7dc7
 caps.latest.revision: 13
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # AggregationInstanceAttribute Data Type (ASSL)

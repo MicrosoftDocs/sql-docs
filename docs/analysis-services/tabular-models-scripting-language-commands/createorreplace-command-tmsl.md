@@ -14,8 +14,7 @@ ms.assetid: f77a0e04-461a-4fa8-b997-78057e410d56
 caps.latest.revision: 12
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # CreateOrReplace command (TMSL)
 

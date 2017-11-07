@@ -23,7 +23,7 @@ ms.assetid: 54445ee7-720c-4683-99a6-e75b3dcca904
 caps.latest.revision: 31
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # Developing with XMLA in Analysis Services

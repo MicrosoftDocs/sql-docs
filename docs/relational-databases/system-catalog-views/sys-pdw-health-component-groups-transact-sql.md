@@ -14,7 +14,6 @@ caps.latest.revision: 6
 author: "barbkess"
 ms.author: "barbkess"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # sys.pdw_health_component_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]

@@ -25,8 +25,7 @@ ms.assetid: 6a2798b1-26c7-49d8-b556-e681c69d9574
 caps.latest.revision: 37
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # Type Element (Dimension) (ASSL)
   Provides information about the contents of the dimension.  

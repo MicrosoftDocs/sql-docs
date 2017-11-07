@@ -25,7 +25,7 @@ ms.assetid: 8f4afc15-601c-4189-bc45-f5a216aed879
 caps.latest.revision: 35
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # ScalarMiningStructureColumn Data Type (ASSL)

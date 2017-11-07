@@ -31,9 +31,9 @@ helpviewer_keywords:
   - "MAXSIZE SQL Database"
 ms.assetid: 22b167f7-ae86-490b-adb3-ec02ca1c1508
 caps.latest.revision: 62
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "On Demand"
 ---
 # CREATE DATABASE (Azure SQL Database)

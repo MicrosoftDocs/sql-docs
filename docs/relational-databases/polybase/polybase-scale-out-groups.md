@@ -19,7 +19,6 @@ caps.latest.revision: 20
 author: "barbkess"
 ms.author: "barbkess"
 manager: "jhubbard"
-ms.workload: "On Demand"
 ---
 # PolyBase scale-out groups
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

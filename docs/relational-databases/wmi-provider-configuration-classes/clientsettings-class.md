@@ -20,7 +20,6 @@ caps.latest.revision: 32
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # ClientSettings Class
   The [ClientSettings Class](../../relational-databases/wmi-provider-configuration-classes/clientsettings-class.md) represents the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] settings on the client.  

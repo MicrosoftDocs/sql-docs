@@ -13,7 +13,6 @@ caps.latest.revision: 0
 author: "craigg-msft"
 ms.author: "craigg"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # SQL Server 2012 SP3 Release Notes
 These Release Notes describe issues you need to know before you install or troubleshoot SQL Server 2012 Service Pack 3. Release Notes are available online only, not on the installation media. They are updated periodically as issues are discovered. For a list o enhancements and fixes, see [SQL Server 2012 Service Pack 3 release information](http://support.microsoft.com/help/3072779/sql-server-2012-service-pack-3-release-information) for more information.  

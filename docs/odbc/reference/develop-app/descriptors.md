@@ -19,7 +19,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Descriptors
 A descriptor handle refers to a data structure that holds information about either columns or dynamic parameters.  

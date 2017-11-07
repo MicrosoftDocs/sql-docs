@@ -18,7 +18,6 @@ caps.latest.revision: 17
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # SSVARIANT Structure
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]

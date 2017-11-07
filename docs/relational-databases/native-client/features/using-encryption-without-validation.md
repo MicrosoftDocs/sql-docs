@@ -20,7 +20,6 @@ caps.latest.revision: 18
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Using Encryption Without Validation
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]

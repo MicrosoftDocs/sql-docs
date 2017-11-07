@@ -14,7 +14,6 @@ caps.latest.revision: 10
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Calling Natively Compiled Stored Procedures from Data Access Applications
   This topic discusses guidance on calling natively compiled stored procedures from data access applications.  

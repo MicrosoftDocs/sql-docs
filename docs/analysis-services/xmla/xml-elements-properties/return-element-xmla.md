@@ -25,10 +25,9 @@ helpviewer_keywords:
   - "return element"
 ms.assetid: 3cfe8b74-fec3-4987-a74a-5f731444e024
 caps.latest.revision: 14
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+author: "jeannt"
+ms.author: "jeannt"
+manager: "erikre"
 ---
 # return Element (XMLA)
   Contains information returned by a [DiscoverResponse](../../../analysis-services/xmla/xml-elements-objects-discoverresponse.md) element in response to a [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) method call or an [ExecuteResponse](../../../analysis-services/xmla/xml-elements-objects-executeresponse.md) element in response to an [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) method call.  

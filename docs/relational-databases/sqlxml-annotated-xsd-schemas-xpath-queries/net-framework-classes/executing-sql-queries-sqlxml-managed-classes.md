@@ -20,7 +20,6 @@ caps.latest.revision: 22
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Executing SQL Queries (SQLXML Managed Classes)
   This example demonstrates:  

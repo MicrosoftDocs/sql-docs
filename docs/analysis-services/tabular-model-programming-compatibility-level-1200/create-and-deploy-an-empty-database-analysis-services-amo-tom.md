@@ -14,8 +14,7 @@ ms.assetid: dcb916e9-97c5-47e0-922a-404891423b2a
 caps.latest.revision: 5
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # Create and deploy an empty database (Analysis Services AMO-TOM)
 

@@ -16,7 +16,6 @@ caps.latest.revision: 16
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "On Demand"
 ---
 # Create a Table for Storing FILESTREAM Data
   This topic shows how to create a table for storing FILESTREAM data.  

@@ -25,8 +25,7 @@ ms.assetid: ce84b54a-8ab2-42f4-a7dd-e10a3d41cb4d
 caps.latest.revision: 32
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # EstimatedCount Element (ASSL)
   Contains the estimated number of members for an attribute, as defined by the user.  

@@ -18,7 +18,7 @@ ms.assetid: 3ed919ea-8598-45d2-a4a0-b1b3357a4ab1
 caps.latest.revision: 27
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # Filter an Itemset in an Association Rules Model

@@ -14,7 +14,6 @@ caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # SQL Server PowerShell License Terms
 **MICROSOFT SOFTWARE LICENSE TERMS**

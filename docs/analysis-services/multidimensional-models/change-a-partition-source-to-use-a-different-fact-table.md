@@ -18,7 +18,7 @@ ms.assetid: 5508312f-8e46-4802-9362-6688ca03d098
 caps.latest.revision: 29
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # Change a partition source to use a different fact table

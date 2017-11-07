@@ -19,7 +19,6 @@ caps.latest.revision: 30
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Adding a Column to a SQL Server Table
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]

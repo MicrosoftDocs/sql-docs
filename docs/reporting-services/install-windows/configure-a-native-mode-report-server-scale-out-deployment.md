@@ -18,7 +18,6 @@ caps.latest.revision: 13
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
-ms.workload: "On Demand"
 ---
 
 # Configure a Native Mode Report Server Scale-Out Deployment

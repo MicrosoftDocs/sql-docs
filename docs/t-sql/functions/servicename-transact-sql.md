@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "registry keys [SQL Server]"
 ms.assetid: 5b0b35be-50ae-411d-a607-bf7464b73624
 caps.latest.revision: 23
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # &#x40;&#x40;SERVICENAME (Transact-SQL)

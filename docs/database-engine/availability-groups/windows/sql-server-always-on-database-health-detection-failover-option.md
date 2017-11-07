@@ -22,7 +22,6 @@ caps.latest.revision: 4
 author: "JasonWHowell"
 ms.author: "jasonh"
 manager: "jhubbard"
-ms.workload: "On Demand"
 ---
 # Availability group database level health detection failover option
 

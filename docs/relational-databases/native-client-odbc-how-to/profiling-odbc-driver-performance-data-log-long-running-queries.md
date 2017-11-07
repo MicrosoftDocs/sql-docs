@@ -16,7 +16,6 @@ caps.latest.revision: 18
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Profiling ODBC Driver Performance Data - Log Long-Running Queries
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]

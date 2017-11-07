@@ -25,7 +25,7 @@ ms.assetid: 95ffe66f-c261-4dc5-ad57-14d2d73205ff
 caps.latest.revision: 72
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "jhubbard"
 ms.workload: "On Demand"
 ---
 # Microsoft Decision Trees Algorithm

@@ -18,7 +18,6 @@ caps.latest.revision: 34
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Implement Event Notifications
   To implement an event notification, you must first create a target service to receive event notifications, and then create the event notification.  

@@ -19,7 +19,6 @@ caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Rules for Updating Results (Visual Database Tools)
 In many cases, you can update the result set displayed in the [Results Pane](../../ssms/visual-db-tools/results-pane-visual-database-tools.md). However, in some cases you cannot.  

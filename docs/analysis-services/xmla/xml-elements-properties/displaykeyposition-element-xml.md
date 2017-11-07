@@ -14,10 +14,9 @@ applies_to:
   - "SQL Server 2016 Preview"
 ms.assetid: 345a24e6-186c-4570-baf2-7bfe9b7b4cc1
 caps.latest.revision: 6
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+author: "jeannt"
+ms.author: "jeannt"
+manager: "erikre"
 ---
 # DisplayKeyPosition Element (XML)
   Contains information about the position of the element in a collection of elements.  

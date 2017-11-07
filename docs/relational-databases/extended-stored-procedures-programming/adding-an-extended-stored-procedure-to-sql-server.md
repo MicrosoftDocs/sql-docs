@@ -18,7 +18,6 @@ caps.latest.revision: 39
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "On Demand"
 ---
 # Adding an Extended Stored Procedure to SQL Server
     

@@ -14,10 +14,9 @@ applies_to:
   - "SQL Server 2016 Preview"
 ms.assetid: c3b64132-3b2e-46f5-ae11-a3cb3c42099c
 caps.latest.revision: 6
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+author: "jeannt"
+ms.author: "jeannt"
+manager: "erikre"
 ---
 # CommonIdentifierPosition Element (XML)
   Contains information about the position of the element in a collection of elements.  

@@ -25,9 +25,9 @@ helpviewer_keywords:
   - "application roles [SQL Server], permissions"
 ms.assetid: 012588a2-cbe1-48f0-a731-b4a2b83203d5
 caps.latest.revision: 24
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "On Demand"
 ---
 # GRANT Database Principal Permissions (Transact-SQL)

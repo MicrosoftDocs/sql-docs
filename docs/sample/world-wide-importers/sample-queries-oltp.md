@@ -15,7 +15,6 @@ author: "BarbKess"
 ms.author: "barbkess"
 manager: "jhubbard"
 robots: noindex,nofollow
-ms.workload: "On Demand"
 ---
 # Sample queries
 Refer to the sample-scripts.zip file that is included with the [release](http://go.microsoft.com/fwlink/?LinkID=800630) of the sample, or refer to the source code:

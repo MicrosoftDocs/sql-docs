@@ -16,7 +16,6 @@ caps.latest.revision: 27
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Create Term-Based Relations
   This topic describes how to create term-based relations for a domain in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). A term-based relation (TBR) enables you to make a correction to a term that is part of a value in a domain. It enables multiple values that are identical except for the spelling of a common part of them to be considered identical synonyms. For example, you can set up a term-based relation that changes the term “Inc.” to “Incorporated”. The term “Inc.” will be changed each time it occurs in the domain. Instances of “Contoso, Inc.” will be changed “Contoso, Incorporated”, and the two values will be considered exact synonyms.  

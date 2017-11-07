@@ -16,8 +16,7 @@ ms.assetid: 33929373-11df-4f89-8d2e-d63923c44f53
 caps.latest.revision: 6
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # CollectionCaption Element (ASSL)
   Contains the plural name for the parent element.  

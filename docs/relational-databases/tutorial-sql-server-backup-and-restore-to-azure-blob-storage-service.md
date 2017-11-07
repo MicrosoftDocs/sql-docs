@@ -16,7 +16,6 @@ caps.latest.revision: 11
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "On Demand"
 ---
 # Tutorial: SQL Server Backup and Restore to Azure Blob Storage Service
 This tutorial helps you understand how to write backups to and restore from the Azure Blob storage service.  

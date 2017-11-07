@@ -18,7 +18,6 @@ caps.latest.revision: 29
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Stored Procedures Event Category
   The **Stored Procedures** event category contains general stored procedure events.  

@@ -13,10 +13,9 @@ helpviewer_keywords:
   - "8649 (Database Engine error)"
 ms.assetid: 992dbc74-7c3a-498b-9f1b-b28387640677
 caps.latest.revision: 15
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # MSSQLSERVER_8649
   

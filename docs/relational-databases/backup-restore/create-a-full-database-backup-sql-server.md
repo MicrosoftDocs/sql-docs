@@ -19,7 +19,6 @@ caps.latest.revision: 63
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Active"
 ---
 # Create a Full Database Backup (SQL Server)
 

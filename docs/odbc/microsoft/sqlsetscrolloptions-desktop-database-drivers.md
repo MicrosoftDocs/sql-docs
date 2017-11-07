@@ -16,7 +16,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # SQLSetScrollOptions (Desktop Database Drivers)
 Forward and static cursors are supported for SQL_CONCUR_READ_ONLY.  

@@ -13,7 +13,6 @@ ms.topic: "article"
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
-ms.workload: "Inactive"
 ---
 # Back up and restore Reporting Services SharePoint service applications
 

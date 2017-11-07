@@ -17,7 +17,6 @@ caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Data Type Change Required Dialog Box (Visual Database Tools)
 Appears when you change the data type, length, scale, precision, or collation of a column that participates in a relationship.  

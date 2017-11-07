@@ -15,7 +15,7 @@ ms.assetid: d0558cae-8209-4242-80c5-2c95981b88b9
 caps.latest.revision: 15
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # Understanding Power View for Multidimensional Models

@@ -17,7 +17,6 @@ caps.latest.revision: 28
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Snapshot Options
   There are a number of options available when initializing a subscription with a snapshot:  

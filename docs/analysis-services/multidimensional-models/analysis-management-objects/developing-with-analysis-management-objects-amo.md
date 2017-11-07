@@ -20,7 +20,7 @@ ms.assetid: 91354fc9-22da-4724-b97f-3b1e7b0e69d3
 caps.latest.revision: 47
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # Developing with Analysis Management Objects (AMO)

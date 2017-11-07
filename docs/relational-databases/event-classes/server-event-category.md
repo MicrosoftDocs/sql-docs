@@ -18,7 +18,6 @@ caps.latest.revision: 23
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Server Event Category
   The **Server** event category contains general server events.  

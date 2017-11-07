@@ -95,7 +95,7 @@ ms.workload: "Active"
   
 -   Have CHECK constraints or enabled rules.  
   
-*column_list*  
+ *column_list*  
  Is an optional list of column names on the target table of the INTO clause. It is analogous to the column list allowed in the [INSERT](../../t-sql/statements/insert-transact-sql.md) statement.  
   
  *scalar_expression*  

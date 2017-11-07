@@ -21,7 +21,6 @@ caps.latest.revision: 36
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # StartMode Property (SqlService Class)
   Gets the start mode of the service.  

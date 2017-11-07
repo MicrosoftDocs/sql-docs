@@ -16,7 +16,7 @@ ms.assetid: 02baf401-52b0-4a73-8a7b-3b5b5e568626
 caps.latest.revision: 6
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # DISCOVER_TRACE_COLUMNS Rowset

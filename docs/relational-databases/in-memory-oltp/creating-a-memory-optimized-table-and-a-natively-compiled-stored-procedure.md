@@ -15,7 +15,6 @@ caps.latest.revision: 35
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "On Demand"
 ---
 # Creating a Memory-Optimized Table and a Natively Compiled Stored Procedure
   This topic contains a sample that introduces you to the syntax for In-Memory OLTP.  

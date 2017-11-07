@@ -12,7 +12,6 @@ ms.topic: "article"
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
-ms.workload: "Active"
 ---
 # Install SQL Server Reporting Services
 

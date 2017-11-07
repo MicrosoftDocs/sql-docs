@@ -25,8 +25,7 @@ ms.assetid: ac54d74a-5e6c-4c24-83bf-766440478f6c
 caps.latest.revision: 38
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # Hierarchy Element (ASSL)
   Defines a hierarchy in a dimension.  

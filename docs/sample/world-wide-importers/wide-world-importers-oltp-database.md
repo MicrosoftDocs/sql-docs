@@ -15,7 +15,6 @@ author: "BarbKess"
 ms.author: "barbkess"
 manager: "jhubbard"
 robots: noindex,nofollow
-ms.workload: "On Demand"
 ---
 # Wide World Importers OLTP database
 **WideWorldImporters Installation and Configuration**

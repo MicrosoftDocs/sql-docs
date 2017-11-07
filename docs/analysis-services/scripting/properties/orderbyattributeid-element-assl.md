@@ -25,8 +25,7 @@ ms.assetid: 41d7b650-ac40-4f1a-850d-2f81a19b28cb
 caps.latest.revision: 33
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # OrderByAttributeID Element (ASSL)
   Identifies another attribute by which to order the members of the [Dimension](../../../analysis-services/scripting/data-type/dimensionattribute-data-type-assl.md) attribute.  

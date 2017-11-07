@@ -14,7 +14,6 @@ caps.latest.revision: 12
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Define a State Variable
   This procedure describes how to define a package variable where the CDC state is stored.  

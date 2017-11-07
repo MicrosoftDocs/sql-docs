@@ -21,7 +21,6 @@ caps.latest.revision: 34
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # ServiceName Property (SqlService Class)
   Gets the name of the service.  

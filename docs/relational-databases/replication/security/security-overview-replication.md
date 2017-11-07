@@ -20,7 +20,6 @@ caps.latest.revision: 45
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Security Overview (Replication)
   Fundamentally, how to help secure your replication environment is a matter of understanding the authentication and authorization options, understanding appropriate uses of replication filtering features, and learning specific measures for how to help secure each piece of the replication environment. The replication environment includes the Distributor, Publisher, Subscribers, and the snapshot folder. This chapter addresses replication security, but replication security is built on [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] security and Windows security. Therefore, you should understand this foundation and the specifics of replication security. For more information about security, see [Security Considerations for a SQL Server Installation](../../../sql-server/install/security-considerations-for-a-sql-server-installation.md). For more information about security considerations for Oracle publishing, see the section "Replication Security Model" in the topic [Design Considerations and Limitations for Oracle Publishers](../../../relational-databases/replication/non-sql/design-considerations-and-limitations-for-oracle-publishers.md).  

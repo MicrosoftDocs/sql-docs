@@ -54,7 +54,6 @@ caps.latest.revision: 207
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "Active"
 ---
 # Configure Windows Service Accounts and Permissions
 

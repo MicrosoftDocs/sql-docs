@@ -13,10 +13,9 @@ helpviewer_keywords:
   - "8712 (Database Engine error)"
 ms.assetid: 292fb3bc-062e-41e4-a566-b5d3d0b21977
 caps.latest.revision: 12
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # MSSQLSERVER_8712
   

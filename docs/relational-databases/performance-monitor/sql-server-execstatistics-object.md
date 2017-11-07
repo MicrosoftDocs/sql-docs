@@ -17,7 +17,6 @@ caps.latest.revision: 14
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # SQL Server, ExecStatistics Object
   The **SQLServer:ExecStatistics** object in Microsoft SQL Server provides counters to monitor various executions.  

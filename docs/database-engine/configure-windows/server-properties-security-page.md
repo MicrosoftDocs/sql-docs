@@ -16,7 +16,6 @@ caps.latest.revision: 31
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Server Properties - Security Page
   Use this page to view or modify your server security options.  

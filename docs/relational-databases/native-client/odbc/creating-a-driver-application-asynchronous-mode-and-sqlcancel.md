@@ -22,7 +22,6 @@ caps.latest.revision: 30
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Creating a Driver Application - Asynchronous Mode and SQLCancel
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]

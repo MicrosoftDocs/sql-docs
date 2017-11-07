@@ -17,7 +17,6 @@ caps.latest.revision: 15
 author: "smartysanthosh"
 ms.author: "nagavo"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Transactions (Master Data Services)
 

@@ -16,7 +16,6 @@ caps.latest.revision: 10
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Change Existing Columns to XML Columns
   The ALTER TABLE statement supports the **xml** data type. For example, you can alter any string type column to the **xml** data type. Note that in these cases, the documents contained in the column must be well formed. Also, if you are changing the type of the column from string to typed xml, the documents in the column are validated against the specified XSD schemas.  

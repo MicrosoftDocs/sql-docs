@@ -22,7 +22,6 @@ caps.latest.revision: 49
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Search Document Properties with Search Property Lists
   The content of document properties was previously indistinguishable from the content of the document body. This limitation restricted full-text queries to generic searches on whole documents. Now, however, you can configure a full-text index to support property-scoped searching on particular properties, such as Author and Title, for supported document types in a **varbinary**, **varbinary(max)** (including **FILESTREAM**), or **image** binary data column. This form of searching is known as *property searching*.  

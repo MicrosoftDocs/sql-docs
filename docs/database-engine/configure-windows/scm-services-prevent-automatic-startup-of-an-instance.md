@@ -22,7 +22,6 @@ caps.latest.revision: 36
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # SCM Services - Prevent Automatic Startup of an Instance
   This topic describes how prevent an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from starting automatically in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using SQL Server Configuration Manager. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is normally configured to start automatically. You can change that by setting the start mode for the instance to manual.  
@@ -45,7 +44,7 @@ ms.workload: "Inactive"
   
 3.  In the details pane, right-click **MSSQLServer**, and then click **Properties.**  
   
-4.  In the **SQL Server \<***instancename***> Properties** dialog box, on the **Service** tab, in the **General** box, set the value of **Start Mode** to **Manual**.  
+4.  In the **SQL Server \<***instancename***> Properties** dialog box, in the **Properties** box, set the value of **Start Mode** to **Manual**.  
   
 5.  Click **OK** to close the **SQL Server \<***instancename***> Properties** dialog box, and then close [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager.  
   

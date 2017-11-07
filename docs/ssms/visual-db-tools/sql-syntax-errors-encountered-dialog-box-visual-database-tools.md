@@ -17,7 +17,6 @@ caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # SQL Syntax Errors Encountered Dialog Box (Visual Database Tools)
 This dialog box notifies you that the designer cannot parse the SQL statement in the SQL pane.  

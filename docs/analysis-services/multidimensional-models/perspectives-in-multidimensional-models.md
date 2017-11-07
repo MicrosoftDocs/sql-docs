@@ -25,7 +25,7 @@ ms.assetid: 5a3d6577-6833-4c24-820c-b65bb856157b
 caps.latest.revision: 28
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # Perspectives in Multidimensional Models

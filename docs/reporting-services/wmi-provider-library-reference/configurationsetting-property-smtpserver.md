@@ -22,7 +22,6 @@ caps.latest.revision: 18
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
-ms.workload: "Inactive"
 ---
 # ConfigurationSetting Property - SMTPServer
   Gets the SMTP server property from the report server configuration file. Read-only.  

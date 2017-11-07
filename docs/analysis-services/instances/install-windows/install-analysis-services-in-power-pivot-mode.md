@@ -14,7 +14,7 @@ ms.assetid: d3310562-82c1-454f-9c48-33a241749238
 caps.latest.revision: 40
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "On Demand"
 ---
 # Install Analysis Services in Power Pivot Mode

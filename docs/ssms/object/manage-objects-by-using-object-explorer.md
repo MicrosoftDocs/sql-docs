@@ -20,7 +20,6 @@ caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Manage Objects by Using Object Explorer
 You can use Object Explorer to manage objects such as databases, tables and stored procedures.  

@@ -20,7 +20,6 @@ caps.latest.revision: 63
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
-ms.workload: "On Demand"
 ---
 # Upgrade a SQL Server Failover Cluster Instance (Setup)
   You can upgrade a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster to a [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] failover cluster by using the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] setup UI or from a command prompt.  

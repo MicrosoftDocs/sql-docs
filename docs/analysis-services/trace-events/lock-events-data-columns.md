@@ -13,8 +13,7 @@ ms.assetid: c223157f-41a0-405c-bc1a-41c999506936
 caps.latest.revision: 5
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # Lock Events Data Columns
   The Lock event category has the following event class:  

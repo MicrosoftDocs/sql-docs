@@ -25,7 +25,7 @@ ms.assetid: 422660b2-4d80-4165-b1c9-3963bcde556b
 caps.latest.revision: 30
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # Partitions - Proactive Caching

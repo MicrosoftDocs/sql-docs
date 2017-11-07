@@ -16,7 +16,6 @@ caps.latest.revision: 45
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
-ms.workload: "On Demand"
 ---
 
 # Lesson 1: Creating a Sample Subscriber Database

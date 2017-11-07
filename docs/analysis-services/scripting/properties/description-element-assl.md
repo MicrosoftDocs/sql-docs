@@ -25,8 +25,7 @@ ms.assetid: 34d67e7c-e79a-429b-8cc3-6ca13b9cf9c3
 caps.latest.revision: 35
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # Description Element (ASSL)
   Contains the description of the parent element.  

@@ -25,7 +25,7 @@ ms.assetid: 75a3a0c2-e1d4-4896-b0f5-2ea9c769b927
 caps.latest.revision: 36
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # CubePermissions Element (ASSL)

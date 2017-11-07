@@ -17,7 +17,6 @@ caps.latest.revision: 25
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Executing the SSMA Console (AccessToSQL)
 Microsoft provides you with a robust set of script file commands and command line options to execute and control SSMA activities. The ensuing sections detail the same.  

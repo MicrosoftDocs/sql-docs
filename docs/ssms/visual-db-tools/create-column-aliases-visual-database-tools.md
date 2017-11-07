@@ -17,7 +17,6 @@ caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Create Column Aliases (Visual Database Tools)
 You can create aliases for column names to make it easier to work with column names, calculations, and summary values. For example, you can create a column alias to:  

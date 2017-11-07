@@ -16,7 +16,6 @@ caps.latest.revision: 26
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Publisher Information, Agents
   The **Agents** tab displays information about the agents and maintenance jobs that are associated with the Publisher:  

@@ -16,7 +16,6 @@ caps.latest.revision: 35
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Lock:Released Event Class
   The Lock:Released event class indicates that a lock on a resource, such as a page, has been released.  

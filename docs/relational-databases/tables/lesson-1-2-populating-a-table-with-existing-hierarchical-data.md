@@ -18,7 +18,6 @@ caps.latest.revision: 23
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "On Demand"
 ---
 # Lesson 1-2 - Populating a Table with Existing Hierarchical Data
 This task creates a new table and populates it with the data in the **EmployeeDemo** table. This task has the following steps:  

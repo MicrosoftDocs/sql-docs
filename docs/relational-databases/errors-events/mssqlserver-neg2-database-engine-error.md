@@ -15,10 +15,9 @@ helpviewer_keywords:
   - "-2 (Database Engine error)"
 ms.assetid: f37a7b7d-26e1-4b9e-bcb4-57f7805393d2
 caps.latest.revision: 11
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # MSSQLSERVER_-2
   

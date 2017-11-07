@@ -20,8 +20,7 @@ ms.assetid: 0f672b93-c317-47e5-b44d-ecea9b587c98
 caps.latest.revision: 21
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # Objects (ASSL)
   This reference section contains syntax and usage information for each element that acts as an object in the Analysis Services Scripting Language (ASSL) schema.  

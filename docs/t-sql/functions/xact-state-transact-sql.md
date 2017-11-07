@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "active transactions"
 ms.assetid: e9300827-e793-4eb6-9042-ffa0204aeb50
 caps.latest.revision: 41
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "On Demand"
 ---
 # XACT_STATE (Transact-SQL)

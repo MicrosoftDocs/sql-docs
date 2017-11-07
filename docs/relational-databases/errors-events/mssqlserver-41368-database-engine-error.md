@@ -13,11 +13,10 @@ helpviewer_keywords:
   - "41368 (Database Engine error)"
 ms.assetid: abc71559-4c4d-4cce-a08f-3299dd167842
 caps.latest.revision: 9
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 robots: noindex,nofollow
-ms.workload: "Inactive"
 ---
 # MSSQLSERVER_41368
   

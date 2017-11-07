@@ -18,7 +18,6 @@ caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Post-Save Notifications Dialog Box (Visual Database Tools)
 This dialog box appears when errors are encountered while trying to save changes to a table. This dialog box lists the objects that were successfully saved in the database, the objects that were not saved, and the errors that were encountered.  

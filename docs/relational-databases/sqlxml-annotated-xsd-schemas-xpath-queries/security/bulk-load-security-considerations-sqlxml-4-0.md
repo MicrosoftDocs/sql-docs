@@ -19,7 +19,6 @@ caps.latest.revision: 24
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Bulk Load Security Considerations (SQLXML 4.0)
   The following are security guidelines for using XML Bulk Load:  

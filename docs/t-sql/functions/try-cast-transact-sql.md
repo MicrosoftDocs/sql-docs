@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "TRY_CAST function"
 ms.assetid: ea3a16de-995b-415c-b5f0-9355cf7bb401
 caps.latest.revision: 10
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "Active"
 ---
 # TRY_CAST (Transact-SQL)

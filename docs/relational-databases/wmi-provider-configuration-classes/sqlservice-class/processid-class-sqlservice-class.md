@@ -21,7 +21,6 @@ caps.latest.revision: 35
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # ProcessId Class (SqlService Class)
   Gets the system process ID that uniquely identifies a service.  

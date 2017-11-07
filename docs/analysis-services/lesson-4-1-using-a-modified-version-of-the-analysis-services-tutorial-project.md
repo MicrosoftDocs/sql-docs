@@ -15,7 +15,7 @@ ms.assetid: 685aa217-de1b-4df2-bf22-095228c40775
 caps.latest.revision: 25
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # Lesson 4-1 - Using a Modified Version of the Analysis Services Tutorial Project

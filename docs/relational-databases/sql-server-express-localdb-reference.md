@@ -14,7 +14,6 @@ caps.latest.revision: 11
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # SQL Server Express LocalDB Reference
   This section contains information about the SQL Server Express LocalDB:  

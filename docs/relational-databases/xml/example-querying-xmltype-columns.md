@@ -16,7 +16,6 @@ caps.latest.revision: 10
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Example: Querying XMLType Columns
   The following query includes columns of **xml** type. The query retrieves product model ID, name, and manufacturing steps at the first location from the `Instructions` column of the **xml** type.  

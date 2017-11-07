@@ -19,7 +19,6 @@ caps.latest.revision: 22
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Print Code and Results
   When you print a query or file, colorized elements print in color if your printer supports color printing and color printing is enabled in the printer setup.  

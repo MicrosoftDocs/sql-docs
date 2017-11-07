@@ -21,7 +21,7 @@ ms.assetid: bd7d5df5-500b-4159-8467-880e141bc043
 caps.latest.revision: 44
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # Data Mining Schema Rowsets

@@ -20,7 +20,6 @@ caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Combine Conditions When OR Has Precedence (Visual Database Tools)
 To link conditions with OR and give them precedence over conditions linked with AND, you must repeat the AND condition for each OR condition.  

@@ -18,7 +18,6 @@ caps.latest.revision: 20
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "On Demand"
 ---
 # Lesson 2: Preparing the Snapshot Folder
 In this lesson, you will learn to configure the snapshot folder that is used to create and store the publication snapshot.  

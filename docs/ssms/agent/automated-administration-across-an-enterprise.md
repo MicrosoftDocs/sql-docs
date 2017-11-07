@@ -24,7 +24,6 @@ caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Automated Administration Across an Enterprise
 Automating administration across multiple instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] is called *multiserver administration*. Use multiserver administration to do the following:  

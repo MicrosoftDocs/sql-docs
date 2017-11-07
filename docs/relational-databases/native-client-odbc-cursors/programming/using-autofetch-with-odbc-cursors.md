@@ -18,7 +18,6 @@ caps.latest.revision: 30
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Using Autofetch with ODBC Cursors
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]

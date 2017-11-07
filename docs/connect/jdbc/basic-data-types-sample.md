@@ -14,7 +14,6 @@ caps.latest.revision: 23
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Basic Data Types Sample
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

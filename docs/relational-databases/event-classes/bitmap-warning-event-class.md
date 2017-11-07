@@ -16,7 +16,6 @@ caps.latest.revision: 15
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Bitmap Warning Event Class
   The **Bitmap Warning** event class can be used to monitor bitmap filter usage in queries. The event subclass can be used to report when bitmap filters have been disabled in a query.  

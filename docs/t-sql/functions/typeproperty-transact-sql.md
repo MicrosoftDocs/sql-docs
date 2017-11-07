@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "TYPEPROPERTY function"
 ms.assetid: bc311c80-bac5-46ab-a5c8-68b1c6bbf24a
 caps.latest.revision: 43
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # TYPEPROPERTY (Transact-SQL)

@@ -14,7 +14,6 @@ caps.latest.revision: 17
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # In-Memory OLTP Code Samples
   This section contains code samples that demonstrate In-Memory OLTP:  

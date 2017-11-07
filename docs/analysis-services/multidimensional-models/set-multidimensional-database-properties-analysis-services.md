@@ -17,7 +17,7 @@ ms.assetid: a8be5b3f-3148-448a-976c-7222705155d9
 caps.latest.revision: 24
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # Set Multidimensional Database Properties (Analysis Services)

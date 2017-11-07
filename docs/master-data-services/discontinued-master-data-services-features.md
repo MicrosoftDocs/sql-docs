@@ -15,7 +15,6 @@ caps.latest.revision: 18
 author: "smartysanthosh"
 ms.author: "nagavo"
 manager: "erikre"
-ms.workload: "Inactive"
 ---
 # Discontinued Master Data Services Features
   This topic describes [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] features that are no longer available in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  

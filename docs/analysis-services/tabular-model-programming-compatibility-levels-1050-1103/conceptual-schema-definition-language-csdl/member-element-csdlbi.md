@@ -16,8 +16,7 @@ ms.assetid: 1ba225f5-3867-4aae-a519-e3c277688d1e
 caps.latest.revision: 6
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # Member Element (CSDLBI)
   The Member element is a complex type that serves as the base for other elements.  

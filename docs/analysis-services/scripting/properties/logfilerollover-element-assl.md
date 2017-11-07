@@ -25,8 +25,7 @@ ms.assetid: 5484e167-b891-431a-bbae-946ea6eb4a3c
 caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # LogFileRollover Element (ASSL)
   Specifies whether logging of [Trace](../../../analysis-services/scripting/objects/trace-element-assl.md) output should roll over to a new file or should stop when the maximum log file size that is specified in [LogFileSize](../../../analysis-services/scripting/properties/logfilesize-element-assl.md) is reached.  

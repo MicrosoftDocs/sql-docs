@@ -17,10 +17,9 @@ helpviewer_keywords:
   - "query store [SQL Server], stored procedures"
 ms.assetid: 9bddbb74-e67a-43e3-b89e-896c498e53cb
 caps.latest.revision: 6
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # Query Store Stored Procedures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

@@ -16,7 +16,6 @@ caps.latest.revision: 25
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Choose Servers to Configure (Configure Database Mirroring Security Wizard)
   Use this page to specify which server instances you want to configure now. You must select at least one server instance before continuing the wizard.  

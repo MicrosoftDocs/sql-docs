@@ -25,8 +25,7 @@ ms.assetid: 120dcc4c-8fe8-4471-bbd6-99ad534364f0
 caps.latest.revision: 33
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # OptimizedState Element (ASSL)
   Determines the level of optimization that is applied to the hierarchy.  

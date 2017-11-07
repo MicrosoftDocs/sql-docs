@@ -17,7 +17,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # SQLGetStmtOption Mapping
 When an application calls **SQLGetStmtOption** to an ODBC 3*.x* driver that does not support it, the call to  

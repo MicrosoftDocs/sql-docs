@@ -14,7 +14,6 @@ caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Raw File Custom Properties
   **Source Custom Properties**  

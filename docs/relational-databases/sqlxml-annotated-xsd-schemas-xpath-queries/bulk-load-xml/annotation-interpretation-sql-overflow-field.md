@@ -19,7 +19,6 @@ caps.latest.revision: 22
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Annotation Interpretation - sql:overflow-field
   In a schema, you can identify a column as an overflow column to receive all unconsumed data from the XML document. This column is specified in the schema by using the **sql:overflow-field** annotation. It is possible to have multiple overflow columns.  

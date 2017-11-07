@@ -21,7 +21,6 @@ caps.latest.revision: 33
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # PropertyIndex Property (SqlServiceAdvancedProperty Class)
   Gets or sets the property index that specifies the position of an advanced property in an array of advanced properties that belong to a referenced service.  

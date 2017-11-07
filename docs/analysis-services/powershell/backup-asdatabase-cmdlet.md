@@ -13,7 +13,7 @@ ms.assetid: 03d58a82-021c-4e13-b265-c084f42a8bb2
 caps.latest.revision: 13
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # Backup-ASDatabase cmdlet

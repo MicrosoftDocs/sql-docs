@@ -16,7 +16,6 @@ caps.latest.revision: 24
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Descriptor Fields for Table-Valued Parameter Constituent Columns
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]

@@ -17,7 +17,6 @@ caps.latest.revision: 31
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # LOG (SSIS Expression)
   Returns the base-10 logarithm of a numeric expression.  

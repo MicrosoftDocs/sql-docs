@@ -19,7 +19,7 @@ ms.assetid: 34f51b85-02b3-40dd-bf93-375a9e522385
 caps.latest.revision: 26
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # Debugging Stored Procedures

@@ -28,7 +28,6 @@ caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
-ms.workload: "On Demand"
 ---
 # Manage Job Steps
 A job step is an action that the job takes on a database or a server. Every job must have at least one job step. Job steps can be:  

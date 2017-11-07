@@ -16,7 +16,6 @@ caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Page Setup Dialog Box
 You can customize your page design by selecting options in the **Page Setup** dialog box. The availability of some options depends on the languages that are installed and enabled for editing.  

@@ -14,8 +14,7 @@ ms.assetid: e54a8a1b-b964-4b6e-9057-44d50af676c0
 caps.latest.revision: 6
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # Add a data source to Tabular model (Analysis Services AMO-TOM)
 

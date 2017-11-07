@@ -16,7 +16,6 @@ caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # SQL Server Agent Properties (Connection Page)
 Use this page to view and modify the settings for the connection from the [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent service to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  

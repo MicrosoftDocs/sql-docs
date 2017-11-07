@@ -21,7 +21,6 @@ caps.latest.revision: 22
 author: "spelluru"
 ms.author: "spelluru"
 manager: "erikre"
-ms.workload: "Inactive"
 ---
 # sysssispackagefolders (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

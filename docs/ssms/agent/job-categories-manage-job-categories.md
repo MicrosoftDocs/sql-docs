@@ -18,7 +18,6 @@ caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Job Categories - Manage Job Categories
 Use the **Job Categories** dialog box to add or delete job categories. Built-in job categories cannot be deleted.  

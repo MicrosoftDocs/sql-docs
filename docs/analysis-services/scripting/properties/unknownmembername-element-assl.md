@@ -25,8 +25,7 @@ ms.assetid: 54271336-ea9b-4270-ac3a-9658a5cff77b
 caps.latest.revision: 35
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # UnknownMemberName Element (ASSL)
   Contains the caption, in the default language of the dimension, for the unknown member of the dimension.  

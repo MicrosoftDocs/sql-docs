@@ -16,7 +16,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # SQLGetData (Desktop Database Drivers)
 This function can retrieve data from any column, whether or not there are bound columns after it and regardless of the order in which the columns are retrieved.  

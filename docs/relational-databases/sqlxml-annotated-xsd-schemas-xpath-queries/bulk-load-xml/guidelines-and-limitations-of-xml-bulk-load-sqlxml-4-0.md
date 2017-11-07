@@ -17,7 +17,6 @@ caps.latest.revision: 26
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Guidelines and Limitations of XML Bulk Load (SQLXML 4.0)
   When you use XML Bulk Load, you should be familiar with the following guidelines and limitations:  

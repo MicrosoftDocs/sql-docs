@@ -18,7 +18,6 @@ caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Summarize Query Results (Visual Database Tools)
 When you create aggregate queries, certain logical principles apply. For example, you cannot display the contents of individual rows in a summary query. The Query and View Designer helps you comply with these principles in the way the [Diagram pane](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md) and [Criteria pane](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md) behave.  

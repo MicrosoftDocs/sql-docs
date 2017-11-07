@@ -14,7 +14,6 @@ caps.latest.revision: 12
 author: "MikeRayMSFT"
 ms.author: "v-saume"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Tune compression for availability group
 

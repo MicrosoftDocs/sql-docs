@@ -16,7 +16,6 @@ caps.latest.revision: 32
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # SQL:StmtStarting Event Class
   The SQL:StmtStarting event class indicates that a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement has started.  

@@ -15,10 +15,9 @@ helpviewer_keywords:
   - "10060 (Database Engine error)"
 ms.assetid: 28c21277-cad8-406c-a955-07933a56982a
 caps.latest.revision: 13
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # MSSQLSERVER_10060
   

@@ -21,7 +21,6 @@ caps.latest.revision: 31
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # PropertyName Property (ServerNetworkProtocolProperty Class)
   Gets the name of the current referenced property.  

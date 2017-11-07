@@ -21,7 +21,6 @@ caps.latest.revision: 33
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # SetOrderValue Method (ClientNetworkProtocol Class)
   Selects the protocol with the specified order value from the client protocol list.  

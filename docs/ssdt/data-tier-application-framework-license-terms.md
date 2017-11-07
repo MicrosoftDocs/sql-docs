@@ -14,7 +14,6 @@ caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Data-Tier Application Framework - License Terms
 ## MICROSOFT SOFTWARE LICENSE TERMS  

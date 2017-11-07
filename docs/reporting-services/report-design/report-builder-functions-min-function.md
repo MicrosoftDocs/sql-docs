@@ -15,7 +15,6 @@ caps.latest.revision: 7
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "erikre"
-ms.workload: "Inactive"
 ---
 # Report Builder Functions - Min Function
   Returns the minimum value of all non-null numeric values specified by the expression, in the context of the given scope.  

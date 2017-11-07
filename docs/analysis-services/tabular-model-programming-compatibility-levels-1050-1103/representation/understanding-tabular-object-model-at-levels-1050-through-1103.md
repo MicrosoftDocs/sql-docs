@@ -14,8 +14,7 @@ ms.assetid: 6077b7e8-cb3e-4480-a5de-bb602cf9d69a
 caps.latest.revision: 10
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # Understanding Tabular Object Model at Levels 1050 through 1103
 

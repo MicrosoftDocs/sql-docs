@@ -21,7 +21,6 @@ caps.latest.revision: 32
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Enabled Property (ServerNetworkProtocol Class)
   Gets the Boolean property that specifies whether the server network protocol is enabled.  

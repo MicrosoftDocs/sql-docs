@@ -25,7 +25,7 @@ ms.assetid: 8d74b932-2174-4e1f-8414-636455880b6a
 caps.latest.revision: 31
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # Dimensions - Storage

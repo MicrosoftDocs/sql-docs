@@ -16,7 +16,6 @@ caps.latest.revision: 22
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
-ms.workload: "On Demand"
 ---
 # Database Mirroring Operating Modes
   This topic describes the synchronous and asynchronous operating modes for database mirroring sessions.  

@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "names [SQL Server], language in use"
 ms.assetid: 3e13b477-7dfa-4da6-9948-da2050d42527
 caps.latest.revision: 21
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # &#x40;&#x40;LANGUAGE (Transact-SQL)

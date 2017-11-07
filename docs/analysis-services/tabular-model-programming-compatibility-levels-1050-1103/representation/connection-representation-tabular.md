@@ -16,8 +16,7 @@ ms.assetid: 4b410b16-d36e-4185-bb20-922e66e5e2b7
 caps.latest.revision: 9
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # Connection Representation (Tabular)
   The connection object defines the source of the data that populates the tabular model.  

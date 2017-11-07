@@ -18,7 +18,7 @@ ms.assetid: 137b2f40-5dfb-4141-9110-70f961f259cb
 caps.latest.revision: 38
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # Attribute Relationships - Create, Modify, or Delete Relationship

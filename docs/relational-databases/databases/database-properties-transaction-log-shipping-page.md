@@ -16,7 +16,6 @@ caps.latest.revision: 21
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Database Properties (Transaction Log Shipping Page)
   Use this page to configure and modify the properties of log shipping for a database.  

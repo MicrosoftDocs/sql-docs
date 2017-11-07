@@ -13,10 +13,9 @@ helpviewer_keywords:
   - "2508 (Database Engine error)"
 ms.assetid: c37d40e5-c665-4d66-a727-5cb845634fcc
 caps.latest.revision: 12
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # MSSQLSERVER_2508
   

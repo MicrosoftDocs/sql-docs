@@ -23,7 +23,6 @@ caps.latest.revision: 31
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Architecture of Client-side and Server-side XML Formatting (SQLXML 4.0)
   The following illustration shows the architecture of XML formatting on the server side.  

@@ -20,7 +20,6 @@ caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Result-Generating and Result-Free Statements
 SQL statements can be loosely divided into the following five categories:  

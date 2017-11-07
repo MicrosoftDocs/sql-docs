@@ -19,7 +19,6 @@ caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Save Changes
 Warns you that changes to the items listed will not be saved unless you click **Yes**.  

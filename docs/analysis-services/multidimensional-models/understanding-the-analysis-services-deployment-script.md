@@ -20,7 +20,7 @@ ms.assetid: a63ebee9-9848-48f1-82ad-64ecf2e47019
 caps.latest.revision: 31
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # Understanding the Analysis Services Deployment Script

@@ -16,7 +16,7 @@ ms.assetid: 655ac93c-5c5c-4565-914b-915327f7d349
 caps.latest.revision: 15
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # Using SQL Server Profiler to Monitor Data Mining (Analysis Services - Data Mining)

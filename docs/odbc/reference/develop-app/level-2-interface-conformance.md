@@ -18,7 +18,6 @@ caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Level 2 Interface Conformance
 The Level 2 interface conformance level includes the Level 1 interface conformance–level functionality plus the following features:  

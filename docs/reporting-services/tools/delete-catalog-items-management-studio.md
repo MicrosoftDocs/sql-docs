@@ -17,7 +17,6 @@ caps.latest.revision: 16
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
-ms.workload: "Inactive"
 ---
 # Delete Catalog Items (Management Studio)
   Use this page to delete shared schedules and role definitions.  

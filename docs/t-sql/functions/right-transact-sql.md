@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "character strings [SQL Server], RIGHT"
 ms.assetid: 43f1fe1f-aa18-47e3-ba20-e03e32254a6d
 caps.latest.revision: 37
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "Active"
 ---
 # RIGHT (Transact-SQL)

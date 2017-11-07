@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "SMALLDATETIMEFROMPARTS function"
 ms.assetid: 7467fdab-e588-419c-9e29-42caec34a9ea
 caps.latest.revision: 14
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "On Demand"
 ---
 # SMALLDATETIMEFROMPARTS (Transact-SQL)

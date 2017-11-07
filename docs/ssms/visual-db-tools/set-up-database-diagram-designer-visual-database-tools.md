@@ -20,7 +20,6 @@ caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Set Up Database Diagram Designer (Visual Database Tools)
 To use Database Diagram Designer, it must first be set up by a member of the **db_owner** role to control access to diagrams.  

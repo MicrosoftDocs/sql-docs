@@ -20,7 +20,6 @@ caps.latest.revision: 30
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # ConnectionString Property (SqlServerAlias Class)
   Gets the connection string that is used to establish the connection for the server connection alias.  

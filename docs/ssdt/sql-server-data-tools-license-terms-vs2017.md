@@ -14,7 +14,6 @@ caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
-ms.workload: "On Demand"
 ---
 # SQL Server Data Tools - License Terms
 ## MICROSOFT SOFTWARE LICENSE TERMS  

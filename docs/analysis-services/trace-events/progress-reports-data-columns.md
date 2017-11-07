@@ -15,8 +15,7 @@ ms.assetid: d34a6322-e26b-4454-b98f-32307d6956b5
 caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # Progress Reports Data Columns
   The Progress Reports event category has the following event classes:  

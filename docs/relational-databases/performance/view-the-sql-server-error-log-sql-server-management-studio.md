@@ -20,7 +20,6 @@ caps.latest.revision: 14
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Active"
 ---
 # View the SQL Server Error Log (SQL Server Management Studio)
 

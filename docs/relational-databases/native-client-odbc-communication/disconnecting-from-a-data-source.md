@@ -27,7 +27,6 @@ caps.latest.revision: 31
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Disconnecting from a Data Source
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]

@@ -18,10 +18,9 @@ helpviewer_keywords:
   - "sp_addmergefilter"
 ms.assetid: 4c118cb1-2008-44e2-a797-34b7dc34d6b1
 caps.latest.revision: 49
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # sp_addmergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

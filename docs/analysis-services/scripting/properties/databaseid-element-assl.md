@@ -23,8 +23,7 @@ ms.assetid: 6bcf2bd5-b037-4964-bc72-42e0c89f9716
 caps.latest.revision: 9
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # DatabaseID Element (ASSL)
   Identifies the [Database](../../../analysis-services/scripting/objects/database-element-assl.md) element associated with an out-of-line [Binding](../../../analysis-services/scripting/data-type/binding-data-type-assl.md) element.  

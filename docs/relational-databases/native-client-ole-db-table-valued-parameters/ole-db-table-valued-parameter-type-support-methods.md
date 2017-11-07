@@ -16,7 +16,6 @@ caps.latest.revision: 11
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # OLE DB Table-Valued Parameter Type Support (Methods)
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]

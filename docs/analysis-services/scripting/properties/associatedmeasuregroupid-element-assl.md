@@ -25,8 +25,7 @@ ms.assetid: a18ff25b-00a2-4ddf-abcc-ef4d52c8a462
 caps.latest.revision: 36
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # AssociatedMeasureGroupID Element (ASSL)
   Contains the ID of the [MeasureGroup](../../../analysis-services/scripting/objects/measuregroup-element-assl.md) element associated with a [CalculationProperty](../../../analysis-services/scripting/objects/calculationproperty-element-assl.md) element or a [Kpi](../../../analysis-services/scripting/objects/kpi-element-assl.md) element.  

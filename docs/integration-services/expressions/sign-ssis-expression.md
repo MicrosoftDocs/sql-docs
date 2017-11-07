@@ -18,7 +18,6 @@ caps.latest.revision: 32
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # SIGN (SSIS Expression)
   Returns the positive (+1), negative (-1), or zero (0) sign of a numeric expression.  

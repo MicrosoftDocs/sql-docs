@@ -19,7 +19,6 @@ caps.latest.revision: 48
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Strategies for Backing Up and Restoring Merge Replication
   For merge replication, back up the following databases regularly:  

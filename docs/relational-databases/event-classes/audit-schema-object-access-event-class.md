@@ -16,7 +16,6 @@ caps.latest.revision: 29
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Audit Schema Object Access Event Class
   The **Audit Schema Object Access** event class occurs when an object permission (such as SELECT) is used.  

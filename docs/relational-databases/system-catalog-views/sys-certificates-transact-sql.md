@@ -20,10 +20,9 @@ helpviewer_keywords:
   - "sys.certificates catalog view"
 ms.assetid: e5046102-a65c-401e-b80d-05636884dec9
 caps.latest.revision: 39
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "On Demand"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # sys.certificates (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]

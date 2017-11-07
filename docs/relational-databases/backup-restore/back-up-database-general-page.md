@@ -16,7 +16,6 @@ caps.latest.revision: 64
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "On Demand"
 ---
 # Back Up Database (General Page)
   Use the **General** page of the **Back Up Database** dialog box to view or modify settings for a database back up operation.  

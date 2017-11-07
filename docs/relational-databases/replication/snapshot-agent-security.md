@@ -18,7 +18,6 @@ caps.latest.revision: 21
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Snapshot Agent Security
   The **Snapshot Agent Security** dialog box allows you to specify:  

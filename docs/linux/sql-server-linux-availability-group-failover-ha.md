@@ -9,7 +9,6 @@ ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 
-ms.workload: "Inactive"
 ---
 # Operate HA availability group for SQL Server on Linux
 

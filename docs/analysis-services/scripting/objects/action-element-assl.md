@@ -25,8 +25,7 @@ ms.assetid: aaee06a2-91c6-4007-b787-79cb08d63c77
 caps.latest.revision: 41
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # Action Element (ASSL)
   Contains information about an action available in a [Cube](../../../analysis-services/scripting/objects/cube-element-assl.md) element or a [Perspective](../../../analysis-services/scripting/objects/perspective-element-assl.md) element.  

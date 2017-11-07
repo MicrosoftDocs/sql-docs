@@ -14,7 +14,6 @@ caps.latest.revision: 6
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # ODBC Driver Behavior Change When Handling Character Conversions
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]

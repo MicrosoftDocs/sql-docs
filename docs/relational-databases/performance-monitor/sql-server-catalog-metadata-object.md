@@ -16,7 +16,6 @@ caps.latest.revision: 4
 author: "dagiro"
 ms.author: "v-dagir"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # SQL Server, Catalog Metadata Object
 The **SQLServer:Catalog Metadata** performance object provides counters for catalog metadata for SQL Server.

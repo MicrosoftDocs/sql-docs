@@ -16,7 +16,6 @@ caps.latest.revision: 44
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Advanced Edit (Condition) Dialog Box
   Use the **Advanced Edit** dialog box to create complex expressions for Policy-Based Management conditions.  

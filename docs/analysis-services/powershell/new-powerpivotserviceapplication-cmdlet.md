@@ -13,7 +13,7 @@ ms.assetid: 7bb2a2d2-04c8-43d4-a0fc-e8339ea22138
 caps.latest.revision: 10
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # New-PowerPivotServiceApplication cmdlet

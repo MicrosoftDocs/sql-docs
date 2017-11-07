@@ -23,9 +23,9 @@ helpviewer_keywords:
   - "lowercase characters"
 ms.assetid: 5ced55f7-ac89-4cf2-9465-f63f4dc480db
 caps.latest.revision: 26
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "Active"
 ---
 # UPPER (Transact-SQL)

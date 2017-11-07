@@ -16,7 +16,6 @@ caps.latest.revision: 32
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # SQL:StmtCompleted Event Class
   The SQL:StmtCompleted event class indicates that a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement has completed.  

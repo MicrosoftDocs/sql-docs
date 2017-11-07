@@ -17,7 +17,6 @@ caps.latest.revision: 22
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Execute Stored Procedure with RPC and Process Output
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]

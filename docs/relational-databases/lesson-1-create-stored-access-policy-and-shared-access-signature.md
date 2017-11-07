@@ -17,7 +17,6 @@ caps.latest.revision: 22
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
-ms.workload: "On Demand"
 ---
 # Lesson 1: Create stored access policy and shared access signature
 In this lesson, you will use an [Azure PowerShell](https://azure.microsoft.com/en-us/documentation/articles/powershell-install-configure/) script to create a shared access signature on an Azure blob container using a stored access policy.  

@@ -16,7 +16,6 @@ caps.latest.revision: 23
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "On Demand"
 ---
 # Create and Manage Full-Text Indexes
 This topic describes how to create, populate, and manage full-text indexes in SQL Server.

@@ -18,7 +18,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Data Type Limitations
 The Microsoft ODBC Desktop Database Drivers impose the following limitations on data types:  

@@ -15,7 +15,6 @@ author: "BarbKess"
 ms.author: "barbkess"
 manager: "jhubbard"
 robots: noindex,nofollow
-ms.workload: "On Demand"
 ---
 # Wide World Importers data warehousing and analytics database
 Documentation for the Wide World Importers data warehousing and analytics database.

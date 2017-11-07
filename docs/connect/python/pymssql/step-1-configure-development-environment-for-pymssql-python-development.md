@@ -14,7 +14,6 @@ caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
-ms.workload: "Active"
 ---
 # Step 1: Configure development environment for pymssql Python development
 You will need to configure your development environment with the prerequisites in order to develop an application using the Python Driver for SQL Server.    

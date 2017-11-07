@@ -20,7 +20,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Errors and Batches
 When an error occurs while executing a batch of SQL statements, one of the following four outcomes are possible. (Each possible outcome is data source–specific and might even depend on the statements included in the batch.)  

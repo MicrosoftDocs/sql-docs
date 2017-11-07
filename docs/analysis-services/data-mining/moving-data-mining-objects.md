@@ -20,7 +20,7 @@ ms.assetid: bc108407-2603-4387-b930-b5bb9df78069
 caps.latest.revision: 45
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # Moving Data Mining Objects

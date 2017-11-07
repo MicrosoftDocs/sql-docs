@@ -14,7 +14,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # SQL Data Types in ODBC
 SQL data types are the types in which data is stored in the data source.  

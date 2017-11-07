@@ -16,7 +16,6 @@ caps.latest.revision: 38
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Secure a Replication Topology
   Security accounts, logins, and passwords required by replication are supplied when replication is configured and when publications and subscriptions are created. These security settings can be changed later using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], replication stored procedures, and Replication Management Objects (RMO). The following topics describe how to modify replication security settings.  

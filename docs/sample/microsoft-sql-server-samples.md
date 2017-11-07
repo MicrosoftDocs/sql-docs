@@ -14,7 +14,6 @@ author: "BarbKess"
 ms.author: "barbkess"
 manager: "jhubbard"
 robots: noindex,nofollow
-ms.workload: "On Demand"
 ---
 # Microsoft SQL Server Samples
 This gallery contains sample databases and other samples for Microsoft SQL products including SQL Server and Azure SQL Database.   
@@ -24,7 +23,7 @@ This gallery contains sample databases and other samples for Microsoft SQL produ
 We are pleased to feature a new sample database called Wide World Importers (WWI), developed to showcase database design using current features, tools and design techniques. The samples include an OLTP and an OLAP database which are built to run on SQL Server 2016 and later. 
 
 ## Documentation
-The [WWI documentation](./world-wide-importers/wide-world-importers-documentation.md) is on Microsoft Docs.   
+The [WWI documentation](https://msdn.microsoft.com/library/mt734199(v=sql.1).aspx) is on MSDN.   
   
 
 ## SQL Server Samples repository

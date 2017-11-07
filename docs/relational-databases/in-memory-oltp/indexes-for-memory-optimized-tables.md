@@ -3,7 +3,7 @@ title: "Indexes for Memory-Optimized Tables | Microsoft Docs"
 ms.custom: 
   - "MSDN content"
   - "MSDN - SQL DB"
-ms.date: "11/6/2017"
+ms.date: "06/12/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.service:
@@ -17,7 +17,6 @@ caps.latest.revision: 14
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
-ms.workload: "On Demand"
 ---
 # Indexes for Memory-Optimized Tables
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -38,7 +37,7 @@ This article describes the types of indexes that are available for a memory-opti
   
 ## A. Syntax for memory-optimized indexes  
   
-Each CREATE TABLE statement for a memory-optimized table must include and index, either explicitly through an INDEX or implicitly through a PRIMAY KEY or UNIQUE constraint. The index must be one of the following:  
+Each CREATE TABLE statement for a memory-optimized table must include between 1 and 8 clauses to declare indexes. The index must be one of the following:  
   
 - Hash index.  
 - Nonclustered index (meaning the default internal structure of a B-tree).  
@@ -60,10 +59,7 @@ To be declared with the default DURABILITY = SCHEMA_AND_DATA, the memory-optimiz
         WITH (  
             MEMORY_OPTIMIZED = ON,  
             DURABILITY = SCHEMA_AND_DATA);  
-> [!NOTE]  
->  [!INCLUDE[ssSQL15](../../includes/sssql14-md.md)] and [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] have a limit of 8 indexes per memory-optimized table or table type. 
->  Starting [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] and in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] there is no longer a limit on the number of indexes specific to memory-optimized tables and table types.
-
+  
   
   
 ### A.1 Code sample for syntax  

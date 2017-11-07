@@ -18,10 +18,9 @@ helpviewer_keywords:
   - "sp_addpullsubscription_agent"
 ms.assetid: b9c2eaed-6d2d-4b78-ae9b-73633133180b
 caps.latest.revision: 44
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # sp_addpullsubscription_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

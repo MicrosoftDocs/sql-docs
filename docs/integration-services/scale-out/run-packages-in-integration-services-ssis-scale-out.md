@@ -15,7 +15,6 @@ ms.author: "haoqian"
 manager: "jhubbard"
 f1_keywords: 
   - "sql13.ssis.ssms.ispackageexecuteinscaleout.f1"
-ms.workload: "Inactive"
 ---
 
 # Run packages in Integration Services (SSIS) Scale Out

@@ -23,7 +23,6 @@ caps.latest.revision: 36
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Profiling ODBC Driver Performance
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]

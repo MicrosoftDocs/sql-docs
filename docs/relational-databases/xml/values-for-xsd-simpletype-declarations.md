@@ -16,7 +16,6 @@ caps.latest.revision: 14
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Values for &lt;xsd:simpleType&gt; Declarations
   The following table outlines the restrictions that are applied, based on all recognized XSD simple type enumerations.  

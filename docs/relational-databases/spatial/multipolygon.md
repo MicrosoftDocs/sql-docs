@@ -17,7 +17,6 @@ caps.latest.revision: 20
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # MultiPolygon
   A **MultiPolygon** instance is a collection of zero or more **Polygon** instances.  

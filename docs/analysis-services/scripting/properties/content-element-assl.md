@@ -25,8 +25,7 @@ ms.assetid: 221addef-2f88-49c5-b8f5-9eee330497a9
 caps.latest.revision: 43
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # Content Element (ASSL)
   Describes the content of the column in the [MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md) element.  

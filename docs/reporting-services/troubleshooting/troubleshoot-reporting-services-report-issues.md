@@ -15,7 +15,6 @@ caps.latest.revision: 9
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
-ms.workload: "Inactive"
 ---
 # Troubleshoot  Reporting Services Report Issues
 This topic helps you troubleshoot problems with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion.md)] report design, previewing a report, publishing a report to a report server in native mode or SharePoint mode, viewing a report on the report server, or exporting a report to a different file format.  

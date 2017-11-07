@@ -19,7 +19,6 @@ caps.latest.revision: 32
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Managing Bulk Copy Batch Sizes
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]

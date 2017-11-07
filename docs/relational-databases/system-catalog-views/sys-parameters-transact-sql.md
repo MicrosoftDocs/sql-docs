@@ -21,10 +21,9 @@ helpviewer_keywords:
   - "table-valued parameters,sys.parameters"
 ms.assetid: 24e2764b-c8e5-4322-97a4-7407d8b8a92b
 caps.latest.revision: 49
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # sys.parameters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]

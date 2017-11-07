@@ -25,10 +25,9 @@ helpviewer_keywords:
   - "WritebackTableCreation element"
 ms.assetid: e9579d63-e28c-4d4e-9f4a-21c5da24c276
 caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+author: "jeannt"
+ms.author: "jeannt"
+manager: "erikre"
 ---
 # WritebackTableCreation Element (XMLA)
   Determines whether a writeback table is created during the [Process](../../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md) operation.  

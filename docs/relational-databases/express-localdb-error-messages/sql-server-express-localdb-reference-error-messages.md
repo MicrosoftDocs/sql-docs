@@ -14,7 +14,6 @@ caps.latest.revision: 8
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # SQL Server Express LocalDB Reference - Error Messages
   This section provides reference information about the following SQL Server Express LocalDB error messages:  

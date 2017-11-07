@@ -14,7 +14,6 @@ caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
-ms.workload: "On Demand"
 ---
 # Visual Database Tools
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] includes visual designers for building [!INCLUDE[tsql](../../includes/tsql_md.md)] queries, tables, and diagramming databases.  

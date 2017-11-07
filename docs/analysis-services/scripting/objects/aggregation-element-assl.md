@@ -25,8 +25,7 @@ ms.assetid: f37af388-b2b3-4234-a1d6-936ee9b7f2ae
 caps.latest.revision: 39
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # Aggregation Element (ASSL)
   Defines a single aggregation for a [Partition](../../../analysis-services/scripting/objects/partition-element-assl.md) element.  

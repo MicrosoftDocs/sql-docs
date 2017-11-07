@@ -23,7 +23,6 @@ caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
-ms.workload: "Active"
 ---
 # SQL Server Agent Fixed Database Roles
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] has the following **msdb** database fixed database roles, which give administrators finer control over access to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent. The roles listed from least to most privileged access are:  

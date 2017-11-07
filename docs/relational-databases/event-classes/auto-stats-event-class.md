@@ -16,7 +16,6 @@ caps.latest.revision: 34
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Auto Stats Event Class
   The **Auto Stats** event class indicates that an automatic updating of index and column statistics has occurred.  

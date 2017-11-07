@@ -21,7 +21,6 @@ caps.latest.revision: 31
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # MultiIpConfigurationSupport Property (ServerNetworkProtocol Class)
   Gets the Boolean property that specifies whether multiple IP addresses are supported by a server network protocol.  

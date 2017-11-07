@@ -16,7 +16,6 @@ caps.latest.revision: 27
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Publisher Information, Publications
   The **Publications** tab provides summary information for all publications at the Publisher selected in the left pane.  

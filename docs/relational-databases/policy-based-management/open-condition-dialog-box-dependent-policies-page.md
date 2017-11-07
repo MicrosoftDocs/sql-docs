@@ -16,7 +16,6 @@ caps.latest.revision: 21
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Open Condition Dialog Box, Dependent Policies Page
   Use this dialog box to display a list of policies that currently reference this Policy-Based Management condition. For more information about how conditions relate to facets and policies, see [Administer Servers by Using Policy-Based Management](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md).  

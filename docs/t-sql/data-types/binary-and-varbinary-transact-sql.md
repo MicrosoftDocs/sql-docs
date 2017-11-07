@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "binary [SQL Server], about binary data type"
 ms.assetid: bcce65f9-10db-4b3e-bfaf-dfc06c6f820f
 caps.latest.revision: 27
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "Active"
 ---
 # binary and varbinary (Transact-SQL)

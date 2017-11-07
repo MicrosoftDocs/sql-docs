@@ -17,7 +17,6 @@ caps.latest.revision: 7
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Hadoop Connection Manager
   The Hadoop connection manager enables an SSIS package to connect to a Hadoop cluster by using the values you specify for the properties.  

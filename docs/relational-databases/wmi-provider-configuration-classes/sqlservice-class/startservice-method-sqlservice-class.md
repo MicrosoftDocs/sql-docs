@@ -21,7 +21,6 @@ caps.latest.revision: 34
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # StartService Method (SqlService Class)
   Attempts to place the service into its started state.  

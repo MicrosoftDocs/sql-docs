@@ -13,7 +13,7 @@ ms.assetid: a49c4af4-e243-4926-be97-74da1f9d54eb
 caps.latest.revision: 20
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # Upgrade Workbooks and Scheduled Data Refresh (SharePoint 2013)

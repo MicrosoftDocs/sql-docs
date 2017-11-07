@@ -15,7 +15,7 @@ ms.assetid: 095039c2-7104-414c-a9a6-327b03ce79df
 caps.latest.revision: 17
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "On Demand"
 ---
 # Lesson 4-4 - Hiding and Disabling Attribute Hierarchies

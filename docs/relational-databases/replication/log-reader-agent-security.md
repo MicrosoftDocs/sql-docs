@@ -18,7 +18,6 @@ caps.latest.revision: 20
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Log Reader Agent Security
   The **Log Reader Agent Security** dialog box allows you to specify:  

@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "ALTER EXTERNAL RESOURCE POOL statement"
 ms.assetid: 634c327d-971b-49ba-b8a2-e243a04040db
 caps.latest.revision: 10
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # ALTER EXTERNAL RESOURCE POOL (Transact-SQL)

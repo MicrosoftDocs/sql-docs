@@ -16,7 +16,6 @@ caps.latest.revision: 30
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Exchange Spill Event Class
   The **Exchange Spill** event class indicates that communication buffers in a parallel query plan have been temporarily written to the **tempdb** database. This occurs rarely and only when a query plan has multiple range scans.  

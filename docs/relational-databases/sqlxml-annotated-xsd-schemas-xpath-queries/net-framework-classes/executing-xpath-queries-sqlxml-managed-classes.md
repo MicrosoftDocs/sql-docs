@@ -20,7 +20,6 @@ caps.latest.revision: 20
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Executing XPath Queries (SQLXML Managed Classes)
   This example illustrates how XPath queries are executed against a mapping schema.  

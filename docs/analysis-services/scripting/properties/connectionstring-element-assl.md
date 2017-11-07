@@ -25,8 +25,7 @@ ms.assetid: f74181c4-7df7-4fbd-94dd-e4ad03dffe14
 caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # ConnectionString Element (ASSL)
   Contains the encrypted connection string for a [DataSource](../../../analysis-services/scripting/objects/datasource-element-assl.md) element.  

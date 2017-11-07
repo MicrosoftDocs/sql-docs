@@ -18,7 +18,6 @@ caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # SQL to C: Date
 The identifier for the date ODBC SQL data type is:  

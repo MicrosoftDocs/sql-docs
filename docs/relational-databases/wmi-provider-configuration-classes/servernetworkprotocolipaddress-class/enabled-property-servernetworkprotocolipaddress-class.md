@@ -21,7 +21,6 @@ caps.latest.revision: 14
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Enabled Property (ServerNetworkProtocolIpAddress Class)
   Gets the Boolean property that specifies whether an IP address is enabled.  

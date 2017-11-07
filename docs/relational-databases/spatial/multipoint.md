@@ -16,7 +16,6 @@ caps.latest.revision: 15
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # MultiPoint
   A **MultiPoint** is a collection of zero or more points. The boundary of a **MultiPoint** instance is empty.  

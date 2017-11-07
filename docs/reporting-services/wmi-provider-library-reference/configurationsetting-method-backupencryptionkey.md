@@ -22,7 +22,6 @@ caps.latest.revision: 21
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
-ms.workload: "Inactive"
 ---
 # ConfigurationSetting Method - BackupEncryptionKey
   Backs up the encryption key for the specified report server instance. The encryption key is stored encrypted with a password.  

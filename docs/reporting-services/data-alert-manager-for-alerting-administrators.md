@@ -18,7 +18,6 @@ caps.latest.revision: 22
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
-ms.workload: "Inactive"
 ---
 # Data Alert Manager for Alerting Administrators
 

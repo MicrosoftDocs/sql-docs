@@ -13,10 +13,9 @@ helpviewer_keywords:
   - "7908 (Database Engine error)"
 ms.assetid: 470045b0-ebe9-44a7-b456-480e7a516a2c
 caps.latest.revision: 16
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # MSSQLSERVER_7908
   

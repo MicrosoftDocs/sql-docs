@@ -17,7 +17,6 @@ caps.latest.revision: 15
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # SQL Server, Wait Statistics Object
   The **SQLServer:Wait Statistics** performance object contains performance counters that report information about wait status.  

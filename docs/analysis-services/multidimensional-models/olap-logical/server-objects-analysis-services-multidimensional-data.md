@@ -18,7 +18,7 @@ ms.assetid: 365bfd63-c55a-433d-9e1a-a788bc149a25
 caps.latest.revision: 9
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # Server Objects (Analysis Services - Multidimensional Data)

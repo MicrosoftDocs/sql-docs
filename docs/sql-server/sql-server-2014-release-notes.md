@@ -13,7 +13,6 @@ caps.latest.revision: 100
 author: "craigg-msft"
 ms.author: "craigg"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # SQL Server 2014 Release Notes
 This Release Notes document describes known issues that you should read about before you install or troubleshoot [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  

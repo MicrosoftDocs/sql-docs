@@ -18,7 +18,6 @@ caps.latest.revision: 17
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Accessing the Current Transaction
   If a transaction is active at the point at which common language runtime (CLR) code running on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is entered, the transaction is exposed through the **System.Transactions.Transaction** class. The **Transaction.Current** property is used to access the current transaction. In most cases it is not necessary to access the transaction explicitly. For database connections, ADO.NET checks **Transaction.Current** automatically when the **Connection.Open** method is called, and transparently enlists the connection in that transaction (unless the **Enlist** keyword is set to false in the connection string).  

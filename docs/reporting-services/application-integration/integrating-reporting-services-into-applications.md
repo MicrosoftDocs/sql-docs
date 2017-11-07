@@ -15,7 +15,6 @@ applies_to:
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
-ms.workload: "On Demand"
 ---
 # Integrating Reporting Services into Applications
 

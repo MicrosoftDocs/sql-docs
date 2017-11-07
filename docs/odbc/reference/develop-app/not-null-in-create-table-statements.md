@@ -17,7 +17,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # NOT NULL in CREATE TABLE Statements
 Some databases, and especially desktop databases, do not support the **NOT NULL** column constraint in **CREATE TABLE** statements. For more information, see the SQL_NON_NULLABLE_COLUMNS option in the [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md) function description.

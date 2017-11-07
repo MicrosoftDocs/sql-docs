@@ -13,10 +13,9 @@ helpviewer_keywords:
   - "511 (Database Engine error)"
 ms.assetid: 0c85686a-53c1-4180-ba8c-2000e68a0d63
 caps.latest.revision: 11
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # MSSQLSERVER_511
   

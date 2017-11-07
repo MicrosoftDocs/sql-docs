@@ -15,7 +15,7 @@ ms.assetid: 128f6dde-409d-4c12-9820-3305bab57b75
 caps.latest.revision: 19
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "On Demand"
 ---
 # Data providers used for Analysis Services connections

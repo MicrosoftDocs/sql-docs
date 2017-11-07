@@ -16,7 +16,6 @@ caps.latest.revision: 39
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "On Demand"
 ---
 # What&#39;s New (Replication)
   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] has not introduced significant new features to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] replication.  

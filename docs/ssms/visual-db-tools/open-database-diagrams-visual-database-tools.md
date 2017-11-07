@@ -18,7 +18,6 @@ caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Open Database Diagrams (Visual Database Tools)
 You can open database diagrams to view or edit the diagram's structure.  

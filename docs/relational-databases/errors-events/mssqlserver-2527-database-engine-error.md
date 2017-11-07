@@ -13,10 +13,9 @@ helpviewer_keywords:
   - "2527 (Database Engine error)"
 ms.assetid: 1cef90ef-9c39-44e6-bc7f-316c8f53c10c
 caps.latest.revision: 17
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # MSSQLSERVER_2527
   

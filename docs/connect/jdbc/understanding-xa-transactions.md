@@ -14,7 +14,6 @@ caps.latest.revision: 80
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
-ms.workload: "On Demand"
 ---
 # Understanding XA Transactions
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

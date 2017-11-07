@@ -18,7 +18,6 @@ caps.latest.revision: 31
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "On Demand"
 ---
 # Synonyms (Database Engine)
   A synonym is a database object that serves the following purposes:  

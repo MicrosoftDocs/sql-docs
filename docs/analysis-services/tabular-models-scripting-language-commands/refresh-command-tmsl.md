@@ -14,8 +14,7 @@ ms.assetid: 97ff6ba8-c236-4ba6-8220-b0fcb9e1dc5c
 caps.latest.revision: 14
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # Refresh command (TMSL)
 

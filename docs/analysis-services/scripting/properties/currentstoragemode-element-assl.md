@@ -25,8 +25,7 @@ ms.assetid: 050c21e4-368b-4ff0-b0c5-349f93fe9747
 caps.latest.revision: 38
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # CurrentStorageMode Element (ASSL)
   Determines the current storage mode for the parent element.  

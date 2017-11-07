@@ -14,7 +14,7 @@ ms.assetid: 6c435e40-bfaf-4073-8cef-bc3260602246
 caps.latest.revision: 9
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "On Demand"
 ---
 # Analysis Services PowerShell Reference

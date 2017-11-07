@@ -26,9 +26,9 @@ helpviewer_keywords:
   - "verifying object exists"
 ms.assetid: f89286db-440f-4218-a828-30881ce3077a
 caps.latest.revision: 63
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "Active"
 ---
 # OBJECT_ID (Transact-SQL)

@@ -20,7 +20,6 @@ caps.latest.revision: 15
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # BinaryPath Property (SqlService Class )
   Gets the binary path of the service.  

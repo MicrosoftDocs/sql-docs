@@ -16,7 +16,6 @@ caps.latest.revision: 32
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Publication Types for Transactional Replication
   Transactional replication offers three publication types:  

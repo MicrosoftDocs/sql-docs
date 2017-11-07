@@ -17,7 +17,6 @@ caps.latest.revision: 37
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Create New Condition or Open Condition Dialog Box, Description Page
   Use this dialog box to add a description to a Policy-Based Management condition.  

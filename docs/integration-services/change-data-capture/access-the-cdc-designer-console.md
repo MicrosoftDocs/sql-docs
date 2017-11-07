@@ -16,7 +16,6 @@ caps.latest.revision: 9
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Access the CDC Designer Console
   You can access the CDC Designer Console from the computer where you installed the console. For more information about installation, see Installation.  

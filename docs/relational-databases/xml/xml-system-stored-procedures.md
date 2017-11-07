@@ -20,7 +20,6 @@ caps.latest.revision: 27
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # XML System Stored Procedures
   SQL Server provides the following system stored procedures that are used together with OPENXML:  

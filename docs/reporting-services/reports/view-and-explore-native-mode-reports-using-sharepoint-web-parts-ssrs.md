@@ -15,7 +15,6 @@ caps.latest.revision: 9
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
-ms.workload: "Inactive"
 ---
 
 # View and Explore Native Mode Reports Using SharePoint Web Parts (SSRS)

@@ -24,7 +24,7 @@ ms.assetid: 92a1e67e-f46e-4960-99b2-4d20f6192fbd
 caps.latest.revision: 62
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "jhubbard"
 ms.workload: "On Demand"
 ---
 # Microsoft Clustering Algorithm

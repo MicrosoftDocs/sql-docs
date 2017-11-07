@@ -25,8 +25,7 @@ ms.assetid: 0edece73-236f-4661-8102-3fcc29326bf4
 caps.latest.revision: 35
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # Text Element (ASSL)
   Contains the text of a [Command](../../../analysis-services/scripting/objects/command-element-assl.md) element.  

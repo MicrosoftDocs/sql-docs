@@ -22,7 +22,6 @@ caps.latest.revision: 34
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
-ms.workload: "Inactive"
 ---
 # ConfigurationSetting Property - DatabaseServerName
   Specifies the name of the server on which the report server database is installed. Read/write.  

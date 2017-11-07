@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "DECRYPTBYKEY function"
 ms.assetid: 6edf121f-ac62-4dae-90e6-6938f32603c9
 caps.latest.revision: 39
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "On Demand"
 ---
 # DECRYPTBYKEY (Transact-SQL)

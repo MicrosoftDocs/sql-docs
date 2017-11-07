@@ -25,8 +25,7 @@ ms.assetid: 5fda5563-cb7a-4402-82ad-3d6c432b6a7e
 caps.latest.revision: 39
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # AllMemberName Element (ASSL)
   Contains the caption in the default language for the All member of a [Hierarchy](../../../analysis-services/scripting/objects/hierarchy-element-assl.md) element.  

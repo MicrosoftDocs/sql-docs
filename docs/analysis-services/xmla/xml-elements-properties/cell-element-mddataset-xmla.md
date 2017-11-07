@@ -25,10 +25,9 @@ helpviewer_keywords:
   - "Cell element"
 ms.assetid: c4ea08a4-f653-4ade-be07-b91eb5b1ef32
 caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+author: "jeannt"
+ms.author: "jeannt"
+manager: "erikre"
 ---
 # Cell Element (MDDataSet) (XMLA)
   Contains information about a single cell contained by a parent [CellData](../../../analysis-services/xmla/xml-elements-properties/celldata-element-xmla.md) element.  

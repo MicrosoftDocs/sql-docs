@@ -17,7 +17,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # DISTINCT Keyword Limitations
 Not supported for Long Text fields (Microsoft Access) or Memo fields (dBASE).

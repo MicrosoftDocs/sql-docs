@@ -14,7 +14,7 @@ ms.assetid: 42c896ee-e5ee-4017-b66e-31d1fe66d369
 caps.latest.revision: 5
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # Create Drillthrough Queries using DMX

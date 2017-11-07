@@ -14,7 +14,6 @@ caps.latest.revision: 14
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Date and Time Improvements
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]

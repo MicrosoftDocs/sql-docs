@@ -16,7 +16,6 @@ caps.latest.revision: 10
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Distributor Information, Publications
   The **Publications** tab provides summary information for all publications at the Distributor that is selected in the left pane.  

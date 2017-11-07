@@ -16,7 +16,6 @@ caps.latest.revision: 31
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Scan:Stopped Event Class
   The Scan:Stopped event class occurs when a table or index scan stops.  

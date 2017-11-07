@@ -19,7 +19,6 @@ caps.latest.revision: 7
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Hardware and Software Requirements (ODBC)
 This topic lists requirements for using the ODBC Desktop Database Drivers.  

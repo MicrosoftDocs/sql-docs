@@ -18,7 +18,6 @@ caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Manage Files with Encoding
 To facilitate the display of your code in a particular language and on a particular platform, you can associate a particular character encoding with a file.  

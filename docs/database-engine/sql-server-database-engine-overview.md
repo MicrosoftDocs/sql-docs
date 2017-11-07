@@ -17,7 +17,6 @@ caps.latest.revision: 48
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "Active"
 ---
 # SQL Server Database Engine
   The [!INCLUDE[ssDE](../includes/ssde-md.md)] is the core service for storing, processing, and securing data. The [!INCLUDE[ssDE](../includes/ssde-md.md)] provides controlled access and rapid transaction processing to meet the requirements of the most demanding data consuming applications within your enterprise.  

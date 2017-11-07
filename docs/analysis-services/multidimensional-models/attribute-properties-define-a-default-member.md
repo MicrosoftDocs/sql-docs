@@ -20,7 +20,7 @@ ms.assetid: db487856-ee21-49c3-aa08-d9136e193374
 caps.latest.revision: 36
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # Attribute Properties - Define a Default Member

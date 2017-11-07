@@ -13,10 +13,9 @@ helpviewer_keywords:
   - "17803 (Database Engine error)"
 ms.assetid: 28591a19-258d-4891-b78a-4686789bb2d7
 caps.latest.revision: 14
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # MSSQLSERVER_17803
   

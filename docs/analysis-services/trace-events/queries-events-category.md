@@ -17,8 +17,7 @@ ms.assetid: 99e1d1d6-f03f-4dd0-b467-ea915aea7667
 caps.latest.revision: 27
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # Queries Events Category
   The Queries Events event category has the event classes described in the following table.  

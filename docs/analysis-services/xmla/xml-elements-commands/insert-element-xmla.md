@@ -25,10 +25,9 @@ helpviewer_keywords:
   - "Insert command"
 ms.assetid: d1137033-cc19-4bcb-b93d-8575f17bea6b
 caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+author: "jeannt"
+ms.author: "jeannt"
+manager: "erikre"
 ---
 # Insert Element (XMLA)
   Inserts attribute members into a dimension.  

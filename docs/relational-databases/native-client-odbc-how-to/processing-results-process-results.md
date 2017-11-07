@@ -16,7 +16,6 @@ caps.latest.revision: 16
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Processing Results - Process Results
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]

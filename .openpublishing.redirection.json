@@ -3104,12 +3104,6 @@
             "source_path": "docs/reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md",
             "redirect_url": "/sql/reporting-services/report-server-sharepoint/report-viewer-web-part-sharepoint-site",
             "redirect_document_id": false
-        },
-        {
-            "source_path": "docs/analytics-platform-system/configure-wsus.md",
-            "redirect_url": "/sql/analytics-platform-system/configure-windows-server-update-services-wsus",
-            "redirect_document_id": false
         }
-
     ]
 }

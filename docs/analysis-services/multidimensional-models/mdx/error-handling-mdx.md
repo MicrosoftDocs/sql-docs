@@ -18,7 +18,7 @@ ms.assetid: bc6ff0af-9fe6-44d6-bc3c-801d71ea41a9
 caps.latest.revision: 26
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # Error Handling (MDX)

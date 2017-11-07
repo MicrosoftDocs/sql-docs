@@ -16,7 +16,6 @@ caps.latest.revision: 32
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # RPC Output Parameter Event Class
   The RPC Output Parameter event class traces the output parameter values of remote procedure calls (RPCs) after execution.  

@@ -16,7 +16,6 @@ caps.latest.revision: 17
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Log Shipping Monitor Settings
   Use this page to configure and to modify the properties of the log shipping monitor server.  

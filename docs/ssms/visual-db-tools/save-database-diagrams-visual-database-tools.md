@@ -18,7 +18,6 @@ caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Save Database Diagrams (Visual Database Tools)
 By saving a database diagram, you can save all the changes you made to it, including any changes you made to the tables, columns, and other database objects.  

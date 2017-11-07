@@ -18,7 +18,6 @@ caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Windows Dialog Box (Microsoft Document Explorer Help)
 This dialog box enables you to display, close, and arrange documents that are open in editors and designers. You can display this dialog box by clicking **Windows** on the **Window** menu.  

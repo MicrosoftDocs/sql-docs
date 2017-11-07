@@ -17,7 +17,6 @@ caps.latest.revision: 77
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Database Mirroring - Establish Session - Windows Authentication
     

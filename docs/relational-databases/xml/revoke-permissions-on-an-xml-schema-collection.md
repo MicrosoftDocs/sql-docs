@@ -16,7 +16,6 @@ caps.latest.revision: 25
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Revoke Permissions on an XML Schema Collection
   The permission to create an XML schema collection can be revoked by using one of the following:  

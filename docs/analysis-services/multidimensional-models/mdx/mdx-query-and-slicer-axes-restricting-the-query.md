@@ -20,7 +20,7 @@ ms.assetid: a64b8172-cd73-42f9-8847-52e967b9697a
 caps.latest.revision: 30
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "On Demand"
 ---
 # MDX Query and Slicer Axes - Restricting the Query

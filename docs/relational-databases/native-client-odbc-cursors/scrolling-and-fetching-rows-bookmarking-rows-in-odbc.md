@@ -20,7 +20,6 @@ caps.latest.revision: 31
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Scrolling and Fetching Rows - Bookmarking Rows in ODBC
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]

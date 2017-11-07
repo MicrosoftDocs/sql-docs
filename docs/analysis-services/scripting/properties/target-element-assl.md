@@ -25,8 +25,7 @@ ms.assetid: 08ce0441-94b6-4f1d-acba-f31c8212cb79
 caps.latest.revision: 33
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # Target Element (ASSL)
   Identifies the target of the [Action](../../../analysis-services/scripting/objects/action-element-assl.md) element.  

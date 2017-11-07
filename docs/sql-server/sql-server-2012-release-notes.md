@@ -15,7 +15,6 @@ caps.latest.revision: 21
 author: "craigg-msft"
 ms.author: "craigg"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # SQL Server 2012 Release Notes
 This Release Notes document describes known issues that you should read about before you install or troubleshoot Microsoft SQL Server 2012 ([click here to download it](http://go.microsoft.com/fwlink/?LinkId=238647)). This Release Notes document is available online only, not on the installation media, and it is updated periodically.  

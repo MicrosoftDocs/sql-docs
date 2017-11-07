@@ -17,8 +17,7 @@ ms.assetid: 5f215a7a-dab8-458c-b846-2d261e957849
 caps.latest.revision: 21
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # Notification Events Event Category
   The Notification Events event category has the event classes described in the following table.  

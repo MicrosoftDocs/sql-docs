@@ -18,7 +18,7 @@ ms.assetid: 7f83d1cb-4732-424f-adc5-2449c1dd1008
 caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "On Demand"
 ---
 # Dimension Attribute Properties Reference

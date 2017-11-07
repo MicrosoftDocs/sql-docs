@@ -16,8 +16,7 @@ ms.assetid: fdf75c47-77dc-4bdb-9931-8eca198fdb88
 caps.latest.revision: 12
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # Level Element (CSDLBI)
   The Level element is a complex type that defines a single level in a hierarchy  

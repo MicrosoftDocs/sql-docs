@@ -13,10 +13,9 @@ helpviewer_keywords:
   - "10534 (Database Engine error)"
 ms.assetid: e65bb118-99d5-4fdb-b1d5-0ec70f0a677b
 caps.latest.revision: 14
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # MSSQLSERVER_10534
   

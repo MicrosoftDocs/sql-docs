@@ -18,7 +18,6 @@ caps.latest.revision: 23
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Scans Event Category
   The **Scans** event category contains scan events.  

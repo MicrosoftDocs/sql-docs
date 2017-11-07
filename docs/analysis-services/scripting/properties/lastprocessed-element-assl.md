@@ -25,8 +25,7 @@ ms.assetid: df3d1f6f-705c-4408-9eb3-c550a1dec450
 caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # LastProcessed Element (ASSL)
   Contains the read-only timestamp that indicates when the database that contains the parent element was last processed.  

@@ -9,7 +9,6 @@ ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 
-ms.workload: "On Demand"
 ---
 # Configure SQL Server settings with environment variables on Linux
 

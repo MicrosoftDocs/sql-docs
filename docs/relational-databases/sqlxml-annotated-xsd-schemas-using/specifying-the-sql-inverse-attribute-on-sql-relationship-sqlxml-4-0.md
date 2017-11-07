@@ -24,7 +24,6 @@ caps.latest.revision: 26
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Specifying the sql:inverse Attribute on sql:relationship (SQLXML 4.0)
   The **sql:inverse** attribute is useful only when the XSD schema is used for either bulk load or by an updategram. The **sql:inverse** attribute can be specified on the **\<sql:relationship>** element. In updategrams, the updategram logic interprets the schema in determining the tables and columns that are updated by the updategram operation. The parent-child relationships that are specified in the schema determine the order in which the records are modified (inserted or deleted).  

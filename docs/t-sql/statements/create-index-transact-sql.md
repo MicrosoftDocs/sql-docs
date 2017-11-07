@@ -54,9 +54,9 @@ helpviewer_keywords:
   - "XML indexes [SQL Server], creating"
 ms.assetid: d2297805-412b-47b5-aeeb-53388349a5b9
 caps.latest.revision: 223
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "Active"
 ---
 # CREATE INDEX (Transact-SQL)
@@ -1038,6 +1038,19 @@ CREATE INDEX IX_ProductVendor_VendorID
 ```  
 CREATE CLUSTERED INDEX IX_ProductVendor_VendorID   
     ON Purchasing..ProductVendor (VendorID);   
+```  
+  
+### P. Add a column to an index  
+ The following example creates index IX_FF with two columns from the dbo.FactFinance table.  The next statement demonstrates rebuilding that index with the same name and one more column.  
+  
+```  
+CREATE INDEX IX_FF ON dbo.FactFinance (  
+    FinanceKey ASC, DateKey ASC );  
+  
+--Rebuild and add the OrganizationKey  
+CREATE INDEX IX_FF ON dbo.FactFinance (  
+    FinanceKey, DateKey, OrganizationKey DESC)  
+WITH ( DROP_EXISTING = ON );  
 ```  
   
 ## See Also  

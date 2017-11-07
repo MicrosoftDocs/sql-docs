@@ -17,7 +17,6 @@ caps.latest.revision: 7
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Back Up Database (Media Options Page)
   Use the  **Media Options** page of the **Back Up Database** dialog box to view or modify database media options.  

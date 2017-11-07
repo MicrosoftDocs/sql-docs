@@ -16,7 +16,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # ODBC SQL Grammar
 Interoperable applications should always use the ODBC SQL grammar in SQL statements. However, considerable variation is possible even within this grammar. For more information, see [Interoperability of SQL Statements](../../../odbc/reference/develop-app/interoperability-of-sql-statements.md).

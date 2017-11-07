@@ -16,9 +16,9 @@ helpviewer_keywords:
   - "Transact-SQL"
 ms.assetid: dbba47d7-e08e-4435-b876-35dced1f325d
 caps.latest.revision: 14
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "Active"
 ---
 # Transact-SQL Reference (Database Engine)

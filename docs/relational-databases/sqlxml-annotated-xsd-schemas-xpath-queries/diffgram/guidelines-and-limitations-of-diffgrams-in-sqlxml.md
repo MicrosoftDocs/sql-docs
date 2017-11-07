@@ -16,7 +16,6 @@ caps.latest.revision: 7
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Guidelines and Limitations of DiffGrams in SQLXML
   Remember the following when using DiffGrams with SQLXML 4.0:  

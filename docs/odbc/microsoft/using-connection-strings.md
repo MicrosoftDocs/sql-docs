@@ -18,7 +18,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Using Connection Strings
 You can use a connection string to connect to a Visual FoxPro data source.  

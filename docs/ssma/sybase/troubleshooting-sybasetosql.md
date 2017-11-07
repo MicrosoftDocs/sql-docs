@@ -19,7 +19,6 @@ caps.latest.revision: 3
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Troubleshooting (SybaseToSQL)
 It is not uncommon to run into migration issues midway executing the console scripts or commands.  

@@ -14,7 +14,6 @@ caps.latest.revision: 9
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Programming Considerations
 This section briefly discusses a number of topics related to writing ODBC applications and drivers.  

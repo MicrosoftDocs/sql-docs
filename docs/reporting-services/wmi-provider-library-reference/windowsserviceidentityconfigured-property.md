@@ -22,7 +22,6 @@ caps.latest.revision: 17
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
-ms.workload: "Inactive"
 ---
 # WindowsServiceIdentityConfigured Property
   Returns the identity that the Report Server Windows service was last configured to run under. Read-only.  

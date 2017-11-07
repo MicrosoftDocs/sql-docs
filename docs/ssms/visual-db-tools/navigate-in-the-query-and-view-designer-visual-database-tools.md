@@ -19,7 +19,6 @@ caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Navigate in the Query and View Designer (Visual Database Tools)
 You can work in the Query and View Designer using the keyboard or the mouse. Refer to the following tables for specific methods.  

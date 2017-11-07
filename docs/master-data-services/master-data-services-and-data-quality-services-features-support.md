@@ -14,7 +14,6 @@ caps.latest.revision: 3
 author: "smartysanthosh"
 ms.author: "nagavo"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Master Data Services and Data Quality Services Features Support
 

@@ -18,7 +18,6 @@ caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
-ms.workload: "On Demand"
 ---
 # Schedule a Job
 This topic describes how to schedule a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent job.  

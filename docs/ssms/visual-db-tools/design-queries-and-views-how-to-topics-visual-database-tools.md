@@ -25,7 +25,6 @@ caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Design Queries and Views How-to Topics (Visual Database Tools)
 The Query and View Designer can help you create and maintain the data retrieval and data manipulation portions of your application.  

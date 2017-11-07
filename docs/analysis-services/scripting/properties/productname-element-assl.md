@@ -25,8 +25,7 @@ ms.assetid: f8129bb2-55c9-44e1-8857-82dc01c04a7f
 caps.latest.revision: 37
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # ProductName Element (ASSL)
   Contains the read-only product name of the instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] that is associated with a [Server](../../../analysis-services/scripting/objects/server-element-assl.md) element.  

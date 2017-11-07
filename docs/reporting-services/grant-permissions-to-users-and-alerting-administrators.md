@@ -15,7 +15,6 @@ caps.latest.revision: 11
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
-ms.workload: "Inactive"
 ---
 # Grant Permissions to Users and Alerting Administrators
 

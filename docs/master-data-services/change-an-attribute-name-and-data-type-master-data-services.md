@@ -17,7 +17,6 @@ caps.latest.revision: 9
 author: "smartysanthosh"
 ms.author: "nagavo"
 manager: "erikre"
-ms.workload: "Inactive"
 ---
 # Change an Attribute Name and Data Type (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], you can change the name of an attribute.  

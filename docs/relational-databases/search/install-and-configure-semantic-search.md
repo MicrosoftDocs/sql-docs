@@ -17,7 +17,6 @@ caps.latest.revision: 31
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Install and Configure Semantic Search
   Describes the prerequisites for statistical semantic search and how to install or check them.  

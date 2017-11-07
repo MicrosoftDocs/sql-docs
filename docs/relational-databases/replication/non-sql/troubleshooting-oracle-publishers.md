@@ -17,7 +17,6 @@ caps.latest.revision: 62
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Troubleshooting Oracle Publishers
   This topic lists a number of issues that might arise when configuring and using an Oracle Publisher.  

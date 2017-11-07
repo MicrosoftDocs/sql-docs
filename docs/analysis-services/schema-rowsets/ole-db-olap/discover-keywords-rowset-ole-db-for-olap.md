@@ -21,7 +21,7 @@ ms.assetid: 70cc680d-9530-469b-8a61-4e6779aec17a
 caps.latest.revision: 12
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # DISCOVER_KEYWORDS Rowset (OLE DB for OLAP)

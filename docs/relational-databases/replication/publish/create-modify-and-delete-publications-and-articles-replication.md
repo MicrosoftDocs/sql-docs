@@ -17,7 +17,6 @@ caps.latest.revision: 36
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Create, Modify, and Delete Publications and Articles (Replication)
   This section of the documentation contains procedural information about tasks related to creating publications and defining articles.  

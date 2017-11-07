@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "DROP DATABASE ENCRYPTION KEY statement"
 ms.assetid: 9231bd89-75e1-45c4-b4c8-13f08695af68
 caps.latest.revision: 22
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "On Demand"
 ---
 # DROP DATABASE ENCRYPTION KEY (Transact-SQL)

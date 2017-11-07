@@ -14,7 +14,6 @@ caps.latest.revision: 10
 author: "smartysanthosh"
 ms.author: "nagavo"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Change the Entity Transaction Log Type (Master Data Services)
   You can change the transaction log type of an entity, to attribute, member, or none.  

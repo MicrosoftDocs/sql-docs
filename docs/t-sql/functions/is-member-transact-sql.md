@@ -27,9 +27,9 @@ helpviewer_keywords:
   - "members [SQL Server], verifying"
 ms.assetid: 77cb68a0-19b7-4fe1-ab17-e5587699631b
 caps.latest.revision: 25
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "On Demand"
 ---
 # IS_MEMBER (Transact-SQL)

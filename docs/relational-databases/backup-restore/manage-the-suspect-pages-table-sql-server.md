@@ -22,7 +22,6 @@ caps.latest.revision: 54
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "On Demand"
 ---
 # Manage the suspect_pages Table (SQL Server)
   This topic describes how to manage the **suspect_pages** table in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. The **suspect_pages** table is used for maintaining information about suspect pages, and is relevant in helping to decide whether a restore is necessary. The [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) table resides in the [msdb database](../../relational-databases/databases/msdb-database.md).  

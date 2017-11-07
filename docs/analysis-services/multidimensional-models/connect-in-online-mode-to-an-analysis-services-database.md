@@ -17,7 +17,7 @@ ms.assetid: 33041234-7106-404f-a289-8e904f32aff2
 caps.latest.revision: 13
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # Connect in Online Mode to an Analysis Services Database

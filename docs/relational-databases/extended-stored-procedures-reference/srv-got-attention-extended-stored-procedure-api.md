@@ -23,7 +23,6 @@ caps.latest.revision: 17
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # srv_got_attention (Extended Stored Procedure API)
     

@@ -1,6 +1,8 @@
 ---
 title: "Security considerations for machine learning in SQL Server | Microsoft Docs"
-ms.date: "11/03/2017"
+ms.custom: 
+  - "SQL2016_New_Updated"
+ms.date: "07/31/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -12,7 +14,7 @@ ms.assetid: d5065197-69e6-4fce-9654-00acaecc148b
 caps.latest.revision: 15
 author: "jeannt"
 ms.author: "jeannt"
-manager: "cgronlund"
+manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # Security considerations for machine learning in SQL Server
@@ -21,13 +23,13 @@ This article lists security considerations that the administrator or architect s
 
 **Applies to:** SQL Server 2016 R Services, SQL Server 2017 Machine Learning Services
 
-## Use a firewall to restrict network access
+## Use a firewall to restrict network access by R
 
 In a default installation, a Windows firewall rule is used to block all outbound network access from the R runtime processes. Firewall rules should be created to prevent the R runtime process from downloading packages or from making other network calls that could potentially be malicious.
 
 If you are using a different firewall program, you can also create rules to block outbound network connection for the R runtime, by setting rules for the local user accounts or for the group represented by the user account pool.
 
-We strongly recommend that you turn on Windows Firewall (or another firewall of your choice) to prevent unrestricted network access by the R or Python runtimes.
+We strongly recommend that you turn on Windows Firewall (or another firewall of your choice) to prevent unfettered network access by the R or Python runtimes.
 
 ## Authentication methods supported for remote compute contexts
 

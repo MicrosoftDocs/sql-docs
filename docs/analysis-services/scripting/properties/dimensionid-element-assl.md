@@ -25,8 +25,7 @@ ms.assetid: 00262781-4216-4a19-8bdc-d46647f42165
 caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # DimensionID Element (ASSL)
   Contains the identifier (ID) of the dimension.  

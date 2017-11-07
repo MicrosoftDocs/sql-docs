@@ -18,7 +18,6 @@ caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # C to SQL: Numeric
 The identifiers for the numeric ODBC C data types are:  

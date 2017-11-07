@@ -19,7 +19,6 @@ caps.latest.revision: 11
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # CDC Source
   The CDC source reads a range of change data from [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] change tables and delivers the changes downstream to other SSIS components.  
@@ -64,7 +63,7 @@ ms.workload: "Inactive"
 ### Use this script to isolate problems and reproduce them in SQL Server Management Studio  
  The CDC source operation is governed by the operation of the CDC Control task executed before invoking the CDC source. The CDC Control task prepares the value of the CDC state package variable to contain the start and end LSNs. It performs function equivalent to the following script:  
   
-```sql
+```  
 use <cdc-enabled-database-name>  
                declare @start_lsn binary(10), @end_lsn binary(10)  
                set @start_lsn = sys.fn_cdc_increment_lsn(  

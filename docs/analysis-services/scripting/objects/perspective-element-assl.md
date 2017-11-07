@@ -25,8 +25,7 @@ ms.assetid: 0442334c-8b00-4451-ad81-02e58c735e8f
 caps.latest.revision: 35
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # Perspective Element (ASSL)
   Defines details for a perspective of a [Cube](../../../analysis-services/scripting/objects/cube-element-assl.md) element.  

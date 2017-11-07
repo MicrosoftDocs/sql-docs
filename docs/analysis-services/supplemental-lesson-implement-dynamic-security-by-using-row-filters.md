@@ -13,7 +13,7 @@ applies_to:
 ms.assetid:
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ---
 # Supplemental Lesson - Implement Dynamic Security by Using Row Filters
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]

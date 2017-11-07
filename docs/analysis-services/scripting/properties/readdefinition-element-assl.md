@@ -25,8 +25,7 @@ ms.assetid: 1f250129-13b2-41b9-b083-b5aacddf0060
 caps.latest.revision: 37
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # ReadDefinition Element (ASSL)
   Determines whether members can read the definition of the database or the definition of objects in the database.  

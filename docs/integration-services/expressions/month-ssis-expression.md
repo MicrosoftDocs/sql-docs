@@ -17,7 +17,6 @@ caps.latest.revision: 38
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # MONTH (SSIS Expression)
   Returns an integer that represents the month datepart of a date.  

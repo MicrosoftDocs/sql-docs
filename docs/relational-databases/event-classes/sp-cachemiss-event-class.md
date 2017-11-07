@@ -16,7 +16,6 @@ caps.latest.revision: 38
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # SP:CacheMiss Event Class
   The SP:CacheMiss event class indicates that the procedure is not found in the cache. If the SP:CacheMiss event class occurs frequently, it can indicate that more memory should be made available to [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], thereby increasing the size of the procedure cache.  

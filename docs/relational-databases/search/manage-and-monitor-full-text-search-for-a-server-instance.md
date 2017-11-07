@@ -18,7 +18,6 @@ caps.latest.revision: 19
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Manage and Monitor Full-Text Search for a Server Instance
   Full-text administration for a server instance includes:  

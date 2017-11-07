@@ -15,8 +15,7 @@ ms.assetid: fbacb187-a4d1-4aa4-be3b-3ddd175f9e19
 caps.latest.revision: 32
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # Discover Server State Events Data Columns
   The Discover Server State event category has the following event classes:  

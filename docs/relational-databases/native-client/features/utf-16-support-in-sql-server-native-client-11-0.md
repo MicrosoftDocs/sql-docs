@@ -14,7 +14,6 @@ caps.latest.revision: 6
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # UTF-16 Support in SQL Server Native Client 11.0
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]

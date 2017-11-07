@@ -15,7 +15,7 @@ ms.assetid: 978279e6-a581-4184-af9d-8701b9826a89
 caps.latest.revision: 18
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # Compatibility Level of a Multidimensional Database (Analysis Services)

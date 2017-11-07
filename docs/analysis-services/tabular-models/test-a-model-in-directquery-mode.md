@@ -13,8 +13,7 @@ ms.assetid: 11260792-ff8b-4d0e-b845-ca210dd3fced
 caps.latest.revision: 11
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # Test a model in DirectQuery mode
 

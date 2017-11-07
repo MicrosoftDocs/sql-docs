@@ -22,7 +22,7 @@ ms.assetid: a12ff02f-6d0b-4488-9846-3609fc0d0554
 caps.latest.revision: 33
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # Creating Stored Procedures

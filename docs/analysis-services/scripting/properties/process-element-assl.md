@@ -25,8 +25,7 @@ ms.assetid: 4aa08718-be44-4781-92cf-7b32b20f862c
 caps.latest.revision: 36
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # Process Element (ASSL)
   Determines whether a user can process the owner of the parent element.  

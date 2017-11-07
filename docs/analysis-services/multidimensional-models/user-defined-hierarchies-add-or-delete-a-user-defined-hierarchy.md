@@ -21,7 +21,7 @@ ms.assetid: 953818b4-9543-4c01-bb20-1d45ec6dfb91
 caps.latest.revision: 51
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # User-Defined Hierarchies - Add or Delete a User-Defined Hierarchy

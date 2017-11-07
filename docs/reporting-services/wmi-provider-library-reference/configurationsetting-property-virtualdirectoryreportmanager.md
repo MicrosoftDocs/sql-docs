@@ -17,7 +17,6 @@ caps.latest.revision: 9
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
-ms.workload: "Inactive"
 ---
 # ConfigurationSetting Property - VirtualDirectoryReportManager
   Returns the virtual directory for the report manager application. Read-only.  

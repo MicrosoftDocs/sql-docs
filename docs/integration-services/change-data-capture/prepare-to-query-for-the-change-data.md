@@ -16,7 +16,6 @@ caps.latest.revision: 26
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Prepare to Query for the Change Data
   In the control flow of an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package that performs an incremental load of change data, the third and final task is to prepare to query for the change data and add a Data Flow task.  
@@ -70,7 +69,7 @@ ms.workload: "Inactive"
   
     -   If you are programming in C#, enter the following lines of code:  
   
-        ```csharp 
+        ```  
         int dataReady;  
         System.DateTime extractStartTime;  
         System.DateTime extractEndTime;  
@@ -96,7 +95,7 @@ ms.workload: "Inactive"
   
     -   If you are programming in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], enter the following lines of code:  
   
-        ```vb  
+        ```  
         Dim dataReady As Integer  
         Dim extractStartTime As Date  
         Dim extractEndTime As Date  
@@ -144,7 +143,7 @@ ms.workload: "Inactive"
   
     4.  For **SQLStatement**, enter the following SQL statement:  
   
-        ```sql
+        ```  
         declare @ExtractStartTime datetime,  
         @ExtractEndTime datetime,   
         @DataReady int  

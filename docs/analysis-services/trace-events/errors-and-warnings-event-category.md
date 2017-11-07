@@ -19,8 +19,7 @@ ms.assetid: cf7fd5a7-b189-47c3-8e5c-3195897c7eab
 caps.latest.revision: 20
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # Errors and Warnings Event Category
   The Errors and Warnings event category has the event classes described in the following table.  

@@ -21,7 +21,6 @@ caps.latest.revision: 14
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # SetValue Method (ClientSettingsGeneralFlag Class)
   Sets all the values of the referenced flag.  

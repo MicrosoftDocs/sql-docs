@@ -18,7 +18,6 @@ caps.latest.revision: 16
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Select a Package
   Use the **Select a Package** dialog box to specify the package from which the Message Queue task can receive messages.  

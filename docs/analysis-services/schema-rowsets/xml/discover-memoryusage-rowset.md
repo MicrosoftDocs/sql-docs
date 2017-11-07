@@ -16,7 +16,7 @@ ms.assetid: e416ea61-9615-468c-a96f-bbf731f803b1
 caps.latest.revision: 7
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # DISCOVER_MEMORYUSAGE Rowset

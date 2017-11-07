@@ -19,7 +19,7 @@ ms.assetid: 467f0cf3-8691-476d-a7fb-a5df4e374eaf
 caps.latest.revision: 29
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # Attribute Properties - Bind an Attribute to a Name Column

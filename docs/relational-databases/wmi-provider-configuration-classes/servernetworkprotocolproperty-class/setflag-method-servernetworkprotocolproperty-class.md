@@ -21,7 +21,6 @@ caps.latest.revision: 30
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # SetFlag Method (ServerNetworkProtocolProperty Class)
   Sets the flag of the referenced property.  

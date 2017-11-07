@@ -22,7 +22,6 @@ caps.latest.revision: 18
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
-ms.workload: "Inactive"
 ---
 # ConfigurationSetting Method - ReencryptSecureInformation
   Generates a new encryption key and re-encrypts all secure information in the catalog using this new key.  

@@ -16,7 +16,6 @@ caps.latest.revision: 20
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # QN:Subscription Event Class
   The QN:Subscription event reports information on notification subscriptions.  

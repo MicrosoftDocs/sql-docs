@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "status information [SQL Server], full-text catalogs"
 ms.assetid: f841dc79-2044-4863-aff0-56b8bb61f250
 caps.latest.revision: 50
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # FULLTEXTCATALOGPROPERTY (Transact-SQL)

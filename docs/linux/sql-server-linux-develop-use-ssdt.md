@@ -10,7 +10,6 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
 ms.custom: H1Hack27Feb2017
-ms.workload: "On Demand"
 ---
 # Use Visual Studio to create databases for SQL Server on Linux
 

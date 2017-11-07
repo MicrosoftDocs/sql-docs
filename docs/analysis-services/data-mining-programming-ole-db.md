@@ -18,9 +18,9 @@ helpviewer_keywords:
   - "OLE DB for Data Mining"
 ms.assetid: 69f306df-8038-463f-91c3-5413503246c2
 caps.latest.revision: 30
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
+author: "jeannt"
+ms.author: "jeannt"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # Data Mining Programming - OLE DB

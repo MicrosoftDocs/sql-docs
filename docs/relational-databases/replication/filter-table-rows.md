@@ -16,7 +16,6 @@ caps.latest.revision: 25
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Filter Table Rows
   The **Filter Table Rows** page allows you to:  

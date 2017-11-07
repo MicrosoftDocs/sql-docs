@@ -18,7 +18,6 @@ caps.latest.revision: 57
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "Active"
 ---
 # Configure a Windows Firewall for Database Engine Access
 

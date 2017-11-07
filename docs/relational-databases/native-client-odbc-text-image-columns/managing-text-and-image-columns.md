@@ -24,7 +24,6 @@ caps.latest.revision: 31
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Managing Text and Image Columns
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]

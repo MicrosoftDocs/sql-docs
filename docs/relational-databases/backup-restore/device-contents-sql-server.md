@@ -16,7 +16,6 @@ caps.latest.revision: 31
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Device Contents (SQL Server)
   Use this dialog box to view the backup information. This information describes the device, the media, the media set, and the backup set or sets.  

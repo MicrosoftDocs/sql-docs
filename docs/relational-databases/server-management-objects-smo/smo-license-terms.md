@@ -14,7 +14,6 @@ caps.latest.revision: 9
 author: "Charles-Gagnon"
 ms.author: "chgagnon"
 manager: "kenvh"
-ms.workload: "On Demand"
 ---
 # SQL Server Shared Management Objects (SMO) License Terms
 

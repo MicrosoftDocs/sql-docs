@@ -16,7 +16,6 @@ caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Operator Properties - New Operator (Notifications Page)
 Use this page to set the alerts and jobs that notify the operator.  

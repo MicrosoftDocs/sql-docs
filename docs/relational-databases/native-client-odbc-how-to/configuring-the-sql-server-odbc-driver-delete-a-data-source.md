@@ -16,7 +16,6 @@ caps.latest.revision: 19
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "On Demand"
 ---
 # Configuring the SQL Server ODBC Driver - Delete a Data Source
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]

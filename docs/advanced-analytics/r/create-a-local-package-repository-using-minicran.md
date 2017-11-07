@@ -87,7 +87,7 @@ You begin by creating a miniCRAN repository to use as a source. You should creat
 
     ```R
     pkgs_needed <- c("zoo", "forecast")
-    ```
+
 2. Optionally, plot the dependency graph, which can be informative and looks cool.
     
     ```R

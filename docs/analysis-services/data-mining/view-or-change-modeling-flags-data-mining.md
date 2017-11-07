@@ -14,7 +14,7 @@ ms.assetid: d1169735-fb18-417b-b8d6-9a161e444020
 caps.latest.revision: 6
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # View or Change Modeling Flags (Data Mining)

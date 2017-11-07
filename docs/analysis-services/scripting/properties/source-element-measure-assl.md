@@ -25,8 +25,7 @@ ms.assetid: 9bae7ba4-3065-4623-b3e0-d54cebea7503
 caps.latest.revision: 32
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # Source Element (Measure) (ASSL)
   Contains the details of the source containing the value of the [Measure](../../../analysis-services/scripting/objects/measure-element-assl.md) element.  

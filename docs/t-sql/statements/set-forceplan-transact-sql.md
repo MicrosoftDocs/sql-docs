@@ -24,9 +24,9 @@ helpviewer_keywords:
   - "overriding query optimizer process"
 ms.assetid: b6c0b08f-2060-4696-9e12-50cb7e674321
 caps.latest.revision: 40
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # SET FORCEPLAN (Transact-SQL)

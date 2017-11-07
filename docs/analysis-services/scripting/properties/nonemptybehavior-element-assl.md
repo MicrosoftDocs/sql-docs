@@ -25,8 +25,7 @@ ms.assetid: b4c78af4-b049-4189-a35b-206e3938d1db
 caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # NonEmptyBehavior Element (ASSL)
   Determines the non-empty behavior associated with the parent of the [CalculationProperty](../../../analysis-services/scripting/objects/calculationproperty-element-assl.md) element.  

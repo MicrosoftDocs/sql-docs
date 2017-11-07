@@ -14,7 +14,6 @@ caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Configure Advanced Options for SQL Server Managed Backup to Microsoft Azure
   The following tutorial describes how to set advanced options for [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. These procedures are only necessary if you require the features they offer. Otherwise, you can enable [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] and depend on the default behavior.  

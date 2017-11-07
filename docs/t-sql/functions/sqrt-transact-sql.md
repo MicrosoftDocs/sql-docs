@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "square root values"
 ms.assetid: 26e244e8-e82d-4664-a445-1226230ee1c5
 caps.latest.revision: 37
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "On Demand"
 ---
 # SQRT (Transact-SQL)

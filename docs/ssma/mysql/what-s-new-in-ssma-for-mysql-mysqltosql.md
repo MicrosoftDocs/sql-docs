@@ -1,5 +1,5 @@
 ---
-title: "What's New in SSMA for MySQL (MySQLToSql) | Microsoft Docs"
+title: "What&#39;s New in SSMA for MySQL (MySQLToSql) | Microsoft Docs"
 ms.prod: "sql-non-specified"
 ms.custom: ""
 ms.date: "09/30/2017"
@@ -17,9 +17,8 @@ caps.latest.revision: 21
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
-# What's New in SSMA for MySQL (MySQLToSql)
+# What&#39;s New in SSMA for MySQL (MySQLToSql)
 This topic lists SSMA for MySQL changes in each release. 
 
 ## SSMA v7.6

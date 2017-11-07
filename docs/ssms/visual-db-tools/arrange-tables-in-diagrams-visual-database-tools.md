@@ -18,7 +18,6 @@ caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Arrange Tables in Diagrams (Visual Database Tools)
 You can quickly arrange the tables in a database diagram to see each table and relationship clearly.  

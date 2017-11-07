@@ -13,10 +13,9 @@ helpviewer_keywords:
   - "1458 (Database Engine error)"
 ms.assetid: adc78c59-a6f2-432b-9a07-fdd1dc2b9026
 caps.latest.revision: 16
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # MSSQLSERVER_1458
   

@@ -25,7 +25,7 @@ ms.assetid: f3c06978-c181-4a73-9b57-8fc30358faab
 caps.latest.revision: 37
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # TimeBinding Data Type (ASSL)

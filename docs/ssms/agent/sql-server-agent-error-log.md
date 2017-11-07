@@ -19,7 +19,6 @@ caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
-ms.workload: "On Demand"
 ---
 # SQL Server Agent Error Log
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent creates an error log that records warnings and errors by default. The following warnings and errors are displayed in the log:  

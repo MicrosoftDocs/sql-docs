@@ -14,7 +14,6 @@ caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # List Job Category Information
 This topic describes how to list job category information in [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] by using [!INCLUDE[tsql](../../includes/tsql_md.md)] or SQL Server Management Objects.  

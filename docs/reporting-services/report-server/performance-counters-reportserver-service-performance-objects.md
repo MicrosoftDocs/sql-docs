@@ -1,4 +1,4 @@
----
+﻿---
 title: "Performance Counters - ReportServer Service, Performance Objects | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
@@ -17,7 +17,6 @@ caps.latest.revision: 21
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
-ms.workload: "Inactive"
 ---
 # Performance Counters - ReportServer Service,  Performance Objects
   This topic describes performance counters for the **ReportServer:Service** and **ReportServerSharePoint:Service** performance objects that are part of a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] deployment.  

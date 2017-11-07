@@ -25,8 +25,7 @@ ms.assetid: 13d2e92b-e4bf-4f2d-b34c-a6f483da3a9e
 caps.latest.revision: 42
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # AttributeID Element (ASSL)
   Contains the ID of the attribute associated with the parent element.  

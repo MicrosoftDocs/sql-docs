@@ -21,7 +21,6 @@ caps.latest.revision: 24
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Restart an Interrupted Restore Operation (Transact-SQL)
   This topic explains how to restart an interrupted restore operation.  

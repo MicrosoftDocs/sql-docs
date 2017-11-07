@@ -18,7 +18,7 @@ ms.assetid: 37c54602-ab25-48be-ae7a-59819deea8ed
 caps.latest.revision: 26
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # Find a Specific Node in a Dependency Network

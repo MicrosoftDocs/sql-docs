@@ -14,8 +14,7 @@ ms.assetid: 898d6ec2-9b40-441b-be2b-5728d1d2882e
 caps.latest.revision: 11
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # Sequence command (TMSL)
 

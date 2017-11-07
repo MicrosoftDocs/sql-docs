@@ -13,10 +13,9 @@ helpviewer_keywords:
   - "3619 (Database Engine error)"
 ms.assetid: 7d94f8d9-65ca-4fde-9c17-7b83e94a3779
 caps.latest.revision: 18
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # MSSQLSERVER_3619
   

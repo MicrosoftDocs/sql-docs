@@ -18,7 +18,6 @@ caps.latest.revision: 32
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Common Actions Requiring an Updated Backup
   If you perform regular log backups, any replication-related changes should be captured in the log backups. If you don't perform log backups, perform a backup of the publication, distribution, subscription, **msdb**, and **master** databases after making modifications to your replication schema or topology.  

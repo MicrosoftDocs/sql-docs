@@ -21,7 +21,7 @@ ms.assetid: 25826ba1-2b38-4b34-bd3a-7eba116093ae
 caps.latest.revision: 32
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # Attribute Properties - Add an  Attribute to a Dimension

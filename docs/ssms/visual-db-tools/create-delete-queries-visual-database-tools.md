@@ -23,7 +23,6 @@ caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Create Delete Queries (Visual Database Tools)
 You can delete all rows in a table by using a Delete query.  

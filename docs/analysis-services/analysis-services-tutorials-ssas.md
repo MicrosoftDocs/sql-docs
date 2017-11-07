@@ -14,7 +14,7 @@ ms.assetid: b378c3bb-eead-46eb-b213-70d994f2d562
 caps.latest.revision: 17
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Active"
 ---
 # Analysis Services Tutorials (SSAS)

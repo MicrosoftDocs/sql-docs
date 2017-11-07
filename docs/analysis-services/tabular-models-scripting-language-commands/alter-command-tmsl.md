@@ -14,8 +14,7 @@ ms.assetid: 8bdc49f1-209e-4055-be19-c83862b81efa
 caps.latest.revision: 13
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # Alter command (TMSL)
 

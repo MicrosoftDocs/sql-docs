@@ -20,7 +20,7 @@ ms.assetid: c5194619-8b31-42be-a95f-585711462945
 caps.latest.revision: 32
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # Mining Model Properties

@@ -18,7 +18,7 @@ ms.assetid: 91d846cf-704d-409a-9198-87674a8fb49a
 caps.latest.revision: 18
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # Programming Administrative Tasks with AMO

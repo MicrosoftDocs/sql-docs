@@ -23,7 +23,7 @@ ms.assetid: 066405ff-903f-467a-b0d5-e58653952c52
 caps.latest.revision: 17
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # DimensionPermission Data Type (ASSL)

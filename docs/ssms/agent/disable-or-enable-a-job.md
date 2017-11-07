@@ -19,7 +19,6 @@ caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
-ms.workload: "On Demand"
 ---
 # Disable or Enable a Job
 This topic describes how to disable a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent job in [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] or [!INCLUDE[tsql](../../includes/tsql_md.md)]. When you disable a job, it is not deleted and can be enabled again when necessary.  

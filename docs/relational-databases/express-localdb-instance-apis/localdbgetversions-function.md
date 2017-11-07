@@ -19,7 +19,6 @@ caps.latest.revision: 8
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # LocalDBGetVersions Function
   Returns all SQL Server Express LocalDB versions available on the computer.  

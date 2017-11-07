@@ -21,7 +21,6 @@ caps.latest.revision: 48
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Secure the Publisher
   The following replication agents connect to the Publisher:  

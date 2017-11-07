@@ -17,7 +17,7 @@ ms.assetid: d765c89e-9512-40fb-984a-8200c2541df6
 caps.latest.revision: 35
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # Database Dimensions - BI Wizard in Dimension Designer

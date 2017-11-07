@@ -16,8 +16,7 @@ ms.assetid: 399aaa34-896c-48e7-aacb-18564f31b568
 caps.latest.revision: 5
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # MemberRef Element (CSDLBI)
   The MemberRef element identifies the name of a property that is the target of a reference.  

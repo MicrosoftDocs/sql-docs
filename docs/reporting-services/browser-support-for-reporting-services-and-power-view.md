@@ -25,7 +25,6 @@ caps.latest.revision: 121
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
-ms.workload: "On Demand"
 ---
 # Browser Support for Reporting Services and Power View
 

@@ -16,8 +16,7 @@ ms.assetid: 6fee5b82-caa8-46a1-ad68-bbce3e11e01e
 caps.latest.revision: 13
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # KpiStatus Element (CSDLBI)
   The KpiStatus element defines a reference to the column that contains the value used as the status indicator in a Key Performance Indicator (KPI).  

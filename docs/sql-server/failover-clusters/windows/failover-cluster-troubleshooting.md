@@ -19,7 +19,6 @@ caps.latest.revision: 12
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
-ms.workload: "Active"
 ---
 # Failover Cluster Troubleshooting
   This topic provides information about the following issues:  

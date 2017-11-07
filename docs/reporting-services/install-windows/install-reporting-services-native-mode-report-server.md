@@ -19,7 +19,6 @@ caps.latest.revision: 68
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
-ms.workload: "Active"
 ---
 # Install Reporting Services native mode report server
 

@@ -15,7 +15,6 @@ caps.latest.revision: 8
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "erikre"
-ms.workload: "On Demand"
 ---
 # Report Builder Functions - Previous Function
   Returns the value or the specified aggregate value for the previous instance of an item within the specified scope.  

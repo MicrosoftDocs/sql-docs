@@ -18,7 +18,7 @@ ms.assetid: 768372db-e5b4-4990-b459-03d854fd9a6d
 caps.latest.revision: 38
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # Copy a View of a Mining Model

@@ -18,7 +18,7 @@ ms.assetid: 47a79542-3142-4e62-a66f-6c4dbfe0f5c0
 caps.latest.revision: 18
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # DISCOVER_SESSIONS Rowset

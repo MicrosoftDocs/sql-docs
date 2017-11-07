@@ -35,9 +35,9 @@ helpviewer_keywords:
   - "time [SQL Server], system"
 ms.assetid: 48a5b230-102e-4a89-bb2a-fcf0cac862bb
 caps.latest.revision: 37
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ms.workload: "Active"
 ---
 # GETUTCDATE (Transact-SQL)

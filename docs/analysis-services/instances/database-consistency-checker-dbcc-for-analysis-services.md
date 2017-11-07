@@ -16,7 +16,7 @@ ms.assetid: 28714c32-718f-4f31-a597-b3289b04b864
 caps.latest.revision: 15
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # Database Consistency Checker (DBCC) for Analysis Services

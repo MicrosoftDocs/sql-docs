@@ -16,7 +16,6 @@ caps.latest.revision: 43
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "On Demand"
 ---
 # How to Create a Visual C# SMO Project in Visual Studio .NET
   This section describes how to build a simple SMO console application.  

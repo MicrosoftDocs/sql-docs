@@ -19,7 +19,6 @@ caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Implement Jobs
 You can use [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent jobs to automate routine administrative tasks and run them on a recurring basis, making administration more efficient.  

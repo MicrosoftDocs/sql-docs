@@ -17,7 +17,6 @@ caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Copy an Image of a Database Diagram to the Clipboard (Visual Database Tools)
 You can create an image of a Database Diagram and copy it to another application.  

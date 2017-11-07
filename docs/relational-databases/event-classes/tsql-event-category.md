@@ -18,7 +18,6 @@ caps.latest.revision: 28
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # TSQL Event Category
   The **TSQL** event category contains general TSQL events.  

@@ -13,10 +13,9 @@ helpviewer_keywords:
   - "20557 (Database Engine error)"
 ms.assetid: f94281ef-331b-4432-9e59-839d3b0e6897
 caps.latest.revision: 12
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # MSSQLSERVER_20557
   

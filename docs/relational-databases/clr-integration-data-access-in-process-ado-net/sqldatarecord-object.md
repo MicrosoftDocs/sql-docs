@@ -17,7 +17,6 @@ caps.latest.revision: 25
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # SqlDataRecord Object
   The **SqlDataRecord** object represents a single row of data, along with its related metadata.  

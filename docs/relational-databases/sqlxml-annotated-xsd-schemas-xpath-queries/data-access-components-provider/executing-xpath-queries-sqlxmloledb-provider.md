@@ -20,7 +20,6 @@ caps.latest.revision: 30
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Executing XPath Queries (SQLXMLOLEDB Provider)
   This example illustrates the use of the following SQLXMLOLEDB Provider-specific properties:  

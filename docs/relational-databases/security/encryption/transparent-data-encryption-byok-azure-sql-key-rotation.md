@@ -18,7 +18,6 @@ ms.topic: hero-article
 ms.date: 08/07/2017
 ms.author: ryzhang26
 
-ms.workload: "Inactive"
 --- 
 
 # Rotate the Transparent Data Encryption (TDE) protector using PowerShell 

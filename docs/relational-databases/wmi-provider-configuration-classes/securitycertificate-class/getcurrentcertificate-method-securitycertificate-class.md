@@ -21,7 +21,6 @@ caps.latest.revision: 33
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # GetCurrentCertificate Method (SecurityCertificate Class)
   Gets the current security certificate.  

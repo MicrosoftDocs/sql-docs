@@ -18,7 +18,6 @@ caps.latest.revision: 12
 author: "smartysanthosh"
 ms.author: "nagavo"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 # Overview: Exporting Data (Master Data Services)
   This article introduces the types of subscription view formats and how to determine when views need to be edited due to changes to model objects.  

@@ -21,7 +21,6 @@ caps.latest.revision: 30
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # PropertyValType Property (ServerNetworkProtocolProperty Class)
   Gets the data type of the value stored in the referenced property.  

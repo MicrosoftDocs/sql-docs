@@ -21,7 +21,6 @@ caps.latest.revision: 27
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "On Demand"
 ---
 # Administer Multiple Servers Using Central Management Servers
   You can administer multiple servers by designating Central Management Servers and creating server groups.  

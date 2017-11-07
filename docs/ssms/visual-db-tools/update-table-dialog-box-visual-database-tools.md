@@ -17,7 +17,6 @@ caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Update Table Dialog Box (Visual Database Tools)
 This dialog box allows you to specify the table to be updated.  

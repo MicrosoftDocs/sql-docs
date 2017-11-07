@@ -33,7 +33,7 @@ ms.assetid: bd3195da-e762-4c98-b643-34c76e842343
 caps.latest.revision: 37
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # Database Dimension Properties - Types

@@ -25,8 +25,7 @@ ms.assetid: 56f52462-a7fd-4b51-a7fb-4311134439e9
 caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # Role Element (ASSL)
   Contains information about a security role.  

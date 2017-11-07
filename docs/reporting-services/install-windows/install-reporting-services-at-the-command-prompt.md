@@ -17,7 +17,6 @@ caps.latest.revision: 11
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
-ms.workload: "Inactive"
 ---
 # Install Reporting Services at the Command Prompt
 

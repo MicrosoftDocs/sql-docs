@@ -21,7 +21,6 @@ caps.latest.revision: 53
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Using Large Value Types
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]

@@ -20,7 +20,6 @@ caps.latest.revision: 67
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "erikre"
-ms.workload: "Active"
 ---
 
 # Create a Basic Table Report (SSRS Tutorial)

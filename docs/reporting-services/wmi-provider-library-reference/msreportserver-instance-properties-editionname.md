@@ -17,7 +17,6 @@ caps.latest.revision: 9
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
-ms.workload: "Inactive"
 ---
 # MSReportServer_Instance Properties - EditionName
   Returns the human readable name of the report server edition. Read-only.  

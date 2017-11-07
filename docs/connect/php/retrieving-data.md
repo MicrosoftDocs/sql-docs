@@ -14,7 +14,6 @@ caps.latest.revision: 42
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Retrieving Data
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

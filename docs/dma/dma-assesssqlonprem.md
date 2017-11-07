@@ -1,5 +1,5 @@
 ---
-title: "Perform a SQL Server migration assessment (Data Migration Assistant) | Microsoft Docs"
+title: "Performing a SQL Server migration assessment (Data Migration Assistant) | Microsoft Docs"
 ms.custom: 
 ms.date: "10/04/2017"
 ms.prod: "sql-non-specified"
@@ -17,67 +17,65 @@ caps.latest.revision: ""
 author: "HJToland3"
 ms.author: "jtoland"
 manager: "craigg"
-ms.workload: "Inactive"
 ---
 
-# Perform a SQL Server migration assessment
-The following step-by-step instructions help you perform your first assessment for migrating to on-premises SQL Server, SQL Server running on an Azure VM, or Azure SQL Database, by using Data Migration Assistant.
+# Performing a SQL Server migration assessment
+The following step-by-step instructions help you to perform your first assessment for migrating to either on-premises SQL Server or SQL Server running on Azure VM, or to Azure SQL Server database, by using Data Migration Assistant.
 
-## Create an assessment
+## Create new assessment
 
-1.  Select the **New** (+) icon, and then select the **Assessment** project
+1.  Click on the New (+) icon, and then select “Assessment” project
     type.
 
 2.  Set the source and target server type.
 
-    If you are upgrading your on-premises SQL Server instance to a modern
-    on-premises SQL Server instance or to SQL Server hosted on an Azure VM, set the
+    If you are upgrading your on-premises SQL Server to a modern
+    on-premises SQL Server or to SQL Server hosted on Azure VM, set the
     source and target server type to **SQL Server**. If you are migrating
     to Azure SQL Database, instead set the target server type to **Azure
     SQL Database**.
 
 3.  Click **Create**.
 
-    ![Create an assessment](../dma/media/NewAssessment.png)
+    ![Create new assessment](../dma/media/NewAssessment.png)
 
-## Choose assessment options
+### Choose assessment options
 
-1. Select the target SQL Server version that you plan to migrate to.
+1.  Select the target SQL Server version that you plan to migrate to,
+    and run an assessment.
 
-2. Select the report type.
-
-   When you are assessing your source SQL Server instance for migrating to
+2.  When you are assessing your source SQL Server migrating to
     on-premises SQL Server or to SQL Server hosted on Azure VM targets,
     you can choose one or both of the following assessment report types:
 
-    -   **Compatibility Issues**
+    -   Compatibility Issues
 
-    -   **New features’ recommendation**
+    -   New features’ recommendation
 
-    ![Select an assessment report type for SQL Server target](../dma/media/AssessmentTypes.png)
+       ![Select an assessment report type](../dma/media/AssessmentTypes.png)
 
-   When you are assessing your source SQL Server instance for migrating to Azure SQL
+3.  When you are assessing your source SQL Server migrating to Azure SQL
     Database, you can choose one or both of the following
     assessment report types:
 
-    -   **Check database compatibility**
+    -   Check database compatibility
 
-    -   **Check feature parity**
+    -   Check feature parity
 
-    ![Select assessment report type for SQL Database target](../dma/media/AssessmentTypes_Azure.png)
+       ![Select assessment report type](../dma/media/AssessmentTypes_Azure.png)
 
-## Add databases to assess
+### Add databases to assess
 
-1.  Select **Add Sources** to open the connection flyout menu.
+1.  Click on **Add Sources** to open the connection fly-out.
 
 2.  Enter the SQL server instance name, choose the Authentication type, set
-    the correct connection properties, and then select **Connect**.
+    the correct connection properties, and then click **Connect**.
 
-3.  Select the databases to assess, and then select **Add**.
+3.  Select the databases to assess, and then click **Add**.
 
     > [!NOTE] 
-    > You can remove multiple databases by selecting
-    > them while holding the Shift or Ctrl key, and then
+    > You can remove databases after adding them by selecting
+    > multiple databases while holding the "shift" or "Ctrl" key, and then
     > clicking **Remove Sources**. You can also add databases from multiple
     > SQL Server instances by using the **Add Sources** button.
 
@@ -85,40 +83,40 @@ The following step-by-step instructions help you perform your first assessment f
 
     ![Add sources and start assessment](../dma/media/SelectDatabase.png)
 
-## View results
+### View results
 
-The duration of the assessment depends on the number of databases added and the schema size of each database. Results are displayed for each database as soon as they are available.
+The duration of the assessment depends on the number of databases added and the schema size of each database. Results are displayed per database as soon as they are available.
 
-1.  Select the database that has completed the assessment, and then switch
+1.  Select the database that has completed assessment, and then switch
     between **Compatibility issues** and **Feature recommendations**
-    by using the switcher.
+    using the switcher.
 
 2.  Review the compatibility issues across all compatibility levels
-    supported by the target SQL Server version that you selected on the **Options**
-    page.
+    supported by the target SQL Server version selected on the "Options"
+    screen.
 
-You can review compatibility issues by analyzing the affected object and its details for every issue identified under **Breaking changes**, **Behavior changes**, and **Deprecated features**.
+Compatibility issues can be reviewed by analyzing the impacted object and its details for every issue identified under “Breaking changes”, “Behavior changes” and “Deprecated features.”
 
 ![View assessment results](../dma/media/ReviewResults.png)
 
 Similarly, you can review feature recommendation across **Performance**, **Storage**, and **Security** areas.
 
-Feature recommendations cover a variety of features such as In-Memory OLTP and Columnstore, Stretch Database, Always Encrypted, Dynamic Data Masking, and Transparent Data Encryption.
+Feature recommendations cover a variety of features such as In-Memory OLTP and Columnstore, Stretch Database, Always Encrypted (AE), Dynamic Data Masking (DDM), and Transparent Data Encryption (TDE).
 
 ![View feature recommendations](../dma/media/FeatureRecommendations.png)
 
-For Azure SQL Database, the assessments provide migration blocking issues and feature parity issues. Review the results for both categories by selecting the specific options.
+For Azure SQL Database, the assessments provide migration blocking issues and feature parity issues.  Review the results for both categories by selecting the specific options.
 
-- The **SQL Server feature parity** category provides a comprehensive set of recommendations, alternative approaches available in Azure, and mitigating steps. It helps you plan this effort in your migration projects.
+- The **SQL Server feature parity** category provides a comprehensive set of recommendations, alternative approaches available in Azure, and mitigating steps so that you can plan this effort into your migration projects.
 
   ![View information for SQL Server feature parity](../dma/media/SQLFeatureParity.png)
 
-- The **Compatibility issues** category provides partially supported or unsupported features that block migrating on-premises SQL Server databases to Azure SQL databases. It then provides recommendations to help you address those issues.
+- The **Compatibility issues** category provides partially or unsupported features that are the compatibility issues that block migrating on-premises SQL Server database(s) to Azure SQL Database(s. It then provides recommendations to help you address those issues.
 
   ![View compatibility issues](../dma/media/CompatibilityIssues.png)
 
-## Export results
+### Export results
 
-After all databases finish the assessment, select **Export report** to export the results to either a JSON file or a CSV file. You can then analyze the data at your own convenience.
+After all databases finish assessment, click **Export report** to export the results to either a JSON or a CSV file for analyzing the data at your own convenience.
 
-You can run multiple assessments concurrently and view the state of the assessments by opening the **All Assessments** page.
+You can run multiple assessments concurrently and view the state of the assessments by navigating to the **All Assessments** screen.

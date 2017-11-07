@@ -14,10 +14,9 @@ applies_to:
   - "SQL Server 2016 Preview"
 ms.assetid: 851ad331-aefd-4277-a5e5-e32a8f5c5e22
 caps.latest.revision: 6
-author: "Minewiskan"
-ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+author: "jeannt"
+ms.author: "jeannt"
+manager: "erikre"
 ---
 # DefaultDetailsPosition Element (XML)
   Contains information about the position of the element in a collection of elements.  

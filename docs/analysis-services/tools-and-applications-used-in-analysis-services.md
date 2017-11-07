@@ -16,8 +16,7 @@ ms.assetid: 0ddb3b7a-7464-4d04-8659-11cb2e4cf3c3
 caps.latest.revision: 17
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "On Demand"
+manager: "erikre"
 ---
 # Tools and applications used in Analysis Services
   Find the tools and applications you'll need for building Analysis Services models and managing deployed databases.  

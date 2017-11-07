@@ -16,7 +16,6 @@ caps.latest.revision: 7
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Device Not Ready Error
   This rule checks the system event log for EventId 15. This error can be caused by SCSI host adapter configuration issues or related problems.  

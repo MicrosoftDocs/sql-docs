@@ -25,8 +25,7 @@ ms.assetid: 523b26c8-5cce-415d-a360-9a0d8724b872
 caps.latest.revision: 32
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # IsKey Element (ASSL)
   Indicates whether the column provides the key for the case in a [MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md) element.  

@@ -13,10 +13,9 @@ helpviewer_keywords:
   - "107 (Database Engine error)"
 ms.assetid: f33f514c-56aa-42e2-841b-e91244da90e2
 caps.latest.revision: 9
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # MSSQLSERVER_107
   

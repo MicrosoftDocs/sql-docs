@@ -14,7 +14,6 @@ caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Oracle Supplemental Logging Script
   This dialog box shows the script the Oracle supplemental logging script.  

@@ -21,7 +21,7 @@ ms.assetid: 825ef719-2f44-4979-be01-5a81f54e1a53
 caps.latest.revision: 14
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # View the Formula for a Time Series Model (Data Mining)

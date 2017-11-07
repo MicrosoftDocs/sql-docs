@@ -19,7 +19,6 @@ caps.latest.revision: 17
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Requirements for Running SQLXML Examples
   The [SQLXML 4.0 Programming](../../relational-databases/sqlxml/sqlxml-4-0-programming-concepts.md) section provides numerous examples. This topic lists requirements for creating working samples from these examples.  

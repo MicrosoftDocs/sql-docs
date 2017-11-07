@@ -2,7 +2,7 @@
 title: "Setup and configuration for Python Machine Learning Services | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/31/2017"
-ms.prod: "sql-server-2017"
+ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +11,7 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 author: "jeannt"
 ms.author: "jeannt"
-manager: "cgronlund"
+manager: "jhubbard"
 ms.workload: "On Demand"
 ---
 # Set up Python Machine Learning Services (In-Database)
@@ -44,15 +44,13 @@ After the installation is complete, reconfigure the instance to allow execution 
 
 ### Unattended installation
 
-To perform an unattended installation, use the command-line options for SQL Server setup and the arguments specific to Python. For more information, see [Unattended installs of SQL Server with Python Machine Learning Services](unattended-installs-of-sql-server-python-services.md).
+To perform an unattended installation, use the command-line options for SQL Server setup and the arguments specific to Python. For more information, see [Unattended installs of SQL Server with Python Machine Learning Services](./unattended-installs-of-sql-server-python-services.md).
 
 ##  <a name="bkmk_installPythonInDatabase"></a> Step 1: Install Machine Learning Services (In-Database) on SQL Server
 
 1. Run the setup wizard for SQL Server 2017.
   
 2. On the **Installation** tab, select **New SQL Server stand-alone installation or add features to an existing installation**.
-
-    ![Install Python in-database](media/2017setup-installation-page-mlsvcs.PNG)
    
 3. On the **Feature Selection** page, select these options:
   
@@ -66,12 +64,11 @@ To perform an unattended installation, use the command-line options for SQL Serv
 
     -   **Python**
         Check this option to get the Python 3.5 executable and select libraries from the Anaconda distribution. Install only one language per instance.
-        
-        ![Feature options for Python](media/ml-svcs-features-python-highlight.png "Setup options for Python")
 
         > [!NOTE]
-        > 
-        > Do not select the option for **Machine Learning Server (Standalone)**. The option to install Machine Learning Server under **Shared Features** is intended for use on a separate computer. For example, you might want to install the same version of the machine learning components on a different computer that is used for project development, such as your data scientist's laptop.
+        > Do not select the option in **Shared Features** for **Microsoft R Server (Standalone)**. Use this option in a separate installation if you need to add the machine learning components to a different computer that is used for R development. For example, this might be useful for your data scientist's laptop.
+        
+        ![Setup options for Python](media/ml-svcs-features-python-highlight.png "Setup options for Python")
 
 4. On the **Consent to Install Python** page, select **Accept**.
   
@@ -90,7 +87,7 @@ To perform an unattended installation, use the command-line options for SQL Serv
      + Machine Learning Services (In-Database)
      + Python
   
-    These selections represent the minimum configuration required to use Python with [!INCLUDE[ssnoversion](../../includes/ssnoversion.md)].
+    These selections represent the minimum configuration required to use Python with SQL Server.
     
     ![Ready to install Python](media/ready-to-install-python.png "Required components for Python install")
 
@@ -116,8 +113,7 @@ To perform an unattended installation, use the command-line options for SQL Serv
     EXEC sp_configure  'external scripts enabled', 1
     RECONFIGURE WITH OVERRIDE
     ```
-    
-    If you have already enabled the feature for the R language, you don't need to run reconfigure a second time for Python. The underlying extensibility platform supports both languages.
+    This is exactly the same process that is used to enable R, because the underlying extensibility feature supports both languages.
 
 4. Restart the SQL Server service for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. Restarting the SQL Server service also automatically restarts the related [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] service.
 
@@ -139,13 +135,13 @@ Take a moment to verify that all components used to launch the Python script are
   
     If you have installed multiple instances of SQL Server, any instance that has either R or Python enabled has its own Launchpad service.
 
-    If you install both R and Python on a single instance, only one Launchpad is installed. A separate, language-specific launcher DLL is added for each language. For more information, see [Components to support Python integration](new-components-in-sql-server-to-support-python-integration.md). 
+    However, if you install R and Python on a single instance, only one Launchpad is installed. A separate, language-specific launcher DLL is added for each language. For more information, see [Components to support Python integration](new-components-in-sql-server-to-support-python-integration.md). 
    
 3. If Launchpad is running, you should be able to run simple Python scripts like the following in  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:
     
     ```SQL
     EXEC sp_execute_external_script  @language =N'Python',
-    @script=N'OutputDataSet = InputDataSet',
+    @script=N'OutputDataSet=InputDataSet',
     @input_data_1 = N'SELECT 1 AS col'
     ```
     
@@ -156,7 +152,6 @@ Take a moment to verify that all components used to launch the Python script are
 
 > [!NOTE]
 > Columns or headings used in the Python script are not returned, by design. To add column names for your output, you must specify the schema for the return data set. Do this by using the WITH RESULTS parameter of the stored procedure, naming the columns and specifying the SQL data type.
-> 
 > For example, you can add the following line to generate an arbitrary column name: `WITH RESULT SETS ((Col1 AS int))`
 
 ## Step 4: Additional configuration
@@ -178,26 +173,26 @@ This is called *implied authentication*, and is a service of the database engine
 You can view these accounts in the Windows user group, **SQLRUserGroup**. By default, 20 worker accounts are created, which is usually more than enough for running external script jobs.
 
 > [!IMPORTANT]
-> The worker group is named **SQLRUserGroup** regardless of whether you installed R or Python. There is a single group for each instance.
+> The worker group is named SQLRUserGroup regardless of the type of script you are running. There is a single group for each instance.
 
-If you need to run scripts from a remote data science client, and you are using Windows authentication, there are additional considerations. These worker accounts must be given permission to sign in to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance on your behalf.
+If you need to run R scripts from a remote data science client, and you are using Windows authentication, there are additional considerations. These worker accounts must be given permission to sign in to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance on your behalf.
 
 1. In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], in Object Explorer, expand **Security**. Then right-click **Logins**, and select **New Login**.
 2. In the **Login - New** dialog box, select **Search**.
 3. Select **Object Types**, and select **Groups**. Clear everything else.
 4. In **Enter the object name to select**, type *SQLRUserGroup*,  and select **Check Names**.
 5. The name of the local group associated with the instance's Launchpad service should resolve to something like *instancename\SQLRUserGroup*. Select **OK**.
-6. By default, the group is assigned to the **public** role, and has permission to connect to the database engine.
+6. By default, the sign-in is assigned to the **public** role, and has permission to connect to the database engine.
 7. Select **OK**.
 
 > [!NOTE]
-> If you use a **SQL login** for running scripts in a SQL Server compute context, this extra step is not required.
+> If you use a SQL sign-in for running scripts in a SQL Server compute context, this extra step is not required.
 
 ### Give users permission to run external scripts
 
 If you installed [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] yourself, and you are running Python scripts in your own instance, you typically execute scripts as an administrator. Thus, you have implicit permission over various operations and all data in the database.
 
-Most users, however, do not have such elevated permissions. For example, users in an organization who use SQL logins to access the database generally do not have elevated permissions. Therefore, for each user who is using Python, you must grant users of Machine Learning Services the permission to run external scripts in each database where Python is used. Here's how:
+Most users, however, do not have such elevated permissions. For example, users in an organization who use SQL sign-ins to access the database generally do not have elevated permissions. Therefore, for each user who is using Python, you must grant users of Machine Learning Services the permission to run external scripts in each database where Python is used. Here's how:
 
 ```SQL
 USE <database_name>
@@ -210,12 +205,12 @@ GRANT EXECUTE ANY EXTERNAL SCRIPT  TO [UserName]
 
 ### Give your users read, write, or data definition language (DDL) permissions to databases
 
-While a user is running scripts, the user might need to read data from other databases. The user might also need to create new tables to store results, and write data into tables.
+While a user is running scripts, the user account or SQL sign-in might need to read data from other databases. The user account or SQL sign-in might also need to create new tables to store results, and write data into tables.
 
-For each Windows user account or SQL login that is running R or Python scripts, ensure that it has the appropriate permissions on the specific database:  `db_datareader`, `db_datawriter`, or `db_ddladmin`.
+For each user account or SQL sign-in that is running R or Python scripts, ensure that it has `db_datareader`, `db_datawriter`, or `db_ddladmin` permissions on the specific database.
 
-For example, the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement gives the SQL login *MySQLLogin* the rights to run T-SQL queries in the *ML_Samples* database. To run this statement, the SQL login must already exist in the security context of the server.
-
+For example, the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement gives the SQL sign-in *MySQLLogin* the rights to run T-SQL queries in the *ML_Samples* database. To run this statement, the SQL sign-in must already exist in the security context of the server.
+  
 ```SQL
 USE ML_Samples
 GO
@@ -230,11 +225,12 @@ If you cannot connect from a remote computer, check whether the firewall allows 
 
 ### Create an ODBC data source for the instance on your data science client
 
-You might create a machine learning solution on a data science client computer. If you need to run code by using the SQL Server computer as the compute context, you have two options: access the instance by using a SQL login, or by using a Windows account.
+You might create a machine learning solution on a data science client computer. If you need to run code by using the SQL Server computer as the compute context, you have two options. You can use a SQL sign-in or an integrated Windows authentication.
 
-+ For SQL logins: Ensure that the login has appropriate permissions on the database where you are reading data. You can do this by adding *Connect to* and *SELECT* permissions, or by adding the login to the `db_datareader` role. To create objects, assign `DDL_admin` rights. If you must save data to tables, add to the `db_datawriter` role.
++ For SQL sign-ins: Ensure that the sign-in has appropriate permissions on the database where you are reading data. You can do this by adding *Connect to* and *SELECT* permissions, or by adding the sign-in to the `db_datareader` role. Sign-ins that create objects need `DDL_admin` rights. Sign-ins that must save data to tables should be added to the `db_datawriter` role.
 
 + For Windows authentication: You might need to create an ODBC data source on the data science client that specifies the instance name and other connection information. For more information, see [ODBC data source administrator](https://docs.microsoft.com/sql/odbc/admin/odbc-data-source-administrator).
+
 
 ## Additional optimizations
 
@@ -242,7 +238,7 @@ Now that you have everything working, you might also want to optimize the server
 
 ### Add more worker accounts
 
-If you expect many users to be running scripts concurrently, you can increase the number of worker accounts that are assigned to the Launchpad service. For more information, see [Modify the user account pool for SQL Server Machine Learning Services](../r/modify-the-user-account-pool-for-sql-server-r-services.md).
+If you expect many users to be running scripts concurrently, you can increase the number of worker accounts that are assigned to the Launchpad service. For more information, see [Modify the user account pool for SQL Server R Services](../r/modify-the-user-account-pool-for-sql-server-r-services.md).
 
 ### Optimize the server for script execution
 
@@ -279,6 +275,10 @@ You can upgrade the machine learning components on a faster schedule than is sup
 + [Pretrained models](https://docs.microsoft.com/r-server/install/microsoftml-install-pretrained-models) for image classification and text analysis.
 
 For information about how to upgrade an instance, see [Upgrade R components through binding](..\r\use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
+
+> [!NOTE]
+> 
+> The current release version contains the latest version of all machine learning components. Therefore, although upgrades via Microsoft Machine Learning Server are supported for SQL Server 2017, the upgrade that is currently available applies only to SQL Server 2016 instances.
 
 ### Tutorials
 

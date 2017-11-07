@@ -16,7 +16,6 @@ caps.latest.revision: 31
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Database Mirroring Monitor (Warnings Page)
   Displays a read-only list of warnings supported on database mirroring events and the specified warning threshold values, if available.  

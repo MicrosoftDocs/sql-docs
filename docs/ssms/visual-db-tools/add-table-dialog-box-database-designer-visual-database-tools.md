@@ -17,7 +17,6 @@ caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Add Table Dialog Box (Database Designer) (Visual Database Tools)
 Lets you add tables in Database Designer.  

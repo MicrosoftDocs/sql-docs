@@ -16,7 +16,6 @@ caps.latest.revision: 24
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Lesson 2-3 - Maximizing Query Editor
 Programmers frequently ask, "How can I get more room to write my code?" The answer is that there are two ways, both easy: maximize the Query Editor window and hide your unused tool windows.  

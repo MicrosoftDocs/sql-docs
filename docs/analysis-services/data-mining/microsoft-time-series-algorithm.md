@@ -23,7 +23,7 @@ ms.assetid: 642297cc-f32a-499b-b26e-fdc7ee24361e
 caps.latest.revision: 75
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "jhubbard"
 ms.workload: "On Demand"
 ---
 # Microsoft Time Series Algorithm

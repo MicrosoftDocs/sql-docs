@@ -14,7 +14,6 @@ caps.latest.revision: 9
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Detaching and Attaching DQS Databases
   This topic describes how to detach and attach the DQS databases.  

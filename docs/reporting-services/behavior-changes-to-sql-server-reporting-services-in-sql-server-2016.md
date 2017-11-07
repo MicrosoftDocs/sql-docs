@@ -27,7 +27,6 @@ caps.latest.revision: 69
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
-ms.workload: "Inactive"
 ---
 
 # Behavior changes to SQL Server Reporting Services in SQL Server 2016

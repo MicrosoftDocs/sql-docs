@@ -17,7 +17,6 @@ caps.latest.revision: 28
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # ABS (SSIS Expression)
   Returns the absolute, positive value of a numeric expression.  

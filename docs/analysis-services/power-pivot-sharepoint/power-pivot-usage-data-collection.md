@@ -15,7 +15,7 @@ ms.assetid: 9057cb89-fb17-466e-a1ce-192c8ca20692
 caps.latest.revision: 10
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # Power Pivot Usage Data Collection

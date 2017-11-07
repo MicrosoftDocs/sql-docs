@@ -16,7 +16,6 @@ caps.latest.revision: 31
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Trace File Close Event Class
   The **Trace File Close** event class indicates that a trace file has been closed during a trace file rollover.  

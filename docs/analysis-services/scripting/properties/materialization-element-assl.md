@@ -23,8 +23,7 @@ ms.assetid: a87a95ae-d89c-4005-b22c-47c8991673b7
 caps.latest.revision: 12
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
-ms.workload: "Inactive"
+manager: "erikre"
 ---
 # Materialization Element (ASSL)
   Indicates the type of relationship between the measure group and the reference dimension.  

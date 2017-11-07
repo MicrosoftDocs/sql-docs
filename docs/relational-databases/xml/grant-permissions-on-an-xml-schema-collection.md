@@ -17,7 +17,6 @@ caps.latest.revision: 32
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Grant Permissions on an XML Schema Collection
   You can grant permissions to create an XML schema collection and also grant permissions on an XML schema collection object.  

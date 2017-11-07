@@ -15,7 +15,6 @@ caps.latest.revision: 9
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
-ms.workload: "Inactive"
 ---
 # Power Pivot Connection Type (SSRS)
   You can use SQL Server Analysis Services data processing extension to retrieve data from a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbook that is published in a SharePoint [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Gallery.  

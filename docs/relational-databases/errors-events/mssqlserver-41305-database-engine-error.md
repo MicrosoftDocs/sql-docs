@@ -13,10 +13,9 @@ helpviewer_keywords:
   - "41305 (Database Engine error)"
 ms.assetid: a96e5083-ff97-4003-a900-07942454151d
 caps.latest.revision: 7
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # MSSQLSERVER_41305
   

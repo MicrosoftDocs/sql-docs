@@ -23,7 +23,7 @@ ms.assetid: 41887413-2d47-49b8-8614-553cb799fb18
 caps.latest.revision: 24
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "erikre"
 ms.workload: "Inactive"
 ---
 # Attach and Detach Analysis Services Databases

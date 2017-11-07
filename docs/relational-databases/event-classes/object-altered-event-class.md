@@ -16,7 +16,6 @@ caps.latest.revision: 23
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Object:Altered Event Class
   The Object:Altered event class indicates that an object has been altered; for example, by an ALTER INDEX, ALTER TABLE, or ALTER DATABASE statement. This event class can be used to determine if objects are being altered; for example, by ODBC applications, which often create temporary stored procedures.  

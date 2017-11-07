@@ -17,7 +17,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # HAVING Clause Limitations
 The maximum number of search conditions in a HAVING clause is 40.

@@ -16,7 +16,6 @@ caps.latest.revision: 37
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Showplan XML Event Class
   The Showplan XML event class occurs when [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executes an SQL statement. Include the Showplan XML event class to identify the Showplan operators. This event class stores each event as a well-defined XML document.  

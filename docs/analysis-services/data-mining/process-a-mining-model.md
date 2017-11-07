@@ -16,7 +16,7 @@ ms.assetid: c2204472-c500-47a5-9afa-7ce2ca78b233
 caps.latest.revision: 32
 author: "Minewiskan"
 ms.author: "owend"
-manager: "kfile"
+manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # Process a Mining Model

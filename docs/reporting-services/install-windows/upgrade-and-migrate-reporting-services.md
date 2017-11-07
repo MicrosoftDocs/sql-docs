@@ -20,7 +20,6 @@ caps.latest.revision: 92
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
-ms.workload: "On Demand"
 ---
 
 # Upgrade and Migrate Reporting Services

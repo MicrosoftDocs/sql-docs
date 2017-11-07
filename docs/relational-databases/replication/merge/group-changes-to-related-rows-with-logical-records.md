@@ -18,7 +18,6 @@ caps.latest.revision: 55
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Group Changes to Related Rows with Logical Records
     

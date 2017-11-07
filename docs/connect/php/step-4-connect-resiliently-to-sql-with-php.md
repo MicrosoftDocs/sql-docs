@@ -14,7 +14,6 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # Step 4: Connect resiliently to SQL with PHP
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

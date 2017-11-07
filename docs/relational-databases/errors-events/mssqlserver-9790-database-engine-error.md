@@ -13,10 +13,9 @@ helpviewer_keywords:
   - "9790 (Database Engine error)"
 ms.assetid: 83fd379f-5deb-4f97-8cb4-282e3d3fed94
 caps.latest.revision: 13
-author: "edmacauley"
-ms.author: "edmaca"
-manager: "cguyer"
-ms.workload: "Inactive"
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
 ---
 # MSSQLSERVER_9790
   

@@ -16,7 +16,6 @@ caps.latest.revision: 11
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "erikre"
-ms.workload: "On Demand"
 ---
 
 # Prerequisites for Tutorials (Report Builder)

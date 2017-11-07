@@ -18,7 +18,6 @@ caps.latest.revision: 37
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
-ms.workload: "Inactive"
 ---
 # View Information and Perform Tasks for Subscription Agents
   Replication Monitor provides two tabs that allow access to information about the agent(s) associated with a subscription:  

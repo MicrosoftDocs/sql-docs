@@ -12,7 +12,6 @@ ms.topic: "article"
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
-ms.workload: "Active"
 ---
 # Import data from Excel to SQL Server or Azure SQL Database
 There are several ways to import data from Excel files to SQL Server or to Azure SQL Database. This article summarizes each of these options and provides links to more detailed instructions.

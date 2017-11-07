@@ -88,7 +88,7 @@ ms.technology:
                                                 <ul class="noBullet">
                                                     <li><a class="barLink" href="https://github.com/Microsoft/sql-server-samples/tree/master/samples">Code samples</a></li>
                                                     <li><a class="barLink" href="https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0">Wide World Importers</a></li>
-                                                    <li><a class="barLink" href="https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works">AdventureWorks</a></li>
+                                                    <li><a class="barLink" href="https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks">AdventureWorks</a></li>
                                                 </ul>
                                             </div>
                                         </div>

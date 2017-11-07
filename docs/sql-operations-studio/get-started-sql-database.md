@@ -5,7 +5,7 @@ keywords:
 ms.custom: "tools|sos"
 ms.date: "11/01/2017"
 ms.prod: "sql-non-specified"
-ms.reviewer: "alayu; erickang; sanagama; sstein"
+ms.reviewer: "alayu; erickang; sstein"
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "quickstart"
@@ -20,7 +20,7 @@ This quickstart demonstrates how to use *[!INCLUDE[name-sos](../includes/name-so
 
 ## Prerequisites
 
-To complete this quickstart, you need [!INCLUDE[name-sos](../includes/name-sos-short.md)], and an Azure SQL server where you have *CREATE DATABASE* permissions.
+To complete this quickstart, you need [!INCLUDE[name-sos](../includes/name-sos-short.md)], and an Azure SQL server.
 
 - [Install [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md).
 
@@ -48,7 +48,7 @@ To connect to your server from [!INCLUDE[name-sos](../includes/name-sos-short.md
 
 Use [!INCLUDE[name-sos](../includes/name-sos-short.md)] to establish a connection to your Azure SQL Database server.
 
-1. The first time you run [!INCLUDE[name-sos](../includes/name-sos-short.md)] the **Connection** page should open. If the **Connection** page doesn't open, click the **New Connection** icon in the **SERVERS** page:
+1. The first time you run [!INCLUDE[name-sos](../includes/name-sos-short.md)] the **Connection** page should open. If the **Connection** page doesn't open, click the **New Connection** icon in the **SERVERS** sidebar:
    
    ![New Connection Icon](media/get-started-sql-database/new-connection-icon.png)
 
@@ -66,10 +66,9 @@ Use [!INCLUDE[name-sos](../includes/name-sos-short.md)] to establish a connectio
 
    ![New Connection Icon](media/get-started-sql-database/new-connection-screen.png)  
 
-3. If you are successfully connected, skip ahead to the next section. If you see the *Create firewall rule* screen, you need to register your IP address. Add an account, and click **OK**.
+3. If you get an error about the firewall, you need to create a firewall rule. To create a firewall rule, see [Firewall rules](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure).
 
-   ![Firewall image](media/get-started-sql-database/setup-firewall-ip.png)  
-
+4. After successfully connecting your server will appear in the object explorer.
 
 ## Create the tutorial database
 
@@ -170,5 +169,5 @@ Other articles in this collection build upon this quickstart. If you plan to con
 Clean up resources by deleting the resource groups you no longer need. For details, see [Clean up resources](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-get-started-portal#clean-up-resources).
 
 ## Next steps
-> [!div class="nextstepaction"]
-> [Apply modern code flow using [!INCLUDE[name-sos](../includes/name-sos-short.md)]](tutorial-sql-editor.md)
+
+To create and run queries, see [Code editor tutorial](tutorial-sql-editor.md).

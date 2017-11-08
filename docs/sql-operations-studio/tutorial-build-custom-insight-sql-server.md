@@ -54,13 +54,11 @@ In this step, run a sql script to query the current active sessions.
 ## Generate an insight widget setting
 
 1. To open the insight widget configuration, click **Create Insight** on *Chart Viewer*:
-   ![configuration](./media/tutorial-build-custom-insight-sql-server/insight-missingpk-config.png)
+   ![configuration](./media/tutorial-build-custom-insight-sql-server/create-insight.png)
    
 2. Copy the insight configuration (the JSON data). 
 
 3. Press **Ctrl+Comma** and to open *User Settings*.
-
-   ![settings](./media/tutorial-build-custom-insight-sql-server/settings.png)
 
 4. Type *dashboard* in *Search Settings*.
 

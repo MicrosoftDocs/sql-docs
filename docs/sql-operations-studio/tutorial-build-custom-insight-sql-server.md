@@ -1,5 +1,5 @@
 ---
-title: Build a customer insight widget in SQL Operations Studio | Microsoft Docs
+title: Build a custom insight widget in SQL Operations Studio | Microsoft Docs
 description: Learn how to build custom insight widgets and add them to database and server dashboards in SQL Operations Studio.
 keywords: 
 ms.custom: "tools|sos"
@@ -101,7 +101,7 @@ In this step, run a sql script to query the current active sessions.
 In this tutorial, you learned how to:
 > [!div class="checklist"]
 > * Run your own query and view it in a chart
-> * Build a custom insight widget from the char
+> * Build a custom insight widget from the chart
 > * Add the chart to a server or database dashboard
 
 To learn how to backup and restore databases, see [Backup and Restore using SQL Operations Studio](tutorial-backup-restore-sql-server.md).

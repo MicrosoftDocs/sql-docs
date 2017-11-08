@@ -46,9 +46,9 @@ The proper migration strategy depends on certain parameters of the original SQL 
 
 |                                   | Requires all server objects and VNNS | Requires all server objects and VNNS | Does not require server objects/VNNS\* | Does not require server objects/VNNS\* |
 |-----------------------------------|--------------------------------------|--------------------------------------------------------------------|------------|------------|
-| Always On? (Y/N)                  | ***Y***                              | ***N***                                                            | ***Y***    | ***N***    |
-| Cluster uses SQL FCI only         | Scenario 3                           | Scenario 2                                                         | Scenario 1 | Scenario 2 |
-| Cluster uses standalone instances | Scenario 5                           | Scenario 4                                                         | Scenario 1 | Scenario 4 |
+| **Always On? (Y/N)**                  | ***Y***                              | ***N***                                                            | ***Y***    | ***N***    |
+| **Cluster uses SQL FCI only**         | Scenario 3                           | Scenario 2                                                         | Scenario 1 | Scenario 2 |
+| **Cluster uses standalone instances** | Scenario 5                           | Scenario 4                                                         | Scenario 1 | Scenario 4 |
 \* Excluding AG listener names
 
 ## Scenario 1: Cluster to migrate uses strictly Availability Groups (Windows Server 2008 R2 SP1+)
@@ -64,13 +64,14 @@ If you have a SQL Server setup that uses strictly Availability Groups, you can m
 3.  Form a distributed availability group where the target cluster is the secondary Availability Group.
 
     >[!NOTE]
-    >The `LISTENER_URL` parameter of the create distributed AG query behaves slightly differently for AGs with an FCI serving as the primary instance. If this is the scenario for either the primary or the secondary AG, use the VNN of the primary SQL FCI as the listener URL in place of the listener’s network name, still using the port of the database mirroring endpoint in either scenario.
+    >The LISTENER\_URL parameter of the create distributed AG query behaves slightly differently for AGs with an FCI serving as the primary instance. If this is the scenario for either the primary or the secondary AG, use the VNN of the primary SQL FCI as the listener URL in place of the listener’s network name, still using the port of the database mirroring endpoint in either scenario.
 
 4.  Join the secondary Availability Group to the distributed AG.
 
 5.  Join the secondary databases on the secondary AG.
 
-    -   This will be done automatically if the target Availability Group uses automatic seeding; this is only possible if the data and log paths are the same across all replicas.
+    >[!NOTE]
+    >This will be done automatically if the target Availability Group uses automatic seeding; this is only possible if the data and log paths are the same across all replicas.
 
 6.  Cut-off all traffic to the primary AG and allow the secondary to sync.
 

@@ -1,9 +1,9 @@
 ---
-title: Monitor Query Performance with SQL Operations Studio  | Microsoft Docs
-description: Monitor a database by adding a pre-built query performance widget to the database dashboard that shows the five slowest queries.
+title: "Tutorial: Monitor Query Performance with SQL Operations Studio (preview)  | Microsoft Docs"
+description: This tutorial demonstrates how to monitor a database by adding a pre-built query performance widget to the database dashboard that shows the five slowest queries.
 keywords: 
 ms.custom: "tools|sos"
-ms.date: "11/06/2017"
+ms.date: "11/08/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: "alayu; erickang; sstein"
 ms.suite: "sql"
@@ -15,9 +15,9 @@ manager: craigg
 ms.workload: "Inactive"
 ---
 
-# Add the pre-built five slowest queries widget to the database dashboard
+# Tutorial: Add the pre-built *five slowest queries* widget to the database dashboard
 
-In this tutorial, you walk through the process of adding one of [!INCLUDE[name-sos](../includes/name-sos-short.md)]'s built-in insight widgets to the *database dashboard*.  to quickly view a database's five slowest queries using [Query Store](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md). You also learn how to view the details of the slow queries and query plans using [!INCLUDE[name-sos](../includes/name-sos-short.md)]'s features. During this tutorial, you learn how to:
+This tutorial demonstrates the process of adding one of [!INCLUDE[name-sos](../includes/name-sos-short.md)]'s built-in insight widgets to the *database dashboard*.  to quickly view a database's five slowest queries using [Query Store](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md). You also learn how to view the details of the slow queries and query plans using [!INCLUDE[name-sos](../includes/name-sos-short.md)]'s features. During this tutorial, you learn how to:
 
 > [!div class="checklist"]
 > * Enable Query Store on a database
@@ -33,9 +33,9 @@ This tutorial details the process of adding [!INCLUDE[name-sos](../includes/name
 
 This tutorial requires the *TutorialDB* database. To create the *TutorialDB* database, complete one of the following quickstarts:
 
-- [Connect and query SQL Server using [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](get-started-sql-server.md)
-- [Connect and query Azure SQL Database using [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](get-started-sql-database.md)
-- [Connect and query SQL Data Warehouse using [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](get-started-sql-dw.md)
+- [Connect and query SQL Server using [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
+- [Connect and query Azure SQL Database using [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
+- [Connect and query SQL Data Warehouse using [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-dw.md)
 
 ## Turn on Query Store for your database
 

@@ -1,11 +1,11 @@
 ---
-title: Download and install Microsoft SQL Operations Studio | Microsoft Docs
-description: 'Download and Install Microsoft SQL Operations Studio for Windows, macOS, or Linux'
-keywords: Microsoft SQL Operations Studio, install Microsoft SQL Operations Studio, download Microsoft SQL Operations Studio
+title: Download and install Microsoft SQL Operations Studio (preview) | Microsoft Docs
+description: 'Download and Install Microsoft SQL Operations Studio (preview) for Windows, macOS, or Linux'
+keywords: Microsoft SQL Operations Studio (preview), install Microsoft SQL Operations Studio (preview), download Microsoft SQL Operations Studio (preview)
 ms.custom: "tools|sos"
-ms.date: "11/06/2017"
+ms.date: "11/08/2017"
 ms.prod: "sql-non-specified"
-ms.reviewer: "alayu; erickang; sanagama; sstein"
+ms.reviewer: "alayu; erickang; sstein"
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -14,7 +14,7 @@ ms.author: "sstein"
 manager: craigg
 ms.workload: "Inactive"
 ---
-# Download and install Microsoft SQL Operations Studio
+# Download and install Microsoft SQL Operations Studio (preview)
 
 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] is a free, lightweight, modern database development and management tool that runs on Windows, macOS, and Linux. Use [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] to manage SQL Server running anywhere, Azure SQL Database, and Azure SQL Data Warehouse.   
 
@@ -46,7 +46,7 @@ ms.workload: "Inactive"
 - Ubuntu 16.04
 
 
-## Get SQL Operations Studio for Windows
+## Get SQL Operations Studio (preview) for Windows
 
 1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] for Windows](https://go.microsoft.com/fwlink/?linkid=XXXXX) to your local computer.
 1. Right-click the **.zip** file, and select **Properties**.
@@ -55,7 +55,7 @@ ms.workload: "Inactive"
 1. Run *\sqlops-windows\sqlops.exe*
 
 
-## Get SQL Operations Studio for macOS
+## Get SQL Operations Studio (preview) for macOS
 
 1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] for macOS](https://go.microsoft.com/fwlink/?linkid=XXXXX) to your local computer.
 2. To expand the contents of the zip, double-click it.
@@ -68,7 +68,7 @@ ms.workload: "Inactive"
       ```sqlops```
 
 
-## Get SQL Operations Studio for Linux
+## Get SQL Operations Studio (preview) for Linux
 
 1. Open a new Terminal window.
 2. Type the following commands to extract the file and launch [!INCLUDE[name-sos](../includes/name-sos-short.md)]:
@@ -83,13 +83,13 @@ ms.workload: "Inactive"
    ```
 
 
-## Uninstall SQL Operations Studio
+## Uninstall SQL Operations Studio (preview)
 
 To uninstall [!INCLUDE[name-sos-short](../includes/name-sos-short.md)], delete the files.
 
 ## Next Steps
 
-See one of the following articles to get started:
-- [Connect & Query SQL Server](get-started-sql-server.md)
-- [Connect & Query Azure SQL Database](get-started-sql-database.md)
-- [Connect & Query Azure Data Warehouse](get-started-sql-dw.md)
+See one of the following quickstarts to get started:
+- [Connect & Query SQL Server](quickstart-sql-server.md)
+- [Connect & Query Azure SQL Database](quickstart-sql-database.md)
+- [Connect & Query Azure Data Warehouse](quickstart-sql-dw.md)

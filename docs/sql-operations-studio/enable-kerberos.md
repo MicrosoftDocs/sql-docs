@@ -1,14 +1,14 @@
 ---
-title: Use Active Directory Authentication (Kerberos) when connecting with SQL Operations Studio | Microsoft Docs
-description: Learn how to enable Kerberos to use Active Directory Authentication for SQL Operations Studio
+title: Use Active Directory Authentication (Kerberos) when connecting with SQL Operations Studio (preview) | Microsoft Docs
+description: Learn how to enable Kerberos to use Active Directory Authentication for SQL Operations Studio (preview)
 keywords: 
 ms.custom: "tools|sos"
-ms.date: "11/06/2017"
+ms.date: "11/08/2017"
 ms.prod: "sql-non-specified"
-ms.reviewer: "alayu; erickang; sanagama; sstein"
+ms.reviewer: "alayu; erickang; sstein"
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.topic: "overview, quickstart, tutorial, or article"
+ms.topic: "article"
 author: "meet-bhagdev"
 ms.author: "meetb"
 manager: craigg

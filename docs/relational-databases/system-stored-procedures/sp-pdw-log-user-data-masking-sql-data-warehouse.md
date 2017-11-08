@@ -2,11 +2,12 @@
 title: "sp_pdw_log_user_data_masking (SQL Data Warehouse) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: ""
+ms.service: "sql-data-warehouse"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
-  - "database-engine"
+  - "sql-data-warehouse"
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 

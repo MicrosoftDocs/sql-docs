@@ -28,12 +28,11 @@ In this tutorial, you learn how to use [!INCLUDE[name-sos](../includes/name-sos-
 ## Prerequisites
 This tutorial requires the *TutorialDB* database. To create the *TutorialDB* database, complete one of the following quickstarts:
 
-- [Connect and query SQL Server using [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](get-started-sql-server.md)
-- [Connect and query Azure SQL Database using [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](get-started-sql-database.md)
-- [Connect and query SQL Data Warehouse using [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](get-started-sql-dw.md)
+- [Connect and query SQL Server using [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
+- [Connect and query Azure SQL Database using [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
+- [Connect and query SQL Data Warehouse using [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-dw.md)
 
 ## Backup a database
-[step overview]
 
 1. Open the TutorialDB database dashboard (open the **SERVERS** sidebar (**CTRL+G**), expand **Databases**, right-click **TutorialDB**, and select **Manage**). 
 
@@ -57,7 +56,7 @@ After clicking **Backup**, the **Backup database** dialog disappears and the bac
    ![backup script](./media/tutorial-backup-restore-sql-server/task-script.png) 
 
 ## Restore a database from a backup file
-[step overview]
+
 
 1. Open the **SERVERS** sidebar (**CTRL+G**), right-click your server, and select **Manage**. 
 

@@ -1,9 +1,9 @@
 ---
-title: Connect and query an Azure SQL database using SQL Operations Studio | Microsoft Docs
-description: Use SQL Operations Studio to connect to a SQL database and run a query
+title: Quickstart: Connect and query an Azure SQL Data Warehouse using SQL Operations Studio | Microsoft Docs
+description: This quickstart shows how to use SQL Operations Studio to connect to a SQL database and run a query
 keywords:
 ms.custom: "tools|sos"
-ms.date: "11/01/2017"
+ms.date: "11/08/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: "alayu; erickang; sstein"
 ms.suite: "sql"
@@ -14,56 +14,52 @@ ms.author: "alayu"
 manager: craigg
 ms.workload: "Inactive"
 ---
-# Azure SQL Database: Use [!INCLUDE[name-sos](../includes/name-sos-short.md)] to connect and query data
+# Quickstart: Use [!INCLUDE[name-sos](../includes/name-sos-short.md)] to connect and query data in Azure SQL Data Warehouse
 
-This quickstart demonstrates how to use *[!INCLUDE[name-sos](../includes/name-sos-short.md)]* to connect to an Azure SQL database, and then use Transact-SQL (T-SQL)statements to create, insert, and select data.
+This quickstart demonstrates how to use [!INCLUDE[name-sos](../includes/name-sos-short.md)] to connect to Azure SQL data warehouse, and then use Transact-SQL statements to create, insert, and select data. 
 
 ## Prerequisites
-
-To complete this quickstart, you need [!INCLUDE[name-sos](../includes/name-sos-short.md)], and an Azure SQL server.
+To complete this quickstart, you need [!INCLUDE[name-sos](../includes/name-sos-short.md)], and an Azure SQL data warehouse.
 
 - [Install [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md).
 
-If you don't already have an Azure SQL server, complete one of the following Azure SQL Database quickstarts (remember the server name, and login credentials!):
+If you don't already have a SQL data warehouse, see [Create a SQL Data Warehouse](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/sql-data-warehouse-get-started-provision).
 
-- [Create DB - Portal](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal)
-- [Create DB - CLI](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-cli)
-- [Create DB - PowerShell](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-powershell)
+Remember the server name, and login credentials!
 
 
-## Connect to your Azure SQL Database server
+## Connect to your data warehouse
 
-Use [!INCLUDE[name-sos](../includes/name-sos-short.md)] to establish a connection to your Azure SQL Database server.
+Use [!INCLUDE[name-sos](../includes/name-sos-short.md)] to establish a connection to your Azure SQL Data Warehouse server.
 
 1. The first time you run [!INCLUDE[name-sos](../includes/name-sos-short.md)] the **Connection** page should open. If the **Connection** page doesn't open, click the **New Connection** icon in the **SERVERS** sidebar:
    
-   ![New Connection Icon](media/get-started-sql-database/new-connection-icon.png)
+   ![New Connection Icon](media/quickstart-sql-dw/new-connection-icon.png)
 
 2. This article uses *SQL Login*, but *Windows Authentication* is also supported. Fill in the fields as follows:
 
    | Setting       | Suggested value | Description |
    | ------------ | ------------------ | ------------------------------------------------- | 
-   | **Server name** | The fully qualified server name | The name should be something like this: **servername.database.windows.net** |
+   | **Server name** | The fully qualified server name | The name should be something like this: **sqldwsample.database.windows.net** |
    | **Authentication** | SQL Login| SQL Authentication is used in this tutorial. |
    | **User name** | The server admin account | This is the account that you specified when you created the server. |
    | **Password (SQL Login)** | The password for your server admin account | This is the password that you specified when you created the server. |
    | **Save Password?** | Yes or No | Select Yes if you do not want to enter the password each time. |
-   | **Database name** | *leave blank* | The name of the database you want to connect to. |
+   | **Database name** | *leave blank* | The name of the database to which to connect. |
    | **Server Group** | Select <Default> | If you created a server group, you can set to a specific server group. | 
 
-   ![New Connection Icon](media/get-started-sql-database/new-connection-screen.png)  
+   ![New Connection Icon](media/quickstart-sql-dw/new-connection-screen.png) 
 
 3. If you get an error about the firewall, you need to create a firewall rule. To create a firewall rule, see [Firewall rules](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure).
 
 4. After successfully connecting your server will appear in the object explorer.
 
 ## Create the tutorial database
+1. Right click on your server, in the object explorer and select **New Query.**
 
-The *TutorialDB* database is used in several [!INCLUDE[name-sos](../includes/name-sos-short.md)] tutorials.
+   ![NewQuery](media/quickstart-sql-dw/new-query.png)
 
-1. Right click on your Azure SQL server in the SERVERS sidebar and select **New Query.**
-
-1. Paste the following snippet into the query window.
+1. Paste the following snippet into the query window:
 
    ```sql
    IF NOT EXISTS (
@@ -77,9 +73,7 @@ The *TutorialDB* database is used in several [!INCLUDE[name-sos](../includes/nam
    ALTER DATABASE [TutorialDB] SET QUERY_STORE=ON
    GO
    ```
-
 1. To execute the query, click **Run**.
-
 
 ## Create a table
 
@@ -87,11 +81,10 @@ The query editor is still connected to the *master* database, but we want to cre
 
 1. Change the connection context to **TutorialDB**:
 
-   ![Change context](media/get-started-sql-database/change-context.png)
+   ![Change context](media/quickstart-sql-database/change-context.png)
 
 
-
-1. Paste the following snippet into the query window.
+1. Paste the following snippet into the query window:
 
    ```sql
    -- Create a new table called 'Customers' in schema 'dbo'
@@ -109,11 +102,13 @@ The query editor is still connected to the *master* database, but we want to cre
    );
    GO
    ```
+
 1. To execute the query, click **Run**.
 
 ## Insert rows
 
 1. Paste the following snippet into the query window:
+
    ```sql
    -- Insert rows into table 'Customers'
    INSERT INTO dbo.Customers
@@ -129,7 +124,7 @@ The query editor is still connected to the *master* database, but we want to cre
 1. To execute the query, click **Run**.
 
 ## View the result
-1. Paste the following snippet into the query window.
+1. Paste the following snippet into the query window:
 
    ```sql
    -- Select rows from table 'Customers'
@@ -138,14 +133,14 @@ The query editor is still connected to the *master* database, but we want to cre
 
 1. To execute the query, click **Run**.
 
-   ![Select results](media/get-started-sql-database/select-results.png)
+   ![Select results](media/quickstart-sql-dw/select-results.png)
 
 ## Save result as Excel
-1. Right click on the results table and save as an Excel** file. 
 
-   ![Save as Excel](media/get-started-sql-database/save-as-excel.png)
+Right-click the results table and select **Save As Excel**. 
 
-2. Save as **Results.xls**.
+   ![Save as Excel](media/quickstart-sql-dw/save-as-excel.png)
+
 
 ## View chart
 View an existing, built-in widget through the dashboard.

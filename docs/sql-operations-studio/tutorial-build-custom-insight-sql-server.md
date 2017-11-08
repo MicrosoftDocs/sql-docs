@@ -1,9 +1,9 @@
 ---
-title: Build a custom insight widget in SQL Operations Studio | Microsoft Docs
-description: Learn how to build custom insight widgets and add them to database and server dashboards in SQL Operations Studio.
+title: Tutorial: Build a custom insight widget in SQL Operations Studio | Microsoft Docs
+description: This tutorial demonstrates how to build custom insight widgets and add them to database and server dashboards in SQL Operations Studio.
 keywords: 
 ms.custom: "tools|sos"
-ms.date: "11/06/2017"
+ms.date: "11/08/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: "alayu; erickang; sstein"
 ms.suite: "sql"
@@ -15,8 +15,11 @@ manager: craigg
 ms.workload: "Inactive"
 ---
 
-# Build a custom insight widget
-In the previous tutorial, you learned how to quickly enable insight widgets on dashboard using built-in samples. In this tutorial, you walk through how to bring your own insight queries and build a custom insight widget. With a few simple steps, you learn how to:
+# Tutorial: Build a custom insight widget
+
+This tutorial, demonstrates how to use your own insight queries to build custom insight widgets.
+
+During this tutorial you learn how to:
 > [!div class="checklist"]
 > * Run your own query and view it in a chart
 > * Build a custom insight widget from the chart
@@ -25,9 +28,9 @@ In the previous tutorial, you learned how to quickly enable insight widgets on d
 ## Prerequisites
 This tutorial requires the *TutorialDB* database. To create the *TutorialDB* database, complete one of the following quickstarts:
 
-- [Connect and query SQL Server using [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](get-started-sql-server.md)
-- [Connect and query Azure SQL Database using [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](get-started-sql-database.md)
-- [Connect and query SQL Data Warehouse using [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](get-started-sql-dw.md)
+- [Connect and query SQL Server using [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
+- [Connect and query Azure SQL Database using [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
+- [Connect and query SQL Data Warehouse using [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-dw.md)
 
 
 ## Run your own query and view the result in a chart view

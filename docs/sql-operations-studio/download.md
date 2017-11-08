@@ -3,7 +3,7 @@ title: Download and install Microsoft SQL Operations Studio | Microsoft Docs
 description: 'Download and Install Microsoft SQL Operations Studio for Windows, macOS, or Linux'
 keywords: Microsoft SQL Operations Studio, install Microsoft SQL Operations Studio, download Microsoft SQL Operations Studio
 ms.custom: "tools|sos"
-ms.date: "11/06/2017"
+ms.date: "11/08/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: "alayu; erickang; sanagama; sstein"
 ms.suite: "sql"
@@ -89,7 +89,7 @@ To uninstall [!INCLUDE[name-sos-short](../includes/name-sos-short.md)], delete t
 
 ## Next Steps
 
-See one of the following articles to get started:
-- [Connect & Query SQL Server](get-started-sql-server.md)
-- [Connect & Query Azure SQL Database](get-started-sql-database.md)
-- [Connect & Query Azure Data Warehouse](get-started-sql-dw.md)
+See one of the following quickstarts to get started:
+- [Connect & Query SQL Server](quickstart-sql-server.md)
+- [Connect & Query Azure SQL Database](quickstart-sql-database.md)
+- [Connect & Query Azure Data Warehouse](quickstart-sql-dw.md)

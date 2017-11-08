@@ -1,9 +1,9 @@
 ---
-title: SQL Operations Studio | Microsoft Docs
+title: What is SQL Operations Studio? | Microsoft Docs
 description: SQL Operations Studio is a lightweight, open source, multi-OS and multi-database tool, designed from the ground-up for DBAs and developers.
 keywords:
 ms.custom: "tools|sos"
-ms.date: "11/03/2017"
+ms.date: "11/08/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: "alayu; erickang; sstein"
 ms.suite: "sql"
@@ -15,7 +15,7 @@ manager: craigg
 ms.workload: "Inactive"
 ---
 
-# [!INCLUDE[name-sos](../includes/name-sos.md)]
+# What is [!INCLUDE[name-sos](../includes/name-sos.md)]?
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] is a lightweight, open source, multi-OS and multi-database tool, designed from the ground-up for DBAs and developers. [!INCLUDE[name-sos](../includes/name-sos-short.md)] simplifies configuration, management, monitoring, and troubleshooting of databases. 
 
@@ -44,4 +44,4 @@ Use your favorite command-line tools (for example, Bash, PowerShell,â€¯sqlcmd,â€
 
 ## Next steps
 - [Download and Install [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)
-- [Connect to SQL Server](get-started-sql-server.md)
+- [Connect to SQL Server](quickstart-sql-server.md)

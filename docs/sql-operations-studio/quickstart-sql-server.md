@@ -1,11 +1,11 @@
 ---
-title: Connect and query SQL Server using SQL Operations Studio | Microsoft Docs
-description: Use SQL Operations Studio to connect to SQL Server and run a query
+title: Quickstart: Connect and query SQL Server using SQL Operations Studio | Microsoft Docs
+description: This quickstart shows how to use SQL Operations Studio to connect to SQL Server and run a query
 keywords:
 ms.custom: "tools|sos"
 ms.date: "11/06/2017"
 ms.prod: "sql-non-specified"
-ms.reviewer: "alayu; erickang; sanagama; sstein"
+ms.reviewer: "alayu; erickang; sstein"
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "quickstart"
@@ -15,8 +15,8 @@ manager: craigg
 ms.workload: "Inactive"
 ---
 
-# Connect and query SQL Server using [!INCLUDE[name-sos](../includes/name-sos-short.md)]
-This article shows how to get started using [!INCLUDE[name-sos](../includes/name-sos-short.md)] with SQL Server databases.  This quickstart should take about five minutes.
+# Quickstart: Connect and query SQL Server using [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+This quickstart shows how to get started using [!INCLUDE[name-sos](../includes/name-sos-short.md)] with SQL Server databases.  This quickstart should take about five minutes.
 
 ## Prerequisites
 
@@ -36,7 +36,7 @@ If you don't have access to a SQL Server, select your platform from the followin
 1. Start **[!INCLUDE[name-sos](../includes/name-sos-short.md)]**.
 1. The first time you run *[!INCLUDE[name-sos](../includes/name-sos-short.md)]* the **Connection** dialog opens. If the **Connection** dialog doesn't open, click the **New Connection** icon in the **SERVERS** page:
    
-   ![New Connection Icon](media/get-started-sql-server/new-connection-icon.png)
+   ![New Connection Icon](media/quickstart-sql-server/new-connection-icon.png)
 
 1. This article uses *SQL Login*, but *Windows Authentication* is supported. Fill in the fields as follows:
  
@@ -47,7 +47,7 @@ If you don't have access to a SQL Server, select your platform from the followin
     - **Database Name:** leave this field blank 
     - **Server Group:** \<Default\>  
 
-   ![New Connection Screen](media/get-started-sql-server/new-connection-screen.png)
+   ![New Connection Screen](media/quickstart-sql-server/new-connection-screen.png)
 
 
 
@@ -83,7 +83,7 @@ The query editor is still connected to the *master* database, but we want to cre
 
 1. Change the connection context to **TutorialDB**:
 
-   ![Change context](media/get-started-sql-database/change-context.png)
+   ![Change context](media/quickstart-sql-database/change-context.png)
 
 
 
@@ -136,12 +136,12 @@ After the query completes, the new **Customers** table appears in the list of ta
 
 1. To execute the query, click **Run**.
 
-   ![Select results](media/get-started-sql-server/select-results.png)
+   ![Select results](media/quickstart-sql-server/select-results.png)
 
 ## Save result to an Excel spreadsheet
 1. Right click on the results table and select **Save As Excel**. 
 
-   ![Save as Excel](media/get-started-sql-server/save-as-excel.png)
+   ![Save as Excel](media/quickstart-sql-server/save-as-excel.png)
 
 2. Save as **Results.xls**.
 

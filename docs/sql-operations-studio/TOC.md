@@ -1,9 +1,9 @@
-# [SQL Operations Studio](overview.md)
+# [SQL Operations Studio](what-is.md)
 # [Install SQL Operations Studio](download.md)
 # Quickstarts
-## [Connect & query - SQL Server](get-started-sql-server.md)
-## [Connect & query - SQL Database](get-started-sql-database.md)
-## [Connect & query - SQL Data Warehouse](get-started-sql-dw.md)
+## [Connect & query SQL Server](quickstart-sql-server.md)
+## [Connect & query SQL Database](quickstart-sql-database.md)
+## [Connect & query SQL Data Warehouse](quickstart-sql-dw.md)
 # Tutorials
 ## [T-SQL Editor](tutorial-sql-editor.md) 
 ## [Enable the database performance insight](tutorial-qds-sql-server.md)

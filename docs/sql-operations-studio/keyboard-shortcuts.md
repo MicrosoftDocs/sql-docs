@@ -62,4 +62,4 @@ To create new keyboard shortcuts:
 
 
 ## Additional Resources
-For information about [!INCLUDE[name-sos](../includes/name-sos-short.md)], see [[!INCLUDE[name-sos](../includes/name-sos-short.md)] Overview](overview.md)
+For information about [!INCLUDE[name-sos](../includes/name-sos-short.md)], see [What is [!INCLUDE[name-sos](../includes/name-sos-short.md)]](what-is.md)

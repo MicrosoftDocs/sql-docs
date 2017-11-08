@@ -8,7 +8,7 @@ ms.prod: "sql-non-specified"
 ms.reviewer: "alayu; erickang; sanagama; sstein"
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
-ms.topic: "overview, quickstart, tutorial, or article"
+ms.topic: "article"
 author: "meet-bhagdev"
 ms.author: "meetb"
 manager: craigg

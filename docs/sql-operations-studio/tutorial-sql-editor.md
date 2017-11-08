@@ -1,9 +1,9 @@
 ---
-title: Working with T-SQL using Microsoft SQL Operations Studio | Microsoft Docs
-description: This tutorial walks through the key features in SQL Operations Studio that simplify using T-SQL.
+title: Tutorial: Working with Transact-SQL using Microsoft SQL Operations Studio | Microsoft Docs
+description: This tutorial demonstrates the key features in SQL Operations Studio that simplify using T-SQL.
 keywords: 
 ms.custom: "tools|sos"
-ms.date: "11/06/2017"
+ms.date: "11/08/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: "alayu; erickang; sstein"
 ms.suite: "sql"
@@ -15,9 +15,9 @@ manager: craigg
 ms.workload: "Inactive"
 ---
 
-# Working with T-SQL using [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# Tutorial: Working with T-SQL with [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
-Creating and running queries, stored procedures, scripts, etc. are the core tasks of database professionals. This tutorial walks through the key features in [!INCLUDE[name-sos](../includes/name-sos-short.md)] that simplify using T-SQL.
+Creating and running queries, stored procedures, scripts, etc. are the core tasks of database professionals. This tutorial demonstrates the key features in [!INCLUDE[name-sos](../includes/name-sos-short.md)] that simplify using T-SQL.
 
 In this tutorial, you learn how to use [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] to:
 > [!div class="checklist"]
@@ -31,9 +31,9 @@ In this tutorial, you learn how to use [!INCLUDE[name-sos-short](../includes/nam
 
 This tutorial requires the *TutorialDB* database. To create the *TutorialDB* database, complete one of the following quickstarts:
 
-- [Connect and query SQL Server using [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](get-started-sql-server.md)
-- [Connect and query Azure SQL Database using [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](get-started-sql-database.md)
-- [Connect and query SQL Data Warehouse using [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](get-started-sql-dw.md)
+- [Connect and query SQL Server using [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
+- [Connect and query Azure SQL Database using [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
+- [Connect and query SQL Data Warehouse using [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-dw.md)
 
 
 

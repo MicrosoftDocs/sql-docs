@@ -3,7 +3,7 @@ title: Integrated terminal in SQL Operations Studio | Microsoft Docs
 description: Learn about the Integrated terminal in SQL Operations Studio.
 keywords:
 ms.custom: "tools|sos"
-ms.date: "10/31/2017"
+ms.date: "11/06/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: "alayu; erickang; sstein"
 ms.suite: "sql"
@@ -26,7 +26,8 @@ To open the terminal:
 
 ![Terminal](media/integrated-terminal/terminal-screen.png)
 
-> **Note:** You can still open an external shell with the Explorer **Open in Command Prompt** command (**Open in Terminal** on Mac or Linux) if you prefer to work outside [!INCLUDE[name-sos](../includes/name-sos-short.md)].
+> [!NOTE]
+> You can still open an external shell with the Explorer **Open in Command Prompt** command (**Open in Terminal** on Mac or Linux) if you prefer to work outside [!INCLUDE[name-sos](../includes/name-sos-short.md)].
 
 ## Managing Multiple Terminals
 
@@ -36,7 +37,8 @@ You can create multiple terminals open to different locations and easily navigat
 
 Remove terminal instances by pressing the trash can button.
 
->**Tip:** If you use multiple terminals extensively, you can add key bindings for the `focusNext`, `focusPrevious` and `kill` commands outlined in the [Key Bindings section](#key-bindings) to allow navigation between them using only the keyboard.
+> [!TIP]
+> If you use multiple terminals extensively, you can add key bindings for the `focusNext`, `focusPrevious` and `kill` commands outlined in the [Key Bindings section](#key-bindings) to allow navigation between them using only the keyboard.
 
 ## Configuration
 
@@ -57,9 +59,11 @@ Correctly configuring your shell on Windows is a matter of locating the right ex
 "terminal.integrated.shell.windows": "C:\\Windows\\sysnative\\bash.exe"
 ```
 
->**Note:** To be used as an integrated terminal, the shell executable must be a console application so that `stdin/stdout/stderr`  can be redirected.
+> [!NOTE]
+> To be used as an integrated terminal, the shell executable must be a console application so that `stdin/stdout/stderr`  can be redirected.
 
->**Tip:** The integrated terminal shell is running with the permissions of [!INCLUDE[name-sos](../includes/name-sos-short.md)]. If you need to run a shell command with elevated (administrator) or different permissions, you can use platform utilities such as `runas.exe` within a terminal.
+> [!TIP]
+> The integrated terminal shell is running with the permissions of [!INCLUDE[name-sos](../includes/name-sos-short.md)]. If you need to run a shell command with elevated (administrator) or different permissions, you can use platform utilities such as `runas.exe` within a terminal.
 
 ### Shell arguments
 

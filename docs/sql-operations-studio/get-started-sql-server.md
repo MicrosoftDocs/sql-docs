@@ -3,7 +3,7 @@ title: Connect and query SQL Server using SQL Operations Studio | Microsoft Docs
 description: Use SQL Operations Studio to connect to SQL Server and run a query
 keywords:
 ms.custom: "tools|sos"
-ms.date: "11/03/2017"
+ms.date: "11/06/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: "alayu; erickang; sanagama; sstein"
 ms.suite: "sql"
@@ -139,7 +139,7 @@ After the query completes, the new **Customers** table appears in the list of ta
    ![Select results](media/get-started-sql-server/select-results.png)
 
 ## Save result to an Excel spreadsheet
-1. Right click on the results table and save as an Excel** file. 
+1. Right click on the results table and select **Save As Excel**. 
 
    ![Save as Excel](media/get-started-sql-server/save-as-excel.png)
 
@@ -149,7 +149,6 @@ After the query completes, the new **Customers** table appears in the list of ta
 View an existing, built-in widget through the dashboard.
 
 ## Next steps
-> [!div class="nextstepaction"]
-> [Apply modern code flow using [!INCLUDE[name-sos](../includes/name-sos-short.md)]](tutorial-sql-editor.md)
+[Code editor tutorial](tutorial-sql-editor.md)
 
 

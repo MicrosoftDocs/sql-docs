@@ -5,7 +5,7 @@ keywords:
 ms.custom: "tools|sos"
 ms.date: "11/01/2017"
 ms.prod: "sql-non-specified"
-ms.reviewer: "alayu; erickang; sanagama; sstein"
+ms.reviewer: "alayu; erickang; sstein"
 ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.topic: "quickstart"
@@ -16,40 +16,27 @@ ms.workload: "Inactive"
 ---
 # Azure SQL Data Warehouse: Use [!INCLUDE[name-sos](../includes/name-sos-short.md)] to connect and query data
 
-This quickstart demonstrates how to use [!INCLUDE[name-sos](../includes/name-sos-short.md)] to connect to Azure SQL Data Warehouse, and then use Transact-SQL statements to create, insert, and select data in the database. 
+This quickstart demonstrates how to use [!INCLUDE[name-sos](../includes/name-sos-short.md)] to connect to Azure SQL data warehouse, and then use Transact-SQL statements to create, insert, and select data. 
 
 ## Prerequisites
-To use this tutorial, you need:
+To complete this quickstart, you need [!INCLUDE[name-sos](../includes/name-sos-short.md)], and an Azure SQL data warehouse.
 
-* An existing SQL data warehouse. To create one, see [Create a SQL Data Warehouse](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/sql-data-warehouse-get-started-provision).
-* Install [!INCLUDE[name-sos](../includes/name-sos-short.md)] by following [these directions](download.md).
-* The fully qualified SQL server name. To find this, see [Connect to SQL Data Warehouse](https://docs.microsoft com/en-us/azure/sql-data-warehouse/sql-data-warehouse-connect-overview).
+- [Install [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md).
 
-## SQL server connection information
+If you don't already have a SQL data warehouse, see [Create a SQL Data Warehouse](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/sql-data-warehouse-get-started-provision).
 
-Get the connection information needed to connect to the Azure SQL Data Warehouse. You will need the fully qualified server name, database name, and login information in the next procedures.
+Remember the server name, and login credentials!
 
-1. Log in to the [Azure portal](https://portal.azure.com/).
-
-2. Select **More Services** from the bottom of the left-hand menu, and type "sql data warehouses" into the **filter** box and click on it.
-
-3. Click on your data warehouse. 
-
-4. On the **Overview** page for your database, copy your server name.
-
-   ![connection information](./media/get-started-sql-dw/server-name.png) 
-
-5. If you have forgotten the login information for your Azure SQL Data Warehouse server, navigate to the SQL Data Warehouse server page to view the server admin name and, if necessary, reset the password. 
 
 ## Connect to your data warehouse
 
 Use [!INCLUDE[name-sos](../includes/name-sos-short.md)] to establish a connection to your Azure SQL Data Warehouse server.
 
-1. When first loading [!INCLUDE[name-sos](../includes/name-sos-short.md)], a connection page should be displayed. If not, click the **New Connection** icon on the top left.
+1. The first time you run [!INCLUDE[name-sos](../includes/name-sos-short.md)] the **Connection** page should open. If the **Connection** page doesn't open, click the **New Connection** icon in the **SERVERS** sidebar:
    
    ![New Connection Icon](media/get-started-sql-dw/new-connection-icon.png)
 
-2. Follow the prompts to specify the connection properties for the new connection profile. After specifying each value, press **ENTER** to continue. 
+2. This article uses *SQL Login*, but *Windows Authentication* is also supported. Fill in the fields as follows:
 
    | Setting       | Suggested value | Description |
    | ------------ | ------------------ | ------------------------------------------------- | 
@@ -63,11 +50,9 @@ Use [!INCLUDE[name-sos](../includes/name-sos-short.md)] to establish a connectio
 
    ![New Connection Icon](media/get-started-sql-dw/new-connection-screen.png) 
 
-3. If you are successfully connected, ignore this step. If you see the following screen, you need to register your IP address. You can do this through [!INCLUDE[name-sos](../includes/name-sos-short.md)] by clicking add an account, logging in with your Azure credentials, and then adding your IP.
+3. If you get an error about the firewall, you need to create a firewall rule. To create a firewall rule, see [Firewall rules](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure).
 
-   ![Firewall image](media/get-started-sql-dw/setup-firewall-ip.png)   
-
-4. You should see your connection in the object explorer.
+4. After successfully connecting your server will appear in the object explorer.
 
 ## Create the tutorial database
 1. Right click on your server, in the object explorer and select **New Query.**
@@ -166,5 +151,5 @@ Other articles in this collection build upon this quickstart. If you plan to con
 Clean up resources by deleting the resource groups you no longer need. For details, see [Clean up resources](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-get-started-portal#clean-up-resources).
 
 ## Next steps
-> [!div class="nextstepaction"]
-> [Apply modern code flow using [!INCLUDE[name-sos](../includes/name-sos-short.md)]](tutorial-sql-editor.md)
+
+To create and run queries, see [Code editor tutorial](tutorial-sql-editor.md).

@@ -2,7 +2,7 @@
 title: "sys.dm_pdw_resource_waits (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: "sql-non-specified"
+ms.prod: ""
 ms.reviewer: ""
 ms.service: "sql-data-warehouse"
 ms.suite: ""

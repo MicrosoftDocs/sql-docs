@@ -21,7 +21,7 @@ manager: "jhubbard"
 ms.workload: "On Demand"
 ---
 # Start System Monitor (Windows)
-  Use System Monitor to monitor the utilization of system resources. Collect and view real-time performance data in the form of counters, for server resources such as processor and memory use, and for many Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] resources such as locks and transactions.  
+  Use System Monitor to monitor the utilization of system resources. Collect and view real-time performance data in the form of counters. You can use counters for server resources, such as processor and memory use. You also can use them for many Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] resources, such as locks and transactions.  
   
 ## Start System Monitor in Windows  
   

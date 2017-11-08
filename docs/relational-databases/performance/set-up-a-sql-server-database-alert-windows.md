@@ -31,11 +31,11 @@ ms.workload: "Inactive"
   
 3. In the **New Alert Settings** dialog box, type a name for the new alert, and then select **OK**.  
   
-4. On the **General** tab of the dialog box for the new alert, add a **Comment**, and select **Add** to add a counter to the alert.  
+4. On the **General** tab of the dialog box for the new alert, add a **Comment**. Select **Add** to add a counter to the alert.  
   
      All alerts must have at least one counter.  
   
-5. In the **Add Counters** dialog box, select a SQL Server object from the **Performance Object** list, and then select a counter from the **Select counters from** list.  
+5. In the **Add Counters** dialog box, select a SQL Server object from the **Performance Object** list. Select a counter from the **Select counters from** list.  
   
 6. To add the counter to the alert, select **Add**. You can continue to add counters, or you can select **Close** to return to the dialog box for the new alert.  
   

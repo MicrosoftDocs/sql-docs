@@ -31,6 +31,6 @@ This article describes changes in [!INCLUDE[ssRSnoversion](../includes/ssrsnover
     - Initial release
 ## Next steps
 
-[What's New in Reporting Services (SSRS)](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)   
+[What's New in Reporting Services (SSRS)](what-s-new-in-sql-server-reporting-services-ssrs.md)   
 
 More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)

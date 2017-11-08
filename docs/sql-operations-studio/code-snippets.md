@@ -44,9 +44,9 @@ User-defined code snippets can also be created.
 
 
  
-## Creating your Own Snippets 
+## Creating SQL code snippets 
 
-You can define your own SQL snippets. To open up a snippet file for editing:
+You can define your own SQL snippets. To open up the SQL snippet file for editing:
 
 1. Open the *Command Palette* (**Shift+Ctrl+P**), and type *snip*, and select **Preferences: Open User Snippets**:
 

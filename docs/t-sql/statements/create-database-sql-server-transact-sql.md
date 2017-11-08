@@ -522,6 +522,9 @@ GO
 ```  
 USE master;  
 GO  
+IF DB_ID (N'mytest') IS NOT NULL
+DROP DATABASE mytest;
+GO
 CREATE DATABASE mytest;  
 GO  
 -- Verify the database files and sizes  

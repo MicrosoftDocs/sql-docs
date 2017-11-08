@@ -16,7 +16,7 @@ ms.workload: "Inactive"
 ---
 
 # Quickstart: Connect and query SQL Server using [!INCLUDE[name-sos](../includes/name-sos-short.md)]
-This quickstart shows how to get started using [!INCLUDE[name-sos](../includes/name-sos-short.md)] with SQL Server databases.  This quickstart should take about five minutes.
+This quickstart shows how to get started using [!INCLUDE[name-sos](../includes/name-sos-short.md)] with SQL Server databases.
 
 ## Prerequisites
 

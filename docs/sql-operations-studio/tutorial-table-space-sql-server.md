@@ -38,27 +38,27 @@ This tutorial requires the *TutorialDB* database. To create the *TutorialDB* dat
 
 1. Open User Settings by pressing 'F1' to open Command Palette, type in 'settings' in the command search input box and select 'Preferences: Open User Settings' command.
 
-   ![Open user settings command](./media/tutorial-sql-server/open-user-settings.png)
+   ![Open user settings command](./media/tutorial-table-space-sql-server/open-user-settings.png)
 
 2. Type 'dashboard' in Settings Search input box to search "dashboard.database.widgets" in Settings.
 
-   ![Search settings](./media/tutorial-sql-server/search-settings.png)
+   ![Search settings](./media/tutorial-table-space-sql-server/search-settings.png)
 
 3. Click 'Copy to Settings' to copy "dashboard.database.widgets" settings to customize.
 
 4. Using [!INCLUDE[name-sos](../includes/name-sos-short.md)]'s insight settings IntelliSense, configure 'name' for the widget title, 'gridItemConfig' for the widget size, and 'widget' by selecting 'table-space-database-insight' from the drop-down list as shown in the screenshot below:
 
-   ![Insight settings](./media/tutorial-sql-server/insight-table-space.png)
+   ![Insight settings](./media/tutorial-table-space-sql-server/insight-table-space.png)
 
 5. Press 'CTRL + S' to save the user's settings file.
 
 6. Open Database dashboard by navigate to 'TutorialDB' in Servers viewlet, and click 'Manage' in the context menu.
 
-   ![Open dashboard](./media/tutorial-sql-server/insight-open-dashboard.png)
+   ![Open dashboard](./media/tutorial-table-space-sql-server/insight-open-dashboard.png)
 
 7. View 'Space used by tables' as shown in the screen shot below: 
 
-   ![Widget](./media/tutorial-sql-server/insight-table-space-result.png)
+   ![Widget](./media/tutorial-table-space-sql-server/insight-table-space-result.png)
 
 
 ## Working with insight chart
@@ -69,7 +69,7 @@ This tutorial requires the *TutorialDB* database. To create the *TutorialDB* dat
     
 2. Hover the mouse pointer over a chart. [!INCLUDE[name-sos](../includes/name-sos-short.md)] shows more information about the data series label and its value as shown on the screenshot.
 
-   ![chart toggle and legend](./media/tutorial-sql-server/insight-table-space-toggle.png)
+   ![chart toggle and legend](./media/tutorial-table-space-sql-server/insight-table-space-toggle.png)
 
 
 ## Next steps

@@ -22,15 +22,15 @@ Code snippets in [!INCLUDE[name-sos](../includes/name-sos-short.md)] are templat
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] provides several SQL snippets to assist you with quickly generating the proper syntax. 
 
-1. To access the available snippets, type *sql* in the query editor:
+1. To access the available snippets, type *sql* in the query editor to open the list:
 
    ![sql snippets](media/code-snippets/sql-snippets.png)
 
-1. Select the snippet you want to use, for example *sqlCreateTable*:
+1. Select the snippet you want to use, and it generates the SQL script. For example, select *sqlCreateTable*:
 
    ![sql snippets](media/code-snippets/create-table.png)
 
-1. Update the highlighted fields with your specific values. For example, replace *TableName* with the name you want for the new table:
+1. Update the highlighted fields with your specific values. For example, replace *TableName* and *Schema* with the values for your database:
 
    ![replace template field](media/code-snippets/table-from-snippet.png)
 
@@ -38,14 +38,9 @@ Code snippets in [!INCLUDE[name-sos](../includes/name-sos-short.md)] are templat
 
    ![replace template field](media/code-snippets/change-all.png)
 
-1. Update or add any additional SQL you need for the selected snippet. For example, update Column1, and add more columns.
-
-## Creating your Own Snippets
-
-You can define your own SQL snippets.  
-
-To open up a snippet file for editing, open **User Snippets** under **File** > **Preferences** (**SqlOps** > **Preferences** on Mac) and select SQL from the list of languages.
+1. Update or add any additional SQL you need for the selected snippet. For example, update *Column1*, *Column2*, and add more columns.
 
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] inherits its code snippet functionality from Visual Studio Code so this article specifically discusses using SQL snippets. For more detailed information, see [Creating your own snippets](https://code.visualstudio.com/docs/editor/userdefinedsnippets) in the Visual Studio Code documentation.
+## Next steps
 
+[Code editor tutorial](tutorial-sql-editor.md)

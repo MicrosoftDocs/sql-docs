@@ -1,6 +1,6 @@
 ---
-title: Code snippets in SQL Operations Studio | Microsoft Docs
-description: Learn how to use SQL code snippets in SQL Operations Studio
+title: Create code snippets in SQL Operations Studio | Microsoft Docs
+description: Learn how to create and use SQL code snippets in SQL Operations Studio
 keywords: 
 ms.custom: "tools|sos"
 ms.date: "11/06/2017"
@@ -14,13 +14,15 @@ ms.author: "sstein"
 manager: craigg
 ms.workload: "Inactive"
 ---
-# Use code snippets to quickly create SQL scripts in [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# Create and use code snippets to quickly create SQL scripts in [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 Code snippets in [!INCLUDE[name-sos](../includes/name-sos-short.md)] are templates that make it easier to create databases and database objects. 
 
-## Using built-in SQL code snippets
-
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] provides several SQL snippets to assist you with quickly generating the proper syntax. 
+
+User-defined code snippets can also be created.
+
+## Using built-in SQL code snippets
 
 1. To access the available snippets, type *sql* in the query editor to open the list:
 
@@ -59,7 +61,6 @@ You can define your own SQL snippets. To open up a snippet file for editing:
 
 1. Paste the following code into *sql.json*:
 
-
    ```sql
    "Select top 5": {
 	"prefix": "sqlSelectTop5",
@@ -90,7 +91,7 @@ You can define your own SQL snippets. To open up a snippet file for editing:
 
 1. Save the sql.json file.
 1. Open a new query editor window by clicking **Ctrl+N**.
-2. Type **sql**, and you see the two user snippets added in the previous section; *sqlCreateTable2* and *sqlSelectTop5*.
+2. Type **sql**, and you see the two user snippets you just added; *sqlCreateTable2* and *sqlSelectTop5*.
 
 Select one of the new snippets and give it a test run!
 

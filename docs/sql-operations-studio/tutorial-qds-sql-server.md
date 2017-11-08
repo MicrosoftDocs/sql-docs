@@ -1,5 +1,5 @@
 ---
-title: Tutorial: Monitor Query Performance with SQL Operations Studio  | Microsoft Docs
+title: "Tutorial: Monitor Query Performance with SQL Operations Studio (preview)  | Microsoft Docs"
 description: This tutorial demonstrates how to monitor a database by adding a pre-built query performance widget to the database dashboard that shows the five slowest queries.
 keywords: 
 ms.custom: "tools|sos"

@@ -1,6 +1,6 @@
 ---
-title: Tutorial: Enable the table space usage insight widget in SQL Operations Studio | Microsoft Docs
-description: This tutorial demonstrates how to enable the table space usage widget on the SQL Operations Studio database dashboard.
+title: "Tutorial: Enable the table space usage insight widget in SQL Operations Studio (preview) | Microsoft Docs"
+description: This tutorial demonstrates how to enable the table space usage widget on the SQL Operations Studio (preview) database dashboard.
 keywords: 
 ms.custom: "tools|sos"
 ms.date: "11/08/2017"

@@ -1,9 +1,9 @@
 ---
-title: SQL Operations Studio User and Workspace Settings | Microsoft Docs
-description: How to modify SQL Operations Studio User and Workspace Settings.
+title: SQL Operations Studio (preview) User and Workspace Settings | Microsoft Docs
+description: How to modify SQL Operations Studio (preview) User and Workspace Settings.
 keywords: 
 ms.custom: "tools|sos"
-ms.date: "11/01/2017"
+ms.date: "11/08/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: "alayu; erickang; sstein"
 ms.suite: "sql"

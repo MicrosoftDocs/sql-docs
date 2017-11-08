@@ -1,5 +1,5 @@
-# [SQL Operations Studio](what-is.md)
-# [Install SQL Operations Studio](download.md)
+# [SQL Operations Studio (preview)](what-is.md)
+# [Install SQL Operations Studio (preview)](download.md)
 # Quickstarts
 ## [Connect & query SQL Server](quickstart-sql-server.md)
 ## [Connect & query SQL Database](quickstart-sql-database.md)
@@ -21,6 +21,6 @@
 ## [Windows authentication (Kerberos)](enable-kerberos.md)
 # Resources
 ## [Transact-SQL Reference](../t-sql/language-reference.md)
-## [SQL Operations Studio GitHub repo](https://www.github.com/Microsoft/SqlOpsStudio)
+## [SQL Operations Studio (preview) GitHub repo](https://www.github.com/Microsoft/SqlOpsStudio)
 # [FAQ](faq.md)
 # [Usage Data Collection](usage-data-collection.md)

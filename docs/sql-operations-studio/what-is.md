@@ -1,6 +1,6 @@
 ---
-title: What is SQL Operations Studio? | Microsoft Docs
-description: SQL Operations Studio is a lightweight, open source, multi-OS and multi-database tool, designed from the ground-up for DBAs and developers.
+title: What is SQL Operations Studio (preview)? | Microsoft Docs
+description: SQL Operations Studio (preview) is a lightweight, open source, multi-OS and multi-database tool, designed from the ground-up for DBAs and developers.
 keywords:
 ms.custom: "tools|sos"
 ms.date: "11/08/2017"

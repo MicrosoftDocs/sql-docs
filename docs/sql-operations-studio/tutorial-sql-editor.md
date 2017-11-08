@@ -1,6 +1,6 @@
 ---
-title: Tutorial: Working with Transact-SQL using Microsoft SQL Operations Studio | Microsoft Docs
-description: This tutorial demonstrates the key features in SQL Operations Studio that simplify using T-SQL.
+title: "Tutorial: Working with Transact-SQL using Microsoft SQL Operations Studio (preview) | Microsoft Docs"
+description: This tutorial demonstrates the key features in SQL Operations Studio (preview) that simplify using T-SQL.
 keywords: 
 ms.custom: "tools|sos"
 ms.date: "11/08/2017"

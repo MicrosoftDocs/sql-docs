@@ -1,6 +1,6 @@
 ---
-title: Tutorial: Build a custom insight widget in SQL Operations Studio | Microsoft Docs
-description: This tutorial demonstrates how to build custom insight widgets and add them to database and server dashboards in SQL Operations Studio.
+title: "Tutorial: Build a custom insight widget in SQL Operations Studio (preview) | Microsoft Docs"
+description: This tutorial demonstrates how to build custom insight widgets and add them to database and server dashboards in SQL Operations Studio (preview).
 keywords: 
 ms.custom: "tools|sos"
 ms.date: "11/08/2017"
@@ -47,7 +47,7 @@ In this step, run a sql script to query the current active sessions.
    WHERE status = 'running'
    ```
 1. To execute the query, press **F5**.
-3. After SQL Operations Studio returns with the result view, click **View as Chart**, then click the **Chart Viewer** tab.
+3. After SQL Operations Studio (preview) returns with the result view, click **View as Chart**, then click the **Chart Viewer** tab.
 4. Change **Chart Type** to **count**. These settings render a count chart:
 
    ![chart](./media/tutorial-build-custom-insight-sql-server/insight-activesession-count.png)
@@ -107,4 +107,4 @@ In this tutorial, you learned how to:
 > * Build a custom insight widget from the chart
 > * Add the chart to a server or database dashboard
 
-To learn how to backup and restore databases, see [Backup and Restore using SQL Operations Studio](tutorial-backup-restore-sql-server.md).
+To learn how to backup and restore databases, see [Backup and Restore using SQL Operations Studio (preview)](tutorial-backup-restore-sql-server.md).

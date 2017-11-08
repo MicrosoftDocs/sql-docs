@@ -26,7 +26,7 @@ ms.workload: "Active"
 
 The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log contains user-defined events and certain system events you can use for troubleshooting. 
 
-## To view the logs
+## View the logs
 
 1. In SQL Server Management Studio, select **Object Explorer**. To open **Object Explorer**, select F8. Or on the top menu, select **View**, and then select **Object Explorer**:
     

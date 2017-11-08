@@ -24,13 +24,13 @@ ms.workload: "Inactive"
 # Open, view, and print a deadlock file (SQL Server Management Studio)
   When [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] generates a deadlock, you can capture and save the deadlock information to a file. After you've saved the deadlock file, you can open it in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to view it or print it.  
   
-## To open and view a deadlock file  
+## Open and view a deadlock file  
   
 1. On the **File** menu in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], point to **Open**, and then select **File**.  
   
 2. In the **Open File** dialog box, select the .xdl file type in the **Files of type** box. You now have a filtered list of only deadlock files.  
   
-## To print a deadlock file  
+## Print a deadlock file  
   
 1. On the **File** menu in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], point to **Open**, and then select **File**.  
   

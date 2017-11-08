@@ -38,11 +38,11 @@ ms.workload: "Inactive"
   
 4. Do one of the following:  
   
-    -   To capture the trace to a file, select **Save to file**. Specify a value for **Set maximum file size**.  
+    -   To capture the trace to a file, select the **Save to file** check box. Specify a value for **Set maximum file size**.  
   
-         Optionally, select **Enable file rollover**, and select **Server processes trace data**. 
+         Optionally, select the **Enable file rollover** and **Server processes trace data** check boxes. 
   
-    -   To capture the trace to a database table, select **Save to table**.  
+    -   To capture the trace to a database table, select the **Save to table** check box.  
   
          Optionally, select **Set maximum rows**, and specify a value.  
   

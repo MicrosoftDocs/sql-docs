@@ -23,7 +23,7 @@ ms.workload: "Inactive"
   
  Alerts also can be defined by using Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. For more information, see [Alerts](http://msdn.microsoft.com/library/3f57d0f0-4781-46ec-82cd-b751dc5affef).  
   
-## To set up a SQL Server database alert  
+## Set up a SQL Server database alert  
   
 1. On the navigation tree of the **Performance** window, expand **Performance Logs and Alerts**.  
   

@@ -23,7 +23,7 @@ ms.workload: "On Demand"
 # Save deadlock graphs (SQL Server Profiler)
   This topic describes how to save a deadlock graph by using [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Deadlock graphs are saved as XML files.  
   
-## To save deadlock graph events separately  
+## Save deadlock graph events separately  
   
 1. On the **File** menu, select **New Trace**, and then connect to an instance of SQL Server.  
   
@@ -40,7 +40,7 @@ ms.workload: "On Demand"
   
     -   To capture the trace to a file, select the **Save to file** check box. Specify a value for **Set maximum file size**.  
   
-         Optionally, select **Enable file rollover**, and select **Server processes trace data**. 
+         Optionally, select the **Enable file rollover** and **Server processes trace data** check boxes. 
   
     -   To capture the trace to a database table, select the **Save to table** check box.  
   

@@ -41,6 +41,60 @@ Code snippets in [!INCLUDE[name-sos](../includes/name-sos-short.md)] are templat
 1. Update or add any additional SQL you need for the selected snippet. For example, update *Column1*, *Column2*, and add more columns.
 
 
+ 
+## Creating your Own Snippets 
+
+You can define your own SQL snippets. To open up a snippet file for editing:
+
+1. Open the *Command Palette* (**Shift+Ctrl+P**), and type *snip*, and select **Preferences: Open User Snippets**:
+
+   ![replace template field](media/code-snippets/user-snippets.png)
+
+1. Select **SQL**:
+
+   > [!NOTE]
+   > [!INCLUDE[name-sos](../includes/name-sos-short.md)] inherits its code snippet functionality from Visual Studio Code so this article specifically discusses using SQL snippets. For more detailed information, see [Creating your own snippets](https://code.visualstudio.com/docs/editor/userdefinedsnippets) in the Visual Studio Code documentation. 
+
+   ![replace template field](media/code-snippets/select-sql.png)
+
+1. Paste the following code into *sql.json*:
+
+
+   ```sql
+   "Select top 5": {
+	"prefix": "sqlSelectTop5",
+	"body": "SELECT TOP 5 * FROM ${1:TableName}",
+	"description": "User-defined snippet example 1"
+    },
+    "Create Table snippet":{
+	"prefix": "sqlCreateTable2",
+    "body": [
+	"-- Create a new table called '${1:TableName}' in schema '${2:SchemaName}'",
+	"-- Drop the table if it already exists",
+	"IF OBJECT_ID('$2.$1', 'U') IS NOT NULL",
+	"DROP TABLE $2.$1",
+	"GO",
+	"-- Create the table in the specified schema",
+	"CREATE TABLE $2.$1",
+	"(",
+	"   $1Id INT NOT NULL PRIMARY KEY, -- primary key column",
+	"   Column1 [NVARCHAR](50) NOT NULL,",
+	"   Column2 [NVARCHAR](50) NOT NULL",
+	"   -- specify more columns here",
+	");",
+	"GO"
+	],
+   "description": "User-defined snippet example 2"
+   }
+   ```
+
+1. Save the sql.json file.
+1. Open a new query editor window by clicking **Ctrl+N**.
+2. Type **sql**, and you see the two user snippets added in the previous section; *sqlCreateTable2* and *sqlSelectTop5*.
+
+Select one of the new snippets and give it a test run!
+
+
 ## Next steps
 
-[Code editor tutorial](tutorial-sql-editor.md)
+For information about the SQL editor, see [Code editor tutorial](tutorial-sql-editor.md).

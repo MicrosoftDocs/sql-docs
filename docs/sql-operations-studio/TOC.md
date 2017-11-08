@@ -6,12 +6,12 @@
 ## [Connect & query - SQL Data Warehouse](get-started-sql-dw.md)
 # Tutorials
 ## [T-SQL Editor](tutorial-sql-editor.md) 
-## [Monitoring Query Performance](tutorial-qds-sql-server.md)
-## [Table Space Usage](tutorial-table-space-sql-server.md)
-## [Custom Insight - Missing Index and Memory Usage](tutorial-build-custom-insight-sql-server.md) 
+## [Enable the database performance insight](tutorial-qds-sql-server.md)
+## [Enable the table space usage insight](tutorial-table-space-sql-server.md)
+## [Build a custom insight to monitor active sessions](tutorial-build-custom-insight-sql-server.md) 
 ## [Backup and restore](tutorial-backup-restore-sql-server.md)
 # How-to guides
-## [Management dashboards & Insight widgets](insight-widgets.md)
+## [Management dashboards & insight widgets](insight-widgets.md)
 ## [Code snippets](code-snippets.md)
 ## [Integrated terminal (PowerShell, Bash)](integrated-terminal.md)
 ## [Keyboard shortcuts](keyboard-shortcuts.md)
@@ -19,8 +19,8 @@
 ## [Source control](source-control.md)
 ## [Workspace & user settings](settings.md)
 ## [Windows authentication (Kerberos)](enable-kerberos.md)
-# Reference
 # Resources
+## [Transact-SQL Reference](../t-sql/language-reference.md)
 ## [SQL Operations Studio GitHub repo](https://www.github.com/Microsoft/SqlOpsStudio)
 # [FAQ](faq.md)
 # [Usage Data Collection](usage-data-collection.md)

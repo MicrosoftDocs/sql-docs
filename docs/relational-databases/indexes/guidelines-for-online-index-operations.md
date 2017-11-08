@@ -20,7 +20,7 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.suite: SQL
-ms.prod_service: database engine, sql database, sql data warehouse
+ms.prod_service: database-engine, sql-database, sql-data-warehouse
 ms.component: indexes
 ms.workload: "On Demand"
 ---

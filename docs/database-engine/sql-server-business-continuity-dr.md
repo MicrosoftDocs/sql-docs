@@ -1,8 +1,9 @@
 ---
 title: Disaster recovery for SQL Server | Microsoft Docs
 description: 
-author: mihaelab 
+author: "allanhirt"
 ms.author: mihaelab 
+ms.reviewer: "mikeray"
 manager: jhubbard
 ms.date: 09/14/2017
 ms.topic: article

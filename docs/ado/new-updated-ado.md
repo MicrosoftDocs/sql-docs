@@ -6,7 +6,8 @@ documentationcenter: ''
 author: MightyPen
 manager: jhubbard
 editor: ''
-ms.service: na
+ms.prod: sql-non-specified
+ms.service: 
 ms.topic: updart-autogen
 ms.technology: database-engine
 ms.custom: UpdArt.exe

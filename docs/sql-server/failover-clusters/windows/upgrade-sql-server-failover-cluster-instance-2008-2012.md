@@ -22,13 +22,13 @@ Windows Server 2008, 2008 R2, and 2012 prevent Windows Server failover clusters 
 
 ## Prerequisites
 
--   Prior to performing any of the migration strategies, a parallel Windows Server failover cluster with Windows Server 2016/2012 R2 must be prepared. All nodes comprising SQL Server FCIs must be joined to the Windows Cluster with the parallel FCI installed. Any standalone machines **must not** be joined to the Windows Server failover cluster prior to migration. User databases should be synchronized on the new environment prior to migration.
+-   Prior to performing any of the migration strategies, a parallel Windows Server failover cluster with Windows Server 2016/2012 R2 must be prepared. All nodes comprising SQL Server failover cluster instances (FCIs) must be joined to the Windows Cluster with the parallel FCIs installed. Any standalone machines **must not** be joined to the Windows Server failover cluster prior to migration. User databases should be synchronized on the new environment prior to migration.
 
 -   All destination instances must be running the same version of SQL Server as their parallel instance in the original environment, with the same instance names and IDs, and installed with the same features. Installation paths and directory structure should be identical on the destination machines. This does not include FCI virtual network names, which must be different prior to migration. Any features enabled by the original instance (Always On, FILESTREAM, etc.) should be enabled on the destination instance.
 
 -   The parallel cluster should have no Always On Availability Groups installed prior to migration.
 
--   Downtime when migrating a cluster which uses strictly Availability Groups (with or without SQL FCIs) can be greatly limited by using Distributed Availability Groups, but this does require that all instances run SQL Server 2016 RTM (or above versions).
+-   Downtime when migrating a cluster that uses strictly Availability Groups (with or without SQL FCIs) can be greatly limited by using Distributed Availability Groups, but this does require that all instances run SQL Server 2016 RTM (or above versions).
 
 -   All migration strategies require SQL Server sysadmin role. All Windows users used by SQL Server services (i.e. Windows account running replication agents) must have the OS level permissions on each machine in the new environment.
 
@@ -42,16 +42,16 @@ Windows Server 2008, 2008 R2, and 2012 prevent Windows Server failover clusters 
 
 ## Migration scenarios
 
-The proper migration strategy depends on certain parameters of the original SQL Server cluster topology, namely the usage of Always On Availability Groups and SQL failover cluster instances. The chosen strategy also depends on the requirements of the destination environment. If the new environment requires that each machine or SQL FCI maintain the original VNNs, or if the SQL Server topology depends on the new instances inheriting all the system objects of the original instances, we must choose a strategy that migrates these.
+The proper migration strategy depends on certain parameters of the original SQL Server cluster topology, namely the usage of Always On Availability Groups and SQL failover cluster instances. The chosen strategy also depends on the requirements of the destination environment. If the new environment requires that each machine or SQL FCI maintains the original virtual network name (VNN), or if the SQL Server topology depends on the new instances inheriting all the system objects of the original instances, we must choose a strategy that migrates these.
 
 |                                   | Requires all server objects and VNNS | Requires all server objects and VNNS | Does not require server objects/VNNS\* | Does not require server objects/VNNS\* |
 |-----------------------------------|--------------------------------------|--------------------------------------------------------------------|------------|------------|
-| **Always On? (Y/N)**                  | ***Y***                              | ***N***                                                            | ***Y***    | ***N***    |
-| **Cluster uses SQL FCI only**         | Scenario 3                           | Scenario 2                                                         | Scenario 1 | Scenario 2 |
-| **Cluster uses standalone instances** | Scenario 5                           | Scenario 4                                                         | Scenario 1 | Scenario 4 |
+| ***Always On? (Y/N)***                  | ***Y***                              | ***N***                                                            | ***Y***    | ***N***    |
+| **Cluster uses SQL FCI only**         | [Scenario 3](#scenario3)                           | [Scenario 2](#scenario2)                                                         | [Scenario 1](#scenario1) | [Scenario 2](#scenario2) |
+| **Cluster uses standalone instances** | [Scenario 5](#scenario5)                           | [Scenario 4](#scenario4)                                                         | [Scenario 1](#scenario1) | [Scenario 4](#scenario4) |
 \* Excluding AG listener names
 
-## Scenario 1: Cluster to migrate uses strictly Availability Groups (Windows Server 2008 R2 SP1+)
+## <a name="scenario1"></a>Scenario 1: Cluster to migrate uses strictly Availability Groups (Windows Server 2008 R2 SP1+)
 
 If you have a SQL Server setup that uses strictly Availability Groups, you can migrate to a new cluster by creating a parallel SQL Server setup on a different Windows Cluster with Windows Server 2016/2012 R2. After this, you can create a distributed AG where the target cluster is the secondary to the current production cluster. This does require that the user upgrade to SQL Server 2016.
 
@@ -88,7 +88,7 @@ If you have a SQL Server setup that uses strictly Availability Groups, you can m
 
 11. Resume traffic towards the listener.
 
-## Scenario 2: Cluster to migrate has SQL FCIs only and no AG
+## <a name="scenario2"></a>Scenario 2: Cluster to migrate has SQL FCIs only and no AG
 
 If you have a SQL Server setup that uses no standalone SQL Server instances (only SQL FCIs), you can migrate to a new cluster by creating a parallel SQL Server setup on a different Windows Cluster with Windows Server 2016/2012 R2. You will migrate to the target cluster by "stealing" the VNNs of the old SQL FCIs and acquiring them on the new clusters. This will create additional downtime dependent on DNS propagation times.
 
@@ -121,7 +121,7 @@ If you have a SQL Server setup that uses no standalone SQL Server instances (onl
 
 12. As the machines come back online following the restart, start each of the SQL Server FCI roles in Failover Cluster Manager.
 
-## Scenario 3: Cluster has SQL FCIs only and uses Availability Groups
+## <a name="scenario3"></a>Scenario 3: Cluster has SQL FCIs only and uses Availability Groups
 
 If you have a SQL Server setup that uses no standalone SQL Server instances, only SQL FCIs, which are contained in at least one Availability Group, you can migrate this to a new cluster using methods similar to the “no Availability Group, no standalone instance” scenario. Prior to copying system tables to the target FCI shared disks, you must drop all Availability Groups in the original environment. After all databases have been migrated to the target machines, you will recreate the Availability Groups with the same schema and listener names. By doing this, the Windows Server failover cluster resources will be correctly formed and managed on the target cluster. **Always On must be enabled in SQL Server Configuration Manager on each machine in the target environment prior to migration.**
 
@@ -159,7 +159,7 @@ If you have a SQL Server setup that uses no standalone SQL Server instances, onl
 
 16. Create a listener in the new AG with the listener name of the original Availability Group’s listener.
 
-## Scenario 4: Cluster has some non-FCI and no Availability Groups
+## <a name="scenario4"></a>Scenario 4: Cluster has some non-FCI and no Availability Groups
 
 Migrating a cluster with standalone instances is similar in process to migrating a SQL Server cluster with only FCIs, but rather than changing the VNN of the FCI’s network name cluster resource, you change the machine name of the original standalone machine, and "steal" the old machine’s name on the target machine. This does introduce additional downtime relative to the no standalone scenarios, as you cannot join the target standalone machine to the WSFC until you have acquired the old machine’s network name.
 
@@ -195,7 +195,7 @@ Migrating a cluster with standalone instances is similar in process to migrating
 
 15. As the machines come back online following the restart, start each of the SQL Server FCI roles in Failover Cluster Manager.
 
-## Scenario 5: Cluster has some non-FCI and uses Availability Groups
+## <a name="scenario5"></a>Scenario 5: Cluster has some non-FCI and uses Availability Groups
 
 Migrating a cluster that uses Availability Groups with standalone replicas is similar in process to migrating a cluster with strictly FCIs using Availability Groups. You still must delete the original Availability Groups and reconstruct them on the target cluster; however, additional downtime is introduced because of the additional costs in migrating standalone instances. **Always On must be enabled on each FCI in the target environment prior to migration.**
 
@@ -317,4 +317,10 @@ Migrating a cluster that uses Availability Groups with standalone replicas is si
 
     Flat files, Excel files, XML sources, and others must be accessible at the same location specified by the SSIS package.
 
-
+## Next steps
+- [Complete the Database Engine Upgrade](../../../database-engine/install-windows/complete-the-database-engine-upgrade.md)
+- [Change the Database Compatibility Mode and Use the Query Store](../../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md)
+- [Take Advantage of New SQL Server 2016 Features](http://msdn.microsoft.com/library/d8879659-8efa-4442-bcbb-91272647ae16)
+- [Upgrade a SQL Server Failover Cluster Instance](upgrade-a-sql-server-failover-cluster-instance.md)
+- [View and Read SQL Server Setup Log Files](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)
+- [Add Features to an Instance of SQL Server 2016 (Setup)](../../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)

@@ -47,12 +47,11 @@ The proper migration strategy depends on certain parameters of the original SQL 
 |                                   | Requires all server objects and VNNS | Requires all server objects and VNNS | Does not require server objects/VNNS\* | Does not require server objects/VNNS\* |
 |-----------------------------------|--------------------------------------|--------------------------------------------------------------------|------------|------------|
 | ***Always On? (Y/N)***                  | ***Y***                              | ***N***                                                            | ***Y***    | ***N***    |
-| **Cluster uses SQL FCI only**         | [Scenario 3](#scenario3)                           | [Scenario 2](#scenario2)                                                         | [Scenario 1](#scenario1) | [Scenario 2](#scenario2) |
-| **Cluster uses standalone instances** | [Scenario 5](#scenario5)                           | [Scenario 4](#scenario4)                                                         | [Scenario 1](#scenario1) | [Scenario 4](#scenario4) |
+| **Cluster uses SQL FCI only**         | [Scenario 3](#scenario-3-cluster-has-sql-fcis-only-and-uses-availability-groups)                           | [Scenario 2](#scenario-2-cluster-to-migrate-has-sql-fcis-only-and-no-ag)                                                        | [Scenario 1](#scenario-1-cluster-to-migrate-uses-strictly-availability-groups-windows-server-2008-r2-sp1) | [Scenario 2](#scenario-2-cluster-to-migrate-has-sql-fcis-only-and-no-ag) |
+| **Cluster uses standalone instances** | [Scenario 5](#scenario-5-cluster-has-some-non-fci-and-uses-availability-groups)                           | [Scenario 4](#scenario-4-cluster-has-some-non-fci-and-no-availability-groups)                                                         | [Scenario 1](#scenario-1-cluster-to-migrate-uses-strictly-availability-groups-windows-server-2008-r2-sp1) | [Scenario 4](#scenario-4-cluster-has-some-non-fci-and-no-availability-groups) |
 \* Excluding AG listener names
 
-## <a name="scenario1"></a>Scenario 1: Cluster to migrate uses strictly Availability Groups (Windows Server 2008 R2 SP1+)
-
+## Scenario 1: Cluster to migrate uses strictly Availability Groups (Windows Server 2008 R2 SP1+)
 If you have a SQL Server setup that uses strictly Availability Groups, you can migrate to a new cluster by creating a parallel SQL Server setup on a different Windows Cluster with Windows Server 2016/2012 R2. After this, you can create a distributed AG where the target cluster is the secondary to the current production cluster. This does require that the user upgrade to SQL Server 2016.
 
 ###  To perform the upgrade
@@ -88,7 +87,7 @@ If you have a SQL Server setup that uses strictly Availability Groups, you can m
 
 11. Resume traffic towards the listener.
 
-## <a name="scenario2"></a>Scenario 2: Cluster to migrate has SQL FCIs only and no AG
+## Scenario 2: Cluster to migrate has SQL FCIs only and no AG
 
 If you have a SQL Server setup that uses no standalone SQL Server instances (only SQL FCIs), you can migrate to a new cluster by creating a parallel SQL Server setup on a different Windows Cluster with Windows Server 2016/2012 R2. You will migrate to the target cluster by "stealing" the VNNs of the old SQL FCIs and acquiring them on the new clusters. This will create additional downtime dependent on DNS propagation times.
 
@@ -121,7 +120,7 @@ If you have a SQL Server setup that uses no standalone SQL Server instances (onl
 
 12. As the machines come back online following the restart, start each of the SQL Server FCI roles in Failover Cluster Manager.
 
-## <a name="scenario3"></a>Scenario 3: Cluster has SQL FCIs only and uses Availability Groups
+## Scenario 3: Cluster has SQL FCIs only and uses Availability Groups
 
 If you have a SQL Server setup that uses no standalone SQL Server instances, only SQL FCIs, which are contained in at least one Availability Group, you can migrate this to a new cluster using methods similar to the “no Availability Group, no standalone instance” scenario. Prior to copying system tables to the target FCI shared disks, you must drop all Availability Groups in the original environment. After all databases have been migrated to the target machines, you will recreate the Availability Groups with the same schema and listener names. By doing this, the Windows Server failover cluster resources will be correctly formed and managed on the target cluster. **Always On must be enabled in SQL Server Configuration Manager on each machine in the target environment prior to migration.**
 
@@ -159,7 +158,7 @@ If you have a SQL Server setup that uses no standalone SQL Server instances, onl
 
 16. Create a listener in the new AG with the listener name of the original Availability Group’s listener.
 
-## <a name="scenario4"></a>Scenario 4: Cluster has some non-FCI and no Availability Groups
+## Scenario 4: Cluster has some non-FCI and no Availability Groups
 
 Migrating a cluster with standalone instances is similar in process to migrating a SQL Server cluster with only FCIs, but rather than changing the VNN of the FCI’s network name cluster resource, you change the machine name of the original standalone machine, and "steal" the old machine’s name on the target machine. This does introduce additional downtime relative to the no standalone scenarios, as you cannot join the target standalone machine to the WSFC until you have acquired the old machine’s network name.
 
@@ -195,7 +194,7 @@ Migrating a cluster with standalone instances is similar in process to migrating
 
 15. As the machines come back online following the restart, start each of the SQL Server FCI roles in Failover Cluster Manager.
 
-## <a name="scenario5"></a>Scenario 5: Cluster has some non-FCI and uses Availability Groups
+## Scenario 5: Cluster has some non-FCI and uses Availability Groups
 
 Migrating a cluster that uses Availability Groups with standalone replicas is similar in process to migrating a cluster with strictly FCIs using Availability Groups. You still must delete the original Availability Groups and reconstruct them on the target cluster; however, additional downtime is introduced because of the additional costs in migrating standalone instances. **Always On must be enabled on each FCI in the target environment prior to migration.**
 

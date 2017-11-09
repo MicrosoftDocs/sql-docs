@@ -1,7 +1,7 @@
 ---
 title: "Replication Management Objects Concepts | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "11/08/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -182,7 +182,10 @@ ms.workload: "Inactive"
   
 > [!IMPORTANT]  
 >  Although the <xref:Microsoft.SqlServer.Management.Common.ServerConnection> class supports declaring explicit transactions when setting properties, such transactions may interfere with internal replication transactions, can produce unanticipated results, and should not be used with RMO.  
-  
+
+### Enabling TLS 1.2 Support for RMO Components 
+ TLS1.2 support for RMO Components on Windows 2012 and lower can be enabled by installing the update [KB 3140245](http://support.microsoft.com/help/3140245), and creating the registry keys as mentioned in the article. On Windows 2012 R2 and later versions, only the registry keys as mentioned in above article, need to be created.
+ 
 ## Example  
  This example demonstrates the caching of property changes. Changes made to the attributes of a transactional publication are cached until they are explicitly sent to the server.  
   

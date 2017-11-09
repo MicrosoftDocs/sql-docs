@@ -2,7 +2,7 @@
 title: "CREATE EXTERNAL TABLE AS SELECT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/10/2017"
-ms.prod: "sql-non-specified"
+ms.prod: ""
 ms.reviewer: ""
 ms.service: "sql-data-warehouse"
 ms.suite: ""

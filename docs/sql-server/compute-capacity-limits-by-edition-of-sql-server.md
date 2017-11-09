@@ -45,9 +45,9 @@ ms.workload: "Active"
 >     -   One to many, it represents an overcommit.  
 >     -   Zero to many, it represents the absence of virtual machine on the host system. So VMs don't use any logical processors.  
 > - A socket is mapped to zero or more cores. When the socket-to-core mapping is:  
->     -   One to zero, it represents an empty socket. (No chip is installed.)  
->     -   One to one, it represents a single-core chip installed in the socket. (This mapping is rare these days.)  
->     -   One to many, it represents a multi-core chip installed in the socket. (Typical values are 2, 4, 8.)  
+>     -   One to zero, it represents an empty socket. No chip is installed.  
+>     -   One to one, it represents a single-core chip installed in the socket. This mapping is rare these days.  
+>     -   One to many, it represents a multi-core chip installed in the socket. Typical values are 2, 4, and 8.  
 > - A core is mapped to one or two logical processors. When the mapping of cores to logical processors is:  
 >     -   One to one, hyperthreading is off.  
 >     -   One to two, hyperthreading is on.  
@@ -89,7 +89,7 @@ In a virtualized environment, the compute capacity limit is based on the number 
 
 For example, a server that has four sockets populated with quad-core processors and the ability to enable two hyperthreads per core contains 32 logical processors with hyperthreading enabled. But it contains only 16 logical processors with hyperthreading disabled. These logical processors can be mapped to virtual machines on the server. The virtual machines’ compute load on that logical processor is mapped to a thread of execution on the physical processor in the host server.  
   
-You might want to disable hyperthreading when the performance for each virtual processor is important. You can enable or disable hyperthreading by using a BIOS setting for the processor during the BIOS setup. But it's typically a server-scoped operation that will affect all workloads running on the server. This might suggest separating workloads that will run in virtualized environments from those that would benefit from the hyperthreading performance boost in a physical operating system environment.  
+You might want to disable hyperthreading when the performance for each virtual processor is important. You can enable or disable hyperthreading by using a BIOS setting for the processor during the BIOS setup. But it's typically a server-scoped operation that will affect all workloads running on the server. This might suggest separating workloads that will run in virtualized environments from workloads that would benefit from the hyperthreading performance boost in a physical operating system environment.  
   
 ## See also  
  [Editions and components of SQL Server 2016](../sql-server/editions-and-components-of-sql-server-2016.md)   

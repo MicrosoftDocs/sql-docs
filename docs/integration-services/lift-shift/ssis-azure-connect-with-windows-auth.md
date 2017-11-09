@@ -38,7 +38,7 @@ To check whether you can connect to an on-premises file share, do the following 
 
 1.  To run this test, find a non-domain-joined computer.
 
-2.  On the non-domain-joined computer, run the following command. This command opens a command prommpt with the domain credentials that you want to use, and then tests connectivity to the file share by getting a directory listing.
+2.  On the non-domain-joined computer, run the following command. This command opens a command prompt window with the domain credentials that you want to use, and then tests connectivity to the file share by getting a directory listing.
 
     ```cmd
     runas.exe /netonly /user:<domain>\<username> cmd.exe

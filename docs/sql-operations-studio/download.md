@@ -21,30 +21,6 @@ ms.workload: "Inactive"
 > [!NOTE]
 > This preview version of [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] installs by copying a zip (tar) file to your local computer, extracting (expanding) the file, and running the executable.
 
-## Supported Operating Systems
-
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] runs on Windows, macOS, and Linux, and is supported on the following platforms:
-
-### Windows
-- Windows 10 (64-bit)
-- Windows 8.1 (64-bit)
-- Windows 8 (64-bit)
-- Windows 7 (SP1) (64-bit) - Requires [KB2533623](https://www.microsoft.com/en-us/download/details.aspx?id=26767)
-- Windows Server 2016
-- Windows Server 2012 R2 (64-bit)
-- Windows Server 2012 (64-bit)
-- Windows Server 2008 R2 (64-bit)
-
-### macOS
-- macOS 10.13 High Sierra
-- macOS 10.12 Sierra
-
-### Linux
-- Red Hat Enterprise Linux 7.4
-- Red Hat Enterprise Linux 7.3
-- SUSE Linux Enterprise Server v12 SP2
-- Ubuntu 16.04
-
 
 ## Get SQL Operations Studio (preview) for Windows
 
@@ -70,8 +46,9 @@ ms.workload: "Inactive"
 
 ## Get SQL Operations Studio (preview) for Linux
 
-1. Open a new Terminal window.
-2. Type the following commands to extract the file and launch [!INCLUDE[name-sos](../includes/name-sos-short.md)]:
+1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] for Linux](https://go.microsoft.com/fwlink/?linkid=XXXXX)
+2. Open a new Terminal window.
+3. Type the following commands to extract the file and launch [!INCLUDE[name-sos](../includes/name-sos-short.md)]:
 
    ```bash
    cd ~
@@ -82,10 +59,34 @@ ms.workload: "Inactive"
    sqlops .
    ```
 
-
 ## Uninstall SQL Operations Studio (preview)
 
 To uninstall [!INCLUDE[name-sos-short](../includes/name-sos-short.md)], delete the files.
+
+## Supported Operating Systems
+
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] runs on Windows, macOS, and Linux, and is supported on the following platforms:
+
+### Windows
+- Windows 10 (64-bit)
+- Windows 8.1 (64-bit)
+- Windows 8 (64-bit)
+- Windows 7 (SP1) (64-bit) - Requires [KB2533623](https://www.microsoft.com/en-us/download/details.aspx?id=26767)
+- Windows Server 2016
+- Windows Server 2012 R2 (64-bit)
+- Windows Server 2012 (64-bit)
+- Windows Server 2008 R2 (64-bit)
+
+### macOS
+- macOS 10.13 High Sierra
+- macOS 10.12 Sierra
+
+### Linux
+- Red Hat Enterprise Linux 7.4
+- Red Hat Enterprise Linux 7.3
+- SUSE Linux Enterprise Server v12 SP2
+- Ubuntu 16.04
+
 
 ## Next Steps
 

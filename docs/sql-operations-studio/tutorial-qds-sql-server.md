@@ -85,7 +85,7 @@ To add an insight widget to your dashboard, edit the *dashboard.database.widgets
 
 4. Close the **Insights** pane.
 
-## View the query plan
+## View the query plan 
 
 1. Open a new query editor by pressing **Ctrl+N**.
 
@@ -99,12 +99,10 @@ To add an insight widget to your dashboard, edit the *dashboard.database.widgets
 
    ![showplan](./media/tutorial-qds-sql-server/showplan.png)
 
-## View the query plan in Query Data Store
+## Save and open a query plan 
 
-**??THIS OPENS AS TEXT FOR ME??**
-
-1. Open the insight detail dialog again.
-
+1. Open the insight detail dialog.
+2. Select one of the query items.
 2. Right-click **query_plan** value and select **Copy Cell**
 
    ![Insights QDS plan](./media/tutorial-qds-sql-server/insight-qds-plan.png)
@@ -113,11 +111,12 @@ To add an insight widget to your dashboard, edit the *dashboard.database.widgets
 
 4. Paste the copied plan into the editor.
 
-5. Press **Ctrl+S** to save the file, and change the file extension to *.showplan.
+5. Press **Ctrl+S** to save the file, and change the file extension to *.sqlplan*. For this tutorial, name the file *slowquery.sqlplan*.
 
-6. The query plan opens in [!INCLUDE[name-sos](../includes/name-sos-short.md)]'s query plan viewer.
+6. The query plan opens in [!INCLUDE[name-sos](../includes/name-sos-short.md)]'s query plan viewer:
 
-   >> ??TBD - screenshot??
+   ![Insights QDS plan](./media/tutorial-qds-sql-server/sqlplan.png)
+
 
 ## Next steps
 In this tutorial, you learned how to:

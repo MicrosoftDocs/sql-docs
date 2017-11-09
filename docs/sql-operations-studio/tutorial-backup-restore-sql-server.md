@@ -27,11 +27,9 @@ In this tutorial, you learn how to use [!INCLUDE[name-sos](../includes/name-sos-
 
 ## Prerequisites
 
-This tutorial requires the SQL Server or Azure SQL Database *TutorialDB*. To create the *TutorialDB* database, complete one of the following quickstarts:
+This tutorial requires the SQL Server *TutorialDB*. To create the *TutorialDB* database, complete one of the following quickstarts:
 
 - [Connect and query SQL Server using [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
-- [Connect and query Azure SQL Database using [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
-
 
 
 ## Backup a database

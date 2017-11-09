@@ -6,10 +6,10 @@
 ## [Connect & query SQL Data Warehouse](quickstart-sql-dw.md)
 # Tutorials
 ## [T-SQL Editor](tutorial-sql-editor.md) 
-## [Enable the database performance insight](tutorial-qds-sql-server.md)
-## [Enable the table space usage insight](tutorial-table-space-sql-server.md)
-## [Build a custom insight to monitor active sessions](tutorial-build-custom-insight-sql-server.md) 
-## [Backup and restore](tutorial-backup-restore-sql-server.md)
+## [Monitor query performance](tutorial-qds-sql-server.md)
+## [Monitor table space usage](tutorial-table-space-sql-server.md)
+## [Build a custom monitoring insight](tutorial-build-custom-insight-sql-server.md) 
+## [Backup and restore databases](tutorial-backup-restore-sql-server.md)
 # How-to guides
 ## [Management dashboards & insight widgets](insight-widgets.md)
 ## [Code snippets](code-snippets.md)
@@ -22,5 +22,6 @@
 # Resources
 ## [Transact-SQL Reference](../t-sql/language-reference.md)
 ## [SQL Operations Studio (preview) GitHub repo](https://www.github.com/Microsoft/SqlOpsStudio)
+## [SQL Server Blog](https://blogs.technet.microsoft.com/dataplatforminsider/)
 # [FAQ](faq.md)
 # [Usage Data Collection](usage-data-collection.md)

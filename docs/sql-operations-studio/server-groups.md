@@ -29,7 +29,7 @@ As stated in the previous section, server group configuration details are stored
    ![Open user settings command](./media/server-groups/open-user-settings.png)
 
 1. In the right side list of settings, locate and copy the following two sections:
-   - datasource.connectionGropus
+   - datasource.connectionGroups
    - datasource.connections
 
    ![server groups in settings](./media/server-groups/server-groups-settings.png)
@@ -38,5 +38,5 @@ As stated in the previous section, server group configuration details are stored
 
 
 
-## Additiona resources
+## Additional resources
 - [Workspace and User settings](settings.md)

@@ -30,9 +30,9 @@ This article provides an overview of the feature and describes known restriction
 
 The preview release provides the following functionality:
 
-+ Call R using stored procedures for easy deployment of machine learning solutions
-+ Get scores from the model using any application that can connect to your cloud database
-+ Supports native scoring using the PREDICT funciton, for fast scoring without use of the R runtime
++ Call R using stored procedures for easy deployment of machine learning solutions.
++ Get scores from the model using any application that can connect to your cloud database.
++ Supports native scoring using the [PREDICT](../../t-sql/queries/predict-transact-sql.md) function, for fast scoring without use of the R runtime.
 
 For restrictions specific to the preview version, see [Restrictions and known issues](#bkmk_restrictions).
 

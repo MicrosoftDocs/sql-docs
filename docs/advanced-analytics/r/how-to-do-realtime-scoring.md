@@ -31,7 +31,7 @@ The following options are supported for fast batch prediction:
 > Use of the PREDICT function is recommended in SQL Server 2017.
 > To use sp\_rxPredict requires that you enable SQLCLR integration. Consider the security implications before you enable this option.
 
-The overall process of preparing the model and then generating scores is very similar:
+The overall process of preparing the model and then generating scores is similar:
 
 1. Create a model using a supported algorithm.
 2. Serialize the model using a special binary format.
@@ -48,7 +48,7 @@ The overall process of preparing the model and then generating scores is very si
 
 ### Serialization and storage
 
-To use a model with either of the fast scoring options, the model must be saved in a special serialized format, which has been optimized for size and scoring efficiency.
+To use a model with either of the fast scoring options, save the model using a special serialized format, which has been optimized for size and scoring efficiency.
 
 + Call `rxSerializeModel` to write a supported model to the **raw** format.
 + Call `rxUnserializeModel` to reconstitute the model for use in other R code, or to view the model.
@@ -137,7 +137,7 @@ EXECUTE sp_execute_external_script
 ```
 
 > [!NOTE] 
-> You must use the [rxSerializeModel](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel) function from RevoScaleR to save the model. The standard R `serialize` function cannot generate the required format.
+> Be sure to use the [rxSerializeModel](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel) function from RevoScaleR to save the model. The standard R `serialize` function cannot generate the required format.
 
 You can run a statement such as the following to view the stored model in binary format:
 
@@ -206,7 +206,7 @@ You must enable this feature for each database that you want to use for scoring.
 
 ### Step 2. Prepare and save the model
 
-The binary format required by sp\_rxPredict is the same as that for PREDICT. Therefore, in your R code, include a call to [rxSerializeModel](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel), and be sure to specify `realtimeScoringOnly = TRUE`, as in this example:
+The binary format required by sp\_rxPredict is the same as the format required to use the PREDICT function. Therefore, in your R code, include a call to [rxSerializeModel](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel), and be sure to specify `realtimeScoringOnly = TRUE`, as in this example:
 
 ```R
 model <- rxSerializeModel(model.name, realtimeScoringOnly = TRUE)

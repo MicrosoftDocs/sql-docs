@@ -44,7 +44,6 @@ The use of SQL logins is also supported in this scenario, which requires that th
  In general, the [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] starts the external script runtime and executes scripts under its own account. However, if the external runtime makes an ODBC call, the [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] impersonates the credentials of the user that sent the command to ensure that the ODBC call does not fail. This is called *implied authentication*.
  
  > [!IMPORTANT]
- >
  > For implied authentication to succeed, the Windows users group that contains the worker accounts (by default, **SQLRUser**) must have an account in the master database for the instance, and this account must be given permissions to connect to the instance.
  > 
  > The group **SQLRUser** is also used when running Python scripts. 

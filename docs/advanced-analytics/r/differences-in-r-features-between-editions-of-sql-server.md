@@ -46,7 +46,7 @@ ms.workload: "Inactive"
   
 -   **Standard Edition**
 
-     Has all the capabilities of in-database analytics included with Enterprise Edition, except for resource governance. Performance and scale is also limited: the data that can be processed must fit in server memory, and processing is limited to a single compute thread, even when using the **RevoScaleR** functions.
+     Has all the capabilities of in-database analytics included with Enterprise Edition, except for resource governance. Performance and scale are also limited: the data that can be processed must fit in server memory, and processing is limited to a single compute thread, even when using the **RevoScaleR** functions.
   
 -   **Express And Web Editions**
   

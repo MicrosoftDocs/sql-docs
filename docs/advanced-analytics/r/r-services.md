@@ -64,7 +64,7 @@ To get started, see these resources:
 
 ## Machine Learning Server (Standalone) and Microsoft R Server (Standalone)
 
-This standalone server system supports distributed, scalable R solutions on multiple platforms and using multiple enterprise data sources, such as Linux and HD Insight. If you don't need to integrate with SQL Server, you can install R Server to enable rapid development, deployment, and operationalization of machine learning solutions. You can also use the R Server installers to upgrade the R components associated with a SQL Server instance and obtain the latest version of R.
+This standalone server system supports distributed, scalable R solutions on multiple platforms and using multiple enterprise data sources, such as Linux and HDInsight. If you don't need to integrate with SQL Server, you can install R Server to enable rapid development, deployment, and operationalization of machine learning solutions. You can also use the R Server installers to upgrade the R components associated with a SQL Server instance and obtain the latest version of R.
 
 If you install Microsoft Machine Learning Server using SQL Server 2017 setup, you can also deploy and consume Python applications.
 
@@ -108,7 +108,7 @@ The Azure Marketplace contains several virtual machines that support data scienc
 
     The new [Data Science VM for Windows Server 2016](http://aka.ms/dsvm/win2016) provides GPU versions of popular deep learning frameworks such as CNTK. Pre-installed tools include the GPU NVIDIA drivers, CUDA Toolkit 8.0, and the NVIDIA cuDNN library for GPU workloads. In just minutes, you can have a complete environment for building deep learning models that can run on either CPU or CPU plus GPU.
 
-+ For R Server or Machine Learning Server, we recommend the Microsoft Machine Learning Server 2017 for Linuxor for Windows 2016 Server.
++ For R Server or Machine Learning Server, we recommend the Microsoft Machine Learning Server 2017 for Linux or for Windows 2016 Server.
 
 + To get an Azure image with SQL Server machine learning, we recommend any of the virtual machine offerings that include **SQL Server 2017**. When you select the image, follow the additional recommendations about tier and service level, to ensure that the VM can support machine learning workloads.
 

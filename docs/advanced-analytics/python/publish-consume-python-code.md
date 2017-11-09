@@ -90,7 +90,7 @@ token_response = client.login(login_request)
 headers = {"Authorization": "Bearer {0}".format(token_response.access_token)}
 
 #Verify that the server is running.
-#Remember to include `headers` in every request!
+#Remember to include `headers` in all requests!
 status_response = client.status(headers) 
 print(status_response.status_code)
 
@@ -105,7 +105,7 @@ print(status_response.status_code)
 create_session_request = deployrclient.models.CreateSessionRequest("Session 1", runtime_type="Python")
 
 #Make the call to start the session. 
-#Remember to include headers in every method call to the server.
+#Remember to include headers in all method calls to the server.
 #Returns a session ID.
 response = client.create_session(create_session_request, headers) 
    
@@ -153,7 +153,7 @@ else:
 response = client.create_snapshot(session_id, deployrclient.models.CreateSnapshotRequest("Iris Snapshot"), headers)
 #Return the snapshot ID for reference when you publish later.
 response.snapshot_id
-#If you forget the ID, list every snapshot to get the ID again.
+#If you forget the ID, list snapshots to get the ID again.
 for snapshot in client.list_snapshots(headers):
     print(snapshot)
 
@@ -326,7 +326,7 @@ Before you can start publishing your Python code and models thorugh Microsoft Ma
 
 Keep in mind that all APIs require authentication; therefore, all users must authenticate when making an API call using the `POST /login` API or through Azure Active Directory (AAD). 
 
-To simplify this process, bearer access tokens are issued so that users need not provide their credentials for every single call.  This bearer token is a lightweight security token that grants the “bearer” access to a protected resource: in this case, the Machine Learning Server's APIs. After a user has been authenticated, the application must validate the user’s bearer token to ensure that authentication was successful for the intended parties. To learn more about managing these tokens, see [Security Access Tokens](https://msdn.microsoft.com/microsoft-r/operationalize/security-access-tokens).
+To simplify this process, bearer access tokens are issued so that users need not provide their credentials for each call.  This bearer token is a lightweight security token that grants the “bearer” access to a protected resource: in this case, the Machine Learning Server's APIs. After a user has been authenticated, the application must validate the user’s bearer token to ensure that authentication was successful for the intended parties. To learn more about managing these tokens, see [Security Access Tokens](https://msdn.microsoft.com/microsoft-r/operationalize/security-access-tokens).
 
 Before you interact with the core APIs, first authenticate, get the bearer access token using the [authentication method](https://msdn.microsoft.com/microsoft-r/operationalize/security-authentication) configured by your administrator, and then include it in each header for each subsequent request:
 
@@ -343,7 +343,7 @@ Before you interact with the core APIs, first authenticate, get the bearer acces
 
    **AD/LDAP or `admin` account authentication**
 
-   You must call the `POST /login` API in order to authenticate. You'll need to pass in the  `username` and `password` for the local administrator, or if Active Directory is enabled, pass the LDAP account information. In turn, Machine Learning Server will issue you a bearer/access token. After authenticated, the user will not need to provide credentials again as long as the token is still valid, and a header is submitted with every request. If you do not know your connection settings, please contact your administrator.
+   You must call the `POST /login` API in order to authenticate. You'll need to pass in the  `username` and `password` for the local administrator, or if Active Directory is enabled, pass the LDAP account information. In turn, Machine Learning Server will issue you a bearer/access token. After authenticated, the user will not need to provide credentials again as long as the token is still valid, and a header is submitted with each request. If you do not know your connection settings, please contact your administrator.
 
    ```python
    #Using client library generated from Autorest
@@ -361,7 +361,7 @@ Before you interact with the core APIs, first authenticate, get the bearer acces
 
    **Azure Active Directory (AAD) authentication**
 
-   You must pass the AAD credentials, authority, and client ID. In turn, AAD will issue the [Bearer access token](https://msdn.microsoft.com/microsoft-r/operationalize/security-access-tokens). After authenticated, the user will not need to provide credentials again as long as the token is still valid, and a header is submitted with every request. If you do not know your connection settings, please contact your administrator.
+   You must pass the AAD credentials, authority, and client ID. In turn, AAD will issue the [Bearer access token](https://msdn.microsoft.com/microsoft-r/operationalize/security-access-tokens). After authenticated, the user will not need to provide credentials again as long as the token is still valid, and a header is submitted with each request. If you do not know your connection settings, please contact your administrator.
 
    ```python
    #Import the AAD authentication library
@@ -467,7 +467,7 @@ After authentication, you can start a Python session and create a model you'll p
        print (execute_response.error_message)
    ```
 
-3. Create a snapshot of this Python session so this environment can be saved in the web service and reproduced at consume time. Snapshots are very useful when you need a prepared environment that includes certain libraries, objects, models, files and artifacts. Snapshots save the whole workspace and working directory. However, when publishing, you can use only snapshots that you've created.
+3. Create a snapshot of this Python session so this environment can be saved in the web service and reproduced at consume time. Snapshots are useful when you need a prepared environment that includes certain libraries, objects, models, files, and artifacts. Snapshots save the whole workspace and working directory. However, when publishing, you can use only snapshots that you've created.
 
    > [!NOTE] 
    > While snapshots can also be used when publishing a web service for environment dependencies, it may have an impact on the performance of the consumption time.  For optimal performance, consider the size of the snapshot carefully and ensure that you keep only those workspace objects you need and purge the rest. In a session, you can use the Python `del` function or [the `deleteWorkspaceObject` API request](https://microsoft.github.io/deployr-api-docs/#delete-workspace-object) to remove unnecessary objects. 
@@ -479,7 +479,7 @@ After authentication, you can start a Python session and create a model you'll p
    #Return the snapshot ID for reference when you publish later.
    response.snapshot_id
    
-   #If you forget the ID, list every snapshot to get the ID again.
+   #If you forget the ID, list snapshots to get the ID again.
    for snapshot in client.list_snapshots(headers):
        print(snapshot)
    ```
@@ -489,7 +489,7 @@ After authentication, you can start a Python session and create a model you'll p
 After your client library has been generated and you've built the authentication logic into your application, you can interact with the core APIs to create a Python session, create a model, and then publish a web service using that model.
 
 > [!NOTE]
-> Remember that you must be authenticated before you make any API calls. Therefore, include `headers` in every request.
+> Remember that you must be authenticated before you make any API calls. Therefore, include `headers` in all requests.
 
 + Publish this SVM model as a Python web service in Machine Learning  Server. This web service will score a vector that gets passed to it.
 
@@ -592,7 +592,7 @@ Now that you've created a web service, you can update, delete, or republish that
 
 ### Update a web service
 
-You can update a web service to change the code, model, description, inputs, outputs and more. In this example, we update the service to add a description useful to people who might consume this service.
+You can update a web service to change the code, model, description, inputs, outputs, and more. In this example, we update the service to add a description useful to people who might consume this service.
 
 ```python
 #Define what needs to be updated. Here we add a description.
@@ -648,7 +648,7 @@ for service in client.get_all_web_services(headers):
 
 ### Delete services
 
-You can delete services you've created. You can also delete the services of others if you are assigned to a role that has the appropriate permissions.
+You can delete services you've created. You can also delete the services of others, if you are assigned to a role that has the appropriate permissions.
 
 In this example, we delete the second web service version we just published.
 

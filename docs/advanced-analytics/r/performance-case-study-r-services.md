@@ -25,7 +25,7 @@ The two case studies had different goals:
 + The first case study, by the R Services development team, sought to measure the impact of specific optimization techniques
 + The second case study, by a data scientist team, experimented with multiple methods to determine the best optimizations for a specific high-volume scoring scenario.
 
-This topic lists the detailed results of the first case study. For the second case study, a summary describes the overall findings. At the end of this topic, you will find links to all scripts and sample data, and resources used by the original authors.
+This topic lists the detailed results of the first case study. For the second case study, a summary describes the overall findings. At the end of this topic are links to all scripts and sample data, and resources used by the original authors.
 
 ## Performance case study: Airline dataset
 
@@ -323,9 +323,9 @@ The configuration that had the best performance in the resume-matching study was
 
 -   Maximum memory for use by R sessions = 70%
 
-For the resume-matching model, external script use was heavy and there were no other database engine services running. Therefore, the resources allocated to external scripts was increased to 70%, which was the best configuration for script performance.
+For the resume-matching model, external script use was heavy and there were no other database engine services running. Therefore, the resources allocated to external scripts were increased to 70%, which proved the best configuration for script performance.
 
-This configuration was arrived at by experimenting with different values. If you use different hardware or a different solution, the optimum configuration might be different.Always experiment to find the best configuration for your case!
+This configuration was arrived at by experimenting with different values. If you use different hardware or a different solution, the optimum configuration might be different. Always experiment to find the best configuration for your case!
 
 In the optimized solution, 1.1 million rows of data (with 100 features) were scored in under 8.5 seconds on a 20-core computer. Optimizations significantly improved the performance in terms of scoring time.
 
@@ -342,7 +342,7 @@ For all these reasons, there is no single solution for mitigating this initial l
 For training large models, or scoring in large batches, the overhead might be minimal in comparison to the gains from avoiding data movement or from streaming and parallel processing. See these recent blogs and samples for additional performance guidance:
 
 + [Loan classification using SQL Server 2016 R Services](https://blogs.msdn.microsoft.com/microsoftrservertigerteam/2016/09/27/loan-classification-using-sql-server-2016-r-services/)
-+ [Eary customer experiences with R Services](https://blogs.msdn.microsoft.com/sqlcat/2016/06/16/early-customer-experiences-with-sql-server-r-services/)
++ [Early customer experiences with R Services](https://blogs.msdn.microsoft.com/sqlcat/2016/06/16/early-customer-experiences-with-sql-server-r-services/)
 + [Using R to detect fraud at 1 million transactions per second](http://blog.revolutionanalytics.com/2016/09/fraud-detection.html/)
 
 ## Resources

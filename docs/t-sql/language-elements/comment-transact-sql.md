@@ -55,7 +55,7 @@ ms.workload: "On Demand"
   
  For more information about keyboard shortcuts, see [SQL Server Management Studio Keyboard Shortcuts](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md).  
   
- For multiline comments, see [Slash Star Comment &#40;Transact-SQL&#41;](../../t-sql/language-elements/slash-star-comment-transact-sql.md).  
+ For multiline comments, see [Slash Star &#40;Block Comment&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/slash-star-comment-transact-sql.md).  
   
 ## Examples  
  The following example uses the -- commenting characters.  

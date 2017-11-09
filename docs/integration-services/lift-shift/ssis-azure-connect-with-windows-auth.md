@@ -102,15 +102,15 @@ To connect to a file share on an Azure virtual machine or Azure file share, do t
 
     a.  To connect to a file share on an Azure virtual machine, run the following stored procedure:
 
-        ```sql
-        catalog.set_execution_credential @domain = N'.', @user = N'username of local account on Azure virtual machine', @password = N'password'
-        ```
+    ```sql
+    catalog.set_execution_credential @domain = N'.', @user = N'username of local account on Azure virtual machine', @password = N'password'
+    ```
 
     b.  To connect to an Azure file share (that is, in Azure Files), run the following stored procedure:
 
-        ```sql
-        catalog.set_execution_credential @domain = N'Azure', @user = N'<storage-account-name>', @password = N'<storage-account-key>'
-        ```
+    ```sql
+    catalog.set_execution_credential @domain = N'Azure', @user = N'<storage-account-name>', @password = N'<storage-account-key>'
+    ```
 
 ## Next steps
 - Deploy a package. For more info, see [Deploy an SSIS project with SQL Server Management Studio (SSMS)](../ssis-quickstart-deploy-ssms.md).

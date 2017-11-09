@@ -147,7 +147,7 @@ sys.dm_sql_referenced_entities (
 ### A. Returning entities that are referenced by a database-level DDL trigger  
  The following example returns the entities (tables and columns) that are referenced by the database-level DDL trigger `ddlDatabaseTriggerLog`.  
   
-```tsql  
+```t-sql  
 USE AdventureWorks2012;  
 GO  
 SELECT referenced_schema_name, referenced_entity_name, referenced_minor_name,   
@@ -159,7 +159,7 @@ GO
 ### B. Returning entities that are referenced by an object  
  The following example returns the entities that are referenced by the user-defined function `dbo.ufnGetContactInformation`.  
   
-```tsql  
+```t-sql  
 USE AdventureWorks2012;  
 GO  
 SELECT referenced_schema_name, referenced_entity_name, referenced_minor_name,   
@@ -171,7 +171,7 @@ GO
 ### C. Returning column dependencies  
  The following example creates the table `Table1` with the computed column `c` defined as the sum of columns `a` and `b`. The `sys.dm_sql_referenced_entities` view is then called. The view returns two rows, one for each column defined in the computed column.  
   
-```tsql  
+```t-sql  
 USE AdventureWorks2012;  
 GO  
 CREATE TABLE dbo.Table1 (a int, b int, c AS a + b);  
@@ -200,7 +200,7 @@ GO
 ### D. Returning non-schema-bound column dependencies  
  The following example drops `Table1` and creates `Table2` and stored procedure `Proc1`. The procedure references `Table2` and the nonexistent table `Table1`. The view `sys.dm_sql_referenced_entities` is run with the stored procedure specified as the referencing entity. The result set shows one row for `Table1` and 3 rows for `Table2`. Because `Table1` does not exist, the column dependencies cannot be resolved and error 2020 is returned. The `is_all_columns_found` column returns 0 for `Table1` indicating that there were columns that could not be discovered.  
   
-```tsql  
+```t-sql  
 USE AdventureWorks2012;  
 GO  
 IF OBJECT_ID ( 'dbo.Table1', 'U' ) IS NOT NULL   
@@ -234,7 +234,7 @@ GO
 ### E. Demonstrating dynamic dependency maintenance  
  The following example extends Example D to show that dependencies are maintained dynamically. The example first re-creates `Table1`, which was dropped in Example D. Then `sys.dm_sql_referenced_entities` is run again with the stored procedure specified as the referencing entity. The result set shows that both tables and their respective columns defined in the stored procedure are returned. In addition, the `is_all_columns_found` column returns a 1 for all objects and columns.  
   
-```tsql  
+```t-sql  
 USE AdventureWorks2012;  
 GO  
 CREATE TABLE Table1 (a int, b int, c AS a + b);  
@@ -267,7 +267,7 @@ GO
   
 **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-```tsql  
+```t-sql  
 SELECT referenced_entity_name AS table_name, referenced_minor_name as column_name, is_selected, is_updated, is_select_all  
 FROM sys.dm_sql_referenced_entities ('HumanResources.uspUpdateEmployeePersonalInfo', 'OBJECT');  
   

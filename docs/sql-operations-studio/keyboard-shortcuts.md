@@ -28,8 +28,6 @@ Open the **Keyboard Shortcuts** editor from the **File** menu: **File** > **Pref
 
 In addition to displaying current keybindings, the **Keyboard Shortcuts** editor lists the available commands that do not have keyboard shortcuts defined. The **Keyboard Shortcuts** editor enables you to easily change, remove, reset, and define new keybindings.  
 
-![keyboard Shortcuts editor](media/keyboard-shortcuts/keyboard-shortcuts.gif)
-
 
 ## Edit existing keyboard shortcuts
 

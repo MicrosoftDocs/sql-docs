@@ -101,7 +101,7 @@ Express Edition is subject to the same limitations as Standard Edition.
 
 ## Machine learning in Web Edition
 
-Web edition does not support execution of R or Python scripts. However, you can use the [PREDICT](../../t-sql/queries/predit-transat-sql.md) function to perform [native scoring](../sql-native-scoring.md) on a model that has been trained on a different SQL Server or R Server instance and then saved in the required binary format.
+Web edition does not support execution of R or Python scripts. However, you can use the [PREDICT](../../t-sql/queries/predict-transact-sql.md) function to perform [native scoring](../sql-native-scoring.md) on a model that has been trained on a different SQL Server or R Server instance and then saved in the required binary format.
 
 ## Next steps
 

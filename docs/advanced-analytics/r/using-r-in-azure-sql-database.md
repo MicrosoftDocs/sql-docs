@@ -95,7 +95,7 @@ The following functionality is not supported:
 
 + The MicrosoftML package is not available.
 + Package management features such as CREATE EXTERNAL LIBRARY are not supported.
-+ You cannot use the Azure SQL database as a remote compute context when executing scripts from an R client. R scripts must be run by using the stored procedure [sp_execute_external_script](../../relational-databases/stored-procedures/sp-execute-external-script-transact-sql.md). Scripts called by the stored procedure cannot use other compute contexts.
++ You cannot use the Azure SQL database as a remote compute context when executing scripts from an R client. R scripts must be run by using the stored procedure [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). Scripts called by the stored procedure cannot use other compute contexts.
 + You cannot execute calls to RevoScaleR functions that require parallel execution.
 + Loopback connections from R script to SQL Server are not supported. In other words, you cannot make external calls from your R script to another ODBC data source.
 

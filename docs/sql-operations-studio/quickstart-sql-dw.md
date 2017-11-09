@@ -54,25 +54,24 @@ Use [!INCLUDE[name-sos](../includes/name-sos-short.md)] to establish a connectio
 
 4. After successfully connecting your server will appear in the object explorer.
 
-## Create the tutorial database
+## Create the tutorial data warehouse
 1. Right click on your server, in the object explorer and select **New Query.**
 
-   ![NewQuery](media/quickstart-sql-dw/new-query.png)
-
-1. Paste the following snippet into the query window:
+1. Paste the following snippet into the query editor:
 
    ```sql
-   IF NOT EXISTS (
-      SELECT name
-      FROM sys.databases
-      WHERE name = N'TutorialDB'
-   )
-   CREATE DATABASE [TutorialDB]
-   GO
-
-   ALTER DATABASE [TutorialDB] SET QUERY_STORE=ON
-   GO
+    IF NOT EXISTS (
+       SELECT name
+       FROM sys.databases
+       WHERE name = N'TutorialDB'
+    )
+    CREATE DATABASE [TutorialDB] (EDITION = 'datawarehouse', SERVICE_OBJECTIVE='DW100');
+    GO  
+    
+    ALTER DATABASE [TutorialDB] SET QUERY_STORE=ON
+    GO
    ```
+
 1. To execute the query, click **Run**.
 
 ## Create a table
@@ -84,7 +83,7 @@ The query editor is still connected to the *master* database, but we want to cre
    ![Change context](media/quickstart-sql-database/change-context.png)
 
 
-1. Paste the following snippet into the query window:
+1. Paste the following snippet into the query editor:
 
    ```sql
    -- Create a new table called 'Customers' in schema 'dbo'
@@ -95,7 +94,7 @@ The query editor is still connected to the *master* database, but we want to cre
    -- Create the table in the specified schema
    CREATE TABLE dbo.Customers
    (
-      CustomerId        INT    NOT NULL   PRIMARY KEY, -- primary key column
+      CustomerId        INT     NOT NULL,
       Name      [NVARCHAR](50)  NOT NULL,
       Location  [NVARCHAR](50)  NOT NULL,
       Email     [NVARCHAR](50)  NOT NULL
@@ -107,24 +106,22 @@ The query editor is still connected to the *master* database, but we want to cre
 
 ## Insert rows
 
-1. Paste the following snippet into the query window:
+1. Paste the following snippet into the query editor:
 
    ```sql
    -- Insert rows into table 'Customers'
    INSERT INTO dbo.Customers
       ([CustomerId],[Name],[Location],[Email])
-   VALUES
-      ( 1, N'Orlando', N'Australia', N''),
-      ( 2, N'Keith', N'India', N'keith0@adventure-works.com'),
-      ( 3, N'Donna', N'Germany', N'donna0@adventure-works.com'),
-      ( 4, N'Janet', N'United States', N'janet1@adventure-works.com')
-   GO
+      SELECT 1, N'Orlando',N'Australia', N'' UNION ALL
+      SELECT 2, N'Keith', N'India', N'keith0@adventure-works.com' UNION ALL
+      SELECT 3, N'Donna', N'Germany', N'donna0@adventure-works.com' UNION ALL
+      SELECT 4, N'Janet', N'United States', N'janet1@adventure-works.com'
    ```
 
 1. To execute the query, click **Run**.
 
 ## View the result
-1. Paste the following snippet into the query window:
+1. Paste the following snippet into the query editor:
 
    ```sql
    -- Select rows from table 'Customers'
@@ -135,21 +132,13 @@ The query editor is still connected to the *master* database, but we want to cre
 
    ![Select results](media/quickstart-sql-dw/select-results.png)
 
-## Save result as Excel
-
-Right-click the results table and select **Save As Excel**. 
-
-   ![Save as Excel](media/quickstart-sql-dw/save-as-excel.png)
-
-
-## View chart
-View an existing, built-in widget through the dashboard.
 
 ## Clean up resources
 
 Other articles in this collection build upon this quickstart. If you plan to continue on to work with subsequent quickstarts, do not clean up the resources created in this quickstart. If you do not plan to continue, use the following steps to delete resources created by this quickstart in the Azure portal.
 Clean up resources by deleting the resource groups you no longer need. For details, see [Clean up resources](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-get-started-portal#clean-up-resources).
 
+
 ## Next steps
 
-To create and run queries, see [Code editor tutorial](tutorial-sql-editor.md).
+Now that you've successfully connected to an Azure SQL data warehouse and ran a query, try out the [Code editor tutorial](tutorial-sql-editor.md).

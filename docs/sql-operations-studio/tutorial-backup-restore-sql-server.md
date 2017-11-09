@@ -26,11 +26,13 @@ In this tutorial, you learn how to use [!INCLUDE[name-sos](../includes/name-sos-
 > * View the status of the restore task
 
 ## Prerequisites
-This tutorial requires the *TutorialDB* database. To create the *TutorialDB* database, complete one of the following quickstarts:
+
+This tutorial requires the SQL Server or Azure SQL Database *TutorialDB*. To create the *TutorialDB* database, complete one of the following quickstarts:
 
 - [Connect and query SQL Server using [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
 - [Connect and query Azure SQL Database using [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
-- [Connect and query SQL Data Warehouse using [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-dw.md)
+
+
 
 ## Backup a database
 
@@ -72,7 +74,7 @@ After clicking **Backup**, the **Backup database** dialog disappears and the bac
 
 4. Click **Restore**
 
-5. To view the status of the restore operation, click **CTRL + T** to open the **Task History** sidebar.
+5. To view the status of the restore operation, click **CTRL+T** to open the **Task History** sidebar.
 
    ![restore](./media/tutorial-backup-restore-sql-server/task-history-restore.png)
 

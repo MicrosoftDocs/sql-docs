@@ -15,7 +15,7 @@ manager: craigg
 ms.workload: "Inactive"
 ---
 
-# Tutorial: Working with T-SQL with [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# Tutorial: Working with T-SQL using [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 Creating and running queries, stored procedures, scripts, etc. are the core tasks of database professionals. This tutorial demonstrates the key features in [!INCLUDE[name-sos](../includes/name-sos-short.md)] that simplify using T-SQL.
 
@@ -29,12 +29,10 @@ In this tutorial, you learn how to use [!INCLUDE[name-sos-short](../includes/nam
 
 ## Prerequisites
 
-This tutorial requires the *TutorialDB* database. To create the *TutorialDB* database, complete one of the following quickstarts:
+This tutorial requires the SQL Server or Azure SQL Database *TutorialDB*. To create the *TutorialDB* database, complete one of the following quickstarts:
 
 - [Connect and query SQL Server using [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
 - [Connect and query Azure SQL Database using [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
-- [Connect and query SQL Data Warehouse using [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-dw.md)
-
 
 
 ## Quickly locate a database object and perform a common task
@@ -66,11 +64,11 @@ This tutorial requires the *TutorialDB* database. To create the *TutorialDB* dat
 
    ![snippet-list](./media/tutorial-sql-editor/snippet-list.png)
 
-3. Type *getCustomer* and all *StoredProcedureName* entries will change to *getCustomer*. 
+3. Type *getCustomer* and all *StoredProcedureName* entries change to *getCustomer*. 
 
    ![snippet](./media/tutorial-sql-editor/snippet.png)
 
-4. Replace the rest of the stored procedure with the T-SQL below
+4. Replace the rest of the stored procedure with the T-SQL below:
 
 	```sql
     -- Create a new stored procedure called 'getCustomer' in schema 'dbo'
@@ -127,7 +125,7 @@ This tutorial requires the *TutorialDB* database. To create the *TutorialDB* dat
 
    ![peek definition](./media/tutorial-sql-editor/peek-definition.png)
 
-6. Use the table defintion in the peek definition, complete the following insert statement
+6. Use the table definition to complete the following insert statement:
 
    ```sql
    INSERT INTO dbo.Customers (CustomerID, Name, Location, Email)
@@ -167,23 +165,20 @@ This tutorial requires the *TutorialDB* database. To create the *TutorialDB* dat
    GO
    ```
 
-8. Press **F5** and execute the script.
+8. To execute the script, press **F5**.
 
-## Save query results as JSON
-
-In this step, we walkthrough how the **Save as JSON** option makes developing and testing application login in stored procedures and using JSON as a data format in applications.
+## Save query results as JSON to pass to our stored procedure
 
 1. **SELECT TOP 1000 Rows** from the *dbo.Customers* table.
 
-2. Select the first row in the results view and click **Save as JSON**.  1. Click **Save**, and it opens the highlighted row in JSON format.
+2. Select the first row in the results view and click **Save as JSON**.  
+3. Click **Save**, and it opens the highlighted row in JSON format.
 
    ![save as JSON](./media/tutorial-sql-editor/save-as-json.png)
 
 4. Select the JSON data and copy it.
 
-5. Open a new query for *TutorialDB* and paste the JSON data into the new query editor. 
-
-6. Complete the following test script using the json data as a template in the previous step. Modify the values for *CustomerID*, *Name*, *Location*, and *Email*.
+5. Open a new query for *TutorialDB* and complete the following test script using the JSON data as a template from the previous step. Modify the values for *CustomerID*, *Name*, *Location*, and *Email*.
 
    ```sql
    -- example to execute the stored procedure we just created
@@ -203,7 +198,7 @@ In this step, we walkthrough how the **Save as JSON** option makes developing an
    EXECUTE dbo.getCustomer @ID = 5
    ```
 
-7. Execute the script by pressing *F5**. The script inserts a new customer and returns the new customer's information in JSON format. Click the result to open a formatted view.
+7. Execute the script by pressing **F5**. The script inserts a new customer and returns the new customer's information in JSON format. Click the result to open a formatted view.
 
    ![test result](./media/tutorial-sql-editor/test-result.png)
 
@@ -216,4 +211,4 @@ In this tutorial, you learned how to:
 > * Learn about database object details using Peek Definition and Go to Definition
 
 
-To learn how to build a custom insight widget, see [Build a custom insight widget]](tutorial-build-custom-insight-sql-server.md).
+To learn how to build a custom insight widget, see [Build a custom insight widget](tutorial-build-custom-insight-sql-server.md).

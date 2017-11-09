@@ -26,11 +26,13 @@ During this tutorial you learn how to:
 > * Add the chart to a server or database dashboard
 
 ## Prerequisites
-This tutorial requires the *TutorialDB* database. To create the *TutorialDB* database, complete one of the following quickstarts:
+
+This tutorial requires the SQL Server or Azure SQL Database *TutorialDB*. To create the *TutorialDB* database, complete one of the following quickstarts:
 
 - [Connect and query SQL Server using [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
 - [Connect and query Azure SQL Database using [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
-- [Connect and query SQL Data Warehouse using [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-dw.md)
+
+
 
 
 ## Run your own query and view the result in a chart view
@@ -48,10 +50,7 @@ In this step, run a sql script to query the current active sessions.
    ```
 1. To execute the query, press **F5**.
 3. After SQL Operations Studio (preview) returns with the result view, click **View as Chart**, then click the **Chart Viewer** tab.
-4. Change **Chart Type** to **count**. These settings render a count chart:
-
-   ![chart](./media/tutorial-build-custom-insight-sql-server/insight-activesession-count.png)
-
+4. Change **Chart Type** to **count**. These settings render a count chart.
 5. Save the query in the editor to a *.sql file. For this tutorial, save the script as *activeSession.sql*.
 
 ## Generate an insight widget setting
@@ -69,7 +68,7 @@ In this step, run a sql script to query the current active sessions.
 
    ![dashboard settings](./media/tutorial-build-custom-insight-sql-server/dashboard-settings.png)
 
-5. Paste the insight configuration JSON into *dashboard.database.widgets{}*. Database dashboard settings looks like the following:
+5. Paste the insight configuration JSON into *dashboard.database.widgets*. Database dashboard settings looks like the following:
 
    ```json
     "dashboard.database.widgets": [
@@ -95,7 +94,7 @@ In this step, run a sql script to query the current active sessions.
             }
         }
    ```
-6. Save the *User Settings* file and Open the *TutorialDB* database dashboard.
+6. Save the *User Settings* file and Open the *TutorialDB* database dashboard to see the active sessions widget:
 
    ![activesession insight](./media/tutorial-build-custom-insight-sql-server/insight-activesession-dashboard.png) 
 

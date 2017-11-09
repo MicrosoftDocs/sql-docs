@@ -16,7 +16,7 @@ ms.workload: "Inactive"
 ---
 
 # Quickstart: Connect and query SQL Server using [!INCLUDE[name-sos](../includes/name-sos-short.md)]
-This quickstart shows how to get started using [!INCLUDE[name-sos](../includes/name-sos-short.md)] with SQL Server databases.
+This quickstart shows how to use [!INCLUDE[name-sos](../includes/name-sos-short.md)] to connect to SQL Server and run a query.
 
 ## Prerequisites
 
@@ -72,7 +72,7 @@ The following steps create a database named **TutorialDB**:
    ALTER DATABASE [TutorialDB] SET QUERY_STORE=ON
    GO
    ```
-1. Select **Run** to execute the query.
+1. To execute the query, click **Run** .
 
 After the query completes, the new **TutorialDB** appears in the list of databases. If you don't see it, right-click the **Databases** node and select **Refresh**.
 
@@ -83,7 +83,7 @@ The query editor is still connected to the *master* database, but we want to cre
 
 1. Change the connection context to **TutorialDB**:
 
-   ![Change context](media/quickstart-sql-database/change-context.png)
+   ![Change context](media/quickstart-sql-server/change-context.png)
 
 
 
@@ -138,17 +138,8 @@ After the query completes, the new **Customers** table appears in the list of ta
 
    ![Select results](media/quickstart-sql-server/select-results.png)
 
-## Save result to an Excel spreadsheet
-1. Right click on the results table and select **Save As Excel**. 
-
-   ![Save as Excel](media/quickstart-sql-server/save-as-excel.png)
-
-2. Save as **Results.xls**.
-
-## View chart
-View an existing, built-in widget through the dashboard.
 
 ## Next steps
-[Code editor tutorial](tutorial-sql-editor.md)
+Now that you've successfully connected to SQL Server and ran a query, try out the [Code editor tutorial](tutorial-sql-editor.md).
 
 

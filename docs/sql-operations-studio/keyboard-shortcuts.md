@@ -35,7 +35,6 @@ In addition to displaying current keybindings, the **Keyboard Shortcuts** editor
 
 To change the keybinding for an existing keyboard shortcut:
 
-1. [Open the **Keyboard Shortcuts** editor](#open-the-keyboard-shortcuts-editor.md).
 1. Locate the keyboard shortcut you want to change by using the search box or scrolling through the list.
    > [!TIP]
    > Search by key, by command, by source, etc. to return all relevant keyboard shortcuts.
@@ -52,7 +51,6 @@ To change the keybinding for an existing keyboard shortcut:
 
 To create new keyboard shortcuts:
 
-1. [Open the **Keyboard Shortcuts** editor](#open-the-keyboard-shortcuts-editor.md).
 1. Right-click a command that doesn't have any keybinding and select **Add Keybinding**.
 
    ![create keyboard shortcut](media/keyboard-shortcuts/add-keybinding.png)
@@ -60,6 +58,3 @@ To create new keyboard shortcuts:
 1. Press the desired combination of keys, then press **Enter** to save it.
 
 
-
-## Additional Resources
-For information about [!INCLUDE[name-sos](../includes/name-sos-short.md)], see [What is [!INCLUDE[name-sos](../includes/name-sos-short.md)]](what-is.md)

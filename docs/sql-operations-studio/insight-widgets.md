@@ -20,7 +20,7 @@ Insight widgets take the SQL queries you use to monitor servers & databases and 
 
 Insights are customizable charts and graphs that you add to server and database monitoring dashboards. View at-a-glance insights of your servers and databases, then drill into more details, and launch management actions that you define. 
 
-You can build awesome server and database management dashboards that are even better than the following example!
+You can build awesome server and database management dashboards similar to the following example:
 
 ![database dashboard](media/insight-widgets/database-dashboard.png)
 
@@ -28,7 +28,7 @@ You can build awesome server and database management dashboards that are even be
 To jump in and start creating different types of insight widgets, check out the following tutorials:
 
 - [Build a custom insight widget](tutorial-build-custom-insight-sql-server.md)
-- Enable built-in insight widgets
+- *Enable built-in insight widgets*
    - [Enable the performance monitoring insight](tutorial-qds-sql-server.md)
    - [Enable the table space usage insight](tutorial-table-space-sql-server.md)
 

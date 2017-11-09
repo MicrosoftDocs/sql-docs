@@ -93,7 +93,8 @@ sys.dm_sql_referenced_entities (
 |is_updated|**bit**|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = The object or column is modified.|  
 |is_select_all|**bit**|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = The object is used in a SELECT * clause (object-level only).|  
 |is_all_columns_found|**bit**|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = All column dependencies for the object could be found.<br /><br /> 0 = Column dependencies for the object could not be found.|
-|error_occurred|**bit**|**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = The object or column has a binding error.<br /><br /> 0 = No binding errors for the object or column were found.|
+|is_insert_all|**bit**|**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = The object is used in an INSERT statement without a column list (object-level only).|  
+|is_incomplete|**bit**|**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = The object or column has a binding error and is incomplete.|
   
 ## Exceptions  
  Returns an empty result set under any of the following conditions:  

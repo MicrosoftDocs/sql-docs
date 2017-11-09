@@ -39,5 +39,5 @@ To disable crash reporting, from **File** > **Preferences** > **Settings**, add 
 
 **Important Notice**: This option requires a restart of [!INCLUDE[name-sos](../includes/name-sos-short.md)] to take effect.
 
-## Additional Resources
+## Additional resources
 - [Workspace and User settings](settings.md)

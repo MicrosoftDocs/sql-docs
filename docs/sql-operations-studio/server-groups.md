@@ -32,9 +32,11 @@ As stated in the previous section, server group configuration details are stored
    - datasource.connectionGropus
    - datasource.connections
 
+   ![server groups in settings](./media/server-groups/server-groups-settings.png)
+
 1. Share these configuration details with users who need to connect to these servers and databases.
 
 
 
-## Next steps
+## Additiona resources
 - [Workspace and User settings](settings.md)

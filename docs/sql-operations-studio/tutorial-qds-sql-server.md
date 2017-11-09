@@ -17,7 +17,7 @@ ms.workload: "Inactive"
 
 # Tutorial: Add the pre-built *five slowest queries* widget to the database dashboard
 
-This tutorial demonstrates the process of adding one of [!INCLUDE[name-sos](../includes/name-sos-short.md)]'s built-in insight widgets to the *database dashboard*.  to quickly view a database's five slowest queries using [Query Store](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md). You also learn how to view the details of the slow queries and query plans using [!INCLUDE[name-sos](../includes/name-sos-short.md)]'s features. During this tutorial, you learn how to:
+This tutorial demonstrates the process of adding one of [!INCLUDE[name-sos](../includes/name-sos-short.md)]'s built-in insight widgets to the *database dashboard* to quickly view a database's five slowest queries. You also learn how to view the details of the slow queries and query plans using [!INCLUDE[name-sos](../includes/name-sos-short.md)]'s features. During this tutorial, you learn how to:
 
 > [!div class="checklist"]
 > * Enable Query Store on a database
@@ -25,17 +25,16 @@ This tutorial demonstrates the process of adding one of [!INCLUDE[name-sos](../i
 > * View details about the database's slowest queries
 > * View query execution plans for the slow queries
 
-This tutorial details the process of adding [!INCLUDE[name-sos](../includes/name-sos-short.md)]'s built-in insight widgets to the *database management dashboard*.
-
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] includes several insight widgets out-of-the-box. This tutorial shows how to add the *query-data-store-db-insight* widget, but the steps are basically the same for adding any widget.
 
 ## Prerequisites
 
-This tutorial requires the *TutorialDB* database. To create the *TutorialDB* database, complete one of the following quickstarts:
+This tutorial requires the SQL Server or Azure SQL Database *TutorialDB*. To create the *TutorialDB* database, complete one of the following quickstarts:
 
 - [Connect and query SQL Server using [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
 - [Connect and query Azure SQL Database using [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
-- [Connect and query SQL Data Warehouse using [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-dw.md)
+
+
 
 ## Turn on Query Store for your database
 
@@ -54,17 +53,17 @@ To add an insight widget to your dashboard, edit the *dashboard.database.widgets
 
    ![Open user settings command](./media/tutorial-qds-sql-server/open-user-settings.png)
 
-2. Type *dashboard* in the settings search box and locate the **dashboard.database.widgets**.
+2. Type *dashboard* in the settings search box and locate **dashboard.database.widgets**.
 
    ![Search settings](./media/tutorial-qds-sql-server/search-settings.png)
 
 3. To customize the **dashboard.database.widgets** setting, hover over the pencil icon to the left of the **dashboard.database.widgets** text, click **Edit** > **Copy to Settings**.
 
-4. Using [!INCLUDE[name-sos](../includes/name-sos-short.md)]'s insight settings IntelliSense, configure *name* for the widget title, *gridItemConfig* for the widget size, and *widget* by selecting **query-data-store-database-insight** from the list as shown in the following screenshot:
+4. Using [!INCLUDE[name-sos](../includes/name-sos-short.md)]'s insight settings IntelliSense, configure *name* for the widget title, *gridItemConfig* for the widget size, and *widget* by selecting **query-data-store-db-insight** from the list as shown in the following screenshot:
 
    ![Insight qds settings](./media/tutorial-qds-sql-server/insight-qds-settings.png)
 
-5. Press **CTRL + s** to save the modified **User Settings**.
+5. Press **Ctrl+S** to save the modified **User Settings**.
 
 6. Open the *Database dashboard* by navigating to **TutorialDB** in the *Servers* sidebar, right-click, and select **Manage**.
 
@@ -77,11 +76,10 @@ To add an insight widget to your dashboard, edit the *dashboard.database.widgets
 
 ## View insight details for more information
 
-1. To view additional information for an insight widget, click the ellipses (**...**) in the upper right, and select **Show Details**:
+1. To view additional information for an insight widget, click the ellipses (**...**) in the upper right, and select **Show Details**.
+2. To show more details for an item, select any item in **Chart Data** list.
 
    ![Insight detail dialog](./media/tutorial-qds-sql-server/insight-details-dialog.png)
-
-2. To show more details for an item, select any item in **Chart Data** list.
 
 3. Right-click **query_sql_txt** in **Item Details** and click **Copy Cell**.
 
@@ -89,9 +87,9 @@ To add an insight widget to your dashboard, edit the *dashboard.database.widgets
 
 ## View the query plan
 
-1. Open a new query editor by pressing *Ctrl + N*.
+1. Open a new query editor by pressing **Ctrl+N**.
 
-2. Paste the *query_sql_txt* from the previous steps into the editor.
+2. Paste the query text from the previous steps into the editor.
 
 3. Click **Explain**.
 
@@ -111,15 +109,15 @@ To add an insight widget to your dashboard, edit the *dashboard.database.widgets
 
    ![Insights QDS plan](./media/tutorial-qds-sql-server/insight-qds-plan.png)
 
-3. Press *Ctrl-N* to open a new editor.
+3. Press **Ctrl+N** to open a new editor.
 
 4. Paste the copied plan into the editor.
 
-5. Press *Ctrl-S* to save the file, and change the file extension to *.showplan.
+5. Press **Ctrl+S** to save the file, and change the file extension to *.showplan.
 
 6. The query plan opens in [!INCLUDE[name-sos](../includes/name-sos-short.md)]'s query plan viewer.
 
-   >> TBD - screenshot
+   >> ??TBD - screenshot??
 
 ## Next steps
 In this tutorial, you learned how to:
@@ -129,4 +127,4 @@ In this tutorial, you learned how to:
 > * View details about the database's slowest queries
 > * View query execution plans for the slow queries
 
-To learn how to build a custom insight widget, see [Build a custom insight widget]](tutorial-build-custom-insight-sql-server.md).
+To learn how to build a custom insight widget, see [Build a custom insight widget](tutorial-build-custom-insight-sql-server.md).

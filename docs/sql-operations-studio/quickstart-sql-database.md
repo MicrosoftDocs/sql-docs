@@ -16,7 +16,7 @@ ms.workload: "Inactive"
 ---
 # Quickstart: Use [!INCLUDE[name-sos](../includes/name-sos-short.md)] to connect and query Azure SQL database
 
-This quickstart demonstrates how to use *[!INCLUDE[name-sos](../includes/name-sos-short.md)]* to connect to an Azure SQL database, and then use Transact-SQL (T-SQL)statements to create, insert, and select data.
+This quickstart demonstrates how to use *[!INCLUDE[name-sos](../includes/name-sos-short.md)]* to connect to an Azure SQL database, and then use Transact-SQL (T-SQL) statements to create, insert, and select data.
 
 ## Prerequisites
 
@@ -55,7 +55,7 @@ Use [!INCLUDE[name-sos](../includes/name-sos-short.md)] to establish a connectio
 
 3. If you get an error about the firewall, you need to create a firewall rule. To create a firewall rule, see [Firewall rules](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure).
 
-4. After successfully connecting your server will appear in the object explorer.
+4. After successfully connecting your server will appear in the *Servers* sidebar.
 
 ## Create the tutorial database
 
@@ -63,7 +63,7 @@ The *TutorialDB* database is used in several [!INCLUDE[name-sos](../includes/nam
 
 1. Right click on your Azure SQL server in the SERVERS sidebar and select **New Query.**
 
-1. Paste the following snippet into the query window.
+1. Paste the following snippet into the query editor.
 
    ```sql
    IF NOT EXISTS (
@@ -91,7 +91,7 @@ The query editor is still connected to the *master* database, but we want to cre
 
 
 
-1. Paste the following snippet into the query window.
+1. Paste the following snippet into the query editor.
 
    ```sql
    -- Create a new table called 'Customers' in schema 'dbo'
@@ -113,7 +113,7 @@ The query editor is still connected to the *master* database, but we want to cre
 
 ## Insert rows
 
-1. Paste the following snippet into the query window:
+1. Paste the following snippet into the query editor:
    ```sql
    -- Insert rows into table 'Customers'
    INSERT INTO dbo.Customers
@@ -129,7 +129,7 @@ The query editor is still connected to the *master* database, but we want to cre
 1. To execute the query, click **Run**.
 
 ## View the result
-1. Paste the following snippet into the query window.
+1. Paste the following snippet into the query editor.
 
    ```sql
    -- Select rows from table 'Customers'
@@ -140,15 +140,6 @@ The query editor is still connected to the *master* database, but we want to cre
 
    ![Select results](media/quickstart-sql-database/select-results.png)
 
-## Save result as Excel
-1. Right click on the results table and save as an Excel** file. 
-
-   ![Save as Excel](media/quickstart-sql-database/save-as-excel.png)
-
-2. Save as **Results.xls**.
-
-## View chart
-View an existing, built-in widget through the dashboard.
 
 ## Clean up resources
 
@@ -157,4 +148,4 @@ Clean up resources by deleting the resource groups you no longer need. For detai
 
 ## Next steps
 
-To create and run queries, see [Code editor tutorial](tutorial-sql-editor.md).
+Now that you've successfully connected to an Azure SQL database and ran a query, try out the [Code editor tutorial](tutorial-sql-editor.md).

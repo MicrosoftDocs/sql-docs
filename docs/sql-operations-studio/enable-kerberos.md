@@ -59,7 +59,7 @@ sudo zypper install realmd krb5-client
 - Kerberos should be installed on your macOS. If your macOS does not have Kerberos installed, you can get it from the [download page](http://web.mit.edu/macdev/KfM/Common/Documentation/download.html).
 
 
-## Configuring KDC in krb5.conf
+## Configure KDC in krb5.conf
 
 Edit the `/etc/krb5.conf` in an editor of your choice. Configure the following keys
 
@@ -81,7 +81,7 @@ Then save the krb5.conf file and exit
 > Domain must be in ALL CAPS
 
 
-## Testing the Ticket Granting Ticket retrieval
+## Test the Ticket Granting Ticket retrieval
 
 Get a Ticket Granting Ticket (TGT) from KDC.
 
@@ -105,4 +105,4 @@ krbtgt/DOMAIN.COMPANY.COM@ DOMAIN.COMPANY.COM.
 
 * Complete the connection profile, click **Connect**
 
-After succssfully connecting, your server appears in the Servers sidebar.
+After successfully connecting, your server appears in the *Servers* sidebar.

@@ -23,11 +23,6 @@ ms.workload: "Inactive"
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] ships with a Git source control manager (SCM), but you still need to [install Git (version 2.0.0 or later)](https://git-scm.com/download) before these features are available. 
 
->**Note:** The [!INCLUDE[name-sos](../includes/name-sos-short.md)] documentation assumes you are already familiar with Git. If you are new to Git, the [git-scm](https://git-scm.com/documentation) website is a good place to start with a popular online [book](https://git-scm.com/book), Getting Started [videos](https://git-scm.com/video/what-is-git), and [cheat sheets](https://services.github.com/on-demand/downloads/github-git-cheat-sheet.pdf). 
-
-![git overview](media/source-control/git-overview.png)
-
->**Tip:** [!INCLUDE[name-sos](../includes/name-sos-short.md)] works with any Git repository.  If you don't already have a private hosted Git provider, [Visual Studio Team Services](https://www.visualstudio.com/products/visual-studio-team-services-vs) is a great free option. [Sign up for VSTS](https://go.microsoft.com/fwlink/?LinkID=307137&campaign=o~msft~code~vc). **??IS THIS TRUE??**
 
 
 ## Open an existing Git repository
@@ -38,7 +33,7 @@ ms.workload: "Inactive"
 
 ## Initialize a new git repository
 
-1. Select Source Control, then select the git icon that appears.
+1. Select **Source Control**, then select the git icon.
 
    ![Source control git icon](media/source-control/source-control.png)
 

@@ -1,8 +1,8 @@
 ---
 title: "How to perform realtime scoring or native scoring in SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/16/2017"
-ms.prod: "sql-server-2016"
+ms.date: "11/09/2017"
+ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +11,7 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 author: "jeannt"
 ms.author: "jeannt"
-manager: "jhubbard"
+manager: "cgronlund"
 ms.workload: "Inactive"
 ---
 # How to perform realtime scoring or native scoring in SQL Server
@@ -25,7 +25,7 @@ Both realtime scoring and native scoring are designed to let you use a machine l
 The following options are supported for fast batch prediction:
 
 + **Native scoring**: T-SQL PREDICT function in SQL Server 2017
-+ **Realtime scoring**: Using the sp\_rxPredict stored procedure in either  SQL Server 2016 or SQL Server 2017.
++ **Realtime scoring**: Using the sp\_rxPredict stored procedure in either SQL Server 2016 or SQL Server 2017.
 
 > [!NOTE]
 > Use of the PREDICT function is recommended in SQL Server 2017.
@@ -69,13 +69,13 @@ From R code, there are two ways to save the model to a table:
 
   The `rxWriteObject()` function can retrieve R objects from an ODBC data source like SQL Server, or write objects to SQL Server. The API is modeled after a simple key-value store.
   
-  If you use this function, be sure to serialize the model using the new serialization function first. Then, set the *serialize* flag in `rxWriteObject` to FALSE, to avoid repeating the serialization step.
+  If you use this function, be sure to serialize the model using the new serialization function first. Then, set the *serialize* argument in `rxWriteObject` to FALSE, to avoid repeating the serialization step.
 
 + You can also save the model in raw format to a file and then read from the file into SQL Server. This option might be useful if you are moving or copying models between environments.
 
 ## Native scoring with PREDICT
 
-In this example, you create a model and then call the realtime prediction function from T-SQL.
+In this example, you create a model, and then call the realtime prediction function from T-SQL.
 
 ### Step 1. Prepare and save the model
 
@@ -119,7 +119,7 @@ CREATE TABLE ml_models ( model_name nvarchar(100) not null primary key
 GO
 ```
 
-The following code creates a model based on the **iris** dataset and saves it to the models table.
+The following code creates a model based on the **iris** dataset and saves it to the table named **models**.
 
 ```SQL
 DECLARE @model varbinary(max);
@@ -137,7 +137,7 @@ EXECUTE sp_execute_external_script
 ```
 
 > [!NOTE] 
-> You must use the [rxSerializeModel](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxserializemodel) function from RevoScaleR to save the model. The standard R `serialize` function cannot generate the required format.
+> You must use the [rxSerializeModel](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel) function from RevoScaleR to save the model. The standard R `serialize` function cannot generate the required format.
 
 You can run a statement such as the following to view the stored model in binary format:
 
@@ -176,7 +176,7 @@ This section describes the steps required to set up **realtime** prediction, and
 You must enable this feature for each database that you want to use for scoring. The server administrator should run the command-line utility, RegisterRExt.exe, which is included with the RevoScaleR package.
 
 > [!NOTE]
-> In order for realtime scoring to work, SQL CLR functionality needs to be enabled in the instance and the database needs to be marked trustworthy. When you run the script, these actions are performed for you. However, you should consider the additional security implications.
+> In order for realtime scoring to work, SQL CLR functionality needs to be enabled in the instance; additionally, the database needs to be marked trustworthy. When you run the script, these actions are performed for you. However, consider the additional security implications before doing this!
 
 1. Open an elevated command prompt, and navigate to the folder where RegisterRExt.exe is located. The following path can be used in a default installation:
     
@@ -202,11 +202,11 @@ You must enable this feature for each database that you want to use for scoring.
 
 > [!NOTE]
 > 
-> In SQL Server 2017, additional security measures are in place to prevent problems with CLR integration. These measures impose additional restrictions on the use of this stored procedure as well.
+> In SQL Server 2017, additional security measures are in place to prevent problems with CLR integration. These measures impose additional restrictions on the use of this stored procedure as well. 
 
 ### Step 2. Prepare and save the model
 
-The binary format required by sp\_rxPredict is the same as that for PREDICT. Therefore, in your R code, include a call to [rxSerializeModel](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxserializemodel), and be sure to specify _realtimeScoringOnly_ = TRUE, as in this example:
+The binary format required by sp\_rxPredict is the same as that for PREDICT. Therefore, in your R code, include a call to [rxSerializeModel](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel), and be sure to specify `realtimeScoringOnly = TRUE`, as in this example:
 
 ```R
 model <- rxSerializeModel(model.name, realtimeScoringOnly = TRUE)
@@ -221,7 +221,8 @@ Because the binary format is the same that is used by the PREDICT function, you 
 ```SQL
 DECLARE @irismodel varbinary(max)
 SELECT @irismodel = [native_model_object] from [ml_models]
-WHERE model_name = 'iris.dtree.model' AND model_version = 'v1''
+WHERE model_name = 'iris.dtree' 
+AND model_version = 'v1''
 
 EXEC sp_rxPredict
 @model = @irismodel,

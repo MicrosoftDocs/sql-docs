@@ -1,9 +1,7 @@
 ---
 title: "SQL Server Machine Learning Services| Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "08/20/2017"
-ms.prod: "sql-server-2016"
+ms.date: "11/09/2017"
+ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,7 +12,7 @@ ms.assetid: ba1dea65-40ea-484a-b767-53680c954934
 caps.latest.revision: 38
 author: "jeannt"
 ms.author: "jeannt"
-manager: "jhubbard"
+manager: "cgronlund"
 ms.workload: "Active"
 ---
 # SQL Server Machine Learning Services

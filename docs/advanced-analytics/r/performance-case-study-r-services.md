@@ -1,7 +1,7 @@
 ---
 title: "Performance for R Services - results and resources| Microsoft Docs"
 ms.custom: ""
-ms.date: "07/15/2017"
+ms.date: "11/09/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -13,7 +13,7 @@ ms.assetid: 0e902312-ad9c-480d-b82f-b871cd1052d9
 caps.latest.revision: 8
 author: "jeannt"
 ms.author: "jeannt"
-manager: "jhubbard"
+manager: "cgronlund"
 ms.workload: "Inactive"
 ---
 # Performance for R Services: results and resources
@@ -325,10 +325,7 @@ The configuration that had the best performance in the resume-matching study was
 
 For the resume-matching model, external script use was heavy and there were no other database engine services running. Therefore, the resources allocated to external scripts was increased to 70%, which was the best configuration for script performance.
 
-This configuration was arrived at by experimenting with different values. If you use different hardware or a different solution, the optimum configuration might be different.
-
-> [!IMPORTANT]
-> Experiment to find the best configuration for your case!
+This configuration was arrived at by experimenting with different values. If you use different hardware or a different solution, the optimum configuration might be different.Always experiment to find the best configuration for your case!
 
 In the optimized solution, 1.1 million rows of data (with 100 features) were scored in under 8.5 seconds on a 20-core computer. Optimizations significantly improved the performance in terms of scoring time.
 
@@ -337,6 +334,16 @@ The results also suggested that the **number of features** had a significant imp
 We recommend that you read this blog article and the accompanying tutorial for a detailed discussion.
 
 -   [Optimization tips and tricks for machine learning in SQL Server](https://azure.microsoft.com/blog/optimization-tips-and-tricks-on-azure-sql-server-for-machine-learning-services/)
+
+Many users have noted that there is a small pause as the R (or Python) runtime is loaded for the first time. For this reason, as described in these tests, the time for the first run is often measured but later discarded. Subsequent caching might result in notable performance differences between the first and second runs. There is also some overhead when data is moved between SQL Server and the external runtime, particularly if data is passed over the network rather than being loaded directly from SQL Server.
+
+For all these reasons, there is no single solution for mitigating this initial loading time, as the performance impact varies significantly depending on the task. For example, caching is performed for single-row scoring in batches; hence, successive scoring operations are much faster and neither the model nor the R runtime is reloaded. You can also use [native scoring](../sql-native-scoring.md) to avoid loading the R runtime entirely.
+
+For training large models, or scoring in large batches, the overhead might be minimal in comparison to the gains from avoiding data movement or from streaming and parallel processing. See these recent blogs and samples for additional performance guidance:
+
++ [Loan classification using SQL Server 2016 R Services](https://blogs.msdn.microsoft.com/microsoftrservertigerteam/2016/09/27/loan-classification-using-sql-server-2016-r-services/)
++ [Eary customer experiences with R Services](https://blogs.msdn.microsoft.com/sqlcat/2016/06/16/early-customer-experiences-with-sql-server-r-services/)
++ [Using R to detect fraud at 1 million transactions per second](http://blog.revolutionanalytics.com/2016/09/fraud-detection.html/)
 
 ## Resources
 

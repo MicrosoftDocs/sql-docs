@@ -1,8 +1,8 @@
 ---
-title: "Publish and Consume Python Code| Microsoft Docs"
+title: "Publish and consume Python code| Microsoft Docs"
 ms.custom: ""
-ms.date: "09/29/2017"
-ms.prod: "sql-server-2016"
+ms.date: "11/09/2017"
+ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +11,7 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 author: "jeannt"
 ms.author: "jeannt"
-manager: "jhubbard"
+manager: "cgronlund"
 ms.workload: "Inactive"
 ---
 
@@ -19,15 +19,15 @@ ms.workload: "Inactive"
 
 You can deploy a working Python solution to a web service by using the operationalization feature in Microsoft Machine Learning Server. This topic describes the steps to successfully publish and then run your solution.
 
-> [!IMPORTANT]
->
-> This sample was developed for the version of Python that is included with Machine Learning Server (Standalone), and uses features in Machine Learning Server version 9.1.0.
- > 
- > To see a similar example that leverages features in the latest release of Microsoft Machine Learning Server, version 9.2.0, see this article on the Machine Learning Server site: [Deploy and manage web services in Python](https://docs.microsoft.com/machine-learning-server/operationalize/python/how-to-deploy-manage-web-services).
-
 The target audience for this article is data scientists who want to learn how to publish Python code or models as web services hosted in Microsoft Machine Learning Server. The article also explains how applications can consume the the code or models. This article assumes that you are proficient in Python.
 
-**Applies to: Machine Learning Server (Standalone) in SQL Server 2017**
+> [!IMPORTANT]
+>
+> This sample was developed for the version of Python that is included with Machine Learning Server (Standalone), and uses features in Machine Learning Server version **9.1.0**.
+ > 
+ > Cick the following link to see the same sample, republished using the newer libraries in Machine Learning Server. See [Deploy and manage web services in Python](https://docs.microsoft.com/machine-learning-server/operationalize/python/how-to-deploy-manage-web-services).
+
+**Applies to: Microsoft R Server (Standalone)**
 
 ## Overview of workflow
 
@@ -52,6 +52,8 @@ After the code block, you'll find a step-by-step walkthrough with more detailed 
 
 > [!IMPORTANT]
 > This example uses the local `admin` account for authentication. However, you should substitute the credentials and [authentication method](#python-auth) configured by your administrator.
+> 
+? Also, the 
 
 ```python
 ##################################################
@@ -59,7 +61,12 @@ After the code block, you'll find a step-by-step walkthrough with more detailed 
 ##################################################
 
 # Import the generated client library. 
+
 import deployrclient
+
+# This example is intended for use with Microsoft R Server 9.0.1. 
+# If you are using a newer version of Machine Learning Server, 
+# use the mrs_server library instead.
 
 ##################################################
 ##              AUTHENTICATION                  ##
@@ -69,6 +76,7 @@ import deployrclient
 #Create client instance and point it at an R Server. 
 #In this case, R Server is local.
 client = deployrclient.DeployRClient("http://localhost:12800")
+# To use ML Server, replace with mrs_server.MRSServer()
 
 #Define the login request and provide credentials 
 #Update values with the connection parameters from your admin

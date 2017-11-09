@@ -1,7 +1,7 @@
 ---
 title: "Using R in Azure SQL Database  | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/29/2017"
+ms.date: "11/09/2017"
 ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
@@ -13,7 +13,7 @@ ms.assetid: 0a90c438-d78b-47be-ac05-479de64378b2
 caps.latest.revision: 1
 author: "jeannt"
 ms.author: "jeannt"
-manager: "jhubbard"
+manager: "cgronlund"
 ---
 # Using R in Azure SQL Database
 
@@ -46,7 +46,7 @@ The overall architecture is like that of SQL Server Machine R Services.
 
 **R packages**
 
-+ The preview release includes Microsoft R Open 3.3.3, and Microsoft R Server version 9.2. The [RevoScaleR package](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler) is preinstalled.
++ The preview release includes Microsoft R Open 3.3.3, and Microsoft R Server version 9.2. The [RevoScaleR package](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) is preinstalled.
 
 + Some R packages have been removed or modified to reduce footprint in the Azure environment. For example, **mrsdeploy** is not included in Azure SQL Database.
 
@@ -87,7 +87,7 @@ This release does not support the ability to customize the R installation, or to
 
 For example, you cannot enable R script execution only on specific databases.
 
-The DMV sys.dm_db_resource_stats, used to monitor CPU and memory usage of R scripts, is not available in the preview release.
+The DMV [sys.dm_db_resource_stats](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database), which is used to monitor CPU and memory usage of R scripts, is not available in the preview release.
 
 ### Other limitations
 
@@ -95,12 +95,7 @@ The following functionality is not supported:
 
 + The MicrosoftML package is not available.
 + Package management features such as CREATE EXTERNAL LIBRARY are not supported.
-+ You cannot use the Azure SQL database as a remote compute context when executing scripts from an R client. R scripts must be run by using the stored procedure sp_execute_external_script. Scripts called by the stored procedure cannot use other compute contexts.
-+ You cannot execute calls to rx functions that require parallel execution.
++ You cannot use the Azure SQL database as a remote compute context when executing scripts from an R client. R scripts must be run by using the stored procedure [sp_execute_external_script](../../relational-databases/stored-procedures/sp-execute-external-script-transact-sql.md). Scripts called by the stored procedure cannot use other compute contexts.
++ You cannot execute calls to RevoScaleR functions that require parallel execution.
 + Loopback connections from R script to SQL Server are not supported. In other words, you cannot make external calls from your R script to another ODBC data source.
 
-## Get started
-
-This announcement from the SQL Server development team includes short samples that you can run in your own Azure SQL databases to experiment with building R models and generating predictions.
-
-+ [Train and Score Models in Azure SQL Database](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2017/09/25/announcing-preview-of-machine-learning-services-with-r-support-in-azure-sql-database/)

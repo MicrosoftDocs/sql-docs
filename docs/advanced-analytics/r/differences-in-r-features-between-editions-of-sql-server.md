@@ -1,8 +1,8 @@
 ---
 title: "Differences in machine learning features between editions of SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/22/2017"
-ms.prod: "sql-server-2016"
+ms.date: "11/09/2017"
+ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,13 +13,18 @@ ms.assetid: 8b33a3e2-04d3-4bad-9335-9568ae09db0b
 caps.latest.revision: 12
 author: "jeannt"
 ms.author: "jeannt"
-manager: "jhubbard"
+manager: "cgronlund"
 ms.workload: "Inactive"
 ---
 
 # Differences in machine learning features between editions of SQL Server
  
- Support for machine learning is available in the following editions of SQL Server 2016 and SQL Server 2017:
+ Support for machine learning is available in SQL Server 2016 and SQL Server 2017. This article lists the editions that support the feature, describes additional limitations that apply in specific editions, and lists capabilities available only in certain editions.
+
+ > [!NOTE]
+ > In general, SQL Server Machine Learning does not include the [operationalization](https://docs.microsoft.com/machine-learning-server/what-is-operationalization) features that are included in Microsoft R Server or Machine Learning Server.
+ > 
+ > If you need these features, you can install Microsoft R Server or Machine Learning Server separately, to support deployment of predictive models as a web service. 
 
 ## Summary of differences
 
@@ -29,11 +34,11 @@ ms.workload: "Inactive"
      
      SQL Server 2017 includes Microsoft Machine Learning Server (Standalone). SQL Server 2016 includes Microsoft R Server (Standalone). This feature supports operationalization of machine learning that does not require the use of SQL Server as a compute context.
 
-     There are no restrictions on these features in Enterprise Edition, which provides optimized performance and scalability through parallelization and streaming. This edition also maximizes the use of platform support for streaming and parallel execution.
+     There are no restrictions on these features in Enterprise Edition, which provides optimized performance and scalability through parallelization and streaming. This edition also maximizes the use of platform support for streaming and parallel execution. This means that, unlike Standard Edition, input data does not need to fit in memory, but can be streamed.
      
      In-database analytics using SQL Server supports resource governance of external scripts to customize server resource usage.
      
-     Newer editions of Microsoft R Server include an improved version of the operationalization engine that supports rapid, secure deployment and sharing of R solutions. For more information, see [mrsdeploy](https://docs.microsoft.com/r-server/r-reference/mrsdeploy/mrsdeploy-package).
+     Newer editions of Microsoft R Server and Machine Learning Server include an improved version of the operationalization engine that supports rapid, secure deployment and sharing of R solutions. For more information, see [Operationalize analytics with Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-operationalization).
 
 -   **Developer Edition**
 
@@ -45,14 +50,13 @@ ms.workload: "Inactive"
   
 -   **Express And Web Editions**
   
-     Only Express Edition with Advanced Services includes the machine learning features. The performance limitations are similar to Standard Edition. Web edition is not intended for tasks such as creating machine learning models; however, you can use the PREDICT function to perform scoring using models trained elsewhere.
+     Only Express Edition with Advanced Services includes the machine learning features. The performance limitations are similar to Standard Edition. 
+     
+     Web edition is not intended for tasks such as creating machine learning models; however, you can use the PREDICT function to perform scoring using models trained elsewhere.
 
 -   **Azure SQL Database**
   
-     Machine learning features such as R and Python scripting are currently not supported in Azure SQL Database.
-     
-     For more information, and announcements about when this feature will be available, see the SQL Server blog: [Python in SQL Server 2017: enhanced in-database machine learning](https://blogs.technet.microsoft.com/dataplatforminsider/2017/04/19/python-in-sql-server-2017-enhanced-in-database-machine-learning/)
-
+     R Services is available in Azure SQL Database as a preview feature, beginning fall 2017. See this article for details about current restrictions: [Using R in Azure SQl Database](using-r-in-azure-sql-database.md).
 
 ### Languages supported in all editions
 
@@ -87,7 +91,9 @@ Even Standard Edition should offer some performance benefit, in comparison to st
 
 Standard Edition does not support Resource Governor. Using resource governance is the best way to customize server resources to support varied workloads such as model training and scoring.
 
-Standard Edition also provides limited performance and scalability in comparison to Enterprise and Developer Editions. All the **RevoScaleR** functions and packages are included with Standard Edition, but the service that launches and manages R scripts is limited in the number of processes it can use. Moreover, data processed by the script must fit in memory.  The same restrictions apply to solutions that use **revoscalepy**.
+Standard Edition also provides limited performance and scalability in comparison to Enterprise and Developer Editions. All the **RevoScaleR** functions and packages are included with Standard Edition, but the service that launches and manages R scripts is limited in the number of processes it can use. Moreover, data processed by the script must fit in memory.  
+
+The same restrictions apply to solutions that use **revoscalepy**.
 
 ## Machine learning in Express Edition with Advanced Services
 
@@ -95,7 +101,7 @@ Express Edition is subject to the same limitations as Standard Edition.
 
 ## Machine learning in Web Edition
 
-Web edition does not support execution of R or Python scripts. However, you can use the PREDICT function to perform [native scoring](../sql-native-scoring.md) on a model that has been trained on a different SQL Server or R Server instance and then saved in the required binary format.
+Web edition does not support execution of R or Python scripts. However, you can use the [PREDICT](../../t-sql/queries/predit-transat-sql.md) function to perform [native scoring](../sql-native-scoring.md) on a model that has been trained on a different SQL Server or R Server instance and then saved in the required binary format.
 
 ## Next steps
 
@@ -106,6 +112,6 @@ For more information, see:
 
 For more information about other features in SQL Server, see:
 
-+ [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md) 
++ [Editions and supported features of SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md) 
 
-For more information about Microsoft R features and how you can optimize your solution for large data sets, see the [Microsoft R Server](https://docs.microsoft.com/r-server/r/tutorial-large-data-tips) documentation.
+For more information about how you can optimize your solution for large data sets, see [tips on computing with big data in R](https://docs.microsoft.com/machine-learning-server/r/tutorial-large-data-tips) documentation.

@@ -43,13 +43,13 @@ Insight widgets are composed of one or two SQL queries:
 
 An insight widget query defines a dataset that renders a count, chart, or graph. Insight details query is used to list relevant insight detail information in a tabular format in the insight details panel. 
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] executes insight widget queries and maps the query resultset to a chart's dataset then renders it. When users open up an insight's details,  executes the insight details query and prints out the result in a grid view within the dialog.
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] executes insight widget queries and maps the query result set to a chart's dataset then renders it. When users open up an insight's details, it executes the insight details query and prints out the result in a grid view within the dialog.
 
 The basic idea is to write a SQL query in a way so it can be used as a dataset of a count, chart, and graph widget. 
 
 ## Summary
 
-T-SQL query and its result set itself determines the insight widget behavior. Writing a query for a chart type or mapping a right chart type for existing query is the key consideration to build an effective insight widget.
+The T-SQL query and its result set determine the insight widget behavior. Writing a query for a chart type or mapping a right chart type for existing query is the key consideration to build an effective insight widget.
 
 
 

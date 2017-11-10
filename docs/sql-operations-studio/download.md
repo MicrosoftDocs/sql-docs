@@ -24,7 +24,7 @@ ms.workload: "Inactive"
 
 ## Get SQL Operations Studio (preview) for Windows
 
-1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] for Windows](https://go.microsoft.com/fwlink/?linkid=XXXXX) to your local computer.
+1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] for Windows](https://go.microsoft.com/fwlink/?linkid=862648) to your local computer.
 1. Right-click the **.zip** file, and select **Properties**.
 1. On the **General** tab, select **Unblock**, and click **Apply**.
 1. Browse to the downloaded file and extract it.
@@ -33,29 +33,22 @@ ms.workload: "Inactive"
 
 ## Get SQL Operations Studio (preview) for macOS
 
-1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] for macOS](https://go.microsoft.com/fwlink/?linkid=XXXXX) to your local computer.
+1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] for macOS](https://go.microsoft.com/fwlink/?linkid=862647) to your local computer.
 2. To expand the contents of the zip, double-click it.
 3. Drag *sqlops.app* to the *Applications* folder, making it available in the *Launchpad*.
 
-### Start [!INCLUDE[name-sos](../includes/name-sos-short.md)] from the terminal:
-1. Add [!INCLUDE[name-sos](../includes/name-sos-short.md)] to the PATH by running the command:  
-      ```ln -s /user/local/bin/sqlops/Applications/sqlops.app/Contents/Resources/app/bin/sqlops```
-1. Start [!INCLUDE[name-sos](../includes/name-sos-short.md)] by running the following command:  
-      ```sqlops```
-
-
 ## Get SQL Operations Studio (preview) for Linux
 
-1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] for Linux](https://go.microsoft.com/fwlink/?linkid=XXXXX)
-2. Open a new Terminal window.
-3. Type the following commands to extract the file and launch [!INCLUDE[name-sos](../includes/name-sos-short.md)]:
+1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] for Linux](https://go.microsoft.com/fwlink/?linkid=862646)
+1. Open a new Terminal window.
+1. Type the following commands to extract the file and launch [!INCLUDE[name-sos](../includes/name-sos-short.md)]:
 
    ```bash
    cd ~
-   cp ~/Downloads/pgi3-sqlops-linux-x64.tar.gz ~
-   tar -xvf ~/pgi3-sqlops-linux-x64.tar.gz
-   echo 'export PATH="$PATH:~/sqlops-linux-x64"' >> ~/.bashrc
-   source .bashrc
+   cp ~/Downloads/sqlops-linux-<version string>-x64.tar.gz ~
+   tar -xvf ~/pgi3-sqlops-linux-<version string>-x64.tar.gz
+   echo 'export PATH="$PATH:~/Downloads/sqlops-linux-x64"' >> ~/.bashrc
+   source ~/.bashrc
    sqlops .
    ```
 

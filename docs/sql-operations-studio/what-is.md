@@ -17,11 +17,11 @@ ms.workload: "Inactive"
 
 # What is [!INCLUDE[name-sos](../includes/name-sos.md)]?
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] is a lightweight, open source, multi-OS and multi-database tool, designed from the ground-up for DBAs and developers. [!INCLUDE[name-sos](../includes/name-sos-short.md)] simplifies configuration, management, monitoring, and troubleshooting of databases. 
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] is a lightweight, free, multi-OS tool designed for DBAs and developers. [!INCLUDE[name-sos](../includes/name-sos-short.md)] simplifies configuration, management, monitoring, and troubleshooting of databases. 
 
 With the ability to run on the platform of your choice (Linux, macOS, or Windows), [!INCLUDE[name-sos](../includes/name-sos-short.md)] enables a modern database management experience, for the databases you work with, wherever they're running; Linux, Windows, Azure, containers, VMs, AWS, Google cloud, etc. 
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] brings your databases into the devops lifecycle/pipeline.
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] brings your databases into the DevOps lifecycle/pipeline.
 
 ***[Download & Install [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)***
 

@@ -1,7 +1,7 @@
 ---
 title: "Prepare the data using PowerShell (walkthrough) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/26/2017"
+ms.date: "11/10/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -17,7 +17,7 @@ ms.assetid: 65fd41d4-c94e-4929-a24a-20e792a86579
 caps.latest.revision: 30
 author: "jeannt"
 ms.author: "jeannt"
-manager: "jhubbard"
+manager: "cgronlund"
 ms.workload: "On Demand"
 ---
 # Prepare the data using PowerShell (walkthrough)
@@ -150,7 +150,7 @@ You should run this script on the computer where you build the solution: for exa
       > [!WARNING]
       > When you use the prompt in the PowerShell script to provide your credentials, the password is written to the updated script file in plain text. Edit the file to remove the credentials immediately after you have created the necessary R objects.
       
-    **Path to the csv file**: Provide the full path to the data file. The default path and filename is `C:\tempR\nyctaxi1pct.csv1`.
+    **Path to the csv file**: Provide the full path to the data file. The default path and filename is `C:\tempR\nyctaxi1pct.csv`.
   
 4.  Press ENTER to run the script.
 

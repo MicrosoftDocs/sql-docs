@@ -1,8 +1,6 @@
 ---
 title: "Create graphs and plots using SQL and R (walkthrough) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "07/03/2017"
+ms.date: "11/10/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -18,7 +16,7 @@ ms.assetid: 5f70f0a6-fd4a-410f-9f44-1605503f77ec
 caps.latest.revision: 16
 author: "jeannt"
 ms.author: "jeannt"
-manager: "jhubbard"
+manager: "cgronlund"
 ms.workload: "On Demand"
 ---
 # Create graphs and plots using SQL and R (walkthrough)

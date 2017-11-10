@@ -1,7 +1,7 @@
 ---
 title: "Installing machine learning components without internet access | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/31/2017"
+ms.date: "11/30/2017"
 ms.prod: 
   - "sql-server-2016"
   - "sql-server-2017"
@@ -126,6 +126,11 @@ Microsoft R Open     |use previous|
 Microsoft R Server      |[SRS_9.2.0.100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851501)|
 Microsoft Python Open     |use previous |
 Microsoft Python Server    |[SPS_9.2.0.100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851500) |
+**SQL Server 2017 CU2** |
+Microsoft R Open     |use previous|
+Microsoft R Server      |use previous|
+Microsoft Python Open     |use previous |
+Microsoft Python Server    |use previous|
 
 ### <a name="bkmk_2016Installers"></a>Downloads for SQL Server 2016
 

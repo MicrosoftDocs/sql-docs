@@ -39,7 +39,7 @@ This tutorial requires the SQL Server or Azure SQL Database *TutorialDB*. To cre
 
 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] provides a search widget to quickly find database objects. The results list provides a context menu for common tasks relevant to the selected object, such as *Edit Data* for a table.
 
-1. Open the SERVERS sidebar (**CTRL+G**), expand **Databases**, and select **TutorialDB**. 
+1. Open the SERVERS sidebar (**Ctrl+G**), expand **Databases**, and select **TutorialDB**. 
 
 1. Open the *TutorialDB Dashboard* by selecting **Manage** from the context menu.
 
@@ -58,7 +58,7 @@ This tutorial requires the SQL Server or Azure SQL Database *TutorialDB*. To cre
 
 ### Use snippets in [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]
 
-1. Open a new query editor by pressing **CTRL + N**.
+1. Open a new query editor by pressing **Ctrl+N**.
 
 2. Type **sql** in the editor, arrow down to **sqlCreateStoredProcedure**, and press the *Tab* key to load the new stored procedure snippet.
 
@@ -105,7 +105,7 @@ This tutorial requires the SQL Server or Azure SQL Database *TutorialDB*. To cre
 
 ## Use Peek Definition and Go to Definition 
 
-1. Open a new editor by pressing **CTRL + N**. 
+1. Open a new editor by pressing **Ctrl+N**. 
 
 2. Type and select **sqlCreateStoredProcedure** from the snippet suggestion list. Type in **setCustomer** for **StoredProcedureName** and **dbo** for **SchemaName**
 

@@ -33,10 +33,6 @@ ms.workload: "Inactive"
 
   Returns the start_lsn column value for the specified capture instance from the [cdc.change_tables](../../relational-databases/system-tables/cdc-change-tables-transact-sql.md) system table. This value represents the low endpoint of the validity interval for the capture instance.  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
-  
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  

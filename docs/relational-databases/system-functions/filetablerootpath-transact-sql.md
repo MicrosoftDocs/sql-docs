@@ -28,10 +28,6 @@ ms.workload: "Inactive"
 
   Returns the root-level UNC path for a specific FileTable or for the current database.  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
-  
 ## Syntax  
   
 ```  

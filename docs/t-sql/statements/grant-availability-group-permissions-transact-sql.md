@@ -18,9 +18,10 @@ helpviewer_keywords:
   - "permissions [SQL Server], availability group"
 ms.assetid: 060eb839-666a-4046-9e1d-5edc9ea75a11
 caps.latest.revision: 9
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Inactive"
 ---
 # GRANT Availability Group Permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

@@ -25,7 +25,8 @@ ms.assetid: d8144b85-c836-4dcf-96b4-36b9dfd4211d
 caps.latest.revision: 33
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # MiningStructures Element (ASSL)
   Contains the collection of [MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md) elements in a [Database](../../../analysis-services/scripting/objects/database-element-assl.md) element.  

@@ -18,6 +18,7 @@ caps.latest.revision: 22
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Updategram Security Considerations (SQLXML 4.0)
   The following are security guidelines for using updategrams:  

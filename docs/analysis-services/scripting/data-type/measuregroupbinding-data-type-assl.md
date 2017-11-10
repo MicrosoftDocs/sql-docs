@@ -25,7 +25,8 @@ ms.assetid: 47e83eec-e0bc-4118-9a0f-5bfdd6218297
 caps.latest.revision: 38
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # MeasureGroupBinding Data Type (ASSL)
   Defines a derived data type that represents a binding to a [MeasureGroup](../../../analysis-services/scripting/objects/measuregroup-element-assl.md) element.  

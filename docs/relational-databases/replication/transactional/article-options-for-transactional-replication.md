@@ -17,6 +17,7 @@ caps.latest.revision: 30
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Article Options for Transactional Replication
   There are a number of options for articles in transactional publications. With transactional replication, you can do the following:  

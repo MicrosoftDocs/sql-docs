@@ -16,7 +16,8 @@ ms.assetid: 80027288-c203-4667-a3e1-40fa572b4975
 caps.latest.revision: 17
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Active"
 ---
 # Tabular Modeling (SSAS)
   Tabular models are Analysis Services databases that run in-memory or in DirectQuery mode, accessing data directly from backend relational data sources.  

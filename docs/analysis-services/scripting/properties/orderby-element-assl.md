@@ -25,7 +25,8 @@ ms.assetid: d7a0564b-430e-44eb-913a-fe1f98917d0f
 caps.latest.revision: 31
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # OrderBy Element (ASSL)
   Describes how to order the members contained in the attribute.  

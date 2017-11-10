@@ -21,6 +21,7 @@ caps.latest.revision: 10
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Properties Collection (ADO)
 Contains all the [Property](../../../ado/reference/ado-api/property-object-ado.md) objects for a specific instance of an object.  

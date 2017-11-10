@@ -25,7 +25,8 @@ ms.assetid: e41c97ca-da44-48e9-a454-d25ee74209fd
 caps.latest.revision: 33
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Partitions Element (ASSL)
   Contains the collection of [Partition](../../../analysis-services/scripting/objects/partition-element-assl.md) elements used by a [MeasureGroup](../../../analysis-services/scripting/objects/measuregroup-element-assl.md) element, or the collection of partition bindings that make up an out-of-line [MeasureGroupBinding](../../../analysis-services/scripting/data-type/measuregroupbinding-data-type-out-of-line-assl.md) element.  

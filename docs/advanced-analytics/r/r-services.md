@@ -2,7 +2,7 @@
 title: "Microsoft Machine Learning Services | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "07/31/2017"
+ms.date: "10/12/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -15,6 +15,7 @@ caps.latest.revision: 23
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Microsoft Machine Learning Services
 
@@ -69,7 +70,7 @@ This standalone server system supports distributed, scalable R solutions on mult
 
 If you install Microsoft Machine Learning Server using SQL Server 2017 setup, you can also deploy and consume Python applications.
 
-For more information, see [Microsoft R Server](https://docs.microsoft.com/r-server/index).
+For more information, see [Microsoft Machine Learning Server](https://docs.microsoft.com/r-server/index).
 
 ## Related technologies
 

@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # PersistFormatEnum
 Specifies the format in which to save a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  

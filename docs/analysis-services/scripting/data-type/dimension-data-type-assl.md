@@ -23,7 +23,8 @@ ms.assetid: 3fe6adc2-5206-44c3-a689-a731705f43ca
 caps.latest.revision: 17
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Dimension Data Type (ASSL)
   Defines a primitive data type that represents a database dimension.  

@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # LocalDBStopTracing Function
   Disables tracing of API calls for all the SQL Server Express LocalDB instances owned by the current Windows user.  

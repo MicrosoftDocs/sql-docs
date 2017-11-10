@@ -34,6 +34,7 @@ caps.latest.revision: 44
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Using XML Data Types
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]

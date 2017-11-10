@@ -23,6 +23,7 @@ caps.latest.revision: 4
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # sys.dm_db_log_space_usage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -53,7 +54,7 @@ The following query returns the total free log space in megabytes (MB) available
 USE tempdb;  
 GO  
 
-SELECT (total_log_size_in_bytes - used_log_space_in_bytes*1.0/1024/1024) AS [free log space in MB]  
+SELECT (total_log_size_in_bytes - used_log_space_in_bytes)*1.0/1024/1024 AS [free log space in MB]  
 FROM sys.dm_db_log_space_usage;  
 ```
   

@@ -23,6 +23,7 @@ caps.latest.revision: 6
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Stream Property
 Gets or sets an OLE DB **Stream** object from/on an **ADOStreamConstruction** object.  

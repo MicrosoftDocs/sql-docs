@@ -13,6 +13,7 @@ caps.latest.revision: 1
 author: "haoqian"
 ms.author: "haoqian"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Troubleshooting Scale Out
 
@@ -125,6 +126,15 @@ If the binding is not correct, reset it with following commands and restart Scal
 netsh http delete sslcert ipport=0.0.0.0:{Master port}
 netsh http add sslcert ipport=0.0.0.0:{Master port} certhash={Master certificate thumbprint} certstorename=Root appid={random guid}
 ```
+
+### **Symptoms**
+Validation failed when connecting Scale Out Worker to Scale Out Master in Scale Out Manager with error message "Cannot open certificate store on the machine".
+
+### **Solution**
+
+Step 1: Run Scale Out Manager as administrator. If you open it with SSMS, you need to run SSMS as administrator.
+
+Step 2: Start Remote Registry service on the machine if it is not running.
 
 ### **Symptoms**
 Execution in Scale Out does not start.

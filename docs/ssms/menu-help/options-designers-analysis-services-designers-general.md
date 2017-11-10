@@ -16,6 +16,7 @@ caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Options (Designers - Analysis Services Designers - General)
 Use the **Designers**, **Maintenance Plans**, **Analysis Services**, **General** page to determine the default behavior of the Analysis Services Designers.  

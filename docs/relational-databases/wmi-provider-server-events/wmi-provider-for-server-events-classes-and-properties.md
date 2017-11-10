@@ -18,6 +18,7 @@ caps.latest.revision: 33
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # WMI Provider for Server Events Classes and Properties
   The following server events make up the programming model for the WMI Provider for Server Events. There are two main categories of events that can be queried by issuing WQL queries against the provider. These are data definition language (DDL) events and trace events. The QUEUE_ACTIVATION and BROKER_QUEUE_DISABLED service broker events can also be queried. Note the inclusive nature of the following tree diagrams. The DDL_ASSEMBLY_EVENTS event, for example, includes any ALTER_ASSEMBLY, CREATE_ASSEMBLY, and DROP_ASSEMBLY event. Similarly, the TRC_FULL_TEXT event includes any FT_CRAWL_ABORTED, FT_CRAWL_STARTED, and FT_CRAWL_STOPPED event. ALL_EVENTS covers all DDL events, trace events, QUEUE_ACTIVATION, and BROKER_QUEUE_DISABLED.  

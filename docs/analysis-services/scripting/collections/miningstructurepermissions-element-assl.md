@@ -25,7 +25,8 @@ ms.assetid: 4db9a9b2-8525-441f-a202-fd253282f540
 caps.latest.revision: 32
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # MiningStructurePermissions Element (ASSL)
   Contains the collection of permissions on a [MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md) element.  

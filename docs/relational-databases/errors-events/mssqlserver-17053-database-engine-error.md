@@ -13,9 +13,10 @@ helpviewer_keywords:
   - "17053 (Database Engine error)"
 ms.assetid: e0a01f3d-d0aa-4c38-8bcc-82e59de50512
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Inactive"
 ---
 # MSSQLSERVER_17053
   

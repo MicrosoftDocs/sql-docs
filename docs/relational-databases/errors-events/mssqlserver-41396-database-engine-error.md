@@ -13,9 +13,10 @@ helpviewer_keywords:
   - "41396 (Database Engine error)"
 ms.assetid: 4ff04042-8367-46f3-8a16-c94682d6eedb
 caps.latest.revision: 8
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Inactive"
 ---
 # MSSQLSERVER_41396
   

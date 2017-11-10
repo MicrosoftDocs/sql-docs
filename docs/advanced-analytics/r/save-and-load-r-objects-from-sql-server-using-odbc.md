@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Save and load R objects from SQL Server using ODBC
 

@@ -25,7 +25,8 @@ ms.assetid: 7448fd80-3072-4d85-b3a0-6606d1d20885
 caps.latest.revision: 35
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # TrendGraphic Element (ASSL)
   Contains the recommended graphical representation of the trend of the [Kpi](../../../analysis-services/scripting/objects/kpi-element-assl.md) element.  

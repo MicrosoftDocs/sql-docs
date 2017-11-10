@@ -16,7 +16,8 @@ ms.assetid: 3a974dd4-e1d6-45b2-b8c8-1a914bc13a02
 caps.latest.revision: 7
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # RelationshipEnd Data Type (ASSL)
   Defines a primitive data type that represents a relationship end in a relationship.  

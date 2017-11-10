@@ -25,7 +25,8 @@ ms.assetid: b2236075-6a48-470d-8182-b0de112e258a
 caps.latest.revision: 38
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Annotations Element (ASSL)
   Contains the collection of [Annotation](../../../analysis-services/scripting/objects/annotation-element-assl.md) elements associated with the parent element.  

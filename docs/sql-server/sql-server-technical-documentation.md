@@ -1,6 +1,6 @@
 ---
-title: "SQL Server Technical Documentation | Microsoft Docs"
-ms.date: "10/02/2017"
+title: "SQL Server Documentation | Microsoft Docs"
+ms.date: "10/30/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -22,30 +22,27 @@ caps.latest.revision: 106
 author: "craigg-msft"
 ms.author: "craigg"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
-# SQL Server Technical Documentation
+# SQL Server Documentation
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
- > For content related to previous versions of SQL Server, see [Installation for SQL Server 2014](https://msdn.microsoft.com/en-US/library/bb500469(SQL.120).aspx).
+SQL Server is a central part of the Microsoft data platform. SQL Server is an industry leader in operational database management systems (ODBMS). This documentation helps you install, configure, and use SQL Server. The content includes end-to-end examples, code samples, and videos. For SQL Server language topics, see [Language Reference](../t-sql/language-reference.md).
 
-Documentation to help you install, configure, and use SQL Server. The content includes end-to-end examples, code samples, and videos. For SQL Server language topics, see [Language Reference](../t-sql/language-reference.md).
+|What's new  | Release notes  |
+|---------|---------|
+|[What's New in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)     | [SQL Server 2017 Release Notes](../sql-server/sql-server-2017-release-notes.md)        |
+|[What's New in SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)     | [SQL Server 2016 Release Notes](../sql-server/sql-server-2016-release-notes.md)        |
+|[What's New in SQL Server 2014](https://msdn.microsoft.com/library/bb500435(v=sql.120).aspx)     | [SQL Server 2014 Release Notes](../sql-server/sql-server-2014-release-notes.md)        |
+   
+**Try SQL Server!**
 
-**SQL Server 2017**
+|||
+|-|-|
+|[![Download from Evaluation Center](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [Download SQL Server 2017](http://go.microsoft.com/fwlink/?LinkID=829477) | [![Download from Evaluation Center](../includes/media/download2.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) [Download SQL Server 2016](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) |
+|[![Create Virtual Machine](../includes/media/azure-vm.png)](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [Get a Virtual Machine with SQL Server](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) | [![Download from Evaluation Center](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) [Download SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) |
+| [![Download from Evaluation Center](../includes/media/download2.png)](../ssdt/download-sql-server-data-tools-ssdt.md) [Download SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md) | |
 
-- [SQL Server 2017 Release Notes](../sql-server/sql-server-2017-release-notes.md)
-- [What's New in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)
-
-**SQL Server 2016**
-
-- [SQL Server 2016 Release Notes](../sql-server/sql-server-2016-release-notes.md)
-- [What's New in SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)
-    
-**Try SQL Server!**    
-- [![Download from Evaluation Center](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [Download SQL Server 2017](http://go.microsoft.com/fwlink/?LinkID=829477)
-- [![Download from Evaluation Center](../includes/media/download2.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) [Download SQL Server 2016](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) 
-- [![Create Virtual Machine](../includes/media/azure-vm.png)](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [Spin up a Virtual Machine with SQL Server 2016 SP1 or SQL Server 2017](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
-- [![Download from Evaluation Center](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) [Download SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
-- [![Download from Evaluation Center](../includes/media/download2.png)](../ssdt/download-sql-server-data-tools-ssdt.md) [Download SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
     
 ## SQL Server Technologies    
     
@@ -62,25 +59,20 @@ Documentation to help you install, configure, and use SQL Server. The content in
 
 ## Migrate and move data
 - [Import and Export Data with the SQL Server Import and Export Wizard](../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)
-- [Microsoft Data Migration Assistant](https://www.microsoft.com/en-us/download/details.aspx?id=53595)
-- [Migrate your SQL Server database to Azure SQL Database](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-migrate-your-sql-server-database)
+- [Microsoft Data Migration Assistant](https://www.microsoft.com/download/details.aspx?id=53595)
+- [Migrate your SQL Server database to Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-migrate-your-sql-server-database)
 
 ## Earlier SQL Server versions
-- [Books Online for SQL Server 2014 Books Online](https://msdn.microsoft.com/library/ms130214(v=sql.120).aspx)
-- [Install SQL Server 2014 Express and other older SQL Server versions](http://www.hanselman.com/blog/DownloadSQLServerExpress.aspx). (**Thank you to [Scott Hanselman](http://www.hanselman.com/) for collecting all of the installer package links in one place!**)  
-- [SQL Server 2012 technical documentation](https://technet.microsoft.com/library/bb418433(v=sql.10).aspx)  
-- [SQL Server 2008 R2 Product Documentation](https://msdn.microsoft.com/library/hh278298(v=sql.10).aspx)  
-- [SQL Server 2008 technical documentation](https://msdn.microsoft.com/library/hh994727(v=sql.10).aspx) 
+- [SQL Server Update Center - links and information for all supported versions](https://msdn.microsoft.com/library/ff803383.aspx)
+- [SQL Server 2014 documentation](https://msdn.microsoft.com/library/ms130214(v=sql.120).aspx)
+- [SQL Server 2012 documentation](https://technet.microsoft.com/library/bb418433(v=sql.10).aspx)  
+- [SQL Server 2008 R2 documentation](https://msdn.microsoft.com/library/hh278298(v=sql.10).aspx)  
+- [SQL Server 2008 documentation](https://msdn.microsoft.com/library/hh994727(v=sql.10).aspx) 
 - [SQL Server 2005 archived documentation](https://msdn.microsoft.com/library/hh278313(v=sql.10).aspx)    
 
 ## Samples  
 - [Wide World Importers sample database](https://msdn.microsoft.com/library/mt734199(v=sql.1).aspx)  
-- [AdventureWorks sample databases and scripts for SQL Server 2016](https://www.microsoft.com/en-us/download/details.aspx?id=49502) 
+- [AdventureWorks sample databases and scripts for SQL Server 2016](https://www.microsoft.com/download/details.aspx?id=49502) 
 - [SQL Server samples on GitHub](https://github.com/Microsoft/sql-server-samples) 
    
- ## More information   
-+ To view SQL Server documentation offline, see [Help Viewer and Offline Content for SQL Server](sql-server-help-installation.md).
-+ [SQL Server Configuration Manager](../relational-databases/sql-server-configuration-manager.md)
-+ [SQL Server Update Center - links and information for all supported versions](https://msdn.microsoft.com/library/ff803383.aspx)
-
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

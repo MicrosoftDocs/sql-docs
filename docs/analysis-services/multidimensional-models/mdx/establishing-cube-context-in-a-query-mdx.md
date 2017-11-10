@@ -21,7 +21,8 @@ ms.assetid: 79d6a1e8-2825-4eb9-97df-5071aecae8f0
 caps.latest.revision: 29
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Establishing Cube Context in a Query (MDX)
   Every MDX query runs within a specified cube context. This context defines the members that are evaluated by the expressions within the query.  

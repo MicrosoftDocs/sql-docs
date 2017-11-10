@@ -14,6 +14,7 @@ caps.latest.revision: 8
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Performance for R Services: results and resources
 

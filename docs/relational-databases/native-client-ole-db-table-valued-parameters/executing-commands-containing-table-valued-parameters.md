@@ -16,6 +16,7 @@ caps.latest.revision: 26
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Executing Commands Containing Table-Valued Parameters
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]

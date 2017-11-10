@@ -20,9 +20,10 @@ helpviewer_keywords:
   - "character strings [SQL Server], RIGHT"
 ms.assetid: 43f1fe1f-aa18-47e3-ba20-e03e32254a6d
 caps.latest.revision: 37
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Active"
 ---
 # RIGHT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]

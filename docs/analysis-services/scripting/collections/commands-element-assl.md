@@ -25,7 +25,8 @@ ms.assetid: c9f69fe8-2221-469b-b5b0-08563aaa01dc
 caps.latest.revision: 37
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Commands Element (ASSL)
   Contains the collection of [Command](../../../analysis-services/scripting/objects/command-element-assl.md) elements associated with an [MdxScript](../../../analysis-services/scripting/objects/mdxscript-element-assl.md) element.  

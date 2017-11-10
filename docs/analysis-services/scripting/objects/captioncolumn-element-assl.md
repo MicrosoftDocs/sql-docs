@@ -25,7 +25,8 @@ ms.assetid: bdb1b9b8-b5d5-4d91-81c7-8de8635bbb83
 caps.latest.revision: 39
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # CaptionColumn Element (ASSL)
   Defines the column that provides the caption for the attribute.  

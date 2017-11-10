@@ -21,6 +21,7 @@ caps.latest.revision: 38
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Data Sources and Connection Methods
   You can use these methods to set and manage data source connections and credentials.  

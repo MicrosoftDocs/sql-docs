@@ -16,6 +16,7 @@ caps.latest.revision: 32
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # RPC:Starting Event Class
   The RPC:Starting event class indicates that a remote procedure call has started.  

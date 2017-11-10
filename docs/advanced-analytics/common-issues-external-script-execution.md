@@ -14,6 +14,7 @@ caps.latest.revision: 1
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Common issues with external script execution in SQL Server
 

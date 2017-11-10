@@ -1,7 +1,7 @@
 ---
 title: "Changelog for SQL Server Data Tools (SSDT) | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/09/2017"
+ms.date: "10/19/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -14,11 +14,44 @@ caps.latest.revision: 31
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
+ms.workload: "Active"
 ---
 # Changelog for SQL Server Data Tools (SSDT)
 This change log is for [SQL Server Data Tools (SSDT)](download-sql-server-data-tools-ssdt.md).  
   
 For detailed posts about what's new and changed, see [the SSDT Team blog](https://blogs.msdn.microsoft.com/ssdt/)
+
+
+## SSDT for Visual Studio 2017 (15.4.0 preview)
+Build number: 14.0.16134.0
+  
+### What's New?
+
+This release provides a standalone web installer for SQL Server Database, Analysis Services, Reporting Services, and Integration Services projects in Visual Studio 2017 15.4 or later.
+
+### Installer
+
+- Allow user to set nickname when installing a new SSDT for VS2017 instance.
+- Hide feature selection checkboxes of installer if no VS instance is selected.
+- Refine some messages of installer based on customer feedback.
+- Fix an issue that installer doesn’t support upgrade.
+
+
+### SSIS
+
+- Fix an issue that Import/Export Wizard cannot list data source when Azure feature pack is installed.
+- Fix an issue that editing an SSIS Analysis Services Process Task throws an exception while switching connection.
+- Fix an issue that CDC components breaks after applying SQL fix that adds __$command_id column.
+- Fix an issue that 3rd party package can’t be edited and executed when targeting old SQL Server.
+- Fix an issue that Flat File Source configure dialog doesn’t show correctly when double click DTSWizard.exe and select Flat File Source.
+- Fix an issue that a package containing Azure Feature Pack task/component can’t execute when targeting SQL Server 2017.
+
+
+**Known Issues**
+
+- The installer is not localized.
+- SSIS Execute Package Task doesn't support debugging when *ExecuteOutOfProcess* is set to True. This issue only applies to debugging. Save, deploy, and execution via DTExec.exe or SSIS catalog is not impacted.
+
 
 ## SSDT 17.3 for Visual Studio 2015
 Build number: 14.0.61709.290

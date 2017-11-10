@@ -13,9 +13,10 @@ helpviewer_keywords:
   - "8645 (Database Engine error)"
 ms.assetid: 63d6d6d7-3850-4061-8e96-b1fa665e3180
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Inactive"
 ---
 # MSSQLSERVER_8645
   

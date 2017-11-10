@@ -15,6 +15,7 @@ caps.latest.revision: 38
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # SQL Server Machine Learning Services
 

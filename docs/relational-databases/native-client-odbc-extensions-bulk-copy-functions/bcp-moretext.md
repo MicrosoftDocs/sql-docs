@@ -21,6 +21,7 @@ caps.latest.revision: 39
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # bcp_moretext
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]

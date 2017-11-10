@@ -24,6 +24,7 @@ caps.latest.revision: 76
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # DECLARE @local_variable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -39,13 +40,13 @@ manager: "jhubbard"
   
 DECLARE   
 {   
-    { @local_variable [AS] data_type  | [ = value ] }  
+    { @local_variable [AS] data_type  [ = value ] }  
   | { @cursor_variable_name CURSOR }  
 } [,...n]   
 | { @table_variable_name [AS] <table_type_definition> }   
   
 <table_type_definition> ::=   
-     TABLE ( { <column_definition> | <table_constraint> } [ ,... ] )   
+     TABLE ( { <column_definition> | <table_constraint> } [ ,...n] )   
   
 <column_definition> ::=   
      column_name { scalar_data_type | AS computed_column_expression }  
@@ -62,7 +63,7 @@ DECLARE
      }   
   
 <table_constraint> ::=   
-     { { PRIMARY KEY | UNIQUE } ( column_name [ ,... ] )   
+     { { PRIMARY KEY | UNIQUE } ( column_name [ ,...n] )   
      | CHECK ( search_condition )   
      }   
   

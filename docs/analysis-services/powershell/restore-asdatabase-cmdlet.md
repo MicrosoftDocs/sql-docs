@@ -13,7 +13,8 @@ ms.assetid: 8ab7a2d0-679c-40e6-b9b9-042184b2dfc9
 caps.latest.revision: 11
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Restore-ASDatabase cmdlet
 

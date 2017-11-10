@@ -13,6 +13,7 @@ caps.latest.revision: 1
 author: "haoqian"
 ms.author: "haoqian"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Change the account for Scale Out logging
 When executing packages in Scale Out, the event messages are logged into SSISDB with an auto-created user **##MS_SSISLogDBWorkerAgentLogin##**. 
@@ -29,7 +30,7 @@ For instructions of joining a database role, see [Join a Role](../../relational-
 Call stored procedure [catalog].[update_logdb_info] with Sql Server name and connection string as parameters.
 
 #### Example
-```tsql
+```sql
 SET @serverName = CONVERT(sysname, SERVERPROPERTY('servername'))
 SET @connectionString = 'Data Source=' + @serverName + ';Initial Catalog=SSISDB;Integrated Security=SSPI;'
 EXEC [internal].[update_logdb_info] @serverName, @connectionString

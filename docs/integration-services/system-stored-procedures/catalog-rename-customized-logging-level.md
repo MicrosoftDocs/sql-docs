@@ -14,6 +14,7 @@ caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # catalog.rename_customized_logging_level
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -22,10 +23,9 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```tsql  
-rename_customized_logging_level [ @old_name = ] old_name  
+```sql  
+catalog.rename_customized_logging_level [ @old_name = ] old_name  
     , [ @new_name = ] new_name  
-  
 ```  
   
 ## Arguments  

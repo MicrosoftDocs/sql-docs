@@ -13,6 +13,7 @@ caps.latest.revision: 1
 author: "haoqian"
 ms.author: "haoqian"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Get started with Integration Services (SSIS) Scale Out on a single computer
 This section provides the guidance of setting up Integration Services Scale Out in an one-box environment with default settings.

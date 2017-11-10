@@ -36,6 +36,7 @@ caps.latest.revision: 75
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # DBCC SHOW_STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -184,10 +185,10 @@ GO
 ```  
   
 ### B. Specifying the HISTOGRAM option  
-The following example limits the statistics information displayed for the `AK_Address_rowguid` index to the HISTOGRAM data.
+This limits the statistics information displayed for Customer_LastName to the HISTOGRAM data.
   
 ```t-sql
-DBCC SHOW_STATISTICS ("Person.Address", AK_Address_rowguid) WITH HISTOGRAM;  
+DBCC SHOW_STATISTICS ("dbo.DimCustomer",Customer_LastName) WITH HISTOGRAM;  
 GO  
 ```  
   
@@ -208,14 +209,6 @@ GO
 The results show the header, the density vector, and part of the histogram.
   
 ![DBCC SHOW_STATISTICS results](../../t-sql/database-console-commands/media/aps-sql-dbccshow-statistics.JPG "DBCC SHOW_STATISTICS results")
-  
-### D. Specifying the HISTOGRAM option  
-This limits the statistics information displayed for Customer_LastName to the HISTOGRAM data.
-  
-```t-sql
-DBCC SHOW_STATISTICS ("dbo.DimCustomer",Customer_LastName) WITH HISTOGRAM;  
-GO  
-```  
   
 ## See Also  
 [Statistics](../../relational-databases/statistics/statistics.md)  

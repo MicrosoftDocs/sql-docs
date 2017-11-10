@@ -14,6 +14,7 @@ caps.latest.revision: 19
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # catalog.deploy_project (SSISDB Database)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -22,28 +23,28 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```tsql  
-deploy_project [ @folder_name = ] folder_name   
-      , [ @project_name = ] project_name   
-      , [ @project_stream = ] projectstream   
+```sql  
+catalog.deploy_project [@folder_name =] folder_name   
+      , [@project_name =] project_name   
+      , [@project_stream =] projectstream   
     [ , [@operation_id ] = operation_id OUTPUT ]   
 ```  
   
 ## Arguments  
- [ @folder_name = ] *folder_name*  
- The name of the folder where the project will be deployed to. The *folder_name* is **nvarchar(128)**.  
+ [@folder_name =] *folder_name*  
+ The name of the folder where the project is deployed. The *folder_name* is **nvarchar(128)**.  
   
- [ @project_name = ] *project_name*  
+ [@project_name =] *project_name*  
  The name of the new or updated project in the folder. The *project_name* is **nvarchar(128)**.  
   
- [ @projectstream = ] *projectstream*  
+ [@projectstream =] *projectstream*  
  The binary contents of an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project deployment file (.ispac extension).  
   
  You can use a SELECT statement with the OPENROWSET function and the BULK rowset provider to retrieve the binary contents of the file. For an example, see [Deploy Integration Services (SSIS) Projects and Packages](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md). For more information about OPENROWSET, see [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md).  
   
  The *projectstream* is **varbinary(MAX)**  
   
- [ @operation_id = ] *operation_id*  
+ [@operation_id =] *operation_id*  
  Returns the unique identifier for the deployment operation. The *operation_id* is **bigint**.  
   
 ## Return Code Value  

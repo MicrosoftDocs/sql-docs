@@ -16,6 +16,7 @@ caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Target Servers (Download Instructions Tab)
 Use this page to display and update the download instructions for one or more target servers.  

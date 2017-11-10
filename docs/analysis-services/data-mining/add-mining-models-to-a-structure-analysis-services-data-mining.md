@@ -18,7 +18,8 @@ ms.assetid: a175daa5-58ea-474c-a82f-9648c5155dc8
 caps.latest.revision: 16
 author: "Minewiskan"
 ms.author: "owend"
-manager: "jhubbard"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Add Mining Models to a Structure (Analysis Services - Data Mining)
   A mining structure is intended to support multiple mining models. Therefore, after you finish the wizard, you can open the structure and add new mining models. Each time that you create a model, you can use a different algorithm, change the parameters, or apply filters to use a different subset of the data.  

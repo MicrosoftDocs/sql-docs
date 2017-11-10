@@ -13,7 +13,8 @@ ms.assetid: 1af1e823-85aa-4319-a93f-98b35f7c7322
 caps.latest.revision: 9
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Add sample data to a DirectQuery model in Design Mode
 

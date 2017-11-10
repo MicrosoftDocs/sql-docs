@@ -25,7 +25,8 @@ ms.assetid: a9cbd3a9-581f-4a08-93d8-e1eea8757ce9
 caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # MasterDatasourceID Element (ASSL)
   Contains the master data source identifier (ID) for a [Database](../../../analysis-services/scripting/objects/database-element-assl.md) element.  

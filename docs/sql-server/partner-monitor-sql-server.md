@@ -13,7 +13,7 @@ ms.topic: article
 ms.tgt_pltfrm: NA
 ms.workload: sql-server
 ms.custom: partners
-ms.date: 17/09/2017    
+ms.date: 11/02/2017    
 ms.author: mikeray
 
 ---
@@ -27,14 +27,19 @@ To monitor your SQL Server services, choose from a wide variety of industry-lead
 ## Our monitoring partners
 | Partner | Description | Links |
 | --- | --- | --- | --- |
-|![idera][1] |**IDERA**<br>SQL Diagnostic Manager is a powerful performance monitoring and diagnostics solution that proactively alerts administrators to health, performance and availability problems within SQL Server environments all from a central console.<br><br>[System requirements][idera_requirements]|<!--[Marketplace][idera_marketplace]<br>-->[Website][idera_website]<br>[Twitter][idera_twitter]<br>[Video][idera_youtube] | |
+|[![idera][1]][idera_website] |**IDERA**<br>SQL Diagnostic Manager is a powerful performance monitoring and diagnostics solution that proactively alerts administrators to health, performance and availability problems within SQL Server environments all from a central console.<br><br>[System requirements][idera_requirements]|<!--[Marketplace][idera_marketplace]<br>-->[Website][idera_website]<br>[Twitter][idera_twitter]<br>[Video][idera_youtube] | |
+|[![quest][3]][quest_website] |**Quest**<br>Spotlight on SQL Server Enterprise - Ensure peak performance around the clock with unmatched monitoring, diagnosis and optimization of SQL Server environments. Spotlight provides access to the details you need for optimal fitness of your SQL Server databases. Get intuitive overviews of health and performance, automated alerts and actions, and mobile device support.|[Marketplace][quest_marketplace]<br>[Website][quest_website]<br>[Video][quest_video] | |
+|[![redgate][4]][redgate_website]| **Redgate**<br>SQL Monitor from Redgate is a SQL Server monitoring tool that helps teams looking after SQL Server be more proactive. Not only does SQL Monitor alert you to current issues, it gives you the information you need to stop them happening in the future. Ideally suited to large SQL Server estates, SQL Monitor makes sure you always have the answer to questions about performance. |[Website][redgate_website]<br>[Twitter][redgate_twitter]<br>[LinkedIn][redgate_linkedin] <br>[Video][redgate_video]| |
+|[![sentryone][2]][sentryone_website] |**SentryOne**<br>SentryOne solutions empower Microsoft data professionals to achieve breakthrough performance across physical, virtual, and cloud environments. With SentryOne, data professionals can consolidate their tool sets, reduce infrastructure costs, and increase database speed and efficiency for peak performance across their Microsoft data platform environments, regardless of size or complexity.|<!--[Marketplace][idera_marketplace]<br>-->[Website][sentryone_website]<br>[Datasheet][sentryone_datasheet]<br>[Twitter][sentryone_twitter]<br>[LinkedIn][sentryone_linkedin] | |
 
 ## Next steps
 To learn more about some of our other partners, see [High availability, and disaster recovery partners][hadr_partners], [management partners][management_partners], and [development partners][dev_partners].
 
 <!--Image references-->
 [1]: ./media/partner-hadr-sql-server/idera_logo.png
-
+[2]:  ./media/partner-hadr-sql-server/sentryone.png
+[3]:  ./media/partner-hadr-sql-server/quest.png
+[4]:  ./media/partner-hadr-sql-server/redgate.png
 
 <!--Article links-->
 [hadr_partners]: ./partner-hadr-sql-server.md
@@ -44,22 +49,32 @@ To learn more about some of our other partners, see [High availability, and disa
 <!--Website links -->
 
 [idera_website]:https://www.idera.com/productssolutions/sqlserver/sqldiagnosticmanager
-
+[sentryone_website]:http://www.sentryone.com 
+[quest_website]:https://www.quest.com/products/spotlight-on-sql-server-enterprise
+[redgate_website]:https://www.red-gate.com/products/dba/sql-monitor/
 <!--Get Started Links-->
 
 <!--Datasheet Links-->
+[sentryone_datasheet]:https://www.sentryone.com/platform 
 
 <!--Marketplace Links -->
 <!----Not available[idera_marketplace]:https://azure.microsoft.com/en-us/marketplace/-->
-
+[quest_marketplace]:http://azuremarketplace.microsoft.com/marketplace/apps/dell_software.spotlight-enterprise-12-0?tab=Overview 
 <!--Press links-->
 <!--[idera_press]:-->
 
-<!--YouTube links-->
+<!--Video links-->
 [idera_youtube]:https://www.idera.com/resourcecentral/videos/an-overview-of-sql-diagnostic-manager
-
+[quest_video]:https://www.quest.com/webcast-ondemand/optimizing-and-tuning-sql-server8122701/
+[redgate_video]:https://youtu.be/EYCLM9hTyME 
 <!--Twitter links-->
 [idera_twitter]:https://twitter.com/Idera_Software
+[sentryone_twitter]:https://twitter.com/sentryone
+[redgate_twitter]:https://twitter.com/redgate  
 
 <!--Supported Systems-->
 [idera_requirements]:https://www.idera.com/productssolutions/sqlserver/sqldiagnosticmanager/systemrequirements
+
+<!--LinkedIn-->
+[sentryone_linkedin]:https://www.linkedin.com/company/sentryone 
+[redgate_linkedin]:https://www.linkedin.com/company/red-gate-software/

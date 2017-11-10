@@ -25,7 +25,8 @@ ms.assetid: e7f1f7ae-3169-4c0c-aadb-f7465155d652
 caps.latest.revision: 36
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # AggregationDesignID Element (ASSL)
   Identifies the [AggregationDesign](../../../analysis-services/scripting/objects/aggregationdesign-element-assl.md) element associated with the [Partition](../../../analysis-services/scripting/objects/partition-element-assl.md) element.  

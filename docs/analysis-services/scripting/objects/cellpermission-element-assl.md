@@ -25,7 +25,8 @@ ms.assetid: 54a6afc0-1fcb-4b24-851a-6d81e1fe0efc
 caps.latest.revision: 36
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # CellPermission Element (ASSL)
   Describes the permissions that members of a [Role](../../../analysis-services/scripting/objects/role-element-assl.md) element have on individual cells within a [Cube](../../../analysis-services/scripting/objects/cube-element-assl.md) element.  

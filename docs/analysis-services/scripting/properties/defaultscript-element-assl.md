@@ -25,7 +25,8 @@ ms.assetid: 60716e63-2d64-4774-9ac9-253efe612fa5
 caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # DefaultScript Element (ASSL)
   Identifies the default [MdxScript](../../../analysis-services/scripting/objects/mdxscript-element-assl.md) element in the [MdxScripts](../../../analysis-services/scripting/collections/mdxscripts-element-assl.md) collection.  

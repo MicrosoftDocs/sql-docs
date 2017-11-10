@@ -25,6 +25,7 @@ caps.latest.revision: 6
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Monitor Job Activity
 You can monitor the current activity of all defined jobs on an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] by using [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent Job Activity Monitor.  

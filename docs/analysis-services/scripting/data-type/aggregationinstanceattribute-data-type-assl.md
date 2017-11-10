@@ -23,7 +23,8 @@ ms.assetid: fc5a98bf-7c3c-4faf-b9f8-16eb073d7dc7
 caps.latest.revision: 13
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # AggregationInstanceAttribute Data Type (ASSL)
   Defines a primitive data type that represents information about an attribute used by an aggregation instance.  

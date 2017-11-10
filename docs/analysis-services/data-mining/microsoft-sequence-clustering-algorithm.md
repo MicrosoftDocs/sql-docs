@@ -19,7 +19,8 @@ ms.assetid: ae779a1f-0adb-4857-afbd-a15543dff299
 caps.latest.revision: 49
 author: "Minewiskan"
 ms.author: "owend"
-manager: "jhubbard"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Microsoft Sequence Clustering Algorithm
   The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering algorithm is a unique algorithm that combines sequence analysis with clustering. You can use this algorithm to explore data that contains events that can be linked in a *sequence*. The algorithm finds the most common sequences, and performs clustering to find  sequences that are similar. The following examples illustrate the types of sequences that you might capture as data for machine learning, to provide insight about common problems or business scenarios:  

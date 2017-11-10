@@ -20,7 +20,8 @@ ms.assetid: 4e0cbf46-cc60-4e91-a292-9a69f29746f0
 caps.latest.revision: 25
 author: "Minewiskan"
 ms.author: "owend"
-manager: "jhubbard"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Logical Architecture (Analysis Services - Data Mining)
   Data mining is a process that involves the interaction of multiple components.  

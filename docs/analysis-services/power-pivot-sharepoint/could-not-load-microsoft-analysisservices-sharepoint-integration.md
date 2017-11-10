@@ -14,7 +14,8 @@ ms.assetid: 6e350b67-5e18-4b90-8fb7-a0109cbb27b7
 caps.latest.revision: 7
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Could not load Microsoft.AnalysisServices.SharePoint.Integration
   In SharePoint 2010 environments that have [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint, this error will occur if the application-level solution for [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] did not deploy correctly.  

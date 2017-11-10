@@ -13,7 +13,8 @@ ms.assetid: 4eb07192-6f53-4426-830a-d63a945dbcab
 caps.latest.revision: 12
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # TMSL Reference - Commands
 

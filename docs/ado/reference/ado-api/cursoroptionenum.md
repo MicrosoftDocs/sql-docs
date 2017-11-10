@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # CursorOptionEnum
 Specifies what functionality the [Supports](../../../ado/reference/ado-api/supports-method.md) method should test for.  

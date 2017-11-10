@@ -13,6 +13,7 @@ caps.latest.revision: 1
 author: "haoqian"
 ms.author: "haoqian"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # catalog.update_master_address (SSISDB Database)
 [!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
@@ -21,8 +22,8 @@ Update the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Scale O
 
 ## Syntax
 
-```tsql
-update_master_address [@MasterAddress = ] masterAddress
+```sql
+catalog.update_master_address [@MasterAddress = ] masterAddress
 ```
 
 ## Arguments

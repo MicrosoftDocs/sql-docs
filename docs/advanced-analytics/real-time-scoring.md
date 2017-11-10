@@ -1,7 +1,7 @@
 ---
 title: "Realtime scoring | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/17/2017"
+ms.date: "11/03/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -12,6 +12,7 @@ ms.topic: "article"
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 
 # Realtime scoring
@@ -47,56 +48,56 @@ For an example of how rxPredict can used for scoring, see [End to End Loan Charg
 
 Realtime scoring is supported on these platforms:
 
-+ SQL Server 2017 Machine Learning Services (includes Microsoft R Server 9.1.0)
++ SQL Server 2017 Machine Learning Services
 + SQL Server R Services 2016, with an upgrade of the R Services instance to Microsoft R Server 9.1.0 or later
-+ Microsoft Machine Learning Server (Standalone)
++ Machine Learning Server (Standalone)
 
 On SQL Server, you must enable the realtime scoring feature in advance. This is because the feature requires installation of CLR-based libraries into SQL Server.
 
-For information regarding realtime scoring in a distributed environment based on Microsoft R Server, please refer to the [publishService](https://msdn.microsoft.com/microsoft-r/mrsdeploy/packagehelp/publishservice) function available in the [mrsDeploy package](https://msdn.microsoft.com/microsoft-r/mrsdeploy/mrsdeploy), which supports publishing models for realtime scoring as a new a web service running on R Server.
+For information regarding realtime scoring in a distributed environment based on Microsoft R Server, please refer to the [publishService](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/publishservice) function available in the [mrsDeploy package](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/mrsdeploy-package), which supports publishing models for realtime scoring as a new a web service running on R Server.
 
 ### Restrictions
 
-+ The model must be trained in advance using one of the supported **rx** algorithms. For details, see [Supported algorithms](#bkmk_rt_supported_algos). Realtime scoring with sp_rxPredict supports both RevoScaleR and MicrosoftML algorithms.
++ The model must be trained in advance using one of the supported **rx** algorithms. For details, see [Supported algorithms](#bkmk_rt_supported_algos). Realtime scoring with `sp_rxPredict` supports both RevoScaleR and MicrosoftML algorithms.
 
-+ The model must be saved using the new serialization function provided in Microsoft R Server 9.1.0. The serialization method has been optimized to support fast scoring.
++ The model must be saved using the new serialization functions: [rxSerialize](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel) for R, and [rx_serialize_model](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model) for Python. These serialization functions have been optimized to support fast scoring.
 
-+ Realtime scoring does not use an R interpreter; therefore, any functionality that might require R interpreter is not supported during the scoring step.  These might include:
++ Realtime scoring does not use an interpreter interpreter; therefore, any functionality that might require an interpreter is not supported during the scoring step.  These might include:
 
   + Models using the `rxGlm` or `rxNaiveBayes` algorithms are not currently supported
 
   + RevoScaleR models that use an R transformation function, or a formula that contains a transformation, such as <code>A ~ log(B)</code> are not supported in realtime scoring. To use a model of this type, we recommend that you perform the transformation on the to input data before passing the data to realtime scoring.
 
-+ Realtime scoring is currently optimized for fast predictions on smaller data sets, ranging from a few rows to  hundreds of thousand of rows. On very large datasets, scoring in R using rxPredict might be faster.
++ Realtime scoring is currently optimized for fast predictions on smaller data sets, ranging from a few rows to  hundreds of thousand of rows. On very large datasets, using [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) might be faster.
 
 ### <a name="bkmk_rt_supported_algos">Algorithms that support realtime scoring
 
 + RevoScaleR models
 
-  + [rxLinMod](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxlinmod) \*
-  + [rxLogit](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxlogit) \*
-  + [rxBTrees](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxbtrees) \*
-  + [rxDtree](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdtree) \*
-  + [rxdForest](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdforest) \*
+  + [rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod) \*
+  + [rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit) \*
+  + [rxBTrees](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxbtrees) \*
+  + [rxDtree](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdtree) \*
+  + [rxdForest](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdforest) \*
   
   Models marked with \* also support native scoring with the PREDICT function.
 
 + MicrosoftML models
 
-  + [rxFastTrees](https://docs.microsoft.com/r-server/r-reference/microsoftml/rxfasttrees)
-  + [rxFastForest](https://docs.microsoft.com/r-server/r-reference/microsoftml/rxfastforest)
-  + [rxLogisticRegression](https://docs.microsoft.com/r-server/r-reference/microsoftml/rxlogisticregression)
-  + [rxOneClassSvm](https://docs.microsoft.com/r-server/r-reference/microsoftml/rxoneclasssvm)
-  + [rxNeuralNet](https://docs.microsoft.com/r-server/r-reference/microsoftml/rxneuralnet)
-  + [rxFastLinear](https://docs.microsoft.com/r-server/r-reference/microsoftml/rxfastlinear)
+  + [rxFastTrees](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfasttrees)
+  + [rxFastForest](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfastforest)
+  + [rxLogisticRegression](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxlogisticregression)
+  + [rxOneClassSvm](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxoneclasssvm)
+  + [rxNeuralNet](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet)
+  + [rxFastLinear](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfastlinear)
 
 + Transformations supplied by MicrosoftML
 
-  + [featurizeText](https://docs.microsoft.com/r-server/r-reference/microsoftml/rxfasttrees)
-  + [concat](https://docs.microsoft.com/r-server/r-reference/microsoftml/concat)
-  + [categorical](https://docs.microsoft.com/r-server/r-reference/microsoftml/categorical)
-  + [categoricalHash](https://docs.microsoft.com/r-server/r-reference/microsoftml/categoricalHash)
-  + [selectFeatures](https://docs.microsoft.com/r-server/r-reference/microsoftml/selectFeatures)
+  + [featurizeText](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfasttrees)
+  + [concat](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/concat)
+  + [categorical](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categorical)
+  + [categoricalHash](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categoricalHash)
+  + [selectFeatures](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/selectFeatures)
 
 ### Unsupported model types
 

@@ -26,9 +26,10 @@ helpviewer_keywords:
   - "verifying object exists"
 ms.assetid: f89286db-440f-4218-a828-30881ce3077a
 caps.latest.revision: 63
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Active"
 ---
 # OBJECT_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]

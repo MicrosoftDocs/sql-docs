@@ -23,7 +23,8 @@ ms.assetid: 7ed7d4ee-4644-4c5d-99a4-c4b429d0203c
 caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # MDX Data Manipulation - Understanding Pass Order and Solve Order
   When a cube is calculated as the result of an MDX script, it can go through many stages of computation depending on the use of various calculation-related features. Each of these stages is referred to as a calculation pass.  

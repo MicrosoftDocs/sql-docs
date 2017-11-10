@@ -13,9 +13,10 @@ helpviewer_keywords:
   - "7936 (Database Engine error)"
 ms.assetid: d78fc8a9-d173-4801-bb32-ed6a29257f08
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Inactive"
 ---
 # MSSQLSERVER_7936
   

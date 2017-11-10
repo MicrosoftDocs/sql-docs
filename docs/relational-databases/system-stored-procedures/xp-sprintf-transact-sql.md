@@ -18,9 +18,10 @@ helpviewer_keywords:
   - "xp_sprintf"
 ms.assetid: 1eedd65c-03cc-4eab-b76e-04684fdfec52
 caps.latest.revision: 33
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Inactive"
 ---
 # xp_sprintf (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]

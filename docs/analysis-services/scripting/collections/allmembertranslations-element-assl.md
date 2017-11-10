@@ -25,7 +25,8 @@ ms.assetid: 982ee2bf-c88d-4da5-a679-7a6b08a48a0d
 caps.latest.revision: 38
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # AllMemberTranslations Element (ASSL)
   Contains the collection of [Translation](../../../analysis-services/scripting/objects/translation-element-assl.md) elements for the caption of the All member of a [Hierarchy](../../../analysis-services/scripting/objects/hierarchy-element-assl.md) element.  

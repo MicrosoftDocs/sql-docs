@@ -15,7 +15,8 @@ ms.assetid: 486f0507-cec6-4672-b947-0bb61d1cbc46
 caps.latest.revision: 11
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # TMSL Reference - Tabular Objects
 

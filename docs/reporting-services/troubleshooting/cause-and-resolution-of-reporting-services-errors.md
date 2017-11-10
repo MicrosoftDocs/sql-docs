@@ -19,6 +19,7 @@ caps.latest.revision: 17
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Cause and Resolution of Reporting Services Errors
   This topic contains cause and resolution information for a number of errors related to [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. The error message topics in this section provide an explanation of the error message, possible causes, and any actions you can take to correct the problem.  

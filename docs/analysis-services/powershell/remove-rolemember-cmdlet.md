@@ -13,7 +13,8 @@ ms.assetid: e38f56ab-facd-4bef-9502-f52f8486a6a6
 caps.latest.revision: 8
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Remove-RoleMember cmdlet
 

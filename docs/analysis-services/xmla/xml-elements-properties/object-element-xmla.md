@@ -25,9 +25,10 @@ helpviewer_keywords:
   - "Object element"
 ms.assetid: 99470537-2c4a-4072-9613-940c41c12487
 caps.latest.revision: 16
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Object Element (XMLA)
   Contains an object reference used by the parent element.  

@@ -13,9 +13,10 @@ helpviewer_keywords:
   - "32042 (Database Engine error)"
 ms.assetid: 53a51c7a-dcd4-4c15-b4d2-6aaa9dce76da
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Inactive"
 ---
 # MSSQLSERVER_32042
   

@@ -32,6 +32,7 @@ caps.latest.revision: 34
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Programmatically Monitor Replication
   Replication Monitor is a graphical tool that allows you to monitor a replication topology. You can access the same monitoring data programmatically by using [!INCLUDE[tsql](../../../includes/tsql-md.md)] replication stored procedures or replication management objects (RMO). These objects enable you to program the following tasks:  

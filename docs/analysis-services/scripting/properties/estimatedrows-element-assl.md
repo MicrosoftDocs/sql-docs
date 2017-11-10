@@ -25,7 +25,8 @@ ms.assetid: 08a66481-6479-4a93-aa7e-15e8b1f854f2
 caps.latest.revision: 33
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # EstimatedRows Element (ASSL)
   Contains the estimated number of rows represented by the parent element.  

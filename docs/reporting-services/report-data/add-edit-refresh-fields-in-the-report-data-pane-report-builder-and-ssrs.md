@@ -15,6 +15,7 @@ caps.latest.revision: 7
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "On Demand"
 ---
 # Add, Edit, Refresh Fields in the Report Data Pane (Report Builder and SSRS)
   Dataset fields are the built-in collection of field names that represent the data that is returned when a dataset query runs on an external data source.  

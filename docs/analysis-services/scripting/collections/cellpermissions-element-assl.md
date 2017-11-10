@@ -25,7 +25,8 @@ ms.assetid: 4a604f2f-f4c3-42bd-a42b-951263942cc6
 caps.latest.revision: 37
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # CellPermissions Element (ASSL)
   Contains the collection of permissions for cells in the associated [Cube](../../../analysis-services/scripting/objects/cube-element-assl.md) element.  

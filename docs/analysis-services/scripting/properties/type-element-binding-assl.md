@@ -25,7 +25,8 @@ ms.assetid: b5f5c485-dc83-4d66-a8d2-e96e96d068f9
 caps.latest.revision: 32
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Type Element (Binding) (ASSL)
   Contains the type of the attribute binding.  

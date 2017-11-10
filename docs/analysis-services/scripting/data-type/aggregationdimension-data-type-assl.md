@@ -25,7 +25,8 @@ ms.assetid: 697e0e09-3210-4a56-882f-80726abc4c68
 caps.latest.revision: 39
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # AggregationDimension Data Type (ASSL)
   Defines a primitive data type that represents the relationship between a dimension and an [Aggregation](../../../analysis-services/scripting/objects/aggregation-element-assl.md) element.  

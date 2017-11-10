@@ -15,7 +15,8 @@ ms.assetid: a01e63e6-97dc-43e5-ad12-ae6580afc606
 caps.latest.revision: 19
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Configure Power Pivot Health Rules
 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] for SharePoint includes SharePoint health rules that help you monitor and remedy server availability and configuration problems. Health rules that apply to [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] for SharePoint appear in the Review rule definitions page.  

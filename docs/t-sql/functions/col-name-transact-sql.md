@@ -21,9 +21,10 @@ helpviewer_keywords:
   - "names [SQL Server], columns"
 ms.assetid: 214144ab-f2bc-4052-83cf-caf0a85c4cc6
 caps.latest.revision: 28
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "On Demand"
 ---
 # COL_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -59,29 +60,6 @@ The *table_id* and *column_id* parameters together produce a column name string.
 For more information about obtaining table and column identification numbers, see [OBJECT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/object-id-transact-sql.md).
   
 ## Examples  
-The following example returns the name of the first column in the `Employee` table of the `AdventureWorks2012` database.
-  
-```sql
-USE AdventureWorks2012;  
-GO  
-SET NOCOUNT OFF;  
-GO  
-SELECT COL_NAME(OBJECT_ID('HumanResources.Employee'), 1) AS 'Column Name';  
-GO  
-```  
-  
-[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
-  
-```
-Column Name
-------------------
-BusinessEntityID
-```
-  
-## Examples
-
-[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-
 The following example returns the name of the first column in a sample `Employee` table.
   
 ```sql

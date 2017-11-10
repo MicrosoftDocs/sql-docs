@@ -25,7 +25,8 @@ ms.assetid: e212d575-a0d7-4548-92b4-33542ef59034
 caps.latest.revision: 38
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # DrillThroughAction Data Type (ASSL)
   Defines a derived data type that represents a drillthrough action.  

@@ -25,7 +25,8 @@ ms.assetid: dafe3df2-4795-48ea-bebe-33c1a3bf18b6
 caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Persistence Element (ASSL)
   Determines which parts of the bound source data are dynamic and are checked for updates using the frequency specified by the [RefreshPolicy](../../../analysis-services/scripting/properties/refreshpolicy-element-assl.md) element.  

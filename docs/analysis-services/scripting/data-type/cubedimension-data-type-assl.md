@@ -25,7 +25,8 @@ ms.assetid: 128ac790-65a1-4e35-b909-8dba2a61b24c
 caps.latest.revision: 40
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # CubeDimension Data Type (ASSL)
   Defines a primitive data type that represents the relationship between a dimension and a cube.  

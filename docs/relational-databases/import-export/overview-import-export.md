@@ -1,7 +1,7 @@
----
+﻿---
 title: "Import and export data from SQL Server and Azure SQL Database | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/12/2017"
+ms.date: "10/27/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -12,6 +12,7 @@ ms.topic: "article"
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Import and export data from SQL Server and Azure SQL Database
 You can use a variety of methods to import data to, and export data from, SQL Server and Azure SQL Database. These methods include Transact-SQL statements, command-line tools, and wizards.
@@ -25,6 +26,13 @@ You can import data with the `BULK INSERT` or the `OPENROWSET(BULK...)` commands
 
 ### Use BCP from the command prompt
 You can import and export data with the BCP command-line utility. For more info, see [Import and Export Bulk Data by Using the bcp Utility](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).
+
+### Use the Import Flat File Wizard
+If you don't need all the configuration options available in the Import and Export Wizard and other tools, you can import a text file into SQL Server by using the **Import Flat File Wizard** in SQL Server Management Studio (SSMS). For more info, see the following articles:
+- [Import Flat File to SQL Wizard](import-flat-file-wizard.md)
+- [What’s new in SQL Server Management Studio 17.3
+](https://blogs.technet.microsoft.com/dataplatforminsider/2017/10/10/whats-new-in-sql-server-management-studio-17-3/)
+- [Introducing the new Import Flat File Wizard in SSMS 17.3](https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-new-Import-Flat-File-Wizard-in-SSMS-173)
 
 ### Use the SQL Server Import and Export Wizard
 You can import data to, or export data from, a variety of sources and destinations with the SQL Server Import and Export Wizard. To use the wizard, you must have SQL Server Integration Services (SSIS) or SQL Server Data Tools (SSDT) installed. For more info, see [Import and Export Data with the SQL Server Import and Export Wizard](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md).

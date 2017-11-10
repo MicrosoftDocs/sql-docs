@@ -16,7 +16,8 @@ ms.assetid: 655ac93c-5c5c-4565-914b-915327f7d349
 caps.latest.revision: 15
 author: "Minewiskan"
 ms.author: "owend"
-manager: "jhubbard"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Using SQL Server Profiler to Monitor Data Mining (Analysis Services - Data Mining)
   If you have the necessary permissions, you can use SQL Server Profiler to monitor data mining activities that are issued as requests sent to an instance of SQL Server Analysis Services. Data mining activity can include the processing of models or structures, prediction queries or content queries, or the creation of new models or structures.  

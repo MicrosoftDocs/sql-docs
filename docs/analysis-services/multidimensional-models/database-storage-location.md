@@ -17,7 +17,8 @@ ms.assetid: cf88c62e-581e-42f2-846f-a9bf1d7c3292
 caps.latest.revision: 18
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Database Storage Location
   There are often situations when an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database administrator (dba) wants a certain database to reside outside of the server data folder. These situations are often driven by business needs, such as improving performance or expanding storage. For these situations, the **DbStorageLocation** database property enables the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dba to specify the database location in a local disk or network device.  

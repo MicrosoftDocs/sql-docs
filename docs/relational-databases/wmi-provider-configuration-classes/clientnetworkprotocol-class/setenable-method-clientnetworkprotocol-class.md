@@ -21,6 +21,7 @@ caps.latest.revision: 34
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # SetEnable Method (ClientNetworkProtocol Class)
   Enables the client network protocol that is specified by the [Configure Client Protocols](http://technet.microsoft.com/library/ms181035.aspx).  

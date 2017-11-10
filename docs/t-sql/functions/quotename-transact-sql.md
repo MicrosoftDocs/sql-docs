@@ -22,9 +22,10 @@ helpviewer_keywords:
   - "valid identifiers [SQL Server]"
 ms.assetid: 34d47f1e-2ac7-4890-8c9c-5f60f115e076
 caps.latest.revision: 35
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Active"
 ---
 # QUOTENAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]

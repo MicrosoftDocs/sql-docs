@@ -25,7 +25,8 @@ ms.assetid: 5c9209e8-ace6-4688-a64d-4987a7648ab9
 caps.latest.revision: 38
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Source Element (ComAssembly) (ASSL)
   Contains the file name or programmatic identifier (ProgID) for a Component Object Model (COM) component.  

@@ -16,6 +16,7 @@ caps.latest.revision: 39
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Lock:Cancel Event Class
   The **Lock:Cancel** event class indicates that acquisition of a lock on a resource has been canceled; for example, due to a query being canceled.  

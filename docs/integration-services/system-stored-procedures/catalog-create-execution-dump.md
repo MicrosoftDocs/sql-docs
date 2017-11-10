@@ -14,6 +14,7 @@ caps.latest.revision: 12
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # catalog.create_execution_dump
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -22,8 +23,8 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```tsql  
-create_execution_dump [ @execution_id = ] execution_id  
+```sql  
+catalog.create_execution_dump [ @execution_id = ] execution_id  
   
 ```  
   
@@ -34,10 +35,8 @@ create_execution_dump [ @execution_id = ] execution_id
 ## Example  
  In the following example, the running package with an execution ID of 88 is prompted to create a dump file.  
   
-```  
-  
+```sql
 EXEC create_execution_dump @execution_id = 88  
-  
 ```  
   
 ## Return Codes  

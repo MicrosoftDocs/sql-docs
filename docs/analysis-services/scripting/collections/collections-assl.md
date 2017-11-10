@@ -20,7 +20,8 @@ ms.assetid: 072b8c6b-1550-4cab-ae64-ba0e3e60b059
 caps.latest.revision: 19
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Collections (ASSL)
   This reference section contains syntax and usage information for each element that acts as a collection in the Analysis Services Scripting Language (ASSL) schema.  

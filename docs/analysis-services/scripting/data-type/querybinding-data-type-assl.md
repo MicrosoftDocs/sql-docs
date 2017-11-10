@@ -25,7 +25,8 @@ ms.assetid: 7b58fc89-0060-4e56-ad99-6f74fe8cfc6d
 caps.latest.revision: 38
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # QueryBinding Data Type (ASSL)
   Defines a derived data type that represents the association of a [DataSource](../../../analysis-services/scripting/objects/datasource-element-assl.md) element with a [QueryDefinition](../../../analysis-services/scripting/properties/querydefinition-element-assl.md) element.  

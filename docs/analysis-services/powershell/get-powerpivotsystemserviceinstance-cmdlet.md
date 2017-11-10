@@ -13,7 +13,8 @@ ms.assetid: 56027a8e-1949-4349-b616-68c8b1d2963c
 caps.latest.revision: 9
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Get-PowerPivotSystemServiceInstance cmdlet
 

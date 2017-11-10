@@ -13,7 +13,8 @@ ms.assetid: 0f6fd52d-ac72-43e3-aa08-05a2d2bb873d
 caps.latest.revision: 18
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "On Demand"
 ---
 # Unable to refresh data for a data connection in the workbook
   For Excel workbooks that contain [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data, Excel Services returns this error if it submits a connection request to a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] server and the request fails.  

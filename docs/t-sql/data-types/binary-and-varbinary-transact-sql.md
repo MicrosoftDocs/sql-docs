@@ -1,7 +1,7 @@
 ---
 title: "binary and varbinary (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/16/2017"
+ms.date: "8/16/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -21,9 +21,10 @@ helpviewer_keywords:
   - "binary [SQL Server], about binary data type"
 ms.assetid: bcce65f9-10db-4b3e-bfaf-dfc06c6f820f
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Active"
 ---
 # binary and varbinary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]

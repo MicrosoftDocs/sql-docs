@@ -25,7 +25,8 @@ ms.assetid: 3195dca4-82bf-46b7-a31f-5383586e3573
 caps.latest.revision: 39
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # TableBinding Data Type (ASSL)
   Defines a derived data type that represents a binding to a table.  

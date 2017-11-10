@@ -71,6 +71,8 @@
 
 
 # Developer
+## [REST API](developer/rest-api.md)
+## [REST API samples](https://github.com/Microsoft/Reporting-Services)
 ## [Application integration](../reporting-services/application-integration/integrating-reporting-services-into-applications.md)
 ## [Report server web service](../reporting-services/report-server-web-service/report-server-web-service.md)
 ## [Extensions](../reporting-services/extensions/reporting-services-extension-library.md)
@@ -85,7 +87,8 @@
 ### [CSV Device Information Settings](csv-device-information-settings.md)  
 ### [Excel Device Information Settings](excel-device-information-settings.md)  
 ### [HTML Device Information Settings](html-device-information-settings.md)  
-### [Image Device Information Settings](image-device-information-settings.md)  ### [MHTML Device Information Settings](mhtml-device-information-settings.md)  
+### [Image Device Information Settings](image-device-information-settings.md)  
+### [MHTML Device Information Settings](mhtml-device-information-settings.md)  
 ### [PDF Device Information Settings](pdf-device-information-settings.md)  
 ### [PPTX Device Information Settings](pptx-device-information-settings.md)  
 ### [XML Device Information Settings](xml-device-information-settings.md)  

@@ -20,6 +20,7 @@ caps.latest.revision: 35
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # AcceptStop Property (SqlService Class)
   Gets the Boolean property value that specifies whether the service can be stopped.  

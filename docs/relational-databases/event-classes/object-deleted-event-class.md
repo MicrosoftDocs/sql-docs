@@ -16,6 +16,7 @@ caps.latest.revision: 33
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Object:Deleted Event Class
   The Object:Deleted event class indicates that an object has been deleted; for example, by DROP INDEX and DROP TABLE statements. This event class can be used to determine if objects are being deleted, for example, by ODBC applications that often create temporary stored procedures.  

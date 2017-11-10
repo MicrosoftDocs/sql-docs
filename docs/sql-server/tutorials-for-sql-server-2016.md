@@ -1,7 +1,7 @@
 ---
 title: "Tutorials for SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/21/2017"
+ms.date: "10/31/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -11,12 +11,12 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
 caps.latest.revision: 40
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "craigg"
+author: "craigg-msft"
+ms.author: "craigg"
+manager: "jhubbard"
+ms.workload: "Active"
 ---
 # Tutorials for SQL Server
-[!INCLUDE[feedback_stackoverflow_msdn_connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] provides tutorials to help you learn new technologies and features. Tutorials for earlier versions can usually be used with more recent versions. When tutorials address a newer feature, they will indicate the minimum version to complete the tutorial.  
      
@@ -25,7 +25,7 @@ manager: "craigg"
 - Check out the new [Wide World Importers](https://msdn.microsoft.com/library/mt734199(SQL.1).aspx) sample available on the [sql-server-samples](https://github.com/Microsoft/sql-server-samples) GitHub repository. 
 
  
-## Current Tutorials  
+## Current tutorials  
   
 |Technology|Description|  
 |--------------|---------------|  
@@ -35,9 +35,9 @@ manager: "craigg"
 |[Integration Services Tutorials](../integration-services/integration-services-tutorials.md)|Learn how to create and deploy [!INCLUDE[ssIS](../includes/ssis-md.md)] packages.|  
 |[Replication Tutorials](../relational-databases/replication/replication-tutorials.md)|Learn how to set up and run replication topologies using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].|  
 |[Reporting Services Tutorials &#40;SSRS&#41;](../reporting-services/reporting-services-tutorials-ssrs.md)|Learn how to create basic reports and subscriptions.|  
-|[SQL Server R Services Tutorials](../advanced-analytics/tutorials/machine-learning-services-tutorials.md)|Learn how to work with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] data using the R language, and run R scripts from [!INCLUDE[tsql](../includes/tsql-md.md)].|  
+|[SQL Server Machine Learning Tutorials](../advanced-analytics/tutorials/machine-learning-services-tutorials.md)|Learn how to work with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] data using R or Python. Run R or Python scripts from [!INCLUDE[tsql](../includes/tsql-md.md)].|  
   
- ## Previously published tutorials:  
+ ## Previously published tutorials 
   
  - [Tutorials for SQL Server 2014](https://msdn.microsoft.com/library/hh231699(v=sql.120).aspx)  
   

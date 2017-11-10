@@ -20,9 +20,10 @@ helpviewer_keywords:
   - "sys.all_objects catalog view"
 ms.assetid: 547e4be4-a8e4-48ce-9d8d-37b169985081
 caps.latest.revision: 39
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "On Demand"
 ---
 # sys.all_objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]

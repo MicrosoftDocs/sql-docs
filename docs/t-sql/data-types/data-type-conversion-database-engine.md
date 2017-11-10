@@ -1,7 +1,7 @@
 ---
 title: "Data type conversion (Database Engine) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/23/2017"
+ms.date: "7/23/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -21,9 +21,10 @@ helpviewer_keywords:
   - "converting data types [SQL Server], about converting data types"
 ms.assetid: ffacf45e-a488-48d0-9bb0-dcc7fd365299
 caps.latest.revision: 37
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Active"
 ---
 # Data type conversion (Database Engine)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]

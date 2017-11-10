@@ -19,6 +19,7 @@ caps.latest.revision: 36
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # Using R code in Transact-SQL (R in SQL quickstart)
 

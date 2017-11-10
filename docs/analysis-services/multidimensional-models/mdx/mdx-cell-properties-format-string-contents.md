@@ -21,7 +21,8 @@ ms.assetid: c354c938-0328-4b8e-adc5-3b52fd2a7152
 caps.latest.revision: 29
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "On Demand"
 ---
 # MDX Cell Properties - FORMAT_STRING Contents
   The **FORMAT_STRING** cell property formats the **VALUE** cell property, creating the value for the **FORMATTED_VALUE** cell property. The **FORMAT_STRING** cell property handles both string and numeric raw values, applying a format expression against the value to return a formatted value for the **FORMATTED_VALUE** cell property. The following tables detail the syntax and formatting characters used to handle string and numeric values.  

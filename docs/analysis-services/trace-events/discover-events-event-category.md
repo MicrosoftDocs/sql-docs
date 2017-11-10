@@ -17,7 +17,8 @@ ms.assetid: fb964bac-dc68-4ad0-80f5-aeb677277169
 caps.latest.revision: 21
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Discover Events Event Category
   The Discover Events event category has the event classes described in the following table.  

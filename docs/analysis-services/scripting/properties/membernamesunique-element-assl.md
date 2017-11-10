@@ -25,7 +25,8 @@ ms.assetid: bd4e75b2-4605-4ebc-a535-10f743eba08e
 caps.latest.revision: 32
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # MemberNamesUnique Element (ASSL)
   Determines whether member names under the parent element must be unique.  

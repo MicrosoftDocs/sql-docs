@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Guest Permissions on User Databases
   This rule determines whether the guest user has permission to access the database. This rule applies to user databases only.  

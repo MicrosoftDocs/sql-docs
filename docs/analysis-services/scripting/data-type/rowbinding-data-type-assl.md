@@ -25,7 +25,8 @@ ms.assetid: 5a49a6e3-25f3-43c8-8529-bcf245b02415
 caps.latest.revision: 37
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # RowBinding Data Type (ASSL)
   Defines a derived data type that represents a binding to the rows of a table in a [DataSourceView](../../../analysis-services/scripting/objects/datasourceview-element-assl.md) element.  

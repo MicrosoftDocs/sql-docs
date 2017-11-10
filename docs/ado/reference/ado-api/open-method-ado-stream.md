@@ -20,6 +20,7 @@ caps.latest.revision: 15
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Open Method (ADO Stream)
 Opens a [Stream](../../../ado/reference/ado-api/stream-object-ado.md) object to manipulate streams of binary or text data.  

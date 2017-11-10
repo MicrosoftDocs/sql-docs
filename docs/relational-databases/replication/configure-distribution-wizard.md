@@ -16,6 +16,7 @@ caps.latest.revision: 22
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Configure Distribution Wizard
   This section provides information on the following pages of the Configure Distribution Wizard:  

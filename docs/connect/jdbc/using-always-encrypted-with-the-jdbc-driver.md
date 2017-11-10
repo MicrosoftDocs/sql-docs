@@ -14,6 +14,7 @@ caps.latest.revision: 64
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Using Always Encrypted with the JDBC Driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -263,34 +264,12 @@ All of these key store providers are described in more detail below.
 ### Using Azure Key Vault Provider
 Azure Key Vault is a convenient option to store and manage column master keys for Always Encrypted (especially if your applications are hosted in Azure). The Microsoft JDBC Driver for SQL Server includes a built in provider, SQLServerColumnEncryptionAzureKeyVaultProvider, for applications that have keys stored in Azure Key Vault. The name of this provider is AZURE_KEY_VAULT. In order to use the Azure Key Vault store provider, an application developer needs to create the vault and the keys in Azure and configure the application to access the keys. For more information on how to setup the key vault and create column master key refer to [Azure Key Vault – Step by Step for more information on setting up the key vault](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/) and [Creating Column Master Keys in Azure Key Vault](https://msdn.microsoft.com/library/mt723359.aspx#Anchor_2).  
   
-To use the Azure Key Vault, client applications need to instantiate the SQLServerColumnEncryptionAzureKeyVaultProvider and register it with the driver. The JDBC driver delegates authentication to the application through an interface called SQLServerKeyVaultAuthenticationCallback which has a method for retrieving an access token from the key vault. To instantiate the Azure Key Vault store provider, the application developer needs to provide an implementation for the only method called **getAccessToken** that retrieves the access token for the key stored in Azure Key Vault.  
-  
-Here is an example of initializing SQLServerKeyVaultAuthenticationCallback and SQLServerColumnEncryptionAzureKeyVaultProvider:  
+To use the Azure Key Vault, client applications need to instantiate the SQLServerColumnEncryptionAzureKeyVaultProvider and register it with the driver.
+
+Here is an example of initializing SQLServerColumnEncryptionAzureKeyVaultProvider:  
   
 ```  
-// String variables clientID and clientSecret hold the client id and client secret values respectively.  
-  
-ExecutorService service = Executors.newFixedThreadPool(10);  
-SQLServerKeyVaultAuthenticationCallback authenticationCallback = new SQLServerKeyVaultAuthenticationCallback() {  
-       @Override  
-    public String getAccessToken(String authority, String resource, String scope) {  
-        AuthenticationResult result = null;  
-        try{  
-                AuthenticationContext context = new AuthenticationContext(authority, false, service);  
-            ClientCredential cred = new ClientCredential(clientID, clientSecret);  
-  
-            Future<AuthenticationResult> future = context.acquireToken(resource, cred, null);  
-            result = future.get();  
-        }  
-        catch(Exception e){  
-            e.printStackTrace();  
-        }  
-        return result.getAccessToken();  
-    }  
-};  
-  
-SQLServerColumnEncryptionAzureKeyVaultProvider akvProvider = new SQLServerColumnEncryptionAzureKeyVaultProvider(authenticationCallback, service);  
-  
+SQLServerColumnEncryptionAzureKeyVaultProvider akvProvider = new SQLServerColumnEncryptionAzureKeyVaultProvider(clientID, clientKey); 
 ```
 
 After the application creates an instance of SQLServerColumnEncryptionAzureKeyVaultProvider, the application needs to register the instance within Microsoft JDBC Driver for SQL Server using the SQLServerConnection.registerColumnEncryptionKeyStoreProviders() method. It is highly recommended, the instance is registered using the default lookup name, AZURE_KEY_VAULT, which can be obtained by calling the SQLServerColumnEncryptionAzureKeyVaultProvider.getName() API. Using the default name, will allow you to use tools, such as SQL Server Management Studio or PowerShell, to provision and manage Always Encrypted keys (the tools use the default name to generate the metadata object to column master key). The below example shows registering the Azure Key Vault provider. For more details on the SQLServerConnection.registerColumnEncryptionKeyStoreProviders() method , see [Always Encrypted API Reference for the JDBC Driver](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md). 
@@ -302,7 +281,7 @@ SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
 ```
   
 > [!IMPORTANT]  
->  The Azure Key Vault implementation of the JDBC driver has  dependencies  on these libraries (from GitHub):  
+>  The Azure Key Vault implementation of the JDBC driver has dependencies on these libraries (from GitHub):  
 >   
 >  [azure-sdk-for-java](https://github.com/Azure/azure-sdk-for-java)  
 >   

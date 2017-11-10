@@ -18,6 +18,7 @@ caps.latest.revision: 15
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Name Element for Database (DTA)
   Specifies the name of a database that you want to tune.  

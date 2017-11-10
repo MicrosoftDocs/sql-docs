@@ -13,6 +13,7 @@ caps.latest.revision: 1
 author: "haoqian"
 ms.author: "haoqian"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Walkthrough: Set up Integration Services Scale Out
 Set up [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] Scale Out by completing the following tasks. 
@@ -138,7 +139,7 @@ You get the **WorkerAgentId** value from the *[catalog].[worker_agents]* databas
 
 #### Example
 This example enables the Scale Out Worker on computerA.
-```tsql
+```sql
 SELECT WorkerAgentId, MachineName FROM [catalog].[worker_agents]
 GO
 -- Result: --

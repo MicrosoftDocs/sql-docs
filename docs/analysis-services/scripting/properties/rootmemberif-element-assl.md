@@ -25,7 +25,8 @@ ms.assetid: b695e271-c748-4abc-a09f-acb1014f768f
 caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # RootMemberIf Element (ASSL)
   Determines how the root member or members of a parent attribute are identified.  

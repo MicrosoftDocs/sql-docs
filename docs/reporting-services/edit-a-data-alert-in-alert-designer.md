@@ -20,6 +20,7 @@ caps.latest.revision: 11
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Edit a Data Alert in Alert Designer
 

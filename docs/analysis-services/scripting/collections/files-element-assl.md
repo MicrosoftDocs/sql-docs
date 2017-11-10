@@ -25,7 +25,8 @@ ms.assetid: 8a1327cb-1f60-42a7-b8ef-213d45a63e55
 caps.latest.revision: 37
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Files Element (ASSL)
   Contains the collection of [File](../../../analysis-services/scripting/objects/file-element-assl.md) elements that make up a [ClrAssembly](../../../analysis-services/scripting/data-type/clrassembly-data-type-assl.md) element.  

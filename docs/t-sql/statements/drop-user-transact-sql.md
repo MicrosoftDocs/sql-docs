@@ -24,9 +24,10 @@ helpviewer_keywords:
   - "users [SQL Server], removing"
 ms.assetid: d6e0e21a-7568-4321-b6d6-bcfba183a719
 caps.latest.revision: 43
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "On Demand"
 ---
 # DROP USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]

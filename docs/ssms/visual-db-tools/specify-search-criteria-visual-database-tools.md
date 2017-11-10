@@ -26,6 +26,7 @@ caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Specify Search Criteria (Visual Database Tools)
 You can use search criteria to restrict the number of rows returned by a query.  

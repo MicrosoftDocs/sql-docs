@@ -17,7 +17,8 @@ ms.assetid: e1701738-50d5-46b4-b406-f1e800545abb
 caps.latest.revision: 18
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # SystemGetClusterAccuracyResults (Analysis Services - Data Mining)
   Returns cross-validation accuracy metrics for a mining structure and related clustering models.  

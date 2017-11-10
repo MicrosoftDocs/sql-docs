@@ -23,9 +23,10 @@ helpviewer_keywords:
   - "converting uppercase to lowercase characters"
 ms.assetid: 1783352b-6852-4658-9d94-51963c59b9bf
 caps.latest.revision: 37
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Active"
 ---
 # LOWER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,29 +49,6 @@ LOWER ( character_expression )
  **varchar** or **nvarchar**  
   
 ## Examples  
- The following example uses the `LOWER` function, the `UPPER` function, and nests the `UPPER` function inside the `LOWER` function in selecting product names that have prices between $11 and $20. This example uses the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
-  
-```  
-SELECT LOWER(SUBSTRING(Name, 1, 20)) AS Lower,   
-   UPPER(SUBSTRING(Name, 1, 20)) AS Upper,   
-   LOWER(UPPER(SUBSTRING(Name, 1, 20))) As LowerUpper  
-FROM Production.Product  
-WHERE ListPrice between 11.00 and 20.00;  
-GO  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
- ```
-Lower                    Upper                    LowerUpper  
----------------------    ---------------------    --------------------  
-minipump                 MINIPUMP                 minipump 
-taillights - battery     TAILLIGHTS - BATTERY     taillights - battery  
-  
-(2 row(s) affected)
-```  
-  
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  The following example uses the `LOWER` function, the `UPPER` function, and nests the `UPPER` function inside the `LOWER` function in selecting product names that have prices between $11 and $20.  
   
 ```  

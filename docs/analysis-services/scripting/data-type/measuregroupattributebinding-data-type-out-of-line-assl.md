@@ -23,7 +23,8 @@ ms.assetid: bfe09a95-4e04-4f93-9389-7dd0b4c8f5e4
 caps.latest.revision: 9
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # MeasureGroupAttributeBinding Data Type (out-of-line) (ASSL)
   Defines a derived data type that represents an out-of-line binding for an attribute in a dimension included in a measure group.  

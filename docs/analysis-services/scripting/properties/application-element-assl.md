@@ -25,7 +25,8 @@ ms.assetid: dfd780ad-f643-4a1c-b58b-34271ae91240
 caps.latest.revision: 38
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Application Element (ASSL)
   Identifies the application associated with an [Action](../../../analysis-services/scripting/objects/action-element-assl.md) element.  

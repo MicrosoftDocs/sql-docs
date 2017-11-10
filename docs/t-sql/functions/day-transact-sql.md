@@ -23,9 +23,10 @@ helpviewer_keywords:
   - "dateparts [SQL Server], day"
 ms.assetid: 2f4410ea-fd3e-4d69-ac4b-3b0091a084bc
 caps.latest.revision: 41
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Active"
 ---
 # DAY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -65,24 +66,6 @@ The following statement returns `1900, 1, 1`. The argument for *date* is the num
   
 ```sql
 SELECT YEAR(0), MONTH(0), DAY(0);  
-```  
-  
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-The following example returns `30`. This is the number of the day.
-  
-```sql
--- Uses AdventureWorks  
-  
-SELECT TOP 1 DAY('2010-07-30T01:01:01.1234')   
-FROM dbo.DimCustomer;  
-```  
-  
-The following example returns `1900, 1, 1`. The argument for *date* is the number `0`. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interprets `0` as January 1, 1900.
-  
-```sql
--- Uses AdventureWorks  
-  
-SELECT TOP 1 YEAR(0), MONTH(0), DAY(0) FROM dbo.DimCustomer;  
 ```  
   
 ## See also

@@ -25,7 +25,8 @@ ms.assetid: 83968c1e-aae8-4657-aa53-d971de0dc834
 caps.latest.revision: 32
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # ModelingFlags Element (ASSL)
   Contains the collection of [ModelingFlag](../../../analysis-services/scripting/objects/modelingflag-element-assl.md) elements for a column in a [MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md) or a [MiningModel](../../../analysis-services/scripting/objects/miningmodel-element-assl.md).  

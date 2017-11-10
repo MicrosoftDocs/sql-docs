@@ -29,6 +29,7 @@ caps.latest.revision: 26
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Use XML Data in Applications
   This topic describes the options that are available to you for working with the **xml** data type in your application. The topic includes information about the following:  

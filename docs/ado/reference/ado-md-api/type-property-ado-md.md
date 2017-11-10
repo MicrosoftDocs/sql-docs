@@ -20,6 +20,7 @@ caps.latest.revision: 12
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Type Property (ADO MD)
 Indicates the type of the current [member](../../../ado/reference/ado-md-api/member-object-ado-md.md).  

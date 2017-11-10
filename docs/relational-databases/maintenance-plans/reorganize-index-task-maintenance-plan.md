@@ -18,6 +18,7 @@ caps.latest.revision: 33
 author: "MightyPen"
 ms.author: "genemi"
 manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Reorganize Index Task (Maintenance Plan)
   Use the **ReorganizeIndex Task** dialog to move index pages into a more efficient search order. This task uses the `ALTER INDEX REORGANIZE` statement with [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] databases.  

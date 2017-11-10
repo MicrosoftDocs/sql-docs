@@ -25,7 +25,8 @@ ms.assetid: a64fe908-154d-4fea-b435-afb6ee37a6fa
 caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # DegenerateMeasureGroupDimension Data Type (ASSL)
   Defines a derived data type that represents the relationship between a degenerate dimension (that is, a fact dimension) and a measure group.  

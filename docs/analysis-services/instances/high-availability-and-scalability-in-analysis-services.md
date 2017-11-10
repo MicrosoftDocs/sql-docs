@@ -13,7 +13,8 @@ ms.assetid: d7040a55-1e4d-4c24-9333-689c1b9e2db8
 caps.latest.revision: 14
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "On Demand"
 ---
 # High availability and Scalability in Analysis Services
   This article describes the most commonly used techniques for making Analysis Services databases  high available and scalable. While each objective could be addressed separately, in reality they often go hand in hand: a scalable deployment for large query or processing workloads typically comes with expectations of high availability.  

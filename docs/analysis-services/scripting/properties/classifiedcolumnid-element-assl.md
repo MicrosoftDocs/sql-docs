@@ -25,7 +25,8 @@ ms.assetid: c294b9c5-3ac2-4554-8ba8-d9f15d7e85c0
 caps.latest.revision: 35
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # ClassifiedColumnID Element (ASSL)
   Contains the identifier (ID) of a related column that is classified by the [ScalarMiningStructureColumn](../../../analysis-services/scripting/data-type/scalarminingstructurecolumn-data-type-assl.md) element.  

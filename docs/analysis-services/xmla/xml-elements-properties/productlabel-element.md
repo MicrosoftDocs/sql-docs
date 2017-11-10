@@ -14,9 +14,10 @@ applies_to:
   - "SQL Server 2016 Preview"
 ms.assetid: 95e0cf59-6581-4a0a-8e77-17664debf7af
 caps.latest.revision: 5
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # ProductLabel Element
   Determines the product level.  

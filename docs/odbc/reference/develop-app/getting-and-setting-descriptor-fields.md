@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Getting and Setting Descriptor Fields
 This section describes the methods an application can use to retrieve or set the values in descriptor fields.  

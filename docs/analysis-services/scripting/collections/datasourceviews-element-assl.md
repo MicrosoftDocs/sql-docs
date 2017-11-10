@@ -25,7 +25,8 @@ ms.assetid: f708ceac-8eeb-45ee-a2bb-919126898c80
 caps.latest.revision: 36
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # DataSourceViews Element (ASSL)
   Contains the collection of [DataSourceView](../../../analysis-services/scripting/objects/datasourceview-element-assl.md) elements associated with a [Database](../../../analysis-services/scripting/objects/database-element-assl.md) element.  

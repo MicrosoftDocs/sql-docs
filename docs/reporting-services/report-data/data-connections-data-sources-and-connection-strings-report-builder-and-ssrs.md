@@ -13,6 +13,7 @@ ms.topic: "article"
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "Active"
 ---
 # Data Connections, Data Sources, and Connection Strings (Report Builder and SSRS)
 

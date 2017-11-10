@@ -16,7 +16,8 @@ ms.assetid: 73d7c48d-d8e0-4119-849d-b5f912d449e4
 caps.latest.revision: 5
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Relationship Data Type (ASSL)
   Defines a primitive data type that represents a relationship in a dimension.  

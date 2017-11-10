@@ -21,7 +21,8 @@ ms.assetid: 7ac07e82-8806-4e9e-8123-22c09c0296de
 caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Analysis Services Scripting Language XML Elements (ASSL)
   Although the Analysis Services Scripting Language (ASSL) schema contains only XML elements, from a developer's point of view, these elements correspond to the following concepts:  

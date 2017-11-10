@@ -18,9 +18,10 @@ helpviewer_keywords:
   - "RADIANS function"
 ms.assetid: e9f69951-ecda-45d9-8909-dcb716b1b1c0
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Inactive"
 ---
 # RADIANS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -113,24 +114,6 @@ The RADIANS of the angle is: 0.00257041
  (1 row(s) affected)  
 ---------------------------------------   
 The RADIANS of the angle is: 3.44022                          
-(1 row(s) affected)  
-```  
-  
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### C. Using RADIANS to show 0.0  
- The following example returns a result of `0.0` because the numeric expression to convert to radians is too small for the `RADIANS` function.  
-  
-```  
-SELECT RADIANS(1e-307)  
-GO  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
-```  
--------------------   
-0.0                        
 (1 row(s) affected)  
 ```  
   

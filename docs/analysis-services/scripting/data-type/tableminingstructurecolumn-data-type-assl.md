@@ -25,7 +25,8 @@ ms.assetid: 350358b0-f2fc-43c3-957d-884c59fa879e
 caps.latest.revision: 37
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # TableMiningStructureColumn Data Type (ASSL)
   Defines a derived data type that represents a [MiningStructureColumn](../../../analysis-services/scripting/data-type/miningstructurecolumn-data-type-assl.md) element that contains nested tables, as opposed to the scalar values associated with the [ScalarMiningStructureColumn](../../../analysis-services/scripting/data-type/scalarminingstructurecolumn-data-type-assl.md) element that contains scalar values.  

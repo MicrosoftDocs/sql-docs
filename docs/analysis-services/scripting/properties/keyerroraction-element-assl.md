@@ -25,7 +25,8 @@ ms.assetid: 91fa9f88-b79e-4996-9717-d7ca82b64ddd
 caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # KeyErrorAction Element (ASSL)
   Specifies the action for [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] to take when an error occurs on a key.  

@@ -18,7 +18,8 @@ ms.assetid: 7f83d1cb-4732-424f-adc5-2449c1dd1008
 caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "On Demand"
 ---
 # Dimension Attribute Properties Reference
   In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], there are many properties that determine how dimensions and dimension attributes function. The following table lists and describes each of these attribute properties.  

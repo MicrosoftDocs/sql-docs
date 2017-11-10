@@ -22,9 +22,10 @@ helpviewer_keywords:
   - "ERROR_SEVERITY function"
 ms.assetid: 50228f2f-6949-4d2e-8e43-fad11bf973ab
 caps.latest.revision: 41
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "On Demand"
 ---
 # ERROR_SEVERITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -94,22 +95,7 @@ GO
   
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### C. Using ERROR_SEVERITY in a CATCH block  
- The following example shows a `SELECT` statement that generates a divide-by-zero error. The severity of the error is returned.  
-  
-```  
-  
-BEGIN TRY  
-    -- Generate a divide-by-zero error.  
-    SELECT 1/0;  
-END TRY  
-BEGIN CATCH  
-    SELECT ERROR_SEVERITY() AS ErrorSeverity;  
-END CATCH;  
-GO  
-```  
-  
-### D. Using ERROR_SEVERITY in a CATCH block with other error-handling tools  
+### C. Using ERROR_SEVERITY in a CATCH block with other error-handling tools  
  The following example shows a `SELECT` statement that generates a divide by zero error. Along with the severity, information that relates to the error is returned.  
   
 ```  

@@ -13,7 +13,8 @@ ms.assetid: 0101e809-d6ea-4d0c-95ec-65dd77acf665
 caps.latest.revision: 5
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # File Load and Save Data Columns
   The File Load and Save event category has the following event class:  

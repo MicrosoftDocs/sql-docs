@@ -25,7 +25,8 @@ ms.assetid: 7b03eeb3-d478-4c38-822e-8cdfcc485039
 caps.latest.revision: 39
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # KeyColumn Element (ASSL)
   Contains the definition of a column that is, or is part of, the key for an attribute.  

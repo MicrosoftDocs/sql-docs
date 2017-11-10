@@ -23,6 +23,7 @@ caps.latest.revision: 47
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # XML Source
   The XML source reads an XML data file and populates the columns in the source output with the data.  

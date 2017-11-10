@@ -13,7 +13,8 @@ ms.assetid: b10ba7c1-8f10-4e72-9626-f9285e4341fd
 caps.latest.revision: 9
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Invoke-ProcessCube cmdlet
 

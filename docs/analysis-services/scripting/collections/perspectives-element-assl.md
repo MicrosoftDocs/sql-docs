@@ -25,7 +25,8 @@ ms.assetid: d071acc3-469b-44f3-b724-423a48da2d41
 caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Perspectives Element (ASSL)
   Contains the collection of [Perspective](../../../analysis-services/scripting/objects/perspective-element-assl.md) elements associated with a [Cube](../../../analysis-services/scripting/objects/cube-element-assl.md) element.  

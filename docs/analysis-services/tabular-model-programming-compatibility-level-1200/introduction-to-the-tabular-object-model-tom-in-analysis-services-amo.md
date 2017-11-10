@@ -14,7 +14,8 @@ ms.assetid: 57a4a934-ecd0-4365-8147-d36899d86751
 caps.latest.revision: 15
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "On Demand"
 ---
 # Introduction to the Tabular Object Model (TOM) in Analysis Services AMO
 

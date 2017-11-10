@@ -19,9 +19,10 @@ helpviewer_keywords:
   - "ROUND function [Transact-SQL]"
 ms.assetid: 23921ed6-dd6a-4c9e-8c32-91c0d44fe4b7
 caps.latest.revision: 40
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Active"
 ---
 # ROUND (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -104,24 +105,14 @@ GO
  The following example shows rounding and approximations.  
   
 ```  
-SELECT ROUND(123.4545, 2);  
-GO  
-SELECT ROUND(123.45, -2);  
-GO  
+SELECT ROUND(123.4545, 2), ROUND(123.45, -2);  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
+
  ```
-----------
-123.4500
-
-(1 row(s) affected)
-
---------
-100.00
-
-(1 row(s) affected)
+--------  ----------
+123.45    100.00
 ```
   
 ### C. Using ROUND to truncate  
@@ -162,20 +153,6 @@ SELECT ROUND(123.994999, 3), ROUND(123.995444, 3);
  ```
 --------  ---------
 123.995000    123.995444
-```
-  
-### E. Using ROUND and rounding approximations  
- The following example shows rounding and approximations.  
-  
-```  
-SELECT ROUND(123.4545, 2), ROUND(123.45, -2);  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-
- ```
---------  ----------
-123.45    100.00
 ```
   
 ## See Also  

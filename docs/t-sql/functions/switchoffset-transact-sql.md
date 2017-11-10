@@ -24,9 +24,10 @@ helpviewer_keywords:
   - "time zones [SQL Server]"
 ms.assetid: 32a48e36-0aa4-4260-9fe9-cae9197d16c5
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "On Demand"
 ---
 # SWITCHOFFSET (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -68,27 +69,6 @@ WHERE c1 > @dt OPTION (RECOMPILE);
 ```  
   
 ## Examples  
- The following example uses `SWITCHOFFSET` to display a different time zone offset than the value stored in the database.  
-  
-```  
-CREATE TABLE dbo.test   
-    (  
-    ColDatetimeoffset datetimeoffset  
-    );  
-GO  
-INSERT INTO dbo.test   
-VALUES ('1998-09-20 7:45:50.71345 -5:00');  
-GO  
-SELECT SWITCHOFFSET (ColDatetimeoffset, '-08:00')   
-FROM dbo.test;  
-GO  
---Returns: 1998-09-20 04:45:50.7134500 -08:00  
-SELECT ColDatetimeoffset  
-FROM dbo.test;  
---Returns: 1998-09-20 07:45:50.7134500 -05:00  
-```  
-  
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  The following example uses `SWITCHOFFSET` to display a different time zone offset than the value stored in the database.  
   
 ```  

@@ -1,7 +1,7 @@
 ---
 title: "DAX in Tabular Models (SSAS Tabular) | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/10/2017"
+ms.date: "10/21/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -15,10 +15,11 @@ ms.assetid: b2693985-1bea-4861-a100-cea4761ba809
 caps.latest.revision: 26
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "On Demand"
 ---
 # DAX in Tabular Models (SSAS Tabular)
-  Data Analysis Expressions (DAX) is a formula language used to create custom calculations in Analysis Sevices, Power BI Desktop, and Power Pivot in Excel. DAX formulas include functions, operators, and values to perform advanced calculations on data in tables and columns.  
+  Data Analysis Expressions (DAX) is a formula language used to create custom calculations in Analysis Services, Power BI Desktop, and Power Pivot in Excel. DAX formulas include functions, operators, and values to perform advanced calculations on data in tables and columns.  
   
  While DAX is used in Analysis Services, Power BI Desktop, and Power Pivot in Excel, this topic applies more to Analysis Services tabular model projects authored in SQL Server Data Tools (SSDT).  
   
@@ -196,6 +197,9 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
 ### Mathematical and trigonometric functions  
  The mathematical functions in DAX are very similar to the Excel mathematical and trigonometric functions. Some minor differences exist in the numeric data types used by DAX functions. For more information, see [Math and Trig Functions (DAX)](http://msdn.microsoft.com/en-us/1f408ec1-e769-43d6-a68c-567bc30d893f).  
+ 
+### Other functions  
+ These functions perform unique actions that cannot be defined by any of the categories most other functions belong to. For more information, see [Other Functions (DAX)](https://msdn.microsoft.com/mt150101).
   
 ### Statistical functions  
  DAX provides statistical functions that perform aggregations. In addition to creating sums and averages, or finding the minimum and maximum values, in DAX you can also filter a column before aggregating or create aggregations based on related tables. For more information, see [Statistical Functions (DAX)](http://msdn.microsoft.com/en-us/ba4c1298-57a0-40fc-b6f6-00e187ace559).  

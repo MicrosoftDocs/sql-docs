@@ -17,6 +17,7 @@ caps.latest.revision: 9
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # ConfigurationSetting Property - VirtualDirectoryReportServer
   Returns the virtual directory for the report server application. Read-only.  

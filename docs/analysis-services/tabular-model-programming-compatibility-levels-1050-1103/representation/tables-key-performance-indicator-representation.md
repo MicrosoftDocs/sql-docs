@@ -16,7 +16,8 @@ ms.assetid: 8d3d949e-5d43-4d2e-9dc8-48d182a7a935
 caps.latest.revision: 8
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Tables - Key Performance Indicator Representation
   A KPI is used to gauge performance of a value, defined by a Base measure, against a Target value  

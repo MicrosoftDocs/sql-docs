@@ -17,6 +17,7 @@ caps.latest.revision: 35
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # YEAR (SSIS Expression)
   Returns an integer that represents the year datepart of a date.  

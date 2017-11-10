@@ -14,6 +14,7 @@ caps.latest.revision: 2
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Step 2: Create a SQL database for pyodbc Python development
 

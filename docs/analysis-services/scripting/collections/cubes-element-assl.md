@@ -25,7 +25,8 @@ ms.assetid: 0eaaaf3f-0c78-4eb4-bc3a-d266579eca56
 caps.latest.revision: 33
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Cubes Element (ASSL)
   Contains the collection of [Cube](../../../analysis-services/scripting/objects/cube-element-assl.md) elements associated with a [Database](../../../analysis-services/scripting/objects/database-element-assl.md) element.  

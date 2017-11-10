@@ -16,7 +16,8 @@ ms.assetid: 3e5fb89d-3ab8-4d2e-9926-feeb38c02d3f
 caps.latest.revision: 33
 author: "Minewiskan"
 ms.author: "owend"
-manager: "jhubbard"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Select a Mining Model and a Data Mining Viewer
   You can explore a mining model by using one of the viewers on the **Mining Model Viewer** tab of Data Mining Designer. You can easily switch between models, or change the viewer that is used.  

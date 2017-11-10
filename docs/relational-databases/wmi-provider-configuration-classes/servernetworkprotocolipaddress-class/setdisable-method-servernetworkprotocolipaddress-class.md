@@ -21,6 +21,7 @@ caps.latest.revision: 31
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # SetDisable Method (ServerNetworkProtocolIPAddress Class)
   Disables the IP address.  

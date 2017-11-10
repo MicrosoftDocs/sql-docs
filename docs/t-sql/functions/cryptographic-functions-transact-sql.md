@@ -20,9 +20,10 @@ helpviewer_keywords:
   - "encryption [SQL Server], functions"
 ms.assetid: 0be5626b-5a25-4d8c-9f44-7abbfccf816c
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "On Demand"
 ---
 # Cryptographic functions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

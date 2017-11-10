@@ -19,6 +19,7 @@ caps.latest.revision: 35
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Secure Shared Data Source Items
   You can set security on a shared data source item to enable or disable access to it.  

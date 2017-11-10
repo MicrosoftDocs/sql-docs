@@ -23,9 +23,10 @@ helpviewer_keywords:
   - "full-text catalogs [SQL Server], reorganizing"
 ms.assetid: 31a47aaf-6c7f-48a4-a86a-d57aec66c9cb
 caps.latest.revision: 40
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Inactive"
 ---
 # ALTER FULLTEXT CATALOG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

@@ -18,7 +18,8 @@ ms.assetid: be7e5f64-af43-47d6-84a5-c5c1c277d644
 caps.latest.revision: 28
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "On Demand"
 ---
 # Grant database permissions (Analysis Services)
   If you are approaching Analysis Services database administration with a background in relational databases, the first thing you need to understand is that, in terms of data access, the database is not the primary securable object in Analysis Services.  

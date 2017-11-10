@@ -15,7 +15,8 @@ ms.assetid: 0ec7feb3-a6b2-4be1-8036-c72b9fbc3562
 caps.latest.revision: 7
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Test an Action
   You test an action by using the Browser view in Cube Designer. Cube Designer can be accessed from [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. After you create the action, you must process the cube before the action can be tested. For more information, see [Processing a multidimensional model &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  

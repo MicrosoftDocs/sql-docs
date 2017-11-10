@@ -14,6 +14,7 @@ caps.latest.revision: 6
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Monitor Instances of SQL Server in the SQL Server Utility
   

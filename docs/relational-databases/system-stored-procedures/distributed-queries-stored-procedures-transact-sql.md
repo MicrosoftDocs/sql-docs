@@ -16,9 +16,10 @@ helpviewer_keywords:
   - "distributed queries [SQL Server], stored procedures"
 ms.assetid: 0fbf2846-885e-4de2-b552-f6453c3ca136
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Inactive"
 ---
 # Distributed Queries Stored Procedures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

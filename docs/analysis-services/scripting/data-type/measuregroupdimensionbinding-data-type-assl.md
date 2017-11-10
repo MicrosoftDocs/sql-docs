@@ -25,7 +25,8 @@ ms.assetid: 770e5ef8-aea1-4c9e-8e0a-2cbac43f2383
 caps.latest.revision: 37
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # MeasureGroupDimensionBinding Data Type (ASSL)
   Defines a derived data type that represents a binding between a dimension and a measure group.  

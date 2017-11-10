@@ -23,9 +23,10 @@ helpviewer_keywords:
   - "active transactions"
 ms.assetid: e9300827-e793-4eb6-9042-ffa0204aeb50
 caps.latest.revision: 41
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "On Demand"
 ---
 # XACT_STATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]

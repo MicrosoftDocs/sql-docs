@@ -20,9 +20,10 @@ helpviewer_keywords:
   - "reverse character expressions"
 ms.assetid: 555d8877-7cc7-4955-ae2c-6215aca313b7
 caps.latest.revision: 46
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Active"
 ---
 # REVERSE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -95,22 +96,6 @@ GO
   
 ```  
 SELECT name, REVERSE(name) FROM sys.databases;  
-GO  
-```  
-  
- The following example reverses the characters in a variable.  
-  
-```  
-DECLARE @myvar varchar(10);  
-SET @myvar = 'sdrawkcaB';  
-SELECT REVERSE(@myvar) AS Reversed ;  
-GO  
-```  
-  
- The following example makes an implicit conversion from an **int** data type into **varchar** data type and then reverses the result.  
-  
-```  
-SELECT REVERSE(1234) AS Reversed ;  
 GO  
 ```  
   

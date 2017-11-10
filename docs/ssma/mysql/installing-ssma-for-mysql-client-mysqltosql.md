@@ -19,6 +19,7 @@ caps.latest.revision: 22
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Installing SSMA for MySQL Client (MySQLToSQL)
 The SSMA for MySQL client consists of the program files that perform the following tasks:  

@@ -15,7 +15,8 @@ ms.assetid: 2cdbfdc5-45a9-4000-a03d-318cc7ac8fe9
 caps.latest.revision: 29
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Power Pivot Server Administration and Configuration in Central Administration
   [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] server administration and configuration is performed by SharePoint service application administrators, using SharePoint Central Administration.  

@@ -25,9 +25,10 @@ helpviewer_keywords:
   - "Update command [XMLA]"
 ms.assetid: 324dcc16-865d-4d0a-b393-2b06c18ac807
 caps.latest.revision: 12
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Update Element (XMLA)
   Updates attribute members in a dimension.  

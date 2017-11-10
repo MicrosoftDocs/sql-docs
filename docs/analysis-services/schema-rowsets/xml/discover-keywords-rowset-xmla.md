@@ -21,7 +21,8 @@ ms.assetid: 99945e53-3a1b-4d7b-9aff-712977db8b2d
 caps.latest.revision: 33
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # DISCOVER_KEYWORDS Rowset (XMLA)
   Returns information about keywords reserved by the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA) provider.  

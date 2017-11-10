@@ -16,7 +16,8 @@ ms.assetid: 4cb9fea5-1616-467b-a539-d051e5833aea
 caps.latest.revision: 10
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Tables - Calculated Measure Representation
   A calculated measure is a named DAX expression evaluated every time it is used.  

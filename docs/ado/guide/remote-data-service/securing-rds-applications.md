@@ -16,6 +16,7 @@ caps.latest.revision: 16
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Securing RDS Applications
 This topic provides security information for RDS.  

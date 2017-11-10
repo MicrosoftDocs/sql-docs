@@ -25,7 +25,8 @@ ms.assetid: 81b574d5-06c1-4587-8bd2-0e5c5e3b1d99
 caps.latest.revision: 38
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # StandardAction Data Type (ASSL)
   Defines a derived data type that represents any [Action](../../../analysis-services/scripting/objects/action-element-assl.md) element other than a [DrillThroughAction](../../../analysis-services/scripting/data-type/drillthroughaction-data-type-assl.md) element or a [ReportAction](../../../analysis-services/scripting/data-type/reportaction-data-type-assl.md) element.  

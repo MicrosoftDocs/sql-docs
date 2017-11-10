@@ -17,6 +17,7 @@ caps.latest.revision: 33
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # - (Negate) (SSIS Expression)
   Negates a numeric expression.  

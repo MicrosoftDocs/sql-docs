@@ -19,9 +19,10 @@ helpviewer_keywords:
   - "PI function"
 ms.assetid: d7c4575b-ba1c-4ef7-a633-9a379d7f01fd
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Inactive"
 ---
 # PI (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,23 +41,6 @@ PI ( )
  **float**  
   
 ## Examples  
- The following example returns the value of `PI`.  
-  
-```  
-SELECT PI();  
-GO  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
-```  
-------------------------  
-3.14159265358979  
-  
-(1 row(s) affected)  
-```  
-  
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  The following example returns the value of `PI`.  
   
 ```  

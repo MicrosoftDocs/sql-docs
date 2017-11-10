@@ -13,7 +13,8 @@ ms.assetid: a94b3198-be85-4935-845d-1cd4e121fc94
 caps.latest.revision: 6
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Query Processing Events Category
   The Query Processing event category has the event classes described in the following table.  

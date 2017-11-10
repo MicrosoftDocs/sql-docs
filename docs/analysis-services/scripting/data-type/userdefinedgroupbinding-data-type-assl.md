@@ -25,7 +25,8 @@ ms.assetid: 70149929-0ff7-4a67-84bf-e94908ae7611
 caps.latest.revision: 37
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # UserDefinedGroupBinding Data Type (ASSL)
   Defines a derived data type that represents a user-defined grouping for an attribute.  

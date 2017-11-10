@@ -25,7 +25,8 @@ ms.assetid: cb9fdfbf-2118-423b-ba02-fa36813dbea0
 caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # DimensionPermissions Element (ASSL)
   Contains the collection of permissions applicable to a [Dimension](../../../analysis-services/scripting/objects/dimension-element-assl.md) element or a [CubePermission](../../../analysis-services/scripting/objects/cubepermission-element-assl.md) element.  

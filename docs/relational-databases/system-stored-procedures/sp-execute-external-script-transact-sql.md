@@ -2,7 +2,7 @@
 title: "sp_execute_external_script (Transact-SQL) | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "08/18/2017"
+ms.date: "10/20/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -21,9 +21,10 @@ helpviewer_keywords:
   - "sp_execute_external_script"
 ms.assetid: de4e1fcd-0e1a-4af3-97ee-d1becc7f04df
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "On Demand"
 ---
 # sp_execute_external_script (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -42,57 +43,33 @@ sp_execute_external_script
     [ , @input_data_1_name = N'input_data_1_name' ]   
     [ , @output_data_1_name = N'output_data_1_name' ]  
     [ , @parallel = 0 | 1 ]  
-    [ , @params = N'@parameter_name data_type [ OUT | OUTPUT ] [ ,...n ]'  
-    [ , @parameter1 = 'value1' [ OUT | OUTPUT ] [ ,...n ]  
-    [ WITH <execute_option> ]  
-[;]  
-  
-<execute_option>::=  
-{  
-      { RESULT SETS UNDEFINED }   
-    | { RESULT SETS NONE }   
-    | { RESULT SETS ( <result_sets_definition> ) }  
-}  
-  
-<result_sets_definition> ::=   
-{  
-    (  
-         { column_name   
-           data_type   
-         [ COLLATE collation_name ]   
-         [ NULL | NOT NULL ] }  
-         [,...n ]  
-    )  
-    | AS OBJECT   
-        [ db_name . [ schema_name ] . | schema_name . ]   
-        {table_name | view_name | table_valued_function_name }  
-    | AS TYPE [ schema_name.]table_type_name  
-}  
+    [ , @params = N'@parameter_name data_type [ OUT | OUTPUT ] [ ,...n ]' ] 
+    [ , @parameter1 = 'value1' [ OUT | OUTPUT ] [ ,...n ] ]
 ```  
   
 ## Arguments  
- [ @language =    ] '*language*'  
-Indicates the script language. *language* is **sysname**.  
+ @language = N'*language*'  
+ Indicates the script language. *language* is **sysname**.  
 
  Valid values are `Python` or `R`. 
   
- [ @script = ]    '*script*'  
+ @script = N'*script*'  
  External language  script specified as a literal or variable input. *script* is **nvarchar(max)**.  
   
- [ @input_data_1_name = ] '*input_data_1_name*'  
+ [ @input_data_1_name = N'*input_data_1_name*' ]  
  Specifies the name of the variable used to represent the query defined by @input_data_1. The data type of the variable in the external script depends on the language. In case of R, the input variable is a data frame. In the case of Python, input must be tabular. *input_data_1_name* is **sysname**.  
   
  Default value is "InputDataSet".  
   
- [ @input_data_1 = ] '*input_data_1*'  
+ [ @input_data_1 =  N'*input_data_1*' ]  
  Specifies the input data used by the external script in the form of a [!INCLUDE[tsql](../../includes/tsql-md.md)] query. *input_data_1* is **nvarchar(max)**.  
   
- [ @output_data_1_name = ] '*output_data_1_name*'  
+ [ @output_data_1_name =  N'*output_data_1_name*' ]  
  Specifies the name of the variable in the external script that contains the data to be returned to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] upon completion of the stored procedure call. The data type of the variable in the external script depends on the language. In the case of R, the output must be a data frame. In the case of Python, the output must be a pandas data frame. *output_data_1_name* is **sysname**.  
   
  Default value is "OutputDataSet".  
   
- [ @parallel = ] 0 | 1  
+ [ @parallel = 0 | 1 ]  
  Enable parallel execution of R scripts by setting the `@parallel` parameter to 1. The default for this parameter is 0 (no parallelism).  
   
  For R scripts that do not use RevoScaleR functions, using the  `@parallel` parameter can be beneficial for processing large datasets, assuming the script can be trivially parallelized. For example, when using the R `predict` function with a model to generate new predictions, set `@parallel = 1` as a hint to the query engine. If the query can be parallelized, rows are distributed according to the **MAXDOP** setting.  
@@ -101,12 +78,13 @@ Indicates the script language. *language* is **sysname**.
   
  For R scripts that use RevoScaleR functions, parallel processing is handled automatically and you should not specify `@parallel = 1` to the **sp_execute_external_script** call.  
   
- [ @params = ] N'*@parameter_name data_type* [ OUT | OUTPUT ] [ ,...n ]'  
+ [ @params = N'*@parameter_name data_type* [ OUT | OUTPUT ] [ ,...n ]' ]  
  A list of input parameter declarations that are used in the external script.  
   
- [ @parameter1 = ] '*value1*'  [ OUT | OUTPUT ] [ ,...n ]  
+ [ @parameter1 = '*value1*'  [ OUT | OUTPUT ] [ ,...n ] ]  
  A list of values for the input parameters used by the external script.  
-  
+
+
 ## Remarks  
  Use **sp_execute_external_script** to execute scripts written in a supported language such as R. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] is comprised of a server component installed with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and a set of workstation tools and connectivity libraries that connect the data scientist to the high-performance environment of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Install R Services (In-Database) during [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup to enable the execution of R scripts. For more information, see [Set up SQL Server R Services &#40;In-Database&#41;](../../advanced-analytics/r-services/set-up-sql-server-r-services-in-database.md).  
   
@@ -114,6 +92,7 @@ Indicates the script language. *language* is **sysname**.
 
 Monitor script execution using [sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md) and [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md). 
 
+ By default, result sets returned by this stored procedure are output with unnamed columns. Column names used within a script are local to the scripting environment and are not reflected in the outputted result set. To name result set columns, use the `WITH RESULTS SET` clause of [`EXECUTE`](../../t-sql/language-elements/execute-transact-sql.md).
   
  In addition to returning a result set, you can return scalar values from R script to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] using OUTPUT parameters. The following example shows the use of OUTPUT parameter:  
   
@@ -168,17 +147,11 @@ SELECT tipped, passenger_count, trip_time_in_secs, trip_distance, d.direct_dista
   
 -   CLR user-defined types  
   
- `WITH RESULTS SETS`  clause is mandatory if you are returning a result set from R . The specified column data types need to match the types supported in R (**bit**, **int**, **float**, **datetime**, **varchar**)  
-  
  **datetime** values in the input are converted to NA on the R side for values that do not fit the permissible range of values in R. this is required because [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permits a larger range of values than is supported in the R language.  
   
  Float values (for example, +Inf, -Inf, NaN) are not supported in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] even though both languages use IEEE 754. Current behavior just sends the values to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] directly and as a result sqlclient in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] throws error. These values convert to **NULL**.  
   
- When using the `WITH RESULTS SET` clause, an error is raised in the following conditions:  
-  
--   The number of columns doesn’t match the number of columns in the R data frame.  
-  
--   Any [!INCLUDE[tsql](../../includes/tsql-md.md)] data type that cannot be mapped to an R data type is transfered as NULL. Any R result set that cannot be mapped to a [!INCLUDE[tsql](../../includes/tsql-md.md)] data type, transfers as NULL.  
+ Any R result set that cannot be mapped to a [!INCLUDE[tsql](../../includes/tsql-md.md)] data type, is output as NULL.  
   
 ## Permissions  
  Requires **EXECUTE ANY EXTERNAL SCRIPT** database permission.  

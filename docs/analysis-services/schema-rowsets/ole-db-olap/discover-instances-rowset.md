@@ -21,7 +21,8 @@ ms.assetid: e0842e63-089d-468d-869f-634da343d9fb
 caps.latest.revision: 30
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # DISCOVER_INSTANCES Rowset
   Describes the instances on the server.  

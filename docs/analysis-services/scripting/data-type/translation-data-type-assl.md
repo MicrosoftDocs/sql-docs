@@ -23,7 +23,8 @@ ms.assetid: d40039e1-3ff6-4e20-8d8b-5baf501f726f
 caps.latest.revision: 11
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Translation Data Type (ASSL)
   Defines a primitive data type that represents a localized translation.  

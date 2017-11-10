@@ -22,7 +22,8 @@ ms.assetid: 0bac050d-cd3b-427b-884a-65a91be89500
 caps.latest.revision: 38
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Write-Enabled Dimensions
     

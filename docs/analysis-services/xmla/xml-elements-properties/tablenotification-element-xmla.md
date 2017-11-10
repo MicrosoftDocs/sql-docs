@@ -25,9 +25,10 @@ helpviewer_keywords:
   - "TableNotification element"
 ms.assetid: 097b0d53-cb0b-4454-963f-60964fd429e0
 caps.latest.revision: 11
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # TableNotification Element (XMLA)
   Represents a table notification for a [NotifyTableChange](../../../analysis-services/xmla/xml-elements-commands/notifytablechange-element-xmla.md) command.  

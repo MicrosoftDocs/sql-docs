@@ -25,7 +25,8 @@ ms.assetid: f3c06978-c181-4a73-9b57-8fc30358faab
 caps.latest.revision: 37
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # TimeBinding Data Type (ASSL)
   Defines a derived data type that represents a binding to time periods.  

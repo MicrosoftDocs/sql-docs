@@ -22,7 +22,8 @@ ms.assetid: a12ff02f-6d0b-4488-9846-3609fc0d0554
 caps.latest.revision: 33
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Creating Stored Procedures
   All stored procedures must be associated with a common language runtime (CLR) or Component Object Model (COM) class in order to be used. The class must be installed on the server — usually in the form of a [!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX® dynamic link library (DLL) — and registered as an assembly on the server or in an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database.  

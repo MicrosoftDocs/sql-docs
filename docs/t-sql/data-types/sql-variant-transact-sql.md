@@ -1,7 +1,7 @@
 ---
 title: "sql_variant (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/12/2017"
+ms.date: "9/12/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -21,9 +21,10 @@ helpviewer_keywords:
   - "storage [SQL Server], sql_variant"
 ms.assetid: 01229779-8bc1-4c7d-890a-8246d4899250
 caps.latest.revision: 43
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "On Demand"
 ---
 # sql_variant (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

@@ -21,7 +21,8 @@ ms.assetid: 825ef719-2f44-4979-be01-5a81f54e1a53
 caps.latest.revision: 14
 author: "Minewiskan"
 ms.author: "owend"
-manager: "jhubbard"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # View the Formula for a Time Series Model (Data Mining)
   If you created a time series model using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Mining, the easiest way to see the regression equation for the model is to use the **Mining Legend** of the [Microsoft Time Series Viewer](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md), which presents all the constants in a readable format.  

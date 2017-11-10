@@ -23,7 +23,8 @@ ms.assetid: 8c4d2ff7-17e1-4e74-bec7-637e0b191acf
 caps.latest.revision: 14
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Action Data Type (ASSL)
   Defines an abstract primitive data type that represents an action in a [Cube](../../../analysis-services/scripting/objects/cube-element-assl.md) element or a [Perspective](../../../analysis-services/scripting/objects/perspective-element-assl.md) element.  

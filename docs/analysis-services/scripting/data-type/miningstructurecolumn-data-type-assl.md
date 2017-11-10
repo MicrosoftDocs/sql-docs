@@ -25,7 +25,8 @@ ms.assetid: b6d6e7a5-9c48-40c4-b147-8fcd5e429ae3
 caps.latest.revision: 38
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # MiningStructureColumn Data Type (ASSL)
   Defines an abstract primitive data type that represents information about a column in a [MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md) element.  

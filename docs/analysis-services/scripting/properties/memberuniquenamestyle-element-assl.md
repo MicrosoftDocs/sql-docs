@@ -23,7 +23,8 @@ ms.assetid: f0771c81-0127-4203-9501-ae4f864730fa
 caps.latest.revision: 13
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # MemberUniqueNameStyle Element (ASSL)
   Determines how unique names are generated for members of hierarchies contained within the [CubeDimension](../../../analysis-services/scripting/data-type/cubedimension-data-type-assl.md) element.  

@@ -16,7 +16,8 @@ ms.assetid: 91220b21-adbc-49a9-b200-8bf0a724eff1
 caps.latest.revision: 13
 author: "Minewiskan"
 ms.author: "owend"
-manager: "jhubbard"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Delete a Filter from a Mining Model
   When you create a filter on a mining model, you can create models on a subset of the data in the data source view. Filters are also useful for testing the accuracy of the model on a subset of the original data.  

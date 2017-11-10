@@ -15,7 +15,8 @@ ms.assetid: 201a3fda-f162-45d7-bf39-74dcb92fd0e6
 caps.latest.revision: 19
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Configure Disk Space Usage (Power Pivot for SharePoint)
   A [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint deployment uses the disk space of the host computer to cache [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] databases for faster reloads. Every [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] database that is loaded in memory is first cached to disk so that it can be quickly reloaded later to service new requests. By default, [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint uses all available disk space to cache its databases, but can modify this behavior by setting properties that limit how much disk space is used.  

@@ -30,9 +30,10 @@ helpviewer_keywords:
   - "time [SQL Server], system"
 ms.assetid: 8423c753-cebe-4edd-871d-0138e092199f
 caps.latest.revision: 43
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Active"
 ---
 # SYSDATETIMEOFFSET (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -110,78 +111,6 @@ SELECT CONVERT (date, SYSDATETIME())
 ```  
   
 ### C. Converting date and time to times  
- The following example shows you how to convert date and time values to `time`.  
-  
-```  
-SELECT CONVERT (time, SYSDATETIME()) AS SYSDATETIME()  
-    ,CONVERT (time, SYSDATETIMEOFFSET()) AS SYSDATETIMEOFFSET()  
-    ,CONVERT (time, SYSUTCDATETIME()) AS SYSUTCDATETIME()  
-    ,CONVERT (time, CURRENT_TIMESTAMP) AS CURRENT_TIMESTAMP  
-    ,CONVERT (time, GETDATE()) AS GETDATE()  
-    ,CONVERT (time, GETUTCDATE()) AS GETUTCDATE();  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
- ```
-SYSDATETIME()      13:18:45.3490361
-SYSDATETIMEOFFSET()13:18:45.3490361
-SYSUTCDATETIME()   20:18:45.3490361
-CURRENT_TIMESTAMP  13:18:45.3470000
-GETDATE()          13:18:45.3470000
-GETUTCDATE()       20:18:45.3470000
-```  
-  
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- The following examples use the six [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] system functions that return current date and time to return the date, time, or both. The values are returned in series; therefore, their fractional seconds might be different.  
-  
-### D. Showing the formats that are returned by the date and time functions  
- The following example shows the different formats that are returned by the date and time functions.  
-  
-```  
-SELECT SYSDATETIME() AS SYSDATETIME  
-    ,SYSDATETIMEOFFSET() AS SYSDATETIMEOFFSET  
-    ,SYSUTCDATETIME() AS SYSUTCDATETIME  
-    ,CURRENT_TIMESTAMP AS CURRENT_TIMESTAMP  
-    ,GETDATE() AS GETDATE  
-    ,GETUTCDATE() AS GETUTCDATE;  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
- ```
-SYSDATETIME()      2007-04-30 13:10:02.0474381
-SYSDATETIMEOFFSET()2007-04-30 13:10:02.0474381 -07:00
-SYSUTCDATETIME()   2007-04-30 20:10:02.0474381
-CURRENT_TIMESTAMP  2007-04-30 13:10:02.047
-GETDATE()          2007-04-30 13:10:02.047
-GETUTCDATE()       2007-04-30 20:10:02.047
-```  
-  
-### E. Converting date and time to date  
- The following example shows you how to convert date and time values to `date`.  
-  
-```  
-SELECT CONVERT (date, SYSDATETIME())  
-    ,CONVERT (date, SYSDATETIMEOFFSET())  
-    ,CONVERT (date, SYSUTCDATETIME())  
-    ,CONVERT (date, CURRENT_TIMESTAMP)  
-    ,CONVERT (date, GETDATE())  
-    ,CONVERT (date, GETUTCDATE());  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
- ```
-2007-04-30
-2007-04-30
-2007-04-30
-2007-04-30
-2007-04-30
-2007-04-30
-```  
-  
-### F. Converting date and time to times  
  The following example shows you how to convert date and time values to `time`.  
   
 ```  

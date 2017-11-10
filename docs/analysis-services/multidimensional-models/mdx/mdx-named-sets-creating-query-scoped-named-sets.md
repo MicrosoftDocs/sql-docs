@@ -18,7 +18,8 @@ ms.assetid: 78bc1e9a-1bc4-4a5a-ab0b-cf430c8fbfe1
 caps.latest.revision: 36
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "On Demand"
 ---
 # MDX Named Sets - Creating Query-Scoped Named Sets
   If a named set is only required for a single Multidimensional Expressions (MDX) query, you can define that named set by using the WITH keyword. A named set that is created by using the WITH keyword no longer exists after the query has finished running.  

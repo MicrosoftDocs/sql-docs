@@ -25,9 +25,10 @@ helpviewer_keywords:
   - "Mode element"
 ms.assetid: 43a54181-6494-48c3-b14b-376d8939fa9f
 caps.latest.revision: 13
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Mode Element (XMLA)
   Identifies the mode to be used by the parent [Lock](../../../analysis-services/xmla/xml-elements-commands/lock-element-xmla.md) element when creating a lock on a specified object.  

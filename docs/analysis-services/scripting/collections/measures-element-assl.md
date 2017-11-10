@@ -25,7 +25,8 @@ ms.assetid: d2107112-f620-4fd7-a05f-bb2606b4be18
 caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Measures Element (ASSL)
   Contains the collection of [Measure](../../../analysis-services/scripting/objects/measure-element-assl.md) elements associated with the parent element.  

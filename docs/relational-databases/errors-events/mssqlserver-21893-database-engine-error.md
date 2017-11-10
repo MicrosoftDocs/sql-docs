@@ -13,9 +13,10 @@ helpviewer_keywords:
   - "21893 (Database Engine error)"
 ms.assetid: 1ab1195a-fe2a-4e06-b871-b177b6bea1fe
 caps.latest.revision: 6
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Inactive"
 ---
 # MSSQLSERVER_21893
   

@@ -23,7 +23,8 @@ ms.assetid: f49c0c96-4277-417b-9660-d77a4faebd00
 caps.latest.revision: 15
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # ProactiveCachingIncrementalProcessingBinding Data Type (ASSL)
   Defines a derived data type that represents a binding to the [ProactiveCaching](../../../analysis-services/scripting/objects/proactivecaching-element-assl.md) element about the status of the process of rebuilding the cache.  

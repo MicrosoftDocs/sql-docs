@@ -25,7 +25,8 @@ ms.assetid: a9dd4890-a5da-48e7-9bbf-f857107cde8d
 caps.latest.revision: 31
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Levels Element (ASSL)
   Contains the collection of [Level](../../../analysis-services/scripting/objects/level-element-assl.md) elements in a [Hierarchy](../../../analysis-services/scripting/objects/hierarchy-element-assl.md) element.  

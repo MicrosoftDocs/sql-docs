@@ -16,6 +16,7 @@ caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Table-Valued Object (Column) Properties (Visual Database Tools)
 These properties appear when you select a column in a table-valued object in the **Diagram** pane of Query and View Designer.  

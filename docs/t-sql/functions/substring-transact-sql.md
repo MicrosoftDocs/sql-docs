@@ -24,9 +24,10 @@ helpviewer_keywords:
   - "characters [SQL Server], returning part of"
 ms.assetid: a19c808f-aaf9-4a69-af59-b1a5fc3e5c4c
 caps.latest.revision: 65
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Active"
 ---
 # SUBSTRING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]

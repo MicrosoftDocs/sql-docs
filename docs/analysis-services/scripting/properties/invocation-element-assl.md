@@ -25,7 +25,8 @@ ms.assetid: f6bf64ad-ae57-4d46-bf92-1d07a65378bb
 caps.latest.revision: 35
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Invocation Element (ASSL)
   Specifies how an [Action](../../../analysis-services/scripting/objects/action-element-assl.md) should be invoked.  

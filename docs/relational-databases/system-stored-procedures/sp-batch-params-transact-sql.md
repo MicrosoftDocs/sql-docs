@@ -28,10 +28,6 @@ ms.workload: "Inactive"
 
   Returns a rowset that contains information about the parameters included in a [!INCLUDE[tsql](../../includes/tsql-md.md)] batch. **sp_batch_params** only parses the batch specified and returns information about embedded parameter values. It does not execute the batch or modify the execution environment.  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
-  
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  

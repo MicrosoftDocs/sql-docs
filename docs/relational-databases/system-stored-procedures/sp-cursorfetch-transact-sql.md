@@ -28,10 +28,6 @@ ms.workload: "Inactive"
 
   Fetches a buffer of one or more rows from the database. The group of rows in this buffer is called the cursor's *fetch buffer*. sp_cursorfetch is invoked by specifying ID = 7 in a tabular data stream (TDS) packet.  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
-  
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  

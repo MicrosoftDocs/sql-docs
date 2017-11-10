@@ -28,10 +28,6 @@ ms.workload: "Inactive"
 
   Adds a user-defined audit event to the **USER_DEFINED_AUDIT_GROUP**. If **USER_DEFINED_AUDIT_GROUP** is not enabled, **sp_audit_write** is ignored.  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
-  
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  

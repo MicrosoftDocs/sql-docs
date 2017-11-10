@@ -28,10 +28,6 @@ ms.workload: "Inactive"
 
   Sets the network names in **sys.servers** to their actual network computer names for remote instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. This procedure can be used to enable execution of remote stored procedure calls to computers that have network names containing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identifiers that are not valid.  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
-  
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  

@@ -23,7 +23,7 @@ ms.workload: "On Demand"
 # Upgrade a SQL Server Failover Cluster Instance
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supports upgrading a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster to a new version of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], to a new [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service pack or cumulative update, or when installing to a new Windows service pack or cumulative update  separately on all failover cluster nodes, with downtime limited to a single manual failover (or two manual failovers if failing back to the original primary).  
   
- Upgrading the Windows operating system of a failover cluster is not supported for operating systems before [!INCLUDE[winblue-server-2-md](../../../includes/winblue-server-2-md.md)]. To upgrade a cluster node running on [!INCLUDE[winblue-server-2-md](../../../includes/winblue-server-2-md.md)], see [Performing a rolling upgrade or update](#performing-a-rolling-upgrade-or-update).  
+ Upgrading the Windows operating system of a failover cluster is not supported for operating systems before [!INCLUDE[winblue-server-2-md](../../../includes/winblue-server-2-md.md)]. To upgrade a cluster node running on [!INCLUDE[winblue-server-2-md](../../../includes/winblue-server-2-md.md)], see [Perform a rolling upgrade or update](#perform-a-rolling-upgrade-or-update).  
   
  Support details are as follows:  
   
@@ -52,7 +52,7 @@ ms.workload: "On Demand"
   
 -   [Hardware and Software Requirements for Installing SQL Server](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md):  Review the software requirements for installing [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. If additional software is required, install it on each node before you begin the upgrade process to minimize any downtime.  
   
-## Performing a rolling upgrade or update  
+## Perform a rolling upgrade or update  
  To upgrade a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster to [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], use [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] setup to upgrade each failover cluster node, one at a time, starting with the passive nodes. As you upgrade each node, it is left out of the possible owners of the failover cluster. If there is an unexpected failover, the upgraded nodes do not participate in the failover until cluster resource group ownership is moved to an upgraded node by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] setup.  
   
  By default, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] setup automatically determines when to fail over to an upgraded node. This depends on the total number of nodes in the failover cluster instance and the number of nodes that have already been upgraded. When half of the nodes or more have already been upgraded, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] setup causes a failover to an upgraded node when you perform upgrade on the next node. Upon failover to an upgraded node, the cluster group is moved to an upgraded node. All the upgraded nodes are put in the possible owners list and all the nodes that are not yet upgraded are removed from the possible owners list. As you upgrade each remaining node, it is added to the possible owners of the failover cluster.  

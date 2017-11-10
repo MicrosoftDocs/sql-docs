@@ -36,10 +36,6 @@ ms.workload: "Inactive"
 > [!IMPORTANT]  
 >  Changing the vardecimal storage format state of a database can affect backup and recovery, database mirroring, sp_attach_db, log shipping, and replication.  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
-  
 ## Syntax  
   
 ```  

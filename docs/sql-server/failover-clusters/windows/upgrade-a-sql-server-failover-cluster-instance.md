@@ -23,11 +23,11 @@ ms.workload: "On Demand"
 # Upgrade a SQL Server Failover Cluster Instance
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supports upgrading a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster to a new version of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], to a new [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service pack or cumulative update, or when installing to a new Windows service pack or cumulative update  separately on all failover cluster nodes, with downtime limited to a single manual failover (or two manual failovers if failing back to the original primary).  
   
- Upgrading the Windows operating system of a failover cluster is not supported for operating systems before [!INCLUDE[winblue-server-2-md](../../../includes/winblue-server-2-md.md)]. To upgrade a cluster node running on [!INCLUDE[winblue-server-2-md](../../../includes/winblue-server-2-md.md)], see [Perform a rolling upgrade or update](#perform-a-rolling-upgrade-or-update).  
+ Upgrading the Windows operating system of a failover cluster is not supported for operating systems before [!INCLUDE[winblue-server-2-md](../../../includes/winblue-server-2-md.md)]. To upgrade a cluster node running on [!INCLUDE[winblue-server-2-md](../../../includes/winblue-server-2-md.md)] or above, see [Perform a rolling upgrade or update](#perform-a-rolling-upgrade-or-update).  
   
  Support details are as follows:  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] upgrade is supported both through the user interface and from the command prompt. You can run upgrade from the command prompt on each failover cluster node, or by using the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] setup UI  to upgrade each cluster node.  For more information, see [Upgrade a SQL Server Failover Cluster Instance &#40;Setup&#41;](../../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance-setup.md) and [Install SQL Server 2016 from the Command Prompt](../../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] upgrade is supported both through the user interface and from the command prompt. You can run upgrade from the command prompt on each failover cluster node, or by using the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] setup UI  to upgrade each cluster node.  For more information, see [Upgrade a SQL Server Failover Cluster Instance &#40;Setup&#41;](../../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance-setup.md) and [Install SQL Server from the Command Prompt](../../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).  
   
 -   The following scenarios are not supported as part of a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] upgrade:  
   
@@ -59,11 +59,11 @@ ms.workload: "On Demand"
   
  This process results in downtime limited to one failover time and database upgrade script execution time during the whole failover cluster upgrade.  
   
- To control the failover behavior of cluster nodes during the upgrade process, run the upgrade operation at the command prompt and use the /FAILOVERCLUSTERROLLOWNERSHIP parameter. For more information, see [Install SQL Server 2016 from the Command Prompt](../../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).  
+ To control the failover behavior of cluster nodes during the upgrade process, run the upgrade operation at the command prompt and use the /FAILOVERCLUSTERROLLOWNERSHIP parameter. For more information, see [Install SQL Server from the Command Prompt](../../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).  
   
 ## Next steps  
  [Upgrade SQL Server Using the Installation Wizard &#40;Setup&#41;](../../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)   
- [Install SQL Server 2016 from the Command Prompt](../../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
+ [Install SQL Server from the Command Prompt](../../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
  [Upgrade a SQL Server Failover Cluster Instance &#40;Setup&#41;](../../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance-setup.md)  
   
   

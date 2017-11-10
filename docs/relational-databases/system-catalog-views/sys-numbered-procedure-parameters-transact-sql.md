@@ -36,10 +36,6 @@ ms.workload: "Inactive"
 > [!NOTE]  
 >  XML and CLR parameters are not supported for numbered procedures.  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
-  
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|ID of the object to which this parameter belongs.|  

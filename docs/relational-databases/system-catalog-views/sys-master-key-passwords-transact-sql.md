@@ -32,10 +32,6 @@ ms.workload: "Inactive"
   
  Each row in this view shows a **credential_id** and the **family_guid** of a database the master key of which is protected by the password associated with that credential. A join with **sys.credentials** on the **credential_id** will return useful fields, such as the **create_date** and credential name.  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
-  
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |**credential_id**|**int**|ID of the credential to which the password belongs. This ID is unique within the server instance.|  

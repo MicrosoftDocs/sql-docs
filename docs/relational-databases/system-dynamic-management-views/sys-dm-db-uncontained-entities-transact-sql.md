@@ -32,10 +32,6 @@ ms.workload: "Inactive"
   
  If a module crosses the database boundary more than once, only the first discovered crossing is reported.  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
-  
 ||||  
 |-|-|-|  
 |**Column name**|**Type**|**Description**|  

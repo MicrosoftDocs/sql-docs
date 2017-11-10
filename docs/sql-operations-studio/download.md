@@ -46,7 +46,7 @@ ms.workload: "Inactive"
    ```bash
    cd ~
    cp ~/Downloads/sqlops-linux-<version string>-x64.tar.gz ~
-   tar -xvf ~/pgi3-sqlops-linux-<version string>-x64.tar.gz
+   tar -xvf ~/sqlops-linux-<version string>-x64.tar.gz
    echo 'export PATH="$PATH:~/Downloads/sqlops-linux-x64"' >> ~/.bashrc
    source ~/.bashrc
    sqlops .

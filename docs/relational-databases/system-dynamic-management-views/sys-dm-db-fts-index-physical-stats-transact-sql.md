@@ -30,10 +30,6 @@ ms.workload: "Inactive"
 
   Returns a row for each full-text or semantic index in each table that has an associated full-text or semantic index.  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
-  
 ||||  
 |-|-|-|  
 |**Column name**|**Type**|**Description**|  

@@ -30,10 +30,6 @@ ms.workload: "Inactive"
 
   Stores the association or relationship of a particular job with one or more target servers.This table is stored in the msdb database.  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
-  
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |job_id|**uniqueidentifier**|Job identification number.|  

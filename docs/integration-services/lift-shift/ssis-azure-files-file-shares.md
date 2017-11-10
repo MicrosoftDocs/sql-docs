@@ -24,10 +24,10 @@ If you need to store and process temporary files during a single package executi
 If you need to store and process permanent files and persist them across multiple package executions, you can use either on-premises file shares or Azure Files
 
 ### Use on-premises file shares
-To continue to use **on-premises file shares**when you lift and shift packages that use local file systems into SSIS in Azure, do the following things:
+To continue to use **on-premises file shares** when you lift and shift packages that use local file systems into SSIS in Azure, do the following things:
 1.	Transfer files from local file systems to on-premises file shares.
 2.	Join the on-premises file shares to an Azure virtual network (VNet).
-3.	Join your Azure-SSIS IR to the same VNet. For more info,see [Join an Azure-SSIS integration runtime to a virtual network](https://docs.microsoft.com/en-us/azure/data-factory/join-azure-ssis-integration-runtime-virtual-network).
+3.	Join your Azure-SSIS IR to the same VNet. For more info, see [Join an Azure-SSIS integration runtime to a virtual network](https://docs.microsoft.com/en-us/azure/data-factory/join-azure-ssis-integration-runtime-virtual-network).
 4.	Connect your Azure-SSIS IR to the on-premises file shares inside the same VNet by setting up access credentials that use Windows authentication. For more info, see [Connect to on-premises data sources and Azure file shares with Windows Authentication](ssis-azure-connect-with-windows-auth.md).
 5.	Update local file paths in your packages to UNC paths pointing to on-premises file shares. For example, update `C:\abc.txt` to `\\<on-prem-server-name>\<share-name>\abc.txt`.
 

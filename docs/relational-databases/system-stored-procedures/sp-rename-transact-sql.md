@@ -192,10 +192,6 @@ CK_Employee_SickLeaveHours            HumanResources     CHECK_CONSTRAINT
 ### F. Renaming statistics  
  The following example creates a statistics object named contactMail1 and then renames the statistic to NewContact by using sp_rename. When renaming statistics, the object must be specified in the format schema.table.statistics_name.  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]).|  
-  
 ```  
 CREATE STATISTICS ContactMail1  
     ON Person.Person (BusinessEntityID, EmailPromotion)  

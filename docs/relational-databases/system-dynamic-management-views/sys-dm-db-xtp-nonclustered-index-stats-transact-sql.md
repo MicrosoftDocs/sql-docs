@@ -38,10 +38,6 @@ ms.workload: "Inactive"
   
  For more information about memory-optimized, nonclustered indexes, see [SQL Server In-Memory OLTP Internals Overview](http://t.co/T6zToWc6y6), page 17.  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
-  
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|ID of the object.|  

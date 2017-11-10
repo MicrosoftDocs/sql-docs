@@ -30,7 +30,7 @@ Typically, setup of the machine components used in SQL Server 2016 and SQL Serve
 
 + **If the computer has an internet connection**
 
-    SQL Server locates and download the components for you, then installs them during setup. You must accept the license terms separately for each open source component (R or Python) that you install.
+    SQL Server locates and downloads the components for you, and then installs them during setup. Accept the license terms separately for each open source component (R or Python) that you install.
 
 + **If the computer does not have internet access**
 

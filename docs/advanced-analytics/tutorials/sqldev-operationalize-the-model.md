@@ -137,7 +137,7 @@ Now let's see how batch scoring works.
     EXEC [dbo].[PredictTip] @inquery = @query_string;
     ```
   
-4. The stored procedure returns a series of values representing the prediction for each of the top ten trips. However, the top trips are also single-passenger trips with a relatively short trip distance, for which the driver is unlikely to get a tip.
+4. The stored procedure returns a series of values representing the prediction for each of the top 10 trips. However, the top trips are also single-passenger trips with a relatively short trip distance, for which the driver is unlikely to get a tip.
   
 
 > [!TIP]
@@ -148,7 +148,7 @@ Now let's see how batch scoring works.
 
 Sometimes you want to pass in individual values from an application and get a single result based on those values. For example, you could set up an Excel worksheet, web application, or Reporting Services report to call the stored procedure and provide inputs typed or selected by users.
 
-In this section, you'll learn how to create single predictions using a stored procedure.
+In this section, you learn how to create single predictions using a stored procedure.
 
 1. Take a minute to review the code of the stored procedure _PredictTipSingleMode_, which was included as part of the download.
   
@@ -199,7 +199,7 @@ In this section, you'll learn how to create single predictions using a stored pr
     EXEC [dbo].[PredictTipSingleMode] 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
     ```
 
-3. The results indicate that the probability of getting a tip is very low on these top 10 trips, since all are single-passenger trips over a relatively short distance.
+3. The results indicate that the probability of getting a tip is low on these top 10 trips, since all are single-passenger trips over a relatively short distance.
 
 ## Conclusions
 

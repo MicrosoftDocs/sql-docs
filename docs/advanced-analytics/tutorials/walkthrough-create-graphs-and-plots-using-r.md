@@ -21,7 +21,7 @@ ms.workload: "On Demand"
 ---
 # Create graphs and plots using SQL and R (walkthrough)
 
-In this part of the walkthrough, you'll learn techniques for generating plots and maps using R with SQL Server data. You'll create a simple histogram, to get some practice, and then develop a more complex map plot.
+In this part of the walkthrough, you learn techniques for generating plots and maps using R with SQL Server data. You create a simple histogram, to get some practice, and then develop a more complex map plot.
 
 ### Create a histogram
 
@@ -48,8 +48,6 @@ In this part of the walkthrough, you'll learn techniques for generating plots an
 ### Create a map plot
 
 Typically, database servers block Internet access. This can be inconvenient when using R packages that need to download maps or other images to generate plots. However, there is a workaround that you might find useful when developing your own applications. Basically, you generate the map representation on the client, and then overlay on the map the points that are stored as attributes in the SQL Server table.
-
-We'll walk you through it in this lesson.
 
 1. Define the function that creates the R plot object. The custom function *mapPlot* creates a scatter plot that uses the taxi pickup locations, and plots the number of rides that started from each location. It uses the **ggplot2** and  **ggmap** packages, which should already be installed and loaded.
 

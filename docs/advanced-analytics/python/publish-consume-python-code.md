@@ -301,14 +301,13 @@ Before you can start publishing your Python code and models thorugh Microsoft Ma
 
 3. Generate the statically-generated client library by passing the `rserver-swagger-<version>.json` file to the Swagger code generator and specifying the language you want. In this case, you should specify Python.  
 
-   For example, if you use AutoRest to generate a Python client library, it might look like this, where the 3-digit number represents the R Server version number:
-   
-   `AutoRest.exe -Input rserver-swagger-9.1.0.json -CodeGenerator Python  -OutputDirectory C:\Users\rserver-user\Documents\Python`
-   
+    For example, if you use AutoRest to generate a Python client library, it might look like this, where the 3-digit number represents the R Server version number:
+    
+    `AutoRest.exe -Input rserver-swagger-9.1.0.json -CodeGenerator Python  -OutputDirectory C:\Users\rserver-user\Documents\Python`
 
-    You can now provide some custom headers and make other changes before using the generated client library stub. See the [Command Line Interface](https://github.com/Azure/autorest/blob/master/docs/user/cli.md) documentation on GitHub for details regarding different configuration options and preferences, such as renaming the namespace.
+4. You can also provide some custom headers and make other changes before using the generated client library stub. See the [Command Line Interface](https://github.com/Azure/autorest/blob/master/docs/user/cli.md) documentation on GitHub for details regarding different configuration options and preferences, such as renaming the namespace.
    
-4. Explore the core client library to see the various API calls you can make. 
+5. Explore the core client library to see the various API calls you can make. 
 
     In our example, Autorest generated some directories and files for the Python client library on your local system. By default, the namespace (and directory) is `deployrclient` and might look like this:
    
@@ -317,7 +316,6 @@ Before you can start publishing your Python code and models thorugh Microsoft Ma
     For this default namespace, the client library itself is called `deploy_rclient.py`. If you open this file in your IDE such as Visual Studio, you will see something like this:
    
    ![Python client library](./media/data-scientist-python-client-library.png)
-
 
 
 ### Step 2. Add authentication and header logic
@@ -467,9 +465,6 @@ After authentication, you can start a Python session and create a model for publ
 
 3. Create a snapshot of this Python session so this environment can be saved in the web service and reproduced at consume time. Snapshots are useful when you need a prepared environment that includes certain libraries, objects, models, files, and artifacts. Snapshots save the whole workspace and working directory. However, when publishing, you can use only snapshots that you've created.
 
-   > [!NOTE] 
-   > While snapshots can also be used when publishing a web service for environment dependencies, it may have an impact on the performance of the consumption time.  For optimal performance, consider the size of the snapshot carefully and ensure that you keep only those workspace objects you need and purge the rest. In a session, you can use the Python `del` function or [the `deleteWorkspaceObject` API request](https://microsoft.github.io/deployr-api-docs/#delete-workspace-object) to remove unnecessary objects. 
-
    ```python
    #Create a snapshot of the current session.
    response = client.create_snapshot(session_id, deployrclient.models.CreateSnapshotRequest("Iris Snapshot"), headers)
@@ -482,22 +477,22 @@ After authentication, you can start a Python session and create a model for publ
        print(snapshot)
    ```
 
+  > [!NOTE] 
+   > While snapshots can also be used when publishing a web service for environment dependencies, it may have an impact on the performance of the consumption time.  For optimal performance, consider the size of the snapshot carefully and ensure that you keep only those workspace objects you need and purge the rest. In a session, you can use the Python `del` function or [the `deleteWorkspaceObject` API request](https://microsoft.github.io/deployr-api-docs/#delete-workspace-object) to remove unnecessary objects. 
+
 ### Step 4. Publish the model 
 
 After your client library has been generated and you've built the authentication logic into your application, you can interact with the core APIs to create a Python session, create a model, and then publish a web service using that model.
 
-> [!NOTE]
-> Remember that you must be authenticated before you make any API calls. Therefore, include `headers` in all requests.
+Some things to remeber:
 
-+ Publish this SVM model as a Python web service in Machine Learning  Server. This web service will score a vector that gets passed to it.
++ You must be authenticated before you make any API calls. Therefore, include `headers` in all requests.
++ To ensure that the web service is registered as a Python service, be sure to specify `runtime_type="Python"`. If you don't set the runtime type to Python, it defaults to R.
++ Scoring requires a vector with sepal length, sepal width, petal length, and petal width
 
-> [!IMPORTANT]
-> To ensure that the web service is registered as a Python service, be sure to specify `runtime_type="Python"`. If you don't set the runtime type to Python, it defaults to R.
+The following code publishes the SVM model as a Python web service. This web service generates a predicted category based on values passed to it.
 
 ```python
-   #Define a web service that determines the iris species by scoring 
-   #a vector of sepal length and width, petal length and width
-   
    #Set `flower_data` for the sepal and petal length and width
    flower_data = deployrclient.models.ParameterDefinition(name = "flower_data", type = "vector")
    #Set `iris_species` for the species of iris
@@ -546,22 +541,22 @@ This section demonstrates how to consume the service in the same session where i
    #Record the R Server endpoint URL hosting the web services you created
    url = "http://localhost:12800"
 
-   #Give the request.Session object the authentication headers 
-   #so you don't have to repeat it with each request.
+   #Include the request.Session object in the authentication headers.
+   #By doing so, you don't need to repeat it with each request.
    s.headers = headers
 
-   # Retrieve the service-specific swagger file using the requests library.
+   # Retrieve the service-specific Swagger file using the requests library.
    swagger_resp = s.get(url+"/api/Iris/V1.0/swagger.json")
 
-   #Either download service-specific swagger file using the json library.
+   #You can download a service-specific Swagger file using the json library.
    with open('iris_swagger.json','w') as f:
       (json.dump(client.get_web_service_swagger("Iris","V1.0",headers),f, indent = 1))
 
-   #Or print just what you need from the Swagger file, 
-   #such as the routing paths for the endpoints to be consumed.
+   #Or, you can print just what you need from the Swagger file. 
+   #This example gets the routing paths for the endpoints to be consumed.
    print(json.dumps(swagger_resp.json()["paths"], indent = 1, sort_keys = True))
 
-   #Or, print input and output parameters as defined in the Swagger.io format
+   #You can also print input and output parameters as defined in the Swagger.io format
    print("Input")
    print(json.dumps(swagger_resp.json()["definitions"]["InputParameters"], indent = 1, sort_keys = True))
    print("Output")
@@ -590,7 +585,7 @@ Now that you've created a web service, you can update, delete, or republish that
 
 ### Update a web service
 
-You can update a web service to change the code, model, description, inputs, outputs, and more. In this example, we update the service to add a description useful to people who might consume this service.
+ In this example, we update the service to add a description useful to people who might consume this service.
 
 ```python
 #Define what needs to be updated. Here we add a description.
@@ -601,9 +596,11 @@ update_request = deployrclient.models.PublishWebServiceRequest(
 client.patch_web_service_version("Iris", "V1.0", update_request, headers)
 ```
 
+You can update a web service to change the code, model, description, inputs, outputs, and more.
+
 ### Publish another version
 
-You can also publish another version of the web service. In this example, the service will now return the Iris species as a string instead of as a list of strings.
+In this example, the service will now return the Iris species as a string instead of as a list of strings.
 
 ```python
 #Publish another version of the web service, but this time 
@@ -630,9 +627,11 @@ resp = s.post(url+"/api/Iris/V2.0",json={"flower_data":[5.1,3.5,1.4,.2]})
 print(json.dumps(resp.json(), indent = 1, sort_keys = True))
 ```
 
+You can use this pattern to publish multiple versions of the same web service. 
+
 ### List services
 
-Get a list of all web services, including those created by other users or in different languages.
+This sample gets a list of all web services, including those created by other users or in different languages.
 
 ```python
 #Return the list of all existing web services.
@@ -646,11 +645,11 @@ for service in client.get_all_web_services(headers):
 
 ### Delete services
 
-You can delete services you've created. You can also delete the services of others, if you are assigned to a role that has the appropriate permissions.
-
 In this example, we delete the second web service version we just published.
 
 ```python
 #Delete the second version we just published.
 client.delete_web_service_version("Iris","V2.0",headers)
 ```
+
+You can delete any service that you created. You can delete the services of others only if you are assigned to a role that has the appropriate permissions.

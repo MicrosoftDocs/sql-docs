@@ -3,9 +3,12 @@ title: "Referencing the ADO Libraries In a Visual Basic 6 Application | Microsof
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.tgt_pltfrm: ""
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "guide"
 ms.technology: “drivers”
 ms.topic: "article"
 dev_langs: 

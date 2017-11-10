@@ -3,8 +3,11 @@ title: "Referencing the ADO Libraries In a Visual C++ Application | Microsoft Do
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "guide"
 ms.technology: “drivers”
 ms.tgt_pltfrm: ""
 ms.topic: "article"

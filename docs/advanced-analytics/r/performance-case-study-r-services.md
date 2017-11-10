@@ -274,13 +274,13 @@ The test results show the time to save the model, and the time taken to load the
 
 Loading a trained model from a table is clearly a faster way to do prediction. We recommend that you avoid creating the model and performing scoring all in the same script.
 
-## Case study: optimization for resume matching task
+## Case study: Optimization for the resume-matching task
 
-The resume-matching model was developed by Microsoft data scientist Ke Huang to test the performance of R code in SQL Server and enable data scientists to support scalable, enterprise-level solutions.
+The resume-matching model was developed by Microsoft data scientist Ke Huang to test the performance of R code in SQL Server, and by doing so help data scientists create scalable, enterprise-level solutions.
 
 ### Methods
 
-Both the RevoScaleR and MicrosoftML packages were used to train a predictive model in a complex R solution involving large datasets. SQL queries and R code were identical. All tests were conducted on a single Azure VM with SQL Server installed. The author then compared scoring times with and without these optimizations provided by SQL Server:
+Both the RevoScaleR and MicrosoftML packages were used to train a predictive model in a complex R solution involving large datasets. SQL queries and R code were identical in all tests. Tests were conducted on a single Azure VM with SQL Server installed. The author then compared scoring times with and without the following optimizations provided by SQL Server:
 
 - In-memory tables
 - Soft-NUMA

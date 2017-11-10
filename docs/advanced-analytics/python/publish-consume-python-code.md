@@ -44,16 +44,14 @@ The workflow from publishing to consuming a Python web service can be summarized
 
 This article discusses each step of the workflow, and includes sample Python code using the iris dataset.
 
-## Sample Code
+## Sample code
 
 This sample code assumes you have satisfied the [prerequisites](#prereq) to generate a Python client library from that Swagger file and that you've used Autorest.
 
-After the code block, you'll find a step-by-step walkthrough with more detailed description of each steo in the process.
+After the code block, you'll find a step-by-step walkthrough with more detailed descriptions of the complete process.
 
 > [!IMPORTANT]
 > This example uses the local `admin` account for authentication. However, you should substitute the credentials and [authentication method](#python-auth) configured by your administrator.
-> 
-? Also, the 
 
 ```python
 ##################################################
@@ -308,15 +306,15 @@ Before you can start publishing your Python code and models thorugh Microsoft Ma
    `AutoRest.exe -Input rserver-swagger-9.1.0.json -CodeGenerator Python  -OutputDirectory C:\Users\rserver-user\Documents\Python`
    
 
-   You can now provide some custom headers and make other changes before using the generated client library stub. See the [Command Line Interface](https://github.com/Azure/autorest/blob/master/docs/user/cli.md) documentation on GitHub for details regarding different configuration options and preferences, such as renaming the namespace.
+    You can now provide some custom headers and make other changes before using the generated client library stub. See the [Command Line Interface](https://github.com/Azure/autorest/blob/master/docs/user/cli.md) documentation on GitHub for details regarding different configuration options and preferences, such as renaming the namespace.
    
 4. Explore the core client library to see the various API calls you can make. 
 
-   In our example, Autorest generated some directories and files for the Python client library on your local system. By default, the namespace (and directory) is `deployrclient` and might look like this:
+    In our example, Autorest generated some directories and files for the Python client library on your local system. By default, the namespace (and directory) is `deployrclient` and might look like this:
    
    ![Autorest output path](./media/data-scientist-python-autorest.png)
 
-   For this default namespace, the client library itself is called `deploy_rclient.py`. If you open this file in your IDE such as Visual Studio, you will see something like this:
+    For this default namespace, the client library itself is called `deploy_rclient.py`. If you open this file in your IDE such as Visual Studio, you will see something like this:
    
    ![Python client library](./media/data-scientist-python-client-library.png)
 
@@ -339,11 +337,11 @@ Before you interact with the core APIs, first authenticate, get the bearer acces
    import deployrclient
    ```
 
-2. Add the authentication logic to your application to define a connection from your local machine to Machine Learning Server, provide credentials, capture the access token, add that token to the header, and use that header for all subsequent requests.  Use the authentication method defined by your administrator: basic admin account, Active Directory/LDAP (AD/LDAP), or Azure Active Directory (AAD).
+2. Add the authentication logic to your application to define a connection from your local machine to Machine Learning Server, provide credentials, capture the access token, add that token to the header. You then use that header for all subsequent requests.  Use the authentication method defined by your administrator: basic admin account, Active Directory/LDAP (AD/LDAP), or Azure Active Directory (AAD).
 
    **AD/LDAP or `admin` account authentication**
 
-   You must call the `POST /login` API in order to authenticate. You'll need to pass in the  `username` and `password` for the local administrator, or if Active Directory is enabled, pass the LDAP account information. In turn, Machine Learning Server will issue you a bearer/access token. After authenticated, the user will not need to provide credentials again as long as the token is still valid, and a header is submitted with each request. If you do not know your connection settings, please contact your administrator.
+   Call the `POST /login` API in order to authenticate. Pass in the  `username` and `password` for the local administrator, or if Active Directory is enabled, pass the LDAP account information. In turn, Machine Learning Server issues a bearer/access token. After authenticated, the user no longer needs to provide credentials again, as long as the token is still valid and a header is submitted with each request. If you do not know your connection settings, please contact your administrator.
 
    ```python
    #Using client library generated from Autorest
@@ -361,7 +359,7 @@ Before you interact with the core APIs, first authenticate, get the bearer acces
 
    **Azure Active Directory (AAD) authentication**
 
-   You must pass the AAD credentials, authority, and client ID. In turn, AAD will issue the [Bearer access token](https://msdn.microsoft.com/microsoft-r/operationalize/security-access-tokens). After authenticated, the user will not need to provide credentials again as long as the token is still valid, and a header is submitted with each request. If you do not know your connection settings, please contact your administrator.
+   Pass the AAD credentials, authority, and client ID. In turn, AAD issues the [Bearer access token](https://msdn.microsoft.com/microsoft-r/operationalize/security-access-tokens). After authenticated, the user no longer needs to provide credentials again, as long as the token is still valid and a header is submitted with each request. If you do not know your connection settings, please contact your administrator.
 
    ```python
    #Import the AAD authentication library
@@ -400,12 +398,12 @@ Before you interact with the core APIs, first authenticate, get the bearer acces
 
 ### Step 3. Prepare session and code
 
-After authentication, you can start a Python session and create a model you'll publish later. You can include any Python code or models in a web service. Once you've set up your session environment, you can even save it as a snapshot so you can reload your session as you had it before. 
+After authentication, you can start a Python session and create a model for publishing later. You can include any Python code or models in a web service. Once you've set up your session environment, you can even save it as a snapshot so you can reload your session as you had it before. 
 
 > [!IMPORTANT]
 > Remember to include `headers` in every request.
 
-1. Create a Python session on R Server. You must specify a name and the Python language (`runtime_type="Python"`).  If you don't set the runtime type to Python, it defaults to R.
+1. Create a Python session on R Server. Be sure to specify a name and the Python language (`runtime_type="Python"`).  If you don't set the runtime type to Python, it defaults to R.
 
    This is a continuation of the example using the client library generated by Autorest:
 
@@ -586,9 +584,9 @@ This section demonstrates how to consume the service in the same session where i
    print(json.dumps(resp.json(), indent = 1, sort_keys = True))
    ```
 
-## Managing the Services
+## Managing the services
 
-Now that you've created a web service, you can update, delete, or republish that service. You can also list all the web services that are hosted using Microsoft Machine Learning Server.
+Now that you've created a web service, you can update, delete, or republish that service. You can also list all the web services that are hosted using R Server (or Machine Learning Server).
 
 ### Update a web service
 

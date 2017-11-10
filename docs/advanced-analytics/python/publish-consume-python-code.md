@@ -1,8 +1,8 @@
 ---
-title: "Publish and Consume Python Code| Microsoft Docs"
+title: "Publish and consume Python code| Microsoft Docs"
 ms.custom: ""
-ms.date: "09/29/2017"
-ms.prod: "sql-server-2016"
+ms.date: "11/09/2017"
+ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +11,7 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 author: "jeannt"
 ms.author: "jeannt"
-manager: "jhubbard"
+manager: "cgronlund"
 ms.workload: "Inactive"
 ---
 
@@ -19,15 +19,15 @@ ms.workload: "Inactive"
 
 You can deploy a working Python solution to a web service by using the operationalization feature in Microsoft Machine Learning Server. This topic describes the steps to successfully publish and then run your solution.
 
-> [!IMPORTANT]
->
-> This sample was developed for the version of Python that is included with Machine Learning Server (Standalone), and uses features in Machine Learning Server version 9.1.0.
- > 
- > To see a similar example that leverages features in the latest release of Microsoft Machine Learning Server, version 9.2.0, see this article on the Machine Learning Server site: [Deploy and manage web services in Python](https://docs.microsoft.com/machine-learning-server/operationalize/python/how-to-deploy-manage-web-services).
-
 The target audience for this article is data scientists who want to learn how to publish Python code or models as web services hosted in Microsoft Machine Learning Server. The article also explains how applications can consume the the code or models. This article assumes that you are proficient in Python.
 
-**Applies to: Machine Learning Server (Standalone) in SQL Server 2017**
+> [!IMPORTANT]
+>
+> This sample was developed for the version of Python that is included with Machine Learning Server (Standalone), and uses features in Machine Learning Server version **9.1.0**.
+ > 
+ > Cick the following link to see the same sample, republished using the newer libraries in Machine Learning Server. See [Deploy and manage web services in Python](https://docs.microsoft.com/machine-learning-server/operationalize/python/how-to-deploy-manage-web-services).
+
+**Applies to: Microsoft R Server (Standalone)**
 
 ## Overview of workflow
 
@@ -44,11 +44,11 @@ The workflow from publishing to consuming a Python web service can be summarized
 
 This article discusses each step of the workflow, and includes sample Python code using the iris dataset.
 
-## Sample Code
+## Sample code
 
 This sample code assumes you have satisfied the [prerequisites](#prereq) to generate a Python client library from that Swagger file and that you've used Autorest.
 
-After the code block, you'll find a step-by-step walkthrough with more detailed description of each steo in the process.
+After the code block, you'll find a step-by-step walkthrough with more detailed descriptions of the complete process.
 
 > [!IMPORTANT]
 > This example uses the local `admin` account for authentication. However, you should substitute the credentials and [authentication method](#python-auth) configured by your administrator.
@@ -59,7 +59,12 @@ After the code block, you'll find a step-by-step walkthrough with more detailed 
 ##################################################
 
 # Import the generated client library. 
+
 import deployrclient
+
+# This example is intended for use with Microsoft R Server 9.0.1. 
+# If you are using a newer version of Machine Learning Server, 
+# use the mrs_server library instead.
 
 ##################################################
 ##              AUTHENTICATION                  ##
@@ -69,6 +74,7 @@ import deployrclient
 #Create client instance and point it at an R Server. 
 #In this case, R Server is local.
 client = deployrclient.DeployRClient("http://localhost:12800")
+# To use ML Server, replace with mrs_server.MRSServer()
 
 #Define the login request and provide credentials 
 #Update values with the connection parameters from your admin
@@ -82,7 +88,7 @@ token_response = client.login(login_request)
 headers = {"Authorization": "Bearer {0}".format(token_response.access_token)}
 
 #Verify that the server is running.
-#Remember to include `headers` in every request!
+#Remember to include `headers` in all requests!
 status_response = client.status(headers) 
 print(status_response.status_code)
 
@@ -97,7 +103,7 @@ print(status_response.status_code)
 create_session_request = deployrclient.models.CreateSessionRequest("Session 1", runtime_type="Python")
 
 #Make the call to start the session. 
-#Remember to include headers in every method call to the server.
+#Remember to include headers in all method calls to the server.
 #Returns a session ID.
 response = client.create_session(create_session_request, headers) 
    
@@ -145,7 +151,7 @@ else:
 response = client.create_snapshot(session_id, deployrclient.models.CreateSnapshotRequest("Iris Snapshot"), headers)
 #Return the snapshot ID for reference when you publish later.
 response.snapshot_id
-#If you forget the ID, list every snapshot to get the ID again.
+#If you forget the ID, list snapshots to get the ID again.
 for snapshot in client.list_snapshots(headers):
     print(snapshot)
 
@@ -295,30 +301,28 @@ Before you can start publishing your Python code and models thorugh Microsoft Ma
 
 3. Generate the statically-generated client library by passing the `rserver-swagger-<version>.json` file to the Swagger code generator and specifying the language you want. In this case, you should specify Python.  
 
-   For example, if you use AutoRest to generate a Python client library, it might look like this, where the 3-digit number represents the R Server version number:
-   
-   `AutoRest.exe -Input rserver-swagger-9.1.0.json -CodeGenerator Python  -OutputDirectory C:\Users\rserver-user\Documents\Python`
-   
+    For example, if you use AutoRest to generate a Python client library, it might look like this, where the 3-digit number represents the R Server version number:
+    
+    `AutoRest.exe -Input rserver-swagger-9.1.0.json -CodeGenerator Python  -OutputDirectory C:\Users\rserver-user\Documents\Python`
 
-   You can now provide some custom headers and make other changes before using the generated client library stub. See the [Command Line Interface](https://github.com/Azure/autorest/blob/master/docs/user/cli.md) documentation on GitHub for details regarding different configuration options and preferences, such as renaming the namespace.
+4. You can also provide some custom headers and make other changes before using the generated client library stub. See the [Command Line Interface](https://github.com/Azure/autorest/blob/master/docs/user/cli.md) documentation on GitHub for details regarding different configuration options and preferences, such as renaming the namespace.
    
-4. Explore the core client library to see the various API calls you can make. 
+5. Explore the core client library to see the various API calls you can make. 
 
-   In our example, Autorest generated some directories and files for the Python client library on your local system. By default, the namespace (and directory) is `deployrclient` and might look like this:
+    In our example, Autorest generated some directories and files for the Python client library on your local system. By default, the namespace (and directory) is `deployrclient` and might look like this:
    
    ![Autorest output path](./media/data-scientist-python-autorest.png)
 
-   For this default namespace, the client library itself is called `deploy_rclient.py`. If you open this file in your IDE such as Visual Studio, you will see something like this:
+    For this default namespace, the client library itself is called `deploy_rclient.py`. If you open this file in your IDE such as Visual Studio, you will see something like this:
    
    ![Python client library](./media/data-scientist-python-client-library.png)
-
 
 
 ### Step 2. Add authentication and header logic
 
 Keep in mind that all APIs require authentication; therefore, all users must authenticate when making an API call using the `POST /login` API or through Azure Active Directory (AAD). 
 
-To simplify this process, bearer access tokens are issued so that users need not provide their credentials for every single call.  This bearer token is a lightweight security token that grants the “bearer” access to a protected resource: in this case, the Machine Learning Server's APIs. After a user has been authenticated, the application must validate the user’s bearer token to ensure that authentication was successful for the intended parties. To learn more about managing these tokens, see [Security Access Tokens](https://msdn.microsoft.com/microsoft-r/operationalize/security-access-tokens).
+To simplify this process, bearer access tokens are issued so that users need not provide their credentials for each call.  This bearer token is a lightweight security token that grants the “bearer” access to a protected resource: in this case, the Machine Learning Server's APIs. After a user has been authenticated, the application must validate the user’s bearer token to ensure that authentication was successful for the intended parties. To learn more about managing these tokens, see [Security Access Tokens](https://msdn.microsoft.com/microsoft-r/operationalize/security-access-tokens).
 
 Before you interact with the core APIs, first authenticate, get the bearer access token using the [authentication method](https://msdn.microsoft.com/microsoft-r/operationalize/security-authentication) configured by your administrator, and then include it in each header for each subsequent request:
 
@@ -331,11 +335,11 @@ Before you interact with the core APIs, first authenticate, get the bearer acces
    import deployrclient
    ```
 
-2. Add the authentication logic to your application to define a connection from your local machine to Machine Learning Server, provide credentials, capture the access token, add that token to the header, and use that header for all subsequent requests.  Use the authentication method defined by your administrator: basic admin account, Active Directory/LDAP (AD/LDAP), or Azure Active Directory (AAD).
+2. Add the authentication logic to your application to define a connection from your local machine to Machine Learning Server, provide credentials, capture the access token, add that token to the header. You then use that header for all subsequent requests.  Use the authentication method defined by your administrator: basic admin account, Active Directory/LDAP (AD/LDAP), or Azure Active Directory (AAD).
 
    **AD/LDAP or `admin` account authentication**
 
-   You must call the `POST /login` API in order to authenticate. You'll need to pass in the  `username` and `password` for the local administrator, or if Active Directory is enabled, pass the LDAP account information. In turn, Machine Learning Server will issue you a bearer/access token. After authenticated, the user will not need to provide credentials again as long as the token is still valid, and a header is submitted with every request. If you do not know your connection settings, please contact your administrator.
+   Call the `POST /login` API in order to authenticate. Pass in the  `username` and `password` for the local administrator, or if Active Directory is enabled, pass the LDAP account information. In turn, Machine Learning Server issues a bearer/access token. After authenticated, the user no longer needs to provide credentials again, as long as the token is still valid and a header is submitted with each request. If you do not know your connection settings, please contact your administrator.
 
    ```python
    #Using client library generated from Autorest
@@ -353,7 +357,7 @@ Before you interact with the core APIs, first authenticate, get the bearer acces
 
    **Azure Active Directory (AAD) authentication**
 
-   You must pass the AAD credentials, authority, and client ID. In turn, AAD will issue the [Bearer access token](https://msdn.microsoft.com/microsoft-r/operationalize/security-access-tokens). After authenticated, the user will not need to provide credentials again as long as the token is still valid, and a header is submitted with every request. If you do not know your connection settings, please contact your administrator.
+   Pass the AAD credentials, authority, and client ID. In turn, AAD issues the [Bearer access token](https://msdn.microsoft.com/microsoft-r/operationalize/security-access-tokens). After authenticated, the user no longer needs to provide credentials again, as long as the token is still valid and a header is submitted with each request. If you do not know your connection settings, please contact your administrator.
 
    ```python
    #Import the AAD authentication library
@@ -392,12 +396,12 @@ Before you interact with the core APIs, first authenticate, get the bearer acces
 
 ### Step 3. Prepare session and code
 
-After authentication, you can start a Python session and create a model you'll publish later. You can include any Python code or models in a web service. Once you've set up your session environment, you can even save it as a snapshot so you can reload your session as you had it before. 
+After authentication, you can start a Python session and create a model for publishing later. You can include any Python code or models in a web service. Once you've set up your session environment, you can even save it as a snapshot so you can reload your session as you had it before. 
 
 > [!IMPORTANT]
 > Remember to include `headers` in every request.
 
-1. Create a Python session on R Server. You must specify a name and the Python language (`runtime_type="Python"`).  If you don't set the runtime type to Python, it defaults to R.
+1. Create a Python session on R Server. Be sure to specify a name and the Python language (`runtime_type="Python"`).  If you don't set the runtime type to Python, it defaults to R.
 
    This is a continuation of the example using the client library generated by Autorest:
 
@@ -459,10 +463,7 @@ After authentication, you can start a Python session and create a model you'll p
        print (execute_response.error_message)
    ```
 
-3. Create a snapshot of this Python session so this environment can be saved in the web service and reproduced at consume time. Snapshots are very useful when you need a prepared environment that includes certain libraries, objects, models, files and artifacts. Snapshots save the whole workspace and working directory. However, when publishing, you can use only snapshots that you've created.
-
-   > [!NOTE] 
-   > While snapshots can also be used when publishing a web service for environment dependencies, it may have an impact on the performance of the consumption time.  For optimal performance, consider the size of the snapshot carefully and ensure that you keep only those workspace objects you need and purge the rest. In a session, you can use the Python `del` function or [the `deleteWorkspaceObject` API request](https://microsoft.github.io/deployr-api-docs/#delete-workspace-object) to remove unnecessary objects. 
+3. Create a snapshot of this Python session so this environment can be saved in the web service and reproduced at consume time. Snapshots are useful when you need a prepared environment that includes certain libraries, objects, models, files, and artifacts. Snapshots save the whole workspace and working directory. However, when publishing, you can use only snapshots that you've created.
 
    ```python
    #Create a snapshot of the current session.
@@ -471,27 +472,27 @@ After authentication, you can start a Python session and create a model you'll p
    #Return the snapshot ID for reference when you publish later.
    response.snapshot_id
    
-   #If you forget the ID, list every snapshot to get the ID again.
+   #If you forget the ID, list snapshots to get the ID again.
    for snapshot in client.list_snapshots(headers):
        print(snapshot)
    ```
+
+  > [!NOTE] 
+   > While snapshots can also be used when publishing a web service for environment dependencies, it may have an impact on the performance of the consumption time.  For optimal performance, consider the size of the snapshot carefully and ensure that you keep only those workspace objects you need and purge the rest. In a session, you can use the Python `del` function or [the `deleteWorkspaceObject` API request](https://microsoft.github.io/deployr-api-docs/#delete-workspace-object) to remove unnecessary objects. 
 
 ### Step 4. Publish the model 
 
 After your client library has been generated and you've built the authentication logic into your application, you can interact with the core APIs to create a Python session, create a model, and then publish a web service using that model.
 
-> [!NOTE]
-> Remember that you must be authenticated before you make any API calls. Therefore, include `headers` in every request.
+Some things to remeber:
 
-+ Publish this SVM model as a Python web service in Machine Learning  Server. This web service will score a vector that gets passed to it.
++ You must be authenticated before you make any API calls. Therefore, include `headers` in all requests.
++ To ensure that the web service is registered as a Python service, be sure to specify `runtime_type="Python"`. If you don't set the runtime type to Python, it defaults to R.
++ Scoring requires a vector with sepal length, sepal width, petal length, and petal width
 
-> [!IMPORTANT]
-> To ensure that the web service is registered as a Python service, be sure to specify `runtime_type="Python"`. If you don't set the runtime type to Python, it defaults to R.
+The following code publishes the SVM model as a Python web service. This web service generates a predicted category based on values passed to it.
 
 ```python
-   #Define a web service that determines the iris species by scoring 
-   #a vector of sepal length and width, petal length and width
-   
    #Set `flower_data` for the sepal and petal length and width
    flower_data = deployrclient.models.ParameterDefinition(name = "flower_data", type = "vector")
    #Set `iris_species` for the species of iris
@@ -540,22 +541,22 @@ This section demonstrates how to consume the service in the same session where i
    #Record the R Server endpoint URL hosting the web services you created
    url = "http://localhost:12800"
 
-   #Give the request.Session object the authentication headers 
-   #so you don't have to repeat it with each request.
+   #Include the request.Session object in the authentication headers.
+   #By doing so, you don't need to repeat it with each request.
    s.headers = headers
 
-   # Retrieve the service-specific swagger file using the requests library.
+   # Retrieve the service-specific Swagger file using the requests library.
    swagger_resp = s.get(url+"/api/Iris/V1.0/swagger.json")
 
-   #Either download service-specific swagger file using the json library.
+   #You can download a service-specific Swagger file using the json library.
    with open('iris_swagger.json','w') as f:
       (json.dump(client.get_web_service_swagger("Iris","V1.0",headers),f, indent = 1))
 
-   #Or print just what you need from the Swagger file, 
-   #such as the routing paths for the endpoints to be consumed.
+   #Or, you can print just what you need from the Swagger file. 
+   #This example gets the routing paths for the endpoints to be consumed.
    print(json.dumps(swagger_resp.json()["paths"], indent = 1, sort_keys = True))
 
-   #Or, print input and output parameters as defined in the Swagger.io format
+   #You can also print input and output parameters as defined in the Swagger.io format
    print("Input")
    print(json.dumps(swagger_resp.json()["definitions"]["InputParameters"], indent = 1, sort_keys = True))
    print("Output")
@@ -578,13 +579,13 @@ This section demonstrates how to consume the service in the same session where i
    print(json.dumps(resp.json(), indent = 1, sort_keys = True))
    ```
 
-## Managing the Services
+## Managing the services
 
-Now that you've created a web service, you can update, delete, or republish that service. You can also list all the web services that are hosted using Microsoft Machine Learning Server.
+Now that you've created a web service, you can update, delete, or republish that service. You can also list all the web services that are hosted using R Server (or Machine Learning Server).
 
 ### Update a web service
 
-You can update a web service to change the code, model, description, inputs, outputs and more. In this example, we update the service to add a description useful to people who might consume this service.
+ In this example, we update the service to add a description useful to people who might consume this service.
 
 ```python
 #Define what needs to be updated. Here we add a description.
@@ -595,9 +596,11 @@ update_request = deployrclient.models.PublishWebServiceRequest(
 client.patch_web_service_version("Iris", "V1.0", update_request, headers)
 ```
 
+You can update a web service to change the code, model, description, inputs, outputs, and more.
+
 ### Publish another version
 
-You can also publish another version of the web service. In this example, the service will now return the Iris species as a string instead of as a list of strings.
+In this example, the service will now return the Iris species as a string instead of as a list of strings.
 
 ```python
 #Publish another version of the web service, but this time 
@@ -624,9 +627,11 @@ resp = s.post(url+"/api/Iris/V2.0",json={"flower_data":[5.1,3.5,1.4,.2]})
 print(json.dumps(resp.json(), indent = 1, sort_keys = True))
 ```
 
+You can use this pattern to publish multiple versions of the same web service. 
+
 ### List services
 
-Get a list of all web services, including those created by other users or in different languages.
+This sample gets a list of all web services, including those created by other users or in different languages.
 
 ```python
 #Return the list of all existing web services.
@@ -640,11 +645,11 @@ for service in client.get_all_web_services(headers):
 
 ### Delete services
 
-You can delete services you've created. You can also delete the services of others if you are assigned to a role that has the appropriate permissions.
-
 In this example, we delete the second web service version we just published.
 
 ```python
 #Delete the second version we just published.
 client.delete_web_service_version("Iris","V2.0",headers)
 ```
+
+You can delete any service that you created. You can delete the services of others only if you are assigned to a role that has the appropriate permissions.

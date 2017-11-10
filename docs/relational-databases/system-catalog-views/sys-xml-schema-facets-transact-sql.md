@@ -30,10 +30,6 @@ ms.workload: "Inactive"
 
   Returns a row per facet (restriction) of an xml-type definition (corresponds to **sys.xml_types**).  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
-  
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |**xml_component_id**|**int**|ID of XML component (type) to which this facet belongs.|  

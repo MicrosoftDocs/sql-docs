@@ -31,10 +31,6 @@ ms.workload: "Inactive"
 
   Contains a row for each backup-device registered by using **sp_addumpdevice** or created in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
-  
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Name of the backup device. Is unique in the set.|  

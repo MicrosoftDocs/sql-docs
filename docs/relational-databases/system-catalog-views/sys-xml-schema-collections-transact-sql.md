@@ -30,10 +30,6 @@ ms.workload: "Inactive"
 
   Returns a row per XML schema collection. An XML schema collection is a named set of XSD definitions. The XML schema collection itself is contained in a relational schema, and it is identified by a schema-scoped [!INCLUDE[tsql](../../includes/tsql-md.md)] name. The following tuples are unique: xml_collection_id, and schema_id and name.  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
-  
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |xml_collection_id|**int**|ID of the XML schema collection. Unique within the database.|  

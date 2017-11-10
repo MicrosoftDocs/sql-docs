@@ -29,10 +29,6 @@ ms.workload: "Inactive"
 
   Provides information about a collector type for a collection item.  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
-  
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |**collector_type_uid**|**uniqueidentifer**|The GUID for a collection type. Is not nullable.|  

@@ -30,10 +30,6 @@ ms.workload: "On Demand"
 
   Contains a row for each allocation unit in the database.  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
-  
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |allocation_unit_id|**bigint**|ID of the allocation unit. Is unique within a database.|  

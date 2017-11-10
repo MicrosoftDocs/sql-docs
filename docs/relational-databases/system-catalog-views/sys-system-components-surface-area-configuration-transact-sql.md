@@ -30,10 +30,6 @@ ms.workload: "Inactive"
 
   Returns one row for each executable system object that can be enabled or disabled by a surface area configuration component. For more information, see [Surface Area Configuration](../../relational-databases/security/surface-area-configuration.md).  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
-  
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |**component_name**|**sysname**|Component name. This will have the keyword collation, Latin1_General_CI_AS_KS_WS. Cannot be NULL.|  

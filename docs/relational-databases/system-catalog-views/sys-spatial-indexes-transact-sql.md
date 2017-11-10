@@ -30,10 +30,6 @@ ms.workload: "Inactive"
 
   Represents the main index information of the spatial indexes.  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
-  
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |\<inherited columns>||Inherits columns from [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md).|  

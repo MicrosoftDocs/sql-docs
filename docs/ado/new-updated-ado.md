@@ -6,11 +6,14 @@ documentationcenter: ''
 author: MightyPen
 manager: jhubbard
 editor: ''
-ms.prod: sql-non-specified
-ms.service: 
+ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
+ms.service: ""
+ms.component: "ado"
+ms.suite: "sql"
 ms.topic: updart-autogen
 ms.technology: database-engine
-ms.custom: UpdArt.exe
+ms.custom: ""
 ms.tgt_pltfrm: na
 ms.devlang: na
 ms.topic: updart-autogen

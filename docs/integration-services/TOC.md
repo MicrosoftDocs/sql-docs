@@ -28,6 +28,8 @@
 ## [Connect to the SSIS Catalog on Azure](lift-shift/ssis-azure-connect-to-catalog-database.md)
 ## [Schedule package execution on Azure](lift-shift/ssis-azure-schedule-packages.md)
 ## [Connect to data sources with Windows Authentication](lift-shift/ssis-azure-connect-with-windows-auth.md)
+## [Connect to files and file shares](lift-shift/ssis-azure-files-file-shares.md)
+
 # [Install or upgrade](../integration-services/install-windows/install-integration-services.md)
 
 # [Development and management Tools](integration-services-ssis-development-and-management-tools.md)

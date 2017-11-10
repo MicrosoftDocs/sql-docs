@@ -38,16 +38,13 @@ ms.workload: "On Demand"
   
 -   Server-level DDL triggers  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].|  
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
 ```  
-  
 sys.dm_sql_referencing_entities (  
     ' schema_name.referenced_entity_name ' , ' <referenced_class> ' )  
   
@@ -167,16 +164,14 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `referencing_schema_name referencing_entity_name   referencing_id referencing_class_desc is_caller_dependent`  
-  
- `----------------------- -------------------------  ------------- ---------------------- -------------------`  
-  
- `HumanResources          uspUpdateEmployeeHireInfo  1803153469    OBJECT_OR_COLUMN       0`  
-  
- `HumanResources          uspUpdateEmployeeLogin     1819153526    OBJECT_OR_COLUMN       0`  
-  
- `(2 row(s) affected)`  
-  
+ ```
+ referencing_schema_name referencing_entity_name   referencing_id referencing_class_desc is_caller_dependent  
+ ----------------------- -------------------------  ------------- ---------------------- -------------------  
+ HumanResources          uspUpdateEmployeeHireInfo  1803153469    OBJECT_OR_COLUMN       0  
+ HumanResources          uspUpdateEmployeeLogin     1819153526    OBJECT_OR_COLUMN       0  
+ (2 row(s) affected)`  
+ ``` 
+ 
 ## See Also  
  [sys.dm_sql_referenced_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)   
  [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)  

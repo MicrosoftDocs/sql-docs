@@ -102,7 +102,7 @@ Next add a listener for the primary availability group on the first WSFC. In thi
   
 ```sql
 ALTER AVAILABILITY GROUP [ag1]    
-    ADD LISTENER 'ag1-listener' ( 
+    ADD LISTENER 'ag1-listener' ( 
         WITH IP ( ('2001:db88:f0:f00f::cf3c'),('2001:4898:e0:f213::4ce2') ) , 
         PORT = 60173);    
 GO  
@@ -147,7 +147,7 @@ GO
   
 ```  
 ALTER AVAILABILITY GROUP [ag2]    
-    ADD LISTENER 'ag2-listener' ( WITH IP ( ('2001:db88:f0:f00f::cf3c'),('2001:4898:e0:f213::4ce2') ) , PORT = 60173);    
+    ADD LISTENER 'ag2-listener' ( WITH IP ( ('2001:db88:f0:f00f::cf3c'),('2001:4898:e0:f213::4ce2') ) , PORT = 60173);    
 GO  
 ```  
   
@@ -156,22 +156,22 @@ GO
   
 ```sql  
 CREATE AVAILABILITY GROUP [distributedag]  
-   WITH (DISTRIBUTED)   
-   AVAILABILITY GROUP ON  
-      'ag1' WITH    
-      (   
-         LISTENER_URL = 'tcp://ag1-listener.contoso.com:5022',    
-         AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT,   
-         FAILOVER_MODE = MANUAL,   
-         SEEDING_MODE = AUTOMATIC   
-      ),   
-      'ag2' WITH    
-      (   
-         LISTENER_URL = 'tcp://ag2-listener.contoso.com:5022',   
-         AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT,   
-         FAILOVER_MODE = MANUAL,   
-         SEEDING_MODE = AUTOMATIC   
-      );    
+   WITH (DISTRIBUTED)   
+   AVAILABILITY GROUP ON  
+      'ag1' WITH    
+      (   
+         LISTENER_URL = 'tcp://ag1-listener.contoso.com:5022',    
+         AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT,   
+         FAILOVER_MODE = MANUAL,   
+         SEEDING_MODE = AUTOMATIC   
+      ),   
+      'ag2' WITH    
+      (   
+         LISTENER_URL = 'tcp://ag2-listener.contoso.com:5022',   
+         AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT,   
+         FAILOVER_MODE = MANUAL,   
+         SEEDING_MODE = AUTOMATIC   
+      );    
 GO   
 ```  
   
@@ -183,22 +183,22 @@ GO
   
 ```sql  
 ALTER AVAILABILITY GROUP [distributedag]   
-   JOIN   
-   AVAILABILITY GROUP ON  
-      'ag1' WITH    
-      (   
-         LISTENER_URL = 'tcp://ag1-listener.contoso.com:5022',    
-         AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT,   
-         FAILOVER_MODE = MANUAL,   
-         SEEDING_MODE = AUTOMATIC   
-      ),   
-      'ag2' WITH    
-      (   
-         LISTENER_URL = 'tcp://ag2-listener.contoso.com:5022',   
-         AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT,   
-         FAILOVER_MODE = MANUAL,   
-         SEEDING_MODE = AUTOMATIC   
-      );    
+   JOIN   
+   AVAILABILITY GROUP ON  
+      'ag1' WITH    
+      (   
+         LISTENER_URL = 'tcp://ag1-listener.contoso.com:5022',    
+         AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT,   
+         FAILOVER_MODE = MANUAL,   
+         SEEDING_MODE = AUTOMATIC   
+      ),   
+      'ag2' WITH    
+      (   
+         LISTENER_URL = 'tcp://ag2-listener.contoso.com:5022',   
+         AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT,   
+         FAILOVER_MODE = MANUAL,   
+         SEEDING_MODE = AUTOMATIC   
+      );    
 GO  
 ```  
 

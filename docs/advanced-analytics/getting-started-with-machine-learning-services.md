@@ -1,8 +1,8 @@
 ---
 title: "Getting started with machine learning in SQL Server| Microsoft Docs"
 ms.custom: ""
-ms.date: "11/03/2017"
-ms.prod: "sql-server-2016"
+ms.date: "11/09/2017"
+ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 

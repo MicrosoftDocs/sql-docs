@@ -1,7 +1,7 @@
 ---
 title: "Prepare the data using PowerShell (walkthrough) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/26/2017"
+ms.date: "11/10/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -17,7 +17,7 @@ ms.assetid: 65fd41d4-c94e-4929-a24a-20e792a86579
 caps.latest.revision: 30
 author: "jeannt"
 ms.author: "jeannt"
-manager: "jhubbard"
+manager: "cgronlund"
 ms.workload: "On Demand"
 ---
 # Prepare the data using PowerShell (walkthrough)
@@ -105,7 +105,7 @@ There are many different ways that you can install packages on SQL Server. For e
     install.packages("RODBC", lib=grep("Program Files", .libPaths(), value=TRUE)[1])
     ```
 
-    - This example uses the R grep function to search the vector of available paths and find the one in “Program Files”. For more information, see [http://www.rdocumentation.org/packages/base/functions/grep](http://www.rdocumentation.org/packages/base/functions/grep).
+    - This example uses the R grep function to search the vector of available paths and find the path that includes “Program Files”. For more information, see [http://www.rdocumentation.org/packages/base/functions/grep](http://www.rdocumentation.org/packages/base/functions/grep).
 
     - If you think the packages are already installed, check the list of installed packages by running `installed.packages()`.
 
@@ -123,7 +123,7 @@ Along with the data files, R scripts, and T-SQL scripts, the download includes t
 
 - Rewrites the arguments in the R script file to use the database name that you specify.
 
-You should run this script on the computer where you build the solution: for example, the laptop where you develop and test your R code. This computer, which we'll call the data science client, must be able to connect to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computer using the Named Pipes protocol.
+Run this script on the computer where you build the solution: for example, the laptop where you develop and test your R code. This computer, which we'll call the data science client, must be able to connect to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computer using the Named Pipes protocol.
 
 1. Open a PowerShell command line **as administrator**.
   
@@ -150,7 +150,7 @@ You should run this script on the computer where you build the solution: for exa
       > [!WARNING]
       > When you use the prompt in the PowerShell script to provide your credentials, the password is written to the updated script file in plain text. Edit the file to remove the credentials immediately after you have created the necessary R objects.
       
-    **Path to the csv file**: Provide the full path to the data file. The default path and filename is `C:\tempR\nyctaxi1pct.csv1`.
+    **Path to the csv file**: Provide the full path to the data file. The default path and filename is `C:\tempR\nyctaxi1pct.csv`.
   
 4.  Press ENTER to run the script.
 
@@ -255,7 +255,7 @@ The following example runs the script using a SQL login:
 
 If your database contains an existing table of the same name and the same schema, **bcp** inserts a new copy of the data rather than overwriting existing data.
 
-To avoid duplicate data, truncate any existing tables before re-running the script.
+To avoid duplicate data, truncate any existing tables before running the script again.
 
 ## What's included in the sample
 
@@ -269,7 +269,7 @@ When you download the files from the GitHub repository, you get the following:
 
 ### <a name="bkmk_data"></a>Training and scoring data
 
-The data is a representative sampling of the New York City taxi data set, which contains records of over 173 million individual trips in 2013, including the fares and tip amounts paid for each trip. To make the data easier to work with, the Microsoft data science team performed downsampling to get just 1% of the data.  This data has been shared in a public blob storage container in Azure, in .CSV format. The source data is an uncompressed file, just under 350MB.
+The data is a representative sampling of the New York City taxi data set, which contains records of over 173 million individual trips in 2013, including the fares and tip amounts paid for each trip. To make the data easier to work with, the Microsoft data science team performed downsampling to get just 1% of the data.  This data has been shared in a public blob storage container in Azure, in .CSV format. The source data is an uncompressed file, just under 350 MB.
 
 + Public dataset: [NYC Taxi and Limousine Commission] (http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)
 
@@ -289,7 +289,7 @@ The PowerShell script executes multiple [!INCLUDE[tsql](../../includes/tsql-md.m
 
 |SQL Script file name|Description|
 |------------------------|----------------|
-|create-db-tb-upload-data.sql|Creates database and two tables:<br /><br /> *nyctaxi_sample*: Table that stores the training data, a one-percent sample of the NYC taxi data set. A clustered columnstore index  is added to the table to improve storage and query performance.<br /><br /> *nyc_taxi_models*: An empty table that you’ll use later to save the trained classification model.|
+|create-db-tb-upload-data.sql|Creates database and two tables:<br /><br /> *nyctaxi_sample*: Table that stores the training data, a one-percent sample of the NYC taxi data set. A clustered columnstore index  is added to the table to improve storage and query performance.<br /><br /> *nyc_taxi_models*: A table used for storing trained models in binary format.|
 |PredictTipBatchMode.sql|Creates a stored procedure that calls a trained model to predict the labels for new observations. It accepts a query as its input parameter.|
 |PredictTipSingleMode.sql|Creates a stored procedure that calls a trained classification model to predict the labels for new observations. Variables of the new observations are passed in as in-line parameters.|
 |PersistModel.sql|Creates a stored procedure that helps store the binary representation of the classification model in a table in the database.|

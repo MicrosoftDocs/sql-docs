@@ -85,8 +85,8 @@
 ### [+ (String Concatenation)](string-concatenation-transact-sql.md)  
 ### [+= (String Concatenation Assignment)](string-concatenation-equal-transact-sql.md)  
 ### [Percent character (Wildcard - Character(s) to Match)](percent-character-wildcard-character-s-to-match-transact-sql.md)  
-### [\[\] (Wildcard - Character(s) to Match)](wildcard-character-s-to-match-transact-sql.md)  
-### [\[^\] (Wildcard - Character(s) Not to Match)](wildcard-character-s-not-to-match-transact-sql.md)  
+### [&#91; &#93; (Wildcard - Character(s) to Match)](wildcard-character-s-to-match-transact-sql.md)  
+### [&#91;^&#93; (Wildcard - Character(s) Not to Match)](wildcard-character-s-not-to-match-transact-sql.md)  
 ### [\_ (Wildcard - Match One Character)](wildcard-match-one-character-transact-sql.md)  
 ## [Operator Precedence](operator-precedence-transact-sql.md)  
 

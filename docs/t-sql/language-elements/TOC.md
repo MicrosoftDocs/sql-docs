@@ -49,7 +49,7 @@
 ### [/= (Division Assignment)](divide-equals-transact-sql.md)  
 ### [Modulus](modulo-transact-sql.md)  
 ### [Modulus Assignment](modulo-equals-transact-sql.md)  
-## [Assignment](assignment-operator-transact-sql.md)  
+## [= (Assignment)](assignment-operator-transact-sql.md)  
 ## [Bitwise](bitwise-operators-transact-sql.md)  
 ### [\& (Bitwise AND)](bitwise-and-transact-sql.md)  
 ### [\&= (Bitwise AND Assignment)](bitwise-and-equals-transact-sql.md)  

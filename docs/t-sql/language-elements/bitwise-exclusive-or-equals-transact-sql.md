@@ -17,6 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "^= (bitwise exclusive OR equals)"
   - "compound operators, ^="
+  - "assignment operators, ^="
+  - "augmented operators, ^="
 ms.assetid: ce524b0f-a24d-44e7-bd5b-b6943793cd48
 caps.latest.revision: 15
 author: "BYHAM"

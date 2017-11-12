@@ -16,6 +16,8 @@ dev_langs:
   - "TSQL"
 helpviewer_keywords: 
   - "compound operators, /="
+  - "assignment operators, /="
+  - "augmented operators, /="
   - "/= (divide equals)"
 ms.assetid: 9ab25d1e-5c98-4dd7-b2cd-9f49499c86e7
 caps.latest.revision: 12

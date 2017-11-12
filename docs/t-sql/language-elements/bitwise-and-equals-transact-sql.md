@@ -16,6 +16,8 @@ dev_langs:
   - "TSQL"
 helpviewer_keywords: 
   - "compound operators, &="
+  - "assignment operators, &="
+  - "augmented operators, &="
   - "&= (bitwise AND equals)"
 ms.assetid: f374c885-3fee-434a-93fb-dfe6e0bcd100
 caps.latest.revision: 15

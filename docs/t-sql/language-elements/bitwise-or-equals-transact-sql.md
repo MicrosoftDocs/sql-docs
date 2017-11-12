@@ -16,7 +16,9 @@ dev_langs:
   - "TSQL"
 helpviewer_keywords: 
   - "compound operators, |="
-  - "|= (bitwize OR equals)"
+  - "assignment operators, |="
+  - "augmented operators, |="
+  - "|= (bitwise OR equals)"
 ms.assetid: bd746a4f-6498-4196-bf2e-b6f457a15d44
 caps.latest.revision: 15
 author: "BYHAM"

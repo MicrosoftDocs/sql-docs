@@ -45,7 +45,7 @@ expression += expression
  Returns the data type of the argument with the higher precedence. For more information, see [Data Type Precedence &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
 ## Remarks  
- For more information, see [+ &#40;Add&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/add-transact-sql.md).  
+ For more information, see [+ &#40;Addition&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/add-transact-sql.md).  
   
 ## See Also  
  [Compound Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   

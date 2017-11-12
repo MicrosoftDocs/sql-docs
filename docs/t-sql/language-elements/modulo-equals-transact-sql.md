@@ -18,6 +18,8 @@ helpviewer_keywords:
   - "%= (modulo equals)"
   - "%= (modulus assignment)"
   - "compound operators, %="
+  - "assignment operators, %="
+  - "augmented operators, %="
 ms.assetid: 45e35516-1f4c-406b-a580-70a14b087847
 caps.latest.revision: 13
 author: "BYHAM"

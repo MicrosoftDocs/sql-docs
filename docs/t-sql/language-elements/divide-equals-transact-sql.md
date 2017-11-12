@@ -1,5 +1,5 @@
 ---
-title: "(Divide EQUALS) (Transact-SQL) | Microsoft Docs"
+title: "(Division Assignment) (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/12/2017"
 ms.prod: "sql-non-specified"
@@ -24,7 +24,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---
-# (Divide EQUALS) (Transact-SQL)
+# /= (Division Assignment) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Divides one number by another and sets a value to the result of the operation. For example, if a variable @x equals 34, then `@x /= 2` takes the original value of @x, divides by 2 and sets @x to that new value (17).  
@@ -45,7 +45,7 @@ expression /= expression
  Returns the data type of the argument with the higher precedence. For more information, see [Data Type Precedence &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
 ## Remarks  
- For more information, see [&#40;Divide&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/divide-transact-sql.md).  
+ For more information, see [&#40;Division&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/divide-transact-sql.md).  
 
 ## Examples  
 The following example, sets a variable to 17. Then uses the `/=` operator to set the variable to half of it's original value.  

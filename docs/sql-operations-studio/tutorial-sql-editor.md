@@ -1,9 +1,8 @@
 ---
-title: "Tutorial: Working with Transact-SQL using Microsoft SQL Operations Studio (preview) | Microsoft Docs"
+title: "Tutorial: Use the Transact-SQL editor to create database objects - SQL Operations Studio (preview) | Microsoft Docs"
 description: This tutorial demonstrates the key features in SQL Operations Studio (preview) that simplify using T-SQL.
-keywords: 
 ms.custom: "tools|sos"
-ms.date: "11/08/2017"
+ms.date: "11/15/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: "alayu; erickang; sstein"
 ms.suite: "sql"
@@ -15,7 +14,7 @@ manager: craigg
 ms.workload: "Inactive"
 ---
 
-# Tutorial: Working with T-SQL using [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# Tutorial: Use the Transact-SQL editor to create database objects - [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 Creating and running queries, stored procedures, scripts, etc. are the core tasks of database professionals. This tutorial demonstrates the key features in [!INCLUDE[name-sos](../includes/name-sos-short.md)] that simplify using T-SQL.
 
@@ -50,7 +49,7 @@ This tutorial requires the SQL Server or Azure SQL Database *TutorialDB*. To cre
 
    ![quick search widget](./media/tutorial-sql-editor/quick-search-widget.png)
 
-1. Edit the **Email** column in the first row, type *orlando0@adventure-works.com*, and click outside the cell to save the change.
+1. Edit the **Email** column in the first row, type *orlando0@adventure-works.com*, and press **Enter** to save the change.
 
    ![edit data](./media/tutorial-sql-editor/edit-data.png)
 
@@ -167,7 +166,7 @@ This tutorial requires the SQL Server or Azure SQL Database *TutorialDB*. To cre
 
 8. To execute the script, press **F5**.
 
-## Save query results as JSON to pass to our stored procedure
+## Use save query results as JSON to test our stored procedure
 
 1. **SELECT TOP 1000 Rows** from the *dbo.Customers* table.
 
@@ -211,4 +210,7 @@ In this tutorial, you learned how to:
 > * Learn about database object details using Peek Definition and Go to Definition
 
 
-To learn how to build a custom insight widget, see [Build a custom insight widget](tutorial-build-custom-insight-sql-server.md).
+To learn how to enable the **five slowest queries** sample insight, complete the next tutorial:
+
+> [!div class="nextstepaction"]
+> [Enable the slow queries sample insight widget](tutorial-qds-sql-server.md)

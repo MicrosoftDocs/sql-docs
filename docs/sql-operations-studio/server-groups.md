@@ -1,9 +1,8 @@
 ---
 title: Server groups in SQL Operations Studio (preview) | Microsoft Docs
 description: Learn about server groups in SQL Operations Studio (preview).
-keywords:
 ms.custom: "tools|sos"
-ms.date: "11/08/2017"
+ms.date: "11/15/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: "alayu; erickang; sstein"
 ms.suite: "sql"

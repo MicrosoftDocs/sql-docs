@@ -1,5 +1,5 @@
 ---
-title: "|= (Bitwise OR EQUALS) (Transact-SQL) | Microsoft Docs"
+title: "|= (Bitwise OR Assignment) (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/10/2017"
 ms.prod: "sql-non-specified"
@@ -24,7 +24,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---
-# |= (Bitwise OR EQUALS) (Transact-SQL)
+# |= (Bitwise OR Assignment) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Performs a bitwise logical OR operation between two specified integer values as translated to binary expressions within [!INCLUDE[tsql](../../includes/tsql-md.md)] statements, and sets a value to the result of the operation.  

@@ -33,14 +33,14 @@ ms.workload: "On Demand"
   
 |Operator|Link to more information|Action|  
 |--------------|------------------------------|------------|  
-|+=|[+= &#40;Add EQUALS&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/add-equals-transact-sql.md)|Adds some amount to the original value and sets the original value to the result.|  
-|-=|[-= &#40;Subtract EQUALS&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/subtract-equals-transact-sql.md)|Subtracts some amount from the original value and sets the original value to the result.|  
-|*=|[&#42;= &#40;Multiply EQUALS&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/multiply-equals-transact-sql.md)|Multiplies by an amount and sets the original value to the result.|  
-|/=|[&#40;Divide EQUALS&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/divide-equals-transact-sql.md)|Divides by an amount and sets the original value to the result.|  
-|%=|[Modulo EQUALS &#40;Transact-SQL&#41;](../../t-sql/language-elements/modulo-equals-transact-sql.md)|Divides by an amount and sets the original value to the modulo.|  
-|&=|[&= &#40;Bitwise AND EQUALS&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/bitwise-and-equals-transact-sql.md)|Performs a bitwise AND and sets the original value to the result.|  
-|^=|[^= &#40;Bitwise Exclusive OR EQUALS&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/bitwise-exclusive-or-equals-transact-sql.md)|Performs a bitwise exclusive OR and sets the original value to the result.|  
-|&#124;=|[&#124;= &#40;Bitwise OR EQUALS&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/bitwise-or-equals-transact-sql.md)|Performs a bitwise OR and sets the original value to the result.|  
+|+=|[+= &#40;Add Assignment&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/add-equals-transact-sql.md)|Adds some amount to the original value and sets the original value to the result.|  
+|-=|[-= &#40;Subtract Assignment&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/subtract-equals-transact-sql.md)|Subtracts some amount from the original value and sets the original value to the result.|  
+|*=|[&#42;= &#40;Multiply Assignment&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/multiply-equals-transact-sql.md)|Multiplies by an amount and sets the original value to the result.|  
+|/=|[&#40;Divide Assignment&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/divide-equals-transact-sql.md)|Divides by an amount and sets the original value to the result.|  
+|%=|[Modulus Assignment &#40;Transact-SQL&#41;](../../t-sql/language-elements/modulo-equals-transact-sql.md)|Divides by an amount and sets the original value to the modulo.|  
+|&=|[&= &#40;Bitwise AND Assignment&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/bitwise-and-equals-transact-sql.md)|Performs a bitwise AND and sets the original value to the result.|  
+|^=|[^= &#40;Bitwise Exclusive OR Assignment&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/bitwise-exclusive-or-equals-transact-sql.md)|Performs a bitwise exclusive OR and sets the original value to the result.|  
+|&#124;=|[&#124;= &#40;Bitwise OR Assignment&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/bitwise-or-equals-transact-sql.md)|Performs a bitwise OR and sets the original value to the result.|  
   
 ## Syntax  
   

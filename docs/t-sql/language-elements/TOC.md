@@ -80,7 +80,7 @@
 ### [NOT](not-transact-sql.md)  
 ### [OR](or-transact-sql.md)  
 ### [SOME | ANY](some-any-transact-sql.md)  
-## [Scope Resolution](scope-resolution-operator-transact-sql.md)  
+## [:: (Scope Resolution)](scope-resolution-operator-transact-sql.md)  
 ## [String](string-operators-transact-sql.md)  
 ### [+ (String Concatenation)](string-concatenation-transact-sql.md)  
 ### [+= (String Concatenation Assignment)](string-concatenation-equal-transact-sql.md)  

@@ -36,26 +36,80 @@ The command completed successfully
 ```
 Copy the DC name that is the required KDC configuration value, in this case dc-33.domain.company.com
 
-## Install the required packages
+## Join your OS to the Active Directory Domain Controller
 
 ### Ubuntu
-
-```bash 
-sudo apt-get krb5-user
+```bash
+sudo apt-get install realmd krb5-user software-properties-common python-software-properties packagekit
 ```
 
-### RHEL
-```bash 
+Edit the `/etc/network/interfaces` file so that your AD domain controller's IP address is listed as a dns-nameserver. For example: 
+
+```/etc/network/interfaces
+<...>
+# The primary network interface
+auth eth0
+iface eth0 inet dhcp
+dns-nameservers **<AD domain controller IP address>**
+dns-search **<AD domain name>**
+```
+
+> [!NOTE]
+> The network interface (eth0) might differ for differnet machines. To find out which one you are using, run ifconfig and copy the interface that has an IP address and transmitted and received bytes.
+
+After editing this file, restart the network service:
+
+```bash
+sudo ifdown eth0 && sudo ifup eth0
+```
+
+Now check that your `/etc/resolv.conf` file contains a line like the following:  
+
+```Code
+nameserver **<AD domain controller IP address>**
+```
+
+```bash
+sudo realm join contoso.com -U 'user@CONTOSO.COM' -v
+<...>
+* Success
+```
+   
+### RedHat Enterprise Linux
+```bash
 sudo yum install realmd krb5-workstation
 ```
 
-### SUSE
-```bash 
-sudo zypper install realmd krb5-client
+Edit the `/etc/sysconfig/network-scripts/ifcfg-eth0` file (or other interface config file as appropriate) so that your AD domain controller's IP address is listed as a DNS server:
+
+```/etc/sysconfig/network-scripts/ifcfg-eth0
+<...>
+PEERDNS=no
+DNS1=**<AD domain controller IP address>**
+```
+
+After editing this file, restart the network service:
+
+```bash
+sudo systemctl restart network
+```
+
+Now check that your `/etc/resolv.conf` file contains a line like the following:  
+
+```Code
+nameserver **<AD domain controller IP address>**
+```
+
+```bash
+sudo realm join contoso.com -U 'user@CONTOSO.COM' -v
+<...>
+* Success
+   
 ```
 
 ### macOS
-- Kerberos should be installed on your macOS. If your macOS does not have Kerberos installed, you can get it from the [download page](http://web.mit.edu/macdev/KfM/Common/Documentation/download.html).
+- Join your macOS to the Active Directory Domain Controller by [following these steps] (https://support.apple.com/kb/PH26282?viewlocale=en_US&locale=en_US).
+
 
 
 ## Configure KDC in krb5.conf

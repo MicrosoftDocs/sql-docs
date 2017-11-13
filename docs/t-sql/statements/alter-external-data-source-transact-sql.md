@@ -1,7 +1,7 @@
 ---
 title: "ALTER EXTERNAL DATA SOURCE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/10/2017"
+ms.date: "11/13/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""

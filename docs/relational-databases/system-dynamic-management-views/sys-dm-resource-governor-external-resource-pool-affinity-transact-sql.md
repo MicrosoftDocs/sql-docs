@@ -34,7 +34,7 @@ ms.workload: "Inactive"
 
 Returns CPU affinity information about the current external resource pool configuration.
   
-|Colmn name|Data type|Description|
+|Column name|Data type|Description|
 |----------------|---------------|-----------------|
 |pool_id|**int**|The ID of the external resource pool. Is not nullable.|
 |processor_group|**smallint**|The ID of the Windows logical processor group. Is not nullable.|

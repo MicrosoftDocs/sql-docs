@@ -60,7 +60,7 @@ The process includes multiple steps:
  
 3.  Under these server default settings, the external runtime will probably have insufficient resources to complete most tasks. To change this, you must modify the server resource usage as follows:
   
-    -   Reduce the maximum computer memory that can be used by the databse engine.
+    -   Reduce the maximum computer memory that can be used by the database engine.
   
     -   Increase the maximum computer memory that can be used by the external process.
 
@@ -115,7 +115,7 @@ The process includes multiple steps:
   
 A classification function examines incoming tasks and determines whether the task is one that can be run using the current resource pool. Tasks that do not meet the criteria of the classification function are assigned back to the server's default resource pool.
   
-1. Begin by specifying that a classifier function should be used by Resource Governor to determine resource pools. You can assign a null as a placeholder for the classifier function.
+1. Begin by specifying that a classifier function should be used by Resource Governor to determine resource pools. You can assign a **null** as a placeholder for the classifier function.
   
     ```sql
     ALTER RESOURCE GOVERNOR WITH (classifier_function = NULL);
@@ -158,7 +158,7 @@ To verify that the changes have been made, you should check the configuration of
 + the default resource pool for external processes
 + the user-defined pool for external processes
 
-1. Run the following statemnt to view all workload groups:
+1. Run the following statement to view all workload groups:
 
     ```sql
     SELECT * FROM sys.resource_governor_workload_groups;
@@ -202,5 +202,6 @@ For more information about managing server resources, see:
 +  [Resource Governor](../../relational-databases/resource-governor/resource-governor.md) 
 + [Resource Governor Related Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md).  
 
-For an overview of reource governance for machine learning, see:
+For an overview of resource governance for machine learning, see:
+
 +  [Resource Governance for Machine Learning Services](../../advanced-analytics/r/resource-governance-for-r-services.md)

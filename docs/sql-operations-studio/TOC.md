@@ -19,7 +19,7 @@
 ## [Source control](source-control.md)
 ## [Workspace & user settings](settings.md)
 ## [Windows authentication (Kerberos)](enable-kerberos.md)
-## [Usage Data Collection](usage-data-collection.md)
+## [Usage data collection](usage-data-collection.md)
 # Resources
 ## [Transact-SQL Reference](../t-sql/language-reference.md)
 ## [SQL Operations Studio (preview) GitHub repo](https://www.github.com/Microsoft/SqlOpsStudio)

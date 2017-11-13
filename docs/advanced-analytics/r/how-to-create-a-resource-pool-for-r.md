@@ -20,7 +20,7 @@ ms.workload: "Inactive"
 ---
 # Create a resource pool for machine learning
 
-This topic describes how you can create a resource pool specifically for managing machine learning workloads in SQL Server. It assumes that you have already installed and enabled the machine learning features, and want to reconfigure the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instance to support more fine-grained management of the resources used by external process such as R or Python.
+This topic describes how you can create a resource pool specifically for managing machine learning workloads in SQL Server. It assumes that you have already installed and enabled the machine learning features, and want to reconfigure the instance to support more fine-grained management of the resources used by external process such as R or Python.
 
 The process includes multiple steps:
 
@@ -60,7 +60,7 @@ The process includes multiple steps:
  
 3.  Under these server default settings, the external runtime will probably have insufficient resources to complete most tasks. To change this, you must modify the server resource usage as follows:
   
-    -   Reduce the maximum computer memory that can be used by [!INCLUDE[ssNoVersion] (../../includes/ssnoversion-md.md)].
+    -   Reduce the maximum computer memory that can be used by the databse engine.
   
     -   Increase the maximum computer memory that can be used by the external process.
 

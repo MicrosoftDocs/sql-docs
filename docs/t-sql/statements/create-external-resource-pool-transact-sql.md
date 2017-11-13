@@ -31,12 +31,13 @@ ms.workload: "Inactive"
 ---
 # CREATE EXTERNAL RESOURCE POOL (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+**Applies to:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] and [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
-  Creates an external pool used to define resources for external processes. A resource pool represents a subset of the physical resources (memory and CPUs) of an instance of the Database Engine. Resource Governor enables a database administrator to distribute server resources among resource pools, up to a maximum of 64 pools.
-  
-  + For SQL Server 2016 R Services, the external pool governs `rterm.exe`, `BxlServer.exe`, and other processes spawned by them. 
-  + For SQL Server 2017 Machine Learning Services, the external pool governs all the R processes described above, as well as `python.exe`, `BxlServer.exe`, and other processes spawned by them. 
+Creates an external pool used to define resources for external processes. A resource pool represents a subset of the physical resources (memory and CPUs) of an instance of the Database Engine. Resource Governor enables a database administrator to distribute server resources among resource pools, up to a maximum of 64 pools.
+
++ For [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)], the external pool governs `rterm.exe`, `BxlServer.exe`, and other processes spawned by them.
+
++ For INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)], the external pool governs the same R processes listed above, as well as `python.exe`, `BxlServer.exe`, and other processes spawned by them.
 
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
@@ -84,13 +85,13 @@ CREATE EXTERNAL RESOURCE POOL pool_name
  MAX_PROCESSES =*value*  
  Specifies the maximum number of processes allowed for the external resource pool. Specify 0 to set an unlimited threshold for the pool which will be bound only be computer resources. The default is 0.  
   
-## Remarks  
+## Remarks
 
 The [!INCLUDE[ssDE](../../includes/ssde-md.md)] implements resource pool when you execute the [ALTER RESOURCE GOVERNOR RECONFIGURE](../../t-sql/statements/alter-resource-governor-transact-sql.md) statement.
 
- For general information about resource pools, see [Resource Governor Resource Pool](../../relational-databases/resource-governor/resource-governor-resource-pool.md), [sys.resource_governor_external_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md), and [sys.dm_resource_governor_external_resource_pool_affinity &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md).  
+ For general information about resource pools, see [Resource Governor Resource Pool](../../relational-databases/resource-governor/resource-governor-resource-pool.md), [sys.resource_governor_external_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md), and [sys.dm_resource_governor_external_resource_pool_affinity &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md).
 
-For information about managing external resource pools used for machine learning, see [Resource governance for machine learning in SQL Server](../../advanced-analytics/r/resource-governance-for-r-services.md). 
+For information specific to managing external resource pools used for machine learning, see [Resource governance for machine learning in SQL Server](../../advanced-analytics/r/resource-governance-for-r-services.md). 
 
 ## Permissions
 
@@ -101,22 +102,21 @@ Requires `CONTROL SERVER` permission.
 The following statement defines an external pool that restricts CPU usage to 75 percent and the maximum memory to 30 percent of the available memory on the computer.
 
 ```sql
-CREATE EXTERNAL RESOURCE POOL ep_1  
+CREATE EXTERNAL RESOURCE POOL ep_1
 WITH (  
-    MAX_CPU_PERCENT = 75  
-    , AFFINITY CPU = AUTO  
-    , MAX_MEMORY_PERCENT = 30  
-);  
-GO  
-ALTER RESOURCE GOVERNOR RECONFIGURE;  
-GO  
-```  
+    MAX_CPU_PERCENT = 75
+    , AFFINITY CPU = AUTO
+    , MAX_MEMORY_PERCENT = 30
+);
+GO
+ALTER RESOURCE GOVERNOR RECONFIGURE;
+GO
+```
   
-## See also  
+## See also
+
  [external scripts enabled Server Configuration Option](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md)   
  [sp_execute_external_script &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)   
- [SQL Server R Services](../../advanced-analytics/r/sql-server-r-services.md)   
- [Known issues for SQL Server machine learning](../../advanced-analytics/r/known-issues-for-sql-server-machine-learning-services.md)   
  [ALTER EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-external-resource-pool-transact-sql.md)   
  [DROP EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/drop-external-resource-pool-transact-sql.md)   
  [CREATE RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-resource-pool-transact-sql.md)   

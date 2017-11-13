@@ -26,4 +26,3 @@
 ## [SQL Server Blog](https://blogs.technet.microsoft.com/dataplatforminsider/)
 # [FAQ](faq.md)
 # [Report issues & make suggestions](https://github.com/microsoft/sqlopsstudio/issues)
-# [Get help](https://gitter.im/Microsoft/mssql)

@@ -30,9 +30,9 @@ ms.workload: "Inactive"
 
 Changes a Resource Governor external pool that specifies resources that can be used by external processes. 
 
-+ For [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)], the external pool governs `rterm.exe`, `BxlServer.exe`, and other processes spawned by them.
++ For [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] in [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], the external pool governs `rterm.exe`, `BxlServer.exe`, and other processes spawned by them.
 
-+ For INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)], the external pool governs the same R processes listed above, as well as `python.exe`, `BxlServer.exe`, and other processes spawned by them.
++ For [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] in [INCLUDE[sssql17-md](../../includes/sssql17-md.md)], the external pool governs the same R processes listed above, as well as `python.exe`, `BxlServer.exe`, and other processes spawned by them.
 
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 

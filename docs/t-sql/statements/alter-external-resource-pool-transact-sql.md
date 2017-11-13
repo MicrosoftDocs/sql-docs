@@ -32,7 +32,7 @@ Changes a Resource Governor external pool that specifies resources that can be u
 
 + For [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] in [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], the external pool governs `rterm.exe`, `BxlServer.exe`, and other processes spawned by them.
 
-+ For [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] in [INCLUDE[sssql17-md](../../includes/sssql17-md.md)], the external pool governs the same R processes listed above, as well as `python.exe`, `BxlServer.exe`, and other processes spawned by them.
++ For [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] in [INCLUDE[sssql17-md](../../includes/sssql17-md.md)], the external pool governs the R processes listed for the previous version, as well as `python.exe`, `BxlServer.exe`, and other processes spawned by them.
 
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
@@ -66,7 +66,7 @@ Is the name of an existing user-defined external resource pool or the default ex
 
 
 MAX_CPU_PERCENT =*value*  
-Specifies the maximum average CPU bandwidth that all requests in the external resource pool will receive when there is CPU contention. *value* is an integer with a default setting of 100. The allowed range for *value* is from 1 through 100.
+Specifies the maximum average CPU bandwidth that all requests in the external resource pool can receive when there is CPU contention. *value* is an integer with a default setting of 100. The allowed range for *value* is from 1 through 100.
 
 
 AFFINITY {CPU = AUTO | ( \<CPU_range_spec> ) | NUMANODE = (\<NUMA_node_range_spec>)}  
@@ -80,7 +80,7 @@ Specifies the total server memory that can be used by requests in this external 
 
 
 MAX_PROCESSES =*value*  
-Specifies the maximum number of processes allowed for the external resource pool. Specify 0 to set an unlimited threshold for the pool which will be bound only be computer resources. The default is 0.
+Specifies the maximum number of processes allowed for the external resource pool. Specify 0 to set an unlimited threshold for the pool, which is thereafter bound only by computer resources. The default is 0.
 
 ## Remarks
 

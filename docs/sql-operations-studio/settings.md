@@ -1,9 +1,8 @@
 ---
 title: SQL Operations Studio (preview) User and Workspace Settings | Microsoft Docs
 description: How to modify SQL Operations Studio (preview) User and Workspace Settings.
-keywords: 
 ms.custom: "tools|sos"
-ms.date: "11/08/2017"
+ms.date: "11/15/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: "alayu; erickang; sstein"
 ms.suite: "sql"
@@ -40,87 +39,14 @@ Changes to settings are reloaded by [!INCLUDE[name-sos](../includes/name-sos-sho
 ## Settings File Locations
 
 Depending on your platform, the user settings file is located here:
-??VERIFY THESE PLACEHOLDERS??
-* **Windows** `%APPDATA%\sqlopsstudio\User\settings.json`
-* **Mac** `$HOME/Library/Application Support/sqlopsstudio/User/settings.json`
-* **Linux** `$HOME/.config/sqlopsstudio/User/settings.json`
+
+* **Windows** `%APPDATA%\sqlops\User\settings.json`
+* **Mac** `$HOME/Library/Application Support/sqlops/User/settings.json`
+* **Linux** `$HOME/.config/sqlops/User/settings.json`
 
 The workspace setting file is located under the `.[!INCLUDE[name-sos](../includes/name-sos-short.md)]` folder in your project.
 
-## Default Settings
 
-When you open settings, **Default Settings** appear so you can search and discover the settings you are looking for. When you search using the Search bar, it not only shows and highlights the settings matching your criteria, but also filters out settings that are not matching. This makes finding settings quick and easy. There are actions available inside **Default Settings** and *settings.json* editors that help you quickly copy or update a setting.
+## Additional resources
 
-<p>
-  <img alt="settings groups" src="https://az754404.vo.msecnd.net/public/default-settings.gif" />
-</p>
-
-
-
-### Settings groups
-
-Default settings are represented in groups so that you can navigate them easily. It has **Most Commonly Used** group on the top to see the most common customizations done by [!INCLUDE[name-sos](../includes/name-sos-short.md)] users.
-
-![Settings Groups](media/settings/settings-groups.png)
-
-Here is the [copy of default settings](#default-settings) that comes with [!INCLUDE[name-sos](../includes/name-sos-short.md)].
-
-## Language specific editor settings
-
-To customize your editor by language, run the global command **Preferences: Configure language-specific settings...** (command id: `workbench.action.configureLanguageBasedSettings`) from the **Command Palette** (`kb(workbench.action.showCommands)`) which opens the language picker. Selecting the language you want, opens the Settings editor with the language entry where you can add applicable settings.
-
-![Configure language-specific settings command](media/settings/pref-config-lang-settings.png)
-
-![Select language](media/settings/lang-selection.png)
-
-![Add language specific setting](media/settings/lang-based-settings.png)
-
-If you have a file open and you want to customize the editor for this file type, click on the Language Mode in the Status Bar to the bottom-right of the [!INCLUDE[name-sos](../includes/name-sos-short.md)] window. This opens the Language Mode picker with an option **Configure 'language_name' language-based settings...**. Selecting this opens the Settings editor with the language entry where you can add applicable settings.
-
-You can also configure language-based settings by directly opening `settings.json`. You can scope them to the workspace by placing them in the Workspace settings just like other settings. If you have settings defined for a language in both user and workspace scopes, then they are merged by giving precedence to the ones defined in the workspace.
-
-The following examples customize editor settings for language modes `typescript` and `markdown`.
-
-```json
-{
-  "[typescript]": {
-    "editor.formatOnSave": true,
-    "editor.formatOnPaste": true
-  },
-  "[markdown]": {
-    "editor.formatOnSave": true,
-    "editor.wordWrap": "on",
-    "editor.renderWhitespace": "all",
-    "editor.acceptSuggestionOnEnter": "off"
-  }
-}
-```
-
-You can use IntelliSense in Settings editor to help you find allowed language-based settings. All editor settings and some non-editor settings are supported.
-
-## Settings and security
-
-In settings, you're allowed to specify some of the executables that [!INCLUDE[name-sos](../includes/name-sos-short.md)] runs to do its work. For example, you can choose which shell the Integrated Terminal should use. For enhanced security, such settings can only be defined in user settings and not at the workspace scope.
-
-Here is the list of settings we don't support at the workspace scope:
-
-- `git.path`
-- `terminal.integrated.shell.linux`
-- `terminal.integrated.shellArgs.linux`
-- `terminal.integrated.shell.osx`
-- `terminal.integrated.shellArgs.osx`
-- `terminal.integrated.shell.windows`
-- `terminal.integrated.shellArgs.windows`
-- `terminal.external.windowsExec`
-- `terminal.external.osxExec`
-- `terminal.external.linuxExec`
-
-The first time you open a workspace that defines any of these settings, [!INCLUDE[name-sos](../includes/name-sos-short.md)] warns you and subsequently always ignore the values after that.
-
-### <a id="default-settings"></a>Copy of Default Settings
-
-To find the default settings, press **Ctrl+COMMA**.
-
-![Default settings](media/settings/default-settings-view.png)
-
-Because SQL Operations Studio (preview) inherits its user and workspace settings functionality from Visual Studio Code, detailed information about advanced settings is in the [Settings for Visual Studio Code article](https://code.visualstudio.com/docs/getstarted/settings).
+Because [!INCLUDE[name-sos](../includes/name-sos-short.md)] inherits its user and workspace settings functionality from Visual Studio Code, detailed information about settings is in the [Settings for Visual Studio Code](https://code.visualstudio.com/docs/getstarted/settings) article.

@@ -1,9 +1,8 @@
 ---
 title: Create code snippets in SQL Operations Studio (preview) | Microsoft Docs
 description: Learn how to create and use SQL code snippets in SQL Operations Studio (preview)
-keywords: 
 ms.custom: "tools|sos"
-ms.date: "11/08/2017"
+ms.date: "11/15/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: "alayu; erickang; sstein"
 ms.suite: "sql"
@@ -14,23 +13,23 @@ ms.author: "sstein"
 manager: craigg
 ms.workload: "Inactive"
 ---
-# Create and use code snippets to quickly create SQL scripts in [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# Create and use code snippets to quickly create Transact-SQL (T-SQL) scripts in [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 Code snippets in [!INCLUDE[name-sos](../includes/name-sos-short.md)] are templates that make it easier to create databases and database objects. 
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] provides several SQL snippets to assist you with quickly generating the proper syntax. 
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] provides several T-SQL snippets to assist you with quickly generating the proper syntax. 
 
 User-defined code snippets can also be created.
 
-## Using built-in SQL code snippets
+## Using built-in T-SQL code snippets
 
 1. To access the available snippets, type *sql* in the query editor to open the list:
 
-   ![sql snippets](media/code-snippets/sql-snippets.png)
+   ![snippets](media/code-snippets/sql-snippets.png)
 
-1. Select the snippet you want to use, and it generates the SQL script. For example, select *sqlCreateTable*:
+1. Select the snippet you want to use, and it generates the T-SQL script. For example, select *sqlCreateTable*:
 
-   ![sql snippets](media/code-snippets/create-table.png)
+   ![create table snippets](media/code-snippets/create-table.png)
 
 1. Update the highlighted fields with your specific values. For example, replace *TableName* and *Schema* with the values for your database:
 
@@ -40,13 +39,13 @@ User-defined code snippets can also be created.
 
    ![replace template field](media/code-snippets/change-all.png)
 
-1. Update or add any additional SQL you need for the selected snippet. For example, update *Column1*, *Column2*, and add more columns.
+1. Update or add any additional T-SQL you need for the selected snippet. For example, update *Column1*, *Column2*, and add more columns.
 
 
  
 ## Creating SQL code snippets 
 
-You can define your own SQL snippets. To open up the SQL snippet file for editing:
+You can define your own snippets. To open up the SQL snippet file for editing:
 
 1. Open the *Command Palette* (**Shift+Ctrl+P**), and type *snip*, and select **Preferences: Open User Snippets**:
 
@@ -96,6 +95,6 @@ You can define your own SQL snippets. To open up the SQL snippet file for editin
 Select one of the new snippets and give it a test run!
 
 
-## Next steps
+## Additional resources
 
 For information about the SQL editor, see [Code editor tutorial](tutorial-sql-editor.md).

@@ -1,9 +1,8 @@
 ---
 title: "Tutorial: Build a custom insight widget in SQL Operations Studio (preview) | Microsoft Docs"
 description: This tutorial demonstrates how to build custom insight widgets and add them to database and server dashboards in SQL Operations Studio (preview).
-keywords: 
 ms.custom: "tools|sos"
-ms.date: "11/08/2017"
+ms.date: "11/15/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: "alayu; erickang; sstein"
 ms.suite: "sql"
@@ -17,7 +16,7 @@ ms.workload: "Inactive"
 
 # Tutorial: Build a custom insight widget
 
-This tutorial, demonstrates how to use your own insight queries to build custom insight widgets.
+This tutorial demonstrates how to use your own insight queries to build custom insight widgets.
 
 During this tutorial you learn how to:
 > [!div class="checklist"]
@@ -31,8 +30,6 @@ This tutorial requires the SQL Server or Azure SQL Database *TutorialDB*. To cre
 
 - [Connect and query SQL Server using [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
 - [Connect and query Azure SQL Database using [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
-
-
 
 
 ## Run your own query and view the result in a chart view
@@ -49,7 +46,7 @@ In this step, run a sql script to query the current active sessions.
    WHERE status = 'running'
    ```
 1. To execute the query, press **F5**.
-3. After SQL Operations Studio (preview) returns with the result view, click **View as Chart**, then click the **Chart Viewer** tab.
+3. After [!INCLUDE[name-sos](../includes/name-sos-short.md)] returns with the result view, click **View as Chart**, then click the **Chart Viewer** tab.
 4. Change **Chart Type** to **count**. These settings render a count chart.
 5. Save the query in the editor to a *.sql file. For this tutorial, save the script as *activeSession.sql*.
 
@@ -106,4 +103,7 @@ In this tutorial, you learned how to:
 > * Build a custom insight widget from the chart
 > * Add the chart to a server or database dashboard
 
-To learn how to backup and restore databases, see [Backup and Restore using SQL Operations Studio (preview)](tutorial-backup-restore-sql-server.md).
+To learn how to backup and restore databases, complete the next tutorial:
+
+> [!div class="nextstepaction"]
+> [Backup and restore databases](tutorial-backup-restore-sql-server.md).

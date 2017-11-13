@@ -1,9 +1,8 @@
 ---
 title: SQL Operations Studio (preview) FAQ | Microsoft Docs
-description: SQL Operations Studio (preview) is a lightweight, open source, multi-OS and multi-database tool, designed from the ground-up for DBAs and developers.
-keywords: 
+description: Frequently asked questions (FAQ) for SQL Operations Studio (preview).
 ms.custom: "tools|sos"
-ms.date: "11/09/2017"
+ms.date: "11/15/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: "alayu; erickang; sstein"
 ms.suite: "sql"
@@ -14,7 +13,7 @@ ms.author: "sstein"
 manager: craigg
 ms.workload: "Inactive"
 ---
-# [!INCLUDE[name-sos](../includes/name-sos-short.md)] FAQ
+# [!INCLUDE[name-sos](../includes/name-sos.md)] FAQ
 
 ## What is [!INCLUDE[name-sos](../includes/name-sos-short.md)]?
 
@@ -22,7 +21,7 @@ ms.workload: "Inactive"
 
 ## Where can I get [!INCLUDE[name-sos](../includes/name-sos-short.md)]?
 
-Download [!INCLUDE[name-sos](../includes/name-sos-short.md)] for Windows, macOS, and Linux from http://aka.ms/sqlopsstudio
+Download [!INCLUDE[name-sos](../includes/name-sos-short.md)] for Windows, macOS, and Linux from [http://aka.ms/sqlopsstudio](download.md)
 
 ## How much does [!INCLUDE[name-sos](../includes/name-sos-short.md)] cost?
 
@@ -61,7 +60,7 @@ The goal is to offer customers the choice of using the tools they want on the pl
 
 
 ## [!INCLUDE[name-sos](../includes/name-sos-short.md)] is missing a feature that is in SSMS/SSDT. Will you add it?
-It depends on the scenario & customer/business need. To help prioritize, file a suggestion on GitHub: https://github.com/microsoft/sqlopsstudio/issues.
+It depends on the scenario & customer/business need. To help prioritize, file a suggestion on [GitHub](https://github.com/microsoft/sqlopsstudio/issues).
 
 
 ## I understand [!INCLUDE[name-sos](../includes/name-sos-short.md)] and the mssql extension for VS Code are powered by a new *tools service* that uses SMO APIs under the covers. Is SMO available on Linux and macOS?
@@ -72,10 +71,10 @@ The SQL Tools Service is on GitHub: [https://github.com/Microsoft/sqltoolsservic
 
 ## Do you plan to port the DACFx APIs and/or sqlpackage.exe and/or SSDT to Linux and macOS?
 
-It's on the longer-term roadmap. To help prioritize, file a suggestion on GitHub: [https://github.com/Microsoft/sqlopsstudio/issues](https://github.com/Microsoft/sqlopsstudio/issues).
+It's on the longer-term roadmap. To help prioritize, file a suggestion on [GitHub](https://github.com/microsoft/sqlopsstudio/issues).
 
 
 ## Will SQL PowerShell cmdlets be available on Linux and macOS?
 
-SQL PowerShell is available today on the PowerShell gallery and you can use it on Windows to work with SQL Server running anywhere, including SQL on Linux. Offering the SQL PowerShell cmdlets on Linux & macOS is in the roadmap. To help prioritize, file a suggestion on GitHub: [https://github.com/Microsoft/sqlopsstudio/issues](https://github.com/Microsoft/sqlopsstudio/issues).
+SQL PowerShell is available today on the PowerShell gallery and you can use it on Windows to work with SQL Server running anywhere, including SQL on Linux. Offering the SQL PowerShell cmdlets on Linux & macOS is in the roadmap. To help prioritize, file a suggestion on [GitHub](https://github.com/microsoft/sqlopsstudio/issues).
 

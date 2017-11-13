@@ -13,21 +13,21 @@ ms.topic: article
 ms.tgt_pltfrm: NA
 ms.workload: sql-server
 ms.custom: partners
-ms.date: 11/02/2017    
+ms.date: 11/02/2017 
 ms.author: mikeray
 
 ---
 # SQL Server monitoring partners
-To monitor your SQL Server services, choose from a wide variety of industry-leading tools.  This article highlights Microsoft partner companies with monitoring solutions supporting Microsoft SQL Server.
+To monitor your SQL Server services, choose from a wide variety of industry-leading tools. This article highlights Microsoft partner companies with monitoring solutions supporting Microsoft SQL Server.
 
 <!--
-|![PartnerShortName][1] |**PartnerShortName**<br>PartnerShortName Brief description of the type of products that partner provides. <br><br>List of supported versions of SQL Server, OS, OS platforms/distros  Server 2005 SP4 – SQL Server 2016 on Windows |[Datasheet][PartnerShortName_datasheet]<br>[Marketplace][PartnerShortName_marketplace]<br>[Website][PartnerShortName_website]<br>[Twitter][PartnerShortName_twitter]<br>[Video][PartnerShortName_youtube]|[![veem_video](./media/partner-hadr-sql-server/PartnerShortName_video.png)](https://www.youtube.com/channel/**************)
+|![PartnerShortName][1] |**PartnerShortName**<br>PartnerShortName Brief description of the type of products that partner provides. <br><br>List of supported versions of SQL Server, OS, OS platforms/distros Server 2005 SP4 – SQL Server 2016 on Windows |[Datasheet][PartnerShortName_datasheet]<br>[Marketplace][PartnerShortName_marketplace]<br>[Website][PartnerShortName_website]<br>[Twitter][PartnerShortName_twitter]<br>[Video][PartnerShortName_youtube]|[![veem_video](./media/partner-hadr-sql-server/PartnerShortName_video.png)](https://www.youtube.com/channel/**************)
 -->
 
-## Our monitoring partners
+## Microsoft monitoring partners
 | Partner | Description | Links |
 | --- | --- | --- | --- |
-|[![idera][1]][idera_website] |**IDERA**<br>SQL Diagnostic Manager is a powerful performance monitoring and diagnostics solution that proactively alerts administrators to health, performance and availability problems within SQL Server environments all from a central console.<br><br>[System requirements][idera_requirements]|<!--[Marketplace][idera_marketplace]<br>-->[Website][idera_website]<br>[Twitter][idera_twitter]<br>[Video][idera_youtube] | |
+|[![idera][1]][idera_website] |**IDERA**<br>SQL Diagnostic Manager is a powerful performance monitoring and diagnostics solution that proactively alerts administrators to health, performance, and availability problems within SQL Server environments all from a central console.<br><br>[System requirements][idera_requirements]|<!--[Marketplace][idera_marketplace]<br>-->[Website][idera_website]<br>[Twitter][idera_twitter]<br>[Video][idera_youtube] | |
 |[![quest][3]][quest_website] |**Quest**<br>Spotlight on SQL Server Enterprise - Ensure peak performance around the clock with unmatched monitoring, diagnosis and optimization of SQL Server environments. Spotlight provides access to the details you need for optimal fitness of your SQL Server databases. Get intuitive overviews of health and performance, automated alerts and actions, and mobile device support.|[Marketplace][quest_marketplace]<br>[Website][quest_website]<br>[Video][quest_video] | |
 |[![redgate][4]][redgate_website]| **Redgate**<br>SQL Monitor from Redgate is a SQL Server monitoring tool that helps teams looking after SQL Server be more proactive. Not only does SQL Monitor alert you to current issues, it gives you the information you need to stop them happening in the future. Ideally suited to large SQL Server estates, SQL Monitor makes sure you always have the answer to questions about performance. |[Website][redgate_website]<br>[Twitter][redgate_twitter]<br>[LinkedIn][redgate_linkedin] <br>[Video][redgate_video]| |
 |[![sentryone][2]][sentryone_website] |**SentryOne**<br>SentryOne solutions empower Microsoft data professionals to achieve breakthrough performance across physical, virtual, and cloud environments. With SentryOne, data professionals can consolidate their tool sets, reduce infrastructure costs, and increase database speed and efficiency for peak performance across their Microsoft data platform environments, regardless of size or complexity.|<!--[Marketplace][idera_marketplace]<br>-->[Website][sentryone_website]<br>[Datasheet][sentryone_datasheet]<br>[Twitter][sentryone_twitter]<br>[LinkedIn][sentryone_linkedin] | |

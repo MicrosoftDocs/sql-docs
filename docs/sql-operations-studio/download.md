@@ -1,9 +1,8 @@
 ---
 title: Download and install Microsoft SQL Operations Studio (preview) | Microsoft Docs
 description: 'Download and Install Microsoft SQL Operations Studio (preview) for Windows, macOS, or Linux'
-keywords: Microsoft SQL Operations Studio (preview), install Microsoft SQL Operations Studio (preview), download Microsoft SQL Operations Studio (preview)
 ms.custom: "tools|sos"
-ms.date: "11/08/2017"
+ms.date: "11/15/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: "alayu; erickang; sstein"
 ms.suite: "sql"
@@ -14,34 +13,27 @@ ms.author: "sstein"
 manager: craigg
 ms.workload: "Inactive"
 ---
-# Download and install Microsoft SQL Operations Studio (preview)
-
-[!INCLUDE[name-sos-short](../includes/name-sos-short.md)] is a free, lightweight, modern database development and management tool that runs on Windows, macOS, and Linux. Use [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] to manage SQL Server running anywhere, Azure SQL Database, and Azure SQL Data Warehouse.   
-
-> [!NOTE]
-> This preview version of [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] installs by copying a zip (tar) file to your local computer, extracting (expanding) the file, and running the executable.
+# Download and install [!INCLUDE[name-sos](../includes/name-sos.md)]
 
 
-## Get SQL Operations Studio (preview) for Windows
+## Get [!INCLUDE[name-sos](../includes/name-sos-short.md)] for Windows
 
-1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] for Windows](https://go.microsoft.com/fwlink/?linkid=862648) to your local computer.
-1. Right-click the **.zip** file, and select **Properties**.
-1. On the **General** tab, select **Unblock**, and click **Apply**.
-1. Browse to the downloaded file and extract it.
-1. Run *\sqlops-windows\sqlops.exe*
+1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] for Windows](https://go.microsoft.com/fwlink/?linkid=862648).
+2. Browse to the downloaded file and extract it.
+3. Run *\sqlops-windows\sqlops.exe*
 
 
-## Get SQL Operations Studio (preview) for macOS
+## Get [!INCLUDE[name-sos](../includes/name-sos-short.md)] for macOS
 
-1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] for macOS](https://go.microsoft.com/fwlink/?linkid=862647) to your local computer.
+1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] for macOS](https://go.microsoft.com/fwlink/?linkid=862647).
 2. To expand the contents of the zip, double-click it.
-3. Drag *sqlops.app* to the *Applications* folder, making it available in the *Launchpad*.
+3. To make [!INCLUDE[name-sos](../includes/name-sos-short.md)] available in the *Launchpad*, drag *sqlops.app* to the *Applications* folder.
 
-## Get SQL Operations Studio (preview) for Linux
 
-1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] for Linux](https://go.microsoft.com/fwlink/?linkid=862646)
-1. Open a new Terminal window.
-1. Type the following commands to extract the file and launch [!INCLUDE[name-sos](../includes/name-sos-short.md)]:
+## Get [!INCLUDE[name-sos](../includes/name-sos-short.md)] for Linux
+
+1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] for Linux](https://go.microsoft.com/fwlink/?linkid=862646).
+1. To extract the file and launch [!INCLUDE[name-sos](../includes/name-sos-short.md)], open a new Terminal window and type the following commands:
 
    ```bash
    cd ~
@@ -52,7 +44,7 @@ ms.workload: "Inactive"
    sqlops .
    ```
 
-## Uninstall SQL Operations Studio (preview)
+## Uninstall [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 To uninstall [!INCLUDE[name-sos-short](../includes/name-sos-short.md)], delete the files.
 

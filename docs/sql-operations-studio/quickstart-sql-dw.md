@@ -1,9 +1,8 @@
 ---
 title: "Quickstart: Connect and query an Azure SQL Data Warehouse using SQL Operations Studio (preview) | Microsoft Docs"
 description: This quickstart shows how to use SQL Operations Studio (preview) to connect to a SQL database and run a query
-keywords:
 ms.custom: "tools|sos"
-ms.date: "11/08/2017"
+ms.date: "11/15/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: "alayu; erickang; sstein"
 ms.suite: "sql"

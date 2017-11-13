@@ -2,7 +2,7 @@
 title: Enable or disable usage data collection, and crash reporting for SQL Operations Studio (preview) | Microsoft Docs
 description: This article explains how to control if usage and crash reporting data is collected and sent to Microsoft.
 ms.custom: "tools|sos"
-ms.date: "11/08/2017"
+ms.date: "11/15/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: "alayu; erickang; sstein"
 ms.suite: "sql"

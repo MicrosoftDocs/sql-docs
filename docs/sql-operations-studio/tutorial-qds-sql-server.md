@@ -1,9 +1,8 @@
 ---
-title: "Tutorial: Monitor Query Performance with SQL Operations Studio (preview)  | Microsoft Docs"
-description: This tutorial demonstrates how to monitor a database by adding a pre-built query performance widget to the database dashboard that shows the five slowest queries.
-keywords: 
+title: "Tutorial: Enable the five slowest queries sample widget - SQL Operations Studio (preview)  | Microsoft Docs"
+description: This tutorial demonstrates how to enable the five slowest queries sample widget on the database dashboard.
 ms.custom: "tools|sos"
-ms.date: "11/08/2017"
+ms.date: "11/15/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: "alayu; erickang; sstein"
 ms.suite: "sql"
@@ -15,9 +14,9 @@ manager: craigg
 ms.workload: "Inactive"
 ---
 
-# Tutorial: Add the pre-built *five slowest queries* widget to the database dashboard
+# Tutorial: Add the *five slowest queries* sample widget to the database dashboard
 
-This tutorial demonstrates the process of adding one of [!INCLUDE[name-sos](../includes/name-sos-short.md)]'s built-in insight widgets to the *database dashboard* to quickly view a database's five slowest queries. You also learn how to view the details of the slow queries and query plans using [!INCLUDE[name-sos](../includes/name-sos-short.md)]'s features. During this tutorial, you learn how to:
+This tutorial demonstrates the process of adding one of [!INCLUDE[name-sos](../includes/name-sos-short.md)]'s built-in sample widgets to the *database dashboard* to quickly view a database's five slowest queries. You also learn how to view the details of the slow queries and query plans using [!INCLUDE[name-sos](../includes/name-sos-short.md)]'s features. During this tutorial, you learn how to:
 
 > [!div class="checklist"]
 > * Enable Query Store on a database
@@ -38,7 +37,7 @@ This tutorial requires the SQL Server or Azure SQL Database *TutorialDB*. To cre
 
 ## Turn on Query Store for your database
 
-The widget in this example requires *Query Store* to be enabled so run the following T-SQL statement against your database:
+The widget in this example requires *Query Store* to be enabled so run the following Transact-SQL (T-SQL) statement against your database:
 
    ```sql
     ALTER DATABASE TutorialDB SET QUERY_STORE = ON
@@ -126,4 +125,8 @@ In this tutorial, you learned how to:
 > * View details about the database's slowest queries
 > * View query execution plans for the slow queries
 
-To learn how to build a custom insight widget, see [Build a custom insight widget](tutorial-build-custom-insight-sql-server.md).
+
+To learn how to enable the **table space usage** sample insight, complete the next tutorial:
+
+> [!div class="nextstepaction"]
+> [Enable the table space sample insight widget](tutorial-table-space-sql-server.md)

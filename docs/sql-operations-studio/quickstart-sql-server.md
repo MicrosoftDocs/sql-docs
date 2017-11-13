@@ -15,7 +15,7 @@ ms.workload: "Inactive"
 ---
 
 # Quickstart: Connect and query SQL Server using [!INCLUDE[name-sos](../includes/name-sos-short.md)]
-This quickstart shows how to use [!INCLUDE[name-sos](../includes/name-sos-short.md)] to connect to SQL Server and run a query.
+This quickstart shows how to use [!INCLUDE[name-sos](../includes/name-sos-short.md)] to connect to SQL Server, and then use Transact-SQL (T-SQL) statements to create the *TutorialDB* used in [!INCLUDE[name-sos](../includes/name-sos-short.md)] tutorials.
 
 ## Prerequisites
 

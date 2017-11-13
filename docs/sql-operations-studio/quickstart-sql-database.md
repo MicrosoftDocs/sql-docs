@@ -15,7 +15,7 @@ ms.workload: "Inactive"
 ---
 # Quickstart: Use [!INCLUDE[name-sos](../includes/name-sos-short.md)] to connect and query Azure SQL database
 
-This quickstart demonstrates how to use *[!INCLUDE[name-sos](../includes/name-sos-short.md)]* to connect to an Azure SQL database, and then use Transact-SQL (T-SQL) statements to create, insert, and select data.
+This quickstart demonstrates how to use *[!INCLUDE[name-sos](../includes/name-sos-short.md)]* to connect to an Azure SQL database, and then use Transact-SQL (T-SQL) statements to create the *TutorialDB* used in [!INCLUDE[name-sos](../includes/name-sos-short.md)] tutorials.
 
 ## Prerequisites
 

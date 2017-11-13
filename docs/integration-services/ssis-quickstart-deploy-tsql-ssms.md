@@ -34,7 +34,7 @@ Use SQL Server Management Studio to establish a connection to the SSIS Catalog.
 
 2. In the **Connect to Server** dialog box, enter the following information:
 
-   | Setting       | Suggested value | More info | 
+   | Setting       | Suggested value | More info | 
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Server type** | Database engine | This value is required. |
    | **Server name** | The fully qualified server name |  |

@@ -112,7 +112,7 @@ After the script has been embedded in the stored procedure, any application that
 
 ![script-in-db-python](../../advanced-analytics/python/media/script-in-db-python2.png)
 
-1. A request for the Python runtime is indicated by the parameter _@language='Python'_ passed to the stored procedure. SQL Server sends this request to the Launchpad service.
+1. A request for the Python runtime is indicated by the parameter `@language='Python'` passed to the stored procedure. SQL Server sends this request to the Launchpad service.
 2. The Launchpad service starts the appropriate launcher; in this case, PythonLauncher.
 3. PythonLauncher starts the external Python35 process.
 4. BxlServer coordinates with the Python runtime to manage exchanges of data, and storage of working results.
@@ -125,7 +125,7 @@ After the script has been embedded in the stored procedure, any application that
 You can run Python scripts from a remote computer, such as a laptop, and have them execute in the context of the SQl Server computer, if these conditions are met:
 
 + You design the scripts appropriately
-+ The remote computer has installed the extensibility libraries that are used by Machine Learning Services
++ The remote computer has installed the extensibility libraries that are used by Machine Learning Services. The [revoscalepy](what-is-revoscalepy.md) package is required to use remote compute contexts.
 
 The following diagram summarizes the overall workflow when scripts are sent from a remote computer.
 

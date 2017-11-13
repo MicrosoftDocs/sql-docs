@@ -41,7 +41,7 @@ Use [!INCLUDE[name-sos](../includes/name-sos-short.md)] to establish a connectio
 
 2. This article uses *SQL Login*, but *Windows Authentication* is also supported. Fill in the fields as follows:
 
-   | Setting       | Suggested value | Description |
+   | Setting       | Suggested value | Description |
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Server name** | The fully qualified server name | The name should be something like this: **servername.database.windows.net** |
    | **Authentication** | SQL Login| SQL Authentication is used in this tutorial. |

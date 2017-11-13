@@ -1,7 +1,7 @@
 ---
 title: "Security considerations for machine learning in SQL Server | Microsoft Docs"
-ms.date: "11/03/2017"
-ms.prod: "sql-server-2016"
+ms.date: "11/09/2017"
+ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -44,20 +44,23 @@ The use of SQL logins is also supported in this scenario, which requires that th
  In general, the [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] starts the external script runtime and executes scripts under its own account. However, if the external runtime makes an ODBC call, the [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] impersonates the credentials of the user that sent the command to ensure that the ODBC call does not fail. This is called *implied authentication*.
  
  > [!IMPORTANT]
- >
  > For implied authentication to succeed, the Windows users group that contains the worker accounts (by default, **SQLRUser**) must have an account in the master database for the instance, and this account must be given permissions to connect to the instance.
  > 
  > The group **SQLRUser** is also used when running Python scripts. 
 
+In general, we recommend that you move larger datasets into SQL Server beforehand, rather than try to read data using RODBC or another library. Also, use a SQL Server query or view as your primary data source, for better performance. For example, you might get your training data (typically the largest dataset) from SQL Server and get just a list of factors from an external source. You can define a linked server to get data from most ODBC data sources. For more information, see [Create a linked server](https://docs.microsoft.com/sql/relational-databases/linked-servers/create-linked-servers-sql-server-database-engine).
+
+To minimize dependency on ODBC calls to external data sources, you might also perform data engineering as a separate process, and save the results in a table, or use T-SQL. See this tutorial for a good example of data engineering in SQL vs. R: [Create data features using T-SQL](../tutorials/sqldev-create-data-features-using-t-sql.md).
+
 ## No support for encryption at rest
 
-Transparent Data Encryption is not supported for data sent to or received from the external script runtime. As a consequence, encryption at rest **is not** be applied to any data that you use in R or Python scripts, any data saved to disk, or any persisted intermediate results.
+Transparent Data Encryption is not supported for data sent to or received from the external script runtime. As a consequence, encryption at rest **is not** applied to any data that you use in R or Python scripts, any data saved to disk, or any persisted intermediate results.
 
 ## Resources
 
 For more information about managing the service, and about how to provision the user accounts used to execute R scripts, see [Configure and manage Advanced Analytics Extensions](../../advanced-analytics/r/configure-and-manage-advanced-analytics-extensions.md).
 
-For a description of the security architecture, see:
+For an explanation of the general security architecture, see:
 
 + [Security overview for R](security-overview-sql-server-r.md)
 + [Security overview for Python](../python/security-overview-sql-server-python-services.md)

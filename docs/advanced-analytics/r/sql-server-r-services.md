@@ -1,9 +1,7 @@
 ---
 title: "SQL Server Machine Learning Services| Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "08/20/2017"
-ms.prod: "sql-server-2016"
+ms.date: "11/09/2017"
+ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,7 +12,7 @@ ms.assetid: ba1dea65-40ea-484a-b767-53680c954934
 caps.latest.revision: 38
 author: "jeannt"
 ms.author: "jeannt"
-manager: "jhubbard"
+manager: "cgronlund"
 ms.workload: "Active"
 ---
 # SQL Server Machine Learning Services
@@ -33,7 +31,7 @@ Through SQL Server setup, you can install both server and client components.
   
     When you select this feature, extensions are installed in the database engine to support execution of code written in R or Python. A new service is created, the [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)], to manage communications between the external runtimes and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.
   
-+ Install **Microsoft Machine Learning Server (Standalone)** on a separate computer if you don't need to use SQL Server as the compute context. Machine Learning Server includes the same machine learning components, plus the mrsdeploy package for scalable, distributed execution of machine learning jobs as a web service.
++ Install **Microsoft Machine Learning Server (Standalone)** on a separate computer if you don't need to use SQL Server as the compute context. Machine Learning Server includes the same machine learning components, plus the ability to execute scalable, distributed machine learning jobs as a web service.
   
 +    Install [Microsoft R Client](https://docs.microsoft.com/r-server/r-client/what-is-microsoft-r-client) on remote computers to develop solutions that can be deployed to SQL Server, or to Machine Learning Server on Windows, Linux, or Hadoop.
 
@@ -43,7 +41,7 @@ Through SQL Server setup, you can install both server and client components.
   
     When you select this feature, you get the ability to run R script using the SQL Server as the compute context, or to run R script in a stored procedure.
   
-+   Install **Microsoft R Server (Standalone)** from SQL Server 2016 setup to set up the R components on separate computer that you use for developin R solutions.
++   Install **Microsoft R Server (Standalone)** from SQL Server 2016 setup, to install the R components on a separate computer that you can use for developing or deploying R solutions.
 
 
 ## Which type of machine learning service do I need?

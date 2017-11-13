@@ -29,7 +29,9 @@ ms.workload: "Inactive"
 
 ## Smart T-SQL code snippets
 
-T-SQL code snippets generate the proper T-SQL syntax to create databases, tables, views, stored procedures, users, logins, roles, etc., and to update existing database objects. To quickly create copies of your database for development or testing purposes, generate and execute CREATE and INSERT scripts. [!INCLUDE[name-sos](../includes/name-sos-short.md)] provides functionality to create your own T-SQL code snippets. To learn more, see [Create and use code snippets](code-snippets.md).
+T-SQL code snippets generate the proper T-SQL syntax to create databases, tables, views, stored procedures, users, logins, roles, etc., and to update existing database objects. Use smart snippets to quickly create copies of your database for development or testing purposes, and to generate and execute CREATE and INSERT scripts.
+
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] also provides functionality to create custom T-SQL code snippets. To learn more, see [Create and use code snippets](code-snippets.md).
 
 
 ## Customizable Server and Database Dashboards featuring Insightful monitoring widgets

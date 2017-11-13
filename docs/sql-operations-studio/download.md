@@ -19,10 +19,8 @@ ms.workload: "Inactive"
 ## Get [!INCLUDE[name-sos](../includes/name-sos-short.md)] for Windows
 
 1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] for Windows](https://go.microsoft.com/fwlink/?linkid=862648).
-2. Right-click the **.zip** file, and select **Properties**.
-3. On the **General** tab, select **Unblock**, and click **Apply**.
-4. Browse to the downloaded file and extract it.
-5. Run *\sqlops-windows\sqlops.exe*
+2. Browse to the downloaded file and extract it.
+3. Run *\sqlops-windows\sqlops.exe*
 
 
 ## Get [!INCLUDE[name-sos](../includes/name-sos-short.md)] for macOS

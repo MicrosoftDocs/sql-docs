@@ -1,5 +1,5 @@
 ---
-title: "Tutorial: Use the Transact-SQL editor to create database objects - SQL Operations Studio (preview) | Microsoft Docs"
+title: "Tutorial: Use the SQL Operations Studio (preview) Transact-SQL editor to create database objects | Microsoft Docs"
 description: This tutorial demonstrates the key features in SQL Operations Studio (preview) that simplify using T-SQL.
 ms.custom: "tools|sos"
 ms.date: "11/15/2017"
@@ -16,7 +16,7 @@ ms.workload: "Inactive"
 
 # Tutorial: Use the Transact-SQL editor to create database objects - [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
-Creating and running queries, stored procedures, scripts, etc. are the core tasks of database professionals. This tutorial demonstrates the key features in [!INCLUDE[name-sos](../includes/name-sos-short.md)] that simplify using T-SQL.
+Creating and running queries, stored procedures, scripts, etc. are the core tasks of database professionals. This tutorial demonstrates the key features in the T-SQL editor to create database objects.
 
 In this tutorial, you learn how to use [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] to:
 > [!div class="checklist"]

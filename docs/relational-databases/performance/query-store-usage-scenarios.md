@@ -2,7 +2,7 @@
 title: "Query Store Usage Scenarios | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "04/12/2016"
+ms.date: "11/13/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -128,7 +128,7 @@ ms.workload: "Inactive"
   
 4.  Move to latest database compatibility level: get your workload exposed to the latest Query Optimizer changes and let it potentially create new plans.  
   
-5.  Use Query Store for analysis and regression fixes: for the most part, the new Query Optimizer changes should produce better plans. However, Query Store will provide an easy way to identify plan choice regressions and fix them using a plan forcing mechanism.  
+5.  Use Query Store for analysis and regression fixes: for the most part, the new Query Optimizer changes should produce better plans. However, Query Store will provide an easy way to identify plan choice regressions and fix them using a plan forcing mechanism. Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], when using the [Automatic Plan Correction](../../relational-databases/automatic-tuning/automatic-tuning.md#automatic-plan-correction) feature, this step becomes automatic.  
   
 ## Identify and improve ad-hoc workloads  
  Some workloads do not have dominant queries that you can tune to improve overall application performance. Those workloads are typically characterized with relatively large number of different queries each of them consuming portion of system resources. Being unique, those queries are executed very rarely (usually only once, thus name ad hoc), so their runtime consumption is not critical. On the other hand, given that application is generating net new queries all the time, significant portion of system resources is spent on query compilation which is not optimal. This is not ideal situation for Query Store either given that large number of queries and plans flood the space you have reserved which means that Query Store will likely end up in the read-only mode very quickly. If you activated **Size Based Cleanup Policy** ([highly recommended](best-practice-with-the-query-store.md) to keep Query Store always up and running), then background process will be cleaning Query Store structures most of the time also taking significant system resources.  

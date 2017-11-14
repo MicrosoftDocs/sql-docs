@@ -37,12 +37,19 @@ ms.workload: "Inactive"
 
    ```bash
    cd ~
-   cp ~/Downloads/sqlops-linux-<version string>-x64.tar.gz ~
-   tar -xvf ~/pgi3-sqlops-linux-<version string>-x64.tar.gz
-   echo 'export PATH="$PATH:~/Downloads/sqlops-linux-x64"' >> ~/.bashrc
+   cp ~/Downloads/sqlops-linux-<version string>.tar.gz ~
+   tar -xvf ~/sqlops-linux-<version string>.tar.gz
+   echo 'export PATH="$PATH:~/sqlops-linux-x64"' >> ~/.bashrc
    source ~/.bashrc
-   sqlops .
+   sqlops
    ```
+
+   > [!NOTE]
+   > On Ubuntu and Redhat, you may have a missing dependency for libXScrnSaver. Use the following commands to install this dependency:
+   >
+   >Ubuntu: **sudo apt-get install libxss1**
+   >
+   >Redhat: **yum install libXScrnSaver**
 
 ## Uninstall [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 

@@ -32,7 +32,7 @@ The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log contains
     
     ![Object_Explorer](../../relational-databases/performance/media/object-explorer.png) 
 
-2. In **Object Explorer**, connect to an instance of the SQL Server, and then expand that instance.
+2. In **Object Explorer**, connect to an instance of SQL Server, and then expand that instance.
   
 3. Find and expand the **Management** section (assuming you have permissions to see it).
 

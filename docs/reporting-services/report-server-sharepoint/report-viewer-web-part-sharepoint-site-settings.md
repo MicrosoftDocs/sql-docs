@@ -23,14 +23,14 @@ The Report Viewer web part has a couple of settings that can be configured. Thes
 
 The site settings can be accessed by:
 
-1. Clicking the gear dropdown in the upper right of the page and selecting **Site Settings**. 
+1. In your SharePoint site, select the **gear** icon in the upper left and select **Site Settings*.
 
-![SharePoint site settings](media/sharepoint-site-settings.png)
+    ![Site settings from the gear icon.](media/sharepoint-site-settings.png)
 
 2. Clicking **Report Viewer Web Part Settings** in the **Reporting Services** site settings group.
 
-> [!NOTE]
-> The site settings can also be reached by navigating directly to `<site>/_layouts/15/ReportViewerWebPart/ReportViewerWebPartSettings.aspx`
+    > [!NOTE]
+    > The site settings can also be reached by navigating directly to `<site>/_layouts/15/ReportViewerWebPart/ReportViewerWebPartSettings.aspx`
 
 ## Report Viewer web part settings
 

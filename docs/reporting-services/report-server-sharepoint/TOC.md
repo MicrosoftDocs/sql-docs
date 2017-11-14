@@ -9,6 +9,7 @@
 ### [Site collection features - Report Server and Power View](site-collection-features-report-server-and-power-view.md)  
 ### [Site settings and features - Reporting Services](site-settings-and-features-reporting-services.md)  
 ### [Site settings and features - Server File Sync in SharePoint](activate-the-report-server-file-sync-feature-in-sharepoint-ca.md)  
+### [Site settings and features - Report Viewer Web Part](report-viewer-web-part-sharepoint-site-settings.md)
 ### [Add Reporting Services content types to a SharePoint library](add-reporting-services-content-types-to-a-sharepoint-library.md)  
 ### [Local mode vs. connected mode reports in the Report Viewer](local-mode-vs-connected-mode-reports-in-the-report-viewer.md)  
 ### [Upload documents to a SharePoint library](upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)  

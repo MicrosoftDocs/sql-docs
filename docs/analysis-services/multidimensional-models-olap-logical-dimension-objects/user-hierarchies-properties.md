@@ -20,7 +20,7 @@ ms.assetid: 344af8f8-12f3-48c0-b934-4503779d37ff
 caps.latest.revision: 28
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # User Hierarchies - Properties

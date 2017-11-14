@@ -21,7 +21,7 @@ ms.assetid: be52b351-f376-42ee-adba-2dcaa0c0f69c
 caps.latest.revision: 40
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Database Dimensions - Modify or Delete a Database Dimension in Solution Explorer

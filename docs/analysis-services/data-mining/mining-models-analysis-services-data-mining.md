@@ -21,7 +21,7 @@ ms.assetid: cd4df273-0c6a-4b3e-9572-8a7e313111e8
 caps.latest.revision: 37
 author: "Minewiskan"
 ms.author: "owend"
-manager: "jhubbard"
+manager: "kfile"
 ms.workload: "On Demand"
 ---
 # Mining Models (Analysis Services - Data Mining)

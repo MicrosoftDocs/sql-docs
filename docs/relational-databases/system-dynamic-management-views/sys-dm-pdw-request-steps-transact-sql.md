@@ -2,7 +2,7 @@
 title: "sys.dm_pdw_request_steps (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: ""
 ms.reviewer: ""
 ms.service: "sql-data-warehouse"
 ms.suite: ""

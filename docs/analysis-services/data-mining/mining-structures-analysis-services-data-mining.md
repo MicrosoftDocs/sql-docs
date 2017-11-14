@@ -25,7 +25,7 @@ ms.assetid: 39748290-c32a-48e6-92a6-0c3a9223773a
 caps.latest.revision: 77
 author: "Minewiskan"
 ms.author: "owend"
-manager: "jhubbard"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Mining Structures (Analysis Services - Data Mining)

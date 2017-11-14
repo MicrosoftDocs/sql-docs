@@ -23,7 +23,7 @@ ms.assetid: 38fc1e05-2ac9-4816-b52b-dfd19c3a43a2
 caps.latest.revision: 19
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Dimension Translations

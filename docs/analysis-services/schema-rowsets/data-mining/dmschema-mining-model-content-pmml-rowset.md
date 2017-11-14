@@ -21,7 +21,7 @@ ms.assetid: fa05bb08-a955-4c8d-b57f-ffcd82470220
 caps.latest.revision: 30
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # DMSCHEMA_MINING_MODEL_CONTENT_PMML Rowset

@@ -20,7 +20,7 @@ ms.assetid: 8c760db3-c475-468e-948d-e5f599d985ad
 caps.latest.revision: 39
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Migrating From ADO MD To ADOMD.NET

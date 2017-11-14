@@ -23,7 +23,7 @@ ms.assetid: cb706817-6f63-4771-92c3-b70030bbce3d
 caps.latest.revision: 35
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Deployment Script Files - Specifying the Installation Target

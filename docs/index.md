@@ -30,7 +30,7 @@ ms.technology:
                                     <div class="cardPadding">
                                         <div class="card">
                                             <div class="cardText">
-                                                <h3>Databases</h3>
+                                                <h3 class="bgdAccent1" style="padding:20px;">Databases</h3>
                                                 <h4>SQL</h4>
                                                 <ul class="noBullet">
                                                     <li><a class="barLink" href="/sql/sql-server/sql-server-technical-documentation">SQL Server (2016, 2017)</a></li>
@@ -38,6 +38,7 @@ ms.technology:
                                                     <li><a class="barLink" href="https://msdn.microsoft.com/en-us/library/dn197878(v=sql.10).aspx">SQL Server 2012</a></li>
                                                     <li><a class="barLink" href="/azure/sql-database/sql-database-design-first-database">Azure SQL Database</a></li>
                                                     <li><a class="barLink" href="/azure/sql-data-warehouse/sql-data-warehouse-get-started-tutorial">Azure SQL Data Warehouse</a></li>
+                                                    <li><a class="barLink" href="/sql/analytics-platform-system/index">Analytics Platform System - Parallel Data Warehouse</a><li>
                                                 </ul>
                                                 <h4>Run on Windows or Linux</h4>
                                                 <ul class="noBullet">
@@ -64,7 +65,7 @@ ms.technology:
                                     <div class="cardPadding">
                                         <div class="card">
                                             <div class="cardText">
-                                                <h3>Develop</h3>
+                                                <h3 class="bgdAccent1" style="padding:20px;">Develop</h3>
                                                 <h4>Design</h4>
                                                 <ul class="noBullet">
                                                     <li><a class="barLink" href="/sql/connect/sql-connection-libraries">Connect with client applications</a></li>
@@ -87,7 +88,7 @@ ms.technology:
                                                 <ul class="noBullet">
                                                     <li><a class="barLink" href="https://github.com/Microsoft/sql-server-samples/tree/master/samples">Code samples</a></li>
                                                     <li><a class="barLink" href="https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0">Wide World Importers</a></li>
-                                                    <li><a class="barLink" href="https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works">AdventureWorks</a></li>
+                                                    <li><a class="barLink" href="https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks">AdventureWorks</a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -99,7 +100,7 @@ ms.technology:
                                     <div class="cardPadding">
                                         <div class="card">
                                             <div class="cardText">
-                                                <h3>Data Analytics</h3>
+                                                <h3 class="bgdAccent1" style="padding:20px;">Data Analytics</h3>
                                                 <h4>Analysis</h4>
                                                 <ul class="noBullet">
                                                     <li><a class="barLink" href="/sql/analysis-services/analysis-services">SQL Server Analysis Services (2016, 2017)</a></li>

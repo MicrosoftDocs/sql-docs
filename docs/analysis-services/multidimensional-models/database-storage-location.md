@@ -17,7 +17,7 @@ ms.assetid: cf88c62e-581e-42f2-846f-a9bf1d7c3292
 caps.latest.revision: 18
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Database Storage Location

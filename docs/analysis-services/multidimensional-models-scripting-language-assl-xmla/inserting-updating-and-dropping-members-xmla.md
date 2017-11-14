@@ -25,7 +25,7 @@ ms.assetid: bba922b5-8b88-4051-9506-ff055248182a
 caps.latest.revision: 13
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Inserting, Updating, and Dropping Members (XMLA)

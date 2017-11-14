@@ -16,7 +16,7 @@ ms.assetid: 76ee5e96-6a04-49af-a88e-cb5fe29f2e9a
 caps.latest.revision: 49
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Active"
 ---
 # Comparing tabular and multidimensional solutions

@@ -15,7 +15,7 @@ ms.assetid: f02dee0c-85ad-45d4-b707-10e9e8541db9
 caps.latest.revision: 8
 author: "guyinacube"
 ms.author: "asaxton"
-manager: "erikre"
+manager: "kfile"
 ms.workload: "Inactive"
 ---
 # Lesson 2: Define a Data Connection and Data Table for Parent Report
@@ -59,7 +59,7 @@ After you create a new website project using the ASP.NET website template for Vi
     SELECT ProductID, Name, ProductNumber, SafetyStockLevel, ReorderPoint FROM  Production.Product Order By ProductID  
     ```  
   
-    You can also create the query by selecting **Query Builder**, and then verify the query by selecting **Execute Query**. If the query does not return the expected data, you might be using an earlier version of AdventureWorks. For more information about how to get the **AdventureWorks2014** sample database, see [Microsoft SQL Server Database Product Samples](http://msftdbprodsamples.codeplex.com/).  
+    You can also create the query by selecting **Query Builder**, and then verify the query by selecting **Execute Query**. If the query does not return the expected data, you might be using an earlier version of AdventureWorks. For more information about how to get the **AdventureWorks2014** sample database, see [AdventureWorks sample databases](https://github.com/Microsoft/sql-server-samples/releases).  
   
 11. On the **Choose Methods to Generate** page, be sure to uncheck **Create methods to send updates directly to the database (GenerateDBDirectMethods)**, and then select **Finish**.  
   

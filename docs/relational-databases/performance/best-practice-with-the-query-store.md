@@ -2,7 +2,7 @@
 title: "Best Practice with the Query Store | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "11/24/2016"
+ms.date: "11/14/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -24,7 +24,7 @@ ms.workload: "On Demand"
 
   This topic outlines the best practices for using the Query Store with your workload.  
   
-##  <a name="SSMS"></a> Use the latest SQL Server Management Studio  
+##  <a name="SSMS"></a> Use the latest [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] has set of user interfaces designed for configuring Query Store as well as for consuming collected data about your workload.  
 Download the latest version of [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] [here](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms).  
   
@@ -123,9 +123,10 @@ ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;
 Navigate to the Query Store sub-folder under the database node in Object Explorer of [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] to open troubleshooting views for specific scenarios.   
 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] Query Store views operate with the set of execution metrics, each expressed as any of the following statistic functions:  
   
-|Execution metric|Statistic function|  
-|----------------------|------------------------|  
-|CPU time, Duration, Execution Count, Logical Reads, Logical writes, Memory consumption, and Physical Reads|Average, Maximum, Minimum, Standard Deviation, Total|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version|Execution metric|Statistic function|  
+|----------------------|----------------------|------------------------|  
+|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|CPU time, Duration, Execution Count, Logical Reads, Logical writes, Memory consumption, Physical Reads, CLR time, Degree of Parallelism (DOP), and Row count|Average, Maximum, Minimum, Standard Deviation, Total|
+|[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|CPU time, Duration, Execution Count, Logical Reads, Logical writes, Memory consumption, Physical Reads, CLR time, Degree of Parallelism (DOP), Row count, Log memory, TempDB memory, and Wait times|Average, Maximum, Minimum, Standard Deviation, Total|
   
  The following graphic shows how to locate Query Store views:  
   
@@ -170,7 +171,7 @@ Navigate to the Query Store sub-folder under the database node in Object Explore
   
 -   Rewrite problematic queries. For example to take advantages of query parameterization or to implement more optimal logic.  
   
-##  <a name="Verify"></a> Verify Query Store is Collecting Query Data Continuously  
+##  <a name="Verify"></a> Verify Query Store is collecting query data continuously  
  Query Store can silently change operations mode. You should regularly monitor the state of the Query Store to ensure that the Query Store is operating, and to take action to avoid failures due to preventable causes. Execute the following query to determine the operation mode and view the most relevant parameters:  
   
 ```tsql
@@ -228,11 +229,11 @@ SELECT actual_state_desc, desired_state_desc, current_storage_size_mb,
 FROM sys.database_query_store_options;  
 ```  
   
- If  the problem persists, it indicates corruption of the Query Store data is persisted on the disk.
+ If the problem persists, it indicates corruption of the Query Store data is persisted on the disk.
  
  Query Store could be recovered by executing **sp_query_store_consistency_check** stored procedure within the affected database.
  
- If that didn't help, you can try to clear Query Store before requesting read-write mode.  
+ If that did not help, you can try to clear Query Store before requesting read-write mode.  
   
 ```tsql  
 ALTER DATABASE [QueryStoreDB]   
@@ -250,7 +251,7 @@ SELECT actual_state_desc, desired_state_desc, current_storage_size_mb,
 FROM sys.database_query_store_options;  
 ```  
   
-## Set the Optimal Query Capture Mode  
+## Set the optimal query capture mode  
  Keep the most relevant data in Query Store. The following table describes typical scenarios for each Query Capture Mode:  
   
 |Query Capture Mode|Scenario|  
@@ -259,7 +260,7 @@ FROM sys.database_query_store_options;
 |Auto|Focus your attention on relevant and actionable queries; those queries that execute regularly or that have significant resource consumption.|  
 |None|You have already captured the query set that you want to monitor in runtime and you want to eliminate the distractions  that other queries may introduce.<br /><br /> None is suitable for testing and bench-marking environments.<br /><br /> None is also appropriate for software vendors who ship Query Store configuration configured to monitor their application workload.<br /><br /> None should be used with caution as you might miss the opportunity to track and optimize important new queries. Avoid using None unless you have a specific scenario that requires it.|  
   
-## Keep the Most Relevant Data in Query Store  
+## Keep the most relevant data in Query Store  
  Configure the Query Store to contain only the relevant data and it will run continuously providing great troubleshooting experience with a minimal impact on your regular workload.  
 The following table provides best practices:  
   

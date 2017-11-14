@@ -1,10 +1,16 @@
 ---
 
-title: "Parallel Data Warehouse overview"
+title: "Parallel Data Warehouse overview"
+
 author: "barbkess" 
 ms.author: "barbkess"
 manager: "jhubbard"	  
-ms.prod: "analytics-platform-system" 
+ms.prod: "sql-non-specified"
+ms.prod_service: "mpp-data-warehouse"
+ms.service: ""
+ms.component: "analytics-platform-system"
+ms.suite: "sql"
+ms.custom: ""
 ms.technology: "mpp-data-warehouse"
 description: "This topic explains the appliance software and the non-appliance software components of Analytics Platform System."
 ms.date: "01/05/2017"

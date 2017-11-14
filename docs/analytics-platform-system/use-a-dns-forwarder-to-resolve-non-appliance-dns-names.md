@@ -1,14 +1,18 @@
 ---
-title: "Use a DNS Forwarder to Resolve Non-Appliance DNS Names (APS)"
+title: "Use a DNS Forwarder to Resolve Non-Appliance DNS Names (APS)"
+
 author: "barbkess" 
 ms.author: "barbkess"
 manager: "jhubbard"	  
-ms.prod: "analytics-platform-system" 
+ms.prod: "sql-non-specified"
+ms.prod_service: "mpp-data-warehouse"
+ms.service: ""
+ms.component: "analytics-platform-system"
 ms.technology: "mpp-data-warehouse"
-ms.custom: na
+ms.custom: ""
 ms.date: 01/05/2017
 ms.reviewer: na
-ms.suite: na
+ms.suite: "sql"
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 123d8a83-b7fd-4dc9-90d4-fa01af2d629d

@@ -1,14 +1,18 @@
 ---
-title: "PDW Services Status (Analytics Platform System)"
+title: "PDW Services Status (Analytics Platform System)"
+
 author: "barbkess" 
 ms.author: "barbkess"
 manager: "jhubbard"	  
-ms.prod: "analytics-platform-system" 
+ms.prod: "sql-non-specified"
+ms.prod_service: "mpp-data-warehouse"
+ms.service: ""
+ms.component: "analytics-platform-system"
 ms.technology: "mpp-data-warehouse"
-ms.custom: na
+ms.custom: ""
 ms.date: 01/05/2017
 ms.reviewer: na
-ms.suite: na
+ms.suite: "sql"
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3fc9bee2-c372-4c4a-956c-fb54215d8918

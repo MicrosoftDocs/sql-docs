@@ -32,8 +32,11 @@ manager: "jhubbard"
 ms.workload: "Active"
 ---
 # DBCC CHECKTABLE (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+
 Checks the integrity of all the pages and structures that make up the table or indexed view.
+
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
     
 ## Syntax    

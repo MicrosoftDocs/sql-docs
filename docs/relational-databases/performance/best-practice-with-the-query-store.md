@@ -199,7 +199,7 @@ FROM sys.database_query_store_options;
     ALTER DATABASE [QueryStoreDB] SET QUERY_STORE CLEAR;  
     ```  
   
- You can apply one or both of these steps by the executing the following statement that explicitly changes operation mode back to read-write:  
+You can apply one or both of these steps by the executing the following statement that explicitly changes operation mode back to read-write:  
   
 ```tsql  
 ALTER DATABASE [QueryStoreDB]   

@@ -18,6 +18,7 @@
 ### [Add Report Viewer web part to a web page](add-report-viewer-web-part-to-page.md)
 ### [Connect Filter or Documents web part](connect-filter-or-documents-web-part-sharepoint-integrated-mode.md)  
 ### [Customize the Report Viewer web part](customize-the-report-viewer-web-part.md)  
+### [SharePoint site settings for the Report Viewer web part](report-viewer-web-part-sharepoint-site-settings.md)
 # [High availability](high-availability-reporting-services.md)  
 # [Enable and disable RDL sandboxing](enable-and-disable-rdl-sandboxing.md)  
 # [Configure Reporting Services to use a subject alternative name](configure-reporting-services-to-use-a-subject-alternative-name.md)  

@@ -23,7 +23,7 @@ The Report Viewer web part has a couple of settings that can be configured. Thes
 
 The site settings can be accessed by:
 
-1. In your SharePoint site, select the **gear** icon in the upper left and select **Site Settings*.
+1. In your SharePoint site, select the **gear** icon in the upper left and select **Site Settings**.
 
     ![Site settings from the gear icon.](media/sharepoint-site-settings.png)
 

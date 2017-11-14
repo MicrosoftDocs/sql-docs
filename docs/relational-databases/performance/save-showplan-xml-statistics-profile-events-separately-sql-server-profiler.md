@@ -23,7 +23,7 @@ ms.workload: "Inactive"
 # Save Showplan XML Statistics Profile events separately (SQL Server Profiler)
   This topic describes how to save **Showplan XML Statistics Profile** events that are captured in traces into separate .SQLPlan files by using [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. You can open the **Showplan XML Statistics Profile** event files in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] so that you can view the graphical execution plan for each event.  
   
-## To save Showplan XML Statistics Profile events separately  
+## Save Showplan XML Statistics Profile events separately  
   
 1. On the **File** menu, select **New Trace**, and then connect to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

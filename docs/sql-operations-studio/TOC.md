@@ -2,8 +2,8 @@
 # [Install](download.md)
 # Quickstarts
 ## [Connect & query SQL Server](quickstart-sql-server.md)
-## [Connect & query SQL Database](quickstart-sql-database.md)
-## [Connect & query SQL Data Warehouse](quickstart-sql-dw.md)
+## [Connect & query Azure SQL Database](quickstart-sql-database.md)
+## [Connect & query Azure SQL Data Warehouse](quickstart-sql-dw.md)
 # Tutorials
 ## [T-SQL Editor](tutorial-sql-editor.md) 
 ## [Sample insight: slow queries](tutorial-qds-sql-server.md)

@@ -1,5 +1,5 @@
 ---
-title: "external scripts enabled Server Configuration Option | Microsoft Docs"
+title: "External Scripts Enabled server configuration option | Microsoft Docs"
 ms.date: "11/13/2017"
 ms.prod: 
  - "sql-server-2016"
@@ -22,13 +22,15 @@ ms.author: "edmaca"
 manager: "craigg"
 ms.workload: "On Demand"
 ---
-# external scripts enabled Server Configuration Option
+# External Scripts Enabled server configuration option
 
 **Applies to:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] and [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
 Use the **external scripts enabled** option to enable the execution of scripts with certain remote language extensions. This property is OFF by default. When **Advanced Analytics Services** is installed, setup can optionally set this property to true.
 
-You must enable the external script enabled option before you can execute an external script using the **sp_execute_external_script** procedure. Use **sp_execute_external_script** to execute scripts written in a supported language such as R or Python. 
+## Remarks
+
+You must enable the external script enabled option before you can execute an external script using the [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) procedure. Use **sp_execute_external_script** to execute scripts written in a supported language such as R or Python. 
 
 + For [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]
 
@@ -41,6 +43,8 @@ You must enable the external script enabled option before you can execute an ext
     [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] uses the same architecture as in SQL Server 2016, but provides support for the Python language.
 
     Install the **Advanced Analytics Extensions** feature during [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup to enable the execution of external scripts. Be sure to select at least one language during initial setup: either R or Python, or both. 
+
+## Additional requirements
 
 After setup, to enable external scripts, execute the following script:
 

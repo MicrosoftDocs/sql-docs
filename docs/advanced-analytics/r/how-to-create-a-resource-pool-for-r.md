@@ -91,16 +91,14 @@ The process includes multiple steps:
   
 1.  Any changes to the configuration of Resource Governor are enforced across the server as a whole and affect  workloads that use the default pools for the server, as well as workloads that use the external pools.
   
-     Therefore, to provide more fine-grained control over which workloads should have precedence, you can create a new user-defined external resource pool. You should also define a classification function and assign it to the external resource pool.
+     Therefore, to provide more fine-grained control over which workloads should have precedence, you can create a new user-defined external resource pool. You should also define a classification function and assign it to the external resource pool. The **EXTERNAL** keyword is new.
   
      Begin by creating a new *user-defined external resource pool*. In the following example, the pool is named **ds_ep**.
   
     ```sql
     CREATE EXTERNAL RESOURCE POOL ds_ep WITH (max_memory_percent = 40);
     ```
-  
-     Note the new **EXTERNAL** keyword.
-  
+
 2.  Create a workload group named `ds_wg` to use in managing session requests. For SQL queries you'll use the default pool; for all external process queries will use the `ds_ep` pool.
   
     ```sql

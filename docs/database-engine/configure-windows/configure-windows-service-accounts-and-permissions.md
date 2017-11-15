@@ -51,8 +51,8 @@ helpviewer_keywords:
   - "accounts [SQL Server], user"
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
 caps.latest.revision: 207
-author: "jeannt"
-ms.author: "edmaca"
+author: "BYHAM"
+ms.author: "BYHAM"
 manager: "craigg"
 ms.workload: "Active"
 ---
@@ -235,7 +235,7 @@ The following table shows the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-
   
  *For more information and sample syntax for unattended installations, see [Install SQL Server 2016 from the Command Prompt](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).  
   
- **The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service is disabled on instances of [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] and [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] with Advanced Services.  
+ **The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service is disabled on instances of [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] and [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] with Advanced Services.
 
  ***Setting the account for Launchpad through the switches alone is not currently supported. Use SQL Server Configuration Manager to change the account and other service settings.
 

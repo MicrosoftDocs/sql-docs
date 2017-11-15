@@ -2,11 +2,14 @@
 title: "SQL Server data files in Microsoft Azure | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/02/2017"
-ms.prod: 
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "databases"
  - "sql-server-2016"
  - "sql-server-2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -18,6 +21,7 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # SQL Server data files in Microsoft Azure
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   ![Data files on Azure](../../relational-databases/databases/media/data-files-on-azure.png "Data files on Azure")  
   
  SQL Server Data Files in Microsoft Azure enables native support for SQL Server database files stored as Microsoft Azure Blobs. It allows you to create a database in SQL Server running in on-premises or in a virtual machine in Microsoft Azure with a dedicated storage location for your data in Microsoft Azure Blob Storage. This enhancement especially simplifies to move databases between machines by using detach and attach operations. In addition, it provides an alternative storage location for your database backup files by allowing you to restore from or to Microsoft Azure Storage. Therefore, it enables several hybrid solutions by providing several benefits for data virtualization, data movement, security and availability, and any easy low costs and maintenance for high-availability and elastic scaling.

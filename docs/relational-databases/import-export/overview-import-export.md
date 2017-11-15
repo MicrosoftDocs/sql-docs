@@ -1,10 +1,13 @@
-﻿---
+---
 title: "Import and export data from SQL Server and Azure SQL Database | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/27/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "import-export"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -15,6 +18,7 @@ manager: "craigg"
 ms.workload: "Inactive"
 ---
 # Import and export data from SQL Server and Azure SQL Database
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 You can use a variety of methods to import data to, and export data from, SQL Server and Azure SQL Database. These methods include Transact-SQL statements, command-line tools, and wizards.
 
 You can also import and export data in a variety of data formats. These formats include flat files, Excel, major relational databases, and various cloud services.

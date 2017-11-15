@@ -54,7 +54,11 @@ To minimize dependency on ODBC calls to external data sources, you might also pe
 
 ## No support for encryption at rest
 
-Transparent Data Encryption is not supported for data sent to or received from the external script runtime. As a consequence, encryption at rest **is not** applied to any data that you use in R or Python scripts, any data saved to disk, or any persisted intermediate results.
+[Transparent Data Encryption (TDE)](https://docs.microsoft.com/sql/relational-databases/security/encryption/transparent-data-encryption) is not supported for data sent to or received from the external script runtime. The reason is that R (or Python) runs outside the SQL Server process and thus data used by the external runtime is not protected by the encryption features of the database engine.  This behavior is no different than any other client running on the SQL Server computer that reads data from the database and makes a copy.
+
+As a consequence, TDE **is not** applied to any data that you use in R or Python scripts, or to any data saved to disk, or to any persisted intermediate results. However, other types of encryption, such as Windows BitLocker encryption or third-party encryption applied at hte file or folder level, still apply.
+
+In case of [Always Encrypted](https://docs.microsoft.com/sql/relational-databases/security/encryption/overview-of-key-management-for-always-encrypted), external runtimes do not have access to the encryption keys; therefore, data cannot be sent to the scripts. 
 
 ## Resources
 

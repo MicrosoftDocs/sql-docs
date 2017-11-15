@@ -39,7 +39,7 @@ If running as administrator and to install the module for all users of the compu
 
 > Install-Module -Name SqlServer -AllowClobber
 
-If not able to run as adminsitrator or to install only for the current user
+If not able to run as administrator or to install only for the current user
 
 > Install-Module -Name SqlServer -Scope CurrentUser -AllowClobber
 

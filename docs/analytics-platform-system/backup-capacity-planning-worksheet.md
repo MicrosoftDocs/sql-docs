@@ -1,9 +1,15 @@
 ---
-title: "Backup Server Capacity Planning Worksheet (SQL Server PDW)"
+title: "Backup Server Capacity Planning Worksheet (SQL Server PDW)"
+
 author: "barbkess" 
 ms.author: "barbkess"
 manager: "jhubbard"	  
-ms.prod: "analytics-platform-system" 
+ms.prod: "sql-non-specified"
+ms.prod_service: "mpp-data-warehouse"
+ms.service: ""
+ms.component: "analytics-platform-system"
+ms.suite: "sql"
+ms.custom: ""
 ms.technology: "mpp-data-warehouse"
 description: "This capacity planning worksheet helps you to determine the requirements for a backup server for performing SQL Server PDW database backup and restore operations."
 ms.date: "01/05/2017"

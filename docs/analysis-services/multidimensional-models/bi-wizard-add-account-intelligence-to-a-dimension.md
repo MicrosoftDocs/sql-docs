@@ -19,7 +19,8 @@ ms.assetid: 36f454ae-a9f2-4a59-b19d-40310af9f901
 caps.latest.revision: 33
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # BI Wizard - Add Account Intelligence to a Dimension
   Add the account intelligence enhancement to a cube or a dimension to assign standard account classifications, such as income and expense, to members of an account attribute. This enhancement also identifies account types (such as Asset and Liability) and assigns the appropriate aggregation to each account type. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] can use the classifications to aggregate accounts over time.  

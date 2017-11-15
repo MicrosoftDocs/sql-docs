@@ -12,9 +12,12 @@ ms.topic: "article"
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Programming Guidelines
+
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
+
 The programming features of the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13 and 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] on macOS and Linux are based on ODBC in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Native Client ([SQL Server Native Client (ODBC)](http://go.microsoft.com/fwlink/?LinkID=134151)). [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Native Client is based on ODBC in Windows Data Access Components ([ODBC Programmer's Reference](http://go.microsoft.com/fwlink/?LinkID=45250)).  
 
 An ODBC application can use Multiple Active Result Sets (MARS) and other [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] specific features by including `/usr/local/include/msodbcsql.h` after including the unixODBC headers (`sql.h`, `sqlext.h`, `sqltypes.h`, and `sqlucode.h`). Then use the same symbolic names for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]-specific items that you would in your Windows ODBC applications.  
@@ -65,9 +68,23 @@ The following features are not available in this release of the ODBC driver on m
 
 ## Character Set Support
 
-SQLCHAR data must be UTF-8. SQLWCHAR data must be UTF-16LE (Little Endian).  
+The client encoding can be one of the following:
+  -  UTF-8
+  -  ISO-8859-1
+  -  ISO-8859-2
+  -  ISO-8859-3
+  -  ISO-8859-4
+  -  ISO-8859-5
+  -  ISO-8859-6
+  -  ISO-8859-7
+  -  ISO-8859-8
+  -  ISO-8859-9
+  -  ISO-8859-13
+  -  ISO-8859-15
+  
+SQLCHAR data must be one of the supported character sets. SQLWCHAR data must be UTF-16LE (Little Endian).  
 
-If SQLDescribeParameter does not specify a SQL type on the server, the driver uses the SQL type specified in the *ParameterType* parameter of SQLBindParameter. If a narrow character SQL type, such as SQL_VARCHAR, is specified in SQLBindParameter, the driver converts the supplied UTF-8 data to the default [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] code page. (The default [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] code page is typically 1252.) However, data loss is possible. If code page 1252 cannot represent a character, the driver converts the character to a question mark ('?'). To avoid this data loss, specify a Unicode SQL character type, such as SQL_NVARCHAR, in SQLBindParameter. In this case, the driver converts the supplied Unicode data in UTF-8 encoding to UTF-16 without loss of data.
+If SQLDescribeParameter does not specify a SQL type on the server, the driver uses the SQL type specified in the *ParameterType* parameter of SQLBindParameter. If a narrow character SQL type, such as SQL_VARCHAR, is specified in SQLBindParameter, the driver converts the supplied data from the client code page to the default [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] code page. (The default [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] code page is typically 1252.) If the client code page is not supported, it will be set to UTF-8. In this case, the driver then converts the UTF-8 data to the default code page. However, data loss is possible. If code page 1252 cannot represent a character, the driver converts the character to a question mark ('?'). To avoid this data loss, specify a Unicode SQL character type, such as SQL_NVARCHAR, in SQLBindParameter. In this case, the driver converts the supplied Unicode data in UTF-8 encoding to UTF-16 without loss of data.
 
 There is a text-encoding conversion difference between Windows and several versions of the iconv library on Linux and macOS. Text data that is encoded in codepage 1255 (Hebrew) has one code point (0xCA) that behaves differently upon conversion. Converting this character to Unicode on Windows produces a UTF-16 code point of 0x05BA. Converting to Unicode on macOS and Linux with libiconv versions earlier than 1.15 produces a UTF-16 code point of 0x00CA.
 

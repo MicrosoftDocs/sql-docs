@@ -2,9 +2,12 @@
 title: "QueryDefinition Element (ASSL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: "scripting"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
@@ -25,7 +28,8 @@ ms.assetid: 25bf0e93-d5c5-41df-b310-a253a4ace80e
 caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # QueryDefinition Element (ASSL)
   Contains an opaque expression for a query associated with a [DataSource](../../../analysis-services/scripting/objects/datasource-element-assl.md) element in a [QueryBinding](../../../analysis-services/scripting/data-type/querybinding-data-type-assl.md) element.  

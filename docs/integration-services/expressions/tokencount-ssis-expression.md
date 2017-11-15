@@ -14,6 +14,7 @@ caps.latest.revision: 8
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # TOKENCOUNT (SSIS Expression)
   Returns the number of tokens in a string that contains tokens separated by the specified delimiters.  

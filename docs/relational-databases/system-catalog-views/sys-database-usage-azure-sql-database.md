@@ -4,7 +4,7 @@ ms.custom:
   - "MSDN content"
   - "MSDN - SQL DB"
 ms.date: "03/03/2017"
-ms.prod: "sql-non-specified"
+ms.prod: 
 ms.reviewer: ""
 ms.service: "sql-database"
 ms.suite: ""
@@ -24,9 +24,10 @@ helpviewer_keywords:
   - "sys.database_usage"
 ms.assetid: be6820de-60bf-4ddd-ace7-4077893d630f
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Inactive"
 ---
 # sys.database_usage (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]

@@ -21,7 +21,8 @@ ms.assetid: 07229bb2-805c-427e-8455-69c9ca5d01e0
 caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Actions (Analysis Services - Multidimensional Data)
   Actions can be of different types and they have to be created accordingly. Actions can be:  

@@ -18,7 +18,8 @@ ms.assetid: 45987daa-4400-41e9-add7-2428fd75709b
 caps.latest.revision: 30
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # MDX Cell Calculations - Query-Scoped Cell Calculations
   You use the **WITH** keyword in Multidimensional Expressions (MDX) to describe calculated cells within the context of a query. The **WITH** keyword has the following syntax:  

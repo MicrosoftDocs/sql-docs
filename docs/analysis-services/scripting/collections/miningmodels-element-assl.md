@@ -2,9 +2,12 @@
 title: "MiningModels Element (ASSL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: "scripting"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
@@ -25,7 +28,8 @@ ms.assetid: 19824d92-2e23-4e5e-b329-e46baf709c4a
 caps.latest.revision: 32
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # MiningModels Element (ASSL)
   Contains the collection of [MiningModel](../../../analysis-services/scripting/objects/miningmodel-element-assl.md) elements associated with a [MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md).  

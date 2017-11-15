@@ -29,9 +29,10 @@ helpviewer_keywords:
   - "##MS_SQLReplicationSigningCertificate##"
 ms.assetid: 3f7adbf7-6e40-4396-a8ca-71cbb843b5c2
 caps.latest.revision: 57
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "On Demand"
 ---
 # Principals (Database Engine)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -77,6 +78,8 @@ Every login belongs to the `public` fixed server role, and every database user b
 -   \##MS_PolicyEventProcessingLogin##   
 -   \##MS_PolicySigningCertificate##   
 -   \##MS_PolicyTsqlExecutionLogin##   
+ 
+ These principal accounts do not have passwords that can be changed by administrators as they are based on certificates issued to Microsoft.
   
 ## The guest User  
  Each database includes a `guest`. Permissions granted to the `guest` user are inherited by users who have access to the database, but who do not have a user account in the database. The `guest` user cannot be dropped, but it can be disabled by revoking it's CONNECT permission. The CONNECT permission can be revoked by executing `REVOKE CONNECT FROM GUEST;` within any database other than `master` or `tempdb`.  

@@ -24,6 +24,7 @@ caps.latest.revision: 30
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Diagnostic Records and Fields
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]

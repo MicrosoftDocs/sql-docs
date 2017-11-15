@@ -11,9 +11,10 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 00bfa716-5390-48e3-b30c-d954d5e0be47
 caps.latest.revision: 3
-author: "sabotta"
-ms.author: "carlasab"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # catalog.master_properties (SSISDB Database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

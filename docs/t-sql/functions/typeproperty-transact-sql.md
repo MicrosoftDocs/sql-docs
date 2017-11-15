@@ -20,9 +20,10 @@ helpviewer_keywords:
   - "TYPEPROPERTY function"
 ms.assetid: bc311c80-bac5-46ab-a5c8-68b1c6bbf24a
 caps.latest.revision: 43
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Inactive"
 ---
 # TYPEPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -34,8 +35,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 TYPEPROPERTY (type , property)  
 ```  
   
@@ -73,15 +72,6 @@ FROM sys.types;
 ```  
   
 ### B. Returning the precision of the tinyint data type  
- The following example returns the precision or number of digits for the `tinyint` data type.  
-  
-```  
-SELECT TYPEPROPERTY( 'tinyint', 'PRECISION');  
-```  
-  
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### C: Returning the precision of the tinyint data type  
  The following example returns the precision or number of digits for the `tinyint` data type.  
   
 ```  

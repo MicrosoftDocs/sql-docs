@@ -11,9 +11,10 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 0bd0d827-e2f1-44fe-aa90-6bf922d68d16
 caps.latest.revision: 3
-author: "sabotta"
-ms.author: "carlasab"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # catalog.worker_agents (SSISDB Database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

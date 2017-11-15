@@ -17,11 +17,12 @@ caps.latest.revision: 27
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Package Properties Dialog Box
   Use the **Package Properties** dialog box to view properties for packages that are stored on the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server.  
   
- For more information, see [Integration Services &#40;SSIS&#41; Server](https://msdn.microsoft.com/library/ms141134.aspx).  
+ For more information, see [Integration Services &#40;SSIS&#41; Server](../integration-services-ssis-packages.md).  
   
  **What do you want to do?**  
   

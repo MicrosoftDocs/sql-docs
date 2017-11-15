@@ -1,8 +1,6 @@
 ---
-title: "View and summarize data using R (SQL-R walkthrough)| Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "07/05/2017"
+title: "View and summarize data using R (walkthrough)| Microsoft Docs"
+ms.date: "11/10/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -15,10 +13,11 @@ applies_to:
 dev_langs: 
   - "R"
 ms.assetid: 358e1431-8f47-4d32-a02f-f90e519eef49
-caps.latest.revision: 21
+caps.latest.revision: 22
 author: "jeannt"
 ms.author: "jeannt"
-manager: "jhubbard"
+manager: "cgronlund"
+ms.workload: "On Demand"
 ---
 # View and summarize data using R
 
@@ -65,7 +64,7 @@ The following steps are all part of the R code and should be run in an R environ
     For Windows authentication, the syntax is a bit different:
     
     ```R
-    connStrWin <- "Driver=SQL Server;Server=SQL_instance_name;Database=database_name;Trusted_Connection=Yes"
+    connStr <- "Driver=SQL Server;Server=SQL_instance_name;Database=database_name;Trusted_Connection=Yes"
     ```
 
     The R script available for download uses SQL logins only. Generally, we recommend that you use Windows authentication where possible, to avoid saving passwords in your R code. However, to ensure that the code in this tutorial matches the code downloaded from Github, we'll use a SQL login for the rest of the walkthrough.
@@ -91,7 +90,7 @@ The following steps are all part of the R code and should be run in an R environ
     sqlcc <- RxInSqlServer(connectionString = connStr, shareDir = sqlShareDir, wait = sqlWait, consoleOutput = sqlConsoleOutput)
     ```
 
-4. By default, the compute context is local, so you need to explicitly set the *active* compute context.
+5. By default, the compute context is local, so you need to explicitly set the *active* compute context.
 
     ```R
     rxSetComputeContext(sqlcc)
@@ -109,9 +108,12 @@ In Microsoft R, a *data source* is an object you create using RevoScaleR functio
 Earlier you defined a connection string, and saved that information in an R variable. You can re-use that connection information to specify the data you want to get.
 
 1. Save a SQL query as a string variable. The query defines the data for training the model.
+
     ```R
-    sampleDataQuery <- "SELECT TOP 1000 tipped, fare_amount, passenger_count,trip_time_in_secs,trip_distance, pickup_datetime, dropoff_datetime, pickup_longitude, pickup_latitude, dropoff_longitude, dropoff_latitude FROM nyctaxi_sample"
+    sampleDataQuery <- "SELECT tipped, fare_amount, passenger_count,trip_time_in_secs,trip_distance, pickup_datetime, dropoff_datetime, pickup_longitude, pickup_latitude, dropoff_longitude, dropoff_latitude FROM nyctaxi_sample"
     ```
+
+    We've used a TOP clause here to make things run faster, but the actual rows returned by the query can vary depending on order. Hence, your summary results might also be different from those listed below. Feel free to remove the TOP clause.
 
 2. Pass the query definition as an argument to the [RxSqlServerData](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqlserverdata) function.
 
@@ -176,38 +178,19 @@ In this section, you'll try out several of the functions provided in [!INCLUDE[r
       Elapsed Time=", round(used.time[3],2),
       " seconds to summarize the inDataSource.", sep=""))
     ```
-
     + The first argument to rxSummary specifies the formula or term to summarize by. Here, the `F()` function is used to convert the values in _passenger\_count_ into factors before summarizing. You also have to specify the minimum value (1) and maximum value (6) for the _passenger\_count_ factor variable.
     + If you do not specify the statistics to output, by default rxSummary outputs Mean, StDev, Min, Max, and the number of valid and missing observations.
     + This example also includes some code to track the time the function starts and completes, so that you can compare performance.
   
     **Results**
 
+    If the rxSummary function runs successfuly, you should see results like these, followed by a list of statistics by category. 
+
     ```
-    rxSummary(formula = ~fare_amount:F(passenger_count), data = inDataSource)
+    rxSummary(formula = ~fare_amount:F(passenger_count, 1,6), data = inDataSource)
     Data: inDataSource (RxSqlServerData Data Source)
     Number of valid observations: 1000
-    Name  Mean    StdDev   Min Max ValidObs MissingObs
-    fare_amount:F_passenger_count 12.4875 9.682605 2.5 64  1000     0
-    Statistics by category (6 categories):*
-    Category                             F_passenger_count Means    StdDev    Min
-    fare_amount for F(passenger_count)=1 1                 12.00901  9.219458  2.5
-    fare_amount for F(passenger_count)=2 2                 11.61893  8.858739  3.0
-    fare_amount for F(passenger_count)=3 3                 14.40196 10.673340  3.5
-    fare_amount for F(passenger_count)=4 4                 13.69048  8.647942  4.5
-    fare_amount for F(passenger_count)=5 5                 19.30909 14.122969  3.5
-    fare_amount for F(passenger_count)=6 6                 12.00000        NA 12.0
-    Max ValidObs
-    55  666
-    52  206
-    52   51
-    39   21
-    64   55
-    12    1
-    "It takes CPU Time=0.5 seconds, Elapsed Time=4.59 seconds to summarize the inDataSource."
     ```
-
-Did you get different results? That's because the smaller query using the TOP keyword is not guaranteed to bring back the same results each time.
 
 ### Bonus exercise on big data
 
@@ -239,8 +222,8 @@ print(paste("It takes CPU Time=", round(used.time[1]+used.time[2],2)," seconds,
 
 ## Next lesson
 
-[Create graphs and plots using R](/walkthrough-create-graphs-and-plots-using-r.md)
+[Create graphs and plots using R](walkthrough-create-graphs-and-plots-using-r.md)
 
 ## Previous lesson
 
-[Explore the data using SQL](/walkthrough-view-and-explore-the-data.md)
+[Explore the data using SQL](walkthrough-view-and-explore-the-data.md)

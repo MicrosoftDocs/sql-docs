@@ -2,9 +2,12 @@
 title: "Administer Element (ASSL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: "scripting"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
@@ -25,7 +28,8 @@ ms.assetid: 52924cd6-6176-47c8-ab17-4ee0e0ce42b1
 caps.latest.revision: 36
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Administer Element (ASSL)
   Indicates whether the associated permission includes the right to administer a [Database](../../../analysis-services/scripting/objects/database-element-assl.md) element.  

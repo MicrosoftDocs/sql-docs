@@ -17,6 +17,7 @@ caps.latest.revision: 9
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Report Sections Dialog Box (Report Builder)
   When you open a report, Report Builder verifies that the report contains only one Report Definition Language (RDL) **\<Section>** element. Opening a report with multiple **\<Section>** elements is not supported.  

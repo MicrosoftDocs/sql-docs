@@ -4,7 +4,7 @@ ms.custom:
   - "MSDN content"
   - "MSDN - SQL DB"
 ms.date: "07/28/2016"
-ms.prod: "sql-non-specified"
+ms.prod: 
 ms.reviewer: ""
 ms.service: "sql-database"
 ms.suite: ""
@@ -21,9 +21,10 @@ helpviewer_keywords:
   - "firewall systems, Azure SQL Database"
 ms.assetid: 3d4c2585-00de-46b5-8eee-0efb71cb3aea
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Inactive"
 ---
 # Firewall Rules Stored Procedures (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx_md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]

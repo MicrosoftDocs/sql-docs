@@ -2,9 +2,12 @@
 title: "ParentObject Element (XMLA) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: "xmla"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
@@ -25,9 +28,10 @@ helpviewer_keywords:
   - "ParentObject element"
 ms.assetid: f821f8f1-554a-4f16-bf09-262a9448e304
 caps.latest.revision: 16
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # ParentObject Element (XMLA)
   Contains the identifier of the parent object under which to create the objects defined by the parent [Create](../../../analysis-services/xmla/xml-elements-commands/create-element-xmla.md) element.  

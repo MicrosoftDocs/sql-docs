@@ -15,7 +15,8 @@ ms.assetid: 6d751477-6bf1-48b4-8833-5a631bbe7650
 caps.latest.revision: 14
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "On Demand"
 ---
 # Configure Analysis Services for Kerberos constrained delegation
   When configuring Analysis Services for Kerberos authentication, you are most likely interested in achieving one or both of the following outcomes: having Analysis Services impersonate a user identity when querying data; or having Analysis Services delegate a user identity to a down-level service. Each scenario calls for slightly different configuration requirements. Both scenarios require verification to ensure configuration was done properly.  

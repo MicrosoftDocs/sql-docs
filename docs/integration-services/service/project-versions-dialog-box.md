@@ -16,6 +16,7 @@ caps.latest.revision: 9
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Project Versions Dialog Box
   Use the **Project Versions** dialog box to view versions of a project and to restore a previous version.  

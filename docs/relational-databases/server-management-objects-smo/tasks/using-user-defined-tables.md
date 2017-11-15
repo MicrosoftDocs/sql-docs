@@ -1,7 +1,7 @@
 ---
 title: "Using User-Defined Tables | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/02/2016"
+ms.date: "08/06/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -16,6 +16,7 @@ caps.latest.revision: 23
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Using User-Defined Tables
   User-defined tables represent tabular information. They are used as parameters when you pass tabular data into stored procedures or user-defined functions. User-defined tables cannot be used to represent columns in a database table.  
@@ -29,7 +30,7 @@ manager: "jhubbard"
  The <xref:Microsoft.SqlServer.Management.Smo.DataType> class is used to specify the data type that is associated with columns and parameters. Use this type to specify the user-defined table type as a parameter for user-defined functions and stored procedures.  
   
 ## Examples  
-To use any code example that is provided, you will have to choose the programming environment, the programming template, and the programming language in which to create your application. For more information, see [Create a Visual Basic SMO Project in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-basic-smo-project-in-visual-studio-net.md) or [Create a Visual C&#35; SMO Project in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+To use any code example that is provided, you will have to choose the programming environment, the programming template, and the programming language in which to create your application. For more information, see [Create a Visual C&#35; SMO Project in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
 
   
 ## Creating a User Defined Table in Visual Basic  

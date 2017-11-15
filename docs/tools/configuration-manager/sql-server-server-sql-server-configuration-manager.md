@@ -14,6 +14,7 @@ caps.latest.revision: 12
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # SQL Server &lt;server&gt; (SQL Server Configuration Manager)
   This is the service that supports [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. To view the properties of the service, right-click the service in the details pane, and then click **Properties**.  

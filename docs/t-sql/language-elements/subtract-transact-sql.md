@@ -25,6 +25,7 @@ caps.latest.revision: 48
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # - (Subtract) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,8 +37,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 expression - expression  
 ```  
   
@@ -81,13 +80,13 @@ SELECT @altstartdate - 1.5 AS 'Subtract Date';
   
  Here is the result set:  
   
- `Subtract Date`  
-  
- `-----------------------`  
-  
- `1900-01-08 15:00:00.000`  
-  
- `(1 row(s) affected)`  
+ ```
+ Subtract Date  
+ -----------------------  
+ 1900-01-08 15:00:00.000  
+
+ (1 row(s) affected)
+ ```  
   
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   

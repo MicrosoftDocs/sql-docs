@@ -2,9 +2,12 @@
 title: "Level Element (ASSL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: "scripting"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
@@ -25,7 +28,8 @@ ms.assetid: 66ee2c16-d6b8-4dd3-879f-1f2b6923bc43
 caps.latest.revision: 37
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Level Element (ASSL)
   Defines a level in a [Hierarchy](../../../analysis-services/scripting/objects/hierarchy-element-assl.md) element.  

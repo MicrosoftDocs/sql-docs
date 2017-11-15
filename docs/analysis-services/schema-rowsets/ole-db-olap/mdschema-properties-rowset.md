@@ -21,7 +21,8 @@ ms.assetid: 95c480f7-c525-44ba-a59b-cd36f5855a4f
 caps.latest.revision: 31
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # MDSCHEMA_PROPERTIES Rowset
   Describes the properties of members within a database.  

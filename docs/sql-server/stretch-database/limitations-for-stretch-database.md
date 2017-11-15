@@ -19,7 +19,8 @@ ms.assetid: 2b1fbec1-7859-44fc-8417-724fc57a59c0
 caps.latest.revision: 26
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Limitations for Stretch Database
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -56,8 +57,8 @@ Stretch-enabled tables have the following limitations.
   
 -   Memory-optimized tables  
   
- ### Data types  
- -   text, ntext and image  
+### Data types  
+-   text, ntext and image  
   
 -   timestamp  
   

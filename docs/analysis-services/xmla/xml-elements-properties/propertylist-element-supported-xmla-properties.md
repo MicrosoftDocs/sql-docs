@@ -2,9 +2,12 @@
 title: "Supported XMLA Properties (XMLA) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: "xmla"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
@@ -19,9 +22,10 @@ helpviewer_keywords:
   - "XMLA, properties"
 ms.assetid: 5745f7b4-6b96-44d5-b77c-f2831a898e5e
 caps.latest.revision: 27
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # PropertyList Element - Supported XMLA Properties
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] supports the properties listed in the following table. You use these listed properties in the [Properties](../../../analysis-services/xmla/xml-elements-properties/properties-element-xmla.md) element of the [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) and [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) methods.  

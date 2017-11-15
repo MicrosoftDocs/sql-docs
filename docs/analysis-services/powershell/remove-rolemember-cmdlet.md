@@ -13,7 +13,8 @@ ms.assetid: e38f56ab-facd-4bef-9502-f52f8486a6a6
 caps.latest.revision: 8
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Remove-RoleMember cmdlet
 
@@ -22,7 +23,7 @@ manager: "erikre"
   Remove a member from the specified role of an Analysis Services database.  
 
 >[!NOTE] 
->This article may contain outdated information and examples.
+>This article may contain outdated information and examples. Use the Get-Help cmdlet for the latest.
   
 ## Syntax  
  `Remove-RoleMember [-MemberName] <System.String> [-Database] <System.String> [-RoleName] <System.String> [<CommonParameters>]`  

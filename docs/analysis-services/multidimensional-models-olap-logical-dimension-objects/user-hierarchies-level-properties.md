@@ -19,7 +19,8 @@ ms.assetid: dabb7335-887b-442a-b67c-4901ba1242b7
 caps.latest.revision: 13
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # User Hierarchies - Level Properties
   The following table lists and describes the properties of a level in a user-defined hierarchy.  

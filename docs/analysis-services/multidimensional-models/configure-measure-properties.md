@@ -46,7 +46,8 @@ ms.assetid: e9031078-c4f5-4986-b0c9-4d064b622ab7
 caps.latest.revision: 50
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Configure Measure Properties
   Measures have properties that enable you to define how the measures function and to control how the measures appear to users.  

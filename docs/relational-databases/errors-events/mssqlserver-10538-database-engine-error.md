@@ -13,9 +13,10 @@ helpviewer_keywords:
   - "10538 (Database Engine error)"
 ms.assetid: 284d19b4-4979-4cbe-a9be-ac1104433c69
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Inactive"
 ---
 # MSSQLSERVER_10538
   

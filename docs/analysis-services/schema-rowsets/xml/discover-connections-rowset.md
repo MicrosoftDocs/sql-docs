@@ -18,7 +18,8 @@ ms.assetid: e4703970-c31d-448c-ab68-503303c91aa4
 caps.latest.revision: 16
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # DISCOVER_CONNECTIONS Rowset
   Provides resource usage and activity information about the currently opened connections on the server.  

@@ -16,6 +16,7 @@ caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Visual Database Tools F1 Help
 These topics discuss the commands and options in the dialog boxes and properties windows for Visual Database Tools elements such as the Table Properties window, and the Column Properties tab.  

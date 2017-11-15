@@ -13,7 +13,8 @@ ms.assetid: 516fab44-734e-425b-9bd0-b4aee1fd338f
 caps.latest.revision: 9
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Invoke-ProcessPartition cmdlet
 
@@ -22,7 +23,7 @@ manager: "erikre"
   Process a partition using a specific processing type variable.  
 
 >[!NOTE] 
->This article may contain outdated information and examples.
+>This article may contain outdated information and examples. Use the Get-Help cmdlet for the latest.
   
 ## Syntax  
  `Invoke-ProcessPartition [-Name] <System.String> [-Database] <System.String> [-ProcessType] <Microsoft.AnalysisServices.ProcessType> [-CubeName] <System.String> [-MeasureGroupName] <System.String> [<CommonParameters>]`  

@@ -20,6 +20,7 @@ caps.latest.revision: 33
 author: "Minewiskan"
 ms.author: "owend"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Hierarchy (MDX)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +46,7 @@ Level_Expression.Hierarchy
  A valid Multidimensional Expressions (MDX) expression that returns a level.  
   
 ### Examples  
- The following example returns the name of the Calendar hierarchy in the Data dimension in the AdventureWorks cube.  
+ The following example returns the name of the Calendar hierarchy in the Date dimension in the AdventureWorks cube.  
   
  `WITH`  
   

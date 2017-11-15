@@ -14,6 +14,7 @@ caps.latest.revision: 5
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # catalog.delete_customized_logging_level
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -22,7 +23,7 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```tsql  
+```sql  
 delete_customized_logging_level [ @level_name = ] level_name  
   
 ```  

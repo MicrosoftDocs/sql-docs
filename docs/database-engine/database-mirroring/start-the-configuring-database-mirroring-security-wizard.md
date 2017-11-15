@@ -17,6 +17,7 @@ caps.latest.revision: 29
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Start the Configuring Database Mirroring Security Wizard
   The Configure Database Mirroring Security Wizard can be used to initially configure security settings at all or some server instances involved in mirroring. This wizard works in conjunction with the **Mirroring** page of the **Database Properties** dialog box.  

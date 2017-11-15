@@ -1,7 +1,7 @@
 ---
 title: "ALTER AUTHORIZATION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/12/2017"
+ms.date: "08/07/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -26,9 +26,10 @@ helpviewer_keywords:
   - "TAKE OWNERSHIP"
 ms.assetid: 8c805ae2-91ed-4133-96f6-9835c908f373
 caps.latest.revision: 84
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Active"
 ---
 # ALTER AUTHORIZATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -118,7 +119,7 @@ ALTER AUTHORIZATION ON
 ```    
     
 ## Arguments    
- <class_type>    
+\<class_type>
  Is the securable class of the entity for which the owner is being changed. OBJECT is the default.    
     
 |||    

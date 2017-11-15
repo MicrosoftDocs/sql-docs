@@ -23,6 +23,7 @@ caps.latest.revision:
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # sys.dm_db_log_stats (Transact-SQL)   
 [!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]  
@@ -76,9 +77,9 @@ Requires the `VIEW DATABASE STATE` permission in the database.
 ## Examples  
 
 ### A. Determining databases in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance with high number of vlfs   
-The following query returns the databases with more than 100 vlfs in the log files. Large numbers of vlfs can affect the database startup, restore, and recovery time.
+The following query returns the databases with more than 100 vlfs in the log files. Large numbers of VLFs can affect the database startup, restore, and recovery time.
 
-```  
+``` t-sql  
 SELECT name AS 'Database Name', total_vlf_count AS 'VLF count' 
 FROM sys.databases AS s
 CROSS APPLY sys.dm_db_log_stats(s.database_id) 
@@ -88,7 +89,7 @@ WHERE total_vlf_count  > 100;
 ### B. Determining databases in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance with transaction log backups older than 4 hours   
 The following query determines the last log backup times for the databases in the instance.
 
-```  
+``` t-sql  
 SELECT name AS 'Database Name', log_backup_time AS 'last log backup time' 
 FROM sys.databases AS s
 CROSS APPLY sys.dm_db_log_stats(s.database_id); 
@@ -97,7 +98,7 @@ CROSS APPLY sys.dm_db_log_stats(s.database_id);
 ## See Also  
 [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
 [Database Related Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
-[sys.dm_db_log_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)   
-[sys.dm_db_log_info](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)  
+[sys.dm_db_log_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)   
+[sys.dm_db_log_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)  
 
   

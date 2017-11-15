@@ -2,7 +2,7 @@
 title: "CREATE TABLE AS SELECT (Azure SQL Data Warehouse) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/07/2016"
-ms.prod: "sql-non-specified"
+ms.prod: ""
 ms.reviewer: ""
 ms.service: "sql-data-warehouse"
 ms.suite: ""
@@ -17,6 +17,7 @@ caps.latest.revision: 40
 author: "barbkess"
 ms.author: "barbkess"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # CREATE TABLE AS SELECT (Azure SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -40,8 +41,6 @@ CREATE TABLE AS SELECT (CTAS) is one of the most important T-SQL features availa
 ## Syntax   
 
 ```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-
 CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name   
     [ ( column_name [ ,...n ] ) ]  
     WITH ( 

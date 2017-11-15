@@ -17,9 +17,10 @@ helpviewer_keywords:
   - "Script File Commands,Project Commands"
 ms.assetid: 7228ccba-c69f-4b4c-8664-01a2750183c5
 caps.latest.revision: 43
-author: "sabotta"
-ms.author: "carlasab"
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "v-thobro"
+ms.workload: "Inactive"
 ---
 # Executing the SSMA Console (OracleToSQL)
 Microsoft provides you with a robust set of script file commands to execute and control SSMA activities. The console application uses certain standard script file commands as enumerated in this section.  
@@ -667,7 +668,7 @@ convert-sql-statement
   
 -   `write-summary-report-to` specifies the path where the report will be generated. If only the folder path is mentioned, then file by name **ConvertSQLReport.XML** is created. (optional attribute)  
   
-    Report creation has 2 further sub-categories, viz..,:  
+    Report creation has 2 further sub-categories, viz.:  
   
     -   report-errors (="true/false", with default as "false" (optional attributes)).  
   

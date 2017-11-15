@@ -16,7 +16,8 @@ ms.assetid: 20d339e2-f47f-437f-94d5-5b00b400356a
 caps.latest.revision: 6
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # DISCOVER_PARTITION_STAT Rowset
   Returns statistics on aggregations in a particular partition.  

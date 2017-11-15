@@ -19,9 +19,10 @@ helpviewer_keywords:
   - "VIEW_TABLE_USAGE view"
 ms.assetid: 0aeefb3f-02ef-457e-8c42-84ddb26f1c88
 caps.latest.revision: 36
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Inactive"
 ---
 # VIEW_TABLE_USAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]

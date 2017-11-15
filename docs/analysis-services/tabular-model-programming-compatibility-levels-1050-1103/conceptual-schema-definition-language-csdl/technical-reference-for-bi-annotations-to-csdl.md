@@ -2,9 +2,12 @@
 title: "Technical Reference for BI Annotations to CSDL | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: "tabular-models"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
@@ -16,7 +19,8 @@ ms.assetid: 63b3e069-6ba5-474e-b769-47b7cc87b7dd
 caps.latest.revision: 16
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Technical Reference for BI Annotations to CSDL
   This section lists the elements, attribute, and properties in CSDL that are used to represent [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] tabular models. Some elements are new; others have been annotated or extended to support business intelligence modeling.  

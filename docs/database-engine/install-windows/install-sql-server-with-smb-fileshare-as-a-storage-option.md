@@ -1,8 +1,10 @@
 ---
-title: "Install SQL Server with SMB Fileshare as a Storage Option | Microsoft Docs"
+title: "Install SQL Server with SMB fileshare storage | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.date: "09/05/2017"
+ms.prod: 
+ - "sql-server-2016"
+ - "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,22 +17,22 @@ author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---
-# Install SQL Server with SMB Fileshare as a Storage Option
-  Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], system databases (Master, Model, MSDB, and TempDB), and [!INCLUDE[ssDE](../../includes/ssde-md.md)] user databases can be installed with Server Message Block (SMB) file server as a storage option. This applies to both [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stand-alone and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster installations (FCI).  
+# Install SQL Server with SMB fileshare storage
+Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], system databases (Master, Model, MSDB, and TempDB), and [!INCLUDE[ssDE](../../includes/ssde-md.md)] user databases can be installed with Server Message Block (SMB) file server as a storage option. This applies to both [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stand-alone and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster installations (FCI).  
   
 > [!NOTE]  
 >  Filestream is currently not supported on an SMB file share.  
   
-## Installation Considerations  
+## Installation considerations  
   
-### SMB File share Formats:  
+### SMB fileshare formats:  
  While specifying the SMB file share, the following are supported Universal Naming Convention (UNC) Path formats for standalone and FCI databases:  
   
 -   \\\ServerName\ShareName\  
   
 -   \\\ServerName\ShareName  
   
- For more information about Universal Naming Convention, see [UNC](http://go.microsoft.com/fwlink/?LinkId=245534) (http://go.microsoft.com/fwlink/?LinkId=245534).  
+ For more information about Universal Naming Convention, see [UNC](http://msdn.microsoft.com/library/gg465305.aspx).  
   
  The loopback UNC path (a UNC path whose server name is localhost, 127.0.0.1, or the local machine name) is not supported. As a special case, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] using File Server Cluster which is hosted on the same node [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is running is also not supported. To prevent this situation, it is recommended that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and File Server Cluster to be created on separated Windows Clusters.  
   
@@ -44,7 +46,7 @@ manager: "jhubbard"
   
 -   Mapped network drives.  
   
-### Supported Data Definition Language (DDL) statements  
+### Supported data definition language (DDL) statements  
  The following [!INCLUDE[tsql](../../includes/tsql-md.md)] DDL statements and database engine stored procedures support SMB file shares:  
   
 1.  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)  
@@ -54,10 +56,6 @@ manager: "jhubbard"
 3.  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
   
 4.  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)  
-  
-5.  [sp_attach_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-db-transact-sql.md)  
-  
-6.  [sp_attach_single_file_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-single-file-db-transact-sql.md)  
   
 ### Installation options  
   
@@ -79,7 +77,7 @@ manager: "jhubbard"
   
      For more information about the usage of various command line parameter options in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], see [Install SQL Server 2016 from the Command Prompt](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).  
   
-## Operating System Considerations (SMB Protocol vs. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])  
+## Operating system considerations (SMB Protocol vs. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])  
  Different Windows operating systems has different SMB protocol versions, and the SMB protocol version is transparent to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. You can find the benefits of different SMB protocol versions with respect to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 |Operating System|SMB2 protocol version|Benefits to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
@@ -89,25 +87,25 @@ manager: "jhubbard"
 |[!INCLUDE[win8srv](../../includes/win8srv-md.md)], including Server Core|3.0|Support for transparent failover of file shares providing zero downtime with no administrator intervention required for SQL DBA or file server administrator in file server cluster configurations.<br /><br /> Support for IO using multiple network interfaces simultaneously, as well as tolerance to network interface failure.<br /><br /> Support for network interfaces with RDMA capabilities.<br /><br /> For more information on these features and Server Message Block, see [Server Message Block overview](http://go.microsoft.com/fwlink/?LinkId=253174) (http://go.microsoft.com/fwlink/?LinkId=253174).<br /><br /> Support for Scale Out File Server (SoFS) with continuous availability.|  
 |[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2, including Server Core|3.2|Support for transparent failover of file shares providing zero downtime with no administrator intervention required for SQL DBA or file server administrator in file server cluster configurations.<br /><br /> Support for IO using multiple network interfaces simultaneously, as well as tolerance to network interface failure, using SMB Multichannel.<br /><br /> Support for network interfaces with RDMA capabilities using SMB Direct.<br /><br /> For more information on these features and Server Message Block, see [Server Message Block overview](http://go.microsoft.com/fwlink/?LinkId=253174) (http://go.microsoft.com/fwlink/?LinkId=253174).<br /><br /> Support for Scale Out File Server (SoFS) with continuous availability.<br /><br /> Optimized for small random read/write I/O common to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLTP.<br /><br /> Maximum Transmission Unit (MTU) is turned on by default, which significantly enhances performance in large sequential transfers like [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data warehouse and database backup or restore.|  
   
-## Security Considerations  
+## Security considerations  
   
 -   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agent service account should have FULL CONTROL share permissions and NTFS permissions on the SMB share folders. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account can be a domain account or a system account if an SMB file server is used. For more information about share and NTFS permissions, see [Share and NTFS Permissions on a File Server](http://go.microsoft.com/fwlink/?LinkId=245535) (http://go.microsoft.com/fwlink/?LinkId=245535).  
   
     > [!NOTE]  
     >  The FULL CONTROL share permissions and NTFS permissions on the SMB share folders should be restricted to: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service account and windows users with admin server roles.  
   
-     It is recommended to use domain account as a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account. If system account is used as a service account, grant the permissions for the machine account in the format: *<domain_name>***\\***<computer_name>***$**.  
+     It is recommended to use domain account as a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account. If system account is used as a service account, grant the permissions for the machine account in the format: \<*domain_name*>\\<*computer_name*>\*$*.  
   
     > [!NOTE]  
     >  During [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup, it is required to specify domain account as a service account if SMB file share is specified as a storage option. With SMB file share, System account can only be specified as a service account post [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation.  
     >   
-    >  Virtual accounts cannot be authenticated to a remote location. All virtual accounts use the permission of machine account. Provision the machine account in the format *<domain_name>***\\***<computer_name>***$**.  
+    >  Virtual accounts cannot be authenticated to a remote location. All virtual accounts use the permission of machine account. Provision the machine account in the format \<*domain_name*>\\<*computer_name*>\*$*.  
   
 -   The account used to install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] should have FULL CONTROL permissions on the SMB file share folder used as the data directory, or any other data folders (User database directory, user database log directory, TempDB directory, TempDB log directory, backup directory) during Cluster Setup.  
   
 -   The account used to install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] should be granted SeSecurityPrivilege privileges on the SMB file server. To grant this privilege, use the Local Security Policy console on the file server to add the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup account to the Manage auditing and security log policy. This setting is available in the User Rights Assignments section under Local Policies in the Local Security Policy console.  
   
-## Known Issues  
+## Known issues  
   
 -   After you detach a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] database that resides on network-attached storage, you might run into database permission issue while trying to reattach the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database. The issue is defined in [this KB article](http://go.microsoft.com/fwlink/?LinkId=237321) (http://go.microsoft.com/fwlink/?LinkId=237321). To work around this issue, see the **More Information** section in the KB article.  
   
@@ -122,7 +120,7 @@ manager: "jhubbard"
         SET DIAGNOSTICS LOG PATH = 'C:\logs';  
         ```  
   
-## See Also  
+## See also  
  [Planning a SQL Server Installation](../../sql-server/install/planning-a-sql-server-installation.md)   
  [Configure Windows Service Accounts and Permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)  
   

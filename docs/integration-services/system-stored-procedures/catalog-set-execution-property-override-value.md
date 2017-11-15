@@ -14,6 +14,7 @@ caps.latest.revision: 4
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # catalog.set_execution_property_override_value
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -22,12 +23,11 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```tsql  
-set_execution_property_override_value [ @execution_id = execution_id  
+```sql  
+catalog.set_execution_property_override_value [ @execution_id = execution_id  
     , [ @property_path = ] property_path  
     , [ @property_value = ] property_value  
     , [ @sensitive = ] sensitive  
-  
 ```  
   
 ## Arguments  

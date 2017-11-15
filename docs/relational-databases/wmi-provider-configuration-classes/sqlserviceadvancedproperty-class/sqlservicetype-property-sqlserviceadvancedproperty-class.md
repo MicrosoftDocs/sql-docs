@@ -21,6 +21,7 @@ caps.latest.revision: 42
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # SqlServiceType Property (SqlServiceAdvancedProperty Class)
   Gets the type of the managed service associated with the advanced property.  

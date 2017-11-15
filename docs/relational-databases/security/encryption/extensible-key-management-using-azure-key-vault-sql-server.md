@@ -19,9 +19,10 @@ helpviewer_keywords:
   - "SQL Server Connector, about"
 ms.assetid: 3efdc48a-8064-4ea6-a828-3fbf758ef97c
 caps.latest.revision: 66
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "On Demand"
 ---
 # Extensible Key Management Using Azure Key Vault (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -30,8 +31,8 @@ manager: "jhubbard"
   
  This topic describes the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] connector. Additional information is available in [Setup Steps for Extensible Key Management Using the Azure Key Vault](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md), [Use SQL Server Connector with SQL Encryption Features](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md), and [SQL Server Connector Maintenance & Troubleshooting](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md).  
   
-##  <a name="Uses"></a> What is Extensible Key Management (EKM) & Why Use it?  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provides several types of encryption that help protect sensitive data, including [Transparent Data Encryption &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption-tde.md), [Column Level Encryption](../../../t-sql/functions/cryptographic-functions-transact-sql.md) (CLE), and [Backup Encryption](../../../relational-databases/backup-restore/backup-encryption.md). In all of these cases, in this traditional key hierarchy, the data is encrypted using a symmetric data encryption key (DEK). The symmetric data encryption key is further protected by encrypting it with a hierarchy of keys stored in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Instead of this model, the alternative is the EKM Provider Model. Using the EKM provider architecture enables [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] to protect the data encryption keys by using an asymmetric key stored outside of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in an external cryptographic provider. This model adds an additional layer of security and separates the management of keys and data.  
+##  <a name="Uses"></a> What is Extensible Key Management (EKM) and Why Use it?  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provides several types of encryption that help protect sensitive data, including [Transparent Data Encryption &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption.md), [Column Level Encryption](../../../t-sql/functions/cryptographic-functions-transact-sql.md) (CLE), and [Backup Encryption](../../../relational-databases/backup-restore/backup-encryption.md). In all of these cases, in this traditional key hierarchy, the data is encrypted using a symmetric data encryption key (DEK). The symmetric data encryption key is further protected by encrypting it with a hierarchy of keys stored in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Instead of this model, the alternative is the EKM Provider Model. Using the EKM provider architecture enables [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] to protect the data encryption keys by using an asymmetric key stored outside of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in an external cryptographic provider. This model adds an additional layer of security and separates the management of keys and data.  
    
  The following image compares the traditional service-manage key hierarchy with the Azure Key Vault system.  
   

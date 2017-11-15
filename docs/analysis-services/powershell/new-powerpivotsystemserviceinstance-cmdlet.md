@@ -13,7 +13,8 @@ ms.assetid: 7ea94113-c0f1-4cca-9228-f1a034fba5db
 caps.latest.revision: 10
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # New-PowerPivotSystemServiceInstance cmdlet
 
@@ -22,7 +23,7 @@ manager: "erikre"
   Adds a new instance of [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] System Service to an application server.  
 
 >[!NOTE] 
->This article may contain outdated information and examples.
+>This article may contain outdated information and examples. Use the Get-Help cmdlet for the latest.
   
  **Applies To:** SharePoint 2010 and SharePoint 2013.  
   

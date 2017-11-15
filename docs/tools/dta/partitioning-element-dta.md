@@ -18,6 +18,7 @@ caps.latest.revision: 13
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Partitioning Element (DTA)
   Contains the partitioning scheme that you would like Database Engine Tuning Advisor to use during analysis.  

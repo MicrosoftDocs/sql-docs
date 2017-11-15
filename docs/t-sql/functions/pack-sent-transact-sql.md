@@ -1,7 +1,7 @@
 ---
 title: "@@PACK_SENT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "09/18/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -23,11 +23,12 @@ helpviewer_keywords:
   - "output packets written to network [SQL Server]"
 ms.assetid: 8a322162-24c9-48e9-bfa4-c060e4e11dba
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Inactive"
 ---
-# @@PACK_SENT (Transact-SQL)
+# &#x40;&#x40;PACK_SENT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Returns the number of output packets written to the network by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] since it was last started.  
@@ -37,7 +38,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
-  
 @@PACK_SENT  
 ```  
   

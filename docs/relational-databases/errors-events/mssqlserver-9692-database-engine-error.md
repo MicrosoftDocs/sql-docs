@@ -13,9 +13,10 @@ helpviewer_keywords:
   - "9692 (Database Engine error)"
 ms.assetid: 02399d6e-ab5e-4f30-8a3e-2bb1e8c135b5
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Inactive"
 ---
 # MSSQLSERVER_9692
   

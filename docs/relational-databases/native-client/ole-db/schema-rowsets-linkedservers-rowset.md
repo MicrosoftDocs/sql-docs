@@ -17,6 +17,7 @@ caps.latest.revision: 29
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Schema Rowsets - LINKEDSERVERS Rowset
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]

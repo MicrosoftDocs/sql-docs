@@ -18,6 +18,7 @@ caps.latest.revision: 14
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Column Element for Index (DTA)
   Specifies the columns on which the index is created for a user-specified configuration.  

@@ -16,6 +16,7 @@ caps.latest.revision: 18
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # PreConnect:Completed Event Class
   The PreConnect:Completedevent class indicates when a LOGON trigger or the Resource Governor classifier function finishes execution.  

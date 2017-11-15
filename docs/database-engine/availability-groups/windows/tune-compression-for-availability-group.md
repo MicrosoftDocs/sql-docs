@@ -14,6 +14,7 @@ caps.latest.revision: 12
 author: "MikeRayMSFT"
 ms.author: "v-saume"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Tune compression for availability group
 
@@ -45,4 +46,4 @@ Trace flag | Description
 
 [Automatic Seeding](https://msdn.microsoft.com/library/mt735149(SQL.130).aspx)
 
-[Always On Prerequisites](https://msdn.microsoft.com/library/ff878487.aspx) 
+[Always On Prerequisites](prereqs-restrictions-recommendations-always-on-availability.md) 

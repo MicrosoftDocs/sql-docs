@@ -2,9 +2,12 @@
 title: "Tabular Model Programming for Compatibility Levels 1050 through 1103 | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: "tabular-models"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
@@ -14,7 +17,8 @@ ms.assetid: 0ceb461e-12c1-44ea-97ac-b99bf308676b
 caps.latest.revision: 16
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Tabular Model Programming for Compatibility Levels 1050 through 1103
 

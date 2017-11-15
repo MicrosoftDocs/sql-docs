@@ -19,9 +19,10 @@ helpviewer_keywords:
   - "tangent"
 ms.assetid: f679fa6a-5739-484b-9450-fb3400d4f30c
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Inactive"
 ---
 # TAN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -33,8 +34,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 TAN ( float_expression )  
 ```  
   
@@ -68,9 +67,10 @@ SELECT TAN(.45);
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `--------`  
-  
- `0.48`  
+ ```
+--------  
+0.48
+```  
   
 ## See Also  
  [Mathematical Functions &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  

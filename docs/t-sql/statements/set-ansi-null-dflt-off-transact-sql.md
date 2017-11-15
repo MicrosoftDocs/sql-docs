@@ -24,9 +24,10 @@ helpviewer_keywords:
   - "SET ANSI_NULL_DFLT_OFF statement"
 ms.assetid: 8ed5c512-f5de-4741-a18a-de85a3041295
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Inactive"
 ---
 # SET ANSI_NULL_DFLT_OFF (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]

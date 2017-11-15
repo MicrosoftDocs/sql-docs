@@ -1,9 +1,13 @@
 ---
 title: "Tabular Model Solutions (SSAS Tabular) | Microsoft Docs"
 ms.date: "05/22/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: "tabular-models"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
+ms.custom: ""
 ms.technology: 
   - "analysis-services"
   - "analysis-services/multidimensional-tabular"
@@ -14,7 +18,8 @@ ms.assetid: 0e9931ff-439e-4e1a-9ef2-5d3971187eb9
 caps.latest.revision: 19
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "On Demand"
 ---
 # Creating Tabular Models
   Topics in this section provide information about how to author tabular models by using the tabular model designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
@@ -57,7 +62,7 @@ manager: "erikre"
  [Tabular Model Solution Deployment](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
   
 ## See Also  
- [Download SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx)   
+ [Download SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md)   
  [Tools and applications used in Analysis Services](../../analysis-services/tools-and-applications-used-in-analysis-services.md)  
   
   

@@ -2,9 +2,12 @@
 title: "Usage Element (MiningModelColumn) (ASSL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: "scripting"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
@@ -25,7 +28,8 @@ ms.assetid: 435a857e-37a9-434e-9de1-354f1ff2993f
 caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Usage Element (MiningModelColumn) (ASSL)
   Describes how the associated column in the parent [MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md) is used.  

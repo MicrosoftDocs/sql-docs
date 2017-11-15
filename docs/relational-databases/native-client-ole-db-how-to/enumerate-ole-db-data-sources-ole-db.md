@@ -16,6 +16,7 @@ caps.latest.revision: 22
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Enumerate OLE DB Data Sources (OLE DB)
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]

@@ -16,6 +16,7 @@ caps.latest.revision: 29
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Audit Backup and Restore Event Class
   The **Audit Backup/Restore** event class occurs whenever a backup or restore command is issued.  

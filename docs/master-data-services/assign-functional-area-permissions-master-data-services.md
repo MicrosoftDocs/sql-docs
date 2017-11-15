@@ -14,9 +14,10 @@ helpviewer_keywords:
   - "functional area permissions [Master Data Services], assigning"
 ms.assetid: af6fe2f3-37d0-4413-ab27-b3a0fb95eb50
 caps.latest.revision: 6
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
+author: "smartysanthosh"
+ms.author: "nagavo"
+manager: "craigg"
+ms.workload: "Inactive"
 ---
 # Assign Functional Area Permissions (Master Data Services)
   Assign functional area permission to grant users or groups access to the functional areas of [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  

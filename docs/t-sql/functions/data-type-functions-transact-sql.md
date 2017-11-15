@@ -1,7 +1,7 @@
 ---
 title: "Data Type Functions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/03/2017"
+ms.date: "07/29/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -13,16 +13,17 @@ dev_langs:
   - "TSQL"
 ms.assetid: 0a6e4985-9601-4877-942a-cf53f6932958
 caps.latest.revision: 4
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Active"
 ---
 # Data Type Functions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  The following scalar functions return information about various data type values.  
+The following scalar functions return information about various data type values.
   
-## In This Section  
+## In this section
   
 |||  
 |-|-|  

@@ -14,6 +14,7 @@ caps.latest.revision: 14
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # catalog.deny_permission (SSISDB Database)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -22,9 +23,8 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```  
-  
-deny_permission [ @object_type = ] object_type  
+```sql
+catalog.deny_permission [ @object_type = ] object_type  
     , [ @object_id = ] object_id  
     , [ @principal_id = ] principal_id  
     , [ @permission_type = ] permission_type  

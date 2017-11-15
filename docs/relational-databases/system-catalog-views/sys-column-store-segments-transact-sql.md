@@ -20,9 +20,10 @@ helpviewer_keywords:
   - "sys.column_store_segments catalog view"
 ms.assetid: 1253448c-2ec9-4900-ae9f-461d6b51b2ea
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Inactive"
 ---
 # sys.column_store_segments (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +60,7 @@ INNER JOIN sys.partitions AS p
     ON s.hobt_id = p.hobt_id   
 INNER JOIN sys.indexes AS i   
     ON p.object_id = i.object_id  
-WHERE i.type = 6  
+WHERE i.type = 5 OR i.type = 6  
 GROUP BY i.name, p.object_id, p.index_id, i.type_desc ;  
 GO  
 ```  

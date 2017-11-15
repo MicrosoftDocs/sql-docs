@@ -16,6 +16,7 @@ caps.latest.revision: 12
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Core SQLXML Security Considerations
   The following are security guidelines for using SQLXML for data access.  

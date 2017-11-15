@@ -20,6 +20,7 @@ caps.latest.revision: 36
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Effects of ISO Options
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]

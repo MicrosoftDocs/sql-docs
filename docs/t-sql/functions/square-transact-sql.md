@@ -19,9 +19,10 @@ helpviewer_keywords:
   - "square values"
 ms.assetid: 007b6b12-da86-4229-8f5c-fdd4fa839f5f
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "On Demand"
 ---
 # SQUARE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -33,8 +34,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 SQUARE ( float_expression )  
 ```  
   
@@ -83,13 +82,12 @@ FROM Containers;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Name           VolSquared`  
-  
- `-------------  ----------`  
-  
- `Cylinder       15680.05`  
-  
- `Cube             575.04`  
+ ```
+Name           VolSquared
+-------------  ----------
+Cylinder       15680.05
+Cube             575.04
+```  
   
 ## See Also  
  [Mathematical Functions &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  

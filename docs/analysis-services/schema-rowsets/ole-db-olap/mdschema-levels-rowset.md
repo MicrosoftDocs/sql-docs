@@ -21,7 +21,8 @@ ms.assetid: 4313e268-33f4-4e99-96d7-2ec26775c580
 caps.latest.revision: 33
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # MDSCHEMA_LEVELS Rowset
   Describes each level within a particular hierarchy.  

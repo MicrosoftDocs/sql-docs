@@ -18,9 +18,10 @@ helpviewer_keywords:
   - "sp_create_plan_guide"
 ms.assetid: 5a8c8040-4f96-4c74-93ab-15bdefd132f0
 caps.latest.revision: 82
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Inactive"
 ---
 # sp_create_plan_guide (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -19,6 +19,7 @@ caps.latest.revision: 24
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # DiffGram Examples (SQLXML 4.0)
   The examples in this topic consist of DiffGrams that perform insert, update, and delete operations to the database. Before using the examples, note the following:  

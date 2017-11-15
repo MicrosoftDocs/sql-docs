@@ -23,6 +23,7 @@ caps.latest.revision: 9
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # sys.dm_server_services (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +44,7 @@ manager: "jhubbard"
 |filename|**nvarchar(256)**|The path and filename of the service executable. Cannot be null.|  
 |is_clustered|**nvarchar(1)**|Indicates whether the service is installed as a resource of a clustered server. Cannot be null.|  
 |cluster_nodename|**nvarchar(256)**|The name of the cluster node on which the service is installed. Is nullable.|
-|instant_file_initialization_enabled|**nvarchar(1)**|**Applies to: Starting [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1**.<br /><br />Specifies whether instant file initialization is enabled for SQL Server Database Engine service. This property does not apply to services (example: SQL Server Agent) other than SQL Server Database Engine service. nullable.<br /><br />Y = instant file initialization is enabled for the service.<br /><br />N = instant file initialization is disabled for the service.|  
+|instant_file_initialization_enabled|**nvarchar(1)**|**Applies to: [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4 and Beginning with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1**.<br /><br />Specifies whether instant file initialization is enabled for SQL Server Database Engine service. This property does not apply to services (example: SQL Server Agent) other than SQL Server Database Engine service. nullable.<br /><br />Y = instant file initialization is enabled for the service.<br /><br />N = instant file initialization is disabled for the service.|  
   
 ## Security  
   

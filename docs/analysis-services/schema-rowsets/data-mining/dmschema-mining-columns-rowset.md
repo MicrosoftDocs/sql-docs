@@ -21,7 +21,8 @@ ms.assetid: ae35ccde-4438-46f4-8611-40b2b1a42fce
 caps.latest.revision: 36
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # DMSCHEMA_MINING_COLUMNS Rowset
   Describes the individual columns of all data mining models in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. This rowset is restricted to the current catalog.  

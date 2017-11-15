@@ -17,7 +17,8 @@ ms.assetid: d765c89e-9512-40fb-984a-8200c2541df6
 caps.latest.revision: 35
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Database Dimensions - BI Wizard in Dimension Designer
   In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], you create custom rollup operators and custom member formulas and configure dimensions for writeback by using the Business Intelligence Wizard or Dimension Designer. You can start the Business Intelligence Wizard from Solution Explorer or from Cube Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Dimension Designer can be accessed from [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  

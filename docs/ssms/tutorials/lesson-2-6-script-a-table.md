@@ -14,6 +14,7 @@ caps.latest.revision: 31
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Lesson 2-6 - Script a Table
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] can create scripts to select, insert, update, and delete tables, and to create, alter, drop, or execute stored procedures.  

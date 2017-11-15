@@ -11,9 +11,10 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 168b7465-a6d6-4329-b46e-fc6c5a3f2d9d
 caps.latest.revision: 4
-author: "sabotta"
-ms.author: "carlasab"
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "v-thobro"
+ms.workload: "Inactive"
 ---
 # Assessment Report (OracleToSQL)
 The Assessment Report window shows the results of the conversion of database objects to [!INCLUDE[tsql](../../includes/tsql_md.md)] syntax, and can also help you estimate the complexity and cost of your migration projects.  

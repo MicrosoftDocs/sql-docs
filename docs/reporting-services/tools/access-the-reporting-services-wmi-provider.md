@@ -22,6 +22,7 @@ caps.latest.revision: 57
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Access the Reporting Services WMI Provider
   The Reporting Services WMI provider exposes two WMI classes for administration of Native mode report server instances through scripting:  

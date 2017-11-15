@@ -13,7 +13,8 @@ ms.assetid: 0e36a632-0750-4247-92b6-1fe38c7a4ce2
 caps.latest.revision: 6
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Deploy PowerPivot and Power View - Multi-Tier SharePoint 2016 Farm
   **Summary:** Summary: This white paper provides SharePoint administrators and architects detailed step-by-step instructions for deploying and configuring a Microsoft BI demo environment in a SharePoint farm with multiple servers, based on the Preview releases of SharePoint Server 2016, Office Online Server, and the SQL Server 2016 BI stack for SharePoint 2016. Following a brief introduction of important architecture changes and corresponding system dependencies, it outlines software and configuration requirements and a recommended deployment path to enable and verify BI capabilities in three main stages. This white paper also addresses known issues that exist in the SharePoint Server 2016 Beta 2, Office Online Server Preview and SQL Server 2016 CTP 3.1 releases and suggests appropriate workarounds. These workarounds will no longer be necessary in the final versions of the products. Check for an updated version of this white paper when deploying RTM releases.  

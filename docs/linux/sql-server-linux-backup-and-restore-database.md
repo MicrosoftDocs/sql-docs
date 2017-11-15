@@ -1,6 +1,4 @@
 ---
-# required metadata
-
 title: Backup and restore SQL Server databases on Linux | Microsoft Docs
 description: Learn how to backup and restore SQL Server databases on Linux.
 author: MikeRayMSFT 
@@ -11,29 +9,20 @@ ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: d30090fb-889f-466e-b793-5f284fccc4e6
-
-# optional metadata
-
-# keywords: ""
-# ROBOTS: ""
-# audience: ""
-# ms.devlang: ""
-# ms.reviewer: ""
-# ms.suite: ""
-# ms.tgt_pltfrm: ""
-# ms.custom: ""
-
+ms.workload: "On Demand"
 ---
 # Backup and restore SQL Server databases on Linux
 
-You can take backups of databases from SQL Server 2017 RC1 on Linux with the same tools as other platforms. On a Linux server, you can use `sqlcmd` to connect to the SQL Server and take backups. From Windows, you can connect to SQL Server on Linux and take backups with the user interface. The backup functionality is the same across platforms. For example, you can backup databases locally, to remote drives, or to [Microsoft Azure Blob storage service](http://msdn.microsoft.com/library/dn435916.aspx). 
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+
+You can take backups of databases from SQL Server 2017 on Linux with the same tools as other platforms. On a Linux server, you can use `sqlcmd` to connect to the SQL Server and take backups. From Windows, you can connect to SQL Server on Linux and take backups with the user interface. The backup functionality is the same across platforms. For example, you can backup databases locally, to remote drives, or to [Microsoft Azure Blob storage service](http://msdn.microsoft.com/library/dn435916.aspx). 
 
 ## Backup with sqlcmd
 
 In the following example `sqlcmd` connects to the local SQL Server instance and takes a full backup of a user database called `demodb`.
 
 ```bash
-sqlcmd -H localhost -U SA -Q "BACKUP DATABASE [demodb] TO DISK = N'var/opt/mssql/data/demodb.bak' WITH NOFORMAT, NOINIT, NAME = 'demodb-full', SKIP, NOREWIND, NOUNLOAD, STATS = 10"
+sqlcmd -S localhost -U SA -Q "BACKUP DATABASE [demodb] TO DISK = N'/var/opt/mssql/data/demodb.bak' WITH NOFORMAT, NOINIT, NAME = 'demodb-full', SKIP, NOREWIND, NOUNLOAD, STATS = 10"
 ```
 
 When you run the command, SQL Server will prompt for a password. After you enter the password, the shell will return the results of the backup progress. For example:
@@ -60,16 +49,15 @@ BACKUP DATABASE successfully processed 298 pages in 0.064 seconds (36.376 MB/sec
 In the following example, `sqlcmd` connects to the local SQL Server instance and takes a tail-log backup. After the tail-log backup completes, the database will be in a restoring state. 
 
 ```bash
-sqlcmd -H localhost -U SA -Q "BACKUP LOG [demodb] TO  DISK = N'var/opt/mssql/data/demodb_LogBackup_2016-11-14_18-09-53.bak' WITH NOFORMAT, NOINIT,  NAME = N'demodb_LogBackup_2016-11-14_18-09-53', NOSKIP, NOREWIND, NOUNLOAD,  NORECOVERY ,  STATS = 5"
+sqlcmd -S localhost -U SA -Q "BACKUP LOG [demodb] TO  DISK = N'/var/opt/mssql/data/demodb_LogBackup_2016-11-14_18-09-53.bak' WITH NOFORMAT, NOINIT,  NAME = N'demodb_LogBackup_2016-11-14_18-09-53', NOSKIP, NOREWIND, NOUNLOAD,  NORECOVERY ,  STATS = 5"
 ```
-
 
 ## Restore with sqlcmd
 
 In the following example `sqlcmd` connects to the local instance of SQL Server and restores a database.
 
 ```bash
-sqlcmd -H localhost -U SA -Q "RESTORE DATABASE [demodb] FROM  DISK = N'var/opt/mssql/data/demodb.bak' WITH  FILE = 1,  NOUNLOAD,  REPLACE,  STATS = 5"
+sqlcmd -S localhost -U SA -Q "RESTORE DATABASE [demodb] FROM  DISK = N'/var/opt/mssql/data/demodb.bak' WITH  FILE = 1,  NOUNLOAD,  REPLACE,  STATS = 5"
 ```
 
 ## Backup and Restore with SQL Server Management Studio (SSMS)
@@ -81,7 +69,7 @@ You can use SSMS from a Windows computer to connect to a Linux database and take
 
 The following steps walk through taking a backup with SSMS. 
 
-1. Start SSMS and connect to your server in SQL Server 2017 RC1 on Linux.
+1. Start SSMS and connect to your server in SQL Server 2017 on Linux.
 
 1. In Object Explorer, right-click on your database, Click **Tasks**, and then click **Back Up...**.
 

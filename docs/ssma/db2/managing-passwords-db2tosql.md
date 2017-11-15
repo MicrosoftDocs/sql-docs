@@ -14,9 +14,10 @@ applies_to:
   - "SQL Server"
 ms.assetid: 56d546e3-8747-4169-aace-693302667e94
 caps.latest.revision: 5
-author: "sabotta"
-ms.author: "carlasab"
-manager: "lonnyb"
+author: "Shamikg"
+ms.author: "Shamikg"
+manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Managing Passwords (DB2ToSQL)
 This section is about securing database passwords and the procedure to import or export them across servers:  

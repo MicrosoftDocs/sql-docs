@@ -20,6 +20,7 @@ caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Use Tokens in Job Steps
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent allows you to use tokens in [!INCLUDE[tsql](../../includes/tsql_md.md)] job step scripts. Using tokens when you write your job steps gives you the same flexibility that variables provide when you write software programs. After you insert a token in a job step script, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent replaces the token at run time, before the job step is executed by the [!INCLUDE[tsql](../../includes/tsql_md.md)] subsystem.  
@@ -64,8 +65,8 @@ The following tables list and describe the tokens and macros that [!INCLUDE[ssNo
 |**(A-ERR)**|Error number. If the job is run by an alert, the error number value automatically replaces this token in the job step.|  
 |**(A-SEV)**|Error severity. If the job is run by an alert, the error severity value automatically replaces this token in the job step.|  
 |**(A-MSG)**|Message text. If the job is run by an alert, the message text value automatically replaces this token in the job step.|  
-|**(AGENT_JOB_NAME)**|The name of the job.|  
-|**(AGENT_STEP_NAME)**|The name of the step.|  
+|**(JOBNAME)**|The name of the job.|  
+|**(STEPNAME)**|The name of the step.|  
 |**(DATE)**|Current date (in YYYYMMDD format).|  
 |**(INST)**|Instance name. For a default instance, this token will have the default instance name: MSSQLSERVER.|  
 |**(JOBID)**|Job ID.|  

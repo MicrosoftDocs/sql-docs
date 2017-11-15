@@ -15,6 +15,7 @@ caps.latest.revision: 7
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Searching for Reports and Other Items (Report Builder  and SSRS)
   You can use Report Manager to search a report server for specific items by name or description. You can search for published reports, report models, folders, shared data sources, and resources. You cannot search for schedules, owners, role assignments, specific snapshots in report history, or subscriptions. The search is performed on the report server database where the items are stored.  
@@ -32,7 +33,7 @@ manager: "erikre"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## See Also  
- [Finding and Viewing Reports in Report Manager &#40;Report Builder and SSRS&#41;](https://msdn.microsoft.com/library/dd255286.aspx)   
+ [Finding and Viewing Reports in Report Manager &#40;Report Builder and SSRS&#41;](finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs.md)   
  [Using My Reports &#40;Report Builder and SSRS&#41;](../../reporting-services/report-builder/using-my-reports-report-builder-and-ssrs.md)   
  [Finding, Viewing, and Managing Reports &#40;Report Builder and SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Open and Close a Report &#40;Report Manager&#41;](../../reporting-services/reports/open-and-close-a-report-report-manager.md)  

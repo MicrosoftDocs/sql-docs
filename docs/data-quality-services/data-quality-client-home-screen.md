@@ -16,6 +16,7 @@ caps.latest.revision: 14
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Data Quality Client Home Screen
   Use this screen to gain access to the user interfaces for each the three major [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) groups of tasks: knowledge base management, data quality projects, and administration.  

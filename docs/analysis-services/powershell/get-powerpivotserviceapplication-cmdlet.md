@@ -13,7 +13,8 @@ ms.assetid: 99e4faa1-2f87-43c6-b7ec-a97d4112c5ac
 caps.latest.revision: 10
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Get-PowerPivotServiceApplication cmdlet
 
@@ -22,7 +23,7 @@ manager: "erikre"
   Returns one or more [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] service applications.  
 
 >[!NOTE] 
->This article may contain outdated information and examples.
+>This article may contain outdated information and examples. Use the Get-Help cmdlet for the latest.
   
  **Applies To:** SharePoint 2010 and SharePoint 2013.  
   

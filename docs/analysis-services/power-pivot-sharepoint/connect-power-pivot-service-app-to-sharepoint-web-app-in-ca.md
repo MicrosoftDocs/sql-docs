@@ -15,7 +15,8 @@ ms.assetid: a5da8e29-7ffd-44e7-bf61-344fa5bea8ce
 caps.latest.revision: 8
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Connect Power Pivot Service App to SharePoint Web App in CA
   A [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] service application can be used by any number of SharePoint Web applications in the farm. To make a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] service application available, you add it to a service association list.  

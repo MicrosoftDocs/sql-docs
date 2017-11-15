@@ -45,6 +45,7 @@ caps.latest.revision: 83
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Publish Data and Database Objects
   When creating a publication, you choose the tables and other database objects that you want to publish. You can publish the following database objects using replication.  

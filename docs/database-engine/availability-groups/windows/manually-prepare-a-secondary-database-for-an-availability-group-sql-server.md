@@ -1,8 +1,10 @@
 ---
 title: "Manually Prepare a Secondary Database for an Availability Group (SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
+ms.date: "07/25/2017"
+ms.prod: 
+ - "sql-server-2016"
+ - "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,35 +25,16 @@ author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
 ---
-# Manually Prepare a Secondary Database for an Availability Group (SQL Server)
-  This topic describes how to prepare a secondary database for an Always On availability group in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], or PowerShell. Preparing a secondary database requires two steps: (1) restoring a recent database backup of the primary database and subsequent log backups onto each server instance that hosts the secondary replica, using RESTORE WITH NORECOVERY, and (2) joining the restored database to the availability group.  
+# Manually prepare a database for an Availability Group (SQL Server)
+This topic describes how to prepare a database for an Always On availability group in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], or PowerShell. Preparing a database requires two steps: 
+
+1. Restore a recent database backup of the primary database and subsequent log backups onto each server instance that hosts the secondary replica, using RESTORE WITH NORECOVERY
+2. Join the restored database to the availability group.  
   
 > [!TIP]  
->  If you have an existing log shipping configuration, you might be able to convert the log shipping primary database along with one or more of its secondary databases to an Always On primary database and one or more Always On secondary databases. For more information, see [Prerequisites for Migrating from Log Shipping to Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-migrating-log-shipping-to-always-on-availability-groups.md).  
-  
--   **Before you begin:**  
-  
-     [Prerequisites and Restrictions](#Prerequisites)  
-  
-     [Recommendations](#Recommendations)  
-  
-     [Security](#Security)  
-  
--   **To prepare a secondary database, using:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [PowerShell](#PowerShellProcedure)  
-  
--   [Related Backup and Restore Tasks](#RelatedTasks)  
-  
--   **Follow Up:** [After Preparing a Secondary Database](#FollowUp)  
-  
-##  <a name="BeforeYouBegin"></a> Before You Begin  
-  
-###  <a name="Prerequisites"></a> Prerequisites and Restrictions  
+>  If you have an existing log shipping configuration, you might be able to convert the log shipping primary database along with one or more of its secondary databases to an availability group primary replica and one or more secondary replicas. For more information, see [Prerequisites for migrating from log Shipping to Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-migrating-log-shipping-to-always-on-availability-groups.md).  
+
+##  <a name="Prerequisites"></a> Prerequisites and restrictions  
   
 -   Make sure that the system where you plan to place database possesses a disk drive with sufficient space for the secondary databases.  
   
@@ -65,7 +48,7 @@ manager: "jhubbard"
   
 -   After restoring the database, you must restore (WITH NORECOVERY) every log backup created since the last restored data backup.  
   
-###  <a name="Recommendations"></a> Recommendations  
+##  <a name="Recommendations"></a> Recommendations  
   
 -   On stand-alone instances of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], we recommend that, if possible, the file path (including the drive letter) of a given secondary database be identical to the path of the corresponding primary database. This is because if you move the database files when creating a secondary database, a later add-file operation might fail on the secondary database and cause the secondary database to be suspended.  
   
@@ -79,20 +62,23 @@ manager: "jhubbard"
   
  When the database being restored does not exist on the server instance, the RESTORE statement requires CREATE DATABASE permissions. For more information, see [RESTORE &#40;Transact-SQL&#41;](../../../t-sql/statements/restore-statements-transact-sql.md).  
   
-##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Use SQL Server Management Studio  
   
 > [!NOTE]  
->  If the backup and restore file paths are identical between the server instance that hosts the primary replica and every instance that hosts a secondary replica, you should be able create secondary databases by using [New Availability Group Wizard](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md), [Add Replica to Availability Group Wizard](../../../database-engine/availability-groups/windows/use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md), or [Add Database to Availability Group Wizard](../../../database-engine/availability-groups/windows/availability-group-add-database-to-group-wizard.md).  
+>  If the backup and restore file paths are identical between the server instance that hosts the primary replica and every instance that hosts a secondary replica, you should be able create secondary replica databases by with [New Availability Group Wizard](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md), [Add Replica to Availability Group Wizard](../../../database-engine/availability-groups/windows/use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md), or [Add Database to Availability Group Wizard](../../../database-engine/availability-groups/windows/availability-group-add-database-to-group-wizard.md).  
   
  **To prepare a secondary database**  
   
 1.  Unless you already have a recent database backup of the primary database, create a new full or differential database backup. As a best practice, place this backup and any subsequent log backups onto the recommended network share.  
   
-2.  Create at least one new log backup of the primary database.  
+2.  Create at least one new log backup of the primary database.
+
+   >[!NOTE]
+   >A transaction log backup may not be required if a transaction log backup has not been previously captured on the database in the primary replica. Microsoft recommends taking a transaction log backup each time a new database is joined to the availability group. 
   
 3.  On the server instance that hosts the secondary replica, restore the full database backup of the primary database (and optionally a differential backup) followed by any subsequent log backups.  
   
-     On the **RESTORE DATABASEOptions** page, select **Leave the database non-operational, and do not roll back the uncommitted transactions. Additional transaction logs can be restored. (RESTORE WITH NORECOVERY)**.  
+     On the **RESTORE DATABASE Options** page, select **Leave the database non-operational, and do not roll back the uncommitted transactions. Additional transaction logs can be restored. (RESTORE WITH NORECOVERY)**.  
   
      If the file paths of the primary database and the secondary database differ, for example, if the primary database is on drive 'F:' but the server instance that hosts the secondary replica lacks an F: drive, include the MOVE option in your WITH clause.  
   
@@ -260,7 +246,7 @@ manager: "jhubbard"
   
 -   [SQL Server PowerShell Provider](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
-###  <a name="ExamplePSscript"></a> Sample Backup and Restore Script and Command  
+###  <a name="ExamplePSscript"></a> Sample backup and restore script and command  
  The following PowerShell commands back up a full database backup and transaction log to a network share and restore those backups from that share. This example assumes that the file path to which the database is restored is the same as the file path on which the database was backed up.  
   
 ```  
@@ -275,10 +261,10 @@ Restore-SqlDatabase -Database "MyDB1" -BackupFile "\\share\backups\MyDB1.trn" -R
   
 ```  
   
-##  <a name="FollowUp"></a> Follow Up: After Preparing a Secondary Database  
+##  <a name="FollowUp"></a> Next steps  
  To complete configuration of the secondary database, join the newly restored database to the availability group. For more information, see [Join a Secondary Database to an Availability Group &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md).  
   
-## See Also  
+## See also  
  [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [BACKUP &#40;Transact-SQL&#41;](../../../t-sql/statements/backup-transact-sql.md)   
  [RESTORE Arguments &#40;Transact-SQL&#41;](../../../t-sql/statements/restore-statements-arguments-transact-sql.md)   

@@ -20,9 +20,10 @@ helpviewer_keywords:
   - "PWDCOMPARE function [Transact-SQL]"
 ms.assetid: 5f84ff9e-c1ec-46aa-8501-50f854ebcc3a
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "On Demand"
 ---
 # PWDCOMPARE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

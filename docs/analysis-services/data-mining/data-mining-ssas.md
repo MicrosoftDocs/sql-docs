@@ -16,7 +16,8 @@ ms.assetid: b1c912da-72f6-4d96-89c8-55a2c4f19e88
 caps.latest.revision: 31
 author: "Minewiskan"
 ms.author: "owend"
-manager: "jhubbard"
+manager: "kfile"
+ms.workload: "On Demand"
 ---
 # Data Mining (SSAS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has been a leader in predictive analytics since the 2000 release, by providing data mining in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. The combination of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Mining provides an integrated platform for predictive analytics that encompasses data cleansing and preparation, machine learning, and reporting. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Mining includes multiple standard algorithms, including EM and K-means clustering models, neural networks, logistic regression and linear regression, decision trees, and naive bayes classifiers. All models have integrated visualizations to help you develop, refine, and evaluate your models.  Integrating data mining into business intelligence solution helps you make intelligent decisions about complex problems.  

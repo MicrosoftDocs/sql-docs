@@ -2,9 +2,12 @@
 title: "ProactiveCachingIncrementalProcessingBinding Data Type (ASSL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: "scripting"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
@@ -23,7 +26,8 @@ ms.assetid: f49c0c96-4277-417b-9660-d77a4faebd00
 caps.latest.revision: 15
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # ProactiveCachingIncrementalProcessingBinding Data Type (ASSL)
   Defines a derived data type that represents a binding to the [ProactiveCaching](../../../analysis-services/scripting/objects/proactivecaching-element-assl.md) element about the status of the process of rebuilding the cache.  

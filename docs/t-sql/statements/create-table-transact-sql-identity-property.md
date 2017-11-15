@@ -21,9 +21,10 @@ helpviewer_keywords:
   - "autonumbers, identity numbers"
 ms.assetid: 8429134f-c821-4033-a07c-f782a48d501c
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Active"
 ---
 # CREATE TABLE (Transact-SQL) IDENTITY (Property)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md.md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]

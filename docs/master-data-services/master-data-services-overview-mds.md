@@ -17,9 +17,10 @@ helpviewer_keywords:
   - "Master Data Services"
 ms.assetid: 8a4c28b1-6061-4850-80b6-132438b8c156
 caps.latest.revision: 28
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
+author: "smartysanthosh"
+ms.author: "nagavo"
+manager: "craigg"
+ms.workload: "Active"
 ---
 # Master Data Services Overview (MDS)
   This topic describes the key data organization and management features of [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. 

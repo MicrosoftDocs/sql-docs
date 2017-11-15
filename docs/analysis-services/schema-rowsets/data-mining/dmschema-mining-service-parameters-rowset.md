@@ -21,7 +21,8 @@ ms.assetid: 5994e66b-84d0-4279-9f50-d92fd829dd83
 caps.latest.revision: 33
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # DMSCHEMA_MINING_SERVICE_PARAMETERS Rowset
   Describes the parameters for the algorithms on the server.  

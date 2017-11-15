@@ -15,6 +15,7 @@ caps.latest.revision: 7
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "erikre"
+ms.workload: "On Demand"
 ---
 # Uninstall Reporting Services
   Uninstalling [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] does not remove the content you have created or configuration you have modified. However, if there is content you need after the uninstall is complete, it is recommended you make copies of content before you begin the uninstallation process.  
@@ -48,7 +49,7 @@ manager: "erikre"
   
 1.  In Windows Control Panel, click **Programs and Features**.  
   
-2.  In **Programs and Features** select **Microsoft SQL Server 2012**.  
+2.  In **Programs and Features** select **Microsoft SQL Server 2016**.  
   
 3.  In the uninstall wizard, select the instance that includes the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] instance feature **RS**.  
   

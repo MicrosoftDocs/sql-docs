@@ -1,11 +1,13 @@
 ---
 title: "Create a Calculated Table (SSAS Tabular) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
+ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: "tabular-models"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
@@ -14,7 +16,8 @@ ms.assetid: 3d7ff98a-82a9-4333-a7d3-7a95a6f2caf7
 caps.latest.revision: 10
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "On Demand"
 ---
 # Create a Calculated Table (SSAS Tabular)
   A *calculated table* is a computed object, based on either a DAX query or expression, derived from all or part of other tables in the same model.  

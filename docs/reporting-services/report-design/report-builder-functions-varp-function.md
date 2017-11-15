@@ -15,6 +15,7 @@ caps.latest.revision: 7
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Report Builder Functions - VarP Function
   Returns the population variance of all non-null numeric values specified by the expression, evaluated in the context of the given scope.  

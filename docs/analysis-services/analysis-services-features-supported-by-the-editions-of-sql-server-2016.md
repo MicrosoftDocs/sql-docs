@@ -15,7 +15,8 @@ ms.assetid: f09d7be1-bd63-43f8-b91c-bf19166b4457
 caps.latest.revision: 4
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "On Demand"
 ---
 # Analysis Services Features Supported by the Editions of SQL Server 2016
 [!INCLUDE[ssas-appliesto-sql2016-later](../includes/ssas-appliesto-sql2016-later.md)]

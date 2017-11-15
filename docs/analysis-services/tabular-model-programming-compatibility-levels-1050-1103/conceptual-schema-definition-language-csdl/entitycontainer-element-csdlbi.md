@@ -2,9 +2,12 @@
 title: "EntityContainer Element (CSDLBI) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: "tabular-models"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
@@ -16,7 +19,8 @@ ms.assetid: e328558e-16b0-4d4a-a79a-fdd3c9493595
 caps.latest.revision: 17
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # EntityContainer Element (CSDLBI)
   The EntityContainer element is a complex type, based on the CSDL type, EntityContainer, that defines a collection of entities within a single data model. In a business intelligence application, the data model represented by an EntityContainer might contain multiple tables with column linked by relationships, as well as calculations, measures, and KPIs. It is conceptually similar to a database or data source.  

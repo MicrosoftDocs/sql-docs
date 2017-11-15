@@ -18,7 +18,8 @@ ms.assetid: c7e1f66f-16ca-43da-b8c7-4d3e1fa8b58d
 caps.latest.revision: 44
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Processing Analysis Services Objects
   Processing affects the following [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] object types: [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] databases, cubes, dimensions, measure groups, partitions, and data mining structures and models. For each object, you can specify the level of processing for the object, or you can specify the Process Default option to enable [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] to automatically select the optimal level of processing. For more information about the different levels of processing for each object, see [Processing Options and Settings &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md).  

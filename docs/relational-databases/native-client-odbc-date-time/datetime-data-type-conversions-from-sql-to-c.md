@@ -16,6 +16,7 @@ caps.latest.revision: 25
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # datetime Data Type Conversions from SQL to C
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]

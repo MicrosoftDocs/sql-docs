@@ -24,6 +24,7 @@ caps.latest.revision: 35
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # OPTION Clause (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -172,7 +173,7 @@ OPTION ( FORCE ORDER )
 ;  
 ```  
   
-### H. Using EXERNALPUSHDOWN  
+### H. Using EXTERNALPUSHDOWN  
  The following example forces the pushdown of the WHERE clause to the MapReduce job on the external Hadoop table.  
   
 ```  

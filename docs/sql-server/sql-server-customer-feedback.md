@@ -22,6 +22,7 @@ ms.assetid:
 # ms.tgt_pltfrm: ""
 # ms.custom: ""
 
+ms.workload: "Inactive"
 ---
 
 # Configure SQL Server to send feedback to Microsoft
@@ -172,3 +173,4 @@ During installation, SQL Server 2016 Analysis Services adds a special account to
 
 You can configure your service not to send usage data, as described in the "Set registry subkeys on the server" section. However, doing this does not remove the service account. 
  
+[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

@@ -13,7 +13,8 @@ ms.assetid: 66d5d154-88ce-4c2e-b1ef-e2d2f6fb1c44
 caps.latest.revision: 11
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Invoke-ProcessASDatabase
 
@@ -26,7 +27,7 @@ manager: "erikre"
  Use **RefreshType** for Tabular databases at compatibility level 1200 or higher.  
 
 >[!NOTE] 
->This article may contain outdated information and examples.
+>This article may contain outdated information and examples. Use the Get-Help cmdlet for the latest.
   
 ## Syntax  
  `Invoke-ProcessASDatabase [-DatabaseName] <string> [-RefreshType] <RefreshType> {Full | ClearValues | Calculate |     DataOnly | Automatic | Add | Defragment} [-Server <string>] [-Credential <pscredential>] [-WhatIf] [-Confirm]     [<CommonParameters>]`  

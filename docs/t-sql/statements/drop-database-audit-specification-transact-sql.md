@@ -19,9 +19,10 @@ helpviewer_keywords:
   - "DROP DATABASE AUDIT SPECIFICATION statement"
 ms.assetid: 3c387c6e-9a67-4daa-b64a-c87f6b3c9c4f
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Inactive"
 ---
 # DROP DATABASE AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

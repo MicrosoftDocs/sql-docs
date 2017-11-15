@@ -21,6 +21,7 @@ caps.latest.revision: 33
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # GetNextOrderValue Method (ClientNetworkProtocol Class)
   Selects the protocol that is in the next position in the list of protocols.  

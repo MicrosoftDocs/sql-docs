@@ -18,6 +18,7 @@ caps.latest.revision: 15
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Modify a Filter (SQL Server Profiler)
   You add filters to trace templates, which contain the trace definitions, to limit the number of events that are gathered by a trace. Limiting the number of events gathered can reduce the performance effects of tracing. If you set filters for a trace template and find that the trace is not gathering the kind of information that you need, you can edit the filter.  

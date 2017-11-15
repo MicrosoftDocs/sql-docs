@@ -14,6 +14,7 @@ caps.latest.revision: 13
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # catalog.rename_environment (SSISDB Database)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -22,8 +23,8 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```tsql  
-rename_environment [ @folder_name = ] folder_name  
+```sql  
+catalog.rename_environment [ @folder_name = ] folder_name  
     , [ @environment_name = ] environment_name  
     , [ @new_environment_name= ] new_environment_name  
 ```  

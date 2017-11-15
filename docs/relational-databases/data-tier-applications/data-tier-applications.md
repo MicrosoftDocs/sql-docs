@@ -20,6 +20,7 @@ caps.latest.revision: 31
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Data-tier Applications
   A data-tier application (DAC) is a logical database management entity that defines all of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objects - like tables, views, and instance objects, including logins – associated with a user’s database. A DAC is a self-contained unit of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database deployment that enables data-tier developers and database administrators to package [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objects into a portable artifact called a DAC package, also known as a DACPAC.  
@@ -63,7 +64,7 @@ manager: "jhubbard"
   
     -   Can import a DACPAC into a database project and continue to design the database.  
   
-SQL Server Data Tools also supports a Local DB for unconnected, client-side database application development. The developer can take a snapshot of this local database to create DACPAC contained in a .dacpac file.  
+        SQL Server Data Tools also supports a Local DB for unconnected, client-side database application development. The developer can take a snapshot of this local database to create DACPAC contained in a .dacpac file.  
   
     -   Independently, the developer can publish a database project directly to a database without even generating a DACPAC. The publish operation follows similar behavior as the deploy operation from other tools.  
   

@@ -15,7 +15,8 @@ ms.assetid: b2e3f97f-18a8-42b6-9030-b4f818afc3b9
 caps.latest.revision: 10
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Create a BI Semantic Model Connection to a Power Pivot Workbook
   Use the information in this topic to set up a BI semantic model connection that redirects to a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbook in the same farm.  

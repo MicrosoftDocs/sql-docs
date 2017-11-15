@@ -15,7 +15,8 @@ ms.assetid: d0558cae-8209-4242-80c5-2c95981b88b9
 caps.latest.revision: 15
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Understanding Power View for Multidimensional Models
   This article describes the Power View for Multidimensional Models feature in SQL Server, and provides important information for BI professionals and administrators who intend to implement Power View for Multidimensional Models in their organization.  

@@ -22,6 +22,7 @@ caps.latest.revision: 49
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Add or Remove Nodes in a SQL Server Failover Cluster (Setup)
   Use this procedure to manage nodes to an existing [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster instance.  

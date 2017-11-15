@@ -1,7 +1,7 @@
 ---
-title: "Troubleshoot a Reporting Services Installation | Microsoft Docs"
+title: "Troubleshoot a Reporting Services installation | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/30/2017"
+ms.date: "09/29/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -14,17 +14,18 @@ caps.latest.revision: 16
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "On Demand"
 ---
 
-# Troubleshoot a Reporting Services Installation
+# Troubleshoot a Reporting Services installation
 
   If you cannot install [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] because of errors that occur during setup, use the instructions in this topic to address the conditions that are most likely to cause installation errors.  
   
  For information about other errors and issues related to [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] see [Troubleshoot SSRS issues and errors.](http://social.technet.microsoft.com/wiki/contents/articles/ssrs-troubleshooting-issues-and-errors.aspx)  
   
- Review the [Online Release Notes](http://go.microsoft.com/fwlink/?linkid=236893) in case the issue you encounter is described in the release notes.  
+ Review the [Online release notes](http://go.microsoft.com/fwlink/?linkid=236893) in case the issue you encounter is described in the release notes.  
   
-##  <a name="bkmk_setuplogs"></a> Check Setup Logs  
+##  <a name="bkmk_setuplogs"></a> Check setup logs  
  Setup errors are recorded in log files in the **[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Setup Bootstrap\Log** folder. A subfolder is created each time you run Setup. The subfolder name is the time and date you ran Setup. For instructions on how to view the Setup log files, see [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
   
 -   The log files include a collection of files.  
@@ -35,7 +36,7 @@ manager: "erikre"
   
 -   Open the *_RS\_\*_ComponentUpdateSetup.log to view [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] setup information.  
   
-##  <a name="bkmk_prereq"></a> Check Prerequisites  
+##  <a name="bkmk_prereq"></a> Check prerequisites  
  Setup checks prerequisites automatically. However, if you are troubleshooting setup problems, it is helpful to know which requirements Setup is checking for.  
   
 -   Account requirements for running Setup include membership in the local Administrators group. Setup must have permission to add files, registry settings, create local security groups, and set permissions. If you are installing a default configuration, Setup must have permission to create a report server database on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance on which you are installing.  
@@ -50,7 +51,7 @@ manager: "erikre"
   
  Setup no longer checks for Internet Information Services (IIS) or [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] requires MDAC 2.0 and the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] version 2.0; Setup will install these if they are not already installed.  
   
-##  <a name="bkmk_tshoot_sharepoint"></a> Troubleshoot Problems with SharePoint Mode installations  
+##  <a name="bkmk_tshoot_sharepoint"></a> Troubleshoot oroblems with SharePoint mode installations  
   
 -   [Reporting Services Configuration Manager Does not start](#bkmk_configmanager_notstart)  
   
@@ -68,7 +69,7 @@ manager: "erikre"
   
 -   [You see an error message that RS_SHP is not supported with PREPAREIMAGE](#bkmk_RS_SHP_notsupported)  
 
-### <a name="bkmk_configmanager_notstart"></a> Reporting Services Configuration Manager Does not start
+### <a name="bkmk_configmanager_notstart"></a> Reporting Services Configuration Manager does not start
 
  **Description:** This issue is by design in SQL Server 2012 and later. Reporting Services is architected for the SharePoint service architecture. The Configuration Manager is no longer needed to configure and administer [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in SharePoint mode.  
   
@@ -116,7 +117,7 @@ manager: "erikre"
   
 -   Install [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode from the SQL Server installation media.  
   
- **Note:** If the **SharePoint 2013/2016 Management Shell** is open when you complete one of the workarounds, close and reopen the management shell.  
+ If the **SharePoint 2013/2016 Management Shell** is open when you complete one of the workarounds, close and reopen the management shell.  
   
  For more information, see the following:  
   
@@ -191,7 +192,7 @@ manager: "erikre"
   
  ![Arrow icon used with Back to Top link](../../analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Troubleshoot Problems with SharePoint Mode installations](#bkmk_tshoot_sharepoint)  
   
-##  <a name="bkmk_tshoot_native"></a> Troubleshoot Problems with the Native Mode Installations  
+##  <a name="bkmk_tshoot_native"></a> Troubleshoot problems with the native mode installations  
   
 ###  <a name="PerfCounters"></a> Performance counters are not visible after upgrading to Windows Vista or Windows Server 2008  
  If you upgrade the operating system to [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] or [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] on a computer that runs [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] performance counters will not be set after the upgrade.  
@@ -266,7 +267,7 @@ manager: "erikre"
 > [!CAUTION]  
 >  Incorrectly editing the registry can severely damage your system. Before making changes to the registry, you should back up any valued data on the computer.  
   
-##  <a name="bkmk_additional"></a> Additional Resources  
+##  <a name="bkmk_additional"></a> Additional resources  
  The following are additional resources you can review to assist you with trouble shooting issues:  
   
 -   TechNet Wiki: Trouble Shooting topics [Troubleshoot SQL Server Reporting Services (SSRS) in SharePoint Integrated Mode](http://social.technet.microsoft.com/wiki/contents/articles/troubleshoot-sql-server-reporting-services-ssrs-in-sharepoint-integrated-mode.aspx)  

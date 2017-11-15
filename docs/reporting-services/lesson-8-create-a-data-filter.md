@@ -16,6 +16,7 @@ caps.latest.revision: 9
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Lesson 8: Create a Data Filter
 After you add a drillthrough action on the parent report, your next step is to create a data filter for the data table that you defined for the child report.  

@@ -11,9 +11,10 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: d63aa7e2-62c6-4c84-b3da-dcf2d89ee134
 caps.latest.revision: 4
-author: "sabotta"
-ms.author: "carlasab"
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "v-pelars"
+ms.workload: "Inactive"
 ---
 # Data Migration Report  (OracleToSQL)
 The **Data Migration Report** dialog box appears after you migrate data to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  

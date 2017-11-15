@@ -21,6 +21,7 @@ caps.latest.revision: 32
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # SHA Property (SecurityCertificate Class)
   Gets the SHA thumbprint attribute of the security certificate.  

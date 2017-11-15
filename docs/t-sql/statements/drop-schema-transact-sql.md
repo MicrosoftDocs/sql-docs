@@ -23,9 +23,10 @@ helpviewer_keywords:
   - "removing schemas"
 ms.assetid: 874aa29e-c8ad-41e4-a672-900fdc58f1f6
 caps.latest.revision: 51
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "On Demand"
 ---
 # DROP SCHEMA (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]

@@ -13,7 +13,8 @@ ms.assetid: 33231250-3880-4d75-936b-d70662a01855
 caps.latest.revision: 9
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Get-PowerPivotSystemService cmdlet
 
@@ -22,7 +23,7 @@ manager: "erikre"
   Returns the global properties of the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] System Service object in a farm. 
 
 >[!NOTE] 
->This article may contain outdated information and examples.
+>This article may contain outdated information and examples. Use the Get-Help cmdlet for the latest.
   
  **Applies To:** SharePoint 2010 and SharePoint 2013.  
   

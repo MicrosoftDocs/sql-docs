@@ -16,6 +16,7 @@ caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Select Object Types (Object Explorer)
 Use this dialog box to specify the types of objects that appear in the **Select Objects** dialog box.  

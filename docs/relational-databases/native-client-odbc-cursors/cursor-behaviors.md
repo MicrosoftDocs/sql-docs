@@ -24,6 +24,7 @@ caps.latest.revision: 32
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Cursor Behaviors
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
@@ -49,6 +50,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Using Cursors (ODBC)](../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md) 
- [Cursor Properties](https://msdn.microsoft.com/library/ms131693.aspx) 
+ [Cursor Properties](properties/cursor-properties.md) 
   
   

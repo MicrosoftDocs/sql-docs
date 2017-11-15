@@ -1,7 +1,7 @@
 ---
 title: "MSSQLSERVER_5515 | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-06-02"
+ms.date: "06/02/2016"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -13,10 +13,11 @@ helpviewer_keywords:
   - "5515 (Database Engine error)"
 ms.assetid: ccd793bc-ba5d-4782-8d72-731fd01fc177
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
 robots: noindex,nofollow
+ms.workload: "Inactive"
 ---
 # MSSQLSERVER_5515
   

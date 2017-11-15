@@ -15,6 +15,7 @@ caps.latest.revision: 2
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Targets for Extended Events in SQL Server
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -39,7 +40,7 @@ The [ring_buffer section](#h2_target_ring_buffer) includes an example of using [
 
 
 - Have installed a recent version of the frequently updated utility SQL Server Management Studio (SSMS.exe). For details see:
-    - [Download SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx)
+    - [Download SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md)
 
 
 - In SSMS.exe, know how to use the **Object Explorer** to right-click the target node under your event session, for [easy viewing of the output data](../../relational-databases/extended-events/advanced-viewing-of-target-data-from-extended-events-in-sql-server.md).

@@ -23,9 +23,10 @@ helpviewer_keywords:
   - "stored procedures [SQL Server], modifying"
 ms.assetid: ed9b2f76-11ec-498d-a95e-75b490a75733
 caps.latest.revision: 69
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "On Demand"
 ---
 # ALTER PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]

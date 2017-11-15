@@ -18,6 +18,7 @@ caps.latest.revision: 37
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # + (Concatenate) (SSIS Expression)
   Concatenates two expressions into one expression.  

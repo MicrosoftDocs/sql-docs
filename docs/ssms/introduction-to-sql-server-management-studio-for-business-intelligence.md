@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Introduction to SQL Server Management Studio for Business Intelligence
 To access, configure, manage, and administer [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)], [!INCLUDE[ssISnoversion](../includes/ssisnoversion_md.md)], and [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion_md.md)], use [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)]. Although all three business intelligence technologies rely on [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)], the administrative tasks associated with each of these technologies are slightly different.  

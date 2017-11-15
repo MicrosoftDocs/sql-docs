@@ -27,6 +27,7 @@ caps.latest.revision: 125
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # Database Mirroring (SQL Server)
     
@@ -78,9 +79,6 @@ manager: "jhubbard"
   
  mirror database  
  The copy of the database that is typically fully synchronized with the principal database.  
-  
- mirror server  
- In a database mirroring configuration, the server instance on which the mirror database resides.  
   
  mirror server  
  In a database mirroring configuration, the server instance on which the mirror database resides.  

@@ -13,9 +13,10 @@ helpviewer_keywords:
   - "208 (Database Engine error)"
 ms.assetid: 4b1895f5-3197-4da1-af86-954c93507956
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Inactive"
 ---
 # MSSQLSERVER_208
   

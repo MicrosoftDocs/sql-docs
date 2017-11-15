@@ -18,7 +18,8 @@ ms.assetid: 5521f8ef-b10a-4861-9df7-1e43e0a1fb3f
 caps.latest.revision: 11
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Translations in Multidimensional Models (Analysis Services)
   You can define translations in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] by using the appropriate designer for the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] object to be translated. Defining a translation creates a **Translation** object associated with the appropriate [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] object that has the specified explicit literal values, in the specified language, for the properties of the associated [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] object.  

@@ -15,7 +15,8 @@ ms.assetid: 9e556fb1-ca37-4f06-8f8f-f187cb0fdb37
 caps.latest.revision: 32
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "On Demand"
 ---
 # Determine the Server Mode of an Analysis Services Instance
   Analysis Services can be installed in one of three server modes: Multidimensional and Data Mining (default), [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint, and Tabular. The server mode of an Analysis Services instance is determined during setup when you choose options for installing the server.  

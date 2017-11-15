@@ -1,7 +1,7 @@
 ---
 title: "REVOKE Server Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/10/2016"
+ms.date: "08/10/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -17,9 +17,10 @@ helpviewer_keywords:
   - "servers [SQL Server], permissions"
 ms.assetid: 7b9a56b3-face-452e-a655-147dac306ba1
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Inactive"
 ---
 # REVOKE Server Permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,10 +57,10 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
  *permission*  
  Specifies a permission that can be granted on a server. For a list of the permissions, see the Remarks section later in this topic.  
   
- { TO | FROM } <grantee_principal>  
+ { TO | FROM } \<grantee_principal> 
  Specifies the principal from which the permission is being revoked.  
   
- AS <grantor_principal>  
+ AS \<grantor_principal> 
  Specifies the principal from which the principal executing this query derives its right to revoke the permission.  
   
  GRANT OPTION FOR  
@@ -176,3 +177,4 @@ GO
  [HAS_PERMS_BY_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/has-perms-by-name-transact-sql.md)  
   
   
+

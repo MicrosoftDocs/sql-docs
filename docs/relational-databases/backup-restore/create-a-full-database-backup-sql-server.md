@@ -19,6 +19,7 @@ caps.latest.revision: 63
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # Create a Full Database Backup (SQL Server)
 
@@ -147,7 +148,7 @@ manager: "jhubbard"
 22. In the **Encryption** section, use the **Encrypt backup** checkbox to decide whether to use encryption for the backup. Use the **Algorithm** drop-down list to select an encryption algorithm.  Use the **Certificate or Asymmetric key** drop-down list, to select an existing Certificate or Asymmetric key. Encryption is supported in SQL Server 2014 or later. For more details on the Encryption options, see [Back Up Database &#40;Backup Options Page&#41;](../../relational-databases/backup-restore/back-up-database-backup-options-page.md).  
   
   
-You can use the [Maintenance Plan Wizard](https://msdn.microsoft.com/library/ms191002.aspx) to create database backups. 
+You can use the [Maintenance Plan Wizard](../maintenance-plans/use-the-maintenance-plan-wizard.md) to create database backups. 
 
 ### Examples  
 #### **A.  Full back up to disk to default location**

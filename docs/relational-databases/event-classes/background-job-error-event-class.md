@@ -16,6 +16,7 @@ caps.latest.revision: 29
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Background Job Error Event Class
   The **Background Job Error** event class occurs when a background job has terminated abnormally. This condition might require the attention of a system administrator.  

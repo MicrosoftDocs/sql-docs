@@ -16,7 +16,8 @@ ms.assetid: 85789177-c5df-4336-a90c-c20d69277ab4
 caps.latest.revision: 6
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # DISCOVER_TRANSACTIONS Rowset
   Returns the current set of pending transactions on the system.  

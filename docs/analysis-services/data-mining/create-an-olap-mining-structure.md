@@ -14,7 +14,8 @@ ms.assetid: 21cbdc9d-d33c-4026-b9ef-1be2bd92b3b1
 caps.latest.revision: 13
 author: "Minewiskan"
 ms.author: "owend"
-manager: "jhubbard"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Create an OLAP Mining Structure
   There are many advantages to creating a data mining model based on an OLAP cube or other multidimensional data store. An OLAP solution already contains huge amounts of data that is well organized, cleaned and properly formatted; however, the complexity of the data is such that users are unlikely to find meaningful patterns by ad hoc exploration. Data mining offers the ability to discover new correlations and provide actionable insight.  

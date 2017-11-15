@@ -21,7 +21,8 @@ ms.assetid: 1bf0a2e2-a419-4c25-b271-37dfa44de2ea
 caps.latest.revision: 33
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # DISCOVER_LITERALS Rowset
   Returns information about literals, including data types and values, supported by the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA) provider.  

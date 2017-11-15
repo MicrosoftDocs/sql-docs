@@ -18,7 +18,8 @@ ms.assetid: 308bc0b3-4fd6-4435-972b-5e40d9e3c99b
 caps.latest.revision: 32
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Supported MDX (MDX)
   The following statements and functions are supported within Multidimensional Expressions (MDX) Script:  

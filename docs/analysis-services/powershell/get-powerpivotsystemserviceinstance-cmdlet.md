@@ -13,7 +13,8 @@ ms.assetid: 56027a8e-1949-4349-b616-68c8b1d2963c
 caps.latest.revision: 9
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Get-PowerPivotSystemServiceInstance cmdlet
 
@@ -22,7 +23,7 @@ manager: "erikre"
   Returns one or more instances of [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] System Service running on application servers in the farm.  
 
 >[!NOTE] 
->This article may contain outdated information and examples.
+>This article may contain outdated information and examples. Use the Get-Help cmdlet for the latest.
   
  **Applies To:** SharePoint 2010 and SharePoint 2013.  
   

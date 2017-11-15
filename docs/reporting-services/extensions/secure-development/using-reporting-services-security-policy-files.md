@@ -22,9 +22,10 @@ helpviewer_keywords:
   - "named permission sets [Reporting Services]"
 ms.assetid: 2280fff6-3de7-44b1-87da-5db0ec975928
 caps.latest.revision: 33
-author: "sabotta"
-ms.author: "carlasab"
+author: "guyinacube"
+ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Using Reporting Services Security Policy Files
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] stores component security policy information in three configuration files that are copied to the file system during setup. These configuration files can contain a combination of internal-use and user-defined security policies for code assemblies in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. The three configuration files correspond to three securable components in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]: The report server and Windows service, the Report Manager Web application, and the Report Designer preview window.  

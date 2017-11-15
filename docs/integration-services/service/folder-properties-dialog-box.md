@@ -18,6 +18,7 @@ caps.latest.revision: 8
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Folder Properties Dialog Box
   A folder contains projects and environments in the **SSISDB** catalog. Each folder defines permissions that apply to the contents of the folder. For more information about [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] permissions, see [catalog.grant_permission &#40;SSISDB Database&#41;](../../integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database.md).  
@@ -35,7 +36,7 @@ manager: "jhubbard"
 5.  Click **OK** to accept the changes and close the **Folders Properties** dialog box.  
   
 ## See Also  
- [Integration Services &#40;SSIS&#41; Server](https://msdn.microsoft.com/library/ms141134.aspx)   
+ [Integration Services &#40;SSIS&#41; Server](../integration-services-ssis-packages.md)   
  [catalog.grant_permission &#40;SSISDB Database&#41;](../../integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database.md)  
   
   

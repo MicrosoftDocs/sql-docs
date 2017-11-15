@@ -16,6 +16,7 @@ caps.latest.revision: 23
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Using Integrated Authentication
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]

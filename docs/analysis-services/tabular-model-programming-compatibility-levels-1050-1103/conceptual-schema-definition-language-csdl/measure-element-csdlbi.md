@@ -2,9 +2,12 @@
 title: "Measure Element (CSDLBI) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: "tabular-models"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
@@ -16,7 +19,8 @@ ms.assetid: bfbc9274-053a-421a-bb81-2095bba710be
 caps.latest.revision: 12
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Measure Element (CSDLBI)
   The Measure element is a complex type based on the CSDL Property element. The CSDLBI annotations add attributes that support definition of complex formulas for use in business intelligence data models.  

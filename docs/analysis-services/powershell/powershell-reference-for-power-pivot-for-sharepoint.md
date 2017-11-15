@@ -14,7 +14,8 @@ ms.assetid: c01735a8-f919-48ad-8d74-35d75a18f821
 caps.latest.revision: 11
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # PowerShell Reference for Power Pivot for SharePoint
 
@@ -23,7 +24,7 @@ manager: "erikre"
   This section lists the PowerShell cmdlets used to configure or administer a [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] installation. For more information about enabling the cmdlets and viewing built-in help, see [Power Pivot Configuration using Windows PowerShell](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell.md).  
 
 >[!NOTE] 
->This article may contain outdated information and examples.
+>This article may contain outdated information and examples. Use the Get-Help cmdlet for the latest.
   
 ## Cmdlet List  
  To see a list of cmdlets from the PowerShell prompt:  

@@ -22,9 +22,10 @@ helpviewer_keywords:
   - "part of object names [SQL Server]"
 ms.assetid: abf34f99-9ee9-460b-85b2-930ca5c4b5ae
 caps.latest.revision: 38
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "On Demand"
 ---
 # PARSENAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all_md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -39,8 +40,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 PARSENAME ( 'object_name' , object_piece )   
 ```  
   
@@ -75,52 +74,6 @@ PARSENAME ( 'object_name' , object_piece )
  The following example uses `PARSENAME` to return information about the `Person` table in the `AdventureWorks2012` database.  
   
 ```  
-USE AdventureWorks2012;  
-SELECT PARSENAME('AdventureWorks2012..Person', 1) AS 'Object Name';  
-SELECT PARSENAME('AdventureWorks2012..Person', 2) AS 'Schema Name';  
-SELECT PARSENAME('AdventureWorks2012..Person', 3) AS 'Database Name';  
-SELECT PARSENAME('AdventureWorks2012..Person', 4) AS 'Server Name';  
-GO  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
- `Object Name`  
-  
- `------------------------------`  
-  
- `Person`  
-  
- `(1 row(s) affected)`  
-  
- `Schema Name`  
-  
- `------------------------------`  
-  
- `(null)`  
-  
- `(1 row(s) affected)`  
-  
- `Database Name`  
-  
- `------------------------------`  
-  
- `AdventureWorks2012`  
-  
- `(1 row(s) affected)`  
-  
- `Server Name`  
-  
- `------------------------------`  
-  
- `(null)`  
-  
- `(1 row(s) affected)`  
-  
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- The following example uses `PARSENAME` to return information about the `Person` table in the `AdventureWorks2012` database.  
-  
-```  
 -- Uses AdventureWorks  
   
 SELECT PARSENAME('AdventureWorksPDW2012.dbo.DimCustomer', 1) AS 'Object Name';  
@@ -131,38 +84,31 @@ GO
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
- `Object Name`  
-  
- `------------------------------`  
-  
- `DimCustomer`  
-  
- `(1 row(s) affected)`  
-  
- `Schema Name`  
-  
- `------------------------------`  
-  
- `dbo`  
-  
- `(1 row(s) affected)`  
-  
- `Database Name`  
-  
- `------------------------------`  
-  
- `AdventureWorksPDW2012`  
-  
- `(1 row(s) affected)`  
-  
- `Server Name`  
-  
- `------------------------------`  
-  
- `(null)`  
-  
- `(1 row(s) affected)`  
+```
+Object Name
+------------------------------
+DimCustomer
+
+(1 row(s) affected)
+
+Schema Name
+------------------------------
+dbo
+
+(1 row(s) affected)
+
+Database Name
+------------------------------
+AdventureWorksPDW2012
+
+(1 row(s) affected)
+
+Server Name
+------------------------------
+(null)
+
+(1 row(s) affected)
+```
   
 ## See Also  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   

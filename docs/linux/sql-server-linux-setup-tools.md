@@ -1,30 +1,19 @@
 ---
-# required metadata
-
 title: Install SQL Server command-line tools on Linux | Microsoft Docs
 description: This topic describes how to install the SQL Server Tools on Linux.
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 07/17/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
-
-# optional metadata
-
-# keywords: ""
-# ROBOTS: ""
-# audience: ""
-# ms.devlang: ""
-# ms.reviewer: ""
-# ms.suite: ""
-# ms.tgt_pltfrm: ""
-# ms.custom: ""
-
+ms.workload: "Active"
 ---
 # Install sqlcmd and bcp the SQL Server command-line tools on Linux
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 The following steps install the command-line tools, Microsoft ODBC drivers, and their dependencies. The **mssql-tools** package contains:
 
@@ -39,10 +28,9 @@ Install the tools for your platform:
 - [macOS](#macos)
 - [Docker](#docker)
 
-> [!TIP]
-> This topic describes how to install the command-line tools. If you are looking for examples of how to use **sqlcmd** or **bcp**, see the [links](#next-steps) at the end of this topic.
+This topic describes how to install the command-line tools. If you are looking for examples of how to use **sqlcmd** or **bcp**, see the [links](#next-steps) at the end of this topic.
 
-## <a id="RHEL"><a/>Install tools on RHEL
+## <a id="RHEL"><a/>Install tools on RHEL 7
 
 Use the following steps to install the **mssql-tools** on Red Hat Enterprise Linux. 
 
@@ -67,14 +55,12 @@ Use the following steps to install the **mssql-tools** on Red Hat Enterprise Lin
 1. If you had a previous version of **mssql-tools** installed, remove any older unixODBC packages.
 
    ```bash
-   sudo yum update
    sudo yum remove unixODBC-utf16 unixODBC-utf16-devel
    ```
 
 1. Run the following commands to install **mssql-tools** with the unixODBC developer package.
 
    ```bash
-   sudo yum update
    sudo yum install mssql-tools unixODBC-devel
    ```
 
@@ -100,7 +86,7 @@ Use the following steps to install the **mssql-tools** on Red Hat Enterprise Lin
    source ~/.bashrc
    ```
 
-## <a id="ubuntu"></a>Install tools on Ubuntu
+## <a id="ubuntu"></a>Install tools on Ubuntu 16.04
 
 Use the following steps to install the **mssql-tools** on Ubuntu. 
 
@@ -145,7 +131,7 @@ Use the following steps to install the **mssql-tools** on Ubuntu.
    source ~/.bashrc
    ```
 
-## <a id="SLES"></a>Install tools on SLES
+## <a id="SLES"></a>Install tools on SLES 12
 
 Use the following steps to install the **mssql-tools** on SUSE Linux Enterprise Server. 
 
@@ -195,8 +181,9 @@ To install the tools for Mac El Capitan and Sierra, use the following commands:
 #brew untap microsoft/mssql-preview if you installed the preview version 
 brew tap microsoft/mssql-release https://github.com/Microsoft/homebrew-mssql-release
 brew update
-brew install mssql-tools
-#for silent install ACCEPT_EULA=y brew install mssql-tools
+brew install --no-sandbox mssql-tools
+#for silent install: 
+#ACCEPT_EULA=y brew install --no-sandbox mssql-tools
 ```
 
 ## <a id="docker"></a> Docker

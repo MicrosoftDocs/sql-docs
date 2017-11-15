@@ -14,6 +14,7 @@ caps.latest.revision: 14
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # catalog.delete_project (SSISDB Database)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -22,8 +23,8 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```tsql  
-delete_project [ @folder_name = ] folder_name , [ @project_name = ] project_name  
+```sql  
+catalog.delete_project [ @folder_name = ] folder_name , [ @project_name = ] project_name  
 ```  
   
 ## Arguments  

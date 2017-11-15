@@ -18,9 +18,10 @@ helpviewer_keywords:
   - "sp_indexoption"
 ms.assetid: 75f836be-d322-4a53-a45d-25bee6b42a52
 caps.latest.revision: 43
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Inactive"
 ---
 # sp_indexoption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -90,7 +91,7 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
 ## Examples  
   
 ### A. Setting an option on a specific index  
- The following example disallows page locks on the `IX`_`Customer`\_`TerritoryID` index on the `Customer` table.  
+ The following example disallows page locks on the `IX_Customer_TerritoryID` index on the `Customer` table.  
   
 ```tsql  
 USE AdventureWorks2012;  
@@ -122,7 +123,7 @@ GO
 ```  
   
 ### C. Setting an option on a table with no clustered index  
- The following example disallows page locks on a table with no clustered index (a heap). The `sys.indexes` catalog view is queried before and after the `sp`_`indexoption` procedure is executed to show the results of the statement.  
+ The following example disallows page locks on a table with no clustered index (a heap). The `sys.indexes` catalog view is queried before and after the `sp_indexoption` procedure is executed to show the results of the statement.  
   
 ```tsql  
 USE AdventureWorks2012;  

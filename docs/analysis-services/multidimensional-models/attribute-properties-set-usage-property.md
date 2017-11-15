@@ -18,7 +18,8 @@ ms.assetid: 7b0ebc58-94b9-4523-8994-e7bc796b0bd8
 caps.latest.revision: 35
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Attribute Properties - Set Usage Property
   You can set the usage for an attribute by using the **Dimension Structure** view in Dimension Designer, which is accessed from [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  

@@ -2,9 +2,12 @@
 title: "MDDataSet Data Type (XMLA) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: "xmla"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
@@ -27,7 +30,8 @@ ms.assetid: 1a7e0092-f9f0-4ae5-ba27-ad1d8ebe8cb9
 caps.latest.revision: 27
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # MDDataSet Data Type (XMLA)
   Defines a derived data type that represents multidimensional data returned by the [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) method.  

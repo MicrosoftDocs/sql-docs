@@ -14,9 +14,10 @@ applies_to:
   - "SQL Server 2016 Preview"
 ms.assetid: 714017b7-1bd6-4950-a3c6-d0df8450a877
 caps.latest.revision: 8
-author: "sabotta"
-ms.author: "carlasab"
+author: "guyinacube"
+ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Report Viewer Web Part Programmability in SharePoint Integration
   The Report Viewer Web Part is a  server control, which contains a set of public application programming interfaces (API) that enables developers to create custom SharePoint applications. You can create custom Web Parts that supply report path and parameters to Report Viewer Web Part using Web Part connections. You can also embed the Web Part in a custom SharePoint Web Part page and customize it using the public API.  

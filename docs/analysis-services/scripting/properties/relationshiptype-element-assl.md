@@ -2,9 +2,12 @@
 title: "RelationshipType Element (ASSL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: "scripting"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
@@ -25,7 +28,8 @@ ms.assetid: 72e1ab0e-a95d-4ebe-857d-21de1bf9fe03
 caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # RelationshipType Element (ASSL)
   Indicates whether member relationships for an [AttributeRelationship](../../../analysis-services/scripting/objects/attributerelationship-element-assl.md) can be changed.  

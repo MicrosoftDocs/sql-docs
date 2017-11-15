@@ -14,6 +14,7 @@ caps.latest.revision: 6
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Functions - dm_execution_performance_counters
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -22,7 +23,7 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```tsql  
+```sql  
 dm_execution_performance_counters [ @execution_id = ] execution_id  
   
 ```  
@@ -63,14 +64,14 @@ dm_execution_performance_counters [ @execution_id = ] execution_id
 ## Example  
  In the following example, the function returns statistics for a running execution with an ID of 34.  
   
-```  
+```sql
 select * from [catalog].[dm_execution_performance_counters] (34)  
 ```  
   
 ## Example  
  In the following example, the function returns statistics for all the executions running on the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] server, depending on your permissions.  
   
-```  
+```sql
 select * from [catalog].[dm_execution_performance_counters] (NULL)  
   
 ```  

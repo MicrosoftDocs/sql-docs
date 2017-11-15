@@ -20,9 +20,10 @@ helpviewer_keywords:
   - "indexes [SQL Server], properties"
 ms.assetid: 998d5788-4871-44a8-8125-0d9390868b84
 caps.latest.revision: 56
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Inactive"
 ---
 # INDEXPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -34,8 +35,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 INDEXPROPERTY ( object_ID , index_or_statistics_name , property )   
 ```  
   
@@ -78,7 +77,7 @@ INDEXPROPERTY ( object_ID , index_or_statistics_name , property )
  A user can only view the metadata of securables that the user owns or on which the user has been granted permission. This means that metadata-emitting, built-in functions such as INDEXPROPERTY may return NULL if the user does not have any permission on the object. For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## Examples  
- The following example returns the values for the **IsClustered**, **IndexDepth**, and **IndexFillFactor** properties for the `PK`_`Employee`\_`BusinessEntityID` index of the `Employee` table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
+ The following example returns the values for the **IsClustered**, **IndexDepth**, and **IndexFillFactor** properties for the `PK_Employee_BusinessEntityID` index of the `Employee` table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
   
 ```  
 SELECT   

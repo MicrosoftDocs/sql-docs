@@ -21,9 +21,10 @@ helpviewer_keywords:
   - "query_store_query_text catalog view"
 ms.assetid: f7032fa0-7c16-4492-bb82-685806c63a8c
 caps.latest.revision: 9
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Inactive"
 ---
 # sys.query_store_query_text (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

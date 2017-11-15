@@ -24,7 +24,8 @@ ms.assetid: 43b65f6d-0123-4556-81f0-c7a0b84361e5
 caps.latest.revision: 13
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Defining and Identifying Objects (XMLA)
   Objects are identified in XML for Analysis (XMLA) commands by using object identifiers and object references, and are defined by using Analysis Services Scripting Language (ASSL) elements XMLA commands.  

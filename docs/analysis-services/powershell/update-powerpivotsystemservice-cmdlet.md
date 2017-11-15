@@ -13,7 +13,8 @@ ms.assetid: a90f1158-68d3-4330-98c1-fb0f81e13328
 caps.latest.revision: 8
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Update-PowerPivotSystemService cmdlet
 
@@ -22,7 +23,7 @@ manager: "erikre"
   Upgrades the parent object of the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] System Service in the farm.  
 
 >[!NOTE] 
->This article may contain outdated information and examples.
+>This article may contain outdated information and examples. Use the Get-Help cmdlet for the latest.
   
  **Applies To:** SharePoint 2010 and SharePoint 2013.  
   

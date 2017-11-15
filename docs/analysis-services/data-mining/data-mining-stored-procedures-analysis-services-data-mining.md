@@ -15,7 +15,8 @@ ms.assetid: a751856d-33bd-4788-9593-317b2826132d
 caps.latest.revision: 26
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Data Mining Stored Procedures (Analysis Services - Data Mining)
   Beginning in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supports stored procedures that can be written in any managed language. The managed languages that are supported include [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET, C#, and managed C++. In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], you can call the stored procedures directly by using the **CALL** statement, or as part of a Data Mining Extensions (DMX) query.  

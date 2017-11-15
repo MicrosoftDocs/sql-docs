@@ -17,9 +17,10 @@ helpviewer_keywords:
   - "data mining [Analysis Services], developer's guide"
 ms.assetid: 9fd77b16-0b89-44ce-bcf1-7c04b62499da
 caps.latest.revision: 20
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Data Mining Programming
   If you find that the built-in tools and viewers in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] do not meet your requirements, you can extend the power of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] by coding your own extensions. In this approach, you have two options:  

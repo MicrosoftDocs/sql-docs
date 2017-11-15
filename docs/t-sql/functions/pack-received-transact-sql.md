@@ -20,11 +20,12 @@ helpviewer_keywords:
   - "packets [SQL Server], number read"
 ms.assetid: 5c0b3d36-bfad-4f0b-abb8-e8f6391b32cd
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Inactive"
 ---
-# @@PACK_RECEIVED (Transact-SQL)
+# &#x40;&#x40;PACK_RECEIVED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Returns the number of input packets read from the network by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] since it was last started.  
@@ -34,7 +35,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
-  
 @@PACK_RECEIVED  
 ```  
   

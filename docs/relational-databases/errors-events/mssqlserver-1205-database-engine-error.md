@@ -13,9 +13,10 @@ helpviewer_keywords:
   - "1205 (Database Engine error)"
 ms.assetid: 9fe3f67c-df3c-4642-a3a4-ccc0e138b632
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Inactive"
 ---
 # MSSQLSERVER_1205
   

@@ -1,7 +1,7 @@
 ---
 title: "Reporting Services Tutorials (SSRS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/25/2017"
+ms.date: "11/07/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -18,7 +18,8 @@ ms.assetid: e90cc448-563b-4dbb-9776-defb8640ec66
 caps.latest.revision: 39
 author: "maggiesMSFT"
 ms.author: "maggies"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Active"
 ---
 # Reporting Services Tutorials (SSRS)
 
@@ -41,8 +42,8 @@ These tutorials introduce you a variety of visualizations you can create in Repo
   
   
 ## See Also  
-* [Adventure Works 2014 Sample Databases](https://msftdbprodsamples.codeplex.com/releases/view/125550)  
-* [Reporting Services Samples on CodePlex](http://go.microsoft.com/fwlink/?LinkId=198283)  
+* [AdventureWorks sample databases](https://github.com/Microsoft/sql-server-samples/releases)  
+* [Reporting Services Samples on the TechNet wiki](http://go.microsoft.com/fwlink/?LinkId=198283)  
 * [TechNet Wiki: SQL Server 2012 Samples](http://go.microsoft.com/fwlink/?linkID=220734)  
  
   

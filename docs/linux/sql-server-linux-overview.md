@@ -1,33 +1,19 @@
 ---
-# required metadata
-
 title: Overview of SQL Server on Linux | Microsoft Docs
 description: This topic describes how SQL Server runs on Linux and provides information on how to learn more.
 author: rothja 
 ms.author: jroth 
 manager: jhubbard
-ms.date: 07/17/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
-
-# optional metadata
-
-# keywords: ""
-# ROBOTS: ""
-# audience: ""
-# ms.devlang: ""
-# ms.reviewer: ""
-# ms.suite: ""
-# ms.tgt_pltfrm: ""
-# ms.custom: ""
-
+ms.workload: "Active"
 ---
 # SQL Server on Linux
 
-SQL Server now runs on Linux! This latest release, SQL Server 2017 RC1, runs on Linux and is in
-many ways simply SQL Server. It’s the same SQL Server database engine, with many similar features and services regardless of your operating system.
+SQL Server 2017 now runs on Linux. It’s the same SQL Server database engine, with many similar features and services regardless of your operating system.
 
 ## Install
 
@@ -36,7 +22,8 @@ To get started, install SQL Server on Linux using one of the following quick sta
 - [Install on Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
 - [Install on SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
 - [Install on Ubuntu](quickstart-install-connect-ubuntu.md)
-- [Run on Docker](quickstart-install-connect-ubuntu.md)
+- [Run on Docker](quickstart-install-connect-docker.md)
+- [Provision a SQL VM in Azure](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
 
 > [!NOTE]
 > Docker itself runs on multiple platforms, which means that you can run the Docker image on Linux, Mac, and Windows.

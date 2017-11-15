@@ -13,7 +13,7 @@ ms.custom: UpdArt.exe
 ms.tgt_pltfrm: na
 ms.devlang: na
 ms.topic: updart-autogen
-ms.date: 07/17/2017
+ms.date: 09/27/2017
 ms.author: genemi
 ms.workload: advanced-analytics
 ---
@@ -29,9 +29,10 @@ Recent updates are reported for the following date range and subject:
 
 
 
-- *Date range of updates:* &nbsp; **2017-05-23** &nbsp; -to- &nbsp; **2017-07-17**
+- *Date range of updates:* &nbsp; **2017-09-11** &nbsp; -to- &nbsp; **2017-09-27**
 - *Subject area:* &nbsp; **Advanced Analytics for SQL Server**.
 
+<!-- Repo = 'MicrosoftDocs/sql-docs'.   Branch = 'live'. -->
 
 
 
@@ -39,13 +40,23 @@ Recent updates are reported for the following date range and subject:
 
 ## New Articles Created Recently
 
-The following links jump to new articles which have been added recently.
+The following links jump to new articles that have been added recently.
 
 
-1. [Common Issues with External Script Execution](common-issues-external-script-execution.md)
-2. [Data Collection for Machine Learning Troubleshooting](data-collection-ml-troubleshooting-process.md)
-3. [SQL Server Python Tutorials](tutorials/sql-server-python-tutorials.md)
-4. [SQL Server R Tutorials](tutorials/sql-server-r-tutorials.md)
+***There are no new articles to list, this time.***
+
+
+
+&nbsp;
+
+## Updated Articles with Excerpts
+
+This section displays the excerpts of updates gathered from articles that have recently experienced a large update.
+
+The excerpts displayed here appear separated from their proper semantic context. Also, sometimes an excerpt is separated from important markdown syntax that surrounds it in the actual article. Therefore these excerpts are for general guidance only. The excerpts only enable you to know whether your interests warrant taking the time to click and visit the actual article.
+
+For these and other reasons, do not copy code from these excerpts, and do not take as exact truth any text excerpt. Instead, visit the actual article.
+
 
 
 
@@ -54,21 +65,12 @@ The following links jump to new articles which have been added recently.
 
 <a name="compactupdatedlist"/>
 
-## Compact List of Articles Updated Recently
+### Compact List of Articles Updated Recently
 
-This compact list provides links to all the updated articles which are listed in the Excerpts section.
+This compact list provides links to all the updated articles that are listed in the Excerpts section.
 
+1. [Installing machine learning components without internet access](#TitleNum_1)
 
-
-&nbsp;
-
-## Updated Articles with Excerpts
-
-This section displays the excerpts of updates gathered from articles which have recently experienced a large update.
-
-The excerpts displayed here appear separated from their proper semantic context. Also, sometimes an excerpt is separated from important markdown syntax that surrounds it in the actual article. Therefore these excerpts are for general guidance only. The excerpts only enable you to know whether your interests warrant taking the time to click and visit the actual article.
-
-For these and other reasons, do not copy code from these excerpts, and do not take as exact truth any text excerpt. Instead, visit the actual article.
 
 
 
@@ -78,246 +80,94 @@ For these and other reasons, do not copy code from these excerpts, and do not ta
 
 <a name="TitleNum_1"/>
 
-### 1. &nbsp; [Introducing revoscalepy](python/what-is-revoscalepy.md)
+### 1. &nbsp; [Installing machine learning components without internet access](r/installing-ml-components-without-internet-access.md)
 
-*Updated: 2017-06-23* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Next](#TitleNum_2))
+*Updated: 2017-09-26* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
 
-<!-- Source markdown line 112.  ms.author= "jeannt".  -->
-
-&nbsp;
-
-
-<!-- git diff --ignore-all-space --unified=0 cab7330ac9944508aaa360e00cbc2e866455776d 33f4e0e2421fa79fc11931dc7f29bff4432c6f5a  (PR=2171  ,  Filename=what-is-revoscalepy.md  ,  Dirpath=docs\advanced-analytics\python\  ,  MergeCommitSha40=7d2dbe0bdc4cbd05f11eacf938b35a9c35ace2e7) -->
-
-
-
-**Using revoscalepy with MicrosoftML**
-
-
-The Python functions for MicrosoftML are integrated with the compute contexts and data sources that are provided in revoscalepy. Therefore, you could use an MicrosoftML algorithm to define and train a model in Python, and use the revoscalepy functions to execute the Python code either locally or in a SQl Server compute context.
-
-Just import the modules in your Python code, and then reference the individual functions you need.
-
-```
-from microsoftml.modules.logistic_regression.rx_logistic_regression import rx_logistic_regression
-from revoscalepy.functions.RxSummary import rx_summary
-from revoscalepy.etl.RxImport import rx_import_datasource
-```
-
-**Requirements**
-
-
-To run Python code in SQL Server, you must have installed SQL Server 2017 together with the feature **Machine Learning Services**, and enabled the Python language. Earlier versions of SQL Server do not support Python integration.
-
-> [!NOTE]
-> Open source distributions of Python do not support SQL Server compute contexts. However, if you need to publish and consume Python applications from Windows, you can install Microsoft Machine Learning Server without installing SQL Server. For more information, see [Create a Standalone R Server--../r/create-a-standalone-r-server.md)
-
-**Get more help**
-
-
-
-
-
-&nbsp;
-
-&nbsp;
-
----
-
-<a name="TitleNum_2"/>
-
-### 2. &nbsp; [Step 5: Train and Save a Model using T-SQL](tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md)
-
-*Updated: 2017-06-01* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_1) | [Next](#TitleNum_3))
-
-<!-- Source markdown line 121.  ms.author= "jeannt".  -->
+<!-- Source markdown line 116.  ms.author= "jeannt".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 5c1cbe92282b96105ffdb69efa803f58dc0ac7e2 e4077a2154a90de468c435efa5b2225125d5b0e7  (PR=1904  ,  Filename=sqldev-py5-train-and-save-a-model-using-t-sql.md  ,  Dirpath=docs\advanced-analytics\tutorials\  ,  MergeCommitSha40=dbf91e0d6f8257227cfe8ac6d13c484d0a566f57) -->
+<!-- git diff --ignore-all-space --unified=0 043eb3d6f461f276fb85b50f77acb40c5de6c884 3d4f13c1184b4fe7432f6ed39310c5ac5590b1c8  (PR=0  ,  Filename=installing-ml-components-without-internet-access.md  ,  Dirpath=docs\advanced-analytics\r\  ,  MergeCommitSha40=b33976cf92f23fbb13cee0c353fd40608d002d94) -->
 
 
 
-1. In [!INCLUDE[ssManStudio--../../includes/ssmanstudio-md.md)], open a new Query window and run the following statement to create the stored procedure _TrainTipPredictionModelRxPy_.  This model will be based on the training data you just prepared. Because the stored procedure already includes a definition of the input data, you don't need to provide an input query.
-
-    ```SQL
-    DROP PROCEDURE IF EXISTS TrainTipPredictionModelRxPy;
-    GO
-
-    CREATE PROCEDURE [dbo].[TrainTipPredictionModelRxPy] (@trained_model varbinary(max) OUTPUT)
-    AS
-    BEGIN
-    EXEC sp_execute_external_script 
-      @language = N'Python',
-      @script = N'
-    import numpy
-    import pickle
-    import pandas
-    from revoscalepy.functions.RxLogit import rx_logit_ex
-    
-    ## Create a logistic regression model using rx_logit_ex function from revoscalepy package
-    logitObj = rx_logit_ex("tipped ~ passenger_count + trip_distance + trip_time_in_secs + direct_distance", data = InputDataSet);
-    
-    ## Serialize model
-    trained_model = pickle.dumps(logitObj)
-    ',
-    @input_data_1 = N'
-    select tipped, fare_amount, passenger_count, trip_time_in_secs, trip_distance, 
-    dbo.fnCalculateDistance(pickup_latitude, pickup_longitude,  dropoff_latitude, dropoff_longitude) as direct_distance
-    from nyctaxi_sample_training
-    ',
-    @input_data_1_name = N'InputDataSet',
-    @params = N'@trained_model varbinary(max) OUTPUT',
-    @trained_model = @trained_model OUTPUT;
-    ;
-    END;
-    ```
-
-
-
-&nbsp;
-
-&nbsp;
-
----
-
-<a name="TitleNum_3"/>
-
-### 3. &nbsp; [Step 6: Operationalize the Model](tutorials/sqldev-py6-operationalize-the-model.md)
-
-*Updated: 2017-06-01* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_2) | [Next](#TitleNum_4))
-
-<!-- Source markdown line 236.  ms.author= "jeannt".  -->
-
-&nbsp;
-
-
-<!-- git diff --ignore-all-space --unified=0 1eb50ac902d4e80bafb1dd7fdf8f607dcdf0d33f 57d5abdc6119db1ecd81587d625054a5bbfb5fc8  (PR=1904  ,  Filename=sqldev-py6-operationalize-the-model.md  ,  Dirpath=docs\advanced-analytics\tutorials\  ,  MergeCommitSha40=dbf91e0d6f8257227cfe8ac6d13c484d0a566f57) -->
-
-
-
-Here is the definition of the stored procedure that performs scoring using the **revoscalepy** model.
-
-```
-CREATE PROCEDURE [dbo].[PredictTipSingleModeRxPy] (@model varchar(50), @passenger_count int = 0,
-  @trip_distance float = 0,
-  @trip_time_in_secs int = 0,
-  @pickup_latitude float = 0,
-  @pickup_longitude float = 0,
-  @dropoff_latitude float = 0,
-  @dropoff_longitude float = 0)
-AS
-BEGIN
-  DECLARE @inquery nvarchar(max) = N'
-    SELECT * FROM [dbo].[fnEngineerFeatures-- 
-      @passenger_count,
-      @trip_distance,
-      @trip_time_in_secs,
-      @pickup_latitude,
-      @pickup_longitude,
-      @dropoff_latitude,
-      @dropoff_longitude)
-    '
-  DECLARE @lmodel2 varbinary(max) = (select model from nyc_taxi_models2 where name = @model);
-  EXEC sp_execute_external_script 
-    @language = N'Python',
-    @script = N'
-      import pickle;
-      import numpy;
-      import pandas;
-      from revoscalepy.functions.RxPredict import rx_predict_ex;
-```
-
-
-
-
-&nbsp;
-
-&nbsp;
-
----
-
-<a name="TitleNum_4"/>
-
-### 4. &nbsp; [Use Python with revoscalepy to Create a Model](tutorials/use-python-revoscalepy-to-create-model.md)
-
-*Updated: 2017-06-21* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_3))
-
-<!-- Source markdown line 119.  ms.author= "jeannt".  -->
-
-&nbsp;
-
-
-<!-- git diff --ignore-all-space --unified=0 0886939f86fe12d7ff7b339689a02c7fc75e0786 23dd469349a05d535063aab3c14aec152ed2cd7b  (PR=2141  ,  Filename=use-python-revoscalepy-to-create-model.md  ,  Dirpath=docs\advanced-analytics\tutorials\  ,  MergeCommitSha40=76839e39427e24688609353b8708d59fee772d28) -->
-
-
-
-**Review the code**
-
-
-Let's review the code and highlight some key steps.
-
-**Defining a data source and compute context**
-
-
-This is an important part of using **revoscalepy** and its related R package **RevoScaleR**. A data source is different from a compute context. The _data source_ defines the data used in your code. The _compute context_ defines where the code will be executed.
-
-> [!NOTE]
-> Support for some data source types supported in RevoScaleR might be limited in the pre-release version. For more information about functions included in the latest release, see [What is revoscalepy--../python/what-is-revoscalepy.md).
-
-The overall process for creating and using a data source and compute context is as follows:
-
-1. Create Python variables, such as _sqlQuery_ and _connectionString_, that define the source and the data you want to use. Pass these variables to the **RxSqlServerData** constructor to  implement the **data source object** named _dataSource_.
-2. Create a compute context object by using the **RxInSqlServer** constructor. In this example, you pass the same connection string you defined earlier, on the assumption that the data is on the same SQL Server instance that you will be using as the compute context. However, the data source and the compute context could be on different servers. The resulting **compute context object** is named _computeContext_.
-3. Choose the active compute context. By default, operations are run locally, which means that if you don't specify a different compute context, the data will be fetched from the data source, and the model-fitting will run in your current Python environment.
-
-    In RevoScaleR, you can also use the function `rxSetComputeContext` to toggle between compute contexts. The function is not implemented yet in the preview version of **revoscalepy**, but you can specify the compute context as an argument to **rx_lin_mod_ex**.
+Release  |Download link  |
+---------|---------|
+**SQL Server 2016 RTM**     |
+Microsoft R Open     |[SRO_3.2.2.803_1033.cab](https://go.microsoft.com/fwlink/?LinkId=761266)
+Microsoft R Server     |[SRS_8.0.3.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=735051)
+**SQL Server 2016 CU 1**     |
+Microsoft R Open     |[SRO_3.2.2.10000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=808803)
+Microsoft R Server     |[SRS_8.0.3.10000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=808805)
+**SQL Server 2016 CU 2**     |
+Microsoft R Open     |[SRO_3.2.2.12000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=827398)
+Microsoft R Server     |[SRS_8.0.3.12000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=827399)
+**SQL Server 2016 CU 3**     |
+Microsoft R Open     |no change; use previous|
+Microsoft R Server     | no change; use previous |
+**SQL Server 2016 CU 4**     |
+Microsoft R Open     |[SRO_3.2.2.13000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=831785)|
+Microsoft R Server     |[SRS_8.0.3.13000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=831676)|
+**SQL Server 2016 CU 5**     |
+Microsoft R Open     |no change; use previous|
+Microsoft R Server     |no change; use previous|
+**SQL Server 2016 CU 6**     |
+Microsoft R Open     |no change; use previous|
+Microsoft R Server     |[SRS_8.0.3.14000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=850316)  |
+**SQL Server 2016 CU 7**     |
+Microsoft R Open     |no change; use previous|
+Microsoft R Server     |no change; use previous |
+**SQL Server 2016 SP 1**     |
+Microsoft R Open     |[SRO_3.2.2.15000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=824879)
+Microsoft R Server     |[SRS_8.0.3.15000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=824881)
+**SQL Server 2016 SP 1 CU1**     |
+Microsoft R Open     |no change; use previous|
+Microsoft R Server     |no change; use previous|
 
 
 
 
 
-<a name="similars2"/>
 
-&nbsp;
 
 ## Similar Articles
 
-This section lists very similar articles for recently updated articles in other subject areas, within the same GitHub.com repository: [MicrosoftDocs/**sql-docs-pr**](https://github.com/microsoftdocs/sql-docs-pr/).
+<!--  HOW TO:
+    Refresh this file's line items with the latest 'Count-in-Similars*' content.
+    Then run Run-533-*.BAT
+-->
 
-<!--  20170717-1101  -->
+This section lists very similar articles for recently updated articles in other subject areas, within our public GitHub.com repository: [MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/).
 
 #### Subject areas which do have new or recently updated articles
 
-- [New + Updated (4+4) : **Advanced Analytics for SQL** docs](../advanced-analytics/new-updated-advanced-analytics.md)
-- [New + Updated (2+0) : **Analysis Services for SQL** docs](../analysis-services/new-updated-analysis-services.md)
-- [New + Updated (1+2) : **Connect to SQL** docs](../connect/new-updated-connect.md)
-- [New + Updated (6+0) : **Database Engine for SQL** docs](../database-engine/new-updated-database-engine.md)
-- [New + Updated (13+2): **Linux for SQL** docs](../linux/new-updated-linux.md)
-- [New + Updated (1+0) : **Master Data Services (MDS) for SQL** docs](../master-data-services/new-updated-master-data-services.md)
-- [New + Updated (1+0) : **ODBC (Open Database Connectivity) for SQL** docs](../odbc/new-updated-odbc.md)
-- [New + Updated (8+4) : **Relational Databases for SQL** docs](../relational-databases/new-updated-relational-databases.md)
-- [New + Updated (2+2) : **Microsoft SQL Server** docs](../sql-server/new-updated-sql-server.md)
-- [New + Updated (0+1) : **SQL Server Management Studio (SSMS)** docs](../ssms/new-updated-ssms.md)
-- [New + Updated (1+0) : **Transact-SQL** docs](../t-sql/new-updated-t-sql.md)
-- [New + Updated (1+0) : **Tools for SQL** docs](../tools/new-updated-tools.md)
-
+- [New + Updated (0+1): **Advanced Analytics for SQL** docs](../advanced-analytics/new-updated-advanced-analytics.md)
+- [New + Updated (0+1): **Analysis Services for SQL** docs](../analysis-services/new-updated-analysis-services.md)
+- [New + Updated (4+1): **Database Engine for SQL** docs](../database-engine/new-updated-database-engine.md)
+- [New + Updated (17+0): **Integration Services for SQL** docs](../integration-services/new-updated-integration-services.md)
+- [New + Updated (3+0): **Linux for SQL** docs](../linux/new-updated-linux.md)
+- [New + Updated (1+1): **Relational Databases for SQL** docs](../relational-databases/new-updated-relational-databases.md)
+- [New + Updated (2+0): **Reporting Services for SQL** docs](../reporting-services/new-updated-reporting-services.md)
+- [New + Updated (0+1): **SQL Server Management Studio (SSMS)** docs](../ssms/new-updated-ssms.md)
+- [New + Updated (0+1): **Transact-SQL** docs](../t-sql/new-updated-t-sql.md)
 
 #### Subject areas which have no new or recently updated articles
 
 - [New + Updated (0+0): **ActiveX Data Objects (ADO) for SQL** docs](../ado/new-updated-ado.md)
+- [New + Updated (0+0): **Connect to SQL** docs](../connect/new-updated-connect.md)
 - [New + Updated (0+0): **Data Quality Services for SQL** docs](../data-quality-services/new-updated-data-quality-services.md)
 - [New + Updated (0+0): **Data Mining Extensions (DMX) for SQL** docs](../dmx/new-updated-dmx.md)
-- [New + Updated (0+0): **Integration Services for SQL** docs](../integration-services/new-updated-integration-services.md)
+- [New + Updated (0+0): **Master Data Services (MDS) for SQL** docs](../master-data-services/new-updated-master-data-services.md)
 - [New + Updated (0+0): **Multidimensional Expressions (MDX) for SQL** docs](../mdx/new-updated-mdx.md)
+- [New + Updated (0+0): **ODBC (Open Database Connectivity) for SQL** docs](../odbc/new-updated-odbc.md)
 - [New + Updated (0+0): **PowerShell for SQL** docs](../powershell/new-updated-powershell.md)
-- [New + Updated (0+0): **Reporting Services for SQL** docs](../reporting-services/new-updated-reporting-services.md)
 - [New + Updated (0+0): **Samples for SQL** docs](../sample/new-updated-sample.md)
+- [New + Updated (0+0): **Microsoft SQL Server** docs](../sql-server/new-updated-sql-server.md)
 - [New + Updated (0+0): **SQL Server Data Tools (SSDT)** docs](../ssdt/new-updated-ssdt.md)
 - [New + Updated (0+0): **SQL Server Migration Assistant (SSMA)** docs](../ssma/new-updated-ssma.md)
+- [New + Updated (0+0): **Tools for SQL** docs](../tools/new-updated-tools.md)
 - [New + Updated (0+0): **XQuery for SQL** docs](../xquery/new-updated-xquery.md)
 
-
-&nbsp;
 

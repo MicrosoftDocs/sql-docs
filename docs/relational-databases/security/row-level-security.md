@@ -18,9 +18,10 @@ helpviewer_keywords:
   - "predicate based security"
 ms.assetid: 7221fa4e-ca4a-4d5c-9f93-1b8a4af7b9e8
 caps.latest.revision: 47
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "On Demand"
 ---
 # Row-Level Security
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -57,9 +58,7 @@ manager: "jhubbard"
   
  Both filter and block predicates and security policies have the following behavior:  
   
--   You may define a predicate function that joins with another table and/or invokes a function. If the security policy is created with `SCHEMABINDING = ON`, then the join or function is accessible from the query and works as expected without any additional permission checks. If the security policy is created with `SCHEMABINDING = OFF`, then users will need **SELECT** or **EXECUTE** permissions on these additional tables and functions in order to query the target table.  
-  
-     You may define a predicate function that joins with another table and/or invokes a function. The join/function is accessible from the query and works as expected without any additional permission checks.  
+-   You may define a predicate function that joins with another table and/or invokes a function. If the security policy is created with `SCHEMABINDING = ON`, then the join or function is accessible from the query and works as expected without any additional permission checks. If the security policy is created with `SCHEMABINDING = OFF`, then users will need **SELECT** or **EXECUTE** permissions on these additional tables and functions in order to query the target table.
   
 -   You may issue a query against a table that has a security predicate defined but disabled. Any rows that would have been filtered or blocked are not affected.  
   

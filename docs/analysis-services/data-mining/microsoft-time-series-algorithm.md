@@ -23,7 +23,8 @@ ms.assetid: 642297cc-f32a-499b-b26e-fdc7ee24361e
 caps.latest.revision: 75
 author: "Minewiskan"
 ms.author: "owend"
-manager: "jhubbard"
+manager: "kfile"
+ms.workload: "On Demand"
 ---
 # Microsoft Time Series Algorithm
   The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series algorithm provides multiple algorithms that are optimized for forecasting  continuous values, such as product sales, over time. Whereas other [!INCLUDE[msCoName](../../includes/msconame-md.md)] algorithms, such as decision trees, require additional columns of new information as input to predict a trend, a time series model does not. A time series model can predict trends based only on the original dataset that is used to create the model. You can also add new data to the model when you make a prediction and automatically incorporate the new data in the trend analysis.  

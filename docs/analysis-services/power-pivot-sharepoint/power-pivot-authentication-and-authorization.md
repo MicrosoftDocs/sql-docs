@@ -15,7 +15,8 @@ ms.assetid: 48230cc0-4037-4f99-8360-dadf4bc169bd
 caps.latest.revision: 31
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Power Pivot Authentication and Authorization
   A [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint deployment that runs within a SharePoint 2010 farm uses the authentication subsystem and authorization model provided by SharePoint servers. SharePoint security infrastructure extends to [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] content and operations because all [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-related content is stored in SharePoint content databases and all [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-related operations are performed by [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] shared services in the farm. Users who request a workbook that contains [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data are authenticated using a SharePoint user identity that is based on their Windows user identity. View permissions on the workbook determine whether the request is granted or denied.  

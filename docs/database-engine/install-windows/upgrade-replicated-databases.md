@@ -1,8 +1,10 @@
 ---
 title: "Upgrade Replicated Databases | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/16/2016"
-ms.prod: "sql-server-2016"
+ms.date: "07/24/2016"
+ms.prod: 
+  - "sql-server-2016"
+  - "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,7 +24,7 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # Upgrade Replicated Databases
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] supports upgrading replicated databases from previous versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; it is not required to stop activity at other nodes while a node is being upgraded. Ensure that you adhere to the rules regarding which versions are supported in a topology:  
+  [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] supports upgrading replicated databases from previous versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; it is not required to stop activity at other nodes while a node is being upgraded. Ensure that you adhere to the rules regarding which versions are supported in a topology:  
   
 -   A Distributor can be any version as long as it is greater than or equal to the Publisher version (in many cases the Distributor is the same instance as the Publisher).  
   
@@ -38,7 +40,7 @@ manager: "jhubbard"
 >  This topic is available in the Setup Help documentation and in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online. Topic links that appear as bold text in the Setup Help documentation refer to topics that are only available in Books Online. **You can design an upgrade strategy for the Publisher, Subscriber and Distributor using the options outlined in this [post](https://blogs.msdn.microsoft.com/sql_server_team/upgrading-a-replication-topology-to-sql-server-2016/)**. 
   
 ## Run the Log Reader Agent for Transactional Replication Before Upgrade  
- Before you upgrade to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], you must make sure that all committed transactions from published tables have been processed by the Log Reader Agent. To make sure that all transactions have been processed, perform the following steps for each database that contains transactional publications:  
+ Before you upgrade [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)], you must make sure that all committed transactions from published tables have been processed by the Log Reader Agent. To make sure that all transactions have been processed, perform the following steps for each database that contains transactional publications:  
   
 1.  Make sure that the Log Reader Agent is running for the database. By default, the agent runs continuously.  
   
@@ -50,7 +52,7 @@ manager: "jhubbard"
   
 5.  Execute [sp_replflush](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md) to close the connection from sp_replcmds.  
   
-6.  Perform the server upgrade to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+6.  Perform the server upgrade to the latest verison of  [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].  
   
 7.  Restart [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent and the Log Reader Agent if they do not start automatically after the upgrade.  
   
@@ -78,7 +80,7 @@ manager: "jhubbard"
  After upgrading [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in a topology that uses merge replication, change the publication compatibility level of any publications if you want to use new features.  
   
 ## Upgrading to Standard, Workgroup, or Express Editions  
- Before upgrading from one edition of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] to another, verify that the functionality you are currently using is supported in the edition to which you are upgrading. For more information, see the section on Replication in [Features Supported by the Editions of SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+ Before upgrading from one edition of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] to another, verify that the functionality you are currently using is supported in the edition to which you are upgrading. For more information, see the section on Replication in [Editions and supported features of SQL Server](../../sql-server/editions-and-components-of-sql-server-2017.md).  
   
 ## Web Synchronization for Merge Replication  
  The Web synchronization option for merge replication requires that the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication Listener (replisapi.dll) be copied to the virtual directory on the Internet Information Services (IIS) server used for synchronization. When you configure Web synchronization, the file is copied to the virtual directory by the Configure Web Synchronization Wizard. If you upgrade the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components installed on the IIS server, you must manually copy replisapi.dll from the COM directory to the virtual directory on the IIS server. For more information about configuring Web synchronization, see [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md).  
@@ -91,6 +93,6 @@ manager: "jhubbard"
  [Replication Backward Compatibility](../../relational-databases/replication/replication-backward-compatibility.md)   
  [What's New &#40;Replication&#41;](../../relational-databases/replication/what-s-new-replication.md)   
  [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
- [Upgrade to SQL Server 2016](../../database-engine/install-windows/upgrade-sql-server.md)  
+ [Upgrade SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)  
   
   

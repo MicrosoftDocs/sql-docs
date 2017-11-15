@@ -17,6 +17,7 @@ caps.latest.revision: 24
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Best Practice with the Query Store
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -70,7 +71,7 @@ SET QUERY_STORE (MAX_STORAGE_SIZE_MB = 1024);
  **Statistics Collection Interval:** Defines level of granularity for the collected runtime statistic (the default is 1 hour). Consider using lower value if you require finer granularity or less time to detect and mitigate issues but keep in mind that it will directly affect the size of Query Store data. Use SSMS or Transact-SQL to set different value for Statistics Collection Interval:  
   
 ```tsql  
-ALTER DATABASE [QueryStoreDB] SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 30);  
+ALTER DATABASE [QueryStoreDB] SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 60);  
 ```  
   
  **Stale Query Threshold (Days):** Time-based cleanup policy that controls the retention period of persisted runtime statistics and inactive queries.  
@@ -80,7 +81,7 @@ By default, Query Store is configured to keep the data for 30 days which may be 
   
 ```tsql  
 ALTER DATABASE [QueryStoreDB]   
-SET QUERY_STORE (CLEANUP_POLICY = (STALE_QUERY_THRESHOLD_DAYS = 14));  
+SET QUERY_STORE (CLEANUP_POLICY = (STALE_QUERY_THRESHOLD_DAYS = 90));  
 ```  
   
  **Size Based Cleanup Mode:** Specifies whether automatic data cleanup will take place when Query Store data size approaches the limit.  
@@ -314,7 +315,15 @@ WHERE is_forced_plan = 1;
  Execution plans reference objects using three-part names `database.schema.object`.   
 
 If you rename a database, plan forcing will fail which will cause recompilation in all subsequent query executions.  
+
+##  <a name="Recovery"></a> Use traceflags on mission critical servers to improve recovery from disaster
+ 
+  The global traceflags 7745 and 7752 can be used to improve performance of Query Store during High Availability and Disaster Recovery scenarios. For more information, refer to [Trace Flags](../..//t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
   
+  Traceflag 7745 will prevent the default behavior where Query Store writes data to disk before SQL Server can be shutdown.
+  
+  Traceflag 7752 enables asynchronous load of Query Store, and also allows SQL Server to run queries before Query Store has been fully loaded. Default Query Store behavior prevents queries from running before the Query Store has been recovered.
+
 ## See Also  
  [Query Store Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
  [Query Store Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   

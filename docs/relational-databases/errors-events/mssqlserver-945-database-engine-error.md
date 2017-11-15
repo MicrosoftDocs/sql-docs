@@ -13,9 +13,10 @@ helpviewer_keywords:
   - "945 (Database Engine error)"
 ms.assetid: ee501d13-0bd9-4627-896c-ed5b1bdb88b3
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Inactive"
 ---
 # MSSQLSERVER_945
   

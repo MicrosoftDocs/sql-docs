@@ -18,6 +18,7 @@ caps.latest.revision: 15
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Administer and Monitor Change Data Capture (SQL Server)
   This topic describes how to administer and monitor change data capture.  

@@ -13,7 +13,8 @@ ms.assetid: 2742b2a3-927c-4e7c-bd7d-43c072fa01ab
 caps.latest.revision: 11
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Remove-PowerPivotServiceApplication cmdlet
 
@@ -22,7 +23,7 @@ manager: "erikre"
   Deletes a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] service application.  
 
 >[!NOTE] 
->This article may contain outdated information and examples.
+>This article may contain outdated information and examples. Use the Get-Help cmdlet for the latest.
   
  **Applies To:** SharePoint 2010 and SharePoint 2013.  
   

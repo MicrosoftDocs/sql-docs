@@ -21,7 +21,8 @@ ms.assetid: fce511af-66d7-42fc-bb3a-6c516f16b10e
 caps.latest.revision: 17
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Attribute Relationships - Configure Attribute Properties
   The following table lists and describes the properties of an attribute relationship.  

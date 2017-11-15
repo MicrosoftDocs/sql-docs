@@ -1,7 +1,7 @@
 ---
 title: "@@OPTIONS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/11/2016"
+ms.date: "09/18/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -20,11 +20,12 @@ helpviewer_keywords:
   - "current SET options"
 ms.assetid: 3d5c7f6e-157b-4231-bbb4-4645a11078b3
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Inactive"
 ---
-# @@OPTIONS (Transact-SQL)
+# &#x40;&#x40;OPTIONS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Returns information about the current SET options.  
@@ -34,7 +35,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
-  
 @@OPTIONS  
 ```  
   

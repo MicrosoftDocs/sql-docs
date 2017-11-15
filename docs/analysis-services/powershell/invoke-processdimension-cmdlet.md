@@ -13,7 +13,8 @@ ms.assetid: 9506938e-7f9f-4595-ad6d-98c8b0ce8395
 caps.latest.revision: 9
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Invoke-ProcessDimension cmdlet
 
@@ -22,7 +23,7 @@ manager: "erikre"
   Process a dimension using a specific processing type variable.  
 
 >[!NOTE] 
->This article may contain outdated information and examples.
+>This article may contain outdated information and examples. Use the Get-Help cmdlet for the latest.
   
 ## Syntax  
  `Invoke-ProcessDimension [-Name] <System.String> [-Database] <System.String> [-ProcessType] <Microsoft.AnalysisServices.ProcessType> [<CommonParameters>]`  

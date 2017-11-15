@@ -24,9 +24,10 @@ helpviewer_keywords:
   - "server properties [SQL Server]"
 ms.assetid: 11e166fa-3dd2-42d8-ac4b-04f18c612c4a
 caps.latest.revision: 128
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Active"
 ---
 # SERVERPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]

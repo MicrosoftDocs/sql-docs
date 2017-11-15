@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Set the Service Startup Account for SQL Server Agent (SQL Server Configuration Manager)
 The [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent service startup account defines the Windows account that [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent runs as, as well as its network permissions. This topic describes how to set the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent service account with [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Configuration Manager in [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].  

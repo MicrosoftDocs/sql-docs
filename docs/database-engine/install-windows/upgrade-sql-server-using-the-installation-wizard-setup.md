@@ -1,8 +1,10 @@
 ---
-title: "Upgrade to SQL Server 2016 Using the Installation Wizard (Setup) | Microsoft Docs"
+title: "Upgrade SQL Server Using the Installation Wizard (Setup) | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/14/2015"
-ms.prod: "sql-server-2016"
+ms.date: "07/24/2017"
+ms.prod:
+ - "sql-server-2016"
+ - "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,21 +21,28 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # Upgrade SQL Server Using the Installation Wizard (Setup)
-  The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation Wizard provides a single feature tree for an in-place upgrade of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation Wizard provides a single feature tree for an in-place upgrade of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components to the latest version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-> [!WARNING]  
->  When you upgrade SQL Server, the previous SQL Server instance will be overwritten and will no   
-> longer exist on your computer. Before upgrading, back up SQL Server databases and other objects   
-> associated with the previous SQL Server instance.  
+>[!WARNING]  
+>When you upgrade [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the previous version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will be overwritten and will no longer exist on your computer. 
+>
+>Before upgrading, back up SQL Server databases and other objects associated with the previous SQL Server instance.  
   
 > [!CAUTION]  
->  For many production and some development environments, a new installation upgrade or a rolling upgrade is more appropriate than an in-place upgrade.  For more information regarding upgrade methods, see [Choose a Database Engine Upgrade Method](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md), [Upgrade Data Quality Services](../../database-engine/install-windows/upgrade-data-quality-services.md), [Upgrade Integration Services](../../integration-services/install-windows/upgrade-integration-services.md), [Upgrade Master Data Services](../../database-engine/install-windows/upgrade-master-data-services.md), [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md),  [Upgrade Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md) and [Upgrade Power Pivot for SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md).  
+> For many production and some development environments, a new installation upgrade or a rolling upgrade is more appropriate than an in-place upgrade.  For more information regarding upgrade methods, see:
+> * [Choose a Database Engine Upgrade Method](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md)
+> * [Upgrade Data Quality Services](../../database-engine/install-windows/upgrade-data-quality-services.md)
+> * [Upgrade Integration Services](../../integration-services/install-windows/upgrade-integration-services.md)
+> * [Upgrade Master Data Services](../../database-engine/install-windows/upgrade-master-data-services.md)
+> * [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)
+> * [Upgrade Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md)
+> * [Upgrade Power Pivot for SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md).  
   
 ## Prerequisites  
- You must run Setup as an administrator. If you install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from a remote share, you must use a domain account that has read and execute permissions on the remote share, and is a local administrator.  
+You must run Setup as an administrator. If you install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from a remote share, you must use a domain account that has read and execute permissions on the remote share, and is a local administrator.  
   
 > [!WARNING]  
->  Be aware that you cannot change the features to be upgraded, and you cannot add features during the upgrade operation. For more information about how to add features to an upgraded instance of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] after the upgrade operation is complete, see [Add Features to an Instance of SQL Server 2016 &#40;Setup&#41;](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md).  
+>  Be aware that you cannot change the features to be upgraded, and you cannot add features during the upgrade operation. For more information about how to add features to an upgraded instance of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] after the upgrade operation is complete, see [Add Features to an Instance of SQL Server &#40;Setup&#41;](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md).  
   
  If you are  upgrading the [!INCLUDE[ssDE](../../includes/ssde-md.md)], review [Plan and Test the Database Engine Upgrade Plan](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md) and then perform the following tasks, as appropriate for your environment:  
   
@@ -41,7 +50,7 @@ manager: "jhubbard"
   
 -   Run the appropriate Database Console Commands (DBCC) on databases to be upgraded to ensure that they are in a consistent state.  
   
--   Estimate the disk space that is required to upgrade SQL Server components, in addition to user databases. For disk space that is required by SQL Server components, see [Hardware and Software Requirements for Installing SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
+-   Estimate the disk space that is required to upgrade SQL Server components, in addition to user databases. For disk space that is required by SQL Server components, see [Hardware and Software Requirements for Installing SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
   
 -   Ensure that existing SQL Server system databases - master, model, msdb, and tempdb - are configured to autogrow, and ensure that they have sufficient hard disk space.  
   
@@ -54,15 +63,15 @@ manager: "jhubbard"
 -   Quit all applications, including all services that have SQL Server dependencies. Upgrade might fail if local applications are connected to the instance being upgraded.  
   
 -   Make sure that Replication is current and then stop Replication.   
-    For detailed steps for performing a rolling upgrade in a replicated environment, see [Upgrade Replicated Databases](../../database-engine/install-windows/upgrade-replicated-databases.md)  
+    For detailed steps for performing a rolling upgrade in a replicated environment, see [Upgrade Replicated Databases](../../database-engine/install-windows/upgrade-replicated-databases.md).
   
 ## Procedure  
   
-#### To upgrade to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+### To upgrade [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)]  
   
 1.  Insert the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation media, and from the root folder, double-click Setup.exe. To install from a network share, move to the root folder on the share, and then double-click Setup.exe.  
   
-2.  The Installation Wizard starts the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation Center. To upgrade an existing instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], click **Installation** in the left-hand navigation area, and then click **Upgrade from [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], or [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]**.  
+2.  The Installation Wizard starts the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation Center. To upgrade an existing instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], click **Installation** in the left-hand navigation area, and then click **Upgrade from...** previous versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 3.  On the Product Key page, click an option to indicate whether you are upgrading to a free edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], or whether you have a PID key for a production version of the product. For more information, see [Editions and Components of SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md) and [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
   
@@ -93,7 +102,7 @@ manager: "jhubbard"
   
      All [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service packs and upgrades will apply to every component of an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-     **Installed instances**  — The grid will show instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that are on the computer where Setup is running. If a default instance is already installed on the computer, you must install a named instance of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+     **Installed instances**  — The grid will show instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that are on the computer where Setup is running. If a default instance is already installed on the computer, you must install a named instance of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].  
   
 13. Work flow for the rest of this topic depends on the features that you have specified for your installation. You might not see all the pages, depending on your selections.  
   
@@ -129,7 +138,7 @@ manager: "jhubbard"
 -   **Configure your new [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation** — To reduce the attackable surface area of a system, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] selectively installs and enables key services and features. For more information about surface area configuration, see the readme file for this release.  
   
 ## See Also  
- [Upgrade to SQL Server 2016](../../database-engine/install-windows/upgrade-sql-server.md)   
+ [Upgrade SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)   
  [Backward Compatibility_deleted](http://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)  
   
   

@@ -14,7 +14,8 @@ ms.assetid: cd6ac80d-b735-4e3e-a024-489f1409ad33
 caps.latest.revision: 20
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Active"
 ---
 # Install SQL Server Analysis Services
   SQL Server Analysis Services is an analytical database server that hosts Tabular models, multidimensional cubes, and data mining models that you can access from reports, spreadsheets, and dashboards.  
@@ -26,9 +27,9 @@ manager: "erikre"
 ## Get tools and designers  
  SQL Server Setup no longer installs the model designers or management tools used for solution design or server administration. In this release, tools have a separate installation, which you can get from the following links:  
   
--   [Download SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx)  
+-   [Download SQL Server Management Studio (SSMS)](../../../ssms/download-sql-server-management-studio-ssms.md)  
   
--   [Download SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx)  
+-   [Download SQL Server Data Tools (SSDT)](../../../ssdt/download-sql-server-data-tools-ssdt.md)  
   
  You'll need both SSMS and SSDT to work with Analysis Services instances and data. Tools can be installed anywhere, but be sure to configure ports on the server before attempting a connection. See [Configure the Windows Firewall to Allow Analysis Services Access](../../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md) for details.  
   
@@ -39,7 +40,7 @@ manager: "erikre"
   
      ![Setup feature tree showing Analsyis Services](../../../analysis-services/instances/install-windows/media/ssas-setupas.gif "Setup feature tree showing Analsyis Services")  
   
-2.  On the Analysis Services Configuration page, select a mode. Tabular mode is the defualt..  
+2.  On the Analysis Services Configuration page, select a mode. Tabular mode is the default..  
   
      ![Setup page with Analysis Services config options](../../../analysis-services/instances/install-windows/media/ssas-setupasconfig.png "Setup page with Analysis Services config options")  
   

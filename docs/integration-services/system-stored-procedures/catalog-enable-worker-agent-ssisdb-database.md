@@ -11,9 +11,10 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: c6e5266b-c32d-49ff-aa69-f09664009fb4
 caps.latest.revision: 3
-author: "sabotta"
-ms.author: "carlasab"
+author: "douglaslMS"
+ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # catalog.enable_worker_agent (SSISDB Database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -22,16 +23,17 @@ Enable a Scale Out Worker for Scale Out Master working with this [!INCLUDE[ssISn
 
 ## Syntax
 
-```tsql
-enable_worker_agent [@WorkerAgentId = ] WorkerAgentId
+```sql
+catalog.enable_worker_agent [@WorkerAgentId =] WorkerAgentId
 ```
 ## Arguments
-[ @WorkerAgentId = ] *WorkerAgentId*
-The worker agent id of Scale Out Worker. The *WorkerAgentId* is **uniqueidentifier**.
+[@WorkerAgentId =] *WorkerAgentId*
+The worker agent ID of Scale Out Worker. The *WorkerAgentId* is **uniqueidentifier**.
 
 ## Example
 This example enables the Scale Out Worker on MachineA.
-```tsql
+
+```sql
 SELECT WorkerAgentId, MachineName FROM [catalog].[worker_agents]
 GO
 -- Result: --
@@ -56,4 +58,4 @@ GO
 -   Membership to the **sysadmin** server role 
 
 ## Errors and Warnings
-The stored procedure returns an error if the worker agent ID is not valid.
+If the worker agent ID is not valid, the stored procedure returns an error.

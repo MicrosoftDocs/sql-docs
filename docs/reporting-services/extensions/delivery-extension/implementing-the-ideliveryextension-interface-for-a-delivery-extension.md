@@ -18,9 +18,10 @@ helpviewer_keywords:
   - "IDeliveryExtension interface"
 ms.assetid: ab0344db-510b-403f-8dbf-b9831553765d
 caps.latest.revision: 37
-author: "sabotta"
-ms.author: "carlasab"
+author: "guyinacube"
+ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Implementing the IDeliveryExtension Interface for a Delivery Extension
   Your delivery extension class is used to deliver report notifications to users based on the contents of the notifications. The delivery extension class also provides infrastructure for validating user settings that are passed to the delivery extension. In addition, your delivery extension class should contain specific properties that clients can use to gain information about the name of the extension, the settings that the extension supports, and the rendering formats that are available to the delivery extension.  

@@ -29,6 +29,7 @@ caps.latest.revision: 46
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # SQL Server Profiler
   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] is an interface to create and manage traces and analyze and replay trace results. Events are saved in a trace file that can later be analyzed or used to replay a specific series of steps when trying to diagnose a problem.  
@@ -43,7 +44,7 @@ manager: "jhubbard"
 
  ## Where is the Profiler?
  
- You can start the Profiler in a number of ways from within SSMS. [Here is a topic that lists the ways to start the Profiler.](https://msdn.microsoft.com/library/ms173799.aspx)
+ You can start the Profiler in a number of ways from within SSMS. [Here is a topic that lists the ways to start the Profiler.](start-sql-server-profiler.md)
   
 ## Capture and replay trace data 
 The following table shows the features we recommend using in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] to capture and replay your trace data.
@@ -51,8 +52,8 @@ The following table shows the features we recommend using in [!INCLUDE[ssCurrent
 ||||  
 |-|-|-|  
 |**Feature\Target Workload**|**Relational Engine**|**Analysis Services**|  
-|**Trace Capture**|[Extended Events](https://msdn.microsoft.com/library/bb630282.aspx) graphical user interface in SQL Server Management Studio|SQL Server Profiler|  
-|**Trace Replay**|[Distributed Replay](https://msdn.microsoft.com/library/ff878183.aspx)|SQL Server Profiler|  
+|**Trace Capture**|[Extended Events](../../relational-databases/extended-events/extended-events.md) graphical user interface in SQL Server Management Studio|SQL Server Profiler|  
+|**Trace Replay**|[Distributed Replay](../distributed-replay/sql-server-distributed-replay.md)|SQL Server Profiler|  
   
 ## SQL Server Profiler  
  Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] is a graphical user interface to SQL Trace for monitoring an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] or Analysis Services. You can capture and save data about each event to a file or table to analyze later. For example, you can monitor a production environment to see which stored procedures are affecting performance by executing too slowly. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] is used for activities such as:  

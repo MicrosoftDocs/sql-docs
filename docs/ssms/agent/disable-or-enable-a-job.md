@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Disable or Enable a Job
 This topic describes how to disable a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent job in [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] or [!INCLUDE[tsql](../../includes/tsql_md.md)]. When you disable a job, it is not deleted and can be enabled again when necessary.  
@@ -63,7 +64,7 @@ For detailed information, see [Implement SQL Server Agent Security](../../ssms/a
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
     ```  
-    -- changes the name, description, and enables status of the job NightlyBackups.  
+    -- changes the name, description, and disables status of the job NightlyBackups.  
     USE msdb ;  
     GO  
   
@@ -71,7 +72,7 @@ For detailed information, see [Implement SQL Server Agent Security](../../ssms/a
         @job_name = N'NightlyBackups',  
         @new_name = N'NightlyBackups -- Disabled',  
         @description = N'Nightly backups disabled during server migration.',  
-        @enabled = 1 ;  
+        @enabled = 0 ;  
     GO  
     ```  
   

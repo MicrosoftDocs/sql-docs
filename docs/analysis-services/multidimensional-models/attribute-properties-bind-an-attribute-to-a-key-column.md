@@ -19,7 +19,8 @@ ms.assetid: c0b0abaa-5c9b-4182-9d5f-fc16cd941d54
 caps.latest.revision: 27
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Attribute Properties - Bind an Attribute to a Key Column
   This procedure describes how to change the setting for the **Name** property of an attribute in a dimension.  

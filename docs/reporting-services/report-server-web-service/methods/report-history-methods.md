@@ -18,9 +18,10 @@ helpviewer_keywords:
   - "methods [Reporting Services], report history"
 ms.assetid: ebfb4834-5445-480c-9a51-6868c60308af
 caps.latest.revision: 35
-author: "sabotta"
+author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Report History Methods
   You can use these methods to create and manage item history snapshots.  

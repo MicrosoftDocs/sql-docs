@@ -14,6 +14,7 @@ caps.latest.revision: 2
 author: "jodebrui"
 ms.author: "jodebrui"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # SQL Server In-Memory OLTP Internals for SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

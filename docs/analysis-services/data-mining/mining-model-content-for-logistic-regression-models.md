@@ -18,7 +18,8 @@ ms.assetid: 69cc0b86-e8bc-4d6c-903e-85724f5c0396
 caps.latest.revision: 13
 author: "Minewiskan"
 ms.author: "owend"
-manager: "jhubbard"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Mining Model Content for Logistic Regression Models
   This topic describes mining model content that is specific to models that use the Microsoft Logistic Regression algorithm. For an explanation of how to interpret statistics and structure shared by all model types, and general definitions of terms related to mining model content, see [Mining Model Content &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  

@@ -2,9 +2,12 @@
 title: "TimeAttributeBinding Data Type (ASSL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: "scripting"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
@@ -25,7 +28,8 @@ ms.assetid: e8317b1c-a83a-4074-9538-400792500985
 caps.latest.revision: 38
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # TimeAttributeBinding Data Type (ASSL)
   Defines a derived data type that represents a "placeholder" binding for generated data items, such as the key columns of an attribute, in a server time dimension.  

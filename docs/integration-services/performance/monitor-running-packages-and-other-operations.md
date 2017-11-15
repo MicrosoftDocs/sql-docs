@@ -17,6 +17,7 @@ caps.latest.revision: 14
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Monitor Running Packages and Other Operations
   You can monitor [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package executions, project validations, and other operations by using one of more of the following tools. Certain tools such as data taps are available only for projects that are deployed to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server.  
@@ -197,5 +198,5 @@ manager: "jhubbard"
     -   **All Connections**  
 
 ## See Also  
- [Execution of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx)   
- [Troubleshooting Reports for Package Execution](https://msdn.microsoft.com/library/gg471512.aspx)  
+ [Execution of Projects and Packages](../packages/deploy-integration-services-ssis-projects-and-packages.md)   
+ [Troubleshooting Reports for Package Execution](../troubleshooting/troubleshooting-reports-for-package-execution.md)  

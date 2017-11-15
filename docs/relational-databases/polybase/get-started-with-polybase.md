@@ -2,7 +2,7 @@
 title: "Get started with PolyBase | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "7/13/2017"
+ms.date: "08/15/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -19,11 +19,11 @@ helpviewer_keywords:
   - "Azure blob storage export"
   - "Hadoop import, PolyBase getting started"
   - "Hadoop export, Polybase getting started"
-ms.assetid: c71ddc50-b4c7-416c-9789-264671bd9ecb
 caps.latest.revision: 78
 author: "barbkess"
 ms.author: "barbkess"
 manager: "jhubbard" 
+ms.workload: "On Demand"
 ---
 # Get started with PolyBase
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -84,10 +84,13 @@ SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;
   
 -   Cloudera CDH 4.3 on Linux  
   
--   Cloudera CDH 5.1 – 5.5, 5.9 - 5.11 on Linux  
+-   Cloudera CDH 5.1 – 5.5, 5.9 - 5.12 on Linux  
   
 -   Azure Blob Storage  
-  
+ 
+Hadoop follows the "Major.Minor.Version" pattern for its new releases. All versions within a supported Major and Minor release are supported.
+ 
+
 >  [!NOTE]
 > Azure Data Lake Store connectivity is only supported in Azure SQL Data Warehouse.
   
@@ -235,10 +238,15 @@ CREATE EXTERNAL DATA SOURCE AzureStorage with (
 --3:  Create an external file format.  
 -- FORMAT TYPE: Type of format in Hadoop (DELIMITEDTEXT,  RCFILE, ORC, PARQUET).  
   
-CREATE EXTERNAL FILE FORMAT TextFileFormat WITH (  
-        FORMAT_TYPE = DELIMITEDTEXT,   
-        FORMAT_OPTIONS (FIELD_TERMINATOR ='|',   
-                USE_TYPE_DEFAULT = TRUE)  
+CREATE EXTERNAL FILE FORMAT TextFileFormat
+WITH (  
+       FORMAT_TYPE = DELIMITEDTEXT,   
+       FORMAT_OPTIONS (
+         FIELD_TERMINATOR ='|',   
+         USE_TYPE_DEFAULT = TRUE
+       )
+);
+         
   
 --4: Create an external table.  
 -- The external table points to data stored in Azure storage.  

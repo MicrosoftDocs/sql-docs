@@ -18,6 +18,7 @@ caps.latest.revision: 13
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Lesson 2-5 - Summary - Managing Data in a Hierarchical Table
 The **hierarchyid** data type lets you easily create tables that reflect hierarchical data, and then create depth-first and breadth-first indexes to efficiently access the table. Use the hierarchical methods to query and manipulate the data.  

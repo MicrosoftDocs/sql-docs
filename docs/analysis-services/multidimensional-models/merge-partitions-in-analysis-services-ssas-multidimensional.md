@@ -18,7 +18,8 @@ ms.assetid: b3857b9b-de43-4911-989d-d14da0196f89
 caps.latest.revision: 34
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Merge Partitions in Analysis Services (SSAS - Multidimensional)
   You can merge partitions in an existing [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database to consolidate fact data from multiple partitions of the same measure group.  

@@ -17,6 +17,7 @@ caps.latest.revision: 25
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # catalog.grant_permission (SSISDB Database)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -25,9 +26,8 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```  
-  
-grant_permission [ @object_type = ] object_type  
+```sql
+catalog.grant_permission [ @object_type = ] object_type  
     , [ @object_id = ] object_id  
     , [ @principal_id = ] principal_id  
     , [ @permission_type = ] permission_type  
@@ -70,6 +70,8 @@ grant_permission [ @object_type = ] object_type
 -   Membership to the **ssis_admin** database role  
   
 -   Membership to the **sysadmin** server role  
+
+This procedure cannot be called by logins that were authenticated by SQL Server. It cannot be called by the sa login.
   
 ## Remarks  
  This stored procedure allows you to grant the permission types described in the following table:  

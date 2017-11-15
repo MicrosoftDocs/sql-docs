@@ -31,6 +31,7 @@ caps.latest.revision: 222
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # bcp Utility
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -431,7 +432,7 @@ The bcp utility can also be downloaded separately from the [Microsoft SQL Server
   
 -   B. Copying table rows into a data file (with a trusted connection)  
   
--   C. Copying table rows into a data file (with Mixed-mode Authentication)  
+-   [C.](#c-copying-table-rows-into-a-data-file-with-mixed-mode-authentication) Copying table rows into a data file (with Mixed-mode Authentication)  
   
 -   D. Copying data from a file to a table  
   

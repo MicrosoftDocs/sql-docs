@@ -18,6 +18,7 @@ caps.latest.revision: 21
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # New Agent Profile
   Use the **New Agent Profile** dialog box to create a new profile. New profiles are always based on existing profiles, but they can be modified to meet application requirements. After a profile has been created, it can be applied to existing and future agent jobs in the **Agent Profiles** dialog box. Agent parameter values can be edited in the \<**AgentProfileName> Properties** dialog box.  

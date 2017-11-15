@@ -2,9 +2,12 @@
 title: "AggregationInstanceAttribute Data Type (ASSL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: "scripting"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
@@ -23,7 +26,8 @@ ms.assetid: fc5a98bf-7c3c-4faf-b9f8-16eb073d7dc7
 caps.latest.revision: 13
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # AggregationInstanceAttribute Data Type (ASSL)
   Defines a primitive data type that represents information about an attribute used by an aggregation instance.  

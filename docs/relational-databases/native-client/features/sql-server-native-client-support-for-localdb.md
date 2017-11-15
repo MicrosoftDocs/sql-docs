@@ -14,6 +14,7 @@ caps.latest.revision: 7
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # SQL Server Native Client Support for LocalDB
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]

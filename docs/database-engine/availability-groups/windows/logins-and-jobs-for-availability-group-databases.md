@@ -18,6 +18,7 @@ caps.latest.revision: 16
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Logins and Jobs for Availability Group Databases
   You should routinely maintain the same set of user logins and [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent jobs on every primary database of an Always On availability group and the corresponding secondary databases. The logins and jobs must be reproduced on every instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that hosts an availability replica for the availability group.  

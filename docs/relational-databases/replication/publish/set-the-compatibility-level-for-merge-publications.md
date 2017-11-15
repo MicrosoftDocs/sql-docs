@@ -18,6 +18,7 @@ caps.latest.revision: 33
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Set the Compatibility Level for Merge Publications
   This topic describes how to set the compatibility level for merge publications in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Merge replication uses the publication compatibility level to determine which features can be used by publications in a given database.  
@@ -106,11 +107,11 @@ DECLARE @publication AS sysname;
 SET @publication = N'AdvWorksSalesOrdersMerge' ;  
   
 -- Change the publication compatibility level to   
--- SQL Server 2012.  
+-- SQL Server 2008 or later.  
 EXEC sp_changemergepublication   
 @publication = @publication,   
 @property = N'publication_compatibility_level',   
-@value = N'110RTM';  
+@value = N'100RTM';  
 GO  
   
 ```  

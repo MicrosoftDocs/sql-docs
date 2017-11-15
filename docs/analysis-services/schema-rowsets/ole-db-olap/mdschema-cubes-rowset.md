@@ -21,7 +21,8 @@ ms.assetid: 5f1b63d4-aa3f-48c6-b866-7ffd91675044
 caps.latest.revision: 32
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # MDSCHEMA_CUBES Rowset
   Describes the structure of cubes within a database.  

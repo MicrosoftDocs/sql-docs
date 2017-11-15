@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # SET EXCLUSIVE Command
 Specifies whether table files are opened for exclusive or shared use on a network.  

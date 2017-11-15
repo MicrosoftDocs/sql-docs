@@ -18,6 +18,7 @@ caps.latest.revision: 21
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Lesson 1-3 - Viewing Tuning Reports
 In the previous practice of this lesson, you viewed the [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts that create or drop database objects in the Database Engine Tuning Advisor recommendations that were generated as a result of the MySession tuning session. The MySession tuning session was created in [Tuning a Workload](../../tools/dta/lesson-1-1-tuning-a-workload.md).  

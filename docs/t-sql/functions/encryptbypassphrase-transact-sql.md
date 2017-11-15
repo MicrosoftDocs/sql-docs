@@ -20,9 +20,10 @@ helpviewer_keywords:
   - "symmetric keys [SQL Server], ENCRYPTBYPASSPHRASE function"
 ms.assetid: f8dbb9e6-94d6-40d7-8b38-6833a409d597
 caps.latest.revision: 35
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "On Demand"
 ---
 # ENCRYPTBYPASSPHRASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

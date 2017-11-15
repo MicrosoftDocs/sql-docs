@@ -1,7 +1,7 @@
 ---
 title: "SCHEMATA (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/15/2017"
+ms.date: "09/08/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -19,9 +19,10 @@ helpviewer_keywords:
   - "SCHEMATA view"
 ms.assetid: 69617642-0f54-4b25-b62f-5f39c8909601
 caps.latest.revision: 41
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Inactive"
 ---
 # SCHEMATA (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,7 +37,13 @@ manager: "jhubbard"
 |**DEFAULT_CHARACTER_SET_CATALOG**|**varchar(**6**)**|Always returns NULL.|  
 |**DEFAULT_CHARACTER_SET_SCHEMA**|**varchar(**3**)**|Always returns NULL.|  
 |**DEFAULT_CHARACTER_SET_NAME**|**sysname**|Returns the name of the default character set.|  
-  
+
+**Example**  
+The following example, returns information about the schemas in the master database:  
+```sql  
+SELECT * FROM master.INFORMATION_SCHEMA.SCHEMATA;
+```  
+
 ## See Also  
  [System Views &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
  [Information Schema Views &#40;Transact-SQL&#41;](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   

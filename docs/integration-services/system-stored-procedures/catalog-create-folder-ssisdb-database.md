@@ -14,6 +14,7 @@ caps.latest.revision: 12
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # catalog.create_folder (SSISDB Database)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -22,15 +23,15 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```tsql  
-create_folder [ @folder_name = ] folder_name, [ @folder_id = ] folder_id OUTPUT  
+```sql  
+catalog.create_folder [@folder_name =] folder_name, [@folder_id =] folder_id OUTPUT  
 ```  
   
 ## Arguments  
- [ @folder_name = ] *folder_name*  
+ [@folder_name =] *folder_name*  
  The name of the new folder. The *folder_name* is **nvarchar(128)**.  
   
- [ @folder_name = ] *folder_id*  
+ [@folder_name =] *folder_id*  
  The unique identifier (ID) of the folder. The *folder_id* is **bigint**.  
   
 ## Return Code Value  
@@ -47,6 +48,6 @@ create_folder [ @folder_name = ] folder_name, [ @folder_id = ] folder_id OUTPUT
 -   Membership to the **sysadmin** server role  
   
 ## Errors and Warnings  
- The stored procedure returns an error if a folder with the same name already exists.  
+If a folder with the same name already exists, the stored procedure returns an error .  
   
   

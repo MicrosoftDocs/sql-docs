@@ -2,9 +2,12 @@
 title: "CellPermission Element (ASSL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: "scripting"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
@@ -25,7 +28,8 @@ ms.assetid: 54a6afc0-1fcb-4b24-851a-6d81e1fe0efc
 caps.latest.revision: 36
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # CellPermission Element (ASSL)
   Describes the permissions that members of a [Role](../../../analysis-services/scripting/objects/role-element-assl.md) element have on individual cells within a [Cube](../../../analysis-services/scripting/objects/cube-element-assl.md) element.  

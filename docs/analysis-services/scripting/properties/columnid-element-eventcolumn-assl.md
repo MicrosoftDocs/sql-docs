@@ -2,9 +2,12 @@
 title: "ColumnID Element (EventColumn) (ASSL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: "scripting"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
@@ -25,7 +28,8 @@ ms.assetid: c4f4fbad-9d70-4de2-8cf7-caee80a4a1e4
 caps.latest.revision: 37
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # ColumnID Element (EventColumn) (ASSL)
   Contains the identifier (ID) of the column of information to be captured for an event as part of a [Trace](../../../analysis-services/scripting/objects/trace-element-assl.md) element.  

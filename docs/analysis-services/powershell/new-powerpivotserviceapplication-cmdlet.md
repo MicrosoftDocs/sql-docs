@@ -13,7 +13,8 @@ ms.assetid: 7bb2a2d2-04c8-43d4-a0fc-e8339ea22138
 caps.latest.revision: 10
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # New-PowerPivotServiceApplication cmdlet
 
@@ -22,7 +23,7 @@ manager: "erikre"
   Creates a new [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] service application.  
 
 >[!NOTE] 
->This article may contain outdated information and examples.
+>This article may contain outdated information and examples. Use the Get-Help cmdlet for the latest.
   
  **Applies To:** SharePoint 2010 and SharePoint 2013.  
   

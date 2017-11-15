@@ -2,9 +2,12 @@
 title: "Tabular Model Roles (SSAS Tabular) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: "tabular-models"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/multidimensional-tabular"
@@ -17,7 +20,8 @@ ms.assetid: 28658862-dce2-459f-8868-29ee31c879bb
 caps.latest.revision: 10
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Tabular Model Roles (SSAS Tabular)
   Information in this topic and related tasks is meant for tabular model database administrators who will create and manage roles for deployed tabular models by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. To learn about roles in tabular models, see [Roles &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/roles-ssas-tabular.md). To learn about creating and managing roles in a tabular model project by using Role Manager in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], see [Create and Manage Roles &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md).  

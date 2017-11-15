@@ -20,7 +20,8 @@ ms.assetid: a64b8172-cd73-42f9-8847-52e967b9697a
 caps.latest.revision: 30
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "On Demand"
 ---
 # MDX Query and Slicer Axes - Restricting the Query
   When formulating a Multidimensional Expressions (MDX) SELECT statement, an application typically examines a cube and divides the set of hierarchies into two subsets:  

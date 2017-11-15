@@ -1,7 +1,7 @@
 ---
 title: "ALTER INDEX (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/10/2017"
+ms.date: "08/07/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -44,9 +44,10 @@ helpviewer_keywords:
   - "page locks [SQL Server]"
 ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
 caps.latest.revision: 222
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Active"
 ---
 # ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -184,7 +185,7 @@ ALTER INDEX { index_name | ALL }
 |REORGANIZE PARTITION = *partition_number*|Nonpartitioned index, XML index, spatial index, or disabled index|  
 |IGNORE_DUP_KEY = ON|XML index<br /><br /> Spatial index<br /><br /> Columnstore index: **Applies to:** SQL Server (starting with SQL Server 2012) and Azure SQL Database.|  
 |ONLINE = ON|XML index<br /><br /> Spatial index<br /><br /> Columnstore index: **Applies to:** SQL Server (starting with SQL Server 2012) and Azure SQL Database.|
-| RESUMABLE = ON  | Resumable indexes not supported with **All** keyword. <br /><br /> **Applies to**: Beginning with SQL Server 2017  and Azure SQL Database (feature is in public preview) |   
+| RESUMABLE = ON  | Resumable indexes not supported with **All** keyword. <br /><br /> **Applies to**: Beginning with SQL Server 2017  and Azure SQL Database |   
   
 > [!WARNING]
 >  For more detailed information about index operations that can be performed online, see [Guidelines for Online Index Operations](../../relational-databases/indexes/guidelines-for-online-index-operations.md).
@@ -429,7 +430,7 @@ FILLFACTOR = *fillfactor*
 
 RESUMABLE **=** { ON | **OFF**}
 
-**Applies to**: Beginning with SQL Server 2017  and Azure SQL Database (feature is in public preview)  
+**Applies to**: Beginning with SQL Server 2017  and Azure SQL Database   
 
  Specifies whether an online index operation is resumable.
 
@@ -441,7 +442,7 @@ Index operation is not resumable.
 
 MAX_DURATION **=** *time* [**MINUTES**] used with **RESUMABLE = ON** (requires **ONLINE = ON**).
  
-**Applies to**: Beginning with SQL Server 2017  and Azure SQL Database (feature is in public preview)  
+**Applies to**: Beginning with SQL Server 2017  and Azure SQL Database 
 
 Indicates time (an integer value specified in minutes) that a resumable online index operation is executed before being paused. 
 
@@ -576,7 +577,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  
 **Applies to**: SQL Server (starting with SQL Server 2014) and Azure SQL Database.
   
- An online index rebuild has to wait for blocking operations on this table. **WAIT_AT_LOW_PRIORITY** indicates that the online index rebuild operation will wait for low priority locks, allowing other operations to proceed while the online index build operation is waiting. Omitting the **WAIT AT LOW PRIORITY** option is equivalent to `WAIT_AT_LOW_PRIORITY (MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`. For more information, see [WAIT_AT_LOW_PRIORITY](https://msdn.microsoft.com/library/ms188388.aspx). 
+ An online index rebuild has to wait for blocking operations on this table. **WAIT_AT_LOW_PRIORITY** indicates that the online index rebuild operation will wait for low priority locks, allowing other operations to proceed while the online index build operation is waiting. Omitting the **WAIT AT LOW PRIORITY** option is equivalent to `WAIT_AT_LOW_PRIORITY (MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`. For more information, see [WAIT_AT_LOW_PRIORITY](alter-index-transact-sql.md). 
   
  MAX_DURATION = *time* [**MINUTES**]  
   
@@ -599,33 +600,33 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  
  RESUME 
  
-**Applies to**: Beginning with SQL Server 2017  (feature is in public preview)
+**Applies to**: Beginning with SQL Server 2017  
 
 Resume an index operation that is paused manually or due to a failure.
 
 MAX_DURATION used with **RESUMABLE=ON**
 
  
-**Applies to**: Beginning with SQL Server 2017  and Azure SQL Database (feature is in public preview)
+**Applies to**: Beginning with SQL Server 2017  and Azure SQL Database
 
 The time (an integer value specified in minutes) the resumable online index operation is executed after being resumed. Once the time expires, the resumable operation is paused if it is still running.
 
 WAIT_AT_LOW_PRIORITY used with **RESUMABLE=ON** and **ONLINE = ON**.  
   
-**Applies to**: Beginning with SQL Server 2017  and Azure SQL Database (feature is in public preview)
+**Applies to**: Beginning with SQL Server 2017  and Azure SQL Database 
   
- Resuming an online index rebuild after a pause has to wait for blocking operations on this table. **WAIT_AT_LOW_PRIORITY** indicates that the online index rebuild operation will wait for low priority locks, allowing other operations to proceed while the online index build operation is waiting. Omitting the **WAIT AT LOW PRIORITY** option is equivalent to `WAIT_AT_LOW_PRIORITY (MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`. For more information, see [WAIT_AT_LOW_PRIORITY](https://msdn.microsoft.com/library/ms188388.aspx). 
+ Resuming an online index rebuild after a pause has to wait for blocking operations on this table. **WAIT_AT_LOW_PRIORITY** indicates that the online index rebuild operation will wait for low priority locks, allowing other operations to proceed while the online index build operation is waiting. Omitting the **WAIT AT LOW PRIORITY** option is equivalent to `WAIT_AT_LOW_PRIORITY (MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`. For more information, see [WAIT_AT_LOW_PRIORITY](alter-index-transact-sql.md). 
 
 
 PAUSE
  
-**Applies to**: Beginning with SQL Server 2017 and Azure SQL Database (feature is in public preview)
+**Applies to**: Beginning with SQL Server 2017 and Azure SQL Database 
   
 Pause a resumable online index rebuild operation.
 
 ABORT
 
-**Applies to**: Beginning with SQL Server 2017  and Azure SQL Database (feature is in public preview)   
+**Applies to**: Beginning with SQL Server 2017  and Azure SQL Database   
 
 Abort a running or paused index operation that was declared as resumable. You have to explicitly execute an **ABORT** command to terminate a resumable index rebuild operation. Failure or pausing a resumable index operation does not terminate its execution; rather, it leaves the operation in an indefinite pause state.
   
@@ -707,7 +708,7 @@ Abort a running or paused index operation that was declared as resumable. You ha
 
 ### Resumable index operations
 
-**Applies to**: Beginning with SQL Server 2017  and Azure SQL Database (feature is in public preview)
+**Applies to**: Beginning with SQL Server 2017  and Azure SQL Database 
 
 ONLINE INDEX REBUILD is specified as resumable using the RESUMABLE=ON option. 
 -  The RESUMABLE option is not persisted in the metadata for a given index and applies only to the duration of a current DDL statement. Therefore, the RESUMABLE=ON clause must be specified explicitly to enable resumability.
@@ -715,7 +716,7 @@ ONLINE INDEX REBUILD is specified as resumable using the RESUMABLE=ON option.
 -  Please note two different MAX_DURATION options. One is related to low_priority_lock_wait and the other is related to RESUMABLE=ON option.
    -  MAX_DURATION option is supported for RESUMABLE=ON option or the **low_priority_lock_wait** argument option. 
    MAX_DURATION for RESUMABLE option specifies the time interval for an index being rebuild. Once this time is used the index rebuild is either paused or it completes its execution. User decides when a rebuild for a paused index can be resumed. The **time** in minutes for MAX_DURATION must be greater than 0 minutes and less or equal one week (7 x 24 x 60= 10080 minutes). Having a long pause for an index operation may impact the DML performance on a specific table as well as the database disk capacity since both indexes the original one and the newly created one require disk space and need to be updated during DML operations. If MAX_DURATION option is omitted, the index operation will continue until its completion or until a failure occurs. 
-   - 	The <low_priority_lock_wait> argument option allows you to decide how the index operation can proceed when blocked on the SCH-M lock.
+- 	The \<low_priority_lock_wait> argument option allows you to decide how the index operation can proceed when blocked on the SCH-M lock.
  
 -  Re-executing the original ALTER INDEX REBUILD statement with the same parameters resumes a paused index rebuild operation. You can also resume a paused index rebuild operation by executing the ALTER INDEX RESUME statement.
 -  The SORT_IN_TEMPDB=ON option is not supported for resumable index 
@@ -782,7 +783,7 @@ The following functionality is disabled for resumable index rebuild operations
   
 -   Columnstore indexes are not available prior to SQL Server 2012. 
 
--  Resumable index operations are available beginning with SQL Server 2017 and Azure SQL Database (feature is in public preview)|   
+-  Resumable index operations are available beginning with SQL Server 2017 and Azure SQL Database   
   
 ## Basic syntax example:   
   
@@ -1131,7 +1132,7 @@ GO
  
 ### J. Online resumable index rebuild
 
-**Applies to**: Beginning with SQL Server 2017 and Azure SQL Database (feature is in public preview)    
+**Applies to**: Beginning with SQL Server 2017 and Azure SQL Database   
 
  The following examples show how to use online resumable index rebuild. 
 

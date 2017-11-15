@@ -1,7 +1,7 @@
 ---
 title: "CREATE ENDPOINT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/05/2017"
+ms.date: "08/10/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -35,6 +35,7 @@ caps.latest.revision: 135
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # CREATE ENDPOINT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -157,7 +158,7 @@ FOR DATABASE_MIRRORING (
 > [!NOTE]  
 >  For options that are specific to SERVICE_BROKER, see "SERVICE_BROKER Options," later in this section. For options that are specific to DATABASE_MIRRORING, see "DATABASE_MIRRORING Options," later in this section.  
   
- AUTHENTICATION **=** <authentication_options>  
+ AUTHENTICATION **=** \<authentication_options> 
  Specifies the TCP/IP authentication requirements for connections for this endpoint. The default is WINDOWS.  
   
  The supported authentication methods include NTLM and or Kerberos or both.  
@@ -292,3 +293,4 @@ GO
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   
+

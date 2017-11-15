@@ -1,6 +1,4 @@
 ---
-# required metadata
-
 title: Troubleshoot SQL Server on Linux | Microsoft Docs
 description: Provides troubleshooting tips for using SQL Server 2017 on Linux.
 author: annashres 
@@ -11,21 +9,13 @@ ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
-
-# optional metadata
-
-# keywords: ""
-# ROBOTS: ""
-# audience: ""
-# ms.devlang: ""
-# ms.reviewer: ""
-# ms.suite: ""
-# ms.tgt_pltfrm: ""
-# ms.custom: ""
+ms.workload: "On Demand"
 ---
 # Troubleshoot SQL Server on Linux
 
-This document describes how to troubleshoot Microsoft SQL Server running on Linux or in a Docker container. When troubleshooting SQL Server on Linux, please make remember the limitations of this private preview release. You can find a list of these in the [Release Notes](sql-server-linux-release-notes.md).
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+
+This document describes how to troubleshoot Microsoft SQL Server running on Linux or in a Docker container. When troubleshooting SQL Server on Linux, please remember to review the supported features and known limitations in the [SQL Server on Linux Release Notes](sql-server-linux-release-notes.md).
 
 ## <a id="connection"></a> Troubleshoot connection failures
 If you are having difficulty connecting to your Linux SQL Server, there are a few things to check. 
@@ -43,11 +33,11 @@ If you are having difficulty connecting to your Linux SQL Server, there are a fe
    >   ```bash
    >   sudo ip addr show eth0 | grep "inet"
    >   ```
-   > One exception to this technique relates to Azure VMs. For Azure VMs, [find the public IP for the VM in the Azure portal](sql-server-linux-azure-virtual-machine.md#connect).
+   > One exception to this technique relates to Azure VMs. For Azure VMs, [find the public IP for the VM in the Azure portal](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine#connect).
 
 - If applicable, check that you have opened the SQL Server port (default 1433) on the firewall.
 
-- For Azure VMs, check that you have a [network security group rule for the default SQL Server port](sql-server-linux-azure-virtual-machine.md#remote).
+- For Azure VMs, check that you have a [network security group rule for the default SQL Server port](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine#remote).
 
 - Verify that the user name and password do not contain any typos or extra spaces or incorrect casing.
 
@@ -125,6 +115,37 @@ For Core dumps
 For SQL dumps 
    ```bash
    sudo ls /var/opt/mssql/log | grep .mdmp 
+   ```
+   
+## Start SQL Server in Minimal Configuration or in Single User Mode
+
+### Start SQL Server in Minimal Configuration Mode
+This is useful if the setting of a configuration value (for example, over-committing memory) has prevented the server from starting.
+  
+   ```bash
+   sudo -u mssql /opt/mssql/bin/sqlservr -f
+   ```
+
+### Start SQL Server in Single User Mode
+Under certain circumstances, you may have to start an instance of SQL Server in single-user mode by using the startup option -m. For example, you may want to change server configuration options or recover a damaged master database or other system database. For example, you may want to change server configuration options or recover a damaged master database or other system database   
+
+Start SQL Server in Single User Mode
+   ```bash
+   sudo -u mssql /opt/mssql/bin/sqlservr -m
+   ```
+
+Start SQL Server in Single User Mode with SQLCMD
+   ```bash
+   sudo -u mssql /opt/mssql/bin/sqlservr -m SQLCMD
+   ```
+  
+> [!WARNING]  
+>  Start SQL Server on Linux with the "mssql" user to prevent future startup issues. Example "sudo -u mssql /opt/mssql/bin/sqlservr [STARTUP OPTIONS]" 
+
+If you have accidentally started SQL Server with another user, you will need to change ownership of SQL Server database files back to the 'mssql' user prior to starting SQL Server with systemd. For example, to change ownership of all database files under /var/opt/mssql to the 'mssql' user, run the following command
+
+   ```bash
+   chown -R mssql:mssql /var/opt/mssql/
    ```
 
 ## Common issues

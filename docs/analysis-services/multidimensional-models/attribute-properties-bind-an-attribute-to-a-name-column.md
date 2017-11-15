@@ -19,7 +19,8 @@ ms.assetid: 467f0cf3-8691-476d-a7fb-a5df4e374eaf
 caps.latest.revision: 29
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Attribute Properties - Bind an Attribute to a Name Column
   This procedure describes how to bind an attribute to a name column manually by using the **Attributes** pane in the Dimension Designer and by using the **Object Binding** dialog box.  

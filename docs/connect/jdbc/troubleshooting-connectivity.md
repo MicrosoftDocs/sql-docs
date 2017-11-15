@@ -14,6 +14,7 @@ caps.latest.revision: 23
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Troubleshooting Connectivity
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

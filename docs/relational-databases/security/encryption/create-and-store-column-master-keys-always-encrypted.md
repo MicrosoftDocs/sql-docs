@@ -14,6 +14,7 @@ caps.latest.revision: 26
 author: "stevestein"
 ms.author: "sstein"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Create and Store Column Master Keys (Always Encrypted)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -45,7 +46,7 @@ The available built-in providers depend on which driver, driver version, and ope
 
 ### Supported Tools
 
-You can use [SQL Server Management Studio](https://msdn.microsoft.com/library/Hh213248.aspx) and the [SqlServer PowerShell module](https://blogs.technet.microsoft.com/dataplatforminsider/2016/06/30/sql-powershell-july-2016-update) to configure Always Encrypted and manage Always Encrypted keys. For a list of which key stores these tool support, see:
+You can use [SQL Server Management Studio](../../../ssms/sql-server-management-studio-ssms.md) and the [SqlServer PowerShell module](https://blogs.technet.microsoft.com/dataplatforminsider/2016/06/30/sql-powershell-july-2016-update) to configure Always Encrypted and manage Always Encrypted keys. For a list of which key stores these tool support, see:
 
 - [Configure Always Encrypted using SQL Server Management Studio](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)
 - [Configure Always Encrypted using PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)
@@ -71,10 +72,10 @@ Use the [New-SelfSignedCertificate](https://technet.microsoft.com/library/hh8486
 
 ```
 New-SelfSignedCertificate is a Windows PowerShell cmdlet that creates a self-signed certificate. The below examples show how to generate a certificate that can be used as a column master key for Always Encrypted.
-$cert = New-SelfSignedCertificate -Subject "AlwaysEncryptedCert" -CertStoreLocation Cert:CurrentUserMy -KeyExportPolicy Exportable -Type DocumentEncryptionCert -KeyUsage KeyEncipherment -KeySpec KeyExchange -KeyLength 2048 
+$cert = New-SelfSignedCertificate -Subject "AlwaysEncryptedCert" -CertStoreLocation Cert:CurrentUser\My -KeyExportPolicy Exportable -Type DocumentEncryptionCert -KeyUsage KeyEncipherment -KeySpec KeyExchange -KeyLength 2048 
 
 # To create a certificate in the local machine certificate store location you need to run the cmdlet as an administrator.
-$cert = New-SelfSignedCertificate -Subject "AlwaysEncryptedCert" -CertStoreLocation Cert:LocalMachineMy -KeyExportPolicy Exportable -Type DocumentEncryptionCert -KeyUsage KeyEncipherment -KeySpec KeyExchange -KeyLength 2048
+$cert = New-SelfSignedCertificate -Subject "AlwaysEncryptedCert" -CertStoreLocation Cert:LocalMachine\My -KeyExportPolicy Exportable -Type DocumentEncryptionCert -KeyUsage KeyEncipherment -KeySpec KeyExchange -KeyLength 2048
 ```
 
 ### Create a self-signed certificate using SQL Server Management Studio (SSMS)

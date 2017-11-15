@@ -15,7 +15,8 @@ ms.assetid: 83dc82da-91fb-4e47-91a8-0e0db67339b8
 caps.latest.revision: 8
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Power Pivot Data Access
   This topic describes the ways in which data is retrieved from a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbook that is published to a SharePoint library.  

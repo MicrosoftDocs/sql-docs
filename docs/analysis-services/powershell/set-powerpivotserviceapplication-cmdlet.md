@@ -13,7 +13,8 @@ ms.assetid: 16d10e2d-d7e1-40f1-bc9d-a4e10c61af95
 caps.latest.revision: 10
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Set-PowerPivotServiceApplication cmdlet
   
@@ -22,7 +23,7 @@ manager: "erikre"
   Sets the properties of a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] service application.  
 
 >[!NOTE] 
->This article may contain outdated information and examples.
+>This article may contain outdated information and examples. Use the Get-Help cmdlet for the latest.
   
  **Applies To:** SharePoint 2010 and SharePoint 2013.  
   

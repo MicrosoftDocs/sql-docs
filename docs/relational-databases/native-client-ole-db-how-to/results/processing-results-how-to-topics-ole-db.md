@@ -16,6 +16,7 @@ caps.latest.revision: 9
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Processing Results How-to Topics (OLE DB)
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]

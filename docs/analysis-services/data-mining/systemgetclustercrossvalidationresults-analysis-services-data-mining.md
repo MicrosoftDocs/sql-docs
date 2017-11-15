@@ -17,7 +17,8 @@ ms.assetid: 79de9b81-9f2e-4f20-ace9-e3b19d6a9759
 caps.latest.revision: 21
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # SystemGetClusterCrossValidationResults (Analysis Services - Data Mining)
   Partitions the mining structure into the specified number of cross-sections, trains a model for each partition, and then returns accuracy metrics for each partition.  

@@ -19,9 +19,10 @@ helpviewer_keywords:
   - "revoking permissions [SQL Server], database scoped credentials"
 ms.assetid: b73233c5-9afa-48ca-ba34-a9f86b9b1d2e
 caps.latest.revision: 2
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Inactive"
 ---
 # REVOKE Database Scoped Credential (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssvNxt-asdb-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-asdb-xxxx-xxx.md)]

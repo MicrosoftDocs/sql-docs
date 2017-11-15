@@ -13,7 +13,8 @@ ms.assetid: b10ba7c1-8f10-4e72-9626-f9285e4341fd
 caps.latest.revision: 9
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Invoke-ProcessCube cmdlet
 
@@ -22,7 +23,7 @@ manager: "erikre"
   Process a cube using a specific processing type variable.  
   
 >[!NOTE] 
->This article may contain outdated information and examples.
+>This article may contain outdated information and examples. Use the Get-Help cmdlet for the latest.
   
 ## Syntax  
  `Invoke-ProcessCube [-Name] <System.String> [-Database] <System.String> [-ProcessType] <Microsoft.AnalysisServices.ProcessType> [<CommonParameters>]`  

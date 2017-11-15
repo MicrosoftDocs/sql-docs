@@ -24,7 +24,8 @@ ms.assetid: 92a1e67e-f46e-4960-99b2-4d20f6192fbd
 caps.latest.revision: 62
 author: "Minewiskan"
 ms.author: "owend"
-manager: "jhubbard"
+manager: "kfile"
+ms.workload: "On Demand"
 ---
 # Microsoft Clustering Algorithm
   The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering algorithm is a *segmentation* or *clustering* algorithm that iterates over cases in a dataset to group them into clusters that contain similar characteristics. These groupings are useful for exploring data, identifying anomalies in the data, and creating predictions.  

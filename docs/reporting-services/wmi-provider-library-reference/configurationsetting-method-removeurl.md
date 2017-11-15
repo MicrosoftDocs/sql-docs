@@ -17,6 +17,7 @@ caps.latest.revision: 13
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # ConfigurationSetting Method - RemoveURL
   Removes a URL reserved for the report server. If there are multiple URLs that need to be removed, this must be done one by one calling this API.  

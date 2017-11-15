@@ -1,7 +1,7 @@
 ---
 title: "@@TEXTSIZE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/13/2017"
+ms.date: "09/18/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -22,11 +22,12 @@ helpviewer_keywords:
   - "text size returned [SQL Server]"
 ms.assetid: 4308a7b9-8e8f-49e9-8246-8224e32f4953
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Inactive"
 ---
-# @@TEXTSIZE (Transact-SQL)
+# &#x40;&#x40;TEXTSIZE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Returns the current value of the [TEXTSIZE](../../t-sql/statements/set-textsize-transact-sql.md) option.  
@@ -36,7 +37,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
-  
 @@TEXTSIZE  
 ```  
   
@@ -56,17 +56,14 @@ SELECT @@TEXTSIZE AS 'Text Size'
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Text Size`  
-  
- `-----------`  
-  
- `4096`  
-  
- `Text Size`  
-  
- `-----------`  
-  
- `2048`  
+ ```
+Text Size
+-----------
+4096
+Text Size
+-----------
+2048
+ ```  
   
 ## See Also  
  [Configuration Functions &#40;Transact-SQL&#41;](../../t-sql/functions/configuration-functions-transact-sql.md)   

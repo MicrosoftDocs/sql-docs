@@ -13,9 +13,10 @@ helpviewer_keywords:
   - "5228 (Database Engine error)"
 ms.assetid: 5e83c617-4aa2-4755-bcc5-a798c46b97e4
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Inactive"
 ---
 # MSSQLSERVER_5228
   

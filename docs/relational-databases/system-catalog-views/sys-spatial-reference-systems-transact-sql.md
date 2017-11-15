@@ -21,9 +21,10 @@ helpviewer_keywords:
   - "spatial_reference_systems"
 ms.assetid: 3c9bc120-67c3-463f-9e24-29fd623f25a0
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Inactive"
 ---
 # sys.spatial_reference_systems (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

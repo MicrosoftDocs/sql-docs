@@ -1,7 +1,7 @@
 ---
-title: "View and explore the data using SQL (SQL-R walkthrough)| Microsoft Docs"
+title: "View and explore the data using SQL (walkthrough)| Microsoft Docs"
 ms.custom: ""
-ms.date: "07/06/2017"
+ms.date: "07/14/2017"
 ms.prod: "sql-server-2016"
 ms.reviewer: ""
 ms.suite: ""
@@ -14,12 +14,13 @@ applies_to:
 dev_langs: 
   - "R"
 ms.assetid: d3835d6d-e68b-486d-81a0-81b717cc6134
-caps.latest.revision: 32
+caps.latest.revision: 33
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
-# View and explore the data using R and SQL
+# View and explore the data using SQL (walkthrough)
 
 Data exploration is an important part of modeling data, and involves reviewing summaries of data objects to be used in the analyses, as well as data visualization. In this lesson, you explore the data objects and generate plots, using both [!INCLUDE[tsql](../../includes/tsql-md.md)] and R functions included in [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)].
 
@@ -47,7 +48,7 @@ First, take a minute to ascertain that your data was loaded correctly.
     ```SQL
     SELECT TOP 1000 * FROM [dbo].[nyctaxi_sample]
     ```
-    If you don't see any data in the table, refer to the [Troubleshooting](/walkthrough-prepare-the-data.md) section in the previous topic.
+    If you don't see any data in the table, refer to the [Troubleshooting](walkthrough-prepare-the-data.md) section in the previous topic.
 
 4. This data table has been optimized for set-based calculations, by adding a [columnstore index](../../relational-databases/indexes/columnstore-indexes-overview.md). Run this statement to generate a quick summary on the table.
 
@@ -63,8 +64,8 @@ First, take a minute to ascertain that your data was loaded correctly.
 
 ## Next lesson
 
-[Summarize data using R](/walkthrough-view-and-summarize-data-using-r.md)
+[Summarize data using R](walkthrough-view-and-summarize-data-using-r.md)
 
 ## Previous lesson
 
-[Prepare the data using PowerShell](/walkthrough-prepare-the-data.md)
+[Prepare the data using PowerShell](walkthrough-prepare-the-data.md)

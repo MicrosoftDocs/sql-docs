@@ -4,14 +4,17 @@ description: SQL Server Script Sample - Unattended Install on Ubuntu
 author: edmacauley
 ms.author: edmacauley
 manager: jhubbard
-ms.date: 07/17/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
+ms.workload: "Inactive"
 ---
 # Sample: Unattended SQL Server installation script for Ubuntu
 
-This sample Bash script installs SQL Server 2017 CTP 2.1 on Ubuntu 16.04 without interactive input. It provides examples of installing the database engine, the SQL Server command-line tools, SQL Server Agent, and performs post-install steps. You can optionally install full-text search and create an administrative user.
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+
+This sample Bash script installs SQL Server 2017 on Ubuntu 16.04 without interactive input. It provides examples of installing the database engine, the SQL Server command-line tools, SQL Server Agent, and performs post-install steps. You can optionally install full-text search and create an administrative user.
 
 > [!TIP]
 > If you do not need an unattended installation script, the fastest way to install SQL Server is to follow the [quick start tutorial for Ubuntu](quickstart-install-connect-ubuntu.md). For other setup information, see [Installation guidance for SQL Server on Linux](sql-server-linux-setup.md).
@@ -55,7 +58,7 @@ fi
 
 echo Adding Microsoft repositories...
 sudo curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
-repoargs="$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server.list)"
+repoargs="$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"
 sudo add-apt-repository "${repoargs}"
 repoargs="$(curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list)"
 sudo add-apt-repository "${repoargs}"

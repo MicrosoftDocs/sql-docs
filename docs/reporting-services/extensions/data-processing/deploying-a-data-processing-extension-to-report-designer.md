@@ -17,9 +17,10 @@ helpviewer_keywords:
   - "assemblies [Reporting Services], data processing extension deployments"
 ms.assetid: 3614e601-004e-4a16-8388-836ffd67e9dd
 caps.latest.revision: 41
-author: "sabotta"
-ms.author: "carlasab"
+author: "guyinacube"
+ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Deploying a Data Processing Extension to Report Designer
   Report Designer uses data processing extensions for retrieving and processing data while you are designing reports. You should deploy your data processing extension assembly to Report Designer as a private assembly. You also need to make an entry in the Report Designer configuration file, RSReportDesigner.config.  

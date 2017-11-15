@@ -14,6 +14,7 @@ caps.latest.revision: 5
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Transact-SQL Code Snippets
   A [!INCLUDE[tsql](../../includes/tsql-md.md)].code snippet is a template containing the basic structure of a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement or block. You can use snippets as a starting point when adding statements in the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor. You can insert the pre-defined snippets supplied with SQL Server, or create your own.  

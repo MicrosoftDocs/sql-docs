@@ -19,7 +19,8 @@ ms.assetid: 6b1337c5-50a0-4fc2-b079-377dc241d2cc
 caps.latest.revision: 32
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Power Pivot Data Feeds
   A data feed provides a stream of data on demand from an online data source to a client application. In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], you can use data feeds to add data from an Atom-aware Web service or application to a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data source in an Excel workbook.  

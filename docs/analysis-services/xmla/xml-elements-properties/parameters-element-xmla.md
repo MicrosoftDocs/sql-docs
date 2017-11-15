@@ -2,9 +2,12 @@
 title: "Parameters Element (XMLA) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: "xmla"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
@@ -25,9 +28,10 @@ helpviewer_keywords:
   - "Parameters element"
 ms.assetid: d46454a1-a1d1-4aa8-95ea-54be22a53e83
 caps.latest.revision: 11
-author: "jeannt"
-ms.author: "jeannt"
-manager: "erikre"
+author: "Minewiskan"
+ms.author: "owend"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Parameters Element (XMLA)
   Contains a collection of [Parameter](../../../analysis-services/xmla/xml-elements-properties/parameter-element-xmla.md) elements used by the [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) method.  

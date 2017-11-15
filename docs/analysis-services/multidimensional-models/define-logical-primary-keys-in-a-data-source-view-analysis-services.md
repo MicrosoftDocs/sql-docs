@@ -20,7 +20,8 @@ ms.assetid: 172bc267-c637-4caa-bf55-0ba198d30b1e
 caps.latest.revision: 36
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Define Logical Primary Keys in a Data Source View (Analysis Services)
   The Data Source View Wizard and Data Source View Designer automatically define a primary key for a table that is added to a data source view based on underlying database table.  

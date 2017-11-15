@@ -14,6 +14,7 @@ caps.latest.revision: 8
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # catalog.remove_data_tap
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -22,9 +23,8 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```tsql  
-remove_data_tap [ @data_tap_id = ] data_tap_id  
-  
+```sql  
+catalog.remove_data_tap [ @data_tap_id = ] data_tap_id  
 ```  
   
 ## Arguments  

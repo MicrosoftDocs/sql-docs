@@ -16,6 +16,7 @@ caps.latest.revision: 19
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Audit Database Principal Management Event Class
   The **Audit Database Principal Management** event class occurs when principals, such as users, are created, altered, or dropped from a database.  

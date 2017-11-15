@@ -18,6 +18,7 @@ caps.latest.revision: 45
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # XML Format Files (SQL Server)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] provides an XML schema that defines syntax for writing *XML format files* to use for bulk importing data into a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table. XML format files must adhere to this schema, which is defined in the XML Schema Definition Language (XSDL). XML format files are only supported when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tools are installed together with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
@@ -175,7 +176,7 @@ manager: "jhubbard"
 ####  <a name="AttrOfFieldElement"></a> Attributes of the \<FIELD> Element  
  This section describes the attributes of the \<FIELD> element, which are summarized in the following schema syntax:  
   
- \<FIELD  
+ <FIELD  
   
  ID **="***fieldID***"**  
   
@@ -226,7 +227,7 @@ manager: "jhubbard"
 ####  <a name="AttrOfColumnElement"></a> Attributes of the \<COLUMN> Element  
  This section describes the attributes of the \<COLUMN> element, which are summarized in the following schema syntax:  
   
- \<COLUMN  
+ <COLUMN  
   
  SOURCE = "*fieldID*"  
   
@@ -307,7 +308,7 @@ manager: "jhubbard"
 ###  <a name="PutXsiTypeValueIntoDataSet"></a> Putting the xsi:type Value into a Data Set  
  When an XML document is validated through the XML Schema Definition (XSD) language, the xsi:type value is not put into the data set. However, you can put the xsi:type information into the data set by loading the XML format file into an XML document (for example, `myDoc`), as illustrated in the following code snippet:  
   
-```  
+```cs
 ...;  
 myDoc.LoadXml(xmlFormat);  
 XmlNodeList ColumnList = myDoc.GetElementsByTagName("COLUMN");  
@@ -356,7 +357,7 @@ for(int i=0;i<ColumnList.Count;i++)
   
  The data fields correspond one-to-one with the columns of the table. In the `<ROW>` element, the format file maps the column `Age` to the first field, the column `FirstName` to the second field, and the column `LastName` to the third field.  
   
-```  
+```xml
 <?xml version="1.0"?>  
 <BCPFORMAT   
 xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
@@ -392,7 +393,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   
  In the `<ROW>` element, the format file maps the column `Age` to the first field, the column `FirstName` to the third field, and the column `LastName` to the second field.  
   
-```  
+```xml
 <?xml version="1.0"?>  
 <BCPFORMAT   
 xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
@@ -427,7 +428,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   
  In the `<ROW>` element, the format file maps the column `Age` to the first field, the column `FirstName` to the third field, and the column `LastName` to the fourth field.  
   
-```  
+```xml
+<?xml version = "1.0"?>  
 <BCPFORMAT   
 xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
@@ -458,7 +460,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ###  <a name="MapXSItype"></a> D. Mapping \<FIELD> xsi:type to \<COLUMN> xsi:type  
  The following example shows different types of fields and their mappings to columns.  
   
-```  
+```xml
 <?xml version = "1.0"?>  
 <BCPFORMAT  
 xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
@@ -495,13 +497,13 @@ xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"
 ###  <a name="MapXMLDataToTbl"></a> E. Mapping XML data to a table  
  The following example creates an empty two-column table (`t_xml`), in which the first column maps to the `int` data type and the second column maps to the `xml` data type.  
   
-```  
+```sql
 CREATE TABLE t_xml (c1 int, c2 xml)  
 ```  
   
  The following XML format file would load a data file into table `t_xml`.  
   
-```  
+```xml
 <?xml version="1.0"?>  
 <BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
@@ -519,7 +521,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ###  <a name="ImportFixedFields"></a> F. Importing fixed-length or fixed-width fields  
  The following example describes fixed fields of `10` or `6` characters each. The format file represents these field lengths/widths as `LENGTH="10"` and `LENGTH="6"`, respectively. Every row of the data files ends with a carriage return-line feed combination, {CR}{LF}, which the format file represents as `TERMINATOR="\r\n"`.  
   
-```  
+```xml
 <?xml version="1.0"?>  
 <BCPFORMAT  
        xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"  

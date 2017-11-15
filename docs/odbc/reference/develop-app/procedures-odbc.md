@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Procedures ODBC
 A *procedure* is an executable object stored on the data source. Generally, it is one or more SQL statements that have been precompiled.  

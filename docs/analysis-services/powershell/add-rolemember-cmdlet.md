@@ -13,7 +13,8 @@ ms.assetid: 827c8bbc-d48f-4e49-9ea5-abb1380f7623
 caps.latest.revision: 14
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Add-RoleMember cmdlet
 
@@ -22,7 +23,7 @@ manager: "erikre"
   Add a member to the specified role of an Analysis Services tabular or multidimensional database.  
 
 >[!NOTE] 
->This article may contain outdated information and examples.
+>This article may contain outdated information and examples. Use the Get-Help cmdlet for the latest.
   
 ## Syntax  
  `Add-RoleMember [-MemberName] <System.String> [-Database] <System.String> [-RoleName] <System.String> [<CommonParameters>]`  

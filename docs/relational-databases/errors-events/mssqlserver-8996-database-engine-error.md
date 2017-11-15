@@ -13,9 +13,10 @@ helpviewer_keywords:
   - "8996 (Database Engine error)"
 ms.assetid: 4e655cdc-945a-4a18-95dd-75f050563d26
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Inactive"
 ---
 # MSSQLSERVER_8996
   

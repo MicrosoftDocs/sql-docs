@@ -22,9 +22,10 @@ helpviewer_keywords:
   - "closing Database Master Keys"
 ms.assetid: bb04ef7a-9f3a-437e-a6f9-ba0204082cb9
 caps.latest.revision: 30
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Inactive"
 ---
 # CLOSE MASTER KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]

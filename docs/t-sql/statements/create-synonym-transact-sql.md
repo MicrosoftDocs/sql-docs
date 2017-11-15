@@ -23,9 +23,10 @@ helpviewer_keywords:
   - "synonyms [SQL Server], creating"
 ms.assetid: 41313809-e970-449c-bc35-85da2ef96e48
 caps.latest.revision: 43
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Active"
 ---
 # CREATE SYNONYM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +50,7 @@ CREATE SYNONYM [ schema_name_1. ] synonym_name FOR <object>
 ```  
   
 ```  
--- Windows Azure SQL Database Syntax  
+-- Azure SQL Database Syntax  
   
 CREATE SYNONYM [ schema_name_1. ] synonym_name FOR < object >  
   
@@ -130,21 +131,17 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `-----------------------`  
-  
- `ProductID   Name`  
-  
- `----------- --------------------------`  
-  
- `1           Adjustable Race`  
-  
- `2           Bearing Ball`  
-  
- `3           BB Ball Bearing`  
-  
- `4           Headset Ball Bearings`  
-  
- `(4 row(s) affected)`  
+ ```
+ ----------------------- 
+ ProductID   Name 
+ ----------- -------------------------- 
+ 1           Adjustable Race 
+ 2           Bearing Ball 
+ 3           BB Ball Bearing 
+ 4           Headset Ball Bearings 
+
+ (4 row(s) affected)
+``` 
   
 ### B. Creating a synonym to remote object  
  In the following example, the base object, `Contact`, resides on a remote server named `Server_Remote`.  

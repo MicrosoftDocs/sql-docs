@@ -17,6 +17,7 @@ caps.latest.revision: 27
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Monitoring of Availability Groups (SQL Server)
   To monitor the properties and state of an Always On availability group you can use the following tools.  

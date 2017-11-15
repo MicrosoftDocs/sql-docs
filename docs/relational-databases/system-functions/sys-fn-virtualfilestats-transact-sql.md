@@ -24,6 +24,7 @@ caps.latest.revision: 29
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # sys.fn_virtualfilestats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -81,7 +82,7 @@ GO
 ```  
   
 ### B. Displaying statistical information for a named database and file  
- The following example displays statistical information for the log file in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] sample database. The system function `DB`_`ID` is used to specify the *database_id* parameter.  
+ The following example displays statistical information for the log file in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] sample database. The system function `DB_ID` is used to specify the *database_id* parameter.  
   
 ```tsql  
 SELECT *  

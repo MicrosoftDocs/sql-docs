@@ -23,6 +23,7 @@ caps.latest.revision: 47
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # sys.dm_os_workers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,8 +48,8 @@ manager: "jhubbard"
 |pending_io_count|**int**|Number of physical I/Os that are performed by this worker.|  
 |pending_io_byte_count|**bigint**|Total number of bytes for all pending physical I/Os for this worker.|  
 |pending_io_byte_average|**int**|Average number of bytes for physical I/Os for this worker.|  
-|wait_started_ms_ticks|**int**|Point in time, in [ms_ticks](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md), when this worker entered the SUSPENDED state. Subtracting this value from ms_ticks in [sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md) returns the number of milliseconds that the worker has been waiting.|  
-|wait_resumed_ms_ticks|**int**|Point in time, in [ms_ticks](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md), when this worker entered the RUNNABLE state. Subtracting this value from ms_ticks in [sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md) returns the number of milliseconds that the worker has been in the runnable queue.|  
+|wait_started_ms_ticks|**bigint**|Point in time, in [ms_ticks](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md), when this worker entered the SUSPENDED state. Subtracting this value from ms_ticks in [sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md) returns the number of milliseconds that the worker has been waiting.|  
+|wait_resumed_ms_ticks|**bigint**|Point in time, in [ms_ticks](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md), when this worker entered the RUNNABLE state. Subtracting this value from ms_ticks in [sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md) returns the number of milliseconds that the worker has been in the runnable queue.|  
 |task_bound_ms_ticks|**bigint**|Point in time, in [ms_ticks](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md), when a task is bound to this worker.|  
 |worker_created_ms_ticks|**bigint**|Point in time, in [ms_ticks](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md), when a worker is created.|  
 |exception_num|**int**|Error number of the last exception that this worker encountered.|  

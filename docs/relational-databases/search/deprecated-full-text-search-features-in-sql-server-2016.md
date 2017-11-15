@@ -18,6 +18,7 @@ caps.latest.revision: 33
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Deprecated Full-Text Search Features in SQL Server 2016
   This topic describes the deprecated full-text search features still available in SQL Server. These features are scheduled to be removed in a future release. Do not use deprecated features in new applications.  

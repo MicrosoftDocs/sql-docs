@@ -23,6 +23,7 @@ caps.latest.revision: 27
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Considerations for Using Test Servers
   Using a test server to tune a database on a production server is an important benefit of [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor. Using this feature, you can offload tuning overhead to a test server without copying the actual data over to the test server from the production server.  

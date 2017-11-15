@@ -18,6 +18,7 @@ caps.latest.revision: 33
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Use EXPLICIT Mode with FOR XML
   As described in the topic, [Constructing XML Using FOR XML](../../relational-databases/xml/for-xml-sql-server.md), RAW and AUTO mode do not provide much control over the shape of the XML generated from a query result. However, EXPLICIT mode provides the most flexibility in generating the XML you want from a query result.  

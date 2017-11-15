@@ -2,7 +2,7 @@
 title: "sp_pdw_remove_network_credentials (SQL Data Warehouse) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: ""
 ms.reviewer: ""
 ms.service: "sql-data-warehouse"
 ms.suite: ""
@@ -17,6 +17,7 @@ caps.latest.revision: 9
 author: "barbkess"
 ms.author: "barbkess"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # sp_pdw_remove_network_credentials (SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]

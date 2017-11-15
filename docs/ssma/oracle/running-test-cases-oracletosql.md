@@ -11,9 +11,10 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: fc208cdb-7373-4f6b-8f6c-cdff9d3dcd02
 caps.latest.revision: 6
-author: "sabotta"
-ms.author: "carlasab"
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "v-thobro"
+ms.workload: "Inactive"
 ---
 # Running Test Cases (OracleToSQL)
 When SSMA Tester runs a Test Case, it executes the objects selected for testing and creates a report about verification results. If the results are identical on both platforms, the test was successful. The correspondence of objects between Oracle and [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] is determined according to the schema-mapping settings for the current SSMA project.  

@@ -14,9 +14,10 @@ helpviewer_keywords:
   - "intellectual property"
 ms.assetid: 174a646a-d65c-4074-8249-d783e91be2dd
 caps.latest.revision: 3
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "edmacauley"
+ms.author: "edmaca"
+manager: "cguyer"
+ms.workload: "Inactive"
 ---
 # Protecting Your SQL Server Intellectual Property
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +29,7 @@ The owner/administrator of a computer can always access the instance of [!INCLUD
 
 Stored procedures and data can be encrypted, but the data structure cannot be hidden and users who can attach a debugger to the server process can retrieve decrypted procedures and data from memory at runtime.
 
-If the clients are not administrators on the computers, you can prevent access by the clients. You can use [Transparent Data Encryption](../../relational-databases/security/encryption/transparent-data-encryption-tde.md) to encrypt the data files, you can encrypt backups, and you can audit the actions of all users. But [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] administrators and admins of the [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] computer can reverse these actions.
+If the clients are not administrators on the computers, you can prevent access by the clients. You can use [Transparent Data Encryption](../../relational-databases/security/encryption/transparent-data-encryption.md) to encrypt the data files, you can encrypt backups, and you can audit the actions of all users. But [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] administrators and admins of the [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] computer can reverse these actions.
 
 ## Solution
 There are various ways to configure client data access without installing [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] on your clients computer. The easiest is probably using [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)] so the clients are not admins, perhaps in combination with [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md). For more information about getting started with [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], see [What is SQL Database? Introduction to SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview).  

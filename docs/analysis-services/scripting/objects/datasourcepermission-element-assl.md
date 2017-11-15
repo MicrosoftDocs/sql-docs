@@ -2,9 +2,12 @@
 title: "DataSourcePermission Element (ASSL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: "scripting"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
@@ -23,7 +26,8 @@ ms.assetid: 6dc6fb13-034e-479a-902e-27f3fb78c33f
 caps.latest.revision: 14
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # DataSourcePermission Element (ASSL)
   Defines the default permissions in a [DataSource](../../../analysis-services/scripting/data-type/datasource-data-type-assl.md) data type for a specific [Role](../../../analysis-services/scripting/objects/role-element-assl.md) element.  

@@ -20,7 +20,8 @@ ms.assetid: ef011559-9ab9-4a19-b5da-265064fea521
 caps.latest.revision: 27
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # View Attributes in Dimension Designer
   This procedure describes how to change the way that attributes are displayed in the Dimension Designer.  

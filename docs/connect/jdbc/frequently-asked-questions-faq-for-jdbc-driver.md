@@ -14,6 +14,7 @@ caps.latest.revision: 8
 author: "MightyPen"
 ms.author: "genemi"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Frequently Asked Questions (FAQ) for JDBC Driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -32,8 +33,8 @@ The JDBC Driver is open source and the source code can be found on [GitHub](http
   
 |JAR|JDBC Specification|JDK Version|  
 |-|-|-|  
-|mssql-jdbc-6.2.0.jre8.jar|JDBC 4.2, 4.1, and 4.0|JDK 8.0|  
-|mssql-jdbc-6.2.0.jre7.jar|JDBC 4.1 and 4.0|JDK 7.0|  
+|mssql-jdbc-6.2.1.jre8.jar|JDBC 4.2, 4.1, and 4.0|JDK 8.0|  
+|mssql-jdbc-6.2.1.jre7.jar|JDBC 4.1 and 4.0|JDK 7.0|  
  
  The Microsoft JDBC Drivers 6.0 and 4.2 for SQL Server supports JDBC 4.0, 4.1, and 4.2 specifications and include two JAR class libraries in the installation package as follows:  
   

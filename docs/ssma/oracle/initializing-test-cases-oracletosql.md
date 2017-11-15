@@ -11,9 +11,10 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 45897363-cfc2-44bb-817b-7561e60b7410
 caps.latest.revision: 6
-author: "sabotta"
-ms.author: "carlasab"
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "v-thobro"
+ms.workload: "Inactive"
 ---
 # Initializing Test Cases (OracleToSQL)
 At this step you specify the initial information for the new test case.  

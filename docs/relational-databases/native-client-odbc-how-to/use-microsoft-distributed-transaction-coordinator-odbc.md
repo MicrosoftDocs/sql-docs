@@ -16,6 +16,7 @@ caps.latest.revision: 12
 author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Use Microsoft Distributed Transaction Coordinator (ODBC)
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]

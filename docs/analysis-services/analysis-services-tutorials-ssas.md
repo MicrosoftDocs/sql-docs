@@ -14,7 +14,8 @@ ms.assetid: b378c3bb-eead-46eb-b213-70d994f2d562
 caps.latest.revision: 17
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Active"
 ---
 # Analysis Services Tutorials (SSAS)
 This section contains tutorials for SQL Server Analysis Services.  

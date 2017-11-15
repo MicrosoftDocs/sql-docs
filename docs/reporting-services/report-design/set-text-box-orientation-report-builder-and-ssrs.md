@@ -15,6 +15,7 @@ caps.latest.revision: 9
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "erikre"
+ms.workload: "On Demand"
 ---
 # Set Text Box Orientation (Report Builder and SSRS)
 In a [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] paginated report, you can rotate a text box in different directions:   

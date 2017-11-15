@@ -17,7 +17,8 @@ ms.assetid: 579ca818-f33d-4060-906d-c8bfee93bf99
 caps.latest.revision: 13
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Define Cube Attribute Properties
   Cube attribute properties enable you to specify unique settings for dimension attributes in cube dimensions based on the same database dimension. The following table describes the properties of a cube attribute.  

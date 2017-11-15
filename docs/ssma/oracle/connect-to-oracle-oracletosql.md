@@ -11,9 +11,10 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 23a48cb6-ff30-49bb-b4a7-603ebcab336f
 caps.latest.revision: 5
-author: "sabotta"
-ms.author: "carlasab"
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "v-thobro"
+ms.workload: "Inactive"
 ---
 # Connect To Oracle (OracleToSQL)
 Use the **Connect to Oracle** dialog box to connect to the Oracle database that you want to migrate.  

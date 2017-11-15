@@ -13,7 +13,8 @@ ms.assetid: f6ef197b-3d74-4339-ae73-8a7c1eaf0e91
 caps.latest.revision: 11
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Set-PowerPivotSystemService cmdlet
   
@@ -22,7 +23,7 @@ manager: "erikre"
   Sets the global properties of the PowerPivotSystemService object at the farm-level.  
 
 >[!NOTE] 
->This article may contain outdated information and examples.
+>This article may contain outdated information and examples. Use the Get-Help cmdlet for the latest.
   
  **Applies To:** SharePoint 2010 and SharePoint 2013.  
   

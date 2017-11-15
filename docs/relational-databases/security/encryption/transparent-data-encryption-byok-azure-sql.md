@@ -1,6 +1,6 @@
 ---
-title: "TDE - Bring your own key - Azure SQL | Microsoft Docs"
-description: "An overview of bring your own key support for Transparent Data Encryption with Azure Key Vault for SQL Database and Data Warehouse. The document covers the benefits of the feature, how it works, considerations, and recomendations."
+title: "TDE - Bring Your Own Key (BYOK) - Azure SQL | Microsoft Docs"
+description: "Bring Your Own Key (BYOK) support for Transparent Data Encryption (TDE) with Azure Key Vault for SQL Database and Data Warehouse. TDE with BYOK overview, benefits, how it works, considerations, and recommendations."
 keywords: ""
 services: "sql-database"
 documentationcenter: ""
@@ -23,14 +23,14 @@ ms.author: "rebeccaz"
 
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
 
-Bring Your Own Key (BYOK) support for [Transparent Data Encryption (TDE)](transparent-data-encryption.md) allows you to take control over your TDE encryption keys and control who can access them and when. [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-secure-your-key-vault), Azure’s cloud-based external key management system, is the first key management service with which TDE has integrated support for BYOK. With BYOK, the database encryption key is protected by an asymmetric key stored in Key Vault. The asymmetric key is set at the server level and inherited by all databases under that server. 
+Bring Your Own Key (BYOK) support for [Transparent Data Encryption (TDE)](transparent-data-encryption.md) allows you to take control of your TDE encryption keys and restrict who can access them and when. [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-secure-your-key-vault), Azure’s cloud-based external key management system is the first key management service with which TDE has integrated support for BYOK. With BYOK, the database encryption key is protected by an asymmetric key stored in Key Vault. The asymmetric key is set at the server level and inherited by all databases under that server. 
 
-With BYOK support, users can now control key management tasks including key rotations, key vault permissions, deleting keys, and enable auditing/reporting on all encryption keys. Key Vault provides central key management, leverages tightly monitored hardware security modules (HSMs), and promotes separation of management of keys and data to help meet regulatory compliance. 
+With BYOK support, users can now control key management tasks including key rotations, key vault permissions, deleting keys, and enable auditing/reporting on all encryption keys. Key Vault provides central key management, leverages tightly monitored hardware security modules (HSMs), and enables separation of duties between management of keys and data to help meet regulatory compliance. 
 
 TDE with BYOK provides the following benefits:
 - Increased transparency and granular control with the ability to self-manage the TDE protector   
 - Central management of TDE encryption keys (along with other keys and secrets used in other Azure services) by hosting them in Key Vault
-- Separation of keys and data management within the organization, to support separation of roles
+- Separation of key and data management roles within the organization, to support separation of duties
 - Greater trust from your own clients, since Key Vault is designed so that Microsoft does not see or extract any encryption keys. 
 - Support for key rotation
 
@@ -53,10 +53,10 @@ Using TDE with BYOK brings both additional key management tasks to you and relat
 ### Key management responsibilities
 
 Taking over encryption key management of an application’s resources is an important responsibility. By using TDE with BYOK through Key Vault, the following are the key management tasks that you are assuming:
-- **Key rotations:** The TDE protectors should be rotated according to internal regulations or compliance requirements. Key rotations can be done through the TDE protector’s key vault.  
+- **Key rotations:** The TDE protectors should be rotated according to internal policies or compliance requirements. Key rotations can be done through the TDE protector’s key vault.  
 - **Key vault permissions**: Permissions within Key Vault are provisioned across a key vault and server level. The server's permissions to a key vault can be revoked at any time using the key vault's access policy.
-- **Deleting keys**: Keys may be dropped from Key Vault and the SQL server for additional safety or to meet compliance.
-- **Auditing/reporting on all encryption keys**: Key Vault provides logs that are easy to inject into other security information and event management (SIEM) tools. Operations Management Suite (OMS) [Log Analytics](https://docs.microsoft.com/azure/log-analytics/log-analytics-azure-key-vault) is one example service that is already integrated.
+- **Deleting keys**: Keys may be dropped from Key Vault and the SQL server for additional safety or to meet compliance requirements.
+- **Auditing/reporting on all encryption keys**: Key Vault provides logs that are easy to inject into other security information and event management (SIEM) tools. Operations Management Suite (OMS) [Log Analytics](https://docs.microsoft.com/azure/log-analytics/log-analytics-azure-key-vault) is one example of a service that is already integrated.
 
 ### Pricing considerations 
 
@@ -69,11 +69,11 @@ TDE with BYOK support is a security capability that is built into Azure SQL Data
 
 ### Loss of access to keys
 
-Once a server no longer has access to the TDE Protector (either by removed Key Vault permissions or a deleted key), **all connections to the encrypted databases under the server are blocked, and these databases go offline and get dropped within 24 hours**. Old backups encrypted with the unavailable key are no longer be accessible. If there is an extreme case where a key is suspected to be compromised (such that a service or user had unauthorized access to the key), it’s best to delete the key by following the guidelines at [Remove a potentially compromised key](transparent-data-encryption-byok-azure-sql-remove-tde-protector.md). The databases must be dropped before deletion of an active TDE protector to prevent up to 10 minutes of potential data loss.  
+Once a server lost access to the TDE Protector (either by removed Key Vault permissions or a deleted key), **all connections to the encrypted databases under the server are blocked, and these databases go offline and get dropped within 24 hours**. Old backups encrypted with the unavailable key are no longer accessible. If there is a possibility that a key may have been compromised (such that a service or user had unauthorized access to the key), it’s best to delete the key by following the guidelines at [Remove a potentially compromised key](transparent-data-encryption-byok-azure-sql-remove-tde-protector.md). The databases must be dropped before deletion of an active TDE protector to prevent up to 10 minutes of potential data loss.  
 
 ### Expired keys
 
-Because the TDE Protector’s availability directly impacts database availability, a key with an expiration date is not allowed to be added to a SQL server. If a key is already used as a TDE Protector for a server, and is later added an expiration date in Azure Key Vault, **once the key becomes expired, the encrypted databases no longer have access to their TDE Protector and are dropped within 24 hours.**
+Because the TDE Protector’s availability directly impacts database availability, a key with an expiration date is not allowed to be added to a SQL server. If a key is already used as a TDE Protector for a server, and is later configured with an expiration date in Azure Key Vault, **once the key expires, the encrypted databases lose access to their TDE Protector and are dropped within 24 hours.**
 
 ### Deleted server identities 
 
@@ -83,17 +83,17 @@ A server's access to Key Vault is managed through the server's unique Azure Acti
 
 Key vaults being used for TDE must be in the same AAD tenant as the SQL Database or Data Warehouse server. Cross-tenant key vault and server interactions are not supported. A resource that is being encrypted with a key from Key Vault cannot be moved across Azure subscriptions. Moving the resource across subscriptions breaks the necessary Key Vault access controls that made TDE with BYOK possible. If any resources must be moved to another subscription, change the TDE mode from BYOK to [Service Managed TDE](transparent-data-encryption-azure-sql.md). 
 
-Unique TDE Protectors for a database or data warehouse are not supported. The TDE Protector is set on the server-level, and inherited by all resources under the server. 
+Unique TDE Protectors for a database or data warehouse are not supported. The TDE Protector is set at the server-level, and inherited by all resources under the server. 
 
 ## Guidelines for managing encrypted databases
 
 ### High availability and disaster recovery
   
-There are two ways geo-replication can be configured for servers using Key Vault: 
+There are two ways to configure geo-replication for servers using Key Vault: 
 
 - **Separate key vault**: Each server has access to a separate key vault (ideally each within their own Azure region). This is the recommended configuration, since each server has its own copy of the TDE protector for the encrypted geo-replicated databases. If one of the server’s Azure regions goes offline, the other servers can continue to access the geo-replicated databases.   
 
-- **Shared key vault**: All servers share the same key vault. This configuration is easier to set up, but if the Azure region where the key vault is located goes offline, all servers are not be able to read the encrypted geo-replicated databases or their own encrypted databases. 
+- **Shared key vault**: All servers share the same key vault. This configuration is easier to set up, but if the Azure region where the key vault is located goes offline, all servers are unable to read the encrypted geo-replicated databases or their own encrypted databases. 
  
 To get started, use the [Add-AzureRmSqlServerKeyVaultKey](/powershell/module/azurerm.sql/add-azurermsqlserverkeyvaultkey) cmdlet to add each server’s Key Vault key to the other servers in the geo-replication link.  
 (Example of a KeyId from Key Vault: *https://contosokeyvault.vault.azure.net/keys/Key1/1a1a2b2b3c3c4d4d5e5e6f6f7g7g8h8h*)
@@ -147,10 +147,10 @@ Creating the TDE encryption key locally first and importing the asymmetric key i
 
 If an encrypted database is going to be replicated to another server, make sure that the server has access to a copy of the Key Vault key material used in the other server **before** moving or replicating the database.  
 
-We recommend that each server have access to a copy of the Key Vault key material used in the other server, which is stored in a separate key vault (ideally each within the same Azure region as the server). With this setup, each server has its own copy of the TDE Protector for the encrypted replicated databases. If one of the servers’ Azure region goes offline, the other servers can continue to access the replicated databases.
+We recommend that each server has access to a copy of the Key Vault key material used in the other server, which is stored in a separate key vault (ideally each within the same Azure region as the server). With this setup, each server has its own copy of the TDE Protector for the encrypted replicated databases. If one of the servers’ Azure region goes offline, the other servers can continue to access the replicated databases.
 
 ## Next steps
 
 - Get started with Bring Your Own Key support for TDE: [Turn on TDE using your own key from Key Vault using PowerShell](transparent-data-encryption-byok-azure-sql-configure.md)
-- Learn how to rotate the TDE Protector of a server to comply with security requirements: [Rotate the Transparent Data Encryption Protector Using PowerShell](transparent-data-encryption-byok-azure-sql-key-rotation.md)
-- In case of a security risk, learn how to remove a potentially compromised TDE Protector: [Remove a potentially compromised key](transparent-data-encryption-byok-azure-sql-remove-tde-protector.md) 
+- Learn how to rotate the TDE Protector of a server to comply with security policies: [Rotate the Transparent Data Encryption Protector Using PowerShell](transparent-data-encryption-byok-azure-sql-key-rotation.md)
+- In case of a security incident, learn how to remove a potentially compromised TDE Protector: [Remove a potentially compromised key](transparent-data-encryption-byok-azure-sql-remove-tde-protector.md) 

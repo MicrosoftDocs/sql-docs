@@ -26,7 +26,7 @@ manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # sys.dm_os_host_info (Transact-SQL)
-[!INCLUDE[tsql-appliesto-sslinux-xxxx-xxxx-xxx](../../includes/tsql-appliesto-sslinux-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
   Returns one row that displays operating system version information.  
   

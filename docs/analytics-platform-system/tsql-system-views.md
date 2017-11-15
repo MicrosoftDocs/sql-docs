@@ -3,7 +3,12 @@ title: T-SQL system views - Analytics Platform System Parallel Data Warehouse | 
 author: "barbkess" 
 ms.author: "barbkess"
 manager: "jhubbard"	  
-ms.prod: "analytics-platform-system" 
+ms.prod: "sql-non-specified"
+ms.prod_service: "mpp-data-warehouse"
+ms.service: ""
+ms.component: "analytics-platform-system"
+ms.suite: "sql"
+ms.custom: ""
 ms.technology: "mpp-data-warehouse"
 description: Transact-SQL (T-SQL) system views for Analytic Platform System (APS) SQL Server Parallel Data Warehouse (PDW).
 documentationcenter: NA

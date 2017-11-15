@@ -2,7 +2,7 @@
 title: "Adaptive query processing in Microsoft SQL databases | Microsoft Docs | Microsoft Docs"
 description: "Adaptive query processing features to improve query performance in SQL Server (2017 and later), and Azure SQL Database."
 ms.custom: 
-ms.date: "10/13/2017"
+ms.date: "11/13/2017"
 ms.prod: "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
@@ -177,7 +177,7 @@ Contrast the prior plan with the actual plan generated with interleaved executio
 1. Also notice that we no longer have spill-warnings, as we’re granting more memory based on the true row count flowing from the MSTVF table scan.
 
 ### Interleaved execution eligible statements
-MSTVF referencing statements in interleaved execution must currently be read-only and not part of a data modification operation. Also, the MSTVFs are not be eligible for interleaved execution if they are used on the inside of a CROSS APPLY.
+MSTVF referencing statements in interleaved execution must currently be read-only and not part of a data modification operation. Also, MSTVFs are not eligible for interleaved execution if they do not use runtime constants.
 
 ### Interleaved execution benefits
 In general, the higher the skew between the estimated vs. actual number of rows, coupled with the number of downstream plan operations, the greater the performance impact.

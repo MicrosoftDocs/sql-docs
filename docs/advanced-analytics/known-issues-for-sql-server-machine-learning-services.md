@@ -48,13 +48,15 @@ This issue is fixed in the release version. If you encounter this issue, as a wo
 
 ### Unable to install SQL Server machine learning features on a domain controller
 
-If you try to install SQL Server 2016 R Services or SQL Server 2017 Machine Learning Services on a domain controller, setup fails, with the error:
+If you try to install SQL Server 2016 R Services or SQL Server 2017 Machine Learning Services on a domain controller, setup fails, with these errors:
 
-   "An error occurred during the setup process of the feature... Cannot find group with identity..."
+>*"An error occurred during the setup process of the feature."*
+> 
+>*"Cannot find group with identity..."*
+> 
+>*"Component error code: 0x80131509"*
 
-Setup fails because on a domain controller, the service cannot create the 20 local accounts required to run machine learning. 
-
-In general, we do not recommend installing SQL Server on a domain controller. For more information, see [Support bulletin 2032911](https://support.microsoft.com/en-us/help/2032911/you-may-encounter-problems-when-installing-sql-server-on-a-domain-cont).
+The failure occurs because, on a domain controller, the service cannot create the 20 local accounts required to run machine learning. In general, we do not recommend installing SQL Server on a domain controller. For more information, see [Support bulletin 2032911](https://support.microsoft.com/en-us/help/2032911/you-may-encounter-problems-when-installing-sql-server-on-a-domain-cont).
 
 ### Install the latest service release to ensure compatibility with Microsoft R Client
 

@@ -1,7 +1,9 @@
 ---
 title: "Known issues in Machine Learning Services | Microsoft Docs"
-ms.date: "11/03/2017"
-ms.prod: "sql-server-2016"
+ms.date: "11/15/2017"
+ms.prod: 
+ - "sql-server-2016"
+ - "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -12,7 +14,7 @@ ms.assetid: 2b37a63a-5ff5-478e-bcc2-d13da3ac241c
 caps.latest.revision: 53
 author: "jeannt"
 ms.author: "jeannt"
-manager: "jhubbard"
+manager: "cgronlund"
 ms.workload: "On Demand"
 ---
 # Known issues in Machine Learning Services
@@ -43,6 +45,16 @@ If you install a pre-release version of SQL Server 2017 on a computer without in
 This issue is fixed in the release version. If you encounter this issue, as a workaround, you can temporarily enable internet access for the duration of the setup. This limitation does not apply to R.
 
 **Applies to:** SQL Server 2017 with Python
+
+### Unable to install SQL Server machine learning features on a domain controller
+
+If you try to install SQL Server 2016 R Services or SQL Server 2017 Machine Learning Services on a domain controller, setup fails, with the error:
+
+   "An error occurred during the setup process of the feature... Cannot find group with identity..."
+
+Setup fails because on a domain controller, the service cannot create the 20 local accounts required to run machine learning. 
+
+In general, we do not recommend installing SQL Server on a domain controller. For more information, see [Support bulletin 2032911](https://support.microsoft.com/en-us/help/2032911/you-may-encounter-problems-when-installing-sql-server-on-a-domain-cont).
 
 ### Install the latest service release to ensure compatibility with Microsoft R Client
 

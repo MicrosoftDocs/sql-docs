@@ -1,9 +1,9 @@
 ---
 title: "Install additional R packages on SQL Server | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "10/02/2017"
-ms.prod: "sql-server-2016"
+ms.date: "11/15/2017"
+ms.prod: 
+ - "sql-server-2016"
+ - "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,7 +14,7 @@ ms.assetid: 21456462-e58a-44c3-9d3a-68b4263575d7
 caps.latest.revision: 16
 author: "jeannt"
 ms.author: "jeannt"
-manager: "jhubbard"
+manager: "cgronlund"
 ms.workload: "On Demand"
 ---
 # Install additional R packages on SQL Server
@@ -24,7 +24,8 @@ This article describes how to install new R packages to an instance of SQL Serve
 > [!IMPORTANT]
 > The process for adding new packages differs depending on the version of SQL Server you are running, and the tools you are using. 
 
-**Applies to:** SQL Server 2016 R Services, SQL Server 2017 Machine Learning Services
+**Applies to:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]  [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] and  [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)]
+[!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
 ## Overview of package installation process
 
@@ -34,7 +35,9 @@ This article describes how to install new R packages to an instance of SQL Serve
 
     Be sure to check for package dependencies and get any related packages that might be needed during installation. To prepare a collection of packages and their dependencies, we recommend the [miniCRAN package](#bkmk_packageDependencies).
 
-3.  Package installation methods differ depending on whether the server has internet access, and on your version of SQL Server. The recommended processes are as follows:
+    If you get download or installation errors, try a different mirror site.
+
+3.  How you install the package depends on whether the server has internet access, and on your version of SQL Server. The recommended processes are as follows:
 
     **Package installation for SQL Server 2016**
     
@@ -145,7 +148,7 @@ If you have already enabled package management on the instance, you can install 
 
 1. Before you start, ensure that these conditions are met:
 
-    + The R client has the latest version of RevoScale. Pre-release versions did not include some package management functions.
+    + Use the latest version of Microsoft R Client, which includes updates to RevoScale.
     + Package management has been enabled on the instance and on the database.
     + You have permission to one of the database management roles.
 

@@ -1,0 +1,1 @@
+<Token>Microsoft SQL Operations Studio (preview)</Token>

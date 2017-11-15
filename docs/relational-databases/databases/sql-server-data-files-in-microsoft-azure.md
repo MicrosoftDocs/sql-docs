@@ -6,8 +6,6 @@ ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
 ms.service: ""
 ms.component: "databases"
- - "sql-server-2016"
- - "sql-server-2017"
 ms.reviewer: ""
 ms.suite: "sql"
 ms.technology: 

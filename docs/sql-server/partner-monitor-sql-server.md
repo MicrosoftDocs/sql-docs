@@ -36,7 +36,7 @@ To monitor your SQL Server services, choose from a wide variety of industry-lead
 
 
 ## Next steps
-To learn more about some of our other partners, see [High availability, and disaster recovery partners][hadr_partners], [management partners][management_partners], and [development partners][dev_partners].
+To learn more about some of our other partners, see [High availability and disaster recovery partners][hadr_partners], [management partners][management_partners], and [development partners][dev_partners].
 
 <!--Image references-->
 [1]: ./media/partner-hadr-sql-server/idera_logo.png

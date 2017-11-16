@@ -6,19 +6,23 @@ documentationcenter: ''
 author: MightyPen
 manager: jhubbard
 editor: BYHAM
-ms.service: na
+ms.service: ""
+ms.component: "t-sql"
+ms.suite: "sql"
 ms.topic: updart-autogen
 ms.technology: database-engine
-ms.custom: UpdArt.exe
+ms.custom: ""
 ms.tgt_pltfrm: na
 ms.devlang: na
 ms.topic: updart-autogen
 ms.date: 09/27/2017
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.author: genemi
 ms.workload: t-sql
 ---
 # New and Recently Updated: Transact-SQL docs
-
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
 
 Nearly every day Microsoft updates some of its existing articles on its [Docs.Microsoft.com](http://docs.microsoft.com/) documentation website. This article displays excerpts from recently updated articles. Links to new articles might also be listed.

@@ -3,8 +3,11 @@ title: "TRANSLATE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/16/2016"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-database"
+ms.service: ""
+ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -22,7 +25,7 @@ manager: "cguyer"
 ms.workload: "On Demand"
 ---
 # TRANSLATE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ssvNxt-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 Returns the string provided as a first argument after some characters specified in the second argument are translated into a destination set of characters.
 

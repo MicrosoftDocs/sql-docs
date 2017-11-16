@@ -29,7 +29,7 @@ manager: "jhubbard"
 ms.workload: "On Demand"
 ---
 # sys.dm_db_index_operational_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw--md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw--md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
 
   Returns current lowore-level I/O, locking, latching, and access method activity for each partition of a table or index in the database.    
     

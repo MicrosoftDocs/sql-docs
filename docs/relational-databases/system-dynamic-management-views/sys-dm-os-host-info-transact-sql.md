@@ -29,9 +29,7 @@ manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # sys.dm_os_host_info (Transact-SQL)
-[!INCLUDE[tsql-appliesto-sslinux-xxxx-xxxx-xxx](../../includes/tsql-appliesto-sslinux-xxxx-xxxx-xxx.md)]
-
-  Returns one row that displays operating system version information.  
+Returns one row that displays operating system version information.  
   
 |Column name |Data type |Description |  
 |-----------------|---------------|-----------------|  

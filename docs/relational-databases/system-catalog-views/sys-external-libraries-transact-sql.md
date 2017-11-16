@@ -2,9 +2,12 @@
 title: "sys.external_libraries (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/05/2017"
-ms.prod: "sql-server-2017"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "r-services"
 ms.tgt_pltfrm: ""
@@ -23,7 +26,7 @@ ms.author: "jeannt"
 manager: "jhubbard"
 ---
 # sys.external_libraries (Transact-SQL)  
-[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]  
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 
 Supports the management of package libraries related to external runtimes such as R or Python.

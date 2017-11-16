@@ -1,11 +1,13 @@
 ---
 title: "sys.column_encryption_keys  (Transact-SQL) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
+ms.custom: ""
 ms.date: "10/28/2015"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-data-warehouse"
+ms.service: ""
+ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -30,7 +32,7 @@ manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # sys.column_encryption_keys  (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-xxx-md.md)]
 
   Returns information about column encryption keys (CEKs) created with the [CREATE COLUMN ENCRYPTION KEY](../../t-sql/statements/create-column-encryption-key-transact-sql.md) statement. Each row represents a CEK.  
   

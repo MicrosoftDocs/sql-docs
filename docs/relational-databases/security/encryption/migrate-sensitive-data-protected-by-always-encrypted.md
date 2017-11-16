@@ -1,11 +1,13 @@
 ---
 title: "Migrate Sensitive Data Protected by Always Encrypted | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
+ms.custom: ""
 ms.date: "11/04/2015"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "security"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -20,6 +22,7 @@ manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # Migrate Sensitive Data Protected by Always Encrypted
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
  To load encrypted data without performing metadata checks on the server during bulk copy operations, create the user with the **ALLOW_ENCRYPTED_VALUE_MODIFICATIONS** option. This option is intended to be used by legacy tools from versions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] older than [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] (such as bcp.exe) or by using third-party Extract-Transform-Load (ETL) work flows that cannot use Always Encrypted. This allows a user to securely move encrypted data from one set of tables, containing encrypted columns, to another set of tables with encrypted columns (in the same or a different database).  
  -  
  -## The ALLOW_ENCRYPTED_VALUE_MODIFICATIONS Option  

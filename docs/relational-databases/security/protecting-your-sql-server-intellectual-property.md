@@ -3,8 +3,11 @@ title: "Protecting Your SQL Server Intellectual Property | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/31/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "security"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -20,7 +23,7 @@ manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # Protecting Your SQL Server Intellectual Property
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Software developers often ask how to distribute their [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] data application to customers, and yet prevent customers from analyzing and deconstructing their application. The key principal here, is that protecting your intellectual property, is a legal issue, and the protection rests in your license agreement. When [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] is installed on a computer that others administer, you inherently lose some aspects of control. 
 

@@ -23,6 +23,7 @@ manager: "jhubbard"
 ms.workload: "On Demand"
 ---
 # PolyBase T-SQL objects
+[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   To use  PolyBase, you must create external tables to reference your external data.  
   
  [CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)  

@@ -20,6 +20,7 @@ manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # Connecting to a Windows Azure SQL Database Using SQL Server Native Client
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   For a sample that shows how to connect to a [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] using [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, see [Development: How-to Topics (Windows Azure SQL Database)](http://msdn.microsoft.com/library/ee621787.aspx).  

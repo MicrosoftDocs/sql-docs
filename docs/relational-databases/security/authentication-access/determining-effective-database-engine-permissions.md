@@ -3,8 +3,11 @@ title: "Determining Effective Database Engine Permissions | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/03/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "security"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -20,7 +23,7 @@ manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # Determining Effective Database Engine Permissions
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 This topic describes how to determine who has permissions to various objects in the SQL Server Database Engine. SQL Server implements two permission systems for the Database Engine. An older system of fixed roles has preconfigured permissions. Beginning with SQL Server 2005 a more flexible and precise system is available. (The information in this topic applies to SQL Server, beginning with 2005. Some types of permissions are not available in some versions of SQL Server.)
 

@@ -1,11 +1,13 @@
 ---
 title: "Polygon | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
+ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "spatial"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-spatial"
 ms.tgt_pltfrm: ""
@@ -21,6 +23,7 @@ manager: "jhubbard"
 ms.workload: "On Demand"
 ---
 # Polygon
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   A **Polygon** is a two-dimensional surface stored as a sequence of points defining an exterior bounding ring and zero or more interior rings.  
   
 ## Polygon instances  

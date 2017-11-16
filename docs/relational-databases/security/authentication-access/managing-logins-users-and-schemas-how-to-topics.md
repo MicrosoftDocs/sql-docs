@@ -2,9 +2,12 @@
 title: "Managing Logins, Users, and Schemas How-to Topics | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "security"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -19,6 +22,7 @@ manager: "cguyer"
 ms.workload: "On Demand"
 ---
 # Managing Logins, Users, and Schemas How-to Topics
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   This page provides links to topics that show you how to manage [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] logins, database users, and database schemas, as well as how to join a role and grant permissions to a principal.  
   
 ## In This Section  

@@ -2,9 +2,12 @@
 title: "Create and Manage Full-Text Catalogs | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "search"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-search"
 ms.tgt_pltfrm: ""
@@ -20,6 +23,7 @@ manager: "jhubbard"
 ms.workload: "On Demand"
 ---
 # Create and Manage Full-Text Catalogs
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 A full-text catalog is a logical container for a group of full-text indexes. You have to create a full-text catalog before you can create a full-text index.
 
 A full-text catalog is a virtual object that does not belong to any filegroup.

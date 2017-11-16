@@ -2,9 +2,12 @@
 title: "Search for Words Close to Another Word with NEAR | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "search"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-search"
 ms.tgt_pltfrm: ""
@@ -27,6 +30,7 @@ manager: "jhubbard"
 ms.workload: "On Demand"
 ---
 # Search for Words Close to Another Word with NEAR
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   You can use the *proximity term* **NEAR** in a [CONTAINS](../../t-sql/queries/contains-transact-sql.md) predicate or [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) function to search for words or phrases near one another. 
   
 ##  <a name="Custom_NEAR"></a> Overview of NEAR  

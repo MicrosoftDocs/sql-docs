@@ -2,9 +2,12 @@
 title: "Use sqlcmd with Scripting Variables | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2016"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "ssms"
+ms.service: ""
+ms.component: "scripting"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -25,6 +28,7 @@ manager: "jhubbard"
 ms.workload: "On Demand"
 ---
 # sqlcmd - Use with Scripting Variables
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   Variables that are used in scripts are called scripting variables. Scripting variables enable one script to be used in multiple scenarios. For example, if you want to run one script against multiple servers, instead of modifying the script for each server, you can use a scripting variable for the server name. By changing the server name supplied to the scripting variable, the same script can be executed on different servers.  
   
  Scripting variables can be defined explicitly by using the **setvar** command, or implicitly by using the **sqlcmd-v** option.  

@@ -2,9 +2,12 @@
 title: "Programming Specific Tasks | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "smo"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "docset-sql-devref"
 ms.tgt_pltfrm: ""
@@ -25,6 +28,7 @@ manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # Programming Specific Tasks
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Programming-specific tasks using SMO objects include complex subjects that would only be required by programs with a specific function, such as backing up, monitoring statistics, replication, managing instance objects, and setting configuration options.  
   
 |Topic|Description|  

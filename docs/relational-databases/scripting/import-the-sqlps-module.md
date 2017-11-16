@@ -2,9 +2,12 @@
 title: "Import the SQLPS Module | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/01/2016"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "ssms"
+ms.service: ""
+ms.component: "scripting"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -17,6 +20,7 @@ manager: "jhubbard"
 ms.workload: "Active"
 ---
 # Import the SQLPS Module
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   The recommended way to manage [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from PowerShell is to import the **sqlps** module into a Windows PowerShell environment. The module loads and registers the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] snap-ins and manageability assemblies.  Beginning in Windows PowerShell 3.0, modules are imported automatically when any cmdlet or function in the module is used in a command. This feature works on any module in a directory that this included in the value of the PSModulePath environment variable.  For additional information, see [Importing a PowerShell Module](https://msdn.microsoft.com/library/dd878284(v=vs.85).aspx)
   
 1.  **Before You Begin:**  [Security](#Security)  

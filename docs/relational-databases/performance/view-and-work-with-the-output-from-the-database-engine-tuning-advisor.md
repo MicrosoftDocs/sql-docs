@@ -2,9 +2,12 @@
 title: "View and Work with the Output from the Database Engine Tuning Advisor | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "performance"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -33,7 +36,7 @@ manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # View and Work with the Output from the Database Engine Tuning Advisor
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   When the Database Engine Tuning Advisor tunes databases, it creates summaries, recommendations, reports, and tuning logs. You can use the tuning log output to troubleshoot Database Engine Tuning Advisor tuning sessions. You can use the summaries, recommendations, and reports to determine whether you want to implement tuning recommendations or continue tuning until you achieve the query performance improvements that you need for your [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation. For information about how to use the Database Tuning Advisor to create workloads and tune a database, see [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
   

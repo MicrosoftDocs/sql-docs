@@ -2,9 +2,12 @@
 title: "Database Engine Tutorials | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/02/2016"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "relational-databases-misc"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-query-tuning"
 ms.tgt_pltfrm: ""
@@ -17,6 +20,7 @@ manager: "jhubbard"
 ms.workload: "On Demand"
 ---
 # Database Engine Tutorials
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 This section contains tutorials for [!INCLUDE[ssDECurrent](../includes/ssdecurrent-md.md)].  
   
 [Tutorial: Getting Started with the Database Engine](../relational-databases/tutorial-getting-started-with-the-database-engine.md)  

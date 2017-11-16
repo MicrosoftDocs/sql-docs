@@ -2,9 +2,12 @@
 title: "New Publication Wizard | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "replication"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
@@ -47,6 +50,7 @@ manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # New Publication Wizard
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   This section provides information on the following pages of the New Publication Wizard:  
   
 -   [Oracle Publisher](../../relational-databases/replication/oracle-publisher.md)  

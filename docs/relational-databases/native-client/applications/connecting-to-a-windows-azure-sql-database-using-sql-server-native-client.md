@@ -1,13 +1,13 @@
 ---
 title: "Connecting to a Windows Azure SQL Database Using SQL Server Native Client | Microsoft Docs"
-ms.custom: 
-  - "MSDN content"
-  - "MSDN - SQL DB"
+ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: 
+ms.prod: ""
+ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.service: "sql-database"
-ms.suite: ""
+ms.component: "native-client|applications"
+ms.suite: "sql"
 ms.technology: 
   - "docset-sql-devref"
 ms.tgt_pltfrm: ""

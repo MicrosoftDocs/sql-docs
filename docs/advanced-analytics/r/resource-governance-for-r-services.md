@@ -29,9 +29,9 @@ This article provides an overview of resource governance features in SQL Server 
 
 One known pain point with machine learning languages such as R and Python is that data is often moved outside the database to computers not controlled by IT. Another is that R is single-threaded, meaning that you can only work with the data available in memory. 
 
-SQL Server Machine Learning Services alleviates both these problems, and helps meet enterprise-level compliance requirements. It keeps advanced analytics inside the database, and supports increased performance over large datasets through features such as streaming and chunking operations. However, moving R and Python computations inside the databases can affect the performance of other services that use the database, including regular user quesries, external applications, and scheduled database jobs.
+SQL Server Machine Learning Services alleviates both these problems, and helps meet enterprise compliance requirements. It keeps advanced analytics inside the database, and supports increased performance over large datasets through features such as streaming and chunking operations. However, moving R and Python computations inside the databases can affect the performance of other services that use the database, including regular user queries, external applications, and scheduled database jobs.
 
-This section provides information about how you can manage resources used by external runtimes, such as R and Python, to mitigate impact on other core database services. A database server environment typically is the hub for multiple dependent applications and services. 
+This section provides information about how you can manage resources used by external runtimes, such as R and Python, to mitigate impact on other core database services. A database server environment typically is the hub for multiple dependent applications and services.
 
 You can use [Resource Governor](../../relational-databases/resource-governor/resource-governor.md) to manage the resources used by the external runtimes for R and Python.  For machine learning, resource governance involves these tasks:
 
@@ -45,7 +45,7 @@ You can use [Resource Governor](../../relational-databases/resource-governor/res
   
 -   Prioritizing workloads.
   
-     The administrator or architect needs to be able to specify workloads that must take precedence, or guarantee certain workloads to complete if there is resource contention.
+     The administrator or architect needs to be able to specify workloads that must take precedence, or guarantee certain workloads to complete when there is resource contention.
 
 ## How to use Resource Governor to manage machine learning
  

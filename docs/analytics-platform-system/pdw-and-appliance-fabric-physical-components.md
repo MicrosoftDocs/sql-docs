@@ -1,14 +1,18 @@
 ---
-title: "PDW and Appliance Fabric Physical Components (Analytics Platform System)"
+title: "PDW and Appliance Fabric Physical Components (Analytics Platform System)"
+
 author: "barbkess" 
 ms.author: "barbkess"
 manager: "jhubbard"	  
-ms.prod: "analytics-platform-system" 
+ms.prod: "sql-non-specified"
+ms.prod_service: "mpp-data-warehouse"
+ms.service: ""
+ms.component: "analytics-platform-system"
 ms.technology: "mpp-data-warehouse"
-ms.custom: na
+ms.custom: ""
 ms.date: 01/05/2017
 ms.reviewer: na
-ms.suite: na
+ms.suite: "sql"
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7748d3da-0b7c-4ec6-9c22-4897758ba573

@@ -90,7 +90,7 @@ To clear and remove the credentials that you provided as described in this artic
     ```
 
 ## Connect to file shares
-You can use Windows authentication to connect to file shares in the same virtual network as the Azure SSIS Integration Runtime, both on premises and on Azure virtual machines and in Azure Files.
+You can use Windows authentication to connect to file shares in the same virtual network as the Azure SSIS Integration Runtime, both on premises and on Azure virtual machines and in Azure Files. For more info about Azure Files, see [Azure Files](https://azure.microsoft.com/services/storage/files/).
 
 To connect to a file share on an Azure virtual machine or Azure file share, do the following things:
 

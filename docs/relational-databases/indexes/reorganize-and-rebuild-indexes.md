@@ -2,9 +2,12 @@
 title: "Reorganize and Rebuild Indexes | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/10/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "indexes"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-indexes"
 ms.tgt_pltfrm: ""
@@ -37,7 +40,7 @@ manager: "jhubbard"
 ms.workload: "Active"
 ---
 # Reorganize and Rebuild Indexes
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
  > For content related to previous versions of SQL Server, see [Reorganize and Rebuild Indexes](https://msdn.microsoft.com/en-US/library/ms189858(SQL.120).aspx).
 

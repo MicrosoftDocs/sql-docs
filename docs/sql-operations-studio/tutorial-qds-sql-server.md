@@ -2,7 +2,7 @@
 title: "Tutorial: Enable the five slowest queries sample widget - SQL Operations Studio (preview)  | Microsoft Docs"
 description: This tutorial demonstrates how to enable the five slowest queries sample widget on the database dashboard.
 ms.custom: "tools|sos"
-ms.date: "11/15/2017"
+ms.date: "11/16/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: "alayu; erickang; sstein"
 ms.suite: "sql"
@@ -58,9 +58,29 @@ To add an insight widget to your dashboard, edit the *dashboard.database.widgets
 
 3. To customize the **dashboard.database.widgets** setting, hover over the pencil icon to the left of the **dashboard.database.widgets** text, click **Edit** > **Copy to Settings**.
 
-4. Using [!INCLUDE[name-sos](../includes/name-sos-short.md)]'s insight settings IntelliSense, configure *name* for the widget title, *gridItemConfig* for the widget size, and *widget* by selecting **query-data-store-db-insight** from the list as shown in the following screenshot:
+4. After copying the settings for **dashboard.database.widgets**, place your cursor at the end of the line after the opening bracket, press **Enter**, and add a curly brace like the following (the closing brace will automatically appear):
 
-   ![Insight qds settings](./media/tutorial-qds-sql-server/insight-qds-settings.png)
+   ```json
+   "dashboard.database.widgets": [
+   {}
+   ```
+5. With your cursor inside the curly braces, press **Ctrl+Space** and select **name**. 
+6. Finish setting up the widget so it looks like the following:
+
+   ```json
+    "dashboard.database.widgets": [
+        {
+            "name": "slow queries widget",
+            "gridItemConfig": {
+                "sizex": 2,
+                "sizey": 1
+            },
+            "widget": {
+                "query-data-store-db-insight": null
+            }
+        }
+    ...
+    ```
 
 5. Press **Ctrl+S** to save the modified **User Settings**.
 

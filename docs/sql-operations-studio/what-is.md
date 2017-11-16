@@ -38,7 +38,7 @@ Create rich customizable dashboards to monitor and quickly troubleshoot performa
 
 ## Connection management (server groups)
 
-Server groups provide a way to organize and share connection information for the servers and databases you work with. For details, see [Server groups](server-groups.md).
+Server groups provide a way to organize connection information for the servers and databases you work with. For details, see [Server groups](server-groups.md).
 
 ## Integrated Terminal
 

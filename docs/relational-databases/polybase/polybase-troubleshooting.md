@@ -25,7 +25,6 @@ manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # PolyBase troubleshooting
-[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
 
   To troubleshoot PolyBase, use the techniques found in this topic.  
   

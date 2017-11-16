@@ -22,8 +22,7 @@ manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # New Subscription Wizard (UI Reference)
-[!INCLUDE[appliesto-ss-asdbx-xxxx-xxx-md](../../includes/appliesto-ss-asdbx-xxxx-xxx-md.md)]
-  This section provides information on the following pages of the New Subscription Wizard:  
+This section provides information on the following pages of the New Subscription Wizard:  
   
 -   [&#60;AgentName&#62; Agent Location](../../relational-databases/replication/agentname-agent-location.md)  
   

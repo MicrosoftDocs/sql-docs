@@ -64,7 +64,7 @@ To add an insight widget to your dashboard, edit the *dashboard.database.widgets
    "dashboard.database.widgets": [
    {}
    ```
-5. With your cursor inside the curly braces, press **Ctrl+Space** and select **Name**. 
+5. With your cursor inside the curly braces, press **Ctrl+Space** and select **name**. 
 6. Finish setting up the widget so it looks like the following:
 
    ```json

@@ -73,15 +73,13 @@ To add an insight widget to your dashboard, edit the *dashboard.database.widgets
             "name": "slow queries widget",
             "gridItemConfig": {
                 "sizex": 2,
-                "sizey": 0
+                "sizey": 1
             },
             "widget": {
                 "query-data-store-db-insight": null
             }
-        },
-        {
-            "name": "Tasks",
-       ...
+        }
+    ...
     ```
 
 5. Press **Ctrl+S** to save the modified **User Settings**.

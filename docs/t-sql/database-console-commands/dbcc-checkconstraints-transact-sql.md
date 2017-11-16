@@ -1,7 +1,7 @@
 ---
 title: "DBCC CHECKCONSTRAINTS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/16/2017"
+ms.date: "11/14/2017"
 ms.prod: "sql-non-specified"
 ms.reviewer: ""
 ms.suite: ""
@@ -30,7 +30,7 @@ manager: "jhubbard"
 ms.workload: "On Demand"
 ---
 # DBCC CHECKCONSTRAINTS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Checks the integrity of a specified constraint or all constraints on a specified table in the current database.
   

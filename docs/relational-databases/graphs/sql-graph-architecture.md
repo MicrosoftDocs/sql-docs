@@ -1,10 +1,13 @@
 ---
 title: "SQL Graph Architecture | Microsoft Docs"
-ms.custom: Learn SQL graph architecture. A graph is a collection of node or edge tables. Node tables represent entities and edge tables represent relationships between nodes. 
+ms.custom: ""
 ms.date: "04/19/2017"
-ms.prod: "sql-server-2017"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "graphs"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -20,7 +23,7 @@ manager: "jhubbard"
 ms.workload: "On Demand"
 ---
 # SQL Graph Architecture  
-[!INCLUDE[tsql-appliesto-ssvnxt-asdb-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-asdb-xxxx-xxx.md)]   
+[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
 Learn how SQL Graph is architected. Knowing the basics will make it easier to understand other SQL Graph articles.
  

@@ -4,7 +4,7 @@
 # [CREATE DIAGNOSTICS SESSION](create-diagnostics-session-transact-sql.md)  
 # [NULL and UNKNOWN](null-and-unknown-transact-sql.md)  
 # [USE](use-transact-sql.md)  
-# [Backslash](sql-server-utilities-statements-backslash.md)  
+# [Backslash (Line Continuation)](sql-server-utilities-statements-backslash.md)  
 # [GO](sql-server-utilities-statements-go.md)  
 
 # [Control-of-Flow](control-of-flow.md)  

@@ -1,14 +1,18 @@
 ---
-title: "Appliance Network Configuration (Analytics Platform System)"
+title: "Appliance Network Configuration (Analytics Platform System)"
+
 author: "barbkess" 
 ms.author: "barbkess"
 manager: "jhubbard"	  
-ms.prod: "analytics-platform-system" 
+ms.prod: "sql-non-specified"
+ms.prod_service: "mpp-data-warehouse"
+ms.service: ""
+ms.component: "analytics-platform-system"
 ms.technology: "mpp-data-warehouse"
-ms.custom: na
+ms.custom: ""
 ms.date: 01/05/2017
 ms.reviewer: na
-ms.suite: na
+ms.suite: "sql"
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8e2b9abe-963d-479b-a4a7-1739fcb3e249

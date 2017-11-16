@@ -2,9 +2,12 @@
 title: "Post-migration Validation and Optimization Guide | Microsoft Docs"
 ms.custom: ""
 ms.date: "5/03/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "relational-databases-misc"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -20,7 +23,7 @@ manager: ""
 ms.workload: "Inactive"
 ---
 # Post-migration Validation and Optimization Guide
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] post migration step is very crucial for reconciling any data accuracy and completeness, as well as uncover performance issues with the workload.
 

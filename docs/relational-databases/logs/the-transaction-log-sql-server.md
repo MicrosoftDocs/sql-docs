@@ -2,9 +2,12 @@
 title: "The Transaction Log (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/03/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "logs"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-transaction-log"
 ms.tgt_pltfrm: ""
@@ -21,6 +24,7 @@ manager: "jhubbard"
 ms.workload: "Active"
 ---
 # The Transaction Log (SQL Server)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Every SQL Server database has a transaction log that records all transactions and the database modifications made by each transaction.
   
 The transaction log is a critical component of the database. If there is a system failure, you will need that log to bring your database back to a consistent state. 

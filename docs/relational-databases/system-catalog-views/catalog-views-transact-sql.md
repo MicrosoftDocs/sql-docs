@@ -3,8 +3,11 @@ title: "Catalog Views (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/02/2016"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -29,7 +32,7 @@ manager: "cguyer"
 ms.workload: "On Demand"
 ---
 # System Catalog Views (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   Catalog views return information that is used by the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. We recommend that you use catalog views because they are the most general interface to the catalog metadata and provide the most efficient way to obtain, transform, and present customized forms of this information. All user-available catalog metadata is exposed through catalog views.  
   

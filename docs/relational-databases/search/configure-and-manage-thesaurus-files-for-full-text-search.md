@@ -2,9 +2,12 @@
 title: "Configure and Manage Thesaurus Files for Full-Text Search | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "search"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-search"
 ms.tgt_pltfrm: ""
@@ -21,6 +24,7 @@ manager: "jhubbard"
 ms.workload: "On Demand"
 ---
 # Configure and Manage Thesaurus Files for Full-Text Search
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Full-Text Search queries can search for synonyms of user-specified terms through the use of a Full-Text Search *thesaurus*. Each thesaurus defines a set of synonyms for a specific language. By developing a thesaurus tailored to your full-text data, you can effectively broaden the scope of full-text queries on that data.
 
 Thesaurus matching occurs for all [FREETEXT](../../t-sql/queries/freetext-transact-sql.md) and [FREETEXTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) queries and for any [CONTAINS](../../t-sql/queries/contains-transact-sql.md) and [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) queries that specify the `FORMSOF THESAURUS` clause.

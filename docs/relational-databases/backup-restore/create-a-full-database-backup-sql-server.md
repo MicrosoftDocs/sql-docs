@@ -2,9 +2,12 @@
 title: "Create a Full Database Backup (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/13/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "backup-restore"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-backup-restore"
 ms.tgt_pltfrm: ""
@@ -22,7 +25,7 @@ manager: "jhubbard"
 ms.workload: "Active"
 ---
 # Create a Full Database Backup (SQL Server)
-
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
  > For SQL Server 2014, go to [Create a Full Database Backup (SQL Server)](https://msdn.microsoft.com/en-US/library/ms187510(SQL.120).aspx).
 
   This topic describes how to create a full database backup in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or PowerShell.  

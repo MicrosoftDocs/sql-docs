@@ -133,7 +133,7 @@ All of the currently supported distributions ship a high availability add on/ext
 > The cluster stack is commonly referred to as Pacemaker in the Linux world.
 
 This solution in some ways is similar to, but in many ways is different from deploying clustered configurations using Windows Server. In Windows Server, the availability form of clustering called a Failover Cluster (WSFC) is built into the operating system and the feature that enables the creation of a WSFC, Failover Clustering, is disabled by default. AGs and FCIs are built on top of a WSFC, and share tight integration because of the specific resource DLL that is provided by SQL Server. This tightly coupled solution is possibly by and large because it is all from one vendor.
-![](./media/sql-server-ha-linux-basics/media/image1.png)
+![](./media/sql-server-ha-linux-basics/image1.png)
 On Linux, while each supported distribution has Pacemaker available, each distribution can customize and have slightly different implementations and versions. Some of the differences will be reflected in the instructions in this document. The clustering layer is open source, so even though it ships with the distributions, it is not tightly integrated in the same way a WSFC is under Windows Server. This is why Microsoft provides `mssql-server-ha` so that SQL Server and Pacemaker stack can provide as close to, but not exactly the same, experience for AGs and FCIs under Windows Server.
 For full documentation on Pacemaker, including a more in-depth explanation of what everything is with full reference information for RHEL and SUSE. Ubuntu does not have a guide for availability.
 -   [RHEL](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/ch-overview-HAAR.html)
@@ -292,7 +292,7 @@ The process for creating a Pacemaker cluster is completely different on SUSE tha
 6.  Change the hacluster password
     `sudo passwd hacluster`
 8.  If you configured an IP address for administration, you can test it in a browser. This will also test the password change for `hacluster`.
-    ![](./media/sql-server-ha-linux-basics/media/image2.png)
+    ![](./media/sql-server-ha-linux-basics/image2.png)
 9.  On another SUSE server that will be a node of the cluster, run
     `sudo ha-cluster-join`
 10. When prompted, enter the name or IP address of the server that was configured as the first node of the cluster in the previous steps. The server will be added as a node to the existing cluster.

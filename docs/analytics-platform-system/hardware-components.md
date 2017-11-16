@@ -1,10 +1,16 @@
 ---
 
-title: "Analytics Platform System hardware components"
+title: "Analytics Platform System hardware components"
+
 author: "barbkess" 
 ms.author: "barbkess"
 manager: "jhubbard"	  
-ms.prod: "analytics-platform-system" 
+ms.prod: "sql-non-specified"
+ms.prod_service: "mpp-data-warehouse"
+ms.service: ""
+ms.component: "analytics-platform-system"
+ms.suite: "sql"
+ms.custom: ""
 ms.technology: "mpp-data-warehouse"
 description: "Analytics Platform System (APS) uses scalable components so that you can buy the right amount of processing and storage according to your business requirements."
 ms.date: "10/20/2016"

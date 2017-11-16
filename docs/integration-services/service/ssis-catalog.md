@@ -593,7 +593,10 @@ To run the **SSIS Server Maintenance Job**, SSIS creates the SQL Server login **
 > [!IMPORTANT]  
 > -   You must perform these steps on the **primary node** of the availability group.
 > -   You must enable **SSIS support for Always On** *after* you add SSISDB to an Always On Availability Group.  
-  
+
+> [!NOTE]
+> For additional details about this procedure, with screen shots, see this walkthrough by SQL Server Marcos Freccia: [Adding SSISDB to AG for SQL Server 2016](https://marcosfreccia.wordpress.com/2017/04/28/adding-ssisdb-to-ag-for-sql-server-2016/).
+
 ####  <a name="Step1"></a> Step 1: Create Integration Services Catalog  
   
 1.  Launch **SQL Server Management Studio** and connect to a SQL Server instance in the cluster that you want to set as the **primary node** of Always On high availability group for SSISDB.  
@@ -607,9 +610,11 @@ To run the **SSIS Server Maintenance Job**, SSIS creates the SQL Server login **
 5.  Enter a **password**, and then click **Ok**. The password protects the database master key that is used for encrypting the catalog data. Save the password in a secure location. It is recommended that you also back up the database master key. For more information, see [Back Up a Database Master Key](../../relational-databases/security/encryption/back-up-a-database-master-key.md).  
   
 ####  <a name="Step2"></a> Step 2: Add SSISDB to an Always On Availability Group  
- Adding the SSISDB database to an Always On Availability Group is almost same as adding any other user database into an availability group. See [Use the Availability Group Wizard](../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md).  
+Adding the SSISDB database to an Always On Availability Group is almost same as adding any other user database into an availability group. See [Use the Availability Group Wizard](../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md).  
   
- You need to provide the password that you specified while creating the SSIS Catalog in the **Select Databases** page of the **New Availability Group** wizard.  
+You need to provide the password that you specified while creating the SSIS Catalog in the **Select Databases** page of the **New Availability Group** wizard.
+
+When you're prompted to **Select your data synchronization preference**, select **Skip initial data synchronization**.
   
  ![New Availability Group](../../integration-services/service/media/ssis-newavailabilitygroup.png "New Availability Group")  
   

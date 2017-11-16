@@ -1,11 +1,13 @@
 ---
 title: "Implementing a CASE Expression in a Natively Compiled Stored Procedure | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
+ms.custom: ""
 ms.date: "04/24/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "in-memory-oltp"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine-imoltp"
 ms.tgt_pltfrm: ""
@@ -18,7 +20,7 @@ manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # Implementing a CASE Expression in a Natively Compiled Stored Procedure
-[!INCLUDE[tsql-appliesto-ssvnxt-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ssvnxt-asdb-xxxx-xxx.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   CASE expressions are supported in natively compiled stored procedures. The following example demonstrates a way to use
 the CASE expression in a query. The workaround described for CASE expressions in natively compiled modules would be no longer needed.

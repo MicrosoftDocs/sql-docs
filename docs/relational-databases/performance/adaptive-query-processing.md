@@ -1,11 +1,14 @@
 ---
 title: "Adaptive query processing in Microsoft SQL databases | Microsoft Docs | Microsoft Docs"
 description: "Adaptive query processing features to improve query performance in SQL Server (2017 and later), and Azure SQL Database."
-ms.custom: 
+ms.custom: ""
 ms.date: "11/13/2017"
-ms.prod: "sql-server-2017"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "performance"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
 ms.tgt_pltfrm: ""
 ms.topic: "article"
@@ -16,10 +19,8 @@ ms.author: "josack;monicar"
 manager: "jhubbard"
 ms.workload: "On Demand"
 ---
-
 # Adaptive query processing in SQL databases
-
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 This article introduces these adaptive query processing features that you can use to improve query performance in SQL Server and Azure SQL Database:
 - Batch mode memory grant feedback.

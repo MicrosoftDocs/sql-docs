@@ -1,11 +1,13 @@
 ---
 title: "Lesson 4: Restore database to virtual machine from URL | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
+ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "tutorial"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "dbe-backup-restore"
 ms.tgt_pltfrm: ""
@@ -20,6 +22,7 @@ manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # Lesson 4: Restore database to virtual machine from URL
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 In this lesson, you will restore the AdventureWorks2014 database to your SQL Server 2016 instance in your Azure virtual machine the AdventureWorks2014 database.  
   
 > [!NOTE]  

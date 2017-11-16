@@ -2,9 +2,12 @@
 title: "SQL:StmtRecompile Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "event-classes"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -19,6 +22,7 @@ manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # SQL:StmtRecompile Event Class
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   The SQL:StmtRecompile event class indicates statement-level recompilations caused by all types of batches: stored procedures, triggers, ad hoc batches, and queries. Queries can be submitted by using sp_executesql, dynamic SQL, Prepare methods, Execute methods, or similar interfaces. The SQL:StmtRecompile event class should be used instead of the SP:Recompile event class.  
   
 ## SQL:StmtRecompile Event Class Data Columns  

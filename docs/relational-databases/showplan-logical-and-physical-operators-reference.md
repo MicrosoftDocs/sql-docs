@@ -2,9 +2,12 @@
 title: "Showplan Logical and Physical Operators Reference | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/12/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database"
+ms.service: ""
+ms.component: "relational-databases-misc"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -142,6 +145,7 @@ manager: "jhubbard"
 ms.workload: "On Demand"
 ---
 # Showplan Logical and Physical Operators Reference
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Operators describe how [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] executes a query or a Data Manipulation Language (DML) statement. The query optimizer uses operators to build a query plan to create the result specified in the query, or to perform the operation specified in the DML statement. The query plan is a tree consisting of physical operators. You can view the query plan by using the SET SHOWPLAN statements, the graphical execution plan options in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], or the SQL Server Profiler Showplan event classes.  
   
  Operators are classified as logical and physical operators.  

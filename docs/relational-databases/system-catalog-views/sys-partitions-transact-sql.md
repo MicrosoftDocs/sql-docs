@@ -29,7 +29,7 @@ manager: "cguyer"
 ms.workload: "On Demand"
 ---
 # sys.partitions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw--md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw--md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
 
   Contains a row for each partition of all the tables and most types of indexes in the database. Special index types such as Full-Text, Spatial, and XML are not included in this view. All tables and indexes in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contain at least one partition, whether or not they are explicitly partitioned.  
   

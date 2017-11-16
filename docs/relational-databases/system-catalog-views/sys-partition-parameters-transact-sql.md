@@ -29,7 +29,7 @@ manager: "cguyer"
 ms.workload: "Inactive"
 ---
 # sys.partition_parameters (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw--md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw--md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
 
   Contains a row for each parameter of a partition function.  
   

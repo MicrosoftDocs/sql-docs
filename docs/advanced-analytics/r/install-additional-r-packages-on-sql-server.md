@@ -1,9 +1,9 @@
 ---
 title: "Install additional R packages on SQL Server | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "10/02/2017"
-ms.prod: "sql-server-2016"
+ms.date: "11/15/2017"
+ms.prod: 
+ - "sql-server-2016"
+ - "sql-server-2017"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,7 +14,7 @@ ms.assetid: 21456462-e58a-44c3-9d3a-68b4263575d7
 caps.latest.revision: 16
 author: "jeannt"
 ms.author: "jeannt"
-manager: "jhubbard"
+manager: "cgronlund"
 ms.workload: "On Demand"
 ---
 # Install additional R packages on SQL Server
@@ -24,7 +24,8 @@ This article describes how to install new R packages to an instance of SQL Serve
 > [!IMPORTANT]
 > The process for adding new packages differs depending on the version of SQL Server you are running, and the tools you are using. 
 
-**Applies to:** SQL Server 2016 R Services, SQL Server 2017 Machine Learning Services
+**Applies to:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]  [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] and  [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)]
+[!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
 ## Overview of package installation process
 
@@ -34,7 +35,9 @@ This article describes how to install new R packages to an instance of SQL Serve
 
     Be sure to check for package dependencies and get any related packages that might be needed during installation. To prepare a collection of packages and their dependencies, we recommend the [miniCRAN package](#bkmk_packageDependencies).
 
-3.  Package installation methods differ depending on whether the server has internet access, and on your version of SQL Server. The recommended processes are as follows:
+    If you get download or installation errors, try a different mirror site.
+
+3.  How you install the package depends on whether the server has internet access, and on your version of SQL Server. The recommended processes are as follows:
 
     **Package installation for SQL Server 2016**
     
@@ -56,13 +59,13 @@ This article describes how to install new R packages to an instance of SQL Serve
 
 ## Install new packages
 
-This section provide detailed procedures for the following key package installation scenarios. The best method for you to use depends on these factores:
+This section provide detailed procedures for key package installation scenarios. Choose the best method, depending on:
 
 - The version of SQL Server you are using
 
-- Whether you are the sole owner of the instance, or are trying to mamaneg packages for multiple people using database roles.
+- Whether you are the sole owner of the instance, or are trying to manage packages for multiple people using database roles.
 
-- Whether you are installing one packages, or multiple packages with dependencies
+- Whether you are installing one package, or multiple packages with dependencies
 
 **Use SQL Server package management**
 
@@ -80,7 +83,7 @@ If your instance supports package management features, you can use either T-SQL 
 
     [Install multiple packages from a miniCRAN repository](#bkmk_minicran)
 
-**Use conventional R rools**
+**Use conventional R tools**
 
 If you are using an earlier version of SQL Server R services, follow these instructions to install packages using conventional R tools. Optionally, use miniCRAN to prepare a collection of packages for installation.
 
@@ -100,7 +103,7 @@ If you are using an earlier version of SQL Server R services, follow these instr
 
 2. Connect to the server using an account that has permissions to install new packages, using one of the supported database roles described in this topic: [R package management for SQL Server](r-package-management-for-sql-server-r-services.md)
 
-3.  Copy the zipped file containing the R package you want to install to a folder on the server computer, such as your **Users** or **Documents** folder. You cannot add a package from a networked drive or from a folder on the client computer. If you have used miniCRAN to create a package repository, copy the package repository in its entirety to any local folder on the server: i.e., not on a networked drive.
+3.  Copy the zipped file containing the R package you want to install to a folder on the server computer, such as your **Users** or **Documents** folder. You cannot add a package from a networked drive or from a folder on the client computer. If you have used miniCRAN to create a package repository, copy the package repository in its entirety to any local folder on the server: that is, not on a networked drive.
 
     If you don't have access to any folders on the server, you can pass the package contents in binary format. See [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) for an example.
 
@@ -108,7 +111,7 @@ If you are using an earlier version of SQL Server R services, follow these instr
     LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)
     statement.
 
-    For this example, we'll assume that your account has permission to upload new packages to the server and install them to shared scope in the database.
+    For this example, we assume that your account has permission to upload new packages to the server and install them to **shared** scope in the database.
 
     The following statement adds the release version of the [zoo](https://cran.r-project.org/web/packages/zoo/index.html) package into the current database context, from a local fileshare.
 
@@ -132,7 +135,7 @@ If you are using an earlier version of SQL Server R services, follow these instr
     library(zoo)'
     ```
 
-    If successful, the **Messages** window should report a message such as "package 'zoo' successfully unpacked and MD5 sums checked". If a required package is already installed, the installation process will attach and load the required package.
+    If successful, the **Messages** window should report a message such as "package 'zoo' successfully unpacked and MD5 sums checked." If a required package is already installed, the installation process then attaches and loads the required package.
 
     > [!NOTE]
     > If a required package is not available, an error is returned: "there is no package called \<required_package\>". 
@@ -145,7 +148,7 @@ If you have already enabled package management on the instance, you can install 
 
 1. Before you start, ensure that these conditions are met:
 
-    + The R client has the latest version of RevoScale. Pre-release versions did not include some package management functions.
+    + Use the latest version of Microsoft R Client, which includes updates to RevoScale.
     + Package management has been enabled on the instance and on the database.
     + You have permission to one of the database management roles.
 
@@ -215,7 +218,7 @@ You can use R tools to install new packages on both SQL Server 2016 and SQL Serv
 
     When asked for a mirror site, select any site that is convenient for your location.
 
-    If the target package depends on additional packages, the R installer will automatically download the dependencies and install them for you.
+    If the target package depends on additional packages, the R installer automatically downloads the dependencies and installs them for you.
 
     **Install package manually or on a computer with no Internet access**
 
@@ -231,7 +234,7 @@ You can use R tools to install new packages on both SQL Server 2016 and SQL Serv
 
 ### <a name="bkmk_minicran"></a> Install multiple packages from a miniCRAN repository
 
-If you are installing packages from a miniCRAN repository, the overall process is very similar to installing a package from a single zipped file. However, rather than uploading an individual package in zipped format, the miniCRAN repository contains the target package as well as any related required packages.
+The overall process of installing packages from a miniCRAN repository is similar to installing a package from a single zipped file. However, rather than uploading an individual package in zipped format, the miniCRAN repository contains the target package as well as any related required packages.
 
 1.  Prepare the miniCRAN repository and then copy the zipped file to a local folder on the server.
 
@@ -255,7 +258,7 @@ If you are installing packages from a miniCRAN repository, the overall process i
     library(randomForest)'
     ```
 
-    If successful, the **Messages** window should report a message such as "package 'randomForest' successfully unpacked and MD5 sums checked" and also "Finished chained execution".
+    If successful, the **Messages** window should report a message such as "package 'randomForest' successfully unpacked and MD5 sums checked" and "Finished chained execution".
 
 ## Package installation tips
 
@@ -263,11 +266,11 @@ This section provides assorted tips and sample code related to R package install
 
 ###  <a name="packageVersion"></a> Get the correct package version and format
 
-There are multiple sources for R packages, the best known among them being CRAN and Bioconductor. The official site for the R language (<https://www.r-project.org/>) lists many of these resources. Many packages are also published to GitHub, where you can obtain the source code. However, you may also have been given R packages that were developed by someone in your company.
+There are multiple sources for R packages, the best known among them being CRAN and Bioconductor. The official site for the R language (<https://www.r-project.org/>) lists many of these resources. Many packages are published to GitHub, where you can obtain the source code. However, you may have been given R packages that were developed by someone in your company.
 
 Regardless of the source, you must ensure that the package you want to install has a binary format for the Windows platform. Otherwise the downloaded package cannot run in the SQL Server environment.
 
-You should also determine whether the package is compatible with the version of R that is running in SQL Server.
+Before downloading, you should also check whether the package is compatible with the version of R that is running in SQL Server.
 
 ### <a name="bkmk_zipPreparation"></a> Download package as zipped file
 
@@ -285,7 +288,7 @@ For example, the following procedure describes now to get the correct version of
 
 This process creates a local copy of the package. You can then install the package, or copy the zipped package to a server that does not have internet access.
 
-For more information about the contents of the zip file format, and how to create an R package, we recommend this tutorial, which you can download in PDF format from the R project site: [Freidrich Leisch: Creating R Packages](http://cran.r-project.org/doc/contrib/Leisch-CreatingPackages.pdf).
+For more information about the contents of the zip file format, and how to create an R package, we recommend this tutorial, which you can download in PDF format from the R project site: [Creating R Packages](http://cran.r-project.org/doc/contrib/Leisch-CreatingPackages.pdf).
 
 ### <a name="bkmk_packageDependencies"></a> Get package dependencies
 

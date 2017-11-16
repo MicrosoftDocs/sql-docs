@@ -48,17 +48,6 @@ ms.workload: "Inactive"
 ## Permissions  
  Requires the `VIEW DATABASE STATE` permission.  
   
-## Remarks
- The values in `reason` and `reason_desc` columns might be:
-
-|reason|reason\_desc|Description|
-|-----------------|---------------|-----------------| 
-| 2	| `DISABLED`	| Option is disabled by system.|
-| 11	| `QUERY_STORE_OFF`	| Query Store is turned off.|
-| 12	| `QUERY_STORE_READ_ONLY`	| Query Store is in read-only mode.|
-| 13	| `NOT_SUPPORTED`	| Available only in Enterprise edition of SQL Server.|
-
-
 ## See Also  
  [Automatic Tuning](../../relational-databases/automatic-tuning/automatic-tuning.md)   
  [ALTER DATABASE SET AUTOMATIC_TUNING &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   

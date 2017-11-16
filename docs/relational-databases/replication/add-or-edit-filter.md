@@ -2,9 +2,12 @@
 title: "Add or Edit Filter | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "replication"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "replication"
 ms.tgt_pltfrm: ""
@@ -19,6 +22,7 @@ manager: "jhubbard"
 ms.workload: "Inactive"
 ---
 # Add or Edit Filter
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   The **Add Filter** and **Edit Filter** dialog boxes allow you to add and edit static row filters and parameterized row filters.  
   
 > [!NOTE]  

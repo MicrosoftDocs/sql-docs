@@ -2,9 +2,12 @@
 title: "Columnstore indexes - architecture | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/17/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "indexes"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -17,7 +20,7 @@ manager: "jhubbard"
 ms.workload: "On Demand"
 ---
 # Columnstore indexes - architecture
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 Learn how a columnstore index is architected. Knowing these basics will make it easier to understand other columnstore articles that explain how to use them effectively.
 

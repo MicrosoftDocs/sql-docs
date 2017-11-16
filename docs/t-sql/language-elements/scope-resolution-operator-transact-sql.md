@@ -1,5 +1,5 @@
 ---
-title: "Scope Resolution Operator (Transact-SQL) | Microsoft Docs"
+title: ":: (Scope Resolution) (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-non-specified"
@@ -20,10 +20,10 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ms.workload: "Inactive"
 ---
-# Scope Resolution Operator (Transact-SQL)
+# :: (Scope Resolution) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  The scope resolution operator **::** provides access to static members of a compound data type. A compound data type is one that contains multiple simple data types and methods.  
+  The scope resolution operator **::** provides access to static members of a compound data type. A compound data type is one that contains multiple simple data types and methods, such as the built-in CLR types and custom SQLCLR User-Defined Types (UDTs).  
   
 ## Examples  
  The following example shows how to use the scope resolution operator to access the `GetRoot()` member of the `hierarchyid` type.  

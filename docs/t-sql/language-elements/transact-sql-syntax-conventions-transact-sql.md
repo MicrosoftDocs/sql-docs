@@ -33,7 +33,7 @@ ms.author: "rickbyh"
 manager: "jhubbard"
 ms.workload: "Active"
 ---
-# Transact-SQL Syntax Conventions-Transact-SQL
+# Transact-SQL Syntax Conventions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   The following table lists and describes conventions that are used in the syntax diagrams in the [!INCLUDE[tsql](../../includes/tsql-md.md)] Reference.  

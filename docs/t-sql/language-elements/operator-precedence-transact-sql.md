@@ -33,8 +33,8 @@ ms.workload: "On Demand"
 |Level|Operators|  
 |-----------|---------------|  
 |1|~ (Bitwise NOT)|  
-|2|* (Multiply), / (Division), % (Modulo)|  
-|3|+ (Positive), - (Negative), + (Add), (+ Concatenate), - (Subtract), & (Bitwise AND), ^ (Bitwise Exclusive OR), &#124; (Bitwise OR)|  
+|2|* (Multiplication), / (Division), % (Modulus)|  
+|3|+ (Positive), - (Negative), + (Addition), (+ Concatenation), - (Subtraction), & (Bitwise AND), ^ (Bitwise Exclusive OR), &#124; (Bitwise OR)|  
 |4|=, >, \<, >=, <=, <>, !=, !>, !< (Comparison operators)|  
 |5|NOT|  
 |6|AND|  

@@ -31,7 +31,7 @@ ms.workload: "On Demand"
 ## Section Heading  
  [+ (String Concatenation)](../../t-sql/language-elements/string-concatenation-transact-sql.md)  
   
- [+= (String Concatenation)](../../t-sql/language-elements/string-concatenation-equal-transact-sql.md)  
+ [+= (String Concatenation Assignment)](../../t-sql/language-elements/string-concatenation-equal-transact-sql.md)  
   
  [% (Wildcard - Character(s) to Match)](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)  
   
